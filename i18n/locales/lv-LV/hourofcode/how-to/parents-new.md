@@ -1,5 +1,5 @@
 ---
-title: How-to guide for parents
+title: Kā ceļvedis vecākiem
 ---
 
 # How to do an Hour of Code with your child

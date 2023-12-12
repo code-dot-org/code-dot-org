@@ -65,8 +65,8 @@ module Foorm
 
       # Third, check that the user hasn't submitted this survey,
       # unless the survey allows multiple submissions or allows signed out submissions
-      unless form_data.allow_multiple_submissions || form_data.allow_signed_out
-        return render :thanks if response_exists?(key_params)
+      if !(form_data.allow_multiple_submissions || form_data.allow_signed_out) && response_exists?(key_params)
+        return render :thanks
       end
 
       # Fourth, check we can find the Foorm configuration.
@@ -115,10 +115,8 @@ module Foorm
 
       # Third, check that the user hasn't submitted this survey,
       # unless the survey allows multiple submissions or allows signed out submissions
-      unless form_data.allow_multiple_submissions || form_data.allow_signed_out
-        if response_exists?(key_params)
-          return render json: {}, status: :no_content
-        end
+      if !(form_data.allow_multiple_submissions || form_data.allow_signed_out) && response_exists?(key_params)
+        return render json: {}, status: :no_content
       end
 
       # Fourth, check we can find the Foorm configuration.

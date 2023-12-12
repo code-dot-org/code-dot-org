@@ -52,7 +52,9 @@ pl:
         age: 'Wiek'
         gender: 'Płeć'
         edit_header: 'Edytuj dane konta'
+        ai_settings_header: 'Ustawienia AI'
         finish_sign_up_header: 'Zakończ tworzenie swojego konta'
+        finish_sign_up_header_error: 'Proszę poprawić następujące błędy:'
         finish_sign_up_subheader: 'Wypełnij poniższe informacje, aby zakończyć tworzenie konta Code.org dla <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Wypełnij poniższe informacje, aby zakończyć tworzenie konta Code.org dla **%{email}**.'
         finish_sign_up_subheader_provider: 'Wypełnij poniższe informacje, aby zakończyć tworzenie konta Code.org z <strong>%{provider}</strong> <strong>%{email}</strong>.'
@@ -60,7 +62,9 @@ pl:
         reset_password_token: "Link do resetowania hasła, z którego skorzystałeś"
         error:
           future: nie może być w przyszłości
+        user_type: 'Typ konta'
         us_state: 'Stan'
+        ai_rubrics_disabled: 'Wyłącz funkcję rubryki AI'
   beta: "beta"
   hello: "Witaj świecie"
   welcome_back: "Witaj z powrotem, %{name}"
@@ -202,6 +206,8 @@ pl:
     parent_account_email_progress_permission: "Czy możemy od czasu do czasu przesyłać Ci e-mailem informacje o postępach i projektach Twojego dziecka, a także o jego kursie i informatyce? [(Zobacz naszą Politykę prywatności)] (%{privacy_policy_url})"
     parent_account_email_label: "Adres e-mail rodzica/opiekuna"
     us_state: 'Stan'
+    us_state_dropdown_options:
+      other: "Mieszkam w miejscu niewymienionym tutaj"
   school_info:
     title: 'Informacja o Szkole (opcjonalne)'
     school_country: 'Kraj szkoły'
@@ -270,6 +276,9 @@ pl:
   parent_mailer:
     student_associated_subject: 'Informacje logowania na Code.org'
     parent_email_added_subject: 'Witaj na Code.org!'
+    parent_permission_request_subject: "Zgoda rodziców potrzebna do uzyskania dostępu dziecka do Code.org"
+    parent_permission_reminder_subject: "Przypomnienie, zgoda rodziców potrzebna do uzyskania dostępu dziecka do Code.org"
+    parent_permission_confirmation_subject: "Dziękujemy za zatwierdzenie dostępu Twojego dziecka do Code.org!"
   teacher_mailer:
     new_teacher_subject: 'Witaj na Code.org!'
     delete_teacher_subject: 'Powiadomienie Code.org: Twoje konto zostało usunięte'
@@ -355,6 +364,7 @@ pl:
       sprite_lab_documentation: "Dokumentacja Sprite Lab"
       sprite_lab_tutorials: "Samouczki Sprite Lab"
       web_lab_documentation: "Dokumentacja Web Lab"
+      project_beats_documentation: "Dokumentacja projektu Beats"
       educate_overview: "Przegląd edukatora"
       educate_elementary: "Szkoła podstawowa"
       educate_middle: "Gimnazjum"
@@ -1131,17 +1141,36 @@ pl:
         not_listed: 'Preferowanego terminu nie ma na liście'
         none: 'Wolę nie odpowiadać'
       school_country:
+        australia: 'Australia'
         barbados: 'Barbados'
         belize: 'Belize'
+        brazil: 'Brazylia'
         canada: 'Kanada'
         chile: 'Chile'
         colombia: 'Kolumbia'
+        dominican_republic: 'Dominikana'
+        india: 'Indie'
+        indonesia: 'Indonezja'
         israel: 'Izrael'
+        jamaica: 'Jamajka'
+        kenya: 'Kenia'
+        kosovo: 'Kosowo'
         malaysia: 'Malezja'
+        maldives: 'Malediwy'
         mexico: 'Meksyk'
+        mongolia: 'Mongolia'
+        new_zealand: 'Nowa Zelandia'
         paraguay: 'Paragwaj'
+        philippines: 'Filipiny'
+        portugal: 'Portugalia'
+        puerto_rico: 'Portoryko'
+        slovakia: 'Słowacja'
+        south_korea: 'Korea Południowa'
+        spain: 'Hiszpania'
         thailand: 'Tajlandia'
+        trinidad_and_tobago: 'Trynidad i Tobago'
         uzbekistan: 'Uzbekistan'
+        vietnam: 'Wietnam'
       ages:
         ages_under_6: 'w wieku ponżej 6 lat'
         ages_7_8: 'w wieku 7-8 lat'
@@ -1190,6 +1219,7 @@ pl:
         csf_express: 'Podstawy informatyki (Wstępne ekspresowe lub ekspresowe)'
         csd: 'Odkrycia informatyki'
         csp: 'Podstawy Informatyki'
+        csa: 'CS A'
         other: 'Inni/inne'
         not_applicable: "Nie dotyczy"
       email_opt_in:
@@ -1231,6 +1261,7 @@ pl:
       workshops_k5: 'Warsztaty dla uczniów w klasach K-5'
       summer_workshops_612: 'Warsztaty Letnie dla uczniów w klasach 6-12'
       virtual_academic_year_workshops_612: 'Wirtualne Warsztaty Roku Akademickiego dla uczniów w klasach 6-12'
+      unsupported: 'Nieobsługiwany'
   cookie_banner:
     message: 'Kontynuując przeglądanie naszej strony lub klikając "Zgadzam się", zgadzasz się na przechowywanie plików cookie na Twoim komputerze lub urządzeniu.'
     more_information: "Zapoznaj się z polityką prywatności Code.org."
@@ -1251,6 +1282,7 @@ pl:
       error_invalid_user: 'Nieważny identyfikator użytkownika. Prosimy spróbować zalogować się ponownie.'
       error_no_code: 'Prosimy wpisać swój kod logowania.'
       confirm_login: "Wybierz Potwierdź, aby zalogować się ze swoim kontem Google.\n"
+    setup_page_title: 'Konfiguracja Maker'
   parent_email_banner:
     text: "**Czy jesteś rodzicem lub opiekunem?** Połącz swój adres e-mail z tym kontem, aby być na bieżąco z postępami i projektami swojego dziecka!"
     link_your_email: "Połącz swój e-mail"
@@ -1286,3 +1318,22 @@ pl:
     binary: "Binarny"
     hexadecimal: "Szesnastkowy"
     pixel_format_header: "Format pikseli"
+  course_deprecated:
+    title: "Głowy do góry! Ten program nauczania nie jest już dostępny, ale Code.org ma dla Ciebie nowsze opcje."
+    button: "Zobacz nowy program nauczania"
+  hoc_tutorial_email_subject: "Przeżyj Godzinę Kodowania dzięki samouczkom Code.org!"
+  hoc_tutorial_email_content:
+    dear_teacher: "Szanowna/y %{teacher_name},"
+    intro_step_by_step_guide: "Jesteśmy bardzo podekscytowani, że organizujesz wydarzenie Godziny Kodowania, korzystając z bezpłatnych zajęć i samouczków Code.org! Jesteśmy zaszczyceni, że nauczyciele tacy jak Ty wprowadzają uczniów w ekscytujący świat kodowania. Oto przewodnik krok po kroku, aby zapewnić udane wydarzenie Godziny Kodowania:"
+    sign_up_step: "**Zarejestruj się** (Opcjonalnie…, ale niesamowite!): Utwórz bezpłatne konto Code.org, aby uzyskać dostęp do osobistego pulpitu, z którego możesz zarządzać Godziną Kodowania w swojej klasie! [Zarejestruj się tutaj] (%{url})."
+    create_classroom_section: "**Utwórz sekcję klasy** (chociaż opcjonalnie… , ale bardzo przydatne!): Tworzenie sekcji z klasy umożliwi Ci śledzenie postępów uczniów, przeglądanie ich prac, a takze zostawianie im uwag! [Skonfiguruj swoją sekcję tutaj] (%{section_setup_url}). A dla wszystkich naszych początkujących, oto [przydatny przewodnik] (%{guide_url}), który Ci pomoże!"
+    pick_perfect_activity: "**Wybierz idealną aktywność**: [Wybierz najlepszy samouczek Godziny Kodowania] (%{url}) na swoje wydarzenie. Zapoznaj się z opcjami i przypisz wybrany samouczek do swojej sekcji, aby Twoi uczniowie dokładnie wiedzieli, od czego zacząć."
+    plan_like_pro: "**Planuj jak profesjonalista**: Wiele naszych samouczków zawiera [plan lekcji] ()%{lesson_plan_url}. To jak sekretny przepis na sukces! Sprawdź swój plan lekcji przed wielkim wydarzeniem."
+    let_fun_begin: "** Niech zabawa się zacznie!**: Kierując się planem lekcji, rozpocznij swoją podróż do świata kodowania. Pamiętaj: nie musisz znać wszystkich odpowiedzi! Twój entuzjazm i wspólna ciekawość z uczniami pomogą wszystkim uczyć się razem."
+    hip_hip_hooray: "**Hip, Hip, Hur!**: Gdy godzina się skończy, świętujmy tych genialnych młodych programistów. Certyfikaty, naklejki, a nawet oklaski — wszystko się liczy. Znajdź nasze [certyfikaty do druku tutaj] (%{url})."
+    more_adventures_await: "**Czeka więcej przygód**: Czy zauważyłeś nowych programistów spragnionych więcej? Przedstaw im więcej programów nauczania informatyki na Code.org!"
+    explore_course: "Poznaj naszą skarbnicę bezpłatnych kursów"
+    learn_about_ai: "Poznaj sztuczną inteligencję (AI)"
+    thank_you: "DZIĘKUJEMY za wspieranie edukacji informatycznej. Nasz zespół życzy Tobie i Twoim uczniom niezapomnianych Godzin Kodowania!"
+    founder: "Założyciel, Code.org"
+    your_friends: "Twoi znajomi na Code.org"

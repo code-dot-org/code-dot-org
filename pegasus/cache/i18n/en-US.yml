@@ -545,13 +545,9 @@
   volunteer_engineer_submission_subtitle_generic: '100,000 teachers are going to host an Hour of Code in their classroom this year, Dec 7-13, 2015. They want your help! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} teachers need volunteers.<br>%{num_volunteers} volunteers have signed up. Join them."
   volunteer_engineer_submission_intro_background: "The Hour of Code is a global movement to try an hour introduction to computer science, reaching tens of millions of students in 180+ countries. Please get involved during Computer Science Education Week, December 7-13."
-  volunteer_engineer_submission_intro_recruit: 'Teachers would love to have somebody <span style="font-family: ''Gotham 7r'', sans-serif;">passionate about computer science education</span> who can help in the classroom, or for somebody who can <span style="font-family: ''Gotham 7r'', sans-serif;">inspire</span> their students by talking about the breadth of possibilities with computer science (which could be done through a video chat).'
   volunteer_engineer_submission_intro_recruit_markdown: "Teachers would love to have somebody **passionate about computer science education** who can help in the classroom, or for somebody who can **inspire** their students by talking about the breadth of possibilities with computer science (which could be done through a video chat)."
-  volunteer_engineer_submission_intro_guide: "Learn more about our <a href=\"%{volunteer_guide}\">volunteer program here</a>."
   volunteer_engineer_submission_intro_guide_markdown: "Learn more about our [volunteer program here](%{volunteer_guide})."
-  volunteer_engineer_submission_intro_signup: "Please enter the following information if you are a computer science student or software professional. You must be at least 18 years old to sign up as a volunteer. Note that all the fields you fill out in this section will be publicly available to anyone looking at the <a href=\"/volunteer/local\">volunteer map</a>. Fields marked with a <span class=\"form-required-field\">*</span> are required."
   volunteer_engineer_submission_intro_signup_markdown: "Please enter the following information if you are a computer science student or software professional. You must be at least 18 years old to sign up as a volunteer. Note that all the fields you fill out in this section will be publicly available to anyone looking at the [volunteer map](/volunteer/local). Fields marked with a _*_ are required."
-  volunteer_engineer_submission_intro_links: "Are you a teacher looking for volunteers? Find a local volunteer on our <a href=\"%{volunteer_local}\">volunteer map</a>."
   volunteer_engineer_submission_intro_links_markdown: "Are you a teacher looking for volunteers? Find a local volunteer on our [volunteer map](%{volunteer_local})."
   volunteer_engineer_submission_update_information: "Update your information"
   volunteer_engineer_submission_header_shared: "Information shared with teachers on volunteer map"
@@ -1569,6 +1565,7 @@
   header_report_abuse: "Report abuse"
   header_legal: "Privacy & Legal"
   header_legal_privacy: "Privacy Policy"
+  header_legal_cookie_notice: "Cookie Notice"
   header_legal_tos: "Terms of Service"
   header_tutorials: "Tutorials"
   header_screen_reader_hamburger: "Menu"

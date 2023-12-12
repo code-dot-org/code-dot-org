@@ -7,11 +7,12 @@
       "curriculum_umbrella": "CSD Self Paced PL",
       "has_verified_resources": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-19 20:03:55 UTC",
+    "serialized_at": "2023-07-04 01:49:00 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -233,6 +234,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-Overview-CourseOverview_2022"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -255,6 +259,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-CV-Equity_2022"
+        ],
         "progression": "Course overvew"
       },
       "bonus": false,
@@ -277,6 +284,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-CSD-vid_2022"
+        ],
         "progression": "Course overvew"
       },
       "bonus": false,
@@ -299,6 +309,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod3-Units_2022"
+        ],
         "progression": "Course Design"
       },
       "bonus": false,
@@ -321,6 +334,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod3-Chapters_2022"
+        ],
         "progression": "Course Design"
       },
       "bonus": false,
@@ -343,6 +359,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-CSD-TeacherVoices-CSDOverview_2022"
+        ],
         "progression": "Course Design"
       },
       "bonus": false,
@@ -365,6 +384,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-LessonTypes_2022"
+        ],
         "progression": "Course Design"
       },
       "bonus": false,
@@ -387,6 +409,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-Task-LessonTypes_2022"
+        ],
         "progression": "Course Design"
       },
       "bonus": false,
@@ -409,6 +434,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-LevelTypes_2022"
+        ],
         "progression": "Course Design"
       },
       "bonus": false,
@@ -431,6 +459,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod3-LevelType-practice-lc_2022"
+        ],
         "progression": "Course Design"
       },
       "bonus": false,
@@ -453,6 +484,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-PSP_2022"
+        ],
         "progression": "The problem solving process"
       },
       "bonus": false,
@@ -475,6 +509,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-PSP-vid_2022"
+        ],
         "progression": "The problem solving process"
       },
       "bonus": false,
@@ -497,6 +534,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-PSP-cont_2022"
+        ],
         "progression": "The problem solving process"
       },
       "bonus": false,
@@ -519,6 +559,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-Overview-Tools_2022"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -541,6 +584,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-LearningTools_2022"
+        ],
         "progression": "Tools "
       },
       "bonus": false,
@@ -563,6 +609,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-GameLab-practice-lc_2022"
+        ],
         "progression": "Tools "
       },
       "bonus": false,
@@ -585,6 +634,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-MakerApp_2022"
+        ],
         "progression": "Tools "
       },
       "bonus": false,
@@ -607,6 +659,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-AILab_2022"
+        ],
         "progression": "Tools "
       },
       "bonus": false,
@@ -629,6 +684,9 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-Tools-c4u_2022"
+        ],
         "progression": "Tools "
       },
       "bonus": false,
@@ -651,6 +709,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-Overview-Implementation_2022"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -673,6 +734,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-TechAndMaterials_2022"
+        ],
         "progression": "Make an implementation plan"
       },
       "bonus": false,
@@ -695,6 +759,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-ImplementationOptions_2022"
+        ],
         "progression": "Make an implementation plan"
       },
       "bonus": false,
@@ -717,6 +784,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL_21-mod3-MakeAPlan-ImplementationPlan_2022"
+        ],
         "progression": "Make an implementation plan"
       },
       "bonus": false,
@@ -744,7 +814,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "SP-VPL-CSD-21-Navigation-Mod3_2022"
+          "SP-VPL-CSD-21-Navigation-Mod3_2023"
         ],
         "lesson.key": "Overview of implementation ",
         "lesson_group.key": "lessonGroup-2",
@@ -752,7 +822,7 @@
         "activity_section.key": "794437a3-70ed-4df9-a5c8-98861200349c"
       },
       "level_keys": [
-        "SP-VPL-CSD-21-Navigation-Mod3_2022"
+        "SP-VPL-CSD-21-Navigation-Mod3_2023"
       ]
     }
   ],
@@ -1035,9 +1105,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-CSD-21-Navigation-Mod3_2022",
+        "level.key": "SP-VPL-CSD-21-Navigation-Mod3_2023",
         "script_level.level_keys": [
-          "SP-VPL-CSD-21-Navigation-Mod3_2022"
+          "SP-VPL-CSD-21-Navigation-Mod3_2023"
         ],
         "lesson.key": "Overview of implementation ",
         "lesson_group.key": "lessonGroup-2",

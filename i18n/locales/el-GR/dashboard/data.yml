@@ -277,7 +277,7 @@ el:
         Unplug3: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
         Unplug4: Αλγόριθμοι
         Unplug5: Συναρτήσεις
-        Unplug6: Έλεγχοι
+        Unplug6: Συνθήκες
         Unplug7: Σύνθεση τραγουδιού
         Unplug8: Αφαίρεση
         Unplug9: Προγραμματισμός με αναμετάδοση
@@ -286,7 +286,7 @@ el:
         C1_happy_maps_unplugged: Χαρούμενοι Χάρτες
         C1_moveitmoveit_unplugged: Μετακίνησέ το, Μετακίνησέ το
         C1_bigevent_unplugged: Το Μεγάλο Γεγονός
-        C1_getting_loopy: Επαναλαμβανόμαστε
+        C1_getting_loopy: Εξερευνώντας τους βρόγχους
         C1_pair_programming: Προγραμματισμός κατά ζεύγη
         C1_maze_intro_sequencing: Αλληλουχία Λαβυρίνθου - Εισαγωγικά
         C1_maze_debugging: Εκσφαλμάτωση Λαβυρίνθου
@@ -310,7 +310,7 @@ el:
         C2_bee_conditionals: Συνθήκες της Μέλισσας
         C2_playlab_createstory: Εργαστήριο Παιχνιδιού - Δημιουργία μιας Ιστορίας
         C2_graph_paper: Προγραμματισμός σε Χαρτί Γραφικών Παραστάσεων
-        C2_conditionals_with_cards: Έλεγχοι
+        C2_conditionals_with_cards: Συνθήκες
         C2_binary_bracelets: Δυαδικά Βραχιόλια
         C2_relay_programming: Προγραμματισμός Ρελέ
         C2_paper_airplanes: Χάρτινα Αεροπλανάκια
@@ -485,14 +485,14 @@ el:
         CSF_skinOverview_Harvester: Ο Θεριστής
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
-        CSF_bb8_loops_C-F: Βρόχους με BB-8
+        CSF_bb8_loops_C-F: Βρόχοι με το BB-8
         CSF_harvester_skinOverview_K-1: Ο Θεριστής
         CSF_harvester_loops_K1: Βρόχοι με τον Θεριστή
         CSF_scrat_loops_K1: Βρόχοι στην Εποχή των Παγετώνων
         CSF_scrat_loops_CF: Βρόχοι στην Εποχή των Παγετώνων
         CSF_if_allskins: Το Τουβλάκι Αν
-        CSF_ifelse_allskins: Χρησιμοποιώντας Τουβλάκια Αν/Αλλιώς
-        CSF_ifelseifelse_allskins: Χρησιμοποιώντας Τουβλάκια Αν/ΑλλιώςΑν/Αλλιώς
+        CSF_ifelse_allskins: Χρησιμοποιώντας τα μπλοκ Εάν/Αλλιώς
+        CSF_ifelseifelse_allskins: Χρησιμοποιώντας τα μπλοκ Εάν/Αλλιώςεάν/Αλλιώς
         CSF_loops_AB: Βρόχοι
         csd_gamelab_booleans: Boolean Εκφράσεις
         csd_gamelab_conditional_statements: Συνθήκες Ελέγχου
@@ -731,6 +731,9 @@ el:
         csa_sorting_algorithms: 'CSA: Αλγόριθμοι Ταξινόμησης'
         star_quilts_intro_to_artist: 'Αστέρια παπλώματα: Εισαγωγή στον Καλλιτέχνη'
         upload_sprites_backgrounds: Αποστολή προσαρμοσμένων sprites και φόντα
+        what-is-creativity: Τι είναι Δημιουργικότητα;
+        code-break: Κάντε ένα Διάλειμμα με Κώδικα
+        csd_ml_how_ai_works: Πώς λειτουργεί η Τεχνητή Νοημοσύνη
     callout:
       text:
         drag_blocks: Πιάσε ένα μπλοκ "κίνηση" και φέρ'το κάτω από το άλλο μπλοκ

@@ -1,7 +1,15 @@
 {
   "blocks": {
     "languageVersion": 0,
-    "blocks": [{"id": "when-run-block", "type": "when_run_simple2", "x": 30, "y": 30}]
-  },
-  "variables": [{"name": "currentTime"}, {"name": "i"}]
+    "blocks": [
+      {
+        "id": "when-run-block",
+        "type": "when_run_simple2",
+        "deletable": false,
+        "movable": false,
+        "x": 30,
+        "y": 30
+      }
+    ]
+  }
 }

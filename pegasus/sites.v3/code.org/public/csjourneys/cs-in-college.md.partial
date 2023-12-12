@@ -38,7 +38,7 @@ social:
   {{ rtc_panel1 }}
 </div>
 <div class="col-60" style="padding-top:15px; padding-left: 10px">
-  <h3><strong>The Transition from High School to College</strong></h3>
+  <h3 class="heading-sm">The Transition from High School to College</h3>
   <p>This first discussion is all about transitions! Learn how Computer Science 101 is different than taking CS in high school. Get the inside scoop on what lectures and projects are like, who to seek help from and when (TAs and office hours), and the importance of finding/building community.</p>
 </div>
 
@@ -48,7 +48,7 @@ social:
   {{ rtc_panel2 }}
 </div>
 <div class="col-60" style="padding-top:15px; padding-left: 10px">
-  <h3><strong>Day in the Life of a Woman College Student in CS</strong></h3>
+  <h3 class="heading-sm">Day in the Life of a Woman College Student in CS</h3>
   <p>Rewriting the Code (RTC) college women attending Columbia, Dartmouth, Michigan, Stanford and UCLA share their experiences as computer science majors. The discussion includes classes to take in HS to be prepared for college courses, what classes are like, navigating impostor syndrome, and ways to get involved in CS outside of class.</p>
 </div>
 
@@ -58,7 +58,7 @@ social:
   {{ rtc_panel3 }}
 </div>
 <div class="col-60" style="padding-top:15px; padding-left: 10px">
-  <h3><strong>Overcoming Imposter Syndrome: Building Confidence & Belonging</strong></h3>
+  <h3 class="heading-sm">Overcoming Imposter Syndrome: Building Confidence & Belonging</h3>
   <p>In our third panel, Rewriting the Code (RTC) college women attending Stanford, Yale, the Universities of Washington, Maryland, and British Columbia share their experiences as computer science majors. Hear about their experiences with tech internships, navigating and overcoming imposter syndrome, and strategies for building confidence and belonging.</p>
 </div>
 
@@ -68,7 +68,7 @@ social:
   {{ rtc_panel4 }}
 </div>
 <div class="col-60" style="padding-top:15px; padding-left: 10px">
-  <h3><strong>Internships + Non-SWE Positions with Companies</strong></h3>
+  <h3 class="heading-sm">Internships + Non-SWE Positions with Companies</h3>
   <p>In our fourth panel, Rewriting the Code (RTC) college women attending the University of Maryland, Williams College, Barnard College, Princeton, and Duke discuss what it's like to apply for, interview for, and participate in internships, along with discussing roles that a CS degree can lead to outside of software engineering.</p>
 </div>
 

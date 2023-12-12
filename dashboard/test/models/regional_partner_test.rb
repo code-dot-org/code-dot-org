@@ -43,7 +43,7 @@ class RegionalPartnerTest < ActiveSupport::TestCase
     end
     assert regional_partner.valid?
     assert_includes regional_partner.pl_programs_offered, "Fish"
-    assert_not_includes regional_partner.pl_programs_offered, ""
+    refute_includes regional_partner.pl_programs_offered, ""
   end
 
   test 'state must be in list' do
@@ -138,7 +138,6 @@ class RegionalPartnerTest < ActiveSupport::TestCase
     assert_equal regional_partner_wa, RegionalPartner.find_by_region(nil, "WA")
   end
 
-  # TODO: remove this test when workshop_organizer is deprecated
   test 'pd_workshops association as workshop_organizer' do
     regional_partner = create :regional_partner
     partner_organizer = create :workshop_organizer
@@ -166,20 +165,19 @@ class RegionalPartnerTest < ActiveSupport::TestCase
     assert_equal partner_workshops, regional_partner.pd_workshops_organized
   end
 
-  # TODO: remove this test when workshop_organizer is deprecated
   test 'future_pd_workshops_organized as workshop_organizer' do
     regional_partner = create :regional_partner
     partner_organizer = create :workshop_organizer
     create :regional_partner_program_manager, regional_partner: regional_partner, program_manager: partner_organizer
 
     future_partner_workshops = [
-      create(:workshop, organizer: partner_organizer, sessions_from: Date.today),
-      create(:workshop, organizer: partner_organizer, sessions_from: Date.tomorrow)
+      create(:workshop, organizer: partner_organizer, sessions_from: Time.zone.today),
+      create(:workshop, organizer: partner_organizer, sessions_from: Time.zone.tomorrow)
     ]
 
     # excluded (past or ended) partner workshops
-    create :workshop, organizer: partner_organizer, sessions_from: Date.yesterday
-    create :workshop, :ended, organizer: partner_organizer, sessions_from: Date.today
+    create :workshop, organizer: partner_organizer, sessions_from: Time.zone.yesterday
+    create :workshop, :ended, organizer: partner_organizer, sessions_from: Time.zone.today
 
     assert_equal future_partner_workshops, regional_partner.future_pd_workshops_organized
   end
@@ -190,13 +188,13 @@ class RegionalPartnerTest < ActiveSupport::TestCase
     create :regional_partner_program_manager, regional_partner: regional_partner, program_manager: partner_organizer
 
     future_partner_workshops = [
-      create(:workshop, organizer: partner_organizer, sessions_from: Date.today),
-      create(:workshop, organizer: partner_organizer, sessions_from: Date.tomorrow)
+      create(:workshop, organizer: partner_organizer, sessions_from: Time.zone.today),
+      create(:workshop, organizer: partner_organizer, sessions_from: Time.zone.tomorrow)
     ]
 
     # excluded (past or ended) partner workshops
-    create :workshop, organizer: partner_organizer, sessions_from: Date.yesterday
-    create :workshop, :ended, organizer: partner_organizer, sessions_from: Date.today
+    create :workshop, organizer: partner_organizer, sessions_from: Time.zone.yesterday
+    create :workshop, :ended, organizer: partner_organizer, sessions_from: Time.zone.today
 
     assert_equal future_partner_workshops, regional_partner.future_pd_workshops_organized
   end
@@ -226,7 +224,7 @@ class RegionalPartnerTest < ActiveSupport::TestCase
   test 'are_apps_closed returns false if RP app closed date is after current date' do
     Timecop.freeze do
       regional_partner = create :regional_partner
-      regional_partner.update!(apps_close_date_teacher: (Date.current + 1.day).strftime("%Y-%m-%d"))
+      regional_partner.update!(apps_close_date_teacher: (Time.zone.today + 1.day).strftime("%Y-%m-%d"))
       refute regional_partner.are_apps_closed
     end
   end
@@ -234,7 +232,7 @@ class RegionalPartnerTest < ActiveSupport::TestCase
   test 'are_apps_closed returns false if RP app closed date is on current date' do
     Timecop.freeze do
       regional_partner = create :regional_partner
-      regional_partner.update!(apps_close_date_teacher: (Date.current).strftime("%Y-%m-%d"))
+      regional_partner.update!(apps_close_date_teacher: (Time.zone.today).strftime("%Y-%m-%d"))
       refute regional_partner.are_apps_closed
     end
   end
@@ -242,7 +240,7 @@ class RegionalPartnerTest < ActiveSupport::TestCase
   test 'are_apps_closed returns true if RP app closed date is before current date' do
     Timecop.freeze do
       regional_partner = create :regional_partner
-      regional_partner.update!(apps_close_date_teacher: (Date.current - 1.day).strftime("%Y-%m-%d"))
+      regional_partner.update!(apps_close_date_teacher: (Time.zone.today - 1.day).strftime("%Y-%m-%d"))
       assert regional_partner.are_apps_closed
     end
   end

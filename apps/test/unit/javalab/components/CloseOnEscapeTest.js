@@ -2,7 +2,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import sinon from 'sinon';
-import CloseOnEscape from '@cdo/apps/javalab/components/CloseOnEscape';
+import CloseOnEscape from '@cdo/apps/templates/CloseOnEscape';
 
 describe('CloseOnEscape', () => {
   let wrapper, handleClose, className;

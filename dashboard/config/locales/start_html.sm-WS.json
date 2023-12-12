@@ -3,23 +3,33 @@
     "data": {
       "start_html": {
         "CSD U1 IO Pet Chooser 2_2021": {
-          "Yes": "Ioe",
           "No": "Leai",
+          "Yes": "Ioe",
           "cute": "aulelei "
         },
         "CSD U1 IO Pet Chooser 2_2022": {
-          "Yes": "Ioe",
           "No": "Leai",
+          "Yes": "Ioe",
+          "cute": "aulelei "
+        },
+        "CSD U1 IO Pet Chooser 2_2023": {
+          "No": "Leai",
+          "Yes": "Ioe",
           "cute": "aulelei "
         },
         "CSD U1 IO Pet Chooser_2021": {
-          "Yes": "Ioe",
           "No": "Leai",
+          "Yes": "Ioe",
           "cute": "aulelei "
         },
         "CSD U1 IO Pet Chooser_2022": {
-          "Yes": "Ioe",
           "No": "Leai",
+          "Yes": "Ioe",
+          "cute": "aulelei "
+        },
+        "CSD U1 IO Pet Chooser_2023": {
+          "No": "Leai",
+          "Yes": "Ioe",
           "cute": "aulelei "
         },
         "CSD U1 IO Story_2021": {
@@ -32,21 +42,36 @@
           "Food": "meaai",
           "text": "tusitusiga"
         },
+        "CSD U1 IO Story_2023": {
+          "Color": "lanu",
+          "Food": "meaai",
+          "text": "tusitusiga"
+        },
         "CSD U1 processing guess_2021": {
           "text": "tusitusiga"
         },
         "CSD U1 processing guess_2022": {
           "text": "tusitusiga"
         },
+        "CSD U1 processing guess_2023": {
+          "text": "tusitusiga"
+        },
         "CSD U1 processing live_2021": {
-          "walking": "savali",
           "bear": "urosa",
-          "rat": "imoa"
+          "rat": "imoa",
+          "walking": "savali"
         },
         "CSD U1 processing live_2022": {
-          "walking": "savali",
           "bear": "urosa",
-          "rat": "imoa"
+          "rat": "imoa",
+          "walking": "savali"
+        },
+        "CSD U1 processing live_2023": {
+          "cat": "pusi",
+          "chicken": "moa",
+          "dog": "maile",
+          "horse": "solofanua",
+          "walking": "savali"
         },
         "CSD U1 processing npark_2021": {
           "Sorry!": "Faamalie atu"
@@ -54,115 +79,258 @@
         "CSD U1 processing npark_2022": {
           "Sorry!": "Faamalie atu"
         },
+        "CSD U1 processing npark_2023": {
+          "Sorry!": "Faamalie atu"
+        },
         "CSD U1 storage movies_2021": {
-          "Yes": "Ioe",
           "No": "Leai",
+          "Yes": "Ioe",
           "text": "tusitusiga"
         },
         "CSD U1 storage movies_2022": {
-          "Yes": "Ioe",
           "No": "Leai",
+          "Yes": "Ioe",
+          "text": "tusitusiga"
+        },
+        "CSD U1 storage movies_2023": {
+          "No": "Leai",
+          "Yes": "Ioe",
           "text": "tusitusiga"
         },
         "CSD U1 storage outfit_2021": {
-          "white": "paepae",
-          "pink": "piniki",
-          "green": "lanu meamata",
           "black": "uliuli",
-          "purple": "viole"
+          "green": "lanu meamata",
+          "pink": "piniki",
+          "purple": "viole",
+          "white": "paepae"
         },
         "CSD U1 storage outfit_2022": {
-          "white": "paepae",
-          "pink": "piniki",
-          "green": "lanu meamata",
           "black": "uliuli",
-          "purple": "viole"
+          "green": "lanu meamata",
+          "pink": "piniki",
+          "purple": "viole",
+          "white": "paepae"
+        },
+        "CSD U1 storage outfit_2023": {
+          "black": "uliuli",
+          "green": "lanu meamata",
+          "pink": "piniki",
+          "purple": "viole",
+          "white": "paepae"
+        },
+        "CSD U6 - Accelerometer - PD_2023": {
+          "You did it!": "Ua e ausia"
         },
         "CSD U6 - Accelerometer - PD_2222": {
           "You did it!": "Ua e ausia"
         },
+        "CSD U6 - Accelerometer - SB2_mb2022": {
+          "Success!": "Tulaga Manuia"
+        },
+        "CSD U6 - Board Inputs - P_2023": {
+          "Success!": "Tulaga Manuia"
+        },
+        "CSD U6 - Board Inputs - PracC_mb2022": {
+          "Success!": "Tulaga Manuia"
+        },
+        "CSD U6 - Board Inputs - SB1_2023": {
+          "Success!": "Tulaga Manuia"
+        },
         "CSD U6 - Board Inputs - SB1_2222": {
+          "Success!": "Tulaga Manuia"
+        },
+        "CSD U6 - Board Inputs - SB1_mb2022": {
+          "Success!": "Tulaga Manuia"
+        },
+        "CSD U6 - Board Inputs - SB2_2023": {
           "Success!": "Tulaga Manuia"
         },
         "CSD U6 - Board Inputs - SB2_2222": {
           "Success!": "Tulaga Manuia"
         },
+        "CSD U6 - Board Inputs - SB2_mb2022": {
+          "Success!": "Tulaga Manuia"
+        },
+        "CSD U6 - Board Inputs - SB3_2023": {
+          "Success!": "Tulaga Manuia"
+        },
         "CSD U6 - Board Inputs - SB3_2222": {
           "Success!": "Tulaga Manuia"
+        },
+        "CSD U6 - Board Outputs - A_2023": {
+          "Happy": "Fiafia"
         },
         "CSD U6 - Board Outputs - A_2222": {
           "Happy": "Fiafia"
         },
+        "CSD U6 - Board Outputs - A_mb2022": {
+          "Happy": "Fiafia"
+        },
+        "CSD U6 - Board Outputs - ChalC_mb2022": {
+          "No": "Leai",
+          "Yes": "Ioe"
+        },
+        "CSD U6 - Board Outputs - P_2023": {
+          "Success!": "Tulaga Manuia"
+        },
         "CSD U6 - Board Outputs - P_2222": {
+          "Success!": "Tulaga Manuia"
+        },
+        "CSD U6 - Board Outputs - SB1_2023": {
           "Success!": "Tulaga Manuia"
         },
         "CSD U6 - Board Outputs - SB1_2222": {
           "Success!": "Tulaga Manuia"
         },
+        "CSD U6 - Board Outputs - SB2_2023": {
+          "Success!": "Tulaga Manuia"
+        },
         "CSD U6 - Board Outputs - SB2_2222": {
           "Success!": "Tulaga Manuia"
+        },
+        "CSD U6 - Board Outputs - SB4_2023": {
+          "Fish": "Ia"
         },
         "CSD U6 - Board Outputs - SB4_2222": {
           "Fish": "Ia"
         },
+        "CSD U6 - Board Outputs - Setup_2023": {
+          "Success!": "Tulaga Manuia"
+        },
         "CSD U6 - Board Outputs - Setup_2222": {
+          "Success!": "Tulaga Manuia"
+        },
+        "CSD U6 - Board Outputs - Setup_mb2022": {
+          "Success!": "Tulaga Manuia"
+        },
+        "CSD U6 - Color LEDs - PracA_2023": {
           "Success!": "Tulaga Manuia"
         },
         "CSD U6 - Color LEDs - PracA_2222": {
           "Success!": "Tulaga Manuia"
         },
+        "CSD U6 - Color LEDs - SB2_2023": {
+          "Success!": "Tulaga Manuia"
+        },
         "CSD U6 - Color LEDs - SB2_2222": {
+          "Success!": "Tulaga Manuia"
+        },
+        "CSD U6 - Color LEDs - SB3_2023": {
           "Success!": "Tulaga Manuia"
         },
         "CSD U6 - Color LEDs - SB3_2222": {
           "Success!": "Tulaga Manuia"
         },
+        "CSD U6 - Color LEDs - SB4_2023": {
+          "Medium": "Feoloolo"
+        },
         "CSD U6 - Color LEDs - SB4_2222": {
           "Medium": "Feoloolo"
         },
-        "CSD U6 - Combine Inputs - A_2222": {
-          "left": "agavale",
-          "right": "taumatau",
-          "red": "lanu mumu",
-          "yellow": "samasama",
+        "CSD U6 - Combine Inputs - A_2023": {
           "green": "lanu meamata",
-          "purple": "viole"
+          "left": "agavale",
+          "purple": "viole",
+          "red": "lanu mumu",
+          "right": "taumatau",
+          "yellow": "samasama"
+        },
+        "CSD U6 - Combine Inputs - A_2222": {
+          "green": "lanu meamata",
+          "left": "agavale",
+          "purple": "viole",
+          "red": "lanu mumu",
+          "right": "taumatau",
+          "yellow": "samasama"
+        },
+        "CSD U6 - Combine Inputs - A_mb2022": {
+          "left": "agavale",
+          "right": "taumatau"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
-          "short": "puupuu",
-          "long": "umi"
+          "long": "umi",
+          "short": "puupuu"
+        },
+        "CSD U6 - Combine Inputs - CA_2023": {
+          "long": "umi",
+          "short": "puupuu"
+        },
+        "CSD U6 - Combine Inputs - PracA_2023": {
+          "left": "agavale",
+          "right": "taumatau"
         },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": "agavale",
           "right": "taumatau"
         },
-        "CSD U6 - Combine Inputs - PracC_2222": {
-          "yellow": "samasama",
-          "green": "lanu meamata",
+        "CSD U6 - Combine Inputs - PracC_2023": {
           "blue": "lanumoana",
-          "orange": "moli"
+          "green": "lanu meamata",
+          "orange": "moli",
+          "yellow": "samasama"
+        },
+        "CSD U6 - Combine Inputs - PracC_2222": {
+          "blue": "lanumoana",
+          "green": "lanu meamata",
+          "orange": "moli",
+          "yellow": "samasama"
+        },
+        "CSD U6 - Combine Inputs - PracD_2023": {
+          "quiet": "le pisa"
         },
         "CSD U6 - Combine Inputs - PracD_2222": {
           "quiet": "le pisa"
         },
+        "CSD U6 - Combine Inputs - SB2_2023": {
+          "long": "umi",
+          "short": "puupuu"
+        },
         "CSD U6 - Combine Inputs - SB2_2222": {
-          "short": "puupuu",
-          "long": "umi"
+          "long": "umi",
+          "short": "puupuu"
+        },
+        "CSD U6 - Combine Inputs - SB3_2023": {
+          "long": "umi",
+          "short": "puupuu"
         },
         "CSD U6 - Combine Inputs - SB3_2222": {
-          "short": "puupuu",
-          "long": "umi"
+          "long": "umi",
+          "short": "puupuu"
+        },
+        "CSD U6 - Combine Inputs - SB4_2023": {
+          "long": "umi",
+          "short": "puupuu"
         },
         "CSD U6 - Combine Inputs - SB4_2222": {
-          "short": "puupuu",
-          "long": "umi"
+          "long": "umi",
+          "short": "puupuu"
+        },
+        "CSD U6 - If Variables - ChalD_2023": {
+          "+": "+",
+          "-": "va"
         },
         "CSD U6 - If Variables - ChalD_2222": {
           "+": "+",
           "-": "va"
         },
+        "CSD U6 - If Variables - ChalD_mb2022": {
+          "+": "+",
+          "-": "va"
+        },
+        "CSD U6 - Music - A_2023": {
+          "Happy": "Fiafia"
+        },
         "CSD U6 - Music - A_2222": {
           "Happy": "Fiafia"
+        },
+        "CSD U6 - Music - ChalD_2023": {
+          "A": "a",
+          "B": "b",
+          "C": "C",
+          "D": "D",
+          "E": "E",
+          "F": "F",
+          "G": "G"
         },
         "CSD U6 - Music - ChalD_2222": {
           "A": "a",
@@ -173,97 +341,243 @@
           "F": "F",
           "G": "G"
         },
-        "CSD U6 - Music - Piano_2222": {
+        "CSD U6 - Music - Piano_2023": {
+          "A": "a",
+          "B": "b",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
+          "G": "G"
+        },
+        "CSD U6 - Music - Piano_2222": {
           "A": "a",
-          "B": "b"
+          "B": "b",
+          "C": "C",
+          "D": "D",
+          "E": "E",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - SB1_2023": {
+          "A": "a",
+          "B": "b",
+          "C": "C",
+          "D": "D",
+          "E": "E",
+          "F": "F",
+          "G": "G"
         },
         "CSD U6 - Music - SB1_2222": {
+          "A": "a",
+          "B": "b",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
+          "G": "G"
+        },
+        "CSD U6 - Music - SB2.5_2023": {
           "A": "a",
-          "B": "b"
+          "B": "b",
+          "C": "C",
+          "D": "D",
+          "E": "E",
+          "F": "F",
+          "G": "G"
         },
         "CSD U6 - Music - SB2.5_2222": {
+          "A": "a",
+          "B": "b",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
+          "G": "G"
+        },
+        "CSD U6 - Music - SB3_2023": {
           "A": "a",
-          "B": "b"
+          "B": "b",
+          "C": "C",
+          "D": "D",
+          "E": "E",
+          "F": "F",
+          "G": "G"
         },
         "CSD U6 - Music - SB3_2222": {
+          "A": "a",
+          "B": "b",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "a",
-          "B": "b"
+          "G": "G"
+        },
+        "CSD U6 - Music - SB4_2023": {
+          "Success!": "Tulaga Manuia"
         },
         "CSD U6 - Music - SB4_2222": {
+          "Success!": "Tulaga Manuia"
+        },
+        "CSD U6 - Physical Input - ChalA_2023": {
           "Success!": "Tulaga Manuia"
         },
         "CSD U6 - Physical Input - ChalA_2222": {
           "Success!": "Tulaga Manuia"
         },
+        "CSD U6 - Physical Input - ChalA_mb2022": {
+          "Success!": "Tulaga Manuia"
+        },
+        "CSD U6 - Physical Input - ChalB_2023": {
+          "Success!": "Tulaga Manuia"
+        },
         "CSD U6 - Physical Input - ChalB_2222": {
+          "Success!": "Tulaga Manuia"
+        },
+        "CSD U6 - Physical Input - ChalB_mb2022": {
+          "Success!": "Tulaga Manuia"
+        },
+        "CSD U6 - Physical Input - ChalC_2023": {
           "Success!": "Tulaga Manuia"
         },
         "CSD U6 - Physical Input - ChalC_2222": {
           "Success!": "Tulaga Manuia"
         },
+        "CSD U6 - Physical Input - ChalC_mb2022": {
+          "Success!": "Tulaga Manuia"
+        },
+        "CSD U6 - Physical Input - PA_2023": {
+          "Score": "Ai"
+        },
         "CSD U6 - Physical Input - PA_2222": {
           "Score": "Ai"
         },
+        "CSD U6 - Physical Input - PA_mb2022": {
+          "Score": "Ai"
+        },
+        "CSD U6 - Physical Input - PC_2023": {
+          "Success!": "Tulaga Manuia"
+        },
         "CSD U6 - Physical Input - PC_2222": {
+          "Success!": "Tulaga Manuia"
+        },
+        "CSD U6 - Physical Input - PD_2023": {
           "Success!": "Tulaga Manuia"
         },
         "CSD U6 - Physical Input - PD_2222": {
           "Success!": "Tulaga Manuia"
         },
+        "CSD U6 - Physical Input - PD_mb2022": {
+          "Success!": "Tulaga Manuia"
+        },
+        "CSD U6 - Physical Input - SB1_2023": {
+          "Success!": "Tulaga Manuia"
+        },
         "CSD U6 - Physical Input - SB1_2222": {
+          "Success!": "Tulaga Manuia"
+        },
+        "CSD U6 - Physical Input - SB1_mb2022": {
+          "Success!": "Tulaga Manuia"
+        },
+        "CSD U6 - Physical Output - ChalA_2023": {
           "Success!": "Tulaga Manuia"
         },
         "CSD U6 - Physical Output - ChalA_2222": {
           "Success!": "Tulaga Manuia"
         },
+        "CSD U6 - Physical Output - ChalA_mb2022": {
+          "Success!": "Tulaga Manuia"
+        },
+        "CSD U6 - Physical Output - ChalB_2023": {
+          "Success!": "Tulaga Manuia"
+        },
         "CSD U6 - Physical Output - ChalB_2222": {
+          "Success!": "Tulaga Manuia"
+        },
+        "CSD U6 - Physical Output - ChalB_mb2022": {
+          "Success!": "Tulaga Manuia"
+        },
+        "CSD U6 - Physical Output - ChalC_2023": {
           "Success!": "Tulaga Manuia"
         },
         "CSD U6 - Physical Output - ChalC_2222": {
           "Success!": "Tulaga Manuia"
         },
+        "CSD U6 - Physical Output - ChalC_mb2022": {
+          "Success!": "Tulaga Manuia"
+        },
+        "CSD U6 - Physical Output - PB_2023": {
+          "Success!": "Tulaga Manuia"
+        },
         "CSD U6 - Physical Output - PB_2222": {
+          "Success!": "Tulaga Manuia"
+        },
+        "CSD U6 - Physical Output - PB_mb2022": {
+          "Success!": "Tulaga Manuia"
+        },
+        "CSD U6 - Physical Output - PC_2023": {
           "Success!": "Tulaga Manuia"
         },
         "CSD U6 - Physical Output - PC_2222": {
           "Success!": "Tulaga Manuia"
         },
+        "CSD U6 - Physical Output - PC_mb2022": {
+          "Success!": "Tulaga Manuia"
+        },
+        "CSD U6 - Physical Output - P_2023": {
+          "Success!": "Tulaga Manuia"
+        },
         "CSD U6 - Physical Output - P_2222": {
+          "Success!": "Tulaga Manuia"
+        },
+        "CSD U6 - Physical Output - P_mb2022": {
+          "Success!": "Tulaga Manuia"
+        },
+        "CSD U6 - Physical Output - SB1_2023": {
           "Success!": "Tulaga Manuia"
         },
         "CSD U6 - Physical Output - SB1_2222": {
           "Success!": "Tulaga Manuia"
         },
+        "CSD U6 - Physical Output - SB1_mb2022": {
+          "Success!": "Tulaga Manuia"
+        },
+        "CSD U6 - Physical Output - SB2.2_2023": {
+          "Success!": "Tulaga Manuia"
+        },
         "CSD U6 - Physical Output - SB2.2_2222": {
+          "Success!": "Tulaga Manuia"
+        },
+        "CSD U6 - Physical Output - SB2.2_mb2022": {
+          "Success!": "Tulaga Manuia"
+        },
+        "CSD U6 - Physical Output - SB2_2023": {
           "Success!": "Tulaga Manuia"
         },
         "CSD U6 - Physical Output - SB2_2222": {
           "Success!": "Tulaga Manuia"
         },
+        "CSD U6 - Physical Output - SB2_mb2022": {
+          "Success!": "Tulaga Manuia"
+        },
+        "CSD U6 - Screen Inputs - A_2023": {
+          "Name:": "Igoa:"
+        },
         "CSD U6 - Screen Inputs - A_2222": {
           "Name:": "Igoa:"
         },
+        "CSD U6 - Screen Inputs - A_mb2022": {
+          "Name:": "Igoa:"
+        },
+        "CSD U6 - Screen Inputs - P_2023": {
+          "Name:": "Igoa:",
+          "Save": "Teu"
+        },
         "CSD U6 - Screen Inputs - P_2222": {
+          "Name:": "Igoa:",
+          "Save": "Teu"
+        },
+        "CSD U6 - Screen Inputs - P_mb2022": {
           "Name:": "Igoa:",
           "Save": "Teu"
         },
@@ -271,26 +585,78 @@
           "black": "uliuli",
           "white": "paepae"
         },
+        "CSD U6 - Screen Inputs - SB2.1_2023": {
+          "black": "uliuli",
+          "white": "paepae"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_mb2022": {
+          "black": "uliuli",
+          "white": "paepae"
+        },
         "CSD U6 - Screen Inputs - SB2.2_2022": {
           "black": "uliuli",
           "white": "paepae"
         },
+        "CSD U6 - Screen Inputs - SB2.2_2023": {
+          "black": "uliuli",
+          "white": "paepae"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_mb2022": {
+          "black": "uliuli",
+          "white": "paepae"
+        },
+        "CSD U6 - Screen Outputs - ChalB_2023": {
+          "Happy": "Fiafia"
+        },
         "CSD U6 - Screen Outputs - ChalB_2222": {
           "Happy": "Fiafia"
+        },
+        "CSD U6 - Screen Outputs - ChalB_mb2022": {
+          "Happy": "Fiafia"
+        },
+        "CSD U6 - Screen Outputs - P_2023": {
+          "title": "ulutala"
         },
         "CSD U6 - Screen Outputs - P_2222": {
           "title": "ulutala"
         },
-        "CSD U6 - Screen Outputs - PracB_2222": {
-          "up": "luga",
+        "CSD U6 - Screen Outputs - P_mb2022": {
+          "title": "ulutala"
+        },
+        "CSD U6 - Screen Outputs - PracB_2023": {
           "down": "lalo",
           "left": "agavale",
-          "right": "taumatau"
+          "right": "taumatau",
+          "up": "luga"
+        },
+        "CSD U6 - Screen Outputs - PracB_2222": {
+          "down": "lalo",
+          "left": "agavale",
+          "right": "taumatau",
+          "up": "luga"
+        },
+        "CSD U6 - Screen Outputs - PracB_mb2022": {
+          "down": "lalo",
+          "left": "agavale",
+          "right": "taumatau",
+          "up": "luga"
+        },
+        "CSD U6 - Screen Outputs - SB1.1_2023": {
+          "name": "igoa"
         },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
           "name": "igoa"
         },
+        "CSD U6 - Screen Outputs - SB1.1_mb2022": {
+          "name": "igoa"
+        },
+        "CSD U6 - Sensors - P_2023": {
+          "text": "tusitusiga"
+        },
         "CSD U6 - Sensors - P_2222": {
+          "text": "tusitusiga"
+        },
+        "CSD U6 - Sensors - P_mb2022": {
           "text": "tusitusiga"
         },
         "CSD U6 Driver pt 2": {
@@ -342,56 +708,56 @@
           "Success!": "Tulaga Manuia"
         },
         "CSD U6 array piano": {
+          "A": "a",
+          "B": "b",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "a",
-          "B": "b"
+          "G": "G"
         },
         "CSD U6 array piano_2018": {
+          "A": "a",
+          "B": "b",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "a",
-          "B": "b"
+          "G": "G"
         },
         "CSD U6 array piano_2019": {
+          "A": "a",
+          "B": "b",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "a",
-          "B": "b"
+          "G": "G"
         },
         "CSD U6 array piano_2021": {
+          "A": "a",
+          "B": "b",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "a",
-          "B": "b"
+          "G": "G"
         },
         "CSD U6 change": {
-          "short": "puupuu",
-          "long": "umi"
+          "long": "umi",
+          "short": "puupuu"
         },
         "CSD U6 change_2018": {
-          "short": "puupuu",
-          "long": "umi"
+          "long": "umi",
+          "short": "puupuu"
         },
         "CSD U6 change_2019": {
-          "short": "puupuu",
-          "long": "umi"
+          "long": "umi",
+          "short": "puupuu"
         },
         "CSD U6 change_2021": {
-          "short": "puupuu",
-          "long": "umi"
+          "long": "umi",
+          "short": "puupuu"
         },
         "CSD U6 colorLeds intensity": {
           "Medium": "Feoloolo"
@@ -418,36 +784,36 @@
           "Happy": "Fiafia"
         },
         "CSD U6 frequency": {
-          "short": "puupuu",
-          "long": "umi"
+          "long": "umi",
+          "short": "puupuu"
         },
         "CSD U6 frequency_2018": {
-          "short": "puupuu",
-          "long": "umi"
+          "long": "umi",
+          "short": "puupuu"
         },
         "CSD U6 frequency_2019": {
-          "short": "puupuu",
-          "long": "umi"
+          "long": "umi",
+          "short": "puupuu"
         },
         "CSD U6 frequency_2021": {
-          "short": "puupuu",
-          "long": "umi"
+          "long": "umi",
+          "short": "puupuu"
         },
         "CSD U6 get toggle": {
-          "short": "puupuu",
-          "long": "umi"
+          "long": "umi",
+          "short": "puupuu"
         },
         "CSD U6 get toggle_2018": {
-          "short": "puupuu",
-          "long": "umi"
+          "long": "umi",
+          "short": "puupuu"
         },
         "CSD U6 get toggle_2019": {
-          "short": "puupuu",
-          "long": "umi"
+          "long": "umi",
+          "short": "puupuu"
         },
         "CSD U6 get toggle_2021": {
-          "short": "puupuu",
-          "long": "umi"
+          "long": "umi",
+          "short": "puupuu"
         },
         "CSD U6 getProperty Demo": {
           "Name:": "Igoa:",
@@ -466,36 +832,36 @@
           "Save": "Teu"
         },
         "CSD U6 getters debug": {
-          "short": "puupuu",
-          "long": "umi"
+          "long": "umi",
+          "short": "puupuu"
         },
         "CSD U6 getters debug_2018": {
-          "short": "puupuu",
-          "long": "umi"
+          "long": "umi",
+          "short": "puupuu"
         },
         "CSD U6 getters debug_2019": {
-          "short": "puupuu",
-          "long": "umi"
+          "long": "umi",
+          "short": "puupuu"
         },
         "CSD U6 getters debug_2021": {
-          "short": "puupuu",
-          "long": "umi"
+          "long": "umi",
+          "short": "puupuu"
         },
         "CSD U6 interval": {
-          "short": "puupuu",
-          "long": "umi"
+          "long": "umi",
+          "short": "puupuu"
         },
         "CSD U6 interval_2018": {
-          "short": "puupuu",
-          "long": "umi"
+          "long": "umi",
+          "short": "puupuu"
         },
         "CSD U6 interval_2019": {
-          "short": "puupuu",
-          "long": "umi"
+          "long": "umi",
+          "short": "puupuu"
         },
         "CSD U6 interval_2021": {
-          "short": "puupuu",
-          "long": "umi"
+          "long": "umi",
+          "short": "puupuu"
         },
         "CSD U6 predict LED button": {
           "Success!": "Tulaga Manuia"
@@ -534,20 +900,20 @@
           "title": "ulutala"
         },
         "CSD U6 slider intro": {
-          "short": "puupuu",
-          "long": "umi"
+          "long": "umi",
+          "short": "puupuu"
         },
         "CSD U6 slider intro_2018": {
-          "short": "puupuu",
-          "long": "umi"
+          "long": "umi",
+          "short": "puupuu"
         },
         "CSD U6 slider intro_2019": {
-          "short": "puupuu",
-          "long": "umi"
+          "long": "umi",
+          "short": "puupuu"
         },
         "CSD U6 slider intro_2021": {
-          "short": "puupuu",
-          "long": "umi"
+          "long": "umi",
+          "short": "puupuu"
         },
         "CSD U6 test LED": {
           "Success!": "Tulaga Manuia"
@@ -564,38 +930,38 @@
         "CSDU4 Crowdsource App Demo": {
           "Cancel": "Taofi",
           "Name:": "Igoa:",
-          "Yes": "Ioe",
           "No": "Leai",
-          "Save": "Teu"
+          "Save": "Teu",
+          "Yes": "Ioe"
         },
         "CSDU4 Crowdsource App Demo_2018": {
           "Cancel": "Taofi",
           "Name:": "Igoa:",
-          "Yes": "Ioe",
           "No": "Leai",
-          "Save": "Teu"
+          "Save": "Teu",
+          "Yes": "Ioe"
         },
         "CSDU4 Crowdsource App Demo_2019": {
           "Cancel": "Taofi",
           "Name:": "Igoa:",
-          "Yes": "Ioe",
           "No": "Leai",
-          "Save": "Teu"
+          "Save": "Teu",
+          "Yes": "Ioe"
         },
         "CSDU4 Decision App Demo": {
-          "Why?": "Aisea?",
           "I don't know": "\"Ou te le iloa.\"",
-          "When?": "Afea?"
+          "When?": "Afea?",
+          "Why?": "Aisea?"
         },
         "CSDU4 Decision App Demo_2018": {
-          "Why?": "Aisea?",
           "I don't know": "\"Ou te le iloa.\"",
-          "When?": "Afea?"
+          "When?": "Afea?",
+          "Why?": "Aisea?"
         },
         "CSDU4 Decision App Demo_2019": {
-          "Why?": "Aisea?",
           "I don't know": "\"Ou te le iloa.\"",
-          "When?": "Afea?"
+          "When?": "Afea?",
+          "Why?": "Aisea?"
         },
         "CSDU4 Functionality visible": {
           "Hide": "Nana"
@@ -610,16 +976,16 @@
           "Cancel": "Taofi"
         },
         "CSDU4 Quiz App Demo": {
-          "Why?": "Aisea?",
-          "When?": "Afea?"
+          "When?": "Afea?",
+          "Why?": "Aisea?"
         },
         "CSDU4 Quiz App Demo_2018": {
-          "Why?": "Aisea?",
-          "When?": "Afea?"
+          "When?": "Afea?",
+          "Why?": "Aisea?"
         },
         "CSDU4 Quiz App Demo_2019": {
-          "Why?": "Aisea?",
-          "When?": "Afea?"
+          "When?": "Afea?",
+          "Why?": "Aisea?"
         },
         "CSDU6 - UI and Inputs - getNumber": {
           "+": "+"
@@ -636,80 +1002,89 @@
         "CSDU6 Circuit Playground Test_2021": {
           "Success!": "Tulaga Manuia"
         },
+        "CSDU6 Circuit Playground Test_2023": {
+          "Success!": "Tulaga Manuia"
+        },
         "CSDU6 Circuit Playground Test_2222": {
           "Success!": "Tulaga Manuia"
         },
+        "CSDU6 Circuit Playground Test_mb2022": {
+          "Success!": "Tulaga Manuia"
+        },
         "CSDU6 circuit playground piano": {
+          "A": "a",
+          "B": "b",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "a",
-          "B": "b"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2018": {
+          "A": "a",
+          "B": "b",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "a",
-          "B": "b"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2019": {
+          "A": "a",
+          "B": "b",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "a",
-          "B": "b"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2021": {
+          "A": "a",
+          "B": "b",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "a",
-          "B": "b"
+          "G": "G"
         },
         "CSDU6 piano with notes": {
+          "A": "a",
+          "B": "b",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "a",
-          "B": "b"
+          "G": "G"
         },
         "CSDU6 piano with notes_2018": {
+          "A": "a",
+          "B": "b",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "a",
-          "B": "b"
+          "G": "G"
         },
         "CSDU6 piano with notes_2019": {
+          "A": "a",
+          "B": "b",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "a",
-          "B": "b"
+          "G": "G"
         },
         "CSDU6 piano with notes_2021": {
+          "A": "a",
+          "B": "b",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "a",
-          "B": "b"
+          "G": "G"
+        },
+        "U9L5 Cropping Widget_ai2023": {
+          "Reset": "Toe amata"
         },
         "allthethings design mode elements": {
           "text": "tusitusiga"
@@ -720,10 +1095,16 @@
         "csd-explore ui-4_2022": {
           "Sorry!": "Faamalie atu"
         },
+        "csd-explore ui-4_2023": {
+          "Sorry!": "Faamalie atu"
+        },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "Faaauau"
         },
         "ml-intro ai lab- fruit veggie widget_2022": {
+          "Continue": "Faaauau"
+        },
+        "ml-intro ai lab- fruit veggie widget_2023": {
           "Continue": "Faaauau"
         },
         "ml-intro app lab-book recommender demo-2021": {
@@ -732,14 +1113,22 @@
         "ml-intro app lab-book recommender demo_2022": {
           "Silly": "Ula"
         },
+        "ml-intro app lab-book recommender demo_2023": {
+          "Silly": "Ula"
+        },
         "ml-model card-medical app v2 2021-2": {
-          "W": "W ",
           "A": "a",
+          "W": "W ",
           "head": "ulu"
         },
         "ml-model card-medical app v2 2021-2_2022": {
-          "W": "W ",
           "A": "a",
+          "W": "W ",
+          "head": "ulu"
+        },
+        "ml-model card-medical app v2 2021-2_2023": {
+          "A": "a",
+          "W": "W ",
           "head": "ulu"
         },
         "ml-model cards-book recommender model card": {
@@ -748,23 +1137,35 @@
         "ml-model cards-book recommender model card_2022": {
           "Silly": "Ula"
         },
+        "ml-model cards-book recommender model card_2023": {
+          "Silly": "Ula"
+        },
         "ml-models in applab-zoo assessment": {
-          "Yes": "Ioe",
+          "B": "b",
           "No": "Leai",
-          "B": "b"
+          "Yes": "Ioe"
         },
         "ml-models in applab-zoo assessment_2022": {
-          "Yes": "Ioe",
+          "B": "b",
           "No": "Leai",
-          "B": "b"
+          "Yes": "Ioe"
+        },
+        "ml-models in applab-zoo assessment_2023": {
+          "B": "b",
+          "No": "Leai",
+          "Yes": "Ioe"
         },
         "ml-models in applab-zoo model embed": {
-          "Yes": "Ioe",
-          "No": "Leai"
+          "No": "Leai",
+          "Yes": "Ioe"
         },
         "ml-models in applab-zoo model embed_2022": {
-          "Yes": "Ioe",
-          "No": "Leai"
+          "No": "Leai",
+          "Yes": "Ioe"
+        },
+        "ml-models in applab-zoo model embed_2023": {
+          "No": "Leai",
+          "Yes": "Ioe"
         },
         "ml-models-shoes decision tree-2021": {
           "Sports": "Taaloga"
@@ -772,17 +1173,26 @@
         "ml-models-shoes decision tree_2022": {
           "Sports": "Taaloga"
         },
+        "ml-models-shoes decision tree_2023": {
+          "Sports": "Taaloga"
+        },
         "ml-use model card-example3A-2021": {
-          "rain": "timu",
-          "snow": "kiona",
           "cloudy": "paolo",
-          "night": "po"
+          "night": "po",
+          "rain": "timu",
+          "snow": "kiona"
         },
         "ml-use model card-example3A_2022": {
-          "rain": "timu",
-          "snow": "kiona",
           "cloudy": "paolo",
-          "night": "po"
+          "night": "po",
+          "rain": "timu",
+          "snow": "kiona"
+        },
+        "ml-use model card-example3A_2023": {
+          "cloudy": "paolo",
+          "night": "po",
+          "rain": "timu",
+          "snow": "kiona"
         }
       }
     }

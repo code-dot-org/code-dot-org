@@ -651,7 +651,7 @@ ja:
         csc-sprite-lab-pixel-editor: 自分だけのスプライトを描こう
         csa-pl-intro-to-strings: Java の文字列入門
         csa-pl-compareTo: compareTo () メソッド
-        csc-event-short-intro: イベントショートイントロ
+        csc-event-short-intro: イベント・ショートイントロダクション
         PL_CSD_CircuitPlayground_Overview_AppsWithDevices: サーキットプレイグラウンドユニットの概要
         csa-day-in-pm-pl: プロジェクトマネージャーは何をしますか？
         csa-pl-intro-to-pm: プロジェクト管理入門
@@ -719,6 +719,15 @@ ja:
         csa_sorting_algorithms: 'CSA: ソートアルゴリズム'
         star_quilts_intro_to_artist: 'スターキルト:アーティスト紹介'
         upload_sprites_backgrounds: カスタムスプライトと背景のアップロード
+        PL_CSD_EquityBlindSpotsvid: 偏見と責任
+        how-ai-works-llms-full: チャットボットと大規模言語モデルの仕組み
+        how-ai-works-creativity-full: AIに創造性と想像力はあるのか？
+        how-ai-works-llms-part1: チャットボットと大規模言語モデル Part 1
+        how-ai-works-llms-part2: チャットボットと大規模言語モデル Part 2
+        what-is-creativity: 創造性とは？
+        code-break: コードブレークを行う
+        csd_ml_how_ai_works: 人工知能のしくみ
+        hoc-dance-ai-warmup: 'ダンスパーティーAI版：ウォームアップ'
     callout:
       text:
         drag_blocks: '「移動」ブロックをドラッグして、ほかのブロックの下にくっつけてください。'

@@ -3,7 +3,8 @@ import {Provider} from 'react-redux';
 import {createStoreWithReducers, registerReducers} from '@cdo/apps/redux';
 import ProgressLessonTeacherInfo from './ProgressLessonTeacherInfo';
 import {LevelKind} from '@cdo/apps/util/sharedConstants';
-import {initProgress, lessons} from '@cdo/apps/code-studio/progressRedux';
+import {initProgress} from '@cdo/apps/code-studio/progressRedux';
+import {lessons} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {
   authorizeLockable,
   setSectionLockStatus,

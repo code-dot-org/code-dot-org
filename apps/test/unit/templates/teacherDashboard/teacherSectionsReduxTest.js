@@ -25,7 +25,6 @@ import reducer, {
   assignmentPaths,
   sectionFromServerSection,
   isAddingSection,
-  isEditingSection,
   beginImportRosterFlow,
   cancelImportRosterFlow,
   importOrUpdateRoster,
@@ -77,6 +76,14 @@ const sections = [
     hidden: false,
     restrict_section: false,
     post_milestone_disabled: false,
+    section_instructors: [
+      {
+        id: 1,
+        status: 'accepted',
+        instructor_name: 'teacher',
+        instructor_email: 'teacher@code.org',
+      },
+    ],
   },
   {
     id: 12,
@@ -99,6 +106,20 @@ const sections = [
     hidden: false,
     restrict_section: false,
     post_milestone_disabled: false,
+    section_instructors: [
+      {
+        id: 2,
+        status: 'accepted',
+        instructor_name: 'teacher',
+        instructor_email: 'teacher@code.org',
+      },
+      {
+        id: 3,
+        status: 'invited',
+        instructor_name: 'coteacher',
+        instructor_email: 'coteacher@code.org',
+      },
+    ],
   },
   {
     id: 307,
@@ -121,6 +142,14 @@ const sections = [
     hidden: false,
     restrict_section: false,
     post_milestone_disabled: false,
+    section_instructors: [
+      {
+        id: 4,
+        status: 'accepted',
+        instructor_name: 'teacher',
+        instructor_email: 'teacher@code.org',
+      },
+    ],
   },
 ];
 
@@ -421,6 +450,20 @@ describe('teacherSectionsRedux', () => {
         postMilestoneDisabled: false,
         codeReviewExpiresAt: null,
         isAssignedCSA: undefined,
+        sectionInstructors: [
+          {
+            id: 2,
+            status: 'accepted',
+            instructor_name: 'teacher',
+            instructor_email: 'teacher@code.org',
+          },
+          {
+            id: 3,
+            status: 'invited',
+            instructor_name: 'coteacher',
+            instructor_email: 'coteacher@code.org',
+          },
+        ],
       });
     });
   });
@@ -703,6 +746,7 @@ describe('teacherSectionsRedux', () => {
           login_type: 'picture',
           grades: ['3'],
           participantType: 'student',
+          section_instructors: [],
         })
       );
 
@@ -737,6 +781,7 @@ describe('teacherSectionsRedux', () => {
           postMilestoneDisabled: false,
           codeReviewExpiresAt: null,
           isAssignedCSA: undefined,
+          sectionInstructors: [],
         },
       });
     });
@@ -1158,29 +1203,6 @@ describe('teacherSectionsRedux', () => {
       const initialState = reducer(initialState, beginEditingSection());
       const state = reducer(initialState, cancelEditingSection());
       assert.isFalse(isAddingSection(state));
-    });
-  });
-
-  describe('isEditingSection', () => {
-    it('is false in initial state', () => {
-      assert.isFalse(isEditingSection(initialState));
-    });
-
-    it('is false when creating a new section', () => {
-      const state = reducer(initialState, beginEditingSection());
-      assert.isFalse(isEditingSection(state));
-    });
-
-    it('is true when editing an existing section', () => {
-      const stateWithSections = reducer(initialState, setSections(sections));
-      const state = reducer(stateWithSections, beginEditingSection(12));
-      assert(isEditingSection(state));
-    });
-
-    it('is false after editing is cancelled', () => {
-      const initialState = reducer(initialState, beginEditingSection());
-      const state = reducer(initialState, cancelEditingSection());
-      assert.isFalse(isEditingSection(state));
     });
   });
 

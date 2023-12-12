@@ -40,6 +40,9 @@ module UsersHelper
 
       # If both users are teachers, transfer ownership of sections
       if source_user.teacher? && destination_user.teacher?
+        SectionInstructor.where(instructor: source_user).each do |si|
+          si.update! instructor: destination_user
+        end
         Section.where(user: source_user).each do |owned_section|
           owned_section.update! user: destination_user
         end
@@ -184,7 +187,7 @@ module UsersHelper
       progress
     end
     timestamp_by_user = progress_by_user.transform_values do |user|
-      user.values.map {|level| level[:last_progress_at]}.compact.max
+      user.values.filter_map {|level| level[:last_progress_at]}.max
     end
 
     [progress_by_user, timestamp_by_user]
@@ -208,7 +211,7 @@ module UsersHelper
   #   3: {}
   # }
   private def teacher_feedbacks_by_student_by_level(users, unit)
-    initial_hash = Hash[users.map {|user| [user.id, {}]}]
+    initial_hash = users.map {|user| [user.id, {}]}.to_h
     TeacherFeedback.
       get_latest_feedbacks_received(users.map(&:id), nil, unit.id).
       group_by(&:student_id).
@@ -439,8 +442,9 @@ module UsersHelper
   def percent_complete_total(unit, user = current_user)
     summary = summarize_user_progress(unit, user)
     levels = unit.script_levels.map(&:level)
+    complete_statuses = %w(perfect passed)
     completed = levels.count do |l|
-      sum = summary[:progress][l.id]; sum && %w(perfect passed).include?(sum[:status])
+      sum = summary[:progress][l.id]; sum && complete_statuses.include?(sum[:status])
     end
     (100.0 * completed / levels.count).round(2)
   end

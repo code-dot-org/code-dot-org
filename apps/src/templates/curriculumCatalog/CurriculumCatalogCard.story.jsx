@@ -17,12 +17,16 @@ const Template = args => (
 
 const defaultArgs = {
   courseDisplayName: 'Computer Science Principles',
+  courseDisplayNameWithLatestYear: 'Computer Science Principles (22-23)',
   duration: 'school_year',
   gradesArray: ['1', '2', '3', '4'],
   topics: ['programming', 'artificial_intelligence', 'art_and_design'],
   isTranslated: true,
   isEnglish: true,
   pathToCourse: '/s/course',
+  isSignedOut: false,
+  isTeacher: true,
+  onQuickViewClick: () => {},
 };
 
 export const AllOptionsCard = Template.bind({});

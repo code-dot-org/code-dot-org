@@ -2,8 +2,313 @@
 ca:
   data:
     unplugged:
+      BigEvent:
+        desc: Els alumnes es familiaritzen amb el concepte de programació d' "esdeveniments",
+          que són accions que un ordinador supervisa constantment. El mestre polsarà
+          botons en un paper a distància i els alumnes reaccionaran depenent de quin
+          botó es prem.
+        title: El gran esdeveniment
+      BigEvent_2018:
+        desc: Els alumnes es familiaritzen amb el concepte de programació d' "esdeveniments",
+          que són accions que un ordinador supervisa constantment. El mestre polsarà
+          botons en un paper a distància i els alumnes reaccionaran depenent de quin
+          botó es prem.
+        title: El gran esdeveniment
+      BigEvent_2019:
+        desc: Els alumnes es familiaritzen amb el concepte de programació d' "esdeveniments",
+          que són accions que un ordinador supervisa constantment. El mestre polsarà
+          botons en un paper a distància i els alumnes reaccionaran depenent de quin
+          botó es prem.
+        title: El gran esdeveniment
+      BinaryBracelets:
+        desc: Els alumnes creen polseres com una representació binària de la primera
+          lletra del seu nom. Els alumnes aprenen que les dades poden ser representades
+          i emmagatzemades de diferents maneres.
+        title: Polseres binàries
+      BinaryBracelets_2018:
+        desc: Els alumnes creen polseres com una representació binària de la primera
+          lletra del seu nom. Els alumnes aprenen que les dades poden ser representades
+          i emmagatzemades de diferents maneres.
+        title: Polseres binàries
+      BinaryBracelets_2019:
+        desc: Els alumnes creen polseres com una representació binària de la primera
+          lletra del seu nom. Els alumnes aprenen que les dades poden ser representades
+          i emmagatzemades de diferents maneres.
+        title: Polseres binàries
+      BinaryImages:
+        desc: Encara que molta gent pensa en el codi binari com a zeros i uns estrictament,
+          els cursos anteriors ens han ensenyat que aquesta informació pot ser representada
+          en una àmplia varietat d'opcions binàries. Aquesta unitat porta aquesta
+          idea un pas més enllà i il·lustra com un ordinador pot emmagatzemar més
+          informació complexa (com ara imatges i colors) en binari, també.
+        title: Imatges binàries
+      BinaryImages_2018:
+        desc: Encara que molta gent pensa en el codi binari com a zeros i uns estrictament,
+          els cursos anteriors ens han ensenyat que aquesta informació pot ser representada
+          en una àmplia varietat d'opcions binàries. Aquesta unitat porta aquesta
+          idea un pas més enllà i il·lustra com un ordinador pot emmagatzemar més
+          informació complexa (com ara imatges i colors) en binari, també.
+        title: Imatges binàries
+      BinaryImages_2019:
+        desc: Encara que molta gent pensa en el codi binari com a zeros i uns estrictament,
+          els cursos anteriors ens han ensenyat que aquesta informació pot ser representada
+          en una àmplia varietat d'opcions binàries. Aquesta unitat porta aquesta
+          idea un pas més enllà i il·lustra com un ordinador pot emmagatzemar més
+          informació complexa (com ara imatges i colors) en binari, també.
+        title: Imatges binàries
+      Booleans:
+        desc: Els booleans són el quart i últim tipus de dades sobre el que aprendràs
+          en aquest curs. En aquesta activitat, aprendràs què són els booleans i com
+          ens poden ajudar a escriure funcions que segueixen la lògica
+        title: Booleans i lògica
+      BuildingAFoundation:
+        desc: Els alumnes construiran una estructura fent servir només els materials
+          proporcionats. Les estructures han de dur a terme una tasca (arribar a una
+          alçada o a un pes concrets), i els alumnes comentaran la idea de persistir
+          quan les coses es compliquen.
+        title: Posant les bases
+      BuildingAFoundation_2019:
+        desc: 'falta traducció: en-US.data.unplugged.BuildingAFoundation_2018.desc'
+        title: 'falta traducció: en-US.data.unplugged.BuildingAFoundation_2018.title'
+      CollisionDetection:
+        desc: Determinar quan els objectes de la pantalla es toquen és un aspecte
+          important de la majoria dels jocs. En aquesta lliçó, ens fixarem en com
+          el Teorema de Pitàgores i la fórmula de la distància es poden fer servir
+          per mesurar la distància entre dos punts sobre el pla i decidir si aquests
+          dos punts (o personatges d'un joc) s'estan tocant.
+        title: Detecció de col·lisions i Teorema de Pitàgores
+      ComputationalThinking:
+        desc: Els alumnes usen les passes del pensament computacional (descomposar,
+          relació de patrons, abstracció, algoritme) per a esbrinar com jugar a un
+          joc que no duu instruccions.
+        title: Pensament computacional
+      Conditionals:
+        desc: Per aprendre de les declaracions de condicionals, els alumnes juguen
+          un joc de cartes i creen normes com "si dibuixo una tarja vermella, puc
+          obtenir un punt" i "si dibuixo una tarja negra, el punt el guanyes tu."
+        title: Condicionals
+      ConditionalsPiecewiseFunctions:
+        desc: Els paràmetres que transmetem a les funcions fan que els resultats siguin
+          diferents a partir d'un patró molt rígid. Suposem que volem els paràmetres
+          que tenen uns certs valors generin resultats a partir d'un únic patró, però
+          que aquells que tenen altres valors segueixin un patró diferent. Bé, doncs
+          aquí és quan entren els condicionals...
+        title: Condicionals i funcions per parts
+      Conditionals_2018:
+        desc: Per aprendre de les declaracions de condicionals, els alumnes juguen
+          un joc de cartes i creen normes com "si dibuixo una tarja vermella, puc
+          obtenir un punt" i "si dibuixo una tarja negra, el punt el guanyes tu."
+        title: Condicionals
+      Conditionals_2019:
+        desc: Per aprendre de les declaracions de condicionals, els alumnes juguen
+          un joc de cartes i creen normes com "si dibuixo una tarja vermella, puc
+          obtenir un punt" i "si dibuixo una tarja negra, el punt el guanyes tu."
+        title: Condicionals
+      Contracts:
+        desc: Els contractes ens obren la porta a entendre i comentar les funcions.
+          En aquesta lliçó, ens fixarem en com els contractes ens poden ajudar a entendre
+          un llenguatge de programació nou o una funció.
+        title: Contractes, domini i rang
+      Crowdsourcing:
+        desc: Els alumnes faran servir la tècnica de la col·laboració oberta, molt
+          freqüent en informàtica, per fer una tasca tots junts d'una manera més eficient
+          que si l'haguessin de fer individualment.
+        title: Col·laboració oberta
+      Crowdsourcing_2019:
+        desc: 'falta traducció: en-US.data.unplugged.Crowdsourcing_2018.desc'
+        title: 'falta traducció: en-US.data.unplugged.Crowdsourcing_2018.title'
+      DesignRecipe:
+        desc: En l'etapa anterior, els alumnes han escrit unes funcions molt senzilles,
+          però com més sofisticades són les funcions, més curós ha de ser el plantejament.
+          La recepta de disseny és una aproximació estructurada a l'escriptura de
+          funcions que inclou un seguit de proves per assegurar-nos que la funció
+          funcioni tal com s'espera.
+        title: La recepta de disseny
+      DiceRace:
+        desc: Aquesta lliçó parla de les situacions de la vida diària en què fem servir
+          algorismes. Així, els alumnes identificaran i escriuran l'algorisme d'una
+          carrera de daus.
+        title: 'Algorismes de la vida real: Cursa de daus'
+      DigitalCitizenship:
+        desc: Els alumnes exploren la diferència entre la informació privada i personal,
+          distingint el que és segur i el que no ho és de compartir en línia.
+        title: Ciutadania digital
+      DigitalFootprint:
+        desc: Els alumnes començaran a aprendre que afegir informació sobre si mateixos
+          a internet crea una petjada o "rastre" digital que té conseqüències.
+        title: La vostra empremta digital
+      DigitalFootprint_2018:
+        desc: Els alumnes començaran a aprendre que afegir informació sobre si mateixos
+          a internet crea una petjada o "rastre" digital que té conseqüències.
+        title: La vostra empremta digital
+      DigitalFootprint_2019:
+        desc: Els alumnes començaran a aprendre que afegir informació sobre si mateixos
+          a internet crea una petjada o "rastre" digital que té conseqüències.
+        title: La vostra empremta digital
+      EnvelopeVariables:
+        desc: En informàtica, les variables ens donen molta llibertat. Aquesta lliçó
+          ajuda a explicar què són i de quines maneres les podem fer servir. Feu aquesta
+          activitat abans (o en combinació amb) la lliçó sobre abstracció perquè la
+          idea quedi ben assimilada.
+        title: Variables en sobres
+      EnvelopeVariables_2019:
+        desc: 'falta traducció: en-US.data.unplugged.EnvelopeVariables_2018.desc'
+        title: 'falta traducció: en-US.data.unplugged.EnvelopeVariables_2018.title'
+      ForLoopFun:
+        desc: Sabem que els bucles ens permeten fer coses una i altra vegada, però
+          ara aprendrem com utilitzar els bucles amb una estructura extra a l'interior.
+        title: Diversió amb bucles "for"
+      ForLoopFun_2019:
+        desc: 'falta traducció: en-US.data.unplugged.ForLoopFun_2018.desc'
+        title: 'falta traducció: en-US.data.unplugged.ForLoopFun_2018.title'
+      FunctionalSuncatchers:
+        desc: Els alumnes creen un algorisme amb variables i funcions (trossos de
+          codi que es volen fer servir moltes vegades) per crear atrapa-somnis amb
+          corda i boletes.
+        title: Funcions atrapa-somnis
+      GettingLoopy:
+        desc: Aquesta lliçó introdueix el concepte de dels bucles en programació (instruccions
+          repetidess) a través d'una activitat de dansa. Els alumnes aprendran coreografies
+          senzilles i, a continuació, aprendran a repetir-ho.
+        title: Fent bucles
+      GettingLoopy_2018:
+        desc: Aquesta lliçó introdueix el concepte de dels bucles en programació (instruccions
+          repetidess) a través d'una activitat de dansa. Els alumnes aprendran coreografies
+          senzilles i, a continuació, aprendran a repetir-ho.
+        title: Fent bucles
+      GettingLoopy_2019:
+        desc: Aquesta lliçó introdueix el concepte de dels bucles en programació (instruccions
+          repetidess) a través d'una activitat de dansa. Els alumnes aprendran coreografies
+          senzilles i, a continuació, aprendran a repetir-ho.
+        title: Fent bucles
+      GoingPlacesSafely:
+        desc: Internet és una eina potent, però a vegades també és un lloc perillós.
+          Els mestres t'expliquen com navegar amb seguretat per internet.
+        title: Anar als llocs amb precaució
+      GoingPlacesSafely_2018:
+        desc: Internet és una eina potent, però a vegades també és un lloc perillós.
+          Els mestres t'expliquen com navegar amb seguretat per internet.
+        title: Anar als llocs amb precaució
+      GoingPlacesSafely_2019:
+        desc: Internet és una eina potent, però a vegades també és un lloc perillós.
+          Els mestres t'expliquen com navegar amb seguretat per internet.
+        title: Anar als llocs amb precaució
+      GraphPaperProgramming:
+        desc: Els alumnes escriuen un algoritme (un conjunt d'instruccions) utilitzant
+          un grup d'ordres predefinides per dirigir els seus companys a reproduir
+          un dibuix.
+        title: Programació de paper quadriculat
+      GraphPaperProgramming_2018:
+        desc: Els alumnes escriuen un algoritme (un conjunt d'instruccions) utilitzant
+          un grup d'ordres predefinides per dirigir els seus companys a reproduir
+          un dibuix.
+        title: Programació de paper quadriculat
+      GraphPaperProgramming_2019:
+        desc: Els alumnes escriuen un algoritme (un conjunt d'instruccions) utilitzant
+          un grup d'ordres predefinides per dirigir els seus companys a reproduir
+          un dibuix.
+        title: Programació de paper quadriculat
+      GraphingData_2019:
+        desc: En aquesta lliçó, els estudiants recopilaran dades d'un projecte del
+          Laboratori de Jocs o d'una situació del món real i les utilitzaran per fer
+          prediccions.
+        title: Dades en imatges
+      Internet:
+        desc: Els alumnes envien missatges representant diversos mètodes de transmissió
+          d'internet utilitzant peces de paper.
+        title: Internet
+      Internet_2019:
+        desc: 'falta traducció: en-US.data.unplugged.Internet_2018.desc'
+        title: 'falta traducció: en-US.data.unplugged.Internet_2018.title'
+      MadGlibs:
+        desc: L'abstracció és una de les habilitats més importants que un programador
+          científic ha d'entendre. Aquesta activitat tindrà els vostres alumnes analitzant
+          les diferències en les històries de manera que puguin abstreure-les. Aquestes
+          històries esdevenen plantilles divertides i noves.
+        title: Mad Glibs
+      MoveIt:
+        desc: Els alumnes creen algorismes senzills (conjunts d'instruccions) per
+          moure un personatge a través d'un laberint utilitzant tant sols una ordre.
+        title: Mou-te, mou-te
+      MoveItMoveIt_2018:
+        title: A moure's!
+      MoveItMoveIt_2019:
+        title: A moure's!
+      PaperPlanes:
+        desc: Aquesta unitat ens repta a utilitzar els algorismes en la nostra vida
+          diària, concretament fent avions de paper. La unitat també se centra en
+          un panorama més ampli de la informàtica i com els algorismes hi juguen un
+          paper essencial.
+        title: 'Algorismes de la vida quotidiana: Avions de paper'
+      PaperPlanes_2018:
+        desc: Aquesta unitat ens repta a utilitzar els algorismes en la nostra vida
+          diària, concretament fent avions de paper. La unitat també se centra en
+          un panorama més ampli de la informàtica i com els algorismes hi juguen un
+          paper essencial.
+        title: 'Algorismes de la vida quotidiana: Avions de paper'
+      PaperPlanes_2019:
+        desc: Aquesta unitat ens repta a utilitzar els algorismes en la nostra vida
+          diària, concretament fent avions de paper. La unitat també se centra en
+          un panorama més ampli de la informàtica i com els algorismes hi juguen un
+          paper essencial.
+        title: 'Algorismes de la vida quotidiana: Avions de paper'
+      PlantASeed:
+        desc: Aquesta unitat remarca com utilitzem els algorismes a la nostra vida
+          diària, utilitzant el fet de plantar una llavor com a exemple. També es
+          centra en un marc més ampli de la informàtica i com els algorismes hi juguen
+          un paper important.
+        title: 'Algorismes de la vida quotidiana: Planta una llavor'
+      PlantASeed_2018:
+        desc: Aquesta unitat remarca com utilitzem els algorismes a la nostra vida
+          diària, utilitzant el fet de plantar una llavor com a exemple. També es
+          centra en un marc més ampli de la informàtica i com els algorismes hi juguen
+          un paper important.
+        title: 'Algorismes de la vida quotidiana: Planta una llavor'
+      PlantASeed_2019:
+        desc: Aquesta unitat remarca com utilitzem els algorismes a la nostra vida
+          diària, utilitzant el fet de plantar una llavor com a exemple. També es
+          centra en un marc més ampli de la informàtica i com els algorismes hi juguen
+          un paper important.
+        title: 'Algorismes de la vida quotidiana: Planta una llavor'
+      RelayProgramming:
+        desc: Els estudiants executen una cursa de relleus on corren a través del
+          pati per escriure un algoritme basat en la imatge "Programació de paper
+          quadriculat". Només poden escriure una instrucció cada vegada i si hi ha
+          un error han d'esborrar-ho tot fins el principi.
+        title: Programació en relleus
+      RelayProgramming_2018:
+        desc: Aquesta activitat comença amb una lliçó breu sobre depuració i persistència,
+          i de seguida es converteix en una cursa a contrarellotge en què els alumnes
+          formaran equips i treballaran junts per escriure un programa amb totes les
+          instruccions corresponents.
+        title: Programació amb relleus
+      RelayProgramming_2018_2019:
+        desc: Aquesta activitat comença amb una lliçó breu sobre depuració i persistència,
+          i de seguida es converteix en una cursa a contrarellotge en què els alumnes
+          formaran equips i treballaran junts per escriure un programa amb totes les
+          instruccions corresponents.
+        title: Programació amb relleus
+      SongwritingParameters:
+        desc: Els alumnes utilitzen el concepte de la tornada en una cançó per aprendre
+          sobre passar paràmetres (que personalitzen una funció sense haver de reescriure-la).
+        title: Composició de cançons
+      SongwritingParameters_2019:
+        desc: 'falta traducció: en-US.data.unplugged.SongwritingParameters_2018.desc'
+        title: 'falta traducció: en-US.data.unplugged.SongwritingParameters_2018.title'
+      SongwritingWithParameters:
+        desc: 'Una de les estructures més esplèndides en el món de la programació
+          és la funció. Les funcions (a vegades anomenades procediments) són mini
+          programes que pots utilitzar una i altra vegada dins d''un programa més
+          gran. Aquesta unitat ajudarà als estudiants a entendre intuïtivament perquè
+          combinant trossos de programació cap a funcions és un exercici tant útil.  '
+        title: Composició de cançons Amb Paràmetres
+      TangramAlgorithms:
+        desc: Aquesta lliçó ens ensenya un tret molt important dels algorismes. Si
+          l'algorisme és senzill, hi haurà moltes maneres de fer-lo servir. Si volem
+          que tothom acabi obtenint el mateix, llavors l'algorisme haurà de ser més
+          detallat.
+        title: Algorismes de Tàngram
       Unplug1:
-        title: Introducció a la informàtica
         desc: Aquesta unitat introdueix el concepte informàtica i explica que fan
           els informàtics. També dona als estudiants l’oportunitat d’assumir el rol
           d’un informàtic. Al final de l’activitat cada estudiant podrà emportar-se
@@ -11,8 +316,18 @@ ca:
           no ensenyar el vocabulari clau associat a la lliçó als més petitons, però
           recorda que si intentes presentar-la ara de manera divertida i amena serà
           molt més productiu que no pas deixar-ho per a oportunitats futures.
+        title: Introducció a la informàtica
+      Unplug10:
+        desc: En aquesta lliçó, els alumnes fingiran que naveguen per internet mentre
+          aprenen sobre adreces web, IP i DNS.
+        title: Internet
+      Unplug11:
+        desc: La recapitulació final a la primera sèrie de 20 hores ajudarà la classe
+          a reviure tots els seus moments preferits al mateix temps que els hi proporciona
+          els passos següents que han de prendre si estan interessats a continuar
+          l'odissea informàtica.
+        title: Recapitulació
       Unplug2:
-        title: Pensament computacional
         desc: Amb res més que paper i rotulador, els alumnes aprendran els 4 passos
           del pensament computacional. Després d'una breu introducció, els alumnes
           es dividiran en grups on hauran de crear instruccions pels altres alumnes
@@ -23,22 +338,22 @@ ca:
           perquè l'altre grup dibuixi un monstre concret. Els grups intercanviaran
           algorismes entre ells per dibuixar un monstre basat en el què indiqui l'algorisme.
           És el dibuix final el que el grup original pretenia crear?
+        title: Pensament computacional
       Unplug3:
-        title: Programació de paper quadriculat
         desc: Els alumnes començaran a entendre en que consisteix la programació programant-se
           entre ells per pintar dibuixos. La classe començarà amb els alumnes intercanviant
           instruccions per pintar quadrats en un full quadriculat amb la finalitat
           de reproduir una imatge. Si queda temps al final de la sessió els alumnes
           poden acabar utilitzant els seus propis dibuixos per programar.
+        title: Programació de paper quadriculat
       Unplug4:
-        title: Algorismes
         desc: Aquesta classe cobreix algorismes.  Utilitzant formes de tangram i paper
           gràfic, el primer exercici mostrarà com  d'important és fer cada instrucció
           com més clara i inequívoca com sigui possible.  Després, explorarem de quantes
           maneres es poden doblegar un paper en un rectangle, assenyalant com alguns
           mètodes poden prendre més o menys plecs que altres.
+        title: Algorismes
       Unplug5:
-        title: Funcions
         desc: En aquesta lliçó, els alumnes faran un atrapa-somnis amb corda, boletes
           i un penjoll. Els alumnes seguiran una sèrie de passos repetitius i després
           se'ls demanarà que identifiquin certs conjunts "d'habilitats" que es dupliquen
@@ -50,582 +365,267 @@ ca:
           dels materials específics que facin servir per crear uns termes generals
           per descriure els materials de cadascun. Aquest ús de nomenclatura general
           és una manera fantàstica d'introduir les variables.
+        title: Funcions
       Unplug6:
-        title: Condicions
         desc: Això és un joc de classe. Després d'introduir la idea dels condicionals,
           les declaracions -si i els bucles, el grup-classe pot practicar tot junts
           utilitzant un programa pre-escrit, un joc de cartes i la sort del sorteig.
+        title: Condicions
       Unplug7:
-        title: Escriptura de la cançó
         desc: Per a la majoria d'alumnes, llegir lletres de cançons serà una activitat
           força coneguda. Agafarem aquest exercici d'ús freqüent i li donarem una
           volta per convertir-lo en una activitat potent sobre com definir i cridar
           funcions. Quan els alumnes s'hagin familiartizat amb el procés de definir/cridar,
           hi afegirem algunes capacitats addicionals relacionades amb els paràmetres
           que hi ha dins d'aquestes crides de funcions.
+        title: Escriptura de la cançó
       Unplug8:
-        title: Abstracció
         desc: Aquesta activitat combina la rutina diària dels alumnes amb un joc de
           paraules per ajudar la classe a aprendre que l'abstracció pot resultar molt
           eficaç.
+        title: Abstracció
       Unplug9:
-        title: Programació de Relé
         desc: Aquesta unitat pren la idea d'una activitat anterior (4. Programant
           amb paper gràfic) i l'utilitzarà per remarcar la rellevància de completar
           els programes que operen en una seqüència i de verificar freqüentment programes
           pels "errors".
-      Unplug10:
-        title: Internet
-        desc: En aquesta lliçó, els alumnes fingiran que naveguen per internet mentre
-          aprenen sobre adreces web, IP i DNS.
-      Unplug11:
-        title: Recapitulació
-        desc: La recapitulació final a la primera sèrie de 20 hores ajudarà la classe
-          a reviure tots els seus moments preferits al mateix temps que els hi proporciona
-          els passos següents que han de prendre si estan interessats a continuar
-          l'odissea informàtica.
+        title: Programació de Relé
       UnplugHappyMaps:
+        desc: Els alumnes creen algorismes senzills (conjunts d'instruccions) per
+          moure un personatge a través d'un laberint utilitzant tant sols una ordre.
         title: Mapes Feliços
+      UnplugHappyMaps_2018:
         desc: Els alumnes creen algorismes senzills (conjunts d'instruccions) per
           moure un personatge a través d'un laberint utilitzant tant sols una ordre.
-      MoveIt:
-        title: Mou-te, mou-te
+        title: Mapes Feliços
+      UnplugHappyMaps_2019:
         desc: Els alumnes creen algorismes senzills (conjunts d'instruccions) per
           moure un personatge a través d'un laberint utilitzant tant sols una ordre.
-      PlantASeed:
-        title: 'Algorismes de la vida quotidiana: Planta una llavor'
-        desc: Aquesta unitat remarca com utilitzem els algorismes a la nostra vida
-          diària, utilitzant el fet de plantar una llavor com a exemple. També es
-          centra en un marc més ampli de la informàtica i com els algorismes hi juguen
-          un paper important.
-      BuildingAFoundation:
-        title: Posant les bases
-        desc: Els alumnes construiran una estructura fent servir només els materials
-          proporcionats. Les estructures han de dur a terme una tasca (arribar a una
-          alçada o a un pes concrets), i els alumnes comentaran la idea de persistir
-          quan les coses es compliquen.
-      GettingLoopy:
-        title: Fent bucles
-        desc: Aquesta lliçó introdueix el concepte de dels bucles en programació (instruccions
-          repetidess) a través d'una activitat de dansa. Els alumnes aprendran coreografies
-          senzilles i, a continuació, aprendran a repetir-ho.
-      RelayProgramming:
-        title: Programació en relleus
-        desc: Els estudiants executen una cursa de relleus on corren a través del
-          pati per escriure un algoritme basat en la imatge "Programació de paper
-          quadriculat". Només poden escriure una instrucció cada vegada i si hi ha
-          un error han d'esborrar-ho tot fins el principi.
-      Conditionals:
-        title: Condicionals
-        desc: Per aprendre de les declaracions de condicionals, els alumnes juguen
-          un joc de cartes i creen normes com "si dibuixo una tarja vermella, puc
-          obtenir un punt" i "si dibuixo una tarja negra, el punt el guanyes tu."
-      BigEvent:
-        title: El gran esdeveniment
-        desc: Els alumnes es familiaritzen amb el concepte de programació d' "esdeveniments",
-          que són accions que un ordinador supervisa constantment. El mestre polsarà
-          botons en un paper a distància i els alumnes reaccionaran depenent de quin
-          botó es prem.
-      GoingPlacesSafely:
-        title: Anar als llocs amb precaució
-        desc: Internet és una eina potent, però a vegades també és un lloc perillós.
-          Els mestres t'expliquen com navegar amb seguretat per internet.
-      GraphPaperProgramming:
-        title: Programació de paper quadriculat
-        desc: Els alumnes escriuen un algoritme (un conjunt d'instruccions) utilitzant
-          un grup d'ordres predefinides per dirigir els seus companys a reproduir
-          un dibuix.
-      PaperPlanes:
-        title: 'Algorismes de la vida quotidiana: Avions de paper'
-        desc: Aquesta unitat ens repta a utilitzar els algorismes en la nostra vida
-          diària, concretament fent avions de paper. La unitat també se centra en
-          un panorama més ampli de la informàtica i com els algorismes hi juguen un
-          paper essencial.
-      BinaryBracelets:
-        title: Polseres binàries
-        desc: Els alumnes creen polseres com una representació binària de la primera
-          lletra del seu nom. Els alumnes aprenen que les dades poden ser representades
-          i emmagatzemades de diferents maneres.
-      DigitalFootprint:
-        title: La vostra empremta digital
-        desc: Els alumnes començaran a aprendre que afegir informació sobre si mateixos
-          a internet crea una petjada o "rastre" digital que té conseqüències.
-      ComputationalThinking:
-        title: Pensament computacional
-        desc: Els alumnes usen les passes del pensament computacional (descomposar,
-          relació de patrons, abstracció, algoritme) per a esbrinar com jugar a un
-          joc que no duu instruccions.
-      FunctionalSuncatchers:
-        title: Funcions atrapa-somnis
-        desc: Els alumnes creen un algorisme amb variables i funcions (trossos de
-          codi que es volen fer servir moltes vegades) per crear atrapa-somnis amb
-          corda i boletes.
-      SongwritingParameters:
-        title: Composició de cançons
-        desc: Els alumnes utilitzen el concepte de la tornada en una cançó per aprendre
-          sobre passar paràmetres (que personalitzen una funció sense haver de reescriure-la).
-      DiceRace:
-        title: 'Algorismes de la vida real: Cursa de daus'
-        desc: Aquesta lliçó parla de les situacions de la vida diària en què fem servir
-          algorismes. Així, els alumnes identificaran i escriuran l'algorisme d'una
-          carrera de daus.
-      Internet:
-        title: Internet
-        desc: Els alumnes envien missatges representant diversos mètodes de transmissió
-          d'internet utilitzant peces de paper.
-      Crowdsourcing:
-        title: Col·laboració oberta
-        desc: Els alumnes faran servir la tècnica de la col·laboració oberta, molt
-          freqüent en informàtica, per fer una tasca tots junts d'una manera més eficient
-          que si l'haguessin de fer individualment.
-      DigitalCitizenship:
-        title: Ciutadania digital
-        desc: Els alumnes exploren la diferència entre la informació privada i personal,
-          distingint el que és segur i el que no ho és de compartir en línia.
-      TangramAlgorithms:
-        title: Algorismes de Tàngram
-        desc: Aquesta lliçó ens ensenya un tret molt important dels algorismes. Si
-          l'algorisme és senzill, hi haurà moltes maneres de fer-lo servir. Si volem
-          que tothom acabi obtenint el mateix, llavors l'algorisme haurà de ser més
-          detallat.
-      EnvelopeVariables:
-        title: Variables en sobres
-        desc: En informàtica, les variables ens donen molta llibertat. Aquesta lliçó
-          ajuda a explicar què són i de quines maneres les podem fer servir. Feu aquesta
-          activitat abans (o en combinació amb) la lliçó sobre abstracció perquè la
-          idea quedi ben assimilada.
-      MadGlibs:
-        title: Mad Glibs
-        desc: L'abstracció és una de les habilitats més importants que un programador
-          científic ha d'entendre. Aquesta activitat tindrà els vostres alumnes analitzant
-          les diferències en les històries de manera que puguin abstreure-les. Aquestes
-          històries esdevenen plantilles divertides i noves.
-      ForLoopFun:
-        title: Diversió amb bucles "for"
-        desc: Sabem que els bucles ens permeten fer coses una i altra vegada, però
-          ara aprendrem com utilitzar els bucles amb una estructura extra a l'interior.
-      SongwritingWithParameters:
-        title: Composició de cançons Amb Paràmetres
-        desc: 'Una de les estructures més esplèndides en el món de la programació
-          és la funció. Les funcions (a vegades anomenades procediments) són mini
-          programes que pots utilitzar una i altra vegada dins d''un programa més
-          gran. Aquesta unitat ajudarà als estudiants a entendre intuïtivament perquè
-          combinant trossos de programació cap a funcions és un exercici tant útil.  '
-      BinaryImages:
-        title: Imatges binàries
-        desc: Encara que molta gent pensa en el codi binari com a zeros i uns estrictament,
-          els cursos anteriors ens han ensenyat que aquesta informació pot ser representada
-          en una àmplia varietat d'opcions binàries. Aquesta unitat porta aquesta
-          idea un pas més enllà i il·lustra com un ordinador pot emmagatzemar més
-          informació complexa (com ara imatges i colors) en binari, també.
+        title: Mapes Feliços
       VideoGamesCoordinatePlanes:
-        title: Videojocs i plans de coordenades
         desc: Descobrim que els videojocs que més ens agraden estan regits per l'àlgebra!
           Explorem com les expressions algebraiques i el pla cartesià ens auden a
           entendre com funcionen els videojocs per, a partir d'aquí, començar a planificar
           el videojoc que volem crear.
-      Contracts:
-        title: Contractes, domini i rang
-        desc: Els contractes ens obren la porta a entendre i comentar les funcions.
-          En aquesta lliçó, ens fixarem en com els contractes ens poden ajudar a entendre
-          un llenguatge de programació nou o una funció.
-      DesignRecipe:
-        title: La recepta de disseny
-        desc: En l'etapa anterior, els alumnes han escrit unes funcions molt senzilles,
-          però com més sofisticades són les funcions, més curós ha de ser el plantejament.
-          La recepta de disseny és una aproximació estructurada a l'escriptura de
-          funcions que inclou un seguit de proves per assegurar-nos que la funció
-          funcioni tal com s'espera.
-      Booleans:
-        title: Booleans i lògica
-        desc: Els booleans són el quart i últim tipus de dades sobre el que aprendràs
-          en aquest curs. En aquesta activitat, aprendràs què són els booleans i com
-          ens poden ajudar a escriure funcions que segueixen la lògica
-      ConditionalsPiecewiseFunctions:
-        title: Condicionals i funcions per parts
-        desc: Els paràmetres que transmetem a les funcions fan que els resultats siguin
-          diferents a partir d'un patró molt rígid. Suposem que volem els paràmetres
-          que tenen uns certs valors generin resultats a partir d'un únic patró, però
-          que aquells que tenen altres valors segueixin un patró diferent. Bé, doncs
-          aquí és quan entren els condicionals...
-      CollisionDetection:
-        title: Detecció de col·lisions i Teorema de Pitàgores
-        desc: Determinar quan els objectes de la pantalla es toquen és un aspecte
-          important de la majoria dels jocs. En aquesta lliçó, ens fixarem en com
-          el Teorema de Pitàgores i la fórmula de la distància es poden fer servir
-          per mesurar la distància entre dos punts sobre el pla i decidir si aquests
-          dos punts (o personatges d'un joc) s'estan tocant.
-      courseA_unplugged_loops:
-        title: Bucles sense connexió
-        desc: En aquesta lliçó, descobriràs els bucles!
-      courseB_unplugged_MRF:
-        title: Activitat sense connexió
-        desc: En aquesta lliçó, “programaràs” els teus amics!
-      courseB_unplugged_loopyMRF:
-        title: Activitat sense connexió
-        desc: Igual que a "Els meus amics robòtics", aquí "programaràs" els teus amics,
-          però aquest cop faràs servir bucles!
-      courseC_Unplugged_ScreenOutTheMean:
-        title: Activitat sense connexió
-        desc: Avui veurem què hem de fer si veiem que algú és cruel a internet
-      courseD_unplugged_digitalCitizenship:
-        title: Activitat sense connexió
-        desc: Avui aprendrem què vol dir ser un Ciutadà Digital.
-      courseE_unplugged_privateInformation:
-        title: 'Common Sense Education: Informació privada i personal '
-        desc: Avui aprendrem la diferència entre informació privada i personal!
-      courseF_unplugged_powerOfWords:
-        title: Activitat sense connexió
-        desc: Avui veurem què hem de fer si veiem que algú és cruel a internet
-      deeper learning description:
-        desc: 'falta traducció: en-US.data.unplugged.desc'
-      courseAB_unplugged_plantASeed:
-        title: 'Algorismes de la vida quotidiana: Planta una llavor'
-        desc: Aquesta unitat remarca com utilitzem els algorismes a la nostra vida
-          diària, utilitzant el fet de plantar una llavor com a exemple. També es
-          centra en un marc més ampli de la informàtica i com els algorismes hi juguen
-          un paper important.
-      courseA_unplugged_happyMaps:
-        title: Mapes Feliços
-        desc: Els alumnes creen algorismes senzills (conjunts d'instruccions) per
-          moure un personatge a través d'un laberint utilitzant tant sols una ordre.
-      courseA_unplugged_goingPlacesSafely:
-        title: Anar als llocs amb precaució
-        desc: Internet és una eina potent, però a vegades també és un lloc perillós.
-          Els mestres t'expliquen com navegar amb seguretat per internet.
+        title: Videojocs i plans de coordenades
       courseABC_unplugged_bigEvent:
-        title: El gran esdeveniment
         desc: Els alumnes es familiaritzen amb el concepte de programació d' "esdeveniments",
           que són accions que un ordinador supervisa constantment. El mestre polsarà
           botons en un paper a distància i els alumnes reaccionaran depenent de quin
           botó es prem.
+        title: El gran esdeveniment
+      courseAB_unplugged_plantASeed:
+        desc: Aquesta unitat remarca com utilitzem els algorismes a la nostra vida
+          diària, utilitzant el fet de plantar una llavor com a exemple. També es
+          centra en un marc més ampli de la informàtica i com els algorismes hi juguen
+          un paper important.
+        title: 'Algorismes de la vida quotidiana: Planta una llavor'
+      courseA_unplugged_goingPlacesSafely:
+        desc: Internet és una eina potent, però a vegades també és un lloc perillós.
+          Els mestres t'expliquen com navegar amb seguretat per internet.
+        title: Anar als llocs amb precaució
+      courseA_unplugged_happyMaps:
+        desc: Els alumnes creen algorismes senzills (conjunts d'instruccions) per
+          moure un personatge a través d'un laberint utilitzant tant sols una ordre.
+        title: Mapes Feliços
+      courseA_unplugged_loops:
+        desc: En aquesta lliçó, descobriràs els bucles!
+        title: Bucles sense connexió
+      courseA_unplugged_loops_2018:
+        desc: En aquesta lliçó, descobriràs els bucles!
+        title: Bucles sense connexió
+      courseA_unplugged_loops_2019:
+        desc: En aquesta lliçó, descobriràs els bucles!
+        title: Bucles sense connexió
+      courseB_unplugged_CnC_2018:
+        desc: Aquesta lliçó, cedida a Fonaments de la Informàtica per l'equip de Copyright
+          and Creativity, ajuda els alumnes a entendre el procés creatiu de compartir
+          contingut i inspirar-nos. Per altra banda, també fomenta l'expressió de
+          la creativitat i la necessitat de ser justos amb el trenall creatiu dels
+          altres.
+        title: No hi ha res com crear i utilitzar de manera justa
+      courseB_unplugged_CnC_2019:
+        desc: Aquesta lliçó, cedida a Fonaments de la Informàtica per l'equip de Copyright
+          and Creativity, ajuda els alumnes a entendre el procés creatiu de compartir
+          contingut i inspirar-nos. Per altra banda, també fomenta l'expressió de
+          la creativitat i la necessitat de ser justos amb el trenall creatiu dels
+          altres.
+        title: No hi ha res com crear i utilitzar de manera justa
+      courseB_unplugged_MRF:
+        desc: En aquesta lliçó, “programaràs” els teus amics!
+        title: Activitat sense connexió
+      courseB_unplugged_MRF_2018:
+        desc: Aprèn a programar escrivint codi per controlar els teus amics!
+        title: Els meus amics robòtics
+      courseB_unplugged_MRF_2019:
+        desc: Aprèn a programar escrivint codi per controlar els teus amics!
+        title: Els meus amics robòtics
       courseB_unplugged_digitalFootprint:
-        title: La vostra empremta digital
         desc: Els alumnes començaran a aprendre que afegir informació sobre si mateixos
           a internet crea una petjada o "rastre" digital que té conseqüències.
+        title: La vostra empremta digital
+      courseB_unplugged_loopyMRF:
+        desc: Igual que a "Els meus amics robòtics", aquí "programaràs" els teus amics,
+          però aquest cop faràs servir bucles!
+        title: Activitat sense connexió
+      courseB_unplugged_loopyMRF_2019:
+        title: Els meus amics robòtics amb bucles
+      courseB_unplugged_passwords_2019:
+        desc: Pensa per què fem servir contrasenyes, aprèn els beneficis que ens aporten
+          i descobreix quines estratègies hi ha per crear contrasenyes potents i segures.
+        title: Contrasenyes potents
+      courseC_Unplugged_ScreenOutTheMean:
+        desc: Avui veurem què hem de fer si veiem que algú és cruel a internet
+        title: Activitat sense connexió
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        desc: Avui veurem què hem de fer si veiem que algú és cruel a internet
+        title: Activitat sense connexió
+      courseC_Unplugged_ScreenOutTheMean_2019:
+        desc: Avui veurem què hem de fer si veiem que algú és cruel a internet
+        title: Activitat sense connexió
+      courseC_unplugged_binaryBracelets:
+        desc: Els alumnes creen polseres com una representació binària de la primera
+          lletra del seu nom. Els alumnes aprenen que les dades poden ser representades
+          i emmagatzemades de diferents maneres.
+        title: Polseres binàries
       courseC_unplugged_buildingAFoundation:
-        title: Posant les bases
         desc: Els alumnes construiran una estructura fent servir només els materials
           proporcionats. Les estructures han de dur a terme una tasca (arribar a una
           alçada o a un pes concrets), i els alumnes comentaran la idea de persistir
           quan les coses es compliquen.
+        title: Posant les bases
+      courseC_unplugged_gettingLoopy:
+        desc: Aquesta lliçó introdueix el concepte de dels bucles en programació (instruccions
+          repetidess) a través d'una activitat de dansa. Els alumnes aprendran coreografies
+          senzilles i, a continuació, aprendran a repetir-ho.
+        title: Fent bucles
       courseC_unplugged_paperPlanes:
-        title: 'Algorismes de la vida quotidiana: Avions de paper'
         desc: Aquesta unitat ens repta a utilitzar els algorismes en la nostra vida
           diària, concretament fent avions de paper. La unitat també se centra en
           un panorama més ampli de la informàtica i com els algorismes hi juguen un
           paper essencial.
-      courseC_unplugged_gettingLoopy:
-        title: Fent bucles
-        desc: Aquesta lliçó introdueix el concepte de dels bucles en programació (instruccions
-          repetidess) a través d'una activitat de dansa. Els alumnes aprendran coreografies
-          senzilles i, a continuació, aprendran a repetir-ho.
-      courseC_unplugged_binaryBracelets:
-        title: Polseres binàries
-        desc: Els alumnes creen polseres com una representació binària de la primera
-          lletra del seu nom. Els alumnes aprenen que les dades poden ser representades
-          i emmagatzemades de diferents maneres.
-      courseD_unplugged_graphPaperProgramming:
-        title: Programació de paper quadriculat
-        desc: Els alumnes escriuen un algoritme (un conjunt d'instruccions) utilitzant
-          un grup d'ordres predefinides per dirigir els seus companys a reproduir
-          un dibuix.
-      courseD_unplugged_relayProgramming:
-        title: Programació amb relleus
-        desc: Els estudiants executen una cursa de relleus on corren a través del
-          pati per escriure un algoritme basat en la imatge "Programació de paper
-          quadriculat". Només poden escriure una instrucció cada vegada i si hi ha
-          un error han d'esborrar-ho tot fins el principi.
-      courseD_unplugged_conditionalsCards:
-        title: Condicionals amb cartes
-        desc: Per aprendre de les declaracions de condicionals, els alumnes juguen
-          un joc de cartes i creen normes com "si dibuixo una tarja vermella, puc
-          obtenir un punt" i "si dibuixo una tarja negra, el punt el guanyes tu."
+        title: 'Algorismes de la vida quotidiana: Avions de paper'
       courseD_unplugged_binaryImages:
-        title: Imatges binàries
         desc: Encara que molta gent pensa en el codi binari com a zeros i uns estrictament,
           els cursos anteriors ens han ensenyat que aquesta informació pot ser representada
           en una àmplia varietat d'opcions binàries. Aquesta unitat porta aquesta
           idea un pas més enllà i il·lustra com un ordinador pot emmagatzemar més
           informació complexa (com ara imatges i colors) en binari, també.
-      courseE_unplugged_diceRace:
-        title: 'Algorismes de la vida real: Cursa de daus'
-        desc: Aquesta lliçó parla de les situacions de la vida diària en què fem servir
-          algorismes. Així, els alumnes identificaran i escriuran l'algorisme d'una
-          carrera de daus.
-      courseE_unplugged_songwritingParameters:
-        title: Composició amb paràmetres
-        desc: Els alumnes utilitzen el concepte de la tornada en una cançó per aprendre
-          sobre passar paràmetres (que personalitzen una funció sense haver de reescriure-la).
-      courseE_unplugged_internet:
-        title: Internet
-        desc: Els alumnes envien missatges representant diversos mètodes de transmissió
-          d'internet utilitzant peces de paper.
+        title: Imatges binàries
+      courseD_unplugged_conditionalsCards:
+        desc: Per aprendre de les declaracions de condicionals, els alumnes juguen
+          un joc de cartes i creen normes com "si dibuixo una tarja vermella, puc
+          obtenir un punt" i "si dibuixo una tarja negra, el punt el guanyes tu."
+        title: Condicionals amb cartes
+      courseD_unplugged_digitalCitizenship:
+        desc: Avui aprendrem què vol dir ser un Ciutadà Digital.
+        title: Activitat sense connexió
+      courseD_unplugged_digitalCitizenship_2018:
+        desc: Avui aprendrem què vol dir ser un Ciutadà Digital.
+        title: Activitat sense connexió
+      courseD_unplugged_digitalCitizenship_2019:
+        desc: Avui aprendrem què vol dir ser un Ciutadà Digital.
+        title: Activitat sense connexió
+      courseD_unplugged_graphPaperProgramming:
+        desc: Els alumnes escriuen un algoritme (un conjunt d'instruccions) utilitzant
+          un grup d'ordres predefinides per dirigir els seus companys a reproduir
+          un dibuix.
+        title: Programació de paper quadriculat
+      courseD_unplugged_relayProgramming:
+        desc: Els estudiants executen una cursa de relleus on corren a través del
+          pati per escriure un algoritme basat en la imatge "Programació de paper
+          quadriculat". Només poden escriure una instrucció cada vegada i si hi ha
+          un error han d'esborrar-ho tot fins el principi.
+        title: Programació amb relleus
+      courseE_simon_says_2019:
+        desc: "Juga a un joc i pensa quines ordres calen per aconseguir el resultat
+          desitjat.\r\n\r\n![test image](https://code.org/images/logo.png)"
+        title: En Simó diu
+      courseE_unplugged_CnC_2018:
+        desc: Aquesta lliçó, cedida a Fonaments de la Informàtica per l'equip de Copyright
+          and Creativity, ajuda els alumnes a entendre les dificultats i els beneficis
+          que suposa respectar la propietat intel·lectual i els drets d'autor, especialment
+          en entorns digitals. Cal que els alumnes entenguin que respectar els drets
+          dels creadors és una part molt important de ser un ciutadà digital ètic.
+        title: Compartir continguts digitals
+      courseE_unplugged_CnC_2019:
+        desc: Aquesta lliçó, cedida a Fonaments de la Informàtica per l'equip de Copyright
+          and Creativity, ajuda els alumnes a entendre les dificultats i els beneficis
+          que suposa respectar la propietat intel·lectual i els drets d'autor, especialment
+          en entorns digitals. Cal que els alumnes entenguin que respectar els drets
+          dels creadors és una part molt important de ser un ciutadà digital ètic.
+        title: Compartir continguts digitals
+      courseE_unplugged_accessAbility_2019:
+        desc: Aprèn sobre l'accessibilitat i el valor de l'empatia a través d'una
+          pluja d'idees i del disseny de solucions accessibles per aplicacions hipotètiques.
+        title: Accés-habilitat
       courseE_unplugged_crowdsourcing:
-        title: Col·laboració oberta
         desc: Els alumnes faran servir la tècnica de la col·laboració oberta, molt
           freqüent en informàtica, per fer una tasca tots junts d'una manera més eficient
           que si l'haguessin de fer individualment.
+        title: Col·laboració oberta
+      courseE_unplugged_diceRace:
+        desc: Aquesta lliçó parla de les situacions de la vida diària en què fem servir
+          algorismes. Així, els alumnes identificaran i escriuran l'algorisme d'una
+          carrera de daus.
+        title: 'Algorismes de la vida real: Cursa de daus'
+      courseE_unplugged_internet:
+        desc: Els alumnes envien missatges representant diversos mètodes de transmissió
+          d'internet utilitzant peces de paper.
+        title: Internet
+      courseE_unplugged_privateInformation:
+        desc: Avui aprendrem la diferència entre informació privada i personal!
+        title: 'Common Sense Education: Informació privada i personal '
+      courseE_unplugged_privateInformation_2019:
+        desc: Aquesta lliçó, dissenyada per Common Sense Education, parla de la diferència
+          entre la informació que es pot compartir a internet de manera segura i la
+          que no.
+        title: Informació privada i personal
       courseE_unplugged_songwriting:
-        title: Composició de cançons
         desc: Els alumnes utilitzen el concepte de la tornada en una cançó per aprendre
           sobre passar paràmetres (que personalitzen una funció sense haver de reescriure-la).
-      courseF_unplugged_tangrams:
-        title: Algorismes de Tàngram
-        desc: Aquesta lliçó ens ensenya un tret molt important dels algorismes. Si
-          l'algorisme és senzill, hi haurà moltes maneres de fer-lo servir. Si volem
-          que tothom acabi obtenint el mateix, llavors l'algorisme haurà de ser més
-          detallat.
+        title: Composició de cançons
+      courseE_unplugged_songwritingParameters:
+        desc: Els alumnes utilitzen el concepte de la tornada en una cançó per aprendre
+          sobre passar paràmetres (que personalitzen una funció sense haver de reescriure-la).
+        title: Composició amb paràmetres
       courseF_unplugged_envelopeVariables:
-        title: Variables en sobres
         desc: En informàtica, les variables ens donen molta llibertat. Aquesta lliçó
           ajuda a explicar què són i de quines maneres les podem fer servir. Feu aquesta
           activitat abans (o en combinació amb) la lliçó sobre abstracció perquè la
           idea quedi ben assimilada.
+        title: Variables en sobres
       courseF_unplugged_forLoopFun:
-        title: Diversió amb bucles "for"
         desc: Sabem que els bucles ens permeten fer coses una i altra vegada, però
           ara aprendrem com utilitzar els bucles amb una estructura extra a l'interior.
+        title: Diversió amb bucles "for"
+      courseF_unplugged_powerOfWords:
+        desc: Avui veurem què hem de fer si veiem que algú és cruel a internet
+        title: Activitat sense connexió
+      courseF_unplugged_powerOfWords_2019:
+        desc: 'falta traducció: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.desc'
+        title: 'falta traducció: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
       courseF_unplugged_songwritingParameters:
-        title: Composició de cançons Amb Paràmetres
         desc: 'Una de les estructures més esplèndides en el món de la programació
           és la funció. Les funcions (a vegades anomenades procediments) són mini
           programes que pots utilitzar una i altra vegada dins d''un programa més
           gran. Aquesta unitat ajudarà als estudiants a entendre intuïtivament perquè
           combinant trossos de programació cap a funcions és un exercici tant útil.  '
-      courseB_unplugged_MRF_2018:
-        title: Els meus amics robòtics
-        desc: Aprèn a programar escrivint codi per controlar els teus amics!
-      PlantASeed_2018:
-        title: 'Algorismes de la vida quotidiana: Planta una llavor'
-        desc: Aquesta unitat remarca com utilitzem els algorismes a la nostra vida
-          diària, utilitzant el fet de plantar una llavor com a exemple. També es
-          centra en un marc més ampli de la informàtica i com els algorismes hi juguen
-          un paper important.
-      UnplugHappyMaps_2018:
-        title: Mapes Feliços
-        desc: Els alumnes creen algorismes senzills (conjunts d'instruccions) per
-          moure un personatge a través d'un laberint utilitzant tant sols una ordre.
-      GoingPlacesSafely_2018:
-        title: Anar als llocs amb precaució
-        desc: Internet és una eina potent, però a vegades també és un lloc perillós.
-          Els mestres t'expliquen com navegar amb seguretat per internet.
-      courseA_unplugged_loops_2018:
-        title: Bucles sense connexió
-        desc: En aquesta lliçó, descobriràs els bucles!
-      BigEvent_2018:
-        title: El gran esdeveniment
-        desc: Els alumnes es familiaritzen amb el concepte de programació d' "esdeveniments",
-          que són accions que un ordinador supervisa constantment. El mestre polsarà
-          botons en un paper a distància i els alumnes reaccionaran depenent de quin
-          botó es prem.
-      GraphPaperProgramming_2018:
-        title: Programació de paper quadriculat
-        desc: Els alumnes escriuen un algoritme (un conjunt d'instruccions) utilitzant
-          un grup d'ordres predefinides per dirigir els seus companys a reproduir
-          un dibuix.
-      courseD_unplugged_digitalCitizenship_2018:
-        title: Activitat sense connexió
-        desc: Avui aprendrem què vol dir ser un Ciutadà Digital.
-      courseC_Unplugged_ScreenOutTheMean_2018:
-        title: Activitat sense connexió
-        desc: Avui veurem què hem de fer si veiem que algú és cruel a internet
-      Conditionals_2018:
-        title: Condicionals
+        title: Composició de cançons Amb Paràmetres
+      courseF_unplugged_tangrams:
+        desc: Aquesta lliçó ens ensenya un tret molt important dels algorismes. Si
+          l'algorisme és senzill, hi haurà moltes maneres de fer-lo servir. Si volem
+          que tothom acabi obtenint el mateix, llavors l'algorisme haurà de ser més
+          detallat.
+        title: Algorismes de Tàngram
+      deeper learning description:
+        desc: 'falta traducció: en-US.data.unplugged.desc'
+      timeforcs_demo_conditionals:
         desc: Per aprendre de les declaracions de condicionals, els alumnes juguen
           un joc de cartes i creen normes com "si dibuixo una tarja vermella, puc
           obtenir un punt" i "si dibuixo una tarja negra, el punt el guanyes tu."
-      DigitalFootprint_2018:
-        title: La vostra empremta digital
-        desc: Els alumnes començaran a aprendre que afegir informació sobre si mateixos
-          a internet crea una petjada o "rastre" digital que té conseqüències.
-      BinaryImages_2018:
-        title: Imatges binàries
-        desc: Encara que molta gent pensa en el codi binari com a zeros i uns estrictament,
-          els cursos anteriors ens han ensenyat que aquesta informació pot ser representada
-          en una àmplia varietat d'opcions binàries. Aquesta unitat porta aquesta
-          idea un pas més enllà i il·lustra com un ordinador pot emmagatzemar més
-          informació complexa (com ara imatges i colors) en binari, també.
-      PaperPlanes_2018:
-        title: 'Algorismes de la vida quotidiana: Avions de paper'
-        desc: Aquesta unitat ens repta a utilitzar els algorismes en la nostra vida
-          diària, concretament fent avions de paper. La unitat també se centra en
-          un panorama més ampli de la informàtica i com els algorismes hi juguen un
-          paper essencial.
-      GettingLoopy_2018:
-        title: Fent bucles
-        desc: Aquesta lliçó introdueix el concepte de dels bucles en programació (instruccions
-          repetidess) a través d'una activitat de dansa. Els alumnes aprendran coreografies
-          senzilles i, a continuació, aprendran a repetir-ho.
-      BinaryBracelets_2018:
-        title: Polseres binàries
-        desc: Els alumnes creen polseres com una representació binària de la primera
-          lletra del seu nom. Els alumnes aprenen que les dades poden ser representades
-          i emmagatzemades de diferents maneres.
-      MoveItMoveIt_2018:
-        title: A moure's!
-      courseB_unplugged_CnC_2018:
-        title: No hi ha res com crear i utilitzar de manera justa
-        desc: Aquesta lliçó, cedida a Fonaments de la Informàtica per l'equip de Copyright
-          and Creativity, ajuda els alumnes a entendre el procés creatiu de compartir
-          contingut i inspirar-nos. Per altra banda, també fomenta l'expressió de
-          la creativitat i la necessitat de ser justos amb el trenall creatiu dels
-          altres.
-      courseE_unplugged_CnC_2018:
-        title: Compartir continguts digitals
-        desc: Aquesta lliçó, cedida a Fonaments de la Informàtica per l'equip de Copyright
-          and Creativity, ajuda els alumnes a entendre les dificultats i els beneficis
-          que suposa respectar la propietat intel·lectual i els drets d'autor, especialment
-          en entorns digitals. Cal que els alumnes entenguin que respectar els drets
-          dels creadors és una part molt important de ser un ciutadà digital ètic.
-      RelayProgramming_2018:
-        title: Programació amb relleus
-        desc: Aquesta activitat comença amb una lliçó breu sobre depuració i persistència,
-          i de seguida es converteix en una cursa a contrarellotge en què els alumnes
-          formaran equips i treballaran junts per escriure un programa amb totes les
-          instruccions corresponents.
-      courseB_unplugged_MRF_2019:
-        title: Els meus amics robòtics
-        desc: Aprèn a programar escrivint codi per controlar els teus amics!
-      BuildingAFoundation_2019:
-        title: 'falta traducció: en-US.data.unplugged.BuildingAFoundation_2018.title'
-        desc: 'falta traducció: en-US.data.unplugged.BuildingAFoundation_2018.desc'
-      courseB_unplugged_loopyMRF_2019:
-        title: Els meus amics robòtics amb bucles
-      Conditionals_2019:
         title: Condicionals
-        desc: Per aprendre de les declaracions de condicionals, els alumnes juguen
-          un joc de cartes i creen normes com "si dibuixo una tarja vermella, puc
-          obtenir un punt" i "si dibuixo una tarja negra, el punt el guanyes tu."
-      courseF_unplugged_powerOfWords_2019:
-        title: 'falta traducció: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
-        desc: 'falta traducció: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.desc'
-      EnvelopeVariables_2019:
-        title: 'falta traducció: en-US.data.unplugged.EnvelopeVariables_2018.title'
-        desc: 'falta traducció: en-US.data.unplugged.EnvelopeVariables_2018.desc'
-      ForLoopFun_2019:
-        title: 'falta traducció: en-US.data.unplugged.ForLoopFun_2018.title'
-        desc: 'falta traducció: en-US.data.unplugged.ForLoopFun_2018.desc'
-      GraphPaperProgramming_2019:
-        title: Programació de paper quadriculat
-        desc: Els alumnes escriuen un algoritme (un conjunt d'instruccions) utilitzant
-          un grup d'ordres predefinides per dirigir els seus companys a reproduir
-          un dibuix.
-      RelayProgramming_2018_2019:
-        title: Programació amb relleus
-        desc: Aquesta activitat comença amb una lliçó breu sobre depuració i persistència,
-          i de seguida es converteix en una cursa a contrarellotge en què els alumnes
-          formaran equips i treballaran junts per escriure un programa amb totes les
-          instruccions corresponents.
-      courseD_unplugged_digitalCitizenship_2019:
-        title: Activitat sense connexió
-        desc: Avui aprendrem què vol dir ser un Ciutadà Digital.
-      BinaryImages_2019:
-        title: Imatges binàries
-        desc: Encara que molta gent pensa en el codi binari com a zeros i uns estrictament,
-          els cursos anteriors ens han ensenyat que aquesta informació pot ser representada
-          en una àmplia varietat d'opcions binàries. Aquesta unitat porta aquesta
-          idea un pas més enllà i il·lustra com un ordinador pot emmagatzemar més
-          informació complexa (com ara imatges i colors) en binari, també.
-      courseE_unplugged_privateInformation_2019:
-        title: Informació privada i personal
-        desc: Aquesta lliçó, dissenyada per Common Sense Education, parla de la diferència
-          entre la informació que es pot compartir a internet de manera segura i la
-          que no.
-      SongwritingParameters_2019:
-        title: 'falta traducció: en-US.data.unplugged.SongwritingParameters_2018.title'
-        desc: 'falta traducció: en-US.data.unplugged.SongwritingParameters_2018.desc'
-      courseE_unplugged_CnC_2019:
-        title: Compartir continguts digitals
-        desc: Aquesta lliçó, cedida a Fonaments de la Informàtica per l'equip de Copyright
-          and Creativity, ajuda els alumnes a entendre les dificultats i els beneficis
-          que suposa respectar la propietat intel·lectual i els drets d'autor, especialment
-          en entorns digitals. Cal que els alumnes entenguin que respectar els drets
-          dels creadors és una part molt important de ser un ciutadà digital ètic.
-      Internet_2019:
-        title: 'falta traducció: en-US.data.unplugged.Internet_2018.title'
-        desc: 'falta traducció: en-US.data.unplugged.Internet_2018.desc'
-      Crowdsourcing_2019:
-        title: 'falta traducció: en-US.data.unplugged.Crowdsourcing_2018.title'
-        desc: 'falta traducció: en-US.data.unplugged.Crowdsourcing_2018.desc'
-      GettingLoopy_2019:
-        title: Fent bucles
-        desc: Aquesta lliçó introdueix el concepte de dels bucles en programació (instruccions
-          repetidess) a través d'una activitat de dansa. Els alumnes aprendran coreografies
-          senzilles i, a continuació, aprendran a repetir-ho.
-      courseC_Unplugged_ScreenOutTheMean_2019:
-        title: Activitat sense connexió
-        desc: Avui veurem què hem de fer si veiem que algú és cruel a internet
-      BigEvent_2019:
-        title: El gran esdeveniment
-        desc: Els alumnes es familiaritzen amb el concepte de programació d' "esdeveniments",
-          que són accions que un ordinador supervisa constantment. El mestre polsarà
-          botons en un paper a distància i els alumnes reaccionaran depenent de quin
-          botó es prem.
-      BinaryBracelets_2019:
-        title: Polseres binàries
-        desc: Els alumnes creen polseres com una representació binària de la primera
-          lletra del seu nom. Els alumnes aprenen que les dades poden ser representades
-          i emmagatzemades de diferents maneres.
-      PaperPlanes_2019:
-        title: 'Algorismes de la vida quotidiana: Avions de paper'
-        desc: Aquesta unitat ens repta a utilitzar els algorismes en la nostra vida
-          diària, concretament fent avions de paper. La unitat també se centra en
-          un panorama més ampli de la informàtica i com els algorismes hi juguen un
-          paper essencial.
-      PlantASeed_2019:
-        title: 'Algorismes de la vida quotidiana: Planta una llavor'
-        desc: Aquesta unitat remarca com utilitzem els algorismes a la nostra vida
-          diària, utilitzant el fet de plantar una llavor com a exemple. També es
-          centra en un marc més ampli de la informàtica i com els algorismes hi juguen
-          un paper important.
-      UnplugHappyMaps_2019:
-        title: Mapes Feliços
-        desc: Els alumnes creen algorismes senzills (conjunts d'instruccions) per
-          moure un personatge a través d'un laberint utilitzant tant sols una ordre.
-      GoingPlacesSafely_2019:
-        title: Anar als llocs amb precaució
-        desc: Internet és una eina potent, però a vegades també és un lloc perillós.
-          Els mestres t'expliquen com navegar amb seguretat per internet.
-      courseA_unplugged_loops_2019:
-        title: Bucles sense connexió
-        desc: En aquesta lliçó, descobriràs els bucles!
-      MoveItMoveIt_2019:
-        title: A moure's!
-      DigitalFootprint_2019:
-        title: La vostra empremta digital
-        desc: Els alumnes començaran a aprendre que afegir informació sobre si mateixos
-          a internet crea una petjada o "rastre" digital que té conseqüències.
-      courseB_unplugged_CnC_2019:
-        title: No hi ha res com crear i utilitzar de manera justa
-        desc: Aquesta lliçó, cedida a Fonaments de la Informàtica per l'equip de Copyright
-          and Creativity, ajuda els alumnes a entendre el procés creatiu de compartir
-          contingut i inspirar-nos. Per altra banda, també fomenta l'expressió de
-          la creativitat i la necessitat de ser justos amb el trenall creatiu dels
-          altres.
-      GraphingData_2019:
-        title: Dades en imatges
-        desc: En aquesta lliçó, els estudiants recopilaran dades d'un projecte del
-          Laboratori de Jocs o d'una situació del món real i les utilitzaran per fer
-          prediccions.
-      courseE_unplugged_accessAbility_2019:
-        title: Accés-habilitat
-        desc: Aprèn sobre l'accessibilitat i el valor de l'empatia a través d'una
-          pluja d'idees i del disseny de solucions accessibles per aplicacions hipotètiques.
-      courseE_simon_says_2019:
-        title: En Simó diu
-        desc: "Juga a un joc i pensa quines ordres calen per aconseguir el resultat
-          desitjat.\r\n\r\n![test image](https://code.org/images/logo.png)"
-      courseB_unplugged_passwords_2019:
-        title: Contrasenyes potents
-        desc: Pensa per què fem servir contrasenyes, aprèn els beneficis que ens aporten
-          i descobreix quines estratègies hi ha per crear contrasenyes potents i segures.
       timeforcs_demo_crowdsourcing:
-        title: Col·laboració oberta
         desc: '_Comentari de Josh: a diferència de la primera lliçó, a aquesta li
           he donat el mateix format d''una lliçó sense connexió típica._'
-      timeforcs_demo_conditionals:
-        title: Condicionals
-        desc: Per aprendre de les declaracions de condicionals, els alumnes juguen
-          un joc de cartes i creen normes com "si dibuixo una tarja vermella, puc
-          obtenir un punt" i "si dibuixo una tarja negra, el punt el guanyes tu."
+        title: Col·laboració oberta

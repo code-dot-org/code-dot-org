@@ -1,6 +1,6 @@
 {
-  "blockly_blockPlaySoundTooltip": "үн ойнот",
   "blockly_blockPlaySoundAtMeasureTooltip": "үн ойнот",
+  "blockly_blockPlaySoundTooltip": "үн ойнот",
   "blockly_blockRepeatTooltip": "кайталоо",
   "blockly_blockWhenRun": "аткарганда",
   "blockly_blockWhenRunTooltip": "аткарганда",
@@ -9,5 +9,6 @@
   "blockly_toolboxCategoryLogic": "Логика",
   "blockly_toolboxCategoryMath": "Математика",
   "blockly_toolboxCategoryVariables": "Өзгөрмөлөр",
+  "continue": "Улантуу",
   "startOver": "Кайра баштоо"
 }

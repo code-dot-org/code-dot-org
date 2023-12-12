@@ -4,7 +4,7 @@
   "blockly_blockRepeatTooltip": "ធ្វើ​ឡើង​វិញ",
   "blockly_blockWhenRun": "នៅពេលដំណើរការ",
   "blockly_blockWhenRunTooltip": "នៅពេលដំណើរការ",
-  "blockly_functionNamePlaceholder": "ហ្វាំងសិនរបស់ខ្ញុំ",
+  "blockly_functionNamePlaceholder": "អនុគមន៍របស់ខ្ញុំ",
   "blockly_toolboxCategoryEvents": "ព្រឹត្តិការណ៍",
   "blockly_toolboxCategoryFunctions": "អនុ​គមន៍",
   "blockly_toolboxCategoryLogic": "តក្ក",
@@ -13,5 +13,6 @@
   "share": "ចែក​រំលែក",
   "startOver": "ចាប់ផ្ដើម​សារឡើង​វិញ",
   "panelHeaderInstructions": "សេចក្ដី​ណែនាំ ",
-  "panelHeaderWorkspace": "កន្លែងធ្វើការ "
+  "panelHeaderWorkspace": "កន្លែងធ្វើការ ",
+  "continue": "បន្ត"
 }

@@ -1,7 +1,7 @@
 {
   "addCSSButton": "Tambah CSS",
-  "addImageButton": "Tambah Imej",
   "addHTMLButton": "Tambah HTML",
+  "addImageButton": "Tambah Imej",
   "closeFullscreenPreview": "Tutup pratonton skrin penuh",
   "currentProjectCapacity": "{currentMegabytes}MB daripada {totalMegabytes}MB digunakan",
   "errorSavingProject": "Sesuatu tidak berfungsi semasa menyimpan projek anda secara automatik. Semak sambungan internet anda dan cuba simpan secara manual. Jika masalah ini berterusan, cuba muatkan semula halaman untuk memulakan semula.",
@@ -13,8 +13,8 @@
   "reset": "Tetapkan Semula Makmal Web",
   "resetComplete": "Set Semula Makmal Web Lengkap",
   "resetFailure": "Gagal mengeset semula Makmal Web: {message}.",
-  "toggleInspectorOn": "Inspektor: Off",
   "toggleInspectorOff": "Inspektor: Pada",
+  "toggleInspectorOn": "Inspektor: Off",
   "troubleshootingSupport": "Sila lihat artikel sokongan kami [\"Menyelesaikan masalah Makmal Web\"]({url}) untuk maklumat lanjut.",
   "uploadError": "Ralat Muat Naik"
 }

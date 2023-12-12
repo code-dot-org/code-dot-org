@@ -15,6 +15,7 @@ import {
   BubbleSize,
   getBubbleUrl,
 } from '@cdo/apps/templates/progress/BubbleFactory';
+import fontConstants from '@cdo/apps/fontConstants';
 
 /**
  * This component is similar to our ProgressBubble, except that instead of being
@@ -157,7 +158,7 @@ const styles = {
     color: color.charcoal,
     display: 'flex',
     fontSize: 16,
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     borderRadius: 20,
     paddingLeft: 10,
     paddingRight: 10,
@@ -171,12 +172,12 @@ const styles = {
   },
   text: {
     display: 'inline-block',
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     letterSpacing: -0.12,
   },
   textProgressStyle: {
     display: 'inline-block',
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     fontSize: 12,
     letterSpacing: -0.12,
     width: 120,

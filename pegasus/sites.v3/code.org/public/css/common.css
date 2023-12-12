@@ -4,10 +4,11 @@
 
 .solid-block-header {
   font-size: 30px;
-  font-family: 'Gotham 7r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--bold-font-weight);
   line-height: 1.2em;
-  background-color: #7665a0;
-  color: white;
+  background-color: var(--neutral_dark70);
+  color: var(--neutral_white);
   height: auto;
   width: 100%;
   padding-top: 12px;
@@ -19,16 +20,18 @@
 .solid-block-subheader {
   color: #7665a0;
   font-size: 18px;
-  font-family: 'Gotham 7r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--bold-font-weight);
   margin-top: 10px;
   margin-bottom: 20px;
   line-height: 1.2em;
 }
 
 .solid-block-subtitle {
-  color: white;
+  color: var(--neutral_white);
   font-size: 16px;
-  font-family: 'Gotham 4r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--regular-font-weight);
 }
 
 .video-smalltext {
@@ -144,12 +147,14 @@
 }
 .course-carousel .slide h2 {
   font-size: 18px;
-  font-family: 'Gotham 5r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   margin: 0 0 .333em 0;
 }
 .course-carousel .slide h3 {
   font-size: 14px;
-  font-family: 'Gotham 5r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   margin: 0 0 .857em 0;
 }
 .course-carousel .slide p {
@@ -192,7 +197,8 @@
   padding: 10px 20px;
   margin: 0;
   font-size: 18px;
-  font-family: 'Gotham 5r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
@@ -392,31 +398,17 @@
 .share-buttons button {
   width: auto;
   height: auto;
-  font-family: 'Gotham 5r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   margin: 10px 10px 0 0;
 }
 .share-buttons button i {
   margin-right: .5em;
 }
 
-button {
-  margin-top: 10px;
-}
-
-a.link-button {
-  display: inline-block;
-  color: white;
-  background-color: #ffa400;
-  border-radius: 4px;
-  padding: 6px 12px;
-  font-size: 14px;
-  font-family: 'Gotham 4r', sans-serif;
-  text-decoration: none;
-}
-
 #map .mapboxgl-popup-close-button {
   margin-top: 0px;
-  background-color: #ffa400;
+  background-color: var(--brand_secondary_default);
 }
 
 /* Promote page */
@@ -426,9 +418,6 @@ a.link-button {
 #promote-page .section {
   clear: both;
   margin: 0 0 20px 0;
-}
-#promote-page h2 {
-  margin-bottom: 10px;
 }
 #promote-page .main-video {
   float: left;
@@ -541,8 +530,8 @@ a.link-button {
 
 .impact-stats-link {
   width: 100%;
-  color: white;
-  background-color: #7665a0;
+  color: var(--neutral_white);
+  background-color: var(--neutral_dark80);
   margin-top: 20px;
   margin-bottom: 20px;
   overflow: hidden;
@@ -556,7 +545,8 @@ a.link-button {
 .impact-stats-link .left p.title {
   font-size: 16px;
   margin-bottom: 3px;
-  font-family: 'Gotham 5r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
 }
 
 .impact-stats-link .left p.details {
@@ -571,7 +561,8 @@ a.link-button {
   margin-top: 0px;
   width: 200px;
   height: 50px;
-  font-family: 'Gotham 5r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
 }
 
 @media screen and (min-width: 970px) {
@@ -663,7 +654,7 @@ a.link-button {
 }
 
 .user_menu, .create_menu { /* copied from dashboard's .header-button */
-  color: white;
+  color: var(--neutral_white);
   display: inline-block;
   background-color: #ffa400;
   background-color: transparent;

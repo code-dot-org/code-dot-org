@@ -6,6 +6,7 @@ import {sectionForDropdownShape} from './shapes';
 import TeacherSectionSelector from './TeacherSectionSelector';
 import MultipleAssignButton from '@cdo/apps/templates/MultipleAssignButton';
 import {selectSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import fontConstants from '@cdo/apps/fontConstants';
 
 class SectionAssigner extends Component {
   static propTypes = {
@@ -16,7 +17,7 @@ class SectionAssigner extends Component {
     courseId: PropTypes.number,
     scriptId: PropTypes.number,
     forceReload: PropTypes.bool,
-    isOnCoursePage: PropTypes.bool,
+    isAssigningCourse: PropTypes.bool,
     isStandAloneUnit: PropTypes.bool,
     participantAudience: PropTypes.string,
     // Redux provided
@@ -55,7 +56,7 @@ class SectionAssigner extends Component {
       selectedSectionId,
       forceReload,
       assignmentName,
-      isOnCoursePage,
+      isAssigningCourse,
       isStandAloneUnit,
       participantAudience,
     } = this.props;
@@ -91,7 +92,7 @@ class SectionAssigner extends Component {
               assignmentName={assignmentName}
               sectionName={selectedSection.name}
               reassignConfirm={this.onReassignConfirm}
-              isOnCoursePage={isOnCoursePage}
+              isAssigningCourse={isAssigningCourse}
               isStandAloneUnit={isStandAloneUnit}
               participantAudience={participantAudience}
             />
@@ -113,7 +114,7 @@ const styles = {
   label: {
     width: '100%',
     fontSize: 16,
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     paddingTop: 10,
     paddingBottom: 10,
     display: 'flex',
@@ -121,7 +122,7 @@ const styles = {
   },
   confirmText: {
     fontSize: 12,
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
   },
 };
 

@@ -23,6 +23,7 @@
 #  funded              :boolean
 #  funding_type        :string(255)
 #  properties          :text(65535)
+#  module              :string(255)
 #
 # Indexes
 #
@@ -147,7 +148,7 @@ class Pd::Workshop < ApplicationRecord
   def self.enrolled_in_by(teacher)
     base_query = joins(:enrollments)
     user_id_where_clause = base_query.where(pd_enrollments: {user_id: teacher.id})
-    email_where_clause = base_query.where(pd_enrollments: {email: teacher.email})
+    email_where_clause = base_query.where(pd_enrollments: {email: teacher.email_for_enrollments})
 
     user_id_where_clause.or(email_where_clause).distinct
   end
@@ -202,7 +203,7 @@ class Pd::Workshop < ApplicationRecord
 
   scope :in_year, ->(year) do
     scheduled_start_on_or_after(Date.new(year)).
-    scheduled_start_on_or_before(Date.new(year + 1))
+      scheduled_start_on_or_before(Date.new(year + 1))
   end
 
   # Filters to workshops that are scheduled on or after today and have not yet ended
@@ -258,11 +259,11 @@ class Pd::Workshop < ApplicationRecord
   end
 
   def self.scheduled_start_in_days(days)
-    Pd::Workshop.joins(:sessions).group_by_id.having("(DATE(MIN(start)) = ?)", Date.today + days.days)
+    Pd::Workshop.joins(:sessions).group_by_id.having("(DATE(MIN(start)) = ?)", Time.zone.today + days.days)
   end
 
   def self.scheduled_end_in_days(days)
-    Pd::Workshop.joins(:sessions).group_by_id.having("(DATE(MAX(end)) = ?)", Date.today + days.days)
+    Pd::Workshop.joins(:sessions).group_by_id.having("(DATE(MAX(end)) = ?)", Time.zone.today + days.days)
   end
 
   # Filters by date the workshop actually ended, regardless of scheduled session times.
@@ -285,7 +286,7 @@ class Pd::Workshop < ApplicationRecord
   # @return [Pd::Workshop, nil]
   def self.nearest
     joins(:sessions).
-      select("pd_workshops.*, ABS(DATEDIFF(pd_sessions.start, '#{Date.today}')) AS day_diff").
+      select("pd_workshops.*, ABS(DATEDIFF(pd_sessions.start, '#{Time.zone.today}')) AS day_diff").
       order("day_diff ASC").
       first
   end
@@ -295,7 +296,7 @@ class Pd::Workshop < ApplicationRecord
   # @return [Pd::Workshop, nil]
   def self.with_nearest_attendance_by(teacher)
     joins(sessions: :attendances).where(pd_attendances: {teacher_id: teacher.id}).
-      select("pd_workshops.*, ABS(DATEDIFF(pd_sessions.start, '#{Date.today}')) AS day_diff").
+      select("pd_workshops.*, ABS(DATEDIFF(pd_sessions.start, '#{Time.zone.today}')) AS day_diff").
       order("day_diff").
       first
   end
@@ -452,7 +453,7 @@ class Pd::Workshop < ApplicationRecord
     errors = []
     scheduled_start_in_days(days).each do |workshop|
       workshop.enrollments.each do |enrollment|
-        email = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, days_before: days)
+        email = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, options: {days_before: days})
         email.deliver_now
       rescue => exception
         errors << "teacher enrollment #{enrollment.id} - #{exception.message}"
@@ -474,7 +475,7 @@ class Pd::Workshop < ApplicationRecord
       end
 
       # send pre-workshop email for CSA, CSD, CSP facilitators 10 days before the workshop only
-      next unless days == 10 && (workshop.course == COURSE_CSD || workshop.course == COURSE_CSP || workshop.course == COURSE_CSA)
+      next unless days == 10 && (workshop.course == COURSE_CSD || workshop.course == COURSE_CSP || workshop.course == COURSE_CSA || workshop.course == COURSE_CSF)
       workshop.facilitators.each do |facilitator|
         next unless facilitator.email
         begin
@@ -528,7 +529,7 @@ class Pd::Workshop < ApplicationRecord
   def self.send_teacher_pre_work_csa
     # Collect errors, but do not stop batch. Rethrow all errors below.
     errors = []
-    scheduled_start_in_days(20).each do |workshop|
+    scheduled_start_in_days(20).select {|ws| ws.course == COURSE_CSA && ws.subject == Pd::Workshop::SUBJECT_CSA_SUMMER_WORKSHOP}.each do |workshop|
       workshop.enrollments.each do |enrollment|
         Pd::WorkshopMailer.teacher_pre_workshop_csa(enrollment).deliver_now
       rescue => exception
@@ -545,7 +546,7 @@ class Pd::Workshop < ApplicationRecord
     send_reminder_for_upcoming_in_days(10)
     send_reminder_to_close
     send_follow_up_after_days(30)
-    send_teacher_pre_work_csa if course == COURSE_CSA
+    send_teacher_pre_work_csa
   end
 
   # Updates enrollments with resolved users.
@@ -560,7 +561,7 @@ class Pd::Workshop < ApplicationRecord
   # from other logic deciding whether a workshop should have exit surveys.
   def send_exit_surveys
     # FiT workshops should not send exit surveys
-    return if SUBJECT_FIT == subject || COURSE_FACILITATOR == course || COURSE_ADMIN_COUNSELOR == course
+    return if subject == SUBJECT_FIT || course == COURSE_FACILITATOR || course == COURSE_ADMIN_COUNSELOR
 
     resolve_enrolled_users
 
@@ -578,7 +579,7 @@ class Pd::Workshop < ApplicationRecord
 
   # Send Post-surveys to facilitators of CSD and CSP workshops
   def send_facilitator_post_surveys
-    if course == COURSE_CSD || course == COURSE_CSP || course == COURSE_CSA
+    if course == COURSE_CSD || course == COURSE_CSP || course == COURSE_CSA || course == COURSE_CSF
       facilitators.each do |facilitator|
         next unless facilitator.email
 
@@ -705,7 +706,7 @@ class Pd::Workshop < ApplicationRecord
   end
 
   # Get all teachers who have attended all sessions of this workshop.
-  def teachers_attending_all_sessions(filter_by_cdo_scholarship=false)
+  def teachers_attending_all_sessions(filter_by_cdo_scholarship: false)
     teachers_attending = sessions.flat_map(&:attendances).flat_map(&:teacher).compact
 
     # Filter attendances to only scholarship teachers

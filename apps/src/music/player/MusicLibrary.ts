@@ -1,12 +1,41 @@
 import {ResponseValidator} from '@cdo/apps/util/HttpClient';
+import {Key} from '../utils/Notes';
 
 export default class MusicLibrary {
+  name: string;
   groups: FolderGroup[];
   private allowedSounds: Sounds | null;
 
-  constructor(libraryJson: LibraryJson) {
+  // BPM & Key associated with this library, or undefined if not present.
+  private bpm: number | undefined;
+  private key: Key | undefined;
+
+  constructor(name: string, libraryJson: LibraryJson) {
+    this.name = name;
     this.groups = libraryJson.groups;
     this.allowedSounds = null;
+
+    const firstGroup: FolderGroup = this.groups[0];
+    if (firstGroup.bpm) {
+      this.bpm = firstGroup.bpm;
+    }
+
+    if (firstGroup.key) {
+      this.key = Key[firstGroup.key.toUpperCase() as keyof typeof Key];
+    }
+  }
+
+  getDefaultSound(): string | undefined {
+    const firstGroup: FolderGroup = this.groups[0];
+
+    // Return the specified default sound if there is one.
+    if (firstGroup?.defaultSound) {
+      return firstGroup?.defaultSound;
+    }
+
+    // The fallback is the first non-instrument/kit folder's first sound.
+    const firstFolder = firstGroup?.folders.find(group => !group.type);
+    return `${firstFolder?.path}/${firstFolder?.sounds[0].src}`;
   }
 
   getSoundForId(id: string): SoundData | null {
@@ -61,6 +90,14 @@ export default class MusicLibrary {
 
     return foldersCopy;
   }
+
+  getBPM(): number | undefined {
+    return this.bpm;
+  }
+
+  getKey(): Key | undefined {
+    return this.key;
+  }
 }
 
 export type LibraryJson = {
@@ -109,6 +146,7 @@ export interface SoundData {
   note?: number;
   restricted?: boolean;
   sequence?: SampleSequence;
+  preview?: boolean;
 }
 
 export interface SoundFolder {
@@ -124,6 +162,9 @@ interface FolderGroup {
   name: string;
   imageSrc: string;
   path: string;
+  bpm?: number;
+  key?: string;
+  defaultSound?: string;
   folders: SoundFolder[];
 }
 

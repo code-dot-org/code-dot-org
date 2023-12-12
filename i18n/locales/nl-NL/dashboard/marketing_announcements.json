@@ -1,0 +1,114 @@
+{
+  "banners": {
+    "csleadersprize": {
+      "title": "",
+      "body": "",
+      "buttonText": "Leer meer"
+    },
+    "csjourneys-22": {
+      "title": "",
+      "body": "",
+      "buttonText": "Leer meer"
+    },
+    "hoc-more": {
+      "title": "",
+      "body": "De website van Hour of Code heeft meer dan 100 informatica-activiteiten voor alle leeftijden en ervaringsniveaus, ontwikkeld door Code.org en haar partners.",
+      "buttonText": ""
+    },
+    "superhero": {
+      "title": "",
+      "body": "",
+      "buttonText": "Leer meer"
+    },
+    "csjourneys": {
+      "title": "",
+      "body": "",
+      "buttonText": "Leer meer"
+    },
+    "class-schedule-survey": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "back-to-school-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "Leer meer"
+    },
+    "teacher-apps-open-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "Doe mee"
+    },
+    "teacher-apps-closing-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "Doe mee"
+    },
+    "teacher-apps-nominate-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "teacher-apps-stillon-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Doe mee"
+    },
+    "home-learning-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Bekijk projectideeën"
+    },
+    "soonhoc-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "codebytes-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Leer meer"
+    },
+    "ai-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Leer meer"
+    },
+    "congrats-certificate-share": {
+      "title": "",
+      "body": "",
+      "buttonText": "Start"
+    },
+    "coldplay": {
+      "title": "",
+      "body": "",
+      "buttonText": "Probeer het"
+    },
+    "ai-launch-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": "Leer meer"
+    },
+    "ai-pl-launch-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": "Leer meer"
+    },
+    "state-of-cs-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "hoc-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": "Leer meer"
+    },
+    "hoc-2023-dance-ai": {
+      "title": "",
+      "body": "",
+      "buttonText": "Leer meer"
+    }
+  }
+}

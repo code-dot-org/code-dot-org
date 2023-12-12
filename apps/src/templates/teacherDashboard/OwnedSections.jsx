@@ -19,7 +19,6 @@ class OwnedSections extends React.Component {
     isPlSections: PropTypes.bool,
     sectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     hiddenSectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
-    userId: PropTypes.number,
 
     // redux provided
     beginEditingSection: PropTypes.func.isRequired,
@@ -64,7 +63,7 @@ class OwnedSections extends React.Component {
   };
 
   render() {
-    const {isPlSections, sectionIds, hiddenSectionIds, userId} = this.props;
+    const {isPlSections, sectionIds, hiddenSectionIds} = this.props;
     const {viewHidden} = this.state;
 
     const hasSections = sectionIds.length > 0;
@@ -82,7 +81,6 @@ class OwnedSections extends React.Component {
               isPlSections={isPlSections}
               sectionIds={visibleSectionIds}
               onEdit={this.onEditSection}
-              userId={userId}
             />
             <div style={styles.buttonContainer}>
               {hiddenSectionIds.length > 0 && (
@@ -111,7 +109,6 @@ class OwnedSections extends React.Component {
                   isPlSections={isPlSections}
                   sectionIds={hiddenSectionIds}
                   onEdit={this.onEditSection}
-                  userId={userId}
                 />
               </div>
             )}

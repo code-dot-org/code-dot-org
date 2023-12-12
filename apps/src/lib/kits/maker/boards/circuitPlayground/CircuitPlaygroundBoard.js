@@ -3,7 +3,6 @@ import _ from 'lodash';
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 import five from '@code-dot-org/johnny-five';
 import Playground from 'playground-io';
-import experiments from '@cdo/apps/util/experiments';
 import Firmata from 'firmata';
 import {
   createCircuitPlaygroundComponents,
@@ -21,13 +20,8 @@ import {
 } from './PlaygroundConstants';
 import Led from './Led';
 import PlaygroundButton from './Button';
-import {
-  detectBoardTypeFromPort,
-  isWebSerialPort,
-  BOARD_TYPE,
-} from '../../util/boardUtils';
-import {isChromeOS, serialPortType} from '../../util/browserChecks';
-import {SERIAL_BAUD} from '@cdo/apps/lib/kits/maker/util/boardUtils';
+import {detectBoardTypeFromPort, BOARD_TYPE} from '../../util/boardUtils';
+import {isChromeOS} from '../../util/browserChecks';
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
 process.hrtime = require('browser-process-hrtime');
@@ -57,7 +51,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
     /** @private {string} a port identifier, e.g. "/dev/ttyACM0" */
     this.port_ = port;
 
-    /** @private {SerialPort} serial port controller */
+    /** @private {Serial} serial port controller */
     this.serialPort_ = null;
 
     /** @private {five.Board} A johnny-five board controller */
@@ -92,22 +86,13 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    */
   connectToFirmware() {
     return new Promise((resolve, reject) => {
-      if (isWebSerialPort(this.port_)) {
-        const name = this.port_.productId;
-        CircuitPlaygroundBoard.openSerialPortWebSerial(this.port_).then(
-          port => {
-            this.initializePlaygroundAndBoard(port, name, resolve, reject);
-          }
-        );
-      } else {
-        const name = this.port_ ? this.port_.comName : undefined;
-        const serialPort = CircuitPlaygroundBoard.openSerialPort(name);
-        this.initializePlaygroundAndBoard(serialPort, name, resolve, reject);
-      }
+      CircuitPlaygroundBoard.openWebSerial(this.port_).then(port => {
+        this.initializePlaygroundAndBoard(port, resolve, reject);
+      });
     });
   }
 
-  initializePlaygroundAndBoard(serialPort, name, resolve, reject) {
+  initializePlaygroundAndBoard(serialPort, resolve, reject) {
     const playground =
       CircuitPlaygroundBoard.makePlaygroundTransport(serialPort);
     const board = new five.Board({
@@ -123,9 +108,6 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       this.boardType_ = detectBoardTypeFromPort(this.port_);
       if (this.boardType_ === BOARD_TYPE.EXPRESS) {
         this.fiveBoard_.isExpressBoard = true;
-      }
-      if (experiments.isEnabled('detect-board')) {
-        this.detectFirmwareVersion(playground);
       }
       resolve();
     });
@@ -250,9 +232,6 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       setTimeout(() => {
         // Close the serialport, cleaning it up properly so we can open it again
         // on the next run.
-        // Note: This doesn't seem to be necessary when using browser-serialport
-        // and the Chrome App connector, but it is required for native
-        // node serialport in the Code.org Maker App.
         if (this.serialPort_ && typeof this.serialPort_.close === 'function') {
           this.serialPort_.close();
         }
@@ -387,27 +366,11 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
   }
 
   /**
-   * Create a serial port controller and open the serial port immediately.
-   * @param {string} portName
-   * @return {SerialPort}
-   */
-  static openSerialPort(portName) {
-    const SerialPortType = serialPortType();
-
-    const port = new SerialPortType(portName, {
-      baudRate: SERIAL_BAUD,
-    });
-
-    this.createPendingQueue(port);
-    return port;
-  }
-
-  /**
    * Create a serial port controller and open the Web Serial port immediately.
    * @param {Object} port
-   * @return {Promise<SerialPort>}
+   * @return {Promise<Serial>}
    */
-  static openSerialPortWebSerial(port) {
+  static openWebSerial(port) {
     return port.openCPPort().then(() => {
       this.createPendingQueue(port);
       return port;
@@ -452,7 +415,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
 
   /**
    * Create a playground-io controller attached to the given serial port.
-   * @param {SerialPort} serialPort
+   * @param {Serial} serialPort
    * @return {Playground}
    */
   static makePlaygroundTransport(serialPort) {

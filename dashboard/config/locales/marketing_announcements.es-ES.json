@@ -1,0 +1,69 @@
+{
+  "es-ES": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "ai-2020": {
+            "buttonText": "Más información",
+            "title": "Explore Inteligencia Artificial y Aprendizaje Automático"
+          },
+          "ai-launch-2023": {
+            "buttonText": "Más información"
+          },
+          "ai-pl-launch-2023": {
+            "buttonText": "Más información"
+          },
+          "back-to-school-2021": {
+            "buttonText": "Más información"
+          },
+          "codebytes-2020": {
+            "buttonText": "Más información"
+          },
+          "coldplay": {
+            "buttonText": "Pruébalo"
+          },
+          "congrats-certificate-share": {
+            "buttonText": "Inicio"
+          },
+          "csjourneys": {
+            "buttonText": "Más información"
+          },
+          "csjourneys-22": {
+            "buttonText": "Más información"
+          },
+          "csleadersprize": {
+            "buttonText": "Más información"
+          },
+          "hoc-2023": {
+            "buttonText": "Más información"
+          },
+          "hoc-2023-dance-ai": {
+            "buttonText": "Más información",
+            "title": "Fiesta de baile: Edición IA"
+          },
+          "hoc-more": {
+            "body": "El sitio web de la Hora del Código cuenta con más de 500 actividades sobre ciencias de la computación para todas las edades y niveles de experiencia, desarrolladas por Code.org y nuestros socios."
+          },
+          "home-learning-2020": {
+            "buttonText": "Ver Ideas de Proyecto"
+          },
+          "superhero": {
+            "buttonText": "Más información"
+          },
+          "teacher-apps-closing-2021": {
+            "buttonText": "Únete a nosotros"
+          },
+          "teacher-apps-nominate-2020": {
+            "buttonText": "Designar a un docente"
+          },
+          "teacher-apps-open-2021": {
+            "buttonText": "Únete a nosotros"
+          },
+          "teacher-apps-stillon-2020": {
+            "buttonText": "Únete a nosotros"
+          }
+        }
+      }
+    }
+  }
+}

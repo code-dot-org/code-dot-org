@@ -10,19 +10,19 @@ da:
           assignment_family_title: AP® Principper i Datalogi
           title: Datalogi principperne ('18-'19)
     resources:
-      curriculum/csd/2020:
-        name: Læseplan
-      teacher_forum/csd/2020:
-        name: Teacher forum
       curriculum/csd/2017:
         name: Læseplan
-      teacher_forum_6/csd/2017:
-        name: Teacher forum
+      curriculum/csd/2018:
+        name: Læseplan
       curriculum/csd/2019:
+        name: Læseplan
+      curriculum/csd/2020:
         name: Læseplan
       teacher_forum/csd/2019:
         name: Teacher forum
-      curriculum/csd/2018:
-        name: Læseplan
+      teacher_forum/csd/2020:
+        name: Teacher forum
+      teacher_forum_6/csd/2017:
+        name: Teacher forum
       teacher_forum_6/csd/2018:
         name: Teacher forum

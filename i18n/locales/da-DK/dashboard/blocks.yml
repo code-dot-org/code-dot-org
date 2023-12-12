@@ -7,19 +7,11 @@ da:
       BadGuys_setSizeAll_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': mellem
-            '2.00': large
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': mellem
-            '2.00': large
-            '3.00': extra large
       Dancelab_alternateMoves:
         text: "\"{GROUP} skift hver {N} takter \nmellem {MOVE1} og {MOVE2}\""
         options:
@@ -67,6 +59,11 @@ da:
           UNIT:
             '"measures"': målt
             '"seconds"': sekunder
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': målt
+            '"seconds"': sekunder
       Dancelab_changeColorBy:
         text: skift {COLOR} {METHOD} by {AMOUNT}
         options:
@@ -106,6 +103,27 @@ da:
             MOVES.Kick: Stjerne
             MOVES.ThisOrThat: Dette eller denne
             MOVES.Rest: Ingen
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} udfør {MOVE} {DIR} forevigt"
+        options:
+          GROUP:
+            '"CAT"': katte
+            '"SLOTH"': plads
+          MOVE:
+            MOVES.Roll: Kropsrulning
+            MOVES.ClapHigh: Højt klap
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Ned to gange
+            MOVES.Drop: Slip
+            MOVES.Floss: Floss
+            MOVES.Fresh: Frisk
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Stjerne
+            MOVES.ThisOrThat: Dette eller denne
+            MOVES.Rest: Ingen
+            '"next"': "(Næste)"
+            '"prev"': "(Forrige)"
+            '"rand"': "(Tilfældig)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} udfør {MOVE} {DIR} forevigt"
         options:
@@ -448,26 +466,6 @@ da:
             '18': '18'
             '19': '19'
             '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
-            '40': '40'
           COSTUME:
             '"ALIEN"': en anden
             '"BEAR"': bjørne
@@ -581,6 +579,50 @@ da:
             '"iceCream"': Soft Ice
             '"default"': Lys
             '"neon"': Neon
+            '"tropical"': Tropisk
+            '"vintage"': Vintage
+            '"warm"': Rød
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          "indstil baggrundseffekt
+          {PALETTE} {EFFECT}"
+        options:
+          EFFECT:
+            '"none"': Ingen
+            '"rand"': "(Tilfældig)"
+            '"quads"': Vinkler
+            '"circles"': Tunnel
+            '"color_cycle"': Farver
+            '"diamonds"': Diamanter
+            '"disco_ball"': Diskokugle
+            '"fireworks"': Fyrværkeri
+            '"flowers"': Blomster
+            '"growing_stars"': Voksende stjerner
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kalejdoskop
+            '"lasers"': Laserdansegulv
+            '"splatter"': Sprøjt af maling
+            '"rainbow"': Regnbue
+            '"ripples_random"': Tilfældige krusninger
+            '"ripples"': Krusninger
+            '"snowflakes"': Sne
+            '"text"': Sangtitel
+            '"galaxy"': Ydre rum
+            '"sparkles"': Glitter
+            '"spiral"': Spiral
+            '"disco"': Kvadrater
+            '"squiggles"': Kruseduller
+            '"starburst"': Starburst
+            '"stars"': Stjerner
+            '"music_wave"': Bølger
+          PALETTE:
+            '"rave"': Sort og hvid
+            '"cool"': Blå
+            '"electronic"': Elektronik
+            '"iceCream"': Soft Ice
+            '"default"': Lys
+            '"neon"': Neon
+            '"rainbow"': Regnbue
             '"tropical"': Tropisk
             '"vintage"': Vintage
             '"warm"': Rød
@@ -1214,9 +1256,7 @@ da:
       gamelab_makeSpritesWithSize:
         options:
           SIZE:
-            '30': small
             '50': mellem
-            '100': large
       gamelab_mirrorSprite:
         text: "{SPRITE} kigger i retning {DIRECTION}"
         options:
@@ -1314,10 +1354,7 @@ da:
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
-            '25': extra small
-            '50': small
             '75': mellem
-            '100': large
       gamelab_setProp:
         text: skift {SPRITE} {PROPERTY} med {VAL}
         options:
@@ -1334,10 +1371,7 @@ da:
           PROPERTY:
             '"scale"': størrelse
           SIZE:
-            '25': extra small
-            '50': small
             '75': mellem
-            '100': large
       gamelab_setSizes:
         text: skift {SPRITE} {PROPERTY} med {N}%
         options:
@@ -1348,11 +1382,9 @@ da:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': langsom
             '5': normal
             '7': hurtig
-            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:
@@ -1701,7 +1733,6 @@ da:
       Poetry_whenLineShows:
         options:
           'N':
-            '0': "???"
             '1': '1'
             '2': '2'
             '3': '3'
@@ -1759,16 +1790,10 @@ da:
         options:
           PORTION:
             '1': alle
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': alle
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       adaptations_adaptationBehaviors:
         options:
           BEHAVIOR:
@@ -1922,7 +1947,6 @@ da:
       ecosystems_int10:
         options:
           VALUE:
-            '0': '0'
             '1': '1'
             '2': '2'
             '3': '3'

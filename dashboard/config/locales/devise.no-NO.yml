@@ -58,6 +58,28 @@
         motta en e-post som forklarer deg hvordan du kan låse opp kontoen din.
       unlocked: Kontoen din er blitt låst opp. Vennligst logg på for å fortsette.
   errors:
+    invitations:
+      edit:
+        header: Angi ditt passord
+        submit_button: Angi passordet
+      invitation_removed: Din invitasjon ble fjernet.
+      invitation_token_invalid: Invitasjonstegnet gitt er ikke gyldig!
+      new:
+        header: Send invitasjon
+        submit_button: Send en invitasjon
+      no_invitations_remaining: Ingen gjenværende invitasjoner
+      send_instructions: En invitasjon e-post er sendt til %{email}.
+      updated: Passordet ble endret. Du er nå logget på.
+    mailer:
+      invitation_instructions:
+        accept: Godta invitasjon
+        hello: Hei %{email}
+        ignore: Hvis du ikke vil godta invitasjonen, vennligst se bort fra denne e-posten.
+          <br /> Din konto vil ikke bli opprettet før du åpner lenken ovenfor og angir
+          passordet ditt.
+        someone_invited_you: Noen har invitert deg til %{url}, du kan godta det gjennom
+          lenken nedenfor.
+        subject: Invitasjon instruksjoner
     messages:
       already_confirmed: var allerede bekreftet. Vennligst  prøv å logg på
       confirmation_period_expired: må være bekreftet innen %{period}, vennligst forespør
@@ -65,25 +87,3 @@
       expired: har utgått, vennligst søk om en ny
       not_found: ikke funnet
       not_locked: var ikke låst
-    invitations:
-      send_instructions: En invitasjon e-post er sendt til %{email}.
-      invitation_token_invalid: Invitasjonstegnet gitt er ikke gyldig!
-      updated: Passordet ble endret. Du er nå logget på.
-      no_invitations_remaining: Ingen gjenværende invitasjoner
-      invitation_removed: Din invitasjon ble fjernet.
-      new:
-        header: Send invitasjon
-        submit_button: Send en invitasjon
-      edit:
-        header: Angi ditt passord
-        submit_button: Angi passordet
-    mailer:
-      invitation_instructions:
-        subject: Invitasjon instruksjoner
-        hello: Hei %{email}
-        someone_invited_you: Noen har invitert deg til %{url}, du kan godta det gjennom
-          lenken nedenfor.
-        accept: Godta invitasjon
-        ignore: Hvis du ikke vil godta invitasjonen, vennligst se bort fra denne e-posten.
-          <br /> Din konto vil ikke bli opprettet før du åpner lenken ovenfor og angir
-          passordet ditt.

@@ -606,7 +606,7 @@ uz:
         csd_app_lab_design_mode: CSD App laboratoriyasini loyihalash rejimi
         csd_app_lab_events: CSD App Lab tadbirlari
         PL_CSD_Unit4_AppTesting: Qog'oz prototipini sinovdan o'tkazish
-        csd_u6_circuit_playground: Jismoniy hisoblash
+        csd_u6_circuit_playground: Jismoniy Hisoblash
         csd_u6_input_output: Input and Output
         CSA-PL-for-loops: Java-da looplar uchun
         CSA-PL-variables: Java-da o'zgaruvchilar yaratish
@@ -719,6 +719,9 @@ uz:
         csa_sorting_algorithms: 'CSA: Saralash algoritmlari'
         star_quilts_intro_to_artist: 'Yulduzli ko''rpa-ko''rpa: rassomga kirish'
         upload_sprites_backgrounds: Maxsus spritlar va fonlarni yuklash
+        what-is-creativity: Ijodkorlik nima?
+        code-break: Dasturlash tanaffusini qiling
+        csd_ml_how_ai_works: SI (AI) qanday ishlaydi
     callout:
       text:
         drag_blocks: '"move" blokini olib boshqa blok pastiga biriktiring.'

@@ -6,460 +6,133 @@
           "display_name": "مختبر الذكاء الاصطناعي"
         },
         "csd-2022/app-lab": {
-          "display_name": "مختبر التطبيق",
-          "content": ""
+          "display_name": "مختبر التطبيق"
         },
         "csd-2022/applab-overview": {
-          "display_name": "لمحة عامة",
-          "content": ""
+          "display_name": "لمحة عامة"
         },
         "csd-2022/arrays": {
-          "display_name": "المصفوفات",
-          "content": ""
+          "display_name": "المصفوفات"
         },
         "csd-2022/board-events": {
-          "display_name": "أحداث اللوحة",
-          "content": ""
+          "display_name": "أحداث اللوحة"
         },
         "csd-2022/circuit-playground": {
-          "display_name": "نظرة عامة على ملعب الدائرة",
-          "content": ""
+          "display_name": "نظرة عامة على ملعب الدائرة"
         },
         "csd-2022/classes": {
-          "display_name": "الفصول الدراسية",
-          "content": ""
+          "display_name": "الفصول الدراسية"
         },
         "csd-2022/collision-detection": {
-          "display_name": "كشف التصادم",
-          "content": ""
+          "display_name": "كشف التصادم"
         },
         "csd-2022/css-overview": {
-          "display_name": "لمحة عامة",
-          "content": ""
+          "display_name": "لمحة عامة"
         },
         "csd-2022/design-mode": {
-          "display_name": "وضع التصميم",
-          "content": ""
+          "display_name": "وضع التصميم"
         },
         "csd-2022/designing-screens-with-code": {
-          "display_name": "تصميم الشاشات باستخدام الكود",
-          "content": ""
+          "display_name": "تصميم الشاشات باستخدام الكود"
         },
         "csd-2022/for-loops": {
-          "display_name": "للحلقات",
-          "content": ""
+          "display_name": "للحلقات"
         },
         "csd-2022/functions": {
-          "display_name": "دوال",
-          "content": ""
+          "display_name": "دوال"
         },
         "csd-2022/game-lab": {
-          "display_name": "مختبر اللعب",
-          "content": ""
+          "display_name": "مختبر اللعب"
         },
         "csd-2022/game-lab-overview": {
-          "display_name": "لمحة عامة",
-          "content": ""
+          "display_name": "لمحة عامة"
         },
         "csd-2022/html-overview": {
-          "display_name": "لمحة عامة",
-          "content": ""
+          "display_name": "لمحة عامة"
         },
         "csd-2022/images-in-html": {
-          "display_name": "الصور بصيغة HTML",
-          "content": ""
+          "display_name": "الصور بصيغة HTML"
         },
         "csd-2022/introduction-to-ai-lab": {
-          "display_name": "مقدمة لمختبر الذكاء الاصطناعي",
-          "content": ""
+          "display_name": "مقدمة لمختبر الذكاء الاصطناعي"
         },
         "csd-2022/javascript": {
-          "display_name": "جافا سكريبت",
-          "content": ""
+          "display_name": "جافا سكريبت"
         },
         "csd-2022/javascript-overview": {
-          "display_name": "لمحة عامة",
-          "content": ""
+          "display_name": "لمحة عامة"
         },
         "csd-2022/lists": {
-          "display_name": "القوائم",
-          "content": ""
+          "display_name": "القوائم"
         },
         "csd-2022/maker-toolkit": {
-          "display_name": "مجموعة أدوات المصمِّم",
-          "content": ""
+          "display_name": "مجموعة أدوات المصمِّم"
         },
         "csd-2022/maker-toolkit-overview": {
-          "display_name": "لمحة عامة",
-          "content": ""
+          "display_name": "لمحة عامة"
         },
         "csd-2022/model-cards-in-ai-lab": {
-          "display_name": "بطاقات نموذجية في مختبر الذكاء الاصطناعي",
-          "content": ""
+          "display_name": "بطاقات نموذجية في مختبر الذكاء الاصطناعي"
         },
         "csd-2022/multi-screen-apps": {
-          "display_name": "التطبيقات متعددة الشاشات",
-          "content": ""
+          "display_name": "التطبيقات متعددة الشاشات"
         },
         "csd-2022/other": {
-          "display_name": "الأخرى",
-          "content": ""
+          "display_name": "الأخرى"
         },
         "csd-2022/other-overview": {
-          "display_name": "لمحة عامة",
-          "content": ""
+          "display_name": "لمحة عامة"
         },
         "csd-2022/patterns-overview": {
-          "display_name": "لمحة عامة",
-          "content": ""
+          "display_name": "لمحة عامة"
         },
         "csd-2022/problem-solving-process": {
-          "display_name": "عملية حل المشكلات",
-          "content": ""
+          "display_name": "عملية حل المشكلات"
         },
         "csd-2022/problem-solving-process-general": {
-          "display_name": "عملية حل المشكلات",
-          "content": ""
+          "display_name": "عملية حل المشكلات"
         },
         "csd-2022/sprite-properties": {
-          "display_name": "خصائص الكائنات",
-          "content": ""
+          "display_name": "خصائص الكائنات"
         },
         "csd-2022/sprites": {
-          "display_name": "النقوش المتحركة",
-          "content": ""
+          "display_name": "النقوش المتحركة"
         },
         "csd-2022/the-draw-loop": {
-          "display_name": "حلقة الرسم",
-          "content": ""
+          "display_name": "حلقة الرسم"
         },
         "csd-2022/variables": {
-          "display_name": "المتغيرات",
-          "content": ""
+          "display_name": "المتغيرات"
         },
         "csd-2022/velocity": {
-          "display_name": "السرعة",
-          "content": ""
+          "display_name": "السرعة"
         },
         "csd-2022/web-lab": {
-          "display_name": "مختبر الويب",
-          "content": ""
+          "display_name": "مختبر الويب"
         },
         "csd-2022/which-type-of-chart": {
-          "content": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)",
-          "display_name": ""
-        },
-        "csd-2022/accelerometer-events": {
-          "display_name": "",
-          "content": ""
+          "content": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         },
         "csd-2022/accuracy-in-ai-lab": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/analog-sensors": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/animation-tab": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/body-styling": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/booleans-and-comparison-operators": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/changing-screens": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/changing-sensor-scale": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/checking-multiple-conditions-with-if-else-if": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/circuit-playground-parent": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/circuits-and-buttons": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/circuits-and-leds": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/color-lights": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/counter-patterns-with-event": {
-          "display_name": "",
-          "content": ""
+          "display_name": "الدقة في مختبر الذكاء الاصطناعي"
         },
         "csd-2022/creating-a-survey": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/creative-commons-search": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/css": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/data-and-change-events": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/debugging-html": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/debugging-variable-scope-functions": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/debugging-with-watchers": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/design-mode-elements": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/drawing-shapes": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/editing-images": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/formatting-html": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/headings-and-paragraphs": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/html": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/html-tags": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/hyperlinks": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/if-else-statements": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/if-statements": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/if-statements-2": {
-          "display_name": "",
-          "content": ""
+          "display_name": "إنشاء استطلاع"
         },
         "csd-2022/importing-a-model-in-app-lab": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/importing-screens": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/layout-properties": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/list-filter-pattern": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/list-reduce-pattern": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/list-scrolling-pattern": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/microbit-circuits-buttons": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/microbit-circuits-leds": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/microbit-display": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/microbit-overview": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/microbit-parent": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/microbit-physical-input": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/microbit-sensors": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/modifying-arrays": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/multi-frame-animations": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/naming-variables": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/patterns": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/patterns-2": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/physical-input": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/playing-notes": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/problem-solving-process-design": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/problem-solving-process-programming": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/producing-output": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/random-list-access": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/random-numbers": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/responding-to-user-input": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/saving-and-uploading-csv-files": {
-          "display_name": "",
-          "content": ""
+          "display_name": "استيراد نموذج في مختبر التطبيق"
         },
         "csd-2022/selecting-a-label": {
-          "display_name": "",
-          "content": ""
+          "display_name": "اختيار تسمية"
         },
         "csd-2022/selecting-features": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/shapes-and-parameters": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/sprite-interactions": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/style-sheets": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/tableDataStorage": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/taking-input-with-getproperty": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/text-properties": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/the-accelerometer": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/the-counter-pattern": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/the-counter-pattern-2": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/timed-for-loop": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/timed-loop": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/update-screen-pattern": {
-          "display_name": "",
-          "content": ""
+          "display_name": "تحديد الميزات"
         },
         "csd-2022/using-data-with-categorical-features": {
-          "display_name": "",
-          "content": ""
+          "display_name": "استخدام البيانات ذات الميزات الفئوية"
         },
         "csd-2022/using-data-with-numerical-features": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/variable-with-string-concatenation-pattern": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/velocity-and-the-counter-pattern": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/when-to-make-a-function": {
-          "display_name": "",
-          "content": ""
+          "display_name": "استخدام البيانات ذات الميزات العددية"
         }
       }
     }

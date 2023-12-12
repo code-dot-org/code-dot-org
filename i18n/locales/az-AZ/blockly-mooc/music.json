@@ -1,8 +1,8 @@
 {
-  "blockly_blockNewTrackAtStart": "yeni track {name}",
-  "blockly_blockNewTrackAtStartTooltip": "yeni track",
-  "blockly_blockNewTrackAtMeasure": "yeni track {track} da {measure}",
-  "blockly_blockNewTrackAtMeasureTooltip": "tədbirdə yeni track",
+  "blockly_blockNewTrackAtStart": "yeni trek {name}",
+  "blockly_blockNewTrackAtStartTooltip": "yeni trek",
+  "blockly_blockNewTrackAtMeasure": "yeni trek {track}  {measure} - da",
+  "blockly_blockNewTrackAtMeasureTooltip": "tədbirdə yeni trek",
   "blockly_blockNewTrackOnTrigger": "yeni track {track} zaman {trigger} səbəb",
   "blockly_blockNewTrackOnTriggerTooltip": "trigger yeni track",
   "blockly_blockPlayChord": "play qeydləri {chord}",
@@ -17,6 +17,7 @@
   "blockly_blockPlaySoundsSequentialTooltip": "ardıcıl səsləri oynayır",
   "blockly_blockPlaySoundsTogether": "birlikdə oynamaq",
   "blockly_blockPlaySoundsTogetherTooltip": "birlikdə səslənir",
+  "blockly_blockPlayPattern": "nağara çalmaq {pattern}",
   "blockly_blockPlayPatternTooltip": "zərb alətləri çalın",
   "blockly_blockRepeat": "{num} dəfə təkrarlayın",
   "blockly_blockRepeatTooltip": "təkrar et",
@@ -36,6 +37,8 @@
   "blockly_fieldRestOneMeasure": "1 ölçü",
   "blockly_fieldRestMeasures": "{num} tədbirlər",
   "blockly_fieldTriggerStartImmediately": "dərhal",
+  "blockly_fieldTriggerStartNextBeat": "növbəti vuruşda",
+  "blockly_fieldTriggerStartNextMeasure": "növbəti ölçüdə",
   "blockly_functionNamePlaceholder": "mənim funksiyam",
   "blockly_toolboxCategoryControl": "Nəzarət",
   "blockly_toolboxCategoryEffects": "Effektlər",
@@ -58,5 +61,8 @@
   "startOver": "Yenidən başla",
   "upload": "Yüklə",
   "panelHeaderInstructions": "Təlimatlar",
-  "panelHeaderWorkspace": "iş sahəsi: "
+  "panelHeaderWorkspace": "iş sahəsi: ",
+  "panelHeaderControls": "İdarəetmələr",
+  "panelHeaderTimeline": "Xronologiya",
+  "continue": "Davam et"
 }

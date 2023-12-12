@@ -4,7 +4,7 @@ class Services::I18n::CurriculumSyncUtils::RenderTranslationsTest < ActiveSuppor
   setup_all do
     @lesson = create(:lesson, overview: "This is the english overview")
     @activity_section = create(:activity_section, name: "English name", description: "English description")
-    @test_locale = :"te-ST"
+    @test_locale = :'te-ST'
     custom_i18n = {
       "data" => {
         "lessons" => {

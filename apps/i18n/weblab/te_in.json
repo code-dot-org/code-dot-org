@@ -1,7 +1,7 @@
 {
   "addCSSButton": "CSS జోడించండి",
-  "addImageButton": "చిత్రాన్ని జోడించండి",
   "addHTMLButton": "HTML జోడించండి",
+  "addImageButton": "చిత్రాన్ని జోడించండి",
   "closeFullscreenPreview": "పూర్తి స్క్రీన్ ప్రివ్యూను మూసివేయండి",
   "currentProjectCapacity": "{totalMegabytes}MB యొక్క {currentMegabytes}MB ఉపయోగించబడింది",
   "disallowedHtml": "“{filename}\" ఫైల్ అనుమతించబడని HTML మూలకాలను కలిగి ఉంది: `{disallowedTags}`. ఈ డైలాగ్ మూసివేయబడినప్పుడు అవి తీసివేయబడతాయి.",
@@ -14,8 +14,8 @@
   "reset": "వెబ్ ల్యాబ్ను రీసెట్ చేయండి",
   "resetComplete": "వెబ్ ల్యాబ్ రీసెట్ పూర్తయింది",
   "resetFailure": "వెబ్ ల్యాబ్ను రీసెట్ చేయడంలో విఫలమైంది: {message}.",
-  "toggleInspectorOn": "ఇన్స్పెక్టర్: ఆఫ్",
   "toggleInspectorOff": "ఇన్స్పెక్టర్: న",
+  "toggleInspectorOn": "ఇన్స్పెక్టర్: ఆఫ్",
   "troubleshootingSupport": "దయచేసి మరింత సమాచారం కోసం మా మద్దతు వ్యాసం [\"ట్రబుల్షూటింగ్ వెబ్ ల్యాబ్ సమస్యలు\"]({url}) చూడండి.",
   "uploadError": "అప్లోడ్ లోపం"
 }

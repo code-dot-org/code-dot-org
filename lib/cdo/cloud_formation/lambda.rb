@@ -16,7 +16,7 @@ module Cdo::CloudFormation
     def js(filename, uglify: true, max: ZIPFILE_MAX)
       str =
         if uglify
-          RakeUtils.npm_install
+          RakeUtils.yarn_install
           `npx uglifyjs --compress --mangle -- #{filename}`
         else
           File.read(filename)
@@ -31,6 +31,61 @@ module Cdo::CloudFormation
       Tempfile.open do |tmp|
         File.write(tmp, erb_file(filename))
         js(tmp.path, **args)
+      end
+    end
+
+    # Prepare (package) a Lambda that uses node runtime to be deployed by CloudFormation
+    # by installing dependencies, zipping the Lambda directory, uploading to S3, and returning the S3 URI to
+    # populate the `AWS::Lambda::Function` `Code` Property.
+    # Assumes Lambdas are in `/aws/cloudformation/lambdas/`.
+    def package_node_lambda(relative_directory)
+      install_node_dependencies(relative_directory)
+      return zip_directory(relative_directory)
+    end
+
+    # Install npm packages used by a lambda to prepare the directory the lambda is in for being zipped and uploaded.
+    # Assumes Lambdas are in `/aws/cloudformation/lambdas/`.
+    def install_node_dependencies(relative_directory)
+      absolute_directory = aws_dir('cloudformation/lambdas' + '//' + relative_directory)
+      Dir.chdir(absolute_directory) do
+        # Use the `ci` parameter to only install the versions identified in the lock file.
+        # Use `--only=prod` to skip dev dependencies.
+        RakeUtils.npm_install 'ci --only=prod'
+      end
+    end
+
+    # Zip a directory containing a Lambda's source code and dependencies, upload to S3, and return the S3 location
+    # to assist in populating the `Code` Property of a CloudFormation template `AWS::Lambda::Function` Resource.
+    # Assumes Lambdas are in `/aws/cloudformation/lambdas/`.
+    # @param relative_directory [String] Name of Lambda directory relative to `/aws/cloudformation/lambdas`.
+    # @param key_prefix [String] String to prefix on zip package filename (object key) before uploading to S3.
+    # @return [String] JSON Deployment package https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html
+    def zip_directory(relative_directory, key_prefix: 'lambda')
+      absolute_directory = aws_dir('cloudformation/lambdas' + '//' + relative_directory)
+      raise "#{absolute_directory} is not a file system directory." unless File.directory?(absolute_directory)
+
+      Dir.chdir(absolute_directory) do
+        # Zip files contain non-deterministic timestamps, so calculate a deterministic hash based on file contents.
+        globs = absolute_directory + '/**/*'
+        hash = Digest::MD5.hexdigest(
+          Dir[*globs].
+            select(&File.method(:file?)).
+            sort.
+            map(&Digest::MD5.method(:file)).
+            join
+        )
+        code_zip = `zip -qr - .`
+        key = "#{key_prefix}-#{hash}.zip"
+        s3_client = Aws::S3::Client.new(http_read_timeout: 30)
+        object_exists = s3_client.head_object(bucket: S3_LAMBDA_BUCKET, key: key) rescue nil
+        unless object_exists
+          CDO.log.info("Uploading Lambda zip package to S3 (#{code_zip.length} bytes)...")
+          s3_client.put_object({bucket: S3_LAMBDA_BUCKET, key: key, body: code_zip})
+        end
+        {
+          S3Bucket: S3_LAMBDA_BUCKET,
+          S3Key: key
+        }.to_json
       end
     end
 
@@ -65,22 +120,14 @@ module Cdo::CloudFormation
     # Zip an array of JS files (along with the `node_modules` folder), and upload to S3.
     def js_zip(files)
       Dir.chdir(aws_dir('cloudformation')) do
-        RakeUtils.npm_install '--production'
+        RakeUtils.yarn_install '--production'
       end
       lambda_zip(*files, 'node_modules', key_prefix: 'lambdajs')
     end
 
-    def ruby_zip(name)
-      dir = aws_dir('lambda', name)
-      Dir.chdir(dir) do
-        RakeUtils.bundle_install '--deployment'
-        lambda_zip("#{name}.rb", 'vendor', key_prefix: 'lambdarb')
-      end
-    end
-
     # Helper function to call a Lambda-function-based AWS::CloudFormation::CustomResource.
     # Ref: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cfn-customresource.html
-    def lambda_fn(function_name, properties={})
+    def lambda_fn(function_name, properties = {})
       custom_type = properties.delete(:CustomType)
       depends_on = properties.delete(:DependsOn)
       custom_resource = {

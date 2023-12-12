@@ -2,11 +2,85 @@
   "sm-WS": {
     "data": {
       "programming_environments": {
-        "weblab": {
-          "name": "Web Lab"
+        "applab": {
+          "categories": {
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Faiva"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Faiva"
+                    }
+                  }
+                }
+              },
+              "name": "Faamaumauga"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "fuainumera pito tele e toe faafoi"
+                    },
+                    "min": {
+                      "description": "fuainumera pito itiiti e toe faafoi"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "fuainumera pito tele e toe faafoi"
+                    },
+                    "min": {
+                      "description": "fuainumera pito itiiti e toe faafoi"
+                    }
+                  }
+                }
+              },
+              "name": "numera"
+            },
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Faiva"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "E taina le leo o le MP3 mai le faila o le URL ua faatonuina"
+                }
+              }
+            },
+            "variables": {
+              "expressions": {
+                "addPair": {
+                  "return_value": "E leai se mea"
+                }
+              },
+              "name": "Fuainumera lasi "
+            }
+          }
         },
         "gamelab": {
           "categories": {
+            "drawing": {
+              "name": "Tusiga ata"
+            },
             "game_lab": {
               "expressions": {
                 "playSound": {
@@ -32,112 +106,38 @@
                 }
               }
             },
-            "drawing": {
-              "name": "Tusiga ata"
-            },
             "math": {
-              "name": "numera",
               "expressions": {
                 "randomNumber": {
                   "palette_params": {
-                    "min": {
-                      "description": "fuainumera pito itiiti e toe faafoi"
-                    },
                     "max": {
                       "description": "fuainumera pito tele e toe faafoi"
+                    },
+                    "min": {
+                      "description": "fuainumera pito itiiti e toe faafoi"
                     }
                   }
                 },
                 "randomNumber_min_max": {
                   "palette_params": {
-                    "min": {
-                      "description": "fuainumera pito itiiti e toe faafoi"
-                    },
                     "max": {
                       "description": "fuainumera pito tele e toe faafoi"
+                    },
+                    "min": {
+                      "description": "fuainumera pito itiiti e toe faafoi"
                     }
                   }
                 }
-              }
+              },
+              "name": "numera"
             },
             "variables": {
               "name": "Fuainumera lasi "
             }
           }
         },
-        "applab": {
-          "categories": {
-            "ui_controls": {
-              "expressions": {
-                "onEvent": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "Faiva"
-                    }
-                  }
-                },
-                "playSound": {
-                  "short_description": "E taina le leo o le MP3 mai le faila o le URL ua faatonuina"
-                }
-              }
-            },
-            "data": {
-              "name": "Faamaumauga",
-              "expressions": {
-                "getPrediction": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "Faiva"
-                    }
-                  }
-                }
-              }
-            },
-            "control": {
-              "expressions": {
-                "timedLoop": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "Faiva"
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "numera",
-              "expressions": {
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "fuainumera pito itiiti e toe faafoi"
-                    },
-                    "max": {
-                      "description": "fuainumera pito tele e toe faafoi"
-                    }
-                  }
-                },
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "fuainumera pito itiiti e toe faafoi"
-                    },
-                    "max": {
-                      "description": "fuainumera pito tele e toe faafoi"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "Fuainumera lasi ",
-              "expressions": {
-                "addPair": {
-                  "return_value": "E leai se mea"
-                }
-              }
-            }
-          }
+        "weblab": {
+          "name": "Web Lab"
         }
       }
     }

@@ -1,15 +1,15 @@
 {
-  "selectDataset": "Pilih set data yang ingin kamu gunakan.",
-  "uploadedDataset": "Kamu baru saja mengunggah set data.",
-  "selectedDataset": "Kamu baru saja memilih set data.",
-  "dataDisplayLabel": "Pilih satu kolom untuk diprediksi.",
   "dataDisplayFeatures": "Pilih satu atau lebih kolom sebagai masukan (input) untuk membantu membuat prediksi.",
-  "selectedFeatureNumerical": "Kamu baru saja memilih sebuah fitur numerik.",
-  "selectedFeatureCategorical": "Kamu baru saja memilih sebuah fitur kategori",
-  "trainModel": "Model kamu sedang dilatih (trained).",
+  "dataDisplayLabel": "Pilih satu kolom untuk diprediksi.",
   "generateResults": "Model kamu sedang diuji.",
+  "modelSummary": "Kamu telah berhasil melatih dan menyimpan model kamu. Periksa detail dari model kamu dan klik Selesai untuk menggunakan model yang telah dilatih di App Lab.",
   "results": "Periksa hasilnya",
   "resultsDetails": "Rincian hasil sedang ditampilkan.",
   "saveModel": "Simpan model yang telah dilatih untuk digunakan di App Lab.",
-  "modelSummary": "Kamu telah berhasil melatih dan menyimpan model kamu. Periksa detail dari model kamu dan klik Selesai untuk menggunakan model yang telah dilatih di App Lab."
+  "selectDataset": "Pilih set data yang ingin kamu gunakan.",
+  "selectedDataset": "Kamu baru saja memilih set data.",
+  "selectedFeatureCategorical": "Kamu baru saja memilih sebuah fitur kategori",
+  "selectedFeatureNumerical": "Kamu baru saja memilih sebuah fitur numerik.",
+  "trainModel": "Model kamu sedang dilatih (trained).",
+  "uploadedDataset": "Kamu baru saja mengunggah set data."
 }

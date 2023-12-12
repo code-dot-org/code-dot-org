@@ -53,9 +53,6 @@ section:nth-of-type(2) figure {
 section:nth-of-type(3) {
   align-items: flex-start;
 }
-  section:nth-of-type(3) h3 {
-    font-family: 'Gotham 5r', sans-serif;
-  }
 
   .amazon-future-engineer-eligibility-container {
     padding: 1em 2em 1em 0;
@@ -76,10 +73,6 @@ section.afe-programs {
 }
   section.afe-programs h2{
     margin-bottom: .5em;
-  }
-
-  section.afe-programs h4{
-    font-size: 15px;
   }
 
   section.afe-programs ul {

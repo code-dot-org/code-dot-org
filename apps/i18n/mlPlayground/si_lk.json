@@ -1,83 +1,13 @@
 {
-  "navigateForward": "කරගෙන යන්න",
-  "navigateBack": "ආපසු",
-  "tryAgain": "නැවත උත්සාහ කරන්න",
-  "navigateDone": "අවසන් කරන්න",
-  "saveProgress": "සුරකින්න",
-  "correctAnswer": "නිවැරදියි",
-  "incorrectAnswer": "වැරදියි",
-  "modelCardPossibleValuesMinimum": "අවම",
-  "modelCardPossibleValuesMaximum": "උපරිම",
-  "columnInspectorDescription": "විස්තරය",
-  "columnDetailsMinimumValue": "අවම",
   "columnDetailsMaximumValue": "උපරිම",
+  "columnDetailsMinimumValue": "අවම",
+  "columnInspectorDescription": "විස්තරය",
+  "correctAnswer": "නිවැරදියි",
   "datasets": {
-    "medical_priority": {
+    "abalone": {
       "fields": {
-        "age": {
-          "id": "වයස"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "day": {
-          "id": "දිනය"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "avocado": {
-          "id": "අලිපේර "
-        },
-        "corn": {
-          "id": "ඉරිඟු"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "bacon": {
-          "id": "බේකන් "
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "පාට"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "වයස"
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Description": {
-          "id": "විස්තරය"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "sides": {
-          "id": "පැති"
-        },
-        "size": {
-          "id": "විශාලත්වය"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "avocado": {
-          "id": "අලිපේර "
+        "Length": {
+          "id": "කාලය"
         }
       }
     },
@@ -91,14 +21,35 @@
         }
       }
     },
-    "student_alcohol_consumption": {
+    "boba_toy": {
+      "fields": {
+        "banana": {
+          "id": "කෙසෙල්"
+        }
+      }
+    },
+    "census_part": {
       "fields": {
         "age": {
           "id": "වයස"
         }
       }
     },
-    "census_part": {
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "පාට"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "වයස"
+        }
+      }
+    },
+    "insurance_cost": {
       "fields": {
         "age": {
           "id": "වයස"
@@ -112,6 +63,20 @@
         }
       }
     },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "රට"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "වයස"
+        }
+      }
+    },
     "movies": {
       "fields": {
         "Country": {
@@ -122,17 +87,10 @@
         }
       }
     },
-    "songs": {
+    "nutrition": {
       "fields": {
-        "Artist": {
-          "id": "කලාකරු"
-        }
-      }
-    },
-    "abalone": {
-      "fields": {
-        "Length": {
-          "id": "කාලය"
+        "Description": {
+          "id": "විස්තරය"
         }
       }
     },
@@ -143,35 +101,27 @@
         }
       }
     },
-    "student_survey": {
+    "poutine_toy": {
       "fields": {
-        "Country": {
-          "id": "රට"
-        },
-        "Internet": {
-          "id": "අන්තර්ජාලය"
-        },
-        "Age": {
-          "id": "වයස",
-          "description": "වයස"
-        },
-        "Gender": {
-          "id": "ස්ත්‍රී/පුරුෂ භාවය",
-          "description": "ස්ත්‍රී/පුරුෂ භාවය"
+        "bacon": {
+          "id": "බේකන් "
         }
       }
     },
-    "boba_toy": {
+    "salad_toy": {
       "fields": {
-        "banana": {
-          "id": "කෙසෙල්"
+        "avocado": {
+          "id": "අලිපේර "
         }
       }
     },
-    "heart": {
+    "salsa_toy": {
       "fields": {
-        "Age": {
-          "id": "වයස"
+        "avocado": {
+          "id": "අලිපේර "
+        },
+        "corn": {
+          "id": "ඉරිඟු"
         }
       }
     },
@@ -185,12 +135,62 @@
         }
       }
     },
-    "loneliness_music": {
+    "shapes_v2_toy": {
       "fields": {
+        "sides": {
+          "id": "පැති"
+        },
+        "size": {
+          "id": "විශාලත්වය"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "දිනය"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "කලාකරු"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "වයස"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Age": {
+          "description": "වයස",
+          "id": "වයස"
+        },
         "Country": {
           "id": "රට"
+        },
+        "Gender": {
+          "description": "ස්ත්‍රී/පුරුෂ භාවය",
+          "id": "ස්ත්‍රී/පුරුෂ භාවය"
+        },
+        "Internet": {
+          "id": "අන්තර්ජාලය"
         }
       }
     }
-  }
+  },
+  "incorrectAnswer": "වැරදියි",
+  "modelCardPossibleValuesMaximum": "උපරිම",
+  "modelCardPossibleValuesMinimum": "අවම",
+  "navigateBack": "ආපසු",
+  "navigateDone": "අවසන් කරන්න",
+  "navigateForward": "කරගෙන යන්න",
+  "saveProgress": "සුරකින්න",
+  "tryAgain": "නැවත උත්සාහ කරන්න"
 }

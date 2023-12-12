@@ -94,23 +94,8 @@ describe('TeacherDashboardHeader', () => {
     expect(dropdownLinks.at(1).contains(checkmarkIcon)).to.equal(false);
   });
 
-  it('renders button to old edit section details', () => {
-    const wrapper = shallow(
-      <TeacherDashboardHeader {...DEFAULT_PROPS} userId={-1} />
-    );
-    let editSectionButton = wrapper.findWhere(
-      element =>
-        element.is('Button') &&
-        element.prop('text') === i18n.editSectionDetails()
-    );
-    expect(editSectionButton).to.have.lengthOf(1);
-    expect(wrapper.find('Connect(EditSectionDialog)')).to.have.lengthOf(1);
-  });
-
   it('renders button to edit section details in new section setup flow', () => {
-    const wrapper = shallow(
-      <TeacherDashboardHeader {...DEFAULT_PROPS} userId={90} />
-    );
+    const wrapper = shallow(<TeacherDashboardHeader {...DEFAULT_PROPS} />);
     let editSectionButton = wrapper.findWhere(
       element =>
         element.is('Button') &&

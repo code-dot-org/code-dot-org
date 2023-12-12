@@ -391,6 +391,10 @@ pt:
         csd_external_netflix_data: Como a Netflix faz sugestões para programas de TV e filmes?
         csd_external_waze_data: Por que tantos usuários são obcecados com Waze?
         csd_gamelab_animation_tab: A Guia de Animação
+        csd_gamelab_draw_1: Desenho no Game Lab - Parte 1
+        csd_gamelab_draw_2: Desenho no Game Lab - Parte 2
+        csd_gamelab_drawloop: Introdução ao Draw Loop
+        csd_gamelab_sprites_1: Introdução aos Sprites
         csd_gamelab_velocity: Velocidade
         csd_weblab_intro_1: Introdução para o Laboratório Web - Parte 1
         csd_weblab_intro_2: Introdução para o Laboratório Web - Parte 2
@@ -556,7 +560,7 @@ pt:
         csf_my_online_neighborhood_2020: Minha Vizinhança Online
         csf_follow_the_digital_trail: Siga o Trilha Digital
         csf_private_and_personal_information: Informações Privadas e Pessoais
-        csd_what_computers_are: O que é um computador?
+        csd_what_computers_are: O que é um Computador?
         csd_how_teamwork_works: Como funciona o trabalho em equipe
         csd_teamwork_and_disagreement: Trabalho em equipe - Lidar com discordâncias
         csf21pilot_events: 'Sprite Lab: Sprites em ação'
@@ -620,7 +624,7 @@ pt:
         csd_app_lab_events: Eventos do CSD App Lab
         PL_CSD_Unit4_AppTesting: Teste de protótipo em papel
         csd_u6_circuit_playground: Computação Física
-        csd_u6_input_output: Entrada e saída
+        csd_u6_input_output: Entrada e Saída
         CSA-PL-for-loops: Para loops em Java
         CSA-PL-variables: Criando variáveis em Java
         PL_CS_Journeys_Overview: Jornada de CC
@@ -711,6 +715,7 @@ pt:
         csd_sprite_properties: Propriedades do Sprite
         csa-pl-documentation: Documentação no Java Lab
         csc-starquilts-intro: 'CSC: Star Quilts'
+        csc-mapmakers-intro: Codificação de Mapas Interativos
         csa-pl-vocab-pm: Vocabulário de gerenciamento de projetos
         csc-ecosystems-intro: Introdução aos ecossistemas
         PL_CSD_MicroBit_Intro: Introdução ao Micro:bit
@@ -728,10 +733,18 @@ pt:
         csa_remving_data_from_an_arraylist: 'CSA: Removendo dados de uma lista de matrizes'
         csa_private_methods: 'CSA: Métodos privados'
         csa_recursion: 'CSA: Recursão'
-        csa_searching_algorithms: 'CSA: Algoritmos de busca'
+        csa_searching_algorithms: 'CSA: Algoritmos de Busca'
         csa_sorting_algorithms: 'CSA: Algoritmos de classificação'
         star_quilts_intro_to_artist: 'Star Quilts: Introdução ao artista'
         upload_sprites_backgrounds: Fazendo upload de sprites e planos de fundo personalizados
+        how-ai-works-llms-full: Como os Chatbots e os Grandes Modelos de Linguagem Funcionam
+        how-ai-works-creativity-full: A IA Possui Criatividade e Imaginação?
+        csc_bookcovers_intro: Codificando Capas de Livros
+        what-is-creativity: O que é criatividade?
+        code-break: Faça uma quebra de código
+        se-cv-intro-to-lessons: 'Engenharia de Software e Visão Computacional: Introdução às Lições'
+        csd_ml_how_ai_works: Como funciona a IA
+        hoc-dance-ai-warmup: 'Festa Dançante, Edição para IA: Aquecimento'
     callout:
       text:
         drag_blocks: Arraste um bloco "avance" e o encaixe embaixo do outro bloco

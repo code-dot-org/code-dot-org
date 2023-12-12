@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import i18n from '@cdo/locale';
+import fontConstants from '@cdo/apps/fontConstants';
 import BaseDialog from '../../BaseDialog';
 import DialogFooter from '../../teacherDashboard/DialogFooter';
 import Button from '../../Button';
@@ -30,7 +31,7 @@ export default class LessonStatusDialog extends Component {
             __useDeprecatedTag
             text={i18n.closeAndSave()}
             onClick={this.props.handleConfirm}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
           />
         </DialogFooter>
       </BaseDialog>
@@ -43,6 +44,6 @@ const styles = {
     paddingLeft: 20,
     paddingRight: 20,
     paddingBottom: 20,
-    fontFamily: '"Gotham 4r", sans-serif, sans-serif',
+    ...fontConstants['main-font-regular'],
   },
 };

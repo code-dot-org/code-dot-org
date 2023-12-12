@@ -59,6 +59,27 @@ sk:
       unlocked: Váš účet bol úspešne odomknutý. Prosím, prihláste sa, aby ste mohli
         pokračovať.
   errors:
+    invitations:
+      edit:
+        header: Nastavte si heslo
+        submit_button: Nastaviť heslo
+      invitation_removed: Vaše pozvanie bolo odstránené.
+      invitation_token_invalid: Zadaný pozývací token je neplatný!
+      new:
+        header: Odoslať pozvánku
+        submit_button: Odoslať pozvánku
+      no_invitations_remaining: Nezostávajú žiadne pozvánky
+      send_instructions: 'Pozvanie bolo odoslané na e-mail: %{email}.'
+      updated: Vaše heslo bolo úspešne nastavené. Ste prihlásený.
+    mailer:
+      invitation_instructions:
+        accept: Prijať pozvánku
+        hello: Ahoj %{email}
+        ignore: Ak nechcete prijať pozvanie, prosím ignorujte tento e-mail.<br />váš
+          účet sa nevytvorí, pokým neprejdete na odkaz vyššie a nenastavíte si heslo.
+        someone_invited_you: Niekto Vás pozval na %{url}, môžete to prijať cez nižšie
+          uvedený odkaz.
+        subject: Inštrukcie k pozvánke
     messages:
       already_confirmed: bol úspešne potvrdený, prosím, skúste sa prihlásiť
       confirmation_period_expired: musí byť potvrdený do %{period}, prosím, požiadajte
@@ -66,24 +87,3 @@ sk:
       expired: vypršal, požiadaj o nový
       not_found: nenájdené
       not_locked: nebol uzamknutý
-    invitations:
-      send_instructions: 'Pozvanie bolo odoslané na e-mail: %{email}.'
-      invitation_token_invalid: Zadaný pozývací token je neplatný!
-      updated: Vaše heslo bolo úspešne nastavené. Ste prihlásený.
-      no_invitations_remaining: Nezostávajú žiadne pozvánky
-      invitation_removed: Vaše pozvanie bolo odstránené.
-      new:
-        header: Odoslať pozvánku
-        submit_button: Odoslať pozvánku
-      edit:
-        header: Nastavte si heslo
-        submit_button: Nastaviť heslo
-    mailer:
-      invitation_instructions:
-        subject: Inštrukcie k pozvánke
-        hello: Ahoj %{email}
-        someone_invited_you: Niekto Vás pozval na %{url}, môžete to prijať cez nižšie
-          uvedený odkaz.
-        accept: Prijať pozvánku
-        ignore: Ak nechcete prijať pozvanie, prosím ignorujte tento e-mail.<br />váš
-          účet sa nevytvorí, pokým neprejdete na odkaz vyššie a nenastavíte si heslo.

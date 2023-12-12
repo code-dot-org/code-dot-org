@@ -18,16 +18,23 @@ Pair programming is a technique in which two programmers work together at one co
 
 ##### As the teacher, you play a critical role in determining and establishing routines for how your students will use the pair programming strategy. 
 
-## Pair programming has been shown to:
 
-<img src="https://images.code.org/d54edebfb0b0c6c55393276180ae19f9-image-1639783726177.jpg" alt="Two students high-five each other while sitting at desktop computers." width="400px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+<img src="https://images.code.org/d54edebfb0b0c6c55393276180ae19f9-image-1639783726177.jpg" alt="Two students high-five each other while sitting at desktop computers." width="300px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+## Pair programming has been shown to:
 
 * ##### Improve computer science enrollment, retention, and students' performance.
 * ##### Increase students' confidence.
 * ##### Develop students' critical thinking skills.
 * ##### Introduce students to the “real world” working environment. In fact, many university courses and computer science professionals use pair programming to help them problem solve!
 
-## To begin pair programming with your students:
+
+<div style="clear:both;">
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em; font-weight: bold;">🤝🏽 How do I begin pair programming with my students?</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
 
 1. ##### Form pairs.
 2. ##### Give each pair one computer.
@@ -35,13 +42,22 @@ Pair programming is a technique in which two programmers work together at one co
 4. ##### Have students start working. 
 5. ##### Ensure that students switch roles at regular intervals (every 3 to 5 minutes).
 6. ##### Ensure that the navigators remain active participants. 
+</p></div></details>
 
-## How is pair programming connected to the curriculum?
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em; font-weight: bold;">🔎 How is pair programming connected to the curriculum?</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
 
-##### In CS Principles, there are many lessons on the computer which students develop programming skills. Pair programming can foster a sense of camaraderie and collaboration in the classroom. In addition, pair programming can  promote inclusion by reducing the "confidence gap" between female and male students while increasing all students' programming confidence. 
+##### In CS Discoveries, there are many lessons on the computer which students develop programming skills. Pair programming can foster a sense of camaraderie and collaboration in the classroom. In addition, pair programming can  promote inclusion by reducing the "confidence gap" between female and male students while increasing all students' programming confidence. 
+</p></div></details>
 
-## Additional resources 
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.5em; font-weight: bold;">📝 Additional resources</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
 
-* ##### The <a href="https://www.etr.org/default/assets/File/projects/Pair%20Programming%20Toolkit_FINAL%207_30_19.pdf" target="blank" rel="noopener noreferrer" >ETR Pair Programming Toolkit</a>    provides additional strategies for implementing Pair Programming in your classroom. 
-* ##### The National Center for Women & Information Technology (NCWIT) has a <a href="http://bit.ly/pair-programming-ncwit" target="blank" rel="noopener noreferrer" >great resource</a> about the benefits of pair programming.
+* ##### The ETR Pair Programming Toolkit provides additional strategies for implementing Pair Programming in your classroom. Check it out at: <a href="http://bit.ly/pair-programming-toolkit" target="blank" rel="noopener noreferrer" >http://bit.ly/pair-programming-toolkit</a>   
+* ##### The National Center for Women & Information Technology (NCWIT) has a great resource about the benefits of pair programming. Check it out at: <a href="http://bit.ly/pair-programming-ncwit" target="blank" rel="noopener noreferrer" >http://bit.ly/pair-programming-ncwit</a>     
+</p></div></details>
 MARKDOWN

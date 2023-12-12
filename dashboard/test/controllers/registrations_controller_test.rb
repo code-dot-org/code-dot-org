@@ -241,7 +241,7 @@ class RegistrationsControllerTest < ActionController::TestCase
 
       assert_equal 'A name', assigns(:user).name
       assert_equal 'f', assigns(:user).gender
-      assert_equal Date.today - 13.years, assigns(:user).birthday
+      assert_equal Time.zone.today - 13.years, assigns(:user).birthday
       assert_equal AuthenticationOption::EMAIL, assigns(:user).primary_contact_info.credential_type
       assert_equal User::TYPE_STUDENT, assigns(:user).user_type
       assert_equal '', assigns(:user).email
@@ -264,7 +264,7 @@ class RegistrationsControllerTest < ActionController::TestCase
 
       assert_equal 'A name', assigns(:user).name
       assert_equal 'f', assigns(:user).gender
-      assert_equal Date.today - 13.years, assigns(:user).birthday
+      assert_equal Time.zone.today - 13.years, assigns(:user).birthday
       assert_equal AuthenticationOption::EMAIL, assigns(:user).primary_contact_info.credential_type
       assert_equal User::TYPE_STUDENT, assigns(:user).user_type
       assert_equal '', assigns(:user).email
@@ -336,8 +336,8 @@ class RegistrationsControllerTest < ActionController::TestCase
 
     mail = ActionMailer::Base.deliveries.first
     assert_equal 'Welcome to Code.org!', mail.subject
-    assert mail.body.to_s.include?('Hadi Partovi')
-    assert mail.body.to_s.include?('New to teaching computer science')
+    assert_includes(mail.body.to_s, 'Hadi Partovi')
+    assert_includes(mail.body.to_s, 'New to teaching computer science')
   end
 
   test "create new teacher with non-us ip sends email without us content" do
@@ -349,8 +349,8 @@ class RegistrationsControllerTest < ActionController::TestCase
 
     mail = ActionMailer::Base.deliveries.first
     assert_equal 'Welcome to Code.org!', mail.subject
-    assert mail.body.to_s.include?('Hadi Partovi')
-    refute mail.body.to_s.include?('New to teaching computer science')
+    assert_includes(mail.body.to_s, 'Hadi Partovi')
+    refute_includes(mail.body.to_s, 'New to teaching computer science')
   end
 
   test 'create new teacher with es-MX locale sends localized welcome email' do
@@ -401,7 +401,7 @@ class RegistrationsControllerTest < ActionController::TestCase
     end
 
     teacher = User.last
-    assert_not_nil teacher.share_teacher_email_regional_partner_opt_in
+    refute_nil teacher.share_teacher_email_regional_partner_opt_in
   end
 
   test "create new teacher with us ip with opt-out to sharing email with regional partners ensure share_teacher_email_regional_partner_opt_in value is nil" do

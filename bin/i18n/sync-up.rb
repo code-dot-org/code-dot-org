@@ -6,6 +6,7 @@
 # 3. from i18n/locales/source/hourofcode to Hourofcode project
 # 4. from i18n/locales/source/**/restricted.yml to Code.org - Restricted project
 
+require_relative 'metrics'
 require_relative 'i18n_script_utils'
 
 def sync_up
@@ -18,7 +19,7 @@ def sync_up
         while line = stdout.gets
           # skip lines detailing individual file upload, unless that file
           # resulted in an unexpected response
-          next if line.start_with?("File ") && line.end_with?("OK\n", "SKIPPED\n")
+          next if line.start_with?("✔️  File")
 
           puts line
         end
@@ -27,8 +28,10 @@ def sync_up
       end
     end
 
+    I18n::Metrics.report_status(true, 'sync-up', 'Sync up completed successfully')
     puts "Sync up completed successfully"
   rescue => exception
+    I18n::Metrics.report_status(false, 'sync-up', "Sync up failed from the error: #{exception}")
     puts "Sync up failed from the error: #{exception}"
     raise exception
   end

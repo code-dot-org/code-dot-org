@@ -11,7 +11,7 @@
       },
       "validations": [
         {
-          "conditions": ["played_one_sound"],
+          "conditions": [{"name": "played_sounds_together", "value": 1}],
           "message": "Nice work.",
           "next": "true"
         },
@@ -37,16 +37,16 @@
       },
       "validations": [
         {
-          "conditions": ["played_three_sounds_together", "used_together_block"],
+          "conditions": [{"name": "played_sounds_together", "value": 3}],
           "message": "Nice work.",
           "next": "true"
         },
         {
-          "conditions": ["played_two_sounds_together"],
+          "conditions": [{"name": "played_sounds_together", "value": 2}],
           "message": "It's good that you played two sounds, but you need to **play another one**."
         },
         {
-          "conditions": ["played_one_sound"],
+          "conditions": [{"name": "played_sounds_together", "value": 1}],
           "message": "It's good that you played one sound, but you need to **play two more**."
         },
         {"message": "Please **play three sounds together**."}

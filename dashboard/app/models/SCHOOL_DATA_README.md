@@ -105,17 +105,17 @@ Here’s an example where the same school has 9 different ids/rows:
 ```
 select * from schools where name='FAIRVIEW ACCELERATED' AND city='SAN ANGELO' AND state='TX' AND zip='76904' AND address_line1='2405 FAIRVIEW SCHOOL RD';
 +--------------+--------------------+----------------------+------------+-------+-------+-------------+---------------------+---------------------+-------------------------+---------------+---------------+-----------+-------------+-----------------+
-| id           | school_district_id | name                 | city       | state | zip   | school_type | created_at          | updated_at          | address_line1           | address_line2 | address_line3 | latitude  | longitude   | state_school_id |
+| id           | school_district_id | name                 | city       | state | zip   | school_type | created_at          | updated_at          | address_line1           | address_line2 | address_line3 | latitude  | longitude   |
 +--------------+--------------------+----------------------+------------+-------+-------+-------------+---------------------+---------------------+-------------------------+---------------+---------------+-----------+-------------+-----------------+
-| 480930011322 |            4809300 | FAIRVIEW ACCELERATED | SAN ANGELO | TX    | 76904 | public      | 2016-10-25 22:08:20 | 2017-11-01 21:43:38 | 2405 FAIRVIEW SCHOOL RD | NULL          | NULL          | 31.390985 | -100.402850 | NULL            |
-| 480930012897 |            4809300 | FAIRVIEW ACCELERATED | SAN ANGELO | TX    | 76904 | public      | 2016-10-25 22:08:20 | 2017-11-01 21:43:38 | 2405 FAIRVIEW SCHOOL RD | NULL          | NULL          | 31.390990 | -100.402461 | NULL            |
-| 481149008475 |            4811490 | FAIRVIEW ACCELERATED | SAN ANGELO | TX    | 76904 | public      | 2016-10-25 22:08:21 | 2017-11-01 21:43:40 | 2405 FAIRVIEW SCHOOL RD | NULL          | NULL          | 31.390985 | -100.402850 | NULL            |
-| 481401008049 |            4814010 | FAIRVIEW ACCELERATED | SAN ANGELO | TX    | 76904 | public      | 2016-10-25 22:08:22 | 2017-11-01 21:43:42 | 2405 FAIRVIEW SCHOOL RD | NULL          | NULL          | 31.390985 | -100.402850 | NULL            |
-| 481807007228 |            4818070 | FAIRVIEW ACCELERATED | SAN ANGELO | TX    | 76904 | public      | 2016-10-25 22:08:26 | 2017-11-01 21:43:47 | 2405 FAIRVIEW SCHOOL RD | NULL          | NULL          | 31.390985 | -100.402850 | NULL            |
-| 483738006035 |            4837380 | FAIRVIEW ACCELERATED | SAN ANGELO | TX    | 76904 | public      | 2016-10-25 22:08:43 | 2017-11-01 21:44:06 | 2405 FAIRVIEW SCHOOL RD | NULL          | NULL          | 31.390985 | -100.402850 | NULL            |
-| 484155009027 |            4841550 | FAIRVIEW ACCELERATED | SAN ANGELO | TX    | 76904 | public      | 2016-10-25 22:08:46 | 2017-11-01 21:44:10 | 2405 FAIRVIEW SCHOOL RD | NULL          | NULL          | 31.390985 | -100.402850 | NULL            |
-| 484404011050 |            4844040 | FAIRVIEW ACCELERATED | SAN ANGELO | TX    | 76904 | public      | 2016-10-25 22:08:47 | 2017-11-01 21:44:12 | 2405 FAIRVIEW SCHOOL RD | NULL          | NULL          | 31.390985 | -100.402850 | NULL            |
-| 484441007083 |            4844410 | FAIRVIEW ACCELERATED | SAN ANGELO | TX    | 76904 | public      | 2016-10-25 22:08:47 | 2017-11-01 21:44:12 | 2405 FAIRVIEW SCHOOL RD | NULL          | NULL          | 31.390985 | -100.402850 | NULL            |
+| 480930011322 |            4809300 | FAIRVIEW ACCELERATED | SAN ANGELO | TX    | 76904 | public      | 2016-10-25 22:08:20 | 2017-11-01 21:43:38 | 2405 FAIRVIEW SCHOOL RD | NULL          | NULL          | 31.390985 | -100.402850 |
+| 480930012897 |            4809300 | FAIRVIEW ACCELERATED | SAN ANGELO | TX    | 76904 | public      | 2016-10-25 22:08:20 | 2017-11-01 21:43:38 | 2405 FAIRVIEW SCHOOL RD | NULL          | NULL          | 31.390990 | -100.402461 |
+| 481149008475 |            4811490 | FAIRVIEW ACCELERATED | SAN ANGELO | TX    | 76904 | public      | 2016-10-25 22:08:21 | 2017-11-01 21:43:40 | 2405 FAIRVIEW SCHOOL RD | NULL          | NULL          | 31.390985 | -100.402850 |
+| 481401008049 |            4814010 | FAIRVIEW ACCELERATED | SAN ANGELO | TX    | 76904 | public      | 2016-10-25 22:08:22 | 2017-11-01 21:43:42 | 2405 FAIRVIEW SCHOOL RD | NULL          | NULL          | 31.390985 | -100.402850 |
+| 481807007228 |            4818070 | FAIRVIEW ACCELERATED | SAN ANGELO | TX    | 76904 | public      | 2016-10-25 22:08:26 | 2017-11-01 21:43:47 | 2405 FAIRVIEW SCHOOL RD | NULL          | NULL          | 31.390985 | -100.402850 |
+| 483738006035 |            4837380 | FAIRVIEW ACCELERATED | SAN ANGELO | TX    | 76904 | public      | 2016-10-25 22:08:43 | 2017-11-01 21:44:06 | 2405 FAIRVIEW SCHOOL RD | NULL          | NULL          | 31.390985 | -100.402850 |
+| 484155009027 |            4841550 | FAIRVIEW ACCELERATED | SAN ANGELO | TX    | 76904 | public      | 2016-10-25 22:08:46 | 2017-11-01 21:44:10 | 2405 FAIRVIEW SCHOOL RD | NULL          | NULL          | 31.390985 | -100.402850 |
+| 484404011050 |            4844040 | FAIRVIEW ACCELERATED | SAN ANGELO | TX    | 76904 | public      | 2016-10-25 22:08:47 | 2017-11-01 21:44:12 | 2405 FAIRVIEW SCHOOL RD | NULL          | NULL          | 31.390985 | -100.402850 |
+| 484441007083 |            4844410 | FAIRVIEW ACCELERATED | SAN ANGELO | TX    | 76904 | public      | 2016-10-25 22:08:47 | 2017-11-01 21:44:12 | 2405 FAIRVIEW SCHOOL RD | NULL          | NULL          | 31.390985 | -100.402850 |
 +--------------+--------------------+----------------------+------------+-------+-------+-------------+---------------------+---------------------+-------------------------+---------------+---------------+-----------+-------------+-----------------+
 9 rows in set (0.00 sec)
 ```
@@ -149,9 +149,6 @@ select count(*) from schools where latitude is null;
 +----------+
 1 row in set (1.02 sec)
 ```
-
-# State school ids need to be unique.
-Because of the duplication of schools, we only load the state ids from most recent public/charter dataset. The result is that not all public and charter schools in our DB have a state school id set.
 
 # School ids were initially imported as ints and later converted to strings, dropping leading zeros
 This only applies to public and charter schools, not private schools. 

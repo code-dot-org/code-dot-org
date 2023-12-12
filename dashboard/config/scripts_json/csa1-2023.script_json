@@ -4,6 +4,28 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "6bb15d90-2dde-4d7c-9480-8211542378b6",
+          "notice": "A 2:1 scholarship opportunity from Amazon Future Engineer",
+          "details": "Planning to study computer science, engineering or robotics in college? Apply to the Amazon Future Engineer Scholarship. 400 high school seniors will be awarded scholarships and get paid internship opportunities.",
+          "link": "https://www.amazonfutureengineer.com/scholarships?utm_campaign=Code.org&utm_medium=Scholarship&utm_source=US&utm_content=Email",
+          "type": "bullhorn",
+          "visibility": "Student-only",
+          "dismissible": true,
+          "buttonText": "Apply now"
+        },
+        {
+          "key": "aeb0e4f3-f883-479e-87dd-adee964d2395",
+          "notice": "Free Teacher Resources from Amazon Future Engineer",
+          "details": "Code.org has partnered with Amazon Future Engineer to offer teachers at underserved schools a growing number of resources and benefits at no cost! ",
+          "link": "code.org/afe",
+          "type": "bullhorn",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Get free resources"
+        }
+      ],
       "curriculum_umbrella": "CSA",
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -17,7 +39,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-31 16:06:35 UTC",
+    "serialized_at": "2023-11-20 21:10:25 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -85,6 +107,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "lessonGroup-7",
+      "user_facing": true,
+      "position": 6,
+      "properties": {
+        "display_name": "Sandboxes"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-7",
         "script.name": "csa1-2023"
       }
     }
@@ -443,6 +477,21 @@
       "seeding_key": {
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "lesson-18",
+      "name": "Sandbox: The Neighborhood",
+      "absolute_position": 21,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 20,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-7",
         "script.name": "csa1-2023"
       }
     }
@@ -1236,6 +1285,18 @@
         "lesson_activity.key": "55412c10-f40b-4a42-806f-7b2e8c7a8619",
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2023"
+      }
+    },
+    {
+      "key": "18711a9c-ad02-440e-9dbb-d0f4a35186da",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "18711a9c-ad02-440e-9dbb-d0f4a35186da",
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-7",
         "script.name": "csa1-2023"
       }
     }
@@ -6047,6 +6108,28 @@
         "activity_section.key": "40c4203e-b918-4c71-8ec5-8004174984eb",
         "lesson_activity.key": "55412c10-f40b-4a42-806f-7b2e8c7a8619"
       }
+    },
+    {
+      "key": "38d82083-6f0c-4a44-9f4e-98c8718a057f",
+      "position": 1,
+      "properties": {
+        "progression_name": "With Paint Bucket"
+      },
+      "seeding_key": {
+        "activity_section.key": "38d82083-6f0c-4a44-9f4e-98c8718a057f",
+        "lesson_activity.key": "18711a9c-ad02-440e-9dbb-d0f4a35186da"
+      }
+    },
+    {
+      "key": "88326380-e0f6-42e6-95b7-fed281cb4511",
+      "position": 2,
+      "properties": {
+        "progression_name": "No Paint Bucket"
+      },
+      "seeding_key": {
+        "activity_section.key": "88326380-e0f6-42e6-95b7-fed281cb4511",
+        "lesson_activity.key": "18711a9c-ad02-440e-9dbb-d0f4a35186da"
+      }
     }
   ],
   "script_levels": [
@@ -8023,6 +8106,56 @@
       "level_keys": [
         "CSA U1 Asphalt Art Project 1-Day_2023"
       ]
+    },
+    {
+      "chapter": 80,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood Sandbox"
+        ],
+        "progression": "With Paint Bucket"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood Sandbox"
+        ],
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa1-2023",
+        "activity_section.key": "38d82083-6f0c-4a44-9f4e-98c8718a057f"
+      },
+      "level_keys": [
+        "CSA 2023 Neighborhood Sandbox"
+      ]
+    },
+    {
+      "chapter": 81,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox"
+        ],
+        "progression": "No Paint Bucket"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox"
+        ],
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa1-2023",
+        "activity_section.key": "88326380-e0f6-42e6-95b7-fed281cb4511"
+      },
+      "level_keys": [
+        "CSA 2023 Neighborhood - No Bucket Sandbox"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -8973,6 +9106,30 @@
         "script.name": "csa1-2023",
         "activity_section.key": "2bc505dc-26c4-4fce-8cdb-4939fd4147ef"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2023 Neighborhood Sandbox",
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood Sandbox"
+        ],
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa1-2023",
+        "activity_section.key": "38d82083-6f0c-4a44-9f4e-98c8718a057f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2023 Neighborhood - No Bucket Sandbox",
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox"
+        ],
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa1-2023",
+        "activity_section.key": "88326380-e0f6-42e6-95b7-fed281cb4511"
+      }
     }
   ],
   "resources": [
@@ -9767,6 +9924,7 @@
       "key": "investigate_working_with_java_files",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -10154,6 +10312,7 @@
       "key": "u1l2_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -12917,6 +13076,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

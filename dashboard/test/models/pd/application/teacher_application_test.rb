@@ -14,7 +14,7 @@ module Pd::Application
       assert_nil teacher_application.application_guid
 
       teacher_application.save!
-      assert_not_nil teacher_application.application_guid
+      refute_nil teacher_application.application_guid
     end
 
     test 'existing guid is preserved' do
@@ -102,8 +102,8 @@ module Pd::Application
     end
 
     test 'accepted_at updates times' do
-      today = Date.today.to_time
-      tomorrow = Date.tomorrow.to_time
+      today = Time.zone.today.to_time
+      tomorrow = Time.zone.tomorrow.to_time
       application = create :pd_teacher_application
       assert_nil application.accepted_at
 
@@ -180,7 +180,7 @@ module Pd::Application
 
       application.update_user_school_info!
       refute_equal original_user_school_info_id, user.school_info_id
-      assert_not_nil user.school_info_id
+      refute_nil user.school_info_id
     end
 
     test 'update_user_school_info does nothing when user has no school info and does not have enough info for new school' do
@@ -205,18 +205,26 @@ module Pd::Application
     test 'get_first_selected_workshop single local workshop' do
       Pd::Workshop.any_instance.stubs(:process_location)
 
-      workshop = create :workshop, location_address: 'Address', sessions_from: Date.today, num_sessions: 1
+      workshop = create :workshop, location_address: 'Address', sessions_from: Time.zone.today, num_sessions: 1
       application = create :pd_teacher_application, form_data_hash: (
       build :pd_teacher_application_hash,
         regional_partner_workshop_ids: [workshop.id],
-        able_to_attend_multiple: ["#{Date.today.strftime '%B %-d, %Y'} in Address"]
+        able_to_attend_multiple: ["#{Time.zone.today.strftime '%B %-d, %Y'} in Address"]
       )
 
       assert_equal workshop, application.get_first_selected_workshop
     end
 
     test 'get_first_selected_workshop multiple local workshops' do
-      workshops = (1..3).map {|i| create :workshop, num_sessions: 2, sessions_from: Date.today + i, location_address: %w(tba TBA tba)[i - 1]}
+      addresses = %w(tba TBA tba)
+      workshops = (1..3).map do |i|
+        create(
+          :workshop,
+          num_sessions: 2,
+          sessions_from: Time.zone.today + i,
+          location_address: addresses[i - 1]
+        )
+      end
 
       application = create :pd_teacher_application, form_data_hash: (
       build(:pd_teacher_application_hash, :with_multiple_workshops,
@@ -233,7 +241,7 @@ module Pd::Application
     end
 
     test 'get_first_selected_workshop multiple local workshops no selection returns first' do
-      workshops = (1..2).map {|i| create :workshop, num_sessions: 2, sessions_from: Date.today + i}
+      workshops = (1..2).map {|i| create :workshop, num_sessions: 2, sessions_from: Time.zone.today + i}
 
       application = create :pd_teacher_application, form_data_hash: (
       build(:pd_teacher_application_hash, :with_multiple_workshops,
@@ -269,7 +277,7 @@ module Pd::Application
     end
 
     test 'get_first_selected_workshop ignores deleted workshop from multiple list' do
-      workshops = (1..2).map {|i| create :workshop, num_sessions: 2, sessions_from: Date.today + i}
+      workshops = (1..2).map {|i| create :workshop, num_sessions: 2, sessions_from: Time.zone.today + i}
 
       application = create :pd_teacher_application, form_data_hash: (
       build(:pd_teacher_application_hash, :with_multiple_workshops,
@@ -286,8 +294,8 @@ module Pd::Application
     end
 
     test 'get_first_selected_workshop picks correct workshop even when multiple are on the same day' do
-      workshop_1 = create :workshop, num_sessions: 2, sessions_from: Date.today + 2
-      workshop_2 = create :workshop, num_sessions: 2, sessions_from: Date.today + 2
+      workshop_1 = create :workshop, num_sessions: 2, sessions_from: Time.zone.today + 2
+      workshop_2 = create :workshop, num_sessions: 2, sessions_from: Time.zone.today + 2
       workshop_1.update_column(:location_address, 'Location 1')
       workshop_2.update_column(:location_address, 'Location 2')
 
@@ -314,26 +322,26 @@ module Pd::Application
       ['csp', 'csd'].each do |course|
         columns = TeacherApplication.columns_to_remove(course)
         columns.keys.each do |k|
-          columns[k].each {|c| refute c.to_s.include?(course)}
+          columns[k].each {|c| refute_includes(c.to_s, course)}
         end
       end
     end
 
     test 'csv_filtered_labels' do
       csv_filtered_labels_csd = TeacherApplication.csv_filtered_labels('csd')
-      assert csv_filtered_labels_csd[:teacher].include? :csd_which_grades
-      refute csv_filtered_labels_csd[:teacher].include? :csp_which_grades
-      refute csv_filtered_labels_csd[:teacher].include? :csa_which_grades
+      assert_includes(csv_filtered_labels_csd[:teacher], :csd_which_grades)
+      refute_includes(csv_filtered_labels_csd[:teacher], :csp_which_grades)
+      refute_includes(csv_filtered_labels_csd[:teacher], :csa_which_grades)
 
       csv_filtered_labels_csp = TeacherApplication.csv_filtered_labels('csp')
-      refute csv_filtered_labels_csp[:teacher].include? :csd_which_grades
-      assert csv_filtered_labels_csp[:teacher].include? :csp_which_grades
-      refute csv_filtered_labels_csp[:teacher].include? :csa_which_grades
+      refute_includes(csv_filtered_labels_csp[:teacher], :csd_which_grades)
+      assert_includes(csv_filtered_labels_csp[:teacher], :csp_which_grades)
+      refute_includes(csv_filtered_labels_csp[:teacher], :csa_which_grades)
 
       csv_filtered_labels_csa = TeacherApplication.csv_filtered_labels('csa')
-      refute csv_filtered_labels_csa[:teacher].include? :csd_which_grades
-      refute csv_filtered_labels_csa[:teacher].include? :csp_which_grades
-      assert csv_filtered_labels_csa[:teacher].include? :csa_which_grades
+      refute_includes(csv_filtered_labels_csa[:teacher], :csd_which_grades)
+      refute_includes(csv_filtered_labels_csa[:teacher], :csp_which_grades)
+      assert_includes(csv_filtered_labels_csa[:teacher], :csa_which_grades)
     end
 
     test 'csv_header' do
@@ -342,21 +350,21 @@ module Pd::Application
       csa_plan_offer_question = "To which grades does your school plan to offer CSA in the #{APPLICATION_CURRENT_YEAR} school year?"
 
       csv_header_csd = CSV.parse(TeacherApplication.csv_header('csd'))[0]
-      assert csv_header_csd.include? csd_plan_offer_question
-      refute csv_header_csd.include? csp_plan_offer_question
-      refute csv_header_csd.include? csa_plan_offer_question
+      assert_includes(csv_header_csd, csd_plan_offer_question)
+      refute_includes(csv_header_csd, csp_plan_offer_question)
+      refute_includes(csv_header_csd, csa_plan_offer_question)
       assert_equal 90, csv_header_csd.length
 
       csv_header_csp = CSV.parse(TeacherApplication.csv_header('csp'))[0]
-      refute csv_header_csp.include? csd_plan_offer_question
-      assert csv_header_csp.include? csp_plan_offer_question
-      refute csv_header_csp.include? csa_plan_offer_question
+      refute_includes(csv_header_csp, csd_plan_offer_question)
+      assert_includes(csv_header_csp, csp_plan_offer_question)
+      refute_includes(csv_header_csp, csa_plan_offer_question)
       assert_equal 92, csv_header_csp.length
 
       csv_header_csa = CSV.parse(TeacherApplication.csv_header('csa'))[0]
-      refute csv_header_csa.include? csd_plan_offer_question
-      refute csv_header_csd.include? csp_plan_offer_question
-      assert csv_header_csa.include? csa_plan_offer_question
+      refute_includes(csv_header_csa, csd_plan_offer_question)
+      refute_includes(csv_header_csd, csp_plan_offer_question)
+      assert_includes(csv_header_csa, csa_plan_offer_question)
       assert_equal 94, csv_header_csa.length
     end
 
@@ -400,21 +408,21 @@ module Pd::Application
       TeacherApplication::FILTERED_LABELS.clear
 
       filtered_labels_csd = TeacherApplication.filtered_labels('csd')
-      assert filtered_labels_csd.include? :csd_which_grades
-      refute filtered_labels_csd.include? :csp_which_grades
-      refute filtered_labels_csd.include? :csa_which_grades
+      assert_includes(filtered_labels_csd, :csd_which_grades)
+      refute_includes(filtered_labels_csd, :csp_which_grades)
+      refute_includes(filtered_labels_csd, :csa_which_grades)
       assert_equal ['csd'], TeacherApplication::FILTERED_LABELS.keys
 
       filtered_labels_csp = TeacherApplication.filtered_labels('csp')
-      refute filtered_labels_csp.include? :csd_which_grades
-      assert filtered_labels_csp.include? :csp_which_grades
-      refute filtered_labels_csp.include? :csa_which_grades
+      refute_includes(filtered_labels_csp, :csd_which_grades)
+      assert_includes(filtered_labels_csp, :csp_which_grades)
+      refute_includes(filtered_labels_csp, :csa_which_grades)
       assert_equal ['csd', 'csp'], TeacherApplication::FILTERED_LABELS.keys
 
       filtered_labels_csa = TeacherApplication.filtered_labels('csa')
-      refute filtered_labels_csa.include? :csd_which_grades
-      refute filtered_labels_csa.include? :csp_which_grades
-      assert filtered_labels_csa.include? :csa_which_grades
+      refute_includes(filtered_labels_csa, :csd_which_grades)
+      refute_includes(filtered_labels_csa, :csp_which_grades)
+      assert_includes(filtered_labels_csa, :csa_which_grades)
       assert_equal ['csd', 'csp', 'csa'], TeacherApplication::FILTERED_LABELS.keys
     end
 
@@ -520,6 +528,7 @@ module Pd::Application
 
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csd],
+        will_teach: options[:will_teach].first,
         csd_which_grades: ['6'],
         enough_course_hours: options[:enough_course_hours].first,
         previous_yearlong_cdo_pd: ['CS Principles'],
@@ -558,6 +567,7 @@ module Pd::Application
 
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csp],
+        will_teach: options[:will_teach].first,
         csp_which_grades: ['12'],
         enough_course_hours: options[:enough_course_hours].first,
         previous_yearlong_cdo_pd: ['CS Discoveries'],
@@ -597,6 +607,7 @@ module Pd::Application
 
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csa],
+        will_teach: options[:will_teach].first,
         csa_already_know: options[:csa_already_know].first,
         csa_phone_screen: options[:csa_phone_screen].first,
         csa_which_grades: ['12'],
@@ -639,6 +650,7 @@ module Pd::Application
 
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csp],
+        will_teach: options[:will_teach].first,
         csp_which_grades: ['12'],
         enough_course_hours: options[:enough_course_hours].first,
         previous_yearlong_cdo_pd: ['CS Discoveries'],
@@ -669,7 +681,8 @@ module Pd::Application
 
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csd],
-        csd_which_grades: %w(11 12),
+        will_teach: options[:will_teach].last,
+        csd_which_grades: nil,
         enough_course_hours: options[:enough_course_hours].last,
         previous_yearlong_cdo_pd: ['CS Discoveries'],
         committed: options[:committed].last,
@@ -707,7 +720,8 @@ module Pd::Application
 
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csp],
-        csp_which_grades: [options[:csp_which_grades].last],
+        will_teach: options[:will_teach].last,
+        csp_which_grades: nil,
         enough_course_hours: options[:enough_course_hours].last,
         previous_yearlong_cdo_pd: 'CS Principles',
         csp_how_offer: options[:csp_how_offer].first,
@@ -746,9 +760,10 @@ module Pd::Application
 
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csa],
+        will_teach: options[:will_teach].last,
         csa_already_know: options[:csa_already_know].last,
         csa_phone_screen: options[:csa_phone_screen].last,
-        csa_which_grades: [options[:csa_which_grades].last],
+        csa_which_grades: nil,
         enough_course_hours: options[:enough_course_hours].last,
         previous_yearlong_cdo_pd: 'Computer Science A (CSA)',
         csa_how_offer: options[:csa_how_offer].first,
@@ -821,7 +836,7 @@ module Pd::Application
       assert_equal 'Not required', application.reload.principal_approval_state
 
       create :pd_principal_approval_application, teacher_application: application, approved: 'Yes'
-      assert application.reload.principal_approval_state.include? 'Complete - Admin said Yes on'
+      assert_includes(application.reload.principal_approval_state, 'Complete - Admin said Yes on')
     end
 
     test 'scholarship criteria uses regional partner set fields when specified' do

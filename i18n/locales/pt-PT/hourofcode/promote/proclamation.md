@@ -1,58 +1,58 @@
 ---
-title: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
+title: Exemplo de resolução de apoio à Semana da Educação em Ciência da Computação e à Hora do Código
 ---
 
 {{ signup_button }}
 
-# Sample Computer Science Education Week resolution
+# Exemplo de resolução da Semana da Educação em Ciência da Computação
 
-### Below is language for a sample resolution supportive of Computer Science Education Week and its goals that can be used by state and local legislators.
+### Abaixo está o idioma de um exemplo de resolução de apoio à Semana da Educação em Ciência da Computação e suas metas, que pode ser usado pelos legisladores estaduais e locais.
 
 * * *
 
-#### **RESOLUTION**  
+#### **RESOLUÇÃO**  
 
 
-#### Supporting the goals and ideals of "Computer Science Education Week"
+#### Apoiando as metas e ideais da “Semana da Educação em Ciência da Computação”
 
-Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
+Considerando que a Semana da Educação em Ciência da Computação destaca o papel crucial que a ciência da computação desempenha na transformação de nossa sociedade e como a ciência da computação possibilita a inovação e cria oportunidades econômicas;
 
-Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
+Considerando que a tecnologia de computação é parte integrante da cultura moderna e está transformando a forma como as pessoas interagem umas com as outras e com o mundo ao seu redor;
 
-Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
+Considerando que a ciência da computação está transformando a indústria, criando novos campos de comércio, impulsionando a inovação em todos os campos da ciência e aumentando a produtividade em setores econômicos estabelecidos;
 
-Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
+Considerando que o campo da ciência da computação é um assunto fundamental que sustenta o setor de tecnologia da informação de nossa economia, que contribui significativamente para a produção econômica dos Estados Unidos;
 
-Whereas the field of computer science is a foundational science for the digital age;
+Considerando que a alfabetização em inteligência artificial se refere aos conhecimentos, habilidades e atitudes associados à forma como a inteligência artificial funciona, incluindo conceitos fundamentais em ciência da computação, e como usar a inteligência artificial de forma segura, responsável e ética;
 
-Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
+Considerando que o campo da ciência da computação, incluindo a inteligência artificial, são tecnologias com o poder de transformar fundamentalmente quase todos os setores da economia dos Estados Unidos;
 
-Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
+Considerando que a liderança tecnológica em todas as áreas da ciência da computação, incluindo inteligência artificial, é um imperativo econômico e de segurança nacional;
 
-Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
+Considerando que as perspectivas de empregos em ciência da computação são boas, com mais de 500.000 vagas abertas em computação em todo o país;
 
-Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
+Considerando que oferecer aos estudantes a chance de participar de atividades de ciência da computação de alta qualidade os expõe às ricas oportunidades que o campo oferece e fornece habilidades de pensamento crítico que os servirão por toda a vida;
 
-Whereas computer science education has challenges to address, including counting computer science classes towards high school graduation requirements, and providing professional development for computer science teachers;
+Considerando que todos os estudantes merecem uma preparação completa no ensino de ciência da computação, incluindo acesso a professores qualificados, tecnologia e currículo adequado à idade, necessários para aprender ciência da computação nos níveis fundamental e médio da educação;
 
-Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
+Considerando que o ensino de ciência da computação tem desafios a enfrentar, incluindo melhorar o acesso aos cursos de ciência da computação para todos os alunos e proporcionar desenvolvimento profissional para professores de ciência da computação;
 
-Whereas the field of computer science has significant equity barriers to address, including attracting more participation by females and underrepresented minorities to all levels and branches;
+Considerando que participar de uma Hora do Código durante a Semana da Educação em Ciência da Computação pode servir para desmistificar o campo da ciência da computação e incentivar mais estudantes a continuarem seus estudos em ciência da computação;
 
-Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
+Considerando que o campo da ciência da computação tem barreiras de equidade significativas a serem enfrentadas, incluindo atrair e reter um campo de candidatos diversos em raça, etnia e gênero em todos os níveis e ramos;
 
-Whereas the week of {{ campaign_date/start_long }}, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it <br />
+Considerando que Grace Murray Hopper, uma das primeiras mulheres no campo da ciência da computação, projetou novas linguagens de programação e foi pioneira em padrões para sistemas de computador que estabeleceram as bases para muitos avanços na ciência da computação; e
 
-Resolved, That the (HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD) --
+Considerando que a semana de {{ campaign_date/start_long }}, em homenagem ao aniversário de Grace Hopper, é designada como “Semana da Educação em Ciência da Computação”: Agora, portanto, que seja <br />
 
-(1) supports the designation of Computer Science Education Week ({{ campaign_date/full }});
+Resolvido que o (CÂMARA OU SENADO, CONSELHO ESTADUAL, MUNICIPAL OU ESCOLAR) --
 
-(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
+(1) apoia a designação da Semana da Educação em Ciência da Computação ({{ campaign_date/full }});
 
-(3) encourages schools, teachers, researchers, universities, business leaders, and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
+(2) incentiva escolas, educadores, pais e formuladores de políticas a participarem da Semana da Educação em Ciência da Computação, permitindo que seus alunos participem da Hora do Código;
 
-(4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
+(3) incentiva escolas, professores, pesquisadores, universidades, líderes empresariais e formuladores de políticas a identificar mecanismos para que os professores recebam desenvolvimento profissional de ponta para proporcionar experiências sustentáveis de aprendizagem em ciência da computação em todos os níveis educacionais e incentivar os alunos a serem expostos aos conceitos da ciência da computação;
 
-(5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
+(4) incentiva oportunidades, inclusive por meio de programas existentes, para estudantes do sexo feminino e estudantes de grupos raciais e étnicos sub-representados na ciência da computação.
 
 {{ signup_button }}

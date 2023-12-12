@@ -36,19 +36,19 @@
         csd-2023:
           title: Informatikkoppdagelser
     resources:
-      curriculum/csd/2020:
-        name: Pensum
-      teacher_forum/csd/2020:
-        name: Lærer-Forum
       curriculum/csd/2017:
         name: Pensum
       teacher_forum_6/csd/2017:
+        name: Lærer-Forum
+      curriculum/csd/2018:
+        name: Pensum
+      teacher_forum_6/csd/2018:
         name: Lærer-Forum
       curriculum/csd/2019:
         name: Pensum
       teacher_forum/csd/2019:
         name: Lærer-Forum
-      curriculum/csd/2018:
+      curriculum/csd/2020:
         name: Pensum
-      teacher_forum_6/csd/2018:
+      teacher_forum/csd/2020:
         name: Lærer-Forum

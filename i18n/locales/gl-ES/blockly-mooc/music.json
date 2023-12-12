@@ -10,5 +10,6 @@
   "share": "Compartir",
   "startOver": "Empezar de novo",
   "panelHeaderInstructions": "Instrucións",
-  "panelHeaderWorkspace": "Espazo de traballo: "
+  "panelHeaderWorkspace": "Espazo de traballo: ",
+  "continue": "Continuar"
 }

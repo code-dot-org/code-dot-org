@@ -16,7 +16,7 @@ import {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
-import {updateQueryParam} from '@cdo/apps/code-studio/utils';
+import {queryParams, updateQueryParam} from '@cdo/apps/code-studio/utils';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';
 
@@ -29,6 +29,7 @@ function showHomepage() {
   const isEnglish = homepageData.isEnglish;
   const announcementOverride = homepageData.announcement;
   const specialAnnouncement = homepageData.specialAnnouncement;
+  const studentSpecialAnnouncement = homepageData.studentSpecialAnnouncement;
   const query = queryString.parse(window.location.search);
   registerReducers({locales, mapbox: mapboxReducer, currentUser});
   const store = getStore();
@@ -49,6 +50,7 @@ function showHomepage() {
   let courseOfferingId;
   let courseVersionId;
   let unitId;
+  let participantType;
   if (query.courseOfferingId) {
     courseOfferingId = parseInt(query.courseOfferingId, 10);
     updateQueryParam('courseOfferingId', undefined, true);
@@ -61,10 +63,19 @@ function showHomepage() {
     unitId = parseInt(query.unitId, 10);
     updateQueryParam('unitId', undefined, true);
   }
+  if (query.participantType) {
+    participantType = queryParams('participantType');
+    updateQueryParam('participantType', undefined, true);
+  }
   if ((courseOfferingId && courseVersionId) || query.openAddSectionDialog) {
     updateQueryParam('openAddSectionDialog', undefined, true);
     store.dispatch(
-      beginCreatingSection(courseOfferingId, courseVersionId, unitId)
+      beginCreatingSection(
+        courseOfferingId,
+        courseVersionId,
+        unitId,
+        participantType
+      )
     );
   }
 
@@ -85,7 +96,6 @@ function showHomepage() {
             topPlCourse={homepageData.topPlCourse}
             queryStringOpen={query['open']}
             canViewAdvancedTools={homepageData.canViewAdvancedTools}
-            isEnglish={isEnglish}
             ncesSchoolId={homepageData.ncesSchoolId}
             censusQuestion={homepageData.censusQuestion}
             showCensusBanner={homepageData.showCensusBanner}
@@ -105,6 +115,9 @@ function showHomepage() {
             hasFeedback={homepageData.hasFeedback}
             showIncubatorBanner={homepageData.showIncubatorBanner}
             currentUserId={homepageData.currentUserId}
+            showDeprecatedCalcAndEvalWarning={
+              homepageData.showDeprecatedCalcAndEvalWarning
+            }
           />
         )}
         {!isTeacher && (
@@ -119,6 +132,10 @@ function showHomepage() {
             showVerifiedTeacherWarning={
               homepageData.showStudentAsVerifiedTeacherWarning
             }
+            showDeprecatedCalcAndEvalWarning={
+              homepageData.showDeprecatedCalcAndEvalWarning
+            }
+            specialAnnouncement={studentSpecialAnnouncement}
           />
         )}
       </div>

@@ -43,7 +43,7 @@ class PeerReviewTest < ActiveSupport::TestCase
       track_progress @level_source.id
     end
 
-    assert_equal Set[nil, 'escalated'], PeerReview.where(submitter: @user, level: @level).map(&:status).to_set
+    assert_equal Set[nil, 'escalated'], PeerReview.where(submitter: @user, level: @level).to_set(&:status)
   end
 
   test 'submitting a peer reviewed level in instructor review only script should create one escalated PeerReview object' do
@@ -333,16 +333,16 @@ class PeerReviewTest < ActiveSupport::TestCase
 
     peer_review.update! reviewer: user1
     assert_equal 1, peer_review.audit_trail.lines.count
-    assert peer_review.audit_trail.lines.last.include? "ASSIGNED to user id #{user1.id}"
+    assert_includes(peer_review.audit_trail.lines.last, "ASSIGNED to user id #{user1.id}")
 
     peer_review.reviewer = user2
     peer_review.update! reviewer: user2
     assert_equal 2, peer_review.audit_trail.lines.count
-    assert peer_review.audit_trail.lines.last.include? "ASSIGNED to user id #{user2.id}"
+    assert_includes(peer_review.audit_trail.lines.last, "ASSIGNED to user id #{user2.id}")
 
     peer_review.update! reviewer: nil
     assert_equal 3, peer_review.audit_trail.lines.count
-    assert peer_review.audit_trail.lines.last.include? "UNASSIGNED"
+    assert_includes(peer_review.audit_trail.lines.last, "UNASSIGNED")
   end
 
   test 'reviews are logged to the audit trail' do
@@ -350,7 +350,7 @@ class PeerReviewTest < ActiveSupport::TestCase
     peer_review = create :peer_review, reviewer: user
     peer_review.update! data: 'accepted'
 
-    assert peer_review.audit_trail.lines.last.include? "REVIEWED by user id #{user.id}"
+    assert_includes(peer_review.audit_trail.lines.last, "REVIEWED by user id #{user.id}")
   end
 
   test 'accepted reviews are logged to the audit trail' do
@@ -362,7 +362,7 @@ class PeerReviewTest < ActiveSupport::TestCase
 
     # 1 line for the assignment, 1 for the review, 1 for the completion
     assert_equal 3, reviews.last.audit_trail.lines.count
-    assert reviews.last.audit_trail.lines.last.include? "ACCEPTED by instructor #{@instructor.id}"
+    assert_includes(reviews.last.audit_trail.lines.last, "ACCEPTED by instructor #{@instructor.id}")
   end
 
   test 'rejected reviews are logged to the audit trail' do
@@ -374,7 +374,7 @@ class PeerReviewTest < ActiveSupport::TestCase
 
     # 1 line for the assignment, 1 for the review, 1 for the rejection
     assert_equal 3, reviews.last.audit_trail.lines.count
-    assert reviews.last.audit_trail.lines.last.include? "REJECTED by instructor #{@instructor.id}"
+    assert_includes(reviews.last.audit_trail.lines.last, "REJECTED by instructor #{@instructor.id}")
   end
 
   test 'instructor reviews log to the audit trail' do
@@ -382,10 +382,10 @@ class PeerReviewTest < ActiveSupport::TestCase
     review = PeerReview.last
 
     review.update!(reviewer: @instructor, status: 'accepted', from_instructor: true)
-    assert review.audit_trail.lines.last.include? "ACCEPTED by instructor #{@instructor.id} #{@instructor.name}"
+    assert_includes(review.audit_trail.lines.last, "ACCEPTED by instructor #{@instructor.id} #{@instructor.name}")
 
     review.update!(reviewer: @instructor, status: 'rejected', from_instructor: true)
-    assert review.audit_trail.lines.last.include? "REJECTED by instructor #{@instructor.id} #{@instructor.name}"
+    assert_includes(review.audit_trail.lines.last, "REJECTED by instructor #{@instructor.id} #{@instructor.name}")
   end
 
   test 'related reviews gets related peer reviews' do

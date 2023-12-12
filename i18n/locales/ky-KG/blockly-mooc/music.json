@@ -9,5 +9,6 @@
   "blockly_toolboxCategoryLogic": "Логика",
   "blockly_toolboxCategoryMath": "Математика",
   "blockly_toolboxCategoryVariables": "Өзгөрмөлөр",
-  "startOver": "Кайра баштоо"
+  "startOver": "Кайра баштоо",
+  "continue": "Улантуу"
 }

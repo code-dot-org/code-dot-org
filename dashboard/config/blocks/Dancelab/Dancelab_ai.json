@@ -1,0 +1,25 @@
+{
+  "category": "World",
+  "config": {
+    "func": "ai",
+    "inline": true,
+    "blockText": "{IMAGE}generate {DANCE_AI} effect",
+    "style": "ai_blocks",
+    "args": [
+      {
+        "name": "IMAGE",
+        "dummy": true,
+        "inline": true,
+        "customOptions": {
+          "assetUrl": "media/ai-bot-mini.svg",
+          "width": 24,
+          "height": 24
+        }
+      },
+      {
+        "name": "DANCE_AI",
+        "customInput": "danceAi"
+      }
+    ]
+  }
+}

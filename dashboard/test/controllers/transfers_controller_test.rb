@@ -61,7 +61,7 @@ class TransfersControllerTest < ActionController::TestCase
     post :create, params: @params
     assert_response :not_found
     assert_equal(
-      "Sorry, but section #{NONEXISTENT_SECTION_CODE} does not exist. Please "\
+      "Sorry, but section #{NONEXISTENT_SECTION_CODE} does not exist. Please " \
         "enter a different section code.",
       json_response["error"]
     )
@@ -97,7 +97,7 @@ class TransfersControllerTest < ActionController::TestCase
     post :create, params: @params
     assert_response :not_found
     assert_equal(
-      "Sorry, but section #{NONEXISTENT_SECTION_CODE} does not exist. Please "\
+      "Sorry, but section #{NONEXISTENT_SECTION_CODE} does not exist. Please " \
         "enter a different section code.",
       json_response["error"]
     )
@@ -224,15 +224,23 @@ class TransfersControllerTest < ActionController::TestCase
 
     assert_response :not_found
     assert_equal(
-      "Sorry, but section #{@other_teacher_section.code} does not exist. "\
+      "Sorry, but section #{@other_teacher_section.code} does not exist. " \
         "Please enter a different section code.",
       json_response['error']
     )
     assert Follower.exists?(student_user: @word_student, section: @word_section)
   end
 
-  test "current section must belong to current user" do
+  test "co-teacher may move students" do
     @word_section.update!(user: @other_teacher)
+
+    post :create, params: @params
+    assert_response :no_content
+  end
+
+  test "removed instructor may not move students" do
+    @word_section.update!(user: @other_teacher)
+    SectionInstructor.find_by(instructor: @teacher, section: @word_section).destroy!
 
     post :create, params: @params
     assert_response :forbidden

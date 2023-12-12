@@ -1,64 +1,12 @@
 {
-  "navigateForward": "Настави",
-  "navigateBack": "Назад",
-  "tryAgain": "Покушај поново",
-  "navigateDone": "Заврши",
-  "saveProgress": "Сачувај",
-  "modelCardPossibleValuesMinimum": "мин",
-  "modelCardPossibleValuesMaximum": "max",
-  "columnInspectorDescription": "Опис",
-  "columnDetailsMinimumValue": "мин",
   "columnDetailsMaximumValue": "max",
+  "columnDetailsMinimumValue": "мин",
+  "columnInspectorDescription": "Опис",
   "datasets": {
-    "medical_priority": {
+    "abalone": {
       "fields": {
-        "age": {
-          "id": "узраст"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "weather": {
-          "id": "време"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "боја"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "узраст"
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Category": {
-          "id": "Kaтегорија"
-        },
-        "Description": {
-          "id": "Опис"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "size": {
-          "id": "величина"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "chicken": {
-          "id": "пиле"
+        "Length": {
+          "id": "Дужина"
         }
       }
     },
@@ -72,21 +20,68 @@
         }
       }
     },
-    "student_alcohol_consumption": {
+    "boba_toy": {
+      "fields": {
+        "banana": {
+          "id": "банана"
+        }
+      }
+    },
+    "census_part": {
       "fields": {
         "age": {
           "id": "узраст"
         }
       }
     },
-    "naan_toy": {
+    "club_random_toy": {
       "fields": {
-        "chicken": {
-          "id": "пиле"
+        "color": {
+          "id": "боја"
         }
       }
     },
-    "census_part": {
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Узраст"
+        }
+      }
+    },
+    "housing_data": {
+      "fields": {
+        "Accessibility to highways": {
+          "id": "Доступност аутопутева"
+        },
+        "Distance to employment centers": {
+          "id": "Растојање до агенција за запошљавање"
+        },
+        "Lower status population": {
+          "id": "Становништво нижег статуса"
+        },
+        "Median home value": {
+          "description": "Медијална вредност непокретности у хиљадама долара",
+          "id": "Медијална вредност непокретности"
+        },
+        "Per Capita Crime Rate": {
+          "description": "Стопа криминала по глави становника по градовима",
+          "id": "Стопа криминала по глави становника"
+        },
+        "Property tax": {
+          "description": "Стопа пореза на имовину по $10.000.",
+          "id": "Порез на имовину"
+        },
+        "Rooms per dwelling": {
+          "description": "Просечан број соба по стамбеној јединици.",
+          "id": "Број соба по стамбеној јединици"
+        },
+        "Student-teacher ratio": {
+          "description": "Однос просечног броја студената према броју наставника по градовима.",
+          "id": "Однос броја студената према броју наставника"
+        }
+      }
+    },
+    "insurance_cost": {
       "fields": {
         "age": {
           "id": "узраст"
@@ -100,104 +95,60 @@
         }
       }
     },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "Землја"
+        },
+        "Dance": {
+          "id": "Плес"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "узраст"
+        }
+      }
+    },
     "movies": {
       "fields": {
-        "Score": {
-          "id": "Резултат"
-        },
         "Country": {
           "id": "Землја"
         },
         "Name": {
           "id": "Име"
         },
+        "Score": {
+          "id": "Резултат"
+        },
         "Star": {
           "id": "Звезда"
         }
       }
     },
-    "songs": {
+    "naan_toy": {
       "fields": {
-        "Artist": {
-          "id": "Уметник"
+        "chicken": {
+          "id": "пиле"
         }
       }
     },
-    "abalone": {
+    "nutrition": {
       "fields": {
-        "Length": {
-          "id": "Дужина"
+        "Category": {
+          "id": "Kaтегорија"
+        },
+        "Description": {
+          "id": "Опис"
         }
       }
     },
-    "housing_data": {
+    "salad_toy": {
       "fields": {
-        "Per Capita Crime Rate": {
-          "id": "Стопа криминала по глави становника",
-          "description": "Стопа криминала по глави становника по градовима"
-        },
-        "Rooms per dwelling": {
-          "id": "Број соба по стамбеној јединици",
-          "description": "Просечан број соба по стамбеној јединици."
-        },
-        "Distance to employment centers": {
-          "id": "Растојање до агенција за запошљавање"
-        },
-        "Accessibility to highways": {
-          "id": "Доступност аутопутева"
-        },
-        "Property tax": {
-          "id": "Порез на имовину",
-          "description": "Стопа пореза на имовину по $10.000."
-        },
-        "Student-teacher ratio": {
-          "id": "Однос броја студената према броју наставника",
-          "description": "Однос просечног броја студената према броју наставника по градовима."
-        },
-        "Lower status population": {
-          "id": "Становништво нижег статуса"
-        },
-        "Median home value": {
-          "id": "Медијална вредност непокретности",
-          "description": "Медијална вредност непокретности у хиљадама долара"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Dance": {
-          "id": "Плес"
-        },
-        "Country": {
-          "id": "Землја"
-        },
-        "Internet": {
-          "id": "Интернет"
-        },
-        "Achievements": {
-          "id": "Достигнућа"
-        },
-        "Age": {
-          "id": "Узраст",
-          "description": "Узраст"
-        },
-        "Gender": {
-          "id": "Пол",
-          "description": "Пол"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "банана"
-        }
-      }
-    },
-    "heart": {
-      "fields": {
-        "Age": {
-          "id": "Узраст"
+        "chicken": {
+          "id": "пиле"
         }
       }
     },
@@ -208,15 +159,64 @@
         }
       }
     },
-    "loneliness_music": {
+    "shapes_v2_toy": {
       "fields": {
-        "Dance": {
-          "id": "Плес"
+        "size": {
+          "id": "величина"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "weather": {
+          "id": "време"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Уметник"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "узраст"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "Достигнућа"
+        },
+        "Age": {
+          "description": "Узраст",
+          "id": "Узраст"
         },
         "Country": {
           "id": "Землја"
+        },
+        "Dance": {
+          "id": "Плес"
+        },
+        "Gender": {
+          "description": "Пол",
+          "id": "Пол"
+        },
+        "Internet": {
+          "id": "Интернет"
         }
       }
     }
-  }
+  },
+  "modelCardPossibleValuesMaximum": "max",
+  "modelCardPossibleValuesMinimum": "мин",
+  "navigateBack": "Назад",
+  "navigateDone": "Заврши",
+  "navigateForward": "Настави",
+  "saveProgress": "Сачувај",
+  "tryAgain": "Покушај поново"
 }

@@ -288,7 +288,10 @@ function baseName(themeName) {
 
 function setAllWorkspacesTheme(theme) {
   Blockly.Workspace.getAll().forEach(workspace => {
-    workspace.setTheme(theme);
+    // Headless workspaces do not have the ability to set the theme.
+    if (typeof workspace.setTheme === 'function') {
+      workspace.setTheme(theme);
+    }
   });
 }
 
@@ -297,6 +300,10 @@ function unregisterDefaultOptions() {
   // This needs to be wrapped in a try for now because our GoogleBlocklyWrapperTest.js
   // is not correctly cleaning up its state.
   try {
+    GoogleBlockly.ContextMenuRegistry.registry.unregister(
+      'blockCollapseExpand'
+    );
+    GoogleBlockly.ContextMenuRegistry.registry.unregister('blockInline');
     // cleanUp() doesn't currently account for immovable blocks.
     GoogleBlockly.ContextMenuRegistry.registry.unregister('cleanWorkspace');
     GoogleBlockly.ContextMenuRegistry.registry.unregister('collapseWorkspace');

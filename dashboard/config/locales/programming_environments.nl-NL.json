@@ -2,128 +2,10 @@
   "nl-NL": {
     "data": {
       "programming_environments": {
-        "weblab": {
-          "name": "Web Lab"
-        },
-        "gamelab": {
-          "name": "Game Lab",
-          "categories": {
-            "game_lab": {
-              "name": "Game Lab",
-              "expressions": {
-                "mouseWentDown": {
-                  "examples": {
-                    "Black and White": {
-                      "name": "Zwart-wit"
-                    }
-                  }
-                },
-                "playSound": {
-                  "short_description": "Speelt het MP3-geluidsbestand via de opgegeven URL."
-                }
-              }
-            },
-            "sprites": {
-              "name": "Sprites",
-              "expressions": {
-                "getSpeed": {
-                  "examples": {
-                    "Spiral": {
-                      "name": "Spiraal"
-                    }
-                  }
-                }
-              }
-            },
-            "groups": {
-              "name": "Groepen",
-              "expressions": {
-                "setColorEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Kleur"
-                    }
-                  }
-                },
-                "setTintEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "Kleur"
-                    }
-                  }
-                }
-              }
-            },
-            "drawing": {
-              "name": "Tekenen",
-              "expressions": {
-                "shape": {
-                  "examples": {
-                    "Star": {
-                      "name": "Ster"
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "wiskundige",
-              "expressions": {
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Het minimum getal geretourneerd"
-                    },
-                    "max": {
-                      "description": "Het maximum getal geretourneerd"
-                    }
-                  }
-                },
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Het minimum getal geretourneerd"
-                    },
-                    "max": {
-                      "description": "Het maximum getal geretourneerd"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "Variabelen",
-              "expressions": {
-                "assign_x": {
-                  "short_description": "Geeft een waarde aan een bestaande variabele. Bijvoorbeeld: x = 0;"
-                },
-                "declareAssign_x": {
-                  "short_description": "Declareert een variabele met de naam die na het woordje 'var' komt en wijst er de waarde aan rechterzijde van de expressie aan toe"
-                }
-              }
-            },
-            "functions": {
-              "name": "Functies"
-            }
-          }
-        },
         "applab": {
-          "name": "App Lab",
-          "description": "App Lab is een programmeeromgeving waarmee je simpele apps kan maken. Ontwerp een app, programmeer met blokken of JavaScript om het te laten werken, en deel je app dan in een paar seconden.",
           "categories": {
-            "ui_controls": {
-              "expressions": {
-                "onEvent": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "Functie"
-                    }
-                  }
-                },
-                "playSound": {
-                  "short_description": "Speelt het MP3-geluidsbestand via de opgegeven URL."
-                }
-              }
+            "advanced": {
+              "name": "Geavanceerd"
             },
             "canvas": {
               "expressions": {
@@ -199,8 +81,59 @@
                 }
               }
             },
+            "circuit": {
+              "expressions": {
+                "buzzer.play": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "buzzer.playNotes": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "buzzer.playSong": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "isPressed": {
+                  "return_value": "Boolean"
+                },
+                "toggleSwitch.isOpen": {
+                  "return_value": "Boolean"
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "stopTimedLoop": {
+                  "palette_params": {
+                    "loop": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Functie"
+                    },
+                    "ms": {
+                      "type": "Getal"
+                    }
+                  }
+                }
+              }
+            },
             "data": {
-              "name": "Data",
               "expressions": {
                 "createRecord": {
                   "palette_params": {
@@ -251,106 +184,742 @@
                     }
                   }
                 }
-              }
+              },
+              "name": "Data"
             },
-            "control": {
+            "functions": {
+              "name": "Functies"
+            },
+            "maker": {
               "expressions": {
-                "timedLoop": {
+                "pinMode": {
                   "palette_params": {
-                    "callback": {
-                      "type": "Functie"
+                    "pin": {
+                      "type": "Getal"
                     }
                   }
                 }
               }
             },
             "math": {
-              "name": "wiskundige",
               "expressions": {
-                "randomNumber_min_max": {
+                "mathPow": {
                   "palette_params": {
-                    "min": {
-                      "description": "Het minimum getal geretourneerd"
+                    "x": {
+                      "type": "Getal"
                     },
-                    "max": {
-                      "description": "Het maximum getal geretourneerd"
+                    "y": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "mathSqrt": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "moduloOperator": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Getal"
+                    },
+                    "y": {
+                      "type": "Getal"
                     }
                   }
                 },
                 "randomNumber": {
                   "palette_params": {
-                    "min": {
-                      "description": "Het minimum getal geretourneerd"
-                    },
                     "max": {
                       "description": "Het maximum getal geretourneerd"
+                    },
+                    "min": {
+                      "description": "Het minimum getal geretourneerd"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Het maximum getal geretourneerd"
+                    },
+                    "min": {
+                      "description": "Het minimum getal geretourneerd"
+                    }
+                  }
+                }
+              },
+              "name": "Wiskunde"
+            },
+            "micro_bit": {
+              "expressions": {
+                "ledScreen.off": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Getal"
+                    },
+                    "y": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "ledScreen.on": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Getal"
+                    },
+                    "y": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "ledScreen.scrollNumber": {
+                  "palette_params": {
+                    "number": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "ledScreen.toggle": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Getal"
+                    },
+                    "y": {
+                      "type": "Getal"
+                    }
+                  }
+                }
+              }
+            },
+            "turtle": {
+              "expressions": {
+                "penRGB": {
+                  "palette_params": {
+                    "r": {
+                      "type": "Getal"
+                    }
+                  }
+                }
+              }
+            },
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Functie"
+                    }
+                  }
+                },
+                "playSound": {
+                  "palette_params": {
+                    "loop": {
+                      "type": "Boolean"
+                    }
+                  },
+                  "short_description": "Speelt het MP3-geluidsbestand via de opgegeven URL."
+                },
+                "rgb": {
+                  "palette_params": {
+                    "a": {
+                      "type": "Getal"
+                    },
+                    "b": {
+                      "type": "Getal"
+                    },
+                    "g": {
+                      "type": "Getal"
+                    },
+                    "r": {
+                      "type": "Getal"
                     }
                   }
                 }
               }
             },
             "variables": {
-              "name": "Variabelen",
               "expressions": {
-                "declareAssign_x": {
-                  "short_description": "Declareert een variabele met de naam die na het woordje 'var' komt en wijst er de waarde aan rechterzijde van de expressie aan toe"
-                },
                 "addPair": {
                   "return_value": "Geen"
+                },
+                "declareAssign_x": {
+                  "short_description": "Declareert een variabele met de naam die na het woordje 'var' komt en wijst er de waarde aan rechterzijde van de expressie aan toe"
                 }
-              }
+              },
+              "name": "Variabelen"
+            }
+          },
+          "description": "App Lab is een programmeeromgeving waarmee je simpele apps kan maken. Ontwerp een app, programmeer met blokken of JavaScript om het te laten werken, en deel je app dan in een paar seconden.",
+          "name": "App Lab"
+        },
+        "gamelab": {
+          "categories": {
+            "drawing": {
+              "expressions": {
+                "arc": {
+                  "palette_params": {
+                    "h": {
+                      "type": "Getal"
+                    },
+                    "start": {
+                      "type": "Getal"
+                    },
+                    "stop": {
+                      "type": "Getal"
+                    },
+                    "w": {
+                      "type": "Getal"
+                    },
+                    "x": {
+                      "type": "Getal"
+                    },
+                    "y": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "ellipse": {
+                  "palette_params": {
+                    "h": {
+                      "type": "Getal"
+                    },
+                    "w": {
+                      "type": "Getal"
+                    },
+                    "x": {
+                      "type": "Getal"
+                    },
+                    "y": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "line": {
+                  "palette_params": {
+                    "x1": {
+                      "type": "Getal"
+                    },
+                    "x2": {
+                      "type": "Getal"
+                    },
+                    "y1": {
+                      "type": "Getal"
+                    },
+                    "y2": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "point": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Getal"
+                    },
+                    "y": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "h": {
+                      "type": "Getal"
+                    },
+                    "w": {
+                      "type": "Getal"
+                    },
+                    "x": {
+                      "type": "Getal"
+                    },
+                    "y": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "regularPolygon": {
+                  "palette_params": {
+                    "sides": {
+                      "type": "Getal"
+                    },
+                    "size": {
+                      "type": "Getal"
+                    },
+                    "x": {
+                      "type": "Getal"
+                    },
+                    "y": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "rgb": {
+                  "palette_params": {
+                    "a": {
+                      "type": "Getal"
+                    },
+                    "b": {
+                      "type": "Getal"
+                    },
+                    "g": {
+                      "type": "Getal"
+                    },
+                    "r": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Ster"
+                    }
+                  },
+                  "palette_params": {
+                    "x1": {
+                      "type": "Getal"
+                    },
+                    "x2": {
+                      "type": "Getal"
+                    },
+                    "y1": {
+                      "type": "Getal"
+                    },
+                    "y2": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "strokeWeight": {
+                  "palette_params": {
+                    "size": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "text": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Getal"
+                    },
+                    "width": {
+                      "type": "Getal"
+                    },
+                    "x": {
+                      "type": "Getal"
+                    },
+                    "y": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "textSize": {
+                  "palette_params": {
+                    "pixels": {
+                      "type": "Getal"
+                    }
+                  }
+                }
+              },
+              "name": "Tekenen"
             },
             "functions": {
               "name": "Functies"
             },
-            "advanced": {
-              "name": "Geavanceerd"
-            }
-          }
-        },
-        "spritelab": {
-          "name": "Sprite Lab",
-          "categories": {
+            "game_lab": {
+              "expressions": {
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "Zwart-wit"
+                    }
+                  }
+                },
+                "playSound": {
+                  "palette_params": {
+                    "loop": {
+                      "type": "Boolean"
+                    }
+                  },
+                  "short_description": "Speelt het MP3-geluidsbestand via de opgegeven URL."
+                },
+                "showMobileControls": {
+                  "palette_params": {
+                    "dpadFourWay": {
+                      "type": "Boolean"
+                    },
+                    "dpadVisible": {
+                      "type": "Boolean"
+                    },
+                    "mobileOnly": {
+                      "type": "Boolean"
+                    },
+                    "spaceButtonVisible": {
+                      "type": "Boolean"
+                    }
+                  }
+                }
+              },
+              "name": "Game Lab"
+            },
+            "groups": {
+              "expressions": {
+                "get": {
+                  "palette_params": {
+                    "i": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "pointToEach": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Getal"
+                    },
+                    "y": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "setColliderEach": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Getal"
+                    },
+                    "rotationOffset": {
+                      "type": "Getal"
+                    },
+                    "width/radius": {
+                      "type": "Getal"
+                    },
+                    "yOffset": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Kleur"
+                    }
+                  }
+                },
+                "setHeightEach": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "setLifetimeEach": {
+                  "palette_params": {
+                    "lifetime": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "setMirrorXEach": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "setMirrorYEach": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "setRotateToDirectionEach": {
+                  "palette_params": {
+                    "bool": {
+                      "type": "Boolean"
+                    }
+                  }
+                },
+                "setRotationEach": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "setRotationSpeedEach": {
+                  "palette_params": {
+                    "speed": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "setScaleEach": {
+                  "palette_params": {
+                    "scale": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "setSpeedAndDirectionEach": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "Getal"
+                    },
+                    "speed": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Kleur"
+                    }
+                  }
+                },
+                "setVelocityEach": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Getal"
+                    },
+                    "y": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "setVelocityXEach": {
+                  "palette_params": {
+                    "velocity": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "setVelocityYEach": {
+                  "palette_params": {
+                    "velocity": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "setVisibleEach": {
+                  "palette_params": {
+                    "bool": {
+                      "type": "Boolean"
+                    }
+                  }
+                },
+                "setWidthEach": {
+                  "palette_params": {
+                    "width": {
+                      "type": "Getal"
+                    }
+                  }
+                }
+              },
+              "name": "Groepen"
+            },
+            "math": {
+              "expressions": {
+                "mathSqrt": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "moduloOperator": {
+                  "palette_params": {
+                    "value1": {
+                      "type": "Getal"
+                    },
+                    "value2": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Het maximum getal geretourneerd"
+                    },
+                    "min": {
+                      "description": "Het minimum getal geretourneerd"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Het maximum getal geretourneerd"
+                    },
+                    "min": {
+                      "description": "Het minimum getal geretourneerd"
+                    }
+                  }
+                }
+              },
+              "name": "Wiskunde"
+            },
             "sprites": {
+              "expressions": {
+                "createSprite": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Getal"
+                    },
+                    "width": {
+                      "type": "Getal"
+                    },
+                    "x": {
+                      "type": "Getal"
+                    },
+                    "y": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Spiraal"
+                    }
+                  }
+                },
+                "mirrorX": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "mirrorY": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "pointTo": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Getal"
+                    },
+                    "y": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "setCollider": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Getal"
+                    },
+                    "rotationOffset": {
+                      "type": "Getal"
+                    },
+                    "width/radius": {
+                      "type": "Getal"
+                    },
+                    "xOffset": {
+                      "type": "Getal"
+                    },
+                    "yOffset": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "setFrame": {
+                  "palette_params": {
+                    "frame": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "setSpeedAndDirection": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "Getal"
+                    },
+                    "speed": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "setVelocity": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Getal"
+                    },
+                    "y": {
+                      "type": "Getal"
+                    }
+                  }
+                }
+              },
               "name": "Sprites"
             },
-            "world": {
-              "name": "Wereld"
-            },
-            "location": {
-              "name": "Plaatsen"
-            },
+            "variables": {
+              "expressions": {
+                "assign_x": {
+                  "short_description": "Geeft een waarde aan een bestaande variabele. Bijvoorbeeld: x = 0;"
+                },
+                "declareAssign_x": {
+                  "short_description": "Declareert een variabele met de naam die na het woordje 'var' komt en wijst er de waarde aan rechterzijde van de expressie aan toe"
+                }
+              },
+              "name": "Variabelen"
+            }
+          },
+          "name": "Game Lab"
+        },
+        "spritelab": {
+          "categories": {
             "actions": {
               "name": "Acties"
-            },
-            "events": {
-              "name": "Gebeurtenissen"
             },
             "behaviors": {
               "name": "Gedrag"
             },
-            "loops": {
-              "name": "Lussen"
+            "comments": {
+              "name": "Opmerkingen"
             },
-            "variables": {
-              "name": "Variabelen"
-            },
-            "math": {
-              "name": "wiskundige"
-            },
-            "logic": {
-              "name": "Logica"
+            "events": {
+              "name": "Gebeurtenissen"
             },
             "functions": {
               "name": "Functies"
             },
+            "location": {
+              "name": "Plaatsen"
+            },
+            "logic": {
+              "name": "Logica"
+            },
+            "loops": {
+              "name": "Lussen"
+            },
+            "math": {
+              "name": "wiskundige"
+            },
+            "sprites": {
+              "name": "Sprites"
+            },
             "text": {
               "name": "Tekst"
             },
-            "comments": {
-              "name": "Opmerkingen"
+            "variables": {
+              "name": "Variabelen"
+            },
+            "world": {
+              "name": "Wereld"
             }
-          }
+          },
+          "name": "Sprite Lab"
+        },
+        "weblab": {
+          "name": "Web Lab"
         }
       }
     }

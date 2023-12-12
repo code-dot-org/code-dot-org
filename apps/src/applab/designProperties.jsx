@@ -188,7 +188,9 @@ export default class DesignProperties extends React.Component {
             className="hover-pointer"
             onClick={this.handleTabClick.bind(this, TabType.PROPERTIES)}
           >
-            <span style={styles.tabLabel}>PROPERTIES</span>
+            <span style={styles.tabLabel}>
+              {applabMsg.designWorkspace_propertiesTab()}
+            </span>
           </div>
           <div
             id="eventsTab"
@@ -200,7 +202,9 @@ export default class DesignProperties extends React.Component {
             className="hover-pointer"
             onClick={this.handleTabClick.bind(this, TabType.EVENTS)}
           >
-            <span style={styles.tabLabel}>EVENTS</span>
+            <span style={styles.tabLabel}>
+              {applabMsg.designWorkspace_eventsTab()}
+            </span>
           </div>
           <div id="emptyTab" style={styles.emptyTab}>
             <ElementSelect

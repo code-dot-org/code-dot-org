@@ -159,7 +159,7 @@ class UserTest < ActiveSupport::TestCase
     user.update_school_info(new_school_info)
     refute_equal original_school_info, user.school_info
     assert_equal new_school_info, user.school_info
-    assert_not_nil user.school_info_id
+    refute_nil user.school_info_id
 
     assert_equal user.user_school_infos.count, 2
     assert_equal user.user_school_infos.where(end_date: nil).count, 1
@@ -172,7 +172,7 @@ class UserTest < ActiveSupport::TestCase
 
     user.update_school_info(new_school_info)
     assert_equal new_school_info, user.school_info
-    assert_not_nil user.school_info_id
+    refute_nil user.school_info_id
 
     assert_equal user.user_school_infos.count, 2
   end
@@ -186,7 +186,7 @@ class UserTest < ActiveSupport::TestCase
     user.update_school_info(new_school_info)
     assert_equal original_school_info, user.school_info
     refute_equal new_school_info, user.school_info
-    assert_not_nil user.school_info_id
+    refute_nil user.school_info_id
 
     assert_equal user.user_school_infos.count, 1
   end
@@ -199,7 +199,7 @@ class UserTest < ActiveSupport::TestCase
     user.update_school_info(new_school_info)
     refute_equal original_school_info, user.school_info
     assert_equal new_school_info, user.school_info
-    assert_not_nil user.school_info_id
+    refute_nil user.school_info_id
 
     assert_equal user.user_school_infos.count, 2
   end
@@ -212,7 +212,7 @@ class UserTest < ActiveSupport::TestCase
     user.update_school_info(new_school_info)
     refute_equal original_school_info, user.school_info
     assert_equal new_school_info, user.school_info
-    assert_not_nil user.school_info_id
+    refute_nil user.school_info_id
 
     assert_equal user.user_school_infos.count, 2
   end
@@ -290,6 +290,30 @@ class UserTest < ActiveSupport::TestCase
     hashed_email = User.hash_email('new@example.com')
     assert_equal hashed_email, teacher.primary_contact_info.hashed_email
     assert_equal hashed_email, teacher.read_attribute(:hashed_email)
+  end
+
+  test 'email_for_enrollments returns user.email if user has no latest accepted application' do
+    user = create :teacher
+    assert_equal user.email_for_enrollments, user.email
+  end
+
+  test 'email_for_enrollments returns user.email if users latest accepted application has no alternate email' do
+    user = create :teacher
+    application = create :pd_teacher_application, user: user
+    application_form_data = application.form_data_hash
+    application_form_data['alternateEmail'] = ''
+    application.update!(form_data_hash: application_form_data)
+
+    assert application.form_data_hash['alternateEmail'].empty?
+    assert_equal user.email_for_enrollments, user.email
+  end
+
+  test 'email_for_enrollments returns app alternate email if users latest accepted application has alternate email' do
+    user = create :teacher
+    application = create :pd_teacher_application, user: user, status: 'accepted'
+    app_alternate_email = application.form_data_hash['alternateEmail']
+
+    assert_equal user.email_for_enrollments, app_alternate_email
   end
 
   test "log in with password with pepper" do
@@ -392,14 +416,14 @@ class UserTest < ActiveSupport::TestCase
   test 'cannot create user when a user with the same credentials exists' do
     User.create(@good_data_google_classroom_import)
     duplicate_user = User.create(@good_data_google_classroom_import)
-    assert_not_empty(duplicate_user.errors)
+    refute_empty(duplicate_user.errors)
     assert(duplicate_user.errors[:uid])
   end
 
   test 'cannot create user when an non-migrated user with the same credentials exists' do
     User.create(@good_data_google_classroom_import).demigrate_from_multi_auth
     duplicate_user = User.create(@good_data_google_classroom_import)
-    assert_not_empty(duplicate_user.errors)
+    refute_empty(duplicate_user.errors)
     assert(duplicate_user.errors[:uid])
   end
 
@@ -572,12 +596,30 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
+  test "saving user strips display name and family name" do
+    user = create :student, name: '  test name  ', family_name: '  test fam name  '
+    user.save
+    user.reload
+    assert_equal user.name, 'test name'
+    assert_equal user.family_name, 'test fam name'
+
+    user.name = '  test name 2  '
+    user.save
+    user.reload
+    assert_equal user.name, 'test name 2'
+
+    user.family_name = '  test fam name 2  '
+    user.save
+    user.reload
+    assert_equal user.family_name, 'test fam name 2'
+  end
+
   test "can create a user with age" do
     Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
       assert_creates(User) do
         user = User.create(@good_data.merge({age: '7', email: 'new@email.com'}))
 
-        assert_equal Date.new(Date.today.year - 7, Date.today.month, Date.today.day), user.birthday
+        assert_equal Date.new(Time.zone.today.year - 7, Time.zone.today.month, Time.zone.today.day), user.birthday
         assert_equal 7, user.age
       end
     end
@@ -588,7 +630,7 @@ class UserTest < ActiveSupport::TestCase
       assert_creates(User) do
         user = User.create(@good_data.merge({age: '21+', email: 'new@email.com'}))
 
-        assert_equal Date.new(Date.today.year - 21, Date.today.month, Date.today.day), user.birthday
+        assert_equal Date.new(Time.zone.today.year - 21, Time.zone.today.month, Time.zone.today.day), user.birthday
         assert_equal "21+", user.age
       end
     end
@@ -630,7 +672,7 @@ class UserTest < ActiveSupport::TestCase
       assert_equal 7, user.age
 
       user.update(age: '9')
-      assert_equal Date.new(Date.today.year - 9, Date.today.month, Date.today.day), user.birthday
+      assert_equal Date.new(Time.zone.today.year - 9, Time.zone.today.month, Time.zone.today.day), user.birthday
       assert_equal 9, user.age
     end
   end
@@ -669,7 +711,7 @@ class UserTest < ActiveSupport::TestCase
     user = User.create(@good_data.merge({age: '7', email: 'new@email.com'}))
     assert_equal 7, user.age
 
-    Timecop.freeze(Date.today + 40) do
+    Timecop.freeze(Time.zone.today + 40) do
       assert_no_difference('user.reload.birthday') do
         user.update(age: '7')
       end
@@ -695,14 +737,29 @@ class UserTest < ActiveSupport::TestCase
                   password: 'xxxxxxxx', provider: 'manual'
       )
     end
-    assert_not_nil user.errors[:email]
+    refute_nil user.errors[:email]
+  end
+
+  test "LTI users should have a LtiUserIdentity when created" do
+    lti_integration = create :lti_integration
+    auth_id = "#{lti_integration[:issuer]}|#{lti_integration[:client_id]}|#{SecureRandom.alphanumeric}"
+    user = build :student
+    user.authentication_options << build(:lti_authentication_option, user: user, authentication_id: auth_id)
+    user.save
+    assert user.lti_user_identities
+    assert_equal 1, user.lti_user_identities.count
+  end
+
+  test "non LTI users should not have a LtiUserIdentity when created" do
+    user = create :user
+    assert_empty user.lti_user_identities
   end
 
   # FND-1130: This test will no longer be required
   test "teacher with no email created after 2016-06-14 should be invalid" do
     user = create :teacher, :without_email
     assert user.invalid?
-    assert_not_empty user.errors[:email]
+    refute_empty user.errors[:email]
   end
 
   # FND-1130: This test will no longer be required
@@ -1437,6 +1494,25 @@ class UserTest < ActiveSupport::TestCase
     assert user.under_13?
   end
 
+  test 'over 21' do
+    user = create :user
+    user.age = 15
+    refute user.over_21?
+    user.save!
+    refute user.over_21?
+
+    user.age = 21
+    assert user.over_21?
+    user.save!
+    assert user.over_21?
+
+    user = create :user
+    user.update_attribute(:birthday, nil) # cheating...
+    user = user.reload
+    assert user.age.nil?
+    refute user.over_21?
+  end
+
   test "reset_secrets calls generate_secret_picture and generate_secret_words" do
     user = create :user
 
@@ -1501,7 +1577,7 @@ class UserTest < ActiveSupport::TestCase
     student = User.find(student.id)
     old_password = student.encrypted_password
 
-    assert mail.body.to_s.include?('Change my password')
+    assert_includes(mail.body.to_s, 'Change my password')
 
     assert mail.body.to_s =~ /reset_password_token=(.+)"/
     # HACK: Fix my syntax highlighting "
@@ -1519,7 +1595,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'send localized password reset email for student' do
-    test_locale = :"te-ST"
+    test_locale = :'te-ST'
     translated_subject = 'subject in te-ST'
     translated_hello = 'hello in te-ST'
     custom_i18n = {
@@ -1558,7 +1634,7 @@ class UserTest < ActiveSupport::TestCase
     student = User.find(student.id)
     old_password = student.encrypted_password
 
-    assert mail.body.to_s.include?('Change my password')
+    assert_includes(mail.body.to_s, 'Change my password')
 
     assert mail.body.to_s =~ /reset_password_token=(.+)"/
     # HACK: Fix my syntax highlighting "
@@ -1587,7 +1663,7 @@ class UserTest < ActiveSupport::TestCase
     student = User.find(student.id)
     old_password = student.encrypted_password
 
-    assert mail.body.to_s.include?('Change password for')
+    assert_includes(mail.body.to_s, 'Change password for')
 
     assert mail.body.to_s =~ /reset_password_token=(.+)"/
     # HACK: Fix my syntax highlighting "
@@ -1792,6 +1868,45 @@ class UserTest < ActiveSupport::TestCase
     refute student.can_change_own_user_type?
   end
 
+  test 'sections_instructed omits deleted sections' do
+    section = create :section
+    teacher = section.teacher
+
+    refute_empty teacher.sections_instructed
+
+    section.destroy!
+
+    assert_empty teacher.sections_instructed
+  end
+
+  test 'section_instructors get deleted when user gets deleted' do
+    section = create :section
+    teacher = section.teacher
+    section_instructors = section.section_instructors
+
+    refute_empty section_instructors
+
+    teacher.destroy!
+
+    assert_empty section_instructors
+  end
+
+  test 'sections_instructed omits sections with in-active section_instructors' do
+    section = create :section
+    teacher = create :teacher
+    create :section_instructor, section: section, instructor: teacher, status: :invited
+
+    assert_empty teacher.sections_instructed
+  end
+
+  test 'sections_instructed includes sections with active section_instructors' do
+    section = create :section
+    teacher = create :teacher
+    create :section_instructor, section: section, instructor: teacher, status: :active
+
+    refute_empty teacher.sections_instructed
+  end
+
   test 'cannot change own user type as a teacher with sections' do
     section = create :section
     teacher = section.teacher
@@ -1806,6 +1921,13 @@ class UserTest < ActiveSupport::TestCase
 
   test 'can delete own account if independent student' do
     user = create :student
+    refute user.teacher_managed_account?
+    assert user.can_delete_own_account?
+  end
+
+  test 'can delete own account if LTI student' do
+    user = create :student
+    user.authentication_options << create(:lti_authentication_option)
     refute user.teacher_managed_account?
     assert user.can_delete_own_account?
   end
@@ -2359,6 +2481,19 @@ class UserTest < ActiveSupport::TestCase
     assert_nil user.parent_email
   end
 
+  test 'upgrade_to_teacher given valid params should delete family_name property' do
+    family_name = 'TestFamName'
+    user = User.create(@good_data.merge({family_name: family_name}))
+    user.reload
+
+    assert_equal family_name, user.family_name
+
+    assert user.upgrade_to_teacher('example@email.com', email_preference_params)
+
+    user.reload
+    assert_nil user.family_name
+  end
+
   def assert_parent_email_params_equals_email_preference(parent_email_params, email_preference)
     assert_equal parent_email_params[:parent_email_preference_email], email_preference.email
     assert_equal parent_email_params[:parent_email_preference_opt_in].casecmp?('yes'), email_preference.opt_in
@@ -2370,7 +2505,7 @@ class UserTest < ActiveSupport::TestCase
     parent_email_params = @good_parent_email_params
     User.create(@good_data.merge(parent_email_params))
     email_preference = EmailPreference.find_by_email(parent_email_params[:parent_email_preference_email])
-    assert_not_nil email_preference
+    refute_nil email_preference
     assert_parent_email_params_equals_email_preference parent_email_params, email_preference
   end
 
@@ -2378,7 +2513,7 @@ class UserTest < ActiveSupport::TestCase
     parent_email_params = @good_parent_email_params.merge({parent_email_preference_opt_in: 'no'})
     User.create(@good_data.merge(parent_email_params))
     email_preference = EmailPreference.find_by_email(parent_email_params[:parent_email_preference_email])
-    assert_not_nil email_preference
+    refute_nil email_preference
     assert_parent_email_params_equals_email_preference parent_email_params, email_preference
   end
 
@@ -2391,7 +2526,7 @@ class UserTest < ActiveSupport::TestCase
     user.update!(parent_email_params)
     email_preference = EmailPreference.find_by_email(parent_email_params[:parent_email_preference_email])
     # There should now be an email preference because the user was updated with a parent_email.
-    assert_not_nil email_preference
+    refute_nil email_preference
     assert_parent_email_params_equals_email_preference parent_email_params, email_preference
   end
 
@@ -2815,9 +2950,9 @@ class UserTest < ActiveSupport::TestCase
     assert_equal [], teacher.sections_as_student
     assert_equal [], other_user.sections_as_student
 
-    assert_equal [], student.sections
-    assert_equal [section], teacher.sections
-    assert_equal [], other_user.sections
+    assert_equal [], student.sections_instructed
+    assert_equal [section], teacher.sections_instructed
+    assert_equal [], other_user.sections_instructed
 
     # can_pair? method
     assert_equal true, student.can_pair?
@@ -3051,20 +3186,20 @@ class UserTest < ActiveSupport::TestCase
 
   test "age is nil for Google OAuth users under age 4" do
     # Users created this way will be asked for their age when they first sign in.
-    three_year_old = create :user, birthday: (Date.today - 3.years), provider: 'google_oauth2'
+    three_year_old = create :user, birthday: (Time.zone.today - 3.years), provider: 'google_oauth2'
     assert_nil three_year_old.age
   end
 
   test "age is set exactly for Google OAuth users between ages 4 and 20" do
-    four_year_old = build :user, birthday: (Date.today - 4.years), provider: 'google_oauth2'
+    four_year_old = build :user, birthday: (Time.zone.today - 4.years), provider: 'google_oauth2'
     assert_equal 4, four_year_old.age
 
-    twenty_year_old = build :user, birthday: (Date.today - 20.years), provider: 'google_oauth2'
+    twenty_year_old = build :user, birthday: (Time.zone.today - 20.years), provider: 'google_oauth2'
     assert_equal 20, twenty_year_old.age
   end
 
   test "age is 21+ for Google OAuth users over the age of 20" do
-    twenty_something = create :user, birthday: (Date.today - 22.years), provider: 'google_oauth2'
+    twenty_something = create :user, birthday: (Time.zone.today - 22.years), provider: 'google_oauth2'
     assert_equal '21+', twenty_something.age
   end
 
@@ -3076,20 +3211,20 @@ class UserTest < ActiveSupport::TestCase
 
   test "age is nil for Clever users under age 4" do
     # Users created this way will be asked for their age when they first sign in.
-    three_year_old = create :user, birthday: (Date.today - 3.years), provider: 'clever'
+    three_year_old = create :user, birthday: (Time.zone.today - 3.years), provider: 'clever'
     assert_nil three_year_old.age
   end
 
   test "age is set exactly for Clever users between ages 4 and 20" do
-    four_year_old = build :user, birthday: (Date.today - 4.years), provider: 'clever'
+    four_year_old = build :user, birthday: (Time.zone.today - 4.years), provider: 'clever'
     assert_equal 4, four_year_old.age
 
-    twenty_year_old = build :user, birthday: (Date.today - 20.years), provider: 'clever'
+    twenty_year_old = build :user, birthday: (Time.zone.today - 20.years), provider: 'clever'
     assert_equal 20, twenty_year_old.age
   end
 
   test "age is 21+ for Clever users over the age of 20" do
-    twenty_something = create :user, birthday: (Date.today - 22.years), provider: 'clever'
+    twenty_something = create :user, birthday: (Time.zone.today - 22.years), provider: 'clever'
     assert_equal '21+', twenty_something.age
   end
 
@@ -3365,7 +3500,7 @@ class UserTest < ActiveSupport::TestCase
 
   class RecentCoursesAndScripts < ActiveSupport::TestCase
     setup do
-      test_locale = :"te-ST"
+      test_locale = :'te-ST'
       I18n.locale = test_locale
       custom_i18n = {
         'data' => {
@@ -3460,7 +3595,7 @@ class UserTest < ActiveSupport::TestCase
       courses_and_scripts = @student.recent_student_courses_and_units(false)
       assert_equal 2, courses_and_scripts.length
 
-      assert_equal ['Computer Science Discoveries', 'Unit Other'], courses_and_scripts.map {|cs| cs[:title]}
+      assert_equal(['Computer Science Discoveries', 'Unit Other'], courses_and_scripts.map {|cs| cs[:title]})
     end
 
     test "it does not return pl scripts that are in returned pl courses" do
@@ -3470,7 +3605,7 @@ class UserTest < ActiveSupport::TestCase
       courses_and_scripts = @teacher.recent_pl_courses_and_units(false)
       assert_equal 2, courses_and_scripts.length
 
-      assert_equal ['Computer Science Discoveries PL Course', 'PL Unit Other'], courses_and_scripts.map {|cs| cs[:title]}
+      assert_equal(['Computer Science Discoveries PL Course', 'PL Unit Other'], courses_and_scripts.map {|cs| cs[:title]})
     end
 
     test "it optionally does not return primary course in returned student courses" do
@@ -3492,7 +3627,7 @@ class UserTest < ActiveSupport::TestCase
 
       assert_equal 1, courses_and_scripts.length
 
-      assert_equal ['testcourse'], courses_and_scripts.map {|cs| cs[:name]}
+      assert_equal(['testcourse'], courses_and_scripts.map {|cs| cs[:name]})
     end
   end
 
@@ -3673,7 +3808,7 @@ class UserTest < ActiveSupport::TestCase
   test 'new users require a password if no authentication provided' do
     assert_raises(ActiveRecord::RecordInvalid) do
       user = create :user, password: nil
-      assert !user.errors[:password].empty?
+      refute user.errors[:password].empty?
     end
   end
 
@@ -3690,6 +3825,7 @@ class UserTest < ActiveSupport::TestCase
         id: @student.id,
         name: @student.name,
         username: @student.username,
+        family_name: nil,
         email: @student.email,
         hashed_email: @student.hashed_email,
         user_type: @student.user_type,
@@ -3732,12 +3868,12 @@ class UserTest < ActiveSupport::TestCase
 
   test 'students share setting updates after turning 13 if they are in no sections' do
     # create a birthday 12 years ago
-    birthday = Date.today - (12 * 365)
+    birthday = Time.zone.today - (12 * 365)
     student = create :user, birthday: birthday
     assert student.reload.sharing_disabled
 
     # go forward in time to a day past the student's 13th birthday
-    Timecop.travel(Date.today + 366) do
+    Timecop.travel(Time.zone.today + 366) do
       # student signs in
       student.sign_in_count = 2
       student.save
@@ -3749,7 +3885,7 @@ class UserTest < ActiveSupport::TestCase
 
   test 'students share setting does not update after turning 13 if they are in sections' do
     # create a birthday 12 years ago
-    birthday = Date.today - (12 * 365)
+    birthday = Time.zone.today - (12 * 365)
     student = create :user, birthday: birthday
 
     teacher = create :teacher
@@ -3759,7 +3895,7 @@ class UserTest < ActiveSupport::TestCase
     assert student.reload.sharing_disabled
 
     # go forward in time to a day past the student's 13th birthday
-    Timecop.travel(Date.today + 366) do
+    Timecop.travel(Time.zone.today + 366) do
       # student signs in
       student.sign_in_count = 2
       student.save
@@ -3888,7 +4024,7 @@ class UserTest < ActiveSupport::TestCase
       @pl_script.reload
     end
 
-    def put_participant_in_section(participant, instructor, script, unit_group=nil, participant_type='student')
+    def put_participant_in_section(participant, instructor, script, unit_group = nil, participant_type = 'student')
       section = create :section, user_id: instructor.id, script_id: script.try(:id), course_id: unit_group.try(:id), participant_type: participant_type, grades: participant_type == 'student' ? ['9'] : ['pl']
       Follower.create!(section_id: section.id, student_user_id: participant.id, user: instructor)
       section
@@ -4231,8 +4367,8 @@ class UserTest < ActiveSupport::TestCase
         # Template backed levels share a channel, so when we find a channel for the
         # template, we create user_levels for every level that uses that template
         assert_equal 2, user.user_levels.length
-        assert user.user_levels.map(&:level_id).include?(template_backed_level1.id)
-        assert user.user_levels.map(&:level_id).include?(template_backed_level2.id)
+        assert_includes(user.user_levels.map(&:level_id), template_backed_level1.id)
+        assert_includes(user.user_levels.map(&:level_id), template_backed_level2.id)
       end
     end
 
@@ -4768,6 +4904,37 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 1, user.properties['section_attempts']
   end
 
+  test 'family name is added to summarize' do
+    user = create :user
+    family_name = 'TestFamilyName'
+    user.family_name = family_name
+
+    assert(user.summarize.key?(:family_name))
+    assert_equal(family_name, user.summarize[:family_name])
+  end
+
+  test 'family name is not allowed on pl participants' do
+    user = create :user
+    family_name = 'TestFamilyName'
+
+    pl_section = create :section, :teacher_participants, user_id: @teacher.id
+    Follower.create!(section_id: pl_section.id, student_user_id: user.id)
+
+    assert(user.valid?)
+
+    user.family_name = family_name
+
+    refute(user.valid?)
+  end
+
+  test 'family name is not allowed on teachers' do
+    user = create :teacher
+    family_name = 'TestFamilyName'
+    user.family_name = family_name
+
+    refute(user.valid?)
+  end
+
   test 'school_info_school returns the school associated with the user' do
     school = create :school
     school_info = create :school_info, school: school
@@ -4891,5 +5058,18 @@ class UserTest < ActiveSupport::TestCase
   test "marketing_segment_data returns the same keys as marketing_segment_data_keys" do
     teacher = create :teacher
     assert_equal User.marketing_segment_data_keys.sort, teacher.marketing_segment_data.keys.map(&:to_s).sort
+  end
+
+  test "given a noncompliant child account, that account is locked out" do
+    student = create :non_compliant_child
+    student.save!
+    assert_equal Policies::ChildAccount::ComplianceState::LOCKED_OUT, student.child_account_compliance_state
+    refute_empty student.child_account_compliance_lock_out_date
+  end
+
+  test "given a compliant child account, that account is NOT locked out" do
+    student = create :non_compliant_child, :with_parent_permission
+    student.save!
+    assert_equal Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED, student.child_account_compliance_state
   end
 end

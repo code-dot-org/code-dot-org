@@ -135,7 +135,7 @@ class ShowSecret extends Component {
               className="uitest-show-picture-or-word"
             />
             <ReactTooltip id={tooltipId} role="tooltip" effect="solid">
-              <div>{i18n.secretLoginTooltip()}</div>
+              <div>{i18n.disabledForTeacherAccountsTooltip()}</div>
             </ReactTooltip>
           </span>
         )}

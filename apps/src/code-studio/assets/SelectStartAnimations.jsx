@@ -11,6 +11,7 @@ import {PICKER_TYPE} from '@cdo/apps/p5lab/AnimationPicker/AnimationPicker';
 
 const THUMBNAIL_SIZE = 50;
 const THUMBNAIL_BORDER_WIDTH = 1;
+const noop = () => undefined;
 
 /*
   Renders one or two animation selectors for content writers to choose sprites and generate
@@ -51,8 +52,7 @@ export default class SelectStartAnimations extends React.Component {
   addAnimationToList = animation => {
     const key = createUuid();
 
-    let updatedOrderedKeys = [key].concat(this.state.orderedKeys);
-    this.setState({orderedKeys: updatedOrderedKeys});
+    this.setState({orderedKeys: [...this.state.orderedKeys, key]});
 
     let propsByKey = {...this.state.propsByKey};
     propsByKey[key] = animation;
@@ -72,18 +72,46 @@ export default class SelectStartAnimations extends React.Component {
 
   displaySelectedSprites = () => {
     const {propsByKey, orderedKeys} = this.state;
-    return orderedKeys.map(key => {
+    if (orderedKeys.length === 0) {
       return (
-        <img
-          key={key}
-          src={propsByKey[key].sourceUrl}
-          alt={propsByKey[key].name}
-          style={styles.thumbnail}
-          role="button"
-          onClick={() => this.removeAnimationFromList(key)}
-        />
+        <p>
+          <i>Selected animations will be displayed here.</i>
+        </p>
       );
-    });
+    } else {
+      return orderedKeys.map(key => {
+        return (
+          <img
+            key={key}
+            src={propsByKey[key].sourceUrl}
+            alt={propsByKey[key].name}
+            style={styles.thumbnail}
+            role="button"
+            onClick={() => this.removeAnimationFromList(key)}
+          />
+        );
+      });
+    }
+  };
+
+  displayAnimationPickerBody = libraryManifest => {
+    return (
+      <AnimationPickerBody
+        onDrawYourOwnClick={noop}
+        onPickLibraryAnimation={this.addAnimationToList}
+        onAnimationSelectionComplete={noop}
+        onUploadClick={noop}
+        playAnimations={false}
+        libraryManifest={libraryManifest}
+        hideAnimationNames={false}
+        navigable
+        hideBackgrounds={false}
+        pickerType={PICKER_TYPE.animationJson}
+        selectedAnimations={[]}
+        hideCostumes={false}
+        shouldWarnOnAnimationUpload={false}
+      />
+    );
   };
 
   render() {
@@ -92,50 +120,37 @@ export default class SelectStartAnimations extends React.Component {
       <React.Fragment>
         <a href="/sprites">Back to Asset Management</a>
         <h2>Generate Animation JSON for a level</h2>
-        <div style={styles.pageBreak}>
-          <h3>Selected Animations:</h3>
+        <p>
+          This tool generates Animation JSON for costumes and backgrounds in
+          Sprite Lab levels (including CS Connections subtypes such as Story and
+          Science levels) and Poetry levels. Costumes and backgrounds, once
+          selected, will show up in the same order that students will view them
+          from their dropdown menu. Generated Animation JSON will update at the
+          bottom of this page after each animation is selected.
+        </p>
+        <p>
+          <strong>Note:</strong> Level-specific animations contain images
+          uploaded specifically for certain levels. They are not available to
+          students in the Animations Library.
+        </p>
+        <div>
+          <h2>Selected Animations:</h2>
           {this.displaySelectedSprites()}
         </div>
         {this.props.useAllSprites && (
           <div style={styles.pageBreak}>
             <h3>
-              Hidden Animations (Animations that don't normally appear in the
-              animation library):
+              Level-specific Animations (Animations that do not appear in the
+              Library Animations):
             </h3>
-            <AnimationPickerBody
-              onDrawYourOwnClick={() =>
-                console.log('Not supported at this time')
-              }
-              onPickLibraryAnimation={this.addAnimationToList}
-              onAnimationSelectionComplete={() => {}}
-              onUploadClick={() => console.log('Not supported at this time')}
-              playAnimations={false}
-              libraryManifest={this.state.levelAnimationsManifest}
-              hideUploadOption
-              hideAnimationNames={false}
-              navigable
-              hideBackgrounds={false}
-              pickerType={PICKER_TYPE.spritelab}
-              selectedAnimations={[]}
-            />
+            {this.displayAnimationPickerBody(
+              this.state.levelAnimationsManifest
+            )}
           </div>
         )}
         <div style={styles.pageBreak}>
           <h3>Library Animations:</h3>
-          <AnimationPickerBody
-            onDrawYourOwnClick={() => console.log('Not supported at this time')}
-            onPickLibraryAnimation={this.addAnimationToList}
-            onAnimationSelectionComplete={() => {}}
-            onUploadClick={() => console.log('Not supported at this time')}
-            playAnimations={false}
-            libraryManifest={this.state.libraryManifest}
-            hideUploadOption
-            hideAnimationNames={false}
-            navigable
-            hideBackgrounds={false}
-            pickerType={PICKER_TYPE.spritelab}
-            selectedAnimations={[]}
-          />
+          {this.displayAnimationPickerBody(this.state.libraryManifest)}
         </div>
         <h2>Generated Animation JSON:</h2>
         <p>{JSON.stringify({orderedKeys, propsByKey})}</p>

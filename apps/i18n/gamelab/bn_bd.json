@@ -1,9 +1,9 @@
 {
   "dropletBlock_createSprite_param2": "চওড়া",
   "dropletBlock_createSprite_param3": "উচ্চতা",
-  "dropletBlock_setCollider_param0": "প্রকার",
-  "dropletBlock_setCollider_param4": "উচ্চতা",
   "dropletBlock_setColliderEach_param0": "প্রকার",
   "dropletBlock_setColliderEach_param4": "উচ্চতা",
+  "dropletBlock_setCollider_param0": "প্রকার",
+  "dropletBlock_setCollider_param4": "উচ্চতা",
   "shareGame": "আপনার খেলা শেয়ার করুন:"
 }

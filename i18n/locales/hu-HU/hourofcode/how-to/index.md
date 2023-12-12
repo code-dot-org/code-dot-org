@@ -25,7 +25,7 @@ A Kódolás órájának a kipróbálásával egyszerűen és szórakoztatva isme
 
 <a id="how-to-video"></a>
 
-## 1. Nézd meg a Kódolás órája videót <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. Nézd meg a Kódolás órája videót <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -72,7 +72,7 @@ Terjeszd a Kódolás óráját más tanároknak, akik talán örömmel csatlakoz
 
 ### Tájékoztasd a pedagógiai asszisztenseket, regisztráljanak az eseményre
 
-Miután [regisztrálsz egy Kódolás órájára](/#csatlakozás), e-mail üzeneteket fogsz kapni, amelyben híreket küldünk és hasznos ötleteket adunk ahhoz, hogy Kódolás óráját eredményesen meg tudjátok tartani. Abban is segít hogy replikáld az infót arról hogy iskolád ilyenben részt vesz. Az önkéntesek nagyszerű forrást jelenthetnek, és eljöhetnek az osztályunkba a számítástechnikáról beszélni, vagy egyszerűen csak segíthetnek tanulóknak a Kódolás órája tevékenységekben.
+Amikor felir [atkozik a Hour of Code eseményre](/events), hasznos e-mailes üzeneteket fog kapni hírekkel és tippekkel a sikeres kódolási óra megszervezéséhez. Abban is segít hogy replikáld az infót arról hogy iskolád ilyenben részt vesz. Az önkéntesek nagyszerű forrást jelenthetnek, és eljöhetnek az osztályunkba a számítástechnikáról beszélni, vagy egyszerűen csak segíthetnek tanulóknak a Kódolás órája tevékenységekben.
 
 ### Csigázd fel őket!
 
@@ -111,46 +111,52 @@ Nem baj, ha számodra és a tanulók számára is újdonság a számítástechni
 
 Vezesd a tanulókat a tevékenységhez
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
-
-Ha a tanulóknak nehézségeik vannak, lehet így reagálni:
-
-- "Nem tudom. Találjunk együtt egy megoldást!"
-- "A technika nem mindig úgy működik, mint ahogy azt mi szeretnénk."
-- "Programozni tanulni, olyan mint egy nyelvet tanulni, nem tudsz azonnal folyékonyan beszélni."
-
-Mi történjen, ha egy tanuló korábban végez?
-
-- A diákok tutorial videókat nézhetnek és [kipróbálhatnak egy másik Kódolás Óráját is]({{ urls/learn }}).
-- Vagy kérdd meg a korán végző tanulókat, hogy segítsenek egy társuknak, akinek nehezen megy a gyakorlat.
-
-* * *
+- Írd fel a gyakorlat linkjét a táblára. Keresd meg a kiválasztott gyakorlatra vonatkozó információk között található linket.</li> </ul> 
+    
+    Ha a tanulóknak nehézségeik vannak, lehet így reagálni:
+    
+    - "Nem tudom. Találjunk együtt egy megoldást!"
+    - "A technika nem mindig úgy működik, mint ahogy azt mi szeretnénk."
+    - "Programozni tanulni, olyan mint egy nyelvet tanulni, nem tudsz azonnal folyékonyan beszélni."
+    
+    Mi történjen, ha egy tanuló korábban végez?
+    
+    - A diákok tutorial videókat nézhetnek és [kipróbálhatnak egy másik Kódolás Óráját is]({{ urls/learn }}).
+    - Vagy kérdd meg a korán végző tanulókat, hogy segítsenek egy társuknak, akinek nehezen megy a gyakorlat.
+    
+    * * *
+    
+    
 
 <a id="celebrate"></a>
 
-## 7. Ünnepeld meg a diákjaid sikerét
-
-[col-33]
-
-![](/images/fit-600/boy-certificate.jpg)
-
-[/col-33]
-
-- [Nyomtass bizonyítványokat]({{ urls/certificates }}) a résztvevőknek és diákoknak.
-- [Nyomtass "Megcsináltam a Kódolás Óráját!"]({{ urls/promote_stickers }}) matricákat.
-- Oszd meg a "Hour of Code"-hoz kapcsolódó fotóidat, videóidat a közösségi hálón. Használd a #HourOfCode és a @codeorg tageket, így mi is ki tudjuk emelni az eredményeidet!
-
-* * *
+    
+    ## 7. Ünnepeld meg a diákjaid sikerét
+    
+    [col-33]
+    
+    ![](/images/fit-600/boy-certificate.jpg)
+    
+    [/col-33]
+    
+    - [Nyomtass bizonyítványokat]({{ urls/certificates }}) a résztvevőknek és diákoknak.
+    - [Nyomtass "Megcsináltam a Kódolás Óráját!"]({{ urls/promote_stickers }}) matricákat.
+    - Oszd meg a "Hour of Code"-hoz kapcsolódó fotóidat, videóidat a közösségi hálón. Használd a #HourOfCode és a @codeorg tageket, így mi is ki tudjuk emelni az eredményeidet!
+    
+    * * *
+    
+    
 
 <a id="other-resources"></a>
 
-## Egyéb források a Kódolás órája oktató számára:
-
-- Látogass el a [Kódolás Órája tanári fórumára](http://forum.code.org/c/plc/hour-of-code), hogy tanácsokat, tippeket és támogatást kapj a többi oktatótól.
-- Olvasd át a [Kódolás órájával kapcsolatos GYIK-et](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
-
-### Mi jön a "Hour of Code" esemény után?
-
-Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
-
-{{ signup_button }}
+    
+    ## Egyéb források a Kódolás órája oktató számára:
+    
+    - Látogass el a [Kódolás Órája tanári fórumára](http://forum.code.org/c/plc/hour-of-code), hogy tanácsokat, tippeket és támogatást kapj a többi oktatótól.
+    - Olvasd át a [Kódolás órájával kapcsolatos GYIK-et](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+    
+    ### Mi jön a "Hour of Code" esemény után?
+    
+    A számítástechnikának nem kell véget érnie a Kódolás órájával! [Ismerd meg, hogyan](/beyond) lehet az IT-t bevinni az iskoládba és eljuttatni a diákjaidhoz.
+    
+    {{ signup_button }}

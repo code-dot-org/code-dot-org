@@ -1,10 +1,9 @@
 Feature: Gamelab Projects
 
-@as_student @no_mobile
+@as_taught_student @no_mobile
 Scenario: Gamelab Flow
   Given I am on "http://studio.code.org/projects/gamelab"
   And I get redirected to "/projects/gamelab/([^\/]*?)/edit" via "dashboard"
-  And I rotate to landscape
   And I wait for the page to fully load
   Then evaluate JavaScript expression "localStorage.setItem('is13Plus', 'true'), true"
   And element "#runButton" is visible
@@ -106,7 +105,6 @@ Scenario: Gamelab Flow
 Scenario: Remix project creates and redirects to new channel
   Given I am on "http://studio.code.org/projects/gamelab"
   And I get redirected to "/projects/gamelab/([^\/]*?)/edit" via "dashboard"
-  And I rotate to landscape
   And I wait for the page to fully load
   Then evaluate JavaScript expression "localStorage.setItem('is13Plus', 'true'), true"
   And element "#runButton" is visible

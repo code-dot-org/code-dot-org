@@ -1,124 +1,17 @@
 {
-  "navigateForward": "Doorgaan",
-  "navigateBack": "Terug",
-  "tryAgain": "Probeer opnieuw",
-  "navigateDone": "Voltooien",
-  "saveProgress": "Opslaan",
-  "correctAnswer": "Juist",
-  "incorrectAnswer": "Incorrect",
-  "modelCardPossibleValuesMinimum": "min",
-  "modelCardPossibleValuesMaximum": "max",
-  "columnInspectorDescription": "Omschrijving",
-  "columnDetailsMinimumValue": "min",
   "columnDetailsMaximumValue": "max",
+  "columnDetailsMinimumValue": "min",
+  "columnInspectorDescription": "Omschrijving",
+  "correctAnswer": "Juist",
   "dataCardLastUpdated": "Last geüpdatet",
   "datasets": {
-    "medical_priority": {
+    "abalone": {
       "fields": {
-        "age": {
-          "id": "leeftijd"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "weather": {
-          "id": "weer"
+        "Height": {
+          "id": "Hoogte"
         },
-        "day": {
-          "id": "dag"
-        },
-        "shoe": {
-          "id": "schoen"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "onion": {
-          "id": "ui"
-        },
-        "avocado": {
-          "id": "avocado"
-        },
-        "corn": {
-          "id": "maïs"
-        },
-        "beans": {
-          "id": "Bonen"
-        },
-        "lime": {
-          "id": "citroen"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "bacon": {
-          "id": "spek"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "kleur"
-        },
-        "food": {
-          "id": "eten"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "leeftijd"
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Category": {
-          "id": "Categorie"
-        },
-        "Description": {
-          "id": "Omschrijving"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "lime": {
-          "id": "citroen"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "sides": {
-          "id": "zijden"
-        },
-        "size": {
-          "id": "grootte"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "tomato": {
-          "id": "Tomaat"
-        },
-        "avocado": {
-          "id": "avocado"
-        },
-        "chicken": {
-          "id": "kip"
-        },
-        "fruit": {
-          "id": "fruit"
-        },
-        "beans": {
-          "id": "Bonen"
+        "Length": {
+          "id": "Lengte"
         }
       }
     },
@@ -132,10 +25,84 @@
         }
       }
     },
-    "student_alcohol_consumption": {
+    "boba_toy": {
+      "fields": {
+        "banana": {
+          "id": "banaan"
+        }
+      }
+    },
+    "census_part": {
       "fields": {
         "age": {
           "id": "leeftijd"
+        }
+      }
+    },
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "kleur"
+        },
+        "food": {
+          "id": "eten"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Leeftijd"
+        }
+      }
+    },
+    "insurance_cost": {
+      "fields": {
+        "age": {
+          "id": "leeftijd"
+        }
+      }
+    },
+    "loneliness_interests": {
+      "fields": {
+        "Internet": {
+          "id": "Internet"
+        }
+      }
+    },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "Land"
+        },
+        "Dance": {
+          "id": "Dans"
+        },
+        "Music": {
+          "id": "Muziek"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "leeftijd"
+        }
+      }
+    },
+    "movies": {
+      "fields": {
+        "Country": {
+          "id": "Land"
+        },
+        "Name": {
+          "id": "naam"
+        },
+        "Score": {
+          "id": "Punt maken"
+        },
+        "Star": {
+          "id": "Ster"
         }
       }
     },
@@ -152,68 +119,13 @@
         }
       }
     },
-    "census_part": {
+    "nutrition": {
       "fields": {
-        "age": {
-          "id": "leeftijd"
-        }
-      }
-    },
-    "loneliness_interests": {
-      "fields": {
-        "Internet": {
-          "id": "Internet"
-        }
-      }
-    },
-    "movies": {
-      "fields": {
-        "Score": {
-          "id": "Punt maken"
+        "Category": {
+          "id": "Categorie"
         },
-        "Country": {
-          "id": "Land"
-        },
-        "Name": {
-          "id": "naam"
-        },
-        "Star": {
-          "id": "Ster"
-        }
-      }
-    },
-    "songs": {
-      "fields": {
-        "Artist": {
-          "id": "Kunstenaar"
-        }
-      }
-    },
-    "safari_toy": {
-      "fields": {
-        "elephant": {
-          "id": "oliefant"
-        },
-        "alligator": {
-          "id": "Alligator"
-        }
-      },
-      "name": "Safari"
-    },
-    "abalone": {
-      "fields": {
-        "Length": {
-          "id": "Lengte"
-        },
-        "Height": {
-          "id": "Hoogte"
-        }
-      }
-    },
-    "zoo": {
-      "fields": {
-        "Aquatic": {
-          "id": "Aquatisch"
+        "Description": {
+          "id": "Omschrijving"
         }
       }
     },
@@ -227,48 +139,66 @@
         }
       }
     },
-    "student_survey": {
+    "poutine_toy": {
       "fields": {
-        "Music": {
-          "id": "Muziek"
-        },
-        "Dance": {
-          "id": "Dans"
-        },
-        "Country": {
-          "id": "Land"
-        },
-        "Internet": {
-          "id": "Internet"
-        },
-        "Achievements": {
-          "id": "Prestaties"
-        },
-        "Age": {
-          "id": "Leeftijd",
-          "description": "Leeftijd"
-        },
-        "Height": {
-          "id": "Hoogte",
-          "description": "Hoogte"
-        },
-        "Gender": {
-          "id": "Geslacht",
-          "description": "Geslacht"
+        "bacon": {
+          "id": "spek"
         }
       }
     },
-    "boba_toy": {
+    "raspado_toy": {
       "fields": {
-        "banana": {
-          "id": "banaan"
+        "lime": {
+          "id": "citroen"
         }
       }
     },
-    "heart": {
+    "safari_toy": {
       "fields": {
-        "Age": {
-          "id": "Leeftijd"
+        "alligator": {
+          "id": "Alligator"
+        },
+        "elephant": {
+          "id": "oliefant"
+        }
+      },
+      "name": "Safari"
+    },
+    "salad_toy": {
+      "fields": {
+        "avocado": {
+          "id": "avocado"
+        },
+        "beans": {
+          "id": "Bonen"
+        },
+        "chicken": {
+          "id": "kip"
+        },
+        "fruit": {
+          "id": "fruit"
+        },
+        "tomato": {
+          "id": "Tomaat"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "avocado": {
+          "id": "avocado"
+        },
+        "beans": {
+          "id": "Bonen"
+        },
+        "corn": {
+          "id": "maïs"
+        },
+        "lime": {
+          "id": "citroen"
+        },
+        "onion": {
+          "id": "ui"
         }
       }
     },
@@ -282,18 +212,88 @@
         }
       }
     },
-    "loneliness_music": {
+    "shapes_v2_toy": {
       "fields": {
-        "Music": {
-          "id": "Muziek"
+        "sides": {
+          "id": "zijden"
+        },
+        "size": {
+          "id": "grootte"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "dag"
+        },
+        "shoe": {
+          "id": "schoen"
+        },
+        "weather": {
+          "id": "weer"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Kunstenaar"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "leeftijd"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "Prestaties"
+        },
+        "Age": {
+          "description": "Leeftijd",
+          "id": "Leeftijd"
+        },
+        "Country": {
+          "id": "Land"
         },
         "Dance": {
           "id": "Dans"
         },
-        "Country": {
-          "id": "Land"
+        "Gender": {
+          "description": "Geslacht",
+          "id": "Geslacht"
+        },
+        "Height": {
+          "description": "Hoogte",
+          "id": "Hoogte"
+        },
+        "Internet": {
+          "id": "Internet"
+        },
+        "Music": {
+          "id": "Muziek"
+        }
+      }
+    },
+    "zoo": {
+      "fields": {
+        "Aquatic": {
+          "id": "Aquatisch"
         }
       }
     }
-  }
+  },
+  "incorrectAnswer": "Incorrect",
+  "modelCardPossibleValuesMaximum": "max",
+  "modelCardPossibleValuesMinimum": "min",
+  "navigateBack": "Terug",
+  "navigateDone": "Voltooien",
+  "navigateForward": "Doorgaan",
+  "saveProgress": "Opslaan",
+  "tryAgain": "Probeer opnieuw"
 }

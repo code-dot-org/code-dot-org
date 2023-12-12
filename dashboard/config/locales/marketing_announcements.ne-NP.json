@@ -1,0 +1,58 @@
+{
+  "ne-NP": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "ai-2020": {
+            "buttonText": "थप जान्नुहोस्"
+          },
+          "ai-launch-2023": {
+            "buttonText": "थप जान्नुहोस्"
+          },
+          "ai-pl-launch-2023": {
+            "buttonText": "थप जान्नुहोस्"
+          },
+          "back-to-school-2021": {
+            "buttonText": "थप जान्नुहोस्"
+          },
+          "codebytes-2020": {
+            "buttonText": "थप जान्नुहोस्"
+          },
+          "coldplay": {
+            "buttonText": "Try it"
+          },
+          "congrats-certificate-share": {
+            "buttonText": "Start"
+          },
+          "csjourneys": {
+            "buttonText": "थप जान्नुहोस्"
+          },
+          "csjourneys-22": {
+            "buttonText": "थप जान्नुहोस्"
+          },
+          "csleadersprize": {
+            "buttonText": "थप जान्नुहोस्"
+          },
+          "hoc-2023": {
+            "buttonText": "थप जान्नुहोस्"
+          },
+          "hoc-2023-dance-ai": {
+            "buttonText": "थप जान्नुहोस्"
+          },
+          "superhero": {
+            "buttonText": "Learn More"
+          },
+          "teacher-apps-closing-2021": {
+            "buttonText": "Join us"
+          },
+          "teacher-apps-open-2021": {
+            "buttonText": "Join us"
+          },
+          "teacher-apps-stillon-2020": {
+            "buttonText": "Join us"
+          }
+        }
+      }
+    }
+  }
+}

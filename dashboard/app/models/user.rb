@@ -76,6 +76,10 @@ require 'school_info_interstitial_helper'
 require 'sign_up_tracking'
 require_dependency 'queries/school_info'
 require_dependency 'queries/script_activity'
+require 'policies/child_account'
+require 'services/child_account'
+require 'policies/lti'
+require 'services/user'
 
 class User < ApplicationRecord
   include SerializedProperties
@@ -102,6 +106,7 @@ class User < ApplicationRecord
   #     child account policy.
   #   child_account_compliance_state_last_updated: The date the user became
   #     compliant with our child account policy.
+  #   ai_rubrics_disabled: Turns off AI assessment for a User.
   serialized_attrs %w(
     ops_first_name
     ops_last_name
@@ -134,8 +139,12 @@ class User < ApplicationRecord
     gender_third_party_input
     child_account_compliance_state
     child_account_compliance_state_last_updated
+    child_account_compliance_lock_out_date
     us_state
     country_code
+    family_name
+    ai_rubrics_disabled
+    sort_by_family_name
   )
 
   attr_accessor(
@@ -183,7 +192,9 @@ class User < ApplicationRecord
     TYPE_STUDENT = 'student'.freeze,
     TYPE_TEACHER = 'teacher'.freeze
   ].freeze
-  validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS
+
+  validates_presence_of :user_type
+  validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS, if: :user_type?
 
   belongs_to :studio_person, optional: true
   has_many :hint_view_requests
@@ -202,7 +213,10 @@ class User < ApplicationRecord
   has_many :pd_workshops_organized, class_name: 'Pd::Workshop', foreign_key: :organizer_id
 
   has_many :authentication_options, dependent: :destroy
+  accepts_nested_attributes_for :authentication_options
   belongs_to :primary_contact_info, class_name: 'AuthenticationOption', optional: true
+
+  has_many :lti_user_identities, dependent: :destroy
 
   # This custom validator makes email collision checks on the AuthenticationOption
   # model also show up as validation errors for the email field on the User
@@ -260,6 +274,10 @@ class User < ApplicationRecord
 
   after_save :save_email_reg_partner_preference, if: -> {share_teacher_email_reg_partner_opt_in_radio_choice.present?}
 
+  after_create if: -> {Policies::Lti.lti? self} do
+    Services::Lti.create_lti_user_identity(self)
+  end
+
   before_destroy :soft_delete_channels
 
   before_validation on: :create, if: -> {gender.present?} do
@@ -267,6 +285,10 @@ class User < ApplicationRecord
   end
 
   validate :validate_us_state, on: :create
+
+  before_create unless: -> {Policies::ChildAccount.compliant?(self)} do
+    Services::ChildAccount.lock_out(self)
+  end
 
   before_validation on: [:create, :update], if: -> {gender_teacher_input.present? && will_save_change_to_attribute?('properties')} do
     self.gender = Policies::Gender.normalize gender_teacher_input
@@ -390,6 +412,18 @@ class User < ApplicationRecord
     primary_contact_info.try(:hashed_email) || ''
   end
 
+  # Email used for the user's enrollments:
+  # Returns the 'alternateEmail' field from the user's latest accepted teacher application if it exists to
+  # help ensure the enrollment emails are delivered. Otherwise, returns the user's email.
+  def email_for_enrollments
+    latest_accepted_app = Pd::Application::TeacherApplication.where(
+      user: self,
+      status: 'accepted'
+    ).order(application_year: :desc).first&.form_data_hash
+    alternate_email = latest_accepted_app ? latest_accepted_app['alternateEmail'] : ''
+    alternate_email&.empty? ? email : alternate_email
+  end
+
   # assign a course to a facilitator that is qualified to teach it
   def course_as_facilitator=(course)
     courses_as_facilitator << courses_as_facilitator.find_or_create_by(facilitator_id: id, course: course)
@@ -454,16 +488,25 @@ class User < ApplicationRecord
 
   has_many :user_levels, -> {order(id: :desc)}, inverse_of: :user
 
+  has_many :section_instructors, foreign_key: 'instructor_id', dependent: :destroy
+  has_many :active_section_instructors, -> {where(status: :active)}, class_name: 'SectionInstructor', foreign_key: 'instructor_id'
+  has_many :sections_instructed, -> {without_deleted}, through: :active_section_instructors, source: :section
+
+  # "sections" previously referred to what is now called :sections_owned.
+  def sections
+    sections_instructed
+  end
+
   # Relationships (sections/followers/students) from being a teacher.
-  has_many :sections, dependent: :destroy
-  has_many :followers, through: :sections
+  has_many :sections_owned, dependent: :destroy, class_name: 'Section'
+  has_many :followers, through: :sections_instructed
   has_many :students, through: :followers, source: :student_user
 
   # Relationships (sections_as_students/followeds/teachers) from being a
   # student.
   has_many :followeds, -> {order 'followers.id'}, class_name: 'Follower', foreign_key: 'student_user_id', dependent: :destroy
   has_many :sections_as_student, through: :followeds, source: :section
-  has_many :teachers, through: :sections_as_student, source: :user
+  has_many :teachers, through: :sections_as_student, source: :instructors
 
   belongs_to :secret_picture, optional: true
   before_create :generate_secret_picture
@@ -553,6 +596,19 @@ class User < ApplicationRecord
     :fix_by_user_type
 
   before_save :remove_cleartext_emails, if: -> {student? && migrated? && user_type_changed?}
+
+  before_save :strip_display_family_names
+  def strip_display_family_names
+    self.name = name.strip if name && will_save_change_to_name?
+    self.family_name = family_name.strip if family_name && will_save_change_to_properties?
+  end
+
+  validate :no_family_name_for_teachers
+  def no_family_name_for_teachers
+    if family_name && (teacher? || sections_as_pl_participant.any?)
+      errors.add(:family_name, "can't be set for teachers or PL participants")
+    end
+  end
 
   before_validation :update_share_setting, unless: :under_13?
 
@@ -787,6 +843,7 @@ class User < ApplicationRecord
     user.provider = auth.provider
     user.uid = auth.uid
     user.name = name_from_omniauth auth.info.name
+    user.family_name = auth.info.family_name if auth.info.family_name.present?
     user.user_type = params['user_type'] || auth.info.user_type
     user.user_type = 'teacher' if user.user_type == 'staff' # Powerschool sends through 'staff' instead of 'teacher'
 
@@ -843,7 +900,7 @@ class User < ApplicationRecord
   def self.new_with_session(params, session)
     return super unless PartialRegistration.in_progress? session
     new_from_partial_registration session do |user|
-      user.attributes = params
+      Services::User.assign_form_params(user, params)
     end
   end
 
@@ -903,6 +960,7 @@ class User < ApplicationRecord
     return false if sponsored?
     return false if oauth?
     return false if parent_managed_account?
+    return false if Policies::Lti.lti? self
     true
   end
 
@@ -1026,6 +1084,10 @@ class User < ApplicationRecord
     return true if teacher? # No-op if user is already a teacher
     return false if email.blank?
 
+    # Remove family name, in case it was set on the student account.
+    # Must do this before updating user_type, to prevent validation failure.
+    self.family_name = nil
+
     hashed_email = User.hash_email(email)
     self.user_type = TYPE_TEACHER
     # teachers do not need another adult to have access to their account.
@@ -1040,6 +1102,8 @@ class User < ApplicationRecord
         new_attributes[:email] = email
       end
       update!(new_attributes)
+
+      self
     end
   rescue
     false # Relevant errors are set on the user model, so we rescue and return false here.
@@ -1180,7 +1244,7 @@ class User < ApplicationRecord
   #   3: {}
   # }
   def self.user_levels_by_user_by_level(users, script)
-    initial_hash = Hash[users.map {|user| [user.id, {}]}]
+    initial_hash = users.map {|user| [user.id, {}]}.to_h
     UserLevel.where(
       script_id: script.id,
       user_id: users.map(&:id)
@@ -1330,7 +1394,7 @@ class User < ApplicationRecord
 
   #sections owned by the user AND not deleted
   def owned_section_ids
-    sections.select(:id).all
+    sections_instructed.select(:id).all
   end
 
   # Is the provided script_level hidden, on account of the section(s) that this
@@ -1423,6 +1487,21 @@ class User < ApplicationRecord
       permission?(UserPermission::LEVELBUILDER)
   end
 
+  AI_TUTOR_EXPERIMENT_NAME = 'ai-tutor'
+
+  # Teachers
+  def can_enable_ai_tutor?
+    permission?(UserPermission::AI_TUTOR_ACCESS) ||
+      SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME)
+  end
+
+  # Students
+  def has_ai_tutor_access?
+    permission?(UserPermission::AI_TUTOR_ACCESS) ||
+      (get_active_experiment_names_by_teachers.include?(AI_TUTOR_EXPERIMENT_NAME) &&
+      sections_as_student.any?(&:ai_tutor_enabled))
+  end
+
   def student_of_verified_instructor?
     teachers.any?(&:verified_instructor?)
   end
@@ -1474,8 +1553,16 @@ class User < ApplicationRecord
     age.nil? || age.to_i < 13
   end
 
+  def over_21?
+    !age.nil? && age.to_i >= 21
+  end
+
   def mute_music?
     !!mute_music
+  end
+
+  def sort_by_family_name?
+    !!sort_by_family_name
   end
 
   def generate_username
@@ -1547,7 +1634,7 @@ class User < ApplicationRecord
   # stored hashed (and not in plaintext), we can still allow them to
   # reset their password with their email (by looking up the hash)
 
-  def self.send_reset_password_instructions(attributes={})
+  def self.send_reset_password_instructions(attributes = {})
     # override of Devise method
     if attributes[:email].blank?
       user = User.new
@@ -1646,6 +1733,15 @@ class User < ApplicationRecord
     Experiment.get_all_enabled(user: self).pluck(:name)
   end
 
+  # Returns an array of experiment name strings that a student's teachers are enrolled in
+  def get_active_experiment_names_by_teachers
+    experiments = []
+    teachers.each do |teacher|
+      experiments.concat(Experiment.get_all_enabled(user: teacher).pluck(:name))
+    end
+    experiments.uniq
+  end
+
   # Returns an array of hashes storing data for each unique course assigned to # sections that this user is a part of.
   # @return [Array{CourseData}]
   def assigned_courses
@@ -1662,7 +1758,7 @@ class User < ApplicationRecord
 
   # Returns the set of courses the user has been assigned to or has progress in.
   def courses_as_participant
-    visible_scripts.map(&:unit_group).compact.concat(section_courses).uniq
+    visible_scripts.filter_map(&:unit_group).concat(section_courses).uniq
   end
 
   # Checks if there are any launched scripts assigned to the user.
@@ -1682,9 +1778,9 @@ class User < ApplicationRecord
   # Query to get the user_script the user was most recently assigned.
   def most_recently_assigned_user_script
     user_scripts.
-    where("assigned_at").
-    order(assigned_at: :desc).
-    first
+      where("assigned_at").
+      order(assigned_at: :desc).
+      first
   end
 
   # Get script object of the user_script the user was most recently
@@ -1703,9 +1799,9 @@ class User < ApplicationRecord
   # in.
   def user_script_with_most_recent_progress
     user_scripts.
-    where("last_progress_at").
-    order(last_progress_at: :desc).
-    first
+      where("last_progress_at").
+      order(last_progress_at: :desc).
+      first
   end
 
   # Get script object of the user_script the user made the most recent
@@ -1724,7 +1820,7 @@ class User < ApplicationRecord
   # recent progress in a script.
   def last_assignment_after_most_recent_progress?
     most_recently_assigned_user_script[:assigned_at] >=
-    user_script_with_most_recent_progress[:last_progress_at]
+      user_script_with_most_recent_progress[:last_progress_at]
   end
 
   # Check if the user's most recently assigned script is associated with at least
@@ -1758,7 +1854,7 @@ class User < ApplicationRecord
 
     pl_user_scripts = user_scripts.select {|us| us.script.pl_course?}
 
-    user_script_data = pl_user_scripts.map do |user_script|
+    user_script_data = pl_user_scripts.filter_map do |user_script|
       # Skip this script if we are excluding the primary script and this is the
       # primary script.
       if exclude_primary_script && user_script[:script_id] == primary_script_id
@@ -1773,7 +1869,7 @@ class User < ApplicationRecord
           link: script_path(script),
         }
       end
-    end.compact
+    end
 
     user_course_data = courses_as_participant.select(&:pl_course?).map(&:summarize_short)
 
@@ -1798,7 +1894,7 @@ class User < ApplicationRecord
 
     user_student_scripts = user_scripts.select {|us| !us.script.pl_course?}
 
-    user_script_data = user_student_scripts.map do |user_script|
+    user_script_data = user_student_scripts.filter_map do |user_script|
       # Skip this script if we are excluding the primary script and this is the
       # primary script.
       if exclude_primary_script && user_script[:script_id] == primary_script_id
@@ -1813,7 +1909,7 @@ class User < ApplicationRecord
           link: script_path(script),
         }
       end
-    end.compact
+    end
 
     user_course_data = courses_as_participant.select {|c| !c.pl_course?}.map(&:summarize_short)
 
@@ -1829,7 +1925,7 @@ class User < ApplicationRecord
   end
 
   def all_sections
-    sections_as_teacher = student? ? [] : sections.to_a
+    sections_as_teacher = student? ? [] : sections_instructed.to_a
     sections_as_teacher.concat(sections_as_student).uniq
   end
 
@@ -1839,7 +1935,7 @@ class User < ApplicationRecord
   def section_courses
     # In the future we may want to make it so that if assigned a script, but that
     # script has a default course, it shows up as a course here
-    all_sections.map(&:unit_group).compact.uniq
+    all_sections.filter_map(&:unit_group).uniq
   end
 
   def visible_scripts
@@ -1862,9 +1958,9 @@ class User < ApplicationRecord
     all_scripts
   end
 
-  # return the id of the section the user most recently created.
+  # return the id of the most-recently-created section the user instructs.
   def last_section_id
-    teacher? ? sections.where(hidden: false).last&.id : nil
+    teacher? ? sections_instructed.where(hidden: false).last&.id : nil
   end
 
   # The section which the user most recently joined as a student, or nil if none exists.
@@ -1949,10 +2045,10 @@ class User < ApplicationRecord
       script = Unit.get_from_cache(script_id)
       script_valid = script.csf? && script.name != Unit::COURSE1_NAME
       if (!user_level.perfect? || user_level.best_result == ActivityConstants::MANUAL_PASS_RESULT) &&
-        new_result >= ActivityConstants::BEST_PASS_RESULT &&
-        script_valid &&
-        HintViewRequest.no_hints_used?(user_id, script_id, level_id) &&
-        AuthoredHintViewRequest.no_hints_used?(user_id, script_id, level_id)
+          new_result >= ActivityConstants::BEST_PASS_RESULT &&
+          script_valid &&
+          HintViewRequest.no_hints_used?(user_id, script_id, level_id) &&
+          AuthoredHintViewRequest.no_hints_used?(user_id, script_id, level_id)
         new_csf_level_perfected = true
       end
 
@@ -2048,6 +2144,7 @@ class User < ApplicationRecord
       id: id,
       name: name,
       username: username,
+      family_name: family_name,
       email: email,
       hashed_email: hashed_email,
       user_type: user_type,
@@ -2136,8 +2233,8 @@ class User < ApplicationRecord
       can_edit_email? && sections_as_student.empty?
     else # downgrading to student
       # Teachers with sections cannot downgrade because our validations require sections
-      # to be owned by teachers.
-      sections.empty?
+      # to be taught by teachers.
+      sections_instructed.empty?
     end
   end
 
@@ -2173,6 +2270,8 @@ class User < ApplicationRecord
     # In some cases, a student might have a password but no e-mail (from our old UI)
     return false if encrypted_password.present? && hashed_email.present?
     return false if encrypted_password.present? && parent_email.present?
+    # LTI created accounts should not be teacher managed
+    return false if Policies::Lti.lti? self
     # Lastly, we check for oauth.
     !oauth?
   end
@@ -2186,6 +2285,11 @@ class User < ApplicationRecord
 
   def parent_managed_account?
     student? && parent_email.present? && hashed_email.blank?
+  end
+
+  # Returns true when the parent email matches the account email.
+  def parent_created_account?
+    student? && parent_email.present? && hashed_email == User.hash_email(parent_email)
   end
 
   # Temporary: Allow single-auth students to add a parent email so it's possible
@@ -2202,10 +2306,10 @@ class User < ApplicationRecord
   end
 
   # Get a section a user is in that is assigned to this script. Look first for
-  # sections they are in as a student, otherwise sections they are the owner of
+  # sections they are in as a student, otherwise sections they instruct
   def section_for_script(script)
     sections_as_student.find {|section| section.script_id == script.id} ||
-      sections.find {|section| section.script_id == script.id}
+      sections_instructed.find {|section| section.script_id == script.id}
   end
 
   def lesson_extras_enabled?(unit)
@@ -2255,7 +2359,7 @@ class User < ApplicationRecord
   def show_census_teacher_banner?
     # Must have an NCES school to show the banner
     users_school = try(:school_info).try(:school)
-    teacher? && users_school && (next_census_display.nil? || Date.today >= next_census_display.to_date)
+    teacher? && users_school && (next_census_display.nil? || Time.zone.today >= next_census_display.to_date)
   end
 
   # Returns the name of the donor for the donor teacher banner and donor footer, or nil if none.
@@ -2333,7 +2437,7 @@ class User < ApplicationRecord
   # course, we will create a UserScript entry so that they get a course card
   # In addition, we want to have green bubbles for the levels associated with these
   # channels, so we create level progress.
-  def generate_progress_from_storage_id(storage_id, script_name='applab-intro')
+  def generate_progress_from_storage_id(storage_id, script_name = 'applab-intro')
     # applab-intro is not seeded in our minimal test env used on test/circle. We
     # should be able to handle this gracefully
     script = begin
@@ -2529,7 +2633,7 @@ class User < ApplicationRecord
   end
 
   def code_review_groups
-    followeds.map(&:code_review_group).compact
+    followeds.filter_map(&:code_review_group)
   end
 
   private def account_age_in_years
@@ -2538,13 +2642,13 @@ class User < ApplicationRecord
 
   # Returns a list of all grades that the teacher currently has sections for
   private def grades_being_taught
-    @grades_being_taught ||= sections.map(&:grades).flatten.uniq
+    @grades_being_taught ||= sections_instructed.map(&:grades).flatten.uniq
   end
 
   # Returns a list of all curriculums that the teacher currently has sections for
   # ex: ["csf", "csd"]
   private def curriculums_being_taught
-    @curriculums_being_taught ||= sections.map {|section| section.script&.curriculum_umbrella}.compact.uniq
+    @curriculums_being_taught ||= sections_instructed.filter_map {|section| section.script&.curriculum_umbrella}.uniq
   end
 
   private def has_attended_pd?
@@ -2574,7 +2678,7 @@ class User < ApplicationRecord
     # If we're a teacher, we want to go through each of our sections and return
     # a mapping from section id to hidden lessons/units in that section
     hidden_by_section = {}
-    sections.each do |section|
+    sections_instructed.each do |section|
       hidden_by_section[section.id] = hidden_lessons ? hidden_lesson_ids([section]) : hidden_unit_ids([section])
     end
     hidden_by_section
@@ -2621,7 +2725,6 @@ class User < ApplicationRecord
   end
 
   US_STATE_DROPDOWN_OPTIONS = {
-    '??' => I18n.t('signup_form.us_state_dropdown_options.other'),
     'AL' => 'Alabama', 'AK' => 'Alaska', 'AZ' => 'Arizona', 'AR' => 'Arkansas',
     'CA' => 'California', 'CO' => 'Colorado', 'CT' => 'Connecticut',
     'DE' => 'Delaware', 'FL' => 'Florida', 'GA' => 'Georgia', 'HI' => 'Hawaii',
@@ -2638,7 +2741,15 @@ class User < ApplicationRecord
     'UT' => 'Utah', 'VT' => 'Vermont', 'VA' => 'Virginia', 'WA' => 'Washington',
     'DC' => 'Washington D.C.', 'WV' => 'West Virginia', 'WI' => 'Wisconsin',
     'WY' => 'Wyoming'
-  }
+  }.freeze
+
+  # Returns a Hash of US state codes to state names meant for use in dropdown
+  # selection inputs for User accounts.
+  # Includes a '??' state code for a location not listed.
+  def self.us_state_dropdown_options
+    {'??' => I18n.t('signup_form.us_state_dropdown_options.other')}.
+      merge(US_STATE_DROPDOWN_OPTIONS)
+  end
 
   # Verifies that the serialized attribute "us_state" is a 2 character string
   # representing a US State or "??" which represents a "N/A" kind of response.
@@ -2653,14 +2764,8 @@ class User < ApplicationRecord
       return
     end
     # Report an error if an invalid value was submitted (probably tampering).
-    unless US_STATE_DROPDOWN_OPTIONS.include?(us_state)
+    unless User.us_state_dropdown_options.include?(us_state)
       errors.add(:us_state, :invalid)
     end
-  end
-
-  # Values for the `child_account_compliance_state` attribute
-  module ChildAccountCompliance
-    # The student's account has been approved by their parent.
-    PERMISSION_GRANTED = 'g'.freeze
   end
 end

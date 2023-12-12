@@ -756,9 +756,9 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
       # input data has more than one value for a key and each value came in a different date
       {
         input: format(
-          '['\
-          '{"%{sources_key}": "table2", "%{data_key}": {"state": "WA"}, "%{data_updated_at_key}": "%{time_str}"},'\
-          '{"%{sources_key}": "table2", "%{data_key}": {"state": "OR"}, "%{data_updated_at_key}": "%{time_str_2}"}'\
+          '[' \
+          '{"%{sources_key}": "table2", "%{data_key}": {"state": "WA"}, "%{data_updated_at_key}": "%{time_str}"},' \
+          '{"%{sources_key}": "table2", "%{data_key}": {"state": "OR"}, "%{data_updated_at_key}": "%{time_str_2}"}' \
           ']',
           format_values
         ),
@@ -774,8 +774,8 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
       },
       # input data comes from 2 tables with different valid keys
       {
-        input: format('['\
-          '{"%{sources_key}": "table1", "%{data_key}": {"opt_in": 1}, "%{data_updated_at_key}": "%{time_str}"},'\
+        input: format('[' \
+          '{"%{sources_key}": "table1", "%{data_key}": {"opt_in": 1}, "%{data_updated_at_key}": "%{time_str}"},' \
           '{"%{sources_key}": "table2", "%{data_key}": {"state": "WA"}, "%{data_updated_at_key}": "%{time_str}"}]',
           format_values
         ),

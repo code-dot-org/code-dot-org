@@ -17,7 +17,6 @@ id:
             '0.75': kecil
             '1.00': sedang
             '2.00': besar
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
@@ -25,7 +24,8 @@ id:
             '0.75': kecil
             '1.00': sedang
             '2.00': besar
-            '3.00': extra large
+      Dancelab_ai:
+        text: "{IMAGE}buat {VALUE} efek"
       Dancelab_alternateMoves:
         text: |-
           {GROUP} berganti setiap {N}
@@ -75,6 +75,11 @@ id:
           UNIT:
             '"measures"': langkah
             '"seconds"': detik
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': langkah
+            '"seconds"': detik
       Dancelab_changeColorBy:
         text: ubah {COLOR}{METHOD} dengan {AMOUNT}
         options:
@@ -114,6 +119,27 @@ id:
             MOVES.Kick: Bintang
             MOVES.ThisOrThat: Ini atau Itu
             MOVES.Rest: Tidak Ada
+      Dancelab_changeMoveEachLR_slothcat:
+        text: lakukan {GROUP} {MOVE} {DIR} selamanya
+        options:
+          GROUP:
+            '"CAT"': semua kucing
+            '"SLOTH"': sloths
+          MOVE:
+            MOVES.Roll: Body Roll
+            MOVES.ClapHigh: Tepuk tangan di atas
+            MOVES.Dab: Oleskan
+            MOVES.DoubleJam: Gandakan
+            MOVES.Drop: Jatuh
+            MOVES.Floss: Floss
+            MOVES.Fresh: Segar
+            MOVES.Clown: Badut
+            MOVES.Kick: Bintang
+            MOVES.ThisOrThat: Ini atau Itu
+            MOVES.Rest: Tidak Ada
+            '"next"': "(Berikutnya)"
+            '"prev"': "(Sebelumnya)"
+            '"rand"': Acak
       Dancelab_changeMoveLR:
         text: "{SPRITE} melakukan {MOVE} {DIR} selamanya"
         options:
@@ -599,6 +625,64 @@ id:
             '"tropical"': Tropis
             '"vintage"': Vintage
             '"warm"': Hangat
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          tetapkan efek latar belakang
+          {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Tidak Ada
+            '"rand"': Acak
+            '"quads"': Sudut
+            '"blooming_petals"': Kelopak Mekar
+            '"circles"': Lingkaran
+            '"color_cycle"': Warna
+            '"diamonds"': Berlian
+            '"disco_ball"': Bola Disko
+            '"fireworks"': Kembang Api
+            '"flowers"': Bunga
+            '"frosted_grid"': Kotak Buram
+            '"growing_stars"': Bintang Tumbuh
+            '"higher_power"': Higher Power
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kaleidoskop
+            '"lasers"': Lantai Dansa Laser
+            '"splatter"': Percikan Cat
+            '"rainbow"': Pelangi
+            '"ripples_random"': Riak Acak
+            '"ripples"': Riak
+            '"snowflakes"': Salju
+            '"text"': Nama Lagu
+            '"galaxy"': Spasi
+            '"sparkles"': Kilauan
+            '"spiral"': Spiral
+            '"disco"': Bujur sangkar
+            '"squiggles"': Garis berlekuk
+            '"starburst"': Semburan bintang
+            '"stars"': Bintang
+            '"music_wave"': Gelombang
+          PALETTE:
+            '"autumn"': Musim Gugur
+            '"rave"': Hitam dan Putih
+            '"cool"': Keren
+            '"electronic"': Elektronik
+            '"grayscale"': Skala Abu-abu
+            '"iceCream"': Es Krim
+            '"default"': Lampu
+            '"neon"': Neon
+            '"ocean"': Lautan
+            '"rainbow"': Pelangi
+            '"roses"': Mawar
+            '"sky"': Langit
+            '"spring"': Musim Semi
+            '"summer"': Musim Panas
+            '"sunrise"': Matahari Terbit
+            '"sunset"': Matahari Terbenam
+            '"tropical"': Tropis
+            '"twinkling"': Berkelip
+            '"vintage"': Vintage
+            '"warm"': Hangat
+            '"winter"': Musim Dingin
       Dancelab_setDanceSpeed:
         text: tetapkan {SPRITE} kecepatan tari menjadi {SPEED}
         options:
@@ -1011,8 +1095,6 @@ id:
         options:
           INPUT1:
             '1': jus lemon
-            '3': baking soda
-            '5': both
       DansBlocks_setForegroundEffect2:
         text: lakukan efek {EFFECT}
         options:
@@ -1029,8 +1111,6 @@ id:
         options:
           INPUT1:
             '1': jus lemon
-            '3': baking soda
-            '5': both
       FunctionBlocks_communicate:
         text: Berkomunikasi {VAR1} dengan {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:
@@ -1699,6 +1779,12 @@ id:
         text: y koordinat {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} meluncur ke {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': padat
+            '"liquid"': cair
+            '"gas"': gas
       KatiesBlocks_tumbling:
         text: jatuh
       Mikelab_addBehaviorSimple:
@@ -2042,14 +2128,10 @@ id:
         options:
           INPUT1:
             '1': jus lemon
-            '3': baking soda
-            '5': both
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
             '1': jus lemon
-            '3': baking soda
-            '5': both
       ParticlesBlocks_statesOfMatter:
         text: "{BEHAVIOR}"
         options:
@@ -2271,7 +2353,6 @@ id:
         text: saat baris {N} memperlihatkan
         options:
           'N':
-            '0': "???"
             '1': '1'
             '2': '2'
             '3': '3'
@@ -2331,9 +2412,6 @@ id:
         options:
           PORTION:
             '1': semua
-            '0.75': most
-            '0.5': half of
-            '0.25': few
           RATE:
             '"slowly"': pelan-pelan
           BEHAVIOR:
@@ -2342,9 +2420,6 @@ id:
         options:
           PORTION:
             '1': semua
-            '0.75': most
-            '0.5': half of
-            '0.25': few
           BEHAVIOR:
             '"avoiding"': jaga jarak
       aalab_spriteSayChoices:
@@ -2483,7 +2558,6 @@ id:
         text: "{VALUE}"
         options:
           VALUE:
-            '0': '0'
             '1': '1'
             '2': '2'
             '3': '3'

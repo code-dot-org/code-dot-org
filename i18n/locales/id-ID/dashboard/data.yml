@@ -736,6 +736,9 @@ id:
         csa_sorting_algorithms: 'CSA: Menyortir algoritma'
         star_quilts_intro_to_artist: 'Star Quilts: Pengantar Artis'
         upload_sprites_backgrounds: Meng-upload Kustom Sprite dan Latar Belakang
+        what-is-creativity: Apa kreatifitas itu?
+        code-break: Ambil Code Break
+        csd_ml_how_ai_works: Bagaimana AI bekerja
     callout:
       text:
         drag_blocks: Tarik blok "gerak" dan letakkan di bawah blok lain

@@ -1,6 +1,7 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
+import {MIN_NUM_MEASURES} from '../constants';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
-import {initialProgressState, ProgressState} from '../progress/ProgressManager';
+import {FunctionEvents} from '../player/interfaces/FunctionEvents';
 
 const registerReducers = require('@cdo/apps/redux').registerReducers;
 
@@ -21,7 +22,7 @@ export const InstructionsPositions = {
   RIGHT: InstructionsPosition.RIGHT,
 };
 
-interface MusicState {
+export interface MusicState {
   /** If the song is currently playing */
   isPlaying: boolean;
   /** The current 1-based playhead position, scaled to measures */
@@ -34,21 +35,26 @@ interface MusicState {
   showInstructions: boolean;
   /** Where instructions should be placed (left, top, or right) */
   instructionsPosition: InstructionsPosition;
-  /** If the headers are showing */
-  isHeadersShowing: boolean;
+  /** If the headers should be hidden */
+  hideHeaders: boolean;
   /** If the Control Pad (Beat Pad) is showing */
   isBeatPadShowing: boolean;
   /** The current list of playback events */
   playbackEvents: PlaybackEvent[];
+  /** The current ordered functions */
+  orderedFunctions: FunctionEvents[];
   /** The current last measure of the song */
   lastMeasure: number;
-  /** The number of levels in the current progression */
-  levelCount: number | undefined;
-  // TODO: Currently Music Lab is the only Lab that uses
-  // this progress system, but in the future, we may want to
-  // move this into a more generic, high-level, lab-agnostic
-  // reducer.
-  currentProgressState: ProgressState;
+  /** The current sound loading progress, from 0-1 inclusive, representing the
+   * number of sounds loaded out of the total number of sounds to load.
+   */
+  soundLoadingProgress: number;
+  /** The 1-based playhead position to start playback from, scaled to measures */
+  startingPlayheadPosition: number;
+  undoStatus: {
+    canUndo: boolean;
+    canRedo: boolean;
+  };
 }
 
 const initialState: MusicState = {
@@ -58,12 +64,17 @@ const initialState: MusicState = {
   timelineAtTop: false,
   showInstructions: false,
   instructionsPosition: InstructionsPosition.LEFT,
-  isHeadersShowing: true,
+  hideHeaders: false,
   isBeatPadShowing: true,
   playbackEvents: [],
+  orderedFunctions: [],
   lastMeasure: 0,
-  levelCount: undefined,
-  currentProgressState: {...initialProgressState},
+  soundLoadingProgress: 0,
+  startingPlayheadPosition: 1,
+  undoStatus: {
+    canUndo: false,
+    canRedo: false,
+  },
 };
 
 const musicSlice = createSlice({
@@ -119,13 +130,13 @@ const musicSlice = createSlice({
         ];
     },
     showHeaders: state => {
-      state.isHeadersShowing = true;
+      state.hideHeaders = false;
     },
     hideHeaders: state => {
-      state.isHeadersShowing = false;
+      state.hideHeaders = true;
     },
     toggleHeaders: state => {
-      state.isHeadersShowing = !state.isHeadersShowing;
+      state.hideHeaders = !state.hideHeaders;
     },
     showBeatPad: state => {
       state.isBeatPadShowing = true;
@@ -136,12 +147,12 @@ const musicSlice = createSlice({
     toggleBeatPad: state => {
       state.isBeatPadShowing = !state.isBeatPadShowing;
     },
-    setCurrentProgressState: (state, action: PayloadAction<ProgressState>) => {
-      state.currentProgressState = {...action.payload};
-    },
     clearPlaybackEvents: state => {
       state.playbackEvents = [];
       state.lastMeasure = 0;
+    },
+    clearOrderedFunctions: state => {
+      state.orderedFunctions = [];
     },
     addPlaybackEvents: (
       state,
@@ -150,8 +161,35 @@ const musicSlice = createSlice({
       state.playbackEvents.push(...action.payload.events);
       state.lastMeasure = action.payload.lastMeasure;
     },
-    setLevelCount: (state, action: PayloadAction<number>) => {
-      state.levelCount = action.payload;
+    addOrderedFunctions: (
+      state,
+      action: PayloadAction<{orderedFunctions: FunctionEvents[]}>
+    ) => {
+      state.orderedFunctions.push(...action.payload.orderedFunctions);
+    },
+    setSoundLoadingProgress: (state, action: PayloadAction<number>) => {
+      state.soundLoadingProgress = action.payload;
+    },
+    setStartPlayheadPosition: (state, action: PayloadAction<number>) => {
+      state.startingPlayheadPosition = action.payload;
+    },
+    moveStartPlayheadPositionForward: state => {
+      state.startingPlayheadPosition = Math.min(
+        state.startingPlayheadPosition + 1,
+        Math.max(state.lastMeasure, MIN_NUM_MEASURES)
+      );
+    },
+    moveStartPlayheadPositionBackward: state => {
+      state.startingPlayheadPosition = Math.max(
+        1,
+        state.startingPlayheadPosition - 1
+      );
+    },
+    setUndoStatus: (
+      state,
+      action: PayloadAction<{canUndo: boolean; canRedo: boolean}>
+    ) => {
+      state.undoStatus = action.payload;
     },
   },
 });
@@ -160,14 +198,21 @@ const musicSlice = createSlice({
 export const getCurrentlyPlayingBlockIds = (state: {
   music: MusicState;
 }): string[] => {
-  const {currentPlayheadPosition, playbackEvents} = state.music;
+  const {isPlaying, currentPlayheadPosition, playbackEvents} = state.music;
+  if (!isPlaying) {
+    return [];
+  }
   const playingBlockIds: string[] = [];
 
   playbackEvents.forEach((playbackEvent: PlaybackEvent) => {
     const currentlyPlaying =
       currentPlayheadPosition !== 0 &&
       currentPlayheadPosition >= playbackEvent.when &&
-      currentPlayheadPosition < playbackEvent.when + playbackEvent.length;
+      currentPlayheadPosition < playbackEvent.when + playbackEvent.length &&
+      !(
+        playbackEvent.skipContext?.insideRandom &&
+        playbackEvent.skipContext?.skipSound
+      );
 
     if (currentlyPlaying) {
       playingBlockIds.push(playbackEvent.blockId);
@@ -199,8 +244,13 @@ export const {
   showBeatPad,
   hideBeatPad,
   toggleBeatPad,
-  setCurrentProgressState,
   clearPlaybackEvents,
+  clearOrderedFunctions,
   addPlaybackEvents,
-  setLevelCount,
+  addOrderedFunctions,
+  setSoundLoadingProgress,
+  setStartPlayheadPosition,
+  moveStartPlayheadPositionForward,
+  moveStartPlayheadPositionBackward,
+  setUndoStatus,
 } = musicSlice.actions;

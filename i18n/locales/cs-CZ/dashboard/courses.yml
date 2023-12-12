@@ -56,22 +56,30 @@ cs:
           description_short: Naučte se základní principy informatiky.
         csd-2023:
           title: Objevování informatiky
+        vpl-csa-2023:
+          title: CSA Virtuální profesionální učení
+        self-paced-pl-csd-unit1-2023:
+          title: Výuka řešení problémů a výpočetní technika
+        self-paced-pl-csd-unit2-2023:
+          title: Výuka vývoje webu
+        self-paced-pl-csd-unit5-2023:
+          title: Výuka dat a společnost
     resources:
-      curriculum/csd/2020:
-        name: Obsah kurzu
-      teacher_forum/csd/2020:
-        name: Fórum učitelů
       curriculum/csd/2017:
         name: Obsah kurzu
       teacher_forum_6/csd/2017:
+        name: Fórum učitelů
+      curriculum/csd/2018:
+        name: Obsah kurzu
+      teacher_forum_6/csd/2018:
         name: Fórum učitelů
       curriculum/csd/2019:
         name: Obsah kurzu
       teacher_forum/csd/2019:
         name: Fórum učitelů
+      curriculum/csd/2020:
+        name: Obsah kurzu
+      teacher_forum/csd/2020:
+        name: Fórum učitelů
       getting_started_with_csd/csd/2021:
         name: Začínáme s CSD
-      curriculum/csd/2018:
-        name: Obsah kurzu
-      teacher_forum_6/csd/2018:
-        name: Fórum učitelů

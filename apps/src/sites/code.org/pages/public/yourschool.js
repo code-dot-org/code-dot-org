@@ -40,6 +40,7 @@ function showYourSchool() {
         teacherApplicationMode={yourschoolElement.data(
           'parameters-teacher-application-mode'
         )}
+        tileset={yourschoolElement.data('parameters-tileset')}
       />
     </Provider>,
     yourschoolElement[0]

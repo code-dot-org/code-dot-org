@@ -5,6 +5,9 @@
         "csd-2022/accelerometer-events": {
           "display_name": "Eventos do Acelerômetro"
         },
+        "csd-2022/animation-tab": {
+          "display_name": "Aba de Animação"
+        },
         "csd-2022/app-lab": {
           "display_name": "Laboratório de Aplicativo"
         },
@@ -76,6 +79,9 @@
         },
         "csd-2022/headings-and-paragraphs": {
           "display_name": "Títulos e Parágrafos"
+        },
+        "csd-2022/html": {
+          "display_name": "HTML"
         },
         "csd-2022/html-overview": {
           "display_name": "Visão geral"
@@ -180,10 +186,10 @@
           "display_name": "O padrão Contador"
         },
         "csd-2022/the-draw-loop": {
-          "display_name": "O laço de desenho"
+          "display_name": "O Desenho do Laço"
         },
         "csd-2022/variables": {
-          "display_name": "variáveis"
+          "display_name": "Variáveis"
         },
         "csd-2022/velocity": {
           "display_name": "Velocidade"

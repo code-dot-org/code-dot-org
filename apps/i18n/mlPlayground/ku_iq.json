@@ -1,43 +1,6 @@
 {
-  "navigateForward": "بەردەوام بە",
-  "saveProgress": "پاشه‌كه‌وت بكە",
   "columnInspectorDescription": "باسکردن",
   "datasets": {
-    "medical_priority": {
-      "fields": {
-        "age": {
-          "id": "تەمەن"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "corn": {
-          "id": "دانەوێڵە/گەنمەشامی"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "ڕەنگ"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "تەمەن"
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Description": {
-          "id": "باسکردن"
-        }
-      }
-    },
     "billionaires": {
       "fields": {
         "Age": {
@@ -48,14 +11,42 @@
         }
       }
     },
-    "student_alcohol_consumption": {
+    "census_part": {
       "fields": {
         "age": {
           "id": "تەمەن"
         }
       }
     },
-    "census_part": {
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "ڕەنگ"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "تەمەن"
+        }
+      }
+    },
+    "insurance_cost": {
+      "fields": {
+        "age": {
+          "id": "تەمەن"
+        }
+      }
+    },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "ووڵات"
+        }
+      }
+    },
+    "medical_priority": {
       "fields": {
         "age": {
           "id": "تەمەن"
@@ -75,34 +66,43 @@
         }
       }
     },
-    "student_survey": {
+    "nutrition": {
       "fields": {
-        "Country": {
-          "id": "ووڵات"
-        },
-        "Age": {
-          "id": "تەمەن",
-          "description": "تەمەن"
-        },
-        "Gender": {
-          "id": "ڕەگەز",
-          "description": "ڕەگەز"
+        "Description": {
+          "id": "باسکردن"
         }
       }
     },
-    "heart": {
+    "salsa_toy": {
       "fields": {
-        "Age": {
+        "corn": {
+          "id": "دانەوێڵە/گەنمەشامی"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
           "id": "تەمەن"
         }
       }
     },
-    "loneliness_music": {
+    "student_survey": {
       "fields": {
+        "Age": {
+          "description": "تەمەن",
+          "id": "تەمەن"
+        },
         "Country": {
           "id": "ووڵات"
+        },
+        "Gender": {
+          "description": "ڕەگەز",
+          "id": "ڕەگەز"
         }
       }
     }
-  }
+  },
+  "navigateForward": "بەردەوام بە",
+  "saveProgress": "پاشه‌كه‌وت بكە"
 }

@@ -636,7 +636,7 @@ pl:
         csd_app_lab_design_mode: CSD Tryb projektowania w App Lab
         csd_app_lab_events: CSD Zdarzenia w App Lab
         PL_CSD_Unit4_AppTesting: Testowanie prototypów papieru
-        csd_u6_circuit_playground: Oiczenia fizyczne
+        csd_u6_circuit_playground: Informatyka z urządzeniami fizycznymi
         csd_u6_input_output: Wejście i Wyjście
         CSA-PL-for-loops: Pętla "dla" w Javie
         CSA-PL-variables: Tworzenie znmiennych  w Javie
@@ -751,6 +751,31 @@ pl:
         star_quilts_intro_to_artist: 'Star Quilts: Wprowadzenie do Artysty'
         upload_sprites_backgrounds: Przesyłanie niestandardowych duszków i teł
         PL_CSD_EquityBlindSpotsvid: Uprzedzenia i odpowiedzialność
+        how-ai-works-llms-full: Jak działają chatboty i duże modele językowe
+        how-ai-works-creativity-full: Czy sztuczna inteligencja jest kreatywna i z wyobraźnią?
+        how-ai-works-llms-part1: Chatboty i duże modele językowe Część 1
+        how-ai-works-llms-part2: Chatboty i duże modele językowe Część 2
+        csc_bookcovers_intro: csc-bookcovers
+        llms-cobranded: 'Jak działa sztuczna inteligencja: Chatboty i duże modele językowe (LLM)'
+        generative-ai-cobranded: 'Jak działa sztuczna inteligencja: Generatywna sztuczna inteligencja'
+        csa-overview: Nowe podejście do Informatyki AP, A
+        what-is-creativity: Czym jest kreatywność?
+        poetry-programming: Poezja i programowanie
+        push-yourself: Zmuś się. Każdy może się nauczyć.
+        classic-maze-intro: Klasyczny labirynt - Wprowadzenie
+        code-break: Przejdź do Code Brake
+        blockchain-introd: 'Jak działa Blockchain: Wprowadzenie'
+        ai-ethis: Etyka i sztuczna inteligencja
+        how-ai-works-lessons: 'Jak działa sztuczna inteligencja: Przegląd lekcji'
+        se-cv-intro-to-lessons: 'Inżynieria oprogramowania i wizja komputerowa: wprowadzenie do lekcji'
+        PL_CSP_SummerAsync_U1ConnectionsConclusions: "\nJednostka 1 Powiązania i wnioski"
+        PL_CSP_SummerAsync_U3L7Debugging: Jednostka 3 Lekcja 7 - Debugowanie
+        PL_CSP_SummerAsync_U3ConnectionsConclusions: 'Jednostka 2: Wnioski i powiązania'
+        PL_CSP_SummerAsync_U3L1Computers: Poprzednio, w... Jednostka  3
+        PL_CSP_SummerAsync_Unit2Internet: Poprzednio, w... Jednostka  2
+        PL_CSP_SummerAsync_U2ConnectionsConclusions: 'Jednostka 3: Wnioski i powiązania'
+        ai_dance_editblocks_draft: Potańcówka AI Edytuj szkic bloków
+        csd_ml_how_ai_works: Jak działa AI
     callout:
       text:
         drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku

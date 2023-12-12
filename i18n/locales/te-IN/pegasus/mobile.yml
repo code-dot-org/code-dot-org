@@ -3,6 +3,7 @@
   hello: "హలో ప్రపంచం"
   'yes': 'అవును'
   'no': 'లేదు'
+  upgrade_ie_link: "మరింతగా తెలుసుకోండి"
   email: "\nఇమెయిల్"
   hoc2014_students: "విద్యార్థులు"
   hoc2014_teachers: "టీచర్లు"
@@ -18,6 +19,10 @@
   homepage_slot_text_teacher: "టీచర్ డ్యాష్‌బోర్డ్"
   homepage_slot_text_flappy: "ఫ్లాపీ కోడ్"
   homepage_action_text_sign_up: "సైన్ అప్"
+  homepage_banner_text_link: "మరింతగా తెలుసుకోండి"
+  homepage_banner_privacy_link: "మరింతగా తెలుసుకోండి"
+  homepage_banner_20k_teachers_link: "మరింతగా తెలుసుకోండి"
+  homepage_banner_40k_teachers_link: "మరింతగా తెలుసుకోండి"
   homepage_slot_text_title_hoc: "అవర్ ఆఫ్ కోడ్"
   homepage_slot_text_link_hoc: "కోడ్ యొక్క అవర్ ప్రయత్నించండి"
   homepage_slot_text_title_students: "విద్యార్థులు"
@@ -26,6 +31,8 @@
   homepage_slot_text_link_high: "ఉన్నత పాఠశాల"
   homepage_slot_text_link_thebadguys: "బాడ్ గైస్ తో కోడ్"
   homepage_gallery_header: "%{project_count} మిలియన్ కి పైగా Code.org ప్రాజెక్టులు సృష్టించబడ్డాయి"
+  homepage_below_hero_announcement_link_text: "మరింతగా తెలుసుకోండి"
+  contact_form_label_topic: "విషయాంశం"
   class_submission_level_middle_school: "మాధ్యమిక పాఠశాల"
   class_submission_level_high_school: "ఉన్నత పాఠశాల"
   starwars_blocks_title: "బ్లాక్స్"
@@ -42,6 +49,7 @@
   volunteer_engineer_submission_field_email_preference_no: 'లేదు'
   volunteer_engineer_submission_commitment_more: "ఎక్కువ"
   petition_age: "వయస్సు"
+  dashboard_announce_learn_more_button: "మరింతగా తెలుసుకోండి"
   dashboard_landing_title: "టీచర్ హోమ్ పేజీ "
   dashboard_landing_welcome: "కొత్త మరియు మెరుగుపడిన టీచర్ డ్యాష్‌బోర్డుకు స్వాగతం."
   dashboard_landing_print_certificates: "ఈ కోర్సు పూర్తి చేసిన విద్యార్థులకు సర్టిఫికేట్లను ముద్రించండి"
@@ -76,6 +84,7 @@
   dashboard_error_other_section: "ఒకవేళ మీరు మీ స్వంత సెక్షన్ల మధ్య విద్యార్థుల్ని తరలిస్తుంటే, డ్రాప్‌డౌన్ నుండి మీ సెక్షన్ ఎంపిక చేయండి. మీ విద్యార్థులను వేరే టీచర్ సెక్షన్ కి తరలించడానికి మాత్రమే 'ఇతర సెక్షన్' ఎంపిక చేయండి."
   dashboard_students_male: "మగ"
   dashboard_students_female: "అవివాహిత"
+  dashboard_overview: "ఓవర్ వ్యూ"
   dashboard_sequence: "సీక్వెన్స్"
   dashboard_classroom_strategies: "ఉపాధ్యాయుల కోసం తరగతి గది వ్యూహాలు"
   dashboard_teacher_worksheet: "టీచర్ వర్క్‌షీట్"
@@ -88,6 +97,7 @@
   learn_sign_up_button: "సైన్ అప్"
   hoc2014_try_new_tutorial: "బీటాలో మా కొత్త అవర్ ఆఫ్ కోడ్ ట్యుటోరియల్ని ప్రయత్నించండి"
   hoc2014_try_frozen: "ఘనీభవించిన నుండి అన్నా మరియు ఎల్సాతో ఆర్టిస్ట్"
+  frozen_name: "అన్నా మరియు ఎల్సాతో కోడ్"
   codeorg_name: "క్లాసిక్ మేజ్"
   codeintl_name: "క్లాసిక్ మేజ్"
   blockly_name: "బ్లాక్లీ"
@@ -111,6 +121,7 @@
   20-hour_name: వేగవంతమైన కోర్సు
   classicmaze_name: "క్లాసిక్ మేజ్"
   minecraft_name: "మైన్ క్రాఫ్ట్"
+  text-compression_name: వచనం కుదింపు 
   applab_name: "యాప్ ల్యాబ్"
   gamelab_name: "గేమ్ ల్యాబ్"
   applab_gradelevel: "వయస్సు 13+"
@@ -159,10 +170,11 @@
   header_about_jobs: "కెరీర్లు"
   header_about_contact: "మమ్మల్ని సంప్రదించండి"
   header_about_faqs: "తరచుగా అడిగే ప్రశ్నలు"
-  header_learn: "తెలుసుకోండి"
+  header_learn: "నేర్చుకోండి"
   header_teach: "నేర్పండి"
-  header_help_us: "మాకు సహాయం చెయ్యండి"
+  header_help_us: "హెల్ప్ అస్ "
   header_about: "పరియచం"
+  header_incubator: "ఇంక్యుబేటర్"
   header_teacher_community: "ఉపాధ్యాయ సమాజం"
   header_help_support: 'సహాయం మరియు మద్దతు '
   header_report_bug: "ఒక సమస్యను రిపోర్టు చేయండి"
@@ -205,19 +217,20 @@
   hoc2018_dance_party_box_title: "డాన్స్ పార్టీ"
   hoc2018_dance_teacher_resources_tile1_button: "పాఠ ప్రణాళిక"
   hoc2018_dance_teacher_resources_tile2_button: "అన్‌ప్లగ్డ్ కార్యాచరణ"
+  hoc2018_dance_amazon_about_future_engineer_button: "మరింతగా తెలుసుకోండి"
   hoc2018_dance_measure: "మెజర్"
   hoc2018_dance_measure_colon: 'మెజర్:'
   hoc2018_dance_video2: "డాన్స్ పార్టీ - ఈవెంట్స్"
   hoc2018_dance_video3: "డాన్స్ పార్టీ - గుణాలు"
   hoc2021_mc_mee_title: "Minecraft TimeCraft"
-  hoc2021_mc_mee_description: 'కాలంలో వెనక్కు ప్రయాణం చేయండి మరియు కోడ్ నేర్చుకోండి! కొత్త Minecraft అవర్ ఆఫ్ కోడ్ ట్యుటోరియల్ ఇప్పుడు Minecraft: Windows, Mac, Chromebook మరియు iPad కోసం ఎడ్యుకేషన్ ఎడిషన్‌లో అందుబాటులో ఉంది. ఉచిత ఎడ్యుకేటర్ వనరులు, ట్రైనింగ్‌లు మరియు వీడియోలతో ప్రారంభించండి.'
+  hoc2021_mc_mee_description: "కాలంలో వెనక్కు ప్రయాణం చేయండి మరియు కోడ్ నేర్చుకోండి! కొత్త Minecraft అవర్ ఆఫ్ కోడ్ ట్యుటోరియల్ ఇప్పుడు Minecraft: Windows, Mac, Chromebook మరియు iPad కోసం ఎడ్యుకేషన్ ఎడిషన్‌లో అందుబాటులో ఉంది. ఉచిత ఎడ్యుకేటర్ వనరులు, ట్రైనింగ్‌లు మరియు వీడియోలతో ప్రారంభించండి."
   hoc2021_mc_mee_villages_title: "రెండు గ్రామాల కథ"
-  hoc2021_mc_mee_villages_description: 'Minecraft: ఎడ్యుకేషన్ ఎడిషన్‌లో కోడింగ్ ప్రాథమిక అంశాలు నేర్చుకోండి మరియు వైవిధ్యం మరియు చేర్పు మీ విద్యార్థులతో అన్వేషించండి.'
+  hoc2021_mc_mee_villages_description: "Minecraft: ఎడ్యుకేషన్ ఎడిషన్‌లో కోడింగ్ ప్రాథమిక అంశాలు నేర్చుకోండి మరియు వైవిధ్యం మరియు చేర్పు మీ విద్యార్థులతో అన్వేషించండి."
   hoc2021_mc_mee_ai_title: "AI ఫర్ గుడ్"
-  hoc2021_mc_mee_ai_description: 'Minecraft: ఎడ్యుకేషన్ ఎడిషన్‌లో మీ విద్యార్థులతో AI అన్వేషించండి మరియు కోడ్ నేర్చుకోండి.'
+  hoc2021_mc_mee_ai_description: "Minecraft: ఎడ్యుకేషన్ ఎడిషన్‌లో మీ విద్యార్థులతో AI అన్వేషించండి మరియు కోడ్ నేర్చుకోండి."
   hoc2022_mc_mee_title: "Minecraft ఎస్కేప్ ఎస్టేట్"
   hoc2022_mc_mee_description: 'తెల్లవారుజామున అంతుచిక్కని భవనం నుండి తప్పించుకొని ఒక మిలియన్ పచ్చలు సంపాదించండి! కొత్త Minecraft అవర్ ఆఫ్ కోడ్ ట్యుటోరియల్ ఇప్పుడు Minecraft పై అందుబాటులో ఉంది: విండోస్, మ్యాక్, క్రోమ్‌బుక్, ఐప్యాడ్ మరియు మొబైల్ కోసం విద్యా ప్రచురణ. ఉచిత విద్యావేత్త వనరులు, శిక్షణలు మరియు వీడియోలతో మొదలు పెట్టండి.'
-  hoc2022_mc_mee_timecraft_description: 'Minecraft లోని ఈ ఉచిత కోడింగ్ పాఠంలో భవిష్యత్తును కాపాడటానికి సకాలములో తిరిగి ప్రయాణించండి: విద్యా ప్రచురణ.'
+  hoc2022_mc_mee_timecraft_description: "Minecraft లోని ఈ ఉచిత కోడింగ్ పాఠంలో భవిష్యత్తును కాపాడటానికి సకాలములో తిరిగి ప్రయాణించండి: విద్యా ప్రచురణ."
   footer_powered_by_aws: "అమెజాన్ వెబ్ సర్వీసెస్ మరియు “AWS చేత ఆధారితం” లోగో అమెజాన్. కామ్, ఇంక్ లేదా యునైటెడ్ స్టేట్స్ మరియు/లేదా ఇతర దేశాలలో దాని అనుబంధ సంస్థల ట్రేడ్మార్క్లు."
   codebytes_skinny_banner_english_only: "ఇంగ్లీష్-మాత్రమే"
   footer_privacy_policy: "గోప్యతా పాలసీ"
@@ -226,7 +239,7 @@
   footer_support: "మద్దతు"
   footer_terms: "నిబంధనలు"
   ai_for_oceans: "AI ఫర్ ఓషన్స్"
-  ai_activity: "కార్యాచరణ"
+  ai_activity: "ఆక్టివిటీ"
   outbreak_tile_subtitle: "మాన్‌స్టర్ టౌన్‌కు ఒక వైరస్ సోకింది! వ్యాప్తి సిములేటర్‌ను కోడ్ చేయండి మరియు మాన్‌స్టర్ టౌన్ పొరుగువారికి ఏమి జరగబోతుందో అంచనాలు వేయండి."
   hoc2022_banner_title: "అన్వేషించండి, ప్లే చేయండి, సృష్టించండి!"
   hoc2022_banner_description: "విశ్వాన్ని అన్వేషించండి, ఒక లక్ష్యాన్ని సాధించండి, ఒక చలనాన్ని ప్రతిమ చేయండి - కంప్యూటర్ సైన్స్ ప్రయత్నించడానికి అనేక మార్గాలు ఉన్నాయి!"

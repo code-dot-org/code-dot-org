@@ -5,11 +5,11 @@ description 'description here'
 markdown <<MARKDOWN
 # Units
 
-##### **The CS Principles curriculum is divided into ten units.** Most units (except units 6 and 8) have an end-of unit, multi-day project along with a multiple-choice assessment. We recommend that you teach the curriculum over the course of a year, with five units per semester. If your students are taking the CS Principles as an AP course, you should plan to cover all 10 units before the AP Exam.
+##### **The CS Principles curriculum is divided into ten units.** Most units (except units 9 and 10) have an end-of unit, multi-day project along with a multiple-choice assessment. We recommend that you teach the curriculum over the course of a year, with five units per semester. If your students are taking the CS Principles as an AP course, you should plan to cover all 10 units before the AP Exam.
 
 <img src="https://images.code.org/b55e51fe9255810b14d2e5fa0674743b-image-1638564177284.jpg" alt="A group of high schoolers have their arms around each other's shoulders and smile at the camera." style="border-radius:20px; float: right; height: 250px; clear: both; margin: 0 20px 20px 20px;">
 
-## Inclusion in course design
+## Course design
 
 ##### While CS Principles does provide students with ample time to learn and practice coding, the curriculum also seeks to provide knowledge and skills to meaningfully participate in our increasingly digital society, economy, and culture. Additionally, Code.org has thoughtfully designed the course to be accessible and non-threatening to students who have never coded before. 
 

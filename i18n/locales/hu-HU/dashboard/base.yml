@@ -52,7 +52,9 @@ hu:
         age: 'Kor'
         gender: 'Nem'
         edit_header: 'Felhasználói adatok szerkesztése'
+        ai_settings_header: 'AI beállítások'
         finish_sign_up_header: 'A profilod létrehozásának befejezése'
+        finish_sign_up_header_error: 'Kérjük, javítsd a következő hibákat:'
         finish_sign_up_subheader: 'Töltsd ki az alábbi adatokat <strong>%{email}</strong> Code.org fiókod létrehozásához.'
         finish_sign_up_subheader_markdown: 'Töltsd ki az alábbi adatokat **%{email}** Code.org fiókod létrehozásához.'
         finish_sign_up_subheader_provider: 'Töltsd ki az alábbi adatokat a Code.org felhasználó fiókod befejezéséhez <strong>%{provider}</strong><strong>%{email}</strong>.'
@@ -60,6 +62,7 @@ hu:
         reset_password_token: "A jelszó megváltoztatásához használt link"
         error:
           future: nem lehet a jövőben
+        user_type: 'Fióktípus'
         us_state: 'Állam'
   beta: "béta"
   hello: "Helló világ"
@@ -202,6 +205,8 @@ hu:
     parent_account_email_progress_permission: "Küldhetünk Önnek esetenként e-mailt a gyermeke fejlődéséről és projektjeiről, valamint frissítéseket a tanfolyamáról és a számítástechnikai ismereteiről? [(Lásd az adatvédelmi irányelveinket)](%{privacy_policy_url})"
     parent_account_email_label: "Szülő/gondviselő e-mail címe"
     us_state: 'Állam'
+    us_state_dropdown_options:
+      other: "Olyan helyen élek, ami nem szerepel a listában."
   school_info:
     title: 'Iskolai információ (opcionális)'
     school_country: 'Iskola országa'
@@ -334,7 +339,7 @@ hu:
       finished_hoc: "Végeztem!"
       sign_in_to_save: 'Jelentkezz be, hogy később ugyaninnen folytathasd'
       my_dashboard: "Vezérlőpultom"
-      course_catalog: "Tanfolyamaink"
+      course_catalog: "Tanfolyamok"
       project_gallery: "Projektek"
       sections: "Szakaszok"
       help_support: "Súgó és támogatás"

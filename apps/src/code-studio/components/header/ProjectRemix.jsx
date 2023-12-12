@@ -4,7 +4,9 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import * as utils from '../../../utils';
 import {refreshProjectName} from '../../projectRedux';
-import {styles} from './EditableProjectName';
+import styles from './project-header.module.scss';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import classNames from 'classnames';
 
 class ProjectRemix extends React.Component {
   static propTypes = {
@@ -15,6 +17,14 @@ class ProjectRemix extends React.Component {
   };
 
   remixProject = () => {
+    if (Lab2Registry.hasEnabledProjects()) {
+      this.remixLab2Project();
+    } else {
+      this.remixLegacyProject();
+    }
+  };
+
+  remixLegacyProject = () => {
     if (
       dashboard.project.getCurrentId() &&
       dashboard.project.canServerSideRemix()
@@ -40,6 +50,15 @@ class ProjectRemix extends React.Component {
     }
   };
 
+  remixLab2Project = () => {
+    const projectManager = Lab2Registry.getInstance().getProjectManager();
+    if (projectManager) {
+      projectManager.flushSave().then(() => {
+        projectManager.redirectToRemix();
+      });
+    }
+  };
+
   render() {
     const {lightStyle, inRestrictedShareMode} = this.props;
     let className = 'project_remix header_button no-mc';
@@ -49,9 +68,8 @@ class ProjectRemix extends React.Component {
     return !inRestrictedShareMode ? (
       <button
         type="button"
-        className={className}
+        className={classNames(styles.buttonSpacing, className)}
         onClick={this.remixProject}
-        style={styles.buttonSpacing}
       >
         {i18n.remix()}
       </button>

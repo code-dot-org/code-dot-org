@@ -10,7 +10,6 @@ Feature: Looking at a few things with Applitools Eyes - Part 3
     And I am a student
     When I open my eyes to test "<test_name>"
     And I am on "<url>"
-    When I rotate to landscape
     And I close the instructions overlay if it exists
     Then I see no difference for "initial load"
     And I close my eyes
@@ -25,7 +24,6 @@ Feature: Looking at a few things with Applitools Eyes - Part 3
     When I open my eyes to test "<test_name>"
     And I am on "<url>"
     And I dismiss the language selector
-    When I rotate to landscape
     Then I see no difference for "initial load"
     And I close my eyes
     Examples:
@@ -39,7 +37,6 @@ Feature: Looking at a few things with Applitools Eyes - Part 3
     When I open my eyes to test "<test_name>"
     And I am on "<url>"
     And I dismiss the language selector
-    When I rotate to landscape
     Then I see no difference for "initial load"
     And I close my eyes
     Examples:

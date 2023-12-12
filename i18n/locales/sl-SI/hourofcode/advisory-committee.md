@@ -1,8 +1,8 @@
 ---
-title: Hour of Code and CSEdWeek Advisory Committee
+title: Ura kodeksa in Svetovalni odbor CSEDWeek
 ---
 
-# Hour of Code and CSEdWeek Advisory Committee
+# Ura kodeksa in Svetovalni odbor CSEDWeek
 
 {{ advisory-committee/about_headshots }}
 

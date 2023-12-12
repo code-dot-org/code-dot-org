@@ -5,19 +5,11 @@ sm:
       BadGuys_setSizeAll_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': feoloolo
-            '2.00': large
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': feoloolo
-            '2.00': large
-            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -33,6 +25,10 @@ sm:
         options:
           UNIT:
             '"seconds"': sekone
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"seconds"': sekone
       Dancelab_changeMoveEachLR:
         options:
           GROUP:
@@ -40,6 +36,10 @@ sm:
             '"ALIEN"': tagata ese
             '"MOOSE"': aila lapoa
             '"ROBOT"': masina faatagata
+          MOVE:
+            MOVES.Rest: E leai se mea
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
           MOVE:
             MOVES.Rest: E leai se mea
       Dancelab_changeMoveLR:
@@ -181,14 +181,16 @@ sm:
         options:
           EFFECT:
             '"none"': E leai se mea
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"none"': E leai se mea
+          PALETTE:
+            '"ocean"': Moana
       Dancelab_setDanceSpeed:
         options:
           SPEED:
             '1': masani
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
       Dancelab_setDanceSpeedEach:
         options:
           GROUP:
@@ -198,10 +200,6 @@ sm:
             '"ROBOT"': masina faatagata
           SPEED:
             '1': masani
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
       Dancelab_setForegroundEffect:
         options:
           EFFECT:
@@ -390,9 +388,7 @@ sm:
       gamelab_makeSpritesWithSize:
         options:
           SIZE:
-            '30': small
             '50': feoloolo
-            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -446,10 +442,7 @@ sm:
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
-            '25': extra small
-            '50': small
             '75': feoloolo
-            '100': large
       gamelab_setProp:
         options:
           PROPERTY:
@@ -462,10 +455,7 @@ sm:
           PROPERTY:
             '"scale"': lapoa
           SIZE:
-            '25': extra small
-            '50': small
             '75': feoloolo
-            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:
@@ -474,11 +464,7 @@ sm:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
-            '3': slow
             '5': masani
-            '7': fast
-            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:
@@ -706,16 +692,10 @@ sm:
         options:
           PORTION:
             '1': uma
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': uma
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       binary_move:
         options:
           DIR:

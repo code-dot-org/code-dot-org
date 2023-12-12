@@ -53,6 +53,7 @@ ca:
         gender: 'Sexe'
         edit_header: 'Edita les dades del compte'
         finish_sign_up_header: 'Acabar de crear el seu compte'
+        finish_sign_up_header_error: 'Corregeix els errors següents:'
         finish_sign_up_subheader: 'Empleneu la informació següent per acabar creant un compte Code.org per a <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Empleneu la informació següent per acabar creant un compte Code.org per a **%{email}**.'
         finish_sign_up_subheader_provider: 'Empleneu la informació següent per acabar creant un compte Code.org amb <strong>%{provider}</strong> per a <strong>%{email}</strong>.'
@@ -60,6 +61,7 @@ ca:
         reset_password_token: "L'enllaç que has fet servir per restablir la contrasenya"
         error:
           future: no pot ser en el futur
+        user_type: 'Tipus de compte'
         us_state: 'Estat/província'
   beta: "beta"
   hello: "Hola món"
@@ -787,6 +789,7 @@ ca:
       title: "Star Wars"
       image_alt: 'L''R2-D2, la Leia, la Rey i el BB-8 en un desert.'
     text-compression:
+      title: "Compressió de text"
       body: "En aquesta lliçó, els alumnes faran servir el Widget de Compressió de Text per comprimir textos tot substituint patrons per símbols."
       image_alt: 'Text que es comprimeix per mitjà de la substitució de paraules senceres per un únic símbol.'
     weblab:

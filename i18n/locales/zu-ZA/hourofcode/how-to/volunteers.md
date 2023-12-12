@@ -6,7 +6,7 @@ title: Hour of Code How-To Guide for Volunteers
 
 ### Thousands of teachers are looking for volunteers to inspire their students. Make a difference today!
 
-[<button>Sign up to volunteer</button>]({{ urls/volunteer }})
+[<button>Bhalisa njengevolontiya</button>]({{ urls/volunteer }})
 
 * * *
 
@@ -15,7 +15,7 @@ Computational thinking helps nurture problem-solving skills, logic, and creativi
 The Hour of Code is a one-hour introduction to computer science designed to demystify “code,” show that anybody can learn the basics, and to broaden participation in the field of computer science. You can help raise awareness of the computer science movement and volunteer to inspire more students to try computer science, particularly young women and students from historically marginalized racial and ethnic groups.
 
 - [Who can volunteer?](#who-can-volunteer)
-- [Why volunteer?](#why-volunteer)
+- [Kungani uvolontiya?](#why-volunteer)
 - [How do volunteers get selected?](#selection)
 - [What if I want to volunteer with a specific school?](#choose-a-school)
 - [How to prepare](#how-to-prepare)
@@ -40,7 +40,7 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. [
 
 <a id="why-volunteer"></a>
 
-## Why volunteer?
+## Kungani uvolontiya?
 
 Computer science is the defining field of the 21st century, yet most schools still don’t teach it. One Hour of Code may be the most access to computer science that these students receive in a given year. By volunteering, you can make it even easier for teachers to bring CS into their classroom.
 
@@ -48,11 +48,11 @@ Computer science is the defining field of the 21st century, yet most schools sti
 
 Check out some testimonials from past volunteers:
 
-- “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry to have a chance to reach and excite these kids.”
-- “Especially enjoyed getting to encourage young girls in technology. Felt like I was helping the next generation in my local area.”
+- "Ingxenye enhle kunazo kusipiliyoni yami kwaba ukuthi lonke ikilasi kwaba abesifazane nabantu bombala. Kuyisinika esihle lekusasa lemboni yethu ukuba sibenethuba lokufinyelela nokuphaphamisa lezi zingane."
+- "Ikakhulukazi ngithozele ukwazi ukukhuthaza amantombazane asemancane kwezethekhinoloji. Ngizizwe sengathi ngisiza isizukulwane esilandelayo kundawo yakithi."
 - " NGITHANDILE ukubona indlela izingane ebezijabule ngayo. One amazing thing was that the teachers noticed that some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others - giving them a place to feel confident.”
 
-[<button>Sign up to volunteer</button>]({{ urls/volunteer }})
+[<button>Bhalisa njengevolontiya</button>]({{ urls/volunteer }})
 
 * * *
 
@@ -126,14 +126,14 @@ Work with the school or teacher to discuss what makes the most sense. We’ve se
 
 #### Sample Agenda:
 
-|Time | Agenda Item | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minutes | Show an [inspirational video](https://hourofcode.com/us/promote/resources#videos)| |5-10 minutes | Introduce yourself and learn more about the students: Where do you work, what do you do, and what do you love most about your job? What or who inspired you? How did you get interested in computer science? Did you have a mentor? Ask the students questions and leave time for Q&A. | |30-60 minutes | Code! If your event is in-person, this is the time to answer questions and guide students through tough puzzles. Try not to give them the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. If you are volunteering virtually, work with the teacher on what the best approach might be. It may make more sense to return at the end of the session to see what progress students have made. | | |1-3 minutes | Thank everyone and share inspirational parting words. Hand out any of your company swag ([stickers](#celebrate) are awesome)! | | <br />
+|Time | Agenda Item | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minutes | Show an [inspirational video](https://hourofcode.com/us/promote/resources#videos)| |5-10 minutes | Introduce yourself and learn more about the students: Where do you work, what do you do, and what do you love most about your job? Yini okanye ngubani okufake intshisakalo? How did you get interested in computer science? Ubunaye umsizi na? Ask the students questions and leave time for Q&A. | |30-60 minutes | Code! If your event is in-person, this is the time to answer questions and guide students through tough puzzles. Try not to give them the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. If you are volunteering virtually, work with the teacher on what the best approach might be. It may make more sense to return at the end of the session to see what progress students have made. | | |1-3 minutes | Thank everyone and share inspirational parting words. Hand out any of your company swag ([stickers](#celebrate) are awesome)! | | <br />
 
 #### Other ideas to add to your event
 
 - Explain ways technology impacts our lives, with examples that students of all backgrounds will care about - talk about technology that’s saving lives, helping people, connecting people.
 - If you are a tech company, demo fun, innovative products your company is working on. If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
 - Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-- If you have a group of staff that will be facilitating your event or volunteering with a local school, consider ordering [custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your group.
+- If you have a group of staff that will be facilitating your event or volunteering with a local school, consider ordering [custom t-shirts](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) for your group.
 
 ### 3. Plan your technology needs
 
@@ -186,7 +186,7 @@ One of the best ways to help is to spread the word and promote the Hour of Code.
 
 ### 1. Register Your Event
 
-When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local schools or parents know that you’re hosting an event near them.
+When you [sign up your Hour of Code event](/events), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local schools or parents know that you’re hosting an event near them.
 
 ### 2. Post on Social Media
 
@@ -225,7 +225,7 @@ Help raise awareness of the computer science movement with this sample content t
 
 - Spread awareness by wearing [Code.org swag](https://store.code.org/) (all proceeds go to supporting more students gain access to computer science education).
 - Choose to benefit Code.org when you shop on [AmazonSmile](https://code.org/donate/amazonsmile).
-- Ask your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word.
+- Cela Umphathi Omkhulu wasekampanini yakho ukuthi athumelele i-imeyili enkampanini egcizelela ukubaluleka wekhompyutha sayensi akhuthaze nabasebenzi ukuthi basasaze nezwi.
 - Have some fun with co-workers in a [giving campaign](https://medium.com/@codeorg/how-a-haircut-happy-hour-turned-into-a-fundraiser-for-code-org-1952b197faa2).
 - [Sign this petition](https://code.org/promote) to make sure that every student has the opportunity to learn computer science.
 - [Donate](https://code.org/donate) to Code.org so that we can keep our educational resources free and accessible to all.
@@ -238,12 +238,12 @@ For more suggestions on how to support Code.org and the Hour of Code, visit [Cod
 
 ## Volunteering FAQ
 
-### I haven't been contacted by a teacher yet. How can I still volunteer?
+### Angikaxhumananga nothisha namanje. Ngingavolintiya kanjani?
 
-Try searching for local schools and call the principal/teacher/front office and ask how you can help.  
+Zama ukufunisela ezikoleni esiseduze futhi shayela uthishanhloko/ uthisha/ihovisi eliphambili noma ungasiza kanjani.  
 
 
-### How long do classroom visits last for?
+### Ukuvakashela amakilasi kuthatha isikhathi esingakanani?
 
 An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.   
 
@@ -258,7 +258,7 @@ Code.org and our partners design all the Hour of Code activities to engage stude
 Teachers will be searching for volunteers on our [volunteer map](https://code.org/volunteer/local). Try to make your profile as complete as possible to increase the chance that a teacher will select you. If you have a preference on how you’d like to volunteer, such as being a guest speaker or as technical support, please indicate that in the description of your profile.   
 
 
-When selected, a teacher will contact you through the volunteer platform (your email address will never be shared with the teacher). If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher.   
+When selected, a teacher will contact you through the volunteer platform (your email address will never be shared with the teacher). Uma ngabe uthola izicelo eziningi ezivela kothisha, ungakwazi ukubuyekeza izintandokazi zakho ngokuchofoza ilinki ukuze uqale futhi utshintshe iminingwane yakho ezansi imeyili evela kumfundisi   
 
 
-[<button>Sign up to volunteer</button>]({{ urls/volunteer }})
+[<button>Bhalisa njengevolontiya</button>]({{ urls/volunteer }})

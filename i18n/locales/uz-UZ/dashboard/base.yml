@@ -53,6 +53,7 @@ uz:
         gender: 'Jinsi'
         edit_header: 'Foydalanuvchi ma''lumotlarini tahrirlash'
         finish_sign_up_header: 'Hisob qaydnomangizni yaratishni yakunlang'
+        finish_sign_up_header_error: 'Iltimos, quyidagi xatolarni to‘g‘rilang:'
         finish_sign_up_subheader: '<strong>%{email} </strong> uchun Code.org hisob qaydnomasini yaratishni tugatish uchun quyidagi ma''lumotlarni to''ldiring.'
         finish_sign_up_subheader_markdown: '**%{email}**  uchun Code.org hisob qaydnomasini yaratishni tugatish uchun quyidagi ma''lumotlarni to''ldiring.'
         finish_sign_up_subheader_provider: '<strong>%{provider}</strong> bilan <strong>%{email} </strong> uchun Code.org hisob qaydnomasini yaratishni tugatish uchun quyidagi ma''lumotlarni to''ldiring.'
@@ -60,6 +61,7 @@ uz:
         reset_password_token: "Siz kirib o'tgan parolni qayta tiklash uchun havola"
         error:
           future: yaqin orada bo`la olmaydi
+        user_type: 'Hisob (Akkaunt) Turi'
         us_state: 'Davlat'
   beta: "beta"
   hello: "Salom Dunyo"
@@ -423,6 +425,7 @@ uz:
       playlab: 'Play Lab - O‘yin laboratoriyasi'
       playlab_k1: 'Play Lab (Maktabgacha)'
       poetry: 'She''riyat'
+      poetry_hoc: 'She''r San''ati'
       scratch: 'Scratch'
       sports: 'Sport'
       spritelab: 'Sprite Lab'
@@ -715,7 +718,7 @@ uz:
     express:
       image_alt: 'Plants vs Zombies zombi va Flappy Bird yonida turgan o''simlik.'
     flappy:
-      title: 'Flappy o‘yinini yarating'
+      title: 'Flappy o‘yinini dasturlash'
       body: 'O‘z o‘yiningizni 10 daqiqa ichida yaratishni xohlaysizmi? Flappy Code darsimizni sinab ko‘ring!'
       image_alt: 'Yashil quvurlar orasida uchayotgan sariq qush.'
     frozen:
@@ -774,6 +777,7 @@ uz:
     playlab:
       image_alt: 'Moviy mushuk, bema''ni it va tarixdan oldingi weasel tasvirlangan rasm kollaji.'
     poem-art:
+      title: 'She''r San''ati'
       body: 'O''zingizni ifoda eting! Animatsion she''rlar yaratish uchun koddan foydalaning.'
       image_alt: 'Sahnada ijro etayotgan hipster kalamar.'
     pre-express-2017:

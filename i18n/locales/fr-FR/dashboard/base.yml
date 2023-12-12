@@ -52,7 +52,9 @@ fr:
         age: 'Age'
         gender: 'Sexe'
         edit_header: 'Modifier les détails du compte'
+        ai_settings_header: 'Paramètres IA'
         finish_sign_up_header: 'Terminez la création de votre compte'
+        finish_sign_up_header_error: 'Veuillez corriger les erreurs suivantes:'
         finish_sign_up_subheader: 'Remplissez les informations suivantes pour finir de créer votre compte Code.org pour <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Remplissez les informations suivantes pour finir de créer votre compte Code.org pour **%{email}**.'
         finish_sign_up_subheader_provider: 'Remplissez les informations suivantes pour compléter la création d''un Code.org avec <strong>%{provider}</strong> de <strong>%{email}</strong>.'
@@ -60,7 +62,9 @@ fr:
         reset_password_token: "Le lien de réinitialisation du mot de passe que vous avez suivi"
         error:
           future: ne peut pas être dans le futur
+        user_type: 'Type de compte'
         us_state: 'État'
+        ai_rubrics_disabled: 'Désactiver la rubrique AI'
   beta: "beta"
   hello: "Bonjour tout le monde"
   welcome_back: "Bienvenue %{name}"
@@ -202,6 +206,8 @@ fr:
     parent_account_email_progress_permission: "Pouvons-nous vous envoyer, par courriel, des mises à jour occasionnelles, sur les progrès et les projets de votre enfant, ainsi que des mises à jour sur ses cours et l’informatique ? [(Voir notre politique de confidentialité)] %{privacy_policy_url}"
     parent_account_email_label: "Adresse électronique du parent/tuteur "
     us_state: 'État'
+    us_state_dropdown_options:
+      other: "L'endroit où j'habite n'est pas listé"
   school_info:
     title: 'Informations de l’école (facultatif)'
     school_country: 'Pays de l’École'
@@ -270,6 +276,9 @@ fr:
   parent_mailer:
     student_associated_subject: 'Informations de connexion pour Code.org'
     parent_email_added_subject: 'Bienvenue sur Code.org!'
+    parent_permission_request_subject: "Consentement parental requis pour l'accès de votre enfant à Code.org"
+    parent_permission_reminder_subject: "Rappel, consentement parental requis pour l'accès de votre enfant à Code.org"
+    parent_permission_confirmation_subject: "Merci d'avoir approuvé l'accès de votre enfant à Code.org !"
   teacher_mailer:
     new_teacher_subject: 'Bienvenue sur Code.org!'
     delete_teacher_subject: 'Notification de Code.org : votre compte a été supprimé'
@@ -355,6 +364,7 @@ fr:
       sprite_lab_documentation: "Documentation sur le Labo des Sprites"
       sprite_lab_tutorials: "Tutoriels du Labo des Sprites"
       web_lab_documentation: "Documentation Web Lab"
+      project_beats_documentation: "Documentation du projet Beats"
       educate_overview: "Aperçu enseignant"
       educate_elementary: "École primaire"
       educate_middle: "Collège"
@@ -921,7 +931,7 @@ fr:
     privacy_notice: "Déclaration de confidentialité"
     accept_label: 'J''accepte les <a href="%{tos_url} » target="_blank"> Conditions d’Utilisation</a> et la<a href="%{privacy_url} » target="_blank"> Politique de Confidentialité</a>'
     accept_label_markdown: J'accepte la mise à jour des [Conditions d’utilisation](%{tos_url}) et de la[Politique de confidentialité](%{privacy_url})
-    accept_tos: En vous inscrivant sur Corde.org, vous acceptez nos [Terms of Service](%{tos_url}) et [Privacy Policy](%{privacy_url}).
+    accept_tos: En vous inscrivant sur Code.org, vous acceptez nos [Terms of Service](%{tos_url}) et [Privacy Policy](%{privacy_url}).
     accept: "Accepter "
     print: "Imprimer"
     reminder_desc: 'Nous avons mis à jour nos <a href="%{tos_url} » target="_blank">Conditions d’utilisation</a> et notre<a href="%{privacy_url} » target="_blank">Politique de confidentialité</a>. Veuillez les lire soigneusement avant de les accepter. Notez que nos outils pédagogiques JavaScript peuvent être indisponibles pour vos élèves avant votre acceptation expresse des conditions mises à jour.'
@@ -1135,17 +1145,35 @@ fr:
         not_listed: 'Terme préféré non listé'
         none: 'Préfère ne pas répondre'
       school_country:
+        australia: 'Australie'
         barbados: 'Barbade'
         belize: 'Belize'
+        brazil: 'Brézil'
         canada: 'Canada'
         chile: 'Chili'
         colombia: 'Colombie'
+        dominican_republic: 'République dominicaine'
+        india: 'Inde'
+        indonesia: 'Indonésie'
         israel: 'Israël'
+        jamaica: 'Jamaïque'
+        kenya: 'Kenya'
+        kosovo: 'Kosovo'
         malaysia: 'Malaisie'
+        maldives: 'Maldives'
         mexico: 'Mexique'
+        mongolia: 'Mongolie'
+        new_zealand: 'Nouvelle-Zélande'
         paraguay: 'Paraguay'
+        philippines: 'Philippines'
+        portugal: 'Portugal'
+        slovakia: 'Slovaquie'
+        south_korea: 'Corée du Sud'
+        spain: 'Espagne'
         thailand: 'Thaïlande'
+        trinidad_and_tobago: 'Trinité-et-Tobago'
         uzbekistan: 'Ouzbékistan'
+        vietnam: 'Viêt Nam'
       ages:
         ages_under_6: 'Moins de 6 ans'
         ages_7_8: '7-8 ans'

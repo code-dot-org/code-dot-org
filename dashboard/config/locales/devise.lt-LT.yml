@@ -61,6 +61,28 @@ lt:
         el. laišką su instrukcija, kaip atrakinti savo paskyrą.
       unlocked: Jūsų paskyra sėkmingai atrakinta. Prašome prisijungti ir tęsti.
   errors:
+    invitations:
+      edit:
+        header: Nustatykite savo slaptažodį
+        submit_button: Sukurti slaptažodį
+      invitation_removed: Jūsų kvietimas buvo pašalintas.
+      invitation_token_invalid: Pakvietimas nebegalioja!
+      new:
+        header: Siųsti kvietimą
+        submit_button: Siųsti kvietimą
+      no_invitations_remaining: Kvietimų nėra
+      send_instructions: Laiškas su pakvietimu buvo išsiųstas gavėjui %{email}.
+      updated: Jūsų slaptažodis sėkmingai sukurtas. Dabar esate prisijungęs.
+    mailer:
+      invitation_instructions:
+        accept: Priimti pakvietimą
+        hello: Sveiki %{email}
+        ignore: Jei nenorite priimti pakvietimo, ignoruokite šį laišką.<br />Jūsų
+          paskyra nebus sukurta, kol nenueisite į šią nuorodą ir nesukursite savo
+          slaptažodžio.
+        someone_invited_you: Kažkas Jus pakvietė į %{url}, galite priimti kvietimą
+          spausdami žemiau pateiktą nuorodą.
+        subject: Pakvietimų instrukcijos
     messages:
       already_confirmed: jau buvo patvirtinta, prašome prisijungti
       confirmation_period_expired: turi būti patvirtintas per %{period}, prašome pamėginti
@@ -68,25 +90,3 @@ lt:
       expired: pasibaigė, prašome prašyti naujos
       not_found: nerastas
       not_locked: nebuvo užrakintas
-    invitations:
-      send_instructions: Laiškas su pakvietimu buvo išsiųstas gavėjui %{email}.
-      invitation_token_invalid: Pakvietimas nebegalioja!
-      updated: Jūsų slaptažodis sėkmingai sukurtas. Dabar esate prisijungęs.
-      no_invitations_remaining: Kvietimų nėra
-      invitation_removed: Jūsų kvietimas buvo pašalintas.
-      new:
-        header: Siųsti kvietimą
-        submit_button: Siųsti kvietimą
-      edit:
-        header: Nustatykite savo slaptažodį
-        submit_button: Sukurti slaptažodį
-    mailer:
-      invitation_instructions:
-        subject: Pakvietimų instrukcijos
-        hello: Sveiki %{email}
-        someone_invited_you: Kažkas Jus pakvietė į %{url}, galite priimti kvietimą
-          spausdami žemiau pateiktą nuorodą.
-        accept: Priimti pakvietimą
-        ignore: Jei nenorite priimti pakvietimo, ignoruokite šį laišką.<br />Jūsų
-          paskyra nebus sukurta, kol nenueisite į šią nuorodą ir nesukursite savo
-          slaptažodžio.

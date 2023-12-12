@@ -47,6 +47,10 @@ se:
         options:
           UNIT:
             '"measures"': távttat
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': távttat
       Dancelab_changeColorBy:
         text: rievdat {COLOR} {METHOD} {AMOUNT}:iin
         options:
@@ -84,6 +88,26 @@ se:
             MOVES.Clown: Gangnam
             MOVES.Kick: Násti
             MOVES.ThisOrThat: Dát vai Duot
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} daga {MOVE} {DIR} vaikko man galle geardde"
+        options:
+          GROUP:
+            '"CAT"': bussát
+            '"SLOTH"': láikkeseallit
+          MOVE:
+            MOVES.Roll: Gorut Jorran
+            MOVES.ClapHigh: Spežže Bajas
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Duppalit Vulos
+            MOVES.Drop: Gahčá
+            MOVES.Floss: Flossa
+            MOVES.Fresh: Ođas
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Násti
+            MOVES.ThisOrThat: Dát vai Duot
+            '"next"': "(Boahtte)"
+            '"prev"': "(Ovddit)"
+            '"rand"': "(Sahtedohko)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} daga {MOVE} {DIR} vaikko man galle geardde"
         options:
@@ -383,26 +407,6 @@ se:
             '18': '18'
             '19': '19'
             '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
-            '40': '40'
           COSTUME:
             '"ALIEN"': Buot alien:at
             '"BEAR"': guovžžat
@@ -515,11 +519,53 @@ se:
             '"tropical"': Trohpalaš
             '"vintage"': Retro
             '"warm"': Liekkus
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          bija duogábeal-effeavtta
+          {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"rand"': "(Sahtedohko)"
+            '"quads"': Čiegat
+            '"circles"': Jorbbát
+            '"color_cycle"': Ivnnit
+            '"diamonds"': Diamánttat
+            '"disco_ball"': Diskospábba
+            '"fireworks"': Dollarusonat
+            '"flowers"': Lieđit
+            '"growing_stars"': Šaddi Násttit
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kaleidoskohpa
+            '"lasers"': Laser Dánsenguolbi
+            '"splatter"': Málá Goaikkanas
+            '"rainbow"': Arvedávgi
+            '"ripples_random"': Sahtedohko Bárožat
+            '"ripples"': Bárožat
+            '"snowflakes"': Muohta
+            '"text"': Lávlagiid namat
+            '"galaxy"': Gomuvuohta
+            '"sparkles"': Šelggonat
+            '"spiral"': Spirála
+            '"disco"': Njealječiegagat
+            '"squiggles"': Squiggles
+            '"starburst"': Starburst
+            '"stars"': Násttit
+            '"music_wave"': Bárut
+          PALETTE:
+            '"rave"': Čáhppes ja Vilges
+            '"cool"': Čáffa
+            '"electronic"': Elektrovnnalaš
+            '"iceCream"': LákcaJiekŋa
+            '"default"': Čuovga
+            '"neon"': Neona
+            '"rainbow"': Arvedávgi
+            '"tropical"': Trohpalaš
+            '"vintage"': Retro
+            '"warm"': Liekkus
       Dancelab_setDanceSpeed:
         text: bija {SPRITE} dánsenleavttu {SPEED}
         options:
           SPEED:
-            '1': normal
             '2': jođánit
             '4': hui jođánit
             '0.5': njozet
@@ -541,7 +587,6 @@ se:
             '"SLOTH"': láikkeseallit
             '"UNICORN"': unikornat
           SPEED:
-            '1': normal
             '2': jođánit
             '4': hui jođánit
             '0.5': njozet
@@ -1161,11 +1206,8 @@ se:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': njozet
-            '5': normal
             '7': jođánit
-            '9': extra fast
       gamelab_setTint:
         text: rievdat {THIS} ivnni  dákkár {COLOR}
       gamelab_setupSim:
@@ -1488,7 +1530,6 @@ se:
       Poetry_whenLineShows:
         options:
           'N':
-            '0': "???"
             '1': '1'
             '2': '2'
             '3': '3'
@@ -1661,7 +1702,6 @@ se:
       ecosystems_int10:
         options:
           VALUE:
-            '0': '0'
             '1': '1'
             '2': '2'
             '3': '3'

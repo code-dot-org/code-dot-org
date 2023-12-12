@@ -4,6 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "4c99343f-3fed-4c37-8d80-62014df28d24",
+          "notice": "Free Teacher Resources from Amazon Future Engineer",
+          "details": "Code.org has partnered with Amazon Future Engineer to offer teachers at underserved schools a growing number of resources and benefits at no cost! ",
+          "link": "code.org/afe",
+          "type": "bullhorn",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Get free resources"
+        }
+      ],
       "curriculum_umbrella": "CSD",
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -18,7 +30,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-26 22:46:53 UTC",
+    "serialized_at": "2023-11-20 21:05:23 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -98,7 +110,7 @@
           {
             "notice": "AI/ML Professional Development",
             "details": "Before starting this unit, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
-            "link": "https://studio.code.org/s/self-paced-pl-csd5-2021",
+            "link": "https://studio.code.org/courses/self-paced-pl-aiml-2023",
             "type": "information",
             "visibility": "Teacher-only"
           }
@@ -1872,7 +1884,7 @@
       "key": "17a8f41e-a04a-458c-b1fb-1fe9dbe02126",
       "position": 5,
       "properties": {
-        "description": "**Training Screen:**\n\n- Informational text will frequently pop up on the screen. Consider asking students to read the prompts aloud to the class, possibly in their best robot voice, for a little fun\n- Ask students to use thumbs up / thumbs down to decide as a class whether something is a fish\n- At 30 images, the level will ask if you would like to continue or keep training. Ask students to help with this decision and follow their lead - either continue training, or go to the next screen.\n- Before continuing, have students record on their activity guide how many images they used to train A.I. Bot.\n\n**Testing Screen:**\n\n- A.I. Bot will probably misidentify a few objects. Make sure students notice this, and ask them to individually consider why they think this might be happening. This ties in to the discussion at the end of this level.\n\n**Evaluation Screen:**\n\n- Have students count the number of fish that it identified correctly. Record this on the activity guide.\n- It’s okay if A.I. Bot misidentifies some trash as fish - this sets the stage for the discussion.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _If we wanted A.I. Bot to become better at recognizing fish, how do you think we could help it do that?_"
+        "description": "| Activity                           | As a Class                                                                                                                                                                      |\n| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |\n| **Training Screen** ![](https://images.code.org/d5c6d852f32c09b038315b9c4b5a77f1-oceans1-sm.png) | <ul><li>Informational text will frequently pop up on the screen. Consider asking students to read the prompts aloud to the class, possibly in their best robot voice, for a little fun</li><li>Ask students to use thumbs up / thumbs down to decide as a class whether something is a fish</li><li>At 30 images, the level will ask if you would like to continue or keep training. Ask students to help with this decision and follow their lead - either continue training, or go to the next screen.</li><li>Before continuing, have students record on their activity guide how many images they used to train the A.I. Bot. </li></ul>|\n| **Testing Screen** ![](https://images.code.org/1c133d1ed2eb5f634fe0469aef40b4c6-oceans2-sm.png) | <ul><li>A.I. Bot will probably misidentify a few objects. Make sure students notice this, and ask them to individually consider why they think this might be happening. This ties in to the discussion at the end of this level.</li></ul> |\n| **Evaluation Screen** ![](https://images.code.org/418cdfba3b4181267a1713855a005bc6-oceans3-sm.png) |<ul><li>Have students count the number of fish that it identified correctly. Record this on the activity guide.</li><li>It’s okay if A.I. Bot misidentifies some trash as fish - this sets the stage for the discussion. </li></ul> |\n\n&nbsp;\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _If we wanted A.I. Bot to become better at recognizing fish, how do you think we could help it do that?_"
       },
       "seeding_key": {
         "activity_section.key": "17a8f41e-a04a-458c-b1fb-1fe9dbe02126",
@@ -4379,7 +4391,7 @@
         "tips": [
           {
             "type": "contentCorner",
-            "markdown": "**Real-World Connection:** These example model cards are exaggerated for pedagogical purposes, but similar phenomena can bee seen in this article: [Hundreds of AI tools have been built to catch covid. None of them helped](https://www.technologyreview.com/2021/07/30/1030329/machine-learning-ai-failed-covid-hospital-diagnosis-pandemic). A few relevant quotes from the article are:\n\n- \"Many unwittingly used a data set that contained chest scans of children who did not have covid as their examples of what non-covid cases looked like. But as a result, the AIs learned to identify kids, not covid.\"\n- \"In yet other cases, some AIs were found to be picking up on the text font that certain hospitals used to label the scans. As a result, fonts from hospitals with more serious caseloads became predictors of covid risk.\"\n\nAs an extension of this lesson, you may choose to share this article with students. However, the article is not intended for a middle-school audience, so additional scaffolds and supports may be necessary to support student understanding and connecting back to today's lesson."
+            "markdown": "**Real-World Connection:** These example model cards are exaggerated for pedagogical purposes, but similar phenomena can be seen in this article: [Hundreds of AI tools have been built to catch covid. None of them helped](https://www.technologyreview.com/2021/07/30/1030329/machine-learning-ai-failed-covid-hospital-diagnosis-pandemic). A few relevant quotes from the article are:\n\n- \"Many unwittingly used a data set that contained chest scans of children who did not have covid as their examples of what non-covid cases looked like. But as a result, the AIs learned to identify kids, not covid.\"\n- \"In yet other cases, some AIs were found to be picking up on the text font that certain hospitals used to label the scans. As a result, fonts from hospitals with more serious caseloads became predictors of covid risk.\"\n\nAs an extension of this lesson, you may choose to share this article with students. However, the article is not intended for a middle-school audience, so additional scaffolds and supports may be necessary to support student understanding and connecting back to today's lesson."
           }
         ]
       },
@@ -12304,7 +12316,7 @@
     },
     {
       "name": "Shoe Survey",
-      "url": "https://docs.google.com/forms/d/1PWlwQuyTn_7f4lQUXkujQRZQrDPXFQllw7y7IGd02VM/view",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSc7rkOHqoMHb2GLBW5tuTjVFPY7xblkCLnzCpGyF6UaX2mKpQ/viewform?usp=sharing",
       "key": "shoe_survey",
       "properties": {
         "audience": "Teacher",
@@ -14433,6 +14445,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

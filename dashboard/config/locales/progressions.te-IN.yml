@@ -2,10 +2,14 @@
 te:
   data:
     progressions:
+      AI Machine Learning - Video: AI మెషిన్ లెర్నింగ్ - వీడియో
+      'AI: Impact on Society - Video': 'AI: సమాజంపై ప్రభావం - వీడియో'
+      'AI: Training Data & Bias - Video': 'AI: ట్రైనింగ్ డేటా & బయాస్ - వీడియో'
       Artist Project: ఆర్టిస్ట్ ప్రాజెక్ట్
       Assessment: అసెస్మెంట్
       Bass, Mid, and Treble: Bass, Mid, and Treble
       Change: మార్పు
+      Check for Understanding: అవగాహన కోసం తనిఖీ చేయండి
       Dance Crews: డాన్స్ క్రూస్
       Debugging: డీబగ్గింగ్
       Drawing: డ్రాయింగ్
@@ -15,7 +19,9 @@ te:
       Functions with Parameters: పారామితులతో విధులు
       Get In Formation: గెట్ ఇన్ ఫార్మేషన్
       How to Make a Sprite: స్ప్రైట్ ఎలా తయారు చేయాలి
+      Intro Video: ఉపోద్ఘాతం వీడియో
       Introducing Sprite Lab: స్ప్రైట్ ల్యాబ్ను పరిచయం చేస్తోంది
+      Introduction: పరిచయం
       Introduction to Arrays: శ్రేణుల పరిచయం
       Lesson Extras: పాఠం ఎక్స్ట్రాలు
       Levels: స్థాయిలు
@@ -23,15 +29,23 @@ te:
       Measures: మెజర్స్
       'Mini-Project: Sticker Art': 'మినీ-ప్రాజెక్ట్: స్టిక్కర్ ఆర్ట్'
       My Online Neighborhood: నా ఆన్లైన్ పరిసరం
+      Overview: ఓవర్ వ్యూ
       Pair Programming: పెయిర్ ప్రోగ్రామింగ్
       Picturing Data: డేటా చిత్రలేఖనమవుతున్న
       Properties: లక్షణాలు
       Quarter Notes: క్వార్టర్ నోట్స్
       Review: రివ్యూ
+      Share Out: షేర్ అవుట్
       Speed it Up, Slow it Down: స్పీడ్ ఇట్ అప్, స్లో ఇట్ డౌన్
       Sprite Lab Project: స్ప్రైట్ ల్యాబ్ ప్రాజెక్ట్
+      Teach AI a New Word: AI కి కొత్త పదం నేర్పండి
+      Text Compression: వచనం కుదింపు
       The Animation Tab: యానిమేషన్ టాబ్
       The Harvester: హార్వెస్టర్
+      Train an AI to Clean the Ocean: సముద్రాన్ని శుభ్రం చేయడానికి AI కి ట్రైనింగ్
+        ఇవ్వండి
+      Unplugged Activity: అన్‌ప్లగ్డ్ కార్యాచరణ
+      Using Training Data: ట్రైనింగ్ డేటాను ఉపయోగించడం
       Using the Repeat Block: రిపీట్ బ్లాక్ ఉపయోగించి
       Variables: వేరియబుల్స్
       Velocity: వెలాసిటీ

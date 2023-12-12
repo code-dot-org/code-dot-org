@@ -45,7 +45,7 @@ class AnnouncementsTest < ActiveSupport::TestCase
   test 'quietly reject invalid data' do
     incomplete_banner_data = {
       pages: {
-        "/courses": "test"
+        '/courses': "test"
       },
       banners: {
         test: {
@@ -71,5 +71,27 @@ class AnnouncementsTest < ActiveSupport::TestCase
     Announcements.set_file_path(File.join("#{dashboard_dir}/test/lib", 'not-a-file.json'))
     announcement = Announcements.get_announcement_for_page("/courses")
     refute announcement
+  end
+
+  test 'returns nil for announcement behind false dcdo flag' do
+    DCDO.instance_variable_get(:@datastore_cache).set('announcement-dcdo-test', false)
+    announcement = Announcements.get_announcement_for_page("/dcdo-test")
+    assert_nil announcement
+  end
+
+  test 'gets announcement for banner behind true dcdo flag' do
+    DCDO.instance_variable_get(:@datastore_cache).set('announcement-dcdo-test', true)
+    announcement = Announcements.get_announcement_for_page("/dcdo-test")
+    assert announcement
+    assert_equal("https://code.org/images/professional-learning-2019-closing-soon.png", announcement[:image])
+    assert_equal("Join us in this movement and submit your application today.", announcement[:body])
+    assert_equal("Don’t miss out. Apply today!", announcement[:title])
+    assert_equal("Join us", announcement[:buttonText])
+    assert_equal("https://code.org/educate/professional-learning/middle-high", announcement[:buttonUrl])
+    assert_equal("teacher-apps-closing-2020-sign-up", announcement[:buttonId])
+    assert_equal("Join us 2!", announcement[:buttonText2])
+    assert_equal("https://code.org/educate/professional-learning", announcement[:buttonUrl2])
+    assert_equal("teacher-apps-closing-2020-sign-up-2", announcement[:buttonId2])
+    assert_equal("dcdo-flag-test", announcement[:id])
   end
 end

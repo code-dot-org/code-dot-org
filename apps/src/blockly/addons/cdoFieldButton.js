@@ -1,22 +1,35 @@
 import GoogleBlockly from 'blockly/core';
 
-/**
- * This is a customized field which the user clicks to select an option from a customized picker,
- * for example, the location of a sprite from a grid or a sound file from a customized modal.
- * @param value Optional. The initial value of the field.
- * @param validator Optional. A function that is called to validate changes to the field's value.
- * Takes in a value & returns a validated value, or null to abort a change
- * @param onClick The function that handles the field's editor.
- * @param transformText Optional. The function that handles how the field text is displayed.
- * @param icon Optional. SVG <tspan> element - if the field displays a button, this is the icon that is displayed on the button.
- */
 export default class CdoFieldButton extends GoogleBlockly.Field {
-  constructor({value, validator, onClick, transformText, icon}) {
+  /**
+   * This is a customized field which the user clicks to select an option from a customized picker,
+   * for example, the location of a sprite from a grid or a sound file from a customized modal.
+   * @param {Object} options - The options for constructing the class.
+   * @param {*} options.value Optional. The initial value of the field.
+   * @param {Function} [options.validator] Optional. A function that is called to validate changes to the field's value.
+   * Takes in a value & returns a validated value, or null to abort a change
+   * @param {Function} options.onClick Handles the field's editor.
+   * @param {Function} [options.transformText] Handles how the field text is displayed.
+   * @param {SVGElement} options.icon SVG <tspan> element - if the field displays a button, this is the icon that is displayed on the button.
+   * @param {Object} [options.colorOverrides] - An optional set of colors to use instead of the sourceBlock's styles.
+   * @param {string} [options.colorOverrides.button] - An override for the toggle button color.
+   * @param {string} [options.colorOverrides.icon] - An override for the color of the icon.
+   * @param {string} [options.colorOverrides.text] - An override for the color of the text.
+   */
+  constructor({
+    value,
+    validator,
+    onClick,
+    transformText,
+    icon,
+    colorOverrides,
+  }) {
     super(value, validator);
     this.onClick = onClick;
     this.transformText = transformText;
     this.icon = icon;
     this.SERIALIZABLE = true;
+    this.colorOverrides = colorOverrides;
   }
 
   static fromJson(options) {
@@ -30,7 +43,8 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
   initView() {
     super.initView();
     if (this.icon) {
-      this.icon.style.fill = this.getSourceBlock().style.colourPrimary;
+      this.icon.style.fill =
+        this.colorOverrides?.icon || this.getSourceBlock().style.colourPrimary;
       this.textElement_.appendChild(this.icon);
     }
   }
@@ -66,8 +80,22 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
    */
   applyColour() {
     const sourceBlock = this.getSourceBlock();
+    const buttonColor = this.colorOverrides?.button;
+    const textColor = this.colorOverrides?.text;
+    const iconColor = this.colorOverrides?.icon;
+
     if (this.icon) {
-      this.icon.style.fill = sourceBlock.style.colourPrimary;
+      this.icon.style.fill = iconColor || sourceBlock.style.colourPrimary;
+    }
+
+    const borderRect = this.borderRect_;
+    if (borderRect && buttonColor) {
+      borderRect.setAttribute('style', 'fill: ' + buttonColor);
+    }
+
+    const textElement = this.textElement_;
+    if (textElement && textColor) {
+      textElement.setAttribute('style', 'fill: ' + textColor);
     }
   }
 }

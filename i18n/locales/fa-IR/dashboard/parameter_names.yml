@@ -1,7 +1,7 @@
 fa:
   data:
     parameter_names:
-      actor: بازیگر
+      actor: عامل
       color: رنگ
       counter: شمارشگر
       height: ارتفاع
@@ -10,5 +10,7 @@ fa:
       length: طول
       min: حداقل
       points: امتیازات
+      radius: شعاع
+      sides: اضلاع
       size: اندازه
       speed: سرعت

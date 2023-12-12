@@ -1,8 +1,8 @@
 ---
-title: Hour of Code and CSEdWeek Advisory Committee
+title: คณะกรรมการที่ปรึกษาชั่วโมงแห่งประมวลกฎหมายและกฏหมาย CSEDWeek
 ---
 
-# Hour of Code and CSEdWeek Advisory Committee
+# คณะกรรมการที่ปรึกษาชั่วโมงแห่งประมวลกฎหมายและกฏหมาย CSEDWeek
 
 {{ advisory-committee/about_headshots }}
 

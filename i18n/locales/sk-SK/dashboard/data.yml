@@ -496,7 +496,7 @@ sk:
         hoc_dance_congrats: Tanečná párty - Párty pokračuje!
         c_and_c_great_to_create: Je skvelé tvoriť a hrať férovo
         c_and_c_digital_sharing: Digitálne zdieľanie
-        teaching_csf_how_it_works: 'Vyučujeme základy informatiky: Ako funguje tento kurz'
+        teaching_csf_how_it_works: 'Vyučujeme Základy informatiky: Ako funguje tento kurz'
         elem_pd_2: Informatika pre prvý stupeň - PD video 2/2
         what_is_cs: Čo je informatika?
         repeat_block: 'Video: Používanie bloku „opakuj“'
@@ -590,9 +590,9 @@ sk:
         poembot-playtest-intro: Testovanie poetického bota – Úvod
         poembot-playtest-sprites: Testovanie poetického bota – Postavičky
         poembot-playtest-events: Testovanie poetického bota – Udalosti
-        hello_world_intro: Ahoj svet – vitaj v laboratóriu postáv
-        hello_world_events: Ahoj svet – programovanie s udalosťami
-        hello_world_congrats: Ahoj svet – rob si, čo chceš 
+        hello_world_intro: Ahoj svet - Vitaj v Sprite Labe
+        hello_world_events: Ahoj svet – Programovanie s udalosťami
+        hello_world_congrats: Ahoj svet – Rob si, čo chceš 
         csp_global_vs_local: Ladenie globálnych a lokálnych premenných
         rough_poemart_intro: v1 Umenie poézie Úvod
         rough_poemart_events: v1 Umenie poézie Podujatia 
@@ -619,11 +619,11 @@ sk:
         csd_app_lab_design_mode: Režim návrhu laboratória aplikácie CSD
         csd_app_lab_events: CSD App Laboratórne udalosti
         PL_CSD_Unit4_AppTesting: Testovanie prototypov papiera
-        csd_u6_circuit_playground: Fyzické výpočty
+        csd_u6_circuit_playground: Programovanie s hardvérom
         csd_u6_input_output: Vstup a výstup
         CSA-PL-for-loops: Pre slučky v jazyku Java
         CSA-PL-variables: Vytváranie premenných v jazyku Java
-        PL_CS_Journeys_Overview: CS Cesty
+        PL_CS_Journeys_Overview: CS Journeys
         CSA-PL-intro-to-java-lab: Základy Java Lab
         CSA-PL-first-program: Písanie programu v jazyku Java
         CSD_u6_variables_part1: 'CSD: Premenné'
@@ -645,7 +645,7 @@ sk:
         PL_CSP_TeacherTips_LeadLearner: 'Tipy pre učiteľov: Ako byť vedúcim študentom'
         PL_CSP_TeacherTips_APExam: 'Tipy pre učiteľov: Príprava na skúšku AP'
         PL_CSP_TeacherTips_EIPM: 'Tipy pre učiteľov: Proces EIPM'
-        PL_CSD_CircuitPlayground_Overview: Prehľad obvodového ihriska
+        PL_CSD_CircuitPlayground_Overview: 'Circuit Playground: Prehľad'
         CSA-PL-debugging-22: Ladenie v Java Lab
         CSD_Unit6_InteractiveArtExemplar: Interaktívny Art Exemplar
         CS_Changing_Everything: Informatika mení svet okolo nás
@@ -665,10 +665,10 @@ sk:
         csa-pl-intro-to-strings: Úvod do reťazcov v jazyku Java
         csa-pl-compareTo: Metóda compareto ()
         csc-event-short-intro: Udalosti Short Intro
-        PL_CSD_CircuitPlayground_Overview_AppsWithDevices: Circuit Ihrisko Unit Prehľad
+        PL_CSD_CircuitPlayground_Overview_AppsWithDevices: 'Circuit Playground: Prehľad lekcie'
         csa-day-in-pm-pl: Čo robí projektový manažér?
         csa-pl-intro-to-pm: Úvod do projektového manažmentu
-        PL_CSD_CircuitPlayground_Setup: Nastavenie obvodového ihriska
+        PL_CSD_CircuitPlayground_Setup: 'Circuit Playground: Nastavenie'
         csa_object_oriented_programming: 'CSA: Objektovo orientované programovanie'
         csa_creating_objects: 'CSA: Vytváranie objektov'
         csa_calling_methods: 'CSA: Metódy volania'
@@ -732,6 +732,14 @@ sk:
         csa_sorting_algorithms: 'CSA: Triediace algoritmy'
         star_quilts_intro_to_artist: 'Hviezdne deky: Úvod do umelca'
         upload_sprites_backgrounds: Nahrávanie vlastných škriatkov a pozadia
+        how-ai-works-llms-full: Ako fungujú chatboty a veľké jazykové modely
+        how-ai-works-creativity-full: Má AI kreativitu a predstavivosť?
+        how-ai-works-llms-part1: Chatboty a veľké jazykové modely Časť 1
+        how-ai-works-llms-part2: Chatboty a veľké jazykové modely, časť 2
+        llms-cobranded: 'Ako funguje AI: Chatboty a veľké jazykové modely'
+        generative-ai-cobranded: 'Ako funguje AI: Generatívna AI'
+        what-is-creativity: Čo je Kreativita?
+        csd_ml_how_ai_works: Ako funguje umelá inteligencia
     callout:
       text:
         drag_blocks: Chyť blok "posuň sa" a pripoj ho pod už použitý blok

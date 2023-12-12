@@ -1,5 +1,6 @@
 @use "color.scss";
 @use "style-constants.scss";
+@import 'font';
 
 .paneSection {
   text-align: center;
@@ -10,6 +11,7 @@
 }
 
 .headerButton {
+  @include main-font-semi-bold;
   cursor: pointer;
   float: right;
   overflow: hidden;
@@ -18,7 +20,6 @@
   margin: 3px 3px 3px 0;
   height: 24px;
   border-radius: 4px;
-  font-family: "Gotham 5r", sans-serif;
   line-height: 18px;
   padding: 0;
   border: 0;
@@ -110,6 +111,7 @@
 //  once we move all the headers to updated styles.
 //  More info here: https://github.com/code-dot-org/code-dot-org/pull/50895
 .legacyHeaderButton {
+  @include main-font-semi-bold;
   cursor: pointer;
   float: right;
   overflow: hidden;
@@ -117,7 +119,6 @@
   margin: 3px 3px 3px 0;
   height: 24px;
   border-radius: 4px;
-  font-family: "Gotham 5r", sans-serif;
   line-height: 18px;
   padding: 0;
   border: 0;

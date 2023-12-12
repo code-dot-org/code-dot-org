@@ -3,22 +3,23 @@ dv:
   data:
     script:
       name:
-        events:
-          title: އިވެންޓުތައް
-          description: އިވެންޓުތައް
-          description_short: އިވެންޓުތައް
-          student_description: އިވެންޓުތައް
-        oceans:
-          title: އޭއައި ފޯރ އޯޝަންސް
-        coursed-2019:
-          lesson_groups:
-            csf_events:
-              display_name: އިވެންޓުތައް
-        coursec-2019:
-          lesson_groups:
-            csf_events:
-              display_name: އިވެންޓުތައް
         coursea-2019:
+          lesson_groups:
+            csf_events:
+              display_name: އިވެންޓުތައް
+        coursea-2020:
+          lesson_groups:
+            csf_events:
+              display_name: އިވެންޓުތައް
+        coursea-2021:
+          lesson_groups:
+            csf_events:
+              display_name: އިވެންޓުތައް
+        coursea-2022:
+          lesson_groups:
+            csf_events:
+              display_name: އިވެންޓުތައް
+        coursea-2023:
           lesson_groups:
             csf_events:
               display_name: އިވެންޓުތައް
@@ -26,7 +27,59 @@ dv:
           lesson_groups:
             csf_events:
               display_name: އިވެންޓުތައް
-        pre-express-2019:
+        courseb-2020:
+          lesson_groups:
+            csf_events:
+              display_name: އިވެންޓުތައް
+        courseb-2021:
+          lesson_groups:
+            csf_events:
+              display_name: އިވެންޓުތައް
+        courseb-2022:
+          lesson_groups:
+            csf_events:
+              display_name: އިވެންޓުތައް
+        courseb-2023:
+          lesson_groups:
+            csf_events:
+              display_name: އިވެންޓުތައް
+        coursec-2019:
+          lesson_groups:
+            csf_events:
+              display_name: އިވެންޓުތައް
+        coursec-2020:
+          lesson_groups:
+            csf_events:
+              display_name: އިވެންޓުތައް
+        coursec-2021:
+          lesson_groups:
+            csf_events:
+              display_name: އިވެންޓުތައް
+        coursec-2022:
+          lesson_groups:
+            csf_events:
+              display_name: އިވެންޓުތައް
+        coursec-2023:
+          lesson_groups:
+            csf_events:
+              display_name: އިވެންޓުތައް
+        coursed-2019:
+          lesson_groups:
+            csf_events:
+              display_name: އިވެންޓުތައް
+        coursed-2020:
+          lesson_groups:
+            csf_events:
+              display_name: އިވެންޓުތައް
+        coursed-2021:
+          lesson_groups:
+            csf_events:
+              display_name: އިވެންޓުތައް
+        coursed-2022:
+          lesson_groups:
+            csf_events:
+              display_name: އިވެންޓުތައް
+        coursed-2023:
           lesson_groups:
             csf_events:
               display_name: އިވެންޓުތައް
@@ -35,31 +88,38 @@ dv:
             csf_events:
               display_name: އިވެންޓުތައް
         dance-2019:
-          title: ޑާންސް ޕާޓީ 2019
           description_short: ފީޗަރކުރަނީ ކޭޓީ ޕެރީ، ޝޯން މެންޑޭސް، ޕެނިކް! އެޓް ދަ
             ޑިސްކޯ، ލިލް ނަސް އެކްސް، ޖޯނަސް ބްރަދަރސް، ނިކީ މިނާޖް އަދި 34 އިތުރު
             ފަރާތް!
-        time4cs-control-unit-1:
+          title: ޑާންސް ޕާޓީ 2019
+        events:
+          description: އިވެންޓުތައް
+          description_short: އިވެންޓުތައް
+          student_description: އިވެންޓުތައް
+          title: އިވެންޓުތައް
+        express-2021:
           lesson_groups:
-            csf_events:
+            lessonGroup-9:
               display_name: އިވެންޓުތައް
-        time4cs-experiment-unit-1:
+        express-2022:
           lesson_groups:
-            csf_events:
+            lessonGroup-9:
               display_name: އިވެންޓުތައް
-        coursea-2020:
+        express-2023:
           lesson_groups:
-            csf_events:
+            lessonGroup-9:
               display_name: އިވެންޓުތައް
-        courseb-2020:
+        nevada-standards-aligned-first-grade-2023:
           lesson_groups:
-            csf_events:
+            lessonGroup-6:
               display_name: އިވެންޓުތައް
-        coursec-2020:
+        nevada-standards-aligned-second-grade-2023:
           lesson_groups:
-            csf_events:
+            lessonGroup-5:
               display_name: އިވެންޓުތައް
-        coursed-2020:
+        oceans:
+          title: އޭއައި ފޯރ އޯޝަންސް
+        pre-express-2019:
           lesson_groups:
             csf_events:
               display_name: އިވެންޓުތައް
@@ -67,47 +127,7 @@ dv:
           lesson_groups:
             csf_events:
               display_name: އިވެންޓުތައް
-        coursea-2021:
-          lesson_groups:
-            csf_events:
-              display_name: އިވެންޓުތައް
-        courseb-2021:
-          lesson_groups:
-            csf_events:
-              display_name: އިވެންޓުތައް
-        coursec-2021:
-          lesson_groups:
-            csf_events:
-              display_name: އިވެންޓުތައް
-        coursed-2021:
-          lesson_groups:
-            csf_events:
-              display_name: އިވެންޓުތައް
-        express-2021:
-          lesson_groups:
-            lessonGroup-9:
-              display_name: އިވެންޓުތައް
         pre-express-2021:
-          lesson_groups:
-            csf_events:
-              display_name: އިވެންޓުތައް
-        coursea-2022:
-          lesson_groups:
-            csf_events:
-              display_name: އިވެންޓުތައް
-        express-2022:
-          lesson_groups:
-            lessonGroup-9:
-              display_name: އިވެންޓުތައް
-        courseb-2022:
-          lesson_groups:
-            csf_events:
-              display_name: އިވެންޓުތައް
-        coursec-2022:
-          lesson_groups:
-            csf_events:
-              display_name: އިވެންޓުތައް
-        coursed-2022:
           lesson_groups:
             csf_events:
               display_name: އިވެންޓުތައް
@@ -119,23 +139,11 @@ dv:
           lesson_groups:
             csf_events:
               display_name: އިވެންޓުތައް
-        express-2023:
-          lesson_groups:
-            lessonGroup-9:
-              display_name: އިވެންޓުތައް
-        coursea-2023:
+        time4cs-control-unit-1:
           lesson_groups:
             csf_events:
               display_name: އިވެންޓުތައް
-        courseb-2023:
-          lesson_groups:
-            csf_events:
-              display_name: އިވެންޓުތައް
-        coursec-2023:
-          lesson_groups:
-            csf_events:
-              display_name: އިވެންޓުތައް
-        coursed-2023:
+        time4cs-experiment-unit-1:
           lesson_groups:
             csf_events:
               display_name: އިވެންޓުތައް

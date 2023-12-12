@@ -1,32 +1,17 @@
-@use "color.scss";
+@use 'color.scss';
 
-.catalogFiltersContainer {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  max-width: 60em;
-  margin: 1em auto;
-
-  button {
-    margin: 0;
-  }
-}
-
-button.catalogClearFiltersButton {
-  font-size: 16px;
-  margin-left: auto;
-}
+$container-width: 309px;
 
 .catalogContentContainer {
   max-width: 60em;
-  margin: 1em auto;
+  margin: 0 auto 1em auto;
 }
 
 .catalogContentCards {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, $container-width);
   justify-content: center;
-  gap: 1em;
+  grid-gap: 1em;
 }
 
 .catalogContentNoResults {
@@ -51,4 +36,35 @@ button.catalogClearFiltersButton {
 
 .noResultsBody {
   margin: 1em;
+}
+
+.assignSuccessMessageContainer {
+  display: flex;
+  min-width: 250px;
+  background-color: color.$bootstrap_success_background;
+  text-align: center;
+  border-radius: 5px;
+  border-color: color.$bootstrap_success_border;
+  position: fixed;
+  z-index: 4;
+  top: 70px;
+
+  button {
+    max-height: 1.5em;
+    margin: 3px 6px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    font-size: 12px;
+  }
+}
+
+.assignSuccessMessage {
+  margin: 16px;
+  color: color.$bootstrap_success_text;
+}
+
+.assignSuccessMessageCenter {
+  display: flex;
+  justify-content: center;
 }

@@ -1,12 +1,13 @@
 import React from 'react';
 import sinon from 'sinon';
-import {shallow} from 'enzyme';
+import {mount} from 'enzyme';
 
 import {expect} from '../../../util/reconfiguredChai';
 
 import {UnconnectedDownloadReplayVideoButton as DownloadReplayVideoButton} from '@cdo/apps/code-studio/components/DownloadReplayVideoButton';
 
-describe('DownloadReplayVideoButton', () => {
+// temporarily skipped because this button is disabled. Re-enable the test if we re-enable the button.
+describe.skip('DownloadReplayVideoButton', () => {
   let wrapper;
 
   let checkVideoSpy;
@@ -28,7 +29,7 @@ describe('DownloadReplayVideoButton', () => {
   });
 
   beforeEach(function () {
-    wrapper = shallow(
+    wrapper = mount(
       <DownloadReplayVideoButton channelId="test" appType="dance" />
     );
 
@@ -42,6 +43,7 @@ describe('DownloadReplayVideoButton', () => {
   });
 
   afterEach(function () {
+    wrapper.unmount();
     checkVideoSpy.restore();
     checkVideoUntilSuccessSpy.restore();
     fetchSpy.restore();
@@ -73,7 +75,7 @@ describe('DownloadReplayVideoButton', () => {
 
     expect(wrapper.instance().buttonEnabled()).to.equal(true);
     expect(wrapper.find('button').props()).to.have.property('disabled', false);
-    expect(wrapper.find('i').hasClass('fa-download')).to.equal(true);
+    expect(wrapper.find('i').hasClass('fa-spinner')).to.equal(true);
   });
 
   it('begins checking for video immediately', () => {

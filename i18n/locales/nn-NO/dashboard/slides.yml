@@ -970,8 +970,6 @@ nn:
       3:
         text: "Vi bruker kjente sanger, inkludert Old Macdonald, for å snakke om hvordan et refreng kalles om og om igjen. Og hvordan noen ganger et refreng kan endre seg. Når du har en sang som Old Macdonald, der ordene endres, er et flott sted å introdusere ideen om parametere. Send forskjellige ord gjennom funksjonen slik at du kan se hvordan refrenget endres. Når alle skjønner det, kan du ta andre kjente sanger og bryte dem opp selv. Se om dere kan finne det ut sammen."
     unplug9:
-      1:
-      2:
       3:
         text: "Dette er en flott introduksjon til feilsøking, korrekturlesning av ditt eget og andres arbeid er en god øvelse. Du vil raskt forstå hvor viktig det er at du er forsiktig med hvordan du koder når mange andre er avhengig av deg."
     unplug10:
@@ -984,7 +982,6 @@ nn:
     unplug11:
       1:
         text: "Nå er tiden inne for å ta et steg tilbake og få en god oversikt over de siste nitten leksjonene vi har vært gjennom. Dette er et ypperlig tidspunkt å gi elevene et friminutt om det er mulig, det de nettopp har vært gjennom er en stor prestasjon. De har lært mer om informatikk gjennom disse leksjonene enn de fleste voksne har fått med seg gjennom hele sitt liv."
-      2:
       3:
         text: "Fra alle oss her ved Code.org, vi håper du har hatt MASSEVIS av moro i løpet av dette kurset. Om du drømmer om å lage den beste nye appen, bruke programmering til å kurere sykdommer eller du bare ønsker å være en fremragende problemløser - dette kurset var det første trinnet for å oppnå de drømmene."
     starwars_intro:
@@ -1287,19 +1284,8 @@ nn:
       2:
         text: "Når du er ferdig med å lage spelet ditt, velg deling for å få ei lenke som du kan dele med venene dine eller for å spele spelet ditt på telefonen. Ha det gøy! Eg gler meg til å spele din versjon av Minecraft."
     mc_2017_agent_intro:
-      1:
-      2:
-      3:
-      4:
-      5:
-      6:
-      7:
-      8:
-      9:
-      10:
       11:
         text: "Dersom du gløymer kva du skal gjere, finst instruksjonane for kvart nivå øvst på sida."
-      12:
     csd_concept_binary_data:
       1:
         text: "Hei! Jeg heter Limor Fried og jobber som ingeniør her hos Adafruit Industries. Her konstruerer jeg elektronikk for bruk i både teknologi og musikk og moteklær."
@@ -1375,24 +1361,6 @@ nn:
     csd_concept_memory_cpu_input_output:
       1:
         image: 'notes/csd_concept_memory_cpu_input_output_1.png'
-      2:
-      3:
-      4:
-      5:
-      6:
-      7:
-      8:
-      9:
-      10:
-      11:
-      12:
     hoc_dance_events_2019:
-      1:
-      2:
-      3:
       4:
         text: "Døme på hendingar er å vente på eit museklikk, ein piltast eller trykk på skjermen."
-      5:
-      6:
-      7:
-      8:

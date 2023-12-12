@@ -706,6 +706,14 @@ ms:
         csa_sorting_algorithms: 'CSA: Menyusun algoritma'
         star_quilts_intro_to_artist: 'Star Quilts: Pengenalan kepada Artis'
         upload_sprites_backgrounds: Memuat naik Sprite Custom dan Latar Belakang
+        PL_CSD_EquityBlindSpotsvid: Berat sebelah & Tanggungjawab
+        how-ai-works-llms-full: Cara Chatbots dan Model Bahasa Terkemuka Berfungsi
+        how-ai-works-creativity-full: Adakah AI Mempunyai Kreativiti dan Imaginasi?
+        how-ai-works-llms-part1: Chatbots dan Model Bahasa Terkemuka Bahagian 1
+        how-ai-works-llms-part2: Chatbots dan Model Bahasa Terkemuka Bahagian 2
+        what-is-creativity: Apakah Kreativiti?
+        code-break: Ikuti Pelajaran Memecah Kod
+        csd_ml_how_ai_works: Cara AI Berfungsi
     callout:
       text:
         drag_blocks: Seret blok “bergerak” dan snap di bawah blok lain

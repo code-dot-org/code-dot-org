@@ -4,6 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "45b14035-d069-49b6-9240-021f81c39e53",
+          "notice": "Free Teacher Resources from Amazon Future Engineer",
+          "details": "Code.org has partnered with Amazon Future Engineer to offer teachers at underserved schools a growing number of resources and benefits at no cost! ",
+          "link": "code.org/afe",
+          "type": "bullhorn",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Get free resources"
+        }
+      ],
       "curriculum_umbrella": "CSD",
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -18,7 +30,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-17 16:42:55 UTC",
+    "serialized_at": "2023-11-20 21:03:53 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1733,7 +1745,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Reducing Printed Materials**\r\n\r\nThe User Profiles are used for reference only.  Students can look at digital versions during this activity.  Assign each student a link, rather than handing out the actual profiles.\r\n\r\nIf you choose to print out the user profiles, they can be reused, as long as the students are told not to write on them.\r\n\r\n"
+            "markdown": "**Reducing Printed Materials:** The User Profiles are used for reference only. Students can look at digital versions during this activity. Assign each student a link, rather than handing out the actual profiles.\n\n**Generating Alternative Profiles:** These profiles are provided as a baseline, but you may decide to augment these profiles or generate entirely new ones to better suit your classroom. You could even consider using a generative AI tool like ChatGPT or Bard to re-imagine these profiles from another perspective - [click here to see an example from our Teacher Forum](https://forum.code.org/t/lesson-2-alternate-user-profiles-for-teaching-empathy/38454) of a teacher who used ChatGPT to re-imagine these profiles as teenagers.\n\nFor more information on using generative AI as a teaching aide, consider reviewing our [AI 101 Professional Learning Series](https://code.org/ai/pl/101)\n"
           }
         ]
       },
@@ -7390,6 +7402,18 @@
       }
     },
     {
+      "name": "Events in App Lab",
+      "url": "https://docs.google.com/presentation/d/1jYIPe_TXe63sjGUzED8sUyzWXWGJHrA-GQzXe7_tmHU/view",
+      "key": "events_in_app_lab_2",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "events_in_app_lab_2"
+      }
+    },
+    {
       "name": "Example Apps for Good",
       "url": "https://docs.google.com/document/d/1kCuDUhTJb7Vcrv_pzvA4yL79WyZn_7PorV-F-gTxBuk/edit",
       "key": "example_apps_for_good",
@@ -8429,6 +8453,12 @@
       "seeding_key": {
         "lesson.key": "Events in App Lab",
         "resource.key": "events_in_app_lab_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in App Lab",
+        "resource.key": "events_in_app_lab_2"
       }
     },
     {
@@ -10156,6 +10186,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

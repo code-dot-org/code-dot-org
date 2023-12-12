@@ -28,8 +28,15 @@ const CheckboxDropdown = ({
     handleClearAll(name);
   }, [name, handleClearAll]);
 
+  // Collapse dropdown if 'Escape' is pressed
+  const onKeyDown = e => {
+    if (e.keyCode === 27) {
+      e.currentTarget.classList.remove('open');
+    }
+  };
+
   return (
-    <div id={`${name}-dropdown`} className="dropdown">
+    <div id={`${name}-dropdown`} className="dropdown" onKeyDown={onKeyDown}>
       <button
         id={`${name}-dropdown-button`}
         type="button"
@@ -45,7 +52,7 @@ const CheckboxDropdown = ({
             title={i18n.filterCheckIconTitle({filter_label: label})}
           />
         )}
-        <Typography semanticTag="span" visualAppearance="body-one">
+        <Typography semanticTag="span" visualAppearance="body-two">
           {label}
         </Typography>
         <FontAwesome id={'chevron-down-icon'} icon={'chevron-down'} />
@@ -65,27 +72,27 @@ const CheckboxDropdown = ({
               />
             </li>
           ))}
-          <div className={style.bottomButtonsContainer}>
-            <Button
-              id="select-all"
-              className={style.affectAllButton}
-              type="button"
-              text={i18n.selectAll()}
-              onClick={onSelectAll}
-              styleAsText
-              color={Button.ButtonColor.brandSecondaryDefault}
-            />
-            <Button
-              id="clear-all"
-              className={style.affectAllButton}
-              type="button"
-              text={i18n.clearAll()}
-              onClick={onClearAll}
-              styleAsText
-              color={Button.ButtonColor.brandSecondaryDefault}
-            />
-          </div>
         </ul>
+        <div className={style.bottomButtonsContainer}>
+          <Button
+            id="select-all"
+            className={style.affectAllButton}
+            type="button"
+            text={i18n.selectAll()}
+            onClick={onSelectAll}
+            styleAsText
+            color={Button.ButtonColor.brandSecondaryDefault}
+          />
+          <Button
+            id="clear-all"
+            className={style.affectAllButton}
+            type="button"
+            text={i18n.clearAll()}
+            onClick={onClearAll}
+            styleAsText
+            color={Button.ButtonColor.brandSecondaryDefault}
+          />
+        </div>
       </form>
     </div>
   );

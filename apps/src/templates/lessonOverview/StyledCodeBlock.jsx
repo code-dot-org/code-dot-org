@@ -1,5 +1,3 @@
-// TODO: define prop types for this file.
-/* eslint-disable react/prop-types */
 import PropTypes from 'prop-types';
 import React from 'react';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -39,5 +37,7 @@ StyledCodeBlock.propTypes = {
     syntax: PropTypes.string.isRequired,
     link: PropTypes.string,
     parameters: PropTypes.array,
+    name: PropTypes.string,
+    blockName: PropTypes.string,
   }).isRequired,
 };

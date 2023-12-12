@@ -1,3 +1,4 @@
+require 'active_support'
 require 'active_support/cache'
 require 'active_support/core_ext/object/blank'
 require 'honeybadger/ruby'
@@ -34,9 +35,7 @@ module Cdo
     # Generic shared cache.
     # Use memcached if available, with FileStore as fallback.
     def self.cache
-      @@cache ||= begin
-        memcached || ActiveSupport::Cache::FileStore.new(dashboard_dir('tmp', 'cache', 'shared'))
-      end
+      @@cache ||= (memcached || ActiveSupport::Cache::FileStore.new(dashboard_dir('tmp', 'cache', 'shared')))
     end
   end
 end

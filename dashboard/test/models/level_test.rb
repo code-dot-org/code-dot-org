@@ -21,7 +21,7 @@ class LevelTest < ActiveSupport::TestCase
   # TYPES_WITH_IDEAL_LEVEL_SOURCE.include or TYPES_WITHOUT_IDEAL_LEVEL_SOURCE.include.
   def raise_unless_specifies_ideal_level_source(level_class)
     unless (Level::TYPES_WITH_IDEAL_LEVEL_SOURCE.include? level_class.to_s) ||
-      (Level::TYPES_WITHOUT_IDEAL_LEVEL_SOURCE.include? level_class.to_s)
+        (Level::TYPES_WITHOUT_IDEAL_LEVEL_SOURCE.include? level_class.to_s)
       raise "#{level_class} does not specify if it has ideal level sources"
     end
     level_class.descendants.each do |descendant|
@@ -75,8 +75,8 @@ class LevelTest < ActiveSupport::TestCase
   test "cannot create two custom levels with same name" do
     assert_does_not_create(Level) do
       level2 = Level.create(@custom_maze_data)
-      assert_not level2.valid?
-      assert level2.errors.include?(:name)
+      refute level2.valid?
+      assert_includes(level2.errors, :name)
     end
   end
 
@@ -84,8 +84,8 @@ class LevelTest < ActiveSupport::TestCase
     assert_does_not_create(Level) do
       name_upcase = @custom_maze_data[:name].upcase
       level2 = Level.create(@custom_maze_data.merge(name: name_upcase))
-      assert_not level2.valid?
-      assert level2.errors.include?(:name)
+      refute level2.valid?
+      assert_includes(level2.errors, :name)
     end
   end
 
@@ -100,8 +100,8 @@ class LevelTest < ActiveSupport::TestCase
   test "reject bad chars in custom level name" do
     assert_does_not_create(Level) do
       level = Level.create(@custom_maze_data.merge(name: 'bad <chars>'))
-      assert_not level.valid?
-      assert level.errors.include?(:name)
+      refute level.valid?
+      assert_includes(level.errors, :name)
     end
   end
 
@@ -153,7 +153,7 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal(summary[:type], 'Maze')
     assert_equal(summary[:name], 'test_level')
     assert_equal(summary[:owner], 'Best Curriculum Writer')
-    assert(summary[:updated_at].include?("03/27/20 at")) # The time is different locally than on drone
+    assert_includes(summary[:updated_at], "03/27/20 at") # The time is different locally than on drone
     assert_equal(summary[:url], "/levels/#{level.id}/edit")
   end
 
@@ -280,7 +280,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'update custom level from file' do
-    LevelLoader.import_levels 'config/scripts/levels/K-1 Bee 2.level'
+    LevelLoader.import_levels 'config/levels/custom/maze/K-1 Bee 2.level'
     level = Level.find_by_name('K-1 Bee 2')
     assert_equal 'bee', level.skin
     assert_equal '[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,1,0,-1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]',
@@ -290,7 +290,7 @@ class LevelTest < ActiveSupport::TestCase
   test 'creating custom level from file sets level_concept_difficulty' do
     Level.find_by_name('K-1 Bee 2')&.destroy
     assert_nil Level.find_by_name('K-1 Bee 2')
-    LevelLoader.import_levels 'config/scripts/levels/K-1 Bee 2.level'
+    LevelLoader.import_levels 'config/levels/custom/maze/K-1 Bee 2.level'
     level = Level.find_by_name('K-1 Bee 2')
     refute_nil level
 
@@ -403,7 +403,7 @@ class LevelTest < ActiveSupport::TestCase
     level_xml = n.to_xml
 
     # Import level XML
-    LevelLoader.load_custom_level_xml level_xml, level
+    Services::LevelFiles.load_custom_level_xml(level_xml, level)
 
     assert_nil level.embed
   end
@@ -587,10 +587,10 @@ class LevelTest < ActiveSupport::TestCase
 
     levels = Level.where_we_want_to_calculate_ideal_level_source
 
-    refute levels.include?(match_level)
-    refute levels.include?(level_with_ideal_level_source_already)
-    refute levels.include?(freeplay_artist)
-    assert levels.include?(regular_artist)
+    refute_includes(levels, match_level)
+    refute_includes(levels, level_with_ideal_level_source_already)
+    refute_includes(levels, freeplay_artist)
+    assert_includes(levels, regular_artist)
   end
 
   test 'calculate_ideal_level_source_id does nothing if no level sources' do
@@ -625,7 +625,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'localizes callouts' do
-    test_locale = :"te-ST"
+    test_locale = :'te-ST'
     level_name = 'test_localize_callouts'
 
     I18n.locale = test_locale
@@ -660,7 +660,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'handles bad callout localization data' do
-    test_locale = :"te-ST"
+    test_locale = :'te-ST'
     level_name = 'test_localize_callouts'
     I18n.locale = test_locale
 
@@ -695,8 +695,7 @@ class LevelTest < ActiveSupport::TestCase
 
     custom_i18n = {
       'data' => {
-        'callouts' => {
-        }
+        'callouts' => {}
       }
     }
 
@@ -709,7 +708,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'localizes rubric properties' do
-    test_locale = :"te-ST"
+    test_locale = :'te-ST'
     level_name = 'test_localize_callouts'
 
     I18n.locale = test_locale
@@ -748,7 +747,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'handles rubric properties localization with non-existent translations' do
-    test_locale = :"te-ST"
+    test_locale = :'te-ST'
     level_name = 'test_localize_callouts'
 
     I18n.locale = test_locale
@@ -1242,7 +1241,7 @@ class LevelTest < ActiveSupport::TestCase
   test "get search options" do
     search_options = Level.search_options
     assert_equal search_options[:levelOptions].map {|option| option[0]}, [
-      "All types", "Ailab", "Applab", "Artist", "Blockly", "Bounce", "BubbleChoice", "Calc", "ContractMatch",
+      "All types", "Aichat", "Ailab", "Applab", "Artist", "Blockly", "Bounce", "BubbleChoice", "Calc", "ContractMatch",
       "Craft", "CurriculumReference", "Dancelab", "Eval", "EvaluationMulti", "External",
       "ExternalLink", "Fish", "Flappy", "FreeResponse", "FrequencyAnalysis", "Gamelab",
       "GamelabJr", "Javalab", "Karel", "LevelGroup", "Map", "Match", "Maze", "Multi", "Music", "NetSim",
@@ -1328,7 +1327,7 @@ class LevelTest < ActiveSupport::TestCase
     contained_level = create :multi
     level_with_contained = create :level, contained_level_names: [contained_level.name]
 
-    assert_not level_with_contained.can_have_feedback_review_state?
+    refute level_with_contained.can_have_feedback_review_state?
   end
 
   test 'next_unused_name_for_copy finds next available level name' do
@@ -1353,7 +1352,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'localized_teacher_markdown reads from top-level locale' do
-    test_locale = :"te-ST"
+    test_locale = :'te-ST'
     level_name = 'test_localize_teacher_markdown'
 
     custom_i18n = {
@@ -1383,7 +1382,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'localized_teacher_markdown reads from dsl locale for DSL-based levels' do
-    test_locale = :"te-ST"
+    test_locale = :'te-ST'
     level_name = 'test_dsl_localize_teacher_markdown'
 
     custom_i18n = {

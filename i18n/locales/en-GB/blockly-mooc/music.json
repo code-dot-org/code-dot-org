@@ -9,5 +9,6 @@
   "blockly_toolboxCategoryVariables": "Variables",
   "share": "Share",
   "startOver": "Start Over",
-  "panelHeaderWorkspace": "Workspace: "
+  "panelHeaderWorkspace": "Workspace: ",
+  "continue": "Continue"
 }

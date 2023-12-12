@@ -44,7 +44,7 @@ module Services
 
       keys = result.named_captures
       course_version = CourseVersion.joins(:course_offering).
-        find_by(key: keys["CourseVersion"], "course_offerings.key": keys["CourseOffering"])
+        find_by(key: keys["CourseVersion"], 'course_offerings.key': keys["CourseOffering"])
       return Vocabulary.find_by(key: keys["Vocabulary"], course_version: course_version)
     end
 
@@ -76,7 +76,7 @@ module Services
 
       keys = result.named_captures
       course_version = CourseVersion.joins(:course_offering).
-        find_by(key: keys["CourseVersion"], "course_offerings.key": keys["CourseOffering"])
+        find_by(key: keys["CourseVersion"], 'course_offerings.key': keys["CourseOffering"])
       return Resource.find_by(key: keys["Resource"], course_version: course_version)
     end
 

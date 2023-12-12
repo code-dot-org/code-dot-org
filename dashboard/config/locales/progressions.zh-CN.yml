@@ -56,6 +56,7 @@ zh-CN:
       Assessment: 测验
       Attribution: 属性
       Back and Forth: 不断重复
+      Balance an Ecosystem: 平衡生态系统
       Basic Conditionals: 基础条件
       Bass, Mid, and Treble: 低音、中音和高音
       Be a Super Digital Citizen: 做一个超级数字公民
@@ -104,7 +105,9 @@ zh-CN:
       Change: 更改
       Changing Screens: 更改屏幕
       Changing Sensor Scale: 改变传感器的级别
+      Check For Understanding: 理解检查
       Check Your Work: 检查你的工作
+      Check for Understanding: 理解检查
       Check-In Survey: 签入调查
       Checking for a Winner: 检查赢家
       'Choice Levels: Customize Your App': 选择级别：自定义你的App
@@ -164,7 +167,7 @@ zh-CN:
       'Demo App: Interactive Card': 演示应用：互动卡片
       Demo Apps: '演示App
 
-'
+        '
       Design Mode: 设计模式
       Design Mode Elements: 设计模式元素
       Design Your Game: 设计你的游戏
@@ -181,6 +184,8 @@ zh-CN:
       Drawing: 绘画
       Drawing Shapes: 绘制形状
       Driver Alert System: 司机报警系统
+      Ecosystems Simulation: 生态系统模拟
+      Ecosystems Video: 生态系统视频
       Editing Images: 编辑图像
       Emotion Machine Example: 情绪机器示例
       End of Course Projects: 结课项目
@@ -227,6 +232,7 @@ zh-CN:
       Follow the Algorithm - Unplugged Activity: 遵循算法 - 离线活动
       Follow the Mouse: 跟随老鼠
       Fonts and Style: 字体和风格
+      Food Chain Setup: 食物链设置
       FoodFight: FoodFight
       For Loop Fun - Unplugged Activity: 快乐For循环 - 离线活动
       For Loops: 计数循环
@@ -259,6 +265,7 @@ zh-CN:
       Ice Age Loops: 冰河世纪循环
       If Statements: If 语句
       If-Else Statements: If-else 语句
+      If... then... Conditional Statements: 如果……那么……条件语句
       Images and Sounds: 图像和声音
       Images in HTML: HTML 中的图像
       Import Your Model: 导入你的模型
@@ -275,6 +282,7 @@ zh-CN:
       InspirationalArtwork: InspirationalArtwork
       Interactive Art: 互动艺术
       Interactive Card: 互动卡
+      Intro Video: 简介视频
       Intro to Design Mode: 设计模式简介
       Intro to Flyer Game: 飞行者游戏简介
       Intro to For Loops: For循环介绍
@@ -282,6 +290,7 @@ zh-CN:
       Intro to Sprites: 精灵介绍
       Intro to Variables: 变量简介
       Introducing Sprite Lab: 向你介绍精灵图实验室
+      Introduction: 介绍
       Introduction to Arrays: 数组的简介
       Introduction to Game Lab: 游戏实验室简介
       Introduction to Variables: 变量简介
@@ -458,7 +467,7 @@ zh-CN:
       Sample Web Page: 示例网页
       Sample Website: '示例网站
 
-'
+        '
       Scoring & Scoreboard: 得分和记分板
       Screen Design: 画面设计
       Sensor Events: 感应事件
@@ -469,8 +478,10 @@ zh-CN:
       Setup: 设置
       Shapes and Parameters: 形状和参数
       Shapes and the Draw Loop: 图形和绘画循环
+      Share Out: 分发
       Share Your App: 分享你的应用
       Share Your Pages: 分享你的页面
+      Share Your Simulation: 分享你的模拟
       Share Your Stylesheets: 分享你的样式表
       Shoe Recommendation Survey: 鞋推荐调查
       Shoe Recommender: 鞋推荐器
@@ -481,6 +492,8 @@ zh-CN:
       Sliders: 滑块
       Smart Bike - Blinkers: 智能单车 - 闪光警戒灯
       Social Sleuth: 社交侦探
+      Solution 2 - Fishing Season: 解决方案2 - 捕鱼季节
+      Solution 3 - Fishing Limits: 解决方案3 - 捕鱼限制
       Songwriting - Functions Unplugged Activity: 词曲创作 - 离线活动
       Speed it Up, Slow it Down: 加速、减速
       Sprite Interactions: 精灵图互动
@@ -510,6 +523,7 @@ zh-CN:
       The Collector: 数据采集器
       The Counter Pattern: 计数器模式
       The Draw Loop: 绘制循环
+      The Food Chain: 食物链
       The Harvester: 收获者
       The Internet - Unplugged Activity: 互联网 - 离线活动
       The Power of Words - Unplugged Activity: 语言的力量 - 离线活动
@@ -522,6 +536,7 @@ zh-CN:
       UI Element Properties: 交互界面元素属性
       Ultimate Shoe Recommender: 终极鞋推荐器
       Unit 5 Lesson 1 Overview: 第五单元第一课概览
+      Unplugged Activity: 线下的活动
       Updating Your Prototype: 更新您的原型
       Upload Your Images: 上传你的图像
       User Interface: 用户界面

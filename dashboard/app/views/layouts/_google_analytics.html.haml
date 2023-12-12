@@ -1,0 +1,20 @@
+-# The following dimensions must match in order the custom dimension settings in our Google Analytics account.
+- selected_language_dim, age_dim, gender_dim, user_type_dim, env_dim, pixel_ratio, has_teacher = (1..7).map{|x|"dimension#{x}"}
+- dimensions = {}
+- dimensions[selected_language_dim] = language if (accepted_languages.present? && accepted_languages.first != language)
+- dimensions[env_dim] = Rails.env
+- if user_signed_in?
+  - dimensions[age_dim] = current_user.age.to_s
+  - dimensions[gender_dim] = current_user.gender
+  - dimensions[user_type_dim] = current_user.user_type
+  - dimensions[has_teacher] = current_user.teachers.any? ? '1' : '0'
+
+:javascript
+  window.userAnalyticsDimensions = #{dimensions.to_json};
+  if ('devicePixelRatio' in window) {
+    window.userAnalyticsDimensions["#{pixel_ratio}"] = window.devicePixelRatio.toString();
+  }
+
+%script{src: webpack_asset_path("js/code.org/views/theme_google_analytics.js")}
+// Initialize Google Optimize (https://support.google.com/optimize/answer/9692472)
+%script{src: "https://www.googleoptimize.com/optimize.js?id=OPT-KBX3C3L"}

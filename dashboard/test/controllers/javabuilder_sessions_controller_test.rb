@@ -77,9 +77,9 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     decoded_token = JWT.decode(token, @rsa_key_test.public_key, true, {algorithm: 'RS256'})
 
     # decoded_token[0] is the JWT payload. Spot check some params
-    assert_not_nil decoded_token[0]['iat']
-    assert_not_nil decoded_token[0]['exp']
-    assert_not_nil decoded_token[0]['uid']
+    refute_nil decoded_token[0]['iat']
+    refute_nil decoded_token[0]['exp']
+    refute_nil decoded_token[0]['uid']
   end
 
   test 'sends options as stringified json' do
@@ -228,7 +228,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     teachers_string = decoded_token[0]['verified_teachers']
     teachers = teachers_string.split(',')
     assert_equal 1, teachers.length
-    assert teachers.include?((verified_teacher_1.id).to_s)
+    assert_includes(teachers, (verified_teacher_1.id).to_s)
     # verified teacher 2 is not teaching the student csa
     refute teachers.include?((verified_teacher_2.id).to_s)
     refute teachers.include?((regular_teacher.id).to_s)

@@ -59,5 +59,6 @@
   "startOver": "Recommencer",
   "upload": "Charger",
   "panelHeaderInstructions": "Consignes",
-  "panelHeaderWorkspace": "Espace de travail "
+  "panelHeaderWorkspace": "Espace de travail ",
+  "continue": "Continuer"
 }

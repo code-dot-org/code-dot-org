@@ -1,18 +1,18 @@
 ---
-title: Hour of Code How-to Guide for After-school
+title: Hour of Code Veiledning for etterskoletid
 ---
 
 {{ signup_button }}
 
 # Hvordan undervise i Kodetimen på AKS/SFO og på fritidsklubber
 
-### Join the movement and introduce your students to computer science with these steps.
+### Bli med i bevegelsen og introduser studentene dine for informatikk med disse trinnene.
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+Beregningstenkning hjelper til med å pleie problemløsende ferdigheter, logikk og kreativitet. Og teknologi transformerer alle bransjer på planeten. Studenter i dag bør lære å lage teknologi, ikke bare bruke den. Ved å starte tidlig, vil de ha et grunnlag for suksess i enhver karrierevei fra det 21. århundre.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. Hvis du trenger litt hjelp, kan du ta kontakt med en [lokal frivillig]({{ urls/volunteer_local }}) som kan hjelpe til med å organisere Kodetimen for klassen din.
+Å prøve en Hour of Code er en enkel og morsom måte å introdusere studentene til informatikk, kanskje for aller første gang. Hvis du trenger litt hjelp, kan du ta kontakt med en [lokal frivillig]({{ urls/volunteer_local }}) som kan hjelpe til med å organisere Kodetimen for klassen din.
 
-### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+### En Hour of Code kan også hostes eksternt! For å komme i gang, sjekk ut [tipsene våre for å være vert for et virtuelt Hour of Code-arrangement](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
@@ -73,7 +73,7 @@ Kodetimen kan åpnes med med å diskutere hvordan informasjonsteknologi påvirke
 
 - [Skriv ut diplomer]({{ urls/certificates }}) fo dine deltakere.
 - [Skriv ut "Jeg fullførte en Kodetime]({{ promote/resources_stickers }}) klistremerker for dine deltakere.
-- [Bestill t-skjorter](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for deltakere.
+- [Bestill tilpassede t-skjorter](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) til deltakerne.
 - Del bilder og videoer av Kodetimen-arrangement på sosiale medier. Bruk emneknaggene #kodetimen, #HourOfCode og @codeorg så vi også kan dra nytte av dine erfaringer. Husk å spørre barna om tillatelse til å dele bilder der de er med!
 
 ## Flere Kodetimen-ressurser for lærere

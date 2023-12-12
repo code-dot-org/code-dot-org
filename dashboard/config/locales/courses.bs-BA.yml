@@ -3,46 +3,46 @@ bs:
   data:
     course:
       name:
-        csp-2017:
-          assignment_family_title: Principi računarske nauke
-          title: Principi računarske nauke
-          description_short: Naučiti temeljne koncepte računarstva.
         csd-2017:
           assignment_family_title: Otkrića računarske nauke
-          title: Otkrića računarske nauke
           description_short: Uvod u kurs računarske nauke koji osposobljava studente
             za stvaranje autentičnih rukotvorina.
+          title: Otkrića računarske nauke
         csd-2018:
           assignment_family_title: Otkrića računarske nauke
           description_short: Uvod u kurs računarske nauke koji osposobljava studente
             za stvaranje autentičnih rukotvorina.
+        csd-2019:
+          description_short: Uvod u kurs računarske nauke koji osposobljava studente
+            za stvaranje autentičnih rukotvorina.
+        csd-2020:
+          description_short: Uvod u kurs računarske nauke koji osposobljava studente
+            za stvaranje autentičnih rukotvorina.
+        csd-2023:
+          title: Otkrića računarske nauke
+        csp-2017:
+          assignment_family_title: Principi računarske nauke
+          description_short: Naučiti temeljne koncepte računarstva.
+          title: Principi računarske nauke
         csp-2018:
           assignment_family_title: Principi računarske nauke
           description_short: Naučiti temeljne koncepte računarstva.
         csp-2019:
           description_short: Naučiti temeljne koncepte računarstva.
-        csd-2019:
-          description_short: Uvod u kurs računarske nauke koji osposobljava studente
-            za stvaranje autentičnih rukotvorina.
         csp-2020:
           description_short: Naučiti temeljne koncepte računarstva.
-        csd-2020:
-          description_short: Uvod u kurs računarske nauke koji osposobljava studente
-            za stvaranje autentičnih rukotvorina.
         csp-2021:
           description_short: Naučiti temeljne koncepte računarstva.
         csp-2022:
           description_short: Naučiti temeljne koncepte računarstva.
         csp-2023:
           description_short: Naučiti temeljne koncepte računarstva.
-        csd-2023:
-          title: Otkrića računarske nauke
     resources:
-      curriculum/csd/2020:
-        name: Nastavni plan
       curriculum/csd/2017:
+        name: Nastavni plan
+      curriculum/csd/2018:
         name: Nastavni plan
       curriculum/csd/2019:
         name: Nastavni plan
-      curriculum/csd/2018:
+      curriculum/csd/2020:
         name: Nastavni plan

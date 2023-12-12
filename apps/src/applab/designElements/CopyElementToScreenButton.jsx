@@ -1,4 +1,5 @@
 import React from 'react';
+import applabMsg from '@cdo/applab/locale';
 import commonStyles from '../../commonStyles';
 import PropTypes from 'prop-types';
 import PopUpMenu from '../../lib/ui/PopUpMenu';
@@ -91,7 +92,8 @@ class CopyElementToScreenButton extends React.Component {
           className={style.copyElementToScreenButton}
           onClick={this.handleDropdownClick}
         >
-          Copy to screen <i className="fa fa-chevron-down" />
+          {applabMsg.designWorkspace_copyToScreenButton()}
+          <i className="fa fa-chevron-down" />
         </button>
         {this.state.opened && (
           <PopUpMenu

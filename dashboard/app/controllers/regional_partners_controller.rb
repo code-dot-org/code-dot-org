@@ -54,9 +54,12 @@ class RegionalPartnersController < ApplicationController
   # PATCH /regional_partners/:id
   def update
     update_params = regional_partner_params.to_h
-    %w(csd csp).each do |course|
-      %w(facilitator).each do |role|
-        %w(open close).each do |state|
+    courses = %w(csd csp)
+    roles = %w(facilitator)
+    states = %w(open close)
+    courses.each do |course|
+      roles.each do |role|
+        states.each do |state|
           key = "apps_#{state}_date_#{course}_#{role}".to_sym
           # Do a date validation.  An exception will result if invalid.
           Date.parse(regional_partner_params[key]) if regional_partner_params[key].presence

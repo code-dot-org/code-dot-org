@@ -17,8 +17,9 @@
   "control": "제어",
   "feedback": "피드백",
   "share": "공유하기",
-  "startOver": "다시 시작하기",
+  "startOver": "다시 시작",
   "upload": "업로드",
-  "panelHeaderInstructions": "소개",
-  "panelHeaderWorkspace": "작업 공간"
+  "panelHeaderInstructions": "안내",
+  "panelHeaderWorkspace": "작업 공간",
+  "continue": "계속"
 }

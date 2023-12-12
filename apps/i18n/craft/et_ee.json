@@ -1,9 +1,9 @@
 {
   "absolute": "absoluutväärtus",
+  "agentDiamondPathCongrats": "Palju õnne, olete leidnud raja teemantini Oled kogunud  {count, plural, one {1 teemanti} other {# teemanti}} ! ",
   "agentGenericFailureMessage": "Jätka koodi kirjutamist! Ärge unustage kasutada Agendi abi.",
   "agentTooFewBlocksFailureMessage": "Proovige lisada ainult üks plokk korrada, et viia tegelene õigesse kohta.",
   "at": "seal",
-  "agentDiamondPathCongrats": "Palju õnne, olete leidnud raja teemantini Oled kogunud  {count, plural, one {1 teemanti} other {# teemanti}} ! ",
   "blockActionAdd": "lisa",
   "blockActionAttack": "rünnak",
   "blockActionClone": "klooni plokke",

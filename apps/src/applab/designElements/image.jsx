@@ -2,6 +2,7 @@ import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 import objectFitImages from 'object-fit-images';
+import applabMsg from '@cdo/applab/locale';
 import PropertyRow from './PropertyRow';
 import ColorPickerPropertyRow from './ColorPickerPropertyRow';
 import BooleanPropertyRow from './BooleanPropertyRow';
@@ -37,7 +38,7 @@ class ImageProperties extends React.Component {
     if (ICON_PREFIX_REGEX.test(canonicalImage)) {
       iconColorPicker = (
         <ColorPickerPropertyRow
-          desc={'icon color'}
+          desc={applabMsg.designElementProperty_iconColor()}
           initialValue={element.getAttribute('data-icon-color') || '#000000'}
           handleChange={this.handleIconColorChange}
         />
@@ -47,37 +48,37 @@ class ImageProperties extends React.Component {
     return (
       <div id="propertyRowContainer">
         <PropertyRow
-          desc={'id'}
+          desc={applabMsg.designElementProperty_id()}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow
         />
         <PropertyRow
-          desc={'width (px)'}
+          desc={applabMsg.designElementProperty_widthPx()}
           isNumber
           initialValue={parseInt(element.style.width, 10)}
           handleChange={this.props.handleChange.bind(this, 'style-width')}
         />
         <PropertyRow
-          desc={'height (px)'}
+          desc={applabMsg.designElementProperty_heightPx()}
           isNumber
           initialValue={parseInt(element.style.height, 10)}
           handleChange={this.props.handleChange.bind(this, 'style-height')}
         />
         <PropertyRow
-          desc={'x position (px)'}
+          desc={applabMsg.designElementProperty_xPositionPx()}
           isNumber
           initialValue={parseInt(element.style.left, 10)}
           handleChange={this.props.handleChange.bind(this, 'left')}
         />
         <PropertyRow
-          desc={'y position (px)'}
+          desc={applabMsg.designElementProperty_yPositionPx()}
           isNumber
           initialValue={parseInt(element.style.top, 10)}
           handleChange={this.props.handleChange.bind(this, 'top')}
         />
         <ImagePickerPropertyRow
-          desc={'image'}
+          desc={applabMsg.designElementProperty_image()}
           initialValue={element.getAttribute('data-canonical-image-url') || ''}
           currentImageType={element.getAttribute('data-image-type') || ''}
           handleChange={this.props.handleChange.bind(this, 'picture')}
@@ -85,9 +86,15 @@ class ImageProperties extends React.Component {
         />
         {iconColorPicker}
         <EnumPropertyRow
-          desc={'fit image'}
+          desc={applabMsg.designElementProperty_fitImage()}
           initialValue={element.style.objectFit || 'fill'}
           options={['fill', 'cover', 'contain', 'none']}
+          displayOptions={[
+            applabMsg.designElementProperty_fitImage_fill(),
+            applabMsg.designElementProperty_fitImage_cover(),
+            applabMsg.designElementProperty_fitImage_contain(),
+            applabMsg.designElementProperty_fitImage_none(),
+          ]}
           handleChange={this.props.handleChange.bind(this, 'objectFit')}
         />
         <BorderProperties
@@ -106,7 +113,7 @@ class ImageProperties extends React.Component {
           )}
         />
         <BooleanPropertyRow
-          desc={'hidden'}
+          desc={applabMsg.designElementProperty_hidden()}
           initialValue={$(element).hasClass('design-mode-hidden')}
           handleChange={this.props.handleChange.bind(this, 'hidden')}
         />
@@ -138,22 +145,19 @@ class ImageEvents extends React.Component {
 
   render() {
     const element = this.props.element;
-    const clickName = 'Click';
-    const clickDesc =
-      'Triggered when the image is clicked with a mouse or tapped on a screen.';
 
     return (
       <div id="eventRowContainer">
         <PropertyRow
-          desc={'id'}
+          desc={applabMsg.designElementProperty_id()}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow
         />
         <EventHeaderRow />
         <EventRow
-          name={clickName}
-          desc={clickDesc}
+          name={applabMsg.designElementEvent_click()}
+          desc={applabMsg.designElement_image_clickEventDesc()}
           handleInsert={this.insertClick}
         />
       </div>

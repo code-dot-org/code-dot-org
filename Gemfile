@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.7.5'
+ruby '3.0.5'
 
 # Ruby 2.7 no longer includes some libraries by default; install
 # the ones we need here
@@ -10,6 +10,10 @@ gem 'thwait'
 # Ruby >= 2.7.7 targets a version of CGI with over-restrictive domain
 # validation; manually target a later version to pick up https://github.com/ruby/cgi/pull/29
 gem 'cgi', '~> 0.3.6'
+
+# Ruby 3.0 no longer provides sorted_set by default, so install it manually
+# see https://github.com/ruby/set/pull/2
+gem 'sorted_set'
 
 # Force HTTPS for github-source gems.
 # This is a temporary workaround - remove when bundler version is >=2.0
@@ -77,7 +81,6 @@ gem 'rack-cache'
 
 group :development, :test do
   gem 'rerun'
-  gem 'shotgun'
   gem 'thin'
   # Use debugger
   #gem 'debugger' unless ENV['RM_INFO']
@@ -86,6 +89,7 @@ group :development, :test do
   gem 'benchmark-ips'
   gem 'better_errors', '>= 2.7.0'
   gem 'brakeman'
+  gem 'database_cleaner-active_record', '~> 2.1.0'
   gem 'haml-rails' # haml (instead of erb) generators
   gem 'ruby-prof'
   gem 'vcr', require: false
@@ -94,19 +98,22 @@ group :development, :test do
 
   gem 'fakeredis', require: false
   gem 'mocha', require: false
-  gem 'sqlite3'
   gem 'timecop'
 
   # For UI testing.
   gem 'cucumber'
   gem 'eyes_selenium', '3.18.4'
+  gem 'fakefs', '~> 2.5.0', require: false
   gem 'minitest', '~> 5.15'
   gem 'minitest-around'
   gem 'minitest-reporters', '~> 1.2.0.beta3'
+  gem 'minitest-spec-context', '~> 0.0.3'
+  gem 'minitest-stub-const', '~> 0.6'
   gem 'net-http-persistent'
   gem 'rinku'
-  gem 'rspec'
+  gem 'rspec', require: false
   gem 'selenium-webdriver', '~> 4.0'
+  gem 'simplecov', '~> 0.22.0', require: false
   gem 'spring', '~> 3.1.1'
   gem 'spring-commands-testunit'
   gem 'webdrivers', '~> 5.2'
@@ -124,10 +131,11 @@ gem 'open_uri_redirections', require: false
 
 # Optimizes copy-on-write memory usage with GC before web-application fork.
 gem 'nakayoshi_fork'
-# Ref: https://github.com/puma/puma/pull/1646
-gem 'puma', github: 'wjordan/puma', branch: 'debugging'
+
+gem 'puma', '~> 5.0'
 gem 'puma_worker_killer'
 gem 'raindrops'
+gem 'sd_notify' # required for Puma to support systemd's Type=notify
 
 gem 'chronic', '~> 0.10.2'
 
@@ -180,7 +188,7 @@ gem 'honeybadger', '>= 4.5.6' # error monitoring
 
 gem 'newrelic_rpm', '~> 6.14.0', group: [:staging, :development, :production] # perf/error/etc monitoring
 
-gem 'redcarpet', '~> 3.3.4'
+gem 'redcarpet', '~> 3.5.1'
 
 gem 'geocoder'
 
@@ -202,7 +210,7 @@ gem 'execjs'
 # JavaScript runtime used by ExecJS.
 gem 'mini_racer', group: [:staging, :test, :production, :levelbuilder]
 
-gem 'jwt' # single signon for zendesk
+gem 'jwt', '~> 2.7.0'
 
 # SMS API for send-to-phone feature; 6.0 includes some breaking changes which
 # we'll need to prepare for:
@@ -237,7 +245,7 @@ gem 'aws-sdk-secretsmanager'
 # Lint tools
 group :development, :staging, :levelbuilder do
   gem 'haml_lint', require: false
-  gem 'rubocop', '1.28', require: false
+  gem 'rubocop', '~> 1.28', require: false
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
   gem 'rubocop-rails-accessibility', require: false
@@ -342,3 +350,5 @@ gem 'pry', '~> 0.14.0'
 gem 'cld'
 
 gem 'crowdin-api', '~> 1.2.1'
+
+gem "delayed_job_active_record", "~> 4.1"

@@ -1,18 +1,387 @@
 ---
 fi-FI:
-  hour_of_code: Koodaustunti
-  hello: Hei maailma
-  'yes': Kyllä
-  'no': Ei
-  select_language: Valitse kieli
-  upgrade_ie_message: Code.org poistaa pian Internet Explorer 8, 9 ja 10 selaimien
-    tuen. Ole hyvä ja päivitä nykyaikaiseen selaimeen.
-  upgrade_ie_message_csedweek: CSEdWeek.org poistaa pian tuen Internet Explorer 8,
-    9 ja 10 -selaimiin. Ole hyvä ja päivitä uusimpaan selaimeen.
-  upgrade_ie_link: Lue lisää
-  en: Tietotekniikka
+  20-hour_name: Nopeutettu kurssi
+  accelerated_gradelevel: 10+ -vuotiaille (kurssin 3 jälkeen)
+  accelerated_name: Nopeutettu kurssi
+  account_sign_up_child_accept_terms: Vahvistan että minulla on huoltajani lupa käyttää
+    Code.org palveluita.
+  account_sign_up_email_opt_in: Saammeko lähettää ilmoituksia kursseistamme, paikallisista
+    tapahtumista tai muista tietotekniikan uutisista sähköpostiisi? (noin kerran kuussa)
+  ai_activity: Toiminta
+  ai_description: Kuvaus
+  ai_for_oceans_lesson_plan: tuntisuunnitelma
+  ai_microsoft_thanks: Kiitämme Microsoftia visiomme ja tehtävämme tukemisessa ja
+    sen varmistamisessa, että jokaisella lapsella on mahdollisuus oppia tietojenkäsittelytietettä
+    ja taitoja menestyä 2000-luvulla.
+  alice_beyond_gradelevel: Yläaste +
+  alice_beyond_longdescription: Käyttäen innovatiivista ohjelmointiympäristöä tukemaan
+    3D-animaatioiden luomista, Alice-projekti tarjoaa työkaluja ja materiaaleja automatisointiajattelun
+    opettamiseen ja oppimiseen, ongelmanratkaisuun ja ohjelmointiin eri ikäisille
+    ja eri luokka-asteille.
+  alice_beyond_platformtext: Windows tai Mac (asennus vaaditaan)
+  alice_beyond_shortdescription: Opeta ohjelmointia kolmiulotteisessa ympäristössä
+  all_ages: Kaikenikäiset
+  allcancode_gradelevel: 5-10-vuotiaille
+  anybody_can_learn: Kuka tahansa voi oppia.
+  appinventor_beyond_gradelevel: Yläaste +
+  appinventor_beyond_longdescription: Viihdyttävät ja nopeat video-oppitunnit kuljettavat
+    sinut läpi kolmen yksinkertaisen sovelluksen rakentamisen Android-puhelimellesi
+    tai tabletillesi. Suunniteltuna sekä aloittelijoille että asiantuntijoille, tämä
+    kooditunti valmistelee sinut omien ohjelmien tekemiseen ennen kuin huomaatkaan.
+    Kuvittele jakavasi sovelluksiasi ystävillesi! Nämä tehtävät soveltuvat sekä yksilöille
+    ja opettajille, jotka ohjaavat kursseja.
+  appinventor_beyond_name: AppInventor Koodaustunti
+  appinventor_beyond_platformtext: Nykyaikainen selain + Android
+  appinventor_beyond_shortdescription: Tee oma sovelluksesi! (vain Android)
+  appinventor_gradelevel: Yläaste +
+  appinventor_longdescription: Viihdyttävät ja nopeat video-oppitunnit kuljettavat
+    sinut läpi kolmen yksinkertaisen sovelluksen rakentamisen Android-puhelimellesi
+    tai tabletillesi. Suunniteltuna sekä aloittelijoille että asiantuntijoille, tämä
+    kooditunti valmistelee sinut omien ohjelmien tekemiseen ennen kuin huomaatkaan.
+    Kuvittele jakavasi sovelluksiasi ystävillesi! Nämä tehtävät soveltuvat sekä yksilöille
+    ja opettajille, jotka ohjaavat kursseja.
+  appinventor_name: AppInventor Koodaustunti
+  appinventor_platformtext: Modernit selaimet + Android
+  appinventor_shortdescription: Tee oma sovelluksesi! (vain Android)
+  applab_gradelevel: Yli 13-vuotiaille
+  applab_name: Sovelluslabra
+  applab_shortdescription_congrats: Sovelluslabra on koodausympäristö, jossa voit
+    tehdä yksinkertaisia sovelluksia. Suunnittele sovellus, koodaa lohkoilla tai javaScriptillä
+    kunnes se toimii, ja jaa työsi sekunneissa
+  applab_tile_start_tutorial: Aloita
+  applab_tile_teacher_guide: Katso opettajan opas
+  aquatic_name: 'Minecraft: Merellinen matka'
+  arduino_beyond_gradelevel: Lukio +
+  arduino_beyond_longdescription: Arduini on suosittu alusta, jolla taiteilijat ja
+    suunnittelijat voivat käyttää oikeita antureita, LEDejä, summereita ja muita laitteita.
+    Sparkfun Virtual Sandbox opettaa sinulle oikeaa Arduino-koodia suoraan omassa
+    selaimessasi.
+  arduino_beyond_name: Arduino Sparkfunilla
+  arduino_beyond_platformtext: Selain, sitten osta aloitussarja
+  arduino_beyond_shortdescription: Opi Arduinoa Sparkfunin Digital Sandbox -ohjelmistossa.
+  are_you_teacher: Oletko opettaja?
+  artist_gradelevel: Ikä 8+
+  artist_name: Taiteilija
+  artist_shortdescription: Tee hienoja piirrustuksia ja kuvioita Taiteilijan kanssa!
+  basketball_name: Tee koripallopeli
+  beginner: Aloittelija
+  beyond_an_hour: Koodaustunnin jälkeen
+  beyond_hoc: Koodaustunnin jälkeen
+  beyond_hour_message: Jatka <a href='http://studio.code.org'>muilla kursseillamme</a>,
+    tai katso <a href='/learn/beyond'>Mitä voit oppia ensimmäisen tunnin jälkeen</a>.
+  bitsbox_gradelevel: Ala-aste
+  bitsbox_longdescription: Muokkaa omaa virtuaalista tablettiasi ja ohjelmoi erilaisia
+    sovelluksia, joita voit pelata ja jakaa. Yksinkertaiset läpikäyntiohjeet mahdollistavat
+    jopa nuorten lasten ohjelmoinnin oikealla Javascriptillä, ja mitä enemmän perehdyt,
+    sitä pidemmälle pääset.
+  bitsbox_name: Bitsbox - tee peli
+  bitsbox_platformtext: Nykyaikaiset verkkoselaimet
+  bitsbox_shortdescription: Koodaa useita sovelluksia pelaamiseen sekä jakamiseen
+    käyttäen todellista JavaScriptiä.
+  blockly_gradelevel: Kaikenikäiset
+  blockly_longdescription: Onko sinulle PC:tä joissa on hidas (tai olematon) verkkoyhteys?
+    Lataa Blocky-oppitunnit, jotka edeltivät Code.org:n oppitunteja - voit ladata
+    yhden 3MB ZIP tiedoston mille tahansa tietokoneelle tai käyttää sitä muistitikulta
+  blockly_name: Blockly
+  blockly_platformtext: Vain nykyaikaiset selaimet
+  blockly_shortdescription: Lataa ZIP-tiedosto oppiaksesi offline-tilassa
+  boxisland_gradelevel: Ala-aste
+  boy: Poika
+  boys: Pojat
+  boys_team: Poikien joukkue
+  california_button: Lisätietoja
+  california_heading: Pyydä kouluasi opettamaan tietotekniikkaa
+  california_text: Kuka vain opettaja voi tarjota meidän <a href='http://studio.code.org/'>ilmaisia
+    kursseja</a>. Millä hyvänsä ala-asteella voidaan <a href='http://code.org/educate/k5'>opettaa
+    tietotekniikkaa</a>. Pyydä lukioita <a href='http://code.org/educate/districts'>tekemään
+    yhteistyötä kanssamme.
+  cargobot_beyond_gradelevel: Yli 8-vuotiaille
+  cargobot_beyond_longdescription: Cargo-Bot on älypeli, jossa opetat robottia liikuttamaan
+    laatikoita. Kuulostaa yksinkertaiselta, eikö vain? Pelissä on 36 oivaltavan älykästä
+    peliä, mieleenjäävä musiikki ja upeat retinagrafiikat. Voit jopa tallentaa ratkaisusi
+    ja jakaa ne YouTubessa ystävillesi.
+  cargobot_beyond_shortdescription: Ohjelmoi robottikäsi iPadillasi
+  carousel_heading_apps_games: Tee omia sovelluksia tai pelejä
+  carousel_heading_beginners: Oppitunnit aloittelijoille
+  carousel_heading_beyond_devices: Opasohjelmat puhelimille ja tablettitietokoneille
+  carousel_heading_beyond_javascript: Oppaat, jotka käsittelevät JavaScript kieltä
+  carousel_heading_beyond_languages: Oppaat muista ohjelmointikielistä
+  carousel_heading_devices: Opasohjelmat puhelimille ja tablettitietokoneille
+  carousel_heading_domestic: Oppitunnit englanniksi
+  carousel_heading_ide: Opettajien keskuudessa suositut alustat
+  carousel_heading_international: Oppitunnit omalla kielelläsi
+  carousel_heading_javascript: JavaScriptiä opettavat oppitunnit
+  carousel_heading_languages: Oppaat muista ohjelmointikielistä
+  carousel_heading_robots: Opi ohjelmoimaan robottien kanssa
+  carousel_heading_university: Yliopistokurssit verkossa
+  carousel_heading_unplugged: Ei laitetta tai internetiä? Kokeile tietotekniikkaa
+    ilman tietokonetta
+  carousel_heading_webpages: Opi tekemään verkkosivuja
+  cded_sign_up: Rekisteröidy
+  cded_try_it: Kokeile
+  city: Kaupunki
+  class_submission_in_school: Koulussa
+  class_submission_in_school_ap_computer_science: Pohjois-Amerikkalainen ylioppilastason
+    tietotekniikka
+  class_submission_in_school_daily_programming_course: Päivittäinen ohjelmointikurssi
+  class_submission_in_school_exploring_computer_science: Tutustu tietotekniikkaan
+  class_submission_in_school_full_university_cs_curriculum: Täysi tietojenkäsittelytieteen
+    oppimäärä yliopistossa
+  class_submission_in_school_other: Muualla koulussa
+  class_submission_in_school_programming_integrated_in_other_classes: Ohjelmointi
+    yhdistettynä muihin oppiaineisiin (matematiikka, tiede, jne.)
+  class_submission_in_school_robotics_club: Robotiikkakerho
+  class_submission_in_school_summer_school_cs_program: Kesäkoulun tietojenkäsittelytieteen
+    ohjelma
+  class_submission_languages_other: Muu kieli(kielet)
+  class_submission_level_college: Yliopisto / korkeakoulu
+  class_submission_level_elementary: Ala-aste
+  class_submission_level_high_school: Lukio
+  class_submission_level_middle_school: Yläaste
+  class_submission_level_preschool: Esikoulu
+  class_submission_level_vocational: Ammatillinen opetus
+  class_submission_online: Verkossa
+  class_submission_online_other: Muu verkossa
+  class_submission_online_programming_class: Ohjelmointikurssi verkossa
+  class_submission_online_teacher_resource: Opettajan materiaali verkossa
+  class_submission_out_of_school: Koulun ulkopuolella
+  class_submission_out_of_school_afterschool_program: lltapäiväkerho
+  class_submission_out_of_school_all-day_workshop: Koko päivän työpaja (enintään viikko)
+  class_submission_out_of_school_multi-week_workshop: Usean viikon työpaja
+  class_submission_out_of_school_other: Muu koulun jälkeen tapahtuva
+  class_submission_out_of_school_summer_camp: Kesäleiri
+  classicmaze_name: Klassinen sokkelo
+  code_hoc_coming: Koodaustunti on täällä - 8.-14. Joulukuuta!
+  code_sign_up: Liity osallistuaksesi tietojenkäsittelytieteen opetusviikon aikana
+  codea_beyond_gradelevel: Lukio +
+  codea_beyond_longdescription: Codea iPadille antaa sinun luoda pelejä ja simulaatioita
+    &mdash; melkein mistä tahansa visuaalisesta ideasta joka sinulla on. Muunna ajatuksesi
+    vuorovaikutteisiksi luomuksiksi jotka hyödyntävät iPadin toimintoja Multi-Touch
+    ja kiihtyvyysmittari. Uskomme että Codea on kaunein käyttämäsi koodieditori ja
+    vielä helppokäyttöinenkin. Codea on suunniteltu jotta voit koskettaa koodiasi.
+    Haluatko vaihtaa numeron? Vain kosketa ja vedä. Entäpä väri tai kuva? Pyyhkäisy  käynnistää
+    visuaalisen editorin, jossa voit valita mitä haluat.
+  codea_beyond_shortdescription: Tee sovelluksia iPadillasi
+  codeavengers_beyond_gradelevel: Yläaste +
+  codeavengers_beyond_longdescription: Opi kuinka ohjelmoida pelejä, sovelluksia ja
+    verkkosivustoja. Asiantuntijoiden suunnittelema kurssi, jossa on täydellinen vaikeustaso
+    aloittelijoille, helposti ymmärrettävät ohjeet ja upea apu tarvittaessa. HTML-,
+    CSS- ja Javascript-kurssimme sisältävät ohjelmointihaasteita ja kertauspelejä,
+    jotka tekevät oppimisen hauskaksi ja tehokkaaksi kaikenikäisille.
+  codeavengers_beyond_name: Opi ohjelmoimaan verkkosivustoja
+  codeavengers_beyond_platformtext: Nykyaikaiset verkkoselaimet
+  codeavengers_beyond_shortdescription: Opi koodaamaan pelejä ja verkkosivustoja
+  codeavengers_gradelevel: Yläaste +
+  codeavengers_longdescription: Rakenna kahden pelaajan 2D ylhäältä-alas peli Javascriptillä
+    kymmenellä yksinkertaisella tehtävällä. Sitten jatka joidenkin ohjelmoinnin perusasioiden
+    oppimista (muuttujat ja ehto-lausekkeet) luodessasi tietovisan, jonka voit jakaa
+    ystäviesi kanssa. Matkan varrella voit ansaita pisteitä ja merkkejä pyrkiessäsi
+    luokan parhaimpien joukkoon.
+  codeavengers_name: Tee peli JavaScript-kielellä
+  codeavengers_platformtext: Nykyaikaiset verkkoselaimet
+  codeavengers_shortdescription: Opi JavaScript-ohjelmointia selaimessa
+  codecademy_beyond_gradelevel: Lukio
+  codecademy_beyond_longdescription: Codeacademy on interaktiivinen, oppilaslähtöinen
+    johdanto tietojenkäsittelyn perusteisiin Javascript-kielellä, jota käyttävät miljoonat
+    opiskelijat maailmassa. Olemme valmistelleet selkeän Koodaustunti-kokemuksen,
+    jossa on mukana visailuja, kalvoja ja oppilaille valmis projekti lopuksi.
+  codecademy_beyond_platformtext: Nykyaikaiset vekkoselaimet. iOS ja Android sovellukset
+  codecademy_beyond_shortdescription: Opi JavaScript-ohjelmointia selaimessa
+  codecademy_gradelevel: Lukio
+  codecademy_longdescription: Codeacademy on interaktiivinen, oppilaslähtöinen johdanto
+    tietojenkäsittelyn perusteisiin Javascript-kielellä, jota käyttävät miljoonat
+    opiskelijat maailmassa. Olemme valmistelleet selkeän Koodaustunti-kokemuksen,
+    jossa on mukana visailuja, kalvoja ja oppilaille valmis projekti lopuksi.
+  codecademy_platformtext: Nykyaikaiset vekkoselaimet. iOS ja Android sovellukset
+  codecademy_shortdescription: Opi JavaScript-ohjelmointia selaimessa
+  codecombat_beyond_gradelevel: Yläaste +
+  codecombat_beyond_longdescription: Pelaa velhona käyttäen koodia (taikoja) sankariesi
+    kontrolloimiseen, navigoi labyrinttejä, voita peikot, huijaa vihollisia ja pelasta
+    liittolaiset! Opi JavaScriptiä tässä aloittelijoille tarkoitetussa HTML 5 verkkopelissä.
+  codecombat_beyond_platformtext: Verkkopohjainen (Firefox, Chrome, Safari, IE9+)
+  codecombat_beyond_shortdescription: Pelaa peliä ja opi JavaScriptiä, niin voit voittaa
+  codecombat_gradelevel: Yläaste +
+  codecombat_longdescription: Voita peikot oppiaksesi Pythonia tai JavaScriptia tässä
+    mielettömässä ohjelmointipelissä!
+  codecombat_platformtext: Modernit selaimet (Jatkokurssi vaatii $$)
+  codecombat_shortdescription: Voita peikot oppiaksesi Pythonia tai JavaScriptia tässä
+    mielettömässä ohjelmointipelissä!
+  codehs_beyond_gradelevel: Lukio
+  codehs_beyond_longdescription: 'Opi ohjelmoinnin perusteet Karel-koiran avulla,
+    tässä hauskassa, lähestyttävässä ja havainnollisessa  ohjelmoinnin johdannossa,
+    jossa ohjeiden antaminen tietokoneelle on kuin komentojen antaminen koiralle.
+    Tämä oppitunti on mahtava opettajan ohjauksessa, mutta voidaan suorittaa itsenäisesti.
+    [Huom.: maksullinen]'
+  codehs_beyond_name: Opettele koodaamaan Karel-koiran kanssa
+  codehs_beyond_platformtext: Nykyaikaiset selaimet (maksullinen)
+  codehs_beyond_shortdescription: Opi JavaScript-ohjelmointia hauskassa visuaalisessa
+    ympäristössä
+  codehs_gradelevel: Lukio
+  codehs_longdescription: Tietokoneen komentaminen, ja siitähän ohjelmoinnissa on
+    kyse, on kuin antaisi komentoja koiralle. Opi koodaamaan Karel-koiraa &mdash;
+    hauska, helppo ja visuaalinen johdanto ohjelmointiin, joka opettaa peruskäsitteet,
+    kuten komennot ja funktiot vasta-alkajille. Opetusohjelma on suunnattu itseoppimiseen,
+    mutta opettajat voivat kirjautua päästäkseen käsiksi opettajan työkaluihin ja
+    seuratakseen oppilaiden etenemistä!
+  codehs_name: Opettele koodaamaan Karel-koiran kanssa
+  codehs_platformtext: Modernit selaimet. (Jatkokurssi vaatii $$)
+  codehs_shortdescription: Ala koodaamaan Karel-koiran kanssa. Hauska ja visuaalinen
+    johdanto ohjelmointiin!
+  codeintl_gradelevel: 4-104-vuotiaille
+  codeintl_longdescription: Opettele tietotekniikan perusteet rakentamalla tietokoneohjelmia
+    palikoista. Tällä pelillisellä itseopiskelukurssilla tekstitettyillä johdantovideoilla
+    esiintyvät Bill Gates, Mark Zuckerberg, Angry Birds ja Plants vs. Zombies. Kurssilla
+    käydään läpi toistosilmukat, ehtolauseet ja yksinkertaisia algoritmeja. Tarjolla
+    34 kielellä.
+  codeintl_name: Klassinen sokkelo
+  codeintl_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
+  codeintl_shortdescription: Opi koodaamaan Mark Zuckerbergin ja Angry Birdsin kanssa!
+  codemonkey_gradelevel: Yläaste +
+  codemonkey_longdescription: 'CodeMonkey on verkkopeli, joka opettaa ohjelmointia
+    oikealla ohjelmointikielellä! Opiskelijat ohjelmoivat apinaa keräämään banaaneja,
+    tehtävien vähitellen vaikeutuessa taso tasolta. Opiskelijat saavat tähtipisteitä
+    jokaisesta ratkaisusta ja he voivat jakaa sen yhdellä napsautuksella. '
+  codemonkey_name: CodeMonkey
+  codemonkey_platformtext: Nykyaikaiset verkkoselaimet
+  codemonkey_shortdescription: Opiskelijat ohjelmoivat apinaa keräämään banaaneita.
+  codeorg_beyond_gradelevel: 4-104-vuotiaille
+  codeorg_beyond_longdescription: Opi tietotekniikan peruskäsitteitä vedä ja pudota
+    -ohjelmoinnilla. 3 täyttä kurssia, joista jokainen sisältää 15-20 oppituntia,
+    joissa vaihtelee luokkahuonetehtävät ilman tietokonetta, sekä pelinomaiset, itseohjatut
+    oppitunnit, joiden videoluentojen tähtinä vierailevat Bill Gates, Mark Zuckerberg,
+    Angry Birds ja Plants vs. Zombies. Opi toisto-silmukat, ehtolausekkeet, perusalgoritmit,
+    funktiot ja muuttujat.
+  codeorg_beyond_name: Johdanto tietotekniikkaan (peruskoulu)
+  codeorg_beyond_platformtext: Nykyaikaiset selaimet, tabletit
+  codeorg_beyond_shortdescription: Opi koodaamaan Mark Zuckerbergin ja Angry Birdsin
+    kanssa!
+  codeorg_gradelevel: 4-104-vuotiaille
+  codeorg_longdescription: Opettele tietotekniikan perusteet rakentamalla tietokoneohjelmia
+    palikoista. Tällä pelillisellä itseopiskelukurssilla tekstitettyillä johdantovideoilla
+    esiintyvät Bill Gates, Mark Zuckerberg, Angry Birds ja Plants vs. Zombies. Kurssilla
+    käydään läpi toistosilmukat, ehtolauseet ja yksinkertaisia algoritmeja. Tarjolla
+    34 kielellä.
+  codeorg_name: Klassinen sokkelo
+  codeorg_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
+  codeorg_shortdescription: Opi koodaamaan Mark Zuckerbergin ja Angry Birdsin kanssa!
+  codespark_gradelevel: Ala-aste
+  codespark_longdescription: Foos on hauska ja lapsiystävällinen tapa oppia ohjelmointia.
+    Ohjelmoi söpöjä hahmoja tehtävien ratkaisemissa ja saa virtuaalinen maailma eloon.
+    Peli on "sanoista vapaa", joten kaikki voivat pelata!
+  codespark_name: Foos (myös lukutaidottomille)
+  codespark_platformtext: iOS, Android (tai selain)
+  codespark_shortdescription: Foos on hauska, lapsiystävällinen peli ohjelmoinnin
+    oppimiseen.
+  codesters_gradelevel: 12-14-vuotiaille
+  codesters_platformtext: Nykyaikaiset verkkoselaimet
+  compatibility_hide_this_warning: Piilota varoitus
+  compatibility_unsupported_browser_markdown: Selaintasi ei tueta. Päivitä selaimesi
+    [johonkin tuetuista selaimistamme](%{supported_browsers_url}). Voit yrittää katsella
+    tätä sivua, mutta todennäköisesti sen toiminnallisuudet ovat rikki.
   computer_science_edweek: Tietotekniikan koulutusviikko
-  csedweek_dates: 3.-9. joulukuuta 2018
+  condcards_gradelevel: 8-12-vuotiaille
+  condcards_longdescription: Opi algoritmeistä ja ehtolausekkeista korttipakan avulla
+    tässä "tietokoneettoman tekemisen" harjoituksessa. Oppilaat tekee tehtävät ryhmissä
+    ja tarvitsevat yhden korttipakan ryhmää kohden.
+  condcards_name: Ehtolauseet pelikorteilla
+  condcards_platformtext: Tietokoneeton tekeminen
+  condcards_shortdescription: Opi algoritmeja korttipakan kanssa
+  congrats_guest_speaker_cta: Etsi vieraileva puhuja
+  congrats_guest_speaker_desc: Nyt kun opiskelijat ovat suorittaneet tietotekniikkakurssin,
+    suosittelemme juhlistamaan sitä ja yhdistämään asioita reaalimaailman kutsumalla
+    vierailevan puhujan luokkahuoneeseen. Voit käyttää vapaaehtoisten karttaa ottaaksesi
+    yhteyttä paikallisiin vapaaehtoisiin, jotka voisivat vierailla oppitunneilla tai
+    etsiä minkä tahansa kaupungin opiskelijoita tai teknisen alan ammattilaisia, jotka
+    ovat valmiita innostamaan opiskelijoita etänä, video chat-keskustelun kautta.
+  congrats_guest_speaker_title: Löydä vieraileva puhuja oppitunnille
+  congrats_next_tutorials_desc: Kokeile näitä lyhyempiä, yhden tunnin oppitunteja,
+    tai kokeile <a href="%{current_path}/next">kumppaneidemme oppitunteja</a>.
+  congrats_next_tutorials_title: Kokeile näitä johdantoja seuraavaksi
+  congrats_third_party_title: Käytä uusia taitojasi näissä sovelluksissa ja sivuistoissa
+  congratulations: Onneksi olkoon!
+  congratulations_on_completing_course: Onnittelut! Läpäisit kurssin %{course}
+  congratulations_on_completing_hoc: Onnittelut Koodaustunnin suorittamisesta
+  congratulations_volunteer: 'Onnittelut: Nyt kun olet kokeillut Koodaustuntia itse,
+    <a href="https://code.org/volunteer">voit kirjautua vapaaehtoiseksi avustajaksi
+    johonkin koululuokkaan</a> ja auttaa oppilaita oppimaan Koodaustunnilla!'
+  contact_form_label_email: Sähköpostiosoitteesi
+  contact_form_label_message: Viesti
+  contact_form_label_submit: Lähetä viesti
+  contact_form_label_topic: Aihe
+  contact_form_topic_contribution: Lahjoitus hyväntekeväisyyteen
+  contact_form_topic_other: Muut
+  contact_form_topic_outside_us: Olen USA:n ulkopuolella
+  contact_form_topic_parent: Olen vanhempi
+  contact_form_topic_partner: Haluan tehdä yhteistyötä
+  contact_form_topic_press: Lehdistö/media (haastattelu- tai luentopyyntö)
+  contact_form_topic_student: Olen oppilas
+  contact_form_topic_teacher: Olen opettaja
+  continue_learning_body: Vaihtoehtoja on paljon. Voit opiskella verkossa tai paikallisessa
+    oppilaitoksessa tai kesäleirillä.
+  continue_learning_header: Jatka opiskelua Koodaustunnin jälkeen
+  country: Maa
+  course1_gradelevel: 4+ -vuotiaille (lukutaidottomat)
+  course1_name: Kurssi 1
+  course2_gradelevel: 6+ -vuotiaille (lukutaitoisille)
+  course2_name: Kurssi 2
+  course3_gradelevel: 8+ -vuotiaille (kurssin 2 jälkeen)
+  course3_name: Kurssi 3
+  course4_gradelevel: 10+ -vuotiaille (kurssin 3 jälkeen)
+  course4_name: Kurssi 4
+  coursea-2017_gradelevel: 4-7-vuotiaille
+  coursea-2018_gradelevel: 4-7-vuotiaille
+  coursea-2019_gradelevel: 4-7-vuotiaille
+  coursea-2020_gradelevel: 4-7-vuotiaille
+  coursea-2021_gradelevel: 4-7-vuotiaille
+  coursea-2022_gradelevel: 4-7-vuotiaille
+  coursea_gradelevel: 4-7-vuotiaille
+  courseb-2017_gradelevel: 5-8-vuotiaille
+  courseb-2018_gradelevel: 5-8-vuotiaille
+  courseb-2019_gradelevel: 5-8-vuotiaille
+  courseb-2020_gradelevel: 5-8-vuotiaille
+  courseb-2021_gradelevel: 5-8-vuotiaille
+  courseb-2022_gradelevel: 5-8-vuotiaille
+  courseb_gradelevel: 5-8-vuotiaille
+  coursec-2017_gradelevel: 6-10-vuotiaille
+  coursec-2018_gradelevel: 6-10-vuotiaille
+  coursec-2019_gradelevel: 6-10-vuotiaille
+  coursec-2020_gradelevel: 6-10-vuotiaille
+  coursec-2021_gradelevel: 6-10-vuotiaille
+  coursec-2022_gradelevel: 6-10-vuotiaille
+  coursec_gradelevel: 6-10-vuotiaille
+  coursed-2017_gradelevel: Kahdeksasluokkalaisista alkaen
+  coursed-2018_gradelevel: Kahdeksasluokkalaisista alkaen
+  coursed-2019_gradelevel: Kahdeksasluokkalaisista alkaen
+  coursed-2020_gradelevel: Kahdeksasluokkalaisista alkaen
+  coursed-2021_gradelevel: Kahdeksasluokkalaisista alkaen
+  coursed-2022_gradelevel: Kahdeksasluokkalaisista alkaen
+  coursed_gradelevel: Kahdeksasluokkalaisista alkaen
+  coursee-2017_gradelevel: 8-12-vuotiaille
+  coursee-2018_gradelevel: 8-12-vuotiaille
+  coursee-2019_gradelevel: 8-12-vuotiaille
+  coursee-2020_gradelevel: 8-12-vuotiaille
+  coursee-2021_gradelevel: 8-12-vuotiaille
+  coursee-2022_gradelevel: 8-12-vuotiaille
+  coursee_gradelevel: 8-12-vuotiaille
+  coursef-2017_gradelevel: 9-13-vuotiaille
+  coursef-2018_gradelevel: 9-13-vuotiaille
+  coursef-2019_gradelevel: 9-13-vuotiaille
+  coursef-2020_gradelevel: 9-13-vuotiaille
+  coursef-2021_gradelevel: 9-13-vuotiaille
+  coursef-2022_gradelevel: 9-13-vuotiaille
+  coursef_gradelevel: 9-13-vuotiaille
+  coursera_beyond_gradelevel: Yliopisto
+  coursera_beyond_longdescription: 'Stanfordin CS 101 kurssi, opettajana Nick Parlante
+    (ILMAISEKSI!). CS 101 opettaa tietotekniikan keskeisimmät käsitteet yleisölle,
+    jolla ei ole lainkaan aikaisempaa kokemusta aiheesta. Leikimällä ja kokeilemalla
+    lyhyillä koodinpaloilla, tuot esiin tietokoneiden vahvuudet ja rajoitukset. CS
+    101 antaa myös yleisen taustan nykypäivän tietokoneisiin: mikä tietokone on, mitä
+    laitteisto on, mitä ohjelmistot ovat ja mikä on internet. Esitietovaatimuksena
+    vain taito käyttää selainta.'
+  coursera_beyond_name: Stanford CS101 -kurssit
+  coursera_beyond_platformtext: Nykyaikaiset selaimet
+  coursera_beyond_shortdescription: Aloita CS101-kurssilla
+  create_art_with_zombie: tai tee edistyneempää taidetta zombien kanssa
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Koodaustunti</a> on tulossa. Kaikki opettajat ja järjestäjät,
     <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -20,166 +389,268 @@ fi-FI:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">Oletko tietotekniikan opettaja? Katso muut CSEdWeek-materiaalit</a>'
   csedweek_banner_teachers_text: Oletko tietotekniikan opettaja? Katso muut CSEdWeek-materiaalit
-  n_have_learned_an_hoc: "<h1>Kokeile</h1><h2>Koodaustunti</h2><h3># palveltu</h3>"
-  anybody_can_learn: Kuka tahansa voi oppia.
-  learn_now: Opettele nyt
-  petition_message: Jokaisen oppilaan jokaisessa koulussa tulisi voida oppia tietotekniikkaa
-  petition_sign_message: 'Jos olet samaa mieltä, allekirjoita. Ole yksi # joukossa.'
-  petition_join_others: 'Liity # muihin'
-  name: Nimi
-  email: Sähköposti
-  zipcode: Maa (tai postinumero Yhdysvalloissa)
-  submit: Jatka
-  twentyhours_heading: Kokeile kurssiamme johdatus tietotekniikkaan
-  twentyhours_text: Ensimmäinen Koodaustunti tehtynä? Opi lisää tietotekniikasta ja
-    ohjelmoinnin käsitteistä tällä jatkokurssilla.
-  og_title: Jokainen lapsi ansaitsee mahdollisuuden
-  og_title_soon: Tunti koodia on tulossa
-  og_title_here: Koodaustunti on täällä!
-  og_description: Jokainen oppilas jokaisessa koulussa ansaitsee mahdollisuuden opiskella
-    tietotekniikkaa. Se muuttaa kaiken.
-  og_description_celeb: Kokeile uusia oppitunteja ja voita videotapaaminen julkkiksen
-    kanssa itsellesi ja luokallesi!
-  csedweek_og_title: Koodaustunti on täällä
+  csedweek_dates: 3.-9. joulukuuta 2018
+  csedweek_map_header: "# CSEdWeek / Koodaustunti-tapahtumia ympäri maailmaa"
+  csedweek_map_legend_cs_tech_jam: Tietojenkäsittelytieteen opetusviikko
+  csedweek_map_legend_event: Koodaustunti
+  csedweek_map_legend_title: Kartan selite
+  csedweek_map_search_placeholder: Etsi koodaustunteja
+  csedweek_map_search_reset: Alusta
+  csedweek_map_search_search: Haku
+  csedweek_map_signup: Ilmoita tapahtumasi
   csedweek_og_description: Koodaustunti on maailmanlaajuinen liike, joka tavoittaa
     kymmeniä miljoonia eri ikäisiä oppilaita yli 180:ssä maassa ja yli 45 eri kielellä.
   csedweek_og_description_here: Koodaustunti on saapunut. Jokainen oppilas jokaisessa
     koulussa ansaitsee mahdollisuuden opiskella tietotekniikkaa. Se muuttaa kaiken.
-  hoc2014_heading: Tule mukaan <a href="http://hourofcode.com">Koodaustuntiin</a><br/>8.–14.
-    joulukuuta 2014<br/>
-  hoc2014_students: Oppilaat
-  hoc2014_try: Kokeile
-  hoc2014_teachers: Opettajat
-  hoc2014_host: Järjestä
-  hoc2014_everyone: Kaikki
-  hoc2014_support: Tue &#x25BE;
-  hoc2014_whatishoc: Mikä on koodaustunti?
-  csedweek_map_header: "# CSEdWeek / Koodaustunti-tapahtumia ympäri maailmaa"
-  csedweek_map_signup: Ilmoita tapahtumasi
-  csedweek_map_search_placeholder: Etsi koodaustunteja
-  csedweek_map_search_search: Haku
-  csedweek_map_search_reset: Alusta
-  csedweek_map_legend_title: Kartan selite
-  csedweek_map_legend_event: Koodaustunti
-  csedweek_map_legend_cs_tech_jam: Tietojenkäsittelytieteen opetusviikko
-  cded_sign_up: Rekisteröidy
-  cded_try_it: Kokeile
-  try_now: Kokeile nyt
-  california_heading: Pyydä kouluasi opettamaan tietotekniikkaa
-  california_text: Kuka vain opettaja voi tarjota meidän <a href='http://studio.code.org/'>ilmaisia
-    kursseja</a>. Millä hyvänsä ala-asteella voidaan <a href='http://code.org/educate/k5'>opettaa
-    tietotekniikkaa</a>. Pyydä lukioita <a href='http://code.org/educate/districts'>tekemään
-    yhteistyötä kanssamme.
-  california_button: Lisätietoja
-  flappy_heading: Flappy syntymäpäivää, Code.org
-  flappy_text: Code.org täytti juuri vuoden.<br/><br/> Juhli kanssamme tekemällä oma
-    <b>Flappy</b>-pelisi. Koodaa omat sääntösi ja jaa kavereiden kanssa!
-  view_english_site: Katsele englanninkielistä sivustoa
-  non_english_tutorials: 'Oppaat on käännetty useille kielille:'
-  write_your_first_program: Kirjoita ensimmäinen oma tietokoneohjelmasi
-  learn_cs_concepts: Opettele tietotekniikan peruskäsitteet vedä ja pudota -ohjelmoinnilla.
-    Tämä on pelimäinen opas, jonka video-oppaissa esiintyvät mm. Bill Gates, Mark
-    Zuckerberg, Angry Birds, ja Plants vs. Zombies. Opettele toistosilmukat, jos-niin
-    -lauseet ja perusalgoritmit.
-  all_ages: Kaikenikäiset
-  beginner: Aloittelija
-  n_participants: "# osallistujaa"
-  go: Mene
-  thank_you_: Kiitos!
-  congratulations: Onneksi olkoon!
-  congratulations_on_completing_hoc: Onnittelut Koodaustunnin suorittamisesta
-  congratulations_volunteer: 'Onnittelut: Nyt kun olet kokeillut Koodaustuntia itse,
-    <a href="https://code.org/volunteer">voit kirjautua vapaaehtoiseksi avustajaksi
-    johonkin koululuokkaan</a> ja auttaa oppilaita oppimaan Koodaustunnilla!'
-  congratulations_on_completing_course: Onnittelut! Läpäisit kurssin %{course}
-  congrats_next_tutorials_title: Kokeile näitä johdantoja seuraavaksi
-  congrats_next_tutorials_desc: Kokeile näitä lyhyempiä, yhden tunnin oppitunteja,
-    tai kokeile <a href="%{current_path}/next">kumppaneidemme oppitunteja</a>.
-  get_a_certificate_of_achievement: Hanki todistus suorituksesta
-  view_course: Näytä kurssi
-  view_unit: Näytä yksikkö
-  make_app: Tee sovellus
-  congrats_guest_speaker_title: Löydä vieraileva puhuja oppitunnille
-  congrats_guest_speaker_desc: Nyt kun opiskelijat ovat suorittaneet tietotekniikkakurssin,
-    suosittelemme juhlistamaan sitä ja yhdistämään asioita reaalimaailman kutsumalla
-    vierailevan puhujan luokkahuoneeseen. Voit käyttää vapaaehtoisten karttaa ottaaksesi
-    yhteyttä paikallisiin vapaaehtoisiin, jotka voisivat vierailla oppitunneilla tai
-    etsiä minkä tahansa kaupungin opiskelijoita tai teknisen alan ammattilaisia, jotka
-    ovat valmiita innostamaan opiskelijoita etänä, video chat-keskustelun kautta.
-  congrats_guest_speaker_cta: Etsi vieraileva puhuja
-  congrats_third_party_title: Käytä uusia taitojasi näissä sovelluksissa ja sivuistoissa
-  third_party_gradelevel_kto8: Luokka-asteet päiväkoti - 8. -luokka
-  third_party_gradelevel_kto2: Esiopetus – alkuopetus
-  third_party_gradelevel_2to8: Perusopetus luokat 2-8
-  third_party_gradelevel_4to12: Perusopetus luokat 4-9 ja toinen aste
-  third_party_gradelevel_5to12: Perusopetus luokat 5-9 ja toinen aste
-  third_party_gradelevel_6plus: Kuudesluokkalaisista alkaen
-  third_party_gradelevel_8plus: Kahdeksasluokkalaisista alkaen
-  third_party_platform_all: 'Käyttöalustat: Web, iPad & Android'
-  third_party_platform_mobile: 'Käyttöalustat: iPad & Android'
-  third_party_platform_web: 'Käyttöalusta: Web'
-  third_party_price_varies: 'Hinta: Suunnitelmat vaihtelevat'
-  third_party_price_free: 'Hinta: Ilmainen'
-  third_party_price_299: 'Hinta: $2.99/ lataus'
-  third_party_price_individual: 'Erillinen hinta: Ilmainen kokeiluversio & $25/ kuukaudessa'
-  third_party_price_school: 'Koulun hinta: Vapaat suunnitelmat & Pro on $2500 +'
-  third_party_tynker_desc: Tynker luovana alustana auttaa lapsia kehittämään tietokoneellista
-    ajattelua ja ohjelmointitaitoja hauskalla, intuitiivisella ja kekseliääällä tavalla.
-    Meidän innovatiivinen visuaalinen ohjelmointikielemme, vuorovaikutteisen vaiheittaiset
-    kurssit ja pelipohjainen ohjelmointi antaa helpon Johdatuksen ohjelmointiin ja
-    kannustaa lapsia innovoimaan ja luomaan.
-  third_party_tynker_btn_curriculum: Kokeile Tynkerin alkeistason opetussuunnitelmaa
-  third_party_tynker_btn_site: Vieraile Tynkerin sivuilla
-  third_party_scratchjr_desc: Scratch Jr. on johdanto ohjelmointikieliin, joka mahdollistaa
-    pienten lasten ( 5-7 - vuotiaat) vuorovaikutteisten tarinoiden ja pelejen luomisen.
-    Lapset kokoavat yhteen graafiisen ohjelmoinnin lohkoja, jotta merkit liikkuvat,
-    hyppäävät, tanssivat ja laulavat. Lapset voivat muokata hahmoaan hahmoeditorilla,
-    lisätä omia ääniä ja ääniä, jopa lisätä valokuvia itsestään - siten ohjelmoida
-    hahmonsa lohkojen avulla eloon.
-  third_party_scratchjr_btn_curriculum: Lataa Scratch Jr. opetussuunnitelma
-  third_party_scratchjr_btn_site: Vieraile Scratch Jr. -sivustolla.
-  third_party_scratch_desc: Scratchin kanssa voit ohjelmoida vuorovaikutteisia tarinoita,
-    pelejä ja animaatioita ja jakaa luomuksesi muille online-yhteisössä. Scratch auttaa
-    nuoria ajattelemaan luovasti, järjestelmällisesti ja työskentelemään yhdessä —
-    keskeisiä taitoja elämässä 2000-luvulla.
-  third_party_scratch_btn_curriculum: Lataa Scratch opetussuunnitelma
-  third_party_scratch_btn_forum: Scratch Kasvattaja Foorumi
-  third_party_scratch_btn_site: Vieraile Scratch -sivustolla
-  third_party_lightbot_btn_curriculum: Lataa Lightbot opetussuunnitelma
-  third_party_lightbot_btn_site: Vieraile Lightbot -sivustolla
-  third_party_khan_btn_learn: Opi CS Khan Academy:n avulla
-  third_party_khan_btn_forum: Khan Academy CS Foorumi
-  third_party_appinv_btn_forum: App Inventor 2 Foorumi
-  third_party_appinv_btn_site: Vieraile App Inventor 2 -sivulla
-  third_party_codehs_btn_try: Intro CS lisätietoja kouluille
-  third_party_codecademy_desc: Uudelleenajattelemme koulutuksen alhaalta ylös. Netti
-    on uudelleen opettanut melkein kaiken - kaupankäynnin, sosiaalisen verkostoitumisen,
-    terveydenhuollon, ja muuta. Me olemme rakentamassa kouluksen mitä maailma tarvitsee
-    - ensimmäinen oikeasti nettikoulutus.
-  third_party_codecademy_btn_curriculum: Lataa Codeacademy opetussuunnitelma
-  third_party_codecademy_btn_site: Vieraile Codecademy -sivulla
-  third_party_organization: Organisaatio
-  third_party_curriculum: Opetussuunnitelma
-  third_party_pricing: Hinnoittelu
-  third_party_cost_free: Ilmainen opiskelijoille ja opettajille
-  third_party_cost_5permonth: "$5 kuukaudessa per luokka"
-  third_party_cost_299: "$2.99 lataus"
-  third_party_cost_free_399: Ilmainen kokeilu, $399 yksi luokkahuone
-  third_party_cost_free_2: Ilmainen kokeilu, $2 yksi oppilas
-  third_party_cost_free_10: Ilmainen kokeilu, $9.99 kuukaudessa
-  third_party_desc_5_4to8: Noin 5 oppituntia, suunnattu luokkille 4-8
-  third_party_desc_10to12_kto3: Noin 10-12 oppituntia, suunnattu eskarilaisista 3-luokkalaisille
-  third_party_desc_11_kto5: Noin 11 oppituntia, suunnattu eskarilaisista 5-luokkalaisille
-  third_party_desc_10to12_kto5: Noin 10-12 oppituntia, suunnattu eskarilaisista 5-luokkalaisille
-  third_party_desc_40_4to8: Yli 40 oppituntia suunnattu luokille 4-8
-  third_party_desc_dozens_kto8: Kymmeniä oppitunteja kaikille eskarista 8-luokkalaisille
-  third_party_desc_10to15_3to12: 10 - 15 oppituntia, suunnattu luokille 3-12
-  third_party_desc_25to40_3to12: 25-40 oppituntia tarkoitettu luokille 3-12
-  third_party_desc_20_2to8: Noin 20 oppituntia, suunnattu luokkille 2-8
-  third_party_desc_7to22_5to12: 7 - 22 oppituntia, suunnattu luokille 5-12
-  third_party_desc_20_4to12: Yli 20 oppituntia suunnattu luokille 4-12
+  csedweek_og_title: Koodaustunti on täällä
+  csfirst_gradelevel: 9-14-vuotiaille
+  csfirst_platformtext: Nykyaikaiset verkkoselaimet
+  dashboard_action_cancel: Peru
+  dashboard_action_confirm: Poista?
+  dashboard_action_delete: Poista
+  dashboard_action_delete_no: Ei
+  dashboard_action_delete_yes: Kyllä
+  dashboard_action_done: Valmis
+  dashboard_announce_learn_more_button: Lue lisää
+  dashboard_classroom_strategies: Luokkaopetuksen lähestymistapoja opettajille
+  dashboard_correctness_correct: Oikein
+  dashboard_course1: 'Kurssi 1:'
+  dashboard_course2: 'Kurssi 2:'
+  dashboard_course3: 'Kurssi 3:'
+  dashboard_course4: 'Kurssi 4 (beta): '
+  dashboard_course_csina: Tietotekniikka algebrassa
+  dashboard_course_csins: Tietotekniikka luonnontieteissä
+  dashboard_course_csins_desc: Code.org, yhteistyössä GUTS-projektin kanssa, tarjoavat
+    mallinnus- ja simulointipainotteisen johdannon tietotekniikan käsitteisiin.
+  dashboard_course_ecs: Tutustu tietotekniikkaan
+  dashboard_curriculum: Opetussuunnitelma
+  dashboard_curriculum_csina: 'Tietotekniikka algebrassa:'
+  dashboard_curriculum_csins: 'Tietotekniikka luonnontieteissä:'
+  dashboard_curriculum_csp: 'Tietojenkäsittelytieteiden alkeet:'
+  dashboard_curriculum_ecs: 'Tutustu tietotekniikkaan:'
+  dashboard_curriculum_high_title: Lukion opetusmateriaalia
+  dashboard_curriculum_k5_title: Esi- ja ala-koulun opetusmateriaalia
+  dashboard_curriculum_middle_title: Yläkoulun opetusmateriaalia
+  dashboard_curriculum_overview: Ala-asteen opetussuunnitelman yleiskatsaus
+  dashboard_debugging: 'Virheen etsintä:'
+  dashboard_download_csv: Lataa CSV
+  dashboard_faq: Usein kysyttyjä kysymyksiä
+  dashboard_faq_k5: Esi- ja alakoulu, usein kysyttyjä kysymyksiä
+  dashboard_filter_all: Kaikki
+  dashboard_filter_by_stage: 'Suodata tason mukaan:'
+  dashboard_framework: Kehikko
+  dashboard_glossary: Sanasto
+  dashboard_grade_k: leikkikoulu
+  dashboard_grade_other: Muut
+  dashboard_high_courses: Vuoden mittaiset lukion kurssit
+  dashboard_hoc_courses: Koodaustunti kaikenikäisille
+  dashboard_hoc_courses_desc: Kokeile jotakin näistä lyhyemmista yhden tunnin harjoitustunneista
+    oppilaittesi kanssa!
+  dashboard_implementation_guide: Toteutusopas
+  dashboard_k5_courses: 20 tunnin kursseja esi- ja alakoulutasolle
+  dashboard_landing_available_courses: Nämä kurssit ovat tällä hetkellä saatavilla
+    sinulle ja oppilaillesi.
+  dashboard_landing_available_title: Saatavilla olevat kurssit
+  dashboard_landing_educator_blog: Lue uutiset ja päivitykset materiaaleihimme Educator
+    -blogistamme
+  dashboard_landing_loading: Lataa...
+  dashboard_landing_more_tutorials: Haluatko nähdä vielä enemmän oppitunteja?
+  dashboard_landing_new_beta: Uutta! Kokeile beta-kurssejamme alakoululaisille.
+  dashboard_landing_new_k5courses: Uutta! Kokeile kurssejamme alakoululaisille.
+  dashboard_landing_news_title: Ala-asteen opettajan materiaalit (vain englanniksi)
+  dashboard_landing_office_hours: Kysy henkilökohtaisesti! Vieraile kuukausittaisella
+    videovastaanotolla.
+  dashboard_landing_print_certificates: Tulosta sertifikaatit kurssin loppuun suorittaneille
+    oppilaille
+  dashboard_landing_print_progress: Tulosta edistyminen
+  dashboard_landing_progress_biggest: Suurimman ryhmäsi eteneminen.
+  dashboard_landing_progress_title: Luokan edistyminen
+  dashboard_landing_students_manage: Tarkastele ja hallinnoi oppilaitasi
+  dashboard_landing_students_title: Oppilaasi
+  dashboard_landing_title: Opettajan kotisivu
+  dashboard_landing_useful_links: Muita hyödyllisiä linkkejä (vain englanniksi)
+  dashboard_landing_video: Katso tämä video
+  dashboard_landing_video_player: Testaa uutta videosoitintamme koulussasi
+  dashboard_landing_view_as_student: Tarkastele sivustoa oppilaana
+  dashboard_landing_view_progress: Tarkastele etenemistä ryhmälle %{biggest_section}
+  dashboard_landing_watch_video: esittelykierros uusiin ominaisuuksiin!
+  dashboard_landing_welcome: Tervetuloa uuteen ja parempaan opettajan päänäyttöön.
+  dashboard_lesson_plans: Tuntisuunnitelma
+  dashboard_login_none: Sähköposti
+  dashboard_login_picture: Kuva
+  dashboard_login_word: Sana
+  dashboard_middle_courses: 20 tunnin yläkoulun kurssit
+  dashboard_navigation_add_students: Lisää oppilaita
+  dashboard_navigation_all_sections: Oppilaiden tunnukset ja edistyminen
+  dashboard_navigation_home_page: Opettajan päänäyttö
+  dashboard_navigation_lesson_plans_resources: Tuntisuunnitelmat ja resurssit
+  dashboard_navigation_manage_students: Hallinnoi oppilaita
+  dashboard_navigation_section: 'Ryhmä: %{section_name}'
+  dashboard_navigation_section_community: Ohje ja yhteisö
+  dashboard_navigation_section_lesson_plans: Tuntisuunnitelmat ja resurssit
+  dashboard_navigation_section_pd: Ammatimainen kehitys
+  dashboard_navigation_section_speakers: Tietotekniikka <br/> Puhujavieraat
+  dashboard_navigation_section_student_progress: Oppilaiden tunnukset ja edistyminen
+  dashboard_navigation_section_teacher_progress: Sinun kurssisi edistyminen
+  dashboard_navigation_student: 'Oppilas: %{student_name}'
+  dashboard_navigation_view_assessments: Arvioinnit
+  dashboard_navigation_view_assessments_surveys: Arvionnit/Tutkimukset
+  dashboard_navigation_view_progress: Edistyminen
+  dashboard_navigation_view_stats: Tilastot
+  dashboard_navigation_view_text_responses: Tekstivastaukset
+  dashboard_overview: Yleiskatsaus
+  dashboard_percent: Prosenttia
+  dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Napsauta
+    tästä</a> nähdäksesi tiedot yksityisyyskäytännöistämme. Voit jakaa sen oppilaille
+    tai tulostaa sen.
+  dashboard_progress_completed_perfect: valmis, täydellinen
+  dashboard_progress_completed_too_many_blocks: valmis, liian monta lohkoa
+  dashboard_progress_furthest_level_attempted: vaikein taso jota yritetty
+  dashboard_progress_in_progress: käynnissä
+  dashboard_progress_not_completed: kesken
+  dashboard_progress_not_started: ei aloitettu
+  dashboard_progress_pair_programming: pariohjelmointi
+  dashboard_progress_submitted: lähetetty
+  dashboard_progress_view: 'Tarkastele etenemistä:'
+  dashboard_puzzle: Tehtävä
+  dashboard_puzzle_solving: 'Tehtävänratkaisu:'
+  dashboard_question: Kysymys
+  dashboard_response: Vastaus
+  dashboard_sections_account_creation_question: Kuka luo oppilaiden tunnukset?
+  dashboard_sections_choose_secret: Jos haluat antaa tunnukset oppilaillesi, valitse
+    ryhmän salaisuustyypiksi joko <b>sana</b> tai <b>kuva</b>.
+  dashboard_sections_close: Sulje
+  dashboard_sections_code_placeholder: 6-merkkinen koodi (ABCDEF)
+  dashboard_sections_email_question: Onko kaikilla oppilailla toimivat sähköpostiosoitteet?
+  dashboard_sections_enter_code: 'Syötä osion koodi:'
+  dashboard_sections_jumbotron_instruction: Luo uusia ryhmiä ja lisää opiskelijoita
+    niihin. Ryhmät auttavat sinua organisoimaan oppilaat pienempiin ryhmiin niin että
+    voit seurata heidän etenemistään ja hallinnoida heidän tilejään.
+  dashboard_sections_login_type_explanation: Tämä taulukko auttaa selittämään minkä
+    kirjautumistavoista, <b>kuva, sana, tai sähköposti</b> haluat valita ryhmään.
+  dashboard_sections_move_to_section: 'Siirry osioon:'
+  dashboard_sections_name: Ryhmän nimi
+  dashboard_sections_new_section: Uusi ryhmä
+  dashboard_sections_other_section: Muu opettaja
+  dashboard_sections_password_account_creation: Oppilaan luoma tekstisalasana
+  dashboard_sections_password_question: Mitä oppilaat käyttävät "salasanana"?
+  dashboard_sections_picture_account_creation: Code.org:n antama kuva
+  dashboard_sections_print_secrets: Voit tulostaa tunnustiedot sisältävät kortit jaettavaksi
+    kullekin oppilaalle.
+  dashboard_sections_secret_none: Jos haluat oppilaidesi hallinnoivan omia tunnuksiaan,
+    mukaanlukien omia salasanojaan, valitse salaisuustyypiksi <b>ei mitään</b>.
+  dashboard_sections_secret_picture: "<b>Kuva</b> antaa sinun asettaa salaisen kuvan
+    jokaiselle oppilaalle, sopii erityisesti nuoremmille oppilaille, jotka eivät osaa
+    vielä kirjoittaa."
+  dashboard_sections_secret_word: "<b>Sana</b> antaa sinun asettaa salaisen sanan
+    jokaiselle oppilaalle."
+  dashboard_sections_sign_in_main: http://code.org ja Napsauta "Kirjaudu"
+  dashboard_sections_sign_in_question: Missä oppilaat kirjautuvat sisään?
+  dashboard_sections_sign_in_unique: '"Hallinnoi oppilaita" -välilehdellä yksilöity
+    verkkosivu'
+  dashboard_sections_switch_section: 'Vaihda ryhmää:'
+  dashboard_sections_table_code: Ryhmän tunnus
+  dashboard_sections_table_course: Kurssi
+  dashboard_sections_table_grade: Taso
+  dashboard_sections_table_pairing_allowed: Pariohjelmointi
+  dashboard_sections_table_secret: Kirjautumisen tyyppi
+  dashboard_sections_table_section: Ryhmä
+  dashboard_sections_table_students: Oppilaat
+  dashboard_sections_word_account_creation: Code.org:n antama sana
+  dashboard_sequence: Komentosarja
+  dashboard_stage: Taso
+  dashboard_standards: Standardit
+  dashboard_student: Oppilas
+  dashboard_student_worksheet: oppilaan tehtävälista
+  dashboard_students_add_multiple: 'Lisää oppilaidesi nimet, yksi kullekin riville:'
+  dashboard_students_completed_levels: Suoritetut tasot
+  dashboard_students_female: Nainen
+  dashboard_students_join_link: Pyydä oppilaitasi luomaan omat tunnuksensa ja liittymään
+    ryhmääsi osoitteessa
+  dashboard_students_male: Mies
+  dashboard_students_name: Nimi
+  dashboard_students_new_section: Olet luonut uuden ryhmän! Lisää nyt oppilaat käyttäen
+    <b>Lisää oppilas</b> ja <b>Lisää useita oppilaita</b> -painikkeita yllä.
+  dashboard_students_no_email: Jos oppilailla ei ole sähköpostiosoitteita, tai haluat
+    luoda tunnukset heidän puolestaan, vaihda ryhmän salaisuustyypiksi <b>sana</b>
+    tai <b>kuva</b>.
+  dashboard_students_print_info: Tulosta kortit oppilaidesi kirjautumistiedoista.
+  dashboard_students_print_page: Tulosta tämä sivu
+  dashboard_students_progress: Edistyminen
+  dashboard_students_reset_picture: Voit nollata oppilaan salaisen kuvan koska tahansa
+    valitsemalla <b>Näytä salaisuus</b> ja sitten <b>Nollaa salaisuus</b>. Uusi salainen
+    kuva luodaan oppilaalle käytettäväksi sisäänkirjautuessa.
+  dashboard_students_reset_word: 'Voit nollata oppilaan salaisen sanan koska tahansa
+    valitsemalla <b>Näytä salaisuus</b> ja sitten <b>Nollaa salaisuus</b>. Uusi salaisten
+    sanojen pari luodaan oppilaalle käytettäväksi sisäänkirjautuessa. '
+  dashboard_students_secret_picture: Salainen kuva
+  dashboard_students_secret_picture_title: Salainen kuva
+  dashboard_students_secret_word: Salainen sana
+  dashboard_students_secret_word_title: Salasana
+  dashboard_students_share_section: 'Jaa tämän ryhmän kirjautumissivu oppilaidesi
+    kanssa:'
+  dashboard_students_total_lines: Koodiriviä
+  dashboard_students_url: Osoite
+  dashboard_submission_in_progress: Kesken
+  dashboard_surveys_answers: Kysely
+  dashboard_teacher: Opettaja
+  dashboard_teacher_worksheet: Opettajan tehtävälista
+  dashboard_view_all_lesson_plans: Katso kaikkia tuntisuunnitelmia
+  download_offline: Lataa offline-versio.
+  educator_notes: Opettajan muistiinpanot
+  edx_beyond_gradelevel: Yliopisto
+  edx_beyond_longdescription: CS50x on Harward Collegen johdanto tietotekniikan ja
+    ohjelmointitaidon älyllisiin haasteisiin pääaineopiskelijoille ja muille, joilla
+    joko on tai ei ole aikaisempaa ohjelmointikokemusta. Sisältöihin kuuluvat abstraktiot,
+    algoritmit, tietorakenteet, kapselointi, resurssienhallinta, tietoturva, ohjelmistotuotanto
+    ja verkkokehitys. Ohjelmointikieliin kuuluvat C, PHP ja JavaScript sekä SQL, CSS
+    ja HTML. CS50x-kurssin kampusversio on Harvardin toiseksi suurin kurssi.
+  edx_beyond_name: Harvard CS50-kurssit
+  edx_beyond_platformtext: Nykyaikaiset selaimet
+  edx_beyond_shortdescription: Harvardin suosituin kurssi
+  email: Sähköposti
+  en: Tietotekniikka
+  enter_country: Syötä maa, jos olet Yhdysvaltojen ulkopuolella
   enter_valid_age: Valitse oikea ikä
   enter_valid_email: Ole hyvä ja syötä toimiva sähköpostiosoite
+  finch_beyond_gradelevel: Yli 8-vuotiaille
+  finch_beyond_longdescription: Finch on uusi robotti tietotekniikan opetukseen. Se
+    on Carnegie Mellonin CREATE laboratorion neljän vuoden tutkimuksen tulos. Finch
+    on suunniteltu antamaan innostava johdanto ohjelmoinnin taitoihin. Siinä on tuki
+    yli tusinalle ohjelmointikielelle ja -ympäristölle, sisältäen useita ympäristöjä,
+    jotka soveltuvat niinkin nuorille kuin kahdeksan vuotiaille oppilaille. Finch
+    suunniteltiin antamaan opiskelijoille mahdollisuus kirjoittaa rikkaita vuorovaikutteisia
+    ohjelmia.
+  finch_beyond_platformtext: Robotin osto
+  finch_beyond_shortdescription: Robotti tietotekniikan opetukseen
+  flappy_gradelevel: 4-104-vuotiaille
+  flappy_heading: Flappy syntymäpäivää, Code.org
+  flappy_longdescription: Käytä "vedä ja pudota" ohjelmointia tehdäksesi oman Flappy
+    Bird-pelin ja muokkaa se erilaisen näköiseksi (Flappy Bird, Flappy Santa, tai
+    mitä tahansa). Lisää peli puhelimeesi yhdellä napsautuksella.
+  flappy_name: Tee Flappy-peli
+  flappy_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
+  flappy_shortcode: räpyttele
+  flappy_shortdescription: Tee oma pelisi - Flappy Bird, Shark tai Submarine
+  flappy_text: Code.org täytti juuri vuoden.<br/><br/> Juhli kanssamme tekemällä oma
+    <b>Flappy</b>-pelisi. Koodaa omat sääntösi ja jaa kavereiden kanssa!
+  footer_about: Tietoja
+  footer_donate: Lahjoita
+  footer_partners: Kumppanit
+  footer_powered_by_aws: Toimii Amazon Web Services -palvelun päällä
+  footer_privacy_policy: Tietosuojakäytäntö
+  footer_support: Tuki
+  footer_terms: Ehdot
+  frozen_gradelevel: Ikä 8+
+  frozen_longdescription: Koodataan Annan ja Elsan kanssa kun he tutkivat jään kauneutta
+    ja taikaa. Tässä pelissä luot lumihiutaleita ja kuvioita luistellen ja luot taianomaisen
+    lumimaan, jonka voit myös jakaa ystäviesi kanssa!
+  frozen_name: Koodaa Annan ja Elsan kanssa
+  frozen_platformtext: Modernit selaimet ja tablettitietokoneet
+  frozen_shortdescription: Liitymme Annan ja Elsan matkaan, kun he tutkivat jään taikaa
+    ja kauneutta ohjelmoinnin avulla.
+  gamelab_name: Pelilabra
+  gender: Sukupuoli
   get_a_certificate_message: Me lähetämme sinulle todistuksen ja lisätietoa miten
     voit  <a href='/learn/beyond'>opiskella lisää Koodaustunnilla oppimasi lisäksi</a>
   get_a_certificate_message_after: Napsauta todistusta ladataksesi tai tulostaaksesi.
@@ -189,133 +660,245 @@ fi-FI:
   get_a_certificate_message_after_markdown: Napsauta todistusta ladataksesi tai tulostaaksesi.
     Jatka sen jälkeen [muilla kursseilla](http://studio.code.org), tai tarkastele
     vaihtoehtoja [Mitä voit oppia ensimmäisen tunnin jälkeen](/learn/beyond).
-  thanks_for_submitting: Kiitos tietojen antamisesta!
-  if_you_enjoyed: Jos nautit oppimisesta, pyydä myös kavereitasi kokeilemaan! Haluamme
-    koko maailman oppivan.
-  personalize_certificate: Nimikoi todistuksesi
-  share_achievement: Jaa saavutuksesi
-  beyond_hour_message: Jatka <a href='http://studio.code.org'>muilla kursseillamme</a>,
-    tai katso <a href='/learn/beyond'>Mitä voit oppia ensimmäisen tunnin jälkeen</a>.
-  leaderboards_for_hoc: Koodaustunnin pistetaulukot.
-  support_url: http://support.code.org/
-  country: Maa
-  city: Kaupunki
-  gender: Sukupuoli
-  boys: Pojat
-  girls: Tytöt
-  give_my_hour: 'Anna tuntini:'
-  girls_team: Tyttöjen joukkue
-  boys_team: Poikien joukkue
-  tell_the_world: Kerro maailmalle!
-  thanks_for_voting: Kiitos äänestämisestä!
-  share_on_facebook: Jaa Facebookissa
-  share_on_twitter: Jaa Twitterissä
-  beyond_an_hour: Koodaustunnin jälkeen
+  get_a_certificate_of_achievement: Hanki todistus suorituksesta
   get_started: Aloita
-  i_agree: Hyväksyn
-  participant_select: "- Valitse -"
-  participant_student: Oppilas
-  participant_parent: Vanhempi
-  participant_educator: Opettaja
-  participant_engineer: Ohjelmistosuunnittelija
-  participant_other: Ei mikään edellä mainituista
-  print_all: Tulosta kaikki
-  print_ice_art: Tulosta jäätaiteesi
-  create_art_with_zombie: tai tee edistyneempää taidetta zombien kanssa
-  i_am_a: Olen
-  never_spam: Me emme koskaan lähetä sinulle roskapostia
-  enter_country: Syötä maa, jos olet Yhdysvaltojen ulkopuolella
-  used_infrequent_updates: Käytetään ainoastaan harvoin tuleviin päivityksiin
-  privacy_practices_children: Lue käytännöistämme lasten yksityisyyden suojaamiseksi
-  petition_thankyou: Kiitos, kun allekirjoitit vetoomuksen
-  continue_learning_header: Jatka opiskelua Koodaustunnin jälkeen
-  continue_learning_body: Vaihtoehtoja on paljon. Voit opiskella verkossa tai paikallisessa
-    oppilaitoksessa tai kesäleirillä.
-  learn_code_studio: Kokeile kursseja Code Studiossa
-  learn_next_level: Jatka seuraavalle tasolle
-  learn_online: Kokeile muita kursseja verkossa
-  learn_classes: Etsi paikallisia oppitunteja
-  learn_back_to_minecraft: Opi lisää Minecraftissa
-  hoc_is_here: "#HourOfCode on tulossa jälleen joulukuussa 5-11. https://youtu.be/KsOIlDT145A."
-  just_did_hoc: 'Suoritin juuri #Koodaustunti - tsekkaa tämä! @codeorg'
-  just_did_course1: Suoritin juuri kurssin 1 - tsekkaa tämä! @codeorg
-  just_did_course2: Suoritin juuri kurssin 2 - tsekkaa tämä! @codeorg
-  just_did_course3: Suoritin juuri kurssin 3 - tsekkaa tämä! @codeorg
-  just_did_course4: Suoritin juuri kurssin 4 - tsekkaa tämä! @codeorg
-  just_did_coursea: Suoritin juuri kurssin A - tarkista tämä! @codeorg
-  just_did_courseb: Suoritin juuri kurssin B - tarkista tämä! @codeorg
-  just_did_coursec: Suoritin juuri kurssin C - tarkista tämä! @codeorg
-  just_did_coursed: Suoritin juuri kurssin D - tarkista tämä! @codeorg
-  just_did_coursee: Suoritin juuri kurssin E - tarkista tämä! @codeorg
-  just_did_coursef: Suoritin juuri kurssin F - tarkista tämä! @codeorg
-  just_did_accelerated: Suoritin juuri nopeutetun kurssin - tsekkaa tämä! @codeorg
-  just_did_hoc_donor: 'Suoritin juuri #Koodaustunnin - Tarkista tämä! (Kiitos %{donor_twitter}
-    tukemisesta @codeorg)'
-  just_did_course_donor: Suoritin juuri kurssin %{course} - käy katsomassa! Kiitos
-    %{donor_twitter} @codeorg tuestasi
-  twitter_teach_cs: Yhdeksän kymmenestä haluaisi, että kouluissa opettaisiin tietotekniikkaa.
-    http://youtu.be/nKIu9yen5nc. Vieraile sivulla https://code.org/.
-  twitter_cs_foundational: Tietotekniikka on perustavaa oppia jokaiselle oppilaalle.
-    https://youtu.be/QvyTEx1wyOY.
-  learn_hoc: Opiskele Koodaustunnilla
-  beyond_hoc: Koodaustunnin jälkeen
-  what_gender: Mikä on sukupuolesi?
   girl: Tyttö
-  boy: Poika
-  help_recruit_coders: Auta meitä hankkimaan lisää koodaajia joukkueeseesi!
+  girls: Tytöt
+  girls_team: Tyttöjen joukkue
+  give_my_hour: 'Anna tuntini:'
+  go: Mene
+  groklearning_beyond_gradelevel: Yläaste +
+  groklearning_beyond_longdescription: Johdantokurssi ohjelmointiin heille, joilla
+    ei ole yhtään ohjelmointikokemusta, käyttäen Python-ohjelmointikieltä. Ainutlaatuinen
+    yhdistelmämme sekä johdantosisältöä että haasteita ohjaa sinut Python-kielen ymmärtämisen
+    kautta itse ohjelmointiin. Olemme opettaneet tämän sisällön eri ikäisille ja taustaisille
+    opiskelijoille  ja olemme varmoja, että kurssi soveltuu myös sinulle.
+  groklearning_beyond_name: Opi Python-ohjelmointia
+  groklearning_beyond_platformtext: Nykyaikaiset verkkoselaimet
+  groklearning_beyond_shortdescription: Perusjohdanto Python-ohjelmointiin
+  groklearning_gradelevel: Yläaste +
+  groklearning_longdescription: Käytä Python-ohjelmointikieltä rakentaaksesi keskustelu-'botin'
+    nimeltä "Eliza" joka toimii robottipsykoterapeuttina. Opetat Elizaa puhumaan ja
+    sanomaan oikean asian. Saatko huijattua ystäväsi luulemaan, että hän onkin ihminen
+    eikä tietokone?
+  groklearning_name: Eliza the Chatterbot Doctor
+  groklearning_platformtext: Nykyaikaiset verkkoselaimet
+  groklearning_shortdescription: Opeta "Eliza"-keskustelurobotti huijaamaan ystäväsi
+    kuvittelemaan häntä ihmiseksi!
+  gumball_name: Gumball
+  hacketyhack_beyond_gradelevel: Lukio
+  hacketyhack_beyond_longdescription: 'Hackety Hack opettaa sinulle ohjelmoinnin perusteita
+    aivan alkeista lähtien. Et tarvitse aikaisempaa ohjelmointikokemusta! Hackety
+    Hack opettaa sinulle Ruby-ohjelmointikielen. Rubyä käytetään kaikenlaisiin ohjelmiin
+    työpöytäsovelluksista webbisivuihin [Huom: vaatii työpöytäasennuksen]'
+  hacketyhack_beyond_name: Opi Rubyä
+  hacketyhack_beyond_platformtext: Työpöytäasennus
+  hacketyhack_beyond_shortdescription: Opi Rubyä perusteista lähtien
+  header_about: Tietoja
+  header_about_contact: Ota yhteyttä
+  header_about_donors: Lahjoittajat
+  header_about_evaluation: Arviointi
+  header_about_faqs: UKK
+  header_about_jobs: Työpaikat
+  header_about_leadership: Johto
+  header_about_news: Uutishuone
+  header_about_partners: Kumppanit
+  header_about_team: Koko joukkue
+  header_about_us: Tietoja meistä
+  header_course_catalog: Kurssiluettelo
+  header_courses: Kurssit
+  header_documentation: Dokumentaatio
+  header_educate_beyond: Muualla kuin Code.org:ssa
+  header_educate_community: Verkkoyhteisö
+  header_educate_elementary: Peruskoulu
+  header_educate_high: Lukio
+  header_educate_hoc: Koodaustunti
+  header_educate_inspire: Innosta opiskelija
+  header_educate_middle: Yläaste
+  header_educate_overview: Kouluttajan yleiskatsaus
+  header_educate_partner: Ryhdy partneriksi
+  header_educate_tools: Työkalut ja videot
+  header_help_support: 'Ohjeet ja tuki '
+  header_help_us: Auta meitä
+  header_home: Etusivu
+  header_learn: Opi
+  header_legal_privacy: Tietosuojakäytäntö
+  header_legal_tos: Käyttöehdot
+  header_my_dashboard: Kojelauta
+  header_project_gallery: Projektit
+  header_report_bug: Ilmoita ongelmasta
+  header_sections: Ryhmät
+  header_stats: Tilastot
+  header_teach: Opeta
+  header_teacher_community: Opettajayhteisö
+  header_tutorials: Oppaat
+  hello: Hei maailma
   help_recruit: Auta meitä hankkimaan lisää koodaajia!
-  lines_of_code: TÄHÄN MENNESSÄ KIRJOITETTU YLI <b># RIVIÄ KOODIA</b>.
-  lines_of_code_alt: "<b>#</b> RIVIÄ OPISKELIJOIDEN KIRJOITTAMAA KOODIA"
-  who_has_done_hoc: 'Kuka on suorittanut #Koodaustunti? @codeorg'
-  who_has_done_hoc_donor: Kuka on tehnyt kodaustunnin? (Kiitos %{donor_twitter} tukemisesta
-    @codeorg)
+  help_recruit_coders: Auta meitä hankkimaan lisää koodaajia joukkueeseesi!
+  help_translate: Auta meitä kääntämisessä.
+  hoc2014_everyone: Kaikki
+  hoc2014_heading: Tule mukaan <a href="http://hourofcode.com">Koodaustuntiin</a><br/>8.–14.
+    joulukuuta 2014<br/>
+  hoc2014_host: Järjestä
+  hoc2014_students: Oppilaat
+  hoc2014_support: Tue &#x25BE;
+  hoc2014_teachers: Opettajat
+  hoc2014_try: Kokeile
+  hoc2014_try_frozen: Taiteilija Frozenin Annan ja Elsan kanssa
+  hoc2014_try_new_tutorial: Betatestaa uusia Koodaustunti-kurssejamme
+  hoc2014_try_new_tutorials: Kokeile uusia Koodaustunti-oppituntejamme
+  hoc2014_try_scrat: Angry Birds, PvZ ja Scrat
+  hoc2014_whatishoc: Mikä on koodaustunti?
+  hoc2018_aquatic_video1: 'Minecraft: Merellinen matka - Esittely'
+  hoc2018_aquatic_video2: 'Minecraft: Merellinen matka - Silmukat'
+  hoc2018_aquatic_video3: 'Minecraft: Merellinen matka - Ehtolauseet'
+  hoc2018_aquatic_video4: 'Minecraft: Merellinen matka - Onnittelut'
+  hoc2018_creativity_create: Luo
+  hoc2018_creativity_what_will_you_create: Mitä luot?
+  hoc2018_dance_amazon_about_future_engineer_button: Lue lisää
+  hoc2018_dance_amazon_scholarship_programs_button: Liity nyt
+  hoc2018_dance_create_your_own_dance_title: Luo oma Dance Party
+  hoc2018_dance_featured_student_creations_title: Valittuja opiskelijoiden luomuksia
+  hoc2018_dance_keep_on_dancing_box_title: Jatka tanssimista
+  hoc2018_dance_keep_on_dancing_button: Aloita osa 2
+  hoc2018_dance_keep_on_dancing_description: Syvennä ensimmäisen oppitunnin osaamistasi
+    laajennetuilla projekti-ideoilla.
+  hoc2018_dance_measure: Tahti
+  hoc2018_dance_measure_colon: 'Tahti:'
+  hoc2018_dance_party_box_description: Koodaa oma Dance Party, jonka voit jakaa ystäviesi
+    kanssa!
+  hoc2018_dance_party_box_title: Tanssibileet
+  hoc2018_dance_party_button: Aloita
+  hoc2018_dance_party_landing_title: Tanssi
+  hoc2018_dance_party_main_heading: Tanssibileet
+  hoc2018_dance_party_subheading: Auta kääntämään Tanssibileet
+  hoc2018_dance_teacher_resources_tile1_button: Tuntisuunnitelma
+  hoc2018_dance_teacher_resources_tile1_description: Tuntisuunnitelmia, todistuksia
+    ja musiikkisuodattimia.
+  hoc2018_dance_teacher_resources_tile2_button: Tietokoneeton tekeminen
+  hoc2018_dance_teacher_resources_tile2_description: Tietokoneita ei tarvita!  Oppikaa
+    koodaamisen käsitteitä ja luokaa koreografia tanssijoille yhdessä.
+  hoc2018_dance_teacher_resources_title: Opettajan resurssit
+  hoc2018_dance_video1: Tanssibileet - Esittely
+  hoc2018_dance_video2: Tanssibileet - Tapahtumat
+  hoc2018_dance_video3: Tanssibileet - Ominaisuudet
+  hoc2018_dance_video4: Tanssibileet - Onnittelut
+  hoc2018_dance_video_title_what_is_creativity: Mitä on luovuus?
+  hoc2018_dance_videos_section_heading: Innostu
+  hoc2018_mc_adventurer_description: Koodin avulla voit viedä Alexin tai Steven seikkailuun.
+  hoc2018_mc_adventurer_title: Minecraft seikkailija
+  hoc2018_mc_aquatic_description: Minecraft on palannut takaisin Hour of Code -tunnille
+    täysin uudella toiminnolla! Matka Minecraftin läpi koodilla.
+  hoc2018_mc_aquatic_title: 'Minecraft: Merellinen matka'
+  hoc2018_mc_back_journey: Minecraft on palannut takaisin Hour of Code -tunnille täysin
+    uudella toiminnolla! Matka Minecraftin läpi koodilla.
+  hoc2018_mc_designer_description: Koodaa eläimiä ja muita Minecraft otuksia omalla
+    Minecraft versiollasi.
+  hoc2018_mc_designer_title: Minecraft suunnittelija
+  hoc2018_mc_details: Useita kieliä | Modernit selaimet | Luokista 2 alkaen
+  hoc2018_mc_download_adventurer: Lataa Minecraft seikkailijan offline-versio.
+  hoc2018_mc_educators_box1_button: Aloitetaan
+  hoc2018_mc_educators_box2_button: Lataa
+  hoc2018_mc_hero_description: Minecraft on palannut takaisin Hour of Code -tunnille
+    täysin uudella toiminnolla! Matka Minecraftin läpi koodilla.
+  hoc2018_mc_hero_title: 'Minecraft: Sankarin matka'
+  hoc2018_mc_homepage_hoc_coming: Koodin hetki on käsillä...
+  hoc2018_mc_homepage_join_us: Liity joukkoomme
+  hoc2018_mc_homepage_try_it: Kokeile
+  hoc2018_mc_homepage_what_create: Mitä luot?
+  hoc2018_mc_journey: Matka Minecraftin läpi koodilla.
+  hoc2018_mc_minecraft_education: Minecraft koulutus
+  hoc2018_mc_no_internet: Onko sinulla nettiyhteys?
+  hoc2018_mc_page_title: Minecraft Koodaustunnin ohjeet
+  hoc2018_mc_short_description_shorter: Minecraft on palannut takaisin Hour of Code
+    -tunnille täysin uudella toiminnolla.
+  hoc2018_mc_start: Aloita
+  hoc2018_mc_teacher_guide: Katso opettajan opas
+  hoc2018_mc_thank_microsoft: Kiitämme Microsoftia visiomme ja tehtävämme tukemisessa
+    ja sen varmistamisessa, että jokaisella lapsella on mahdollisuus oppia tietojenkäsittelytietettä
+    ja taitoja menestyä 2000-luvulla.
+  hoc2018_mc_video_1min: 1 min
+  hoc2018_mc_video_2min: 2 min
+  hoc2018_mc_video_5min: 5 min
+  hoc2018_mc_video_title_anybody_can_learn: Kuka vain voi oppia
+  hoc2018_mc_video_title_cs_intro: Tutustuminen tietotekniikkaan
+  hoc2018_mc_video_title_inspire_girl: Inspiroi tyttö
+  hoc2018_mc_video_title_sports: Tee se. Kuka tahansa voi oppia.
+  hoc2018_mc_watch_videos: Ennen kuin aloitat, katso yksi näistä inspiroivista videoista
+  hoc2019_dance_previous_versions: "Etsitkö edellistä versiota Tanssibileistä?  \nKlikkaa
+    täältä aloittaaksesi [Osan 1](%{dance_2018_link}) ja [Osan 2](%{dance_extras_2018_link})
+    vuodelta 2018."
+  hoc2019_mc_aquatic_description: Tutki vedenalaista maailmaa koodin avulla.
+  hoc2020_mc_available_code_org: Saatavilla Code.org -sivustolla
+  hoc2022_landing_page_create_title: Luo
+  hoc_is_here: "#HourOfCode on tulossa jälleen joulukuussa 5-11. https://youtu.be/KsOIlDT145A."
   hoc_leaderboards: Koodaustunnin pistetaulukot
-  students_and_lines: "%{students} opiskelijaa on suorittanut koodaustunnin ja kirjoittanut
-    %{lines} riviä koodia."
-  start_hoc: Aloita Koodaustunti nyt
-  contact_form_topic_press: Lehdistö/media (haastattelu- tai luentopyyntö)
-  stats_nina: '"Joka ikinen päivä tuotti saman tuloksen &mdash; 100 % sitoutuminen."-Nina
-    Nichols Peery, opettaja'
-  stats_student: '"Tiesin, että tämä oli <b>ainutlaatuinen</b> mahdollisuus."-Mariana
-    Alzate, viidesluokkalainen'
-  stats_michael: '"En ole<b>koskaan</b> nähnyt minun opiskelijoitani niin innostuneena
-    oppimisestaan." - Michael Clark, opettaja'
-  studiobar_title: Tutustu <a href='http://studio.code.org'>Koodistudioon</a>
-  studiobar_title_nolink: Tutustu Koodistudioon
-  studiobar_elementary_title: Alkeiskurssit
-  studiobar_elementary_body: Kolme uutta kurssiamme alakoululaisille
-  studiobar_dance_title: Tanssibileet
-  studiobar_dance_body: Luo ja jaa omat tanssibileesi
-  studiobar_hoc_title: Koodaustunti
-  studiobar_hoc_body: Opi koodaamaan Angry Birdsien kanssa
-  studiobar_flappy_title: Flappy Code
-  studiobar_flappy_body: Tee ja jaa oma Flappy-pelisi
-  studiobar_teacher_title: Tehty opettajille
-  studiobar_teacher_body: Ota Code Studio käyttöön luokassasi
-  studiobar_frozen_title: Koodaustunti
-  studiobar_frozen_body: Luo talven ihmemaa Annan ja Elsan kanssa
-  studiobar_donate_title: Lahjoita
-  studiobar_donate_body: Jokaista lahjoittamaasi dollaria kohden yksi lapsi saa oppia
-  studiobar_shop_title: Kauppa
-  studiobar_shop_body: Murra kaavamaisia käsityksiä. Käytä meidän logoa ylpeänä.
-  homepage_hero_text_malala: "&ldquo;Haastan tytöt kaikista maista oppimaan yhden
-    koodaustunnin&rdquo;  Malala, Nobelin rauhanpalkinnon saaja"
-  homepage_hero_text_susan: |-
-    &ldquo;Jos voit muuttaa teknologian, voit muuttaa maailman.&rdquo;
-    Susan, YouTube:n toimitusjohtaja
+  hoc_overview_dance_2019_subtitle: Koodaa tanssibileet jakaaksesi se ystäviesi kanssa.
+    Esittelyssä Katy Perry, Shawn Mendes, Panic! The Disco, Lil Nas X, Jonas Brothers,
+    Nicki Minaj, ja 34 enemmän!
+  hoc_overview_dance_subtitle: Koodaa tanssibileet jakaaksesi se ystäviesi kanssa.
+    Esittelyssä Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara ja 25 muuta!
+  hoc_overview_dance_title: Tanssibileet
+  hoc_overview_more_resources: Lisätietoja ja resursseja yhteydenpidon varmistamiseksi
+    etäluokkahuoneessasi [virtuaalinen Hour of Code](https://hourofcode.com/us/how-to/virtual)  isännöintioppaassamme
+    . Opiskelijoille, joilla ei ole samoja mahdollisuuksia teknologian käyttöön, jaa
+    tämä paketti [Offline Hour of Code-tehtävät](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf).
+  hoc_overview_partner_activities_body: Koodaustunti -sivustolla on yli 500 tietotekniikan
+    aktiviteettia kaikenikäisille ja kaikille osaamistasoille. Sivuston on kehittänyt
+    Code.org ja sen yhteistyökumppanit.
+  hoc_overview_partner_activities_link: Näytä tehtävät
+  hoc_overview_partner_activities_title: Enemmän toimintoja yhteistyökumppaneilta
+  hoc_overview_start_tutorial: Aloita
+  hoc_overview_view_teacher_guide: Katso opettajan opas
+  homepage_action_text_codevideo: Katso video
+  homepage_action_text_girlvideo: Inspiroi tyttö
+  homepage_action_text_hoc: Koodaustunti jokaiselle opiskelijalle.
+  homepage_action_text_join_us: Liity joukkoomme
+  homepage_action_text_learn: Aloita oppiminen
+  homepage_action_text_num_served: "# käyttäjää"
+  homepage_action_text_sign_up: Rekisteröidy
+  homepage_action_text_signpetition: Allekirjoita vetoomus
+  homepage_action_text_teachervideo: Katso video
+  homepage_action_text_try_it: Kokeile
+  homepage_action_text_volunteers: Teknisiä vapaaehtoistyöntekijöitä tarvitaan
+  homepage_action_text_watchvideo: Katso video
+  homepage_banner_20k_teachers: 20,000 opettajaa koulutettu, ja nyt opettamassa tietotekniikkaa
+    luokkahuoneissa.
+  homepage_banner_20k_teachers_link: Lue lisää
+  homepage_banner_40k_teachers_link: Lue lisää
+  homepage_banner_emailprivacy_link: Lue lisää
+  homepage_banner_link_prizes: 'Liity historian suurimpaan oppimistapahtumaan. '
+  homepage_banner_privacy_link: Lue lisää
+  homepage_banner_text_link: Lue lisää
+  homepage_banner_text_main: Code.org ja College Board liittoutuvat yhteen parantaakseen
+    vähemmistöjen ja naisten osallistumista tietotekniikkaan.
+  homepage_banner_text_prizes: 'Koodaustunti on tulossa taas, joulukuussa 7-13. '
+  homepage_below_hero_announcement_link_text: Lue lisää
+  homepage_diversity_pledge: Tee monipuolisuuslupaus
+  homepage_donors_donate: Lahjoita
+  homepage_donors_seall: Näytä kaikki
+  homepage_gallery_header: Yli %{project_count} miljoonaa Code.org projektia luotu
+  homepage_header_donors: Code.org kiittää tukijoitaan
+  homepage_hero_hoc_is_coming: Tunti koodia on tulossa
+  homepage_hero_hoc_is_here: Koodaustunti on täällä
+  homepage_hero_text_bosh: |-
+    &ldquo;Jos koodaat, voit valita elämäsi suunnan.&rdquo;
+    Chris Bosh
   homepage_hero_text_fistbump: |-
     &ldquo;Älä pelkästään leiki puhelimellasi, ohjelmoi se.&rdquo;
     Presidentti Barack Obama
+  homepage_hero_text_malala: "&ldquo;Haastan tytöt kaikista maista oppimaan yhden
+    koodaustunnin&rdquo;  Malala, Nobelin rauhanpalkinnon saaja"
+  homepage_hero_text_satya: |-
+    &ldquo;Tietotekniikka voi avata parhaat mahdollisuudet maailmassa.&rdquo;
+    Satya, Microsoft:in toimitusjohtaja
   homepage_hero_text_sheryl: |-
     &ldquo;Lapsemme &mdash; mukaan lukien tyttömme &mdash;
     tarvitsevat mahdollisuuden oppia tietotekniikkaa.&rdquo;
     Sheryl, Facebook:in operatiivinen johtaja
-  homepage_hero_text_satya: |-
-    &ldquo;Tietotekniikka voi avata parhaat mahdollisuudet maailmassa.&rdquo;
-    Satya, Microsoft:in toimitusjohtaja
-  homepage_hero_text_bosh: |-
-    &ldquo;Jos koodaat, voit valita elämäsi suunnan.&rdquo;
-    Chris Bosh
+  homepage_hero_text_stat_loc: "#loc opiskelijoiden kirjoittamia koodirivejä"
+  homepage_hero_text_stat_served: 'Koodaustunti: #served tarjolla'
+  homepage_hero_text_stat_students: "#student_count opiskelijoiden tilejä Code Studio:ssa"
   homepage_hero_text_student1: |-
     &ldquo;Nämä taidot ovat muuttaneet tulevaisuuteni. Puhumattakaan siitä, että se on puhdasta hauskuutta.&rdquo;
     Luna, 7. luokkalainen
@@ -329,1109 +912,159 @@ fi-FI:
     haluaa.&rdquo; \nMaya, 2. luokka"
   homepage_hero_text_student5: "&ldquo;Tietotekniikka ei ole muita varten. Se on sinua
     varten, tässä, juuri nyt.&rdquo; \nGeraldo, opettaja"
+  homepage_hero_text_susan: |-
+    &ldquo;Jos voit muuttaa teknologian, voit muuttaa maailman.&rdquo;
+    Susan, YouTube:n toimitusjohtaja
   homepage_hero_text_teacher1: "&ldquo;Koodaaminen kipinöi luovuutta, innostusta ja
     innovaatiota &mdash; \njotka kaikki ovat välttämätömiä millä vain uralla.&rdquo;\nFloresa,
     opettaja"
   homepage_hero_text_teacher2: |-
     &ldquo;Tämä ohjelma sai 100% opiskelijoistani sitoutuviksi, osallistuviksi ja mukaan.&rdquo;
     Adam, opettaja
-  homepage_hero_text_stat_loc: "#loc opiskelijoiden kirjoittamia koodirivejä"
-  homepage_hero_text_stat_students: "#student_count opiskelijoiden tilejä Code Studio:ssa"
-  homepage_hero_text_stat_served: 'Koodaustunti: #served tarjolla'
-  homepage_hero_hoc_is_coming: Tunti koodia on tulossa
-  homepage_hero_hoc_is_here: Koodaustunti on täällä
-  homepage_slot_text_hoc: Koodaustunti
-  homepage_slot_text_frozen: Frozen Annan ja Elsan kanssa
-  homepage_slot_text_teacher: Opettajan päänäyttö
-  homepage_slot_text_studio: Kaikki oppituntimme
-  homepage_slot_text_course4: Kurssi 4
-  homepage_slot_text_shop: Kauppa
-  homepage_slot_text_flappy: Flappy Code
-  homepage_action_text_hoc: Koodaustunti jokaiselle opiskelijalle.
-  homepage_action_text_num_served: "# käyttäjää"
-  homepage_action_text_join_us: Liity joukkoomme
-  homepage_action_text_sign_up: Rekisteröidy
-  homepage_action_text_try_it: Kokeile
-  homepage_action_text_volunteers: Teknisiä vapaaehtoistyöntekijöitä tarvitaan
-  homepage_action_text_codevideo: Katso video
-  homepage_action_text_teachervideo: Katso video
-  homepage_action_text_watchvideo: Katso video
-  homepage_action_text_girlvideo: Inspiroi tyttö
-  homepage_action_text_learn: Aloita oppiminen
-  homepage_action_text_signpetition: Allekirjoita vetoomus
   homepage_signpetition_dropdown: Allekirjoita vetoomuksemme &#x25BE;
   homepage_signpetition_dropdown_text: Hyväksyn
-  homepage_diversity_pledge: Tee monipuolisuuslupaus
-  homepage_banner_text_prizes: 'Koodaustunti on tulossa taas, joulukuussa 7-13. '
-  homepage_banner_link_prizes: 'Liity historian suurimpaan oppimistapahtumaan. '
-  homepage_banner_text_main: Code.org ja College Board liittoutuvat yhteen parantaakseen
-    vähemmistöjen ja naisten osallistumista tietotekniikkaan.
-  homepage_banner_text_link: Lue lisää
-  homepage_banner_privacy_link: Lue lisää
-  homepage_banner_20k_teachers: 20,000 opettajaa koulutettu, ja nyt opettamassa tietotekniikkaa
-    luokkahuoneissa.
-  homepage_banner_20k_teachers_link: Lue lisää
-  homepage_banner_emailprivacy_link: Lue lisää
-  homepage_banner_40k_teachers_link: Lue lisää
-  homepage_slot_text_title_hoc: Koodaustunti
+  homepage_slot_text_blurb_advocates: Tue työtämme
+  homepage_slot_text_blurb_at_home: Näillä materiaaleilla se käy helposti
+  homepage_slot_text_blurb_educators: Opeta opiskelijoillesi
   homepage_slot_text_blurb_hoc: Kuka tahansa voi oppia. Aloita jo tänään
-  homepage_slot_text_link_hoc: Kokeile koodaustuntia
-  homepage_slot_text_link_host: Järjestä Koodaustunti
-  homepage_slot_text_link_hocserved: "# käyttäjää"
-  homepage_solot_text_link_volunteer: Toimi vapaaehtoisena Koodaustunnissa
-  homepage_slot_text_title_students: Oppilaat
   homepage_slot_text_blurb_students: Tutki kaikki oppaat
   homepage_slot_text_blurb_students_courses: Tutustu kursseihimme
-  homepage_slot_text_link_codestudio: Kokeile Koodistudiota
-  homepage_slot_text_link_local: Etsi kerho läheltäsi
-  homepage_slot_text_link_othercourses: Muut verkkokurssit
-  homepage_slot_text_title_educators: Opettajat
-  homepage_slot_text_blurb_educators: Opeta opiskelijoillesi
-  homepage_slot_text_link_elementary: Peruskoulu
-  homepage_slot_text_link_middle: Yläaste
-  homepage_slot_text_link_high: Lukio
-  homepage_slot_text_link_k5: Kursseja luokkatasoille esi-5
-  homepage_slot_text_link_fullcurriculum: Katso koko opetussuunnitelma
-  homepage_slot_text_link_pd: Ammatillinen kehittyminen
-  homepage_slot_text_title_advocates: Kannattajat
-  homepage_slot_text_blurb_advocates: Tue työtämme
-  homepage_slot_text_link_stats: Katso tilastot
+  homepage_slot_text_course4: Kurssi 4
+  homepage_slot_text_flappy: Flappy Code
+  homepage_slot_text_frozen: Frozen Annan ja Elsan kanssa
+  homepage_slot_text_hoc: Koodaustunti
   homepage_slot_text_link_buy: Tule mukaan
+  homepage_slot_text_link_codestudio: Kokeile Koodistudiota
   homepage_slot_text_link_donate: Tee lahjoitus
+  homepage_slot_text_link_elementary: Peruskoulu
+  homepage_slot_text_link_fullcurriculum: Katso koko opetussuunnitelma
+  homepage_slot_text_link_high: Lukio
+  homepage_slot_text_link_hoc: Kokeile koodaustuntia
+  homepage_slot_text_link_hocserved: "# käyttäjää"
+  homepage_slot_text_link_host: Järjestä Koodaustunti
+  homepage_slot_text_link_k5: Kursseja luokkatasoille esi-5
+  homepage_slot_text_link_local: Etsi kerho läheltäsi
+  homepage_slot_text_link_middle: Yläaste
+  homepage_slot_text_link_othercourses: Muut verkkokurssit
+  homepage_slot_text_link_pd: Ammatillinen kehittyminen
   homepage_slot_text_link_shop: T-paitoja, hattuja & muuta
-  homepage_gallery_header: Yli %{project_count} miljoonaa Code.org projektia luotu
-  homepage_header_donors: Code.org kiittää tukijoitaan
-  homepage_donors_seall: Näytä kaikki
-  homepage_donors_donate: Lahjoita
-  homepage_below_hero_announcement_link_text: Lue lisää
-  contact_form_topic_student: Olen oppilas
-  contact_form_topic_parent: Olen vanhempi
-  contact_form_topic_teacher: Olen opettaja
-  contact_form_topic_outside_us: Olen USA:n ulkopuolella
-  contact_form_topic_contribution: Lahjoitus hyväntekeväisyyteen
-  contact_form_topic_partner: Haluan tehdä yhteistyötä
-  contact_form_topic_other: Muut
-  contact_form_label_topic: Aihe
-  contact_form_label_email: Sähköpostiosoitteesi
-  contact_form_label_message: Viesti
-  contact_form_label_submit: Lähetä viesti
-  class_submission_in_school: Koulussa
-  class_submission_in_school_daily_programming_course: Päivittäinen ohjelmointikurssi
-  class_submission_in_school_ap_computer_science: Pohjois-Amerikkalainen ylioppilastason
-    tietotekniikka
-  class_submission_in_school_full_university_cs_curriculum: Täysi tietojenkäsittelytieteen
-    oppimäärä yliopistossa
-  class_submission_in_school_robotics_club: Robotiikkakerho
-  class_submission_in_school_programming_integrated_in_other_classes: Ohjelmointi
-    yhdistettynä muihin oppiaineisiin (matematiikka, tiede, jne.)
-  class_submission_in_school_summer_school_cs_program: Kesäkoulun tietojenkäsittelytieteen
-    ohjelma
-  class_submission_in_school_exploring_computer_science: Tutustu tietotekniikkaan
-  class_submission_in_school_other: Muualla koulussa
-  class_submission_out_of_school: Koulun ulkopuolella
-  class_submission_out_of_school_summer_camp: Kesäleiri
-  class_submission_out_of_school_afterschool_program: lltapäiväkerho
-  class_submission_out_of_school_all-day_workshop: Koko päivän työpaja (enintään viikko)
-  class_submission_out_of_school_multi-week_workshop: Usean viikon työpaja
-  class_submission_out_of_school_other: Muu koulun jälkeen tapahtuva
-  class_submission_online: Verkossa
-  class_submission_online_programming_class: Ohjelmointikurssi verkossa
-  class_submission_online_teacher_resource: Opettajan materiaali verkossa
-  class_submission_online_other: Muu verkossa
-  class_submission_level_preschool: Esikoulu
-  class_submission_level_elementary: Ala-aste
-  class_submission_level_middle_school: Yläaste
-  class_submission_level_high_school: Lukio
-  class_submission_level_college: Yliopisto / korkeakoulu
-  class_submission_level_vocational: Ammatillinen opetus
-  class_submission_languages_other: Muu kieli(kielet)
-  playlab_choose_theme: Valitse Pelilabra-teemasi
-  playlab_classic_title: Klassinen
-  playlab_gumball_title: Gumball
-  playlab_iceage_title: Ice Age - Tulossa pian
-  playlab_iceage_title_live: Jääkausi
-  starwars_subtitle: Kasaa koodista Galaksi
-  starwars_javascript_title: JavaScript
-  starwars_javascript_description: Käytä raahattavia koodipalikoita ja JavaScriptiä.
-  starwars_javascript_specs: Vain englanti | Modernit selaimet | Yli 11-vuotiaille
-  starwars_blocks_title: lohkot
-  starwars_blocks_description: Käytä vedettäviä ja tiputettavia lohkoja.
-  starwars_blocks_specs: Monia kieliä | Modernit selaimet, älypuhelimet, tabletit
-    | Ikävuodet 6-10
-  starwars_platform_text: Nykyaikaiset selaimet, älypuhelimet, tabletit
-  mc_name: Minecraft Koodaustunti
-  mc_longdescription: Käytä koodipalikoita viedäksesi Steven tai Alexin seikkailulle
-    läpi Minecraft-maailman
-  mc_shortdescription: Käytä koodipalikoita viedäksesi Steven tai Alexin seikkailulle
-    läpi Minecraft-maailman
-  mc_gradelevel: 4-104-vuotiaille
-  mc_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
-  mc_specs: Useita kieliä | Modernit selaimet | Yli 6-vuotiaille
-  minecraft_agent: 'Minecraft: Sankarin matka'
-  minecraft_designer: Minecraft suunnittelija
-  minecraft_adventurer: Minecraft seikkailija
-  minecraft_tutorials: Minecraft Koodaustunnin ohjeet
-  minecraft_specs: Useita kieliä | Modernit selaimet | Luokista 2 alkaen
-  minecraft_agent_description: Minecraft on palannut takaisin Hour of Code -tunnille
-    täysin uudella toiminnolla! Matka Minecraftin läpi koodilla.
-  minecraft_agent_button: Aloita
-  minecraft_designer_description: Koodaa eläimiä ja muita Minecraft otuksia omalla
-    Minecraft versiollasi.
-  minecraft_designer_button: Aloita
-  minecraft_adventurer_description: Koodin avulla voit viedä Alexin tai Steven seikkailuun.
-  minecraft_adventurer_button: Aloita
-  minecraft_no_internet: Onko sinulla nettiyhteys?
-  minecraft_download_adventurer: Lataa Minecraft seikkailijan offline-versio.
-  minecraft_subtitle: Minecraft Koodaustunti
-  sports_page_title: Koodaustunti Urheilua
-  sports_og_title: Tee se. Kuka tahansa voi oppia.
-  sports_watch_video: Katso video
-  sports_video_title: Tee se. Kuka tahansa voi oppia.
-  sports_select_theme: Valitse tutorialin teema
-  sports_basketball_title: Tee koripallopeli
-  sports_featured_athletes: Suositeltavat urheilijat
-  sports_athletes_title: Suositeltavat urheilijat
-  watch_inspirational_videos: Ennen kuin aloitat, katso yksi näistä inspiroivista
-    videoista
-  video_title_inspire_girl: Inspiroi tyttö
-  video_title_cs_intro: Tutustuminen tietotekniikkaan
-  video_title_anybody_can_learn: Kuka vain voi oppia
-  video_title_draymond_green: Kooditunti Draymond Greenin kanssa
-  video_1min: 1 min
-  video_2min: 2 min
-  video_5min: 5 min
-  speak_another_language: Puhutko muuta kieltä?
-  help_translate: Auta meitä kääntämisessä.
-  no_internet: Onko sinulla nettiyhteys?
-  download_offline: Lataa offline-versio.
-  are_you_teacher: Oletko opettaja?
-  review_lesson_plan: Tarkista tuntisuunnitelma ja muita opettajien resursseja.
-  volunteer_engineer_submission_title: Inspiroi opiskelijoita ja toimi vapaaehtoisena
-    Koodaustunnille.
-  volunteer_engineer_submission_subtitle_generic: '100 000 opettajaa aikovat järjestää
-    Koodaustunnin luokissaan tänä vuonna, Joulukuussa 7-13, 2015. He tarvitsevat apuasi! '
-  volunteer_engineer_submission_update_information: Päivitä tietosi
-  volunteer_engineer_submission_header_shared: Tietoa jaetaan opettajille vapaaehtoisten
-    kartasta
-  volunteer_engineer_submission_field_name: Nimi
-  volunteer_engineer_submission_field_name_placeholder: Koko nimi
-  volunteer_engineer_submission_field_company: Yritys (tai yliopisto)
-  volunteer_engineer_submission_field_company_placeholder: Yritys (tai yliopisto)
-  volunteer_engineer_submission_field_experience_level: Kokemustaso
-  volunteer_engineer_submission_field_location: Sijainti
-  volunteer_engineer_submission_field_location_desc: Sijaintisi näkyy kartalla ja
-    sen avulla opettajat voivat etsiä lähialueeltaan vapaaehtoisia. Jos olet huolissasi
-    yksityisyydensuojastasi, käytä vain työ/kouluosoitettasi tai mainitse vain pelkkä
-    kaupunki.
-  volunteer_engineer_submission_field_location_placeholder: Postinumero, kaupunki
-    ja osavaltio/maa tai katuosoite
-  volunteer_engineer_submission_field_location_flexibility: Voin auttaa Koodaustuntia...
-    (Valitse kaikki sopivat vaihtoehdot)
-  volunteer_engineer_submission_checkbox_after_hoc: Olen kiinnostunut vapaaehtoistyöstä
-    Koodaustunnin jälkeen
-  volunteer_engineer_submission_field_linkedin: LinkedIn-profiili
-  volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
-  volunteer_engineer_submission_field_facebook: Facebook-profiili
-  volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
-  volunteer_engineer_submission_field_description: Kuvaus
-  volunteer_engineer_submission_field_description_desc: Kuvaa tietotekniikan osaamisesi
-    ja mitä apua voisit tarjota vapaaehtoisena paikallisille opettajille.
-  volunteer_engineer_submission_header_private: Tiedot ovat luottamuksellisia ja niitä
-    ei koskaan jaeta
-  volunteer_engineer_submission_field_email: Sähköpostiosoite
-  volunteer_engineer_submission_field_email_desc: Sähköpostiosoitettasi ei koskaan
-    jaeta, mutta lähetämme sinulle pyyntöjä opettajilta.
-  volunteer_engineer_submission_field_email_placeholder: Sähköpostiosoite
-  volunteer_engineer_submission_field_email_preference_yes: Kyllä
-  volunteer_engineer_submission_field_email_preference_no: Ei
-  volunteer_engineer_submission_submit: Jatka
-  volunteer_engineer_submission_commitment_uncertain: Epävarma
-  volunteer_engineer_submission_commitment_one_hr_per_week: tunti viikossa
-  volunteer_engineer_submission_commitment_three_hrs_per_week: 3 tuntia viikossa
-  volunteer_engineer_submission_commitment_five_hrs_per_week: 5 tuntia viikossa
-  volunteer_engineer_submission_commitment_now_and_then: Silloin tällöin
-  volunteer_engineer_submission_commitment_annually: 2 - 3 kertaa vuodessa
-  volunteer_engineer_submission_commitment_monthly: Pari tuntia kuukaudessa
-  volunteer_engineer_submission_commitment_weekly: Pari tuntia viikossa
-  volunteer_engineer_submission_commitment_more: Lisää
-  volunteer_engineer_submission_location_flexibility_onsite: Paikanpäällä koulussa
-  volunteer_engineer_submission_location_flexibility_remote: Mentorointi etänä (opettajien
-    tai oppilaiden)
-  volunteer_engineer_submission_location_flexibility_curriculum: Halukas ottamaan
-    osaa avoimen lähdekoodin oppisuunnitelmaprojekteihin
-  volunteer_engineer_submission_experience_unspecified: Määrittelemätön
-  volunteer_engineer_submission_experience_university_student_or_researcher: Nykyinen
-    yliopisto-opiskelija (tai tutkija)
-  volunteer_engineer_submission_experience_software_professional: Ohjelmistoammattilainen
-  volunteer_engineer_submission_distance_8: 8 km
-  volunteer_engineer_submission_distance_16: 16km
-  volunteer_engineer_submission_distance_24: 24km
-  volunteer_engineer_submission_distance_32: 32 km
-  volunteer_engineer_submission_num_volunteers_5: 5 vapaaehtoistyöntekijää
-  volunteer_engineer_submission_num_volunteers_10: 10 vapaaehtoistyöntekijää
-  volunteer_engineer_submission_num_volunteers_25: 25 vapaaehtoistyöntekijää
-  volunteer_engineer_submission_num_volunteers_50: 50 vapaaehtoistyöntekijää
-  petition_age: Ikä
-  dashboard_announce_learn_more_button: Lue lisää
-  dashboard_landing_title: Opettajan kotisivu
-  dashboard_landing_welcome: Tervetuloa uuteen ja parempaan opettajan päänäyttöön.
-  dashboard_landing_video: Katso tämä video
-  dashboard_landing_watch_video: esittelykierros uusiin ominaisuuksiin!
-  dashboard_landing_view_as_student: Tarkastele sivustoa oppilaana
-  dashboard_landing_students_title: Oppilaasi
-  dashboard_landing_students_manage: Tarkastele ja hallinnoi oppilaitasi
-  dashboard_landing_news_title: Ala-asteen opettajan materiaalit (vain englanniksi)
-  dashboard_landing_new_beta: Uutta! Kokeile beta-kurssejamme alakoululaisille.
-  dashboard_landing_new_k5courses: Uutta! Kokeile kurssejamme alakoululaisille.
-  dashboard_landing_useful_links: Muita hyödyllisiä linkkejä (vain englanniksi)
-  dashboard_landing_office_hours: Kysy henkilökohtaisesti! Vieraile kuukausittaisella
-    videovastaanotolla.
-  dashboard_landing_print_certificates: Tulosta sertifikaatit kurssin loppuun suorittaneille
-    oppilaille
-  dashboard_landing_educator_blog: Lue uutiset ja päivitykset materiaaleihimme Educator
-    -blogistamme
-  dashboard_landing_video_player: Testaa uutta videosoitintamme koulussasi
-  dashboard_landing_progress_title: Luokan edistyminen
-  dashboard_landing_progress_biggest: Suurimman ryhmäsi eteneminen.
-  dashboard_landing_view_progress: Tarkastele etenemistä ryhmälle %{biggest_section}
-  dashboard_landing_print_progress: Tulosta edistyminen
-  dashboard_landing_available_title: Saatavilla olevat kurssit
-  dashboard_landing_available_courses: Nämä kurssit ovat tällä hetkellä saatavilla
-    sinulle ja oppilaillesi.
-  dashboard_landing_more_tutorials: Haluatko nähdä vielä enemmän oppitunteja?
-  dashboard_hoc_courses: Koodaustunti kaikenikäisille
-  dashboard_hoc_courses_desc: Kokeile jotakin näistä lyhyemmista yhden tunnin harjoitustunneista
-    oppilaittesi kanssa!
-  dashboard_k5_courses: 20 tunnin kursseja esi- ja alakoulutasolle
-  dashboard_middle_courses: 20 tunnin yläkoulun kurssit
-  dashboard_high_courses: Vuoden mittaiset lukion kurssit
-  dashboard_course_csina: Tietotekniikka algebrassa
-  dashboard_course_csins: Tietotekniikka luonnontieteissä
-  dashboard_course_csins_desc: Code.org, yhteistyössä GUTS-projektin kanssa, tarjoavat
-    mallinnus- ja simulointipainotteisen johdannon tietotekniikan käsitteisiin.
-  dashboard_course_ecs: Tutustu tietotekniikkaan
-  dashboard_landing_loading: Lataa...
-  dashboard_action_cancel: Peru
-  dashboard_action_delete: Poista
-  dashboard_action_delete_yes: Kyllä
-  dashboard_action_delete_no: Ei
-  dashboard_action_confirm: Poista?
-  dashboard_action_done: Valmis
-  dashboard_surveys_answers: Kysely
-  dashboard_percent: Prosenttia
-  dashboard_filter_by_stage: 'Suodata tason mukaan:'
-  dashboard_filter_all: Kaikki
-  dashboard_download_csv: Lataa CSV
-  dashboard_navigation_home_page: Opettajan päänäyttö
-  dashboard_navigation_section_student_progress: Oppilaiden tunnukset ja edistyminen
-  dashboard_navigation_section_teacher_progress: Sinun kurssisi edistyminen
-  dashboard_navigation_section_lesson_plans: Tuntisuunnitelmat ja resurssit
-  dashboard_navigation_section_community: Ohje ja yhteisö
-  dashboard_navigation_section_pd: Ammatimainen kehitys
-  dashboard_navigation_section_speakers: Tietotekniikka <br/> Puhujavieraat
-  dashboard_navigation_all_sections: Oppilaiden tunnukset ja edistyminen
-  dashboard_navigation_view_progress: Edistyminen
-  dashboard_navigation_view_text_responses: Tekstivastaukset
-  dashboard_navigation_view_assessments: Arvioinnit
-  dashboard_navigation_view_assessments_surveys: Arvionnit/Tutkimukset
-  dashboard_navigation_add_students: Lisää oppilaita
-  dashboard_navigation_manage_students: Hallinnoi oppilaita
-  dashboard_navigation_lesson_plans_resources: Tuntisuunnitelmat ja resurssit
-  dashboard_navigation_view_stats: Tilastot
-  dashboard_navigation_section: 'Ryhmä: %{section_name}'
-  dashboard_navigation_student: 'Oppilas: %{student_name}'
-  dashboard_progress_not_started: ei aloitettu
-  dashboard_progress_in_progress: käynnissä
-  dashboard_progress_not_completed: kesken
-  dashboard_progress_completed_too_many_blocks: valmis, liian monta lohkoa
-  dashboard_progress_completed_perfect: valmis, täydellinen
-  dashboard_progress_furthest_level_attempted: vaikein taso jota yritetty
-  dashboard_progress_submitted: lähetetty
-  dashboard_progress_view: 'Tarkastele etenemistä:'
-  dashboard_progress_pair_programming: pariohjelmointi
-  dashboard_sections_new_section: Uusi ryhmä
-  dashboard_sections_jumbotron_instruction: Luo uusia ryhmiä ja lisää opiskelijoita
-    niihin. Ryhmät auttavat sinua organisoimaan oppilaat pienempiin ryhmiin niin että
-    voit seurata heidän etenemistään ja hallinnoida heidän tilejään.
-  dashboard_sections_table_section: Ryhmä
-  dashboard_sections_table_secret: Kirjautumisen tyyppi
-  dashboard_sections_table_grade: Taso
-  dashboard_sections_table_course: Kurssi
-  dashboard_sections_table_pairing_allowed: Pariohjelmointi
-  dashboard_sections_table_students: Oppilaat
-  dashboard_sections_table_code: Ryhmän tunnus
-  dashboard_sections_name: Ryhmän nimi
-  dashboard_sections_choose_secret: Jos haluat antaa tunnukset oppilaillesi, valitse
-    ryhmän salaisuustyypiksi joko <b>sana</b> tai <b>kuva</b>.
-  dashboard_sections_secret_word: "<b>Sana</b> antaa sinun asettaa salaisen sanan
-    jokaiselle oppilaalle."
-  dashboard_sections_secret_picture: "<b>Kuva</b> antaa sinun asettaa salaisen kuvan
-    jokaiselle oppilaalle, sopii erityisesti nuoremmille oppilaille, jotka eivät osaa
-    vielä kirjoittaa."
-  dashboard_sections_secret_none: Jos haluat oppilaidesi hallinnoivan omia tunnuksiaan,
-    mukaanlukien omia salasanojaan, valitse salaisuustyypiksi <b>ei mitään</b>.
-  dashboard_sections_print_secrets: Voit tulostaa tunnustiedot sisältävät kortit jaettavaksi
-    kullekin oppilaalle.
-  dashboard_sections_switch_section: 'Vaihda ryhmää:'
-  dashboard_sections_close: Sulje
-  dashboard_sections_move_to_section: 'Siirry osioon:'
-  dashboard_sections_enter_code: 'Syötä osion koodi:'
-  dashboard_sections_code_placeholder: 6-merkkinen koodi (ABCDEF)
-  dashboard_sections_other_section: Muu opettaja
-  dashboard_students_add_multiple: 'Lisää oppilaidesi nimet, yksi kullekin riville:'
-  dashboard_students_new_section: Olet luonut uuden ryhmän! Lisää nyt oppilaat käyttäen
-    <b>Lisää oppilas</b> ja <b>Lisää useita oppilaita</b> -painikkeita yllä.
-  dashboard_students_name: Nimi
-  dashboard_students_progress: Edistyminen
-  dashboard_students_male: Mies
-  dashboard_students_female: Nainen
-  dashboard_students_completed_levels: Suoritetut tasot
-  dashboard_students_total_lines: Koodiriviä
-  dashboard_students_share_section: 'Jaa tämän ryhmän kirjautumissivu oppilaidesi
-    kanssa:'
-  dashboard_students_print_info: Tulosta kortit oppilaidesi kirjautumistiedoista.
-  dashboard_students_secret_picture_title: Salainen kuva
-  dashboard_students_secret_picture: Salainen kuva
-  dashboard_students_reset_picture: Voit nollata oppilaan salaisen kuvan koska tahansa
-    valitsemalla <b>Näytä salaisuus</b> ja sitten <b>Nollaa salaisuus</b>. Uusi salainen
-    kuva luodaan oppilaalle käytettäväksi sisäänkirjautuessa.
-  dashboard_students_secret_word_title: Salasana
-  dashboard_students_secret_word: Salainen sana
-  dashboard_students_reset_word: 'Voit nollata oppilaan salaisen sanan koska tahansa
-    valitsemalla <b>Näytä salaisuus</b> ja sitten <b>Nollaa salaisuus</b>. Uusi salaisten
-    sanojen pari luodaan oppilaalle käytettäväksi sisäänkirjautuessa. '
-  dashboard_students_join_link: Pyydä oppilaitasi luomaan omat tunnuksensa ja liittymään
-    ryhmääsi osoitteessa
-  dashboard_students_no_email: Jos oppilailla ei ole sähköpostiosoitteita, tai haluat
-    luoda tunnukset heidän puolestaan, vaihda ryhmän salaisuustyypiksi <b>sana</b>
-    tai <b>kuva</b>.
-  dashboard_students_print_page: Tulosta tämä sivu
-  dashboard_students_url: Osoite
-  dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Napsauta
-    tästä</a> nähdäksesi tiedot yksityisyyskäytännöistämme. Voit jakaa sen oppilaille
-    tai tulostaa sen.
-  dashboard_curriculum_k5_title: Esi- ja ala-koulun opetusmateriaalia
-  dashboard_curriculum_middle_title: Yläkoulun opetusmateriaalia
-  dashboard_curriculum_high_title: Lukion opetusmateriaalia
-  dashboard_lesson_plans: Tuntisuunnitelma
-  dashboard_view_all_lesson_plans: Katso kaikkia tuntisuunnitelmia
-  dashboard_course1: 'Kurssi 1:'
-  dashboard_course2: 'Kurssi 2:'
-  dashboard_course3: 'Kurssi 3:'
-  dashboard_course4: 'Kurssi 4 (beta): '
-  dashboard_curriculum: Opetussuunnitelma
-  dashboard_curriculum_overview: Ala-asteen opetussuunnitelman yleiskatsaus
-  dashboard_overview: Yleiskatsaus
-  dashboard_sequence: Komentosarja
-  dashboard_framework: Kehikko
-  dashboard_standards: Standardit
-  dashboard_implementation_guide: Toteutusopas
-  dashboard_glossary: Sanasto
-  dashboard_classroom_strategies: Luokkaopetuksen lähestymistapoja opettajille
-  dashboard_debugging: 'Virheen etsintä:'
-  dashboard_puzzle_solving: 'Tehtävänratkaisu:'
-  dashboard_student_worksheet: oppilaan tehtävälista
-  dashboard_teacher_worksheet: Opettajan tehtävälista
-  dashboard_curriculum_csina: 'Tietotekniikka algebrassa:'
-  dashboard_curriculum_csins: 'Tietotekniikka luonnontieteissä:'
-  dashboard_curriculum_csp: 'Tietojenkäsittelytieteiden alkeet:'
-  dashboard_curriculum_ecs: 'Tutustu tietotekniikkaan:'
-  dashboard_grade_k: leikkikoulu
-  dashboard_grade_other: Muut
-  dashboard_login_word: Sana
-  dashboard_login_picture: Kuva
-  dashboard_login_none: Sähköposti
-  dashboard_stage: Taso
-  dashboard_puzzle: Tehtävä
-  dashboard_question: Kysymys
-  dashboard_response: Vastaus
-  dashboard_correctness_correct: Oikein
-  dashboard_submission_in_progress: Kesken
-  stats_hoc_2013_heading: 'Uskomattomia tilastoja viime vuoden Koodaustunnista. Vain
-    yhdessä viikossa:'
-  stats_hoc_2013_image_alt: Tilastoja vuoden 2013 Koodaustunnista
-  dashboard_teacher: Opettaja
-  dashboard_student: Oppilas
-  dashboard_sections_email_question: Onko kaikilla oppilailla toimivat sähköpostiosoitteet?
-  dashboard_sections_account_creation_question: Kuka luo oppilaiden tunnukset?
-  dashboard_sections_password_question: Mitä oppilaat käyttävät "salasanana"?
-  dashboard_sections_picture_account_creation: Code.org:n antama kuva
-  dashboard_sections_word_account_creation: Code.org:n antama sana
-  dashboard_sections_sign_in_question: Missä oppilaat kirjautuvat sisään?
-  dashboard_sections_sign_in_unique: '"Hallinnoi oppilaita" -välilehdellä yksilöity
-    verkkosivu'
-  dashboard_sections_sign_in_main: http://code.org ja Napsauta "Kirjaudu"
-  dashboard_sections_password_account_creation: Oppilaan luoma tekstisalasana
-  dashboard_sections_login_type_explanation: Tämä taulukko auttaa selittämään minkä
-    kirjautumistavoista, <b>kuva, sana, tai sähköposti</b> haluat valita ryhmään.
-  dashboard_faq: Usein kysyttyjä kysymyksiä
-  dashboard_faq_k5: Esi- ja alakoulu, usein kysyttyjä kysymyksiä
-  code_hoc_coming: Koodaustunti on täällä - 8.-14. Joulukuuta!
-  code_sign_up: Liity osallistuaksesi tietojenkäsittelytieteen opetusviikon aikana
-  learn_more: Lisätietoja
-  learn_sign_up_button: Rekisteröidy
-  learn_videos_show: Näytä tämä inspiroiva video luokallesi
-  hoc2014_try_new_tutorials: Kokeile uusia Koodaustunti-oppituntejamme
-  hoc2014_try_new_tutorial: Betatestaa uusia Koodaustunti-kurssejamme
-  hoc2014_try_scrat: Angry Birds, PvZ ja Scrat
-  hoc2014_try_frozen: Taiteilija Frozenin Annan ja Elsan kanssa
-  carousel_heading_international: Oppitunnit omalla kielelläsi
-  carousel_heading_domestic: Oppitunnit englanniksi
-  carousel_heading_beginners: Oppitunnit aloittelijoille
-  carousel_heading_javascript: JavaScriptiä opettavat oppitunnit
-  carousel_heading_beyond_javascript: Oppaat, jotka käsittelevät JavaScript kieltä
-  carousel_heading_unplugged: Ei laitetta tai internetiä? Kokeile tietotekniikkaa
-    ilman tietokonetta
-  carousel_heading_devices: Opasohjelmat puhelimille ja tablettitietokoneille
-  carousel_heading_beyond_devices: Opasohjelmat puhelimille ja tablettitietokoneille
-  carousel_heading_languages: Oppaat muista ohjelmointikielistä
-  carousel_heading_beyond_languages: Oppaat muista ohjelmointikielistä
-  carousel_heading_apps_games: Tee omia sovelluksia tai pelejä
-  carousel_heading_university: Yliopistokurssit verkossa
-  carousel_heading_webpages: Opi tekemään verkkosivuja
-  carousel_heading_robots: Opi ohjelmoimaan robottien kanssa
-  carousel_heading_ide: Opettajien keskuudessa suositut alustat
-  educator_notes: Opettajan muistiinpanot
-  how_to_teach_hoc: Miten opettaa koodia tunnissa
-  more_resources_educators: Lisämateriaalit opettajille ja kasvattajille
-  participants: osallistujat
-  teachers_notes: Opettajan muistiinpanot
-  teachers_notes_hoc: 'Opettajat: Lue tärkeitä huomioita kouluttajille tästä'
-  previous: Edellinen
-  next: Seuraava
-  older_systems: Kurssit, jotka toimivat vanhemmilla järjestelmillä
-  older_systems_subheading: Näiden pitäisi toimia vanhemmilla selaimilla. Päästäksesi
-    kaikkiin oppaisiin, päivitä <a href="http://browsehappy.com/" target="_blank">nykyaikaiseen
-    verkkoselaimeen.</a>
-  mobile_devices: Oppaat mobiililaitteille
-  frozen_name: Koodaa Annan ja Elsan kanssa
-  starwars_name: 'Tähtien Sota: Kasaa koodista Galaksi'
-  codeorg_name: Klassinen sokkelo
-  codeintl_name: Klassinen sokkelo
-  khan_name: Johdanto JavaScript kieleen
-  khanes_name: Johdanto JavaScript kieleen
-  khanpt_name: Johdanto JavaScript kieleen
-  khanhe_name: Johdanto JavaScript kieleen
-  khanfr_name: Johdanto JavaScript kieleen
-  khanpl_name: Johdanto JavaScript kieleen
-  tynker_name: Tee oma peli
-  scratch_name: Ala luovaksi koodaten
-  thinkersmith_name: Robottiystäväni
-  condcards_name: Ehtolauseet pelikorteilla
-  codehs_name: Opettele koodaamaan Karel-koiran kanssa
-  codemonkey_name: CodeMonkey
-  codeavengers_name: Tee peli JavaScript-kielellä
-  processing_name: Piirrä koodilla
-  robomind_name: Ohjelmoi virtuaalirobotti
-  groklearning_name: Eliza the Chatterbot Doctor
-  quorum_name: Esteetön ohjelmointi (ruudunlukijatuella)
-  codespark_name: Foos (myös lukutaidottomille)
-  kodable_name: Kodable (myös lukutaidottomille)
-  tynkerapp_name: Tynker - tableteilla
-  robomindnl_name: Ohjelmoi virtuaalirobotti
-  flappy_name: Tee Flappy-peli
-  bitsbox_name: Bitsbox - tee peli
-  makeschool_name: Rakenna iPhone-peli selaimessasi!
-  appinventor_name: AppInventor Koodaustunti
-  blockly_name: Blockly
-  projguts_name: Kivi, sakset, paperi
-  hourofcode_name: Klassinen sokkelo
-  playlab_name: Pelilabra
-  infinity_name: Infinity Pelilabra
-  artist_name: Taiteilija
-  course1_name: Kurssi 1
-  course2_name: Kurssi 2
-  course3_name: Kurssi 3
-  course4_name: Kurssi 4
-  accelerated_name: Nopeutettu kurssi
-  20-hour_name: Nopeutettu kurssi
-  gumball_name: Gumball
-  classicmaze_name: Klassinen sokkelo
-  iceage_name: Jääkausi
-  minecraft_name: Minecraft
-  applab_name: Sovelluslabra
-  gamelab_name: Pelilabra
-  basketball_name: Tee koripallopeli
-  applab_gradelevel: Yli 13-vuotiaille
-  applab_shortdescription_congrats: Sovelluslabra on koodausympäristö, jossa voit
-    tehdä yksinkertaisia sovelluksia. Suunnittele sovellus, koodaa lohkoilla tai javaScriptillä
-    kunnes se toimii, ja jaa työsi sekunneissa
-  codeorg_gradelevel: 4-104-vuotiaille
-  codeintl_gradelevel: 4-104-vuotiaille
-  khan_gradelevel: Yläaste +
-  khanes_gradelevel: Yläaste +
-  khanpt_gradelevel: Yläaste +
-  khanhe_gradelevel: Yläaste +
-  khanfr_gradelevel: Yläaste +
-  khanpl_gradelevel: Yläaste +
-  tynker_gradelevel: 5-13-vuotiaille
-  scratch_gradelevel: Yli 8-vuotiaille
-  lightbot_gradelevel: Kaikenikäiset
-  thinkersmith_gradelevel: Kaikenikäiset
-  condcards_gradelevel: 8-12-vuotiaille
-  lightbotintl_gradelevel: Kaikenikäiset
-  codehs_gradelevel: Lukio
-  codecademy_gradelevel: Lukio
-  codecombat_gradelevel: Yläaste +
-  codemonkey_gradelevel: Yläaste +
-  codeavengers_gradelevel: Yläaste +
-  processing_gradelevel: Lukio
-  robomind_gradelevel: 8-13-vuotiaille
-  groklearning_gradelevel: Yläaste +
-  quorum_gradelevel: Yläaste +
-  codespark_gradelevel: Ala-aste
-  kodable_gradelevel: Ala-aste
-  tynkerapp_gradelevel: 5-13-vuotiaille
-  robomindnl_gradelevel: 8-13-vuotiaille
-  flappy_gradelevel: 4-104-vuotiaille
-  bitsbox_gradelevel: Ala-aste
-  makeschool_gradelevel: Lukio
-  touchdevelop_gradelevel: Lukio
-  appinventor_gradelevel: Yläaste +
-  blockly_gradelevel: Kaikenikäiset
-  thinkersmith2_gradelevel: Yli 8-vuotiaille
-  kodableunplugged_gradelevel: 8-13-vuotiaille
-  projguts_gradelevel: 10-13-vuotiaille
-  hourofcode_gradelevel: 4-104-vuotiaille
-  frozen_gradelevel: Ikä 8+
-  starwars_gradelevel: 4-104-vuotiaille
-  playlab_gradelevel: 4-104-vuotiaille
-  infinity_gradelevel: 4-104-vuotiaille
-  artist_gradelevel: Ikä 8+
-  monstercoding_gradelevel: 5-13-vuotiaille
-  allcancode_gradelevel: 5-10-vuotiaille
-  csfirst_gradelevel: 9-14-vuotiaille
-  boxisland_gradelevel: Ala-aste
-  codesters_gradelevel: 12-14-vuotiaille
-  texasinstruments_gradelevel: 13-16-vuotiaille
-  teacherled_gradelevel: Yli 5-vuotiaille
-  course1_gradelevel: 4+ -vuotiaille (lukutaidottomat)
-  course2_gradelevel: 6+ -vuotiaille (lukutaitoisille)
-  course3_gradelevel: 8+ -vuotiaille (kurssin 2 jälkeen)
-  course4_gradelevel: 10+ -vuotiaille (kurssin 3 jälkeen)
-  coursea_gradelevel: 4-7-vuotiaille
-  courseb_gradelevel: 5-8-vuotiaille
-  coursec_gradelevel: 6-10-vuotiaille
-  coursed_gradelevel: Kahdeksasluokkalaisista alkaen
-  coursee_gradelevel: 8-12-vuotiaille
-  coursef_gradelevel: 9-13-vuotiaille
-  coursea-2017_gradelevel: 4-7-vuotiaille
-  courseb-2017_gradelevel: 5-8-vuotiaille
-  coursec-2017_gradelevel: 6-10-vuotiaille
-  coursed-2017_gradelevel: Kahdeksasluokkalaisista alkaen
-  coursee-2017_gradelevel: 8-12-vuotiaille
-  coursef-2017_gradelevel: 9-13-vuotiaille
-  coursea-2018_gradelevel: 4-7-vuotiaille
-  courseb-2018_gradelevel: 5-8-vuotiaille
-  coursec-2018_gradelevel: 6-10-vuotiaille
-  coursed-2018_gradelevel: Kahdeksasluokkalaisista alkaen
-  coursee-2018_gradelevel: 8-12-vuotiaille
-  coursef-2018_gradelevel: 9-13-vuotiaille
-  coursea-2019_gradelevel: 4-7-vuotiaille
-  courseb-2019_gradelevel: 5-8-vuotiaille
-  coursec-2019_gradelevel: 6-10-vuotiaille
-  coursed-2019_gradelevel: Kahdeksasluokkalaisista alkaen
-  coursee-2019_gradelevel: 8-12-vuotiaille
-  coursef-2019_gradelevel: 9-13-vuotiaille
-  coursea-2020_gradelevel: 4-7-vuotiaille
-  courseb-2020_gradelevel: 5-8-vuotiaille
-  coursec-2020_gradelevel: 6-10-vuotiaille
-  coursed-2020_gradelevel: Kahdeksasluokkalaisista alkaen
-  coursee-2020_gradelevel: 8-12-vuotiaille
-  coursef-2020_gradelevel: 9-13-vuotiaille
-  coursea-2021_gradelevel: 4-7-vuotiaille
-  courseb-2021_gradelevel: 5-8-vuotiaille
-  coursec-2021_gradelevel: 6-10-vuotiaille
-  coursed-2021_gradelevel: Kahdeksasluokkalaisista alkaen
-  coursee-2021_gradelevel: 8-12-vuotiaille
-  coursef-2021_gradelevel: 9-13-vuotiaille
-  coursea-2022_gradelevel: 4-7-vuotiaille
-  courseb-2022_gradelevel: 5-8-vuotiaille
-  coursec-2022_gradelevel: 6-10-vuotiaille
-  coursed-2022_gradelevel: Kahdeksasluokkalaisista alkaen
-  coursee-2022_gradelevel: 8-12-vuotiaille
-  coursef-2022_gradelevel: 9-13-vuotiaille
-  accelerated_gradelevel: 10+ -vuotiaille (kurssin 3 jälkeen)
-  codeorg_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
-  codeintl_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
-  thinkersmithspanish_platformtext: Tietokoneeton tekeminen
-  khan_platformtext: Nykyaikaiset verkkoselaimet
-  khanes_platformtext: Nykyaikaiset verkkoselaimet
-  khanpt_platformtext: Nykyaikaiset verkkoselaimet
-  khanhe_platformtext: Nykyaikaiset verkkoselaimet
-  khanfr_platformtext: Nykyaikaiset verkkoselaimet
-  khanpl_platformtext: Nykyaikaiset verkkoselaimet
-  tynker_platformtext: Nykyaikaiset verkkoselaimet
-  scratch_platformtext: Vain pöytäkoneiden selaimille (ei tableteille)
-  lightbot_platformtext: Kaikki selaimet sekä iOS, Android tai pelikonsoli
-  thinkersmith_platformtext: Tietokoneeton tekeminen
-  condcards_platformtext: Tietokoneeton tekeminen
-  lightbotintl_platformtext: iOS, Android (tai selain)
-  codehs_platformtext: Modernit selaimet. (Jatkokurssi vaatii $$)
-  codecademy_platformtext: Nykyaikaiset vekkoselaimet. iOS ja Android sovellukset
-  codecombat_platformtext: Modernit selaimet (Jatkokurssi vaatii $$)
-  codemonkey_platformtext: Nykyaikaiset verkkoselaimet
-  codeavengers_platformtext: Nykyaikaiset verkkoselaimet
-  processing_platformtext: Nykyaikaiset verkkoselaimet
-  robomind_platformtext: Moderni verkkoselain, mobiiliverkko
-  groklearning_platformtext: Nykyaikaiset verkkoselaimet
-  quorum_platformtext: Modernit webselaimet. Ruudunlukijatuki
-  codespark_platformtext: iOS, Android (tai selain)
-  tynkerapp_platformtext: iPad- ja Android-tabletit
-  robomindnl_platformtext: Moderni verkkoselain, mobiiliverkko
-  flappy_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
-  bitsbox_platformtext: Nykyaikaiset verkkoselaimet
-  makeschool_platformtext: Nykyaikaiset verkkoselaimet
-  touchdevelop_platformtext: Nykyaikaiset selaimet, älypuhelimet, kaikki laitteet
-  appinventor_platformtext: Modernit selaimet + Android
-  blockly_platformtext: Vain nykyaikaiset selaimet
-  thinkersmith2_platformtext: Tietokoneeton tekeminen
-  kodableunplugged_platformtext: Tietokoneeton tekeminen
-  projguts_platformtext: Tietokoneeton tekeminen
-  hourofcode_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
-  frozen_platformtext: Modernit selaimet ja tablettitietokoneet
-  starwars_platformtext: Modernit selaimet ja tablettitietokoneet
-  playlab_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
-  csfirst_platformtext: Nykyaikaiset verkkoselaimet
-  codesters_platformtext: Nykyaikaiset verkkoselaimet
-  teacherled_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
-  codeorg_shortdescription: Opi koodaamaan Mark Zuckerbergin ja Angry Birdsin kanssa!
-  codeintl_shortdescription: Opi koodaamaan Mark Zuckerbergin ja Angry Birdsin kanssa!
-  khan_shortdescription: Opi piirtämään JavaScriptillä
-  khanes_shortdescription: Opi piirtämään JavaScriptillä
-  khanpt_shortdescription: Opi piirtämään JavaScriptillä
-  khanhe_shortdescription: Opi piirtämään JavaScriptillä
-  khanfr_shortdescription: Opi piirtämään JavaScriptillä
-  khanpl_shortdescription: Opi piirtämään JavaScriptillä
-  tynker_shortdescription: Opi koodaamaan ratkoen hauskoja tehtäviä ja rakenna samalla
-    oma mobiilipelisi.
-  scratch_shortdescription: Luo interaktiivisia pelejä, tarinoita ja animaatioita.
-  lightbot_shortdescription: Ohjelmoi Lightbot ratkomaan tehtäviä käyttäen aliohjelmia
-    ja silmukoita!
-  thinkersmith_shortdescription: Tietokoneettoman tekemisen kurssi ryhmälle, jolla
-    ei ole laitteita
-  condcards_shortdescription: Opi algoritmeja korttipakan kanssa
-  lightbotintl_shortdescription: Koodauskäsitteitä opettava peli
-  codehs_shortdescription: Ala koodaamaan Karel-koiran kanssa. Hauska ja visuaalinen
-    johdanto ohjelmointiin!
-  codecademy_shortdescription: Opi JavaScript-ohjelmointia selaimessa
-  codecombat_shortdescription: Voita peikot oppiaksesi Pythonia tai JavaScriptia tässä
-    mielettömässä ohjelmointipelissä!
-  codemonkey_shortdescription: Opiskelijat ohjelmoivat apinaa keräämään banaaneita.
-  codeavengers_shortdescription: Opi JavaScript-ohjelmointia selaimessa
-  processing_shortdescription: Tunnin kurssi Processing-kielestä
-  robomind_shortdescription: Kirjoita koodia virtuaalirobotille
-  groklearning_shortdescription: Opeta "Eliza"-keskustelurobotti huijaamaan ystäväsi
-    kuvittelemaan häntä ihmiseksi!
-  quorum_shortdescription: Liity Maryn seuraan ohjatulle kiertomatkalle, kun hän oppii
-    Quorum-ohjelmointikieltä.
-  codespark_shortdescription: Foos on hauska, lapsiystävällinen peli ohjelmoinnin
-    oppimiseen.
-  kodable_shortdescription: Hauska iPad-peli opettamaan ohjelmoinnin käsitteitä
-  tynkerapp_shortdescription: 'Opi ohjelmoimaan ratkaisemalla hauskoja ohjelmointitehtäviä. '
-  robomindnl_shortdescription: Kirjoita koodia virtuaalirobotille
-  flappy_shortdescription: Tee oma pelisi - Flappy Bird, Shark tai Submarine
-  bitsbox_shortdescription: Koodaa useita sovelluksia pelaamiseen sekä jakamiseen
-    käyttäen todellista JavaScriptiä.
-  makeschool_shortdescription: Tee iPhone-peli! Opi opettamaan hirviöllesi uusia liikkeitä
-    koodia kirjoittaen!
-  touchdevelop_shortdescription: 'Ratkaise tehtäviä, luo pelejä, ja opi ohjelmointia
-    puhelimellasi. '
-  appinventor_shortdescription: Tee oma sovelluksesi! (vain Android)
-  blockly_shortdescription: Lataa ZIP-tiedosto oppiaksesi offline-tilassa
-  thinkersmith2_shortdescription: Opi kuinka tietokoneet käyttävät 1:iä ja 0:ia tiedon
-    esittämiseen
-  kodableunplugged_shortdescription: Hauska tietokoneettoman tekemisen harjoitus
-  projguts_shortdescription: Kokeile mallinnusta ja simulointia kivi-sakset-paperi
-    -pelin avulla
-  hourofcode_shortdescription: Opi koodaamaan Mark Zuckerbergin ja Angry Birdsin kanssa!
-  frozen_shortdescription: Liitymme Annan ja Elsan matkaan, kun he tutkivat jään taikaa
-    ja kauneutta ohjelmoinnin avulla.
-  starwars_shortdescription: Opettele ohjelmoimaan droideja ja luo kaukaiseen galaksiin
-    ikioma Tähtien Sota -pelisi.
-  playlab_shortdescription: Suunnittele ja luo oma tarina tai peli Pelilabrassa!
-  infinity_shortdescription: Tee Pelilabrassa tarina tai peli jonka pääosassa ovat
-    Disneyn Infinity-hahmot.
-  artist_shortdescription: Tee hienoja piirrustuksia ja kuvioita Taiteilijan kanssa!
-  teacherled_shortdescription: Innostu luomaan oma kooditunti tapahtuma näillä tuntisuunnitelmilla.
-  codeorg_longdescription: Opettele tietotekniikan perusteet rakentamalla tietokoneohjelmia
-    palikoista. Tällä pelillisellä itseopiskelukurssilla tekstitettyillä johdantovideoilla
-    esiintyvät Bill Gates, Mark Zuckerberg, Angry Birds ja Plants vs. Zombies. Kurssilla
-    käydään läpi toistosilmukat, ehtolauseet ja yksinkertaisia algoritmeja. Tarjolla
-    34 kielellä.
-  codeintl_longdescription: Opettele tietotekniikan perusteet rakentamalla tietokoneohjelmia
-    palikoista. Tällä pelillisellä itseopiskelukurssilla tekstitettyillä johdantovideoilla
-    esiintyvät Bill Gates, Mark Zuckerberg, Angry Birds ja Plants vs. Zombies. Kurssilla
-    käydään läpi toistosilmukat, ehtolauseet ja yksinkertaisia algoritmeja. Tarjolla
-    34 kielellä.
-  thinkersmithspanish_longdescription: Käyttämällä ennakkoon "Robotti kieltä" , opiskelijat
-    oppivat tekemään tiettyjä tehtäviä ilman etukäteistä keskustelua . Tämä opetus
-    opettaa lapsille symbolien ja toimintojen suhdetta, lisäksi se on korvaamaton
-    kyky virheenkorjauksessa.
-  khan_longdescription: Opi JavaScript-ohjelmoinnin perusteet samalla, kun luot hauskoja
-    piirrustuksia koodillasi. Voit opiskella itseksesi tai luokan kanssa!
-  khanes_longdescription: Opi JavaScript-ohjelmoinnin perusteet samalla, kun luot
-    hauskoja piirrustuksia koodillasi. Voit opiskella itseksesi tai luokan kanssa!
-  khanpt_longdescription: Opi JavaScript-ohjelmoinnin perusteet samalla, kun luot
-    hauskoja piirrustuksia koodillasi. Voit opiskella itseksesi tai luokan kanssa!
-  khanhe_longdescription: Opi JavaScript-ohjelmoinnin perusteet samalla, kun luot
-    hauskoja piirrustuksia koodillasi. Voit opiskella itseksesi tai luokan kanssa!
-  khanfr_longdescription: Opi JavaScript-ohjelmoinnin perusteet samalla, kun luot
-    hauskoja piirrustuksia koodillasi. Voit opiskella itseksesi tai luokan kanssa!
-  khanpl_longdescription: Opi JavaScript-ohjelmoinnin perusteet samalla, kun luot
-    hauskoja piirrustuksia koodillasi. Voit opiskella itseksesi tai luokan kanssa!
-  tynker_longdescription: Luo omia pelejä ja jaa ne ystäviesi kanssa! Ratkaise hauskoja
-    pulmia ja opi samalla ohjelmoinnin perusteet. Hauskoilla animaatiohahmoilla teet
-    pelistä omanlaisesi. Useita tasoja ja paljon taustoja. Tee pelistä realistisempi
-    fysiikan avulla. Näe koodi joko visuaalisina lohkoina tai JavaScriptinä. Vie pelisi
-    iPadille tai Android-tabletille. Yli tusina hauskoja tehtäviä, joista voit valita!
-  scratch_longdescription: Scratchin kanssa voit luoda oman interaktiivisen pelin,
-    tarinan tai animaation &mdash; ja voit jakaa ne ystäviesi kanssa. Aloita animoimalla
-    oma nimesi, luomalla syntymäpäiväkortti tai luomalla pong-peli.
-  lightbot_longdescription: Opasta valobotti sytyttämään kaikki siniset ruudut! Valobotti
-    on ohjelmointia pelimuotona käyttävä pulmapeli, jonka avulla pelaajat oppivat
-    ymmärtämään yksinkertaista koodia. Opi tekemään komentojonoja, kirjoittamaan aliohjelmia
-    ja käyttämään silmukoita edetäksesi pelissä. Sopii kaiken ikäisille.
-  thinkersmith_longdescription: Käyttäen ennaltamäärättyä "robottikielitä", oppilaat
-    selvittävät, miten ohjata toisiaan annettujen tehtävien läpi sopimatta niistä
-    etukäteen. Tämä oppitunti opettaa lapsia yhdistämään symbolit toimintoihin, sekä
-    virheiden paikallistamisen ja korjaamisen kultaisen taidon. "Minun robottiystäväni"
-    sopii parhaiten ryhmätoimintaan ja sisältää opettajan ohjekirjan luokkakäyttöön.
-  condcards_longdescription: Opi algoritmeistä ja ehtolausekkeista korttipakan avulla
-    tässä "tietokoneettoman tekemisen" harjoituksessa. Oppilaat tekee tehtävät ryhmissä
-    ja tarvitsevat yhden korttipakan ryhmää kohden.
-  lightbotintl_longdescription: 'Opi ohjelmoinnin peruslogiikka. Sopii 4+-vuotiaille.
-    Tuetut alustat: iOS, Android ja selaimet. Opi tekemään komentojonoja, tunnistamaan
-    hahmoja, käyttämään proseduureja ja hyödyntämään silmukoita!'
-  codehs_longdescription: Tietokoneen komentaminen, ja siitähän ohjelmoinnissa on
-    kyse, on kuin antaisi komentoja koiralle. Opi koodaamaan Karel-koiraa &mdash;
-    hauska, helppo ja visuaalinen johdanto ohjelmointiin, joka opettaa peruskäsitteet,
-    kuten komennot ja funktiot vasta-alkajille. Opetusohjelma on suunnattu itseoppimiseen,
-    mutta opettajat voivat kirjautua päästäkseen käsiksi opettajan työkaluihin ja
-    seuratakseen oppilaiden etenemistä!
-  codecademy_longdescription: Codeacademy on interaktiivinen, oppilaslähtöinen johdanto
-    tietojenkäsittelyn perusteisiin Javascript-kielellä, jota käyttävät miljoonat
-    opiskelijat maailmassa. Olemme valmistelleet selkeän Koodaustunti-kokemuksen,
-    jossa on mukana visailuja, kalvoja ja oppilaille valmis projekti lopuksi.
-  codecombat_longdescription: Voita peikot oppiaksesi Pythonia tai JavaScriptia tässä
-    mielettömässä ohjelmointipelissä!
-  codemonkey_longdescription: 'CodeMonkey on verkkopeli, joka opettaa ohjelmointia
-    oikealla ohjelmointikielellä! Opiskelijat ohjelmoivat apinaa keräämään banaaneja,
-    tehtävien vähitellen vaikeutuessa taso tasolta. Opiskelijat saavat tähtipisteitä
-    jokaisesta ratkaisusta ja he voivat jakaa sen yhdellä napsautuksella. '
-  codeavengers_longdescription: Rakenna kahden pelaajan 2D ylhäältä-alas peli Javascriptillä
-    kymmenellä yksinkertaisella tehtävällä. Sitten jatka joidenkin ohjelmoinnin perusasioiden
-    oppimista (muuttujat ja ehto-lausekkeet) luodessasi tietovisan, jonka voit jakaa
-    ystäviesi kanssa. Matkan varrella voit ansaita pisteitä ja merkkejä pyrkiessäsi
-    luokan parhaimpien joukkoon.
-  processing_longdescription: Johdanto ohjelmointiin kuvataiteiden parissa käyttäen
-    Processing-ohjelmointikieltä. Lyhyet video-oppitunnit johdattelevat ohjelmointiharjoituksiin,
-    joiden kautta päästään suunnittelemaan  interaktiivista piirto-ohjelmaa
-  robomind_longdescription: 'Opiskelijat oppivat ohjelmoinnin perusteet ohjaamalla
-    omaa virtuaalista robottiaan. Verkkokurssi sisältää kaiken tarvittavan - lyhyet
-    esittelyt, elokuvat, tietovisat ja automaattiset  opastukset/vinkit, jotka auttavat
-    ohjelmointiharjoitusten kanssa. '
-  groklearning_longdescription: Käytä Python-ohjelmointikieltä rakentaaksesi keskustelu-'botin'
-    nimeltä "Eliza" joka toimii robottipsykoterapeuttina. Opetat Elizaa puhumaan ja
-    sanomaan oikean asian. Saatko huijattua ystäväsi luulemaan, että hän onkin ihminen
-    eikä tietokone?
-  quorum_longdescription: Tämä oppitunti on saatavilla näkövammaisille ja toimii näytönlukijaohjelmien
-    kanssa. Tule Maryn kanssa vierailulle, kun Mary tulee biologian laboratorioon
-    ohjelmoijaksi ja oppii Quorum ohjelmointikielen. Oppitunti on oppilaan ohjaama,
-    jossa on esimerkkitehtäviä verkossa.
-  codespark_longdescription: Foos on hauska ja lapsiystävällinen tapa oppia ohjelmointia.
-    Ohjelmoi söpöjä hahmoja tehtävien ratkaisemissa ja saa virtuaalinen maailma eloon.
-    Peli on "sanoista vapaa", joten kaikki voivat pelata!
-  kodable_longdescription: Kodable on itseohjaava iPad-peli, joka johdattelee 5+-vuotiaat
-    lapset ohjelmoinnin perusteisiin. Opettajan tai vanhemman läsnäolo on suotavaa,
-    mutta ei välttämätöntä.
-  tynkerapp_longdescription: Opi ohjelmoimaan ratkaisemalla hauskoja koodaustehtäviä.
-    Rakenna helposti pelejä ja tarinoita käyttäen teemaan sopivia grafiikoja, 10+
-    pelirakennussettiä ja muokattavissa olevia hahmoja. Ei vaadi verkkoyhteyttä. Pääset
-    luomuksiisi myös verkon välityksellä.
-  robomindnl_longdescription: 'Opiskelijat oppivat ohjelmoinnin perusteet ohjaamalla
-    omaa virtuaalista robottiaan. Verkkokurssi sisältää kaiken tarvittavan - lyhyet
-    esittelyt, elokuvat, tietovisat ja automaattiset  opastukset/vinkit, jotka auttavat
-    ohjelmointiharjoitusten kanssa. '
-  flappy_longdescription: Käytä "vedä ja pudota" ohjelmointia tehdäksesi oman Flappy
-    Bird-pelin ja muokkaa se erilaisen näköiseksi (Flappy Bird, Flappy Santa, tai
-    mitä tahansa). Lisää peli puhelimeesi yhdellä napsautuksella.
-  bitsbox_longdescription: Muokkaa omaa virtuaalista tablettiasi ja ohjelmoi erilaisia
-    sovelluksia, joita voit pelata ja jakaa. Yksinkertaiset läpikäyntiohjeet mahdollistavat
-    jopa nuorten lasten ohjelmoinnin oikealla Javascriptillä, ja mitä enemmän perehdyt,
-    sitä pidemmälle pääset.
-  makeschool_longdescription: Opi ohjelmoimaan tekemällä iPhone-peli käyttäen upouutta
-    ja aloittelijalle ystävällistä Swift-ohjelmointikieltä! Luo Pok&eacute;mon-teemainen
-    toimintopeli ja kirjoita koodia opettaaksesi hirviöllesi uusia liikkeitä. Opit
-    kuinka käyttää muuttujia, menetelmiä ja olioita auttaksesi hirviötäsi voittamaan!
-  touchdevelop_longdescription: 'Kosketusystävällinen editori opastaa sinua pikselitaiteen
-    luomisessa, karhuarvoituksen ratkaisemisessa ja tekemään oman pelin hyppivästä
-    linnusta. '
-  appinventor_longdescription: Viihdyttävät ja nopeat video-oppitunnit kuljettavat
-    sinut läpi kolmen yksinkertaisen sovelluksen rakentamisen Android-puhelimellesi
-    tai tabletillesi. Suunniteltuna sekä aloittelijoille että asiantuntijoille, tämä
-    kooditunti valmistelee sinut omien ohjelmien tekemiseen ennen kuin huomaatkaan.
-    Kuvittele jakavasi sovelluksiasi ystävillesi! Nämä tehtävät soveltuvat sekä yksilöille
-    ja opettajille, jotka ohjaavat kursseja.
-  blockly_longdescription: Onko sinulle PC:tä joissa on hidas (tai olematon) verkkoyhteys?
-    Lataa Blocky-oppitunnit, jotka edeltivät Code.org:n oppitunteja - voit ladata
-    yhden 3MB ZIP tiedoston mille tahansa tietokoneelle tai käyttää sitä muistitikulta
-  thinkersmith2_longdescription: Oppilaat oppivat esittämään ja tallentamaan merkkejä
-    binäärisinä, funktioina, jotka ovat päällä tai  pois. Lopuksi luokka pääsee muuntamaan
-    omat nimikirjaimensa ja viemään ne kotiinsa.
-  kodableunplugged_longdescription: 'Suunniteltuna käytettäväksi paperilla, fuzzFamily
-    Frenzy on johdanto ohjelmointilogiikkaan lapsille iältään 5 tai enemmän. Opettajan
-    pitäisi selittää peli, jonka jälkeen oppilaat ohjelmoivat luokkakaverinsa suorittamaan
-    yksinkertaisen esteradan. '
-  projguts_longdescription: Tämä tietokoneettoman tekemisen toiminta auttaa opiskelijoita
-    oppimaan kuinka mallinnus ja simulointi toimii, laittaessaan oppilasryhmän pelaamaan
-    eri versioita kivi-sakset-paperi -pelistä, ja näkemään erilaisten mallinnuskokeilujen
-    tulokset.
-  hourofcode_longdescription: Paikkamerkki uuteen code.org/hoc
-  frozen_longdescription: Koodataan Annan ja Elsan kanssa kun he tutkivat jään kauneutta
-    ja taikaa. Tässä pelissä luot lumihiutaleita ja kuvioita luistellen ja luot taianomaisen
-    lumimaan, jonka voit myös jakaa ystäviesi kanssa!
-  starwars_longdescription: Opettele ohjelmoimaan droideja ja luo kaukaiseen galaksiin
-    ikioma Tähtien Sota -pelisi.
-  playlab_longdescription: Luo tarina tai tee peli PeliLabralla! Merirosvot, eläimet,
-    ninjat, zombit ja monet muut hahmot liikkuvat, ääntelevät, keräävät pisteitä ja
-    jopa heittävät tulipalloja!
-  codeorg_beyond_name: Johdanto tietotekniikkaan (peruskoulu)
-  khan_beyond_name: Opi tietokoneohjelmointia
-  tynker_beyond_name: Opi ohjelmointia kotona
-  scratch_beyond_name: Ala luovaksi koodaten
-  kodable_beyond_name: Kodable
-  scratchjr_beyond_name: ScratchJR lukutaidottomille
-  hopscotch_beyond_name: 'Hopscotch: ohjelmointia iPadillasi'
-  pocketcode_beyond_name: Taskukoodi
-  groklearning_beyond_name: Opi Python-ohjelmointia
-  hacketyhack_beyond_name: Opi Rubyä
-  robomind_beyond_name: Ohjelmoi virtuaalirobotti
-  makeschool_beyond_name: Rakenna iPhone-peli selaimessasi!
-  appinventor_beyond_name: AppInventor Koodaustunti
-  codehs_beyond_name: Opettele koodaamaan Karel-koiran kanssa
-  udemy_beyond_name: Ohjelmointikurssit verkossa
-  lynda_beyond_name: Ohjelmointikurssit verkossa
-  edx_beyond_name: Harvard CS50-kurssit
-  coursera_beyond_name: Stanford CS101 -kurssit
-  teachingtree_beyond_name: Yliopistokurssit verkossa
-  w3schools_beyond_name: Opi HTML:ää
-  codeavengers_beyond_name: Opi ohjelmoimaan verkkosivustoja
-  arduino_beyond_name: Arduino Sparkfunilla
-  processing_beyond_name: Ohjelmoi Processing -kielellä
-  codeorg_beyond_gradelevel: 4-104-vuotiaille
-  khan_beyond_gradelevel: Yläaste +
-  tynker_beyond_gradelevel: 5-13-vuotiaille
-  scratch_beyond_gradelevel: Yli 8-vuotiaille
-  lightbot_beyond_gradelevel: Kaikenikäiset
-  codecademy_beyond_gradelevel: Lukio
-  kodable_beyond_gradelevel: Ala-aste
-  scratchjr_beyond_gradelevel: Ala-aste
+  homepage_slot_text_link_stats: Katso tilastot
+  homepage_slot_text_shop: Kauppa
+  homepage_slot_text_studio: Kaikki oppituntimme
+  homepage_slot_text_teacher: Opettajan päänäyttö
+  homepage_slot_text_title_advocates: Kannattajat
+  homepage_slot_text_title_at_home: Opi kotona
+  homepage_slot_text_title_educators: Opettajat
+  homepage_slot_text_title_hoc: Koodaustunti
+  homepage_slot_text_title_students: Oppilaat
+  homepage_solot_text_link_volunteer: Toimi vapaaehtoisena Koodaustunnissa
   hopscotch_beyond_gradelevel: Yläaste +
-  pocketcode_beyond_gradelevel: Yläaste +
-  groklearning_beyond_gradelevel: Yläaste +
-  hacketyhack_beyond_gradelevel: Lukio
-  robomind_beyond_gradelevel: 8-13-vuotiaille
-  makeschool_beyond_gradelevel: Lukio
-  appinventor_beyond_gradelevel: Yläaste +
-  touchdevelop_beyond_gradelevel: Lukio
-  codehs_beyond_gradelevel: Lukio
-  udemy_beyond_gradelevel: Lukio +
-  lynda_beyond_gradelevel: Lukio +
-  edx_beyond_gradelevel: Yliopisto
-  coursera_beyond_gradelevel: Yliopisto
-  udacity_beyond_gradelevel: Yliopisto
-  teachingtree_beyond_gradelevel: Yliopisto
-  kodu_beyond_gradelevel: Yli 8-vuotiaille
-  cargobot_beyond_gradelevel: Yli 8-vuotiaille
-  kidsruby_beyond_gradelevel: Yli 12-vuotiaille
-  w3schools_beyond_gradelevel: Yli 12-vuotiaille
-  codeavengers_beyond_gradelevel: Yläaste +
-  mozilla_beyond_gradelevel: Yli 12-vuotiaille
-  codecombat_beyond_gradelevel: Yläaste +
-  codea_beyond_gradelevel: Lukio +
-  lego_beyond_gradelevel: Yläaste +
-  finch_beyond_gradelevel: Yli 8-vuotiaille
-  arduino_beyond_gradelevel: Lukio +
-  processing_beyond_gradelevel: Lukio
-  alice_beyond_gradelevel: Yläaste +
-  sphero_beyond_gradelevel: Yli 8-vuotiaille
-  codeorg_beyond_platformtext: Nykyaikaiset selaimet, tabletit
-  khan_beyond_platformtext: Nykyaikaiset verkkoselaimet
-  tynker_beyond_platformtext: Nykyaikaiset verkkoselaimet (maksullinen)
-  scratch_beyond_platformtext: Mikä tahansa selain
-  lightbot_beyond_platformtext: iOS, Android (tai selain)
-  codecademy_beyond_platformtext: Nykyaikaiset vekkoselaimet. iOS ja Android sovellukset
-  pocketcode_beyond_platformtext: Mobiilisovellus
-  groklearning_beyond_platformtext: Nykyaikaiset verkkoselaimet
-  hacketyhack_beyond_platformtext: Työpöytäasennus
-  robomind_beyond_platformtext: Moderni verkkoselain, mobiiliverkko
-  makeschool_beyond_platformtext: Nykyaikaiset verkkoselaimet
-  appinventor_beyond_platformtext: Nykyaikainen selain + Android
-  touchdevelop_beyond_platformtext: Nykyaikaiset selaimet, älypuhelimet, kaikki laitteet
-  codehs_beyond_platformtext: Nykyaikaiset selaimet (maksullinen)
-  udemy_beyond_platformtext: Verkkopohjainen
-  lynda_beyond_platformtext: Verkkopohjainen (maksullinen)
-  edx_beyond_platformtext: Nykyaikaiset selaimet
-  coursera_beyond_platformtext: Nykyaikaiset selaimet
-  udacity_beyond_platformtext: Nykyaikaiset selaimet
-  teachingtree_beyond_platformtext: Verkkopohjainen
-  kidsruby_beyond_platformtext: Työpöytäasennus
-  w3schools_beyond_platformtext: Nykyaikaiset verkkoselaimet
-  codeavengers_beyond_platformtext: Nykyaikaiset verkkoselaimet
-  mozilla_beyond_platformtext: Nykyaikaiset verkkoselaimet
-  codecombat_beyond_platformtext: Verkkopohjainen (Firefox, Chrome, Safari, IE9+)
-  lego_beyond_platformtext: Robotin osto
-  finch_beyond_platformtext: Robotin osto
-  arduino_beyond_platformtext: Selain, sitten osta aloitussarja
-  processing_beyond_platformtext: Nykyaikaiset verkkoselaimet
-  alice_beyond_platformtext: Windows tai Mac (asennus vaaditaan)
-  sphero_beyond_platformtext: Robotin osto
-  codeorg_beyond_shortdescription: Opi koodaamaan Mark Zuckerbergin ja Angry Birdsin
-    kanssa!
-  khan_beyond_shortdescription: Opi piirtämään JavaScriptillä
-  tynker_beyond_shortdescription: Hauska ja mukaansatempaava kurssi lapsille luokilla
-    4-8
-  scratch_beyond_shortdescription: Luo interaktiivisia pelejä, tarinoita ja animaatioita.
-  lightbot_beyond_shortdescription: Koodauskäsitteitä opettava peli
-  codecademy_beyond_shortdescription: Opi JavaScript-ohjelmointia selaimessa
-  kodable_beyond_shortdescription: Hauska iPad-peli opettamaan ohjelmoinnin käsitteitä
-  scratchjr_beyond_shortdescription: 'Luo vuorovaikutteisia tarinoita ja pelejä käyttäen
-    ScratchJr:ää. '
-  hopscotch_beyond_shortdescription: Opi visuaalista ohjelmointia iPadillä
-  pocketcode_beyond_shortdescription: Luo peli älypuhelimeesi ja jaa ystävillesi kokeiltavaksi!
-  groklearning_beyond_shortdescription: Perusjohdanto Python-ohjelmointiin
-  hacketyhack_beyond_shortdescription: Opi Rubyä perusteista lähtien
-  robomind_beyond_shortdescription: Kirjoita koodia virtuaalirobotille
-  makeschool_beyond_shortdescription: Opi tekemään iPhone-peli tunnissa
-  appinventor_beyond_shortdescription: Tee oma sovelluksesi! (vain Android)
-  touchdevelop_beyond_shortdescription: Ohjelmoi mobiilisovelluksia suoraan puhelimeesi,
-    tablettiisi tai kannettavaasi
-  codehs_beyond_shortdescription: Opi JavaScript-ohjelmointia hauskassa visuaalisessa
-    ympäristössä
-  udemy_beyond_shortdescription: Kymmenittäin ohjelmointikursseja verkossa
-  lynda_beyond_shortdescription: Kymmenittäin ohjelmointikursseja verkossa
-  edx_beyond_shortdescription: Harvardin suosituin kurssi
-  coursera_beyond_shortdescription: Aloita CS101-kurssilla
-  udacity_beyond_shortdescription: Aloita CS101-kurssilla
-  teachingtree_beyond_shortdescription: 'Verkkotietämys: Nopeaa ja Rajoittamatonta'
-  kodu_beyond_shortdescription: Suunnittele kolmiulotteinen pelimaailma
-  cargobot_beyond_shortdescription: Ohjelmoi robottikäsi iPadillasi
-  kidsruby_beyond_shortdescription: Opi ohjelmoimaan Rubyllä
-  w3schools_beyond_shortdescription: Opi tekemään verkkosivustoja
-  codeavengers_beyond_shortdescription: Opi koodaamaan pelejä ja verkkosivustoja
-  mozilla_beyond_shortdescription: Luo ja jaa verkkosivuja
-  codecombat_beyond_shortdescription: Pelaa peliä ja opi JavaScriptiä, niin voit voittaa
-  codea_beyond_shortdescription: Tee sovelluksia iPadillasi
-  lego_beyond_shortdescription: Rakenna ja ohjelmoi robotti
-  finch_beyond_shortdescription: Robotti tietotekniikan opetukseen
-  arduino_beyond_shortdescription: Opi Arduinoa Sparkfunin Digital Sandbox -ohjelmistossa.
-  processing_beyond_shortdescription: Opi Processing-kieliä
-  alice_beyond_shortdescription: Opeta ohjelmointia kolmiulotteisessa ympäristössä
-  sphero_beyond_shortdescription: SPRK tunnit antavat lapsille hauskan ensikurssin
-    robottien ohjelmointiin tarkentaen samalla sekä matematiikan että luonnontieteiden
-    taitoja.
-  codeorg_beyond_longdescription: Opi tietotekniikan peruskäsitteitä vedä ja pudota
-    -ohjelmoinnilla. 3 täyttä kurssia, joista jokainen sisältää 15-20 oppituntia,
-    joissa vaihtelee luokkahuonetehtävät ilman tietokonetta, sekä pelinomaiset, itseohjatut
-    oppitunnit, joiden videoluentojen tähtinä vierailevat Bill Gates, Mark Zuckerberg,
-    Angry Birds ja Plants vs. Zombies. Opi toisto-silmukat, ehtolausekkeet, perusalgoritmit,
-    funktiot ja muuttujat.
-  khan_beyond_longdescription: Opi JavaScript-ohjelmoinnin perusteet samalla, kun
-    luot hauskoja piirrustuksia koodillasi. Voit opiskella itseksesi tai luokan kanssa!
-  tynker_beyond_longdescription: Tynker tekee ohjelmoinnin oppimisesta hauskaa ja
-    helppoa. Se tekee siitä havainnollista. Lapset rakentavat pelejä ja mobiilisovelluksia
-    järjestelmällä koodilohkoja. Ei ole tarvetta tuntea ohjelmointisyntaksia. Lapset
-    voivat muuntaa ideansa animoiduiksi tarinoiksi ja matemaattiseksi taiteeksi heti.
-    Se edistää etenevää oppimista. Samalla kun lapset oppivat perusteita, Tynker johdattaa
-    kehittyneempiin konsepteihin, kuten syntaksipohjaiseen ohjelmointiin.
-  scratch_beyond_longdescription: Scratchin kanssa voit luoda oman interaktiivisen
-    pelin, tarinan tai animaation &mdash; ja voit jakaa ne ystäviesi kanssa. Aloita
-    animoimalla oma nimesi, luomalla syntymäpäiväkortti tai luomalla pong-peli.
-  lightbot_beyond_longdescription: 'Opi ohjelmoinnin peruslogiikka. Sopii 4+-vuotiaille.
-    Tuetut alustat: iOS, Android ja selaimet. Opi tekemään komentojonoja, tunnistamaan
-    hahmoja, käyttämään proseduureja ja hyödyntämään silmukoita!'
-  codecademy_beyond_longdescription: Codeacademy on interaktiivinen, oppilaslähtöinen
-    johdanto tietojenkäsittelyn perusteisiin Javascript-kielellä, jota käyttävät miljoonat
-    opiskelijat maailmassa. Olemme valmistelleet selkeän Koodaustunti-kokemuksen,
-    jossa on mukana visailuja, kalvoja ja oppilaille valmis projekti lopuksi.
-  kodable_beyond_longdescription: Kodable on itseohjaava iPad-peli, joka johdattelee
-    5+-vuotiaat lapset ohjelmoinnin perusteisiin. Opettajan tai vanhemman läsnäolo
-    on suotavaa, mutta ei välttämätöntä.
-  scratchjr_beyond_longdescription: ScratchJr on ohjelmointikieli aloittelijoille,
-    joka mahdollistaa nuorten lasten luoda omia vuorovaikutteisia tarinoita ja pelejä.
-    Lapset liittävät yhteen ohjelmointilohkoja, jotka laittavat hahmot liikkumaan,
-    hyppäämään, tanssimaan ja laulamaan
   hopscotch_beyond_longdescription: Opiskelijan ohjaama oppitunti iPadillä käyttäen
     Hopscotch-ohjelmointikieltä. Opiskelijat rakentavat pelejä ja sovelluksia iPadilleen
     iPadillään. Opiskelijat voivat työskennellä itsenäisesti tai ystäviensä kanssa
     (korkeintaan 3 henkilöä yhtä iPadiä kohden).
-  pocketcode_beyond_longdescription: Luo oma pelisi älypuhelimellesi Pocket Codella!
-    Auta laskuvarjohyppääjä Steve pakettiensa toimitamisessa. Voit jakaa pelisi ystävillesi
-    ja muille käyttäjille kokeiltavaksi!
-  groklearning_beyond_longdescription: Johdantokurssi ohjelmointiin heille, joilla
-    ei ole yhtään ohjelmointikokemusta, käyttäen Python-ohjelmointikieltä. Ainutlaatuinen
-    yhdistelmämme sekä johdantosisältöä että haasteita ohjaa sinut Python-kielen ymmärtämisen
-    kautta itse ohjelmointiin. Olemme opettaneet tämän sisällön eri ikäisille ja taustaisille
-    opiskelijoille  ja olemme varmoja, että kurssi soveltuu myös sinulle.
-  hacketyhack_beyond_longdescription: 'Hackety Hack opettaa sinulle ohjelmoinnin perusteita
-    aivan alkeista lähtien. Et tarvitse aikaisempaa ohjelmointikokemusta! Hackety
-    Hack opettaa sinulle Ruby-ohjelmointikielen. Rubyä käytetään kaikenlaisiin ohjelmiin
-    työpöytäsovelluksista webbisivuihin [Huom: vaatii työpöytäasennuksen]'
-  robomind_beyond_longdescription: 'Opiskelijat oppivat ohjelmoinnin perusteet kontrolloiden
-    omaa virtuaalista robottiaan. Tämä verkkokurssi sisältää kaiken tarvittavan: lyhyet
-    esitykset, elokuvat, tietovisat ja automaattisen opastuksen/vinkit ohjelmointitehtävien
-    avuksi. '
-  makeschool_beyond_longdescription: Osaatko hiukan ObjectiveC:tä? Opi iPhone-pelin
-    tekeminen tunnissa! Opastamme sinut prosessin läpi, ohjelmoimaan, testaamaan ja
-    pelaamaan pelisi täysin selaimessa, jonka jälkeen voit jakaa sen Facebookissa
-    ystävillesi kokeiltavaksi! Ei vaadi aikaisempaa kokemusta iPhonelle kehittämisestä.
-    Sinun täytyy ymmärtää mitä ovat muuttujat, metodit ja oliot.
-  appinventor_beyond_longdescription: Viihdyttävät ja nopeat video-oppitunnit kuljettavat
-    sinut läpi kolmen yksinkertaisen sovelluksen rakentamisen Android-puhelimellesi
-    tai tabletillesi. Suunniteltuna sekä aloittelijoille että asiantuntijoille, tämä
-    kooditunti valmistelee sinut omien ohjelmien tekemiseen ennen kuin huomaatkaan.
-    Kuvittele jakavasi sovelluksiasi ystävillesi! Nämä tehtävät soveltuvat sekä yksilöille
-    ja opettajille, jotka ohjaavat kursseja.
-  touchdevelop_beyond_longdescription: TouchDevelop antaa sinun luoda sovelluksia
-    iPad-, Android-, PC-, Mac, Windows Phone-alustoille. Meidän kosketusystävällinen
-    editorimme tekee ohjelmoinnista hauskaa, jopa sinun puhelimellasi tai tabletillasi!
-  codehs_beyond_longdescription: 'Opi ohjelmoinnin perusteet Karel-koiran avulla,
-    tässä hauskassa, lähestyttävässä ja havainnollisessa  ohjelmoinnin johdannossa,
-    jossa ohjeiden antaminen tietokoneelle on kuin komentojen antaminen koiralle.
-    Tämä oppitunti on mahtava opettajan ohjauksessa, mutta voidaan suorittaa itsenäisesti.
-    [Huom.: maksullinen]'
-  udemy_beyond_longdescription: 'Vaikka et olisi koskaan nähnyt riviäkään koodia,
-    tai vaikka jos ohjelmoit elääksesi, Udemyllä on sinulle kursseja, joita opettavat
-    ammattilaiset ohjaajat. [Huom.: maksullinen]'
-  lynda_beyond_longdescription: 'Opi kuinka ohjelmoit, luot ja rakennat verkkosovelluksia,
-    C ja C++ olio-ohjelmointikielten perusteista, aina Javan kirjoittamiseen. Kehittäjille
-    tarkoitetut oppitunnit auttavat sinua kehittämään ja luomaan mobiilisovelluksia,
-    työskentelemään PHP:llä ja MySQL tietokannoilla, aloittamaan tilastollisella ohjelmointikielellä
-    R, ja paljon muuta. [Huom.: maksullinen]'
-  edx_beyond_longdescription: CS50x on Harward Collegen johdanto tietotekniikan ja
-    ohjelmointitaidon älyllisiin haasteisiin pääaineopiskelijoille ja muille, joilla
-    joko on tai ei ole aikaisempaa ohjelmointikokemusta. Sisältöihin kuuluvat abstraktiot,
-    algoritmit, tietorakenteet, kapselointi, resurssienhallinta, tietoturva, ohjelmistotuotanto
-    ja verkkokehitys. Ohjelmointikieliin kuuluvat C, PHP ja JavaScript sekä SQL, CSS
-    ja HTML. CS50x-kurssin kampusversio on Harvardin toiseksi suurin kurssi.
-  coursera_beyond_longdescription: 'Stanfordin CS 101 kurssi, opettajana Nick Parlante
-    (ILMAISEKSI!). CS 101 opettaa tietotekniikan keskeisimmät käsitteet yleisölle,
-    jolla ei ole lainkaan aikaisempaa kokemusta aiheesta. Leikimällä ja kokeilemalla
-    lyhyillä koodinpaloilla, tuot esiin tietokoneiden vahvuudet ja rajoitukset. CS
-    101 antaa myös yleisen taustan nykypäivän tietokoneisiin: mikä tietokone on, mitä
-    laitteisto on, mitä ohjelmistot ovat ja mikä on internet. Esitietovaatimuksena
-    vain taito käyttää selainta.'
-  udacity_beyond_longdescription: Tällä kurssilla opit tietotekniikan avainkäsitteitä
-    ja opit kuinka kirjoitat omia tietokoneohjelmia. Esimerkkinä käytämme hakurobottia.
-    Kurssille ei vaadita aiempaa ohjelmointiosaamista; aloittelijat ovat tervetulleita!
-    Kurssin lopussa olet oppinut avainkäsitteet ja tarpeeksi ohjelmointia, jotta voit
-    kirjoittaa itsenäisesti erilaisia Python-ohjelmia. Tämä kurssi valmistelee sinut
-    siirtymään keskitason tietotekniikan kursseille.
-  teachingtree_beyond_longdescription: TeachingTree on avoin alusta, joka antaa kenen
-    tahansa organisoida koulutussisältöjä. Tavoitteenamme on antaa opiskelijoille
-    kulloinkin juuri se videopätkä, jonka he tarvitsevat yksittäisen käsitteen oppimiseksi.
-    Kaikkia kannustetaan auttamaan joko videoita lisäämällä tai käsitteiden tunnistamisessa.
+  hopscotch_beyond_name: 'Hopscotch: ohjelmointia iPadillasi'
+  hopscotch_beyond_shortdescription: Opi visuaalista ohjelmointia iPadillä
+  hour_of_code: Koodaustunti
+  hourofcode_gradelevel: 4-104-vuotiaille
+  hourofcode_longdescription: Paikkamerkki uuteen code.org/hoc
+  hourofcode_name: Klassinen sokkelo
+  hourofcode_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
+  hourofcode_shortdescription: Opi koodaamaan Mark Zuckerbergin ja Angry Birdsin kanssa!
+  how_to_teach_hoc: Miten opettaa koodia tunnissa
+  i_agree: Hyväksyn
+  i_am_a: Olen
+  iceage_name: Jääkausi
+  if_you_enjoyed: Jos nautit oppimisesta, pyydä myös kavereitasi kokeilemaan! Haluamme
+    koko maailman oppivan.
+  infinity_gradelevel: 4-104-vuotiaille
+  infinity_name: Infinity Pelilabra
+  infinity_shortdescription: Tee Pelilabrassa tarina tai peli jonka pääosassa ovat
+    Disneyn Infinity-hahmot.
+  just_did_accelerated: Suoritin juuri nopeutetun kurssin - tsekkaa tämä! @codeorg
+  just_did_course1: Suoritin juuri kurssin 1 - tsekkaa tämä! @codeorg
+  just_did_course2: Suoritin juuri kurssin 2 - tsekkaa tämä! @codeorg
+  just_did_course3: Suoritin juuri kurssin 3 - tsekkaa tämä! @codeorg
+  just_did_course4: Suoritin juuri kurssin 4 - tsekkaa tämä! @codeorg
+  just_did_course_donor: Suoritin juuri kurssin %{course} - käy katsomassa! Kiitos
+    %{donor_twitter} @codeorg tuestasi
+  just_did_coursea: Suoritin juuri kurssin A - tarkista tämä! @codeorg
+  just_did_courseb: Suoritin juuri kurssin B - tarkista tämä! @codeorg
+  just_did_coursec: Suoritin juuri kurssin C - tarkista tämä! @codeorg
+  just_did_coursed: Suoritin juuri kurssin D - tarkista tämä! @codeorg
+  just_did_coursee: Suoritin juuri kurssin E - tarkista tämä! @codeorg
+  just_did_coursef: Suoritin juuri kurssin F - tarkista tämä! @codeorg
+  just_did_hoc: 'Suoritin juuri #Koodaustunti - tsekkaa tämä! @codeorg'
+  just_did_hoc_donor: 'Suoritin juuri #Koodaustunnin - Tarkista tämä! (Kiitos %{donor_twitter}
+    tukemisesta @codeorg)'
+  khan_beyond_gradelevel: Yläaste +
+  khan_beyond_longdescription: Opi JavaScript-ohjelmoinnin perusteet samalla, kun
+    luot hauskoja piirrustuksia koodillasi. Voit opiskella itseksesi tai luokan kanssa!
+  khan_beyond_name: Opi tietokoneohjelmointia
+  khan_beyond_platformtext: Nykyaikaiset verkkoselaimet
+  khan_beyond_shortdescription: Opi piirtämään JavaScriptillä
+  khan_gradelevel: Yläaste +
+  khan_longdescription: Opi JavaScript-ohjelmoinnin perusteet samalla, kun luot hauskoja
+    piirrustuksia koodillasi. Voit opiskella itseksesi tai luokan kanssa!
+  khan_name: Johdanto JavaScript kieleen
+  khan_platformtext: Nykyaikaiset verkkoselaimet
+  khan_shortdescription: Opi piirtämään JavaScriptillä
+  khanes_gradelevel: Yläaste +
+  khanes_longdescription: Opi JavaScript-ohjelmoinnin perusteet samalla, kun luot
+    hauskoja piirrustuksia koodillasi. Voit opiskella itseksesi tai luokan kanssa!
+  khanes_name: Johdanto JavaScript kieleen
+  khanes_platformtext: Nykyaikaiset verkkoselaimet
+  khanes_shortdescription: Opi piirtämään JavaScriptillä
+  khanfr_gradelevel: Yläaste +
+  khanfr_longdescription: Opi JavaScript-ohjelmoinnin perusteet samalla, kun luot
+    hauskoja piirrustuksia koodillasi. Voit opiskella itseksesi tai luokan kanssa!
+  khanfr_name: Johdanto JavaScript kieleen
+  khanfr_platformtext: Nykyaikaiset verkkoselaimet
+  khanfr_shortdescription: Opi piirtämään JavaScriptillä
+  khanhe_gradelevel: Yläaste +
+  khanhe_longdescription: Opi JavaScript-ohjelmoinnin perusteet samalla, kun luot
+    hauskoja piirrustuksia koodillasi. Voit opiskella itseksesi tai luokan kanssa!
+  khanhe_name: Johdanto JavaScript kieleen
+  khanhe_platformtext: Nykyaikaiset verkkoselaimet
+  khanhe_shortdescription: Opi piirtämään JavaScriptillä
+  khanpl_gradelevel: Yläaste +
+  khanpl_longdescription: Opi JavaScript-ohjelmoinnin perusteet samalla, kun luot
+    hauskoja piirrustuksia koodillasi. Voit opiskella itseksesi tai luokan kanssa!
+  khanpl_name: Johdanto JavaScript kieleen
+  khanpl_platformtext: Nykyaikaiset verkkoselaimet
+  khanpl_shortdescription: Opi piirtämään JavaScriptillä
+  khanpt_gradelevel: Yläaste +
+  khanpt_longdescription: Opi JavaScript-ohjelmoinnin perusteet samalla, kun luot
+    hauskoja piirrustuksia koodillasi. Voit opiskella itseksesi tai luokan kanssa!
+  khanpt_name: Johdanto JavaScript kieleen
+  khanpt_platformtext: Nykyaikaiset verkkoselaimet
+  khanpt_shortdescription: Opi piirtämään JavaScriptillä
+  kidsruby_beyond_gradelevel: Yli 12-vuotiaille
+  kidsruby_beyond_longdescription: Pidä hauskaa ja tee pelejä, tai ratkaise kotitehtäväsi
+    Rubyllä! Kerro vanhemmillesi tai opettajillesi että opiskelet Ruby ohjelmointia...
+    ;). Ilmainen, ja toimii millä tahansa tietokoneella. [Huom. Vaatii työpöytäasennuksen]
+  kidsruby_beyond_platformtext: Työpöytäasennus
+  kidsruby_beyond_shortdescription: Opi ohjelmoimaan Rubyllä
+  kodable_beyond_gradelevel: Ala-aste
+  kodable_beyond_longdescription: Kodable on itseohjaava iPad-peli, joka johdattelee
+    5+-vuotiaat lapset ohjelmoinnin perusteisiin. Opettajan tai vanhemman läsnäolo
+    on suotavaa, mutta ei välttämätöntä.
+  kodable_beyond_name: Kodable
+  kodable_beyond_shortdescription: Hauska iPad-peli opettamaan ohjelmoinnin käsitteitä
+  kodable_gradelevel: Ala-aste
+  kodable_longdescription: Kodable on itseohjaava iPad-peli, joka johdattelee 5+-vuotiaat
+    lapset ohjelmoinnin perusteisiin. Opettajan tai vanhemman läsnäolo on suotavaa,
+    mutta ei välttämätöntä.
+  kodable_name: Kodable (myös lukutaidottomille)
+  kodable_shortdescription: Hauska iPad-peli opettamaan ohjelmoinnin käsitteitä
+  kodableunplugged_gradelevel: 8-13-vuotiaille
+  kodableunplugged_longdescription: 'Suunniteltuna käytettäväksi paperilla, fuzzFamily
+    Frenzy on johdanto ohjelmointilogiikkaan lapsille iältään 5 tai enemmän. Opettajan
+    pitäisi selittää peli, jonka jälkeen oppilaat ohjelmoivat luokkakaverinsa suorittamaan
+    yksinkertaisen esteradan. '
+  kodableunplugged_platformtext: Tietokoneeton tekeminen
+  kodableunplugged_shortdescription: Hauska tietokoneettoman tekemisen harjoitus
+  kodu_beyond_gradelevel: Yli 8-vuotiaille
   kodu_beyond_longdescription: Kodu auttaa lapsia luomaan pelejä PC:lle ja XBoxille
     yksinkertaisen visuaalisen ohjelmointikielen avulla. Kodua voidaan käyttää opettamaan
     luovuutta, ongelmanratkaisua, tarinankerrontaa sekä ohjelmointia. Kuka tahansa
@@ -1439,47 +1072,169 @@ fi-FI:
     tai ohjelmointitaitoja. Kodu-ohjelmisto on saatavilla PC:lle ilmaiseksi. Kodu
     Xboxille on saatavilla Yhdysvalloissa XBox Marketplacessa, Indie Games-kanavalta
     noin 5$ hintaan.
-  cargobot_beyond_longdescription: Cargo-Bot on älypeli, jossa opetat robottia liikuttamaan
-    laatikoita. Kuulostaa yksinkertaiselta, eikö vain? Pelissä on 36 oivaltavan älykästä
-    peliä, mieleenjäävä musiikki ja upeat retinagrafiikat. Voit jopa tallentaa ratkaisusi
-    ja jakaa ne YouTubessa ystävillesi.
-  kidsruby_beyond_longdescription: Pidä hauskaa ja tee pelejä, tai ratkaise kotitehtäväsi
-    Rubyllä! Kerro vanhemmillesi tai opettajillesi että opiskelet Ruby ohjelmointia...
-    ;). Ilmainen, ja toimii millä tahansa tietokoneella. [Huom. Vaatii työpöytäasennuksen]
-  w3schools_beyond_longdescription: Opi luomaan verkkosivustoja. Opi palvelipuolen
-    perusteet alle päivässä. Opi hyödyntämään tietokantoja verkkosivuillasi
-  codeavengers_beyond_longdescription: Opi kuinka ohjelmoida pelejä, sovelluksia ja
-    verkkosivustoja. Asiantuntijoiden suunnittelema kurssi, jossa on täydellinen vaikeustaso
-    aloittelijoille, helposti ymmärrettävät ohjeet ja upea apu tarvittaessa. HTML-,
-    CSS- ja Javascript-kurssimme sisältävät ohjelmointihaasteita ja kertauspelejä,
-    jotka tekevät oppimisen hauskaksi ja tehokkaaksi kaikenikäisille.
+  kodu_beyond_shortdescription: Suunnittele kolmiulotteinen pelimaailma
+  leaderboards_for_hoc: Koodaustunnin pistetaulukot.
+  learn_back_to_minecraft: Opi lisää Minecraftissa
+  learn_classes: Etsi paikallisia oppitunteja
+  learn_code_studio: Kokeile kursseja Code Studiossa
+  learn_cs_concepts: Opettele tietotekniikan peruskäsitteet vedä ja pudota -ohjelmoinnilla.
+    Tämä on pelimäinen opas, jonka video-oppaissa esiintyvät mm. Bill Gates, Mark
+    Zuckerberg, Angry Birds, ja Plants vs. Zombies. Opettele toistosilmukat, jos-niin
+    -lauseet ja perusalgoritmit.
+  learn_hoc: Opiskele Koodaustunnilla
+  learn_more: Lisätietoja
+  learn_next_level: Jatka seuraavalle tasolle
+  learn_now: Opettele nyt
+  learn_online: Kokeile muita kursseja verkossa
+  learn_sign_up_button: Rekisteröidy
+  learn_videos_show: Näytä tämä inspiroiva video luokallesi
+  lego_beyond_gradelevel: Yläaste +
+  lego_beyond_longdescription: Luo pieniä, muokattavia ja ohjelmoitavia robotteja
+    käyttäen LEGO palikoita.
+  lego_beyond_platformtext: Robotin osto
+  lego_beyond_shortdescription: Rakenna ja ohjelmoi robotti
+  lightbot_beyond_gradelevel: Kaikenikäiset
+  lightbot_beyond_longdescription: 'Opi ohjelmoinnin peruslogiikka. Sopii 4+-vuotiaille.
+    Tuetut alustat: iOS, Android ja selaimet. Opi tekemään komentojonoja, tunnistamaan
+    hahmoja, käyttämään proseduureja ja hyödyntämään silmukoita!'
+  lightbot_beyond_platformtext: iOS, Android (tai selain)
+  lightbot_beyond_shortdescription: Koodauskäsitteitä opettava peli
+  lightbot_gradelevel: Kaikenikäiset
+  lightbot_longdescription: Opasta valobotti sytyttämään kaikki siniset ruudut! Valobotti
+    on ohjelmointia pelimuotona käyttävä pulmapeli, jonka avulla pelaajat oppivat
+    ymmärtämään yksinkertaista koodia. Opi tekemään komentojonoja, kirjoittamaan aliohjelmia
+    ja käyttämään silmukoita edetäksesi pelissä. Sopii kaiken ikäisille.
+  lightbot_platformtext: Kaikki selaimet sekä iOS, Android tai pelikonsoli
+  lightbot_shortdescription: Ohjelmoi Lightbot ratkomaan tehtäviä käyttäen aliohjelmia
+    ja silmukoita!
+  lightbotintl_gradelevel: Kaikenikäiset
+  lightbotintl_longdescription: 'Opi ohjelmoinnin peruslogiikka. Sopii 4+-vuotiaille.
+    Tuetut alustat: iOS, Android ja selaimet. Opi tekemään komentojonoja, tunnistamaan
+    hahmoja, käyttämään proseduureja ja hyödyntämään silmukoita!'
+  lightbotintl_platformtext: iOS, Android (tai selain)
+  lightbotintl_shortdescription: Koodauskäsitteitä opettava peli
+  lines_of_code: TÄHÄN MENNESSÄ KIRJOITETTU YLI <b># RIVIÄ KOODIA</b>.
+  lines_of_code_alt: "<b>#</b> RIVIÄ OPISKELIJOIDEN KIRJOITTAMAA KOODIA"
+  lynda_beyond_gradelevel: Lukio +
+  lynda_beyond_longdescription: 'Opi kuinka ohjelmoit, luot ja rakennat verkkosovelluksia,
+    C ja C++ olio-ohjelmointikielten perusteista, aina Javan kirjoittamiseen. Kehittäjille
+    tarkoitetut oppitunnit auttavat sinua kehittämään ja luomaan mobiilisovelluksia,
+    työskentelemään PHP:llä ja MySQL tietokannoilla, aloittamaan tilastollisella ohjelmointikielellä
+    R, ja paljon muuta. [Huom.: maksullinen]'
+  lynda_beyond_name: Ohjelmointikurssit verkossa
+  lynda_beyond_platformtext: Verkkopohjainen (maksullinen)
+  lynda_beyond_shortdescription: Kymmenittäin ohjelmointikursseja verkossa
+  make_app: Tee sovellus
+  makeschool_beyond_gradelevel: Lukio
+  makeschool_beyond_longdescription: Osaatko hiukan ObjectiveC:tä? Opi iPhone-pelin
+    tekeminen tunnissa! Opastamme sinut prosessin läpi, ohjelmoimaan, testaamaan ja
+    pelaamaan pelisi täysin selaimessa, jonka jälkeen voit jakaa sen Facebookissa
+    ystävillesi kokeiltavaksi! Ei vaadi aikaisempaa kokemusta iPhonelle kehittämisestä.
+    Sinun täytyy ymmärtää mitä ovat muuttujat, metodit ja oliot.
+  makeschool_beyond_name: Rakenna iPhone-peli selaimessasi!
+  makeschool_beyond_platformtext: Nykyaikaiset verkkoselaimet
+  makeschool_beyond_shortdescription: Opi tekemään iPhone-peli tunnissa
+  makeschool_gradelevel: Lukio
+  makeschool_longdescription: Opi ohjelmoimaan tekemällä iPhone-peli käyttäen upouutta
+    ja aloittelijalle ystävällistä Swift-ohjelmointikieltä! Luo Pok&eacute;mon-teemainen
+    toimintopeli ja kirjoita koodia opettaaksesi hirviöllesi uusia liikkeitä. Opit
+    kuinka käyttää muuttujia, menetelmiä ja olioita auttaksesi hirviötäsi voittamaan!
+  makeschool_name: Rakenna iPhone-peli selaimessasi!
+  makeschool_platformtext: Nykyaikaiset verkkoselaimet
+  makeschool_shortdescription: Tee iPhone-peli! Opi opettamaan hirviöllesi uusia liikkeitä
+    koodia kirjoittaen!
+  mc_gradelevel: 4-104-vuotiaille
+  mc_longdescription: Käytä koodipalikoita viedäksesi Steven tai Alexin seikkailulle
+    läpi Minecraft-maailman
+  mc_name: Minecraft Koodaustunti
+  mc_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
+  mc_shortdescription: Käytä koodipalikoita viedäksesi Steven tai Alexin seikkailulle
+    läpi Minecraft-maailman
+  mc_specs: Useita kieliä | Modernit selaimet | Yli 6-vuotiaille
+  minecraft_adventurer: Minecraft seikkailija
+  minecraft_adventurer_button: Aloita
+  minecraft_adventurer_description: Koodin avulla voit viedä Alexin tai Steven seikkailuun.
+  minecraft_agent: 'Minecraft: Sankarin matka'
+  minecraft_agent_button: Aloita
+  minecraft_agent_description: Minecraft on palannut takaisin Hour of Code -tunnille
+    täysin uudella toiminnolla! Matka Minecraftin läpi koodilla.
+  minecraft_designer: Minecraft suunnittelija
+  minecraft_designer_button: Aloita
+  minecraft_designer_description: Koodaa eläimiä ja muita Minecraft otuksia omalla
+    Minecraft versiollasi.
+  minecraft_download_adventurer: Lataa Minecraft seikkailijan offline-versio.
+  minecraft_name: Minecraft
+  minecraft_no_internet: Onko sinulla nettiyhteys?
+  minecraft_specs: Useita kieliä | Modernit selaimet | Luokista 2 alkaen
+  minecraft_subtitle: Minecraft Koodaustunti
+  minecraft_tutorials: Minecraft Koodaustunnin ohjeet
+  mobile_devices: Oppaat mobiililaitteille
+  monstercoding_gradelevel: 5-13-vuotiaille
+  more_resources_educators: Lisämateriaalit opettajille ja kasvattajille
+  mozilla_beyond_gradelevel: Yli 12-vuotiaille
   mozilla_beyond_longdescription: Thimble tekee omien verkkosivujen luomisen ja jakamisen
     naurettavan yksinkertaiseksi. Kirjoita ja muokkaa HTML:ää ja CSS:ää suoraan selaimessasi
     ja esikatsele työsi heti. Jaa valmis projektisi yhdellä napsautuksella. Täydellinen
     sekä aloittelijoille ja asiantuntijoille.
-  codecombat_beyond_longdescription: Pelaa velhona käyttäen koodia (taikoja) sankariesi
-    kontrolloimiseen, navigoi labyrinttejä, voita peikot, huijaa vihollisia ja pelasta
-    liittolaiset! Opi JavaScriptiä tässä aloittelijoille tarkoitetussa HTML 5 verkkopelissä.
-  codea_beyond_longdescription: Codea iPadille antaa sinun luoda pelejä ja simulaatioita
-    &mdash; melkein mistä tahansa visuaalisesta ideasta joka sinulla on. Muunna ajatuksesi
-    vuorovaikutteisiksi luomuksiksi jotka hyödyntävät iPadin toimintoja Multi-Touch
-    ja kiihtyvyysmittari. Uskomme että Codea on kaunein käyttämäsi koodieditori ja
-    vielä helppokäyttöinenkin. Codea on suunniteltu jotta voit koskettaa koodiasi.
-    Haluatko vaihtaa numeron? Vain kosketa ja vedä. Entäpä väri tai kuva? Pyyhkäisy  käynnistää
-    visuaalisen editorin, jossa voit valita mitä haluat.
-  lego_beyond_longdescription: Luo pieniä, muokattavia ja ohjelmoitavia robotteja
-    käyttäen LEGO palikoita.
-  finch_beyond_longdescription: Finch on uusi robotti tietotekniikan opetukseen. Se
-    on Carnegie Mellonin CREATE laboratorion neljän vuoden tutkimuksen tulos. Finch
-    on suunniteltu antamaan innostava johdanto ohjelmoinnin taitoihin. Siinä on tuki
-    yli tusinalle ohjelmointikielelle ja -ympäristölle, sisältäen useita ympäristöjä,
-    jotka soveltuvat niinkin nuorille kuin kahdeksan vuotiaille oppilaille. Finch
-    suunniteltiin antamaan opiskelijoille mahdollisuus kirjoittaa rikkaita vuorovaikutteisia
-    ohjelmia.
-  arduino_beyond_longdescription: Arduini on suosittu alusta, jolla taiteilijat ja
-    suunnittelijat voivat käyttää oikeita antureita, LEDejä, summereita ja muita laitteita.
-    Sparkfun Virtual Sandbox opettaa sinulle oikeaa Arduino-koodia suoraan omassa
-    selaimessasi.
+  mozilla_beyond_platformtext: Nykyaikaiset verkkoselaimet
+  mozilla_beyond_shortdescription: Luo ja jaa verkkosivuja
+  n_have_learned_an_hoc: "<h1>Kokeile</h1><h2>Koodaustunti</h2><h3># palveltu</h3>"
+  n_participants: "# osallistujaa"
+  name: Nimi
+  never_spam: Me emme koskaan lähetä sinulle roskapostia
+  next: Seuraava
+  'no': Ei
+  no_internet: Onko sinulla nettiyhteys?
+  non_english_tutorials: 'Oppaat on käännetty useille kielille:'
+  og_description: Jokainen oppilas jokaisessa koulussa ansaitsee mahdollisuuden opiskella
+    tietotekniikkaa. Se muuttaa kaiken.
+  og_description_celeb: Kokeile uusia oppitunteja ja voita videotapaaminen julkkiksen
+    kanssa itsellesi ja luokallesi!
+  og_title: Jokainen lapsi ansaitsee mahdollisuuden
+  og_title_here: Koodaustunti on täällä!
+  og_title_soon: Tunti koodia on tulossa
+  older_systems: Kurssit, jotka toimivat vanhemmilla järjestelmillä
+  older_systems_subheading: Näiden pitäisi toimia vanhemmilla selaimilla. Päästäksesi
+    kaikkiin oppaisiin, päivitä <a href="http://browsehappy.com/" target="_blank">nykyaikaiseen
+    verkkoselaimeen.</a>
+  page_not_found_title: Sivua ei löydy
+  participant_educator: Opettaja
+  participant_engineer: Ohjelmistosuunnittelija
+  participant_other: Ei mikään edellä mainituista
+  participant_parent: Vanhempi
+  participant_select: "- Valitse -"
+  participant_student: Oppilas
+  participants: osallistujat
+  personalize_certificate: Nimikoi todistuksesi
+  petition_age: Ikä
+  petition_join_others: 'Liity # muihin'
+  petition_message: Jokaisen oppilaan jokaisessa koulussa tulisi voida oppia tietotekniikkaa
+  petition_sign_message: 'Jos olet samaa mieltä, allekirjoita. Ole yksi # joukossa.'
+  petition_thankyou: Kiitos, kun allekirjoitit vetoomuksen
+  playlab_choose_theme: Valitse Pelilabra-teemasi
+  playlab_classic_title: Klassinen
+  playlab_gradelevel: 4-104-vuotiaille
+  playlab_gumball_title: Gumball
+  playlab_iceage_title: Ice Age - Tulossa pian
+  playlab_iceage_title_live: Jääkausi
+  playlab_longdescription: Luo tarina tai tee peli PeliLabralla! Merirosvot, eläimet,
+    ninjat, zombit ja monet muut hahmot liikkuvat, ääntelevät, keräävät pisteitä ja
+    jopa heittävät tulipalloja!
+  playlab_name: Pelilabra
+  playlab_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
+  playlab_shortdescription: Suunnittele ja luo oma tarina tai peli Pelilabrassa!
+  pocketcode_beyond_gradelevel: Yläaste +
+  pocketcode_beyond_longdescription: Luo oma pelisi älypuhelimellesi Pocket Codella!
+    Auta laskuvarjohyppääjä Steve pakettiensa toimitamisessa. Voit jakaa pelisi ystävillesi
+    ja muille käyttäjille kokeiltavaksi!
+  pocketcode_beyond_name: Taskukoodi
+  pocketcode_beyond_platformtext: Mobiilisovellus
+  pocketcode_beyond_shortdescription: Luo peli älypuhelimeesi ja jaa ystävillesi kokeiltavaksi!
+  previous: Edellinen
+  print_all: Tulosta kaikki
+  print_ice_art: Tulosta jäätaiteesi
+  privacy_practices_children: Lue käytännöistämme lasten yksityisyyden suojaamiseksi
+  processing_beyond_gradelevel: Lukio
   processing_beyond_longdescription: Processing on ohjelmointikieli, kehitysympäristö
     ja verkkoyhteisö. Vuodesta 2001 lähtien Processing on kannustanut ohjelmointilukutaitoa
     kuvaamataiteissa ja visuaalista lukutaitoa teknologiassa. Aluksi se luotiin palvelemaan
@@ -1487,192 +1242,437 @@ fi-FI:
     ympäristössä, josta Processing on kehittynyt ammattilaisten kehitystyökaluksi.
     Nykyään kymmenet tuhannet opiskelijat, suunnittelijat, tutkijat ja harrastajat
     käyttävät Processingia oppimisessa, prototyypeissä ja tuotannossa.
-  alice_beyond_longdescription: Käyttäen innovatiivista ohjelmointiympäristöä tukemaan
-    3D-animaatioiden luomista, Alice-projekti tarjoaa työkaluja ja materiaaleja automatisointiajattelun
-    opettamiseen ja oppimiseen, ongelmanratkaisuun ja ohjelmointiin eri ikäisille
-    ja eri luokka-asteille.
+  processing_beyond_name: Ohjelmoi Processing -kielellä
+  processing_beyond_platformtext: Nykyaikaiset verkkoselaimet
+  processing_beyond_shortdescription: Opi Processing-kieliä
+  processing_gradelevel: Lukio
+  processing_longdescription: Johdanto ohjelmointiin kuvataiteiden parissa käyttäen
+    Processing-ohjelmointikieltä. Lyhyet video-oppitunnit johdattelevat ohjelmointiharjoituksiin,
+    joiden kautta päästään suunnittelemaan  interaktiivista piirto-ohjelmaa
+  processing_name: Piirrä koodilla
+  processing_platformtext: Nykyaikaiset verkkoselaimet
+  processing_shortdescription: Tunnin kurssi Processing-kielestä
+  projguts_gradelevel: 10-13-vuotiaille
+  projguts_longdescription: Tämä tietokoneettoman tekemisen toiminta auttaa opiskelijoita
+    oppimaan kuinka mallinnus ja simulointi toimii, laittaessaan oppilasryhmän pelaamaan
+    eri versioita kivi-sakset-paperi -pelistä, ja näkemään erilaisten mallinnuskokeilujen
+    tulokset.
+  projguts_name: Kivi, sakset, paperi
+  projguts_platformtext: Tietokoneeton tekeminen
+  projguts_shortdescription: Kokeile mallinnusta ja simulointia kivi-sakset-paperi
+    -pelin avulla
+  quorum_gradelevel: Yläaste +
+  quorum_longdescription: Tämä oppitunti on saatavilla näkövammaisille ja toimii näytönlukijaohjelmien
+    kanssa. Tule Maryn kanssa vierailulle, kun Mary tulee biologian laboratorioon
+    ohjelmoijaksi ja oppii Quorum ohjelmointikielen. Oppitunti on oppilaan ohjaama,
+    jossa on esimerkkitehtäviä verkossa.
+  quorum_name: Esteetön ohjelmointi (ruudunlukijatuella)
+  quorum_platformtext: Modernit webselaimet. Ruudunlukijatuki
+  quorum_shortdescription: Liity Maryn seuraan ohjatulle kiertomatkalle, kun hän oppii
+    Quorum-ohjelmointikieltä.
+  review_lesson_plan: Tarkista tuntisuunnitelma ja muita opettajien resursseja.
+  robomind_beyond_gradelevel: 8-13-vuotiaille
+  robomind_beyond_longdescription: 'Opiskelijat oppivat ohjelmoinnin perusteet kontrolloiden
+    omaa virtuaalista robottiaan. Tämä verkkokurssi sisältää kaiken tarvittavan: lyhyet
+    esitykset, elokuvat, tietovisat ja automaattisen opastuksen/vinkit ohjelmointitehtävien
+    avuksi. '
+  robomind_beyond_name: Ohjelmoi virtuaalirobotti
+  robomind_beyond_platformtext: Moderni verkkoselain, mobiiliverkko
+  robomind_beyond_shortdescription: Kirjoita koodia virtuaalirobotille
+  robomind_gradelevel: 8-13-vuotiaille
+  robomind_longdescription: 'Opiskelijat oppivat ohjelmoinnin perusteet ohjaamalla
+    omaa virtuaalista robottiaan. Verkkokurssi sisältää kaiken tarvittavan - lyhyet
+    esittelyt, elokuvat, tietovisat ja automaattiset  opastukset/vinkit, jotka auttavat
+    ohjelmointiharjoitusten kanssa. '
+  robomind_name: Ohjelmoi virtuaalirobotti
+  robomind_platformtext: Moderni verkkoselain, mobiiliverkko
+  robomind_shortdescription: Kirjoita koodia virtuaalirobotille
+  robomindnl_gradelevel: 8-13-vuotiaille
+  robomindnl_longdescription: 'Opiskelijat oppivat ohjelmoinnin perusteet ohjaamalla
+    omaa virtuaalista robottiaan. Verkkokurssi sisältää kaiken tarvittavan - lyhyet
+    esittelyt, elokuvat, tietovisat ja automaattiset  opastukset/vinkit, jotka auttavat
+    ohjelmointiharjoitusten kanssa. '
+  robomindnl_name: Ohjelmoi virtuaalirobotti
+  robomindnl_platformtext: Moderni verkkoselain, mobiiliverkko
+  robomindnl_shortdescription: Kirjoita koodia virtuaalirobotille
+  scratch_beyond_gradelevel: Yli 8-vuotiaille
+  scratch_beyond_longdescription: Scratchin kanssa voit luoda oman interaktiivisen
+    pelin, tarinan tai animaation &mdash; ja voit jakaa ne ystäviesi kanssa. Aloita
+    animoimalla oma nimesi, luomalla syntymäpäiväkortti tai luomalla pong-peli.
+  scratch_beyond_name: Ala luovaksi koodaten
+  scratch_beyond_platformtext: Mikä tahansa selain
+  scratch_beyond_shortdescription: Luo interaktiivisia pelejä, tarinoita ja animaatioita.
+  scratch_gradelevel: Yli 8-vuotiaille
+  scratch_longdescription: Scratchin kanssa voit luoda oman interaktiivisen pelin,
+    tarinan tai animaation &mdash; ja voit jakaa ne ystäviesi kanssa. Aloita animoimalla
+    oma nimesi, luomalla syntymäpäiväkortti tai luomalla pong-peli.
+  scratch_name: Ala luovaksi koodaten
+  scratch_platformtext: Vain pöytäkoneiden selaimille (ei tableteille)
+  scratch_shortdescription: Luo interaktiivisia pelejä, tarinoita ja animaatioita.
+  scratchjr_beyond_gradelevel: Ala-aste
+  scratchjr_beyond_longdescription: ScratchJr on ohjelmointikieli aloittelijoille,
+    joka mahdollistaa nuorten lasten luoda omia vuorovaikutteisia tarinoita ja pelejä.
+    Lapset liittävät yhteen ohjelmointilohkoja, jotka laittavat hahmot liikkumaan,
+    hyppäämään, tanssimaan ja laulamaan
+  scratchjr_beyond_name: ScratchJR lukutaidottomille
+  scratchjr_beyond_shortdescription: 'Luo vuorovaikutteisia tarinoita ja pelejä käyttäen
+    ScratchJr:ää. '
+  select_language: Valitse kieli
+  share_achievement: Jaa saavutuksesi
+  share_on_facebook: Jaa Facebookissa
+  share_on_twitter: Jaa Twitterissä
+  speak_another_language: Puhutko muuta kieltä?
+  sphero_beyond_gradelevel: Yli 8-vuotiaille
   sphero_beyond_longdescription: Robottikurssilla lapset oppivat leikin lomassa ohjelmoimaan.
     Samalla tulee harjoiteltua myös matematiikan ja luonnontieteiden taitoja.
-  compatibility_hide_this_warning: Piilota varoitus
-  compatibility_unsupported_browser_markdown: Selaintasi ei tueta. Päivitä selaimesi
-    [johonkin tuetuista selaimistamme](%{supported_browsers_url}). Voit yrittää katsella
-    tätä sivua, mutta todennäköisesti sen toiminnallisuudet ovat rikki.
-  flappy_shortcode: räpyttele
-  header_home: Etusivu
-  header_my_dashboard: Kojelauta
-  header_courses: Kurssit
-  header_course_catalog: Kurssiluettelo
-  header_project_gallery: Projektit
-  header_sections: Ryhmät
-  header_educate_overview: Kouluttajan yleiskatsaus
-  header_educate_elementary: Peruskoulu
-  header_educate_middle: Yläaste
-  header_educate_high: Lukio
-  header_educate_hoc: Koodaustunti
-  header_educate_partner: Ryhdy partneriksi
-  header_educate_beyond: Muualla kuin Code.org:ssa
-  header_educate_inspire: Innosta opiskelija
-  header_educate_community: Verkkoyhteisö
-  header_educate_tools: Työkalut ja videot
-  header_about_us: Tietoja meistä
-  header_about_leadership: Johto
-  header_about_donors: Lahjoittajat
-  header_about_partners: Kumppanit
-  header_about_team: Koko joukkue
-  header_about_news: Uutishuone
-  header_about_evaluation: Arviointi
-  header_about_jobs: Työpaikat
-  header_about_contact: Ota yhteyttä
-  header_about_faqs: UKK
-  header_learn: Opi
-  header_teach: Opeta
-  header_stats: Tilastot
-  header_help_us: Auta meitä
-  header_about: Tietoja
-  header_teacher_community: Opettajayhteisö
-  header_help_support: 'Ohjeet ja tuki '
-  header_report_bug: Ilmoita ongelmasta
-  header_legal_privacy: Tietosuojakäytäntö
-  header_legal_tos: Käyttöehdot
-  header_tutorials: Oppaat
+  sphero_beyond_platformtext: Robotin osto
+  sphero_beyond_shortdescription: SPRK tunnit antavat lapsille hauskan ensikurssin
+    robottien ohjelmointiin tarkentaen samalla sekä matematiikan että luonnontieteiden
+    taitoja.
+  sports_athletes_title: Suositeltavat urheilijat
+  sports_basketball_title: Tee koripallopeli
+  sports_featured_athletes: Suositeltavat urheilijat
+  sports_og_title: Tee se. Kuka tahansa voi oppia.
+  sports_page_title: Koodaustunti Urheilua
+  sports_select_theme: Valitse tutorialin teema
+  sports_video_title: Tee se. Kuka tahansa voi oppia.
+  sports_watch_video: Katso video
   sprite_lab_documentation: Sprite-labra dokumentaatio
   sprite_lab_tutorials: Sprite-labra oppitunnit
-  header_documentation: Dokumentaatio
-  user_header_label: Hei %{username}
-  user_header_team: Tiimi
-  user_header_settings: Tilin asetukset
-  user_header_logout: Kirjaudu ulos
-  user_header_signin: Kirjaudu sisään
-  user_header_create: 'Luo '
+  start_hoc: Aloita Koodaustunti nyt
+  starwars_blocks_description: Käytä vedettäviä ja tiputettavia lohkoja.
+  starwars_blocks_specs: Monia kieliä | Modernit selaimet, älypuhelimet, tabletit
+    | Ikävuodet 6-10
+  starwars_blocks_title: lohkot
+  starwars_gradelevel: 4-104-vuotiaille
+  starwars_javascript_description: Käytä raahattavia koodipalikoita ja JavaScriptiä.
+  starwars_javascript_specs: Vain englanti | Modernit selaimet | Yli 11-vuotiaille
+  starwars_javascript_title: JavaScript
+  starwars_longdescription: Opettele ohjelmoimaan droideja ja luo kaukaiseen galaksiin
+    ikioma Tähtien Sota -pelisi.
+  starwars_name: 'Tähtien Sota: Kasaa koodista Galaksi'
+  starwars_platform_text: Nykyaikaiset selaimet, älypuhelimet, tabletit
+  starwars_platformtext: Modernit selaimet ja tablettitietokoneet
+  starwars_shortdescription: Opettele ohjelmoimaan droideja ja luo kaukaiseen galaksiin
+    ikioma Tähtien Sota -pelisi.
+  starwars_subtitle: Kasaa koodista Galaksi
+  stats_hoc_2013_heading: 'Uskomattomia tilastoja viime vuoden Koodaustunnista. Vain
+    yhdessä viikossa:'
+  stats_hoc_2013_image_alt: Tilastoja vuoden 2013 Koodaustunnista
+  stats_michael: '"En ole<b>koskaan</b> nähnyt minun opiskelijoitani niin innostuneena
+    oppimisestaan." - Michael Clark, opettaja'
+  stats_nina: '"Joka ikinen päivä tuotti saman tuloksen &mdash; 100 % sitoutuminen."-Nina
+    Nichols Peery, opettaja'
+  stats_student: '"Tiesin, että tämä oli <b>ainutlaatuinen</b> mahdollisuus."-Mariana
+    Alzate, viidesluokkalainen'
+  students_and_lines: "%{students} opiskelijaa on suorittanut koodaustunnin ja kirjoittanut
+    %{lines} riviä koodia."
+  studiobar_dance_body: Luo ja jaa omat tanssibileesi
+  studiobar_dance_title: Tanssibileet
+  studiobar_donate_body: Jokaista lahjoittamaasi dollaria kohden yksi lapsi saa oppia
+  studiobar_donate_title: Lahjoita
+  studiobar_elementary_body: Kolme uutta kurssiamme alakoululaisille
+  studiobar_elementary_title: Alkeiskurssit
+  studiobar_flappy_body: Tee ja jaa oma Flappy-pelisi
+  studiobar_flappy_title: Flappy Code
+  studiobar_frozen_body: Luo talven ihmemaa Annan ja Elsan kanssa
+  studiobar_frozen_title: Koodaustunti
+  studiobar_hoc_body: Opi koodaamaan Angry Birdsien kanssa
+  studiobar_hoc_title: Koodaustunti
+  studiobar_shop_body: Murra kaavamaisia käsityksiä. Käytä meidän logoa ylpeänä.
+  studiobar_shop_title: Kauppa
+  studiobar_teacher_body: Ota Code Studio käyttöön luokassasi
+  studiobar_teacher_title: Tehty opettajille
+  studiobar_title: Tutustu <a href='http://studio.code.org'>Koodistudioon</a>
+  studiobar_title_nolink: Tutustu Koodistudioon
+  submit: Jatka
+  support_url: http://support.code.org/
+  teacherled_gradelevel: Yli 5-vuotiaille
+  teacherled_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
+  teacherled_shortdescription: Innostu luomaan oma kooditunti tapahtuma näillä tuntisuunnitelmilla.
+  teachers_notes: Opettajan muistiinpanot
+  teachers_notes_hoc: 'Opettajat: Lue tärkeitä huomioita kouluttajille tästä'
+  teachingtree_beyond_gradelevel: Yliopisto
+  teachingtree_beyond_longdescription: TeachingTree on avoin alusta, joka antaa kenen
+    tahansa organisoida koulutussisältöjä. Tavoitteenamme on antaa opiskelijoille
+    kulloinkin juuri se videopätkä, jonka he tarvitsevat yksittäisen käsitteen oppimiseksi.
+    Kaikkia kannustetaan auttamaan joko videoita lisäämällä tai käsitteiden tunnistamisessa.
+  teachingtree_beyond_name: Yliopistokurssit verkossa
+  teachingtree_beyond_platformtext: Verkkopohjainen
+  teachingtree_beyond_shortdescription: 'Verkkotietämys: Nopeaa ja Rajoittamatonta'
+  tell_the_world: Kerro maailmalle!
+  texasinstruments_gradelevel: 13-16-vuotiaille
+  thank_you_: Kiitos!
+  thanks_for_submitting: Kiitos tietojen antamisesta!
+  thanks_for_voting: Kiitos äänestämisestä!
+  thinkersmith2_gradelevel: Yli 8-vuotiaille
+  thinkersmith2_longdescription: Oppilaat oppivat esittämään ja tallentamaan merkkejä
+    binäärisinä, funktioina, jotka ovat päällä tai  pois. Lopuksi luokka pääsee muuntamaan
+    omat nimikirjaimensa ja viemään ne kotiinsa.
+  thinkersmith2_platformtext: Tietokoneeton tekeminen
+  thinkersmith2_shortdescription: Opi kuinka tietokoneet käyttävät 1:iä ja 0:ia tiedon
+    esittämiseen
+  thinkersmith_gradelevel: Kaikenikäiset
+  thinkersmith_longdescription: Käyttäen ennaltamäärättyä "robottikielitä", oppilaat
+    selvittävät, miten ohjata toisiaan annettujen tehtävien läpi sopimatta niistä
+    etukäteen. Tämä oppitunti opettaa lapsia yhdistämään symbolit toimintoihin, sekä
+    virheiden paikallistamisen ja korjaamisen kultaisen taidon. "Minun robottiystäväni"
+    sopii parhaiten ryhmätoimintaan ja sisältää opettajan ohjekirjan luokkakäyttöön.
+  thinkersmith_name: Robottiystäväni
+  thinkersmith_platformtext: Tietokoneeton tekeminen
+  thinkersmith_shortdescription: Tietokoneettoman tekemisen kurssi ryhmälle, jolla
+    ei ole laitteita
+  thinkersmithspanish_longdescription: Käyttämällä ennakkoon "Robotti kieltä" , opiskelijat
+    oppivat tekemään tiettyjä tehtäviä ilman etukäteistä keskustelua . Tämä opetus
+    opettaa lapsille symbolien ja toimintojen suhdetta, lisäksi se on korvaamaton
+    kyky virheenkorjauksessa.
+  thinkersmithspanish_platformtext: Tietokoneeton tekeminen
+  third_party_appinv_btn_forum: App Inventor 2 Foorumi
+  third_party_appinv_btn_site: Vieraile App Inventor 2 -sivulla
+  third_party_codecademy_btn_curriculum: Lataa Codeacademy opetussuunnitelma
+  third_party_codecademy_btn_site: Vieraile Codecademy -sivulla
+  third_party_codecademy_desc: Uudelleenajattelemme koulutuksen alhaalta ylös. Netti
+    on uudelleen opettanut melkein kaiken - kaupankäynnin, sosiaalisen verkostoitumisen,
+    terveydenhuollon, ja muuta. Me olemme rakentamassa kouluksen mitä maailma tarvitsee
+    - ensimmäinen oikeasti nettikoulutus.
+  third_party_codehs_btn_try: Intro CS lisätietoja kouluille
+  third_party_cost_299: "$2.99 lataus"
+  third_party_cost_5permonth: "$5 kuukaudessa per luokka"
+  third_party_cost_free: Ilmainen opiskelijoille ja opettajille
+  third_party_cost_free_10: Ilmainen kokeilu, $9.99 kuukaudessa
+  third_party_cost_free_2: Ilmainen kokeilu, $2 yksi oppilas
+  third_party_cost_free_399: Ilmainen kokeilu, $399 yksi luokkahuone
+  third_party_curriculum: Opetussuunnitelma
+  third_party_desc_10to12_kto3: Noin 10-12 oppituntia, suunnattu eskarilaisista 3-luokkalaisille
+  third_party_desc_10to12_kto5: Noin 10-12 oppituntia, suunnattu eskarilaisista 5-luokkalaisille
+  third_party_desc_10to15_3to12: 10 - 15 oppituntia, suunnattu luokille 3-12
+  third_party_desc_11_kto5: Noin 11 oppituntia, suunnattu eskarilaisista 5-luokkalaisille
+  third_party_desc_20_2to8: Noin 20 oppituntia, suunnattu luokkille 2-8
+  third_party_desc_20_4to12: Yli 20 oppituntia suunnattu luokille 4-12
+  third_party_desc_25to40_3to12: 25-40 oppituntia tarkoitettu luokille 3-12
+  third_party_desc_40_4to8: Yli 40 oppituntia suunnattu luokille 4-8
+  third_party_desc_5_4to8: Noin 5 oppituntia, suunnattu luokkille 4-8
+  third_party_desc_7to22_5to12: 7 - 22 oppituntia, suunnattu luokille 5-12
+  third_party_desc_dozens_kto8: Kymmeniä oppitunteja kaikille eskarista 8-luokkalaisille
+  third_party_gradelevel_2to8: Perusopetus luokat 2-8
+  third_party_gradelevel_4to12: Perusopetus luokat 4-9 ja toinen aste
+  third_party_gradelevel_5to12: Perusopetus luokat 5-9 ja toinen aste
+  third_party_gradelevel_6plus: Kuudesluokkalaisista alkaen
+  third_party_gradelevel_8plus: Kahdeksasluokkalaisista alkaen
+  third_party_gradelevel_kto2: Esiopetus – alkuopetus
+  third_party_gradelevel_kto8: Luokka-asteet päiväkoti - 8. -luokka
+  third_party_khan_btn_forum: Khan Academy CS Foorumi
+  third_party_khan_btn_learn: Opi CS Khan Academy:n avulla
+  third_party_lightbot_btn_curriculum: Lataa Lightbot opetussuunnitelma
+  third_party_lightbot_btn_site: Vieraile Lightbot -sivustolla
+  third_party_organization: Organisaatio
+  third_party_platform_all: 'Käyttöalustat: Web, iPad & Android'
+  third_party_platform_mobile: 'Käyttöalustat: iPad & Android'
+  third_party_platform_web: 'Käyttöalusta: Web'
+  third_party_price_299: 'Hinta: $2.99/ lataus'
+  third_party_price_free: 'Hinta: Ilmainen'
+  third_party_price_individual: 'Erillinen hinta: Ilmainen kokeiluversio & $25/ kuukaudessa'
+  third_party_price_school: 'Koulun hinta: Vapaat suunnitelmat & Pro on $2500 +'
+  third_party_price_varies: 'Hinta: Suunnitelmat vaihtelevat'
+  third_party_pricing: Hinnoittelu
+  third_party_scratch_btn_curriculum: Lataa Scratch opetussuunnitelma
+  third_party_scratch_btn_forum: Scratch Kasvattaja Foorumi
+  third_party_scratch_btn_site: Vieraile Scratch -sivustolla
+  third_party_scratch_desc: Scratchin kanssa voit ohjelmoida vuorovaikutteisia tarinoita,
+    pelejä ja animaatioita ja jakaa luomuksesi muille online-yhteisössä. Scratch auttaa
+    nuoria ajattelemaan luovasti, järjestelmällisesti ja työskentelemään yhdessä —
+    keskeisiä taitoja elämässä 2000-luvulla.
+  third_party_scratchjr_btn_curriculum: Lataa Scratch Jr. opetussuunnitelma
+  third_party_scratchjr_btn_site: Vieraile Scratch Jr. -sivustolla.
+  third_party_scratchjr_desc: Scratch Jr. on johdanto ohjelmointikieliin, joka mahdollistaa
+    pienten lasten ( 5-7 - vuotiaat) vuorovaikutteisten tarinoiden ja pelejen luomisen.
+    Lapset kokoavat yhteen graafiisen ohjelmoinnin lohkoja, jotta merkit liikkuvat,
+    hyppäävät, tanssivat ja laulavat. Lapset voivat muokata hahmoaan hahmoeditorilla,
+    lisätä omia ääniä ja ääniä, jopa lisätä valokuvia itsestään - siten ohjelmoida
+    hahmonsa lohkojen avulla eloon.
+  third_party_tynker_btn_curriculum: Kokeile Tynkerin alkeistason opetussuunnitelmaa
+  third_party_tynker_btn_site: Vieraile Tynkerin sivuilla
+  third_party_tynker_desc: Tynker luovana alustana auttaa lapsia kehittämään tietokoneellista
+    ajattelua ja ohjelmointitaitoja hauskalla, intuitiivisella ja kekseliääällä tavalla.
+    Meidän innovatiivinen visuaalinen ohjelmointikielemme, vuorovaikutteisen vaiheittaiset
+    kurssit ja pelipohjainen ohjelmointi antaa helpon Johdatuksen ohjelmointiin ja
+    kannustaa lapsia innovoimaan ja luomaan.
+  touchdevelop_beyond_gradelevel: Lukio
+  touchdevelop_beyond_longdescription: TouchDevelop antaa sinun luoda sovelluksia
+    iPad-, Android-, PC-, Mac, Windows Phone-alustoille. Meidän kosketusystävällinen
+    editorimme tekee ohjelmoinnista hauskaa, jopa sinun puhelimellasi tai tabletillasi!
+  touchdevelop_beyond_platformtext: Nykyaikaiset selaimet, älypuhelimet, kaikki laitteet
+  touchdevelop_beyond_shortdescription: Ohjelmoi mobiilisovelluksia suoraan puhelimeesi,
+    tablettiisi tai kannettavaasi
+  touchdevelop_gradelevel: Lukio
+  touchdevelop_longdescription: 'Kosketusystävällinen editori opastaa sinua pikselitaiteen
+    luomisessa, karhuarvoituksen ratkaisemisessa ja tekemään oman pelin hyppivästä
+    linnusta. '
+  touchdevelop_platformtext: Nykyaikaiset selaimet, älypuhelimet, kaikki laitteet
+  touchdevelop_shortdescription: 'Ratkaise tehtäviä, luo pelejä, ja opi ohjelmointia
+    puhelimellasi. '
+  try_now: Kokeile nyt
+  twentyhours_heading: Kokeile kurssiamme johdatus tietotekniikkaan
+  twentyhours_text: Ensimmäinen Koodaustunti tehtynä? Opi lisää tietotekniikasta ja
+    ohjelmoinnin käsitteistä tällä jatkokurssilla.
+  twitter_cs_foundational: Tietotekniikka on perustavaa oppia jokaiselle oppilaalle.
+    https://youtu.be/QvyTEx1wyOY.
+  twitter_teach_cs: Yhdeksän kymmenestä haluaisi, että kouluissa opettaisiin tietotekniikkaa.
+    http://youtu.be/nKIu9yen5nc. Vieraile sivulla https://code.org/.
+  tynker_beyond_gradelevel: 5-13-vuotiaille
+  tynker_beyond_longdescription: Tynker tekee ohjelmoinnin oppimisesta hauskaa ja
+    helppoa. Se tekee siitä havainnollista. Lapset rakentavat pelejä ja mobiilisovelluksia
+    järjestelmällä koodilohkoja. Ei ole tarvetta tuntea ohjelmointisyntaksia. Lapset
+    voivat muuntaa ideansa animoiduiksi tarinoiksi ja matemaattiseksi taiteeksi heti.
+    Se edistää etenevää oppimista. Samalla kun lapset oppivat perusteita, Tynker johdattaa
+    kehittyneempiin konsepteihin, kuten syntaksipohjaiseen ohjelmointiin.
+  tynker_beyond_name: Opi ohjelmointia kotona
+  tynker_beyond_platformtext: Nykyaikaiset verkkoselaimet (maksullinen)
+  tynker_beyond_shortdescription: Hauska ja mukaansatempaava kurssi lapsille luokilla
+    4-8
+  tynker_gradelevel: 5-13-vuotiaille
+  tynker_longdescription: Luo omia pelejä ja jaa ne ystäviesi kanssa! Ratkaise hauskoja
+    pulmia ja opi samalla ohjelmoinnin perusteet. Hauskoilla animaatiohahmoilla teet
+    pelistä omanlaisesi. Useita tasoja ja paljon taustoja. Tee pelistä realistisempi
+    fysiikan avulla. Näe koodi joko visuaalisina lohkoina tai JavaScriptinä. Vie pelisi
+    iPadille tai Android-tabletille. Yli tusina hauskoja tehtäviä, joista voit valita!
+  tynker_name: Tee oma peli
+  tynker_platformtext: Nykyaikaiset verkkoselaimet
+  tynker_shortdescription: Opi koodaamaan ratkoen hauskoja tehtäviä ja rakenna samalla
+    oma mobiilipelisi.
+  tynkerapp_gradelevel: 5-13-vuotiaille
+  tynkerapp_longdescription: Opi ohjelmoimaan ratkaisemalla hauskoja koodaustehtäviä.
+    Rakenna helposti pelejä ja tarinoita käyttäen teemaan sopivia grafiikoja, 10+
+    pelirakennussettiä ja muokattavissa olevia hahmoja. Ei vaadi verkkoyhteyttä. Pääset
+    luomuksiisi myös verkon välityksellä.
+  tynkerapp_name: Tynker - tableteilla
+  tynkerapp_platformtext: iPad- ja Android-tabletit
+  tynkerapp_shortdescription: 'Opi ohjelmoimaan ratkaisemalla hauskoja ohjelmointitehtäviä. '
+  udacity_beyond_gradelevel: Yliopisto
+  udacity_beyond_longdescription: Tällä kurssilla opit tietotekniikan avainkäsitteitä
+    ja opit kuinka kirjoitat omia tietokoneohjelmia. Esimerkkinä käytämme hakurobottia.
+    Kurssille ei vaadita aiempaa ohjelmointiosaamista; aloittelijat ovat tervetulleita!
+    Kurssin lopussa olet oppinut avainkäsitteet ja tarpeeksi ohjelmointia, jotta voit
+    kirjoittaa itsenäisesti erilaisia Python-ohjelmia. Tämä kurssi valmistelee sinut
+    siirtymään keskitason tietotekniikan kursseille.
+  udacity_beyond_platformtext: Nykyaikaiset selaimet
+  udacity_beyond_shortdescription: Aloita CS101-kurssilla
+  udemy_beyond_gradelevel: Lukio +
+  udemy_beyond_longdescription: 'Vaikka et olisi koskaan nähnyt riviäkään koodia,
+    tai vaikka jos ohjelmoit elääksesi, Udemyllä on sinulle kursseja, joita opettavat
+    ammattilaiset ohjaajat. [Huom.: maksullinen]'
+  udemy_beyond_name: Ohjelmointikurssit verkossa
+  udemy_beyond_platformtext: Verkkopohjainen
+  udemy_beyond_shortdescription: Kymmenittäin ohjelmointikursseja verkossa
+  upgrade_ie_link: Lue lisää
+  upgrade_ie_message: Code.org poistaa pian Internet Explorer 8, 9 ja 10 selaimien
+    tuen. Ole hyvä ja päivitä nykyaikaiseen selaimeen.
+  upgrade_ie_message_csedweek: CSEdWeek.org poistaa pian tuen Internet Explorer 8,
+    9 ja 10 -selaimiin. Ole hyvä ja päivitä uusimpaan selaimeen.
+  used_infrequent_updates: Käytetään ainoastaan harvoin tuleviin päivityksiin
   user_header_applab: 'Sovelluslabra '
   user_header_artist: 'Taiteilija '
-  user_header_gamelab: Pelilabra
-  user_header_playlab: Pelilabra
+  user_header_create: 'Luo '
   user_header_dance: Tanssibileet
-  user_header_minecraft: Minecraft
   user_header_flappy: Flappy
+  user_header_gamelab: Pelilabra
+  user_header_label: Hei %{username}
+  user_header_logout: Kirjaudu ulos
+  user_header_minecraft: Minecraft
+  user_header_playlab: Pelilabra
+  user_header_settings: Tilin asetukset
+  user_header_signin: Kirjaudu sisään
+  user_header_team: Tiimi
   user_header_view_all: Kaikki projektit...
-  user_header_view_project_gallery: Näytä projektit
   user_header_view_my_projects: Katso omia projektejasi
-  applab_tile_start_tutorial: Aloita
-  applab_tile_teacher_guide: Katso opettajan opas
-  aquatic_name: 'Minecraft: Merellinen matka'
-  account_sign_up_email_opt_in: Saammeko lähettää ilmoituksia kursseistamme, paikallisista
-    tapahtumista tai muista tietotekniikan uutisista sähköpostiisi? (noin kerran kuussa)
-  account_sign_up_child_accept_terms: Vahvistan että minulla on huoltajani lupa käyttää
-    Code.org palveluita.
-  hoc_overview_dance_title: Tanssibileet
-  hoc_overview_dance_subtitle: Koodaa tanssibileet jakaaksesi se ystäviesi kanssa.
-    Esittelyssä Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara ja 25 muuta!
-  hoc_overview_dance_2019_subtitle: Koodaa tanssibileet jakaaksesi se ystäviesi kanssa.
-    Esittelyssä Katy Perry, Shawn Mendes, Panic! The Disco, Lil Nas X, Jonas Brothers,
-    Nicki Minaj, ja 34 enemmän!
-  hoc_overview_partner_activities_title: Enemmän toimintoja yhteistyökumppaneilta
-  hoc_overview_partner_activities_body: Koodaustunti -sivustolla on yli 500 tietotekniikan
-    aktiviteettia kaikenikäisille ja kaikille osaamistasoille. Sivuston on kehittänyt
-    Code.org ja sen yhteistyökumppanit.
-  hoc_overview_partner_activities_link: Näytä tehtävät
-  hoc_overview_start_tutorial: Aloita
-  hoc_overview_more_resources: Lisätietoja ja resursseja yhteydenpidon varmistamiseksi
-    etäluokkahuoneessasi [virtuaalinen Hour of Code](https://hourofcode.com/us/how-to/virtual)  isännöintioppaassamme
-    . Opiskelijoille, joilla ei ole samoja mahdollisuuksia teknologian käyttöön, jaa
-    tämä paketti [Offline Hour of Code-tehtävät](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf).
-  hoc_overview_view_teacher_guide: Katso opettajan opas
-  hoc2018_creativity_create: Luo
-  hoc2018_creativity_what_will_you_create: Mitä luot?
-  hoc2018_mc_page_title: Minecraft Koodaustunnin ohjeet
-  hoc2018_mc_details: Useita kieliä | Modernit selaimet | Luokista 2 alkaen
-  hoc2018_mc_aquatic_title: 'Minecraft: Merellinen matka'
-  hoc2018_mc_aquatic_description: Minecraft on palannut takaisin Hour of Code -tunnille
-    täysin uudella toiminnolla! Matka Minecraftin läpi koodilla.
-  hoc2019_mc_aquatic_description: Tutki vedenalaista maailmaa koodin avulla.
-  hoc2018_mc_hero_title: 'Minecraft: Sankarin matka'
-  hoc2018_mc_hero_description: Minecraft on palannut takaisin Hour of Code -tunnille
-    täysin uudella toiminnolla! Matka Minecraftin läpi koodilla.
-  hoc2018_mc_designer_title: Minecraft suunnittelija
-  hoc2018_mc_designer_description: Koodaa eläimiä ja muita Minecraft otuksia omalla
-    Minecraft versiollasi.
-  hoc2018_mc_adventurer_title: Minecraft seikkailija
-  hoc2018_mc_adventurer_description: Koodin avulla voit viedä Alexin tai Steven seikkailuun.
-  hoc2018_mc_start: Aloita
-  hoc2018_mc_no_internet: Onko sinulla nettiyhteys?
-  hoc2018_mc_download_adventurer: Lataa Minecraft seikkailijan offline-versio.
-  hoc2018_mc_educators_box1_button: Aloitetaan
-  hoc2018_mc_educators_box2_button: Lataa
-  hoc2018_mc_watch_videos: Ennen kuin aloitat, katso yksi näistä inspiroivista videoista
-  hoc2018_mc_video_1min: 1 min
-  hoc2018_mc_video_2min: 2 min
-  hoc2018_mc_video_5min: 5 min
-  hoc2018_mc_video_title_sports: Tee se. Kuka tahansa voi oppia.
-  hoc2018_mc_video_title_inspire_girl: Inspiroi tyttö
-  hoc2018_mc_video_title_cs_intro: Tutustuminen tietotekniikkaan
-  hoc2018_mc_video_title_anybody_can_learn: Kuka vain voi oppia
-  hoc2018_mc_homepage_hoc_coming: Koodin hetki on käsillä...
-  hoc2018_mc_homepage_what_create: Mitä luot?
-  hoc2018_mc_homepage_join_us: Liity joukkoomme
-  hoc2018_mc_homepage_try_it: Kokeile
-  hoc2018_mc_back_journey: Minecraft on palannut takaisin Hour of Code -tunnille täysin
-    uudella toiminnolla! Matka Minecraftin läpi koodilla.
-  hoc2018_mc_teacher_guide: Katso opettajan opas
-  hoc2018_mc_minecraft_education: Minecraft koulutus
-  hoc2018_mc_short_description_shorter: Minecraft on palannut takaisin Hour of Code
-    -tunnille täysin uudella toiminnolla.
-  hoc2018_mc_journey: Matka Minecraftin läpi koodilla.
-  hoc2018_dance_party_main_heading: Tanssibileet
-  hoc2018_dance_party_landing_title: Tanssi
-  hoc2018_dance_party_subheading: Auta kääntämään Tanssibileet
-  hoc2018_dance_create_your_own_dance_title: Luo oma Dance Party
-  hoc2018_dance_party_box_title: Tanssibileet
-  hoc2018_dance_party_box_description: Koodaa oma Dance Party, jonka voit jakaa ystäviesi
-    kanssa!
-  hoc2018_dance_party_button: Aloita
-  hoc2018_dance_keep_on_dancing_box_title: Jatka tanssimista
-  hoc2018_dance_keep_on_dancing_description: Syvennä ensimmäisen oppitunnin osaamistasi
-    laajennetuilla projekti-ideoilla.
-  hoc2018_dance_keep_on_dancing_button: Aloita osa 2
-  hoc2018_dance_teacher_resources_title: Opettajan resurssit
-  hoc2018_dance_teacher_resources_tile1_description: Tuntisuunnitelmia, todistuksia
-    ja musiikkisuodattimia.
-  hoc2018_dance_teacher_resources_tile1_button: Tuntisuunnitelma
-  hoc2018_dance_teacher_resources_tile2_description: Tietokoneita ei tarvita!  Oppikaa
-    koodaamisen käsitteitä ja luokaa koreografia tanssijoille yhdessä.
-  hoc2018_dance_teacher_resources_tile2_button: Tietokoneeton tekeminen
-  hoc2018_dance_featured_student_creations_title: Valittuja opiskelijoiden luomuksia
-  hoc2018_dance_videos_section_heading: Innostu
-  hoc2018_dance_video_title_what_is_creativity: Mitä on luovuus?
-  hoc2018_dance_amazon_about_future_engineer_button: Lue lisää
-  hoc2018_dance_amazon_scholarship_programs_button: Liity nyt
-  hoc2018_dance_measure: Tahti
-  hoc2018_dance_measure_colon: 'Tahti:'
-  hoc2018_aquatic_video1: 'Minecraft: Merellinen matka - Esittely'
-  hoc2018_aquatic_video2: 'Minecraft: Merellinen matka - Silmukat'
-  hoc2018_aquatic_video3: 'Minecraft: Merellinen matka - Ehtolauseet'
-  hoc2018_aquatic_video4: 'Minecraft: Merellinen matka - Onnittelut'
-  hoc2018_dance_video1: Tanssibileet - Esittely
-  hoc2018_dance_video2: Tanssibileet - Tapahtumat
-  hoc2018_dance_video3: Tanssibileet - Ominaisuudet
-  hoc2018_dance_video4: Tanssibileet - Onnittelut
-  page_not_found_title: Sivua ei löydy
-  hoc2018_mc_thank_microsoft: Kiitämme Microsoftia visiomme ja tehtävämme tukemisessa
-    ja sen varmistamisessa, että jokaisella lapsella on mahdollisuus oppia tietojenkäsittelytietettä
-    ja taitoja menestyä 2000-luvulla.
-  hoc2019_dance_previous_versions: "Etsitkö edellistä versiota Tanssibileistä?  \nKlikkaa
-    täältä aloittaaksesi [Osan 1](%{dance_2018_link}) ja [Osan 2](%{dance_extras_2018_link})
-    vuodelta 2018."
-  homepage_slot_text_title_at_home: Opi kotona
-  homepage_slot_text_blurb_at_home: Näillä materiaaleilla se käy helposti
-  hoc2020_mc_available_code_org: Saatavilla Code.org -sivustolla
-  footer_powered_by_aws: Toimii Amazon Web Services -palvelun päällä
-  footer_privacy_policy: Tietosuojakäytäntö
-  footer_about: Tietoja
-  footer_partners: Kumppanit
-  footer_donate: Lahjoita
-  footer_support: Tuki
-  footer_terms: Ehdot
-  ai_for_oceans_lesson_plan: tuntisuunnitelma
-  ai_microsoft_thanks: Kiitämme Microsoftia visiomme ja tehtävämme tukemisessa ja
-    sen varmistamisessa, että jokaisella lapsella on mahdollisuus oppia tietojenkäsittelytietettä
-    ja taitoja menestyä 2000-luvulla.
-  ai_activity: Toiminta
-  ai_description: Kuvaus
-  hoc2022_landing_page_create_title: Luo
+  user_header_view_project_gallery: Näytä projektit
+  video_1min: 1 min
+  video_2min: 2 min
+  video_5min: 5 min
+  video_title_anybody_can_learn: Kuka vain voi oppia
+  video_title_cs_intro: Tutustuminen tietotekniikkaan
+  video_title_draymond_green: Kooditunti Draymond Greenin kanssa
+  video_title_inspire_girl: Inspiroi tyttö
+  view_course: Näytä kurssi
+  view_english_site: Katsele englanninkielistä sivustoa
+  view_unit: Näytä yksikkö
+  volunteer_engineer_submission_checkbox_after_hoc: Olen kiinnostunut vapaaehtoistyöstä
+    Koodaustunnin jälkeen
+  volunteer_engineer_submission_commitment_annually: 2 - 3 kertaa vuodessa
+  volunteer_engineer_submission_commitment_five_hrs_per_week: 5 tuntia viikossa
+  volunteer_engineer_submission_commitment_monthly: Pari tuntia kuukaudessa
+  volunteer_engineer_submission_commitment_more: Lisää
+  volunteer_engineer_submission_commitment_now_and_then: Silloin tällöin
+  volunteer_engineer_submission_commitment_one_hr_per_week: tunti viikossa
+  volunteer_engineer_submission_commitment_three_hrs_per_week: 3 tuntia viikossa
+  volunteer_engineer_submission_commitment_uncertain: Epävarma
+  volunteer_engineer_submission_commitment_weekly: Pari tuntia viikossa
+  volunteer_engineer_submission_distance_16: 16km
+  volunteer_engineer_submission_distance_24: 24km
+  volunteer_engineer_submission_distance_32: 32 km
+  volunteer_engineer_submission_distance_8: 8 km
+  volunteer_engineer_submission_experience_software_professional: Ohjelmistoammattilainen
+  volunteer_engineer_submission_experience_university_student_or_researcher: Nykyinen
+    yliopisto-opiskelija (tai tutkija)
+  volunteer_engineer_submission_experience_unspecified: Määrittelemätön
+  volunteer_engineer_submission_field_company: Yritys (tai yliopisto)
+  volunteer_engineer_submission_field_company_placeholder: Yritys (tai yliopisto)
+  volunteer_engineer_submission_field_description: Kuvaus
+  volunteer_engineer_submission_field_description_desc: Kuvaa tietotekniikan osaamisesi
+    ja mitä apua voisit tarjota vapaaehtoisena paikallisille opettajille.
+  volunteer_engineer_submission_field_email: Sähköpostiosoite
+  volunteer_engineer_submission_field_email_desc: Sähköpostiosoitettasi ei koskaan
+    jaeta, mutta lähetämme sinulle pyyntöjä opettajilta.
+  volunteer_engineer_submission_field_email_placeholder: Sähköpostiosoite
+  volunteer_engineer_submission_field_email_preference_no: Ei
+  volunteer_engineer_submission_field_email_preference_yes: Kyllä
+  volunteer_engineer_submission_field_experience_level: Kokemustaso
+  volunteer_engineer_submission_field_facebook: Facebook-profiili
+  volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
+  volunteer_engineer_submission_field_linkedin: LinkedIn-profiili
+  volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
+  volunteer_engineer_submission_field_location: Sijainti
+  volunteer_engineer_submission_field_location_desc: Sijaintisi näkyy kartalla ja
+    sen avulla opettajat voivat etsiä lähialueeltaan vapaaehtoisia. Jos olet huolissasi
+    yksityisyydensuojastasi, käytä vain työ/kouluosoitettasi tai mainitse vain pelkkä
+    kaupunki.
+  volunteer_engineer_submission_field_location_flexibility: Voin auttaa Koodaustuntia...
+    (Valitse kaikki sopivat vaihtoehdot)
+  volunteer_engineer_submission_field_location_placeholder: Postinumero, kaupunki
+    ja osavaltio/maa tai katuosoite
+  volunteer_engineer_submission_field_name: Nimi
+  volunteer_engineer_submission_field_name_placeholder: Koko nimi
+  volunteer_engineer_submission_header_private: Tiedot ovat luottamuksellisia ja niitä
+    ei koskaan jaeta
+  volunteer_engineer_submission_header_shared: Tietoa jaetaan opettajille vapaaehtoisten
+    kartasta
+  volunteer_engineer_submission_location_flexibility_curriculum: Halukas ottamaan
+    osaa avoimen lähdekoodin oppisuunnitelmaprojekteihin
+  volunteer_engineer_submission_location_flexibility_onsite: Paikanpäällä koulussa
+  volunteer_engineer_submission_location_flexibility_remote: Mentorointi etänä (opettajien
+    tai oppilaiden)
+  volunteer_engineer_submission_num_volunteers_10: 10 vapaaehtoistyöntekijää
+  volunteer_engineer_submission_num_volunteers_25: 25 vapaaehtoistyöntekijää
+  volunteer_engineer_submission_num_volunteers_5: 5 vapaaehtoistyöntekijää
+  volunteer_engineer_submission_num_volunteers_50: 50 vapaaehtoistyöntekijää
+  volunteer_engineer_submission_submit: Jatka
+  volunteer_engineer_submission_subtitle_generic: '100 000 opettajaa aikovat järjestää
+    Koodaustunnin luokissaan tänä vuonna, Joulukuussa 7-13, 2015. He tarvitsevat apuasi! '
+  volunteer_engineer_submission_title: Inspiroi opiskelijoita ja toimi vapaaehtoisena
+    Koodaustunnille.
+  volunteer_engineer_submission_update_information: Päivitä tietosi
+  w3schools_beyond_gradelevel: Yli 12-vuotiaille
+  w3schools_beyond_longdescription: Opi luomaan verkkosivustoja. Opi palvelipuolen
+    perusteet alle päivässä. Opi hyödyntämään tietokantoja verkkosivuillasi
+  w3schools_beyond_name: Opi HTML:ää
+  w3schools_beyond_platformtext: Nykyaikaiset verkkoselaimet
+  w3schools_beyond_shortdescription: Opi tekemään verkkosivustoja
+  watch_inspirational_videos: Ennen kuin aloitat, katso yksi näistä inspiroivista
+    videoista
+  what_gender: Mikä on sukupuolesi?
+  who_has_done_hoc: 'Kuka on suorittanut #Koodaustunti? @codeorg'
+  who_has_done_hoc_donor: Kuka on tehnyt kodaustunnin? (Kiitos %{donor_twitter} tukemisesta
+    @codeorg)
+  write_your_first_program: Kirjoita ensimmäinen oma tietokoneohjelmasi
+  'yes': Kyllä
+  zipcode: Maa (tai postinumero Yhdysvalloissa)

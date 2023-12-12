@@ -1,4 +1,4 @@
-class Api::V1::Pd::WorkshopsController < ::ApplicationController
+class Api::V1::Pd::WorkshopsController < ApplicationController
   include Pd::WorkshopFilters
   include Api::CsvDownload
   include Pd::Application::RegionalPartnerTeacherconMapping
@@ -76,7 +76,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   # regional partners, and an empty set for everyone else.
   def upcoming_teachercons
     workshops = Pd::Workshop.
-      scheduled_start_on_or_after(Date.today.beginning_of_day).
+      scheduled_start_on_or_after(Time.zone.today.beginning_of_day).
       where(subject: Pd::Workshop::SUBJECT_TEACHER_CON)
 
     if params[:course]
@@ -90,8 +90,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       # teachercon
       cities = current_user.
         regional_partners.
-        map {|partner| get_matching_teachercon(partner)}.
-        compact.
+        filter_map {|partner| get_matching_teachercon(partner)}.
         to_set.
         pluck(:city).
         map {|city| "%#{city}%"}
@@ -151,7 +150,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       conditions[:subject] = Pd::Workshop::SUBJECT_CSF_201
     end
 
-    @workshops = Pd::Workshop.scheduled_start_on_or_after(Date.today.beginning_of_day).
+    @workshops = Pd::Workshop.scheduled_start_on_or_after(Time.zone.today.beginning_of_day).
       where(conditions).where.not(processed_location: nil)
     if params['geojson']
       render json: to_geojson(@workshops)
@@ -319,6 +318,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
       :suppress_email,
       :third_party_provider,
       {sessions_attributes: [:id, :start, :end, :_destroy]},
+      :module,
     ]
 
     allowed_params.delete :regional_partner_id unless can_update_regional_partner

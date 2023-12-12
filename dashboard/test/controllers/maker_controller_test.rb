@@ -22,6 +22,9 @@ class MakerControllerTest < ActionController::TestCase
     @most_recent_devices_version = ensure_script 'devices-recent', '2022'
 
     Unit.clear_cache
+    Cpa.stubs(:cpa_experience).
+      with(any_parameters).
+      returns(Cpa::NEW_USER_LOCKOUT)
   end
 
   test_redirect_to_sign_in_for :home
@@ -421,7 +424,7 @@ class MakerControllerTest < ActionController::TestCase
 
   private
 
-  def ensure_script(script_name, version_year='2000', is_stable=true)
+  def ensure_script(script_name, version_year = '2000', is_stable = true)
     Unit.find_by_name(script_name) ||
       create(:script, name: script_name, family_name: 'devices', version_year: version_year, published_state: is_stable ? Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable : Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview).tap do |script|
         lesson_group = create :lesson_group, script: script

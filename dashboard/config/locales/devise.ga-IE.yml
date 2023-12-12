@@ -59,6 +59,28 @@ ga:
         bhfuil treoracha maidir lena dhíghlasáil go luath.
       unlocked: Díghlásáladh do chuntas. Logáil isteach le dul ar aghaidh.
   errors:
+    invitations:
+      edit:
+        header: Socraigh d'fhocal faire
+        submit_button: Socraigh m'fhocal faire
+      invitation_removed: Baineadh do chuireadh.
+      invitation_token_invalid: Tá an ceadchomhartha ón chuireadh neamhbhailí!
+      new:
+        header: Seol cuireadh
+        submit_button: Seol cuireadh
+      no_invitations_remaining: Níl aon chuirí fágtha
+      send_instructions: Seoladh cuireadh chuig %{email}.
+      updated: Socraíodh d'fhocal faire. Tá tú logáilte isteach anois.
+    mailer:
+      invitation_instructions:
+        accept: Glac leis an gcuireadh
+        hello: Dia dhuit a %{email}
+        ignore: Mura mian leat glacadh leis an gcuireadh, déan neamhaird den ríomhphost.<br
+          />Ní chruthófar cuntas ar do shon go dtí go gcliceálfaidh tú an nasc thuas
+          chun focal faire a roghnú.
+        someone_invited_you: Thug duine éigin cuireadh chun %{url} duit. Is féidir
+          leat glacadh leis tríd an nasc thíos.
+        subject: Treoracha
     messages:
       already_confirmed: deimhnithe cheana, déan iarracht logáil isteach anois
       confirmation_period_expired: "- is gá é seo a dheimhniú faoi cheann %{period},
@@ -66,25 +88,3 @@ ga:
       expired: thar am, ba chóir duit ceann nua a iarraidh
       not_found: gan aimsiú
       not_locked: gan glasáil
-    invitations:
-      send_instructions: Seoladh cuireadh chuig %{email}.
-      invitation_token_invalid: Tá an ceadchomhartha ón chuireadh neamhbhailí!
-      updated: Socraíodh d'fhocal faire. Tá tú logáilte isteach anois.
-      no_invitations_remaining: Níl aon chuirí fágtha
-      invitation_removed: Baineadh do chuireadh.
-      new:
-        header: Seol cuireadh
-        submit_button: Seol cuireadh
-      edit:
-        header: Socraigh d'fhocal faire
-        submit_button: Socraigh m'fhocal faire
-    mailer:
-      invitation_instructions:
-        subject: Treoracha
-        hello: Dia dhuit a %{email}
-        someone_invited_you: Thug duine éigin cuireadh chun %{url} duit. Is féidir
-          leat glacadh leis tríd an nasc thíos.
-        accept: Glac leis an gcuireadh
-        ignore: Mura mian leat glacadh leis an gcuireadh, déan neamhaird den ríomhphost.<br
-          />Ní chruthófar cuntas ar do shon go dtí go gcliceálfaidh tú an nasc thuas
-          chun focal faire a roghnú.

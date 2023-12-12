@@ -52,7 +52,9 @@ ja:
         age: '年齢'
         gender: '性別'
         edit_header: 'アカウント詳細を編集する'
+        ai_settings_header: 'AI設定'
         finish_sign_up_header: 'アカウントの作成を完了します'
+        finish_sign_up_header_error: '次の間違い（エラー）を正しく直してください。'
         finish_sign_up_subheader: '<strong>%{email}</strong>のCode.orgアカウント作成を完了するには、次の情報を入力してください。'
         finish_sign_up_subheader_markdown: '**%{email}**のCode.orgアカウント作成を完了するには、次の情報を入力してください。'
         finish_sign_up_subheader_provider: '<strong>%{email}</strong>の<strong>%{provider}</strong>でCode.orgアカウント作成を完了するには、次の情報を入力してください。'
@@ -60,6 +62,7 @@ ja:
         reset_password_token: "あなたがフォローしたパスワードのリセットリンク"
         error:
           future: 現在までの日付にする
+        user_type: 'アカウントの種類'
         us_state: '都道府県'
   beta: "ベータ版"
   hello: "Hello world"
@@ -109,7 +112,7 @@ ja:
   prize: '受賞'
   more_info: 'もっと見る'
   auth:
-    continue_with: '%{provider} で続きます'
+    continue_with: '%{provider} を使用してサインインする'
     sign_in_with: '%{provider} を使用してサインインする'
     signed_in: 'サインイン！'
     signed_out_markdown: '### [Code.org](%{url})からサインアウトしました。'
@@ -202,6 +205,8 @@ ja:
     parent_account_email_progress_permission: "お子様の進捗状況やプロジェクトに関する最新情報、およびコースとコンピューターサイエンスに関する最新情報をメールでお送りしてもよろしいですか？[(当社のプライバシーポリシーをご覧ください)] (%{privacy_policy_url})"
     parent_account_email_label: "親/保護者のメール"
     us_state: '都道府県'
+    us_state_dropdown_options:
+      other: "ここに記載されていない場所に住んでいます"
   school_info:
     title: '学校名(任意)'
     school_country: '学校のある国'
@@ -270,6 +275,9 @@ ja:
   parent_mailer:
     student_associated_subject: 'Code.org のログイン情報'
     parent_email_added_subject: 'Code.org へようこそ!'
+    parent_permission_request_subject: "Code.orgへのアクセスには保護者の同意が必要です。"
+    parent_permission_reminder_subject: "注意：お子様のCode.orgへのアクセスには保護者の同意が必要です。"
+    parent_permission_confirmation_subject: "お子様のCode.orgへのアクセスを承認していただき、ありがとうございます！"
   teacher_mailer:
     new_teacher_subject: 'Code.org へようこそ!'
     delete_teacher_subject: 'Code.org通知: アカウントが削除されました'
@@ -866,6 +874,8 @@ ja:
     submit-incomplete-body: "いくつかの質問が回答されてないままになっています。このままでよろしいですか?\n※投稿したあとで評価の再編集はできません。"
     submit-complete-title: "評価を提出します。"
     submit-complete-body: "評価の提出後は編集はできません。良いですか?"
+  level_summary:
+    correct_answer: "正解"
   match:
     wrong_title: "うまく解決できていません。"
     wrong_body: "うまく解決できていません。もう一度やってみてください。"
@@ -1127,17 +1137,33 @@ ja:
         not_listed: '希望の用語がリストにありません'
         none: '答えたくない'
       school_country:
+        australia: 'オーストラリア'
         barbados: 'バルバドス'
         belize: 'ベリーズ'
+        brazil: 'ブラジル'
         canada: 'カナダ'
         chile: 'チリ'
         colombia: 'コロンビア'
+        dominican_republic: 'ドミニカ共和国'
+        india: 'インド'
+        indonesia: 'インドネシア'
         israel: 'イスラエル'
+        jamaica: 'ジャマイカ'
+        kenya: 'ケニア'
         malaysia: 'マレーシア'
+        maldives: 'モルディブ'
         mexico: 'メキシコ'
+        mongolia: 'モンゴル'
+        new_zealand: 'ニュージーランド'
         paraguay: 'パラグアイ'
+        portugal: 'ポルトガル'
+        slovakia: 'スロバキア'
+        south_korea: '韓国'
+        spain: 'スペイン'
         thailand: 'タイ'
+        trinidad_and_tobago: 'トリニダード・トバゴ'
         uzbekistan: 'ウズベキスタン'
+        vietnam: 'ベトナム'
       ages:
         ages_under_6: '6歳未満'
         ages_7_8: '7-8歳'

@@ -50,12 +50,15 @@ th:
           description_short: A brief rampup of concepts for students who have not taken คอร์ส 2 and 3.
           student_description: A brief rampup of concepts for students who have not taken คอร์ส 2 and 3.
         infinity:
+          title: ดิสนีย์ อินฟินิตี้ เพลย์ แล็บ
           description: ใช้เพลย์แลปเพื่อแต่งเรื่องหรือเกมที่ชูตัวละครจาก Disney Infinity
           description_short: ใช้เพลย์แลปเพื่อแต่งเรื่องหรือเกมที่ชูตัวละครจาก Disney Infinity
           student_description: ใช้เพลย์แลปเพื่อแต่งเรื่องหรือเกมที่ชูตัวละครจาก Disney Infinity
           name: ไม่จำกัด
         netsim:
           title: เครื่องจำลองอินเตอร์เน็ต
+        pixelation:
+          title: พิกเซลเลชัน
         20-hour:
           title: Accelerated Intro to CS คอร์ส
           description: This 20-hour คอร์ส covers the core computer science and programming concepts in คอร์ส 2-4. The คอร์ส is designed for use with ages 10-18. Check out คอร์ส 2-4 for a more complete experience!
@@ -106,16 +109,20 @@ th:
           description_audience: อายุ 10-18 ปี
         iceage:
           name: ยุคน้ำแข็ง
+        gumball:
+          title: กัมบอล เพลย์ แล็บ
         starwars:
+          title: 'สตาร์วอร์ส: สร้างกาแลคซี่ด้วยการเขียนโค้ด (JavaScript)'
           description: ลองมาควบคุมหุ่นยนต์ด้วยการเขียนโปรแกรม และสร้างเกมสตาร์วอร์สของคุณเองในจักรวาลอันไกลโพ้นกันเถอะ
           description_short: ลองมาควบคุมหุ่นยนต์ด้วยการเขียนโปรแกรม และสร้างเกมสตาร์วอร์สของคุณเองในจักรวาลอันไกลโพ้นกันเถอะ
           student_description: ลองมาควบคุมหุ่นยนต์ด้วยการเขียนโปรแกรม และสร้างเกมสตาร์วอร์สของคุณเองในจักรวาลอันไกลโพ้นกันเถอะ
         starwarsblocks:
+          title: 'สตาร์วอร์ส: สร้างกาแลคซี่ด้วยการเขียนโค้ด (Blockly)'
           description: ลองมาควบคุมหุ่นยนต์ด้วยการเขียนโปรแกรม และสร้างเกมสตาร์วอร์สของคุณเองในจักรวาลอันไกลโพ้นกันเถอะ
           description_short: ลองมาควบคุมหุ่นยนต์ด้วยการเขียนโปรแกรม และสร้างเกมสตาร์วอร์สของคุณเองในจักรวาลอันไกลโพ้นกันเถอะ
           student_description: ลองมาควบคุมหุ่นยนต์ด้วยการเขียนโปรแกรม และสร้างเกมสตาร์วอร์สของคุณเองในจักรวาลอันไกลโพ้นกันเถอะ
         mc:
-          title: ชั่วโมงแห่งการเขียนโค้ดกับไมน์คราฟท์
+          title: การผจญภัยในไมน์คราฟท์
           description: ใช้บล็อคของโค้ดเพื่อพาสตีฟหรือแอเล็กซ์สู่การผจญภัยในโลกของไมน์คราฟท์
           description_short: สำรวจโลก Minecraft ผ่านโค้ด
           student_description: ใช้บล็อคของโค้ดเพื่อพาสตีฟหรือแอเล็กซ์สู่การผจญภัยในโลกของไมน์คราฟท์
@@ -208,6 +215,10 @@ th:
             required:
               display_name: ภาพรวม
         basketball:
+          title: เลือกทีมของคุณและสร้างเกมบาสเก็ตบอล
+          description_short: เลือกทีมของคุณและสร้างเกมบาสเก็ตบอล
+          description: เลือกทีมของคุณและสร้างเกมบาสเก็ตบอล
+          student_description: เลือกทีมของคุณและสร้างเกมบาสเก็ตบอล
           name: บาสเก็ตบอล
         csp2-support:
           lesson_groups:
@@ -219,14 +230,19 @@ th:
           description: เขียนโปรแกรมให้กับสัตว์ต่างๆและนักแสดงอื่นๆเพื่อสร้างเกมไมน์คราฟท์ในแบบฉบับของคุณเอง
           student_description: เขียนโปรแกรมให้กับสัตว์ต่างๆและนักแสดงอื่นๆเพื่อสร้างเกมไมน์คราฟท์ในแบบฉบับของคุณเอง
         coursea-draft:
+          title: 'ความรู้พื้นฐานด้านวิทยาการคอมพิวเตอร์: หลักสูตร A'
           description_short: รายละเอียดเบื้องต้นของวิทยาการคอมพิวเตอร์สำหรับเด็กวัยเริ่มอ่านออกเขียนได้
         courseb-draft:
+          title: 'ความรู้พื้นฐานด้านวิทยาการคอมพิวเตอร์: หลักสูตร B'
           description_short: รายละเอียดเบื้องต้นของวิทยาการคอมพิวเตอร์สำหรับเด็กวัยเริ่มอ่านออกเขียนได้
         coursec-draft:
+          title: 'ความรู้พื้นฐานด้านวิทยาการคอมพิวเตอร์: หลักสูตร C'
           description_short: ศึกษาพื้นฐานของวิทยาการคอมพิวเตอร์ ก่อนลงมือคิดงานศิลปะ เรื่องราวและเกมของคุณเอง
         coursed-draft:
+          title: 'ความรู้พื้นฐานด้านวิทยาการคอมพิวเตอร์: หลักสูตร D'
           description_short: ศึกษาพื้นฐานของวิทยาการคอมพิวเตอร์ ก่อนลงมือคิดงานศิลปะ เรื่องราวและเกมของคุณเอง
         coursee-draft:
+          title: 'ความรู้พื้นฐานด้านวิทยาการคอมพิวเตอร์: หลักสูตร E'
           description_short: ศึกษาพื้นฐานของวิทยาการคอมพิวเตอร์ ก่อนลงมือคิดงานศิลปะ เรื่องราวและเกมของคุณเอง
           lesson_groups:
             end_of_course_project:
@@ -234,6 +250,7 @@ th:
             extra_course_content:
               display_name: เนื้อหาของหลักสูตรพิเศษ
         coursef-draft:
+          title: 'ความรู้พื้นฐานด้านบริการลูกค้า: หลักสูตร F'
           description_short: ศึกษาพื้นฐานของวิทยาการคอมพิวเตอร์ ก่อนลงมือคิดงานศิลปะ เรื่องราวและเกมของคุณเอง
           lesson_groups:
             end_of_course_project:
@@ -264,6 +281,8 @@ th:
           lesson_groups:
             cspSurvey:
               display_name: แบบสำรวจ
+        coursed-ramp:
+          title: 'ความรู้พื้นฐานด้านวิทยาการคอมพิวเตอร์: หลักสูตร D'
         coursee-ramp:
           title: หลักสูตร E-เลื่อนชั้น
         csp-post-survey:
@@ -679,6 +698,7 @@ th:
         frozen-2018-test:
           title: สคริปต์โฟรเซ่นใหม่
         dance:
+          title: แดนซ์ปาร์ตี้ (2018)
           description_short: มีเพลงของศิลปินดังต่างๆ เช่น Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara และคนอื่นๆ อีก 25 คน!
           description: เขียนโค้ดสำหรับปาร์ตี้เต้นรำของคุณเอง เพื่อแชร์กับเพื่อนๆ ของคุณ!
           student_description: เขียนโค้ดสำหรับปาร์ตี้เต้นรำของคุณเอง เพื่อแชร์กับเพื่อนๆ ของคุณ!
@@ -1388,6 +1408,8 @@ th:
           lesson_groups:
             cspSurvey:
               display_name: แบบสำรวจ
+        csp5-virtual:
+          title: การเขียนโปรแกรมที่ขับเคลื่อนด้วยเหตุการณ์ใน App Lab
         virtual-holding-place:
           lesson_groups:
             csd3_2:
@@ -1396,6 +1418,8 @@ th:
           lesson_groups:
             cspSurvey:
               display_name: แบบสำรวจ
+        csd3-virtual:
+          title: บทนำด้วยตนเองเกี่ยวกับ Game Lab
         virustest:
           title: จำลองการระบาด
           description_short: 'ใช้แลปสไปรท์เพื่อสร้างการจำลองการระบาดของไวรัส '
@@ -1713,6 +1737,7 @@ th:
             cspSurvey2020:
               display_name: แบบสำรวจ
         aiml-2021:
+          title: AI และโมดูลการเรียนรู้ของเครื่อง
           lesson_groups:
             lessonGroup-4:
               display_name: แบบสำรวจ
@@ -1905,6 +1930,8 @@ th:
               display_name: ตัวอย่างและแหล่งข้อมูล
         tesstest921:
           name: testest921
+        hello-world-animals:
+          title: 'สวัสดีโลก: สัตว์'
         hello-world-retro:
           title: 'Hello World: เรโทร'
         hello-world-batman:
@@ -1912,6 +1939,8 @@ th:
         ai-ethics:
           title: จรรยาบรรณ AI ของเรา
           description_audience: เกรด 6-12
+        dance-unplugged:
+          title: ชั่วโมงแห่งรหัส - ปาร์ตี้เต้นรำ - อันปลั๊ก
         csc-things:
           name: เกี่ยวกับ CSC
           title: ข้อมูล CSC
@@ -1980,6 +2009,8 @@ th:
           title: ภาพปกบทกวี
         poetry-2021:
           title: การเข้ารหัสด้วยบทกวี
+        hello-world-animals-2021:
+          title: 'สวัสดีโลก: สัตว์'
         hello-world-retro-2021:
           title: 'Hello World: เรโทร'
         counting-csc-2021:
@@ -2280,6 +2311,8 @@ th:
         csd-post-survey-2022:
           description: หน่วยการเรียนรู้ประกอบด้วยแบบสำรวจหลังจบคอร์ส CS Discoveries และมอบหมายหน่วยการเรียนรู้นี้ได้หลังจากนักเรียนเรียนหน่วยการเรียนรู้สุดท้ายใน CS Discoveries เรียบร้อยแล้ว
           student_description: หน่วยการเรียนนี้ประกอบด้วยแบบสำรวจเมื่อชั้นเรียนของคุณเรียน CS Discoveries เสร็จแล้ว ผู้สอนจะบอกกับคุณว่าควรทำแบบสำรวจนี้เมื่อไหร่
+        aiml-2022:
+          title: AI และโมดูลการเรียนรู้ของเครื่อง
         self-paced-pl-csd1-2022:
           title: 'โมดูล 1: ยินดีต้อนรับ '
           description: "โมดูลนี้เป็นบทนำสั้น ๆ ทั้ง Code.org และหลักสูตรการเรียนรู้แบบมืออาชีพนี้ \n\n\\*\\*คุณจะ: \\*\\*\n\n-   รับรู้เบื้องต้นเกี่ยวกับ Code.org และการค้นพบ CS.\n-   เรียนรู้วิธีการมีส่วนร่วมในหลักสูตรการเรียนรู้แบบมืออาชีพนี้\n\n\\*\\*เวลาที่แนะนำ: \\*\\* 10 นาที"
@@ -2378,6 +2411,10 @@ th:
           title: 'สวัสดีชาวโลก: จักรวาล'
         hello-world-soccer-2022:
           title: 'สวัสดีชาวโลก: ฟุตบอล'
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: แบบสำรวจ
         csd3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2431,6 +2468,8 @@ th:
         csp-playground:
           description_audience: ผู้เขียนหลักสูตร
           description_short: เพื่อจัดทำอัปเดตในบทเรียนหรือเลเวลระหว่างหลักสูตรแต่ละเวอร์ชัน
+        devices-2022:
+          title: การสร้างแอปด้วยอุปกรณ์ (Circuit Playground)
         microbit-temp:
           lesson_groups:
             lessonGroup-2:
@@ -2591,12 +2630,24 @@ th:
               display_name: ตอนที่ 2
             lessonGroup-5:
               display_name: แบบสำรวจ
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: แบบสำรวจ
         focus-on-creativity3-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'บทที่ 1: ภาพและการเคลื่อนไหว'
             lessonGroup-3:
               display_name: 'บทที่ 2: การสร้างเกม'
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: แบบสำรวจ
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: แบบสำรวจ
         focus-on-data3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2605,12 +2656,24 @@ th:
               display_name: ตอนที่ 1
             lessonGroup-4:
               display_name: ตอนที่ 2
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: แบบสำรวจ
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: แบบสำรวจ
         focus-on-coding3-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'บทที่ 1: ภาพและการเคลื่อนไหว'
             lessonGroup-3:
               display_name: 'บทที่ 2: การสร้างเกม'
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: แบบสำรวจ
         focus-on-impact-in-society4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2705,6 +2768,7 @@ th:
           description: "ในโมดูลนี้ คุณจะได้รับการแนะนำให้รู้จักกับแนวปฏิบัติด้านวิทยาการคอมพิวเตอร์ที่แท้จริงที่นักเรียนจะมีส่วนร่วมตลอดหลักสูตร CS Discoveries การปฏิบัติเหล่านี้รวมถึงการแก้จุดบกพร่องการใช้ทรัพยากรและการเขียนโปรแกรมคู่นอกจากนี้ คุณยังจะได้สำรวจบทบาทของครูในห้องเรียน CS Discoveries และวางแผนวิธีที่คุณจะสนับสนุนการเรียนรู้ของนักเรียนในขณะที่สอนหลักสูตร \n\n\\*\\*คุณจะ: \\*\\*\n\n-   พิจารณาบทบาทของครูในห้องเรียนการค้นพบ CS \n-   เรียนรู้เกี่ยวกับแนวปฏิบัติด้านวิทยาการคอมพิวเตอร์ที่แท้จริงที่นักเรียนจะพัฒนาตลอดหลักสูตร CS Discoveries\n-   วางแผนวิธีการที่จะสนับสนุนการเรียนรู้ของนักเรียนผ่านความแตกต่าง การประเมินผลอย่างต่อเนื่อง และการส่งเสริมวัฒนธรรมของการรวม \n\n\\*\\*เวลาที่แนะนำ: \\*\\* 50 นาที"
           student_description: "ในโมดูลนี้ คุณจะได้รับการแนะนำให้รู้จักกับแนวปฏิบัติด้านวิทยาการคอมพิวเตอร์ที่แท้จริงที่นักเรียนจะมีส่วนร่วมตลอดหลักสูตร CS Discoveries การปฏิบัติเหล่านี้รวมถึงการแก้จุดบกพร่องการใช้ทรัพยากรและการเขียนโปรแกรมคู่นอกจากนี้ คุณยังจะได้สำรวจบทบาทของครูในห้องเรียน CS Discoveries และวางแผนวิธีที่คุณจะสนับสนุนการเรียนรู้ของนักเรียนในขณะที่สอนหลักสูตร \n\n\\*\\*คุณจะ: \\*\\*\n\n-   พิจารณาบทบาทของครูในห้องเรียนการค้นพบ CS \n-   เรียนรู้เกี่ยวกับแนวปฏิบัติด้านวิทยาการคอมพิวเตอร์ที่แท้จริงที่นักเรียนจะพัฒนาตลอดหลักสูตร CS Discoveries\n-   วางแผนวิธีการที่จะสนับสนุนการเรียนรู้ของนักเรียนผ่านความแตกต่าง การประเมินผลอย่างต่อเนื่อง และการส่งเสริมวัฒนธรรมของการรวม \n\n\\*\\*เวลาที่แนะนำ: \\*\\* 50 นาที"
         self-paced-pl-csd5-2023:
+          title: 'รูปแบบที่ 7: การเตรียมพร้อมในการสอนด้าน AI และ Machine Learning'
           description: "บทเรียนการเรียนรู้ระดับอาชีพนี้ได้รับการออกแบบมาเพื่อช่วยสร้างความพร้อมให้กับคุณเพื่อใช้ในการสอนบทเรียนเกี่ยวกับ AI และ Machine Learning ใน Code.org \n\n**ในบทเรียนการเรียนรู้ระดับอาชีพนี้ คุณจะได้:**\n\n-   เรียนรู้เกี่ยวกับ AI และ Machine Learning เบื้องต้น\n-   ฝึกฝนด้านรูปแบบคีย์ที่มีในบทเรียน\n-   เข้าร่วมทำงานใน AI Lab และ App Lab\n-   เรียนจนจบโปรเจกต์\n-   สร้างแผนการสอนเพื่อนำหน่วยการเรียนรู้ไปใช้กับนักเรียน\n\n**เวลาที่แนะนำ:** 120 นาที"
           student_description: "บทเรียนการเรียนรู้ระดับอาชีพนี้ได้รับการออกแบบมาเพื่อช่วยสร้างความพร้อมให้กับคุณเพื่อใช้ในการสอนบทเรียนเกี่ยวกับ AI และ Machine Learning ใน Code.org \n\n**ในบทเรียนการเรียนรู้ระดับอาชีพนี้ คุณจะได้:**\n\n-   เรียนรู้เกี่ยวกับ AI และ Machine Learning เบื้องต้น\n-   ฝึกฝนด้านรูปแบบคีย์ที่มีในบทเรียน\n-   เข้าร่วมทำงานใน AI Lab และ App Lab\n-   เรียนจนจบโปรเจกต์\n-   สร้างแผนการสอนเพื่อนำหน่วยการเรียนรู้ไปใช้กับนักเรียน\n\n**เวลาที่แนะนำ:** 120 นาที"
         pl-csd-summer-day1:
@@ -2753,3 +2817,166 @@ th:
           description_short: ศึกษาแนวคิดทั้งหมดที่เกี่ยวกับวิทยาการคอมพิวเตอร์พื้นฐาน ก่อนลงมือคิดงานศิลปะ เรื่องราวหรือเกมของคุณเอง
         self-paced-pl-csp2-2023:
           title: 'โมดูล 2: การนำทาง Code.org'
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: ข้อมูล
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: พลเมืองดิจิทัล
+            lessonGroup-3:
+              display_name: การจัดลำดับ
+            lessonGroup-4:
+              display_name: ลูป
+            lessonGroup-5:
+              display_name: ผลกระทบจากการใช้คอมพิวเตอร์
+          description_audience: 'อายุ: 4-7 ปี'
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: ข้อมูล
+          lesson_groups:
+            lessonGroup-2:
+              display_name: พลเมืองดิจิทัล
+            lessonGroup-3:
+              display_name: การจัดลำดับ
+            lessonGroup-4:
+              display_name: ลูป
+            lessonGroup-5:
+              display_name: ผลกระทบจากการใช้คอมพิวเตอร์
+            lessonGroup-6:
+              display_name: ข้อมูล
+          description_audience: 'อายุ: 4-7 ปี'
+          description_short: รายละเอียดเบื้องต้นของวิทยาการคอมพิวเตอร์สำหรับเด็กวัยเรียนรู้
+        nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: ข้อมูล
+          lesson_groups:
+            lessonGroup-2:
+              display_name: พลเมืองดิจิทัล
+            lessonGroup-3:
+              display_name: การจัดลำดับ
+            lessonGroup-4:
+              display_name: ลูป
+            lessonGroup-5:
+              display_name: ผลกระทบจากการใช้คอมพิวเตอร์
+            lessonGroup-6:
+              display_name: เหตุการณ์
+            lessonGroup-7:
+              display_name: โปรเจกต์ปิดท้ายหลักสูตร
+            lessonGroup-8:
+              display_name: ข้อมูล
+          description_audience: 'อายุ: 5-8 ปี'
+          description_short: รายละเอียดเบื้องต้นของวิทยาการคอมพิวเตอร์สำหรับเด็กวัยเรียนรู้ จะมีความคล้ายคลึงกับหลักสูตร A แต่จะมีการเพิ่มเติมแนวคิดที่ลงลึกยิ่งขึ้น
+        nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: ระบบคอมพิวเตอร์
+          lesson_groups:
+            lessonGroup-2:
+              display_name: พลเมืองดิจิทัล
+            lessonGroup-3:
+              display_name: การจัดลำดับ
+            lessonGroup-4:
+              display_name: ลูป
+            lessonGroup-5:
+              display_name: เหตุการณ์
+            lessonGroup-6:
+              display_name: ข้อมูล
+            lessonGroup-8:
+              display_name: ระบบคอมพิวเตอร์
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: พลเมืองดิจิทัล
+            lessonGroup-3:
+              display_name: การจัดลำดับ
+            lessonGroup-4:
+              display_name: ผลกระทบจากการใช้คอมพิวเตอร์
+            lessonGroup-6:
+              display_name: ลูป
+            lessonGroup-7:
+              display_name: ข้อมูล
+            lessonGroup-8:
+              display_name: โปรเจกต์ปิดท้ายหลักสูตร
+          description_audience: 'อายุ: 7-11 ปี'
+          description_short: เรียนรู้คำสั่งแบบมีเงื่อนไข ก่อนคิดงานศิลปะ เกม และแม้แต่ปาร์ตี้เต้นรำของคุณเอง
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: ลูปซ้อนลูป
+            lessonGroup-4:
+              display_name: ฟังก์ชัน
+            lessonGroup-6:
+              display_name: โปรเจกต์ปิดท้ายหลักสูตร
+          description_audience: 'อายุ: 8-12 ปี'
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          description_audience: 'อายุ: 9-13 ปี'
+          description_short: ศึกษาแนวคิดทั้งหมดที่เกี่ยวกับวิทยาการคอมพิวเตอร์พื้นฐาน ก่อนลงมือคิดงานศิลปะ เรื่องราวหรือเกมของคุณเอง
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: เงื่อนไข
+            lessonGroup-5:
+              display_name: ตัวแปร
+            lessonGroup-6:
+              display_name: ผลกระทบจากการใช้คอมพิวเตอร์
+            lessonGroup-7:
+              display_name: โปรเจกต์ปิดท้ายหลักสูตร
+          description_audience: 'อายุ: 9-13 ปี'
+          description_short: ศึกษาแนวคิดทั้งหมดที่เกี่ยวกับวิทยาการคอมพิวเตอร์พื้นฐาน ก่อนลงมือคิดงานศิลปะ เรื่องราวหรือเกมของคุณเอง
+        how-ai-works-2023:
+          title: AI ทำงานอย่างไร
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: จรรยาบรรณ AI ของเรา
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: บทเกริ่นนำ
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: บทเกริ่นนำ
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: บทเกริ่นนำ
+          lesson_groups:
+            lessonGroup-7:
+              display_name: บทเกริ่นนำ
+        self-paced-pl-csd-unit1-2-2023:
+          title: 'รูปแบบที่ 1: การเตรียมพร้อมในการสอนการแก้ไขปัญหาและการคำนวณ'
+          description: "บทเรียนการเรียนรู้ระดับอาชีพนี้ได้รับการออกแบบมาเพื่อช่วยสร้างความพร้อมให้กับคุณเพื่อใช้ในการสอนบทเรียนการแก้ไขปัญหาและการคำนวณเบื้องต้นใน Code.org \n\n**ในบทเรียนการเรียนรู้ระดับอาชีพนี้ คุณจะได้:**\n\n-   เรียนรู้การแก้ปัญหาและการคำนวณเบื้องต้น\n-   ฝึกฝนด้านรูปแบบคีย์ที่มีในบทเรียน\n-   เรียนจนจบโปรเจกต์\n\n**เวลาที่แนะนำ:** 30 นาที"
+          student_description: "บทเรียนการเรียนรู้ระดับอาชีพนี้ได้รับการออกแบบมาเพื่อช่วยสร้างความพร้อมให้กับคุณเพื่อใช้ในการสอนบทเรียนการแก้ไขปัญหาและการคำนวณเบื้องต้นใน Code.org \n\n**ในบทเรียนการเรียนรู้ระดับอาชีพนี้ คุณจะได้:**\n\n-   เรียนรู้การแก้ปัญหาและการคำนวณเบื้องต้น\n-   ฝึกฝนด้านรูปแบบคีย์ที่มีในบทเรียน\n-   เรียนจนจบโปรเจกต์\n\n**เวลาที่แนะนำ:** 30 นาที"
+        self-paced-pl-csd-unit2-2-2023:
+          title: 'รูปแบบที่ 2: การเตรียมพร้อมในการสอนพัฒนาเว็บ'
+        self-paced-pl-csd-unit3-2-2023:
+          title: การเตรียมพร้อมในการสอนการตอบโต้ในอะนิเมชันและเกม
+          description: "บทเรียนการเรียนรู้ระดับอาชีพนี้ได้รับการออกแบบมาเพื่อช่วยสร้างความพร้อมให้กับคุณเพื่อใช้ในการสอนบทเรียนการโต้ตอบเบื้องต้นในอะนิเมชันและเกมใน Code.org \n\n**ในบทเรียนการเรียนรู้ระดับอาชีพนี้ คุณจะได้:**\n\n-   เรียนรู้การโต้ตอบเบื้องต้นในอะนิเมชันและเกม\n-   ฝึกฝนด้านรูปแบบคีย์ที่มีในบทเรียน\n-   เข้าร่วมทำงานใน Game Lab\n-   เรียนจนจบโปรเจกต์\n\n**เวลาที่แนะนำ:** 120 นาที"
+          student_description: "บทเรียนการเรียนรู้ระดับอาชีพนี้ได้รับการออกแบบมาเพื่อช่วยสร้างความพร้อมให้กับคุณเพื่อใช้ในการสอนบทเรียนการโต้ตอบเบื้องต้นในอะนิเมชันและเกมใน Code.org \n\n**ในบทเรียนการเรียนรู้ระดับอาชีพนี้ คุณจะได้:**\n\n-   เรียนรู้การโต้ตอบเบื้องต้นในอะนิเมชันและเกม\n-   ฝึกฝนด้านรูปแบบคีย์ที่มีในบทเรียน\n-   เข้าร่วมทำงานใน Game Lab\n-   เรียนจนจบโปรเจกต์\n\n**เวลาที่แนะนำ:** 120 นาที"
+        self-paced-pl-csd-unit4-2-2023:
+          title: " รูปแบบที่ 4: การเตรียมพร้อมในการสอนกระบวนการออกแบบ"
+        self-paced-pl-csd-unit5-2-2023:
+          title: 'รูปแบบที่ 5: การเตรียมพร้อมในการสอนด้านข้อมูลและสังคม'
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: แบบสำรวจ
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'บทที่ 1: ภาพและการเคลื่อนไหว'
+            lessonGroup-3:
+              display_name: 'บทที่ 2: การสร้างเกม'
+        csd7-2024:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: แอปแลปเบื้องต้น
+            lessonGroup-2:
+              display_name: ตอนที่ 1
+            lessonGroup-3:
+              display_name: ตอนที่ 2

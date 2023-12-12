@@ -5,11 +5,11 @@
         "CT": {
           "description": "Есептегіштік ойлау"
         },
-        "L": {
-          "description": "Тілі"
-        },
         "F": {
           "description": "Функциялар"
+        },
+        "L": {
+          "description": "Тілі"
         }
       }
     }

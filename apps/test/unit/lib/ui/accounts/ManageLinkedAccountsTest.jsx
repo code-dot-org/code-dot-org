@@ -14,6 +14,7 @@ const DEFAULT_PROPS = {
   userHasPassword: true,
   isGoogleClassroomStudent: false,
   isCleverStudent: false,
+  personalAccountLinkingEnabled: true,
 };
 
 describe('ManageLinkedAccounts', () => {
@@ -250,69 +251,46 @@ describe('ManageLinkedAccounts', () => {
     expect(googleConnectButton).to.have.attr('disabled');
   });
 
-  describe('in the Maker App', () => {
+  describe('CPA lockout to prevent students from connecting oauth accounts without parent permission', () => {
     beforeEach(() => {
-      replaceOnWindow('MakerBridge', true);
+      replaceOnWindow('CPA_EXPERIENCE', 'true');
     });
 
     afterEach(() => {
-      restoreOnWindow('MakerBridge', false);
+      restoreOnWindow('CPA_EXPERIENCE', undefined);
     });
 
-    it('renders the Google Account as disabled with explanatory tooltip', () => {
-      const wrapper = mount(<ManageLinkedAccounts {...DEFAULT_PROPS} />);
-
-      expect(wrapper.find('table')).to.exist;
-      expect(wrapper.find('OauthConnection').at(0)).to.include.text(
-        'Google Account'
+    it('disables the connect buttons when personal account linking is disabled', () => {
+      const wrapper = mount(
+        <ManageLinkedAccounts
+          {...DEFAULT_PROPS}
+          personalAccountLinkingEnabled={false}
+        />
       );
 
-      let googleOAuthButton = wrapper
-        .find('OauthConnection')
-        .at(0)
-        .find('BootstrapButton');
-      expect(googleOAuthButton).to.be.disabled();
+      const googleConnectButton = wrapper.find('BootstrapButton').at(0);
+      expect(googleConnectButton).to.have.attr('disabled');
+      expect(googleConnectButton).to.be.disabled();
 
-      const tooltip = wrapper
-        .find('OauthConnection')
-        .at(0)
-        .find('ReactTooltip')
-        .at(0);
-      expect(tooltip).to.include.text(
-        'This action cannot be done from the Maker App.'
-      );
+      const msftConnectButton = wrapper.find('BootstrapButton').at(1);
+      expect(msftConnectButton).to.have.attr('disabled');
+      expect(msftConnectButton).to.be.disabled();
+
+      const facebookConnectButton = wrapper.find('BootstrapButton').at(3);
+      expect(facebookConnectButton).to.have.attr('disabled');
+      expect(facebookConnectButton).to.be.disabled();
     });
 
-    it('Microsoft, Clever, and Facebook buttons are enabled with no tooltips', () => {
-      const wrapper = mount(<ManageLinkedAccounts {...DEFAULT_PROPS} />);
-
-      expect(wrapper.find('table')).to.exist;
-      expect(wrapper.find('OauthConnection').at(1)).to.include.text(
-        'Microsoft Account'
+    it('does not disable the Clever connect button even when the other buttons are disabled', () => {
+      const wrapper = mount(
+        <ManageLinkedAccounts
+          {...DEFAULT_PROPS}
+          personalAccountLinkingEnabled={false}
+        />
       );
-      expect(
-        wrapper.find('OauthConnection').at(1).find('BootstrapButton')
-      ).to.not.be.disabled();
-      expect(wrapper.find('OauthConnection').at(1).find('ReactTooltip')).to.not
-        .exist;
-
-      expect(wrapper.find('OauthConnection').at(2)).to.include.text(
-        'Clever Account'
-      );
-      expect(
-        wrapper.find('OauthConnection').at(2).find('BootstrapButton')
-      ).to.not.be.disabled();
-      expect(wrapper.find('OauthConnection').at(2).find('ReactTooltip')).to.not
-        .exist;
-
-      expect(wrapper.find('OauthConnection').at(3)).to.include.text(
-        'Facebook Account'
-      );
-      expect(
-        wrapper.find('OauthConnection').at(3).find('BootstrapButton')
-      ).to.not.be.disabled();
-      expect(wrapper.find('OauthConnection').at(3).find('ReactTooltip')).to.not
-        .exist;
+      const cleverConnectButton = wrapper.find('BootstrapButton').at(2);
+      expect(cleverConnectButton).to.not.have.attr('disabled');
+      expect(cleverConnectButton).to.not.be.disabled();
     });
   });
 });

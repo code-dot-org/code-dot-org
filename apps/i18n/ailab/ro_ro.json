@@ -1,15 +1,15 @@
 {
-  "selectDataset": "Selectați setul de date pe care doriți să îl utilizați.",
-  "uploadedDataset": "Tocmai ați încărcat un set de date.",
-  "selectedDataset": "Tocmai ați selectat un set de date.",
-  "dataDisplayLabel": "Alegeți o coloană pentru a prezice.",
   "dataDisplayFeatures": "Alegeți una sau mai multe coloane ca intrări pentru a vă ajuta să faceți predicția.",
-  "selectedFeatureNumerical": "Tocmai ați selectat o caracteristică numerică.",
-  "selectedFeatureCategorical": "Tocmai ați selectat o caracteristică categorică.",
-  "trainModel": "Modelul tău este instruit.",
+  "dataDisplayLabel": "Alegeți o coloană pentru a prezice.",
   "generateResults": "Modelul dvs. este testat.",
+  "modelSummary": "V-ați antrenat și salvat cu succes modelul. Examinați detaliile modelului și faceți clic pe Finalizare pentru a utiliza modelul instruit în App Lab.",
   "results": "Examinați rezultatele.",
   "resultsDetails": "Detaliile rezultatelor sunt afișate.",
   "saveModel": "Salvați modelul instruit pentru utilizare în App Lab.",
-  "modelSummary": "V-ați antrenat și salvat cu succes modelul. Examinați detaliile modelului și faceți clic pe Finalizare pentru a utiliza modelul instruit în App Lab."
+  "selectDataset": "Selectați setul de date pe care doriți să îl utilizați.",
+  "selectedDataset": "Tocmai ați selectat un set de date.",
+  "selectedFeatureCategorical": "Tocmai ați selectat o caracteristică categorică.",
+  "selectedFeatureNumerical": "Tocmai ați selectat o caracteristică numerică.",
+  "trainModel": "Modelul tău este instruit.",
+  "uploadedDataset": "Tocmai ați încărcat un set de date."
 }

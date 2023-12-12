@@ -3,49 +3,58 @@
     "data": {
       "start_html": {
         "CSD U1 IO Pet Chooser 2_2021": {
-          "Yes": "Ya",
           "No": "Tidak",
+          "Yes": "Ya",
           "cute": "comel"
         },
         "CSD U1 IO Pet Chooser 2_2022": {
-          "Yes": "Ya",
           "No": "Tidak",
+          "Yes": "Ya",
+          "cute": "comel"
+        },
+        "CSD U1 IO Pet Chooser 2_2023": {
+          "No": "Tidak",
+          "Yes": "Ya",
           "cute": "comel"
         },
         "CSD U1 IO Pet Chooser_2021": {
-          "Yes": "Ya",
           "No": "Tidak",
+          "Yes": "Ya",
           "cute": "comel"
         },
         "CSD U1 IO Pet Chooser_2022": {
-          "Yes": "Ya",
           "No": "Tidak",
+          "Yes": "Ya",
+          "cute": "comel"
+        },
+        "CSD U1 IO Pet Chooser_2023": {
+          "No": "Tidak",
+          "Yes": "Ya",
           "cute": "comel"
         },
         "CSD U1 IO Story_2021": {
-          "Name": "Nama",
+          "City": "Bandar",
           "Color": "Warna",
           "Food": "Makanan",
-          "City": "Bandar",
+          "Name": "Nama",
           "text": "teks"
         },
         "CSD U1 IO Story_2022": {
-          "Name": "Nama",
+          "City": "Bandar",
           "Color": "Warna",
           "Food": "Makanan",
+          "Name": "Nama",
+          "text": "teks"
+        },
+        "CSD U1 IO Story_2023": {
           "City": "Bandar",
+          "Color": "Warna",
+          "Food": "Makanan",
+          "Name": "Nama",
           "text": "teks"
         },
         "CSD U1 processing bday_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -56,18 +65,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing bday_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -78,29 +87,55 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "CSD U1 processing bday_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing fastest_2021": {
-          "s": "s",
+          "0": "0",
           "k": "k",
-          "0": "0"
+          "s": "s"
         },
         "CSD U1 processing fastest_2022": {
-          "s": "s",
+          "0": "0",
           "k": "k",
-          "0": "0"
+          "s": "s"
+        },
+        "CSD U1 processing fastest_2023": {
+          "0": "0",
+          "k": "k",
+          "s": "s"
         },
         "CSD U1 processing guess_2021": {
-          "?": "?",
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -111,20 +146,20 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "?": "?",
           "text": "teks"
         },
         "CSD U1 processing guess_2022": {
-          "?": "?",
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -135,18 +170,58 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "?": "?",
+          "text": "teks"
+        },
+        "CSD U1 processing guess_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "?": "?",
           "text": "teks"
         },
         "CSD U1 processing live_2021": {
-          "walking": "Berjalan",
           "bear": "beruang",
-          "rat": "tikus"
+          "rat": "tikus",
+          "walking": "Berjalan"
         },
         "CSD U1 processing live_2022": {
-          "walking": "Berjalan",
           "bear": "beruang",
-          "rat": "tikus"
+          "rat": "tikus",
+          "walking": "Berjalan"
+        },
+        "CSD U1 processing live_2023": {
+          "cat": "kucing",
+          "chicken": "ayam",
+          "dog": "anjing",
+          "horse": "kuda",
+          "walking": "Berjalan"
         },
         "CSD U1 processing npark_2021": {
           "Correct!": "Betul!",
@@ -156,16 +231,12 @@
           "Correct!": "Betul!",
           "Sorry!": "Maaf!"
         },
+        "CSD U1 processing npark_2023": {
+          "Correct!": "Betul!",
+          "Sorry!": "Maaf!"
+        },
         "CSD U1 processing writers_2021": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -176,18 +247,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing writers_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -198,7 +269,37 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "CSD U1 processing writers_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 storage friends_2021": {
           "Back": "Belakang"
@@ -206,33 +307,50 @@
         "CSD U1 storage friends_2022": {
           "Back": "Belakang"
         },
+        "CSD U1 storage friends_2023": {
+          "Back": "Belakang"
+        },
         "CSD U1 storage movies_2021": {
+          "No": "Tidak",
           "Star Wars": "Star Wars",
           "Yes": "Ya",
-          "No": "Tidak",
           "text": "teks"
         },
         "CSD U1 storage movies_2022": {
+          "No": "Tidak",
           "Star Wars": "Star Wars",
           "Yes": "Ya",
+          "text": "teks"
+        },
+        "CSD U1 storage movies_2023": {
           "No": "Tidak",
+          "Star Wars": "Star Wars",
+          "Yes": "Ya",
           "text": "teks"
         },
         "CSD U1 storage outfit_2021": {
           "Clear": "Kosongkan",
-          "white": "putih",
-          "pink": "merah jambu",
-          "green": "hijau",
           "black": "hitam",
-          "purple": "ungu"
+          "green": "hijau",
+          "pink": "merah jambu",
+          "purple": "ungu",
+          "white": "putih"
         },
         "CSD U1 storage outfit_2022": {
           "Clear": "Kosongkan",
-          "white": "putih",
-          "pink": "merah jambu",
-          "green": "hijau",
           "black": "hitam",
-          "purple": "ungu"
+          "green": "hijau",
+          "pink": "merah jambu",
+          "purple": "ungu",
+          "white": "putih"
+        },
+        "CSD U1 storage outfit_2023": {
+          "Clear": "Kosongkan",
+          "black": "hitam",
+          "green": "hijau",
+          "pink": "merah jambu",
+          "purple": "ungu",
+          "white": "putih"
         },
         "CSD U2 RGB intro": {
           "1": "1",
@@ -269,133 +387,343 @@
           "4": "4",
           "5": "5"
         },
+        "CSD U6 - Accelerometer - PB_2023": {
+          "0": "0"
+        },
         "CSD U6 - Accelerometer - PB_2222": {
           "0": "0"
+        },
+        "CSD U6 - Accelerometer - PB_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Accelerometer - PD_2023": {
+          "You did it!": "Awak berjaya!"
         },
         "CSD U6 - Accelerometer - PD_2222": {
           "You did it!": "Awak berjaya!"
         },
+        "CSD U6 - Accelerometer - PF_2023": {
+          "0": "0"
+        },
         "CSD U6 - Accelerometer - PF_2222": {
           "0": "0"
         },
+        "CSD U6 - Accelerometer - PF_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Accelerometer - SB2_mb2022": {
+          "Success!": "Berjaya!"
+        },
+        "CSD U6 - Board Inputs - P_2023": {
+          "Success!": "Berjaya!"
+        },
+        "CSD U6 - Board Inputs - PracC_mb2022": {
+          "Success!": "Berjaya!"
+        },
+        "CSD U6 - Board Inputs - SB1_2023": {
+          "Success!": "Berjaya!"
+        },
         "CSD U6 - Board Inputs - SB1_2222": {
+          "Success!": "Berjaya!"
+        },
+        "CSD U6 - Board Inputs - SB1_mb2022": {
+          "Success!": "Berjaya!"
+        },
+        "CSD U6 - Board Inputs - SB2_2023": {
           "Success!": "Berjaya!"
         },
         "CSD U6 - Board Inputs - SB2_2222": {
           "Success!": "Berjaya!"
         },
+        "CSD U6 - Board Inputs - SB2_mb2022": {
+          "Success!": "Berjaya!"
+        },
+        "CSD U6 - Board Inputs - SB3_2023": {
+          "Success!": "Berjaya!"
+        },
         "CSD U6 - Board Inputs - SB3_2222": {
           "Success!": "Berjaya!"
+        },
+        "CSD U6 - Board Outputs - A_2023": {
+          "Happy": "Gembira"
         },
         "CSD U6 - Board Outputs - A_2222": {
           "Happy": "Gembira"
         },
+        "CSD U6 - Board Outputs - A_mb2022": {
+          "Age": "Umur",
+          "Happy": "Gembira",
+          "Name": "Nama"
+        },
+        "CSD U6 - Board Outputs - ChalC_mb2022": {
+          "No": "Tidak",
+          "Yes": "Ya"
+        },
+        "CSD U6 - Board Outputs - P_2023": {
+          "Success!": "Berjaya!"
+        },
         "CSD U6 - Board Outputs - P_2222": {
+          "Success!": "Berjaya!"
+        },
+        "CSD U6 - Board Outputs - PracD_mb2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3"
+        },
+        "CSD U6 - Board Outputs - SB1_2023": {
           "Success!": "Berjaya!"
         },
         "CSD U6 - Board Outputs - SB1_2222": {
           "Success!": "Berjaya!"
         },
+        "CSD U6 - Board Outputs - SB2_2023": {
+          "Success!": "Berjaya!"
+        },
         "CSD U6 - Board Outputs - SB2_2222": {
           "Success!": "Berjaya!"
+        },
+        "CSD U6 - Board Outputs - SB4_2023": {
+          "Fish": "Ikan"
         },
         "CSD U6 - Board Outputs - SB4_2222": {
           "Fish": "Ikan"
         },
+        "CSD U6 - Board Outputs - Setup_2023": {
+          "Success!": "Berjaya!"
+        },
         "CSD U6 - Board Outputs - Setup_2222": {
           "Success!": "Berjaya!"
         },
-        "CSD U6 - Color LEDs - ChalD_2222": {
+        "CSD U6 - Board Outputs - Setup_mb2022": {
+          "Success!": "Berjaya!"
+        },
+        "CSD U6 - Color LEDs - ChalD_2023": {
+          "East": "Timur",
           "North": "Utara",
           "South": "Selatan",
-          "East": "Timur",
           "West": "Barat"
         },
+        "CSD U6 - Color LEDs - ChalD_2222": {
+          "East": "Timur",
+          "North": "Utara",
+          "South": "Selatan",
+          "West": "Barat"
+        },
+        "CSD U6 - Color LEDs - PracA_2023": {
+          "Success!": "Berjaya!"
+        },
         "CSD U6 - Color LEDs - PracA_2222": {
+          "Success!": "Berjaya!"
+        },
+        "CSD U6 - Color LEDs - SB2_2023": {
           "Success!": "Berjaya!"
         },
         "CSD U6 - Color LEDs - SB2_2222": {
           "Success!": "Berjaya!"
         },
+        "CSD U6 - Color LEDs - SB3_2023": {
+          "Success!": "Berjaya!"
+        },
         "CSD U6 - Color LEDs - SB3_2222": {
           "Success!": "Berjaya!"
+        },
+        "CSD U6 - Color LEDs - SB4_2023": {
+          "Medium": "Sederhana"
         },
         "CSD U6 - Color LEDs - SB4_2222": {
           "Medium": "Sederhana"
         },
-        "CSD U6 - Combine Inputs - A_2222": {
-          "left": "kiri",
-          "right": "kanan",
-          "red": "merah",
-          "yellow": "kuning",
+        "CSD U6 - Combine Inputs - A_2023": {
           "green": "hijau",
-          "purple": "ungu"
+          "left": "kiri",
+          "purple": "ungu",
+          "red": "merah",
+          "right": "kanan",
+          "yellow": "kuning"
+        },
+        "CSD U6 - Combine Inputs - A_2222": {
+          "green": "hijau",
+          "left": "kiri",
+          "purple": "ungu",
+          "red": "merah",
+          "right": "kanan",
+          "yellow": "kuning"
+        },
+        "CSD U6 - Combine Inputs - A_mb2022": {
+          "left": "kiri",
+          "right": "kanan"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
-          "on": "pada",
           "fast": "cepat",
-          "slow": "perlahan",
-          "short": "Pendek",
+          "high": "tinggi",
           "long": "Panjang",
           "low": "rendah",
-          "high": "tinggi"
+          "on": "pada",
+          "short": "Pendek",
+          "slow": "perlahan"
+        },
+        "CSD U6 - Combine Inputs - CA_2023": {
+          "fast": "cepat",
+          "high": "tinggi",
+          "long": "Panjang",
+          "low": "rendah",
+          "on": "pada",
+          "short": "Pendek",
+          "slow": "perlahan"
+        },
+        "CSD U6 - Combine Inputs - ChalG_2023": {
+          "Blue": "Biru",
+          "Green": "Hijau",
+          "Red": "Merah"
         },
         "CSD U6 - Combine Inputs - ChalG_2222": {
-          "Red": "Merah",
+          "Blue": "Biru",
           "Green": "Hijau",
-          "Blue": "Biru"
+          "Red": "Merah"
+        },
+        "CSD U6 - Combine Inputs - PracA_2023": {
+          "left": "kiri",
+          "right": "kanan"
         },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": "kiri",
           "right": "kanan"
         },
-        "CSD U6 - Combine Inputs - PracC_2222": {
-          "yellow": "kuning",
-          "green": "hijau",
+        "CSD U6 - Combine Inputs - PracC_2023": {
           "blue": "biru",
-          "orange": "oren"
+          "green": "hijau",
+          "orange": "oren",
+          "yellow": "kuning"
+        },
+        "CSD U6 - Combine Inputs - PracC_2222": {
+          "blue": "biru",
+          "green": "hijau",
+          "orange": "oren",
+          "yellow": "kuning"
+        },
+        "CSD U6 - Combine Inputs - PracD_2023": {
+          "Test": "Ujian",
+          "quiet": "senyap"
         },
         "CSD U6 - Combine Inputs - PracD_2222": {
-          "quiet": "senyap",
-          "Test": "Ujian"
+          "Test": "Ujian",
+          "quiet": "senyap"
+        },
+        "CSD U6 - Combine Inputs - SB1_mb2022": {
+          "bottom row": "barisan Bawah",
+          "top row": "barisan Atas"
+        },
+        "CSD U6 - Combine Inputs - SB2_2023": {
+          "long": "Panjang",
+          "short": "Pendek"
         },
         "CSD U6 - Combine Inputs - SB2_2222": {
-          "short": "Pendek",
-          "long": "Panjang"
+          "long": "Panjang",
+          "short": "Pendek"
         },
-        "CSD U6 - Combine Inputs - SB3_2222": {
-          "short": "Pendek",
+        "CSD U6 - Combine Inputs - SB3_2023": {
+          "high": "tinggi",
           "long": "Panjang",
           "low": "rendah",
-          "high": "tinggi"
+          "short": "Pendek"
+        },
+        "CSD U6 - Combine Inputs - SB3_2222": {
+          "high": "tinggi",
+          "long": "Panjang",
+          "low": "rendah",
+          "short": "Pendek"
+        },
+        "CSD U6 - Combine Inputs - SB4_2023": {
+          "long": "Panjang",
+          "short": "Pendek"
         },
         "CSD U6 - Combine Inputs - SB4_2222": {
-          "short": "Pendek",
-          "long": "Panjang"
+          "long": "Panjang",
+          "short": "Pendek"
+        },
+        "CSD U6 - Combine Inputs - SB4v2_mb2022": {
+          "Row": "Pergaduhan"
+        },
+        "CSD U6 - Combine Inputs - SB5v2_mb2022": {
+          "Row": "Pergaduhan"
+        },
+        "CSD U6 - Functions - P2C_2023": {
+          "Blue": "Biru",
+          "Red": "Merah"
         },
         "CSD U6 - Functions - P2C_2222": {
-          "Red": "Merah",
-          "Blue": "Biru"
+          "Blue": "Biru",
+          "Red": "Merah"
+        },
+        "CSD U6 - Functions - P2C_mb2022": {
+          "Blue": "Biru",
+          "Red": "Merah"
+        },
+        "CSD U6 - Functions - P_2023": {
+          "0": "0"
         },
         "CSD U6 - Functions - P_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Functions - P_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Functions - SB7_2023": {
           "0": "0"
         },
         "CSD U6 - Functions - SB7_2222": {
           "0": "0"
         },
-        "CSD U6 - If Variables - ChalD_2222": {
-          "0": "0",
+        "CSD U6 - Functions - SB7_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - If Variables - ChalD_2023": {
           "+": "+",
-          "-": "-"
+          "-": "-",
+          "0": "0"
+        },
+        "CSD U6 - If Variables - ChalD_2222": {
+          "+": "+",
+          "-": "-",
+          "0": "0"
+        },
+        "CSD U6 - If Variables - ChalD_mb2022": {
+          "+": "+",
+          "-": "-",
+          "0": "0"
+        },
+        "CSD U6 - If Variables - SB3_2023": {
+          "Name": "Nama"
         },
         "CSD U6 - If Variables - SB3_2222": {
           "Name": "Nama"
         },
+        "CSD U6 - If Variables - SB3_mb2022": {
+          "Name": "Nama"
+        },
+        "CSD U6 - If Variables - SB4_2023": {
+          "0": "0"
+        },
         "CSD U6 - If Variables - SB4_2222": {
           "0": "0"
         },
+        "CSD U6 - If Variables - SB4_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Music - A_2023": {
+          "Happy": "Gembira"
+        },
         "CSD U6 - Music - A_2222": {
           "Happy": "Gembira"
+        },
+        "CSD U6 - Music - ChalD_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "E",
+          "F": "F",
+          "G": "G"
         },
         "CSD U6 - Music - ChalD_2222": {
           "A": "A",
@@ -406,118 +734,305 @@
           "F": "F",
           "G": "G"
         },
-        "CSD U6 - Music - Piano_2222": {
-          "C": "C",
-          "D": "D",
-          "E": "E",
-          "F": "F",
-          "G": "G",
+        "CSD U6 - Music - Piano_2023": {
           "A": "A",
           "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "E",
+          "F": "F",
+          "G": "G",
           "Note:": "Nota:"
         },
-        "CSD U6 - Music - SB1_2222": {
+        "CSD U6 - Music - Piano_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
           "G": "G",
+          "Note:": "Nota:"
+        },
+        "CSD U6 - Music - SB1_2023": {
           "A": "A",
-          "B": "B"
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "E",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - SB1_2222": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "E",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - SB2.5_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "E",
+          "F": "F",
+          "G": "G"
         },
         "CSD U6 - Music - SB2.5_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
+          "G": "G"
+        },
+        "CSD U6 - Music - SB3_2023": {
           "A": "A",
-          "B": "B"
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "E",
+          "F": "F",
+          "G": "G"
         },
         "CSD U6 - Music - SB3_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
+        },
+        "CSD U6 - Music - SB4_2023": {
+          "Success!": "Berjaya!"
         },
         "CSD U6 - Music - SB4_2222": {
           "Success!": "Berjaya!"
+        },
+        "CSD U6 - Physical Input - A_2023": {
+          "1": "1",
+          "2": "2"
         },
         "CSD U6 - Physical Input - A_2222": {
           "1": "1",
           "2": "2"
         },
+        "CSD U6 - Physical Input - A_mb2022": {
+          "1": "1",
+          "2": "2"
+        },
+        "CSD U6 - Physical Input - ChalA_2023": {
+          "Success!": "Berjaya!"
+        },
         "CSD U6 - Physical Input - ChalA_2222": {
+          "Success!": "Berjaya!"
+        },
+        "CSD U6 - Physical Input - ChalA_mb2022": {
+          "Success!": "Berjaya!"
+        },
+        "CSD U6 - Physical Input - ChalB_2023": {
           "Success!": "Berjaya!"
         },
         "CSD U6 - Physical Input - ChalB_2222": {
           "Success!": "Berjaya!"
         },
+        "CSD U6 - Physical Input - ChalB_mb2022": {
+          "Success!": "Berjaya!"
+        },
+        "CSD U6 - Physical Input - ChalC_2023": {
+          "Success!": "Berjaya!"
+        },
         "CSD U6 - Physical Input - ChalC_2222": {
           "Success!": "Berjaya!"
         },
+        "CSD U6 - Physical Input - ChalC_mb2022": {
+          "Success!": "Berjaya!"
+        },
+        "CSD U6 - Physical Input - PA_2023": {
+          "0": "0",
+          "Score": "Markah"
+        },
         "CSD U6 - Physical Input - PA_2222": {
-          "Score": "Markah",
-          "0": "0"
+          "0": "0",
+          "Score": "Markah"
+        },
+        "CSD U6 - Physical Input - PA_mb2022": {
+          "0": "0",
+          "Score": "Markah"
+        },
+        "CSD U6 - Physical Input - PC_2023": {
+          "Success!": "Berjaya!"
         },
         "CSD U6 - Physical Input - PC_2222": {
+          "Success!": "Berjaya!"
+        },
+        "CSD U6 - Physical Input - PD_2023": {
           "Success!": "Berjaya!"
         },
         "CSD U6 - Physical Input - PD_2222": {
           "Success!": "Berjaya!"
         },
+        "CSD U6 - Physical Input - PD_mb2022": {
+          "Success!": "Berjaya!"
+        },
+        "CSD U6 - Physical Input - SB1_2023": {
+          "Success!": "Berjaya!"
+        },
         "CSD U6 - Physical Input - SB1_2222": {
+          "Success!": "Berjaya!"
+        },
+        "CSD U6 - Physical Input - SB1_mb2022": {
+          "Success!": "Berjaya!"
+        },
+        "CSD U6 - Physical Output - ChalA_2023": {
           "Success!": "Berjaya!"
         },
         "CSD U6 - Physical Output - ChalA_2222": {
           "Success!": "Berjaya!"
         },
+        "CSD U6 - Physical Output - ChalA_mb2022": {
+          "Success!": "Berjaya!"
+        },
+        "CSD U6 - Physical Output - ChalB_2023": {
+          "Success!": "Berjaya!"
+        },
         "CSD U6 - Physical Output - ChalB_2222": {
+          "Success!": "Berjaya!"
+        },
+        "CSD U6 - Physical Output - ChalB_mb2022": {
+          "Success!": "Berjaya!"
+        },
+        "CSD U6 - Physical Output - ChalC_2023": {
           "Success!": "Berjaya!"
         },
         "CSD U6 - Physical Output - ChalC_2222": {
           "Success!": "Berjaya!"
         },
+        "CSD U6 - Physical Output - ChalC_mb2022": {
+          "Success!": "Berjaya!"
+        },
+        "CSD U6 - Physical Output - PB_2023": {
+          "Success!": "Berjaya!"
+        },
         "CSD U6 - Physical Output - PB_2222": {
+          "Success!": "Berjaya!"
+        },
+        "CSD U6 - Physical Output - PB_mb2022": {
+          "Success!": "Berjaya!"
+        },
+        "CSD U6 - Physical Output - PC_2023": {
           "Success!": "Berjaya!"
         },
         "CSD U6 - Physical Output - PC_2222": {
           "Success!": "Berjaya!"
         },
+        "CSD U6 - Physical Output - PC_mb2022": {
+          "Success!": "Berjaya!"
+        },
+        "CSD U6 - Physical Output - P_2023": {
+          "Success!": "Berjaya!"
+        },
         "CSD U6 - Physical Output - P_2222": {
+          "Success!": "Berjaya!"
+        },
+        "CSD U6 - Physical Output - P_mb2022": {
+          "Success!": "Berjaya!"
+        },
+        "CSD U6 - Physical Output - SB1_2023": {
           "Success!": "Berjaya!"
         },
         "CSD U6 - Physical Output - SB1_2222": {
           "Success!": "Berjaya!"
         },
+        "CSD U6 - Physical Output - SB1_mb2022": {
+          "Success!": "Berjaya!"
+        },
+        "CSD U6 - Physical Output - SB2.2_2023": {
+          "Success!": "Berjaya!"
+        },
         "CSD U6 - Physical Output - SB2.2_2222": {
+          "Success!": "Berjaya!"
+        },
+        "CSD U6 - Physical Output - SB2.2_mb2022": {
+          "Success!": "Berjaya!"
+        },
+        "CSD U6 - Physical Output - SB2_2023": {
           "Success!": "Berjaya!"
         },
         "CSD U6 - Physical Output - SB2_2222": {
           "Success!": "Berjaya!"
         },
+        "CSD U6 - Physical Output - SB2_mb2022": {
+          "Success!": "Berjaya!"
+        },
+        "CSD U6 - Screen Inputs - A_2023": {
+          "Name:": "Nama:"
+        },
         "CSD U6 - Screen Inputs - A_2222": {
           "Name:": "Nama:"
         },
-        "CSD U6 - Screen Inputs - ChalB_2222": {
-          "Red": "Merah",
-          "Green": "Hijau",
-          "Blue": "Biru"
+        "CSD U6 - Screen Inputs - A_mb2022": {
+          "Name:": "Nama:"
         },
-        "CSD U6 - Screen Inputs - P_2222": {
+        "CSD U6 - Screen Inputs - ChalB_2023": {
+          "Blue": "Biru",
+          "Green": "Hijau",
+          "Red": "Merah"
+        },
+        "CSD U6 - Screen Inputs - ChalB_2222": {
+          "Blue": "Biru",
+          "Green": "Hijau",
+          "Red": "Merah"
+        },
+        "CSD U6 - Screen Inputs - ChalB_mb2022": {
+          "Blue": "Biru",
+          "Green": "Hijau",
+          "Red": "Merah"
+        },
+        "CSD U6 - Screen Inputs - P_2023": {
+          "Blue": "Biru",
+          "Green": "Hijau",
           "Name:": "Nama:",
           "Red": "Merah",
-          "Green": "Hijau",
-          "Blue": "Biru",
           "Save": "Simpan"
+        },
+        "CSD U6 - Screen Inputs - P_2222": {
+          "Blue": "Biru",
+          "Green": "Hijau",
+          "Name:": "Nama:",
+          "Red": "Merah",
+          "Save": "Simpan"
+        },
+        "CSD U6 - Screen Inputs - P_mb2022": {
+          "Blue": "Biru",
+          "Green": "Hijau",
+          "Name:": "Nama:",
+          "Red": "Merah",
+          "Save": "Simpan"
+        },
+        "CSD U6 - Screen Inputs - PracD_2023": {
+          "0": "0"
         },
         "CSD U6 - Screen Inputs - PracD_2222": {
           "0": "0"
         },
+        "CSD U6 - Screen Inputs - PracD_mb2022": {
+          "0": "0"
+        },
         "CSD U6 - Screen Inputs - SB2.1_2022": {
+          "black": "hitam",
+          "white": "putih"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_2023": {
+          "black": "hitam",
+          "white": "putih"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_mb2022": {
           "black": "hitam",
           "white": "putih"
         },
@@ -525,42 +1040,152 @@
           "black": "hitam",
           "white": "putih"
         },
+        "CSD U6 - Screen Inputs - SB2.2_2023": {
+          "black": "hitam",
+          "white": "putih"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_mb2022": {
+          "black": "hitam",
+          "white": "putih"
+        },
+        "CSD U6 - Screen Outputs - ChalB_2023": {
+          "?": "?",
+          "Happy": "Gembira"
+        },
         "CSD U6 - Screen Outputs - ChalB_2222": {
-          "Happy": "Gembira",
-          "?": "?"
+          "?": "?",
+          "Happy": "Gembira"
+        },
+        "CSD U6 - Screen Outputs - ChalB_mb2022": {
+          "?": "?",
+          "Happy": "Gembira"
+        },
+        "CSD U6 - Screen Outputs - P_2023": {
+          "title": "tajuk"
         },
         "CSD U6 - Screen Outputs - P_2222": {
           "title": "tajuk"
         },
-        "CSD U6 - Screen Outputs - PracA_2222": {
-          "White": "Kulit Putih",
-          "Red": "Merah",
-          "Green": "Hijau",
-          "Blue": "Biru"
+        "CSD U6 - Screen Outputs - P_mb2022": {
+          "title": "tajuk"
         },
-        "CSD U6 - Screen Outputs - PracB_2222": {
-          "up": "atas",
+        "CSD U6 - Screen Outputs - PracA_2023": {
+          "Blue": "Biru",
+          "Green": "Hijau",
+          "Red": "Merah",
+          "White": "Kulit Putih"
+        },
+        "CSD U6 - Screen Outputs - PracA_2222": {
+          "Blue": "Biru",
+          "Green": "Hijau",
+          "Red": "Merah",
+          "White": "Kulit Putih"
+        },
+        "CSD U6 - Screen Outputs - PracA_mb2022": {
+          "Blue": "Biru",
+          "Green": "Hijau",
+          "Red": "Merah",
+          "White": "Kulit Putih"
+        },
+        "CSD U6 - Screen Outputs - PracB_2023": {
           "down": "bawah",
           "left": "kiri",
-          "right": "kanan"
+          "right": "kanan",
+          "up": "atas"
+        },
+        "CSD U6 - Screen Outputs - PracB_2222": {
+          "down": "bawah",
+          "left": "kiri",
+          "right": "kanan",
+          "up": "atas"
+        },
+        "CSD U6 - Screen Outputs - PracB_mb2022": {
+          "down": "bawah",
+          "left": "kiri",
+          "right": "kanan",
+          "up": "atas"
+        },
+        "CSD U6 - Screen Outputs - SB1.1_2023": {
+          "name": "nama"
         },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
           "name": "nama"
         },
+        "CSD U6 - Screen Outputs - SB1.1_mb2022": {
+          "name": "nama"
+        },
+        "CSD U6 - Sensors - A_2023": {
+          "0": "0"
+        },
         "CSD U6 - Sensors - A_2222": {
           "0": "0"
+        },
+        "CSD U6 - Sensors - A_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Sensors - PC_2023": {
+          "off": "off",
+          "on": "pada"
         },
         "CSD U6 - Sensors - PC_2222": {
           "off": "off",
           "on": "pada"
         },
-        "CSD U6 - Sensors - P_2222": {
-          "text": "teks",
+        "CSD U6 - Sensors - P_2023": {
           "high": "tinggi",
-          "low": "rendah"
+          "low": "rendah",
+          "text": "teks"
+        },
+        "CSD U6 - Sensors - P_2222": {
+          "high": "tinggi",
+          "low": "rendah",
+          "text": "teks"
+        },
+        "CSD U6 - Sensors - P_mb2022": {
+          "high": "tinggi",
+          "low": "rendah",
+          "text": "teks"
+        },
+        "CSD U6 - Sensors - SB1_2023": {
+          "value": "nilai"
+        },
+        "CSD U6 - Sensors - SB1_2222": {
+          "value": "nilai"
+        },
+        "CSD U6 - Sensors - SB2_2023": {
+          "Update": "Kemas kini",
+          "value": "nilai"
         },
         "CSD U6 - Sensors - SB2_2222": {
           "Update": "Kemas kini",
+          "value": "nilai"
+        },
+        "CSD U6 - Sensors - SB2_mb2022": {
+          "Update": "Kemas kini",
+          "value": "nilai"
+        },
+        "CSD U6 - Sensors - SB3_2023": {
+          "value": "nilai"
+        },
+        "CSD U6 - Sensors - SB3_2222": {
+          "value": "nilai"
+        },
+        "CSD U6 - Sensors - SB3_mb2022": {
+          "value": "nilai"
+        },
+        "CSD U6 - Sensors - SB4.1_2023": {
+          "value": "nilai"
+        },
+        "CSD U6 - Sensors - SB4.1_2222": {
+          "value": "nilai"
+        },
+        "CSD U6 - Sensors - SB4_2023": {
+          "value": "nilai"
+        },
+        "CSD U6 - Sensors - SB4_2222": {
+          "value": "nilai"
+        },
+        "CSD U6 - Sensors - SB4_mb2022": {
           "value": "nilai"
         },
         "CSD U6 Driver pt 2": {
@@ -635,6 +1260,30 @@
         "CSD U6 add LED button_2021": {
           "Success!": "Berjaya!"
         },
+        "CSD U6 analog change": {
+          "value": "nilai"
+        },
+        "CSD U6 analog change_2018": {
+          "value": "nilai"
+        },
+        "CSD U6 analog change_2019": {
+          "value": "nilai"
+        },
+        "CSD U6 analog change_2021": {
+          "value": "nilai"
+        },
+        "CSD U6 analog data": {
+          "value": "nilai"
+        },
+        "CSD U6 analog data_2018": {
+          "value": "nilai"
+        },
+        "CSD U6 analog data_2019": {
+          "value": "nilai"
+        },
+        "CSD U6 analog data_2021": {
+          "value": "nilai"
+        },
         "CSD U6 analog light": {
           "Update": "Kemas kini",
           "value": "nilai"
@@ -651,41 +1300,53 @@
           "Update": "Kemas kini",
           "value": "nilai"
         },
+        "CSD U6 analog sound": {
+          "value": "nilai"
+        },
+        "CSD U6 analog sound_2018": {
+          "value": "nilai"
+        },
+        "CSD U6 analog sound_2019": {
+          "value": "nilai"
+        },
+        "CSD U6 analog sound_2021": {
+          "value": "nilai"
+        },
         "CSD U6 array piano": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 arrays select predict": {
           "first": "pertama"
@@ -700,20 +1361,20 @@
           "first": "pertama"
         },
         "CSD U6 change": {
-          "short": "Pendek",
-          "long": "Panjang"
+          "long": "Panjang",
+          "short": "Pendek"
         },
         "CSD U6 change_2018": {
-          "short": "Pendek",
-          "long": "Panjang"
+          "long": "Panjang",
+          "short": "Pendek"
         },
         "CSD U6 change_2019": {
-          "short": "Pendek",
-          "long": "Panjang"
+          "long": "Panjang",
+          "short": "Pendek"
         },
         "CSD U6 change_2021": {
-          "short": "Pendek",
-          "long": "Panjang"
+          "long": "Panjang",
+          "short": "Pendek"
         },
         "CSD U6 colorLeds intensity": {
           "Medium": "Sederhana"
@@ -728,95 +1389,95 @@
           "Medium": "Sederhana"
         },
         "CSD U6 emotion machine example": {
-          "Happy": "Gembira",
-          "?": "?"
+          "?": "?",
+          "Happy": "Gembira"
         },
         "CSD U6 emotion machine example_2018": {
-          "Happy": "Gembira",
-          "?": "?"
+          "?": "?",
+          "Happy": "Gembira"
         },
         "CSD U6 emotion machine example_2019": {
-          "Happy": "Gembira",
-          "?": "?"
+          "?": "?",
+          "Happy": "Gembira"
         },
         "CSD U6 emotion machine example_2021": {
-          "Happy": "Gembira",
-          "?": "?"
+          "?": "?",
+          "Happy": "Gembira"
         },
         "CSD U6 frequency": {
-          "short": "Pendek",
+          "high": "tinggi",
           "long": "Panjang",
           "low": "rendah",
-          "high": "tinggi"
+          "short": "Pendek"
         },
         "CSD U6 frequency_2018": {
-          "short": "Pendek",
+          "high": "tinggi",
           "long": "Panjang",
           "low": "rendah",
-          "high": "tinggi"
+          "short": "Pendek"
         },
         "CSD U6 frequency_2019": {
-          "short": "Pendek",
+          "high": "tinggi",
           "long": "Panjang",
           "low": "rendah",
-          "high": "tinggi"
+          "short": "Pendek"
         },
         "CSD U6 frequency_2021": {
-          "short": "Pendek",
+          "high": "tinggi",
           "long": "Panjang",
           "low": "rendah",
-          "high": "tinggi"
+          "short": "Pendek"
         },
         "CSD U6 get toggle": {
-          "short": "Pendek",
+          "high": "tinggi",
           "long": "Panjang",
           "low": "rendah",
-          "high": "tinggi"
+          "short": "Pendek"
         },
         "CSD U6 get toggle_2018": {
-          "short": "Pendek",
+          "high": "tinggi",
           "long": "Panjang",
           "low": "rendah",
-          "high": "tinggi"
+          "short": "Pendek"
         },
         "CSD U6 get toggle_2019": {
-          "short": "Pendek",
+          "high": "tinggi",
           "long": "Panjang",
           "low": "rendah",
-          "high": "tinggi"
+          "short": "Pendek"
         },
         "CSD U6 get toggle_2021": {
-          "short": "Pendek",
+          "high": "tinggi",
           "long": "Panjang",
           "low": "rendah",
-          "high": "tinggi"
+          "short": "Pendek"
         },
         "CSD U6 getProperty Demo": {
+          "Blue": "Biru",
+          "Green": "Hijau",
           "Name:": "Nama:",
           "Red": "Merah",
-          "Green": "Hijau",
-          "Blue": "Biru",
           "Save": "Simpan"
         },
         "CSD U6 getProperty Demo_2018": {
+          "Blue": "Biru",
+          "Green": "Hijau",
           "Name:": "Nama:",
           "Red": "Merah",
-          "Green": "Hijau",
-          "Blue": "Biru",
           "Save": "Simpan"
         },
         "CSD U6 getProperty Demo_2019": {
+          "Blue": "Biru",
+          "Green": "Hijau",
           "Name:": "Nama:",
           "Red": "Merah",
-          "Green": "Hijau",
-          "Blue": "Biru",
           "Save": "Simpan"
         },
         "CSD U6 getProperty Demo_2021": {
+          "Blue": "Biru",
+          "Green": "Hijau",
           "Name:": "Nama:",
           "Red": "Merah",
-          "Green": "Hijau",
-          "Blue": "Biru",
           "Save": "Simpan"
         },
         "CSD U6 getProperty input": {
@@ -832,84 +1493,84 @@
           "Submit": "Hantar"
         },
         "CSD U6 getters debug": {
-          "slow": "perlahan",
           "fast": "cepat",
-          "short": "Pendek",
+          "high": "tinggi",
           "long": "Panjang",
           "low": "rendah",
-          "high": "tinggi"
+          "short": "Pendek",
+          "slow": "perlahan"
         },
         "CSD U6 getters debug_2018": {
           "fast": "cepat",
-          "slow": "perlahan",
-          "short": "Pendek",
+          "high": "tinggi",
           "long": "Panjang",
           "low": "rendah",
-          "high": "tinggi"
+          "short": "Pendek",
+          "slow": "perlahan"
         },
         "CSD U6 getters debug_2019": {
           "fast": "cepat",
-          "slow": "perlahan",
-          "short": "Pendek",
+          "high": "tinggi",
           "long": "Panjang",
           "low": "rendah",
-          "high": "tinggi"
+          "short": "Pendek",
+          "slow": "perlahan"
         },
         "CSD U6 getters debug_2021": {
           "fast": "cepat",
-          "slow": "perlahan",
-          "short": "Pendek",
+          "high": "tinggi",
           "long": "Panjang",
           "low": "rendah",
-          "high": "tinggi"
+          "short": "Pendek",
+          "slow": "perlahan"
         },
         "CSD U6 interval": {
-          "short": "Pendek",
-          "long": "Panjang"
+          "long": "Panjang",
+          "short": "Pendek"
         },
         "CSD U6 interval_2018": {
-          "short": "Pendek",
-          "long": "Panjang"
+          "long": "Panjang",
+          "short": "Pendek"
         },
         "CSD U6 interval_2019": {
-          "short": "Pendek",
-          "long": "Panjang"
+          "long": "Panjang",
+          "short": "Pendek"
         },
         "CSD U6 interval_2021": {
-          "short": "Pendek",
-          "long": "Panjang"
+          "long": "Panjang",
+          "short": "Pendek"
         },
         "CSD U6 light show": {
-          "on": "pada",
-          "off": "off"
+          "off": "off",
+          "on": "pada"
         },
         "CSD U6 light show_2018": {
-          "on": "pada",
-          "off": "off"
+          "off": "off",
+          "on": "pada"
         },
         "CSD U6 light show_2019": {
-          "on": "pada",
-          "off": "off"
+          "off": "off",
+          "on": "pada"
         },
         "CSD U6 light show_2021": {
-          "on": "pada",
-          "off": "off"
+          "off": "off",
+          "on": "pada"
         },
         "CSD U6 params create colors": {
-          "Red": "Merah",
-          "Blue": "Biru"
+          "Blue": "Biru",
+          "Red": "Merah"
         },
         "CSD U6 params create colors_2018": {
-          "Red": "Merah",
-          "Blue": "Biru"
+          "Blue": "Biru",
+          "Red": "Merah"
         },
         "CSD U6 params create colors_2019": {
-          "Red": "Merah",
-          "Blue": "Biru"
+          "Blue": "Biru",
+          "Red": "Merah"
         },
         "CSD U6 params create colors_2021": {
-          "Red": "Merah",
-          "Blue": "Biru"
+          "Blue": "Biru",
+          "Red": "Merah"
         },
         "CSD U6 params starchaser intro": {
           "0": "0"
@@ -936,24 +1597,24 @@
           "Success!": "Berjaya!"
         },
         "CSD U6 sensor experiment embedded": {
-          "text": "teks",
           "high": "tinggi",
-          "low": "rendah"
+          "low": "rendah",
+          "text": "teks"
         },
         "CSD U6 sensor experiment embedded_2018": {
-          "text": "teks",
           "high": "tinggi",
-          "low": "rendah"
+          "low": "rendah",
+          "text": "teks"
         },
         "CSD U6 sensor experiment embedded_2019": {
-          "text": "teks",
           "high": "tinggi",
-          "low": "rendah"
+          "low": "rendah",
+          "text": "teks"
         },
         "CSD U6 sensor experiment embedded_2021": {
-          "text": "teks",
           "high": "tinggi",
-          "low": "rendah"
+          "low": "rendah",
+          "text": "teks"
         },
         "CSD U6 setProperty predict app": {
           "title": "tajuk"
@@ -968,20 +1629,20 @@
           "title": "tajuk"
         },
         "CSD U6 slider intro": {
-          "short": "Pendek",
-          "long": "Panjang"
+          "long": "Panjang",
+          "short": "Pendek"
         },
         "CSD U6 slider intro_2018": {
-          "short": "Pendek",
-          "long": "Panjang"
+          "long": "Panjang",
+          "short": "Pendek"
         },
         "CSD U6 slider intro_2019": {
-          "short": "Pendek",
-          "long": "Panjang"
+          "long": "Panjang",
+          "short": "Pendek"
         },
         "CSD U6 slider intro_2021": {
-          "short": "Pendek",
-          "long": "Panjang"
+          "long": "Panjang",
+          "short": "Pendek"
         },
         "CSD U6 test LED": {
           "Success!": "Berjaya!"
@@ -996,74 +1657,74 @@
           "Success!": "Berjaya!"
         },
         "CSDU4 Connecting Screens": {
-          "Red": "Merah",
+          "Blue": "Biru",
           "Green": "Hijau",
-          "Blue": "Biru"
+          "Red": "Merah"
         },
         "CSDU4 Connecting Screens Getting Back": {
-          "Red": "Merah",
+          "Blue": "Biru",
           "Green": "Hijau",
-          "Blue": "Biru"
+          "Red": "Merah"
         },
         "CSDU4 Crowdsource App Demo": {
           "About": "Tentang",
           "About Us": "Tentang Kami",
-          "User": "Pengguna",
-          "Cancel": "Batal",
-          "Name:": "Nama:",
-          "Red": "Merah",
-          "Green": "Hijau",
           "Blue": "Biru",
-          "Yes": "Ya",
+          "Cancel": "Batal",
+          "Green": "Hijau",
+          "Name:": "Nama:",
           "No": "Tidak",
-          "Save": "Simpan"
+          "Red": "Merah",
+          "Save": "Simpan",
+          "User": "Pengguna",
+          "Yes": "Ya"
         },
         "CSDU4 Crowdsource App Demo_2018": {
           "About": "Tentang",
           "About Us": "Tentang Kami",
-          "User": "Pengguna",
-          "Cancel": "Batal",
-          "Name:": "Nama:",
-          "Red": "Merah",
-          "Green": "Hijau",
           "Blue": "Biru",
-          "Yes": "Ya",
+          "Cancel": "Batal",
+          "Green": "Hijau",
+          "Name:": "Nama:",
           "No": "Tidak",
-          "Save": "Simpan"
+          "Red": "Merah",
+          "Save": "Simpan",
+          "User": "Pengguna",
+          "Yes": "Ya"
         },
         "CSDU4 Crowdsource App Demo_2019": {
           "About": "Tentang",
           "About Us": "Tentang Kami",
-          "User": "Pengguna",
-          "Cancel": "Batal",
-          "Name:": "Nama:",
-          "Red": "Merah",
-          "Green": "Hijau",
           "Blue": "Biru",
-          "Yes": "Ya",
+          "Cancel": "Batal",
+          "Green": "Hijau",
+          "Name:": "Nama:",
           "No": "Tidak",
-          "Save": "Simpan"
+          "Red": "Merah",
+          "Save": "Simpan",
+          "User": "Pengguna",
+          "Yes": "Ya"
         },
         "CSDU4 Decision App Demo": {
           "About": "Tentang",
-          "Why?": "Kenapa?",
+          "About Us": "Tentang Kami",
           "I don't know": "Saya tidak tahu",
           "When?": "Bila?",
-          "About Us": "Tentang Kami"
+          "Why?": "Kenapa?"
         },
         "CSDU4 Decision App Demo_2018": {
           "About": "Tentang",
-          "Why?": "Kenapa?",
+          "About Us": "Tentang Kami",
           "I don't know": "Saya tidak tahu",
           "When?": "Bila?",
-          "About Us": "Tentang Kami"
+          "Why?": "Kenapa?"
         },
         "CSDU4 Decision App Demo_2019": {
           "About": "Tentang",
-          "Why?": "Kenapa?",
+          "About Us": "Tentang Kami",
           "I don't know": "Saya tidak tahu",
           "When?": "Bila?",
-          "About Us": "Tentang Kami"
+          "Why?": "Kenapa?"
         },
         "CSDU4 Functionality visible": {
           "Hide": "Sembunyi",
@@ -1072,44 +1733,44 @@
         "CSDU4 List App Demo": {
           "About": "Tentang",
           "About Us": "Tentang Kami",
-          "Done": "Selesai",
-          "Cancel": "Batal"
+          "Cancel": "Batal",
+          "Done": "Selesai"
         },
         "CSDU4 List App Demo_2018": {
           "About": "Tentang",
           "About Us": "Tentang Kami",
-          "Done": "Selesai",
-          "Cancel": "Batal"
+          "Cancel": "Batal",
+          "Done": "Selesai"
         },
         "CSDU4 List App Demo_2019": {
           "About": "Tentang",
           "About Us": "Tentang Kami",
-          "Done": "Selesai",
-          "Cancel": "Batal"
+          "Cancel": "Batal",
+          "Done": "Selesai"
         },
         "CSDU4 Quiz App Demo": {
           "About": "Tentang",
-          "Submit": "Hantar",
-          "Why?": "Kenapa?",
-          "When?": "Bila?",
           "About Us": "Tentang Kami",
-          "Correct!": "Betul!"
+          "Correct!": "Betul!",
+          "Submit": "Hantar",
+          "When?": "Bila?",
+          "Why?": "Kenapa?"
         },
         "CSDU4 Quiz App Demo_2018": {
           "About": "Tentang",
-          "Submit": "Hantar",
-          "Why?": "Kenapa?",
-          "When?": "Bila?",
           "About Us": "Tentang Kami",
-          "Correct!": "Betul!"
+          "Correct!": "Betul!",
+          "Submit": "Hantar",
+          "When?": "Bila?",
+          "Why?": "Kenapa?"
         },
         "CSDU4 Quiz App Demo_2019": {
           "About": "Tentang",
-          "Submit": "Hantar",
-          "Why?": "Kenapa?",
-          "When?": "Bila?",
           "About Us": "Tentang Kami",
-          "Correct!": "Betul!"
+          "Correct!": "Betul!",
+          "Submit": "Hantar",
+          "When?": "Bila?",
+          "Why?": "Kenapa?"
         },
         "CSDU6 - UI and Inputs - getNumber": {
           "+": "+",
@@ -1130,80 +1791,174 @@
         "CSDU6 Circuit Playground Test_2021": {
           "Success!": "Berjaya!"
         },
+        "CSDU6 Circuit Playground Test_2023": {
+          "Success!": "Berjaya!"
+        },
         "CSDU6 Circuit Playground Test_2222": {
           "Success!": "Berjaya!"
         },
+        "CSDU6 Circuit Playground Test_mb2022": {
+          "Success!": "Berjaya!"
+        },
         "CSDU6 circuit playground piano": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
+        },
+        "GAN Guess Widget_ai23": {
+          "Click on the buttons below to build a guess for what follows the rule": "Klik pada butang di bawah untuk membina tekaan untuk apa yang mengikuti peraturan",
+          "Computer's Guess FOLLOWS Rule": "Guess Komputer MENGIKUTI Peraturan",
+          "Computer's Guess does NOT follow the Rule": "Teka Komputer TIDAK mengikut Peraturan",
+          "Computer's Guess:": "Teka Komputer:",
+          "Current Guess": "Teka Semasa",
+          "Previous Guesses": "Tekaan Sebelumnya",
+          "Submit Guess": "Hantar Guess"
+        },
+        "LLM - Eliza_ai23": {
+          "Talk to Eliza by entering text in the prompt box. When you are finished, type quit in the prompt.": "Bercakap dengan Eliza dengan memasukkan teks dalam kotak prompt. Apabila anda selesai, taipkan berhenti dalam prompt."
+        },
+        "LLM - Written Voice Simulator_ai23": {
+          "BTS: \"Dynamite\"": "BTS: “Dinamit”",
+          "Back": "Belakang",
+          "Change Voice": "Tukar Suara",
+          "Choose a voice to model": "Pilih suara untuk model",
+          "Choose the Save file you want to load from the dropdown below": "Pilih Simpan fail yang anda mahu muatkan dari dropdown di bawah",
+          "Copy / Paste or type the words you want to create a model based on below": "Salin/Tampal atau taipkan perkataan yang ingin anda buat model berdasarkan di bawah",
+          "Create my own!": "Buat saya sendiri!",
+          "Delete Text": "Padam Teks",
+          "Dr Seuss: Green Eggs and Ham": "Dr Seuss: Telur Hijau dan Ham",
+          "Generate!": "Menjana!",
+          "Give the voice a name": "Beri nama suara",
+          "Give your save file a name": "Beri nama fail simpanan anda",
+          "Load Save": "Muatkan Simpan",
+          "Load this story": "Muatkan cerita ini",
+          "Maya Angelou: \"Caged Bird\"": "Maya Angelou: “Burung Sangkar”",
+          "Model This Voice!": "Model Suara Ini!",
+          "Modeling Voice": "Pemodelan Suara",
+          "Pharell: \"Happy\"": "Pharell: “Selamat”",
+          "Sandra Cisneros: \"Abuelito Who\"": "Sandra Cisneros: “Abuelito Siapa”",
+          "Save Text": "Simpan Teks",
+          "Save!": "Simpan!"
+        },
+        "Neural Networks - Perceptron - Beta_ai23": {
+          "Choose one of the content creators below to generate recommendations for you. Clicking their name will show more information about them.Once you've selected someone, click the \"Show Recommendations\" button to see what your video feed!See Recommendations! ➡️Your RecommendationsThese are the videos you've been recommended based on who you selected in the last screen.Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain categories.Example!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Person": "Pilih salah satu pencipta kandungan di bawah untuk menjana cadangan untuk anda. Mengklik nama mereka akan menunjukkan lebih banyak maklumat mengenai mereka. Sebaik sahaja anda telah memilih seseorang, klik butang “Tunjukkan Cadangan” untuk melihat suapan video anda! Lihat Cadangan! ➡️ Cadangan andaIni adalah video yang anda telah disyorkan berdasarkan siapa yang anda pilih dalam skrin terakhir.Hanya 3 video yang ditunjukkan pada satu masa - gunakan butang Tatal untuk melihat lebih banyak lagi. Gunakan butang di sebelah kiri untuk menapis mengikut kategori tertentu.Contoh! Contoh! Contoh! ⬆️ Tatal Ke Atas ⬆️⬇️ Tatal Ke Bawah ⬇️⬅️ Pilih Orang Baru",
+          "Example!": "Contoh!",
+          "Let's Get Started! ➡️": "Mari Bermula! ➡️",
+          "Once you've selected someone, click the \"Show Recommendations\" button to see what your video feed!": "Sebaik sahaja anda telah memilih seseorang, klik butang “Tunjukkan Cadangan” untuk melihat suapan video anda!",
+          "Only 3 videos are shown at a time - use the Scroll buttons to see more. ": "Hanya 3 video yang ditunjukkan pada satu masa - gunakan butang Tatal untuk melihat lebih banyak lagi. ",
+          "See Recommendations! ➡️": "Lihat Cadangan! ➡️",
+          "Select at least one person to use for recommendations to continue!": "Pilih sekurang-kurangnya satu orang untuk digunakan untuk cadangan untuk diteruskan!",
+          "Simply pick which content creators you want to follow and then see your video recommendations!": "Hanya pilih pencipta kandungan yang anda mahu ikuti dan kemudian lihat cadangan video anda!",
+          "These are the videos you've been recommended based on who you selected in the last screen.Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain categories.Example!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Person": "Ini adalah video yang anda telah disyorkan berdasarkan siapa yang anda pilih dalam skrin terakhir.Hanya 3 video yang ditunjukkan pada satu masa - gunakan butang Tatal untuk melihat lebih banyak lagi. Gunakan butang di sebelah kiri untuk menapis mengikut kategori tertentu.Contoh! Contoh! Contoh! ⬆️ Tatal Ke Atas ⬆️⬇️ Tatal Ke Bawah ⬇️⬅️ Pilih Orang Baru",
+          "Use the buttons on the left to filter by certain categories.": "Gunakan butang di sebelah kiri untuk menapis mengikut kategori tertentu.",
+          "We've gathered all your favorite personalities to make videos that match your interests AND to help curate your video feed.": "Kami telah mengumpulkan semua personaliti kegemaran anda untuk membuat video yang sepadan dengan minat anda DAN untuk membantu kurasi suapan video anda.",
+          "WeTube is a new media website for all your favorite content creators. We've gathered all your favorite personalities to make videos that match your interests AND to help curate your video feed.Simply pick which content creators you want to follow and then see your video recommendations!Let's Get Started! ➡️Select at least one person to use for recommendations to continue!Choose one of the content creators below to generate recommendations for you. Clicking their name will show more information about them.Once you've selected someone, click the \"Show Recommendations\" button to see what your video feed!See Recommendations! ➡️Your RecommendationsThese are the videos you've been recommended based on who you selected in the last screen.Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain categories.Example!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Person": "WeTube adalah laman web media baru untuk semua pencipta kandungan kegemaran anda. Kami telah mengumpulkan semua personaliti kegemaran anda untuk membuat video yang sepadan dengan minat anda DAN untuk membantu memilih suapan video anda.Cukup pilih pencipta kandungan yang ingin anda ikuti dan kemudian lihat cadangan video anda! Mari Bermula! ➡️ Pilih sekurang-kurangnya satu orang untuk digunakan untuk cadangan untuk meneruskan! Pilih salah satu pencipta kandungan di bawah untuk menjana cadangan untuk anda. Mengklik nama mereka akan menunjukkan lebih banyak maklumat mengenai mereka. Sebaik sahaja anda telah memilih seseorang, klik butang “Tunjukkan Cadangan” untuk melihat suapan video anda! Lihat Cadangan! ➡️ Cadangan andaIni adalah video yang anda telah disyorkan berdasarkan siapa yang anda pilih dalam skrin terakhir.Hanya 3 video yang ditunjukkan pada satu masa - gunakan butang Tatal untuk melihat lebih banyak lagi. Gunakan butang di sebelah kiri untuk menapis mengikut kategori tertentu.Contoh! Contoh! Contoh! ⬆️ Tatal Ke Atas ⬆️⬇️ Tatal Ke Bawah ⬇️⬅️ Pilih Orang Baru",
+          "Your Recommendations": "Cadangan Anda",
+          "⬅️ Select New Person": "⬅️ Pilih Orang Baru",
+          "⬆️ Scroll Up ⬆️": "⬆️ Tatal Ke Atas ⬆️",
+          "⬇️ Scroll Down ⬇️": "⬇️ Tatal Ke Bawah ⬇️"
+        },
+        "Neural Networks - Perceptron - Full_ai23": {
+          "0 means their opinion isn't included in your recommendations at all": "0 bermakna pendapat mereka tidak termasuk dalam cadangan anda sama sekali",
+          "10 means they have a huge influence on the recommendations you receive": "10 bermakna mereka mempunyai pengaruh besar terhadap cadangan yang anda terima",
+          "Choose one of the content creators below, then use the slider to adjust how much you want them to influence your recommendations!0 means their opinion isn't included in your recommendations at all10 means they have a huge influence on the recommendations you receivefeatureLabelSee Recommendations! ➡️featureValueYour RecommendationsThese are the videos you've been recommended based on how you adjusted the weights on the last screen. Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain videosExample!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Weights": "Pilih salah satu pencipta kandungan di bawah, kemudian gunakan gelangsar untuk menyesuaikan berapa banyak yang anda mahu mereka mempengaruhi cadangan anda! 0 bermakna pendapat mereka tidak termasuk dalam cadangan anda sama sekali10 bermakna mereka mempunyai pengaruh yang besar terhadap cadangan yang anda terimaFeatureLabelSee Cadangan! ➡️ FeatureValueYour Cadangan AndaIni adalah video yang anda telah disyorkan berdasarkan cara anda menyesuaikan berat pada skrin terakhir. Hanya 3 video yang ditunjukkan pada satu masa - gunakan butang Tatal untuk melihat lebih banyak lagi. Gunakan butang di sebelah kiri untuk menapis oleh VideoSexample tertentu! Contoh! Contoh! ⬆️ Tatal Ke Atas ⬆️⬇️ Tatal Ke Bawah ⬇️⬅️ Pilih Berat Baru",
+          "Example!": "Contoh!",
+          "Let's Get Started! ➡️": "Mari Bermula! ➡️",
+          "Only 3 videos are shown at a time - use the Scroll buttons to see more. ": "Hanya 3 video yang ditunjukkan pada satu masa - gunakan butang Tatal untuk melihat lebih banyak lagi. ",
+          "See Recommendations! ➡️": "Lihat Cadangan! ➡️",
+          "Select at least one person to use for recommendations to continue!": "Pilih sekurang-kurangnya satu orang untuk digunakan untuk cadangan untuk diteruskan!",
+          "Simply pick which content creators you want to follow to see your recommendations!": "Hanya pilih pencipta kandungan yang anda mahu ikuti untuk melihat cadangan anda!",
+          "These are the videos you've been recommended based on how you adjusted the weights on the last screen. Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain videosExample!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Weights": "Ini adalah video yang anda telah disyorkan berdasarkan cara anda menyesuaikan berat pada skrin terakhir. Hanya 3 video yang ditunjukkan pada satu masa - gunakan butang Tatal untuk melihat lebih banyak lagi. Gunakan butang di sebelah kiri untuk menapis oleh VideoSexample tertentu! Contoh! Contoh! ⬆️ Tatal Ke Atas ⬆️⬇️ Tatal Ke Bawah ⬇️⬅️ Pilih Berat Baru",
+          "Use the buttons on the left to filter by certain videos": "Gunakan butang di sebelah kiri untuk menapis mengikut video tertentu",
+          "We've gathered all your favorite personalities to make videos that match your interests.": "Kami telah mengumpulkan semua personaliti kegemaran anda untuk membuat video yang sepadan dengan minat anda.",
+          "WeTube Video Recommendations": "Cadangan Video WeTube",
+          "WeTube is a new media website for all your favorite content creators. We've gathered all your favorite personalities to make videos that match your interests.Simply pick which content creators you want to follow to see your recommendations!Let's Get Started! ➡️Select at least one person to use for recommendations to continue!Choose one of the content creators below, then use the slider to adjust how much you want them to influence your recommendations!0 means their opinion isn't included in your recommendations at all10 means they have a huge influence on the recommendations you receivefeatureLabelSee Recommendations! ➡️featureValueYour RecommendationsThese are the videos you've been recommended based on how you adjusted the weights on the last screen. Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain videosExample!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Weights": "WeTube adalah laman web media baru untuk semua pencipta kandungan kegemaran anda. Kami telah mengumpulkan semua personaliti kegemaran anda untuk membuat video yang sepadan dengan minat anda.Hanya pilih pencipta kandungan yang anda mahu ikuti untuk melihat cadangan anda! Mari Bermula! ➡️ Pilih sekurang-kurangnya satu orang untuk digunakan untuk cadangan untuk meneruskan! Pilih salah satu pencipta kandungan di bawah, kemudian gunakan gelangsar untuk menyesuaikan berapa banyak yang anda mahu mereka mempengaruhi cadangan anda! 0 bermakna pendapat mereka tidak termasuk dalam cadangan anda sama sekali10 bermakna mereka mempunyai pengaruh yang besar terhadap cadangan yang anda terimaFeatureLabelSee Cadangan! ➡️ FeatureValueYour Cadangan AndaIni adalah video yang anda telah disyorkan berdasarkan cara anda menyesuaikan berat pada skrin terakhir. Hanya 3 video yang ditunjukkan pada satu masa - gunakan butang Tatal untuk melihat lebih banyak lagi. Gunakan butang di sebelah kiri untuk menapis oleh VideoSexample tertentu! Contoh! Contoh! ⬆️ Tatal Ke Atas ⬆️⬇️ Tatal Ke Bawah ⬇️⬅️ Pilih Berat Baru",
+          "Your Recommendations": "Cadangan Anda",
+          "featureLabel": "FeatureLabel",
+          "featureValue": "FeatureValue",
+          "⬅️ Select New Weights": "⬅️ Pilih Berat Baru",
+          "⬆️ Scroll Up ⬆️": "⬆️ Tatal Ke Atas ⬆️",
+          "⬇️ Scroll Down ⬇️": "⬇️ Tatal Ke Bawah ⬇️"
+        },
+        "Noisy Image Widget_ai23": {
+          "0%": "0%",
+          "Be patient! Noisy image loading!": "Bersabarlah! Pemuatan imej bising!",
+          "Move the slider to add more or less generations of noise to the image": "Gerakkan gelangsar untuk menambah lebih kurang generasi bunyi pada imej",
+          "New Image": "Imej Baru",
+          "Noise Generations:": "Generasi Bunyi:",
+          "Noise Generations: ": "Generasi Bunyi: "
+        },
+        "U9L5 Cropping Widget_ai2023": {
+          "Crop": "Tanaman",
+          "Image Select": "Pilih Imej",
+          "Reset": "Tetapkan semula"
         },
         "allthethings design mode elements": {
           "text": "teks"
@@ -1223,13 +1978,20 @@
         "csd u5 recommender sample_2022": {
           "Start": "Mula"
         },
+        "csd u5 recommender sample_2023": {
+          "Start": "Mula"
+        },
         "csd-apps for good-2": {
-          "Next": "Seterusnya",
-          "Home": "Laman Utama"
+          "Home": "Laman Utama",
+          "Next": "Seterusnya"
         },
         "csd-apps for good-2_2022": {
-          "Next": "Seterusnya",
-          "Home": "Laman Utama"
+          "Home": "Laman Utama",
+          "Next": "Seterusnya"
+        },
+        "csd-apps for good-2_2023": {
+          "Home": "Laman Utama",
+          "Next": "Seterusnya"
         },
         "csd-apps for good-3": {
           "1": "1",
@@ -1243,24 +2005,26 @@
           "3": "3",
           "4": "4"
         },
+        "csd-apps for good-3_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4"
+        },
         "csd-explore ui-2": {
-          "Next": "Seterusnya",
-          "Home": "Laman Utama"
+          "Home": "Laman Utama",
+          "Next": "Seterusnya"
         },
         "csd-explore ui-2_2022": {
-          "Next": "Seterusnya",
-          "Home": "Laman Utama"
+          "Home": "Laman Utama",
+          "Next": "Seterusnya"
+        },
+        "csd-explore ui-2_2023": {
+          "Home": "Laman Utama",
+          "Next": "Seterusnya"
         },
         "csd-explore ui-3": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1271,18 +2035,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-3_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1293,7 +2057,37 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "csd-explore ui-3_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-4": {
           "Correct!": "Betul!",
@@ -1303,16 +2097,12 @@
           "Correct!": "Betul!",
           "Sorry!": "Maaf!"
         },
+        "csd-explore ui-4_2023": {
+          "Correct!": "Betul!",
+          "Sorry!": "Maaf!"
+        },
         "csd-explore ui-5": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1323,18 +2113,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-5_2022": {
           "1": "1",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1345,7 +2135,37 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "csd-explore ui-5_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-6": {
           "Next": "Seterusnya"
@@ -1353,14 +2173,22 @@
         "csd-explore ui-6_2022": {
           "Next": "Seterusnya"
         },
+        "csd-explore ui-6_2023": {
+          "Next": "Seterusnya"
+        },
         "ml-L2 supervised - green glass door-2021": {
-          "Green Glass Door": "Pintu Kaca Hijau",
           "Accepted": "Diterima",
+          "Green Glass Door": "Pintu Kaca Hijau",
           "Rejected": "Ditolak"
         },
         "ml-L2 supervised - green glass door_2022": {
-          "Green Glass Door": "Pintu Kaca Hijau",
           "Accepted": "Diterima",
+          "Green Glass Door": "Pintu Kaca Hijau",
+          "Rejected": "Ditolak"
+        },
+        "ml-L2 supervised - green glass door_2023": {
+          "Accepted": "Diterima",
+          "Green Glass Door": "Pintu Kaca Hijau",
           "Rejected": "Ditolak"
         },
         "ml-L2 unsupervised - 1-2021": {
@@ -1369,17 +2197,26 @@
         "ml-L2 unsupervised - 1_2022": {
           "Next": "Seterusnya"
         },
+        "ml-L2 unsupervised - 1_2023": {
+          "Next": "Seterusnya"
+        },
         "ml-customize-raspado-2021": {
-          "yes": "ya",
-          "no": "tidak",
+          "Predict": "Ramalkan",
           "Raspado Recommender": "Pengesyor Raspado",
-          "Predict": "Ramalkan"
+          "no": "tidak",
+          "yes": "ya"
         },
         "ml-customize-raspado_2022": {
-          "yes": "ya",
-          "no": "tidak",
+          "Predict": "Ramalkan",
           "Raspado Recommender": "Pengesyor Raspado",
-          "Predict": "Ramalkan"
+          "no": "tidak",
+          "yes": "ya"
+        },
+        "ml-customize-raspado_2023": {
+          "Predict": "Ramalkan",
+          "Raspado Recommender": "Pengesyor Raspado",
+          "no": "tidak",
+          "yes": "ya"
         },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "Teruskan",
@@ -1389,107 +2226,162 @@
           "Continue": "Teruskan",
           "Loading...": "Sila tunggu..."
         },
+        "ml-intro ai lab- fruit veggie widget_2023": {
+          "Continue": "Teruskan",
+          "Loading...": "Sila tunggu..."
+        },
         "ml-intro app lab-book recommender demo-2021": {
-          "Silly": "Bodoh",
-          "Predict": "Ramalkan"
+          "Predict": "Ramalkan",
+          "Silly": "Bodoh"
         },
         "ml-intro app lab-book recommender demo_2022": {
-          "Silly": "Bodoh",
-          "Predict": "Ramalkan"
+          "Predict": "Ramalkan",
+          "Silly": "Bodoh"
+        },
+        "ml-intro app lab-book recommender demo_2023": {
+          "Predict": "Ramalkan",
+          "Silly": "Bodoh"
         },
         "ml-model card-medical app v2 2021-2": {
-          "W": "W",
           "A": "A",
-          "yes": "ya",
+          "W": "W",
+          "head": "kepala",
           "no": "tidak",
-          "head": "kepala"
+          "yes": "ya"
         },
         "ml-model card-medical app v2 2021-2_2022": {
-          "W": "W",
           "A": "A",
-          "yes": "ya",
+          "W": "W",
+          "head": "kepala",
           "no": "tidak",
-          "head": "kepala"
+          "yes": "ya"
+        },
+        "ml-model card-medical app v2 2021-2_2023": {
+          "A": "A",
+          "W": "W",
+          "head": "kepala",
+          "no": "tidak",
+          "yes": "ya"
         },
         "ml-model cards-book recommender model card": {
-          "Silly": "Bodoh",
-          "Predict": "Ramalkan"
+          "Predict": "Ramalkan",
+          "Silly": "Bodoh"
         },
         "ml-model cards-book recommender model card_2022": {
-          "Silly": "Bodoh",
-          "Predict": "Ramalkan"
+          "Predict": "Ramalkan",
+          "Silly": "Bodoh"
+        },
+        "ml-model cards-book recommender model card_2023": {
+          "Predict": "Ramalkan",
+          "Silly": "Bodoh"
         },
         "ml-models in applab-choice if quotes": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
           "Predict": "Ramalkan"
         },
         "ml-models in applab-choice if quotes_2022": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
+          "Predict": "Ramalkan"
+        },
+        "ml-models in applab-choice if quotes_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
           "Predict": "Ramalkan"
         },
         "ml-models in applab-choice if wrong place": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
           "Predict": "Ramalkan"
         },
         "ml-models in applab-choice if wrong place_2022": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
+          "Predict": "Ramalkan"
+        },
+        "ml-models in applab-choice if wrong place_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
           "Predict": "Ramalkan"
         },
         "ml-models in applab-choice intended warnings": {
-          "3": "3",
-          "2": "2",
           "1": "1",
-          "Predict": "Ramalkan",
-          "Back": "Belakang"
+          "2": "2",
+          "3": "3",
+          "Back": "Belakang",
+          "Predict": "Ramalkan"
         },
         "ml-models in applab-choice intended warnings_2022": {
-          "3": "3",
-          "2": "2",
           "1": "1",
-          "Predict": "Ramalkan",
-          "Back": "Belakang"
+          "2": "2",
+          "3": "3",
+          "Back": "Belakang",
+          "Predict": "Ramalkan"
+        },
+        "ml-models in applab-choice intended warnings_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Back": "Belakang",
+          "Predict": "Ramalkan"
         },
         "ml-models in applab-choice predict typos": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
           "Predict": "Ramalkan"
         },
         "ml-models in applab-choice predict typos_2022": {
-          "3": "3",
-          "2": "2",
           "1": "1",
+          "2": "2",
+          "3": "3",
+          "Predict": "Ramalkan"
+        },
+        "ml-models in applab-choice predict typos_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
           "Predict": "Ramalkan"
         },
         "ml-models in applab-zoo assessment": {
-          "Yes": "Ya",
-          "No": "Tidak",
           "B": "B",
-          "Predict": "Ramalkan"
+          "No": "Tidak",
+          "Predict": "Ramalkan",
+          "Yes": "Ya"
         },
         "ml-models in applab-zoo assessment_2022": {
-          "Yes": "Ya",
-          "No": "Tidak",
           "B": "B",
-          "Predict": "Ramalkan"
+          "No": "Tidak",
+          "Predict": "Ramalkan",
+          "Yes": "Ya"
+        },
+        "ml-models in applab-zoo assessment_2023": {
+          "B": "B",
+          "No": "Tidak",
+          "Predict": "Ramalkan",
+          "Yes": "Ya"
         },
         "ml-models in applab-zoo model embed": {
-          "Yes": "Ya",
           "No": "Tidak",
-          "Predict": "Ramalkan"
+          "Predict": "Ramalkan",
+          "Yes": "Ya"
         },
         "ml-models in applab-zoo model embed_2022": {
-          "Yes": "Ya",
           "No": "Tidak",
-          "Predict": "Ramalkan"
+          "Predict": "Ramalkan",
+          "Yes": "Ya"
+        },
+        "ml-models in applab-zoo model embed_2023": {
+          "No": "Tidak",
+          "Predict": "Ramalkan",
+          "Yes": "Ya"
         },
         "ml-models-shoes decision tree-2021": {
           "Improved Shoe Recommender": "Pengesyor Kasut yang Diperbaiki",
@@ -1499,10 +2391,17 @@
           "Improved Shoe Recommender": "Pengesyor Kasut yang Diperbaiki",
           "Sports": "Sukan"
         },
+        "ml-models-shoes decision tree_2023": {
+          "Improved Shoe Recommender": "Pengesyor Kasut yang Diperbaiki",
+          "Sports": "Sukan"
+        },
         "ml-models-shoes points-2021": {
           "Ultimate Shoe Recommender": "Pengesyor Kasut Muktamad"
         },
         "ml-models-shoes points_2022": {
+          "Ultimate Shoe Recommender": "Pengesyor Kasut Muktamad"
+        },
+        "ml-models-shoes points_2023": {
           "Ultimate Shoe Recommender": "Pengesyor Kasut Muktamad"
         },
         "ml-models-shoes random-2021": {
@@ -1511,71 +2410,35 @@
         "ml-models-shoes random_2022": {
           "Shoe Recommender": "Pengesyor Kasut"
         },
+        "ml-models-shoes random_2023": {
+          "Shoe Recommender": "Pengesyor Kasut"
+        },
         "ml-use model card-example3A-2021": {
           "Driver Alert System": "Sistem Makluman Pemandu",
-          "rain": "hujan",
-          "snow": "salji",
+          "Predict": "Ramalkan",
           "cloudy": "mendung",
-          "night": "malam",
           "dusk": "Senja",
-          "Predict": "Ramalkan"
+          "night": "malam",
+          "rain": "hujan",
+          "snow": "salji"
         },
         "ml-use model card-example3A_2022": {
           "Driver Alert System": "Sistem Makluman Pemandu",
-          "rain": "hujan",
-          "snow": "salji",
+          "Predict": "Ramalkan",
           "cloudy": "mendung",
-          "night": "malam",
           "dusk": "Senja",
-          "Predict": "Ramalkan"
+          "night": "malam",
+          "rain": "hujan",
+          "snow": "salji"
         },
-        "CSD U6 - Sensors - SB1_2222": {
-          "value": "nilai"
-        },
-        "CSD U6 - Sensors - SB3_2222": {
-          "value": "nilai"
-        },
-        "CSD U6 - Sensors - SB4.1_2222": {
-          "value": "nilai"
-        },
-        "CSD U6 - Sensors - SB4_2222": {
-          "value": "nilai"
-        },
-        "CSD U6 analog change": {
-          "value": "nilai"
-        },
-        "CSD U6 analog change_2018": {
-          "value": "nilai"
-        },
-        "CSD U6 analog change_2019": {
-          "value": "nilai"
-        },
-        "CSD U6 analog change_2021": {
-          "value": "nilai"
-        },
-        "CSD U6 analog data": {
-          "value": "nilai"
-        },
-        "CSD U6 analog data_2018": {
-          "value": "nilai"
-        },
-        "CSD U6 analog data_2019": {
-          "value": "nilai"
-        },
-        "CSD U6 analog data_2021": {
-          "value": "nilai"
-        },
-        "CSD U6 analog sound": {
-          "value": "nilai"
-        },
-        "CSD U6 analog sound_2018": {
-          "value": "nilai"
-        },
-        "CSD U6 analog sound_2019": {
-          "value": "nilai"
-        },
-        "CSD U6 analog sound_2021": {
-          "value": "nilai"
+        "ml-use model card-example3A_2023": {
+          "Driver Alert System": "Sistem Makluman Pemandu",
+          "Predict": "Ramalkan",
+          "cloudy": "mendung",
+          "dusk": "Senja",
+          "night": "malam",
+          "rain": "hujan",
+          "snow": "salji"
         }
       }
     }

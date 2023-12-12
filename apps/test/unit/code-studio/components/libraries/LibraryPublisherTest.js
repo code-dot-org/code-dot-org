@@ -293,6 +293,65 @@ describe('LibraryPublisher', () => {
         console.warn.restore();
       });
 
+      it('sets error state if library contains PII', async () => {
+        publishSpy.callsArgWith(1, {
+          message: 'httpStatusCode: 400; status: error; error: Bad request',
+          cause: {pIIWords: ['123-456-7890']},
+        });
+        sinon.stub(console, 'warn');
+        wrapper.setState({
+          libraryDescription: description,
+          selectedFunctions: selectedFunctions,
+        });
+
+        await wrapper.instance().validateAndPublish();
+
+        expect(wrapper.state().publishState).to.equal(PublishState.PII_INPUT);
+        expect(wrapper.state().pIIWords).to.deep.equal(['123-456-7890']);
+
+        console.warn.restore();
+      });
+
+      it('sets generic error state if error has null cause', async () => {
+        publishSpy.callsArgWith(1, {
+          message: 'httpStatusCode: 400; status: error; error: Bad request',
+          cause: null,
+        });
+        sinon.stub(console, 'warn');
+        wrapper.setState({
+          libraryDescription: description,
+          selectedFunctions: selectedFunctions,
+        });
+
+        await wrapper.instance().validateAndPublish();
+
+        expect(wrapper.state().publishState).to.equal(
+          PublishState.ERROR_PUBLISH
+        );
+
+        console.warn.restore();
+      });
+
+      it('sets generic error state if error has another cause', async () => {
+        publishSpy.callsArgWith(1, {
+          message: 'httpStatusCode: 400; status: error; error: Bad request',
+          cause: {profaneWords: ['fart']},
+        });
+        sinon.stub(console, 'warn');
+        wrapper.setState({
+          libraryDescription: description,
+          selectedFunctions: selectedFunctions,
+        });
+
+        await wrapper.instance().validateAndPublish();
+
+        expect(wrapper.state().publishState).to.equal(
+          PublishState.ERROR_PUBLISH
+        );
+
+        console.warn.restore();
+      });
+
       it('calls onPublishSuccess when it succeeds', async () => {
         publishSpy.callsArg(2);
         wrapper.setState({

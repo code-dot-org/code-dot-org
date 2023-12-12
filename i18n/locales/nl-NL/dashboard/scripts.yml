@@ -192,7 +192,7 @@ nl:
           description_short: Leer hoe je droids moet programmeren en maak je eigen Star Wars-spel en een heelal heel, heel ver weg.
           student_description: Leer hoe je droids moet programmeren en maak je eigen Star Wars-spel en een heelal heel, heel ver weg.
         mc:
-          title: Minecraft programmeer uur
+          title: Minecraft avonturier
           description: Gebruik blokken code om Steve of Alex te helpen op hun avontuur door deze Minecraft-wereld.
           description_short: Ontdek een Minecraft-wereld met code
           student_description: Gebruik blokken code om Steve of Alex te helpen op hun avontuur door deze Minecraft-wereld.
@@ -344,6 +344,8 @@ nl:
           lesson_groups:
             content:
               display_name: Content
+            end_of_course_project:
+              display_name: Project aan het einde van de cursus
             extra_course_content:
               display_name: Extra cursusinhoud
         coursef-draft:
@@ -351,6 +353,8 @@ nl:
           lesson_groups:
             content:
               display_name: Content
+            end_of_course_project:
+              display_name: Project aan het einde van de cursus
         classic-hoc-impact-study:
           description_short: Probeer de grondbeginselen van de informatica met veel leuke figuren!
         hoc-impact-study:
@@ -379,6 +383,8 @@ nl:
               display_name: Leraarpraktijken
         csf2harvey:
           lesson_groups:
+            end_of_course_project:
+              display_name: Project aan het einde van de cursus
             content:
               display_name: Content
         csp5-support:
@@ -454,6 +460,8 @@ nl:
           description_short: Behandel snel concepten in Cursus C & D en ga dan verder met functies.
           description: Begin met coderen met algoritmen, loops, conditionals en gebeurtenissen en daarna ga je verder met functies. Ontwerp en maak in het tweede deel van deze cursus een sluitsteenproject dat je kunt delen met je vrienden en familie.
           lesson_groups:
+            end_of_course_project:
+              display_name: Project aan het einde van de cursus
             extra_course_content:
               display_name: Extra cursusinhoud
           student_description: Begin met coderen met algoritmen, loops, conditionals en gebeurtenissen en daarna ga je verder met functies. Ontwerp en maak in het tweede deel van deze cursus een sluitsteenproject dat je kunt delen met je vrienden en familie.
@@ -463,6 +471,9 @@ nl:
           description_audience: 'Leeftijden: 9-13'
           description_short: Leer alle concepten in Informatica Fundamentals en creëer je eigen kunst, verhaal of spel.
           description: Leer verschillende soorten loops, gebeurtenissen, functies en conditionals te gebruiken. Onderzoek verschillende probleemoplossende technieken en bespreek maatschappelijke gevolgen van computergebruik en internet. Ontwerp en maak in het tweede deel van deze cursus een sluitsteenproject dat je kunt delen met vrienden en familie.
+          lesson_groups:
+            end_of_course_project:
+              display_name: Project aan het einde van de cursus
           student_description: Leer verschillende soorten loops, gebeurtenissen, functies en conditionals te gebruiken. Onderzoek verschillende probleemoplossende technieken en bespreek maatschappelijke gevolgen van computergebruik en internet. Ontwerp en maak in het tweede deel van deze cursus een sluitsteenproject dat je kunt delen met vrienden en familie.
         cspnovice:
           lesson_groups:
@@ -544,6 +555,8 @@ nl:
           lesson_groups:
             content:
               display_name: Content
+            end_of_course_project:
+              display_name: Project aan het einde van de cursus
           student_description: Leer de basisprincipes van informatica en internetveiligheid. Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt delen.
         pre-express-2017:
           description_audience: 'Leeftijden: 4-8'
@@ -555,16 +568,26 @@ nl:
               display_name: Vragenlijst
         e-f-ramp:
           lesson_groups:
+            end_of_course_project:
+              display_name: Project aan het einde van de cursus
             extra_course_content:
               display_name: Extra cursusinhoud
         new-express:
           lesson_groups:
             content:
               display_name: Content
+            end_of_course_project:
+              display_name: Project aan het einde van de cursus
         new-e:
           lesson_groups:
+            end_of_course_project:
+              display_name: Project aan het einde van de cursus
             extra_course_content:
               display_name: Extra cursusinhoud
+        new-f:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Project aan het einde van de cursus
         csd5-old:
           lesson_groups:
             csd5_1:
@@ -584,8 +607,14 @@ nl:
               display_name: Vragenlijst
         course-e-2018:
           lesson_groups:
+            end_of_course_project:
+              display_name: Project aan het einde van de cursus
             extra_course_content:
               display_name: Extra cursusinhoud
+        course-f-2018:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Project aan het einde van de cursus
         csd6-old:
           lesson_groups:
             csd6_1:
@@ -648,6 +677,8 @@ nl:
           description: Begin met coderen met algoritmen, loops, conditionals en gebeurtenissen en daarna ga je verder met functies. Ontwerp en maak in het tweede deel van deze cursus een sluitsteenproject dat je kunt delen met je vrienden en familie.
           description_audience: 'Leeftijden: 8-12'
           lesson_groups:
+            end_of_course_project:
+              display_name: Project aan het einde van de cursus
             extra_course_content:
               display_name: Extra cursusinhoud
           student_description: Begin met coderen met algoritmen, loops, conditionals en gebeurtenissen en daarna ga je verder met functies. Ontwerp en maak in het tweede deel van deze cursus een sluitsteenproject dat je kunt delen met je vrienden en familie.
@@ -657,6 +688,9 @@ nl:
           description: Leer verschillende soorten loops, gebeurtenissen, functies en conditionals te gebruiken. Onderzoek verschillende probleemoplossende technieken en bespreek maatschappelijke gevolgen van computergebruik en internet. Ontwerp en maak in het tweede deel van deze cursus een sluitsteenproject dat je kunt delen met vrienden en familie.
           description_short: Leer alle concepten in Informatica Fundamentals en creëer je eigen kunst, verhaal of spel.
           description_audience: 'Leeftijden: 9-13'
+          lesson_groups:
+            end_of_course_project:
+              display_name: Project aan het einde van de cursus
           student_description: Leer verschillende soorten loops, gebeurtenissen, functies en conditionals te gebruiken. Onderzoek verschillende probleemoplossende technieken en bespreek maatschappelijke gevolgen van computergebruik en internet. Ontwerp en maak in het tweede deel van deze cursus een sluitsteenproject dat je kunt delen met vrienden en familie.
         csp1-2018:
           lesson_groups:
@@ -860,6 +894,8 @@ nl:
               display_name: Sprites
             csf_digcit:
               display_name: Digitaal Burgerschap
+            end_of_course_project:
+              display_name: Project aan het einde van de cursus
           student_description: Leer verschillende soorten loops, gebeurtenissen, functies en conditionals te gebruiken. Onderzoek verschillende probleemoplossende technieken en bespreek maatschappelijke gevolgen van computergebruik en internet. Ontwerp en maak in het tweede deel van deze cursus een sluitsteenproject dat je kunt delen met vrienden en familie.
         coursed-2019:
           title: Cursus D (2019)
@@ -876,6 +912,8 @@ nl:
               display_name: Binaire
             csf_digcit:
               display_name: Digitaal Burgerschap
+            end_of_course_project:
+              display_name: Project aan het einde van de cursus
           student_description: Studenten ontwikkelen hun begrip van loops, conditionals en gebeurtenissen. Naast codering leren studenten over digitaal burgerschap.
         coursee-2019:
           title: Cursus E (2019)
@@ -892,6 +930,8 @@ nl:
               display_name: Genestelde lussen
             csf_functions:
               display_name: Functies
+            end_of_course_project:
+              display_name: Project aan het einde van de cursus
           student_description: Begin met coderen met algoritmen, loops, conditionals en gebeurtenissen en daarna ga je verder met functies. Ontwerp en maak in het tweede deel van deze cursus een sluitsteenproject dat je kunt delen met je vrienden en familie.
         express-2019:
           title: Express-cursus (2019)
@@ -941,6 +981,8 @@ nl:
               display_name: Gebeurtenissen
             csf_data:
               display_name: Data
+            end_of_course_project:
+              display_name: Project aan het einde van de cursus
           student_description: Maak programma's met sequencing, loops en gebeurtenissen. Vertaal uw initialen in binair, onderzoek verschillende probleemoplossende technieken en leer hoe u kunt reageren op cyberpesten. Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt delen!
         csp-mid-survey:
           lesson_groups:
@@ -1313,6 +1355,8 @@ nl:
               display_name: Genestelde lussen
             csf_functions:
               display_name: Functies
+            end_of_course_project:
+              display_name: Project aan het einde van de cursus
         time4cs-control-unit-1:
           lesson_groups:
             csf_loops:
@@ -1444,6 +1488,8 @@ nl:
               display_name: Gebeurtenissen
             csf_data:
               display_name: Data
+            end_of_course_project:
+              display_name: Project aan het einde van de cursus
           student_description: Maak programma's met sequencing, loops en gebeurtenissen. Vertaal uw initialen in binair, onderzoek verschillende probleemoplossende technieken en leer hoe u kunt reageren op cyberpesten. Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt delen!
         coursed-2020:
           title: Cursus D (2020)
@@ -1460,6 +1506,8 @@ nl:
               display_name: Binaire
             csf_digcit:
               display_name: Digitaal Burgerschap
+            end_of_course_project:
+              display_name: Project aan het einde van de cursus
           student_description: Studenten ontwikkelen hun begrip van loops, conditionals en gebeurtenissen. Naast codering leren studenten over digitaal burgerschap.
         coursee-2020:
           title: Cursus E (2020)
@@ -1476,6 +1524,8 @@ nl:
               display_name: Genestelde lussen
             csf_functions:
               display_name: Functies
+            end_of_course_project:
+              display_name: Project aan het einde van de cursus
           student_description: Begin met coderen met algoritmen, loops, conditionals en gebeurtenissen en daarna ga je verder met functies. Ontwerp en maak in het tweede deel van deze cursus een sluitsteenproject dat je kunt delen met je vrienden en familie.
         coursef-2020:
           title: Cursus F (2020)
@@ -1495,6 +1545,8 @@ nl:
               display_name: For-lussen
             csf_sprites:
               display_name: Sprites
+            end_of_course_project:
+              display_name: Project aan het einde van de cursus
           student_description: Leer verschillende soorten loops, gebeurtenissen, functies en conditionals te gebruiken. Onderzoek verschillende probleemoplossende technieken en bespreek maatschappelijke gevolgen van computergebruik en internet. Ontwerp en maak in het tweede deel van deze cursus een sluitsteenproject dat je kunt delen met vrienden en familie.
         express-2020:
           title: Express-cursus (2020)
@@ -1514,6 +1566,8 @@ nl:
               display_name: For-lussen
             csf_sprites:
               display_name: Sprites
+            end_of_course_project:
+              display_name: Project aan het einde van de cursus
         pre-express-2020:
           description_audience: 'Leeftijden: 4-8'
           lesson_groups:
@@ -1693,6 +1747,8 @@ nl:
               display_name: Lussen
             csf_events:
               display_name: Gebeurtenissen
+            lessonGroup-5:
+              display_name: Project aan het einde van de cursus
           student_description: Leer de basisprincipes van informatica en internetveiligheid. Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt delen.
         courseb-2021:
           description_audience: 'Leeftijden: 5-8'
@@ -1703,6 +1759,8 @@ nl:
               display_name: Lussen
             csf_events:
               display_name: Gebeurtenissen
+            lessonGroup-6:
+              display_name: Project aan het einde van de cursus
           student_description: Leer de basisprincipes van informatica en internetveiligheid. Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt delen.
         coursec-2021:
           description_short: Leer de basisprincipes van informatica en creëer je eigen kunst, verhalen en games.
@@ -1718,6 +1776,8 @@ nl:
               display_name: Gebeurtenissen
             csf_data:
               display_name: Data
+            end_of_course_project:
+              display_name: Project aan het einde van de cursus
           student_description: Maak programma's met sequencing, loops en gebeurtenissen. Vertaal uw initialen in binair, onderzoek verschillende probleemoplossende technieken en leer hoe u kunt reageren op cyberpesten. Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt delen!
         coursed-2021:
           description_audience: 'Leeftijden: 7-11'
@@ -1732,6 +1792,8 @@ nl:
               display_name: Binaire
             csf_digcit:
               display_name: Digitaal Burgerschap
+            end_of_course_project:
+              display_name: Project aan het einde van de cursus
             lessonGroup-6:
               display_name: Digitaal Burgerschap
         coursee-2021:
@@ -1747,6 +1809,8 @@ nl:
               display_name: Voorwaardelijke instructies
             csf_functions:
               display_name: Functies
+            end_of_course_project:
+              display_name: Project aan het einde van de cursus
         coursef-2021:
           description_short: Leer alle concepten in Informatica Fundamentals en creëer je eigen kunst, verhaal of spel.
           description_audience: 'Leeftijden: 9-13'
@@ -1759,6 +1823,8 @@ nl:
               display_name: For-lussen
             csf_for_loops:
               display_name: For-lussen
+            end_of_course_project:
+              display_name: Project aan het einde van de cursus
             lessonGroup-8:
               display_name: Variabelen
             lessonGroup-9:
@@ -1782,6 +1848,8 @@ nl:
               display_name: For-lussen
             csf_sprites:
               display_name: Sprites
+            end_of_course_project:
+              display_name: Project aan het einde van de cursus
             lessonGroup-9:
               display_name: Gebeurtenissen
         pre-express-2021:
@@ -2052,6 +2120,8 @@ nl:
               display_name: Content
             lessonGroup-2:
               display_name: Content
+        dance-unplugged:
+          title: Unplugged dansfeest
         csc-things:
           name: csc-dingen
           title: 'CSC Brain Dump '
@@ -2143,6 +2213,8 @@ nl:
               display_name: Sprites
             lessonGroup-3:
               display_name: Variabelen
+            lessonGroup-4:
+              display_name: Project aan het einde van de cursus
         csd6-pilot-2022:
           lesson_groups:
             lessonGroup-2:
@@ -2173,6 +2245,8 @@ nl:
               display_name: Lussen
             csf_events:
               display_name: Gebeurtenissen
+            lessonGroup-5:
+              display_name: Project aan het einde van de cursus
           student_description: Leer de basisprincipes van informatica en internetveiligheid. Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt delen.
           description_short: Een inleiding tot informatica voor pre-readers.
           description_audience: 'Leeftijden: 4-7'
@@ -2192,6 +2266,8 @@ nl:
               display_name: Variabelen
             csf_for_loops:
               display_name: For-lussen
+            end_of_course_project:
+              display_name: Project aan het einde van de cursus
           description_audience: 'Leeftijden: 9-18'
         csp1-2022:
           lesson_groups:
@@ -2223,6 +2299,8 @@ nl:
               display_name: Lussen
             csf_events:
               display_name: Gebeurtenissen
+            lessonGroup-6:
+              display_name: Project aan het einde van de cursus
           student_description: Leer de basisprincipes van informatica en internetveiligheid. Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt delen.
           description_audience: 'Leeftijden: 5-8'
         coursec-2022:
@@ -2235,6 +2313,8 @@ nl:
               display_name: Gebeurtenissen
             csf_data:
               display_name: Data
+            end_of_course_project:
+              display_name: Project aan het einde van de cursus
           student_description: Maak programma's met sequencing, loops en gebeurtenissen. Vertaal uw initialen in binair, onderzoek verschillende probleemoplossende technieken en leer hoe u kunt reageren op cyberpesten. Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt delen!
           description_short: Leer de basisprincipes van informatica en creëer je eigen kunst, verhalen en games.
           description_audience: 'Leeftijden: 6-10'
@@ -2254,6 +2334,8 @@ nl:
               display_name: Lussen
             csf_conditionals:
               display_name: Voorwaardelijke instructies
+            end_of_course_project:
+              display_name: Project aan het einde van de cursus
           description_audience: 'Leeftijden: 7-11'
         coursee-2022:
           lesson_groups:
@@ -2267,6 +2349,8 @@ nl:
               display_name: Functies
             csf_nested_loops:
               display_name: Voorwaardelijke instructies
+            end_of_course_project:
+              display_name: Project aan het einde van de cursus
           description_audience: 'Leeftijden: 8-12'
         coursef-2022:
           lesson_groups:
@@ -2276,6 +2360,8 @@ nl:
               display_name: Digitaal Burgerschap
             lessonGroup-8:
               display_name: Variabelen
+            end_of_course_project:
+              display_name: Project aan het einde van de cursus
           description_short: Leer alle concepten in Informatica Fundamentals en creëer je eigen kunst, verhaal of spel.
           description_audience: 'Leeftijden: 9-13'
         csa1-2022:
@@ -2331,6 +2417,8 @@ nl:
               display_name: Sprites
             lessonGroup-8:
               display_name: Variabelen
+            end_of_course_project:
+              display_name: Project aan het einde van de cursus
           description_audience: 'Leeftijden: 9-13'
           description_short: Leer alle concepten in Informatica Fundamentals en creëer je eigen kunst, verhaal of spel.
         csa6-2022:
@@ -2486,6 +2574,10 @@ nl:
           title: 'Hallo World: Space'
         hello-world-soccer-2022:
           title: 'Hello World: Voetbal'
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Vragenlijst
         csd5-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2544,6 +2636,8 @@ nl:
           lessons:
             lesson-5:
               name: Evaluaties
+            lesson-6:
+              name: Les 1
         devices-2022:
           lesson_groups:
             lessonGroup-4:
@@ -2585,6 +2679,8 @@ nl:
               display_name: Variabelen
             csf_for_loops:
               display_name: For-lussen
+            end_of_course_project:
+              display_name: Project aan het einde van de cursus
           description_audience: 'Leeftijden: 9-18'
         coursea-2023:
           lesson_groups:
@@ -2594,6 +2690,8 @@ nl:
               display_name: Lussen
             csf_events:
               display_name: Gebeurtenissen
+            lessonGroup-5:
+              display_name: Project aan het einde van de cursus
           student_description: Leer de basisprincipes van informatica en internetveiligheid. Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt delen.
           description_short: Een inleiding tot informatica voor pre-readers.
           description_audience: 'Leeftijden: 4-7'
@@ -2605,6 +2703,8 @@ nl:
               display_name: Lussen
             csf_events:
               display_name: Gebeurtenissen
+            lessonGroup-6:
+              display_name: Project aan het einde van de cursus
           student_description: Leer de basisprincipes van informatica en internetveiligheid. Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt delen.
           description_audience: 'Leeftijden: 5-8'
         coursec-2023:
@@ -2617,6 +2717,8 @@ nl:
               display_name: Gebeurtenissen
             csf_data:
               display_name: Data
+            end_of_course_project:
+              display_name: Project aan het einde van de cursus
           student_description: Maak programma's met sequencing, loops en gebeurtenissen. Vertaal uw initialen in binair, onderzoek verschillende probleemoplossende technieken en leer hoe u kunt reageren op cyberpesten. Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt delen!
           description_short: Leer de basisprincipes van informatica en creëer je eigen kunst, verhalen en games.
           description_audience: 'Leeftijden: 6-10'
@@ -2630,6 +2732,8 @@ nl:
               display_name: Lussen
             csf_conditionals:
               display_name: Voorwaardelijke instructies
+            end_of_course_project:
+              display_name: Project aan het einde van de cursus
           description_audience: 'Leeftijden: 7-11'
         coursee-2023:
           lesson_groups:
@@ -2643,6 +2747,8 @@ nl:
               display_name: Functies
             csf_nested_loops:
               display_name: Voorwaardelijke instructies
+            end_of_course_project:
+              display_name: Project aan het einde van de cursus
           description_audience: 'Leeftijden: 8-12'
         web-development-2023:
           lesson_groups:
@@ -2670,10 +2776,18 @@ nl:
               display_name: Hoofdstuk 2
             lessonGroup-5:
               display_name: Vragenlijst
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Vragenlijst
         focus-on-creativity4a-2023:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Hoofdstuk 2: Hardware Input'
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Vragenlijst
         focus-on-hardware2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2682,6 +2796,10 @@ nl:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Hoofdstuk 2: Hardware Input'
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Vragenlijst
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
@@ -2696,14 +2814,26 @@ nl:
               display_name: Hoofdstuk 1
             lessonGroup-4:
               display_name: Hoofdstuk 2
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Vragenlijst
         focus-on-design-with-purpose4a-2023:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Hoofdstuk 2: Hardware Input'
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Vragenlijst
         focus-on-coding4a-2023:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Hoofdstuk 2: Hardware Input'
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Vragenlijst
         focus-on-impact-in-society3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2797,9 +2927,216 @@ nl:
               display_name: Sprites
             lessonGroup-4:
               display_name: Variabelen
+            lessonGroup-6:
+              display_name: Project aan het einde van de cursus
           description_audience: 'Leeftijden: 9-13'
           description_short: Leer alle concepten in Informatica Fundamentals en creëer je eigen kunst, verhaal of spel.
         csa-frq-practice:
           lesson_groups:
             lessonGroup-3:
               display_name: Lessen
+        csa-frq-practice-2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Lessen
+        csa-frq-practice-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Lessen
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Data
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Lessen
+        csa-frq-practice-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Lessen
+        csa-frq-practice-pre2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Lessen
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaal Burgerschap
+            lessonGroup-4:
+              display_name: Lussen
+          description_audience: 'Leeftijden: 4-7'
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Data
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaal Burgerschap
+            lessonGroup-4:
+              display_name: Lussen
+            lessonGroup-6:
+              display_name: Data
+          description_audience: 'Leeftijden: 4-7'
+          description_short: Een inleiding tot informatica voor pre-readers.
+        nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: Data
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaal Burgerschap
+            lessonGroup-4:
+              display_name: Lussen
+            lessonGroup-6:
+              display_name: Gebeurtenissen
+            lessonGroup-7:
+              display_name: Project aan het einde van de cursus
+            lessonGroup-8:
+              display_name: Data
+          description_audience: 'Leeftijden: 5-8'
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaal Burgerschap
+            lessonGroup-4:
+              display_name: Lussen
+            lessonGroup-5:
+              display_name: Gebeurtenissen
+            lessonGroup-6:
+              display_name: Data
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaal Burgerschap
+            lessonGroup-6:
+              display_name: Lussen
+            lessonGroup-7:
+              display_name: Data
+            lessonGroup-8:
+              display_name: Project aan het einde van de cursus
+          description_audience: 'Leeftijden: 7-11'
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Genestelde lussen
+            lessonGroup-4:
+              display_name: Functies
+            lessonGroup-6:
+              display_name: Project aan het einde van de cursus
+          description_audience: 'Leeftijden: 8-12'
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
+          description_audience: 'Leeftijden: 9-13'
+          description_short: Leer alle concepten in Informatica Fundamentals en creëer je eigen kunst, verhaal of spel.
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
+            lessonGroup-3:
+              display_name: Voorwaardelijke instructies
+            lessonGroup-5:
+              display_name: Variabelen
+            lessonGroup-7:
+              display_name: Project aan het einde van de cursus
+          description_audience: 'Leeftijden: 9-13'
+          description_short: Leer alle concepten in Informatica Fundamentals en creëer je eigen kunst, verhaal of spel.
+        vpl-csp-2023-m1:
+          title: Module 1
+        vpl-csp-2023-m2:
+          title: Module 2
+        vpl-csp-2023-m3:
+          title: Module 3
+        vpl-csp-2023-m4:
+          title: Module 4
+        vpl-csp-2023-m5:
+          title: Module 5
+        vpl-csp-2023-m6:
+          title: Module 6
+        vpl-csp-2023-m7:
+          title: Module 7
+        vpl-csp-2023-m8:
+          title: Module 8
+        vpl-csa-2023-m1:
+          title: Module 1
+        how-ai-works-2023:
+          title: Hoe AI werkt
+        vpl-csa-2023-m2:
+          title: Module 2
+        vpl-csa-2023-m3:
+          title: Module 3
+        vpl-csa-2023-m4:
+          title: Module 4
+        vpl-csa-2023-m5:
+          title: Module 5
+        vpl-csa-2023-m6:
+          title: Module 6
+        vpl-csa-2023-m7:
+          title: Module 7
+        vpl-csa-2023-m8:
+          title: Module 8
+        vpl-csd-2023-m1:
+          title: Module 1
+        vpl-csd-2023-m2:
+          title: Module 2
+        vpl-csd-2023-m3:
+          title: Module 3
+        vpl-csd-2023-m4:
+          title: Module 4
+        vpl-csd-2023-m5:
+          title: Module 5
+        vpl-csd-2023-m6:
+          title: Module 6
+        vpl-csd-2023-m7:
+          title: Module 7
+        vpl-csd-2023-m8:
+          title: Module 8
+        virtual-pl-csa-summer-2024-day1:
+          title: Dag 1
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Introductie
+          title: Dag 2
+        virtual-pl-csp-summer-day3:
+          title: Dag 3
+        virtual-pl-csp-summer-day4:
+          title: Dag 4
+        virtual-pl-csa-summer-day2:
+          title: Dag 2
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Introductie
+          title: Dag 3
+        virtual-pl-csa-summer-day4:
+          title: Dag 4
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Introductie
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Introductie
+          title: Dag 1
+        virtual-pl-csp-summer-day1:
+          title: Dag 1
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Vragenlijst
+        csd5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Hoofdstuk 1: Het voorstellen van informatie'
+        csd6a-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Hoofdstuk 2: Hardware Input'
+        csd7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Hoofdstuk 1
+            lessonGroup-3:
+              display_name: Hoofdstuk 2

@@ -1,5 +1,5 @@
 ---
-title: Spread the word
+title: کلمه خپره کړئ
 ---
 
 {{ signup_button }}

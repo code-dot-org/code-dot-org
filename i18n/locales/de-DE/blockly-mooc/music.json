@@ -59,5 +59,6 @@
   "startOver": "Neu starten",
   "upload": "Hochladen",
   "panelHeaderInstructions": "Anweisungen",
-  "panelHeaderWorkspace": "Arbeitsbereich: "
+  "panelHeaderWorkspace": "Arbeitsbereich: ",
+  "continue": "Weiter"
 }

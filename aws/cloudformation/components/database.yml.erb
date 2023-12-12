@@ -1,13 +1,120 @@
 <%
   PRODUCTION_DB_CLUSTER_ID = 'production-aurora-cluster'.freeze
+  # If an adhoc environment is using MySQL server installed on the app server EC2 Instance instead of an AWS RDS Cluster
+  # use default credentials and hostname.
+  MYSQL_DAEMON_DEFAULT_CREDENTIALS = '{"username":"root", "password":""}'.freeze
+  MYSQL_DAEMON_HOSTNAME = 'localhost'.freeze
+  DATABASE_CONFIGURATION = {
+    db_cluster_id: '!Ref AuroraCluster',
+    db_endpoint_writer: '!GetAtt AuroraCluster.Endpoint.Address',
+    db_endpoint_proxy_writer: '!GetAtt DBProxy.Endpoint',
+    db_endpoint_proxy_reader: '!GetAtt ReaderDBProxyEndpoint.Endpoint',
+    db_endpoint_proxy_reporting: '!GetAtt ReportingDBProxyEndpoint.Endpoint'
+  }.tap do |hash|
+    if rack_env?(:production)
+      hash[:db_cluster_id] = PRODUCTION_DB_CLUSTER_ID
+      # Use a placeholder string for production db cluster endpoint to avoid placing a slightly sensitive value
+      # in source code. We set the value of the Secret manually in production.
+      hash[:db_endpoint_writer] = 'PLACEHOLDER'
+      # We haven't yet provisioned the Writer and Reader Proxy Endpoints in production.
+      hash[:db_endpoint_proxy_writer] = 'PLACEHOLDER'
+      hash[:db_endpoint_proxy_reader] = 'PLACEHOLDER'
+    end
+    if !database
+      hash[:db_cluster_id] = MYSQL_DAEMON_HOSTNAME
+      hash[:db_endpoint_writer] = MYSQL_DAEMON_HOSTNAME
+      hash[:db_endpoint_proxy_writer] = MYSQL_DAEMON_HOSTNAME
+      hash[:db_endpoint_proxy_reader] = MYSQL_DAEMON_HOSTNAME
+      hash[:db_endpoint_proxy_reporting] = MYSQL_DAEMON_HOSTNAME
+    end
+  end
   # Integer range identifying each of the DB Instances to provision in the cluster.
   DB_INSTANCE_RANGE=(0..1)
 -%>
 
+  DatabaseSecretAdmin:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Name: !Sub "CfnStack/${AWS::StackName}/db_credential_admin"
+      Description: !Sub "Database credentials for ${AWS::StackName} admin user."
+<% if database -%>
+      GenerateSecretString:
+        SecretStringTemplate: !Sub '{"username": "${DatabaseUsername}"}'
+        GenerateStringKey: password
+        PasswordLength: 10
+        ExcludePunctuation: True
+<% else -%>
+      SecretString: '<%=MYSQL_DAEMON_DEFAULT_CREDENTIALS %>'
+<% end -%>
+  DatabaseSecretWriter:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Name: !Sub "CfnStack/${AWS::StackName}/db_credential_writer"
+      Description: !Sub "Database credentials for ${AWS::StackName} writer user."
+<% if database -%>
+      GenerateSecretString:
+        SecretStringTemplate: !Sub '{"username": "application-writer"}'
+        GenerateStringKey: password
+        PasswordLength: 10
+        ExcludePunctuation: True
+<% else -%>
+      SecretString: '<%=MYSQL_DAEMON_DEFAULT_CREDENTIALS %>'
+<% end -%>
+  DatabaseSecretReader:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Name: !Sub "CfnStack/${AWS::StackName}/db_credential_reader"
+      Description: !Sub "Database credentials for ${AWS::StackName} reader user."
+<% if database -%>
+      GenerateSecretString:
+        SecretStringTemplate: !Sub '{"username": "readonly"}'
+        GenerateStringKey: password
+        PasswordLength: 10
+        ExcludePunctuation: True
+<% else -%>
+      SecretString: '<%=MYSQL_DAEMON_DEFAULT_CREDENTIALS %>'
+<% end -%>
+
+# Publish identifiers for database Resources provisioned in this template to Secrets, so the values can dynamically
+# populate CDO.* application configuration settings.
+# TODO: Transition these configuration settings to AWS Systems Manager Parameter Store or some equivalent system.
+
+  DBClusterIDConfig:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Description: 'Publish Database Cluster ID to application configuration setting CDO.db_cluster_id'
+      Name: !Sub "CfnStack/${AWS::StackName}/db_cluster_id"
+      SecretString: <%=DATABASE_CONFIGURATION[:db_cluster_id]%>
+  DBWriterEndpointConfig:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Description: 'Publish Database Cluster Writer Endpoint to application configuration setting CDO.db_endpoint_writer'
+      Name: !Sub "CfnStack/${AWS::StackName}/db_endpoint_writer"
+      SecretString: <%=DATABASE_CONFIGURATION[:db_endpoint_writer]%>
+  DBProxyWriterEndpointConfig:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Description: 'Publish RDS Proxy Writer Endpoint to the application configuration setting CDO.db_endpoint_proxy_writer'
+      Name: !Sub "CfnStack/${AWS::StackName}/db_endpoint_proxy_writer"
+      SecretString: <%=DATABASE_CONFIGURATION[:db_endpoint_proxy_writer]%>
+  DBProxyReaderEndpointConfig:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Description: 'Publish RDS Proxy Reader Endpoint to the application configuration setting CDO.db_endpoint_proxy_reader'
+      Name: !Sub "CfnStack/${AWS::StackName}/db_endpoint_proxy_reader"
+      SecretString: <%=DATABASE_CONFIGURATION[:db_endpoint_proxy_reader]%>
+  DBProxyReportingEndpointConfig:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Description: 'Publish RDS Proxy Reporting Endpoint to the application configuration setting CDO.db_endpoint_proxy_reporting'
+      Name: !Sub "CfnStack/${AWS::StackName}/db_endpoint_proxy_reporting"
+      SecretString: <%=DATABASE_CONFIGURATION[:db_endpoint_proxy_reporting]%>
+
+<% if database-%>
 # We don't yet provision the production database cluster/instances via CloudFormation, but we're incrementally
 # working towards that. Start with provisioning the DB Instance and Cluster ParameterGroups via this template.
 <%
-  YAML.load(erb_file(aws_dir('cloudformation/db_parameters.yml.erb'))).each do |key, values|
+    YAML.load(erb_file(aws_dir('cloudformation/db_parameters.yml.erb'))).each do |key, values|
 -%>
   <%=key%>DBParameters:
     Type: AWS::RDS::DB<%=key.match('Cluster')%>ParameterGroup
@@ -15,20 +122,7 @@
       Description: !Sub "<%=key.titleize%> DB Parameters for ${AWS::StackName}."
       Family: aurora-mysql5.7
       Parameters: <%=values.compact.to_json%>
-<%end -%>
-
-<%  db_secrets = [nil, 'application-writer', 'readonly'].map do |user| -%>
-  DatabaseSecret<%=secret = user&.underscore&.camelcase%>:
-    Type: AWS::SecretsManager::Secret
-    Properties:
-      Description: !Sub "Secrets for accessing database<%user ? " user #{user}" : ''%> from ${AWS::StackName} CloudFormation stack"
-      GenerateSecretString:
-        SecretStringTemplate: !Sub '{"username": "<%=user || '${DatabaseUsername}'%>"}'
-        GenerateStringKey: password
-        PasswordLength: 10
-        ExcludePunctuation: True
-      Name: !Sub "CfnStack/${AWS::StackName}/database-<%=user || 'secret'%>"
-<%  secret; end -%>
+<%  end -%>
 
   DBProxyRole:
     Type: AWS::IAM::Role
@@ -38,9 +132,9 @@
         - PolicyName: RDSProxy
           PolicyDocument:
             Statement:
-<%  db_secrets.each do |secret| -%>
-              - {Effect: Allow, Action: 'secretsmanager:GetSecretValue', Resource: !Ref DatabaseSecret<%=secret%>}
-<%  end -%>
+              - {Effect: Allow, Action: 'secretsmanager:GetSecretValue', Resource: !Ref DatabaseSecretAdmin}
+              - {Effect: Allow, Action: 'secretsmanager:GetSecretValue', Resource: !Ref DatabaseSecretWriter}
+              - {Effect: Allow, Action: 'secretsmanager:GetSecretValue', Resource: !Ref DatabaseSecretReader}
       PermissionsBoundary: !ImportValue IAM-DevPermissions
   ReportingDBProxy:
     Type: AWS::RDS::DBProxy
@@ -49,7 +143,7 @@
       EngineFamily: MYSQL
       RoleArn: !GetAtt DBProxyRole.Arn
       Auth:
-        - {AuthScheme: SECRETS, SecretArn: !Ref DatabaseSecret<%='readonly'&.underscore&.camelcase%>, IAMAuth: DISABLED}
+        - {AuthScheme: SECRETS, SecretArn: !Ref DatabaseSecretReader, IAMAuth: DISABLED}
       VpcSubnetIds: <%=subnets.to_json%>
       VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
   ReportingDBDomainName:
@@ -72,11 +166,11 @@
       VpcSecurityGroupIds: [ !ImportValue VPC-DBSecurityGroup ]
   ReportingDBProxyTargetGroup:
     Type: AWS::RDS::DBProxyTargetGroup
-<% unless rack_env?(:production)%>
+<%  unless rack_env?(:production)%>
     # List of Database Instance Logical IDs that must be provisioned before this RDS Proxy TargetGroup (Aurora0,Aurora1)
     # These Database Instances are not yet provisioned by this Stack.
     DependsOn: [<%=DB_INSTANCE_RANGE.map {|i| "Aurora#{i}"}.join(',')%>]
-<%end -%>
+<%  end -%>
     Properties:
       DBProxyName: !Ref ReportingDBProxy
       DBClusterIdentifiers: [<%=rack_env?(:production) ? "'#{PRODUCTION_DB_CLUSTER_ID}'" : '!Ref AuroraCluster'%>]
@@ -91,34 +185,8 @@
         # exceed 5% of the total database connection capacity of a reader instance.
         MaxConnectionsPercent: 5
 
-# Publish identifiers for database Resources provisioned in this template to Secrets, so the values can dynamically
-# populate CDO.* application configuration settings.
-# TODO: Transition these configuration settings to AWS Systems Manager Parameter Store.
-# TODO: Add Stack name to the Secret name to support multiple deployments with the same environment type.
-  DBClusterIDConfig:
-    Type: AWS::SecretsManager::Secret
-    Properties:
-      Description: 'Publish Database Cluster ID to application configuration setting CDO.db_cluster_id'
-      Name: '<%=environment%>/cdo/db_cluster_id'
-      SecretString: <%=rack_env?(:production) ? "'#{PRODUCTION_DB_CLUSTER_ID}'" : '!Ref AuroraCluster'%>
-  DBWriterEndpointConfig:
-    Type: AWS::SecretsManager::Secret
-    Properties:
-      Description: 'Publish Database Cluster Writer Endpoint to application configuration setting CDO.db_writer_endpoint'
-      Name: '<%=environment%>/cdo/db_writer_endpoint'
-      # Publish a placeholder string for production. We set the value of the Secret manually in production.
-      SecretString: <%=rack_env?(:production) ? 'PLACEHOLDER' : '!GetAtt AuroraCluster.Endpoint.Address'%>
-  DBProxyReportingEndpointConfig:
-    Type: AWS::SecretsManager::Secret
-    Properties:
-      Description: 'Publish RDS Proxy Reporting Endpoint to the application configuration setting CDO.db_proxy_reporting_endpoint'
-      Name: '<%=environment%>/cdo/db_proxy_reporting_endpoint'
-      SecretString: !GetAtt ReportingDBProxyEndpoint.Endpoint
-
-
-
 # We don't provision these in production via CloudFormation ... yet!
-<% unless rack_env?(:production)%>
+<%  unless rack_env?(:production)%>
   AuroraCluster:
     Type: AWS::RDS::DBCluster
     Properties:
@@ -129,8 +197,8 @@
       # Each Database Instance in the cluster is restarted.
       # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-engineversion
       EngineVersion: 5.7.mysql_aurora.2.11.1
-      MasterUsername: !Sub "{{resolve:secretsmanager:${DatabaseSecret}:SecretString:username}}"
-      MasterUserPassword: !Sub "{{resolve:secretsmanager:${DatabaseSecret}:SecretString:password}}"
+      MasterUsername: !Sub "{{resolve:secretsmanager:${DatabaseSecretAdmin}:SecretString:username}}"
+      MasterUserPassword: !Sub "{{resolve:secretsmanager:${DatabaseSecretAdmin}:SecretString:password}}"
       EnableIAMDatabaseAuthentication: true
       VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
       DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
@@ -141,8 +209,7 @@
         - slowquery
       DeletionProtection: <%= rack_env?(:adhoc) ? false : true %>
       BackupRetentionPeriod: !Ref DBBackupRetention
-<%
-    DB_INSTANCE_RANGE.each do |i| %>
+<%    DB_INSTANCE_RANGE.each do |i| %>
   Aurora<%=i%>:
     Type: AWS::RDS::DBInstance
     Properties:
@@ -155,7 +222,7 @@
       DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
       Engine: aurora-mysql
       # We will usually do engine version updates manually, so don't specify an EngineVersion for the DBInstance.
-<%  end -%>
+<%    end -%>
 
   DBProxy:
     Type: AWS::RDS::DBProxy
@@ -164,9 +231,9 @@
       EngineFamily: MYSQL
       RoleArn: !GetAtt DBProxyRole.Arn
       Auth:
-<%  db_secrets.each do |secret| -%>
-        - {AuthScheme: SECRETS, SecretArn: !Ref DatabaseSecret<%=secret%>, IAMAuth: DISABLED}
-<%  end -%>
+        - {AuthScheme: SECRETS, SecretArn: !Ref DatabaseSecretAdmin, IAMAuth: DISABLED}
+        - {AuthScheme: SECRETS, SecretArn: !Ref DatabaseSecretWriter, IAMAuth: DISABLED}
+        - {AuthScheme: SECRETS, SecretArn: !Ref DatabaseSecretReader, IAMAuth: DISABLED}
       VpcSubnetIds: <%=subnets.to_json%>
       VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
   ReaderDBProxyEndpoint:
@@ -187,4 +254,5 @@
       TargetGroupName: default
       ConnectionPoolConfigurationInfo:
         ConnectionBorrowTimeout: 10
+<%  end -%>
 <%end -%>

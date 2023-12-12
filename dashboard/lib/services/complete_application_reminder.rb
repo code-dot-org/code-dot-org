@@ -22,7 +22,7 @@ class Services::CompleteApplicationReminder
     def applications_needing_initial_reminder
       incomplete_applications_with_email.select do |app|
         most_recent_update = most_recently_updated(app)
-        most_recent_update.before?(Date.today - 6.days) && most_recent_update.after?(Date.today - 14.days) &&
+        most_recent_update.before?(Time.zone.today - 6.days) && most_recent_update.after?(Time.zone.today - 14.days) &&
           app.emails.where(email_type: 'complete_application_initial_reminder').count == 0
       end
     end
@@ -33,7 +33,7 @@ class Services::CompleteApplicationReminder
     # @return [Enumerable<Pd::Application::ApplicationBase>]
     def applications_needing_final_reminder
       incomplete_applications_with_email.select do |app|
-        most_recently_updated(app).before?(Date.today - 13.days) &&
+        most_recently_updated(app).before?(Time.zone.today - 13.days) &&
           app.emails.where(email_type: 'complete_application_final_reminder').count == 0
       end
     end
@@ -45,9 +45,9 @@ class Services::CompleteApplicationReminder
     def incomplete_applications_with_email
       Pd::Application::TeacherApplication.
         where(application_year: Pd::Application::ActiveApplicationModels::APPLICATION_CURRENT_YEAR, status: 'incomplete').
-          select do |app|
-            app.email.present?
-          end
+        select do |app|
+          app.email.present?
+        end
     end
 
     def most_recently_updated(application)

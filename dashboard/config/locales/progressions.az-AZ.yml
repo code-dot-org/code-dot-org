@@ -4,7 +4,7 @@ az:
     progressions:
       '"If/Else" with the Bee': 'Arı ilə "Əgər/Yoxsa"
 
-'
+        '
       8-Bit Binary Number Widget: 8-Bit İkili Nömrə Vidceti
       AI Lab and Isaac's Data: AI Laboratoriyası və İshaqın Məlumatları
       AI Lab and Kim's Data: AI Laboratoriyası və Kimin Məlumatları
@@ -28,20 +28,21 @@ az:
       Adding New Screens: Yeni ekranların əlavə edilməsi
       Adding Pages: 'səhifələri əlavə etmək
 
-'
+        '
       Adding Screens: ekranlar əlavə etmək
       Alien Defender: Yadplanteli mudafiyesi
       Alternative Datasets: Alternativ Datasets
       Analog Sensors: Analoq sensorlar
       Animate Your Scene: 'Səhnənizi Canlandırın
 
-'
+        '
       App Lab Intro - Video: 'Tətbiq Laboratoriyasına Giriş - Video
 
-'
-      'App Project: Bugs and Features': 'Tətbiq Layihəsi: Səhvlər və Xüsusiyyətlər'
-      'App Project: Linking Screens': 'Tətbiq Layihəsi: Ekranları Bağlamaq'
+        '
+      'App Project: Bugs and Features': 'Tətbiq Layihəsi: Səhvlər və Xüsusiyyətlər.'
+      'App Project: Linking Screens': 'Tətbiq Layihəsi: Ekranları Bağlamaq.'
       'App Project: Screen Design': 'Proqram Layihəsi: Ekran Dizaynı'
+      'App Project: Screen Import': 'Tətbiq Layihəsi: Ekran İdxalı.'
       'App: Choose a Kid''s Movie': Tətbiq:Uşağın kinosunu seçin
       'App: Friend Finder': 'Tətbiq: Dost tapan'
       'App: Guess the Number': 'Tətbiq: rəqəmi təxmin et '
@@ -51,17 +52,17 @@ az:
       'App: My Famous Birthday': Mənim məşhur ad günüm
       'App: National Parks': 'milli parklar
 
-'
+        '
       'App: Outfit Picker': 'Tətbiq: paltar seçən'
       'App: Pet Chooser': 'Tətbiq: Ev Heyvanı seçən'
       'App: Stamp Notebook': 'Proqram: Stamp Notbuk'
       'App: Story Creator': hekayə yaradıcısı
       'App: The Fastest Finger': 'ən sürətli barmaq
 
-'
+        '
       'App: Where Should I Live?': 'mən harda yaşamalıyam
 
-'
+        '
       Arrays: Massivlər
       Artist Intro with JR Hildebrand: JR Hildebrand ilə Rəssam Girişi
       Artist Intro with JR Hildebrande: JR Hildebrand ilə Rəssam Girişi
@@ -78,7 +79,7 @@ az:
       Binary Bracelets - Unplugged Activity: İkili bilərziklər - Unplugged Fəaliyyət
       Binary Number Widget: İkili Nömrə Vidceti
       Binary Numbers: İkilik rəqəmlər
-      Binary and Data: İkili və məlumat
+      Binary and Data: İkili və məlumat.
       Board Events: İdarə Heyətinin Tədbirləri
       Board Input and Output: Lövhənin Girişi və Çıxışı
       Book Recommender App: Kitab Tövsiyə Proqramı
@@ -108,20 +109,27 @@ az:
       'Challenge: Draw an Image': 'Çağırış: Bir şəkil çəkin'
       'Challenge: Extend Your Scene': 'Çağırış: Səhnənizi genişləndirin'
       'Challenge: Lists': siyahılar
+      'Challenge: Making Sense of Sensors': yaratmaq
       'Challenge: RGB Colors': 'Çağırış: RGB Rəngləri'
       'Challenge: Updating Variables': 'Çağırış: Dəyişənləri Yeniləmə'
       Challenges: Əngəllər
       Change: Dəyişmək
-      Changing Screens: Ekranların dəyişdirilməsi
+      Changing Screens: Ekranların dəyişdirilməsi/
+      Changing Sensor Scale: miqyas
       Check Your Work: İşinizi Yoxlayın
+      Check for Understanding: Anlayışı yoxlayın
       Check-In Survey: 'giriş sorğusu
 
-'
+        '
       Checking for a Winner: Qazananı yoxlamaq
+      Choice: Seçim
       'Choice Levels: Customize Your App': 'Seçim səviyyələri: Tətbiqinizi fərdiləşdirin'
       Choose Your Own Adventure: Öz macəranızı seçin
       Choosing Good IDs: Yaxşı şəxsiyyət vəsiqələrinin seçilməsi
+      'Circuit Playground: Buzzer': dövrə
       'Circuit Playground: Introduction': 'Circuit Playground: Giriş'
+      'Circuit Playground: LEDs': dövrə
+      Circuits and Logic: Sxemlər və məntiq
       Club Datasets: |2-
 
         Klub məlumat dəstləri
@@ -130,6 +138,7 @@ az:
       Code Your Page: Səhifənizi kodlayın
       Collector Game: Kolleksiyaçı oyunu
       Collision Detection: Toqquşmanın Aşkarlanması
+      Collision Detection Review: Toqquşmanın Aşkarlanması İcmalı
       Collisions: Toqquşmalar
       Collisions in Games: oyunlarda toqquşmalar
       Color LEDs: Rəngli LEDlər
@@ -164,26 +173,28 @@ az:
       Data Visualization: Məlumatların vizuallaşdırılması
       De-bugging with the Step Button: Addım Düyməsi ilə Debugging
       Debugging: Sazlama
+      Debugging with Watchers: İzləyicilərlə sazlama
       Debugging with the Step Button: Addım düyməsi ilə sazlama
       'Demo App: Interactive Card': 'Layihə: İnteraktiv kart'
       Demo Apps: Demo applikasiyalar
       Design Mode: Dizayn Rejimi
-      Design Mode Elements: Dizayn rejimi elementləri
+      Design Mode Elements: Dizayn rejimi elementləri,
       Design Your Game: Oyununu dizayn et
       Design Your Prototype: 'Prototipinizi dizayn edin
 
-'
+        '
       Design a Screen for your App: Proqramınız üçün ekran dizayn edin
       Design an AI App - AI Lab: AI Proqramın Dizaynı - AI Laboratoriyası
       Designing Screens with Code: Kod ilə ekran dizaynı
       Designing for Accessibility: Əlçatanlıq üçün dizayn
       Digital Sharing - Unplugged Activity: Rəqəmsal Paylaşım - Çıxarılan Fəaliyyət
+      Dogger Example: Dogger nümunəsi
       Draw Your Background: 'arxa fonunuzu çəkin
 
-'
+        '
       Draw a Background: 'arxa fon çək
 
-'
+        '
       Drawing: Şəkil
       Drawing Shapes: Rəsm Şekilləri
       Driver Alert System: sürücü xəbərdarlığı sistemi
@@ -209,14 +220,15 @@ az:
       'Exploration: Clicker Game': 'Kəşfiyyat: Klik Oyunu'
       'Exploration: For Loops': 'Kəşfiyyat: Döngələr üçün
 
-'
+        '
       'Exploration: Rikki''s Poster': 'Kəşfiyyat: Rikkinin Posteri
 
-'
+        '
       'Exploration: Sample Apps': 'Tədqiqat: Nümunə Tətbiqlər'
       'Exploration: Sample Programs': 'Tədqiqat: Nümunə Proqramlar'
       'Exploration: Sample Project': 'Tədqiqat: Nümunə Layihəsi'
       Explore HTML: HTML kəşf edin
+      Explore!: Kəşf edin!
       Exploring CS in Entertainment: Əyləncədə CS-ni araşdırın
       Exploring more CSS: Daha çox CSS-i araşdırın
       Extra: Əlavə
@@ -242,7 +254,9 @@ az:
       'Free Play: Make a Scene': 'Pulsuz Oyun: Səhnə yaradın'
       'Free Play: Make an Interactive Scene': 'Pulsuz Oyun: İnteraktiv bir səhnə yaradın'
       Functions: Funksiyalar
+      Functions Review: Funksiyalara baxış
       Functions with Parameters: Parametrli funksiyalar
+      Geometric Sun: Həndəsi Günəş
       Get In Formation: Düzül
       Getting Properties: Xüsusiyyətləri əldə etmək
       Graph Paper Programming - Unplugged Activity: Qrafik Kağız Proqramlaşdırma -
@@ -263,18 +277,21 @@ az:
       Images in HTML: HTML-dəki şəkillər
       Import Your Model: Modelinizi idxal edin
       Import a Model: Modeli idxal edin
-      Importing Screens: Ekranlar idxal olunur
+      Importing Screens: Ekranlar idxal olunur,
       Importing Your Model: Modelinizi İdxal Edin
       Improve Your Game: Oyununuzu təkmilləşdirin
       Innovation Research: Yenilik Araşdırması
       Input Examples: Giriş Nümunələri
       Input with If-Else: If-Else ilə daxil edin
+      Inspiration!: ilham
       InspirationalArtwork: İlham verən sənət əsəri
+      Intro Video: Giriş Videosu
       Intro to Design Mode: Dizayn rejiminə giriş
       Intro to For Loops: For Loops-a giriş
       Intro to Sprites: Spraytlara giriş
       Intro to Variables: Dəyişənlərə giriş
       Introducing Sprite Lab: Sprite Laboratoriyasını təqdim edirik
+      Introduction: Giriş
       Introduction to Arrays: Massivlərə Giriş
       Introduction to Game Lab: Oyun Laboratoriyasına giriş
       Introduction to Variables: Dəyişənlərə giriş
@@ -317,27 +334,40 @@ az:
       'Mini-Project: Snowflake #2': 'Mini-Layihə: Qar dənəciyi #2'
       'Mini-Project: Sticker Art': 'Mini-Layihə: Etiket İncəsənət'
       'Mini-Project: Virtual Pet': 'Mini-Layihə: Virtual Ev Heyvanı'
+      'Mini-project: Chase Game': 'Mini-Layihə: Klik Oyunu'
+      'Mini-project: Interactive Poster': 'Mini layihə: İnteraktiv plakat'
+      'Mini-project: Jorge the Dog': 'Mini layihə: İt Xorxe'
       'Mini-project: Sticker Art': 'Mini-Layihə: Stiker İncəsənəti'
       'Mini-project: Sticker Design': 'Mini-Layihə: Stiker Diyaznı'
+      Modify simulation variables: Simulyasiya dəyişənlərini
+      Modifying Arrays: Massivlərin dəyişdirilməsi
       Modifying and Creating Arrays: Dizilərin dəyişdirilməsi və yaradılması
       More Buttons: Daha çox Düymələr
       More Input: Daha ətraflı
       More Parameters: Daha Çox Parametrlər
       Motorcycle: Motosiklet
-      Multi-Screen Apps: Çox-ekranlı Tətbiqlər
+      Multi-Screen Apps: Çox-ekranlı Tətbiqlər,
       Multiframe Animations: Çox çərçivəli animasiyalar
+      Musical Arrays: Musiqi massivləri
       My Online Neighborhood: Mənim onlayn qonşuluğum
+      My Time Capsule: Mənim Zaman Kapsulam
       Naming Variables: Dəyişənlərin adlanması
+      Nested Loops with the Bee: Arı ilə yuvalı döngələr
+      New Challenge Introduction: Yeni Çağırış Giriş
       New Shapes: Yeni Formalar
+      Noisy Image Widget: Səs-küylü Şəkil Widgeti
       Orientation: oriyentasiya
       Overview: Yekun
       'Overview: Design Mode': 'Baxış: Dizayn rejimi'
+      'Overview: If Statements': 'Ümumi baxış: Bəyanatlar If'
       'Overview: Images': 'Baxış: Şəkillər'
       Pair Programming: Estafet proqramlaşdırması
+      Pet Recommender: Heyvan Tövsiyəçisi
       Picturing Data: Şəkil Məlumatları
       Plan Your Project: Layihənizi Plaşdırın
       Plan Your Scene: Səhnənizi Planlayın
       Planning: Planlama
+      Player Controls: Oyunçu nəzarəti
       Playing Notes: Notları Çalmaq
       Plotting Shapes in Game Lab: Oyun Laboratoriyasında Şekiller Çizim
       Polling Events: Səsvermə hadisəsi
@@ -376,12 +406,14 @@ az:
       Repeat Until Statements: Bəyanatlara qədər təkrarlayın
       Representing Images: Şəkilləri təmsil edir
       Responding to Board Events: Lovhə hadisələrinə cavab vermək
-      Responding to User Input: İstifadəçi input-una cavab
+      Responding to User Input: İstifadəçi input-una cavab.
       Review: Gözdən keçirmə
       Revise Artist Project: Rəssamın layihəsini yenidən gözdən keçir
+      Revise Sprite Lab Project: Sprite Lab Layihəsini yenidən nəzərdən keçirin
+      Revisiting the Counter Pattern: sayğac
       Run a simulation: Simulyasiya edin
       Same Game: Eyni Oyun
-      Sample App: Nümunə Tətbiqlər
+      Sample App: Nümunə Tətbiqlər?
       Sample Game: Örnək oyun
       Sample Platform Jumper Game: Nümunə Platforma Jumper Oyunu
       Sample Program: Nümunə program
@@ -396,6 +428,7 @@ az:
       Setup: Qur
       Shapes and Parameters: Forma və parametrlər
       Shapes and the Draw Loop: Formalar və Çəkmə Döngəsi
+      Share Out: Paylaş
       Share Your App: Tətbiqinizi paylaşın
       Side Scroller: Yan Scroller
       Simple Circuits: Sadə sxemlər
@@ -407,10 +440,12 @@ az:
       Songwriting - Functions Unplugged Activity: Mahnı Yazısı - Unplugged Fəaliyyət
         funksiyaları
       Speed it Up, Slow it Down: Sürətləndir,Yavaşlat
+      Sprite Interactions: Sprayt qarşılıqlı təsirləri
       Sprite Lab Project: Sprite Laboratoriyası Layihəsi
       Sprite Movement: Sprayt Hərəkəti
       Sprite Properties: Sprite Xüsusiyyətləri
       Sprite Scenes: Sprite səhnələri
+      Sprite Velocity: Sprayt sürəti
       Sprites and the Draw Loop: Sprites və Draw Loop
       Star Chaser: Ulduz Qovucu
       Styling Text: Styling mətni
@@ -433,16 +468,18 @@ az:
       The Draw Loop: Bərabərlik Döngüsü
       The Harvester: 'Biçinçi
 
-'
+        '
       The Internet - Unplugged Activity: İnternet - Bağlanmamış Fəaliyyət
       The Power of Words - Unplugged Activity: Sözlərin Gücü - Unplugged Fəaliyyət
       The Right App - Unplugged Activity: Düzgün Tətbiq - Çıxarılan Fəaliyyət
       Top Websites: Ən yaxşı veb saytlar
-      Tour of Design Mode: Dizayn rejimi turu
+      Tour of Design Mode: Dizayn rejimi turuDizayn rejimi
       Train AI to Clean the Ocean: Okeanı təmizləmək üçün süni intellektə öyrədin
       UI Element Properties: UI Element Xüsusiyyətləri
+      Unplugged Activity: Sərbəst fəaliyyət
       Upload Your Images: Şəkillərinizi yükləyin
       User Interface: İstifadəçi interfeysi
+      Using Accelerometer Events: akselerometr
       Using the Grid: Şəbəkədən istifadə
       Using the Repeat Block: Dövr bloklarından istifadə etmək
       Variables: dəyişənlər
@@ -453,6 +490,7 @@ az:
       Video - Variables: Video - Dəyişənlər
       'Video: "If/Else"': 'Video: "Əgər/Və_ya"'
       'Video: Conditional Statements': 'Video: Şərti Bəyanatlar'
+      'Video: Conditionals': 'Video: Şərti ifadələr'
       'Video: Conditionals: If Statements': 'Video: Şərti Bəyanatlar: İf Operatorları'
       'Video: Conditionals: If and If/Else Statements': 'Video: Şərti Bəyanatlar:
         İf və İf/Else Operatorları'

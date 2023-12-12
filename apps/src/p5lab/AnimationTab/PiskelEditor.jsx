@@ -175,7 +175,8 @@ class PiskelEditor extends React.Component {
           if (this.props.currentAnimation !== key) {
             this.loadSelectedAnimation_(this.props);
           }
-        }
+        },
+        animationProps.frameCount
       );
     }
   }

@@ -2,226 +2,10 @@
   "ur-PK": {
     "data": {
       "programming_environments": {
-        "weblab": {
-          "name": "ویب لیب"
-        },
-        "gamelab": {
-          "name": "کھیل لیب",
-          "categories": {
-            "game_lab": {
-              "name": "کھیل لیب",
-              "expressions": {
-                "mouseIsOver": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "سپرائٹ"
-                    }
-                  }
-                },
-                "mousePressedOver": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "سپرائٹ"
-                    }
-                  }
-                },
-                "mouseWentDown": {
-                  "examples": {
-                    "Black and White": {
-                      "name": "ستارہ"
-                    }
-                  }
-                },
-                "playSound": {
-                  "short_description": "MP3 آواز مسل کو اختصاصی URL سے ادا کرتا ہے ۔"
-                },
-                "showMobileControls": {
-                  "content": "کھیل کی جگہ کے نیچے نظر آنے والے موبائل کنٹرول کو تبدیل کرتا ہے.",
-                  "short_description": "کھیل کی جگہ کے نیچے نظر آنے والے موبائل کنٹرول کو تبدیل کرتا ہے."
-                }
-              }
-            },
-            "sprites": {
-              "expressions": {
-                "getSpeed": {
-                  "examples": {
-                    "Spiral": {
-                      "name": "مرغولہ"
-                    }
-                  }
-                },
-                "sprite.height": {
-                  "return_value": "سپرائٹ کی اونچائی."
-                },
-                "sprite.width": {
-                  "return_value": "سپرائٹ کی چوڑائی."
-                }
-              }
-            },
-            "groups": {
-              "name": "گروپس",
-              "expressions": {
-                "add": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "سپرائٹ"
-                    }
-                  }
-                },
-                "contains": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "سپرائٹ"
-                    }
-                  }
-                },
-                "remove": {
-                  "palette_params": {
-                    "sprite": {
-                      "type": "سپرائٹ"
-                    }
-                  }
-                },
-                "setColorEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "رنگ بھریں"
-                    }
-                  }
-                },
-                "setTintEach": {
-                  "palette_params": {
-                    "color": {
-                      "type": "رنگ بھریں"
-                    }
-                  }
-                }
-              }
-            },
-            "drawing": {
-              "name": "ڈرائنگ",
-              "expressions": {
-                "shape": {
-                  "examples": {
-                    "Star": {
-                      "name": "ستارہ"
-                    }
-                  }
-                }
-              }
-            },
-            "control": {
-              "expressions": {
-                "setInterval": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "فنکشن کے ہر عملدرآمد کے درمیان ملی سیکنڈ کی تعداد."
-                    }
-                  }
-                },
-                "setTimeout": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "ملی سیکنڈ کی تعداد تقریب پر عمل کرنے سے پہلے انتظار کرنا."
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "ریاضی",
-              "expressions": {
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "کم سے کم ریٹرنڈ نمبر"
-                    },
-                    "max": {
-                      "description": "زیادہ سے زیادہ ریٹرنڈ نمبر"
-                    }
-                  }
-                },
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "کم سے کم ریٹرنڈ نمبر"
-                    },
-                    "max": {
-                      "description": "زیادہ سے زیادہ ریٹرنڈ نمبر"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "متغیرات",
-              "expressions": {
-                "includes": {
-                  "palette_params": {
-                    "searchValue": {
-                      "description": "تلاش کرنے کے لئے سٹرنگ."
-                    }
-                  }
-                },
-                "indexOf": {
-                  "palette_params": {
-                    "searchValue": {
-                      "description": "تلاش کرنے کے لئے سٹرنگ."
-                    }
-                  }
-                },
-                "length": {
-                  "return_value": "سٹرنگ کی لمبائی"
-                }
-              }
-            },
-            "functions": {
-              "name": "افعال"
-            }
-          }
-        },
         "applab": {
-          "name": "ایپ لیب",
-          "description": "ایپ لیب ایک پروگرامنگ ماحول ہے جہاں آپ سادہ اطلاقات بنا سکتے ہیں. یہ کام کرنے کے لئے بلاکس یا جاوا اسکرپٹ کے ساتھ ایک اپلی کیشن، کوڈ ڈیزائن کریں، پھر سیکنڈ میں اپنی ایپ کا اشتراک کریں.",
           "categories": {
-            "ui_controls": {
-              "expressions": {
-                "button": {
-                  "short_description": "اسکرین پر ایک بٹن بناتا ہے جو پہلے سے طے شدہ مقام پر دی گئی شناخت کی طرف سے فراہم کردہ متن کی نمائش کرتا ہے (0,0)."
-                },
-                "onEvent": {
-                  "examples": {
-                    "Shrink and Grow": {
-                      "name": "سکڑیں اور بڑھیں"
-                    }
-                  },
-                  "palette_params": {
-                    "callback": {
-                      "type": "فنکشن"
-                    }
-                  }
-                },
-                "playSound": {
-                  "short_description": "MP3 آواز مسل کو اختصاصی URL سے ادا کرتا ہے ۔"
-                },
-                "setProperty": {
-                  "palette_params": {
-                    "property": {
-                      "description": "جائیداد تبدیل کرنے کے لئے."
-                    }
-                  },
-                  "short_description": "مخصوص عنصر کے لئے ایک پراپرٹی کو نئی قدر پر مرتب کرتا ہے۔"
-                },
-                "setScreen": {
-                  "short_description": "اسکرین کو دیئے گئے ScreenID پر سیٹ کرتا ہے."
-                },
-                "showElement": {
-                  "short_description": "فراہم کی شناخت کے ساتھ عنصر دکھاتا ہے."
-                },
-                "textLabel": {
-                  "short_description": "اسکرین پر ایک ٹیکسٹ لیبل بناتا ہے جو ڈیفالٹ مقام (0,0) پر دی گئی شناخت کی طرف سے فراہم کردہ متن کو ظاہر کرتا ہے."
-                }
-              }
+            "advanced": {
+              "name": "اعلی درجے کی"
             },
             "canvas": {
               "expressions": {
@@ -287,17 +71,17 @@
                 },
                 "getImageData": {
                   "palette_params": {
+                    "height": {
+                      "description": "تصویر کے اعداد و شمار پر قبضہ کرنے کے لئے bounding مستطیل کی اونچائی."
+                    },
+                    "width": {
+                      "description": "تصویر کے اعداد و شمار پر قبضہ کرنے کے لئے bounding مستطیل کی چوڑائی."
+                    },
                     "x": {
                       "description": "پکسلز میں X پوزیشن کی گرفتاری شروع کرنے کے لئے."
                     },
                     "y": {
                       "description": "پکسلز میں Y پوزیشن کی گرفتاری شروع کرنے کے لئے."
-                    },
-                    "width": {
-                      "description": "تصویر کے اعداد و شمار پر قبضہ کرنے کے لئے bounding مستطیل کی چوڑائی."
-                    },
-                    "height": {
-                      "description": "تصویر کے اعداد و شمار پر قبضہ کرنے کے لئے bounding مستطیل کی اونچائی."
                     }
                   }
                 },
@@ -329,22 +113,25 @@
                 },
                 "rect": {
                   "palette_params": {
+                    "height": {
+                      "description": "مستطیل کے پکسلز میں عمودی اونچائی."
+                    },
+                    "width": {
+                      "description": "مستطیل کے پکسلز میں افقی چوڑائی."
+                    },
                     "x": {
                       "description": "مستطیل کے اوپری بائیں کونے کے پکسلز میں X پوزیشن."
                     },
                     "y": {
                       "description": "Y پوزیشن مستطیل کے اوپری بائیں کونے کے پکسلز میں."
-                    },
-                    "width": {
-                      "description": "مستطیل کے پکسلز میں افقی چوڑائی."
-                    },
-                    "height": {
-                      "description": "مستطیل کے پکسلز میں عمودی اونچائی."
                     }
                   }
                 },
                 "setAlpha": {
                   "palette_params": {
+                    "alphaValue": {
+                      "description": "پکسل میں مقرر کرنے کے لیے الفا (دھندلاپن) کی مقدار (0 سے 255 تک) ۔"
+                    },
                     "imageData": {
                       "type": "اعتراض"
                     },
@@ -353,15 +140,15 @@
                     },
                     "y": {
                       "description": "تصویر کے اوپری بائیں کونے سے شروع ہونے والے پکسلز میں Y پوزیشن."
-                    },
-                    "alphaValue": {
-                      "description": "پکسل میں مقرر کرنے کے لیے الفا (دھندلاپن) کی مقدار (0 سے 255 تک) ۔"
                     }
                   },
                   "short_description": "الفا کی مقدار کا تعین کرتا ہے (دھندلاپن) (سے لے کر 0 سے 255) دیئے گئے تصویر کے اعداد و شمار میں دی گئی X اور Y پوزیشن پر واقع پکسل کے رنگ میں."
                 },
                 "setBlue": {
                   "palette_params": {
+                    "blueValue": {
+                      "description": "پکسل میں سیٹ کرنے کے لئے نیلے رنگ کی مقدار (0 سے 255 تک)."
+                    },
                     "imageData": {
                       "type": "اعتراض"
                     },
@@ -370,15 +157,15 @@
                     },
                     "y": {
                       "description": "تصویر کے اوپری بائیں کونے سے شروع ہونے والے پکسلز میں Y پوزیشن."
-                    },
-                    "blueValue": {
-                      "description": "پکسل میں سیٹ کرنے کے لئے نیلے رنگ کی مقدار (0 سے 255 تک)."
                     }
                   },
                   "short_description": "نیلے رنگ کی مقدار (0 سے 255 تک) دی گئی تصویر کے اعداد و شمار میں دی گئی X اور Y پوزیشن پر واقع پکسل کے رنگ میں BlueValue ان پٹ رقم کو مقرر کرتا ہے."
                 },
                 "setGreen": {
                   "palette_params": {
+                    "greenValue": {
+                      "description": "سبز کی مقدار (0 سے 255) پکسل میں مقرر کرنے کے لئے."
+                    },
                     "imageData": {
                       "type": "اعتراض"
                     },
@@ -387,35 +174,32 @@
                     },
                     "y": {
                       "description": "تصویر کے اوپری بائیں کونے سے شروع ہونے والے پکسلز میں Y پوزیشن."
-                    },
-                    "greenValue": {
-                      "description": "سبز کی مقدار (0 سے 255) پکسل میں مقرر کرنے کے لئے."
                     }
                   },
                   "short_description": "سبز کی مقدار کا تعین کرتا ہے (0 سے 255 تک) دیئے گئے تصویر کے اعداد و شمار میں دیئے گئے X اور Y پوزیشن پر واقع پکسل کے رنگ میں GreenValue ان پٹ رقم پر."
                 },
                 "setRGB": {
                   "palette_params": {
+                    "alpha": {
+                      "description": "اختیاری. پکسل میں سیٹ کرنے کے لئے دھندلاپن کی مقدار (0 سے 255 تک). 255 پر ڈیفالٹ (مکمل دھندلاپن)."
+                    },
+                    "blue": {
+                      "description": "پکسل میں سیٹ کرنے کے لئے نیلے رنگ کی مقدار (0 سے 255 تک)."
+                    },
+                    "green": {
+                      "description": "سبز کی مقدار (0 سے 255) پکسل میں مقرر کرنے کے لئے."
+                    },
                     "imageData": {
                       "type": "اعتراض"
+                    },
+                    "red": {
+                      "description": "پکسل میں سیٹ کرنے کے لئے سرخ (0 سے 255) کی مقدار."
                     },
                     "x": {
                       "description": "تصویر کے اوپری بائیں کونے سے شروع ہونے والے پکسلز میں X پوزیشن."
                     },
                     "y": {
                       "description": "تصویر کے اوپری بائیں کونے سے شروع ہونے والے پکسلز میں Y پوزیشن."
-                    },
-                    "red": {
-                      "description": "پکسل میں سیٹ کرنے کے لئے سرخ (0 سے 255) کی مقدار."
-                    },
-                    "green": {
-                      "description": "سبز کی مقدار (0 سے 255) پکسل میں مقرر کرنے کے لئے."
-                    },
-                    "blue": {
-                      "description": "پکسل میں سیٹ کرنے کے لئے نیلے رنگ کی مقدار (0 سے 255 تک)."
-                    },
-                    "alpha": {
-                      "description": "اختیاری. پکسل میں سیٹ کرنے کے لئے دھندلاپن کی مقدار (0 سے 255 تک). 255 پر ڈیفالٹ (مکمل دھندلاپن)."
                     }
                   }
                 },
@@ -424,22 +208,53 @@
                     "imageData": {
                       "type": "اعتراض"
                     },
+                    "redValue": {
+                      "description": "پکسل میں سیٹ کرنے کے لئے سرخ (0 سے 255) کی مقدار."
+                    },
                     "x": {
                       "description": "تصویر کے اوپری بائیں کونے سے شروع ہونے والے پکسلز میں X پوزیشن."
                     },
                     "y": {
                       "description": "تصویر کے اوپری بائیں کونے سے شروع ہونے والے پکسلز میں Y پوزیشن."
-                    },
-                    "redValue": {
-                      "description": "پکسل میں سیٹ کرنے کے لئے سرخ (0 سے 255) کی مقدار."
                     }
                   },
                   "short_description": "دی گئی تصویر کے اعداد و شمار میں دیئے گئے X اور Y پوزیشن پر واقع پکسل کے رنگ میں سرخ کی مقدار (0 سے 255 تک) کا تعین کرتا ہے RedValue ان پٹ رقم پر."
                 }
               }
             },
+            "control": {
+              "expressions": {
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "description": "منسوخ کرنے کے لئے setTimeout فنکشن کی طرف سے واپس کی گئی قدر."
+                    }
+                  }
+                },
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "فنکشن کے ہر عملدرآمد کے درمیان ملی سیکنڈ کی تعداد."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "ملی سیکنڈ کی تعداد تقریب پر عمل کرنے سے پہلے انتظار کرنا."
+                    }
+                  }
+                },
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "فنکشن"
+                    }
+                  }
+                }
+              }
+            },
             "data": {
-              "name": "ڈیٹا",
               "expressions": {
                 "createRecord": {
                   "palette_params": {
@@ -464,11 +279,11 @@
                 },
                 "drawChartFromRecords": {
                   "palette_params": {
-                    "tableName": {
-                      "description": "سے ریکارڈ بازیافت کرنے کے لئے میز کا نام."
-                    },
                     "options": {
                       "type": "اعتراض"
+                    },
+                    "tableName": {
+                      "description": "سے ریکارڈ بازیافت کرنے کے لئے میز کا نام."
                     }
                   }
                 },
@@ -528,7 +343,36 @@
                     }
                   }
                 }
-              }
+              },
+              "name": "ڈیٹا"
+            },
+            "functions": {
+              "name": "افعال"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "زیادہ سے زیادہ ریٹرنڈ نمبر"
+                    },
+                    "min": {
+                      "description": "کم سے کم ریٹرنڈ نمبر"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "زیادہ سے زیادہ ریٹرنڈ نمبر"
+                    },
+                    "min": {
+                      "description": "کم سے کم ریٹرنڈ نمبر"
+                    }
+                  }
+                }
+              },
+              "name": "ریاضی"
             },
             "turtle": {
               "expressions": {
@@ -595,66 +439,50 @@
                 }
               }
             },
-            "control": {
+            "ui_controls": {
               "expressions": {
-                "clearTimeout": {
-                  "palette_params": {
-                    "timeout": {
-                      "description": "منسوخ کرنے کے لئے setTimeout فنکشن کی طرف سے واپس کی گئی قدر."
-                    }
-                  }
+                "button": {
+                  "short_description": "اسکرین پر ایک بٹن بناتا ہے جو پہلے سے طے شدہ مقام پر دی گئی شناخت کی طرف سے فراہم کردہ متن کی نمائش کرتا ہے (0,0)."
                 },
-                "setInterval": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "فنکشن کے ہر عملدرآمد کے درمیان ملی سیکنڈ کی تعداد."
+                "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "سکڑیں اور بڑھیں"
                     }
-                  }
-                },
-                "setTimeout": {
-                  "palette_params": {
-                    "ms": {
-                      "description": "ملی سیکنڈ کی تعداد تقریب پر عمل کرنے سے پہلے انتظار کرنا."
-                    }
-                  }
-                },
-                "timedLoop": {
+                  },
                   "palette_params": {
                     "callback": {
                       "type": "فنکشن"
                     }
                   }
-                }
-              }
-            },
-            "math": {
-              "name": "ریاضی",
-              "expressions": {
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "کم سے کم ریٹرنڈ نمبر"
-                    },
-                    "max": {
-                      "description": "زیادہ سے زیادہ ریٹرنڈ نمبر"
-                    }
-                  }
                 },
-                "randomNumber": {
+                "playSound": {
+                  "short_description": "MP3 آواز مسل کو اختصاصی URL سے ادا کرتا ہے ۔"
+                },
+                "setProperty": {
                   "palette_params": {
-                    "min": {
-                      "description": "کم سے کم ریٹرنڈ نمبر"
-                    },
-                    "max": {
-                      "description": "زیادہ سے زیادہ ریٹرنڈ نمبر"
+                    "property": {
+                      "description": "جائیداد تبدیل کرنے کے لئے."
                     }
-                  }
+                  },
+                  "short_description": "مخصوص عنصر کے لئے ایک پراپرٹی کو نئی قدر پر مرتب کرتا ہے۔"
+                },
+                "setScreen": {
+                  "short_description": "اسکرین کو دیئے گئے ScreenID پر سیٹ کرتا ہے."
+                },
+                "showElement": {
+                  "short_description": "فراہم کی شناخت کے ساتھ عنصر دکھاتا ہے."
+                },
+                "textLabel": {
+                  "short_description": "اسکرین پر ایک ٹیکسٹ لیبل بناتا ہے جو ڈیفالٹ مقام (0,0) پر دی گئی شناخت کی طرف سے فراہم کردہ متن کو ظاہر کرتا ہے."
                 }
               }
             },
             "variables": {
-              "name": "متغیرات",
               "expressions": {
+                "addPair": {
+                  "return_value": "کوئی نہيں"
+                },
                 "declareAssign_list_123": {
                   "short_description": "اعلان اور ایک متغیر کے لئے ایک صف تفویض"
                 },
@@ -672,61 +500,233 @@
                     }
                   }
                 },
-                "addPair": {
-                  "return_value": "کوئی نہيں"
-                },
                 "length": {
                   "return_value": "سٹرنگ کی لمبائی"
                 }
+              },
+              "name": "متغیرات"
+            }
+          },
+          "description": "ایپ لیب ایک پروگرامنگ ماحول ہے جہاں آپ سادہ اطلاقات بنا سکتے ہیں. یہ کام کرنے کے لئے بلاکس یا جاوا اسکرپٹ کے ساتھ ایک اپلی کیشن، کوڈ ڈیزائن کریں، پھر سیکنڈ میں اپنی ایپ کا اشتراک کریں.",
+          "name": "ایپ لیب"
+        },
+        "gamelab": {
+          "categories": {
+            "control": {
+              "expressions": {
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "فنکشن کے ہر عملدرآمد کے درمیان ملی سیکنڈ کی تعداد."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "ملی سیکنڈ کی تعداد تقریب پر عمل کرنے سے پہلے انتظار کرنا."
+                    }
+                  }
+                }
               }
+            },
+            "drawing": {
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "ستارہ"
+                    }
+                  }
+                }
+              },
+              "name": "ڈرائنگ"
             },
             "functions": {
               "name": "افعال"
             },
-            "advanced": {
-              "name": "اعلی درجے کی"
+            "game_lab": {
+              "expressions": {
+                "mouseIsOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "سپرائٹ"
+                    }
+                  }
+                },
+                "mousePressedOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "سپرائٹ"
+                    }
+                  }
+                },
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "ستارہ"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "MP3 آواز مسل کو اختصاصی URL سے ادا کرتا ہے ۔"
+                },
+                "showMobileControls": {
+                  "content": "کھیل کی جگہ کے نیچے نظر آنے والے موبائل کنٹرول کو تبدیل کرتا ہے.",
+                  "short_description": "کھیل کی جگہ کے نیچے نظر آنے والے موبائل کنٹرول کو تبدیل کرتا ہے."
+                }
+              },
+              "name": "کھیل لیب"
+            },
+            "groups": {
+              "expressions": {
+                "add": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "سپرائٹ"
+                    }
+                  }
+                },
+                "contains": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "سپرائٹ"
+                    }
+                  }
+                },
+                "remove": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "سپرائٹ"
+                    }
+                  }
+                },
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "رنگ بھریں"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "رنگ بھریں"
+                    }
+                  }
+                }
+              },
+              "name": "گروپس"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "زیادہ سے زیادہ ریٹرنڈ نمبر"
+                    },
+                    "min": {
+                      "description": "کم سے کم ریٹرنڈ نمبر"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "زیادہ سے زیادہ ریٹرنڈ نمبر"
+                    },
+                    "min": {
+                      "description": "کم سے کم ریٹرنڈ نمبر"
+                    }
+                  }
+                }
+              },
+              "name": "ریاضی"
+            },
+            "sprites": {
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "مرغولہ"
+                    }
+                  }
+                },
+                "sprite.height": {
+                  "return_value": "سپرائٹ کی اونچائی."
+                },
+                "sprite.width": {
+                  "return_value": "سپرائٹ کی چوڑائی."
+                }
+              }
+            },
+            "variables": {
+              "expressions": {
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "تلاش کرنے کے لئے سٹرنگ."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "تلاش کرنے کے لئے سٹرنگ."
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "سٹرنگ کی لمبائی"
+                }
+              },
+              "name": "متغیرات"
             }
-          }
+          },
+          "name": "کھیل لیب"
+        },
+        "javalab": {
+          "name": "جاوا لیب"
         },
         "spritelab": {
           "categories": {
-            "world": {
-              "name": "دنیا"
-            },
-            "location": {
-              "name": "مقامات"
-            },
             "actions": {
               "name": "ایکشنز"
-            },
-            "events": {
-              "name": "ایونٹس/واقعات"
             },
             "behaviors": {
               "name": "رویے"
             },
-            "loops": {
-              "name": "لوپس"
+            "comments": {
+              "name": "تبصرے"
             },
-            "variables": {
-              "name": "متغیرات"
+            "events": {
+              "name": "ایونٹس/واقعات"
             },
-            "math": {
-              "name": "ریاضی"
+            "location": {
+              "name": "مقامات"
             },
             "logic": {
               "name": "منطق"
             },
+            "loops": {
+              "name": "لوپس"
+            },
+            "math": {
+              "name": "ریاضی"
+            },
             "text": {
               "name": "متن"
             },
-            "comments": {
-              "name": "تبصرے"
+            "variables": {
+              "name": "متغیرات"
+            },
+            "world": {
+              "name": "دنیا"
             }
           }
         },
-        "javalab": {
-          "name": "جاوا لیب"
+        "weblab": {
+          "name": "ویب لیب"
         }
       }
     }

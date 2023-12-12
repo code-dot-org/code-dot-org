@@ -1,7 +1,8 @@
-- require 'cdo/cpa'
+- require 'cpa'
 - location = Geocoder.search(request.ip).try(:first)
 - country_code = location&.country_code.to_s.upcase
-- state_code = location&.state_code.to_s.upcase
+-# 'RD' is the 'Reserved' country code for private IP's, i.e. localhost.
+- us_ip = ['US', 'RD'].include?(country_code)
 - require '../shared/middleware/helpers/experiments'
 - content_for(:head) do
   %meta{name: "robots", content: "noindex"}/
@@ -27,7 +28,7 @@
     before joining the section.
   %p{style: 'margin-bottom: 30px;'} If you don't have an account at Code.org yet, please fill out the fields below to create an account and join the section.
   - if @user.errors.any?
-    #error_explanation
+    #error_explanation.padded_container
       %ul
         - @user.errors.full_messages.each do |msg|
           %li= msg
@@ -80,14 +81,13 @@
                 = f.label :age, t('signup_form.age')
                 = f.select :age, User::AGE_DROPDOWN_OPTIONS, include_blank: true, class: 'fieldblock'
               %br/
-              - if cpa_experience
+              - if us_ip && Cpa.cpa_experience(request)
                 .itemblock
                   = f.label :us_state, t('signup_form.us_state')
-                  = f.select :us_state, us_state_options, selected: state_code,
-                  include_blank: true
+                  = f.select :us_state, us_state_options, include_blank: true
                   = f.hidden_field :country_code, value: country_code
                 %br/
-              - if experiment_value('gender')
+              - if experiment_value('gender', request)
                 .itemblock
                   = f.label :gender_student_input, t('signup_form.gender')
                   = f.text_field :gender_student_input, maxlength: 50

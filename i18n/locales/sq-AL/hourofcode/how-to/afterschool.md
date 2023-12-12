@@ -16,7 +16,7 @@ Provimi i ores se kodit eshte nje menyre e thjeshte dhe zbavitese t'i njoftoni s
 
 * * *
 
-## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. Shikoni këtë video si <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ## Zgjedhni nje tutorial
 
@@ -49,7 +49,7 @@ Planifiko Orën tënde të Kodimit duke inspiruar fëmijët dhe diskutoni se si 
 **Trego një video frymëzuese:**
 
 - Video origjinale te code.org e cila perfshine BIll Gates, Mark Zuckerberg, dhe yllin e NBA Chris Bosh - ekzistojne dy versione te videos, ajo 1 minuteshe dhe 5 minuta.
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
+- Videoja “ [Ora e Kodit në mbarë botën”](https://www.youtube.com/watch?v=KsOIlDT145A)
 - [Presidenti Obama duke i bere thirrje nxenesve qe te mesojne shkencat kompjuterike](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - Gjej me shume video inspiruese [ketu](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP)
 
@@ -73,7 +73,7 @@ Planifiko Orën tënde të Kodimit duke inspiruar fëmijët dhe diskutoni se si 
 
 - [Printo certifikata]({{ urls/certificates }}) per nxenesit tuaj. 
 - Pritoni stiker me mbishkrimin "Kam kryer nje ore kodimi"
-- [Porosisni maica te personalizuara](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) per pjesemarresit.
+- [Porositni blu](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) za me porosi për pjesëmarrësit.
 - Shpërndaj fotot dhe videot e Orës tënde të Kodimit në mediat sociale. Përdorni #HourOfCode dhe @codeorg kështu që ne mund të nxjerrim në pah suksesin tuaj!
 
 ## Burime te tjera te ores se kodimit per mesimdhenes

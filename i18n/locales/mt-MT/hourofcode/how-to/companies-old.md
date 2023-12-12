@@ -1,11 +1,11 @@
 ---
-title: How to host an Hour of Code - Companies
+title: Kif tospita Siegħa ta 'Kodiċi - Kumpaniji
 ---
 
 {{ signup_button }}
 
 # How to bring the Hour of Code to your company
-### Find out how you and your employees can inspire students to try computer science!
+### Sib kif inti u l-impjegati tiegħek jistgħu jispiraw lill-istudenti biex jippruvaw ix-xjenza tal-kompjuter!
 
 ***
 
@@ -57,9 +57,9 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 **Show an inspirational video:**
 
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions).
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Il-Video [tas-Siegħa tal-Kodiċi Dinjija](https://www.youtube.com/watch?v=KsOIlDT145A)
+- [Il-President Obama jappella lill-istudenti kollha biex jitgħallmu x-xjenza tal-kompjuter](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- Sib aktar vidjows ta 'ispirazzjoni [hawn](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **Ideas to introduce your Hour of Code activity to students:**
 
@@ -67,7 +67,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 - If you are a tech company, demo fun, innovative products your company is working on.
 - If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
 - Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- Ara pariri biex jkollok bniet interessati fix-xjenza tal-kompjuter [hawn]({{ urls/girls }}).
 
 ## 6. Code!
 **Direct participants to the activity**

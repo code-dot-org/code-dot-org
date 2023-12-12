@@ -57,5 +57,6 @@
   "startOver": "Recomeçar",
   "upload": "Fazer upload",
   "panelHeaderInstructions": "Instruções",
-  "panelHeaderWorkspace": "Área de trabalho: "
+  "panelHeaderWorkspace": "Área de trabalho: ",
+  "continue": "Continuar"
 }

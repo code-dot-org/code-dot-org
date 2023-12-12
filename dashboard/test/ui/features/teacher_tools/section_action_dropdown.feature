@@ -31,8 +31,6 @@ Feature: Using the SectionActionDropdown
     And I press the first ".print-login-link" element to load a new page
     And I wait until current URL contains "/login_info"
 
-  @skip
-  # TODO TEACH-509
   Scenario: Printing Certificates from SectionActionDropdown shows course name
     Given I create a teacher named "Teacher" and go home
     And I create a new "Hour of Code" student section named "Oceans Section" assigned to "AI for Oceans"

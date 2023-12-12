@@ -23,6 +23,7 @@ class ChannelToken < ApplicationRecord
 
   belongs_to :user, optional: true
   belongs_to :level, optional: true
+  belongs_to :script, class_name: 'Unit', optional: true
 
   # The projects table used to be named storage_apps. This column has not been renamed
   # to reflect the new table name, so an alias is used to clarify which table this ID maps to.

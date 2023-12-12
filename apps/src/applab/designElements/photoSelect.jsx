@@ -27,47 +27,47 @@ class PhotoChooserProperties extends React.Component {
     return (
       <div id="propertyRowContainer">
         <PropertyRow
-          desc={'id'}
+          desc={i18n.designElementProperty_id()}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow
         />
         <PropertyRow
-          desc={'width (px)'}
+          desc={i18n.designElementProperty_widthPx()}
           isNumber
           initialValue={parseInt(element.style.width, 10)}
           handleChange={this.props.handleChange.bind(this, 'style-width')}
         />
         <PropertyRow
-          desc={'height (px)'}
+          desc={i18n.designElementProperty_heightPx()}
           isNumber
           initialValue={parseInt(element.style.height, 10)}
           handleChange={this.props.handleChange.bind(this, 'style-height')}
         />
         <PropertyRow
-          desc={'x position (px)'}
+          desc={i18n.designElementProperty_xPositionPx()}
           isNumber
           initialValue={parseInt(element.style.left, 10)}
           handleChange={this.props.handleChange.bind(this, 'left')}
         />
         <PropertyRow
-          desc={'y position (px)'}
+          desc={i18n.designElementProperty_yPositionPx()}
           isNumber
           initialValue={parseInt(element.style.top, 10)}
           handleChange={this.props.handleChange.bind(this, 'top')}
         />
         <ColorPickerPropertyRow
-          desc={'background color'}
+          desc={i18n.designElementProperty_backgroundColor()}
           initialValue={element.style.backgroundColor}
           handleChange={this.props.handleChange.bind(this, 'backgroundColor')}
         />
         <ColorPickerPropertyRow
-          desc={'icon color'}
+          desc={i18n.designElementProperty_iconColor()}
           initialValue={element.style.color || '#000000'}
           handleChange={this.props.handleChange.bind(this, 'textColor')}
         />
         <PropertyRow
-          desc={'icon size (px)'}
+          desc={i18n.designElementProperty_iconSizePx()}
           isNumber
           initialValue={parseInt(element.style.fontSize, 10)}
           handleChange={this.props.handleChange.bind(this, 'fontSize')}
@@ -88,7 +88,7 @@ class PhotoChooserProperties extends React.Component {
           )}
         />
         <BooleanPropertyRow
-          desc={'hidden'}
+          desc={i18n.designElementProperty_hidden()}
           initialValue={$(element).hasClass('design-mode-hidden')}
           handleChange={this.props.handleChange.bind(this, 'hidden')}
         />
@@ -129,7 +129,7 @@ class PhotoChooserEvents extends React.Component {
     return (
       <div id="eventRowContainer">
         <PropertyRow
-          desc={'id'}
+          desc={i18n.designElementProperty_id()}
           initialValue={elementUtils.getId(element)}
           handleChange={this.props.handleChange.bind(this, 'id')}
           isIdRow={true}

@@ -11,19 +11,11 @@ uz:
       BadGuys_setSizeAll_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': o‘rta
-            '2.00': large
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': o‘rta
-            '2.00': large
-            '3.00': extra large
       Dancelab_alternateMoves:
         text: " {MOVE1} va {MOVE2} orasida {GROUP} harakatlar guruhi har {N} o'lchovda almashadi"
         options:
@@ -71,6 +63,11 @@ uz:
           UNIT:
             '"measures"': o'lchovlar
             '"seconds"': soniyalar
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': o'lchovlar
+            '"seconds"': soniyalar
       Dancelab_changeColorBy:
         text: " {COLOR} {METHOD} almashtirish {AMOUNT} "
         options:
@@ -110,6 +107,27 @@ uz:
             MOVES.Kick: Yulduz raqsi
             MOVES.ThisOrThat: U yoki bu
             MOVES.Rest: Hech biri
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} buni {MOVE} {DIR} doimiy qiladi"
+        options:
+          GROUP:
+            '"CAT"': mushuklar
+            '"SLOTH"': yalqovlar
+          MOVE:
+            MOVES.Roll: dumalash
+            MOVES.ClapHigh: yuqori qarsak
+            MOVES.Dab: Dab (qirmoq)
+            MOVES.DoubleJam: Ikki marta pastga
+            MOVES.Drop: Tashlash
+            MOVES.Floss: Ip
+            MOVES.Fresh: Fresh raqsi
+            MOVES.Clown: Gangnam raqsi
+            MOVES.Kick: Yulduz raqsi
+            MOVES.ThisOrThat: U yoki bu
+            MOVES.Rest: Hech biri
+            '"next"': "(Keyingi)"
+            '"prev"': "(Oldingi)"
+            '"rand"': "(Tasodifiy)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} doimo {MOVE} {DIR} qiladi"
         options:
@@ -453,26 +471,6 @@ uz:
             '18': '18'
             '19': '19'
             '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
-            '40': '40'
           COSTUME:
             '"ALIEN"': o‘zga sayyoraliklar
             '"BEAR"': ayiqlar
@@ -589,6 +587,50 @@ uz:
             '"iceCream"': Muzqaymoq
             '"default"': Chiroq
             '"neon"': Neon
+            '"tropical"': Tropik
+            '"vintage"': Vintaj
+            '"warm"': Iliq
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          orqa fon effektini
+          {PALETTE} {EFFECT} ga sozlash
+        options:
+          EFFECT:
+            '"none"': Hech biri
+            '"rand"': "(Tasodifiy)"
+            '"quads"': Burchaklar
+            '"circles"': Aylanalar
+            '"color_cycle"': Ranglar
+            '"diamonds"': Brilliantlar
+            '"disco_ball"': Disko to'p
+            '"fireworks"': Feyerverklar
+            '"flowers"': Gullar
+            '"growing_stars"': O'sib borayotgan yulduzlar
+            '"swirl"': Gipno
+            '"kaleidoscope"': Kaleydoskop
+            '"lasers"': Lazerli raqs maydonchasi
+            '"splatter"': Bo'yoq sachratmalari
+            '"rainbow"': Kamalak
+            '"ripples_random"': Tasodifiy to‘lqinlar
+            '"ripples"': To‘lqinlar
+            '"snowflakes"': Qor
+            '"text"': Qo'shiq nomlari
+            '"galaxy"': Qoinot
+            '"sparkles"': Uchqunlar
+            '"spiral"': Spiral
+            '"disco"': Kvadratlar
+            '"squiggles"': Siqilish (burmalar)
+            '"starburst"': Yulduzlar to'plami
+            '"stars"': Yulduzlar
+            '"music_wave"': Toʻlqinlar
+          PALETTE:
+            '"rave"': Qora va oq
+            '"cool"': Zo'r
+            '"electronic"': Elektronik
+            '"iceCream"': Muzqaymoq
+            '"default"': Chiroq
+            '"neon"': Neon
+            '"rainbow"': Kamalak
             '"tropical"': Tropik
             '"vintage"': Vintaj
             '"warm"': Iliq
@@ -998,8 +1040,6 @@ uz:
         options:
           INPUT1:
             '1': Limon sharbati
-            '3': baking soda
-            '5': both
       DansBlocks_setForegroundEffect2:
         options:
           EFFECT:
@@ -1012,8 +1052,6 @@ uz:
         options:
           INPUT1:
             '1': Limon sharbati
-            '3': baking soda
-            '5': both
       FunctionBlocks_communicate:
         text: "{VAR1} bilan {SPRITE1COSTUME} o'rtasida aloqa bogʻlash"
       FunctionBlocks_makeManipulative2:
@@ -1268,9 +1306,7 @@ uz:
       gamelab_makeSpritesWithSize:
         options:
           SIZE:
-            '30': small
             '50': o‘rta
-            '100': large
       gamelab_mirrorSprite:
         text: "{SPRITE} {DIRECTION} ga yuzlangan"
         options:
@@ -1408,10 +1444,7 @@ uz:
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
-            '25': extra small
-            '50': small
             '75': o‘rta
-            '100': large
       gamelab_setPrompt:
         text: "{VAR} o'zgaruvchisi uchun foydalanuvchidan {QUESTION} so'rovi"
       gamelab_setPromptWithChoices:
@@ -1432,10 +1465,7 @@ uz:
           PROPERTY:
             '"scale"': kattalik
           SIZE:
-            '25': extra small
-            '50': small
             '75': o‘rta
-            '100': large
       gamelab_setSizes:
         text: " {SPRITE} {PROPERTY} qiymatini {N}% ga o'rnatish"
         options:
@@ -1446,11 +1476,9 @@ uz:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': sekin
             '5': normada
             '7': tez
-            '9': extra fast
       gamelab_setTint:
         text: "{THIS} rangini {COLOR} ga o'zgartirish"
       gamelab_setupSim:
@@ -1529,6 +1557,12 @@ uz:
         text: "{SPRITE} x koordinatasi"
       gamelab_yLocationOf:
         text: "{SPRITE} y koordinatasi"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': qattiq
+            '"liquid"': suyuq
+            '"gas"': gaz
       KatiesBlocks_tumbling:
         text: dumboloq oshish
       Mikelab_addBehaviorSimple:
@@ -1827,14 +1861,10 @@ uz:
         options:
           INPUT1:
             '1': Limon sharbati
-            '3': baking soda
-            '5': both
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
             '1': Limon sharbati
-            '3': baking soda
-            '5': both
       ParticlesBlocks_statesOfMatter:
         options:
           BEHAVIOR:
@@ -1962,7 +1992,6 @@ uz:
       Poetry_whenLineShows:
         options:
           'N':
-            '0': "???"
             '1': '1'
             '2': '2'
             '3': '3'
@@ -2022,16 +2051,10 @@ uz:
         options:
           PORTION:
             '1': hamma
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': hamma
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       adaptations_adaptationBehaviors:
         options:
           BEHAVIOR:
@@ -2181,7 +2204,6 @@ uz:
       ecosystems_int10:
         options:
           VALUE:
-            '0': '0'
             '1': '1'
             '2': '2'
             '3': '3'

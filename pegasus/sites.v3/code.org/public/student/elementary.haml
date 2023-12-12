@@ -1,77 +1,149 @@
 ---
 title: Computer Science Curriculum for Grades K-5
-theme: responsive
+theme: responsive_full_width
 ---
 
-%link{type: "text/css", href: "/css/learn-carousel.css", rel: "stylesheet"}
-= view 'mobilecheck.js'
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 
-.solid-block-header
-  Grades K-5
+%section.no-padding-bottom
+  .wrapper
+    %h1=hoc_s(:elemeentary_page_main_title)
+    %p.body-one
+      =hoc_s(:elementary_page_main_description)
 
-%h1 Courses by Code.org
+%section
+  .wrapper
+    %h2
+      =hoc_s(:middle_high_page_hero_title)
+    %p
+      =hoc_s(:middle_high_page_hero_description)
+    .action-block.action-block--two-col
+      .media-wrapper.col-50
+        %img{src: "/images/houreofcode-students-banner.png", alt: ""}
+      .text-wrapper.col-50
+        %p.overline
+        %h3
+          =hoc_s(:middle_high_page_hero_title)
+        %p.heading-sm
+          =hoc_s(:middle_high_page_hero_description)
+        %a.link-button{href: "https://hourofcode.com/learn"}
+          =hoc_s(:middle_high_page_hourofcode_link)
 
-%h2 Computer Science Fundamentals Express Courses
+= view :section_divider_line
 
-A great option for students getting started on their own.  You'll learn the 
-fundamentals of computer science with drag & drop blocks.  Create your own 
-drawings and games.
+%section
+  .wrapper
+    %h2
+      =hoc_s(:elementary_page_own_pace_title)
+    %p
+      =hoc_s(:elementary_page_own_pace_description)
 
-%div{style: "clear: both"}
-%br
+    .action-block__wrapper.action-block__wrapper--two-col
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %p.overline
+            =hoc_s(:module_age_05_07)
+          %h3
+            =hoc_s(:elementary_page_own_pace_card_title_1)
+          %img{src: "/images/pre-reader-express-course-banner.png", alt: ""}
+          %p
+            =hoc_s(:elementary_page_own_pace_card_description_1)
+        .content-footer
+          %a.link-button{href: "https://studio.code.org/s/pre-express", target: "_blank", rel: "noopener noreferrer"}
+            =hoc_s(:elementary_page_own_pace_link_1)
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %p.overline
+            =hoc_s(:module_age_07_11)
+          %h3
+            =hoc_s(:elementary_page_own_pace_card_title_2)
+          %img{src: "/images/express-course-banner.png", alt: ""}
+          %p
+            =hoc_s(:elementary_page_own_pace_card_description_1)
+        .content-footer
+          %a.link-button{href: "https://studio.code.org/s/express", target: "_blank", rel: "noopener noreferrer"}
+            =hoc_s(:elementary_page_own_pace_link_2)
 
-.col-50{style: "padding-right: 10px;"}
-  %a{href: CDO.studio_url('/s/pre-express')}
-    %img{src: "/images/curriculum/course-tile-pre-reader-express.png", style: "max-width: 100%;"}
+= view :section_divider_line
 
-.col-50{style: "padding-right: 10px;"}
-  %a{href: CDO.studio_url('/s/express')}
-    %img{src: "/images/curriculum/course-tile-express.png", style: "max-width: 100%;"}
+%section
+  .wrapper
+    %h2
+      =hoc_s(:elementary_page_make_your_own_games_title)
+    .action-block.action-block--two-col
+      .media-wrapper.col-50
+        %img{src: "/images/sprite-lab-banner.png", alt: ""}
+      .text-wrapper.col-50
+        %p.overline
+          =hoc_s(:module_age_07)
+        %h3
+          =hoc_s(:elementary_page_make_your_own_games_card_title_1)
+        %p.heading-sm
+          =hoc_s(:elementary_page_make_your_own_games_card_description_1)
+        %a.link-button{href: "/spritelab"}
+          =hoc_s(:elementary_page_make_your_own_games_link)
 
-%div{style: "clear: both"}
+= view :section_divider_line
 
-%h2 Computer Science Fundamentals for Elementary Schools
+%section
+  .wrapper
+    %h2
+      =hoc_s(:middle_high_page_additional_resources_title)
+    %p=hoc_s(:middle_high_page_additional_resources_description)
+    .action-block.action-block--two-col{style: "margin-bottom: 2rem"}
+      .media-wrapper.col-50
+        %img{src: "/images/video-library-banner.png", alt: ""}
+      .text-wrapper.col-50
+        %h3
+          =hoc_s(:middle_high_page_video_library_title)
+        %p.heading-sm
+          =hoc_s(:middle_high_page_video_library_description)
+        %a.link-button{href: "https://code.org/videos"}
+          =hoc_s(:middle_high_page_video_library_link)
+    .action-block.action-block--two-col
+      .media-wrapper.col-50
+        %img{src: "/images/cs-journeys-banner.png", alt: ""}
+      .text-wrapper.col-50
+        %h3
+          =hoc_s(:middle_high_page_cs_journeys_title)
+        %p.heading-sm
+          =hoc_s(:middle_high_page_cs_journeys_description)
+        %a.link-button{href: "https://code.org/beyond"}
+          =hoc_s(:middle_high_page_cs_journeys_link)
 
-For pre-readers in elementary school classrooms
+= view :section_divider_line
 
-%div{style: "clear: both"}
+%section
+  .wrapper
+    %h2
+      =hoc_s(:elementary_page_computer_science_title)
+    %p
+      =hoc_s(:elementary_page_computer_science_description)
 
-.col-25
-  %a{href: CDO.studio_url('/s/coursea')}
-    %img{src: "/images/curriculum/new-course-tile-courseA.png"}
-
-.col-25
-  %a{href: CDO.studio_url('/s/courseb')}
-    %img{src: "/images/curriculum/new-course-tile-courseB.png"}
-
-%div{style: "clear: both"}
-%br
-%br
-
-For older students in elementary school classrooms
-
-%div{style: "clear: both"}
-
-.col-25
-  %a{href: CDO.studio_url('/s/coursec')}
-    %img{src: "/images/curriculum/new-course-tile-courseC.png"}
-
-.col-25
-  %a{href: CDO.studio_url('/s/coursed')}
-    %img{src: "/images/curriculum/new-course-tile-courseD.png"}
-
-.col-25
-  %a{href: CDO.studio_url('/s/coursee')}
-    %img{src: "/images/curriculum/new-course-tile-courseE.png"}
-
-.col-25
-  %a{href: CDO.studio_url('/s/coursef')}
-    %img{src: "/images/curriculum/new-course-tile-courseF.png"}
-
-%div{style: "clear: both"}
-
-%hr
-
-%h1 Courses from 3rd parties
-
-= view :learn_carousels, variation:'elementary'
+    .action-block__wrapper.action-block__wrapper--two-col
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %p.overline
+            =hoc_s(:module_label_grades)
+            =hoc_s(:module_grade_k_5)
+          %h3
+            =hoc_s(:elementary_page_computer_science_card_title_1)
+          = view :display_video_thumbnail, id: "cs_fundamentals", video_code: "rNIM1fzJ8u0", play_button: 'center', letterbox: 'false'
+          %p
+            =hoc_s(:elementary_page_computer_science_description_1)
+        .content-footer
+          %a.link-button{href: "https://code.org/csf", target: "_blank", rel: "noopener noreferrer"}
+            =hoc_s(:call_to_action_explore_curricula)
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %p.overline
+            =hoc_s(:module_label_grades)
+            =hoc_s(:module_grade_3_5)
+          %h3
+            =hoc_s(:elementary_page_computer_science_card_title_2)
+          = view :display_video_thumbnail, id: "cs_connections", video_code: "GDcKJ1v2W1s", play_button: 'center', letterbox: 'false'
+          %p
+            =hoc_s(:elementary_page_computer_science_description_2)
+        .content-footer
+          %a.link-button{href: "https://code.org/csc", target: "_blank", rel: "noopener noreferrer"}
+            =hoc_s(:call_to_action_explore_curricula)

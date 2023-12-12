@@ -5,9 +5,9 @@ import {SoundEvent} from './interfaces/SoundEvent';
 import MusicLibrary, {SampleSequence, SoundFolder} from './MusicLibrary';
 import SamplePlayer, {SampleEvent} from './SamplePlayer';
 import {generateNotesFromChord, ChordNote} from '../utils/Chords';
-import {logWarning} from '../utils/MusicMetrics';
 import {getTranposedNote, Key} from '../utils/Notes';
 import {Effects} from './interfaces/Effects';
+import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 
 // Using require() to import JS in TS files
 const soundApi = require('./sound');
@@ -23,14 +23,14 @@ const DEFAULT_KEY = Key.C;
  * uses a {@link SamplePlayer} to play sounds.
  */
 export default class MusicPlayer {
-  private readonly bpm: number;
-  private readonly key: Key;
+  private bpm: number;
+  private key: Key;
   private samplePlayer: SamplePlayer;
   private library: MusicLibrary | null;
 
   constructor(bpm: number = DEFAULT_BPM, key: Key = DEFAULT_KEY) {
-    this.bpm = bpm;
-    this.key = key;
+    this.bpm = this.validateBpm(bpm);
+    this.key = this.validateKey(key);
     this.samplePlayer = new SamplePlayer();
     this.library = null;
   }
@@ -39,9 +39,23 @@ export default class MusicPlayer {
    * Initializes the MusicPlayer and {@link SamplePlayer} with the music library.
    * Playback cannot start until the player is initialized.
    */
-  initialize(library: MusicLibrary) {
+  initialize(
+    library: MusicLibrary,
+    updateLoadProgress: (value: number) => void
+  ) {
     this.library = library;
-    this.samplePlayer.initialize(library);
+
+    // Set key and BPM from library if present
+    const libraryBpm = library.getBPM();
+    if (libraryBpm) {
+      this.bpm = this.validateBpm(libraryBpm);
+    }
+    const libraryKey = library.getKey();
+    if (libraryKey) {
+      this.key = this.validateKey(libraryKey);
+    }
+
+    this.samplePlayer.initialize(library, this.bpm, updateLoadProgress);
   }
 
   /**
@@ -121,10 +135,14 @@ export default class MusicPlayer {
   /**
    * Start playback. Schedules all queued playback events for playback
    * and tells the {@link SamplePlayer} to start playing.
+   *
+   * @param startPosition to start playback from. Defaults to 1
+   * (beginning of song) if not specified.
    */
-  playSong(events: PlaybackEvent[]) {
+  playSong(events: PlaybackEvent[], startPosition = 1) {
     this.samplePlayer.startPlayback(
-      events.map(event => this.convertEventToSamples(event)).flat()
+      events.map(event => this.convertEventToSamples(event)).flat(),
+      this.convertPlayheadPositionToSeconds(startPosition)
     );
   }
 
@@ -180,7 +198,7 @@ export default class MusicPlayer {
 
   private convertEventToSamples(event: PlaybackEvent): SampleEvent[] {
     if (this.library === null) {
-      logWarning('Music Player not initialized');
+      Lab2MetricsReporter.logWarning('Music Player not initialized');
       return [];
     }
 
@@ -192,7 +210,7 @@ export default class MusicPlayer {
       const soundEvent = event as SoundEvent;
       const soundData = this.library.getSoundForId(soundEvent.id);
       if (!soundData) {
-        logWarning('No sound for ID: ' + soundEvent.id);
+        Lab2MetricsReporter.logWarning('No sound for ID: ' + soundEvent.id);
         return [];
       }
 
@@ -282,13 +300,15 @@ export default class MusicPlayer {
       this.library.getFolderForPath(instrument);
 
     if (folder === null) {
-      logWarning(`No instrument ${instrument}`);
+      Lab2MetricsReporter.logWarning(`No instrument ${instrument}`);
       return null;
     }
 
     const sound = folder.sounds.find(sound => sound.note === note) || null;
     if (sound === null) {
-      logWarning(`No sound for note value ${note} on instrument ${instrument}`);
+      Lab2MetricsReporter.logWarning(
+        `No sound for note value ${note} on instrument ${instrument}`
+      );
       return null;
     }
 
@@ -321,5 +341,23 @@ export default class MusicPlayer {
     });
 
     return samples;
+  }
+
+  private validateBpm(bpm: number): number {
+    if (bpm < 1 || bpm > 500) {
+      console.warn('Invalid BPM. Defaulting to 120');
+      return DEFAULT_BPM;
+    }
+
+    return bpm;
+  }
+
+  private validateKey(key: number): Key {
+    if (Key[key] === undefined) {
+      console.warn('Invalid key. Defaulting to C');
+      return Key.C;
+    }
+
+    return key;
   }
 }

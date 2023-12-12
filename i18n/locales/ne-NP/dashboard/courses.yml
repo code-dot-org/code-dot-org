@@ -8,11 +8,11 @@ ne:
         csp-2018:
           assignment_family_title: AP® Computer Science Principles
     resources:
-      curriculum/csd/2020:
-        name: Curriculum
       curriculum/csd/2017:
+        name: Curriculum
+      curriculum/csd/2018:
         name: Curriculum
       curriculum/csd/2019:
         name: Curriculum
-      curriculum/csd/2018:
+      curriculum/csd/2020:
         name: Curriculum

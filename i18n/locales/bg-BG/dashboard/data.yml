@@ -39,6 +39,7 @@ bg:
         Custom: Художник
         CustomStudio: Театрална лаборатория
         Gamelab: Играта лаборатория
+        Spritelab: Sprite Lab
     trophy:
       name:
         Bronze: Бронз
@@ -507,14 +508,21 @@ bg:
         hoc_dance_warmup: Танцово Парти - Загрявка
         hoc_dance_events: Танцово Парти - Събития
         hoc_dance_properties: Танцово Парти - Характеристики
+        hoc_dance_congrats: Танцово Парти - Продължи да Купонясваш!
         teaching_csf_how_it_works: 'Преподаване на CS основи: Как Курсът Работи'
         what_is_cs: Какво са компютърните науки?
         repeat_block: Използване на Блокчето Повтаряй
         lesson_planning: Планиране на Урок
         opd_closing: 'Преподаване на CS основи: Затваряне & Следващи Стъпки'
         writing_first_program: Напишете първата си компютърна програма!
+        conditionals_with_cards: Ънплъгд Урок в Действие - Условия с Карти
+        songwriting_with_functions: Ънплъгд Урок в Действие - Писане на Песни с Функции
         what_is_an_event: Какво е събитие?
+        teaching_cs_pair_programming: 'Преподаване на CS Основи: Програмиране по Двойки'
+        teaching_problem_solving: 'Преподаване на CS Основи: Преподаване на Решаване на Проблеми'
+        csd_applab_designmode: 'CS Открития: App Lab - Режим на Проектиране'
         csd_pair_programming: Програмиране по двойки
+        csd_gamelab_functions: Викане и Дефиниране на Функции
         csd_applab_parameters: Функции с параметри
         csd_applab_loops: Цикли в App Lab
         csd_problem_solving_process: Процеса за Решаване на Проблеми
@@ -525,14 +533,19 @@ bg:
         csd_debugging: Отстраняване на грешки
         csd_applab_designmode_short: App Lab Режим на Дизайн
         csp-pd-welcome: Добре дошъл в Семейството!
+        u7-libraries-explanation: 'App Lab: Как да Направите Собствени Блокчета - Как да Използвате Библиотеки'
+        why-should-teach-unplugged-activities: 'ЧЗВ: Защо трябва да преподавам "ънплъгд" дейности?'
         cs-principles-intro-to-objects: 'CS Принципи: Въведение в Обекти'
         oceans_machine_learning: Машинно Обучение
         oceans_training_data: Данни за Обучение
+        hoc_dance_congrats_2019: Танцово Парти - Продължи да Купонясваш!
         hoc_dance_warmup_2019: Танцово Парти - Загрявка
         hoc_dance_events_2019: Танцово Парти - Събития
+        hoc_dance_measures_2019: Танцово Парти - Тактове
         hoc_dance_properties_2019: Танцово Парти - Характеристики
         csd_what_computers_do: Какво Правят Компютрите?
         csf_my_online_neighborhood_2020: Моят Онлайн Квартал
+        csf_follow_the_digital_trail: Следвай Онлайн Пътеката
         csf_private_and_personal_information: Лична Информация
         csd_what_computers_are: Какво е Компютър?
         csd_how_teamwork_works: Как Работи Работата в Екип
@@ -555,6 +568,9 @@ bg:
         PL_CSD_TeacherTips_Advise: Съвети за Учители - Съвет към Нови Учители
         PL_CSD_TeacherTips_IntroToCSD: Съвети за Учители - Въведение в Открития по КН
         PL_CSD_TeacherTips_ProblemSolvingProcess: Съвети за Учители - Процеса за Решаване на Проблеми
+        PL_CSD_TeacherTips_PairProgramming: Съвети за Учители - Програмиране по Двойки
+        PL_CSD_TeacherTips_Debugging: Съвети за Учители - Дебъгване
+        PL_CSD_TeacherTips_LeadLearner: Съвети за Учители - Водач Учещ
         hello_world_intro: Здравей Свят - Добре дошъл в Sprite Lab
         hello_world_events: Здравей Свят - Програмиране със Събития
         hello_world_congrats: Здравей Свят - Прави Каквото Искаш
@@ -571,11 +587,13 @@ bg:
         CSA-PL-variables: Създаване на Променливи в Java
         PL_CS_Journeys_Overview: CS Пътешествия
         CSA-PL-first-program: Писане на Програма в Java
+        csc-poem-art-intro: Въвеждащо Видео
         csc-poem-art-outro: Outro Видео
         csp_applab_parameters: Функции с параметри
         CSA-PL-intro-to-arrays: Едномерни (1D) Масиви
         CSA-PL-Printing-in-Java: Изписване в Java
         CS_Changing_Everything: Компютърните Науки Променят Всичко
+        csa-equals-video: Методът equals()
         csa-day-in-pm-pl: Какво прави мениджърът на проекта?
         csa-pl-creating-objects: Създаване на Обекти
         csd_sprite_properties: Свойства на Спрайта

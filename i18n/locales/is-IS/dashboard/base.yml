@@ -53,6 +53,7 @@ is:
         gender: 'Kyn'
         edit_header: 'Breyta upplýsingum reiknings'
         finish_sign_up_header: 'Ljúka við að stofna aðgang'
+        finish_sign_up_header_error: 'Vinsamlegast leiðréttu eftirfarandi villur:'
         finish_sign_up_subheader: 'Færðu inn eftirfarandi upplýsingar til að ljúka við að stofna Code.org aðgang fyrir <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Færðu inn eftirfarandi upplýsingar til að ljúka við að stofna Code.org aðgang fyrir **%{email}**.'
         finish_sign_up_subheader_provider: 'Færðu inn eftirfarandi upplýsingar til að ljúka við að stofna Code.org aðgang hjá <strong>%{provider}</strong> fyrir <strong>%{email}</strong>.'
@@ -60,6 +61,7 @@ is:
         reset_password_token: "Tengillinn sem þú hefur notað til að endurstilla lykilorðið"
         error:
           future: má ekki vera í framtíð
+        user_type: 'Tegund aðgangs'
         us_state: 'Fylki'
   beta: "beta"
   hello: "Halló heimur"

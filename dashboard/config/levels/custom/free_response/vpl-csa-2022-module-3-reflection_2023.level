@@ -1,0 +1,29 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2023-08-01T16:21:51.000Z",
+  "level_num": "custom",
+  "user_id": 884,
+  "properties": {
+    "encrypted": "false",
+    "tts_short_instructions_override": "How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
+    "tts_long_instructions_override": "Congratulations! You just wrote some code. You are officially a programmer!\r\n\r\nDid you notice that the last puzzle was a little more difficult? It was a challenge puzzle. Challenge puzzles are meant to stretch the boundaries of what students will do. We make it clear that they should be attempted, but do not require that they be completed for students to succeed for the lesson.\r\n\r\nNow take a moment to reflect. How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
+    "instructions_important": "false",
+    "long_instructions": "# Using The Theater in CSA\r\n\r\nIt is important to note that in many of the levels students will have the opportunity to practice writing programs in Java that don’t involve The Theater.  Using The Theater allows students another context to use key computer science concepts while creating unique and fun products.  \r\n\r\n## Reflect\r\n\r\nConsider your own students and your own experience with The Theater\r\n* What will frustrate students about using The Theater?  What tools do you have to support students through the frustration?\r\n* How can you celebrate student successes in the classroom?  How can you make student progress and success visible?\r\n\r\n<hr>\r\n\r\n**Up next:** Reflect on how you will prepare students for the Unit 4 project.\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 24299,
+    "allow_multiple_attempts": "true",
+    "name_suffix": "_2023"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2023-08-01T16:21:51.188+00:00\",\"changed\":[\"cloned from \\\"vpl-csa-2022-module-3-reflection\\\"\"],\"cloned_from\":\"vpl-csa-2022-module-3-reflection\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

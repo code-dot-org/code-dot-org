@@ -177,7 +177,7 @@ function createStore(reducer, initialState) {
               'props.showNextHint',
               'props.assetUrl',
               'props.exportApp',
-              'getChanges',
+              'payload.getChanges',
             ],
             ignoredPaths: [
               'hiddenLesson',

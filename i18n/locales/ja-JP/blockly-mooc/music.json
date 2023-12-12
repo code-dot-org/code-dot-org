@@ -56,5 +56,6 @@
   "startOver": "最初からやりなおす",
   "upload": "アップロード",
   "panelHeaderInstructions": "やり方:",
-  "panelHeaderWorkspace": "ワークスペース："
+  "panelHeaderWorkspace": "ワークスペース：",
+  "continue": "次へ"
 }

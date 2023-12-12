@@ -13,7 +13,7 @@
     "csp10-2023",
     "csp-post-survey-2023"
   ],
-  "published_state": "preview",
+  "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
@@ -56,6 +56,16 @@
       },
       "seeding_key": {
         "resource.key": "change_log"
+      }
+    },
+    {
+      "name": "Create PT Written Response Practice Opportunities",
+      "url": "https://docs.google.com/document/d/1MElyqUf08j_M69PDmeGianVGqWT3RyXhFEFHgxlU5RQ/edit?usp=sharing",
+      "key": "create_pt_callouts",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "create_pt_callouts"
       }
     },
     {
@@ -164,6 +174,18 @@
       },
       "seeding_key": {
         "resource.key": "syllabus"
+      }
+    },
+    {
+      "name": "Tech Requirements and Required Materials",
+      "url": "https://docs.google.com/document/d/1bz9KZcgb92D2-DZZdfghQy_HyTG7FRkOE4us3pwpRHY/edit?usp=sharing",
+      "key": "tech_requirements_and_required_materials",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "tech_requirements_and_required_materials"
       }
     },
     {

@@ -4,10 +4,10 @@
     "self-paced-pl-physical-computing1-2023",
     "self-paced-pl-physical-computing2-2023"
   ],
-  "published_state": "in_development",
+  "published_state": "stable",
   "instruction_type": "self_paced",
   "participant_audience": "teacher",
-  "instructor_audience": "universal_instructor",
+  "instructor_audience": "facilitator",
   "properties": {
     "family_name": "self-paced-pl-physical-computing",
     "has_verified_resources": true,

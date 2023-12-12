@@ -527,13 +527,9 @@
   volunteer_engineer_submission_subtitle_generic: '2015 年的12/7-12/13，有 100,000 個老師舉辦一小時玩程式活動，他們需要你的幫忙！ '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} 名教師需要志工。<br>%{num_volunteers} 人已自願參加，加入他們。"
   volunteer_engineer_submission_intro_background: "一小時玩程式（Hour of Code）是一個介紹計算機科學的全球性活動，在超過 180 個國家，有數以千萬計的學生響應。歡迎你在計算機科學教育週（CsedWeek，12/7-12/13）一同參與活動。"
-  volunteer_engineer_submission_intro_recruit: '這些老師希望有<span style="font-family: ''Gotham 7r'', sans-serif;">熱衷於計算機科學教育的人士</span>能夠在課堂上提供幫助，或是藉由談論計算機科學的可能性有多大（不一定要面對面，或許也能透過視訊）來<span style="font-family: ''Gotham 7r'', sans-serif;">啟發</span>學生的人。'
   volunteer_engineer_submission_intro_recruit_markdown: "老師都希望有**熱衷於電腦科學教育**的人士能夠在課堂上提供幫助，或是有人談論電腦科學的可能性有多大（不一定要面對面，或許也能以視訊通話），從而**啟發**學生。"
-  volunteer_engineer_submission_intro_guide: "進一步了解我們的<a href=\"%{volunteer_guide}\">志工專案</a>。"
   volunteer_engineer_submission_intro_guide_markdown: "進一步了解我們的<a href=\"%{volunteer_guide}\">志工專案</a>。"
-  volunteer_engineer_submission_intro_signup: "如果你是學習計算機科學的學生，或是軟體專業人士，請填寫下列資訊。必須年滿 18 歲才能申請為志工，所有填寫的訊息都會在<a href=\"/volunteer/local\">志工地圖</a>上公開顯示。<span class=\"form-required-field\">*</span>為必填。"
   volunteer_engineer_submission_intro_signup_markdown: "如果你是學習電腦科學的學生，或是軟體專業人士，請填寫下列資訊。必須年滿 18 歲才能申請為志工。在本節填寫的所有訊息都會在[志工地圖](/volunteer/local)上公開顯示。_*_為必填。"
-  volunteer_engineer_submission_intro_links: "需要些志工嗎？在我們的<a href=\"%{volunteer_local}\">志工地圖</a>上尋找本地有哪些志願者。"
   volunteer_engineer_submission_intro_links_markdown: "你是需要些志工的教師嗎？在我們的[志工地圖](%{volunteer_local})上尋找在地有哪些志願者。"
   volunteer_engineer_submission_update_information: "更新你的個人資訊"
   volunteer_engineer_submission_header_shared: "在志工地圖上分享給老師的資訊"
@@ -1523,12 +1519,14 @@
   header_stats: "統計資料"
   header_help_us: "幫助我們"
   header_about: "關於"
+  header_incubator: "孵化器"
   header_teacher_community: "教師社群"
   header_help_support: '幫助與支援'
   header_report_bug: "回報問題"
   header_report_abuse: "檢舉濫用"
   header_legal: "法律與隱私權"
   header_legal_privacy: "隱私政策"
+  header_legal_cookie_notice: "Cookie通知"
   header_legal_tos: "服務條款"
   header_tutorials: "所有教程"
   header_screen_reader_hamburger: "選單"
@@ -1637,7 +1635,7 @@
   hoc2018_mc_download_adventurer: "下載離線版的 Minecraft 探險家。"
   hoc2018_mc_educators: "致教師"
   hoc2018_mc_educators_box1_title: "在 Minecraft 裡寫程式"
-  hoc2018_mc_educators_box1_desc: 'Minecraft：教育版提供符合標準的Minecraft課程、培訓與編碼。'
+  hoc2018_mc_educators_box1_desc: "Minecraft：教育版提供符合標準的Minecraft課程、培訓與編碼。"
   hoc2018_mc_educators_box1_button: "這就啟動"
   hoc2018_mc_educators_box2_title: "下載主持人指南"
   hoc2018_mc_educators_box2_desc: "這個工具包會幫助你主持一小時玩程式，並讓你的學生投入到計算機科學。"
@@ -1745,7 +1743,7 @@
   hoc2018_mc_with_microsoft: "合作夥伴"
   hoc2018_mc_thank_microsoft: "感謝Microsoft支持我們的願景與使命，以確保每位孩童都有機會學習電腦科學及掌握在21世紀獲得成功的技能。"
   hoc2019_mc_mee_title: "Minecraft AI for Good"
-  hoc2019_mc_mee_description1: '新的《Minecraft Hour of Code》教程現已在 Minecraft 教育版上線：適用於 Windows、Mac 與 iPad。和你的學生一同學習編碼的基礎知識，一起探索人工智慧！'
+  hoc2019_mc_mee_description1: "新的《Minecraft Hour of Code》教程現已在 Minecraft 教育版上線：適用於 Windows、Mac 與 iPad。和你的學生一同學習編碼的基礎知識，一起探索人工智慧！"
   hoc2019_mc_mee_description2: "免費獲得資源，包括課程計劃、影片、電腦科學課程及教師培訓。"
   hoc2019_mc_more_coding_resources: "更多編程資源"
   hoc2019_dance_previous_versions: "你在找之前的舞蹈派對嗎？\n這裡有 2018 年版的[第 1 部分](%{dance_2018_link})和[第 2 部分](%{dance_extras_2018_link})。"
@@ -1758,18 +1756,18 @@
   page_not_available_description: "我們很抱歉地告知您，您所要求的頁面目前已被移除。如果您仍然需要存取，歡迎寄信給我們[support@code.org](%{support_email_link})，告知您的需求"
   page_not_available_button: "返回主頁"
   hoc2020_mc_available_code_org: "可於 Code.org 取得"
-  hoc2020_mc_available_mee: '可於 Minecraft 教育版取得'
+  hoc2020_mc_available_mee: "可於 Minecraft 教育版取得"
   hoc2020_mc_mee_title: "我的世界兩個村莊的故事"
-  hoc2020_mc_mee_description: '現在可於 Windows、Mac、Chromebook 及 iPad 的 Minecraft 教育版取得全新 Minecraft 一小時玩程式教程。學習基本編程，與學生探討多樣性和包容性。取得免費資源，包括教學計劃、影片、計算機科學課程、公平課程和教師培訓。'
+  hoc2020_mc_mee_description: "現在可於 Windows、Mac、Chromebook 及 iPad 的 Minecraft 教育版取得全新 Minecraft 一小時玩程式教程。學習基本編程，與學生探討多樣性和包容性。取得免費資源，包括教學計劃、影片、計算機科學課程、公平課程和教師培訓。"
   hoc2021_mc_mee_title: "「最新世界」計時"
-  hoc2021_mc_mee_description: '回到過去，學習編寫程式碼！全新的「我的世界一小時程式編程」教學課程現已在 Windows、Mac、色彩筆記本和 iPad 版的「我的世界：教育版」中推出。開始使用免費的教育工作者資源、訓練和影片。'
+  hoc2021_mc_mee_description: "回到過去，學習編寫程式碼！全新的「我的世界一小時程式編程」教學課程現已在 Windows、Mac、色彩筆記本和 iPad 版的「我的世界：教育版」中推出。開始使用免費的教育工作者資源、訓練和影片。"
   hoc2021_mc_mee_villages_title: "兩個村莊的故事"
-  hoc2021_mc_mee_villages_description: '在 Minecraft：教育版中，與您的學生一起學習編碼基礎知識，並探索多元化和包容性。'
+  hoc2021_mc_mee_villages_description: "在 Minecraft：教育版中，與您的學生一起學習編碼基礎知識，並探索多元化和包容性。"
   hoc2021_mc_mee_ai_title: "人工智慧"
-  hoc2021_mc_mee_ai_description: '與您的學生一起探索人工智慧，並在 Minecraft：教育版中學習編寫程式碼。'
+  hoc2021_mc_mee_ai_description: "與您的學生一起探索人工智慧，並在 Minecraft：教育版中學習編寫程式碼。"
   hoc2022_mc_mee_title: "我的世界逃生莊園"
   hoc2022_mc_mee_description: '在黎明前逃離神秘的豪宅，賺取一百萬顆翡翠！新鮮出爐的我的世界一小時玩程式教程現已在《我的世界：教育版》中推出，適用於Windows、Mac、Chromebook、Ipad和移動設備。開始使用免費的教育工作者資源、培訓和視訊。'
-  hoc2022_mc_mee_timecraft_description: '在《我的世界：教育版》的這個免費編程課中，進行時間旅行，拯救未來。'
+  hoc2022_mc_mee_timecraft_description: "在《我的世界：教育版》的這個免費編程課中，進行時間旅行，拯救未來。"
   footer_powered_by_aws: "Powered by Amazon Web Services"
   footer_built_on_github: "構建於 Microsoft 的 Github"
   codebytes_skinny_banner_title: "12 月 7–11 日，加入我們 CodeBytes 的迷你課程直播。"
@@ -1818,7 +1816,7 @@
   ai_zooniverse: "祖尼爾斯-快照山斑馬"
   ai_zooniverse_description: "幫助保護瀕危的開普山斑馬通過識別不同的動物的圖像。"
   ai_audience: "觀眾"
-  ai_minecraft_description: '免費取得包含課程計畫、影片、計算機科學課程和教師培訓等各種資源。（需要當個創世神：教育版）'
+  ai_minecraft_description: "免費取得包含課程計畫、影片、計算機科學課程和教師培訓等各種資源。（需要當個創世神：教育版）"
   ai_k_12_audience: "K-12 (需要閱讀)"
   ai_microsoft_workshop: "免費的微軟線上工作坊"
   ai_microsoft_workshop_description: "透過免費 STEM 和編碼工作坊激發好奇心。"

@@ -7,19 +7,11 @@ ga:
       BadGuys_setSizeAll_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': tamall
-            '2.00': large
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': tamall
-            '2.00': large
-            '3.00': extra large
       Dancelab_alternateMoves:
         text: "malartaíodh gach {GROUP} idir {MOVE1} \nagus {MOVE2} gach {N} tomhas"
         options:
@@ -67,6 +59,11 @@ ga:
           UNIT:
             '"measures"': tomhas
             '"seconds"': soicind
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': tomhas
+            '"seconds"': soicind
       Dancelab_changeColorBy:
         text: 'méadaigh {METHOD} de gach {COLOR}: {AMOUNT}'
         options:
@@ -106,6 +103,27 @@ ga:
             MOVES.Kick: Réalta
             MOVES.ThisOrThat: Seo nó Siúd
             MOVES.Rest: Dada
+      Dancelab_changeMoveEachLR_slothcat:
+        text: déanadh gach {GROUP} {MOVE} {DIR} go brách
+        options:
+          GROUP:
+            '"CAT"': cat
+            '"SLOTH"': spadán
+          MOVE:
+            MOVES.Roll: Tonn Choirp
+            MOVES.ClapHigh: Bualadh Bos Ard
+            MOVES.Dab: Daba
+            MOVES.DoubleJam: Dúbailt Síos
+            MOVES.Drop: Titim
+            MOVES.Floss: Flas
+            MOVES.Fresh: Úr
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Réalta
+            MOVES.ThisOrThat: Seo nó Siúd
+            MOVES.Rest: Dada
+            '"next"': "(Ar Aghaidh)"
+            '"prev"': "(Siar)"
+            '"rand"': "(Randamach)"
       Dancelab_changeMoveLR:
         text: déanadh {SPRITE} {MOVE} {DIR} go brách
         options:
@@ -446,26 +464,6 @@ ga:
             '18': '18'
             '19': '19'
             '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
-            '40': '40'
           COSTUME:
             '"ALIEN"': eachtrán
             '"BEAR"': béar
@@ -575,6 +573,50 @@ ga:
             '"iceCream"': Uachtair Reoite
             '"default"': Sorcha
             '"neon"': Gléineach
+            '"tropical"': Trópaiceach
+            '"vintage"': Sean-Nóis
+            '"warm"': Teolaí
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          socraigh éifeacht an chúlra:
+          {EFFECT} {PALETTE}
+        options:
+          EFFECT:
+            '"none"': Dada
+            '"rand"': "(Randamach)"
+            '"quads"': Uillinneacha
+            '"circles"': Ciorcail
+            '"color_cycle"': Dathanna
+            '"diamonds"': Diamaint
+            '"disco_ball"': Liathróid Dioscó
+            '"fireworks"': Tinte ealaíne
+            '"flowers"': Bláthanna
+            '"growing_stars"': Réaltaí ag fás
+            '"swirl"': Hiopnó
+            '"kaleidoscope"': Cailéideascóp
+            '"lasers"': Urlár Damhsa Léasair
+            '"splatter"': Steall Péinte
+            '"rainbow"': Tuar ceatha
+            '"ripples_random"': Tonnáin Randamacha
+            '"ripples"': Tonnáin
+            '"snowflakes"': Sneachta
+            '"text"': Ainmneacha Amhráin
+            '"galaxy"': An Spás
+            '"sparkles"': Drithlí
+            '"spiral"': Bís
+            '"disco"': Cearnóga
+            '"squiggles"': Caisirníní
+            '"starburst"': Pléascadh Réaltaí
+            '"stars"': Réaltaí
+            '"music_wave"': Tonnta
+          PALETTE:
+            '"rave"': Dubh is Bán
+            '"cool"': Fionnuar
+            '"electronic"': Leictreonach
+            '"iceCream"': Uachtair Reoite
+            '"default"': Sorcha
+            '"neon"': Gléineach
+            '"rainbow"': Tuar ceatha
             '"tropical"': Trópaiceach
             '"vintage"': Sean-Nóis
             '"warm"': Teolaí
@@ -1198,9 +1240,7 @@ ga:
       gamelab_makeSpritesWithSize:
         options:
           SIZE:
-            '30': small
             '50': tamall
-            '100': large
       gamelab_mirrorSprite:
         text: aghaidh {SPRITE} {DIRECTION}
         options:
@@ -1270,10 +1310,7 @@ ga:
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
-            '25': extra small
-            '50': small
             '75': tamall
-            '100': large
       gamelab_setProp:
         text: 'socraigh {PROPERTY} do {SPRITE}: {VAL}'
         options:
@@ -1290,10 +1327,7 @@ ga:
           PROPERTY:
             '"scale"': méid
           SIZE:
-            '25': extra small
-            '50': small
             '75': tamall
-            '100': large
       gamelab_setSizes:
         text: 'socraigh {PROPERTY} do {SPRITE}: {N}%'
         options:
@@ -1304,11 +1338,9 @@ ga:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': mall
             '5': gnáthmhód
             '7': sciobtha
-            '9': extra fast
       gamelab_setTint:
         text: athraigh dath {THIS} go {COLOR}
       gamelab_showTitleScreen:
@@ -1708,7 +1740,6 @@ ga:
       Poetry_whenLineShows:
         options:
           'N':
-            '0': "???"
             '1': '1'
             '2': '2'
             '3': '3'
@@ -1755,16 +1786,10 @@ ga:
         options:
           PORTION:
             '1': uile
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': uile
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       adaptations_adaptationBehaviors:
         options:
           BEHAVIOR:
@@ -1892,7 +1917,6 @@ ga:
       ecosystems_int10:
         options:
           VALUE:
-            '0': '0'
             '1': '1'
             '2': '2'
             '3': '3'

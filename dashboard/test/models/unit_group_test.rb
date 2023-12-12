@@ -140,7 +140,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student, seeded_unit_group.participant_audience
     assert_equal Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, seeded_unit_group.instructor_audience
     course_version = seeded_unit_group.course_version
-    assert_not_nil course_version
+    refute_nil course_version
     assert_equal '2021', course_version.key
     assert_equal 'family', course_version.course_offering&.key
     assert_equal Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, course_version.published_state
@@ -580,7 +580,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     unit_group = create :unit_group, name: 'my-unit-group', family_name: 'my-family', version_year: '1999', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
     CourseOffering.add_course_offering(unit_group)
 
-    test_locale = :"te-ST"
+    test_locale = :'te-ST'
     I18n.locale = test_locale
     custom_i18n = {
       'data' => {
@@ -646,7 +646,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     unit1.reload
     unit2.reload
 
-    test_locale = :"te-ST"
+    test_locale = :'te-ST'
     I18n.locale = test_locale
     custom_i18n = {
       'data' => {
@@ -718,9 +718,9 @@ class UnitGroupTest < ActiveSupport::TestCase
 
     [csp_2017, csp_2018, csp_2019, csp_2020].each do |c|
       summary = c.summarize_course_versions(create(:teacher))
-      assert_equal ["Computer Science Principles ('17-'18)", "Computer Science Principles ('18-'19)", "Computer Science Principles ('19-'20)"], summary.values.map {|h| h[:name]}
-      assert_equal [true, true, false], summary.values.map {|h| h[:is_stable]}
-      assert_equal [false, true, false], summary.values.map {|h| h[:is_recommended]}
+      assert_equal(["Computer Science Principles ('17-'18)", "Computer Science Principles ('18-'19)", "Computer Science Principles ('19-'20)"], summary.values.map {|h| h[:name]})
+      assert_equal([true, true, false], summary.values.map {|h| h[:is_stable]})
+      assert_equal([false, true, false], summary.values.map {|h| h[:is_recommended]})
     end
   end
 
@@ -736,9 +736,9 @@ class UnitGroupTest < ActiveSupport::TestCase
 
     [csp_2017, csp_2018, csp_2019, csp_2020].each do |c|
       summary = c.summarize_course_versions(create(:student))
-      assert_equal ["Computer Science Principles ('18-'19)"], summary.values.map {|h| h[:name]}
-      assert_equal [true], summary.values.map {|h| h[:is_stable]}
-      assert_equal [true], summary.values.map {|h| h[:is_recommended]}
+      assert_equal(["Computer Science Principles ('18-'19)"], summary.values.map {|h| h[:name]})
+      assert_equal([true], summary.values.map {|h| h[:is_stable]})
+      assert_equal([true], summary.values.map {|h| h[:is_recommended]})
     end
   end
 
@@ -966,8 +966,21 @@ class UnitGroupTest < ActiveSupport::TestCase
     setup do
       File.stubs(:write)
       @csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+      csp1_2017 = create(:script, name: 'csp1-2017', supported_locales: ['fake-locale'])
+      create :unit_group_unit, unit_group: @csp_2017, script: csp1_2017, position: 1
+      csp2_2017 = create(:script, name: 'csp2-2017', supported_locales: ['fake-locale'])
+      create :unit_group_unit, unit_group: @csp_2017, script: csp2_2017, position: 1
+
       @csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
-      create(:unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview)
+      csp1_2018 = create(:script, name: 'csp1-2018', supported_locales: ['fake-locale'])
+      create :unit_group_unit, unit_group: @csp_2018, script: csp1_2018, position: 1
+      csp2_2018 = create(:script, name: 'csp2-2018', supported_locales: [])
+      create :unit_group_unit, unit_group: @csp_2018, script: csp2_2018, position: 1
+
+      @csp_2019 = create(:unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview)
+      csp1_2019 = create(:script, name: 'csp1-2019', supported_locales: ['fake-locale'])
+      create :unit_group_unit, unit_group: @csp_2019, script: csp1_2019, position: 1
+
       @student = create :student
     end
 
@@ -975,9 +988,16 @@ class UnitGroupTest < ActiveSupport::TestCase
       assert_nil UnitGroup.latest_stable_version('fake-family')
     end
 
-    test 'latest_stable_version returns latest course version' do
-      latest_version = UnitGroup.latest_stable_version('csp')
-      assert_equal @csp_2018, latest_version
+    test 'latest_stable_version returns nil if no stable course versions support user locale' do
+      assert_nil UnitGroup.latest_stable_version('csp', locale: 'invalid-locale')
+    end
+
+    test 'latest_stable_version returns the latest stable course version where each unit supports user locale' do
+      assert_equal @csp_2017, UnitGroup.latest_stable_version('csp', locale: 'fake-locale')
+    end
+
+    test 'latest_stable_version returns latest stable course version for English locales' do
+      assert_equal @csp_2018, UnitGroup.latest_stable_version('csp', locale: 'en-US')
     end
 
     test 'latest_assigned_version returns latest version in family assigned to student' do
@@ -1157,5 +1177,18 @@ class UnitGroupTest < ActiveSupport::TestCase
     filepath = "#{Rails.root}/test/fixtures/#{unit_group_name}.course"
     UnitGroup.load_from_path(filepath)
     assert UnitGroup.find_by_name(unit_group_name)
+  end
+
+  test 'supported_locale_codes' do
+    csx = create(:unit_group, name: 'csx-2050', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    csx1 = create(:script, name: 'csx1', supported_locales: ['it-IT', 'en-GB', 'zh-TW', 'tlh'])
+    csx2 = create(:script, name: 'csx2', supported_locales: ['it-IT', 'tlh', 'zh-TW', 'es-MX'])
+    csx3 = create(:script, name: 'csx3', supported_locales: ['it-IT', 'en-GB', 'zh-TW'])
+
+    create(:unit_group_unit, position: 1, unit_group: csx, script: csx1)
+    create(:unit_group_unit, position: 2, unit_group: csx, script: csx2)
+    create(:unit_group_unit, position: 3, unit_group: csx, script: csx3)
+
+    assert_equal ['en-US', 'it-IT', 'zh-TW'], csx.supported_locale_codes
   end
 end

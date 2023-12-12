@@ -59,7 +59,7 @@ class PardotV2
   # @yieldreturn [Array<Hash>] an array of hash of prospect data
   # @raise [ArgumentError] if 'id' is not in the list of fields
   # @raise [StandardError] if receives errors in Pardot response
-  def self.retrieve_prospects(last_id, fields, limit = nil, only_deleted = false)
+  def self.retrieve_prospects(last_id, fields, limit = nil, only_deleted: false)
     raise ArgumentError.new("Missing value 'id' in fields argument") unless fields.include? 'id'
     total_results_retrieved = 0
 
@@ -87,8 +87,8 @@ class PardotV2
       yield prospects if block_given?
 
       total_results_retrieved += prospects.length
-      log "Retrieved #{total_results_retrieved} prospects. Last Pardot ID = #{last_id}."\
-        " #{limit.nil? ? 'No limit' : "Limit = #{limit}"}."
+      log "Retrieved #{total_results_retrieved} prospects. Last Pardot ID = #{last_id}. " \
+        "#{limit.nil? ? 'No limit' : "Limit = #{limit}"}."
       break if limit && total_results_retrieved >= limit
     end
 
@@ -125,7 +125,7 @@ class PardotV2
   # @param [Hash] data
   # @param [Boolean] eager_submit
   # @return [Array<Array>] @see process_batch method
-  def batch_create_prospects(email, data, eager_submit = false)
+  def batch_create_prospects(email, data, eager_submit: false)
     prospect = self.class.convert_to_pardot_prospect data.merge(email: email)
     @new_prospects << prospect
 
@@ -153,7 +153,7 @@ class PardotV2
   # @param [Hash] new_contact_data a hash with original contact keys
   # @param [Boolean] eager_submit
   # @return [Array<Array>] @see process_batch method
-  def batch_update_prospects(email, pardot_id, old_prospect_data, new_contact_data, eager_submit = false)
+  def batch_update_prospects(email, pardot_id, old_prospect_data, new_contact_data, eager_submit: false)
     new_prospect_data = self.class.convert_to_pardot_prospect new_contact_data
     delta = self.class.calculate_data_delta old_prospect_data, new_prospect_data
     return [], [] unless delta.present?
@@ -381,7 +381,7 @@ class PardotV2
     # Return indexes of rejected emails and their error messages
     errors = extract_batch_request_errors doc
 
-    log "Completed a batch request to #{api_endpoint} in #{time_elapsed.round(2)} secs. "\
+    log "Completed a batch request to #{api_endpoint} in #{time_elapsed.round(2)} secs. " \
       "#{prospects.length} prospects submitted. #{errors.length} rejected."
 
     errors

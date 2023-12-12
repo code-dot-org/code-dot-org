@@ -14,7 +14,7 @@ Thank you for joining the movement! We want to help you go further.
 If you're a district or school administrator, see our [Administrator Guide](https://<%= codedotorg %>/administrators) for expanding access in your school or district.
 
 ### Teachers
-If you're a teacher, view our curriculum and professional learning options for [teaching computer science](https://<%= studiodotcodedotorg %>/courses?view=teacher) to your students - no computer science experience necessary.
+If you're a teacher, view our curriculum and professional learning options for [teaching computer science](https://<%= codedotorg %>/teach) to your students - no computer science experience necessary.
 
 We also have [resources to help you advocate](https://<%= codedotorg %>/promote) for the need for computer science in your area.
 

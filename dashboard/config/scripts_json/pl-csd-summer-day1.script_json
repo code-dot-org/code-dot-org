@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-06-15 17:01:18 UTC",
+    "serialized_at": "2023-07-05 19:05:11 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -90,7 +90,7 @@
     },
     {
       "key": "lesson-6",
-      "name": "Unit 1: The Problem Solving Process in CS Dicoveries ",
+      "name": "Unit 1: The Problem Solving Process in CS Discoveries ",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -148,7 +148,7 @@
       "relative_position": 7,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose**:\n* **Essential Practice:** Teachers provide opportunities for exploration coupled with opportunities for sensemaking.\n\n* **Lesson Decisions:**\n  * Allow participants time to explore Web Lab before discussing its capabilities as a whole group\n  * Watch videos together as a whole group and utilize the discussion questions from the teacher resources to facilitate group sense making\n  * Do not answer questions directly, instead point participants to resources that might help them answer the question themselves.\n  * Create a poster with a list of resources throughout the lesson and refer to it often. Have participants keep a similar list in their journals.\n\n* **Debrief Topic:** Exploration\n\n**Objectives:**\n* Participants understand the value of exploration along with how resources can support student exploration\n* Participants gain experience using HTML and Web Lab\n\n**Suggested Time:** 55 minutes\n\n<a href=\"https://studio.code.org/s/csd2-2022/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> ",
+        "overview": "**Purpose**:\n* **Essential Practice:** Teachers provide opportunities for exploration coupled with opportunities for sensemaking.\n\n* **Lesson Decisions:**\n  * Allow participants time to explore Web Lab before discussing its capabilities as a whole group\n  * Watch videos together as a whole group and utilize the discussion questions from the teacher resources to facilitate group sense making\n  * Do not answer questions directly, instead point participants to resources that might help them answer the question themselves.\n  * Create a poster with a list of resources throughout the lesson and refer to it often. Have participants keep a similar list in their journals.\n\n* **Debrief Topic:** Exploration\n\n**Objectives:**\n* Participants understand the value of exploration along with how resources can support student exploration\n* Participants gain experience using HTML and Web Lab\n\n**Suggested Time:** 55 minutes\n\n<a href=\"https://studio.code.org/s/csd2-2023/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> ",
         "preparation": "* Review the Code Studio levels\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "student_overview": "**Question of the Day:** How can we tell the computer both *what* to put on the web page, and *how* to organize it?\n\n\nYou will look at an HTML page in Web Lab and use HTML to write your first web page of the unit.\n"
       },
@@ -184,7 +184,7 @@
       "relative_position": 9,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose**:\n* **Essential Practice:** Teachers incorporate opportunities for student collaboration into the lesson\n\n* **Lesson Decisions:**\n  * Encourage students to discuss questions with a partner before asking for help from the teacher\n  * During discussions, have participants collaborate with table teams to develop group answers\n  * Encourage participants to work together to solve bugs\n\n\n* **Debrief Topic:** Peer Collaboration\n\n**Objectives:**\n* Participants brainstorm ways to promote student collaboration during skill building lessons\n* Participants are able to use CSS to change the style of text on a web page\n\n\n**Suggested Time:** 55 minutes\n\n<a href=\"https://studio.code.org/s/csd2-2022/lessons/6\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> \n",
+        "overview": "**Purpose**:\n* **Essential Practice:** Teachers incorporate opportunities for student collaboration into the lesson\n\n* **Lesson Decisions:**\n  * Encourage students to discuss questions with a partner before asking for help from the teacher\n  * During discussions, have participants collaborate with table teams to develop group answers\n  * Encourage participants to work together to solve bugs\n\n\n* **Debrief Topic:** Peer Collaboration\n\n**Objectives:**\n* Participants brainstorm ways to promote student collaboration during skill building lessons\n* Participants are able to use CSS to change the style of text on a web page\n\n\n**Suggested Time:** 55 minutes\n\n<a href=\"https://studio.code.org/s/csd2-2023/lessons/6\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> \n",
         "preparation": "* Create a new poster titled **CSS Properties** if your students will not be tracking new CSS properties in their journals\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "student_overview": "**Question of the Day:** How can we change the style of text on a web page?\n\nIn this lesson, you will learn how to use CSS to style the HTML elements on your web page. \n\n"
       },

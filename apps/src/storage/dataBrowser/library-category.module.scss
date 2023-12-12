@@ -1,24 +1,24 @@
-@import "color.scss";
+@import 'color', 'font';
 
 .categoryName {
-  font-family: "Gotham 7r", sans-serif;
+  @include main-font-bold;
   cursor: pointer;
   color: $dark_charcoal;
 }
 
 .tableNumber {
+  @include main-font-regular;
   float: right;
-  font-family: "Gotham 4r", sans-serif;
   color: $light_gray;
 }
 
 .categoryDescription {
-  font-family: "Gotham 4r", sans-serif;
+  @include main-font-regular;
   color: $dark_charcoal;
 }
 
 .tableName {
-  font-family: "Gotham 5r", sans-serif;
+  @include main-font-semi-bold;
   color: $cyan;
 }
 

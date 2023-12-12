@@ -17,6 +17,7 @@
   "blockly_blockPlaySoundsSequentialTooltip": "reproduza sons sequencialmente",
   "blockly_blockPlaySoundsTogether": "joguem juntos",
   "blockly_blockPlaySoundsTogetherTooltip": "reproduzam sons juntos",
+  "blockly_blockPlayPattern": "tocar bateria {pattern}",
   "blockly_blockPlayPatternTooltip": "tocar bateria",
   "blockly_blockRepeat": "repita {num} vezes",
   "blockly_blockRepeatTooltip": "repita",
@@ -38,6 +39,8 @@
   "blockly_fieldRestOneMeasure": "1 medida",
   "blockly_fieldRestMeasures": "{num} medidas",
   "blockly_fieldTriggerStartImmediately": "imediatamente",
+  "blockly_fieldTriggerStartNextBeat": "na próxima batida",
+  "blockly_fieldTriggerStartNextMeasure": "na próxima medida",
   "blockly_functionNamePlaceholder": "minha função",
   "blockly_toolboxCategoryEffects": "Efeitos",
   "blockly_toolboxCategoryEvents": "Eventos",
@@ -47,7 +50,7 @@
   "blockly_toolboxCategoryPlay": "Sons",
   "blockly_toolboxCategorySimple": "Simples",
   "blockly_toolboxCategoryTracks": "Faixas",
-  "blockly_toolboxCategoryVariables": "variáveis",
+  "blockly_toolboxCategoryVariables": "Variáveis",
   "chordArpeggioUp": "Arpejo Up",
   "chordArpeggioDown": "Arpejo Down",
   "chordArpeggioRandom": "Arpejo aleatório",
@@ -58,5 +61,8 @@
   "startOver": "Começar do início",
   "upload": "Fazer upload",
   "panelHeaderInstructions": "Instruções",
-  "panelHeaderWorkspace": "Área de trabalho: "
+  "panelHeaderWorkspace": "Área de trabalho: ",
+  "panelHeaderControls": "Controles",
+  "panelHeaderTimeline": "Cronograma",
+  "continue": "Avançar"
 }

@@ -7,6 +7,7 @@
 #  parent_email   :string(255)      not null
 #  uuid           :string(36)       not null
 #  reminders_sent :integer          default(0), not null
+#  resends_sent   :integer          default(0), not null
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
 #

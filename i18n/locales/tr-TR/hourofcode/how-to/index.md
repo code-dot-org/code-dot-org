@@ -25,7 +25,7 @@ Hour of Code'u denemek, öğrencileri belki de ilk defa bilgisayar bilimiyle tan
 
 <a id="how-to-video"></a>
 
-## 1. Hour of Code Nasıl Yapılır? videosunu izleyin <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. Hour of Code Nasıl Yapılır? videosunu izleyin <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -72,7 +72,7 @@ Eğlenceye katılmak isteyebilecek diğer öğretmenlere Hour of Code'u tanıtı
 
 ### Etkinliğini Kaydederek Gönüllülere Haber Verin
 
-[Hour of Code etkinliğinizi kaydettirdiğinizde](/#join), başarılı bir Kodlama Saati düzenlemek için haberler ve ipuçları içeren yararlı e-postalar alacaksınız. Aynı zamanda, bölgenizdeki gönüllülere, okulunuzun katıldığını da bu şekilde bildirirsiniz. Harika bir kaynak olan gönüllüler sınıfınıza gelerek bilgisayar bilimi hakkında konuşabilir veya öğrencilerinize Hour of Code aktivitelerinde yardımcı olabilirler.
+[Hour of Code etkinliğinize kaydolduğunuzda](/events) başarılı bir Hour of Code'a ev sahipliği yapmak için haberler ve ipuçları içeren yararlı e-postalar alacaksınız. Aynı zamanda, bölgenizdeki gönüllülere, okulunuzun katıldığını da bu şekilde bildirirsiniz. Harika bir kaynak olan gönüllüler sınıfınıza gelerek bilgisayar bilimi hakkında konuşabilir veya öğrencilerinize Hour of Code aktivitelerinde yardımcı olabilirler.
 
 ### Öğrencilerinizi Heyecanlandırın
 

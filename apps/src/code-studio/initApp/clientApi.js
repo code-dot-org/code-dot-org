@@ -201,7 +201,9 @@ var base = {
         callback(null, data);
       })
       .fail(function (request, status, error) {
-        var err = errorString(request, status, error);
+        // json_bad_request helper adds details to the responseJSON
+        const details = request.responseJSON?.details || null;
+        const err = errorString(request, status, error, details);
         callback(err, false);
       });
   },
@@ -231,9 +233,10 @@ var base = {
   },
 };
 
-function errorString(request, status, error) {
+function errorString(request, status, error, details = null) {
   return new Error(
-    `httpStatusCode: ${request.status}; status: ${status}; error: ${error}`
+    `httpStatusCode: ${request.status}; status: ${status}; error: ${error}`,
+    {cause: details}
   );
 }
 

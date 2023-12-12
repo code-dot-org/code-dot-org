@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "musiclab",
-    "serialized_at": "2023-06-09 00:42:17 UTC",
+    "serialized_at": "2023-07-25 22:00:05 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -51,10 +51,30 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "4d6d179c-5eff-45cd-b0c6-51c6793a7e69",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4d6d179c-5eff-45cd-b0c6-51c6793a7e69",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "musiclab-2023"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "35f0a999-d2d4-4110-a6b7-ca74b748bd1a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "35f0a999-d2d4-4110-a6b7-ca74b748bd1a",
+        "lesson_activity.key": "4d6d179c-5eff-45cd-b0c6-51c6793a7e69"
+      }
+    }
   ],
   "script_levels": [
 

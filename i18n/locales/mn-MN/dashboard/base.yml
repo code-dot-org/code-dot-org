@@ -53,6 +53,7 @@ mn:
         gender: 'Жендер'
         edit_header: 'Бүртгэлийн мэдээллээ засах'
         finish_sign_up_header: 'Бүртгэлээ үүсгэж дуусгах'
+        finish_sign_up_header_error: 'Дараах алдааг засаарай:'
         finish_sign_up_subheader: '<strong>%{email}</strong>-д зориулж Code.org-н бүртгэл үүсгэж дуусгахын тулд дараах мэдээллийг бөглөөрэй.'
         finish_sign_up_subheader_markdown: '**%{email}**-д зориулж Code.org-н бүртгэл үүсгэж дуусгахын тулд дараах мэдээллийг бөглөөрэй.'
         finish_sign_up_subheader_provider: '<strong>%{email}</strong>-д зориулж <strong>%{provider}</strong>-н хамт Code.org-н бүртгэл үүсгэж дуусгахын тулд дараах мэдээллийг бөглөөрэй.'
@@ -60,6 +61,7 @@ mn:
         reset_password_token: "Таны дагасан нууц үг шинэчлэх холбоос"
         error:
           future: ирээдүйд байж болохгүй
+        user_type: 'Бүртгэлийн төрөл'
         us_state: 'Муж'
   beta: "бета хувилбар"
   hello: "Сайн уу дэлхий"

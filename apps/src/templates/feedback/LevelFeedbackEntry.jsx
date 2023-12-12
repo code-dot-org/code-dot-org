@@ -9,6 +9,7 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import {KeepWorkingBadge} from '@cdo/apps/templates/progress/BubbleBadge';
+import fontConstants from '@cdo/apps/fontConstants';
 
 const getElementHeight = element => {
   return ReactDOM.findDOMNode(element).offsetHeight;
@@ -77,6 +78,7 @@ function ReviewState({reviewState, isAwaitingTeacherReview}) {
     );
   }
 }
+
 ReviewState.propTypes = {
   reviewState: PropTypes.string,
   isAwaitingTeacherReview: PropTypes.bool,
@@ -99,6 +101,7 @@ function Performance({performance}) {
     </div>
   );
 }
+
 Performance.propTypes = {
   performance: PropTypes.string,
 };
@@ -162,6 +165,7 @@ function Comment({commentText, feedbackSeenByStudent, feedbackId}) {
     </div>
   );
 }
+
 Comment.propTypes = {
   commentText: PropTypes.string,
   feedbackSeenByStudent: PropTypes.bool,
@@ -193,12 +197,12 @@ const styles = {
     lineHeight: '21px',
   },
   rubricPerformance: {
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
   },
   reviewState: {
     display: 'flex',
     alignItems: 'center',
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     fontSize: 14,
     color: color.charcoal,
   },
@@ -222,7 +226,7 @@ const styles = {
   },
   commentText: {
     position: 'relative', // for positioning fade over comment text
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
   },
   fadeout: {
     bottom: 0,

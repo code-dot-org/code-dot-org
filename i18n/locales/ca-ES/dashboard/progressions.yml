@@ -81,6 +81,7 @@ ca:
       Challenges: Reptes
       Change: Canviar
       Check Your Work: Revisa la teva feina
+      Check for Understanding: Comprovar si hi ha comprensió
       Check-In Survey: Enquesta de registre
       Checking for a Winner: Cercant d'un guanyador
       'Choice Levels: Customize Your App': 'Nivells d''elecció: personalitza la teva aplicació'
@@ -210,12 +211,14 @@ ca:
       Input with If-Else: Entrada de dades amb if/else
       InspirationalArtwork: Dissenys inspiradors
       Interactive Art: Art interactiu
+      Intro Video: Introducció de vídeo
       Intro to Flyer Game: Introducció al joc dels volants
       Intro to For Loops: Introducció als bucles "for"
       Intro to Side Scrollers: Introducció als desplaçadors laterals
       Intro to Sprites: Introducció als sprites
       Intro to Variables: Introducció a les variables
       Introducing Sprite Lab: Introducció al Laboratori d'Sprites
+      Introduction: Introducció
       Introduction to Arrays: Introducció a les matrius
       Investigate: Investigar
       Isaac's Survey Data: Dades de l'enquesta de l'Isaac
@@ -372,6 +375,7 @@ ca:
       Setting Properties: Configurar propietats
       Setup: Configuració
       Shapes and the Draw Loop: Formes i el bucle de dibuix
+      Share Out: Posada en comú
       Share Your App: Comparteix la teva aplicació
       Share Your Pages: Comparteix les teves pàgines
       Share Your Stylesheets: Comparteix els teus fulls d'estil
@@ -398,6 +402,7 @@ ca:
       Teach AI a New Word: Ensenya una paraula nova a la IA
       'Technique: Frequency Analysis': 'Tècnica: Anàlisi de freqüències'
       Terminology Recap: Recapitulació de termes
+      Text Compression: Compressió de text
       The Animation Tab: La pestanya Animació
       The Artist in Code Studio: L'Artista a Code Studio
       The Big Event - Unplugged Activity: El gran esdeveniment - Activitat sense connexió
@@ -414,6 +419,7 @@ ca:
       UI Element Properties: Propietats dels elements de la interfície de l'usuari
       Ultimate Shoe Recommender: Recomanació definitiva de sabates
       Unit 5 Lesson 1 Overview: Resum Unitat 5 Lliçó 1
+      Unplugged Activity: Activitat sense connexió
       Updating Your Prototype: Actualitzant el teu prototip
       Upload Your Images: Puja les teves imatges
       User Interface: Interfície d'usuari

@@ -3,18 +3,17 @@ import PropTypes from 'prop-types';
 import msg from '@cdo/locale';
 import AnimationPickerListItem from './AnimationPickerListItem.jsx';
 import project from '@cdo/apps/code-studio/initApp/project';
-import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
-import classNames from 'classnames';
-import styles from './animation-upload-button.module.scss';
 import {connect} from 'react-redux';
 import {
   refreshInRestrictedShareMode,
   refreshTeacherHasConfirmedUploadWarning,
-} from '@cdo/apps/code-studio/projectRedux.js';
+} from '@cdo/apps/code-studio/projectRedux';
 import {
   exitedUploadWarning,
   showingUploadWarning,
 } from '../redux/animationPicker.js';
+import ImageUploadModal from '@cdo/apps/templates/imageUploadWarning/ImageUploadModal';
+import PublishedWarningModal from '@cdo/apps/templates/imageUploadWarning/PublishedWarningModal';
 
 /**
  * Render the animation upload button. If the project should warn on upload
@@ -38,9 +37,6 @@ export function UnconnectedAnimationUploadButton({
   const [isUploadModalOpen, setIsUploadModalOpen] = useState(false);
   const [isPublishedWarningModalOpen, setIsPublishedWarningModalOpen] =
     useState(false);
-  const [noPIIConfirmed, setNoPIIConfirmed] = useState(false);
-  const [restrictedShareConfirmed, setRestrictedShareConfirmed] =
-    useState(false);
 
   // Some of the behavior (particularly in the confirmation dialog) is conditional
   // on whether a student or teacher is uploading.
@@ -49,14 +45,13 @@ export function UnconnectedAnimationUploadButton({
   // Students see a warning to not upload PII as well as a statement that they will not be able
   // to share their project if they upload -- we also save this state to their project and don't show the warning again.
   const isTeacher = currentUserType === 'teacher';
-  let hasConfirmedWarning, updateWarningState, isConfirmButtonEnabled;
+  let hasConfirmedWarning, updateWarningState;
   if (isTeacher) {
     hasConfirmedWarning = teacherHasConfirmedUploadWarning;
     updateWarningState = () => {
       project.setTeacherHasConfirmedUploadWarning(true);
       refreshTeacherHasConfirmedUploadWarning();
     };
-    isConfirmButtonEnabled = noPIIConfirmed;
   } else {
     hasConfirmedWarning = inRestrictedShareMode;
     updateWarningState = () => {
@@ -64,7 +59,6 @@ export function UnconnectedAnimationUploadButton({
       // redux setting, for use in share/remix
       refreshInRestrictedShareMode();
     };
-    isConfirmButtonEnabled = noPIIConfirmed && restrictedShareConfirmed;
   }
 
   const showRestrictedUploadWarning =
@@ -84,92 +78,6 @@ export function UnconnectedAnimationUploadButton({
         }
         isBackgroundsTab={isBackgroundsTab}
       />
-    );
-  }
-
-  // Warning dialog that says if you upload, you can no longer share and remix,
-  // and you confirm you will not upload PII.
-  function renderUploadModal() {
-    return (
-      <BaseDialog isOpen={isUploadModalOpen} handleClose={cancelUpload}>
-        <div>
-          <h1 className={styles.modalHeader}>
-            {msg.animationPicker_restrictedShareRulesHeader()}
-          </h1>
-          <label className={styles.checkboxLabel}>
-            <input
-              type="checkbox"
-              checked={noPIIConfirmed}
-              onChange={() => setNoPIIConfirmed(!noPIIConfirmed)}
-            />
-            {msg.animationPicker_confirmNoPII()}
-          </label>
-          {!isTeacher && (
-            <label className={styles.checkboxLabel}>
-              <input
-                type="checkbox"
-                checked={restrictedShareConfirmed}
-                onChange={() =>
-                  setRestrictedShareConfirmed(!restrictedShareConfirmed)
-                }
-              />
-              {msg.animationPicker_confirmRestrictedShare()}
-            </label>
-          )}
-          <p className={styles.modalDetails}>
-            {isTeacher && (
-              <>
-                {msg.animationPicker_warnNoPublishShare()}
-                <br />
-              </>
-            )}
-            {msg.animationPicker_undoRestrictedShareInstructions()}
-          </p>
-        </div>
-        <div className={styles.modalButtonRow}>
-          <button
-            className={classNames(styles.modalButton, styles.cancelButton)}
-            type="button"
-            onClick={cancelUpload}
-          >
-            {msg.dialogCancel()}
-          </button>
-          <button
-            className={classNames(styles.modalButton, styles.confirmButton)}
-            type="button"
-            onClick={confirmUploadWarning}
-            disabled={!isConfirmButtonEnabled}
-          >
-            {msg.dialogOK()}
-          </button>
-        </div>
-      </BaseDialog>
-    );
-  }
-
-  // Warning dialog that you cannot upload until you un-publish your project.
-  function renderPublishedWarningModal() {
-    return (
-      <BaseDialog
-        isOpen={isPublishedWarningModalOpen}
-        handleClose={closePublishedWarning}
-      >
-        <div>
-          <h1 className={styles.modalHeader}>
-            {msg.animationPicker_cannotUploadHeader()}
-          </h1>
-          <p>{msg.animationPicker_cannotUploadIfPublished()}</p>
-        </div>
-        <div className={styles.modalButtonRow}>
-          <button
-            className={classNames(styles.modalButton, styles.confirmButton)}
-            type="button"
-            onClick={closePublishedWarning}
-          >
-            {msg.dialogOK()}
-          </button>
-        </div>
-      </BaseDialog>
     );
   }
 
@@ -196,16 +104,22 @@ export function UnconnectedAnimationUploadButton({
   }
 
   function cancelUpload() {
-    setRestrictedShareConfirmed(false);
-    setNoPIIConfirmed(false);
     setIsUploadModalOpen(false);
     exitedUploadWarning();
   }
 
   return (
     <>
-      {renderUploadModal()}
-      {renderPublishedWarningModal()}
+      <ImageUploadModal
+        isOpen={isUploadModalOpen}
+        cancelUpload={cancelUpload}
+        isTeacher={isTeacher}
+        confirmUploadWarning={confirmUploadWarning}
+      />
+      <PublishedWarningModal
+        isOpen={isPublishedWarningModalOpen}
+        onClose={closePublishedWarning}
+      />
       {renderUploadButton()}
     </>
   );

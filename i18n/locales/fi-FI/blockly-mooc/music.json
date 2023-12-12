@@ -13,5 +13,6 @@
   "share": "Jaa",
   "startOver": "Aloita alusta",
   "panelHeaderInstructions": "Ohjeet",
-  "panelHeaderWorkspace": "Työtila: "
+  "panelHeaderWorkspace": "Työtila: ",
+  "continue": "Jatka"
 }

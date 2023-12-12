@@ -1,0 +1,26 @@
+name 'SP-VPL-21-CSD-mod5-L14examples-AIML_-22_23'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# AI Code of Ethics
+
+<div style="background-color: #a6e3e8; border-radius: 40px 40px 40px 40px; color: #000000; width: 95%; padding: 0.5px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px; ">As a part of the AI and Machine Learning unit, students will conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence area of their choice. Afterward, each group will develop at least one solution-oriented principle that addresses their chosen area. These principles will then be assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.
+</p></div>
+
+<img src="https://images.code.org/23a706a106dd10148790bac3fea0a9bb-image-1641668692644.jpg" style="float: right; height: 250px; margin:25px;">
+
+## Overview
+
+##### In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.
+
+## Objectives
+
+##### * Create at least one guiding principle that addresses an AI ethics issue.
+##### * Define artificial intelligence (AI) in their own words, using technologies they encounter in their daily lives as examples.
+##### * Describe at least one example of an ethical issue pertaining to AI, along with its impact on society.
+
+
+MARKDOWN

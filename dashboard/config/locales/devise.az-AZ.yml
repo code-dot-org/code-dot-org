@@ -63,6 +63,27 @@ az:
       unlocked: Sizin hesabınızın kilidi müvəffəqiyyət ilə açılmışdır. Davam etmək
         üçün hesabınıza daxil olun.
   errors:
+    invitations:
+      edit:
+        header: Şifrənizi təyin edin
+        submit_button: Şifrəmi təyin et
+      invitation_removed: Dəvətiniz silindi.
+      invitation_token_invalid: Göstərilən dəvət işarəsi etibarlı deyil!
+      new:
+        header: Dəvət göndər
+        submit_button: Bir dəvətnamə göndər
+      no_invitations_remaining: Dəvət qalmadı
+      send_instructions: "%{email} ünvanına dəvət mesajı göndərildi."
+      updated: Şifrən müvəffəqiyyətlə təyin edildi. İndi hesab açdın.
+    mailer:
+      invitation_instructions:
+        accept: Dəvətnaməni qəbul et
+        hello: Salam %{email}
+        ignore: Dəvətnaməni almaq istəmirsənsə, zəhmət olmasa bu e-poçtu yox hesab
+          et.<br />Aşağıdakı keçidə basmamış və şifrə yaratmamış hesabın yaranmayacaq.
+        someone_invited_you: Biri səni %{url} ünvanına dəvət etdi, aşağıdakı keçiddən
+          qəbul edə bilərsən.
+        subject: Dəvət təlimatları
     messages:
       already_confirmed: artıq təsdiqlənmişdir, xahiş edirik hesabınıza daxil olmağa
         çalışın
@@ -71,24 +92,3 @@ az:
       expired: istifadə müddəti bitmişdir, xahiş edirik yeni sorğu göndərəsiniz
       not_found: tapılmadı
       not_locked: Kilidlənməmişdi
-    invitations:
-      send_instructions: "%{email} ünvanına dəvət mesajı göndərildi."
-      invitation_token_invalid: Göstərilən dəvət işarəsi etibarlı deyil!
-      updated: Şifrən müvəffəqiyyətlə təyin edildi. İndi hesab açdın.
-      no_invitations_remaining: Dəvət qalmadı
-      invitation_removed: Dəvətiniz silindi.
-      new:
-        header: Dəvət göndər
-        submit_button: Bir dəvətnamə göndər
-      edit:
-        header: Şifrənizi təyin edin
-        submit_button: Şifrəmi təyin et
-    mailer:
-      invitation_instructions:
-        subject: Dəvət təlimatları
-        hello: Salam %{email}
-        someone_invited_you: Biri səni %{url} ünvanına dəvət etdi, aşağıdakı keçiddən
-          qəbul edə bilərsən.
-        accept: Dəvətnaməni qəbul et
-        ignore: Dəvətnaməni almaq istəmirsənsə, zəhmət olmasa bu e-poçtu yox hesab
-          et.<br />Aşağıdakı keçidə basmamış və şifrə yaratmamış hesabın yaranmayacaq.

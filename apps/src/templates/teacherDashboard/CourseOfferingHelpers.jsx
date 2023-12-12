@@ -11,8 +11,8 @@ export const translatedCourseOfferingCsTopics = {
   games_and_animations: i18n.courseOfferingCsTopicGamesAndAnimations(),
   internet: i18n.courseOfferingCsTopicInternet(),
   physical_computing: i18n.courseOfferingCsTopicPhysicalComputing(),
-  web_design: i18n.courseOfferingCsTopicWebDesign(),
   programming: i18n.courseOfferingCsTopicProgramming(),
+  web_design: i18n.courseOfferingCsTopicWebDesign(),
 };
 
 // Same list as CourseOfferingSchoolSubjects in sharedCourseConstants but with translated strings
@@ -55,6 +55,24 @@ export const translatedCourseOfferingDurations = {
   month: i18n.month(),
   week: i18n.week(),
   lesson: i18n.lesson(),
+};
+
+export const translatedCourseOfferingDurationsWithTime = {
+  school_year: `${i18n.schoolYear()} (${i18n.schoolYearDuration()})`,
+  semester: `${i18n.semester()} (${i18n.semesterDuration()})`,
+  quarter: `${i18n.quarter()} (${i18n.quarterDuration()})`,
+  month: `${i18n.month()} (${i18n.monthDuration()})`,
+  week: `${i18n.week()} (${i18n.weekDuration()})`,
+  lesson: `${i18n.lesson()} (${i18n.lessonDuration()})`,
+};
+
+export const translatedCourseOfferingMarketingInitiatives = {
+  csa: i18n.marketingInitiativeCSA(),
+  csc: i18n.marketingInitiativeCSC(),
+  csd: i18n.marketingInitiativeCSD(),
+  csf: i18n.marketingInitiativeCSF(),
+  csp: i18n.marketingInitiativeCSP(),
+  hoc: i18n.marketingInitiativeHOC(),
 };
 
 export const translatedGradeLevels = {
@@ -106,3 +124,11 @@ export const subjectsAndTopicsOrder = [
   'data',
   'programming',
 ];
+
+export const translatedAvailableResources = {
+  'Lesson Plan': i18n.lessonPlans(),
+  'Slide Deck': i18n.slideDecks(),
+  'Activity Guide': i18n.activityGuides(),
+  'Answer Key': i18n.answerKeysExemplars(),
+  Rubric: i18n.projectRubrics(),
+};

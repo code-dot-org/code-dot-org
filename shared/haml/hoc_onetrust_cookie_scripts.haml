@@ -1,6 +1,6 @@
 - require '../shared/middleware/helpers/experiments'
 -# OneTrust Cookies Consent Notice scripts for hourofcode.com
-- cookie_script_env = experiment_value('onetrust_cookie_scripts')
+- cookie_script_env = experiment_value('onetrust_cookie_scripts', request)
 - if cookie_script_env == 'production'
   %script{:src=>"#{CDO.code_org_url}/js/jquery.min.js"}
   %script{src: 'https://cdn.cookielaw.org/consent/7c79c547-a2fc-4998-9b21-0c7a5e67e345/OtAutoBlock.js', type: 'text/javascript'}

@@ -2,11 +2,32 @@
   "sq-AL": {
     "data": {
       "reference_guides": {
+        "csd-2022/accuracy-in-ai-lab": {
+          "display_name": "Saktësia në Al Lab"
+        },
+        "csd-2022/animation-tab": {
+          "display_name": "Tab-i i Animacionit"
+        },
         "csd-2022/app-lab": {
           "display_name": "Laboratori i Aplikacioneve"
         },
         "csd-2022/applab-overview": {
           "display_name": "Përmbledhja"
+        },
+        "csd-2022/body-styling": {
+          "display_name": "Stilimi i trupit"
+        },
+        "csd-2022/classes": {
+          "display_name": "Klasat"
+        },
+        "csd-2022/color-lights": {
+          "display_name": "Dritat me ngjyra"
+        },
+        "csd-2022/creating-a-survey": {
+          "display_name": "Krijimi i një formulari"
+        },
+        "csd-2022/css": {
+          "display_name": "CSS"
         },
         "csd-2022/css-overview": {
           "display_name": "Përmbledhja"
@@ -20,11 +41,20 @@
         "csd-2022/functions": {
           "display_name": "funksione"
         },
+        "csd-2022/game-lab": {
+          "display_name": "Game Lab"
+        },
         "csd-2022/game-lab-overview": {
           "display_name": "Përmbledhja"
         },
+        "csd-2022/html": {
+          "display_name": "HTML"
+        },
         "csd-2022/html-overview": {
           "display_name": "Përmbledhja"
+        },
+        "csd-2022/importing-a-model-in-app-lab": {
+          "display_name": "Importimi i një modeli në App Lab"
         },
         "csd-2022/javascript": {
           "display_name": "JavaScript"
@@ -34,6 +64,9 @@
         },
         "csd-2022/lists": {
           "display_name": "Listat"
+        },
+        "csd-2022/maker-toolkit": {
+          "display_name": "Paketa e veglave të krijuesit"
         },
         "csd-2022/maker-toolkit-overview": {
           "display_name": "Përmbledhja"
@@ -46,6 +79,30 @@
         },
         "csd-2022/patterns-overview": {
           "display_name": "Përmbledhja"
+        },
+        "csd-2022/selecting-a-label": {
+          "display_name": "Përzgjedhja e një etikete"
+        },
+        "csd-2022/selecting-features": {
+          "display_name": "Përzgjedhja e Veçorive"
+        },
+        "csd-2022/sprites": {
+          "display_name": "Sprites"
+        },
+        "csd-2022/style-sheets": {
+          "display_name": "Fletët e stilimit"
+        },
+        "csd-2022/taking-input-with-getproperty": {
+          "display_name": "Marrja e hyrjes me getProperty"
+        },
+        "csd-2022/text-properties": {
+          "display_name": "Tiparet e tekstit"
+        },
+        "csd-2022/using-data-with-categorical-features": {
+          "display_name": "Përdorimi i të Dhënave me Veçori Kategorike"
+        },
+        "csd-2022/using-data-with-numerical-features": {
+          "display_name": "Përdorimi i të dhënave me veçori numerike"
         },
         "csd-2022/variables": {
           "display_name": "variabla"

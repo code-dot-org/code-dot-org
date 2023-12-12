@@ -12,10 +12,6 @@ theme: responsive_full_width
 - icon_circle_check = "fa-solid fa-circle-check"
 - icon_flag = "fa-solid fa-flag-checkered"
 
-%section.skinny-banner.no-padding-bottom
-  .wrapper
-    = view :maker_skinny_banner
-
 %section.intro
   .wrapper
     %h1 The BBC micro:bit
@@ -40,6 +36,8 @@ theme: responsive_full_width
             %p.no-margin-bottom Using App Lab students can quickly build apps that communicate with external hardware using our block-to-text app development environment.
     .clear
 
+= view :maker_skinny_banner
+
 %section.bg-neutral-light.device-setup
   .wrapper
     %h2 Device setup requirements
@@ -60,7 +58,7 @@ theme: responsive_full_width
     %figure.col-25{style: "float: right; text-align: center"}
       %img{src: "/images/maker/microbit.gif", alt: "", style: "margin: 0 auto 2em; max-width: 250px; width:100%"}
     .clear
-    %p.body-two Wondering which version you have? <a href="https://support.microbit.org/support/solutions/articles/19000119162-how-to-identify-the-version-number-of-your-micro-bit" target="_blank" rel="noopener noreferrer">Check out the micro:bit guide</a>.
+    %p.body-three Wondering which version you have? <a class="has-external-link" href="https://support.microbit.org/support/solutions/articles/19000119162-how-to-identify-the-version-number-of-your-micro-bit" target="_blank" rel="noopener noreferrer">Check out the micro:bit guide</a>.
 
 %section.bg-primary-light
   .wrapper
@@ -76,7 +74,7 @@ theme: responsive_full_width
       .text-wrapper.col-50
         %h3.heading-sm Buy the micro:bit
         %p BBC micro:bit reseller companies sell the device all around the world.
-        %a{href: "https://microbit.org/buy/", class: "link-button", target: "_blank", rel: "noopener noreferrer"} Buy the micro:bit
+        %a{href: "https://microbit.org/buy/", class: "link-button has-external-link", target: "_blank", rel: "noopener noreferrer"} Buy the micro:bit
 
 = view :section_divider_line
 

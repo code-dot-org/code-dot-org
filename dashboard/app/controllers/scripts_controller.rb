@@ -13,6 +13,9 @@ class ScriptsController < ApplicationController
   use_reader_connection_for_route(:show)
 
   def show
+    if @script.is_deprecated
+      return render 'errors/deprecated_course'
+    end
     if @script.redirect_to?
       redirect_path = script_path(Unit.get_from_cache(@script.redirect_to))
       redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
@@ -46,8 +49,8 @@ class ScriptsController < ApplicationController
 
     @show_redirect_warning = params[:redirect_warning] == 'true'
     unless current_user&.student?
-      @section = current_user&.sections&.all&.find {|s| s.id.to_s == params[:section_id]}&.summarize
-      sections = current_user.try {|u| u.sections.all.reject(&:hidden).map(&:summarize)}
+      @section = current_user&.sections_instructed&.all&.find {|s| s.id.to_s == params[:section_id]}&.summarize
+      sections = current_user.try {|u| u.sections_instructed.all.reject(&:hidden).map(&:summarize)}
       @sections_with_assigned_info = sections&.map {|section| section.merge!({"isAssigned" => section[:script_id] == @script.id})}
     end
 
@@ -147,22 +150,26 @@ class ScriptsController < ApplicationController
     # containing a slash, we do this (security) check anyways to prevent
     # directory traversal as validation can be manually bypassed.
     if (@script.name.start_with? '.') ||
-      (@script.name.start_with? '~') ||
-      (@script.name.include? '/')
+        (@script.name.start_with? '~') ||
+        (@script.name.include? '/')
       raise ArgumentError, "evil unit name (#{@script.name})"
     end
 
     @script.destroy
     if Rails.application.config.levelbuilder_mode
       filename = "config/scripts/#{@script.name}.script"
-      File.delete(filename) if File.exist?(filename)
+      FileUtils.rm_f(filename)
       filename = "config/scripts_json/#{@script.name}.script_json"
-      File.delete(filename) if File.exist?(filename)
+      FileUtils.rm_f(filename)
     end
     redirect_to scripts_path, notice: I18n.t('crud.destroyed', model: Unit.model_name.human)
   end
 
   def edit
+    # Deprecated scripts should not be edited.
+    if @script.is_deprecated
+      return render 'errors/deprecated_course'
+    end
     raise "The new unit editor does not support level variants with experiments" if @script.is_migrated && @script.script_levels.any?(&:has_experiment?)
     @show_all_instructions = params[:show_all_instructions]
     @script_data = {

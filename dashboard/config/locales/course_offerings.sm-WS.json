@@ -2,10 +2,10 @@
   "sm-WS": {
     "data": {
       "course_offerings": {
-        "valentine": "valenitino",
         "halloween": "aso aitu",
+        "soccer": "soka",
         "step": "sitepu",
-        "soccer": "soka"
+        "valentine": "valenitino"
       }
     }
   }

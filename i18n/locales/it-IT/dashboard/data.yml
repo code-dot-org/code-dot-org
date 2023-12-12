@@ -498,7 +498,7 @@ it:
         CSF_loops_AB: Cicli
         csd_gamelab_booleans: Espressioni Booleane
         csd_gamelab_conditional_statements: Istruzioni Condizionali
-        csd_gamelab_if_else: Dichiarazioni Se/altrimenti
+        csd_gamelab_if_else: Istruzioni condizionali Se/altrimenti
         CSF_SpriteLabIntro_CDEF: Questo è il Laboratorio dei personaggi
         CSF_Spritelab_MakeSprite_CDEF: Come creare un personaggio nel Laboratorio dei personaggi
         CDEF_Video_SpritesInAction: Personaggi in azione
@@ -591,7 +591,7 @@ it:
         csd_ml_model_cards_july2021: Schede modello in Laboratorio IA
         csd_ml_numerical_ai_lab: Dati numerici in Laboratorio IA
         Gettting_Started_Progress: Progresso, feedback e valutazione
-        Gettting_Started_ClassSection: Creazione di una sezione di classe
+        Gettting_Started_ClassSection: Creazione di una classe
         Gettting_Started_StudentExperience: L'esperienza degli studenti
         Getting_Started_BasicFeatures: Caratteristiche di base di Code.org
         PL_overview_CSD: Cos'è Alla scoperta dell'informatica?
@@ -621,7 +621,7 @@ it:
         poemart_events: L'arte della poesia - Eventi
         poemart_imagery: L'arte della poesia  - Metafore
         poemart_celebration: L'arte della poesia  - Celebrazione
-        csd_u6_variables_part2: Variabili - Il modello del contatore
+        csd_u6_variables_part2: Variabili - Lo schema a contatore
         csd_ml_ethics_ai: 'Etica e Intelligenza Artificiale '
         outbreak_intro: 'Simulatore di focolaio - Introduzione'
         outbreak_events: 'Simulatore di focolaio - Eventi'
@@ -644,7 +644,7 @@ it:
         csd_u6_if_statements: 'CSD: Istruzioni if'
         csc-poem-art-intro: Video introduttivo
         csc-poem-art-outro: Video finale
-        csd_u6_call_define_functions: 'CSD: Chiamare e Definire Funzioni'
+        csd_u6_call_define_functions: 'Chiamata e definizione di funzioni'
         csp_applab_parameters: Funzioni con parametri
         starquilts_intro_artist: Introduzione a Star Quilts
         CSA-PL-intro-to-arrays: Array unidimensionale (1D)
@@ -747,6 +747,17 @@ it:
         star_quilts_intro_to_artist: 'Star Quilts: Introduzione all''artista'
         upload_sprites_backgrounds: Caricamento di sprite e sfondi personalizzati
         PL_CSD_EquityBlindSpotsvid: Pregiudizi e Responsabilità
+        how-ai-works-llms-full: Come funzionano i Chatbot e i Modelli linguistici di grandi dimensioni
+        how-ai-works-creativity-full: L'IA è dotata di creatività e di immaginazione?
+        how-ai-works-llms-part1: Chatbot e modelli linguistici di grandi dimensioni Parte 1
+        how-ai-works-llms-part2: Chatbot e modelli linguistici di grandi dimensioni Parte 2
+        llms-cobranded: 'Come funziona l''IA: chatbot e modelli linguistici di grandi dimensioni (LLM)'
+        generative-ai-cobranded: 'Come funziona l''IA: IA generativa'
+        what-is-creativity: Cos'è la creatività?
+        code-break: Prenditi una Pausa Codice
+        how-ai-works-lessons: 'Come funziona l''IA: panoramica delle lezioni'
+        csd_ml_how_ai_works: Come funziona l'IA
+        hoc-dance-ai-warmup: 'Dance Party edizione AI: preparazione'
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto l'altro blocco qua sopra

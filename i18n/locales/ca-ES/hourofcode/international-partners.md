@@ -1,14 +1,14 @@
 ---
-title: Contact International Partners
+title: Contacte International Partners
 ---
 
 {{ signup_button }}
 
-# Contact International Partners
+# Contacte International Partners
 
-Code.org works with many organizations around the world to make the Hour of Code a truly international movement. You, too, can play a leading role to get more people in your country involved! If you're in one of the countries below, reach out to the listed partner and get connected with your local Hour of Code.
+Code.org treballa amb moltes organitzacions d'arreu del món per fer de l'Hora del Codi un moviment realment internacional. Tu també pots tenir un paper protagonista per aconseguir que més gent del teu país s'impliqui! Si sou en un dels països següents, poseu-vos en contacte amb el soci que apareix a la llista i connecteu-vos amb la vostra hora de codi local.
 
-*Don't see your country listed here?* [See how to become our international partner!](https://code.org/international/apply) <br /> <br />
+*No veieu el vostre país a la llista aquí?* [Vegeu com esdevenir el nostre soci internacional!](https://code.org/international/apply) <br /> <br />
 
 {{ international_partners_table }}
 

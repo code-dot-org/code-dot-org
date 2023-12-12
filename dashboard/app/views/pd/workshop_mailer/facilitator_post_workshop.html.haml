@@ -1,6 +1,6 @@
 :css
   body {
-    font-family: Gotham, sans-serif;
+    font-family: Metropolis, sans-serif;
   }
 
 %p
@@ -8,7 +8,7 @@
   = @user.name + ','
 
 %p
-  Thank you for facilitating a
+  Thank you for facilitating the
   = @workshop.subject
   = @workshop.course_name
   workshop
@@ -21,6 +21,11 @@
   so that our team can better understand how your workshop went and how you feel you're developing as a facilitator.
   We ask that you please submit this by
   = @deadline + '.'
+  Coordinate with your co-lead and Regional Partner on the following post-workshop actions:
+  %ol
+    %li Review attendance for accuracy
+    %li Make sure the workshop is closed and surveys deployed
+    %li Review survey results for feedback
 
 %p
 As a reminder, there are a number of ways for you to get support between workshops. You can:
@@ -29,7 +34,10 @@ As a reminder, there are a number of ways for you to get support between worksho
   %li
     Engage with other facilitators in the
     = link_to('Facilitator Forum', 'https://forum.code.org/c/facilitators') + ' and'
-    = link_to('Facilitator Slack channel', 'https://codefacilitators6-12.slack.com/messages')
+    - if @workshop.course == 'CS Fundamentals'
+      = link_to('Facilitator Slack channel', 'https://csffacilitators.slack.com/messages')
+    - else
+      = link_to('Facilitator Slack channel', 'https://codefacilitators6-12.slack.com/messages')
   %li
     Email
     = mail_to('facilitators@code.org')

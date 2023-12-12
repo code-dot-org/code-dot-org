@@ -35,7 +35,7 @@ class TeachersBeyondHoc extends Component {
         title: i18n.congratsTeacherCodeOrgTitle(),
         description: i18n.congratsTeacherCodeOrgDesc(),
         buttonText: i18n.congratsTeacherCodeOrgButton(),
-        link: '/courses?view=teacher',
+        link: '/catalog',
         image: codeorgTeacherImage,
       },
       {

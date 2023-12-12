@@ -38,7 +38,7 @@ export default class ConfirmHiddenAssignment extends Component {
             text={i18n.unhideUnitAndAssign()}
             style={{marginLeft: 5}}
             onClick={onConfirm}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
           />
         </div>
       </BaseDialog>

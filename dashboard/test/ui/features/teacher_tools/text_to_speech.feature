@@ -14,7 +14,6 @@ Scenario: Check that TTS player is displayed
 @chrome
 Scenario: Listen to TTS Audio in CSF
   Given I am on "http://studio.code.org/s/allthethings/lessons/6/levels/3?noautoplay=true"
-  And I rotate to landscape
   And I wait for the page to fully load
 
   # note: we expect no audio for the instructions, because this test

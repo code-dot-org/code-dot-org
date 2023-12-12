@@ -2,10 +2,13 @@
 ENV['RACK_ENV'] = 'test'
 ENV['UNIT_TEST'] = '1'
 
+require 'fakefs/safe'
 require 'minitest/autorun'
 require 'rack/test'
 require 'minitest/reporters'
 require 'minitest/around/unit'
+require 'minitest-spec-context'
+require 'minitest/stub_const'
 require 'mocha/mini_test'
 require 'vcr'
 require_relative '../../deployment'
@@ -77,7 +80,13 @@ module SetupTest
     VCR.use_cassette(cassette_name, record: record_mode) do
       PEGASUS_DB.transaction(rollback: :always) do
         DASHBOARD_DB.transaction(rollback: :always) do
+          # Use Minitest#stub here even though we generally prefer Mocha#stubs.
+          # Mocha keeps its stubbing logic simple in an attempt to avoid
+          # overcomplicating tests, but in this case we specifically do need a
+          # dynamic return value, which Mocha does not support.
+          # rubocop:disable CustomCops/PreferMochaStubsToMinitestStub
           AWS::S3.stub(:random, proc {random.bytes(16).unpack1('H*')}, &block)
+          # rubocop:enable CustomCops/PreferMochaStubsToMinitestStub
         end
       end
     end

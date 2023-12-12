@@ -1,0 +1,23 @@
+{
+  "tg-TJ": {
+    "data": {
+      "start_libraries": {
+        "LLM - Written Voice Simulator_ai23": {
+          "I18n_HAIW23L4": {
+            "newBackButton_19": "Бозгашт"
+          }
+        },
+        "Neural Networks - Perceptron - Beta_ai23": {
+          "I18n_HAIW23L3": {
+            "allButtonText": "Ҳама"
+          }
+        },
+        "Neural Networks - Perceptron - Full_ai23": {
+          "I18n_HAIW23L3": {
+            "allButtonText": "Ҳама"
+          }
+        }
+      }
+    }
+  }
+}

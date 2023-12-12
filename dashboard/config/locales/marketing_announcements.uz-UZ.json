@@ -1,0 +1,70 @@
+{
+  "uz-UZ": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "ai-2020": {
+            "buttonText": "Ko‘proq bilish",
+            "title": "Sun'iy intellekt va mashinani o'rganishni o'rganing"
+          },
+          "ai-launch-2023": {
+            "buttonText": "Ko‘proq bilish"
+          },
+          "ai-pl-launch-2023": {
+            "buttonText": "Ko‘proq bilish"
+          },
+          "back-to-school-2021": {
+            "buttonText": "Ko‘proq bilish"
+          },
+          "codebytes-2020": {
+            "buttonText": "Ko‘proq bilish"
+          },
+          "coldplay": {
+            "buttonText": "Sinab ko‘ring"
+          },
+          "congrats-certificate-share": {
+            "buttonText": "Boshlash"
+          },
+          "csjourneys": {
+            "buttonText": "Ko‘proq bilish"
+          },
+          "csjourneys-22": {
+            "buttonText": "Ko‘proq bilish"
+          },
+          "csleadersprize": {
+            "buttonText": "Ko‘proq bilish"
+          },
+          "hoc-2023": {
+            "body": "SI bilan yoki SIsiz dasturlash soatini tashkil qilish va SI qanday ishlashini o'rganish uchun dunyo bo'ylab millionlab odamlarga qo'shiling. Har kim, istalgan joyda uni amalga oshirishi mumkin. Tajribaga ega bo'lish kerak emas.",
+            "buttonText": "Ko‘proq bilish",
+            "title": "Dasturlash Soati: SI yordamida Ijodkorlik"
+          },
+          "hoc-2023-dance-ai": {
+            "buttonText": "Ko‘proq bilish"
+          },
+          "hoc-more": {
+            "body": "Dasturlash soati veb-saytida Code.org va hamkorlar tomonidan ishlab chiqilgan barcha yosh va tajriba darajalari uchun 500 dan ortiq kompyuter fanlari mashg‘ulotlari mavjud."
+          },
+          "home-learning-2020": {
+            "buttonText": "Loyiha g'oyalarini ko'rish"
+          },
+          "superhero": {
+            "buttonText": "Batafsil"
+          },
+          "teacher-apps-closing-2021": {
+            "buttonText": "Bizga qo'shiling"
+          },
+          "teacher-apps-nominate-2020": {
+            "buttonText": "O‘qituvchi nomzodini ko‘rsatish"
+          },
+          "teacher-apps-open-2021": {
+            "buttonText": "Bizga qo'shiling"
+          },
+          "teacher-apps-stillon-2020": {
+            "buttonText": "Bizga qo'shiling"
+          }
+        }
+      }
+    }
+  }
+}

@@ -722,6 +722,10 @@ de:
         csa_sorting_algorithms: 'CSA: Sortieralgorithmen'
         star_quilts_intro_to_artist: 'Star Quilts: Einführung in den Künstler'
         upload_sprites_backgrounds: Hochladen benutzerdefinierter Sprites und Hintergründe
+        what-is-creativity: Was ist Kreativität?
+        code-break: Mache eine Programmierpause
+        csd_ml_how_ai_works: So funktioniert KI
+        hoc-dance-ai-warmup: 'Tanzparty KI-Edition: Aufwärmen'
     callout:
       text:
         drag_blocks: Ziehe einen "vorwärts bewegen"-Baustein und lasse ihn unter den anderen Baustein einrasten

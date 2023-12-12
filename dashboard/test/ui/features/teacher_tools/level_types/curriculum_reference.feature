@@ -6,8 +6,7 @@ Feature: Looking at curriculum reference levels Applitools Eyes
 
   Scenario Outline: Load iframe then take screenshot
     Given I am on "<url>"
-    Then I rotate to landscape
-    And I open my eyes to test "<test_name>"
+    Then I open my eyes to test "<test_name>"
     And I wait to see "#curriculum-reference"
     And I see no difference for "initial load"
     And I close my eyes

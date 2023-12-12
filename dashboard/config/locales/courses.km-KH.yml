@@ -6,19 +6,19 @@ km:
         mike-test:
           title: មូលដ្ឋានគ្រិះវិទ្យាសាស្រ្ដកុំព្យូទ័រ
     resources:
-      curriculum/csd/2020:
-        name: កម្មវិធីសិក្សា
-      teacher_forum/csd/2020:
-        name: វេទិការគ្រូបង្រៀន
       curriculum/csd/2017:
         name: កម្មវិធីសិក្សា
-      teacher_forum_6/csd/2017:
-        name: វេទិការគ្រូបង្រៀន
+      curriculum/csd/2018:
+        name: កម្មវិធីសិក្សា
       curriculum/csd/2019:
+        name: កម្មវិធីសិក្សា
+      curriculum/csd/2020:
         name: កម្មវិធីសិក្សា
       teacher_forum/csd/2019:
         name: វេទិការគ្រូបង្រៀន
-      curriculum/csd/2018:
-        name: កម្មវិធីសិក្សា
+      teacher_forum/csd/2020:
+        name: វេទិការគ្រូបង្រៀន
+      teacher_forum_6/csd/2017:
+        name: វេទិការគ្រូបង្រៀន
       teacher_forum_6/csd/2018:
         name: វេទិការគ្រូបង្រៀន

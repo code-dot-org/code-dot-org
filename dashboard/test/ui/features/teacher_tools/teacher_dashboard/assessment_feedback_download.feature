@@ -4,8 +4,6 @@ Feature: Using the assessments tab in the teacher dashboard to get feedback for 
   Background:
     Given I create an authorized teacher-associated student named "Sally"
 
-  @skip
-  # TODO TEACH-509: Reenable with new section setup flow
   Scenario: Assessments tab has feedback download
     # Assign a unit with a survey but no assessment
     When I sign in as "Teacher_Sally"
@@ -39,24 +37,20 @@ Feature: Using the assessments tab in the teacher dashboard to get feedback for 
     And I select the "All teacher feedback in this unit" option in dropdown "assessment-selector"
     Then I wait until element "div:contains(Download CSV of Feedback)" is visible
 
-
-  @skip
-  # TODO TEACH-509: Reenable with new section setup flow
   Scenario: Assessments tab does not have feedback download
    # Assign a unit without feedback
     When I sign in as "Teacher_Sally" and go home
     And I click selector ".ui-test-section-dropdown" once I see it
     And I click selector ".edit-section-details-link"
+    Then I wait until element "#uitest-section-name-setup" is visible
     And I press keys "testingSection" for element "#uitest-section-name-setup"
     And I press the first "input[name='grades[]']" element
     And I wait until element "button:contains(Hour of Code)" is visible
     And I click selector "button:contains(Hour of Code)"
     And I press the first "input[name='Artist']" element
     And I press the first "#uitest-save-section-changes" element
-    And I wait until element "#classroom-sections" is visible
 
     # Assessments tab
-    And I wait until element "a:contains('Untitled Section')" is visible
     And I save the section id from row 0 of the section table
     Then I navigate to teacher dashboard for the section I saved
     And I wait until element "#uitest-teacher-dashboard-nav a:contains(Assessments/Surveys)" is visible

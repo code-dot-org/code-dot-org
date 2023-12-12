@@ -5,11 +5,11 @@
         "CT": {
           "description": "Arvutuslik mõtlemine"
         },
-        "L": {
-          "description": "Keel"
-        },
         "F": {
           "description": "Funktsioonid"
+        },
+        "L": {
+          "description": "Keel"
         }
       }
     }

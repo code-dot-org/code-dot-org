@@ -10,7 +10,7 @@ title: آور-آف-کوڈ کس طرح ھوسٹ (منعقد) کریں۔ آرگن�
 ***
 
 ## مقامی کمرۂ جماعت کے ساتھ جڑنے اور کوڈ کے گھنٹے کے لئے رضاکارانہ طور پر
-Code.org offers the opportunity for your employees to [connect]({{ urls/volunteer }}) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
+Code.org آپ کے ملازمین کو آور آف کوڈ کرنے والے مقامی کلاس رومز کے ساتھ [جڑنے]({{ urls/volunteer }}) کا موقع فراہم کرتا ہے جہاں وہ اپنے ٹیک کیریئر کے تجربے شیئر کر سکتے ہیں اور طلباء کو کمپیوٹر سائنس کا مطالعہ کرنے کی ترغیب دے سکتے ہیں۔
 
 [<button>Sign up to volunteer!</button>]({{ urls/volunteer }})
 <br>
@@ -27,20 +27,20 @@ For more instructions on encouraging employees and connecting your employees wit
 
 # طالب علموں کے ساتھ ایک گھنٹہ کوڈ کا ایونٹ کیسے میزبان ہے
 
-## 1. اپنے Hour of Code تقریب کا پرچار کریں
+## 1۔ اپنے Hour of Code تقریب کا پرچار کریں
 - Promote your [Hour of Code]({{ urls/promote }}) event and encourage others to host.
 - سوفٹ ویئر انجینئرز کو آپ کی کمپنی میں ایک مقامی کلاس روم کا دورہ کرنے کے لئے کوڈ کا قیام کرنے اور طالب علموں کو کمپیوٹر سائنس کا مطالعہ کرنے میں حوصلہ افزائی کرنے کی حوصلہ افزائی کریں. They can [sign up]({{ urls/volunteer_engineer }}) to be connected with a classroom.
 
-## 2. معلوماتی ویڈیو دیکھیں <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 2۔ معلوماتی ویڈیو دیکھیں <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 
-## 3. Choose an activity
+## 3۔ Choose an activity
 We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participants of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
 
 **All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
 
 [<img src="/images/fit-700/tutorials.png" />]({{ urls/learn }})
 
-## 4. Plan your technology needs - computers are optional
+## 4۔ Plan your technology needs - computers are optional
 
 آور-آف-کوڈ کا بہترین تجربہ انٹرنیت سے منسلک کمپیوٹرز کے ساتھ ہوسکتا ہے. But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
 
@@ -51,7 +51,7 @@ We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participa
 - **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). جب شرکاء پارٹنر کو شریک کرتے ہیں تو وہ ایک دوسرے کی مدد کرتے ہیں اور آرگنائزر پر کم لگاتے ہیں. وہ یہ بھی دیکھتے ہیں کہ کمپیوٹر سائنس دراصل سوشل اور باہمی تعاون کی طرز پر ہے۔.
 - **Have low bandwidth?** Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
 
-## 5.  Start your Hour of Code off with an inspiring video
+## 5۔  Start your Hour of Code off with an inspiring video
 پارٹیسیپنٹ کو متاثر کرتے ہوئے اپنا آور-آف-کوڈ دل جمعی سے شروع کریں اور انہیں بتائیں کہ کمپیوٹر سائنس ہماری روزمرہ زندگی کے ہر حصہ پر کس طرح اثرانداز ہوسکتی ہے۔. اس کے بارے میں مزید اشتراک کریں کہ آپ کو آپ کی کمپنی میں کمپیوٹر سائنس اور آپ کی کردار کا تعاقب کیا گیا ہے.
 
 **کوئی متاثر کن (انسپائریشنل) ویڈیو دیکھائیں:**
@@ -70,15 +70,15 @@ We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participa
 - اگر آپ ٹیک ٹیک کمپنی ہیں، ڈیمو تفریح، جدید مصنوعات آپ کی کمپنی پر کام کر رہی ہے.
 - اگر آپ ٹیک ٹیک کمپنی نہیں ہیں تو، اس بات پر تبادلہ خیال کریں کہ آپ کی کمپنی کے مسائل حل کرنے اور مقاصد کو پورا کرنے کے لئے ٹیکنالوجی کا استعمال کرتی ہے.
 - سوفٹ ویئر انجینئرز کو آپ کی کمپنی سے مدعو کرنے کے بارے میں بات کرنے کے لئے مدعو کریں کیوں کہ انہوں نے کمپیوٹر سائنس اور ان منصوبوں پر کام کرنے کا مطالعہ کرنے کا فیصلہ کیا.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- لڑکیوں کو کمپیوٹر سائنس میں دلچسپی دلانے کے لئے ن [کات]({{ urls/girls }})یہاں
 
 
 
-## 6. Code!
+## 6۔ کوڈ!
 
 **ایکٹیویٹی کے لیے شرکاء کو ہدایات دیں**
 
-- Write the activity link on a whiteboard. Find the link listed on the [information for your selected activity]({{ urls/learn }}) under the number of participants.
+- ایک وائٹ بورڈ پر سرگرمی کا لنک لکھیں۔ Find the link listed on the [information for your selected activity]({{ urls/learn }}) under the number of participants.
 - چھوٹے طالب علموں کے لئے، وقت سے آگے سرگرمی کا صفحہ لوڈ کریں یا بک مارک کے طور پر محفوظ کریں.
 
 **جب شرکاء مشکلات میں آتے ہیں تو جواب دینا ٹھیک ہے:**

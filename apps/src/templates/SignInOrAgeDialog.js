@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import cookies from 'js-cookie';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import color from '@cdo/apps/util/color';
+import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/templates/Button';
 import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
@@ -97,7 +98,7 @@ class SignInOrAgeDialog extends Component {
                 __useDeprecatedTag
                 href={pegasus('/hourofcode/overview')}
                 text="See all tutorials"
-                color={Button.ButtonColor.orange}
+                color={Button.ButtonColor.brandSecondaryDefault}
               />
             </div>
           </div>
@@ -144,7 +145,7 @@ const styles = {
   },
   heading: {
     fontSize: 16,
-    fontFamily: "'Gotham 5r', sans-serif",
+    ...fontConstants['main-font-semi-bold'],
   },
   middle: {
     marginTop: 20,

@@ -53,7 +53,7 @@ def main
     delta_sec = Time.now - db[table].order(:id).last[:created_at]
     threshold_sec = duration_min * SECONDS_PER_MINUTE
     if delta_sec > threshold_sec
-      alert "#{table.to_s.upcase} CREATION: too long (#{delta_sec} seconds "\
+      alert "#{table.to_s.upcase} CREATION: too long (#{delta_sec} seconds " \
         "[threshold #{threshold_sec}]) since last #{table} creation."
     end
   end
@@ -64,8 +64,8 @@ def main
     delta_sec = Time.now - db[table].where(column => column_value).order(:id).limit(1).last[:created_at]
     threshold_sec = duration_min * SECONDS_PER_MINUTE
     next unless delta_sec > threshold_sec
-    alert "#{table.to_s.upcase} KEY-VALUE CREATION: "\
-      "too long (#{delta_sec} seconds [threshold #{threshold_sec}]) since "\
+    alert "#{table.to_s.upcase} KEY-VALUE CREATION: " \
+      "too long (#{delta_sec} seconds [threshold #{threshold_sec}]) since " \
       "last #{table} creation with column #{column} having value #{column_value}."
   end
 
@@ -76,8 +76,8 @@ def main
     first_unsent_sec = Time.now - first_unsent[:created_at]
     threshold_sec = 5 * SECONDS_PER_MINUTE
     if last_sent_sec > threshold_sec && first_unsent_sec > threshold_sec
-      alert "POSTE_DELIVERIES MESSAGES UNSENT: too long "\
-        "(#{first_unsent_sec} seconds [threshold #{threshold_sec}]) since "\
+      alert "POSTE_DELIVERIES MESSAGES UNSENT: too long " \
+        "(#{first_unsent_sec} seconds [threshold #{threshold_sec}]) since " \
         "last email delivered"
     end
   end

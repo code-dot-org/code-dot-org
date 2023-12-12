@@ -1,0 +1,22 @@
+<Javalab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 68,
+  "created_at": "2023-06-21T19:46:47.000Z",
+  "level_num": "custom",
+  "user_id": 19026,
+  "properties": {
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "project_template_level_name": "CSA-frq-2021-ArrayResizer",
+    "long_instructions": "##ArrayResizer FRQ (Part B)\r\n\r\nWrite the method `resize`, which returns a new two-dimensional array containing only rows from `array2D` with all non-zero values. The elements in the new array should appear in the same order as the order in which they appeared in the original array. \r\n\r\nThe following code segment initializes a two-dimensional array and calls the `resize` method. \r\n\r\n```\r\nint[][] arr = {{2, 1, 0},\r\n\t\t\t   {1, 3, 2}, \r\n               {0, 0, 0}, \r\n               {4, 5, 6}}; \r\nint[][] smaller = ArrayResizer.resize(arr); \r\n```\r\n\r\nWhen the code segment completes, the following will be the contents of `smaller`. \r\n\r\n```\r\n{{1, 3, 2}, {4, 5, 6}} \r\n```\r\n\r\nA helper method, `numNonZeroRows`, has been provided for you. The method returns the number of rows in its two-dimensional array parameter that contain no zero values. \r\n\r\nComplete the `resize` method. Assume that `isNonZeroRow` works as specified, regardless of what you wrote in part (a). You must use `numNonZeroRows` and `isNonZeroRow` appropriately to receive full credit.\r\n",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console"
+  },
+  "audit_log": "[{\"changed_at\":\"2023-06-21 19:46:49 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":19026,\"changed_by_email\":\"brandon.spellman@code.org\"}]"
+}]]></config>
+</Javalab>

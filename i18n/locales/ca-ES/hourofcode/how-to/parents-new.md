@@ -1,5 +1,5 @@
 ---
-title: How-to guide for parents
+title: Guia d'How-to per a pares
 ---
 
 # Com fer una Hora del Codi amb el vostre fill

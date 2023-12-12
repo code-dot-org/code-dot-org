@@ -41,6 +41,7 @@ Dashboard::Application.routes.draw do
     get "/musiclab", to: redirect("/projectbeats", status: 302)
     get "/projectbeats", to: "musiclab#index"
     get "/musiclab/menu", to: "musiclab#menu"
+    get "/musiclab/gallery", to: "musiclab#gallery"
     get "/musiclab/analytics_key", to: "musiclab#get_analytics_key"
 
     resources :activity_hints, only: [:update]
@@ -197,8 +198,10 @@ Dashboard::Application.routes.draw do
       get '/users/demigrate_from_multi_auth', to: 'registrations#demigrate_from_multi_auth'
       get '/users/to_destroy', to: 'registrations#users_to_destroy'
       get '/reset_session', to: 'sessions#reset'
+      get '/lockout', to: 'sessions#lockout'
       get '/users/existing_account', to: 'registrations#existing_account'
       post '/users/auth/maker_google_oauth2', to: 'omniauth_callbacks#maker_google_oauth2'
+      get '/users/edit', to: 'registrations#edit'
     end
     devise_for :users, controllers: {
       omniauth_callbacks: 'omniauth_callbacks',
@@ -262,6 +265,7 @@ Dashboard::Application.routes.draw do
           get "/#{key}/:channel_id/remix", to: 'projects#remix', key: key.to_s, as: "#{key}_project_remix"
           get "/#{key}/:channel_id/export_create_channel", to: 'projects#export_create_channel', key: key.to_s, as: "#{key}_project_export_create_channel"
           get "/#{key}/:channel_id/export_config", to: 'projects#export_config', key: key.to_s, as: "#{key}_project_export_config"
+          get "/#{key}/:channel_id/can_publish_age_status", to: 'projects#can_publish_age_status'
         end
 
         get '/:tab_name', to: 'projects#index', constraints: {tab_name: /(public|libraries)/}
@@ -319,7 +323,7 @@ Dashboard::Application.routes.draw do
         post 'clone'
         post 'update_start_code'
         post 'update_exemplar_code'
-        get 'level_data'
+        get 'level_properties'
       end
     end
 
@@ -355,6 +359,9 @@ Dashboard::Application.routes.draw do
 
       resources :reference_guides, param: 'key', path: 'guides'
     end
+
+    resources :potential_teachers, only: [:create]
+    get '/potential_teachers/:id', param: :id, to: 'potential_teachers#show'
 
     # CSP 20-21 lockable lessons with lesson plan redirects
     get '/s/csp1-2020/lockable/2(*all)', to: redirect(path: '/s/csp1-2020/lessons/14%{all}')
@@ -471,9 +478,9 @@ Dashboard::Application.routes.draw do
             get 'page/:puzzle_page', to: 'script_levels#show', as: 'puzzle_page', format: false
             # /s/xxx/lessons/yyy/levels/zzz/sublevel/sss
             get 'sublevel/:sublevel_position', to: 'script_levels#show', as: 'sublevel', format: false
-            # Get the level data via JSON.
-            # /s/xxx/lessons/yyy/levels/zzz/level_data
-            get 'level_data', to: 'script_levels#level_data'
+            # Get the level's properties via JSON.
+            # /s/xxx/lessons/yyy/levels/zzz/level_properties
+            get 'level_properties', to: 'script_levels#level_properties'
           end
         end
         resources :script_levels, only: [:show], path: "/levels", format: false do
@@ -592,12 +599,20 @@ Dashboard::Application.routes.draw do
     post '/admin/gatekeeper/delete', to: 'dynamic_config#gatekeeper_delete', as: 'gatekeeper_delete'
     post '/admin/gatekeeper/set', to: 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
 
+    # LTI API endpoints
+    match '/lti/v1/login(/:platform_id)', to: 'lti_v1#login', via: [:get, :post]
+    post '/lti/v1/authenticate', to: 'lti_v1#authenticate'
+
+    # OAuth endpoints
+    get '/oauth/jwks', to: 'oauth_jwks#jwks'
+
     get '/notes/:key', to: 'notes#index'
 
     resources :zendesk_session, only: [:index]
 
     post '/report_abuse', to: 'report_abuse#report_abuse'
     get '/report_abuse', to: 'report_abuse#report_abuse_form'
+    post '/report_abuse_pop_up', to: 'report_abuse#report_abuse_pop_up'
 
     get '/too_young', to: 'too_young#index'
 
@@ -858,6 +873,7 @@ Dashboard::Application.routes.draw do
             send(method, action, action: action)
           end
         end
+        post 'test/ai_proxy/assessment', to: 'test_ai_proxy#assessment'
       end
     end
 
@@ -868,6 +884,9 @@ Dashboard::Application.routes.draw do
         post 'users/:user_id/using_text_mode', to: 'users#post_using_text_mode'
         post 'users/:user_id/display_theme', to: 'users#update_display_theme'
         post 'users/:user_id/mute_music', to: 'users#post_mute_music'
+
+        post 'users/sort_by_family_name', to: 'users#post_sort_by_family_name'
+
         get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
         get 'users/:user_id/display_theme', to: 'users#get_display_theme'
         get 'users/:user_id/mute_music', to: 'users#get_mute_music'
@@ -909,6 +928,15 @@ Dashboard::Application.routes.draw do
         # Routes used by the peer reviews admin pages
         get 'peer_review_submissions/index', to: 'peer_review_submissions#index'
         get 'peer_review_submissions/report_csv', to: 'peer_review_submissions#report_csv'
+
+        get 'section_instructors/check', to: 'section_instructors#check'
+        resources :section_instructors, only: [:index, :create, :destroy] do
+          member do
+            put 'accept'
+            put 'decline'
+          end
+        end
+        get 'section_instructors/:section_id', to: 'section_instructors#show'
 
         resources :ml_models, only: [:show, :destroy] do
           collection do
@@ -1029,6 +1057,29 @@ Dashboard::Application.routes.draw do
 
     resources :code_review_comments, only: [:create, :update, :destroy]
 
+    resources :rubrics, only: [:create, :edit, :new, :update] do
+      member do
+        get 'get_ai_evaluations'
+        get 'get_teacher_evaluations'
+        get 'ai_evaluation_status_for_user'
+        post 'run_ai_evaluations_for_user'
+        post 'submit_evaluations'
+      end
+    end
+
+    resources :learning_goal_teacher_evaluations, only: [:create, :update] do
+      collection do
+        get :get_evaluation
+        post :get_or_create_evaluation
+      end
+    end
+
+    resources :learning_goal_ai_evaluation_feedbacks, only: [:create, :update] do
+      collection do
+        post :get_by_ai_evaluation_id
+      end
+    end
+
     get '/backpacks/channel', to: 'backpacks#get_channel'
 
     resources :project_commits, only: [:create]
@@ -1050,11 +1101,16 @@ Dashboard::Application.routes.draw do
     get '/offline-files.json', action: :offline_files, controller: :offline
 
     post '/browser_events/put_logs', to: 'browser_events#put_logs'
+    post '/browser_events/put_metric_data', to: 'browser_events#put_metric_data'
 
     get '/get_token', to: 'authenticity_token#get_token'
+
+    post '/openai/chat_completion', to: 'openai_chat#chat_completion'
 
     # Policy Compliance
     get '/policy_compliance/child_account_consent/', to:
       'policy_compliance#child_account_consent'
+    post '/policy_compliance/child_account_consent/', to:
+      'policy_compliance#child_account_consent_request'
   end
 end

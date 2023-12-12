@@ -6,11 +6,11 @@ my:
         mike-test:
           title: ကွန်ပျူတာသိပ္ပံအခြေခံ။
     resources:
-      teacher_forum/csd/2020:
-        name: ဆရာဖိုရမ်
       teacher_forum_6/csd/2017:
+        name: ဆရာဖိုရမ်
+      teacher_forum_6/csd/2018:
         name: ဆရာဖိုရမ်
       teacher_forum/csd/2019:
         name: ဆရာဖိုရမ်
-      teacher_forum_6/csd/2018:
+      teacher_forum/csd/2020:
         name: ဆရာဖိုရမ်

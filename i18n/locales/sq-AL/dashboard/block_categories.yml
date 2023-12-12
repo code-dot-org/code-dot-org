@@ -2,16 +2,41 @@ sq:
   data:
     block_categories:
       Actions: Veprime
+      Advanced: E avancuar
+      Behaviors: Sjelljet
+      'Behaviors ': 'Sjelljet '
+      Boolean: Logjike
+      Brushes: Furçat
+      Category: Kategoria
       Color: Ngjyra
       Comment: Komento
+      Comments: Komente
       Conditionals: Kushtet
+      Dancers: Kërcimtarët
+      Default: Parazgjedhur
+      Effects: Efektet
       Events: Ngjarje
       Functions: funksione
       'Functions ': 'funksione '
+      Game/Score: Lojë/Rezultati
+      Games/Score: Lojra/Rezultati
+      Groups: Grupet
+      Input: Input
       Location: Lokacioni
+      Locations: Vendndodhjet
       Logic: Logjikë
-      Loops: cikle 
+      Loops: Cikle
       Math: Matematikë
+      Number: Numri
+      Numbers: Numrat
+      Picker: Mbledhës
+      Prebuilt: Para-ndërtuar
+      Properties: Parametrat
+      Shapes: Format
+      Sprites: Sprites
+      String: String
       Text: Tekst
       Variables: variabla
       'Variables ': 'Variabla '
+      'Variables  ': 'Variablat  '
+      World: Bota

@@ -15,7 +15,6 @@ cs:
             '0.75': malý
             '1.00': středně
             '2.00': velký
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
@@ -23,7 +22,6 @@ cs:
             '0.75': malý
             '1.00': středně
             '2.00': velký
-            '3.00': extra large
       Dancelab_alternateMoves:
         text: "{GROUP} střídat každých {N} taktů \nmezi {MOVE1} a {MOVE2}"
         options:
@@ -71,6 +69,11 @@ cs:
           UNIT:
             '"measures"': takty
             '"seconds"': sekund
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': takty
+            '"seconds"': sekund
       Dancelab_changeColorBy:
         text: změnit {COLOR} {METHOD} o {AMOUNT}
         options:
@@ -110,6 +113,27 @@ cs:
             MOVES.Kick: Kopou
             MOVES.ThisOrThat: Toto nebo ono
             MOVES.Rest: Žádný
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} dělá {MOVE} {DIR} navždy"
+        options:
+          GROUP:
+            '"CAT"': všechny kočky
+            '"SLOTH"': lenochodové
+          MOVE:
+            MOVES.Roll: Vlna tělem
+            MOVES.ClapHigh: Clap High
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Dvojitě dolů
+            MOVES.Drop: Roznožka
+            MOVES.Floss: Tančí floss
+            MOVES.Fresh: Tančí fresh
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Kopou
+            MOVES.ThisOrThat: Toto nebo ono
+            MOVES.Rest: Žádný
+            '"next"': "(Další)"
+            '"prev"': "(Předchozí)"
+            '"rand"': "(Náhodně)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} dělá {MOVE} {DIR} navždy"
         options:
@@ -454,26 +478,6 @@ cs:
             '18': '18'
             '19': '19'
             '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
-            '40': '40'
           COSTUME:
             '"ALIEN"': všichni vetřelci
             '"BEAR"': medvědi
@@ -586,6 +590,49 @@ cs:
             '"iceCream"': Zmrzlina
             '"default"': Světlo
             '"neon"': Neon
+            '"tropical"': Tropické
+            '"vintage"': Retro
+            '"warm"': Červené
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: nastav efekt pozadí {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Žádný
+            '"rand"': "(Náhodně)"
+            '"quads"': Úhly
+            '"circles"': Tunel
+            '"color_cycle"': Barvy
+            '"diamonds"': Diamanty
+            '"disco_ball"': Disco koule
+            '"fireworks"': Ohňostroj
+            '"flowers"': Květiny
+            '"growing_stars"': Zvětšující se hvězdy
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kaleidoskop
+            '"lasers"': Laserový taneční parket
+            '"splatter"': Barevný stříkanec
+            '"rainbow"': Duha
+            '"ripples_random"': Náhodné vlny
+            '"ripples"': Vlny
+            '"snowflakes"': Sníh
+            '"text"': Název skladby
+            '"galaxy"': Vesmír
+            '"sparkles"': Lesky
+            '"spiral"': Spirála
+            '"disco"': Čtverce
+            '"squiggles"': Klikyháky
+            '"starburst"': Výbuch hvězdy
+            '"stars"': Hvězdy
+            '"music_wave"': Vlny
+          PALETTE:
+            '"rave"': Černá a bílá
+            '"cool"': Modré
+            '"electronic"': Elektronika
+            '"iceCream"': Zmrzlina
+            '"default"': Světlo
+            '"neon"': Neon
+            '"ocean"': Oceán
+            '"rainbow"': Duha
             '"tropical"': Tropické
             '"vintage"': Retro
             '"warm"': Červené
@@ -995,8 +1042,6 @@ cs:
         options:
           INPUT1:
             '1': citronová šťáva
-            '3': baking soda
-            '5': both
       DansBlocks_setForegroundEffect2:
         text: proveď efekt {EFFECT}
         options:
@@ -1013,8 +1058,6 @@ cs:
         options:
           INPUT1:
             '1': citronová šťáva
-            '3': baking soda
-            '5': both
       FunctionBlocks_communicate:
         text: Komunikujte {VAR1} s {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:
@@ -1508,11 +1551,9 @@ cs:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': pomalá
             '5': normální
             '7': rychlá
-            '9': extra fast
       gamelab_setTint:
         text: změň barvu {THIS} na {COLOR}
       gamelab_setupScoreboard:
@@ -1670,6 +1711,12 @@ cs:
         text: y souřadnice {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} klouže na {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': pevná látka
+            '"liquid"': kapalina
+            '"gas"': plyn
       KatiesBlocks_tumbling:
         text: cvičení
       Mikelab_addBehaviorSimple:
@@ -2019,14 +2066,10 @@ cs:
         options:
           INPUT1:
             '1': citronová šťáva
-            '3': baking soda
-            '5': both
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
             '1': citronová šťáva
-            '3': baking soda
-            '5': both
       ParticlesBlocks_statesOfMatter:
         options:
           BEHAVIOR:
@@ -2308,16 +2351,10 @@ cs:
         options:
           PORTION:
             '1': vše
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': vše
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE} říká {SPEECH}"
       adaptations_adaptationBehaviors:
@@ -2476,7 +2513,6 @@ cs:
       ecosystems_int10:
         options:
           VALUE:
-            '0': '0'
             '1': '1'
             '2': '2'
             '3': '3'

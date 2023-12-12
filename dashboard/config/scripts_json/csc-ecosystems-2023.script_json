@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "curriculum_umbrella": "CSC",
       "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
@@ -12,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "csc-ecosystems",
-    "serialized_at": "2023-06-06 20:32:30 UTC",
+    "serialized_at": "2023-08-24 20:44:32 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -44,8 +45,8 @@
       "relative_position": 1,
       "properties": {
         "overview": "In this **skill-building** lesson, students will program a model of an aquatic ecosystem and then simulate an overfishing situation. Students will learn how to program conditional statements to check the amount of algae in the water. If there is too much algae, the coral becomes sick. If there is too little algae, the fish have no food source and leave the area. If there is just the right amount of algae, the sick coral will heal and the fish will stay in the area. \n",
-        "preparation": "- Play through the levels and review the lesson slides.\n- Decide on pacing between student work time and whole group instruction.\n- Check your technology and decide if you need to troubleshoot anything in advance.\n- Consider assigning students the recommended preparation ([link](https://levelbuilder-studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4050222))\n- Consider these related extensions options ([link](https://levelbuilder-studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4050221))",
-        "purpose": "Students will learn that marine ecosystems have many organisms which interact and keep each other in balance. This lesson combines computer science with life sciences as students create a model that simulates the effects of overfishing. "
+        "preparation": "- Play through the levels and review the <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">lesson slides</a> \n- Decide on pacing between student work time and whole group instruction.\n- Consider assigning students the recommended preparation \n([link](https://studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4911962))\n- Consider these related extensions options ([link](https://studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4911963)) to explore after the last lesson.\n\n#####Optional:\n- [Optional] Review this <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">Helpful Hints</a>  slideshow. \n- [Optional] Review this <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">teacher’s guide to debugging</a>  to be prepared to help students find and fix errors in their code. \n",
+        "purpose": "Students will learn that marine ecosystems have many organisms which interact and keep each other in balance. This lesson combines computer science with life sciences as students create a model that simulates the effects of overfishing using conditional statements in computer science to show cause and effect in real life. "
       },
       "seeding_key": {
         "lesson.key": "Overfishing Simulation (pilot)",
@@ -62,7 +63,7 @@
       "relative_position": 2,
       "properties": {
         "overview": "In this **skill-building** lesson, students will read about and then program three different solutions to the problem of overfishing.\n\nThis lesson starts where the previous lesson left off, with the model of an unbalanced aquatic ecosystem. First, students will modify the behavior of the boat so it can only move within a specified “fishing zone”. Second, students will program a new event to specify a “fishing season” and a “no fishing season”. Third, students will learn how to use a variable to keep track of the number of fish the boat has removed. The lesson ends with a Check For Understanding level to make sure students learned the three solutions to overfishing.\n",
-        "preparation": "- Play through the levels and review the lesson slides.\n- Decide on pacing between student work time and whole group instruction.\n- Read the provided article on [Understanding Overfishing](https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing). Scaffold as needed to meet the needs of your students. \n- Consider assigning students the recommended preparation [(link)](https://levelbuilder-studio.code.org/s/csc-ecosystems-2023/lessons/2#activity-4110188).\n- Consider these related extensions options [(link)](https://levelbuilder-studio.code.org/s/csc-ecosystems-2023/lessons/2#activity-4110189).",
+        "preparation": "- Read the provided article on <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\" target=\"_blank\">Understanding Overfishing</a>. Scaffold as needed to meet the needs of your students. \n- Play through the levels and review the <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">lesson slides</a> \n- Decide on pacing between student work time and whole group instruction.\n- Consider assigning students the recommended preparation [(link)](https://studio.code.org/s/csc-ecosystems-2023/lessons/2#activity-4986903).\n- Consider these related extensions options [(link)](https://studio.code.org/s/csc-ecosystems-2023/lessons/2#activity-4986904).\n\n#####Optional:\n- [Optional] Review this <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">Helpful Hints</a>  slideshow. \n- [Optional] Review this <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">teacher’s guide to debugging</a>  to be prepared to help students find and fix errors in their code. ",
         "purpose": "Students will continue to learn about balanced and unbalanced ecosystems. Using a scientific article about overfishing as a foundation, students will develop a rich understanding of the connections between organisms in an ecosystem. Ultimately, students will have the opportunity to apply what they have learned by modeling a local ecosystem. "
       },
       "seeding_key": {
@@ -80,7 +81,7 @@
       "relative_position": 3,
       "properties": {
         "overview": "In this **skill-building** lesson, students will explore several different ecosystem simulations. Students can choose to explore a rainforest, desert, arctic, or wetlands ecosystem. They will take on the role of an ecologist and investigate the interactions between the plants and animals in each ecosystem’s food chain. Students will read the instructions to understand the challenge each ecosystem is facing. Then they will modify the corresponding code in order to rebalance the ecosystem. ",
-        "preparation": "- Play through the levels and review the lesson slides.\n- Decide on pacing between student work time and whole group instruction.\n- Print an Ecologist's Notebook for each student\n- Consider the extension option at the end of the lesson plan"
+        "preparation": "- Play through the levels and review the <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">lesson slides</a> \n- Decide on pacing between student work time and whole group instruction.\n- Print an Ecologist's Notebook for each student\n- Consider these [extension opportunities](https://studio.code.org/s/csc-ecosystems-2023/lessons/3#activity-4852074) after this lesson"
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -162,7 +163,7 @@
       "key": "ed5b5a6d-063d-493f-a4f3-bbd78d100172",
       "position": 1,
       "properties": {
-        "name": "Recommended Preperation"
+        "name": "Recommended Preparation"
       },
       "seeding_key": {
         "lesson_activity.key": "ed5b5a6d-063d-493f-a4f3-bbd78d100172",
@@ -272,7 +273,7 @@
       "key": "1684b440-4813-446c-a62d-201cf832b0fd",
       "position": 4,
       "properties": {
-        "name": "Extension Option"
+        "name": "Extension Opportuntites "
       },
       "seeding_key": {
         "lesson_activity.key": "1684b440-4813-446c-a62d-201cf832b0fd",
@@ -300,7 +301,7 @@
         "tips": [
           {
             "type": "contentCorner",
-            "markdown": "**Science Content:** Students will work with a marine life ecosystem in Lessons 1 and 2. To build familiarity with this ecosystem, we recommend this [Ocean Animals Video](https://www.youtube.com/watch?v=8adtdg0N2-g) (9:42 minutes).\n\n**Computer Science Content:** In this module, students will learn new coding concepts that might be difficult for new-to-computer science students. If students are not familiar with Code.org’s Sprite Lab we recommend trying [Swimming Fish with Sprite Lab](https://studio.code.org/s/coursee-2022/lessons/3) (55 minutes) for a basic introduction to the tool. \n\nThis module also uses an advanced CS concept called conditional statements. Students learn this concept in a scaffolded way, but some students may benefit from first engaging in this introduction to conditionals unplugged activity: [Conditionals with Cards](https://studio.code.org/s/coursed-2022/lessons/12) (50 minutes)."
+            "markdown": "**Science Content:** Students will work with a marine life ecosystem in Lessons 1 and 2. To build familiarity with this ecosystem, we recommend this <a href=\"https://www.youtube.com/watch?v=8adtdg0N2-g\" target=\"_blank\">Ocean Animals Video</a> (9:42 minutes).\n\n**Computer Science Content:** In this module, students will learn new coding concepts that might be difficult for new-to-computer science students. If students are not familiar with Code.org’s Sprite Lab we recommend trying <a href=\"https://studio.code.org/s/coursee-2022/lessons/3\" target=\"_blank\">Swimming Fish with Sprite Lab</a> (55 minutes) for a basic introduction to the tool. \n\nThis module also uses an advanced CS concept called conditional statements. Students learn this concept in a scaffolded way, but some students may benefit from first engaging in this introduction to conditionals unplugged activity: <a href=\"https://studio.code.org/s/coursed-2022/lessons/12\" target=\"_blank\">Conditionals with Cards</a> (50 minutes).\n"
           }
         ]
       },
@@ -502,7 +503,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "In levels 7-9 students are supplied with the correct code from their previous levels. They will add a few new blocks to the end of the starter code in each level to build the simulation. \nConditional statements can be a tricky concept in computer science. If you have time, this [Conditions with Cards](https://code.org/hourofcode/unplugged-conditionals-with-cards) Unplugged activity can help reinforce the understanding. Additionally, encourage students to read their code out loud to help them understand what the conditional blocks are doing in each situation. \n"
+            "markdown": "In levels 7-9 students are supplied with the correct code from their previous levels. They will add a few new blocks to the end of the starter code in each level to build the simulation. \nConditional statements can be a tricky concept in computer science. If you have time, this <a href=\"https://code.org/hourofcode/unplugged-conditionals-with-cards\" target=\"_blank\">Conditionals with Cards</a> Unplugged activity can help reinforce the understanding. Additionally, encourage students to read their code out loud to help them understand what the conditional blocks are doing in each situation. \n"
           }
         ]
       },
@@ -619,7 +620,7 @@
         "tips": [
           {
             "type": "contentCorner",
-            "markdown": "\n**Science Content:**  \n- [CSC Module: Animal Adaptations Lessons 1-3](http://studio.code.org/s/csc-adaptations-2023)\n- [Project: Modeling Life Cycles in Sprite Lab](https://docs.google.com/document/d/1C8cz6hKlBuEMz_1ocauAaEWkwLVENDC5u8N_qQED8vU/edit?usp=sharing)\n- [AI for Oceans](https://code.org/oceans)\n- Read-Alouds and other activities\n\n\n**Computer Science Concepts:**  \n- Simulations:  [Simulating Experiments](https://studio.code.org/s/coursef-2022/lessons/12) & [Outbreak](https://studio.code.org/s/coursef-2022/lessons/13)\n- Conditionals: [Minecraft](https://studio.code.org/s/coursee-2022/lessons/12)\n- If/Else Conditionals: [Bee](https://studio.code.org/s/coursed-2022/lessons/14)\n- Events: [Dance Party](https://studio.code.org/s/coursed-2022/lessons/8)"
+            "markdown": "\n**Science Content:**  \n- <a href=\"http://studio.code.org/s/csc-adaptations-2023\" target=\"_blank\">CSC Module: Animal Adaptations Lessons 1-3</a> \n- <a href=\"https://docs.google.com/document/d/1C8cz6hKlBuEMz_1ocauAaEWkwLVENDC5u8N_qQED8vU/edit?usp=sharing\" target=\"_blank\">Project: Modeling Life Cycles in Sprite Lab</a> \n- <a href=\"https://code.org/oceans\" target=\"_blank\">AI for Oceans</a> \n\n\n**Computer Science Concepts:**  \n- Simulations:  <a href=\"https://studio.code.org/s/coursef-2022/lessons/12\" target=\"_blank\">Simulating Experiments</a> & <a href=\"https://studio.code.org/s/coursef-2022/lessons/13\" target=\"_blank\">Outbreak</a> \n- Conditionals: <a href=\"https://studio.code.org/s/coursee-2022/lessons/12\" target=\"_blank\">Minecraft</a> \n- If/Else Conditionals: <a href=\"https://studio.code.org/s/coursed-2022/lessons/14\" target=\"_blank\">Bee</a> \n- Events: <a href=\"https://studio.code.org/s/coursed-2022/lessons/8\" target=\"_blank\">Dance Party</a> "
           }
         ]
       },
@@ -635,7 +636,7 @@
         "tips": [
           {
             "type": "contentCorner",
-            "markdown": "**Science Content**: In this lesson, students will work on balancing the marine ecosystem simulation with sustainable fishing practices. Some of the strategies have been used by coastal indigenous people for centuries. Here are some resources to help students build more background knowledge: \n\n\n\n- [Salmon Boy: A Legend of the Sechelt People](https://www.youtube.com/watch?v=WpKqXidmshc) A story of a boy who teaches his people about responsibility and respect for the salmon, ensuring their survival. \n\n- [Storymap website](https://www.seagardens.net/#map):  Indigenous People have been stewarding the ocean for thousands of years. This interactive and “living” story map of sea gardens, begins to synthesize information about ancestral mariculture across the Pacific Ocean. \n\n**Computer Science**: This lesson breifly uses events, behaviors, and conditionals in the code.  Here are a few resources may help reinforce these coding concepts if you have time. \n- [Events](https://studio.code.org/s/coursed-2022/lessons/6) in Bounce (50 minute lesson)"
+            "markdown": "**Science Content**: In this lesson, students will work on balancing the marine ecosystem simulation with sustainable fishing practices. Some of the strategies have been used by coastal indigenous people for centuries. Here are some resources to help students build more background knowledge: \n\n- <a href=\"https://www.youtube.com/watch?v=WpKqXidmshc\" target=\"_blank\">Salmon Boy: A Legend of the Sechelt People</a>: A story of a boy who teaches his people about responsibility and respect for the salmon, ensuring their survival. \n\n- <a href=\"https://www.seagardens.net/#map\" target=\"_blank\">Storymap website</a>:  Indigenous People have been stewarding the ocean for thousands of years. This interactive and “living” story map of sea gardens, begins to synthesize information about ancestral mariculture across the Pacific Ocean. \n\n**Computer Science**: This lesson briefly uses events, behaviors, and conditionals in the code.  Here are a few resources may help reinforce these coding concepts if you have time. \n\n- <a href=\"https://studio.code.org/s/coursed-2022/lessons/6\" target=\"_blank\">Events</a> in Bounce (50 minute lesson)"
           }
         ]
       },
@@ -648,7 +649,7 @@
       "key": "b94ce22a-54d4-4d70-b8d1-a3f37e9c22ae",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Read & Discuss” slide\n\n**Do This**: Provide students with the Understanding Overfishing [article](https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing) digitally or printed. Read the article together out loud, taking time to address new vocabulary as needed for your class. \n\n**Discuss**: \n- _How does the article connect to the overfishing simulation we made in Lesson 1?_ \n- _How could we change the code to balance the ecosystem?_\n\n**Discussion Goal**: Students should see the connection to the unbalanced ecosystem, specifically if there are fewer fish, the algae overgrows and the coral becomes sick. Have students refer to the paragraph of the article titled “Harm to ecosystems”. Students can also find several solutions to the problem in the section titled “How to prevent overfishing”. Students should brainstorm how they could apply these solutions to their coded simulation.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Read & Discuss” slide\n\n**Do This**: Provide students with the Understanding Overfishing <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\" target=\"_blank\">article</a> digitally or printed. Read the article together out loud, taking time to address new vocabulary as needed for your class. \n\n**Discuss**: \n- _How does the article connect to the overfishing simulation we made in Lesson 1?_ \n- _How could we change the code to balance the ecosystem?_\n\n**Discussion Goal**: Students should see the connection to the unbalanced ecosystem, specifically if there are fewer fish, the algae overgrows and the coral becomes sick. Have students refer to the paragraph of the article titled “Harm to ecosystems”. Students can also find several solutions to the problem in the section titled “How to prevent overfishing”. Students should brainstorm how they could apply these solutions to their coded simulation.",
         "duration": "10",
         "name": "Read and Discuss",
         "tips": [
@@ -827,7 +828,7 @@
         "tips": [
           {
             "type": "contentCorner",
-            "markdown": "**Science Content**: In this lesson, students will work on balancing the marine ecosystem simulation with sustainable fishing practices. Some of the strategies have been used by coastal indigenous people for centuries. Here are some resources to help students build more background knowledge: \n\n\n\n- [Salmon Boy: A Legend of the Sechelt People](https://www.youtube.com/watch?v=WpKqXidmshc) A story of a boy who teaches his people about responsibility and respect for the salmon, ensuring their survival. \n\n- [Storymap website](https://www.seagardens.net/#map):  Indigenous People have been stewarding the ocean for thousands of years. This interactive and “living” story map of sea gardens, begins to synthesize information about ancestral mariculture across the Pacific Ocean. \n\n**Computer Science**: This lesson breifly uses events, behaviors, and conditionals in the code.  Here are a few resources may help reinforce these coding concepts if you have time. \n- [Events](https://studio.code.org/s/coursed-2022/lessons/6) in Bounce (50 minute lesson)"
+            "markdown": "**Science Content**: In this lesson, students will work on balancing the marine ecosystem simulation with sustainable fishing practices. Some of the strategies have been used by coastal indigenous people for centuries. Here are some resources to help students build more background knowledge: \n\n\n\n- [Salmon Boy: A Legend of the Sechelt People](https://www.youtube.com/watch?v=WpKqXidmshc) is a story of a boy who teaches his people about responsibility and respect for the salmon, ensuring their survival. \n\n- [Storymap website](https://www.seagardens.net/#map):  Indigenous People have been stewarding the ocean for thousands of years. This interactive and “living” story map of sea gardens begins to synthesize information about ancestral mariculture across the Pacific Ocean. \n\n**Computer Science**: This lesson briefly uses events, behaviors, and conditionals in the code.  Here are a few resources that may help reinforce these coding concepts if you have time. \n- [Events](https://studio.code.org/s/coursed-2022/lessons/6) in Bounce (50 minute lesson)"
           }
         ]
       },
@@ -1028,7 +1029,7 @@
       "key": "2ac3ae1c-b9e7-455a-91a3-b30db502e3b2",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 10 - Free Play” slide\n\n\n**Do This**: Students can use the animals and backgrounds to create their own ecosystem. \n\n\n**(Optional) Do This**: It is possible for you to make a remix of the Free Play level in Lesson 1 and then upload your own images to use for sprites. You could use this technique to put a local lens on the last level. [This](https://youtu.be/8KCAvNt4jRg) is a video that explains how to upload your own images for your students to use as sprites.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 10 - Free Play” slide\n\n\n**Do This**: Students can use the animals and backgrounds to create their own ecosystem. \n\n\n**(Optional) Do This**: It is possible for you to make a remix of the Free Play level in Lesson 1 and then upload your own images to use for sprites. You could use this technique to put a local lens on the last level. <a href=\"https://youtu.be/8KCAvNt4jRg\" target=\"_blank\">This is a video</a> \nthat explains how to upload your own images for your students to use as sprites.\n",
         "name": "Create a Local Ecosystem"
       },
       "seeding_key": {
@@ -1041,7 +1042,13 @@
       "position": 2,
       "properties": {
         "description": "Try adding a background and sprites that represent an ecosystem in our area! There are new sprite and background options available to you in this level. \n\n- How do the organisms in this ecosystem move? Try adding behaviors!\n- How do the organisms in this ecosystem interact? Try adding events!\n- How does the energy flow (food web) in this ecosystem?  \n- Is your simulation a balanced ecosystem or is one organism causing an imbalance?  \n",
-        "remarks": true
+        "remarks": true,
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "Further extensions include: \n\n**Science Content:**  \n- <a href=\"http://studio.code.org/s/csc-adaptations-2023\" target=\"_blank\">CSC Module: Animal Adaptations Lessons 1-3</a> \n- <a href=\"https://docs.google.com/document/d/1C8cz6hKlBuEMz_1ocauAaEWkwLVENDC5u8N_qQED8vU/edit?usp=sharing\" target=\"_blank\">Project: Modeling Life Cycles in Sprite Lab</a> \n- <a href=\"https://code.org/oceans\" target=\"_blank\">AI for Oceans</a> \n\n\n**Computer Science Concepts:**  \n- Simulations:  <a href=\"https://studio.code.org/s/coursef-2022/lessons/12\" target=\"_blank\">Simulating Experiments</a> & <a href=\"https://studio.code.org/s/coursef-2022/lessons/13\" target=\"_blank\">Outbreak</a> \n- Conditionals: <a href=\"https://studio.code.org/s/coursee-2022/lessons/12\" target=\"_blank\">Minecraft</a> \n- If/Else Conditionals: <a href=\"https://studio.code.org/s/coursed-2022/lessons/14\" target=\"_blank\">Bee</a> \n- Events: <a href=\"https://studio.code.org/s/coursed-2022/lessons/8\" target=\"_blank\">Dance Party</a> "
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "9fda5c5f-e72e-4695-accb-10fe0ecad953",
@@ -1906,6 +1913,28 @@
   ],
   "resources": [
     {
+      "name": "CS Connections Landing Page",
+      "url": "https://code.org/educate/csc",
+      "key": "cs_connections_landing_page",
+      "properties": {
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "cs_connections_landing_page"
+      }
+    },
+    {
+      "name": "CSC Extended Connections Book List",
+      "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview\t",
+      "key": "csc_extended_connections_book_list",
+      "properties": {
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csc_extended_connections_book_list"
+      }
+    },
+    {
       "name": "Ecologist's Notebook",
       "url": "https://docs.google.com/document/d/1_xi5PFs5TJyO3-8Hz7ftZxCNRPpd5yQBCwhm8IuysY8/template/preview",
       "key": "ecologist_s_notebook",
@@ -1932,6 +1961,38 @@
       }
     },
     {
+      "name": "Helpful Hints for teachers and learners\t",
+      "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\t",
+      "key": "helpful_hints_for_teachers_and_learners",
+      "properties": {
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "helpful_hints_for_teachers_and_learners"
+      }
+    },
+    {
+      "name": "Resource List for All Lessons",
+      "url": "\t/s/csc-ecosystems-2023/resources",
+      "key": "resource_list_for_all_lessons",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "resource_list_for_all_lessons"
+      }
+    },
+    {
+      "name": "Standards in Simulating a Marine Ecosystem ",
+      "url": "/s/csc-ecosystems-2023/standards",
+      "key": "standards_in_simulating_a_marine_ecosystem",
+      "properties": {
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "standards_in_simulating_a_marine_ecosystem"
+      }
+    },
+    {
       "name": "Understanding Overfishing Article",
       "url": "https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing",
       "key": "understanding_overfishing_article",
@@ -1941,6 +2002,17 @@
       },
       "seeding_key": {
         "resource.key": "understanding_overfishing_article"
+      }
+    },
+    {
+      "name": "Vocabulary in Simulating a Marine Ecosystem",
+      "url": "/s/csc-ecosystems-2023/vocab",
+      "key": "vocabulary_in_simulating_a_marine_ecosystem",
+      "properties": {
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "vocabulary_in_simulating_a_marine_ecosystem"
       }
     }
   ],
@@ -1977,7 +2049,42 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "cs_connections_landing_page",
+        "script.name": "csc-ecosystems-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csc_extended_connections_book_list",
+        "script.name": "csc-ecosystems-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "helpful_hints_for_teachers_and_learners",
+        "script.name": "csc-ecosystems-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "resource_list_for_all_lessons",
+        "script.name": "csc-ecosystems-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "standards_in_simulating_a_marine_ecosystem",
+        "script.name": "csc-ecosystems-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "vocabulary_in_simulating_a_marine_ecosystem",
+        "script.name": "csc-ecosystems-2023"
+      }
+    }
   ],
   "scripts_student_resources": [
 
@@ -2201,9 +2308,19 @@
   ],
   "objectives": [
     {
+      "key": "025c46ee-bcd9-47e3-afa6-10d849dcd120",
+      "properties": {
+        "description": "Explain how computer science simulations can be beneficial to scientists. "
+      },
+      "seeding_key": {
+        "lesson.key": "Balancing the Ecosystem (pilot)",
+        "objective.key": "025c46ee-bcd9-47e3-afa6-10d849dcd120"
+      }
+    },
+    {
       "key": "2523ed88-7219-4356-a342-5077931e97df",
       "properties": {
-        "description": "Use a scientific article to guide their solutions to the overfishing simulation. "
+        "description": "Reference the included scientific article to guide their solutions to the overfishing simulation."
       },
       "seeding_key": {
         "lesson.key": "Balancing the Ecosystem (pilot)",
@@ -2231,26 +2348,6 @@
       }
     },
     {
-      "key": "664b9350-b3cd-4628-8e4d-47c4104c4d4c",
-      "properties": {
-        "description": "Explain how their modifications to the simulation impacted the ecosystem."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-3",
-        "objective.key": "664b9350-b3cd-4628-8e4d-47c4104c4d4c"
-      }
-    },
-    {
-      "key": "6e7573f5-4086-415a-9da6-88ff42a56814",
-      "properties": {
-        "description": "Debug (find and fix problems) in their code. "
-      },
-      "seeding_key": {
-        "lesson.key": "Balancing the Ecosystem (pilot)",
-        "objective.key": "6e7573f5-4086-415a-9da6-88ff42a56814"
-      }
-    },
-    {
       "key": "8123b6d5-695d-49e4-8880-0d1f532656df",
       "properties": {
         "description": "Create and use a variable to keep track of a changing value in a program."
@@ -2263,7 +2360,7 @@
     {
       "key": "977ebecc-d561-43b6-a4ad-33ff9807142a",
       "properties": {
-        "description": "Analyze the interdependent relationships between plants and animals in a food chain and the effects of human impact."
+        "description": "Analyze the relationships between plants and animals in a food chain and the effects of human impact."
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -2293,7 +2390,7 @@
     {
       "key": "fa9ae023-cf9e-40d1-9128-e260e85bb8c8",
       "properties": {
-        "description": "Use conditional statements to show a cause and effect scenario in nature"
+        "description": "Use conditional statements to show a cause and effect scenario in nature."
       },
       "seeding_key": {
         "lesson.key": "Overfishing Simulation (pilot)",
@@ -2303,7 +2400,7 @@
     {
       "key": "fc9e660e-7b37-4a84-b2a8-837fa31efbab",
       "properties": {
-        "description": "Identify different organisms present in a balanced marine ecosystem"
+        "description": "Analyze the effects of too much, too little or just the right amount of algae in a marine ecosystem. "
       },
       "seeding_key": {
         "lesson.key": "Overfishing Simulation (pilot)",
@@ -2524,5 +2621,14 @@
         "opportunity_standard.shortcode": "3-LS4-4"
       }
     }
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
   ]
 }

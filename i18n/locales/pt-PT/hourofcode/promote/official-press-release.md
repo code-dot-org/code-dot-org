@@ -1,5 +1,5 @@
 ---
-title: Hour of Code Press Release for Elected Officials
+title: Comunicado de imprensa da Hora do Código para funcionários eleitos
 ---
 
 {{ signup_button }}

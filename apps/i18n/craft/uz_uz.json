@@ -1,9 +1,9 @@
 {
   "absolute": "modul",
+  "agentDiamondPathCongrats": "Tabriklaymiz, olmos yo‘lini topdingiz! Hozirgacha siz {count, plural, one {1 olmos} other {# olmoslari}} ni to‘pladingiz!",
   "agentGenericFailureMessage": "Kodlashni davom eting! Agentga yordam berish uchun foydalanishni unutmang.",
   "agentTooFewBlocksFailureMessage": "Agentni kerakli joyga etkazish uchun bir vaqtning o‘zida bitta blok qo‘shib ko‘ring.",
   "at": "at",
-  "agentDiamondPathCongrats": "Tabriklaymiz, olmos yo‘lini topdingiz! Hozirgacha siz {count, plural, one {1 olmos} other {# olmoslari}} ni to‘pladingiz!",
   "blockActionAdd": "qo‘shing",
   "blockActionAttack": "hujum",
   "blockActionClone": "bloklarni klonlash",

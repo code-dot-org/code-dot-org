@@ -1,5 +1,5 @@
-@use "sass:math";
-@import "phase1-design-system";
+@use 'sass:math';
+@import 'phase1-design-system';
 
 $border-radius: 4px;
 $container-width: 309px;
@@ -70,10 +70,10 @@ $container-width: 309px;
 
   > div {
     // font styles
+    @include main-font-semi-bold;
     font-size: 0.75em;
     line-height: 0.875em;
     letter-spacing: 0.04em;
-    font-family: $gotham-bold, sans-serif;
     text-transform: uppercase;
     color: $neutral-dark;
 
@@ -164,6 +164,7 @@ $container-width: 309px;
 
 .buttonsContainer_english {
   justify-content: space-between;
+  column-gap: 12px;
 
   button,
   a,
@@ -173,4 +174,36 @@ $container-width: 309px;
     // (totalContainerWidth - 2*padding - minimumSpaceBetweenButtons) / 2
     width: math.div($container-width - (2 * 16) - 12, 2);
   }
+}
+
+.centerExpandedCard {
+  display: flex;
+}
+
+.cardsContainer:nth-child(3n + 1) .centerExpandedCard {
+  justify-content: flex-start;
+}
+
+.cardsContainer:nth-child(3n + 2) .centerExpandedCard {
+  justify-content: center;
+}
+
+.cardsContainer:nth-child(3n + 3) {
+  .centerExpandedCard {
+    justify-content: flex-end;
+  }
+
+  .arrowContainer:before {
+    background: $neutral_light;
+  }
+}
+
+.expandedCard {
+  .curriculumInfoContainer {
+    border-color: $neutral-dark !important;
+  }
+}
+
+.buttonFlex {
+  flex: 1;
 }

@@ -1,9 +1,9 @@
 {
   "absolute": "mutlak",
+  "agentDiamondPathCongrats": "Tahniah, anda telah menjumpai jalan berlian! Setakat ini, anda telah berjaya mengumpul {count, plural, one {1 berlian} other {# berlian}}!",
   "agentGenericFailureMessage": "Teruskan pengekodan! Jangan lupa mengunakan The Agent untuk membantu.",
   "agentTooFewBlocksFailureMessage": "Cuba tambah hanya satu blok setiap kali untuk meletakkan The Agent di tempat yang betul.",
   "at": "pada",
-  "agentDiamondPathCongrats": "Tahniah, anda telah menjumpai jalan berlian! Setakat ini, anda telah berjaya mengumpul {count, plural, one {1 berlian} other {# berlian}}!",
   "blockActionAdd": "tambah",
   "blockActionAttack": "serang",
   "blockActionClone": "blok klon",

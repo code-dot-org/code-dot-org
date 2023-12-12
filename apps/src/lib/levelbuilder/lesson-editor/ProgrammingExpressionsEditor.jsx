@@ -174,7 +174,7 @@ class ProgrammingExpressionsEditor extends Component {
         <Button
           text={'Add Introduced Code'}
           onClick={this.handleOpenAddProgrammingExpression}
-          color={Button.ButtonColor.orange}
+          color={Button.ButtonColor.brandSecondaryDefault}
         />
         <FindProgrammingExpressionDialog
           isOpen={this.state.addProgrammingExpressionOpen}

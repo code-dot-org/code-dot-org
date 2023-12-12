@@ -169,14 +169,19 @@ pl:
           version_title: "'23-24"
         focus-on-hardware-2023:
           title: Skoncentruj się na sprzęcie
+          version_title: "'23-'24"
         focus-on-data-2023:
           title: Skoncentruj się na danych
+          version_title: "'23-'24"
         focus-on-design-with-purpose-2023:
           title: Skoncentruj się na projektowaniu z celem
+          version_title: "'23-'24"
         focus-on-coding-2023:
           title: Skoncentruj się na kodowaniu
+          version_title: "'23-'24"
         focus-on-impact-in-society-2023:
           title: Skoncentruj się na wpływie w społeczeństwie
+          version_title: "'23-'24"
         vpl-csd-summer-ci-2023:
           title: Badania programu Odkryć informatycznych
           version_title: "'23-'24"
@@ -199,19 +204,104 @@ pl:
         self-paced-pl-csp-2023:
           title: self-paced-pl-csp-2021
           version_title: 22-23
+        self-paced-pl-aiml-2023:
+          title: 'Przygotowanie do nauczania sztucznej inteligencji i uczenia maszynowego '
+          description_student: "## Witamy\n\nWitamy w bezpłatnej, samodzielnej nauce online o Code.org dla nauczycieli, aby przygotować się do nauczania z Code.org! Po ukończeniu tego doskonalenia zawodowego **będziesz mógł rozpocząć nauczanie jednostki Code.org dotyczcej tworzenia AI i uczenia maszynowego** ze swoimi uczniami.\n\n### Wybierz sposób uczenia się, który Ci odpowiada\n\n-   **Podżaj we własnym tempie:** Uczenie się we własnym tempie ma Ci zapewnić panowanie nad własną nauką. Sugerowane czasy zajęć są podane dla każdej lekcji. Zachęcamy jednak do **angażowania się we własnym tempa.**\n\n-   **Wybierz treści:** Treści s zorganizowane z sugerowanym postępem dla nauczycieli nowicjuszy zarówno w Code.org, jak i jednostce AI i Uczenie Maszynowe. Możesz jednak **podżać w kolejności, która najlepiej odpowiada Twoim potrzebom.** Jeśli znasz już platformę Code.org, możesz pominąć Pierwsze kroki z Code.org i przejść od razu do przygotowania się do uczenia AI i uczenie maszynowe. "
+          description_teacher: "## Witamy\n\nWitamy w bezpłatnej, samodzielnej nauce online o Code.org dla nauczycieli, aby przygotować się do nauczania z Code.org! Po ukończeniu tego doskonalenia zawodowego **będziesz mógł rozpocząć nauczanie jednostki Code.org dotyczcej tworzenia AI i uczenia maszynowego** ze swoimi uczniami.\n\n### Wybierz sposób uczenia się, który Ci odpowiada\n\n-   **Podżaj we własnym tempie:** Uczenie się we własnym tempie ma Ci zapewnić panowanie nad własną nauką. Sugerowane czasy zajęć są podane dla każdej lekcji. Zachęcamy jednak do **angażowania się we własnym tempa.**\n\n-   **Wybierz treści:** Treści s zorganizowane z sugerowanym postępem dla nauczycieli nowicjuszy zarówno w Code.org, jak i jednostce AI i Uczenie Maszynowe. Możesz jednak **podżać w kolejności, która najlepiej odpowiada Twoim potrzebom.** Jeśli znasz już platformę Code.org, możesz pominąć Pierwsze kroki z Code.org i przejść od razu do przygotowania się do uczenia AI i uczenie maszynowe. "
+        vpl-csp-2023:
+          title: Zasady CS Wirtualny kurs warsztatowy PL
+          version_title: '2023'
+        vpl-csa-2023:
+          title: CSA Wirtualne profesjonalne uczenie się
+          version_title: '2023'
+        vpl-csd-2023:
+          title: Wirtualne profesjonalne uczenie się CSD
+          version_title: '2023'
+        virtual-pl-csa-summer-2024:
+          title: virtual-pl-csa-summer-2024
+          description_student: "\\*\\*Co Cię czeka: \\*\\*\n\n-   Przygotujesz się do nauczania kursu informatyki A.\n-   Przećwiczysz kluczowe pojęcia z programu nauczania kursu informatyki A.\n-   Zwiększysz zrozumienie sprawiedliwej edukacji informatycznej. \n-   Rozwiniesz empatię dla doświadczeń uczniów. \n-   Staniesz się elementem sieci nauczycieli, którzy wykonują podobną pracę."
+          description_teacher: "\\*\\*Uczestnicy: \\*\\*\n\n-   Przygotują się do nauczania kursu informatyki A.\n-   Przećwiczą kluczowe pojęcia z programu nauczania kursu informatyki A.\n-   Zwiększą zrozumienie sprawiedliwej edukacji informatycznej. \n-   Rozwiną empatię dla doświadczeń uczniów. \n-   Staną się elementem sieci nauczycieli, którzy wykonują podobną pracę."
+        virtual-pl-csp-summer-2024:
+          title: virtual-pl-csp-summer-2024
+          description_student: "\\*\\*Co Cię czeka: \\*\\*\n\n-   Przygotujesz się do nauczania zasad informatyki.\n-   Przećwiczysz kluczowe pojęcia z programu nauczania zasad informatyki.\n-   Zwiększysz zrozumienie sprawiedliwej edukacji informatycznej. \n-   Rozwiniesz empatię dla doświadczeń uczniów. \n-   Staniesz się elementem sieci nauczycieli, którzy wykonują podobną pracę."
+          description_teacher: "\\*\\*Uczestnicy: \\*\\*\n\n-   Przygotują się do nauczania zasad informatyki.\n-   Przećwiczą kluczowe pojęcia z programu nauczania zasad informatyki.\n-   Zwiększą zrozumienie sprawiedliwej edukacji informatycznej. \n-   Rozwiną empatię dla doświadczeń uczniów. \n-   Staną się elementem sieci nauczycieli, którzy wykonują podobną pracę."
+        self-paced-pl-csd-unit1-2023:
+          title: Nauczanie rozwiązywania problemów i informatyki
+          description_student: "## Witamy\n\nWitamy w bezpłatnej samodzielnej nauce online Code.org dla nauczycieli, aby rozpocząć nauczanie z Code.org! Po ukończeniu tego profesjonalnego doświadczenia edukacyjnego, \\*\\* będziesz gotowy, aby rozpocząć nauczanie Jednostki 1 CSD Code.org - Rozwiązywanie problemów i informatyka\\*\\* ze swoimi uczniami.\n\n### Znajdź sposób uczenia się, który Ci odpowiada\n\n-   **Podążaj we własnym tempie:** To samodzielne doświadczenie uczenia się ma na celu umożliwienie Ci kontroli nad własną nauką. Sugerowane czasy są podane dla każdej lekcji. Zachęcamy jednak do **angażowania się we własnym temp.**\n\n-   **Wybierz treści dla siebie:** Treści są uporządkowane w sugerowanym postępie dla nauczycieli nowych zarówno w Code.org, jak i Jednostce 1 CSD - Rozwiązywanie problemów i informatyka. Możesz jednak **angażować się w kolejności materiału, która najlepiej spełnia Twoje potrzeby.** Jeśli znasz już platformę Code.org, możesz pominąć Pierwsze kroki z Code.org i przejść bezpośrednio do Przygotowanie do nauczania rozwiązywania problemów i informatyki. "
+          description_teacher: "## Witamy\n\nWitamy w bezpłatnej samodzielnej nauce online Code.org dla nauczycieli, aby rozpocząć nauczanie z Code.org! Po ukończeniu tego profesjonalnego doświadczenia edukacyjnego, \\*\\* będziesz gotowy, aby rozpocząć nauczanie Jednostki 1 CSD Code.org - Rozwiązywanie problemów i informatyka\\*\\* ze swoimi uczniami.\n\n### Znajdź sposób uczenia się, który Ci odpowiada\n\n-   **Podążaj we własnym tempie:** To samodzielne doświadczenie uczenia się ma na celu umożliwienie Ci kontroli nad własną nauką. Sugerowane czasy są podane dla każdej lekcji. Zachęcamy jednak do **angażowania się we własnym temp.**\n\n-   **Wybierz treści dla siebie:** Treści są uporządkowane w sugerowanym postępie dla nauczycieli nowych zarówno w Code.org, jak i Jednostce 1 CSD - Rozwiązywanie problemów i informatyka. Możesz jednak **angażować się w kolejności materiału, która najlepiej spełnia Twoje potrzeby.** Jeśli znasz już platformę Code.org, możesz pominąć Pierwsze kroki z Code.org i przejść bezpośrednio do Przygotowanie do nauczania rozwiązywania problemów i informatyki. "
+          version_title: "'23-'24"
+        self-paced-pl-csd-unit2-2023:
+          description_student: "## Powitanie\n\nWitamy w bezpłatnej, samodzielnej nauce online Code.org dla nauczycieli, by rozpoczęli nauczanie z Code.org! Po ukończeniu tego doświadczenia zawodowego **będziesz gotowy, aby rozpocząć naukę ze swoimi uczniami Jednostki 2 CSD na Code.org – Tworzenie stron internetowych**.\n\n### Wybierz sposób uczenia się, która Ci odpowiada\n\n-   **Podążaj we własnym tempie:** Nauka we własnym tempie ma dać Ci kontrolę nad własną nauką. Sugerowane godziny zajęć podane są przy każdej lekcji. Zachęcamy Cię jednak do **zaangażowania się w treść we własnym tempie.**\n\n-   **Wybierz treści dla siebie:** Treści są zorganizowane według sugerowanej kolejności dla nauczycieli, którzy są nowicjuszami zarówno w Code.org, jak i w Jednostce 2 CSD  – Tworzenie stron internetowych. Możesz jednak **zaangażować się w przerabianie treści w kolejności, która najlepiej odpowiada Twoim potrzebom.** Jeśli znasz już platformę Code.org, możesz pominąć wprowadzenie do Code.org i przejść od razu do Przygotowanie do Nauczania tworzenia stron internetowych."
+          description_teacher: "## Powitanie\n\nWitamy w bezpłatnej, samodzielnej nauce online Code.org dla nauczycieli, by rozpoczęli nauczanie z Code.org! Po ukończeniu tego doświadczenia zawodowego **będziesz gotowy, aby rozpocząć naukę ze swoimi uczniami Jednostki 2 CSD na Code.org – Tworzenie stron internetowych**.\n\n### Wybierz sposób uczenia się, która Ci odpowiada\n\n-   **Podążaj we własnym tempie:** Nauka we własnym tempie ma dać Ci kontrolę nad własną nauką. Sugerowane godziny zajęć podane są przy każdej lekcji. Zachęcamy Cię jednak do **zaangażowania się w treść we własnym tempie.**\n\n-   **Wybierz treści dla siebie:** Treści są zorganizowane według sugerowanej kolejności dla nauczycieli, którzy są nowicjuszami zarówno w Code.org, jak i w Jednostce 2 CSD  – Tworzenie stron internetowych. Możesz jednak **zaangażować się w przerabianie treści w kolejności, która najlepiej odpowiada Twoim potrzebom.** Jeśli znasz już platformę Code.org, możesz pominąć wprowadzenie do Code.org i przejść od razu do Przygotowanie do Nauczania tworzenia stron internetowych."
+          version_title: "'23-'24"
+        self-paced-pl-csd-unit3-2023:
+          title: Nauczanie interaktywnych animacji i gier
+          description_student: "## Powitanie\n\nWitamy w bezpłatnej, samodzielnej nauce online Code.org dla nauczycieli, by rozpoczęli nauczanie z Code.org! Po ukończeniu tego doświadczenia zawodowego **będziesz gotowy, aby rozpocząć naukę ze swoimi uczniami Jednostki 3 CSD na Code.org – Interaktywne animacje i gry**.\n\n### Wybierz sposób uczenia się, która Ci odpowiada\n\n-   **Podążaj we własnym tempie:** Nauka we własnym tempie ma dać Ci kontrolę nad własną nauką. Sugerowane godziny zajęć podane są przy każdej lekcji. Zachęcamy Cię jednak do **zaangażowania się w treść we własnym tempie.**\n\n-   **Wybierz treści dla siebie:** Treści są zorganizowane według sugerowanej kolejności dla nauczycieli, którzy są nowicjuszami zarówno w Code.org, jak i w Jednostce 3 CSD  – Interaktywne animacje i gry. Możesz jednak **zaangażować się w przerabianie treści w kolejności, która najlepiej odpowiada Twoim potrzebom.** Jeśli znasz już platformę Code.org, możesz pominąć wprowadzenie do Code.org i przejść od razu do Przygotowanie do Nauczania Interaktywnych animacji i gier."
+          description_teacher: "## Powitanie\n\nWitamy w bezpłatnej, samodzielnej nauce online Code.org dla nauczycieli, by rozpoczęli nauczanie z Code.org! Po ukończeniu tego doświadczenia zawodowego **będziesz gotowy, aby rozpocząć naukę ze swoimi uczniami Jednostki 3 CSD na Code.org – Interaktywne animacje i gry**.\n\n### Wybierz sposób uczenia się, która Ci odpowiada\n\n-   **Podążaj we własnym tempie:** Nauka we własnym tempie ma dać Ci kontrolę nad własną nauką. Sugerowane godziny zajęć podane są przy każdej lekcji. Zachęcamy Cię jednak do **zaangażowania się w treść we własnym tempie.**\n\n-   **Wybierz treści dla siebie:** Treści są zorganizowane według sugerowanej kolejności dla nauczycieli, którzy są nowicjuszami zarówno w Code.org, jak i w Jednostce 3 CSD  – Interaktywne animacje i gry. Możesz jednak **zaangażować się w przerabianie treści w kolejności, która najlepiej odpowiada Twoim potrzebom.** Jeśli znasz już platformę Code.org, możesz pominąć wprowadzenie do Code.org i przejść od razu do Przygotowanie do Nauczania Interaktywnych animacji i gier."
+          version_title: "'23-'24"
+        self-paced-pl-csd-unit4-2023:
+          title: Nauczanie procesu projektowania
+          description_student: "## Powitanie\n\nWitamy w bezpłatnej, samodzielnej nauce online Code.org dla nauczycieli, by rozpoczęli nauczanie z Code.org! Po ukończeniu tego doświadczenia zawodowego **będziesz gotowy, aby rozpocząć naukę ze swoimi uczniami Jednostki 4 CSD na Code.org – Proces projektowania**.\n\n### Wybierz sposób uczenia się, która Ci odpowiada\n\n-   **Podążaj we własnym tempie:** Nauka we własnym tempie ma dać Ci kontrolę nad własną nauką. Sugerowane godziny zajęć podane są przy każdej lekcji. Zachęcamy Cię jednak do **zaangażowania się w treść we własnym tempie.**\n\n-   **Wybierz treści dla siebie:** Treści są zorganizowane według sugerowanej kolejności dla nauczycieli, którzy są nowicjuszami zarówno w Code.org, jak i w Jednostce 4 CSD  – Proces projektowania. Możesz jednak **zaangażować się w przerabianie treści w kolejności, która najlepiej odpowiada Twoim potrzebom.** Jeśli znasz już platformę Code.org, możesz pominąć wprowadzenie do Code.org i przejść od razu do Przygotowanie do Nauczania Procesu projektowania."
+          description_teacher: "## Powitanie\n\nWitamy w bezpłatnej, samodzielnej nauce online Code.org dla nauczycieli, by rozpoczęli nauczanie z Code.org! Po ukończeniu tego doświadczenia zawodowego **będziesz gotowy, aby rozpocząć naukę ze swoimi uczniami Jednostki 4 CSD na Code.org – Proces projektowania**.\n\n### Wybierz sposób uczenia się, która Ci odpowiada\n\n-   **Podążaj we własnym tempie:** Nauka we własnym tempie ma dać Ci kontrolę nad własną nauką. Sugerowane godziny zajęć podane są przy każdej lekcji. Zachęcamy Cię jednak do **zaangażowania się w treść we własnym tempie.**\n\n-   **Wybierz treści dla siebie:** Treści są zorganizowane według sugerowanej kolejności dla nauczycieli, którzy są nowicjuszami zarówno w Code.org, jak i w Jednostce 4 CSD  – Proces projektowania. Możesz jednak **zaangażować się w przerabianie treści w kolejności, która najlepiej odpowiada Twoim potrzebom.** Jeśli znasz już platformę Code.org, możesz pominąć wprowadzenie do Code.org i przejść od razu do Przygotowanie do Nauczania Procesu projektowania."
+          version_title: "'23-'24"
+        self-paced-pl-csd-unit5-2023:
+          title: Nauczanie o danych i społeczeństwie
+          description_student: "## Powitanie\n\nWitamy w bezpłatnej, samodzielnej nauce online Code.org dla nauczycieli, by rozpoczęli nauczanie z Code.org! Po ukończeniu tego doświadczenia zawodowego **będziesz gotowy, aby rozpocząć naukę ze swoimi uczniami Jednostki 5 CSD na Code.org – Dane i społeczeństwo**.\n\n### Wybierz sposób uczenia się, która Ci odpowiada\n\n-   **Podążaj we własnym tempie:** Nauka we własnym tempie ma dać Ci kontrolę nad własną nauką. Sugerowane godziny zajęć podane są przy każdej lekcji. Zachęcamy Cię jednak do **zaangażowania się w treść we własnym tempie.**\n\n-   **Wybierz treści dla siebie:** Treści są zorganizowane według sugerowanej kolejności dla nauczycieli, którzy są nowicjuszami zarówno w Code.org, jak i w Jednostce 5 CSD  – Dane i społeczeństwo. Możesz jednak **zaangażować się w przerabianie treści w kolejności, która najlepiej odpowiada Twoim potrzebom.** Jeśli znasz już platformę Code.org, możesz pominąć wprowadzenie do Code.org i przejść od razu do Przygotowanie do Nauczania na temat Danych i społeczeństwa."
+          description_teacher: "## Powitanie\n\nWitamy w bezpłatnej, samodzielnej nauce online Code.org dla nauczycieli, by rozpoczęli nauczanie z Code.org! Po ukończeniu tego doświadczenia zawodowego **będziesz gotowy, aby rozpocząć naukę ze swoimi uczniami Jednostki 5 CSD na Code.org – Dane i społeczeństwo**.\n\n### Wybierz sposób uczenia się, która Ci odpowiada\n\n-   **Podążaj we własnym tempie:** Nauka we własnym tempie ma dać Ci kontrolę nad własną nauką. Sugerowane godziny zajęć podane są przy każdej lekcji. Zachęcamy Cię jednak do **zaangażowania się w treść we własnym tempie.**\n\n-   **Wybierz treści dla siebie:** Treści są zorganizowane według sugerowanej kolejności dla nauczycieli, którzy są nowicjuszami zarówno w Code.org, jak i w Jednostce 5 CSD  – Dane i społeczeństwo. Możesz jednak **zaangażować się w przerabianie treści w kolejności, która najlepiej odpowiada Twoim potrzebom.** Jeśli znasz już platformę Code.org, możesz pominąć wprowadzenie do Code.org i przejść od razu do Przygotowanie do Nauczania na temat Danych i społeczeństwa."
+          version_title: "'23-'24"
     resources:
-      curriculum/csd/2020:
-        name: Program nauczania
-        url: https://curriculum.code.org/csd-20/
-      teacher_forum/csd/2020:
-        name: Forum Nauczycieli
-        url: https://forum.code.org/c/csd
       curriculum/csd/2017:
         name: Program nauczania
         url: https://curriculum.code.org/csd-1718/
       teacher_forum_6/csd/2017:
         name: Forum Nauczycieli
         url: https://forum.code.org/c/csd
+      curriculum/csd/2018:
+        name: Program nauczania
+        url: https://curriculum.code.org/csd-18/
+      teacher_forum_6/csd/2018:
+        name: Forum Nauczycieli
+        url: https://forum.code.org/c/csd
+      curriculum/csd/2019:
+        name: Program nauczania
+        url: https://curriculum.code.org/csd-19/
+      teacher_forum/csd/2019:
+        name: Forum Nauczycieli
+        url: https://forum.code.org/c/csd
+      curriculum/csd/2020:
+        name: Program nauczania
+        url: https://curriculum.code.org/csd-20/
+      teacher_forum/csd/2020:
+        name: Forum Nauczycieli
+        url: https://forum.code.org/c/csd
+      all_code/csd/2021:
+        name: Cały kod
+        url: "/courses/csd-2021/code"
+      all_resources_1/csd/2021:
+        name: Wszystkie zasoby
+        url: "/courses/csd-2021/resources"
+      all_standards_1/csd/2021:
+        name: Wszystkie standardy
+        url: "/courses/csd-2021/standards"
+      all_vocabulary_1/csd/2021:
+        name: Całe słownictwo
+        url: "/courses/csd-2021/vocab"
+      csd_curriculum_guide/csd/2021:
+        url: https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview
+      csd_guide_to_assessment/csd/2021:
+        name: Przewodnik po ocenie CSD
+        url: https://docs.google.com/document/d/1PdGi9HCStRVDoIMKg2p5E4V4i_eN-CVqKgS-1VrZK18/preview
+      csd_guide_to_debugging/csd/2021:
+        url: https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview
+      csd_guide_to_differentiation/csd/2021:
+        url: https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview
+      csd_guide_to_using_resources/csd/2021:
+        url: https://docs.google.com/document/d/1DUpyEfCI3AWk5YQ3CXIlP5WpWhydWE4hKUmOZMHnNRU/preview
+      csd_implementation_guide/csd/2021:
+        url: https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview
+      getting_started_with_csd/csd/2021:
+        name: Pierwsze kroki z CSD
+        url: https://docs.google.com/document/d/1dMdllds_bhoi-SgtLH7eDdpSHjV_mHOD0-gf9VIgwZk/preview
       all_code_5/csd/2022:
         name: Cały kod
         url: "/courses/csd-2022/code"
@@ -244,12 +334,6 @@ pl:
         url: https://docs.google.com/document/d/1zA0qPfzSRZd8lQeJ5kmTNJVnTwrBgMyCKzt0nhC8oBg/preview
       csd_programming_levels_guide/csd/2022:
         url: https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview
-      curriculum/csd/2019:
-        name: Program nauczania
-        url: https://curriculum.code.org/csd-19/
-      teacher_forum/csd/2019:
-        name: Forum Nauczycieli
-        url: https://forum.code.org/c/csd
       all_code_2/csd/2023:
         name: Cały kod
         url: "/courses/csd-2023/code"
@@ -265,6 +349,9 @@ pl:
       csd_changelog_23-_24/csd/2023:
         name: Dziennik zmian CSD '23-'24
         url: https://docs.google.com/document/d/1p5wN0AlEUoKZ0WpcBryjkxLyQKsAr4k6zWqI91faksI/view
+      csd_course_standards_csta_alignment/csd/2023:
+        name: Standardy kursu CSD Wyrównanie CSTA
+        url: https://docs.google.com/spreadsheets/d/1mSkUykxhOhSviA7wmo5Ejh3vYgLJDtG46rCm_92607g/edit?usp=sharing
       csd_guide_to_assessment/csd/2023:
         name: Przewodnik po ocenie CSD
         url: https://docs.google.com/document/d/1IO5XgPW_Apil_Uziq5hAMCBgilm8txZ3sp8atxiKiLU/view
@@ -294,37 +381,3 @@ pl:
       csd_syllabus/csd/2023:
         name: Syllabus CSD
         url: https://docs.google.com/document/d/1wqoDRuGVb8ZNoVjikkq1ZflA_C57r-YHmn3awpJmSJQ/view
-      all_code/csd/2021:
-        name: Cały kod
-        url: "/courses/csd-2021/code"
-      all_resources_1/csd/2021:
-        name: Wszystkie zasoby
-        url: "/courses/csd-2021/resources"
-      all_standards_1/csd/2021:
-        name: Wszystkie standardy
-        url: "/courses/csd-2021/standards"
-      all_vocabulary_1/csd/2021:
-        name: Całe słownictwo
-        url: "/courses/csd-2021/vocab"
-      csd_curriculum_guide/csd/2021:
-        url: https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview
-      csd_guide_to_assessment/csd/2021:
-        name: Przewodnik po ocenie CSD
-        url: https://docs.google.com/document/d/1PdGi9HCStRVDoIMKg2p5E4V4i_eN-CVqKgS-1VrZK18/preview
-      csd_guide_to_debugging/csd/2021:
-        url: https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview
-      csd_guide_to_differentiation/csd/2021:
-        url: https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview
-      csd_guide_to_using_resources/csd/2021:
-        url: https://docs.google.com/document/d/1DUpyEfCI3AWk5YQ3CXIlP5WpWhydWE4hKUmOZMHnNRU/preview
-      csd_implementation_guide/csd/2021:
-        url: https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview
-      getting_started_with_csd/csd/2021:
-        name: Pierwsze kroki z CSD
-        url: https://docs.google.com/document/d/1dMdllds_bhoi-SgtLH7eDdpSHjV_mHOD0-gf9VIgwZk/preview
-      curriculum/csd/2018:
-        name: Program nauczania
-        url: https://curriculum.code.org/csd-18/
-      teacher_forum_6/csd/2018:
-        name: Forum Nauczycieli
-        url: https://forum.code.org/c/csd

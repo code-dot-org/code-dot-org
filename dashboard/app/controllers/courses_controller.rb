@@ -31,10 +31,10 @@ class CoursesController < ApplicationController
 
   def index
     view_options(full_width: true, responsive_content: true, no_padding_container: true, has_i18n: true)
-    @is_teacher = (current_user&.teacher?) || params[:view] == 'teacher'
     @is_english = request.language == 'en'
     @is_signed_out = current_user.nil?
     @force_race_interstitial = params[:forceRaceInterstitial]
+    @courses_announcement = Announcements.get_localized_announcement_for_page("/courses")
     @modern_elementary_courses_available = Unit.modern_elementary_courses_available?(request.locale)
   end
 
@@ -51,7 +51,7 @@ class CoursesController < ApplicationController
       return
     end
 
-    sections = current_user.try {|u| u.sections.all.reject(&:hidden).map(&:summarize)}
+    sections = current_user.try {|u| u.sections_instructed.all.reject(&:hidden).map(&:summarize)}
     @sections_with_assigned_info = sections&.map {|section| section.merge!({"isAssigned" => section[:course_id] == @unit_group.id})}
 
     @locale_code = request.locale

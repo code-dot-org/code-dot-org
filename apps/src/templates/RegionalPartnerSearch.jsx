@@ -14,6 +14,7 @@ import {currentLocation} from '@cdo/apps/utils';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import $ from 'jquery';
+import fontConstants from '@cdo/apps/fontConstants';
 
 const WorkshopCard = props => {
   return (
@@ -254,11 +255,7 @@ class RegionalPartnerSearch extends Component {
               </p>
               <p>
                 All of our curriculum, tools, and courses are also available for
-                your school at no cost. Or,{' '}
-                <a href="/educate/curriculum/3rd-party">
-                  contact one of these computer science providers
-                </a>{' '}
-                for other Professional Development options in your area.
+                your school at no cost.
               </p>
               {this.shouldDisplayApplicationLink() && (
                 <StartApplicationButton
@@ -526,10 +523,10 @@ const styles = {
     marginTop: 20,
   },
   bold: {
-    fontFamily: '"Gotham 7r", sans-serif',
+    ...fontConstants['main-font-bold'],
   },
   linkLike: {
-    fontFamily: '"Gotham 7r", sans-serif',
+    ...fontConstants['main-font-bold'],
     cursor: 'pointer',
     color: color.purple,
   },

@@ -69,6 +69,11 @@ sv:
           UNIT:
             '"measures"': takter
             '"seconds"': sekunder
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': takter
+            '"seconds"': sekunder
       Dancelab_changeColorBy:
         text: ändra {COLOR} {METHOD} via {AMOUNT}
         options:
@@ -108,6 +113,27 @@ sv:
             MOVES.Kick: Stjärna
             MOVES.ThisOrThat: Det här eller det där
             MOVES.Rest: Ingen
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} gör {MOVE} {DIR} för alltid"
+        options:
+          GROUP:
+            '"CAT"': alla katter
+            '"SLOTH"': sengångare
+          MOVE:
+            MOVES.Roll: Kroppsrullning
+            MOVES.ClapHigh: Klappa högt
+            MOVES.Dab: Dabba
+            MOVES.DoubleJam: Dubbelt ner
+            MOVES.Drop: Släpp
+            MOVES.Floss: Flossa
+            MOVES.Fresh: Färsk
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Stjärna
+            MOVES.ThisOrThat: Det här eller det där
+            MOVES.Rest: Ingen
+            '"next"': "(Nästa)"
+            '"prev"': "(Föregående)"
+            '"rand"': "(Slumpad)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} gör {MOVE} {DIR} för alltid"
         options:
@@ -585,6 +611,51 @@ sv:
             '"iceCream"': Glass
             '"default"': Ljus
             '"neon"': Neon
+            '"tropical"': Tropisk
+            '"vintage"': Vintage
+            '"warm"': Röda
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          ställ in bakgrundseffekt
+          {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Ingen
+            '"rand"': "(Slumpad)"
+            '"quads"': Vinklar
+            '"circles"': Tunnel
+            '"color_cycle"': Färger
+            '"diamonds"': Diamanter
+            '"disco_ball"': Discokula
+            '"fireworks"': Fyrverkerier
+            '"flowers"': Blommor
+            '"growing_stars"': Växande Stjärnor
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kalejdoskop
+            '"lasers"': Laserdansgolv
+            '"splatter"': Färgstänk
+            '"rainbow"': Regnbåge
+            '"ripples_random"': Slumpmässiga Krusningar
+            '"ripples"': Krusningar
+            '"snowflakes"': Snö
+            '"text"': Låttitel
+            '"galaxy"': Rymd
+            '"sparkles"': Gnistror
+            '"spiral"': Spiral
+            '"disco"': Fyrkanter
+            '"squiggles"': Krumelurer
+            '"starburst"': Stjärnfall
+            '"stars"': Stjärnor
+            '"music_wave"': Vågor
+          PALETTE:
+            '"rave"': Svartvitt
+            '"cool"': Blues
+            '"electronic"': Elektroniskt
+            '"iceCream"': Glass
+            '"default"': Ljus
+            '"neon"': Neon
+            '"ocean"': Hav
+            '"rainbow"': Regnbåge
             '"tropical"': Tropisk
             '"vintage"': Vintage
             '"warm"': Röda
@@ -2163,18 +2234,12 @@ sv:
         options:
           PORTION:
             '1': alla
-            '0.75': most
-            '0.5': half of
-            '0.25': few
           RATE:
             '"immediately"': omedelbart
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': alla
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE} säger {SPEECH}"
       adaptations_adaptationBehaviors:
@@ -2326,7 +2391,6 @@ sv:
       ecosystems_int10:
         options:
           VALUE:
-            '0': '0'
             '1': '1'
             '2': '2'
             '3': '3'

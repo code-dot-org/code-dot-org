@@ -5,10 +5,11 @@
   "blockly_blockWhenRun": "als gestart",
   "blockly_blockWhenRunTooltip": "als gestart",
   "blockly_functionNamePlaceholder": "mijn functie",
+  "blockly_toolboxCategoryEffects": "Effecten",
   "blockly_toolboxCategoryEvents": "Gebeurtenissen",
   "blockly_toolboxCategoryFunctions": "Functies",
   "blockly_toolboxCategoryLogic": "Logica",
-  "blockly_toolboxCategoryMath": "wiskundige",
+  "blockly_toolboxCategoryMath": "Wiskunde",
   "blockly_toolboxCategoryPlay": "Geluiden",
   "blockly_toolboxCategoryVariables": "Variabelen",
   "feedback": "Feedback",
@@ -16,5 +17,6 @@
   "startOver": "Begin opnieuw",
   "upload": "Uploaden",
   "panelHeaderInstructions": "Instructies",
-  "panelHeaderWorkspace": "Werkplaats: "
+  "panelHeaderWorkspace": "Werkplaats: ",
+  "continue": "Doorgaan"
 }

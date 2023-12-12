@@ -540,13 +540,9 @@
   volunteer_engineer_submission_subtitle_generic: '100 000 učitelů bude hostit Hodinu kódu ve svých třídách letos 7.-13. prosince tohoto roku 2015. Chtějí vaši pomoc! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} učitelů shání dobrovolníky nadšené pro výuku informatiky, aby jim pomohli s Hodinou kódu letos v prosinci.<br>%{num_volunteers} dobrovolníků se přihlásilo. Přidejte se k nim."
   volunteer_engineer_submission_intro_background: "Hodina kódu je globální hnutí s cílem přinést hodinu informatiky do každé školy. Hodiny kódu se zúčastnili desítky milionů studentů z více než 180 zemí. Zapojte se i vy během týdne informatiky 7.-13. prosince, prosím."
-  volunteer_engineer_submission_intro_recruit: 'Tito učitelé by rádi našli někoho <span style="font-family: ''Gotham 7r'', sans-serif;">nadšeného do výuky informatiky</span>, kdo jim může pomoci v učebně, nebo někoho kodo může <span style="font-family: ''Gotham 7r'', sans-serif;">inspirovat</span> jejich studenty přednáškou o šíři možností v informatice (to lze provést přes videokonferenci). Pokud se nechcete přihlásit jako dobrovolník, <a href="%{url}">zjistěte více</a> o možnosti zorganizovat svoji vlastní Hodinu kódu.'
   volunteer_engineer_submission_intro_recruit_markdown: "Učitelé by rádi měli někoho, kdo by byl vášnivý vzděláváním informatiky, který může pomoci ve třídě, nebo pro někoho, kdo může inspirovat své studenty tím, že mluví o šíři možností s informatikou (což by mohlo být provedeno prostřednictvím videochatu)."
-  volunteer_engineer_submission_intro_guide: "Více informací o našem <a href=\"%{volunteer_guide}\">programu dobrovolníků zde</a>."
   volunteer_engineer_submission_intro_guide_markdown: "Přečtěte si více o našem [dobrovolnický program zde] (%{volunteer_guide})."
-  volunteer_engineer_submission_intro_signup: "Zadejte následující informace, pokud jste počítačové vědy student nebo software profesionál, prosím. Pole označená <span class=\"form-required-field\"> *</span> jsou požadovaná."
   volunteer_engineer_submission_intro_signup_markdown: "Pokud jste student počítačové vědy nebo odborník na software, zadejte prosím následující informace. Musíte být nejméně 18 let, abyste se přihlásil jako dobrovolník. Všimněte si, že všechna pole, která vyplníte v této sekci, budou veřejně dostupná každému, kdo se podívá na [mapu dobrovolníků] (/dobrovolník/místní). Pole označená _*_ jsou povinná."
-  volunteer_engineer_submission_intro_links: "Nehledáte dobrovolníkas? <a href=\"%{learn_more}\">Dozvi se více</a> o organizování tvé Hodiny kódu a nalezení dobrovolníka v místě na naší <a href=\"%{volunteer_local}\">mapě dobrovolníků</a>."
   volunteer_engineer_submission_intro_links_markdown: "Jste učitel, který hledá dobrovolníky? Najděte místního dobrovolníka na naší [mapě dobrovolníků] (%{volunteer_local})."
   volunteer_engineer_submission_update_information: "Aktualizujte vaše informace"
   volunteer_engineer_submission_header_shared: "Informace sdílené s učiteli na dobrovolnické mapě"
@@ -1519,12 +1515,14 @@
   header_stats: "Statistiky"
   header_help_us: "Pomozte nám"
   header_about: "O nás"
+  header_incubator: "Inkubátor"
   header_teacher_community: "Komunita učitelů"
   header_help_support: 'Nápověda a podpora '
   header_report_bug: "Nahlásit chybu"
   header_report_abuse: "Nahlásit zneužití"
   header_legal: "Ochrana osobních údajů a právní"
   header_legal_privacy: "Zásady ochrany osobních údajů"
+  header_legal_cookie_notice: "Oznámení o souborech cookie"
   header_legal_tos: "Podmínky"
   header_tutorials: "Návody"
   header_screen_reader_hamburger: "Menu"
@@ -1633,7 +1631,7 @@
   hoc2018_mc_download_adventurer: "Stáhni si offline verzi Minecraft Adventurer."
   hoc2018_mc_educators: "Pro učitele"
   hoc2018_mc_educators_box1_title: "Kód s Minecraft"
-  hoc2018_mc_educators_box1_desc: 'Minecraft: Education Edition poskytuje v Minecraft učební osnovy, školení a kódování přizpůsobené standardům.'
+  hoc2018_mc_educators_box1_desc: "Minecraft: Education Edition poskytuje v Minecraft učební osnovy, školení a kódování přizpůsobené standardům."
   hoc2018_mc_educators_box1_button: "Začněte"
   hoc2018_mc_educators_box2_title: "Download Facilitator Guide"
   hoc2018_mc_educators_box2_desc: "Tato sada nástrojů vám pomůže hostit Hodinu kódu a zapojit studenty do počítačové vědy."
@@ -1741,7 +1739,7 @@
   hoc2018_mc_with_microsoft: "V rámci partnerství s"
   hoc2018_mc_thank_microsoft: "Děkujeme společnosti Microsoft, že podporuje naši vizi a misi zajištění toho, aby všechny děti měly příležitost učit se počítačové vědy a dovednosti potřebné k dosahování úspěchu ve 21. století."
   hoc2019_mc_mee_title: "Umělá inteligence Minecraft pro dobro"
-  hoc2019_mc_mee_description1: 'Nový výukový kurz Minecraft „Hodina programování“ je teď k dostání na Minecraft: Edice pro školy pro Windows, Mac, a iPad. Učte se základy programování a umělé inteligence se svými studenty!'
+  hoc2019_mc_mee_description1: "Nový výukový kurz Minecraft „Hodina programování“ je teď k dostání na Minecraft: Edice pro školy pro Windows, Mac, a iPad. Učte se základy programování a umělé inteligence se svými studenty!"
   hoc2019_mc_mee_description2: "Získejte přístup k bezplatným zdrojům včetně plánu lekcí, videí, učebních osnov informatiky a školení učitelů."
   hoc2019_mc_more_coding_resources: "Další zdroje o programování"
   hoc2019_dance_previous_versions: "Hledáte předchozí verzi Tanečního večírku?  \nKlikněte zde, abyste začali [Část 1](%{dance_2018_link}) a [Část 2](%{dance_extras_2018_link}) z minulého roku."
@@ -1754,18 +1752,18 @@
   page_not_available_description: "Omlouváme se, požadovaná stránka již není k dispozici na této adrese. Pokud stále potřebujete přístup, pošlete prosím e-mail na adresu [support@code.org] (%{support_email_link})."
   page_not_available_button: "Zpět domů"
   hoc2020_mc_available_code_org: "Dostupné na Code.org"
-  hoc2020_mc_available_mee: 'Dostupné v Minecraft: Edice pro školy'
+  hoc2020_mc_available_mee: "Dostupné v Minecraft: Edice pro školy"
   hoc2020_mc_mee_title: "Minecraft Příběh dvou vesnic"
-  hoc2020_mc_mee_description: 'Nový výukový kurz „Hodiny programování Minecraft“ je nyní dostupný v „Minecraft: Edice pro školy“ pro Windows, Mac, Chromebook a iPad. Učte se základy programování a poznávejte se svými studenty různorodost a inkluzi! Získejte přístup k prostředkům, jako je plán lekcí, videa, osnovy počítačové vědy, lekce rovnostářství, a výuka učitelů.'
+  hoc2020_mc_mee_description: "Nový výukový kurz „Hodiny programování Minecraft“ je nyní dostupný v „Minecraft: Edice pro školy“ pro Windows, Mac, Chromebook a iPad. Učte se základy programování a poznávejte se svými studenty různorodost a inkluzi! Získejte přístup k prostředkům, jako je plán lekcí, videa, osnovy počítačové vědy, lekce rovnostářství, a výuka učitelů."
   hoc2021_mc_mee_title: "Minecraft TimeCraft"
-  hoc2021_mc_mee_description: 'Cestujte zpět v čase a naučte se kódovat! Nový výukový program Hodiny kódu s Minecraftem je nyní dostupný ve hře Minecraft: Education Edition pro Windows, Mac, Chromebook a iPad. Začněte s bezplatnými zdroji, školeními a videi pro učitele.'
+  hoc2021_mc_mee_description: "Cestujte zpět v čase a naučte se kódovat! Nový výukový program Hodiny kódu s Minecraftem je nyní dostupný ve hře Minecraft: Education Edition pro Windows, Mac, Chromebook a iPad. Začněte s bezplatnými zdroji, školeními a videi pro učitele."
   hoc2021_mc_mee_villages_title: "Příběh Dvou Vesnic"
-  hoc2021_mc_mee_villages_description: 'Naučte se základy kódování a prozkoumejte se svými studenty diverzitu a inkluzi ve hře Minecraft: Education Edition.'
+  hoc2021_mc_mee_villages_description: "Naučte se základy kódování a prozkoumejte se svými studenty diverzitu a inkluzi ve hře Minecraft: Education Edition."
   hoc2021_mc_mee_ai_title: "Umělá inteligence Pro Dobro"
-  hoc2021_mc_mee_ai_description: 'Prozkoumejte se svými studenty umělou inteligenci a naučte se kódovat ve hře Minecraft: Education Edition.'
+  hoc2021_mc_mee_ai_description: "Prozkoumejte se svými studenty umělou inteligenci a naučte se kódovat ve hře Minecraft: Education Edition."
   hoc2022_mc_mee_title: "Minecraft Escape Estate"
   hoc2022_mc_mee_description: 'Uprchněte před rozbřeskem ze záhadného sídla a vydělejte si milion smaragdů! Nový výukový kurz Hodiny programování Minecraft je teď k dostání na Minecraft: Education Edition pro Windows, Mac, Chromebook, iPad a mobily. Začněte s bezplatnými zdroji, školeními a videy pro vzdělavatele. '
-  hoc2022_mc_mee_timecraft_description: 'Cestujte zpět v čase, abyste zachránili budoucnost v této bezplatné lekci programování ve hře Minecraft: Education Edition.'
+  hoc2022_mc_mee_timecraft_description: "Cestujte zpět v čase, abyste zachránili budoucnost v této bezplatné lekci programování ve hře Minecraft: Education Edition."
   footer_powered_by_aws: "Poháněn Amazon Web Services"
   footer_built_on_github: "Postavený na GitHubu od Microsoftu"
   codebytes_skinny_banner_title: "Přidejte se k nám 7.-11. prosince pro naše CodeBytes živé mini-lekce!"
@@ -1814,7 +1812,7 @@
   ai_zooniverse: "Zooniverse - Pořiďte snímek horské zebry"
   ai_zooniverse_description: "Pomáhejte chránit ohroženou kapskou horskou zebru určováním různých zvířat na obrázcích."
   ai_audience: "Obecenstvo"
-  ai_minecraft_description: 'Získejte přístup k bezplatným prostředkům, jako například k plánu lekcí, videím, osnovám počítačových věd a školením pro učitele. (Podmínkou je Minecraft: Edice pro školy)'
+  ai_minecraft_description: "Získejte přístup k bezplatným prostředkům, jako například k plánu lekcí, videím, osnovám počítačových věd a školením pro učitele. (Podmínkou je Minecraft: Edice pro školy)"
   ai_k_12_audience: "Věk 12 a více (potřebná schopnost čtení)"
   ai_microsoft_workshop: "Bezplatné virtuální dílny od společnosti Microsoft"
   ai_microsoft_workshop_description: "Podněcujte představivost s bezplatnými dílnami STEM a programování."

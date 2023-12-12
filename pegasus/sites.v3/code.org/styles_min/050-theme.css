@@ -1,12 +1,3 @@
-html {
-  height: 100%;
-}
-
-body {
-  background-color: #fff;
-  height: 100%;
-}
-
 .wrapper {
   min-height: 100%;
   margin-bottom: -80px;     /* This is the same as the height of .push. */
@@ -18,13 +9,13 @@ body {
 
 #pageheader-wrapper .headerlink:link,
 #pageheader-wrapper .headerlink:visited {
-  color: white;
+  color: var(--neutral_white);
   text-decoration: none;
 }
 
 #pageheader-wrapper .headerlink:hover,
 #pageheader-wrapper .headerlink:active {
-  color: white;
+  color: var(--neutral_white);
   border-bottom: solid 2px rgb(255, 164, 0);
 }
 
@@ -37,12 +28,12 @@ body {
   height: 170px;
   padding: 20px;
   overflow: hidden;
-  background-color: #292F36;
+  background-color: var(--neutral_dark);
   box-sizing: border-box;
 }
 
 #pagefooter .content {
-  color: white;
+  color: var(--neutral_white);
   font-size: 14px;
   font-weight: normal;
   width: 970px;
@@ -60,21 +51,26 @@ body {
 }
 
 .whitefooterlink:link {
-  color: white;
+  color: var(--neutral_white);
   font-size: 14px;
-  font-family: 'Gotham 4r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--regular-font-weight);
+  text-decoration: none;
 }
 
 .whitefooterlink:hover {
-  color: white;
+  color: var(--neutral_white);
   font-size: 14px;
-  font-family: 'Gotham 4r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--regular-font-weight);
+  text-decoration: underline;
 }
 
 .whitefooterlink:visited {
-  color: white;
+  color: var(--neutral_white);
   font-size: 14px;
-  font-family: 'Gotham 4r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--regular-font-weight);
 }
 
 
@@ -114,9 +110,9 @@ body {
   color: rgb(255, 255, 255);
   cursor: pointer;
   display: inline-block;
-  font-family: 'Gotham 4r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--regular-font-weight);
   font-size: 14px;
-  font-weight: normal;
   height: 35px;
   letter-spacing: normal;
   line-height: 22px;

@@ -2,6 +2,9 @@ require 'cdo/google/drive'
 require lib_dir 'cdo/data/logging/rake_task_event_logger'
 include TimedTaskWithLogging
 
+# Unique Google Drive file identifier for the Google Sheet named 'I18n'
+I18N_GOOGLE_SHEET_ID = '1Tq7VqZALgRA0wYk0HDfEOTyRI0TM2Dir2rloXIPGCgU'.freeze
+
 # Given a line of yml in the form of key: value, wraps unquoted strings in
 # double quotes, escaping existing quotes. Does not touch already quoted or
 # single quoted strings.
@@ -37,11 +40,9 @@ end
 namespace :i18n do
   desc 'download the latest i18n gsheet'
   timed_task_with_logging :sync do
-    gsheet = 'Data/I18n'
     path = pegasus_dir('cache/i18n/en-US.yml')
-
-    file = gdrive.file(gsheet)
-    raise("Google Drive file '#{gsheet}' not found.") unless file
+    gdrive = Google::Drive.new
+    file = gdrive.file_by_id(I18N_GOOGLE_SHEET_ID)
 
     mtime = file.mtime
     ctime = File.mtime(path).utc if File.file?(path)

@@ -3,7 +3,7 @@ import React, {useState, useEffect, useRef} from 'react';
 import {connect} from 'react-redux';
 import $ from 'jquery';
 import HeaderBanner from '../HeaderBanner';
-import Notification from '../Notification';
+import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import MarketingAnnouncementBanner from './MarketingAnnouncementBanner';
 import RecentCourses from './RecentCourses';
 import TeacherSections from './TeacherSections';
@@ -35,7 +35,6 @@ export const UnconnectedTeacherHomepage = ({
   plCourses,
   courses,
   afeEligible,
-  isEnglish,
   joinedStudentSections,
   joinedPlSections,
   ncesSchoolId,
@@ -55,22 +54,30 @@ export const UnconnectedTeacherHomepage = ({
   hasFeedback,
   showIncubatorBanner,
   currentUserId,
+  showDeprecatedCalcAndEvalWarning,
 }) => {
   const censusBanner = useRef(null);
   const teacherReminders = useRef(null);
   const flashes = useRef(null);
+
+  /*
+   * Determines whether the AFE banner will take premium space on the Teacher Homepage
+   */
+  const shouldShowAFEBanner = true;
+
+  /* We are hiding the Census banner to free up space on the Teacher Homepage (November 2023)
+   * when we want to show the Census banner again remove the next line
+   */
+  const forceHideCensusBanner = true;
 
   /* We are hiding the PL application banner to free up space on the Teacher Homepage (May 2023)
    * when we want to show the Census banner again set this to true
    */
   const showPLBanner = false;
 
-  /* We are hiding the Census banner to free up space on the Teacher Homepage (May 2023)
-   * when we want to show the Census banner again remove the next line
-   */
-  showCensusBanner = false;
-  const [displayCensusBanner, setDisplayCensusBanner] =
-    useState(showCensusBanner);
+  const [displayCensusBanner, setDisplayCensusBanner] = useState(
+    showCensusBanner && !forceHideCensusBanner
+  );
   const [censusSubmittedSuccessfully, setCensusSubmittedSuccessfully] =
     useState(null);
   const [censusBannerTeachesSelection, setCensusBannerTeachesSelection] =
@@ -153,7 +160,7 @@ export const UnconnectedTeacherHomepage = ({
   // Verify background image works for both LTR and RTL languages.
   const backgroundUrl = '/shared/images/banners/teacher-homepage-hero.jpg';
 
-  const showAFEBanner = isEnglish && afeEligible;
+  const showAFEBanner = shouldShowAFEBanner && afeEligible;
 
   // Send one analytics event when a teacher logs in. Use session storage to determine
   // whether they've just logged in.
@@ -172,14 +179,22 @@ export const UnconnectedTeacherHomepage = ({
     <div>
       <HeaderBanner
         headingText={i18n.homepageHeading()}
-        short={true}
         backgroundUrl={backgroundUrl}
+        backgroundImageStyling={{backgroundPosition: '90% 30%'}}
       />
       <div className={'container main'}>
         <ProtectedStatefulDiv ref={flashes} />
+        {showDeprecatedCalcAndEvalWarning && (
+          <Notification
+            type={NotificationType.warning}
+            notice={i18n.deprecatedCalcAndEvalWarning()}
+            details={i18n.deprecatedCalcAndEvalDetails()}
+            dismissible={false}
+          />
+        )}
         <ProtectedStatefulDiv ref={teacherReminders} />
         {showNpsSurvey && <NpsSurveyBlock />}
-        {isEnglish && specialAnnouncement && (
+        {specialAnnouncement && (
           <MarketingAnnouncementBanner
             announcement={specialAnnouncement}
             marginBottom="30px"
@@ -206,7 +221,7 @@ export const UnconnectedTeacherHomepage = ({
             headingText="Return to Your Application"
             descriptionText="Finish applying for our Professional Learning Program"
             buttonText="Finish Application"
-            buttonColor={Button.ButtonColor.orange}
+            buttonColor={Button.ButtonColor.brandSecondaryDefault}
             buttonUrl="/pd/application/teacher"
             solidBorder={true}
           />
@@ -217,7 +232,7 @@ export const UnconnectedTeacherHomepage = ({
             headingText="Return to Your Application"
             descriptionText="Your Regional Partner has requested updates to your Professional Learning Application."
             buttonText="Return to Application"
-            buttonColor={Button.ButtonColor.orange}
+            buttonColor={Button.ButtonColor.brandSecondaryDefault}
             buttonUrl="/pd/application/teacher"
             solidBorder={true}
           />
@@ -258,7 +273,7 @@ export const UnconnectedTeacherHomepage = ({
             <div style={styles.clear} />
           </div>
         )}
-        <TeacherSections userId={currentUserId} />
+        <TeacherSections />
         <RecentCourses
           courses={courses}
           topCourse={topCourse}
@@ -305,7 +320,6 @@ UnconnectedTeacherHomepage.propTypes = {
   courses: shapes.courses,
   afeEligible: PropTypes.bool,
   hocLaunch: PropTypes.string,
-  isEnglish: PropTypes.bool.isRequired,
   joinedStudentSections: shapes.sections,
   joinedPlSections: shapes.sections,
   ncesSchoolId: PropTypes.string,
@@ -325,6 +339,7 @@ UnconnectedTeacherHomepage.propTypes = {
   hasFeedback: PropTypes.bool,
   showIncubatorBanner: PropTypes.bool,
   currentUserId: PropTypes.number,
+  showDeprecatedCalcAndEvalWarning: PropTypes.bool,
 };
 
 const styles = {

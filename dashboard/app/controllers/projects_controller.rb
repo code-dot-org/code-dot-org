@@ -2,7 +2,7 @@ require 'active_support/core_ext/hash/indifferent_access'
 require 'cdo/firehose'
 
 class ProjectsController < ApplicationController
-  before_action :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy, :public, :index, :export_config, :weblab_footer, :get_or_create_for_level]
+  before_action :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy, :public, :index, :export_config, :weblab_footer, :get_or_create_for_level, :can_publish_age_status]
   before_action :redirect_admin_from_labs, only: [:load, :create_new, :show, :edit, :remix]
   before_action :authorize_load_project!, only: [:load, :create_new, :edit, :remix]
   before_action :set_level, only: [:load, :create_new, :show, :edit, :readonly, :remix, :export_config, :export_create_channel]
@@ -152,6 +152,10 @@ class ProjectsController < ApplicationController
     javalab: {
       name: 'New Java Lab Project',
       login_required: true
+    },
+    music: {
+      name: 'New Music Lab Project',
+      i18n: true
     },
     poetry: {
       name: 'New Poetry Project'
@@ -304,7 +308,12 @@ class ProjectsController < ApplicationController
     user_storage_id = get_storage_id
     # Find the channel for the user and level if it exists, or create a new one.
     channel_token = ChannelToken.find_or_create_channel_token(level, request.ip, user_storage_id, script_id, {hidden: true})
-    render(status: :ok, json: {channel: channel_token.channel})
+    script_name = !script_id.nil? && Unit.find(script_id)&.name
+    # We can limit channel updates during periods of high use using the updateChannelOnSave flag.
+    reduce_channel_updates = script_name ?
+                              !Gatekeeper.allows("updateChannelOnSave", where: {script_name: script_name}, default: true) :
+                              false
+    render(status: :ok, json: {channel: channel_token.channel, reduceChannelUpdates: reduce_channel_updates})
   end
 
   def weblab_footer
@@ -335,6 +344,9 @@ class ProjectsController < ApplicationController
       params[:channel_id] = params[:channel_id].tr(cipher, alphabet)
     end
 
+    redirect_for_lab2 = redirect_edit_view_for_lab2
+    return redirect_for_lab2 if redirect_for_lab2
+
     iframe_embed = params[:iframe_embed] == true
     iframe_embed_app_and_code = params[:iframe_embed_app_and_code] == true
     sharing = iframe_embed || params[:share] == true
@@ -361,7 +373,7 @@ class ProjectsController < ApplicationController
       full_width: true,
       callouts: [],
       channel: params[:channel_id],
-      no_footer: sharing || iframe_embed_app_and_code,
+      no_footer: sharing || iframe_embed_app_and_code || @game&.no_footer?,
       code_studio_logo: sharing && !iframe_embed,
       no_header: sharing || iframe_embed_app_and_code,
       small_footer: !iframe_embed_app_and_code && !sharing && (@game&.uses_small_footer? || @level&.enable_scrolling?),
@@ -372,6 +384,8 @@ class ProjectsController < ApplicationController
       disallowed_html_tags: disallowed_html_tags,
       blocklyVersion: params[:blocklyVersion]
     )
+
+    @body_classes = @level.properties['background']
 
     if [Game::ARTIST, Game::SPRITELAB, Game::POETRY].include? @game.app
       @project_image = CDO.studio_url "/v3/files/#{@view_options['channel']}/.metadata/thumbnail.png", 'https:'
@@ -437,6 +451,21 @@ class ProjectsController < ApplicationController
     SourceBucket.new.remix_source src_channel_id, new_channel_id, animation_list
     FileBucket.new.copy_files src_channel_id, new_channel_id if uses_file_bucket?(project_type)
     redirect_to action: 'edit', channel_id: new_channel_id
+  end
+
+  def can_publish_age_status
+    project = Project.find_by_channel_id(params[:channel_id])
+    unless project.apply_project_age_publish_limits?
+      return render json: {
+        project_existed_long_enough_to_publish: true,
+        user_existed_long_enough_to_publish: true
+      }
+    end
+
+    render json: {
+      project_existed_long_enough_to_publish: project.existed_long_enough_to_publish?,
+      user_existed_long_enough_to_publish: project.owner_existed_long_enough_to_publish?
+    }
   end
 
   private def uses_asset_bucket?(project_type)
@@ -533,6 +562,22 @@ class ProjectsController < ApplicationController
   # For certain actions, check a special permission before proceeding.
   private def authorize_load_project!
     authorize! :load_project, params[:key]
+  end
+
+  # Redirect to the correct view/edit page for Lab2 projects. If a project owner is on a /view
+  # page, redirect to /edit. If a non-owner is on an /edit page, redirect to /view.
+  # For legacy (non-Lab2) labs, this is handled on the front-end.
+  # We will also redirect away from share URLs to the correct view/edit page as Lab2 does not
+  # yet support separate share pages.
+  private def redirect_edit_view_for_lab2
+    return nil unless @level.uses_lab2?
+
+    project = Projects.new(get_storage_id).get(params[:channel_id])
+    is_owner = project[:isOwner]
+    sharing = params[:iframe_embed] == true || params[:share] == true
+
+    return redirect_to "/projects/#{params[:key]}/#{params[:channel_id]}/edit" if is_owner && (sharing || request.path.ends_with?('/view'))
+    return redirect_to "/projects/#{params[:key]}/#{params[:channel_id]}/view" if !is_owner && (sharing || request.path.ends_with?('/edit'))
   end
 
   # Automatically catch authorization exceptions on any methods in this controller

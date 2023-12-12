@@ -2,8 +2,23 @@
   "az-AZ": {
     "data": {
       "frameworks": {
+        "ai4k12-2021": {
+          "name": "AI4K12 Milli Təlimatlar 2021"
+        },
         "ccmath": {
           "name": "Ümumi Əsas Riyaziyyat Standartları"
+        },
+        "csp2021": {
+          "name": "CSP Konseptual Çərçivə"
+        },
+        "csta2011": {
+          "name": "CSTA K-12 Kompüter Elmləri Standartları "
+        },
+        "iste": {
+          "name": "Tələbələr üçün ISTE Standartları"
+        },
+        "ngss": {
+          "name": "Yeni Nəsil Elm Standartları"
         }
       }
     }

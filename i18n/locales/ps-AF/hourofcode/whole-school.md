@@ -1,5 +1,5 @@
 ---
-title: Whole School Participation
+title: د ښوونځي ټول ګډون
 ---
 
 {{ signup_button }}

@@ -76,7 +76,7 @@ ru:
       Building an App: Создание приложения
       'Bunny ': 'Кролик
 
-'
+        '
       Button Circuits: Схемы кнопок
       CS Discoveries Post-Course Survey: 'Занимательная информатика: опрос по окончании
         курса'
@@ -99,6 +99,7 @@ ru:
       Change: Изменить
       Changing Screens: Изменение экранов
       Check Your Work: Проверить Свою Работу
+      Check for Understanding: Проверьте понимание
       Check-In Survey: Регистрационный Опрос
       Checking for a Winner: Проверка победителя
       'Choice Levels: Customize Your App': 'Выберите Уровни: Настройте Свое Приложение'
@@ -124,7 +125,7 @@ ru:
       Course E Artist Project: Курс E. Проект "Художник"
       Course E Sprite Lab Project: 'Курс Д: проект в Лаборатории спрайтов
 
-'
+        '
       'Course E: Play Lab Project': 'Курс E: проект в Лаборатории игр'
       Course F Artist Project: 'Курс Е: проект в среде Художника'
       Course F Sprite Lab Project: 'Курс Е: проект в Лаборатории спрайтов'
@@ -163,7 +164,7 @@ ru:
         без компьютера
       Dogger Example: 'Пример доггера
 
-'
+        '
       Draw Your Background: Нарисовать Свой Фон
       Draw a Background: Нарисовать Фон
       Drawing: Рисование
@@ -228,7 +229,7 @@ ru:
       Functions with Parameters: Процедуры с параметрами
       Geometric Sun: 'Геометрическое солнце
 
-'
+        '
       Get In Formation: Давайте установим порядок
       Getters and Setters: Средства доступа для чтения и записи
       Getting Properties: Обретение свойств
@@ -261,12 +262,14 @@ ru:
       Inspiration!: Вдохновение!
       InspirationalArtwork: InspirationalArtwork
       Interactive Art: Интерактивное Искусство
+      Intro Video: Вступительное Видео
       Intro to Flyer Game: Вступление к Игре Летун
       Intro to For Loops: Введение в циклы «for»
       Intro to Side Scrollers: Введение в Боковые Прокручиватели
       Intro to Sprites: Введение в спрайты
       Intro to Variables: Введение в переменные
       Introducing Sprite Lab: Представляем Лабораторию спрайтов
+      Introduction: Введение
       Introduction to Arrays: Введение в массивы
       Investigate: Исследовать
       Isaac's Survey Data: Данные Опроса Айзека
@@ -423,7 +426,7 @@ ru:
       Revise Sprite Lab Project: Отредактируй проект в Лаборатории спрайтов
       Robot Doodle: 'Робот Дудль
 
-'
+        '
       Run a simulation: Запуск симуляции
       Safari App: Приложение Сафари
       Safari Model: Модель Сафари
@@ -444,6 +447,7 @@ ru:
       Setting Properties: Задание свойств
       Setup: Настроить
       Shapes and the Draw Loop: Фигуры и цикл рисования
+      Share Out: Выскажитесь
       Share Your App: Поделись своим приложением
       Share Your Pages: Поделиться Своими Страницами
       Share Your Stylesheets: Поделиться Своими Таблицами Стилей
@@ -490,6 +494,7 @@ ru:
       UI Element Properties: Свойства элементов пользовательского интерфейса
       Ultimate Shoe Recommender: Итоговый Рекомендатель Обуви
       Unit 5 Lesson 1 Overview: Часть 5 Урок 1 Обзор
+      Unplugged Activity: Урок без компьютера
       Updating Your Prototype: Обновление Вашего Прототипа
       Upload Your Images: Загрузить Свои Изображения
       User Interface: Интерфейс пользователя
@@ -526,7 +531,7 @@ ru:
         инструмент «Художник»'
       'Video: CS Matters': 'Видео: "Важность информатики"
 
-'
+        '
       'Video: Circuits and Logic': 'Видео: Схемы и Логика'
       'Video: Code Your Own Flappy Game': 'Видео: Создайте свою собственную игру «Порхающая
         птичка»'

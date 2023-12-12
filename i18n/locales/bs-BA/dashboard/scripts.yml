@@ -165,7 +165,6 @@ bs:
           description_short: Nauči kako isprogramirati droide, i napravi vlastitu Ratovi Zvijezda igricu u galaksiji daleko daleko.
           student_description: Nauči kako isprogramirati droide, i napravi vlastitu Ratovi Zvijezda igricu u galaksiji daleko daleko.
         mc:
-          title: Sata Kodiranja Minecraft-a
           description: Koristi blokove koda da bi poveo Steve ili Alex u avanturu kroz Minecraft svijet
           description_short: Istražite svijet Minecraft-a putem koda
           student_description: Koristi blokove koda da bi poveo Steve ili Alex u avanturu kroz Minecraft svijet
@@ -1021,6 +1020,8 @@ bs:
           lesson_groups:
             lessonGroup-2:
               description: uslov
+        dance-unplugged:
+          title: Plesna zabava bez granica
         spelling-bee:
           title: Spelovanje
         2022drafting:
@@ -1177,6 +1178,8 @@ bs:
           lessons:
             lesson-5:
               name: Procjene
+            lesson-6:
+              name: Lekcija 1
         pre-express-2023:
           lesson_groups:
             csf_loops:
@@ -1283,3 +1286,89 @@ bs:
           lesson_groups:
             lessonGroup-3:
               display_name: Razredi
+        csa-frq-practice-2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Razredi
+        csa-frq-practice-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Razredi
+        csa-frq-practice-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Razredi
+        csa-frq-practice-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Razredi
+        csa-frq-practice-pre2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Razredi
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno Državljanstvo
+            lessonGroup-4:
+              display_name: Petlje
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno Državljanstvo
+            lessonGroup-4:
+              display_name: Petlje
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno Državljanstvo
+            lessonGroup-4:
+              display_name: Petlje
+            lessonGroup-6:
+              display_name: Događaji
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno Državljanstvo
+            lessonGroup-4:
+              display_name: Petlje
+            lessonGroup-5:
+              display_name: Događaji
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalno Državljanstvo
+            lessonGroup-6:
+              display_name: Petlje
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ugniježdene Petlje
+            lessonGroup-4:
+              display_name: Funkcije
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Uvjeti
+            lessonGroup-5:
+              display_name: Varijable
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Uvod
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Uvod
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Uvod
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Uvod
+        csd5-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Poglavlje 2: Rješavanje problema podataka'
+          description_short: Naučite kako ljudi koriste računala za rješavanje problema podataka.

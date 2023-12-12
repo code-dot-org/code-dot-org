@@ -22,7 +22,12 @@ import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 // though our error message says 100KB, to help users avoid confusion.
 const MAX_UPLOAD_SIZE = 101000;
 
-export const PICKER_TYPE = makeEnum('spritelab', 'gamelab', 'backgrounds');
+export const PICKER_TYPE = makeEnum(
+  'spritelab',
+  'gamelab',
+  'backgrounds',
+  'animationJson'
+);
 
 /**
  * Dialog used for finding/selecting/uploading one or more assets to add to a
@@ -44,7 +49,6 @@ class AnimationPicker extends React.Component {
     channelId: PropTypes.string.isRequired,
     allowedExtensions: PropTypes.string,
     libraryManifest: PropTypes.object.isRequired,
-    hideUploadOption: PropTypes.bool.isRequired,
     hideAnimationNames: PropTypes.bool.isRequired,
     navigable: PropTypes.bool.isRequired,
     defaultQuery: PropTypes.object,
@@ -116,7 +120,6 @@ class AnimationPicker extends React.Component {
           onAnimationSelectionComplete={this.props.onAnimationSelectionComplete}
           playAnimations={this.props.playAnimations}
           libraryManifest={this.props.libraryManifest}
-          hideUploadOption={this.props.hideUploadOption}
           hideAnimationNames={this.props.hideAnimationNames}
           navigable={this.props.navigable}
           defaultQuery={this.props.defaultQuery}

@@ -191,7 +191,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
         name: {'first' => 'Hat', 'last' => 'Cat'},
         email: 'hat.cat@example.com',
         user_type: 'student',
-        dob: Date.today - 10.years,
+        dob: Time.zone.today - 10.years,
         gender: 'f'
       },
     )
@@ -251,7 +251,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
         name: {'first' => 'Hat', 'last' => 'Cat'},
         email: 'hat.cat@example.com',
         user_type: 'student',
-        dob: Date.today - 10.years,
+        dob: Time.zone.today - 10.years,
         gender: 'f'
       },
     )
@@ -301,7 +301,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
         name: 'someone',
         email: 'test@email.com',
         user_type: User::TYPE_STUDENT,
-        dob: Date.today - 20.years,
+        dob: Time.zone.today - 20.years,
         gender: 'f'
       },
       credentials: {
@@ -804,7 +804,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
     assert_redirected_to 'http://test-studio.code.org/users/existing_account?email=test%40foo.xyz&provider=google_oauth2'
     user.reload
-    assert_not_equal 'google_oauth2', user.provider
+    refute_equal 'google_oauth2', user.provider
   end
 
   test 'login: microsoft_v2_auth silently takes over unmigrated student with matching email' do
@@ -865,7 +865,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       get :google_oauth2
     end
     user.reload
-    assert_not_equal 'google_oauth2', user.provider
+    refute_equal 'google_oauth2', user.provider
     assert_nil signed_in_user_id
   end
 
@@ -894,7 +894,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
     user.reload
     takeover_auth = user.authentication_options.last
-    assert_not_equal 'microsoft_v2_auth', takeover_auth.credential_type
+    refute_equal 'microsoft_v2_auth', takeover_auth.credential_type
     assert_nil signed_in_user_id
   end
 
@@ -911,7 +911,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_redirected_to 'http://test-studio.code.org/users/existing_account?email=test%40foo.xyz&provider=google_oauth2'
     user.reload
     found_google = user.authentication_options.any? {|auth_option| auth_option.credential_type == AuthenticationOption::GOOGLE}
-    assert_not found_google
+    refute found_google
   end
 
   test 'login: google_oauth2 silently takes over migrated Google Classroom student with matching email' do
@@ -948,7 +948,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     user.reload
     assert_equal 'migrated', user.provider
     found_google = user.authentication_options.any? {|auth_option| auth_option.credential_type == AuthenticationOption::GOOGLE}
-    assert_not found_google
+    refute found_google
     assert_nil signed_in_user_id
   end
 
@@ -1603,7 +1603,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     # Verify takeover completed
     user.reload
     google_oauth = user.authentication_options.find {|a| a.credential_type == AuthenticationOption::GOOGLE}
-    assert_not_nil google_oauth
+    refute_nil google_oauth
 
     # Verify that we signed the user into the taken-over account
     assert_equal user.id, signed_in_user_id
@@ -1691,7 +1691,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
         name: args[:name] || 'someone',
         email: args[:email] || 'new@example.com',
         user_type: args[:user_type] || 'teacher',
-        dob: args[:dob] || (Date.today - 20.years),
+        dob: args[:dob] || (Time.zone.today - 20.years),
         gender: args[:gender] || 'f'
       },
       credentials: {

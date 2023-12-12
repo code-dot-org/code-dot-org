@@ -65,6 +65,17 @@ class ActivitiesControllerTest < ActionController::TestCase
       app: 'test',
       program: '<hey>'
     }
+
+    # set up params for testing rubric evaluation
+    @teacher = create :teacher
+    @section = create :section, teacher: @teacher
+    @student = create :student
+    create :follower, section: @section, student_user: @student
+    @milestone_rubric_params = @milestone_params.merge(
+      user_id: @student.id,
+      submitted: 'true'
+    )
+    EvaluateRubricJob.expects(:perform_later).never
   end
 
   # Ignore any additional keys in 'actual' not found in 'expected'.
@@ -84,8 +95,8 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   def studio_program_with_text(text)
     '<xml><block type="when_run" deletable="false"><next><block type="studio_showTitleScreen"><title name="TITLE">' +
-        text +
-        '</title><title name="TEXT">type text here</title></block></next></block>'
+      text +
+      '</title><title name="TEXT">type text here</title></block></next></block>'
   end
 
   def build_expected_response(options = {})
@@ -336,12 +347,12 @@ class ActivitiesControllerTest < ActionController::TestCase
     end
     assert_equal original_activity_count + 1, Activity.count
     assert_equal original_user_level_count + 1, UserLevel.count
-    assert_not_nil UserLevel.where(
+    refute_nil UserLevel.where(
       user_id: @user,
       level_id: @script_level.level_id,
       script_id: @script_level.script_id
     ).first
-    assert_not_nil UserScript.where(user_id: @user, script_id: @script_level.script_id).first
+    refute_nil UserScript.where(user_id: @user, script_id: @script_level.script_id).first
 
     assert_response :success
 
@@ -1126,5 +1137,61 @@ class ActivitiesControllerTest < ActionController::TestCase
     parent_user_level = UserLevel.find_by(user: @user, level: bubble_choice, script: script)
     refute_nil parent_user_level
     assert_equal 100, parent_user_level.best_result
+  end
+
+  test 'milestone with student in experiment triggers rubric eval job' do
+    create :single_section_experiment, section: @section, name: 'ai-rubrics', script: @script
+    EvaluateRubricJob.stubs(:ai_enabled?).with(@script_level).returns(true)
+    EvaluateRubricJob.expects(:perform_later).with(user_id: @student.id, requester_id: @student.id, script_level_id: @script_level.id).once
+    sign_in @student
+
+    post :milestone, params: @milestone_rubric_params
+    assert_response :success
+  end
+
+  test 'milestone with student in experiment on non ai level does not trigger rubric eval job' do
+    create :single_section_experiment, section: @section, name: 'ai-rubrics'
+    EvaluateRubricJob.stubs(:ai_enabled?).with(@script_level).returns(false)
+    EvaluateRubricJob.expects(:perform_later).never
+    sign_in @student
+
+    post :milestone, params: @milestone_rubric_params
+    assert_response :success
+  end
+
+  test 'milestone with teacher in experiment does not trigger rubric eval job' do
+    create :single_section_experiment, section: @section, name: 'ai-rubrics'
+    EvaluateRubricJob.stubs(:ai_enabled?).with(@script_level).returns(true)
+    EvaluateRubricJob.expects(:perform_later).never
+    sign_in @teacher
+
+    @milestone_rubric_params[:user_id] = @teacher.id
+    # teachers are not shown the option to submit, and we rely on this to avoid
+    # requesting rubric evaluations for teachers
+    @milestone_rubric_params.delete(:submitted)
+
+    post :milestone, params: @milestone_rubric_params
+    assert_response :success
+  end
+
+  test 'milestone with student not in experiment does not trigger rubric eval job' do
+    # some other section is added to the experiment
+    create :single_section_experiment, name: 'ai-rubrics'
+    EvaluateRubricJob.stubs(:ai_enabled?).with(@script_level).returns(true)
+    EvaluateRubricJob.expects(:perform_later).never
+    sign_in @student
+
+    post :milestone, params: @milestone_rubric_params
+    assert_response :success
+  end
+
+  test 'milestone on level without ai enabled does not trigger rubric eval job' do
+    create :single_section_experiment, section: @section, name: 'ai-rubrics'
+    EvaluateRubricJob.stubs(:ai_enabled?).with(@script_level).returns(false)
+    EvaluateRubricJob.expects(:perform_later).never
+    sign_in @student
+
+    post :milestone, params: @milestone_rubric_params
+    assert_response :success
   end
 end

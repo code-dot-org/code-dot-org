@@ -6,7 +6,7 @@ title: Resources
 
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
 
-# Promote the Hour of Code
+# হাওয়ার অফ কোড বিজ্ঞাপন করো
 
 ### Find all the resources you need to bring attention to your Hour of Code. Not sure where to begin? Start with our [how-to guide for hosting an Hour of Code]({{ how_to_url }})!
 
@@ -18,7 +18,7 @@ title: Resources
 
 ## Hang these posters in your school
 
-A new poster set is available featuring Malala, Stephen Curry, Shakira and more! This year, each set will also come with 6 posters and 126 "I did the Hour of Code" stickers. Supplies are limited, so [order your posters](https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH) soon. To print on your own, simply click an image below to view and save a printable version.
+A new poster set is available featuring Malala, Stephen Curry, Shakira and more! This year, each set will also come with 6 posters and 126 "I did the Hour of Code" stickers. To print on your own, simply click an image below to view and save a printable version.
 
 {{ promote_new_posters }}
 

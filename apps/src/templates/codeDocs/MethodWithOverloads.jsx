@@ -1,5 +1,3 @@
-// TODO: Fix prop types for this file
-/* eslint-disable react/prop-types */
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import Example from './Example';
@@ -131,6 +129,7 @@ const methodShape = PropTypes.shape({
   parameters: PropTypes.arrayOf(PropTypes.object),
   examples: PropTypes.arrayOf(PropTypes.object),
   overloads: PropTypes.arrayOf(PropTypes.object),
+  returnValue: PropTypes.string,
 });
 
 SingleMethod.propTypes = {

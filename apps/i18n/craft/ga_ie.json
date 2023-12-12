@@ -1,9 +1,9 @@
 {
   "absolute": "dearbhluach",
+  "agentDiamondPathCongrats": "Comhghairdeas, d'aimsigh tú an cosán diamaint! Tá {count, plural, one {diamant amháin} two {2 dhiamant} few {# dhiamant} many {# ndiamant} other {# diamant}} bailithe agat go dtí seo!",
   "agentGenericFailureMessage": "Lean ort ag códáil! Ná déan dearmad An Gníomhaire a úsáid chun cúnamh a fháil.",
   "agentTooFewBlocksFailureMessage": "Cuir bloc leis ceann ar cheann chun an Gníomhaire a threorú go dtí an sprioc.",
   "at": "ag",
-  "agentDiamondPathCongrats": "Comhghairdeas, d'aimsigh tú an cosán diamaint! Tá {count, plural, one {diamant amháin} two {2 dhiamant} few {# dhiamant} many {# ndiamant} other {# diamant}} bailithe agat go dtí seo!",
   "blockActionAdd": "cuir",
   "blockActionAttack": "ionsaigh",
   "blockActionClone": "cóipeáil blocanna",

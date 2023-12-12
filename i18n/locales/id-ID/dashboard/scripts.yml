@@ -195,15 +195,17 @@ id:
           description_short: Membuat cerita atau membuat permainan dengan laboratorium bermain Gumball!
           student_description: Membuat cerita atau membuat permainan dengan laboratorium bermain Gumball!
         starwars:
+          title: 'Star Wars: Membangun Galaxy Dengan Kode (Javascript)'
           description: Pelajari memprogram Droid, dan Buat permainan Star Wars Anda sendiri di sebuah di galaksi yang sangat jauh.
           description_short: Pelajari memprogram Droid, dan Buat permainan Star Wars Anda sendiri di sebuah di galaksi yang sangat jauh.
           student_description: Pelajari memprogram Droid, dan Buat permainan Star Wars Anda sendiri di sebuah di galaksi yang sangat jauh.
         starwarsblocks:
+          title: 'Star Wars: Membangun Galaxy Dengan Kode (Blockly)'
           description: Pelajari memprogram Droid, dan Buat permainan Star Wars Anda sendiri di sebuah di galaksi yang sangat jauh.
           description_short: Pelajari memprogram Droid, dan Buat permainan Star Wars Anda sendiri di sebuah di galaksi yang sangat jauh.
           student_description: Pelajari memprogram Droid, dan Buat permainan Star Wars Anda sendiri di sebuah di galaksi yang sangat jauh.
         mc:
-          title: Minecraft Hour of Code
+          title: Petualang Minecraft
           description: Gunakan blok dari Code untuk mendapatkan Steve atau Alex pada petualangan dengan dunia Minecraft ini.
           description_short: Jelajahi dunia Minecraft melalui kode
           student_description: Gunakan blok dari Code untuk mendapatkan Steve atau Alex pada petualangan dengan dunia Minecraft ini.
@@ -454,14 +456,19 @@ id:
         flappy-impact-study:
           title: Flappy Code dengan survey
         coursea-draft:
+          title: 'Dasar-dasar Ilmu Komputer: Kursus A'
           description_short: Pengenalan ilmu komputer bagi pembaca pemula.
         courseb-draft:
+          title: 'Dasar-dasar Ilmu Komputer: Kursus B'
           description_short: Pengenalan ilmu komputer bagi pembaca pemula.
         coursec-draft:
+          title: 'Dasar-dasar Ilmu Komputer: Kursus C'
           description_short: Pelajari dasar-dasar ilmu komputer dan buat seni, cerita, dan permainan Anda sendiri.
         coursed-draft:
+          title: 'Dasar-dasar Ilmu Komputer: Kursus D'
           description_short: Pelajari dasar-dasar ilmu komputer dan buat seni, cerita, dan permainan Anda sendiri.
         coursee-draft:
+          title: 'Dasar-dasar Ilmu Komputer: Kursus E'
           description_short: Pelajari dasar-dasar ilmu komputer dan buat seni, cerita, dan permainan Anda sendiri.
           lesson_groups:
             content:
@@ -471,6 +478,7 @@ id:
             extra_course_content:
               display_name: Isi Kursus Tambahan
         coursef-draft:
+          title: 'Dasar-dasar Ilmu Komputer: Kursus F'
           description_short: Pelajari dasar-dasar ilmu komputer dan buat seni, cerita, dan permainan Anda sendiri.
           lesson_groups:
             content:
@@ -553,6 +561,8 @@ id:
           description_audience: Sekolah Dan Siswa Menengah Tinggi
           description: Lokakarya ini dirancang untuk memberikan pengenalan dasar app lab kepada murid dalam 2 jam. Murid mestinya bisa hadir dengan latar belakang ilmu komputer yang berbeda dan merasa senang bisa membuat sesuatu.
           student_description: Lokakarya ini dirancang untuk memberikan pengenalan dasar app lab kepada murid dalam 2 jam. Murid mestinya bisa hadir dengan latar belakang ilmu komputer yang berbeda dan merasa senang bisa membuat sesuatu.
+        coursed-ramp:
+          title: 'Dasar-dasar Ilmu Komputer: Kursus D'
         workshop-maker:
           title: Lokakarya Maker Toolkit
           description_audience: Guru menghadiri sendiri Lokakarya Maker Toolkit
@@ -3195,6 +3205,7 @@ id:
           description: Selamat Datang di Survei Pascakursus CS Principles Code.org.  Survei ini membutuhkan kira-kira 15 menit sampai selesai. Tanggapan Anda bersifat privat dan anonim -- guru Anda dapat melihat hasil agregat anonim untuk seluruh kelas. Hasil survei sangat penting bagi guru Anda dan Code.org demi kelangsungan dan kesempurnaan kursus. Terima kasih atas waktu dan pertimbangan Anda.
           student_description: Selamat Datang di Survei Pascakursus CS Principles Code.org.  Survei ini membutuhkan kira-kira 15 menit sampai selesai. Tanggapan Anda bersifat privat dan anonim -- guru Anda dapat melihat hasil agregat anonim untuk seluruh kelas. Hasil survei sangat penting bagi guru Anda dan Code.org demi kelangsungan dan kesempurnaan kursus. Terima kasih atas waktu dan pertimbangan Anda.
         aiml-2021:
+          title: Modul AI dan Machine Learning
           lesson_groups:
             lessonGroup-4:
               display_name: Survei
@@ -3485,6 +3496,8 @@ id:
               display_name: Demo dan Sumber Daya
         tesstest921:
           name: tesstest921
+        hello-world-animals:
+          title: 'Halo Dunia: Hewan'
         hello-world-retro:
           title: 'Hello World: Retro'
         hello-world-batman:
@@ -3502,6 +3515,8 @@ id:
         ai-ethics:
           title: Kode Etik AI Kami
           description_audience: kelas 6-12
+        dance-unplugged:
+          title: Hour of Code - Pesta Dansa - Tanpa Komputer
         csc-things:
           name: soal csc
           title: 'CSC Brain Dump '
@@ -3575,6 +3590,8 @@ id:
           title: Seni Puisi
         poetry-2021:
           title: Coding dengan Puisi
+        hello-world-animals-2021:
+          title: 'Halo Dunia: Hewan'
         hello-world-retro-2021:
           title: 'Hello World: Retro'
         explore-data-1-2021:
@@ -4166,6 +4183,7 @@ id:
           title: Survei Pascakursus CS Principles
         aiml-2022:
           name: aiml-2022
+          title: Modul AI dan Machine Learning
           description_short: Pelajari tentang Artificial Intelligence dan Machine Learning
         self-paced-pl-csd1-2022:
           lesson_groups:
@@ -4409,6 +4427,8 @@ id:
               display_name: 'Bab 1: Proses Pemecahan Masalah'
             lessonGroup-3:
               display_name: 'Bab 2: Komputer dan Pemecahan Masalah'
+            lessonGroup-5:
+              display_name: Survei
         csd2-2023:
           student_description: " Di Unit 2, Anda akan mempelajari cara membuat dan membagikan konten di halaman web Anda sendiri. Setelah memutuskan konten yang ingin Anda bagikan ke dunia, Anda akan mempelajari cara membuat struktur dan gaya halaman menggunakan HTML dan CSS. Anda juga akan melatih keterampilan pemrograman yang tak ternilai harganya, seperti debugging, menggunakan materi pembelajaran, dan kerja tim. "
         csd4-2023:
@@ -4536,6 +4556,11 @@ id:
           lessons:
             lesson-5:
               name: Penilaian
+            lesson-6:
+              name: Pelajaran 1
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Acak
         csp-playground:
           title: CSP Playground
           description_audience: Penulis Kurikulum
@@ -4544,6 +4569,7 @@ id:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Bab 2: Membangun Prototipe Fisik'
+          title: Membuat Aplikasi dengan Perangkat (Circuit Playground)
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
@@ -4744,6 +4770,8 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bab 1: Proses Pemecahan Masalah'
+            lessonGroup-4:
+              display_name: Survei
         focus-on-creativity2-2023:
           student_description: " Di Unit 2, Anda akan mempelajari cara membuat dan membagikan konten di halaman web Anda sendiri. Setelah memutuskan konten yang ingin Anda bagikan ke dunia, Anda akan mempelajari cara membuat struktur dan gaya halaman menggunakan HTML dan CSS. Anda juga akan melatih keterampilan pemrograman yang tak ternilai harganya, seperti debugging, menggunakan materi pembelajaran, dan kerja tim. "
         focus-on-creativity3-2023:
@@ -4764,6 +4792,8 @@ id:
               display_name: 'Bab 1: Proses Pemecahan Masalah'
             lessonGroup-3:
               display_name: 'Bab 2: Komputer dan Pemecahan Masalah'
+            lessonGroup-5:
+              display_name: Survei
         focus-on-hardware2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4781,6 +4811,8 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bab 1: Proses Pemecahan Masalah'
+            lessonGroup-4:
+              display_name: Survei
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
@@ -4807,6 +4839,8 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bab 1: Proses Pemecahan Masalah'
+            lessonGroup-4:
+              display_name: Survei
         focus-on-design-with-purpose2-2023:
           student_description: " Di Unit 2, Anda akan mempelajari cara membuat dan membagikan konten di halaman web Anda sendiri. Setelah memutuskan konten yang ingin Anda bagikan ke dunia, Anda akan mempelajari cara membuat struktur dan gaya halaman menggunakan HTML dan CSS. Anda juga akan melatih keterampilan pemrograman yang tak ternilai harganya, seperti debugging, menggunakan materi pembelajaran, dan kerja tim. "
         focus-on-design-with-purpose3-2023:
@@ -4825,6 +4859,8 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bab 1: Proses Pemecahan Masalah'
+            lessonGroup-4:
+              display_name: Survei
         focus-on-coding2-2023:
           student_description: " Di Unit 2, Anda akan mempelajari cara membuat dan membagikan konten di halaman web Anda sendiri. Setelah memutuskan konten yang ingin Anda bagikan ke dunia, Anda akan mempelajari cara membuat struktur dan gaya halaman menggunakan HTML dan CSS. Anda juga akan melatih keterampilan pemrograman yang tak ternilai harganya, seperti debugging, menggunakan materi pembelajaran, dan kerja tim. "
         focus-on-coding3-2023:
@@ -4843,6 +4879,8 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bab 1: Proses Pemecahan Masalah'
+            lessonGroup-4:
+              display_name: Survei
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -5139,7 +5177,7 @@ id:
           description: "Pada modul kali ini, Anda akan dikenalkan dengan praktik CS otentik yang akan dipelajari oleh siswa selama kursus CS Discoveries. Praktek ini mencakup debugging, penggunaan sumber daya, dan pair programming. Anda juga akan mengeksplorasi peran guru dalam kelas CS Discoveries dan membuat rencana untuk membantu pembelajaran siswa saat mengajarkan kursus ini. \n\n\\*\\*Anda akan: \\*\\*\n\n-   Mempertimbangkan peran guru di kelas CS Discoveries. \n-   Mempelajari tentang praktik CS otentik yang akan dikembangkan oleh siswa selama kursus CS Discoveries.\n-   Membuat rencana untuk membantu pembelajaran siswa melalui diferensiasi, penilaian berkelanjutan, dan mempromosikan budaya inklusi. \n\n\\*\\* Waktu yang Disarankan: \\*\\* 50 menit"
           student_description: "Pada modul kali ini, Anda akan dikenalkan dengan praktik CS otentik yang akan dipelajari oleh siswa selama kursus CS Discoveries. Praktek ini mencakup debugging, penggunaan sumber daya, dan pair programming. Anda juga akan mengeksplorasi peran guru dalam kelas CS Discoveries dan membuat rencana untuk membantu pembelajaran siswa saat mengajarkan kursus ini. \n\n\\*\\*Anda akan: \\*\\*\n\n-   Mempertimbangkan peran guru di kelas CS Discoveries. \n-   Mempelajari tentang praktik CS otentik yang akan dikembangkan oleh siswa selama kursus CS Discoveries.\n-   Membuat rencana untuk membantu pembelajaran siswa melalui diferensiasi, penilaian berkelanjutan, dan mempromosikan budaya inklusi. \n\n\\*\\* Waktu yang Disarankan: \\*\\* 50 menit"
         self-paced-pl-csd5-2023:
-          title: self-paced-pl-csd5
+          title: 'Modul 7: Bersiap Mengajarkan AI dan Machine Learning'
           description: |-
             Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit AI dan Machine Learning Code.org.
 
@@ -5251,3 +5289,338 @@ id:
           lesson_groups:
             lessonGroup-3:
               display_name: Kelas
+        csa-frq-practice-2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Kelas
+        csa-frq-practice-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Kelas
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Data
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Kelas
+        csa-frq-practice-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Kelas
+        csa-frq-practice-pre2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Kelas
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kewarganegaraaan Digital
+            lessonGroup-3:
+              display_name: Urutan
+            lessonGroup-4:
+              display_name: Loop
+            lessonGroup-5:
+              display_name: Dampak dari Komputasi
+          description_audience: 'Usia: 4-7'
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Data
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kewarganegaraaan Digital
+            lessonGroup-3:
+              display_name: Urutan
+            lessonGroup-4:
+              display_name: Loop
+            lessonGroup-5:
+              display_name: Dampak dari Komputasi
+            lessonGroup-6:
+              display_name: Data
+          description_audience: 'Usia: 4-7'
+          description_short: Pengenalan ilmu komputer untuk pra-pembaca.
+        nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: Data
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kewarganegaraaan Digital
+            lessonGroup-3:
+              display_name: Urutan
+            lessonGroup-4:
+              display_name: Loop
+            lessonGroup-5:
+              display_name: Dampak dari Komputasi
+            lessonGroup-6:
+              display_name: kegiatan
+            lessonGroup-7:
+              display_name: Proyek Akhir Kursus
+            lessonGroup-8:
+              display_name: Data
+          description_audience: 'Usia: 5-8'
+          description_short: Pengenalan ilmu komputer untuk prabaca. Sama dengan Kursus A, tetapi dengan tambahan konsep 'pendalaman'.
+        nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: Sistem Komputasi
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kewarganegaraaan Digital
+            lessonGroup-3:
+              display_name: Urutan
+            lessonGroup-4:
+              display_name: Loop
+            lessonGroup-5:
+              display_name: kegiatan
+            lessonGroup-6:
+              display_name: Data
+            lessonGroup-8:
+              display_name: Sistem Komputasi
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kewarganegaraaan Digital
+            lessonGroup-3:
+              display_name: Urutan
+            lessonGroup-4:
+              display_name: Dampak dari Komputasi
+            lessonGroup-6:
+              display_name: Loop
+            lessonGroup-7:
+              display_name: Data
+            lessonGroup-8:
+              display_name: Proyek Akhir Kursus
+          description_audience: 'Usia: 7-11'
+          description_short: Pelajari tentang pernyataan conditional. Buat karya seni, permainan, dan bahkan pesta dansa.
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Nested Loop
+            lessonGroup-4:
+              display_name: fungsi
+            lessonGroup-6:
+              display_name: Proyek Akhir Kursus
+          description_audience: 'Usia: 8-12'
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
+          description_audience: 'Usia: 9-13'
+          description_short: Pelajari seluruh konsep dalam dasar dasar ilmu komputer dan buat seni, cerita atau permainan anda sendiri.
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
+            lessonGroup-3:
+              display_name: Kondisi
+            lessonGroup-5:
+              display_name: variabel
+            lessonGroup-6:
+              display_name: Dampak dari Komputasi
+            lessonGroup-7:
+              display_name: Proyek Akhir Kursus
+          description_audience: 'Usia: 9-13'
+          description_short: Pelajari seluruh konsep dalam dasar dasar ilmu komputer dan buat seni, cerita atau permainan anda sendiri.
+        vpl-csp-2023-m1:
+          title: Modul 1
+        vpl-csp-2023-m2:
+          title: Modul 2
+        vpl-csp-2023-m3:
+          title: Modul 3
+        vpl-csp-2023-m4:
+          title: Modul 4
+        vpl-csp-2023-m5:
+          title: Modul 5
+        vpl-csp-2023-m6:
+          title: Modul 6
+        vpl-csp-2023-m7:
+          title: Modul 7
+        vpl-csp-2023-m8:
+          title: Modul 8
+        vpl-csa-2023-m1:
+          title: Modul 1
+        how-ai-works-2023:
+          title: Bagaimana AI bekerja
+        vpl-csa-2023-m2:
+          title: Modul 2
+        vpl-csa-2023-m3:
+          title: Modul 3
+        vpl-csa-2023-m4:
+          title: Modul 4
+        vpl-csa-2023-m5:
+          title: Modul 5
+        vpl-csa-2023-m6:
+          title: Modul 6
+        vpl-csa-2023-m7:
+          title: Modul 7
+        vpl-csa-2023-m8:
+          title: Modul 8
+        vpl-csd-2023-m1:
+          title: Modul 1
+        vpl-csd-2023-m2:
+          title: Modul 2
+        vpl-csd-2023-m3:
+          title: Modul 3
+        vpl-csd-2023-m4:
+          title: Modul 4
+        vpl-csd-2023-m5:
+          title: Modul 5
+        vpl-csd-2023-m6:
+          title: Modul 6
+        vpl-csd-2023-m7:
+          title: Modul 7
+        vpl-csd-2023-m8:
+          title: Modul 8
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: Kode Etik AI Kami
+        virtual-pl-csa-summer-2024-day1:
+          title: Hari 1
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Pendahuluan
+          title: Hari 2
+        virtual-pl-csp-summer-day3:
+          title: Hari 3
+        virtual-pl-csp-summer-day4:
+          title: Hari 4
+        virtual-pl-csa-summer-day2:
+          title: Hari 2
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Pendahuluan
+          title: Hari 3
+        virtual-pl-csa-summer-day4:
+          title: Hari 4
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Pendahuluan
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Pendahuluan
+          title: Hari 1
+        virtual-pl-csp-summer-day1:
+          lessons:
+            lesson-5:
+              name: Pengantar Kegiatan Asinkron
+          title: Hari 1
+        draft-hoc-dp-2:
+          lessons:
+            lesson-2:
+              name: templat rencana pelajaran hour of code
+        self-paced-pl-csd-unit1-2-2023:
+          title: 'Modul 1: Bersiap Mengajarkan Pemecahan Masalah dan Komputasi'
+          description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit Pemecahan Masalah dan Komputasi Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang Pemecahan Masalah dan Komputasi.
+            -   Mempraktikkan konsep-konsep utama yang tercantum di dalam unit.
+            -   Mengkesplorasi proyek akhir chapter.
+
+            **Waktu yang disarankan:** 30 menit
+          student_description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit Pemecahan Masalah dan Komputasi Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang Pemecahan Masalah dan Komputasi.
+            -   Mempraktikkan konsep-konsep utama yang tercantum di dalam unit.
+            -   Mengkesplorasi proyek akhir chapter.
+
+            **Waktu yang disarankan:** 30 menit
+        dance-ai-2023:
+          lessons:
+            lesson-1:
+              name: 'Pesta Dansa: Edisi AI'
+          title: 'Pesta Dansa: Edisi AI'
+        self-paced-pl-csd-unit2-2-2023:
+          title: 'Modul 2: Bersiap Mengajarkan Pengembangan Web'
+        self-paced-pl-csd-unit3-2-2023:
+          title: Bersiap Mengajarkan Animasi Interaktif dan Game
+          description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit Animasi Interaktif dan Game Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang Animasi Interaktif dan Game.
+            -   Mempraktikkan konsep-konsep utama yang tercantum di dalam unit.
+            -   Mencoba Game Lab.
+            -   Mengkesplorasi proyek-proyek akhir chapter.
+
+            **Waktu yang disarankan:** 120 menit
+          student_description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit Animasi Interaktif dan Game Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang Animasi Interaktif dan Game.
+            -   Mempraktikkan konsep-konsep utama yang tercantum di dalam unit.
+            -   Mencoba Game Lab.
+            -   Mengkesplorasi proyek-proyek akhir chapter.
+
+            **Waktu yang disarankan:** 120 menit
+        self-paced-pl-csd-unit4-2-2023:
+          title: " Modul 4: Bersiap Mengajarkan Proses Desain"
+        self-paced-pl-csd-unit5-2-2023:
+          title: 'Modul 5: Bersiap Mengajarkan Data dan Masyarakat'
+        web-dev-2024:
+          student_description: " Di Unit 2, Anda akan mempelajari cara membuat dan membagikan konten di halaman web Anda sendiri. Setelah memutuskan konten yang ingin Anda bagikan ke dunia, Anda akan mempelajari cara membuat struktur dan gaya halaman menggunakan HTML dan CSS. Anda juga akan melatih keterampilan pemrograman yang tak ternilai harganya, seperti debugging, menggunakan materi pembelajaran, dan kerja tim. "
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Survei
+            lessonGroup-2:
+              display_name: 'Bab 1: Proses Pemecahan Masalah'
+            lessonGroup-3:
+              display_name: 'Bab 2: Komputer dan Pemecahan Masalah'
+        csd2-2024:
+          student_description: " Di Unit 2, Anda akan mempelajari cara membuat dan membagikan konten di halaman web Anda sendiri. Setelah memutuskan konten yang ingin Anda bagikan ke dunia, Anda akan mempelajari cara membuat struktur dan gaya halaman menggunakan HTML dan CSS. Anda juga akan melatih keterampilan pemrograman yang tak ternilai harganya, seperti debugging, menggunakan materi pembelajaran, dan kerja tim. "
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Bab 1: Gambar dan Animasi'
+            lessonGroup-3:
+              display_name: 'Bab 2: Bangunan Permainan'
+          student_description: " Di Unit 3, Pengalaman coding Anda akan terbentuk sewaktu Anda memprogram animasi, seni interaktif, dan permainan di Game Lab. Unit ini dimulai dengan bentuk-bentuk sederhana dan berjenjang hingga ke permainan berbasis-sprite yang lebih canggih, menggunakan konsep pemrograman dan proses desain yang sama yang digunakan sehari-hari oleh ilmuwan komputer. Dalam proyek terakhir, Anda akan mengembangkan program interaktif yang sudah mendapat sentuhan pribadi."
+        csd4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Bab 1: User Centered Design'
+            lessonGroup-3:
+              display_name: 'Bab 2: Aplikasi Prototyping'
+          student_description: Unit 4 memperkenalkan dampak sosial yang lebih luas dari komputasi.  Melalui serangkaian tantangan desain, Anda akan mempelajari cara memahami kebutuhan orang lain dengan lebih baik sambil mengembangkan solusi sebuah masalah. Bagian kedua unit ini berisi sebuah proyek tim berulang, yang di dalamnya tim berkesempatan mengidentifikasi suatu kebutuhan yang mereka pedulikan, solusi prototipe baik di kertas maupun di App Lab, dan mengujikan solusi kepada pengguna yang sebenarnya untuk mendapatkan masukan dan mendorong pengulangan lebih lanjut.
+        csd5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Bab 1: Yang Mewakili Informasi'
+            lessonGroup-3:
+              display_name: 'Bab 2: Memecahkan Masalah Data'
+          student_description: Unit 5 membahas pentingnya data dalam memecahkan masalah dan menyoroti cara komputer dapat membantu dalam proses ini. Bab pertama mengulas berbagai sistem yang digunakan untuk merepresentasikan informasi dalam komputer beserta tantangan dan imbalan yang diterima jika menggunakan sistem tersebut. Di bab kedua, Anda akan mempelajari cara menggunakan kumpulan data untuk memecahkan masalah, dan cara komputer membantu mengotomatiskan langkah-langkah dari proses ini. Bab ini diakhiri dengan mempertimbangkan cara menerapkan proses pemecahan masalah data dalam bidang yang Anda pilih.
+          description_short: Pelajari cara orang menggunakan komputer untuk memecahkan masalah data.
+        csd6a-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Bab 2: Membangun Prototipe Fisik'
+          description_short: Belajar program dengan perangkat fisik.
+        csd6b-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Masukan dan keluaran
+        csd7-2024:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Pengenalan App Lab
+            lessonGroup-2:
+              display_name: Chapter 1
+            lessonGroup-3:
+              display_name: Chapter 2
+        csd-post-survey-2024:
+          title: Survei Pasca Kursus

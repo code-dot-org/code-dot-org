@@ -1,7 +1,8 @@
 #!/usr/bin/env ruby
 require_relative '../../../deployment'
 
-ROOT = File.expand_path('../../../..', __FILE__)
+UI_TEST_DIR = File.expand_path(__dir__)
+ROOT = File.expand_path('../../..', UI_TEST_DIR)
 
 # Set up gems listed in the Gemfile.
 ENV['BUNDLE_GEMFILE'] ||= "#{ROOT}//Gemfile"
@@ -36,10 +37,10 @@ ENV['BUILD'] ||= `git rev-parse --short HEAD`
 
 GIT_BRANCH = GitUtils.current_branch
 COMMIT_HASH = RakeUtils.git_revision
-LOCAL_LOG_DIRECTORY = 'log'
+LOCAL_LOG_DIRECTORY = File.join(UI_TEST_DIR, 'log')
 S3_LOGS_BUCKET = 'cucumber-logs'
 S3_LOGS_PREFIX = ENV['CI'] ? "circle/#{ENV['CIRCLE_BUILD_NUM']}" : "#{Socket.gethostname}/#{GIT_BRANCH}"
-LOG_UPLOADER = AWS::S3::LogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX, true)
+LOG_UPLOADER = AWS::S3::LogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX, make_public: true)
 
 #
 # Run a set of UI/Eyes tests according to the provided options.
@@ -150,14 +151,14 @@ def parse_options
       end
       opts.on("-p", "--pegasus Domain", String, "Specify an override domain for code.org, e.g. localhost.code.org:3000") do |p|
         if p == 'localhost:3000'
-          print "WARNING: Some tests may fail using '-p localhost:3000' because cookies will not be available.\n"\
+          print "WARNING: Some tests may fail using '-p localhost:3000' because cookies will not be available.\n" \
                 "Try '-p localhost.code.org:3000' instead (this is the default when using '-l').\n"
         end
         options.pegasus_domain = p
       end
       opts.on("-d", "--dashboard Domain", String, "Specify an override domain for studio.code.org, e.g. localhost-studio.code.org:3000") do |d|
         if d == 'localhost:3000'
-          print "WARNING: Some tests may fail using '-d localhost:3000' because cookies will not be available.\n"\
+          print "WARNING: Some tests may fail using '-d localhost:3000' because cookies will not be available.\n" \
                 "Try '-d localhost-studio.code.org:3000' instead (this is the default when using '-l').\n"
         end
         options.dashboard_domain = d
@@ -236,7 +237,7 @@ def parse_options
     opt_parser.parse!(ARGV)
     # Standardize: Drop leading dot-slash on feature paths
     options.features = ARGV + (options.features || []).
-        map! {|feature| feature.gsub(/^\.\//, '')}
+      map! {|feature| feature.gsub(/^\.\//, '')}
 
     if options.force_db_access
       options.pegasus_db_access = true
@@ -268,7 +269,7 @@ def select_browser_configs(options)
     }]
   end
 
-  browsers = JSON.parse(File.read('browsers.json'))
+  browsers = JSON.parse(File.read(File.join(UI_TEST_DIR, 'browsers.json')))
   if options.config
     options.config.map do |name|
       browsers.detect {|b| b['name'] == name}.tap do |browser|
@@ -303,9 +304,9 @@ end
 
 def open_log_files
   FileUtils.mkdir_p(LOCAL_LOG_DIRECTORY)
-  $success_log = File.open("#{LOCAL_LOG_DIRECTORY}/success.log", 'w')
-  $error_log = File.open("#{LOCAL_LOG_DIRECTORY}/error.log", 'w')
-  $errorbrowsers_log = File.open("#{LOCAL_LOG_DIRECTORY}/errorbrowsers.log", 'w')
+  $success_log = File.open(File.join(LOCAL_LOG_DIRECTORY, "success.log"), 'w')
+  $error_log = File.open(File.join(LOCAL_LOG_DIRECTORY, "error.log"), 'w')
+  $errorbrowsers_log = File.open(File.join(LOCAL_LOG_DIRECTORY, "errorbrowsers.log"), 'w')
 end
 
 def close_log_files
@@ -333,7 +334,7 @@ def run_tests(env, feature, arguments, log_prefix)
   start_time = Time.now
   cmd = "cucumber #{feature} #{arguments}"
   puts "#{log_prefix}#{cmd}"
-  Open3.popen3(env, cmd) do |stdin, stdout, stderr, wait_thr|
+  Open3.popen3(env, cmd, chdir: UI_TEST_DIR) do |stdin, stdout, stderr, wait_thr|
     stdin.close
     stdout = stdout.read
     stderr = stderr.read
@@ -351,7 +352,12 @@ def run_tests(env, feature, arguments, log_prefix)
 end
 
 def features_to_run
-  $features_to_run ||= $options.features.empty? ? Dir.glob('features/**/*.feature') : $options.features
+  $features_to_run ||=
+    if $options.features.empty?
+      Dir.glob(File.join(UI_TEST_DIR, 'features', '**', '*.feature'))
+    else
+      $options.features
+    end
 end
 
 #
@@ -368,12 +374,14 @@ end
 # ]
 #
 def browser_features
-  ($browsers.product features_to_run).map do |browser, feature|
+  ($browsers.product features_to_run).filter_map do |browser, feature|
+    full_feature_path = File.expand_path(feature)
+    relative_feature_path = Pathname.new(full_feature_path).relative_path_from(UI_TEST_DIR).to_s
     arguments = cucumber_arguments_for_browser(browser, $options)
-    scenario_count = ParallelTests::Cucumber::Scenarios.all([feature], test_options: arguments).length
+    scenario_count = ParallelTests::Cucumber::Scenarios.all([full_feature_path], test_options: arguments).length
     next if scenario_count.zero?
-    [browser, feature]
-  end.compact
+    [browser, relative_feature_path]
+  end
 end
 
 def test_type
@@ -459,10 +467,10 @@ def scheme_for_environment
 end
 
 def generate_status_page(suite_start_time)
-  test_status_template = File.read('test_status.haml')
+  test_status_template = File.read(File.join(UI_TEST_DIR, 'test_status.haml'))
   haml_engine = Haml::Engine.new(test_status_template)
   File.write(
-    status_page_filename,
+    File.join(UI_TEST_DIR, status_page_filename),
     haml_engine.render(
       Object.new,
       {
@@ -481,7 +489,7 @@ def generate_status_page(suite_start_time)
 end
 
 def test_run_identifier(browser, feature)
-  feature_name = feature.gsub('features/', '').gsub('.feature', '').tr('/', '_')
+  feature_name = feature.gsub(/.*features\//, '').gsub('.feature', '').tr('/', '_')
   browser_name = browser_name_or_unknown(browser)
   "#{browser_name}_#{feature_name}" + (eyes? ? '_eyes' : '')
 end
@@ -566,9 +574,9 @@ end
 # return all text after "Failing Scenarios"
 def output_synopsis(output_text, log_prefix)
   # example output:
-  # ["    And I press \"resetButton\"                                                                                                                                    # step_definitions/steps.rb:63\n",
-  #  "    Then element \"#runButton\" is visible                                                                                                                         # step_definitions/steps.rb:124\n",
-  #  "    And element \"#resetButton\" is hidden                                                                                                                         # step_definitions/steps.rb:130\n",
+  # ["    And I press \"resetButton\"            # step_definitions/steps.rb:63\n",
+  #  "    Then element \"#runButton\" is visible # step_definitions/steps.rb:124\n",
+  #  "    And element \"#resetButton\" is hidden # step_definitions/steps.rb:130\n",
   #  "\n",
   #  "Failing Scenarios:\n",
   #  "cucumber features/artist.feature:11 # Scenario: Loading the first level\n",
@@ -621,15 +629,15 @@ end
 
 def html_output_filename(test_run_string, options)
   if options.html
-    "#{LOCAL_LOG_DIRECTORY}/#{test_run_string}_output.html"
+    File.join(LOCAL_LOG_DIRECTORY, "#{test_run_string}_output.html")
   end
 end
 
 def rerun_filename(test_run_string)
-  "#{LOCAL_LOG_DIRECTORY}/#{test_run_string}.rerun"
+  File.join(LOCAL_LOG_DIRECTORY, "#{test_run_string}.rerun")
 end
 
-def tag(tag, run=true)
+def tag(tag, run = true)
   return skip_tag(tag) unless run
   " -t #{tag}"
 end

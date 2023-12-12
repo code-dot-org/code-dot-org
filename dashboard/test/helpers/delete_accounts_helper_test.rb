@@ -617,6 +617,19 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     end
   end
 
+  test "removes lti user identities rows" do
+    lti_user_identity = create :lti_user_identity
+    user = lti_user_identity.user
+
+    assert_equal 1, user.lti_user_identities.with_deleted.count,
+    'Expected user to have one lti user identities'
+
+    purge_user user
+
+    assert_equal 0, user.lti_user_identities.with_deleted.count,
+      'Expected user to have no lti user identities'
+  end
+
   #
   # Table: dashboard.authored_hint_view_requests
   #
@@ -968,7 +981,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     ActiveRecord::Base.connection.exec_query(
       <<-SQL.squish
         INSERT INTO `pd_facilitator_program_registrations` (user_id, form_data, created_at, updated_at)
-        VALUES (#{teacher.id}, '{\"country\": \"USA\"}', '#{Time.now.to_s(:db)}', '#{Time.now.to_s(:db)}')
+        VALUES (#{teacher.id}, '{"country": "USA"}', '#{Time.now.to_s(:db)}', '#{Time.now.to_s(:db)}')
     SQL
     )
 
@@ -991,7 +1004,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     ActiveRecord::Base.connection.exec_query(
       <<-SQL.squish
         INSERT INTO `pd_fit_weekend1819_registrations` (pd_application_id, form_data, created_at, updated_at)
-        VALUES (#{application.id}, '{\"country\": \"USA\"}', '#{Time.now.to_s(:db)}', '#{Time.now.to_s(:db)}')
+        VALUES (#{application.id}, '{"country": "USA"}', '#{Time.now.to_s(:db)}', '#{Time.now.to_s(:db)}')
     SQL
     )
 
@@ -1014,7 +1027,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     ActiveRecord::Base.connection.exec_query(
       <<-SQL.squish
         INSERT INTO `pd_fit_weekend_registrations` (pd_application_id, registration_year, form_data, created_at, updated_at)
-        VALUES (#{application.id}, '2019-2020', '{\"country\": \"USA\"}', '#{Time.now.to_s(:db)}', '#{Time.now.to_s(:db)}')
+        VALUES (#{application.id}, '2019-2020', '{"country": "USA"}', '#{Time.now.to_s(:db)}', '#{Time.now.to_s(:db)}')
     SQL
     )
 
@@ -1088,7 +1101,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     ActiveRecord::Base.connection.exec_query(
       <<-SQL.squish
         INSERT INTO `pd_regional_partner_program_registrations` (user_id, form_data, teachercon, created_at, updated_at)
-        VALUES (#{teacher.id}, '{\"country\": \"USA\"}', 1, '#{Time.now.to_s(:db)}', '#{Time.now.to_s(:db)}')
+        VALUES (#{teacher.id}, '{"country": "USA"}', 1, '#{Time.now.to_s(:db)}', '#{Time.now.to_s(:db)}')
     SQL
     )
 
@@ -1106,7 +1119,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     ActiveRecord::Base.connection.exec_query(
       <<-SQL.squish
         INSERT INTO `pd_regional_partner_program_registrations` (user_id, form_data, teachercon, created_at, updated_at)
-        VALUES (#{teacher.id}, '{\"country\": \"USA\"}', 1, '#{Time.now.to_s(:db)}', '#{Time.now.to_s(:db)}')
+        VALUES (#{teacher.id}, '{"country": "USA"}', 1, '#{Time.now.to_s(:db)}', '#{Time.now.to_s(:db)}')
     SQL
     )
 
@@ -1128,7 +1141,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     ActiveRecord::Base.connection.exec_query(
       <<-SQL.squish
         INSERT INTO `pd_teachercon1819_registrations` (user_id, form_data, created_at, updated_at)
-        VALUES (#{teacher.id}, '{\"country\": \"USA\"}', '#{Time.now.to_s(:db)}', '#{Time.now.to_s(:db)}')
+        VALUES (#{teacher.id}, '{"country": "USA"}', '#{Time.now.to_s(:db)}', '#{Time.now.to_s(:db)}')
     SQL
     )
 
@@ -1208,7 +1221,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     ActiveRecord::Base.connection.exec_query(
       <<-SQL.squish
         INSERT INTO `pd_teacher_applications` (user_id, primary_email, secondary_email, created_at, updated_at, application)
-        VALUES (#{user.id}, '#{user.email}', '#{secondary_email}', '#{Time.now.to_s(:db)}', '#{Time.now.to_s(:db)}', '{\"primaryEmail\": \"#{user.email}\"}')
+        VALUES (#{user.id}, '#{user.email}', '#{secondary_email}', '#{Time.now.to_s(:db)}', '#{Time.now.to_s(:db)}', '{"primaryEmail": "#{user.email}"}')
       SQL
     )
 
@@ -1557,11 +1570,11 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       form_ids = PEGASUS_DB[:forms].where(email: email).map {|f| f[:id]}
 
       refute_empty PEGASUS_DB[:forms].where(id: form_ids)
-      assert PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?}
+      assert(PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?})
 
       purge_all_accounts_with_email email
 
-      refute PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?}
+      refute(PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?})
     end
   end
 
@@ -1571,11 +1584,11 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       form_ids = PEGASUS_DB[:forms].where(user_id: user.id).map {|f| f[:id]}
 
       refute_empty PEGASUS_DB[:forms].where(id: form_ids)
-      assert PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?}
+      assert(PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?})
 
       purge_user user
 
-      refute PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?}
+      refute(PEGASUS_DB[:forms].where(id: form_ids).any? {|f| f[:email].present?})
     end
   end
 

@@ -53,6 +53,7 @@ ms:
         gender: 'Jantina'
         edit_header: 'Edit Maklumat Akaun'
         finish_sign_up_header: 'Selesai membuat akaun anda'
+        finish_sign_up_header_error: 'Sila betulkan kesilapan yang berikut:'
         finish_sign_up_subheader: 'Isi maklumat berikut untuk menyelesaikan membuat akaun Code.org untuk <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Isikan maklumat berikut untuk menyelesaikan membuat akaun Code.org untuk **%{email}**.'
         finish_sign_up_subheader_provider: 'Isikan maklumat berikut untuk menyelesaikan membuat akaun Code.org dengan <strong>%{provider}</strong> untuk <strong>%{email}</strong>.'
@@ -60,6 +61,7 @@ ms:
         reset_password_token: "Pautan tetapan semula kata laluan yang telah anda ikuti"
         error:
           future: tidak boleh ada di masa depan
+        user_type: 'Jenis Akaun'
         us_state: 'Negeri'
   beta: "beta"
   hello: "Helo dunia"
@@ -202,6 +204,8 @@ ms:
     parent_account_email_progress_permission: "Bolehkah kami sekali-sekala e-mel anda kemaskini kemajuan dan projek anak anda, serta kemaskini kursus dan sains komputer mereka? [(Lihat polisi privasi kami)](%{privacy_policy_url})"
     parent_account_email_label: "E-mel Ibubapa/Penjaga"
     us_state: 'Negeri'
+    us_state_dropdown_options:
+      other: "Saya tinggal di tempat yang tidak disenaraikan di sini"
   school_info:
     title: 'Maklumat Sekolah (pilihan)'
     school_country: 'Negara Sekolah'
@@ -264,6 +268,9 @@ ms:
   parent_mailer:
     student_associated_subject: 'Maklumat log masuk untuk Code.org'
     parent_email_added_subject: 'Selamat datang ke Code.org!'
+    parent_permission_request_subject: "Persetujuan ibu bapa diperlukan untuk anak anda mengakses ke Code.org"
+    parent_permission_reminder_subject: "Peringatan, persetujuan ibu bapa diperlukan untuk anak anda dapat mengakses ke Code.org"
+    parent_permission_confirmation_subject: "Terima kasih kerana meluluskan akses anak anda ke Code.org!"
   teacher_mailer:
     new_teacher_subject: 'Selamat datang ke Code.org!'
     delete_teacher_subject: 'Pemberitahuan Code.org: Akaun anda telah dipadamkan'
@@ -349,6 +356,7 @@ ms:
       sprite_lab_documentation: "Dokumentasi Lab Sprite"
       sprite_lab_tutorials: "Tutorial Sprite Lab"
       web_lab_documentation: "Dokumentasi Makmal Web"
+      project_beats_documentation: "Projek Beats Documentation"
       educate_overview: "Gambaran Keseluruhan Pendidik"
       educate_elementary: "Sekolah Rendah"
       educate_middle: "Sekolah Menengah Rendah"
@@ -860,6 +868,8 @@ ms:
     submit-incomplete-body: "Anda meninggalkan beberapa pertanyaan tidak lengkap.  Anda tidak boleh mengedit penilaian anda selepas menyerahkannya.  Adakah anda pasti?"
     submit-complete-title: "Hantar penilaian anda"
     submit-complete-body: "Anda tidak boleh mengedit penilaian anda selepas menyerahkannya.  Adakah awak pasti?"
+  level_summary:
+    correct_answer: "Jawapan yang Betul"
   match:
     wrong_title: "Penyelesaian salah"
     wrong_body: "Penyelesaian yang anda masukkan tidak betul.  Sila cuba lagi!"
@@ -1121,17 +1131,33 @@ ms:
         not_listed: 'Istilah pilihan tidak disenaraikan'
         none: 'Memilih untuk tidak menjawab'
       school_country:
+        australia: 'Australia'
         barbados: 'Barbados'
         belize: 'Belize'
+        brazil: 'Brazil'
         canada: 'Kanada'
         chile: 'Chile'
         colombia: 'Colombia'
+        dominican_republic: 'Republik Dominika'
+        india: 'India'
+        indonesia: 'Indonesia'
         israel: 'Israel'
+        jamaica: 'Jamaica'
+        kenya: 'Kenya'
         malaysia: 'Malaysia'
+        maldives: 'Maldives'
         mexico: 'Mexico'
+        mongolia: 'Mongolia'
+        new_zealand: 'New Zealand'
         paraguay: 'Paraguay'
+        portugal: 'Portugal'
+        slovakia: 'Slovakia'
+        south_korea: 'Korea Selatan'
+        spain: 'Sepanyol'
         thailand: 'Thailand'
+        trinidad_and_tobago: 'Trinidad dan Tobago'
         uzbekistan: 'Uzbekistan'
+        vietnam: 'Vietnam'
       ages:
         ages_under_6: '< 6 tahun'
         ages_7_8: '7-8 tahun'

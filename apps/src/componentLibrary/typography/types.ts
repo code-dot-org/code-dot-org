@@ -22,8 +22,13 @@ type VisualAppearance =
   | 'heading-xs'
   | 'body-one'
   | 'body-two'
-  | 'overline'
+  | 'body-three'
+  | 'body-four'
+  | 'overline-one'
+  | 'overline-two'
+  | 'overline-three'
   | 'strong'
+  | 'extra-strong'
   | 'em'
   | 'figcaption';
 

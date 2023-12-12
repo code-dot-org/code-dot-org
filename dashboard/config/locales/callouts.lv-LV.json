@@ -2,6 +2,15 @@
   "lv-LV": {
     "data": {
       "callouts": {
+        "CSD U3L16 Prac D_2023": {
+          "CSD U3L16.7 - start": "Pievieno savu kodu šeit"
+        },
+        "CSD U6 - Color LEDs - SB4_2023": {
+          "CSDU6L10_rainbow": "Pievieno savu kodu šeit"
+        },
+        "CSD U6 - Color LEDs - SB4_2222": {
+          "CSDU6L10_rainbow": "Pievieno savu kodu šeit"
+        },
         "CSD U6 colorLeds intensity": {
           "CSDU6L10_rainbow": "Pievieno savu kodu šeit"
         },
@@ -11,6 +20,9 @@
         "CSD U6 colorLeds intensity_2019": {
           "CSDU6L10_rainbow": "Pievieno savu kodu šeit"
         },
+        "CSD U6 colorLeds intensity_2021": {
+          "CSDU6L10_rainbow": "Pievieno savu kodu šeit"
+        },
         "CSD U6 light show": {
           "CSDUDL03P09": "Ko dara šī līnija?"
         },
@@ -18,6 +30,9 @@
           "CSDUDL03P09": "Ko dara šī līnija?"
         },
         "CSD U6 light show_2019": {
+          "CSDUDL03P09": "Ko dara šī līnija?"
+        },
+        "CSD U6 light show_2021": {
           "CSDUDL03P09": "Ko dara šī līnija?"
         },
         "Course 4 Artist 4": {
@@ -79,8 +94,8 @@
           "create_function": "Spied šeit, lau atvērtu Funkciju paneli, tad nospied \"Izveidot funkciju\" pogu."
         },
         "NEW Course 4 Artist Params 9": {
-          "edit_add_parameter": "Klikšķini labot, lai pievienotu savai funkcijai parametru",
-          "add_and_drag_parameter": "Ieraksti parametra vārdu te, klikšķini pievienot un tad velc to savā definētajā funkcijā."
+          "add_and_drag_parameter": "Ieraksti parametra vārdu te, klikšķini pievienot un tad velc to savā definētajā funkcijā.",
+          "edit_add_parameter": "Klikšķini labot, lai pievienotu savai funkcijai parametru"
         },
         "NEW Course 4 Artist Vars 6": {
           "place_length_variable": "Velc garuma mainīgo te, lai aizstātu jautājuma zīmes"
@@ -104,11 +119,65 @@
         "Overworld Move to Sheep": {
           "craft_run_button_callout": "Nospied \"Palaist\", lai izmēģinātu programmu"
         },
+        "Overworld Move to Sheep2022": {
+          "craft_run_button_callout": "Nospied \"Palaist\", lai izmēģinātu programmu"
+        },
         "Overworld Move to Sheep_2019": {
           "craft_run_button_callout": "Nospied \"Palaist\", lai izmēģinātu programmu"
         },
         "Overworld Move to Sheep_2020": {
           "craft_run_button_callout": "Nospied \"Palaist\", lai izmēģinātu programmu"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "Nospied \"Palaist\", lai izmēģinātu programmu"
+        },
+        "Overworld Move to Sheep_2023": {
+          "craft_run_button_callout": "Nospied \"Palaist\", lai izmēģinātu programmu"
+        },
+        "csc-starquilts-comment_2023": {
+          "New Artist Project_callout1": "Klikšķini uz kategorijām, lai redzētu blokus savā rīklodziņā! Velc blokus uz darbvietu, lai tos pievienotu savai programmai",
+          "New Artist Project_callout2": "Nospied \"Palaist\", lai saglabātu un palaistu programmu",
+          "sign_in_to_save_project": "Vai vēlaties piekļūt savam projektam vēlāk? Piereģistrējies, lai saglabātu šo projektu savā kontā!"
+        },
+        "csc-starquilts-repeat_2023": {
+          "New Artist Project_callout1": "Klikšķini uz kategorijām, lai redzētu blokus savā rīklodziņā! Velc blokus uz darbvietu, lai tos pievienotu savai programmai",
+          "New Artist Project_callout2": "Nospied \"Palaist\", lai saglabātu un palaistu programmu",
+          "sign_in_to_save_project": "Vai vēlaties piekļūt savam projektam vēlāk? Piereģistrējies, lai saglabātu šo projektu savā kontā!"
+        },
+        "csc-starquilts-rhombus-freeplay_2023": {
+          "New Artist Project_callout1": "Klikšķini uz kategorijām, lai redzētu blokus savā rīklodziņā! Velc blokus uz darbvietu, lai tos pievienotu savai programmai",
+          "New Artist Project_callout2": "Nospied \"Palaist\", lai saglabātu un palaistu programmu",
+          "sign_in_to_save_project": "Vai vēlaties piekļūt savam projektam vēlāk? Piereģistrējies, lai saglabātu šo projektu savā kontā!"
+        },
+        "csc-starquilts-row1_2023": {
+          "New Artist Project_callout1": "Klikšķini uz kategorijām, lai redzētu blokus savā rīklodziņā! Velc blokus uz darbvietu, lai tos pievienotu savai programmai",
+          "New Artist Project_callout2": "Nospied \"Palaist\", lai saglabātu un palaistu programmu",
+          "sign_in_to_save_project": "Vai vēlaties piekļūt savam projektam vēlāk? Piereģistrējies, lai saglabātu šo projektu savā kontā!"
+        },
+        "csc-starquilts-row2_2023": {
+          "New Artist Project_callout1": "Klikšķini uz kategorijām, lai redzētu blokus savā rīklodziņā! Velc blokus uz darbvietu, lai tos pievienotu savai programmai",
+          "New Artist Project_callout2": "Nospied \"Palaist\", lai saglabātu un palaistu programmu",
+          "sign_in_to_save_project": "Vai vēlaties piekļūt savam projektam vēlāk? Piereģistrējies, lai saglabātu šo projektu savā kontā!"
+        },
+        "csc-starquilts-row3_2023": {
+          "New Artist Project_callout1": "Klikšķini uz kategorijām, lai redzētu blokus savā rīklodziņā! Velc blokus uz darbvietu, lai tos pievienotu savai programmai",
+          "New Artist Project_callout2": "Nospied \"Palaist\", lai saglabātu un palaistu programmu",
+          "sign_in_to_save_project": "Vai vēlaties piekļūt savam projektam vēlāk? Piereģistrējies, lai saglabātu šo projektu savā kontā!"
+        },
+        "csc-starquilts-row4_2023": {
+          "New Artist Project_callout1": "Klikšķini uz kategorijām, lai redzētu blokus savā rīklodziņā! Velc blokus uz darbvietu, lai tos pievienotu savai programmai",
+          "New Artist Project_callout2": "Nospied \"Palaist\", lai saglabātu un palaistu programmu",
+          "sign_in_to_save_project": "Vai vēlaties piekļūt savam projektam vēlāk? Piereģistrējies, lai saglabātu šo projektu savā kontā!"
+        },
+        "csc-starquilts-row5_2023": {
+          "New Artist Project_callout1": "Klikšķini uz kategorijām, lai redzētu blokus savā rīklodziņā! Velc blokus uz darbvietu, lai tos pievienotu savai programmai",
+          "New Artist Project_callout2": "Nospied \"Palaist\", lai saglabātu un palaistu programmu",
+          "sign_in_to_save_project": "Vai vēlaties piekļūt savam projektam vēlāk? Piereģistrējies, lai saglabātu šo projektu savā kontā!"
+        },
+        "csc_starquilts_freeplay_2023": {
+          "New Artist Project_callout1": "Klikšķini uz kategorijām, lai redzētu blokus savā rīklodziņā! Velc blokus uz darbvietu, lai tos pievienotu savai programmai",
+          "New Artist Project_callout2": "Nospied \"Palaist\", lai saglabātu un palaistu programmu",
+          "sign_in_to_save_project": "Vai vēlaties piekļūt savam projektam vēlāk? Piereģistrējies, lai saglabātu šo projektu savā kontā!"
         },
         "frozen circle function with parameter": {
           "frozen_circle_function_with_parameter_circle": "Izmanto bloku \"zīmē apli\" un maini izmēru."
@@ -149,21 +218,6 @@
         },
         "frozen square snowflake": {
           "replace_questions": "Izmanto izkrītošo izvēlni, lai aizstātu \"???\" ar skaitli"
-        },
-        "Overworld Move to Sheep_2021": {
-          "craft_run_button_callout": "Nospied \"Palaist\", lai izmēģinātu programmu"
-        },
-        "CSD U6 colorLeds intensity_2021": {
-          "CSDU6L10_rainbow": "Pievieno savu kodu šeit"
-        },
-        "CSD U6 light show_2021": {
-          "CSDUDL03P09": "Ko dara šī līnija?"
-        },
-        "CSD U6 - Color LEDs - SB4_2222": {
-          "CSDU6L10_rainbow": "Pievieno savu kodu šeit"
-        },
-        "Overworld Move to Sheep2022": {
-          "craft_run_button_callout": "Nospied \"Palaist\", lai izmēģinātu programmu"
         }
       }
     }

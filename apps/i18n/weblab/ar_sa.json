@@ -1,7 +1,7 @@
 {
   "addCSSButton": "إضافة CSS",
-  "addImageButton": "إضافة صورة",
   "addHTMLButton": "إضافة HTML",
+  "addImageButton": "إضافة صورة",
   "closeFullscreenPreview": "إغلاق معاينة ملء الشاشة",
   "currentProjectCapacity": "تم استخدام {currentMegabytes}ميغابايت من {totalMegabytes}ميغابايت",
   "disallowedHtml": "يحتوي الملف \"{filename}\" على عناصر HTML غير المسموح بها: `{disallowedTags}`. ستتم إزالتها عند إغلاق مربع الحوار هذا.",
@@ -14,8 +14,8 @@
   "reset": "إعادة تعيين مختبر الويب",
   "resetComplete": "تمت إعادة تعيين مختبر الويب",
   "resetFailure": "فشلت إعادة تعيين Web Lab: {message}.",
-  "toggleInspectorOn": "المفتش: إيقاف التشغيل",
   "toggleInspectorOff": "المفتش: قيد التشغيل",
+  "toggleInspectorOn": "المفتش: إيقاف التشغيل",
   "troubleshootingSupport": "يرجى الاطلاع على مقالة الدعم الخاصة بنا [\"استكشاف مشكلات مختبر الويب وإصلاحها\"]({url}) لمزيد من المعلومات.",
   "uploadError": "خطأ في التحميل"
 }

@@ -26,6 +26,7 @@ export const UnconnectedContainedLevelResetButton = ({
     firehoseClient.putRecord({
       study: 'reset-predict-level',
       event: 'level-reset',
+      user_id: userId,
       script_id: serverScriptId,
       level_id: serverLevelId,
     });

@@ -90,11 +90,6 @@ const ATTENDED_CSF_COURSES_OPTIONS = {
   'Nope, I have never attended a CS Fundamentals workshop.': 'No',
 };
 
-const CSF_HAS_CURIICULUM_COPY_OPTIONS = {
-  'Yes, and I will bring it to the workshop.': 'Yes',
-  'Nope. I will need a new copy provided. Thanks!': 'No',
-};
-
 const REPLACE_EXISTING_OPTIONS = [
   'Yes, this course will replace an existing computer science course',
   'No, this course will be added to the schedule in addition to an existing computer science course',
@@ -104,6 +99,7 @@ const REPLACE_EXISTING_OPTIONS = [
 
 export default class EnrollForm extends React.Component {
   static propTypes = {
+    user_id: PropTypes.number.isRequired,
     workshop_id: PropTypes.number.isRequired,
     workshop_course: PropTypes.string,
     first_name: PropTypes.string,
@@ -259,6 +255,7 @@ export default class EnrollForm extends React.Component {
       };
     }
     const params = {
+      user_id: this.props.user_id,
       first_name: this.state.first_name,
       last_name: this.state.last_name,
       email: this.state.email,
@@ -273,10 +270,6 @@ export default class EnrollForm extends React.Component {
       explain_csf_course_other: this.state.explain_csf_course_other,
       attended_csf_intro_workshop:
         ATTENDED_CSF_COURSES_OPTIONS[this.state.attended_csf_intro_workshop],
-      csf_has_physical_curriculum_guide:
-        CSF_HAS_CURIICULUM_COPY_OPTIONS[
-          this.state.csf_has_physical_curriculum_guide
-        ],
       previous_courses: this.state.previous_courses,
       replace_existing: this.state.replace_existing,
       csf_intro_intent: this.state.csf_intro_intent,
@@ -453,7 +446,6 @@ export default class EnrollForm extends React.Component {
             required={true}
             onChange={this.handleChange}
             defaultValue={this.props.email}
-            readOnly={!!this.props.email}
             title={
               this.props.email ? 'Email can be changed in account settings' : ''
             }
@@ -645,26 +637,6 @@ export default class EnrollForm extends React.Component {
                 type="radio"
                 required={true}
               />
-              <ButtonList
-                id="csf_has_physical_curriculum_guide"
-                key="csf_has_physical_curriculum_guide"
-                answers={Object.keys(CSF_HAS_CURIICULUM_COPY_OPTIONS)}
-                groupName="csf_has_physical_curriculum_guide"
-                label="Do you have a physical copy of the 2019-2020 CS Fundamentals Curriculum Guide that you can bring to the workshop?"
-                onChange={this.handleChange}
-                selectedItems={this.state.csf_has_physical_curriculum_guide}
-                validationState={
-                  Object.prototype.hasOwnProperty.call(
-                    this.state.errors,
-                    'csf_has_physical_curriculum_guide'
-                  )
-                    ? VALIDATION_STATE_ERROR
-                    : null
-                }
-                errorText={this.state.errors.csf_has_physical_curriculum_guide}
-                type="radio"
-                required={true}
-              />
             </FormGroup>
           )}
 
@@ -852,10 +824,7 @@ export default class EnrollForm extends React.Component {
       ) {
         requiredFields.push('csf_intro_intent');
       } else if (this.props.workshop_subject === DEEP_DIVE) {
-        requiredFields.push(
-          'attended_csf_intro_workshop',
-          'csf_has_physical_curriculum_guide'
-        );
+        requiredFields.push('attended_csf_intro_workshop');
       }
     }
 

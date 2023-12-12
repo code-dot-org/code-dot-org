@@ -22,7 +22,7 @@ class FeaturedProjectsController < ApplicationController
   # with false reports of abuse on featured projects, this
   # sets their abuse score such that the project needs to
   # be reported many times before being blocked.
-  def buffer_abuse_score(score=-50)
+  def buffer_abuse_score(score = -50)
     channels_path = "/v3/channels/#{params[:project_id]}/buffer_abuse_score"
     assets_path = "/v3/assets/#{params[:project_id]}/"
     files_path = "/v3/files/#{params[:project_id]}/"

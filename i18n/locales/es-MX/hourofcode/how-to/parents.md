@@ -29,8 +29,8 @@ Hay innumerables [actividades de la Hora del Código](https://hourofcode.com/us/
 Todas nuestras actividades integran la resolución de problemas y el pensamiento crítico con diversión y creatividad, pero estas son algunas de las favoritas de los estudiantes:
 
 - Para el niño al que le encanta jugar: [Minecraft](https://code.org/minecraft) o [Fiesta de baile](https://code.org/dance)
-- Para los niños y niñas a los que les encanta Disney: [Star Wars](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/lessons/1/levels/1) o [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
-- Para el niño al que le encanta aprender: [IA para océanos](https://code.org/oceans) o [Hacer música con Scratch ](https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg)
+- Para los niños que les encanta Disney: [Star Wars](https://code.org/starwars), [Frozen](https://studio.code.org/s/frozen/lessons/1/levels/1), o [Moana](https://partners.disney.com/hour-of-code?cds&cmp=vanity%7Cnatural%7Cus%7Cmoanahoc%7C)
+- Para el niño al que le encanta aprender: [IA para Océanos](https://code.org/oceans) o [Hacer Música con Scratch ](https://scratch.mit.edu/projects/editor/?tutorial=music&utm_source=codeorg)
 
 <h3>¿Poca tecnología o sin tecnología?</h3>
 
@@ -48,7 +48,7 @@ Ahora que tienes algunos tutoriales en mente, puede ser útil probar estas activ
 
 <h3>¿Más de un niño en casa?</h3>
 
-Considera proporcionar audífonos a cada uno de tus niños si van a trabajar en dispositivos separados. De esa manera, podrán realizar actividades con sonido sin distraerse entre sí.
+Considera proporcionar audífonos a cada uno de los niños si van a trabajar en dispositivos separados. De esa manera, podrán realizar actividades con sonido sin distraerse unos a otros.
 
 Si solo usarás un dispositivo, o simplemente deseas que tu Hora del Código sea más interactiva, prueba la [programación en pareja](https://www.youtube.com/watch?v=vgkahOzFH2Q). La programación en pareja anima a los niños a trabajar juntos. Cuando se asocian, se ayudan mutuamente a resolver problemas. Además verán que las ciencias de la computación son una actividad social y colaborativa.
 
@@ -73,7 +73,7 @@ Está bien si tanto tú como tu hijo son nuevos en las ciencias de la computaci�
 
 <h3>¿Tienes niñas en casa?</h3>
 
-<a href="https://code.org/girls">Estas son nuestras recomendaciones</a> para ayudar a despertar tu interés en las ciencias de la computación. **Consejo profesional**: ¡Puedes comenzar simplemente diciéndoles que serían excelentes en eso!
+<a href="https://code.org/girls">Estas son nuestras recomendaciones</a> para ayudar a despertar su interés en las ciencias de la computación. **Consejo profesional**: ¡Puedes comenzar simplemente diciéndoles que serían excelentes en eso!
 
 <h3>Resuelvan problemas juntos</h3>
 
@@ -86,7 +86,7 @@ La ciencia de la computación tiene que ver con aprender a "depurar" situaciones
 La Hora del Código es un evento mundial y tu familia merece celebrarlo. Estas son algunas formas de hacer que tu Hora del Código sea muy especial:
 
 - Imprime [Certificados de la Hora del Código](https://staging.code.org/certificates) que otorgues cuando tu hijo complete su actividad
-- [Imprime stickers](https://staging.hourofcode.com/us/promote/resources#stickers) en casa o [cómpralas en línea](https://store.code.org/), a modo de sorpresa adicional.
+- [Imprime stickers](https://staging.hourofcode.com/us/promote/resources#stickers) en casa o [cómpralas en línea](https://store.code.org/), como sorpresa añadida.
 - Comparte fotos y videos de tu Hora del Código en casa en las redes sociales. Utiliza el hashtag [#HoraDelCódigo](https://twitter.com/hashtag/hourofcode) y etiqueta a [@codeorg](https://twitter.com/codeorg) para que también podamos destacar tu éxito.
 
 [![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})

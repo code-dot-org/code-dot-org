@@ -82,6 +82,7 @@ el:
       Challenges: Προκλήσεις
       Change: Αλλαγή
       Check Your Work: Ελέγξτε Την Εργασία Σας
+      Check for Understanding: Ελέγξτε για κατανόηση
       Check-In Survey: Έρευνα Εισόδου
       Checking for a Winner: Ελέγχοντας για ένα Νικητή
       'Choice Levels: Customize Your App': 'Επίπεδα Επιλογών: Προσαρμόστε την Εφαρμογή Σας'
@@ -205,12 +206,14 @@ el:
       Input Examples: Εισάγετε Παραδείγματα
       Input with If-Else: Εισάγετε με Αν-Διαφορετικά
       InspirationalArtwork: InspirationalArtwork
+      Intro Video: Εισαγωγικό Βίντεο
       Intro to Flyer Game: Εισαγωγή στο Παιχνίδι δημιουργίας Διαφημιστικού Εντύπου
       Intro to For Loops: Εισαγωγή σε Για Βρόχους
       Intro to Side Scrollers: Εισαγωγή σε Side Scrollers
       Intro to Sprites: Εισαγωγή στα μοτίβα
       Intro to Variables: Εισαγωγή σε Μεταβλητές
       Introducing Sprite Lab: 'Βίντεο: Εισαγωγή στο Εργαστήρι Χαρακτήρων'
+      Introduction: Εισαγωγή
       Introduction to Arrays: Εισαγωγή στις συστοιχίες
       Introduction to Game Lab: Εισαγωγή στο Εργαστήριο Παιχνιδιού
       Isaac's Survey Data: Δεδομένα Εκτίμησης του Ισαάκ
@@ -409,6 +412,7 @@ el:
       UI Element Properties: Ιδιότητες Στοιχείου Διεπαφής Χρήστη
       Ultimate Shoe Recommender: Υπέρτατο Σύστημα Πρότασης Παπουτσιών
       Unit 5 Lesson 1 Overview: Σύνοψη Μαθήματος 1 Ενότητας 5
+      Unplugged Activity: Αποσυνδεδεμένη Δραστηριότητα
       Upload Your Images: Μεταφορτώστε Τις Εικόνες Σας
       User Interface: Διεπαφή Χρήστη
       Using Getters and Setters: Χρήση βελτιωτικών και ρυθμιστικών
@@ -423,14 +427,14 @@ el:
       Velocity and the Counter Pattern: Ταχύτητα και το μοτίβο αντίθετης φοράς
       Video: Βίντεο
       Video - Encryption and Public Keys: Βίντεο - Κρυπτογράφηση και Δημόσια Κλειδιά
-      'Video - Maze Intro: Programming with Blocks': 'Βίντεο - Εισαγωγή στον Λαβύρινθο: Προγραμματισμός με Κύβους'
+      'Video - Maze Intro: Programming with Blocks': 'Βίντεο - Εισαγωγή στον Λαβύρινθο: Προγραμματισμός με Μπλοκ'
       'Video:  Debugging with the Step Button': 'Βίντεο: Αποσφαλμάτωση με το Κουμπί Βήμα'
       'Video:  Minecraft - The Agent': 'Βίντεο: Ναρκαλιευτής - Ο πράκτορας λογισμικού'
       'Video:  Text  and Prompts': 'Βίντεο: Κείμενο και Προτροπές'
       'Video: "If/Else"': 'Βίντεο: "Αν/Διαφορετικά"'
       'Video: AI: What is Machine Learning?': 'Βίντεο: Τεχνητή Νοημοσύνη: Τι είναι Μηχανική Μάθηση;'
       'Video: Amazon and Data': 'Βίντεο: Amazon και Δεδομένα'
-      'Video: Artist Intro with JR Hildebrand': 'Βίντεο: Εισαγωγή Καλλιτέχνη με τον JR Hildebrand'
+      'Video: Artist Intro with JR Hildebrand': 'Βίντεο: Εισαγωγή στον Καλλιτέχνη με τον JR Hildebrand'
       'Video: Artist Intro with JR Hildebrande': 'Βίντεο: Εισαγωγή Καλλιτέχνη με τον JR Hildebrand'
       'Video: Circuits and Logic': 'Βίντεο: Κυκλώματα και Λογική'
       'Video: Code Your Own Flappy Game': 'Βίντεο: Προγραμματίστε με κώδικα το δικό σας Flappy παιχνίδι'
@@ -448,7 +452,7 @@ el:
       'Video: Drawing in Game Lab - Part 1': 'Βίντεο: Σχεδίαση στο Εργαστήριο Παιχνιδιού-Μέρος 1'
       'Video: Events': 'Βίντεο: Γεγονότα'
       'Video: Follow The Digital Trail': 'Βίντεο: Ακολουθήστε το Ψηφιακό Ίχνος'
-      'Video: Getting Loopy': 'Βίντεο: Εμφωλευμένοι Βρόχοι'
+      'Video: Getting Loopy': 'Βίντεο: Εξερευνώντας τους βρόγχους'
       'Video: Happy Maps - Unplugged Activity': 'Βίντεο: Χαρούμενοι Χάρτες - Δραστηριότητα εκτός Διαδικτύου'
       'Video: Harvesting with Conditionals': 'Βίντεο: Σοδειά με "Υπό Συνθήκες"'
       'Video: How Search Works': 'Βίντεο: Πώς Λειτουργεί η Αναζήτηση'
@@ -489,10 +493,10 @@ el:
       'Video: Programming with Rey and BB-8': 'Βίντεο: Προγραμματίζοντας με τον Ρέι και BB-8'
       'Video: Properties': 'Βίντεο: Ιδιότητες'
       'Video: Publishing Your Website': 'Βίντεο: Δημοσιοποιώντας Τον Ιστότοπό Σας'
-      'Video: Repeat Blocks': 'Βίντεο: Κύβοι Επανάληψης'
-      'Video: Repeat Blocks with BB-8': 'Βίντεο: Κύβοι Επανάληψης με BB-8'
-      'Video: Repeat Blocks with the Artist': 'Βίντεο: Κύβοι Επανάληψης με τον Καλλιτέχνη'
-      'Video: Repeat Until Blocks': 'Βίντεο: Κύβοι Επανάληψης Έως'
+      'Video: Repeat Blocks': 'Βίντεο: Επανάλαβε μπλοκ'
+      'Video: Repeat Blocks with BB-8': 'Βίντεο: Επανάλαβε μπλοκ με τον BB-8'
+      'Video: Repeat Blocks with the Artist': 'Βίντεο: Επανάλαβε μπλοκ με τον Καλλιτέχνη'
+      'Video: Repeat Until Blocks': 'Βίντεο: Επανάλαβε Έως μπλοκ'
       'Video: Repeat Until Statements': 'Βίντεο: Εντολές Επανάλαβε Μέχρι'
       'Video: Sprites in Action': 'Βίντεο: Χαρακτήρες σε Δράση'
       'Video: Star Wars Project': 'Βίντεο: Έργο Star Wars (Πόλεμος των Άστρων)'

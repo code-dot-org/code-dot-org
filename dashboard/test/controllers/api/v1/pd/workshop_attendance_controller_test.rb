@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::IntegrationTest
+class Api::V1::Pd::WorkshopAttendanceControllerTest < ActionDispatch::IntegrationTest
   freeze_time
 
   self.use_transactional_test_case = true
@@ -16,7 +16,6 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
     @enrollment = Pd::Enrollment.find_by!(workshop: @workshop, user: @teacher)
     @session = @workshop.sessions.first
 
-    # TODO: remove this test when workshop_organizer is deprecated
     @organizer_workshop = create :workshop, organizer: @workshop_organizer, facilitators: [@facilitator], num_sessions: 1
     @organizer_workshop.start!
 
@@ -73,7 +72,6 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
     assert_manage_response :forbidden, workshop: @other_workshop, user: @other_teacher
   end
 
-  # TODO: remove this test when workshop_organizer is deprecated
   test 'workshop organizers can manage attendance for their workshops only' do
     sign_in @workshop_organizer
     assert_read_response :success, workshop: @organizer_workshop
@@ -118,7 +116,6 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
     assert_manage_response :forbidden
   end
 
-  # TODO: remove this test when workshop_organizer is deprecated
   test 'organizers can read, but cannot manage, attendance for ended workshops' do
     @organizer_workshop.end!
     sign_in @workshop_organizer
@@ -334,24 +331,5 @@ class Api::V1::Pd::WorkshopAttendanceControllerTest < ::ActionDispatch::Integrat
     assert attendance
     assert_equal 1, attendance.length
     attendance.first
-  end
-
-  def params(attended = true)
-    attendances = attended ? [{id: @teacher.id}] : []
-    {
-      session_attendances: [
-        session_id: @session.id,
-        attendances: attendances
-      ]
-    }
-  end
-
-  def create_user_params(enrolled_teacher_email)
-    {
-      session_attendances: [
-        session_id: @session.id,
-        attendances: [{email: enrolled_teacher_email}]
-      ]
-    }
   end
 end

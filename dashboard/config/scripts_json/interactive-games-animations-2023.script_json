@@ -5,6 +5,7 @@
     "login_required": true,
     "properties": {
       "curriculum_umbrella": "CSD",
+      "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_course": true,
@@ -18,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "interactive-games-animations",
-    "serialized_at": "2023-05-17 16:30:20 UTC",
+    "serialized_at": "2023-09-14 22:04:35 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -4388,7 +4389,13 @@
       "position": 6,
       "properties": {
         "description": "The second prediction level program has one small difference that will make it run a little differently. \n\n**Discuss:** Students should consider and discuss:\n* What will this program do? \n\n**Discussion Goal:** Notice that the blue background is never visible because it is immediately drawn over by the red background. Also, there's only ever one yellow dot visible since as the draw loop runs over and over it is placing down new backgrounds.\n",
-        "progression_name": "Predict"
+        "progression_name": "Predict",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Inside versus outside the draw loop**\n\nThis is a good time to make sure students understand that code **outside** the draw loop is used to **set up the program**. It is for how you want your program to start. Code **inside** the draw loop is for things that are **changing as the program is running**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "e5b871f7-789f-45a5-adc9-f174ced5c565",
@@ -16619,7 +16626,7 @@
     },
     {
       "name": "Drawing Shapes",
-      "url": "https://docs.google.com/document/d/1B1fjF39Xr1KKDILVzcXqvEpi1ri3MiDkkVLIMZquh_8/view",
+      "url": "https://docs.google.com/document/d/1XuLY5osr9sZMfLAWMkqi8C7IdG_Uu3PshqKeSIhtKno/edit?usp=sharing",
       "key": "drawing_shapes",
       "properties": {
         "audience": "Verified Teacher",
@@ -16829,7 +16836,7 @@
     },
     {
       "name": "Interactive Card",
-      "url": "https://docs.google.com/document/d/1sAILZnk26g21FluRhU0pWqVDOMBZVrNAko1mSVeuKHM/view",
+      "url": "https://docs.google.com/document/d/10XQ5HTNnp2OlJm0w3cF9urOGdPUDTbdK2I4VYadeomU/view",
       "key": "interactive_card",
       "properties": {
         "audience": "Student",
@@ -19133,7 +19140,7 @@
     {
       "key": "3b0a3692-f343-4885-b30f-cff32675efed",
       "properties": {
-        "description": "Apply variables, shapes, and ranomNumber concepts to create a program."
+        "description": "Apply variables, shapes, and randomNumber concepts to create a program."
       },
       "seeding_key": {
         "lesson.key": "Mini-Project - Robot Faces",
@@ -20456,6 +20463,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

@@ -64,6 +64,8 @@ uz:
           student_description: Disney Infinity qahramonlari ishtirokidagi hikoya yoki o‘yin yaratish uchun Play Lab-dan foydalaning.
         netsim:
           title: Internet simulyator
+        pixelation:
+          title: Piksellash
         20-hour:
           title: Accelerated Intro to CS Course
           description: Ushbu 20 soatlik kurs 2-4 kurslarda o‘tiladigan asosiy kompyuter fanlari va dasturlash tushunchalarini qamrab oladi. Kurs 10-18 yoshlilar uchun mo'ljallangan. To‘liq tajriba uchun 2-4 kurslarni o‘ting!
@@ -77,7 +79,7 @@ uz:
           description_short: Hodisalar
           student_description: Hodisalar
         flappy:
-          title: Flappy o‘yinini yarating
+          title: Flappy o‘yinini dasturlash
           description: O‘z o‘yiningizni 10 daqiqa ichida yaratishni xohlaysizmi? Flappy Code darsimizni sinab ko‘ring!
           description_short: O‘zingizning Flappy o‘yiningizni yarating!
           student_description: O‘z o‘yiningizni 10 daqiqa ichida yaratishni xohlaysizmi? Flappy Code darsimizni sinab ko‘ring!
@@ -141,7 +143,7 @@ uz:
           description_short: Droidlarni dasturlashni o‘rganing va olis-olis galaktikada o‘z Star Wars o‘yiningizni yarating.
           student_description: Droidlarni dasturlashni o‘rganing va olis-olis galaktikada o‘z Star Wars o‘yiningizni yarating.
         mc:
-          title: Maynkraft Dasturlash soati
+          title: Minecraft Sarguzashtchi
           description: Stiv va Aleks Maynkraft olamida sayohat qilishlari uchun kod bloklaridan foydalaning.
           description_short: Minecraft dunyosini kod orqali o'rganing.
           student_description: Stiv va Aleks Maynkraft olamida sayohat qilishlari uchun kod bloklaridan foydalaning.
@@ -234,6 +236,8 @@ uz:
               display_name: Kontent
             practice:
               display_name: Teaching Practices
+        CSDU2-Draft:
+          description_short: Web dasturlash
         CSDU5-Draft:
           description_short: Maʼlumotlar
         CSF_Secret_Sample_Story:
@@ -354,14 +358,19 @@ uz:
           description: Minecraft-ning o'z versiyangizda hayvonlarni va boshqa Minecraft jonzotlarini dasturlab yarating.
           student_description: Minecraft-ning o'z versiyangizda hayvonlarni va boshqa Minecraft jonzotlarini dasturlab yarating.
         coursea-draft:
+          title: 'Kompyuter fanlari asoslari: A Kursi'
           description_short: An introduction to computer science for early readers.
         courseb-draft:
+          title: 'Kompyuter fanlari asoslari: B Kursi'
           description_short: An introduction to computer science for early readers.
         coursec-draft:
+          title: 'Kompyuter fanlari asoslari: C Kursi'
           description_short: Informatika asoslarini o‘rganing va o‘z san'at asari, hikoya va o‘yinlaringizni yarating.
         coursed-draft:
+          title: 'Kompyuter fanlari asoslari: D Kursi'
           description_short: Informatika asoslarini o‘rganing va o‘z san'at asari, hikoya va o‘yinlaringizni yarating.
         coursee-draft:
+          title: 'Kompyuter fanlari asoslari: E Kursi'
           description_short: Informatika asoslarini o‘rganing va o‘z san'at asari, hikoya va o‘yinlaringizni yarating.
           lesson_groups:
             content:
@@ -371,6 +380,7 @@ uz:
             extra_course_content:
               display_name: Extra Course Content
         coursef-draft:
+          title: 'Kompyuter fanlari asoslari: F Kursi'
           description_short: Informatika asoslarini o‘rganing va o‘z san'at asari, hikoya va o‘yinlaringizni yarating.
           lesson_groups:
             content:
@@ -452,6 +462,8 @@ uz:
           description_audience: Middle and High School Students
           description: This workshop is designed to give students a basic introduction to app lab in 2 hours. Students should be able to come in with different backgrounds in computer science and have fun creating something.
           student_description: This workshop is designed to give students a basic introduction to app lab in 2 hours. Students should be able to come in with different backgrounds in computer science and have fun creating something.
+        coursed-ramp:
+          title: 'Kompyuter fanlari asoslari: D Kursi'
         workshop-maker:
           title: Maker Toolkit Workshop
           description_audience: Teachers attending an in-person Maker Toolkit Workshop
@@ -521,6 +533,7 @@ uz:
           title: Public Key Cryptography Widgets
         csd2-old:
           title: CSD Unit 2 (DEPRECATED)
+          description_short: Web dasturlash
         coursea-2017:
           title: Kurs A
           assignment_family_title: Kurs A
@@ -2500,6 +2513,7 @@ uz:
               display_name: 'Chapter 2: Styling and CSS'
           student_description: O‘zingizning veb-sahifalaringizda kontentni yaratish va almashishni o‘rganasiz. Dunyo bilan qanday tarkibni baham ko‘rishni xohlaganingizdan so‘ng, siz HTML va CSSdan foydalangan holda sahifalaringizni qanday tuzish va stil berishni o‘rganasiz. Shuningdek, siz debug va izoh berish kabi qimmatli dasturiy ko‘nikmalar bilan ishlaysiz. Bo‘limning oxiriga kelib siz Internetda nashr etishingiz mumkin bo‘lgan shaxsiy veb-saytingizga ega bo‘lasiz.
         csp5-virtual:
+          title: App Labda hodisalarga asoslangan holda dasturlash
           description: O‘zi ishlaydigan ushbu modul kompyuter dasturlashning asosiy tushunchalarini taqdim etadi, bu esa boy, interaktiv dasturlarni yaratish qobiliyatini ochib beradi. Ushbu bo‘lim JavaScriptni dasturlash tili sifatida, App Lab dasturlarni yaratish uchun dasturlash muhiti sifatida ishlatadi, ammo ushbu darslarda o‘rganilgan tushunchalar barcha dasturlash tillari va vositalarini qamrab oladi.
           description_short: Keng qamrovli, interaktiv dasturlar yaratish orqali JavaScriptda kompyuter dasturlashning asosiy tushunchalarini o‘rganasiz.
           student_description: O‘zi ishlaydigan ushbu modul kompyuter dasturlashning asosiy tushunchalarini taqdim etadi, bu esa boy, interaktiv dasturlarni yaratish qobiliyatini ochib beradi. Ushbu bo‘lim JavaScriptni dasturlash tili sifatida, App Lab dasturlarni yaratish uchun dasturlash muhiti sifatida ishlatadi, ammo ushbu darslarda o‘rganilgan tushunchalar barcha dasturlash tillari va vositalarini qamrab oladi.
@@ -2548,6 +2562,7 @@ uz:
             cs_lg:
               display_name: LG GOOD
         csd3-virtual:
+          title: Game Lab (O'yin laboratoriyasi)ga erkin grafik asosida kirish
           description: Game Labda animatsiyalar, interaktiv san'at va o‘yinlarni dasturlashtirasiz. Oddiy shakllardan boshlang va kompyuter olimlari har kuni foydalanadigan dizayn dasturlari bilan bir xil dasturiy tushunchalardan foydalanib, spraytga asoslangan yanada murakkab animatsiyalar va o‘yinlarni yarating. Yakuniy loyihada siz shaxsiylashtirilgan, interaktiv dasturni ishlab chiqasiz.
           description_short: " Learn to program animations, interactive art, and games in Game Lab."
           lesson_groups:
@@ -2583,6 +2598,8 @@ uz:
         ml-playground:
           description: CSD uchun ML/AI birligini rivojlantirish uchun aqliy hujum/o‘yin maydonchasi. Kelgusi savollarni Dan Shnayderdan so‘rang.
           student_description: CSD uchun ML/AI birligini rivojlantirish uchun aqliy hujum/o‘yin maydonchasi. Kelgusi savollarni Dan Shnayderdan so‘rang.
+        outbreak:
+          title: Yoyilish Simulyatori
         apps-for-good:
           title: Foydali ilovalar
         2021drafting:
@@ -2592,6 +2609,8 @@ uz:
             lessonGroup-3:
               display_name: O‘zgaruvchilar
               description: O‘zgaruvchilarda qiymatlarni saqlang va keyinroq ularni o‘zingizning dasturingizda oling. O‘zgaruvchanlarda saqlanadigan qiymatlarni o‘zgartiring, qiziqarli interaktiv loyihalarni yarating!
+            outbreak:
+              display_name: Yoyilish Simulyatori
             contagion:
               display_name: Kasallik yuqishi
             debugging:
@@ -3038,6 +3057,7 @@ uz:
           description: Welcome to the Code.org CS Principles Post-Course Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
           student_description: Welcome to the Code.org CS Principles Post-Course Survey.  This survey takes about 15 minutes to complete.  Your responses are private and anonymous -- your teacher can see anonymous aggregate results for the whole class.  The results are vital for your teacher and for Code.org to sustain and improve the course.  Thanks for your time and consideration.
         aiml-2021:
+          title: SI va Mashinaviy o'rganish Moduli
           lesson_groups:
             lessonGroup-4:
               display_name: Survey
@@ -3142,6 +3162,8 @@ uz:
               display_name: Darslar
             lessonGroup-3:
               display_name: Loyiha
+        hello-world-animals:
+          title: 'Salom dunyo: Hayvonlar'
         csa4-exemplars:
           lesson_groups:
             lesson group:
@@ -3152,6 +3174,10 @@ uz:
               display_name: Kontent
             lessonGroup-2:
               display_name: Kontent
+        dance-unplugged:
+          title: Dasturlash soati - Raqs kechasi - Kompyutersiz
+        poem-art:
+          title: She'r San'ati
         spelling-bee:
           title: Bilimdon Asalari
         csa5-exemplars:
@@ -3166,6 +3192,12 @@ uz:
               display_name: Kontent
         ai-ethics-2021:
           description_audience: 6-12 sinflar
+        poem-art-2021:
+          title: She'r San'ati
+        poetry-2021:
+          title: She'riyat bilan dasturlash
+        hello-world-animals-2021:
+          title: 'Salom dunyo: Hayvonlar'
         explore-data-1-2021:
           title: Ma'lumotlar Vizualizatsiyasi
         csa6-exemplars:
@@ -3522,6 +3554,8 @@ uz:
           title: CS Discoveries Post-Course Survey
         csp-post-survey-2022:
           title: CS Principles Post-Course Survey
+        aiml-2022:
+          title: SI va Mashinaviy o'rganish Moduli
         self-paced-pl-csd1-2022:
           lesson_groups:
             lessonGroup-2:
@@ -3637,6 +3671,8 @@ uz:
               display_name: 'Chapter 1: The Problem Solving Process'
             lessonGroup-3:
               display_name: 'Chapter 2: Computers and Problem Solving'
+            lessonGroup-5:
+              display_name: Survey
         csd2-2023:
           student_description: 'Unit 2 bo‘limida siz o‘zingizning veb-sahifalaringizda kontentni yaratish va almashishni o‘rganasiz. Dunyo bilan qanday tarkibni baham ko‘rishni xohlaganingizdan so‘ng, siz HTML va CSSdan foydalangan holda sahifalaringizni qanday tuzish va stil berishni o‘rganasiz. Shuningdek, siz debug va izoh berish kabi qimmatli dasturiy ko‘nikmalar bilan ishlaysiz. '
         csd4-2023:
@@ -3742,12 +3778,15 @@ uz:
           lessons:
             lesson-5:
               name: Baholash
+            lesson-6:
+              name: 1-dars
         csp-playground:
           title: CSP Playground
         devices-2022:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Chapter 2: Building Physical Prototypes'
+          title: Vositalar (Circuit Playground) yordamida ilovalarni yaratish
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
@@ -3760,6 +3799,8 @@ uz:
               display_name: Intro to App Lab
             lessonGroup-3:
               display_name: Inputs and Outputs
+        testing-focus-on-creativity2:
+          title: Web dasturlash
         pre-express-2023:
           lesson_groups:
             csf_sequencing:
@@ -3929,6 +3970,8 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Chapter 1: The Problem Solving Process'
+            lessonGroup-4:
+              display_name: Survey
         focus-on-creativity2-2023:
           student_description: 'Unit 2 bo‘limida siz o‘zingizning veb-sahifalaringizda kontentni yaratish va almashishni o‘rganasiz. Dunyo bilan qanday tarkibni baham ko‘rishni xohlaganingizdan so‘ng, siz HTML va CSSdan foydalangan holda sahifalaringizni qanday tuzish va stil berishni o‘rganasiz. Shuningdek, siz debug va izoh berish kabi qimmatli dasturiy ko‘nikmalar bilan ishlaysiz. '
         focus-on-creativity3-2023:
@@ -3949,6 +3992,8 @@ uz:
               display_name: 'Chapter 1: The Problem Solving Process'
             lessonGroup-3:
               display_name: 'Chapter 2: Computers and Problem Solving'
+            lessonGroup-5:
+              display_name: Survey
         focus-on-hardware2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -3966,6 +4011,8 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Chapter 1: The Problem Solving Process'
+            lessonGroup-4:
+              display_name: Survey
         focus-on-data2:
           lesson_groups:
             lessonGroup-2:
@@ -3988,6 +4035,8 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Chapter 1: The Problem Solving Process'
+            lessonGroup-4:
+              display_name: Survey
         focus-on-design-with-purpose2-2023:
           student_description: 'Unit 2 bo‘limida siz o‘zingizning veb-sahifalaringizda kontentni yaratish va almashishni o‘rganasiz. Dunyo bilan qanday tarkibni baham ko‘rishni xohlaganingizdan so‘ng, siz HTML va CSSdan foydalangan holda sahifalaringizni qanday tuzish va stil berishni o‘rganasiz. Shuningdek, siz debug va izoh berish kabi qimmatli dasturiy ko‘nikmalar bilan ishlaysiz. '
         focus-on-design-with-purpose3-2023:
@@ -4006,6 +4055,8 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Chapter 1: The Problem Solving Process'
+            lessonGroup-4:
+              display_name: Survey
         focus-on-coding2-2023:
           student_description: 'Unit 2 bo‘limida siz o‘zingizning veb-sahifalaringizda kontentni yaratish va almashishni o‘rganasiz. Dunyo bilan qanday tarkibni baham ko‘rishni xohlaganingizdan so‘ng, siz HTML va CSSdan foydalangan holda sahifalaringizni qanday tuzish va stil berishni o‘rganasiz. Shuningdek, siz debug va izoh berish kabi qimmatli dasturiy ko‘nikmalar bilan ishlaysiz. '
         focus-on-coding3-2023:
@@ -4024,6 +4075,8 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Chapter 1: The Problem Solving Process'
+            lessonGroup-4:
+              display_name: Survey
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4171,3 +4224,266 @@ uz:
           lesson_groups:
             lessonGroup-3:
               display_name: Sinflar
+        csa-frq-practice-2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Sinflar
+        csa-frq-practice-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Sinflar
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Maʼlumotlar
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Sinflar
+        csa-frq-practice-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Sinflar
+        csa-frq-practice-pre2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Sinflar
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Raqamli Fuqarolik
+            lessonGroup-3:
+              display_name: Sequencing
+            lessonGroup-4:
+              display_name: Sikllar
+            lessonGroup-5:
+              display_name: Kompyuterlar ta'siri
+          description_audience: 'Yosh: 4-7'
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Maʼlumotlar
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Raqamli Fuqarolik
+            lessonGroup-3:
+              display_name: Sequencing
+            lessonGroup-4:
+              display_name: Sikllar
+            lessonGroup-5:
+              display_name: Kompyuterlar ta'siri
+            lessonGroup-6:
+              display_name: Maʼlumotlar
+          description_audience: 'Yosh: 4-7'
+          description_short: Maktabgacha yoshdagilarni kompyuter fanlari bilan tanishtirish
+        nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: Maʼlumotlar
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Raqamli Fuqarolik
+            lessonGroup-3:
+              display_name: Sequencing
+            lessonGroup-4:
+              display_name: Sikllar
+            lessonGroup-5:
+              display_name: Kompyuterlar ta'siri
+            lessonGroup-6:
+              display_name: Hodisalar
+            lessonGroup-7:
+              display_name: End of Course Project
+            lessonGroup-8:
+              display_name: Maʼlumotlar
+          description_audience: 'Yosh: 5-8'
+          description_short: Maktabgacha yoshdagi o‘quvchilar uchun kompyuter fanlariga kirish. (A kursiga o‘xshash, ammo tushunchalar chuqurroq o‘rganilgan).
+        nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: Hisoblash tizimlari
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Raqamli Fuqarolik
+            lessonGroup-3:
+              display_name: Sequencing
+            lessonGroup-4:
+              display_name: Sikllar
+            lessonGroup-5:
+              display_name: Hodisalar
+            lessonGroup-6:
+              display_name: Maʼlumotlar
+            lessonGroup-8:
+              display_name: Hisoblash tizimlari
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Raqamli Fuqarolik
+            lessonGroup-3:
+              display_name: Sequencing
+            lessonGroup-4:
+              display_name: Kompyuterlar ta'siri
+            lessonGroup-6:
+              display_name: Sikllar
+            lessonGroup-7:
+              display_name: Maʼlumotlar
+            lessonGroup-8:
+              display_name: End of Course Project
+          description_audience: 'Yosh: 7-11'
+          description_short: Learn about conditional statements. Create your own art, games, and even a dance party.
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ichma-ich sikllar
+            lessonGroup-4:
+              display_name: Funksiyalar
+            lessonGroup-6:
+              display_name: End of Course Project
+          description_audience: 'Yosh: 8-12'
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Spraytlar
+          description_audience: 'Yosh: 9-13'
+          description_short: Informatika asoslari kursidan barcha tushunchalarni o'rganing va o'z san'at asari, hikoya yoki o'yiningizni yarating.
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Spraytlar
+            lessonGroup-3:
+              display_name: Shartli bayonotlar
+            lessonGroup-5:
+              display_name: O‘zgaruvchilar
+            lessonGroup-6:
+              display_name: Kompyuterlar ta'siri
+            lessonGroup-7:
+              display_name: End of Course Project
+          description_audience: 'Yosh: 9-13'
+          description_short: Informatika asoslari kursidan barcha tushunchalarni o'rganing va o'z san'at asari, hikoya yoki o'yiningizni yarating.
+        vpl-csp-2023-m1:
+          title: Modul 1
+        vpl-csp-2023-m2:
+          title: Modul 2
+        vpl-csp-2023-m3:
+          title: Modul 3
+        vpl-csp-2023-m4:
+          title: Modul 4
+        vpl-csp-2023-m5:
+          title: Modul 5
+        vpl-csp-2023-m6:
+          title: Modul 6
+        vpl-csp-2023-m7:
+          title: Modul 7
+        vpl-csp-2023-m8:
+          title: Modul 8
+        vpl-csa-2023-m1:
+          title: Modul 1
+        how-ai-works-2023:
+          title: SI (AI) qanday ishlaydi
+        vpl-csa-2023-m2:
+          title: Modul 2
+        vpl-csa-2023-m3:
+          title: Modul 3
+        vpl-csa-2023-m4:
+          title: Modul 4
+        vpl-csa-2023-m5:
+          title: Modul 5
+        vpl-csa-2023-m6:
+          title: Modul 6
+        vpl-csa-2023-m7:
+          title: Modul 7
+        vpl-csa-2023-m8:
+          title: Modul 8
+        vpl-csd-2023-m1:
+          title: Modul 1
+        vpl-csd-2023-m2:
+          title: Modul 2
+        vpl-csd-2023-m3:
+          title: Modul 3
+        vpl-csd-2023-m4:
+          title: Modul 4
+        vpl-csd-2023-m5:
+          title: Modul 5
+        vpl-csd-2023-m6:
+          title: Modul 6
+        vpl-csd-2023-m7:
+          title: Modul 7
+        vpl-csd-2023-m8:
+          title: Modul 8
+        virtual-pl-csa-summer-2024-day1:
+          title: 1-kun
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Kirish
+          title: 2-kun
+        virtual-pl-csp-summer-day3:
+          title: 3-kun
+        virtual-pl-csp-summer-day4:
+          title: 4-kun
+        virtual-pl-csa-summer-day2:
+          title: 2-kun
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Kirish
+          title: 3-kun
+        virtual-pl-csa-summer-day4:
+          title: 4-kun
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Kirish
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Kirish
+          title: 1-kun
+        virtual-pl-csp-summer-day1:
+          title: 1-kun
+        web-dev-2024:
+          student_description: 'Unit 2 bo‘limida siz o‘zingizning veb-sahifalaringizda kontentni yaratish va almashishni o‘rganasiz. Dunyo bilan qanday tarkibni baham ko‘rishni xohlaganingizdan so‘ng, siz HTML va CSSdan foydalangan holda sahifalaringizni qanday tuzish va stil berishni o‘rganasiz. Shuningdek, siz debug va izoh berish kabi qimmatli dasturiy ko‘nikmalar bilan ishlaysiz. '
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Survey
+            lessonGroup-2:
+              display_name: 'Chapter 1: The Problem Solving Process'
+            lessonGroup-3:
+              display_name: 'Chapter 2: Computers and Problem Solving'
+        csd2-2024:
+          student_description: 'Unit 2 bo‘limida siz o‘zingizning veb-sahifalaringizda kontentni yaratish va almashishni o‘rganasiz. Dunyo bilan qanday tarkibni baham ko‘rishni xohlaganingizdan so‘ng, siz HTML va CSSdan foydalangan holda sahifalaringizni qanday tuzish va stil berishni o‘rganasiz. Shuningdek, siz debug va izoh berish kabi qimmatli dasturiy ko‘nikmalar bilan ishlaysiz. '
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapter 1: Images and Animations'
+            lessonGroup-3:
+              display_name: 'Chapter 2: Building Games'
+          student_description: Unit 3 bo'limida siz Game Labda animatsiyalar, interaktiv san'at va o‘yinlarni dasturlashtirasiz. Oddiy shakllardan boshlang va kompyuter olimlari har kuni foydalanadigan dizayn dasturlari bilan bir xil dasturiy tushunchalardan foydalanib, spraytga asoslangan yanada murakkab animatsiyalar va o‘yinlarni yarating. Yakuniy loyihada siz shaxsiylashtirilgan, interaktiv dasturni ishlab chiqasiz.
+        csd4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapter 1: User Centered Design'
+            lessonGroup-3:
+              display_name: 'Chapter 2: App Prototyping'
+          student_description: Unit 4 introduces the broader social impacts of computing. Through a series of design challenges, you will learn how to better understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which teams have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test solutions with real users to get feedback and drive further iteration.
+        csd5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapter 1: Representing Information'
+            lessonGroup-3:
+              display_name: 'Chapter 2: Solving Data Problems'
+          student_description: 5-bo‘lim ma'lumotlarning muammolarni hal qilishdagi ahamiyati haqida va bu jarayonda kompyuterlarning qanday yordam berishini ko‘rsatib beradi. Birinchi bobda kompyuterda ma'lumotlarni aks ettirish uchun foydalaniladigan turli xil tizimlar va ulardan foydalanish natijasida yuzaga keladigan qiyinchiliklar va almashinuvlar ko‘rib chiqilgan. Ikkinchi bobda siz ma'lumotlar to‘plamlari muammolarni hal qilishda qanday foydalanilishini va kompyuterlar ushbu jarayonning bosqichlarini avtomatlashtirishda qanday yordam berishini bilib olasiz. Ma'lumotlar muammosini hal qilish jarayonini siz tanlagan sohaga qanday tatbiq etish mumkinligini ko‘rib chiqish bilan bob yakunlanadi.
+          description_short: Learn how people use computers to solve data problems.
+        csd6a-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Chapter 2: Building Physical Prototypes'
+          description_short: Learn to program with physical devices.
+        csd6b-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Inputs and Outputs
+        csd7-2024:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Intro to App Lab
+        csd-post-survey-2024:
+          title: Post-Course Survey
