@@ -1,5 +1,8 @@
 AWSTemplateFormatVersion: 2010-09-09
-Description: DNS records and resources supporting events.code.org
+Description: DNS records and resources supporting events.code.org.
+
+# This domain is intended to be used for event related mini-sites.
+# It is hosted in LeadPages, and the DNS records are managed in Route53.
 
 Parameters:
   CodeDotOrgHostedZoneId:
@@ -7,7 +10,6 @@ Parameters:
     Description: The Route53 Hosted Zone ID for code.org
 
 Resources:
-  # Create a new hosted zone for events.code.org
   # The NS Records making this authoritative should be manually added.
   HostedZone:
     Type: AWS::Route53::HostedZone
@@ -24,3 +26,9 @@ Resources:
           TTL: 300
           ResourceRecords:
             - events.code.org.leadpages.net
+
+# Return outputs
+Outputs:
+  HostedZoneNameServers:
+    Description: The Route53 Hosted Zone Name Servers for events.code.org
+    Value: !Join [",", !GetAtt HostedZone.NameServers]
