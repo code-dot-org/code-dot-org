@@ -6,7 +6,6 @@
     "properties": {
       "curriculum_umbrella": "CSF",
       "hideable_lessons": true,
-      "is_course": true,
       "is_migrated": true,
       "supported_locales": [
         "de-DE"
@@ -15,11 +14,11 @@
     },
     "new_name": null,
     "family_name": "20-hour",
-    "serialized_at": "2023-05-17 11:09:23 UTC",
-    "published_state": "stable",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "serialized_at": "2023-12-11 23:42:50 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "20-hour"
     }
@@ -4790,6 +4789,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }
