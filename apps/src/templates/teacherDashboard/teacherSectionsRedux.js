@@ -455,13 +455,8 @@ export const setCoteacherInviteForPl = coteacherInviteForPl => ({
 });
 
 export const asyncLoadCoteacherInvite = () => dispatch => {
-  // this gets all of the section_instructors for the instuctor
-  // this line below calls the endpoint (this endpoint gets all the section instructors of the current id
-  // this includes sections where they are invited byt not)
   fetchJSON('/api/v1/section_instructors')
     .then(sectionInstructors => {
-      // Find the oldest invite.
-      // this is what returns the NEWEST.
       const invitedPlSections = sectionInstructors.filter(section => {
         return (
           section.status === 'invited' && section.participant_type === 'teacher'
@@ -472,23 +467,15 @@ export const asyncLoadCoteacherInvite = () => dispatch => {
           section.status === 'invited' && section.participant_type === 'student'
         );
       });
-      console.log(invitedPlSections);
-      console.log(invitedClassroomSections);
-      // go through each, and find the ones where the status is "invited"
-      // then grab the section_id and see if that section is a PL section
-
-      // const coteacherInvite = sectionInstructors.find(
-      //   instructor => instructor.status === 'invited'
-      // );
 
       const coteacherInviteForClassrooms =
         invitedClassroomSections.length > 0
           ? invitedClassroomSections[0]
-          : null;
+          : undefined;
 
       const coteacherInviteForPl =
-        invitedPlSections.length > 0 ? invitedPlSections[0] : null;
-      // change this to the variable... still not sure about null
+        invitedPlSections.length > 0 ? invitedPlSections[0] : undefined;
+
       dispatch(setCoteacherInvite(coteacherInviteForClassrooms));
       dispatch(setCoteacherInviteForPl(coteacherInviteForPl));
     })
