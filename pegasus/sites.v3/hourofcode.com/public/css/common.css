@@ -18,8 +18,7 @@ html {
   text-align: center;
 }
 
-.clear:before,
-.clear:after {
+.clear:before, .clear:after {
   content: "\0020";
   display: block;
   height: 0;
@@ -50,7 +49,7 @@ html {
 .carousel .slide-next span.label {
   display: none;
 }
-.carousel-wrapper {
+.carousel-wrapper{
   position: relative;
 }
 .carousel-wrapper .pagination {
@@ -94,7 +93,8 @@ html {
   border-radius: 4px;
 }
 
-@media screen and (max-width: 319px) {
+@media screen and (max-width: 319px)
+{
   .learnpage {
     width: 100%;
   }
@@ -112,6 +112,7 @@ html {
 }
 
 @media screen and (min-width: 600px) and (max-width: 969px) {
+
   .learnpage {
     width: 600px;
     margin: 0 auto;
@@ -119,8 +120,7 @@ html {
 }
 
 /* Datepicker customizations */
-.datepicker td,
-.datepicker th {
+.datepicker td, .datepicker th {
   background-color: transparent;
   color: #333;
   line-height: 1em;
@@ -136,7 +136,7 @@ html {
   margin: 10px 10px 0 0;
 }
 .share-buttons button i {
-  padding-right: 0.5em;
+  padding-right: .5em;
 }
 
 /* Promote page */
@@ -318,8 +318,7 @@ html {
   clear: both;
   margin: 0 0 40px 0;
 }
-.resources-item:before,
-.resources-item:after {
+.resources-item:before, .resources-item:after {
   content: "\0020";
   display: block;
   height: 0;
@@ -352,26 +351,24 @@ html {
 }
 
 /* Forms */
-.radio-inline,
-.checkbox-inline,
-.radio-inline + .radio-inline,
-.checkbox-inline + .checkbox-inline {
+.radio-inline, .checkbox-inline,
+.radio-inline+.radio-inline, .checkbox-inline+.checkbox-inline {
   margin-left: 0;
   margin-right: 2em;
 }
 
 .letter {
-  margin-left: 5%;
-  margin-right: 30%;
+  margin-left:5%;
+  margin-right:30%;
 }
 
 .letternames {
-  margin-left: 5%;
-  margin-right: 27%;
+  margin-left:5%;
+  margin-right:27%;
 }
 
 .wideletternames {
-  margin-left: 5%;
+  margin-left:5%;
 }
 
 #signup-closed {
@@ -388,3 +385,4 @@ html {
 #onetrust-consent-sdk ul li:before {
   content: none;
 }
+
