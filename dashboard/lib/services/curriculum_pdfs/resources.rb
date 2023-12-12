@@ -172,7 +172,6 @@ module Services
         # and arbitrary URLs that end in ".pdf"
         def fetch_url_to_path(url, path)
           service = Drive::DriveService.new
-          puts CDO.gdrive_export_secret
           service.authorization = Google::Auth::ServiceAccountCredentials.make_creds(
             json_key_io: StringIO.new(CDO.gdrive_export_secret || ""),
             scope: Google::Apis::DriveV3::AUTH_DRIVE,
@@ -180,14 +179,12 @@ module Services
           if url.start_with?("https://docs.google.com/document/d/")
             file_id = url_to_id(url)
             service.export_file(file_id, 'application/pdf', download_dest: path)
-            puts "File downloaded successfully to #{path}"
             return path
           elsif url.start_with?("https://drive.google.com/")
             file_id = url_to_id(url)
             file = service.getFile(file_id)
             return nil unless file.export_links.include? "application/pdf"
             service.export_file(file_id, 'application/pdf', download_dest: path)
-            puts "File downloaded successfully to #{path}"
             return path
           elsif url.end_with?(".pdf")
             IO.copy_stream(URI.parse(url)&.open, path)
@@ -207,9 +204,23 @@ module Services
           return nil
         end
 
-        # # Returns a file_id for a google drive doc
-        # # borrowed from GoogleDrive api
-        # # See: https://github.com/gimite/google-drive-ruby/blob/55b996b2c287cb0932824bf2474248a498469328/lib/google_drive/session.rb#L693C5-L731C8
+        # url_to_id(url) is borrowed from GoogleDrive api
+        # The license of this software is "New BSD Licence".
+        # Copyright (c) 2013, Hiroshi Ichikawa <http://gimite.net/>
+        # Copyright (c) 2013, David R. Albrecht <https://github.com/eldavido>
+        # Copyright (c) 2013, Guy Boertje <https://github.com/guyboertje>
+        # Copyright (c) 2013, Phuogn Nguyen <https://github.com/phuongnd08>
+        # All rights reserved.
+
+        # Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+        # - Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+        # - Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+        # - Neither the name of Hiroshi Ichikawa nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+        # THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+        # See: https://github.com/gimite/google-drive-ruby/blob/55b996b2c287cb0932824bf2474248a498469328/lib/google_drive/session.rb#L693C5-L731C8
+        # Returns a file_id for a google drive doc
         def url_to_id(url)
           uri = URI.parse(url)
           if ['spreadsheets.google.com', 'docs.google.com', 'drive.google.com'].include?(uri.host)
