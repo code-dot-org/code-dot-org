@@ -66,4 +66,3 @@ def find_mismatched_levels
 end
 
 puts find_mismatched_levels
-foo
