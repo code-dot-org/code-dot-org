@@ -16,4 +16,3 @@ class AddProcessedLocationToPdWorkshops < ActiveRecord::Migration[4.2]
     remove_column :pd_workshops, :processed_location
   end
 end
-foo

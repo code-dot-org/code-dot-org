@@ -128,4 +128,3 @@ class AnimationBucketTest < FilesApiTestBase
     @animation_bucket.s3.unstub(:delete_objects)
   end
 end
-foo
