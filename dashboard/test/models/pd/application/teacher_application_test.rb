@@ -966,19 +966,22 @@ module Pd::Application
     test 'meets_scholarship_criteria' do
       application = create :pd_teacher_application
       test_cases = [
-        {underrepresented_minority_percent: YES, free_lunch_percent: YES, verdict: YES},
-        {underrepresented_minority_percent: YES, free_lunch_percent: nil, verdict: YES},
-        {underrepresented_minority_percent: YES, free_lunch_percent: NO, verdict: YES},
-        {underrepresented_minority_percent: nil, free_lunch_percent: YES, verdict: YES},
-        {underrepresented_minority_percent: nil, free_lunch_percent: nil, verdict: REVIEWING_INCOMPLETE},
-        {underrepresented_minority_percent: nil, free_lunch_percent: NO, verdict: REVIEWING_INCOMPLETE},
-        {underrepresented_minority_percent: NO, free_lunch_percent: YES, verdict: YES},
-        {underrepresented_minority_percent: NO, free_lunch_percent: nil, verdict: REVIEWING_INCOMPLETE},
-        {underrepresented_minority_percent: NO, free_lunch_percent: NO, verdict: NO},
+        {underrepresented_minority_percent: YES, free_lunch_percent: YES, not_teaching_in_access_report: YES, verdict: YES},
+        {underrepresented_minority_percent: YES, free_lunch_percent: YES, not_teaching_in_access_report: NO, verdict: YES},
+        {underrepresented_minority_percent: YES, free_lunch_percent: NO, not_teaching_in_access_report: YES, verdict: YES},
+        {underrepresented_minority_percent: NO, free_lunch_percent: YES, not_teaching_in_access_report: YES, verdict: YES},
+        {underrepresented_minority_percent: YES, free_lunch_percent: YES, not_teaching_in_access_report: nil, verdict: YES},
+        {underrepresented_minority_percent: YES, free_lunch_percent: nil, not_teaching_in_access_report: YES, verdict: YES},
+        {underrepresented_minority_percent: nil, free_lunch_percent: YES, not_teaching_in_access_report: YES, verdict: YES},
+        {underrepresented_minority_percent: YES, free_lunch_percent: NO, not_teaching_in_access_report: NO, verdict: YES},
+        {underrepresented_minority_percent: nil, free_lunch_percent: nil, not_teaching_in_access_report: nil, verdict: REVIEWING_INCOMPLETE},
+        {underrepresented_minority_percent: nil, free_lunch_percent: NO, not_teaching_in_access_report: NO, verdict: REVIEWING_INCOMPLETE},
+        {underrepresented_minority_percent: NO, free_lunch_percent: nil, not_teaching_in_access_report: NO, verdict: REVIEWING_INCOMPLETE},
+        {underrepresented_minority_percent: NO, free_lunch_percent: NO, not_teaching_in_access_report: NO, verdict: NO},
       ]
 
       test_cases.each do |test_case|
-        input = test_case.slice(:underrepresented_minority_percent, :free_lunch_percent)
+        input = test_case.slice(:underrepresented_minority_percent, :free_lunch_percent, :not_teaching_in_access_report)
         application.update(response_scores: {meets_scholarship_criteria_scores: input}.to_json)
 
         output = application.meets_scholarship_criteria

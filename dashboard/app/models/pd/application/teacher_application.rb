@@ -1082,8 +1082,13 @@ module Pd::Application
           end
       end
 
+      census_summary = Census::CensusSummary.find_by(school_id: school_id, school_year: census_year)
       meets_scholarship_criteria_scores[:not_teaching_in_access_report] =
-        !!Census::CensusSummary.find_by(school_id: school_id, school_year: census_year)&.does_teach? ? NO : YES
+        if census_summary
+          census_summary.does_teach? ? NO : YES
+        else
+          nil
+        end
 
       update(
         response_scores: response_scores_hash.deep_merge(
