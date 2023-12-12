@@ -206,22 +206,22 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
   // Handle the case in which the modal is created with an existing value.
   useEffect(() => {
     if (mode === Mode.INITIAL) {
-      const previousInputString = currentAiModalField?.getValue();
-      if (previousInputString) {
-        const previousInput: AiFieldValue = JSON.parse(previousInputString);
+      const previousValueString = currentAiModalField?.getValue();
+      if (previousValueString) {
+        const previousValue: AiFieldValue = JSON.parse(previousValueString);
 
         setMode(Mode.RESULTS);
-        setInputs(previousInput.inputs);
+        setInputs(previousValue.inputs);
         setGeneratingProgress({step: BAD_GENERATED_RESULTS_COUNT, subStep: 0});
 
         generatedEffects.current = {
           badEffects: getRangeArray(0, BAD_GENERATED_RESULTS_COUNT - 1).map(
-            () => chooseEffects(previousInput.inputs, EffectsQuality.BAD)
+            () => chooseEffects(previousValue.inputs, EffectsQuality.BAD)
           ),
-          goodEffect: previousInput,
+          goodEffect: previousValue,
         };
 
-        minMaxAssociations.current = calculateMinMax(previousInput.inputs);
+        minMaxAssociations.current = calculateMinMax(previousValue.inputs);
       } else {
         setTimeout(() => {
           setMode(Mode.SELECT_INPUTS);
