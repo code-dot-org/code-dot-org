@@ -1,10 +1,5 @@
 import {createUuid} from '@cdo/apps/utils';
 
-export const UploadType = {
-  SPRITE: 'Sprite',
-  METADATA: 'Metadata',
-};
-
 /* Returns the animation manifest of either GameLab or SpriteLab in the specified locale
  * @param appType {String} "gamelab" or "spritelab"
  * @param locale {String} language locale, defaults to 'en_us'

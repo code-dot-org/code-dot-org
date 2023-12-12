@@ -152,9 +152,12 @@ export default class AnimationPickerBody extends React.Component {
     // "level_costumes", "backgrounds", "animals".
     // We want to hide the "animals" category which has only one animation in it.
     // It will be displayed in the "all" category added below.
-    // There is an 'animals' category because a level-specific animation was uploaded with the
-    // 'animals' category BEFORE the sprite upload feature dictated that level-specific animations
+    // There is an "animals" category because a level-specific animation was uploaded with the
+    // "animals" category BEFORE the sprite upload feature dictated that level-specific animations
     // can only be categorized as "costume" or "background".
+    // WE check if LEVEL_COSTUMES is in the category list below since it implies that these are
+    // level-specific animations (as opposed to library animations) and therefore the need for
+    // the filtering described above.
     if (categories.includes(LEVEL_COSTUMES)) {
       categories = categories.filter(
         category => category === BACKGROUNDS || category === LEVEL_COSTUMES
