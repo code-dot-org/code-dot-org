@@ -12,67 +12,83 @@ const baseHeadingStyle = {
   color: color.dark_charcoal,
 };
 
-export const h1Style = {
-  ...baseHeadingStyle,
-  ...fontConstants['main-font-bold'],
-  fontSize: 32,
-  lineHeight: '48px',
+const headingStyleOverrides = {
+  h1: {
+    ...fontConstants['main-font-bold'],
+    fontSize: 32,
+    lineHeight: '48px',
+  },
+  h2: {
+    ...fontConstants['main-font-regular'],
+    fontSize: 24,
+    lineHeight: '48px',
+  },
+  h3: {
+    ...fontConstants['main-font-semi-bold'],
+    fontSize: 16,
+    lineHeight: '24px',
+  },
 };
 
-export class Heading1 extends Component {
+// Abstract base class which can be extended to define individual headings
+// Components.
+class BaseHeading extends Component {
+  // We expect classes that extend this to define a heading tag; specifically,
+  // one which is also a key of headingStyleOverrides.
+  static HeadingTag = undefined;
+
   static propTypes = {
     style: PropTypes.object,
   };
 
   render() {
-    return <h1 {...this.props} style={{...h1Style, ...this.props.style}} />;
+    const {style, ...miscProps} = this.props;
+    return (
+      <this.HeadingTag
+        {...miscProps}
+        style={{
+          ...baseHeadingStyle,
+          ...headingStyleOverrides[this.HeadingTag],
+          ...style,
+        }}
+      />
+    );
   }
 }
 
-export const h2Style = {
-  ...baseHeadingStyle,
-  ...fontConstants['main-font-regular'],
-  fontSize: 24,
-  lineHeight: '48px',
-};
-
-export class Heading2 extends Component {
-  static propTypes = {
-    style: PropTypes.object,
-  };
-
-  render() {
-    return <h2 {...this.props} style={{...h2Style, ...this.props.style}} />;
-  }
+export class Heading1 extends BaseHeading {
+  static HeadingTag = 'h1';
 }
 
-export const h3Style = {
-  ...baseHeadingStyle,
-  ...fontConstants['main-font-semi-bold'],
-  fontSize: 16,
-  lineHeight: '24px',
-};
+export class Heading2 extends BaseHeading {
+  static HeadingTag = 'h2';
+}
 
-export const h3RebrandingStyle = {
-  ...baseHeadingStyle,
+export const h3RebrandingStyleOverride = {
   fontFamily: '"Barlow Semi Condensed Semibold", sans-serif',
   fontSize: '1.75em',
   lineHeight: '1.2',
 };
 
-export class Heading3 extends Component {
+export class Heading3 extends BaseHeading {
+  static HeadingTag = 'h3';
   static propTypes = {
-    style: PropTypes.object,
+    ...BaseHeading.propTypes,
     isRebranded: PropTypes.bool,
   };
 
   render() {
-    const {isRebranded, style, ...restProps} = this.props;
-    const headingStyles = {
-      ...(isRebranded ? h3RebrandingStyle : h3Style),
+    const {isRebranded, style, ...miscProps} = this.props;
+    const computedStyle = {
+      ...(isRebranded
+        ? h3RebrandingStyleOverride
+        : headingStyleOverrides[this.HeadingTag]),
       ...style,
     };
 
-    return <h3 {...restProps} style={headingStyles} />;
+    return super({
+      ...miscProps,
+      style: computedStyle,
+    });
   }
 }
