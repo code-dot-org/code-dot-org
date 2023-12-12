@@ -74,7 +74,7 @@ const displayAssistantMessage = (status, chatMessageText) => {
 
 const ChatMessage = ({message}) => {
   return (
-    <div id={`ChatMessage id: ${message.id}`}>
+    <div id={`chat-message-id-${message.id}`}>
       {isUser(message.role) && (
         <div className={style.userMessageContainer}>
           {displayUserMessage(message.status, message.chatMessageText)}
