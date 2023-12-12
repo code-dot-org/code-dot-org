@@ -42,5 +42,5 @@ time bundle exec rake install
 time bundle exec rake build
 time bundle exec rake lint
 time bundle exec ruby tools/hooks/lint.rb
-time bundle exec ruby tools/hooks/lint.rb $DRONE_SOURCE_BRANCH $DRONE_TARGET_BRANCH
+time bundle exec ruby tools/hooks/lint.rb origin/$DRONE_TARGET_BRANCH $DRONE_SOURCE_BRANCH
 time bundle exec rake circle:run_tests
