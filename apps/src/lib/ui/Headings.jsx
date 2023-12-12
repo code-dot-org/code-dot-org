@@ -79,16 +79,19 @@ export class Heading3 extends BaseHeading {
 
   render() {
     const {isRebranded, style, ...miscProps} = this.props;
-    const computedStyle = {
-      ...(isRebranded
-        ? h3RebrandingStyleOverride
-        : headingStyleOverrides[this.HeadingTag]),
-      ...style,
-    };
+    const overrideStyle = isRebranded
+      ? h3RebrandingStyleOverride
+      : headingStyleOverrides[this.HeadingTag];
 
-    return super({
-      ...miscProps,
-      style: computedStyle,
-    });
+    return (
+      <this.HeadingTag
+        {...miscProps}
+        style={{
+          ...baseHeadingStyle,
+          ...overrideStyle,
+          ...style,
+        }}
+      />
+    );
   }
 }
