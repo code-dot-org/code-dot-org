@@ -112,3 +112,4 @@ describe('FoormLibraryEditorManager', () => {
     assert.equal(wrapper.find(FoormEntityEditor).length, 1);
   });
 });
+foo
