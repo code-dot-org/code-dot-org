@@ -102,7 +102,6 @@ module.exports = {
     ...rulesToEventuallyReenable,
     'babel/semi': 'error', // autofixable
     'cdo-custom-rules/style-blocks-below-class': 'error',
-    'jsx-a11y/aria-role': ['error', {ignoreNonDOM: true}],
     'mocha/no-exclusive-tests': 'error',
     'react/button-has-type': 'error',
     'react/display-name': 'off',
