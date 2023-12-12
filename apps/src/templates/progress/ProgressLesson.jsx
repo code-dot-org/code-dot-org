@@ -158,7 +158,18 @@ class ProgressLesson extends React.Component {
               ...{marginBottom: this.state.collapsed ? 0 : 15},
             }}
           >
-            <div style={styles.headingText} onClick={this.toggleCollapsed}>
+            <div
+              style={styles.headingText}
+              onClick={this.toggleCollapsed}
+              tabIndex="0"
+              role="button"
+              onKeyDown={e => {
+                if ([' ', 'Enter', 'Spacebar'].includes(e.key)) {
+                  e.preventDefault();
+                  this.toggleCollapsed();
+                }
+              }}
+            >
               <FontAwesome icon={caret} style={caretStyle} />
               {hiddenForStudents && (
                 <FontAwesome icon="eye-slash" style={styles.icon} />
