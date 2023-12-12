@@ -1,3 +1,5 @@
+import './addons/plusMinusBlocks/if.js';
+import './addons/plusMinusBlocks/text_join.js';
 import {javascriptGenerator} from 'blockly/javascript';
 import {
   ScrollBlockDragger,
@@ -748,6 +750,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   blocklyWrapper.getMainWorkspace = function () {
     return blocklyWrapper.mainBlockSpace;
+  };
+
+  blocklyWrapper.getFunctionEditorWorkspace = function () {
+    return blocklyWrapper.functionEditor?.getWorkspace();
   };
 
   initializeBlocklyXml(blocklyWrapper);

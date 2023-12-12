@@ -618,6 +618,8 @@ he:
               display_name: סקר
         csd-post-survey-2023:
           title: סקר שלאחר הקורס
+        csd-post-survey-2024:
+          title: סקר שלאחר הקורס
         csd1-2017:
           lesson_groups:
             csd1_1:
@@ -667,6 +669,14 @@ he:
             cspSurvey:
               display_name: סקר
         csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: הדרך לפתרון תהליך'
+            lessonGroup-3:
+              display_name: 'פרק 2: מחשבים ופתרון בעיות'
+            lessonGroup-5:
+              display_name: סקר
+        csd1-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'פרק 1: הדרך לפתרון תהליך'
@@ -816,6 +826,12 @@ he:
               display_name: 'פרק 1: תמונות ואנימציות'
             lessonGroup-3:
               display_name: 'פרק 2: יצירת משחקים'
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: תמונות ואנימציות'
+            lessonGroup-3:
+              display_name: 'פרק 2: יצירת משחקים'
         csd3-dlp:
           lesson_groups:
             required:
@@ -887,6 +903,12 @@ he:
             cspSurvey:
               display_name: סקר
         csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: עיצוב מכוון משתמש'
+            lessonGroup-3:
+              display_name: 'פרק 2: תכנון אפליקציה'
+        csd4-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'פרק 1: עיצוב מכוון משתמש'
@@ -977,6 +999,12 @@ he:
             cspSurvey:
               display_name: סקר
         csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'פרק 1: ייצוג מידע'
+            lessonGroup-3:
+              display_name: 'פרק 2: פתרון בעיות נתונים'
+        csd5-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'פרק 1: ייצוג מידע'
@@ -1081,6 +1109,10 @@ he:
             csd6_2:
               display_name: 'פרק 2: יצור אב טיפוס פיזי'
         csd6a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'פרק 2: יצור אב טיפוס פיזי'
+        csd6a-2024:
           lesson_groups:
             lessonGroup-3:
               display_name: 'פרק 2: יצור אב טיפוס פיזי'

@@ -273,9 +273,14 @@ pt:
             curso.... ainda me perguntando de onde vem a visão geral, o conteúdo....
           title: andrea-teste
         angelina-playground:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Aleatório
           lessons:
             lesson-5:
               name: Avaliações
+            lesson-6:
+              name: Lição 1
         applab-1hour:
           description: Essa oficina foi desenvolvida para oferecer aos alunos uma
             introdução básica ao laboratório de aplicativos em 1 hora. Os alunos devem
@@ -1760,6 +1765,8 @@ pt:
           title: Pesquisa pós-curso da CS Discoveries
         csd-post-survey-2023:
           title: Pesquisa Pós-Curso
+        csd-post-survey-2024:
+          title: Pesquisa Pós-Curso
         csd-sample-online:
           title: Amostra de atividades on-line para o CS Discoveries
         csd-test-saving-state:
@@ -1835,6 +1842,14 @@ pt:
             cspSurvey:
               display_name: Questionário
         csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Computadores e Solução de Problemas'
+            lessonGroup-5:
+              display_name: Questionário
+        csd1-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capítulo 1: O Processo de Solução de Problemas'
@@ -2227,6 +2242,18 @@ pt:
             baseados em sprites, usando os mesmos conceitos de programação e o processo
             de design que os cientistas da computação usam diariamente. No projeto
             final, você desenvolverá um programa interativo personalizado."
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Imagens e Amimações'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Construindo Jogos'
+          student_description: " Na Unidade 3, você aproveitará sua experiência de
+            codificação ao programar animações, arte interativa e jogos no Laboratório
+            de Jogos. A unidade começa com formas simples e cria jogos sofisticados
+            baseados em sprites, usando os mesmos conceitos de programação e o processo
+            de design que os cientistas da computação usam diariamente. No projeto
+            final, você desenvolverá um programa interativo personalizado."
         csd3-dlp:
           description: Esta é a Unidade 3 do Plano de Aprendizagem Mais Profunda para
             os facilitadores de CSP do Code.org em treinamento. Aqui você encontrará
@@ -2466,6 +2493,20 @@ pt:
             soluções tanto no papel quanto no App Lab e testam soluções com usuários
             reais para obter feedback e avançar iteração.
         csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Desenho orientado ao usuário'
+            lessonGroup-3:
+              display_name: 'Capítulo 1: Prototipando o App'
+          student_description: A unidade 4 apresenta os impactos sociais mais amplos
+            da computação. Através de uma série de desafios de design, você aprenderá
+            a entender melhor as necessidades de outras pessoas enquanto desenvolve
+            uma solução para um problema. A segunda metade da unidade consiste em
+            um projeto de equipe iterativo, durante o qual as equipes têm a oportunidade
+            de identificar uma necessidade com a qual se preocupam, protótipos de
+            soluções tanto no papel quanto no App Lab e testam soluções com usuários
+            reais para obter feedback e avançar iteração.
+        csd4-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capítulo 1: Desenho orientado ao usuário'
@@ -2723,6 +2764,23 @@ pt:
             como o processo de solução de problemas de dados pode ser aplicado a uma
             área de sua escolha.
         csd5-2023:
+          description_short: Aprenda como as pessoas usam computadores para resolver
+            problemas de dados.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Representando Informação'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Resolvendo problemas de dados'
+          student_description: A unidade 5 trata da importância dos dados na solução
+            de problemas e destaca como os computadores podem ajudar nesse processo.
+            O primeiro capítulo explora os diferentes sistemas usados ​​para representar
+            informações em um computador e os desafios e as vantagens e desvantagens
+            do uso deles. No segundo capítulo, você aprenderá como as coleções de
+            dados são usadas para resolver problemas e como os computadores ajudam
+            a automatizar as etapas desse processo. O capítulo conclui considerando
+            como o processo de solução de problemas de dados pode ser aplicado a uma
+            área de sua escolha.
+        csd5-2024:
           description_short: Aprenda como as pessoas usam computadores para resolver
             problemas de dados.
           lesson_groups:
@@ -3044,7 +3102,16 @@ pt:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Capítulo 2: Construindo protótipos físicos'
+        csd6a-2024:
+          description_short: Aprenda a programar com dispositivos físicos.
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Construindo protótipos físicos'
         csd6b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Entradas e saídas
+        csd6b-2024:
           lesson_groups:
             lessonGroup-3:
               display_name: Entradas e saídas
@@ -3057,6 +3124,14 @@ pt:
             lessonGroup-4:
               display_name: Questionário
         csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Capítulo 1
+            lessonGroup-3:
+              display_name: Capítulo 2
+            lessonGroup-4:
+              display_name: Introdução Laboratório de Aplicativos
+        csd7-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Capítulo 1

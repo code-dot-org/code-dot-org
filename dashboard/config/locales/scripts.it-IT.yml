@@ -275,9 +275,14 @@ it:
             required:
               display_name: Panoramica
         angelina-playground:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Casuale
           lessons:
             lesson-5:
               name: Risultati dei test
+            lesson-6:
+              name: Lezione 1
         applab-intro:
           description: Crea la tua app in JavaScript usando la programmazione a blocchi
             o in formato testo. Se ti sei già esercitato con i blocchi, spingi le
@@ -2153,6 +2158,8 @@ it:
           title: Sondaggio Post-corso di Alla Scoperta dell'Informatica
         csd-post-survey-2023:
           title: Sondaggio Post-corso
+        csd-post-survey-2024:
+          title: Sondaggio Post-corso
         csd-tests:
           title: Test finali CSD
         csd1-2017:
@@ -2353,6 +2360,23 @@ it:
             ed elaborano i dati per aiutare gli esseri umani a risolvere i problemi.
             L'unità si conclude con un progetto in cui si progetta un'applicazione
             che aiuta a risolvere un problema a scelta.
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
+            lessonGroup-3:
+              display_name: 'Capitolo 2: computer e risoluzione dei problemi'
+            lessonGroup-5:
+              display_name: Sondaggio
+          student_description: Risoluzione dei problemi e informatica è un'introduzione
+            all'informatica con un'elevata componente interattiva e collaborativa
+            e inquadrata nella più ampia ricerca della risoluzione dei problemi. Ti
+            eserciterai a utilizzare un processo di risoluzione dei problemi per affrontare
+            una serie di problemi, sfide e scenari del mondo reale. Successivamente,
+            imparerai come i computer gestscono dati in ingresso e in uscita, memorizzano
+            ed elaborano i dati per aiutare gli esseri umani a risolvere i problemi.
+            L'unità si conclude con un progetto in cui si progetta un'applicazione
+            che aiuta a risolvere un problema a scelta.
         csd1-dlp:
           lesson_groups:
             content:
@@ -2524,6 +2548,17 @@ it:
             come il debugging, l'utilizzo delle risorse e il lavoro di squadra.  "
           title: Sviluppo Web ('22-'23)
         csd2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolo 1: Creazione di pagine Web'
+            lessonGroup-3:
+              display_name: 'Capitolo 2: Siti web multipagina'
+          student_description: " Nell'Unità 2, imparerai come creare e condividere
+            i contenuti sulle tue pagine web. Dopo aver deciso quali contenuti condividere
+            con il mondo, imparerai come strutturare e modellare le tue pagine usando
+            HTML e CSS. Potrai anche mettere in pratica preziose competenze di programmazione
+            come il debugging, l'utilizzo delle risorse e il lavoro di squadra.  "
+        csd2-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolo 1: Creazione di pagine Web'
@@ -2768,6 +2803,18 @@ it:
             basati su personaggi, utilizzando gli stessi concetti di programmazione
             e il processo di progettazione utilizzati quotidianamente dagli informatici.
             Nel progetto finale, svilupperai un programma personalizzato e interattivo."
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolo 1: Immagini e animazioni'
+            lessonGroup-3:
+              display_name: 'Capitolo 2: Realizzazione di giochi'
+          student_description: " Nell'Unità 3, svilupperai la tua esperienza di programmazione
+            elaborando animazioni, grafica interattiva e giochi in Sviluppo Giochi.
+            L'unità inizia con forme semplici e si sviluppa fino a giochi più sofisticati
+            basati su personaggi, utilizzando gli stessi concetti di programmazione
+            e il processo di progettazione utilizzati quotidianamente dagli informatici.
+            Nel progetto finale, svilupperai un programma personalizzato e interattivo."
         csd3-dlp:
           lesson_groups:
             content:
@@ -2940,6 +2987,20 @@ it:
             ottenere riscontri e favorire ulteriori iterazioni.
           title: Il processo di progettazione ('22-'23)
         csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolo 1: progettazione focalizzata sull''utente'
+            lessonGroup-3:
+              display_name: 'Capitolo 2: prototipazione di app'
+          student_description: Questa unità introduce gli impatti sociali più ampi
+            dell'informatica. Attraverso una serie di esercizi di progettazione, imparerai
+            come comprendere meglio le esigenze degli altri sviluppando una soluzione
+            a un problema. La seconda parte dell'unità consiste in un progetto iterativo
+            di gruppo, durante il quale i gruppi di lavoro hanno l'opportunità di
+            identificare un'esigenza che gli sta a cuore, prototipare soluzioni sia
+            su carta che in "Sviluppo App" e testare soluzioni con utenti reali per
+            ottenere riscontri e favorire ulteriori iterazioni.
+        csd4-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolo 1: progettazione focalizzata sull''utente'
@@ -3214,6 +3275,23 @@ it:
             ad automatizzare le fasi di questo processo. Il capitolo si conclude esaminando
             come applicare il processo di risoluzione dei problemi relativi ai dati
             a un'area di vostra scelta.
+        csd5-2024:
+          description_short: Scopri come le persone utilizzano i computer per risolvere
+            problemi relativi ai dati.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolo 1: Rappresentazione dei dati'
+            lessonGroup-3:
+              display_name: 'Capitolo 2: Risoluzione dei problemi relativi ai dati'
+          student_description: Questa unità tratta dell'importanza dei dati nella
+            risoluzione dei problemi ed evidenzia come i computer possono aiutare
+            in questo processo. Il primo capitolo esplora i diversi sistemi utilizzati
+            per rappresentare i dati in un computer e le sfide e i compromessi posti
+            dal loro utilizzo. Nel secondo capitolo imparerai come le raccolte di
+            dati vengono utilizzate per risolvere problemi e come i computer aiutano
+            ad automatizzare le fasi di questo processo. Il capitolo si conclude esaminando
+            come applicare il processo di risoluzione dei problemi relativi ai dati
+            a un'area di vostra scelta.
         csd5-dlp:
           lesson_groups:
             content:
@@ -3461,7 +3539,27 @@ it:
             può portare a un prodotto finito. L'unità si conclude con una sfida progettuale
             per utilizzare il Circuit Playground come base per un'innovazione di propria
             progettazione.
+        csd6a-2024:
+          description_short: Impara a programmare con dispositivi fisici.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolo 1: Ingressi e uscite'
+            lessonGroup-3:
+              display_name: 'Capitolo 2: costruire prototipi fisici'
+          student_description: Questa unità esplora il ruolo delle piattaforme hardware
+            nell'informatica e come diversi sensori possono fornire input e output
+            più efficaci rispetto alla tastiera, al mouse e al monitor tradizionali.
+            Utilizzando Sviluppo App e Circuit Playground di Adafruit, svilupperai
+            programmi che utilizzano gli stessi input e output hardware che vedi nei
+            dispositivi intelligenti, osservando come un semplice prototipo approssimativo
+            può portare a un prodotto finito. L'unità si conclude con una sfida progettuale
+            per utilizzare il Circuit Playground come base per un'innovazione di propria
+            progettazione.
         csd6b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ingressi e uscite
+        csd6b-2024:
           lesson_groups:
             lessonGroup-3:
               display_name: Ingressi e uscite
@@ -3547,6 +3645,21 @@ it:
             personale.
           title: IA e apprendimento automatico ('22-'23)
         csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Capitolo 1
+            lessonGroup-3:
+              display_name: Capitolo 2
+            lessonGroup-4:
+              display_name: Introduzione a Sviluppo App
+          student_description: Questa unità è un'introduzione pratica allo sviluppo
+            di un modello di apprendimento automatico ("machine learning") con dati
+            tabulari. Esplorerai come i computer imparano dai dati per prendere decisioni,
+            quindi svilupperai i tuoi progetti di apprendimento automatico basati
+            su dati del mondo reale. L'unità si conclude con la progettazione della
+            propria app di apprendimento automatico per risolvere un rilevante problema
+            personale.
+        csd7-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Capitolo 1
@@ -5395,7 +5508,7 @@ it:
           student_description: |-
             Scopri come funziona l'IA partecipando a diverse esperienze e guardando la serie di video [Come funziona l'IA](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)!
 
-            **Vuoi insegnare queste lezioni?** [Clicca qui per visualizzare il piano di queste lezioni](/s/how-ai-works-2023?viewAs=Instructor)
+            **Vuoi insegnare queste lezioni?** [Clicca qui per visualizzare il piano di lavoro di queste lezioni](/s/how-ai-works-2023?viewAs=Instructor) (Per visualizzarlo è necessario accedere preventivamente con un'utenza di tipologia insegnante.)
           title: Come funziona l'IA
         iceage:
           description: Crea una storia oppure fai un gioco con il Laboratorio con
@@ -6522,6 +6635,17 @@ it:
             120 minuti"
           title: 'Modulo 7: preparazione all''insegnamento dell''intelligenza Artificiale
             e dell''Apprendimento Automatico'
+        web-dev-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolo 1: Creazione di pagine Web'
+            lessonGroup-3:
+              display_name: 'Capitolo 2: Siti web multipagina'
+          student_description: " Nell'Unità 2, imparerai come creare e condividere
+            i contenuti sulle tue pagine web. Dopo aver deciso quali contenuti condividere
+            con il mondo, imparerai come strutturare e modellare le tue pagine usando
+            HTML e CSS. Potrai anche mettere in pratica preziose competenze di programmazione
+            come il debugging, l'utilizzo delle risorse e il lavoro di squadra.  "
         web-development-2023:
           lesson_groups:
             lessonGroup-2:
