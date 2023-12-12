@@ -172,7 +172,6 @@ module Services
         # and arbitrary URLs that end in ".pdf"
         def fetch_url_to_path(url, path)
           service = Drive::DriveService.new
-          puts CDO.gdrive_export_secret
           service.authorization = Google::Auth::ServiceAccountCredentials.make_creds(
             json_key_io: StringIO.new(CDO.gdrive_export_secret || ""),
             scope: Google::Apis::DriveV3::AUTH_DRIVE,
