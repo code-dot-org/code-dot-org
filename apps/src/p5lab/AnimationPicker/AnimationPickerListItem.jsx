@@ -28,6 +28,15 @@ export default class AnimationPickerListItem extends React.Component {
   };
 
   componentDidMount() {
+    this.getIconImageSrc();
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.category !== this.props.category) {
+      this.getIconImageSrc();
+    }
+  }
+  getIconImageSrc = () => {
     let category = this.props.category;
     if (category) {
       if (this.props.isAnimationJsonMode && category === 'all') {
@@ -39,7 +48,7 @@ export default class AnimationPickerListItem extends React.Component {
         this.setState({iconImageSrc: file.default});
       });
     }
-  }
+  };
 
   render() {
     const {
