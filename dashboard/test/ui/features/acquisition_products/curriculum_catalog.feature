@@ -55,15 +55,11 @@ Feature: Curriculum Catalog Page
     Then I click selector "a:contains(Sign in or create account)"
     And I wait until element "h2:contains(Have an account already? Sign in)" is visible
 
-  Scenario: Signed-in student is redirected to help page when clicking Assign
+  Scenario: Signed-in student does not see Assign button
     Given I create a student named "Student Sam"
     Given I am on "http://studio.code.org/catalog"
     And I wait until element "h4:contains(AI for Oceans)" is visible
-
-    Then I click selector "[aria-label='Assign AI for Oceans to your classroom']"
-    And I wait until element "h3:contains(Use a teacher account to assign a curriculum)" is visible
-    Then I click selector "a:contains(Learn how to update account type)"
-    And I wait until current URL contains "/articles/360023222371-How-can-I-change-my-account-type-from-student-to-teacher-or-vice-versa"
+    And I wait until element "button:contains(Assign)" is not visible   
 
   Scenario: Signed-in teacher without sections is prompted to created sections when clicking Assign
     Given I create a teacher named "Teacher Tom"
@@ -169,8 +165,21 @@ Feature: Curriculum Catalog Page
     And I click selector "a:contains(Facilitator led workshops)"
     Then I wait for jquery to load
     And I wait until current URL contains "/professional-development-workshops"
-    
 
+  Scenario: On expanded card, Signed-in teacher sees professional learning section
+    Given I create a teacher named "Teacher Tom"
+    Given I am on "http://studio.code.org/catalog"
+    And I wait until element "h4:contains(CS Fundamentals: Course A)" is visible
+    And I click selector "[aria-label='View details about CS Fundamentals: Course A']"
+    And I scroll the "h4:contains(CS Fundamentals: Course A)" element into view
+    And I wait until element "h4:contains(Professional Learning)" is visible
+
+  Scenario: On expanded card, Signed-in student does not see professional learning section
+    Given I create a student named "Student Sam"
+    Given I am on "http://studio.code.org/catalog"
+    And I wait until element "h4:contains(CS Fundamentals: Course A)" is visible
+    And I click selector "[aria-label='View details about CS Fundamentals: Course A']"
+    And I wait until element "h4:contains(Professional Learning)" is not visible
 
   # Expanded Card Assign button scenarios
   Scenario: On expanded card, Signed-out user is redirected to sign-in page when clicking Assign to class sections
@@ -182,16 +191,12 @@ Feature: Curriculum Catalog Page
     Then I click selector "a:contains(Sign in or create account)"
     And I wait until element "h2:contains(Have an account already? Sign in)" is visible
 
-  Scenario: On expanded card, Signed-in student is redirected to help page when clicking Assign to class sections
+  Scenario: On expanded card, Signed-in student does not see Assign button
     Given I create a student named "Student Sam"
     Given I am on "http://studio.code.org/catalog"
     And I wait until element "h4:contains(AI for Oceans)" is visible
-
     And I click selector "[aria-label='View details about AI for Oceans']"
-    And I click selector "button:contains(Assign to class sections)"
-    And I wait until element "h3:contains(Use a teacher account to assign a curriculum)" is visible
-    Then I click selector "a:contains(Learn how to update account type)"
-    And I wait until current URL contains "/articles/360023222371-How-can-I-change-my-account-type-from-student-to-teacher-or-vice-versa"
+    And I wait until element "span:contains(Assign to class sections)" is not visible
 
   Scenario: On the expanded card, Signed-in teacher without sections is prompted to created sections when clicking Assign to class sections
     Given I create a teacher named "Teacher Tom"
