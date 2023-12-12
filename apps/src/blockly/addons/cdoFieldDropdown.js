@@ -20,7 +20,7 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
       // For behavior picker blocks, we need to regenerate menu options each time,
       // in case a behavior has been renamed.
       const useCache = this.name !== 'BEHAVIOR';
-      for (const option of this.getOptions(useCache)) {
+      for (const option of this.getOptions(useCache, newValue)) {
         if (option[1] === newValue) {
           return newValue;
         } else if (option[1] === `"${newValue}"`) {
@@ -41,6 +41,34 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
       }
       return null;
     }
+  }
+
+  /**
+   * Return a list of the options for this dropdown.
+   *
+   * @param useCache For dynamic options, whether or not to use the cached
+   *     options or to re-generate them.
+   * @param {string} newValue The new value to be checked and potentially added
+   *     to the options list (behaviorPicker blocks only).
+   * @returns A non-empty array of option tuples:
+   *     (human-readable text or image, language-neutral name).
+   * @throws {TypeError} If generated options are incorrectly structured.
+   */
+  getOptions(useCache, newValue) {
+    const options = super.getOptions(useCache);
+
+    // Behavior pickers do not populate correctly until the workspace has been loaded.
+    if (this.name === 'BEHAVIOR' && newValue) {
+      // Check whether the initial newValue option already exists
+      const optionExists = options.some(option => option[0] === newValue);
+      // The hidden workspace is created after the main workspace flyout is populated.
+      const loadingFinished = Blockly.getHiddenDefinitionWorkspace();
+      if (!optionExists && !loadingFinished) {
+        // Assume initial value is valid and add it to the menu if not yet present.
+        options.push([newValue, newValue]);
+      }
+    }
+    return options;
   }
 
   /**
