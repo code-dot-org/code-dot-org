@@ -73,8 +73,6 @@ export default function CoteacherSettings({
     [setSavedCoteachers]
   );
 
-  console.log('lfm', coteachers);
-
   return (
     <div className={styles.expandedSection}>
       {i18n.coteacherAddInfo()}

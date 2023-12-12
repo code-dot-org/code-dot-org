@@ -14,8 +14,6 @@ export default function PrimaryTeacher({primaryTeacher, numCoteachers}) {
     [coteachersExist, primaryTeacher]
   );
 
-  console.log('lfm1', shouldDisplayTeacher, coteachersExist);
-
   return shouldDisplayTeacher ? (
     <div>
       <label className={styles.label}>
