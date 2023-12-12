@@ -100,6 +100,11 @@ class ApiController < ApplicationController
     course_id = params[:courseId].to_s
     course_name = params[:courseName].to_s
 
+    if course_name.length > 255
+      render json: {error: 'Course name is too long. Maximum length is 255 characters.'}, status: :unprocessable_entity
+      return
+    end
+
     query_clever_service("v2.1/sections/#{course_id}/students") do |students|
       section = CleverSection.from_service(course_id, current_user.id, students, course_name)
       render json: section.summarize

@@ -1706,6 +1706,12 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
+  test 'clever section name too long' do
+    course_name = 'name' * 64
+    post :import_clever_classroom, params: {courseId: '01', courseName: course_name}
+    assert_response :unprocessable_entity
+  end
+
   #
   # Given two arrays, checks that they represent equivalent bags (or multisets)
   # of elements.
