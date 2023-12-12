@@ -1986,3 +1986,33 @@ fi:
           lesson_groups:
             lessonGroup-7:
               display_name: Johdanto
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Kysely
+            lessonGroup-2:
+              display_name: 'Luku 1: Ongelmanratkaisu prosessi'
+            lessonGroup-3:
+              display_name: 'Luku 2: Tietokoneet ja ongelmanratkaisu'
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Luku 1: Kuvia ja animaatioita'
+            lessonGroup-3:
+              display_name: 'Luku 2: Pelien rakentaminen'
+        csd4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Luku 1: Käyttäjäkeskeinen suunnittelu'
+            lessonGroup-3:
+              display_name: 'Luku 2: Apsin prototypointi'
+        csd5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Luku 1: Tiedon esittäminen'
+            lessonGroup-3:
+              display_name: 'Luku 2: Tieto-ongelmien ratkaisu'
+        csd6a-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Luku 2: Laitteiston syöte'

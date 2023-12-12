@@ -1,8 +1,9 @@
-import {BlockSvg, Workspace, WorkspaceSvg} from 'blockly';
+import {Workspace} from 'blockly';
 import React, {useEffect, useRef} from 'react';
 import moduleStyles from './ai-block-preview.module.scss';
-import {generateAiEffectBlocksFromResult} from './utils';
 import {GeneratedEffect} from './types';
+import {useSelector} from 'react-redux';
+import {generateAiEffectBlocksXmlFromResult} from './utils';
 
 interface AiBlockPreviewProps {
   results: GeneratedEffect;
@@ -16,6 +17,7 @@ const AiBlockPreview: React.FunctionComponent<AiBlockPreviewProps> = ({
 }) => {
   const blockPreviewContainerRef = useRef<HTMLSpanElement>(null);
   const workspaceRef = useRef<Workspace | null>(null);
+  const isRtl = useSelector((state: {isRtl: boolean}) => state.isRtl);
 
   // Create the workspace once the container has been rendered.
   useEffect(() => {
@@ -23,33 +25,18 @@ const AiBlockPreview: React.FunctionComponent<AiBlockPreviewProps> = ({
       return;
     }
 
-    const emptyBlockXml = Blockly.utils.xml.textToDom('<xml></xml>');
+    const xml = generateAiEffectBlocksXmlFromResult(results);
+    const blocks = Blockly.utils.xml.textToDom(xml);
     workspaceRef.current = Blockly.createEmbeddedWorkspace(
       blockPreviewContainerRef.current,
-      emptyBlockXml,
-      {}
+      blocks,
+      {rtl: isRtl}
     );
-  }, [blockPreviewContainerRef]);
-
-  // Build out the blocks.
-  useEffect(() => {
-    if (!blockPreviewContainerRef.current || !workspaceRef.current) {
-      return;
-    }
-    const blocksSvg = generateAiEffectBlocksFromResult(
-      workspaceRef.current,
-      results
-    );
-    blocksSvg.forEach((blockSvg: BlockSvg) => {
-      blockSvg.initSvg();
-      blockSvg.render();
-    });
-    Blockly.svgResize(workspaceRef.current as WorkspaceSvg);
 
     return () => {
       workspaceRef.current?.clear();
     };
-  }, [blockPreviewContainerRef, results]);
+  }, [blockPreviewContainerRef, isRtl, results]);
 
   // Dispose of the workspace on unmount.
   useEffect(() => () => workspaceRef.current?.dispose(), []);
