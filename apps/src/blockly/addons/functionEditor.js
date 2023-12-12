@@ -413,7 +413,6 @@ export default class FunctionEditor {
 
     return {
       ...blockConfig,
-      // deletable: false, // TODO: Figure out why this isn't making the block not deletable
       movable: false,
       x,
       y,
