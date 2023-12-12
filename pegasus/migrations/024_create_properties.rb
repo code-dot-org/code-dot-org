@@ -12,4 +12,3 @@ Sequel.migration do
     drop_table(:properties)
   end
 end
-foo
