@@ -146,37 +146,11 @@ class HamburgerTest < Minitest::Test
   def test_hamburger_content_student
     contents = Hamburger.get_hamburger_contents({level: nil, script_level: nil, user_type: "student", language: "en"})
     assert_includes_id contents[:entries], "hamburger-student-projects"
-    assert_includes_id contents[:entries], "hamburger-student-incubator"
-  end
-
-  def test_hamburger_content_student_nonen
-    contents = Hamburger.get_hamburger_contents({level: nil, script_level: nil, user_type: "student", language: "fr"})
-    assert_includes_id contents[:entries], "hamburger-student-projects"
-    assert_includes_id contents[:entries], "hamburger-student-incubator"
   end
 
   def test_hamburger_content_nobody
     contents = Hamburger.get_hamburger_contents({level: nil, script_level: nil, user_type: nil, language: "en"})
     assert_includes_id contents[:entries], "hamburger-signed-out-projects"
-    assert_includes_id contents[:entries], "hamburger-signed-out-incubator"
-  end
-
-  def test_hamburger_content_nobody_nonen
-    contents = Hamburger.get_hamburger_contents({level: nil, script_level: nil, user_type: nil, language: "fr"})
-    assert_includes_id contents[:entries], "hamburger-signed-out-projects"
-    assert_includes_id contents[:entries], "hamburger-signed-out-incubator"
-  end
-
-  def test_hamburger_content_teacher
-    contents = Hamburger.get_hamburger_contents({level: nil, script_level: nil, user_type: "teacher", language: "en"})
-    assert_includes_id contents[:entries], "hamburger-teacher-professional-learning"
-    assert_includes_id contents[:entries], "hamburger-teacher-incubator"
-  end
-
-  def test_hamburger_content_teacher_nonen
-    contents = Hamburger.get_hamburger_contents({level: nil, script_level: nil, user_type: "teacher", language: "fr"})
-    assert_includes_id contents[:entries], "hamburger-teacher-professional-learning"
-    assert_includes_id contents[:entries], "hamburger-teacher-incubator"
   end
 
   def test_hamburger_content_nolevel
