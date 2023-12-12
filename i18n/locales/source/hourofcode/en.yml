@@ -1756,7 +1756,7 @@
 
   hoc_events_heading: "Register to Host an Hour of Code"
   hoc_events_jump_to_map: "Jump to the Hour of Code map"
-  
+
   signup_closed: 'Registration for the Hour of Code is now closed. Please check again in October to sign up for the next Hour of Code.'
   signup_registration_not_required: "You don't need to register to participate! The Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan an event for your class."
   signup_registration_not_required_markdown: "You don't need to register to participate! The Hour of Code activities are available year-round. [Try an activity](%{hoc_activities_url}) or read our [How-to guide](%{howto_guide_url}) to plan an event for your class."
