@@ -20,7 +20,7 @@ export interface AITutorState {
 
 const initialChatMessages: ChatCompletionMessage[] = [
   {
-    id: 1,
+    id: 0,
     role: Role.ASSISTANT,
     chatMessageText: "Hi! I'm your AI Tutor. Type your question below.",
     status: Status.OK,
@@ -76,10 +76,7 @@ export const submitChatMessage = createAsyncThunk(
     const state = thunkAPI.getState() as {aiTutor: AITutorState};
     const systemPrompt = generalChatSystemPrompt;
     const storedMessages = state.aiTutor.chatMessages;
-    const newMessageId =
-      storedMessages.length === 0
-        ? 1
-        : storedMessages[storedMessages.length - 1].id + 1;
+    const newMessageId = storedMessages[storedMessages.length - 1].id + 1;
     const appropriateChatMessages = storedMessages.filter(
       msg => msg.status === Status.OK
     );
