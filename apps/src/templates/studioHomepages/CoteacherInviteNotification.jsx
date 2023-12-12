@@ -35,10 +35,6 @@ const CoteacherInviteNotification = ({
       showCoteacherForPlInviteNotification(coteacherInviteForPl)
     )
   ) {
-    console.log(
-      showCoteacherInviteNotification(coteacherInvite) ||
-        showCoteacherForPlInviteNotification(coteacherInviteForPl)
-    );
     return null;
   }
 
