@@ -9,12 +9,10 @@
         .slide
           .slide-img<
             %img{:src=>"/images/cs-stats/#{statistic[:code_s]}.png"}
-    %a.slide-prev{:href=>'#'}<
-      %span<
-        %span.label Previous
-    %a.slide-next{:href=>'#'}<
-      %span<
-        %span.label Next
+    %a.slide-prev{href:'#', aria:{label: 'View previous slide'}}
+      %span
+    %a.slide-next{href: '#', aria:{label: 'View next slide'}}
+      %span
   .pagination
     %div{:id => "stats-carousel-pagination"}
 

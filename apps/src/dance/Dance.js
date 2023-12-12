@@ -40,7 +40,7 @@ import {showArrowButtons} from '@cdo/apps/templates/arrowDisplayRedux';
 import danceCode from '@code-dot-org/dance-party/src/p5.dance.interpreted.js';
 import utils from './utils';
 import ErrorBoundary from '@cdo/apps/lab2/ErrorBoundary';
-import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
+import danceMetricsReporter from './danceMetricsReporter';
 import {ErrorFallbackPage} from '@cdo/apps/lab2/views/ErrorFallbackPage';
 import {DANCE_AI_SOUNDS} from './ai/constants';
 
@@ -181,8 +181,7 @@ Dance.prototype.init = function (config) {
   this.awaitTimingMetrics();
 
   const state = getStore().getState();
-  Lab2MetricsReporter.updateProperties({
-    appName: 'Dance',
+  danceMetricsReporter.updateProperties({
     channelId: state.pageConstants.channelId,
     currentLevelId: state.progress.currentLevelId,
     scriptId: state.progress.scriptId,
@@ -195,7 +194,7 @@ Dance.prototype.init = function (config) {
         // this is actually the Lab2 Error Fallback page. We may want to refactor this after Hour of Code.
         fallback={<ErrorFallbackPage />}
         onError={(error, componentStack) => {
-          Lab2MetricsReporter.logError('Uncaught React Error', error, {
+          danceMetricsReporter.logError('Uncaught React Error', error, {
             componentStack,
           });
         }}
@@ -454,7 +453,7 @@ Dance.prototype.afterInject_ = function () {
     container: 'divDance',
     i18n: danceMsg,
     resourceLoader: new ResourceLoader(ASSET_BASE),
-    logger: Lab2MetricsReporter,
+    logger: danceMetricsReporter,
   });
 
   // Expose an interface for testing
