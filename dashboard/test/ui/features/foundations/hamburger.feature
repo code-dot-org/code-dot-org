@@ -102,6 +102,7 @@ Feature: Hamburger dropdown
     And I see "#support"
     And I see "#teacher-community"
 
+ 	
 Scenario: Signed out user viewing help dropdown in Spanish on desktop
   Given I am on "http://code.org/lang/es"
   Then I wait until I am on "http://code.org/"
