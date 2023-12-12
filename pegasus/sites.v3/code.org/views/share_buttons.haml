@@ -24,11 +24,11 @@
 - unless user_type == "student_y"
   .share-buttons
     -if facebook
-      %a.link-button.secondary.small.window-popup{href: "https://www.facebook.com/sharer/sharer.php?#{facebook.to_query}"}
+      %a.link-button.secondary.small.window-popup.share-button-facebook{href: "https://www.facebook.com/sharer/sharer.php?#{facebook.to_query}"}
         %i{class: "fa-brands fa-facebook"}
         =I18n.t(:share_on_facebook)
     -if twitter
-      %a.link-button.secondary.small.window-popup{href: "https://twitter.com/intent/tweet?#{twitter.to_query}"}
+      %a.link-button.secondary.small.window-popup.share-button-twitter{href: "https://twitter.com/intent/tweet?#{twitter.to_query}"}
         %i{class: "fa-brands fa-twitter"}
         =I18n.t(:share_on_twitter)
     -download_url ||= nil
