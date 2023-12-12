@@ -232,6 +232,9 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
     fields: {
       NAME: Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE,
     },
+    extraState: {
+      userCreated: true,
+    },
   };
 
   if (functionEditorOpen) {
