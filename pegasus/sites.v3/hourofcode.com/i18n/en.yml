@@ -1429,7 +1429,7 @@
   hoc_live_learn_message: "Learn basic concepts of computer science alongside special guests! Students of all ages and abilities, including those without computers, are welcome to our virtual workshop. Continue learning at home through our Hour of Code Live episodes."
   hoc_live_join_us: 'Join us'
   hoc_live_learn_more: 'Learn more'
-  hoc_live_map_message: "During peak Hour of Code times, a static map is used to save bandwidth on high traffic pages. If you are looking for the dynamic map you can find it on [hourofcode.com/map](%{map_url})."
+  hoc_live_map_and_events_message: "During peak Hour of Code traffic, we use a static map to save bandwidth and keep our site running. To see a dynamic map of all events [click here](%{map_url}), and to see the full event list [click here](%{events_url})."
                                                   
   hoc_overview_oceans_tutorial_header: 'AI for Oceans'
   hoc_overview_oceans_tutorial_desc: 'Learn about artificial intelligence (AI), machine learning, training data, and bias, while exploring ethical issues and how AI can be used to address world problems.'
