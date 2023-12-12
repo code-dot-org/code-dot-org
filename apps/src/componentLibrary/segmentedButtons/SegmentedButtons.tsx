@@ -13,7 +13,24 @@ interface SegmentedButtonsProps {
   size?: 'xs' | 's' | 'm' | 'l';
 }
 
-const Checkbox: React.FunctionComponent<SegmentedButtonsProps> = ({
+// Todo:
+// 1. Add onClick handler
+// 2. Add selected state
+// 3. Add disabled state
+// 4. Add hover state
+// 5. Add focus state
+// 6. Add active state
+// 7. Add keyboard navigation
+// 8. Add aria attributes
+// 9. Add tests
+// 10. Add storybook
+// 11. Add documentation
+// 12. Add prop types
+// 13. Add default props
+// 14. Add sizes
+// 15. Add icons
+
+const SegmentedButtons: React.FunctionComponent<SegmentedButtonsProps> = ({
   buttons,
   size = 'm',
 }) => {
@@ -35,4 +52,4 @@ const Checkbox: React.FunctionComponent<SegmentedButtonsProps> = ({
   );
 };
 
-export default Checkbox;
+export default SegmentedButtons;

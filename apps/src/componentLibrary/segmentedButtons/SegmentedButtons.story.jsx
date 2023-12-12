@@ -42,23 +42,27 @@ DefaultSegmentedButtons.args = {
   ],
 };
 
-export const DisabledCheckbox = MultipleTemplate.bind({});
-DisabledCheckbox.args = {
+export const DisabledSegmentedButtons = MultipleTemplate.bind({});
+DisabledSegmentedButtons.args = {
   components: [
-    {name: 'test-disabled', label: 'Label', disabled: true},
     {
-      name: 'test-disabled-checked',
-      label: 'Label Checked',
-      disabled: true,
-      checked: true,
-      onChange: () => {},
-    },
-    {
-      name: 'test-disabled-indeterminate',
-      label: 'Label Indeterminate',
-      indeterminate: true,
-      disabled: true,
-      onChange: () => {},
+      buttons: [
+        {name: 'test-disabled', label: 'Label', disabled: true},
+        {
+          name: 'test-disabled-checked',
+          label: 'Label Checked',
+          disabled: true,
+          checked: true,
+          onChange: () => {},
+        },
+        {
+          name: 'test-disabled-indeterminate',
+          label: 'Label Indeterminate',
+          indeterminate: true,
+          disabled: true,
+          onChange: () => {},
+        },
+      ],
     },
   ],
 };
