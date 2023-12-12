@@ -135,6 +135,10 @@ export default class FunctionEditor {
     return this.editorWorkspace.id;
   }
 
+  getWorkspace() {
+    return this.editorWorkspace;
+  }
+
   // TODO
   renameParameter(oldName, newName) {}
 
@@ -159,11 +163,14 @@ export default class FunctionEditor {
       Blockly.getHiddenDefinitionWorkspace()
     );
 
+    let type;
     if (existingProcedureBlock) {
+      type = existingProcedureBlock.type;
       // If we already have stored data about the procedure, use that.
       const existingData = Blockly.serialization.blocks.save(
         existingProcedureBlock
       );
+
       // Disable events here so we don't copy an existing block into the hidden definition
       // workspace.
       Blockly.Events.disable();
@@ -171,13 +178,13 @@ export default class FunctionEditor {
         this.addEditorWorkspaceBlockConfig(existingData),
         this.editorWorkspace
       );
-
       Blockly.Events.enable();
     } else {
+      type = procedureType;
       // Otherwise, we need to create a new block from scratch.
       const newDefinitionBlock = {
         kind: 'block',
-        type: procedureType,
+        type,
         extraState: {
           procedureId: procedure.getId(),
           userCreated: true,
@@ -194,19 +201,15 @@ export default class FunctionEditor {
       );
     }
 
-    // We hide the delete button unless it is a function or user-created behavior.
-    const shouldShowDeleteButton =
-      this.block.type === BLOCK_TYPES.procedureDefinition ||
-      this.block.userCreated;
+    const isBehavior = type === BLOCK_TYPES.behaviorDefinition;
+    // We do not want to show the delete button for behaviors that are not user-created
+    const hideDeleteButton = isBehavior && !this.block.userCreated;
     const modalEditorDeleteButton = document.getElementById(
       MODAL_EDITOR_DELETE_ID
     );
-    modalEditorDeleteButton.style.visibility = shouldShowDeleteButton
-      ? 'visible'
-      : 'hidden';
-
-    const type = procedureType || existingProcedureBlock.type;
-    const isBehavior = type === BLOCK_TYPES.behaviorDefinition;
+    modalEditorDeleteButton.style.visibility = hideDeleteButton
+      ? 'hidden'
+      : 'visible';
 
     // Used to create and render an SVG frame instance.
     const getDefinitionBlockColor = () => {

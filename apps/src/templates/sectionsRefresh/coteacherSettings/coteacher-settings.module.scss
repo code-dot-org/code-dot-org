@@ -21,7 +21,7 @@
 
   .input {
     flex: 1;
-    margin-right: 10px;
+    margin-inline-end: 10px;
     margin-bottom: 0;
     padding: 6px 12px;
   }
@@ -103,11 +103,12 @@
   &Pill {
     border-radius: 100px;
     padding: 4px 8px;
-    margin-left: 12px;
+    margin-inline-start: 12px;
     font-size: 12px;
     letter-spacing: 0.5px;
     color: $light_black;
     width: fit-content;
+    cursor: default;
   }
 
   &Active {
@@ -119,14 +120,22 @@
   }
 
   &Declined{
-    background-color: $product_negative_light;}
+    background-color: $product_negative_light;
+  }
 
   &Error{
     background-color: $neutral_dark10;
   }
 
   &PillIcon {
-    margin-right: 5px;
+    margin-inline-end: 5px;
+  }
+
+  &ToolTipText {
+    font-size: 13px;
+    color: $neutral_white;
+    margin-bottom: 0;
+    max-width: 365px;
   }
 }
 
