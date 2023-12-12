@@ -37,8 +37,8 @@ echo "Wrote secrets from env vars into locals.yml."
 
 set -x
 
-time bundle install --quiet
-time bundle exec rake install
-time bundle exec rake build
-time bundle exec ruby tools/hooks/lint.rb origin/$DRONE_TARGET_BRANCH $DRONE_SOURCE_BRANCH
-time bundle exec rake circle:run_tests
+bundle install --quiet
+bundle exec rake install
+bundle exec rake build
+bundle exec ruby tools/hooks/lint.rb origin/$DRONE_TARGET_BRANCH $DRONE_SOURCE_BRANCH
+bundle exec rake circle:run_tests

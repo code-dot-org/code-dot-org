@@ -93,14 +93,12 @@ end
 # been changed between branches; this is useful for a continuous integration or
 # pre-merge hook.
 def do_linting(base = nil, current = nil)
-  puts "do_linting(#{base.inspect}, #{current.inspect})"
   modified_files =
     if base.nil? || current.nil?
       HooksUtils.get_staged_files
     else
       HooksUtils.get_changed_files_between_branches(base, current)
     end
-  puts "modified_files: #{modified_files.inspect}"
 
   todo = {
     Object.method(:run_haml) => filter_haml(modified_files),
