@@ -507,7 +507,7 @@
   "coteacherTooltip": "As a co-teacher, you will be able to manage students in the section, view their work, and track their progress.",
   "coteacherAdd": "Add Co-Teachers",
   "coteacherLabel": "Co-teachers",
-  "coteacherPrimaryTeacher": "Primary teacher",
+  "coteacherPrimaryTeacher": "Primary Teacher",
   "coteacherAddTooltip": "Co-teachers have the same access as you in managing this section and viewing student work. Co-teachers will see the invitation on their teacher dashboard.",
   "coteacherAddInfo": "Add co-teachers by entering the email address associated with their Code.org account in the field below. Each section can have up to five co-teachers.",
   "coteacherAddNoEmail": "Please enter an email address.",
