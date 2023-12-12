@@ -118,17 +118,9 @@ describe I18n::Resources::Dashboard::CurriculumContent::SyncIn do
       I18nScriptUtils.expects(:copy_file).with(i18n_source_file_path, i18n_original_file_path).in_sequence(execution_sequence)
 
       RedactRestoreUtils.
-        expects(:redact_file).
-        with(i18n_source_file_path, %w[resourceLink vocabularyDefinition]).
-        in_sequence(execution_sequence).
-        returns({'i18n_key' => 'redacted_i18n_val'})
-
-      redacted_i18n_source_file_content = <<~JSON.strip
-        {
-          "i18n_key": "redacted_i18n_val"
-        }
-      JSON
-      I18nScriptUtils.expects(:write_file).with(i18n_source_file_path, redacted_i18n_source_file_content).in_sequence(execution_sequence)
+        expects(:redact).
+        with(i18n_source_file_path, i18n_source_file_path, %w[resourceLink vocabularyDefinition]).
+        in_sequence(execution_sequence)
 
       redact_i18n_source_file_content
     end

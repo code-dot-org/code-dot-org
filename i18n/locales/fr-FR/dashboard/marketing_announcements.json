@@ -104,6 +104,11 @@
       "title": "L'heure du code : La créativité avec l'IA",
       "body": "Rejoignez les millions de personnes à travers le monde en organisant une heure de code, avec ou sans IA, et en apprenant comment fonctionne l'IA. Toute personne, où qu'elle se trouve, peut le faire. Aucune expérience n'est nécessaire.",
       "buttonText": "En savoir plus"
+    },
+    "hoc-2023-dance-ai": {
+      "title": "Soirée dansante : Édition IA",
+      "body": "Apprenez les concepts de l'intelligence artificielle (IA) et créez votre propre soirée dansante virtuelle avec les meilleurs artistes du moment. Choisissez parmi des dizaines de chansons et touchez tous vos élèves, quels que soient leurs goûts musicaux. Il est temps de jouer !",
+      "buttonText": "En savoir plus"
     }
   }
 }

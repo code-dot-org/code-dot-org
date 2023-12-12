@@ -12,10 +12,6 @@ theme: responsive_full_width
 - icon_circle_check = "fa-solid fa-circle-check"
 - icon_flag = "fa-solid fa-flag-checkered"
 
-%section.skinny-banner.no-padding-bottom
-  .wrapper
-    = view :maker_skinny_banner
-
 %section.intro
   .wrapper
     %h1 The BBC micro:bit
@@ -39,6 +35,8 @@ theme: responsive_full_width
             %h3 Works with App Lab
             %p.no-margin-bottom Using App Lab students can quickly build apps that communicate with external hardware using our block-to-text app development environment.
     .clear
+
+= view :maker_skinny_banner
 
 %section.bg-neutral-light.device-setup
   .wrapper

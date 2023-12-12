@@ -1,5 +1,5 @@
 %a#hocsignupform{name: 'signup'}
-- if ["actual-hoc", "post-hoc", false].include?(hoc_mode)
+- if hoc_mode == false
   %p.signup-closed.body-two.no-margin-bottom
     =hoc_s(:signup_registration_closed_2022_markdown, markdown: :inline, locals: {hoc_activities_url: resolve_url('/learn')})
 - else
