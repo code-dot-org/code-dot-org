@@ -24,30 +24,6 @@ export default class AnimationPickerListItem extends React.Component {
   state = {
     loaded: false,
     hover: false,
-    iconImageSrc: null,
-  };
-
-  componentDidMount() {
-    this.getIconImageSrc();
-  }
-
-  componentDidUpdate(prevProps) {
-    if (prevProps.category !== this.props.category) {
-      this.getIconImageSrc();
-    }
-  }
-  getIconImageSrc = () => {
-    let category = this.props.category;
-    if (category) {
-      if (this.props.isAnimationJsonMode && category === 'all') {
-        category = 'all_including_backgrounds';
-      }
-      import(
-        `@cdo/static/p5lab/animation-previews/category_${category}.png`
-      ).then(file => {
-        this.setState({iconImageSrc: file.default});
-      });
-    }
   };
 
   render() {
@@ -61,10 +37,18 @@ export default class AnimationPickerListItem extends React.Component {
       selected,
       isBackgroundsTab,
     } = this.props;
-    const {loaded, hover, iconImageSrc} = this.state;
+    const {loaded, hover} = this.state;
     const multiSelectIconClassName = `fa ${
       selected ? 'fa-check' : 'fa-plus'
     } fa-2x`;
+
+    let iconImageSrc = category
+      ? `/blockly/media/p5lab/animation-previews/category_${category}.png`
+      : '';
+    if (this.props.isAnimationJsonMode && category === 'all') {
+      iconImageSrc =
+        '/blockly/media/p5lab/animation-previews/category_all_including_backgrounds.png';
+    }
 
     const previewSize = parseInt(style.previewSize);
 
