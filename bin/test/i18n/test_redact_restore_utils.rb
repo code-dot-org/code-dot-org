@@ -1,6 +1,5 @@
 require_relative '../test_helper'
 require_relative '../../i18n/redact_restore_utils'
-require_relative '../../i18n/i18n_script_utils'
 
 describe RedactRestoreUtils do
   let(:described_class) {RedactRestoreUtils}
