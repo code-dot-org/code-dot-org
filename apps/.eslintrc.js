@@ -9,7 +9,6 @@ const rulesToEventuallyReenable = {
   'jsx-a11y/alt-text': 'off',
   'jsx-a11y/anchor-has-content': 'off',
   'jsx-a11y/anchor-is-valid': 'off',
-  'jsx-a11y/aria-role': 'off',
   'jsx-a11y/blob': 'off',
   'jsx-a11y/click-events-have-key-events': 'off',
   'jsx-a11y/heading-has-content': 'off',
