@@ -290,7 +290,9 @@ input[type=submit] {
     color: var(--neutral_dark70);
   }
 
-  /* Small button styles */
+  /* Small button styles
+    - this can be used in combination
+    with the other classes */
   &.small {
     font-size: 0.875rem;
     padding: 0.5rem 0.75rem;
