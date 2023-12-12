@@ -90,7 +90,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_caller_update_shape_mixin',
       'procedure_caller_context_menu_mixin',
       'procedure_caller_onchange_mixin',
-      'procedure_callernoreturn_get_def_block_mixin',
+      'behavior_get_def_block_mixin',
       'modal_procedures_no_destroy',
     ],
     mutator: 'behavior_get_mutator',
@@ -118,6 +118,15 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
 GoogleBlockly.Extensions.registerMutator(
   'behavior_def_mutator',
   behaviorDefMutator
+);
+
+const behaviorGetDefBlockMixin = {
+  hasReturn_: false,
+  defType_: 'behavior_definition',
+};
+GoogleBlockly.Extensions.registerMixin(
+  'behavior_get_def_block_mixin',
+  behaviorGetDefBlockMixin
 );
 
 // This extension adds an SVG frame around behavior definition blocks.
