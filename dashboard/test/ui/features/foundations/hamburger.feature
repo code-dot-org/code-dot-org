@@ -81,6 +81,7 @@ Feature: Hamburger dropdown
     And I see "#report-bug"
     And I see "#support"
 
+
   Scenario: Teacher viewing hamburger dropdown and help button in English on desktop on level
     Given I create a teacher named "Tessa Teacher"
     And I am on "http://studio.code.org/s/allthethings/lessons/1/levels/1"
@@ -100,7 +101,7 @@ Feature: Hamburger dropdown
     And I see "#report-bug"
     And I see "#support"
     And I see "#teacher-community"
-
+  
 Scenario: Signed out user viewing help dropdown in Spanish on desktop
   Given I am on "http://code.org/lang/es"
   Then I wait until I am on "http://code.org/"
