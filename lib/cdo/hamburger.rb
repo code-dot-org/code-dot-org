@@ -92,8 +92,8 @@ class Hamburger
       {title: "my_dashboard", url: CDO.studio_url("/home")},
       {title: "course_catalog", url: CDO.studio_url("/catalog")},
       {title: "project_gallery", url: CDO.studio_url("/projects")},
-      {title: "professional_learning", url: CDO.studio_url("/my-professional-learning"), id: "hamburger-teacher-professional-learning"},
-      {title: "incubator", url: CDO.studio_url("/incubator"), id: "hamburger-teacher-incubator"}
+      {title: "professional_learning", url: CDO.studio_url("/my-professional-learning")},
+      {title: "incubator", url: CDO.studio_url("/incubator")}
     ].each do |entry|
       entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
     end
@@ -102,7 +102,7 @@ class Hamburger
       {title: "my_dashboard", url: CDO.studio_url("/home"), id: "hamburger-student-home"},
       {title: "course_catalog", url: CDO.studio_url("/courses")},
       {title: "project_gallery", url: CDO.studio_url("/projects"), id: "hamburger-student-projects"},
-      {title: "incubator", url: CDO.studio_url("/incubator"), id: "hamburger-student-incubator"}
+      {title: "incubator", url: CDO.studio_url("/incubator")}
     ].each do |entry|
       entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
     end
@@ -110,7 +110,7 @@ class Hamburger
     signed_out_entries = [
       {title: "course_catalog", url: CDO.studio_url("/catalog")},
       {title: "project_gallery", url: CDO.studio_url("/projects/public"), id: "hamburger-signed-out-projects"},
-      {title: "incubator", url: CDO.studio_url("/incubator"), id: "hamburger-signed-out-incubator"}
+      {title: "incubator", url: CDO.studio_url("/incubator")}
     ].each do |entry|
       entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
     end
