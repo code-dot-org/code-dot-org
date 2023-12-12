@@ -51,7 +51,7 @@ import aiBotBodyThink2 from '@cdo/static/dance/ai/bot/ai-bot-body-think2.png';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import ModalButton from './ModalButton';
-import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
+import danceMetricsReporter from '../danceMetricsReporter';
 import CdoFieldDanceAi from './cdoFieldDanceAi';
 import {DANCE_AI_FIELD_NAME} from './constants';
 
@@ -162,7 +162,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
 
   const currentAiModalField: CdoFieldDanceAi | null = useMemo(() => {
     if (aiModalBlockId === undefined) {
-      Lab2MetricsReporter.logWarning('AI modal opened without a field');
+      danceMetricsReporter.logWarning('AI modal opened without a field');
       return null;
     }
 
@@ -171,7 +171,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
       ?.getField(DANCE_AI_FIELD_NAME);
 
     if (field === null) {
-      Lab2MetricsReporter.logWarning('Could not find AI field');
+      danceMetricsReporter.logWarning('Could not find AI field');
       return null;
     }
 
@@ -719,10 +719,20 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
               }}
               useRebrandedLikeStyles
             >
-              <button key={0} type="button" value={Toggle.EFFECT}>
+              <button
+                id="toggle-effect-button"
+                key={0}
+                type="button"
+                value={Toggle.EFFECT}
+              >
                 {i18n.danceAiModalEffectButton()}
               </button>
-              <button key={1} type="button" value={Toggle.CODE}>
+              <button
+                id="toggle-code-button"
+                key={1}
+                type="button"
+                value={Toggle.CODE}
+              >
                 {i18n.danceAiModalCodeButton()}
               </button>
             </ToggleGroup>
