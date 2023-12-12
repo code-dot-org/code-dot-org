@@ -62,7 +62,7 @@
             <arg name="this sprite" type="Sprite"/>
             <description>move a sprite to the right across the screen</description>
           </mutation>
-          <field name="NAME" id="moving east">moving east</field>
+          <field name="NAME" id="moving east">leaving the area</field>
           <statement name="STACK">
             <block type="gamelab_moveInDirection" uservisible="false" can_disconnect_from_parent="false">
               <field name="DIRECTION">"East"</field>
