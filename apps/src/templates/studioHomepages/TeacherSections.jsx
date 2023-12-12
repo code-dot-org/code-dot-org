@@ -44,6 +44,13 @@ class TeacherSections extends Component {
     );
   }
 
+  shouldRenderPlSections() {
+    return (
+      this.props.plSectionIds?.length > 0 ||
+      showCoteacherInviteNotification(this.props.coteacherInviteForPl)
+    );
+  }
+
   render() {
     const {
       plSectionIds,
@@ -69,7 +76,7 @@ class TeacherSections extends Component {
             />
           </ContentContainer>
         )}
-        {this.props.plSectionIds?.length > 0 && (
+        {this.shouldRenderPlSections() && (
           <ContentContainer heading={i18n.plSectionsTitle()}>
             <CoteacherInviteNotification isForPl={true} />
             <OwnedSections
