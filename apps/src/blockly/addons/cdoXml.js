@@ -62,6 +62,7 @@ export default function initializeBlocklyXml(blocklyWrapper) {
 
       // Further manipulate the XML for specific top block types.
       addNameToBlockFunctionDefinitionBlock(xmlChild);
+      addMutationToProcedureDefBlocks(xmlChild);
       addMutationToBehaviorDefBlocks(xmlChild);
       addMutationToMiniToolboxBlocks(xmlChild);
       makeWhenRunUndeletable(xmlChild);
@@ -168,6 +169,36 @@ export function addMutationToBehaviorDefBlocks(blockElement) {
     // Create new mutation attribute based on original block attribute.
     mutationElement.setAttribute('behaviorId', idAttribute);
   }
+}
+
+/**
+ * Adds a mutation element to a block if it is a procedure definition.
+ * CDO Blockly uses an unsupported method for serializing state
+ * where arbitrary XML attributes could hold important information.
+ * Mainline Blockly expects a mutator. The presence of the mutation element
+ * will trigger the block's domToMutation function to run, if it exists.
+ *
+ * @param {Element} blockElement - The XML element for a single block.
+ */
+export function addMutationToProcedureDefBlocks(blockElement) {
+  if (blockElement.getAttribute('type') !== BLOCK_TYPES.procedureDefinition) {
+    return;
+  }
+  const mutationElement =
+    blockElement.querySelector('mutation') ||
+    blockElement.ownerDocument.createElement('mutation');
+  // Place mutator before fields, values, and other nested blocks.
+  blockElement.insertBefore(mutationElement, blockElement.firstChild);
+
+  // We need to keep track of whether the user created the procedure definition.
+  // In CDO Blockly, the 'usercreated' flag was set on the block. Google Blockly
+  // expects this kind of extra state in a mutator.
+  const userCreated = readBooleanAttribute(
+    blockElement,
+    'usercreated',
+    FALSEY_DEFAULT
+  );
+  mutationElement.setAttribute('userCreated', userCreated);
 }
 
 /**
