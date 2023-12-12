@@ -317,7 +317,6 @@ export const blocks = {
     if (
       behaviorsFound &&
       Blockly.useModalFunctionEditor &&
-      block.workspace.toolbox_ &&
       // TODO: Support editing behaviors from within a modal editor workspace.
       block.workspace.id === Blockly.getMainWorkspace().id
     ) {

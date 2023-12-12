@@ -67,10 +67,11 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
   }
 
   /**
-   * Create an editor for the field.
+   * Trigger on click when the field is clicked.
+   * We always trigger on click even if the field is not editable.
    * @override
    */
-  showEditor_() {
+  onMouseDown_(e) {
     this.onClick();
   }
 
