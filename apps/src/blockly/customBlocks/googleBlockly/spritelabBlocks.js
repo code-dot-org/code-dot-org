@@ -224,7 +224,7 @@ export const blocks = {
     generator.behavior_definition = function (block) {
       // Define a procedure with a return value.
       const funcName = generator.nameDB_.getName(
-        block.getFieldValue('NAME'),
+        block.behaviorId,
         Blockly.Names.NameType.PROCEDURE
       );
 
@@ -293,10 +293,7 @@ export const blocks = {
       return null;
     };
     generator.gamelab_behavior_get = function () {
-      const name = generator.nameDB_.getName(
-        this.getFieldValue('NAME'),
-        'PROCEDURE'
-      );
+      const name = generator.nameDB_.getName(this.behaviorId, 'PROCEDURE');
       return [`new Behavior(${name}, [])`, generator.ORDER_ATOMIC];
     };
     generator.sprite_parameter_get = generator.variables_get;
