@@ -312,3 +312,4 @@ NetSimTabsComponent.prototype.setRouterLogData = function (logData) {
     this.routerTab_.setRouterLogData(logData);
   }
 };
+foo
