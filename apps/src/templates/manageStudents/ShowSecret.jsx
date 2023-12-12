@@ -127,12 +127,12 @@ class ShowSecret extends Component {
         {!this.state.isShowing && (
           <span data-for={tooltipId} data-tip>
             <Button
-              __useDeprecatedTag
               onClick={this.show}
               color={Button.ButtonColor.white}
               text={showButtonText}
               disabled={secretLoginDisabled}
               className="uitest-show-picture-or-word"
+              style={styles.button}
             />
             <ReactTooltip id={tooltipId} role="tooltip" effect="solid">
               <div>{i18n.disabledForTeacherAccountsTooltip()}</div>
@@ -151,18 +151,17 @@ class ShowSecret extends Component {
               />
             )}
             <Button
-              __useDeprecatedTag
               onClick={this.reset}
               color={Button.ButtonColor.blue}
               text={i18n.reset()}
-              style={styles.reset}
+              style={{ ...styles.button, ...styles.reset}}
               className="uitest-reset-password"
             />
             <Button
-              __useDeprecatedTag
               onClick={this.hide}
               color={Button.ButtonColor.white}
               text={hideButtonText}
+              style={styles.button}
             />
           </div>
         )}
@@ -178,6 +177,10 @@ const styles = {
   image: {
     width: 45,
   },
+  button: {
+    margin: 0,
+    boxShadow: 'inset 0 2px 0 0 rgb(255 255 255 / 40%)',
+  }
 };
 
 export const UnconnectedShowSecret = ShowSecret;
