@@ -7,4 +7,5 @@
 
 .codeButton {
   @include remove-button-styles;
+  font-size: 13px;
 }
