@@ -1,5 +1,6 @@
 import React, {useCallback, useMemo, useState} from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import {Editable, withReact, Slate} from 'slate-react';
 import {
   Editor,
@@ -13,7 +14,7 @@ import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
 import javalabMsg from '@cdo/javalab/locale';
 import CodeReviewError from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewError';
-import '@cdo/apps/templates/instructions/codeReviewV2/codeReviewCommentEditor.scss';
+import moduleStyles from '@cdo/apps/templates/instructions/codeReviewV2/codeReviewCommentEditor.module.scss';
 
 const CodeReviewCommentEditor = ({addCodeReviewComment}) => {
   const renderElement = useCallback(props => <Element {...props} />, []);
@@ -85,22 +86,23 @@ const CodeReviewCommentEditor = ({addCodeReviewComment}) => {
       <div style={styles.textareaWrapper}>
         <Slate editor={editor} value={initialValue} onChange={onChange}>
           <div style={styles.buttonsArea}>
-            <div
-              role="button"
+            <button
+              type="button"
               style={styles.codeButton}
-              onMouseDown={event => {
+              className={classNames(moduleStyles.codeButton)}
+              onClick={event => {
                 event.preventDefault();
                 toggleBlock(editor, 'code_block');
               }}
             >
               <FontAwesome icon="code" />
-            </div>
+            </button>
           </div>
           <Editable
             renderElement={renderElement}
             renderLeaf={renderLeaf}
             placeholder={javalabMsg.addACommentToReview()}
-            className="editable-text-area"
+            className={classNames(moduleStyles.editableTextArea)}
             spellCheck
             autoFocus
           />

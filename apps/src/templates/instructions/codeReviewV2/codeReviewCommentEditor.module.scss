@@ -1,0 +1,10 @@
+@import '../../../mixins.scss';
+
+.editableTextArea {
+  min-height: 40px !important;
+  padding: 10px 8px;
+}
+
+.codeButton {
+  @include remove-button-styles;
+}
