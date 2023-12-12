@@ -20,7 +20,6 @@ function CollapserIcon({
   className,
 }) {
   const iconClass = isCollapsed ? collapsedIconClass : expandedIconClass;
-  console.log("foo");
 
   return (
     <button

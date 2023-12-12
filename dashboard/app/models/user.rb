@@ -430,7 +430,7 @@ class User < ApplicationRecord
   end
 
   def delete_course_as_facilitator(course)
-    self.courses_as_facilitator.find_by(course: course).try(:destroy)
+    courses_as_facilitator.find_by(course: course).try(:destroy)
   end
 
   # Given a user_id, username, or email, attempts to find the relevant user
