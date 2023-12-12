@@ -2,6 +2,9 @@
 // https://github.com/google/blockly-samples/blob/82f1c35be007a99b7446e199448d083ac68a9f84/plugins/block-shareable-procedures/src/blocks.ts#L1184-L1285
 // We need a bug fix not present in our current (v9) version of the mixin, and
 // we need to not run the on change handler if the block is an embedded workspace.
+
+import {frameSizes} from '@cdo/apps/blockly/addons/cdoConstants';
+
 // We may be able to extend the mixin once we upgrade to v10.
 const procedureCallerOnChangeMixin = {
   /**
@@ -96,7 +99,7 @@ const procedureCallerOnChangeMixin = {
     const blockDef = {
       type: this.defType_,
       x: xy.x + Blockly.config.snapRadius * (this.RTL ? -1 : 1),
-      y: xy.y + Blockly.config.snapRadius * 2,
+      y: xy.y + Blockly.config.snapRadius * 2 + frameSizes.BLOCK_HEADER_HEIGHT,
       extraState: {
         params: params.map(p => ({name: p})),
       },

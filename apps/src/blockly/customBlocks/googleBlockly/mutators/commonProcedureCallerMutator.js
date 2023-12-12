@@ -41,15 +41,29 @@ export const commonFunctions = {
     // If the state we are loading doesn't match the workspace, we fall back
     // to using the behavior id.
     if (!this.model_) {
+      name = this.behaviorId;
       this.model_ = this.findProcedureModel_(
-        this.behaviorId,
+        name,
         this.paramsFromSerializedState_
       );
     }
-    // If we still can't find the right model, assign the first model entry
-    // so that the student's program doesn't crash.
-    if (!this.model_) {
-      this.model_ = this.workspace.getProcedureMap().getProcedures()[0];
+    // If we still can't find a model, create a new one.
+    if (!this.model_ && !this.workspace.isFlyout) {
+      let def = Blockly.Procedures.getDefinition(name, this.workspace);
+      if (!this.defMatches_(def)) {
+        def = null;
+      }
+      if (!def) {
+        // We have no def nor procedure model.
+        this.model_ = this.createDef_(name, this.paramsFromSerializedState_);
+      }
+      if (!this.getProcedureModel()) {
+        // We have a def, but no reference to its model.
+        this.model_ = this.findProcedureModel_(
+          name,
+          this.paramsFromSerializedState_
+        );
+      }
     }
     if (this.getProcedureModel()) {
       this.initBlockWithProcedureModel_();

@@ -58,7 +58,7 @@ export default class CdoFieldFlyout extends GoogleBlockly.Field {
   initView() {
     this.workspace_ = this.getSourceBlock().workspace;
     this.flyout_ = new CdoBlockFlyout({
-      ...Blockly.getMainWorkspace().options,
+      ...this.workspace_.options,
       disabledPatternId: this.workspace_.options.disabledPatternId,
       parentWorkspace: this.workspace_,
       RTL: this.workspace_.RTL,
