@@ -295,6 +295,7 @@ input[type=submit] {
     with the other classes */
   &.big {
     font-size: 1.25rem;
+    padding-inline: 1.25rem;
   }
 
   /* Small button styles
