@@ -163,7 +163,7 @@ export const procedureDefMutator = {
 
     setBlockDescription(this, state);
     this.doProcedureUpdate();
-    this.setDeletable(state['initialDeleteConfig']);
+    this.setDeletable(state['initialDeleteConfig'] === false ? false : true);
     this.setStatements_(state['hasStatements'] === false ? false : true);
     this.userCreated = state['userCreated'];
   },
