@@ -14177,8 +14177,8 @@ en:
           title: Creativity with Code
           description_audience: ''
           description_short: ''
-          description: "**You will:**\n\n* Get an introduction to Code.org’s mission. \n* Learn how to navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes\n"
-          student_description: "**You will:**\n\n* Get an introduction to Code.org’s mission. \n* Learn how to navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes\n"
+          description: "**You will:**\n\n* Identify and explain fundamental CS concepts, including Sprites, evenets and behaviors. \n\n* Demonstrate the application of event-based programming.\n\n* Create a program using sprites, events, and behaviors.\n\n**Suggested time:** 60 minutes\n"
+          student_description: "**You will:**\n\n* Identify and explain fundamental CS concepts, including Sprites, evenets and behaviors. \n\n* Demonstrate the application of event-based programming.\n\n* Create a program using sprites, events, and behaviors.\n\n**Suggested time:** 60 minutes\n\n"
         self-paced-pl-k5-2024-1:
           lessons:
             lesson-1:
