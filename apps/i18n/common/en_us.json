@@ -1509,6 +1509,7 @@
   "loginTypeGoogleClassroomButton": "Use Google Classroom",
   "loginTypeGoogleClassroomDescription": "Sync your Code.org section with an existing Google Classroom. Students must log in with their Google account.",
   "loginTypeGoogleClassroomDescriptionUpdated": "Import a roster from one of your Google Classrooms to create student accounts.",
+  "loginTypeLti": "LTI Integration",
   "loginTypeMicrosoftClassroom": "Microsoft Classroom",
   "loginTypeMicrosoftClassroomButton": "Use Microsoft Classroom",
   "loginTypeMicrosoftClassroomDescription": "Sync your Code.org section with an existing Microsoft Classroom.",
