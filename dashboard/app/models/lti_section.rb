@@ -20,6 +20,7 @@ class LtiSection < ApplicationRecord
   acts_as_paranoid
   belongs_to :lti_course
   belongs_to :section
+  has_many :followers, through: :section
   validates :section_id, uniqueness: true
   validates :lms_section_id, presence: true
   before_destroy :soft_delete_associated_section
