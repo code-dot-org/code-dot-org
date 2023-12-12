@@ -290,6 +290,13 @@ input[type=submit] {
     color: var(--neutral_dark70);
   }
 
+  /* Big button styles
+    - this can be used in combination
+    with the other classes */
+  &.big {
+    font-size: 1.25rem;
+  }
+
   /* Small button styles
     - this can be used in combination
     with the other classes */
