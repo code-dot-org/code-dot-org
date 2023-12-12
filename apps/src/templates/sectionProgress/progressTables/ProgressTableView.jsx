@@ -16,7 +16,6 @@ import {
   getCurrentUnitData,
   jumpToLessonDetails,
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import styleConstants from '@cdo/apps/styleConstants';
 import ProgressTableStudentList from './ProgressTableStudentList';
 import ProgressTableContentView from './ProgressTableContentView';
 import SummaryViewLegend from '@cdo/apps/templates/sectionProgress/progressTables/SummaryViewLegend';
@@ -355,7 +354,7 @@ class ProgressTableView extends React.Component {
     return (
       // outer div contains both table and legend
       <div>
-        <div style={styles.container} className="progress-table">
+        <div className="progress-table">
           <div style={styles.studentList} className="student-list">
             <ProgressTableStudentList
               key={key}
@@ -400,16 +399,13 @@ class ProgressTableView extends React.Component {
 }
 
 const styles = {
-  container: {
-    width: styleConstants['content-width'],
-  },
   studentList: {
-    display: 'inline-block',
-    verticalAlign: 'top',
+    position: 'absolute',
   },
   contentView: {
-    display: 'inline-block',
-    width: parseInt(progressTableStyleConstants.CONTENT_VIEW_WIDTH),
+    paddingInlineStart: parseInt(
+      progressTableStyleConstants.STUDENT_LIST_WIDTH
+    ),
   },
 };
 
