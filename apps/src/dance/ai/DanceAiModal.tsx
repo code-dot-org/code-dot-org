@@ -311,7 +311,10 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     startGenerating();
   };
 
-  const handleStartOverClick = (usingHeader: boolean) => {
+  const handleStartOverClick = (
+    e: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) => {
+    const usingHeader = e.currentTarget.dataset.usingheader || false;
     analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_RESTARTED, {
       emojis: inputs,
       usingHeader,
@@ -574,7 +577,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
       <div
         className={moduleStyles.inputsContainer}
         tabIndex={0}
-        onClick={() => handleStartOverClick(true)}
+        onClick={handleStartOverClick}
+        data-usingheader
       >
         {getRangeArray(0, SLOT_COUNT - 1).map(index => {
           const item = getItem(inputs[index]);
@@ -913,7 +917,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
               currentMode={mode}
               showFor={[Mode.RESULTS]}
               id="start-over-button"
-              onClick={() => handleStartOverClick(false)}
+              onClick={handleStartOverClick}
               color={Button.ButtonColor.neutralDark}
               className={classNames(
                 moduleStyles.button,
