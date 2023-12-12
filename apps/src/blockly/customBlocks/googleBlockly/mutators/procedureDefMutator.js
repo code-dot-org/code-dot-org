@@ -89,7 +89,7 @@ export const procedureDefMutator = {
 
     this.userCreated = readBooleanAttribute(
       xmlElement,
-      'usercreated',
+      'userCreated',
       FALSEY_DEFAULT
     );
     const deletableAttribute = readBooleanAttribute(

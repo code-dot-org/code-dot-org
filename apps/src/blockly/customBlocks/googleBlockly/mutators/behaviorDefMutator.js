@@ -81,7 +81,7 @@ export const behaviorDefMutator = {
     this.behaviorId = xmlElement.getAttribute('behaviorId');
     this.userCreated = readBooleanAttribute(
       xmlElement,
-      'usercreated',
+      'userCreated',
       FALSEY_DEFAULT
     );
     const deletableAttribute = readBooleanAttribute(
