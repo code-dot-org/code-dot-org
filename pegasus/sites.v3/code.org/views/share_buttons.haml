@@ -1,5 +1,3 @@
--gplus ||= nil
-
 = view 'popup_window.js'
 
 :ruby
@@ -31,7 +29,3 @@
       %a.link-button.secondary.small.window-popup.share-button-twitter{href: "https://twitter.com/intent/tweet?#{twitter.to_query}"}
         %i{class: "fa-brands fa-twitter"}
         =I18n.t(:share_on_twitter)
-    -download_url ||= nil
-    -unless download_url.nil_or_empty?
-      %a.link-button.secondary.small.desktop-feature{href: download_url}
-        %img{src: "/images/download.png", width: "35px"}
