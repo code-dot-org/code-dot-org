@@ -4,18 +4,6 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "announcements": [
-        {
-          "key": "9664ad65-66f4-46d1-b0dd-14f7d74dcf80",
-          "notice": "Unit Under Construction",
-          "details": "In response to the changes to the Create Performance Task the College Board announced on Aug 28, we will be updating this unit during the Fall 2023. Until these updates are complete, some lessons, activities, and resources will be out of date with the new format of the Create Performance Task.",
-          "link": "https://apcentral.collegeboard.org/courses/ap-computer-science-principles/exam",
-          "type": "bullhorn_yellow",
-          "visibility": "Teacher-only",
-          "dismissible": true,
-          "buttonText": "Learn More"
-        }
-      ],
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -30,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-12-08 01:37:11 UTC",
+    "serialized_at": "2023-12-11 22:55:39 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1023,7 +1011,7 @@
       "key": "f2d81ed8-e42d-4491-8a2b-7ab5a14dc36a",
       "position": 18,
       "properties": {
-        "description": "You have made good progress today, and are halfway done with the free response portion of this mock exam. We will conclude tomorrow with the remaining to questions. To end today, let's reflect on what has been done so far. ",
+        "description": "You have made good progress today, and are halfway done with the free response portion of this mock exam. We will conclude tomorrow with the remaining two questions. To end today, let's reflect on what has been done so far. ",
         "remarks": true
       },
       "seeding_key": {
