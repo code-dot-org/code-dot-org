@@ -16,6 +16,7 @@ import {
   studentLevelInfoShape,
 } from './rubricShapes';
 import LearningGoal from './LearningGoal';
+import LearningGoals from'./LearningGoals';
 import Button from '@cdo/apps/templates/Button';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import classnames from 'classnames';
@@ -209,7 +210,7 @@ export default function RubricContent({
           >
             <FontAwesome icon="angle-left" />
           </button>
-          <LearningGoal
+          <LearningGoals
             key={rubric.learningGoals[currentLearningGoal].key}
             learningGoal={rubric.learningGoals[currentLearningGoal]}
             teacherHasEnabledAi={teacherHasEnabledAi}
