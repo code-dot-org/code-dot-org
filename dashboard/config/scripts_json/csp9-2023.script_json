@@ -4,18 +4,6 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "announcements": [
-        {
-          "key": "9664ad65-66f4-46d1-b0dd-14f7d74dcf80",
-          "notice": "Unit Under Construction",
-          "details": "In response to the changes to the Create Performance Task the College Board announced on Aug 28, we will be updating this unit during the Fall 2023. Until these updates are complete, some lessons, activities, and resources will be out of date with the new format of the Create Performance Task.",
-          "link": "https://apcentral.collegeboard.org/courses/ap-computer-science-principles/exam",
-          "type": "bullhorn_yellow",
-          "visibility": "Teacher-only",
-          "dismissible": true,
-          "buttonText": "Learn More"
-        }
-      ],
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -30,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-11-22 15:55:26 UTC",
+    "serialized_at": "2023-12-11 22:55:39 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -125,10 +113,10 @@
       "properties": {
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "It is finally time for students to take on the Create Performance Task. For a total of 9 class hours, students should work on their projects with only types of teacher support allowed (essentially: Advise on process, don’t influence or evaluate ideas).  Students may also work with a collaborative partner in *in development of their program* - written responses must be done on their own.\n\nThe lesson includes reminders about how you can interact with students while they are working on their projects, and suggestions about time line. The Create PT requires a minimum of 12 hours of class time.  At the end, students will submit their program code, program video, and written responses through their AP digital portfolio.",
+        "overview": "It is finally time for students to take on the Create Performance Task. For a total of 9 class hours, students should work on their projects with only types of teacher support allowed (essentially: Advise on process, don’t influence or evaluate ideas).  Students may also work with a collaborative partner in *in development of their program* - written responses must be done on their own.\n\nThe lesson includes reminders about how you can interact with students while they are working on their projects, and suggestions about time line. The Create PT requires a minimum of 9 hours of class time.  At the end, students will submit their program code, program video, and personalized project reference through their AP digital portfolio.",
         "preparation": "* Review pages 169-171 in the [Course and Exam Description](https://apcentral.collegeboard.org/pdf/ap-computer-science-principles-course-and-exam-description.pdf?course=ap-computer-science-principles)  to understand the teacher's role on the Create PT\n* Review how to create a stand-alone App Lab project to assist students\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1oA6gTYeeHtlUhwvE4wN2C9l_JfrDVYfHbL-8sE18ahI/edit?usp=sharing)",
         "purpose": ".",
-        "student_overview": "The lesson includes some final reminders and guidelines for completing the Create PT before officially starting. For a total of 9 class hours, you will work on your project with only types of teacher support allowed (essentially: Advise on process, not ideas).  You may also work with a collaborative partner in *in development of you program* - written responses must be done on your own."
+        "student_overview": "The lesson includes some final reminders and guidelines for completing the Create PT before officially starting. For a total of 9 class hours, you will work on your project with only types of teacher support allowed (essentially: Advise on process, not ideas).  You may also work with a collaborative partner in *in development of you program* - personalized project references must be done on your own."
       },
       "seeding_key": {
         "lesson.key": "Create PT - Complete the Task (12 hrs)",
@@ -1023,7 +1011,7 @@
       "key": "f2d81ed8-e42d-4491-8a2b-7ab5a14dc36a",
       "position": 18,
       "properties": {
-        "description": "You have made good progress today, and are halfway done with the free response portion of this mock exam. We will conclude tomorrow with the remaining to questions. To end today, let's reflect on what has been done so far. ",
+        "description": "You have made good progress today, and are halfway done with the free response portion of this mock exam. We will conclude tomorrow with the remaining two questions. To end today, let's reflect on what has been done so far. ",
         "remarks": true
       },
       "seeding_key": {
@@ -1350,6 +1338,7 @@
       "key": "activity_guide_version_a_-_create_pt_mock_exam",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -1362,6 +1351,7 @@
       "key": "activity_guide_version_b_-_create_pt_mock_exam",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -1425,30 +1415,6 @@
       },
       "seeding_key": {
         "resource.key": "ap_cs_principles_course_and_exam_description_ced_"
-      }
-    },
-    {
-      "name": "APCSP CT 20-21 Scoring Guidelines",
-      "url": "https://apcentral.collegeboard.org/media/pdf/ap21-sg-computer-science-principles.pdf",
-      "key": "apcsp_ct_20-21_scoring_guidelines",
-      "properties": {
-        "audience": "Student",
-        "type": "Rubric"
-      },
-      "seeding_key": {
-        "resource.key": "apcsp_ct_20-21_scoring_guidelines"
-      }
-    },
-    {
-      "name": "APCSP CT 20-21 Task Instructions",
-      "url": "https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf",
-      "key": "apcsp_ct_20-21_task_instructions",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "apcsp_ct_20-21_task_instructions"
       }
     },
     {
@@ -1525,6 +1491,7 @@
       "key": "create_pt_mock_exam_description",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -1537,6 +1504,7 @@
       "key": "create_pt_survival_guide_23-24",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Resource"
       },
       "seeding_key": {
@@ -1636,18 +1604,6 @@
       "seeding_key": {
         "lesson.key": "Create PT   Make a Plan",
         "resource.key": "csp_unit_9_-_lesson_3_-_make_a_plan"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Create PT - Complete the Task (12 hrs)",
-        "resource.key": "apcsp_ct_20-21_scoring_guidelines"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Create PT - Complete the Task (12 hrs)",
-        "resource.key": "apcsp_ct_20-21_task_instructions"
       }
     },
     {
