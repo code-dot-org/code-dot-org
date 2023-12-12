@@ -38,6 +38,14 @@ const CoteacherInviteNotification = ({
     return null;
   }
 
+  let invite;
+
+  if (showCoteacherForPlInviteNotification(coteacherInviteForPl) && isForPl) {
+    invite = coteacherInviteForPl;
+  } else if (showCoteacherInviteNotification(coteacherInvite) && !isForPl) {
+    invite = coteacherInvite;
+  }
+
   const buttonAction = api => {
     HttpClient.put(api, '', true)
       .then(() => {
@@ -61,22 +69,22 @@ const CoteacherInviteNotification = ({
     buttonAction(`/api/v1/section_instructors/${id}/decline`);
   };
 
-  if (showCoteacherInviteNotification(coteacherInvite) && !isForPl) {
+  if (invite) {
     return (
       <Notification
         dismissible={false}
         type={NotificationType.collaborate}
         iconStyles={styles.icon}
         notice={i18n.coteacherInvite({
-          invitedByName: coteacherInvite.invited_by_name,
+          invitedByName: invite.invited_by_name,
         })}
         details={
           <BodyTwoText style={{marginBottom: 0}}>
             {i18n.coteacherInviteDescription({
-              invitedByEmail: coteacherInvite.invited_by_email,
+              invitedByEmail: invite.invited_by_email,
             })}
             <br />
-            <StrongText>{coteacherInvite.section_name}</StrongText>
+            <StrongText>{invite.section_name}</StrongText>
           </BodyTwoText>
         }
         tooltipText={i18n.coteacherTooltip()}
@@ -84,66 +92,13 @@ const CoteacherInviteNotification = ({
         buttons={[
           {
             text: 'Decline',
-            onClick: () =>
-              declineCoteacherInvite(
-                coteacherInvite.id,
-                coteacherInvite.section_id
-              ),
+            onClick: () => declineCoteacherInvite(invite.id, invite.section_id),
             color: Button.ButtonColor.neutralDark,
             style: styles.declineButton,
           },
           {
             text: 'Accept',
-            onClick: () =>
-              acceptCoteacherInvite(
-                coteacherInvite.id,
-                coteacherInvite.section_id
-              ),
-            color: Button.ButtonColor.brandSecondaryDefault,
-            style: styles.acceptButton,
-          },
-        ]}
-      />
-    );
-  }
-  if (showCoteacherForPlInviteNotification(coteacherInviteForPl) && isForPl) {
-    return (
-      <Notification
-        dismissible={false}
-        type={NotificationType.collaborate}
-        iconStyles={styles.icon}
-        notice={i18n.coteacherInvite({
-          invitedByName: coteacherInviteForPl.invited_by_name,
-        })}
-        details={
-          <BodyTwoText style={{marginBottom: 0}}>
-            {i18n.coteacherInviteDescription({
-              invitedByEmail: coteacherInviteForPl.invited_by_email,
-            })}
-            <br />
-            <StrongText>{coteacherInviteForPl.section_name}</StrongText>
-          </BodyTwoText>
-        }
-        tooltipText={i18n.coteacherTooltip()}
-        buttonsStyles={styles.buttons}
-        buttons={[
-          {
-            text: 'Decline',
-            onClick: () =>
-              declineCoteacherInvite(
-                coteacherInviteForPl.id,
-                coteacherInviteForPl.section_id
-              ),
-            color: 'green',
-            style: styles.declineButton,
-          },
-          {
-            text: 'Accept',
-            onClick: () =>
-              acceptCoteacherInvite(
-                coteacherInviteForPl.id,
-                coteacherInviteForPl.section_id
-              ),
+            onClick: () => acceptCoteacherInvite(invite.id, invite.section_id),
             color: Button.ButtonColor.brandSecondaryDefault,
             style: styles.acceptButton,
           },
