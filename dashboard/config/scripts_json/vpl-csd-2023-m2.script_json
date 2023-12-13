@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-18 03:50:29 UTC",
+    "serialized_at": "2023-12-13 00:26:59 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -942,43 +942,13 @@
     }
   ],
   "resources": [
-    {
-      "name": "23-24 CS Discoveries Virtual M2 Agenda",
-      "url": "https://docs.google.com/document/d/154IcQMYNsEyN5EhjjQfKXDrWjGhvJwXCI0N58YVfyfQ/edit?usp=drive_link",
-      "key": "23-24_cs_discoveries_virtual_m2_agenda",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "23-24_cs_discoveries_virtual_m2_agenda"
-      }
-    },
-    {
-      "name": "23-24 CS Discoveries Virtual M2 Slides",
-      "url": "https://docs.google.com/presentation/d/1IJfhIKA0QD3IpfVwNzLVSrrYhv13j_lVHYc9YMLJR10/edit?usp=drive_link",
-      "key": "23-24_cs_discoveries_virtual_m2_slides",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "23-24_cs_discoveries_virtual_m2_slides"
-      }
-    }
+
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "23-24_cs_discoveries_virtual_m2_agenda",
-        "script.name": "vpl-csd-2023-m2"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "23-24_cs_discoveries_virtual_m2_slides",
-        "script.name": "vpl-csd-2023-m2"
-      }
-    }
+
   ],
   "scripts_student_resources": [
 

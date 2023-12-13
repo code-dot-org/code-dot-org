@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-09-15 23:14:13 UTC",
+    "serialized_at": "2023-12-13 00:26:59 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -624,6 +624,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD M3 Theme Introduction_2023"
+        ],
         "progression": "Module 3 Overview & Check In (~10 mins)"
       },
       "bonus": false,
@@ -646,6 +649,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD M3 Check-in_2023"
+        ],
         "progression": "Module 3 Overview & Check In (~10 mins)"
       },
       "bonus": false,
@@ -743,6 +749,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - M3 - U4L1 Investigation_2022"
+        ],
         "progression": "Curriculum Investigation (~60 mins)"
       },
       "bonus": false,
@@ -790,6 +799,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 3 - U4L3 and 4 Investigation_2022"
+        ],
         "progression": "Curriculum Investigation (~60 mins)"
       },
       "bonus": false,
@@ -837,6 +849,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 3 - Conclusions and Connections_2023"
+        ],
         "progression": "Conclusions and Connections (~10 mins)"
       },
       "bonus": false,
@@ -859,6 +874,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - M3_CSD U4 Chapter 1 Project_2023"
+        ],
         "progression": "Conclusions and Connections (~10 mins)"
       },
       "bonus": false,
@@ -881,6 +899,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 3 - L13 LInkingScreens_2023"
+        ],
         "progression": "Conclusions and Connections (~10 mins)"
       },
       "bonus": false,
@@ -903,6 +924,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - M3_CSD U4 Chapter 2 Project_2023"
+        ],
         "progression": "Conclusions and Connections (~10 mins)"
       },
       "bonus": false,
@@ -950,6 +974,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - M3 Wrap Up_2023"
+        ],
         "progression": "Module 3 Asynchronous Wrap Up (~5 mins)"
       },
       "bonus": false,
@@ -1162,156 +1189,22 @@
     }
   ],
   "resources": [
-    {
-      "name": "23-24 CS Discoveries Virtual M3 Agenda",
-      "url": "https://docs.google.com/document/d/1ooUKmEva7BvQcXUP-DNc9dATwT0sMM_4CfjONa7WQGc/edit?usp=drive_link",
-      "key": "23-24_cs_discoveries_virtual_m3_agenda",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "23-24_cs_discoveries_virtual_m3_agenda"
-      }
-    },
-    {
-      "name": "23-24 CS Discoveries Virtual M3 Slides",
-      "url": "https://docs.google.com/presentation/d/1Vswx3L6DgMyNGx3y08os9y-MwYsQih3wYTfZE9_ZmeQ/edit?usp=drive_link",
-      "key": "23-24_cs_discoveries_virtual_m3_slides",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "23-24_cs_discoveries_virtual_m3_slides"
-      }
-    },
-    {
-      "name": "User Interface Screens",
-      "url": "https://docs.google.com/document/d/1Mirzvq92BRcGrI4z0Mm4HamTTu_bkBiXFfsHYxTzXAM/edit",
-      "key": "user_interface_screens",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "user_interface_screens"
-      }
-    },
-    {
-      "name": "User Interfaces",
-      "url": "https://docs.google.com/presentation/d/1lQ8QF0NB5hSNqcSQiEXsX8704TxVM6tk9Goq9ajvMoA/template/preview",
-      "key": "user_interfaces",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "user_interfaces"
-      }
-    },
-    {
-      "name": "User Testing (Computer)",
-      "url": "https://docs.google.com/document/d/1_ce_F8_tnexWhS718ALJadACNKe0oomeIeyKTwuWmAg/edit",
-      "key": "user_testing_computer_",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "user_testing_computer_"
-      }
-    },
-    {
-      "name": "User Testing (User)",
-      "url": "https://docs.google.com/document/d/1qE028_n5aq9n8ebVm09uzu0169ykzvxfl8pUvV6S6D8/edit",
-      "key": "user_testing_user_",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "user_testing_user_"
-      }
-    }
+
   ],
   "lessons_resources": [
-    {
-      "seeding_key": {
-        "lesson.key": "User Interfaces",
-        "resource.key": "user_interface_screens"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "User Interfaces",
-        "resource.key": "user_interfaces"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "User Interfaces",
-        "resource.key": "user_testing_computer_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "User Interfaces",
-        "resource.key": "user_testing_user_"
-      }
-    }
+
   ],
   "scripts_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "23-24_cs_discoveries_virtual_m3_agenda",
-        "script.name": "vpl-csd-2023-m3"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "23-24_cs_discoveries_virtual_m3_slides",
-        "script.name": "vpl-csd-2023-m3"
-      }
-    }
+
   ],
   "scripts_student_resources": [
 
   ],
   "vocabularies": [
-    {
-      "key": "prototype",
-      "word": "Prototype",
-      "definition": "A first or early model of a product that allows you to test assumptions before developing a final version.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "prototype"
-      }
-    },
-    {
-      "key": "user_interface",
-      "word": "User Interface",
-      "definition": "The visual elements of a program through which a user controls or communicates with the application. Often abbreviated UI.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "user_interface"
-      }
-    }
+
   ],
   "lessons_vocabularies": [
-    {
-      "seeding_key": {
-        "lesson.key": "User Interfaces",
-        "vocabulary.key": "prototype"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "User Interfaces",
-        "vocabulary.key": "user_interface"
-      }
-    }
+
   ],
   "lessons_programming_expressions": [
 

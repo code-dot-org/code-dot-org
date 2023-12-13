@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-12 14:54:06 UTC",
+    "serialized_at": "2023-12-13 00:26:57 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -492,6 +492,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day3-async1intro"
+        ],
         "progression": "Introduction to Asynchronous Part 1"
       },
       "bonus": false,
@@ -514,6 +517,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day3_async1jigsaw1"
+        ],
         "progression": "Lesson Investigation Jigsaw"
       },
       "bonus": false,
@@ -536,6 +542,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day3_async1jigsaw2"
+        ],
         "progression": "Lesson Investigation Jigsaw"
       },
       "bonus": false,
@@ -558,6 +567,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day3-async2intro"
+        ],
         "progression": "Asynchronous Part 2"
       },
       "bonus": false,
@@ -580,6 +592,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day3_async2industry"
+        ],
         "progression": "Asynchronous Part 2"
       },
       "bonus": false,
@@ -602,6 +617,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day3_async2buildassess"
+        ],
         "progression": "Asynchronous Part 2"
       },
       "bonus": false,
@@ -624,6 +642,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csa-summer-day3_async2wrapup"
+        ],
         "progression": "Module 3 Wrap Up "
       },
       "bonus": false,
@@ -728,43 +749,13 @@
     }
   ],
   "resources": [
-    {
-      "name": "2024 Virtual CSA Summer Workshop - Day 3 Agenda",
-      "url": "https://docs.google.com/document/d/1MR94G6o2o-Lay746Y_e9P8oiv_8kMXl8zVbrb0pYiMc/edit?usp=drive_link",
-      "key": "2024_virtual_csa_summer_workshop_-_day_3_agenda",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "2024_virtual_csa_summer_workshop_-_day_3_agenda"
-      }
-    },
-    {
-      "name": "2024 Virtual CSA Summer Workshop - Day 3 Slides",
-      "url": "https://docs.google.com/presentation/d/1c8OvMdu4RVO_ENTSp5ipJ1rjGA3ytdMfFlwsR_hhkaI/edit?usp=drive_link",
-      "key": "2024_virtual_csa_summer_workshop_-_day_3_slides",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "2024_virtual_csa_summer_workshop_-_day_3_slides"
-      }
-    }
+
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "2024_virtual_csa_summer_workshop_-_day_3_agenda",
-        "script.name": "virtual-pl-csa-summer-day3"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "2024_virtual_csa_summer_workshop_-_day_3_slides",
-        "script.name": "virtual-pl-csa-summer-day3"
-      }
-    }
+
   ],
   "scripts_student_resources": [
 
