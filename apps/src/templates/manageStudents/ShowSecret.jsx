@@ -154,7 +154,7 @@ class ShowSecret extends Component {
               onClick={this.reset}
               color={Button.ButtonColor.blue}
               text={i18n.reset()}
-              style={{ ...styles.button, ...styles.reset}}
+              style={{...styles.button, ...styles.reset}}
               className="uitest-reset-password"
             />
             <Button
@@ -180,7 +180,7 @@ const styles = {
   button: {
     margin: 0,
     boxShadow: 'inset 0 2px 0 0 rgb(255 255 255 / 40%)',
-  }
+  },
 };
 
 export const UnconnectedShowSecret = ShowSecret;
