@@ -24,6 +24,7 @@ class TeacherSections extends Component {
     asyncLoadSectionData: PropTypes.func.isRequired,
     asyncLoadCoteacherInvite: PropTypes.func.isRequired,
     coteacherInvite: PropTypes.object,
+    coteacherInviteForPl: PropTypes.object,
     studentSectionIds: PropTypes.array,
     plSectionIds: PropTypes.array,
     hiddenPlSectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
@@ -40,6 +41,13 @@ class TeacherSections extends Component {
     return (
       this.props.studentSectionIds?.length > 0 ||
       showCoteacherInviteNotification(this.props.coteacherInvite)
+    );
+  }
+
+  shouldRenderPlSections() {
+    return (
+      this.props.plSectionIds?.length > 0 ||
+      showCoteacherInviteNotification(this.props.coteacherInviteForPl)
     );
   }
 
@@ -61,15 +69,16 @@ class TeacherSections extends Component {
         </ContentContainer>
         {this.shouldRenderSections() && (
           <ContentContainer heading={i18n.sectionsTitle()}>
-            <CoteacherInviteNotification />
+            <CoteacherInviteNotification isForPl={false} />
             <OwnedSections
               sectionIds={studentSectionIds}
               hiddenSectionIds={hiddenStudentSectionIds}
             />
           </ContentContainer>
         )}
-        {this.props.plSectionIds?.length > 0 && (
+        {this.shouldRenderPlSections() && (
           <ContentContainer heading={i18n.plSectionsTitle()}>
+            <CoteacherInviteNotification isForPl={true} />
             <OwnedSections
               isPlSections={true}
               sectionIds={plSectionIds}
@@ -87,6 +96,7 @@ export const UnconnectedTeacherSections = TeacherSections;
 export default connect(
   state => ({
     coteacherInvite: state.teacherSections.coteacherInvite,
+    coteacherInviteForPl: state.teacherSections.coteacherInviteForPl,
     studentSectionIds: state.teacherSections.studentSectionIds,
     plSectionIds: state.teacherSections.plSectionIds,
     hiddenPlSectionIds: hiddenPlSectionIds(state),

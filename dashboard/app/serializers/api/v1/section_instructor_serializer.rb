@@ -21,7 +21,7 @@
 #
 
 class Api::V1::SectionInstructorSerializer < ActiveModel::Serializer
-  attributes :id, :status, :invited_by_name, :invited_by_email, :section_name, :section_id, :instructor_name, :instructor_email
+  attributes :id, :status, :invited_by_name, :invited_by_email, :section_name, :section_id, :instructor_name, :instructor_email, :participant_type
 
   def invited_by_name
     object.invited_by&.name
