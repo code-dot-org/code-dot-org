@@ -1242,6 +1242,26 @@ class UnitTest < ActiveSupport::TestCase
     assert_equal expected_announcements, summary[:announcements]
   end
 
+  test 'summarize_for_unit_selector determines whether feedback is enabled' do
+    course_version = create :course_version, :with_unit
+    course_offering = course_version.course_offering
+    course_offering.update!(marketing_initiative: 'CSD')
+    unit = course_version.content_root
+    summary = unit.summarize_for_unit_selector
+    assert summary[:is_feedback_enabled]
+
+    course_offering.update!(marketing_initiative: 'HOC')
+    unit.reload
+    summary = unit.summarize_for_unit_selector
+    refute summary[:is_feedback_enabled]
+
+    # no course version means no feedback
+    unit = create :script
+    refute unit.get_course_version
+    summary = unit.summarize_for_unit_selector
+    refute summary[:is_feedback_enabled]
+  end
+
   test 'should generate PLC objects for migrated unit' do
     i18n = {
       'en' => {

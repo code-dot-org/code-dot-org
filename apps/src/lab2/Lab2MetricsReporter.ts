@@ -7,16 +7,20 @@ import {MetricDimension} from '@cdo/apps/lib/metrics/types';
 interface ReportingProperties {
   channelId?: string;
   appName?: string;
-  currentLevelId?: string;
+  currentLevelId?: string | number;
   scriptId?: number;
 }
 
 /**
- * Singleton metrics reporter for Lab2 labs.
+ * Metrics reporter for labs.
  */
-class Lab2MetricsReporter {
+export class LabMetricsReporter {
   // Common fields that are added to every log payload.
   private commonProperties: ReportingProperties = {};
+
+  constructor(initialProperties?: ReportingProperties) {
+    this.commonProperties = initialProperties || {};
+  }
 
   /**
    * Update common properties that will be added to log payloads.
@@ -94,4 +98,5 @@ class Lab2MetricsReporter {
   }
 }
 
-export default new Lab2MetricsReporter();
+// TODO: Remove default export in favor of creating a singleton in the Lab2Registry.
+export default new LabMetricsReporter();
