@@ -149,6 +149,14 @@ export default class FunctionEditor {
   // TODO
   refreshParamsEverywhere() {}
 
+  autoOpenFunction(functionName) {
+    const existingProcedureBlock = Blockly.Procedures.getDefinition(
+      functionName,
+      Blockly.getHiddenDefinitionWorkspace()
+    );
+    this.showForFunctionHelper(existingProcedureBlock);
+  }
+
   /**
    * Show the given procedure in the function editor. Either load from
    * the procedure workspace if it already exists, or create a new block.
@@ -157,15 +165,26 @@ export default class FunctionEditor {
    * procedure does not already exist.
    */
   showForFunction(procedure, procedureType) {
-    this.clearEditorWorkspace();
-
-    this.dom.style.display = 'block';
-    Blockly.common.svgResize(this.editorWorkspace);
-
     const existingProcedureBlock = Blockly.Procedures.getDefinition(
       procedure.getName(),
       Blockly.getHiddenDefinitionWorkspace()
     );
+    this.showForFunctionHelper(
+      existingProcedureBlock,
+      procedure,
+      procedureType
+    );
+  }
+
+  showForFunctionHelper(existingProcedureBlock, newProcedure, procedureType) {
+    if (!existingProcedureBlock && !newProcedure) {
+      // We can't show the function editor if we don't have an existing or new procedure
+      return;
+    }
+
+    this.clearEditorWorkspace();
+    this.dom.style.display = 'block';
+    Blockly.common.svgResize(this.editorWorkspace);
 
     let type;
     if (existingProcedureBlock) {
@@ -190,11 +209,11 @@ export default class FunctionEditor {
         kind: 'block',
         type,
         extraState: {
-          procedureId: procedure.getId(),
+          procedureId: newProcedure.getId(),
           userCreated: true,
         },
         fields: {
-          NAME: procedure.getName(),
+          NAME: newProcedure.getName(),
         },
         deletable: false,
       };
