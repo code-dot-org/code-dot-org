@@ -406,22 +406,6 @@
   margin-right: .5em;
 }
 
-button {
-  margin-top: 10px;
-}
-
-a.link-button {
-  display: inline-block;
-  color: var(--neutral_white);
-  background-color: var(--brand_secondary_default);
-  border-radius: 4px;
-  padding: 6px 12px;
-  font-size: 14px;
-  font-family: var(--main-font);
-  font-weight: var(--semi-bold-font-weight);
-  text-decoration: none;
-}
-
 #map .mapboxgl-popup-close-button {
   margin-top: 0px;
   background-color: var(--brand_secondary_default);

@@ -805,9 +805,13 @@ Then /^element "([^"]*)" is (not )?displayed$/ do |selector, negation|
 end
 
 And(/^I select age (\d+) in the age dialog/) do |age|
+  dropdown_selection = age
+  if age == 21
+    dropdown_selection = "21+"
+  end
   steps <<~GHERKIN
     And element ".age-dialog" is visible
-    And I select the "#{age}" option in dropdown "uitest-age-selector"
+    And I select the "#{dropdown_selection}" option in dropdown "uitest-age-selector"
     And I click selector "#uitest-submit-age"
   GHERKIN
 end
@@ -887,6 +891,11 @@ end
 Then /^I wait for image "([^"]*)" to load$/ do |selector|
   wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
   wait.until {@browser.execute_script("return $('#{selector}').prop('complete');")}
+end
+
+Then /^I wait for the video thumbnails to load$/ do
+  wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
+  wait.until {@browser.execute_script("return Array.from(document.querySelectorAll('img.thumbnail-image')).filter((img) => !img.complete).length == 0;")}
 end
 
 Then /^I see jquery selector (.*)$/ do |selector|
