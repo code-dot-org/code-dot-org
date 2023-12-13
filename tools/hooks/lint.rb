@@ -63,6 +63,30 @@ def run_eslint_apps(files)
   run("./node_modules/.bin/eslint -c .eslintrc.js -f ./.eslintCustomMessagesFormatter.js #{files.join(' ')}", APPS_DIR)
 end
 
+def run_eslint_jsx_a11y(files)
+  rules = [
+    'jsx-a11y/alt-text: error',
+    'jsx-a11y/anchor-has-content: error',
+    'jsx-a11y/anchor-is-valid: error',
+    'jsx-a11y/click-events-have-key-events: error',
+    'jsx-a11y/heading-has-content: error',
+    'jsx-a11y/iframe-has-title: error',
+    'jsx-a11y/interactive-supports-focus: error',
+    'jsx-a11y/label-has-associated-control: error',
+    'jsx-a11y/media-has-caption: error',
+    'jsx-a11y/mouse-events-have-key-events: error',
+    'jsx-a11y/no-autofocus: error',
+    'jsx-a11y/no-noninteractive-element-interactions: error',
+    'jsx-a11y/no-noninteractive-element-to-interactive-role: error',
+    'jsx-a11y/no-noninteractive-tabindex: error',
+    'jsx-a11y/no-redundant-roles: error',
+    'jsx-a11y/no-static-element-interactions: error',
+    'jsx-a11y/tabindex-no-positive: error',
+  ]
+  rules_arg = rules.map {|rule| "--rule '#{rule}'"}.join(' ')
+  run("./node_modules/.bin/eslint -c .eslintrc.js -f ./.eslintCustomMessagesFormatter.js #{rules_arg} #{files.join(' ')}", APPS_DIR)
+end
+
 def run_eslint_shared(files)
   # Use vanilla eslint parser, because babel-eslint always allows es6
   run("../../apps/node_modules/eslint/bin/eslint.js #{files.join(' ')}", SHARED_JS_DIR)
@@ -92,6 +116,7 @@ def do_linting
     Object.method(:run_haml) => filter_haml(modified_files),
     Object.method(:run_scss_dashboard) => filter_scss(modified_files),
     Object.method(:run_eslint_apps) => filter_eslint_apps(modified_files),
+    Object.method(:run_eslint_jsx_a11y) => filter_eslint_apps(modified_files),
     Object.method(:run_eslint_shared) => filter_eslint_shared(modified_files),
     Object.method(:run_stylelint_apps) => filter_scss_apps(modified_files),
     Object.method(:run_rubocop) => filter_rubocop(modified_files)
