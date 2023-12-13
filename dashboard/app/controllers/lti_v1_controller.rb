@@ -1,7 +1,9 @@
 require "base64"
 require "queries/lti"
 require "services/lti"
+require "policies/lti"
 require "concerns/partial_registration"
+require "clients/lti_advantage_client"
 
 class LtiV1Controller < ApplicationController
   # Don't require an authenticity token because LTI Platforms POST to this
@@ -87,13 +89,26 @@ class LtiV1Controller < ApplicationController
       user = Queries::Lti.get_user(decoded_jwt)
       target_link_uri = decoded_jwt[:'https://purl.imsglobal.org/spec/lti/claim/target_link_uri']
 
+      launch_context = decoded_jwt[Policies::Lti::LTI_CONTEXT_CLAIM]
+      nrps_url = decoded_jwt[Policies::Lti::LTI_NRPS_CLAIM][:context_memberships_url]
+      resource_link_id = decoded_jwt[Policies::Lti::LTI_RESOURCE_LINK_CLAIM][:id]
+      deployment_id = decoded_jwt[Policies::Lti::LTI_DEPLOYMENT_ID_CLAIM]
+      deployment = Queries::Lti.get_deployment(integration.id, deployment_id)
+      redirect_params = {
+        lti_integration_id: integration.id,
+        deployment_id: deployment.id,
+        context_id: launch_context[:id],
+        rlid: resource_link_id,
+        nrps_url: nrps_url,
+      }
+
       if user
         sign_in user
-        redirect_to target_link_uri
+        redirect_to "#{target_link_uri}?#{redirect_params.to_query}"
       else
         user = Services::Lti.initialize_lti_user(decoded_jwt)
         PartialRegistration.persist_attributes(session, user)
-        session[:user_return_to] = target_link_uri
+        session[:user_return_to] = "#{target_link_uri}?#{redirect_params.to_query}"
         redirect_to new_user_registration_url
       end
     else
@@ -106,6 +121,54 @@ class LtiV1Controller < ApplicationController
     response = JSON.parse(HTTParty.get(public_jwk_url).body)
     jwk_set = JSON::JWK::Set.new response
     JSON::JWT.decode(id_token, jwk_set)
+  end
+
+  # GET /lti/v1/sync_course
+  # Syncs an LMS course from an LTI launch or from the teacher dashboard sync button.
+  def sync_course
+    return unauthorized_status unless current_user
+    return redirect_to home_path unless current_user.teacher?
+    params.require([:lti_integration_id, :deployment_id, :context_id, :rlid, :nrps_url]) if params[:section_code].blank?
+
+    lti_course, lti_integration, deployment_id, context_id, resource_link_id, nrps_url = nil
+    if params[:section_code].present?
+      # Section code present, meaning this is a sync from the teacher dashboard.
+      # Populate vars from the section associated with the input code.
+      lti_course = Queries::Lti.get_lti_course_from_section_code(params[:section_code])
+      return head :bad_request unless lti_course # Received a code for a non-LTI section
+      lti_integration = lti_course.lti_integration
+      deployment_id = lti_course.lti_deployment_id
+      context_id = lti_course.context_id
+      resource_link_id = lti_course.resource_link_id
+      nrps_url = lti_course.nrps_url
+    else
+      # Section code isn't present, meaning this is a sync from an LTI launch.
+      # Populate vars from the request params.
+      lti_integration = LtiIntegration.find(params[:lti_integration_id])
+      deployment_id = params[:deployment_id]
+      context_id = params[:context_id]
+      resource_link_id = params[:rlid]
+      nrps_url = params[:nrps_url]
+    end
+    return head :bad_request unless lti_integration
+
+    ActiveRecord::Base.transaction do
+      lti_course ||= Queries::Lti.find_or_create_lti_course(
+        lti_integration_id: lti_integration.id,
+        context_id: context_id,
+        deployment_id: deployment_id,
+        nrps_url: nrps_url,
+        resource_link_id: resource_link_id
+      )
+
+      lti_advantage_client = LtiAdvantageClient.new(lti_integration.client_id, lti_integration.issuer)
+      nrps_response = lti_advantage_client.get_context_membership(nrps_url, resource_link_id)
+      nrps_sections = Services::Lti.parse_nrps_response(nrps_response)
+
+      Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: nrps_sections, section_owner_id: current_user.id)
+    end
+
+    redirect_to home_path
   end
 
   private
