@@ -176,10 +176,3 @@ Resources:
             }
           };
         };
-
-Outputs:
-  TeachAiNameServers:
-    Description: Name servers for teachai.org
-    Value: !Join [',', !GetAtt [HostedZone, NameServers]]
-    Export:
-      Name: TeachAiNameServers
