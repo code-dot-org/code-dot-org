@@ -23,7 +23,6 @@ function RubricFloatingActionButton({
   sectionId,
 }) {
   const [isOpen, setIsOpen] = useState(false);
-  console.log('sectionId', sectionId);
 
   const eventData = useMemo(() => {
     return {
