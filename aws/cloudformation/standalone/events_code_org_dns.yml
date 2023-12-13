@@ -4,11 +4,6 @@ Description: DNS records and resources supporting events.code.org.
 # This domain is intended to be used for event related mini-sites.
 # It is hosted in LeadPages, and the DNS records are managed in Route53.
 
-Parameters:
-  CodeDotOrgHostedZoneId:
-    Type: String
-    Description: The Route53 Hosted Zone ID for code.org
-
 Resources:
   # The NS Records making this authoritative should be manually added.
   HostedZone:
