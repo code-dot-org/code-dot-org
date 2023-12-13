@@ -940,111 +940,6 @@ columns:
     comment:
   - *23
   - *15
-  circuit_playground_discount_applications:
-  - *5
-  - *12
-  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: unit_6_intention
-    sql_type_metadata: *2
-    'null': true
-    default:
-    default_function:
-    collation:
-    comment:
-  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: full_discount
-    sql_type_metadata: *19
-    'null': true
-    default:
-    default_function:
-    collation:
-    comment:
-  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: admin_set_status
-    sql_type_metadata: *19
-    'null': false
-    default: '0'
-    default_function:
-    collation:
-    comment:
-  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: signature
-    sql_type_metadata: *3
-    'null': true
-    default:
-    default_function:
-    collation: utf8_unicode_ci
-    comment:
-  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: signed_at
-    sql_type_metadata: *4
-    'null': true
-    default:
-    default_function:
-    collation:
-    comment:
-  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: circuit_playground_discount_code_id
-    sql_type_metadata: *2
-    'null': true
-    default:
-    default_function:
-    collation:
-    comment:
-  - *9
-  - *10
-  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: school_id
-    sql_type_metadata: *3
-    'null': true
-    default:
-    default_function:
-    collation: utf8_unicode_ci
-    comment:
-  circuit_playground_discount_codes:
-  - *5
-  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: code
-    sql_type_metadata: *3
-    'null': false
-    default:
-    default_function:
-    collation: utf8_unicode_ci
-    comment:
-  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: full_discount
-    sql_type_metadata: *19
-    'null': false
-    default:
-    default_function:
-    collation:
-    comment:
-  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: expiration
-    sql_type_metadata: *4
-    'null': false
-    default:
-    default_function:
-    collation:
-    comment:
-  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: claimed_at
-    sql_type_metadata: *4
-    'null': true
-    default:
-    default_function:
-    collation:
-    comment:
-  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: voided_at
-    sql_type_metadata: *4
-    'null': true
-    default:
-    default_function:
-    collation:
-    comment:
-  - *9
-  - *10
   code_review_comments:
   - *24
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -1683,7 +1578,7 @@ columns:
     'null': false
     default:
     default_function:
-    collation: utf8_unicode_ci
+    collation: utf8mb4_unicode_ci
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: last_error
@@ -1691,7 +1586,7 @@ columns:
     'null': true
     default:
     default_function:
-    collation: utf8_unicode_ci
+    collation: utf8mb4_unicode_ci
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: run_at
@@ -1723,7 +1618,7 @@ columns:
     'null': true
     default:
     default_function:
-    collation: utf8_unicode_ci
+    collation: utf8mb4_unicode_ci
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: queue
@@ -1731,7 +1626,7 @@ columns:
     'null': true
     default:
     default_function:
-    collation: utf8_unicode_ci
+    collation: utf8mb4_unicode_ci
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: created_at
@@ -2440,7 +2335,7 @@ columns:
     'null': true
     default:
     default_function:
-    collation: utf8_unicode_ci
+    collation: utf8mb4_unicode_ci
     comment:
   - *25
   - *26
@@ -2542,7 +2437,7 @@ columns:
     'null': true
     default:
     default_function:
-    collation: utf8_unicode_ci
+    collation: utf8mb4_unicode_ci
     comment:
   - *55
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -2551,7 +2446,7 @@ columns:
     'null': true
     default:
     default_function:
-    collation: utf8_unicode_ci
+    collation: utf8mb4_unicode_ci
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: submitted_at
@@ -2997,7 +2892,7 @@ columns:
     'null': true
     default:
     default_function:
-    collation: utf8_unicode_ci
+    collation: utf8mb4_unicode_ci
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: course_id
@@ -3005,7 +2900,7 @@ columns:
     'null': true
     default:
     default_function:
-    collation: utf8_unicode_ci
+    collation: utf8mb4_unicode_ci
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: nrps_url
@@ -3013,7 +2908,7 @@ columns:
     'null': true
     default:
     default_function:
-    collation: utf8_unicode_ci
+    collation: utf8mb4_unicode_ci
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: resource_link_id
@@ -3021,7 +2916,7 @@ columns:
     'null': true
     default:
     default_function:
-    collation: utf8_unicode_ci
+    collation: utf8mb4_unicode_ci
     comment:
   - *25
   - *26
@@ -3139,7 +3034,7 @@ columns:
     'null': true
     default:
     default_function:
-    collation: utf8_unicode_ci
+    collation: utf8mb4_unicode_ci
     comment:
   - *25
   - *26
@@ -4621,8 +4516,22 @@ columns:
   - *10
   potential_teachers:
   - *24
-  - *46
-  - *37
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: name
+    sql_type_metadata: *3
+    'null': false
+    default:
+    default_function:
+    collation: utf8mb4_unicode_ci
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: email
+    sql_type_metadata: *3
+    'null': false
+    default:
+    default_function:
+    collation: utf8mb4_unicode_ci
+    comment:
   - *23
   - *25
   - *26
@@ -7504,8 +7413,6 @@ primary_keys:
   census_submissions_school_infos:
   census_summaries: id
   channel_tokens: id
-  circuit_playground_discount_applications: id
-  circuit_playground_discount_codes: id
   code_review_comments: id
   code_review_group_members:
   code_review_groups: id
@@ -7696,8 +7603,6 @@ data_sources:
   census_submissions_school_infos: true
   census_summaries: true
   channel_tokens: true
-  circuit_playground_discount_applications: true
-  circuit_playground_discount_codes: true
   code_review_comments: true
   code_review_group_members: true
   code_review_groups: true
@@ -8245,47 +8150,6 @@ indexes:
     type:
     using: :btree
     comment:
-  circuit_playground_discount_applications:
-  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
-    table: circuit_playground_discount_applications
-    name: index_circuit_playground_discount_applications_on_user_id
-    unique: true
-    columns:
-    - user_id
-    lengths: {}
-    orders: {}
-    opclasses: {}
-    where:
-    type:
-    using: :btree
-    comment:
-  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
-    table: circuit_playground_discount_applications
-    name: index_circuit_playground_applications_on_code_id
-    unique: false
-    columns:
-    - circuit_playground_discount_code_id
-    lengths: {}
-    orders: {}
-    opclasses: {}
-    where:
-    type:
-    using: :btree
-    comment:
-  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
-    table: circuit_playground_discount_applications
-    name: index_circuit_playground_discount_applications_on_school_id
-    unique: false
-    columns:
-    - school_id
-    lengths: {}
-    orders: {}
-    opclasses: {}
-    where:
-    type:
-    using: :btree
-    comment:
-  circuit_playground_discount_codes: []
   code_review_comments:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: code_review_comments
@@ -9513,19 +9377,6 @@ indexes:
   lti_deployments:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: lti_deployments
-    name: index_lti_deployments_on_lti_integration_id
-    unique: false
-    columns:
-    - lti_integration_id
-    lengths: {}
-    orders: {}
-    opclasses: {}
-    where:
-    type:
-    using: :btree
-    comment:
-  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
-    table: lti_deployments
     name: index_lti_deployments_on_deployment_id
     unique: false
     columns:
@@ -9537,13 +9388,26 @@ indexes:
     type:
     using: :btree
     comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: lti_deployments
+    name: index_lti_deployments_on_lti_integration_id
+    unique: false
+    columns:
+    - lti_integration_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where:
+    type:
+    using: :btree
+    comment:
   lti_integrations:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: lti_integrations
-    name: index_lti_integrations_on_platform_id
+    name: index_lti_integrations_on_client_id
     unique: false
     columns:
-    - platform_id
+    - client_id
     lengths: {}
     orders: {}
     opclasses: {}
@@ -9566,10 +9430,10 @@ indexes:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: lti_integrations
-    name: index_lti_integrations_on_client_id
+    name: index_lti_integrations_on_platform_id
     unique: false
     columns:
-    - client_id
+    - platform_id
     lengths: {}
     orders: {}
     opclasses: {}
@@ -9633,10 +9497,10 @@ indexes:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: lti_user_identities
-    name: index_lti_user_identities_on_user_id
+    name: index_lti_user_identities_on_subject
     unique: false
     columns:
-    - user_id
+    - subject
     lengths: {}
     orders: {}
     opclasses: {}
@@ -9646,10 +9510,10 @@ indexes:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: lti_user_identities
-    name: index_lti_user_identities_on_subject
+    name: index_lti_user_identities_on_user_id
     unique: false
     columns:
-    - subject
+    - user_id
     lengths: {}
     orders: {}
     opclasses: {}
@@ -13082,5 +12946,5 @@ database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter
   version:
   - 8
   - 0
-  - 26
-  full_version_string: 8.0.26-0ubuntu0.20.04.2
+  - 23
+  full_version_string: 8.0.23-0ubuntu0.20.04.1
