@@ -85,6 +85,12 @@ Resources:
                 - '"DRNkZHyoRezTf6QbinBB2dbyANEuwKI5DVRBFowQOj9zvM3IvxAEboMlb0sz"'
                 - '"UjAoML94HOkKuGuCkdZ1gbVEi3GcVwrIQphal1QIDAQAB;"'
 
+  # ---------------------------------------
+  # Redirect teachai.org to www.teachai.org
+  #
+  # TODO: Absorb into global redirects config via INF-721
+  # ---------------------------------------
+
   RedirectDistribution:
     Type: AWS::CloudFront::Distribution
     Properties:
@@ -170,3 +176,10 @@ Resources:
             }
           };
         };
+
+Outputs:
+  TeachAiNameServers:
+    Description: Name servers for teachai.org
+    Value: !Join [',', !GetAtt [HostedZone, NameServers]]
+    Export:
+      Name: TeachAiNameServers
