@@ -1021,6 +1021,7 @@
   "emailMeAGuide": "Email me a guide",
   "emailRequestSubmitted": "Email request submitted",
   "embed": "Embed",
+  "embeddedExampleFor": "Embedded Example for {name}",
   "emptyBlockInFunction": "The function {name} has an unfilled input.",
   "emptyBlockInVariable": "The variable {name} has an unfilled input.",
   "emptyBlocksErrorMsg": "The \"Repeat\" or \"If\" block needs to have other blocks inside it to work. Make sure the inner block fits properly inside the containing block.",
