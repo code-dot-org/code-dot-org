@@ -73,6 +73,7 @@ class JavalabConsole extends React.Component {
 
   jumpToBottom = () => {
     this._consoleLogs.scrollTop = this._consoleLogs.scrollHeight;
+    this.focusInput();
   };
 
   // Transform this.props.consoleLogs into an array of strings, with each string
@@ -134,7 +135,6 @@ class JavalabConsole extends React.Component {
               onKeyDown={this.onInputKeyDown}
               aria-label="console input"
               ref={ref => (this.inputRef = ref)}
-              autoFocus
             />
           </div>
         );
@@ -171,7 +171,7 @@ class JavalabConsole extends React.Component {
       );
     } else {
       return (
-        <div onClick={this.onLogsClick} style={styles.logs}>
+        <div onClick={this.focusInput} style={styles.logs}>
           {this.renderConsoleLogs(displayTheme)}
         </div>
       );
@@ -199,7 +199,7 @@ class JavalabConsole extends React.Component {
     }
   };
 
-  onLogsClick = () => {
+  focusInput = () => {
     // only jump to input if the program is currently in run or test mode.
     if (this.props.shouldJumpToInput) {
       this.inputRef.focus();
