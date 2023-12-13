@@ -47,7 +47,7 @@ export default function ImageInput({
           />
         </label>
         {showPreview && !!currentImageUrl && (
-          <img src={currentImageUrl} style={styles.image} />
+          <img src={currentImageUrl} style={styles.image} alt="" />
         )}
       </div>
       <UploadImageDialog

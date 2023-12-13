@@ -12,7 +12,7 @@ export default class FacilitatorBio extends React.Component {
 
   image = () => {
     if (this.props.facilitator.image_path) {
-      return <img src={this.props.facilitator.image_path} />;
+      return <img src={this.props.facilitator.image_path} alt="" />;
     }
   };
 

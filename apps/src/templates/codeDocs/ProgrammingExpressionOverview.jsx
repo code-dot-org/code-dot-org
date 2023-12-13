@@ -75,7 +75,9 @@ export default function ProgrammingExpressionOverview({
       );
     }
     if (programmingExpression.imageUrl) {
-      return <img src={programmingExpression.imageUrl} style={styles.image} />;
+      return (
+        <img src={programmingExpression.imageUrl} style={styles.image} alt="" />
+      );
     }
     return <h1>{programmingExpression.name}</h1>;
   };

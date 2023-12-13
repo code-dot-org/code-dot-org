@@ -471,7 +471,7 @@ export default class AnimationUpload extends React.Component {
           </div>
           <label>
             <h3>Image Preview:</h3>
-            <img ref="imagePreview" src={filePreviewURL} />
+            <img ref="imagePreview" src={filePreviewURL} alt="" />
           </label>
           <h2 style={styles.animationUploadStep}>
             Step 2: Settings and Metadata
@@ -557,7 +557,7 @@ export default class AnimationUpload extends React.Component {
                 />
                 {animationExistsStatus === Status.ALERT && (
                   <div style={styles.animationReplace}>
-                    <img src={this.getExistingAnimationSrc()} />
+                    <img src={this.getExistingAnimationSrc()} alt="" />
                     <label>
                       <input
                         type="checkbox"

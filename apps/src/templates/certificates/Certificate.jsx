@@ -162,7 +162,7 @@ function Certificate(props) {
             className={style.confetti}
           />
           <a href={certificateShareLink}>
-            <img src={imgSrc} />
+            <img src={imgSrc} alt="" />
           </a>
         </div>
         <div className={`${certificateStyle} ${style.inputContainer}`}>

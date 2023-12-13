@@ -82,7 +82,7 @@ export default function UploadImageDialog({
     <LessonEditorDialog isOpen={isOpen} handleClose={handleDialogClose}>
       <h2>Upload Image</h2>
 
-      {imgUrl && <img src={imgUrl} />}
+      {imgUrl && <img src={imgUrl} alt="" />}
       <input
         type="file"
         name="file"

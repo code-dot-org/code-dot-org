@@ -156,7 +156,7 @@ export default connect(state => ({
 const Header = ({logoUrl}) => {
   return (
     <header style={styles.header}>
-      <img src={logoUrl} style={styles.codeOrgLogo} />
+      <img src={logoUrl} style={styles.codeOrgLogo} alt="" />
     </header>
   );
 };
@@ -192,6 +192,7 @@ const SignInInstructions = ({
             <img
               src="/shared/images/clever_code_org_logo.png"
               style={styles.cleverCodeOrgLogo}
+              alt=""
             />
           </li>
         </ol>
@@ -223,6 +224,7 @@ const SignInInstructions = ({
                 <img
                   src={pegasus(`/images/${secretPicturePath}`)}
                   style={{width: 60, margin: 10}}
+                  alt=""
                 />
               </span>
             )}

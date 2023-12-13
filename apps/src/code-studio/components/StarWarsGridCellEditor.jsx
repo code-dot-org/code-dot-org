@@ -55,7 +55,7 @@ export default class StarWarsGridCellEditor extends CellEditor {
 
     return (
       <form className="span4 offset1">
-        <img src={tileGuide} />
+        <img src={tileGuide} alt="" />
         <header>
           <strong>
             Editing Cell ({this.props.row}, {this.props.col})

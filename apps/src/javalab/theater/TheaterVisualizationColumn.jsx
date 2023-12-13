@@ -65,8 +65,8 @@ class TheaterVisualizationColumn extends React.Component {
                 showOverlay && style.overlay
               )}
             >
-              <img id="theater" className={style.image} />
-              <audio id="theater-audio" preload="auto" />
+              <img id="theater" className={style.image} alt="" />
+              <audio id="theater-audio" preload="auto" alt="" />
             </div>
             <JavalabCrosshairOverlay visible={showOverlay} />
           </div>

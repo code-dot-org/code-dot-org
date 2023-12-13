@@ -380,7 +380,11 @@ class ShareAllowedDialog extends React.Component {
                 )}
                 <div style={{clear: 'both'}}>
                   <div style={styles.thumbnail}>
-                    <img style={styles.thumbnailImg} src={thumbnailUrl} />
+                    <img
+                      style={styles.thumbnailImg}
+                      src={thumbnailUrl}
+                      alt=""
+                    />
                   </div>
                   <div>
                     <Button

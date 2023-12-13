@@ -9,7 +9,11 @@ export function ProgrammingEnvironmentCard({programmingEnvironment}) {
     <div style={styles.card}>
       <div>
         {programmingEnvironment.imageUrl && (
-          <img style={styles.image} src={programmingEnvironment.imageUrl} />
+          <img
+            style={styles.image}
+            src={programmingEnvironment.imageUrl}
+            alt=""
+          />
         )}
         {programmingEnvironment.title && (
           <h2>{programmingEnvironment.title}</h2>

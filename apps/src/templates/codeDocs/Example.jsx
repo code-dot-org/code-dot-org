@@ -28,7 +28,7 @@ export default function Example({example, programmingEnvironmentName}) {
                 ...embeddedIdeStyles[programmingEnvironmentName],
               }}
             />
-            {example.image && <img src={example.image} />}
+            {example.image && <img src={example.image} alt="" />}
           </div>
         </div>
       );
@@ -54,7 +54,7 @@ export default function Example({example, programmingEnvironmentName}) {
               />
             </div>
           </div>
-          {example.image && <img src={example.image} />}
+          {example.image && <img src={example.image} alt="" />}
         </div>
       );
     }
@@ -62,7 +62,7 @@ export default function Example({example, programmingEnvironmentName}) {
     return (
       <div>
         {content}
-        {example.image && <img src={example.image} />}
+        {example.image && <img src={example.image} alt="" />}
       </div>
     );
   }

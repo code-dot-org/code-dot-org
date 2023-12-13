@@ -148,6 +148,7 @@ class ShowSecret extends Component {
               <img
                 src={pegasus('/images/' + this.props.secretPicture)}
                 style={styles.image}
+                alt=""
               />
             )}
             <Button

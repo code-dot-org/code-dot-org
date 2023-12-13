@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
 
 export default function ExampleImage({src}) {
-  return <img style={styles.img} src={src} />;
+  return <img style={styles.img} src={src} alt="" />;
 }
 
 ExampleImage.propTypes = {

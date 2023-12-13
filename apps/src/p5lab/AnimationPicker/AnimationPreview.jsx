@@ -162,6 +162,7 @@ export default class AnimationPreview extends React.Component {
           onLoad={this.props.onPreviewLoad}
           src={this.props.sourceUrl || EMPTY_IMAGE}
           style={backgroundImageStyle}
+          alt=""
         />
       );
     }
@@ -186,6 +187,7 @@ export default class AnimationPreview extends React.Component {
             onLoad={this.props.onPreviewLoad}
             src={this.props.sourceUrl || EMPTY_IMAGE}
             style={imageStyle}
+            alt=""
           />
         </div>
       </div>

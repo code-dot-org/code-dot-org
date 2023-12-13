@@ -163,6 +163,7 @@ const ImageThumbnail = class extends React.Component {
           src={this.props.src}
           style={assetThumbnailStyle}
           id="ui-image-thumbnail"
+          alt=""
         />
       </a>
     );

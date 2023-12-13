@@ -63,7 +63,9 @@ export default class SublevelCard extends React.Component {
   renderThumbnail = () => {
     const {sublevel} = this.props;
     if (sublevel.thumbnail_url) {
-      return <img src={sublevel.thumbnail_url} style={styles.thumbnail} />;
+      return (
+        <img src={sublevel.thumbnail_url} style={styles.thumbnail} alt="" />
+      );
     } else if (['Maze', 'Karel'].includes(sublevel.type)) {
       return this.renderWithMazeThumbnail();
     } else {

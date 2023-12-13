@@ -99,6 +99,7 @@ export default class AnimationPickerListItem extends React.Component {
                 data-category={category}
                 className={style.categoryImage}
                 src={iconImageSrc}
+                alt=""
               />
             )}
           </div>

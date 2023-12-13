@@ -44,6 +44,7 @@ export default class Image extends React.Component {
         {...this.props}
         style={{...this.props.style, ...style}}
         onLoad={this.onImageLoad}
+        alt=""
       />
     );
   }

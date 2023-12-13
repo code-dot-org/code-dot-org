@@ -166,6 +166,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
                 !vertical && moduleStyles.fixedHeight
               )}
               onClick={() => imageClicked()}
+              alt=""
             />
             {showBigImage && (
               <div
@@ -174,7 +175,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
                   imagePopOutDirection === 'left' && moduleStyles.bigImageLeft
                 )}
               >
-                <img src={imageUrl} onClick={() => imageClicked()} />
+                <img src={imageUrl} onClick={() => imageClicked()} alt="" />
               </div>
             )}
           </div>

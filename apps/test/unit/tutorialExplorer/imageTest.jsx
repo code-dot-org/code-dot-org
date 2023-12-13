@@ -8,7 +8,9 @@ describe('Image', () => {
     const wrapper = shallow(<Image style={{}} />, {
       disableLifecycleMethods: true,
     });
-    assert(wrapper.containsMatchingElement(<img style={{opacity: 0.1}} />));
+    assert(
+      wrapper.containsMatchingElement(<img style={{opacity: 0.1}} alt="" />)
+    );
   });
 
   it('renders with a transition to full opacity after image loads', () => {
@@ -23,6 +25,7 @@ describe('Image', () => {
             opacity: 1,
             transition: 'opacity 200ms ease-in',
           }}
+          alt=""
         />
       )
     );

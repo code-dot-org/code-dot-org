@@ -29,7 +29,7 @@ describe('TopCourse', () => {
     expect(
       wrapper.containsMatchingElement(
         <div>
-          <img />
+          <img alt="" />
           <div>{topCourse.assignableName}</div>
           <div>
             <div>You are currently working on {topCourse.lessonName}.</div>

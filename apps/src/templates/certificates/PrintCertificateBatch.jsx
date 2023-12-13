@@ -24,7 +24,7 @@ export default function PrintCertificateBatch({imageUrls}) {
       {imageUrls.map((imageUrl, index) => (
         <div key={imageUrl}>
           {index > 0 && <div className="page-break" />}
-          <img src={imageUrl} width="100%" />
+          <img src={imageUrl} width="100%" alt="" />
         </div>
       ))}
     </div>

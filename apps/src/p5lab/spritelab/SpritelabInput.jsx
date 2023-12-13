@@ -129,6 +129,7 @@ class SpritelabInput extends React.Component {
                     src={spriteMap[choice]}
                     value={choice}
                     style={styles.choiceSpriteImage}
+                    alt=""
                   />
                 </button>
               ) : (

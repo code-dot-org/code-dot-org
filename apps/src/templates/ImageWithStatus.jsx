@@ -56,6 +56,7 @@ export class ImageWithStatus extends Component {
           height={this.props.height}
           onLoad={this.handleImageLoad}
           onError={this.handleImageError}
+          alt=""
         />
         <div data-image-status={this.state.imageStatus} />
       </div>
