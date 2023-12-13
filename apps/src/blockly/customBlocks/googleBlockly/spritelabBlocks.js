@@ -362,7 +362,7 @@ export const blocks = {
     // and a language-neutral string. Both are the same in this case.
     const behaviorOptions = behaviorBlocks.map(block => [
       block.getProcedureModel().name,
-      block.getProcedureModel().name,
+      block.behaviorId,
     ]);
     behaviorOptions.sort();
     // Add a "No behaviors found" option, if needed
