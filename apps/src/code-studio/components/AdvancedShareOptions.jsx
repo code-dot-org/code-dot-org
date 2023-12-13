@@ -63,6 +63,11 @@ const style = {
     fontSize: 'large',
     height: 40,
   },
+  embedCodeCheckbox: {
+    display: 'inline-block',
+    paddingLeft: 8,
+    paddingTop: 8,
+  },
 };
 
 const ShareOptions = {
@@ -137,21 +142,26 @@ class AdvancedShareOptions extends React.Component {
         <textarea
           type="text"
           onClick={e => e.target.select()}
-          readOnly="true"
+          readOnly={true}
           value={iframeHtml}
           style={style.embedInput}
+          aria-label={i18n.codeToEmbed()}
         />
-        <label style={{display: 'flex'}}>
+        <div>
           <input
+            id="embedCodeCheckbox"
             type="checkbox"
-            style={{accentColor: color.brand_primary_default}}
+            style={{accentColor: color.brand_primary_default, margin: 0}}
             checked={this.state.embedWithoutCode}
+            aria-label={i18n.hideAbilityToViewCode()}
             onChange={() =>
               this.setState({embedWithoutCode: !this.state.embedWithoutCode})
             }
           />
-          <span style={{marginLeft: 5}}>Hide ability to view code</span>
-        </label>
+          <label htmlFor="embedCodeCheckbox" style={style.embedCodeCheckbox}>
+            {i18n.hideAbilityToViewCode()}
+          </label>
+        </div>
       </div>
     );
   }
