@@ -76,6 +76,8 @@ module Pd::Application
 
     has_many :emails, class_name: 'Pd::Application::Email', foreign_key: 'pd_application_id'
 
+    has_one :enrollment, class_name: 'Pd::Enrollment', foreign_key: 'application_id'
+
     before_validation :set_course_from_program, if: -> {form_data_changed?}
     before_validation :set_status_from_admin_approval, if: -> {properties_changed?}
     validates :status, exclusion: {in: ['interview'], message: '%{value} is reserved for facilitator applications.'}
@@ -321,8 +323,12 @@ module Pd::Application
       workshops.first
     end
 
+    def enrolled?
+      enrollment.present?
+    end
+
     def friendly_registered_workshop
-      Pd::Enrollment.find_by(user: user, workshop: pd_workshop_id) ? 'Yes' : 'No'
+      enrolled? ? 'Yes' : 'No'
     end
 
     def self.prefetch_associated_models(applications)

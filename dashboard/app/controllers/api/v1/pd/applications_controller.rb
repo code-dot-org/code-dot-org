@@ -33,6 +33,9 @@ module Api::V1::Pd
         apps.group(:status).each do |group|
           application_data[role][group.status] = {total: group.total}
         end
+
+        enrollments = apps.count(&:enrolled?)
+        application_data[role][:enrolled] = {total: enrollments}
       end
 
       render json: application_data
