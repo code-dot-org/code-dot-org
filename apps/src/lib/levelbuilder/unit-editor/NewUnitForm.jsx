@@ -64,8 +64,17 @@ export default function NewUnitForm(props) {
         </select>
         <HelpTip>
           <p>
-            There are two different types of courses we support. A course with
-            multiple units and a standalone course (only a single unit).
+            Standalone units are designed to exist on their own. Use this when
+            the unit won't appear inside of a Course with /courses/ in the URL.
+          </p>
+          <p>
+            Units inside a course can be found within a Course that has a
+            /courses/ URL and shares resources between other units in that
+            course.
+          </p>
+          <p>
+            For example: How AI Works is a standalone unit, but CSD Unit 1 is
+            contained within the CSD course.
           </p>
         </HelpTip>
       </label>
