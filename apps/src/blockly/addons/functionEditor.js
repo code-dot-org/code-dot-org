@@ -202,12 +202,13 @@ export default class FunctionEditor {
     this.block.setDeletable(false);
 
     // We only want to be able to delete things that are user-created (functions and behaviors)
+    const hideDeleteButton = !this.block.userCreated;
     const modalEditorDeleteButton = document.getElementById(
       MODAL_EDITOR_DELETE_ID
     );
-    modalEditorDeleteButton.style.visibility = this.block.userCreated
-      ? 'visible'
-      : 'hidden';
+    modalEditorDeleteButton.style.visibility = hideDeleteButton
+      ? 'hidden'
+      : 'visible';
 
     // Used to create and render an SVG frame instance.
     const getDefinitionBlockColor = () => {
