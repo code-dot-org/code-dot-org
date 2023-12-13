@@ -1,12 +1,40 @@
-# Greenhouse DNS Configuration
-# This template is deployed manually to the 'greenhouse-dns' stack.
-# See: https://support.greenhouse.io/hc/en-us/articles/201111684-Email-domain-verification
-
 AWSTemplateFormatVersion: 2010-09-09
+Description: DNS records for code.org
 
-Description: DNS Records for the Greenhouse applicant tracking system.
+# This remplate contains DNS recourds within the Code.org Hosted Zone.
+# DNS records may be created by other stacks if they are project specific.
+# This template contains miscelenous generic records that are not project specific.
+
+Parameters:
+  CodeDotOrgHostedZoneId:
+    Type: String
+    Description: The ID of the code.org Hosted Zone
 
 Resources:
+
+  RecordSetGroup:
+    Type: AWS::Route53::RecordSetGroup
+    Properties:
+      HostedZoneId: !Ref CodeDotOrgHostedZoneId
+      RecordSets:
+        # Events microsite hosted in Leadpages
+        - Name: events.code.org
+          Type: CNAME
+          TTL: 300
+          ResourceRecords:
+            - events.code.org.leadpages.net
+        # Delegate Greenhouse DNS to a separate Hosted Zone
+        - Name: gh-mail.code.org
+          Type: NS
+          TTL: 3600
+          ResourceRecords:
+            - !GetAtt GreenhouseHostedZone.NameServers
+        # Delegate TeachAI DNS to a separate Hosted Zone
+        - Name: teachai.org
+          Type: NS
+          TTL: 3600
+          ResourceRecords:
+            !Split [",", !ImportValue TeachAiNameServers]
 
   GreenhouseHostedZone:
     Type: AWS::Route53::HostedZone
@@ -15,17 +43,7 @@ Resources:
       HostedZoneConfig: 
         Comment: Records for Greenhouse mail integration
 
-  NameServerRecord:
-    Type: AWS::Route53::RecordSet
-    Properties:
-      HostedZoneName : code.org.
-      Name: gh-mail.code.org
-      Comment: Records for Greenhouse mail integration
-      ResourceRecords: !GetAtt GreenhouseHostedZone.NameServers
-      TTL: 3600
-      Type: NS
-
-  GreenhouseRecords:
+  GreenhouseRecordSetGroup:
     Type: AWS::Route53::RecordSetGroup
     Properties:
       Comment: Creating records for mail server
