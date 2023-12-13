@@ -44,7 +44,8 @@ export default function NewUnitForm(props) {
     <form action="/s" method="post">
       <RailsAuthenticityToken />
       <label>
-        Is this unit going to be in a course with one unit or multiple units?
+        Is this unit going to be a standalone unit or part of a course with
+        multiple units?
         <select
           style={styles.dropdown}
           value={isCourse}
@@ -55,16 +56,16 @@ export default function NewUnitForm(props) {
             {''}
           </option>
           <option key={'multi-unit'} value={'false'}>
-            {'Multiple Units'}
+            {'Part of a course'}
           </option>
           <option key={'single-unit'} value={'true'}>
-            {'Single Unit'}
+            {'Standalone unit'}
           </option>
         </select>
         <HelpTip>
           <p>
             There are two different types of courses we support. A course with
-            multiple units and a course that is a single unit.
+            multiple units and a standalone course (only a single unit).
           </p>
         </HelpTip>
       </label>
