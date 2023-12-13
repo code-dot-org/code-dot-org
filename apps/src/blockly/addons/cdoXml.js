@@ -2,6 +2,10 @@ import {BLOCK_TYPES, PROCEDURE_DEFINITION_TYPES} from '../constants';
 import {partitionBlocksByType} from './cdoUtils';
 import {FALSEY_DEFAULT, readBooleanAttribute} from '../utils';
 
+// The user created attribute needs to be read from XML start blocks as 'usercreated'.
+// Once this has been done, all subsequent steps in the serialization use userCreated.
+const USER_CREATED_XML_ATTRIBUTE = 'usercreated';
+
 export default function initializeBlocklyXml(blocklyWrapper) {
   // Clear xml namespace
   blocklyWrapper.utils.xml.NAME_SPACE = '';
@@ -156,7 +160,7 @@ export function addMutationToBehaviorDefBlocks(blockElement) {
   // expects this kind of extra state in a mutator.
   const userCreated = readBooleanAttribute(
     blockElement,
-    'usercreated',
+    USER_CREATED_XML_ATTRIBUTE,
     FALSEY_DEFAULT
   );
   mutationElement.setAttribute('userCreated', userCreated);
@@ -194,7 +198,7 @@ export function addMutationToProcedureDefBlocks(blockElement) {
   // expects this kind of extra state in a mutator.
   const userCreated = readBooleanAttribute(
     blockElement,
-    'usercreated',
+    USER_CREATED_XML_ATTRIBUTE,
     FALSEY_DEFAULT
   );
   mutationElement.setAttribute('userCreated', userCreated);
