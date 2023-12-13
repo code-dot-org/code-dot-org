@@ -60,11 +60,8 @@ def run_rubocop(files)
 end
 
 def run_eslint_apps(files)
-  run("./node_modules/.bin/eslint -c .eslintrc.js -f ./.eslintCustomMessagesFormatter.js #{files.join(' ')}", APPS_DIR)
-end
-
-def run_eslint_jsx_a11y(files)
-  rules = [
+  # We're not ready to globally re-enable many a11y rules yet, but we can check them on a per-file basis.
+  a11y_rules = [
     'jsx-a11y/alt-text: error',
     'jsx-a11y/anchor-has-content: error',
     'jsx-a11y/anchor-is-valid: error',
@@ -83,8 +80,8 @@ def run_eslint_jsx_a11y(files)
     'jsx-a11y/no-static-element-interactions: error',
     'jsx-a11y/tabindex-no-positive: error',
   ]
-  rules_arg = rules.map {|rule| "--rule '#{rule}'"}.join(' ')
-  run("./node_modules/.bin/eslint -c .eslintrc.js -f ./.eslintCustomMessagesFormatter.js #{rules_arg} #{files.join(' ')}", APPS_DIR)
+  a11y_rules_arg = a11y_rules.map {|rule| "--rule '#{rule}'"}.join(' ')
+  run("./node_modules/.bin/eslint -c .eslintrc.js -f ./.eslintCustomMessagesFormatter.js #{a11y_rules_arg} #{files.join(' ')}", APPS_DIR)
 end
 
 def run_eslint_shared(files)
@@ -116,7 +113,6 @@ def do_linting
     Object.method(:run_haml) => filter_haml(modified_files),
     Object.method(:run_scss_dashboard) => filter_scss(modified_files),
     Object.method(:run_eslint_apps) => filter_eslint_apps(modified_files),
-    Object.method(:run_eslint_jsx_a11y) => filter_eslint_apps(modified_files),
     Object.method(:run_eslint_shared) => filter_eslint_shared(modified_files),
     Object.method(:run_stylelint_apps) => filter_scss_apps(modified_files),
     Object.method(:run_rubocop) => filter_rubocop(modified_files)
