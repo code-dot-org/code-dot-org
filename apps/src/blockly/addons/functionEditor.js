@@ -39,6 +39,7 @@ export default class FunctionEditor {
     this.parameterBlockTypes = opt_parameterBlockTypes || {};
     this.disableParamEditing = opt_disableParamEditing || false;
     this.paramTypes = opt_paramTypes || [];
+    this.isReadOnly = false;
   }
 
   init(options) {
@@ -50,6 +51,7 @@ export default class FunctionEditor {
     }
 
     this.dom = modalEditor;
+    this.isReadOnly = options.readOnly;
 
     // Customize auto-populated Functions toolbox category.
     this.editorWorkspace = Blockly.blockly_.inject(modalEditor, {
@@ -87,10 +89,12 @@ export default class FunctionEditor {
       .getElementById(MODAL_EDITOR_CLOSE_ID)
       .addEventListener('click', () => this.hide());
 
-    // Delete handler
-    document
-      .getElementById(MODAL_EDITOR_DELETE_ID)
-      .addEventListener('click', this.onDeletePressed.bind(this));
+    // Handler for delete button. We only enable the delete button for writeable workspaces.
+    if (!this.isReadOnly) {
+      document
+        .getElementById(MODAL_EDITOR_DELETE_ID)
+        .addEventListener('click', this.onDeletePressed.bind(this));
+    }
 
     // Editor workspace toolbox procedure category callback
     // we have to pass the main ws so that the correct procedures are populated
@@ -203,7 +207,9 @@ export default class FunctionEditor {
 
     const isBehavior = type === BLOCK_TYPES.behaviorDefinition;
     // We do not want to show the delete button for behaviors that are not user-created
-    const hideDeleteButton = isBehavior && !this.block.userCreated;
+    // or are in read only workspaces.
+    const hideDeleteButton =
+      this.isReadOnly || (isBehavior && !this.block.userCreated);
     const modalEditorDeleteButton = document.getElementById(
       MODAL_EDITOR_DELETE_ID
     );
