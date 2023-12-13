@@ -82,7 +82,7 @@ class Services::Lti
           sections[section_id][:members] << member
         else
           sections[section_id] = {
-            name: "#{context_title} #{member_section_names[index]}",
+            name: "#{context_title}: #{member_section_names[index]}",
             members: [member],
           }
         end

@@ -212,7 +212,7 @@ class Services::LtiTest < ActiveSupport::TestCase
   end
 
   test 'should append the course name to each section name when parsing NRPS response' do
-    expected_section_names = @lms_section_names.map {|name| "#{@course_name} #{name}"}
+    expected_section_names = @lms_section_names.map {|name| "#{@course_name}: #{name}"}
     parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response)
     actual_section_names = parsed_response.values.map {|v| v[:name]}
     assert_empty expected_section_names - actual_section_names
@@ -226,7 +226,7 @@ class Services::LtiTest < ActiveSupport::TestCase
     Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: parsed_response, section_owner_id: teacher.id)
 
     # initial names
-    expected_section_names = @lms_section_names.map {|name| "#{@course_name} #{name}"}
+    expected_section_names = @lms_section_names.map {|name| "#{@course_name}: #{name}"}
     actual_section_names = lti_course.sections.map(&:name)
     assert_empty expected_section_names - actual_section_names
 
@@ -238,7 +238,7 @@ class Services::LtiTest < ActiveSupport::TestCase
     end
     parsed_response = Services::Lti.parse_nrps_response(new_response)
     Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: parsed_response, section_owner_id: teacher.id)
-    new_expected_names = JSON.parse(new_names).map {|name| "#{@course_name} #{name}"}
+    new_expected_names = JSON.parse(new_names).map {|name| "#{@course_name}: #{name}"}
     actual_section_names = lti_course.reload.sections.map(&:name)
     assert_empty new_expected_names - actual_section_names
   end
