@@ -29,12 +29,6 @@ Resources:
           TTL: 3600
           ResourceRecords:
             - !GetAtt GreenhouseHostedZone.NameServers
-        # Delegate TeachAI DNS to a separate Hosted Zone
-        - Name: teachai.org
-          Type: NS
-          TTL: 3600
-          ResourceRecords:
-            !Split [",", !ImportValue TeachAiNameServers]
 
   GreenhouseHostedZone:
     Type: AWS::Route53::HostedZone
