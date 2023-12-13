@@ -156,7 +156,11 @@ function StandardsEditor(props) {
       <label>
         <strong>Filter by framework</strong>
       </label>
-      <select onChange={handleSelectFramework} style={styles.select}>
+      <select
+        onChange={handleSelectFramework}
+        style={styles.select}
+        aria-label="Filter by framework"
+      >
         <option value="">(none)</option>
         {props.frameworks.map(framework => (
           <option key={framework.shortcode} value={framework.shortcode}>
