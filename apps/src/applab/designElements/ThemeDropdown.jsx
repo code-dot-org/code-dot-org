@@ -37,7 +37,7 @@ export default class ThemeDropdown extends React.Component {
         value: themeOption.option,
         label: (
           <div className="theme-dropdown-label" style={styles.dropdownLabel}>
-            <img style={styles.icon} src={themeOption.icon} />
+            <img style={styles.icon} src={themeOption.icon} alt="" />
             <div style={styles.label}>
               {applabMsg[`designElementTheme_${themeOption.option}`]()}
             </div>
