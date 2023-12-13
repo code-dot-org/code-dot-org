@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-12-13 00:26:56 UTC",
+    "serialized_at": "2023-12-12 23:52:02 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -219,6 +219,16 @@
       }
     },
     {
+      "key": "9a68b9d0-b00b-4ec6-a6a4-94fa74894122",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9a68b9d0-b00b-4ec6-a6a4-94fa74894122",
+        "lesson_activity.key": "6dd65c2d-de48-4de3-a548-571729f360c8"
+      }
+    },
+    {
       "key": "eab6aafc-3179-4c38-87c7-a12c34858bc4",
       "position": 1,
       "properties": {
@@ -331,6 +341,132 @@
       "level_keys": [
         "OPD-K5 Begin_2023_K5CSConcepts"
       ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_collector_prog1_2023_k5CSconcepts"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-1",
+        "activity_section.key": "50d08900-45e8-409e-ae4d-109cd790581c"
+      },
+      "level_keys": [
+        "courseC_collector_prog1_2023_k5CSconcepts"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_collector_prog2_2023_K5CSConcepts"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-1",
+        "activity_section.key": "50d08900-45e8-409e-ae4d-109cd790581c"
+      },
+      "level_keys": [
+        "courseC_collector_prog2_2023_K5CSConcepts"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_collector_prog3_2023_K5CSConcepts"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-1",
+        "activity_section.key": "50d08900-45e8-409e-ae4d-109cd790581c"
+      },
+      "level_keys": [
+        "courseC_collector_prog3_2023_K5CSConcepts"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_collector_prog4_2023_K5CSConcepts"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-1",
+        "activity_section.key": "50d08900-45e8-409e-ae4d-109cd790581c"
+      },
+      "level_keys": [
+        "courseC_collector_prog4_2023_K5CSConcepts"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSC-SelfPaced-debugging2_2023_K5CSConcepts"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-1",
+        "activity_section.key": "50d08900-45e8-409e-ae4d-109cd790581c"
+      },
+      "level_keys": [
+        "CSC-SelfPaced-debugging2_2023_K5CSConcepts"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseC_collector_prog5_2023_K5CSConcepts"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-1",
+        "activity_section.key": "50d08900-45e8-409e-ae4d-109cd790581c"
+      },
+      "level_keys": [
+        "courseC_collector_prog5_2023_K5CSConcepts"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -368,6 +504,78 @@
         "lesson_group.key": "",
         "script.name": "self-paced-pl-k5-2024-1",
         "activity_section.key": "b9f2f0e9-8438-491a-9d23-5531ea8c1e32"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_collector_prog1_2023_k5CSconcepts",
+        "script_level.level_keys": [
+          "courseC_collector_prog1_2023_k5CSconcepts"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-1",
+        "activity_section.key": "50d08900-45e8-409e-ae4d-109cd790581c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_collector_prog2_2023_K5CSConcepts",
+        "script_level.level_keys": [
+          "courseC_collector_prog2_2023_K5CSConcepts"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-1",
+        "activity_section.key": "50d08900-45e8-409e-ae4d-109cd790581c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_collector_prog3_2023_K5CSConcepts",
+        "script_level.level_keys": [
+          "courseC_collector_prog3_2023_K5CSConcepts"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-1",
+        "activity_section.key": "50d08900-45e8-409e-ae4d-109cd790581c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_collector_prog4_2023_K5CSConcepts",
+        "script_level.level_keys": [
+          "courseC_collector_prog4_2023_K5CSConcepts"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-1",
+        "activity_section.key": "50d08900-45e8-409e-ae4d-109cd790581c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSC-SelfPaced-debugging2_2023_K5CSConcepts",
+        "script_level.level_keys": [
+          "CSC-SelfPaced-debugging2_2023_K5CSConcepts"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-1",
+        "activity_section.key": "50d08900-45e8-409e-ae4d-109cd790581c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseC_collector_prog5_2023_K5CSConcepts",
+        "script_level.level_keys": [
+          "courseC_collector_prog5_2023_K5CSConcepts"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-1",
+        "activity_section.key": "50d08900-45e8-409e-ae4d-109cd790581c"
       }
     }
   ],
