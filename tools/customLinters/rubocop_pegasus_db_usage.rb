@@ -10,7 +10,7 @@ module CustomCops
     def on_const(node)
       if pegasus_db_usage?(node)
         file_path = processed_source.buffer.name
-        unless file_path.include?('/pegasus/')
+        unless file_path.include?('/pegasus/') || file_path.include?('/bin/')
           add_offense(node, message: MSG)
         end
       end
