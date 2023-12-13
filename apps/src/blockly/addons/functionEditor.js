@@ -89,7 +89,7 @@ export default class FunctionEditor {
       .getElementById(MODAL_EDITOR_CLOSE_ID)
       .addEventListener('click', () => this.hide());
 
-    // Delete handler. We only enable the delete button for writeable workspaces.
+    // Handler for delete button. We only enable the delete button for writeable workspaces.
     if (!this.isReadOnly) {
       document
         .getElementById(MODAL_EDITOR_DELETE_ID)
