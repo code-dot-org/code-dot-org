@@ -12,7 +12,8 @@ export const behaviorGetMutator = {
     this.deserialize_(name, []);
   },
 
-  // Only used to save in XML, but still required to exist by Blockly.
+  // We shouldn't ever need to save behaviors as XML because Sprite Lab also saves to JSON.
+  // However, this function would create the appropriate mutation if did.
   mutationToDom: function () {
     const container = GoogleBlockly.utils.xml.createElement('mutation');
     container.setAttribute('behaviorId', this.behaviorId);
