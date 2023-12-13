@@ -11,11 +11,7 @@
  */
 
 import {ObservableParameterModel} from '@blockly/block-shareable-procedures';
-import {
-  FALSEY_DEFAULT,
-  TRUTHY_DEFAULT,
-  readBooleanAttribute,
-} from '@cdo/apps/blockly/utils';
+import {FALSEY_DEFAULT, readBooleanAttribute} from '@cdo/apps/blockly/utils';
 import {
   getBlockDescription,
   setBlockDescription,
@@ -92,12 +88,6 @@ export const procedureDefMutator = {
       'userCreated',
       FALSEY_DEFAULT
     );
-    const deletableAttribute = readBooleanAttribute(
-      xmlElement,
-      'deletable',
-      TRUTHY_DEFAULT
-    );
-    this.setDeletable(deletableAttribute);
     this.setStatements_(xmlElement.getAttribute('statements') !== 'false');
   },
 
