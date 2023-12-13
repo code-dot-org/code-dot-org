@@ -2,7 +2,8 @@
   "pages": {
     "/home": "teacher-apps-closing-2020",
     "/courses": "teacher-apps-open-2021",
-    "/another-page": "not-a-banner"
+    "/another-page": "not-a-banner",
+    "/dcdo-test": "dcdo-flag-test"
   },
   "banners": {
     "teacher-apps-open-2021": {
@@ -14,6 +15,18 @@
       "buttonId": "teacher-apps-open-2021-sign-up"
     },
     "teacher-apps-closing-2020": {
+      "image": "https://code.org/images/professional-learning-2019-closing-soon.png",
+      "title": "Don’t miss out. Apply today!",
+      "body": "Join us in this movement and submit your application today.",
+      "buttonText": "Join us",
+      "buttonUrl": "https://code.org/educate/professional-learning/middle-high",
+      "buttonId": "teacher-apps-closing-2020-sign-up",
+      "buttonText2": "Join us 2!",
+      "buttonUrl2": "https://code.org/educate/professional-learning",
+      "buttonId2": "teacher-apps-closing-2020-sign-up-2"
+    },
+    "dcdo-flag-test": {
+      "dcdo": "announcement-dcdo-test",
       "image": "https://code.org/images/professional-learning-2019-closing-soon.png",
       "title": "Don’t miss out. Apply today!",
       "body": "Join us in this movement and submit your application today.",
