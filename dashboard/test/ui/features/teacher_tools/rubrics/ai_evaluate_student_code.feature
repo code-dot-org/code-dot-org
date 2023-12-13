@@ -1,3 +1,4 @@
+@no_firefox
 # AI evaluation is stubbed out in UI tests via the /api/test/ai_proxy/assessment route.
 Feature: Evaluate student code against rubrics using AI
   Scenario: Student code is evaluated by AI when student submits project
@@ -45,7 +46,7 @@ Feature: Evaluate student code against rubrics using AI
 
     # Teacher views AI evaluation results in rubric tab
     When I click selector ".uitest-rubric-header-tab:contains('Rubric')"
-    And I wait until element ".uitest-learning-goal" is visible
+    And I wait until element ".uitest-learning-goal-row" is visible
     And element ".uitest-uses-ai" is visible
     And I click selector ".uitest-uses-ai:eq(0)"
     And I wait until element ".uitest-ai-assessment" is visible
@@ -95,7 +96,7 @@ Feature: Evaluate student code against rubrics using AI
 
     # Teacher views AI evaluation results in rubric tab
     When I click selector ".uitest-rubric-header-tab:contains('Rubric')"
-    And I wait until element ".uitest-learning-goal" is visible
+    And I wait until element ".uitest-learning-goal-row" is visible
     And element ".uitest-uses-ai" is visible
     And I click selector ".uitest-uses-ai:eq(0)"
     And I wait until element ".uitest-ai-assessment" is visible
