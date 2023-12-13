@@ -18,13 +18,32 @@ export const showCoteacherInviteNotification = coteacherInvite => {
   return !!coteacherInvite && DCDO.get('show-coteacher-ui', true);
 };
 
+export const showCoteacherForPlInviteNotification = coteacherInviteForPl => {
+  return !!coteacherInviteForPl && DCDO.get('show-coteacher-ui', true);
+};
+
 const CoteacherInviteNotification = ({
+  isForPl,
   asyncLoadCoteacherInvite,
   asyncLoadSectionData,
   coteacherInvite,
+  coteacherInviteForPl,
 }) => {
-  if (!showCoteacherInviteNotification(coteacherInvite)) {
+  if (
+    !(
+      showCoteacherInviteNotification(coteacherInvite) ||
+      showCoteacherForPlInviteNotification(coteacherInviteForPl)
+    )
+  ) {
     return null;
+  }
+
+  let invite;
+
+  if (showCoteacherForPlInviteNotification(coteacherInviteForPl) && isForPl) {
+    invite = coteacherInviteForPl;
+  } else if (showCoteacherInviteNotification(coteacherInvite) && !isForPl) {
+    invite = coteacherInvite;
   }
 
   const buttonAction = api => {
@@ -50,41 +69,45 @@ const CoteacherInviteNotification = ({
     buttonAction(`/api/v1/section_instructors/${id}/decline`);
   };
 
-  return (
-    <Notification
-      dismissible={false}
-      type={NotificationType.collaborate}
-      iconStyles={styles.icon}
-      notice={i18n.coteacherInvite({
-        invitedByName: coteacherInvite.invited_by_name,
-      })}
-      details={
-        <BodyTwoText style={{marginBottom: 0}}>
-          {i18n.coteacherInviteDescription({
-            invitedByEmail: coteacherInvite.invited_by_email,
-          })}
-          <br />
-          <StrongText>{coteacherInvite.section_name}</StrongText>
-        </BodyTwoText>
-      }
-      tooltipText={i18n.coteacherTooltip()}
-      buttonsStyles={styles.buttons}
-      buttons={[
-        {
-          text: 'Decline',
-          onClick: () => declineCoteacherInvite(coteacherInvite.id),
-          color: Button.ButtonColor.neutralDark,
-          style: styles.declineButton,
-        },
-        {
-          text: 'Accept',
-          onClick: () => acceptCoteacherInvite(coteacherInvite.id),
-          color: Button.ButtonColor.brandSecondaryDefault,
-          style: styles.acceptButton,
-        },
-      ]}
-    />
-  );
+  if (invite) {
+    return (
+      <Notification
+        dismissible={false}
+        type={NotificationType.collaborate}
+        iconStyles={styles.icon}
+        notice={i18n.coteacherInvite({
+          invitedByName: invite.invited_by_name,
+        })}
+        details={
+          <BodyTwoText style={{marginBottom: 0}}>
+            {i18n.coteacherInviteDescription({
+              invitedByEmail: invite.invited_by_email,
+            })}
+            <br />
+            <StrongText>{invite.section_name}</StrongText>
+          </BodyTwoText>
+        }
+        tooltipText={i18n.coteacherTooltip()}
+        buttonsStyles={styles.buttons}
+        buttons={[
+          {
+            text: 'Decline',
+            onClick: () => declineCoteacherInvite(invite.id, invite.section_id),
+            color: Button.ButtonColor.neutralDark,
+            style: styles.declineButton,
+          },
+          {
+            text: 'Accept',
+            onClick: () => acceptCoteacherInvite(invite.id, invite.section_id),
+            color: Button.ButtonColor.brandSecondaryDefault,
+            style: styles.acceptButton,
+          },
+        ]}
+      />
+    );
+  } else {
+    return null;
+  }
 };
 
 export const UnconnectedCoteacherInviteNotification =
@@ -93,6 +116,7 @@ export const UnconnectedCoteacherInviteNotification =
 export default connect(
   state => ({
     coteacherInvite: state.teacherSections.coteacherInvite,
+    coteacherInviteForPl: state.teacherSections.coteacherInviteForPl,
   }),
   {
     asyncLoadCoteacherInvite,
@@ -101,9 +125,11 @@ export default connect(
 )(CoteacherInviteNotification);
 
 CoteacherInviteNotification.propTypes = {
+  isForPl: PropTypes.bool,
   asyncLoadCoteacherInvite: PropTypes.func.isRequired,
   asyncLoadSectionData: PropTypes.func.isRequired,
   coteacherInvite: PropTypes.object,
+  coteacherInviteForPl: PropTypes.object,
 };
 
 // The Notification object uses styles instead of className for legacy reasons.
