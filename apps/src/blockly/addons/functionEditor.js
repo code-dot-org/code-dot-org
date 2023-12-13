@@ -207,6 +207,7 @@ export default class FunctionEditor {
 
     const isBehavior = type === BLOCK_TYPES.behaviorDefinition;
     // We do not want to show the delete button for behaviors that are not user-created
+    // or are in read only workspaces.
     const hideDeleteButton =
       this.isReadOnly || (isBehavior && !this.block.userCreated);
     const modalEditorDeleteButton = document.getElementById(

@@ -110,7 +110,9 @@ export default class WorkspaceSvgFrame extends SvgFrame {
     // In LTR the svg should be to the right of the toolbox, plus a margin.
     const metricsManager = this.element_.getMetricsManager();
     let frameX = frameSizes.MARGIN_SIDE / 2;
+    // Toolbox width > 0 if we have a categorized toolbox.
     const toolboxWidth = metricsManager.getToolboxMetrics().width;
+    // Flyout width > 0 if we have an uncategorized toolbox.
     const flyoutWidth = metricsManager.getFlyoutMetrics().width;
     if (toolboxWidth) {
       frameX += toolboxWidth;

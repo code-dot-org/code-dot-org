@@ -317,7 +317,7 @@ export const toolboxConfigurationSupportsEditButton = block => {
   if (block.type === BLOCK_TYPES.procedureCall) {
     return true;
   } else {
-    // behavior caller or picker
+    // block is a behavior caller or picker.
     const hasCategorizedToolbox = !!block.workspace.toolbox_;
     const hasUncategorizedToolbox = !!block.workspace.flyout;
     // We show the edit button for levels with a categorized toolbox or no toolbox.
