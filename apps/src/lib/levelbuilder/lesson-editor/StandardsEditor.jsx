@@ -153,13 +153,13 @@ function StandardsEditor(props) {
   const searchBoxKey = `${frameworkShortcode},${standardShortcodes}`;
   return (
     <div>
-      <label>
+      <label htmlFor="framework">
         <strong>Filter by framework</strong>
       </label>
       <select
         onChange={handleSelectFramework}
         style={styles.select}
-        aria-label="Filter by framework"
+        id="framework"
       >
         <option value="">(none)</option>
         {props.frameworks.map(framework => (
