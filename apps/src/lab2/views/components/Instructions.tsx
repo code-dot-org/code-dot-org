@@ -159,14 +159,19 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
               !vertical && moduleStyles.horizontal
             )}
           >
-            <img
-              src={imageUrl}
-              className={classNames(
-                moduleStyles.image,
-                !vertical && moduleStyles.fixedHeight
-              )}
+            <button
               onClick={() => imageClicked()}
-            />
+              className={moduleStyles.invisibleButton}
+              type="button"
+            >
+              <img
+                src={imageUrl}
+                className={classNames(
+                  moduleStyles.image,
+                  !vertical && moduleStyles.fixedHeight
+                )}
+              />
+            </button>
             {showBigImage && (
               <div
                 className={classNames(
@@ -174,7 +179,13 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
                   imagePopOutDirection === 'left' && moduleStyles.bigImageLeft
                 )}
               >
-                <img src={imageUrl} onClick={() => imageClicked()} />
+                <button
+                  onClick={() => imageClicked()}
+                  className={moduleStyles.invisibleButton}
+                  type="button"
+                >
+                  <img src={imageUrl} />
+                </button>
               </div>
             )}
           </div>

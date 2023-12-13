@@ -1,4 +1,5 @@
 @import 'color.scss';
+@import '@cdo/apps/mixins';
 
 @keyframes slidein {
   from {
@@ -180,4 +181,8 @@
   p {
     font-size: 14px;
   }
+}
+
+.invisibleButton {
+  @include remove-button-styles;
 }
