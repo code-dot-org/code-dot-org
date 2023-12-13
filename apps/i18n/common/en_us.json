@@ -3,6 +3,7 @@
   "abuseFormDetail": "Please provide as much detail as possible regarding the content you are reporting.",
   "abuseFormAcknowledge": "By submitting this information, you acknowledge it will be handled in accordance with the terms of the [Privacy Policy]({privacy_url}) and the [Terms of Service]({tos_url}).",
   "abuseType": "Please answer how this content violates the Terms of Service",
+  "abuseTypes": "Abuse types",
   "abuseTypeHarassment": "Threats, cyberbullying, harassment",
   "abuseTypeCyberbullying": "Cyberbullying",
   "abuseTypeInfringement": "Copyright Infringement",
