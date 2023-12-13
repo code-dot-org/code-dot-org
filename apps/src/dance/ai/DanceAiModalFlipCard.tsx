@@ -18,6 +18,21 @@ type DanceAiModalFlipCardProps = {
   getGeneratedEffect: any;
 };
 
+/**
+ * This component renders the flip card on the Dance AI Modal. It's a good candidate for further refactoring and could possibly be made more generic.
+ *
+ * @param props
+ * @param props.mode
+ * @param props.generatingProgressStep
+ * @param props.badGeneratedResultsCount
+ * @param props.currentToggle
+ * @param props.previewAppearDuration
+ * @param props.previewAppearDuration
+ * @param props.currentGeneratedEffect
+ * @param props.getGeneratedEffect
+ * @returns A react element that renders the flip card
+ */
+
 const DanceAiModalFlipCard: React.FunctionComponent<
   DanceAiModalFlipCardProps
 > = ({

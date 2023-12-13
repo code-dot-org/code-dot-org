@@ -13,6 +13,17 @@ interface EmojiIconProps {
   isHighlighted?: boolean;
 }
 
+/**
+ * This component renders an EmojiIcon
+ *
+ * @param props
+ * @param props.item the DanceAiModelItem emoji
+ * @param props.onClick callback click handler to be called when the user clicks on an emoji
+ * @param className class to attach to the emoji
+ * @param isHighlighted boolean to determine if the emoji should be drawn highlighted
+ * @returns An EmojiIcon
+ */
+
 const EmojiIcon: React.FunctionComponent<EmojiIconProps> = ({
   item,
   onClick,

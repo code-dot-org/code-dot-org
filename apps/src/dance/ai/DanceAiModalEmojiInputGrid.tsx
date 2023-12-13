@@ -11,6 +11,15 @@ type DanceAiModalEmojiInputGrid = {
   handleItemClick: (id: string, available: boolean) => void;
 };
 
+/**
+ * This component renders the input grid of emojis for the user to select from
+ *
+ * @param props
+ * @param props.selectedEmojis An array of emojis the user has currently selected.
+ * @param props.handleItemClick callback click handler to be called when the user clicks on an emoji
+ * @returns A react element that renders the emoji input grid.
+ */
+
 const DanceAiModalEmojiInputGrid: React.FunctionComponent<
   DanceAiModalEmojiInputGrid
 > = ({selectedEmojis, handleItemClick}) => {

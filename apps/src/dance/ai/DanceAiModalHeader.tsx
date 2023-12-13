@@ -14,6 +14,18 @@ interface DanceAiModalHeaderProps {
   slotCount: number;
 }
 
+/**
+ * This component renders the header of Dance AI Modal.
+ *
+ * @param props
+ * @param props.onClose callback to be called when the modal closes
+ * @param props.handleStartOverClick callback for when the startover button is clicked
+ * @param props.selectedEmojis array of DanceAiModalItems the user has selected
+ * @param props.slotCount number of slots to display
+
+ * @returns A react element that renders the modal header
+ */
+
 const DanceAiModalHeader: React.FunctionComponent<DanceAiModalHeaderProps> = ({
   onClose,
   handleStartOverClick,

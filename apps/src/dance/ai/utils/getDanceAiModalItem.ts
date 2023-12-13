@@ -8,5 +8,6 @@ const itemsById: {[key: string]: DanceAiModelItem} =
     {}
   );
 
+// given an item id, returns the item object
 export const getDanceAiModalItem = (id: string): DanceAiModelItem =>
   itemsById[id];
