@@ -29,7 +29,7 @@ namespace :build do
       RakeUtils.system "npm run #{npm_target}"
       File.write(commit_hash, calculate_apps_commit_hash)
 
-      if rack_env?(:staging) && DCDO.get('deploy_storybook', false)
+      if rack_env?(:staging) && DCDO.get('deploy_storybook', true)
         ChatClient.log 'Deploying <b>storybook</b>...'
         RakeUtils.system 'npm run storybook:deploy'
       end

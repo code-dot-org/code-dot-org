@@ -1,4 +1,5 @@
 require "test_helper"
+require 'testing/includes_metrics'
 
 class EvaluateRubricJobTest < ActiveJob::TestCase
   setup do
@@ -163,6 +164,114 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     assert_equal SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:PII_VIOLATION], RubricAiEvaluation.where(user_id: @student.id).first.status
   end
 
+  test "job is retried when the proxy server returns a 429" do
+    # Perform an otherwise successful run
+    EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
+
+    # Create a project
+    channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
+    channel_id = channel_token.channel
+
+    stub_project_source_data(channel_id)
+
+    stub_lesson_s3_data
+
+    stub_get_openai_evaluations(status: 429)
+
+    # Run the job (and track attempts)
+    assert_performed_jobs EvaluateRubricJob::RETRIES_ON_RATE_LIMIT do
+      perform_enqueued_jobs do
+        EvaluateRubricJob.perform_later(
+          user_id: @student.id,
+          requester_id: @student.id,
+          script_level_id: @script_level.id
+        )
+      end
+    end
+  end
+
+  test "job is retried when the proxy server times out" do
+    # Perform an otherwise successful run
+    EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
+
+    # Create a project
+    channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
+    channel_id = channel_token.channel
+
+    stub_project_source_data(channel_id)
+
+    stub_lesson_s3_data
+
+    stub_get_openai_evaluations(status: 429, raises: Net::ReadTimeout)
+
+    # Run the job (and track attempts)
+    assert_performed_jobs EvaluateRubricJob::RETRIES_ON_TIMEOUT do
+      perform_enqueued_jobs do
+        EvaluateRubricJob.perform_later(
+          user_id: @student.id,
+          requester_id: @student.id,
+          script_level_id: @script_level.id
+        )
+      end
+    end
+  end
+
+  test "metrics for tokens used are logged" do
+    # Perform an otherwise successful run
+    EvaluateRubricJob.stubs(:get_lesson_s3_name).with(@script_level).returns('fake-lesson-s3-name')
+
+    # Create a project
+    channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
+    channel_id = channel_token.channel
+
+    stub_project_source_data(channel_id)
+
+    stub_lesson_s3_data
+
+    stub_get_openai_evaluations(metadata: {
+                                  'agent' => 'openai',
+                                  'usage' => {
+                                    'total_tokens' => 123,
+                                    'completion_tokens' => 100,
+                                    'prompt_tokens' => 23,
+                                  },
+                                }
+    )
+
+    Cdo::Metrics.expects(:push).with(
+      EvaluateRubricJob::AI_RUBRIC_METRICS_NAMESPACE,
+      all_of(
+        includes_metrics(TotalTokens: 123),
+        includes_dimensions(:TotalTokens, Environment: CDO.rack_env, Agent: 'openai')
+      )
+    )
+
+    Cdo::Metrics.expects(:push).with(
+      EvaluateRubricJob::AI_RUBRIC_METRICS_NAMESPACE,
+      all_of(
+        includes_metrics(CompletionTokens: 100),
+        includes_dimensions(:CompletionTokens, Environment: CDO.rack_env, Agent: 'openai')
+      )
+    )
+
+    Cdo::Metrics.expects(:push).with(
+      EvaluateRubricJob::AI_RUBRIC_METRICS_NAMESPACE,
+      all_of(
+        includes_metrics(PromptTokens: 23),
+        includes_dimensions(:PromptTokens, Environment: CDO.rack_env, Agent: 'openai')
+      )
+    )
+
+    # Run the job (and track attempts)
+    perform_enqueued_jobs do
+      EvaluateRubricJob.perform_later(
+        user_id: @student.id,
+        requester_id: @student.id,
+        script_level_id: @script_level.id
+      )
+    end
+  end
+
   # stub out the calls to fetch project data from S3. Because the call to S3
   # is deep inside SourceBucket, we stub out the entire SourceBucket class
   # rather than stubbing the S3 calls directly.
@@ -221,7 +330,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     EvaluateRubricJob.any_instance.stubs(:s3_client).returns(s3_client)
   end
 
-  private def stub_get_openai_evaluations(code: 'fake-code')
+  private def stub_get_openai_evaluations(code: 'fake-code', status: 200, raises: nil, metadata: {})
     expected_examples = [
       ['fake-code-1', 'fake-response-1'],
       ['fake-code-2', 'fake-response-2']
@@ -251,12 +360,30 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     ai_proxy_origin = 'http://fake-ai-proxy-origin'
     CDO.stubs(:ai_proxy_origin).returns(ai_proxy_origin)
     uri = URI.parse("#{ai_proxy_origin}/assessment")
-    HTTParty.stubs(:post).with(
+
+    request = stub(
+      uri: uri
+    )
+    response = stub(
+      body: {metadata: metadata, data: fake_ai_evaluations}.to_json,
+      code: status,
+      request: request,
+      success?: status == 200
+    )
+    response.stubs(:is_a?).with(HTTParty::Response).returns(true)
+
+    post_stub = HTTParty.stubs(:post).with(
       uri,
       body: URI.encode_www_form(expected_form_data),
       headers: {'Content-Type' => 'application/x-www-form-urlencoded'},
       timeout: 120
-    ).returns(stub(body: {data: fake_ai_evaluations}.to_json, success?: true))
+    )
+
+    if raises
+      post_stub.raises(raises)
+    else
+      post_stub.returns(response)
+    end
   end
 
   # verify the job wrote the expected LearningGoalAiEvaluations to the database

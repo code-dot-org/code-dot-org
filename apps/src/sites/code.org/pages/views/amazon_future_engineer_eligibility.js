@@ -1,6 +1,6 @@
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-//import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-//import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -29,8 +29,7 @@ function showAmazonFutureEngineerEligibility() {
         study: 'amazon-future-engineer-eligibility',
         event: 'start',
       });
-      // TODO: Reenable Amplitude https://codedotorg.atlassian.net/browse/ACQ-1209
-      // analyticsReporter.sendEvent(EVENTS.AFE_START);
+      analyticsReporter.sendEvent(EVENTS.AFE_START);
 
       amazonFutureEngineerEligibilityElements.each(
         (index, amazonFutureEngineerEligibilityElement) => {
