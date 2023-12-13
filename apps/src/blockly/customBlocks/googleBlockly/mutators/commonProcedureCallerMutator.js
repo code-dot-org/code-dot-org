@@ -36,7 +36,6 @@ export const commonFunctions = {
    */
   deserialize_: function (name, params) {
     this.setFieldValue(name, 'NAME');
-    // Typically, the procedure will share its name with the caller block.
     if (!this.model_) this.model_ = this.findProcedureModel_(name, params);
     if (this.getProcedureModel()) {
       this.initBlockWithProcedureModel_();
