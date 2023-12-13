@@ -3,7 +3,7 @@
   "config": {
     "func": "ai",
     "inline": true,
-    "blockText": "{IMAGE}generate {VALUE} effect",
+    "blockText": "{IMAGE}generate {DANCE_AI} effect",
     "style": "ai_blocks",
     "args": [
       {
@@ -17,7 +17,7 @@
         }
       },
       {
-        "name": "VALUE",
+        "name": "DANCE_AI",
         "customInput": "danceAi"
       }
     ]

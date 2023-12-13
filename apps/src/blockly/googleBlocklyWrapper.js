@@ -752,6 +752,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return blocklyWrapper.mainBlockSpace;
   };
 
+  blocklyWrapper.getFunctionEditorWorkspace = function () {
+    return blocklyWrapper.functionEditor?.getWorkspace();
+  };
+
   initializeBlocklyXml(blocklyWrapper);
   initializeGenerator(blocklyWrapper);
   initializeTouch(blocklyWrapper);

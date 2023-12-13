@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-11-28 21:29:58 UTC",
+    "serialized_at": "2023-12-13 00:26:51 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -8104,6 +8104,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Getting Started_2024"
+        ],
         "progression": "App Lab Intro - Video"
       },
       "bonus": false,
@@ -8126,6 +8129,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - Change Screen Color_2024"
+        ],
         "progression": "Setting Properties"
       },
       "bonus": false,
@@ -8148,6 +8154,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - Change Text 2_2024"
+        ],
         "progression": "Setting Properties"
       },
       "bonus": false,
@@ -8170,6 +8179,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - Full Text_2024"
+        ],
         "progression": "Setting Properties"
       },
       "bonus": false,
@@ -8192,6 +8204,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Make It Interactive_2024"
+        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -8214,6 +8229,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - onEvent intro_2024"
+        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -8236,6 +8254,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - onEvent twoButtons_2024"
+        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -8258,6 +8279,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Images and Sounds_2024"
+        ],
         "progression": "Images and Sounds"
       },
       "bonus": false,
@@ -8280,6 +8304,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - playSound_2024"
+        ],
         "progression": "Images and Sounds"
       },
       "bonus": false,
@@ -8302,6 +8329,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Design Mode_2024"
+        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -8324,6 +8354,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - thisOrThatAddButton_2024"
+        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -8346,6 +8379,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - thisOrThatAddScreen_2024"
+        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -8368,6 +8404,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - thisOrThatSetScreen_2024"
+        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -8390,6 +8429,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Share Your App_2024"
+        ],
         "progression": "Share Your App"
       },
       "bonus": false,
@@ -8412,6 +8454,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - thisOrThatPersonalize_2024"
+        ],
         "progression": "Share Your App"
       },
       "bonus": false,
@@ -8434,6 +8479,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_FishVTrash_2024"
+        ],
         "progression": "Recognizing Fish"
       },
       "bonus": false,
@@ -8456,6 +8504,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Short_2024"
+        ],
         "progression": "Recognizing Fish Features"
       },
       "bonus": false,
@@ -8478,6 +8529,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Long_2024"
+        ],
         "progression": "Recognizing Expressions"
       },
       "bonus": false,
@@ -8500,6 +8554,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "aiml-intro-pulse-survey_2024"
+        ],
         "progression": "Check-In Survey"
       },
       "bonus": false,
@@ -8522,6 +8579,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-L2 unsupervised - 1_2024"
+        ],
         "progression": "Looking for Patterns"
       },
       "bonus": false,
@@ -8544,6 +8604,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-L2 supervised - green glass door_2024"
+        ],
         "progression": "Green Glass Door"
       },
       "bonus": false,
@@ -8566,6 +8629,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models-shoes random_2024"
+        ],
         "progression": "Shoe Recommender"
       },
       "bonus": false,
@@ -8588,6 +8654,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models-shoes decision tree_2024"
+        ],
         "progression": "Improved Shoe Recommender"
       },
       "bonus": false,
@@ -8610,6 +8679,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models-shoe survey_2024"
+        ],
         "progression": "Shoe Recommendation Survey"
       },
       "bonus": false,
@@ -8632,6 +8704,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models-shoes points_2024"
+        ],
         "progression": "Ultimate Shoe Recommender"
       },
       "bonus": false,
@@ -8654,6 +8729,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro ai lab- fruit veggie widget_2024"
+        ],
         "progression": "Fruit and Veggie Explorer"
       },
       "bonus": false,
@@ -8676,6 +8754,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro ai lab-shapes v1_2024"
+        ],
         "progression": "Recognizing Shapes"
       },
       "bonus": false,
@@ -8698,6 +8779,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro categorical-pizza_2024"
+        ],
         "progression": "Pizza Recommendations"
       },
       "bonus": false,
@@ -8720,6 +8804,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro categorical-food choices_2024"
+        ],
         "progression": "You Choose: Restaurant Recommendations"
       },
       "bonus": false,
@@ -8742,6 +8829,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender demo_2024"
+        ],
         "progression": "Book Recommender App"
       },
       "bonus": false,
@@ -8764,6 +8854,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender 0_2024"
+        ],
         "progression": "Import a Model"
       },
       "bonus": false,
@@ -8786,6 +8879,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender 1_2024"
+        ],
         "progression": "Customize Your App"
       },
       "bonus": false,
@@ -8808,6 +8904,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender 2_2024"
+        ],
         "progression": "Customize Your App"
       },
       "bonus": false,
@@ -8830,6 +8929,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender 3_2024"
+        ],
         "progression": "Customize Your App"
       },
       "bonus": false,
@@ -8852,6 +8954,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender 4_2024"
+        ],
         "progression": "Customize Your App"
       },
       "bonus": false,
@@ -8874,6 +8979,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender 5_2024"
+        ],
         "progression": "Choice Levels: Customize Your App"
       },
       "bonus": false,
@@ -8896,6 +9004,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-model card-medical app v2 2021-2_2024"
+        ],
         "progression": "Medical Priority App"
       },
       "bonus": false,
@@ -8918,6 +9029,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-model cards-book recommender model card_2024"
+        ],
         "progression": "Book Recommender Model Card"
       },
       "bonus": false,
@@ -8940,6 +9054,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-model card-medical-1_2024"
+        ],
         "progression": "Medical Dataset Model Cards"
       },
       "bonus": false,
@@ -8962,6 +9079,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-model card-medical-2_2024"
+        ],
         "progression": "Medical Dataset Model Cards"
       },
       "bonus": false,
@@ -8984,6 +9104,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-model card-medical-3_2024"
+        ],
         "progression": "Medical Dataset Model Cards"
       },
       "bonus": false,
@@ -9006,6 +9129,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-data decisions-zoo1_2024"
+        ],
         "progression": "Zoo Predictions"
       },
       "bonus": false,
@@ -9028,6 +9154,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-data decisions-zoo2_2024"
+        ],
         "progression": "Zoo Predictions"
       },
       "bonus": false,
@@ -9050,6 +9179,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-data decisions-zoo3_2024"
+        ],
         "progression": "Zoo Predictions"
       },
       "bonus": false,
@@ -9072,6 +9204,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-data decisions- import app_2024"
+        ],
         "progression": "Importing Your Model"
       },
       "bonus": false,
@@ -9094,6 +9229,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-data decisions- customize app_2024"
+        ],
         "progression": "Customizing Your App"
       },
       "bonus": false,
@@ -9116,6 +9254,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models in applab-zoo model embed_2024"
+        ],
         "progression": "Example App: Zoo Classification"
       },
       "bonus": false,
@@ -9138,6 +9279,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example1A_2024"
+        ],
         "progression": "Pet Recommender"
       },
       "bonus": false,
@@ -9160,6 +9304,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-pet model card_2024"
+        ],
         "progression": "Pet Recommender"
       },
       "bonus": false,
@@ -9182,6 +9329,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example1B_2024"
+        ],
         "progression": "Pet Recommender"
       },
       "bonus": false,
@@ -9204,6 +9354,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models in applab-screens-2_2024"
+        ],
         "progression": "Adding New Screens"
       },
       "bonus": false,
@@ -9226,6 +9379,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models in applab-screens-1_2024"
+        ],
         "progression": "Adding New Screens"
       },
       "bonus": false,
@@ -9248,6 +9404,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models in applab-screens-3_2024"
+        ],
         "progression": "Adding New Screens"
       },
       "bonus": false,
@@ -9270,6 +9429,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models in applab-choice parent_2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -9292,6 +9454,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ml-models in applab-zoo assessment_2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -9314,6 +9479,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use models applab-practice choice_2024"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -9336,6 +9504,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ml-numerical ai lab-safari 1_2024"
+        ],
         "progression": "Safari Model"
       },
       "bonus": false,
@@ -9358,6 +9529,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-numerical data- import app_2024"
+        ],
         "progression": "Safari App"
       },
       "bonus": false,
@@ -9380,6 +9554,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-customize-raspado_2024"
+        ],
         "progression": "Raspado Recommender"
       },
       "bonus": false,
@@ -9402,6 +9579,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example3A_2024"
+        ],
         "progression": "Driver Alert System"
       },
       "bonus": false,
@@ -9424,6 +9604,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example3_EditA_2024"
+        ],
         "progression": "Driver Alert System"
       },
       "bonus": false,
@@ -9446,6 +9629,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example3_EditB_2024"
+        ],
         "progression": "Driver Alert System"
       },
       "bonus": false,
@@ -9468,6 +9654,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example3_EditC_2024"
+        ],
         "progression": "Driver Alert System"
       },
       "bonus": false,
@@ -9490,6 +9679,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example3C_2024"
+        ],
         "progression": "Driver Alert System"
       },
       "bonus": false,
@@ -9512,6 +9704,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example3D_2024"
+        ],
         "progression": "Driver Alert System"
       },
       "bonus": false,
@@ -9534,6 +9729,9 @@
       "activity_section_position": 6,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example3E_2024"
+        ],
         "progression": "Driver Alert System"
       },
       "bonus": false,
@@ -9556,6 +9754,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-customize apps-practice choice_2024"
+        ],
         "progression": "You Choose: Improve Your App"
       },
       "bonus": false,
@@ -9578,6 +9779,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-mini project-ai lab 2_2024"
+        ],
         "progression": "Train a Model in AI Lab"
       },
       "bonus": false,
@@ -9600,6 +9804,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-mini project-app lab_2024"
+        ],
         "progression": "Create an App in App Lab"
       },
       "bonus": false,
@@ -9622,6 +9829,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "aiml-ch1-pulse-survey_2024"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -9644,6 +9854,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-plan survey-copy form_2024"
+        ],
         "progression": "Create a Google Form"
       },
       "bonus": false,
@@ -9666,6 +9879,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-good data-kim survey_2024"
+        ],
         "progression": "Kim's Survey"
       },
       "bonus": false,
@@ -9688,6 +9904,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-good data-kim data_2024"
+        ],
         "progression": "Kim's Survey Data"
       },
       "bonus": false,
@@ -9710,6 +9929,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-good data-upload csv_2024"
+        ],
         "progression": "AI Lab and Kim's Data"
       },
       "bonus": false,
@@ -9732,6 +9954,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-good data-isaac data_2024"
+        ],
         "progression": "Isaac's Survey Data"
       },
       "bonus": false,
@@ -9754,6 +9979,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-good data-upload isaac csv_2024"
+        ],
         "progression": "AI Lab and Isaac's Data"
       },
       "bonus": false,
@@ -9776,6 +10004,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-bad data-club investigations_2024"
+        ],
         "progression": "Club Datasets"
       },
       "bonus": false,
@@ -9798,6 +10029,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-bad data-loneliness all_2024"
+        ],
         "progression": "Alternative Datasets"
       },
       "bonus": false,
@@ -9820,6 +10054,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-club app-import model_2024"
+        ],
         "progression": "Import Your Model"
       },
       "bonus": false,
@@ -9842,6 +10079,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-club app-edit text_2024"
+        ],
         "progression": "Import Your Model"
       },
       "bonus": false,
@@ -9864,6 +10104,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-club app-add theme_2024"
+        ],
         "progression": "Import Your Model"
       },
       "bonus": false,
@@ -9886,6 +10129,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-club app-home screen design_2024"
+        ],
         "progression": "Add a Welcome Screen"
       },
       "bonus": false,
@@ -9908,6 +10154,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-club app-home screen event_2024"
+        ],
         "progression": "Add a Welcome Screen"
       },
       "bonus": false,
@@ -9930,6 +10179,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-club app-choice parent_2024"
+        ],
         "progression": "Customize Your App"
       },
       "bonus": false,
@@ -9952,6 +10204,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ml-club app-review submit_2024"
+        ],
         "progression": "Review Your App"
       },
       "bonus": false,
@@ -9974,6 +10229,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-final project-ai lab_2024"
+        ],
         "progression": "Design an AI App - AI Lab"
       },
       "bonus": false,
@@ -9996,6 +10254,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-final project-app lab_2024"
+        ],
         "progression": "Design an AI App - App Lab"
       },
       "bonus": false,
@@ -10018,6 +10279,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csd7_2024"
+        ],
         "progression": "End-Of-Unit Survey"
       },
       "bonus": false,
@@ -11094,1991 +11358,22 @@
     }
   ],
   "resources": [
-    {
-      "name": "5 Why's - Activity Guide",
-      "url": "https://docs.google.com/presentation/d/1u2BsNRx8ev5_zQ2Fv49SVQSiGlJTDs8d7O2-JuDZeHE/view",
-      "key": "5_why_s_-_activity_guide",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "5_why_s_-_activity_guide"
-      }
-    },
-    {
-      "name": "[KEY] - Numerical Data in AI Lab",
-      "url": "https://docs.google.com/document/d/1ChaLFrOmn56Obv_e7Ep54Yn7GSPHH9CSDDiKUVIS6yk/view",
-      "key": "_key_-_numerical_data_in_ai_lab",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_-_numerical_data_in_ai_lab"
-      }
-    },
-    {
-      "name": "[KEY] Classification Models",
-      "url": "https://docs.google.com/document/d/1X9insuLdN9bxeBEWryrr_W0xr-ZseXn4I5bdBBtQMLY/view",
-      "key": "_key_classification_models",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_classification_models"
-      }
-    },
-    {
-      "name": "[KEY] Numerical Accuracy",
-      "url": "https://docs.google.com/document/d/1Mqq-0fwCIi-urnwqatu8_FKuGZmqa2RLFTLB6YbMEGk/view",
-      "key": "_key_numerical_accuracy",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_numerical_accuracy"
-      }
-    },
-    {
-      "name": "[KEY] Patterns in Data",
-      "url": "https://docs.google.com/document/d/1XYw_VE2B-yxIBEe8zir93crlOiT3Ry78kq3YZo_2FPg/view",
-      "key": "_key_patterns_in_data",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_patterns_in_data"
-      }
-    },
-    {
-      "name": "[KEY] Training a Model in AI Lab",
-      "url": "https://docs.google.com/document/d/1lc4m63AY7E6vd8SDogG9bFLnXFFhtNf31fmTdzPxpA4/view",
-      "key": "_key_training_a_model_in_ai_lab",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_training_a_model_in_ai_lab"
-      }
-    },
-    {
-      "name": "[KEY] Zombie Prediction",
-      "url": "https://docs.google.com/document/d/10DEhYqysK5A7D5ZBI96AcKl4RtGyhC26qvu6gwV-ukI/view",
-      "key": "_key_zombie_prediction",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_zombie_prediction"
-      }
-    },
-    {
-      "name": "[KEY] Zoo Models",
-      "url": "https://docs.google.com/document/d/1fD-5e1s2_fE3V19MphefDg41JY-N9Pog6O6hTyXJJoc/view",
-      "key": "_key_zoo_models",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_zoo_models"
-      }
-    },
-    {
-      "name": "[Template] 5 Why's",
-      "url": "https://docs.google.com/presentation/d/1tmU3VoEL_L-GEPYjV3egM2NoPXK9X82BxC4QI3fMj90/view",
-      "key": "_template_5_why_s",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "_template_5_why_s"
-      }
-    },
-    {
-      "name": "Accuracy in AI Lab",
-      "url": "https://drive.google.com/file/d/1T_YmYjGf4xEauRt7uBwI4ty_NE7KShgY/view?usp=sharing",
-      "key": "accuracy_in_ai_lab",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "accuracy_in_ai_lab"
-      }
-    },
-    {
-      "name": "AI Code of Ethics",
-      "url": "https://docs.google.com/presentation/d/1RWBw8fsV2HuLZzkuYTvHvIeubKvZg73EBB0VtBEFOWw/template/preview",
-      "key": "ai_code_of_ethics",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "ai_code_of_ethics"
-      }
-    },
-    {
-      "name": "AI Ethics Research Areas",
-      "url": "https://docs.google.com/document/d/1ir5EPOnw2ZUsmSmf9AwTG4vzVGQy3VBPu_Vaq1SlP7I/view",
-      "key": "ai_ethics_research_areas",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "ai_ethics_research_areas"
-      }
-    },
-    {
-      "name": "AI Ethics Research Reflection",
-      "url": "https://docs.google.com/document/d/1STOrwXgubRtaDInE5OZZFoqIVONFiJ6MWSvJbwUS3Zg/view",
-      "key": "ai_ethics_research_reflection",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "ai_ethics_research_reflection"
-      }
-    },
-    {
-      "name": "AI: Training Data & Bias",
-      "url": "https://youtu.be/x2mRoFNm22g",
-      "key": "ai_training_data_bias",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/02-ai-trainingdata-sm-mp4.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "ai_training_data_bias"
-      }
-    },
-    {
-      "name": "AI: What is Machine Learning?",
-      "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
-      "key": "ai_what_is_machine_learning_",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/01-ai-machinelearning-sm-mp4.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "ai_what_is_machine_learning_"
-      }
-    },
-    {
-      "name": "All Code",
-      "url": "/s/csd7-2023/code",
-      "key": "all_code_5",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_code_5"
-      }
-    },
-    {
-      "name": "All Resources",
-      "url": "/s/csd7-2023/resources",
-      "key": "all_resources_7",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_resources_7"
-      }
-    },
-    {
-      "name": "All Standards",
-      "url": "/s/csd7-2023/standards",
-      "key": "all_standards_7",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_standards_7"
-      }
-    },
-    {
-      "name": "All Vocabulary",
-      "url": "/s/csd7-2023/vocab",
-      "key": "all_vocabulary_7",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_vocabulary_7"
-      }
-    },
-    {
-      "name": "App Brainstorm - Activity Guide",
-      "url": "https://docs.google.com/document/d/1T-gkuy-Tl-5fW4OoXPN2brtVDI5us3i61IOhnGoR13I/view",
-      "key": "app_brainstorm_-_activity_guide",
-      "properties": {
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "app_brainstorm_-_activity_guide"
-      }
-    },
-    {
-      "name": "Classification Models",
-      "url": "https://docs.google.com/document/d/1hR_i4su2lxxpGZHoDNxDvKWyrDpn66MAIsi22iFVZNs/view",
-      "key": "classification_models",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "classification_models"
-      }
-    },
-    {
-      "name": "Classification Models",
-      "url": "https://docs.google.com/presentation/d/1k1CbZpukeDIMzXknkigoxJDGsg4PkLe3GMV-lyoxtHs/template/preview",
-      "key": "classification_models_1",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "classification_models_1"
-      }
-    },
-    {
-      "name": "Classifying Fish",
-      "url": "https://docs.google.com/document/d/1ZCRVbRA6XLj1tRCzPed5fSGfqGjJ2I1ImES-BTo3GmY/view",
-      "key": "classifying_fish",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "classifying_fish"
-      }
-    },
-    {
-      "name": "Cleaning Survey Data",
-      "url": "https://www.youtube.com/watch?v=NBTYgU71Jgw",
-      "key": "cleaning_survey_data",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "cleaning_survey_data"
-      }
-    },
-    {
-      "name": "Create an ML App",
-      "url": "https://docs.google.com/document/d/1vZrQXBaQclP25oPwNXCNSX1-CERz4vwNSIMl0ZyH4oc/view",
-      "key": "create_an_ml_app",
-      "properties": {
-        "audience": "Student",
-        "type": "Rubric"
-      },
-      "seeding_key": {
-        "resource.key": "create_an_ml_app"
-      }
-    },
-    {
-      "name": "Create an ML App - Project Guide",
-      "url": "https://docs.google.com/document/d/1ySXUw0Lre1O6qvHS6zv3CN0BFBOKsZhE3PKE6D2hN60/view",
-      "key": "create_an_ml_app_-_project_guide",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "create_an_ml_app_-_project_guide"
-      }
-    },
-    {
-      "name": "Creating a Survey",
-      "url": "https://drive.google.com/file/d/1L8WM8UEpOUW7rY1DaGImAco2BGzj6J_y/view?usp=sharing",
-      "key": "creating_a_survey",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "creating_a_survey"
-      }
-    },
-    {
-      "name": "Creating a Survey in Google Forms",
-      "url": "https://www.youtube.com/watch?v=Ot6eXUYb3P0",
-      "key": "creating_a_survey_in_google_forms",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "creating_a_survey_in_google_forms"
-      }
-    },
-    {
-      "name": "Creating an App",
-      "url": "https://docs.google.com/presentation/d/1orxGDc4fT_-OiklE1dISBAchmzPmdsQYaz8Wg3st61c/template/preview",
-      "key": "creating_an_app",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "creating_an_app"
-      }
-    },
-    {
-      "name": "CSD Guide to Assessment",
-      "url": "https://docs.google.com/document/d/1IO5XgPW_Apil_Uziq5hAMCBgilm8txZ3sp8atxiKiLU/view",
-      "key": "csd_guide_to_assessment",
-      "properties": {
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csd_guide_to_assessment"
-      }
-    },
-    {
-      "name": "CSD Guide to Curriculum Videos",
-      "url": "https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view",
-      "key": "csd_guide_to_curriculum_videos",
-      "properties": {
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csd_guide_to_curriculum_videos"
-      }
-    },
-    {
-      "name": "CSD Guide to Debugging",
-      "url": "https://docs.google.com/document/d/145lvpomqz0tUuzXLbkAFgP9zMDpECMwFYiEIG1_hQFg/view",
-      "key": "csd_guide_to_debugging",
-      "properties": {
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csd_guide_to_debugging"
-      }
-    },
-    {
-      "name": "CSD Guide to Differentiation",
-      "url": "https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view",
-      "key": "csd_guide_to_differentiation",
-      "properties": {
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csd_guide_to_differentiation"
-      }
-    },
-    {
-      "name": "CSD Guide to Teaching and Learning Strategies",
-      "url": "https://docs.google.com/document/d/1Cg5iTwERoX25Y2DdLNmrPCbVB2d9FPGfUMUvcnVoN8Q/view",
-      "key": "csd_guide_to_teaching_and_learning_strategies",
-      "properties": {
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csd_guide_to_teaching_and_learning_strategies"
-      }
-    },
-    {
-      "name": "CSD Guide to Using Resources",
-      "url": "https://docs.google.com/document/d/1NYJMHZYnAZYNctehlQOImSstsu48sRGOMbi4It4ZjkI/view",
-      "key": "csd_guide_to_using_resources",
-      "properties": {
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csd_guide_to_using_resources"
-      }
-    },
-    {
-      "name": "Customizing Apps",
-      "url": "https://docs.google.com/presentation/d/1mroNd1d6wJqOTwS6jIxOsjB_VIX792xpe-0oECCfQik/template/preview",
-      "key": "customizing_apps",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "customizing_apps"
-      }
-    },
-    {
-      "name": "Design an AI App",
-      "url": "https://docs.google.com/presentation/d/14KQvTgTDbCsbj4OwyjcllthuFgc1-6Ay9AB-L7Kf7y0/template/preview",
-      "key": "design_an_ai_app",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "design_an_ai_app"
-      }
-    },
-    {
-      "name": "Design an AI App - Project Guide",
-      "url": "https://docs.google.com/document/d/1-pPVR5sLB4lRXLkE9-wJCI2WrSK5WV852EhJXO8FXig/view",
-      "key": "design_an_ai_app_-_project_guide",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "design_an_ai_app_-_project_guide"
-      }
-    },
-    {
-      "name": "Design an AI App",
-      "url": "https://docs.google.com/document/d/1cCwvy69clrk4cSaweGUkC1Isee0aiuCtdZUUe69idzM/view",
-      "key": "design_an_ai_app_1",
-      "properties": {
-        "audience": "Student",
-        "type": "Rubric"
-      },
-      "seeding_key": {
-        "resource.key": "design_an_ai_app_1"
-      }
-    },
-    {
-      "name": "Ethics & AI: Equal Access and Algorithmic Bias",
-      "url": "https://www.youtube.com/watch?v=tJQSyzBUAew",
-      "key": "ethics_ai_equal_access_and_algorithmic_bias",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "ethics_ai_equal_access_and_algorithmic_bias"
-      }
-    },
-    {
-      "name": "Events in App Lab",
-      "url": "https://youtu.be/npa2r4t6y2A",
-      "key": "events_in_app_lab",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "events_in_app_lab"
-      }
-    },
-    {
-      "name": "Exemplar - Design an AI App",
-      "url": "https://studio.code.org/projects/applab/9g5u-sqHLP9fU2FGmfhMJcS06nWpXsQt2ApYFb3CNaw",
-      "key": "exemplar_-_design_an_ai_app",
-      "properties": {
-        "audience": "Verified Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "exemplar_-_design_an_ai_app"
-      }
-    },
-    {
-      "name": "Exemplar - Design an AI App Model Card",
-      "url": "https://docs.google.com/presentation/d/1Vc766dZ-q3Y2x6b39mKIMAGHk88ppxP-SjygFH3v5tE/view",
-      "key": "exemplar_-_design_an_ai_app_model_card",
-      "properties": {
-        "audience": "Verified Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "exemplar_-_design_an_ai_app_model_card"
-      }
-    },
-    {
-      "name": "Exemplar - Design an AI App Project Guide",
-      "url": "https://docs.google.com/document/d/1GOcczf3U2d3qGXKSu4yeU0g2Tnnwib8q7xZcLsd0lLk/edit",
-      "key": "exemplar_-_design_an_ai_app_project_guide",
-      "properties": {
-        "audience": "Verified Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "exemplar_-_design_an_ai_app_project_guide"
-      }
-    },
-    {
-      "name": "Finding Patterns in Data",
-      "url": "https://www.youtube.com/watch?v=edFO0bdpoHY",
-      "key": "finding_patterns_in_data",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "finding_patterns_in_data"
-      }
-    },
-    {
-      "name": "Fruit & Veggie Cards",
-      "url": "https://docs.google.com/document/d/1IEe5Wi6_7MmptyiPHnEwvtwQsKvcIfqHzXsS4qnhPUY/view",
-      "key": "fruit_veggie_cards",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "fruit_veggie_cards"
-      }
-    },
-    {
-      "name": "If-Statements in App Lab",
-      "url": "https://www.youtube.com/watch?v=0oG3Wck2fRU",
-      "key": "if-statements_in_app_lab",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "if-statements_in_app_lab"
-      }
-    },
-    {
-      "name": "Importing a Model in App Lab",
-      "url": "https://drive.google.com/file/d/1xxtJnmayTnjT_0KdcaQp5buxBsVJnbsu/view?usp=sharing",
-      "key": "importing_a_model_in_app_lab",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "importing_a_model_in_app_lab"
-      }
-    },
-    {
-      "name": "Importing Models in App Lab",
-      "url": "https://docs.google.com/presentation/d/1MmDk9KQ67u5-_587yyWCSCg4PnEX-76bYiH8IWOqMTg/template/preview",
-      "key": "importing_models_in_app_lab",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "importing_models_in_app_lab"
-      }
-    },
-    {
-      "name": "Innovations in AI",
-      "url": "https://docs.google.com/presentation/d/1P4guv1tKEcVrWhV7Cf1g3r6De2kIBkHAlJEUggOgmOc/template/preview",
-      "key": "innovations_in_ai",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "innovations_in_ai"
-      }
-    },
-    {
-      "name": "Innovations in AI - Activity Guide",
-      "url": "https://docs.google.com/document/d/1GwSQtWmUvuGGTefN3jW0r5MtgJt361I9ESe_Zi9y6ws/view",
-      "key": "innovations_in_ai_-_activity_guide",
-      "properties": {
-        "audience": "Student",
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "innovations_in_ai_-_activity_guide"
-      }
-    },
-    {
-      "name": "Innovations in AI Research Areas - Student Resource",
-      "url": "https://docs.google.com/document/d/1gJ9VpNdZWk05Ad7oEbuMal02MsYaZtnrLUqecmf8Obg/view",
-      "key": "innovations_in_ai_research_areas_-_student_resource",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "innovations_in_ai_research_areas_-_student_resource"
-      }
-    },
-    {
-      "name": "Intro to Design Mode",
-      "url": "https://youtu.be/jiX1dST2PCw",
-      "key": "intro_to_design_mode",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "intro_to_design_mode"
-      }
-    },
-    {
-      "name": "Introduction to AI Lab",
-      "url": "https://docs.google.com/presentation/d/1bStRdf2CkIJxdiyIIqMeAOdq4jqvMaQ4OZZ6iMYp5Ww/template/preview",
-      "key": "introduction_to_ai_lab",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "introduction_to_ai_lab"
-      }
-    },
-    {
-      "name": "Introduction to AI Lab",
-      "url": "https://www.youtube.com/watch?v=bGJ05vdI3xA",
-      "key": "introduction_to_ai_lab_1",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "introduction_to_ai_lab_1"
-      }
-    },
-    {
-      "name": "Introduction to Machine Learning",
-      "url": "https://docs.google.com/presentation/d/1ZOSt4G-bEqIiFIWFWQjvY54I2YgHlCURXmtX1FYnpFw/template/preview",
-      "key": "introduction_to_machine_learning",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "introduction_to_machine_learning"
-      }
-    },
-    {
-      "name": "Isaac's Survey Data - Student Resource",
-      "url": "https://docs.google.com/spreadsheets/d/1XKPrY1ABlrSx3pdKqK7y4dx5OYdSAJkpYdefKrFyqEI/copy",
-      "key": "isaac_s_survey_data_-_student_resource",
-      "properties": {
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "isaac_s_survey_data_-_student_resource"
-      }
-    },
-    {
-      "name": "Issue Statements",
-      "url": "https://docs.google.com/presentation/d/1h26VlnEpI96YmZVqgsaSqYXUsnyjeoh6SeHYg3Z_n4A/template/preview",
-      "key": "issue_statements",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "issue_statements"
-      }
-    },
-    {
-      "name": "Kim's Survey Data - Student Resource",
-      "url": "https://docs.google.com/spreadsheets/d/1bVtUc5KrHaBZ4rx6trdYVqjGHIq9J8jBG0Mx2d9nxDM/copy",
-      "key": "kim_s_survey_data_-_student_resource",
-      "properties": {
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "kim_s_survey_data_-_student_resource"
-      }
-    },
-    {
-      "name": "Make a Machine Learning App",
-      "url": "https://docs.google.com/presentation/d/1ippNYS2AFhv4wp95KKIHP6cxUIxWnIYMlun62-xkTqY/template/preview",
-      "key": "make_a_machine_learning_app",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "make_a_machine_learning_app"
-      }
-    },
-    {
-      "name": "Model Card - Digital Template",
-      "url": "https://docs.google.com/presentation/d/16m1cey8LBDAG7gO8D1_cGEnLO6K5LDWhiv2OzCRTgQ0/view",
-      "key": "model_card_-_digital_template",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "model_card_-_digital_template"
-      }
-    },
-    {
-      "name": "Model Card - Printable Template",
-      "url": "https://docs.google.com/presentation/d/1R-QhIBO71FwchR8d5JVBcD5PbiOU5z7R_bP09mnRHkY/view",
-      "key": "model_card_-_printable_template",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "model_card_-_printable_template"
-      }
-    },
-    {
-      "name": "Model Cards",
-      "url": "https://docs.google.com/presentation/d/1WYIFb5KSvsmllWEWCRyadM7KXp8zERjfBJ1TwmMtySA/template/preview",
-      "key": "model_cards",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "model_cards"
-      }
-    },
-    {
-      "name": "Model Cards",
-      "url": "https://docs.google.com/document/d/19-PQFU3YYjjdWjVRUCMXpmRZnV_LNdVeM-sQrnpVLiU/view",
-      "key": "model_cards_1",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "model_cards_1"
-      }
-    },
-    {
-      "name": "Model Cards in AI Lab",
-      "url": "https://www.youtube.com/watch?v=tz_ptkv0NxA",
-      "key": "model_cards_in_ai_lab",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "model_cards_in_ai_lab"
-      }
-    },
-    {
-      "name": "Model Cards in App Lab",
-      "url": "https://docs.google.com/presentation/d/1OwOs1FbnA3FUbm9e4QV6bQWcphOn8LTfifrg0hupUqo/template/preview",
-      "key": "model_cards_in_app_lab",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "model_cards_in_app_lab"
-      }
-    },
-    {
-      "name": "Numerical Accuracy",
-      "url": "https://docs.google.com/document/d/12upsaTZ3iqHrGyesBl-0KWLhznL42KlsJGZeF5PyPPI/view",
-      "key": "numerical_accuracy",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "numerical_accuracy"
-      }
-    },
-    {
-      "name": "Numerical Data in AI Lab",
-      "url": "https://docs.google.com/presentation/d/1RMRXGf2sQhzujRY4p6KHHCF98kVSnYXvvkBWwqmCbEY/template/preview",
-      "key": "numerical_data_in_ai_lab",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "numerical_data_in_ai_lab"
-      }
-    },
-    {
-      "name": "Numerical Data in AI Lab",
-      "url": "https://docs.google.com/document/d/13I6pRYxTwoDEUeIXkglvG7rpMIsLjVKHu7R8rKOxT08/view",
-      "key": "numerical_data_in_ai_lab_1",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "numerical_data_in_ai_lab_1"
-      }
-    },
-    {
-      "name": "Numerical Data in AI Lab",
-      "url": "https://www.youtube.com/watch?v=a4JH1D_D7s4",
-      "key": "numerical_data_in_ai_lab_2",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "numerical_data_in_ai_lab_2"
-      }
-    },
-    {
-      "name": "Numerical Models",
-      "url": "https://docs.google.com/presentation/d/1933wdhwpGeJnJLFjtgi_UvGkPEOALsImH58Fwz0ydAI/template/preview",
-      "key": "numerical_models",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "numerical_models"
-      }
-    },
-    {
-      "name": "Our AI Code of Ethics [Template]",
-      "url": "https://docs.google.com/presentation/d/1SJEXpTCKwf5fbDy5GuDjDGAsuUrkI9QfxKF-1pMSndg/edit?usp=sharing",
-      "key": "our_ai_code_of_ethics_template_",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "our_ai_code_of_ethics_template_"
-      }
-    },
-    {
-      "name": "Patterns in Data",
-      "url": "https://docs.google.com/presentation/d/1rf0nrsftZegYxbHrsGIOf6yiyL2ItHiFweQ68mMltB8/template/preview",
-      "key": "patterns_in_data",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "patterns_in_data"
-      }
-    },
-    {
-      "name": "Patterns in Data",
-      "url": "https://docs.google.com/document/d/17l2oREzo8U-DsVkq_FlgujiG99swiGfKvC-53mYBwns/view",
-      "key": "patterns_in_data_1",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "patterns_in_data_1"
-      }
-    },
-    {
-      "name": "Printable Model Cards",
-      "url": "https://docs.google.com/presentation/d/1Whie0DD0D81Wd9rUelsPxogrShY4TNo08r6Vi_hAqzo/view",
-      "key": "printable_model_cards",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "printable_model_cards"
-      }
-    },
-    {
-      "name": "Saving Models in AI Lab",
-      "url": "https://docs.google.com/presentation/d/1VAtkWeEY9FwyLykuTlJr58El62Xz7CLxNeL44jOZqvs/template/preview",
-      "key": "saving_models_in_ai_lab",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "saving_models_in_ai_lab"
-      }
-    },
-    {
-      "name": "Seeing AI",
-      "url": "https://www.youtube.com/watch?v=DybczED-GKE",
-      "key": "seeing_ai",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "seeing_ai"
-      }
-    },
-    {
-      "name": "Selecting a Label",
-      "url": "https://drive.google.com/file/d/1iCd0-YM5JK2Bk1u3XgEY6o0xcGwJdkau/view?usp=sharing",
-      "key": "selecting_a_label",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "selecting_a_label"
-      }
-    },
-    {
-      "name": "Selecting Features",
-      "url": "https://drive.google.com/file/d/1GLf_xq333r4tR2XHMoP24rq0KQVLM8z_/view?usp=sharing",
-      "key": "selecting_features",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "selecting_features"
-      }
-    },
-    {
-      "name": "Shoe Survey",
-      "url": "https://docs.google.com/forms/d/e/1FAIpQLSc7rkOHqoMHb2GLBW5tuTjVFPY7xblkCLnzCpGyF6UaX2mKpQ/viewform?usp=sharing",
-      "key": "shoe_survey",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "shoe_survey"
-      }
-    },
-    {
-      "name": "Survey Data in AI Lab",
-      "url": "https://docs.google.com/presentation/d/15fxpekeW4564LMtEyaqqOJazdCaM8CMXveNqd2eKFw8/template/preview",
-      "key": "survey_data_in_ai_lab",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "survey_data_in_ai_lab"
-      }
-    },
-    {
-      "name": "Survey Planning",
-      "url": "https://docs.google.com/presentation/d/1CrX-BcrBirQIZ6fcaX6KRE0WWOn11kYQqCkv2qwAS68/template/preview",
-      "key": "survey_planning",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "survey_planning"
-      }
-    },
-    {
-      "name": "Survey Planning - Activity Guide",
-      "url": "https://docs.google.com/document/d/1Z_diIi_5bK5hEf6zky_BYh-B0xVlWabwJEddK3CxSv8/view",
-      "key": "survey_planning_-_activity_guide",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "survey_planning_-_activity_guide"
-      }
-    },
-    {
-      "name": "Survey Template [Google Form]",
-      "url": "https://docs.google.com/forms/d/1E4sGp03dDW6TYVh1G6zlNITuuSaLFGlMox2E0Iiczzo/copy",
-      "key": "survey_template_google_form_",
-      "properties": {
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "survey_template_google_form_"
-      }
-    },
-    {
-      "name": "Teacher Forum",
-      "url": "https://forum.code.org/c/csd",
-      "key": "teacher_forum",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "teacher_forum"
-      }
-    },
-    {
-      "name": "The Problem Solving Process",
-      "url": "https://docs.google.com/document/d/1ttgLORbUtEEpWcGsygF0YKVFHpG0PEzfLyi52T8wFIo/view",
-      "key": "the_problem_solving_process_3",
-      "properties": {
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "the_problem_solving_process_3"
-      }
-    },
-    {
-      "name": "The Problem Solving Process with Data",
-      "url": "https://docs.google.com/document/d/19pdlJOjWqA5s7f5sr9mTL-v7x_ZMjQP36SlwqzJ-Ipo/view",
-      "key": "the_problem_solving_process_with_data",
-      "properties": {
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "the_problem_solving_process_with_data"
-      }
-    },
-    {
-      "name": "Training a Model in AI Lab",
-      "url": "https://docs.google.com/document/d/1g2SnkvucCNybZEGOdid2Dlq0_XEm0sf4z0U3msUJLIM/view",
-      "key": "training_a_model_in_ai_lab",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "training_a_model_in_ai_lab"
-      }
-    },
-    {
-      "name": "Training and Testing in AI Lab",
-      "url": "https://www.youtube.com/watch?v=HcCtdaiMWPQ",
-      "key": "training_and_testing_in_ai_lab",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "training_and_testing_in_ai_lab"
-      }
-    },
-    {
-      "name": "Troubleshooting Models",
-      "url": "https://docs.google.com/presentation/d/1SYRgBzxxq2oM_qynytBYf5tVQUgkzG4DmCPfGTGIbrI/template/preview",
-      "key": "troubleshooting_models",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "troubleshooting_models"
-      }
-    },
-    {
-      "name": "Troubleshooting Models - Activity Guide",
-      "url": "https://docs.google.com/document/d/1CWOJ7PHNlO7Z-4C51KvZnu55EDKn1t33i-2oUw5Zc_g/view",
-      "key": "troubleshooting_models_-_activity_guide",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "troubleshooting_models_-_activity_guide"
-      }
-    },
-    {
-      "name": "Types of Machine Learning",
-      "url": "https://docs.google.com/presentation/d/1w2aMrTfjvyUJNQKXsy_01cUSFvSFLmB4-r3LIo3ZFVM/template/preview",
-      "key": "types_of_machine_learning",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "types_of_machine_learning"
-      }
-    },
-    {
-      "name": "Types of Machine Learning",
-      "url": "https://docs.google.com/document/d/1QxjxUn_X9RXolJfIMHVYYxxZB-9tAtJC067r__oQZfM/view",
-      "key": "types_of_machine_learning_1",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "types_of_machine_learning_1"
-      }
-    },
-    {
-      "name": "Types of Machine Learning",
-      "url": "https://docs.google.com/document/d/1EEHJruthZ3ObknGOaVsC2SKY5RaZp042ozgzGau5NWw/view",
-      "key": "types_of_machine_learning_2",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "types_of_machine_learning_2"
-      }
-    },
-    {
-      "name": "Using Data with Categorical Features",
-      "url": "https://drive.google.com/file/d/1blY6e6hX5DszuAdHXTEeB735kYUy1Hyj/view?usp=sharing",
-      "key": "using_data_with_categorical_features",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "using_data_with_categorical_features"
-      }
-    },
-    {
-      "name": "Using Data with Numerical Features",
-      "url": "https://drive.google.com/file/d/1gDKIbkvicZqyXlyj2a5InXaU9_lcxVlU/view?usp=sharing",
-      "key": "using_data_with_numerical_features",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "using_data_with_numerical_features"
-      }
-    },
-    {
-      "name": "View and Download Survey Data",
-      "url": "https://www.youtube.com/watch?v=orn4dpcIiCk",
-      "key": "view_and_download_survey_data",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "view_and_download_survey_data"
-      }
-    },
-    {
-      "name": "Zombie Prediction",
-      "url": "https://docs.google.com/document/d/14PIdGQ6YClxCMOetY8AGHcbpnCyYI2vffTTKGCqbNRw/view",
-      "key": "zombie_prediction",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "zombie_prediction"
-      }
-    },
-    {
-      "name": "Zoo Models",
-      "url": "https://docs.google.com/document/d/1gDbioUAySZZdDeWWbs0zg4X0-Dy392dJRo3splmeqW8/view",
-      "key": "zoo_models",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "zoo_models"
-      }
-    }
+
   ],
   "lessons_resources": [
-    {
-      "seeding_key": {
-        "lesson.key": "AI Code of Ethics",
-        "resource.key": "ai_code_of_ethics"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "AI Code of Ethics",
-        "resource.key": "ai_ethics_research_areas"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "AI Code of Ethics",
-        "resource.key": "ai_ethics_research_reflection"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "AI Code of Ethics",
-        "resource.key": "ethics_ai_equal_access_and_algorithmic_bias"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "AI Code of Ethics",
-        "resource.key": "our_ai_code_of_ethics_template_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Classification Models",
-        "resource.key": "_key_classification_models"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Classification Models",
-        "resource.key": "classification_models"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Classification Models",
-        "resource.key": "classification_models_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Classification Models",
-        "resource.key": "fruit_veggie_cards"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Creating an App",
-        "resource.key": "creating_an_app"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Customizing Apps",
-        "resource.key": "customizing_apps"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Importing Models in App Lab",
-        "resource.key": "events_in_app_lab"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Importing Models in App Lab",
-        "resource.key": "importing_a_model_in_app_lab"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Importing Models in App Lab",
-        "resource.key": "importing_models_in_app_lab"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Importing Models in App Lab",
-        "resource.key": "intro_to_design_mode"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Innovations in AI",
-        "resource.key": "innovations_in_ai"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Innovations in AI",
-        "resource.key": "innovations_in_ai_-_activity_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Innovations in AI",
-        "resource.key": "innovations_in_ai_research_areas_-_student_resource"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Innovations in AI",
-        "resource.key": "seeing_ai"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to AI Lab",
-        "resource.key": "_key_training_a_model_in_ai_lab"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to AI Lab",
-        "resource.key": "accuracy_in_ai_lab"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to AI Lab",
-        "resource.key": "introduction_to_ai_lab"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to AI Lab",
-        "resource.key": "introduction_to_ai_lab_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to AI Lab",
-        "resource.key": "selecting_features"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to AI Lab",
-        "resource.key": "training_a_model_in_ai_lab"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to AI Lab",
-        "resource.key": "training_and_testing_in_ai_lab"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to AI Lab",
-        "resource.key": "using_data_with_categorical_features"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Machine Learning",
-        "resource.key": "ai_what_is_machine_learning_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Machine Learning",
-        "resource.key": "classifying_fish"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Machine Learning",
-        "resource.key": "introduction_to_machine_learning"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Issue Statements",
-        "resource.key": "5_why_s_-_activity_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Issue Statements",
-        "resource.key": "app_brainstorm_-_activity_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Issue Statements",
-        "resource.key": "issue_statements"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Model Cards in App Lab",
-        "resource.key": "if-statements_in_app_lab"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Model Cards in App Lab",
-        "resource.key": "model_cards_in_app_lab"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Model Cards in App Lab",
-        "resource.key": "printable_model_cards"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Model Cards",
-        "resource.key": "ai_training_data_bias"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Model Cards",
-        "resource.key": "model_cards"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Model Cards",
-        "resource.key": "model_cards_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Numerical Data in AI Lab",
-        "resource.key": "_key_-_numerical_data_in_ai_lab"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Numerical Data in AI Lab",
-        "resource.key": "numerical_data_in_ai_lab"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Numerical Data in AI Lab",
-        "resource.key": "numerical_data_in_ai_lab_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Numerical Data in AI Lab",
-        "resource.key": "numerical_data_in_ai_lab_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Numerical Data in AI Lab",
-        "resource.key": "using_data_with_numerical_features"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Numerical Models",
-        "resource.key": "_key_numerical_accuracy"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Numerical Models",
-        "resource.key": "_key_zombie_prediction"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Numerical Models",
-        "resource.key": "numerical_accuracy"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Numerical Models",
-        "resource.key": "numerical_models"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Numerical Models",
-        "resource.key": "zombie_prediction"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Patterns in Data",
-        "resource.key": "_key_patterns_in_data"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Patterns in Data",
-        "resource.key": "finding_patterns_in_data"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Patterns in Data",
-        "resource.key": "patterns_in_data"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Patterns in Data",
-        "resource.key": "patterns_in_data_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Patterns in Data",
-        "resource.key": "shoe_survey"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design an AI App",
-        "resource.key": "_template_5_why_s"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design an AI App",
-        "resource.key": "design_an_ai_app"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design an AI App",
-        "resource.key": "design_an_ai_app_-_project_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design an AI App",
-        "resource.key": "design_an_ai_app_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design an AI App",
-        "resource.key": "exemplar_-_design_an_ai_app"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design an AI App",
-        "resource.key": "exemplar_-_design_an_ai_app_model_card"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design an AI App",
-        "resource.key": "exemplar_-_design_an_ai_app_project_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design an AI App",
-        "resource.key": "model_card_-_digital_template"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design an AI App",
-        "resource.key": "model_card_-_printable_template"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design an AI App",
-        "resource.key": "survey_template_google_form_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Make a Machine Learning App",
-        "resource.key": "create_an_ml_app"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Make a Machine Learning App",
-        "resource.key": "create_an_ml_app_-_project_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Make a Machine Learning App",
-        "resource.key": "make_a_machine_learning_app"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Saving Models in AI Lab",
-        "resource.key": "_key_zoo_models"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Saving Models in AI Lab",
-        "resource.key": "model_cards_in_ai_lab"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Saving Models in AI Lab",
-        "resource.key": "saving_models_in_ai_lab"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Saving Models in AI Lab",
-        "resource.key": "selecting_a_label"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Saving Models in AI Lab",
-        "resource.key": "zoo_models"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Survey Data in AI Lab",
-        "resource.key": "cleaning_survey_data"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Survey Data in AI Lab",
-        "resource.key": "isaac_s_survey_data_-_student_resource"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Survey Data in AI Lab",
-        "resource.key": "kim_s_survey_data_-_student_resource"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Survey Data in AI Lab",
-        "resource.key": "survey_data_in_ai_lab"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Survey Data in AI Lab",
-        "resource.key": "view_and_download_survey_data"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Survey Planning",
-        "resource.key": "creating_a_survey"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Survey Planning",
-        "resource.key": "creating_a_survey_in_google_forms"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Survey Planning",
-        "resource.key": "survey_planning"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Survey Planning",
-        "resource.key": "survey_planning_-_activity_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Survey Planning",
-        "resource.key": "survey_template_google_form_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Troubleshooting Models",
-        "resource.key": "troubleshooting_models"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Troubleshooting Models",
-        "resource.key": "troubleshooting_models_-_activity_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Types of Machine Learning",
-        "resource.key": "types_of_machine_learning"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Types of Machine Learning",
-        "resource.key": "types_of_machine_learning_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Types of Machine Learning",
-        "resource.key": "types_of_machine_learning_2"
-      }
-    }
+
   ],
   "scripts_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "all_code_5",
-        "script.name": "csd7-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_resources_7",
-        "script.name": "csd7-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_standards_7",
-        "script.name": "csd7-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_vocabulary_7",
-        "script.name": "csd7-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_guide_to_assessment",
-        "script.name": "csd7-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_guide_to_curriculum_videos",
-        "script.name": "csd7-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_guide_to_debugging",
-        "script.name": "csd7-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_guide_to_differentiation",
-        "script.name": "csd7-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_guide_to_teaching_and_learning_strategies",
-        "script.name": "csd7-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_guide_to_using_resources",
-        "script.name": "csd7-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "teacher_forum",
-        "script.name": "csd7-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "the_problem_solving_process_3",
-        "script.name": "csd7-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "the_problem_solving_process_with_data",
-        "script.name": "csd7-2024"
-      }
-    }
+
   ],
   "scripts_student_resources": [
 
   ],
   "vocabularies": [
-    {
-      "key": "bias",
-      "word": "Bias",
-      "definition": "When a decision favors some things and de-prioritizes or excludes others",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "bias"
-      }
-    },
-    {
-      "key": "categorical_data",
-      "word": "Categorical Data",
-      "definition": "data that can be separated into groups",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "categorical_data"
-      }
-    },
-    {
-      "key": "classification",
-      "word": "Classification",
-      "definition": "predicting a category based on other features",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "classification"
-      }
-    },
-    {
-      "key": "ethics",
-      "word": "Ethics",
-      "definition": "guidelines for good behavior.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "ethics"
-      }
-    },
-    {
-      "key": "features",
-      "word": "Features",
-      "definition": "The inputs that a model uses to make decisions",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "features"
-      }
-    },
-    {
-      "key": "label",
-      "word": "Label",
-      "definition": "the output you are trying to decide or predict with a model",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "label"
-      }
-    },
-    {
-      "key": "machine_learning",
-      "word": "Machine Learning",
-      "definition": "How computers recognize patterns and make decisions without being explicitly programmed",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "machine_learning"
-      }
-    },
-    {
-      "key": "model",
-      "word": "Model",
-      "definition": "a computer program designed to make a decision",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "model"
-      }
-    },
-    {
-      "key": "numerical_data",
-      "word": "Numerical Data",
-      "definition": "data that can be counted or measured",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "numerical_data"
-      }
-    },
-    {
-      "key": "supervised_learning",
-      "word": "Supervised Learning",
-      "definition": "When a human trains a model to learn with examples",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "supervised_learning"
-      }
-    },
-    {
-      "key": "training",
-      "word": "Training",
-      "definition": "giving examples to a model so it can learn",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "training"
-      }
-    },
-    {
-      "key": "unsupervised_learning",
-      "word": "Unsupervised Learning",
-      "definition": "Finding patterns in data that doesn't have any labels",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "unsupervised_learning"
-      }
-    }
+
   ],
   "lessons_vocabularies": [
-    {
-      "seeding_key": {
-        "lesson.key": "AI Code of Ethics",
-        "vocabulary.key": "ethics"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Classification Models",
-        "vocabulary.key": "categorical_data"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Classification Models",
-        "vocabulary.key": "classification"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Machine Learning",
-        "vocabulary.key": "machine_learning"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Model Cards",
-        "vocabulary.key": "bias"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Numerical Data in AI Lab",
-        "vocabulary.key": "numerical_data"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Types of Machine Learning",
-        "vocabulary.key": "features"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Types of Machine Learning",
-        "vocabulary.key": "label"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Types of Machine Learning",
-        "vocabulary.key": "model"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Types of Machine Learning",
-        "vocabulary.key": "supervised_learning"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Types of Machine Learning",
-        "vocabulary.key": "training"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Types of Machine Learning",
-        "vocabulary.key": "unsupervised_learning"
-      }
-    }
+
   ],
   "lessons_programming_expressions": [
     {

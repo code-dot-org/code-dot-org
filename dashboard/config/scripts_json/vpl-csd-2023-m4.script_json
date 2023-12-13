@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-09-16 00:50:21 UTC",
+    "serialized_at": "2023-12-13 00:27:00 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -533,6 +533,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - M4 - CI_2023"
+        ],
         "progression": "Lesson Investigation (~60 mins)"
       },
       "bonus": false,
@@ -555,6 +558,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - M4 - CI - L1_2023"
+        ],
         "progression": "Lesson Investigation (~60 mins)"
       },
       "bonus": false,
@@ -577,6 +583,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - M4 - CI - L2_2023"
+        ],
         "progression": "Lesson Investigation (~60 mins)"
       },
       "bonus": false,
@@ -599,6 +608,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD M4 Reflection_2023"
+        ],
         "progression": "Lesson Investigation (~60 mins)"
       },
       "bonus": false,
@@ -621,6 +633,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - U5 Module 4 - Conclusions and Connections_2023"
+        ],
         "progression": "Conclusions and Connections (~10 min)"
       },
       "bonus": false,
@@ -643,6 +658,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD U5 Chapter 1 Project_M4_2023"
+        ],
         "progression": "Conclusions and Connections (~10 min)"
       },
       "bonus": false,
@@ -665,6 +683,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD U5 Chapter 2 Project_M4_2023"
+        ],
         "progression": "Conclusions and Connections (~10 min)"
       },
       "bonus": false,
@@ -687,6 +708,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 4 - Differentiation_2023"
+        ],
         "progression": "Differentiation  (~10 min)"
       },
       "bonus": false,
@@ -852,189 +876,22 @@
     }
   ],
   "resources": [
-    {
-      "name": "23-24 CS Discoveries Virtual M4 Agenda",
-      "url": "https://docs.google.com/document/d/1eB5_Mf2I-bpCdwQgmc4LZwiLM42C41wVRpJ8I7-L_tY/edit?usp=drive_link",
-      "key": "23-24_cs_discoveries_virtual_m4_agenda",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "23-24_cs_discoveries_virtual_m4_agenda"
-      }
-    },
-    {
-      "name": "23-24 CS Discoveries Virtual M4 Slides",
-      "url": "https://docs.google.com/presentation/d/1fklkd5WcEOo0K0oRfdfH8co8Psll72iKLxAv0hXVQNw/edit?usp=drive_link",
-      "key": "23-24_cs_discoveries_virtual_m4_slides",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "23-24_cs_discoveries_virtual_m4_slides"
-      }
-    },
-    {
-      "name": "ASCII",
-      "url": "https://docs.google.com/document/d/1axpDn1sTR1RZUPB6G5rU5Dv_RCGJGSd7JWpd0J_chkU/edit",
-      "key": "ascii",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "ascii"
-      }
-    },
-    {
-      "name": "ASCII and Binary Representation",
-      "url": "https://docs.google.com/presentation/d/1EouCz7ZnhJQshZjlUwVEZ7kw2w2nh6liwOz1_Rpf0TM/template/preview",
-      "key": "ascii_and_binary_representation",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "ascii_and_binary_representation"
-      }
-    },
-    {
-      "name": "ASCII Challenges",
-      "url": "https://docs.google.com/document/d/1YN3r7hmuf_fFpOhnIMRDrUbEha7Ij8mP647X3FdrBz0/view",
-      "key": "ascii_challenges",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "ascii_challenges"
-      }
-    },
-    {
-      "name": "ASCII Challenges",
-      "url": "https://docs.google.com/document/d/1HtbjV-HiNGAEH0FVSdipR6RIknT16YXc1SqGhM58eII/edit",
-      "key": "ascii_challenges_1",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "ascii_challenges_1"
-      }
-    },
-    {
-      "name": "ASCII Text",
-      "url": "https://docs.google.com/document/d/1If85I7nDxl_3uBbGDoZg86zrwGuw1ShFVK8eaDOH0_A/view",
-      "key": "ascii_text",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "ascii_text"
-      }
-    }
+
   ],
   "lessons_resources": [
-    {
-      "seeding_key": {
-        "lesson.key": "ASCII and Binary Representation",
-        "resource.key": "ascii"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "ASCII and Binary Representation",
-        "resource.key": "ascii_and_binary_representation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "ASCII and Binary Representation",
-        "resource.key": "ascii_challenges"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "ASCII and Binary Representation",
-        "resource.key": "ascii_challenges_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "ASCII and Binary Representation",
-        "resource.key": "ascii_text"
-      }
-    }
+
   ],
   "scripts_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "23-24_cs_discoveries_virtual_m4_agenda",
-        "script.name": "vpl-csd-2023-m4"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "23-24_cs_discoveries_virtual_m4_slides",
-        "script.name": "vpl-csd-2023-m4"
-      }
-    }
+
   ],
   "scripts_student_resources": [
 
   ],
   "vocabularies": [
-    {
-      "key": "ascii",
-      "word": "ASCII",
-      "definition": "a popular system for representing text in binary",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "ascii"
-      }
-    },
-    {
-      "key": "binary_system",
-      "word": "Binary System",
-      "definition": "a way of representing information using only two options",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "binary_system"
-      }
-    },
-    {
-      "key": "bit",
-      "word": "Bit",
-      "definition": "a single piece of binary information",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "bit"
-      }
-    }
+
   ],
   "lessons_vocabularies": [
-    {
-      "seeding_key": {
-        "lesson.key": "ASCII and Binary Representation",
-        "vocabulary.key": "ascii"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "ASCII and Binary Representation",
-        "vocabulary.key": "binary_system"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "ASCII and Binary Representation",
-        "vocabulary.key": "bit"
-      }
-    }
+
   ],
   "lessons_programming_expressions": [
 

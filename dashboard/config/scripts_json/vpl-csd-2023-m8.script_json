@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-11-16 21:05:12 UTC",
+    "serialized_at": "2023-12-13 00:27:00 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1262,99 +1262,10 @@
     }
   ],
   "resources": [
-    {
-      "name": "[KEY] Zoo Models",
-      "url": "https://docs.google.com/document/d/1fD-5e1s2_fE3V19MphefDg41JY-N9Pog6O6hTyXJJoc/view",
-      "key": "_key_zoo_models",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_zoo_models"
-      }
-    },
-    {
-      "name": "Model Cards in AI Lab",
-      "url": "https://www.youtube.com/watch?v=tz_ptkv0NxA",
-      "key": "model_cards_in_ai_lab",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "model_cards_in_ai_lab"
-      }
-    },
-    {
-      "name": "Saving Models in AI Lab",
-      "url": "https://docs.google.com/presentation/d/1VAtkWeEY9FwyLykuTlJr58El62Xz7CLxNeL44jOZqvs/template/preview",
-      "key": "saving_models_in_ai_lab",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "saving_models_in_ai_lab"
-      }
-    },
-    {
-      "name": "Selecting a Label",
-      "url": "https://drive.google.com/file/d/1iCd0-YM5JK2Bk1u3XgEY6o0xcGwJdkau/view?usp=sharing",
-      "key": "selecting_a_label",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "selecting_a_label"
-      }
-    },
-    {
-      "name": "Zoo Models",
-      "url": "https://docs.google.com/document/d/1gDbioUAySZZdDeWWbs0zg4X0-Dy392dJRo3splmeqW8/view",
-      "key": "zoo_models",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "zoo_models"
-      }
-    }
+
   ],
   "lessons_resources": [
-    {
-      "seeding_key": {
-        "lesson.key": "Saving Models in AI Lab",
-        "resource.key": "_key_zoo_models"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Saving Models in AI Lab",
-        "resource.key": "model_cards_in_ai_lab"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Saving Models in AI Lab",
-        "resource.key": "saving_models_in_ai_lab"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Saving Models in AI Lab",
-        "resource.key": "selecting_a_label"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Saving Models in AI Lab",
-        "resource.key": "zoo_models"
-      }
-    }
+
   ],
   "scripts_resources": [
 

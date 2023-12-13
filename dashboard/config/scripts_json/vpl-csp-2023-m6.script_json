@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-13 02:12:58 UTC",
+    "serialized_at": "2023-12-13 00:27:01 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -119,6 +119,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL Module 8 - Workshop Overview_2023"
+        ],
         "progression": "Module 6 Overview (~5 minutes)"
       },
       "bonus": false,
@@ -141,6 +144,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M8 - MC Exam 1_2023"
+        ],
         "progression": "Preparing students for the AP Multiple Choice Exam (~60 minutes)"
       },
       "bonus": false,
@@ -163,6 +169,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M8 - Exam 2_2023"
+        ],
         "progression": "Preparing students for the AP Multiple Choice Exam (~60 minutes)"
       },
       "bonus": false,
@@ -185,6 +194,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M8 - Exam 3_2023"
+        ],
         "progression": "Preparing students for the AP Multiple Choice Exam (~60 minutes)"
       },
       "bonus": false,
@@ -232,6 +244,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Module 8 Wrap Up_2023"
+        ],
         "progression": "Module 6 Asynchronous Wrap Up (~10 minutes)"
       },
       "bonus": false,

@@ -13,10 +13,6 @@ theme: responsive_full_width
 - icon_circle_xmark = "fa-solid fa-circle-xmark"
 - icon_flag = "fa-solid fa-flag-checkered"
 
-%section.skinny-banner.no-padding-bottom
-  .wrapper
-    = view :maker_skinny_banner
-
 %section.intro
   .wrapper
     %h1 The Circuit Playground
@@ -38,6 +34,8 @@ theme: responsive_full_width
       %figure.col-25{style: "margin-top: 2em; text-align: center"}
         %img{src: "/images/maker/circuitplayground-no-bg.gif", alt: ""}
     .clear
+
+= view :maker_skinny_banner
 
 %section.bg-neutral-light.device-setup
   .wrapper

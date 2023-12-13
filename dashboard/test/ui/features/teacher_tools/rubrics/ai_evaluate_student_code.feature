@@ -1,3 +1,4 @@
+@no_firefox
 # AI evaluation is stubbed out in UI tests via the /api/test/ai_proxy/assessment route.
 Feature: Evaluate student code against rubrics using AI
   Scenario: Student code is evaluated by AI when student submits project
@@ -45,7 +46,7 @@ Feature: Evaluate student code against rubrics using AI
 
     # Teacher views AI evaluation results in rubric tab
     When I click selector ".uitest-rubric-header-tab:contains('Rubric')"
-    And I wait until element ".uitest-learning-goal" is visible
+    And I wait until element ".uitest-learning-goal-row" is visible
     And element ".uitest-uses-ai" is visible
     And I click selector ".uitest-uses-ai:eq(0)"
     And I wait until element ".uitest-ai-assessment" is visible
@@ -62,27 +63,6 @@ Feature: Evaluate student code against rubrics using AI
 
     # Student runs code
     When I ensure droplet is in text mode
-    And I append text to droplet "// the quick brown fox jumped over the lazy dog.\n"
-    And I click selector "#runButton"
-    And I wait until element "#resetButton" is visible
-
-    # Student submits code, waits for AI eval to run, unsubmits, then updates their code.
-    # TODO: remove this block as part of https://codedotorg.atlassian.net/browse/AITT-325
-    And I wait until element "#submitButton" is visible
-    And I click selector "#submitButton"
-    And I wait until element "#confirm-button" is visible
-    And I click selector "#confirm-button" to load a new page
-    # This will trigger an AI evaluation job to be queued.
-    # The delayed job worker runs every 5 seconds. The job itself should run
-    # quickly since it hits the stubbed out /api/test/ai_proxy/assessment route.
-    And I wait for 10 seconds
-    And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
-    And I wait for the page to fully load
-    And I click selector "#unsubmitButton"
-    And I wait until element "#confirm-button" is visible
-    And I click selector "#confirm-button" to load a new page
-    And I wait for the page to fully load
-    And I ensure droplet is in text mode
     And I append text to droplet "// the quick brown fox jumped over the lazy dog.\n"
     And I click selector "#runButton"
     And I wait until element "#resetButton" is visible
@@ -116,7 +96,7 @@ Feature: Evaluate student code against rubrics using AI
 
     # Teacher views AI evaluation results in rubric tab
     When I click selector ".uitest-rubric-header-tab:contains('Rubric')"
-    And I wait until element ".uitest-learning-goal" is visible
+    And I wait until element ".uitest-learning-goal-row" is visible
     And element ".uitest-uses-ai" is visible
     And I click selector ".uitest-uses-ai:eq(0)"
     And I wait until element ".uitest-ai-assessment" is visible

@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-25 20:43:15 UTC",
+    "serialized_at": "2023-12-13 00:26:57 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1023,99 +1023,13 @@
     }
   ],
   "resources": [
-    {
-      "name": "2023 Virtual CSP Summer Workshop - Day 1 Agenda",
-      "url": "https://docs.google.com/document/d/1sfEyKamZF3xCAuOcZbqwCA_Upy6RpGi1uF3bX7eBKxo/edit",
-      "key": "2023_virtual_csp_summer_workshop_-_day_1_agenda",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "2023_virtual_csp_summer_workshop_-_day_1_agenda"
-      }
-    },
-    {
-      "name": "2023 Virtual CSP Summer Workshop - Day 1 Slides",
-      "url": "https://docs.google.com/presentation/d/1wkHDEdZ8tU0OSJajVVNt-2g1tyRb8d0CSxElTjNuwmY/edit#slide=id.gdc8b0dc810_0_182",
-      "key": "2023_virtual_csp_summer_workshop_-_day_1_slides",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "2023_virtual_csp_summer_workshop_-_day_1_slides"
-      }
-    },
-    {
-      "name": "Circle Square Patterns",
-      "url": "https://docs.google.com/document/d/17GrZRYeVRMKwo9vbW-xVT1-Ccu0U2n88Thr-kMqu4s4/edit",
-      "key": "circle_square_patterns",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "circle_square_patterns"
-      }
-    },
-    {
-      "name": "Circle Square Patterns",
-      "url": "https://docs.google.com/presentation/d/1qRXtZdZDn4tmLqaQ6eK8BmaVKKWmibihy2WTozCLJeM/",
-      "key": "circle_square_patterns_1",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1qRXtZdZDn4tmLqaQ6eK8BmaVKKWmibihy2WTozCLJeM/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "circle_square_patterns_1"
-      }
-    },
-    {
-      "name": "Shape Cutouts",
-      "url": "https://docs.google.com/document/d/1l19mBWEkYLt-cIZbahv8JrrbRQFnwQQajmeq-r5InsU/edit",
-      "key": "shape_cutouts",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "shape_cutouts"
-      }
-    }
+
   ],
   "lessons_resources": [
-    {
-      "seeding_key": {
-        "lesson.key": "Circle Square Patterns",
-        "resource.key": "circle_square_patterns"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Circle Square Patterns",
-        "resource.key": "circle_square_patterns_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Circle Square Patterns",
-        "resource.key": "shape_cutouts"
-      }
-    }
+
   ],
   "scripts_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "2023_virtual_csp_summer_workshop_-_day_1_agenda",
-        "script.name": "virtual-pl-csp-summer-day1"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "2023_virtual_csp_summer_workshop_-_day_1_slides",
-        "script.name": "virtual-pl-csp-summer-day1"
-      }
-    }
+
   ],
   "scripts_student_resources": [
 
