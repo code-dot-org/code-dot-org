@@ -173,10 +173,9 @@ export function addMutationToBehaviorDefBlocks(blockElement) {
 
 /**
  * Adds a mutation element to a block if it is a procedure definition.
- * CDO Blockly uses an unsupported method for serializing state
- * where arbitrary XML attributes could hold important information.
- * Mainline Blockly expects a mutator. The presence of the mutation element
- * will trigger the block's domToMutation function to run, if it exists.
+ * Currently, the only reason to have a mutator for procedures is to store
+ * the 'usercreated' property. Behavior definition mutators are more complicated,
+ * see addMutationToBehaviorDefBlocks.
  *
  * @param {Element} blockElement - The XML element for a single block.
  */
