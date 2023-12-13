@@ -1,0 +1,123 @@
+import React from 'react';
+import SegmentedButtons, {SegmentedButtonsProps} from './index';
+import {Meta, Story} from '@storybook/react';
+
+export default {
+  title: 'DesignSystem/Segmented Buttons Component',
+  component: SegmentedButtons,
+} as Meta;
+
+//
+// TEMPLATE
+//
+const SingleTemplate: Story<SegmentedButtonsProps> = args => (
+  <SegmentedButtons {...args} />
+);
+
+const MultipleTemplate: Story<{
+  components: SegmentedButtonsProps[];
+}> = args => (
+  <>
+    {args.components?.map(componentArg => (
+      <SegmentedButtons key={componentArg.size} {...componentArg} />
+    ))}
+  </>
+);
+
+export const DefaultSegmentedButtons = SingleTemplate.bind({});
+DefaultSegmentedButtons.args = {
+  buttons: [
+    {label: 'Label', onClick: () => alert('clicked')},
+    {
+      label: 'Label Checked',
+      onClick: () => alert('clicked'),
+    },
+    {
+      label: 'Label Indeterminate',
+      onClick: () => alert('clicked'),
+    },
+  ],
+  size: 'm',
+};
+
+export const DisabledSegmentedButtons = MultipleTemplate.bind({});
+DisabledSegmentedButtons.args = {
+  components: [
+    {
+      buttons: [
+        {label: 'Label', onClick: () => alert('clicked')},
+        {
+          label: 'Label Checked',
+          onClick: () => alert('clicked'),
+        },
+        {
+          label: 'Label Indeterminate',
+          onClick: () => alert('clicked'),
+        },
+      ],
+      size: 'm',
+    },
+  ],
+};
+
+export const SizesOfCheckbox = MultipleTemplate.bind({});
+SizesOfCheckbox.args = {
+  components: [
+    {
+      buttons: [
+        {label: 'Label', onClick: () => alert('clicked')},
+        {
+          label: 'Label Checked',
+          onClick: () => alert('clicked'),
+        },
+        {
+          label: 'Label Indeterminate',
+          onClick: () => alert('clicked'),
+        },
+      ],
+      size: 'xs',
+    },
+    {
+      buttons: [
+        {label: 'Label', onClick: () => alert('clicked')},
+        {
+          label: 'Label Checked',
+          onClick: () => alert('clicked'),
+        },
+        {
+          label: 'Label Indeterminate',
+          onClick: () => alert('clicked'),
+        },
+      ],
+      size: 's',
+    },
+    {
+      buttons: [
+        {label: 'Label', onClick: () => alert('clicked')},
+        {
+          label: 'Label Checked',
+          onClick: () => alert('clicked'),
+        },
+        {
+          label: 'Label Indeterminate',
+          onClick: () => alert('clicked'),
+        },
+      ],
+      size: 'm',
+    },
+    {
+      buttons: [
+        {label: 'Label', onClick: () => alert('clicked')},
+        {
+          label: 'Label Checked',
+          onClick: () => alert('clicked'),
+        },
+        {
+          label: 'Label Indeterminate',
+          onClick: () => alert('clicked'),
+        },
+      ],
+      size: 'l',
+    },
+  ],
+};
