@@ -56,6 +56,9 @@ export default function Example({example, programmingEnvironmentName}) {
                   width: '100%',
                   height: enteredHeight * 1.5,
                 }}
+                title={i18n.embeddedExampleFor({
+                  name: programmingEnvironmentName,
+                })}
               />
             </div>
           </div>
