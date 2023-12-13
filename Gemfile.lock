@@ -534,8 +534,8 @@ GEM
     mini_magick (4.12.0)
     mini_mime (1.1.2)
     mini_portile2 (2.8.2)
-    mini_racer (0.3.1)
-      libv8 (~> 8.4.255)
+    mini_racer (0.8.0)
+      libv8-node (~> 18.16.0.0)
     minitest (5.18.0)
     minitest-around (0.5.0)
       minitest (~> 5.0)
@@ -1112,7 +1112,7 @@ DEPENDENCIES
   youtube-dl.rb
 
 RUBY VERSION
-   ruby 3.0.5p211
+   ruby 3.0.6p216
 
 BUNDLED WITH
    2.3.22
