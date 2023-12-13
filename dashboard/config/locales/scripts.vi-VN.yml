@@ -1660,6 +1660,8 @@ vi:
           title: Khám phá KHMT Khảo sát sau khóa học
         csd-post-survey-2023:
           title: Khảo sát sau khoá học
+        csd-post-survey-2024:
+          title: Khảo sát sau khoá học
         csd1-2017:
           lesson_groups:
             csd1_1:
@@ -1698,6 +1700,12 @@ vi:
             cspSurvey:
               display_name: Khảo sát
         csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chương 1: Quá trình giải quyết vấn đề'
+            lessonGroup-5:
+              display_name: Khảo sát
+        csd1-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Chương 1: Quá trình giải quyết vấn đề'
@@ -2036,6 +2044,14 @@ vi:
             lessonGroup-4:
               display_name: Khảo sát
         csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chương 1
+            lessonGroup-3:
+              display_name: Chương 2
+            lessonGroup-4:
+              display_name: Giới thiệu về AppLab
+        csd7-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Chương 1

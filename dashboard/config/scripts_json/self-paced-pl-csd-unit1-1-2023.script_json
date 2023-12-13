@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-11-13 17:58:19 UTC",
+    "serialized_at": "2023-12-13 00:26:54 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -994,6 +994,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-CSD-Unit1-Module1WrapUp"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,

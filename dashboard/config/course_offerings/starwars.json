@@ -6,7 +6,7 @@
   "assignable": true,
   "curriculum_type": null,
   "marketing_initiative": "HOC",
-  "grade_levels": "2,3,4,5,6,7,8,9,10,11,12",
+  "grade_levels": "6,7,8,9,10,11,12",
   "header": "popular_media",
   "image": "https://images.code.org/b9845378bf9c6cb8e60b4bd614ef50d1-Starwars.png",
   "cs_topic": "games_and_animations,programming",
@@ -15,7 +15,7 @@
   "description": "Use JavaScript to learn to program droids, and create your own Star Wars game in a galaxy far, far away.",
   "professional_learning_program": null,
   "video": "https://www.youtube-nocookie.com/embed/vNjiHkQQl6A/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=vNjiHkQQl6A&wmode=transparent",
-  "published_date": "2015-12-01 05:00:00 UTC",
+  "published_date": "2015-12-01 13:00:00 UTC",
   "self_paced_pl_course_offering_id": null,
   "self_paced_pl_course_offering_key": null
 }

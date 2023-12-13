@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-20 16:14:46 UTC",
+    "serialized_at": "2023-12-13 00:26:57 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1807,6 +1807,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-UnderstandingContext2_5_video"
+        ],
         "progression": "Previously, On...Unit 2"
       },
       "bonus": false,
@@ -2104,261 +2107,22 @@
     }
   ],
   "resources": [
-    {
-      "name": "2023 Virtual CSP Summer Workshop - Day 2 Agenda",
-      "url": "https://docs.google.com/document/d/1oJrgd_fmicZxtBa29PxV3VldCqiZw_oKdhwOvk_JuK4/edit",
-      "key": "2023_virtual_csp_summer_workshop_-_day_2_agenda",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "2023_virtual_csp_summer_workshop_-_day_2_agenda"
-      }
-    },
-    {
-      "name": "2023 Virtual CSP Summer Workshop - Day 2 Slides",
-      "url": "https://docs.google.com/presentation/d/1-wezbnRwzwt2_Ng4vN4B9-hHS_3bkc1yOhoa0Sq0uAU/edit#slide=id.gdc9be48aa9_0_162",
-      "key": "2023_virtual_csp_summer_workshop_-_day_2_slides",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "2023_virtual_csp_summer_workshop_-_day_2_slides"
-      }
-    },
-    {
-      "name": "Activity Guide - Black and White Images",
-      "url": "https://docs.google.com/document/d/1-W0LMRihs84dIlC6VwKowq3FcTE3hCZGes8Duda1TqM/edit?usp=sharing",
-      "key": "activity_guide_-_black_and_white_images",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "activity_guide_-_black_and_white_images"
-      }
-    },
-    {
-      "name": "B&W Pixelation Tutorial",
-      "url": "https://youtu.be/rJOa5Q5a1WM",
-      "key": "b_w_pixelation_tutorial",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/2015/csp/pixelation_bw.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "b_w_pixelation_tutorial"
-      }
-    },
-    {
-      "name": "Black and White Images",
-      "url": "https://docs.google.com/presentation/d/1jvP-OPzI4Eiqk7Nm5CtokKfxPBVGDeuNutqKw2gzab8/",
-      "key": "black_and_white_images",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1jvP-OPzI4Eiqk7Nm5CtokKfxPBVGDeuNutqKw2gzab8/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "black_and_white_images"
-      }
-    },
-    {
-      "name": "KEY Black & White Images Activity Guide",
-      "url": "https://docs.google.com/document/d/1b02zxA27_uBJHDHkyBSyw56KiEPcgQRdwGekJmNs5Fk/edit?usp=sharing",
-      "key": "key_black_white_images_activity_guide",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "key_black_white_images_activity_guide"
-      }
-    },
-    {
-      "name": "Lossless Compression",
-      "url": "https://docs.google.com/presentation/d/1gYsjdeTaaOyoXSGZtyeABU9QPgZZIGnz9z4cyNXdkTY/",
-      "key": "lossless_compression",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1gYsjdeTaaOyoXSGZtyeABU9QPgZZIGnz9z4cyNXdkTY/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "lossless_compression"
-      }
-    },
-    {
-      "name": "Lossy Compression",
-      "url": "https://docs.google.com/presentation/d/1JJ-IX_dV6497KXmimsIOussZQoDOS9cV8udzeRaeJ-E/",
-      "key": "lossy_compression",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1JJ-IX_dV6497KXmimsIOussZQoDOS9cV8udzeRaeJ-E/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "lossy_compression"
-      }
-    },
-    {
-      "name": "Text Compression widget (tutorial)",
-      "url": "http://youtu.be/LCGkcn1f-ms",
-      "key": "text_compression_widget_tutorial_",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/2015/csp/textcompression_blacc.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "text_compression_widget_tutorial_"
-      }
-    }
+
   ],
   "lessons_resources": [
-    {
-      "seeding_key": {
-        "lesson.key": "Black and White Images",
-        "resource.key": "activity_guide_-_black_and_white_images"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Black and White Images",
-        "resource.key": "b_w_pixelation_tutorial"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Black and White Images",
-        "resource.key": "black_and_white_images"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Black and White Images",
-        "resource.key": "key_black_white_images_activity_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lossless Compression",
-        "resource.key": "lossless_compression"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lossless Compression",
-        "resource.key": "text_compression_widget_tutorial_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lossy Compression",
-        "resource.key": "lossy_compression"
-      }
-    }
+
   ],
   "scripts_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "2023_virtual_csp_summer_workshop_-_day_2_agenda",
-        "script.name": "virtual-pl-csp-summer-day2"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "2023_virtual_csp_summer_workshop_-_day_2_slides",
-        "script.name": "virtual-pl-csp-summer-day2"
-      }
-    }
+
   ],
   "scripts_student_resources": [
 
   ],
   "vocabularies": [
-    {
-      "key": "analog_data",
-      "word": "Analog Data",
-      "definition": "Data with values that change continuously, or smoothly, over time. Some examples of analog data include music, colors of a painting, or position of a sprinter during a race.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "analog_data"
-      }
-    },
-    {
-      "key": "digital_data",
-      "word": "Digital Data",
-      "definition": "Data that changes discretely through a finite set of possible values",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "digital_data"
-      }
-    },
-    {
-      "key": "lossless_compression",
-      "word": "Lossless Compression",
-      "definition": "A process for reducing the number of bits needed to represent something without losing any information. This process is reversible.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "lossless_compression"
-      }
-    },
-    {
-      "key": "lossy_compression",
-      "word": "Lossy Compression",
-      "definition": "A process for reducing the number of bits needed to represent something in which some information is lost or thrown away. This process is not reversible.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "lossy_compression"
-      }
-    },
-    {
-      "key": "sampling",
-      "word": "Sampling",
-      "definition": "A process for creating a digital representation of analog data by measuring the analog data at regular intervals called samples.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "sampling"
-      }
-    }
+
   ],
   "lessons_vocabularies": [
-    {
-      "seeding_key": {
-        "lesson.key": "Black and White Images",
-        "vocabulary.key": "analog_data"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Black and White Images",
-        "vocabulary.key": "digital_data"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Black and White Images",
-        "vocabulary.key": "sampling"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lossless Compression",
-        "vocabulary.key": "lossless_compression"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lossy Compression",
-        "vocabulary.key": "lossy_compression"
-      }
-    }
+
   ],
   "lessons_programming_expressions": [
 

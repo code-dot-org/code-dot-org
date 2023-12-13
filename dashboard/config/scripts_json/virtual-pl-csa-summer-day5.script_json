@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-17 14:16:31 UTC",
+    "serialized_at": "2023-12-13 00:26:57 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -696,43 +696,13 @@
     }
   ],
   "resources": [
-    {
-      "name": "2024 Virtual CSA Summer Workshop - Day 5 Agenda",
-      "url": "https://docs.google.com/document/d/1evlDdbEJXfCyxtsC5nCDVliyP_etlOPfhql-Pui-DR4/edit?usp=drive_link",
-      "key": "2024_virtual_csa_summer_workshop_-_day_5_agenda",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "2024_virtual_csa_summer_workshop_-_day_5_agenda"
-      }
-    },
-    {
-      "name": "2024 Virtual CSA Summer Workshop - Day 5 Slides",
-      "url": "https://docs.google.com/presentation/d/1KzT267nQHs_q4OSzcRwwFor7JNgMiWyBIQdbeKXiPZk/edit?usp=drive_link",
-      "key": "2024_virtual_csa_summer_workshop_-_day_5_slides",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "2024_virtual_csa_summer_workshop_-_day_5_slides"
-      }
-    }
+
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "2024_virtual_csa_summer_workshop_-_day_5_agenda",
-        "script.name": "virtual-pl-csa-summer-day5"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "2024_virtual_csa_summer_workshop_-_day_5_slides",
-        "script.name": "virtual-pl-csa-summer-day5"
-      }
-    }
+
   ],
   "scripts_student_resources": [
 

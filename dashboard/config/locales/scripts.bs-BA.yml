@@ -118,6 +118,8 @@ bs:
           lessons:
             lesson-5:
               name: Procjene
+            lesson-6:
+              name: Lekcija 1
         artist:
           description: Crtanje cool slike i dizajn s Umjetnikom!
           description_short: Crtanje cool slike i dizajn s Umjetnikom!
@@ -656,6 +658,12 @@ bs:
             csd5_2:
               display_name: 'Poglavlje 2: Rješavanje problema podataka'
         csd5-2023:
+          description_short: Naučite kako ljudi koriste računala za rješavanje problema
+            podataka.
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Poglavlje 2: Rješavanje problema podataka'
+        csd5-2024:
           description_short: Naučite kako ljudi koriste računala za rješavanje problema
             podataka.
           lesson_groups:

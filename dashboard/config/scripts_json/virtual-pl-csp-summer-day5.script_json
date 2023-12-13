@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-25 15:32:14 UTC",
+    "serialized_at": "2023-12-13 00:26:58 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -662,43 +662,13 @@
     }
   ],
   "resources": [
-    {
-      "name": "2023 Virtual CSP Summer Workshop - Day 5 Agenda",
-      "url": "https://docs.google.com/document/d/1UuoUUpZJagOivp7_ZU2MpQgmByLnaHnsyRw9eiJ3Mp4/edit",
-      "key": "2023_virtual_csp_summer_workshop_-_day_5_agenda",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "2023_virtual_csp_summer_workshop_-_day_5_agenda"
-      }
-    },
-    {
-      "name": "2023 Virtual CSP Summer Workshop - Day 5 Slides",
-      "url": "https://docs.google.com/presentation/d/15QTlVvR7i289x3nLSOpdD8H-eVypeXqQjqaWyMVN0Aw/edit#slide=id.gdcc3c25bab_0_194",
-      "key": "2023_virtual_csp_summer_workshop_-_day_5_slides",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "2023_virtual_csp_summer_workshop_-_day_5_slides"
-      }
-    }
+
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "2023_virtual_csp_summer_workshop_-_day_5_agenda",
-        "script.name": "virtual-pl-csp-summer-day5"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "2023_virtual_csp_summer_workshop_-_day_5_slides",
-        "script.name": "virtual-pl-csp-summer-day5"
-      }
-    }
+
   ],
   "scripts_student_resources": [
 

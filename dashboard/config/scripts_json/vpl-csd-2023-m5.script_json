@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-11-15 18:03:24 UTC",
+    "serialized_at": "2023-12-13 00:27:00 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -934,43 +934,13 @@
     }
   ],
   "resources": [
-    {
-      "name": "23-24 CS Discoveries Virtual M5 Agenda",
-      "url": "https://docs.google.com/document/d/1tO94dRFkU7_GjauhkMbzC_TcdqGcIZxAD5xzOmNNj_c/edit?usp=sharing",
-      "key": "23-24_cs_discoveries_virtual_m5_agenda",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "23-24_cs_discoveries_virtual_m5_agenda"
-      }
-    },
-    {
-      "name": "23-24 CS Discoveries Virtual M5 Slides",
-      "url": "https://docs.google.com/presentation/d/1xVNUWIHUD2xkA58jBKso5gGtvtMjSbG2V_3ZJlApBuA/edit?usp=drive_link",
-      "key": "23-24_cs_discoveries_virtual_m5_slides",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "23-24_cs_discoveries_virtual_m5_slides"
-      }
-    }
+
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "23-24_cs_discoveries_virtual_m5_agenda",
-        "script.name": "vpl-csd-2023-m5"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "23-24_cs_discoveries_virtual_m5_slides",
-        "script.name": "vpl-csd-2023-m5"
-      }
-    }
+
   ],
   "scripts_student_resources": [
 
