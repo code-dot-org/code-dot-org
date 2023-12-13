@@ -119,6 +119,7 @@ GoogleBlockly.Extensions.register('procedures_edit_button', function () {
       value: msg.edit(),
       onClick: editButtonHandler,
       colorOverrides: {button: 'blue', text: 'white'},
+      allowReadOnlyClick: true, // We support showing the editor even if viewing in read only mode.
     });
     this.inputList[this.inputList.length - 1].appendField(button, 'EDIT');
   }

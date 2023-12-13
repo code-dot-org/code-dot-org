@@ -23,6 +23,7 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
     transformText,
     icon,
     colorOverrides,
+    allowReadOnlyClick = false,
   }) {
     super(value, validator);
     this.onClick = onClick;
@@ -30,6 +31,7 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
     this.icon = icon;
     this.SERIALIZABLE = true;
     this.colorOverrides = colorOverrides;
+    this.allowReadOnlyClick = allowReadOnlyClick;
   }
 
   static fromJson(options) {
@@ -67,12 +69,24 @@ export default class CdoFieldButton extends GoogleBlockly.Field {
   }
 
   /**
-   * Trigger on click when the field is clicked.
-   * We always trigger on click even if the field is not editable.
+   * Create an editor for the field.
+   * @override
+   */
+  showEditor_() {
+    this.onClick();
+  }
+
+  /**
+   * If we always want to allow clicking on a read-only field, we
+   * call onClick here, otherwise we use the default behavior.
    * @override
    */
   onMouseDown_(e) {
-    this.onClick();
+    if (this.allowReadOnlyClick) {
+      this.onClick();
+    } else {
+      super.onMouseDown_(e);
+    }
   }
 
   /**

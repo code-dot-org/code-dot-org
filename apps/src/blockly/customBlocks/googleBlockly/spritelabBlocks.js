@@ -328,6 +328,7 @@ export const blocks = {
         value: msg.edit(),
         onClick: editButtonHandler,
         colorOverrides: {button: 'blue', text: 'white'},
+        allowReadOnlyClick: true, // We support showing the editor even if viewing in read only mode.
       });
       block.inputList[block.inputList.length - 1].appendField(
         editButton,
