@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-11-17 22:26:59 UTC",
+    "serialized_at": "2023-12-13 00:26:55 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -988,6 +988,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-U3-GettingStarted-WrapUp"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,

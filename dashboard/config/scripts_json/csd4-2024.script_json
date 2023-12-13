@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-11-28 21:16:56 UTC",
+    "serialized_at": "2023-12-13 00:26:46 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5815,6 +5815,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "intro-pulse-survey_csd4_2024"
+        ],
         "progression": "Check-In Survey"
       },
       "bonus": false,
@@ -5837,6 +5840,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U4Ch1_2024"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -5859,6 +5865,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-apps for good-1_2024"
+        ],
         "progression": "Sample Apps for Good"
       },
       "bonus": false,
@@ -5881,6 +5890,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-apps for good-2_2024"
+        ],
         "progression": "Sample Apps for Good"
       },
       "bonus": false,
@@ -5903,6 +5915,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-apps for good-3_2024"
+        ],
         "progression": "Sample Apps for Good"
       },
       "bonus": false,
@@ -5925,6 +5940,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-explore ui-1_2024"
+        ],
         "progression": "Example Apps"
       },
       "bonus": false,
@@ -5947,6 +5965,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-explore ui-2_2024"
+        ],
         "progression": "Example Apps"
       },
       "bonus": false,
@@ -5969,6 +5990,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-explore ui-3_2024"
+        ],
         "progression": "Example Apps"
       },
       "bonus": false,
@@ -5991,6 +6015,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-explore ui-4_2024"
+        ],
         "progression": "Example Apps"
       },
       "bonus": false,
@@ -6013,6 +6040,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-explore ui-5_2024"
+        ],
         "progression": "Example Apps"
       },
       "bonus": false,
@@ -6035,6 +6065,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-explore ui-6_2024"
+        ],
         "progression": "Example Apps"
       },
       "bonus": false,
@@ -6057,6 +6090,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 1_2024"
+        ],
         "progression": "Build a Screen"
       },
       "bonus": false,
@@ -6079,6 +6115,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 2_2024"
+        ],
         "progression": "Build a Screen"
       },
       "bonus": false,
@@ -6101,6 +6140,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 3_2024"
+        ],
         "progression": "Build a Screen"
       },
       "bonus": false,
@@ -6123,6 +6165,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 4_2024"
+        ],
         "progression": "Build a Screen"
       },
       "bonus": false,
@@ -6145,6 +6190,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 5_2024"
+        ],
         "progression": "Finish a Screen"
       },
       "bonus": false,
@@ -6167,6 +6215,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 6_2024"
+        ],
         "progression": "Finish a Screen"
       },
       "bonus": false,
@@ -6189,6 +6240,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 7_2024"
+        ],
         "progression": "Finish a Screen"
       },
       "bonus": false,
@@ -6211,6 +6265,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Design a Screen for your App_2024"
+        ],
         "progression": "Design a Screen for your App"
       },
       "bonus": false,
@@ -6233,6 +6290,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4 - Design Mode Project_2024"
+        ],
         "progression": "App Project: Screen Design"
       },
       "bonus": false,
@@ -6255,6 +6315,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 1_2024"
+        ],
         "progression": "Adding Screens"
       },
       "bonus": false,
@@ -6277,6 +6340,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 1.5_2024"
+        ],
         "progression": "Adding Screens"
       },
       "bonus": false,
@@ -6299,6 +6365,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 2_2024"
+        ],
         "progression": "Adding Screens"
       },
       "bonus": false,
@@ -6321,6 +6390,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 2.5_2024"
+        ],
         "progression": "Adding Screens"
       },
       "bonus": false,
@@ -6343,6 +6415,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 3_2024"
+        ],
         "progression": "Events and Linking Screens"
       },
       "bonus": false,
@@ -6365,6 +6440,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 4_2024"
+        ],
         "progression": "Events and Linking Screens"
       },
       "bonus": false,
@@ -6387,6 +6465,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 5_2024"
+        ],
         "progression": "Events and Linking Screens"
       },
       "bonus": false,
@@ -6409,6 +6490,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 Project Import_2024"
+        ],
         "progression": "Combining Projects"
       },
       "bonus": false,
@@ -6431,6 +6515,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSDU4 Project Events_2024"
+        ],
         "progression": "Combining Projects"
       },
       "bonus": false,
@@ -6453,6 +6540,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 Project Bug Feature_2024"
+        ],
         "progression": "Updating Your Prototype"
       },
       "bonus": false,
@@ -6475,6 +6565,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csd4_2024"
+        ],
         "progression": "End-Of-Unit Survey"
       },
       "bonus": false,
@@ -6497,6 +6590,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD User Centered Design Post-Project Test_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6900,2058 +6996,22 @@
     }
   ],
   "resources": [
-    {
-      "name": "All Code",
-      "url": "/s/csd4-2023/code",
-      "key": "all_code_2",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_code_2"
-      }
-    },
-    {
-      "name": "All Resources",
-      "url": "/s/csd4-2023/resources",
-      "key": "all_resources_3",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_resources_3"
-      }
-    },
-    {
-      "name": "All Standards",
-      "url": "/s/csd4-2023/standards",
-      "key": "all_standards_3",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_standards_3"
-      }
-    },
-    {
-      "name": "All Vocabulary",
-      "url": "/s/csd4-2023/vocab",
-      "key": "all_vocabulary_3",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_vocabulary_3"
-      }
-    },
-    {
-      "name": "App Design Kickoff",
-      "url": "https://docs.google.com/document/d/163Ene8sb4nK0kfoDHsIBzUCMJWiFtaYZ8YYVIytGH4A/",
-      "key": "app_design_kickoff",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "app_design_kickoff"
-      }
-    },
-    {
-      "name": "App Design Kickoff",
-      "url": "https://docs.google.com/document/d/1vDZOUyigfP7tG0WxMQDnfbn9lc_8Isbp9Y43I8zOnvI/edit",
-      "key": "app_design_kickoff_1",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "app_design_kickoff_1"
-      }
-    },
-    {
-      "name": "App Presentation",
-      "url": "https://docs.google.com/document/d/1-2z9HtHPEMui9aavjRkYs4vlp5l0ujgXI8XW8KFCcf4/edit",
-      "key": "app_presentation",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Rubric"
-      },
-      "seeding_key": {
-        "resource.key": "app_presentation"
-      }
-    },
-    {
-      "name": "App Presentation - Student Checklist",
-      "url": "https://docs.google.com/document/d/1d1Dq6t-90ZbseWX5JW7JrZLP3CSHzR1rXk8rzZKzFOo/edit",
-      "key": "app_presentation_-_student_checklist",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "app_presentation_-_student_checklist"
-      }
-    },
-    {
-      "name": "App Presentation",
-      "url": "https://docs.google.com/presentation/d/1qRbnSABMrfeZHUiQ_mGdhzW7UIGuiGiWyMcQK_pH-tY/edit",
-      "key": "app_presentation_1",
-      "properties": {
-        "audience": "Student",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "app_presentation_1"
-      }
-    },
-    {
-      "name": "App Presentation Template",
-      "url": "https://docs.google.com/presentation/d/19KVEybGqu6pdFB3QwjvJNA_VTM5W5Kxy3fUlxf1xnc4/edit",
-      "key": "app_presentation_template",
-      "properties": {
-        "audience": "Student",
-        "type": "Slide Deck"
-      },
-      "seeding_key": {
-        "resource.key": "app_presentation_template"
-      }
-    },
-    {
-      "name": "Bugs and Features",
-      "url": "https://docs.google.com/document/d/1TGQ7XrKwn9fPRG0Mx73KJa8aGns6mZf49Q9FaNd-s4Y/view",
-      "key": "bugs_and_features",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "bugs_and_features"
-      }
-    },
-    {
-      "name": "Bugs and Features",
-      "url": "https://docs.google.com/document/d/1265CpF9-hjVtzzVy4q9hZzzlTIxE_F8Ky8Std-7vgA8/edit",
-      "key": "bugs_and_features_1",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "bugs_and_features_1"
-      }
-    },
-    {
-      "name": "Bugs and Features",
-      "url": "https://docs.google.com/presentation/d/1y6QCAd_xow-sik_VBFXv3iPxe4lut6QPUj_AdUj7YRY/template/preview",
-      "key": "bugs_and_features_2",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "bugs_and_features_2"
-      }
-    },
-    {
-      "name": "Build a Digital Prototype",
-      "url": "https://docs.google.com/presentation/d/1m_wCIIDoIp_ErwXCfiLR7C0gz76UT_SOXpE0zehxDFI/template/preview",
-      "key": "build_a_digital_prototype",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "build_a_digital_prototype"
-      }
-    },
-    {
-      "name": "Build a Paper Prototype",
-      "url": "https://docs.google.com/presentation/d/16FI22pYInGobcTyY-d_gT6I1-0yy8csglrXFGuOZnaU/template/preview",
-      "key": "build_a_paper_prototype",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "build_a_paper_prototype"
-      }
-    },
-    {
-      "name": "Changing Screens",
-      "url": "https://drive.google.com/file/d/1d9yygBuMPaCOPP3fraA3oacuy_RD9iNB/view?usp=sharing",
-      "key": "changing_screens",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "changing_screens"
-      }
-    },
-    {
-      "name": "Computer Science Practices",
-      "url": "https://docs.google.com/document/d/1Ccf-WMH2qFDhycKaKSILRrZUe42lWESyRqMgdTymCPw/edit",
-      "key": "computer_science_practices",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Reflection"
-      },
-      "seeding_key": {
-        "resource.key": "computer_science_practices"
-      }
-    },
-    {
-      "name": "CSD Guide to Assessment",
-      "url": "https://docs.google.com/document/d/1IO5XgPW_Apil_Uziq5hAMCBgilm8txZ3sp8atxiKiLU/view",
-      "key": "csd_guide_to_assessment",
-      "properties": {
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csd_guide_to_assessment"
-      }
-    },
-    {
-      "name": "CSD Guide to Curriculum Videos",
-      "url": "https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view",
-      "key": "csd_guide_to_curriculum_videos",
-      "properties": {
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csd_guide_to_curriculum_videos"
-      }
-    },
-    {
-      "name": "CSD Guide to Debugging",
-      "url": "https://docs.google.com/document/d/145lvpomqz0tUuzXLbkAFgP9zMDpECMwFYiEIG1_hQFg/view",
-      "key": "csd_guide_to_debugging",
-      "properties": {
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csd_guide_to_debugging"
-      }
-    },
-    {
-      "name": "CSD Guide to Differentiation",
-      "url": "https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view",
-      "key": "csd_guide_to_differentiation",
-      "properties": {
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csd_guide_to_differentiation"
-      }
-    },
-    {
-      "name": "CSD Guide to Teaching and Learning Strategies",
-      "url": "https://docs.google.com/document/d/1Cg5iTwERoX25Y2DdLNmrPCbVB2d9FPGfUMUvcnVoN8Q/view",
-      "key": "csd_guide_to_teaching_and_learning_strategies",
-      "properties": {
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csd_guide_to_teaching_and_learning_strategies"
-      }
-    },
-    {
-      "name": "CSD Guide to Using Resources",
-      "url": "https://docs.google.com/document/d/1NYJMHZYnAZYNctehlQOImSstsu48sRGOMbi4It4ZjkI/view",
-      "key": "csd_guide_to_using_resources",
-      "properties": {
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csd_guide_to_using_resources"
-      }
-    },
-    {
-      "name": "Design Mode",
-      "url": "https://drive.google.com/file/d/1WvW6pkUseGiXOg3TgeNAFPg-VwK65gjN/view?usp=sharing",
-      "key": "design_mode",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "design_mode"
-      }
-    },
-    {
-      "name": "Design Mode Elements",
-      "url": "https://drive.google.com/file/d/1_freDr5sGWMgTKwDH0kFJwkKXjzVCoE_/view?usp=sharing",
-      "key": "design_mode_elements",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "design_mode_elements"
-      }
-    },
-    {
-      "name": "Design Mode in App Lab",
-      "url": "https://docs.google.com/presentation/d/1OaU4Usq0hBND-uOEQ94p14bODWZXwEgDxmszDQmQUZw/template/preview",
-      "key": "design_mode_in_app_lab",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "design_mode_in_app_lab"
-      }
-    },
-    {
-      "name": "Designing Apps for Good",
-      "url": "https://docs.google.com/presentation/d/1Jgq8VFas_arxyvooUEleRJhVJNeWoOfkIOvEb-zkdDA/template/preview",
-      "key": "designing_apps_for_good",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "designing_apps_for_good"
-      }
-    },
-    {
-      "name": "Designing with Empathy",
-      "url": "https://docs.google.com/document/d/10uAtyNYjzc91_hMTBRHRkSSxx7QJRZptkguzeH8Dwqg/view",
-      "key": "designing_with_empathy",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "designing_with_empathy"
-      }
-    },
-    {
-      "name": "Designing with Empathy",
-      "url": "https://docs.google.com/document/d/1iwf4Y8AYLQFAuHSq-k-FnASFI7Wt8w7skZKFclggBcA/view",
-      "key": "designing_with_empathy_1",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "designing_with_empathy_1"
-      }
-    },
-    {
-      "name": "Designing With Empathy",
-      "url": "https://docs.google.com/presentation/d/1J7jcGlNc_NcAZVKRPjYh6HZklX4u8SvUfN446zye8TE/template/preview",
-      "key": "designing_with_empathy_2",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "designing_with_empathy_2"
-      }
-    },
-    {
-      "name": "Digital Prototype User Testing",
-      "url": "https://docs.google.com/document/d/1hdfiToUH-GACjesuIOIQB_C9FYqS-HjAHkGc5ju1kN0/view",
-      "key": "digital_prototype_user_testing",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "digital_prototype_user_testing"
-      }
-    },
-    {
-      "name": "Events in App Lab",
-      "url": "https://youtu.be/npa2r4t6y2A",
-      "key": "events_in_app_lab",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "events_in_app_lab"
-      }
-    },
-    {
-      "name": "Events in App Lab",
-      "url": "https://docs.google.com/presentation/d/1jYIPe_TXe63sjGUzED8sUyzWXWGJHrA-GQzXe7_tmHU/view",
-      "key": "events_in_app_lab_1",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "events_in_app_lab_1"
-      }
-    },
-    {
-      "name": "Example Apps for Good",
-      "url": "https://docs.google.com/document/d/1kCuDUhTJb7Vcrv_pzvA4yL79WyZn_7PorV-F-gTxBuk/edit",
-      "key": "example_apps_for_good",
-      "properties": {
-        "audience": "Teacher",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "example_apps_for_good"
-      }
-    },
-    {
-      "name": "Example Project - Cooking App - Convincing Evidence",
-      "url": "https://docs.google.com/document/d/13Q2QXHg7EKmBOJRgkmWo57wbIpPt9kLVwnKU6OBlFr4/edit",
-      "key": "example_project_-_cooking_app_-_convincing_evidence",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "example_project_-_cooking_app_-_convincing_evidence"
-      }
-    },
-    {
-      "name": "Example Project - Cooking App - Extensive Evidence",
-      "url": "https://docs.google.com/document/d/1o_9JXVWcz-pb0UzdxGvc6JK3F0urzYBBGeYEmsPVQsQ/edit",
-      "key": "example_project_-_cooking_app_-_extensive_evidence",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "example_project_-_cooking_app_-_extensive_evidence"
-      }
-    },
-    {
-      "name": "Example Project - Language App - Convincing Evidence",
-      "url": "https://docs.google.com/document/d/1ClqPV-tCtyWfNY_symf6htPZJIVXrvmbcv2mEABpq4c/edit",
-      "key": "example_project_-_language_app_-_convincing_evidence",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "example_project_-_language_app_-_convincing_evidence"
-      }
-    },
-    {
-      "name": "Example Project - Language App - Limited Evidence",
-      "url": "https://docs.google.com/document/d/1KP1j3ZSTJLIDYh-xJIdw_umw9CgbcB0ps13bqvY2t4M/edit",
-      "key": "example_project_-_language_app_-_limited_evidence",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "example_project_-_language_app_-_limited_evidence"
-      }
-    },
-    {
-      "name": "Example User Interviews",
-      "url": "https://docs.google.com/document/d/171tU61kaUxWI9k3jBAJoc0z4iaxdEP6jZYeLairEJXg/view",
-      "key": "example_user_interviews",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "example_user_interviews"
-      }
-    },
-    {
-      "name": "Explore UI Elements",
-      "url": "https://docs.google.com/document/d/1OyTMxdwh3yLv7EnE-FOtxb9mDScbkMgjZn_ypxF7q5U/edit",
-      "key": "explore_ui_elements",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "explore_ui_elements"
-      }
-    },
-    {
-      "name": "Explore UI Elements",
-      "url": "https://docs.google.com/document/d/1L01gXcQN0ObiRNDZLy-QjKWJbXEMPlYLRdiXgdhUvgA/edit",
-      "key": "explore_ui_elements_1",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "explore_ui_elements_1"
-      }
-    },
-    {
-      "name": "Exploring UI Elements",
-      "url": "https://docs.google.com/presentation/d/1K3K8qyAnkNFQCEgvXJ_k8K_YahKclHGDc9FQAEAaung/template/preview",
-      "key": "exploring_ui_elements",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "exploring_ui_elements"
-      }
-    },
-    {
-      "name": "Feedback and Testing",
-      "url": "https://docs.google.com/presentation/d/1Ei2opMNsuFVaIhGQz1RBtF1BI-uzEWpCxhTqh0TTH7c/template/preview",
-      "key": "feedback_and_testing",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "feedback_and_testing"
-      }
-    },
-    {
-      "name": "Identifying User Needs",
-      "url": "https://docs.google.com/presentation/d/1QCkVC0MWzi0JiuLMmgfddVwhPrSIklpbDF7_18iGsj8/template/preview",
-      "key": "identifying_user_needs",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "identifying_user_needs"
-      }
-    },
-    {
-      "name": "Importing Screens",
-      "url": "https://drive.google.com/file/d/1eMuKUTAUEPx26x6S7NgldhZ7GMv1DJ-D/view?usp=sharing",
-      "key": "importing_screens",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "importing_screens"
-      }
-    },
-    {
-      "name": "Improve a Screen",
-      "url": "https://docs.google.com/document/d/1q3J_DQFPps7O5jOwRig_iApTNzVvagecx7rsjpeuNE8/edit",
-      "key": "improve_a_screen",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "improve_a_screen"
-      }
-    },
-    {
-      "name": "Improve a Screen",
-      "url": "https://docs.google.com/document/d/1y0YfE6qZKKlRRpeVGU2d-SuctJP9P5fI2062yo85nZg/edit?usp=sharing",
-      "key": "improve_a_screen_1",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "improve_a_screen_1"
-      }
-    },
-    {
-      "name": "Intro to Design Mode",
-      "url": "https://youtu.be/jiX1dST2PCw",
-      "key": "intro_to_design_mode",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "intro_to_design_mode"
-      }
-    },
-    {
-      "name": "Linking Prototype Screens",
-      "url": "https://docs.google.com/presentation/d/1FEpaeO9Sc0oBboRKbfOO_n8nn8b3PJNALpytfAEVzJI/template/preview",
-      "key": "linking_prototype_screens",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "linking_prototype_screens"
-      }
-    },
-    {
-      "name": "Market Research",
-      "url": "https://docs.google.com/document/d/1xROZ51ntcX11OmXXfB46slca_ViqIjmOrAydkytVWdw/edit",
-      "key": "market_research",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "market_research"
-      }
-    },
-    {
-      "name": "Market Research - Research Areas",
-      "url": "https://docs.google.com/document/d/1ZSf6F57MCRMkwoDDfhofI5OgGaYtGvehRNDSdBs0Y7Q/edit#",
-      "key": "market_research_-_research_areas",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "market_research_-_research_areas"
-      }
-    },
-    {
-      "name": "Market Research",
-      "url": "https://docs.google.com/document/d/1jx9jmHk5HkzfWnsb6M8QSrIsekgbzUsT3PblOIgr7XE/edit",
-      "key": "market_research_1",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "market_research_1"
-      }
-    },
-    {
-      "name": "Market Research",
-      "url": "https://docs.google.com/presentation/d/1VewZgc4VzXFSQDlc5QUrdV6Xm8hN58gEKH3DWSzoByY/template/preview",
-      "key": "market_research_2",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "market_research_2"
-      }
-    },
-    {
-      "name": "Model Screen Design",
-      "url": "https://docs.google.com/document/d/1kqlYoJneCvbWYPbt5tCt5z9dFOZrP1GVBIV91S_mWyw/edit?pli=1",
-      "key": "model_screen_design",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "model_screen_design"
-      }
-    },
-    {
-      "name": "Multi-Screen Apps",
-      "url": "https://drive.google.com/file/d/1CZ0No5Wxy7QyRddR-3eddfKasGsh6xFg/view?usp=sharing",
-      "key": "multi-screen_apps",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "multi-screen_apps"
-      }
-    },
-    {
-      "name": "Paper Prototype - Student Checklist",
-      "url": "https://docs.google.com/document/d/1tysTwNU1ZCRVEROiOZ2gKYUYP8QRYn2D92IdDjvBSpk/edit",
-      "key": "paper_prototype_-_student_checklist",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "paper_prototype_-_student_checklist"
-      }
-    },
-    {
-      "name": "Paper Prototype Planning",
-      "url": "https://docs.google.com/document/d/1q06xCd9SXPup1KHcfXL0kczUNUs5C-rUTfxyB2qhs-Y/view",
-      "key": "paper_prototype_planning",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "paper_prototype_planning"
-      }
-    },
-    {
-      "name": "Paper Prototype Planning",
-      "url": "https://docs.google.com/document/d/1hiMawWN9iTFxyremD9-adXrrrBDmXvBGyX3o27nCQC8/edit",
-      "key": "paper_prototype_planning_1",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "paper_prototype_planning_1"
-      }
-    },
-    {
-      "name": "Paper Prototype Project Guide",
-      "url": "https://docs.google.com/document/d/1o5-nB-iYLFCdquqAMdeBm57WkqWnmVlSHVrQcBRjVDE/view",
-      "key": "paper_prototype_project_guide",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "paper_prototype_project_guide"
-      }
-    },
-    {
-      "name": "Paper Prototype User Testing",
-      "url": "https://docs.google.com/document/d/1uEBql95st5PNTCzJUbytcSwUe4nu7JD-AxpjxlAVx3k/view",
-      "key": "paper_prototype_user_testing",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "paper_prototype_user_testing"
-      }
-    },
-    {
-      "name": "Paper Prototype User Testing",
-      "url": "https://docs.google.com/document/d/1GC8GXJuYyy2MCzQrOBov-AZU-twa1jSnuzh823w7Xnc/edit",
-      "key": "paper_prototype_user_testing_1",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "paper_prototype_user_testing_1"
-      }
-    },
-    {
-      "name": "Paper Prototypes",
-      "url": "https://docs.google.com/document/d/1azVKaOq9wrtcbROSjrBr10xsuiBQA_rvODOO7RYbrbU/edit",
-      "key": "paper_prototypes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Rubric"
-      },
-      "seeding_key": {
-        "resource.key": "paper_prototypes"
-      }
-    },
-    {
-      "name": "Peer Review 1",
-      "url": "https://docs.google.com/document/d/1CVcpiBI1UeA5U5SbGnkM6xqKmKZo2XefU2J7Tg8zWqk",
-      "key": "peer_review_1",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "peer_review_1"
-      }
-    },
-    {
-      "name": "Peer Review 2",
-      "url": "https://docs.google.com/document/d/1PA_zExhRqRnZ5j6DaJHnceUSYGHBGHgqw3VSfQNm2E0",
-      "key": "peer_review_2",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "peer_review_2"
-      }
-    },
-    {
-      "name": "Phone Paper Prototype",
-      "url": "https://drive.google.com/file/d/1O_TFldMiOe6QWCnunqgaZFFT9qnansLo/view",
-      "key": "phone_paper_prototype",
-      "properties": {
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "phone_paper_prototype"
-      }
-    },
-    {
-      "name": "Problem Solving Process with Empathy",
-      "url": "https://code.org/curriculum/docs/csd/PSPE.png",
-      "key": "problem_solving_process_with_empathy",
-      "properties": {
-        "audience": "Student",
-        "type": "Image"
-      },
-      "seeding_key": {
-        "resource.key": "problem_solving_process_with_empathy"
-      }
-    },
-    {
-      "name": "Profile 1",
-      "url": "https://docs.google.com/document/d/1N6Ks8rp6YoLgsbA3FE0x9RatJY3znevnMkMyUN3yRE8/edit",
-      "key": "profile_1",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "User Profile"
-      },
-      "seeding_key": {
-        "resource.key": "profile_1"
-      }
-    },
-    {
-      "name": "Profile 2",
-      "url": "https://docs.google.com/document/d/14nHf-TzkKBUC0hvYlcviVe-S9wDdo1TqPUIcnTcHMzw/edit",
-      "key": "profile_2",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "User Profile"
-      },
-      "seeding_key": {
-        "resource.key": "profile_2"
-      }
-    },
-    {
-      "name": "Profile 3",
-      "url": "https://docs.google.com/document/d/1Nw_0v_uGCe4J_tcimhyJiWKYgw4jhNgg8qP1zo4GddE/edit",
-      "key": "profile_3",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "User Profile"
-      },
-      "seeding_key": {
-        "resource.key": "profile_3"
-      }
-    },
-    {
-      "name": "Profile 4",
-      "url": "https://docs.google.com/document/d/1kRKQYsomhS9UakiDazQ9dXNk8AIWHaq082Y4wBflK34/",
-      "key": "profile_4",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "User Profile"
-      },
-      "seeding_key": {
-        "resource.key": "profile_4"
-      }
-    },
-    {
-      "name": "Project - App Presentation",
-      "url": "https://docs.google.com/presentation/d/17u_op3RN3iyBebwv2ubMUMx83-MXza-wNzxDlpxnY1Q/template/preview",
-      "key": "project_-_app_presentation",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "project_-_app_presentation"
-      }
-    },
-    {
-      "name": "Project - Paper Prototype",
-      "url": "https://docs.google.com/presentation/d/19DdVVqSlOtAXoh_s92NR9dqqkka6udzl6JF-qyOWhEc/template/preview",
-      "key": "project_-_paper_prototype",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "project_-_paper_prototype"
-      }
-    },
-    {
-      "name": "Prototype Feedback",
-      "url": "https://docs.google.com/document/d/1DzoLUATK8k1lyr_TLhR4mJ5UHLhrZN6-sLRay0tLX4Q/edit?usp=sharing",
-      "key": "prototype_feedback",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "prototype_feedback"
-      }
-    },
-    {
-      "name": "Prototype Testing",
-      "url": "https://docs.google.com/presentation/d/1n6k7rNlAurR70Gsko5wAHR5rZiIyyzdLv2jy1sC8ptc/template/preview",
-      "key": "prototype_testing",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "prototype_testing"
-      }
-    },
-    {
-      "name": "Reacting as your User",
-      "url": "https://docs.google.com/document/d/1cQXtr4zj3LEuOMoOYJf8KtBUl9ge3qmwBBzEBv8GixA/edit",
-      "key": "reacting_as_your_user",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "reacting_as_your_user"
-      }
-    },
-    {
-      "name": "Reacting as Your User Profile 1",
-      "url": "https://docs.google.com/document/d/1VFvDunQ2ahFH9xp7aYv2CRvdh14z26o6XuCPfDPrq10/edit",
-      "key": "reacting_as_your_user_profile_1",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "reacting_as_your_user_profile_1"
-      }
-    },
-    {
-      "name": "Reacting as Your User Profile 2",
-      "url": "https://docs.google.com/document/d/1aoekiZA8YNZiWOmJky1wQZkWWFf8KvJcNMZr-0h2Sys/edit",
-      "key": "reacting_as_your_user_profile_2",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "reacting_as_your_user_profile_2"
-      }
-    },
-    {
-      "name": "Reacting as Your User Profile 3",
-      "url": "https://docs.google.com/document/d/1Cx5M2WHzKr2mz-5oM_x49Si20gJ77RiRFd3ASRMNOaw/edit",
-      "key": "reacting_as_your_user_profile_3",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "reacting_as_your_user_profile_3"
-      }
-    },
-    {
-      "name": "Reacting as Your User Profile 4",
-      "url": "https://docs.google.com/document/d/1KxWZEztMy7pZ6Ksg5OO0io7dLCJblKRcBpCoVkEpXfc/edit",
-      "key": "reacting_as_your_user_profile_4",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "reacting_as_your_user_profile_4"
-      }
-    },
-    {
-      "name": "Responding to User Input",
-      "url": "https://drive.google.com/file/d/1zTyBx7l2RiRLcB9AjRZZ314PL6kvY_-D/view?usp=sharing",
-      "key": "responding_to_user_input",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "responding_to_user_input"
-      }
-    },
-    {
-      "name": "Sample Marked Rubrics",
-      "url": "https://docs.google.com/document/d/1jpcg90ImVQKQoWMCsHQwFcnNCFwbx_kTxxVwuYjR3bQ/edit",
-      "key": "sample_marked_rubrics_1",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "sample_marked_rubrics_1"
-      }
-    },
-    {
-      "name": "Screen Design (2021)",
-      "url": "https://docs.google.com/document/d/1QGuwv8brhQRgXewOgsEV1zy7qrhCMawqlMNP4WLNh9Y/view",
-      "key": "screen_design_2021_",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "screen_design_2021_"
-      }
-    },
-    {
-      "name": "Screen Ownership (2021)",
-      "url": "https://docs.google.com/document/d/1iCbvI452ztUOn1jPqcVBQUg9EiuzCIwhV7rWPuFCAQ8/view",
-      "key": "screen_ownership_2021_",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "screen_ownership_2021_"
-      }
-    },
-    {
-      "name": "Teacher Forum",
-      "url": "https://forum.code.org/c/csd",
-      "key": "teacher_forum",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "teacher_forum"
-      }
-    },
-    {
-      "name": "Testing the App",
-      "url": "https://docs.google.com/presentation/d/1iPfbJe630o40RCFnGKCSlujZfvozajPc4J3el9MlHgg/template/preview",
-      "key": "testing_the_app",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "testing_the_app"
-      }
-    },
-    {
-      "name": "The Design Thinking Process",
-      "url": "https://www.youtube.com/watch?v=_r0VX-aU_T8",
-      "key": "the_design_thinking_process",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "the_design_thinking_process"
-      }
-    },
-    {
-      "name": "The Problem Solving Process with Design",
-      "url": "https://docs.google.com/document/d/1qgiwCyO7948qPSWbTvYmR7DjH0nkh8HpfxP1HxubDis/view",
-      "key": "the_problem_solving_process_with_design",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "the_problem_solving_process_with_design"
-      }
-    },
-    {
-      "name": "Understanding Your User",
-      "url": "https://docs.google.com/presentation/d/1ay4VDFZ1PTA6LBUksPJRz_6aU7cVy5FXHSHuMrmfUl8/template/preview",
-      "key": "understanding_your_user",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "understanding_your_user"
-      }
-    },
-    {
-      "name": "Updating Your Prototype",
-      "url": "https://docs.google.com/document/d/1-Ax_KooQaPObURbSS7tYp00gshGzIjufv7P-y5UU98M/view",
-      "key": "updating_your_prototype",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "updating_your_prototype"
-      }
-    },
-    {
-      "name": "Updating Your Prototype",
-      "url": "https://docs.google.com/presentation/d/1EB3cF4d1MdQ7FkL29IbZOL7VyAiRTADRnGlIFZGWKTA/template/preview",
-      "key": "updating_your_prototype_1",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "updating_your_prototype_1"
-      }
-    },
-    {
-      "name": "User Centered Design - Define and Prepare",
-      "url": "https://docs.google.com/presentation/d/1g2tfwNongYEZQI_0SCMW1fCuzGxtUAxWj6RDNA75PE4/template/preview",
-      "key": "user_centered_design_-_define_and_prepare",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "user_centered_design_-_define_and_prepare"
-      }
-    },
-    {
-      "name": "User Centered Design - Try and Reflect",
-      "url": "https://docs.google.com/presentation/d/1WFIH7J7MIVcc7l3uSOMynL1F1TMZTi7wqTvZML8ENxE/template/preview",
-      "key": "user_centered_design_-_try_and_reflect",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "user_centered_design_-_try_and_reflect"
-      }
-    },
-    {
-      "name": "User Centered Design (Define & Prepare)",
-      "url": "https://docs.google.com/document/d/1_SDc4Rqsmyi9gfU2cfjxb2cMd3-e7S-E8JpfYHGIgFA/edit",
-      "key": "user_centered_design_define_prepare_",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "user_centered_design_define_prepare_"
-      }
-    },
-    {
-      "name": "User Centered Design (Define & Prepare) 2021",
-      "url": "https://docs.google.com/document/d/1XkDwOnyf6zxvBOb6MVYk00X9YuMnQdd-0xT11-idHRg/view",
-      "key": "user_centered_design_define_prepare_2021",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "user_centered_design_define_prepare_2021"
-      }
-    },
-    {
-      "name": "User Centered Design (Try & Reflect)",
-      "url": "https://docs.google.com/document/d/1H_eXRckFRPnYGBoheT8DEauzwzc58Kp1XUOVCwtYZ_U/edit",
-      "key": "user_centered_design_try_reflect_",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "user_centered_design_try_reflect_"
-      }
-    },
-    {
-      "name": "User Centered Design (Try & Reflect) 2021",
-      "url": "https://docs.google.com/document/d/1mHWy7a3_eSdEgjXRFCb1ezGFdi1QMgPTtitqHap0ERQ/view",
-      "key": "user_centered_design_try_reflect_2021",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "user_centered_design_try_reflect_2021"
-      }
-    },
-    {
-      "name": "User Interface Screens",
-      "url": "https://docs.google.com/document/d/1Mirzvq92BRcGrI4z0Mm4HamTTu_bkBiXFfsHYxTzXAM/edit",
-      "key": "user_interface_screens",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "user_interface_screens"
-      }
-    },
-    {
-      "name": "User Interfaces",
-      "url": "https://docs.google.com/presentation/d/1lQ8QF0NB5hSNqcSQiEXsX8704TxVM6tk9Goq9ajvMoA/template/preview",
-      "key": "user_interfaces",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "user_interfaces"
-      }
-    },
-    {
-      "name": "User Interviews",
-      "url": "https://docs.google.com/document/d/1nkieg4ryGPbOFt6AkNYEzdvjm8pJi2zr_BM8ty3kbtc/view",
-      "key": "user_interviews",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "user_interviews"
-      }
-    },
-    {
-      "name": "User Test Cases",
-      "url": "https://docs.google.com/document/d/1i1_B7ZK8ljkijlKLIKndNtpbNYiY34Xe5W1vsigjw7I/view",
-      "key": "user_test_cases",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "user_test_cases"
-      }
-    },
-    {
-      "name": "User Test Cases",
-      "url": "https://docs.google.com/document/d/1sY0WomOU0tFfIeBRCPzJCKs6LLI7kpmPNfYccwtcvi0/edit",
-      "key": "user_test_cases_1",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "user_test_cases_1"
-      }
-    },
-    {
-      "name": "User Testing (Computer)",
-      "url": "https://docs.google.com/document/d/1_ce_F8_tnexWhS718ALJadACNKe0oomeIeyKTwuWmAg/edit",
-      "key": "user_testing_computer_",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "user_testing_computer_"
-      }
-    },
-    {
-      "name": "User Testing (User)",
-      "url": "https://docs.google.com/document/d/1qE028_n5aq9n8ebVm09uzu0169ykzvxfl8pUvV6S6D8/edit",
-      "key": "user_testing_user_",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "user_testing_user_"
-      }
-    },
-    {
-      "name": "What's For Lunch Testing",
-      "url": "https://www.youtube.com/watch?v=ny5UbRpG6PE",
-      "key": "what_s_for_lunch_testing",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "what_s_for_lunch_testing"
-      }
-    }
+
   ],
   "lessons_resources": [
-    {
-      "seeding_key": {
-        "lesson.key": "Bugs and Features",
-        "resource.key": "bugs_and_features"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Bugs and Features",
-        "resource.key": "bugs_and_features_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Bugs and Features",
-        "resource.key": "bugs_and_features_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Build a Digital Prototype",
-        "resource.key": "build_a_digital_prototype"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Build a Digital Prototype",
-        "resource.key": "screen_design_2021_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Build a Paper Prototype",
-        "resource.key": "build_a_paper_prototype"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Build a Paper Prototype",
-        "resource.key": "design_mode"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Build a Paper Prototype",
-        "resource.key": "design_mode_elements"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Build a Paper Prototype",
-        "resource.key": "paper_prototype_planning"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Build a Paper Prototype",
-        "resource.key": "paper_prototype_planning_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Build a Paper Prototype",
-        "resource.key": "phone_paper_prototype"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Design Mode in App Lab",
-        "resource.key": "design_mode"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Design Mode in App Lab",
-        "resource.key": "design_mode_elements"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Design Mode in App Lab",
-        "resource.key": "design_mode_in_app_lab"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Design Mode in App Lab",
-        "resource.key": "intro_to_design_mode"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Design Mode in App Lab",
-        "resource.key": "model_screen_design"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Design Mode in App Lab",
-        "resource.key": "screen_design_2021_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Design Mode in App Lab",
-        "resource.key": "screen_ownership_2021_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Designing Apps for Good",
-        "resource.key": "app_design_kickoff"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Designing Apps for Good",
-        "resource.key": "app_design_kickoff_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Designing Apps for Good",
-        "resource.key": "designing_apps_for_good"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Designing Apps for Good",
-        "resource.key": "example_apps_for_good"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Designing With Empathy",
-        "resource.key": "designing_with_empathy"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Designing With Empathy",
-        "resource.key": "designing_with_empathy_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Designing With Empathy",
-        "resource.key": "designing_with_empathy_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Designing With Empathy",
-        "resource.key": "problem_solving_process_with_empathy"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Events in App Lab",
-        "resource.key": "events_in_app_lab"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Events in App Lab",
-        "resource.key": "events_in_app_lab_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Exploring UI Elements",
-        "resource.key": "explore_ui_elements"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Exploring UI Elements",
-        "resource.key": "explore_ui_elements_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Exploring UI Elements",
-        "resource.key": "exploring_ui_elements"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Feedback and Testing",
-        "resource.key": "feedback_and_testing"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Feedback and Testing",
-        "resource.key": "improve_a_screen"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Feedback and Testing",
-        "resource.key": "improve_a_screen_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Feedback and Testing",
-        "resource.key": "prototype_feedback"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Feedback and Testing",
-        "resource.key": "user_interface_screens"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Identifying User Needs",
-        "resource.key": "example_user_interviews"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Identifying User Needs",
-        "resource.key": "identifying_user_needs"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Identifying User Needs",
-        "resource.key": "user_interviews"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Linking Prototype Screens",
-        "resource.key": "changing_screens"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Linking Prototype Screens",
-        "resource.key": "importing_screens"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Linking Prototype Screens",
-        "resource.key": "linking_prototype_screens"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Linking Prototype Screens",
-        "resource.key": "multi-screen_apps"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Linking Prototype Screens",
-        "resource.key": "responding_to_user_input"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Market Research",
-        "resource.key": "market_research"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Market Research",
-        "resource.key": "market_research_-_research_areas"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Market Research",
-        "resource.key": "market_research_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Market Research",
-        "resource.key": "market_research_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - App Presentation",
-        "resource.key": "app_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - App Presentation",
-        "resource.key": "app_presentation_-_student_checklist"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - App Presentation",
-        "resource.key": "app_presentation_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - App Presentation",
-        "resource.key": "app_presentation_template"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - App Presentation",
-        "resource.key": "computer_science_practices"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - App Presentation",
-        "resource.key": "peer_review_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - App Presentation",
-        "resource.key": "peer_review_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - App Presentation",
-        "resource.key": "project_-_app_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - App Presentation",
-        "resource.key": "sample_marked_rubrics_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Paper Prototype",
-        "resource.key": "computer_science_practices"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Paper Prototype",
-        "resource.key": "example_project_-_cooking_app_-_convincing_evidence"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Paper Prototype",
-        "resource.key": "example_project_-_cooking_app_-_extensive_evidence"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Paper Prototype",
-        "resource.key": "example_project_-_language_app_-_convincing_evidence"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Paper Prototype",
-        "resource.key": "example_project_-_language_app_-_limited_evidence"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Paper Prototype",
-        "resource.key": "paper_prototype_-_student_checklist"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Paper Prototype",
-        "resource.key": "paper_prototype_project_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Paper Prototype",
-        "resource.key": "paper_prototypes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Paper Prototype",
-        "resource.key": "project_-_paper_prototype"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Prototype Testing",
-        "resource.key": "paper_prototype_user_testing"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Prototype Testing",
-        "resource.key": "paper_prototype_user_testing_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Prototype Testing",
-        "resource.key": "prototype_testing"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Prototype Testing",
-        "resource.key": "user_test_cases"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Prototype Testing",
-        "resource.key": "user_test_cases_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Prototype Testing",
-        "resource.key": "what_s_for_lunch_testing"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Testing the App",
-        "resource.key": "digital_prototype_user_testing"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Testing the App",
-        "resource.key": "testing_the_app"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Testing the App",
-        "resource.key": "user_test_cases"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Understanding Your User",
-        "resource.key": "profile_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Understanding Your User",
-        "resource.key": "profile_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Understanding Your User",
-        "resource.key": "profile_3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Understanding Your User",
-        "resource.key": "profile_4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Understanding Your User",
-        "resource.key": "reacting_as_your_user"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Understanding Your User",
-        "resource.key": "reacting_as_your_user_profile_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Understanding Your User",
-        "resource.key": "reacting_as_your_user_profile_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Understanding Your User",
-        "resource.key": "reacting_as_your_user_profile_3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Understanding Your User",
-        "resource.key": "reacting_as_your_user_profile_4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Understanding Your User",
-        "resource.key": "understanding_your_user"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Updating Your Prototype",
-        "resource.key": "updating_your_prototype"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Updating Your Prototype",
-        "resource.key": "updating_your_prototype_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "User Centered Design - Define and Prepare",
-        "resource.key": "the_design_thinking_process"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "User Centered Design - Define and Prepare",
-        "resource.key": "user_centered_design_-_define_and_prepare"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "User Centered Design - Define and Prepare",
-        "resource.key": "user_centered_design_define_prepare_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "User Centered Design - Define and Prepare",
-        "resource.key": "user_centered_design_define_prepare_2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "User Centered Design - Try and Reflect",
-        "resource.key": "user_centered_design_-_try_and_reflect"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "User Centered Design - Try and Reflect",
-        "resource.key": "user_centered_design_try_reflect_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "User Centered Design - Try and Reflect",
-        "resource.key": "user_centered_design_try_reflect_2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "User Interfaces",
-        "resource.key": "user_interface_screens"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "User Interfaces",
-        "resource.key": "user_interfaces"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "User Interfaces",
-        "resource.key": "user_testing_computer_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "User Interfaces",
-        "resource.key": "user_testing_user_"
-      }
-    }
+
   ],
   "scripts_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "all_code_2",
-        "script.name": "csd4-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_resources_3",
-        "script.name": "csd4-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_standards_3",
-        "script.name": "csd4-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_vocabulary_3",
-        "script.name": "csd4-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_guide_to_assessment",
-        "script.name": "csd4-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_guide_to_curriculum_videos",
-        "script.name": "csd4-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_guide_to_debugging",
-        "script.name": "csd4-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_guide_to_differentiation",
-        "script.name": "csd4-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_guide_to_teaching_and_learning_strategies",
-        "script.name": "csd4-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_guide_to_using_resources",
-        "script.name": "csd4-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "teacher_forum",
-        "script.name": "csd4-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "the_problem_solving_process_with_design",
-        "script.name": "csd4-2024"
-      }
-    }
+
   ],
   "scripts_student_resources": [
 
   ],
   "vocabularies": [
-    {
-      "key": "bug",
-      "word": "Bug",
-      "definition": "Part of a program that does not work correctly.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "bug"
-      }
-    },
-    {
-      "key": "empathy",
-      "word": "Empathy",
-      "definition": "In design, paying attention to a user's feelings and needs when designing a product.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "empathy"
-      }
-    },
-    {
-      "key": "feature",
-      "word": "Feature",
-      "definition": "Part of a program that adds functionality for the user",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "feature"
-      }
-    },
-    {
-      "key": "prototype",
-      "word": "Prototype",
-      "definition": "A first or early model of a product that allows you to test assumptions before developing a final version.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "prototype"
-      }
-    },
-    {
-      "key": "usability",
-      "word": "Usability",
-      "definition": "How easy, efficient, and satisfying it is to use a human-made object or device (including software).",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "usability"
-      }
-    },
-    {
-      "key": "user",
-      "word": "User",
-      "definition": "Someone who uses an object, including software and hardware.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "user"
-      }
-    },
-    {
-      "key": "user_interface",
-      "word": "User Interface",
-      "definition": "The visual elements of a program through which a user controls or communicates with the application. Often abbreviated UI.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "user_interface"
-      }
-    }
+
   ],
   "lessons_vocabularies": [
-    {
-      "seeding_key": {
-        "lesson.key": "Bugs and Features",
-        "vocabulary.key": "bug"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Bugs and Features",
-        "vocabulary.key": "feature"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Build a Paper Prototype",
-        "vocabulary.key": "prototype"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Designing With Empathy",
-        "vocabulary.key": "empathy"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Designing With Empathy",
-        "vocabulary.key": "user"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Understanding Your User",
-        "vocabulary.key": "usability"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "User Interfaces",
-        "vocabulary.key": "prototype"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "User Interfaces",
-        "vocabulary.key": "user_interface"
-      }
-    }
+
   ],
   "lessons_programming_expressions": [
     {

@@ -61,6 +61,7 @@ export default function initializeBlocklyXml(blocklyWrapper) {
       processBlockAndChildren(xmlChild);
 
       // Further manipulate the XML for specific top block types.
+      addNameToBlockFunctionDefinitionBlock(xmlChild);
       addMutationToBehaviorDefBlocks(xmlChild);
       addMutationToMiniToolboxBlocks(xmlChild);
       makeWhenRunUndeletable(xmlChild);
@@ -166,6 +167,47 @@ export function addMutationToBehaviorDefBlocks(blockElement) {
 }
 
 /**
+ * In the event that a legacy project has functions without names, add a name
+ * to the definition block's NAME field.
+ * @param {Element} blockElement - The XML element for a single block.
+ */
+export function addNameToBlockFunctionDefinitionBlock(blockElement) {
+  const blockType = blockElement.getAttribute('type');
+  if (blockType !== BLOCK_TYPES.procedureDefinition) {
+    return;
+  }
+  const fieldElement = blockElement.querySelector('field[name="NAME"]');
+  if (!fieldElement) {
+    return;
+  }
+
+  if (fieldElement.textContent === '') {
+    fieldElement.textContent = Blockly.Msg.UNNAMED_KEY;
+  }
+}
+
+/**
+ * In the event that a legacy project has functions without names, add a name
+ * to a call block's mutator.
+ *
+ * @param {Element} blockElement - The XML element for a single block.
+ */
+export function addNameToBlockFunctionCallBlock(blockElement) {
+  const blockType = blockElement.getAttribute('type');
+  if (blockType !== BLOCK_TYPES.procedureCall) {
+    return;
+  }
+  const mutationElement =
+    blockElement.querySelector('mutation') ||
+    blockElement.ownerDocument.createElement('mutation');
+  // Place mutator before fields, values, and other nested blocks.
+  blockElement.insertBefore(mutationElement, blockElement.firstChild);
+  if (!mutationElement.getAttribute('name')) {
+    mutationElement.setAttribute('name', Blockly.Msg.UNNAMED_KEY);
+  }
+}
+
+/**
  * Adds a mutation element to a block if it's a text join block with an input count.
  * CDO Blockly uses an unsupported method for serializing input count state
  * where an arbitrary block attribute could be used to manage extra state.
@@ -174,7 +216,7 @@ export function addMutationToBehaviorDefBlocks(blockElement) {
  *
  * @param {Element} blockElement - The XML element for a single block.
  */
-export function addMutationToTextJoinBlocks(blockElement) {
+export function addMutationToTextJoinBlock(blockElement) {
   if (
     !['text_join', 'text_join_simple'].includes(
       blockElement.getAttribute('type')
@@ -213,9 +255,10 @@ function processBlockAndChildren(block) {
  * @param {Element} block - The XML element for a single block.
  */
 function processIndividualBlock(block) {
+  addNameToBlockFunctionCallBlock(block);
   // Convert unsupported can_disconnect_from_parent attributes.
   makeLockedBlockImmovable(block);
-  addMutationToTextJoinBlocks(block);
+  addMutationToTextJoinBlock(block);
 }
 
 /**

@@ -444,6 +444,15 @@ FactoryBot.define do
       end
     end
 
+    trait :with_lti_auth do
+      after(:create) do |user|
+        user.authentication_options.destroy_all
+        lti_auth = create(:lti_authentication_option, user: user)
+        user.authentication_options << lti_auth
+        user.save!
+      end
+    end
+
     trait :sso_provider do
       encrypted_password {nil}
       provider {%w(facebook windowslive clever).sample}
@@ -591,6 +600,7 @@ FactoryBot.define do
     end
 
     factory :lti_authentication_option do
+      sequence(:email) {|n| "lti_user#{n}@lms.com"}
       credential_type {AuthenticationOption::LTI_V1}
       authentication_id {"#{SecureRandom.alphanumeric}|#{SecureRandom.alphanumeric}|#{SecureRandom.alphanumeric}"}
     end

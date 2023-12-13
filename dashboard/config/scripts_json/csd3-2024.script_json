@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-11-28 21:14:32 UTC",
+    "serialized_at": "2023-12-13 00:26:45 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -7827,6 +7827,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 L1 - Design Templates_2024"
+        ],
         "progression": "Animation and Game Templates"
       },
       "bonus": false,
@@ -7849,6 +7852,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "intro-pulse-survey_csd3_2024"
+        ],
         "progression": "Check-In Survey"
       },
       "bonus": false,
@@ -7871,6 +7877,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Plotting Shapes Shape Lab_2024"
+        ],
         "progression": "Drawing Shapes"
       },
       "bonus": false,
@@ -7893,6 +7902,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3L3 rect_2024"
+        ],
         "progression": "Predict - Introduction to Game Lab"
       },
       "bonus": false,
@@ -7915,6 +7927,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 rect_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7937,6 +7952,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Drawing Squares to Corners_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7959,6 +7977,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 fill_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7981,6 +8002,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 sequence_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8003,6 +8027,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 ellipse_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8025,6 +8052,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 drawing practice choice_2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -8047,6 +8077,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 debug_2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -8069,6 +8102,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 drawing challenges_2024"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -8091,6 +8127,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3L4 - Predict_2024"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -8113,6 +8152,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random Taller Rectangle_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8135,6 +8177,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random Ellipse Behind_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8157,6 +8202,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random background_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8179,6 +8227,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random background2_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8201,6 +8252,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random Debug Grass_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8223,6 +8277,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games parameters practice_2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -8245,6 +8302,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random Debug Cloud_2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -8267,6 +8327,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Parameters challenge_2024"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -8289,6 +8352,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables Predict Where X_2024"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -8311,6 +8377,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables Predict Where XY_2024"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -8333,6 +8402,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3L5 - SB1_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8355,6 +8427,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables naming rules v2_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8377,6 +8452,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables Draw Poppy_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8399,6 +8477,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games variables practice_2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -8421,6 +8502,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables assessment_2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -8443,6 +8527,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games variables challenge_2024"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -8465,6 +8552,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3L6 - Predict_2024"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -8487,6 +8577,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random random ellipse_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8509,6 +8602,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random random ellipse2_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8531,6 +8627,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables random with assignment_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8553,6 +8652,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables random reassign_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8575,6 +8677,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games random practice_2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -8597,6 +8702,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random rainbow snake_2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -8619,6 +8727,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games random challenge_2024"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -8641,6 +8752,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 L7 review_2024"
+        ],
         "progression": "Review Shape Blocks"
       },
       "bonus": false,
@@ -8663,6 +8777,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 L7 mini project_2024"
+        ],
         "progression": "Create Your Robot Face"
       },
       "bonus": false,
@@ -8685,6 +8802,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3L7 - Predict_2024"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -8707,6 +8827,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites intro sprites_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8729,6 +8852,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites intro debug_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8751,6 +8877,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites Exploration_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8773,6 +8902,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites intro sprites_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8795,6 +8927,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites anitab 1_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8817,6 +8952,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites sequencing_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8839,6 +8977,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 drawSprites placement match_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -8861,6 +9002,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Sprites practice_2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -8883,6 +9027,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites assessment_2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -8905,6 +9052,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Sprites Challenges_2024"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -8927,6 +9077,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games properties predict_2024"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -8949,6 +9102,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games properties xy_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8971,6 +9127,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games properties new_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8993,6 +9152,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Properties practice_2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -9015,6 +9177,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD Games properties assessment_2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -9037,6 +9202,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Properties challenge_2024"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -9059,6 +9227,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web text explore_2024"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -9081,6 +9252,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites text_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -9103,6 +9277,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web text size_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -9125,6 +9302,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web text practice choice_2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -9147,6 +9327,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD web text assessment_2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -9169,6 +9352,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web text challenge choice_2024"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -9191,6 +9377,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Scene Example_2024"
+        ],
         "progression": "Captioned Scene Example"
       },
       "bonus": false,
@@ -9213,6 +9402,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites scene drawing_2024"
+        ],
         "progression": "Create a Background"
       },
       "bonus": false,
@@ -9235,6 +9427,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites scene sprites_2024"
+        ],
         "progression": "Add Sprites"
       },
       "bonus": false,
@@ -9257,6 +9452,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites scene text_2024"
+        ],
         "progression": "Add Text"
       },
       "bonus": false,
@@ -9279,6 +9477,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites scene challenge_2024"
+        ],
         "progression": "Review Your Scene"
       },
       "bonus": false,
@@ -9301,6 +9502,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Draw Loop predict 1_2024"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -9323,6 +9527,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Draw Loop Plugged orange and green_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -9345,6 +9552,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Draw Loop Plugged predict 2_2024"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -9367,6 +9577,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 dancing alien_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -9389,6 +9602,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Draw Loop Plugged wiggle sprite x_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -9411,6 +9627,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web draw loop practice choice_2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -9433,6 +9652,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Draw Loop Plugged wiggle sprite y_2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -9455,6 +9677,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web draw loop challenge choice_2024"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -9477,6 +9702,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - Simple Counter Predict_2024"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -9499,6 +9727,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprite Movement Right_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -9521,6 +9752,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprite Movement Left_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -9543,6 +9777,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Diagonal Movement_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -9565,6 +9802,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprite Movement Predict_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -9587,6 +9827,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web movement practice choice_2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -9609,6 +9852,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Movement Fish_2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -9631,6 +9877,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web movement challenge choice_2024"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -9653,6 +9902,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web project animated example_2024"
+        ],
         "progression": "Example Animated Scene"
       },
       "bonus": false,
@@ -9675,6 +9927,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web project animated background_2024"
+        ],
         "progression": "Draw a Background"
       },
       "bonus": false,
@@ -9697,6 +9952,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web project animated sprites_2024"
+        ],
         "progression": "Add Sprites"
       },
       "bonus": false,
@@ -9719,6 +9977,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web project animated text_2024"
+        ],
         "progression": "Add Text"
       },
       "bonus": false,
@@ -9741,6 +10002,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web project animated movement_2024"
+        ],
         "progression": "Add Movement"
       },
       "bonus": false,
@@ -9763,6 +10027,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web project animated review_2024"
+        ],
         "progression": "Review Your Animated Scene"
       },
       "bonus": false,
@@ -9785,6 +10052,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Boolean Predict_2024"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -9807,6 +10077,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - conditionals - Matching_2018_2019_pilot_2024"
+        ],
         "progression": "Quick Check"
       },
       "bonus": false,
@@ -9829,6 +10102,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - conditionals - transition_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -9851,6 +10127,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - conditionals - first conditional_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -9873,6 +10152,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Conditionals Apple 2_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -9895,6 +10177,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web conditionals practice choice_2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -9917,6 +10202,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD web conditionals assessment_2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -9939,6 +10227,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web conditionals challenge choice_2024"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -9961,6 +10252,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Keypress Boolean_2024"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -9983,6 +10277,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 keydown conditional_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -10005,6 +10302,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 UP_ARROW_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -10027,6 +10327,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Input Gears_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -10049,6 +10352,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web keyboard practice choice_2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -10071,6 +10377,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Direction Arrows_2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -10093,6 +10402,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web keyboard challenge choice_2024"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -10115,6 +10427,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 if else predict_2024"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -10137,6 +10452,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Else_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -10159,6 +10477,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games mousedown intro_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -10181,6 +10502,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - complex - mouse down_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -10203,6 +10527,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 If Else_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -10225,6 +10552,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web mouse practice choice_2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -10247,6 +10577,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD web mouse assessment_2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -10269,6 +10602,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web mouse challenge choice_2024"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -10291,6 +10627,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Interactive Card Exemplar_2024"
+        ],
         "progression": "Demo App: Interactive Card"
       },
       "bonus": false,
@@ -10313,6 +10652,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - Interactive Card - ExampleChoice_2024"
+        ],
         "progression": "Interactive Card Examples"
       },
       "bonus": false,
@@ -10335,6 +10677,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Interactive Card Background_2024"
+        ],
         "progression": "Project Work"
       },
       "bonus": false,
@@ -10357,6 +10702,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Interactive Card Sprites_2024"
+        ],
         "progression": "Project Work"
       },
       "bonus": false,
@@ -10379,6 +10727,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Interactive Card User Input_2024"
+        ],
         "progression": "Project Work"
       },
       "bonus": false,
@@ -10401,6 +10752,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Interactive Card Other Conditionals_2024"
+        ],
         "progression": "Project Work"
       },
       "bonus": false,
@@ -10423,6 +10777,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Interactive Card Final_2024"
+        ],
         "progression": "Project Work"
       },
       "bonus": false,
@@ -10445,6 +10802,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2024"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -10467,6 +10827,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 L18 Predict_2024"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -10489,6 +10852,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction velocityX_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -10511,6 +10877,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction velocityY_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -10533,6 +10902,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction rotation_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -10555,6 +10927,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction rotation control_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -10577,6 +10952,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction velocityX if-statements_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -10599,6 +10977,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games velocity tennis_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -10621,6 +11002,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games velocity practice choice_2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -10643,6 +11027,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction velocityX control_2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -10665,6 +11052,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games velocity challenge choice_2024"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -10687,6 +11077,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions car intro_2024"
+        ],
         "progression": "Sample Game"
       },
       "bonus": false,
@@ -10709,6 +11102,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions build isTouching_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -10731,6 +11127,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions isTouching intro_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -10753,6 +11152,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions egg_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -10775,6 +11177,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions debug isTouching_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -10797,6 +11202,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games istouching practice choice_2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -10819,6 +11227,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions horse_2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -10841,6 +11252,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games istouching challenge choice_2024"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -10863,6 +11277,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games side scroller demo_2024"
+        ],
         "progression": "Side Scroller Example"
       },
       "bonus": false,
@@ -10885,6 +11302,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games sidescroll background_2024"
+        ],
         "progression": "Draw Your Background"
       },
       "bonus": false,
@@ -10907,6 +11327,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction tumbleweed_2024"
+        ],
         "progression": "Create Your Sprites"
       },
       "bonus": false,
@@ -10929,6 +11352,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction jump_2024"
+        ],
         "progression": "Player Controls"
       },
       "bonus": false,
@@ -10951,6 +11377,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction looping_2024"
+        ],
         "progression": "Looping"
       },
       "bonus": false,
@@ -10973,6 +11402,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions sidescroll2_2024"
+        ],
         "progression": "Sprite Interactions"
       },
       "bonus": false,
@@ -10995,6 +11427,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions scoreboard_2024"
+        ],
         "progression": "Scoring & Scoreboard"
       },
       "bonus": false,
@@ -11017,6 +11452,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games sidescroll review_2024"
+        ],
         "progression": "Review Your Game"
       },
       "bonus": false,
@@ -11039,6 +11477,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Complex Movement counter prediction gamelab_2024"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -11061,6 +11502,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction accelerateX_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -11083,6 +11527,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction accelerateY_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -11105,6 +11552,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction decelerateX_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -11127,6 +11577,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games movement2 practice choice_2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -11149,6 +11602,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction decelerateY_2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -11171,6 +11627,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games movement2 challenge choice_2024"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -11193,6 +11652,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions predict set velocity code_2024"
+        ],
         "progression": "Code Prediction"
       },
       "bonus": false,
@@ -11215,6 +11677,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions displace x_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -11237,6 +11702,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions displace y_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -11259,6 +11727,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions displace intro_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -11281,6 +11752,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions try blocks_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -11303,6 +11777,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games collisions practice choice_2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -11325,6 +11802,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD games collisions assessment_2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -11347,6 +11827,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games collisions challenge choice_2024"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -11369,6 +11852,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games flyer demo_2024"
+        ],
         "progression": "Flyer Game Example"
       },
       "bonus": false,
@@ -11391,6 +11877,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction add coin_2024"
+        ],
         "progression": "Make Your Sprites"
       },
       "bonus": false,
@@ -11413,6 +11902,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction jumping_2024"
+        ],
         "progression": "Player Controls"
       },
       "bonus": false,
@@ -11435,6 +11927,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction left right counter_2024"
+        ],
         "progression": "Player Controls"
       },
       "bonus": false,
@@ -11457,6 +11952,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction left right counter 2_2024"
+        ],
         "progression": "Player Controls"
       },
       "bonus": false,
@@ -11479,6 +11977,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions flyman add obstacles_2024"
+        ],
         "progression": "Sprite Movement"
       },
       "bonus": false,
@@ -11501,6 +12002,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction reset coin_2024"
+        ],
         "progression": "Sprite Interactions"
       },
       "bonus": false,
@@ -11523,6 +12027,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions flyman bounceOff_2024"
+        ],
         "progression": "Review Your Game"
       },
       "bonus": false,
@@ -11545,6 +12052,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD_U3L24 Prediction_2024"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -11567,6 +12077,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions Call Function_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -11589,6 +12102,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions Order Functions_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -11611,6 +12127,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions Prediction Order of Create_2024"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -11633,6 +12152,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games functions practice choice_2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -11655,6 +12177,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games functions assessment FR_2024"
+        ],
         "progression": "Quick Check"
       },
       "bonus": false,
@@ -11677,6 +12202,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions Write Reset_2024"
+        ],
         "progression": "Collector Game"
       },
       "bonus": false,
@@ -11699,6 +12227,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions Add IsTouching_2024"
+        ],
         "progression": "Collector Game"
       },
       "bonus": false,
@@ -11721,6 +12252,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions Add Change Background_2024"
+        ],
         "progression": "Collector Game"
       },
       "bonus": false,
@@ -11743,6 +12277,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games functions challenge choice_2024"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -11765,6 +12302,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti Play Defender_2024"
+        ],
         "progression": "Same Game"
       },
       "bonus": false,
@@ -11787,6 +12327,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2024"
+        ],
         "progression": "Plan Your Project"
       },
       "bonus": false,
@@ -11809,6 +12352,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender animate cake enemies_2024"
+        ],
         "progression": "Set Up Sprites"
       },
       "bonus": false,
@@ -11831,6 +12377,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender enemies move_2024"
+        ],
         "progression": "Set Up Sprites"
       },
       "bonus": false,
@@ -11853,6 +12402,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender move player_2024"
+        ],
         "progression": "Control Your Player"
       },
       "bonus": false,
@@ -11875,6 +12427,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender move up down_2024"
+        ],
         "progression": "Control Your Player"
       },
       "bonus": false,
@@ -11897,6 +12452,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender animate player_2024"
+        ],
         "progression": "Control Your Player"
       },
       "bonus": false,
@@ -11919,6 +12477,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender enemies touch cake_2024"
+        ],
         "progression": "Sprite Interactions"
       },
       "bonus": false,
@@ -11941,6 +12502,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender enemies touch cake sprite2_2024"
+        ],
         "progression": "Sprite Interactions"
       },
       "bonus": false,
@@ -11963,6 +12527,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender create set enemies_2024"
+        ],
         "progression": "Sprite Interactions"
       },
       "bonus": false,
@@ -11985,6 +12552,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender displace enemies_2024"
+        ],
         "progression": "Sprite Interactions"
       },
       "bonus": false,
@@ -12007,6 +12577,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender touch water_2024"
+        ],
         "progression": "Sprite Interactions"
       },
       "bonus": false,
@@ -12029,6 +12602,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games cake challenge choice_2024"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -12051,6 +12627,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform sample1_2024"
+        ],
         "progression": "Sample Platform Jumper Game"
       },
       "bonus": false,
@@ -12073,6 +12652,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform intro_2018_2019_pilot_2024"
+        ],
         "progression": "Build a Platform Jumper"
       },
       "bonus": false,
@@ -12095,6 +12677,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform background1_2024"
+        ],
         "progression": "Platform Jumper - Background and Variables"
       },
       "bonus": false,
@@ -12117,6 +12702,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform variable1_2024"
+        ],
         "progression": "Platform Jumper - Background and Variables"
       },
       "bonus": false,
@@ -12139,6 +12727,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform background2_2024"
+        ],
         "progression": "Platform Jumper - Background and Variables"
       },
       "bonus": false,
@@ -12161,6 +12752,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform scoreboard_2024"
+        ],
         "progression": "Platform Jumper - Background and Variables"
       },
       "bonus": false,
@@ -12183,6 +12777,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform platform1_2024"
+        ],
         "progression": "Platform Jumper - Platforms"
       },
       "bonus": false,
@@ -12205,6 +12802,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform platform2_2024"
+        ],
         "progression": "Platform Jumper - Platforms"
       },
       "bonus": false,
@@ -12227,6 +12827,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform platform3_2024"
+        ],
         "progression": "Platform Jumper - Platforms"
       },
       "bonus": false,
@@ -12249,6 +12852,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform items1_2024"
+        ],
         "progression": "Platform Jumper - Items"
       },
       "bonus": false,
@@ -12271,6 +12877,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform items2_2024"
+        ],
         "progression": "Platform Jumper - Items"
       },
       "bonus": false,
@@ -12293,6 +12902,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform items3_2024"
+        ],
         "progression": "Platform Jumper - Items"
       },
       "bonus": false,
@@ -12315,6 +12927,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform player1_2024"
+        ],
         "progression": "Platform Jumper - Player"
       },
       "bonus": false,
@@ -12337,6 +12952,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform player2_2024"
+        ],
         "progression": "Platform Jumper - Player"
       },
       "bonus": false,
@@ -12359,6 +12977,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform player3_2024"
+        ],
         "progression": "Platform Jumper - Player"
       },
       "bonus": false,
@@ -12381,6 +13002,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform player4_2024"
+        ],
         "progression": "Platform Jumper - Player"
       },
       "bonus": false,
@@ -12403,6 +13027,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform review_2024"
+        ],
         "progression": "Platform Jumper Review"
       },
       "bonus": false,
@@ -12425,6 +13052,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games platform challenge choice_2024"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -12447,6 +13077,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - Design a Game 1 - ExampleChoice_2024"
+        ],
         "progression": "Sample Games"
       },
       "bonus": false,
@@ -12469,6 +13102,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game variables_2024"
+        ],
         "progression": "Project - Background and Variables"
       },
       "bonus": false,
@@ -12491,6 +13127,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game backgrounds_2024"
+        ],
         "progression": "Project - Background and Variables"
       },
       "bonus": false,
@@ -12513,6 +13152,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game display boards_2024"
+        ],
         "progression": "Project - Background and Variables"
       },
       "bonus": false,
@@ -12535,6 +13177,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game choose background_2024"
+        ],
         "progression": "Project - Background and Variables"
       },
       "bonus": false,
@@ -12557,6 +13202,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game animations_2024"
+        ],
         "progression": "Project - Sprites and Interactions"
       },
       "bonus": false,
@@ -12579,6 +13227,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game create sprites_2024"
+        ],
         "progression": "Project - Sprites and Interactions"
       },
       "bonus": false,
@@ -12601,6 +13252,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game sprite movement_2024"
+        ],
         "progression": "Project - Sprites and Interactions"
       },
       "bonus": false,
@@ -12623,6 +13277,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game user controls_2024"
+        ],
         "progression": "Project - Sprites and Interactions"
       },
       "bonus": false,
@@ -12645,6 +13302,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game interactions_2024"
+        ],
         "progression": "Project - Sprites and Interactions"
       },
       "bonus": false,
@@ -12667,6 +13327,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games project review_2024"
+        ],
         "progression": "Review Your Game"
       },
       "bonus": false,
@@ -12689,6 +13352,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csd3_2024"
+        ],
         "progression": "End-Of-Unit Survey"
       },
       "bonus": false,
@@ -12711,6 +13377,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD Interactive Animations and Games Post-Project Test_pilot_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -15406,2505 +16075,22 @@
     }
   ],
   "resources": [
-    {
-      "name": "(Warm Up) Word Search",
-      "url": "https://docs.google.com/document/d/1ebaf_cmMsIxI0j_WGQL2xry4URBOMWzp-7KwqayMFFU/view",
-      "key": "_warm_up_word_search_1",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "_warm_up_word_search_1"
-      }
-    },
-    {
-      "name": "(Warm Up) Word Search [KEY]",
-      "url": "https://docs.google.com/document/d/1B1fjF39Xr1KKDILVzcXqvEpi1ri3MiDkkVLIMZquh_8/edit?usp=share_link",
-      "key": "_warm_up_word_search_key_",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_warm_up_word_search_key_"
-      }
-    },
-    {
-      "name": "Activity Guide - Robot Face Planning",
-      "url": "https://docs.google.com/document/d/1xy53Z--2I9X4k75Besh15eGTY3Rpo8Asdba6uctI9nY/edit?usp=sharing",
-      "key": "activity_guide_-_robot_face_planning",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "activity_guide_-_robot_face_planning"
-      }
-    },
-    {
-      "name": "All Code",
-      "url": "/s/csd3-2023/code",
-      "key": "all_code_1",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_code_1"
-      }
-    },
-    {
-      "name": "All Resources",
-      "url": "/s/csd3-2023/resources",
-      "key": "all_resources_2",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_resources_2"
-      }
-    },
-    {
-      "name": "All Standards",
-      "url": "/s/csd3-2023/standards",
-      "key": "all_standards_2",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_standards_2"
-      }
-    },
-    {
-      "name": "All Vocabulary",
-      "url": "/s/csd3-2023/vocab",
-      "key": "all_vocabulary_2",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_vocabulary_2"
-      }
-    },
-    {
-      "name": "Animated Scene",
-      "url": "https://docs.google.com/document/d/1fHRgDgi5mCgPFitc3nM4StqO1ciaGjmQCLREmTnveFg/view",
-      "key": "animated_scene",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Rubric"
-      },
-      "seeding_key": {
-        "resource.key": "animated_scene"
-      }
-    },
-    {
-      "name": "Animated Scene",
-      "url": "https://docs.google.com/document/d/1a2qv6xH8ewMu9SrKaFt3hbPM6JGSJ0kqjyc-UzQ_3xE/view",
-      "key": "animated_scene_1",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "animated_scene_1"
-      }
-    },
-    {
-      "name": "Animated Scene Planning",
-      "url": "https://docs.google.com/document/d/1YrtHnzB6kLGtFt05gQEHjfbX5aWWYlv3YRdTsR5VR3M/view",
-      "key": "animated_scene_planning",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "animated_scene_planning"
-      }
-    },
-    {
-      "name": "Animation and Game Design for Users",
-      "url": "https://docs.google.com/document/d/1T1rHB9UzmWg26DW1QLzJWGE6_ONfBCIi5F6pdX4rGmU/edit?usp=sharing",
-      "key": "animation_and_game_design_for_users",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "animation_and_game_design_for_users"
-      }
-    },
-    {
-      "name": "Animation and Game Design Template",
-      "url": "https://docs.google.com/presentation/d/1O1oWeMbIOetBbgmuwyXlUDmlr6L9ygQi0wLG89w_uq0/edit?usp=sharing",
-      "key": "animation_and_game_design_template",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "animation_and_game_design_template"
-      }
-    },
-    {
-      "name": "Animation Tab",
-      "url": "https://drive.google.com/file/d/1ytsY-Hv17uCKmwY4Af7OpljWdsLtGfTn/view",
-      "key": "animation_tab",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "animation_tab"
-      }
-    },
-    {
-      "name": "Boolean Expressions",
-      "url": "https://youtu.be/_j9nvYKaOVE",
-      "key": "boolean_expressions",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/csd_booleans_sm-mp4.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "boolean_expressions"
-      }
-    },
-    {
-      "name": "Booleans and Comparison Operators",
-      "url": "https://drive.google.com/file/d/1gGmtvyZpXVcH6Vrju9FX73X7qlZLIBvt/view?usp=sharing",
-      "key": "booleans_and_comparison_operators",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "booleans_and_comparison_operators"
-      }
-    },
-    {
-      "name": "Captioned Scenes",
-      "url": "https://docs.google.com/document/d/1sry7ZwDwOM_lsIJ0kKkEYyqvhif8JQocYX7y3Gx4JKk/view",
-      "key": "captioned_scenes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Rubric"
-      },
-      "seeding_key": {
-        "resource.key": "captioned_scenes"
-      }
-    },
-    {
-      "name": "Collision Detection",
-      "url": "https://docs.google.com/document/d/1pSfutXv_HqPGrU-dWIDbwFgo0RiG0_8x58c3c5heGfY/view",
-      "key": "collision_detection",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "collision_detection"
-      }
-    },
-    {
-      "name": "Collision Detection",
-      "url": "https://drive.google.com/file/d/1xPa35tY4P8GUXKSMp0F6OUTQjcDpMa6M/view?usp=sharing",
-      "key": "collision_detection_1",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "collision_detection_1"
-      }
-    },
-    {
-      "name": "Collision Detection",
-      "url": "https://docs.google.com/presentation/d/1r4I_2bAd7GCqWPlIaQ_JaXr1UaIISo5TXCLvsXIiQiY/template/preview",
-      "key": "collision_detection_2",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "collision_detection_2"
-      }
-    },
-    {
-      "name": "Collision Detection (Version A)",
-      "url": "https://docs.google.com/document/d/1YThab-y4Vg-ltanqwNykC4nOaT0gKdKFHtS1INoHWHM/view",
-      "key": "collision_detection_version_a_",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "collision_detection_version_a_"
-      }
-    },
-    {
-      "name": "Collision Detection (Version B)",
-      "url": "https://docs.google.com/document/d/1U3t6FGGvvqAVdz-rudQIJsDW4ubfEaSelaVqENp_kVw/view",
-      "key": "collision_detection_version_b_",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "collision_detection_version_b_"
-      }
-    },
-    {
-      "name": "Collisions",
-      "url": "https://docs.google.com/presentation/d/18nEJsDVITNK8jHkhfBSdtvwoHBB12DVnKtjm-MhYoxI/template/preview",
-      "key": "collisions",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "collisions"
-      }
-    },
-    {
-      "name": "Complex Sprite Movement",
-      "url": "https://docs.google.com/presentation/d/1r3fGTf_J1buSAn10_qBNJI4h8mHEGWOFatytHyQOVYQ/template/preview",
-      "key": "complex_sprite_movement",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "complex_sprite_movement"
-      }
-    },
-    {
-      "name": "Computer Science Practices",
-      "url": "https://docs.google.com/document/d/1Ccf-WMH2qFDhycKaKSILRrZUe42lWESyRqMgdTymCPw/edit",
-      "key": "computer_science_practices",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Reflection"
-      },
-      "seeding_key": {
-        "resource.key": "computer_science_practices"
-      }
-    },
-    {
-      "name": "Conditional Statements",
-      "url": "https://youtu.be/TuLIK7DcPWs",
-      "key": "conditional_statements",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/csd_conditionals_sm-mp4.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "conditional_statements"
-      }
-    },
-    {
-      "name": "Conditionals",
-      "url": "https://docs.google.com/presentation/d/1Pa444DLx4TBgZ1vaBgJMgHmaLSryolD7phxmdK7YQ2w/template/preview",
-      "key": "conditionals",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "conditionals"
-      }
-    },
-    {
-      "name": "CSD Guide to Assessment",
-      "url": "https://docs.google.com/document/d/1IO5XgPW_Apil_Uziq5hAMCBgilm8txZ3sp8atxiKiLU/view",
-      "key": "csd_guide_to_assessment",
-      "properties": {
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csd_guide_to_assessment"
-      }
-    },
-    {
-      "name": "CSD Guide to Curriculum Videos",
-      "url": "https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view",
-      "key": "csd_guide_to_curriculum_videos",
-      "properties": {
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csd_guide_to_curriculum_videos"
-      }
-    },
-    {
-      "name": "CSD Guide to Debugging",
-      "url": "https://docs.google.com/document/d/145lvpomqz0tUuzXLbkAFgP9zMDpECMwFYiEIG1_hQFg/view",
-      "key": "csd_guide_to_debugging",
-      "properties": {
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csd_guide_to_debugging"
-      }
-    },
-    {
-      "name": "CSD Guide to Differentiation",
-      "url": "https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view",
-      "key": "csd_guide_to_differentiation",
-      "properties": {
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csd_guide_to_differentiation"
-      }
-    },
-    {
-      "name": "CSD Guide to Teaching and Learning Strategies",
-      "url": "https://docs.google.com/document/d/1Cg5iTwERoX25Y2DdLNmrPCbVB2d9FPGfUMUvcnVoN8Q/view",
-      "key": "csd_guide_to_teaching_and_learning_strategies",
-      "properties": {
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csd_guide_to_teaching_and_learning_strategies"
-      }
-    },
-    {
-      "name": "CSD Guide to Using Resources",
-      "url": "https://docs.google.com/document/d/1NYJMHZYnAZYNctehlQOImSstsu48sRGOMbi4It4ZjkI/view",
-      "key": "csd_guide_to_using_resources",
-      "properties": {
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csd_guide_to_using_resources"
-      }
-    },
-    {
-      "name": "CSD Programming Levels Guide",
-      "url": "https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view",
-      "key": "csd_programming_levels_guide",
-      "properties": {
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csd_programming_levels_guide"
-      }
-    },
-    {
-      "name": "Defender Game",
-      "url": "https://docs.google.com/document/d/1ScMzt0GzhV_f-hMtrWCRCI0pha4mtmlGrrtrp76KIqg/view",
-      "key": "defender_game",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "defender_game"
-      }
-    },
-    {
-      "name": "Drawing in Game Lab",
-      "url": "https://docs.google.com/presentation/d/1kVwsZPhVrafAXXkK5qhWdfZeYKSEjK-eD6txmmWmPSA/template/preview",
-      "key": "drawing_in_game_lab",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "drawing_in_game_lab"
-      }
-    },
-    {
-      "name": "Drawing in Game Lab - Part 1",
-      "url": "https://youtu.be/PXn9gKiKKFo",
-      "key": "drawing_in_game_lab_-_part_1",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/gamelab_introtodrawing-mp4.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "drawing_in_game_lab_-_part_1"
-      }
-    },
-    {
-      "name": "Drawing in Game Lab - Part 2",
-      "url": "https://youtu.be/QLabeWhw_O0",
-      "key": "drawing_in_game_lab_-_part_2",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/gamelab_addingcolors-mp4.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "drawing_in_game_lab_-_part_2"
-      }
-    },
-    {
-      "name": "Drawing Shapes",
-      "url": "https://docs.google.com/document/d/1XuLY5osr9sZMfLAWMkqi8C7IdG_Uu3PshqKeSIhtKno/edit?usp=sharing",
-      "key": "drawing_shapes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "drawing_shapes"
-      }
-    },
-    {
-      "name": "Drawing Shapes",
-      "url": "https://drive.google.com/file/d/1zlXf6POVzO078N25Xos87oTrMaJ_p3Iq/view?usp=sharing",
-      "key": "drawing_shapes_1",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "drawing_shapes_1"
-      }
-    },
-    {
-      "name": "Drawing Shapes (Version A)",
-      "url": "https://docs.google.com/document/d/1ht990ZS0tJFc8dg-B6nmOi6nzayWq3ODiNNL4EBORlM/",
-      "key": "drawing_shapes_version_a_",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "drawing_shapes_version_a_"
-      }
-    },
-    {
-      "name": "Drawing Shapes (Version B)",
-      "url": "https://docs.google.com/document/d/1OCYkSeNuuEggdlmhNOG-LOfl51ctcyzyFmsPdQAtq84/",
-      "key": "drawing_shapes_version_b_",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "drawing_shapes_version_b_"
-      }
-    },
-    {
-      "name": "Exemplar - Animation and Game Design Activity Guide",
-      "url": "https://docs.google.com/document/d/1MgNcavou62Y4BykohkGT_MR8Rj1nKIeInEUVU2qaxq0/edit?usp=sharing",
-      "key": "exemplar_-_animation_and_game_design_activity_guide",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "exemplar_-_animation_and_game_design_activity_guide"
-      }
-    },
-    {
-      "name": "Exemplar - Interactive Card",
-      "url": "https://docs.google.com/document/d/1Z13UA6i0PTT83UVdtEjSsZqxyGinVYoz3SFIUAnkwVY/view",
-      "key": "exemplar_-_interactive_card",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "exemplar_-_interactive_card"
-      }
-    },
-    {
-      "name": "Extra Code in Challenge Levels",
-      "url": "https://docs.google.com/document/d/1Zx8e-b_GJFNxsuXx10tIdh3EPSGoqPwpxGh2Hz70B2w/view",
-      "key": "extra_code_in_challenge_levels",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "extra_code_in_challenge_levels"
-      }
-    },
-    {
-      "name": "Flipbook Example - by Marnic Bos",
-      "url": "https://youtu.be/hol0p29cd8o",
-      "key": "flipbook_example_-_by_marnic_bos",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "flipbook_example_-_by_marnic_bos"
-      }
-    },
-    {
-      "name": "Flyer Game",
-      "url": "https://docs.google.com/document/d/1dTUv-Qj1Kg_9oEYfAR70iL2ud6y8XFectzYKCi4MLyE/view",
-      "key": "flyer_game",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Rubric"
-      },
-      "seeding_key": {
-        "resource.key": "flyer_game"
-      }
-    },
-    {
-      "name": "Flyer Game - Project Guide",
-      "url": "https://docs.google.com/document/d/14by40I7v6BwWh7venZO83xk1qgeHE4hmNjdfQo1BsbQ/view",
-      "key": "flyer_game_-_project_guide",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "flyer_game_-_project_guide"
-      }
-    },
-    {
-      "name": "Flyer Game",
-      "url": "https://docs.google.com/document/d/1_n916C-OpKAquctNSkD5SdsWqC1RI9WQQzQ0EcZV_48/view",
-      "key": "flyer_game_1",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "flyer_game_1"
-      }
-    },
-    {
-      "name": "Functions",
-      "url": "https://youtu.be/TUdtGzQge3M",
-      "key": "functions",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/callingfunctions-mp4.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "functions"
-      }
-    },
-    {
-      "name": "Functions",
-      "url": "https://drive.google.com/file/d/1Zw7G76us_ENyDtrVOWsA5RMQzjDbrJcg/view?usp=sharing",
-      "key": "functions_1",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "functions_1"
-      }
-    },
-    {
-      "name": "Functions",
-      "url": "https://docs.google.com/presentation/d/1HX7a6aQXxnjvS99K0FDO0W7Kp23fnMNSHiHCYtcuD-s/view",
-      "key": "functions_2",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "functions_2"
-      }
-    },
-    {
-      "name": "If-Else Statements",
-      "url": "https://drive.google.com/file/d/1_RzGKuxpESYxpD__X3RdeTm89pTYcfB4/view?usp=sharing",
-      "key": "if-else_statements",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "if-else_statements"
-      }
-    },
-    {
-      "name": "If/Else Statements",
-      "url": "https://youtu.be/6m6FFUJsOzo",
-      "key": "if_else_statements",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/csd_ifelse_sm-mp4.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "if_else_statements"
-      }
-    },
-    {
-      "name": "If Statements",
-      "url": "https://drive.google.com/file/d/1dCxskfbG66EVJfdzp0cNaNxw9MxX79KF/view?usp=sharing",
-      "key": "if_statements",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "if_statements"
-      }
-    },
-    {
-      "name": "Interactive Card",
-      "url": "https://docs.google.com/document/d/10XQ5HTNnp2OlJm0w3cF9urOGdPUDTbdK2I4VYadeomU/view",
-      "key": "interactive_card",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Rubric"
-      },
-      "seeding_key": {
-        "resource.key": "interactive_card"
-      }
-    },
-    {
-      "name": "Interactive Card - Activity Guide",
-      "url": "https://docs.google.com/document/d/1iJjh3OSHyZdk1TCBaq5JtfP3v9fXxbp9utiJzIU5bdQ/view",
-      "key": "interactive_card_-_activity_guide",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "interactive_card_-_activity_guide"
-      }
-    },
-    {
-      "name": "Interactive Card - Marked Rubrics",
-      "url": "https://docs.google.com/document/d/1HwcWQLHiuPEOlPaM6axOFGgu7peYsrCZnT7Juea-rfA/view",
-      "key": "interactive_card_-_marked_rubrics",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "interactive_card_-_marked_rubrics"
-      }
-    },
-    {
-      "name": "Interactive Card - Peer Review",
-      "url": "https://docs.google.com/document/d/1e9HdHppRFxkszxCF2m9YWr-jt1EK8DupSrsP6q2_060/view",
-      "key": "interactive_card_-_peer_review",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "interactive_card_-_peer_review"
-      }
-    },
-    {
-      "name": "Interactive Card - Student Checklist",
-      "url": "https://docs.google.com/document/d/1N1iuDi-25VhSto-9zk9_0dc8H4t1nsS22u91I7Uucfw/view",
-      "key": "interactive_card_-_student_checklist",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "interactive_card_-_student_checklist"
-      }
-    },
-    {
-      "name": "Introduction to Sprites",
-      "url": "https://www.youtube.com/watch?v=96iGNtAp9J4",
-      "key": "introduction_to_sprites",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/introduction-to-sprites-mp4.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "introduction_to_sprites"
-      }
-    },
-    {
-      "name": "Introduction to the Draw Loop",
-      "url": "https://youtu.be/G6QJeuHhqCM",
-      "key": "introduction_to_the_draw_loop",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/gamelab_draw-loop-mp4.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "introduction_to_the_draw_loop"
-      }
-    },
-    {
-      "name": "Introduction to Variables",
-      "url": "https://youtu.be/UG7Q1Sr0_F0",
-      "key": "introduction_to_variables",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/2015/csp/applab/variables_1.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "introduction_to_variables"
-      }
-    },
-    {
-      "name": "Keyboard Input",
-      "url": "https://docs.google.com/presentation/d/1dxsWmBnyhc0pzGs5KjupRRNaYkXX8Ehdiebja2N0Yss/template/preview",
-      "key": "keyboard_input",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "keyboard_input"
-      }
-    },
-    {
-      "name": "Make Your Own Game ",
-      "url": "https://docs.google.com/document/d/1m0szgz6YtE4RucBUFWpocRxu3r0hKpn3JDgPoK7nwOQ/view",
-      "key": "make_your_own_game",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "make_your_own_game"
-      }
-    },
-    {
-      "name": "Make Your Own Game - Peer Review",
-      "url": "https://docs.google.com/document/d/1VOlmo7osjS7We0ebREm3M54Gwr4o13p7irHfIASDvFE/view",
-      "key": "make_your_own_game_-_peer_review",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "make_your_own_game_-_peer_review"
-      }
-    },
-    {
-      "name": "Make Your Own Game - Sample Marked Rubrics",
-      "url": "https://docs.google.com/document/d/1VHUhfblKwRZieZXM8YYHr3mkilbjEQhcQmcmwNaUUHc/view",
-      "key": "make_your_own_game_-_sample_marked_rubrics",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "make_your_own_game_-_sample_marked_rubrics"
-      }
-    },
-    {
-      "name": "Make Your Own Game - Student Checklist",
-      "url": "https://docs.google.com/document/d/1YDsOmgD3NvRjIQwGpZsH_17TIXpQaVUhtjFpyh4-qGw/view",
-      "key": "make_your_own_game_-_student_checklist",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "make_your_own_game_-_student_checklist"
-      }
-    },
-    {
-      "name": "Make Your Own Game",
-      "url": "https://docs.google.com/document/d/14oPvmdvm_BfOn5KBSov6jyhoEMRHygdNNIXl-fe4g-Q/view",
-      "key": "make_your_own_game_1",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "make_your_own_game_1"
-      }
-    },
-    {
-      "name": "Make Your Own Game",
-      "url": "https://docs.google.com/document/d/1BHsR1x8scsPsfaQoNEIgkz1rSLwG2hnKkjmVrPX55lw/view",
-      "key": "make_your_own_game_2",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Rubric"
-      },
-      "seeding_key": {
-        "resource.key": "make_your_own_game_2"
-      }
-    },
-    {
-      "name": "Mini-Project - Animation",
-      "url": "https://docs.google.com/presentation/d/1us7auvKet5Mdtd21WNeVH0p7CO8ZOiqHjVK6_SXGn0Y/template/preview",
-      "key": "mini-project_-_animation",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "mini-project_-_animation"
-      }
-    },
-    {
-      "name": "Mini-Project - Captioned Scenes",
-      "url": "https://docs.google.com/presentation/d/1S843wg4O8Cxz12NagDW2nu8B0Taj1_pSvyvj4o85asc/template/preview",
-      "key": "mini-project_-_captioned_scenes",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "mini-project_-_captioned_scenes"
-      }
-    },
-    {
-      "name": "Mini-Project - Flyer Game",
-      "url": "https://docs.google.com/presentation/d/1qbOF9IpC97i4GDN1c1KieAb6XtVb6Lh7mon9WcdUM9Q/template/preview",
-      "key": "mini-project_-_flyer_game",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "mini-project_-_flyer_game"
-      }
-    },
-    {
-      "name": "Mini-Project - Robot Faces",
-      "url": "https://docs.google.com/presentation/d/1161OfiePgWMjWrrBoN4dHU2Srxna4tE8gVhj9OYTHgg/template/preview",
-      "key": "mini-project_-_robot_faces",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "mini-project_-_robot_faces"
-      }
-    },
-    {
-      "name": "Mini-Project - Robot Faces",
-      "url": "https://docs.google.com/document/d/1jereSAhnM_DHRHJ7xmnhJl1cp9U6QiuNDbHnVaJHJA8/edit?usp=sharing",
-      "key": "mini-project_-_robot_faces_1",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "mini-project_-_robot_faces_1"
-      }
-    },
-    {
-      "name": "Mini-Project - Side Scroller",
-      "url": "https://docs.google.com/presentation/d/1-Zd08aeFU9Po2Qa7EHi9pf870CUilb2pdHtR44s_h_U/template/preview",
-      "key": "mini-project_-_side_scroller",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "mini-project_-_side_scroller"
-      }
-    },
-    {
-      "name": "Mini-Project Guide - Side Scroller",
-      "url": "https://docs.google.com/document/d/1zxFNweZNdkXc1YsVROgDQ2fmrxbbgCgZQtMPS-POmg4/view",
-      "key": "mini-project_guide_-_side_scroller",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "mini-project_guide_-_side_scroller"
-      }
-    },
-    {
-      "name": "Mini Project - Captioned Scenes",
-      "url": "https://docs.google.com/document/d/1xzA9xataf6TwgdLM--JumBAhAXLjcYyZOiuaShcuOjE/view",
-      "key": "mini_project_-_captioned_scenes",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "mini_project_-_captioned_scenes"
-      }
-    },
-    {
-      "name": "Mouse Input",
-      "url": "https://docs.google.com/presentation/d/1V_I3P7hFqxijePGNKF5V0RynQqv1_zYLJaBrQyhwpns/template/preview",
-      "key": "mouse_input",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "mouse_input"
-      }
-    },
-    {
-      "name": "Naming Variables",
-      "url": "https://drive.google.com/file/d/1GGtHE-IK3S9rN6KoaE9jhdzTK8emO_Kw/view",
-      "key": "naming_variables",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "naming_variables"
-      }
-    },
-    {
-      "name": "Planning Your Platform Game",
-      "url": "https://docs.google.com/document/d/1F9RH16-Yph9gapZyBKbnnh-LEJUwN20Ipa5D4rIMz1g/view",
-      "key": "planning_your_platform_game",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "planning_your_platform_game"
-      }
-    },
-    {
-      "name": "Planning Your Platform Game",
-      "url": "https://docs.google.com/document/d/1FqTjwpAuFrVidZ_j6aGw895FivFCRO2CZSvhHqWuEik/view",
-      "key": "planning_your_platform_game_1",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "planning_your_platform_game_1"
-      }
-    },
-    {
-      "name": "Plotting Shapes",
-      "url": "https://docs.google.com/presentation/d/1kAI6VK8GU8k-ounpUizwzLRdhjMfwF4M0yumF8-O9qc/template/preview",
-      "key": "plotting_shapes",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "plotting_shapes"
-      }
-    },
-    {
-      "name": "Problem Solving and Design",
-      "url": "https://docs.google.com/document/d/1qgiwCyO7948qPSWbTvYmR7DjH0nkh8HpfxP1HxubDis/edit?usp=sharing",
-      "key": "problem_solving_and_design",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "problem_solving_and_design"
-      }
-    },
-    {
-      "name": "Problem Solving with Programming",
-      "url": "https://docs.google.com/document/d/1q10YfeMqY95SAq0VAB3wnLPK2aDuJEoD2j82n-i183Y/edit?usp=share_link",
-      "key": "problem_solving_with_programming",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "problem_solving_with_programming"
-      }
-    },
-    {
-      "name": "Programming for a Purpose",
-      "url": "https://docs.google.com/presentation/d/1lR2Il6bOm-OHQltTtHO5XJ_p0q2J-3dye_RiCZW-sGY/template/preview",
-      "key": "programming_for_a_purpose",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "programming_for_a_purpose"
-      }
-    },
-    {
-      "name": "Project - Design a Game",
-      "url": "https://docs.google.com/presentation/d/14RyASPSwS_vT1jf_OWromepRlsN8LQtQiAnLj2qzXVQ/template/preview",
-      "key": "project_-_design_a_game",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "project_-_design_a_game"
-      }
-    },
-    {
-      "name": "Project - Interactive Card",
-      "url": "https://docs.google.com/presentation/d/1VymZrgMdUtcehg9rA2u-IGevR5rptmlNRkeuHRmwisw/template/preview",
-      "key": "project_-_interactive_card",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "project_-_interactive_card"
-      }
-    },
-    {
-      "name": "Random Dot Flipbook",
-      "url": "https://docs.google.com/drawings/d/1N1m8la6XsQrn1X2Yq97gRfg4HRh1glk-gTHBK0fUDZA/view",
-      "key": "random_dot_flipbook",
-      "properties": {
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "random_dot_flipbook"
-      }
-    },
-    {
-      "name": "Random Numbers",
-      "url": "https://drive.google.com/file/d/1Ix9XXFWgnPi7xoGUZ9ljdD8gZPrhFLUn/view?usp=sharing",
-      "key": "random_numbers",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "random_numbers"
-      }
-    },
-    {
-      "name": "Random Numbers",
-      "url": "https://docs.google.com/presentation/d/1gYcOnHhQRTTNDFj1s1Anfu5XkrkeCPk_9N7GmLCLzFo/template/preview",
-      "key": "random_numbers_1",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "random_numbers_1"
-      }
-    },
-    {
-      "name": "Random Sprite Flipbook",
-      "url": "https://docs.google.com/drawings/d/1VEgpZKDn4kvZvRSafrDSqB3so1HzKeeA8WAWLQZsoL0/view",
-      "key": "random_sprite_flipbook",
-      "properties": {
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "random_sprite_flipbook"
-      }
-    },
-    {
-      "name": "Robot Faces",
-      "url": "https://docs.google.com/document/d/1MQBo1-nmTLCjrUihCOBSU9X__V7LgS4H0Clc2obp_Ek/edit?usp=sharing",
-      "key": "robot_faces",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Rubric"
-      },
-      "seeding_key": {
-        "resource.key": "robot_faces"
-      }
-    },
-    {
-      "name": "Sample Shape Drawing",
-      "url": "https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screenshot-2017-05-24-at-1.13.21-PM.png",
-      "key": "sample_shape_drawing",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "sample_shape_drawing"
-      }
-    },
-    {
-      "name": "Shapes and Parameters",
-      "url": "https://drive.google.com/file/d/1uEZ_gMcXJOCd41k6uTKlxsVVWEVrFikj/view?usp=sharing",
-      "key": "shapes_and_parameters",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "shapes_and_parameters"
-      }
-    },
-    {
-      "name": "Shapes and Parameters",
-      "url": "https://docs.google.com/presentation/d/1apejlCGeW2ptqIoFWTcy-WqthPGMsItKNbEUOWGosEk/template/preview",
-      "key": "shapes_and_parameters_1",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "shapes_and_parameters_1"
-      }
-    },
-    {
-      "name": "Side Scroller",
-      "url": "https://docs.google.com/document/d/1iSosF7vOAc5_iqr9cBYfgDjbiVERhkbKNMa1RJK_mv8/view",
-      "key": "side_scroller",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Rubric"
-      },
-      "seeding_key": {
-        "resource.key": "side_scroller"
-      }
-    },
-    {
-      "name": "Side Scroller",
-      "url": "https://docs.google.com/document/d/1WW92Ti8Xg1Evn8rQtRZq8Xltf5NP8cP_ZVrWHuiQPFk/view",
-      "key": "side_scroller_1",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "side_scroller_1"
-      }
-    },
-    {
-      "name": "Sprite Movement",
-      "url": "https://youtu.be/G666sFzAg5g",
-      "key": "sprite_movement",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/gamelab_animatingwithsprites-mp4.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "sprite_movement"
-      }
-    },
-    {
-      "name": "Sprite Movement",
-      "url": "https://docs.google.com/presentation/d/1qcdkzXVAkXUd9c3JIRba4ik35i02bk_-xRMfwrQVz8I/template/preview",
-      "key": "sprite_movement_1",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "sprite_movement_1"
-      }
-    },
-    {
-      "name": "Sprite Properties",
-      "url": "https://drive.google.com/file/d/1E4UZKHRQM0erDbb-rPTRbRVpj7IquA3p/view?usp=sharing",
-      "key": "sprite_properties",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "sprite_properties"
-      }
-    },
-    {
-      "name": "Sprite Properties",
-      "url": "https://docs.google.com/presentation/d/1T7SX_rhCuVe6DkmQFMWz2QIgQMBD0G4RXwY-lCA72ug/template/preview",
-      "key": "sprite_properties_1",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "sprite_properties_1"
-      }
-    },
-    {
-      "name": "Sprite Properties",
-      "url": "https://www.youtube.com/watch?v=5Op72oHFUnc",
-      "key": "sprite_properties_2",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/sprite-properties-mp4.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "sprite_properties_2"
-      }
-    },
-    {
-      "name": "Sprite Scene Planning",
-      "url": "https://docs.google.com/document/d/1Rukfe006wz8yYJPnKj5sKn7SK6KbL1X6Pd-c2BNy95E/view",
-      "key": "sprite_scene_planning",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "sprite_scene_planning"
-      }
-    },
-    {
-      "name": "Sprites",
-      "url": "https://drive.google.com/file/d/1WS_5m8Ffy0u4OKILPEVSjs2KamZr2a41/view",
-      "key": "sprites",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "sprites"
-      }
-    },
-    {
-      "name": "Sprites",
-      "url": "https://docs.google.com/presentation/d/1XcR7-9AOjlV-ksjFts4MturQ7qISXUFMXWSWwrecjvU/template/preview",
-      "key": "sprites_1",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "sprites_1"
-      }
-    },
-    {
-      "name": "Teacher Forum",
-      "url": "https://forum.code.org/c/csd",
-      "key": "teacher_forum",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "teacher_forum"
-      }
-    },
-    {
-      "name": "Text",
-      "url": "https://docs.google.com/presentation/d/1ovtVNX4feLKwx1ETO18kkTmRQRa7_SLjqdLUrzuEi5I/template/preview",
-      "key": "text",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "text"
-      }
-    },
-    {
-      "name": "The Animation Tab",
-      "url": "https://youtu.be/BrkREtPb0J4",
-      "key": "the_animation_tab",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/sprite-animations-mp4.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "the_animation_tab"
-      }
-    },
-    {
-      "name": "The Draw Loop",
-      "url": "https://drive.google.com/file/d/1MxfQObaxvA82Y50YHIRTxUa55gZMNlSW/view?usp=sharing",
-      "key": "the_draw_loop",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "the_draw_loop"
-      }
-    },
-    {
-      "name": "The Draw Loop",
-      "url": "https://docs.google.com/presentation/d/1WiAmb354NypVe1SsF3AUZ0O2b-aXgvnhRgkETaO3sZQ/template/preview",
-      "key": "the_draw_loop_1",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "the_draw_loop_1"
-      }
-    },
-    {
-      "name": "The Game Design Process",
-      "url": "https://docs.google.com/presentation/d/1R52jE2nA2mmd8dex6wfWKrAU63m64spVHgotpqid86w/template/preview",
-      "key": "the_game_design_process",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "the_game_design_process"
-      }
-    },
-    {
-      "name": "The Problem Solving Process ",
-      "url": "https://www.youtube.com/watch?v=z7RaFPT3DTE",
-      "key": "the_problem_solving_process",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/problemsolvingprocess-mp4.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "the_problem_solving_process"
-      }
-    },
-    {
-      "name": "The Problem Solving Process with Design",
-      "url": "https://docs.google.com/document/d/1qgiwCyO7948qPSWbTvYmR7DjH0nkh8HpfxP1HxubDis/view",
-      "key": "the_problem_solving_process_with_design",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "the_problem_solving_process_with_design"
-      }
-    },
-    {
-      "name": "The Problem Solving Process with Programming",
-      "url": "https://docs.google.com/document/d/1q10YfeMqY95SAq0VAB3wnLPK2aDuJEoD2j82n-i183Y/view",
-      "key": "the_problem_solving_process_with_programming",
-      "properties": {
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "the_problem_solving_process_with_programming"
-      }
-    },
-    {
-      "name": "Using the Game Design Process",
-      "url": "https://docs.google.com/presentation/d/14SNOuHJQ_rkJGymgcAA1DT7Nshhk1wROENBo-W6kY7g/template/preview",
-      "key": "using_the_game_design_process",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "using_the_game_design_process"
-      }
-    },
-    {
-      "name": "Variables",
-      "url": "https://drive.google.com/file/d/1sZpmFctaVP3RCT1Ojx0wcZ2CUyQhKzKv/view?usp=sharing",
-      "key": "variables",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "variables"
-      }
-    },
-    {
-      "name": "Variables",
-      "url": "https://youtu.be/WsXNpY3SXe8",
-      "key": "variables_1",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "variables_1"
-      }
-    },
-    {
-      "name": "Variables",
-      "url": "https://docs.google.com/presentation/d/1HtBUmXrH6cqE2SPhCtaxnouYF_xaitoWrvBgZDFOnpk/template/preview",
-      "key": "variables_2",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "variables_2"
-      }
-    },
-    {
-      "name": "Velocity",
-      "url": "https://youtu.be/zcP94yMYqrI",
-      "key": "velocity",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/gamelab_velocity-mp4.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "velocity"
-      }
-    },
-    {
-      "name": "Velocity",
-      "url": "https://drive.google.com/file/d/10n2QcpY__sDlycr09Xar6o-2iDAb0P49/view?usp=sharing",
-      "key": "velocity_1",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "velocity_1"
-      }
-    },
-    {
-      "name": "Velocity",
-      "url": "https://docs.google.com/presentation/d/112H3VkJf1Dq8MQNQqDsFg5a6y62_kjSwUhafQD9xxoo/template/preview",
-      "key": "velocity_2",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "velocity_2"
-      }
-    },
-    {
-      "name": "Velocity and the Counter Pattern",
-      "url": "https://drive.google.com/file/d/1blEk-rMG-vei9DBrOo6Tk9ctt8lQaJx-/view?usp=sharing",
-      "key": "velocity_and_the_counter_pattern",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "velocity_and_the_counter_pattern"
-      }
-    }
+
   ],
   "lessons_resources": [
-    {
-      "seeding_key": {
-        "lesson.key": "Collision Detection",
-        "resource.key": "collision_detection"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collision Detection",
-        "resource.key": "collision_detection_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collision Detection",
-        "resource.key": "collision_detection_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collision Detection",
-        "resource.key": "collision_detection_version_a_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collision Detection",
-        "resource.key": "collision_detection_version_b_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collisions",
-        "resource.key": "collisions"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Complex Sprite Movement",
-        "resource.key": "complex_sprite_movement"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Complex Sprite Movement",
-        "resource.key": "velocity_and_the_counter_pattern"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "resource.key": "boolean_expressions"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "resource.key": "booleans_and_comparison_operators"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "resource.key": "conditional_statements"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "resource.key": "conditionals"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "resource.key": "if_statements"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Drawing in Game Lab",
-        "resource.key": "drawing_in_game_lab"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Drawing in Game Lab",
-        "resource.key": "drawing_in_game_lab_-_part_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Drawing in Game Lab",
-        "resource.key": "drawing_in_game_lab_-_part_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Drawing in Game Lab",
-        "resource.key": "drawing_shapes_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions",
-        "resource.key": "functions"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions",
-        "resource.key": "functions_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions",
-        "resource.key": "functions_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Keyboard Input",
-        "resource.key": "keyboard_input"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Animation",
-        "resource.key": "animated_scene"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Animation",
-        "resource.key": "animated_scene_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Animation",
-        "resource.key": "animated_scene_planning"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Animation",
-        "resource.key": "mini-project_-_animation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Animation",
-        "resource.key": "problem_solving_with_programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Captioned Scenes",
-        "resource.key": "captioned_scenes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Captioned Scenes",
-        "resource.key": "mini-project_-_captioned_scenes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Captioned Scenes",
-        "resource.key": "mini_project_-_captioned_scenes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Captioned Scenes",
-        "resource.key": "problem_solving_with_programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Captioned Scenes",
-        "resource.key": "sprite_scene_planning"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Flyer Game",
-        "resource.key": "flyer_game"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Flyer Game",
-        "resource.key": "flyer_game_-_project_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Flyer Game",
-        "resource.key": "flyer_game_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Flyer Game",
-        "resource.key": "mini-project_-_flyer_game"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Flyer Game",
-        "resource.key": "problem_solving_with_programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Robot Faces",
-        "resource.key": "activity_guide_-_robot_face_planning"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Robot Faces",
-        "resource.key": "mini-project_-_robot_faces"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Robot Faces",
-        "resource.key": "mini-project_-_robot_faces_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Robot Faces",
-        "resource.key": "problem_solving_with_programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Robot Faces",
-        "resource.key": "robot_faces"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Side Scroller",
-        "resource.key": "mini-project_-_side_scroller"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Side Scroller",
-        "resource.key": "mini-project_guide_-_side_scroller"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Side Scroller",
-        "resource.key": "problem_solving_with_programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Side Scroller",
-        "resource.key": "side_scroller"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Side Scroller",
-        "resource.key": "side_scroller_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mouse Input",
-        "resource.key": "if-else_statements"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mouse Input",
-        "resource.key": "if_else_statements"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mouse Input",
-        "resource.key": "mouse_input"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Plotting Shapes",
-        "resource.key": "drawing_shapes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Plotting Shapes",
-        "resource.key": "drawing_shapes_version_a_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Plotting Shapes",
-        "resource.key": "drawing_shapes_version_b_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Plotting Shapes",
-        "resource.key": "plotting_shapes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Plotting Shapes",
-        "resource.key": "sample_shape_drawing"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming for a Purpose",
-        "resource.key": "_warm_up_word_search_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming for a Purpose",
-        "resource.key": "_warm_up_word_search_key_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming for a Purpose",
-        "resource.key": "animation_and_game_design_for_users"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming for a Purpose",
-        "resource.key": "animation_and_game_design_template"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming for a Purpose",
-        "resource.key": "exemplar_-_animation_and_game_design_activity_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming for a Purpose",
-        "resource.key": "problem_solving_and_design"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming for a Purpose",
-        "resource.key": "programming_for_a_purpose"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming for a Purpose",
-        "resource.key": "the_problem_solving_process"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design a Game",
-        "resource.key": "computer_science_practices"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design a Game",
-        "resource.key": "extra_code_in_challenge_levels"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design a Game",
-        "resource.key": "make_your_own_game"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design a Game",
-        "resource.key": "make_your_own_game_-_peer_review"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design a Game",
-        "resource.key": "make_your_own_game_-_sample_marked_rubrics"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design a Game",
-        "resource.key": "make_your_own_game_-_student_checklist"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design a Game",
-        "resource.key": "make_your_own_game_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design a Game",
-        "resource.key": "make_your_own_game_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design a Game",
-        "resource.key": "problem_solving_with_programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design a Game",
-        "resource.key": "project_-_design_a_game"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
-        "resource.key": "computer_science_practices"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
-        "resource.key": "exemplar_-_interactive_card"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
-        "resource.key": "extra_code_in_challenge_levels"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
-        "resource.key": "interactive_card"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
-        "resource.key": "interactive_card_-_activity_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
-        "resource.key": "interactive_card_-_marked_rubrics"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
-        "resource.key": "interactive_card_-_peer_review"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
-        "resource.key": "interactive_card_-_student_checklist"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
-        "resource.key": "problem_solving_with_programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
-        "resource.key": "project_-_interactive_card"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Random Numbers",
-        "resource.key": "random_numbers"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Random Numbers",
-        "resource.key": "random_numbers_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Shapes and Parameters",
-        "resource.key": "shapes_and_parameters"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Shapes and Parameters",
-        "resource.key": "shapes_and_parameters_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprite Movement",
-        "resource.key": "sprite_movement"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprite Movement",
-        "resource.key": "sprite_movement_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprite Properties",
-        "resource.key": "sprite_properties"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprite Properties",
-        "resource.key": "sprite_properties_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprite Properties",
-        "resource.key": "sprite_properties_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprites",
-        "resource.key": "animation_tab"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprites",
-        "resource.key": "introduction_to_sprites"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprites",
-        "resource.key": "sprites"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprites",
-        "resource.key": "sprites_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprites",
-        "resource.key": "the_animation_tab"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Text",
-        "resource.key": "text"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Draw Loop",
-        "resource.key": "flipbook_example_-_by_marnic_bos"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Draw Loop",
-        "resource.key": "introduction_to_the_draw_loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Draw Loop",
-        "resource.key": "random_dot_flipbook"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Draw Loop",
-        "resource.key": "random_sprite_flipbook"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Draw Loop",
-        "resource.key": "the_draw_loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Draw Loop",
-        "resource.key": "the_draw_loop_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Game Design Process",
-        "resource.key": "defender_game"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Game Design Process",
-        "resource.key": "the_game_design_process"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Using the Game Design Process",
-        "resource.key": "planning_your_platform_game"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Using the Game Design Process",
-        "resource.key": "planning_your_platform_game_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Using the Game Design Process",
-        "resource.key": "using_the_game_design_process"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables",
-        "resource.key": "introduction_to_variables"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables",
-        "resource.key": "naming_variables"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables",
-        "resource.key": "variables"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables",
-        "resource.key": "variables_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables",
-        "resource.key": "variables_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Velocity",
-        "resource.key": "velocity"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Velocity",
-        "resource.key": "velocity_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Velocity",
-        "resource.key": "velocity_2"
-      }
-    }
+
   ],
   "scripts_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "all_code_1",
-        "script.name": "csd3-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_resources_2",
-        "script.name": "csd3-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_standards_2",
-        "script.name": "csd3-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_vocabulary_2",
-        "script.name": "csd3-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_guide_to_assessment",
-        "script.name": "csd3-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_guide_to_curriculum_videos",
-        "script.name": "csd3-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_guide_to_debugging",
-        "script.name": "csd3-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_guide_to_differentiation",
-        "script.name": "csd3-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_guide_to_teaching_and_learning_strategies",
-        "script.name": "csd3-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_guide_to_using_resources",
-        "script.name": "csd3-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_programming_levels_guide",
-        "script.name": "csd3-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "teacher_forum",
-        "script.name": "csd3-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "the_problem_solving_process_with_design",
-        "script.name": "csd3-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "the_problem_solving_process_with_programming",
-        "script.name": "csd3-2024"
-      }
-    }
+
   ],
   "scripts_student_resources": [
 
   ],
   "vocabularies": [
-    {
-      "key": "abstraction",
-      "word": "Abstraction",
-      "definition": "a simplified representation of something more complex. Abstractions allow you to hide details to help you manage complexity, focus on relevant concepts, and reason about problems at a higher level.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "abstraction"
-      }
-    },
-    {
-      "key": "boolean_expression",
-      "word": "Boolean Expression",
-      "definition": "in programming, an expression that evaluates to True or False. ",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "boolean_expression"
-      }
-    },
-    {
-      "key": "bug",
-      "word": "Bug",
-      "definition": "Part of a program that does not work correctly.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "bug"
-      }
-    },
-    {
-      "key": "condition",
-      "word": "Condition",
-      "definition": "Something a program checks to see whether it is true before deciding to take an action.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "condition"
-      }
-    },
-    {
-      "key": "conditionals",
-      "word": "Conditionals",
-      "definition": "Statements that only run when certain conditions are true.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "conditionals"
-      }
-    },
-    {
-      "key": "debugging",
-      "word": "Debugging",
-      "definition": "Finding and fixing problems in an algorithm or program.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "debugging"
-      }
-    },
-    {
-      "key": "dot_notation",
-      "word": "Dot notation",
-      "definition": "the way that sprites' properties are used in Game Lab, by connecting the sprite and property with a dot.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "dot_notation"
-      }
-    },
-    {
-      "key": "function",
-      "word": "Function",
-      "definition": "A named bit of programming instructions.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "function"
-      }
-    },
-    {
-      "key": "parameter",
-      "word": "Parameter",
-      "definition": "Additional information provided as input to a block to customize its functionality",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "parameter"
-      }
-    },
-    {
-      "key": "program",
-      "word": "Program",
-      "definition": "An algorithm that has been coded into something that can be run by a machine.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "program"
-      }
-    },
-    {
-      "key": "property",
-      "word": "Property",
-      "definition": "A label for a characteristic of a sprite, such as its location and appearance",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "property"
-      }
-    },
-    {
-      "key": "sprite",
-      "word": "Sprite",
-      "definition": "A character on the screen with properties that describe its location, movement, and look.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "sprite"
-      }
-    },
-    {
-      "key": "variable",
-      "word": "Variable",
-      "definition": "A label for a piece of information used in a program.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "variable"
-      }
-    }
+
   ],
   "lessons_vocabularies": [
-    {
-      "seeding_key": {
-        "lesson.key": "Collision Detection",
-        "vocabulary.key": "abstraction"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Collisions",
-        "vocabulary.key": "abstraction"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "vocabulary.key": "boolean_expression"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "vocabulary.key": "condition"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals",
-        "vocabulary.key": "conditionals"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Drawing in Game Lab",
-        "vocabulary.key": "bug"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Drawing in Game Lab",
-        "vocabulary.key": "debugging"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Drawing in Game Lab",
-        "vocabulary.key": "program"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions",
-        "vocabulary.key": "function"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mouse Input",
-        "vocabulary.key": "conditionals"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Shapes and Parameters",
-        "vocabulary.key": "parameter"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprite Properties",
-        "vocabulary.key": "dot_notation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprite Properties",
-        "vocabulary.key": "property"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sprites",
-        "vocabulary.key": "sprite"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables",
-        "vocabulary.key": "variable"
-      }
-    }
+
   ],
   "lessons_programming_expressions": [
     {

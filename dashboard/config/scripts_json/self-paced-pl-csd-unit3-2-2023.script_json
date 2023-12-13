@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-11-21 00:09:21 UTC",
+    "serialized_at": "2023-12-13 00:26:55 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -550,6 +550,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-Project Overview_U3L2_self-paced-unit3"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -1022,6 +1025,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD_Lesson2WrapUp_U3_self-paced-unit3"
+        ],
         "progression": "Section Wrap Up"
       },
       "bonus": false,
@@ -1494,6 +1500,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD_Lesson3WrapUp_U3_self-paced-unit3"
+        ],
         "progression": "Section Wrap Up"
       },
       "bonus": false,
@@ -1891,6 +1900,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD_Lesson4WrapUp_U3_self-paced-unit3"
+        ],
         "progression": "Section Wrap Up"
       },
       "bonus": false,
@@ -2013,6 +2025,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-Unit3_WrapUp"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
