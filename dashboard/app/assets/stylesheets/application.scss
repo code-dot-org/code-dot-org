@@ -3930,7 +3930,8 @@ html[dir=rtl] {
   background-color: $neutral_white !important;
   float: right;
   border: 2px solid $neutral_dark;
-  height: 16px;
+  box-sizing: border-box;
+  height: 32px;
   padding: 6px !important;
 
   html[dir=rtl] & {
