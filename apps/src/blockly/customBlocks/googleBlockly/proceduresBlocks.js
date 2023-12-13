@@ -112,7 +112,8 @@ GoogleBlockly.Extensions.register('procedures_edit_button', function () {
     Blockly.useModalFunctionEditor &&
     this.inputList.length &&
     !this.workspace.isFlyout &&
-    this.workspace.id !== Blockly.functionEditor.getWorkspaceId()
+    this.workspace.id !== Blockly.functionEditor.getWorkspaceId() &&
+    toolboxConfigurationSupportsEditButton(this)
   ) {
     const button = new Blockly.FieldButton({
       value: msg.edit(),
@@ -299,4 +300,32 @@ const getNewFunctionButtonWithCallback = (
     text: msg.createBlocklyFunction(),
     callbackKey,
   };
+};
+
+/**
+ * We always show the edit button for function callers, but
+ * conditionally show it for behavior callers and pickers.
+ * For behavior callers and pickers we only show the edit button
+ * if there is a categorized toolbox or no toolbox.
+ * The reason for this is renaming behaviors without the behavior
+ * category (which can be repopulated after renaming) causes
+ * confusing behavior.
+ * @param {Block} block Block to check
+ * @returns boolean
+ */
+export const toolboxConfigurationSupportsEditButton = block => {
+  if (block.type === BLOCK_TYPES.procedureCall) {
+    return true;
+  } else {
+    // behavior caller or picker
+    const hasCategorizedToolbox = !!block.workspace.toolbox_;
+    const hasUncategorizedToolbox = !!block.workspace.flyout;
+    // We show the edit button for levels with a categorized toolbox or no toolbox.
+    // We do not show it for uncategorized toolboxes because renaming behaviors
+    // without the behavior category causes confusing behavior.
+    return (
+      hasCategorizedToolbox ||
+      (!hasCategorizedToolbox && !hasUncategorizedToolbox)
+    );
+  }
 };

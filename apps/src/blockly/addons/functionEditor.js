@@ -157,7 +157,6 @@ export default class FunctionEditor {
    * procedure does not already exist.
    */
   showForFunction(procedure, procedureType) {
-    console.log('in showForFunction');
     this.clearEditorWorkspace();
 
     this.dom.style.display = 'block';

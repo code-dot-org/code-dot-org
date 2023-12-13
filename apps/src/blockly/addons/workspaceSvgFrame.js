@@ -108,10 +108,14 @@ export default class WorkspaceSvgFrame extends SvgFrame {
 
   getFrameX() {
     // In LTR the svg should be to the right of the toolbox, plus a margin.
+    const metricsManager = this.element_.getMetricsManager();
     let frameX = frameSizes.MARGIN_SIDE / 2;
-    const toolbox = this.element_.toolbox_;
-    if (toolbox) {
-      frameX += toolbox.width_;
+    const toolboxWidth = metricsManager.getToolboxMetrics().width;
+    const flyoutWidth = metricsManager.getFlyoutMetrics().width;
+    if (toolboxWidth) {
+      frameX += toolboxWidth;
+    } else if (flyoutWidth) {
+      frameX += flyoutWidth;
     }
     if (this.element_.RTL) {
       // In RTL the toolbox is on the right, so we don't need to leave space for
@@ -121,12 +125,10 @@ export default class WorkspaceSvgFrame extends SvgFrame {
 
       // Actual content width.
       const contentWidth =
-        this.element_.getMetricsManager().getMetrics().contentWidth +
-        2 * frameSizes.MARGIN_SIDE;
+        metricsManager.getMetrics().contentWidth + 2 * frameSizes.MARGIN_SIDE;
       // Width of the visible portion of the workspace.
       const viewWidth =
-        this.element_.getMetricsManager().getViewMetrics().width -
-        frameSizes.MARGIN_SIDE;
+        metricsManager.getViewMetrics().width - frameSizes.MARGIN_SIDE;
       // Offset to move the frame to the left.
       let offset = 0;
       if (contentWidth > viewWidth) {
