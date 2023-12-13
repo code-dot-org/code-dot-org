@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef, useCallback} from 'react';
+import React, {useState, useEffect, useRef, useCallback, useMemo} from 'react';
 import moduleStyles from './dance-ai-modal.module.scss';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import Button from '@cdo/apps/templates/Button';
@@ -51,6 +51,9 @@ import aiBotBodyThink2 from '@cdo/static/dance/ai/bot/ai-bot-body-think2.png';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import ModalButton from './ModalButton';
+import danceMetricsReporter from '../danceMetricsReporter';
+import CdoFieldDanceAi from './cdoFieldDanceAi';
+import {DANCE_AI_FIELD_NAME} from './constants';
 
 export enum Mode {
   INITIAL = 'initial',
@@ -153,9 +156,27 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
   const [currentToggle, setCurrentToggle] = useState<Toggle>(Toggle.EFFECT);
   const [explanationProgress, setExplanationProgress] = useState<number>(0);
 
-  const currentAiModalField = useSelector(
-    (state: {dance: DanceState}) => state.dance.currentAiModalField
+  const aiModalBlockId = useSelector(
+    (state: {dance: DanceState}) => state.dance.currentAiModalBlockId
   );
+
+  const currentAiModalField: CdoFieldDanceAi | null = useMemo(() => {
+    if (aiModalBlockId === undefined) {
+      danceMetricsReporter.logWarning('AI modal opened without a field');
+      return null;
+    }
+
+    const field = Blockly.getMainWorkspace()
+      .getBlockById(aiModalBlockId)
+      ?.getField(DANCE_AI_FIELD_NAME);
+
+    if (field === null) {
+      danceMetricsReporter.logWarning('Could not find AI field');
+      return null;
+    }
+
+    return field as CdoFieldDanceAi;
+  }, [aiModalBlockId]);
 
   const aiModalOpenedFromFlyout = useSelector(
     (state: {dance: DanceState}) => state.dance.aiModalOpenedFromFlyout
@@ -646,6 +667,12 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
       ? i18n.danceAiModalExplanation2()
       : undefined;
 
+  // If the AI modal was somehow not opened by an AI block, or we couldn't find the source field,
+  // don't render anything.
+  if (currentAiModalField === null) {
+    return null;
+  }
+
   return (
     <AccessibleDialog
       className={moduleStyles.dialog}
@@ -692,10 +719,20 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
               }}
               useRebrandedLikeStyles
             >
-              <button key={0} type="button" value={Toggle.EFFECT}>
+              <button
+                id="toggle-effect-button"
+                key={0}
+                type="button"
+                value={Toggle.EFFECT}
+              >
                 {i18n.danceAiModalEffectButton()}
               </button>
-              <button key={1} type="button" value={Toggle.CODE}>
+              <button
+                id="toggle-code-button"
+                key={1}
+                type="button"
+                value={Toggle.CODE}
+              >
                 {i18n.danceAiModalCodeButton()}
               </button>
             </ToggleGroup>

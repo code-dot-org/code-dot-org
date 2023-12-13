@@ -49,4 +49,16 @@ class Policies::Lti
     end
     nil
   end
+
+  # Returns the email provided by the LMS when creating the User through LTI
+  # provisioning.
+  def self.lti_provided_email(user)
+    user.authentication_options.find(&:lti?).try(:email)
+  end
+
+  # Should we show the email form input when a user is creating
+  # a Code.org account from an LTI supporting LMS?
+  def self.show_email_input?(user)
+    user.teacher? && Policies::Lti.lti?(user)
+  end
 end
