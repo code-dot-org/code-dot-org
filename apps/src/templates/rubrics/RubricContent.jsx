@@ -16,7 +16,7 @@ import {
   studentLevelInfoShape,
 } from './rubricShapes';
 import LearningGoal from './LearningGoal';
-import LearningGoals from'./LearningGoals';
+import LearningGoals from './LearningGoals';
 import Button from '@cdo/apps/templates/Button';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import classnames from 'classnames';
@@ -55,7 +55,6 @@ export default function RubricContent({
   const [errorSubmitting, setErrorSubmitting] = useState(false);
   const [lastSubmittedTimestamp, setLastSubmittedTimestamp] = useState(false);
   const [feedbackAdded, setFeedbackAdded] = useState(false);
-  const [currentLearningGoal, setCurrentLearningGoal] = useState(0);
   const submitFeedbackToStudent = () => {
     analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_SUBMITTED, {
       ...reportingData,
@@ -126,17 +125,6 @@ export default function RubricContent({
     }
   };
 
-  const onCarouselPress = buttonValue => {
-    let currentIndex = currentLearningGoal;
-    currentIndex += buttonValue;
-    if (currentIndex < 0) {
-      currentIndex = rubric.learningGoals.length - 1;
-    } else if (currentIndex >= rubric.learningGoals.length) {
-      currentIndex = 0;
-    }
-    setCurrentLearningGoal(currentIndex);
-  };
-
   let infoText = null;
   if (!onLevelForEvaluation) {
     infoText = i18n.rubricCanOnlyBeEvaluatedOnProjectLevelAlert();
@@ -202,40 +190,17 @@ export default function RubricContent({
         )}
       </div>
       {experiments.isEnabled('ai-rubrics-redesign') ? (
-        <div className={style.learningGoalContainer}>
-          <button
-            type="button"
-            className={style.learningGoalButton}
-            onClick={() => onCarouselPress(-1)}
-          >
-            <FontAwesome icon="angle-left" />
-          </button>
-          <LearningGoals
-            key={rubric.learningGoals[currentLearningGoal].key}
-            learningGoal={rubric.learningGoals[currentLearningGoal]}
-            teacherHasEnabledAi={teacherHasEnabledAi}
-            canProvideFeedback={canProvideFeedback}
-            reportingData={reportingData}
-            studentLevelInfo={studentLevelInfo}
-            aiUnderstanding={getAiUnderstanding(
-              rubric.learningGoals[currentLearningGoal].id
-            )}
-            aiConfidence={getAiConfidence(
-              rubric.learningGoals[currentLearningGoal].id
-            )}
-            isStudent={false}
-            feedbackAdded={feedbackAdded}
-            setFeedbackAdded={setFeedbackAdded}
-            aiEvalInfo={getAiInfo(rubric.learningGoals[currentLearningGoal].id)}
-          />
-          <button
-            type="button"
-            className={style.learningGoalButton}
-            onClick={() => onCarouselPress(1)}
-          >
-            <FontAwesome icon="angle-right" />
-          </button>
-        </div>
+        <LearningGoals
+          learningGoals={rubric.learningGoals}
+          teacherHasEnabledAi={teacherHasEnabledAi}
+          canProvideFeedback={canProvideFeedback}
+          reportingData={reportingData}
+          studentLevelInfo={studentLevelInfo}
+          isStudent={false}
+          feedbackAdded={feedbackAdded}
+          setFeedbackAdded={setFeedbackAdded}
+          aiEvaluations={aiEvaluations}
+        />
       ) : (
         <div className={style.learningGoalContainer}>
           {rubric.learningGoals.map(lg => (
