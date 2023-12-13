@@ -1025,6 +1025,7 @@
   "emptyBlockInFunction": "The function {name} has an unfilled input.",
   "emptyBlockInVariable": "The variable {name} has an unfilled input.",
   "emptyBlocksErrorMsg": "The \"Repeat\" or \"If\" block needs to have other blocks inside it to work. Make sure the inner block fits properly inside the containing block.",
+  "emptyBrambleContainer": "Empty Bramble Container",
   "emptyExampleBlockErrorMsg": "You need at least two examples in function {functionName}. Make sure each example has a call and a result.",
   "emptyFreeResponse": "No response given for this question.",
   "emptyFunctionBlocksErrorMsg": "The function block needs to have other blocks inside it to work.",
