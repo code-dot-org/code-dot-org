@@ -64,6 +64,10 @@ const style = {
     height: 40,
   },
   embedCodeCheckbox: {
+    accentColor: color.brand_primary_default,
+    margin: 0,
+  },
+  embedCodeCheckboxLabel: {
     display: 'inline-block',
     paddingLeft: 8,
     paddingTop: 8,
@@ -151,14 +155,17 @@ class AdvancedShareOptions extends React.Component {
           <input
             id="embedCodeCheckbox"
             type="checkbox"
-            style={{accentColor: color.brand_primary_default, margin: 0}}
+            style={style.embedCodeCheckbox}
             checked={this.state.embedWithoutCode}
             aria-label={i18n.hideAbilityToViewCode()}
             onChange={() =>
               this.setState({embedWithoutCode: !this.state.embedWithoutCode})
             }
           />
-          <label htmlFor="embedCodeCheckbox" style={style.embedCodeCheckbox}>
+          <label
+            htmlFor="embedCodeCheckbox"
+            style={style.embedCodeCheckboxLabel}
+          >
             {i18n.hideAbilityToViewCode()}
           </label>
         </div>
