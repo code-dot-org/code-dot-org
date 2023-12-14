@@ -1707,9 +1707,28 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test 'clever section name too long' do
-    course_name = 'name' * 64
-    post :import_clever_classroom, params: {courseId: '01', courseName: course_name}
-    assert_response :unprocessable_entity
+    teacher = create :teacher, :with_clever_authentication_option
+    sign_in teacher
+    assert_nil teacher.uid
+
+    course_name = 'name' * 100
+    student_list = [
+      {'data' => {'dob' => '2002-09-04T00:00:00.000Z', 'name' => {'first' => 'Ethan', 'last' => 'Doe'}, 'id' => '5966ed736b21538e3c000004'}},
+      {'data' => {'dob' => '2000-02-11T00:00:00.000Z', 'name' => {'first' => 'Lily', 'last' => 'Fake'}, 'id' => '5966ed736b21538e3c000005'}},
+      {'data' => {'dob' => '2002-05-21T00:00:00.000Z', 'name' => {'first' => 'Elizabeth', 'last' => 'Smith'}, 'id' => '5966ed736b21538e3c000006'}},
+    ]
+
+    section = CleverSection.from_service('101', teacher.id, student_list, 'Section A')
+
+    puts section.summarize
+    puts section.id
+
+    post :import_clever_classroom, params: {courseId: section.id, courseName: course_name}
+
+    response_json = JSON.parse(response.body)
+    puts response_json
+    assert_equal 255, response_json['course_name'].length
+    assert response_json['course_name'].end_with?('...')
   end
 
   #
