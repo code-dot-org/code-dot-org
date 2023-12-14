@@ -7,7 +7,7 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {hideShareDialog, showLibraryCreationDialog} from './shareDialogRedux';
 import Button from '../../templates/Button';
-import moduleStyle from './advancedShareOptions.module.scss';
+import moduleStyle from './components.module.scss';
 import classnames from 'classnames';
 
 const ShareOptions = {
