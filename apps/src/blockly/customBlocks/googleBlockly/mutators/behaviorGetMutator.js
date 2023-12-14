@@ -1,4 +1,5 @@
 import {commonFunctions} from './commonProcedureCallerMutator';
+import GoogleBlockly from 'blockly/core';
 
 export const behaviorGetMutator = {
   previousEnabledState_: true,
@@ -11,8 +12,13 @@ export const behaviorGetMutator = {
     this.deserialize_(name, []);
   },
 
-  // Only used to save in XML, but still required to exist by Blockly.
-  mutationToDom: function () {},
+  // We shouldn't ever need to save behaviors as XML because Sprite Lab also saves to JSON.
+  // However, this function would create the appropriate mutation if did.
+  mutationToDom: function () {
+    const container = GoogleBlockly.utils.xml.createElement('mutation');
+    container.setAttribute('behaviorId', this.behaviorId);
+    return container;
+  },
 
   ...commonFunctions,
 };
