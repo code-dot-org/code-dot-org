@@ -745,7 +745,7 @@ const STANDARD_INPUT_TYPES = {
       block.superSetTitleValue = block.setTitleValue;
       block.setTitleValue = function (newValue, name) {
         if (name === inputConfig.name && block.blockSpace.isFlyout) {
-          newValue = Blockly.Variables.generateUniqueName(newValue, block);
+          newValue = Blockly.Variables.generateUniqueName(newValue);
         }
         block.superSetTitleValue(newValue, name);
       };
@@ -1228,6 +1228,21 @@ exports.installCustomBlocks = function ({
       );
     }
   });
+
+  // TODO: extract Sprite-Lab-specific logic.
+  if (
+    blockly.Blocks.gamelab_location_variable_set &&
+    blockly.Blocks.gamelab_location_variable_get
+  ) {
+    Blockly.Variables.registerGetter(
+      Blockly.BlockValueType.LOCATION,
+      'gamelab_location_variable_get'
+    );
+    Blockly.Variables.registerSetter(
+      Blockly.BlockValueType.LOCATION,
+      'gamelab_location_variable_set'
+    );
+  }
 
   return blocksByCategory;
 };

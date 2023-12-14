@@ -16,7 +16,6 @@ import {Channel, Project, ProjectSources} from '../types';
 import {currentLocation} from '@cdo/apps/utils';
 import Lab2MetricsReporter from '../Lab2MetricsReporter';
 import {ValidationError} from '../responseValidators';
-import {NetworkError} from '@cdo/apps/util/HttpClient';
 const {reload} = require('@cdo/apps/utils');
 
 export default class ProjectManager {
@@ -63,10 +62,6 @@ export default class ProjectManager {
     this.forceReloading = false;
   }
 
-  getChannelId(): string {
-    return this.channelId;
-  }
-
   // Load the project from the sources and channels store.
   async load(): Promise<Project> {
     if (this.destroyed) {
@@ -85,13 +80,9 @@ export default class ProjectManager {
         Lab2MetricsReporter.logWarning(
           `Error validating sources (${error.message}). Defaulting to empty sources.`
         );
-      } else if (
-        error instanceof NetworkError &&
-        (error as NetworkError).response.status === 404
-      ) {
-        // This is expected if the project is new. Default to empty sources.
-      } else {
-        throw new Error('Error loading sources', {cause: error});
+      } else if (!(error as Error).message.includes('404')) {
+        Lab2MetricsReporter.logError('Error loading sources', error as Error);
+        throw error;
       }
     }
 
@@ -99,7 +90,8 @@ export default class ProjectManager {
     try {
       channel = await this.channelsStore.load(this.channelId);
     } catch (error) {
-      throw new Error('Error loading channel', {cause: error});
+      Lab2MetricsReporter.logError('Error loading channel', error as Error);
+      throw error;
     }
 
     this.lastChannel = channel;

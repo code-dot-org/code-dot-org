@@ -9,7 +9,7 @@ var StepButton = function (props) {
   }
   return (
     <button type="button" id="stepButton" className={classes}>
-      <img src="/blockly/media/1x1.gif" alt="" />
+      <img src="/blockly/media/1x1.gif" />
       {msg.step()}
     </button>
   );

@@ -68,7 +68,6 @@ class Section < ApplicationRecord
   has_many :active_section_instructors, -> {where(status: :active)}, class_name: 'SectionInstructor'
   has_many :instructors, through: :active_section_instructors, class_name: 'User'
   has_one :lti_section
-  has_one :lti_course, through: :lti_section
   after_destroy :soft_delete_lti_section
 
   has_many :followers, dependent: :destroy
@@ -160,8 +159,7 @@ class Section < ApplicationRecord
     LOGIN_TYPE_PICTURE = 'picture'.freeze,
     LOGIN_TYPE_WORD = 'word'.freeze,
     LOGIN_TYPE_GOOGLE_CLASSROOM = 'google_classroom'.freeze,
-    LOGIN_TYPE_CLEVER = 'clever'.freeze,
-    LOGIN_TYPE_LTI_V1 = 'lti_v1'.freeze
+    LOGIN_TYPE_CLEVER = 'clever'.freeze
   ]
 
   LOGIN_TYPES_OAUTH = [
@@ -458,7 +456,7 @@ class Section < ApplicationRecord
   end
 
   def provider_managed?
-    login_type == LOGIN_TYPE_LTI_V1
+    false
   end
 
   def at_capacity?

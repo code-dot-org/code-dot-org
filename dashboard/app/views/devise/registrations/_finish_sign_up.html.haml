@@ -34,6 +34,7 @@
           = link_to t('cancel'), users_cancel_path
 
     = f.hidden_field :locale, value: locale
+    = f.hidden_field :email
     = f.hidden_field :encrypted_password
     - if @user.errors.any?
       .row
@@ -101,19 +102,6 @@
               .radio
                 = f.radio_button :parent_email_preference_opt_in, 'no'
                 = f.label :parent_email_preference_opt_in, t('signup_form.email_preference_no'), value: 'no'
-
-    - if Policies::Lti.show_email_input? @user
-      = f.fields_for :authentication_options do |ao_form|
-        - if ao_form.object.lti?
-          .row
-            .span3.signup-field-label
-              #teacher-email-label
-                = ao_form.label :email, User.human_attribute_name(:email)
-              - if @user.errors[:email].present?
-                %p.error= @user.errors[:email].join('\n')
-            .span5
-              = ao_form.email_field :email, maxlength: 255
-
     .row
       .span3.signup-field-label
         #teacher-name-label{style: "display: none;"}

@@ -71,7 +71,8 @@ module I18n
             i18n_original_file_path = i18n_source_file_path.sub(I18N_SOURCE_DIR_PATH, I18N_BACKUP_DIR_PATH)
             I18nScriptUtils.copy_file(i18n_source_file_path, i18n_original_file_path)
 
-            RedactRestoreUtils.redact(i18n_source_file_path, i18n_source_file_path, REDACT_RESTORE_PLUGINS)
+            redacted = RedactRestoreUtils.redact_file(i18n_source_file_path, REDACT_RESTORE_PLUGINS)
+            I18nScriptUtils.write_file(i18n_source_file_path, JSON.pretty_generate(redacted))
           end
 
           # Helper method to get the desired destination subdirectory of the given

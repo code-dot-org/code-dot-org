@@ -1,9 +1,104 @@
 {
   "banners": {
+    "csleadersprize": {
+      "title": "Add a new computer science course, win $10,000!",
+      "body": "This CS Education Week, one middle and high school in every U.S. state and D.C. will be awarded the CS Leaders Prize of $10,000 to help expand access to computer science education for their students.",
+      "buttonText": "Learn more"
+    },
+    "csjourneys-22": {
+      "title": "CS Journeys is back, along with NEW Careers with CS videos",
+      "body": "Watch unique tech professionals at work, plus join virtual field trips of NASA’s Artemis mission and more.",
+      "buttonText": "Learn more"
+    },
+    "hoc-more": {
+      "title": "Keep learning!",
+      "body": "The Hour of Code website has over 500 computer science activities for all ages and experience levels, developed by Code.org and partners.",
+      "buttonText": "View activities"
+    },
     "superhero": {
       "title": "Help your students become superheroes!",
       "body": "Join our highly supportive Professional Learning Program for middle and high school educators.",
       "buttonText": "Learn More"
+    },
+    "csjourneys": {
+      "title": "Explore the wide world of computer science",
+      "body": "Bring CS to life with Code.org’s new career inspiration and exploration program! Sign up for live, engaging classroom experiences like virtual field trips and class chats, or let students explore with short videos and other resources.",
+      "buttonText": "Learn more"
+    },
+    "class-schedule-survey": {
+      "title": "Fall 2021 Class Schedule Survey",
+      "body": "Please take a moment to fill out this 5-question survey. Answers you provide will help us determine when to offer programming like virtual field trips and talks with professionals during the fall semester.",
+      "buttonText": "Take the survey"
+    },
+    "back-to-school-2021": {
+      "title": "Back to School Updates",
+      "body": " Check out the latest updates to Code.org’s curriculum and tools (including a new AI / ML module!), plus learn how to use Code.org in your classroom with our new Getting Started video series.",
+      "buttonText": "Learn more"
+    },
+    "teacher-apps-open-2021": {
+      "title": "Sign up for Professional Learning",
+      "body": "98% of participating teachers recommend our engaging, highly supportive program. Join our hands-on workshops with other teachers from your area. Scholarships and discounts available in most areas.",
+      "buttonText": "Join us"
+    },
+    "teacher-apps-closing-2021": {
+      "title": "Don’t miss out. Apply today!",
+      "body": "98% of participating teachers recommend our engaging, highly supportive program. Join our hands-on workshops with other teachers from your area. Scholarships and discounts available in most areas.",
+      "buttonText": "Join us"
+    },
+    "teacher-apps-nominate-2020": {
+      "title": "Know an Awesome Teacher?",
+      "body": "Let them know how amazing they are by nominating them for a Professional Learning Scholarship today!",
+      "buttonText": "Nominate a Teacher"
+    },
+    "teacher-apps-stillon-2020": {
+      "title": "Professional Learning is still on!",
+      "body": "Workshops are now virtual in most states! 98% of teachers recommend our engaging professional learning programs to teach computer science. Join our hands-on workshops with other teachers from your area. Spaces are limited, so apply today!",
+      "buttonText": "Join us"
+    },
+    "home-learning-2020": {
+      "title": "Project Ideas for Home Learning",
+      "body": "Parents and teachers — take a look at our Project Ideas page for starter projects in Game Lab, App Lab, and Web Lab. These include project descriptions, tips, and demo projects students can remix to make their own! ",
+      "buttonText": "View Project Ideas"
+    },
+    "soonhoc-2020": {
+      "title": "The Hour of Code is Coming",
+      "body": "Sign up your class to try one of the over 115 new activities for the Hour of Code (Dec. 7-13). This year, we’ll explore how we can harness computer science and technologies like AI to help build the society we want to live in. Sign up today!",
+      "buttonText": "Join Us"
+    },
+    "codebytes-2020": {
+      "title": "CodeBytes: Live interactive mini-lessons during CSEdWeek!",
+      "body": "Planning for the Hour of Code with your virtual classroom? Join us for CodeBytes, a series of 20 minute lessons that will livestream December 7-11. Episodes are designed for all grade bands and students with varying technology access.",
+      "buttonText": "Learn more"
+    },
+    "ai-2020": {
+      "title": "Explore Artificial Intelligence and Machine Learning",
+      "body": "Join us to explore how AI impacts our entire world in a brand new video series, train AI for Oceans in 25+ languages, and hear from a panel of experts during the Ethics of AI livestream on Tuesday, December 8th.",
+      "buttonText": "Learn more"
+    },
+    "congrats-certificate-share": {
+      "title": "Try an Hour of Code",
+      "body": "Anyone can learn!",
+      "buttonText": "Start"
+    },
+    "coldplay": {
+      "title": "Code and dance with Coldplay",
+      "body": "Use Dance Party to create something awesome! Share it online and Coldplay might spotlight your project on social media. You could even get to see the band live! Let's see what you create!",
+      "buttonText": "Try it"
+    },
+    "ai-launch-2023": {
+      "title": "AI education for the world",
+      "body": "See how we're planning to bring AI education to students around the world.",
+      "buttonText": "Learn more"
+    },
+    "ai-pl-launch-2023": {
+      "title": "AI 101 for Teachers",
+      "body": "Discover the groundbreaking world of Artificial Intelligence (AI) and its transformative potential in education with our comprehensive online learning series for teachers.",
+      "buttonText": "Learn more"
+    },
+    "state-of-cs-2023": {
+      "title": "2023 State of Computer Science Education",
+      "body": "Check out the latest data on national and state-level computer science education policy, including policy trends, maps, state summaries, and implementation data.",
+      "buttonText": "Read report"
     },
     "hoc-2023": {
       "title": "Hour of Code: Creativity with AI",

@@ -19,15 +19,6 @@ $ai-modal-border-width: 8px;
   }
 }
 
-@keyframes flying-emoji-x-rtl {
-  0% {
-    left: 65px;
-  }
-  100% {
-    left: 115px;
-  }
-}
-
 @keyframes flying-emoji-y {
   0% {
     top: 0;
@@ -132,7 +123,6 @@ $ai-modal-border-width: 8px;
     box-sizing: border-box;
     border-radius: 4px;
     background-color: white;
-    overflow: hidden;
 
     .toggleArea {
       position: absolute;
@@ -206,29 +196,16 @@ $ai-modal-border-width: 8px;
       width: 260px;
       height: 280px;
       top: 50px;
+      left: 0;
       pointer-events: none;
       z-index: 1;
-
-      html[dir='ltr'] & {
-        left: 0;
-      }
-
-      html[dir='rtl'] & {
-        right: 0;
-      }
 
       .flyingEmoji {
         position: absolute;
         left: 110px;
         top: 100px;
 
-        html[dir='ltr'] & {
-          animation: flying-emoji-x 0.4s linear, flying-emoji-y 0.4s ease-in;
-        }
-
-        html[dir='rtl'] & {
-          animation: flying-emoji-x-rtl 0.4s linear, flying-emoji-y 0.4s ease-in;
-        }
+        animation: flying-emoji-x 0.4s linear, flying-emoji-y 0.4s ease-in;
       }
 
       .botContainer {
@@ -237,29 +214,15 @@ $ai-modal-border-width: 8px;
         .botHead {
           position: absolute;
           width: 97px;
+          left: 81.5px;
           top: 34px;
+          transform-origin: bottom left;
           transition: transform 0.5s 0.25s;
           transform: rotate(0deg);
           pointer-events: none;
 
-          html[dir='ltr'] & {
-            left: 81.5px;
-            transform-origin: bottom left;
-          }
-
-          html[dir='rtl'] & {
-            left: 82px;
-            transform-origin: bottom right;
-          }
-
           &Open {
-            html[dir='ltr'] & {
-              transform: rotate(-60deg);
-            }
-
-            html[dir='rtl'] & {
-              transform: rotate(60deg);
-            }
+            transform: rotate(-60deg);
           }
         }
 
@@ -338,14 +301,7 @@ $ai-modal-border-width: 8px;
         }
 
         &Back {
-          html[dir='ltr'] & {
-            right: 0;
-          }
-
-          html[dir='rtl'] & {
-            left: 0;
-          }
-
+          right: 0;
           transform: rotateY(180deg);
 
           .blockPreview {
@@ -358,18 +314,10 @@ $ai-modal-border-width: 8px;
     .checkArea {
       position: absolute;
       top: 120px;
-
+      left: 630px;
       font-size: 100px;
       color: $yes-color;
       animation: appear 0.05s;
-
-      html[dir='ltr'] & {
-        left: 630px;
-      }
-
-      html[dir='rtl'] & {
-        left: 80px;
-      }
     }
 
     .explanationArea {
@@ -384,17 +332,15 @@ $ai-modal-border-width: 8px;
         position: absolute;
         padding-inline-start: 15px;
         box-sizing: border-box;
+        right: 20px;
         width: 110px;
         border-radius: 4px;
         border: solid $neutral_dark10 1px;
         animation: appear 1s;
 
-        html[dir='ltr'] & {
-          right: 20px;
-        }
-
         html[dir='rtl'] & {
           left: 20px;
+          right: initial;
         }
 
         .emojiSlot {

@@ -1,0 +1,8 @@
+%div.subscribe-form.flex-container.justify-space-between.align-items-center.wrap
+  .text-wrapper
+    %h2=hoc_s(:subscribe_form_section_title)
+    %p
+      = subscribe_form_section_desc
+    %p=hoc_s(:subscribe_form_section_unsubscribe)
+  %figure.col-50
+    %iframe{allowtransparency: "true", frameborder: "0", height: "375px", src: form_src, style: "border: 0", type: "text/html", width: "100%"}

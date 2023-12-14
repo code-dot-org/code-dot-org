@@ -1,6 +1,6 @@
 {
   "af": {
-    "/en.yml": "0675f947c7c0bea779fee6c2a7e25655",
+    "/en.yml": "ac8830d1eec668754acb58326bbdf32f",
     "/how-to/volunteers.md": "ac8830d1eec668754acb58326bbdf32f",
     "/how-to/parents.md": "ac8830d1eec668754acb58326bbdf32f",
     "/how-to/events.md": "ac8830d1eec668754acb58326bbdf32f",
@@ -32,7 +32,7 @@
     "/activity-guidelines.md": "ac8830d1eec668754acb58326bbdf32f"
   },
   "sq": {
-    "/en.yml": "0675f947c7c0bea779fee6c2a7e25655",
+    "/en.yml": "ac8830d1eec668754acb58326bbdf32f",
     "/how-to/volunteers.md": "ac8830d1eec668754acb58326bbdf32f",
     "/how-to/parents.md": "ac8830d1eec668754acb58326bbdf32f",
     "/how-to/events.md": "ac8830d1eec668754acb58326bbdf32f",
@@ -64,7 +64,7 @@
     "/activity-guidelines.md": "b803ee9eb2dee4758ac8e4db947d1ce6"
   },
   "ar": {
-    "/en.yml": "f41bd7e42ecb519756b3cfb125cfab47",
+    "/en.yml": "b803ee9eb2dee4758ac8e4db947d1ce6",
     "/how-to/volunteers.md": "b803ee9eb2dee4758ac8e4db947d1ce6",
     "/how-to/parents.md": "b803ee9eb2dee4758ac8e4db947d1ce6",
     "/how-to/events.md": "b803ee9eb2dee4758ac8e4db947d1ce6",
@@ -96,7 +96,7 @@
     "/activity-guidelines.md": "d5ce61b9fe64bbfebf405276e3a52bc1"
   },
   "hy-AM": {
-    "/en.yml": "1d7956c079a21f0a277c2e1a1afd3ee2",
+    "/en.yml": "d5ce61b9fe64bbfebf405276e3a52bc1",
     "/how-to/volunteers.md": "d5ce61b9fe64bbfebf405276e3a52bc1",
     "/how-to/parents.md": "d5ce61b9fe64bbfebf405276e3a52bc1",
     "/how-to/events.md": "d5ce61b9fe64bbfebf405276e3a52bc1",
@@ -128,7 +128,7 @@
     "/activity-guidelines.md": "d5ce61b9fe64bbfebf405276e3a52bc1"
   },
   "as": {
-    "/en.yml": "1d7956c079a21f0a277c2e1a1afd3ee2",
+    "/en.yml": "d5ce61b9fe64bbfebf405276e3a52bc1",
     "/how-to/volunteers.md": "d5ce61b9fe64bbfebf405276e3a52bc1",
     "/how-to/parents.md": "d5ce61b9fe64bbfebf405276e3a52bc1",
     "/how-to/events.md": "d5ce61b9fe64bbfebf405276e3a52bc1",
@@ -160,7 +160,7 @@
     "/activity-guidelines.md": "e555aa59352ab865810cf149138450be"
   },
   "az": {
-    "/en.yml": "1d7956c079a21f0a277c2e1a1afd3ee2",
+    "/en.yml": "e555aa59352ab865810cf149138450be",
     "/how-to/volunteers.md": "e555aa59352ab865810cf149138450be",
     "/how-to/parents.md": "e555aa59352ab865810cf149138450be",
     "/how-to/events.md": "e555aa59352ab865810cf149138450be",
@@ -192,7 +192,7 @@
     "/activity-guidelines.md": "e555aa59352ab865810cf149138450be"
   },
   "eu": {
-    "/en.yml": "68d95006fe890c2f49e1b05a901826b4",
+    "/en.yml": "9d34b29403fa53cb46952a89606194f9",
     "/how-to/volunteers.md": "9d34b29403fa53cb46952a89606194f9",
     "/how-to/parents.md": "9d34b29403fa53cb46952a89606194f9",
     "/how-to/events.md": "9d34b29403fa53cb46952a89606194f9",
@@ -224,7 +224,7 @@
     "/activity-guidelines.md": "9d34b29403fa53cb46952a89606194f9"
   },
   "bn": {
-    "/en.yml": "68d95006fe890c2f49e1b05a901826b4",
+    "/en.yml": "9d34b29403fa53cb46952a89606194f9",
     "/how-to/volunteers.md": "9d34b29403fa53cb46952a89606194f9",
     "/how-to/parents.md": "9d34b29403fa53cb46952a89606194f9",
     "/how-to/events.md": "9d34b29403fa53cb46952a89606194f9",
@@ -256,7 +256,7 @@
     "/activity-guidelines.md": "9d34b29403fa53cb46952a89606194f9"
   },
   "bs": {
-    "/en.yml": "68d95006fe890c2f49e1b05a901826b4",
+    "/en.yml": "ebf85242fb73cd65a13999b360dea40d",
     "/how-to/volunteers.md": "ebf85242fb73cd65a13999b360dea40d",
     "/how-to/parents.md": "ebf85242fb73cd65a13999b360dea40d",
     "/how-to/events.md": "ebf85242fb73cd65a13999b360dea40d",
@@ -288,7 +288,7 @@
     "/activity-guidelines.md": "ebf85242fb73cd65a13999b360dea40d"
   },
   "bg": {
-    "/en.yml": "a4dd5bd5bd79358b04cb5a7cc1914708",
+    "/en.yml": "ebf85242fb73cd65a13999b360dea40d",
     "/how-to/volunteers.md": "ebf85242fb73cd65a13999b360dea40d",
     "/how-to/parents.md": "ebf85242fb73cd65a13999b360dea40d",
     "/how-to/events.md": "ebf85242fb73cd65a13999b360dea40d",
@@ -320,7 +320,7 @@
     "/activity-guidelines.md": "ebf85242fb73cd65a13999b360dea40d"
   },
   "my": {
-    "/en.yml": "a4dd5bd5bd79358b04cb5a7cc1914708",
+    "/en.yml": "9225f904463331cd008c1fb2307f78b2",
     "/how-to/volunteers.md": "9225f904463331cd008c1fb2307f78b2",
     "/how-to/parents.md": "9225f904463331cd008c1fb2307f78b2",
     "/how-to/events.md": "9225f904463331cd008c1fb2307f78b2",
@@ -352,7 +352,7 @@
     "/activity-guidelines.md": "9225f904463331cd008c1fb2307f78b2"
   },
   "ca": {
-    "/en.yml": "a4dd5bd5bd79358b04cb5a7cc1914708",
+    "/en.yml": "9225f904463331cd008c1fb2307f78b2",
     "/how-to/volunteers.md": "9225f904463331cd008c1fb2307f78b2",
     "/how-to/parents.md": "9225f904463331cd008c1fb2307f78b2",
     "/how-to/events.md": "9225f904463331cd008c1fb2307f78b2",
@@ -384,7 +384,7 @@
     "/activity-guidelines.md": "6d1edb02af8698afc9a88536585b4d81"
   },
   "zh-CN": {
-    "/en.yml": "69d662c8c63caeacc83ffcc85798f83b",
+    "/en.yml": "7b372cf1a0460e30c995f7fba167bbb3",
     "/how-to/volunteers.md": "6d1edb02af8698afc9a88536585b4d81",
     "/how-to/parents.md": "6d1edb02af8698afc9a88536585b4d81",
     "/how-to/events.md": "6d1edb02af8698afc9a88536585b4d81",
@@ -416,7 +416,7 @@
     "/activity-guidelines.md": "6d1edb02af8698afc9a88536585b4d81"
   },
   "zh-TW": {
-    "/en.yml": "5c3d546ca1389606c7e2c5ff0056cc97",
+    "/en.yml": "ad665842cf1afdfaf8646b342bbf6411",
     "/how-to/volunteers.md": "ad665842cf1afdfaf8646b342bbf6411",
     "/how-to/parents.md": "ad665842cf1afdfaf8646b342bbf6411",
     "/how-to/events.md": "ad665842cf1afdfaf8646b342bbf6411",
@@ -448,7 +448,7 @@
     "/activity-guidelines.md": "ad665842cf1afdfaf8646b342bbf6411"
   },
   "co": {
-    "/en.yml": "a207e6b47780d75f6dd752b2874d1c82",
+    "/en.yml": "ad665842cf1afdfaf8646b342bbf6411",
     "/how-to/volunteers.md": "ad665842cf1afdfaf8646b342bbf6411",
     "/how-to/parents.md": "ad665842cf1afdfaf8646b342bbf6411",
     "/how-to/events.md": "ad665842cf1afdfaf8646b342bbf6411",
@@ -480,7 +480,7 @@
     "/activity-guidelines.md": "ad665842cf1afdfaf8646b342bbf6411"
   },
   "hr": {
-    "/en.yml": "a207e6b47780d75f6dd752b2874d1c82",
+    "/en.yml": "38959e5c57c739263423169c42b9dd3b",
     "/how-to/volunteers.md": "38959e5c57c739263423169c42b9dd3b",
     "/how-to/parents.md": "38959e5c57c739263423169c42b9dd3b",
     "/how-to/events.md": "38959e5c57c739263423169c42b9dd3b",
@@ -512,7 +512,7 @@
     "/activity-guidelines.md": "38959e5c57c739263423169c42b9dd3b"
   },
   "cs": {
-    "/en.yml": "9be52ee9c6289ba2946ae69af0827c7c",
+    "/en.yml": "38959e5c57c739263423169c42b9dd3b",
     "/how-to/volunteers.md": "38959e5c57c739263423169c42b9dd3b",
     "/how-to/parents.md": "38959e5c57c739263423169c42b9dd3b",
     "/how-to/events.md": "38959e5c57c739263423169c42b9dd3b",
@@ -544,7 +544,7 @@
     "/activity-guidelines.md": "19b85df46f722f6feb310dbeac5f6392"
   },
   "da": {
-    "/en.yml": "9be52ee9c6289ba2946ae69af0827c7c",
+    "/en.yml": "19b85df46f722f6feb310dbeac5f6392",
     "/how-to/volunteers.md": "19b85df46f722f6feb310dbeac5f6392",
     "/how-to/parents.md": "19b85df46f722f6feb310dbeac5f6392",
     "/how-to/events.md": "19b85df46f722f6feb310dbeac5f6392",
@@ -576,7 +576,7 @@
     "/activity-guidelines.md": "19b85df46f722f6feb310dbeac5f6392"
   },
   "fa-AF": {
-    "/en.yml": "9be52ee9c6289ba2946ae69af0827c7c",
+    "/en.yml": "3efbdfe70677a84afcc34d72a9c6a57b",
     "/how-to/volunteers.md": "3efbdfe70677a84afcc34d72a9c6a57b",
     "/how-to/parents.md": "3efbdfe70677a84afcc34d72a9c6a57b",
     "/how-to/events.md": "3efbdfe70677a84afcc34d72a9c6a57b",
@@ -608,7 +608,7 @@
     "/activity-guidelines.md": "3efbdfe70677a84afcc34d72a9c6a57b"
   },
   "dv": {
-    "/en.yml": "9be52ee9c6289ba2946ae69af0827c7c",
+    "/en.yml": "3efbdfe70677a84afcc34d72a9c6a57b",
     "/how-to/volunteers.md": "3efbdfe70677a84afcc34d72a9c6a57b",
     "/how-to/parents.md": "3efbdfe70677a84afcc34d72a9c6a57b",
     "/how-to/events.md": "3efbdfe70677a84afcc34d72a9c6a57b",
@@ -640,7 +640,7 @@
     "/activity-guidelines.md": "3efbdfe70677a84afcc34d72a9c6a57b"
   },
   "nl": {
-    "/en.yml": "9ac950ba6f4bcee5091e1caf2c46eae5",
+    "/en.yml": "c7f9e6500e59d2669625dce6b2b899e3",
     "/how-to/volunteers.md": "c7f9e6500e59d2669625dce6b2b899e3",
     "/how-to/parents.md": "c7f9e6500e59d2669625dce6b2b899e3",
     "/how-to/events.md": "c7f9e6500e59d2669625dce6b2b899e3",
@@ -672,7 +672,7 @@
     "/activity-guidelines.md": "c7f9e6500e59d2669625dce6b2b899e3"
   },
   "dz": {
-    "/en.yml": "9ac950ba6f4bcee5091e1caf2c46eae5",
+    "/en.yml": "c7f9e6500e59d2669625dce6b2b899e3",
     "/how-to/volunteers.md": "c7f9e6500e59d2669625dce6b2b899e3",
     "/how-to/parents.md": "c7f9e6500e59d2669625dce6b2b899e3",
     "/how-to/events.md": "c7f9e6500e59d2669625dce6b2b899e3",
@@ -704,7 +704,7 @@
     "/activity-guidelines.md": "c7f9e6500e59d2669625dce6b2b899e3"
   },
   "en-GB": {
-    "/en.yml": "9ac950ba6f4bcee5091e1caf2c46eae5",
+    "/en.yml": "3232aa559d38f6885ce8f2c416f225f0",
     "/how-to/volunteers.md": "3232aa559d38f6885ce8f2c416f225f0",
     "/how-to/parents.md": "3232aa559d38f6885ce8f2c416f225f0",
     "/how-to/events.md": "3232aa559d38f6885ce8f2c416f225f0",
@@ -736,7 +736,7 @@
     "/activity-guidelines.md": "3232aa559d38f6885ce8f2c416f225f0"
   },
   "et": {
-    "/en.yml": "9ac950ba6f4bcee5091e1caf2c46eae5",
+    "/en.yml": "3232aa559d38f6885ce8f2c416f225f0",
     "/how-to/volunteers.md": "3232aa559d38f6885ce8f2c416f225f0",
     "/how-to/parents.md": "3232aa559d38f6885ce8f2c416f225f0",
     "/how-to/events.md": "3232aa559d38f6885ce8f2c416f225f0",
@@ -768,7 +768,7 @@
     "/activity-guidelines.md": "3232aa559d38f6885ce8f2c416f225f0"
   },
   "fo": {
-    "/en.yml": "2a6d9df9af4885940262476c1128a177",
+    "/en.yml": "62eda330e608c67148caf21207779272",
     "/how-to/volunteers.md": "62eda330e608c67148caf21207779272",
     "/how-to/parents.md": "62eda330e608c67148caf21207779272",
     "/how-to/events.md": "62eda330e608c67148caf21207779272",
@@ -800,7 +800,7 @@
     "/activity-guidelines.md": "62eda330e608c67148caf21207779272"
   },
   "fil": {
-    "/en.yml": "570655b2c5251eec64055bf8fb664ecb",
+    "/en.yml": "62eda330e608c67148caf21207779272",
     "/how-to/volunteers.md": "62eda330e608c67148caf21207779272",
     "/how-to/parents.md": "62eda330e608c67148caf21207779272",
     "/how-to/events.md": "62eda330e608c67148caf21207779272",
@@ -832,7 +832,7 @@
     "/activity-guidelines.md": "62eda330e608c67148caf21207779272"
   },
   "fi": {
-    "/en.yml": "2a6d9df9af4885940262476c1128a177",
+    "/en.yml": "7b299253682c0508cd610a0e17901aea",
     "/how-to/volunteers.md": "7b299253682c0508cd610a0e17901aea",
     "/how-to/parents.md": "7b299253682c0508cd610a0e17901aea",
     "/how-to/events.md": "7b299253682c0508cd610a0e17901aea",
@@ -864,7 +864,7 @@
     "/activity-guidelines.md": "7b299253682c0508cd610a0e17901aea"
   },
   "fr": {
-    "/en.yml": "a747342a7b5b92643fcf4374a1b5655c",
+    "/en.yml": "d3f083a9346f93e76120e10807899469",
     "/how-to/volunteers.md": "7b299253682c0508cd610a0e17901aea",
     "/how-to/parents.md": "7b299253682c0508cd610a0e17901aea",
     "/how-to/events.md": "7b299253682c0508cd610a0e17901aea",
@@ -896,7 +896,7 @@
     "/activity-guidelines.md": "f69dc1ab1133f07370c1db5762e5fd49"
   },
   "fr-CA": {
-    "/en.yml": "ab897456bdbfcb7b176bdc965fbbc580",
+    "/en.yml": "f69dc1ab1133f07370c1db5762e5fd49",
     "/how-to/volunteers.md": "f69dc1ab1133f07370c1db5762e5fd49",
     "/how-to/parents.md": "f69dc1ab1133f07370c1db5762e5fd49",
     "/how-to/events.md": "f69dc1ab1133f07370c1db5762e5fd49",
@@ -928,7 +928,7 @@
     "/activity-guidelines.md": "f69dc1ab1133f07370c1db5762e5fd49"
   },
   "gl": {
-    "/en.yml": "ab897456bdbfcb7b176bdc965fbbc580",
+    "/en.yml": "f69dc1ab1133f07370c1db5762e5fd49",
     "/how-to/volunteers.md": "f69dc1ab1133f07370c1db5762e5fd49",
     "/how-to/parents.md": "f69dc1ab1133f07370c1db5762e5fd49",
     "/how-to/events.md": "f69dc1ab1133f07370c1db5762e5fd49",
@@ -960,7 +960,7 @@
     "/activity-guidelines.md": "8bd2258b7c4cc55c7b446384fdc6712b"
   },
   "ka": {
-    "/en.yml": "ab897456bdbfcb7b176bdc965fbbc580",
+    "/en.yml": "8bd2258b7c4cc55c7b446384fdc6712b",
     "/how-to/volunteers.md": "8bd2258b7c4cc55c7b446384fdc6712b",
     "/how-to/parents.md": "8bd2258b7c4cc55c7b446384fdc6712b",
     "/how-to/events.md": "8bd2258b7c4cc55c7b446384fdc6712b",
@@ -992,7 +992,7 @@
     "/activity-guidelines.md": "8bd2258b7c4cc55c7b446384fdc6712b"
   },
   "de": {
-    "/en.yml": "f2fb02396d8734109bc01ec303d7afd2",
+    "/en.yml": "37fc4e13b15c1c2af1ca9437941f7f0e",
     "/how-to/volunteers.md": "37fc4e13b15c1c2af1ca9437941f7f0e",
     "/how-to/parents.md": "37fc4e13b15c1c2af1ca9437941f7f0e",
     "/how-to/events.md": "37fc4e13b15c1c2af1ca9437941f7f0e",
@@ -1024,7 +1024,7 @@
     "/activity-guidelines.md": "37fc4e13b15c1c2af1ca9437941f7f0e"
   },
   "el": {
-    "/en.yml": "389854d8930ac30bfa56f63048ab4224",
+    "/en.yml": "37fc4e13b15c1c2af1ca9437941f7f0e",
     "/how-to/volunteers.md": "37fc4e13b15c1c2af1ca9437941f7f0e",
     "/how-to/parents.md": "37fc4e13b15c1c2af1ca9437941f7f0e",
     "/how-to/events.md": "37fc4e13b15c1c2af1ca9437941f7f0e",
@@ -1056,7 +1056,7 @@
     "/activity-guidelines.md": "ec00b37092c5d50bf3831ceb8bdbd3bc"
   },
   "gu-IN": {
-    "/en.yml": "389854d8930ac30bfa56f63048ab4224",
+    "/en.yml": "ec00b37092c5d50bf3831ceb8bdbd3bc",
     "/how-to/volunteers.md": "ec00b37092c5d50bf3831ceb8bdbd3bc",
     "/how-to/parents.md": "ec00b37092c5d50bf3831ceb8bdbd3bc",
     "/how-to/events.md": "ec00b37092c5d50bf3831ceb8bdbd3bc",
@@ -1088,7 +1088,7 @@
     "/activity-guidelines.md": "ec00b37092c5d50bf3831ceb8bdbd3bc"
   },
   "ha": {
-    "/en.yml": "389854d8930ac30bfa56f63048ab4224",
+    "/en.yml": "ec00b37092c5d50bf3831ceb8bdbd3bc",
     "/how-to/volunteers.md": "ec00b37092c5d50bf3831ceb8bdbd3bc",
     "/how-to/parents.md": "ec00b37092c5d50bf3831ceb8bdbd3bc",
     "/how-to/events.md": "ec00b37092c5d50bf3831ceb8bdbd3bc",
@@ -1120,7 +1120,7 @@
     "/activity-guidelines.md": "8304b524cff4202ac5988ffda99e6c88"
   },
   "haw": {
-    "/en.yml": "91794f8c6cee6adeb4144f91f650a815",
+    "/en.yml": "8304b524cff4202ac5988ffda99e6c88",
     "/how-to/volunteers.md": "8304b524cff4202ac5988ffda99e6c88",
     "/how-to/parents.md": "8304b524cff4202ac5988ffda99e6c88",
     "/how-to/events.md": "8304b524cff4202ac5988ffda99e6c88",
@@ -1152,7 +1152,7 @@
     "/activity-guidelines.md": "8304b524cff4202ac5988ffda99e6c88"
   },
   "he": {
-    "/en.yml": "91794f8c6cee6adeb4144f91f650a815",
+    "/en.yml": "8304b524cff4202ac5988ffda99e6c88",
     "/how-to/volunteers.md": "8304b524cff4202ac5988ffda99e6c88",
     "/how-to/parents.md": "8304b524cff4202ac5988ffda99e6c88",
     "/how-to/events.md": "8304b524cff4202ac5988ffda99e6c88",
@@ -1184,7 +1184,7 @@
     "/activity-guidelines.md": "63802c2f4b146967ae0d3e2a32db0097"
   },
   "hi": {
-    "/en.yml": "ad85e71070aced6aefd2cb5ae0011fa6",
+    "/en.yml": "63802c2f4b146967ae0d3e2a32db0097",
     "/how-to/volunteers.md": "63802c2f4b146967ae0d3e2a32db0097",
     "/how-to/parents.md": "63802c2f4b146967ae0d3e2a32db0097",
     "/how-to/events.md": "63802c2f4b146967ae0d3e2a32db0097",
@@ -1216,7 +1216,7 @@
     "/activity-guidelines.md": "63802c2f4b146967ae0d3e2a32db0097"
   },
   "hu": {
-    "/en.yml": "90124609628a8a3a2f03104f547d7902",
+    "/en.yml": "63802c2f4b146967ae0d3e2a32db0097",
     "/how-to/volunteers.md": "63802c2f4b146967ae0d3e2a32db0097",
     "/how-to/parents.md": "63802c2f4b146967ae0d3e2a32db0097",
     "/how-to/events.md": "63802c2f4b146967ae0d3e2a32db0097",
@@ -1248,7 +1248,7 @@
     "/activity-guidelines.md": "a6e552ef36eaee03ff6786ee2b5b0b49"
   },
   "is": {
-    "/en.yml": "90124609628a8a3a2f03104f547d7902",
+    "/en.yml": "a6e552ef36eaee03ff6786ee2b5b0b49",
     "/how-to/volunteers.md": "a6e552ef36eaee03ff6786ee2b5b0b49",
     "/how-to/parents.md": "a6e552ef36eaee03ff6786ee2b5b0b49",
     "/how-to/events.md": "a6e552ef36eaee03ff6786ee2b5b0b49",
@@ -1280,7 +1280,7 @@
     "/activity-guidelines.md": "a6e552ef36eaee03ff6786ee2b5b0b49"
   },
   "ig": {
-    "/en.yml": "90124609628a8a3a2f03104f547d7902",
+    "/en.yml": "a6e552ef36eaee03ff6786ee2b5b0b49",
     "/how-to/volunteers.md": "bb961f7e03995ee6b71320c577c780bf",
     "/how-to/parents.md": "bb961f7e03995ee6b71320c577c780bf",
     "/how-to/events.md": "bb961f7e03995ee6b71320c577c780bf",
@@ -1312,7 +1312,7 @@
     "/activity-guidelines.md": "bb961f7e03995ee6b71320c577c780bf"
   },
   "id": {
-    "/en.yml": "53a4c50ce33cbbf5b4c8527da4d17f80",
+    "/en.yml": "bb961f7e03995ee6b71320c577c780bf",
     "/how-to/volunteers.md": "bb961f7e03995ee6b71320c577c780bf",
     "/how-to/parents.md": "bb961f7e03995ee6b71320c577c780bf",
     "/how-to/events.md": "bb961f7e03995ee6b71320c577c780bf",
@@ -1344,7 +1344,7 @@
     "/activity-guidelines.md": "bb961f7e03995ee6b71320c577c780bf"
   },
   "ga-IE": {
-    "/en.yml": "95c884ac3acf0f87d669cce1ed0890c7",
+    "/en.yml": "ec0b7cb646080981b09a7dfb295013f1",
     "/how-to/volunteers.md": "ec0b7cb646080981b09a7dfb295013f1",
     "/how-to/parents.md": "ec0b7cb646080981b09a7dfb295013f1",
     "/how-to/events.md": "ec0b7cb646080981b09a7dfb295013f1",
@@ -1376,7 +1376,7 @@
     "/activity-guidelines.md": "ec0b7cb646080981b09a7dfb295013f1"
   },
   "it": {
-    "/en.yml": "d0d4c10e7d4ce9154ed28c87e07d0e4d",
+    "/en.yml": "0be7e6a9c272c1e88c055b79e3bd9013",
     "/how-to/volunteers.md": "ec0b7cb646080981b09a7dfb295013f1",
     "/how-to/parents.md": "ec0b7cb646080981b09a7dfb295013f1",
     "/how-to/events.md": "e265ceea8c366155c8685a89f586f186",
@@ -1408,7 +1408,7 @@
     "/activity-guidelines.md": "ec0b7cb646080981b09a7dfb295013f1"
   },
   "ja": {
-    "/en.yml": "95c884ac3acf0f87d669cce1ed0890c7",
+    "/en.yml": "919022b6b2ae4b9f135a1e9477fcf0f5",
     "/how-to/volunteers.md": "919022b6b2ae4b9f135a1e9477fcf0f5",
     "/how-to/parents.md": "919022b6b2ae4b9f135a1e9477fcf0f5",
     "/how-to/events.md": "919022b6b2ae4b9f135a1e9477fcf0f5",
@@ -1440,7 +1440,7 @@
     "/activity-guidelines.md": "919022b6b2ae4b9f135a1e9477fcf0f5"
   },
   "kn": {
-    "/en.yml": "cca5ed3ab04f33ecbe927728f4f1bb8c",
+    "/en.yml": "919022b6b2ae4b9f135a1e9477fcf0f5",
     "/how-to/volunteers.md": "919022b6b2ae4b9f135a1e9477fcf0f5",
     "/how-to/parents.md": "919022b6b2ae4b9f135a1e9477fcf0f5",
     "/how-to/events.md": "919022b6b2ae4b9f135a1e9477fcf0f5",
@@ -1472,7 +1472,7 @@
     "/activity-guidelines.md": "2763326266be8ce50debb7ea528d58a2"
   },
   "kk": {
-    "/en.yml": "cca5ed3ab04f33ecbe927728f4f1bb8c",
+    "/en.yml": "2763326266be8ce50debb7ea528d58a2",
     "/how-to/volunteers.md": "2763326266be8ce50debb7ea528d58a2",
     "/how-to/parents.md": "2763326266be8ce50debb7ea528d58a2",
     "/how-to/events.md": "2763326266be8ce50debb7ea528d58a2",
@@ -1504,7 +1504,7 @@
     "/activity-guidelines.md": "2763326266be8ce50debb7ea528d58a2"
   },
   "km": {
-    "/en.yml": "cca5ed3ab04f33ecbe927728f4f1bb8c",
+    "/en.yml": "2763326266be8ce50debb7ea528d58a2",
     "/how-to/volunteers.md": "2763326266be8ce50debb7ea528d58a2",
     "/how-to/parents.md": "2763326266be8ce50debb7ea528d58a2",
     "/how-to/events.md": "2763326266be8ce50debb7ea528d58a2",
@@ -1536,7 +1536,7 @@
     "/activity-guidelines.md": "10e2d896d40e0c9636c4f27ae721ecb7"
   },
   "ko": {
-    "/en.yml": "c842cf2851318be115ca8833049fc937",
+    "/en.yml": "10e2d896d40e0c9636c4f27ae721ecb7",
     "/how-to/volunteers.md": "10e2d896d40e0c9636c4f27ae721ecb7",
     "/how-to/parents.md": "10e2d896d40e0c9636c4f27ae721ecb7",
     "/how-to/events.md": "10e2d896d40e0c9636c4f27ae721ecb7",
@@ -1568,7 +1568,7 @@
     "/activity-guidelines.md": "10e2d896d40e0c9636c4f27ae721ecb7"
   },
   "ku": {
-    "/en.yml": "cf79be43b88146879eeddb6b1b1dd58a",
+    "/en.yml": "10e2d896d40e0c9636c4f27ae721ecb7",
     "/how-to/volunteers.md": "10e2d896d40e0c9636c4f27ae721ecb7",
     "/how-to/parents.md": "10e2d896d40e0c9636c4f27ae721ecb7",
     "/how-to/events.md": "10e2d896d40e0c9636c4f27ae721ecb7",
@@ -1600,7 +1600,7 @@
     "/activity-guidelines.md": "0aedfa1e213662941545323ed03259d3"
   },
   "ky": {
-    "/en.yml": "cf79be43b88146879eeddb6b1b1dd58a",
+    "/en.yml": "0aedfa1e213662941545323ed03259d3",
     "/how-to/volunteers.md": "0aedfa1e213662941545323ed03259d3",
     "/how-to/parents.md": "0aedfa1e213662941545323ed03259d3",
     "/how-to/events.md": "0aedfa1e213662941545323ed03259d3",
@@ -1632,7 +1632,7 @@
     "/activity-guidelines.md": "0aedfa1e213662941545323ed03259d3"
   },
   "lv": {
-    "/en.yml": "cf79be43b88146879eeddb6b1b1dd58a",
+    "/en.yml": "0aedfa1e213662941545323ed03259d3",
     "/how-to/volunteers.md": "0aedfa1e213662941545323ed03259d3",
     "/how-to/parents.md": "0aedfa1e213662941545323ed03259d3",
     "/how-to/events.md": "0aedfa1e213662941545323ed03259d3",
@@ -1664,7 +1664,7 @@
     "/activity-guidelines.md": "bf3d19e390a75e85a1542d5b605c1229"
   },
   "lt": {
-    "/en.yml": "eb9ee528c241280c4f1a9b70179fc049",
+    "/en.yml": "bf3d19e390a75e85a1542d5b605c1229",
     "/how-to/volunteers.md": "bf3d19e390a75e85a1542d5b605c1229",
     "/how-to/parents.md": "bf3d19e390a75e85a1542d5b605c1229",
     "/how-to/events.md": "bf3d19e390a75e85a1542d5b605c1229",
@@ -1696,7 +1696,7 @@
     "/activity-guidelines.md": "bf3d19e390a75e85a1542d5b605c1229"
   },
   "mk": {
-    "/en.yml": "eb9ee528c241280c4f1a9b70179fc049",
+    "/en.yml": "2f7eb711aeed7863644b5dcf2a638047",
     "/how-to/volunteers.md": "2f7eb711aeed7863644b5dcf2a638047",
     "/how-to/parents.md": "2f7eb711aeed7863644b5dcf2a638047",
     "/how-to/events.md": "2f7eb711aeed7863644b5dcf2a638047",
@@ -1728,7 +1728,7 @@
     "/activity-guidelines.md": "2f7eb711aeed7863644b5dcf2a638047"
   },
   "ms": {
-    "/en.yml": "eb9ee528c241280c4f1a9b70179fc049",
+    "/en.yml": "2f7eb711aeed7863644b5dcf2a638047",
     "/how-to/volunteers.md": "2f7eb711aeed7863644b5dcf2a638047",
     "/how-to/parents.md": "2f7eb711aeed7863644b5dcf2a638047",
     "/how-to/events.md": "2f7eb711aeed7863644b5dcf2a638047",
@@ -1760,7 +1760,7 @@
     "/activity-guidelines.md": "2f7eb711aeed7863644b5dcf2a638047"
   },
   "mt": {
-    "/en.yml": "fddb1fb172583ab0b1768d086f167c54",
+    "/en.yml": "08df93a07c12bac1434546280c6bd559",
     "/how-to/volunteers.md": "08df93a07c12bac1434546280c6bd559",
     "/how-to/parents.md": "08df93a07c12bac1434546280c6bd559",
     "/how-to/events.md": "08df93a07c12bac1434546280c6bd559",
@@ -1792,7 +1792,7 @@
     "/activity-guidelines.md": "08df93a07c12bac1434546280c6bd559"
   },
   "mi": {
-    "/en.yml": "fddb1fb172583ab0b1768d086f167c54",
+    "/en.yml": "08df93a07c12bac1434546280c6bd559",
     "/how-to/volunteers.md": "08df93a07c12bac1434546280c6bd559",
     "/how-to/parents.md": "08df93a07c12bac1434546280c6bd559",
     "/how-to/events.md": "08df93a07c12bac1434546280c6bd559",
@@ -1824,7 +1824,7 @@
     "/activity-guidelines.md": "e73576b5b9a90cf80e85ccee51c5252d"
   },
   "mr": {
-    "/en.yml": "fddb1fb172583ab0b1768d086f167c54",
+    "/en.yml": "e73576b5b9a90cf80e85ccee51c5252d",
     "/how-to/volunteers.md": "e73576b5b9a90cf80e85ccee51c5252d",
     "/how-to/parents.md": "e73576b5b9a90cf80e85ccee51c5252d",
     "/how-to/events.md": "e73576b5b9a90cf80e85ccee51c5252d",
@@ -1856,7 +1856,7 @@
     "/activity-guidelines.md": "e73576b5b9a90cf80e85ccee51c5252d"
   },
   "mn": {
-    "/en.yml": "fddb1fb172583ab0b1768d086f167c54",
+    "/en.yml": "5eea98b81ce44a9619f598c2ae316b6f",
     "/how-to/volunteers.md": "5eea98b81ce44a9619f598c2ae316b6f",
     "/how-to/parents.md": "5eea98b81ce44a9619f598c2ae316b6f",
     "/how-to/events.md": "5eea98b81ce44a9619f598c2ae316b6f",
@@ -1888,7 +1888,7 @@
     "/activity-guidelines.md": "5eea98b81ce44a9619f598c2ae316b6f"
   },
   "nv": {
-    "/en.yml": "af961ab8ba965b8d9ce633276d34b7a0",
+    "/en.yml": "513e7919b4b8f4906f5391d3a7aa7f94",
     "/how-to/volunteers.md": "513e7919b4b8f4906f5391d3a7aa7f94",
     "/how-to/parents.md": "513e7919b4b8f4906f5391d3a7aa7f94",
     "/how-to/events.md": "513e7919b4b8f4906f5391d3a7aa7f94",
@@ -1920,7 +1920,7 @@
     "/activity-guidelines.md": "513e7919b4b8f4906f5391d3a7aa7f94"
   },
   "ne-NP": {
-    "/en.yml": "a7eaff1dba7a08eadadb0c9626840da5",
+    "/en.yml": "5eea98b81ce44a9619f598c2ae316b6f",
     "/how-to/volunteers.md": "5eea98b81ce44a9619f598c2ae316b6f",
     "/how-to/parents.md": "5eea98b81ce44a9619f598c2ae316b6f",
     "/how-to/events.md": "5eea98b81ce44a9619f598c2ae316b6f",
@@ -1952,7 +1952,7 @@
     "/activity-guidelines.md": "5eea98b81ce44a9619f598c2ae316b6f"
   },
   "se": {
-    "/en.yml": "a7eaff1dba7a08eadadb0c9626840da5",
+    "/en.yml": "5eea98b81ce44a9619f598c2ae316b6f",
     "/how-to/volunteers.md": "5eea98b81ce44a9619f598c2ae316b6f",
     "/how-to/parents.md": "5eea98b81ce44a9619f598c2ae316b6f",
     "/how-to/events.md": "5eea98b81ce44a9619f598c2ae316b6f",
@@ -1984,7 +1984,7 @@
     "/activity-guidelines.md": "c593b247ce96a1307d61cd24fd436f05"
   },
   "no": {
-    "/en.yml": "a7eaff1dba7a08eadadb0c9626840da5",
+    "/en.yml": "c593b247ce96a1307d61cd24fd436f05",
     "/how-to/volunteers.md": "c593b247ce96a1307d61cd24fd436f05",
     "/how-to/parents.md": "c593b247ce96a1307d61cd24fd436f05",
     "/how-to/events.md": "c593b247ce96a1307d61cd24fd436f05",
@@ -2016,7 +2016,7 @@
     "/activity-guidelines.md": "c593b247ce96a1307d61cd24fd436f05"
   },
   "nn-NO": {
-    "/en.yml": "a7eaff1dba7a08eadadb0c9626840da5",
+    "/en.yml": "f9af4dbe19fa64ff3a3983283436d0c9",
     "/how-to/volunteers.md": "f9af4dbe19fa64ff3a3983283436d0c9",
     "/how-to/parents.md": "f9af4dbe19fa64ff3a3983283436d0c9",
     "/how-to/events.md": "f9af4dbe19fa64ff3a3983283436d0c9",
@@ -2048,7 +2048,7 @@
     "/activity-guidelines.md": "f9af4dbe19fa64ff3a3983283436d0c9"
   },
   "pap": {
-    "/en.yml": "05065727311982e1c6a0101728fe87da",
+    "/en.yml": "f9af4dbe19fa64ff3a3983283436d0c9",
     "/how-to/volunteers.md": "f9af4dbe19fa64ff3a3983283436d0c9",
     "/how-to/parents.md": "f9af4dbe19fa64ff3a3983283436d0c9",
     "/how-to/events.md": "f9af4dbe19fa64ff3a3983283436d0c9",
@@ -2080,7 +2080,7 @@
     "/activity-guidelines.md": "f9af4dbe19fa64ff3a3983283436d0c9"
   },
   "ps": {
-    "/en.yml": "05065727311982e1c6a0101728fe87da",
+    "/en.yml": "6b92181b0b3ded3f2ed1f0e1099c2ce1",
     "/how-to/volunteers.md": "6b92181b0b3ded3f2ed1f0e1099c2ce1",
     "/how-to/parents.md": "6b92181b0b3ded3f2ed1f0e1099c2ce1",
     "/how-to/events.md": "6b92181b0b3ded3f2ed1f0e1099c2ce1",
@@ -2112,7 +2112,7 @@
     "/activity-guidelines.md": "6b92181b0b3ded3f2ed1f0e1099c2ce1"
   },
   "fa": {
-    "/en.yml": "05065727311982e1c6a0101728fe87da",
+    "/en.yml": "6b92181b0b3ded3f2ed1f0e1099c2ce1",
     "/how-to/volunteers.md": "6b92181b0b3ded3f2ed1f0e1099c2ce1",
     "/how-to/parents.md": "6b92181b0b3ded3f2ed1f0e1099c2ce1",
     "/how-to/events.md": "6b92181b0b3ded3f2ed1f0e1099c2ce1",
@@ -2144,7 +2144,7 @@
     "/activity-guidelines.md": "2ac13e0e56aa9db3d58ed89b03d8b890"
   },
   "pl": {
-    "/en.yml": "e39db6b77cd5fdd740d6ac57e7a5ee7a",
+    "/en.yml": "bc4c0c632ef25e1f53cc056299000c57",
     "/how-to/volunteers.md": "2ac13e0e56aa9db3d58ed89b03d8b890",
     "/how-to/parents.md": "2ac13e0e56aa9db3d58ed89b03d8b890",
     "/how-to/events.md": "2ac13e0e56aa9db3d58ed89b03d8b890",
@@ -2176,7 +2176,7 @@
     "/activity-guidelines.md": "2ac13e0e56aa9db3d58ed89b03d8b890"
   },
   "pt-PT": {
-    "/en.yml": "503d2af400d4a186b8e85157c38f4463",
+    "/en.yml": "a0ec0caa8b45d65a332a1af5cc47868a",
     "/how-to/volunteers.md": "a0ec0caa8b45d65a332a1af5cc47868a",
     "/how-to/parents.md": "a0ec0caa8b45d65a332a1af5cc47868a",
     "/how-to/events.md": "a0ec0caa8b45d65a332a1af5cc47868a",
@@ -2208,7 +2208,7 @@
     "/activity-guidelines.md": "a0ec0caa8b45d65a332a1af5cc47868a"
   },
   "pt-BR": {
-    "/en.yml": "503d2af400d4a186b8e85157c38f4463",
+    "/en.yml": "a0ec0caa8b45d65a332a1af5cc47868a",
     "/how-to/volunteers.md": "a0ec0caa8b45d65a332a1af5cc47868a",
     "/how-to/parents.md": "a0ec0caa8b45d65a332a1af5cc47868a",
     "/how-to/events.md": "a0ec0caa8b45d65a332a1af5cc47868a",
@@ -2240,7 +2240,7 @@
     "/activity-guidelines.md": "a0ec0caa8b45d65a332a1af5cc47868a"
   },
   "ro": {
-    "/en.yml": "503d2af400d4a186b8e85157c38f4463",
+    "/en.yml": "bbc43fad3c0fb61487c60f9aae39348f",
     "/how-to/volunteers.md": "bbc43fad3c0fb61487c60f9aae39348f",
     "/how-to/parents.md": "bbc43fad3c0fb61487c60f9aae39348f",
     "/how-to/events.md": "bbc43fad3c0fb61487c60f9aae39348f",
@@ -2272,7 +2272,7 @@
     "/activity-guidelines.md": "bbc43fad3c0fb61487c60f9aae39348f"
   },
   "ru": {
-    "/en.yml": "6f75b2f41c258d035327aad5302094f3",
+    "/en.yml": "bbc43fad3c0fb61487c60f9aae39348f",
     "/how-to/volunteers.md": "bbc43fad3c0fb61487c60f9aae39348f",
     "/how-to/parents.md": "bbc43fad3c0fb61487c60f9aae39348f",
     "/how-to/events.md": "bbc43fad3c0fb61487c60f9aae39348f",
@@ -2304,7 +2304,7 @@
     "/activity-guidelines.md": "845cbe2138aa771d1889ad4ad3d92dc6"
   },
   "sm": {
-    "/en.yml": "af961ab8ba965b8d9ce633276d34b7a0",
+    "/en.yml": "513e7919b4b8f4906f5391d3a7aa7f94",
     "/how-to/volunteers.md": "513e7919b4b8f4906f5391d3a7aa7f94",
     "/how-to/parents.md": "513e7919b4b8f4906f5391d3a7aa7f94",
     "/how-to/events.md": "513e7919b4b8f4906f5391d3a7aa7f94",
@@ -2336,7 +2336,7 @@
     "/how-to/volunteers-old.md": "513e7919b4b8f4906f5391d3a7aa7f94"
   },
   "sr": {
-    "/en.yml": "6f75b2f41c258d035327aad5302094f3",
+    "/en.yml": "845cbe2138aa771d1889ad4ad3d92dc6",
     "/how-to/volunteers.md": "845cbe2138aa771d1889ad4ad3d92dc6",
     "/how-to/parents.md": "845cbe2138aa771d1889ad4ad3d92dc6",
     "/how-to/events.md": "845cbe2138aa771d1889ad4ad3d92dc6",
@@ -2368,7 +2368,7 @@
     "/activity-guidelines.md": "845cbe2138aa771d1889ad4ad3d92dc6"
   },
   "si-LK": {
-    "/en.yml": "6f75b2f41c258d035327aad5302094f3",
+    "/en.yml": "b953fe5f18632fa976745a0fdd3e4dc3",
     "/how-to/volunteers.md": "b953fe5f18632fa976745a0fdd3e4dc3",
     "/how-to/parents.md": "b953fe5f18632fa976745a0fdd3e4dc3",
     "/how-to/events.md": "b953fe5f18632fa976745a0fdd3e4dc3",
@@ -2400,7 +2400,7 @@
     "/activity-guidelines.md": "b953fe5f18632fa976745a0fdd3e4dc3"
   },
   "sk": {
-    "/en.yml": "f4ce7b13fcd07a803d3aed9cbeac689e",
+    "/en.yml": "b953fe5f18632fa976745a0fdd3e4dc3",
     "/how-to/volunteers.md": "b953fe5f18632fa976745a0fdd3e4dc3",
     "/how-to/parents.md": "b953fe5f18632fa976745a0fdd3e4dc3",
     "/how-to/events.md": "b953fe5f18632fa976745a0fdd3e4dc3",
@@ -2432,7 +2432,7 @@
     "/activity-guidelines.md": "afc7ca7b06326cc9cedf2c98d6c6805d"
   },
   "sl": {
-    "/en.yml": "f4ce7b13fcd07a803d3aed9cbeac689e",
+    "/en.yml": "afc7ca7b06326cc9cedf2c98d6c6805d",
     "/how-to/volunteers.md": "afc7ca7b06326cc9cedf2c98d6c6805d",
     "/how-to/parents.md": "afc7ca7b06326cc9cedf2c98d6c6805d",
     "/how-to/events.md": "afc7ca7b06326cc9cedf2c98d6c6805d",
@@ -2464,7 +2464,7 @@
     "/activity-guidelines.md": "afc7ca7b06326cc9cedf2c98d6c6805d"
   },
   "es-ES": {
-    "/en.yml": "f4ce7b13fcd07a803d3aed9cbeac689e",
+    "/en.yml": "11613559bfc65c01876f28bd27f0f399",
     "/how-to/volunteers.md": "145c742a9a4c6162349d8658c5c96a03",
     "/how-to/parents.md": "145c742a9a4c6162349d8658c5c96a03",
     "/how-to/events.md": "145c742a9a4c6162349d8658c5c96a03",
@@ -2496,7 +2496,7 @@
     "/activity-guidelines.md": "145c742a9a4c6162349d8658c5c96a03"
   },
   "es-MX": {
-    "/en.yml": "16d31b75faaf2caa4486633e6709031b",
+    "/en.yml": "2cd48ebcab0c99fe9a53b0dd840efe06",
     "/how-to/volunteers.md": "2cd48ebcab0c99fe9a53b0dd840efe06",
     "/how-to/parents.md": "2cd48ebcab0c99fe9a53b0dd840efe06",
     "/how-to/events.md": "2cd48ebcab0c99fe9a53b0dd840efe06",
@@ -2528,7 +2528,7 @@
     "/activity-guidelines.md": "2cd48ebcab0c99fe9a53b0dd840efe06"
   },
   "sv-SE": {
-    "/en.yml": "16d31b75faaf2caa4486633e6709031b",
+    "/en.yml": "2cd48ebcab0c99fe9a53b0dd840efe06",
     "/how-to/volunteers.md": "30b18740c38ce0600812be4f56638b9b",
     "/how-to/parents.md": "30b18740c38ce0600812be4f56638b9b",
     "/how-to/events.md": "30b18740c38ce0600812be4f56638b9b",
@@ -2560,7 +2560,7 @@
     "/activity-guidelines.md": "30b18740c38ce0600812be4f56638b9b"
   },
   "tg": {
-    "/en.yml": "16d31b75faaf2caa4486633e6709031b",
+    "/en.yml": "30b18740c38ce0600812be4f56638b9b",
     "/how-to/volunteers.md": "30b18740c38ce0600812be4f56638b9b",
     "/how-to/parents.md": "30b18740c38ce0600812be4f56638b9b",
     "/how-to/events.md": "30b18740c38ce0600812be4f56638b9b",
@@ -2592,7 +2592,7 @@
     "/activity-guidelines.md": "30b18740c38ce0600812be4f56638b9b"
   },
   "ta": {
-    "/en.yml": "16d31b75faaf2caa4486633e6709031b",
+    "/en.yml": "7a1644db858d7fe2abce5c12057dde96",
     "/how-to/volunteers.md": "7a1644db858d7fe2abce5c12057dde96",
     "/how-to/parents.md": "7a1644db858d7fe2abce5c12057dde96",
     "/how-to/events.md": "7a1644db858d7fe2abce5c12057dde96",
@@ -2624,7 +2624,7 @@
     "/activity-guidelines.md": "7a1644db858d7fe2abce5c12057dde96"
   },
   "te": {
-    "/en.yml": "e49325b0cfd81a6793378113975804e0",
+    "/en.yml": "7a1644db858d7fe2abce5c12057dde96",
     "/how-to/volunteers.md": "7a1644db858d7fe2abce5c12057dde96",
     "/how-to/parents.md": "7a1644db858d7fe2abce5c12057dde96",
     "/how-to/events.md": "7a1644db858d7fe2abce5c12057dde96",
@@ -2656,7 +2656,7 @@
     "/activity-guidelines.md": "515fad767f6f3b8bc945151c7ce2df1e"
   },
   "th": {
-    "/en.yml": "774bcbe3df3f8498f7c75bdeaeabbd1b",
+    "/en.yml": "515fad767f6f3b8bc945151c7ce2df1e",
     "/how-to/volunteers.md": "515fad767f6f3b8bc945151c7ce2df1e",
     "/how-to/parents.md": "515fad767f6f3b8bc945151c7ce2df1e",
     "/how-to/events.md": "515fad767f6f3b8bc945151c7ce2df1e",
@@ -2688,7 +2688,7 @@
     "/activity-guidelines.md": "515fad767f6f3b8bc945151c7ce2df1e"
   },
   "ti": {
-    "/en.yml": "e49325b0cfd81a6793378113975804e0",
+    "/en.yml": "0e86b6060fdbe46c63125161d1cba0b3",
     "/how-to/volunteers.md": "0e86b6060fdbe46c63125161d1cba0b3",
     "/how-to/parents.md": "0e86b6060fdbe46c63125161d1cba0b3",
     "/how-to/events.md": "0e86b6060fdbe46c63125161d1cba0b3",
@@ -2720,7 +2720,7 @@
     "/activity-guidelines.md": "0e86b6060fdbe46c63125161d1cba0b3"
   },
   "tr": {
-    "/en.yml": "682c9f8b4c4e6d2c66b99af7c2a3cc2d",
+    "/en.yml": "0e86b6060fdbe46c63125161d1cba0b3",
     "/how-to/volunteers.md": "0e86b6060fdbe46c63125161d1cba0b3",
     "/how-to/parents.md": "0e86b6060fdbe46c63125161d1cba0b3",
     "/how-to/events.md": "0e86b6060fdbe46c63125161d1cba0b3",
@@ -2752,7 +2752,7 @@
     "/activity-guidelines.md": "c0485f2e60a776b79a5a303ff886b04c"
   },
   "uk": {
-    "/en.yml": "682c9f8b4c4e6d2c66b99af7c2a3cc2d",
+    "/en.yml": "36651624babd3fc75abbe79c0e580dcf",
     "/how-to/volunteers.md": "c0485f2e60a776b79a5a303ff886b04c",
     "/how-to/parents.md": "c0485f2e60a776b79a5a303ff886b04c",
     "/how-to/events.md": "c0485f2e60a776b79a5a303ff886b04c",
@@ -2784,7 +2784,7 @@
     "/activity-guidelines.md": "c0485f2e60a776b79a5a303ff886b04c"
   },
   "ur-PK": {
-    "/en.yml": "682c9f8b4c4e6d2c66b99af7c2a3cc2d",
+    "/en.yml": "a988c975fd75f7537931de03f21be5a3",
     "/how-to/volunteers.md": "a988c975fd75f7537931de03f21be5a3",
     "/how-to/parents.md": "a988c975fd75f7537931de03f21be5a3",
     "/how-to/events.md": "a988c975fd75f7537931de03f21be5a3",
@@ -2816,7 +2816,7 @@
     "/activity-guidelines.md": "a988c975fd75f7537931de03f21be5a3"
   },
   "uz": {
-    "/en.yml": "7f321208537793e43a79b7cd21d766b4",
+    "/en.yml": "a988c975fd75f7537931de03f21be5a3",
     "/how-to/volunteers.md": "a988c975fd75f7537931de03f21be5a3",
     "/how-to/parents.md": "a988c975fd75f7537931de03f21be5a3",
     "/how-to/events.md": "22dad7dcbf00cc5595716e4df0a07a22",
@@ -2848,7 +2848,7 @@
     "/activity-guidelines.md": "22dad7dcbf00cc5595716e4df0a07a22"
   },
   "vi": {
-    "/en.yml": "7f321208537793e43a79b7cd21d766b4",
+    "/en.yml": "22dad7dcbf00cc5595716e4df0a07a22",
     "/how-to/volunteers.md": "22dad7dcbf00cc5595716e4df0a07a22",
     "/how-to/parents.md": "22dad7dcbf00cc5595716e4df0a07a22",
     "/how-to/events.md": "22dad7dcbf00cc5595716e4df0a07a22",
@@ -2880,7 +2880,7 @@
     "/activity-guidelines.md": "22dad7dcbf00cc5595716e4df0a07a22"
   },
   "yo": {
-    "/en.yml": "7f321208537793e43a79b7cd21d766b4",
+    "/en.yml": "36e8335f81b1fa523a948a5b1bf13828",
     "/how-to/volunteers.md": "36e8335f81b1fa523a948a5b1bf13828",
     "/how-to/parents.md": "36e8335f81b1fa523a948a5b1bf13828",
     "/how-to/events.md": "36e8335f81b1fa523a948a5b1bf13828",
@@ -2912,7 +2912,7 @@
     "/activity-guidelines.md": "c9f4318fa111b52db47ad8a879231d31"
   },
   "zu": {
-    "/en.yml": "af961ab8ba965b8d9ce633276d34b7a0",
+    "/en.yml": "c9f4318fa111b52db47ad8a879231d31",
     "/how-to/volunteers.md": "c9f4318fa111b52db47ad8a879231d31",
     "/how-to/parents.md": "c9f4318fa111b52db47ad8a879231d31",
     "/how-to/events.md": "c9f4318fa111b52db47ad8a879231d31",
@@ -2976,7 +2976,7 @@
     "/activity-guidelines.md": "W/\"6727646f1cbf826efa727e88dd55dc68\""
   },
   "cy": {
-    "/en.yml": "7f321208537793e43a79b7cd21d766b4",
+    "/en.yml": "36e8335f81b1fa523a948a5b1bf13828",
     "/how-to/volunteers.md": "36e8335f81b1fa523a948a5b1bf13828",
     "/how-to/parents.md": "36e8335f81b1fa523a948a5b1bf13828",
     "/how-to/events.md": "36e8335f81b1fa523a948a5b1bf13828",

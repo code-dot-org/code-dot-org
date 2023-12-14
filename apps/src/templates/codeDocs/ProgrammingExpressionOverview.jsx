@@ -38,7 +38,7 @@ export default function ProgrammingExpressionOverview({
       const blocksDom = parseElement(
         `<block type='${programmingExpression.blockName}' />`
       );
-      const blockSpace = Blockly.createEmbeddedWorkspace(
+      const blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(
         titleRef.current,
         blocksDom,
         {

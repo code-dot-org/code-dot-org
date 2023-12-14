@@ -1,5 +1,5 @@
 import GoogleBlockly from 'blockly/core';
-import {BLOCK_TYPES, PROCEDURE_DEFINITION_TYPES} from '../constants';
+import {PROCEDURE_DEFINITION_TYPES} from '../constants';
 import {partitionBlocksByType} from './cdoUtils';
 
 const unknownBlockState = {type: 'unknown', enabled: false};
@@ -30,9 +30,6 @@ export default class CdoBlockSerializer extends GoogleBlockly.serialization
           blockState.movable = !Blockly.useModalFunctionEditor;
           // Ensure that procedure definitions are editable.
           blockState.editable = true;
-        } else if (blockState.type === BLOCK_TYPES.whenRun) {
-          // Ensures that when run blocks cannot be deleted.
-          blockState.deletable = false;
         }
         GoogleBlockly.serialization.blocks.append(blockState, workspace, {
           recordUndo: Blockly.Events.getRecordUndo(),

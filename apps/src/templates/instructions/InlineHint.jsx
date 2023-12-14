@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import EmbeddedWorkspace from '../EmbeddedWorkspace';
+import ReadOnlyBlockSpace from '../ReadOnlyBlockSpace';
 import ChatBubble from './ChatBubble';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {connect} from 'react-redux';
@@ -58,7 +58,7 @@ class InlineHint extends React.Component {
       >
         <SafeMarkdown markdown={this.props.markdown} />
         {this.props.block && (
-          <EmbeddedWorkspace
+          <ReadOnlyBlockSpace
             block={this.props.block}
             isRtl={this.props.isRtl}
           />

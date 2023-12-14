@@ -40,7 +40,7 @@ module I18n
               source_path = File.join(I18N_SOURCE_DIR_PATH, file_name)
               next unless File.exist?(source_path)
 
-              backup_path = File.join(I18N_BACKUP_DIR_PATH, file_name)
+              backup_path = CDO.dir(I18N_ORIGINAL_DIR, DIR_NAME, file_name)
               I18nScriptUtils.copy_file(source_path, backup_path)
 
               RedactRestoreUtils.redact(source_path, source_path, REDACT_PLUGINS)

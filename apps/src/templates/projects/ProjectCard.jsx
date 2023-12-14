@@ -19,43 +19,42 @@ export default class ProjectCard extends React.Component {
     currentGallery: PropTypes.oneOf(['personal', 'public']).isRequired,
     showFullThumbnail: PropTypes.bool,
     isDetailView: PropTypes.bool,
-    showReportAbuseHeader: PropTypes.bool,
   };
 
   constructor(props) {
     super(props);
 
     this.state = {
-      isShowingReportAbusePopUp: false,
-      hasBeenReported: false, // may need to change this state in the future to utilize report cookies - if gallery ever keeps an immediate report
+      showReportAbuse: false,
+      showReportHeader: false, // may need to change this state in the future to utilize report cookies - if gallery ever keeps an immediate report
     };
     this.showReportAbusePopUp = this.showReportAbusePopUp.bind(this);
     this.closeReportAbusePopUp = this.closeReportAbusePopUp.bind(this);
-    this.onReportAbuse = this.onReportAbuse.bind(this);
+    this.showReportedHeader = this.showReportedHeader.bind(this);
   }
 
   showReportAbusePopUp() {
     this.setState({
-      isShowingReportAbusePopUp: true,
+      showReportAbuse: true,
     });
   }
 
   closeReportAbusePopUp() {
     this.setState({
-      isShowingReportAbusePopUp: false,
+      showReportAbuse: false,
     });
   }
 
-  onReportAbuse() {
+  showReportedHeader() {
     this.setState({
-      hasBeenReported: true,
+      showReportHeader: true,
     });
   }
 
   renderHeader() {
-    const {hasBeenReported} = this.state;
+    const {showReportHeader} = this.state;
 
-    if (!hasBeenReported) {
+    if (!showReportHeader) {
       return (
         <div
           style={{
@@ -92,8 +91,7 @@ export default class ProjectCard extends React.Component {
   }
 
   render() {
-    const {projectData, currentGallery, isDetailView, showReportAbuseHeader} =
-      this.props;
+    const {projectData, currentGallery, isDetailView} = this.props;
     const {type, channel} = this.props.projectData;
     const isPersonalGallery = currentGallery === 'personal';
     const isPublicGallery = currentGallery === 'public';
@@ -110,21 +108,21 @@ export default class ProjectCard extends React.Component {
       isPublicGallery && isDetailView && projectData.publishedAt;
     const noTimeOnCardStyle = shouldShowPublicDetails ? {} : styles.noTime;
 
-    const {isShowingReportAbusePopUp} = this.state;
+    const {showReportAbuse} = this.state;
 
     return (
       <div className="project_card">
-        {isShowingReportAbusePopUp && (
+        {showReportAbuse ? (
           <ReportAbusePopUp
             abuseUrl={url}
             projectData={this.props.projectData}
             onClose={this.closeReportAbusePopUp}
-            onReport={this.onReportAbuse}
+            onReport={this.showReportedHeader}
           />
-        )}
+        ) : null}
 
         <div className={style.card}>
-          {showReportAbuseHeader && this.renderHeader()}
+          {this.renderHeader()}
 
           <div style={thumbnailStyle}>
             <a

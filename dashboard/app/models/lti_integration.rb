@@ -29,7 +29,6 @@ class LtiIntegration < ApplicationRecord
   validates :auth_redirect_url, presence: true
   validates :jwks_url, presence: true
   validates :access_token_url, presence: true
-  has_many :lti_courses, dependent: :destroy
 
   before_create :set_uuid
 

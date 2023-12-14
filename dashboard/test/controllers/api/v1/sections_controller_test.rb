@@ -121,7 +121,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in admin
     get :index
     assert_response :success
-    expected = admin.sections_instructed.map(&:summarize_without_students).as_json
+    expected = admin.sections.map(&:summarize_without_students).as_json
     assert_equal expected, returned_json
   end
 

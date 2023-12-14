@@ -11,7 +11,7 @@
 - videos << { id: 'learn',     code: 'qYZF6oIZtfc', text: I18n.t(:video_title_anybody_can_learn), duration: I18n.t(:video_1min), download: '//videos.code.org/social/codeorg-60sec.mp4'}
 - videos << { id: 'aracely',   code: 'rqU8eNJ-SS0', text: I18n.t(:video_title_my_name_is_aracely), duration: I18n.t(:video_3min), download: '//videos.code.org/social/my-name-is-aracely.mp4'}
 - videos << { id: 'latam_hoc',   code: 'EGgdCryC8Uo', text: I18n.t(:video_title_latam_hoc), duration: I18n.t(:video_2min), download: '//video.code.org/social/latam-hour-of-code-2018.mp4'}
-- videos << { id: 'young_women_in_cs',   code: 'Om0lYzVZAq8', text: hoc_s(:video_title_young_women_in_computer_science), duration: I18n.t(:video_2min), download: '//videos.code.org/ywics-panel-2023.mp4'}
+
 - videos.each do |video|
   .col-50{style: "float:left; padding:10px"}
     - url = "https://www.youtube.com/watch?v=#{video[:code]}"

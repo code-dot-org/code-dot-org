@@ -19,17 +19,6 @@ describe('StudentHomepage', () => {
     studentId: 123,
     isEnglish: true,
     showVerifiedTeacherWarning: false,
-    specialAnnouncement: {
-      id: 'id',
-      image: '/image',
-      title: 'title',
-      body: 'body',
-      link: '/link',
-      description: 'description',
-      buttonUrl: '/url',
-      buttonText: 'press me',
-      heading: 'heading',
-    },
   };
 
   it('shows a Header Banner that says My Dashboard', () => {
@@ -77,7 +66,7 @@ describe('StudentHomepage', () => {
 
   it('shows the special announcement for all languages', () => {
     const wrapper = shallow(<StudentHomepage {...TEST_PROPS} />);
-    assert(wrapper.find('MarketingAnnouncementBanner').exists());
+    assert(wrapper.find('SpecialAnnouncement').exists());
   });
 
   it('displays a notification for verified teacher permissions if showVerifiedTeacherWarning is true', () => {

@@ -1,10 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "published": true,
-  "game_id": 41,
-  "created_at": "2023-03-03T20:22:09.000Z",
-  "level_num": "custom",
-  "user_id": 18603,
   "properties": {
     "encrypted": "false",
     "skin": "applab",
@@ -216,6 +211,10 @@
       "ledScreen.scrollString": null,
       "compass.getHeading": null
     },
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
     "embed": "false",
     "project_template_level_name": "U6_L03_Lists Practice_Choice_3-Template",
     "mini_rubric": "false",
@@ -239,14 +238,14 @@
     "beginner_mode": "false",
     "fail_on_lint_errors": "false",
     "widget_mode": "false",
-    "ai_enabled": "false",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
-    "thumbnail_url": "https://images.code.org/442c509d85a87f4f46980567dfb04c67-levelProg2.png"
+    "ai_enabled": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2023-03-03 20:22:57 +0000\",\"changed\":[\"validation_enabled\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-12-11 16:29:54 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "game_id": 41,
+  "published": true,
+  "created_at": "2023-03-03T20:22:09.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "audit_log": "[{\"changed_at\":\"2023-03-03 20:22:57 +0000\",\"changed\":[\"validation_enabled\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

@@ -16,7 +16,7 @@ describe('Cohort Calculator', () => {
       cohortCalculator = shallow(
         <CohortCalculator
           regionalPartnerFilterValue={regionalPartnerFilterValue}
-          role="csp_teachers" // eslint-disable-line jsx-a11y/aria-role
+          role="csp_teachers"
           accepted={0}
         />
       );
@@ -51,7 +51,7 @@ describe('Cohort Calculator', () => {
       cohortCalculator = shallow(
         <CohortCalculator
           regionalPartnerFilterValue={regionalPartnerFilterValue}
-          role="csp_teachers" // eslint-disable-line jsx-a11y/aria-role
+          role="csp_teachers"
           accepted={0}
         />
       );

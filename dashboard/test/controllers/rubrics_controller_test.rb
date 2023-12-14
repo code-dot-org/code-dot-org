@@ -329,44 +329,8 @@ class RubricsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test 'run ai evaluations for user succeeds if user attempted but did not submit project' do
-    sign_in @teacher
-
-    new_student = create :student
-    create :follower, student_user: new_student, user: @teacher
-    new_storage_id = create_storage_id_for_user(new_student.id)
-
-    channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, new_storage_id, @script_level.script_id)
-    new_channel_id = channel_token.channel
-
-    stub_project_source_data(new_channel_id)
-
-    Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
-    EvaluateRubricJob.stubs(:ai_enabled?).returns(true)
-    EvaluateRubricJob.expects(:perform_later).with(user_id: new_student.id, requester_id: @teacher.id, script_level_id: @script_level.id).once
-
-    post :ai_evaluation_status_for_user, params: {
-      id: @rubric.id,
-      userId: new_student.id,
-    }
-    assert_response :success
-    response = JSON.parse(@response.body)
-    assert response['attempted']
-    refute response['lastAttemptEvaluated']
-
-    post :run_ai_evaluations_for_user, params: {
-      id: @rubric.id,
-      userId: new_student.id,
-    }
-    assert_response :success
-  end
-
   test "run ai evaluations returns bad request if level not attempted" do
     sign_in @teacher
-
-    new_student = create :student
-    create :follower, student_user: new_student, user: @teacher
-    create_storage_id_for_user(new_student.id)
 
     Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
     EvaluateRubricJob.stubs(:ai_enabled?).returns(true)
@@ -374,7 +338,7 @@ class RubricsControllerTest < ActionController::TestCase
 
     post :ai_evaluation_status_for_user, params: {
       id: @rubric.id,
-      userId: new_student.id,
+      userId: @student.id,
     }
     assert_response :success
     response = JSON.parse(@response.body)
@@ -383,7 +347,7 @@ class RubricsControllerTest < ActionController::TestCase
 
     post :run_ai_evaluations_for_user, params: {
       id: @rubric.id,
-      userId: new_student.id,
+      userId: @student.id,
     }
     assert_response :bad_request
   end
@@ -519,8 +483,7 @@ class RubricsControllerTest < ActionController::TestCase
     fake_source_data = {
       status: 'FOUND',
       body: StringIO.new(fake_main_json),
-      version_id: version_id,
-      last_modified: DateTime.now
+      version_id: version_id
     }
     SourceBucket.any_instance.stubs(:get).with(channel_id, "main.json").returns(fake_source_data)
   end

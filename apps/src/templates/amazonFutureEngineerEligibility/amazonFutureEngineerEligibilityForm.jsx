@@ -1,6 +1,6 @@
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+//import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+//import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {Button, Checkbox} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
@@ -141,9 +141,10 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
       event: 'continue',
       data_json: JSON.stringify(submitData),
     });
-    analyticsReporter.sendEvent(EVENTS.AFE_CONTINUE, {
+    // TODO: Reenable Amplitude https://codedotorg.atlassian.net/browse/ACQ-1209
+    /*analyticsReporter.sendEvent(EVENTS.AFE_CONTINUE, {
       submitData: JSON.stringify(submitData),
-    });
+    });*/
 
     this.props.updateFormData(submitData);
     this.props.updateFormData(submitData);
@@ -188,6 +189,10 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
 
     if (this.state.csta) {
       requiredFields.push('consentCSTA');
+    }
+
+    if (this.state.inspirationKit) {
+      requiredFields.push('street1', 'city', 'state', 'zip');
     }
 
     const missingRequiredFields = requiredFields.filter(f => {

@@ -22,7 +22,8 @@ Visual guides for Steps 1 - 3 can be [found here][install-canvas], and for Step 
 1. Enter the following LTI Key Settings:
     - Key Name: `<your-key-name>`
     - Owner Email: `<admin-owner-email>`
-    - Redirect URIs: `https://studio.code.org/lti/v1/authenticate`
+    - Redirect URIs: `https://studio.code.org/home` NOTE: If you use the JSON
+    configuration option below, this will autogenerate for you
     - Notes: `(Optional) Add any notes about the LTI key, such as the reason it was created`
 
 ### Step 2: Configure your LTI Key
@@ -67,19 +68,11 @@ option.
         "text": "Launch Code.org",
         "placements": [
           {
-            "placement": "account_navigation",
-            "message_type": "LtiResourceLinkRequest"
-          },
-          {
             "placement": "link_selection",
-            "message_type": "LtiResourceLinkRequest"
+            "message_type": "LtiResourceLinkRequest"       
           },
           {
-            "placement": "assignment_menu",
-            "message_type": "LtiResourceLinkRequest"
-          },
-          {
-            "placement": "assignment_selection",
+            "placement": "submission_type_selection",
             "message_type": "LtiResourceLinkRequest"
           }
         ]

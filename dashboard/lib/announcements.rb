@@ -21,11 +21,7 @@ class Announcements
     return nil unless banner_id_for_page
 
     banner = banners[banner_id_for_page]
-
-    #Returns banner if no DCDO property or if DCDO property is present and set to true
-    unless banner && banner["dcdo"] && !DCDO.get(banner["dcdo"], false)
-      banner&.merge({id: banner_id_for_page})
-    end
+    banner&.merge({id: banner_id_for_page})
   end
 
   # gets localized special announcement data for a page, or nil if not found

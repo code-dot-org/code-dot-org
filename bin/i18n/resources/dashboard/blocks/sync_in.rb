@@ -52,7 +52,7 @@ module I18n
           end
 
           def prepare
-            I18nScriptUtils.write_yaml_file(ORIGIN_I18N_FILE_PATH, i18n_data)
+            I18nScriptUtils.write_file(ORIGIN_I18N_FILE_PATH, I18nScriptUtils.to_crowdin_yaml(i18n_data))
             I18nScriptUtils.copy_file(ORIGIN_I18N_FILE_PATH, I18N_SOURCE_FILE_PATH)
           end
 

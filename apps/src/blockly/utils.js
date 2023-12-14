@@ -1,17 +1,5 @@
-import _ from 'lodash';
 import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
-
-/**
- * Reads a boolean attribute from an XML element.
- * @param {Element} xmlElement - The XML element from which the attribute will be read.
- * @param {string} attribute - The name of the attribute to be read from the XML element.
- * @returns {boolean} True if the attribute value is exactly 'true', otherwise false.
- * If we ever need to return true for unset attributes, we can update this function.
- */
-export function readBooleanAttribute(xmlElement, attribute) {
-  const attributeValue = xmlElement.getAttribute(attribute);
-  return attributeValue === 'true';
-}
+import _ from 'lodash';
 
 export function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);

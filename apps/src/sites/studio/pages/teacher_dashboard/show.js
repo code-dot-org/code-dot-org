@@ -79,16 +79,8 @@ $(document).ready(function () {
   if (defaultScriptId) {
     store.dispatch(setScriptId(defaultScriptId));
   }
-  // Reorder coursesWithProgress so that the current section is at the top and other sections are in order from newest to oldest
-  const reorderedCourses = [
-    ...coursesWithProgress.filter(
-      course => course.id !== section.course_version_id
-    ),
-    ...coursesWithProgress.filter(
-      course => course.id === section.course_version_id
-    ),
-  ].reverse();
-  store.dispatch(setCoursesWithProgress(reorderedCourses));
+
+  store.dispatch(setCoursesWithProgress(coursesWithProgress));
 
   ReactDOM.render(
     <Provider store={store}>

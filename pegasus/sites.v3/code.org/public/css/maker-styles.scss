@@ -20,6 +20,12 @@ section.device-setup { // /maker/circuitplayground
   }
 }
 
+@media screen and (max-width: $width-sm) {
+  .maker-skinny-banner {
+    margin-top: 0 !important;
+  }
+}
+
 // code.org/maker/index.haml
 section.hero-banner-basic {
   padding: 0 2rem;

@@ -44,7 +44,7 @@
 |Iraq|ABCode|Batool Hussain|ABcode.global@gmail.com|
 |Israel|Wix|Yossi Hayut|yossih@wix.com<br>http://www.wix.com|
 |Italy|Programma il Futuro|Enrico Nardelli|didattica@programmailfuturo.it<br>https://programmailfuturo.it|
-|Jamaica|Seprod Foundation|Lisa D'Oyen|ldoyen@seprod.com<br>https://seprodfoundation.org/|
+|Jamaica|Seprod Foundation|Lisa D'Oyen|ldoyen@seprod.com<br>www.seprodfoundation.org|
 |Japan|特定非営利活動法人みんなのコード (Code for Everyone)|利根川 裕太 (Yuta Tonegawa)|info@code.or.jp|
 |Kenya|Uzima Aid|Gideon Ochieng'|gideon.ochieng@uzimaid.org<br>http://www.uzimaid.org/|
 |Kosovo|SHPIK|Bekim Kasumi|bekim.kasumi@shpik.org<br>www.shpik.org|

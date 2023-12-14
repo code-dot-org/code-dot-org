@@ -258,41 +258,41 @@ en:
         title: My Robotic Friends
         desc: Learn to program by writing code for your friends!
       BuildingAFoundation_2018:
-        title:
-        desc:
+        title: 
+        desc: 
       courseB_unplugged_loopyMRF_2018:
-        title:
-        desc:
+        title: 
+        desc: 
       DiceRace_2018:
-        title:
-        desc:
+        title: 
+        desc: 
       courseE_unplugged_privateInformation_2018:
-        title:
-        desc:
+        title: 
+        desc: 
       SongwritingParameters_2018:
-        title:
-        desc:
+        title: 
+        desc: 
       Internet_2018:
-        title:
-        desc:
+        title: 
+        desc: 
       Crowdsourcing_2018:
-        title:
-        desc:
+        title: 
+        desc: 
       TangramAlgorithms_2018:
-        title:
-        desc:
+        title: 
+        desc: 
       courseF_unplugged_powerOfWords_2018:
-        title:
-        desc:
+        title: 
+        desc: 
       EnvelopeVariables_2018:
-        title:
-        desc:
+        title: 
+        desc: 
       ForLoopFun_2018:
-        title:
-        desc:
+        title: 
+        desc: 
       SongwritingWithParameters_2018:
-        title:
-        desc:
+        title: 
+        desc: 
       PlantASeed_2018:
         title: 'Real-life Algorithms: Plant a Seed'
         desc: This lesson calls out ways we use algorithms in our daily lives, using the act of planting a seed as an example. It also focuses on the bigger picture of computer science and how algorithms play an essential part.
@@ -450,20 +450,8 @@ en:
         title: Conditionals
         desc: To learn about conditional statements, students play a card game and create rules like "If I draw a red card, I get a point" and "If I draw a black card, you get a point."
       SP-VPL-CSD-21-CourseNavigation:
-        title:
-        desc:
+        title: 
+        desc: 
       SP-VPL-CSA-21-mod3-1-1:
-        title:
-        desc:
-      'Introducing block-based programing ':
-        title:
-        desc:
-      Introducing block-based programing:
-        title: 'Introducing block-based programing '
-        desc: "Block-based programming is like building with digital blocks! Instead of typing out complicated code, early learners can use a friendly and visual approach. It's a bit like creating a digital puzzle or playing with building blocks, but instead of stacking physical pieces, you stack digital 'blocks' to make things happen on a computer.\r\n\r\nWith block-based programming, you don't need to worry about writing exact words or symbols. Instead, you drag and drop colorful blocks that represent different commands. \r\n\r\nFor example, if you want a character to move, you grab a 'move' block and snap it into place. It's all about arranging these visual blocks in a sequence, like building a tower, to create your own digital adventures.\r\n\r\nThis approach makes learning about computers and coding super fun and less intimidating. It's like playing a game, but you're also learning how to tell the computer to play along. Block-based programming is a fantastic tool for early learners because it turns coding into a creative and interactive experience using simple drag-and-drop methods! \r\n\r\nLet’s get started. "
-      'Unplugged ':
-        title: Defining Algorithms
-        desc: "\r\n75%\r\n10\r\nC11\r\n\r\nCongratulations! You just wrote an algorithm! Algorithm is a key term used in computer science. Algorithms are like step-by-step recipes for solving problems. It's a clear set of instructions that tells you what to do, just like following a recipe to bake cookies. Creating an algorithm is like giving directions to a computer so it knows exactly what steps to take.\r\n\r\nYou just created an algorithm for Laurel to get to the treasure. \r\nLet’s create another algorithm.\r\n \r\n \r\n \t\r\n"
-      Unplugged- Melissa Sandbox:
-        title: Unplugged
-        desc: " \t\r\nCongratulations! You just wrote an algorithm! Algorithm is a key term used in computer science. Algorithms are like step-by-step recipes for solving problems. It's a clear set of instructions that tells you what to do, just like following a recipe to bake cookies. Creating an algorithm is like giving directions to a computer so it knows exactly what steps to take.\r\n\r\nYou just created an algorithm for Laurel to get to the treasure. \r\nLet’s create another algorithm.\r\nTurn on screen reader support\r\n \r\n"
+        title: 
+        desc: 

@@ -15,18 +15,11 @@ import {
 import Button from '../../templates/Button';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 
 const PROVIDER_NAME = {
   [OAuthSectionTypes.clever]: i18n.loginTypeClever(),
   [OAuthSectionTypes.google_classroom]: i18n.loginTypeGoogleClassroom(),
-  [SectionLoginType.lti_v1]: i18n.loginTypeLti(),
 };
-
-const SYNC_PROVIDERS = [
-  ...Object.values(OAuthSectionTypes),
-  SectionLoginType.lti_v1,
-];
 
 export const READY = 'ready';
 export const IN_PROGRESS = 'in-progress';
@@ -40,11 +33,10 @@ export const SUCCESS = 'success';
 class SyncOmniAuthSectionControl extends React.Component {
   static propTypes = {
     sectionId: PropTypes.number.isRequired,
-    studioUrlPrefix: PropTypes.string,
     // Provided by Redux
     sectionCode: PropTypes.string,
     sectionName: PropTypes.string,
-    sectionProvider: PropTypes.oneOf(SYNC_PROVIDERS),
+    sectionProvider: PropTypes.oneOf(Object.values(OAuthSectionTypes)),
     updateRoster: PropTypes.func.isRequired,
   };
 
@@ -204,7 +196,7 @@ export function SyncOmniAuthSectionButton({provider, buttonState, onClick}) {
   );
 }
 SyncOmniAuthSectionButton.propTypes = {
-  provider: PropTypes.oneOf(SYNC_PROVIDERS).isRequired,
+  provider: PropTypes.oneOf(Object.values(OAuthSectionTypes)).isRequired,
   buttonState: PropTypes.oneOf([READY, IN_PROGRESS, SUCCESS]).isRequired,
   onClick: PropTypes.func,
 };

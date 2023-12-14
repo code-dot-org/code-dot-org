@@ -173,7 +173,7 @@ export default function RubricSettings({
 
   return (
     <div
-      className={classnames('uitest-rubric-settings', style.settings, {
+      className={classnames(style.settings, {
         [style.settingsVisible]: visible,
         [style.settingsHidden]: !visible,
       })}
@@ -188,7 +188,6 @@ export default function RubricSettings({
             <BodyTwoText>{i18n.runAiAssessmentDescription()}</BodyTwoText>
           </div>
           <Button
-            className="uitest-run-ai-assessment"
             text={i18n.runAiAssessment()}
             color={Button.ButtonColor.brandSecondaryDefault}
             onClick={handleRunAiAssessment}
@@ -197,11 +196,7 @@ export default function RubricSettings({
           >
             {polling && <i className="fa fa-spinner fa-spin" />}
           </Button>
-          {statusText() && (
-            <BodyTwoText className="uitest-eval-status-text">
-              {statusText()}
-            </BodyTwoText>
-          )}
+          {statusText() && <BodyTwoText>{statusText()}</BodyTwoText>}
         </div>
       )}
     </div>

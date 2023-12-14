@@ -9,10 +9,10 @@
   position: relative;
 
   @media screen and (max-width: $width-md) {
-    padding: 0 2rem;
+    padding: 0 1rem;
   }
 
-  @media screen and (max-width: 546px) {
+  @media screen and (max-width: $width-sm) {
     height: auto;
     padding: 1rem 2rem;
     margin: 3rem auto 0;
@@ -39,11 +39,10 @@
       padding: 0.5rem 0;
     }
 
-    @media screen and (max-width: 546px) {
+    @media screen and (max-width: $width-sm) {
       justify-content: center;
       width: 100%;
       margin-top: -1rem;
-      gap: 1rem;
     }
   }
 
@@ -54,7 +53,7 @@
       display: none;
     }
 
-    @media screen and (max-width: 546px) {
+    @media screen and (max-width: $width-sm) {
       display: block;
       position: relative;
       top: -8px;
@@ -71,35 +70,34 @@
       right: 0;
     }
 
-    @media screen and (max-width: 546px) {
+    @media screen and (max-width: $width-sm) {
       display: none;
     }
   }
 
   .text-wrapper {
-    color: var(--neutral_white);
+    color: white;
     text-align: center;
-    max-width: 450px;
 
     @media screen and (max-width: $width-md) {
       margin: 0 0 -0.5rem;
       text-align: left;
     }
 
-    @media screen and (max-width: 546px) {
+    @media screen and (max-width: $width-sm) {
       text-align: center;
     }
 
     h1 {
       @include heading-sm;
-      color: var(--neutral_white);
+      color: $white;
       margin: 0 auto 4px;
     }
 
     p {
       @include body-two;
       margin-bottom: 0;
-      color: var(--neutral_white);
+      color: $white;
     }
   }
 
@@ -108,7 +106,7 @@
     border-color: #4E1598;
     margin: 0;
 
-    @media screen and (max-width: 546px) {
+    @media screen and (max-width: $width-sm) {
       margin-top: 1rem;
     }
   }

@@ -22,10 +22,46 @@ import {
   LabeledRadioButtonsWithAdditionalTextFields,
 } from '../../form_components_func/labeled/LabeledRadioButtons';
 
+const WhichGradesSelector = props => {
+  return (
+    <>
+      <LabeledCheckBoxes name={props.courseName} />
+      {props.showScholarshipWarning && (
+        <p style={styles.error}>
+          Note: This program is designed to work best for teachers who are
+          teaching this course in the {Year} school year. Scholarship
+          eligibility is often dependent on whether or not you will be teaching
+          the course during the {Year} school year.
+        </p>
+      )}
+    </>
+  );
+};
+WhichGradesSelector.propTypes = {
+  courseName: PropTypes.string,
+  showScholarshipWarning: PropTypes.bool,
+};
+
 const ImplementationPlan = props => {
   const {data} = props;
   const programInfo = getProgramInfo(data.program);
   const hasNoProgramSelected = data.program === undefined;
+
+  const notSureTeachPlanOption = `Not sure yet if my school plans to offer ${programInfo.name} in the ${Year} school year`;
+  let showScholarshipEligibilityWarning = false;
+  if (
+    (data.program === PROGRAM_CSD &&
+      data.csdWhichGrades &&
+      data.csdWhichGrades.includes(notSureTeachPlanOption)) ||
+    (data.program === PROGRAM_CSP &&
+      data.cspWhichGrades &&
+      data.cspWhichGrades.includes(notSureTeachPlanOption)) ||
+    (data.program === PROGRAM_CSA &&
+      data.csaWhichGrades &&
+      data.csaWhichGrades.includes(notSureTeachPlanOption))
+  ) {
+    showScholarshipEligibilityWarning = true;
+  }
 
   const renderContents = () => {
     if (hasNoProgramSelected) {
@@ -37,21 +73,30 @@ const ImplementationPlan = props => {
           </p>
         </div>
       );
-    } else if (data.willTeach === 'Yes') {
+    } else {
       return (
         <>
           {data.program === PROGRAM_CSD && (
-            <LabeledCheckBoxes name="csdWhichGrades" />
+            <WhichGradesSelector
+              courseName="csdWhichGrades"
+              showScholarshipWarning={showScholarshipEligibilityWarning}
+            />
           )}
           {data.program === PROGRAM_CSP && (
             <>
-              <LabeledCheckBoxes name="cspWhichGrades" />
+              <WhichGradesSelector
+                courseName="cspWhichGrades"
+                showScholarshipWarning={showScholarshipEligibilityWarning}
+              />
               <LabeledRadioButtons name="cspHowOffer" />
             </>
           )}
           {data.program === PROGRAM_CSA && (
             <>
-              <LabeledCheckBoxes name="csaWhichGrades" />
+              <WhichGradesSelector
+                courseName="csaWhichGrades"
+                showScholarshipWarning={showScholarshipEligibilityWarning}
+              />
               <LabeledRadioButtons name="csaHowOffer" />
             </>
           )}
@@ -81,15 +126,6 @@ const ImplementationPlan = props => {
           />
         </>
       );
-    } else if (!!data.willTeach) {
-      return (
-        <p style={styles.error}>
-          Note: This program is designed to work best for teachers who are
-          teaching this course in the {Year} school year. Scholarship
-          eligibility is often dependent on whether or not you will be teaching
-          the course during the {Year} school year.
-        </p>
-      );
     }
   };
 
@@ -98,7 +134,7 @@ const ImplementationPlan = props => {
       <LabelsContext.Provider value={PageLabels.implementationPlan}>
         <FormGroup>
           <h3>Section 6: {SectionHeaders.implementationPlan}</h3>
-          <LabeledRadioButtons name="willTeach" />
+
           {renderContents()}
         </FormGroup>
       </LabelsContext.Provider>
@@ -120,9 +156,9 @@ const uniqueRequiredFields = {
 };
 
 ImplementationPlan.getDynamicallyRequiredFields = data => {
-  const requiredFields = ['willTeach'];
+  const requiredFields = [];
 
-  if (data.program && data.willTeach === 'Yes') {
+  if (data.program) {
     requiredFields.push(...uniqueRequiredFields[data.program]);
   }
 
