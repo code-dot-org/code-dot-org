@@ -220,7 +220,7 @@ export const blocks = {
     Blockly.common.defineBlocks(behaviorBlocks);
 
     const generator = Blockly.getGenerator();
-    generator.forBlock['behavior_definition'] = function (block) {
+    generator['behavior_definition'] = function (block) {
       // Define a procedure with a return value.
       const funcName = generator.nameDB_.getName(
         block.getFieldValue('NAME'),
@@ -291,15 +291,14 @@ export const blocks = {
       generator.definitions_['%' + funcName] = code;
       return null;
     };
-    generator.forBlock['gamelab_behavior_get'] = function () {
+    generator['gamelab_behavior_get'] = function () {
       const name = generator.nameDB_.getName(
         this.getFieldValue('NAME'),
         'PROCEDURE'
       );
       return [`new Behavior(${name}, [])`, generator.ORDER_ATOMIC];
     };
-    generator.forBlock['sprite_parameter_get'] =
-      generator.forBlock['variables_get'];
+    generator['sprite_parameter_get'] = generator['variables_get'];
   },
 
   // All logic for behavior picker custom input type
