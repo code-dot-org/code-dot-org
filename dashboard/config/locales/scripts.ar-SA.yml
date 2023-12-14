@@ -9870,7 +9870,7 @@ ar:
         pl-csd-summer-day3:
           lesson_groups:
             lessonGroup-2:
-              display_name: اليوم 3
+              display_name: اليوم ٣
           lessons:
             lesson-11:
               name: اختتام اليوم الثالث
@@ -9887,11 +9887,11 @@ ar:
             lesson-9:
               name: ثقافة الفصل الدراسي
           name: pl-CSD - اليوم الصيفي 3
-          title: اليوم 3
+          title: اليوم ٣
         pl-csd-summer-day4:
           lesson_groups:
             lessonGroup-2:
-              display_name: اليوم 4
+              display_name: اليوم ٤
           lessons:
             lesson-10:
               name: المفاضلة
@@ -9912,7 +9912,7 @@ ar:
             lesson-9:
               name: 'اختتام المحتوى '
           name: pl-CSD - الصيف - اليوم الرابع
-          title: اليوم 4
+          title: اليوم ٤
         pl-csd-summer-day5:
           lesson_groups:
             lessonGroup-2:
@@ -11177,7 +11177,7 @@ ar:
               name: الجزء 1 غير المتزامن
             lesson-4:
               name: الجزء 2 غير المتزامن
-          title: اليوم 3
+          title: اليوم ٣
         virtual-pl-csa-summer-day4:
           lesson_groups:
             lessonGroup-2:
@@ -11195,7 +11195,7 @@ ar:
               name: الجزء 2 غير المتزامن
             lesson-5:
               name: افتتاحية ورشة العمل
-          title: اليوم 4
+          title: اليوم ٤
         virtual-pl-csa-summer-day5:
           lesson_groups:
             lessonGroup-2:
@@ -11277,7 +11277,7 @@ ar:
               name: 'الوحدة 3: التحقيق في المناهج الدراسية: العفاريت'
             lesson-9:
               name: اتصالات الوحدة 3
-          title: اليوم 3
+          title: اليوم ٣
         virtual-pl-csd-summer-day4:
           lesson_groups:
             lessonGroup-2:
@@ -11297,7 +11297,7 @@ ar:
               name: الإنهاء
             lesson-2:
               name: مقدمة إلى الوحدة 5
-          title: اليوم 4
+          title: اليوم ٤
         virtual-pl-csd-summer-day5:
           lesson_groups:
             lessonGroup-2:
@@ -11319,7 +11319,7 @@ ar:
               name: استعراض ورش عمل العام الدراسي
             lesson-9:
               name: التحضير للسنة
-          title: اليوم 5
+          title: اليوم ٥
         virtual-pl-csp-summer-day1:
           lesson_groups:
             lessonGroup-2:
@@ -11361,7 +11361,7 @@ ar:
           lessons:
             lesson-2:
               name: الجزء 1 غير المتزامن
-          title: اليوم 3
+          title: اليوم ٣
         virtual-pl-csp-summer-day4:
           lesson_groups:
             lessonGroup-2:
@@ -11372,7 +11372,7 @@ ar:
               display_name: الجزء المتزامن 2
             lessonGroup-5:
               display_name: الجزء 2 غير المتزامن
-          title: اليوم 4
+          title: اليوم ٤
         virtual-pl-csp-summer-day5:
           lesson_groups:
             lessonGroup-2:
@@ -11384,7 +11384,7 @@ ar:
           lessons:
             lesson-6:
               name: مراسم الختام
-          title: اليوم 5
+          title: اليوم ٥
         virustest:
           description_short: 'استخدم Sprite Lab لبرمجة محاكاة من انتشار فيروس. '
           lesson_groups:
