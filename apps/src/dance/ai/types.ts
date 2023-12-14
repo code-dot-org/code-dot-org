@@ -1,6 +1,6 @@
 import {DANCE_AI_SOUNDS} from '@cdo/apps/dance/ai/constants';
 
-export enum AiOutput {
+export enum DanceAiModalOutputType {
   AI_BLOCK = 'ai_block',
   GENERATED_BLOCKS = 'generated_blocks',
   BOTH = 'both',

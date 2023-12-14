@@ -12,7 +12,7 @@ import AiVisualizationPreview from './AiVisualizationPreview';
 
 import {
   AiFieldValue,
-  AiOutput,
+  DanceAiModalOutputType,
   DanceAiSound,
   FieldKey,
   GeneratedEffect,
@@ -544,12 +544,14 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
   const showUseButton =
     mode === DanceAiModalMode.RESULTS &&
     currentToggle === DanceAiPreviewButtonToggleState.EFFECT &&
-    (aiOutput === AiOutput.AI_BLOCK || aiOutput === AiOutput.BOTH);
+    (aiOutput === DanceAiModalOutputType.AI_BLOCK ||
+      aiOutput === DanceAiModalOutputType.BOTH);
 
   const showConvertButton =
     mode === DanceAiModalMode.RESULTS &&
     currentToggle === DanceAiPreviewButtonToggleState.CODE &&
-    (aiOutput === AiOutput.GENERATED_BLOCKS || aiOutput === AiOutput.BOTH);
+    (aiOutput === DanceAiModalOutputType.GENERATED_BLOCKS ||
+      aiOutput === DanceAiModalOutputType.BOTH);
 
   let aiBotHead = aiBotHeadNormal;
   let aiBotBody = aiBotBodyNormal;
