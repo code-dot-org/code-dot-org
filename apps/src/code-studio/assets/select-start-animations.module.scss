@@ -1,0 +1,5 @@
+@import '../../mixins.scss';
+
+.selectedAnimation {
+  @include remove-button-styles;
+}
