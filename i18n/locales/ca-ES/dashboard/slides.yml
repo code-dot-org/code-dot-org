@@ -2019,3 +2019,10 @@ ca:
       10:
         image: 'notes/hoc_hello_world_2021_freeplay_10.jpg'
         text: "Llavors, què crearàs? Podríeu explicar una història sobre vosaltres mateixos... o fer-vos una amb els vostres propis personatges especials. Potser fins i tot utilitzaràs les teves noves habilitats informàtiques per al teu proper projecte escolar! Estira la imaginació i diverteix-te!"
+    hoc-dance-ai-warmup:
+      2:
+        text: "Hola, em dic Miral Kotb i soc ballarina, desenvolupadora de software i creadora d'iLuminate."
+      3:
+        text: "La informàtica i la creativitat estan relacionades de moltes maneres. Són impossibles de comptar! Perquè un cop tens l'habilitat d'escriure codi, pots convertir les teves idees en el que vulguis. Jo ho faig amb vestits de llum. Quan tens els recursos necessaris per escriure codi, pots fer moltíssimes coses, i les possibilitats són inifites."
+      5:
+        text: "Fareu servir blocs de codi per triar ballarins diferents, canviar els passos de ball que fan, fer que segueixin la música i fer-los interactius."
