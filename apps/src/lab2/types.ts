@@ -6,6 +6,8 @@
 // If the ChannelsApi on the server doesn't care about these, they should
 // live elsewhere.
 // The library data should definitely live elsewhere.
+
+import {BlockDefinition} from '@cdo/apps/types/blocklyTypes';
 export interface Channel {
   id: string;
   name: string;
@@ -97,6 +99,11 @@ export interface LevelProperties {
   appName: AppName;
   longInstructions?: string;
   freePlay?: boolean;
+  edit_blocks?: string;
+  isK1?: boolean;
+  skin?: string;
+  toolboxBlocks?: string;
+  sharedBlocks?: BlockDefinition[];
 }
 
 // Level configuration data used by project-backed labs that don't require
