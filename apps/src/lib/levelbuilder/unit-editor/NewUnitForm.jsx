@@ -67,7 +67,7 @@ export default function NewUnitForm(props) {
         isOpen={submitDialogOpen}
         handleClose={() => setSubmitDialogOpen(false)}
       >
-        <div>
+        <div className="submitDialog">
           <p>
             Are you sure you want to submit this unit? These fields are very
             difficult to change after submission.
@@ -76,7 +76,7 @@ export default function NewUnitForm(props) {
             person if you are unsure.
           </p>
           <button
-            className="btn btn-primary"
+            className="btn btn-submit-dialog"
             type="submit"
             style={styles.buttonStyle}
           >

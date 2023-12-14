@@ -182,4 +182,25 @@ describe('NewUnitFormTest', () => {
     expect(wrapper.find('div.savingDetailsAndButton').length).to.equal(0);
     expect(wrapper.find('[name="script[name]"]').length).to.equal(0);
   });
+
+  it('hitting save opens submit confirmation dialog', () => {
+    const wrapper = shallow(<NewUnitForm {...defaultProps} />);
+    expect(wrapper.find('div.savingDetailsAndButton').length).to.equal(0);
+    expect(wrapper.find('NewCourseFields').length).to.equal(0);
+    expect(wrapper.find('.isCourseSelector').length).to.equal(1);
+
+    wrapper
+      .find('.isCourseSelector')
+      .simulate('change', {target: {value: 'false'}});
+
+    expect(wrapper.find('BaseDialog').props().isOpen).to.be.false;
+
+    expect(wrapper.find('NewCourseFields').length).to.equal(0);
+    expect(wrapper.find('div.savingDetailsAndButton').length).to.equal(1);
+    expect(wrapper.find('[name="script[name]"]').length).to.equal(1);
+
+    wrapper.find('div.savingDetailsAndButton').find('button').simulate('click');
+
+    expect(wrapper.find('BaseDialog').props().isOpen).to.be.true;
+  });
 });
