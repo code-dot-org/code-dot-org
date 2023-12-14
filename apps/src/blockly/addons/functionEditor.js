@@ -215,7 +215,6 @@ export default class FunctionEditor {
         fields: {
           NAME: newProcedure.getName(),
         },
-        deletable: false,
       };
 
       this.block = Blockly.serialization.blocks.append(
@@ -223,12 +222,11 @@ export default class FunctionEditor {
         this.editorWorkspace
       );
     }
+    this.block.setDeletable(false);
 
-    const isBehavior = type === BLOCK_TYPES.behaviorDefinition;
-    // We do not want to show the delete button for behaviors that are not user-created
-    // or are in read only workspaces.
-    const hideDeleteButton =
-      this.isReadOnly || (isBehavior && !this.block.userCreated);
+    // We only want to be able to delete things that are user-created (functions and behaviors)
+    // and not things that are being previewed from a read-only workspace.
+    const hideDeleteButton = this.isReadOnly || !this.block.userCreated;
     const modalEditorDeleteButton = document.getElementById(
       MODAL_EDITOR_DELETE_ID
     );
@@ -243,7 +241,9 @@ export default class FunctionEditor {
 
     this.editorWorkspace.svgFrame_ = new WorkspaceSvgFrame(
       this.editorWorkspace,
-      isBehavior ? msg.behaviorEditorHeader() : msg.function(),
+      type === BLOCK_TYPES.behaviorDefinition
+        ? msg.behaviorEditorHeader()
+        : msg.function(),
       'blocklyWorkspaceSvgFrame',
       getDefinitionBlockColor
     );
