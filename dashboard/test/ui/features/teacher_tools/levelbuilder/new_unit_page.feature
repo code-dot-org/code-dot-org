@@ -13,8 +13,8 @@ Feature: Using the New Unit Page
     And I wait until element ".isVersionedSelector" is visible
     And I select the "No" option in dropdown with class "isVersionedSelector"
     And the unit slug input contains the temp script name
-    And I click "button[type='button']" 
-    And I wait until "button[type='submit']" is visible
+    And I click "button[type='button']"
+    And I wait until element ".submitDialog" is visible
     And I click "button[type='submit']" to load a new page
 
     Then I wait for the temp unit edit page to load
