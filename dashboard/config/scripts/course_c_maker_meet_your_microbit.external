@@ -3,14 +3,15 @@ title 'Making Counters'
 
 
 markdown <<MARKDOWN
-##micro:bit Physical Computing Fundamentals
+<h2 style="text-align: center;">Meet your micro:bit</h2>
 
-**Meet your micro:bit**
+<div style="text-align: center;">
+<a href="https://mbit.io/csf-1-project" target="_blank">Check out the micro:bit code here.</a>
+</div>
 
-Find the corresponding lesson plan in the booklet [Physical Computing for Code.org CS Fundamentals Course C](https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf).
 
-<img src="https://images.code.org/7691a0a2939bb662b2c7dce4864cbc81-image-1701980096289.13.17 PM.png" style= "width:60%">
-<div style= "width: 60%"> 
+[<img src="https://images.code.org/7691a0a2939bb662b2c7dce4864cbc81-image-1701980096289.13.17 PM.png" style="display: block; margin: auto; width: 30%">](https://mbit.io/csf-1-project)
+
 
 
 
