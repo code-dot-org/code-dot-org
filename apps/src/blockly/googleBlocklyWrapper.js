@@ -372,6 +372,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
     [Themes.TRITANOPIA]: CdoTritanopiaTheme,
     [Themes.TRITANOPIA_DARK]: CdoTritanopiaDarkTheme,
   };
+  // Assign all of the properties of the javascript generator to the forBlock array
+  // Prevents deprecation warnings related to https://github.com/google/blockly/pull/7150
+  Object.setPrototypeOf(javascriptGenerator.forBlock, javascriptGenerator);
+
   blocklyWrapper.JavaScript = javascriptGenerator;
   blocklyWrapper.navigationController = new NavigationController();
   // Initialize plugin.
