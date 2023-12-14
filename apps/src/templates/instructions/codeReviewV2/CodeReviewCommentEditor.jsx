@@ -102,7 +102,6 @@ const CodeReviewCommentEditor = ({addCodeReviewComment}) => {
             placeholder={javalabMsg.addACommentToReview()}
             className="editable-text-area"
             spellCheck
-            autoFocus
           />
         </Slate>
       </div>
