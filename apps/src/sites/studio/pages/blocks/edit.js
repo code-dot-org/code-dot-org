@@ -12,6 +12,8 @@ import animationList, {
 import {getDefaultListMetadata} from '@cdo/apps/assetManagement/animationLibraryApi';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import {BlocklyVersion} from '@cdo/apps/blockly/constants';
+import generators from '@cdo/apps/dance/generators';
+import CdoFieldDanceAi from '@cdo/apps/dance/ai/cdoFieldDanceAi';
 
 const VALID_COLOR = 'black';
 const INVALID_COLOR = '#d00';
@@ -42,6 +44,7 @@ function initializeEditPage(defaultSprites) {
     typeHints: true,
     isBlockEditMode: true,
   });
+  Blockly.fieldRegistry.register('field_dance_ai', CdoFieldDanceAi);
 
   const blockConfigElement = document.getElementById('block_config');
 
@@ -163,6 +166,7 @@ function updateBlockPreview() {
       },
     ],
     customInputTypes,
+    customGenerators: poolField.value === 'Dancelab' ? generators : undefined,
   });
   const block = `<block type="${blockName}" />`;
   Blockly.mainBlockSpace.clear();
