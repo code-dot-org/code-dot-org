@@ -135,8 +135,6 @@ module Pd
         other_races_percent: 'Percent of student enrollment by race: Other',
         principal_approval: "Do you approve of <Teacher Name> participating in Code.org's #{YEAR} Professional Learning Program?",
         principal_schedule_confirmed: "Are you committed to including Computer Science <Program> on the master schedule in #{YEAR} if <Teacher Name> is accepted into the program?",
-        contact_invoicing: "Contact name for invoicing",
-        contact_invoicing_detail: "Contact email or phone number for invoicing",
       }
     }.freeze
 
@@ -209,8 +207,6 @@ module Pd
         pacific_islander: "Percent of student enrollment by race - Native Hawaiian or other Pacific Islander",
         american_indian: "Percent of student enrollment by race - American Indian or Native Alaskan",
         other: "Percent of student enrollment by race - Other",
-        committed_to_master_schedule: "Are you committed to including this course on the master schedule in #{YEAR} if this teacher is accepted into the program?",
-        replace_course: "Will this course replace an existing computer science course in the master schedule? (Principal's response)",
         csp_implementation: "How will you implement CS Principles at your school?",
         csd_implementation: "How will you implement CS Discoveries at your school?",
         csa_implementation: "How will you implement CSA at your school?",
@@ -398,15 +394,10 @@ module Pd
         :pacific_islander,
         :american_indian,
         :other,
-        :committed_to_master_schedule,
-        :replace_course,
         :csp_implementation,
         :csd_implementation,
         :csa_implementation,
-        :pay_fee,
         :share_ap_scores,
-        :contact_invoicing,
-        :contact_invoicing_detail
       ],
       nces: [
         :title_i_status,
