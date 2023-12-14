@@ -39,14 +39,14 @@
     "parent_level_id": 21171,
     "name_suffix": "_2023",
     "encrypted": "false",
-    "tts_long_instructions_override": "Move Laurel to the treasure, then use the collect block to pick it up.\r\n\r\n",
+    "tts_long_instructions_override": "Now that you are comfortable moving the blocks to the workspace, let's try a specific task. Move Laurel to the treasure, then use the collect block to pick it up.\r\n\r\n",
     "mini_rubric": "false",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
     "preload_asset_list": null
   },
   "notes": "Not enough blocks in workspace puzzle",
-  "audit_log": "[{\"changed_at\":\"2023-12-12T22:56:48.145+00:00\",\"changed\":[\"cloned from \\\"courseC_collector_prog2_2023\\\"\"],\"cloned_from\":\"courseC_collector_prog2_2023\"},{\"changed_at\":\"2023-12-12 22:58:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2023-12-12 23:08:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-12-12T22:56:48.145+00:00\",\"changed\":[\"cloned from \\\"courseC_collector_prog2_2023\\\"\"],\"cloned_from\":\"courseC_collector_prog2_2023\"},{\"changed_at\":\"2023-12-12 22:58:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2023-12-12 23:08:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2023-12-13 18:29:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"tts_long_instructions_override\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

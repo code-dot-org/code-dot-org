@@ -51,11 +51,19 @@ class ProjectsGallery extends Component {
           {galleryTabs.map(tab => (
             <div
               key={tab.key}
+              tabIndex="0"
+              role="button"
               style={[
                 styles.pill,
                 this.props.selectedGallery === tab.key && styles.selectedPill,
               ]}
               onClick={() => this.toggleTo(tab)}
+              onKeyDown={e => {
+                if ([' ', 'Enter', 'Spacebar'].includes(e.key)) {
+                  e.preventDefault();
+                  this.toggleTo(tab);
+                }
+              }}
             >
               {tab.headerText}
             </div>
