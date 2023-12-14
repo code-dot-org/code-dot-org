@@ -214,6 +214,7 @@ $container-width: 309px;
 // !important tags needed here in order to override Button styling that makes the Learn More button appear at all times.
 .learnMoreButton {
   display: none !important;
+  text-align: center;
 }
 
 @media screen and (max-width: $width-md) {

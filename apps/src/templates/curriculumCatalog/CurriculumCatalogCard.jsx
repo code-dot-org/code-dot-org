@@ -286,7 +286,7 @@ const CustomizableCurriculumCatalogCard = ({
               />
               <Button
                 __useDeprecatedTag
-                color={Button.ButtonColor.neutralDark}
+                color={quickViewButtonColor}
                 type="button"
                 href={pathToCourse}
                 aria-label={i18n.learnMoreDescription({
