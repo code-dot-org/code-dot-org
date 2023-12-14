@@ -30,6 +30,7 @@ class DCDOBase < DynamicConfigBase
     {
       'frontend-i18n-tracking': DCDO.get('frontend-i18n-tracking', false),
       clearerSignUpUserType: DCDO.get('clearerSignUpUserType', false),
+      'pl-teacher-application-off-season': DCDO.get('pl_teacher_application', false),
       'csa-homepage-banner-2022': DCDO.get('csa-homepage-banner-2022', false),
       'csa-skinny-banner': DCDO.get('csa-skinny-banner', false),
       'csta-form-extension': DCDO.get('csta-form-extension', false),

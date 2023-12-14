@@ -5,8 +5,8 @@ import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import fontConstants from '@cdo/apps/fontConstants';
 import {putRecord} from '../lib/util/firehose';
-//import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-//import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import color from '../util/color';
 import Button from './Button';
 import i18n from '@cdo/locale';
@@ -37,8 +37,7 @@ export default class DonorTeacherBanner extends Component {
         event: 'submit',
         data_string: $('input[name="nces-id"]').val(),
       });
-      // TODO: Reenable Amplitude https://codedotorg.atlassian.net/browse/ACQ-1209
-      // analyticsReporter.sendEvent(EVENTS.AFE_HOMEPAGE_BANNER_SUBMIT);
+      analyticsReporter.sendEvent(EVENTS.AFE_HOMEPAGE_BANNER_SUBMIT);
 
       // redirect to form on amazon-future-engineer page
       window.location.assign(pegasus('/amazon-future-engineer#sign-up-today'));
