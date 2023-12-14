@@ -1,15 +1,50 @@
+// There are some rules that we would like to have enabled, but which have
+// existing violations that need to be fixed (or individually ignored) before
+// we can do so.
+//
+// Adding them here separately from the other, intentionally-disabled rules
+// below, so that we can more easily track fixing violations and eventually
+// reenabling.
+const rulesToEventuallyReenable = {
+  'jsx-a11y/alt-text': 'off',
+  'jsx-a11y/anchor-is-valid': 'off',
+  'jsx-a11y/blob': 'off',
+  'jsx-a11y/click-events-have-key-events': 'off',
+  'jsx-a11y/heading-has-content': 'off',
+  'jsx-a11y/interactive-supports-focus': 'off',
+  'jsx-a11y/label-has-associated-control': 'off',
+  'jsx-a11y/media-has-caption': 'off',
+  'jsx-a11y/mouse-events-have-key-events': 'off',
+  'jsx-a11y/no-noninteractive-element-interactions': 'off',
+  'jsx-a11y/no-noninteractive-element-to-interactive-role': 'off',
+  'jsx-a11y/no-noninteractive-tabindex': 'off',
+  'jsx-a11y/no-static-element-interactions': 'off',
+  'jsx-a11y/tabindex-no-positive': 'off',
+};
+
 // This config defines globals available especially in apps,
 // enables es6, and enables apps-specific plugins and rules.
 // See the root .eslintrc.js for generic eslint linting rules.
 module.exports = {
   parser: '@babel/eslint-parser',
-  plugins: ['cdo-custom-rules', 'react', 'react-hooks', 'mocha', 'babel'],
+  plugins: [
+    'cdo-custom-rules',
+    'react',
+    'react-hooks',
+    'mocha',
+    'babel',
+    'jsx-a11y',
+  ],
   parserOptions: {
     babelOptions: {
       presets: ['@babel/preset-react'],
     },
   },
-  extends: ['plugin:react/recommended', 'plugin:prettier/recommended'],
+  extends: [
+    'plugin:react/recommended',
+    'plugin:prettier/recommended',
+    'plugin:jsx-a11y/recommended',
+  ],
   env: {
     es6: true,
   },
@@ -60,6 +95,7 @@ module.exports = {
     YT: 'readonly',
   },
   rules: {
+    ...rulesToEventuallyReenable,
     'babel/semi': 'error', // autofixable
     'cdo-custom-rules/style-blocks-below-class': 'error',
     'mocha/no-exclusive-tests': 'error',
