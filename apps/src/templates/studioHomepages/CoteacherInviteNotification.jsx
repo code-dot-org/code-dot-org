@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, {useMemo} from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
@@ -14,12 +14,8 @@ import DCDO from '@cdo/apps/dcdo';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
-export const showCoteacherInviteNotification = coteacherInvite => {
-  return !!coteacherInvite && DCDO.get('show-coteacher-ui', true);
-};
-
-export const showCoteacherForPlInviteNotification = coteacherInviteForPl => {
-  return !!coteacherInviteForPl && DCDO.get('show-coteacher-ui', true);
+export const showCoteacherInviteNotification = invite => {
+  return !!invite && DCDO.get('show-coteacher-ui', true);
 };
 
 const CoteacherInviteNotification = ({
@@ -29,22 +25,14 @@ const CoteacherInviteNotification = ({
   coteacherInvite,
   coteacherInviteForPl,
 }) => {
-  if (
-    !(
-      showCoteacherInviteNotification(coteacherInvite) ||
-      showCoteacherForPlInviteNotification(coteacherInviteForPl)
-    )
-  ) {
+  const invite = useMemo(() => {
+    if (showCoteacherInviteNotification(coteacherInviteForPl) && isForPl) {
+      return coteacherInviteForPl;
+    } else if (showCoteacherInviteNotification(coteacherInvite) && !isForPl) {
+      return coteacherInvite;
+    }
     return null;
-  }
-
-  let invite;
-
-  if (showCoteacherForPlInviteNotification(coteacherInviteForPl) && isForPl) {
-    invite = coteacherInviteForPl;
-  } else if (showCoteacherInviteNotification(coteacherInvite) && !isForPl) {
-    invite = coteacherInvite;
-  }
+  }, [coteacherInvite, coteacherInviteForPl, isForPl]);
 
   const buttonAction = api => {
     HttpClient.put(api, '', true)

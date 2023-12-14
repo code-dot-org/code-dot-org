@@ -17,6 +17,7 @@ describe('CoteacherInviteNotification', () => {
       section_name: 'The Pumpkin Patch',
       status: 'invited',
       instructor_name: 'Linus',
+      participant_type: 'student',
     },
     coteacherInviteForPl: {
       id: 2,
@@ -25,6 +26,7 @@ describe('CoteacherInviteNotification', () => {
       section_name: 'Section for teachers',
       status: 'invited',
       instructor_name: 'Larry',
+      participant_type: 'teacher',
     },
   };
 

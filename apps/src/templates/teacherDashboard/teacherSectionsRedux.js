@@ -457,24 +457,20 @@ export const setCoteacherInviteForPl = coteacherInviteForPl => ({
 export const asyncLoadCoteacherInvite = () => dispatch => {
   fetchJSON('/api/v1/section_instructors')
     .then(sectionInstructors => {
-      const invitedPlSections = sectionInstructors.filter(section => {
+      const coteacherInviteForPl = sectionInstructors.find(instructorInvite => {
         return (
-          section.status === 'invited' && section.participant_type === 'teacher'
+          instructorInvite.status === 'invited' &&
+          instructorInvite.participant_type === 'teacher'
         );
       });
-      const invitedClassroomSections = sectionInstructors.filter(section => {
-        return (
-          section.status === 'invited' && section.participant_type === 'student'
-        );
-      });
-
-      const coteacherInviteForClassrooms =
-        invitedClassroomSections.length > 0
-          ? invitedClassroomSections[0]
-          : undefined;
-
-      const coteacherInviteForPl =
-        invitedPlSections.length > 0 ? invitedPlSections[0] : undefined;
+      const coteacherInviteForClassrooms = sectionInstructors.find(
+        instructorInvite => {
+          return (
+            instructorInvite.status === 'invited' &&
+            instructorInvite.participant_type === 'student'
+          );
+        }
+      );
 
       dispatch(setCoteacherInvite(coteacherInviteForClassrooms));
       dispatch(setCoteacherInviteForPl(coteacherInviteForPl));
