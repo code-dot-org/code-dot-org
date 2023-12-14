@@ -75,13 +75,13 @@ class AdvancedShareOptions extends React.Component {
     const iframeHtml = `<iframe width="${iframeWidth}" height="${iframeHeight}" style="border: 0px;" src="${url}"></iframe>`;
     return (
       <div>
-        <p className={moduleStyle.regularText}>
+        <p className={moduleStyle.advancedShareOptionsRegularText}>
           {i18n.shareEmbedDescription()}
         </p>
         <p
           className={classnames(
-            moduleStyle.regularText,
-            moduleStyle.warningText
+            moduleStyle.advancedShareOptionsRegularText,
+            moduleStyle.advancedShareOptionsWarningText
           )}
         >
           {i18n.shareEmbedWarning()}
@@ -119,7 +119,7 @@ class AdvancedShareOptions extends React.Component {
 
     return (
       <div>
-        <p className={moduleStyle.regularText}>
+        <p className={moduleStyle.advancedShareOptionsRegularText}>
           Export your project as a zipped file, which will contain the
           HTML/CSS/JS files, as well as any assets, for your project.
         </p>
@@ -148,7 +148,7 @@ class AdvancedShareOptions extends React.Component {
   renderLibraryTab = () => {
     return (
       <div>
-        <p className={moduleStyle.regularText}>
+        <p className={moduleStyle.advancedShareOptionsRegularText}>
           {i18n.shareLibraryWithClassmate()}
         </p>
         <Button
@@ -216,7 +216,7 @@ class AdvancedShareOptions extends React.Component {
         );
       }
       optionsNav = (
-        <div className={moduleStyle.nav}>
+        <div className={moduleStyle.advancedShareOptionsNav}>
           <ul>
             {exportTab}
             {embedTab}
@@ -243,7 +243,7 @@ class AdvancedShareOptions extends React.Component {
         </button>
       );
     return (
-      <div className={moduleStyle.root}>
+      <div className={moduleStyle.advancedShareOptionsRoot}>
         {expand}
         {optionsNav}
         {selectedTab}

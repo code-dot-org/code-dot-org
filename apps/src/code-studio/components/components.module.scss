@@ -3,7 +3,7 @@
 @import 'font';
 
 // Styles used for AdvancedShareOptions
-.root {
+.advancedShareOptionsRoot {
   margin-top: 20px;
 }
 
@@ -20,7 +20,7 @@
   color: $neutral_dark90;
 }
 
-.nav {
+.advancedShareOptionsNav {
   ul {
     border-bottom: 1px solid;
     border-color: $purple;
@@ -41,7 +41,7 @@
   }
 }
 
-p.regularText {
+p.advancedShareOptionsRegularText {
   font-size: inherit;
   line-height: inherit;
   color: $neutral_dark;
@@ -49,7 +49,7 @@ p.regularText {
   @include main-font-semi-bold;
 }
 
-p.warningText {
+p.advancedShareOptionsWarningText {
   color: $red;
 }
 
