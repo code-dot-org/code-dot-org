@@ -460,7 +460,7 @@ export const asyncLoadCoteacherInvite = () => dispatch => {
       const coteacherInviteForPl = sectionInstructors.find(instructorInvite => {
         return (
           instructorInvite.status === 'invited' &&
-          instructorInvite.participant_type === 'teacher'
+          instructorInvite.participant_type !== 'student'
         );
       });
       const coteacherInviteForClassrooms = sectionInstructors.find(

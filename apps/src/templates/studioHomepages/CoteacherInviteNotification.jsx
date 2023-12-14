@@ -57,45 +57,44 @@ const CoteacherInviteNotification = ({
     buttonAction(`/api/v1/section_instructors/${id}/decline`);
   };
 
-  if (invite) {
-    return (
-      <Notification
-        dismissible={false}
-        type={NotificationType.collaborate}
-        iconStyles={styles.icon}
-        notice={i18n.coteacherInvite({
-          invitedByName: invite.invited_by_name,
-        })}
-        details={
-          <BodyTwoText style={{marginBottom: 0}}>
-            {i18n.coteacherInviteDescription({
-              invitedByEmail: invite.invited_by_email,
-            })}
-            <br />
-            <StrongText>{invite.section_name}</StrongText>
-          </BodyTwoText>
-        }
-        tooltipText={i18n.coteacherTooltip()}
-        buttonsStyles={styles.buttons}
-        buttons={[
-          {
-            text: 'Decline',
-            onClick: () => declineCoteacherInvite(invite.id, invite.section_id),
-            color: Button.ButtonColor.neutralDark,
-            style: styles.declineButton,
-          },
-          {
-            text: 'Accept',
-            onClick: () => acceptCoteacherInvite(invite.id, invite.section_id),
-            color: Button.ButtonColor.brandSecondaryDefault,
-            style: styles.acceptButton,
-          },
-        ]}
-      />
-    );
-  } else {
+  if (!invite) {
     return null;
   }
+  return (
+    <Notification
+      dismissible={false}
+      type={NotificationType.collaborate}
+      iconStyles={styles.icon}
+      notice={i18n.coteacherInvite({
+        invitedByName: invite.invited_by_name,
+      })}
+      details={
+        <BodyTwoText style={{marginBottom: 0}}>
+          {i18n.coteacherInviteDescription({
+            invitedByEmail: invite.invited_by_email,
+          })}
+          <br />
+          <StrongText>{invite.section_name}</StrongText>
+        </BodyTwoText>
+      }
+      tooltipText={i18n.coteacherTooltip()}
+      buttonsStyles={styles.buttons}
+      buttons={[
+        {
+          text: 'Decline',
+          onClick: () => declineCoteacherInvite(invite.id, invite.section_id),
+          color: Button.ButtonColor.neutralDark,
+          style: styles.declineButton,
+        },
+        {
+          text: 'Accept',
+          onClick: () => acceptCoteacherInvite(invite.id, invite.section_id),
+          color: Button.ButtonColor.brandSecondaryDefault,
+          style: styles.acceptButton,
+        },
+      ]}
+    />
+  );
 };
 
 export const UnconnectedCoteacherInviteNotification =
