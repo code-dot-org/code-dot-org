@@ -23,7 +23,7 @@ var EvalVisualizationColumn = function () {
           id="continueButton"
           className="launch hide float-right"
         >
-          <img src="/blockly/media/1x1.gif" alt="" />
+          <img src="/blockly/media/1x1.gif" />
           {msg.continue()}
         </button>
       </GameButtons>

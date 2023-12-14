@@ -210,7 +210,6 @@ class HomeController < ApplicationController
       @homepage_data[:isTeacher] = false
       @homepage_data[:sections] = student_sections
       @homepage_data[:studentId] = current_user.id
-      @homepage_data[:studentSpecialAnnouncement] = Announcements.get_localized_announcement_for_page("/student-home")
     end
 
     if current_user.school_donor_name

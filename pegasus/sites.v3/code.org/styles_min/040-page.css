@@ -12,7 +12,7 @@
   --brand_primary_default: #009EB0;
   --brand_primary_dark: #008291;
   --brand_secondary_light: #E0D1EC;
-  --brand_secondary_default: #8C52BA;
+  --brand_secondary_default: #9660BF;
   --brand_secondary_dark: #6F488E;
   --brand_accent_default: #ED6060;
   --neutral_white: #FFFFFF;
@@ -178,16 +178,6 @@ figcaption,
   color: var(--brand_primary_default);
 }
 
-strong {
-  font-family: var(--main-font);
-  font-weight: var(--bold-font-weight);
-}
-
-em {
-  font-family: var(--main-font);
-  font-style: italic;
-}
-
 a,
 a:link {
   font-family: var(--main-font);
@@ -208,99 +198,6 @@ a:active {
 
 a:link:has(*) {
   text-decoration: none;
-}
-
-/* Button styles */
-/* For call to action links that look like buttons
-  use the .link-button class on an <a> tag instead
-  of a <button> element */
-a.link-button,
-button,
-.btn,
-input[type=submit] {
-  display: inline-block;
-  color: var(--neutral_white);
-  background: var(--brand_secondary_default);
-  border: 2px solid var(--brand_secondary_default);
-  border-radius: 4px;
-  padding: .75rem 1rem;
-  margin: 0.5rem 0;
-  font-size: 1rem;
-  font-family: var(--main-font);
-  font-weight: var(--semi-bold-font-weight);
-  line-height: 1;
-  text-decoration: none;
-  text-align: center;
-  transition: all ease-in-out .2s;
-
-  /* Hover styles */
-  &:hover {
-    background: var(--brand_secondary_dark);
-    border-color: var(--brand_secondary_dark);
-    color: var(--neutral_white);
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-  /* Focus styles */
-  &:focus {
-    outline: var(--brand_primary_default) solid 2px;
-    outline-offset: 2px;
-    &:not(:focus-visible) {
-      outline: none;
-    }
-  }
-
-  /* Secondary button styles */
-  &.secondary {
-    background: none;
-    border-color: var(--neutral_dark);
-    color: var(--neutral_dark);
-    &:hover {
-      background: var(--neutral_dark10);
-    }
-  }
-
-  /* White button styles */
-  &.white {
-    background: var(--neutral_white);
-    border-color: var(--neutral_white);
-    color: var(--neutral_dark);
-    &:hover {
-      background: var(--neutral_dark10);
-      border-color: var(--neutral_dark10);
-    }
-  }
-
-  /* Icon button styles */
-  &.has-icon {
-    .flex-wrapper {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-  }
-
-  /* Disabled button styles */
-  &:disabled,
-  &.disabled {
-    cursor: default;
-    background: var(--neutral_dark20);
-    border: 2px solid var(--neutral_dark20);
-    color: var(--neutral_dark70);
-  }
-
-  /* Small button styles */
-  &.small {
-    font-size: 0.875rem;
-    padding: 0.5rem 0.75rem;
-  }
-
-  /* Increases line height on mobile
-    if button text goes to 2+ lines */
-  @media (max-width: 640px) {
-    line-height: 1.2;
-  }
 }
 
 /* Adds an icon to external links
@@ -326,6 +223,16 @@ a.link-button.has-external-link::after {
 html[dir="rtl"] .has-external-link a.link-button::after,
 html[dir="rtl"] a.link-button.has-external-link::after {
   margin: 0 4px 0 0;
+}
+
+strong {
+  font-family: var(--main-font);
+  font-weight: var(--bold-font-weight);
+}
+
+em {
+  font-family: var(--main-font);
+  font-style: italic;
 }
 
 li > ul {
@@ -452,6 +359,70 @@ a.about_list_item {
 
 a.about_list_item:hover {
   color: var(--brand_secondary_default);
+}
+
+.button-color-share {
+  background-color: var(--brand_secondary_default);
+  border-color: var(--brand_secondary_default);
+}
+
+button {
+  -webkit-appearance: none;
+  -webkit-user-select: none;
+  -webkit-writing-mode: horizontal-tb;
+  align-items: flex-start;
+  background-color: var(--brand_secondary_default);
+  border-color: var(--brand_secondary_default);
+  background-image: none;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-image-outset: 0px;
+  border-image-repeat: stretch;
+  border-image-slice: 100%;
+  border-image-source: none;
+  border-image-width: 1;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  box-sizing: border-box;
+  color: var(--neutral_white);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
+  font-size: 14px;
+  height: 34px;
+  letter-spacing: normal;
+  line-height: 20px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  padding-bottom: 6px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 6px;
+  text-align: center;
+  text-indent: 0px;
+  text-shadow: none;
+  text-transform: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-spacing: 0px;
+  writing-mode: lr-tb;
+  transition: all ease-in-out .2s;
+}
+
+.btn-white:hover{
+  background-color:#E6E6F3;
+  border-color:#adadad;
 }
 
 .dropdown {

@@ -322,7 +322,6 @@ az:
   call_to_action_explore_all_hoc_activities: Code.org saytından bütün Hour of Code
     fəaliyyətlərini araşdırın
   call_to_action_start_dance_party: Rəqs partiyasına başlayın
-  call_to_action_start_dance_party_ai_edition: 'Start Dance Party: AI Edition'
   call_to_action_start_part_02: İkinci hissəyə başlayın
   call_to_action_start_unplugged_activity: Şəbəkdən çıxarılmış fəaliyyətə başlayın
   call_to_action_view_promo_resources: Promo resurslarına baxın
@@ -438,15 +437,6 @@ az:
   call_to_action_learn_about_ai: AI haqqında məlumat əldə edin
   call_to_action_learn_more_about_ai: Learn more about AI
   call_to_action_get_started: Başlamaq
-  call_to_action_explore_self_paced_pl: Explore self-paced professional learning
-  call_to_action_applications_get_notified: Get notified when applications open
-  call_to_action_applications_notify_me: Notify me when I can apply
-  call_to_action_apply_now: Apply now
-  call_to_action_explore_self_paced_learning: Explore self-paced learning
-  call_to_action_explore_k_5_workshops: Explore K-5 workshops
-  call_to_action_for_intl_educators: For international educators
-  call_to_action_learn_more_program_region: Learn more about the program in your region
-  call_to_action_visit_support_center: Visit our support center
   aria_label_call_to_action_hoc_how_to_educators: Müəllimlər üçün necə təlimatına
     baxın
   aria_label_call_to_action_hoc_how_to_companies: Şirkətlər üçün necə təlimatına baxın
@@ -474,8 +464,6 @@ az:
     təlim proqramına başlayın
   aria_label_call_to_action_teaching_problem_solving: Problemlərin həlli və hesablama
     peşəkar tədris proqramına başlayın
-  aria_label_call_to_action_teaching_interactive_animations_games: Start the Teaching
-    Interactive Animations and Games professional learning program
   aria_label_call_to_action_teaching_csc: Tədris Kompüter Elmləri Əlaqələri peşəkar
     təlim proqramına başlayın
   aria_label_call_to_action_teaching_ai: Tədris AI və Maşın Öyrənmə peşəkar öyrənmə
@@ -581,16 +569,6 @@ az:
   aria_label_call_to_action_register_student_workshop: Register for a free student
     workshop
   aria_label_call_to_action_view_more_cs_resources: View more computer science resources
-  aria_label_call_to_action_pl_apply_csd: Apply now for Computer Science Discoveries
-    professional learning
-  aria_label_call_to_action_pl_apply_csp: Apply now for Computer Science Principles
-    professional learning
-  aria_label_call_to_action_pl_apply_csa: Apply now for AP® Computer Science A professional
-    learning
-  aria_label_call_to_action_learn_more_csd: Learn more about Computer Science Discoveries
-  aria_label_call_to_action_learn_more_csp: Learn more about Computer Science Principles
-  aria_label_call_to_action_learn_more_csa: Learn more about AP® Computer Science
-    A
   video_title_professional_learning_program: Code.org-un Peşəkar Öyrənmə Proqramı
   curriculum_name_csf: Kompüter elminin əsasları
   curriculum_name_csf_02: Hər hansı bir CS Əsasları (Kurs A-F)
@@ -609,7 +587,6 @@ az:
   curriculum_name_csd: Kompüter Elmləri Kəşfləri
   curriculum_name_csp: Kompüter Elmləri Prinsipləri
   curriculum_name_problem_solving: Problemlərin həlli və hesablanması
-  curriculum_name_teaching_animation: Teaching Interactive Animations and Games
   curriculum_name_csc: Kompüter Elmləri Əlaqələri
   curriculum_name_csa: AP® Kompüter Elmləri A
   curriculum_name_csa_ai: Proqram mühəndisliyi və kompüter baxışı
@@ -748,7 +725,6 @@ az:
   module_label_languages: 'Dəstəklənən Dillər:'
   module_label_accessibility_features: 'Əlçatanlıq:'
   module_label_accessibility_features_full: 'Əlçatanlıq xüsusiyyətləri:'
-  module_label_teacher_requirements: 'Teacher Requirements:'
   module_label_educator_tool: Tərbiyəçi vasitəsi
   module_label_educator_course: Pedaqoq kursu
   module_label_educator_resources: Educator resources
@@ -802,7 +778,6 @@ az:
   module_duration_1_hr: 1 saat
   module_duration_2_hrs: 2 saat
   module_duration_3_hrs: 3 saat
-  module_duration_3_hrs_20_minutes: 3 hours 20 minutes
   module_duration_5_hrs: 5 saat
   module_duration_5_hrs_plus: 5+ saat
   module_duration_8_hrs: 8 saat
@@ -824,7 +799,6 @@ az:
   module_label_teaching_csd: Kompüter Elmləri Kəşflərinin Tədrisi
   module_label_teaching_csp: Kompüter Elmi Prinsiplərinin Tədrisi
   module_label_teaching_problem_solving: Problemlərin həlli və hesablama tədrisi
-  module_label_teaching_animations: Interactive Animations and Games
   module_label_teaching_csc: Kompüter elmləri əlaqələrinin tədrisi
   module_label_teaching_ai: Süni intellekt və maşın öyrənməsinin tədrisi
   module_label_teaching_maker_cp: Cihazlarla Proqramlar yaratmağı öyrətmək (Circuit
@@ -894,12 +868,6 @@ az:
   heading_attend_free_workshop: Attend a free student workshop
   heading_access_more_cs_resources: Access more computer science resources
   heading_available_on_code_dot_org: Available on Code.org
-  heading_program_design: Program design
-  heading_how_does_application_process_work: How does the application process work?
-  heading_apply: Apply
-  heading_acceptance: Acceptance
-  heading_enroll: Enroll
-  heading_have_questions: Have questions?
   cs_ambassador_subhead: Əgər siz məktəbinizdə daha çox gənc qadını kompüter elmləri
     almağa təşviq etmək həvəsli bir orta məktəb tələbəsinizsə, onda sizə ehtiyacımız
     var!
@@ -971,19 +939,6 @@ az:
     CSA curriculum to your students.
   professional_learning_section_workshops_starting: Bu yaydan başlayan şəxsən və virtual
     seminarlar.
-  pl_self_paced_learning_heading: Self-Paced Learning
-  pl_self_paced_learning_desc: Learn at your own pace using our online learning modules.
-    You can start whenever is convenient for you and the courses are free.
-  pl_elementary_workshops_heading: Elementary Workshops
-  pl_elementary_workshops_desc: Do you teach Kindergarten through 5th grade? Check
-    out the link below to learn more about our K5 workshops.
-  pl_outside_us_heading: Outside the United States
-  pl_outside_us_desc: If you're an international teacher interested in professional
-    learning, learn more about what's offered in your area.
-  pl_regional_partner_desc: Your local Code.org Regional Partner provides high quality
-    Code.org professional learning to teachers, and can help guide your school or
-    district on implementation, certification, funding, and more. They are happy to
-    answer any questions you may have about the program!
   no_devices_section_subhead: Davam edin, şnurunu kəsin (bir müddət)!
   no_devices_section_desc: CS təhsili həmişə ekranın qarşısında olmağa ehtiyac duymur
     və cihaza giriş kompüter elmləri anlayışlarını öyrənmək üçün bir maneə olmamalıdır.
@@ -1008,11 +963,6 @@ az:
   subscribe_form_section_desc_csp: Code.org-un Kompüter Elmləri Prinsipləri haqqında
     aylıq e-poçt almaq üçün qeydiyyatdan keçin və birbaşa gələnlər qutunuza göndərilən
     faydalı xatırlatmalar, məsləhətlər və yeniləmələri əldə edin.
-  subscribe_form_section_title_pl: Get notified when Professional Learning registration
-    opens
-  subscribe_form_section_desc_pl: Be the first to know when registration begins! Sign
-    up to receive an email notification when teachers can start applying for the Code.org
-    Professional Learning Program.
   subscribe_form_section_unsubscribe: İstənilən vaxt abunəlikdən çıxa bilərsiniz.
   hoc_page_what_is_hoc_heading: What is Hour of Code?
   hoc_page_desc: "[The Hour of Code](%{hoc_url}) is a global movement reaching tens
@@ -1215,7 +1165,6 @@ az:
     sonra bütün iştirakçıların ən çox ehtiyaclarını ödəən təlimatlar hazırlamaq üçün
     bir komanda olaraq əməkdaşlıq edin.
   ai_curriculum_btn_aria_label_06: Generativ AI dərs planının ictimai təsirinə baxın
-  ai_curriculum_btn_aria_label_dance_ai: 'Try the Dance Party: AI Edition activity'
   ai_carousel_heading: 'Code.org ilə AI haqqında müəllimlərin dedikləri:'
   ai_carousel_quote_01: Bu dərs həm də şagirdlərimə təsnifat sistemlərində fikir elementinin
     olduğunu görmək imkanı verdi. Daha sonra, AI -də qərəzin necə nəticələnə biləcəyini
@@ -1426,68 +1375,6 @@ az:
   ai_vid_computervision_caption: Kompüter Görmə
   ai_vid_ethics1_caption: 'Etika və AI: Bərabər Giriş və Alqoritmik Yanlışlıq'
   ai_vid_ethics2_caption: 'Etika və AI: Məxfilik və İşin Gələcəyi'
-  pl_middle_high_top_heading: Professional Learning Workshops for Grades 6-12
-  pl_middle_high_top_desc: Our engaging workshops are for new and experienced computer
-    science teachers!
-  pl_middle_high_top_desc_02: 'In this program, you will:'
-  pl_middle_high_top_list_01: Explore the curriculum and learning tools
-  pl_middle_high_top_list_02: Experience the course as a teacher and a learner
-  pl_middle_high_top_list_03: Collaborate with fellow teachers
-  pl_middle_high_quotes_heading: 'What teachers are saying about Code.org professional
-    learning:'
-  pl_middle_high_quotes_01: I liked seeing the lessons in action — it helped me understand
-    how to pace them in my own classroom. I liked the opportunity to talk to my peers
-    about assessment ideas and recruitment ideas.
-  pl_middle_high_quotes_02: This was excellent professional development that allowed
-    us time to reflect, process and debrief both individually and as a group. The
-    activities were engaging and meaningful to learning the content. I feel like I'm
-    leaving with skill I can immediately apply in teaching the curriculum.
-  pl_middle_high_quotes_03: By the end, I just felt so prepared, motivated, and ready
-    to get back in the classroom again!
-  pl_middle_high_programs_heading: Professional learning programs specific to the
-    course
-  pl_middle_high_programs_desc: Join one of our professional learning programs in
-    your area. The programs are designed to prepare you before and during your first
-    year teaching [Computer Science Discoveries](%{csd_url}), [Computer Science Principles](%{csp_url}),
-    or [AP® Computer Science A](%{csa_url}).
-  pl_middle_high_programs_no_experience_req: No computer science experience required
-  pl_middle_high_programs_some_experience_req: Able to use functions, conditionals,
-    loops, and arrays
-  pl_middle_high_programs_based_in_us: Based in United States
-  pl_middle_high_programs_teach_ap_course: Teach AP® or non-AP® course
-  pl_middle_high_programs_csd_hours: Teaching 25+ hours of course to a class in next
-    school year
-  pl_middle_high_programs_csp_hours: Teaching 100+ hours of course to a class in next
-    school year
-  pl_middle_high_programs_csa_hours: Teaching 140+ hours of course to a class in next
-    school year
-  pl_middle_high_program_design_desc: The yearlong professional learning programs
-    all follow a similar design. Regional Partners across the country provide our
-    programs and offer local workshops led by trained facilitators.
-  pl_middle_high_program_design_summer_title: Summer Workshops
-  pl_middle_high_program_design_summer_desc: Attend a multi-day summer workshop to
-    get familiar with the curriculum and prepare for the school year.
-  pl_middle_high_program_design_year_title: Academic Year Workshops
-  pl_middle_high_program_design_year_desc: Attend workshops during the year to receive
-    support as you teach the curriculum.
-  pl_middle_high_program_design_community_title: Community Support
-  pl_middle_high_program_design_community_desc: Collaborate with your regional cohort
-    of teachers and get the support of a nationwide online teacher community.
-  pl_middle_high_process_apply_desc: Fill out an application with information about
-    you, your school, and the course you're teaching.
-  pl_middle_high_process_acceptance_desc: If accepted, you will be notified of your
-    acceptance by your Regional Partner after applying.
-  pl_middle_high_process_enroll_desc: Sign up for the summer workshop in your region
-    and get ready to start the yearlong program!
-  pl_middle_high_cost_heading: What does the program cost?
-  pl_middle_high_cost_subhead: The cost of the program varies by region.
-  pl_middle_high_cost_desc: You may be eligible for a scholarship to cover the cost
-    of your program.
-  pl_middle_high_additional_programs_desc: In addition to our in-person facilitator
-    led options for middle and high school teachers we have several other programs
-    to meet the diverse needs of our teachers.
-  pl_middle_high_additional_programs_heading: Additional programs to meet diverse
-    teacher needs
   self_paced_pl_hero_heading: Tərbiyəçilər üçün öz-özünə inkişaf edən peşəkar öyrənmə
   self_paced_pl_hero_desc: Kompüter elmləri tədris səyahətinin hər mərhələsində müəllimlərə
     dəstək olmaq üçün peşəkar öyrənmə təklifləri.
@@ -3112,7 +2999,6 @@ az:
     və ya [Necə Ediləcək Bələdçini oxuyun] ()%{howto_url}'
   tutorial_dance2019_name: Rəqs şənliyi 2019
   tutorial_danceparty_name: Rəqs şənliyi
-  tutorial_dancepartyai_name: 'Rəqs partiyası: AI nəşri'
   tutorial_chibitronics_name: 'Chibitronics: İşıqlandırılmış Hekayə'
   tutorial_athlete_name: Öz idman oyununuzu kodlayın
   tutorial_moana_name: 'Moana: Kodla yol tapmaq'
@@ -3794,9 +3680,6 @@ az:
   tutorial_danceparty_shortdescription: Dostlarınızla bölüşmək üçün bir Rəqs Partiyasını
     kodlayın. Beyoncé, Lizzo, Harry Styles, Lil Nas X, Selena Gomez, Disneyin 'Encanto'
     musiqisi və daha çoxunu təqdim edir!
-  tutorial_dancepartyai_shortdescription: Learn about artificial intelligence (AI)
-    concepts to create your own virtual dance party showcasing today's top artists.
-    It's time to strut your stuff!
   tutorial_chibitronics_shortdescription: Öz hekayənizi işıqlandırmaq üçün bir kağız
     dövrəsini proqramlaşdırın.
   tutorial_athlete_shortdescription: Basketbol oyunu etmək və ya idman arasında qarışdırın
@@ -5028,9 +4911,6 @@ az:
   tutorial_danceparty_longdescription: Dostlarınızla bölüşmək üçün bir Rəqs Partiyasını
     kodlayın. Beyoncé, Lizzo, Harry Styles, Lil Nas X, Selena Gomez, Disneyin 'Encanto'
     musiqisi və daha çoxunu təqdim edir!
-  tutorial_dancepartyai_longdescription: Learn about artificial intelligence (AI)
-    concepts to create your own virtual dance party showcasing today's top artists.
-    It's time to strut your stuff!
   tutorial_chibitronics_longdescription: Öz hekayənizi işıqlandırmaq üçün bir kağız
     dövrəsini proqramlaşdırın.
   tutorial_athlete_longdescription: Basketbol oyunu etmək və ya idman arasında qarışdırın
@@ -7996,7 +7876,6 @@ az:
     özünəməxsus xüsusi edən müxtəlifliyi qəbul edəcəklər.
   tutorial_dance2019_string_detail_grades: 2+ siniflər
   tutorial_danceparty_string_detail_grades: 2+ siniflər
-  tutorial_dancepartyai_string_detail_grades: Grade 3+
   tutorial_chibitronics_string_detail_grades: 2-5 siniflər
   tutorial_athlete_string_detail_grades: 2+ siniflər
   tutorial_moana_string_detail_grades: 2+ siniflər
@@ -8674,8 +8553,6 @@ az:
   tutorial_dance2019_string_platforms: Bütün müasir brauzerlər, Android tablet, iPad,
     Unplugged
   tutorial_danceparty_string_platforms: Bütün müasir brauzerlər, Android planşet,
-    iPad
-  tutorial_dancepartyai_string_platforms: Bütün müasir brauzerlər, Android planşet,
     iPad
   tutorial_chibitronics_string_platforms: Bütün müasir brauzerlər, Ekran oxuyucusu
   tutorial_athlete_string_platforms: Bütün müasir brauzerlər
@@ -9546,7 +9423,6 @@ az:
     iPhone, iPad, Android telefon, Android tablet
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
-  tutorial_dancepartyai_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Chibitronics Chibi Çip və Dövrə Etiketi
     LEDləri
   tutorial_athlete_string_detail_platforms: ''
@@ -10227,7 +10103,6 @@ az:
   tutorial_meeempathy_string_detail_platforms: ''
   tutorial_dance2019_string_detail_programming_languages: Bloklar
   tutorial_danceparty_string_detail_programming_languages: Bloklar
-  tutorial_dancepartyai_string_detail_programming_languages: Bloklar
   tutorial_chibitronics_string_detail_programming_languages: Bloklar
   tutorial_athlete_string_detail_programming_languages: Bloklar
   tutorial_moana_string_detail_programming_languages: Bloklar

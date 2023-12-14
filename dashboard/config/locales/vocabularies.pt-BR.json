@@ -1409,18 +1409,18 @@
         },
         "conditionals/csc-ecosystems/2023": {
           "word": "Condições",
-          "definition": "Declarações que só são executadas sob certas condições"
+          "definition": "Declarações que só funcionam sob certas condições"
         },
         "ecosystem/csc-ecosystems/2023": {
           "word": "Ecossistema",
-          "definition": "Uma comunidade biológica de organismos interagindo e seu ambiente"
+          "definition": "Uma comunidade biológica de organismos em interação e seu ambiente"
         },
         "event/csc-ecosystems/2023": {
           "word": "Evento",
           "definition": "Uma ação que faz com que algo aconteça"
         },
         "overfishing/csc-ecosystems/2023": {
-          "word": "Pesca Predatória",
+          "word": "Sobrepesca",
           "definition": "Remoção de peixes mais rápido do que eles podem se reproduzir"
         },
         "simulation/csc-ecosystems/2023": {
@@ -1428,8 +1428,8 @@
           "definition": "Um modelo de computador para fins de estudo."
         },
         "debug/csc-ecosystems/2023": {
-          "word": "Depure",
-          "definition": "Localizando e corrigindo erros ou problemas no código."
+          "word": "Depurar",
+          "definition": "Encontrando e corrigindo erros ou problemas no código."
         },
         "variable/csc-ecosystems/2023": {
           "word": "Variável",

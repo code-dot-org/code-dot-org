@@ -50,19 +50,6 @@ section.donate-options {
   }
 }
 
-section.supporters {
-
-  .logos {
-    margin-block: 3rem;
-    gap: 3rem;
-
-    img {
-      width: 100px;
-      align-self: center;
-    }
-  }
-}
-
 section.seals{
 
   @media screen and (max-width: $width-sm) {

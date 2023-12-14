@@ -15,10 +15,7 @@ import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpe
 import SectionActionDropdown from './SectionActionDropdown';
 import Button from '@cdo/apps/templates/Button';
 import {stringifyQueryParams} from '../../utils';
-import {
-  StudentGradeLevels,
-  SectionLoginType,
-} from '@cdo/apps/util/sharedConstants';
+import {StudentGradeLevels} from '@cdo/apps/util/sharedConstants';
 
 /** @enum {number} */
 export const COLUMNS = {
@@ -90,8 +87,6 @@ export const loginInfoFormatter = function (loginType, {rowData}) {
     sectionCode = i18n.loginTypeClever();
   } else if (rowData.loginType === OAuthSectionTypes.google_classroom) {
     sectionCode = i18n.loginTypeGoogleClassroom();
-  } else if (rowData.loginType === SectionLoginType.lti_v1) {
-    sectionCode = i18n.loginTypeLti();
   } else {
     sectionCode = rowData.code;
   }

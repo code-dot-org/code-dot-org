@@ -8,8 +8,8 @@ tr:
             '"follows"': takip eder
             '"avoids"': kaçınır
       AmysBlocks_goldilocks:
-        text: |-
-          Eğer {CONDITION}{SPRITE}
+        text: |2-
+           if {CONDITION}{SPRITE}
           {STATEMENT}
         options:
           CONDITION:
@@ -1166,7 +1166,7 @@ tr:
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}, {TEXT1} der"
       gamelab_addBehaviorSimple:
-        text: "{SPRITE} karakteri {BEHAVIOR} 'e başlar"
+        text: hareket {SPRITE} Başlar {BEHAVIOR}
       gamelab_addTarget:
         text: "{SPRITE},   {OPT} ile {TARGET} 'e erişir."
         options:
@@ -1836,8 +1836,8 @@ tr:
       KatiesBlocks_glideTo:
         text: "{SPRITE}, {LOCATION} konumuna süzülür"
       KatiesBlocks_goldilocks:
-        text: |-
-          Eğer {CONDITION}{SPRITE}
+        text: |2-
+           if {CONDITION}{SPRITE}
           {STATEMENT}
         options:
           CONDITION:
@@ -1855,7 +1855,7 @@ tr:
       KatiesBlocks_tumbling:
         text: karıştır
       Mikelab_addBehaviorSimple:
-        text: "{SPRITE} karakteri {BEHAVIOR} 'e başlar"
+        text: hareket {SPRITE} Başlar {BEHAVIOR}
       Mikelab_addTrainingData:
         text: 'eğitim verileri ekleyin: {NAME},{LOCATION}'
         options:

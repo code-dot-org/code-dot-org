@@ -295,7 +295,6 @@ he:
   call_to_action_explore_all_hoc_activities: גלו את כל הפעילויות של שעת הקוד באתר
     Code.org
   call_to_action_start_dance_party: התחל מסיבת ריקודים
-  call_to_action_start_dance_party_ai_edition: 'Start Dance Party: AI Edition'
   call_to_action_start_part_02: התחל חלק שני
   call_to_action_start_unplugged_activity: התחל פעילות מנותקת
   call_to_action_view_promo_resources: הצג משאבי פרומו
@@ -410,15 +409,6 @@ he:
   call_to_action_learn_about_ai: למד על AI
   call_to_action_learn_more_about_ai: Learn more about AI
   call_to_action_get_started: להתחיל
-  call_to_action_explore_self_paced_pl: Explore self-paced professional learning
-  call_to_action_applications_get_notified: Get notified when applications open
-  call_to_action_applications_notify_me: Notify me when I can apply
-  call_to_action_apply_now: Apply now
-  call_to_action_explore_self_paced_learning: Explore self-paced learning
-  call_to_action_explore_k_5_workshops: Explore K-5 workshops
-  call_to_action_for_intl_educators: For international educators
-  call_to_action_learn_more_program_region: Learn more about the program in your region
-  call_to_action_visit_support_center: Visit our support center
   aria_label_call_to_action_hoc_how_to_educators: צפה במדריך הדרכה למחנכים
   aria_label_call_to_action_hoc_how_to_companies: צפה במדריך הדרכה לחברות
   aria_label_call_to_action_hoc_how_to_districts: צפה במדריך הדרכה למחוזות
@@ -441,8 +431,6 @@ he:
     למידה מקצועית
   aria_label_call_to_action_teaching_problem_solving: התחל את תוכנית הלימוד המקצועית
     בהוראה לפתרון בעיות ומחשוב
-  aria_label_call_to_action_teaching_interactive_animations_games: Start the Teaching
-    Interactive Animations and Games professional learning program
   aria_label_call_to_action_teaching_csc: התחל את תוכנית הלמידה המקצועית להוראת חיבורי
     מדעי המחשב
   aria_label_call_to_action_teaching_ai: התחל את תוכנית הלמידה המקצועית של הוראת AI
@@ -537,16 +525,6 @@ he:
   aria_label_call_to_action_register_student_workshop: Register for a free student
     workshop
   aria_label_call_to_action_view_more_cs_resources: View more computer science resources
-  aria_label_call_to_action_pl_apply_csd: Apply now for Computer Science Discoveries
-    professional learning
-  aria_label_call_to_action_pl_apply_csp: Apply now for Computer Science Principles
-    professional learning
-  aria_label_call_to_action_pl_apply_csa: Apply now for AP® Computer Science A professional
-    learning
-  aria_label_call_to_action_learn_more_csd: Learn more about Computer Science Discoveries
-  aria_label_call_to_action_learn_more_csp: Learn more about Computer Science Principles
-  aria_label_call_to_action_learn_more_csa: Learn more about AP® Computer Science
-    A
   video_title_professional_learning_program: תוכנית הלמידה המקצועית של Code.org
   curriculum_name_csf: יסודות מדעי המחשב
   curriculum_name_csf_02: כל יסודות CS (קורס A-F)
@@ -565,7 +543,6 @@ he:
   curriculum_name_csd: תגליות מדעי המחשב
   curriculum_name_csp: עקרונות מדעי המחשב
   curriculum_name_problem_solving: פתרון בעיות ומחשוב
-  curriculum_name_teaching_animation: Teaching Interactive Animations and Games
   curriculum_name_csc: חיבורי מדעי המחשב
   curriculum_name_csa: AP® מדעי המחשב א
   curriculum_name_csa_ai: הנדסת תוכנה וראייה ממוחשבת
@@ -686,7 +663,6 @@ he:
   module_label_languages: 'שפות נתמכות:'
   module_label_accessibility_features: 'נגישות:'
   module_label_accessibility_features_full: 'תכונות נגישות:'
-  module_label_teacher_requirements: 'Teacher Requirements:'
   module_label_educator_tool: כלי מחנך
   module_label_educator_course: קורס מחנך
   module_label_educator_resources: Educator resources
@@ -740,7 +716,6 @@ he:
   module_duration_1_hr: 1 שעה
   module_duration_2_hrs: 2 שעות
   module_duration_3_hrs: 3 שעות
-  module_duration_3_hrs_20_minutes: 3 hours 20 minutes
   module_duration_5_hrs: 5 שעות
   module_duration_5_hrs_plus: 5+ שעות
   module_duration_8_hrs: 8 שעות
@@ -762,7 +737,6 @@ he:
   module_label_teaching_csd: הוראת תגליות מדעי המחשב
   module_label_teaching_csp: הוראת עקרונות מדעי המחשב
   module_label_teaching_problem_solving: הוראת פתרון בעיות ומחשוב
-  module_label_teaching_animations: Interactive Animations and Games
   module_label_teaching_csc: הוראת חיבורי מדעי המחשב
   module_label_teaching_ai: הוראת AI ולמידת מכונה
   module_label_teaching_maker_cp: לימוד יצירת אפליקציות עם מכשירים (מגרש משחקים במעגל)
@@ -825,12 +799,6 @@ he:
   heading_attend_free_workshop: Attend a free student workshop
   heading_access_more_cs_resources: Access more computer science resources
   heading_available_on_code_dot_org: Available on Code.org
-  heading_program_design: Program design
-  heading_how_does_application_process_work: How does the application process work?
-  heading_apply: Apply
-  heading_acceptance: Acceptance
-  heading_enroll: Enroll
-  heading_have_questions: Have questions?
   cs_ambassador_subhead: אם אתה תלמיד תיכון נלהב לעודד נשים צעירות יותר ללמוד מדעי
     המחשב בבית הספר שלך, אז אנחנו צריכים אותך!
   cs_ambassador_desc: כל תחום, כולל רפואה, בידור, ספורט, חינוך, עסקים, אופנה ויזמות
@@ -896,19 +864,6 @@ he:
     CSA curriculum to your students.
   professional_learning_section_workshops_starting: סדנאות אישיות ווירטואליות החל
     מהקיץ הקרוב.
-  pl_self_paced_learning_heading: Self-Paced Learning
-  pl_self_paced_learning_desc: Learn at your own pace using our online learning modules.
-    You can start whenever is convenient for you and the courses are free.
-  pl_elementary_workshops_heading: Elementary Workshops
-  pl_elementary_workshops_desc: Do you teach Kindergarten through 5th grade? Check
-    out the link below to learn more about our K5 workshops.
-  pl_outside_us_heading: Outside the United States
-  pl_outside_us_desc: If you're an international teacher interested in professional
-    learning, learn more about what's offered in your area.
-  pl_regional_partner_desc: Your local Code.org Regional Partner provides high quality
-    Code.org professional learning to teachers, and can help guide your school or
-    district on implementation, certification, funding, and more. They are happy to
-    answer any questions you may have about the program!
   no_devices_section_subhead: קדימה, חתוך את הכבל (לזמן מה)!
   no_devices_section_desc: חינוך למדעי המחשב לא תמיד צריך להיות מול מסך וגישה למכשירים
     לא אמורה להוות מכשול ללימוד מושגי מדעי המחשב.
@@ -933,11 +888,6 @@ he:
   subscribe_form_section_desc_csp: הירשם לקבלת הודעות דוא"ל חודשיות אודות עקרונות
     מדעי המחשב של Code.org וקבל תזכורות מועילות, טיפים ועדכונים הנשלחים ישירות לתיבת
     הדואר הנכנס שלך.
-  subscribe_form_section_title_pl: Get notified when Professional Learning registration
-    opens
-  subscribe_form_section_desc_pl: Be the first to know when registration begins! Sign
-    up to receive an email notification when teachers can start applying for the Code.org
-    Professional Learning Program.
   subscribe_form_section_unsubscribe: אתה יכול לבטל את המנוי בכל עת.
   hoc_page_what_is_hoc_heading: What is Hour of Code?
   hoc_page_desc: "[The Hour of Code](%{hoc_url}) is a global movement reaching tens
@@ -1123,7 +1073,6 @@ he:
     שתף פעולה כצוות כדי להמציא הנחיות העונות על הצרכים הרבים ביותר של כל המשתתפים.
   ai_curriculum_btn_aria_label_06: צפה בהשפעה החברתית של מערך שיעורים בינה מלאכותית
     גנרטיבית
-  ai_curriculum_btn_aria_label_dance_ai: 'Try the Dance Party: AI Edition activity'
   ai_carousel_heading: 'מה המורים אומרים על AI עם Code.org:'
   ai_carousel_quote_01: שיעור זה גם נתן לתלמידים שלי את ההזדמנות לראות שיש אלמנט של
     דעה במערכות סיווג. מאוחר יותר, כשהתחלנו לראות כיצד הטיה יכולה להסתיים ב- AI, הצלחתי
@@ -1292,68 +1241,6 @@ he:
   ai_vid_computervision_caption: ראייה ממוחשבת
   ai_vid_ethics1_caption: 'אתיקה ובינה מלאכותית: גישה שווה והטיה אלגוריתמית'
   ai_vid_ethics2_caption: 'אתיקה ובינה מלאכותית: פרטיות ועתיד העבודה'
-  pl_middle_high_top_heading: Professional Learning Workshops for Grades 6-12
-  pl_middle_high_top_desc: Our engaging workshops are for new and experienced computer
-    science teachers!
-  pl_middle_high_top_desc_02: 'In this program, you will:'
-  pl_middle_high_top_list_01: Explore the curriculum and learning tools
-  pl_middle_high_top_list_02: Experience the course as a teacher and a learner
-  pl_middle_high_top_list_03: Collaborate with fellow teachers
-  pl_middle_high_quotes_heading: 'What teachers are saying about Code.org professional
-    learning:'
-  pl_middle_high_quotes_01: I liked seeing the lessons in action — it helped me understand
-    how to pace them in my own classroom. I liked the opportunity to talk to my peers
-    about assessment ideas and recruitment ideas.
-  pl_middle_high_quotes_02: This was excellent professional development that allowed
-    us time to reflect, process and debrief both individually and as a group. The
-    activities were engaging and meaningful to learning the content. I feel like I'm
-    leaving with skill I can immediately apply in teaching the curriculum.
-  pl_middle_high_quotes_03: By the end, I just felt so prepared, motivated, and ready
-    to get back in the classroom again!
-  pl_middle_high_programs_heading: Professional learning programs specific to the
-    course
-  pl_middle_high_programs_desc: Join one of our professional learning programs in
-    your area. The programs are designed to prepare you before and during your first
-    year teaching [Computer Science Discoveries](%{csd_url}), [Computer Science Principles](%{csp_url}),
-    or [AP® Computer Science A](%{csa_url}).
-  pl_middle_high_programs_no_experience_req: No computer science experience required
-  pl_middle_high_programs_some_experience_req: Able to use functions, conditionals,
-    loops, and arrays
-  pl_middle_high_programs_based_in_us: Based in United States
-  pl_middle_high_programs_teach_ap_course: Teach AP® or non-AP® course
-  pl_middle_high_programs_csd_hours: Teaching 25+ hours of course to a class in next
-    school year
-  pl_middle_high_programs_csp_hours: Teaching 100+ hours of course to a class in next
-    school year
-  pl_middle_high_programs_csa_hours: Teaching 140+ hours of course to a class in next
-    school year
-  pl_middle_high_program_design_desc: The yearlong professional learning programs
-    all follow a similar design. Regional Partners across the country provide our
-    programs and offer local workshops led by trained facilitators.
-  pl_middle_high_program_design_summer_title: Summer Workshops
-  pl_middle_high_program_design_summer_desc: Attend a multi-day summer workshop to
-    get familiar with the curriculum and prepare for the school year.
-  pl_middle_high_program_design_year_title: Academic Year Workshops
-  pl_middle_high_program_design_year_desc: Attend workshops during the year to receive
-    support as you teach the curriculum.
-  pl_middle_high_program_design_community_title: Community Support
-  pl_middle_high_program_design_community_desc: Collaborate with your regional cohort
-    of teachers and get the support of a nationwide online teacher community.
-  pl_middle_high_process_apply_desc: Fill out an application with information about
-    you, your school, and the course you're teaching.
-  pl_middle_high_process_acceptance_desc: If accepted, you will be notified of your
-    acceptance by your Regional Partner after applying.
-  pl_middle_high_process_enroll_desc: Sign up for the summer workshop in your region
-    and get ready to start the yearlong program!
-  pl_middle_high_cost_heading: What does the program cost?
-  pl_middle_high_cost_subhead: The cost of the program varies by region.
-  pl_middle_high_cost_desc: You may be eligible for a scholarship to cover the cost
-    of your program.
-  pl_middle_high_additional_programs_desc: In addition to our in-person facilitator
-    led options for middle and high school teachers we have several other programs
-    to meet the diverse needs of our teachers.
-  pl_middle_high_additional_programs_heading: Additional programs to meet diverse
-    teacher needs
   self_paced_pl_hero_heading: למידה מקצועית בקצב עצמי למחנכים
   self_paced_pl_hero_desc: הצעות למידה מקצועיות לתמיכה במורים בכל שלב במסע ההוראה
     שלהם במדעי המחשב.
@@ -2819,7 +2706,6 @@ he:
     את המדריך]%{howto_url}'
   tutorial_dance2019_name: מסיבת ריקודים
   tutorial_danceparty_name: מסיבת ריקודים
-  tutorial_dancepartyai_name: 'מסיבת ריקודים: מהדורת AI'
   tutorial_chibitronics_name: 'צ''יביטרוניקה: סיפור מואר'
   tutorial_athlete_name: תכנת משחק ספורט משלך
   tutorial_moana_name: 'מואנה: איתור דרך עם קוד'
@@ -3499,9 +3385,6 @@ he:
   tutorial_meeempathy_name: סיפור מיינקראפט על שני כפרים
   tutorial_danceparty_shortdescription: תכנתו מסיבת ריקודים ושתפו אותה עם חבריכם.
     עם שירים של קייטי פרי, מדונה, ג'יי באלווין, סיה, קית' אורבן, סיארה ועוד 25 אמנים!
-  tutorial_dancepartyai_shortdescription: Learn about artificial intelligence (AI)
-    concepts to create your own virtual dance party showcasing today's top artists.
-    It's time to strut your stuff!
   tutorial_chibitronics_shortdescription: תכנת מעגל נייר כדי להאיר את הסיפור שלך.
   tutorial_athlete_shortdescription: בחר ליצור משחק כדורסל או משחק שישלב כמה פעילויות
     ספורטיביות שונות!
@@ -4550,9 +4433,6 @@ he:
     רבים אחרים!
   tutorial_danceparty_longdescription: תכנתו מסיבת ריקודים ושתפו אותה עם חבריכם. עם
     שירים של קייטי פרי, מדונה, ג'יי באלווין, סיה, קית' אורבן, סיארה ועוד 25 אמנים!
-  tutorial_dancepartyai_longdescription: Learn about artificial intelligence (AI)
-    concepts to create your own virtual dance party showcasing today's top artists.
-    It's time to strut your stuff!
   tutorial_chibitronics_longdescription: תכנת מעגל נייר כדי להאיר את הסיפור שלך.
   tutorial_athlete_longdescription: בחר ליצור משחק כדורסל או משחק שישלב כמה פעילויות
     ספורטיביות שונות!
@@ -6938,7 +6818,6 @@ he:
     ויאמצו את המגוון שהופך את כולנו למיוחדים באופן ייחודי.
   tutorial_dance2019_string_detail_grades: כיתות ב 'ומעלה
   tutorial_danceparty_string_detail_grades: כיתות ב 'ומעלה
-  tutorial_dancepartyai_string_detail_grades: Grade 3+
   tutorial_chibitronics_string_detail_grades: כיתות 2-5
   tutorial_athlete_string_detail_grades: כיתות ב 'ומעלה
   tutorial_moana_string_detail_grades: כיתות ב 'ומעלה
@@ -7616,8 +7495,6 @@ he:
   tutorial_dance2019_string_platforms: כל הדפדפנים המודרניים, טאבלט אנדרואיד, אייפד,
     מנותק
   tutorial_danceparty_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
-    ואייפד
-  tutorial_dancepartyai_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
     ואייפד
   tutorial_chibitronics_string_platforms: כל הדפדפנים המודרניים, קורא מסך
   tutorial_athlete_string_platforms: כל הדפדפנים המודרניים
@@ -8489,7 +8366,6 @@ he:
     אייפון, אייפד, טלפון אנדרואיד, טאבלט אנדרואיד
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
-  tutorial_dancepartyai_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: שבב צ'יביטרוניקה צ'יבי ומדבקת מעגלים
     נוריות
   tutorial_athlete_string_detail_platforms: ''
@@ -9169,7 +9045,6 @@ he:
   tutorial_meeempathy_string_detail_platforms: ''
   tutorial_dance2019_string_detail_programming_languages: בלוקים
   tutorial_danceparty_string_detail_programming_languages: בלוקים
-  tutorial_dancepartyai_string_detail_programming_languages: בלוקים
   tutorial_chibitronics_string_detail_programming_languages: בלוקים
   tutorial_athlete_string_detail_programming_languages: בלוקים
   tutorial_moana_string_detail_programming_languages: בלוקים

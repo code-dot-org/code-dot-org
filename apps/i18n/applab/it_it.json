@@ -122,7 +122,7 @@
   "designElement_textInput_changeEventDesc": "Attivato quando l'area di testo perde la priorità se il testo è cambiato.",
   "designElement_textInput_inputEventDesc": "Attivato immediatamente ogni volta che il contenuto dell'input di testo cambia.",
   "designToolboxDescription": "Trascina gli elementi nella tua app!",
-  "designToolboxHeader": "Cassetta degli strumenti",
+  "designToolboxHeader": "Cassetta degli strumenti di progettazione",
   "designWorkspaceDescription": "Fai clic su un elemento o selezionalo dal menu a discesa sottostante per modificarne le proprietà. Crea codice in Eventi.",
   "designWorkspaceHeader": "Area di lavoro: ",
   "designWorkspace_copyToScreenButton": "Copia sullo schermo",

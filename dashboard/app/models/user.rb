@@ -79,7 +79,6 @@ require_dependency 'queries/script_activity'
 require 'policies/child_account'
 require 'services/child_account'
 require 'policies/lti'
-require 'services/user'
 
 class User < ApplicationRecord
   include SerializedProperties
@@ -273,10 +272,6 @@ class User < ApplicationRecord
   after_save :save_parent_email_preference, if: :parent_email_preference_opt_in_required?
 
   after_save :save_email_reg_partner_preference, if: -> {share_teacher_email_reg_partner_opt_in_radio_choice.present?}
-
-  after_create if: -> {Policies::Lti.lti? self} do
-    Services::Lti.create_lti_user_identity(self)
-  end
 
   before_destroy :soft_delete_channels
 
@@ -525,7 +520,7 @@ class User < ApplicationRecord
   validates :name, length: {within: 1..70}, allow_blank: true
   validates :name, no_utf8mb4: true
 
-  defer_age = proc {|user| %w(google_oauth2 clever powerschool).include?(user.provider) || user.sponsored? || Policies::Lti.lti?(user)}
+  defer_age = proc {|user| %w(google_oauth2 clever powerschool).include?(user.provider) || user.sponsored?}
 
   validates :age, presence: true, on: :create, unless: defer_age # only do this on create to avoid problems with existing users
   AGE_DROPDOWN_OPTIONS = (4..20).to_a << "21+"
@@ -900,7 +895,7 @@ class User < ApplicationRecord
   def self.new_with_session(params, session)
     return super unless PartialRegistration.in_progress? session
     new_from_partial_registration session do |user|
-      Services::User.assign_form_params(user, params)
+      user.attributes = user.attributes.merge(params) {|_key, old_val, new_val| new_val.presence || old_val}.compact
     end
   end
 

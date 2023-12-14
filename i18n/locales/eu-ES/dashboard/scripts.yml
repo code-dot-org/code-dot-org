@@ -1047,10 +1047,6 @@ eu:
               display_name: Zerrendak
             lessonGroup-3:
               display_name: Itzuliak
-        angelina-playground:
-          lesson_groups:
-            lessonGroup-4:
-              display_name: Ausazkoa
         pre-express-2023:
           lesson_groups:
             csf_loops:

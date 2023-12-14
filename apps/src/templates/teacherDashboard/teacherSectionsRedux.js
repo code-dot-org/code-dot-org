@@ -45,7 +45,6 @@ const urlByProvider = {
 const importUrlByProvider = {
   [OAuthSectionTypes.google_classroom]: '/dashboardapi/import_google_classroom',
   [OAuthSectionTypes.clever]: '/dashboardapi/import_clever_classroom',
-  [SectionLoginType.lti_v1]: '/lti/v1/sync_course',
 };
 
 //
@@ -550,14 +549,6 @@ export const importOrUpdateRoster =
     let sectionId;
 
     dispatch({type: IMPORT_ROSTER_REQUEST});
-    if (provider === SectionLoginType.lti_v1) {
-      return fetch(`${importSectionUrl}?section_code=${courseId}`).then(() =>
-        dispatch({
-          type: IMPORT_ROSTER_SUCCESS,
-          sectionId,
-        })
-      );
-    }
     return fetchJSON(importSectionUrl, {courseId, courseName})
       .then(newSection => (sectionId = newSection.id))
       .then(() => dispatch(asyncLoadSectionData()))
@@ -1065,10 +1056,7 @@ export default function teacherSections(state = initialState, action) {
   if (action.type === SET_ROSTER_PROVIDER) {
     // No-op if this action is called with a non-OAuth section type,
     // since this action is triggered on every section load.
-    if (
-      OAuthSectionTypes[action.rosterProvider] ||
-      action.rosterProvider === SectionLoginType.lti_v1
-    ) {
+    if (OAuthSectionTypes[action.rosterProvider]) {
       return {
         ...state,
         rosterProvider: action.rosterProvider,

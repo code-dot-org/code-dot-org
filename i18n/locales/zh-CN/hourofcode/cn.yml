@@ -229,7 +229,6 @@ cn:
   call_to_action_share_on_social_media: 分享到社交媒体
   call_to_action_explore_all_hoc_activities: 浏览Code.org上的所有编程一小时活动
   call_to_action_start_dance_party: 开始舞会
-  call_to_action_start_dance_party_ai_edition: 开始舞会：AI版
   call_to_action_start_part_02: 从第二部分开始
   call_to_action_start_unplugged_activity: 开始不插电的活动
   call_to_action_view_promo_resources: 查看促销资源
@@ -344,15 +343,6 @@ cn:
   call_to_action_learn_about_ai: 了解AI
   call_to_action_learn_more_about_ai: Learn more about AI
   call_to_action_get_started: 开始吧
-  call_to_action_explore_self_paced_pl: Explore self-paced professional learning
-  call_to_action_applications_get_notified: Get notified when applications open
-  call_to_action_applications_notify_me: Notify me when I can apply
-  call_to_action_apply_now: Apply now
-  call_to_action_explore_self_paced_learning: Explore self-paced learning
-  call_to_action_explore_k_5_workshops: Explore K-5 workshops
-  call_to_action_for_intl_educators: For international educators
-  call_to_action_learn_more_program_region: Learn more about the program in your region
-  call_to_action_visit_support_center: Visit our support center
   aria_label_call_to_action_hoc_how_to_educators: 查看教育工作者操作指南
   aria_label_call_to_action_hoc_how_to_companies: 查看公司操作指南
   aria_label_call_to_action_hoc_how_to_districts: 查看各地区的操作指南
@@ -369,8 +359,6 @@ cn:
   aria_label_call_to_action_teaching_csd: 启动 “计算机科学发现” 教学专业学习计划
   aria_label_call_to_action_teaching_csp: 启动 “计算机科学原理教学” 专业学习计划
   aria_label_call_to_action_teaching_problem_solving: 启动 “教学问题解决和计算专业学习计划”
-  aria_label_call_to_action_teaching_interactive_animations_games: Start the Teaching
-    Interactive Animations and Games professional learning program
   aria_label_call_to_action_teaching_csc: 开始教授计算机科学联系专业学习计划
   aria_label_call_to_action_teaching_ai: 启动 “教学 AI 和机器学习” 专业学习计划
   aria_label_call_to_action_teaching_maker_cp: 开始教学 “使用设备创建应用程序”（Circuit Playground）专业学习计划
@@ -437,16 +425,6 @@ cn:
   aria_label_call_to_action_minecraft_2020: 开始使用《我的世界地球AI》
   aria_label_call_to_action_register_student_workshop: 注册参加免费学生工作坊
   aria_label_call_to_action_view_more_cs_resources: 查看更多计算机科学资源
-  aria_label_call_to_action_pl_apply_csd: Apply now for Computer Science Discoveries
-    professional learning
-  aria_label_call_to_action_pl_apply_csp: Apply now for Computer Science Principles
-    professional learning
-  aria_label_call_to_action_pl_apply_csa: Apply now for AP® Computer Science A professional
-    learning
-  aria_label_call_to_action_learn_more_csd: Learn more about Computer Science Discoveries
-  aria_label_call_to_action_learn_more_csp: Learn more about Computer Science Principles
-  aria_label_call_to_action_learn_more_csa: Learn more about AP® Computer Science
-    A
   video_title_professional_learning_program: Code.org 的专业学习计划
   curriculum_name_csf: 计算机科学基础知识
   curriculum_name_csf_02: 任何 CS 基础知识（A-F 课程）
@@ -465,7 +443,6 @@ cn:
   curriculum_name_csd: 计算机科学发现
   curriculum_name_csp: 计算机科学原理
   curriculum_name_problem_solving: 问题解决和计算
-  curriculum_name_teaching_animation: Teaching Interactive Animations and Games
   curriculum_name_csc: 计算机科学联系
   curriculum_name_csa: 计算机科学A
   curriculum_name_csa_ai: 软件工程与计算机视觉
@@ -542,7 +519,6 @@ cn:
   module_label_languages: 支持语言：
   module_label_accessibility_features: 辅助功能：
   module_label_accessibility_features_full: 无障碍功能：
-  module_label_teacher_requirements: 'Teacher Requirements:'
   module_label_educator_tool: 教育工作者工具
   module_label_educator_course: 教育工作者课程
   module_label_educator_resources: Educator resources
@@ -596,7 +572,6 @@ cn:
   module_duration_1_hr: 1 个小时
   module_duration_2_hrs: 2 个小时
   module_duration_3_hrs: 3 个小时
-  module_duration_3_hrs_20_minutes: 3 hours 20 minutes
   module_duration_5_hrs: 5 个小时
   module_duration_5_hrs_plus: 5 小时以上
   module_duration_8_hrs: 8 个小时
@@ -618,7 +593,6 @@ cn:
   module_label_teaching_csd: 教授计算机科学发现
   module_label_teaching_csp: 教授计算机科学原理
   module_label_teaching_problem_solving: 教学 “问题解决与计算”
-  module_label_teaching_animations: Interactive Animations and Games
   module_label_teaching_csc: 教授计算机科学联系
   module_label_teaching_ai: 教学 AI 和机器学习
   module_label_teaching_maker_cp: 教学用设备创建应用程序（Circuit Playground
@@ -674,12 +648,6 @@ cn:
   heading_attend_free_workshop: 参加免费学生工作坊
   heading_access_more_cs_resources: 访问更多计算机科学资源
   heading_available_on_code_dot_org: 可在Code.org找到
-  heading_program_design: Program design
-  heading_how_does_application_process_work: How does the application process work?
-  heading_apply: Apply
-  heading_acceptance: Acceptance
-  heading_enroll: Enroll
-  heading_have_questions: Have questions?
   cs_ambassador_subhead: 如果你是一名热衷于鼓励更多年轻女性在学校学习计算机科学的高中生，那么我们需要你！
   cs_ambassador_desc: 计算机科学涉及每个领域，包括医学、娱乐、体育、教育、商业、时尚和创业。然而，只有5％的高中年龄年轻女性上计算机科学课。大使可以通过鼓励同龄人上计算机科学课来帮助缩小这种性别差距。
   cs_ambassador_application_date: 申请截止日期为 2023 年 11 月 8 日
@@ -718,19 +686,6 @@ cn:
     as well as expert facilitators as you take on the first year of teaching the free
     CSA curriculum to your students.
   professional_learning_section_workshops_starting: 面对面和虚拟研讨会于今年夏天开始。
-  pl_self_paced_learning_heading: Self-Paced Learning
-  pl_self_paced_learning_desc: Learn at your own pace using our online learning modules.
-    You can start whenever is convenient for you and the courses are free.
-  pl_elementary_workshops_heading: Elementary Workshops
-  pl_elementary_workshops_desc: Do you teach Kindergarten through 5th grade? Check
-    out the link below to learn more about our K5 workshops.
-  pl_outside_us_heading: Outside the United States
-  pl_outside_us_desc: If you're an international teacher interested in professional
-    learning, learn more about what's offered in your area.
-  pl_regional_partner_desc: Your local Code.org Regional Partner provides high quality
-    Code.org professional learning to teachers, and can help guide your school or
-    district on implementation, certification, funding, and more. They are happy to
-    answer any questions you may have about the program!
   no_devices_section_subhead: 来吧，切断电线（一会儿）！
   no_devices_section_desc: 计算机科学教育并不一定要在屏幕前进行，设备访问不应该成为学习计算机科学概念的障碍。
   support_and_questions_section_subhead: 还有问题吗？找我们！我们随时提供帮助。
@@ -741,11 +696,6 @@ cn:
   subscribe_form_section_desc_csd: 注册即可每月收到有关 Code.org 计算机科学发现的电子邮件，并将有用的提醒、提示和更新直接发送到您的收件箱。
   subscribe_form_section_desc_csf: 注册即可每月收到有关 Code.org 计算机科学基础知识的电子邮件，并将有用的提醒、提示和更新直接发送到您的收件箱。
   subscribe_form_section_desc_csp: 注册即可每月收到有关 Code.org 计算机科学原理的电子邮件，并将有用的提醒、提示和更新直接发送到您的收件箱。
-  subscribe_form_section_title_pl: Get notified when Professional Learning registration
-    opens
-  subscribe_form_section_desc_pl: Be the first to know when registration begins! Sign
-    up to receive an email notification when teachers can start applying for the Code.org
-    Professional Learning Program.
   subscribe_form_section_unsubscribe: 您可以随时取消订阅。
   hoc_page_what_is_hoc_heading: 编程一小时是什么？
   hoc_page_desc: "[编程一小时](%{hoc_url})是一项全球运动，覆盖逾180个国家的数千万学生。无论身在何处，任何人都可以组织编程一小时活动，或从超过500个一小时教程（超过45种语言版本）中选择学习。"
@@ -867,7 +817,6 @@ cn:
   ai_curriculum_title_06: 生成式 AI 的社会影响
   ai_curriculum_desc_06: 从不同的角度调查生成式人工智能的影响，然后作为一个团队合作，制定满足所有参与者最大需求的指导方针。
   ai_curriculum_btn_aria_label_06: 查看生成式人工智能的社会影响课程计划
-  ai_curriculum_btn_aria_label_dance_ai: 尝试舞会：AI版活动
   ai_carousel_heading: 老师们对使用 Code.org 的人工智能的评价：
   ai_carousel_quote_01: 这节课还让我的学生有机会看到分类系统中有观点要素。后来，当我们开始看到偏见如何最终出现在人工智能中时，我得以将它们拉回来，提醒他们，用于训练模型的数据是基于选择的。
   ai_carousel_quote_02: 我的学生了解到，当涉及到他们几乎每天都在经历的技术进步时，他们不必只是消费者。他们实际上可以成为创作者！
@@ -974,68 +923,6 @@ cn:
   ai_vid_computervision_caption: 计算机视觉
   ai_vid_ethics1_caption: 伦理与人工智能：平等机会和算法偏见
   ai_vid_ethics2_caption: 伦理与人工智能：隐私与工作的未来
-  pl_middle_high_top_heading: Professional Learning Workshops for Grades 6-12
-  pl_middle_high_top_desc: Our engaging workshops are for new and experienced computer
-    science teachers!
-  pl_middle_high_top_desc_02: 'In this program, you will:'
-  pl_middle_high_top_list_01: Explore the curriculum and learning tools
-  pl_middle_high_top_list_02: Experience the course as a teacher and a learner
-  pl_middle_high_top_list_03: Collaborate with fellow teachers
-  pl_middle_high_quotes_heading: 'What teachers are saying about Code.org professional
-    learning:'
-  pl_middle_high_quotes_01: I liked seeing the lessons in action — it helped me understand
-    how to pace them in my own classroom. I liked the opportunity to talk to my peers
-    about assessment ideas and recruitment ideas.
-  pl_middle_high_quotes_02: This was excellent professional development that allowed
-    us time to reflect, process and debrief both individually and as a group. The
-    activities were engaging and meaningful to learning the content. I feel like I'm
-    leaving with skill I can immediately apply in teaching the curriculum.
-  pl_middle_high_quotes_03: By the end, I just felt so prepared, motivated, and ready
-    to get back in the classroom again!
-  pl_middle_high_programs_heading: Professional learning programs specific to the
-    course
-  pl_middle_high_programs_desc: Join one of our professional learning programs in
-    your area. The programs are designed to prepare you before and during your first
-    year teaching [Computer Science Discoveries](%{csd_url}), [Computer Science Principles](%{csp_url}),
-    or [AP® Computer Science A](%{csa_url}).
-  pl_middle_high_programs_no_experience_req: No computer science experience required
-  pl_middle_high_programs_some_experience_req: Able to use functions, conditionals,
-    loops, and arrays
-  pl_middle_high_programs_based_in_us: Based in United States
-  pl_middle_high_programs_teach_ap_course: Teach AP® or non-AP® course
-  pl_middle_high_programs_csd_hours: Teaching 25+ hours of course to a class in next
-    school year
-  pl_middle_high_programs_csp_hours: Teaching 100+ hours of course to a class in next
-    school year
-  pl_middle_high_programs_csa_hours: Teaching 140+ hours of course to a class in next
-    school year
-  pl_middle_high_program_design_desc: The yearlong professional learning programs
-    all follow a similar design. Regional Partners across the country provide our
-    programs and offer local workshops led by trained facilitators.
-  pl_middle_high_program_design_summer_title: Summer Workshops
-  pl_middle_high_program_design_summer_desc: Attend a multi-day summer workshop to
-    get familiar with the curriculum and prepare for the school year.
-  pl_middle_high_program_design_year_title: Academic Year Workshops
-  pl_middle_high_program_design_year_desc: Attend workshops during the year to receive
-    support as you teach the curriculum.
-  pl_middle_high_program_design_community_title: Community Support
-  pl_middle_high_program_design_community_desc: Collaborate with your regional cohort
-    of teachers and get the support of a nationwide online teacher community.
-  pl_middle_high_process_apply_desc: Fill out an application with information about
-    you, your school, and the course you're teaching.
-  pl_middle_high_process_acceptance_desc: If accepted, you will be notified of your
-    acceptance by your Regional Partner after applying.
-  pl_middle_high_process_enroll_desc: Sign up for the summer workshop in your region
-    and get ready to start the yearlong program!
-  pl_middle_high_cost_heading: What does the program cost?
-  pl_middle_high_cost_subhead: The cost of the program varies by region.
-  pl_middle_high_cost_desc: You may be eligible for a scholarship to cover the cost
-    of your program.
-  pl_middle_high_additional_programs_desc: In addition to our in-person facilitator
-    led options for middle and high school teachers we have several other programs
-    to meet the diverse needs of our teachers.
-  pl_middle_high_additional_programs_heading: Additional programs to meet diverse
-    teacher needs
   self_paced_pl_hero_heading: 面向教育工作者的自定进度专业学习
   self_paced_pl_hero_desc: 专业学习产品为教师在计算机科学教学之旅的每个阶段提供支持。
   self_paced_pl_intro_heading: 按时间表进行专业学习
@@ -2162,7 +2049,6 @@ cn:
   learn_banner_teachers_markdown: "  教师：[主持一小时] (%{host_url}) 或 [阅读指南] (%{howto_url})"
   tutorial_dance2019_name: 舞蹈派对
   tutorial_danceparty_name: 舞会
-  tutorial_dancepartyai_name: 舞会：AI 版
   tutorial_chibitronics_name: Chibitronics：照明故事
   tutorial_athlete_name: 编写你专属的运动游戏
   tutorial_moana_name: 莫阿娜：代码给我指路
@@ -2839,7 +2725,6 @@ cn:
   tutorial_meeempathy_name: Minecraft 中两个村庄的故事
   tutorial_danceparty_shortdescription: "  编写一个舞蹈派对，与你的朋友分享。Katy Perry、Madonna、J.
     Balvin、Sia、Keith Urban、Ciara 等超过 25 位歌手将为你带来精彩的表演！"
-  tutorial_dancepartyai_shortdescription: 了解人工智能（AI）概念，创建自己的虚拟舞会来展示当今的顶级艺术家。是时候大放异彩了！
   tutorial_chibitronics_shortdescription: 编程一个纸质回路来点亮你自己的故事。
   tutorial_athlete_shortdescription: 选择制作一款篮球游戏，或者制作一款综合运动游戏！
   tutorial_moana_shortdescription: 勇敢无畏的Moana决心要找到她自己的路
@@ -3473,7 +3358,6 @@ cn:
     Lil Nas X, Panic！At The Disco, Jonas Brothers, 还有更多！"
   tutorial_danceparty_longdescription: "  编写一个舞蹈派对，与你的朋友分享。Katy Perry、Madonna、J. Balvin、Sia、Keith
     Urban、Ciara 等超过 25 位歌手将为你带来精彩的表演！"
-  tutorial_dancepartyai_longdescription: 了解人工智能（AI）概念，创建自己的虚拟舞会来展示当今的顶级艺术家。是时候大放异彩了！
   tutorial_chibitronics_longdescription: 编程一个纸质回路来点亮你自己的故事。
   tutorial_athlete_longdescription: 选择制作一款篮球游戏，或者制作一款综合运动游戏！
   tutorial_moana_longdescription: 新的迪斯尼《编程一小时》教程使用可视化编程语言-使用块, 学生只需拖放可视块来编写代码。可视化编程是一种有趣且容易理解的方法来教编码逻辑。视觉编程的曝光为基于文本的编程奠定了基础,
@@ -4503,7 +4387,6 @@ cn:
   tutorial_meeempathy_longdescription: 几个世纪以来，村民和灾厄村民们都在同一片土地上生活，但彼此之间很少有往来。而现在，您可以借助代码的力量，将两个村庄团结在一起。用户将体验到对友邻的同理心与同情心，了解协作与包容的概念，并拥抱内心的多样性，而这正是让你我独一无二的原因。
   tutorial_dance2019_string_detail_grades: 二年级以上
   tutorial_danceparty_string_detail_grades: 二年级以上
-  tutorial_dancepartyai_string_detail_grades: 3年级以上
   tutorial_chibitronics_string_detail_grades: 幼儿园到五年级
   tutorial_athlete_string_detail_grades: 二年级以上
   tutorial_moana_string_detail_grades: 二年级以上
@@ -5180,7 +5063,6 @@ cn:
   tutorial_meeempathy_string_detail_grades: 二年级以上
   tutorial_dance2019_string_platforms: 所有较新的浏览器，安卓平板电脑，iPad，无需插件
   tutorial_danceparty_string_platforms: 所有较新的浏览器，安卓平板电脑，iPad
-  tutorial_dancepartyai_string_platforms: 所有较新的浏览器，安卓平板电脑，iPad
   tutorial_chibitronics_string_platforms: 所有高版本浏览器
   tutorial_athlete_string_platforms: 所有高版本浏览器
   tutorial_moana_string_platforms: 所有较新的浏览器，安卓平板电脑，iPad
@@ -5865,7 +5747,6 @@ cn:
   tutorial_meeempathy_string_platforms: Windows、iPad、MacOS
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
-  tutorial_dancepartyai_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Chibitronics Chibi 芯片和电路贴纸 LED
   tutorial_athlete_string_detail_platforms: ''
   tutorial_moana_string_detail_platforms: ''
@@ -6544,7 +6425,6 @@ cn:
   tutorial_meeempathy_string_detail_platforms: ''
   tutorial_dance2019_string_detail_programming_languages: 方块
   tutorial_danceparty_string_detail_programming_languages: 方块
-  tutorial_dancepartyai_string_detail_programming_languages: 方块
   tutorial_chibitronics_string_detail_programming_languages: 方块
   tutorial_athlete_string_detail_programming_languages: 方块
   tutorial_moana_string_detail_programming_languages: 方块

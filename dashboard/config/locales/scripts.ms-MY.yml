@@ -1358,14 +1358,6 @@ ms:
               display_name: Bab 2
             lessonGroup-4:
               display_name: Pengenalan kepada Makmal Aplikasi
-        csd7-2024:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Bab 1
-            lessonGroup-3:
-              display_name: Bab 2
-            lessonGroup-4:
-              display_name: Pengenalan kepada Makmal Aplikasi
         csdu6-playground:
           description_short: Taman permainan CSD U6. Lihat Dan Schneider untuk soalan
           lesson_groups:

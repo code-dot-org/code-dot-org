@@ -14494,34 +14494,34 @@
           "hint1": "Utilisez le menu déroulant pour choisir parmi différentes couleurs et effets.\n\n![](<https://images.code.org/b3cd57bafe3e5eb487d61ef846a4715c-image-1660769880438.57.55 PM.png>)"
         },
         "dance_ai_code_at_measure": {
-          "hint1": "Connecte un bloc `I.A. génère effet` à l'événement `à 2 mesures` dans t'espace de travail comme ceci : \n\n[blocs blockly][0]",
-          "hint2": "Clique sur le bloc [block blockly][0] pour créer un nouvel effet. "
+          "hint1": "Connectez un bloc `Effet généré par l'IA` à l'événement `à 2 mesures` dans votre espace de travail comme ceci : \n\n[blocs blockly][0]",
+          "hint2": "Cliquez sur le bloc [block blockly][0] pour créer un nouvel effet. "
         },
         "dance_ai_code_key_press": {
-          "hint1": "💡 **Toujours bloqué ?** Regarde à nouveau la vidéo sur les événements pour apprendre comment ils fonctionnent. ",
+          "hint1": "💡 \\*\\*Toujours bloqué ? \\*\\* Regardez à nouveau la vidéo sur les événements pour apprendre comment ils fonctionnent. ",
           "hint2": "💡Voici un exemple de ce à quoi votre code peut ressembler. <xml><xml xmlns=\"https://developers.google.com/blockly/xml\">\n\n<block type=\"Dancelab_whenKey\" id=\"*R3Us3z5;rM#sBE?1zjX\" deletable=\"false\" x=\"19\" y=\"221\">\n    <field name=\"KEY\">\"haut\"</field>\n    <next>\n      <block type=\"Dancelab_doMoveEachLR\" id=\"*hCDocpHXqlku@f[[rK=\">\n        <field name=\"GROUP\">\"OURS\"</field>\n        <field name=\"MOVE\">Mouvements.Dab</field>\n        <field name=\"DIR\">-1</field>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "dance_ai_customize_effect": {
-          "Hint1": "💡 Personnalise l'effet en cliquant sur les emojis dans le menu <xml> <block xmlns=\"https://developers.google.com/blockly/xml\" type=\"Dancelab_ai\" id=\"*6NOt^DsApsRC-pPZKBQ\">.\n  <field name=\"VALUE\">{\"inputs\" :[\"cool\", \"cold\", \"wavy\"], \"backgroundEffect\" : \"sparkles\", \"backgroundColor\" : \"cool\", \"foregroundEffect\" : \"bubbles\"}</field>\n\n</block> </xml> bloc dans l'espace de travail. ",
-          "Hint2": "💡 **Toujours bloqué?** Regarde la vidéo pour voir comment personnaliser l'effet. ",
-          "HintEdit": "💡 Si tu veux utiliser le code écrit par l'I.A., bascule pour afficher le code et clique sur `Utiliser le code`. Les blocs remplaceront ceux de `Effet généré par l'I.A.` dans ton espace de travail. "
+          "Hint1": "💡 Personnalisez l'effet en cliquant sur les emojis dans le menu <xml> <block xmlns=\"https://developers.google.com/blockly/xml\" type=\"Dancelab_ai\" id=\"*6NOt^DsApsRC-pPZKBQ\">.\n  <field name=\"VALUE\">{\"entrée\" :[\"cool\", \"Glacial\", \"ondulé\"], \"backgroundEffect\" : \"scintillements\", \"backgroundColor\" : \"cool\", \"foregroundEffect\" : \"bulles\"}</field>\n\n</block> </xml> bloc dans l'espace de travail. ",
+          "Hint2": "💡 **Toujours bloqué?** Regardez la vidéo pour voir comment personnaliser l'effet. ",
+          "HintEdit": "💡 Si vous souhaitez utiliser le code écrit par l'I.A., basculez pour afficher le code et cliquez sur \"Utiliser le code\". Les blocs remplaceront ceux de `Effet généré par l'I.A.` dans votre espace de travail. "
         },
         "dance_ai_dancer_and_dance_move": {
           "HInt2": "Le danseur doit être le même sur les deux blocs et la séquence (l'ordre) est importante.  ",
-          "validation": "💡  Ajoute ces blocs au <code style=\"color:white; background-color:#FFBD46\">paramètre</code> pour créer ton premier danseur : \n<xml xmlns=\"https://developers.google.com/blockly/xml\">\n      <block type=\"Dancelab_makeAnonymousDanceSprite\" id=\"1\">\n        <field name=\"COSTUME\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">\"CAT\"</field>\n        <field name=\"LOCATION\">{x: 200, y: 200}</field>\n        <next>\n          <block type=\"Dancelab_changeMoveEachLR\" id=\"|y+CWEBlleENO5MU(?yL\">\n            <field name=\"GROUP\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">\"CAT\"</field>\n            <field name=\"MOVE\">\"suivant\"</field>\n            <field name=\"DIR\">-1</field>\n          </block>\n        </next>\n      </block>\n    </statement>\n\n</xml>"
+          "validation": "💡  Ajoutez ces blocs au <code style=\"color:white; background-color:#FFBD46\">paramètre</code> pour créer votre premier danseur : \n<xml xmlns=\"https://developers.google.com/blockly/xml\">\n      <block type=\"Dancelab_makeAnonymousDanceSprite\" id=\"1\">\n        <field name=\"COSTUME\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">\"CAT\"</field>\n        <field name=\"LOCATION\">{x: 200, y: 200}</field>\n        <next>\n          <block type=\"Dancelab_changeMoveEachLR\" id=\"|y+CWEBlleENO5MU(?yL\">\n            <field name=\"GROUP\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">\"CAT\"</field>\n            <field name=\"MOVE\">\"suivant\"</field>\n            <field name=\"DIR\">-1</field>\n          </block>\n        </next>\n      </block>\n    </statement>\n\n</xml>"
         },
         "dance_ai_generate_effect": {
-          "Hint2": "💡 Connecte le bloc [bloc Blockly][0] dans le bloc orange <code style=\"color:white; background-color:#FFBD46\">configuration</code>. Clique ensuite dessus pour démarrer.",
-          "Hint3": "💡 Si tu veux régénérer l'effet ou changer les emojis, clique à nouveau sur le bloc `I.A. génère effet`. "
+          "Hint2": "💡 Connectez le [bloc Blockly][0] dans <code style=\"color:white; background-color:#FFBD46\">paramètre</code>. Cliquez ensuite dessus pour démarrer.",
+          "Hint3": "💡 Si vous souhaitez régénérer l'effet ou changer les emojis, cliquez à nouveau sur le bloc `Effet généré par l'IA`. "
         },
         "dance_ai_generate_effect_again": {
-          "Hint1": "💡 Écoute la chanson et pense à l'ambiance de la musique. ",
-          "Hint2": "💡 Connecte le bloc [bloc Blockly][0] dans le bloc orange <code style=\"color:white; background-color:#FFBD46\">configuration</code>. Clique ensuite dessus pour démarrer.",
-          "Hint3": "💡 Si tu veux régénérer l'effet ou changer les émojis, clique à nouveau sur le bloc `I.A. génère effet`."
+          "Hint1": "💡 Écoutez la chanson et songez à l'ambiance de la musique. ",
+          "Hint2": "💡 Connectez le [bloc Blockly][0] dans <code style=\"color:white; background-color:#FFBD46\">paramètre</code>. Cliquez ensuite dessus pour démarrer.",
+          "Hint3": "💡 Si vous souhaitez régénérer l'effet ou changer les émojis, cliquez à nouveau sur le bloc `Effet généré par l'IA`."
         },
         "dance_ai_try_key_press": {
-          "hint1": "💡 Tes danseurs ne répondront pas à tes indications à moins qu'ils soient en train de danser. ",
-          "hint2": "💡 Après avoir appuyé sur <code style=\"color:white; background-color:#FFBD46\">Démarrer</code>, donne la réplique à tes danseurs en appuyant sur la flèche <code style=\"color:white; background-color:#FFBD46\">◀</code> <code style=\"color:white; background-color:#FFBD46\">▶</code> droite ou gauche. "
+          "hint1": "💡 Vos danseurs ne répondront pas à vos indications à moins qu'ils soient en train de danser. ",
+          "hint2": "💡 Après avoir appuyé sur <code style=\"color:white; background-color:#FFBD46\">Exécuter</code>, donnez la réplique à vos danseurs en appuyant sur la flèche <code style=\"color:white; background-color:#FFBD46\">◀</code> <code style=\"color:white; background-color:#FFBD46\">▶</code> droite ou gauche. "
         },
         "ecosystems_helloworld_say_2023": {
           "add_sprite": "Cliquez et faites glisser un bloc « créer un nouveau sprite » et connectez-le sous « when run ». \n\n<xml><block type=\"when_run\" deletable=\"false\"><next><block type=\"gamelab_makeNewSpriteAnon\"><field name=\"ANIMATION_NAME\">\"bunny1_ready\"</field><value name=\"LOCATION\"><block type=\"gamelab_location_picker\" can_disconnect_from_parent=\"false\"><field name=\"LOCATION\">{\"x\":200,\"y\":200}</field></block></value></block></next></block></xml>",

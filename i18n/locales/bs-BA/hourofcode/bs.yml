@@ -310,7 +310,6 @@ bs:
   call_to_action_explore_all_hoc_activities: Istražite sve aktivnosti Hour of Code
     sa Code.org
   call_to_action_start_dance_party: Započnite plesnu zabavu
-  call_to_action_start_dance_party_ai_edition: 'Start Dance Party: AI Edition'
   call_to_action_start_part_02: Započnite drugi dio
   call_to_action_start_unplugged_activity: Pokrenite isključene aktivnosti
   call_to_action_view_promo_resources: Pogledajte promotivne resurse
@@ -425,15 +424,6 @@ bs:
   call_to_action_learn_about_ai: Saznajte više o AI
   call_to_action_learn_more_about_ai: Learn more about AI
   call_to_action_get_started: Započnite
-  call_to_action_explore_self_paced_pl: Explore self-paced professional learning
-  call_to_action_applications_get_notified: Get notified when applications open
-  call_to_action_applications_notify_me: Notify me when I can apply
-  call_to_action_apply_now: Apply now
-  call_to_action_explore_self_paced_learning: Explore self-paced learning
-  call_to_action_explore_k_5_workshops: Explore K-5 workshops
-  call_to_action_for_intl_educators: For international educators
-  call_to_action_learn_more_program_region: Learn more about the program in your region
-  call_to_action_visit_support_center: Visit our support center
   aria_label_call_to_action_hoc_how_to_educators: Pogledajte vodič za nastavnike
   aria_label_call_to_action_hoc_how_to_companies: Pogledajte vodič za kompanije
   aria_label_call_to_action_hoc_how_to_districts: Pogledajte vodič za upute za okruge
@@ -457,8 +447,6 @@ bs:
     u nastavi principa računarskih nauka
   aria_label_call_to_action_teaching_problem_solving: Pokrenite program profesionalnog
     učenja u rješavanju problema nastave i računarstvu
-  aria_label_call_to_action_teaching_interactive_animations_games: Start the Teaching
-    Interactive Animations and Games professional learning program
   aria_label_call_to_action_teaching_csc: Pokrenite program profesionalnog učenja
     Nastava Computer Science Connections
   aria_label_call_to_action_teaching_ai: Pokrenite program profesionalnog učenja za
@@ -566,16 +554,6 @@ bs:
   aria_label_call_to_action_register_student_workshop: Register for a free student
     workshop
   aria_label_call_to_action_view_more_cs_resources: View more computer science resources
-  aria_label_call_to_action_pl_apply_csd: Apply now for Computer Science Discoveries
-    professional learning
-  aria_label_call_to_action_pl_apply_csp: Apply now for Computer Science Principles
-    professional learning
-  aria_label_call_to_action_pl_apply_csa: Apply now for AP® Computer Science A professional
-    learning
-  aria_label_call_to_action_learn_more_csd: Learn more about Computer Science Discoveries
-  aria_label_call_to_action_learn_more_csp: Learn more about Computer Science Principles
-  aria_label_call_to_action_learn_more_csa: Learn more about AP® Computer Science
-    A
   video_title_professional_learning_program: Program profesionalnog učenja Code.org
   curriculum_name_csf: Osnove računarskih nauka
   curriculum_name_csf_02: Bilo koji CS osnove (kurs A-F)
@@ -594,7 +572,6 @@ bs:
   curriculum_name_csd: Otkrića računarskih nauka
   curriculum_name_csp: Načela računarskih nauka
   curriculum_name_problem_solving: Rješavanje problema i računarstvo
-  curriculum_name_teaching_animation: Teaching Interactive Animations and Games
   curriculum_name_csc: Computer Science Veze
   curriculum_name_csa: AP® Computer Science A
   curriculum_name_csa_ai: Softverski inženjering & Computer Vision
@@ -724,7 +701,6 @@ bs:
   module_label_languages: 'Podržani jezici:'
   module_label_accessibility_features: 'Pristupačnost:'
   module_label_accessibility_features_full: 'Značajke pristupačnosti:'
-  module_label_teacher_requirements: 'Teacher Requirements:'
   module_label_educator_tool: Alat za edukatore
   module_label_educator_course: Kurs edukatora
   module_label_educator_resources: Educator resources
@@ -778,7 +754,6 @@ bs:
   module_duration_1_hr: 1 sat
   module_duration_2_hrs: 2 sata
   module_duration_3_hrs: 3 sata
-  module_duration_3_hrs_20_minutes: 3 hours 20 minutes
   module_duration_5_hrs: 5 sati
   module_duration_5_hrs_plus: 5+ sati
   module_duration_8_hrs: 8 sati
@@ -800,7 +775,6 @@ bs:
   module_label_teaching_csd: Nastava otkrića informatike
   module_label_teaching_csp: Nastava principa računarskih nauka
   module_label_teaching_problem_solving: Nastava rješavanja problema i računarstva
-  module_label_teaching_animations: Interactive Animations and Games
   module_label_teaching_csc: Podučavanje računarskih nauka veze
   module_label_teaching_ai: Podučavanje AI i mašinskog učenja
   module_label_teaching_maker_cp: Podučavanje kreiranja aplikacija s uređajima (Circuit
@@ -871,12 +845,6 @@ bs:
   heading_attend_free_workshop: Attend a free student workshop
   heading_access_more_cs_resources: Access more computer science resources
   heading_available_on_code_dot_org: Available on Code.org
-  heading_program_design: Program design
-  heading_how_does_application_process_work: How does the application process work?
-  heading_apply: Apply
-  heading_acceptance: Acceptance
-  heading_enroll: Enroll
-  heading_have_questions: Have questions?
   cs_ambassador_subhead: Ako ste srednjoškolac strastven u poticanju više mladih žena
     da pohađaju informatiku u vašoj školi, onda ste nam potrebni!
   cs_ambassador_desc: Svako polje, uključujući medicinu, zabavu, sport, obrazovanje,
@@ -945,19 +913,6 @@ bs:
     CSA curriculum to your students.
   professional_learning_section_workshops_starting: Osobne i virtualne radionice koje
     počinju ovog ljeta.
-  pl_self_paced_learning_heading: Self-Paced Learning
-  pl_self_paced_learning_desc: Learn at your own pace using our online learning modules.
-    You can start whenever is convenient for you and the courses are free.
-  pl_elementary_workshops_heading: Elementary Workshops
-  pl_elementary_workshops_desc: Do you teach Kindergarten through 5th grade? Check
-    out the link below to learn more about our K5 workshops.
-  pl_outside_us_heading: Outside the United States
-  pl_outside_us_desc: If you're an international teacher interested in professional
-    learning, learn more about what's offered in your area.
-  pl_regional_partner_desc: Your local Code.org Regional Partner provides high quality
-    Code.org professional learning to teachers, and can help guide your school or
-    district on implementation, certification, funding, and more. They are happy to
-    answer any questions you may have about the program!
   no_devices_section_subhead: Samo naprijed, prerežite kabel (neko vrijeme)!
   no_devices_section_desc: CS obrazovanje ne mora uvijek biti ispred ekrana, a pristup
     uređaju ne bi trebao biti prepreka učenju koncepata informatike.
@@ -982,11 +937,6 @@ bs:
   subscribe_form_section_desc_csp: Prijavite se da biste primali mjesečne e-poruke
     o Code.org-ovim principima računalnih nauka i dobijte korisne podsjetnike, savjete
     i ažuriranja koja se šalju direktno u vaš poštanski sandučić.
-  subscribe_form_section_title_pl: Get notified when Professional Learning registration
-    opens
-  subscribe_form_section_desc_pl: Be the first to know when registration begins! Sign
-    up to receive an email notification when teachers can start applying for the Code.org
-    Professional Learning Program.
   subscribe_form_section_unsubscribe: Možete se odjaviti u bilo kojem trenutku.
   hoc_page_what_is_hoc_heading: What is Hour of Code?
   hoc_page_desc: "[The Hour of Code](%{hoc_url}) is a global movement reaching tens
@@ -1184,7 +1134,6 @@ bs:
     potreba svih učesnika.
   ai_curriculum_btn_aria_label_06: Pogledajte društveni uticaj generativnog AI plana
     lekcije
-  ai_curriculum_btn_aria_label_dance_ai: 'Try the Dance Party: AI Edition activity'
   ai_carousel_heading: 'Šta nastavnici kažu o AI sa Code.org:'
   ai_carousel_quote_01: Ova lekcija je takođe dala mojim učenicima priliku da vide
     da postoji element mišljenja u klasifikacionim sistemima. Kasnije, kada smo počeli
@@ -1377,68 +1326,6 @@ bs:
   ai_vid_computervision_caption: Computer Vision
   ai_vid_ethics1_caption: 'Etika i AI: jednak pristup i algoritamska pristranost'
   ai_vid_ethics2_caption: 'Etika i AI: Privatnost i budućnost rada'
-  pl_middle_high_top_heading: Professional Learning Workshops for Grades 6-12
-  pl_middle_high_top_desc: Our engaging workshops are for new and experienced computer
-    science teachers!
-  pl_middle_high_top_desc_02: 'In this program, you will:'
-  pl_middle_high_top_list_01: Explore the curriculum and learning tools
-  pl_middle_high_top_list_02: Experience the course as a teacher and a learner
-  pl_middle_high_top_list_03: Collaborate with fellow teachers
-  pl_middle_high_quotes_heading: 'What teachers are saying about Code.org professional
-    learning:'
-  pl_middle_high_quotes_01: I liked seeing the lessons in action — it helped me understand
-    how to pace them in my own classroom. I liked the opportunity to talk to my peers
-    about assessment ideas and recruitment ideas.
-  pl_middle_high_quotes_02: This was excellent professional development that allowed
-    us time to reflect, process and debrief both individually and as a group. The
-    activities were engaging and meaningful to learning the content. I feel like I'm
-    leaving with skill I can immediately apply in teaching the curriculum.
-  pl_middle_high_quotes_03: By the end, I just felt so prepared, motivated, and ready
-    to get back in the classroom again!
-  pl_middle_high_programs_heading: Professional learning programs specific to the
-    course
-  pl_middle_high_programs_desc: Join one of our professional learning programs in
-    your area. The programs are designed to prepare you before and during your first
-    year teaching [Computer Science Discoveries](%{csd_url}), [Computer Science Principles](%{csp_url}),
-    or [AP® Computer Science A](%{csa_url}).
-  pl_middle_high_programs_no_experience_req: No computer science experience required
-  pl_middle_high_programs_some_experience_req: Able to use functions, conditionals,
-    loops, and arrays
-  pl_middle_high_programs_based_in_us: Based in United States
-  pl_middle_high_programs_teach_ap_course: Teach AP® or non-AP® course
-  pl_middle_high_programs_csd_hours: Teaching 25+ hours of course to a class in next
-    school year
-  pl_middle_high_programs_csp_hours: Teaching 100+ hours of course to a class in next
-    school year
-  pl_middle_high_programs_csa_hours: Teaching 140+ hours of course to a class in next
-    school year
-  pl_middle_high_program_design_desc: The yearlong professional learning programs
-    all follow a similar design. Regional Partners across the country provide our
-    programs and offer local workshops led by trained facilitators.
-  pl_middle_high_program_design_summer_title: Summer Workshops
-  pl_middle_high_program_design_summer_desc: Attend a multi-day summer workshop to
-    get familiar with the curriculum and prepare for the school year.
-  pl_middle_high_program_design_year_title: Academic Year Workshops
-  pl_middle_high_program_design_year_desc: Attend workshops during the year to receive
-    support as you teach the curriculum.
-  pl_middle_high_program_design_community_title: Community Support
-  pl_middle_high_program_design_community_desc: Collaborate with your regional cohort
-    of teachers and get the support of a nationwide online teacher community.
-  pl_middle_high_process_apply_desc: Fill out an application with information about
-    you, your school, and the course you're teaching.
-  pl_middle_high_process_acceptance_desc: If accepted, you will be notified of your
-    acceptance by your Regional Partner after applying.
-  pl_middle_high_process_enroll_desc: Sign up for the summer workshop in your region
-    and get ready to start the yearlong program!
-  pl_middle_high_cost_heading: What does the program cost?
-  pl_middle_high_cost_subhead: The cost of the program varies by region.
-  pl_middle_high_cost_desc: You may be eligible for a scholarship to cover the cost
-    of your program.
-  pl_middle_high_additional_programs_desc: In addition to our in-person facilitator
-    led options for middle and high school teachers we have several other programs
-    to meet the diverse needs of our teachers.
-  pl_middle_high_additional_programs_heading: Additional programs to meet diverse
-    teacher needs
   self_paced_pl_hero_heading: Samostalno profesionalno učenje za nastavnike
   self_paced_pl_hero_desc: Ponude profesionalnog učenja za podršku nastavnicima u
     svakoj fazi njihovog putovanja u nastavi informatike.
@@ -3044,7 +2931,6 @@ bs:
     Vodič za upute] (%{howto_url})'
   tutorial_dance2019_name: Plesna zabava
   tutorial_danceparty_name: Plesna zabava
-  tutorial_dancepartyai_name: 'Plesna zabava: AI izdanje'
   tutorial_chibitronics_name: 'Chibitronics: Illuminated Story'
   tutorial_athlete_name: Isprogramirajte vlastitu sportsku igricu
   tutorial_moana_name: 'Moana: Traženje puta uz pomoć Koda'
@@ -3729,9 +3615,6 @@ bs:
   tutorial_danceparty_shortdescription: Code a Dance Party podijeliti sa svojim prijateljima.
     Uz Beyoncé, Lizzo, Harry Styles, Lil Nas X, Selenu Gomez, muziku iz Disneyjevog
     'Encanto' i još mnogo toga!
-  tutorial_dancepartyai_shortdescription: Learn about artificial intelligence (AI)
-    concepts to create your own virtual dance party showcasing today's top artists.
-    It's time to strut your stuff!
   tutorial_chibitronics_shortdescription: Programirajte papirni krug kako biste osvijetlili
     vlastitu priču.
   tutorial_athlete_shortdescription: Izaberite između izrade košarkaške utakmice ili
@@ -4926,9 +4809,6 @@ bs:
   tutorial_danceparty_longdescription: Code a Dance Party podijeliti sa svojim prijateljima.
     Uz Beyoncé, Lizzo, Harry Styles, Lil Nas X, Selenu Gomez, muziku iz Disneyjevog
     'Encanto' i još mnogo toga!
-  tutorial_dancepartyai_longdescription: Learn about artificial intelligence (AI)
-    concepts to create your own virtual dance party showcasing today's top artists.
-    It's time to strut your stuff!
   tutorial_chibitronics_longdescription: Programirajte papirni krug kako biste osvijetlili
     vlastitu priču.
   tutorial_athlete_longdescription: Izaberite između izrade košarkaške utakmice ili
@@ -7750,7 +7630,6 @@ bs:
     jedinstveno posebnim.
   tutorial_dance2019_string_detail_grades: Ocjene 2+
   tutorial_danceparty_string_detail_grades: Ocjene 2+
-  tutorial_dancepartyai_string_detail_grades: Grade 3+
   tutorial_chibitronics_string_detail_grades: Ocjene 2-5
   tutorial_athlete_string_detail_grades: Ocjene 2+
   tutorial_moana_string_detail_grades: Ocjene 2+
@@ -8428,8 +8307,6 @@ bs:
   tutorial_dance2019_string_platforms: Svi moderni preglednici, Android tablet, iPad,
     Unplugged
   tutorial_danceparty_string_platforms: Svi moderni preglednici, Android tablet, iPad
-  tutorial_dancepartyai_string_platforms: Svi moderni preglednici, Android tablet,
-    iPad
   tutorial_chibitronics_string_platforms: Svi moderni preglednici, Čitač ekrana
   tutorial_athlete_string_platforms: Svi moderni preglednici
   tutorial_moana_string_platforms: Svi moderni preglednici, Android tablet, iPad
@@ -9297,7 +9174,6 @@ bs:
     iPhone, iPad, Android telefon, Android tablet
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
-  tutorial_dancepartyai_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Chibitronics Chibi čip i krug naljepnica
     LED
   tutorial_athlete_string_detail_platforms: ''
@@ -9979,7 +9855,6 @@ bs:
   tutorial_meeempathy_string_detail_platforms: ''
   tutorial_dance2019_string_detail_programming_languages: Blokovi
   tutorial_danceparty_string_detail_programming_languages: Blokovi
-  tutorial_dancepartyai_string_detail_programming_languages: Blokovi
   tutorial_chibitronics_string_detail_programming_languages: Blokovi
   tutorial_athlete_string_detail_programming_languages: Blokovi
   tutorial_moana_string_detail_programming_languages: Blokovi

@@ -97,11 +97,7 @@ export default connect(
               style={{display: canRunNext ? 'none' : 'inline-block'}}
               disabled={!isAttached}
             >
-              <img
-                src="/blockly/media/1x1.gif"
-                className="pause-btn icon21"
-                alt=""
-              />
+              <img src="/blockly/media/1x1.gif" className="pause-btn icon21" />
               {i18n.pause()}
             </button>
             {

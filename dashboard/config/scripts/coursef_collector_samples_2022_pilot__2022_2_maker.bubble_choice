@@ -1,9 +1,0 @@
-name 'courseF_collector_samples_2022_pilot_-2022-2_maker'
-display_name 'Exploration - Sample Programs'
-description 'You will be creating a collector game. Before you start, explore the example projects below. Press \"Finish\" when you are ready to start planning your own program.'
-
-sublevels
-level 'courseF_apps_collector_move_maker'
-level 'courseF_apps_collector_drive_maker'
-level 'courseF_apps_collector_drag_maker'
-level 'courseF_apps_collector_move2_maker'

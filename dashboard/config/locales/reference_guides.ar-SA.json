@@ -130,9 +130,6 @@
         },
         "csd-2022/using-data-with-categorical-features": {
           "display_name": "استخدام البيانات ذات الميزات الفئوية"
-        },
-        "csd-2022/using-data-with-numerical-features": {
-          "display_name": "استخدام البيانات ذات الميزات العددية"
         }
       }
     }

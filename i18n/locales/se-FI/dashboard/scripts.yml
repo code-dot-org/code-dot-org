@@ -1954,29 +1954,3 @@ se:
           lesson_groups:
             lessonGroup-2:
               display_name: Sprite:at
-        csd1-2024:
-          lesson_groups:
-            lessonGroup-5:
-              display_name: Iskkadeapmi
-            lessonGroup-2:
-              display_name: 'Kahpital 1: ČuolbmaČoavdinProseassa'
-            lessonGroup-3:
-              display_name: 'Kahpital 2: Dihtorat ja ČuolbmaČoavdin'
-        csd3-2024:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'Kapihtal 1: Govat ja Animašuvnnat'
-            lessonGroup-3:
-              display_name: 'Kapihtal 2: Hukse Spealuid'
-        csd4-2024:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'Kapihtal 1: Geavaheaddji Deattuhuvvon Designa'
-            lessonGroup-3:
-              display_name: 'Kapihtal 2: Prototyhpet App:a'
-        csd6b-2024:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Input:at ja Output:at
-        csd-post-survey-2024:
-          title: Maŋŋil Kurssa Iskkadeapmi

@@ -1,5 +1,5 @@
-@use 'sass:math';
-@import 'phase1-design-system';
+@use "sass:math";
+@import "phase1-design-system";
 
 $border-radius: 4px;
 $container-width: 309px;
@@ -164,7 +164,6 @@ $container-width: 309px;
 
 .buttonsContainer_english {
   justify-content: space-between;
-  column-gap: 12px;
 
   button,
   a,
@@ -202,8 +201,4 @@ $container-width: 309px;
   .curriculumInfoContainer {
     border-color: $neutral-dark !important;
   }
-}
-
-.buttonFlex {
-  flex: 1;
 }

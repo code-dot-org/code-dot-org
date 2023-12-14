@@ -328,7 +328,6 @@ ga:
   call_to_action_explore_all_hoc_activities: Déan iniúchadh ar gach gníomhaíocht Uair
     an Chód ó Code.org
   call_to_action_start_dance_party: Tosaigh Páirtí Damhsa
-  call_to_action_start_dance_party_ai_edition: 'Start Dance Party: AI Edition'
   call_to_action_start_part_02: Tosaigh cuid a dó
   call_to_action_start_unplugged_activity: Cuir tús le gníomhaíocht díphlugá
   call_to_action_view_promo_resources: Féach ar acmhainní promo
@@ -444,15 +443,6 @@ ga:
   call_to_action_learn_about_ai: Foghlaim faoi AI
   call_to_action_learn_more_about_ai: Learn more about AI
   call_to_action_get_started: Tús a chur
-  call_to_action_explore_self_paced_pl: Explore self-paced professional learning
-  call_to_action_applications_get_notified: Get notified when applications open
-  call_to_action_applications_notify_me: Notify me when I can apply
-  call_to_action_apply_now: Apply now
-  call_to_action_explore_self_paced_learning: Explore self-paced learning
-  call_to_action_explore_k_5_workshops: Explore K-5 workshops
-  call_to_action_for_intl_educators: For international educators
-  call_to_action_learn_more_program_region: Learn more about the program in your region
-  call_to_action_visit_support_center: Visit our support center
   aria_label_call_to_action_hoc_how_to_educators: Féach treoir conas-chun do Oideachasóirí
   aria_label_call_to_action_hoc_how_to_companies: Féach treoir conas-chun do Chuideachtaí
   aria_label_call_to_action_hoc_how_to_districts: Féach treoir conas-chun do Cheantair
@@ -476,8 +466,6 @@ ga:
     Prionsabail Eolaíochta Ríomhaireachta Teagaisc
   aria_label_call_to_action_teaching_problem_solving: Cuir tús leis an gclár foghlama
     gairmiúil Réitigh Fadhban
-  aria_label_call_to_action_teaching_interactive_animations_games: Start the Teaching
-    Interactive Animations and Games professional learning program
   aria_label_call_to_action_teaching_csc: Cuir tús leis an gclár foghlama gairmiúla
     Naisc Eolaíochta Ríomhaireachta Teagaisc
   aria_label_call_to_action_teaching_ai: Cuir tús leis an gclár foghlama gairmiúil
@@ -586,16 +574,6 @@ ga:
   aria_label_call_to_action_register_student_workshop: Register for a free student
     workshop
   aria_label_call_to_action_view_more_cs_resources: View more computer science resources
-  aria_label_call_to_action_pl_apply_csd: Apply now for Computer Science Discoveries
-    professional learning
-  aria_label_call_to_action_pl_apply_csp: Apply now for Computer Science Principles
-    professional learning
-  aria_label_call_to_action_pl_apply_csa: Apply now for AP® Computer Science A professional
-    learning
-  aria_label_call_to_action_learn_more_csd: Learn more about Computer Science Discoveries
-  aria_label_call_to_action_learn_more_csp: Learn more about Computer Science Principles
-  aria_label_call_to_action_learn_more_csa: Learn more about AP® Computer Science
-    A
   video_title_professional_learning_program: Clár Foghlama Gairmiúla Code.org
   curriculum_name_csf: Bunúsacha Eolaíochta Ríomhaireachta
   curriculum_name_csf_02: Aon Bunús CS (Cúrsa AF)
@@ -614,7 +592,6 @@ ga:
   curriculum_name_csd: Fionnachtana Eolaíochta Ríomhaireachta
   curriculum_name_csp: Prionsabail na Ríomheolaíochta
   curriculum_name_problem_solving: Réiteach Fadhbanna agus Ríomhaireacht
-  curriculum_name_teaching_animation: Teaching Interactive Animations and Games
   curriculum_name_csc: Naisc Eolaíocht Ríomhaireachta
   curriculum_name_csa: AP® Eolaíocht Ríomhaireachta A
   curriculum_name_csa_ai: Innealtóireacht Bogearraí & Fís Ríomhaireachta
@@ -756,7 +733,6 @@ ga:
   module_label_languages: 'Teangacha Tacaithe:'
   module_label_accessibility_features: 'Inrochtaineacht:'
   module_label_accessibility_features_full: 'Gnéithe Inrochtaineachta:'
-  module_label_teacher_requirements: 'Teacher Requirements:'
   module_label_educator_tool: Uirlis oideachasóir
   module_label_educator_course: Cúrsa oideachasóir
   module_label_educator_resources: Educator resources
@@ -810,7 +786,6 @@ ga:
   module_duration_1_hr: 1 uair an chloig
   module_duration_2_hrs: 2 uair an chloig
   module_duration_3_hrs: 3 uair an chloig
-  module_duration_3_hrs_20_minutes: 3 hours 20 minutes
   module_duration_5_hrs: 5 uair an chloig
   module_duration_5_hrs_plus: 5+ uair an chloig
   module_duration_8_hrs: 8 n-uair an chloig
@@ -832,7 +807,6 @@ ga:
   module_label_teaching_csd: Fionnachtana Eolaíochta Ríomhaireachta a Mhúineadh
   module_label_teaching_csp: Prionsabail na Ríomheolaíochta Teagaisc
   module_label_teaching_problem_solving: Réiteach fadhbanna agus Ríomhaireacht
-  module_label_teaching_animations: Interactive Animations and Games
   module_label_teaching_csc: Naisc Eolaíochta Ríomhaireachta a Mhúineadh
   module_label_teaching_ai: AI agus Foghlaim Meaisín a Mhúineadh
   module_label_teaching_maker_cp: Aipeanna a Chruthú le Gléasanna (Clós Súgartha Cuarda)
@@ -904,12 +878,6 @@ ga:
   heading_attend_free_workshop: Attend a free student workshop
   heading_access_more_cs_resources: Access more computer science resources
   heading_available_on_code_dot_org: Available on Code.org
-  heading_program_design: Program design
-  heading_how_does_application_process_work: How does the application process work?
-  heading_apply: Apply
-  heading_acceptance: Acceptance
-  heading_enroll: Enroll
-  heading_have_questions: Have questions?
   cs_ambassador_subhead: Más mac léinn ardscoile thú atá paiseanta faoi níos mó mná
     óga a spreagadh chun ríomheolaíocht a ghlacadh ag do scoil, ansin teastaíonn tú
     uainn!
@@ -982,19 +950,6 @@ ga:
     CSA curriculum to your students.
   professional_learning_section_workshops_starting: Ceardlanna pearsanta agus fíorúla
     ag tosú an samhradh seo.
-  pl_self_paced_learning_heading: Self-Paced Learning
-  pl_self_paced_learning_desc: Learn at your own pace using our online learning modules.
-    You can start whenever is convenient for you and the courses are free.
-  pl_elementary_workshops_heading: Elementary Workshops
-  pl_elementary_workshops_desc: Do you teach Kindergarten through 5th grade? Check
-    out the link below to learn more about our K5 workshops.
-  pl_outside_us_heading: Outside the United States
-  pl_outside_us_desc: If you're an international teacher interested in professional
-    learning, learn more about what's offered in your area.
-  pl_regional_partner_desc: Your local Code.org Regional Partner provides high quality
-    Code.org professional learning to teachers, and can help guide your school or
-    district on implementation, certification, funding, and more. They are happy to
-    answer any questions you may have about the program!
   no_devices_section_subhead: Téigh ar aghaidh, gearr an corda (ar feadh tamaill)!
   no_devices_section_desc: Ní CS oideachas gá i gcónaí a bheith i os comhair scáileán
     agus gléas rochtain níor chóir a bheith ina bhac ar fhoghlaim coincheapa eolaíocht
@@ -1021,11 +976,6 @@ ga:
   subscribe_form_section_desc_csp: Cláraigh a fháil r-phoist míosúil faoi Prionsabail
     Eolaíocht Ríomhaireachta Code.org agus meabhrúcháin cabhrach, leideanna, agus
     nuashonruithe a sheoladh ceart chun do bhosca a fháil.
-  subscribe_form_section_title_pl: Get notified when Professional Learning registration
-    opens
-  subscribe_form_section_desc_pl: Be the first to know when registration begins! Sign
-    up to receive an email notification when teachers can start applying for the Code.org
-    Professional Learning Program.
   subscribe_form_section_unsubscribe: Is féidir leat díliostáil ag am ar bith.
   hoc_page_what_is_hoc_heading: What is Hour of Code?
   hoc_page_desc: "[The Hour of Code](%{hoc_url}) is a global movement reaching tens
@@ -1234,7 +1184,6 @@ ga:
     ar na riachtanais is mó ó gach rannpháirtí.
   ai_curriculum_btn_aria_label_06: Féach ar an Tionchar Sóisialta a bhaineann le plean
     ceachta AI Ginearálta
-  ai_curriculum_btn_aria_label_dance_ai: 'Try the Dance Party: AI Edition activity'
   ai_carousel_heading: 'Cad a deir múinteoirí faoi AI le Code.org:'
   ai_carousel_quote_01: Thug an ceacht seo deis do mo mhic léinn a fheiceáil go bhfuil
     gné tuairime i gcórais aicmithe. Níos déanaí, nuair a thosaíomar ag feiceáil conas
@@ -1448,68 +1397,6 @@ ga:
   ai_vid_computervision_caption: Fís Ríomhaireachta
   ai_vid_ethics1_caption: 'Eitic & AI: Rochtain Chomhionann agus Claonadh Algartamach'
   ai_vid_ethics2_caption: 'Eitic & AI: Príobháideacht agus Todhchaí na hOibre'
-  pl_middle_high_top_heading: Professional Learning Workshops for Grades 6-12
-  pl_middle_high_top_desc: Our engaging workshops are for new and experienced computer
-    science teachers!
-  pl_middle_high_top_desc_02: 'In this program, you will:'
-  pl_middle_high_top_list_01: Explore the curriculum and learning tools
-  pl_middle_high_top_list_02: Experience the course as a teacher and a learner
-  pl_middle_high_top_list_03: Collaborate with fellow teachers
-  pl_middle_high_quotes_heading: 'What teachers are saying about Code.org professional
-    learning:'
-  pl_middle_high_quotes_01: I liked seeing the lessons in action — it helped me understand
-    how to pace them in my own classroom. I liked the opportunity to talk to my peers
-    about assessment ideas and recruitment ideas.
-  pl_middle_high_quotes_02: This was excellent professional development that allowed
-    us time to reflect, process and debrief both individually and as a group. The
-    activities were engaging and meaningful to learning the content. I feel like I'm
-    leaving with skill I can immediately apply in teaching the curriculum.
-  pl_middle_high_quotes_03: By the end, I just felt so prepared, motivated, and ready
-    to get back in the classroom again!
-  pl_middle_high_programs_heading: Professional learning programs specific to the
-    course
-  pl_middle_high_programs_desc: Join one of our professional learning programs in
-    your area. The programs are designed to prepare you before and during your first
-    year teaching [Computer Science Discoveries](%{csd_url}), [Computer Science Principles](%{csp_url}),
-    or [AP® Computer Science A](%{csa_url}).
-  pl_middle_high_programs_no_experience_req: No computer science experience required
-  pl_middle_high_programs_some_experience_req: Able to use functions, conditionals,
-    loops, and arrays
-  pl_middle_high_programs_based_in_us: Based in United States
-  pl_middle_high_programs_teach_ap_course: Teach AP® or non-AP® course
-  pl_middle_high_programs_csd_hours: Teaching 25+ hours of course to a class in next
-    school year
-  pl_middle_high_programs_csp_hours: Teaching 100+ hours of course to a class in next
-    school year
-  pl_middle_high_programs_csa_hours: Teaching 140+ hours of course to a class in next
-    school year
-  pl_middle_high_program_design_desc: The yearlong professional learning programs
-    all follow a similar design. Regional Partners across the country provide our
-    programs and offer local workshops led by trained facilitators.
-  pl_middle_high_program_design_summer_title: Summer Workshops
-  pl_middle_high_program_design_summer_desc: Attend a multi-day summer workshop to
-    get familiar with the curriculum and prepare for the school year.
-  pl_middle_high_program_design_year_title: Academic Year Workshops
-  pl_middle_high_program_design_year_desc: Attend workshops during the year to receive
-    support as you teach the curriculum.
-  pl_middle_high_program_design_community_title: Community Support
-  pl_middle_high_program_design_community_desc: Collaborate with your regional cohort
-    of teachers and get the support of a nationwide online teacher community.
-  pl_middle_high_process_apply_desc: Fill out an application with information about
-    you, your school, and the course you're teaching.
-  pl_middle_high_process_acceptance_desc: If accepted, you will be notified of your
-    acceptance by your Regional Partner after applying.
-  pl_middle_high_process_enroll_desc: Sign up for the summer workshop in your region
-    and get ready to start the yearlong program!
-  pl_middle_high_cost_heading: What does the program cost?
-  pl_middle_high_cost_subhead: The cost of the program varies by region.
-  pl_middle_high_cost_desc: You may be eligible for a scholarship to cover the cost
-    of your program.
-  pl_middle_high_additional_programs_desc: In addition to our in-person facilitator
-    led options for middle and high school teachers we have several other programs
-    to meet the diverse needs of our teachers.
-  pl_middle_high_additional_programs_heading: Additional programs to meet diverse
-    teacher needs
   self_paced_pl_hero_heading: Foghlaim Ghairmiúil Féin-Paced d'Oideoirí
   self_paced_pl_hero_desc: Tairiscintí foghlama gairmiúla chun tacú le múinteoirí
     i ngach céim dá dturas teagaisc ríomheolaíochta.
@@ -3209,7 +3096,6 @@ ga:
     nó [léigh an How-To Guide] (%{howto_url})'
   tutorial_dance2019_name: Páirtí Rince
   tutorial_danceparty_name: Páirtí Rince
-  tutorial_dancepartyai_name: 'Cóisir Damhsa: Eagrán AI'
   tutorial_chibitronics_name: 'Chibitronics: Scéal Soilsithe'
   tutorial_athlete_name: Cód do chluiche spóirt féin
   tutorial_moana_name: 'Moana: Bealach a Aimsiú le Cód'
@@ -3899,9 +3785,6 @@ ga:
   tutorial_danceparty_shortdescription: Cód Páirtí Rince a roinnt le do chairde. Featuring
     Beyoncé, Lizzo, Harry Styles, Lil Nas X, Selena Gomez, ceol ó 'Encanto' Disney,
     agus níos mó!
-  tutorial_dancepartyai_shortdescription: Learn about artificial intelligence (AI)
-    concepts to create your own virtual dance party showcasing today's top artists.
-    It's time to strut your stuff!
   tutorial_chibitronics_shortdescription: Déan ciorcad páipéir a chlárú chun do scéal
     féin a lasadh.
   tutorial_athlete_shortdescription: Roghnaigh idir cluiche cispheile a dhéanamh nó
@@ -5163,9 +5046,6 @@ ga:
   tutorial_danceparty_longdescription: Cód Páirtí Rince a roinnt le do chairde. Featuring
     Beyoncé, Lizzo, Harry Styles, Lil Nas X, Selena Gomez, ceol ó 'Encanto' Disney,
     agus níos mó!
-  tutorial_dancepartyai_longdescription: Learn about artificial intelligence (AI)
-    concepts to create your own virtual dance party showcasing today's top artists.
-    It's time to strut your stuff!
   tutorial_chibitronics_longdescription: Déan ciorcad páipéir a chlárú chun do scéal
     féin a lasadh.
   tutorial_athlete_longdescription: Roghnaigh idir cluiche cispheile a dhéanamh nó
@@ -8273,7 +8153,6 @@ ga:
     go léir uathúil speisialta.
   tutorial_dance2019_string_detail_grades: Gráid 2+
   tutorial_danceparty_string_detail_grades: Gráid 2+
-  tutorial_dancepartyai_string_detail_grades: Grade 3+
   tutorial_chibitronics_string_detail_grades: Gráid 2-5
   tutorial_athlete_string_detail_grades: Gráid 2+
   tutorial_moana_string_detail_grades: Gráid 2+
@@ -8951,8 +8830,6 @@ ga:
   tutorial_dance2019_string_platforms: Gach brabhsálaithe nua-aimseartha, táibléad
     Android, iPad, Unplugged
   tutorial_danceparty_string_platforms: Gach brabhsálaithe nua-aimseartha, táibléad
-    Android, iPad
-  tutorial_dancepartyai_string_platforms: Gach brabhsálaithe nua-aimseartha, táibléad
     Android, iPad
   tutorial_chibitronics_string_platforms: Gach brabhsálaí nua-aimseartha, Léitheoir
     scáileáin
@@ -9868,7 +9745,6 @@ ga:
     Chromebook, iPhone, iPad, Android fón, Android tablet
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
-  tutorial_dancepartyai_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Chibitronics Sliseanna Chibi agus
     Soilse Greamán Cuarda
   tutorial_athlete_string_detail_platforms: ''
@@ -10551,7 +10427,6 @@ ga:
   tutorial_meeempathy_string_detail_platforms: ''
   tutorial_dance2019_string_detail_programming_languages: Bloic
   tutorial_danceparty_string_detail_programming_languages: Bloic
-  tutorial_dancepartyai_string_detail_programming_languages: Bloic
   tutorial_chibitronics_string_detail_programming_languages: Bloic
   tutorial_athlete_string_detail_programming_languages: Bloic
   tutorial_moana_string_detail_programming_languages: Bloic

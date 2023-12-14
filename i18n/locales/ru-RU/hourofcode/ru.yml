@@ -330,7 +330,6 @@ ru:
   call_to_action_explore_all_hoc_activities: Ознакомьтесь со всеми мероприятиями «Часа
     кода» на сайте Code.org
   call_to_action_start_dance_party: Начните танцевальную вечеринку
-  call_to_action_start_dance_party_ai_edition: 'Start Dance Party: AI Edition'
   call_to_action_start_part_02: Начните вторую часть
   call_to_action_start_unplugged_activity: Начните работу без подключения к сети
   call_to_action_view_promo_resources: Смотреть промо-ресурсы
@@ -447,15 +446,6 @@ ru:
   call_to_action_learn_about_ai: Узнайте об искусственном интеллекте
   call_to_action_learn_more_about_ai: Learn more about AI
   call_to_action_get_started: Начни
-  call_to_action_explore_self_paced_pl: Explore self-paced professional learning
-  call_to_action_applications_get_notified: Get notified when applications open
-  call_to_action_applications_notify_me: Notify me when I can apply
-  call_to_action_apply_now: Apply now
-  call_to_action_explore_self_paced_learning: Explore self-paced learning
-  call_to_action_explore_k_5_workshops: Explore K-5 workshops
-  call_to_action_for_intl_educators: For international educators
-  call_to_action_learn_more_program_region: Learn more about the program in your region
-  call_to_action_visit_support_center: Visit our support center
   aria_label_call_to_action_hoc_how_to_educators: Ознакомьтесь с практическим руководством
     для преподавателей
   aria_label_call_to_action_hoc_how_to_companies: Ознакомьтесь с практическим руководством
@@ -486,8 +476,6 @@ ru:
     «Преподавание принципов информатики»
   aria_label_call_to_action_teaching_problem_solving: Начните программу профессионального
     обучения по решению проблем преподавания и вычислительной технике
-  aria_label_call_to_action_teaching_interactive_animations_games: Start the Teaching
-    Interactive Animations and Games professional learning program
   aria_label_call_to_action_teaching_csc: 'Начать преподавание по программе профессионального
     обучения "Связь с информатикой" '
   aria_label_call_to_action_teaching_ai: Начните программу профессионального обучения
@@ -593,16 +581,6 @@ ru:
     семинар для учащихся
   aria_label_call_to_action_view_more_cs_resources: Посмотреть больше ресурсов по
     информатике
-  aria_label_call_to_action_pl_apply_csd: Apply now for Computer Science Discoveries
-    professional learning
-  aria_label_call_to_action_pl_apply_csp: Apply now for Computer Science Principles
-    professional learning
-  aria_label_call_to_action_pl_apply_csa: Apply now for AP® Computer Science A professional
-    learning
-  aria_label_call_to_action_learn_more_csd: Learn more about Computer Science Discoveries
-  aria_label_call_to_action_learn_more_csp: Learn more about Computer Science Principles
-  aria_label_call_to_action_learn_more_csa: Learn more about AP® Computer Science
-    A
   video_title_professional_learning_program: Программа профессионального обучения
     Code.org
   curriculum_name_csf: Основы компьютерных наук
@@ -622,7 +600,6 @@ ru:
   curriculum_name_csd: Открытия в области компьютерных наук
   curriculum_name_csp: Принципы компьютерных наук
   curriculum_name_problem_solving: Решение задач и вычисления
-  curriculum_name_teaching_animation: Teaching Interactive Animations and Games
   curriculum_name_csc: Связь с информатикой
   curriculum_name_csa: Информатика А
   curriculum_name_csa_ai: Программная инженерия и компьютерное зрение
@@ -758,7 +735,6 @@ ru:
   module_label_languages: 'Поддерживаемые языки:'
   module_label_accessibility_features: 'Доступность:'
   module_label_accessibility_features_full: 'Функции доступности:'
-  module_label_teacher_requirements: 'Teacher Requirements:'
   module_label_educator_tool: Инструмент для преподавателей
   module_label_educator_course: Курс для преподавателей
   module_label_educator_resources: Educator resources
@@ -812,7 +788,6 @@ ru:
   module_duration_1_hr: 1 час
   module_duration_2_hrs: 2 часа
   module_duration_3_hrs: 3 часа
-  module_duration_3_hrs_20_minutes: 3 hours 20 minutes
   module_duration_5_hrs: 5 часов
   module_duration_5_hrs_plus: 5+ часов
   module_duration_8_hrs: 8 часов
@@ -834,7 +809,6 @@ ru:
   module_label_teaching_csd: Преподавание открытий в области компьютерных наук
   module_label_teaching_csp: Принципы преподавания компьютерных наук
   module_label_teaching_problem_solving: Обучение решению проблем и вычислениям
-  module_label_teaching_animations: Interactive Animations and Games
   module_label_teaching_csc: Преподавание курса "Связь с информатикой"
   module_label_teaching_ai: Обучение искусственному интеллекту и машинному обучению
   module_label_teaching_maker_cp: Обучение созданию приложений на устройствах (Circuit
@@ -909,12 +883,6 @@ ru:
   heading_attend_free_workshop: Посетите бесплатный семинар для учащихся
   heading_access_more_cs_resources: Получите доступ к дополнительным ресурсам по информатике
   heading_available_on_code_dot_org: Доступно на Code.org
-  heading_program_design: Program design
-  heading_how_does_application_process_work: How does the application process work?
-  heading_apply: Apply
-  heading_acceptance: Acceptance
-  heading_enroll: Enroll
-  heading_have_questions: Have questions?
   cs_ambassador_subhead: Если вы учитесь в средней школе и хотите побудить больше
     молодых женщин изучать компьютерные науки в своей школе, тогда вы нужны нам!
   cs_ambassador_desc: Информатика затрагивает каждую область, включая медицину, развлечения,
@@ -984,19 +952,6 @@ ru:
     CSA curriculum to your students.
   professional_learning_section_workshops_starting: Очные и виртуальные семинары начнутся
     этим летом.
-  pl_self_paced_learning_heading: Self-Paced Learning
-  pl_self_paced_learning_desc: Learn at your own pace using our online learning modules.
-    You can start whenever is convenient for you and the courses are free.
-  pl_elementary_workshops_heading: Elementary Workshops
-  pl_elementary_workshops_desc: Do you teach Kindergarten through 5th grade? Check
-    out the link below to learn more about our K5 workshops.
-  pl_outside_us_heading: Outside the United States
-  pl_outside_us_desc: If you're an international teacher interested in professional
-    learning, learn more about what's offered in your area.
-  pl_regional_partner_desc: Your local Code.org Regional Partner provides high quality
-    Code.org professional learning to teachers, and can help guide your school or
-    district on implementation, certification, funding, and more. They are happy to
-    answer any questions you may have about the program!
   no_devices_section_subhead: Преподавайте без устройств!
   no_devices_section_desc: Обучение информатике не всегда должно проводиться перед
     экраном, а доступ к устройству не должен стать препятствием для изучения понятий
@@ -1022,11 +977,6 @@ ru:
   subscribe_form_section_desc_csp: Подпишитесь, чтобы получать ежемесячные электронные
     письма о принципах компьютерных наук Code.org и получать полезные напоминания,
     советы и обновления прямо на свой почтовый ящик.
-  subscribe_form_section_title_pl: Get notified when Professional Learning registration
-    opens
-  subscribe_form_section_desc_pl: Be the first to know when registration begins! Sign
-    up to receive an email notification when teachers can start applying for the Code.org
-    Professional Learning Program.
   subscribe_form_section_unsubscribe: Вы можете отказаться от подписки в любое время.
   hoc_page_what_is_hoc_heading: 'Что такое «Час кода»? '
   hoc_page_desc: "[Час кода](%{hoc_url}) – международное движение, объединяющее десятки
@@ -1235,7 +1185,6 @@ ru:
     потребностям всех участников.
   ai_curriculum_btn_aria_label_06: Ознакомьтесь с социальным влиянием плана уроков
     по генеративному искусственному интеллекту
-  ai_curriculum_btn_aria_label_dance_ai: 'Try the Dance Party: AI Edition activity'
   ai_carousel_heading: 'Что говорят учителя об искусственном интеллекте с помощью
     Code.org:'
   ai_carousel_quote_01: Этот урок также дал моим ученикам возможность увидеть, что
@@ -1454,68 +1403,6 @@ ru:
     предвзятость'
   ai_vid_ethics2_caption: 'Этика и искусственный интеллект: конфиденциальность и будущее
     работы'
-  pl_middle_high_top_heading: Professional Learning Workshops for Grades 6-12
-  pl_middle_high_top_desc: Our engaging workshops are for new and experienced computer
-    science teachers!
-  pl_middle_high_top_desc_02: 'In this program, you will:'
-  pl_middle_high_top_list_01: Explore the curriculum and learning tools
-  pl_middle_high_top_list_02: Experience the course as a teacher and a learner
-  pl_middle_high_top_list_03: Collaborate with fellow teachers
-  pl_middle_high_quotes_heading: 'What teachers are saying about Code.org professional
-    learning:'
-  pl_middle_high_quotes_01: I liked seeing the lessons in action — it helped me understand
-    how to pace them in my own classroom. I liked the opportunity to talk to my peers
-    about assessment ideas and recruitment ideas.
-  pl_middle_high_quotes_02: This was excellent professional development that allowed
-    us time to reflect, process and debrief both individually and as a group. The
-    activities were engaging and meaningful to learning the content. I feel like I'm
-    leaving with skill I can immediately apply in teaching the curriculum.
-  pl_middle_high_quotes_03: By the end, I just felt so prepared, motivated, and ready
-    to get back in the classroom again!
-  pl_middle_high_programs_heading: Professional learning programs specific to the
-    course
-  pl_middle_high_programs_desc: Join one of our professional learning programs in
-    your area. The programs are designed to prepare you before and during your first
-    year teaching [Computer Science Discoveries](%{csd_url}), [Computer Science Principles](%{csp_url}),
-    or [AP® Computer Science A](%{csa_url}).
-  pl_middle_high_programs_no_experience_req: No computer science experience required
-  pl_middle_high_programs_some_experience_req: Able to use functions, conditionals,
-    loops, and arrays
-  pl_middle_high_programs_based_in_us: Based in United States
-  pl_middle_high_programs_teach_ap_course: Teach AP® or non-AP® course
-  pl_middle_high_programs_csd_hours: Teaching 25+ hours of course to a class in next
-    school year
-  pl_middle_high_programs_csp_hours: Teaching 100+ hours of course to a class in next
-    school year
-  pl_middle_high_programs_csa_hours: Teaching 140+ hours of course to a class in next
-    school year
-  pl_middle_high_program_design_desc: The yearlong professional learning programs
-    all follow a similar design. Regional Partners across the country provide our
-    programs and offer local workshops led by trained facilitators.
-  pl_middle_high_program_design_summer_title: Summer Workshops
-  pl_middle_high_program_design_summer_desc: Attend a multi-day summer workshop to
-    get familiar with the curriculum and prepare for the school year.
-  pl_middle_high_program_design_year_title: Academic Year Workshops
-  pl_middle_high_program_design_year_desc: Attend workshops during the year to receive
-    support as you teach the curriculum.
-  pl_middle_high_program_design_community_title: Community Support
-  pl_middle_high_program_design_community_desc: Collaborate with your regional cohort
-    of teachers and get the support of a nationwide online teacher community.
-  pl_middle_high_process_apply_desc: Fill out an application with information about
-    you, your school, and the course you're teaching.
-  pl_middle_high_process_acceptance_desc: If accepted, you will be notified of your
-    acceptance by your Regional Partner after applying.
-  pl_middle_high_process_enroll_desc: Sign up for the summer workshop in your region
-    and get ready to start the yearlong program!
-  pl_middle_high_cost_heading: What does the program cost?
-  pl_middle_high_cost_subhead: The cost of the program varies by region.
-  pl_middle_high_cost_desc: You may be eligible for a scholarship to cover the cost
-    of your program.
-  pl_middle_high_additional_programs_desc: In addition to our in-person facilitator
-    led options for middle and high school teachers we have several other programs
-    to meet the diverse needs of our teachers.
-  pl_middle_high_additional_programs_heading: Additional programs to meet diverse
-    teacher needs
   self_paced_pl_hero_heading: Профессиональное обучение в индивидуальном темпе для
     преподавателей
   self_paced_pl_hero_desc: Предложения по профессиональному обучению, помогающие учителям
@@ -3184,7 +3071,6 @@ ru:
     или [ознакомьтесь с нашим практическим руководством](%{howto_url})  "
   tutorial_dance2019_name: Ускорить, замедлить
   tutorial_danceparty_name: Танцевальная вечеринка
-  tutorial_dancepartyai_name: 'Танцевальная вечеринка: издание AI'
   tutorial_chibitronics_name: 'Чибитроника: освещенная история'
   tutorial_athlete_name: Создайте свою спортивную игру
   tutorial_moana_name: 'Моана: навигация с помощью кода'
@@ -3886,9 +3772,6 @@ ru:
   tutorial_danceparty_shortdescription: "  Запрограммируй собственный танец и поделись
     им с друзьями. С участием Кэти Перри, Мадонны, Дж. Болвина, Сии, Кейт Урбан, Сиэры
     и еще более 25 знаменитостей!  "
-  tutorial_dancepartyai_shortdescription: Learn about artificial intelligence (AI)
-    concepts to create your own virtual dance party showcasing today's top artists.
-    It's time to strut your stuff!
   tutorial_chibitronics_shortdescription: Запрограммируйте бумажную схему, чтобы осветить
     свою историю.
   tutorial_athlete_shortdescription: Запрограммируйте игру в баскетбол или создайте
@@ -5140,9 +5023,6 @@ ru:
   tutorial_danceparty_longdescription: "  Запрограммируй собственный танец и поделись
     им с друзьями. С участием Кэти Перри, Мадонны, Дж. Болвина, Сии, Кейт Урбан, Сиэры
     и еще более 25 знаменитостей!  "
-  tutorial_dancepartyai_longdescription: Learn about artificial intelligence (AI)
-    concepts to create your own virtual dance party showcasing today's top artists.
-    It's time to strut your stuff!
   tutorial_chibitronics_longdescription: Запрограммируйте бумажную схему, чтобы осветить
     свою историю.
   tutorial_athlete_longdescription: Запрограммируйте игру в баскетбол или создайте
@@ -8089,7 +7969,6 @@ ru:
     ощутят разнообразие, которое делает всех нас уникальными.
   tutorial_dance2019_string_detail_grades: 2 класс и старше
   tutorial_danceparty_string_detail_grades: 2 класс и старше
-  tutorial_dancepartyai_string_detail_grades: Grade 3+
   tutorial_chibitronics_string_detail_grades: 2-5 классы
   tutorial_athlete_string_detail_grades: 2 класс и старше
   tutorial_moana_string_detail_grades: 2 класс и старше
@@ -8767,8 +8646,6 @@ ru:
   tutorial_dance2019_string_platforms: Все современные браузеры, планшет Android,
     iPad, отключены
   tutorial_danceparty_string_platforms: Все современные браузеры, планшет Android,
-    iPad
-  tutorial_dancepartyai_string_platforms: Все современные браузеры, планшет Android,
     iPad
   tutorial_chibitronics_string_platforms: Все современные браузеры
   tutorial_athlete_string_platforms: Все современные браузеры
@@ -9639,7 +9516,6 @@ ru:
   tutorial_meeempathy_string_platforms: Windows, iPad, MacOS
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
-  tutorial_dancepartyai_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Светодиодные наклейки на чипы и схемы
     Chibitronics Chibi
   tutorial_athlete_string_detail_platforms: ''
@@ -10323,7 +10199,6 @@ ru:
   tutorial_meeempathy_string_detail_platforms: ''
   tutorial_dance2019_string_detail_programming_languages: Блоки
   tutorial_danceparty_string_detail_programming_languages: Блоки
-  tutorial_dancepartyai_string_detail_programming_languages: Блоки
   tutorial_chibitronics_string_detail_programming_languages: Блоки
   tutorial_athlete_string_detail_programming_languages: Блоки
   tutorial_moana_string_detail_programming_languages: Блоки

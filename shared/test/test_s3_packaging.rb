@@ -19,11 +19,11 @@ class S3PackagingTest < Minitest::Test
       FileUtils.mkdir('build')
       File.write('build/output.js', "output")
     end
-    RakeUtils.stubs(:git_folder_hash).returns(commit_hash)
-    packager = S3Packaging.new('test-package', source_location, target_location).tap do |s3|
-      s3.instance_variable_get(:@logger).level = Logger::Severity::WARN
+    packager = RakeUtils.stub(:git_folder_hash, commit_hash) do
+      S3Packaging.new('test-package', source_location, target_location).tap do |s3|
+        s3.instance_variable_get(:@logger).level = Logger::Severity::WARN
+      end
     end
-    RakeUtils.unstub(:git_folder_hash)
     [source_location, target_location, packager]
   end
 
@@ -57,8 +57,9 @@ class S3PackagingTest < Minitest::Test
   end
 
   def test_create_and_decompress_package
-    RakeUtils.expects(:git_folder_hash).returns(ORIGINAL_HASH)
-    package = @packager.send(:create_package, 'build')
+    package = RakeUtils.stub(:git_folder_hash, ORIGINAL_HASH) do
+      @packager.send(:create_package, 'build')
+    end
     assert package.is_a?(Tempfile)
 
     `rm -rf #{@target_location}/*`
@@ -102,13 +103,15 @@ class S3PackagingTest < Minitest::Test
     alt_source_loc, alt_target_loc, alt_packager = create_packager(alt_hash)
     begin
       # upload package for ORIGINAL_HASH
-      RakeUtils.expects(:git_folder_hash).returns(ORIGINAL_HASH)
-      original_package = @packager.send(:create_package, 'build')
+      original_package = RakeUtils.stub(:git_folder_hash, ORIGINAL_HASH) do
+        @packager.send(:create_package, 'build')
+      end
       @packager.send(:upload_package, original_package)
 
       # upload package for "alternate-hash"
-      RakeUtils.expects(:git_folder_hash).returns(alt_hash)
-      alt_package = alt_packager.send(:create_package, 'build')
+      alt_package = RakeUtils.stub(:git_folder_hash, alt_hash) do
+        alt_packager.send(:create_package, 'build')
+      end
       alt_packager.send(:upload_package, alt_package)
 
       # we have no package, so we download one
@@ -172,8 +175,9 @@ class S3PackagingTest < Minitest::Test
   end
 
   def test_download_anonymous
-    RakeUtils.expects(:git_folder_hash).returns(ORIGINAL_HASH)
-    package = @packager.send(:create_package, 'build')
+    package = RakeUtils.stub(:git_folder_hash, ORIGINAL_HASH) do
+      @packager.send(:create_package, 'build')
+    end
     @packager.send(:upload_package, package)
     # Stub blank AWS credentials in packager's S3 client
     @packager.instance_variable_set(:@client, Aws::S3::Client.new(credentials: Aws::Credentials.new(nil, nil)))

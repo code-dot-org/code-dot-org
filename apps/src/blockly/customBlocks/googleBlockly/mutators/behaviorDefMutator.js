@@ -10,7 +10,6 @@
  */
 
 import {ObservableParameterModel} from '@blockly/block-shareable-procedures';
-import {readBooleanAttribute} from '@cdo/apps/blockly/utils';
 import {
   getBlockDescription,
   setBlockDescription,
@@ -75,7 +74,7 @@ export const behaviorDefMutator = {
       }
     }
     this.behaviorId = xmlElement.getAttribute('behaviorId');
-    this.userCreated = readBooleanAttribute(xmlElement, 'userCreated');
+    this.userCreated = xmlElement.getAttribute('userCreated');
   },
 
   /**

@@ -2977,39 +2977,3 @@ he:
         self-paced-pl-csd-unit5-1-2023: {}
         self-paced-pl-csd-unit5-2-2023: {}
         ai-tutor-test: {}
-        web-dev-2024: {}
-        csd1-2024:
-          lesson_groups:
-            lessonGroup-5:
-              display_name: סקר
-            lessonGroup-2:
-              display_name: 'פרק 1: הדרך לפתרון תהליך'
-            lessonGroup-3:
-              display_name: 'פרק 2: מחשבים ופתרון בעיות'
-        csd2-2024: {}
-        csd3-2024:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'פרק 1: תמונות ואנימציות'
-            lessonGroup-3:
-              display_name: 'פרק 2: יצירת משחקים'
-        csd4-2024:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'פרק 1: עיצוב מכוון משתמש'
-            lessonGroup-3:
-              display_name: 'פרק 2: תכנון אפליקציה'
-        csd5-2024:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'פרק 1: ייצוג מידע'
-            lessonGroup-3:
-              display_name: 'פרק 2: פתרון בעיות נתונים'
-        csd6a-2024:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: 'פרק 2: יצור אב טיפוס פיזי'
-        csd6b-2024: {}
-        csd7-2024: {}
-        csd-post-survey-2024:
-          title: סקר שלאחר הקורס

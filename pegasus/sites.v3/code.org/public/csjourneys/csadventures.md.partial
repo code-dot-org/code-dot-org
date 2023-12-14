@@ -1,0 +1,135 @@
+---
+title: Take your class on a CS Adventure!
+video_player: true
+theme: responsive
+social:
+  "og:title": "Take your class on a CS Adventure!"
+  "twitter:title": "Take your class on a CS Adventure!"
+  "og:description": "Excite and inspire your students with virtual field trips and class chats with real professionals"
+  "twitter:description": "Excite and inspire your students with virtual field trips and class chats with real professionals"
+  "og:image": "/images/csjourneys/og-trips.png"
+  "twitter:image:": "/images/csjourneys/og-trips.png"
+  "og:image:width": 1200
+  "og:image:height": 630
+---
+<link href="/css/tools.css" rel="stylesheet">
+
+<a id="top"></a>
+
+<h1 style="margin-top:25px"><a href="/csjourneys"><img src="/images/csjourneys/csjourneys.png" alt="CS Journeys" style="width:170px; max-width:100%; margin-bottom: 12px"></a><br>Virtual field trips and career chats</h1>
+
+<p>Use these engagement opportunities to excite and inspire your students to keep learning CS! Click on each opportunity to view specific details around timing, grade-appropriateness, and more.</p>
+<ul>
+  <li><a href="#trips">Virtual field trips</a></li>
+  <li><a href="#chats">Career chats</a></li>
+</ul>
+
+<a id="trips">
+<h2>Virtual field trips</h2>
+
+<div class="col-33" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a class="linktag" id="alexa-trip" href="https://www.amazonfutureengineer.com/space?utm_campaign=codeorg&utm_medium=alexaforastronauts&utm_source=US&utm_content=Website" target="_blank">
+        <img class="tutorial-tile-img" src="/images/csjourneys/alexatour.gif" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Alexa, take me to the moon! Virtual field trip on Kahoot">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+        <div class="smalltext" style="color: #00adbc; text-align: left"><strong>Available on Kahoot!</strong></div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Alexa, take me to the Moon!</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Join Amazon, Lockheed Martin, and Webex for a behind-the-scenes look at the technology being tested on NASA’s Artemis I mission.</div>
+        <br>
+       <a class="linktag" id="nasa-trip" href="https://www.amazonfutureengineer.com/space?utm_campaign=codeorg&utm_medium=alexaforastronauts&utm_source=US&utm_content=Website" target="_blank"><button>View details</button></a>
+  </div>
+</div>
+</div>
+
+<div class="col-33" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a class="linktag" id="nasa-trip" href="https://chandra.si.edu/fieldtrip/" target="_blank">
+        <img class="tutorial-tile-img" src="/images/csjourneys/fill-485x235/nasa-trip.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Chandra X-Ray Observatory">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+        <div class="smalltext" style="color: #00adbc; text-align: left"><strong>One-to-two tours per week</strong></div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Explore the universe with NASA's Chandra X-ray Observatory</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Tour NASA’s Chandra X-ray Observatory as we investigate hot regions of the Universe, from black holes to exploding stars!</div>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px"><strong>2023 tour dates to be announced.</strong></div>
+  </div>
+</div>
+</div>
+
+<div class="col-33" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a class="linktag" id="irobot-trip" href="https://experience.irobot.com/irobot-education-virtual-museum-tours-2023" target="_blank">
+        <img class="tutorial-tile-img" src="/images/csjourneys/fill-485x235/iRobot-trip.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="iRobot Tours">
+      </a>
+
+
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+        <div class="smalltext" style="color: #00adbc; text-align: left"><strong>Select dates</strong></div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Go inside the iRobot Cool Stuff Museum</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Join us in the iRobot Cool Stuff Museum, exploring 30 years of robotics history. See via our mobile robot as our guide brings robotics and computer science to life.</div>
+        <a class="linktag" id="irobot-trip" href="https://experience.irobot.com/irobot-education-virtual-museum-tours-2023" target="_blank"><button>View details</button></a>
+  </div>
+</div>
+</div>
+
+<div style="clear: both; margin-bottom: 20px"></div>
+
+<div class="col-33" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a class="linktag" id="mbari-trip" href="https://montereybayaquarium.thinkific.com/courses/exploring-the-deep-bit-by-bit" target="_blank">
+        <img class="tutorial-tile-img" src="/images/csjourneys/fill-485x235/mbari-trip.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Monterey Bay Aquarium self-paced virtual tour">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+        <div class="smalltext" style="color: #00adbc; text-align: left"><strong>Self-paced</strong></div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Exploring the Deep Bit by Bit 👾</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Learn about the deep sea with the Monterey Bay Aquarium and see how computer science plays a part in helping us understand this challenging habitat!</div>
+        <a class="linktag" id="mbari-trip" href="https://montereybayaquarium.thinkific.com/courses/exploring-the-deep-bit-by-bit" target="_blank"><button>View details</button></a>
+  </div>
+</div>
+<p style="padding-left:15px; padding-right:15px"><i>Note that students need to create an account with Monterey Bay Aquarium to access the experience.</i></p>
+</div>
+
+<div class="col-33" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a class="linktag" id="amazon-trip" href="https://www.amazonfutureengineer.com/fctours?utm_campaign=Code.org&utm_medium=Website&utm_source=FC%20Tours" target="_blank">
+        <img class="tutorial-tile-img" src="/images/csjourneys/fctour.gif" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Amazon FC Tours">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+        <div class="smalltext" style="color: #00adbc; text-align: left"><strong>Available on Kahoot!</strong></div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Explore the technology of Amazon's Fulfillment Centers</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Discover how computer science, state-of-the-art engineering, and incredible people deliver customer orders at Amazon.</div>
+        <a class="linktag" id="amazon-trip" href="https://www.amazonfutureengineer.com/fctours?utm_campaign=Code.org&utm_medium=Website&utm_source=FC%20Tours" target="_blank"><button>View details</button></a>
+  </div>
+</div>
+</div>
+
+<div style="clear: both; margin-bottom: 20px"></div>
+
+<a id="chats">
+<h2 style="margin-top:25px">My Journey Chats</h2>
+<p>My Journey Chats are on hiatus during the 2022-2023 school year. Check out a few of our past chats below, or to view all past events, <a  class="linktag" id="past chats" href="https://code.org/csjourneys/pastchats" target="_blank">click here</a>.</p>
+<br>
+
+<a id="recordings"></a>
+
+<div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
+  {{ myjourney14 }}
+  <h3>Using computer science to keep people safe</h3>
+  <p>Hear from Richard Nelson, V, a mechanical engineer at Motorola Solutions who plays a crucial role in ensuring public safety.</p>
+</div>
+
+<div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
+  {{ myjourney5 }}
+  <h3>Building robots</h3>
+  <br>
+  <p>Learn how Eva Moscat and Anna Elzer are helping build software for robots and designing learning experiences that inspire the next generation of technologists.</p>
+</div>
+
+<div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
+  {{ myjourney13 }}
+  <h3>How to outsmart a malicious hacker</h3>
+  <p>Learn how Christopher Lopez, a security analyst with Tanium, helps organizations protect their networks from cybersecurity threats.</p>
+</div>
+
+
+<div style="clear: both; margin-bottom: 20px"></div>

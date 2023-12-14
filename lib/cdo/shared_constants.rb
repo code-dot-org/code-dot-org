@@ -47,7 +47,6 @@ module SharedConstants
       email: 'email',
       google_classroom: 'google_classroom',
       clever: 'clever',
-      lti_v1: 'lti_v1',
     }
   )
 

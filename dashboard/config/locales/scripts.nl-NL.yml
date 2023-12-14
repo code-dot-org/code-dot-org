@@ -156,8 +156,6 @@ nl:
           lessons:
             lesson-5:
               name: Evaluaties
-            lesson-6:
-              name: Les 1
         aquatic:
           description_short: Minecraft is terug met een gloednieuwe activiteit voor
             het Codeuur!
@@ -1434,10 +1432,6 @@ nl:
           lesson_groups:
             lessonGroup-5:
               display_name: Vragenlijst
-        csd1-2024:
-          lesson_groups:
-            lessonGroup-5:
-              display_name: Vragenlijst
         csd1-dlp:
           lesson_groups:
             content:
@@ -1618,10 +1612,6 @@ nl:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Hoofdstuk 1: Het voorstellen van informatie'
-        csd5-2024:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'Hoofdstuk 1: Het voorstellen van informatie'
         csd5-dlp:
           lesson_groups:
             content:
@@ -1730,10 +1720,6 @@ nl:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Hoofdstuk 2: Hardware Input'
-        csd6a-2024:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: 'Hoofdstuk 2: Hardware Input'
         csd7-2021:
           lesson_groups:
             lessonGroup-4:
@@ -1743,12 +1729,6 @@ nl:
             lessonGroup-4:
               display_name: Vragenlijst
         csd7-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Hoofdstuk 1
-            lessonGroup-3:
-              display_name: Hoofdstuk 2
-        csd7-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Hoofdstuk 1

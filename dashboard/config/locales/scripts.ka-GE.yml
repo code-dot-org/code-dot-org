@@ -479,9 +479,6 @@ ka:
             ჯერ კიდევ მაინტერესებს საიდან მოვიდა მიმოხილვა, შინაარსი...
           title: ანდრეა-ტესტი
         angelina-playground:
-          lesson_groups:
-            lessonGroup-4:
-              display_name: შემთხვევითი
           lessons:
             lesson-5:
               name: ტესტები
@@ -1999,8 +1996,6 @@ ka:
           title: CSD სტუდენტური პოსტ-კურსის კვლევა ('18-'19)
         csd-post-survey-2023:
           title: კურსის შემდგომი გამოკითხვა
-        csd-post-survey-2024:
-          title: კურსის შემდგომი გამოკითხვა
         csd-sample-online:
           title: ონლაინ აქტივობების ნიმუში CS აღმოჩენებისთვის
         csd-test-saving-state:
@@ -2193,23 +2188,6 @@ ka:
             მთავრდება პროექტით, რომელშიც თქვენ შეიმუშავებთ პროგრამას, რომელიც დაგეხმარებათ
             თქვენი არჩევანის პრობლემის მოგვარებაში.
         csd1-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'თავი 1: პრობლემის გადაჭრის პროცესი'
-            lessonGroup-3:
-              display_name: 'თავი 2: კომპიუტერები და პრობლემების გადაჭრა'
-            lessonGroup-5:
-              display_name: გამოკითხვა
-          student_description: პრობლემის გადაჭრა და გამოთვლა არის უაღრესად ინტერაქტიული
-            და თანამშრომლობითი შესავალი კომპიუტერული მეცნიერების სფეროში, რომელიც
-            ჩამოყალიბებულია პრობლემების გადაჭრის უფრო ფართო ძიებაში. თქვენ ივარჯიშებთ
-            პრობლემის გადაჭრის პროცესის გამოყენებით თავსატეხების, გამოწვევებისა და
-            რეალური სამყაროს სცენარების სერიის გადასაჭრელად. შემდეგი, თქვენ შეისწავლით
-            თუ როგორ შეიტანენ კომპიუტერები ინფორმაციას, გამოაქვთ, ინახავენ და ამუშავებენ
-            ინფორმაციას, რათა დაეხმარონ ადამიანებს პრობლემების გადაჭრაში. განყოფილება
-            მთავრდება პროექტით, რომელშიც თქვენ შეიმუშავებთ პროგრამას, რომელიც დაგეხმარებათ
-            თქვენი არჩევანის პრობლემის მოგვარებაში.
-        csd1-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'თავი 1: პრობლემის გადაჭრის პროცესი'
@@ -2447,12 +2425,6 @@ ka:
             cspSurvey:
               display_name: გამოკითხვა
         csd2-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'თავი 1: ვებგვერდების შექმნა'
-            lessonGroup-3:
-              display_name: 'თავი 2: მრავალგვერდიანი ვებსაიტები'
-        csd2-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'თავი 1: ვებგვერდების შექმნა'
@@ -2719,12 +2691,6 @@ ka:
             cspSurvey:
               display_name: გამოკითხვა
         csd3-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'თავი 1: სურათები და ანიმაციები'
-            lessonGroup-3:
-              display_name: 'თავი 2: თამაშების შექმნა'
-        csd3-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'თავი 1: სურათები და ანიმაციები'
@@ -3013,12 +2979,6 @@ ka:
               display_name: 'თავი 1: მომხმარებელზე ორიენტირებული დიზაინი'
             lessonGroup-3:
               display_name: 'თავი 2: აპლიკაციის პროტოტიპირება'
-        csd4-2024:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'თავი 1: მომხმარებელზე ორიენტირებული დიზაინი'
-            lessonGroup-3:
-              display_name: 'თავი 2: აპლიკაციის პროტოტიპირება'
         csd4-dlp:
           description: ეს არის უფრო ღრმა სასწავლო გეგმის მე -4 ნაწილი Code.org CS
             აღმოჩენების ფასილიტატორებისთვის ტრენინგში. აქ ნახავთ ასახვის მოთხოვნებს
@@ -3284,14 +3244,6 @@ ka:
             cspSurvey:
               display_name: გამოკითხვა
         csd5-2023:
-          description_short: გაიგეთ, თუ როგორ იყენებენ ადამიანები კომპიუტერებს მონაცემებთან
-            დაკავშირებული პრობლემების გადასაჭრელად.
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'თავი 1: ინფორმაციის წარმოდგენა'
-            lessonGroup-3:
-              display_name: 'თავი 2: მონაცემებთან დაკავშირებული პრობლემების გადაწყვეტა'
-        csd5-2024:
           description_short: გაიგეთ, თუ როგორ იყენებენ ადამიანები კომპიუტერებს მონაცემებთან
             დაკავშირებული პრობლემების გადასაჭრელად.
           lesson_groups:
@@ -3646,16 +3598,7 @@ ka:
           lesson_groups:
             lessonGroup-3:
               display_name: 'თავი 2: აპარატული შეყვანა'
-        csd6a-2024:
-          description_short: შეისწავლეთ პროგრამირება ფიზიკური მოწყობილობების საშუალებით.
-          lesson_groups:
-            lessonGroup-3:
-              display_name: 'თავი 2: აპარატული შეყვანა'
         csd6b-2023:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: შესაყვანი და გამოსაყვანი ინფორმაცია
-        csd6b-2024:
           lesson_groups:
             lessonGroup-3:
               display_name: შესაყვანი და გამოსაყვანი ინფორმაცია
@@ -3668,10 +3611,6 @@ ka:
             lessonGroup-4:
               display_name: გამოკითხვა
         csd7-2023:
-          lesson_groups:
-            lessonGroup-4:
-              display_name: შესავალი აპლიკაციების ლაბორატორიაში
-        csd7-2024:
           lesson_groups:
             lessonGroup-4:
               display_name: შესავალი აპლიკაციების ლაბორატორიაში
@@ -7779,12 +7718,6 @@ ka:
         vpl-csp-2020:
           name: vpl-CSP- 2020
           title: CS პრინციპები ვირტუალური პროფესიული სწავლება
-        web-dev-2024:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'თავი 1: ვებგვერდების შექმნა'
-            lessonGroup-3:
-              display_name: 'თავი 2: მრავალგვერდიანი ვებსაიტები'
         web-development-2023:
           lesson_groups:
             lessonGroup-2:

@@ -2602,24 +2602,24 @@
           "sign_in_to_save_project": "Vous souhaitez accéder à votre projet plus tard ? Connectez-vous pour enregistrer ce projet sur votre compte !"
         },
         "dance_ai_code_at_measure": {
-          "ai_dance_callout_02_b": "⬆️ Utilise ce bloc.",
-          "dance_callout_02": "Ajoute ici le bloc I.A. génère effet."
+          "ai_dance_callout_02_b": "⬆️ Utilisez ce bloc.",
+          "dance_callout_02": "Ajoutez ici le bloc d'effet AI generate."
         },
         "dance_ai_code_key_press": {
-          "ai_dance_callout_02_b": "⬆️ Utilise ce bloc.",
+          "ai_dance_callout_02_b": "⬆️ Utilisez ce bloc.",
           "dance_callout_02": "Ajouter une danse."
         },
         "dance_ai_customize_effect": {
-          "ai_dance_callout_draft_level_6": "Clique ici"
+          "ai_dance_callout_draft_level_6": "Cliquez ici"
         },
         "dance_ai_dancer_and_dance_move": {
-          "ai_dance_callout_draft_level_02": "⬆️ Commence ici."
+          "ai_dance_callout_draft_level_02": "⬆️ Commencez ici."
         },
         "dance_ai_generate_effect": {
-          "ai_dance_callout_draft_level_03": "⬆️ Utilise ce bloc."
+          "ai_dance_callout_draft_level_03": "⬆️ Utiliser ce bloc."
         },
         "dance_ai_generate_effect_again": {
-          "dance_callout_01": "⬆️ Utilise ce bloc."
+          "dance_callout_01": "⬆️ Utilisez ce bloc."
         },
         "ecosystems_helloworld_say_2023": {
           "hello_world_make_sprite": "Utilises ce bloc pour créer un sprite.",

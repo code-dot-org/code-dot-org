@@ -16,14 +16,13 @@ def fix_callouts
   else
     puts "THIS IS A FULL RUN"
   end
-  puts "***SPRITE LAB***"
-  process_levels(GamelabJr.where(game_id: 64))
+  puts "***POETRY***"
+  process_levels(Poetry.all)
+  puts "***DANCE***"
+  process_levels(Dancelab.all)
 end
 
 def process_levels(levels)
-  fixed_count = 0
-  could_not_fix_count = 0
-  failed_count = 0
   svg_flyout_id_matcher = /\.svgFlyoutGroup \[block-id="(.*)"\]/
   blockly_flyout_id_matcher = /\.blocklyFlyout \[data-id="(.*)"\]/
   svg_ws_id_matcher = /\.svgGroup \[block-id="(.*)"\]/
@@ -78,19 +77,15 @@ def process_levels(levels)
     add_new_callouts(category_ids_to_fix, broken_category_callouts, callouts)
     if add_ids_to_blocks(block_ids_to_fix, level, broken_block_callouts)
       level.callout_json = JSON.generate(callouts)
-      fixed_count += 1
       unless DRY_RUN
         level.save!(touch: false)
       end
     else
       puts "Could not update #{level.name}"
-      could_not_fix_count += 1
     end
   rescue => exception
     puts "Failed on #{level.name} with error #{exception.message}"
-    failed_count += 1
   end
-  puts "Fixed #{fixed_count} levels, could not fix #{could_not_fix_count} levels, failed on #{failed_count} levels"
 end
 
 def add_new_callouts(ids_to_fix, broken_callouts, callouts)
@@ -146,7 +141,7 @@ end
 def add_ids_to_blocks(ids_to_add, level, broken_callouts)
   toolbox_xml = Nokogiri::XML(level.toolbox_blocks)
   start_blocks_xml = Nokogiri::XML(level.start_blocks)
-  long_instructions_block_count = level.long_instructions&.scan('<block')&.count || 0
+  long_instructions_block_count = level.long_instructions.scan('<block').count
   existing_ids = []
   # Find all existing ids on blocks. If the id we are looking for already exists, don't add it.
   find_existing_ids(toolbox_xml.xpath('//*'), existing_ids)
@@ -154,14 +149,13 @@ def add_ids_to_blocks(ids_to_add, level, broken_callouts)
   ids_to_add = ids_to_add.difference(existing_ids)
   # This xpath syntax ignores namespaces, which some xml nodes use.
   toolbox_blocks = toolbox_xml.xpath("*[local-name()='xml']//*[local-name()='block']")
-  category_blocks = toolbox_xml.xpath("*[local-name()='xml']//*[local-name()='category']")
   start_blocks = start_blocks_xml.xpath("*[local-name()='xml']//*[local-name()='block']")
   could_match = true
   ids_to_add.each do |id_to_add|
+    index = id_to_add.to_i - 1
     callout_data = broken_callouts[id_to_add]
     is_toolbox_block = callout_data[:new_element_id].include? 'blocklyFlyout'
     if is_toolbox_block
-      index = category_blocks.empty? ? id_to_add.to_i - 1 : id_to_add.to_i - start_blocks.length - 1 - long_instructions_block_count
       if toolbox_blocks.length <= index
         puts "#{level.name} INVALID TOOLBOX INDEX #{id_to_add}"
         could_match = false
@@ -173,13 +167,13 @@ def add_ids_to_blocks(ids_to_add, level, broken_callouts)
         toolbox_blocks[index]['id'] = id_to_add
       end
     else # Otherwise it's a start block.
-      index = category_blocks.empty? ? id_to_add.to_i - toolbox_blocks.length - 1 - long_instructions_block_count : id_to_add.to_i - 1 - long_instructions_block_count
+      index = id_to_add.to_i - toolbox_blocks.length - 1 - long_instructions_block_count
       if start_blocks.length <= index
         puts "#{level.name} INVALID START_BLOCKS INDEX #{id_to_add}"
         could_match = false
       elsif start_blocks[index]['id']
         # If the block already has an id, we can't add a new one. Fail this update.
-        puts "#{level.name} Start block with index #{id_to_add} already has id #{start_blocks[index]['id']}"
+        puts "#{level.name} Start block with index #{id_to_add} already has id #{toolbox_blocks[index]['id']}"
         could_match = false
       else
         start_blocks[index]['id'] = id_to_add

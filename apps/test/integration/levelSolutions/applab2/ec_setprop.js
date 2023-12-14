@@ -136,7 +136,7 @@ module.exports = {
       levelHtml:
         '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" class="appModern withCrosshair" style="width: 320px; height: 450px; display: none;"><div class="screen" tabindex="1" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;">' +
         '<button id="button1" style="padding: 0px; margin: 0px; height: 30px; width: 80px; font-size: 14px; color: rgb(255, 255, 255); position: absolute; left: 55px; top: 85px; background-color: rgb(26, 188, 156);">Button</button>' +
-        '<img src="/blockly/media/1x1.gif" alt="" data-canonical-image-url="" data-object-fit="contain" id="image1" style="height: 100px; width: 100px; object-fit: contain; font-family: &quot;object-fit: contain;&quot;; position: static; left: 20px; top: 30px; margin: 0px;">' +
+        '<img src="/blockly/media/1x1.gif" data-canonical-image-url="" data-object-fit="contain" id="image1" style="height: 100px; width: 100px; object-fit: contain; font-family: &quot;object-fit: contain;&quot;; position: static; left: 20px; top: 30px; margin: 0px;">' +
         '</div></div>',
       xml: `
         var unescapedImage = 'ñ#?( "\\'.jpg';
@@ -335,7 +335,7 @@ module.exports = {
       description: 'setProperty on design mode created Image 1',
       editCode: true,
       levelHtml:
-        '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" class="appModern withCrosshair" style="width: 320px; height: 450px; display: none;"><div class="screen" tabindex="1" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;"><img src="/blockly/media/1x1.gif" alt="" data-canonical-image-url="" id="my_image" style="height: 100px; width: 100px; position: absolute; left: 80px; top: 75px; margin: 0px;" /></div></div>',
+        '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" class="appModern withCrosshair" style="width: 320px; height: 450px; display: none;"><div class="screen" tabindex="1" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;"><img src="/blockly/media/1x1.gif" data-canonical-image-url="" id="my_image" style="height: 100px; width: 100px; position: absolute; left: 80px; top: 75px; margin: 0px;" /></div></div>',
       xml: `setProperty("my_image", "width", 11);
         console.log("width: " + getProperty("my_image", "width"));
         setProperty("my_image", "height", 12);
@@ -533,7 +533,7 @@ module.exports = {
       description: 'setProperty on design mode created image 2',
       editCode: true,
       levelHtml:
-        '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" class="appModern withCrosshair" style="width: 320px; height: 450px; display: block;"><div class="screen" tabindex="1" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;"><img src="/blockly/media/1x1.gif" alt="" data-canonical-image-url="" id="image1" style="height: 100px; width: 100px; position: absolute; left: 125px; top: 235px; margin: 0px;" /></div></div>',
+        '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" class="appModern withCrosshair" style="width: 320px; height: 450px; display: block;"><div class="screen" tabindex="1" id="screen1" style="display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;"><img src="/blockly/media/1x1.gif" data-canonical-image-url="" id="image1" style="height: 100px; width: 100px; position: absolute; left: 125px; top: 235px; margin: 0px;" /></div></div>',
       xml: `setProperty("image1", "picture", "${flappyImage}");
         console.log("picture: " + getProperty("image1", "picture"));`,
       runBeforeClick: function (assert) {

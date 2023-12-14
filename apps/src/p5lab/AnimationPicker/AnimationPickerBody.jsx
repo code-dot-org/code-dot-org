@@ -199,8 +199,6 @@ export default class AnimationPickerBody extends React.Component {
       onAnimationSelectionComplete,
       shouldWarnOnAnimationUpload,
     } = this.props;
-    const animationJsonMode =
-      this.props.pickerType === PICKER_TYPE.animationJson;
 
     const searching = searchQuery !== '';
     const inCategory = categoryQuery !== '';
@@ -208,15 +206,11 @@ export default class AnimationPickerBody extends React.Component {
     // Display second "Done" button. Useful for mobile, where the original "done" button might not be on screen when
     // animation picker is loaded. 600 pixels is minimum height of the animation picker.
     const shouldDisplaySecondDoneButton = isMobileDevice();
-    // We show the draw your own and upload buttons if the user is:
-    // Either not currently searching and not in a category, unless that category is backgrounds
-    // OR they are searching but there were no results,
-    // AND they are not in animationJsonMode.
-    // animationJsonMode is used for the Generate Animation JSON levelbuilder tool in SelectStartAnimations.
+    // We show the draw your own and upload buttons if the user is either:
+    // Not currently searching and not in a category, unless that category is backgrounds
+    // OR they are searching but there were no results
     const showDrawAndUploadButtons =
-      ((!searching && (!inCategory || isBackgroundsTab)) ||
-        results.length === 0) &&
-      !animationJsonMode;
+      (!searching && (!inCategory || isBackgroundsTab)) || results.length === 0;
 
     return (
       <div style={{marginBottom: 10}}>
@@ -228,7 +222,7 @@ export default class AnimationPickerBody extends React.Component {
           />
         )}
         <h1 style={dialogStyles.title}>
-          {!animationJsonMode && msg.animationPicker_title({assetType})}
+          {msg.animationPicker_title({assetType})}
         </h1>
         {showDrawAndUploadButtons && (
           <WarningLabel>{msg.animationPicker_warning()}</WarningLabel>

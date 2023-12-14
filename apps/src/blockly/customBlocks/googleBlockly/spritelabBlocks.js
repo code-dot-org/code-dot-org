@@ -12,7 +12,6 @@ const INPUTS = {
   STACK: 'STACK',
 };
 import {BLOCK_TYPES, NO_OPTIONS_MESSAGE} from '@cdo/apps/blockly/constants';
-import {readBooleanAttribute} from '@cdo/apps/blockly/utils';
 import {editButtonHandler} from './proceduresBlocks';
 
 // This file contains customizations to Google Blockly Sprite Lab blocks.
@@ -174,7 +173,7 @@ export const blocks = {
         // Assume default icon if no XML attribute present
         !xmlElement.hasAttribute('useDefaultIcon') ||
         // Coerce string to Boolean
-        readBooleanAttribute(xmlElement, 'useDefaultIcon');
+        xmlElement.getAttribute('useDefaultIcon') === 'true';
       flyoutToggleButton.setIcon(useDefaultIcon);
     };
   },
@@ -352,13 +351,8 @@ export const blocks = {
   // blocks found on the main workspace.
   getAllBehaviorOptions() {
     const noBehaviorLabel = msg.behaviorsNotFound();
-    const noBehaviorOption = [noBehaviorLabel, NO_OPTIONS_MESSAGE];
     // Behavior definition blocks are always moved to the hidden workspace.
-    const definitionWorkspace = Blockly.getHiddenDefinitionWorkspace();
-    if (!definitionWorkspace) {
-      return [noBehaviorOption];
-    }
-    const behaviorBlocks = definitionWorkspace
+    const behaviorBlocks = Blockly.getHiddenDefinitionWorkspace()
       .getTopBlocks()
       .filter(block => block.type === BLOCK_TYPES.behaviorDefinition);
     // Menu options are an array, each option containing a human-readable part,
@@ -370,7 +364,7 @@ export const blocks = {
     behaviorOptions.sort();
     // Add a "No behaviors found" option, if needed
     if (behaviorOptions.length === 0) {
-      behaviorOptions.push(noBehaviorOption);
+      behaviorOptions.push([noBehaviorLabel, NO_OPTIONS_MESSAGE]);
     }
     return behaviorOptions;
   },

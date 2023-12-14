@@ -1771,11 +1771,11 @@
         },
         "ai_code_of_ethics/csd/2021": {
           "type": "Slides",
-          "name": "Código de Ética da IA"
+          "name": "Código de Ética em IA"
         },
         "ai_ethics_research_reflection/csd/2021": {
           "type": "Apostila do aluno",
-          "name": "Reflexões sobre Pesquisa em Ética da IA"
+          "name": "Reflexões sobre Pesquisa em Ética em IA"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
           "type": "Vídeo",
@@ -1783,8 +1783,8 @@
         },
         "our_ai_code_of_ethics_template_/csd/2021": {
           "type": "Slides",
-          "name": "Nosso Código de Ética da IA [Template]",
-          "url": "https://docs.google.com/presentation/d/10I8C-jKXKPZ4V33mWlQ3uHdXRzXYpKXUniPGnrrJ4cY/edit#slide=id.ga33378b3c1_1_14"
+          "name": "Nosso Código de Ética em IA [Template]",
+          "url": "https://docs.google.com/presentation/d/1SJEXpTCKwf5fbDy5GuDjDGAsuUrkI9QfxKF-1pMSndg/edit?usp=sharing"
         },
         "make_a_machine_learning_app/csd/2021": {
           "type": "Slides"
@@ -5093,11 +5093,11 @@
         },
         "ai_code_of_ethics/csd/2022": {
           "type": "Slides",
-          "name": "Código de Ética da IA"
+          "name": "Código de Ética em IA"
         },
         "ai_ethics_research_reflection/csd/2022": {
           "type": "Apostila do aluno",
-          "name": "Reflexões sobre Pesquisa em Ética da IA"
+          "name": "Reflexões sobre Pesquisa em Ética em IA"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2022": {
           "type": "Vídeo",
@@ -5105,8 +5105,8 @@
         },
         "our_ai_code_of_ethics_template_/csd/2022": {
           "type": "Slides",
-          "name": "Nosso Código de Ética da IA [Template]",
-          "url": "https://docs.google.com/presentation/d/10I8C-jKXKPZ4V33mWlQ3uHdXRzXYpKXUniPGnrrJ4cY/edit#slide=id.ga33378b3c1_1_14"
+          "name": "Nosso Código de Ética em IA [Template]",
+          "url": "https://docs.google.com/presentation/d/1SJEXpTCKwf5fbDy5GuDjDGAsuUrkI9QfxKF-1pMSndg/edit?usp=sharing"
         },
         "create_an_ml_app/csd/2022": {
           "type": "Rubrica"
@@ -6497,7 +6497,7 @@
         "ai_code_of_ethics/ai-ethics/2023": {
           "type": "Slides",
           "url": "[https://docs.google.com/presentation/d/1sjTMJf2g1eJvvTjaIzk5aFkTi-\\\\\\_UNWybRq48pfH2PVo/template/preview](https://docs.google.com/presentation/d/1sjTMJf2g1eJvvTjaIzk5aFkTi-_UNWybRq48pfH2PVo/template/preview)",
-          "name": "Código de Ética da IA"
+          "name": "Código de Ética em IA"
         },
         "ai_research_areas/ai-ethics/2023": {
           "type": "Guia de Atividade",
@@ -6698,29 +6698,29 @@
           "type": "Slides"
         },
         "cs_connections_landing_page/csc-ecosystems/2023": {
-          "name": "Página Inicial Conexões CC",
+          "name": "Página inicial do CS Connections",
           "url": "https://code.org/educate/csc",
           "type": "Recurso"
         },
         "csc_extended_connections_book_list/csc-ecosystems/2023": {
-          "name": "Lista de Livros do CCC Conexões Estendidas",
+          "name": "Lista de livros de conexões estendidas do CSC",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "Recurso"
         },
         "helpful_hints_for_teachers_and_learners/csc-ecosystems/2023": {
-          "name": "Dicas Úteis para professores e alunos\t",
+          "name": "Dicas úteis para professores e alunos\t",
           "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
           "type": "Recurso"
         },
         "resource_list_for_all_lessons/csc-ecosystems/2023": {
-          "name": "Lista de Recursos para Todas as Lições"
+          "name": "Lista de recursos para todas as aulas"
         },
         "standards_in_simulating_a_marine_ecosystem/csc-ecosystems/2023": {
-          "name": "Padrões na Simulação de um Ecossistema Marinho ",
+          "name": "Padrões na simulação de um ecossistema marinho ",
           "type": "Recurso"
         },
         "vocabulary_in_simulating_a_marine_ecosystem/csc-ecosystems/2023": {
-          "name": "Vocabulário na Simulação de um Ecossistema Marinho",
+          "name": "Vocabulário na simulação de um ecossistema marinho",
           "type": "Recurso"
         },
         "ecosystems/csc-ecosystems/2023": {
@@ -6729,7 +6729,7 @@
           "type": "Slides"
         },
         "understanding_overfishing_article/csc-ecosystems/2023": {
-          "name": "Artigo Entendendo a Pesca Predatória",
+          "name": "Artigo sobre como entender a sobrepesca",
           "url": "https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing",
           "type": "Recurso"
         },
@@ -8898,11 +8898,11 @@
         },
         "ai_code_of_ethics/csd/2023": {
           "type": "Slides",
-          "name": "Código de Ética da IA"
+          "name": "Código de Ética em IA"
         },
         "ai_ethics_research_areas/csd/2023": {
           "type": "Guia de Atividade",
-          "name": "Áreas de Pesquisa em Ética da IA"
+          "name": "Áreas de Pesquisa em Ética em IA"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2023": {
           "type": "Vídeo",
@@ -8910,8 +8910,8 @@
         },
         "our_ai_code_of_ethics_template_/csd/2023": {
           "type": "Slides",
-          "name": "Nosso Código de Ética da IA [Template]",
-          "url": "https://docs.google.com/presentation/d/10I8C-jKXKPZ4V33mWlQ3uHdXRzXYpKXUniPGnrrJ4cY/edit#slide=id.ga33378b3c1_1_14"
+          "name": "Nosso Código de Ética em IA [Template]",
+          "url": "https://docs.google.com/presentation/d/1SJEXpTCKwf5fbDy5GuDjDGAsuUrkI9QfxKF-1pMSndg/edit?usp=sharing"
         },
         "create_an_ml_app/csd/2023": {
           "type": "Rubrica"
@@ -10500,7 +10500,7 @@
         },
         "_optional_gan_game_activity_guide/how-ai-works/2023": {
           "name": "(Opcional) Guia de Atividade - GAN Game",
-          "url": "https://docs.google.com/document/d/1KxPguMFb6aGAnkdR2Zswpw-trJ2l7TBR-0k0o0JmMW0/edit#heading=h.typunx9zvwvn",
+          "url": "https://docs.google.com/document/d/1XJ16vDcCDz1_cI8T9d554n_cxqEPT2EVCNh6ZLe1OwI/edit",
           "type": "Guia de Atividade"
         },
         "generative_images/how-ai-works/2023": {
@@ -10520,17 +10520,17 @@
         },
         "noisy_image_activity_exemplar/how-ai-works/2023": {
           "name": "[Exemplar] Atividade sobre Imagem Ruidosa",
-          "url": "https://docs.google.com/document/d/16JS48VFJQcbkMHXtfDnQlMvToPfSnlakPxJP55-R870/edit",
+          "url": "https://docs.google.com/document/d/1TkzwTBscbPo7fZl-21ggTqSECFdQ35dxoBrBSdX-0yw/",
           "type": "Exemplo"
         },
         "noisy_image_widget_activity_guide/how-ai-works/2023": {
           "name": "Guia de Atividade - Widget Imagem Ruidosa",
-          "url": "https://docs.google.com/document/d/1EBzQ_Z3nwnv0VhSQPJyaykomuT8dm1QrCwL9kl6lbAE/edit",
+          "url": "https://docs.google.com/document/d/1rxB-NpxulH6SUyweHwGTxatqYAQc5Qt8ZQN9Dkgi6sE/",
           "type": "Guia de Atividade"
         },
         "user_guide_noise_image_widget/how-ai-works/2023": {
           "name": "Guia do Usuário: Widget Imagem Ruidosa",
-          "url": "https://docs.google.com/presentation/d/1rAviZZOa7TfIC-kOashIM5lLe9X3qNXCRVttoHyI0z0/edit#slide=id.g253d5348d4f_0_72",
+          "url": "https://docs.google.com/presentation/d/1l3Ide0B-4k_IEhWYiCVz6OnyAL4fCmg-ROqogyqnVCo/view",
           "type": "Recurso"
         },
         "video_and_vocabulary_guide_1/how-ai-works/2023": {
@@ -10540,7 +10540,7 @@
         },
         "algorithmic_bias/how-ai-works/2023": {
           "name": "Viés Algorítmico",
-          "url": "https://docs.google.com/presentation/d/1CGgkSg1hQOPNHKV0uznE_8TCsm4yCvgvs5oJaUTrLZg/edit#slide=id.g22ab307d70e_0_62",
+          "url": "https://docs.google.com/presentation/d/1N_sFSTNrP2jpnQPdIAaIDPhQYroSiV5EYxSP3dZ-bHc/template/preview",
           "type": "Slides"
         },
         "how_ai_works_-_societal_impact/how-ai-works/2023": {
@@ -10559,17 +10559,17 @@
           "type": "Recurso"
         },
         "ai_code_of_ethics/how-ai-works/2023": {
-          "url": "https://docs.google.com/presentation/d/1C2KiKqogA5SJPsr1v6ReLL_d2hNor46lJBC8kwfVGsg/edit#slide=id.gd02e514e9e_0_8",
+          "url": "https://docs.google.com/presentation/d/18r16dGGz9ZYwG-lSdC7s35-J4yrbc_glpubFZqYsuBg/template/preview",
           "type": "Slides",
-          "name": "Código de Ética da IA"
+          "name": "Código de Ética em IA"
         },
         "ai_ethics_research_areas/how-ai-works/2023": {
-          "url": "https://docs.google.com/document/d/1iudXGy410w7jMTHN_NSIsPVVO6dVoz1J3oY4LPcfjuk/edit",
-          "name": "Áreas de Pesquisa em Ética da IA"
+          "url": "https://docs.google.com/document/d/1wfEQVKhZGmlybOevVoWFfpyqpHjTXTvj0ZZWf-8wme0/edit?usp=sharing",
+          "name": "Áreas de Pesquisa em Ética em IA"
         },
         "ai_ethics_research_reflection/how-ai-works/2023": {
-          "url": "https://docs.google.com/document/d/1wCmP3L6yNTUVg-PU3P2V70YoZPULs3M1sXAOCPigpdg/edit",
-          "name": "Reflexões sobre Pesquisa em Ética da IA"
+          "url": "https://docs.google.com/document/d/1KKCTMHVmaUA6B8wBnzT-nHzYCQ6seJD8z-o22dYBkd8/edit?usp=sharing",
+          "name": "Reflexões sobre Pesquisa em Ética em IA"
         },
         "how_ai_works_-_privacy_and_future_of_work/how-ai-works/2023": {
           "name": "Como a IA Funciona — Privacidade e o Futuro do Trabalho",
@@ -10578,8 +10578,8 @@
         },
         "our_ai_code_of_ethics_template_/how-ai-works/2023": {
           "type": "Slides",
-          "name": "Nosso Código de Ética da IA [Template]",
-          "url": "https://docs.google.com/presentation/d/10I8C-jKXKPZ4V33mWlQ3uHdXRzXYpKXUniPGnrrJ4cY/edit#slide=id.ga33378b3c1_1_14"
+          "name": "Nosso Código de Ética em IA [Template]",
+          "url": "https://docs.google.com/presentation/d/1SJEXpTCKwf5fbDy5GuDjDGAsuUrkI9QfxKF-1pMSndg/edit?usp=sharing"
         },
         "does_ai_have_creativity_and_imagination_/how-ai-works/2023": {
           "url": "https://www.youtube.com/watch?v=X994dDnmRmY",
@@ -10588,7 +10588,7 @@
         },
         "how_ai_works/how-ai-works/2023": {
           "name": "Como funciona a IA",
-          "url": "https://docs.google.com/presentation/d/1pFzvEnu99kyud0257cE6fLt6SVaavBmPc-zcvotU4ns/edit#slide=id.g2192a721ecf_0_32",
+          "url": "https://docs.google.com/presentation/d/1Ca1i3-7p6sjC16TuEVF5chfC6Fw3ecM12inLOFXEKQg/template/preview",
           "type": "Slides"
         },
         "how_ai_works_ethics_ai_equal_access_and_algorithmic_bias/how-ai-works/2023": {
@@ -10623,7 +10623,7 @@
         },
         "vocabulary_matching/how-ai-works/2023": {
           "name": "Correspondência de Vocabulário",
-          "url": "https://docs.google.com/document/d/1vB2ys-yU5KgSUmrYCAMNvkujGBLZvQQUch8YRwlenTs/edit",
+          "url": "https://docs.google.com/document/d/1Tbz8ULln11yU1hpD73OzgRUnujWjdpdOi8fKQsOAiIk/edit",
           "type": "Guia de Atividade"
         },
         "_key_vocabulary_matching/how-ai-works/2023": {
@@ -11003,7 +11003,7 @@
           "name": "Todo o Vocabulário"
         },
         "ai_ethics_research_areas/csd/2021": {
-          "name": "Áreas de Pesquisa em Ética da IA"
+          "name": "Áreas de Pesquisa em Ética em IA"
         },
         "all_resources_5/csd/2022": {
           "name": "Todos os Recursos"
@@ -11292,7 +11292,7 @@
           "name": "Todo o Vocabulário"
         },
         "ai_ethics_research_areas/csd/2022": {
-          "name": "Áreas de Pesquisa em Ética da IA"
+          "name": "Áreas de Pesquisa em Ética em IA"
         },
         "all_resources/coursea/2022": {
           "name": "Todos os Recursos"
@@ -11700,7 +11700,7 @@
           "url": "https://docs.google.com/document/d/1SIpzFmX7RqxwkEy4AyFe19-8hoWAS0A0D6C8Yzr-BHM/edit"
         },
         "ai_ethics_research_reflection/csd/2023": {
-          "name": "Reflexões sobre Pesquisa em Ética da IA"
+          "name": "Reflexões sobre Pesquisa em Ética em IA"
         },
         "all_resources/express/2023": {
           "name": "Todos os Recursos"

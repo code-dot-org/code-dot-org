@@ -122,9 +122,6 @@ ga:
             required:
               display_name: Foramharc
         angelina-playground:
-          lesson_groups:
-            lessonGroup-4:
-              display_name: Randamach
           lessons:
             lesson-5:
               name: Measúnuithe
@@ -1040,8 +1037,6 @@ ga:
               display_name: Suirbhé
         csd-post-survey-2023:
           title: Suirbhé Iarchúrsa
-        csd-post-survey-2024:
-          title: Suirbhé Iarchúrsa
         csd1-2017:
           lesson_groups:
             csd1_1:
@@ -1097,14 +1092,6 @@ ga:
             cspSurvey:
               display_name: Suirbhé
         csd1-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'Caibidil 1: Próiseas Réitithe Fadhbanna'
-            lessonGroup-3:
-              display_name: 'Caibidil 2: Ríomhairí agus Réiteach Fadhbanna'
-            lessonGroup-5:
-              display_name: Suirbhé
-        csd1-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Caibidil 1: Próiseas Réitithe Fadhbanna'
@@ -1263,12 +1250,6 @@ ga:
               display_name: 'Caibidil 1: Íomhánna agus Beochan'
             lessonGroup-3:
               display_name: 'Caibidil 2: Tógáil Cluichí'
-        csd3-2024:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'Caibidil 1: Íomhánna agus Beochan'
-            lessonGroup-3:
-              display_name: 'Caibidil 2: Tógáil Cluichí'
         csd3-dlp:
           lesson_groups:
             content:
@@ -1352,12 +1333,6 @@ ga:
             cspSurvey:
               display_name: Suirbhé
         csd4-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'Caibidil 1: Dearadh Dírithe ar an Úsáideoir'
-            lessonGroup-3:
-              display_name: 'Caibidil 2: Fréamhshamhaltú Aipeanna'
-        csd4-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Caibidil 1: Dearadh Dírithe ar an Úsáideoir'
@@ -1452,12 +1427,6 @@ ga:
             cspSurvey:
               display_name: Suirbhé
         csd5-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'Caibidil 1: Léiriú Sonraí'
-            lessonGroup-3:
-              display_name: 'Caibidil 2: Réiteach Fadhbanna Sonraí'
-        csd5-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Caibidil 1: Léiriú Sonraí'
@@ -1573,10 +1542,6 @@ ga:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Caibidil 2: Fréamhshamhlacha Fisiceacha'
-        csd6a-2024:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: 'Caibidil 2: Fréamhshamhlacha Fisiceacha'
         csd7-2021:
           lesson_groups:
             lessonGroup-4:
@@ -1586,10 +1551,6 @@ ga:
             lessonGroup-4:
               display_name: Suirbhé
         csd7-2023:
-          lesson_groups:
-            lessonGroup-4:
-              display_name: Buneolas ar an tSaotharlann Aipeanna
-        csd7-2024:
           lesson_groups:
             lessonGroup-4:
               display_name: Buneolas ar an tSaotharlann Aipeanna

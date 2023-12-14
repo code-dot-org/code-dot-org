@@ -613,14 +613,6 @@ fi:
               display_name: 'Luku 2: Tietokoneet ja ongelmanratkaisu'
             lessonGroup-5:
               display_name: Kysely
-        csd1-2024:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'Luku 1: Ongelmanratkaisu prosessi'
-            lessonGroup-3:
-              display_name: 'Luku 2: Tietokoneet ja ongelmanratkaisu'
-            lessonGroup-5:
-              display_name: Kysely
         csd1-dlp:
           lesson_groups:
             required:
@@ -759,12 +751,6 @@ fi:
               display_name: 'Luku 1: Kuvia ja animaatioita'
             lessonGroup-3:
               display_name: 'Luku 2: Pelien rakentaminen'
-        csd3-2024:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'Luku 1: Kuvia ja animaatioita'
-            lessonGroup-3:
-              display_name: 'Luku 2: Pelien rakentaminen'
         csd3-dlp:
           lesson_groups:
             required:
@@ -834,12 +820,6 @@ fi:
             cspSurvey:
               display_name: Kysely
         csd4-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'Luku 1: Käyttäjäkeskeinen suunnittelu'
-            lessonGroup-3:
-              display_name: 'Luku 2: Apsin prototypointi'
-        csd4-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Luku 1: Käyttäjäkeskeinen suunnittelu'
@@ -928,12 +908,6 @@ fi:
             cspSurvey:
               display_name: Kysely
         csd5-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'Luku 1: Tiedon esittäminen'
-            lessonGroup-3:
-              display_name: 'Luku 2: Tieto-ongelmien ratkaisu'
-        csd5-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Luku 1: Tiedon esittäminen'
@@ -1036,10 +1010,6 @@ fi:
             csd6_2:
               display_name: 'Luku 2: Laitteiston syöte'
         csd6a-2023:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: 'Luku 2: Laitteiston syöte'
-        csd6a-2024:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Luku 2: Laitteiston syöte'

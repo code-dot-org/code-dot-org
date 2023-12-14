@@ -28,10 +28,7 @@ class ManageStudents extends React.Component {
         {isLoadingStudents && <Spinner />}
         {!isLoadingStudents && (
           <div>
-            <SyncOmniAuthSectionControl
-              sectionId={sectionId}
-              studioUrlPrefix={studioUrlPrefix}
-            />
+            <SyncOmniAuthSectionControl sectionId={sectionId} />
             <ManageStudentsTable studioUrlPrefix={studioUrlPrefix} />
           </div>
         )}

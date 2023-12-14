@@ -325,7 +325,6 @@ pl:
   call_to_action_explore_all_hoc_activities: Odkryj wszystkie aktywności w ramach
     Godziny Kodowania z Code.org
   call_to_action_start_dance_party: Rozpocznij potańcówkę
-  call_to_action_start_dance_party_ai_edition: 'Rozpocznij Potańcówkę: Edycja AI'
   call_to_action_start_part_02: Rozpocznij część drugą
   call_to_action_start_unplugged_activity: Rozpocznij aktywność bez komputera
   call_to_action_view_promo_resources: Przejrzyj zasoby promocyjne
@@ -441,16 +440,6 @@ pl:
   call_to_action_learn_about_ai: Dowiedz się więcej o sztucznej inteligencji (AI)
   call_to_action_learn_more_about_ai: Dowiedz się więcej o sztucznej inteligencji
   call_to_action_get_started: Rozpocznij
-  call_to_action_explore_self_paced_pl: Poznaj samodzielne doskonalenie zawodowe
-  call_to_action_applications_get_notified: Otrzymuj powiadomienia o otwarciu aplikacji
-  call_to_action_applications_notify_me: Powiadom mnie, kiedy będę mógł złożyć wniosek
-  call_to_action_apply_now: Aplikuj teraz
-  call_to_action_explore_self_paced_learning: Poznaj samodzielną naukę
-  call_to_action_explore_k_5_workshops: Poznaj warsztaty K-5
-  call_to_action_for_intl_educators: Dla międzynarodowych edukatorów
-  call_to_action_learn_more_program_region: Dowiedz się więcej o programie w Twoim
-    regionie
-  call_to_action_visit_support_center: Odwiedź nasze centrum wsparcia
   aria_label_call_to_action_hoc_how_to_educators: Zobacz poradnik dla nauczycieli
   aria_label_call_to_action_hoc_how_to_companies: Zobacz poradnik dla firm
   aria_label_call_to_action_hoc_how_to_districts: Zobacz poradnik dla dystryktów
@@ -474,8 +463,6 @@ pl:
     Zasad Informatyki
   aria_label_call_to_action_teaching_problem_solving: Rozpocznij profesjonalny program
     nauczania rozwiązywania problemów i informatyki
-  aria_label_call_to_action_teaching_interactive_animations_games: Rozpocznij profesjonalny
-    program nauczania interaktywnych animacji i gier
   aria_label_call_to_action_teaching_csc: Rozpocznij profesjonalny program Nauczanie
     Powiązań Informatyki
   aria_label_call_to_action_teaching_ai: Rozpocznij profesjonalny program Nauczanie
@@ -585,15 +572,6 @@ pl:
   aria_label_call_to_action_register_student_workshop: Zarejestruj się na bezpłatne
     warsztaty uczniowskie
   aria_label_call_to_action_view_more_cs_resources: Zobacz więcej zasobów informatycznych
-  aria_label_call_to_action_pl_apply_csd: Aplikuj teraz na doskonalenie zawodowe w
-    zakresie Odkryć Informatyki
-  aria_label_call_to_action_pl_apply_csp: Aplikuj teraz na doskonalenie zawodowe w
-    zakresie Zasad Informatyki
-  aria_label_call_to_action_pl_apply_csa: Aplikuj teraz na doskonalenie zawodowe w
-    zakresie AP® Informatyka A
-  aria_label_call_to_action_learn_more_csd: Dowiedz się więcej o Odkryciach Informatyki
-  aria_label_call_to_action_learn_more_csp: Dowiedz się więcej o Zasadach Informatyki
-  aria_label_call_to_action_learn_more_csa: Dowiedz się więcej o AP® Informatyka A
   video_title_professional_learning_program: Profesjonalny program nauczania Code.org
   curriculum_name_csf: Podstawy informatyki
   curriculum_name_csf_02: Wszelkie podstawy CS (kurs A-F)
@@ -612,7 +590,6 @@ pl:
   curriculum_name_csd: Odkrycia informatyki
   curriculum_name_csp: Zasady informatyki
   curriculum_name_problem_solving: Rozwiązywanie problemów i informatyka
-  curriculum_name_teaching_animation: Nauczanie interaktywnych animacji i gier
   curriculum_name_csc: Powiązania informatyki
   curriculum_name_csa: AP® Informatyka A
   curriculum_name_csa_ai: Inżynieria oprogramowania i wizja komputerowa
@@ -747,7 +724,6 @@ pl:
   module_label_languages: 'Obsługiwane języki:'
   module_label_accessibility_features: 'Dostępność:'
   module_label_accessibility_features_full: 'Funkcje ułatwień dostępu:'
-  module_label_teacher_requirements: 'Wymagania nauczyciela:'
   module_label_educator_tool: Narzędzie nauczyciela
   module_label_educator_course: Kurs dla nauczycieli
   module_label_educator_resources: Zasoby dla nauczycieli
@@ -801,7 +777,6 @@ pl:
   module_duration_1_hr: 1 godzina
   module_duration_2_hrs: 2 godziny
   module_duration_3_hrs: 3 godziny
-  module_duration_3_hrs_20_minutes: 3 godziny 20 minut
   module_duration_5_hrs: 5 godzin
   module_duration_5_hrs_plus: 5+ godzin
   module_duration_8_hrs: 8 godzin
@@ -823,7 +798,6 @@ pl:
   module_label_teaching_csd: Nauczanie informatyki Odkrycia
   module_label_teaching_csp: Nauczanie zasad informatyki
   module_label_teaching_problem_solving: Nauczanie rozwiązywania problemów i informatyki
-  module_label_teaching_animations: Interaktywne animacje i gry
   module_label_teaching_csc: Nauczanie informatyki Połączenia
   module_label_teaching_ai: Nauczanie sztucznej inteligencji i uczenia maszynowego
   module_label_teaching_maker_cp: Nauczanie tworzenia aplikacji za pomocą urządzeń
@@ -894,12 +868,6 @@ pl:
   heading_attend_free_workshop: Weź udział w bezpłatnych warsztatach uczniowskich
   heading_access_more_cs_resources: Uzyskaj dostęp do większej liczby zasobów informatycznych
   heading_available_on_code_dot_org: Dostępne na Code.org
-  heading_program_design: Projekt programu
-  heading_how_does_application_process_work: Jak działa proces składania wniosków?
-  heading_apply: Aplikuj
-  heading_acceptance: Akceptacja
-  heading_enroll: Zapisz się
-  heading_have_questions: Masz pytania?
   cs_ambassador_subhead: Jeśli jesteś uczniem liceum, który pasjonuje się zachęcaniem
     większej liczby młodych kobiet do studiowania informatyki w Twojej szkole, wtedy
     Cię potrzebujemy!
@@ -972,20 +940,6 @@ pl:
     CSA curriculum to your students.
   professional_learning_section_workshops_starting: Warsztaty osobiste i wirtualne
     rozpoczynają się tego lata.
-  pl_self_paced_learning_heading: Samodzielne uczenie się
-  pl_self_paced_learning_desc: Ucz się we własnym tempie, korzystając z naszych modułów
-    edukacyjnych online. Możesz zacząć, kiedy jest to dla Ciebie wygodne, a kursy
-    są bezpłatne.
-  pl_elementary_workshops_heading: Podstawowe warsztaty
-  pl_elementary_workshops_desc: Czy uczysz w przedszkolu do piątej klasy? Sprawdź
-    poniższy link, aby dowiedzieć się więcej o naszych warsztatach dla K5.
-  pl_outside_us_heading: Poza Stanami Zjednoczonymi
-  pl_outside_us_desc: Jeśli jesteś międzynarodowym nauczycielem zainteresowanym doskonaleniem
-    zawodowym, dowiedz się więcej o tym, co jest oferowane w Twojej okolicy.
-  pl_regional_partner_desc: Twój lokalny partner regionalny Code.org zapewnia nauczycielom
-    wysokiej jakości doskonalenie zawodowe w zakresie  Code.org i może pomóc Twojej
-    szkole lub w okręgu w zakresie wdrażania, certyfikacji, finansowania i nie tylko.
-    Chętnie odpowiedzą na wszelkie pytania dotyczące programu!
   no_devices_section_subhead: Śmiało, odetnij sznur (na chwilę)!
   no_devices_section_desc: Edukacja CS nie zawsze musi znajdować się przed ekranem,
     a dostęp do urządzenia nie powinien stanowić bariery w nauce koncepcji informatyki.
@@ -1010,12 +964,6 @@ pl:
   subscribe_form_section_desc_csp: Zarejestruj się, aby otrzymywać comiesięczne e-maile
     o Zasadach Informatyki Code.org i otrzymywać pomocne przypomnienia, wskazówki
     i aktualizacje wysyłane bezpośrednio do Twojej skrzynki odbiorczej.
-  subscribe_form_section_title_pl: Otrzymuj powiadomienia, gdy otworzy się rejestracja
-    Doskonalenia Zawodowego
-  subscribe_form_section_desc_pl: Bądź pierwszą osobą, która dowie się, kiedy rozpoczyna
-    się rejestracja! Zarejestruj się, aby otrzymywać powiadomienie e-mailem, kiedy
-    nauczyciele mogą rozpocząć ubieganie się o udział w programie Doskonalenia zawodowego
-    Code.org.
   subscribe_form_section_unsubscribe: Możesz zrezygnować z subskrypcji w dowolnym
     momencie.
   hoc_page_what_is_hoc_heading: Co to jest Godzina Kodowania?
@@ -1225,7 +1173,6 @@ pl:
     zaspokoją największe potrzeby wszystkich uczestników.
   ai_curriculum_btn_aria_label_06: 'Zobacz plan lekcji dotyczącej społeczny wpływ
     generatywnej sztucznej inteligencji '
-  ai_curriculum_btn_aria_label_dance_ai: 'Wypróbuj Potańcówkę: Aktywności Edycji AI'
   ai_carousel_heading: 'Co nauczyciele mówią o sztucznej inteligencji z Code.org:'
   ai_carousel_quote_01: Ta lekcja dała również moim uczniom możliwość zobaczenia,
     że w systemach klasyfikacji istnieje element opinii. Później, kiedy zaczęliśmy
@@ -1434,70 +1381,6 @@ pl:
     algorytmiczna'
   ai_vid_ethics2_caption: 'Etyka i sztuczna inteligencja: prywatność i przyszłość
     pracy'
-  pl_middle_high_top_heading: Warsztaty doskonalenia zawodowego dla klas 6-12
-  pl_middle_high_top_desc: Nasze angażujące warsztaty są przeznaczone dla nowych i
-    doświadczonych nauczycieli informatyki!
-  pl_middle_high_top_desc_02: 'W tym programie będziesz:'
-  pl_middle_high_top_list_01: Poznaj program nauczania i narzędzia edukacyjne
-  pl_middle_high_top_list_02: Przeżyj kurs jako nauczyciel i uczeń
-  pl_middle_high_top_list_03: Współpracuj z innymi nauczycielami
-  pl_middle_high_quotes_heading: 'Co nauczyciele mówią o doskonaleniu zawodowym w
-    zakresie Code.org:'
-  pl_middle_high_quotes_01: Lubiłem widzieć lekcje w akcji - pomogło mi to zrozumieć,
-    jak je przeprowadzać we własnej klasie. Podobała mi się możliwość porozmawiania
-    z rówieśnikami o pomysłach na ocenę i rekrutacyję.
-  pl_middle_high_quotes_02: Było to świetne doskonalenie zawodowe, które dało nam
-    czas na refleksję, przetwarzanie i podsumowanie zarówno indywidualnie, jak i w
-    grupie. Zajęcia były angażujące i znaczące dla poznawania treści. Czuję, że wyjdę
-    z umiejętnościami, które mogę natychmiast zastosować w ucząc według włanego programu
-    nauczania.
-  pl_middle_high_quotes_03: Pod koniec czułem się tak przygotowany, zmotywowany i
-    gotowy, aby ponownie wrócić do klasy!
-  pl_middle_high_programs_heading: Programy doskonalenia zawodowego specyficzne dla
-    kursu
-  pl_middle_high_programs_desc: Dołącz do jednego z naszych programów doskonalenia
-    zawodowego w Twojej okolicy. Programy mają na celu przygotowanie Cię przed i podczas
-    pierwszego roku nauczania [Odkrycia Informatyki] (%{csd_url}), [Zasady Informatyki]
-    (%{csp_url}) lub [AP® Informatyka A] (%{csa_url}).
-  pl_middle_high_programs_no_experience_req: Nie jest wymagane doświadczenie informatyczne
-  pl_middle_high_programs_some_experience_req: Potrafi korzystać z funkcji, warunków,
-    pętli i tablic
-  pl_middle_high_programs_based_in_us: Z siedzibą w Stanach Zjednoczonych
-  pl_middle_high_programs_teach_ap_course: Nauczaj kursów AP® lub innych niż AP®
-  pl_middle_high_programs_csd_hours: Nauczanie przez ponad 25 godzin kursu w klasie
-    w przyszłym roku szkolnym
-  pl_middle_high_programs_csp_hours: Nauczanie przez ponad 100 godzin kursu w klasie
-    w przyszłym roku szkolnym
-  pl_middle_high_programs_csa_hours: Nauczanie przez ponad 140 godzin kursu w klasie
-    w przyszłym roku szkolnym
-  pl_middle_high_program_design_desc: Wszystkie coroczne programy doskonalenia zawodowego
-    są podobnie zaprojektowane. Partnerzy regionalni w całym kraju zapewniają realizację
-    naszych programów i oferują lokalne warsztaty prowadzone przez przeszkolonych
-    facylitatorów.
-  pl_middle_high_program_design_summer_title: Letnie warsztaty
-  pl_middle_high_program_design_summer_desc: Weź udział w wielodniowych letnich warsztatach,
-    aby zapoznać się z programem nauczania i przygotować się do roku szkolnego.
-  pl_middle_high_program_design_year_title: Warsztaty roku akademickiego
-  pl_middle_high_program_design_year_desc: Weź udział w warsztatach w ciągu roku,
-    aby otrzymać wsparcie podczas nauczania według własnego programu.
-  pl_middle_high_program_design_community_title: Wsparcie społeczności
-  pl_middle_high_program_design_community_desc: Współpracuj ze swoją regionalną kohortą
-    nauczycieli i uzyskaj wsparcie ogólnokrajowej społeczności nauczycieli online.
-  pl_middle_high_process_apply_desc: Wypełnij wniosek z informacjami o Tobie, Twojej
-    szkole i kursie, który prowadzisz.
-  pl_middle_high_process_acceptance_desc: Jeśli zostaniesz zaakceptowany, zostaniesz
-    powiadomiony o akceptacji przez partnera regionalnego po złożeniu wniosku.
-  pl_middle_high_process_enroll_desc: Zapisz się na letnie warsztaty w swoim regionie
-    i przygotuj się na rozpoczęcie rocznego programu!
-  pl_middle_high_cost_heading: Ile kosztuje program?
-  pl_middle_high_cost_subhead: Koszt programu różni się w zależności od regionu.
-  pl_middle_high_cost_desc: Możesz kwalifikować się do stypendium na pokrycie kosztów
-    swojego programu.
-  pl_middle_high_additional_programs_desc: Oprócz naszych osobistych opcji prowadzonych
-    przez moderatora dla nauczycieli, mamy kilka innych programów, aby zaspokoić różnorodne
-    potrzeby naszych nauczycieli.
-  pl_middle_high_additional_programs_heading: Dodatkowe programy spełniające różnorodne
-    potrzeby nauczycieli
   self_paced_pl_hero_heading: Profesjonalne uczenie się we własnym tempie dla nauczycieli
   self_paced_pl_hero_desc: Profesjonalne oferty edukacyjne wspierające nauczycieli
     na każdym etapie ich podróży do nauczania informatyki.
@@ -3139,7 +3022,6 @@ pl:
     lub [zapoznaj się z treścią "Przewodnika jak to robić](%{howto_url})'
   tutorial_dance2019_name: Potańcówka 2019
   tutorial_danceparty_name: Potańcówka
-  tutorial_dancepartyai_name: 'Potańcówka: edycja AI'
   tutorial_chibitronics_name: 'Chibitronics: Oświecona historia'
   tutorial_athlete_name: Zakoduj swoją grę sportową
   tutorial_moana_name: 'Vaiana: kodowanie na oceanie'
@@ -3827,9 +3709,6 @@ pl:
   tutorial_danceparty_shortdescription: Zakoduj potańcówkę, aby podzielić się nią
     ze znajomymi. Występują Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara
     i 25 innych!
-  tutorial_dancepartyai_shortdescription: Dowiedz się o koncepcjach sztucznej inteligencji
-    (AI), aby stworzyć własną wirtualną potańcówkę prezentującą dzisiejszych najlepszych
-    artystów. Nadszedł czas, aby pochwalić się swoimi wytworami!
   tutorial_chibitronics_shortdescription: Zaprogramuj papierowy obwód, aby rozświetlić
     Twoją własną historię.
   tutorial_athlete_shortdescription: Wybierz między utworzeniem meczu koszykówki a
@@ -5060,9 +4939,6 @@ pl:
   tutorial_danceparty_longdescription: Zakoduj potańcówkę, aby podzielić się nią ze
     znajomymi. Występują Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara i
     25 innych!
-  tutorial_dancepartyai_longdescription: Dowiedz się o koncepcjach sztucznej inteligencji
-    (AI), aby stworzyć własną wirtualną potańcówkę prezentującą dzisiejszych najlepszych
-    artystów. Nadszedł czas, aby pochwalić się swoimi wytworami!
   tutorial_chibitronics_longdescription: Zaprogramuj papierowy obwód, aby rozświetlić
     Twoją własną historię.
   tutorial_athlete_longdescription: Wybierz między utworzeniem meczu koszykówki a
@@ -8132,7 +8008,6 @@ pl:
     która czyni nas wyjątkowymi.
   tutorial_dance2019_string_detail_grades: Klasy 2+
   tutorial_danceparty_string_detail_grades: Klasy 2+
-  tutorial_dancepartyai_string_detail_grades: Klasa 3+
   tutorial_chibitronics_string_detail_grades: Od dzieci, które uczą się czytać, do
     klasy 5
   tutorial_athlete_string_detail_grades: Klasy 2+
@@ -8908,8 +8783,6 @@ pl:
   tutorial_dance2019_string_platforms: Wszystkie współczesne przeglądarki, tablet
     z systemem Android, iPad, bez komputera
   tutorial_danceparty_string_platforms: Wszystkie współczesne przeglądarki, tablet
-    z systemem Android, iPad
-  tutorial_dancepartyai_string_platforms: Wszystkie współczesne przeglądarki, tablet
     z systemem Android, iPad
   tutorial_chibitronics_string_platforms: Wszystkie współczesne przeglądarki
   tutorial_athlete_string_platforms: Wszystkie współczesne przeglądarki
@@ -9845,7 +9718,6 @@ pl:
   tutorial_meeempathy_string_platforms: Windows, iPad, MacOS
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
-  tutorial_dancepartyai_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Chibitronics Chibi Chip i  Circuit
     Sticker LED
   tutorial_athlete_string_detail_platforms: ''
@@ -10528,7 +10400,6 @@ pl:
   tutorial_meeempathy_string_detail_platforms: ''
   tutorial_dance2019_string_detail_programming_languages: Bloki
   tutorial_danceparty_string_detail_programming_languages: Bloki
-  tutorial_dancepartyai_string_detail_programming_languages: Bloki
   tutorial_chibitronics_string_detail_programming_languages: Bloki
   tutorial_athlete_string_detail_programming_languages: Bloki
   tutorial_moana_string_detail_programming_languages: Bloki

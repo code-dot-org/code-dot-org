@@ -65,7 +65,10 @@ FeedbackBlocks.prototype.render = function () {
   }
 
   var parsedXml = parseXmlElement(this.xml);
-  var blockSpace = Blockly.createEmbeddedWorkspace(this.div, parsedXml);
+  var blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(
+    this.div,
+    parsedXml
+  );
   this.blockSpaceEditor = blockSpace.blockSpaceEditor;
 };
 

@@ -3074,8 +3074,6 @@ is:
           lessons:
             lesson-5:
               name: Mat
-            lesson-6:
-              name: Kennslustund 1
         devices-2022:
           lesson_groups:
             lessonGroup-4:
@@ -3551,40 +3549,3 @@ is:
           lesson_groups:
             lessonGroup-7:
               display_name: Kynning
-        csd1-2024:
-          lesson_groups:
-            lessonGroup-5:
-              display_name: Könnun
-            lessonGroup-2:
-              display_name: 'Kafli 1: Lausn vandamála sem ferli'
-            lessonGroup-3:
-              display_name: 'Kafli 2: Tölvur og lausn vandamála'
-        csd3-2024:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'Kafli 1: Myndir og Hreyfing'
-            lessonGroup-3:
-              display_name: 'Kafli 2: Gerð leikja'
-        csd4-2024:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'Kafli 1: Notendamiðuð hönnun'
-            lessonGroup-3:
-              display_name: 'Kafli 2: Frumgerðir appa'
-        csd5-2024:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'Kafli 1: Kóðun upplýsinga'
-            lessonGroup-3:
-              display_name: 'Kafli 2: Lausn vandamála með gögn'
-          description_short: Lærðu um hvernig fólk notar tölvur til að leysa vandamál með gögn.
-        csd6a-2024:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: 'Kafli 2: Smíði frumgerða vélbúnaðar'
-        csd6b-2024:
-          lesson_groups:
-            lessonGroup-3:
-              display_name: Inntök og Úttök
-        csd-post-survey-2024:
-          title: Könnun eftir námskeið

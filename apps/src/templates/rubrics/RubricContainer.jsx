@@ -136,15 +136,10 @@ RubricContainer.propTypes = {
 const HeaderTab = ({text, isSelected, onClick}) => {
   return (
     <button
-      className={classnames(
-        'uitest-rubric-header-tab',
-        style.rubricHeaderTab,
-        style.buttonStyle,
-        {
-          [style.selectedTab]: isSelected,
-          [style.unselectedTab]: !isSelected,
-        }
-      )}
+      className={classnames(style.rubricHeaderTab, style.buttonStyle, {
+        [style.selectedTab]: isSelected,
+        [style.unselectedTab]: !isSelected,
+      })}
       onClick={onClick}
       type="button"
     >

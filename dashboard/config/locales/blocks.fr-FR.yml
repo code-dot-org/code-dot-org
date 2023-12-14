@@ -35,7 +35,7 @@ fr:
             '1.00': moyen(s)
             '2.00': grand(s)
       Dancelab_ai:
-        text: "{IMAGE}génère effet {VALUE}"
+        text: "{IMAGE}généré {VALUE} effet"
       Dancelab_alternateMoves:
         options:
           GROUP:

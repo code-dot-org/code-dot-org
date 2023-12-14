@@ -413,7 +413,6 @@ export const courseOfferings = {
 
 export const fakeCoursesWithProgress = [
   {
-    id: 1,
     display_name: 'Course A',
     units: [
       {
@@ -433,7 +432,6 @@ export const fakeCoursesWithProgress = [
     ],
   },
   {
-    id: 2,
     display_name: 'CS Discoveries 2018',
     units: [
       {
@@ -453,7 +451,6 @@ export const fakeCoursesWithProgress = [
     ],
   },
   {
-    id: 3,
     display_name: 'Flappy',
     units: [
       {

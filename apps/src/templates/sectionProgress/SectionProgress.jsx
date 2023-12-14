@@ -147,7 +147,6 @@ class SectionProgress extends Component {
       (currentView === ViewType.SUMMARY || currentView === ViewType.DETAIL);
     const standardsStyle =
       currentView === ViewType.STANDARDS ? styles.show : styles.hide;
-
     return (
       <div>
         <div style={styles.topRowContainer}>

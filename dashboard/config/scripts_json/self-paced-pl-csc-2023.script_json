@@ -4,7 +4,6 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "curriculum_umbrella": "CSC Self Paced PL",
       "has_verified_resources": true,
       "is_course": true,
       "is_migrated": true,
@@ -14,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "self-paced-pl-csc",
-    "serialized_at": "2023-12-05 19:45:31 UTC",
+    "serialized_at": "2023-10-18 14:53:19 UTC",
     "published_state": "stable",
     "instruction_type": "self_paced",
     "instructor_audience": "universal_instructor",

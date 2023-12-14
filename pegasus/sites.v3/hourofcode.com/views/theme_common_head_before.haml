@@ -1,8 +1,4 @@
 - @header['social'].each_pair do |property, content|
-  -# Sets the description name attribute for SEO
-  -# Uses the same og:description from social_metadata.rb
-  - if property == "og:description"
-    %meta{name: "description", content: content}
   %meta{property:property, content:content}
 
 %meta{name:"viewport", content:"width=device-width, initial-scale=1"}

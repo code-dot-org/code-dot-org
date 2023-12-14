@@ -155,9 +155,6 @@ ro:
             required:
               display_name: Prezentare generală
         angelina-playground:
-          lesson_groups:
-            lessonGroup-4:
-              display_name: Aleatoriu
           lessons:
             lesson-5:
               name: Evaluări
@@ -1608,8 +1605,6 @@ ro:
             va spune când trebuie să răspunzi la acest sondaj.
         csd-post-survey-2023:
           title: Chestionar după curs
-        csd-post-survey-2024:
-          title: Chestionar după curs
         csd1-2017:
           lesson_groups:
             csd1_1:
@@ -1659,14 +1654,6 @@ ro:
             cspSurvey:
               display_name: Sondaj
         csd1-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'Capitolul 1: Procesul de rezolvare a problemelor'
-            lessonGroup-3:
-              display_name: 'Capitolul 2: Calculatoare și rezolvarea problemelor'
-            lessonGroup-5:
-              display_name: Sondaj
-        csd1-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolul 1: Procesul de rezolvare a problemelor'
@@ -1826,12 +1813,6 @@ ro:
               display_name: 'Capitolul 1: Imagini şi animaţii'
             lessonGroup-3:
               display_name: 'Capitolul 2: Cum facem jocuri'
-        csd3-2024:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'Capitolul 1: Imagini şi animaţii'
-            lessonGroup-3:
-              display_name: 'Capitolul 2: Cum facem jocuri'
         csd3-dlp:
           lesson_groups:
             content:
@@ -1916,12 +1897,6 @@ ro:
             cspSurvey:
               display_name: Sondaj
         csd4-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'Capitolul 1: Design orientat spre utilizator'
-            lessonGroup-3:
-              display_name: 'Capitolul 2: Prototipare aplicații'
-        csd4-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolul 1: Design orientat spre utilizator'
@@ -2016,12 +1991,6 @@ ro:
             cspSurvey:
               display_name: Sondaj
         csd5-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 'Capitolul 1: Reprezentarea informaţiilor'
-            lessonGroup-3:
-              display_name: 'Capitolul 2: Rezolvarea problemelor cu seturi de date'
-        csd5-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolul 1: Reprezentarea informaţiilor'
@@ -2129,14 +2098,6 @@ ro:
             lessonGroup-4:
               display_name: Sondaj
         csd7-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: Capitolul 1
-            lessonGroup-3:
-              display_name: Capirolul 2
-            lessonGroup-4:
-              display_name: Introducere în App Lab
-        csd7-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Capitolul 1

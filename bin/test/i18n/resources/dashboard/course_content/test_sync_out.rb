@@ -61,7 +61,7 @@ describe I18n::Resources::Dashboard::CourseContent::SyncOut do
       RedactRestoreUtils.
         expects(:restore_file).
         with(original_file_path, crowdin_file_path, %w[blockly]).
-        returns(JSON.generate({'en' => {'i18n_key' => 'restored_i18n_data'}}))
+        returns({'en' => {'i18n_key' => 'restored_i18n_data'}})
     end
 
     before do

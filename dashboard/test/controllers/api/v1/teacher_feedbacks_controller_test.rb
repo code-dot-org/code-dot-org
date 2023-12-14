@@ -14,11 +14,9 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
   setup_all do
     #create student, teacher, and level and register student in teacher's section
     @teacher = create :authorized_teacher
-    @coteacher = create :authorized_teacher
     @not_authorized_teacher = create :teacher
     @student = create :student
     @section = create :section, user: @teacher
-    create :section_instructor, section: @section, instructor: @coteacher, status: :active
     @section.add_student(@student)
     @level = create :level
     @script_level = create :script_level
@@ -63,8 +61,7 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     @section.add_student(student2)
 
     teacher_sign_in_and_give_feedback(@teacher, @student, @script, @level, @script_level, COMMENT1, PERFORMANCE1)
-    teacher_sign_in_and_give_feedback(@coteacher, @student, @script, @level, @script_level, COMMENT2, PERFORMANCE1)
-    teacher_sign_in_and_give_feedback(@teacher, student2, @script, @level, @script_level, COMMENT3, PERFORMANCE2)
+    teacher_sign_in_and_give_feedback(@teacher, student2, @script, @level, @script_level, COMMENT2, PERFORMANCE2)
     get "#{API}/get_feedback_from_teacher", params: {student_id: @student.id, level_id: @level.id, teacher_id: @teacher.id, script_id: @script.id}
 
     assert_response :success
@@ -210,16 +207,6 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     assert_equal "0", response.body
   end
 
-  test 'count does include feedback from a coteacher' do
-    sign_in @student
-    teacher_sign_in_and_give_feedback(@coteacher, @student, @script, @level, @script_level, COMMENT1, PERFORMANCE1)
-    sign_out @coteacher
-
-    sign_in @student
-    get "#{API}/count"
-    assert_equal "1", response.body
-  end
-
   test 'bad request when student_id not provided - get_feedbacks' do
     teacher_sign_in_and_give_feedback(@teacher, @student, @script, @level, @script_level, COMMENT1, PERFORMANCE1)
     get "#{API}/get_feedbacks", params: {level_id: @level.id, script_id: @script.id}
@@ -262,27 +249,6 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     create :teacher_feedback, teacher: @teacher, student: @student, script: @script_level.script, level: @level, comment: COMMENT1, performance: PERFORMANCE1
 
     feedback2 = create :teacher_feedback, teacher: teacher2, student: @student, script: @script_level.script, level: @level, comment: COMMENT2, performance: PERFORMANCE2
-    feedback2.created_at = feedback2.created_at + 1
-    feedback2.save validate: false
-
-    feedback3 = create :teacher_feedback, teacher: @teacher, student: @student, script: @script_level.script, level: @level, comment: COMMENT3, performance: PERFORMANCE3
-    feedback3.created_at = feedback3.created_at + 2
-    feedback3.save validate: false
-
-    sign_in @student
-    get "#{API}/get_feedbacks", params: {student_id: @student.id, level_id: @level.id, script_id: @script.id}
-
-    assert_equal 2, parsed_response.count
-    assert_equal COMMENT2, parsed_response[1]['comment']
-    assert_equal PERFORMANCE2, parsed_response[1]['performance']
-    assert_equal COMMENT3, parsed_response[0]['comment']
-    assert_equal PERFORMANCE3, parsed_response[0]['performance']
-  end
-
-  test 'student can retrieve feedback for a level - three comments, two teachers same section' do
-    create :teacher_feedback, teacher: @teacher, student: @student, script: @script_level.script, level: @level, comment: COMMENT1, performance: PERFORMANCE1
-
-    feedback2 = create :teacher_feedback, teacher: @coteacher, student: @student, script: @script_level.script, level: @level, comment: COMMENT2, performance: PERFORMANCE2
     feedback2.created_at = feedback2.created_at + 1
     feedback2.save validate: false
 

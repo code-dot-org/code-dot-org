@@ -2730,11 +2730,3 @@ el:
           lesson_groups:
             lessonGroup-7:
               display_name: Εισαγωγή
-        csd1-2024:
-          lesson_groups:
-            lessonGroup-5:
-              display_name: Έρευνα
-        csd7-2024:
-          lesson_groups:
-            lessonGroup-4:
-              display_name: Εισαγωγή στο App Lab

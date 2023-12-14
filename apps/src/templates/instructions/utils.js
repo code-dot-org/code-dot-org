@@ -109,12 +109,12 @@ function removeCommentNodes(root) {
 
 /**
  * Converts any inline XML in the container element into embedded
- * read-only workspaces in long instructions or authored hints in the Instructions panel.
+ * read-only BlockSpaces in long instructions or authored hints in the Instructions panel.
  * @param {Element} xmlContainer The element in which to search for XML
  * @param {Boolean} isRtl True if we are displaying in RTL
  */
 export function convertXmlToBlockly(xmlContainer, isRtl) {
-  // blockSpaceContainers are elements (div or span) that contain embedded workspaces
+  // blockSpaceContainers are elements (div or span) that contain read-only block spaces
   // We add the class name 'readonly-block-space-container' to these elements when they are created
   // so that they can be easily removed  to prevent the duplication of blocks when toggling
   // between long/short instructions or when the blocks are rendered in the levelbuilder
@@ -154,7 +154,7 @@ export function convertXmlToBlockly(xmlContainer, isRtl) {
 
     // Don't render the raw XML
     xml.style.display = 'none';
-    const blockSpace = Blockly.createEmbeddedWorkspace(
+    const blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(
       blockSpaceContainer,
       xml,
       {

@@ -10,7 +10,7 @@ export default function EmbeddedBlock({blockName, link, ariaLabel}) {
   useEffect(() => {
     if (blockName && blockRef.current) {
       const blocksDom = parseElement(`<block type='${blockName}' />`);
-      const blockSpace = Blockly.createEmbeddedWorkspace(
+      const blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(
         blockRef.current,
         blocksDom,
         {

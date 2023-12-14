@@ -10,20 +10,8 @@
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 24px;
-}
-
-.label {
-  font-size: 16px;
   margin-top: 24px;
-}
-
-.primaryTeacher {
-  padding: 12px;
-  height: 48px;
-  border: 1px solid $light_gray_200;
-  font-size: 16px;
-  line-height: 150%;
+  margin-bottom: 24px;
 }
 
 .add {
@@ -48,7 +36,7 @@
     margin: 0;
   }
 
-  &Label {
+  .label {
     @include label-one;
     font-size: 14px;
     margin-bottom: 0;
