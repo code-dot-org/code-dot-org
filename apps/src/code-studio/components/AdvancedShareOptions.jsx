@@ -157,7 +157,6 @@ class AdvancedShareOptions extends React.Component {
             type="checkbox"
             style={style.embedCodeCheckbox}
             checked={this.state.embedWithoutCode}
-            aria-label={i18n.hideAbilityToViewCode()}
             onChange={() =>
               this.setState({embedWithoutCode: !this.state.embedWithoutCode})
             }
