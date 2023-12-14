@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-12-12 20:56:51 UTC",
+    "serialized_at": "2023-12-14 01:35:09 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -165,6 +165,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-k5-2-intro_2024"
+        ],
         "progression": "Creativity + Code with Event-based Programs"
       },
       "bonus": false,
@@ -187,6 +190,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-k5-2-eventprogram-intro_2024"
+        ],
         "progression": "Creativity + Code with Event-based Programs"
       },
       "bonus": false,
@@ -209,6 +215,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-k5-2_IntroSpriteLab_2024"
+        ],
         "progression": "Creativity + Code with Event-based Programs"
       },
       "bonus": false,
@@ -231,6 +240,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-k5-2-spriteLab_intro_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -252,6 +264,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-k5-2-helloworld_bunny_location_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -273,6 +288,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-k5-2-ecosystems_helloworld_say_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -294,6 +312,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-k5-2-helloworld_bunny_background_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -315,6 +336,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-k5-2_ecosystems_say_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -336,6 +360,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-k5-2-SelfPaced-customizegifs_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -357,6 +384,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-k5-2-SelfPaced-customization1_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -378,6 +408,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-k5-2-SelfPaced-customization2_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {

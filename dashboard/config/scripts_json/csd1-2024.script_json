@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-11-28 21:08:50 UTC",
+    "serialized_at": "2023-12-14 01:35:05 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4533,6 +4533,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pre-survey-levelgroup_21_22_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4554,6 +4557,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "intro-pulse-survey_csd1_2024"
+        ],
         "progression": "Check-In Survey"
       },
       "bonus": false,
@@ -4576,6 +4582,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 IO Pet Chooser_2024"
+        ],
         "progression": "App: Pet Chooser"
       },
       "bonus": false,
@@ -4598,6 +4607,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 IO Story_2024"
+        ],
         "progression": "App: Story Creator"
       },
       "bonus": false,
@@ -4620,6 +4632,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 IO Pet Chooser 2_2024"
+        ],
         "progression": "App: Improved Pet App"
       },
       "bonus": false,
@@ -4642,6 +4657,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing bday_2024"
+        ],
         "progression": "App: Is It Your Birthday?"
       },
       "bonus": false,
@@ -4664,6 +4682,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing npark_2024"
+        ],
         "progression": "App: National Parks"
       },
       "bonus": false,
@@ -4686,6 +4707,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing countries_2024"
+        ],
         "progression": "App: How Many Countries"
       },
       "bonus": false,
@@ -4708,6 +4732,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing writers_2024"
+        ],
         "progression": "App: My Famous Birthday"
       },
       "bonus": false,
@@ -4730,6 +4757,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing notebook_2024"
+        ],
         "progression": "App: Stamp Notebook"
       },
       "bonus": false,
@@ -4752,6 +4782,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing fastest_2024"
+        ],
         "progression": "App: The Fastest Finger"
       },
       "bonus": false,
@@ -4774,6 +4807,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing guess_2024"
+        ],
         "progression": "App: Guess the Number"
       },
       "bonus": false,
@@ -4796,6 +4832,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing live_2024"
+        ],
         "progression": "App: Where Should I Live?"
       },
       "bonus": false,
@@ -4818,6 +4857,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 storage outfit_2024"
+        ],
         "progression": "App: Outfit Picker"
       },
       "bonus": false,
@@ -4840,6 +4882,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 storage friends_2024"
+        ],
         "progression": "App: Friend Finder"
       },
       "bonus": false,
@@ -4862,6 +4907,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 storage movies_2024"
+        ],
         "progression": "App: Choose a Kid's Movie"
       },
       "bonus": false,
@@ -4884,6 +4932,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD Student End of Unit Survey - Unit 1_2024"
+        ],
         "progression": "End-of-Unit Survey"
       },
       "bonus": false,
@@ -4906,6 +4957,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U1 Test_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5141,1271 +5195,22 @@
     }
   ],
   "resources": [
-    {
-      "name": "All Resources",
-      "url": "/s/csd1-2023/resources",
-      "key": "all_resources",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_resources"
-      }
-    },
-    {
-      "name": "All Standards",
-      "url": "/s/csd1-2023/standards",
-      "key": "all_standards",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_standards"
-      }
-    },
-    {
-      "name": "All Vocabulary",
-      "url": "/s/csd1-2023/vocab",
-      "key": "all_vocabulary",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_vocabulary"
-      }
-    },
-    {
-      "name": "Aluminum Boats",
-      "url": "https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit",
-      "key": "aluminum_boats",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "aluminum_boats"
-      }
-    },
-    {
-      "name": "Aluminum Boats",
-      "url": "https://docs.google.com/document/d/1dY3N0DvsPLoPRgWOXcSwRKGxZGaiP2HI84QaalQcE7s/",
-      "key": "aluminum_boats_1",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "aluminum_boats_1"
-      }
-    },
-    {
-      "name": "Apps and Problem Solving",
-      "url": "https://docs.google.com/document/d/1Oza12wkU_FWawNSeXBae_v6knPNdO8Ph5EPeYBSvy3k/edit",
-      "key": "apps_and_problem_solving",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "apps_and_problem_solving"
-      }
-    },
-    {
-      "name": "Apps and Problem Solving - Student Checklist",
-      "url": "https://docs.google.com/document/d/1KVhC59py0Myrqx2hJcFX9wEST48u_kxZ8CCAzZSwJe0/edit",
-      "key": "apps_and_problem_solving_-_student_checklist",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "apps_and_problem_solving_-_student_checklist"
-      }
-    },
-    {
-      "name": "Apps and Problem Solving",
-      "url": "https://docs.google.com/document/d/1pJbXBKzppBtWwjo3bBXD8fE_QfI4yt2gQQD1hou1_Gg/",
-      "key": "apps_and_problem_solving_1",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Peer Review"
-      },
-      "seeding_key": {
-        "resource.key": "apps_and_problem_solving_1"
-      }
-    },
-    {
-      "name": "Apps and Problem Solving",
-      "url": "https://docs.google.com/document/d/1lkmNph6eIP1ERFbn7PTbUagWaVnPOiFGgESMKuECTuE/edit",
-      "key": "apps_and_problem_solving_2",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Rubric"
-      },
-      "seeding_key": {
-        "resource.key": "apps_and_problem_solving_2"
-      }
-    },
-    {
-      "name": "Apps with Processing",
-      "url": "https://docs.google.com/document/d/1S3OZcT2RUzp6WTnd1M74xQ6axbZF6qAXzYgAnn2sHJk/edit?usp=sharing",
-      "key": "apps_with_processing",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "apps_with_processing"
-      }
-    },
-    {
-      "name": "Apps with Processing",
-      "url": "https://docs.google.com/document/d/1X_F-Sr4pj_E4jM0eGqE9crfrY2bNEozJqPw765QQ4Jw/view",
-      "key": "apps_with_processing_1",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "apps_with_processing_1"
-      }
-    },
-    {
-      "name": "Apps with Processing",
-      "url": "https://docs.google.com/presentation/d/1DS3DtZOeqkkFPx25ujdJ_LB68Wxj_yNBWUquVAo1Tis/template/preview",
-      "key": "apps_with_processing_2",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "apps_with_processing_2"
-      }
-    },
-    {
-      "name": "Apps with Storage",
-      "url": "https://docs.google.com/document/d/1WUFg-bK_Z7KYACda7pwQ6DZVThUulwAT0RvdYH2bsug/edit?usp=sharing",
-      "key": "apps_with_storage",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "apps_with_storage"
-      }
-    },
-    {
-      "name": "Apps with Storage",
-      "url": "https://docs.google.com/document/d/17X6xpUxRugcGDMRzplSRPU3d18VviQ4v7uOj2E3s99s/edit",
-      "key": "apps_with_storage_1",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "apps_with_storage_1"
-      }
-    },
-    {
-      "name": "Apps with Storage",
-      "url": "https://docs.google.com/presentation/d/1bXivMZwN5wWZxnmlaSO2M81twsZf_JgXBWWdrSccghE/template/preview",
-      "key": "apps_with_storage_2",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "apps_with_storage_2"
-      }
-    },
-    {
-      "name": "Build a Newspaper Table",
-      "url": "https://docs.google.com/document/d/1ghhCM2xUqrm2qe6egJ2JGjYNVAHsCTVv3c5ywo-JJmo/edit?usp=sharing",
-      "key": "build_a_newspaper_table",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "build_a_newspaper_table"
-      }
-    },
-    {
-      "name": "Build a Newspaper Table",
-      "url": "https://docs.google.com/document/d/1dBzGa8_2iObdnxfSkBtgdYoQXRaM3bIB1eYiDnfAo7k/",
-      "key": "build_a_newspaper_table_1",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "build_a_newspaper_table_1"
-      }
-    },
-    {
-      "name": "Code.org How-to Video Playlist",
-      "url": "https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5",
-      "key": "code_org_how-to_video_playlist",
-      "properties": {
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "code_org_how-to_video_playlist"
-      }
-    },
-    {
-      "name": "Code.org How-to Videos",
-      "url": "https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-",
-      "key": "code_org_how-to_videos",
-      "properties": {
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "code_org_how-to_videos"
-      }
-    },
-    {
-      "name": "Computer Science Practices",
-      "url": "https://docs.google.com/document/d/1Ccf-WMH2qFDhycKaKSILRrZUe42lWESyRqMgdTymCPw/edit",
-      "key": "computer_science_practices",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Reflection"
-      },
-      "seeding_key": {
-        "resource.key": "computer_science_practices"
-      }
-    },
-    {
-      "name": "CSD Guide to Assessment",
-      "url": "https://docs.google.com/document/d/1IO5XgPW_Apil_Uziq5hAMCBgilm8txZ3sp8atxiKiLU/view",
-      "key": "csd_guide_to_assessment",
-      "properties": {
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csd_guide_to_assessment"
-      }
-    },
-    {
-      "name": "CSD Guide to Curriculum Videos",
-      "url": "https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view",
-      "key": "csd_guide_to_curriculum_videos",
-      "properties": {
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csd_guide_to_curriculum_videos"
-      }
-    },
-    {
-      "name": "CSD Guide to Differentiation",
-      "url": "https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view",
-      "key": "csd_guide_to_differentiation",
-      "properties": {
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csd_guide_to_differentiation"
-      }
-    },
-    {
-      "name": "CSD Guide to Teaching and Learning Strategies",
-      "url": "https://docs.google.com/document/d/1Cg5iTwERoX25Y2DdLNmrPCbVB2d9FPGfUMUvcnVoN8Q/view",
-      "key": "csd_guide_to_teaching_and_learning_strategies",
-      "properties": {
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csd_guide_to_teaching_and_learning_strategies"
-      }
-    },
-    {
-      "name": "CSD Guide to Using Resources",
-      "url": "https://docs.google.com/document/d/1NYJMHZYnAZYNctehlQOImSstsu48sRGOMbi4It4ZjkI/view",
-      "key": "csd_guide_to_using_resources",
-      "properties": {
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "csd_guide_to_using_resources"
-      }
-    },
-    {
-      "name": "Exploring Problem Solving",
-      "url": "https://docs.google.com/presentation/d/1qEiI3VfO04CKhzpucsXmcrTLcV3wHYCyvwsOdiSoI5k/template/preview",
-      "key": "exploring_problem_solving",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "exploring_problem_solving"
-      }
-    },
-    {
-      "name": "Exploring Problem Solving - Animal Theme",
-      "url": "https://docs.google.com/document/d/1yEDSiEwx6OICs4MZwzl4zBd_aVfVEWd6JlPIqo2mc1c/edit?usp=sharing",
-      "key": "exploring_problem_solving_-_animal_theme",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "exploring_problem_solving_-_animal_theme"
-      }
-    },
-    {
-      "name": "Exploring Problem Solving - Games Theme",
-      "url": "https://docs.google.com/document/d/1INTy954U_5XR2VgA5Mq17GKfxXHr29KVwMPVfVqcm04/edit?usp=sharing",
-      "key": "exploring_problem_solving_-_games_theme",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "exploring_problem_solving_-_games_theme"
-      }
-    },
-    {
-      "name": "Exploring Problem Solving (Animals)",
-      "url": "https://docs.google.com/presentation/d/1HrzXZUsvtHJjfU2XI5FOkDQCkkxzFJ1354F6iPG2hp4/template/preview",
-      "key": "exploring_problem_solving_animals_",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "exploring_problem_solving_animals_"
-      }
-    },
-    {
-      "name": "Exploring Problem Solving (Games)",
-      "url": "https://docs.google.com/presentation/d/11Qw-SNahzSYo-9zX4SQhOiRgvtQN6mL8zwFeaf2gTqk/template/preview",
-      "key": "exploring_problem_solving_games_",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "exploring_problem_solving_games_"
-      }
-    },
-    {
-      "name": "Input and Output",
-      "url": "https://docs.google.com/document/d/1y6JJOsmZh0zwXpP4qCQoPFhQiLXGi4NJnnQoLnHAkPc/edit?usp=sharing",
-      "key": "input_and_output",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "input_and_output"
-      }
-    },
-    {
-      "name": "Input and Output",
-      "url": "https://docs.google.com/document/d/1Wf9oUuRi5iNb2cVrn1F8kbDDys0CcAcN-m4ZLpXohmY",
-      "key": "input_and_output_1",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "input_and_output_1"
-      }
-    },
-    {
-      "name": "Input and Output",
-      "url": "https://docs.google.com/presentation/d/1uoMxf--EQrDqG_bmoqYWn6KraKCmWy9gC1LFOlz4OO8/template/preview",
-      "key": "input_and_output_2",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "input_and_output_2"
-      }
-    },
-    {
-      "name": "Intro to Problem Solving",
-      "url": "https://docs.google.com/presentation/d/1TuN5qOfjgSxNjZccb6o4sUZbfaXGOSDeUolDojrJ0pM/template/preview",
-      "key": "intro_to_problem_solving",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "intro_to_problem_solving"
-      }
-    },
-    {
-      "name": "Intro to Problem Solving - Paper Tower",
-      "url": "https://docs.google.com/document/d/1UNCZD2dRyfZB7wW2yW5_zDRF_lzJjmdLeu21YovvmBs/edit?usp=sharing",
-      "key": "intro_to_problem_solving_-_paper_tower",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "intro_to_problem_solving_-_paper_tower"
-      }
-    },
-    {
-      "name": "Intro to Problem Solving (Newspapers)",
-      "url": "https://docs.google.com/presentation/d/1EY9Qy_ufSUgtdyfDdoEjDXfbepoW4o-66y5nkNDY_-0/template/preview",
-      "key": "intro_to_problem_solving_newspapers_",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "intro_to_problem_solving_newspapers_"
-      }
-    },
-    {
-      "name": "Intro to Problem Solving (Paper Tower)",
-      "url": "https://docs.google.com/presentation/d/1x9Zx8mdqlNkYnFcK0-uff_sv53v1_MWTHwpXdW6eJJo/template/preview",
-      "key": "intro_to_problem_solving_paper_tower_",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "intro_to_problem_solving_paper_tower_"
-      }
-    },
-    {
-      "name": "Intro to Problem Solving (Spaghetti)",
-      "url": "https://docs.google.com/presentation/d/1GOd3_LgR4y4EeYqOVx6yjdIvx_mhJ4cJAMwu0NAkovA/template/preview",
-      "key": "intro_to_problem_solving_spaghetti_",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "intro_to_problem_solving_spaghetti_"
-      }
-    },
-    {
-      "name": "Paper Tower",
-      "url": "https://docs.google.com/document/d/1B4c4oTSnJdlhXjUmmkVNgPrWa1WxTn2-QLEIg4ZI5yU/edit",
-      "key": "paper_tower",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "paper_tower"
-      }
-    },
-    {
-      "name": "Peer Review Exemplar",
-      "url": "https://docs.google.com/document/d/1Vctwpr27vkSbw3SLuOtT86jzltqWt6LQ1YotnbutEgs/edit",
-      "key": "peer_review_exemplar",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "peer_review_exemplar"
-      }
-    },
-    {
-      "name": "Problem Solving Process",
-      "url": "https://docs.google.com/document/d/1lWv8fKJO2ZRvObUx6Ys1MTVqcSC5ZUfKI8RRXGayRpY/",
-      "key": "problem_solving_process",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "problem_solving_process"
-      }
-    },
-    {
-      "name": "Problem Solving Process",
-      "url": "https://youtu.be/z7RaFPT3DTE",
-      "key": "problem_solving_process_1",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/problemsolvingprocess-mp4.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "problem_solving_process_1"
-      }
-    },
-    {
-      "name": "Problem Solving Process",
-      "url": "https://drive.google.com/file/d/0B2UNlnU_5Vg4aC1DVGdWU19hZkE/view?usp=sharing&resourcekey=0-1I3oX1C8Q_P1YAV15vJfOw",
-      "key": "problem_solving_process_2",
-      "properties": {
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "problem_solving_process_2"
-      }
-    },
-    {
-      "name": "Project - Propose an App",
-      "url": "https://docs.google.com/presentation/d/1dFjAAwty7BeGHTDB7X8VXyCmMJ9Fh5mEs_JNZwlf9XM/template/preview",
-      "key": "project_-_propose_an_app",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "project_-_propose_an_app"
-      }
-    },
-    {
-      "name": "Project Guide Exemplar",
-      "url": "https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/edit?usp=sharing",
-      "key": "project_guide_exemplar",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "project_guide_exemplar"
-      }
-    },
-    {
-      "name": "Sample Marked Rubrics",
-      "url": "https://docs.google.com/document/d/17C1pGuIk1FL84FjMvUIisYa6x_U8aKREcljfqnEm21c/edit?usp=sharing",
-      "key": "sample_marked_rubrics",
-      "properties": {
-        "audience": "Verified Teacher",
-        "include_in_pdf": true,
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "sample_marked_rubrics"
-      }
-    },
-    {
-      "name": "Solving Problems",
-      "url": "https://docs.google.com/document/d/11Gy--8a7-BPT0uMa3ME23nI1FxPKrodORRbb3oc7vsY/",
-      "key": "solving_problems",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "solving_problems"
-      }
-    },
-    {
-      "name": "Solving Problems",
-      "url": "https://docs.google.com/document/d/1HUE7g2tqk-_3wiOU4cEFfE4CoOQ5kMzZQc-BTXdco5E/edit",
-      "key": "solving_problems_1",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "solving_problems_1"
-      }
-    },
-    {
-      "name": "Solving Problems",
-      "url": "https://docs.google.com/document/d/10kPXjW-A81o_7lIigLzpPq1lCVbE0bT42fxBUT6C758/edit#heading=h.1nymh4dpxwx1",
-      "key": "solving_problems_2",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "solving_problems_2"
-      }
-    },
-    {
-      "name": "Solving Problems",
-      "url": "https://docs.google.com/document/d/1Fwpp9gfPGNdF32LlOFTIa0mF6i5c6s2_2uXnRZlvkhU/edit",
-      "key": "solving_problems_3",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "solving_problems_3"
-      }
-    },
-    {
-      "name": "Spaghetti Bridge",
-      "url": "https://docs.google.com/document/d/1XUKyQ3UfGDOugVRWybvjietxgM-LEkdsaT2h6haXp4Q/edit?usp=sharing",
-      "key": "spaghetti_bridge",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "spaghetti_bridge"
-      }
-    },
-    {
-      "name": "Spaghetti Bridge - Activity Guide",
-      "url": "https://docs.google.com/document/d/17j77zulzXehMma9Y8yDrJNTRWnN1B7z1aBgQ4vqg8z0/edit?usp=sharing",
-      "key": "spaghetti_bridge_-_activity_guide",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "spaghetti_bridge_-_activity_guide"
-      }
-    },
-    {
-      "name": "Tangrams",
-      "url": "https://docs.google.com/document/d/15EVADKK_Dk3UVwDIbuRK6TLjIJJD8-6bVWPsu0zTvLc/edit",
-      "key": "tangrams",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "tangrams"
-      }
-    },
-    {
-      "name": "Teacher Forum",
-      "url": "https://forum.code.org/c/csd",
-      "key": "teacher_forum",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "teacher_forum"
-      }
-    },
-    {
-      "name": "The Problem Solving Process ",
-      "url": "https://www.youtube.com/watch?v=z7RaFPT3DTE",
-      "key": "the_problem_solving_process",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/problemsolvingprocess-mp4.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "the_problem_solving_process"
-      }
-    },
-    {
-      "name": "The Problem Solving Process",
-      "url": "https://docs.google.com/presentation/d/1ISxsRTRVG9D0BYkfRHYHWFHiP_HNYIvlzfkCULvxYnA/template/preview",
-      "key": "the_problem_solving_process_1",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "the_problem_solving_process_1"
-      }
-    },
-    {
-      "name": "The Problem Solving Process",
-      "url": "https://docs.google.com/document/d/1KczAoklRXU1MemCJaah68E9-YtM4Qny00uZJE5f_Ly0/edit?usp=sharing",
-      "key": "the_problem_solving_process_2",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "the_problem_solving_process_2"
-      }
-    },
-    {
-      "name": "The Problem Solving Process",
-      "url": "https://docs.google.com/document/d/1ttgLORbUtEEpWcGsygF0YKVFHpG0PEzfLyi52T8wFIo/view",
-      "key": "the_problem_solving_process_3",
-      "properties": {
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "the_problem_solving_process_3"
-      }
-    },
-    {
-      "name": "What Do Computers Do",
-      "url": "https://www.youtube.com/watch?v=92TaQRBwPSs",
-      "key": "what_do_computers_do",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/csdwhat-docomputersdo-mp4.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "what_do_computers_do"
-      }
-    },
-    {
-      "name": "What is a Computer",
-      "url": "https://youtu.be/rRSD128KWIM",
-      "key": "what_is_a_computer",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/whatisacomputer-mp4.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "what_is_a_computer"
-      }
-    },
-    {
-      "name": "What is a Computer?",
-      "url": "https://docs.google.com/document/d/19QfEaVJcF85W6iZwITFIcPycO11znVjYTAaKO78VPH0/edit?usp=sharing",
-      "key": "what_is_a_computer_",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "what_is_a_computer_"
-      }
-    },
-    {
-      "name": "What is a Computer",
-      "url": "https://docs.google.com/presentation/d/1qc6_t0IdvXD_jSZ84gXvNA7LvLCr94WHKC6SKPtq2po/template/preview",
-      "key": "what_is_a_computer_1",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "what_is_a_computer_1"
-      }
-    },
-    {
-      "name": "What is a Computer (Version A)",
-      "url": "https://docs.google.com/document/d/1I0Pw3qKhtT0TdbPME3EKsi-L7ufgpxB3JBT59uxgp4w",
-      "key": "what_is_a_computer_version_a_",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "what_is_a_computer_version_a_"
-      }
-    },
-    {
-      "name": "What is a Computer (Version B)",
-      "url": "https://docs.google.com/document/d/1z4LfopE0NCEdiQo2BhYDXGm39Z7Wgr-SZjN1nw2U00Q/",
-      "key": "what_is_a_computer_version_b_",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "what_is_a_computer_version_b_"
-      }
-    }
+
   ],
   "lessons_resources": [
-    {
-      "seeding_key": {
-        "lesson.key": "Exploring Problem Solving - Animals Theme (Alternate Lesson 3)",
-        "resource.key": "exploring_problem_solving_-_animal_theme"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Exploring Problem Solving - Animals Theme (Alternate Lesson 3)",
-        "resource.key": "exploring_problem_solving_animals_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Exploring Problem Solving - Animals Theme (Alternate Lesson 3)",
-        "resource.key": "solving_problems_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Exploring Problem Solving - Animals Theme (Alternate Lesson 3)",
-        "resource.key": "tangrams"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Exploring Problem Solving - Games Theme (Alternate Lesson 3)",
-        "resource.key": "exploring_problem_solving_-_games_theme"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Exploring Problem Solving - Games Theme (Alternate Lesson 3)",
-        "resource.key": "exploring_problem_solving_games_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Exploring Problem Solving - Games Theme (Alternate Lesson 3)",
-        "resource.key": "solving_problems_3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Exploring Problem Solving",
-        "resource.key": "exploring_problem_solving"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Exploring Problem Solving",
-        "resource.key": "solving_problems"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Exploring Problem Solving",
-        "resource.key": "solving_problems_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Input and Output",
-        "resource.key": "input_and_output"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Input and Output",
-        "resource.key": "input_and_output_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Input and Output",
-        "resource.key": "input_and_output_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)",
-        "resource.key": "build_a_newspaper_table"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)",
-        "resource.key": "build_a_newspaper_table_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)",
-        "resource.key": "code_org_how-to_videos"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)",
-        "resource.key": "intro_to_problem_solving_newspapers_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to Problem Solving - Paper Tower (Alternate Lesson 1)",
-        "resource.key": "code_org_how-to_video_playlist"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to Problem Solving - Paper Tower (Alternate Lesson 1)",
-        "resource.key": "intro_to_problem_solving_-_paper_tower"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to Problem Solving - Paper Tower (Alternate Lesson 1)",
-        "resource.key": "intro_to_problem_solving_paper_tower_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to Problem Solving - Paper Tower (Alternate Lesson 1)",
-        "resource.key": "paper_tower"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)",
-        "resource.key": "code_org_how-to_videos"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)",
-        "resource.key": "intro_to_problem_solving_spaghetti_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)",
-        "resource.key": "spaghetti_bridge"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)",
-        "resource.key": "spaghetti_bridge_-_activity_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to Problem Solving",
-        "resource.key": "aluminum_boats"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to Problem Solving",
-        "resource.key": "aluminum_boats_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to Problem Solving",
-        "resource.key": "code_org_how-to_videos"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to Problem Solving",
-        "resource.key": "intro_to_problem_solving"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Processing",
-        "resource.key": "apps_with_processing"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Processing",
-        "resource.key": "apps_with_processing_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Processing",
-        "resource.key": "apps_with_processing_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Propose an App",
-        "resource.key": "apps_and_problem_solving"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Propose an App",
-        "resource.key": "apps_and_problem_solving_-_student_checklist"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Propose an App",
-        "resource.key": "apps_and_problem_solving_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Propose an App",
-        "resource.key": "apps_and_problem_solving_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Propose an App",
-        "resource.key": "computer_science_practices"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Propose an App",
-        "resource.key": "peer_review_exemplar"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Propose an App",
-        "resource.key": "project_-_propose_an_app"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Propose an App",
-        "resource.key": "project_guide_exemplar"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Propose an App",
-        "resource.key": "sample_marked_rubrics"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Storage",
-        "resource.key": "apps_with_storage"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Storage",
-        "resource.key": "apps_with_storage_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Storage",
-        "resource.key": "apps_with_storage_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Storage",
-        "resource.key": "what_do_computers_do"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Problem Solving Process",
-        "resource.key": "problem_solving_process"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Problem Solving Process",
-        "resource.key": "problem_solving_process_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Problem Solving Process",
-        "resource.key": "problem_solving_process_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Problem Solving Process",
-        "resource.key": "the_problem_solving_process"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Problem Solving Process",
-        "resource.key": "the_problem_solving_process_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Problem Solving Process",
-        "resource.key": "the_problem_solving_process_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "What is a Computer?",
-        "resource.key": "what_is_a_computer"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "What is a Computer?",
-        "resource.key": "what_is_a_computer_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "What is a Computer?",
-        "resource.key": "what_is_a_computer_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "What is a Computer?",
-        "resource.key": "what_is_a_computer_version_a_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "What is a Computer?",
-        "resource.key": "what_is_a_computer_version_b_"
-      }
-    }
+
   ],
   "scripts_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "all_resources",
-        "script.name": "csd1-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_standards",
-        "script.name": "csd1-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_vocabulary",
-        "script.name": "csd1-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_guide_to_assessment",
-        "script.name": "csd1-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_guide_to_curriculum_videos",
-        "script.name": "csd1-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_guide_to_differentiation",
-        "script.name": "csd1-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_guide_to_teaching_and_learning_strategies",
-        "script.name": "csd1-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_guide_to_using_resources",
-        "script.name": "csd1-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "teacher_forum",
-        "script.name": "csd1-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "the_problem_solving_process_3",
-        "script.name": "csd1-2024"
-      }
-    }
+
   ],
   "scripts_student_resources": [
 
   ],
   "vocabularies": [
-    {
-      "key": "computer",
-      "word": "Computer",
-      "definition": "A machine that works with information.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "computer"
-      }
-    },
-    {
-      "key": "input",
-      "word": "Input",
-      "definition": "the information computers get from users, devices, or other computers",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "input"
-      }
-    },
-    {
-      "key": "output",
-      "word": "Output",
-      "definition": "the information computers give to users, devices, or other computers",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "output"
-      }
-    },
-    {
-      "key": "processing",
-      "word": "Processing",
-      "definition": "The thinking work computers do to turn input into output.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "processing"
-      }
-    },
-    {
-      "key": "storage",
-      "word": "storage",
-      "definition": "saving information to use in the future",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "storage"
-      }
-    }
+
   ],
   "lessons_vocabularies": [
-    {
-      "seeding_key": {
-        "lesson.key": "Input and Output",
-        "vocabulary.key": "input"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Input and Output",
-        "vocabulary.key": "output"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Processing",
-        "vocabulary.key": "processing"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Storage",
-        "vocabulary.key": "storage"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "What is a Computer?",
-        "vocabulary.key": "computer"
-      }
-    }
+
   ],
   "lessons_programming_expressions": [
 
