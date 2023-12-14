@@ -27,7 +27,7 @@ const AiBlockPreview: React.FunctionComponent<AiBlockPreviewProps> = ({
 
     const xml = generateAiEffectBlocksXmlFromResult(results);
     const blocks = Blockly.utils.xml.textToDom(xml);
-    workspaceRef.current = Blockly.BlockSpace.createReadOnlyBlockSpace(
+    workspaceRef.current = Blockly.createEmbeddedWorkspace(
       blockPreviewContainerRef.current,
       blocks,
       {rtl: isRtl}
