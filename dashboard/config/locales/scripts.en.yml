@@ -8019,6 +8019,8 @@ en:
               name: AI Playground
             lesson-13:
               name: Gen AI Blocks Playground
+            lesson-14:
+              name: Test micro:bit lesson
         csc-pilot-2022-ecosystems:
           lesson_groups: {}
           name: csc-pilot-2022-ecosystems

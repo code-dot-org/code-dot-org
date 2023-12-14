@@ -321,16 +321,25 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
 
   const onClose = useCallback(() => dispatch(closeAiModal()), [dispatch]);
 
-  const handleStartOverClick = useCallback(() => {
-    analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_RESTARTED, {
-      emojis: inputs,
-    });
+  const handleStartOverClick = useCallback(
+    (usingHeader: boolean) => {
+      analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_RESTARTED, {
+        emojis: inputs,
+        usingHeader,
+      });
+      setInputs([]);
+      setCurrentInputSlot(0);
+      setGeneratingProgress({step: 0, subStep: 0});
+      setGeneratedProgress(0);
+      setMode(Mode.SELECT_INPUTS);
+    },
+    [inputs]
+  );
 
-    setInputs([]);
-    setGeneratingProgress({step: 0, subStep: 0});
-    setGeneratedProgress(0);
-    setMode(Mode.SELECT_INPUTS);
-  }, [inputs]);
+  const handleStartOverClickUsingHeader = useCallback(
+    () => handleStartOverClick(true),
+    [handleStartOverClick]
+  );
 
   const handleRegenerateClick = useCallback(() => {
     analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_REGENERATED, {
@@ -595,7 +604,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     >
       <DanceAiModalHeader
         onClose={onClose}
-        handleStartOverClick={handleStartOverClick}
+        handleStartOverClick={handleStartOverClickUsingHeader}
         selectedEmojis={selectedEmojis}
         slotCount={SLOT_COUNT}
       />
@@ -776,7 +785,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
               currentMode={mode}
               showFor={[Mode.RESULTS]}
               id="start-over-button"
-              onClick={handleStartOverClick}
+              onClick={handleStartOverClickNotUsingHeader}
               color={Button.ButtonColor.neutralDark}
               className={classNames(
                 moduleStyles.button,
