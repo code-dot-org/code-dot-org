@@ -7834,7 +7834,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Maze 4",
+        "level.key": "2-3 Maze 1",
         "script_level.level_keys": [
           "2-3 Maze 1",
           "2-3 Maze 4"
@@ -7847,7 +7847,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Maze 1",
+        "level.key": "2-3 Maze 4",
         "script_level.level_keys": [
           "2-3 Maze 1",
           "2-3 Maze 4"
@@ -7964,7 +7964,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Artist Loops 4",
+        "level.key": "2-3 Artist 3",
         "script_level.level_keys": [
           "2-3 Artist 3",
           "2-3 Artist Loops 4"
@@ -7977,7 +7977,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Artist 3",
+        "level.key": "2-3 Artist Loops 4",
         "script_level.level_keys": [
           "2-3 Artist 3",
           "2-3 Artist Loops 4"
