@@ -60,11 +60,10 @@ theme: responsive_full_width
     %h2=hoc_s(:heading_start_hoc_with_videos)
     = view :"dance/dance_inspirational_videos"
 
-%section
+%section#behind-the-scenes
   .wrapper
-    #behind-the-scenes
-      %h2= hoc_s(:dance_ai_behind_the_scenes)
-      %p!= hoc_s(:dance_ai_behind_the_scenes_markdown, markdown: true)
+    %h2= hoc_s(:dance_ai_behind_the_scenes)
+    %p!= hoc_s(:dance_ai_behind_the_scenes_markdown, markdown: true)
 
 %section.bg-neutral-light
   .wrapper
