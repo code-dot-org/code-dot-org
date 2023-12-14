@@ -2,6 +2,8 @@
 
 ## UI
 
+https://github.com/code-dot-org/code-dot-org/assets/2205926/1dca6294-fad7-46c7-8ee0-368c798c2600
+
 The Dance AI modal accompanies a new AI block added to Dance Party for the Hour of Code in 2023.  The modal allows the user to select three emoji that will then be used to generate an effect, which is a combination of an existing Dance Party foreground and background effect.  This combination effect can be used as-is, or the user can view the equivalent code and even convert the AI block into that code.
 
 ### Architecture
