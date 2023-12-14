@@ -1,13 +1,13 @@
 import React from 'react';
 import Button from '@cdo/apps/templates/Button';
-import {Mode} from './types';
+import {DanceAiModalMode} from './types';
 
 interface ModalButtonProps extends React.ComponentProps<typeof Button> {
-  currentMode: Mode;
-  showFor?: Mode[];
-  hideFor?: Mode[];
-  enableFor?: Mode[];
-  disableFor?: Mode[];
+  currentMode: DanceAiModalMode;
+  showFor?: DanceAiModalMode[];
+  hideFor?: DanceAiModalMode[];
+  enableFor?: DanceAiModalMode[];
+  disableFor?: DanceAiModalMode[];
 }
 
 const ModalButton: React.FunctionComponent<ModalButtonProps> = props => {

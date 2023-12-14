@@ -18,8 +18,8 @@ import {
   GeneratedEffect,
   MinMax,
   EffectsQuality,
-  Mode,
-  Toggle,
+  DanceAiModalMode,
+  DanceAiPreviewButtonToggleState,
 } from './types';
 import {
   chooseEffects,
@@ -126,7 +126,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     maxTotalScore: 3 * SLOT_COUNT,
   });
 
-  const [mode, setMode] = useState(Mode.INITIAL);
+  const [mode, setMode] = useState(DanceAiModalMode.INITIAL);
 
   const [inputs, setInputs] = useState<string[]>([]);
   const [inputAddCount, setInputAddCount] = useState<number>(0);
@@ -136,7 +136,10 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
       subStep: 0,
     });
   const [generatedProgress, setGeneratedProgress] = useState<number>(0);
-  const [currentToggle, setCurrentToggle] = useState<Toggle>(Toggle.EFFECT);
+  const [currentToggle, setCurrentToggle] =
+    useState<DanceAiPreviewButtonToggleState>(
+      DanceAiPreviewButtonToggleState.EFFECT
+    );
   const [explanationProgress, setExplanationProgress] = useState<number>(0);
 
   const aiModalBlockId = useSelector(
@@ -226,12 +229,12 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
 
   // Handle the case in which the modal is created with an existing value.
   useEffect(() => {
-    if (mode === Mode.INITIAL) {
+    if (mode === DanceAiModalMode.INITIAL) {
       const previousValueString = currentAiModalField?.getValue();
       if (previousValueString) {
         const previousValue: AiFieldValue = JSON.parse(previousValueString);
 
-        setMode(Mode.RESULTS);
+        setMode(DanceAiModalMode.RESULTS);
         setInputs(previousValue.inputs);
         setGeneratingProgress({step: BAD_GENERATED_RESULTS_COUNT, subStep: 0});
 
@@ -245,7 +248,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
         minMaxAssociations.current = calculateMinMax(previousValue.inputs);
       } else {
         setTimeout(() => {
-          setMode(Mode.SELECT_INPUTS);
+          setMode(DanceAiModalMode.SELECT_INPUTS);
         }, 500);
       }
     }
@@ -308,7 +311,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
 
   const startGenerating = useCallback(() => {
     startAi();
-    setMode(Mode.GENERATING);
+    setMode(DanceAiModalMode.GENERATING);
   }, [startAi]);
 
   const handleGenerateClick = useCallback(() => {
@@ -330,7 +333,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
       setInputs([]);
       setGeneratingProgress({step: 0, subStep: 0});
       setGeneratedProgress(0);
-      setMode(Mode.SELECT_INPUTS);
+      setMode(DanceAiModalMode.SELECT_INPUTS);
     },
     [inputs]
   );
@@ -352,7 +355,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
 
     setGeneratingProgress({step: 0, subStep: 0});
     setGeneratedProgress(0);
-    setCurrentToggle(Toggle.EFFECT);
+    setCurrentToggle(DanceAiPreviewButtonToggleState.EFFECT);
     startGenerating();
   }, [startGenerating, inputs]);
 
@@ -363,7 +366,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
 
     setGeneratedProgress(0);
     setExplanationProgress(0);
-    setMode(Mode.EXPLANATION);
+    setMode(DanceAiModalMode.EXPLANATION);
   }, [inputs]);
 
   const handleUseClick = useCallback(() => {
@@ -384,7 +387,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
   }, [currentAiModalField, inputs, onClose]);
 
   const handleLeaveExplanation = useCallback(() => {
-    setMode(Mode.RESULTS);
+    setMode(DanceAiModalMode.RESULTS);
   }, []);
 
   // One-shot update of step & substep.
@@ -412,19 +415,22 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
 
   // Handle moments when we should play a sound or do another action.
   useEffect(() => {
-    if (mode === Mode.GENERATING && generatingProgress.subStep === 0) {
+    if (
+      mode === DanceAiModalMode.GENERATING &&
+      generatingProgress.subStep === 0
+    ) {
       if (generatingProgress.step < BAD_GENERATED_RESULTS_COUNT) {
         playSound('ai-generate-no', {volume: 0.2});
       } else {
-        setMode(Mode.GENERATED);
+        setMode(DanceAiModalMode.GENERATED);
       }
-    } else if (mode === Mode.GENERATED) {
+    } else if (mode === DanceAiModalMode.GENERATED) {
       if (generatedProgress === 0) {
         playSound('ai-generate-yes', {volume: 0.2});
       } else if (generatedProgress === GENERATED_STEPS_COUNT - 1) {
-        setMode(Mode.RESULTS);
+        setMode(DanceAiModalMode.RESULTS);
       }
-    } else if (mode === Mode.EXPLANATION) {
+    } else if (mode === DanceAiModalMode.EXPLANATION) {
       if (explanationProgress < EXPLANATION_STEPS_COUNT - 1) {
         playSound('ai-generate-no', {volume: 0.2});
       } else {
@@ -451,23 +457,23 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
   // Animate through the generating or explanation process.
   useInterval(
     () => {
-      if (mode === Mode.GENERATING) {
+      if (mode === DanceAiModalMode.GENERATING) {
         setGeneratingProgress(updateGeneratingProgress);
-      } else if (mode === Mode.GENERATED) {
+      } else if (mode === DanceAiModalMode.GENERATED) {
         if (generatedProgress < GENERATED_STEPS_COUNT - 1) {
           setGeneratedProgress(progress => progress + 1);
         }
-      } else if (mode === Mode.EXPLANATION) {
+      } else if (mode === DanceAiModalMode.EXPLANATION) {
         if (explanationProgress < EXPLANATION_STEPS_COUNT - 1) {
           setExplanationProgress(progress => progress + 1);
         }
       }
     },
-    mode === Mode.GENERATING
+    mode === DanceAiModalMode.GENERATING
       ? getGeneratingStepDuration()
-      : mode === Mode.GENERATED
+      : mode === DanceAiModalMode.GENERATED
       ? GENERATED_STEP_DURATION
-      : mode === Mode.EXPLANATION
+      : mode === DanceAiModalMode.EXPLANATION
       ? EXPLANATION_STEP_DURATION
       : undefined
   );
@@ -536,26 +542,26 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
   }, [inputs, mode, currentToggle, generatingProgress.step, onClose]);
 
   const showUseButton =
-    mode === Mode.RESULTS &&
-    currentToggle === Toggle.EFFECT &&
+    mode === DanceAiModalMode.RESULTS &&
+    currentToggle === DanceAiPreviewButtonToggleState.EFFECT &&
     (aiOutput === AiOutput.AI_BLOCK || aiOutput === AiOutput.BOTH);
 
   const showConvertButton =
-    mode === Mode.RESULTS &&
-    currentToggle === Toggle.CODE &&
+    mode === DanceAiModalMode.RESULTS &&
+    currentToggle === DanceAiPreviewButtonToggleState.CODE &&
     (aiOutput === AiOutput.GENERATED_BLOCKS || aiOutput === AiOutput.BOTH);
 
   let aiBotHead = aiBotHeadNormal;
   let aiBotBody = aiBotBodyNormal;
 
   if (
-    mode === Mode.GENERATED ||
-    (mode === Mode.GENERATING &&
+    mode === DanceAiModalMode.GENERATED ||
+    (mode === DanceAiModalMode.GENERATING &&
       generatingProgress.step >= BAD_GENERATED_RESULTS_COUNT)
   ) {
     aiBotHead = aiBotHeadYes;
     aiBotBody = aiBotBodyYes;
-  } else if (mode === Mode.GENERATING) {
+  } else if (mode === DanceAiModalMode.GENERATING) {
     aiBotBody =
       aiBotBodyThinkImages[
         generatingProgress.step % aiBotBodyThinkImages.length
@@ -579,17 +585,19 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
   const previewAppearDuration = getGeneratingStepDuration() / 2.5;
 
   const text =
-    mode === Mode.SELECT_INPUTS
+    mode === DanceAiModalMode.SELECT_INPUTS
       ? i18n.danceAiModalChooseEmoji()
-      : mode === Mode.GENERATING
+      : mode === DanceAiModalMode.GENERATING
       ? i18n.danceAiModalFinding2()
-      : mode === Mode.GENERATED
+      : mode === DanceAiModalMode.GENERATED
       ? i18n.danceAiModalGenerating2()
-      : mode === Mode.RESULTS && currentToggle === Toggle.EFFECT
+      : mode === DanceAiModalMode.RESULTS &&
+        currentToggle === DanceAiPreviewButtonToggleState.EFFECT
       ? i18n.danceAiModalEffect2()
-      : mode === Mode.RESULTS && currentToggle === Toggle.CODE
+      : mode === DanceAiModalMode.RESULTS &&
+        currentToggle === DanceAiPreviewButtonToggleState.CODE
       ? i18n.danceAiModalCode2()
-      : mode === Mode.EXPLANATION
+      : mode === DanceAiModalMode.EXPLANATION
       ? i18n.danceAiModalExplanation2()
       : undefined;
 
@@ -614,16 +622,16 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
       />
 
       <div id="ai-modal-inner-area" className={moduleStyles.innerArea}>
-        {mode === Mode.RESULTS && (
+        {mode === DanceAiModalMode.RESULTS && (
           <div
             id="toggle-area"
             className={moduleStyles.toggleArea}
-            style={{zIndex: mode === Mode.RESULTS ? 1 : 0}}
+            style={{zIndex: mode === DanceAiModalMode.RESULTS ? 1 : 0}}
           >
             <ToggleGroup
               selected={currentToggle}
               activeColor={color['light_primary_500']}
-              onChange={(value: Toggle) => {
+              onChange={(value: DanceAiPreviewButtonToggleState) => {
                 setCurrentToggle(value);
               }}
               useRebrandedLikeStyles
@@ -631,11 +639,15 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
               <button
                 id="toggle-effect-button"
                 type="button"
-                value={Toggle.EFFECT}
+                value={DanceAiPreviewButtonToggleState.EFFECT}
               >
                 {i18n.danceAiModalEffectButton()}
               </button>
-              <button id="toggle-code-button" type="button" value={Toggle.CODE}>
+              <button
+                id="toggle-code-button"
+                type="button"
+                value={DanceAiPreviewButtonToggleState.CODE}
+              >
                 {i18n.danceAiModalCodeButton()}
               </button>
             </ToggleGroup>
@@ -648,7 +660,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
           </div>
         )}
 
-        {mode === Mode.SELECT_INPUTS && (
+        {mode === DanceAiModalMode.SELECT_INPUTS && (
           <DanceAiModalEmojiInputGrid
             selectedEmojis={selectedEmojis}
             handleItemClick={handleItemClick}
@@ -656,7 +668,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
         )}
 
         <div id="bot-area" className={moduleStyles.botArea}>
-          {mode === Mode.SELECT_INPUTS && lastInputItem && (
+          {mode === DanceAiModalMode.SELECT_INPUTS && lastInputItem && (
             <div
               key={inputAddCount}
               id="flying-emoji"
@@ -668,17 +680,17 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
               />
             </div>
           )}
-          {(mode === Mode.INITIAL ||
-            mode === Mode.SELECT_INPUTS ||
-            mode === Mode.GENERATING ||
-            mode === Mode.GENERATED ||
-            mode === Mode.RESULTS) && (
+          {(mode === DanceAiModalMode.INITIAL ||
+            mode === DanceAiModalMode.SELECT_INPUTS ||
+            mode === DanceAiModalMode.GENERATING ||
+            mode === DanceAiModalMode.GENERATED ||
+            mode === DanceAiModalMode.RESULTS) && (
             <div className={moduleStyles.botContainer}>
               <img
                 src={aiBotHead}
                 className={classNames(
                   moduleStyles.botHead,
-                  mode === Mode.SELECT_INPUTS &&
+                  mode === DanceAiModalMode.SELECT_INPUTS &&
                     currentInputSlot < SLOT_COUNT &&
                     moduleStyles.botHeadOpen
                 )}
@@ -693,9 +705,9 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
           )}
         </div>
 
-        {(mode === Mode.GENERATING ||
-          mode === Mode.GENERATED ||
-          mode === Mode.RESULTS) && (
+        {(mode === DanceAiModalMode.GENERATING ||
+          mode === DanceAiModalMode.GENERATED ||
+          mode === DanceAiModalMode.RESULTS) && (
           <DanceAiModalFlipCard
             mode={mode}
             generatingProgressStep={generatingProgress.step}
@@ -707,13 +719,13 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
           />
         )}
 
-        {mode === Mode.GENERATED && (
+        {mode === DanceAiModalMode.GENERATED && (
           <div id="check-area" className={moduleStyles.checkArea}>
             <i className="fa fa-check-circle" />
           </div>
         )}
 
-        {mode === Mode.EXPLANATION && currentGeneratedEffect && (
+        {mode === DanceAiModalMode.EXPLANATION && currentGeneratedEffect && (
           <div id="explanation-area" className={moduleStyles.explanationArea}>
             <div className={moduleStyles.key}>
               {selectedEmojis.map((item, index) => (
@@ -787,7 +799,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
           <div id="buttons-area-top-left">
             <ModalButton
               currentMode={mode}
-              showFor={[Mode.RESULTS]}
+              showFor={[DanceAiModalMode.RESULTS]}
               id="start-over-button"
               onClick={handleStartOverClickNotUsingHeader}
               color={Button.ButtonColor.neutralDark}
@@ -804,7 +816,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
           <div id="buttons-area-top-right">
             <ModalButton
               currentMode={mode}
-              showFor={[Mode.RESULTS]}
+              showFor={[DanceAiModalMode.RESULTS]}
               id="explanation-button"
               onClick={handleExplanationClick}
               color={Button.ButtonColor.neutralDark}
@@ -820,7 +832,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
 
             <ModalButton
               currentMode={mode}
-              showFor={[Mode.EXPLANATION]}
+              showFor={[DanceAiModalMode.EXPLANATION]}
               id="leave-explanation-button"
               onClick={handleLeaveExplanation}
               color={Button.ButtonColor.brandSecondaryDefault}
@@ -840,7 +852,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
           <div>
             <ModalButton
               currentMode={mode}
-              showFor={[Mode.RESULTS]}
+              showFor={[DanceAiModalMode.RESULTS]}
               id="regenerate-button"
               onClick={handleRegenerateClick}
               color={Button.ButtonColor.neutralDark}
@@ -857,7 +869,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
             {currentInputSlot >= SLOT_COUNT && (
               <ModalButton
                 currentMode={mode}
-                showFor={[Mode.SELECT_INPUTS]}
+                showFor={[DanceAiModalMode.SELECT_INPUTS]}
                 id="generate-button"
                 text={i18n.danceAiModalGenerateButton()}
                 onClick={handleGenerateClick}

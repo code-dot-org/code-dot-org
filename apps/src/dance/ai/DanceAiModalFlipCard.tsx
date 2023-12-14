@@ -5,14 +5,14 @@ import classNames from 'classnames';
 import AiVisualizationPreview from './AiVisualizationPreview';
 import AiBlockPreview from './AiBlockPreview';
 
-import {Mode, Toggle} from './types';
+import {DanceAiModalMode, DanceAiPreviewButtonToggleState} from './types';
 import {getPreviewCode} from './utils';
 
 type DanceAiModalFlipCardProps = {
-  mode: Mode;
+  mode: DanceAiModalMode;
   generatingProgressStep: number;
   badGeneratedResultsCount: number;
-  currentToggle: Toggle;
+  currentToggle: DanceAiPreviewButtonToggleState;
   previewAppearDuration: number;
   currentGeneratedEffect: any;
   getGeneratedEffect: any;
@@ -52,12 +52,15 @@ const DanceAiModalFlipCard: React.FunctionComponent<
   // one appears, it will smoothly fade in over the top of the previous one.
   const indexesToPreview = useMemo(() => {
     const indexesToPreview = [];
-    if (mode === Mode.GENERATING || mode === Mode.GENERATED) {
+    if (
+      mode === DanceAiModalMode.GENERATING ||
+      mode === DanceAiModalMode.GENERATED
+    ) {
       if (generatingProgressStep > 0) {
         indexesToPreview.push(generatingProgressStep - 1);
       }
       indexesToPreview.push(generatingProgressStep);
-    } else if (mode === Mode.RESULTS) {
+    } else if (mode === DanceAiModalMode.RESULTS) {
       indexesToPreview.push(badGeneratedResultsCount);
     }
 
@@ -66,8 +69,8 @@ const DanceAiModalFlipCard: React.FunctionComponent<
 
   let previewAreaClass = undefined;
   if (
-    mode === Mode.GENERATED ||
-    (mode === Mode.GENERATING &&
+    mode === DanceAiModalMode.GENERATED ||
+    (mode === DanceAiModalMode.GENERATING &&
       generatingProgressStep >= badGeneratedResultsCount)
   ) {
     previewAreaClass = moduleStyles.previewAreaYes;
@@ -83,8 +86,8 @@ const DanceAiModalFlipCard: React.FunctionComponent<
           id="flip-card-inner"
           className={classNames(
             moduleStyles.flipCardInner,
-            mode === Mode.RESULTS &&
-              currentToggle === Toggle.CODE &&
+            mode === DanceAiModalMode.RESULTS &&
+              currentToggle === DanceAiPreviewButtonToggleState.CODE &&
               moduleStyles.flipCardInnerFlipped
           )}
         >
@@ -109,7 +112,7 @@ const DanceAiModalFlipCard: React.FunctionComponent<
             })}
           </div>
           <div id="flip-card-back" className={moduleStyles.flipCardBack}>
-            {mode === Mode.RESULTS && (
+            {mode === DanceAiModalMode.RESULTS && (
               <div id="block-preview" className={moduleStyles.blockPreview}>
                 {currentGeneratedEffect && (
                   <AiBlockPreview results={currentGeneratedEffect} />

@@ -47,7 +47,7 @@ export enum EffectsQuality {
   BAD = 'bad',
 }
 
-export enum Mode {
+export enum DanceAiModalMode {
   INITIAL = 'initial',
   SELECT_INPUTS = 'selectInputs',
   GENERATING = 'generating',
@@ -56,7 +56,7 @@ export enum Mode {
   EXPLANATION = 'explanation',
 }
 
-export enum Toggle {
+export enum DanceAiPreviewButtonToggleState {
   EFFECT = 'effect',
   CODE = 'code',
 }
