@@ -1,0 +1,41 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'IAM Role and Log Group for Security Monitoring'
+
+Resources:
+  SecurityMonitoringRole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      RoleName: 'SecurityMonitoringRole'
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: 'Allow'
+            Principal:
+              Service: 'vpc-flow-logs.amazonaws.com'
+            Action: 'sts:AssumeRole'
+      Policies:
+        - PolicyName: 'CloudWatchLogsPolicy'
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: 'Allow'
+                Action:
+                  - 'logs:CreateLogStream'
+                  - 'logs:PutLogEvents'
+                  - 'logs:DescribeLogStreams'
+                Resource: !Sub 'arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/vpc/security_monitoring:*'
+
+  SecurityMonitoringLogGroup:
+    Type: 'AWS::Logs::LogGroup'
+    Properties:
+      LogGroupName: '/aws/vpc/security_monitoring'
+      RetentionInDays: 365
+
+Outputs:
+  SecurityMonitoringRoleArn:
+    Description: 'ARN of the Security Monitoring IAM Role'
+    Value: !GetAtt SecurityMonitoringRole.Arn
+
+  SecurityMonitoringLogGroupName:
+    Description: 'Name of the Security Monitoring Log Group'
+    Value: !Ref SecurityMonitoringLogGroup
