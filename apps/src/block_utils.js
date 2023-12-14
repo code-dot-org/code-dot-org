@@ -550,6 +550,15 @@ const LABELED_INPUT_PARTS_REGEX = /(.*?)({([^}]*)}|\n|$)/m;
  * @returns InputConfig the input config with name `inputName`
  */
 const findAndRemoveInputConfig = (args, inputName, blockText) => {
+  if (args.length === 0) {
+    MetricsReporter.logWarning({
+      event: 'BLOCK_MISSING_INPUT',
+      message: `${inputName} not found in args. No args remaining.`,
+      blockText,
+    });
+    return null;
+  }
+
   let argIndex = args.findIndex(arg => arg.name === inputName);
   if (argIndex === -1) {
     // In the case of a missing input, default to the first available arg.
@@ -586,6 +595,13 @@ const determineInputs = function (text, args, strictTypes = []) {
     const inputName = parts[3];
     if (inputName) {
       const arg = findAndRemoveInputConfig(args, inputName, text);
+      if (arg === null) {
+        // If no valid arg was found, just use the label.
+        return {
+          mode: DUMMY_INPUT,
+          label,
+        };
+      }
       const strict = arg.strict || strictTypes.includes(arg.type);
       let mode;
       if (arg.options) {
