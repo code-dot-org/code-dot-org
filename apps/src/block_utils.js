@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import {styleTypes} from './blockly/themes/cdoBlockStyles.mjs';
 import xml from './xml';
+import MetricsReporter from './lib/metrics/MetricsReporter';
 
 const ATTRIBUTES_TO_CLEAN = ['uservisible', 'deletable', 'movable'];
 const DEFAULT_COLOR = [184, 1.0, 0.74];
@@ -545,14 +546,21 @@ const LABELED_INPUT_PARTS_REGEX = /(.*?)({([^}]*)}|\n|$)/m;
  * Finds the input config for the given input name, and removes it from args.
  * @param {InputConfig[]} args List of configs to search through
  * @param {string} inputName name of input to find and remove
+ * @param {string} blockText original block text used for metrics reporting in the case of a missing input
  * @returns InputConfig the input config with name `inputName`
  */
-const findAndRemoveInputConfig = (args, inputName) => {
-  const argIndex = args.findIndex(arg => arg.name === inputName);
-  if (argIndex !== -1) {
-    return args.splice(argIndex, 1)[0];
+const findAndRemoveInputConfig = (args, inputName, blockText) => {
+  let argIndex = args.findIndex(arg => arg.name === inputName);
+  if (argIndex === -1) {
+    // In the case of a missing input, default to the first available arg.
+    argIndex = 0;
+    MetricsReporter.logWarning({
+      event: 'BLOCK_MISSING_INPUT',
+      message: `${inputName} not found in args. Defaulting to ${args[argIndex].name}`,
+      blockText,
+    });
   }
-  throw new Error(`${inputName} not found in args`);
+  return args.splice(argIndex, 1)[0];
 };
 
 /**
@@ -577,7 +585,7 @@ const determineInputs = function (text, args, strictTypes = []) {
     const label = parts[1];
     const inputName = parts[3];
     if (inputName) {
-      const arg = findAndRemoveInputConfig(args, inputName);
+      const arg = findAndRemoveInputConfig(args, inputName, text);
       const strict = arg.strict || strictTypes.includes(arg.type);
       let mode;
       if (arg.options) {
