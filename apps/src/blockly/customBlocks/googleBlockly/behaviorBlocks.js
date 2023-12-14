@@ -235,17 +235,19 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
       allBehaviors.push({
         name: block.getFieldValue('NAME'),
         id: block.id,
+        behaviorId: block.behaviorId,
       })
     );
   });
 
-  allBehaviors.sort(nameComparator).forEach(({name, id}) => {
+  allBehaviors.sort(nameComparator).forEach(({name, id, behaviorId}) => {
     blockList.push({
       kind: 'block',
       type: BLOCK_TYPES.behaviorGet,
       extraState: {
         name,
         id,
+        behaviorId,
       },
       fields: {
         NAME: name,
