@@ -862,6 +862,7 @@ const styles = {
     backgroundColor: 'white',
     paddingLeft: 10,
     paddingRight: 10,
+    paddingTop: 5,
     position: 'absolute',
     top: HEADER_HEIGHT,
     bottom: 0,
