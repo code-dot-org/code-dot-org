@@ -883,6 +883,9 @@ fi:
     ikätovereitaan osallistumaan tietojenkäsittelytieteen luokkaan.
   cs_ambassador_application_date: Hakemukset avoinna 8.11.2023 saakka
   cs_ambassador_application_subhead: Lähetä hakemuksesi tänään yhdessä opettajan kanssa
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: Kysymyksiä? Ota yhteyttä [youngwomen@code.org]
     (%{email_url})
   cs_ambassador_do_heading: Mitä CS-lähettiläät tekevät?

@@ -896,6 +896,9 @@ uk:
     гендерний розрив, заохочуючи своїх однолітків пройти курс інформатики.
   cs_ambassador_application_date: Заявки відкриті до 8 листопада 2023 року
   cs_ambassador_application_subhead: Попрацюйте з вчительем, щоб подати заявку сьогодні
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: Питання? Будь ласка, зв'яжіться з [youngwomen@code.org]
     (%{email_url})
   cs_ambassador_do_heading: Що роблять амбасадори CS?

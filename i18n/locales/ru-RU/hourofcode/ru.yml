@@ -924,6 +924,9 @@ ru:
     курсы информатики.
   cs_ambassador_application_date: Заявки принимаются до 8 ноября 2023 года
   cs_ambassador_application_subhead: Поработайте с учителем, чтобы подать заявку сегодня
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: Вопросы? Пожалуйста, свяжитесь с нами по адресу
     [youngwomen@code.org] (%{email_url})
   cs_ambassador_do_heading: Чем занимаются послы CS?

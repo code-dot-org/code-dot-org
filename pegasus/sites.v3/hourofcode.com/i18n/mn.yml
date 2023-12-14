@@ -916,6 +916,9 @@ mn:
     хичээлд хамрагдахыг уриалснаар энэ жендэрийн зөрүүг хаахад тусалж чадна.
   cs_ambassador_application_date: Өргөдөл 2023 оны 11-р сарын 8-ны өдөр хүртэл нээлттэй
   cs_ambassador_application_subhead: Өнөөдөр өргөдлөө өгөхдөө багштай хамтран ажиллаарай
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: Асуулт? Холбоо барих уу [youngwomen@code.org]
     (%{email_url})
   cs_ambassador_do_heading: CS Элчин сайдууд юу хийдэг вэ?
