@@ -91,7 +91,7 @@ class Blockly < Level
 
   def summarize_for_lab2_properties(script)
     level_properties = super
-    level_properties[:sharedBlocks] = localized_blockly_level_options(script).dup["sharedBlocks"]
+    level_properties[:sharedBlocks] = localized_blockly_level_options(script)["sharedBlocks"]
     level_properties
   end
 

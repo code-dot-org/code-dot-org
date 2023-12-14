@@ -8,7 +8,6 @@ const blockUtils = require('@cdo/apps/block_utils');
 export function setUpBlocklyForDanceLab(
   levelProperties: LevelProperties | undefined
 ) {
-  const blocksModule = danceBlocks;
   const skin = levelProperties?.skin || undefined;
   const isK1 = levelProperties?.isK1 || undefined;
   const blockInstallOptions = {
@@ -17,11 +16,11 @@ export function setUpBlocklyForDanceLab(
     level: levelProperties,
   };
   commonBlocks.install(Blockly, blockInstallOptions);
-  blocksModule.install(Blockly);
+  danceBlocks.install(Blockly);
   const blocksByCategory = blockUtils.installCustomBlocks({
     blockly: Blockly,
     blockDefinitions: levelProperties?.sharedBlocks,
-    customInputTypes: blocksModule.customInputTypes,
+    customInputTypes: danceBlocks.customInputTypes,
   });
   Blockly.setInfiniteLoopTrap();
   return blocksByCategory; // TODO: use when implementing pathway for toolbox editing for levelbuilders
