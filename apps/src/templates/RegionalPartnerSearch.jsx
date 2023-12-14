@@ -592,7 +592,6 @@ const styles = {
   bigButton: {
     padding: '10px 20px 10px 20px',
     height: 'initial',
-    //marginTop: 22,
     backgroundColor: color.brand_secondary_default,
     borderColor: color.brand_secondary_default,
     ...fontConstants['main-font-semi-bold'],
