@@ -196,7 +196,7 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   };
 
   // If the modal function editor is enabled, we render a button to open the editor
-  // Otherwise, we render a "blank" behavior definition block
+  // Behaviors are not editable without the modal editor open
   if (functionEditorOpen) {
     // No-op - cannot create new behaviors while the modal editor is open
   } else if (Blockly.useModalFunctionEditor) {

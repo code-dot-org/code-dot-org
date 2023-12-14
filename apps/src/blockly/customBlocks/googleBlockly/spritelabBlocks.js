@@ -6,17 +6,17 @@ import {updatePointerBlockImage} from '@cdo/apps/blockly/addons/cdoSpritePointer
 import CdoFieldFlyout from '@cdo/apps/blockly/addons/cdoFieldFlyout';
 import {spriteLabPointers} from '@cdo/apps/p5lab/spritelab/blockly/constants';
 import {blocks as behaviorBlocks} from './behaviorBlocks';
+import {BLOCK_TYPES, NO_OPTIONS_MESSAGE} from '@cdo/apps/blockly/constants';
+import {FALSEY_DEFAULT, readBooleanAttribute} from '@cdo/apps/blockly/utils';
+import {
+  editButtonHandler,
+  toolboxConfigurationSupportsEditButton,
+} from './proceduresBlocks';
 
 const INPUTS = {
   FLYOUT: 'flyout_input',
   STACK: 'STACK',
 };
-import {BLOCK_TYPES, NO_OPTIONS_MESSAGE} from '@cdo/apps/blockly/constants';
-import {readBooleanAttribute} from '@cdo/apps/blockly/utils';
-import {
-  editButtonHandler,
-  toolboxConfigurationSupportsEditButton,
-} from './proceduresBlocks';
 
 // This file contains customizations to Google Blockly Sprite Lab blocks.
 export const blocks = {
@@ -177,7 +177,7 @@ export const blocks = {
         // Assume default icon if no XML attribute present
         !xmlElement.hasAttribute('useDefaultIcon') ||
         // Coerce string to Boolean
-        readBooleanAttribute(xmlElement, 'useDefaultIcon');
+        readBooleanAttribute(xmlElement, 'useDefaultIcon', FALSEY_DEFAULT);
       flyoutToggleButton.setIcon(useDefaultIcon);
     };
   },
