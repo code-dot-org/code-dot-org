@@ -328,7 +328,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
         usingHeader,
       });
       setInputs([]);
-      setCurrentInputSlot(0);
       setGeneratingProgress({step: 0, subStep: 0});
       setGeneratedProgress(0);
       setMode(Mode.SELECT_INPUTS);
@@ -338,6 +337,11 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
 
   const handleStartOverClickUsingHeader = useCallback(
     () => handleStartOverClick(true),
+    [handleStartOverClick]
+  );
+
+  const handleStartOverClickNotUsingHeader = useCallback(
+    () => handleStartOverClick(false),
     [handleStartOverClick]
   );
 
