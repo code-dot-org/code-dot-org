@@ -16,7 +16,6 @@ const rulesToEventuallyReenable = {
   'jsx-a11y/label-has-associated-control': 'off',
   'jsx-a11y/media-has-caption': 'off',
   'jsx-a11y/mouse-events-have-key-events': 'off',
-  'jsx-a11y/no-autofocus': 'off',
   'jsx-a11y/no-noninteractive-element-to-interactive-role': 'off',
   'jsx-a11y/no-noninteractive-tabindex': 'off',
   'jsx-a11y/no-static-element-interactions': 'off',
