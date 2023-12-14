@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
 import ScriptLevelRedirectDialog from '@cdo/apps/code-studio/components/ScriptLevelRedirectDialog';
@@ -73,13 +74,15 @@ function initPage() {
     );
     if (rubricFabMountPoint) {
       ReactDOM.render(
-        <RubricFloatingActionButton
-          rubric={rubric}
-          studentLevelInfo={studentLevelInfo}
-          reportingData={reportingData}
-          currentLevelName={config.level_name}
-          aiEnabled={experiments.isEnabled('ai-rubrics')}
-        />,
+        <Provider store={getStore()}>
+          <RubricFloatingActionButton
+            rubric={rubric}
+            studentLevelInfo={studentLevelInfo}
+            reportingData={reportingData}
+            currentLevelName={config.level_name}
+            aiEnabled={experiments.isEnabled('ai-rubrics')}
+          />
+        </Provider>,
         rubricFabMountPoint
       );
     }
