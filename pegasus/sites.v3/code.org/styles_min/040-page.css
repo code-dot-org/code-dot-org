@@ -290,7 +290,17 @@ input[type=submit] {
     color: var(--neutral_dark70);
   }
 
-  /* Small button styles */
+  /* Big button styles
+    - this can be used in combination
+    with the other classes */
+  &.big {
+    font-size: 1.25rem;
+    padding-inline: 1.25rem;
+  }
+
+  /* Small button styles
+    - this can be used in combination
+    with the other classes */
   &.small {
     font-size: 0.875rem;
     padding: 0.5rem 0.75rem;
