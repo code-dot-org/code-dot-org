@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import AssetManager from './AssetManager';
-import color from '../../util/color';
 import {
   SOUND_PREFIX,
   DEFAULT_SOUND_PATH_PREFIX,
@@ -10,7 +9,8 @@ import SoundLibrary from './SoundLibrary';
 import i18n from '@cdo/locale';
 import Sounds from '../../Sounds';
 import {RecordingFileType} from './recorders';
-import fontConstants from '@cdo/apps/fontConstants';
+import classnames from 'classnames';
+import moduleStyle from './components.module.scss';
 
 const audioExtension = '.mp3';
 
@@ -53,52 +53,42 @@ export default class SoundPicker extends React.Component {
 
   render() {
     const isFileMode = this.state.mode === MODE.files;
-    const headerStyles = {
-      soundModeToggle: {
-        float: 'left',
-        margin: '0 20px 0 0',
-        fontSize: 16,
-        cursor: 'pointer',
-      },
-      fileModeToggle: {
-        margin: 0,
-        fontSize: 16,
-        cursor: 'pointer',
-      },
-    };
 
-    if (isFileMode) {
-      headerStyles.soundModeToggle = {
-        ...headerStyles.soundModeToggle,
-        color: color.light_gray,
-      };
+    const soundModeToggleClassNames = classnames(
+      moduleStyle.modeSwitchButton,
+      moduleStyle.soundModeToggle,
+      {
+        [moduleStyle.selectedToggle]: !isFileMode,
+        [moduleStyle.unselectedToggle]: isFileMode,
+      }
+    );
 
-      headerStyles.fileModeToggle = {
-        ...headerStyles.fileModeToggle,
-        ...fontConstants['main-font-semi-bold'],
-      };
-    } else {
-      headerStyles.soundModeToggle = {
-        ...headerStyles.soundModeToggle,
-        ...fontConstants['main-font-semi-bold'],
-      };
-      headerStyles.fileModeToggle = {
-        ...headerStyles.fileModeToggle,
-        color: color.light_gray,
-      };
-    }
+    const fileModeToggleClassNames = classnames(
+      moduleStyle.modeSwitchButton,
+      moduleStyle.fileModeToggle,
+      {
+        [moduleStyle.selectedToggle]: isFileMode,
+        [moduleStyle.unselectedToggle]: !isFileMode,
+      }
+    );
 
-    let modeSwitch;
-    let title = <p>{i18n.chooseSounds()}</p>;
-
-    modeSwitch = (
+    const title = <p>{i18n.chooseSounds()}</p>;
+    const modeSwitch = (
       <div id="modeSwitch">
-        <p onClick={this.setSoundMode} style={headerStyles.soundModeToggle}>
+        <button
+          onClick={this.setSoundMode}
+          className={soundModeToggleClassNames}
+          type="button"
+        >
           {i18n.soundLibrary()}
-        </p>
-        <p onClick={this.setFileMode} style={headerStyles.fileModeToggle}>
+        </button>
+        <button
+          onClick={this.setFileMode}
+          className={fileModeToggleClassNames}
+          type="button"
+        >
           {i18n.makeNewSounds()}
-        </p>
+        </button>
       </div>
     );
 
@@ -119,12 +109,12 @@ export default class SoundPicker extends React.Component {
         />
       );
     return (
-      <div className="modal-content" style={styles.root}>
+      <div className={classnames('modal-content', moduleStyle.soundPickerRoot)}>
         {title}
         {!this.props.libraryOnly && (
           <div>
             {this.props.showUnderageWarning && (
-              <p style={styles.warning}>
+              <p className={moduleStyle.soundPickerWarning}>
                 Warning: Do not upload anything that contains personal
                 information.
               </p>
@@ -132,24 +122,9 @@ export default class SoundPicker extends React.Component {
             {modeSwitch}
           </div>
         )}
-        <hr style={styles.divider} />
+        <hr className={moduleStyle.soundPickerDivider} />
         {body}
       </div>
     );
   }
 }
-
-const styles = {
-  root: {
-    margin: '0 0 0 5px',
-  },
-  divider: {
-    borderColor: color.purple,
-    margin: '5px 0',
-  },
-  warning: {
-    color: color.red,
-    fontSize: 13,
-    fontWeight: 'bold',
-  },
-};
