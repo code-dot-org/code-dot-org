@@ -2,6 +2,7 @@
 @import 'color';
 @import 'font';
 
+// Styles used for AdvancedShareOptions
 .root {
   margin-top: 20px;
 }
@@ -32,7 +33,7 @@
   li {
     display: inline-block;
     color: $neutral_dark90;
-    
+
     @include main-font-semi-bold;
     font-size: larger;
     margin-right: 10px;
@@ -44,7 +45,7 @@ p.regularText {
   font-size: inherit;
   line-height: inherit;
   color: $neutral_dark;
-  
+
   @include main-font-semi-bold;
 }
 
@@ -62,8 +63,42 @@ p.warningText {
 .expand {
   @include remove-button-styles;
   color: $brand_secondary_default;
-  
+
   @include main-font-semi-bold;
   font-size: 13px;
   cursor: pointer;
+}
+
+// Styles for SoundPicker
+
+.soundPickerRoot {
+  margin: 0 0 0 5px;
+}
+
+.soundPickerDivider {
+  border-color: $purple;
+  margin: 5px 0;
+}
+
+.modeSwitchButton {
+  @include remove-button-styles;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.soundModeToggle {
+  float: left;
+  margin: 0 20px 0 0;
+}
+
+.fileModeToggle {
+  margin: 0;
+}
+
+.selectedToggle {
+  @include main-font-semi-bold;
+}
+
+.unselectedToggle {
+  color: $light_gray;
 }
