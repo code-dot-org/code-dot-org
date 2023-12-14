@@ -1802,7 +1802,7 @@
             <arg name="this sprite" type="Sprite"/>
             <description>change the size of a sprite</description>
           </mutation>
-          <title name="NAME" id="shrinking">shrinking</title>
+          <title name="NAME" id="shrinking">swimming in a group</title>
           <statement name="STACK">
             <block type="gamelab_changePropBy" uservisible="false">
               <title name="PROPERTY">"scale"</title>

@@ -1,6 +1,10 @@
 import {BLOCK_TYPES, PROCEDURE_DEFINITION_TYPES} from '../constants';
 import {partitionBlocksByType} from './cdoUtils';
-import {readBooleanAttribute} from '../utils';
+import {FALSEY_DEFAULT, readBooleanAttribute} from '../utils';
+
+// The user created attribute needs to be read from XML start blocks as 'usercreated'.
+// Once this has been done, all subsequent steps in the serialization use userCreated.
+const USER_CREATED_XML_ATTRIBUTE = 'usercreated';
 
 export default function initializeBlocklyXml(blocklyWrapper) {
   // Clear xml namespace
@@ -62,6 +66,7 @@ export default function initializeBlocklyXml(blocklyWrapper) {
 
       // Further manipulate the XML for specific top block types.
       addNameToBlockFunctionDefinitionBlock(xmlChild);
+      addMutationToProcedureDefBlocks(xmlChild);
       addMutationToBehaviorDefBlocks(xmlChild);
       addMutationToMiniToolboxBlocks(xmlChild);
       makeWhenRunUndeletable(xmlChild);
@@ -153,7 +158,11 @@ export function addMutationToBehaviorDefBlocks(blockElement) {
   // (e.g. shared behaviors).
   // In CDO Blockly, the 'usercreated' flag was set on the block. Google Blockly
   // expects this kind of extra state in a mutator.
-  const userCreated = readBooleanAttribute(blockElement, 'usercreated');
+  const userCreated = readBooleanAttribute(
+    blockElement,
+    USER_CREATED_XML_ATTRIBUTE,
+    FALSEY_DEFAULT
+  );
   mutationElement.setAttribute('userCreated', userCreated);
 
   // In CDO Blockly, behavior ids were stored on the field. Google Blockly
@@ -164,6 +173,35 @@ export function addMutationToBehaviorDefBlocks(blockElement) {
     // Create new mutation attribute based on original block attribute.
     mutationElement.setAttribute('behaviorId', idAttribute);
   }
+}
+
+/**
+ * Adds a mutation element to a block if it is a procedure definition.
+ * Currently, the only reason to have a mutator for procedures is to store
+ * the 'usercreated' property. Behavior definition mutators are more complicated,
+ * see addMutationToBehaviorDefBlocks.
+ *
+ * @param {Element} blockElement - The XML element for a single block.
+ */
+export function addMutationToProcedureDefBlocks(blockElement) {
+  if (blockElement.getAttribute('type') !== BLOCK_TYPES.procedureDefinition) {
+    return;
+  }
+  const mutationElement =
+    blockElement.querySelector('mutation') ||
+    blockElement.ownerDocument.createElement('mutation');
+  // Place mutator before fields, values, and other nested blocks.
+  blockElement.insertBefore(mutationElement, blockElement.firstChild);
+
+  // We need to keep track of whether the user created the procedure definition.
+  // In CDO Blockly, the 'usercreated' flag was set on the block. Google Blockly
+  // expects this kind of extra state in a mutator.
+  const userCreated = readBooleanAttribute(
+    blockElement,
+    USER_CREATED_XML_ATTRIBUTE,
+    FALSEY_DEFAULT
+  );
+  mutationElement.setAttribute('userCreated', userCreated);
 }
 
 /**

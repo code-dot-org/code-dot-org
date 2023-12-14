@@ -180,8 +180,11 @@ class RegionalPartnerSearch extends Component {
       <div>
         {this.state.showZip && (
           <form onSubmit={this.handleZipSubmit}>
-            <label style={styles.schoolZipLabel}>School ZIP Code:</label>
+            <label style={styles.schoolZipLabel} htmlFor="zipCode">
+              School ZIP Code:
+            </label>
             <input
+              id="zipCode"
               type="text"
               value={this.state.zipValue}
               onChange={this.handleZipChange}
