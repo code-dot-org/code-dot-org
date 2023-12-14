@@ -449,7 +449,7 @@ module LevelsHelper
     # Run Sprite Lab using Google Blockly unless we are editing start blocks
     # Allows us to transition the student experience to Google Blockly without modifying the levelbuilder experience yet
     return false if !!@is_start_mode && @level.is_a?(GamelabJr)
-    return true if Experiment.enabled?(experiment_name: 'google_blockly', user: current_user) && !@is_start_mode
+    return true if Experiment.enabled?(experiment_name: 'google_blockly', user: current_user)
     return true if view_options[:blocklyVersion]&.downcase == 'google'
     return false if view_options[:blocklyVersion]&.downcase == 'cdo'
     return true if @level.uses_google_blockly?

@@ -352,6 +352,12 @@ class LevelsHelperTest < ActionView::TestCase
     refute_equal channel, get_channel_for(level, script.id)
   end
 
+  test 'use_google_blockly is false if @is_start_mode is true and @level is GamelabJr' do
+    @is_start_mode = true
+    @level = build :level, type: 'GamelabJr'
+    refute use_google_blockly
+  end
+
   test 'use_google_blockly is false if not set' do
     Experiment.stubs(:enabled?).returns(false)
     @level = build :level
@@ -360,11 +366,19 @@ class LevelsHelperTest < ActionView::TestCase
     reset_view_options
   end
 
-  test 'use_google_blockly is false if Experiment is enabled but is_start_mode is true' do
+  test 'use_google_blockly is true if Experiment is enabled for google_blockly and @is_start_mode is false' do
+    @is_start_mode = false
+    Experiment.stubs(:enabled?).returns(true)
+    @level = build :level, type: 'GamelabJr'
+    assert use_google_blockly
+    Experiment.unstub(:enabled?)
+  end
+
+  test 'use_google_blockly is true if Experiment is enabled for google_blockly and it is not Sprite Lab start_mode' do
     @is_start_mode = true
     Experiment.stubs(:enabled?).returns(true)
     @level = build :level
-    refute use_google_blockly
+    assert use_google_blockly
     Experiment.unstub(:enabled?)
   end
 
@@ -375,24 +389,7 @@ class LevelsHelperTest < ActionView::TestCase
     Experiment.unstub(:enabled?)
   end
 
-  test 'use_google_blockly is true if Experiment is enabled for google_blockly' do
-    Experiment.stubs(:enabled?).returns(true)
-    @level = build :level
-    assert use_google_blockly
-    Experiment.unstub(:enabled?)
-  end
-
   test 'use_google_blockly is true if blocklyVersion is set to Google in view_options' do
-    Experiment.stubs(:enabled?).returns(false)
-    view_options(blocklyVersion: 'google')
-    @level = build :level
-    assert use_google_blockly
-    Experiment.unstub(:enabled?)
-    reset_view_options
-  end
-
-  test 'use_google_blockly is true if blocklyVersion is set to Google in view_options even if start_mode is true' do
-    @is_start_mode = true
     Experiment.stubs(:enabled?).returns(false)
     view_options(blocklyVersion: 'google')
     @level = build :level
