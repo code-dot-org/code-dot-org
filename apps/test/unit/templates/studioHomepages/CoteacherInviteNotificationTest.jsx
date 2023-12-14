@@ -89,4 +89,17 @@ describe('CoteacherInviteNotification', () => {
     expect(notification.props().type).to.equal(NotificationType.collaborate);
     expect(notification.props().notice).to.include('Ms. Frizzle');
   });
+
+  it('renders no notifications if there is no PL invite and isForPl is true', () => {
+    DCDO.set('show-coteacher-ui', true);
+    const wrapper = shallow(
+      <CoteacherInviteNotification
+        {...defaultProps}
+        isForPl={true}
+        coteacherInvite={null}
+        coteacherInviteForPl={null}
+      />
+    );
+    expect(wrapper.find(Notification).length).to.equal(0);
+  });
 });
