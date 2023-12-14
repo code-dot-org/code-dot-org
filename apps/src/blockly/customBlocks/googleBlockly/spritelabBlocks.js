@@ -13,7 +13,10 @@ const INPUTS = {
 };
 import {BLOCK_TYPES, NO_OPTIONS_MESSAGE} from '@cdo/apps/blockly/constants';
 import {readBooleanAttribute} from '@cdo/apps/blockly/utils';
-import {editButtonHandler} from './proceduresBlocks';
+import {
+  editButtonHandler,
+  toolboxConfigurationSupportsEditButton,
+} from './proceduresBlocks';
 
 // This file contains customizations to Google Blockly Sprite Lab blocks.
 export const blocks = {
@@ -317,14 +320,15 @@ export const blocks = {
     if (
       behaviorsFound &&
       Blockly.useModalFunctionEditor &&
-      block.workspace.toolbox_ &&
       // TODO: Support editing behaviors from within a modal editor workspace.
-      block.workspace.id === Blockly.getMainWorkspace().id
+      block.workspace.id === Blockly.getMainWorkspace().id &&
+      toolboxConfigurationSupportsEditButton(block)
     ) {
       const editButton = new Blockly.FieldButton({
         value: msg.edit(),
         onClick: editButtonHandler,
         colorOverrides: {button: 'blue', text: 'white'},
+        allowReadOnlyClick: true, // We support showing the editor even if viewing in read only mode.
       });
       block.inputList[block.inputList.length - 1].appendField(
         editButton,

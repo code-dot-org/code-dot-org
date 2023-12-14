@@ -1,94 +1,304 @@
 require_relative '../test_helper'
 require_relative '../../i18n/redact_restore_utils'
-require_relative '../../i18n/i18n_script_utils'
 
-class RedactRestoreUtilsTest < Minitest::Test
-  YAML_FIXTURE_PATH = CDO.dir('bin/test/fixtures/i18n_locales_source_dashboard_blocks.yml').freeze
-  JSON_FIXTURE_PATH = CDO.dir('bin/test/fixtures/i18n_locales_source_dashboard_docs.json').freeze
+describe RedactRestoreUtils do
+  let(:described_class) {RedactRestoreUtils}
 
-  def test_redaction_of_yaml_file
-    expected_source_path = YAML_FIXTURE_PATH
-    expected_source_data = 'expected_source_data'
-    expected_dest_dir_path = 'expected_dest_dir'
-    expected_dest_path = "#{expected_dest_dir_path}/dest.yml"
-    expected_dest_file = mock
-    expected_plugins = %w[testPlugin]
-    expected_format = 'txt'
-    expected_redacted_data = 'expected_redacted_data'
-    expected_redacted_yaml = 'expected_redacted_yaml'
-
-    YAML.stubs(:load_file).with(expected_source_path).returns(expected_source_data)
-    RedactRestoreUtils.stubs(:redact_data).with(expected_source_data, expected_plugins, expected_format).returns(expected_redacted_data)
-
-    File.stubs(:open).with(expected_dest_path, 'w+').yields(expected_dest_file)
-    I18nScriptUtils.stubs(:to_crowdin_yaml).returns(expected_redacted_yaml)
-
-    FileUtils.expects(:mkdir_p).with(expected_dest_dir_path).once
-    expected_dest_file.expects(:write).with(expected_redacted_yaml).once
-
-    RedactRestoreUtils.redact(expected_source_path, expected_dest_path, expected_plugins, expected_format)
+  around do |test|
+    FakeFS.with_fresh {test.call}
   end
 
-  def test_redaction_of_json_file
-    expected_source_path = JSON_FIXTURE_PATH
-    expected_source_data = 'expected_source_data'
-    expected_dest_dir_path = 'expected_dest_dir'
-    expected_dest_path = "#{expected_dest_dir_path}/dest.json"
-    expected_dest_file = mock
-    expected_plugins = %w[testPlugin]
-    expected_format = 'txt'
-    expected_redacted_data = 'expected_redacted_data'
-    expected_redacted_json = '"expected_redacted_data"'
+  describe '.redact_data' do
+    let(:redact_data) {described_class.redact_data(source_data, plugins, format)}
 
-    JSON.stubs(:load_file).with(expected_source_path).returns(expected_source_data)
-    RedactRestoreUtils.stubs(:redact_data).with(expected_source_data, expected_plugins, expected_format).returns(expected_redacted_data)
-    File.stubs(:open).with(expected_dest_path, 'w+').yields(expected_dest_file)
+    let(:source_data) {'expected_source_data'}
+    let(:plugins) {['expected_plugins']}
+    let(:format) {'expected_format'}
 
-    FileUtils.expects(:mkdir_p).with(expected_dest_dir_path).once
-    expected_dest_file.expects(:write).with(expected_redacted_json).once
+    it 'redacts the data' do
+      expected_args =
+        "#{CDO.dir('bin/i18n/node_modules/.bin/redact')} " \
+        "-p #{CDO.dir("bin/i18n/node_modules/@code-dot-org/remark-plugins/src/#{plugins.first}.js")} " \
+        "-f #{format}"
+      expected_stdin_data = JSON.generate(source_data)
+      redacted_data = 'expected_redacted_data'
 
-    RedactRestoreUtils.redact(expected_source_path, expected_dest_path, expected_plugins, expected_format)
+      Open3.expects(:capture2).with(expected_args, stdin_data: expected_stdin_data).returns([JSON.generate(redacted_data)])
+
+      assert_equal redacted_data, redact_data
+    end
+
+    context 'when no plugins are provided' do
+      let(:plugins) {[]}
+
+      it 'redacts the data without plugins' do
+        expected_args = "#{CDO.dir('bin/i18n/node_modules/.bin/redact')} -f #{format}"
+        expected_stdin_data = JSON.generate(source_data)
+        redacted_data = 'expected_redacted_data'
+
+        Open3.expects(:capture2).with(expected_args, stdin_data: expected_stdin_data).returns([JSON.generate(redacted_data)])
+
+        assert_equal redacted_data, redact_data
+      end
+    end
+
+    describe 'plugin testing' do
+      let(:format) {'md'}
+
+      let(:perform_plugin_testing) do
+        assert_equal({'test' => expected_result}, described_class.redact_data({'test' => redactable_data}, [plugin], format))
+      end
+
+      context 'when plugin is blockfield' do
+        let(:plugin) {'blockfield'}
+        let(:format) {'txt'}
+
+        let(:redactable_data) {"{TEST} \n {EXAMPLE}"}
+        let(:expected_result) {"[TEST][0] \n [EXAMPLE][1]"}
+
+        it 'returns correct redacted data', &proc {perform_plugin_testing}
+      end
+
+      context 'when plugin is visualCodeBlock' do
+        let(:plugin) {'visualCodeBlock'}
+
+        let(:redactable_data) {"\r\n - *test* - \n"}
+        let(:expected_result) {"-   _test_ - "}
+
+        it 'returns correct redacted data', &proc {perform_plugin_testing}
+      end
+
+      context 'when plugin is link' do
+        let(:plugin) {'link'}
+
+        let(:redactable_data) {'[link](https://example.org)'}
+        let(:expected_result) {'[link][0]'}
+
+        it 'returns correct redacted data', &proc {perform_plugin_testing}
+      end
+
+      context 'when plugin is resourceLink' do
+        let(:plugin) {'resourceLink'}
+
+        let(:redactable_data) {'[r test/example/1]'}
+        let(:expected_result) {'[test][0]'}
+
+        it 'returns correct redacted data', &proc {perform_plugin_testing}
+      end
+
+      context 'when plugin is vocabularyDefinition' do
+        let(:plugin) {'vocabularyDefinition'}
+
+        let(:redactable_data) {'[v test/example/1]'}
+        let(:expected_result) {'[test][0]'}
+
+        it 'returns correct redacted data', &proc {perform_plugin_testing}
+      end
+
+      context 'when plugin is blockly' do
+        let(:plugin) {'blockly'}
+
+        let(:redactable_data) {'<xml><block>block_content</block></xml>'}
+        let(:expected_result) {'[blockly block][0]'}
+
+        it 'returns correct redacted data', &proc {perform_plugin_testing}
+      end
+    end
   end
 
-  def test_redaction_of_data_with_blockfield_plugin_with_txt_format
-    raw_redact_data = {'test' => "{TEST} \n {EXAMPLE}"}
-    expected_result = {'test' => "[TEST][0] \n [EXAMPLE][1]"}
+  describe '.redact' do
+    let(:redact) {described_class.redact(source_file_path, target_file_path, plugins, format)}
 
-    assert_equal expected_result, RedactRestoreUtils.redact_data(raw_redact_data, %w[blockfield], 'txt')
+    let(:source_file_path) {'expected_source_file_path'}
+    let(:target_file_path) {'target_file_path'}
+    let(:plugins) {['expected_plugin']}
+    let(:format) {'expected_format'}
+
+    let(:source_data) {'expected_source_data'}
+    let(:redacted_data) {'expected_redacted_data'}
+
+    let(:source_file_is_json) {false}
+    let(:source_file_is_yaml) {false}
+
+    let(:expect_redacted_data_to_json_file_writing) do
+      I18nScriptUtils.expects(:write_json_file).with(target_file_path, redacted_data)
+    end
+    let(:expect_redacted_data_to_yaml_file_writing) do
+      I18nScriptUtils.expects(:write_yaml_file).with(target_file_path, redacted_data)
+    end
+
+    before do
+      FileUtils.touch(source_file_path)
+
+      I18nScriptUtils.stubs(:json_file?).with(source_file_path).returns(source_file_is_json)
+      I18nScriptUtils.stubs(:yaml_file?).with(source_file_path).returns(source_file_is_yaml)
+
+      I18nScriptUtils.stubs(:parse_file).with(source_file_path).returns(source_data)
+      RedactRestoreUtils.stubs(:redact_data).with(source_data, plugins, format).returns(redacted_data)
+
+      I18nScriptUtils.stubs(:write_json_file).with(target_file_path, redacted_data)
+      I18nScriptUtils.stubs(:write_yaml_file).with(target_file_path, redacted_data)
+    end
+
+    describe 'json source file' do
+      let(:source_file_is_json) {true}
+
+      it 'writes redacted data to the target file' do
+        expect_redacted_data_to_json_file_writing.once
+        redact
+      end
+
+      context 'when the source file does not exist' do
+        before do
+          FileUtils.rm(source_file_path)
+        end
+
+        it 'does not write redacted data to the target file' do
+          expect_redacted_data_to_json_file_writing.never
+          redact
+        end
+      end
+
+      context 'when plugins are not provided' do
+        let(:redact) {described_class.redact(source_file_path, target_file_path)}
+
+        let(:plugins) {[]}
+        let(:format) {anything}
+        let(:redacted_data) {'redacted_without_plugins_data'}
+
+        it 'writes redacted without plugins data to the target file' do
+          expect_redacted_data_to_json_file_writing.once
+          redact
+        end
+      end
+
+      context 'when format is not provided' do
+        let(:redact) {described_class.redact(source_file_path, target_file_path, plugins)}
+
+        let(:format) {'md'}
+        let(:redacted_data) {'redacted_md_data'}
+
+        it 'writes redacted md data to the target file' do
+          expect_redacted_data_to_json_file_writing.once
+          redact
+        end
+      end
+    end
+
+    describe 'yaml source file' do
+      let(:source_file_is_yaml) {true}
+
+      it 'writes redacted data to the target file' do
+        expect_redacted_data_to_yaml_file_writing.once
+        redact
+      end
+
+      context 'when the source file does not exist' do
+        before do
+          FileUtils.rm(source_file_path)
+        end
+
+        it 'does not write redacted data to the target file' do
+          expect_redacted_data_to_yaml_file_writing.never
+          redact
+        end
+      end
+
+      context 'when plugins are not provided' do
+        let(:redact) {described_class.redact(source_file_path, target_file_path)}
+
+        let(:plugins) {[]}
+        let(:format) {anything}
+        let(:redacted_data) {'redacted_without_plugins_data'}
+
+        it 'writes redacted without plugins data to the target file' do
+          expect_redacted_data_to_yaml_file_writing.once
+          redact
+        end
+      end
+
+      context 'when format is not provided' do
+        let(:redact) {described_class.redact(source_file_path, target_file_path, plugins)}
+
+        let(:format) {'md'}
+        let(:redacted_data) {'redacted_md_data'}
+
+        it 'writes redacted md data to the target file' do
+          expect_redacted_data_to_yaml_file_writing.once
+          redact
+        end
+      end
+    end
   end
 
-  def test_redaction_of_data_with_visual_code_block_plugin
-    raw_redact_data = {'test' => "\r\n - *test* - \n"}
-    expected_result = {'test' => "-   _test_ - "}
+  describe '.redact_markdown' do
+    let(:redact_markdown) {described_class.redact_markdown(source_file_path, target_file_path, plugins, format)}
 
-    assert_equal expected_result, RedactRestoreUtils.redact_data(raw_redact_data, %w[visualCodeBlock])
-  end
+    let(:source_file_path) {'expected_source_file.md'}
+    let(:target_file_path) {'expected_target_file.md'}
+    let(:plugins) {['expected_plugin']}
+    let(:format) {'expected_format'}
 
-  def test_redaction_of_data_with_link_plugin
-    raw_redact_data = {'test' => '[link](https://example.org)'}
-    expected_result = {'test' => '[link][0]'}
+    let(:redacted_data) {'expected_redacted_data'}
 
-    assert_equal expected_result, RedactRestoreUtils.redact_data(raw_redact_data, %w[link])
-  end
+    let(:expect_redacted_data_to_target_file_writing) do
+      I18nScriptUtils.expects(:write_file).with(target_file_path, redacted_data)
+    end
 
-  def test_redaction_of_data_with_resource_link_plugin
-    raw_redact_data = {'valid' => '[r test/example/1]', 'invalid' => '[r test/example]'}
-    expected_result = {'valid' => '[test][0]', 'invalid' => '[r test/example]'}
+    before do
+      FileUtils.touch(source_file_path)
 
-    assert_equal expected_result, RedactRestoreUtils.redact_data(raw_redact_data, %w[resourceLink])
-  end
+      described_class.stubs(:redact_file).with(source_file_path, plugins, format).returns(redacted_data)
+    end
 
-  def test_redaction_of_data_with_vocabulary_definition_plugin
-    raw_redact_data = {'valid' => '[v test/example/1]', 'invalid' => '[v test/example]'}
-    expected_result = {'valid' => '[test][0]', 'invalid' => '[v test/example]'}
+    it 'writes redacted md data to the target file' do
+      expect_redacted_data_to_target_file_writing.once
+      redact_markdown
+    end
 
-    assert_equal expected_result, RedactRestoreUtils.redact_data(raw_redact_data, %w[vocabularyDefinition])
-  end
+    context 'when the source file does not exist' do
+      before do
+        FileUtils.rm(source_file_path)
+      end
 
-  def test_redaction_of_data_with_blockly_plugin
-    raw_redact_data = {'test' => '<xml><block>block_content</block></xml>'}
-    expected_result = {'test' => '[blockly block][0]'}
+      it 'does not write redacted data to the target file' do
+        expect_redacted_data_to_target_file_writing.never
+        redact_markdown
+      end
+    end
 
-    assert_equal expected_result, RedactRestoreUtils.redact_data(raw_redact_data, %w[blockly])
+    context 'when the source file is not .md' do
+      let(:source_file_path) {'expected_source_file.not_md'}
+
+      it 'does not write redacted data to the target file' do
+        expect_redacted_data_to_target_file_writing.never
+        redact_markdown
+      end
+    end
+
+    context 'when plugins are not provided' do
+      let(:redact_markdown) {described_class.redact_markdown(source_file_path, target_file_path)}
+
+      let(:plugins) {[]}
+      let(:format) {anything}
+      let(:redacted_data) {'redacted_without_plugins_data'}
+
+      it 'writes redacted without plugins data to the target file' do
+        expect_redacted_data_to_target_file_writing.once
+        redact_markdown
+      end
+    end
+
+    context 'when format is not provided' do
+      let(:redact_markdown) {described_class.redact_markdown(source_file_path, target_file_path, plugins)}
+
+      let(:format) {'md'}
+      let(:redacted_data) {'redacted_with_md_format_data'}
+
+      it 'writes redacted with md format data to the target file' do
+        expect_redacted_data_to_target_file_writing.once
+        redact_markdown
+      end
+    end
   end
 end
