@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
+import i18n from '@cdo/locale';
 
 export default function Example({example, programmingEnvironmentName}) {
   const content = (
@@ -27,6 +29,9 @@ export default function Example({example, programmingEnvironmentName}) {
                 ...styles.embeddedApp,
                 ...embeddedIdeStyles[programmingEnvironmentName],
               }}
+              title={i18n.embeddedExampleFor({
+                name: programmingEnvironmentName,
+              })}
             />
             {example.image && <img src={example.image} />}
           </div>
@@ -51,6 +56,9 @@ export default function Example({example, programmingEnvironmentName}) {
                   width: '100%',
                   height: enteredHeight * 1.5,
                 }}
+                title={i18n.embeddedExampleFor({
+                  name: programmingEnvironmentName,
+                })}
               />
             </div>
           </div>
