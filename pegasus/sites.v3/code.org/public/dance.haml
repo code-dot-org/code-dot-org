@@ -62,6 +62,12 @@ theme: responsive_full_width
 
 %section
   .wrapper
+    #behind-the-scenes
+      %h2= hoc_s(:dance_ai_behind_the_scenes)
+      %p!= hoc_s(:dance_ai_behind_the_scenes_markdown, markdown: true)
+
+%section.bg-neutral-light
+  .wrapper
     = view :afe_partnership_block
     %p.body-four.centered
       =hoc_s(:dance_afe_disclaimer)
