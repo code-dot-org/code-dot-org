@@ -2153,75 +2153,75 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@blockly/block-shareable-procedures@npm:~1.2.11":
-  version: 1.2.11
-  resolution: "@blockly/block-shareable-procedures@npm:1.2.11"
+"@blockly/block-shareable-procedures@npm:~4.0.5":
+  version: 4.0.6
+  resolution: "@blockly/block-shareable-procedures@npm:4.0.6"
   peerDependencies:
-    blockly: ^9.3.0
-  checksum: 7027b319feab1994ac46e67d9e8931bc4b7f7a3c4ee7345f37c056b65acb3a6c72db46a418b4c6834e5d802490b84240e02fd1db893d9315d795adeecbcde1a3
+    blockly: ^10.2.0
+  checksum: ef0ee49918357ba64bcfe21fc31f3011a5a1ef6e2d16ea702c597c434f666a34940245356ec8f783c880a3f8fc794f5d6db9499fd9cb686380dad7a8f16b9505
   languageName: node
   linkType: hard
 
-"@blockly/field-grid-dropdown@npm:~2.0.2":
-  version: 2.0.2
-  resolution: "@blockly/field-grid-dropdown@npm:2.0.2"
+"@blockly/field-grid-dropdown@npm:~4.0.9":
+  version: 4.0.10
+  resolution: "@blockly/field-grid-dropdown@npm:4.0.10"
   peerDependencies:
-    blockly: ^9.0.0
-  checksum: 3104e5510434438d80863fe966cd210f4b42c04c201e689dfb731a038f80c6948706f15d22deceeea09ec44e9aed0eb7b677e5b8b9158b6cd32af8ad9f80ee6e
+    blockly: ^10.0.0
+  checksum: 76f4e9d92a45ef31dc1c44e83e7ae35aaa9937a56423a808aeb18a3f08c642fa8903dec078129ae622fc5d679da4a7946aa51391738b4f6359f166ab4c01f29f
   languageName: node
   linkType: hard
 
-"@blockly/keyboard-navigation@npm:0.3.6":
-  version: 0.3.6
-  resolution: "@blockly/keyboard-navigation@npm:0.3.6"
+"@blockly/keyboard-navigation@npm:~0.5.6":
+  version: 0.5.7
+  resolution: "@blockly/keyboard-navigation@npm:0.5.7"
   peerDependencies:
-    blockly: ^9.0.0
-  checksum: e6325ba0c9cbb18d59132c6c8ed717b73f7957ab53b47d14fea87877632adc20e66e272268e59aa83328faf0630a70bf321ec4fad18334d4d775c6356c593497
+    blockly: ^10.2.0
+  checksum: 0d92312640f941794f5b15e2c6707373715dcc44ecb9f3f6bf86a0b61740512e0882ff40f0ea1ac0502f2c20035396b07fda56b4c37dbc38f524063f38a155cd
   languageName: node
   linkType: hard
 
-"@blockly/plugin-cross-tab-copy-paste@npm:^2.0.7":
-  version: 2.0.7
-  resolution: "@blockly/plugin-cross-tab-copy-paste@npm:2.0.7"
+"@blockly/plugin-cross-tab-copy-paste@npm:~5.0.4":
+  version: 5.0.5
+  resolution: "@blockly/plugin-cross-tab-copy-paste@npm:5.0.5"
   peerDependencies:
-    blockly: ^9.0.0
-  checksum: 6bcce714e04117883bc54a42c3f4810026c8162f5bec7700a4f080dbca46ea87852bb34e239db49fc60e91c974ac894d02799341c4f73fc429c12d0040d4debd
+    blockly: ^10.2.0
+  checksum: 27b7da1ef3c21287619e1cd9d9ad6a5db67a83968d1acbb5d5fecfee9a7dc63146da505cceebe4b68befc6bf5fac7a5787221cb4ab8997b2611a2c3273f3c375
   languageName: node
   linkType: hard
 
-"@blockly/plugin-scroll-options@npm:~3.0.3":
-  version: 3.0.3
-  resolution: "@blockly/plugin-scroll-options@npm:3.0.3"
+"@blockly/plugin-scroll-options@npm:~5.0.8":
+  version: 5.0.9
+  resolution: "@blockly/plugin-scroll-options@npm:5.0.9"
   peerDependencies:
-    blockly: ^9.0.0
-  checksum: 7be9e02f60ce07f2346f2bde29b34f855073aa5ede6af628dfa0b238423f6909e1c365039205447be1cc58beeda266e86f771367221a66050972c67236f23f85
+    blockly: ^10.0.0
+  checksum: 365c2750f6b55e5eac70c158cade9b6d1c7106ff9e9d9db9d62335135a1f994d1329db865b16f46c2bc1a07059d9aa588fe94b5efd0ef13861cceb70ca037d1d
   languageName: node
   linkType: hard
 
-"@blockly/renderer-inline-row-separators@npm:^0.2.13":
-  version: 0.2.14
-  resolution: "@blockly/renderer-inline-row-separators@npm:0.2.14"
+"@blockly/renderer-inline-row-separators@npm:^0.5.0":
+  version: 0.5.0
+  resolution: "@blockly/renderer-inline-row-separators@npm:0.5.0"
   peerDependencies:
-    blockly: ^9.0.0
-  checksum: b1d4e828fa5fead415c16b3a5016b33bf397a8b7cf7fc1ee62a181a0564b4c254cc2f2f3a941556c5fd3a982c1a85bce9546b644a422a7cbe7cfd0519a40cf0a
+    blockly: ^10.0.0
+  checksum: 86693dc65a5514c6c5d8f8307cdeb5da4538f41e994c6e85b49dbda9f6c41484aadca555559e458cb1076965ca99d9c13f0a1aa88ffed6dcb7fffaf2bdcc8554
   languageName: node
   linkType: hard
 
-"@blockly/theme-dark@npm:^4.0.3":
-  version: 4.0.3
-  resolution: "@blockly/theme-dark@npm:4.0.3"
+"@blockly/theme-dark@npm:6.0.4":
+  version: 6.0.4
+  resolution: "@blockly/theme-dark@npm:6.0.4"
   peerDependencies:
-    blockly: ^9.0.0
-  checksum: cf27b62cc84c555ad18332000cd253a24acee3c2b92d09acad2034c06608e8bf403e003da16b6afa6204488e8ecf20189de4eec14d11cb41fd3ddcd3c9255e87
+    blockly: ^10.0.0
+  checksum: 29b364af1953f70fc1f39fa261571a1f4ccda3a7049707083cfc3f71591e8bde44f34721842b43f5a74c5e8c8942e87c59e3cb078a13ded6fc8e56ffb1ca147f
   languageName: node
   linkType: hard
 
-"@blockly/theme-highcontrast@npm:^3.0.3":
-  version: 3.0.3
-  resolution: "@blockly/theme-highcontrast@npm:3.0.3"
+"@blockly/theme-highcontrast@npm:5.0.4":
+  version: 5.0.4
+  resolution: "@blockly/theme-highcontrast@npm:5.0.4"
   peerDependencies:
-    blockly: ^9.0.0
-  checksum: b9f07425053316e13d72ffbbd1989c6eac34fbc82507bf5dec622ed7c5751f90482a17b5bc6c9c957c7888104a41ab562be3c96079c069cf40fa5014e04a1512
+    blockly: ^10.0.0
+  checksum: 9b709d12ca79371edf0fa2b0da27d3d7e163ca53a13eef05ee9275e4142f12fb6d85e8293ec2d069fe6be9c46717e233854646260a1711a8124429d228b056b9
   languageName: node
   linkType: hard
 
@@ -7749,14 +7749,14 @@ __metadata:
     "@babel/polyfill": ^7.12.1
     "@babel/preset-env": ^7.18.10
     "@babel/preset-react": ^7.18.6
-    "@blockly/block-shareable-procedures": ~1.2.11
-    "@blockly/field-grid-dropdown": ~2.0.2
-    "@blockly/keyboard-navigation": 0.3.6
-    "@blockly/plugin-cross-tab-copy-paste": ^2.0.7
-    "@blockly/plugin-scroll-options": ~3.0.3
-    "@blockly/renderer-inline-row-separators": ^0.2.13
-    "@blockly/theme-dark": ^4.0.3
-    "@blockly/theme-highcontrast": ^3.0.3
+    "@blockly/block-shareable-procedures": ~4.0.5
+    "@blockly/field-grid-dropdown": ~4.0.9
+    "@blockly/keyboard-navigation": ~0.5.6
+    "@blockly/plugin-cross-tab-copy-paste": ~5.0.4
+    "@blockly/plugin-scroll-options": ~5.0.8
+    "@blockly/renderer-inline-row-separators": ^0.5.0
+    "@blockly/theme-dark": 6.0.4
+    "@blockly/theme-highcontrast": 5.0.4
     "@cdo/interpreted": "link:../dashboard/config/libraries"
     "@code-dot-org/artist": 0.2.1
     "@code-dot-org/blockly": 4.0.14
@@ -7806,7 +7806,7 @@ __metadata:
     babel-plugin-add-module-exports: ^0.2.1
     babel-plugin-dynamic-import-node: ^2.3.0
     babel-plugin-syntax-async-functions: ^6.8.0
-    blockly: 9.3.3
+    blockly: 10.3.0
     bootstrap-sass: ^3.3.6
     browser-process-hrtime: 0.1.2
     buffer: ^6.0.3
@@ -8019,12 +8019,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"blockly@npm:9.3.3":
-  version: 9.3.3
-  resolution: "blockly@npm:9.3.3"
+"blockly@npm:10.3.0":
+  version: 10.3.0
+  resolution: "blockly@npm:10.3.0"
   dependencies:
-    jsdom: 21.1.1
-  checksum: 73ecb2b97c4d4e0ade7e47155f916b7a415b8f4085af010e61af6455490efc588504becbef78faaad5e4802eebe2a626eb8ee804cb2ff105f4737915b82e45fe
+    jsdom: 22.1.0
+  checksum: e75f5e38cd1fd9c14147a60ac117ac2d23af9ebe96a52e26883f7bc13e8298d72411b65e03e78d8d22d1402660d1c1598059af6fbcc4146079b2f77a32dcd245
   languageName: node
   linkType: hard
 
@@ -17660,7 +17660,43 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"jsdom@npm:21.1.1, jsdom@npm:^21.1.1":
+"jsdom@npm:22.1.0":
+  version: 22.1.0
+  resolution: "jsdom@npm:22.1.0"
+  dependencies:
+    abab: ^2.0.6
+    cssstyle: ^3.0.0
+    data-urls: ^4.0.0
+    decimal.js: ^10.4.3
+    domexception: ^4.0.0
+    form-data: ^4.0.0
+    html-encoding-sniffer: ^3.0.0
+    http-proxy-agent: ^5.0.0
+    https-proxy-agent: ^5.0.1
+    is-potential-custom-element-name: ^1.0.1
+    nwsapi: ^2.2.4
+    parse5: ^7.1.2
+    rrweb-cssom: ^0.6.0
+    saxes: ^6.0.0
+    symbol-tree: ^3.2.4
+    tough-cookie: ^4.1.2
+    w3c-xmlserializer: ^4.0.0
+    webidl-conversions: ^7.0.0
+    whatwg-encoding: ^2.0.0
+    whatwg-mimetype: ^3.0.0
+    whatwg-url: ^12.0.1
+    ws: ^8.13.0
+    xml-name-validator: ^4.0.0
+  peerDependencies:
+    canvas: ^2.5.0
+  peerDependenciesMeta:
+    canvas:
+      optional: true
+  checksum: d955ab83a6dad3e6af444098d30647c719bbb4cf97de053aa5751c03c8d6f3283d8c4d7fc2774c181f1d432fb0250e7332bc159e6b466424f4e337d73adcbf30
+  languageName: node
+  linkType: hard
+
+"jsdom@npm:^21.1.1":
   version: 21.1.1
   resolution: "jsdom@npm:21.1.1"
   dependencies:
@@ -20485,6 +20521,13 @@ es6-shim@latest:
   version: 2.2.2
   resolution: "nwsapi@npm:2.2.2"
   checksum: 43769106292bc95f776756ca2f3513dab7b4d506a97c67baec32406447841a35f65f29c1f95ab5d42785210fd41668beed33ca16fa058780be43b101ad73e205
+  languageName: node
+  linkType: hard
+
+"nwsapi@npm:^2.2.4":
+  version: 2.2.7
+  resolution: "nwsapi@npm:2.2.7"
+  checksum: cab25f7983acec7e23490fec3ef7be608041b460504229770e3bfcf9977c41d6fe58f518994d3bd9aa3a101f501089a3d4a63536f4ff8ae4b8c4ca23bdbfda4e
   languageName: node
   linkType: hard
 
