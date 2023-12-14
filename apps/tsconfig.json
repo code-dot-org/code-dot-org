@@ -10,7 +10,7 @@
   "compilerOptions": {
     "jsx": "react",
     "target": "es5",
-    "lib": ["ES2019", "DOM"],
+    "lib": ["ES2022", "DOM"],
     "module": "node16",
     "rootDir": "./",
     "moduleResolution": "node16",

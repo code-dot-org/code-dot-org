@@ -58,7 +58,7 @@ module Pd
         first_name: 'First name',
         last_name: 'Last name',
         account_email: 'Account email',
-        alternate_email: 'If you used your school email and can be reached at a better email address in the summer months, please enter it here:',
+        alternate_email: 'If you have another email address that you check in the summer months, please enter it here:',
         phone: 'Home or cell phone',
         street_address: 'Home street address',
         city: 'Home city',
@@ -70,7 +70,7 @@ module Pd
         current_role: 'What is your current role at your school?',
         previous_yearlong_cdo_pd: clean_multiline(
           "Have you participated in previous yearlong Code.org Professional Learning Programs?
-           If so, mark the programs you've participated in."
+           If so, mark the programs in which you have participated."
         ),
         csa_already_know: 'Have you previously taught CS or have you learned CS yourself?',
         csa_phone_screen: clean_multiline(
@@ -109,14 +109,13 @@ module Pd
         ),
         csa_how_offer: 'How will you offer CSA?',
         enough_course_hours: "Will you have more than {{min hours}} hours with your {{CS program}} section(s)?",
-        replace_existing: 'Will this course replace an existing computer science course in the master schedule?'
+        will_teach: "Are you planning to teach this course in the #{YEAR} school year?"
       },
       professional_learning_program_requirements:
         {
           committed: 'Are you committed to participating in the entire Professional Learning Program?',
           able_to_attend_multiple: 'Your Regional Partner is hosting the following workshop(s). Please indicate which workshops you are able to attend. Select all that apply.',
-          pay_fee: 'Will your school be able to pay the fee?',
-          understand_fee: "By checking this box, you indicate that you understand there may be a fee for the professional learning program you attend.",
+          pay_fee: 'Will your school or district be able to pay a fee for the program?',
           scholarship_reasons: "Please provide any additional information you'd like to share about why your application should be considered for a scholarship.",
           agree: 'By submitting this application, I agree to share this application, my contact information, and aggregate class information with my local Code.org Regional Partner.'
         },
@@ -136,8 +135,6 @@ module Pd
         other_races_percent: 'Percent of student enrollment by race: Other',
         principal_approval: "Do you approve of <Teacher Name> participating in Code.org's #{YEAR} Professional Learning Program?",
         principal_schedule_confirmed: "Are you committed to including Computer Science <Program> on the master schedule in #{YEAR} if <Teacher Name> is accepted into the program?",
-        contact_invoicing: "Contact name for invoicing",
-        contact_invoicing_detail: "Contact email or phone number for invoicing",
       }
     }.freeze
 
@@ -180,7 +177,6 @@ module Pd
           parameters and that uses conditional logic, loops, and an array (or list)?'
         ),
         enough_course_hours: "Will you have more than {{min hours}} hours with your {{CS program}} section(s)?",
-        replace_existing: "Will this course replace an existing computer science course in the master schedule? (Teacher's response)",
         previous_yearlong_cdo_pd: "Have you participated in previous yearlong Code.org Professional Learning Programs?",
         able_to_attend_multiple: "Please indicate which workshops you are able to attend.",
         how_heard: PAGE_LABELS[:about_you][:how_heard] + " (Teacher's response)",
@@ -211,8 +207,6 @@ module Pd
         pacific_islander: "Percent of student enrollment by race - Native Hawaiian or other Pacific Islander",
         american_indian: "Percent of student enrollment by race - American Indian or Native Alaskan",
         other: "Percent of student enrollment by race - Other",
-        committed_to_master_schedule: "Are you committed to including this course on the master schedule in #{YEAR} if this teacher is accepted into the program?",
-        replace_course: "Will this course replace an existing computer science course in the master schedule? (Principal's response)",
         csp_implementation: "How will you implement CS Principles at your school?",
         csd_implementation: "How will you implement CS Discoveries at your school?",
         csa_implementation: "How will you implement CSA at your school?",
@@ -365,11 +359,9 @@ module Pd
         :csp_which_grades,
         :csp_how_offer,
         :enough_course_hours,
-        :replace_existing,
         :previous_yearlong_cdo_pd,
         :committed,
         :able_to_attend_multiple,
-        :pay_fee,
         :scholarship_reasons,
         :gender_identity,
         :race,
@@ -402,15 +394,10 @@ module Pd
         :pacific_islander,
         :american_indian,
         :other,
-        :committed_to_master_schedule,
-        :replace_course,
         :csp_implementation,
         :csd_implementation,
         :csa_implementation,
-        :pay_fee,
         :share_ap_scores,
-        :contact_invoicing,
-        :contact_invoicing_detail
       ],
       nces: [
         :title_i_status,

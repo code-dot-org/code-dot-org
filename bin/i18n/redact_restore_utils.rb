@@ -101,6 +101,7 @@ class RedactRestoreUtils
 
   # redact redacts the content of the source file, whether is a json, yml or other formats and write the output
   # into the dest file.
+  # TODO: split into two methods `redact_json_file` and `redact_yaml_file`
   def self.redact(source, dest, plugins = [], format = 'md')
     return unless File.exist? source
     return unless I18nScriptUtils.json_file?(source) || I18nScriptUtils.yaml_file?(source)

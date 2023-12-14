@@ -25,6 +25,7 @@ const defaultArgs = {
   isEnglish: true,
   pathToCourse: '/s/course',
   isSignedOut: false,
+  isTeacher: true,
   onQuickViewClick: () => {},
 };
 

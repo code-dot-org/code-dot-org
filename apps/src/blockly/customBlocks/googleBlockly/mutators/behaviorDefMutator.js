@@ -10,6 +10,7 @@
  */
 
 import {ObservableParameterModel} from '@blockly/block-shareable-procedures';
+import {FALSEY_DEFAULT, readBooleanAttribute} from '@cdo/apps/blockly/utils';
 import {
   getBlockDescription,
   setBlockDescription,
@@ -74,7 +75,11 @@ export const behaviorDefMutator = {
       }
     }
     this.behaviorId = xmlElement.getAttribute('behaviorId');
-    this.userCreated = xmlElement.getAttribute('userCreated');
+    this.userCreated = readBooleanAttribute(
+      xmlElement,
+      'userCreated',
+      FALSEY_DEFAULT
+    );
   },
 
   /**
@@ -86,7 +91,6 @@ export const behaviorDefMutator = {
     state['procedureId'] = this.getProcedureModel().getId();
     state['behaviorId'] = this.behaviorId;
     state['userCreated'] = this.userCreated;
-
     state['description'] = getBlockDescription(this);
 
     const params = this.getProcedureModel().getParameters();
@@ -142,7 +146,6 @@ export const behaviorDefMutator = {
     }
 
     setBlockDescription(this, state);
-
     this.doProcedureUpdate();
     this.setStatements_(state['hasStatements'] === false ? false : true);
   },

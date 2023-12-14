@@ -3,7 +3,7 @@ import {SongMetadata} from '../types';
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 import * as danceMsg from '../locale';
 import {ASSET_BASE} from '../constants';
-import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
+import {LabMetricsReporter} from '@cdo/apps/lab2/Lab2MetricsReporter';
 import utils from '../utils';
 
 // TODO: The Dance Party repo currently does not export types, so we need
@@ -29,6 +29,7 @@ const allEvents: {[name in HookName]: Handler} = {
  */
 export default class ProgramExecutor {
   private readonly nativeAPI: typeof DanceParty;
+  private readonly metricsReporter: LabMetricsReporter;
   private hooks: {[name in HookName]?: (args?: unknown[]) => unknown};
   private validationCode?: string;
   private onEventsChanged?: () => void;
@@ -41,6 +42,7 @@ export default class ProgramExecutor {
     onPuzzleComplete: (result: boolean, message: string) => void,
     isReadOnlyWorkspace: boolean,
     recordReplayLog: boolean,
+    metricsReporter: LabMetricsReporter,
     customHelperLibrary?: string,
     validationCode?: string,
     onEventsChanged?: () => void,
@@ -66,8 +68,9 @@ export default class ProgramExecutor {
         container,
         i18n: danceMsg,
         resourceLoader: new ResourceLoader(ASSET_BASE),
-        logger: Lab2MetricsReporter,
+        logger: metricsReporter,
       });
+    this.metricsReporter = metricsReporter;
   }
 
   /**
@@ -79,7 +82,7 @@ export default class ProgramExecutor {
 
     this.hooks = await this.compileAllCode(code);
     if (!this.hooks.runUserSetup || !this.hooks.getCueList) {
-      Lab2MetricsReporter.logWarning('Missing required hooks in compiled code');
+      this.reportMissingHooks('runUserSetup', 'getCueList');
       return;
     }
 
@@ -107,7 +110,7 @@ export default class ProgramExecutor {
     this.reset();
     this.hooks = await this.preloadSpritesAndCompileCode(code, 'runUserSetup');
     if (!this.hooks.runUserSetup) {
-      Lab2MetricsReporter.logWarning('Missing required hook in compiled code');
+      this.reportMissingHooks('runUserSetup');
       return;
     }
 
@@ -161,7 +164,7 @@ export default class ProgramExecutor {
     this.hooks = await this.preloadSpritesAndCompileCode(code, 'runUserSetup');
 
     if (!this.hooks.runUserSetup) {
-      Lab2MetricsReporter.logWarning('Missing required hook in compiled code');
+      this.reportMissingHooks('runUserSetup');
       return;
     }
 
@@ -265,7 +268,7 @@ export default class ProgramExecutor {
     }
 
     if (!this.hooks.runUserEvents) {
-      Lab2MetricsReporter.logWarning('Missing required hook in compiled code');
+      this.reportMissingHooks('runUserEvents');
       return;
     }
     this.hooks.runUserEvents(currentFrameEvents);
@@ -294,5 +297,11 @@ export default class ProgramExecutor {
       callback: callbackWrapper,
       onEnded: onEndedWrapper,
     });
+  }
+
+  private reportMissingHooks(...hooks: string[]) {
+    this.metricsReporter.logWarning(
+      `Missing required hooks in compiled code: ${hooks.join(', ')}`
+    );
   }
 }

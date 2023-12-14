@@ -4245,6 +4245,11 @@ pt:
           lessons:
             lesson-5:
               name: Avaliações
+            lesson-6:
+              name: Lição 1
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Aleatório
         csp-playground:
           title: CSP Parque Infantil
           description_audience: Escritores de currículos
@@ -5080,3 +5085,52 @@ pt:
           title: " Módulo 4: Preparação para ensinar o processo de design"
         self-paced-pl-csd-unit5-2-2023:
           title: 'Módulo 5: Preparação para ensinar Dados e Sociedade'
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Questionário
+            lessonGroup-2:
+              display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Computadores e Solução de Problemas'
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Imagens e Amimações'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Construindo Jogos'
+          student_description: " Na Unidade 3, você aproveitará sua experiência de codificação ao programar animações, arte interativa e jogos no Laboratório de Jogos. A unidade começa com formas simples e cria jogos sofisticados baseados em sprites, usando os mesmos conceitos de programação e o processo de design que os cientistas da computação usam diariamente. No projeto final, você desenvolverá um programa interativo personalizado."
+        csd4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Desenho orientado ao usuário'
+            lessonGroup-3:
+              display_name: 'Capítulo 1: Prototipando o App'
+          student_description: A unidade 4 apresenta os impactos sociais mais amplos da computação. Através de uma série de desafios de design, você aprenderá a entender melhor as necessidades de outras pessoas enquanto desenvolve uma solução para um problema. A segunda metade da unidade consiste em um projeto de equipe iterativo, durante o qual as equipes têm a oportunidade de identificar uma necessidade com a qual se preocupam, protótipos de soluções tanto no papel quanto no App Lab e testam soluções com usuários reais para obter feedback e avançar iteração.
+        csd5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Representando Informação'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Resolvendo problemas de dados'
+          student_description: A unidade 5 trata da importância dos dados na solução de problemas e destaca como os computadores podem ajudar nesse processo. O primeiro capítulo explora os diferentes sistemas usados ​​para representar informações em um computador e os desafios e as vantagens e desvantagens do uso deles. No segundo capítulo, você aprenderá como as coleções de dados são usadas para resolver problemas e como os computadores ajudam a automatizar as etapas desse processo. O capítulo conclui considerando como o processo de solução de problemas de dados pode ser aplicado a uma área de sua escolha.
+          description_short: Aprenda como as pessoas usam computadores para resolver problemas de dados.
+        csd6a-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Construindo protótipos físicos'
+          description_short: Aprenda a programar com dispositivos físicos.
+        csd6b-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Entradas e saídas
+        csd7-2024:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Introdução Laboratório de Aplicativos
+            lessonGroup-2:
+              display_name: Capítulo 1
+            lessonGroup-3:
+              display_name: Capítulo 2
+        csd-post-survey-2024:
+          title: Pesquisa Pós-Curso
