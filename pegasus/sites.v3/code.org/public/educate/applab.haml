@@ -15,14 +15,14 @@ video_player: true
 .tools-banner
   .tools-img-box
     %img.tools-img-applab.tools-img{src: CDO.code_org_url("/images/app-lab/applab-tool.png"), alt: ""}
-  .tools-info{style: "max-width: 658px;"}
+  .tools-info{style: "max-width: 635px;"}
     .tools-title-bar
       %h1.tools-title App Lab
     .tools-description
       %p App Lab is a programming environment where you can make simple apps. Design an app, code in JavaScript with either blocks or text, then share your app in seconds.
       .tools-details Ages 13+, all modern browsers, English only
-      %a{href: CDO.studio_url("/projects/applab/new")}
-        %button Try it out
+      %a.link-button{href: CDO.studio_url("/projects/applab/new")}
+        Try it out
 
 .clear
 
@@ -87,8 +87,8 @@ video_player: true
         .pl-title Professional Learning Program
         %p Course specific professional learning provides hands on experience with the curriculum.
       .pl-button
-        %a{href: "/educate/professional-learning"}
-          %button Learn more
+        %a.link-button.secondary.small{href: "/educate/professional-learning"}
+          Learn more
 
   %h3.heading-sm{style: "margin-top: 2rem"}
     %a{href: '/csp'} Computer Science Principles
