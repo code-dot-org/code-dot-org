@@ -4,9 +4,6 @@ import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
 // Considers an attribute true only if it is explicitly set to 'true' (i.e. defaults to false if unset).
 export const FALSEY_DEFAULT = attributeValue => attributeValue === 'true';
 
-// Considers an attribute true only if it is explicitly set to 'true' (i.e. defaults to false if unset).
-export const FALSEY_DEFAULT = attributeValue => attributeValue === 'true';
-
 /**
  * Reads a boolean attribute from an XML element and determines its value based on a callback function.
  * The callback function determines how we interpret the attribute value as a boolean.
