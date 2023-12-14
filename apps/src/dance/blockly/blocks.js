@@ -48,7 +48,7 @@ const customInputTypes = {
       block.superSetTitleValue = block.setTitleValue;
       block.setTitleValue = function (newValue, name) {
         if (name === inputConfig.name && block.blockSpace.isFlyout) {
-          newValue = Blockly.Variables.generateUniqueName(newValue);
+          newValue = Blockly.Variables.generateUniqueName(newValue, block);
         }
         block.superSetTitleValue(newValue, name);
       };
@@ -92,7 +92,7 @@ const customInputTypes = {
       const newField = new CdoFieldDanceAi();
       currentInputRow
         .appendField(inputConfig.label)
-        .appendField(newField, 'VALUE');
+        .appendField(newField, inputConfig.name);
     },
     generateCode(block, arg) {
       return block.getFieldValue(arg.name);

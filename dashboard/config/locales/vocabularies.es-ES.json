@@ -2534,7 +2534,7 @@
           "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
         },
         "code/flappy/unversioned": {
-          "word": "Programar",
+          "word": "código",
           "definition": "(v) escribir código, o escribir instrucciones para una computadora."
         },
         "debugging/flappy/unversioned": {
@@ -2767,7 +2767,7 @@
           "definition": " una lista de instrucciones que le dice a la computadora qué hacer, como un conjunto de pasos para jugar un juego o hacer una tarea en la computadora. "
         },
         "artificial_intelligence_a_i_/dance-ai/2023": {
-          "word": "Inteligência Artificial (I.A.) ",
+          "word": "Inteligencia Artificial (I.A.) ",
           "definition": " un programa de computadora que se entrena a base de datos, aprende a reconocer los patrones en los datos, y toma decisiones en base a la información con la cual se entrenó. "
         }
       }
