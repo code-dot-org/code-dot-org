@@ -632,3 +632,19 @@ i.infoAlertIcon {
 .aiFeedbackReceived {
   margin-left: auto;
 }
+
+.selectors {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;   
+  align-items: flex-start;
+  align-self: stretch;
+  gap: 15px;
+  padding: 10px;
+}
+
+.studentInfoGroup {
+  display: flex;
+  align-self: stretch;
+  flex-direction: column;
+}
