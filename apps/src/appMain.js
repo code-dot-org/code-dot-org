@@ -101,6 +101,7 @@ export default function (app, levels, options) {
           blockly: Blockly,
           blockDefinitions: customBlocksConfig,
           customInputTypes: options.blocksModule.customInputTypes,
+          customGenerators: options.blocksGenerators,
         });
 
         if (

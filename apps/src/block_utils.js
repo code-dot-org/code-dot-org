@@ -1200,6 +1200,7 @@ exports.installCustomBlocks = function ({
   blockly,
   blockDefinitions,
   customInputTypes,
+  customGenerators,
 }) {
   const createJsWrapperBlock = exports.createJsWrapperBlockCreator(
     blockly,
@@ -1215,7 +1216,18 @@ exports.installCustomBlocks = function ({
 
   const blocksByCategory = {};
   blockDefinitions.forEach(({name, pool, category, config, helperCode}) => {
-    const blockName = createJsWrapperBlock(config, helperCode, pool);
+    let blockName;
+    if (config.jsonConfig && customGenerators[config.jsonConfig.type]) {
+      blockName = installJsonBlock(
+        blockly,
+        config.jsonConfig,
+        name,
+        blockly.getGenerator(),
+        customGenerators[config.jsonConfig.type]
+      );
+    } else {
+      blockName = createJsWrapperBlock(config, helperCode, pool);
+    }
     if (!blocksByCategory[category]) {
       blocksByCategory[category] = [];
     }
@@ -1228,6 +1240,24 @@ exports.installCustomBlocks = function ({
   });
 
   return blocksByCategory;
+};
+
+const installJsonBlock = function (
+  blockly,
+  blockJson,
+  name,
+  generator,
+  generatorFn
+) {
+  blockly.Blocks[name] = {
+    init: function () {
+      this.jsonInit(blockJson);
+    },
+  };
+
+  generator[name] = generatorFn;
+
+  return name;
 };
 
 /**

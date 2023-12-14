@@ -103,6 +103,7 @@ const customInputTypes = {
 export default {
   customInputTypes,
   install(blockly, blockInstallOptions) {
+    blockly.fieldRegistry.register('field_dance_ai', CdoFieldDanceAi);
     Blockly.cdoUtils.registerCustomProcedureBlocks();
     // Legacy style block definitions :(
     const generator = blockly.getGenerator();
