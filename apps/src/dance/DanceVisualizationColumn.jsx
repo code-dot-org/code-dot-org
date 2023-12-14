@@ -101,6 +101,10 @@ class DanceVisualizationColumn extends React.Component {
                   alt=""
                 />
               </div>
+              {
+                // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+                // Verify or update this alt-text as necessary
+              }
               {this.props.isShareView && (
                 <img src={imgSrc} id="danceClickToRun" alt="" />
               )}

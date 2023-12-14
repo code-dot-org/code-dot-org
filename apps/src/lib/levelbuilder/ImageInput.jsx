@@ -46,6 +46,10 @@ export default function ImageInput({
             icon="plus-circle"
           />
         </label>
+        {
+          // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+          // Verify or update this alt-text as necessary
+        }
         {showPreview && !!currentImageUrl && (
           <img src={currentImageUrl} style={styles.image} alt="" />
         )}

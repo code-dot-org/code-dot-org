@@ -54,6 +54,10 @@ export default class ArtistVisualizationColumn extends React.Component {
             {
               ' ' /* Explicitly insert whitespace so that this behaves like our ejs file*/
             }
+            {
+              // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+              // Verify or update this alt-text as necessary
+            }
             <img
               id="spinner"
               style={styles.invisible}

@@ -20,6 +20,8 @@ describe('Image', () => {
     wrapper.instance().onImageLoad();
     assert(
       wrapper.containsMatchingElement(
+        // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+        // Verify or update this alt-text as necessary
         <img
           style={{
             opacity: 1,

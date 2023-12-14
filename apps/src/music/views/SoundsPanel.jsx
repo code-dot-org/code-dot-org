@@ -34,6 +34,10 @@ const FolderPanelRow = ({
   return (
     <div className={classNames('sounds-panel-folder-row', styles.folderRow)}>
       <div className={styles.folderRowLeft}>
+        {
+          // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+          // Verify or update this alt-text as necessary
+        }
         {imageSrc && (
           <img src={imageSrc} className={styles.folderImage} alt="" />
         )}
@@ -96,6 +100,10 @@ const SoundsPanelRow = ({
       onClick={() => onSelect(folder.path + '/' + sound.src)}
     >
       <div className={styles.soundRowLeft}>
+        {
+          // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+          // Verify or update this alt-text as necessary
+        }
         <img src={typeIconPath} className={styles.typeIcon} alt="" />
       </div>
       <div className={styles.soundRowMiddle}>{sound.name}</div>

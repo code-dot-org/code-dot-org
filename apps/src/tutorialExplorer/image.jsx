@@ -39,6 +39,8 @@ export default class Image extends React.Component {
     }
 
     return (
+      // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+      // Verify or update this alt-text as necessary
       <img
         ref="img"
         {...this.props}

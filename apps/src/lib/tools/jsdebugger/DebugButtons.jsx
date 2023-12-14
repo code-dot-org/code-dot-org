@@ -114,6 +114,10 @@ export default connect(
               onClick={this.togglePause}
               style={{display: canRunNext ? 'inline-block' : 'none'}}
             >
+              {
+                // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+                // Verify or update this alt-text as necessary
+              }
               <img
                 src="/blockly/media/1x1.gif"
                 className="continue-btn icon21"
@@ -132,6 +136,10 @@ export default connect(
               disabled={!isPaused || !isAttached || isEditWhileRun}
               title={isEditWhileRun ? i18n.editDuringRunMessage() : undefined}
             >
+              {
+                // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+                // Verify or update this alt-text as necessary
+              }
               <img
                 src="/blockly/media/1x1.gif"
                 className="step-over-btn icon21"
@@ -148,6 +156,10 @@ export default connect(
               disabled={!isPaused || !isAttached || isEditWhileRun}
               title={isEditWhileRun ? i18n.editDuringRunMessage() : undefined}
             >
+              {
+                // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+                // Verify or update this alt-text as necessary
+              }
               <img
                 src="/blockly/media/1x1.gif"
                 className="step-out-btn icon21"
@@ -166,6 +178,10 @@ export default connect(
               disabled={(!isPaused && isAttached) || isEditWhileRun}
               title={isEditWhileRun ? i18n.editDuringRunMessage() : undefined}
             >
+              {
+                // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+                // Verify or update this alt-text as necessary
+              }
               <img
                 src="/blockly/media/1x1.gif"
                 className="step-in-btn icon21"

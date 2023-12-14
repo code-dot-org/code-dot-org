@@ -159,6 +159,10 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
               !vertical && moduleStyles.horizontal
             )}
           >
+            {
+              // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+              // Verify or update this alt-text as necessary
+            }
             <img
               src={imageUrl}
               className={classNames(
@@ -175,6 +179,10 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
                   imagePopOutDirection === 'left' && moduleStyles.bigImageLeft
                 )}
               >
+                {
+                  // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+                  // Verify or update this alt-text as necessary
+                }
                 <img src={imageUrl} onClick={() => imageClicked()} alt="" />
               </div>
             )}

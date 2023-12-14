@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
 
 export default function ExampleImage({src}) {
+  // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+  // Verify or update this alt-text as necessary
   return <img style={styles.img} src={src} alt="" />;
 }
 

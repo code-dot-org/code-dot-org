@@ -11,6 +11,8 @@ export default class PromptIcon extends React.Component {
 
   render() {
     return (
+      // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+      // Verify or update this alt-text as necessary
       <img src={this.props.src} id="prompt-icon" style={styles.main} alt="" />
     );
   }

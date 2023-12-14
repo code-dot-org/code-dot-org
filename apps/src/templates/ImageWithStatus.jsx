@@ -50,6 +50,10 @@ export class ImageWithStatus extends Component {
   render() {
     return (
       <div style={this.props.wrapperStyle}>
+        {
+          // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+          // Verify or update this alt-text as necessary
+        }
         <img
           src={this.props.src}
           width={this.props.width}

@@ -16,6 +16,10 @@ export default function SectionCreationCelebrationDialog() {
       <div className={moduleStyles.celebrationDialogBody}>
         <h2>{i18n.congratulations()}</h2>
         <div>{i18n.sectionCreationCelebrationDialogMessage()}</div>
+        {
+          // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+          // Verify or update this alt-text as necessary
+        }
         <img
           src={CelebrationGif}
           className={moduleStyles.celebrationGif}

@@ -99,6 +99,8 @@ export default class AnimationPickerListItem extends React.Component {
               </span>
             )}
             {category && iconImageSrc && (
+              // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+              // Verify or update this alt-text as necessary
               <img
                 data-category={category}
                 className={style.categoryImage}
