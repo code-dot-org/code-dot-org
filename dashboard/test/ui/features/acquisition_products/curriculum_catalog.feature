@@ -56,9 +56,11 @@ Feature: Curriculum Catalog Page
     And I wait until element "h2:contains(Have an account already? Sign in)" is visible
 
   Scenario: Signed-in student does not see Assign button
+  Scenario: Signed-in student does not see Assign button
     Given I create a student named "Student Sam"
     Given I am on "http://studio.code.org/catalog"
     And I wait until element "h4:contains(AI for Oceans)" is visible
+    And I wait until element "button:contains(Assign)" is not visible   
     And I wait until element "button:contains(Assign)" is not visible   
 
   Scenario: Signed-in teacher without sections is prompted to created sections when clicking Assign
@@ -202,6 +204,7 @@ Feature: Curriculum Catalog Page
     Given I am on "http://studio.code.org/catalog"
     And I wait until element "h4:contains(AI for Oceans)" is visible
     And I click selector "[aria-label='View details about AI for Oceans']"
+    And I wait until element "span:contains(Assign to class sections)" is not visible
     And I wait until element "span:contains(Assign to class sections)" is not visible
 
   @no_mobile

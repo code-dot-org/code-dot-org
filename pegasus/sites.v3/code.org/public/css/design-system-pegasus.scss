@@ -149,87 +149,6 @@ hr {
   }
 }
 
-// Buttons
-a.link-button,
-button,
-.btn,
-input[type=submit] {
-  height: unset;
-  display: inline-block;
-  color: white;
-  background-color: $brand_secondary_default;
-  border: 2px solid $brand_secondary_default;
-  border-radius: $border-radius;
-  padding: .75rem 1rem;
-  margin: 0.5rem 0;
-  font-size: 1rem;
-  font-family: var(--main-font);
-  font-weight: var(--semi-bold-font-weight);
-  line-height: 1.05;
-  text-decoration: none;
-  text-align: center;
-  transition: all ease-in-out .2s;
-
-  @media screen and (max-width: $width-sm) {
-    line-height: 1.2;
-  }
-
-  &:hover {
-    color: white;
-    background-color: $brand_secondary_dark;
-    border-color: $brand_secondary_dark;
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-  &:focus {
-    @include focus-outline;
-
-    &:not(:focus-visible) {
-      outline: none;
-    }
-  }
-
-  &:disabled,
-  &.disabled {
-    cursor: default;
-    background-color: $neutral_dark20;
-    border: 2px solid $neutral_dark20;
-    color: $neutral_dark70;
-  }
-}
-
-a.link-button {
-  &.secondary {
-    background: none;
-    border-color: $neutral_dark;
-    color: $neutral_dark;
-
-    &:hover {
-      background: $neutral_dark10;
-    }
-  }
-
-  &.white {
-    background-color: $neutral_white;
-    border-color: $neutral_white;
-    color: $neutral_dark;
-
-    &:hover {
-      background: $neutral_dark10;
-      border-color: $neutral_dark10;
-    }
-  }
-
-  &.has-icon {
-    .flex-wrapper {
-      display: flex;
-      align-items: center;
-      gap: 0 .75rem;
-    }
-  }
-}
-
 // Button wrapper for side-by-side buttons
 .button-wrapper {
   display: flex;
@@ -1133,20 +1052,6 @@ section.quote {
   span {
     color: $brand_accent_default;
     margin: 0 2px;
-  }
-}
-
-// Modals
-.modal-header {
-
-  button.close {
-    min-width: unset;
-    margin-top: 2px;
-
-    &:hover {
-      background: none;
-      border: none;
-    }
   }
 }
 
