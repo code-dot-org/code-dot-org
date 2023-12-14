@@ -7,72 +7,8 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {hideShareDialog, showLibraryCreationDialog} from './shareDialogRedux';
 import Button from '../../templates/Button';
-import fontConstants from '@cdo/apps/fontConstants';
-
-const style = {
-  nav: {
-    ul: {
-      borderBottom: '1px solid',
-      borderColor: color.purple,
-      marginTop: 0,
-      marginLeft: 0,
-      marginRight: 0,
-      marginBottom: 10,
-    },
-    li: {
-      display: 'inline-block',
-      color: color.neutral_dark90,
-      ...fontConstants['main-font-semi-bold'],
-      fontSize: 'larger',
-      marginRight: 10,
-      cursor: 'pointer',
-    },
-    selectedLi: {color: color.brand_secondary_default},
-  },
-  ol: {
-    marginLeft: 15,
-  },
-  p: {
-    fontSize: 'inherit',
-    lineHeight: 'inherit',
-    color: color.neutral_dark,
-    ...fontConstants['main-font-semi-bold'],
-  },
-  warningp: {
-    color: color.red,
-  },
-  bold: {
-    ...fontConstants['main-font-bold'],
-  },
-  root: {
-    marginTop: 20,
-  },
-  expand: {
-    color: color.brand_secondary_default,
-    ...fontConstants['main-font-semi-bold'],
-    cursor: 'pointer',
-  },
-  embedInput: {
-    cursor: 'copy',
-    width: 465,
-    height: 80,
-    margin: 0,
-  },
-  shareLibraryButton: {
-    margin: 0,
-    fontSize: 'large',
-    height: 40,
-  },
-  embedCodeCheckbox: {
-    accentColor: color.brand_primary_default,
-    margin: 0,
-  },
-  embedCodeCheckboxLabel: {
-    display: 'inline-block',
-    paddingLeft: 8,
-    paddingTop: 8,
-  },
-};
+import moduleStyle from './advancedShareOptions.module.scss';
+import classnames from 'classnames';
 
 const ShareOptions = {
   EXPORT: 'export',
@@ -139,8 +75,15 @@ class AdvancedShareOptions extends React.Component {
     const iframeHtml = `<iframe width="${iframeWidth}" height="${iframeHeight}" style="border: 0px;" src="${url}"></iframe>`;
     return (
       <div>
-        <p style={style.p}>{i18n.shareEmbedDescription()}</p>
-        <p style={{...style.p, ...style.warningp}}>
+        <p className={moduleStyle.regularText}>
+          {i18n.shareEmbedDescription()}
+        </p>
+        <p
+          className={classnames(
+            moduleStyle.regularText,
+            moduleStyle.warningText
+          )}
+        >
           {i18n.shareEmbedWarning()}
         </p>
         <textarea
@@ -148,14 +91,14 @@ class AdvancedShareOptions extends React.Component {
           onClick={e => e.target.select()}
           readOnly={true}
           value={iframeHtml}
-          style={style.embedInput}
+          className={moduleStyle.embedInput}
           aria-label={i18n.codeToEmbed()}
         />
         <div>
           <input
             id="embedCodeCheckbox"
             type="checkbox"
-            style={style.embedCodeCheckbox}
+            className={moduleStyle.embedCodeCheckbox}
             checked={this.state.embedWithoutCode}
             onChange={() =>
               this.setState({embedWithoutCode: !this.state.embedWithoutCode})
@@ -163,7 +106,7 @@ class AdvancedShareOptions extends React.Component {
           />
           <label
             htmlFor="embedCodeCheckbox"
-            style={style.embedCodeCheckboxLabel}
+            className={moduleStyle.embedCodeCheckboxLabel}
           >
             {i18n.hideAbilityToViewCode()}
           </label>
@@ -183,7 +126,7 @@ class AdvancedShareOptions extends React.Component {
 
     return (
       <div>
-        <p style={style.p}>
+        <p className={moduleStyle.regularText}>
           Export your project as a zipped file, which will contain the
           HTML/CSS/JS files, as well as any assets, for your project.
         </p>
@@ -212,11 +155,18 @@ class AdvancedShareOptions extends React.Component {
   renderLibraryTab = () => {
     return (
       <div>
-        <p style={style.p}>{i18n.shareLibraryWithClassmate()}</p>
+        <p className={moduleStyle.regularText}>
+          {i18n.shareLibraryWithClassmate()}
+        </p>
         <Button
           color={Button.ButtonColor.neutralDark}
           onClick={this.props.openLibraryCreationDialog}
-          style={style.shareLibraryButton}
+          className={moduleStyle.shareLibraryButton}
+          style={{
+            margin: 0,
+            fontSize: 'large',
+            height: 40,
+          }}
           text={i18n.shareLibrary()}
         />
       </div>
@@ -224,15 +174,23 @@ class AdvancedShareOptions extends React.Component {
   };
 
   renderAdvancedListItem = (option, name) => {
+    const selected = this.state.selectedOption === option;
+    const buttonClassNames = classnames(
+      moduleStyle.advancedShareOptionsButton,
+      {
+        [moduleStyle.selectedAdvancedShareOption]: selected,
+        [moduleStyle.unselectedAdvancedShareOption]: !selected,
+      }
+    );
     return (
-      <li
-        style={[
-          style.nav.li,
-          this.state.selectedOption === option && style.nav.selectedLi,
-        ]}
-        onClick={() => this.setState({selectedOption: option})}
-      >
-        {name}
+      <li>
+        <button
+          onClick={() => this.setState({selectedOption: option})}
+          className={buttonClassNames}
+          type="button"
+        >
+          {name}
+        </button>
       </li>
     );
   };
@@ -265,8 +223,8 @@ class AdvancedShareOptions extends React.Component {
         );
       }
       optionsNav = (
-        <div>
-          <ul style={style.nav.ul}>
+        <div className={moduleStyle.nav}>
+          <ul>
             {exportTab}
             {embedTab}
             {libraryTab}
@@ -287,12 +245,12 @@ class AdvancedShareOptions extends React.Component {
     }
     const expand =
       expanded && selectedOption ? null : (
-        <a onClick={onExpand} style={style.expand}>
+        <button onClick={onExpand} className={moduleStyle.expand} type="button">
           {i18n.advancedShare()}
-        </a>
+        </button>
       );
     return (
-      <div style={style.root}>
+      <div className={moduleStyle.root}>
         {expand}
         {optionsNav}
         {selectedTab}
