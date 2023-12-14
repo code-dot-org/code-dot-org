@@ -1,7 +1,10 @@
 @import "color";
+@import "@cdo/apps/componentLibrary/common/styles/mixins";
 
 .segmentedButtonsContainer {
-  display: block;
+  display: inline-flex;
+  align-items: flex-start;
+  gap: -1px;
 
   .segmentedButton {
     &:first-child {
@@ -17,42 +20,112 @@
     &:not(:last-child) {
       margin-right: -1px;
     }
+
+    span {
+      margin: 0;
+    }
   }
 }
 
 .segmentedButton {
-  display: inline-block;
-  border: 1px solid $neutral_dark40;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 0.5rem;
+
+  background-color: $light_white;
+  border: 1px solid $light_gray_200;
   border-radius: 0;
-  background-color: $neutral_white;
-  color: $neutral_dark;
+  color: $light_black;
   margin: 0;
 
   // Hover styles
+  &:hover {
+    box-shadow: none;
+    background-color: $light_gray_100;
+    border-color: $light_gray_200;
+  }
 
   // Focus styles
-  &:focus {
-    //outline:none;
-    //background-color: red;
-    //border-color: red;
-    border-radius: 0;
+  &:focus-visible {
+    outline: none;
+    background-color: $light_primary_100;
+    border-color: $light_gray_200;
   }
 
   // Pressed styles
+  &:active {
+    background-color: $light_primary_500;
+    // Important here is needed to rewrite line 3320, app/assets/stylesheets/application.scss */
+    border-color: $light_primary_500 !important;
+    color: $light_white;
+  }
+
   // Disabled styles
+  &:disabled {
+    background-color: $light_white;
+    border-color: $light_gray_200;
+    color: $light_gray_200;
+  }
 }
 
 // Sizes
+.segmentedButton-l {
+  padding: 0.625rem 1rem;
 
-//.segmentedButton-l {
-//}
+  span {
+    @include button-one-text;
+  }
 
-.segmentedButton-m {
-  font-size: 19px;
+  i {
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1.1875rem;
+    line-height: 1.25;
+  }
 }
 
-//.segmentedButton-s {
-//}
+.segmentedButton-m {
+  padding: 0.5rem 1rem;
 
-//.segmentedButton-xs {
-//}
+  span {
+    @include button-two-text;
+  }
+
+  i {
+    width: 1.25rem;
+    height: 1.25rem;
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+}
+
+.segmentedButton-s {
+  padding: 0.3125rem 0.625rem;
+
+  span {
+    @include button-three-text;
+  }
+
+  i {
+    width: 1.125rem;
+    height: 1.125rem;
+    font-size: 0.875rem;
+    line-height: 1.25;
+  }
+}
+
+.segmentedButton-xs {
+  padding: 0.125rem 0.5rem;
+
+  span {
+    @include button-four-text;
+  }
+
+  i {
+    width: 1rem;
+    height: 1rem;
+    font-size: 0.8125rem;
+    line-height: 1.25;
+  }
+}

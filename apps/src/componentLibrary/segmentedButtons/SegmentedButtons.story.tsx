@@ -31,10 +31,25 @@ DefaultSegmentedButtons.args = {
     {
       label: 'Label Checked',
       onClick: () => alert('clicked'),
+      iconLeft: {
+        iconName: 'smile',
+        iconStyle: 'solid',
+        title: 'smile',
+      },
     },
     {
       label: 'Label Indeterminate',
       onClick: () => alert('clicked'),
+      iconLeft: {
+        iconName: 'smile',
+        iconStyle: 'solid',
+        title: 'smile',
+      },
+      iconRight: {
+        iconName: 'smile',
+        iconStyle: 'solid',
+        title: 'smile',
+      },
     },
   ],
   size: 'm',
@@ -45,7 +60,7 @@ DisabledSegmentedButtons.args = {
   components: [
     {
       buttons: [
-        {label: 'Label', onClick: () => alert('clicked')},
+        {label: 'Label', onClick: () => alert('clicked'), disabled: true},
         {
           label: 'Label Checked',
           onClick: () => alert('clicked'),
@@ -60,8 +75,8 @@ DisabledSegmentedButtons.args = {
   ],
 };
 
-export const SizesOfCheckbox = MultipleTemplate.bind({});
-SizesOfCheckbox.args = {
+export const SizesOfSegmentedButtons = MultipleTemplate.bind({});
+SizesOfSegmentedButtons.args = {
   components: [
     {
       buttons: [
