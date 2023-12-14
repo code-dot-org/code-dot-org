@@ -66,6 +66,9 @@ class TheaterVisualizationColumn extends React.Component {
               )}
             >
               <img id="theater" className={style.image} alt="" />
+              {/* The audio here is generated dynamically from a student's code,
+                  and we don't have text that would appropriately represent the audio being generated. */}
+              {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
               <audio id="theater-audio" preload="auto" alt="" />
             </div>
             <JavalabCrosshairOverlay visible={showOverlay} />

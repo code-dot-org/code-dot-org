@@ -170,6 +170,7 @@ export default class ProgressTableContentView extends React.Component {
           },
         }}
         columns={columns}
+        style={{width: 'fit-content'}}
       >
         <Sticky.Header
           style={{overflow: 'hidden'}}
