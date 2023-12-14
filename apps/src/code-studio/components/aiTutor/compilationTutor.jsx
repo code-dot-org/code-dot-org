@@ -6,6 +6,7 @@ import style from './ai-tutor.module.scss';
 import {askAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {compilationSystemPrompt} from '@cdo/apps/aiTutor/constants';
 
 // AI Tutor feature that explains to students why their code did not compile.
 const CompilationTutor = ({levelId}) => {
@@ -27,8 +28,7 @@ const CompilationTutor = ({levelId}) => {
   );
   const aiResponse = useSelector(state => state.aiTutor.aiResponse);
 
-  const systemPrompt =
-    'You are a tutor in a high school computer science class. Students in the class are studying Java and they would like to know in age-appropriate, clear language why their code does not compile.';
+  const systemPrompt = compilationSystemPrompt;
 
   const handleSend = async studentCode => {
     dispatch(
