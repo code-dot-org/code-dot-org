@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csd-playground",
-    "serialized_at": "2023-08-16 20:52:50 UTC",
+    "serialized_at": "2023-12-13 21:21:18 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -246,6 +246,23 @@
       },
       "seeding_key": {
         "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "lesson-14",
+      "name": "Test micro:bit lesson",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 14,
+      "properties": {
+        "overview": "This lesson plan is not available on Code.org's website - instead, [click here to access the micro:bit PDFs](https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf)",
+        "student_overview": "Learn how to use micro:bits on Microsoft Makecode!"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
         "lesson_group.key": "",
         "script.name": "csd-playground"
       }
@@ -756,6 +773,18 @@
       "seeding_key": {
         "lesson_activity.key": "bf5a65c2-6081-47ce-ba56-2ebdc0885e54",
         "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "6366e51d-234a-4ec4-b784-8c5d22f48a2e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6366e51d-234a-4ec4-b784-8c5d22f48a2e",
+        "lesson.key": "lesson-14",
         "lesson_group.key": "",
         "script.name": "csd-playground"
       }
@@ -2151,6 +2180,16 @@
       "seeding_key": {
         "activity_section.key": "248e598c-713a-4c8a-b9bb-27b0e4e72a06",
         "lesson_activity.key": "bf5a65c2-6081-47ce-ba56-2ebdc0885e54"
+      }
+    },
+    {
+      "key": "2b88c060-f758-4572-b9ba-04cdc501c84f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2b88c060-f758-4572-b9ba-04cdc501c84f",
+        "lesson_activity.key": "6366e51d-234a-4ec4-b784-8c5d22f48a2e"
       }
     }
   ],
@@ -4236,6 +4275,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dan - gen block test"
+        ],
         "progression": "Border Test"
       },
       "bonus": false,
