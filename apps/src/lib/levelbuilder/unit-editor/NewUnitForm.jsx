@@ -44,7 +44,7 @@ export default function NewUnitForm(props) {
 
   const savingDetailsAndButton = React.useCallback(
     () => (
-      <div>
+      <div className="savingDetailsAndButton">
         <input name="is_migrated" value={true} type="hidden" />
         <input name="lesson_groups" value={'[]'} type="hidden" />
         <br />

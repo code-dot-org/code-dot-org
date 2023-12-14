@@ -69,7 +69,7 @@ describe('NewUnitFormTest', () => {
     fields = wrapper.find('NewCourseFields');
     expect(fields.find('.versionYearSelector').props().value).to.equal('1991');
 
-    expect(wrapper.find('SavingDetailsAndButton').length).to.equal(1);
+    expect(wrapper.find('div.savingDetailsAndButton').length).to.equal(1);
     expect(wrapper.find('[name="script[name]"]').length).to.equal(1);
   });
 
@@ -128,7 +128,7 @@ describe('NewUnitFormTest', () => {
 
   it('can create a new unit for multi unit course', () => {
     const wrapper = shallow(<NewUnitForm {...defaultProps} />);
-    expect(wrapper.find('button').length).to.equal(0);
+    expect(wrapper.find('div.savingDetailsAndButton').length).to.equal(0);
     expect(wrapper.find('NewCourseFields').length).to.equal(0);
     expect(wrapper.find('.isCourseSelector').length).to.equal(1);
 
@@ -137,13 +137,13 @@ describe('NewUnitFormTest', () => {
       .simulate('change', {target: {value: 'false'}});
 
     expect(wrapper.find('NewCourseFields').length).to.equal(0);
-    expect(wrapper.find('SavingDetailsAndButton').length).to.equal(1);
+    expect(wrapper.find('div.savingDetailsAndButton').length).to.equal(1);
     expect(wrapper.find('[name="script[name]"]').length).to.equal(1);
   });
 
   it('resetting isCourseSelector hides NewCourseFields', () => {
     const wrapper = shallow(<NewUnitForm {...defaultProps} />);
-    expect(wrapper.find('button').length).to.equal(0);
+    expect(wrapper.find('div.savingDetailsAndButton').length).to.equal(0);
     expect(wrapper.find('NewCourseFields').length).to.equal(0);
     expect(wrapper.find('.isCourseSelector').length).to.equal(1);
 
@@ -152,19 +152,19 @@ describe('NewUnitFormTest', () => {
       .simulate('change', {target: {value: 'true'}});
 
     expect(wrapper.find('NewCourseFields').length).to.equal(1);
-    expect(wrapper.find('SavingDetailsAndButton').length).to.equal(0);
+    expect(wrapper.find('div.savingDetailsAndButton').length).to.equal(0);
     expect(wrapper.find('[name="script[name]"]').length).to.equal(0);
 
     wrapper.find('.isCourseSelector').simulate('change', {target: {value: ''}});
 
     expect(wrapper.find('NewCourseFields').length).to.equal(0);
-    expect(wrapper.find('SavingDetailsAndButton').length).to.equal(0);
+    expect(wrapper.find('div.savingDetailsAndButton').length).to.equal(0);
     expect(wrapper.find('[name="script[name]"]').length).to.equal(0);
   });
 
   it('resetting isCourseSelector hides save button', () => {
     const wrapper = shallow(<NewUnitForm {...defaultProps} />);
-    expect(wrapper.find('button').length).to.equal(0);
+    expect(wrapper.find('div.savingDetailsAndButton').length).to.equal(0);
     expect(wrapper.find('NewCourseFields').length).to.equal(0);
     expect(wrapper.find('.isCourseSelector').length).to.equal(1);
 
@@ -173,13 +173,13 @@ describe('NewUnitFormTest', () => {
       .simulate('change', {target: {value: 'false'}});
 
     expect(wrapper.find('NewCourseFields').length).to.equal(0);
-    expect(wrapper.find('SavingDetailsAndButton').length).to.equal(1);
+    expect(wrapper.find('div.savingDetailsAndButton').length).to.equal(1);
     expect(wrapper.find('[name="script[name]"]').length).to.equal(1);
 
     wrapper.find('.isCourseSelector').simulate('change', {target: {value: ''}});
 
     expect(wrapper.find('NewCourseFields').length).to.equal(0);
-    expect(wrapper.find('SavingDetailsAndButton').length).to.equal(0);
+    expect(wrapper.find('div.savingDetailsAndButton').length).to.equal(0);
     expect(wrapper.find('[name="script[name]"]').length).to.equal(0);
   });
 });
