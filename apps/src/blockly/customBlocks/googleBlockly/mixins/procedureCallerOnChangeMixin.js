@@ -39,16 +39,13 @@ const procedureCallerOnChangeMixin = {
     if (!def) {
       // We have no def nor procedure model.
       Blockly.Events.setGroup(event.group);
-      this.model_ = this.createDef_(
-        this.getFieldValue('NAME'),
-        this.paramsFromSerializedState_
-      );
+      this.model_ = this.createDef_(name, this.paramsFromSerializedState_);
       Blockly.Events.setGroup(false);
     }
     if (!this.getProcedureModel()) {
       // We have a def, but no reference to its model.
       this.model_ = this.findProcedureModel_(
-        this.getFieldValue('NAME'),
+        name,
         this.paramsFromSerializedState_
       );
     }
