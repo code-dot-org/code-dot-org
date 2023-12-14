@@ -1,0 +1,80 @@
+@import '@cdo/apps/mixins';
+@import 'color';
+@import 'font';
+
+.root {
+  margin-top: 20px;
+}
+
+.advancedShareOptionsButton {
+  @include remove-button-styles;
+  font: inherit;
+}
+
+.selectedAdvancedShareOption {
+  color: $brand_secondary_default;
+}
+
+.unselectedAdvancedShareOption {
+  color: $neutral_dark90;
+}
+
+.nav {
+  ul {
+    border-bottom: 1px solid;
+    border-color: $purple;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  li {
+    display: inline-block;
+    color: $neutral_dark90;
+    
+    @include main-font-semi-bold;
+    font-size: larger;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+}
+
+p.regularText {
+  font-size: inherit;
+  line-height: inherit;
+  color: $neutral_dark;
+  
+  @include main-font-semi-bold;
+}
+
+p.warningText {
+  color: $red;
+}
+
+.embedInput {
+  cursor: copy;
+  width: 465px;
+  height: 80px;
+  margin: 0;
+}
+
+.expand {
+  @include remove-button-styles;
+  color: $brand_secondary_default;
+  
+  @include main-font-semi-bold;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.embedCodeCheckbox {
+  accent-color: $brand_primary_default;
+  margin: 0;
+}
+
+.embedCodeCheckboxLabel {
+  display: inline-block;
+  padding-left: 8px;
+  padding-top: 8px;
+}
