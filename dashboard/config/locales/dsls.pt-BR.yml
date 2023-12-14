@@ -6979,6 +6979,16 @@ pt-BR:
       CSD Web Sample Pages_2023:
         content1: Examine esses exemplos de páginas da web e decida a qual propósito
           elas servem a seus criadores e visitantes.
+        markdown: |
+          # Exemplo de páginas pessoais da Web
+
+          <div style="float: left; text-align:center; width:33%"><strong>Modelo A</strong><br />(Clique na imagem para ver o modelo)<br /><a href="https://codeprojects.org/projects/weblab/kkb1upGQja7Hy4NAa72uQxwu87jDa_DO1aiav2Qhzk8" target="_new"><img style="border-radius:10px; margin: 10px; width: 100%;" src="https://images.code.org/301502f3280461ed7b9f16bf5ed11bb8-image-1677189841902.png" alt="Template A page"></a></div>
+          <div style="float: left; text-align:center; width:33%"><strong>Modelo B</strong><br />(Clique na imagem para ver o modelo)<br /><a href="https://codeprojects.org/projects/weblab/hQCSn2We5tss6ZiOPTGJYq6PXHkwOIAztnd3ArJbezc" target="_new"><img style="border-radius:10px; margin: 10px; width: 100%;" src="https://images.code.org/e9839b33b809a72773d9190f5378e295-image-1677194056589.png" alt="Template B page"></a></div>
+          <div style="float: left; text-align:center; width:34%"><strong>Modelo C</strong><br />(Clique na imagem para ver o modelo)<br /><a href="https://codeprojects.org/projects/weblab/Z3m2fWClc10iTgxiLnOfTqZHApYrFXgx8YqgCwAvXvs" target="_new"><img style="border-radius:10px; margin: 10px; width: 100%;" src="https://images.code.org/c030607ab7c9eacdffc613aff3992381-image-1677194170313.png" alt="Template C page"></a></div>
+          <hr style="clear: both" />
+          <div style="float: left; text-align:center; width:33%"><strong>Modelo D</strong><br />(Clique na imagem para ver o modelo)<br /><a href="https://codeprojects.org/projects/weblab/asJPWlR18HPsC30w8nGM7Zm1jPurD_wNyEKstYWjh_Q" target="_new"><img style="border-radius:10px; margin: 10px; width: 100%;" src="https://images.code.org/e53aaca3962f75b7279cb8f39b2b8237-image-1677194195497.png" alt="Template D page"></a></div>
+          <div style="float: left; text-align:center; width:33%"><strong>Modelo E</strong><br />(Clique na imagem para ver o modelo)<br /><a href="https://codeprojects.org/projects/weblab/I888qmIAVN8JACK6jHeRtIz17b77g5-XcvkkxF8ztZ8" target="_new"><img style="border-radius:10px; margin: 10px; width: 100%;" src="https://images.code.org/68afb5ea16d9e61545c68254570ce39e-image-1677194239625.png" alt="Template E page"></a></div>
+          <hr style="clear: both" />
       CSD games cake challenge choice_2021:
         description: |2-
 
@@ -17857,137 +17867,189 @@ pt-BR:
           para começar? ** Use <a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\"
           target=\"_blank\">esse recurso</a> para compartilhar feedback com seu parceiro.\n\n"
       csc_ecosystemes_foodchain_info:
-        markdown: "\n##**Todos os ecossistemas têm uma cadeia alimentar _delicadamente
-          balanceada_ ## #The Cadeia alimentar do ecossistema marinho\n: >## #1.\n\n\n\n<img
+        markdown: "\n##**Todos os ecossistemas possuem uma cadeia alimentar _delicadamente
+          equilibrada_\n###A Cadeia Alimentar do Ecossistema Marinho:\n\n\n\n<img
           src=\"https://images.code.org/2270cbb4656875db210e9871883a7d45-image-1683677265473.jpg\"
-          style= \"width:80%\">\n<div style= \"width: 80%\"> \n\nO sol fornece energia
-          para que a fotossíntese ocorra nas algas.\n>## #2. As algas são comidas
-          pelos peixes.\n>## #3. Os peixes são capturados e comidos por humanos, que
-          usam barcos de pesca com redes. \n\n</div>\n\n\n##** Se houver muito ou
-          pouco de um organismo na cadeia alimentar, haverá efeitos em todo o ecossistema.**\n"
+          style= \"width:80%\">\n<div style= \"width: 80%\"> \n\n>## #1. O sol fornece
+          energia para que a fotossíntese ocorra nas algas.\n>## #2. As algas são
+          comidas pelos peixes.\n>## #3. Os peixes são capturados e comidos por humanos,
+          que usam barcos pesqueiros com redes. \n\n</div>\n\n\n##**Se houver muito
+          ou pouco de um organismo na cadeia alimentar, haverá efeitos em todo o ecossistema.**\n"
       csc_ecosystems_choice_freeplay_2023:
-        description: Cada uma dessas simulações de ecossistema precisa ser ajustada.
+        description: Cada uma dessas simulações de ecossistemas precisa ser ajustada.
           Escolha um ecossistema, execute a simulação para observar o problema e ajuste
           o código para corrigi-lo.
-        display_name: Escolha um ecossistema!
+        display_name: Escolha um Ecossistema!
       csc_ecosystems_conditionals_overview:
-        markdown: "#Cause & Effect Conditionals \n\n</div>\n\n## Em seguida, você
-          adicionará um código para verificar a quantidade de algas na água <br>\n<img
-          src=\"https://images.code.org/8be316d4e408466b4300c614712fd652-image-1684798211348.jpg\"
-          \ width=50% style=\"margin-right: 10px; float: right\">\n<br> <br>\n\n-
-          Primeiro, o computador verifica se uma condição é verdadeira ou falsa.\n\n-
-          Se for verdade, ele executará os blocos internos.\n- Se for falso, não fará
-          nada.\n\n<br>\n<br>\n<br>\n\n## Se houver muitas algas, o coral fica doente\n\n<br>\n\n<img
-          src=\"https://images.code.org/4d8aaa9c6562e0ca0b3d92ff7aed1d03-image-1681847951794.png\"
-          \ width=20% style=\"margin-right: 10px; float: left\">\n<img src=\"https://images.code.org/941774921f367566bef36cb712cf2bfb-image-1681840836607.png\"
-          \ width=30% style=\" margin-right: 10px; float: left\">\n\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n***\n\n\n\n##
-          Se houver pouca alga, o peixe sairá\n<img src=\"https://images.code.org/6869f418200edfb88190c0a1e4e5cd10-image-1681838202310.png\"
-          \ width=20% style=\"margin-right: 10px; float: left\">\n\n\n<img src=\"https://images.code.org/233178645539bc7966f55af47865096d-image-1681840833690.png\"
-          \ width=20% style=\" margin-right: 10px; float: left\">\n\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n\n***\n\n\n\n##
-          Se houver algas suficientes, então o ecossistema é saudável\n\n<img src=\"https://images.code.org/8bb9247c35d7d167611b02764beaeff3-image-1681838011797.png\"
-          \ width=20% style=\"margin-right: 30px; float: left\">\n<img src=\"https://images.code.org/b1ed2f5c135f9637fd7a9c5778db2b0c-image-1681840830929.png\"
-          \ width=30% style=\"margin-left: 10px;float: left\">\n<br>\n<br>\n<br>\n<br>\n\n"
+        markdown: |+
+          # Condicionais de Causa & Efeito
+
+          </div>
+
+          ## Em seguida, você adicionará um código para verificar a quantidade de algas na água <br>
+          <img src="https://images.code.org/8be316d4e408466b4300c614712fd652-image-1684798211348.jpg"  width=50% style="margin-right: 10px; float: right">
+          <br> <br>
+
+          - Primeiro, o computador verifica se uma condição é verdadeira ou falsa.
+
+          - Se for verdade, ele executará os blocos internos.
+          - Se for falso, não fará nada.
+
+          <br>
+          <br>
+          <br>
+
+          ## Se houver muitas algas, o coral ficará doente
+
+          <br>
+
+          <img src="https://images.code.org/4d8aaa9c6562e0ca0b3d92ff7aed1d03-image-1681847951794.png"  width=20% style="margin-right: 10px; float: left">
+          <img src="https://images.code.org/941774921f367566bef36cb712cf2bfb-image-1681840836607.png"  width=30% style=" margin-right: 10px; float: left">
+
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+
+          ***
+
+
+
+          ## Se houver poucas algas, os peixes sairão
+          <img src="https://images.code.org/6869f418200edfb88190c0a1e4e5cd10-image-1681838202310.png"  width=20% style="margin-right: 10px; float: left">
+
+
+          <img src="https://images.code.org/233178645539bc7966f55af47865096d-image-1681840833690.png"  width=20% style=" margin-right: 10px; float: left">
+
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+
+
+          ***
+
+
+
+          ## Se a quantidade de algas estiver equilibrada, então o ecossistema ficará saudável
+
+          <img src="https://images.code.org/8bb9247c35d7d167611b02764beaeff3-image-1681838011797.png"  width=20% style="margin-right: 30px; float: left">
+          <img src="https://images.code.org/b1ed2f5c135f9637fd7a9c5778db2b0c-image-1681840830929.png"  width=30% style="margin-left: 10px;float: left">
+          <br>
+          <br>
+          <br>
+          <br>
+
       csc_ecosystems_matching_cfu:
         answers:
-        - text: "! [] (https://images.code.org/284e3b6e09f5d58052a8840e756644c5-image-1683752491112.png)"
-        - text: "! [] (https://images.code.org/d466f0912cd0cadb3d655263c71c072f-image-1683752857648.jpg)"
-        - text: "! [] (https://images.code.org/de2ab3c63bc2cf7cb319be86d5dcdec0-image-1683752570051.png)"
+        - text: "![](https://images.code.org/284e3b6e09f5d58052a8840e756644c5-image-1683752491112.png)"
+        - text: "![](https://images.code.org/d466f0912cd0cadb3d655263c71c072f-image-1683752857648.jpg)"
+        - text: "![](https://images.code.org/de2ab3c63bc2cf7cb319be86d5dcdec0-image-1683752570051.png)"
         markdown: |+
-          ## Veja as três práticas sustentáveis de pesca
+          ## Veja as três práticas de pesca sustentável
 
-          Arraste o código até a imagem correspondente.
+          Arraste o código para a imagem correspondente.
 
         questions:
-        - text: Crie uma zona de pesca para barcos! [] (https://images.code.org/5f5e0640a82242d632db10b872280e18-image-1683753001613.gif)
+        - text: Crie uma zona de pesca para os barcos ![] (https://images.code.org/5f5e0640a82242d632db10b872280e18-image-1683753001613.gif)
         - text: |-
-            Comece uma temporada de pesca e uma temporada sem pesca
-            ! [] (https://images.code.org/becad47fd19a4d0e938a0cd10c404e41-image-1683838684289.gif)
-        - text: Estabeleça limites de pesca! [] (https://images.code.org/f8bbd98ff6199af5d3ad23d64f39629d-image-1683753402925.gif)
-        title: Combine o código com a imagem
+            Comece uma temporada de pesca e uma temporada de pesca proibida
+            ![](https://images.code.org/becad47fd19a4d0e938a0cd10c404e41-image-1683838684289.gif)
+        - text: Estabeleça Limites de Pesca ![](https://images.code.org/f8bbd98ff6199af5d3ad23d64f39629d-image-1683753402925.gif)
+        title: Corresponda o código à imagem
       csc_ecosystems_matching_conditionals:
         answers:
-        - text: "! [] (https://images.code.org/db1db479bec9b40c6e0574ade394d32b-image-1680118613718.36.41
+        - text: "![](https://images.code.org/db1db479bec9b40c6e0574ade394d32b-image-1680118613718.36.41
             PM.png)"
-        - text: "! [] (https://images.code.org/7c9171ab2ee2e833e5ff60d5519d8728-image-1680118617438.31.00
+        - text: "![](https://images.code.org/7c9171ab2ee2e833e5ff60d5519d8728-image-1680118617438.31.00
             PM.png)"
-        - text: "! [] (https://images.code.org/412968ba617ef19d2049e0e63d271937-image-1680118620636.30.50
+        - text: "![](https://images.code.org/412968ba617ef19d2049e0e63d271937-image-1680118620636.30.50
             PM.png)"
         markdown: |
-          ## Veja os três ecossistemas
+          ## Veja os Três Ecossistemas
 
           Um ecossistema está equilibrado e os outros dois estão desequilibrados de maneiras diferentes. Arraste o código até a imagem correspondente.
         questions:
-        - text: Poucas algas fazem o peixe sair.! [] (https://images.code.org/c0a28473307b7e9b0e827532d2a6ddda-image-1680212227032.png)
+        - text: Poucas algas fazem os peixes saírem. ![](https://images.code.org/c0a28473307b7e9b0e827532d2a6ddda-image-1680212227032.png)
         - text: |-
-            O excesso de algas deixa o coral doente. <br>
-            ! [] (https://images.code.org/1230fd96832b692b0c8ab88e77957f33-image-1680212254888.png)
+            Muita alga deixam o coral doente. <br>
+            ![](https://images.code.org/1230fd96832b692b0c8ab88e77957f33-image-1680212254888.png)
         - text: A quantidade certa de algas permite que o coral doente se cure e também
-            mantenha os peixes saudáveis.! [] (https://images.code.org/3dd061538a7a73285aa0916fdde34e77-image-1680212284869.png)
-        title: Combine o código com a imagem
+            mantém os peixes saudáveis. ![] (https://images.code.org/3dd061538a7a73285aa0916fdde34e77-image-1680212284869.png)
+        title: Corresponda o código à imagem
       csc_ecosystems_matching_events:
         answers:
-        - text: "! [] (https://images.code.org/bf70d0664e68690f2359a48365e50ccc-image-1680556679495.16.33
+        - text: "![](https://images.code.org/bf70d0664e68690f2359a48365e50ccc-image-1680556679495.16.33
             PM.png)"
-        - text: "! [] (https://images.code.org/fe4d2803162186a8e53ec0027f27a206-image-1680556683660.36.04
+        - text: "![](https://images.code.org/fe4d2803162186a8e53ec0027f27a206-image-1680556683660.36.04
             PM.png)"
         markdown: |+
-          Veja o que acontece quando os sprites se tocam nas duas animações. Em seguida, arraste cada imagem do código até a imagem correspondente.
+          Veja o que acontece quando os sprites tocam nas duas animações. Em seguida, arraste cada imagem do código para a imagem correspondente.
 
 
         questions:
-        - text: O barco pega o peixe.! [] (https://images.code.org/bcdefefdd1787330e3ad72558b5b492d-image-1680556053866.gif)
-        - text: Os peixes comem as algas.! [] (https://images.code.org/73febc58a3d23fbf4c66e693abec9e3d-image-1680556608027.gif)
-        title: Combine o código com a animação
+        - text: O barco pega o peixe. ![](https://images.code.org/bcdefefdd1787330e3ad72558b5b492d-image-1680556053866.gif)
+        - text: Os peixes comem as algas. ![](https://images.code.org/73febc58a3d23fbf4c66e693abec9e3d-image-1680556608027.gif)
+        title: Corresponda o código à animação
       csc_ecosystems_overfishing_solution2_overview:
-        markdown: "> #Sustainable Prática de pesca #2:\n>># #Create uma temporada
-          de <img src=\"https://images.code.org/123dd5c82e4c03dcbc32b775fd16ec60-image-1681937158113.png\"
-          \ width=400 style=\"margin-right: 30px; float: left\">\npesca**Estabeleça
-          limites sobre quando as pessoas podem pescar. Quando não é temporada de
-          pesca, o ecossistema tem tempo para se recuperar.** \n<br>\n\n#Save our
-          Seas! \n<img src=\"https://images.code.org/f3f55eddff9891464c8fb5a5405c31c3-image-1681781301257.png\"
+        markdown: "> #Prática de Pesca Sustentável #2:\n>>##Crie uma Temporada de
+          Pesca <img src=\"https://images.code.org/123dd5c82e4c03dcbc32b775fd16ec60-image-1681937158113.png\"
+          \ width=400 style=\"margin-right: 30px; float: left\">\n**Estabeleça limites
+          para quando as pessoas podem pescar. Quando não é temporada de pesca, o
+          ecossistema tem tempo para se recuperar.** \n<br>\n\n#Salve Nossos Mares!
+          \n<img src=\"https://images.code.org/f3f55eddff9891464c8fb5a5405c31c3-image-1681781301257.png\"
           width=250 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n<img
           src=\"https://images.code.org/cbccfc42b7e1fe329ac7c9c37dfcb6b5-image-1681781296669.png\"
           width=250 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n\n</div>\n\n###
-          A sobrepesca é um problema que pode prejudicar os ecossistemas da vida marinha
-          e as pessoas que dependem deles. É importante praticar a pesca sustentável
-          para ajudar a proteger esses ecossistemas e garantir que as populações de
-          peixes permaneçam saudáveis.\n\n\n\n<br>\n<br>\n<br>\n"
+          A pesca predatória é um problema que pode prejudicar os ecossistemas da
+          vida marinha e as pessoas que dependem deles. É importante praticar a pesca
+          sustentável para ajudar a proteger esses ecossistemas e garantir que as
+          populações de peixes permaneçam saudáveis.\n\n\n\n<br>\n<br>\n<br>\n"
       csc_ecosystems_overfishing_solution3_overview:
-        markdown: "> #Sustainable Prática de pesca #3:\n>># #Set Limites de pesca
-          <img src=\"https://images.code.org/58d4ca52deba39a990c3165ba16e284b-image-1681747630352.png\"
+        markdown: "> #Prática de Pesca Sustentáveis #3:\n>># #Defina os Limites de
+          Pesca <img src=\"https://images.code.org/58d4ca52deba39a990c3165ba16e284b-image-1681747630352.png\"
           \ width=300 style=\"margin-right: 30px; float: left\">\n**Os cientistas
           podem ajudar a descobrir quantos peixes podem ser capturados sem causar
-          danos ao oceano. Então, os pescadores saberão que devem pescar apenas aquela
-          quantidade de peixes.** #Save \n<br>\n<br>\n<br>\n\nour Seas! \n<img src=\"https://images.code.org/35e557d27c4bdb5f546da560716dc10b-image-1681756387784.jpg\"
+          danos ao oceano. Então, os pescadores saberão que só devem pescar uma quantidade
+          determinada peixes.** \n<br>\n<br>\n<br>\n\n#Save Nossos Mares! \n<img src=\"https://images.code.org/35e557d27c4bdb5f546da560716dc10b-image-1681756387784.jpg\"
           width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n###
           Trabalhando juntos, podemos ajudar a manter nossos oceanos cheios de vida
           para as próximas gerações!\n\n\n\n<br>\n<br>\n<br>\n\n"
       csc_ecosystems_overfishing_solutions_overview:
-        markdown: "#Save nossos mares! \n<img src=\"https://images.code.org/d4267a1de975b8ea46468f74187eb95c-image-1681756621010.jpg\"
+        markdown: "#Save Nossos Mares! \n<img src=\"https://images.code.org/d4267a1de975b8ea46468f74187eb95c-image-1681756621010.jpg\"
           width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n###
-          O oceano tem muitos peixes, mas às vezes as pessoas pegam muitos peixes
-          e isso pode ser ruim para o ecossistema. Nos níveis seguintes, você codificará
-          **três práticas diferentes de pesca sustentável** para ajudar a proteger
-          nossos ecossistemas oceânicos.\n\n<br>\n\n## #To leia mais sobre soluções
+          O oceano tem muitos peixes, mas às vezes as pessoas pescam peixes demais
+          e isso pode ser ruim para o ecossistema. Nos níveis a seguir, você codificará
+          **três diferentes práticas de pesca sustentável** para ajudar a proteger
+          nossos ecossistemas oceânicos.\n\n<br>\n\n## #Para ler mais sobre soluções
           sustentáveis para nossos oceanos: <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\"
-          target=\"_blank\">Clique aqui</a>\n<br>\n<br>\n\n> #Sustainable Fishing
-          Prática #1:\n>> # #Fishing Zonas <img src=\"https://images.code.org/c33e46309c5335dc557c67c34310e723-image-1681511054034.png\"
-          \ width=300 style=\"margin-right: 30px; float: left\">\n**Os barcos de pesca
+          target=\"_blank\">Clique aqui</a>\n<br>\n<br>\n\n> #Práticas de Pesca Sustentável
+          #1:\n>> # #Zonas de Pesca <img src=\"https://images.code.org/c33e46309c5335dc557c67c34310e723-image-1681511054034.png\"
+          \ width=300 style=\"margin-right: 30px; float: left\">\n**Os barcos pesqueiros
           só podem pescar em áreas designadas. Algumas áreas estão proibidas para
-          barcos de pesca para que o ecossistema possa se recuperar.** \n<br>\n<br>\n\n\n"
+          que o ecossistema possa se recuperar.** \n<br>\n<br>\n\n\n"
       csc_ecosystems_planning:
-        markdown: "#Share Sua simulação de ecossistema!\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
-          PM.png\" style= \"width:50%\">\n<div style= \"width: 60%\"> \n\n###** Ecologistas!
-          É hora de compartilhar sua pesquisa! **\n\n## #Explain as seguintes observações
+        markdown: "## Compartilhe a Sua Simulação de Ecossistema!\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:50%\">\n<div style= \"width: 60%\"> \n\n###**Ecologistas!
+          É hora de compartilhar sua pesquisa!**\n\n### Explique as seguintes observações
           que você fez:\n\n>1. Explique a cadeia alimentar em seu ecossistema e como
-          você a codificou.\n>2. Havia muito ou pouco de um organismo?\n>3. Explique
-          as modificações que você fez na simulação. \n>4. O que você notou depois
-          de alterar os valores?\n</div>\n\n<div style=\"background-color: #a6e3e8;
-          border-radius: 10px; color: #000000; width: 95%; padding: 0.5px 20px 1px
-          20px;\">\n\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right:
+          você a codificou.\n>2. Havia muito ou muito pouco de um organismo?\n>3.
+          Explique as modificações que você fez na simulação. \n>4. O que você notou
+          depois de alterar os valores?\n</div>\n\n<div style=\"background-color:
+          #a6e3e8; border-radius: 10px; color: #000000; width: 95%; padding: 0.5px
+          20px 1px 20px;\">\n\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right:
           10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px; \">\n\n###**Pronto
-          para mais codificação? ** \nExperimente o [Express Course] do code.org (https://studio.code.org/s/express-2022)
-          para aprender mais ciência da computação no seu próprio ritmo.   \n<br>\n</p></div>\n"
+          para mais programação?** \nExperimente o [Curso Expresso] da Code.org (https://studio.code.org/s/express-2022)
+          para aprender mais sobre ciência da computação no seu próprio ritmo.   \n<br>\n</p></div>\n"
       csc_mappinglandmarks_markdown_lesson_2:
         markdown: |+
           # #Plan Mapa de seus pontos turísticos
@@ -19276,7 +19338,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - {}
+        - text: Quero ter mais aulas de ciência da computação no futuro
       csd-post-survey-unit1-preamble:
         content1: descrição aqui
       csd-post-survey-unit2-preamble:
@@ -24010,24 +24072,24 @@ pt-BR:
         - text: Quero fazer mais cursos de ciência da computação no futuro.
       csd-pulse-check-survey-preamble:
         markdown: |
-          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
+          ### Por favor, reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas não os nomes dos alunos.
           </small>
       csd-pulse-check-survey-preamble_2018:
         markdown: |
-          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
+          ### Por favor, reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas não os nomes dos alunos.
           </small>
       csd-pulse-check-survey-preamble_2018_2019:
         markdown: |
-          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
+          ### Por favor, reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas não os nomes dos alunos.
           </small>
       csd-pulse-check-survey-preamble_2019:
         markdown: |
@@ -24052,17 +24114,17 @@ pt-BR:
           </small>
       csd-pulse-check-survey-preamble_2019_pilot_2023:
         markdown: |
-          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
+          ### Por favor, reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas não os nomes dos alunos.
           </small>
       csd-pulse-check-survey-preamble_2019_pilot_copy1_2023:
         markdown: |
-          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
+          ### Por favor, reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas não os nomes dos alunos.
           </small>
       csd-pulse-check-survey-preamble_2019_pilot_copy2_2023:
         markdown: |
@@ -24073,38 +24135,38 @@ pt-BR:
           </small>
       csd-pulse-check-survey-preamble_2019_pilot_copy2_csd1_2023:
         markdown: |
-          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
+          ### Por favor, reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas não os nomes dos alunos.
           </small>
       csd-pulse-check-survey-preamble_2019_pilot_copy2_csd2_2023:
         markdown: |
-          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
+          ### Por favor, reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas não os nomes dos alunos.
           </small>
       csd-pulse-check-survey-preamble_2019_pilot_copy2_csd3_2023:
         markdown: |
-          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
+          ### Por favor, reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas não os nomes dos alunos.
           </small>
       csd-pulse-check-survey-preamble_2019_pilot_copy2_csd4_2023:
         markdown: |
-          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
+          ### Por favor, reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas não os nomes dos alunos.
           </small>
       csd-pulse-check-survey-preamble_2019_pilot_copy2_csd5_2023:
         markdown: |
-          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
+          ### Por favor, reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas não os nomes dos alunos.
           </small>
       csd-pulse-check-survey-preamble_2019_pilot_copy2_csd6_2023:
         markdown: |
@@ -24136,10 +24198,10 @@ pt-BR:
           </small>
       csd-pulse-check-survey-preamble_2023:
         markdown: |
-          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
+          ### Por favor, reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas não os nomes dos alunos.
           </small>
       csd-pulse-check-survey-preamble_2023a_2023:
         markdown: |
@@ -24157,10 +24219,10 @@ pt-BR:
           </small>
       csd-pulse-check-survey-preamble_copy1_2023:
         markdown: |
-          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
+          ### Por favor, reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas não os nomes dos alunos.
           </small>
       csd-pulse-check-survey-preamble_mb2022:
         markdown: |
@@ -27883,61 +27945,56 @@ pt-BR:
         - correct: true
           text: Esta é a primeira vez que estou aprendendo sobre ciência da computação
         - correct: true
-          text: 'Já fiz atividades menores de ciência da computação (por exemplo:
-            uma hora de código), mas esta é minha primeira aula mais longa'
+          text: 'Já fiz atividades menores sobre ciência da computação (por exemplo:
+            uma hora do código), mas esta é minha primeira aula mais longa'
         - correct: true
-          text: Já fiz aulas ou fiz tutoriais on-line mais longos sobre ciência da
-            computação
+          text: Já fiz aulas ou tutoriais on-line mais longos sobre ciência da computação
         questions:
-        - text: Quais experiências anteriores você teve com a ciência da computação?
+        - text: Quais foram as suas experiências anteriores com a ciência da computação?
       intro-pulse-survey-q1_csd2_2023:
         answers:
         - correct: true
           text: Esta é a primeira vez que estou aprendendo sobre ciência da computação
         - correct: true
-          text: 'Já fiz atividades menores de ciência da computação (por exemplo:
-            uma hora de código), mas esta é minha primeira aula mais longa'
+          text: 'Já fiz atividades menores sobre ciência da computação (por exemplo:
+            uma hora do código), mas esta é minha primeira aula mais longa'
         - correct: true
-          text: Já fiz aulas ou fiz tutoriais on-line mais longos sobre ciência da
-            computação
+          text: Já fiz aulas ou tutoriais on-line mais longos sobre ciência da computação
         questions:
-        - text: Quais experiências anteriores você teve com a ciência da computação?
+        - text: Quais foram as suas experiências anteriores com a ciência da computação?
       intro-pulse-survey-q1_csd3_2023:
         answers:
         - correct: true
           text: Esta é a primeira vez que estou aprendendo sobre ciência da computação
         - correct: true
-          text: 'Já fiz atividades menores de ciência da computação (por exemplo:
-            uma hora de código), mas esta é minha primeira aula mais longa'
+          text: 'Já fiz atividades menores sobre ciência da computação (por exemplo:
+            uma hora do código), mas esta é minha primeira aula mais longa'
         - correct: true
-          text: Já fiz aulas ou fiz tutoriais on-line mais longos sobre ciência da
-            computação
+          text: Já fiz aulas ou tutoriais on-line mais longos sobre ciência da computação
         questions:
-        - text: Quais experiências anteriores você teve com a ciência da computação?
+        - text: Quais foram as suas experiências anteriores com a ciência da computação?
       intro-pulse-survey-q1_csd4_2023:
         answers:
         - correct: true
           text: Esta é a primeira vez que estou aprendendo sobre ciência da computação
         - correct: true
-          text: 'Já fiz atividades menores de ciência da computação (por exemplo:
-            uma hora de código), mas esta é minha primeira aula mais longa'
+          text: 'Já fiz atividades menores sobre ciência da computação (por exemplo:
+            uma hora do código), mas esta é minha primeira aula mais longa'
         - correct: true
-          text: Já fiz aulas ou fiz tutoriais on-line mais longos sobre ciência da
-            computação
+          text: Já fiz aulas ou tutoriais on-line mais longos sobre ciência da computação
         questions:
-        - text: Quais experiências anteriores você teve com a ciência da computação?
+        - text: Quais foram as suas experiências anteriores com a ciência da computação?
       intro-pulse-survey-q1_csd5_2023:
         answers:
         - correct: true
           text: Esta é a primeira vez que estou aprendendo sobre ciência da computação
         - correct: true
-          text: 'Já fiz atividades menores de ciência da computação (por exemplo:
-            uma hora de código), mas esta é minha primeira aula mais longa'
+          text: 'Já fiz atividades menores sobre ciência da computação (por exemplo:
+            uma hora do código), mas esta é minha primeira aula mais longa'
         - correct: true
-          text: Já fiz aulas ou fiz tutoriais on-line mais longos sobre ciência da
-            computação
+          text: Já fiz aulas ou tutoriais on-line mais longos sobre ciência da computação
         questions:
-        - text: Quais experiências anteriores você teve com a ciência da computação?
+        - text: Quais foram as suas experiências anteriores com a ciência da computação?
       intro-pulse-survey-q1_csd6_2023:
         answers:
         - correct: true
@@ -27967,10 +28024,15 @@ pt-BR:
       intro-pulse-survey-q2_csd2_2023:
         answers:
         - correct: true
+          text: Esta é a primeira vez que estou aprendendo sobre desenvolvimento web
         - correct: true
+          text: 'Eu já fiz atividades menores de desenvolvimento web (por exemplo:
+            uma hora de programação), mas esta é minha primeira aula mais longa'
         - correct: true
+          text: Já tive aulas ou fiz tutoriais on-line mais longos sobre desenvolvimento
+            web
         questions:
-        - {}
+        - text: Quais experiências anteriores você teve com desenvolvimento web?
       intro-pulse-survey-q2_csd3_2023:
         answers:
         - correct: true
@@ -28016,7 +28078,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - {}
+        - text: Eu tenho a capacidade de aprender ciência da computação
       intro-pulse-survey-q3_csd2_2023:
         answers:
         - correct: true
@@ -28034,7 +28096,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - {}
+        - text: Eu tenho a capacidade de aprender ciência da computação
       intro-pulse-survey-q3_csd3_2023:
         answers:
         - correct: true
@@ -28052,7 +28114,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - {}
+        - text: Eu tenho a capacidade de aprender ciência da computação
       intro-pulse-survey-q3_csd4_2023:
         answers:
         - correct: true
@@ -28070,7 +28132,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - {}
+        - text: Eu tenho a capacidade de aprender ciência da computação
       intro-pulse-survey-q3_csd5_2023:
         answers:
         - correct: true
@@ -28088,7 +28150,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - {}
+        - text: Eu tenho a capacidade de aprender ciência da computação
       intro-pulse-survey-q3_csd6_2023:
         answers:
         - correct: true
@@ -28106,7 +28168,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - {}
+        - text: Eu tenho a capacidade de aprender ciência da computação
       intro-pulse-survey-q4_csd1_2023:
         answers:
         - correct: true
@@ -28124,7 +28186,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - {}
+        - text: Quero ter mais aulas de ciência da computação no futuro
       intro-pulse-survey-q4_csd2_2023:
         answers:
         - correct: true
@@ -28142,7 +28204,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - {}
+        - text: Quero ter mais aulas de ciência da computação no futuro
       intro-pulse-survey-q4_csd3_2023:
         answers:
         - correct: true
@@ -28160,7 +28222,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - {}
+        - text: Quero ter mais aulas de ciência da computação no futuro
       intro-pulse-survey-q4_csd4_2023:
         answers:
         - correct: true
@@ -28178,7 +28240,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - {}
+        - text: Quero ter mais aulas de ciência da computação no futuro
       intro-pulse-survey-q4_csd5_2023:
         answers:
         - correct: true
@@ -28196,7 +28258,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - {}
+        - text: Quero ter mais aulas de ciência da computação no futuro
       intro-pulse-survey-q4_csd6_2023:
         answers:
         - correct: true
@@ -28214,7 +28276,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - {}
+        - text: Quero ter mais aulas de ciência da computação no futuro
       intro-pulse-survey-q5_csd1_2023:
         answers:
         - correct: true
@@ -28325,6 +28387,8 @@ pt-BR:
         - text: Gosto de ciência da computação.
       intro-pulse-survey_csd1_2023:
         title: Pesquisa rápida de resolução de problemas e computação!
+      intro-pulse-survey_csd2_2023:
+        title: Pesquisa rápida de desenvolvimento web!
       made-choices-about-assignments:
         answers:
         - correct: true
