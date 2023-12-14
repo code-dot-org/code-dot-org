@@ -1055,20 +1055,6 @@ section.quote {
   }
 }
 
-// Modals
-.modal-header {
-
-  button.close {
-    min-width: unset;
-    margin-top: 2px;
-
-    &:hover {
-      background: none;
-      border: none;
-    }
-  }
-}
-
 // Video series
 // - see example: code.org/blockchain
 .video-series {

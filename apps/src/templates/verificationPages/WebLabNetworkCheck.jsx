@@ -1,12 +1,15 @@
-import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+
+import i18n from '@cdo/locale';
+
+import ValidationStep, {Status} from '../../lib/ui/ValidationStep';
+import testImageAccess from '../../code-studio/url_test';
 import {
   BRAMBLE_READY_STATE,
   FILE_SYSTEM_ERROR,
   SUPPORT_ARTICLE_URL,
 } from '../../weblab/constants';
-import ValidationStep, {Status} from '../../lib/ui/ValidationStep';
-import testImageAccess from '../../code-studio/url_test';
 
 const WEBLAB_URL = '/weblab/host?skip_files=true';
 
@@ -300,6 +303,7 @@ class WebLabNetworkCheck extends Component {
             scrolling="no"
             style={styles.iframe}
             src={this.state.iframeSrc}
+            title={i18n.emptyBrambleContainer()}
           />
         </div>
       </div>

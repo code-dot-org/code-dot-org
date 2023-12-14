@@ -1,0 +1,18 @@
+name 'course_c_maker_meet_your_microbit'
+title 'Making Counters'
+
+
+markdown <<MARKDOWN
+<h2 style="text-align: center;">Meet your micro:bit</h2>
+
+<div style="text-align: center;">
+<a href="https://mbit.io/csf-1-project" target="_blank">Check out the micro:bit code here.</a>
+</div>
+
+
+[<img src="https://images.code.org/7691a0a2939bb662b2c7dce4864cbc81-image-1701980096289.13.17 PM.png" style="display: block; margin: auto; width: 30%">](https://mbit.io/csf-1-project)
+
+
+
+
+MARKDOWN
