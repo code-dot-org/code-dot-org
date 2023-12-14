@@ -24,10 +24,10 @@ export default class CourseUnitsEditor extends Component {
   };
 
   render() {
-    const {unitNames, unitsInCourse} = this.props;
+    const {unitNames} = this.props;
     return (
       <div>
-        {unitsInCourse.concat('').map((selectedUnit, index) => (
+        {this.props.unitsInCourse.concat('').map((selectedUnit, index) => (
           <select
             style={{
               ...this.props.inputStyle,
