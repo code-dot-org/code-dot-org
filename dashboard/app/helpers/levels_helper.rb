@@ -440,11 +440,15 @@ module LevelsHelper
 
   # As we migrate labs from CDO to Google Blockly, there are multiple ways to determine which version a lab uses.
   # In priority order they, are:
-  # 1. Enrolling in the google_blockly experiment using the set_single_user_experiment endpoint (persists across levels).
-  # 2. Setting the blocklyVersion view_option, usually configured by a URL parameter (not persistent across levels).
-  # 3. The corresponding inherited Level model can override Level#uses_google_blockly?. This option is for labs that
+  # 1. For now, the Sprite Lab levelbuilding experience should always be in CDO Blockly, until we update levelbuilder to support JSON.
+  # 2. Enrolling in the google_blockly experiment using the set_single_user_experiment endpoint (persists across levels).
+  # 3. Setting the blocklyVersion view_option, usually configured by a URL parameter (not persistent across levels).
+  # 4. The corresponding inherited Level model can override Level#uses_google_blockly?. This option is for labs that
   #    have fully transitioned to Google Blockly.
   def use_google_blockly
+    # Run Sprite Lab using Google Blockly unless we are editing start blocks
+    # Allows us to transition the student experience to Google Blockly without modifying the levelbuilder experience yet
+    return false if !!@is_start_mode && @level.is_a?(GamelabJr)
     return true if Experiment.enabled?(experiment_name: 'google_blockly', user: current_user) && !@is_start_mode
     return true if view_options[:blocklyVersion]&.downcase == 'google'
     return false if view_options[:blocklyVersion]&.downcase == 'cdo'
