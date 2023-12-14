@@ -19,7 +19,8 @@ type DanceAiModalFlipCardProps = {
 };
 
 /**
- * This component renders the flip card on the Dance AI Modal. It's a good candidate for further refactoring and could possibly be made more generic.
+ * This component renders the flip card on the Dance AI Modal. It's a good
+ * candidate for further refactoring and could possibly be made more generic.
  *
  * @param props
  * @param props.mode
