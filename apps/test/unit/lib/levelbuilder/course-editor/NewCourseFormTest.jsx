@@ -40,7 +40,6 @@ describe('NewCourseFormTest', () => {
     // need to get updated fields
     fields = wrapper.find('NewCourseFields');
     expect(fields.find('.isVersionedSelector').length).to.equal(1);
-    expect(wrapper.find('button').length).to.equal(0);
 
     fields
       .find('.isVersionedSelector')
@@ -52,7 +51,7 @@ describe('NewCourseFormTest', () => {
     expect(fields.find('.versionYearSelector').props().disabled).to.equal(
       false
     );
-    expect(wrapper.find('button').length).to.equal(0);
+    expect(wrapper.find('button').length).to.equal(1);
 
     fields
       .find('.versionYearSelector')
@@ -62,7 +61,7 @@ describe('NewCourseFormTest', () => {
     fields = wrapper.find('NewCourseFields');
     expect(fields.find('.versionYearSelector').props().value).to.equal('1991');
 
-    expect(wrapper.find('button').length).to.equal(1);
+    expect(wrapper.find('button').length).to.equal(2);
   });
 
   it('course type settings are updated when family name is selected', () => {
