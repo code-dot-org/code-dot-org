@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-12-12 23:52:02 UTC",
+    "serialized_at": "2023-12-14 01:35:09 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -276,6 +276,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 About_copy_2023_K5CSConcepts"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -297,6 +300,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5-PLVid_2023_K5CSConcepts"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -318,6 +324,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Begin_2023_K5CSConcepts"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -339,6 +348,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_collector_prog1_2023_k5CSconcepts"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -360,6 +372,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_collector_prog2_2023_K5CSConcepts"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -381,6 +396,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_collector_prog3_2023_K5CSConcepts"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -402,6 +420,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_collector_prog4_2023_K5CSConcepts"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -423,6 +444,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSC-SelfPaced-debugging2_2023_K5CSConcepts"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -444,6 +468,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_collector_prog5_2023_K5CSConcepts"
+        ]
       },
       "bonus": false,
       "seeding_key": {

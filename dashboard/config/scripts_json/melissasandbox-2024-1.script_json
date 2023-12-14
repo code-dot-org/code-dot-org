@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-12-05 18:41:29 UTC",
+    "serialized_at": "2023-12-14 01:35:09 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -117,6 +117,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 About_copy_2023_MelissaSandbox"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -138,6 +141,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5-PLVid_2023_MelissaSandbox"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -159,6 +165,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Why teach CS_copy_2023_MelissaSandbox"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -180,7 +189,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "instructor_in_training": true
+        "instructor_in_training": true,
+        "level_keys": [
+          "courseC_collector_prog1_2023_MelissaSandbox"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -202,7 +214,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "instructor_in_training": true
+        "instructor_in_training": true,
+        "level_keys": [
+          "courseC_collector_prog3_2023_MelissaSandbox"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -224,7 +239,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "instructor_in_training": true
+        "instructor_in_training": true,
+        "level_keys": [
+          "courseC_collector_prog4_2023_MelissaSandbox"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -246,7 +264,10 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "instructor_in_training": true
+        "instructor_in_training": true,
+        "level_keys": [
+          "courseC_collector_prog5_2023_MelissaSandbox"
+        ]
       },
       "bonus": false,
       "seeding_key": {
