@@ -676,7 +676,7 @@ module Pd::Application
             previous_yearlong_cdo_pd: YES,
           },
           meets_scholarship_criteria_scores: {
-            not_teaching_in_access_report: nil,
+            not_teaching_in_access_report: YES,
           },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
