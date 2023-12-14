@@ -40,6 +40,7 @@ describe('NewCourseFormTest', () => {
     // need to get updated fields
     fields = wrapper.find('NewCourseFields');
     expect(fields.find('.isVersionedSelector').length).to.equal(1);
+    expect(wrapper.find('button').length).to.equal(1);
 
     fields
       .find('.isVersionedSelector')
