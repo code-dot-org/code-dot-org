@@ -246,6 +246,7 @@ input[type=submit] {
   &:focus {
     outline: var(--brand_primary_default) solid 2px;
     outline-offset: 2px;
+
     &:not(:focus-visible) {
       outline: none;
     }
@@ -256,6 +257,7 @@ input[type=submit] {
     background: none;
     border-color: var(--neutral_dark);
     color: var(--neutral_dark);
+
     &:hover {
       background: var(--neutral_dark10);
     }
@@ -266,6 +268,7 @@ input[type=submit] {
     background: var(--neutral_white);
     border-color: var(--neutral_white);
     color: var(--neutral_dark);
+
     &:hover {
       background: var(--neutral_dark10);
       border-color: var(--neutral_dark10);
@@ -310,6 +313,19 @@ input[type=submit] {
     if button text goes to 2+ lines */
   @media (max-width: 640px) {
     line-height: 1.2;
+  }
+}
+
+/* Modals */
+.modal-header {
+  & button.close {
+    min-width: unset;
+    margin-top: 2px;
+
+    &:hover {
+      background: none;
+      border: none;
+    }
   }
 }
 
