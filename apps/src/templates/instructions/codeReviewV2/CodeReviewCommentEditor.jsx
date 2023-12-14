@@ -98,6 +98,7 @@ const CodeReviewCommentEditor = ({addCodeReviewComment}) => {
             </button>
           </div>
           <Editable
+            id="ui-test-code-review-comment-input"
             renderElement={renderElement}
             renderLeaf={renderLeaf}
             placeholder={javalabMsg.addACommentToReview()}
