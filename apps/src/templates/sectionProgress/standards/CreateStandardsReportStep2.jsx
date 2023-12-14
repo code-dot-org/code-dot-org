@@ -82,6 +82,7 @@ class CreateStandardsReportStep2 extends Component {
           }
           onChange={this.commentChanged}
           style={styles.textArea}
+          aria-label={i18n.createStandardsReportStep2()}
         />
         <DialogFooter>
           <Button

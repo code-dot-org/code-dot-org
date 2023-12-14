@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import {FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {
@@ -18,7 +18,12 @@ const CSP_URL = 'https://code.org/educate/csp';
 const CSA_URL = 'https://code.org/educate/csa';
 
 const ChooseYourProgram = props => {
+  const [programChanged, setProgramChanged] = useState(false);
+
   const onProgramChange = newProgram => {
+    if (props.data.program) {
+      setProgramChanged(true);
+    }
     props.onChange(newProgram);
     analyticsReporter.sendEvent(EVENTS.PROGRAM_PICKED_EVENT, {
       'professional learning program': getProgramInfo(newProgram.program)
@@ -63,6 +68,15 @@ const ChooseYourProgram = props => {
             name="program"
             onChange={program => onProgramChange(program)}
           />
+          {programChanged && (
+            <p>
+              Note: If you have previously started the application and decide to
+              change your program, that will impact which questions you need to
+              answer to complete the application. In this case, please check all
+              pages to make sure you have answered all questions for this new
+              program choice.
+            </p>
+          )}
         </FormGroup>
       </LabelsContext.Provider>
     </FormContext.Provider>

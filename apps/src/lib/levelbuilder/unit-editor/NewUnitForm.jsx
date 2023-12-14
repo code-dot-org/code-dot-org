@@ -44,7 +44,8 @@ export default function NewUnitForm(props) {
     <form action="/s" method="post">
       <RailsAuthenticityToken />
       <label>
-        Is this unit going to be in a course with one unit or multiple units?
+        Is this unit going to be a standalone unit or part of a course with
+        multiple units?
         <select
           style={styles.dropdown}
           value={isCourse}
@@ -55,16 +56,25 @@ export default function NewUnitForm(props) {
             {''}
           </option>
           <option key={'multi-unit'} value={'false'}>
-            {'Multiple Units'}
+            {'Part of a course'}
           </option>
           <option key={'single-unit'} value={'true'}>
-            {'Single Unit'}
+            {'Standalone unit'}
           </option>
         </select>
         <HelpTip>
           <p>
-            There are two different types of courses we support. A course with
-            multiple units and a course that is a single unit.
+            Standalone units are designed to exist on their own. Use this when
+            the unit won't appear inside of a Course with /courses/ in the URL.
+          </p>
+          <p>
+            Units inside a course can be found within a Course that has a
+            /courses/ URL and shares resources between other units in that
+            course.
+          </p>
+          <p>
+            For example: How AI Works is a standalone unit, but CSD Unit 1 is
+            contained within the CSD course.
           </p>
         </HelpTip>
       </label>

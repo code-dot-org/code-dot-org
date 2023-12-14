@@ -9,6 +9,7 @@ import {
   uploadAnimationToAnimationLibrary,
   uploadMetadataToAnimationLibrary,
 } from '@cdo/apps/assetManagement/animationLibraryApi';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 const EXTENSION_CHECK = 'extensionError';
 const FILENAME_CHECK = 'filenameError';
@@ -605,6 +606,11 @@ export default class AnimationUpload extends React.Component {
             <h2 style={styles.animationUploadStep}>
               Step 3: Upload image and metadata to S3
             </h2>
+            <SafeMarkdown
+              markdown={
+                'If you upload an image and metadata as a library animation, please request an engineer to update the `spritelabCostumeLibrary.json` file located in S3 - [reference doc](https://docs.google.com/document/d/1ytp-ss-TBKxgULI2kybSaDNF-tLLbVII6OYxuFP9_8k/edit).'
+              }
+            />
             <button
               type="submit"
               disabled={uploadButtonDisabled}

@@ -1491,15 +1491,17 @@ class User < ApplicationRecord
 
   # Teachers
   def can_enable_ai_tutor?
+    !DCDO.get('ai-tutor-disabled', false) && (
     permission?(UserPermission::AI_TUTOR_ACCESS) ||
-      SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME)
+      SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME))
   end
 
   # Students
   def has_ai_tutor_access?
+    !DCDO.get('ai-tutor-disabled', false) && (
     permission?(UserPermission::AI_TUTOR_ACCESS) ||
       (get_active_experiment_names_by_teachers.include?(AI_TUTOR_EXPERIMENT_NAME) &&
-      sections_as_student.any?(&:ai_tutor_enabled))
+      sections_as_student.any?(&:ai_tutor_enabled)))
   end
 
   def student_of_verified_instructor?

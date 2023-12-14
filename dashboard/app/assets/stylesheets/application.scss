@@ -1311,6 +1311,10 @@ input.header_input {
   text-decoration: underline;
 }
 
+#teacher-dashboard {
+  margin: 0 39px;
+}
+
 #alert {
   color: $red;
   font-size: 130%;
@@ -3930,9 +3934,8 @@ html[dir=rtl] {
   background-color: $neutral_white !important;
   float: right;
   border: 2px solid $neutral_dark;
-  margin-top: 1px !important;
-  margin-right: 2px;
-  height: 16px;
+  box-sizing: border-box;
+  height: 32px;
   padding: 6px !important;
 
   html[dir=rtl] & {
