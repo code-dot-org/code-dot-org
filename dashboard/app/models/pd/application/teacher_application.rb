@@ -47,7 +47,7 @@ module Pd::Application
 
     PROGRAMS = {
       csd: 'Computer Science Discoveries (appropriate for 6th - 10th grade)',
-      csp: 'Computer Science Principles (appropriate for 9th - 12th grade, and can be implemented as an AP or introductory course)',
+      csp: 'Computer Science Principles (appropriate for 9th - 12th grade, and can be implemented as an AP or non-AP introductory course)',
       csa: 'Computer Science A (appropriate for 10th - 12th grade, and can be implemented as an AP or non-AP introductory Java programming course)'
     }.freeze
     PROGRAM_OPTIONS = PROGRAMS.values
@@ -642,12 +642,6 @@ module Pd::Application
           "I don't have experience teaching any of these courses"
         ],
         completing_on_behalf_of_someone_else: [YES, NO],
-        replace_existing: [
-          YES,
-          "No, this course will be added to the schedule in addition to an existing computer science course",
-          "No, computer science is new to my school",
-          TEXT_FIELDS[:i_dont_know_explain]
-        ]
       }
     end
 
@@ -675,7 +669,6 @@ module Pd::Application
 
         program
         enough_course_hours
-        replace_existing
 
         gender_identity
         race
@@ -741,7 +734,6 @@ module Pd::Application
         [:able_to_attend_single, TEXT_FIELDS[:unable_to_attend], :able_to_attend_single_explain],
         [:able_to_attend_multiple, TEXT_FIELDS[:no_explain], :able_to_attend_multiple_explain],
         [:committed, TEXT_FIELDS[:no_explain], :committed_other],
-        [:replace_existing, TEXT_FIELDS[:i_dont_know_explain]],
         [:able_to_attend_multiple, TEXT_FIELDS[:not_sure_explain], :able_to_attend_multiple_not_sure_explain],
         [:able_to_attend_multiple, TEXT_FIELDS[:unable_to_attend], :able_to_attend_multiple_unable_to_attend],
         [:how_heard, TEXT_FIELDS[:other_with_text]]
@@ -1032,15 +1024,6 @@ module Pd::Application
         meets_minimum_criteria_scores[:principal_approval] =
           responses[:principal_approval] == principal_options[:do_you_approve].first ? YES : NO
 
-        meets_minimum_criteria_scores[:principal_schedule_confirmed] =
-          if responses[:principal_schedule_confirmed]&.in?(principal_options[:committed_to_master_schedule].slice(0..1))
-            YES
-          elsif responses[:principal_schedule_confirmed] == principal_options[:committed_to_master_schedule][2]
-            NO
-          else
-            nil
-          end
-
         school_stats = get_latest_school_stats(school_id)
 
         free_lunch_percent = responses[:principal_free_lunch_percent].present? ?
@@ -1083,7 +1066,7 @@ module Pd::Application
             meets_minimum_criteria_scores: meets_minimum_criteria_scores,
             meets_scholarship_criteria_scores: meets_scholarship_criteria_scores,
           }
-        ) {|key, old, new| key == :replace_existing ? new : old}.to_json
+        ).to_json
       )
     end
 
@@ -1146,8 +1129,6 @@ module Pd::Application
       # Approval application created, now score corresponding teacher application
       principal_response = principal_approval.sanitized_form_data_hash
 
-      replace_course_string = principal_response.values_at(:replace_course, :replace_course_other).compact.join(": ").gsub('::', ':')
-
       principal_school = School.find_by(id: principal_response[:school])
       update_form_data_hash(
         {
@@ -1159,8 +1140,6 @@ module Pd::Application
           principal_school_type: principal_school.try(:school_type),
           principal_school_district: principal_school.try(:district).try(:name),
           principal_approval: principal_response.values_at(:do_you_approve, :do_you_approve_other).compact.join(" "),
-          principal_schedule_confirmed:
-            principal_response.values_at(:committed_to_master_schedule, :committed_to_master_schedule_other).compact.join(" "),
           principal_total_enrollment: principal_response[:total_student_enrollment],
           principal_free_lunch_percent:
             principal_response[:free_lunch_percent] ? format("%0.02f%%", principal_response[:free_lunch_percent]) : nil,
@@ -1177,11 +1156,7 @@ module Pd::Application
             principal_response[:pacific_islander] ? format("%0.02f%%", principal_response[:pacific_islander]) : nil,
           principal_white_percent: principal_response[:white] ? format("%0.02f%%", principal_response[:white]) : nil,
           principal_other_percent: principal_response[:other] ? format("%0.02f%%", principal_response[:other]) : nil,
-          principal_wont_replace_existing_course: replace_course_string,
           principal_send_ap_scores: principal_response[:send_ap_scores],
-          principal_pay_fee: principal_response[:pay_fee],
-          principal_contact_invoicing: principal_response[:contact_invoicing],
-          principal_contact_invoicing_detail: principal_response[:contact_invoicing_detail]
         }
       )
       save!

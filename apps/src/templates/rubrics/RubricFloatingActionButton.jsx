@@ -1,5 +1,6 @@
 import React, {useEffect, useMemo, useState} from 'react';
 import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
 import style from './rubrics.module.scss';
 import aiFabIcon from '@cdo/static/ai-fab-background.png';
 import rubricFabIcon from '@cdo/static/rubric-fab-background.png';
@@ -11,13 +12,15 @@ import {
   reportingDataShape,
   studentLevelInfoShape,
 } from './rubricShapes';
+import {selectedSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-export default function RubricFloatingActionButton({
+function RubricFloatingActionButton({
   rubric,
   studentLevelInfo,
   currentLevelName,
   reportingData,
   aiEnabled,
+  sectionId,
 }) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -89,4 +92,11 @@ RubricFloatingActionButton.propTypes = {
   currentLevelName: PropTypes.string,
   reportingData: reportingDataShape,
   aiEnabled: PropTypes.bool,
+  sectionId: PropTypes.number,
 };
+
+export const UnconnectedRubricFloatingActionButton = RubricFloatingActionButton;
+
+export default connect(state => ({
+  sectionId: selectedSection(state)?.id,
+}))(RubricFloatingActionButton);

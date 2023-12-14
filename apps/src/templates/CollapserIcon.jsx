@@ -25,7 +25,6 @@ function CollapserIcon({
     <button
       id={id}
       onClick={onClick}
-      role="button"
       className={classNames(
         iconClass + ' fa',
         className,
