@@ -95,13 +95,20 @@ class DanceVisualizationColumn extends React.Component {
                 id="divDanceLoading"
                 style={{...styles.visualization, ...styles.loadingContainer}}
               >
+                {
+                  // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+                  // Verify or update this alt-text as necessary
+                }
                 <img
                   src="//curriculum.code.org/images/DancePartyLoading.gif"
                   style={styles.loadingGif}
+                  alt=""
                 />
               </div>
               {this.props.isShareView && (
-                <img src={imgSrc} id="danceClickToRun" />
+                // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+                // Verify or update this alt-text as necessary
+                <img src={imgSrc} id="danceClickToRun" alt="" />
               )}
             </div>
           </ProtectedVisualizationDiv>
