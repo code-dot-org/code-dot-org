@@ -865,6 +865,9 @@ ps:
     د دې جن
   cs_ambassador_application_date: غوښتنلیکونه پورې د 8 نومبر 2023 پورې
   cs_ambassador_application_subhead: د ښوونکي سره کار وکړئ ترڅو نن خپل غوښتنلی
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: پوښتنې؟ لطفا اړیکه ونیسئ [youngwomen@code.org]
     (%{email_url})
   cs_ambassador_do_heading: د سی ایس سفیران څه کوي؟

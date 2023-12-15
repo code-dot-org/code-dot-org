@@ -52,15 +52,24 @@ pt:
           name: Álgebra
           student_description: Aprenda programação funcional com álgebra
           title: Ciência da computação em álgebra
+        CSDU1-Draft:
+          description: Local temporário para trabalhar na U1 do Disco
         CSDU2-Draft:
+          description: Local temporário para trabalhar na U2 do Disco
           description_short: Desenvolvimento na Web
         CSDU3-Draft:
           description: Local temporário para trabalhar no U3 of Disco
           description_short: Programação
           title: " Unidade TEMP CSD 3 - Jogos e animações interativas"
+        CSDU4-Draft:
+          description: Local temporário para trabalhar na U4 do Disco
+          description_short: Processo de Design e App Lab
+          title: Unidade TEMP CSD 4 - O Processo de Design
         CSDU5-Draft:
+          description: Local temporário para trabalhar na U5 do Disco
           description_short: Dados
         CSDU6-Draft:
+          description: Local temporário para trabalhar na U6 do Disco
           description_short: Makerlab
         CSF_Secret_Sample:
           description: Teste da nova filosofia educacional
@@ -69,7 +78,12 @@ pt:
           student_description: Teste da nova filosofia educacional
           title: Amostra secreta
         CSF_Secret_Sample_Story:
+          description: Teste de uma nova filosofia educacional com um enredo orientador
           description_audience: 8-18 anos de idade+
+          description_short: Isso é segredo... shhhh
+          student_description: Teste de uma nova filosofia educacional com um enredo
+            orientador
+          title: Amostra Secreta com História
         CSPLessonSamples:
           description: Amostras de lição para CSP
           description_short: Amostras de lição para CSP
@@ -80,6 +94,13 @@ pt:
           description_short: Introdução on-line a PCC
           student_description: Introdução on-line a PCC
           title: DP - Princípios da ciência da computação
+        CSPPD2:
+          description: PD online de 8 horas que se baseia na experiência presencial
+            de 5 dias e ajuda os professores a se prepararem para o início do semestre
+          description_short: 'Estudo Mesclado de Verão: 8 horas online'
+          student_description: PD online de 8 horas que se baseia na experiência presencial
+            de 5 dias e ajuda os professores a se prepararem para o início do semestre
+          title: 'Princípios da Ciência da Computação PD: Estudo Mesclado de Verão'
         CSPPD3-Unit3-pt2:
           description: Exploração on-line da Unidade 3 do CSP - Desafios da aula
           description_short: Exploração on-line da Unidade 3 do CSP - Desafios da
@@ -152,6 +173,14 @@ pt:
           description_short: 'Fase 2 - on-line: combinado de estudos de verão'
           student_description: 'Fase 2 - on-line: combinado de estudos de verão'
           title: 'Explorando o PD em Ciência da Computação: estudo combinado de verão'
+        Equity-OnlinePD:
+          description: Desenvolva estratégias para criar equidade em sua sala de aula
+            com este curso online gratuito e individualizado.
+          description_short: Desenvolva estratégias de ensino equitativas com este
+            curso online gratuito e individualizado.
+          student_description: Desenvolva estratégias para criar equidade em sua sala
+            de aula com este curso online gratuito e individualizado.
+          title: Criando Salas de Aula de Ciência da Computação mais Equitativas
         Hour of Code:
           description: Conheça as noções básicas de ciência da computação com personagens
             de Angry Birds e Plants vs. Zombies!
@@ -179,7 +208,10 @@ pt:
             profissional para professores do ensino fundamental, aqui: <https://studio.code.org/s/k5-onlinepd>'
           title: Desenvolvimento profissional para o Ensino Fundamental
         MikeTest:
+          description: Tentando não estragar nada
           description_audience: 8-98 anos de idade
+          description_short: Apenas um roteiro para brincar
+          student_description: Tentando não estragar nada
         ScienceP3OLPT3:
           title: Ciência da Computação em Ciência PD Pré-Fase 3B
         Special Fun:
@@ -207,7 +239,16 @@ pt:
             Dê o melhor de si!
           title: Tutorial - Desafio Code Studio
         afterschool1:
+          description: O Afterschool 1 foi projetado para salas de aula informais,
+            em que os alunos variam em idade e a avaliação não é obrigatória. Este
+            curso se concentra no aprendizado por meio do entretenimento, com várias
+            opções de implementação, tudo em 10 sessões ou menos. Use sozinho ou com
+            o Afterschool Unplugged. Recomendado para alunos do 3o ao 8o ano do ensino
+            fundamental.
           description_audience: De 7 a 13 anos
+          description_short: Curso curto e desconectado projetado para a aprendizagem
+            informal
+          title: Afterschool 1
         ai-ethics:
           description_audience: 6ª à 12ª séries
           title: Nosso Código de Ética em I.A.
@@ -239,6 +280,18 @@ pt:
                 -   Como o machine learning identifica padrões nos dados para tomar decisões?
                 -   Como podemos evitar o viés ao treinar um modelo de machine learning?
               display_name: Capítulo 1 - Compreendendo o Aprendizado de Máquina
+            lessonGroup-3:
+              big_questions: "-   Como o machine learning pode ser usado para resolver
+                problemas em nossa comunidade?"
+              description: Este capítulo prepara os alunos para serem cientistas de
+                machine learning para criar um aplicativo que aborde um problema em
+                sua comunidade. Os alunos acompanham um grupo fictício de estudantes
+                enquanto definem um problema, desenvolvem uma pesquisa para coletar
+                dados, analisam seus dados no I.A. Lab, criam um cartão modelo e desenvolvem
+                um aplicativo para resolver o problema. Em seguida, no projeto final,
+                os alunos repetem essas mesmas etapas com um problema que os preocupa
+                em sua comunidade.
+              display_name: Capítulo 2 - Projete um Aplicativo de Machine Learning
             lessonGroup-4:
               display_name: Questionário
           student_description: |-
@@ -256,6 +309,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Capítulo 1 - Compreendendo o Aprendizado de Máquina
+            lessonGroup-3:
+              display_name: Capítulo 2 - Projete um Aplicativo de Machine Learning
           student_description: |-
             Esta unidade é uma introdução prática ao desenvolvimento de um modelo de machine learning com dados tabulares. Os alunos exploram como os computadores aprendem com os dados para tomar decisões, e então desenvolvem projetos de machine learning com base em dados do mundo real. Esta unidade culmina no projeto de um aplicativo de machine learning para solucionar um problema pessoal relevante.
 
@@ -365,6 +420,11 @@ pt:
           description_short: Em parceria com o Projeto GUTS
           student_description: Ensine álgebra com programação funcional
           title: CS em Álgebra, Parte 1
+        algebraPD2:
+          description: Apoio ao Ano Acadêmico
+          description_short: Apoio ao Ano Acadêmico
+          student_description: Apoio ao Ano Acadêmico
+          title: CS em Álgebra, Parte 2
         algebraPD2a:
           description: 'Fase 2 - on-line: combinado de estudos de verão'
           description_short: 'Fase 2 - on-line: combinado de estudos de verão'
@@ -383,6 +443,12 @@ pt:
             blocos
           title: DP - Fase 3
         algebraPD3a:
+          description: 'Fase 3 (Parte 2): estudo sobre Álgebra de nível misto online
+            CS '
+          description_short: 'Fase 3 (Parte 1): estudo sobre Álgebra de nível misto
+            online CS '
+          student_description: 'Fase 3 (Parte 2): estudo sobre Álgebra de nível misto
+            online CS '
           title: Ciência da computação em álgebra PD
         algebraPD3b:
           title: Ciência da computação em álgebra PD
@@ -401,7 +467,9 @@ pt:
           title: Demonstração de algébra
         algebrapdnext:
           description: Ensine álgebra com programação funcional
+          description_short: "\\\\tFase 3: Suporte para o Ano Letivo"
           student_description: Ensine álgebra com programação funcional
+          title: Ciência da Computação em Álgebra PD Fase 2
         allthehiddenthings:
           description: Tipos de níveis não lançados para testes de interface de usuário
             como administrador
@@ -411,6 +479,11 @@ pt:
             de usuário como administrador
           title: Todas as coisas escondidas!
         alltheplcthings:
+          description: Este é um exemplo de curso que tem todas as coisas especiais
+            do PLC. A inscrição neste curso não gera repercussões. No momento, é apenas
+            uma cópia do TeacherCon
+          description_short: Este é um exemplo de curso que tem todas as coisas especiais
+            do PLC.
           lesson_groups:
             content:
               display_name: Conteúdo
@@ -418,6 +491,10 @@ pt:
               display_name: Práticas de ensino
             required:
               display_name: Visão geral
+          student_description: Este é um exemplo de curso que tem todas as coisas
+            especiais do PLC. A inscrição neste curso não gera repercussões. No momento,
+            é apenas uma cópia do TeacherCon
+          title: Exemplo de curso para PLC e afins
         allthesurveys:
           description_short: Local para organizar e testar as pesquisas do Code.org
           title: Todas as pesquisas
@@ -427,6 +504,10 @@ pt:
           lessons:
             lesson-49:
               name: Música
+            lesson-50:
+              name: Bate-papo com IA
+            lesson-51:
+              name: Rubricas de IA
           name: todas as coisas
           student_description: Todos os tipos de nível para testar UI
           title: Todas as coisas!
@@ -506,9 +587,33 @@ pt:
           student_description: Faça desenhos e figuras legais com o Artista!
           title: Artista
         artistExemplar:
+          description: Esses níveis de artista vão deixar os alunos da terceira série
+            de boca aberta
           description_audience: 8-18 anos de idade
+          description_short: Como podemos fazer com que os níveis do artista realmente
+            funcionem?
+          student_description: Esses níveis de artista vão deixar os alunos da terceira
+            série de boca aberta
+          title: Artista Exemplar
         asUnplugged:
+          description: O Afterschool Unplugged foi projetado para ensinar noções de
+            pensamento computacional e Ciência da Computação por meio de jogos e artesanato
+            offline. Concebidas com o ambiente de uma sala de aula informal em mente,
+            essas aulas são fantásticas como uma proposta isolada ou em combinação
+            com o Afterschool 1. Este curso se concentra no aprendizado por meio do
+            entretenimento. Recomendado para as séries finais do Ensino Fundamental
+            .
           description_audience: De 6 a 13 anos
+          description_short: Curso curto e desconectado projetado para a aprendizagem
+            informal
+          student_description: O Afterschool Unplugged foi projetado para ensinar
+            noções de pensamento computacional e Ciência da Computação por meio de
+            jogos e artesanato offline. Concebidas com o ambiente de uma sala de aula
+            informal em mente, essas aulas são fantásticas como uma proposta isolada
+            ou em combinação com o Afterschool 1. Este curso se concentra no aprendizado
+            por meio do entretenimento. Recomendado para as séries finais do Ensino
+            Fundamental .
+          title: Afterschool Unplugged
         aws-demo:
           title: Demonstração da AWS
         basketball:
@@ -570,6 +675,7 @@ pt:
           description_audience: 4-6 anos de idade
           description_short: Comece com o Curso 1 para alunos que estão começando
             a ler.
+          name: curso 1
           student_description: Comece com o Curso 1 para alunos que estão começando
             a ler. Os alunos vão criar programas de computador, o que os ajudará a
             aprender a colaborar com outras pessoas, desenvolver habilidades de resolução
@@ -585,6 +691,7 @@ pt:
             podem compartilhar. Este curso é recomendado para alunos do 2° ao 5° ano.
           description_audience: A partir de 6 anos (as crianças já devem saber ler)
           description_short: Comece com o Curso 2 para alunos que sabem ler.
+          name: curso 2
           student_description: Comece com o Curso 2 para alunos que sabem ler e não
             têm experiência prévia em programação. Neste curso, os alunos vão criar
             programas para resolver problemas e desenvolver jogos ou histórias interativas
@@ -601,6 +708,7 @@ pt:
           description_audience: 8-18 anos de idade
           description_short: Explore ainda mais a programação enquanto constrói jogos
             e histórias interativas. O Curso 3 é uma continuação do Curso 2.
+          name: curso 3
           student_description: O Curso 3 foi desenvolvido para os alunos que já fizeram
             o Curso 2. Os alunos se aprofundarão nos tópicos de programação introduzidos
             nos cursos anteriores, buscando soluções flexíveis para problemas mais
@@ -1432,6 +1540,7 @@ pt:
               display_name: Projeto de Fim do Curso
             ramp_up:
               display_name: Treinamento
+          name: coursef-2020
           student_description: Aprenda a usar diferentes tipos de loops, eventos,
             funções e condicionais. Investigue diferentes técnicas de solução de problemas
             e discuta os impactos sociais da computação e da Internet. Na segunda
@@ -1601,6 +1710,8 @@ pt:
               name: Pré-pesquisa Engenharia de Software e Visão Computacional
             lesson-8:
               name: Pós-pesquisa Engenharia de Software e Visão Computacional
+            lesson-9:
+              name: Configuração
           title: Engenharia de Software e Visão Computacional
         csa-u6-dev:
           lesson_groups:
@@ -1642,6 +1753,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-4:
               display_name: Áreas restritas
             lessonGroup-5:
@@ -1650,12 +1763,18 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
         csa1-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Questionário
             lessonGroup-3:
               display_name: Conteúdo
+            lessonGroup-4:
+              display_name: Mostre o Que Você Sabe
+            lessonGroup-5:
+              display_name: Lições Extras
           lessons:
             lesson-2:
               name: Laboratório Java
@@ -1665,16 +1784,22 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
         csa1-pilot:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-5:
               display_name: Área restrita
         csa1-pilot-facilitator:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-5:
               display_name: Área restrita
           name: coordenador-piloto-csa1
@@ -1682,20 +1807,30 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-5:
               display_name: Questionário
         csa2-2022:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
         csa2-2022-exemplars:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
         csa2-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
+            lessonGroup-4:
+              display_name: Lições Extras
           lessons:
             lesson-4:
               name: Variáveis
@@ -1703,16 +1838,22 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
         csa2-pilot:
           lesson_groups:
             lesson group:
               display_name: Conteúdo
+            lessonGroup-2:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-4:
               display_name: Área restrita
         csa2-pilot-facilitator:
           lesson_groups:
             lesson group:
               display_name: Conteúdo
+            lessonGroup-2:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-4:
               display_name: Área restrita
           name: coordenador-piloto-csa2
@@ -1720,14 +1861,22 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
         csa3-2022:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
         csa3-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
+            lessonGroup-4:
+              display_name: Lições Extras
           lessons:
             lesson-1:
               name: Matrizes unidimensionais (1D)
@@ -1737,16 +1886,22 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
         csa3-pilot:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-5:
               display_name: Área restrita
         csa3-pilot-facilitator:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-5:
               display_name: Área restrita
           name: coordenador-piloto-csa3
@@ -1754,14 +1909,22 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
         csa4-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
+            lessonGroup-4:
+              display_name: Lições Extras
           lessons:
             lesson-9:
               name: Aleatório
@@ -1773,18 +1936,26 @@ pt:
               display_name: Conteúdo
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lesson_group:
               display_name: Conteúdo
+            show_what_you_know:
+              display_name: Mostre o Que Você Sabe
         csa4-pilot:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-4:
               display_name: Área restrita
         csa4-pilot-facilitator:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-4:
               display_name: Área restrita
           name: coordenador-piloto-csa4
@@ -1792,6 +1963,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
         csa5-2022:
           lesson_groups:
             lessonGroup-2:
@@ -1800,22 +1973,32 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
+            lessonGroup-4:
+              display_name: Lições Extras
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
           name: csa5-exemplars
           title: Unidade 5 – Organização de objetos [Exemplars]
         csa5-pilot:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-4:
               display_name: Área restrita
         csa5-pilot-facilitator:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-4:
               display_name: Área restrita
           name: coordenador-piloto-csa5
@@ -1827,42 +2010,62 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-5:
               display_name: Área restrita
         csa6-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
+            lessonGroup-4:
+              display_name: Lições Extras
         csa6-exemplars:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
         csa6-pilot:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-5:
               display_name: Área restrita
         csa6-pilot-facilitator:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-5:
               display_name: Área restrita
         csa6-validation-pilot-2022:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
         csa7-2022:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-5:
               display_name: Área restrita
         csa7-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
+            lessonGroup-5:
+              display_name: Lições Extras
           lessons:
             lesson-6:
               name: Propriedade intelectual
@@ -1870,92 +2073,118 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
         csa7-pilot:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-5:
               display_name: Área restrita
         csa7-pilot-extra:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-5:
               display_name: Área restrita
         csa7-pilot-facilitator:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-5:
               display_name: Área restrita
         csa7-validation-pilot-2022:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
         csa8-2022:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-5:
               display_name: Questionário
         csa8-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-4:
               display_name: Questionário
+            lessonGroup-5:
+              display_name: Lições Extras
         csa8-exemplars:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
         csa8-pilot:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-5:
               display_name: Área restrita
         csa8-pilot-extra:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-5:
               display_name: Área restrita
         csa8-pilot-facilitator:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-5:
               display_name: Área restrita
         csa8-validation-pilot-2022:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-5:
               display_name: Questionário
         csc-ecosystems-2023:
-          description: "## Trabalho prévio sugerido para este módulo. Alunos de\n\n\\*_Ciências_
-            devem simular um ecossistema de vida marinha nas Lições 1 e 2. Para desenvolver
-            familiaridade com esse ecossistema, recomendamos este [Vídeo sobre Animais
-            do Oceano](https://www.youtube.com/watch?v=8adtdg0N2-g) (9:42 minutos).
-            \n\nNa Lição 2, os alunos vão codificar diversas práticas de pesca sustentável.
-            Eis aqui alguns textos para desenvolver conhecimentos sobre os fundamentos
-            e se aprofundar nas conexões com o mundo real: [Compreenda a Pesca Predatória](https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing)
-            (Artigo sobre o Aquário da Baía de Monterey), ou [Mw,kwa Talks to Loon](https://books.google.com/books/about/Mw_kwa_Talks_to_the_Loon.html?id=ZtJfkFFPTzIC)
-            (livro infantil).\n\n \\*_Ciência da Computação:_ Neste módulo, os alunos
-            vão aprender novos conceitos de codificação que podem ser difíceis para
-            alunos novatos em ciência da computação. Se os alunos não estiverem familiarizados
-            com o laboratório de fadas do Code.org, recomendamos que experimentem
-            o [Peixes Nadando com o Laboratório de Fadas](https://studio.code.org/s/coursee-2022/lessons/3)
+          description: "## Pré-trabalho Sugerido para este Módulo\n\n**Ciência:**
+            Os alunos simularão um ecossistema de vida marinha nas Lições 1 e 2. Para
+            se familiarizar com esse ecossistema, recomendamos este [Vídeo sobre Animais
+            Oceânicos](https://www.youtube.com/watch?v=8adtdg0N2-g) (9:42 minutos).
+            \n\nNa Lição 2, os alunos programarão várias práticas de pesca sustentável.
+            Estas são algumas leituras para construir um conhecimento básico e aprofundar
+            as conexões com o mundo real: [Entendedo a Pesca Predatória](https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing)
+            (artigo do Monterey Bay Aquarium) ou [Mw,kwa Talks to the Loon](https://books.google.com/books/about/Mw_kwa_Talks_to_the_Loon.html?id=ZtJfkFFPTzIC)
+            (livro infantil).\n\n**Ciência da Computação:** Neste módulo, os alunos
+            aprenderão novos conceitos de codificação que podem ser difíceis para
+            alunos iniciantes na ciência da computação. Se os alunos não estiverem
+            familiarizados com o Sprite Lab da Code.org, recomendamos experimentar
+            [Nandando com Peixes no Sprite Lab](https://studio.code.org/s/coursee-2022/lessons/3)
             (55 minutos) para uma introdução básica à ferramenta. \n\nEste módulo
-            também utiliza um conceito avançado de CC conhecido como declarações condicionais.
-            Os alunos aprendem esse conceito de forma gradual, mas alguns podem se
-            beneficiar participando desta atividade introdutória offline sobre declarações
-            condicionais: [Declarações condicionais com cartas](https://studio.code.org/s/coursed-2022/lessons/12)
+            também usa um conceito de CC avançado chamado declarações condicionais.
+            Os alunos aprendem esse conceito de forma estruturada, mas pode ser melhor
+            alguns alunos participarem primeiro desta introdução à atividade condicional
+            desplugada : [Condicionais com Cartas](https://studio.code.org/s/coursed-2022/lessons/12)
             (50 minutos)."
           lessons:
             lesson-3:
-              name: Codifique seu próprio ecossistema (2023)
-          title: Simulação de um ecossistema marinho (2023)
+              name: Programe Seu Próprio Ecossistema (2023)
+          title: Simulando um Ecossistema Marinho (2023)
         csc-function-machines-pilot:
           lessons:
             lesson-1:
@@ -2061,7 +2290,7 @@ pt:
           student_description: Esta unidade contém uma pesquisa para quando e a sua
             aula de Descobertas CS e as unidades forem concluídas. O seu professor
             lhe dirá quando você deverá fazer essa pesquisa.
-          title: Pesquisa Pós-curso do Descobertas da CC
+          title: Pesquisa Pós-Curso - Descobertas da CS
         csd-post-survey-2022:
           description: Esta unidade contém a Pesquisa Após o Curso das Descobertas
             CS. Esta unidade pode ser atribuída depois que os alunos completarem a
@@ -2069,7 +2298,7 @@ pt:
           student_description: Esta unidade contém uma pesquisa para quando e a sua
             aula de Descobertas CS e as unidades forem concluídas. O seu professor
             lhe dirá quando você deverá fazer essa pesquisa.
-          title: Pesquisa Pós-curso do Descobertas da CC
+          title: Pesquisa Pós-Curso - Descobertas da CS
         csd-post-survey-2023:
           description: Esta unidade contém a Pesquisa Pós-Curso. Esta unidade pode
             ser disponibilizada depois que os alunos concluírem a sua unidade final
@@ -2092,6 +2321,14 @@ pt:
           student_description: Todos os vídeos nas descobertas do CS
           title: CSD Videos
         csd1-2017:
+          description: A Unidade 1 é uma introdução altamente interativa e colaborativa
+            ao campo da ciência da computação, conforme enquadrada na busca mais ampla
+            pela resolução de problemas. Você pratica o uso de um processo de resolução
+            de problemas para resolver uma série de quebra-cabeças, desafios e cenários
+            do mundo real. Em seguida, você aprenderá como os computadores inserem,
+            produzem, armazenam e processam informações para ajudar os humanos na
+            resolução de problemas. A unidade conclui com um projeto no qual você
+            cria um aplicativo que ajuda a resolver um problema de sua escolha.
           description_short: "  Aprenda como os humanos trabalham com computadores
             para resolver problemas."
           lesson_groups:
@@ -2101,8 +2338,25 @@ pt:
               display_name: 'Capítulo 2: Computação e Resolução de Problemas'
             cspSurvey:
               display_name: Questionário
+          student_description: A Unidade 1 é uma introdução altamente interativa e
+            colaborativa ao campo da ciência da computação, conforme enquadrada na
+            busca mais ampla pela resolução de problemas. Você pratica o uso de um
+            processo de resolução de problemas para resolver uma série de quebra-cabeças,
+            desafios e cenários do mundo real. Em seguida, você aprenderá como os
+            computadores inserem, produzem, armazenam e processam informações para
+            ajudar os humanos na resolução de problemas. A unidade conclui com um
+            projeto no qual você cria um aplicativo que ajuda a resolver um problema
+            de sua escolha.
           title: Unidade 1 de CSD - Solução de problemas ('17 -'18)
         csd1-2018:
+          description: A Unidade 1 é uma introdução altamente interativa e colaborativa
+            ao campo da ciência da computação, conforme enquadrada na busca mais ampla
+            pela resolução de problemas. Você pratica o uso de um processo de resolução
+            de problemas para resolver uma série de quebra-cabeças, desafios e cenários
+            do mundo real. Em seguida, você aprenderá como os computadores inserem,
+            produzem, armazenam e processam informações para ajudar os humanos na
+            resolução de problemas. A unidade conclui com um projeto no qual você
+            cria um aplicativo que ajuda a resolver um problema de sua escolha.
           description_short: "  Aprenda como os humanos trabalham com computadores
             para resolver problemas."
           lesson_groups:
@@ -2112,6 +2366,15 @@ pt:
               display_name: 'Capítulo 2: Computação e Resolução de Problemas'
             cspSurvey:
               display_name: Questionário
+          student_description: A Unidade 1 é uma introdução altamente interativa e
+            colaborativa ao campo da ciência da computação, conforme enquadrada na
+            busca mais ampla pela resolução de problemas. Você pratica o uso de um
+            processo de resolução de problemas para resolver uma série de quebra-cabeças,
+            desafios e cenários do mundo real. Em seguida, você aprenderá como os
+            computadores inserem, produzem, armazenam e processam informações para
+            ajudar os humanos na resolução de problemas. A unidade conclui com um
+            projeto no qual você cria um aplicativo que ajuda a resolver um problema
+            de sua escolha.
           title: Unidade 1 CSD - Solução de problemas ('18 -'19)
         csd1-2019:
           description: Resolução de Problemas e Computação é uma introdução altamente
@@ -2157,6 +2420,8 @@ pt:
               display_name: 'Capítulo 1: O Processo de Resolução de Problemas'
             csd1_2:
               display_name: 'Capítulo 2: Computação e Resolução de Problemas'
+            csd1_3:
+              display_name: Lições Extras
             cspSurvey:
               display_name: Questionário
           student_description: Resolução de Problemas e Computação é uma introdução
@@ -2168,6 +2433,7 @@ pt:
             informações para ajudar nós humanos a resolver problemas. A unidade é
             concluída com um projeto na qual você desenvolve uma aplicação, visando
             solucionar um problema de sua escolha.
+          title: Unidade 1 de CSD - Solução de Problemas e Computação ('20 -'21)
         csd1-2021:
           description: |-
             Resolução de Problemas e Computação é uma introdução altamente interativa e colaborativa ao campo da ciência da computação, pensada dentro de um escopo mais amplo da resolução de problemas. Você praticará o uso do processo de resolução de problemas para abordar uma série de quebra-cabeças, desafios e cenários do mundo real. A seguir, você aprenderá como os computadores captam, enviam, armazenam e processam informações para ajudar nós humanos a resolver problemas. A unidade é concluída com um projeto na qual você desenvolve uma aplicação, visando solucionar um problema de sua escolha.
@@ -2207,6 +2473,7 @@ pt:
               display_name: 'Capítulo 2: Computação e Resolução de Problemas'
             csd1_3:
               description: 'Este capítulo fornece lições alternativas para esta unidade.  '
+              display_name: Lições Extras
             cspSurvey:
               display_name: Questionário
           student_description: Resolução de Problemas e Computação é uma introdução
@@ -2530,14 +2797,29 @@ pt:
             terá um site pessoal que poderá publicar na Internet."
           title: Unidade 2 de CSD - Desenvolvimento Web ('19 -'20)
         csd2-2020:
+          description: " Na Unidade 2, você aprenderá a criar e compartilhar o conteúdo
+            em suas próprias páginas da web. Depois de decidir qual conteúdo você
+            quer compartilhar com o mundo, você aprenderá a estruturar e estilizar
+            suas páginas usando HTML e CSS. Você também praticará habilidades valiosas
+            de programação, como depuração, uso de recursos e trabalho em equipe."
           description_short: " Aprenda a criar seu próprio site no Web Lab."
           lesson_groups:
             csd2_1:
               display_name: 'Capítulo 1: Conteúdo Web e HTML'
+            csd2_1v2:
+              display_name: 'Capítulo 1: Criando Páginas da Web'
             csd2_2:
               display_name: 'Capítulo 2: Estilo e CSS'
+            csd2_2v2:
+              display_name: 'Capítulo 2: Sites com Várias Páginas'
             cspSurvey:
               display_name: Questionário
+          name: csd2-2020
+          student_description: " Na Unidade 2, você aprenderá a criar e compartilhar
+            o conteúdo em suas próprias páginas da web. Depois de decidir qual conteúdo
+            você quer compartilhar com o mundo, você aprenderá a estruturar e estilizar
+            suas páginas usando HTML e CSS. Você também praticará habilidades valiosas
+            de programação, como depuração, uso de recursos e trabalho em equipe."
           title: Unidade 2 de CSD - Desenvolvimento Web ('20 -'21)
         csd2-2021:
           description_short: " Aprenda a criar seu próprio site no Web Lab."
@@ -2554,6 +2836,7 @@ pt:
                 ao computador, os alunos usam HTML para estruturar o conteúdo de uma
                 página da web. Eles também exploram as implicações de privacidade
                 e de propriedade intelectual da publicação de seus trabalhos on-line.
+              display_name: 'Capítulo 1: Criando Páginas da Web'
             csd2_2v2:
               big_questions: |-
                 -   Como os sites podem ser usados para solucionar problemas no mundo?
@@ -2563,8 +2846,14 @@ pt:
                 pessoal e começam a vê-los como uma forma de solucionar problemas.
                 Os alunos desenvolvem suas habilidades colaborativas e trabalham em
                 equipes para criar sites de multiplas páginas que solucionam um problema.
+              display_name: 'Capítulo 2: Sites com Várias Páginas'
             cspSurvey:
               display_name: Questionário
+          student_description: " Na Unidade 2, você aprenderá a criar e compartilhar
+            o conteúdo em suas próprias páginas da web. Depois de decidir qual conteúdo
+            você quer compartilhar com o mundo, você aprenderá a estruturar e estilizar
+            suas páginas usando HTML e CSS. Você também praticará habilidades valiosas
+            de programação, como depuração, uso de recursos e trabalho em equipe."
         csd2-2022:
           description_short: " Aprenda a criar seu próprio site no Web Lab."
           lesson_groups:
@@ -2628,6 +2917,11 @@ pt:
             ## Terminou de Lecionar esta Unidade?
 
             Responda a esta [\*\*breve pesquisa\*\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=2) para a equipe curricular da Code.org saber como foi a sua experiência com esta unidade.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Criando Páginas da Web'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Sites com Várias Páginas'
           student_description: Nesta unidade, você aprenderá como criar e compartilhar
             conteúdo em suas páginas web. Após decidir qual conteúdo você quer compartilhar
             com o mundo, você aprenderá como estruturar e estilizar suas páginas usando
@@ -2682,6 +2976,11 @@ pt:
             ## Terminou de Lecionar esta Unidade?
 
             Responda a esta [\*\*breve pesquisa\*\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=2) para a equipe curricular da Code.org saber como foi a sua experiência com esta unidade.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Criando Páginas da Web'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Sites com Várias Páginas'
           student_description: Nesta unidade, você aprenderá como criar e compartilhar
             conteúdo em suas páginas web. Após decidir qual conteúdo você quer compartilhar
             com o mundo, você aprenderá como estruturar e estilizar suas páginas usando
@@ -2874,12 +3173,14 @@ pt:
               display_name: 'Capítulo 2: Construindo Jogos'
             cspSurvey:
               display_name: Questionário
+          name: csd3-2020
           student_description: " Na Unidade 3, você aproveitará sua experiência de
             codificação ao programar animações, arte interativa e jogos no Laboratório
             de Jogos. A unidade começa com formas simples e cria jogos sofisticados
             baseados em sprites, usando os mesmos conceitos de programação e o processo
             de design que os cientistas da computação usam diariamente. No projeto
             final, você desenvolverá um programa interativo personalizado."
+          title: CSD Unidade 3 - Animações e Jogos Interativos ('20-'21)
         csd3-2021:
           description_short: Programação
           lesson_groups:
@@ -3241,6 +3542,7 @@ pt:
               display_name: 'Capítulo 2: Resolvendo problemas de dados'
             cspSurvey:
               display_name: Questionário
+          name: csd4-2020
           student_description: A unidade 4 apresenta os impactos sociais mais amplos
             da computação. Através de uma série de desafios de design, você aprenderá
             a entender melhor as necessidades de outras pessoas enquanto desenvolve
@@ -3249,6 +3551,7 @@ pt:
             de identificar uma necessidade com a qual se preocupam, protótipos de
             soluções tanto no papel quanto no App Lab e testam soluções com usuários
             reais para obter feedback e avançar iteração.
+          title: CDS Unidade 4 - O Processo de Design ('20 -'21)
         csd4-2021:
           description_short: "  Aprenda a criar um programa que atenda às necessidades
             de seus usuários."
@@ -3623,6 +3926,7 @@ pt:
             a automatizar as etapas desse processo. O capítulo conclui considerando
             como o processo de solução de problemas de dados pode ser aplicado a uma
             área de sua escolha.
+          title: CSD Unidade 5 - Dados e Sociedade ('20 -'21)
         csd5-2021:
           description_short: Aprenda como as pessoas usam computadores para resolver
             problemas de dados.
@@ -3997,6 +4301,7 @@ pt:
             inteligentes, observando como um simples protótipo bruto pode levar a
             um produto acabado. A unidade conclui com um desafio de projeto para usar
             o Circuit Playground como base para uma inovação de seu próprio projeto.
+          title: CDS Unidade 6 - Computação Física ('20 -'21)
         csd6-2021:
           description_short: Aprenda a programar com dispositivos físicos.
           lesson_groups:
@@ -4017,13 +4322,26 @@ pt:
         csd6-2022:
           description_short: Aprenda a programar com dispositivos físicos.
           lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Entradas e Saídas'
             lessonGroup-3:
               display_name: 'Capítulo 2: Construindo protótipos físicos'
             lessonGroup-4:
               display_name: Questionário
+          student_description: Esta unidade explora o papel das plataformas de hardware
+            na computação e como diferentes sensores podem fornecer entradas e saídas
+            mais eficazes do que o teclado, o mouse e o monitor tradicionais. Usando
+            o App Lab e o Circuit Playground da Adafruit, você desenvolverá programas
+            que utilizam as mesmas entradas e saídas de hardware que você vê nos dispositivos
+            inteligentes, observando como um simples protótipo bruto pode levar a
+            um produto acabado. A unidade conclui com um desafio de projeto para usar
+            o Circuit Playground como base para uma inovação de seu próprio projeto.
+          title: Computação Física ('22-'23)
         csd6-2023:
           description_short: Aprenda a programar com dispositivos físicos.
           lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Entradas e Saídas'
             lessonGroup-3:
               display_name: 'Capítulo 2: Construindo protótipos físicos'
         csd6-dlp:
@@ -4155,8 +4473,18 @@ pt:
             com esta unidade."
           description_short: Aprenda a programar com dispositivos físicos.
           lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Entradas e Saídas'
             lessonGroup-3:
               display_name: 'Capítulo 2: Construindo protótipos físicos'
+          student_description: Esta unidade explora o papel das plataformas de hardware
+            na computação e como diferentes sensores podem fornecer entradas e saídas
+            mais eficazes do que o teclado, o mouse e o monitor tradicionais. Usando
+            o App Lab e o Circuit Playground da Adafruit, você desenvolverá programas
+            que utilizam as mesmas entradas e saídas de hardware que você vê nos dispositivos
+            inteligentes, observando como um simples protótipo bruto pode levar a
+            um produto acabado. A unidade conclui com um desafio de projeto para usar
+            o Circuit Playground como base para uma inovação de seu próprio projeto.
           title: Unidade 6A - (Opção A) Criação de Aplicativos com Dispositivos -
             Circuito Playground ('23-'24)
         csd6a-2024:
@@ -4224,8 +4552,18 @@ pt:
             com esta unidade."
           description_short: Aprenda a programar com dispositivos físicos.
           lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Entradas e Saídas'
             lessonGroup-3:
               display_name: 'Capítulo 2: Construindo protótipos físicos'
+          student_description: Esta unidade explora o papel das plataformas de hardware
+            na computação e como diferentes sensores podem fornecer entradas e saídas
+            mais eficazes do que o teclado, o mouse e o monitor tradicionais. Usando
+            o App Lab e o Circuit Playground da Adafruit, você desenvolverá programas
+            que utilizam as mesmas entradas e saídas de hardware que você vê nos dispositivos
+            inteligentes, observando como um simples protótipo bruto pode levar a
+            um produto acabado. A unidade conclui com um desafio de projeto para usar
+            o Circuit Playground como base para uma inovação de seu próprio projeto.
           title: Unidade 6A - (Opção A) Criação de Aplicativos com Dispositivos -
             Circuito Playground ('23-'24)
         csd6b-2023:
@@ -4376,6 +4714,18 @@ pt:
                 -   Como o machine learning identifica padrões nos dados para tomar decisões?
                 -   Como podemos evitar o viés ao treinar um modelo de machine learning?
               display_name: Capítulo 1 - Compreendendo o Aprendizado de Máquina
+            lessonGroup-3:
+              big_questions: "-   Como o machine learning pode ser usado para resolver
+                problemas em nossa comunidade?"
+              description: Este capítulo prepara os alunos para serem cientistas de
+                machine learning para criar um aplicativo que aborde um problema em
+                sua comunidade. Os alunos acompanham um grupo fictício de estudantes
+                enquanto definem um problema, desenvolvem uma pesquisa para coletar
+                dados, analisam seus dados no I.A. Lab, criam um cartão modelo e desenvolvem
+                um aplicativo para resolver o problema. Em seguida, no projeto final,
+                os alunos repetem essas mesmas etapas com um problema que os preocupa
+                em sua comunidade.
+              display_name: Capítulo 2 - Projete um Aplicativo de Machine Learning
             lessonGroup-4:
               display_name: Questionário
           title: I.A. e Aprendizagem de máquina
@@ -4857,6 +5207,9 @@ pt:
             de facilitadores.
           title: Princípios do CS Reflexões para iniciantes 2018-2019
         csp-online-test:
+          description: Este é um espaço de teste para PD online. A inscrição neste
+            curso não faz nada.
+          description_short: Este é um exemplo de curso para testar o CSP online PD
           lesson_groups:
             content:
               display_name: Conteúdo
@@ -4864,6 +5217,9 @@ pt:
               display_name: Práticas de ensino
             required:
               display_name: Visão geral
+          student_description: Este é um espaço de teste para PD online. A inscrição
+            neste curso não faz nada.
+          title: espaço de teste para suporte online do csp
         csp-playground:
           description_audience: Escritores de currículos
           description_short: Para escalonar as atualizações das lições ou os níveis
@@ -4931,6 +5287,8 @@ pt:
           title: Pesquisa pós-curso de princípios do CS
         csp-post-survey-2023:
           title: Pesquisa pós-curso de princípios do CS
+        csp-pre-survey:
+          title: Princípios CS Pré-pesquisa
         csp1-2017:
           description: Esta unidade explora os desafios e questões técnicas que surgem
             da necessidade de representar informações digitais em computadores e transferi-las
@@ -4992,6 +5350,13 @@ pt:
             de design.
           title: CSP Unidade 1 - A Internet ('19-'20)
         csp1-2020:
+          description: Esta unidade explora os desafios técnicos e as questões que
+            surgem da necessidade de representar informações digitais em computadores.
+            Saiba como informações complexas, como números, texto, imagens e som,
+            são representadas no texto, como a compressão funciona e os impactos sociais
+            mais amplos da digitalização das informações do mundo.
+          description_short: Explore os desafios e os impactos de representar informações
+            sobre o mundo ao seu redor em bits.
           lesson_groups:
             cspSurvey:
               display_name: Questionário
@@ -4999,25 +5364,62 @@ pt:
               display_name: Pesquisa Pós-Curso
             csp_unit1_2020:
               display_name: 'Unidade 1: Informação Digital'
+          name: csp1-2020
+          student_description: Esta unidade explora os desafios técnicos e as questões
+            que surgem da necessidade de representar informações digitais em computadores.
+            Saiba como informações complexas, como números, texto, imagens e som,
+            são representadas no texto, como a compressão funciona e os impactos sociais
+            mais amplos da digitalização das informações do mundo.
           title: CSP Unidade 1 – Informação digital (2020-2021)
         csp1-2021:
+          description: Esta unidade explora os desafios técnicos e as questões que
+            surgem da necessidade de representar informações digitais em computadores.
+            Saiba como informações complexas, como números, texto, imagens e som,
+            são representadas no texto, como a compressão funciona e os impactos sociais
+            mais amplos da digitalização das informações do mundo.
+          description_short: Explore os desafios e os impactos de representar informações
+            sobre o mundo ao seu redor em bits.
           lesson_groups:
             cspSurvey:
               display_name: Questionário
             csp_unit1_2020:
               display_name: 'Unidade 1: Informação Digital'
+          student_description: Esta unidade explora os desafios técnicos e as questões
+            que surgem da necessidade de representar informações digitais em computadores.
+            Saiba como informações complexas, como números, texto, imagens e som,
+            são representadas no texto, como a compressão funciona e os impactos sociais
+            mais amplos da digitalização das informações do mundo.
         csp1-2022:
+          description: Esta unidade explora os desafios técnicos e as questões que
+            surgem da necessidade de representar informações digitais em computadores.
+            Saiba como informações complexas, como números, texto, imagens e som,
+            são representadas no texto, como a compressão funciona e os impactos sociais
+            mais amplos da digitalização das informações do mundo.
+          description_short: Explore os desafios e os impactos de representar informações
+            sobre o mundo ao seu redor em bits.
           lesson_groups:
             cspSurvey:
               display_name: Questionário
             csp_unit1_2020:
               display_name: 'Unidade 1: Informação Digital'
+          student_description: Esta unidade explora os desafios técnicos e as questões
+            que surgem da necessidade de representar informações digitais em computadores.
+            Saiba como informações complexas, como números, texto, imagens e som,
+            são representadas no texto, como a compressão funciona e os impactos sociais
+            mais amplos da digitalização das informações do mundo.
         csp1-2023:
+          description_short: Explore os desafios e os impactos de representar informações
+            sobre o mundo ao seu redor em bits.
           lesson_groups:
             cspSurvey:
               display_name: Questionário
             csp_unit1_2020:
               display_name: 'Unidade 1: Informação Digital'
+          student_description: Esta unidade explora os desafios técnicos e as questões
+            que surgem da necessidade de representar informações digitais em computadores.
+            Saiba como informações complexas, como números, texto, imagens e som,
+            são representadas no texto, como a compressão funciona e os impactos sociais
+            mais amplos da digitalização das informações do mundo.
         csp1-dlp:
           description: 'Esta é a Unidade 1 do Plano de Aprendizagem Mais Profunda
             para os facilitadores de CSP do Code.org em treinamento. Aqui você encontrará
@@ -5082,6 +5484,11 @@ pt:
               display_name: Variáveis
           title: 'Unidade 1: Bits e Bytes'
         csp1-support:
+          description: Este é um conjunto de suportes online organizados em um Curso
+            de Aprendizagem Profissional para professores do CSP que se preparam para
+            ensinar a Unidade 1.
+          description_short: Curso de Aprendizagem Profissional para Professores da
+            Unidade CSP 1
           lesson_groups:
             content:
               display_name: Conteúdo
@@ -5089,6 +5496,9 @@ pt:
               display_name: Práticas de ensino
             required:
               display_name: Visão geral
+          student_description: Este é um conjunto de suportes online organizados em
+            um Curso de Aprendizagem Profissional para professores do CSP que se preparam
+            para ensinar a Unidade 1.
           title: Unidade 1 Curso de aprendizagem profissional on-line
         csp10-2020:
           lesson_groups:
@@ -5110,11 +5520,18 @@ pt:
             lessonGroup-2:
               display_name: Pesquisa Pós-Curso
         csp10-2023:
+          description_short: Projete e analise algoritmos para entender como eles
+            funcionam e por que alguns são considerados melhores do que outros.
           lesson_groups:
             csp_unit10_2020:
               display_name: 'Unidade 10: Segurança cibernética e impactos globais'
             lessonGroup-2:
               display_name: Pesquisa Pós-Curso
+          student_description: Esta unidade é uma rápida exploração de como os cientistas
+            da computação projetam algoritmos para resolver problemas e como eles
+            analisam a velocidade de diferentes algoritmos. Aprenda sobre o conceito
+            de eficiência algorítmica por meio de uma variedade de atividades práticas
+            e saiba como ele está sendo aplicado na computação moderna.
         csp10-pilot:
           title: Cibersegurança e Impactos Globais
         csp10-pilot-staging:
@@ -5211,26 +5628,66 @@ pt:
             na unidade.
           title: CSP Unidade 2 - Informação Digital ('19-'20)
         csp2-2020:
+          description: Esta unidade revela como a Internet foi projetada para conectar
+            bilhões de dispositivos e pessoas umas às outras. Aprenda como os diferentes
+            protocolos da Internet funcionam e, na verdade, crie-os você mesmo usando
+            o Internet Simulator. Em seguida, considere os impactos que a Internet
+            teve, tanto bons quanto ruins, na vida moderna.
+          description_short: Crie a Internet do zero usando o Internet Simulator.
           lesson_groups:
             cspSurvey2020:
               display_name: Pesquisa Pós-Curso
             csp_unit2_2020:
               display_name: 'Unidade 2: A internet'
+          name: csp2-2020
+          student_description: Esta unidade revela como a Internet foi projetada para
+            conectar bilhões de dispositivos e pessoas umas às outras. Aprenda como
+            os diferentes protocolos da Internet funcionam e, na verdade, crie-os
+            você mesmo usando o Internet Simulator. Em seguida, considere os impactos
+            que a Internet teve, tanto bons quanto ruins, na vida moderna.
           title: CSP Unidade 2 – A Internet (2020-2021)
         csp2-2021:
+          description: Esta unidade revela como a Internet foi projetada para conectar
+            bilhões de dispositivos e pessoas umas às outras. Aprenda como os diferentes
+            protocolos da Internet funcionam e, na verdade, crie-os você mesmo usando
+            o Internet Simulator. Em seguida, considere os impactos que a Internet
+            teve, tanto bons quanto ruins, na vida moderna.
+          description_short: Crie a Internet do zero usando o Internet Simulator.
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Unidade 2: A internet'
             lessonGroup-2:
               display_name: Questionário
+          student_description: Esta unidade revela como a Internet foi projetada para
+            conectar bilhões de dispositivos e pessoas umas às outras. Aprenda como
+            os diferentes protocolos da Internet funcionam e, na verdade, crie-os
+            você mesmo usando o Internet Simulator. Em seguida, considere os impactos
+            que a Internet teve, tanto bons quanto ruins, na vida moderna.
         csp2-2022:
+          description: Esta unidade revela como a Internet foi projetada para conectar
+            bilhões de dispositivos e pessoas umas às outras. Aprenda como os diferentes
+            protocolos da Internet funcionam e, na verdade, crie-os você mesmo usando
+            o Internet Simulator. Em seguida, considere os impactos que a Internet
+            teve, tanto bons quanto ruins, na vida moderna.
+          description_short: Crie a Internet do zero usando o Internet Simulator.
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Unidade 2: A internet'
+          student_description: Esta unidade revela como a Internet foi projetada para
+            conectar bilhões de dispositivos e pessoas umas às outras. Aprenda como
+            os diferentes protocolos da Internet funcionam e, na verdade, crie-os
+            você mesmo usando o Internet Simulator. Em seguida, considere os impactos
+            que a Internet teve, tanto bons quanto ruins, na vida moderna.
         csp2-2023:
+          description_short: Crie a Internet do zero usando o Internet Simulator.
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Unidade 2: A internet'
+          student_description: Esta unidade revela como a Internet foi projetada para
+            conectar bilhões de dispositivos e pessoas umas às outras. Aprenda como
+            os diferentes protocolos da Internet funcionam e, na verdade, crie-os
+            você mesmo usando o Internet Simulator. Em seguida, considere os impactos
+            que a Internet teve, tanto bons quanto ruins, na vida moderna.
         csp2-dlp:
           description: 'Esta é a Unidade 2 do Plano de Aprendizagem Mais Profunda
             para os facilitadores de CSP do Code.org em treinamento. Aqui você encontrará
@@ -5282,6 +5739,7 @@ pt:
               display_name: Conteúdo
             required:
               display_name: Visão geral
+          title: CSP Piloto da Unidade 2 - A Internet
         csp2-pilot-staging:
           lesson_groups:
             csp_conditionals:
@@ -5294,6 +5752,11 @@ pt:
               display_name: Variáveis
           title: 'Unidade 2: A internet'
         csp2-support:
+          description: Este é um conjunto de suportes online organizados em um Curso
+            de Aprendizagem Profissional para professores do CSP que se preparam para
+            ensinar a Unidade 2.
+          description_short: Curso de Aprendizagem Profissional para Professores da
+            Unidade CSP 2
           lesson_groups:
             content:
               display_name: Conteúdo
@@ -5301,6 +5764,10 @@ pt:
               display_name: Práticas de ensino
             required:
               display_name: Visão geral
+          student_description: Este é um conjunto de suportes online organizados em
+            um Curso de Aprendizagem Profissional para professores do CSP que se preparam
+            para ensinar a Unidade 2.
+          title: Unidade 2 Curso de Aprendizagem Profissional Online
         csp3-2017:
           description: |-
             Esta unidade apresenta os conceitos fundamentais da programação de computadores, o que libera a capacidade de criar aplicativos ricos e interativos. Este curso usa JavaScript como linguagem de programação e App Lab como ambiente de programação para criar aplicativos, mas os conceitos aprendidos nessas lições abrangem todas as linguagens e ferramentas de programação.
@@ -5364,24 +5831,72 @@ pt:
             todas as ferramentas e linguagens de programação.
           title: CSP Unidade 3 - Programação
         csp3-2020:
+          description: Esta unidade é uma introdução à programação e ao design de
+            aplicativos com foco em habilidades importantes, como depuração, programação
+            em pares e testes com usuários. Aprenda a criar interfaces de usuário
+            e a escrever programas orientados por eventos no App Lab e, em seguida,
+            crie um projeto que ensine seus colegas sobre um tópico de sua escolha.
+          description_short: Crie seu primeiro aplicativo e saiba como os programadores
+            colaboram e interagem com os usuários para criar as melhores soluções
+            possíveis para os problemas.
           lesson_groups:
             cspSurvey2020:
               display_name: Pesquisa Pós-Curso
             csp_unit3_2020:
               display_name: 'Unidade 3: Introdução ao design de aplicativos'
+          name: csp3-2020
+          student_description: Esta unidade é uma introdução à programação e ao design
+            de aplicativos com foco em habilidades importantes, como depuração, programação
+            em pares e testes com usuários. Aprenda a criar interfaces de usuário
+            e a escrever programas orientados por eventos no App Lab e, em seguida,
+            crie um projeto que ensine seus colegas sobre um tópico de sua escolha.
           title: CSP Unidade 3 – Introdução ao design de aplicativos (2020-2021)
         csp3-2021:
+          description: Esta unidade é uma introdução à programação e ao design de
+            aplicativos com foco em habilidades importantes, como depuração, programação
+            em pares e testes com usuários. Aprenda a criar interfaces de usuário
+            e a escrever programas orientados por eventos no App Lab e, em seguida,
+            crie um projeto que ensine seus colegas sobre um tópico de sua escolha.
+          description_short: Crie seu primeiro aplicativo e saiba como os programadores
+            colaboram e interagem com os usuários para criar as melhores soluções
+            possíveis para os problemas.
           lesson_groups:
             csp_unit3_2020:
               display_name: 'Unidade 3: Introdução ao design de aplicativos'
+          student_description: Esta unidade é uma introdução à programação e ao design
+            de aplicativos com foco em habilidades importantes, como depuração, programação
+            em pares e testes com usuários. Aprenda a criar interfaces de usuário
+            e a escrever programas orientados por eventos no App Lab e, em seguida,
+            crie um projeto que ensine seus colegas sobre um tópico de sua escolha.
         csp3-2022:
+          description: Esta unidade é uma introdução à programação e ao design de
+            aplicativos com foco em habilidades importantes, como depuração, programação
+            em pares e testes com usuários. Aprenda a criar interfaces de usuário
+            e a escrever programas orientados por eventos no App Lab e, em seguida,
+            crie um projeto que ensine seus colegas sobre um tópico de sua escolha.
+          description_short: Crie seu primeiro aplicativo e saiba como os programadores
+            colaboram e interagem com os usuários para criar as melhores soluções
+            possíveis para os problemas.
           lesson_groups:
             csp_unit3_2020:
               display_name: 'Unidade 3: Introdução ao design de aplicativos'
+          student_description: Esta unidade é uma introdução à programação e ao design
+            de aplicativos com foco em habilidades importantes, como depuração, programação
+            em pares e testes com usuários. Aprenda a criar interfaces de usuário
+            e a escrever programas orientados por eventos no App Lab e, em seguida,
+            crie um projeto que ensine seus colegas sobre um tópico de sua escolha.
         csp3-2023:
+          description_short: Crie seu primeiro aplicativo e saiba como os programadores
+            colaboram e interagem com os usuários para criar as melhores soluções
+            possíveis para os problemas.
           lesson_groups:
             csp_unit3_2020:
               display_name: 'Unidade 3: Introdução ao design de aplicativos'
+          student_description: Esta unidade é uma introdução à programação e ao design
+            de aplicativos com foco em habilidades importantes, como depuração, programação
+            em pares e testes com usuários. Aprenda a criar interfaces de usuário
+            e a escrever programas orientados por eventos no App Lab e, em seguida,
+            crie um projeto que ensine seus colegas sobre um tópico de sua escolha.
         csp3-a:
           description: Esta unidade apresenta os conceitos fundamentais de programação
             de computadores para estudantes do grupo de sub objetivos A.
@@ -5581,6 +6096,13 @@ pt:
             moderna funciona.
           title: CSP Unidade 4 - Big Data e Privacidade ('19 -'20)
         csp4-2020:
+          description: Esta unidade explora como variáveis, condicionais e funções
+            permitem o design de aplicativos cada vez mais complexos. Aprenda a programar
+            com esses três novos conceitos por meio de uma sequência de atividades
+            colaborativas. Em seguida, crie seu próprio aplicativo de tomada de decisões
+            para compartilhar com amigos e ajudá-los a tomar uma decisão.
+          description_short: Aprenda a criar aplicativos que armazenam informações,
+            tomam decisões e mantêm o código organizado.
           lesson_groups:
             cspSurvey2020:
               display_name: Pesquisa Pós-Curso
@@ -5592,8 +6114,21 @@ pt:
               display_name: Projeto
             csp_variables:
               display_name: Variáveis
+          name: csp4-2020
+          student_description: Esta unidade explora como variáveis, condicionais e
+            funções permitem o design de aplicativos cada vez mais complexos. Aprenda
+            a programar com esses três novos conceitos por meio de uma sequência de
+            atividades colaborativas. Em seguida, crie seu próprio aplicativo de tomada
+            de decisões para compartilhar com amigos e ajudá-los a tomar uma decisão.
           title: CSP Unidade 4 - Variáveis, condicionais e funções ('20 -'21)
         csp4-2021:
+          description: Esta unidade explora como variáveis, condicionais e funções
+            permitem o design de aplicativos cada vez mais complexos. Aprenda a programar
+            com esses três novos conceitos por meio de uma sequência de atividades
+            colaborativas. Em seguida, crie seu próprio aplicativo de tomada de decisões
+            para compartilhar com amigos e ajudá-los a tomar uma decisão.
+          description_short: Aprenda a criar aplicativos que armazenam informações,
+            tomam decisões e mantêm o código organizado.
           lesson_groups:
             csp_conditionals:
               display_name: Condições
@@ -5603,7 +6138,19 @@ pt:
               display_name: Projeto
             csp_variables:
               display_name: Variáveis
+          student_description: Esta unidade explora como variáveis, condicionais e
+            funções permitem o design de aplicativos cada vez mais complexos. Aprenda
+            a programar com esses três novos conceitos por meio de uma sequência de
+            atividades colaborativas. Em seguida, crie seu próprio aplicativo de tomada
+            de decisões para compartilhar com amigos e ajudá-los a tomar uma decisão.
         csp4-2022:
+          description: Esta unidade explora como variáveis, condicionais e funções
+            permitem o design de aplicativos cada vez mais complexos. Aprenda a programar
+            com esses três novos conceitos por meio de uma sequência de atividades
+            colaborativas. Em seguida, crie seu próprio aplicativo de tomada de decisões
+            para compartilhar com amigos e ajudá-los a tomar uma decisão.
+          description_short: Aprenda a criar aplicativos que armazenam informações,
+            tomam decisões e mantêm o código organizado.
           lesson_groups:
             csp_conditionals:
               display_name: Condições
@@ -5613,7 +6160,14 @@ pt:
               display_name: Projeto
             csp_variables:
               display_name: Variáveis
+          student_description: Esta unidade explora como variáveis, condicionais e
+            funções permitem o design de aplicativos cada vez mais complexos. Aprenda
+            a programar com esses três novos conceitos por meio de uma sequência de
+            atividades colaborativas. Em seguida, crie seu próprio aplicativo de tomada
+            de decisões para compartilhar com amigos e ajudá-los a tomar uma decisão.
         csp4-2023:
+          description_short: Aprenda a criar aplicativos que armazenam informações,
+            tomam decisões e mantêm o código organizado.
           lesson_groups:
             csp_conditionals:
               display_name: Condições
@@ -5623,6 +6177,11 @@ pt:
               display_name: Projeto
             csp_variables:
               display_name: Variáveis
+          student_description: Esta unidade explora como variáveis, condicionais e
+            funções permitem o design de aplicativos cada vez mais complexos. Aprenda
+            a programar com esses três novos conceitos por meio de uma sequência de
+            atividades colaborativas. Em seguida, crie seu próprio aplicativo de tomada
+            de decisões para compartilhar com amigos e ajudá-los a tomar uma decisão.
         csp4-dlp:
           description: 'Esta é a Unidade 4 do Plano de Aprendizagem Mais Profunda
             para os facilitadores de CSP do Code.org em treinamento. Aqui você encontrará
@@ -5783,6 +6342,14 @@ pt:
             e ferramentas de programação.
           title: CSP Unidade 5 - Criação de aplicativos ('19 -'20)
         csp5-2020:
+          description: Esta unidade apresenta listas, loops e travessias e explora
+            como eles podem ser usados para criar aplicativos que armazenam e processam
+            grandes quantidades de informações. Aprenda a programar com a biblioteca
+            de dados no App Lab e conclua um projeto de hackathon de 5 dias no final
+            da unidade, onde você pode criar um programa sobre qualquer tópico de
+            sua escolha.
+          description_short: Aprenda a criar aplicativos que usam listas, loops e
+            travessias para armazenar e processar grandes quantidades de informações.
           lesson_groups:
             cspSurvey2020:
               display_name: Pesquisa Pós-Curso
@@ -5794,8 +6361,23 @@ pt:
               display_name: Projeto
             csp_traversals:
               display_name: Traversais
+          name: csp5-2020
+          student_description: Esta unidade apresenta listas, loops e travessias e
+            explora como eles podem ser usados para criar aplicativos que armazenam
+            e processam grandes quantidades de informações. Aprenda a programar com
+            a biblioteca de dados no App Lab e conclua um projeto de hackathon de
+            5 dias no final da unidade, onde você pode criar um programa sobre qualquer
+            tópico de sua escolha.
           title: CSP Unidade 5 – Listas, laços e travessias (2020–2021)
         csp5-2021:
+          description: Esta unidade apresenta listas, loops e travessias e explora
+            como eles podem ser usados para criar aplicativos que armazenam e processam
+            grandes quantidades de informações. Aprenda a programar com a biblioteca
+            de dados no App Lab e conclua um projeto de hackathon de 5 dias no final
+            da unidade, onde você pode criar um programa sobre qualquer tópico de
+            sua escolha.
+          description_short: Aprenda a criar aplicativos que usam listas, loops e
+            travessias para armazenar e processar grandes quantidades de informações.
           lesson_groups:
             csp_lists:
               display_name: Listas
@@ -5807,7 +6389,21 @@ pt:
               display_name: Traversais
             lessonGroup-5:
               display_name: Pesquisa Pós-Curso
+          student_description: Esta unidade apresenta listas, loops e travessias e
+            explora como eles podem ser usados para criar aplicativos que armazenam
+            e processam grandes quantidades de informações. Aprenda a programar com
+            a biblioteca de dados no App Lab e conclua um projeto de hackathon de
+            5 dias no final da unidade, onde você pode criar um programa sobre qualquer
+            tópico de sua escolha.
         csp5-2022:
+          description: Esta unidade apresenta listas, loops e travessias e explora
+            como eles podem ser usados para criar aplicativos que armazenam e processam
+            grandes quantidades de informações. Aprenda a programar com a biblioteca
+            de dados no App Lab e conclua um projeto de hackathon de 5 dias no final
+            da unidade, onde você pode criar um programa sobre qualquer tópico de
+            sua escolha.
+          description_short: Aprenda a criar aplicativos que usam listas, loops e
+            travessias para armazenar e processar grandes quantidades de informações.
           lesson_groups:
             csp_lists:
               display_name: Listas
@@ -5819,7 +6415,16 @@ pt:
               display_name: Traversais
             lessonGroup-5:
               display_name: Pesquisa Pós-Curso
+          student_description: Esta unidade apresenta listas, loops e travessias e
+            explora como eles podem ser usados para criar aplicativos que armazenam
+            e processam grandes quantidades de informações. Aprenda a programar com
+            a biblioteca de dados no App Lab e conclua um projeto de hackathon de
+            5 dias no final da unidade, onde você pode criar um programa sobre qualquer
+            tópico de sua escolha.
         csp5-2023:
+          description_short: Explore e visualize conjuntos de dados de uma ampla variedade
+            de tópicos enquanto procura padrões e tenta aprender mais sobre o mundo
+            ao seu redor.
           lesson_groups:
             csp_lists:
               display_name: Dados
@@ -5929,25 +6534,64 @@ pt:
             tarefas de criação e exploração de desempenho.
           title: Unidade CSP 6 - Tarefas de desempenho do AP
         csp6-2020:
+          description: Esta unidade é uma rápida exploração de como os cientistas
+            da computação projetam algoritmos para resolver problemas e como eles
+            analisam a velocidade de diferentes algoritmos. Aprenda sobre o conceito
+            de eficiência algorítmica por meio de uma variedade de atividades práticas
+            e saiba como ele está sendo aplicado na computação moderna.
+          description_short: Projete e analise algoritmos para entender como eles
+            funcionam e por que alguns são considerados melhores do que outros.
           lesson_groups:
             cspSurvey2020:
               display_name: Pesquisa Pós-Curso
             csp_unit6_2020:
               display_name: 'Unidade 6: Algoritmos'
+          name: csp6-2020
+          student_description: Esta unidade é uma rápida exploração de como os cientistas
+            da computação projetam algoritmos para resolver problemas e como eles
+            analisam a velocidade de diferentes algoritmos. Aprenda sobre o conceito
+            de eficiência algorítmica por meio de uma variedade de atividades práticas
+            e saiba como ele está sendo aplicado na computação moderna.
           title: CSP Unidade 6 – Algoritmos (2020-2021)
         csp6-2021:
+          description: Esta unidade é uma rápida exploração de como os cientistas
+            da computação projetam algoritmos para resolver problemas e como eles
+            analisam a velocidade de diferentes algoritmos. Aprenda sobre o conceito
+            de eficiência algorítmica por meio de uma variedade de atividades práticas
+            e saiba como ele está sendo aplicado na computação moderna.
+          description_short: Projete e analise algoritmos para entender como eles
+            funcionam e por que alguns são considerados melhores do que outros.
           lesson_groups:
             csp_unit6_2020:
               display_name: Algoritmos
             lessonGroup-2:
               display_name: Pesquisa Pós-Curso
+          student_description: Esta unidade é uma rápida exploração de como os cientistas
+            da computação projetam algoritmos para resolver problemas e como eles
+            analisam a velocidade de diferentes algoritmos. Aprenda sobre o conceito
+            de eficiência algorítmica por meio de uma variedade de atividades práticas
+            e saiba como ele está sendo aplicado na computação moderna.
         csp6-2022:
+          description: Esta unidade é uma rápida exploração de como os cientistas
+            da computação projetam algoritmos para resolver problemas e como eles
+            analisam a velocidade de diferentes algoritmos. Aprenda sobre o conceito
+            de eficiência algorítmica por meio de uma variedade de atividades práticas
+            e saiba como ele está sendo aplicado na computação moderna.
+          description_short: Projete e analise algoritmos para entender como eles
+            funcionam e por que alguns são considerados melhores do que outros.
           lesson_groups:
             csp_unit6_2020:
               display_name: 'Unidade 6: Algoritmos'
             lessonGroup-2:
               display_name: Pesquisa Pós-Curso
+          student_description: Esta unidade é uma rápida exploração de como os cientistas
+            da computação projetam algoritmos para resolver problemas e como eles
+            analisam a velocidade de diferentes algoritmos. Aprenda sobre o conceito
+            de eficiência algorítmica por meio de uma variedade de atividades práticas
+            e saiba como ele está sendo aplicado na computação moderna.
         csp6-2023:
+          description_short: Aprenda a criar aplicativos que usam listas, loops e
+            travessias para armazenar e processar grandes quantidades de informações.
           lesson_groups:
             csp_unit6_2020:
               display_name: Listas
@@ -5959,12 +6603,19 @@ pt:
               display_name: Traversais
             lessonGroup-5:
               display_name: Projeto
+          student_description: Esta unidade apresenta listas, loops e travessias e
+            explora como eles podem ser usados para criar aplicativos que armazenam
+            e processam grandes quantidades de informações. Aprenda a programar com
+            a biblioteca de dados no App Lab e conclua um projeto de hackathon de
+            5 dias no final da unidade, onde você pode criar um programa sobre qualquer
+            tópico de sua escolha.
         csp6-pilot:
           lesson_groups:
             content:
               display_name: Conteúdo
             required:
               display_name: Visão geral
+          title: Piloto da Unidade 6 do CSP - Algoritmos
         csp6-pilot-staging:
           lesson_groups:
             csp_conditionals:
@@ -5977,6 +6628,13 @@ pt:
               display_name: Variáveis
           title: 'Unidade 6: Algoritmos'
         csp7-2020:
+          description: Esta unidade apresenta parâmetros, retorno e bibliotecas. Aprenda
+            a usar esses conceitos para criar novos tipos de aplicativos, bem como
+            bibliotecas de código que você pode compartilhar com seus colegas de classe.
+            Finalize a unidade criando uma biblioteca de funções a partir de qualquer
+            tópico de sua escolha.
+          description_short: Aprenda a criar um código limpo e reutilizável que você
+            pode compartilhar com um único colega de classe ou com o mundo inteiro.
           lesson_groups:
             cspSurvey2020:
               display_name: Pesquisa Pós-Curso
@@ -5984,7 +6642,21 @@ pt:
               display_name: Bibliotecas
             csp_parameters_return_values:
               display_name: Parâmetros e valores de retorno
+          name: csp7-2020
+          student_description: Esta unidade apresenta parâmetros, retorno e bibliotecas.
+            Aprenda a usar esses conceitos para criar novos tipos de aplicativos,
+            bem como bibliotecas de código que você pode compartilhar com seus colegas
+            de classe. Finalize a unidade criando uma biblioteca de funções a partir
+            de qualquer tópico de sua escolha.
+          title: CSP Piloto da Unidade 7 - Parâmetros, retorno e bibliotecas ('20-'21)
         csp7-2021:
+          description: Esta unidade apresenta parâmetros, retorno e bibliotecas. Aprenda
+            a usar esses conceitos para criar novos tipos de aplicativos, bem como
+            bibliotecas de código que você pode compartilhar com seus colegas de classe.
+            Finalize a unidade criando uma biblioteca de funções a partir de qualquer
+            tópico de sua escolha.
+          description_short: Aprenda a criar um código limpo e reutilizável que você
+            pode compartilhar com um único colega de classe ou com o mundo inteiro.
           lesson_groups:
             csp_libraries:
               display_name: Bibliotecas
@@ -5992,7 +6664,19 @@ pt:
               display_name: Parâmetros e valores de retorno
             lessonGroup-3:
               display_name: Questionário
+          student_description: Esta unidade apresenta parâmetros, retorno e bibliotecas.
+            Aprenda a usar esses conceitos para criar novos tipos de aplicativos,
+            bem como bibliotecas de código que você pode compartilhar com seus colegas
+            de classe. Finalize a unidade criando uma biblioteca de funções a partir
+            de qualquer tópico de sua escolha.
         csp7-2022:
+          description: Esta unidade apresenta parâmetros, retorno e bibliotecas. Aprenda
+            a usar esses conceitos para criar novos tipos de aplicativos, bem como
+            bibliotecas de código que você pode compartilhar com seus colegas de classe.
+            Finalize a unidade criando uma biblioteca de funções a partir de qualquer
+            tópico de sua escolha.
+          description_short: Aprenda a criar um código limpo e reutilizável que você
+            pode compartilhar com um único colega de classe ou com o mundo inteiro.
           lesson_groups:
             csp_libraries:
               display_name: Bibliotecas
@@ -6000,7 +6684,14 @@ pt:
               display_name: Parâmetros e valores de retorno
             lessonGroup-3:
               display_name: Pesquisa Pós-Curso
+          student_description: Esta unidade apresenta parâmetros, retorno e bibliotecas.
+            Aprenda a usar esses conceitos para criar novos tipos de aplicativos,
+            bem como bibliotecas de código que você pode compartilhar com seus colegas
+            de classe. Finalize a unidade criando uma biblioteca de funções a partir
+            de qualquer tópico de sua escolha.
         csp7-2023:
+          description_short: Aprenda a criar um código limpo e reutilizável que você
+            pode compartilhar com um único colega de classe ou com o mundo inteiro.
           lesson_groups:
             csp_libraries:
               display_name: Bibliotecas
@@ -6008,6 +6699,11 @@ pt:
               display_name: Parâmetros e valores de retorno
             lessonGroup-3:
               display_name: Pesquisa Pós-Curso
+          student_description: Esta unidade apresenta parâmetros, retorno e bibliotecas.
+            Aprenda a usar esses conceitos para criar novos tipos de aplicativos,
+            bem como bibliotecas de código que você pode compartilhar com seus colegas
+            de classe. Finalize a unidade criando uma biblioteca de funções a partir
+            de qualquer tópico de sua escolha.
         csp7-pilot:
           lesson_groups:
             csp_libraries:
@@ -6025,19 +6721,47 @@ pt:
               display_name: Parâmetros e valores de retorno
           title: 'Unidade 7: Funções e Bibliotecas'
         csp8-2020:
+          description: Nesta unidade, prepare e execute a Tarefa de Criação de Desempenho
+            AP. Cada lição contém links para documentos e atividades úteis que lhe
+            ajudarão a entender a tarefa e a desenvolver um plano para concluí-la.
+          description_short: Pratique e conclua a Tarefa de Criação de Desempenho
+            (PT).
+          name: csp8-2020
+          student_description: Nesta unidade, prepare e execute a Tarefa de Criação
+            de Desempenho AP. Cada lição contém links para documentos e atividades
+            úteis que lhe ajudarão a entender a tarefa e a desenvolver um plano para
+            concluí-la.
           title: CSP Unidade 8 – Preparação para o Create PT (2020-2021)
         csp8-2021:
+          description: Nesta unidade, prepare e execute a Tarefa de Criação de Desempenho
+            AP. Cada lição contém links para documentos e atividades úteis que lhe
+            ajudarão a entender a tarefa e a desenvolver um plano para concluí-la.
+          description_short: Pratique e conclua a Tarefa de Criação de Desempenho
+            (PT).
           lesson_groups:
             lessonGroup-2:
               display_name: Criar PT
             lessonGroup-3:
               display_name: Questionário
+          student_description: Nesta unidade, prepare e execute a Tarefa de Criação
+            de Desempenho AP. Cada lição contém links para documentos e atividades
+            úteis que lhe ajudarão a entender a tarefa e a desenvolver um plano para
+            concluí-la.
         csp8-2022:
+          description: Nesta unidade, prepare e execute a Tarefa de Criação de Desempenho
+            AP. Cada lição contém links para documentos e atividades úteis que lhe
+            ajudarão a entender a tarefa e a desenvolver um plano para concluí-la.
+          description_short: Pratique e conclua a Tarefa de Criação de Desempenho
+            (PT).
           lesson_groups:
             lessonGroup-2:
               display_name: Criar PT
             lessonGroup-3:
               display_name: Pesquisa Pós-Curso
+          student_description: Nesta unidade, prepare e execute a Tarefa de Criação
+            de Desempenho AP. Cada lição contém links para documentos e atividades
+            úteis que lhe ajudarão a entender a tarefa e a desenvolver um plano para
+            concluí-la.
         csp8-2023:
           lesson_groups:
             lessonGroup-2:
@@ -6058,30 +6782,63 @@ pt:
               display_name: Variáveis
           title: 'Unidade 8: Criar PT'
         csp9-2020:
+          description: Nesta unidade, aprenda como a análise de dados ajuda a transformar
+            dados brutos em informações úteis sobre o mundo. Aprenda a usar a visualização
+            de dados para encontrar padrões em conjuntos de dados e saiba como esse
+            processo de análise de dados está sendo usado em contextos como dados
+            abertos ou aprendizado de máquina para ajudar a tomar decisões ou aprender
+            mais sobre nosso mundo. No projeto da unidade, você analisará um conjunto
+            de dados de sua escolha e compartilhará suas descobertas.
+          description_short: Explore e visualize conjuntos de dados de uma ampla variedade
+            de tópicos enquanto procura padrões e tenta aprender mais sobre o mundo
+            ao seu redor.
           lesson_groups:
             cspSurvey2020:
               display_name: Pesquisa Pós-Curso
             csp_unit9_2020:
               display_name: 'Unidade 9: Dados'
+          student_description: Nesta unidade, aprenda como a análise de dados ajuda
+            a transformar dados brutos em informações úteis sobre o mundo. Aprenda
+            a usar a visualização de dados para encontrar padrões em conjuntos de
+            dados e saiba como esse processo de análise de dados está sendo usado
+            em contextos como dados abertos ou aprendizado de máquina para ajudar
+            a tomar decisões ou aprender mais sobre nosso mundo. No projeto da unidade,
+            você analisará um conjunto de dados de sua escolha e compartilhará suas
+            descobertas.
           title: CSP Unidade 9 – Dados (2020-2021)
         csp9-2021:
+          description_short: Explore e visualize conjuntos de dados de uma ampla variedade
+            de tópicos enquanto procura padrões e tenta aprender mais sobre o mundo
+            ao seu redor.
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Unidade 9: Dados'
             lessonGroup-2:
               display_name: Questionário
         csp9-2022:
+          description_short: Explore e visualize conjuntos de dados de uma ampla variedade
+            de tópicos enquanto procura padrões e tenta aprender mais sobre o mundo
+            ao seu redor.
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Unidade 9: Dados'
             lessonGroup-2:
               display_name: Pesquisa Pós-Curso
         csp9-2023:
+          description: Nesta unidade, prepare e execute a Tarefa de Criação de Desempenho
+            AP. Cada lição contém links para documentos e atividades úteis que lhe
+            ajudarão a entender a tarefa e a desenvolver um plano para concluí-la.
+          description_short: Pratique e conclua a Tarefa de Criação de Desempenho
+            (PT).
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Unidade 9: Dados'
             lessonGroup-2:
               display_name: Pesquisa Pós-Curso
+          student_description: Nesta unidade, prepare e execute a Tarefa de Criação
+            de Desempenho AP. Cada lição contém links para documentos e atividades
+            úteis que lhe ajudarão a entender a tarefa e a desenvolver um plano para
+            concluí-la.
         csp9-pilot:
           title: CSP Unidade 9 Piloto - Dados
         csp9-pilot-staging:
@@ -6095,14 +6852,35 @@ pt:
             csp_variables:
               display_name: Variáveis
           title: 'Unidade 9: Dados'
+        cspassessment:
+          description_short: Essa avaliação foi descontinuada e está programada para
+            ser removida no verão de 2017.
         cspexam1-mWU7ilDYM9:
+          description: 'Essa avaliação de 25 perguntas de múltipla escolha abrange
+            questões sobre 7 grandes ideias relacionadas à ciência da computação:
+            criatividade, abstração, dados, algoritmos, programação, Internet e impacto
+            global.'
           description_short: Esta avaliação de múltipla escolha cobre questões de
             7 grandes ideias da ciência da computação. É a parte 1 de duas partes
             de um exame de 50 questões.
+          student_description: 'Essa avaliação de 25 perguntas de múltipla escolha
+            abrange questões sobre 7 grandes ideias relacionadas à ciência da computação:
+            criatividade, abstração, dados, algoritmos, programação, Internet e impacto
+            global.'
+          title: Avaliação Cumulativa dos Princípios de CS - Parte 1
         cspexam2-AKwgAh1ac5:
+          description: 'Essa avaliação de 25 perguntas de múltipla escolha abrange
+            questões sobre 7 grandes ideias relacionadas à ciência da computação:
+            criatividade, abstração, dados, algoritmos, programação, Internet e impacto
+            global. É a parte 2 de uma avaliação de 50 perguntas.'
           description_short: Esta avaliação de múltipla escolha cobre questões de
             7 grandes ideias da ciência da computação. É a parte 2 de duas partes
             de um exame de 50 questões.
+          student_description: 'Essa avaliação de 25 perguntas de múltipla escolha
+            abrange questões sobre 7 grandes ideias relacionadas à ciência da computação:
+            criatividade, abstração, dados, algoritmos, programação, Internet e impacto
+            global. É a parte 2 de uma avaliação de 50 perguntas.'
+          title: Avaliação Cumulativa dos Princípios de CS - Parte 2
         cspfacilitator:
           description: Níveis online para workshop de PD
           description_short: Níveis online para workshop de PD
@@ -6509,8 +7287,18 @@ pt:
             reais para obter feedback e avançar iteração.
         devices-2022:
           lesson_groups:
+            lessonGroup-3:
+              display_name: 'Capítulo 1: Entradas e Saídas'
             lessonGroup-4:
               display_name: 'Capítulo 2: Construindo protótipos físicos'
+          student_description: Esta unidade explora o papel das plataformas de hardware
+            na computação e como diferentes sensores podem fornecer entradas e saídas
+            mais eficazes do que o teclado, o mouse e o monitor tradicionais. Usando
+            o App Lab e o Circuit Playground da Adafruit, você desenvolverá programas
+            que utilizam as mesmas entradas e saídas de hardware que você vê nos dispositivos
+            inteligentes, observando como um simples protótipo bruto pode levar a
+            um produto acabado. A unidade conclui com um desafio de projeto para usar
+            o Circuit Playground como base para uma inovação de seu próprio projeto.
           title: Criação de aplicativos com dispositivos (Playground de Circuitos)
         devices-2023:
           description: "Na unidade Criação de Aplicativos para Dispositivos, os alunos
@@ -6575,20 +7363,33 @@ pt:
             para a equipe de currículo do Code.org saber como foi a sua experiência
             com esta unidade."
           lesson_groups:
+            lessonGroup-3:
+              display_name: 'Capítulo 1: Entradas e Saídas'
             lessonGroup-4:
               display_name: 'Capítulo 2: Construindo protótipos físicos'
             lessonGroup-5:
               display_name: Questionário
+          student_description: Esta unidade explora o papel das plataformas de hardware
+            na computação e como diferentes sensores podem fornecer entradas e saídas
+            mais eficazes do que o teclado, o mouse e o monitor tradicionais. Usando
+            o App Lab e o Circuit Playground da Adafruit, você desenvolverá programas
+            que utilizam as mesmas entradas e saídas de hardware que você vê nos dispositivos
+            inteligentes, observando como um simples protótipo bruto pode levar a
+            um produto acabado. A unidade conclui com um desafio de projeto para usar
+            o Circuit Playground como base para uma inovação de seu próprio projeto.
         dlp-csp-mod1-2022:
           title: Princípios do CS Módulo de Aprendizagem Mais Profunda 1
         dlp19-csd-mod-fit:
           description_audience: Facilitadores de descobertas da CS em treinamento
             2019
+          description_short: Informações Básicas e instruções práticas para o Workshop
+            FiT
           lesson_groups:
             content:
               display_name: Conteúdo
             required:
               display_name: Visão geral
+          name: dlp19-csd-mod-fit
           title: Módulo de descobertas mais profundas do CS Discoveries 2019 para
             FiT
         dlp19-csd-mod-w1:
@@ -6659,6 +7460,7 @@ pt:
               display_name: Conteúdo
             required:
               display_name: Visão geral
+          name: dlp19-csp-mod-w2
           title: Princípios de CS Módulo de aprendizado mais profundo para o Workshop
             2
         dlp19-csp-mod-w3:
@@ -6679,6 +7481,7 @@ pt:
               display_name: Conteúdo
             required:
               display_name: Visão geral
+          name: dlp19-csp-mod-w4
           title: Princípios de CS Módulo de aprendizagem mais profunda para o Workshop
             4
         dlp21-csd:
@@ -6715,27 +7518,55 @@ pt:
             extra_course_content:
               display_name: Conteúdo do curso extra
           title: Curso E & F Ramp
+        ecs-unit1:
+          description: 'Unidade 1: Interação Humano-Computador'
+          description_short: 'Unidade 1: Interação Humano-Computador'
+          student_description: 'Unidade 1: Interação Humano-Computador'
+          title: " ECS Unidade 1"
         ecs-unit2:
           description: 'Unidade 2: Resolução de problemas'
           description_short: 'Unidade 2: Resolução de problemas'
           student_description: 'Unidade 2: Resolução de problemas'
+          title: " ECS Unidade 2"
         ecs-unit3:
           description: 'Unidade 3: Web Design'
           description_short: 'Unidade 3: Web Design'
           student_description: 'Unidade 3: Web Design'
+          title: " ECS Unidade 3"
         ecs-unit4:
           description: "(antigo) Unidade 4: Programação"
           description_short: "(antigo) Unidade 4: Programação"
           student_description: "(antigo) Unidade 4: Programação"
+          title: " ECS Unidade 4"
+        ecs-unit5:
+          description: 'Unidade 5: Computação e Análise de Dados'
+          description_short: 'Unidade 5: Computação e Análise de Dados'
+          student_description: 'Unidade 5: Computação e Análise de Dados'
+          title: " ECS Unidade 5"
         ecs-unit6:
           description: 'Unidade 6: Robótica'
           description_short: 'Unidade 6: Robótica'
           student_description: 'Unidade 6: Robótica'
+          title: " ECS Unidade 6"
         edit-code:
           description: Edite o código
           description_short: Edite o código
           student_description: Edite o código
           title: Edite o código
+        equity-pd:
+          description: Como conduzir uma discussão sobre equidade em um PD da Code.org
+          description_short: Como conduzir uma discussão sobre equidade em um PD da
+            Code.org
+          student_description: Como conduzir uma discussão sobre equidade em um PD
+            da Code.org
+          title: Liderando uma Discussão sobre Equidade
+        equityPD:
+          description: Como conduzir uma discussão sobre equidade em um PD da Code.org
+          description_short: Como conduzir uma discussão sobre equidade em um PD da
+            Code.org
+          student_description: Como conduzir uma discussão sobre equidade em um PD
+            da Code.org
+          title: Liderando uma Discussão sobre Equidade
         events:
           description: Eventos
           description_short: Eventos
@@ -6965,6 +7796,17 @@ pt:
             Experimente nosso tutorial sobre o Código do Flappy bird!
           title: Código do Flappy bird
         flappy-impact-study:
+          description: Quer escrever seu próprio jogo em menos de 10 minutos? Experimente
+            nosso tutorial para o Flappy Code! Esta versão inclui pesquisas anteriores
+            e posteriores para nos ajudar a continuar aprimorando a Hora do Código.
+            Peça à sua turma que passe para a pós-pesquisa 10 minutos antes do término
+            da aula.
+          description_short: Escreva seu próprio jogo Flappy em menos de 10 minutos!
+          student_description: Quer escrever seu próprio jogo em menos de 10 minutos?
+            Experimente nosso tutorial para o Flappy Code! Esta versão inclui pesquisas
+            anteriores e posteriores para nos ajudar a continuar aprimorando a Hora
+            do Código. Peça à sua turma que passe para a pós-pesquisa 10 minutos antes
+            do término da aula.
           title: Flappy Code com pesquisa
         fmscsd3preview:
           description_audience: Escola secundária de Falmouth (Mike Harvey)
@@ -7066,6 +7908,11 @@ pt:
             ## Terminou de Lecionar esta Unidade?
 
             Responda a esta [\*\*breve pesquisa\*\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=2) para a equipe curricular da Code.org saber como foi a sua experiência com esta unidade.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Criando Páginas da Web'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Sites com Várias Páginas'
           student_description: Nesta unidade, você aprenderá como criar e compartilhar
             conteúdo em suas páginas web. Após decidir qual conteúdo você quer compartilhar
             com o mundo, você aprenderá como estruturar e estilizar suas páginas usando
@@ -7195,8 +8042,18 @@ pt:
             com esta unidade."
           description_short: Aprenda a programar com dispositivos físicos.
           lesson_groups:
+            lessonGroup-3:
+              display_name: 'Capítulo 1: Entradas e Saídas'
             lessonGroup-4:
               display_name: 'Capítulo 2: Construindo protótipos físicos'
+          student_description: Esta unidade explora o papel das plataformas de hardware
+            na computação e como diferentes sensores podem fornecer entradas e saídas
+            mais eficazes do que o teclado, o mouse e o monitor tradicionais. Usando
+            o App Lab e o Circuit Playground da Adafruit, você desenvolverá programas
+            que utilizam as mesmas entradas e saídas de hardware que você vê nos dispositivos
+            inteligentes, observando como um simples protótipo bruto pode levar a
+            um produto acabado. A unidade conclui com um desafio de projeto para usar
+            o Circuit Playground como base para uma inovação de seu próprio projeto.
         focus-on-coding4b-2023:
           description: "Na unidade de Criação de Aplicativos para Dispositivos, os
             alunos exploram o papel dos dispositivos físicos na computação. Usando
@@ -7358,6 +8215,11 @@ pt:
             ## Terminou de Lecionar esta Unidade?
 
             Responda a esta [\*\*breve pesquisa\*\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=2) para a equipe curricular da Code.org saber como foi a sua experiência com esta unidade.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Criando Páginas da Web'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Sites com Várias Páginas'
           student_description: Nesta unidade, você aprenderá como criar e compartilhar
             conteúdo em suas páginas web. Após decidir qual conteúdo você quer compartilhar
             com o mundo, você aprenderá como estruturar e estilizar suas páginas usando
@@ -7487,8 +8349,18 @@ pt:
             com esta unidade."
           description_short: Aprenda a programar com dispositivos físicos.
           lesson_groups:
+            lessonGroup-3:
+              display_name: 'Capítulo 1: Entradas e Saídas'
             lessonGroup-4:
               display_name: 'Capítulo 2: Construindo protótipos físicos'
+          student_description: Esta unidade explora o papel das plataformas de hardware
+            na computação e como diferentes sensores podem fornecer entradas e saídas
+            mais eficazes do que o teclado, o mouse e o monitor tradicionais. Usando
+            o App Lab e o Circuit Playground da Adafruit, você desenvolverá programas
+            que utilizam as mesmas entradas e saídas de hardware que você vê nos dispositivos
+            inteligentes, observando como um simples protótipo bruto pode levar a
+            um produto acabado. A unidade conclui com um desafio de projeto para usar
+            o Circuit Playground como base para uma inovação de seu próprio projeto.
         focus-on-creativity4b-2023:
           description: "Na unidade de Criação de Aplicativos para Dispositivos, os
             alunos exploram o papel dos dispositivos físicos na computação. Usando
@@ -7887,6 +8759,11 @@ pt:
             ## Terminou de Lecionar esta Unidade?
 
             Responda a esta [\*\*breve pesquisa\*\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=2) para a equipe curricular da Code.org saber como foi a sua experiência com esta unidade.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Criando Páginas da Web'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Sites com Várias Páginas'
           student_description: Nesta unidade, você aprenderá como criar e compartilhar
             conteúdo em suas páginas web. Após decidir qual conteúdo você quer compartilhar
             com o mundo, você aprenderá como estruturar e estilizar suas páginas usando
@@ -8024,8 +8901,18 @@ pt:
             com esta unidade."
           description_short: Aprenda a programar com dispositivos físicos.
           lesson_groups:
+            lessonGroup-3:
+              display_name: 'Capítulo 1: Entradas e Saídas'
             lessonGroup-4:
               display_name: 'Capítulo 2: Construindo protótipos físicos'
+          student_description: Esta unidade explora o papel das plataformas de hardware
+            na computação e como diferentes sensores podem fornecer entradas e saídas
+            mais eficazes do que o teclado, o mouse e o monitor tradicionais. Usando
+            o App Lab e o Circuit Playground da Adafruit, você desenvolverá programas
+            que utilizam as mesmas entradas e saídas de hardware que você vê nos dispositivos
+            inteligentes, observando como um simples protótipo bruto pode levar a
+            um produto acabado. A unidade conclui com um desafio de projeto para usar
+            o Circuit Playground como base para uma inovação de seu próprio projeto.
         focus-on-design-with-purpose4b-2023:
           description: "Na unidade de Criação de Aplicativos para Dispositivos, os
             alunos exploram o papel dos dispositivos físicos na computação. Usando
@@ -8239,8 +9126,18 @@ pt:
             com esta unidade."
           description_short: Aprenda a programar com dispositivos físicos.
           lesson_groups:
+            lessonGroup-3:
+              display_name: 'Capítulo 1: Entradas e Saídas'
             lessonGroup-4:
               display_name: 'Capítulo 2: Construindo protótipos físicos'
+          student_description: Esta unidade explora o papel das plataformas de hardware
+            na computação e como diferentes sensores podem fornecer entradas e saídas
+            mais eficazes do que o teclado, o mouse e o monitor tradicionais. Usando
+            o App Lab e o Circuit Playground da Adafruit, você desenvolverá programas
+            que utilizam as mesmas entradas e saídas de hardware que você vê nos dispositivos
+            inteligentes, observando como um simples protótipo bruto pode levar a
+            um produto acabado. A unidade conclui com um desafio de projeto para usar
+            o Circuit Playground como base para uma inovação de seu próprio projeto.
         focus-on-hardware3b-2023:
           description: "Na unidade de Criação de Aplicativos para Dispositivos, os
             alunos exploram o papel dos dispositivos físicos na computação. Usando
@@ -8500,9 +9397,18 @@ pt:
             Esta unidade culmina no projeto de um aplicativo de machine learning para
             solucionar um problema pessoal relevante.
         frequency_analysis:
+          description: Use o Widget de Análise de Frequência para analisar as frequências
+            das letras em um texto de entrada em comparação com as frequências esperadas
+            para o inglês padrão. Use essa comparação para explorar como decifrar
+            cifras de mudança e substituição.
           description_short: Use o Componente Análise de Frequência para analisar
             frequências de letras em um texto comparado com frequências esperadas.
             Quebre Cifras de Troca e Substituição.
+          student_description: Use o Widget de Análise de Frequência para analisar
+            as frequências das letras em um texto de entrada em comparação com as
+            frequências esperadas para o inglês padrão. Use essa comparação para explorar
+            como decifrar cifras de mudança e substituição.
+          title: Widget de Análise de Frequência
         frozen:
           description: Vamos usar programação para explorar a magia e a beleza do
             gelo junto com Anna e Elsa. Você vai criar flocos de neve e padrões enquanto
@@ -8535,22 +9441,35 @@ pt:
         glj-behavior-test:
           title: Teste do Laboratório de Jogos Jr. - Comportamento
         grade1:
+          description: Script de Planejamento para CSF 2.0
           description_audience: 5-18 anos de idade
+          description_short: Script de Planejamento para CSF 2.0
           title: 1° Ano
         grade2:
+          description: Script de Planejamento para CSF 2.0
           description_audience: 5-18 anos de idade
+          description_short: Script de Planejamento para CSF 2.0
           title: 2° Ano
         grade3:
+          description: Script de Planejamento para CSF 2.0
           description_audience: 5-18 anos de idade
+          description_short: Script de Planejamento para CSF 2.0
           title: 3° Ano
         grade4:
+          description: Script de Planejamento para CSF 2.0
           description_audience: De 9 a 99 anos
+          description_short: Script de Planejamento para CSF 2.0
           title: 4° Ano
         grade5:
+          description: Script de Planejamento para CSF 2.0
           description_audience: 10-110 anos de idade
+          description_short: Script de Planejamento para CSF 2.0
+          student_description: Script de Planejamento para CSF 2.0
           title: 5° Ano
         gradeKinder:
+          description: Script de Planejamento para CSF 2.0
           description_audience: 5-18 anos de idade
+          description_short: Script de Planejamento para CSF 2.0
           title: Pré-escola
         gumball:
           description: Crie uma história ou faça um jogo com o Laboratório do Gumball!
@@ -8605,6 +9524,14 @@ pt:
             uma nova atividade! Viaje através de Minecraft com código.
           title: 'Minecraft: Jornada do Herói'
         hoc-encryption:
+          description: Nesta lição, os alunos são apresentados à necessidade de criptografia
+            e técnicas simples para quebrar (ou decifrar) mensagens secretas.
+          description_short: Nesta lição, os alunos são apresentados à necessidade
+            de criptografia e técnicas simples para quebrar (ou decifrar) mensagens
+            secretas.
+          student_description: Nesta lição, os alunos são apresentados à necessidade
+            de criptografia e técnicas simples para quebrar (ou decifrar) mensagens
+            secretas.
           title: Hora do Código - Encriptação Simples
         hoc-impact-study:
           description_short: Conheça os conceitos básicos da ciência da computação
@@ -8745,9 +9672,11 @@ pt:
               display_name: Iniciando
             k5_next_steps:
               display_name: Próximas etapas
+          name: k5-onlinepd-2019
           student_description: Aprenda a ensinar ciência da computação usando os Fundamentos
             de Ciência da Computação da Code.org com este curso on-line gratuito e
             individualizado!
+          title: Ensino de Fundamentos da Ciência da Computação (2019)
         k5-onlinepd-2020:
           description: Aprenda a ensinar ciência da computação usando os Fundamentos
             de Ciência da Computação da Code.org com este curso on-line gratuito e
@@ -8775,6 +9704,8 @@ pt:
               display_name: 'Aprofundamento: Cursos E e F'
             k5_getting_started_1:
               display_name: Introdução
+        k5concepts:
+          title: Conceitos K5
         kodea-pd-2021:
           description: Aprenda a ensinar ciência da computação usando os Fundamentos
             de Ciência da Computação da Code.org com este curso on-line gratuito e
@@ -8981,6 +9912,14 @@ pt:
             de máquina pode ser usado para resolver problemas mundiais.
           title: IA para oceanos
         odometer:
+          description: Use o widget Odmeter para controlar odômetros com várias bases
+            numéricas. Binário, Decimal e Hexadecimal são os sistemas numéricos mais
+            comuns na Ciência da Computação.
+          description_short: Use o widget Odmeter para controlar odômetros com várias
+            bases numéricas.
+          student_description: Use o widget Odmeter para controlar odômetros com várias
+            bases numéricas. Binário, Decimal e Hexadecimal são os sistemas numéricos
+            mais comuns na Ciência da Computação.
           title: Widget de hodômetro
         outbreak:
           description: 'Use o Sprite Lab para programar uma simulação de epidemia
@@ -9003,8 +9942,18 @@ pt:
           title: Hora do Código Peru 2019
         physcomp-temp:
           lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Entradas e Saídas'
             lessonGroup-3:
               display_name: 'Capítulo 2: Construindo protótipos físicos'
+          student_description: Esta unidade explora o papel das plataformas de hardware
+            na computação e como diferentes sensores podem fornecer entradas e saídas
+            mais eficazes do que o teclado, o mouse e o monitor tradicionais. Usando
+            o App Lab e o Circuit Playground da Adafruit, você desenvolverá programas
+            que utilizam as mesmas entradas e saídas de hardware que você vê nos dispositivos
+            inteligentes, observando como um simples protótipo bruto pode levar a
+            um produto acabado. A unidade conclui com um desafio de projeto para usar
+            o Circuit Playground como base para uma inovação de seu próprio projeto.
         pixelation:
           description: Crie imagens com bits e bytes.
           description_short: Crie imagens com bits e bytes.
@@ -9241,6 +10190,7 @@ pt:
           description: Estudo de verão combinado on-line da fase 2
           description_short: Estudo de verão combinado on-line da fase 2
           student_description: Estudo de verão combinado on-line da fase 2
+          title: Ciência da Computação em Ciência PD Fase 2b
         sciencePD:
           description: Em parceria com o Projeto GUTS
           description_short: Em parceria com o Projeto GUTS
@@ -9272,15 +10222,22 @@ pt:
           description: 'Fase 2 - on-line: combinado de estudos de verão'
           description_short: 'Fase 2 - on-line: combinado de estudos de verão'
           student_description: 'Fase 2 - on-line: combinado de estudos de verão'
+          title: Ciência da Computação em Ciência PD Fase 2b
         sciencePD2b-iZone:
           description: 'Fase 2 - on-line: combinado de estudos de verão'
           description_short: 'Fase 2 - on-line: combinado de estudos de verão'
           student_description: 'Fase 2 - on-line: combinado de estudos de verão'
+          title: Ciência da Computação em Ciência PD Fase 2b
         sciencePD3:
           description: Suporte ao Ano Acadêmico - Semestre 1
           description_short: Suporte ao Ano Acadêmico - Semestre 1
           student_description: Suporte ao Ano Acadêmico - Semestre 1
           title: DP da ciência da computação na ciência
+        sciencePD3_pre1:
+          description: 'Fase 3: Desenvolvimento do Ano Letivo (Segmento Um)'
+          description_short: 'Fase 3: Desenvolvimento do Ano Letivo Pré-1'
+          student_description: 'Fase 3: Desenvolvimento do Ano Letivo (Segmento Um)'
+          title: CS em Ciências PD3 antes da primeira sessão presencial
         sconyers:
           title: Parque da Tracey
         self-paced-pl-csa2-2022:
@@ -9722,6 +10679,10 @@ pt:
         subgoal-labels-opt-in:
           title: Opt-In do estudo de etiquetas de sub-objetivo
         teachercon:
+          description: Usaremos isso durante o TeacherCon para fornecer suporte e
+            materiais para as sessões
+          description_short: Usaremos isso durante o TeacherCon para fornecer suporte
+            e materiais para as sessões
           lesson_groups:
             content:
               display_name: Conteúdo
@@ -9729,6 +10690,9 @@ pt:
               display_name: Práticas de ensino
             required:
               display_name: Visão geral
+          student_description: Usaremos isso durante o TeacherCon para fornecer suporte
+            e materiais para as sessões
+          title: Suportes ao TeacherCon
         tess-testing-problem-solving-2023:
           lesson_groups:
             lessonGroup-2:
@@ -9764,6 +10728,11 @@ pt:
             lessonGroup-2:
               display_name: Capítulo 1
         testing-focus-on-creativity2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Criando Páginas da Web'
+            lessonGroup-4:
+              display_name: 'Capítulo 2: Sites com Várias Páginas'
           title: Desenvolvimento na Web
         text-compression:
           description: Comprima o texto identificando padrões repetidos.
@@ -9792,6 +10761,7 @@ pt:
               display_name: Treinamento
           title: Time4CS Unidade de Controle 1
         time4cs-control-unit-2:
+          description: A descrição da unidade vai aqui
           lesson_groups:
             csf_conditionals:
               display_name: Condições
@@ -9803,6 +10773,7 @@ pt:
               display_name: Laços aninhados
             end_of_course_project:
               display_name: Projeto de Fim do Curso
+          student_description: A descrição da unidade vai aqui
           title: Unidade de controle Time4CS 2
         time4cs-experiment-unit-1:
           lesson_groups:
@@ -9908,6 +10879,7 @@ pt:
             e decriptação de mensagens usando uma Cifra de Vigenère.
           student_description: Use o Componente Cifra de Vigenère para explorar encriptação
             e decriptação de mensagens usando uma Cifra de Vigenère.
+          title: Widget de Cifra de Vigenère
         virtual-holding-place:
           lesson_groups:
             content:
@@ -10318,6 +11290,11 @@ pt:
             ## Terminou de Lecionar esta Unidade?
 
             Responda a esta [\*\*breve pesquisa\*\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=2) para a equipe curricular da Code.org saber como foi a sua experiência com esta unidade.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Criando Páginas da Web'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Sites com Várias Páginas'
           student_description: Nesta unidade, você aprenderá como criar e compartilhar
             conteúdo em suas páginas web. Após decidir qual conteúdo você quer compartilhar
             com o mundo, você aprenderá como estruturar e estilizar suas páginas usando
@@ -10373,6 +11350,10 @@ pt:
 
             Responda a esta [\*\*breve pesquisa\*\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=2) para a equipe curricular da Code.org saber como foi a sua experiência com esta unidade.
           lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Criando Páginas da Web'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Sites com Várias Páginas'
             lessonGroup-4:
               display_name: Questionário
           student_description: Nesta unidade, você aprenderá como criar e compartilhar

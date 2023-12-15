@@ -966,7 +966,7 @@
   "errorFindingClassLibraries": "Impossibile caricare le tue librerie di classe questa volta. Sei pregato di controllare la tua connessione ad internet e riprovare.",
   "errorGenericLintError": "Il tuo programma contiene un avviso da parte dell'editor che deve essere corretto. Passa il mouse sopra le icone vicino ai numeri di riga nell'editor per saperne di più.",
   "errorIncompleteBlockInFunction": "Clicca su \"Modifica\" per essere sicuro di non avere alcun blocco mancante nella tua funzione.",
-  "errorLoadingAnimation": "Sembra che stiamo riscontrando problemi nel caricamento della tua animazione \"{animationName}». Assicurati di avere una buona connessione Internet e prova a ricaricare la pagina. Se il problema persiste, è possibile che l'animazione sia interrotta. In questo caso, potrebbe essere necessario continuare rimuovendo l'animazione.",
+  "errorLoadingAnimation": "Sembra che stiamo riscontrando problemi nel caricamento della tua animazione «{animationName}». Assicurati di avere una buona connessione Internet e prova a ricaricare la pagina. Se il problema persiste, è possibile che l'animazione sia interrotta. In questo caso, potrebbe essere necessario continuare rimuovendo l'animazione.",
   "errorLoadingDocumentation": "Si è verificato un errore durante il caricamento della documentazione.",
   "errorLoadingRosteredSections": "Oops, c'è stato un problema a recuperare le tue classi da {type}.",
   "errorLoadingRosteredSectionsSupport": "Se il problema persiste, clicca qui per suggerimenti di risoluzione dei problemi.",

@@ -2008,6 +2008,152 @@ pt:
         text: 'Não importa o que você queira fazer com o computador, cada ação individual
           se resume em: inserir informações do mundo físico, armazenar e processar
           esta informação, e obter alguma saída de volta ao mundo físico.'
+    dance_ai_events_intro:
+      1:
+        image: notes/hoc_dance_ai_2023_events_01.jpg
+        text: Hora do Código | Festa Dançante - Edição IA - Introdução a Eventos
+      2:
+        image: notes/hoc_dance_ai_2023_events_02.jpg
+        text: Olá, eu sou a Hannah e sou engenheira de software na Code.org!
+      3:
+        image: notes/hoc_dance_ai_2023_events_03.jpg
+        text: Os coreógrafos instruem aos dançarinos sobre quando um movimento de
+          dança deve ser executado. Na Festa Dançante, você usará o código para orientar
+          seus dançarinos a se moverem quando você quiser.
+      4:
+        image: notes/hoc_dance_ai_2023_events_04.jpg
+        text: 'Como você faz isso? Pense em uma situação em que você faz algo, como
+          apertar a campainha, e então acontece outra coisa: a campainha toca sozinha.
+          Ao programar sua festa dançante, você pode usar eventos para fazer seu programa
+          responder a uma tecla que você pressiona.'
+      5:
+        image: notes/hoc_dance_ai_2023_events_05.jpg
+        text: Por exemplo, você pode codificar um evento em sua dança para que, quando
+          a tecla “para cima” for pressionada, seu dançarino faz um dab. Ou quando
+          a tecla “para baixo” é pressionada, outro dançarino faça a estrela!
+      6:
+        image: notes/hoc_dance_ai_2023_events_06.jpg
+        text: Os eventos são como sequências de minidanças que não estão conectadas
+          à sua configuração principal. Eles ficam sozinhos, e a dançarina só responde
+          com os movimentos de dança que você codificou quando pressiona a tecla direita
+          no teclado.
+      7:
+        image: notes/hoc_dance_ai_2023_events_07.jpg
+        text: Tenha cuidado! Ao escolher movimentos de dança, certifique-se de que
+          a dançarina que você está programando já esteja no seu palco. Se sua dançarina
+          não estiver lá, ela não receberá o comando para dançar! Então, que tipo
+          de dança você vai preparar? Pressione 'Run', aperte as teclas e veja sua
+          dançarina dançar!
+    dance_ai_events_measure_noST:
+      1:
+        image: notes/hoc_dance_ai_2023_measures_01.jpg
+        text: Hora do Código | Festa Dançante - Edição IA - Introdução a Métricas
+      2:
+        image: notes/hoc_dance_ai_2023_measures_02.jpg
+        text: E se sua festa dançante ficasse parecendo um videoclipe? Talvez você
+          queira alterar o fundo e os efeitos especiais para combinar com diferentes
+          partes da música. Use esse novo bloco de eventos para alterar o plano de
+          fundo do seu programa em uma medida exata.
+      3:
+        image: notes/hoc_dance_ai_2023_measures_03.jpg
+        text: Na música, as “compassos” são usados como uma forma de controlar o tempo.
+          Está vendo o metrônomo na parte superior? Isso nos mostra exatamente onde
+          estamos na música.
+      4:
+        image: notes/hoc_dance_ai_2023_measures_04.jpg
+        text: Assim como outros eventos, o computador está atento a dicas. E... aí
+          está! Logo no quarto compasso, seu efeito muda.
+      5:
+        image: notes/hoc_dance_ai_2023_measures_05.jpg
+        text: Certifique-se de se conectar e solicitar um novo bloco de IA em seu
+          evento, para que o computador saiba para qual novo plano de fundo mudar.
+          Experimente!
+    dance_ai_how_ai_works:
+      1:
+        image: notes/hoc_dance_ai_2023_how_ai_01.jpg
+        text: Hora do Código | Festa Dançante - Edição IA - Como a IA funciona
+      2:
+        image: notes/hoc_dance_ai_2023_how_ai_02.jpg
+        text: Como você acha que a IA funciona? Ela pode ler sua mente? É mágica?
+          É uma adivinhação aleatória? Na verdade, a IA sabe muito! A IA analisa bilhões
+          de pontos de dados e encontra associações entre palavras. Com alguns conceitos
+          matemáticos simples, aplicados bilhões de vezes, ela calcula a força entre
+          essas associações.
+      3:
+        image: notes/hoc_dance_ai_2023_how_ai_03.jpg
+        text: Em seguida, a IA usa o que aprendeu para tomar decisões sobre o que
+          gerar para você. Minha equipe usa a IA para procurar associações entre músicas
+          e artistas, para garantir que a Amazon Music siga recomendando a melhor
+          próxima música para você.
+      4:
+        image: notes/hoc_dance_ai_2023_how_ai_04.jpg
+        text: Às vezes, essas decisões não são as mesmas que você tomaria porque a
+          IA está fazendo associações com base em bilhões de pontos de dados. Imagine
+          um pôr do sol. Que cor você vê? Se você fizesse essa pergunta a bilhões
+          de pessoas, obteria muitas respostas diferentes.
+      5:
+        image: notes/hoc_dance_ai_2023_how_ai_05.jpg
+        text: Quando você escolhe seus três emojis, a IA pode gerar efeitos que não
+          são exatamente o que você imaginou.
+      6:
+        image: notes/hoc_dance_ai_2023_how_ai_06.jpg
+        text: Você tem algumas opções! A primeira coisa que você pode fazer é regenerar
+          os efeitos com base nos mesmos emojis que você já escolheu.
+      7:
+        image: notes/hoc_dance_ai_2023_how_ai_07.jpg
+        text: Você também pode personalizar os efeitos gerados pelo bot de IA clicando
+          no botão “Usar código”. Isso fornecerá dois novos blocos de código em seu
+          espaço de trabalho.
+      8:
+        image: notes/hoc_dance_ai_2023_how_ai_08.jpg
+        text: Por último, você pode clicar em “Começar de novo” para escolher um novo
+          conjunto de emojis. Você pode trabalhar com a IA para criar o efeito perfeito.
+          Que personalizações você vai fazer?
+    dance_ai_intro_to_ai_v3:
+      1:
+        image: notes/hoc_dance_ai_2023_intro_ai_01.jpg
+        text: 'Hora do Código | Festa Dançante: Edição AI - Introdução à IA'
+      2:
+        image: notes/hoc_dance_ai_2023_intro_ai_02.jpg
+        text: Olá, meu nome é Joaquin e eu sou o responsável pela Plataforma de Busca
+          de Músicas na Amazon.
+      3:
+        image: notes/hoc_dance_ai_2023_intro_ai_03.jpg
+        text: Eu lidero a equipe da Amazon Music que ajuda você a encontrar suas músicas
+          favoritas. Usamos tecnologias computacionais avançadas, como a Inteligência
+          Artificial, para garantir que, quando você precisar de uma recomendação
+          musical, possamos oferecer o resultado perfeito.
+      4:
+        image: notes/hoc_dance_ai_2023_intro_ai_04.jpg
+        text: A Inteligência Artificial, ou IA, é um programa de computador que funciona
+          como o cérebro de um ser humano. Ele absorve muitos dados, aprende padrões
+          a partir desses dados e depois toma decisões com base no que aprendeu.
+      5:
+        image: notes/hoc_dance_ai_2023_intro_ai_05.jpg
+        text: A IA já está sendo usada de várias maneiras, para desempenhar desde
+          pequenas tarefas (“Alexa, conte-me uma piada!” , “Como você chama uma grande
+          pilha de gatinhos? Uma miau-tanha!”), até tarefas criativas e até mesmo
+          para profissionais. Na Amazon, usamos a IA para escrever código, sugerir
+          produtos que você possa gostar, e minha equipe ajuda você a encontrar músicas
+          para você curtir.
+      6:
+        image: notes/hoc_dance_ai_2023_intro_ai_06.jpg
+        text: Hoje, você usará o bot de IA para codificar uma combinação de efeitos
+          especiais para sua dança. Há efeitos de primeiro plano, efeitos de fundo
+          e esquemas de cores para você escolher. Existem 11.000 combinações diferentes
+          desses efeitos.
+      7:
+        image: notes/hoc_dance_ai_2023_intro_ai_07.jpg
+        text: Não se preocupe, você não precisará experimentar cada combinação. A
+          IA sugerirá a melhor para você com base no que aprendeu.
+      8:
+        image: notes/hoc_dance_ai_2023_intro_ai_08.jpg
+        text: Primeiro, você escolherá três emojis.
+      9:
+        image: notes/hoc_dance_ai_2023_intro_ai_09.jpg
+        text: Em seguida, o bot de IA gera um efeito que melhor corresponde à sua
+          seleção. Ele escreve código para fazer esse efeito. Vamos ver quais efeitos
+          legais você e o bot de IA criarão!
     farmer_intro:
       1:
         image: notes/stage9_1.jpg
@@ -2391,6 +2537,51 @@ pt:
         text: Quando você pressiona “Executar”, o sprite dirá qualquer texto que você
           disser. Agora é hora de começar a usar o Sprite Lab e ver aonde sua imaginação
           o leva!
+    hoc-dance-ai-warmup:
+      1:
+        image: notes/hoc_dance_ai_2023_intro_01.jpg
+        text: 'Hora do Código | Festa Dançante: Edição AI - Aquecimento'
+      2:
+        image: notes/hoc_dance_ai_2023_intro_02.jpg
+        text: Olá. Meu nome é Miral Kotb e eu sou um dançarino, desenvolvedor de software
+          e criador do iLuminate.
+      3:
+        image: notes/hoc_dance_ai_2023_intro_03.jpg
+        text: A ciência da computação está relacionada à criatividade de várias maneiras.
+          É imensurável, na verdade. Quer dizer, uma vez que você tenha a habilidade
+          de escrever software, você pode colocar idéias em qualquer coisa. Eu faço
+          isso com roupas leves. Há muito o que você pode fazer quando você tem as
+          ferramentas para escrever software, e as possibilidades são realmente infinitas.
+      4:
+        image: notes/hoc_dance_ai_2023_intro_04.jpg
+        text: Na próxima hora, você começará a trabalhar com Ciência da Computação
+          e Inteligência Artificial organizando sua própria festa dançante! Reunimos
+          algumas músicas de sucesso e um grupo de ótimos dançarinos para você curtir.
+      5:
+        image: notes/hoc_dance_ai_2023_intro_05.jpg
+        text: Você usará blocos de código para escolher diferentes dançarinos, mudar
+          seus movimentos de dança, fazê-los responder à música e torná-los interativos.
+      6:
+        image: notes/hoc_dance_ai_2023_intro_06.jpg
+        text: Ao programar sua festa dançante, você trabalhará com Inteligência Artificial
+          para gerar planos de fundo bem legais.
+      7:
+        image: notes/hoc_dance_ai_2023_intro_07.jpg
+        text: As instruções para cada nível estarão aqui na parte superior da tela.
+      8:
+        image: notes/hoc_dance_ai_2023_intro_08.jpg
+        text: Ao começar a codificar, você arrastará blocos da caixa de ferramentas
+          para a área de trabalho. Depois de pressionar 'Executar', você verá sua
+          festa dançante em ação no espaço de jogo.
+      9:
+        image: notes/hoc_dance_ai_2023_intro_09.jpg
+        text: Se você quiser uma dica, clique na lâmpada. Se seu código tiver um bug,
+          o feedback aparecerá aqui, abaixo das instruções, para ajudá-lo.
+      10:
+        image: notes/hoc_dance_ai_2023_intro_10.jpg
+        text: Tente você mesmo! E se você estiver se sentindo travado, tudo bem! Levante
+          e siga em frente! Continue programando e, antes que você perceba, terá criado
+          sua própria festa dançante. Então, o que você vai criar?
     hoc_dance_congrats:
       1:
         text: 'Hora do Código | Festa da Dança: Que comece a Festa!'

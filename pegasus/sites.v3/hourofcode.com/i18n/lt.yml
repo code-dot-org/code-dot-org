@@ -896,6 +896,9 @@ lt:
   cs_ambassador_application_date: Paraiškos skelbiamos iki 2023 m. lapkričio 8 d.
   cs_ambassador_application_subhead: Dirbkite su mokytoju, kad pateiktumėte savo paraišką
     šiandien
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: Klausimai? Prašome susisiekti su [youngwomen@code.org]
     (%{email_url})
   cs_ambassador_do_heading: Ką veikia CS ambasadoriai?
