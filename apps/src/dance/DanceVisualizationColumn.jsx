@@ -103,7 +103,11 @@ class DanceVisualizationColumn extends React.Component {
                 />
               </div>
               {this.props.isShareView && (
-                <img src={imgSrc} id="danceClickToRun" />
+                <img
+                  src={imgSrc}
+                  id="danceClickToRun"
+                  alt={danceMsg.clickToRunDanceParty()}
+                />
               )}
             </div>
           </ProtectedVisualizationDiv>
