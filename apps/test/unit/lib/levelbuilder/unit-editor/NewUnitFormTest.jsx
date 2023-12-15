@@ -47,7 +47,7 @@ describe('NewUnitFormTest', () => {
     // need to get updated fields
     fields = wrapper.find('NewCourseFields');
     expect(fields.find('.isVersionedSelector').length).to.equal(1);
-    expect(wrapper.find('button').length).to.equal(0);
+    expect(wrapper.find('button').length).to.equal(1);
 
     fields
       .find('.isVersionedSelector')
@@ -59,7 +59,7 @@ describe('NewUnitFormTest', () => {
     expect(fields.find('.versionYearSelector').props().disabled).to.equal(
       false
     );
-    expect(wrapper.find('button').length).to.equal(0);
+    expect(wrapper.find('button').length).to.equal(1);
 
     fields
       .find('.versionYearSelector')
