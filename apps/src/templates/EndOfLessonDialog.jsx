@@ -35,7 +35,6 @@ function EndOfLessonDialog({lessonNumber, isSummaryView}) {
       <div>{i18n.endOfLessonDialogDetails()}</div>
       <DialogFooter rightAlign={true}>
         <Button
-          __useDeprecatedTag
           text={i18n.ok()}
           color={Button.ButtonColor.brandSecondaryDefault}
           onClick={handleClose}
