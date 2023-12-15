@@ -70,7 +70,17 @@ export default class CdoFieldVariable extends GoogleBlockly.FieldVariable {
           : ' ' + Blockly.FieldDropdown.ARROW_CHAR
       )
     );
+
+    /**
+     * Begin CDO customization
+     */
     this.arrow_.setAttribute('dominant-baseline', 'central');
+    // This is to make this function forward-compatible with Blockly v10.
+    this.arrow = this.arrow_;
+    /**
+     * End CDO customization
+     */
+
     if (this.getSourceBlock()?.RTL) {
       this.getTextElement().insertBefore(this.arrow_, this.textContent_);
     } else {
