@@ -160,13 +160,11 @@ export class ShareTeacherLibraries extends React.Component {
             </SortedTableSelect>
             <div style={styles.footer}>
               <Button
-                __useDeprecatedTag
                 onClick={onCancel}
                 color={Button.ButtonColor.gray}
                 text={i18n.closeDialog()}
               />
               <Button
-                __useDeprecatedTag
                 disabled={!selectedLibraryId}
                 onClick={this.assignLibrary}
                 text={i18n.shareLibraryButton()}
