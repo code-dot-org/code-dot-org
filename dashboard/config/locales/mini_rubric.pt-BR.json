@@ -230,6 +230,7 @@
           "rubric_performance_level_4": "As tags de lista não são usadas ou são mal utilizadas, de forma que nenhum conteúdo apareça em uma lista."
         },
         "CSD U2L2 - PracC_2023": {
+          "rubric_key_concept": "Use a sintaxe HTML correta para criar parágrafos de texto",
           "rubric_performance_level_3": "Há pelo menos uma tag de parágrafo no texto, mas ela pode não ser ter sido corretamente (por exemplo, falta de tag de fechamento, parágrafos criados fora do elemento do corpo).",
           "rubric_performance_level_4": "Não há tags de parágrafo no texto."
         },
@@ -803,15 +804,15 @@
           "rubric_performance_level_4": "O código não foi alterado em relação ao aplicativo original"
         },
         "CSD U6 - If Variables - A_2023": {
-          "rubric_key_concept": "Use variáveis e declarações if para criar um aplicativo que usa o circuit playground",
-          "rubric_performance_level_1": "O programa funciona conforme descrito, usando variáveis para controlar o tamanho e uma declaração if para soar o buzzer na hora correta",
+          "rubric_key_concept": "Use variáveis e declarações Se para criar um aplicativo que usa o circuit playground",
+          "rubric_performance_level_1": "O programa funciona conforme descrito, usando variáveis para controlar o tamanho e uma declaração Se para soar o buzzer na hora correta",
           "rubric_performance_level_2": "As variáveis são usadas para acompanhar o tamanho do elemento, mas o buzzer não soa quando ele atinge o tamanho correto",
           "rubric_performance_level_3": "As variáveis são usadas para o tamanho, mas não o aumentam quando o botão é pressionado",
           "rubric_performance_level_4": "O código não foi mudado"
         },
         "CSD U6 - If Variables - A_2222": {
-          "rubric_key_concept": "Use variáveis e declarações if para criar um aplicativo que usa o circuit playground",
-          "rubric_performance_level_1": "O programa funciona conforme descrito, usando variáveis para controlar o tamanho e uma declaração if para soar o buzzer na hora correta",
+          "rubric_key_concept": "Use variáveis e declarações Se para criar um aplicativo que usa o circuit playground",
+          "rubric_performance_level_1": "O programa funciona conforme descrito, usando variáveis para controlar o tamanho e uma declaração Se para soar o buzzer na hora correta",
           "rubric_performance_level_2": "As variáveis são usadas para acompanhar o tamanho do elemento, mas o buzzer não soa quando ele atinge o tamanho correto",
           "rubric_performance_level_3": "As variáveis são usadas para o tamanho, mas não o aumentam quando o botão é pressionado",
           "rubric_performance_level_4": "O código não foi mudado"
@@ -1432,24 +1433,24 @@
           "rubric_performance_level_4": "O aplicativo não foi iniciado"
         },
         "ml-models in applab-zoo assessment": {
-          "rubric_key_concept": "Use o Cartão Modelo para atualizar um aplicativo e use declarações if para mudar as telas em um aplicativo",
-          "rubric_performance_level_1": "A tela de predição tem frases completas para cada recurso, e as declarações if são usadas para mudar a tela com base no valor previsto.",
-          "rubric_performance_level_2": "A tela de predição tem algumas frases completas e algumas declarações if são usadas para mudar a tela com base no valor previsto. No entanto, o aplicativo está incompleto.",
-          "rubric_performance_level_3": "A tela de predição não tem frases completas ou há erros nas declarações if para mudar a tela.",
+          "rubric_key_concept": "Use o Cartão Modelo para atualizar um aplicativo e use declarações Se para mudar as telas em um aplicativo",
+          "rubric_performance_level_1": "A tela de predição tem frases completas para cada recurso, e as declarações Se são usadas para mudar a tela com base no valor previsto.",
+          "rubric_performance_level_2": "A tela de predição tem algumas frases completas e algumas declarações Se são usadas para mudar a tela com base no valor previsto. No entanto, o aplicativo está incompleto.",
+          "rubric_performance_level_3": "A tela de predição não tem frases completas ou há erros nas declarações Se para mudar a tela.",
           "rubric_performance_level_4": "O aplicativo não foi atualizado."
         },
         "ml-models in applab-zoo assessment_2022": {
-          "rubric_key_concept": "Use o Cartão Modelo para atualizar um aplicativo e use declarações if para mudar as telas em um aplicativo",
-          "rubric_performance_level_1": "A tela de predição tem frases completas para cada recurso, e as declarações if são usadas para mudar a tela com base no valor previsto.",
-          "rubric_performance_level_2": "A tela de predição tem algumas frases completas e algumas declarações if são usadas para mudar a tela com base no valor previsto. No entanto, o aplicativo está incompleto.",
-          "rubric_performance_level_3": "A tela de predição não tem frases completas ou há erros nas declarações if para mudar a tela.",
+          "rubric_key_concept": "Use o Cartão Modelo para atualizar um aplicativo e use declarações Se para mudar as telas em um aplicativo",
+          "rubric_performance_level_1": "A tela de predição tem frases completas para cada recurso, e as declarações Se são usadas para mudar a tela com base no valor previsto.",
+          "rubric_performance_level_2": "A tela de predição tem algumas frases completas e algumas declarações Se são usadas para mudar a tela com base no valor previsto. No entanto, o aplicativo está incompleto.",
+          "rubric_performance_level_3": "A tela de predição não tem frases completas ou há erros nas declarações Se para mudar a tela.",
           "rubric_performance_level_4": "O aplicativo não foi atualizado."
         },
         "ml-models in applab-zoo assessment_2023": {
-          "rubric_key_concept": "Use o Cartão Modelo para atualizar um aplicativo e use declarações if para mudar as telas em um aplicativo",
-          "rubric_performance_level_1": "A tela de predição tem frases completas para cada recurso, e as declarações if são usadas para mudar a tela com base no valor previsto.",
-          "rubric_performance_level_2": "A tela de predição tem algumas frases completas e algumas declarações if são usadas para mudar a tela com base no valor previsto. No entanto, o aplicativo está incompleto.",
-          "rubric_performance_level_3": "A tela de predição não tem frases completas ou há erros nas declarações if para mudar a tela.",
+          "rubric_key_concept": "Use o Cartão Modelo para atualizar um aplicativo e use declarações Se para mudar as telas em um aplicativo",
+          "rubric_performance_level_1": "A tela de predição tem frases completas para cada recurso, e as declarações Se são usadas para mudar a tela com base no valor previsto.",
+          "rubric_performance_level_2": "A tela de predição tem algumas frases completas e algumas declarações Se são usadas para mudar a tela com base no valor previsto. No entanto, o aplicativo está incompleto.",
+          "rubric_performance_level_3": "A tela de predição não tem frases completas ou há erros nas declarações Se para mudar a tela.",
           "rubric_performance_level_4": "O aplicativo não foi atualizado."
         }
       }

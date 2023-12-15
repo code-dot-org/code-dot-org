@@ -846,6 +846,9 @@ ar:
     سد هذه الفجوة بين الجنسين من خلال تشجيع أقرانهم على حضور دروس علوم الكمبيوتر.
   cs_ambassador_application_date: التطبيقات مفتوحة حتى 8 نوفمبر 2023
   cs_ambassador_application_subhead: اعمل مع المعلم لتقديم طلبك اليوم
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: أسئلة؟ يرجى الاتصال بـ [youngwomen@code.org]
     (%{email_url})
   cs_ambassador_do_heading: ماذا يفعل سفراء CS؟
