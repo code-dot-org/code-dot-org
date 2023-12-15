@@ -562,7 +562,7 @@ const findAndRemoveInputConfig = (args, inputName, blockText) => {
   let argIndex = args.findIndex(arg => arg.name === inputName);
   if (argIndex === -1) {
     // In the case of a missing input, default to the first available arg.
-    // We can assume that the args are typically ordered in same way as the inputs.
+    // We're assuming that the order of the inputs in args matches the order in the block text.
     argIndex = 0;
     MetricsReporter.logWarning({
       event: 'BLOCK_MISSING_INPUT',
