@@ -17,6 +17,11 @@ const generators: {[blockName: string]: Generator} = {
       // API.endAi();
       `;
   },
+  setBackgroundEffectWithPaletteAI: (block: Block) => {
+    const effect = block.getFieldValue('EFFECT');
+    const palette = block.getFieldValue('PALETTE');
+    return `setBackgroundEffectWithPalette('${effect}', '${palette}');`;
+  },
 };
 
 export default generators;

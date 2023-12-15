@@ -149,7 +149,7 @@ function updateBlockPreview() {
       : spritelabCustomInputTypes;
 
   const blockName = getBlockName(
-    parsedConfig.func || parsedConfig.name,
+    parsedConfig.func || parsedConfig.name || parsedConfig.jsonConfig?.type,
     poolField.value
   );
   nameField.value = blockName;
