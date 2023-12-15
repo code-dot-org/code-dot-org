@@ -59,6 +59,7 @@
   "danceFeedbackUseSetSize": "Use the `set backup_dancer2 size` block to make that dancer smaller.",
   "danceFeedbackUseSetTint": "Use the `set tint` block to change a dancer's tint.",
   "danceFeedbackUseStartMapping": "Try adding the <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> block to your program.",
+  "dancePartyLoading": "Dance character dancing while Dance Party loads.",
   "danceSongNoLongerSupported": "Code.org has added new hit songs to Dance Party, but the original song chosen on this project is no longer supported by Code.org.",
   "measure": "Measure:"
 }
