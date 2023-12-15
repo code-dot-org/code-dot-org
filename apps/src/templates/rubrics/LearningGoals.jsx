@@ -26,7 +26,7 @@ import AiAssessment from './AiAssessment';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {UNDERSTANDING_LEVEL_STRINGS} from './rubricHelpers';
 
-const invalidUnderstanding = -1;
+const INVALID_UNDERSTANDING = -1;
 
 export default function LearningGoals({
   learningGoals,
@@ -40,16 +40,21 @@ export default function LearningGoals({
   setFeedbackAdded,
   aiEvaluations,
 }) {
-  const [isAutosaving, setIsAutosaving] = useState(false);
-  const [autosaved, setAutosaved] = useState(false);
-  const [errorAutosaving, setErrorAutosaving] = useState(false);
+  const STATUS = Object.freeze({
+    NOT_STARTED: 0,
+    IN_PROGRESS: 1,
+    FINISHED: 2,
+    ERROR: 3,
+  });
+  const [autosaveStatus, setAutosaveStatus] = useState(STATUS.NOT_STARTED);
   const [learningGoalEval, setLearningGoalEval] = useState(null);
   const [displayFeedback, setDisplayFeedback] = useState('');
-  const [displayUnderstanding, setDisplayUnderstanding] =
-    useState(invalidUnderstanding);
+  const [displayUnderstanding, setDisplayUnderstanding] = useState(
+    INVALID_UNDERSTANDING
+  );
   const [currentLearningGoal, setCurrentLearningGoal] = useState(0);
   const teacherFeedback = useRef('');
-  const understandingLevel = useRef(invalidUnderstanding);
+  const understandingLevel = useRef(INVALID_UNDERSTANDING);
 
   const aiEnabled =
     learningGoals[currentLearningGoal].aiEnabled && teacherHasEnabledAi;
@@ -72,28 +77,6 @@ export default function LearningGoals({
     }
   };
 
-  const getAiUnderstanding = learningGoalId => {
-    if (!!aiEvaluations) {
-      const aiInfo = aiEvaluations.find(
-        item => item.learning_goal_id === learningGoalId
-      );
-      return aiInfo?.understanding;
-    } else {
-      return null;
-    }
-  };
-
-  const getAiConfidence = learningGoalId => {
-    if (!!aiEvaluations) {
-      const aiInfo = aiEvaluations.find(
-        item => item.learning_goal_id === learningGoalId
-      );
-      return aiInfo?.ai_confidence;
-    } else {
-      return null;
-    }
-  };
-
   const getAiInfo = learningGoalId => {
     if (!!aiEvaluations) {
       const aiInfo = aiEvaluations.find(
@@ -105,16 +88,10 @@ export default function LearningGoals({
     }
   };
 
-  const aiUnderstanding = getAiUnderstanding(
-    learningGoals[currentLearningGoal].id
-  );
-  const aiConfidence = getAiConfidence(learningGoals[currentLearningGoal].id);
   const aiEvalInfo = getAiInfo(learningGoals[currentLearningGoal].id);
 
   const autosave = () => {
-    setAutosaved(false);
-    setIsAutosaving(true);
-    setErrorAutosaving(false);
+    setAutosaveStatus(STATUS.IN_PROGRESS);
     const bodyData = JSON.stringify({
       studentId: studentLevelInfo.user_id,
       learningGoalId: learningGoals[currentLearningGoal].id,
@@ -130,16 +107,14 @@ export default function LearningGoals({
       }
     )
       .then(() => {
-        setIsAutosaving(false);
-        setAutosaved(true);
+        setAutosaveStatus(STATUS.FINISHED);
         if (!feedbackAdded) {
           setFeedbackAdded(true);
         }
       })
       .catch(error => {
-        console.log(error);
-        setIsAutosaving(false);
-        setErrorAutosaving(true);
+        console.error(error);
+        setAutosaveStatus(STATUS.ERROR);
       });
     clearTimeout(autosaveTimer.current);
   };
@@ -185,9 +160,7 @@ export default function LearningGoals({
     });
     setDisplayUnderstanding(radioButtonData);
     understandingLevel.current = radioButtonData;
-    if (!isAutosaving) {
-      autosave();
-    }
+    autosave();
   };
 
   const renderAutoSaveTextbox = () => {
@@ -204,16 +177,16 @@ export default function LearningGoals({
             disabled={!canProvideFeedback}
           />
         </label>
-        {isAutosaving ? (
+        {autosaveStatus === STATUS.IN_PROGRESS ? (
           <span className={style.autosaveMessage}>{i18n.saving()}</span>
         ) : (
-          autosaved && (
+          autosaveStatus === STATUS.FINISHED && (
             <span id="ui-autosaveConfirm" className={style.autosaveMessage}>
               <FontAwesome icon="circle-check" /> {i18n.savedToGallery()}
             </span>
           )
         )}
-        {errorAutosaving && (
+        {autosaveStatus === STATUS.ERROR && (
           <span className={style.autosaveMessage}>
             {i18n.feedbackSaveError()}
           </span>
@@ -274,18 +247,18 @@ export default function LearningGoals({
           </StrongText>
         </div>
         <div className={style.learningGoalsHeaderRightSide}>
-          {aiEnabled && displayUnderstanding === invalidUnderstanding && (
+          {aiEnabled && displayUnderstanding === INVALID_UNDERSTANDING && (
             <AiToken />
           )}
           {/*TODO: Display status of feedback*/}
           {canProvideFeedback &&
             aiEnabled &&
-            displayUnderstanding === invalidUnderstanding && (
+            displayUnderstanding === INVALID_UNDERSTANDING && (
               <BodyThreeText>{i18n.approve()}</BodyThreeText>
             )}
           {canProvideFeedback &&
             !aiEnabled &&
-            displayUnderstanding === invalidUnderstanding && (
+            displayUnderstanding === INVALID_UNDERSTANDING && (
               <BodyThreeText>{i18n.evaluate()}</BodyThreeText>
             )}
           {displayUnderstanding >= 0 && (
@@ -328,13 +301,13 @@ export default function LearningGoals({
         {teacherHasEnabledAi &&
           !!studentLevelInfo &&
           !!aiEvalInfo &&
-          aiUnderstanding !== undefined && (
+          aiEvalInfo.understanding !== undefined && (
             <div className={style.openedAiAssessment}>
               <AiAssessment
                 isAiAssessed={learningGoals[currentLearningGoal].aiEnabled}
                 studentName={studentLevelInfo.name}
-                aiConfidence={aiConfidence}
-                aiUnderstandingLevel={aiUnderstanding}
+                aiConfidence={aiEvalInfo.ai_confidence}
+                aiUnderstandingLevel={aiEvalInfo.understanding}
                 aiEvalInfo={aiEvalInfo}
               />
             </div>
@@ -349,6 +322,7 @@ export default function LearningGoals({
             radioButtonCallback={radioButtonCallback}
             submittedEvaluation={submittedEvaluation}
             isStudent={isStudent}
+            isAutosaving={autosaveStatus === STATUS.IN_PROGRESS}
           />
           {learningGoals[currentLearningGoal].tips && !isStudent && (
             <div>
