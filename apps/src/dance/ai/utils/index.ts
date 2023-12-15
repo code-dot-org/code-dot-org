@@ -8,7 +8,7 @@ export * from './getGeneratedEffectScores';
 export * from './getLabelMap';
 export * from './getPreviewCode';
 export * from './getRangeArray';
-export * from './getDanceAiModalItem';
+export * from './getEmojiItem';
 export * from './linearInterpolation';
 export * from './useInterval';
 export * from './validateAndSetFieldValue';

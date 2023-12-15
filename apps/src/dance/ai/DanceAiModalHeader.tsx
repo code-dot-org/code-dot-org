@@ -3,14 +3,14 @@ import moduleStyles from './dance-ai-modal.module.scss';
 import aiBotMini from '@cdo/static/dance/ai/bot/ai-bot-mini.svg';
 const i18n = require('../locale');
 
-import {DanceAiModelItem} from './types';
+import {EmojiItem} from './types';
 
 import EmojiIcon from './EmojiIcon';
 
 interface DanceAiModalHeaderProps {
   onClose: () => void;
   handleStartOverClick: () => void;
-  selectedEmojis: DanceAiModelItem[];
+  selectedEmojis: EmojiItem[];
   slotCount: number;
 }
 
@@ -20,7 +20,7 @@ interface DanceAiModalHeaderProps {
  * @param props
  * @param props.onClose callback to be called when the modal closes
  * @param props.handleStartOverClick callback for when the startover button is clicked
- * @param props.selectedEmojis array of DanceAiModalItems the user has selected
+ * @param props.selectedEmojis array of EmojiItems the user has selected
  * @param props.slotCount number of slots to display
 
  * @returns A react element that renders the modal header
@@ -33,9 +33,7 @@ const DanceAiModalHeader: React.FunctionComponent<DanceAiModalHeaderProps> = ({
   slotCount,
 }) => {
   const headerContent = useMemo(() => {
-    const filledSelectedEmojis: (DanceAiModelItem | undefined)[] = [
-      ...selectedEmojis,
-    ];
+    const filledSelectedEmojis: (EmojiItem | undefined)[] = [...selectedEmojis];
     filledSelectedEmojis.length = slotCount;
     filledSelectedEmojis.fill(undefined, selectedEmojis.length, slotCount);
 

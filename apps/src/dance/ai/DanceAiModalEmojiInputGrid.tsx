@@ -1,13 +1,13 @@
 import React from 'react';
 import moduleStyles from './dance-ai-modal.module.scss';
 
-import {DanceAiModelItem} from './types';
+import {EmojiItem} from './types';
 
 import DanceAiEmojiIcon from './DanceAiEmojiIcon';
 import inputLibraryJson from '@cdo/static/dance/ai/ai-inputs.json';
 
 type DanceAiModalEmojiInputGrid = {
-  selectedEmojis: DanceAiModelItem[];
+  selectedEmojis: EmojiItem[];
   handleItemClick: (id: string, available: boolean) => void;
 };
 

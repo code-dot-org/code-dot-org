@@ -31,7 +31,7 @@ export interface AiFieldValue extends GeneratedEffect {
 
 export type DanceAiSound = (typeof DANCE_AI_SOUNDS)[number];
 
-export type DanceAiModelItem = {
+export type EmojiItem = {
   id: string;
   emoji: string;
   modelDescriptiveName: string;

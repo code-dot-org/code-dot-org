@@ -2,12 +2,12 @@ import React from 'react';
 import classNames from 'classnames';
 
 import {getEmojiImageUrl} from './utils';
-import {DanceAiModelItem} from './types';
+import {EmojiItem} from './types';
 
 import moduleStyles from './dance-ai-modal.module.scss';
 
 interface EmojiIconProps {
-  item: DanceAiModelItem;
+  item: EmojiItem;
   onClick?: () => void;
   className?: string;
   isHighlighted?: boolean;
@@ -17,7 +17,7 @@ interface EmojiIconProps {
  * This component renders an EmojiIcon
  *
  * @param props
- * @param props.item the DanceAiModelItem emoji
+ * @param props.item the EmojiItem emoji
  * @param props.onClick callback click handler to be called when the user clicks on an emoji
  * @param className class to attach to the emoji
  * @param isHighlighted boolean to determine if the emoji should be drawn highlighted
