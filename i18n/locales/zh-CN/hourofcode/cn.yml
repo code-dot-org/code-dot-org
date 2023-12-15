@@ -684,6 +684,9 @@ cn:
   cs_ambassador_desc: 计算机科学涉及每个领域，包括医学、娱乐、体育、教育、商业、时尚和创业。然而，只有5％的高中年龄年轻女性上计算机科学课。大使可以通过鼓励同龄人上计算机科学课来帮助缩小这种性别差距。
   cs_ambassador_application_date: 申请截止日期为 2023 年 11 月 8 日
   cs_ambassador_application_subhead: 立即与老师一起提交申请
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: 有问题吗？请联系 [youngwomen@code.org] (%{email_url})
   cs_ambassador_do_heading: CS 大使是做什么的？
   cs_ambassador_do_desc: CS Ambassadors 鼓励年轻女性探索这个主题，并在重新获得计算机科学领域的地位时互相提升。CS 大使与同行交流，分享他们对计算机科学的兴奋和热爱。他们参观教室，在午餐时主持餐桌，并在集会和俱乐部会议上发言。CS大使与教师和学校管理人员合作，打破阻碍年轻女性前进的陈规定型观念。
