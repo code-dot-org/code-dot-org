@@ -10,7 +10,6 @@ import {
 } from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/templates/Button';
 import {RubricAiEvaluationStatus} from '@cdo/apps/util/sharedConstants';
-import {queryParams} from '@cdo/apps/code-studio/utils';
 
 const STATUS = {
   // we are waiting for initial status from the server
@@ -69,6 +68,7 @@ export default function RubricSettings({
   visible,
   refreshAiEvaluations,
   studentName,
+  sectionId,
 }) {
   const [csrfToken, setCsrfToken] = useState('');
   const [status, setStatus] = useState(STATUS.INITIAL_LOAD);
@@ -80,8 +80,6 @@ export default function RubricSettings({
   );
   const [statusAll, setStatusAll] = useState(STATUS_ALL.INITIAL_LOAD);
   const [unevaluatedCount, setUnevaluatedCount] = useState(0);
-  const sectionId = queryParams('section_id');
-  // console.log(`SECTION ID: ${sectionId}`);
 
   const statusText = () => {
     switch (status) {
@@ -264,7 +262,6 @@ export default function RubricSettings({
   };
 
   const handleRunAiAssessmentAll = () => {
-    //TODO: create function in rubrics_controller to run all unsubmitted
     setStatusAll(STATUS_ALL.EVALUATION_PENDING);
     const url = `/rubrics/${rubricId}/run_ai_evaluations_for_all`;
     const params = {section_id: sectionId};
@@ -317,6 +314,7 @@ export default function RubricSettings({
             <BodyTwoText>{i18n.runAiAssessmentDescriptionAll()}</BodyTwoText>
           </div>
           <Button
+            className="uitest-run-ai-assessment-all"
             text={i18n.runAiAssessmentAll()}
             color={Button.ButtonColor.brandSecondaryDefault}
             onClick={handleRunAiAssessmentAll}
@@ -343,4 +341,5 @@ RubricSettings.propTypes = {
   visible: PropTypes.bool,
   refreshAiEvaluations: PropTypes.func,
   studentName: PropTypes.string,
+  sectionId: PropTypes.number,
 };
