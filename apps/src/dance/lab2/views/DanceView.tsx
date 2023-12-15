@@ -13,7 +13,8 @@ import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
 import {DanceLevelProperties, DanceProjectSources} from '../../types';
 import {registerReducers} from '@cdo/apps/redux';
-import {setUpBlocklyForDanceLab} from '../../blockly/setup';
+import {installCommonBlocks, installDanceBlocks} from '../../blockly/setup';
+import undefined from 'react-with-context';
 const commonI18n = require('@cdo/locale');
 
 const DANCE_VISUALIZATION_ID = 'dance-visualization';
@@ -56,6 +57,14 @@ const DanceView: React.FunctionComponent = () => {
 
   const levelProperties = useTypedSelector(state => state.lab.levelProperties);
 
+  const skin = useTypedSelector(
+    state => state.lab.levelProperties?.skin || undefined
+  );
+
+  const isK1 = useTypedSelector(
+    state => state.lab.levelProperties?.isK1 || false
+  );
+
   const onAuthError = (songId: string) => {
     Lab2MetricsReporter.logWarning({
       message: 'Error loading song',
@@ -64,7 +73,11 @@ const DanceView: React.FunctionComponent = () => {
   };
 
   useEffect(() => {
-    setUpBlocklyForDanceLab(levelProperties);
+    installCommonBlocks(skin, isK1);
+  }, [skin, isK1]);
+
+  useEffect(() => {
+    installDanceBlocks(levelProperties);
   }, [levelProperties]);
 
   // Initialize song manifest and load initial song when level loads.
