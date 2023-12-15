@@ -305,8 +305,9 @@ export default function RubricSettings({
           >
             {polling && <i className="fa fa-spinner fa-spin" />}
           </Button>
-          {statusText() && <BodyTwoText>{statusText()}</BodyTwoText>}
-
+          <BodyTwoText className="uitest-eval-status-text">
+            {statusText() || ''}
+          </BodyTwoText>
           <div>
             <BodyTwoText>
               <StrongText>{i18n.aiAssessmentAll()}</StrongText>
@@ -325,7 +326,9 @@ export default function RubricSettings({
               <i className="fa fa-spinner fa-spin" />
             )}
           </Button>
-          {statusAllText() && <BodyTwoText>{statusAllText()}</BodyTwoText>}
+          <BodyTwoText className="uitest-eval-status-all-text">
+            {statusAllText() || ''}
+          </BodyTwoText>
         </div>
       )}
     </div>
