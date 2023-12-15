@@ -28,7 +28,6 @@ const Notification = ({
   buttons,
   buttonsStyles,
   buttonText,
-  buttonColor,
   children,
   details,
   detailsLink,
@@ -177,7 +176,7 @@ const Notification = ({
               <Button
                 __useDeprecatedTag
                 href={buttonLink}
-                color={buttonColor || Button.ButtonColor.gray}
+                color={Button.ButtonColor.gray}
                 text={buttonText}
                 style={styles.button}
                 target={newWindow ? '_blank' : null}
@@ -220,7 +219,6 @@ Notification.propTypes = {
   detailsLinkNewWindow: PropTypes.bool,
   buttonText: PropTypes.string,
   buttonLink: PropTypes.string,
-  buttonColor: PropTypes.string,
   dismissible: PropTypes.bool.isRequired,
   iconStyles: PropTypes.object,
   onDismiss: PropTypes.func,
