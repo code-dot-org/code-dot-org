@@ -36,6 +36,7 @@ class CreateStandardsReportStep1 extends Component {
             onClick={this.props.onNext}
             color={Button.ButtonColor.brandSecondaryDefault}
             className="uitest-standards-generate-report-next"
+            style={styles.button}
           />
         </DialogFooter>
       </div>
@@ -49,6 +50,9 @@ const styles = {
     fontWeight: 'bold',
     marginTop: 20,
     marginBottom: 30,
+  },
+  button: {
+    margin: 0,
   },
 };
 
