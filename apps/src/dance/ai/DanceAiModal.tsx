@@ -20,12 +20,13 @@ import {
   EffectsQuality,
   DanceAiModalMode,
   DanceAiPreviewButtonToggleState,
+  EmojiItem,
 } from './types';
 import {
   chooseEffects,
   generateAiEffectBlocks,
   generateAiEffectBlocksFromResult,
-  getEmojiItem,
+  getAiEmojiItem,
   getPreviewCode,
   getGeneratedEffectScores,
   getLabelMap,
@@ -40,7 +41,7 @@ const i18n = require('../locale');
 import EmojiIcon from './EmojiIcon';
 import DanceAiModalHeader from './DanceAiModalHeader';
 import DanceAiModalFlipCard from './DanceAiModalFlipCard';
-import DanceAiModalEmojiInputGrid from './DanceAiModalEmojiInputGrid';
+import EmojiInputGrid from './EmojiInputGrid';
 
 import aiBotHeadNormal from '@cdo/static/dance/ai/bot/ai-bot-head-normal.png';
 import aiBotBodyNormal from '@cdo/static/dance/ai/bot/ai-bot-body-normal.png';
@@ -56,6 +57,8 @@ import ModalButton from './ModalButton';
 import danceMetricsReporter from '../danceMetricsReporter';
 import CdoFieldDanceAi from './cdoFieldDanceAi';
 import {DANCE_AI_FIELD_NAME} from './constants';
+
+import inputLibraryJson from '@cdo/static/dance/ai/ai-inputs.json';
 
 // Progress in the generating mode has a step and a substep.
 // Each step is a now effect, while each substep shows progress for
@@ -75,6 +78,10 @@ const aiBotBodyThinkImages = [
   aiBotBodyThink1,
   aiBotBodyThink2,
 ];
+
+// this function is used internaly in handleItemClick to determine if an id is selected
+const isItemSelected = (id: string, inputs: string[]) =>
+  inputs.some(inputId => inputId === id);
 
 // How many emojis are to be selected.
 const SLOT_COUNT = 3;
@@ -174,7 +181,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
 
   const currentInputSlot = inputs.length;
   const selectedEmojis = useMemo(
-    () => inputs.map(getEmojiItem).filter(item => item !== undefined),
+    () => inputs.map(getAiEmojiItem).filter(item => item !== undefined),
     [inputs]
   );
 
@@ -280,9 +287,17 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     };
   }, []);
 
+  // this callback is handed to the EmojiInputGrid to determine if an EmojiIcon is highlighted
+  const isItemHighlighted = useCallback(
+    (item: EmojiItem) => isItemSelected(item.id, inputs),
+    [inputs]
+  );
+
   const handleItemClick = useCallback(
-    (id: string, available: boolean) => {
+    (id: string) => {
       setInputs(inputs => {
+        const available = !isItemSelected(id, inputs);
+
         // if we've clicked on an emoji that's not available, remove it from our inputs
         if (!available) {
           playSound('ai-deselect-emoji');
@@ -666,9 +681,10 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
         )}
 
         {mode === DanceAiModalMode.SELECT_INPUTS && (
-          <DanceAiModalEmojiInputGrid
-            selectedEmojis={selectedEmojis}
-            handleItemClick={handleItemClick}
+          <EmojiInputGrid
+            inputLibrary={inputLibraryJson}
+            onClick={handleItemClick}
+            isHighlighted={isItemHighlighted}
           />
         )}
 

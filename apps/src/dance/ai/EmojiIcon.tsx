@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useMemo} from 'react';
 import classNames from 'classnames';
 
 import {getEmojiImageUrl} from './utils';
@@ -6,9 +6,9 @@ import {EmojiItem} from './types';
 
 import moduleStyles from './dance-ai-modal.module.scss';
 
-interface EmojiIconProps {
+export interface EmojiIconProps {
   item: EmojiItem;
-  onClick?: () => void;
+  onClick?: (itemId: string) => void;
   className?: string;
   isHighlighted?: boolean;
 }
@@ -33,10 +33,14 @@ const EmojiIcon: React.FunctionComponent<EmojiIconProps> = ({
   const isButton = onClick !== undefined;
   const Tag = isButton ? 'button' : 'div';
 
+  const clickHandler = useMemo(() => {
+    return onClick ? () => onClick(item.id) : undefined;
+  }, [onClick, item]);
+
   return (
     <Tag
       type={isButton ? 'button' : undefined}
-      onClick={onClick}
+      onClick={clickHandler}
       style={{
         backgroundImage: `url(${getEmojiImageUrl(item.id)})`,
       }}

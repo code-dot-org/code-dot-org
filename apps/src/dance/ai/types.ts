@@ -34,6 +34,9 @@ export type DanceAiSound = (typeof DANCE_AI_SOUNDS)[number];
 export type EmojiItem = {
   id: string;
   emoji: string;
+};
+
+export type AIEmojiItem = EmojiItem & {
   modelDescriptiveName: string;
 };
 
