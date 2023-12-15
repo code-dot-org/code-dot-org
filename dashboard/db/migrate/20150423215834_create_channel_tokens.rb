@@ -9,6 +9,10 @@ class CreateChannelTokens < ActiveRecord::Migration[4.2]
       t.timestamps
     end
 
+    # The following code is disabled because access to PEGASUS_DB from outside
+    # of the pegasus or bin directories is not allowed. For more details, see:
+    # https://github.com/code-dot-org/code-dot-org/pull/55417
+
     # big_game_template = Level.find_by_key('Big Game Template').id
     #
     # Copy 'Big Game Template' channel for each user that has one saved.
