@@ -380,14 +380,10 @@ class ShareAllowedDialog extends React.Component {
                 )}
                 <div style={{clear: 'both'}}>
                   <div style={styles.thumbnail}>
-                    {
-                      // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
-                      // Verify or update this alt-text as necessary
-                    }
                     <img
                       style={styles.thumbnailImg}
                       src={thumbnailUrl}
-                      alt=""
+                      alt={i18n.projectThumbnail()}
                     />
                   </div>
                   <div>
