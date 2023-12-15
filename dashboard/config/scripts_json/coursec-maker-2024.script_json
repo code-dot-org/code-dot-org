@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "coursec-maker",
-    "serialized_at": "2023-12-13 20:47:33 UTC",
+    "serialized_at": "2023-12-14 18:16:48 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -119,10 +119,10 @@
       "name": "Emotion badge",
       "absolute_position": 4,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
-        "overview": "[micro:bit Physical Computing Fundamentals pp. 22-24](https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf)"
+        "overview": "This lesson plan is not available on Code.org's website - instead, [click here to access micro:bit Physical Computing Fundamentals pp. 22-24](https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf#page=22)"
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -190,9 +190,10 @@
       "name": "Calming LEDs",
       "absolute_position": 8,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 8,
       "properties": {
+        "overview": "This lesson plan is not available on Code.org's website - instead, [click here to access micro:bit Physical Computing Fundamentals pp. 25-27](https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf#page=25)"
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
@@ -259,9 +260,10 @@
       "name": "Counter",
       "absolute_position": 12,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 12,
       "properties": {
+        "overview": "This lesson plan is not available on Code.org's website - instead, [click here to access micro:bit Physical Computing Fundamentals pp. 28-30](https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf#page=28)"
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -580,6 +582,18 @@
       }
     },
     {
+      "key": "aee1c063-fbf1-499a-90c4-a6b1b3fa4e15",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "aee1c063-fbf1-499a-90c4-a6b1b3fa4e15",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursec-maker-2024"
+      }
+    },
+    {
       "key": "c8881f4f-471f-439a-ba88-ba27d1da7617",
       "position": 1,
       "properties": {
@@ -671,6 +685,18 @@
       "seeding_key": {
         "lesson_activity.key": "51d40ff1-ad1c-4397-b98a-886989f8f87c",
         "lesson.key": "Counting with Variables",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "coursec-maker-2024"
+      }
+    },
+    {
+      "key": "fab02723-90c1-401f-9e66-d2e80e2d7212",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fab02723-90c1-401f-9e66-d2e80e2d7212",
+        "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "coursec-maker-2024"
       }
@@ -1307,6 +1333,17 @@
       }
     },
     {
+      "key": "ce5804af-f79f-4429-9cfb-b9e2d760a6b6",
+      "position": 1,
+      "properties": {
+        "progression_name": "Calming LEDs"
+      },
+      "seeding_key": {
+        "activity_section.key": "ce5804af-f79f-4429-9cfb-b9e2d760a6b6",
+        "lesson_activity.key": "aee1c063-fbf1-499a-90c4-a6b1b3fa4e15"
+      }
+    },
+    {
       "key": "4118fee7-33b3-41ea-b191-d2f7ae15144f",
       "position": 1,
       "properties": {
@@ -1650,6 +1687,17 @@
         "activity_section.key": "da29ad7f-6cb2-4717-92fc-d6728279badb",
         "lesson_activity.key": "51d40ff1-ad1c-4397-b98a-886989f8f87c"
       }
+    },
+    {
+      "key": "2a45eed6-43d6-445c-acf6-e465970ed3a8",
+      "position": 1,
+      "properties": {
+        "progression_name": "Counter"
+      },
+      "seeding_key": {
+        "activity_section.key": "2a45eed6-43d6-445c-acf6-e465970ed3a8",
+        "lesson_activity.key": "fab02723-90c1-401f-9e66-d2e80e2d7212"
+      }
     }
   ],
   "script_levels": [
@@ -1659,6 +1707,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_c_maker_dance_party_unplugged"
+        ],
         "progression": "Dance Party"
       },
       "bonus": false,
@@ -1980,6 +2031,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_c_maker_emotion_badge"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2377,6 +2431,28 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Calming LEDs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course_c_maker_calming_leds"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursec-maker-2024",
+        "activity_section.key": "ce5804af-f79f-4429-9cfb-b9e2d760a6b6"
+      },
+      "level_keys": [
+        "course_c_maker_calming_leds"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "courseC_data wizard_maker"
         ],
@@ -2397,7 +2473,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2422,7 +2498,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2447,7 +2523,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2472,7 +2548,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -2497,7 +2573,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -2522,7 +2598,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -2547,7 +2623,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -2572,7 +2648,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -2597,7 +2673,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
@@ -2622,7 +2698,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 10,
       "activity_section_position": 4,
       "assessment": false,
@@ -2647,7 +2723,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 11,
       "activity_section_position": 5,
       "assessment": false,
@@ -2669,6 +2745,28 @@
       },
       "level_keys": [
         "courseF_clicker_finish_maker"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Counter"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course_c_maker_counter"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "coursec-maker-2024",
+        "activity_section.key": "2a45eed6-43d6-445c-acf6-e465970ed3a8"
+      },
+      "level_keys": [
+        "course_c_maker_counter"
       ]
     }
   ],
@@ -3023,6 +3121,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "course_c_maker_calming_leds",
+        "script_level.level_keys": [
+          "course_c_maker_calming_leds"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursec-maker-2024",
+        "activity_section.key": "ce5804af-f79f-4429-9cfb-b9e2d760a6b6"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "courseC_data wizard_maker",
         "script_level.level_keys": [
           "courseC_data wizard_maker"
@@ -3163,6 +3273,18 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "coursec-maker-2024",
         "activity_section.key": "6f20dc82-6227-4ca1-87ec-e46b4615a6d4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "course_c_maker_counter",
+        "script_level.level_keys": [
+          "course_c_maker_counter"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "coursec-maker-2024",
+        "activity_section.key": "2a45eed6-43d6-445c-acf6-e465970ed3a8"
       }
     }
   ],
