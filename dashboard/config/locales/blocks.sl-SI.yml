@@ -37,8 +37,6 @@ sl:
             '1.00': srednje
             '3.00': Zelo veliko
         text: nastavite {SPRITE} velikost na {SIZE}
-      Dancelab_ai:
-        text: uporabite AI {IMAGE}
       Dancelab_alternateMoves:
         options:
           GROUP:
