@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import $ from 'jquery';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
+import i18n from '@cdo/locale';
 
 class CensusMapInfoWindow extends Component {
   static propTypes = {
@@ -399,13 +400,9 @@ export default class CensusMapReplacement extends Component {
           </div>
           <div id="right">
             <span id="footer-text">In partnership with</span>
-            {
-              // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
-              // Verify or update this alt-text as necessary
-            }
             <img
               src="/images/fit-100/avatars/computer_science_teachers_association.png"
-              alt=""
+              alt={i18n.CSTALogo()}
             />
           </div>
         </div>
