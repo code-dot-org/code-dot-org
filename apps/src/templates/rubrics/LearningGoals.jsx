@@ -145,7 +145,7 @@ export default function LearningGoals({
             understandingLevel.current = json.understanding;
           }
         })
-        .catch(error => console.log(error));
+        .catch(error => console.error(error));
     }
   }, [studentLevelInfo, learningGoals, currentLearningGoal]);
 
