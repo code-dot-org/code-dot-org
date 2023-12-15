@@ -5,7 +5,11 @@ import classNames from 'classnames';
 import AiVisualizationPreview from './AiVisualizationPreview';
 import AiBlockPreview from './AiBlockPreview';
 
-import {DanceAiModalMode, DanceAiPreviewButtonToggleState} from './types';
+import {
+  DanceAiModalMode,
+  DanceAiPreviewButtonToggleState,
+  GeneratedEffect,
+} from './types';
 import {getPreviewCode} from './utils';
 
 type DanceAiModalFlipCardProps = {
@@ -14,8 +18,8 @@ type DanceAiModalFlipCardProps = {
   badGeneratedResultsCount: number;
   currentToggle: DanceAiPreviewButtonToggleState;
   previewAppearDuration: number;
-  currentGeneratedEffect: any;
-  getGeneratedEffect: any;
+  currentGeneratedEffect: GeneratedEffect | undefined;
+  getGeneratedEffect: (step: number) => GeneratedEffect | undefined;
 };
 
 /**
