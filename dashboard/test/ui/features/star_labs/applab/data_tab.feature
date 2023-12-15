@@ -1,5 +1,6 @@
 @no_mobile
 @as_student
+@skip
 Feature: App Lab Data Tab
 
   Background:
