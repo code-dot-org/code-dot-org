@@ -97,6 +97,7 @@
   .content-view {
     thead,
     tbody {
+      max-width: constants.$content-view-width;
       td {
         text-align: center;
       }

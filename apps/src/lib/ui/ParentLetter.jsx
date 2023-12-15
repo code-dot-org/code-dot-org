@@ -156,7 +156,11 @@ export default connect(state => ({
 const Header = ({logoUrl}) => {
   return (
     <header style={styles.header}>
-      <img src={logoUrl} style={styles.codeOrgLogo} />
+      {
+        // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+        // Verify or update this alt-text as necessary
+      }
+      <img src={logoUrl} style={styles.codeOrgLogo} alt="" />
     </header>
   );
 };
@@ -189,9 +193,14 @@ const SignInInstructions = ({
           <li>
             {i18n.parentLetterClever2()}
             <br />
+            {
+              // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+              // Verify or update this alt-text as necessary
+            }
             <img
               src="/shared/images/clever_code_org_logo.png"
               style={styles.cleverCodeOrgLogo}
+              alt=""
             />
           </li>
         </ol>
@@ -220,9 +229,14 @@ const SignInInstructions = ({
             {secretPicturePath && (
               <span>
                 <br />
+                {
+                  // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+                  // Verify or update this alt-text as necessary
+                }
                 <img
                   src={pegasus(`/images/${secretPicturePath}`)}
                   style={{width: 60, margin: 10}}
+                  alt=""
                 />
               </span>
             )}
