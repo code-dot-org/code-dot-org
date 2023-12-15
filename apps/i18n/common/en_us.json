@@ -410,6 +410,7 @@
   "code": "Code:",
   "codeIntroduced": "Code Introduced",
   "codeLogo": "Code.org logo",
+  "codeLogoClever": "Example of Code.org logo on Clever",
   "codeMode": "Code",
   "codeReviewAutoDisableMessage": "Code review will be automatically disabled in {daysLeft} days. To reset this time, disable and re-enable code review.",
   "codeReviewGroups": "Code Review Groups",
