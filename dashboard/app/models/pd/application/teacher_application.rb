@@ -125,6 +125,12 @@ module Pd::Application
       current_year_index >= 0 ? APPLICATION_YEARS[current_year_index + 1] : nil
     end
 
+    # The census lags by a year, so the census year is the first application year minus 1
+    # For example, for the 2023-2025 application year, we want to look at 2023 census data
+    def census_year
+      application_year.split('-').first.to_i - 1
+    end
+
     # @override
     def set_type_and_year
       self.application_type = TEACHER_APPLICATION
@@ -1059,6 +1065,13 @@ module Pd::Application
             nil
           end
       end
+
+      # Check if a school is not teaching CS according to the access report
+      # If the school is not in the census_summaries table, treat that as not teaching
+      # This is a bit of a confusing double negative but I wanted to keep the YES/NO logic
+      # consistent with the criteria.
+      meets_scholarship_criteria_scores[:not_teaching_in_access_report] =
+        Census::CensusSummary.find_by(school_id: school_id, school_year: census_year)&.does_teach? ? NO : YES  
 
       update(
         response_scores: response_scores_hash.deep_merge(
