@@ -6,7 +6,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "long_instructions": "## Reflection\r\n\r\nWhere do you see CS in your world?\r\n\r\nThink about your typical day. When are you using Computer Science? For what purposes? What role does it have in your life?",
+    "long_instructions": "## Reflection\r\n\r\nThink about your typical day. \r\n\r\n<ul>\r\n  <li>Where do you see Computer Science in your world?</li>\r\n  <li>When are you using Computer Science? For what purposes?</li>\r\n  <li>What role does Computer Science have in your life?</li>\r\n</ul>   ",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 19619,
@@ -20,7 +20,7 @@
     "allow_multiple_attempts": "true"
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-12-13T23:20:17.137+00:00\",\"changed\":[\"cloned from \\\"U2L1 CFU how use internet_2023\\\"\"],\"cloned_from\":\"U2L1 CFU how use internet_2023\"},{\"changed_at\":\"2023-12-13 23:21:28 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-12-13T23:20:17.137+00:00\",\"changed\":[\"cloned from \\\"U2L1 CFU how use internet_2023\\\"\"],\"cloned_from\":\"U2L1 CFU how use internet_2023\"},{\"changed_at\":\"2023-12-13 23:21:28 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2023-12-14 20:14:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2023-12-14 20:17:47 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
