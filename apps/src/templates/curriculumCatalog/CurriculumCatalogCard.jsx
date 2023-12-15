@@ -282,18 +282,7 @@ const CustomizableCurriculumCatalogCard = ({
                 onClick={onQuickViewClick}
                 aria-label={quickViewButtonDescription}
                 text={i18n.quickView()}
-                className={`${style.buttonFlex} ${style.quickViewButton}`}
-              />
-              <Button
-                __useDeprecatedTag
-                color={quickViewButtonColor}
-                type="button"
-                href={pathToCourse}
-                aria-label={i18n.learnMoreDescription({
-                  course_name: courseDisplayName,
-                })}
-                text={i18n.learnMore()}
-                className={`${style.buttonFlex} ${style.learnMoreButton}`}
+                className={style.buttonFlex}
               />
               {(isSignedOut || isTeacher) && (
                 <Button
