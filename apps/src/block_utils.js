@@ -654,8 +654,11 @@ const determineInputs = function (text, args, strictTypes = []) {
   args = args.filter(arg => !arg.statement);
 
   if (args.length > 0) {
-    console.warn('Unexpected args in block definition:');
-    console.warn(args);
+    MetricsReporter.logWarning({
+      event: 'BLOCK_UNEXPECTED_ARGS',
+      args,
+      blockText: text,
+    });
   }
   return inputs;
 };
