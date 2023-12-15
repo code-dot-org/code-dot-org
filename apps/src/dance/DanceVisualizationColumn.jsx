@@ -1,12 +1,13 @@
 import React from 'react';
 import cookies from 'js-cookie';
+import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
+import danceMsg from './locale';
 import GameButtons from '../templates/GameButtons';
 import ArrowButtons from '../templates/ArrowButtons';
 import BelowVisualization from '../templates/BelowVisualization';
 import {MAX_GAME_WIDTH, GAME_HEIGHT} from './constants';
 import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
-import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
 import AgeDialog from '../templates/AgeDialog';
 import HourOfCodeGuideEmailDialog from '../templates/HourOfCodeGuideEmailDialog';
 import {getFilterStatus} from '@cdo/apps/dance/songs';
@@ -98,10 +99,15 @@ class DanceVisualizationColumn extends React.Component {
                 <img
                   src="//curriculum.code.org/images/DancePartyLoading.gif"
                   style={styles.loadingGif}
+                  alt={danceMsg.dancePartyLoading()}
                 />
               </div>
               {this.props.isShareView && (
-                <img src={imgSrc} id="danceClickToRun" />
+                <img
+                  src={imgSrc}
+                  id="danceClickToRun"
+                  alt={danceMsg.clickToRunDanceParty()}
+                />
               )}
             </div>
           </ProtectedVisualizationDiv>

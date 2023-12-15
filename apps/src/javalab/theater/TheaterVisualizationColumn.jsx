@@ -65,7 +65,11 @@ class TheaterVisualizationColumn extends React.Component {
                 showOverlay && style.overlay
               )}
             >
-              <img id="theater" className={style.image} />
+              {
+                // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+                // Verify or update this alt-text as necessary
+              }
+              <img id="theater" className={style.image} alt="" />
               {/* The audio here is generated dynamically from a student's code,
                   and we don't have text that would appropriately represent the audio being generated. */}
               {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
