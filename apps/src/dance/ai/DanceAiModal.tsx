@@ -189,10 +189,10 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
   }, []);
 
   const getScores = useCallback(
-    (myInputs: string[], step: number) => {
+    (givenInputs: string[], step: number) => {
       const effect = getGeneratedEffect(step);
       if (effect) {
-        return getGeneratedEffectScores(myInputs, effect);
+        return getGeneratedEffectScores(givenInputs, effect);
       }
 
       return [0, 0, 0];
@@ -206,18 +206,21 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
   // (ie, the sum of ALL selected emoji's associations with a foreground/background palette combination).
   // Used to normalize and scale the data for easier differentiation between results by the user.
   const calculateMinMax = useCallback(
-    (myInputs: string[]) => {
+    (givenInputs: string[]) => {
       // The minimum individual score is selected across all generated effects (bad and good).
       const minIndividualScore = getRangeArray(
         0,
         BAD_GENERATED_RESULTS_COUNT - 1
       ).reduce((accumulator: number, step: number) => {
-        const scores = getScores(myInputs, step);
+        const scores = getScores(givenInputs, step);
         return Math.min(...scores, accumulator);
       }, Infinity);
 
       // By definition, the maximum total score must come from the "good" effect.
-      const goodEffectScores = getScores(myInputs, BAD_GENERATED_RESULTS_COUNT);
+      const goodEffectScores = getScores(
+        givenInputs,
+        BAD_GENERATED_RESULTS_COUNT
+      );
       const maxTotalScore = goodEffectScores.reduce(
         (sum, score) => (sum += score)
       );
@@ -230,22 +233,22 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
   // Handle the case in which the modal is created with an existing value.
   useEffect(() => {
     if (mode === DanceAiModalMode.INITIAL) {
-      const previousValueString = currentAiModalField?.getValue();
-      if (previousValueString) {
-        const previousValue: AiFieldValue = JSON.parse(previousValueString);
+      const initialValueString = currentAiModalField?.getValue();
+      if (initialValueString) {
+        const initialValue: AiFieldValue = JSON.parse(initialValueString);
 
         setMode(DanceAiModalMode.RESULTS);
-        setInputs(previousValue.inputs);
+        setInputs(initialValue.inputs);
         setGeneratingProgress({step: BAD_GENERATED_RESULTS_COUNT, subStep: 0});
 
         generatedEffects.current = {
           badEffects: getRangeArray(0, BAD_GENERATED_RESULTS_COUNT - 1).map(
-            () => chooseEffects(previousValue.inputs, EffectsQuality.BAD)
+            () => chooseEffects(initialValue.inputs, EffectsQuality.BAD)
           ),
-          goodEffect: previousValue,
+          goodEffect: initialValue,
         };
 
-        minMaxAssociations.current = calculateMinMax(previousValue.inputs);
+        minMaxAssociations.current = calculateMinMax(initialValue.inputs);
       } else {
         setTimeout(() => {
           setMode(DanceAiModalMode.SELECT_INPUTS);
