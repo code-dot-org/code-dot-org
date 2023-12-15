@@ -54,6 +54,7 @@ class AccountPurger
     raise 'Not implemented' unless @dry_run
   end
 
+  # rubocop:disable CustomCops/PegasusDbUsage
   private def really_purge_data_for_account(user)
     ActiveRecord::Base.transaction do
       PEGASUS_DB.transaction do
@@ -65,4 +66,5 @@ class AccountPurger
       end
     end
   end
+  # rubocop:enable CustomCops/PegasusDbUsage
 end
