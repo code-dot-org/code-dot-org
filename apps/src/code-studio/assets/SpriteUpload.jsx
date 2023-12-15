@@ -472,8 +472,10 @@ export default class AnimationUpload extends React.Component {
           </div>
           <label>
             <h3>Image Preview:</h3>
-            {/* TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
-                Verify or update this alt-text as necessary */}
+            {
+              // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+              // Verify or update this alt-text as necessary
+            }
             <img ref="imagePreview" src={filePreviewURL} alt="" />
           </label>
           <h2 style={styles.animationUploadStep}>
