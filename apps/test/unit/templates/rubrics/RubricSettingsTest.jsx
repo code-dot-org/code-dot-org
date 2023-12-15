@@ -51,6 +51,7 @@ describe('RubricSettings', () => {
           visible
           rubricId={1}
           studentUserId={10}
+          sectionId={2}
         />
       );
       await act(async () => {
@@ -86,6 +87,7 @@ describe('RubricSettings', () => {
           rubricId={1}
           studentUserId={10}
           visible
+          sectionId={2}
         />
       );
       await act(async () => {
@@ -122,6 +124,7 @@ describe('RubricSettings', () => {
           rubricId={1}
           studentUserId={10}
           visible
+          sectionId={2}
         />
       );
       await act(async () => {
@@ -230,6 +233,7 @@ describe('RubricSettings', () => {
           studentUserId={10}
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           visible
+          sectionId={2}
         />
       );
 
@@ -312,6 +316,7 @@ describe('RubricSettings', () => {
           rubricId={1}
           studentUserId={10}
           visible
+          sectionId={2}
         />
       );
       await act(async () => {
@@ -352,6 +357,7 @@ describe('RubricSettings', () => {
           rubricId={1}
           studentUserId={10}
           visible
+          sectionId={2}
         />
       );
       await act(async () => {
@@ -392,6 +398,7 @@ describe('RubricSettings', () => {
           rubricId={1}
           studentUserId={10}
           visible
+          sectionId={2}
         />
       );
       await act(async () => {
