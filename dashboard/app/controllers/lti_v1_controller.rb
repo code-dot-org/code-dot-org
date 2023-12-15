@@ -123,11 +123,24 @@ class LtiV1Controller < ApplicationController
     JSON::JWT.decode(id_token, jwk_set)
   end
 
+  def render_sync_course_error(message, status)
+    @lti_section_sync_result = {error: message}
+    return respond_to do |format|
+      format.html do
+        render lti_v1_sync_course_path
+      end
+      format.json {render json: @lti_section_sync_result, status: :bad_request}
+    end
+  end
+
   # GET /lti/v1/sync_course
   # Syncs an LMS course from an LTI launch or from the teacher dashboard sync button.
+  # It can respond to either HTML or JSON content requests.
   def sync_course
     return unauthorized_status unless current_user
-    return redirect_to home_path unless current_user.teacher?
+    unless current_user.teacher?
+      return render_sync_course_error("User must be a teacher.", :bad_request)
+    end
     params.require([:lti_integration_id, :deployment_id, :context_id, :rlid, :nrps_url]) if params[:section_code].blank?
 
     lti_course, lti_integration, deployment_id, context_id, resource_link_id, nrps_url = nil
@@ -135,7 +148,9 @@ class LtiV1Controller < ApplicationController
       # Section code present, meaning this is a sync from the teacher dashboard.
       # Populate vars from the section associated with the input code.
       lti_course = Queries::Lti.get_lti_course_from_section_code(params[:section_code])
-      return head :bad_request unless lti_course # Received a code for a non-LTI section
+      unless lti_course
+        return render_sync_course_error("We couldn't find the given section.", :bad_request)
+      end
       lti_integration = lti_course.lti_integration
       deployment_id = lti_course.lti_deployment_id
       context_id = lti_course.context_id
@@ -150,8 +165,16 @@ class LtiV1Controller < ApplicationController
       resource_link_id = params[:rlid]
       nrps_url = params[:nrps_url]
     end
-    return head :bad_request unless lti_integration
+    unless lti_integration
+      return render_sync_course_error("LTI Integration not found", :bad_request)
+    end
 
+    result = {
+      all: {},
+      changed: {}
+    }
+
+    had_changes = false
     ActiveRecord::Base.transaction do
       lti_course ||= Queries::Lti.find_or_create_lti_course(
         lti_integration_id: lti_integration.id,
@@ -165,10 +188,30 @@ class LtiV1Controller < ApplicationController
       nrps_response = lti_advantage_client.get_context_membership(nrps_url, resource_link_id)
       nrps_sections = Services::Lti.parse_nrps_response(nrps_response)
 
-      Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: nrps_sections, section_owner_id: current_user.id)
+      sync_course_roster_results = Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: nrps_sections, section_owner_id: current_user.id)
+      had_changes ||= sync_course_roster_results
+
+      # Report which sections were updated
+      nrps_sections.each do |section_id, section|
+        result[:all][section_id] = {
+          name: section[:name],
+          size: section[:members].size,
+        }
+      end
     end
 
-    redirect_to home_path
+    @lti_section_sync_result = result
+
+    respond_to do |format|
+      format.html do
+        if had_changes || params[:force]
+          render lti_v1_sync_course_path
+        else
+          redirect_to home_path
+        end
+      end
+      format.json {render json: result}
+    end
   end
 
   private
