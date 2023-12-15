@@ -12,6 +12,7 @@ class ApiController < ApplicationController
       response = RestClient.get("https://api.clever.com/#{endpoint}", auth)
       yield JSON.parse(response)['data']
     rescue RestClient::ExceptionWithResponse => exception
+      puts "ERRRRRRRROR"
       render status: exception.response.code, json: {error: exception.response.body}
     end
   end

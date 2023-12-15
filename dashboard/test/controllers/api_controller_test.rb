@@ -1708,6 +1708,7 @@ class ApiControllerTest < ActionController::TestCase
 
   test 'clever section name too long' do
     teacher = create :teacher, :with_clever_authentication_option
+    section = create :section
     sign_in teacher
     assert_nil teacher.uid
     post :import_clever_classroom, params: {courseId: section.id, courseName: course_name}
