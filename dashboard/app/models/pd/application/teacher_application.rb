@@ -125,7 +125,7 @@ module Pd::Application
       current_year_index >= 0 ? APPLICATION_YEARS[current_year_index + 1] : nil
     end
 
-    # The census lags by a year years, so the census year is the first application year minus 1
+    # The census lags by a year, so the census year is the first application year minus 1
     # For example, for the 2023-2025 application year, we want to look at 2023 census data
     def census_year
       application_year.split('-').first.to_i - 1
