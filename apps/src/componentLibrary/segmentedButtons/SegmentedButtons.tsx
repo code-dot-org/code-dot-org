@@ -1,30 +1,21 @@
 import React from 'react';
 import classnames from 'classnames';
 
-import Typography from '@cdo/apps/componentLibrary/typography';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
-import moduleStyles from './segmentedButtons.module.scss';
+import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 
-type SegmentedButtonIconProps = {
-  iconName: string;
-  iconStyle: 'light' | 'solid' | 'regular' | 'thin';
-  title: string;
-};
-type SegmentedButtonProps = {
-  /** Button Label */
-  label?: string;
-  disabled?: boolean;
-  selected?: boolean;
-  onClick: () => void;
-  iconLeft?: SegmentedButtonIconProps;
-  iconRight?: SegmentedButtonIconProps;
-};
+import SegmentedButton, {
+  SegmentedButtonProps,
+  SegmentButtonType,
+} from './_SegmentedButton';
+import moduleStyles from './segmentedButtons.module.scss';
 
 export interface SegmentedButtonsProps {
   /** Array of props for Segmented Buttons to render */
   buttons: SegmentedButtonProps[];
-  /** Segmented Button Size*/
-  size?: 'xs' | 's' | 'm' | 'l';
+  /** Segmented Buttons Size*/
+  size?: ComponentSizeXSToL;
+  /** Segmented Buttons Type (visual)*/
+  buttonsType?: SegmentButtonType;
 }
 
 // Todo:
@@ -58,36 +49,25 @@ export interface SegmentedButtonsProps {
 const SegmentedButtons: React.FunctionComponent<SegmentedButtonsProps> = ({
   buttons,
   size = 'm',
+  buttonsType = 'withLabel',
 }) => {
   return (
-    <div className={moduleStyles.segmentedButtonsContainer}>
+    <div
+      className={classnames(
+        moduleStyles.segmentedButtons,
+        moduleStyles[`segmentedButtons-${size}`]
+      )}
+    >
       {buttons.map(({label, onClick, disabled, iconLeft, iconRight}) => (
-        <button
-          type="button"
-          disabled={disabled}
-          onClick={onClick}
+        <SegmentedButton
+          label={label}
           key={label}
-          className={classnames(
-            moduleStyles.segmentedButton,
-            moduleStyles[`segmentedButton-${size}`]
-          )}
-        >
-          {iconLeft && (
-            <FontAwesomeV6Icon
-              iconName={iconLeft.iconName}
-              iconStyle={iconLeft.iconStyle}
-              title={iconLeft.title}
-            />
-          )}
-          {label && <span>{label}</span>}
-          {iconRight && (
-            <FontAwesomeV6Icon
-              iconName={iconRight.iconName}
-              iconStyle={iconRight.iconStyle}
-              title={iconRight.title}
-            />
-          )}
-        </button>
+          onClick={onClick}
+          disabled={disabled}
+          iconLeft={iconLeft}
+          iconRight={iconRight}
+          buttonType={buttonsType}
+        />
       ))}
     </div>
   );

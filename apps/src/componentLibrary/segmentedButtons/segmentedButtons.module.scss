@@ -1,8 +1,8 @@
 @import "color";
 @import "@cdo/apps/componentLibrary/common/styles/mixins";
 
-.segmentedButtonsContainer {
-  display: inline-flex;
+.segmentedButtons {
+  display: flex;
   align-items: flex-start;
   gap: -1px;
 
@@ -19,10 +19,6 @@
 
     &:not(:last-child) {
       margin-right: -1px;
-    }
-
-    span {
-      margin: 0;
     }
   }
 }
@@ -70,62 +66,114 @@
 }
 
 // Sizes
-.segmentedButton-l {
-  padding: 0.625rem 1rem;
-
-  span {
-    @include button-one-text;
+.segmentedButtons-l {
+  .segmentedButton-withLabel {
+    padding: 0.625rem 1rem;
   }
 
-  i {
-    width: 1.5rem;
-    height: 1.5rem;
-    font-size: 1.1875rem;
-    line-height: 1.25;
-  }
-}
-
-.segmentedButton-m {
-  padding: 0.5rem 1rem;
-
-  span {
-    @include button-two-text;
+  .segmentedButton-iconOnly {
+    padding: 0.75rem;
   }
 
-  i {
-    width: 1.25rem;
-    height: 1.25rem;
-    font-size: 1rem;
-    line-height: 1.25;
+  .segmentedButton-number {
+    padding: 0.625rem 0;
+  }
+
+  .segmentedButton {
+    span {
+      @include button-one-text;
+      margin-bottom: 0;
+    }
+
+    i {
+      width: 1.5rem;
+      height: 1.5rem;
+      font-size: 1.1875rem;
+      line-height: 1.25;
+    }
   }
 }
 
-.segmentedButton-s {
-  padding: 0.3125rem 0.625rem;
-
-  span {
-    @include button-three-text;
+.segmentedButtons-m {
+  .segmentedButton-withLabel {
+    padding: 0.5rem 1rem;
   }
 
-  i {
-    width: 1.125rem;
-    height: 1.125rem;
-    font-size: 0.875rem;
-    line-height: 1.25;
+  .segmentedButton-iconOnly {
+    padding: 0.625rem;
+  }
+
+  .segmentedButton-number {
+    padding: 0.5rem 0;
+  }
+
+  .segmentedButton {
+    span {
+      @include button-two-text;
+      margin-bottom: 0;
+    }
+
+    i {
+      width: 1.25rem;
+      height: 1.25rem;
+      font-size: 1rem;
+      line-height: 1.25;
+    }
   }
 }
 
-.segmentedButton-xs {
-  padding: 0.125rem 0.5rem;
-
-  span {
-    @include button-four-text;
+.segmentedButtons-s {
+  .segmentedButton-withLabel {
+    padding: 0.3125rem 0.625rem;
   }
 
-  i {
-    width: 1rem;
-    height: 1rem;
-    font-size: 0.8125rem;
-    line-height: 1.25;
+  .segmentedButton-iconOnly {
+    padding: 0.4375rem;
+  }
+
+  .segmentedButton-number {
+    padding: 0.3125rem 0;
+  }
+
+  .segmentedButton {
+    span {
+      @include button-three-text;
+      margin-bottom: 0;
+    }
+
+    i {
+      width: 1.125rem;
+      height: 1.125rem;
+      font-size: 0.875rem;
+      line-height: 1.25;
+    }
+  }
+}
+
+.segmentedButtons-xs {
+  .segmentedButton-withLabel {
+    padding: 0.125rem 0.5rem;
+  }
+
+  .segmentedButton-iconOnly {
+    padding: 0.25rem;
+  }
+
+  .segmentedButton-number {
+    padding: 0.125rem 0;
+  }
+
+  .segmentedButton {
+    span {
+      @include button-four-text;
+      margin-bottom: 0;
+    }
+
+    i {
+      width: 1rem;
+      height: 1rem;
+      font-size: 0.8125rem;
+      line-height: 1.25;
+    }
   }
 }
