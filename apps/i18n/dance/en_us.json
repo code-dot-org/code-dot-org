@@ -1,4 +1,5 @@
 {
+  "clickToRunDanceParty": "Click to run Dance Party",
   "danceAiFeedbackAiBlockNoParameters": "⚠️ Choose three emojis for A.I. to generate the effect.",
   "danceAiFeedbackAiBlockInWorkspaceWithNoParameters": "⚠️ There is an `A.I. generate effect` block without emojis chosen. Choose three emojis for A.I. to generate the effect",
   "danceAiFeedbackAiBlockNotConnectedSetup": "⚠️ Connect the `A.I. generate effect` block to the `setup` block.",
