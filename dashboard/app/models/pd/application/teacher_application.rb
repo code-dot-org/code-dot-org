@@ -1071,7 +1071,7 @@ module Pd::Application
       # This is a bit of a confusing double negative but I wanted to keep the YES/NO logic
       # consistent with the criteria.
       meets_scholarship_criteria_scores[:not_teaching_in_access_report] =
-        Census::CensusSummary.find_by(school_id: school_id, school_year: census_year)&.does_teach? ? NO : YES  
+        Census::CensusSummary.find_by(school_id: school_id, school_year: census_year)&.does_teach? ? NO : YES
 
       update(
         response_scores: response_scores_hash.deep_merge(
