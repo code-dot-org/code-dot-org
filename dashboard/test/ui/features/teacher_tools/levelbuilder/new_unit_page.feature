@@ -6,7 +6,7 @@ Feature: Using the New Unit Page
     And I am on "http://studio.code.org/s/new"
     And I wait until element ".isCourseSelector" is visible
 
-    When I select the "Single Unit" option in dropdown with class "isCourseSelector"
+    When I select the "Standalone unit" option in dropdown with class "isCourseSelector"
     And I wait until element ".familyNameSelector" is visible
     And element ".familyNameInput" is visible
     And I enter a temp unit name
