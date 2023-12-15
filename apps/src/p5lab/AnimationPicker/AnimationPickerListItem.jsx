@@ -100,7 +100,11 @@ export default class AnimationPickerListItem extends React.Component {
               </span>
             )}
             {iconImageSrc && (
-              <img className={style.categoryImage} src={iconImageSrc} />
+              <img
+                className={style.categoryImage}
+                src={iconImageSrc}
+                alt={''}
+              />
             )}
           </div>
           {animationProps && loaded && (hover || selected) && (

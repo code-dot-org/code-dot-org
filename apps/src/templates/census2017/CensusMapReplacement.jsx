@@ -399,7 +399,14 @@ export default class CensusMapReplacement extends Component {
           </div>
           <div id="right">
             <span id="footer-text">In partnership with</span>
-            <img src="/images/fit-100/avatars/computer_science_teachers_association.png" />
+            {
+              // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+              // Verify or update this alt-text as necessary
+            }
+            <img
+              src="/images/fit-100/avatars/computer_science_teachers_association.png"
+              alt=""
+            />
           </div>
         </div>
         <br />

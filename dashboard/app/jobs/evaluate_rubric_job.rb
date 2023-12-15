@@ -17,10 +17,16 @@ class EvaluateRubricJob < ApplicationJob
       'CSD U3 Interactive Card Final_2023' => 'CSD-2022-U3-L17',
       'CSD U3 Sprites scene challenge_2023' => 'New-U3-2022-L10',
       'CSD web project animated review_2023' => 'New-U3-2022-L13',
-      'CSD games sidescroll review_2023' => 'New-U3-2022-L20'
+      'CSD games sidescroll review_2023' => 'New-U3-2022-L20',
     },
     'allthethings' => {
       'CSD U3 Sprites scene challenge_allthethings' => 'allthethings-lesson-48',
+    },
+    'interactive-games-animations-2023' => {
+      'CSD U3 Interactive Card Final_2023' => 'CSD-2022-U3-L17',
+      'CSD U3 Sprites scene challenge_2023' => 'New-U3-2022-L10',
+      'CSD web project animated review_2023' => 'New-U3-2022-L13',
+      'CSD games sidescroll review_2023' => 'New-U3-2022-L20',
     }
   }
 
