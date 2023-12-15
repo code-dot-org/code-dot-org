@@ -155,13 +155,13 @@ export default function RubricContent({
         </Heading5>
         {experiments.isEnabled('ai-rubrics-redesign') && (
           <div className={style.selectors}>
+            <SectionSelector reloadOnChange={true} requireSelection={false} />
             <StudentSelector
               selectedUserId={
                 studentLevelInfo ? studentLevelInfo.user_id : null
               }
               reloadOnChange={true}
             />
-            <SectionSelector reloadOnChange={true} requireSelection={false} />
           </div>
         )}
         {!!studentLevelInfo && (
