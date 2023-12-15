@@ -29,11 +29,21 @@ export default class VerticalFlyout extends GoogleBlockly.VerticalFlyout {
     flyoutWidth += Blockly.Scrollbar.scrollbarThickness;
 
     /* Begin CDO Customization */
-    // Constrain the flyout to not be wider than 40% of the total workspace space.
-    flyoutWidth = Math.min(
-      flyoutWidth,
-      this.targetWorkspace.getMetricsManager().getSvgMetrics().width * 0.4
-    );
+    const mainWorkspace = Blockly.getMainWorkspace();
+    const hiddenDefinitionWorkspace = Blockly.getHiddenDefinitionWorkspace();
+
+    if (this.targetWorkspace.id === mainWorkspace?.id) {
+      // Constrain the main workspace flyout to not be wider than 40% of the total workspace space.
+      flyoutWidth = Math.min(
+        flyoutWidth,
+        this.targetWorkspace.getMetricsManager().getSvgMetrics().width * 0.4
+      );
+    } else if (this.targetWorkspace.id === hiddenDefinitionWorkspace?.id) {
+      // Before the modal editor workspace is opened, its svg metrics are unreliable.
+      // Assume the flyout should have the same width as the main workspace.
+      flyoutWidth = mainWorkspace?.getMetricsManager().getFlyoutMetrics().width;
+    }
+
     /* End CDO Customization */
 
     if (this.width_ !== flyoutWidth) {

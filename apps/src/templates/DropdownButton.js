@@ -113,7 +113,9 @@ export const DropdownButton = class DropdownButtonComponent extends Component {
                 style={{
                   ...child.props.style,
                 }}
-              />
+              >
+                {child.props.children}
+              </a>
             ))}
           </div>
         )}
