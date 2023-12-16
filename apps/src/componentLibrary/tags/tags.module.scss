@@ -1,0 +1,119 @@
+@import "color.scss";
+@import "font.scss";
+@import "@cdo/apps/componentLibrary/typography/typography.module";
+
+// Tags common styles
+.tags {
+  display: flex;
+  column-gap: 0.5em;
+
+  .tag {
+    display: flex;
+    align-items: baseline;
+    gap: 2px;
+    color: $neutral-dark;
+    padding: 2px 12px;
+    background-color: $brand_primary_light;
+    border-radius: 6.25rem;;
+    max-width: 15em;
+
+    span {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    i {
+      display: flex;
+      justify-content: center;
+    }
+
+    &:has(i:first-child) {
+      padding-inline-start: 8px;
+    }
+
+    &:has(i:not(:first-child)) {
+      padding-inline-end: 8px;
+    }
+  }
+}
+
+.tagTooltip {
+  opacity: 1;
+  margin-bottom: 0.75em;
+  pointer-events: none;
+
+  :global(.tooltip-inner) { /* stylelint-disable-line selector-pseudo-class-no-unknown */
+    border-radius: 5px;
+    color: $light_white;
+    background-color: $light_gray_900;
+
+    p {
+      color: #fff;
+      margin: 0;
+    }
+  }
+
+  :global(.tooltip-arrow) { /* stylelint-disable-line selector-pseudo-class-no-unknown */
+    left: 50%;
+    bottom: 0;
+    border: 15px solid transparent;
+    border-top: 15px solid $light_gray_900;
+    transform: translate(-50%, calc(100% - 8px));
+  }
+}
+
+// Sizes
+.tags-l {
+  .tag {
+    span {
+      @include overline-one;
+      line-height: 1.5;
+      margin-bottom: 0;
+      margin-top: 1.5px;
+    }
+
+    i {
+      font-size: 0.875rem;
+      line-height: 1.25;
+      width: 1.25rem;
+      height: 1.125rem;
+    }
+  }
+}
+
+.tags-m {
+  .tag {
+    span {
+      @include overline-two;
+      line-height: 1.54;
+      margin-bottom: 0;
+      margin-top: 2px;
+    }
+
+    i {
+      font-size: 0.75rem;
+      line-height: 1.25;
+      width: 1.125rem;
+      height: 0.9375rem;
+    }
+  }
+}
+
+.tags-s {
+  .tag {
+    span {
+      @include overline-three;
+      line-height: 1.8;
+      margin-bottom: 0;
+      margin-top: 1px;
+    }
+
+    i {
+      font-size: 0.625rem;
+      line-height: 1.25;
+      width: 1rem;
+      height: 0.8125rem;
+    }
+  }
+}

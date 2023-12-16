@@ -81,9 +81,14 @@ export default class SignInInstructions extends React.Component {
             </div>
             <p style={styles.sublistAlign}>{i18n.signingInClever1b()}</p>
             <p style={styles.listAlign}>{i18n.signingInClever2()}</p>
+            {
+              // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+              // Verify or update this alt-text as necessary
+            }
             <img
               style={styles.sublistAlign}
               src="/shared/images/clever_code_org_logo.png"
+              alt=""
             />
           </div>
         )}
