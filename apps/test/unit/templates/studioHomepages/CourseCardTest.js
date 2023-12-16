@@ -29,7 +29,11 @@ describe('CourseCard', () => {
     expect(
       wrapper.containsMatchingElement(
         <a href={courses[0].link}>
-          <img />
+          {
+            // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+            // Verify or update this alt-text as necessary
+          }
+          <img alt="" />
           <div>{courses[0].title}</div>
           <div>
             {courses[0].description}
@@ -55,7 +59,11 @@ describe('CourseCard', () => {
     expect(
       wrapper.containsMatchingElement(
         <a href={courses[0].link}>
-          <img />
+          {
+            // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+            // Verify or update this alt-text as necessary
+          }
+          <img alt="" />
           <div>{courses[0].title}</div>
           <div>
             {courses[0].description}

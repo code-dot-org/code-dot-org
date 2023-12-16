@@ -4738,25 +4738,39 @@ nl-NL:
             waardoor het programma zal mislukken?
       courseC_multi_maze_debugging8_predict12022:
         answers:
-        - text: Scrat zal de eikel bereiken. Er zitten geen bugs in de code.
+        - feedback: Onjuist. Scrat zal de eikel niet bereiken omdat hij de verkeerde
+            kant op draait.
+          text: Scrat zal de eikel bereiken. Er zitten geen bugs in de code.
         - correct: true
+          feedback: Juist! Scrat draait de verkeerde kant op en zal de eikel niet
+            bereiken.
           text: Scrat zal de eikel niet bereiken omdat hij de verkeerde kant op draait.
-        - text: Scrat zal de eikel niet bereiken omdat er niet genoeg `beweeg vooruit`
+        - feedback: Onjuist. Scrat zal de eikel niet bereiken omdat hij de verkeerde
+            kant op draait.
+          text: Scrat zal de eikel niet bereiken omdat er niet genoeg `beweeg vooruit`
             blokken zijn.
         - feedback: Scrat zal de eikel niet bereiken omdat hij de verkeerde kant op
             draait.
+          text: Scrat verplaatst zich niet van het eerste blok.
         questions:
         - text: Zoek naar fouten in deze code. Zal Scrat de eikel bereiken of is er
             een probleem?
       courseC_multi_maze_debugging8_predict12022_2023:
         answers:
-        - text: Scrat zal de eikel bereiken. Er zitten geen bugs in de code.
+        - feedback: Onjuist. Scrat zal de eikel niet bereiken omdat hij de verkeerde
+            kant op draait.
+          text: Scrat zal de eikel bereiken. Er zitten geen bugs in de code.
         - correct: true
+          feedback: Juist! Scrat draait de verkeerde kant op en zal de eikel niet
+            bereiken.
           text: Scrat zal de eikel niet bereiken omdat hij de verkeerde kant op draait.
-        - text: Scrat zal de eikel niet bereiken omdat er niet genoeg `beweeg vooruit`
+        - feedback: Onjuist. Scrat zal de eikel niet bereiken omdat hij de verkeerde
+            kant op draait.
+          text: Scrat zal de eikel niet bereiken omdat er niet genoeg `beweeg vooruit`
             blokken zijn.
         - feedback: Scrat zal de eikel niet bereiken omdat hij de verkeerde kant op
             draait.
+          text: Scrat verplaatst zich niet van het eerste blok.
         questions:
         - text: Zoek naar fouten in deze code. Zal Scrat de eikel bereiken of is er
             een probleem?
@@ -4828,6 +4842,7 @@ nl-NL:
             blokken zijn.
         - feedback: Er zitten twee fouten in deze code. Eerst draait Scrat de verkeerde
             kant op, dan zet Scrat niet genoeg stappen vooruit om de eikel te bereiken.
+          text: Scrat verplaatst zich niet van het eerste blok.
         questions:
         - text: Zoek naar fouten in deze code. Zal Scrat de eikel bereiken of is er
             een probleem?

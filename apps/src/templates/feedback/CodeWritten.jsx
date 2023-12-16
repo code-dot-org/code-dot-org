@@ -29,7 +29,6 @@ class CodeWritten extends React.Component {
         style={useChallengeStyles ? styles.details : null}
       >
         <summary
-          role="button"
           style={{
             ...styles.summary,
             ...(useChallengeStyles ? styles.challengeSummary : {}),

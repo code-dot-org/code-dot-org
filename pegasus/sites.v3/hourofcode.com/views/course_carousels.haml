@@ -96,6 +96,7 @@
       var groupedCards = groupArray(cards, cardsPerSlide);
 
       $('#' + carouselId + ' .slides .slide').remove();
+
       groupedCards.forEach(function(group, index) {
         var slide = $('<div class="slide"></div>');
         slide.append(group);

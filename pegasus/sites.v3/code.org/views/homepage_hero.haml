@@ -10,7 +10,7 @@
   - if show_single_hero == "changeworld"
     .hero-message-line1{style: "color: white; font-size: 28px; line-height: 28px; padding-top: 20px; padding-bottom: 20px; font-family: var(--main-font); font-weight: var(--semi-bold-font-weight)", dir: "auto"}
       = hoc_s(:hoc2019_header_line1_mobile)
-    .hero-message-line2{style: "color: white; font-size: 28px; line-height: 28px; padding-bottom: 80px; font-family: var(--main-font); font-weight: var(--semi-bold-font-weight)", dir: "auto"}
+    .hero-message-line2{style: "color: white; font-size: 28px; line-height: 28px; padding-bottom: 3rem; font-family: var(--main-font); font-weight: var(--semi-bold-font-weight)", dir: "auto"}
       = hoc_s(:hoc2019_header_line2_mobile)
   - elsif show_single_hero == "custom" && heroes_arranged[0][:items]&.length
     .hero-messages{style: "padding-top: 60px; padding-bottom: 20px"}
@@ -25,14 +25,14 @@
     - actions.each do |entry|
       - if ["cta_button", "cta_button_solid_white", "cta_button_hollow_white", "cta_button_solid_yellow", "cta_button_solid_grey", "cta_button_solid_black", "cta_button_hollow_black"].include? entry[:type]
         .action
-          %a.linktag#hero-hoc{href: entry[:url]}
+          %a.link-button.big{href: entry[:url], style: "background: var(--orange); border-color: var(--orange)"}
             - extra_class = "herohocbutton-solid-white" if entry[:type] == "cta_button_solid_white"
             - extra_class = "herohocbutton-hollow-white" if entry[:type] == "cta_button_hollow_white"
             - extra_class = "herohocbutton-solid-yellow" if entry[:type] == "cta_button_solid_yellow"
             - extra_class = "herohocbutton-solid-grey" if entry[:type] == "cta_button_solid_grey"
             - extra_class = "herohocbutton-solid-black" if entry[:type] == "cta_button_solid_black"
             - extra_class = "herohocbutton-hollow-black" if entry[:type] == "cta_button_hollow_black"
-            %button.herohocbutton{class: extra_class}= I18n.t(entry[:text])
+            = I18n.t(entry[:text])
       - elsif entry[:type] == "video"
         .action
           %button.clicktag.herohocbutton#hero-video{onclick: "return showVideo_mainvideo();"}

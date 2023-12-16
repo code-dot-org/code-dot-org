@@ -2783,6 +2783,20 @@ fil:
         text: Kapag pinindot mo ang "Run", sasabihin ng sprite ang anumang text na
           sasabihin mo dito. Ngayon ay oras na para magsimula sa Sprite Lab, at tingnan
           kung saan ka dadalhin ng iyong imahinasyon!
+    hoc-dance-ai-warmup:
+      2:
+        text: Hi! Miral Kotb ang pangalan ko at isa akong mananayaw, developer ng
+          software, at tagalikha ng iLuminate.
+      3:
+        text: Nauugnay sa pagkamalikhain ang computer science sa maraming paraan.
+          Talagang hindi masusukat. Ibig kong sabihin, kapag mayroon kang kakayahang
+          magsulat ng software maaari kang maglagay ng mga ideya sa kahit ano. Ginagawa
+          ko ito sa mga light suit. Napakarami mong magagawa kapag mayroon kang mga
+          tool sa pagsulat ng software, at talagang walang katapusa ang mga posibilidad.
+      5:
+        text: Gagamit ka ng mga block ng code upang pumili ng iba't ibang mananayaw,
+          baguhin ang kanilang mga galaw, pasayawin sila sa musika, at gawin silang
+          interactive.
     hoc_dance_congrats:
       1:
         text: 'Hour of Code | Dance Party: Parti Na!'
