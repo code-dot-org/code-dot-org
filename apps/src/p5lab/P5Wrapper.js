@@ -138,7 +138,10 @@ P5Wrapper.prototype.init = function (options) {
   if (!options.spritelab) {
     // Override p5.createSprite and p5.Group so we can override the methods that
     // take callback parameters
+    console.log('i got in here!');
     window.p5.prototype.createSprite = p5SpriteWrapper.createSprite;
+    // TODO: Is exposing this eval method through the window object okay?
+    window.p5.prototype.evaluateVariable = p5SpriteWrapper.evaluateVariable;
     var baseGroupConstructor = window.p5.prototype.Group;
     window.p5.prototype.Group = p5GroupWrapper.Group.bind(
       null,

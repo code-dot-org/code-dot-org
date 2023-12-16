@@ -125,7 +125,7 @@ function bounceOff(target, callback) {
  * Copied code from p5play from Sprite() with targeted modifications that
  * use the additional state parameter to be compatible with the interpreter.
  */
-var _collideWith = function(p5Inst, type, target, callback) {
+var _collideWith = function (p5Inst, type, target, callback) {
   if (this.removed) {
     return false;
   }
