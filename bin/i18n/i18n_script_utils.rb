@@ -47,7 +47,7 @@ CROWDIN_TEST_PROJECTS = {
     files_to_sync_out_json: CDO.dir('bin/i18n/crowdin/codeorg-testing_files_to_sync_out.json')
   },
   'codeorg-markdown-testing': {
-    config_file:            CDO.dir('bin/i18n/crowdin/config/codeorg-testing_markdown_crowdin.yml'),
+    config_file:            CDO.dir('bin/i18n/crowdin/config/codeorg-markdown-testing_crowdin.yml'),
     identity_file:          CDO.dir('bin/i18n/crowdin_credentials.yml'),
     etags_json:             CDO.dir('bin/i18n/crowdin/etags/codeorg-markdown-testing_etags.json'),
     files_to_sync_out_json: CDO.dir('bin/i18n/crowdin/codeorg-testing_markdown_files_to_sync_out.json')
@@ -59,7 +59,7 @@ CROWDIN_TEST_PROJECTS = {
     files_to_sync_out_json: CDO.dir('bin/i18n/crowdin/hour-of-code-test_files_to_sync_out.json')
   },
   'codeorg-restricted-test': {
-    config_file:            CDO.dir('bin/i18n/crowdin/config/codeorg-testing_restricted_crowdin.yml'),
+    config_file:            CDO.dir('bin/i18n/crowdin/config/codeorg-restricted-testing_crowdin.yml'),
     identity_file:          CDO.dir('bin/i18n/crowdin_credentials.yml'),
     etags_json:             CDO.dir('bin/i18n/crowdin/etags/codeorg-restricted-testing_etags.json'),
     files_to_sync_out_json: CDO.dir('bin/i18n/crowdin/codeorg-restricted-test_files_to_sync_out.json')
