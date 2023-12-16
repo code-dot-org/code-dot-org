@@ -138,12 +138,17 @@ export function attach(jsInterpreter) {
       dispatch(appendLog({output: output}, 'WARNING'))
     );
 
+    console.log('does Sprite Lab hit this?');
+
     const watchIntervalId = setInterval(() => {
       const jsInterpreter = getJSInterpreter(getState());
+      console.log('watchedExpressions', getState().watchedExpressions);
       getState().watchedExpressions.forEach(we => {
+        console.log('we', we);
         const currentValue = jsInterpreter.evaluateWatchExpression(
           we.get('expression')
         );
+        console.log('currentValue', currentValue);
         dispatch(updateWatchExpressions(we.get('expression'), currentValue));
       });
     }, WATCH_TIMER_PERIOD);

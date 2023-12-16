@@ -353,6 +353,11 @@ export default class P5Lab {
           console.warn('Error pre-populating watchers.');
         }
       }
+
+      // Will Sprite Lab track this variable a automagically?
+      if (this.isBlockly) {
+        getStore().dispatch(addWatcher('a'));
+      }
       config.loadAudio = this.loadAudio_.bind(this);
       config.afterInject = this.afterInject_.bind(this, config);
       config.afterEditorReady = this.afterEditorReady_.bind(
@@ -1627,5 +1632,10 @@ export default class P5Lab {
 
   getAppReducers() {
     return reducers;
+  }
+
+  evaluateVariable(variableName) {
+    console.log('can I get here?!');
+    return this.JSInterpreter.evalInCurrentScope(variableName);
   }
 }

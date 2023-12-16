@@ -55,6 +55,7 @@ export default class CoreLibrary {
           commands.drawTitle.apply(this);
         }
         commands.drawStoryLabText.apply(this);
+        this.displayVariableValues();
       },
       ...commands,
     };
@@ -870,5 +871,35 @@ export default class CoreLibrary {
 
   runBehaviors() {
     this.behaviors.forEach(behavior => behavior.func({id: behavior.sprite.id}));
+  }
+
+  getBlocklyVariableMap() {
+    const variableNames = Blockly.getMainWorkspace()?.getAllVariableNames();
+    let variableValuesByName = {};
+    variableNames.forEach(name => {
+      // ADD EVAL METHOD RIGHT HERE!!!
+      // const value = this.p5.JSInterpreter.evalWithCurrentState(name);
+      // const value = this.p5.evaluateVariable(name);
+      // console.log('did i get a value?', value);
+      // variableValuesByName[name] = value;
+    });
+
+    return variableValuesByName;
+  }
+
+  displayVariableValues() {
+    const variableMap = this.getBlocklyVariableMap();
+    console.log('displaying variable values');
+    Object.keys(variableMap).forEach(variable => {
+      console.log('variable', variable);
+      if (variable !== null) {
+        this.p5.textSize(20);
+        this.p5.text(
+          `${variable}: ${variableMap[variable]}`,
+          10,
+          20 + 20 * this.p5.textAscent()
+        );
+      }
+    });
   }
 }
