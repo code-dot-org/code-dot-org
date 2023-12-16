@@ -1,0 +1,19 @@
+# This is a configuration file for the Hour of Code Test project.
+"project_identifier" : "hour-of-code-test"
+"project_id" : "634038"
+"base_path_env": "I18N_SOURCE_DIR"
+"preserve_hierarchy": true
+
+"api_key" : ""
+
+files: [
+  {
+    "source": "/hourofcode/en.yml",
+    "translation": "/%language%/hourofcode/%original_file_name%",
+    "update_option": "update_as_unapproved"
+  }, {
+    "source": "/hourofcode/**/*.md",
+    "translation": "/%language%/hourofcode/**/%file_name%.md",
+    "update_option": "update_as_unapproved"
+  }
+]
