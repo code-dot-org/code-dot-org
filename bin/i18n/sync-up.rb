@@ -9,6 +9,7 @@
 require_relative 'metrics'
 require_relative 'i18n_script_utils'
 
+ENV['I18N_SOURCE_DIR'] = CDO.dir(I18N_SOURCE_DIR)
 def sync_up
   I18nScriptUtils.with_synchronous_stdout do
     puts "Sync up starting"

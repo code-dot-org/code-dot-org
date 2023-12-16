@@ -1,7 +1,6 @@
 # This is a configuration file for the Code.org Restricted Test project.
-"project_identifier" : "codeorg-restricted-test"
 "project_id" : "634320"
-"base_url_env": "I18N_SOURCE_DIR"
+"base_path_env": "I18N_SOURCE_DIR"
 "preserve_hierarchy": true
 
 "api_key" : ""
@@ -9,8 +8,6 @@
 files: [
   {
   "source": "/**/restricted.yml",
-
   "translation": "/%locale%/**/%original_file_name%",
-
   "update_option": "update_as_unapproved"
 }]

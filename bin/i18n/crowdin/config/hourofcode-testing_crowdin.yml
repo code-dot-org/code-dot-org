@@ -1,8 +1,6 @@
 # This is a configuration file for the Hour of Code Test project.
-"project_identifier" : "hour-of-code-test"
 "project_id" : "634038"
 "base_path_env": "I18N_SOURCE_DIR"
-"preserve_hierarchy": true
 
 "api_key" : ""
 
