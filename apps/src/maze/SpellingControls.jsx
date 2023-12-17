@@ -31,7 +31,11 @@ var SpellingControls = function (props) {
                 className="spellingButton"
                 disabled
               >
-                <img src="/blockly/media/1x1.gif" />
+                {
+                  // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+                  // Verify or update this alt-text as necessary
+                }
+                <img src="/blockly/media/1x1.gif" alt="" />
                 <span id="currentWordContents" />
               </button>
             </td>

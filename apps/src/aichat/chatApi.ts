@@ -1,7 +1,7 @@
 import {Role, Status, ChatCompletionMessage} from './types';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {CHAT_COMPLETION_URL} from './constants';
-import Lab2MetricsReporter from '../lab2/Lab2MetricsReporter';
+import Lab2Registry from '../lab2/Lab2Registry';
 
 /**
  * This function sends a POST request to the chat completion backend controller.
@@ -56,10 +56,9 @@ export async function getChatCompletionMessage(
   try {
     response = await postOpenaiChatCompletion(messagesToSend);
   } catch (error) {
-    Lab2MetricsReporter.logError(
-      'Error in chat completion request',
-      error as Error
-    );
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .logError('Error in chat completion request', error as Error);
   }
 
   // For now, response will be null if there was an error.

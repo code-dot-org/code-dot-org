@@ -2102,3 +2102,10 @@ pt:
       10:
         image: 'notes/hoc_hello_world_2021_freeplay_10.jpg'
         text: "Então, o que você vai criar? Você pode contar uma história sobre si mesmo... ou inventar uma com seus próprios personagens especiais. Talvez você até use suas novas habilidades em ciência da computação para seu próximo projeto escolar! Amplie sua imaginação e divirta-se!"
+    hoc-dance-ai-warmup:
+      2:
+        text: "Olá. Meu nome é Miral Kotb e eu sou um dançarino, desenvolvedor de software e criador do iLuminate."
+      3:
+        text: "A ciência da computação está relacionada à criatividade de várias maneiras. É imensurável, na verdade. Quer dizer, uma vez que você tenha a habilidade de escrever software, você pode colocar idéias em qualquer coisa. Eu faço isso com roupas leves. Há muito o que você pode fazer quando você tem as ferramentas para escrever software, e as possibilidades são realmente infinitas."
+      5:
+        text: "Você usará blocos de código para escolher diferentes dançarinos, mudar seus movimentos de dança, fazê-los responder à música e torná-los interativos."

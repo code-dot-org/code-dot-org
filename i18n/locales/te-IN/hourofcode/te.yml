@@ -909,6 +909,9 @@ te:
   cs_ambassador_application_date: దరఖాస్తులు నవంబర్ 8, 2023 వరకు తెరవబడతాయి
   cs_ambassador_application_subhead: ఈ రోజు మీ దరఖాస్తును సమర్పించడానికి ఉపాధ్యాయుడితో
     కలిసి పని చేయండి
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: ప్రశ్నలు? దయచేసి సంప్రదించండి [youngwomen@code.org]
     (%{email_url})
   cs_ambassador_do_heading: సిఎస్ రాయబారులు ఏమి చేస్తారు?

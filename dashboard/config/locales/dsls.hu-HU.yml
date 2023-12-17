@@ -5500,7 +5500,7 @@ hu-HU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Biztos vagyok benne, hogy képes vagyok számítógépes tudományt tanulni.
       confident-ability-to-learn_2022:
         answers:
         - correct: true
@@ -5511,7 +5511,7 @@ hu-HU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Biztos vagyok benne, hogy képes vagyok számítógépes tudományt tanulni.
       confident-ability-to-learn_2023:
         answers:
         - correct: true
@@ -5522,7 +5522,7 @@ hu-HU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Biztos vagyok benne, hogy képes vagyok számítógépes tudományt tanulni.
       confident-ability-to-learn_mb2022:
         answers:
         - correct: true
@@ -5533,7 +5533,7 @@ hu-HU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Biztos vagyok benne, hogy képes vagyok számítógépes tudományt tanulni.
       contained_Choose_2_Test:
         answers:
         - correct: true
@@ -5568,7 +5568,7 @@ hu-HU:
         - correct: true
           text: nem
         questions:
-        - {}
+        - text: Egy iskolai tanácsadó ösztönzött arra, hogy vegyél részt ezen az órán?
       counselor_encourage_2022:
         answers:
         - correct: true
@@ -5576,7 +5576,7 @@ hu-HU:
         - correct: true
           text: nem
         questions:
-        - {}
+        - text: Egy iskolai tanácsadó ösztönzött arra, hogy vegyél részt ezen az órán?
       counselor_encourage_2023:
         answers:
         - correct: true
@@ -5584,7 +5584,7 @@ hu-HU:
         - correct: true
           text: nem
         questions:
-        - {}
+        - text: Egy iskolai tanácsadó ösztönzött arra, hogy vegyél részt ezen az órán?
       courseAB_EOC2022:
         description: Elértél a tanfolyam utolsó leckéjéhez! Válassz egy projektet,
           amit elkészítesz!
@@ -8871,6 +8871,8 @@ hu-HU:
         content1: a leírás itt található
       csd-post-survey-unit6-preamble:
         content1: a leírás itt található
+      csd-pre-survey-levelgroup_21_22:
+        title: Számítástechnika felfedezése c. tanfolyam előzetes felmérése
       csd-pre-survey-levelgroup_21_22_2022:
         title: Számítástechnika felfedezése c. tanfolyam előzetes felmérése
       csd-pulse-check-survey-1-q1 U1Ch2:
@@ -12303,6 +12305,95 @@ hu-HU:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017 preamble 1_2021:
+        markdown: "### **Ez egy név nélküli felmérés**\n\n* Ennek a rövid felmérésnek
+          a kitöltése **legfeljebb 10 percet** vesz igénybe.\n* A Code.org nagyon
+          komolyan veszi az adatbiztonságot.\n* Az itt szereplő válaszai **névtelenek**
+          maradnak. \n\nA tanárod látja az egész osztály összesített válaszait de
+          nem fogja látni az egyéni válaszaid/ n\nEzt azért tesszük, mert azt akarjuk,
+          hogy **a lehető legnyitottabb és őszintesebb** legyél. Törődünk a tanfolyamon
+          szerzett tapasztalataiddal, és a visszajelzéseidet felhasználjuk a fejlesztéseink
+          során.\n\n***\n### Az iskola általános### \n"
+        teacher_markdown: |
+          A legjobb gyakorlat az, ha hagyod, hogy a tanulók kitöltsék ezt a felmérést **mielőtt** bármilyen osztálytevékenységben részt vennének .A legtöbb tanár ezt az első óra részeként teszi meg.
+
+          A felmérés összesített eredményét anomim módon tekintheted meg.
+
+          Miért van itt ez a felmérés?
+          * Ennek a kurzusnak a fő célja a számítástechnikában való részvétel bővítése.
+          * Az előzetes és képzés utáni felmérések segítségével megpróbáljuk felmérni, hogy hogyan változhat a tanulók számítástechnikával kapcsolatos hozzáállása a tanfolyam során.
+          * A kérdőív segít megérteni a tantervben fontos fejlesztéseket is, amelyeket a tanári és a tanulói tapasztalatok javítása érdekében tehetünk.
+
+
+          * Kérjük, segíts azzal, hogy a tanulóid hozzájáruljanak ehhez a létfontosságú adatbázishoz. Az ő hangjuk lesz a különbség!
+      csp-pre-survey-2017 preamble 1_2022:
+        markdown: "### **Ez egy név nélküli felmérés**\n\n* Ennek a rövid felmérésnek
+          a kitöltése **legfeljebb 10 percet** vesz igénybe.\n* A Code.org nagyon
+          komolyan veszi az adatbiztonságot.\n* Az itt szereplő válaszai **névtelenek**
+          maradnak. \n\nA tanárod látja az egész osztály összesített válaszait de
+          nem fogja látni az egyéni válaszaid/ n\nEzt azért tesszük, mert azt akarjuk,
+          hogy **a lehető legnyitottabb és őszintesebb** legyél. Törődünk a tanfolyamon
+          szerzett tapasztalataiddal, és a visszajelzéseidet felhasználjuk a fejlesztéseink
+          során.\n\n***\n### Az iskola általános### \n"
+        teacher_markdown: |
+          A legjobb gyakorlat az, ha hagyod, hogy a tanulók kitöltsék ezt a felmérést **mielőtt** bármilyen osztálytevékenységben részt vennének .A legtöbb tanár ezt az első óra részeként teszi meg.
+
+          A felmérés összesített eredményét anomim módon tekintheted meg.
+
+          Miért van itt ez a felmérés?
+          * Ennek a kurzusnak a fő célja a számítástechnikában való részvétel bővítése.
+          * Az előzetes és képzés utáni felmérések segítségével megpróbáljuk felmérni, hogy hogyan változhat a tanulók számítástechnikával kapcsolatos hozzáállása a tanfolyam során.
+          * A kérdőív segít megérteni a tantervben fontos fejlesztéseket is, amelyeket a tanári és a tanulói tapasztalatok javítása érdekében tehetünk.
+
+
+          * Kérjük, segíts azzal, hogy a tanulóid hozzájáruljanak ehhez a létfontosságú adatbázishoz. Az ő hangjuk lesz a különbség!
+      csp-pre-survey-2017 preamble 1_2023:
+        markdown: "### **Ez egy név nélküli felmérés**\n\n* Ennek a rövid felmérésnek
+          a kitöltése **legfeljebb 10 percet** vesz igénybe.\n* A Code.org nagyon
+          komolyan veszi az adatbiztonságot.\n* Az itt szereplő válaszai **névtelenek**
+          maradnak. \n\nA tanárod látja az egész osztály összesített válaszait de
+          nem fogja látni az egyéni válaszaid/ n\nEzt azért tesszük, mert azt akarjuk,
+          hogy **a lehető legnyitottabb és őszintesebb** legyél. Törődünk a tanfolyamon
+          szerzett tapasztalataiddal, és a visszajelzéseidet felhasználjuk a fejlesztéseink
+          során.\n\n***\n### Az iskola általános### \n"
+        teacher_markdown: |
+          A legjobb gyakorlat az, ha hagyod, hogy a tanulók kitöltsék ezt a felmérést **mielőtt** bármilyen osztálytevékenységben részt vennének .A legtöbb tanár ezt az első óra részeként teszi meg.
+
+          A felmérés összesített eredményét anomim módon tekintheted meg.
+
+          Miért van itt ez a felmérés?
+          * Ennek a kurzusnak a fő célja a számítástechnikában való részvétel bővítése.
+          * Az előzetes és képzés utáni felmérések segítségével megpróbáljuk felmérni, hogy hogyan változhat a tanulók számítástechnikával kapcsolatos hozzáállása a tanfolyam során.
+          * A kérdőív segít megérteni a tantervben fontos fejlesztéseket is, amelyeket a tanári és a tanulói tapasztalatok javítása érdekében tehetünk.
+
+
+          * Kérjük, segíts azzal, hogy a tanulóid hozzájáruljanak ehhez a létfontosságú adatbázishoz. Az ő hangjuk lesz a különbség!
+      csp-pre-survey-2017 preamble 2 cs in general_2021:
+        markdown: "## A számítógépes-tudomány általában"
+      csp-pre-survey-2017 preamble 2 cs in general_2022:
+        markdown: "## A számítógépes-tudomány általában"
+      csp-pre-survey-2017 preamble 2 cs in general_copy2_2023:
+        markdown: "## A számítógépes-tudomány általában"
+      csp-pre-survey-2017 preamble 3 this class_2021:
+        markdown: "### Számítástechnika a jövőben\n"
+      csp-pre-survey-2017 preamble 3 this class_2022:
+        markdown: "### Számítástechnika a jövőben\n"
+      csp-pre-survey-2017 preamble 3 this class_copy2_2023:
+        markdown: "### Számítástechnika a jövőben\n"
+      csp-pre-survey-2017 preamble 4 the future_2021:
+        markdown: "### Számítástechnika a jövőben\n"
+      csp-pre-survey-2017 preamble 4 the future_2022:
+        markdown: "### Számítástechnika a jövőben\n"
+      csp-pre-survey-2017 preamble 4 the future_2023:
+        markdown: "### Számítástechnika a jövőben\n"
+      csp-pre-survey-2017 preamble 5 demographics_2021:
+        markdown: "### Háttered a számítástechnikában\n"
+      csp-pre-survey-2017 preamble 5 demographics_2022:
+        markdown: "### Háttered a számítástechnikában\n"
+      csp-pre-survey-2017 preamble 5 demographics_2023:
+        markdown: "### Háttered a számítástechnikában\n"
+      csp-pre-survey-2017 preamble 5 demographics_mb2022:
+        markdown: "### Háttered a számítástechnikában\n"
       csp-pre-survey-2017-q1:
         answers:
         - correct: true
@@ -12339,6 +12430,7 @@ hu-HU:
       csp-pre-survey-2017-q10_2021:
         answers:
         - correct: true
+          text: Határozottan egyetértek
         - correct: true
         - correct: true
         - correct: true
@@ -13232,14 +13324,21 @@ hu-HU:
       csp-pre-survey-2017-q3_2021:
         answers:
         - correct: true
+          text: Határozottan egyetértek
         - correct: true
+          text: Egyetértek
         - correct: true
+          text: Némileg egyetértek
         - correct: true
+          text: Egyik sem
         - correct: true
+          text: Némileg vitatom
         - correct: true
+          text: Nem értek egyet
         - correct: true
+          text: Egyáltalán nem értek egyet
         questions:
-        - {}
+        - text: Szerintem érdekes az iskolai munkám.
       csp-pre-survey-2017-q3_2022:
         answers:
         - correct: true
@@ -13309,14 +13408,21 @@ hu-HU:
       csp-pre-survey-2017-q4_2021:
         answers:
         - correct: true
+          text: Határozottan egyetértek
         - correct: true
+          text: Egyetértek
         - correct: true
+          text: Némileg egyetértek
         - correct: true
+          text: Egyik sem
         - correct: true
+          text: Némileg vitatom
         - correct: true
+          text: Nem értek egyet
         - correct: true
+          text: Egyáltalán nem értek egyet
         questions:
-        - {}
+        - text: Fontos számomra, hogy jó legyek az iskolai munkámban.
       csp-pre-survey-2017-q4_2022:
         answers:
         - correct: true
@@ -13474,14 +13580,21 @@ hu-HU:
       csp-pre-survey-2017-q9_2021:
         answers:
         - correct: true
+          text: Határozottan egyetértek
         - correct: true
+          text: Egyetértek
         - correct: true
+          text: Némileg egyetértek
         - correct: true
+          text: Egyik sem
         - correct: true
+          text: Némileg vitatom
         - correct: true
+          text: Nem értek egyet
         - correct: true
+          text: Egyáltalán nem értek egyet
         questions:
-        - {}
+        - text: Tényleg önmagam lehetek az iskolában.
       csp-pre-survey-2017-q9_2022:
         answers:
         - correct: true
@@ -13536,59 +13649,94 @@ hu-HU:
       ever-learned-cs:
         answers:
         - correct: true
+          text: Igen, vettem részt ilyen órán
         - correct: true
+          text: Igen, néhány tevékenységet végeztem, de nem teljes tanfolyamot
         - correct: true
+          text: Nem biztos
         - correct: true
+          text: Határozottan nem
         questions:
-        - {}
+        - text: Tanultál már valaha számítástechnika tudományt <em>az iskolában</em>
+            ?
       ever-learned-cs-outside-school:
         answers:
         - correct: true
+          text: Igen, iskola utáni programban
         - correct: true
+          text: Igen, független online tevékenységként
         - correct: true
+          text: Igen, táborban vagy nyári programban
         - correct: true
+          text: Nem, sosem tanultam informatikai tudományt az iskolán kívül
         questions:
-        - {}
+        - text: Tanultál már valaha informatikai tudományt <em>az iskolán kívül</em>
+            ? (Ha igen, kérjük, válaszd ki a legfrissebb tapasztalataidat)
       ever-learned-cs-outside-school_2022:
         answers:
         - correct: true
+          text: Igen, iskola utáni programban
         - correct: true
+          text: Igen, független online tevékenységként
         - correct: true
+          text: Igen, táborban vagy nyári programban
         - correct: true
+          text: Nem, sosem tanultam informatikai tudományt az iskolán kívül
         questions:
-        - {}
+        - text: Tanultál már valaha informatikai tudományt <em>az iskolán kívül</em>
+            ? (Ha igen, kérjük, válaszd ki a legfrissebb tapasztalataidat)
       ever-learned-cs-outside-school_2023:
         answers:
         - correct: true
+          text: Igen, iskola utáni programban
         - correct: true
+          text: Igen, független online tevékenységként
         - correct: true
+          text: Igen, táborban vagy nyári programban
         - correct: true
+          text: Nem, sosem tanultam informatikai tudományt az iskolán kívül
         questions:
-        - {}
+        - text: Tanultál már valaha informatikai tudományt <em>az iskolán kívül</em>
+            ? (Ha igen, kérjük, válaszd ki a legfrissebb tapasztalataidat)
       ever-learned-cs-outside-school_mb2022:
         answers:
         - correct: true
+          text: Igen, iskola utáni programban
         - correct: true
+          text: Igen, független online tevékenységként
         - correct: true
+          text: Igen, táborban vagy nyári programban
         - correct: true
+          text: Nem, sosem tanultam informatikai tudományt az iskolán kívül
         questions:
-        - {}
+        - text: Tanultál már valaha informatikai tudományt <em>az iskolán kívül</em>
+            ? (Ha igen, kérjük, válaszd ki a legfrissebb tapasztalataidat)
       ever-learned-cs_2022:
         answers:
         - correct: true
+          text: Igen, vettem részt ilyen órán
         - correct: true
+          text: Igen, néhány tevékenységet végeztem, de nem teljes tanfolyamot
         - correct: true
+          text: Nem biztos
         - correct: true
+          text: Határozottan nem
         questions:
-        - {}
+        - text: Tanultál már valaha számítástechnika tudományt <em>az iskolában</em>
+            ?
       ever-learned-cs_2023:
         answers:
         - correct: true
+          text: Igen, vettem részt ilyen órán
         - correct: true
+          text: Igen, néhány tevékenységet végeztem, de nem teljes tanfolyamot
         - correct: true
+          text: Nem biztos
         - correct: true
+          text: Határozottan nem
         questions:
-        - {}
+        - text: Tanultál már valaha számítástechnika tudományt <em>az iskolában</em>
+            ?
       express_EOC2022:
         description: Elértél az E tanfolyam utolsó leckéjéhez! Válassz egy projektet,
           amit elkészítesz.
@@ -13608,7 +13756,8 @@ hu-HU:
         - correct: true
           text: nem
         questions:
-        - {}
+        - text: Egy családtag, például szülő, testvér vagy unokatestvér ösztönött
+            téged arra, hogy vegyél részt ezen az órán?
       family_encourage_2022:
         answers:
         - correct: true
@@ -13616,7 +13765,8 @@ hu-HU:
         - correct: true
           text: nem
         questions:
-        - {}
+        - text: Egy családtag, például szülő, testvér vagy unokatestvér ösztönött
+            téged arra, hogy vegyél részt ezen az órán?
       family_encourage_2023:
         answers:
         - correct: true
@@ -13624,7 +13774,8 @@ hu-HU:
         - correct: true
           text: nem
         questions:
-        - {}
+        - text: Egy családtag, például szülő, testvér vagy unokatestvér ösztönött
+            téged arra, hogy vegyél részt ezen az órán?
       grade2_multi_collector_A_predict1:
         answers:
         - feedback: Ne jó! Laurel olyan helyről próbál meg kincset gyűjteni, ahol
@@ -13862,7 +14013,7 @@ hu-HU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Érdekel a számítástechnika tanulása.
       interested-in-learning-cs_2022:
         answers:
         - correct: true
@@ -13873,7 +14024,7 @@ hu-HU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Érdekel a számítástechnika tanulása.
       interested-in-learning-cs_2023:
         answers:
         - correct: true
@@ -13884,7 +14035,7 @@ hu-HU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Érdekel a számítástechnika tanulása.
       interested-in-learning-cs_mb2022:
         answers:
         - correct: true
@@ -13895,7 +14046,7 @@ hu-HU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Érdekel a számítástechnika tanulása.
       intro-pulse-survey-q1_csd1_2023:
         answers:
         - correct: true
@@ -14682,7 +14833,7 @@ hu-HU:
         - correct: true
           text: nem
         questions:
-        - {}
+        - text: Valaki más ösztönzött arra, hogy vegyél részt ezen az órán?
       someone_else_encourage_2022:
         answers:
         - correct: true
@@ -14690,7 +14841,7 @@ hu-HU:
         - correct: true
           text: nem
         questions:
-        - {}
+        - text: Valaki más ösztönzött arra, hogy vegyél részt ezen az órán?
       someone_else_encourage_2023:
         answers:
         - correct: true
@@ -14698,7 +14849,7 @@ hu-HU:
         - correct: true
           text: nem
         questions:
-        - {}
+        - text: Valaki más ösztönzött arra, hogy vegyél részt ezen az órán?
       taken-other-code-org:
         answers:
         - correct: true
@@ -14725,7 +14876,7 @@ hu-HU:
         - correct: true
           text: nem
         questions:
-        - {}
+        - text: Egy tanár ösztönzött arra, hogy vegyél részt ezen az órán?
       teacher_encourage_2022:
         answers:
         - correct: true
@@ -14733,7 +14884,7 @@ hu-HU:
         - correct: true
           text: nem
         questions:
-        - {}
+        - text: Egy tanár ösztönzött arra, hogy vegyél részt ezen az órán?
       teacher_encourage_2023:
         answers:
         - correct: true
@@ -14741,7 +14892,7 @@ hu-HU:
         - correct: true
           text: nem
         questions:
-        - {}
+        - text: Egy tanár ösztönzött arra, hogy vegyél részt ezen az órán?
       test anonymous student survey educational:
         answers:
         - correct: true
@@ -14856,7 +15007,7 @@ hu-HU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Aggódom, hogy mások szerint kevésbé vagyok képes teljesíteni
       worried-seen-incapable_2022:
         answers:
         - correct: true
@@ -14867,7 +15018,7 @@ hu-HU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Aggódom, hogy mások szerint kevésbé vagyok képes teljesíteni
       worried-seen-incapable_2023:
         answers:
         - correct: true
@@ -14878,4 +15029,4 @@ hu-HU:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Aggódom, hogy mások szerint kevésbé vagyok képes teljesíteni

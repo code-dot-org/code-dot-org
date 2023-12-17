@@ -47,7 +47,7 @@ module Pd::Application
 
     PROGRAMS = {
       csd: 'Computer Science Discoveries (appropriate for 6th - 10th grade)',
-      csp: 'Computer Science Principles (appropriate for 9th - 12th grade, and can be implemented as an AP or introductory course)',
+      csp: 'Computer Science Principles (appropriate for 9th - 12th grade, and can be implemented as an AP or non-AP introductory course)',
       csa: 'Computer Science A (appropriate for 10th - 12th grade, and can be implemented as an AP or non-AP introductory Java programming course)'
     }.freeze
     PROGRAM_OPTIONS = PROGRAMS.values
@@ -123,6 +123,12 @@ module Pd::Application
     def self.next_year(year)
       current_year_index = APPLICATION_YEARS.index(year)
       current_year_index >= 0 ? APPLICATION_YEARS[current_year_index + 1] : nil
+    end
+
+    # The census lags by a year, so the census year is the first application year minus 1
+    # For example, for the 2023-2025 application year, we want to look at 2023 census data
+    def census_year
+      application_year.split('-').first.to_i - 1
     end
 
     # @override
@@ -642,12 +648,6 @@ module Pd::Application
           "I don't have experience teaching any of these courses"
         ],
         completing_on_behalf_of_someone_else: [YES, NO],
-        replace_existing: [
-          YES,
-          "No, this course will be added to the schedule in addition to an existing computer science course",
-          "No, computer science is new to my school",
-          TEXT_FIELDS[:i_dont_know_explain]
-        ]
       }
     end
 
@@ -675,7 +675,6 @@ module Pd::Application
 
         program
         enough_course_hours
-        replace_existing
 
         gender_identity
         race
@@ -741,7 +740,6 @@ module Pd::Application
         [:able_to_attend_single, TEXT_FIELDS[:unable_to_attend], :able_to_attend_single_explain],
         [:able_to_attend_multiple, TEXT_FIELDS[:no_explain], :able_to_attend_multiple_explain],
         [:committed, TEXT_FIELDS[:no_explain], :committed_other],
-        [:replace_existing, TEXT_FIELDS[:i_dont_know_explain]],
         [:able_to_attend_multiple, TEXT_FIELDS[:not_sure_explain], :able_to_attend_multiple_not_sure_explain],
         [:able_to_attend_multiple, TEXT_FIELDS[:unable_to_attend], :able_to_attend_multiple_unable_to_attend],
         [:how_heard, TEXT_FIELDS[:other_with_text]]
@@ -1068,13 +1066,20 @@ module Pd::Application
           end
       end
 
+      # Check if a school is not teaching CS according to the access report
+      # If the school is not in the census_summaries table, treat that as not teaching
+      # This is a bit of a confusing double negative but I wanted to keep the YES/NO logic
+      # consistent with the criteria.
+      meets_scholarship_criteria_scores[:not_teaching_in_access_report] =
+        Census::CensusSummary.find_by(school_id: school_id, school_year: census_year)&.does_teach? ? NO : YES
+
       update(
         response_scores: response_scores_hash.deep_merge(
           {
             meets_minimum_criteria_scores: meets_minimum_criteria_scores,
             meets_scholarship_criteria_scores: meets_scholarship_criteria_scores,
           }
-        ) {|key, old, new| key == :replace_existing ? new : old}.to_json
+        ).to_json
       )
     end
 

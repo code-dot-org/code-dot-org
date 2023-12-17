@@ -1,4 +1,4 @@
-import {LabMetricsReporter} from '../lab2/Lab2MetricsReporter';
+import LabMetricsReporter from '../lab2/Lab2MetricsReporter';
 
 const danceMetricsReporter = new LabMetricsReporter({
   appName: 'Dance',
