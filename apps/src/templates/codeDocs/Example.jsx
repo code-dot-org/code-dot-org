@@ -33,7 +33,11 @@ export default function Example({example, programmingEnvironmentName}) {
                 name: programmingEnvironmentName,
               })}
             />
-            {example.image && <img src={example.image} />}
+            {
+              // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+              // Verify or update this alt-text as necessary
+            }
+            {example.image && <img src={example.image} alt="" />}
           </div>
         </div>
       );
@@ -62,7 +66,11 @@ export default function Example({example, programmingEnvironmentName}) {
               />
             </div>
           </div>
-          {example.image && <img src={example.image} />}
+          {
+            // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+            // Verify or update this alt-text as necessary
+          }
+          {example.image && <img src={example.image} alt="" />}
         </div>
       );
     }
@@ -70,7 +78,11 @@ export default function Example({example, programmingEnvironmentName}) {
     return (
       <div>
         {content}
-        {example.image && <img src={example.image} />}
+        {
+          // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+          // Verify or update this alt-text as necessary
+        }
+        {example.image && <img src={example.image} alt="" />}
       </div>
     );
   }
