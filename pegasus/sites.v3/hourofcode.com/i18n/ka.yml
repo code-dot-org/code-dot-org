@@ -907,6 +907,9 @@ ka:
   cs_ambassador_application_date: განაცხადები ღიაა 2023 წლის 8 ნოემბრამდე
   cs_ambassador_application_subhead: იმუშავეთ მასწავლებელთან თქვენი განაცხადის წარდგენისთვის
     დღეს
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: კითხვები? გთხოვთ დაუკავშირდეთ [youngwomen@code.org]
     (%{email_url})
   cs_ambassador_do_heading: რას აკეთებენ CS ელჩები?

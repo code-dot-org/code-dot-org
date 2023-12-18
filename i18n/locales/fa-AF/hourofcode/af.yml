@@ -873,6 +873,9 @@ af:
   cs_ambassador_application_date: برنامه های کاربردی تا 8 نوامبر 2023 باز می شود
   cs_ambassador_application_subhead: با یک معلم همکاری کنید تا درخواست خود را امروز
     ارسال کنید
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: سوالات؟ لطفا با [youngwomen@code.org] تماس
     بگیرید (%{email_url})
   cs_ambassador_do_heading: سفیران CS چه می کنند؟

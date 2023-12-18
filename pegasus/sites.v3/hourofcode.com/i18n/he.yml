@@ -839,6 +839,9 @@ he:
     שיעור מדעי המחשב.
   cs_ambassador_application_date: הבקשות פתוחות עד 8 בנובמבר 2023
   cs_ambassador_application_subhead: עבוד עם מורה כדי להגיש את בקשתך עוד היום
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: שאלות? אנא צרו קשר עם [youngwomen@code.org]
     (%{email_url})
   cs_ambassador_do_heading: מה עושים שגרירי CS?
