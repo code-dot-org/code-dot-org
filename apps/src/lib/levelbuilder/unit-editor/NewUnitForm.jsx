@@ -3,6 +3,7 @@ import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import PropTypes from 'prop-types';
 import NewCourseFields from '../NewCourseFields';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
 
 export default function NewUnitForm(props) {
   const [isCourse, setIsCourse] = useState('');
@@ -11,6 +12,7 @@ export default function NewUnitForm(props) {
   const [instructorAudience, setInstructorAudience] = useState('');
   const [participantAudience, setParticipantAudience] = useState('');
   const [instructionType, setInstructionType] = useState('');
+  const [submitDialogOpen, setSubmitDialogOpen] = useState(false);
 
   const getScriptName = () => {
     const name =
@@ -39,6 +41,52 @@ export default function NewUnitForm(props) {
 
     setFamilyName(familyName);
   };
+
+  const savingDetailsAndButton = React.useCallback(
+    () => (
+      <div className="savingDetailsAndButton">
+        <input name="is_migrated" value={true} type="hidden" />
+        <input name="lesson_groups" value={'[]'} type="hidden" />
+        <br />
+        <button
+          className="btn btn-primary"
+          style={styles.buttonStyle}
+          onClick={() => setSubmitDialogOpen(true)}
+          type="button"
+        >
+          Save Changes
+        </button>
+      </div>
+    ),
+    [setSubmitDialogOpen]
+  );
+
+  const submitDialog = React.useCallback(
+    () => (
+      <BaseDialog
+        isOpen={submitDialogOpen}
+        handleClose={() => setSubmitDialogOpen(false)}
+      >
+        <div className="submitDialog">
+          <p>
+            Are you sure you want to submit this unit? These fields are very
+            difficult to change after submission.
+            <br />
+            It is recommended that you double check each field with another
+            person if you are unsure.
+          </p>
+          <button
+            className="btn btn-submit-dialog"
+            type="submit"
+            style={styles.buttonStyle}
+          >
+            Submit
+          </button>
+        </div>
+      </BaseDialog>
+    ),
+    [submitDialogOpen, setSubmitDialogOpen]
+  );
 
   return (
     <form action="/s" method="post">
@@ -146,7 +194,7 @@ export default function NewUnitForm(props) {
                 value={isCourse === 'true'}
                 type="hidden"
               />
-              <SavingDetailsAndButton />
+              {savingDetailsAndButton()}
             </div>
           )}
         </div>
@@ -165,9 +213,10 @@ export default function NewUnitForm(props) {
             </HelpTip>
             <input name="script[name]" />
           </label>
-          <SavingDetailsAndButton />
+          {savingDetailsAndButton()}
         </div>
       )}
+      {submitDialog()}
     </form>
   );
 }
@@ -188,20 +237,3 @@ const styles = {
     marginBottom: 20,
   },
 };
-
-function SavingDetailsAndButton() {
-  return (
-    <div>
-      <input name="is_migrated" value={true} type="hidden" />
-      <input name="lesson_groups" value={'[]'} type="hidden" />
-      <br />
-      <button
-        className="btn btn-primary"
-        type="submit"
-        style={styles.buttonStyle}
-      >
-        Save Changes
-      </button>
-    </div>
-  );
-}

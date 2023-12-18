@@ -44,6 +44,7 @@ class Services::LtiTest < ActiveSupport::TestCase
       }],
     }.deep_symbolize_keys
 
+    @course_name = 'Test Course'
     @lms_section_ids = [1, 2, 3]
     @lms_section_names = ['Section 1', 'Section 2', 'Section 3']
 
@@ -52,7 +53,7 @@ class Services::LtiTest < ActiveSupport::TestCase
       context: {
         id: "context-id",
         label: "Course Label",
-        title: "Course Title"
+        title: @course_name,
       },
       members: [
         {
@@ -208,6 +209,38 @@ class Services::LtiTest < ActiveSupport::TestCase
       assert_empty v.keys - [:name, :members]
       assert_equal v[:members].length, 3
     end
+  end
+
+  test 'should append the course name to each section name when parsing NRPS response' do
+    expected_section_names = @lms_section_names.map {|name| "#{@course_name}: #{name}"}
+    parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response)
+    actual_section_names = parsed_response.values.map {|v| v[:name]}
+    assert_empty expected_section_names - actual_section_names
+  end
+
+  test 'should update a section name if it has changed' do
+    teacher = create :teacher
+    lti_integration = create :lti_integration
+    lti_course = create :lti_course, lti_integration: lti_integration
+    parsed_response = Services::Lti.parse_nrps_response(@nrps_full_response)
+    Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: parsed_response, section_owner_id: teacher.id)
+
+    # initial names
+    expected_section_names = @lms_section_names.map {|name| "#{@course_name}: #{name}"}
+    actual_section_names = lti_course.sections.map(&:name)
+    assert_empty expected_section_names - actual_section_names
+
+    # re-sync with new names
+    new_names = ['Renamed 1', 'Renamed 2', 'Renamed 3'].to_s
+    new_response = @nrps_full_response.deep_dup
+    new_response[:members].each do |member|
+      member[:message][0][@custom_claims_key][:section_names] = new_names
+    end
+    parsed_response = Services::Lti.parse_nrps_response(new_response)
+    Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: parsed_response, section_owner_id: teacher.id)
+    new_expected_names = JSON.parse(new_names).map {|name| "#{@course_name}: #{name}"}
+    actual_section_names = lti_course.reload.sections.map(&:name)
+    assert_empty new_expected_names - actual_section_names
   end
 
   test 'should add or remove student users when syncing a section' do

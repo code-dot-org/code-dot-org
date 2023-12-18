@@ -916,6 +916,9 @@ de:
   cs_ambassador_application_date: Bewerbungen sind bis zum 8. November 2023 möglich
   cs_ambassador_application_subhead: Arbeiten Sie noch heute mit einer Lehrerin oder
     einem Lehrer zusammen, um Ihre Bewerbung einzureichen
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: Fragen? Bitte wenden Sie sich an [youngwomen@code.org]
     (%{email_url})
   cs_ambassador_do_heading: Welche Aufgabe haben CS-Botschafterinnen und CS-Botschafter?

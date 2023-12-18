@@ -2175,3 +2175,10 @@ sk:
       10:
         image: 'notes/hoc_hello_world_2021_freeplay_10.jpg'
         text: "Čo teda vytvoríte? Mohli by ste rozprávať príbeh o sebe... alebo si ho vyrobiť so svojimi vlastnými špeciálnymi postavami. Možno budete dokonca používať svoje nové počítačové vedy zručnosti pre váš ďalší školský projekt! Strečte svoju fantáziu a bavte sa!"
+    hoc-dance-ai-warmup:
+      2:
+        text: "Ahoj! Volám sa Miral Kotb a som tanečníčka, softvérová vývojárka a zakladateľka iLuminate."
+      3:
+        text: "Takže, informatika súvisí s kreativitou vo veľa smeroch. Nemerateľne veľa, naozaj. Mám na mysli to, že ak máš raz schopnosť písať softvér, môžeš vložiť myšlienky do čohokoľvek. Ja to robím so sveteľným oblekmi. Je toho tak veľa, čo môžeš vytvoriť akonáhle máš nástroje na písanie softvéru a tvoje možnosti sú neobmedzené."
+      5:
+        text: "Budeš používať bloky kódu na výber tanečníkov, zmenu ich tanečných pohybov a donútiš ich tak, aby reagovali na hudbu a boli interaktívni."

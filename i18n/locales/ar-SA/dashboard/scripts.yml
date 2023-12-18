@@ -8109,9 +8109,9 @@ ar:
               name: اختتام اليوم الثالث
           lesson_groups:
             lessonGroup-2:
-              display_name: اليوم 3
+              display_name: اليوم ٣
           name: pl-CSD - اليوم الصيفي 3
-          title: اليوم 3
+          title: اليوم ٣
         pl-csd-summer-day4:
           lessons:
             lesson-4:
@@ -8134,9 +8134,9 @@ ar:
               name: الإنهاء
           lesson_groups:
             lessonGroup-2:
-              display_name: اليوم 4
+              display_name: اليوم ٤
           name: pl-CSD - الصيف - اليوم الرابع
-          title: اليوم 4
+          title: اليوم ٤
         pl-csd-summer-day5:
           lessons:
             lesson-1:
@@ -8219,7 +8219,7 @@ ar:
               display_name: الجزء المتزامن 2
             lessonGroup-5:
               display_name: الجزء 2 غير المتزامن
-          title: اليوم 3
+          title: اليوم ٣
         virtual-pl-csd-summer-day4:
           lessons:
             lesson-2:
@@ -8239,7 +8239,7 @@ ar:
               display_name: الجزء المتزامن 2
             lessonGroup-5:
               display_name: الجزء 2 غير المتزامن
-          title: اليوم 4
+          title: اليوم ٤
         virtual-pl-csd-summer-day5:
           lessons:
             lesson-9:
@@ -8261,7 +8261,7 @@ ar:
               display_name: الجزء 1 غير المتزامن
             lessonGroup-4:
               display_name: الجزء المتزامن 2
-          title: اليوم 5
+          title: اليوم ٥
         self-paced-pl-microbit2:
           lesson_groups:
             lessonGroup-2:
@@ -8599,7 +8599,7 @@ ar:
               display_name: الجزء المتزامن 2
             lessonGroup-5:
               display_name: الجزء 2 غير المتزامن
-          title: اليوم 3
+          title: اليوم ٣
         virtual-pl-csp-summer-day4:
           lesson_groups:
             lessonGroup-2:
@@ -8610,7 +8610,7 @@ ar:
               display_name: الجزء المتزامن 2
             lessonGroup-5:
               display_name: الجزء 2 غير المتزامن
-          title: اليوم 4
+          title: اليوم ٤
         virtual-pl-csp-summer-day5:
           lessons:
             lesson-6:
@@ -8622,7 +8622,7 @@ ar:
               display_name: الجزء 1 غير المتزامن
             lessonGroup-4:
               display_name: الجزء المتزامن 2
-          title: اليوم 5
+          title: اليوم ٥
         virtual-pl-csa-summer-day2:
           lessons:
             lesson-2:
@@ -8658,7 +8658,7 @@ ar:
               display_name: الجزء المتزامن 2
             lessonGroup-5:
               display_name: الجزء 2 غير المتزامن
-          title: اليوم 3
+          title: اليوم ٣
         virtual-pl-csa-summer-day4:
           lessons:
             lesson-2:
@@ -8676,7 +8676,7 @@ ar:
               display_name: الجزء المتزامن 2
             lessonGroup-5:
               display_name: الجزء 2 غير المتزامن
-          title: اليوم 4
+          title: اليوم ٤
         virtual-pl-csa-summer-day5:
           lessons:
             lesson-1:

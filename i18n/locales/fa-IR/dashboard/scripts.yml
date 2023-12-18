@@ -1978,6 +1978,11 @@ fa:
           lesson_groups:
             lessonGroup-7:
               display_name: مقدمه
+        dance-ai-2023:
+          lessons:
+            lesson-1:
+              name: 'مهمانی رقص: نسخه هوش مصنوعی'
+          title: 'مهمانی رقص: نسخه هوش مصنوعی'
         csd7-2024:
           lesson_groups:
             lessonGroup-4:

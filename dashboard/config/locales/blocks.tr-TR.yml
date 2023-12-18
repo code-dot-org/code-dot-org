@@ -1176,7 +1176,7 @@ tr:
             '"liquid"': sıvı
             '"solid"': katı
         text: |2-
-          eğer {CONDITION}{SPRITE}
+           eğer {CONDITION}{SPRITE}
           {STATEMENT}
       KatiesBlocks_makeNumSpritesNear:
         text: "{LOCATION} yakınında {NUM} yeni {ANIMATION_NAME} karakter yap"

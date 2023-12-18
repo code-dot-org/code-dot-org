@@ -917,6 +917,9 @@ hi:
   cs_ambassador_application_date: 8 नवंबर, 2023 तक आवेदन खुले हैं
   cs_ambassador_application_subhead: आज ही अपना आवेदन जमा करने के लिए एक शिक्षक के
     साथ काम करें
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: सवाल? कृपया [youngwomen@code.org] से संपर्क
     करें (%{email_url})
   cs_ambassador_do_heading: CS एंबेसडर क्या करते हैं?

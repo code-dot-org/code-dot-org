@@ -29,7 +29,11 @@ describe('TopCourse', () => {
     expect(
       wrapper.containsMatchingElement(
         <div>
-          <img />
+          {
+            // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+            // Verify or update this alt-text as necessary
+          }
+          <img alt="" />
           <div>{topCourse.assignableName}</div>
           <div>
             <div>You are currently working on {topCourse.lessonName}.</div>
