@@ -685,6 +685,9 @@ zh:
   cs_ambassador_desc: 每個領域，包括醫學，娛樂，體育，教育，商業，時尚和創業，都受到計算機科學影響。然而，只有 5% 的高中年輕女性參加計算機科學課程。大使可以鼓勵同齡人參加計算機科學課程來幫助彌補這種性別差距。
   cs_ambassador_application_date: 截止報名日期至二零二三年十一月八日
   cs_ambassador_application_subhead: 立即與老師合作提交您的申請
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: 有問題？請聯繫 [youngwomen@code.org]（%{email_url}）
   cs_ambassador_do_heading: CS 大使做什麼？
   cs_ambassador_do_desc: 資訊科技大使鼓勵年輕女性探索這個主題，並在他們重新獲得計算機科學的地位時，互相提升起來。CS 大使與同伴聯繫，分享他們對計算機科學的興奮和熱愛。他們參觀教室，在午餐時舉辦桌子，並在會議和俱樂部會議上發言。CS

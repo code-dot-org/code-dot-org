@@ -887,6 +887,9 @@ lv:
   cs_ambassador_application_date: Pieteikumi atvērti līdz 2023. gada 8. novembrim
   cs_ambassador_application_subhead: Sadarbojieties ar skolotāju, lai iesniegtu pieteikumu
     šodien
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: Jautājumi? Lūdzu, sazinieties ar [youngwomen@code.org]
     (%{email_url})
   cs_ambassador_do_heading: Ko dara CS vēstnieki?

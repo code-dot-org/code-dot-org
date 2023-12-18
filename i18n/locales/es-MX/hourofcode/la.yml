@@ -922,6 +922,9 @@ la:
     2023
   cs_ambassador_application_subhead: Trabaja con un profesor para presentar tu solicitud
     hoy mismo
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: "¿Preguntas? Póngase en contacto con [youngwomen@code.org]
     (%{email_url})"
   cs_ambassador_do_heading: "¿Qué hacen los Embajadores CS?"

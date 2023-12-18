@@ -911,6 +911,9 @@ az:
   cs_ambassador_application_date: Müraciətlər 8 Noyabr 2023 tarixinə qədər açıqdır
   cs_ambassador_application_subhead: Bu gün ərizənizi təqdim etmək üçün bir müəllim
     ilə işləyin
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: Suallar? [youngwomen@code.org] ilə əlaqə saxlayın
     (%{email_url})
   cs_ambassador_do_heading: CS səfirləri nə edirlər?

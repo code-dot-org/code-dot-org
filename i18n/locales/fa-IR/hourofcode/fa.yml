@@ -881,6 +881,9 @@ fa:
   cs_ambassador_application_date: برنامه های کاربردی تا 8 نوامبر 2023 باز است
   cs_ambassador_application_subhead: امروز با یک معلم کار کنید تا درخواست خود را ارسال
     کنید
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: سوال؟ لطفا با [youngwomen@code.org] تماس بگیرید
     (%{email_url})
   cs_ambassador_do_heading: سفیران CS چه کاری انجام می دهند؟
@@ -14778,7 +14781,7 @@ fa:
   hoc_how_to_top_view_guide: مشاهده راهنما برای
   hoc_how_to_nav_main_aria_label: یک راهنما را انتخاب کنید
   hoc_how_to_nav_sidebar_aria_label: ناوبری نوار کناری
-  hoc_how_to_educators_intro_heading: چطور ساعت کدنویسی تان را برنامه ریزی کنید.
+  hoc_how_to_educators_intro_heading: چطور ساعت کدنویسی خود را برنامه ریزی کنید.
   hoc_how_to_educators_intro_desc: ساعت کد مقدمه ای یک ساعته با علوم کامپیوتر است
     که با استفاده از آموزش های سرگرم کننده نشان می دهد که هر کس می تواند اصول اولیه
     را یاد بگیرد. امسال، ما با ارائه فرصت های کدگذاری که شامل هوش مصنوعی (AI) و اجزای

@@ -893,6 +893,9 @@ cs:
   cs_ambassador_application_date: Přihlášky otevřené do 8. listopadu 2023
   cs_ambassador_application_subhead: Spolupracujte s učitelem a odešlete svou žádost
     ještě dnes
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: Otázky? Kontaktujte prosím [youngwomen@code.org]
     (%{email_url})
   cs_ambassador_do_heading: Co dělají velvyslanci CS?

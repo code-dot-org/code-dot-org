@@ -867,6 +867,9 @@ is:
   cs_ambassador_application_date: Umsóknir opnar til 8. nóvember 2023
   cs_ambassador_application_subhead: Vinna með kennara til að senda inn umsókn þína
     í dag
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: Spurningar? Vinsamlegast hafðu samband við
     [youngwomen@code.org] (%{email_url})
   cs_ambassador_do_heading: Hvað gera CS sendiherrar?

@@ -911,6 +911,9 @@ kn:
   cs_ambassador_application_date: ಅರ್ಜಿಗಳು ನವೆಂಬರ್ 8, 2023 ರವರೆಗೆ ತೆರೆಯುತ್ತವೆ
   cs_ambassador_application_subhead: ಇಂದು ನಿಮ್ಮ ಅರ್ಜಿಯನ್ನು ಸಲ್ಲಿಸಲು ಶಿಕ್ಷಕರೊಂದಿಗೆ
     ಕೆಲಸ ಮಾಡಿ
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: ಪ್ರಶ್ನೆಗಳು? ದಯವಿಟ್ಟು ಸಂಪರ್ಕಿಸಿ [youngwomen@code.org]
     (%{email_url})
   cs_ambassador_do_heading: ಸಿಎಸ್ ರಾಯಭಾರಿಗಳು ಏನು ಮಾಡುತ್ತಾರೆ?
