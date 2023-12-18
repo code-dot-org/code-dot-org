@@ -15,31 +15,32 @@ export interface SegmentedButtonsProps {
   /** Segmented Buttons Size*/
   size?: ComponentSizeXSToL;
   /** Segmented Buttons Type (visual)*/
-  buttonsType?: SegmentButtonType;
+  type?: SegmentButtonType;
 }
 
 // Todo:
 // 2. Add selected state
 // 3. Add disabled state
-// 4. Add hover state ++
-// 5. Add focus state ++
 // 6. Add active state
-// 7. Add keyboard navigation ++
+// 16. check different types appearance
 // 8. Add aria attributes
 // 9. Add tests
-// 10. Add storybook
-// 11. Add documentation
-// 12. Add prop types
-// 13. Add default props
+// 10. Add storybook ++
+// 11. Add documentation ++
+// 12. Add prop types ++
+// 13. Add default props ++
 // 14. Add sizes ++
 // 15. Add icons ++
+// 7. Add keyboard navigation ++
+// 5. Add focus state ++
+// 4. Add hover state ++
 
 /**
  * ### Production-ready Checklist:
  * * (?) implementation of component approved by design team;
  * * (?) has storybook, covered with stories and documentation;
  * * (?) has tests: test every prop, every state and every interaction that's js related;
- * * (see apps/test/unit/componentLibrary/RadioButtonTest.jsx, apps/test/unit/componentLibrary/RadioButtonsGroupTest.jsx)
+ * * (see apps/test/unit/componentLibrary/RadioButtonTest.jsx, apps/test/unit/componentLibrary/SegmentedButtonTest.jsx)
  * * (?) passes accessibility checks;
  *
  * ###  Status: ```Wip```
@@ -49,7 +50,7 @@ export interface SegmentedButtonsProps {
 const SegmentedButtons: React.FunctionComponent<SegmentedButtonsProps> = ({
   buttons,
   size = 'm',
-  buttonsType = 'withLabel',
+  type = 'withLabel',
 }) => {
   return (
     <div
@@ -60,13 +61,13 @@ const SegmentedButtons: React.FunctionComponent<SegmentedButtonsProps> = ({
     >
       {buttons.map(({label, onClick, disabled, iconLeft, iconRight}) => (
         <SegmentedButton
-          label={label}
           key={label}
+          label={label}
           onClick={onClick}
           disabled={disabled}
           iconLeft={iconLeft}
           iconRight={iconRight}
-          buttonType={buttonsType}
+          buttonType={type}
         />
       ))}
     </div>

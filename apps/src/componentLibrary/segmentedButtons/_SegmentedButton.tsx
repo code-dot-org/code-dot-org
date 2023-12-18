@@ -14,11 +14,17 @@ export type SegmentButtonType = 'withLabel' | 'iconOnly' | 'number';
 export interface SegmentedButtonProps {
   /** Button Label */
   label?: string;
+  /** Is button disabled */
   disabled?: boolean;
+  /** Is button selected */
   selected?: boolean;
+  /** Button onClick handler */
   onClick: () => void;
-  buttonType: SegmentButtonType;
+  /** Segmented Button Type */
+  buttonType?: SegmentButtonType;
+  /** Icon left from label*/
   iconLeft?: SegmentedButtonIconProps;
+  /** Icon right from label */
   iconRight?: SegmentedButtonIconProps;
 }
 
@@ -27,7 +33,7 @@ const SegmentedButton: React.FunctionComponent<SegmentedButtonProps> = ({
   disabled,
   selected,
   onClick,
-  buttonType,
+  buttonType = 'withLabel',
   iconLeft,
   iconRight,
 }) => {
@@ -36,7 +42,6 @@ const SegmentedButton: React.FunctionComponent<SegmentedButtonProps> = ({
       type="button"
       disabled={disabled}
       onClick={onClick}
-      key={label}
       className={classnames(
         moduleStyles.segmentedButton,
         moduleStyles[`segmentedButton-${buttonType}`],

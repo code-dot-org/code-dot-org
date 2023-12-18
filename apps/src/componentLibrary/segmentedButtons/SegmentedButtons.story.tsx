@@ -136,3 +136,51 @@ SizesOfSegmentedButtons.args = {
     },
   ],
 };
+
+export const TypesOfSegmentedButtons = MultipleTemplate.bind({});
+TypesOfSegmentedButtons.args = {
+  components: [
+    {
+      buttons: [
+        {label: 'Label', onClick: () => alert('clicked')},
+        {
+          label: 'Label Checked',
+          onClick: () => alert('clicked'),
+        },
+        {
+          label: 'Label Indeterminate',
+          onClick: () => alert('clicked'),
+        },
+      ],
+      type: 'withLabel',
+    },
+    {
+      buttons: [
+        {label: 'Label', onClick: () => alert('clicked')},
+        {
+          label: 'Label Checked',
+          onClick: () => alert('clicked'),
+        },
+        {
+          label: 'Label Indeterminate',
+          onClick: () => alert('clicked'),
+        },
+      ],
+      type: 'iconOnly',
+    },
+    {
+      buttons: [
+        {label: 'Label', onClick: () => alert('clicked')},
+        {
+          label: 'Label Checked',
+          onClick: () => alert('clicked'),
+        },
+        {
+          label: 'Label Indeterminate',
+          onClick: () => alert('clicked'),
+        },
+      ],
+      type: 'number',
+    },
+  ],
+};
