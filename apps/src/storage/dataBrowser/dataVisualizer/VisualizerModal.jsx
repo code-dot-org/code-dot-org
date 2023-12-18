@@ -139,7 +139,7 @@ class VisualizerModal extends React.Component {
       case ChartType.CROSS_TAB:
         return msg.crossTab();
       default:
-        return chartType;
+        return '';
     }
   }
 

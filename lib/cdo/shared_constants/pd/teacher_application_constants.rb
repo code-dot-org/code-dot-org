@@ -285,6 +285,7 @@ module Pd
       scholarship_questions: [
         :underrepresented_minority_percent,
         :free_lunch_percent,
+        :not_teaching_in_access_report,
       ],
       criteria_score_questions_csd: [
         :csd_which_grades,
