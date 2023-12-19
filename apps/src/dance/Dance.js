@@ -10,7 +10,11 @@ var dom = require('../dom');
 import DanceVisualizationColumn from './DanceVisualizationColumn';
 import Sounds from '../Sounds';
 import {TestResults} from '../constants';
-import {ASSET_BASE, DancelabReservedWords} from './constants';
+import {
+  ASSET_BASE,
+  DancelabReservedWords,
+  DANCE_PARTY_LEVELS,
+} from './constants';
 import DanceParty from '@code-dot-org/dance-party/src/p5.dance';
 import DanceAPI from '@code-dot-org/dance-party/src/api';
 import ResourceLoader from '@code-dot-org/dance-party/src/ResourceLoader';
@@ -598,14 +602,15 @@ Dance.prototype.onPuzzleComplete = function (result, message) {
     this.studioApp_.playAudio('failure');
   }
   const state = getStore().getState();
-  analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_VALIDATION, {
-    result, // true if level is passed, false otherwise
-    message, // feedback message key
-    testResults: this.testResults, // number representing test results defined in `src/constants.js`
-    currentLevelId: state.progress.currentLevelId,
-    scriptId: state.progress.scriptId,
-    userId: state.currentUser.userId,
-  });
+  if (!result) {
+    analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_VALIDATION, {
+      message, // feedback message key
+      testResults: this.testResults, // number representing test results defined in `src/constants.js`
+      currentLevelId: state.progress.currentLevelId,
+      level: DANCE_PARTY_LEVELS[state.progress.currentLevelId],
+      userId: state.currentUser.userId,
+    });
+  }
 
   const sendReport = () => {
     this.studioApp_.report({
