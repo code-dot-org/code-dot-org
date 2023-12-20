@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-12-18 20:23:32 UTC",
+    "serialized_at": "2023-12-19 17:54:18 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6530,6 +6530,28 @@
     {
       "chapter": 17,
       "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Web Dev SB comments_2024"
+        ],
+        "lesson.key": "Headings and Lists",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "71547720-513e-45c2-8243-10cae1b2ab29"
+      },
+      "level_keys": [
+        "CSD Web Dev SB comments_2024"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -6553,8 +6575,8 @@
       ]
     },
     {
-      "chapter": 18,
-      "position": 8,
+      "chapter": 19,
+      "position": 9,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -6578,8 +6600,8 @@
       ]
     },
     {
-      "chapter": 19,
-      "position": 9,
+      "chapter": 20,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -6603,7 +6625,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6628,7 +6650,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6653,7 +6675,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6678,7 +6700,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6703,7 +6725,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6728,7 +6750,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6753,7 +6775,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6778,7 +6800,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -6803,7 +6825,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -6828,7 +6850,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -6853,7 +6875,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -6878,7 +6900,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -6903,7 +6925,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -6928,7 +6950,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 10,
       "activity_section_position": 1,
       "assessment": true,
@@ -6953,7 +6975,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -6978,7 +7000,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7003,7 +7025,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7028,7 +7050,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -7053,7 +7075,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -7078,7 +7100,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -7103,7 +7125,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -7128,7 +7150,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -7153,7 +7175,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -7178,7 +7200,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -7203,7 +7225,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7228,7 +7250,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7253,7 +7275,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7278,7 +7300,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -7303,7 +7325,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -7328,7 +7350,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -7353,7 +7375,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -7378,7 +7400,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -7403,7 +7425,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -7428,7 +7450,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7453,7 +7475,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7478,7 +7500,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -7500,7 +7522,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -7522,7 +7544,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7547,7 +7569,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7572,7 +7594,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7597,7 +7619,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 61,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -7622,7 +7644,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 62,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -7647,7 +7669,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 63,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -7672,7 +7694,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 64,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -7697,7 +7719,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 65,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7722,7 +7744,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7744,7 +7766,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 67,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7769,7 +7791,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 68,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -7794,7 +7816,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 69,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -7819,7 +7841,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 70,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -7841,7 +7863,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 71,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -7866,7 +7888,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 72,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -7891,7 +7913,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 73,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7916,7 +7938,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 74,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7941,7 +7963,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 75,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7966,7 +7988,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 76,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7991,7 +8013,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 77,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -8016,7 +8038,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 78,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -8041,7 +8063,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 79,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -8066,7 +8088,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 80,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -8091,7 +8113,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 81,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -8116,7 +8138,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 82,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8141,7 +8163,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 83,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8166,7 +8188,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 84,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8191,7 +8213,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 85,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8216,7 +8238,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 86,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -8241,7 +8263,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 87,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -8266,7 +8288,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 88,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8291,7 +8313,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 89,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -8316,7 +8338,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 90,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -8526,6 +8548,18 @@
         "level.key": "CSD Web Dev choice level ol 1_2024",
         "script_level.level_keys": [
           "CSD Web Dev choice level ol 1_2024"
+        ],
+        "lesson.key": "Headings and Lists",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "71547720-513e-45c2-8243-10cae1b2ab29"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Web Dev SB comments_2024",
+        "script_level.level_keys": [
+          "CSD Web Dev SB comments_2024"
         ],
         "lesson.key": "Headings and Lists",
         "lesson_group.key": "lessonGroup-2",
