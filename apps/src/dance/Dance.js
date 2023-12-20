@@ -10,11 +10,7 @@ var dom = require('../dom');
 import DanceVisualizationColumn from './DanceVisualizationColumn';
 import Sounds from '../Sounds';
 import {TestResults} from '../constants';
-import {
-  ASSET_BASE,
-  DancelabReservedWords,
-  DANCE_PARTY_LEVELS,
-} from './constants';
+import {ASSET_BASE, DancelabReservedWords} from './constants';
 import DanceParty from '@code-dot-org/dance-party/src/p5.dance';
 import DanceAPI from '@code-dot-org/dance-party/src/api';
 import ResourceLoader from '@code-dot-org/dance-party/src/ResourceLoader';
@@ -604,10 +600,9 @@ Dance.prototype.onPuzzleComplete = function (result, message) {
   const state = getStore().getState();
   if (!result) {
     analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_VALIDATION, {
+      levelPath: state.pageConstants.thisLevelUrl,
+      result: 'Failed validation',
       message, // feedback message key
-      testResults: this.testResults, // number representing test results defined in `src/constants.js`
-      currentLevelId: state.progress.currentLevelId,
-      level: DANCE_PARTY_LEVELS[state.progress.currentLevelId],
       userId: state.currentUser.userId,
     });
   }
