@@ -27,7 +27,7 @@ const MultipleTemplate: Story<{
 export const DefaultSegmentedButtons = SingleTemplate.bind({});
 DefaultSegmentedButtons.args = {
   buttons: [
-    {label: 'Label', onClick: () => alert('clicked')},
+    {label: 'Label', onClick: () => alert('clicked'), value: 'label'},
     {
       label: 'Label Checked',
       onClick: () => alert('clicked'),
@@ -36,6 +36,7 @@ DefaultSegmentedButtons.args = {
         iconStyle: 'solid',
         title: 'smile',
       },
+      value: 'label-checked',
     },
     {
       label: 'Label Indeterminate',
@@ -50,9 +51,11 @@ DefaultSegmentedButtons.args = {
         iconStyle: 'solid',
         title: 'smile',
       },
+      value: 'label-indeterminate',
     },
   ],
   size: 'm',
+  selectedButtonValue: 'label',
 };
 
 export const DisabledSegmentedButtons = MultipleTemplate.bind({});
@@ -60,17 +63,25 @@ DisabledSegmentedButtons.args = {
   components: [
     {
       buttons: [
-        {label: 'Label', onClick: () => alert('clicked'), disabled: true},
+        {
+          label: 'Label',
+          onClick: () => alert('clicked'),
+          disabled: true,
+          value: 'label',
+        },
         {
           label: 'Label Checked',
           onClick: () => alert('clicked'),
+          value: 'label-checked',
         },
         {
           label: 'Label Indeterminate',
           onClick: () => alert('clicked'),
+          value: 'label-indeterminate',
         },
       ],
       size: 'm',
+      selectedButtonValue: 'label-checked',
     },
   ],
 };
@@ -80,59 +91,71 @@ SizesOfSegmentedButtons.args = {
   components: [
     {
       buttons: [
-        {label: 'Label', onClick: () => alert('clicked')},
+        {label: 'Label', onClick: () => alert('clicked'), value: 'label'},
         {
           label: 'Label Checked',
           onClick: () => alert('clicked'),
+          value: 'label-checked',
         },
         {
           label: 'Label Indeterminate',
           onClick: () => alert('clicked'),
+          value: 'label-indeterminate',
         },
       ],
       size: 'xs',
+      selectedButtonValue: 'label',
     },
     {
       buttons: [
-        {label: 'Label', onClick: () => alert('clicked')},
+        {label: 'Label', onClick: () => alert('clicked'), value: 'label'},
         {
           label: 'Label Checked',
           onClick: () => alert('clicked'),
+          value: 'label-checked',
         },
         {
           label: 'Label Indeterminate',
           onClick: () => alert('clicked'),
+          value: 'label-indeterminate',
         },
       ],
       size: 's',
+      selectedButtonValue: 'label-checked',
     },
     {
       buttons: [
-        {label: 'Label', onClick: () => alert('clicked')},
+        {label: 'Label', onClick: () => alert('clicked'), value: 'label'},
         {
           label: 'Label Checked',
           onClick: () => alert('clicked'),
+          value: 'label-checked',
         },
         {
           label: 'Label Indeterminate',
           onClick: () => alert('clicked'),
+          value: 'label-indeterminate',
         },
       ],
       size: 'm',
+      selectedButtonValue: 'label-indeterminate',
     },
     {
       buttons: [
-        {label: 'Label', onClick: () => alert('clicked')},
+        {label: 'Label', onClick: () => alert('clicked'), value: 'label'},
         {
           label: 'Label Checked',
           onClick: () => alert('clicked'),
+          value: 'label-checked',
         },
         {
           label: 'Label Indeterminate',
           onClick: () => alert('clicked'),
+          value: 'label-indeterminate',
         },
       ],
       size: 'l',
+      selectedButtonValue: 'label',
     },
   ],
 };
@@ -142,45 +165,70 @@ TypesOfSegmentedButtons.args = {
   components: [
     {
       buttons: [
-        {label: 'Label', onClick: () => alert('clicked')},
+        {label: 'Label', onClick: () => alert('clicked'), value: 'label'},
         {
-          label: 'Label Checked',
+          label: 'Label Two',
           onClick: () => alert('clicked'),
+          value: 'label-two',
         },
         {
-          label: 'Label Indeterminate',
+          label: 'Label Three',
           onClick: () => alert('clicked'),
+          value: 'label-three',
         },
       ],
       type: 'withLabel',
+      selectedButtonValue: 'label',
     },
     {
       buttons: [
-        {label: 'Label', onClick: () => alert('clicked')},
         {
-          label: 'Label Checked',
+          icon: {
+            iconName: 'check',
+            iconStyle: 'solid',
+            title: 'check',
+          },
           onClick: () => alert('clicked'),
+          value: 'icon-check',
         },
         {
-          label: 'Label Indeterminate',
+          icon: {
+            iconName: 'smile',
+            iconStyle: 'solid',
+            title: 'smile',
+          },
           onClick: () => alert('clicked'),
+          value: 'icon-smile',
+        },
+        {
+          icon: {
+            iconName: 'house',
+            iconStyle: 'solid',
+            title: 'house',
+          },
+          onClick: () => alert('clicked'),
+          value: 'icon-house',
         },
       ],
       type: 'iconOnly',
+      selectedButtonValue: 'icon-check',
     },
     {
       buttons: [
-        {label: 'Label', onClick: () => alert('clicked')},
+        {label: '1', onClick: () => alert('clicked'), value: '1'},
         {
-          label: 'Label Checked',
+          label: '2',
           onClick: () => alert('clicked'),
+          value: '2',
         },
         {
-          label: 'Label Indeterminate',
+          label: '3',
           onClick: () => alert('clicked'),
+          value: '3',
         },
       ],
       type: 'number',
+      selectedButtonValue: '1',
     },
   ],
 };

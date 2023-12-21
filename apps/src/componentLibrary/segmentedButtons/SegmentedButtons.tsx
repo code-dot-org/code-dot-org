@@ -16,15 +16,14 @@ export interface SegmentedButtonsProps {
   size?: ComponentSizeXSToL;
   /** Segmented Buttons Type (visual)*/
   type?: SegmentButtonType;
+  /** Segmented Buttons selected button unique value */
+  selectedButtonValue: string;
 }
 
 // Todo:
-// 2. Add selected state
-// 3. Add disabled state
-// 6. Add active state
-// 16. check different types appearance
 // 8. Add aria attributes
 // 9. Add tests
+// 16. Add selected change logic (to storybook or to the component itself)
 // 10. Add storybook ++
 // 11. Add documentation ++
 // 12. Add prop types ++
@@ -34,13 +33,17 @@ export interface SegmentedButtonsProps {
 // 7. Add keyboard navigation ++
 // 5. Add focus state ++
 // 4. Add hover state ++
+// 2. Add selected state ++
+// 3. Add disabled state ++
+// 6. Add active state ++
+// 16. check different types appearance ++
 
 /**
  * ### Production-ready Checklist:
  * * (?) implementation of component approved by design team;
  * * (?) has storybook, covered with stories and documentation;
  * * (?) has tests: test every prop, every state and every interaction that's js related;
- * * (see apps/test/unit/componentLibrary/RadioButtonTest.jsx, apps/test/unit/componentLibrary/SegmentedButtonTest.jsx)
+ * * (see apps/test/unit/componentLibrary/SegmentedButtonTest.jsx)
  * * (?) passes accessibility checks;
  *
  * ###  Status: ```Wip```
@@ -49,6 +52,7 @@ export interface SegmentedButtonsProps {
  */
 const SegmentedButtons: React.FunctionComponent<SegmentedButtonsProps> = ({
   buttons,
+  selectedButtonValue,
   size = 'm',
   type = 'withLabel',
 }) => {
@@ -59,17 +63,22 @@ const SegmentedButtons: React.FunctionComponent<SegmentedButtonsProps> = ({
         moduleStyles[`segmentedButtons-${size}`]
       )}
     >
-      {buttons.map(({label, onClick, disabled, iconLeft, iconRight}) => (
-        <SegmentedButton
-          key={label}
-          label={label}
-          onClick={onClick}
-          disabled={disabled}
-          iconLeft={iconLeft}
-          iconRight={iconRight}
-          buttonType={type}
-        />
-      ))}
+      {buttons.map(
+        ({label, onClick, disabled, iconLeft, iconRight, icon, value}) => (
+          <SegmentedButton
+            key={label}
+            selected={selectedButtonValue === value}
+            label={label}
+            onClick={onClick}
+            disabled={disabled}
+            iconLeft={iconLeft}
+            iconRight={iconRight}
+            icon={icon}
+            buttonType={type}
+            value={value}
+          />
+        )
+      )}
     </div>
   );
 };

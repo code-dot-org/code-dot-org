@@ -21,6 +21,41 @@
       margin-right: -1px;
     }
   }
+
+  // Selected styles
+  .selectedSegmentedButton {
+    background-color: $light_primary_500;
+    border-color: $light_primary_500;
+    color: $light_white;
+
+    // Hover styles
+    &:hover {
+      background-color: $light_primary_500;
+      border-color: $light_primary_500;
+      color: $light_white;
+    }
+
+    // Focus styles
+    &:focus-visible {
+      background-color: $light_primary_100;
+      border-color: $light_gray_200;
+      color: $light_black;
+    }
+
+    // Pressed styles
+    &:active {
+      background-color: $light_primary_500;
+      border-color: $light_primary_500;
+      color: $light_white;
+    }
+
+    // Disabled styles
+    &:disabled {
+      background-color: $light_primary_100;
+      border-color: $light_primary_100;
+      color: $light_white;
+    }
+  }
 }
 
 .segmentedButton {
@@ -51,7 +86,7 @@
 
   // Pressed styles
   &:active {
-    background-color: $light_primary_500;
+    background-color: $light_primary_700;
     // Important here is needed to rewrite line 3320, app/assets/stylesheets/application.scss */
     border-color: $light_primary_500 !important;
     color: $light_white;
@@ -77,6 +112,7 @@
 
   .segmentedButton-number {
     padding: 0.625rem 0;
+    width: 3rem;
   }
 
   .segmentedButton {
@@ -105,6 +141,7 @@
 
   .segmentedButton-number {
     padding: 0.5rem 0;
+    width: 2.5rem;
   }
 
   .segmentedButton {
@@ -133,6 +170,7 @@
 
   .segmentedButton-number {
     padding: 0.3125rem 0;
+    width: 2rem;
   }
 
   .segmentedButton {
@@ -161,6 +199,7 @@
 
   .segmentedButton-number {
     padding: 0.125rem 0;
+    width: 1.5rem;
   }
 
   .segmentedButton {

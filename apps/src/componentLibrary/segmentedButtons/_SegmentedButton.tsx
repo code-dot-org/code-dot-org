@@ -18,6 +18,8 @@ export interface SegmentedButtonProps {
   disabled?: boolean;
   /** Is button selected */
   selected?: boolean;
+  /** Button unique value. Used for selected/not selected logic */
+  value: string;
   /** Button onClick handler */
   onClick: () => void;
   /** Segmented Button Type */
@@ -26,6 +28,8 @@ export interface SegmentedButtonProps {
   iconLeft?: SegmentedButtonIconProps;
   /** Icon right from label */
   iconRight?: SegmentedButtonIconProps;
+  /** Icon for IconOnly button type */
+  icon?: SegmentedButtonIconProps;
 }
 
 const SegmentedButton: React.FunctionComponent<SegmentedButtonProps> = ({
@@ -36,6 +40,7 @@ const SegmentedButton: React.FunctionComponent<SegmentedButtonProps> = ({
   buttonType = 'withLabel',
   iconLeft,
   iconRight,
+  icon,
 }) => {
   return (
     <button
@@ -48,6 +53,13 @@ const SegmentedButton: React.FunctionComponent<SegmentedButtonProps> = ({
         selected && moduleStyles.selectedSegmentedButton
       )}
     >
+      {buttonType === 'iconOnly' && icon && (
+        <FontAwesomeV6Icon
+          iconName={icon.iconName}
+          iconStyle={icon.iconStyle}
+          title={icon.title}
+        />
+      )}
       {iconLeft && (
         <FontAwesomeV6Icon
           iconName={iconLeft.iconName}
