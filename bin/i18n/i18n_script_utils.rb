@@ -68,7 +68,7 @@ CROWDIN_TEST_PROJECTS = {
 
 class I18nScriptUtils
   PROGRESS_BAR_FORMAT = '%t: |%B| %p% %a'.freeze
-  PARALLEL_PROCESSES = Parallel.processor_count / 2
+  PARALLEL_PROCESSES = Parallel.processor_count.freeze
   SOURCE_LOCALE = 'en-US'.freeze
   TTS_LOCALES = (::TextToSpeech::VOICES.keys - %i[en-US]).freeze
 
@@ -383,11 +383,11 @@ class I18nScriptUtils
   end
 
   def self.create_progress_bar(**args)
-    ProgressBar.create(**args, format: PROGRESS_BAR_FORMAT)
+    ProgressBar.create(format: PROGRESS_BAR_FORMAT, **args)
   end
 
   def self.process_in_threads(data_array, **args)
-    Parallel.each(data_array, **args, in_threads: PARALLEL_PROCESSES) {|data| yield(data)}
+    Parallel.each(data_array, in_threads: PARALLEL_PROCESSES, **args) {|data| yield(data)}
   end
 
   # Writes file

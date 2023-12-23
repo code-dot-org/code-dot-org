@@ -45,6 +45,8 @@ module MiniTest
 
   class Spec
     before do
+      I18n::Metrics.stubs(:log_metric) if defined?(I18n::Metrics)
+
       if ENV['CIRCLECI']
         STDOUT.stubs(:print)
         STDOUT.stubs(:puts)

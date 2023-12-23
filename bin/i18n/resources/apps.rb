@@ -9,6 +9,12 @@ module I18n
         Labs.sync_in
       end
 
+      def self.sync_up
+        Animations.sync_up
+        ExternalSources.sync_up
+        Labs.sync_up
+      end
+
       def self.sync_out
         Animations.sync_out
         ExternalSources.sync_out

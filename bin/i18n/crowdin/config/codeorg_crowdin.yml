@@ -32,6 +32,10 @@ files: [
   #
   # hourofcode content is handled by the hourofcode-specific sync
   "ignore" : [
+    "/animations/**",
+    "/blockly-core/**",
+    "/blockly-mooc/**",
+    "/external-sources/**",
     "/hourofcode/**",
     "/dashboard/restricted.yml"
   ],
@@ -46,6 +50,10 @@ files: [
   "source" : "/**/*.json",
   "translation" : "/%language%/**/%original_file_name%",
   "ignore" : [
+    "/animations/**",
+    "/blockly-core/**",
+    "/blockly-mooc/**",
+    "/external-sources/**",
     "/hourofcode/**",
     "/blockly-mooc/calc.json",
     "/blockly-mooc/eval.json",

@@ -7,17 +7,7 @@ module Crowdin
   module ClientExtensions
     # Project Id is at https://crowdin.com/project/<project_name>/tools/api
     # Project source language is at https://crowdin.com/project/<project_name>/settings
-    CDO_PROJECT_IDS = {
-      'codeorg' => 26074,
-      'hour-of-code' => 55536,
-      'codeorg-markdown' => 314545,
-      'codeorg-restricted' => 464582,
-      'codeorg-testing' => 346087,
-      'codeorg-markdown-testing' => 547997,
-      'hour-of-code-test' => 634038,
-      'codeorg-restricted-test' => 634320
-
-    }
+    CDO_PROJECT_IDS = CDO.crowdin_project_ids.freeze
 
     CDO_PROJECT_SOURCE_LANGUAGES = {
       'codeorg' => 'enus',
