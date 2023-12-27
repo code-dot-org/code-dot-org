@@ -4,26 +4,28 @@ import classnames from 'classnames';
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 
 import SegmentedButton, {
-  SegmentedButtonProps,
+  SegmentedButtonModel,
   SegmentButtonType,
 } from './_SegmentedButton';
 import moduleStyles from './segmentedButtons.module.scss';
 
 export interface SegmentedButtonsProps {
   /** Array of props for Segmented Buttons to render */
-  buttons: SegmentedButtonProps[];
+  buttons: SegmentedButtonModel[];
   /** Segmented Buttons Size*/
   size?: ComponentSizeXSToL;
   /** Segmented Buttons Type (visual)*/
   type?: SegmentButtonType;
   /** Segmented Buttons selected button unique value */
   selectedButtonValue: string;
+  /** Segmented Buttons onChange handler */
+  onChange: (value: string) => void;
 }
 
 // Todo:
 // 8. Add aria attributes
 // 9. Add tests
-// 16. Add selected change logic (to storybook or to the component itself)
+// 16. Add selected change logic (to storybook or to the component itself) ++
 // 10. Add storybook ++
 // 11. Add documentation ++
 // 12. Add prop types ++
@@ -53,6 +55,7 @@ export interface SegmentedButtonsProps {
 const SegmentedButtons: React.FunctionComponent<SegmentedButtonsProps> = ({
   buttons,
   selectedButtonValue,
+  onChange,
   size = 'm',
   type = 'withLabel',
 }) => {
@@ -63,22 +66,20 @@ const SegmentedButtons: React.FunctionComponent<SegmentedButtonsProps> = ({
         moduleStyles[`segmentedButtons-${size}`]
       )}
     >
-      {buttons.map(
-        ({label, onClick, disabled, iconLeft, iconRight, icon, value}) => (
-          <SegmentedButton
-            key={label}
-            selected={selectedButtonValue === value}
-            label={label}
-            onClick={onClick}
-            disabled={disabled}
-            iconLeft={iconLeft}
-            iconRight={iconRight}
-            icon={icon}
-            buttonType={type}
-            value={value}
-          />
-        )
-      )}
+      {buttons.map(({label, disabled, iconLeft, iconRight, icon, value}) => (
+        <SegmentedButton
+          key={label}
+          selected={selectedButtonValue === value}
+          label={label}
+          onChange={onChange}
+          disabled={disabled}
+          iconLeft={iconLeft}
+          iconRight={iconRight}
+          icon={icon}
+          buttonType={type}
+          value={value}
+        />
+      ))}
     </div>
   );
 };

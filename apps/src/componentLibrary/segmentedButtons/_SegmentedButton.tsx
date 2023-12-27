@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 import classnames from 'classnames';
 import moduleStyles from '@cdo/apps/componentLibrary/segmentedButtons/segmentedButtons.module.scss';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
@@ -11,7 +11,7 @@ type SegmentedButtonIconProps = {
 
 export type SegmentButtonType = 'withLabel' | 'iconOnly' | 'number';
 
-export interface SegmentedButtonProps {
+export interface SegmentedButtonModel {
   /** Button Label */
   label?: string;
   /** Is button disabled */
@@ -20,8 +20,6 @@ export interface SegmentedButtonProps {
   selected?: boolean;
   /** Button unique value. Used for selected/not selected logic */
   value: string;
-  /** Button onClick handler */
-  onClick: () => void;
   /** Segmented Button Type */
   buttonType?: SegmentButtonType;
   /** Icon left from label*/
@@ -32,21 +30,29 @@ export interface SegmentedButtonProps {
   icon?: SegmentedButtonIconProps;
 }
 
+interface SegmentedButtonProps extends SegmentedButtonModel {
+  /** Segmented Button onChange handler */
+  onChange: (value: string) => void;
+}
+
 const SegmentedButton: React.FunctionComponent<SegmentedButtonProps> = ({
   label,
   disabled,
   selected,
-  onClick,
   buttonType = 'withLabel',
   iconLeft,
   iconRight,
   icon,
+  value,
+  onChange,
 }) => {
+  const handleClick = useCallback(() => onChange(value), [onChange, value]);
+
   return (
     <button
       type="button"
       disabled={disabled}
-      onClick={onClick}
+      onClick={handleClick}
       className={classnames(
         moduleStyles.segmentedButton,
         moduleStyles[`segmentedButton-${buttonType}`],
