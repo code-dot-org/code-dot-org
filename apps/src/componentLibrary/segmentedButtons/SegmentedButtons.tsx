@@ -45,7 +45,7 @@ export interface SegmentedButtonsProps {
  * * (?) implementation of component approved by design team;
  * * (?) has storybook, covered with stories and documentation;
  * * (?) has tests: test every prop, every state and every interaction that's js related;
- * * (see apps/test/unit/componentLibrary/SegmentedButtonTest.jsx)
+ * * (see apps/test/unit/componentLibrary/SegmentedButtonsTest.jsx)
  * * (?) passes accessibility checks;
  *
  * ###  Status: ```Wip```
