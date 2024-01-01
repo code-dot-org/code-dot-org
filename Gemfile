@@ -349,6 +349,6 @@ gem 'pry', '~> 0.14.0'
 # Google's Compact Language Detector
 gem 'cld'
 
-gem 'crowdin-api', '~> 1.2.1'
+gem 'crowdin-api', '~> 1.6.0'
 
 gem "delayed_job_active_record", "~> 4.1"

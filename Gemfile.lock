@@ -298,7 +298,7 @@ GEM
     crack (0.4.5)
       rexml
     crass (1.0.6)
-    crowdin-api (1.2.1)
+    crowdin-api (1.6.0)
       open-uri (>= 0.1.0, < 0.2.0)
       rest-client (>= 2.0.0, < 2.1.0)
     css_parser (1.10.0)
@@ -843,7 +843,7 @@ GEM
       net-ssh (>= 2.8.0)
     state_machine (1.2.0)
     stringex (2.5.2)
-    stringio (3.0.7)
+    stringio (3.1.0)
     swd (1.0.1)
       activesupport (>= 3)
       attr_required (>= 0.0.5)
@@ -866,7 +866,7 @@ GEM
     thwait (0.2.0)
       e2mmap
     tilt (2.0.11)
-    time (0.2.2)
+    time (0.3.0)
       date
     timecop (0.8.1)
     timeout (0.3.2)
@@ -887,7 +887,7 @@ GEM
     unf_ext (0.0.7.2)
     unicode-display_width (2.4.2)
     unicode_utils (1.4.0)
-    uri (0.12.1)
+    uri (0.13.0)
     user_agent_parser (2.3.0)
     uuid (2.3.9)
       macaddr (~> 1.0)
@@ -970,7 +970,7 @@ DEPENDENCIES
   cld
   colorize
   composite_primary_keys (~> 13.0)
-  crowdin-api (~> 1.2.1)
+  crowdin-api (~> 1.6.0)
   cucumber
   daemons
   dalli
