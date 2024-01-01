@@ -22,6 +22,10 @@ module I18n
           SyncIn.perform
         end
 
+        def self.sync_up
+          SyncUp.perform
+        end
+
         def self.sync_out
           SyncOut.perform
         end
