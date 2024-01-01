@@ -57,6 +57,7 @@ describe I18n::Metrics do
     end
 
     before do
+      described_class.unstub(:log_metric)
       CDO.stubs(:rack_env).returns(cdo_rack_env)
       Net::HTTP.stubs(:get).with(cdo_ec2_instance_id_endpoint_uri).returns(machine_id)
     end
