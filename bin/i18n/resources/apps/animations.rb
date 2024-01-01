@@ -1,7 +1,5 @@
 require_relative '../../i18n_script_utils'
 
-Dir[File.expand_path('../animations/**/*.rb', __FILE__)].sort.each {|file| require file}
-
 module I18n
   module Resources
     module Apps
@@ -14,6 +12,10 @@ module I18n
           SyncIn.perform
         end
 
+        def self.sync_up
+          SyncUp.perform
+        end
+
         def self.sync_out
           SyncOut.perform
         end
@@ -21,3 +23,5 @@ module I18n
     end
   end
 end
+
+Dir[File.expand_path('../animations/**/*.rb', __FILE__)].sort.each {|file| require file}
