@@ -167,7 +167,7 @@ export function addMutationToBehaviorDefBlocks(blockElement) {
 
   // In CDO Blockly, behavior ids were stored on the field. Google Blockly
   // expects this kind of extra state in a mutator.
-  const nameField = blockElement.querySelector('field[name="NAME"]');
+  const nameField = getNameField(blockElement);
   const idAttribute = nameField && nameField.getAttribute('id');
   if (idAttribute) {
     // Create new mutation attribute based on original block attribute.
@@ -214,7 +214,7 @@ export function addNameToBlockFunctionDefinitionBlock(blockElement) {
   if (blockType !== BLOCK_TYPES.procedureDefinition) {
     return;
   }
-  const fieldElement = blockElement.querySelector('field[name="NAME"]');
+  const fieldElement = getNameField(blockElement);
   if (!fieldElement) {
     return;
   }
@@ -272,6 +272,15 @@ export function addMutationToTextJoinBlock(blockElement) {
   // Google Blockly expects this kind of extra state to be in a mutator.
   const inputCount = blockElement.getAttribute('inputcount');
   mutationElement.setAttribute('items', inputCount);
+}
+
+function getNameField(blockElement) {
+  // Title is the legacy name for field, we support getting name from
+  // either field or title.
+  return (
+    blockElement.querySelector('field[name="NAME"]') ||
+    blockElement.querySelector('title[name="NAME"]')
+  );
 }
 
 /**

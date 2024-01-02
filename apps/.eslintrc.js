@@ -6,11 +6,9 @@
 // below, so that we can more easily track fixing violations and eventually
 // reenabling.
 const rulesToEventuallyReenable = {
-  'jsx-a11y/alt-text': 'off',
   'jsx-a11y/anchor-is-valid': 'off',
   'jsx-a11y/blob': 'off',
   'jsx-a11y/click-events-have-key-events': 'off',
-  'jsx-a11y/interactive-supports-focus': 'off',
   'jsx-a11y/label-has-associated-control': 'off',
   'jsx-a11y/mouse-events-have-key-events': 'off',
   'jsx-a11y/no-noninteractive-element-interactions': 'off',

@@ -44,7 +44,7 @@
     "preload_asset_list": null
   },
   "notes": "Sequence matters. Blocks already in the workspace, but not connected.  Order these blocks to solve the puzzle.",
-  "audit_log": "[{\"changed_at\":\"2023-12-12T23:10:04.914+00:00\",\"changed\":[\"cloned from \\\"courseC_collector_prog3_2023\\\"\"],\"cloned_from\":\"courseC_collector_prog3_2023\"},{\"changed_at\":\"2023-12-12 23:14:38 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-12-12T23:10:04.914+00:00\",\"changed\":[\"cloned from \\\"courseC_collector_prog3_2023\\\"\"],\"cloned_from\":\"courseC_collector_prog3_2023\"},{\"changed_at\":\"2023-12-12 23:14:38 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2023-12-14 22:27:39 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

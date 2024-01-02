@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "coursed-maker",
-    "serialized_at": "2023-12-07 20:34:26 UTC",
+    "serialized_at": "2023-12-14 18:26:01 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -119,9 +119,10 @@
       "name": "Saving sea turtles",
       "absolute_position": 4,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
+        "overview": "This lesson plan is not available on Code.org's website - instead, [click here to access micro:bit Physical Computing Fundamentals pp. 22-24](https://code.org/maker/assets/CSF-Booklet-Course-D-Nov2023.pdf#page=22)"
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -186,9 +187,10 @@
       "name": "Rock, paper, scissors",
       "absolute_position": 8,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 8,
       "properties": {
+        "overview": "This lesson plan is not available on Code.org's website - instead, [click here to access micro:bit Physical Computing Fundamentals pp. 25-27](https://code.org/maker/assets/CSF-Booklet-Course-D-Nov2023.pdf#page=25)"
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
@@ -235,9 +237,10 @@
       "name": "Activity picker",
       "absolute_position": 11,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 11,
       "properties": {
+        "overview": "This lesson plan is not available on Code.org's website - instead, [click here to access micro:bit Physical Computing Fundamentals pp. 28-30](https://code.org/maker/assets/CSF-Booklet-Course-D-Nov2023.pdf#page=28)"
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -371,6 +374,18 @@
       }
     },
     {
+      "key": "ce267257-09ce-4c5f-a7f0-84b3f17c573e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ce267257-09ce-4c5f-a7f0-84b3f17c573e",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "coursed-maker-2024"
+      }
+    },
+    {
       "key": "cb7f4337-a847-4696-ac11-bd457415cbbd",
       "position": 1,
       "properties": {
@@ -494,6 +509,18 @@
       }
     },
     {
+      "key": "675734f8-febb-41d2-8eaf-f29b79073289",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "675734f8-febb-41d2-8eaf-f29b79073289",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursed-maker-2024"
+      }
+    },
+    {
       "key": "705958a4-4bfa-4487-91d5-145b8055bb6e",
       "position": 1,
       "properties": {
@@ -543,6 +570,18 @@
       "seeding_key": {
         "lesson_activity.key": "a27425a5-6a28-44e5-9273-de7c792db89a",
         "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "coursed-maker-2024"
+      }
+    },
+    {
+      "key": "a8ad97dd-ec10-4a94-b135-206fc4a71cb4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a8ad97dd-ec10-4a94-b135-206fc4a71cb4",
+        "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "coursed-maker-2024"
       }
@@ -871,6 +910,17 @@
       "seeding_key": {
         "activity_section.key": "b60b222d-c7ca-4649-ab32-3c41895c2dac",
         "lesson_activity.key": "9b88c0cc-78a3-433a-975a-2b7951e8b0bd"
+      }
+    },
+    {
+      "key": "6229743e-885f-4c34-aafe-ccd51cc02048",
+      "position": 1,
+      "properties": {
+        "progression_name": "Saving Sea Turtles"
+      },
+      "seeding_key": {
+        "activity_section.key": "6229743e-885f-4c34-aafe-ccd51cc02048",
+        "lesson_activity.key": "ce267257-09ce-4c5f-a7f0-84b3f17c573e"
       }
     },
     {
@@ -1397,6 +1447,17 @@
       }
     },
     {
+      "key": "33c79d74-b1cf-416e-9911-42a58a5a8f4b",
+      "position": 1,
+      "properties": {
+        "progression_name": "Rock, Paper, Scissors"
+      },
+      "seeding_key": {
+        "activity_section.key": "33c79d74-b1cf-416e-9911-42a58a5a8f4b",
+        "lesson_activity.key": "675734f8-febb-41d2-8eaf-f29b79073289"
+      }
+    },
+    {
       "key": "bde0c09b-4141-4127-b150-79cccd45e29a",
       "position": 1,
       "properties": {
@@ -1548,6 +1609,17 @@
         "activity_section.key": "8be45bea-7b66-49b4-9adf-541054d9aeae",
         "lesson_activity.key": "a27425a5-6a28-44e5-9273-de7c792db89a"
       }
+    },
+    {
+      "key": "8f60b255-a3c7-4a1d-9d23-15924ffbf102",
+      "position": 1,
+      "properties": {
+        "progression_name": "Activity Picker"
+      },
+      "seeding_key": {
+        "activity_section.key": "8f60b255-a3c7-4a1d-9d23-15924ffbf102",
+        "lesson_activity.key": "a8ad97dd-ec10-4a94-b135-206fc4a71cb4"
+      }
     }
   ],
   "script_levels": [
@@ -1557,6 +1629,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ConditionalsWithCards-Unplugged2022_maker"
+        ],
         "progression": "Conditionals with Cards - Unplugged Activity"
       },
       "bonus": false,
@@ -1579,6 +1654,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionalsVid1_maker"
+        ],
         "progression": "Video: Conditionals: If Statements"
       },
       "bonus": false,
@@ -1601,6 +1679,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals1_predict1_maker"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -1623,6 +1704,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals2_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1645,6 +1729,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals3_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1667,6 +1754,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals4_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1689,6 +1779,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals5_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1711,6 +1804,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals6_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1733,6 +1829,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionalsVidIfElse_maker"
+        ],
         "progression": "Video: Conditionals: If and If/Else Statements"
       },
       "bonus": false,
@@ -1755,6 +1854,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals7_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1777,6 +1879,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals7_predict2_maker"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -1800,6 +1905,9 @@
       "assessment": false,
       "properties": {
         "challenge": true,
+        "level_keys": [
+          "courseD_bee_conditionals8_maker"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -1822,6 +1930,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals9_maker"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1844,6 +1955,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals10_maker"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1866,6 +1980,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals_challenge1_maker"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -1888,6 +2005,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals_challenge2_maker"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -1910,6 +2030,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_2022LessonExtra14a_maker"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -1932,6 +2055,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_2022_LessonExtra14b_maker"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -1954,6 +2080,31 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Saving Sea Turtles"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course_d_maker_saving_sea_turtles"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "coursed-maker-2024",
+        "activity_section.key": "6229743e-885f-4c34-aafe-ccd51cc02048"
+      },
+      "level_keys": [
+        "course_d_maker_saving_sea_turtles"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseE_video_introSpriteLab_maker"
+        ],
         "progression": "Video: Hello World: Welcome to Sprite Lab"
       },
       "bonus": false,
@@ -1971,11 +2122,14 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_say_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1993,11 +2147,14 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_location_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2015,11 +2172,14 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_multi_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2037,11 +2197,14 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_click_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2059,11 +2222,14 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_eventsvideo_maker"
+        ],
         "progression": "Video: Hello World: Programming with Events"
       },
       "bonus": false,
@@ -2081,11 +2247,14 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_events_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2103,11 +2272,14 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_backgrounds_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2125,11 +2297,14 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_costumes_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2147,11 +2322,14 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 10,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_sizes_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2169,11 +2347,14 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 11,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_behaviors_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2191,11 +2372,14 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 12,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_sounds_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2213,11 +2397,14 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_freeplayvideo_maker"
+        ],
         "progression": "Video: Hello World: Do What You Want"
       },
       "bonus": false,
@@ -2235,11 +2422,14 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_freeplay_maker"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -2257,11 +2447,14 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_intro video_maker"
+        ],
         "progression": "Ecosystems Video"
       },
       "bonus": false,
@@ -2279,11 +2472,14 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_fish_maker"
+        ],
         "progression": "Ecosystems Simulation"
       },
       "bonus": false,
@@ -2301,11 +2497,14 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_algae_maker"
+        ],
         "progression": "Food Chain Setup"
       },
       "bonus": false,
@@ -2323,11 +2522,14 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_boat_maker"
+        ],
         "progression": "Food Chain Setup"
       },
       "bonus": false,
@@ -2345,11 +2547,14 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 5,
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_matching_events_maker"
+        ],
         "progression": "Food Chain Setup"
       },
       "bonus": false,
@@ -2367,11 +2572,14 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_conditionals_overview_maker"
+        ],
         "progression": "If... then... Conditional Statements"
       },
       "bonus": false,
@@ -2389,11 +2597,14 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_coral_maker"
+        ],
         "progression": "If... then... Conditional Statements"
       },
       "bonus": false,
@@ -2411,11 +2622,14 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_coral_health_maker"
+        ],
         "progression": "If... then... Conditional Statements"
       },
       "bonus": false,
@@ -2433,11 +2647,14 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 9,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_justright_algae_maker"
+        ],
         "progression": "If... then... Conditional Statements"
       },
       "bonus": false,
@@ -2455,11 +2672,14 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 10,
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_matching_conditionals_maker"
+        ],
         "progression": "If... then... Conditional Statements"
       },
       "bonus": false,
@@ -2477,11 +2697,14 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_algae_freeplay_maker"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -2499,11 +2722,36 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Rock, Paper, Scissors"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course_d_maker_rock_paper_scissors"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursed-maker-2024",
+        "activity_section.key": "33c79d74-b1cf-416e-9911-42a58a5a8f4b"
+      },
+      "level_keys": [
+        "course_d_maker_rock_paper_scissors"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_variables_predict_maker"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -2521,11 +2769,14 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 47,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_pilotVideo_prompts_maker"
+        ],
         "progression": "Video: Text and Prompts"
       },
       "bonus": false,
@@ -2543,11 +2794,14 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 48,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_review_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2565,11 +2819,14 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 49,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_print_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2587,11 +2844,14 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 50,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_events_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2609,11 +2869,14 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 51,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_prompts_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2631,11 +2894,14 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 52,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_answer_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2653,11 +2919,14 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 53,
       "position": 8,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_concat_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2675,11 +2944,14 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 54,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_practice2022_2022_pilot_-2022-2_maker"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2694,6 +2966,28 @@
       },
       "level_keys": [
         "courseF_text_practice2022_2022_pilot_-2022-2_maker"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Activity Picker"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course_d_maker_activity_picker"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "coursed-maker-2024",
+        "activity_section.key": "8f60b255-a3c7-4a1d-9d23-15924ffbf102"
+      },
+      "level_keys": [
+        "course_d_maker_activity_picker"
       ]
     }
   ],
@@ -2912,6 +3206,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "coursed-maker-2024",
         "activity_section.key": "86e50617-f157-453b-8a2f-db16284ef146"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "course_d_maker_saving_sea_turtles",
+        "script_level.level_keys": [
+          "course_d_maker_saving_sea_turtles"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "coursed-maker-2024",
+        "activity_section.key": "6229743e-885f-4c34-aafe-ccd51cc02048"
       }
     },
     {
@@ -3216,6 +3522,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "course_d_maker_rock_paper_scissors",
+        "script_level.level_keys": [
+          "course_d_maker_rock_paper_scissors"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursed-maker-2024",
+        "activity_section.key": "33c79d74-b1cf-416e-9911-42a58a5a8f4b"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "courseF_variables_predict_maker",
         "script_level.level_keys": [
           "courseF_variables_predict_maker"
@@ -3320,6 +3638,18 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "coursed-maker-2024",
         "activity_section.key": "499cf2d4-7c44-4461-943f-7e624d2a58c5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "course_d_maker_activity_picker",
+        "script_level.level_keys": [
+          "course_d_maker_activity_picker"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "coursed-maker-2024",
+        "activity_section.key": "8f60b255-a3c7-4a1d-9d23-15924ffbf102"
       }
     }
   ],
