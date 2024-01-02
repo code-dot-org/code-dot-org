@@ -127,7 +127,7 @@ class LtiV1Controller < ApplicationController
     @lti_section_sync_result = {error: message}
     return respond_to do |format|
       format.html do
-        render lti_v1_sync_course_path
+        render lti_v1_sync_course_path, status: status
       end
       format.json {render json: @lti_section_sync_result, status: :bad_request}
     end
@@ -139,7 +139,7 @@ class LtiV1Controller < ApplicationController
   def sync_course
     return unauthorized_status unless current_user
     unless current_user.teacher?
-      return render_sync_course_error("User must be a teacher.", :bad_request)
+      return redirect_to home_path
     end
     params.require([:lti_integration_id, :deployment_id, :context_id, :rlid, :nrps_url]) if params[:section_code].blank?
 
