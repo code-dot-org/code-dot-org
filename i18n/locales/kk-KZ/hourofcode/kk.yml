@@ -901,6 +901,9 @@ kk:
   cs_ambassador_application_date: Өтінімдер 2023 жылдың 8 қарашасына дейін ашық
   cs_ambassador_application_subhead: Өтінішіңізді бүгін беру үшін мұғаліммен жұмыс
     жасаңыз
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: Сұрақтар? [youngwomen@code.org] хабарласыңыз
     (%{email_url})
   cs_ambassador_do_heading: CS елшілері не істейді?

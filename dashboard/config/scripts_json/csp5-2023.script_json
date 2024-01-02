@@ -6,16 +6,6 @@
     "properties": {
       "announcements": [
         {
-          "key": "fc8bca4d-a578-4a87-ab9e-dd23f8f3cec3",
-          "notice": "A 2:1 scholarship opportunity from Amazon Future Engineer",
-          "details": "Planning to study computer science, engineering or robotics in college? Apply to the Amazon Future Engineer Scholarship. 400 high school seniors will be awarded scholarships and get paid internship opportunities.",
-          "link": "https://www.amazonfutureengineer.com/scholarships?utm_campaign=Code.org&utm_medium=Scholarship&utm_source=US&utm_content=Email",
-          "type": "bullhorn",
-          "visibility": "Student-only",
-          "dismissible": true,
-          "buttonText": "Apply now"
-        },
-        {
           "key": "38889d1b-67f5-40a9-a0a8-99b238aada75",
           "notice": "Free Teacher Resources from Amazon Future Engineer",
           "details": "Code.org has partnered with Amazon Future Engineer to offer teachers at underserved schools a growing number of resources and benefits at no cost! ",
@@ -40,7 +30,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-12-12 03:15:10 UTC",
+    "serialized_at": "2023-12-15 22:59:34 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4052,7 +4042,7 @@
     {
       "key": "data_bias",
       "word": "Data Bias",
-      "definition": "the practice of obtaining input or information from a large number of people via the Internet",
+      "definition": "data that does not accurately reflect the full population or phenomenon being studied",
       "properties": {
       },
       "seeding_key": {

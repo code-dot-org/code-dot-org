@@ -902,6 +902,9 @@ nl:
   cs_ambassador_application_date: Inschrijvingen open tot 8 november 2023
   cs_ambassador_application_subhead: Werk samen met een leraar om je aanvraag vandaag
     nog in te dienen
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: Vragen? Neem contact op met [youngwomen@code.org]
     (%{email_url})
   cs_ambassador_do_heading: Wat doen CS Ambassadors?
