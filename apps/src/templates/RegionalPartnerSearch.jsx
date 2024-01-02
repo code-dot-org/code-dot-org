@@ -344,9 +344,9 @@ class RegionalPartnerSearch extends Component {
                                   This Regional Partner is not offering{' '}
                                   {currCourse.name} workshops at this time.
                                   Code.org will review your application and
-                                  contact you with options for joining the
-                                  program hosted by a Regional Partner from a
-                                  different region.
+                                  contact you with options for joining a virtual
+                                  cohort of {currCourse.name} teachers from
+                                  another region.
                                 </div>
                               </>
                             }
