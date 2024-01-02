@@ -1706,6 +1706,23 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
+  test 'clever section name too long' do
+    teacher = create :teacher, :with_clever_authentication_option
+    sign_in teacher
+    course_name = 'test' * 65
+
+    ApiController.any_instance.expects(:query_clever_service).yields(clever_students_response_stub)
+    post :import_clever_classroom, params: {courseName: course_name}
+
+    response_json = JSON.parse(response.body)
+    assert_equal 255, response_json['name'].length
+    assert response_json['name'].end_with?('...')
+  end
+
+  def clever_students_response_stub
+    [{"data" => {"created" => "2017-07-13T03:48:03.497Z", "district" => "59484d29ae5dee0001fd3291", "dob" => "", "enrollments" => [], "gender" => "M", "hispanic_ethnicity" => "", "last_modified" => "2017-11-02T00:49:40.494Z", "name" => {"first" => "Ethan", "last" => "Doe", "middle" => ""}, "race" => "", "school" => "5966ed6cf9d478523c000004", "schools" => ["5966ed6cf9d478523c000004"], "sis_id" => "200", "id" => "5966ed736b21538e3c000004"}, "uri" => "/v2.1/students/5966ed736b21538e3c000004"}]
+  end
+
   #
   # Given two arrays, checks that they represent equivalent bags (or multisets)
   # of elements.
