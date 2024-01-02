@@ -14,25 +14,25 @@ I18N_ORIGINAL_DIR = File.join(I18N_LOCALES_DIR, 'original').freeze
 
 CROWDIN_PROJECTS = {
   codeorg: {
-    config_file:            CDO.dir('bin/i18n/crwodin/config/codeorg_crowdin.yml'),
+    config_file:            CDO.dir('bin/i18n/crowdin/config/codeorg_crowdin.yml'),
     identity_file:          CDO.dir('bin/i18n/crowdin_credentials.yml'),
     etags_json:             CDO.dir('bin/i18n/crowdin/etags/codeorg_etags.json'),
     files_to_sync_out_json: CDO.dir('bin/i18n/crowdin/codeorg_files_to_sync_out.json')
   },
   'codeorg-markdown': {
-    config_file:            CDO.dir('bin/i18n/crwodin/config/codeorg_markdown_crowdin.yml'),
+    config_file:            CDO.dir('bin/i18n/crowdin/config/codeorg_markdown_crowdin.yml'),
     identity_file:          CDO.dir('bin/i18n/crowdin_credentials.yml'),
     etags_json:             CDO.dir('bin/i18n/crowdin/etags/codeorg-markdown_etags.json'),
     files_to_sync_out_json: CDO.dir('bin/i18n/crowdin/codeorg-markdown_files_to_sync_out.json')
   },
   'hour-of-code': {
-    config_file:            CDO.dir('bin/i18n/crwodin/config/hourofcode_crowdin.yml'),
+    config_file:            CDO.dir('bin/i18n/crowdin/config/hourofcode_crowdin.yml'),
     identity_file:          CDO.dir('bin/i18n/crowdin_credentials.yml'),
     etags_json:             CDO.dir('bin/i18n/crowdin/etags/hour-of-code_etags.json'),
     files_to_sync_out_json: CDO.dir('bin/i18n/crowdin/hour-of-code_files_to_sync_out.json')
   },
   'codeorg-restricted': {
-    config_file:            CDO.dir('bin/i18n/crwodin/config/codeorg_restricted_crowdin.yml'),
+    config_file:            CDO.dir('bin/i18n/crowdin/config/codeorg_restricted_crowdin.yml'),
     identity_file:          CDO.dir('bin/i18n/crowdin_credentials.yml'),
     etags_json:             CDO.dir('bin/i18n/crowdin/etags/codeorg-restricted_etags.json'),
     files_to_sync_out_json: CDO.dir('bin/i18n/crowdin/codeorg-restricted_files_to_sync_out.json')
