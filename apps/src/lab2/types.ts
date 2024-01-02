@@ -7,7 +7,7 @@
 // live elsewhere.
 // The library data should definitely live elsewhere.
 
-import {BlockDefinition} from '@cdo/apps/types/blocklyTypes';
+import {BlockDefinition} from '@cdo/apps/blockly/types';
 export interface Channel {
   id: string;
   name: string;
