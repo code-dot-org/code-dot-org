@@ -1,0 +1,14 @@
+section.top {
+
+  li {
+    display: flex;
+    justify-content: start;
+    gap: 0.5rem;
+
+    &::before {
+      font: var(--fa-font-solid);
+      content: "\f058";
+      margin-top: 3px;
+    }
+  }
+}
