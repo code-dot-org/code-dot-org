@@ -27,7 +27,7 @@ import {WarningType} from './constants';
  * @returns {Promise}
  */
 export function enforceTableCount(config, tableName) {
-  const tablesRef = getPathRef(getProjectDatabase(), 'counters/tables');
+  const tablesRef = getPathRef(getProjectDatabase(), 'counters/tables'); // TODO: unfirebase
   return tablesRef.once('value').then(snapshot => {
     if (
       snapshot.numChildren() >= config.maxTableCount &&
