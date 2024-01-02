@@ -598,14 +598,12 @@ Dance.prototype.onPuzzleComplete = function (result, message) {
     this.studioApp_.playAudio('failure');
   }
   const state = getStore().getState();
-  if (!result) {
-    analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_VALIDATION, {
-      levelPath: state.pageConstants.thisLevelUrl,
-      result: 'Failed validation',
-      message, // feedback message key
-      userId: state.currentUser.userId,
-    });
-  }
+  analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_VALIDATION, {
+    levelPath: state.pageConstants.thisLevelUrl,
+    result: 'Failed validation',
+    message, // feedback message key
+    userId: state.currentUser.userId,
+  });
 
   const sendReport = () => {
     this.studioApp_.report({
