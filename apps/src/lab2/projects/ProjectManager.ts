@@ -64,6 +64,11 @@ export default class ProjectManager {
     this.reduceChannelUpdates = reduceChannelUpdates;
     this.initialSaveComplete = false;
     this.forceReloading = false;
+   this.metricsReporter = metricsReporter;
+  }
+
+  getChannelId(): string {
+    return this.channelId;
   }
 
   // Load the project from the sources and channels store.
