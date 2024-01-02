@@ -103,7 +103,7 @@ def get_world_covid19_data
 end
 
 def main
-  fb = FirebaseHelper.new('shared')
+  fb = FirebaseHelper.new('shared') # TODO: unfirebase
   records, columns = get_us_covid19_data
   fb.upload_live_table('COVID-19 Cases per US State', records, columns)
 

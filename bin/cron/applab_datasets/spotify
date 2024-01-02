@@ -130,7 +130,7 @@ end
 
 def main
   get_token
-  fb = FirebaseHelper.new('shared')
+  fb = FirebaseHelper.new('shared') # TODO: unfirebase
 
   if $token.nil_or_empty?
     Honeybadger.notify_cronjob_error(error_message: "Did not to retrieve Spotify playlist data due to missing authentication token.")
