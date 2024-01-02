@@ -32,7 +32,7 @@
     "co-teacher": {
       "image": "/shared/images/announcement/announcement_co_teacher_2024.png",
       "title": "New! Add co-teachers to your sections",
-      "body": "Streamline your classroom management by adding up to five co-teachers from your section settings page.",
+      "body": "Streamline your classroom management by adding co-teachers from your \"Edit Section Details\" page.",
       "buttonText": "Learn more",
       "buttonUrl": "https://support.code.org/hc/en-us/articles/228116368-Can-2-teachers-share-access-to-a-classroom-section-",
       "buttonId": "co-teacher"
