@@ -2,6 +2,8 @@ require_relative '../../shared/middleware/helpers/storage_id'
 require 'cdo/aws/s3'
 require 'cdo/db'
 
+# rubocop:disable CustomCops/PegasusDbUsage
+# rubocop:disable CustomCops/DashboardDbUsage
 class DeleteAccountsHelper
   class SafetyConstraintViolation < RuntimeError; end
 
@@ -504,3 +506,5 @@ class DeleteAccountsHelper
       )
   end
 end
+# rubocop:enable CustomCops/PegasusDbUsage
+# rubocop:enable CustomCops/DashboardDbUsage

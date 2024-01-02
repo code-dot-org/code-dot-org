@@ -87,7 +87,9 @@ class PegasusTest < Minitest::Test
 
     # Disconnect databases before forking parallel processes.
     DB.disconnect
+    # rubocop:disable CustomCops/DashboardDbUsage
     DASHBOARD_DB.disconnect
+    # rubocop:enable CustomCops/DashboardDbUsage
 
     results = Parallel.map(all_documents) do |page|
       site = page[:site]
@@ -104,7 +106,9 @@ class PegasusTest < Minitest::Test
       begin
         attempts = 3
         loop do
+          # rubocop:disable CustomCops/DashboardDbUsage
           queries = capture_queries(DB, DASHBOARD_DB) {get(uri)}
+          # rubocop:enable CustomCops/DashboardDbUsage
           break if queries.empty? || (attempts -= 1).zero?
         end
       rescue Exception => exception

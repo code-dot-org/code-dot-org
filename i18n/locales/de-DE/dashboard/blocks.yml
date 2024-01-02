@@ -22,6 +22,8 @@ de:
             '0.75': klein
             '1.00': mittel
             '2.00': groß
+      Dancelab_ai:
+        text: "{IMAGE}Erzeuge {VALUE} -Effekt"
       Dancelab_alternateMoves:
         text: "{GROUP} wechselt jeden {N} Takt \nzwischen {MOVE1} und {MOVE2}"
         options:
@@ -72,6 +74,7 @@ de:
             '"measures"': Takte
             '"seconds"': Sekunden
       Dancelab_atTimestampNotAfter:
+        text: bei {TIMESTAMP} {UNIT}
         options:
           UNIT:
             '"measures"': Takte
@@ -418,6 +421,7 @@ de:
             '"x"': kreuz und quer
             '"plus"': plus
             '"spiral"': Spirale
+            '"infinity"': unendliche Linie
             '"random"': zufällig
       Dancelab_makeAnonymousDanceSprite:
         text: erstelle neues {COSTUME} in {LOCATION}
@@ -528,6 +532,7 @@ de:
             '"x"': kreuz und quer
             '"plus"': plus
             '"spiral"': Spirale
+            '"infinity"': unendliche Linie
             '"random"': zufällig
       Dancelab_mixColors:
         text: Mische {COLOR1} und {COLOR2}
@@ -622,12 +627,14 @@ de:
             '"none"': Keiner
             '"rand"': "(zufällig)"
             '"quads"': Winkel
+            '"blooming_petals"': Blühende Blütenblätter
             '"circles"': Tunnel
             '"color_cycle"': Farben
             '"diamonds"': Rauten
             '"disco_ball"': Disco-Kugel
             '"fireworks"': Feuerwerk
             '"flowers"': Blumen
+            '"frosted_grid"': Gefrorenes Gitter
             '"growing_stars"': Wachsende Sterne
             '"swirl"': Hypno
             '"kaleidoscope"': Kaleidoskop
@@ -647,16 +654,26 @@ de:
             '"stars"': Sterne
             '"music_wave"': Wellen
           PALETTE:
+            '"autumn"': Herbst
             '"rave"': Schwarzweiß
             '"cool"': Blaus
             '"electronic"': Elektronisch
+            '"grayscale"': Graustufen
             '"iceCream"': Eiscreme
             '"default"': Hell
             '"neon"': Neon
             '"rainbow"': Regenbogen
+            '"roses"': Rosen
+            '"sky"': Himmel
+            '"spring"': Frühling
+            '"summer"': Sommer
+            '"sunrise"': Sonnenaufgang
+            '"sunset"': Sonnenuntergang
             '"tropical"': Tropisch
+            '"twinkling"': Funkelnd
             '"vintage"': Vintage
             '"warm"': Rots
+            '"winter"': Winter
       Dancelab_setDanceSpeed:
         text: verändern Sie die {SPRITE} Tanzgeschwindigkeit zu {SPEED}
         options:
@@ -1058,6 +1075,12 @@ de:
         text: Setup
       Dancelab_whenSetup2:
         text: Setup
+      Dancelab_whenSetupSong:
+        options:
+          SONG:
+            '"macklemore90"': Macklemore - Can't Hold Us
+            '"hammer"': MC Hammer - U Can't Touch This
+            '"peas"': The Black Eyed Peas - I Got a Feeling
       DansBlocks_getMicroscope:
         text: Mikroskop hat {INPUT1}
         options:

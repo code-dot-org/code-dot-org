@@ -40,6 +40,12 @@ interface PageError {
   details?: object;
 }
 
+interface PageError {
+  errorMessage: string;
+  error?: Error;
+  details?: object;
+}
+
 export interface LabState {
   // If we are currently loading common data for a project or level. Should only be used internally
   // by this Redux file.
@@ -90,7 +96,7 @@ export const setUpWithLevel = createAsyncThunk(
   ) => {
     try {
       // Update properties for reporting as early as possible in case of errors.
-      Lab2MetricsReporter.updateProperties({
+      Lab2Registry.getInstance().getMetricsReporter().updateProperties({
         currentLevelId: payload.levelId,
         scriptId: payload.scriptId,
         channelId: payload.channelId,
@@ -103,7 +109,9 @@ export const setUpWithLevel = createAsyncThunk(
         payload.levelPropertiesPath
       );
 
-      Lab2MetricsReporter.updateProperties({appName: levelProperties.appName});
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .updateProperties({appName: levelProperties.appName});
 
       const {isProjectLevel, disableProjects} = levelProperties;
 
@@ -138,7 +146,7 @@ export const setUpWithLevel = createAsyncThunk(
       }
 
       // Set channel ID for reporting in case we hit an error and can't update the store.
-      Lab2MetricsReporter.updateProperties({
+      Lab2Registry.getInstance().getMetricsReporter().updateProperties({
         channelId: projectManager.getChannelId(),
       });
 
@@ -170,7 +178,7 @@ export const setUpWithoutLevel = createAsyncThunk(
   async (payload: {channelId: string; appName: AppName}, thunkAPI) => {
     try {
       // Update properties for reporting as early as possible in case of errors.
-      Lab2MetricsReporter.updateProperties({
+      Lab2Registry.getInstance().getMetricsReporter().updateProperties({
         channelId: payload.channelId,
         appName: payload.appName,
       });

@@ -930,6 +930,9 @@ vi:
   cs_ambassador_application_date: Đăng ký mở cửa đến ngày 8 tháng 11 năm 2023
   cs_ambassador_application_subhead: Làm việc với một giáo viên để gửi đơn đăng ký
     của bạn ngay hôm nay
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: Câu hỏi? Vui lòng liên hệ [youngwomen@code.org]
     (%{email_url})
   cs_ambassador_do_heading: Đại sứ CS làm gì?

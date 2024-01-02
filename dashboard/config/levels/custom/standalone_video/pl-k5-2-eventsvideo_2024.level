@@ -1,0 +1,20 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 54,
+  "created_at": "2023-12-13T22:11:21.000Z",
+  "level_num": "custom",
+  "user_id": 16899,
+  "properties": {
+    "encrypted": "false",
+    "video_key": "hello_world_events",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "long_instructions": "##### This video is part of Code.org's Hello World!.  Visit <a href=\"https://code.org/helloworld\" target=\"blank\"> Hello World! </a>for more information. "
+  },
+  "audit_log": "[{\"changed_at\":\"2023-12-13T22:11:21.721+00:00\",\"changed\":[\"cloned from \\\"CSC-SelfPaced-eventsvideo_2023\\\"\"],\"cloned_from\":\"CSC-SelfPaced-eventsvideo_2023\"},{\"changed_at\":\"2023-12-15 15:53:19 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

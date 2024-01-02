@@ -24,7 +24,11 @@ export default function PrintCertificateBatch({imageUrls}) {
       {imageUrls.map((imageUrl, index) => (
         <div key={imageUrl}>
           {index > 0 && <div className="page-break" />}
-          <img src={imageUrl} width="100%" />
+          {
+            // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+            // Verify or update this alt-text as necessary
+          }
+          <img src={imageUrl} width="100%" alt="" />
         </div>
       ))}
     </div>

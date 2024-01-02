@@ -1459,7 +1459,8 @@
   hoc_live_learn_message: "Learn basic concepts of computer science alongside special guests! Students of all ages and abilities, including those without computers, are welcome to our virtual workshop. Continue learning at home through our Hour of Code Live episodes."
   hoc_live_join_us: 'Join us'
   hoc_live_learn_more: 'Learn more'
-
+  hoc_live_map_and_events_message: "During peak Hour of Code traffic, we use a static map to save bandwidth and keep our site running. To see a dynamic map of all events [click here](%{map_url}), and to see the full event list [click here](%{events_url})."
+                                                  
   hoc_overview_oceans_tutorial_header: 'AI for Oceans'
   hoc_overview_oceans_tutorial_desc: 'Learn about artificial intelligence (AI), machine learning, training data, and bias, while exploring ethical issues and how AI can be used to address world problems.'
 
@@ -10099,6 +10100,7 @@
   hoc_beyond_for_teachers_course_link_2: "Explore other providers"
   hoc_beyond_carousel_title: "For Students"
   hoc_beyond_carousel_description: "Want to keep learning after Hour of Code? Check out these activities for learners of all ages and skill levels."
+  hoc_beyond_submit_activity_form: "Submit your own activity [here](%{form_url})."
   hoc_beyond_end_section_label: "The Hour of Code is organized by [Code.org](%{home_page})"
 
   language_code:

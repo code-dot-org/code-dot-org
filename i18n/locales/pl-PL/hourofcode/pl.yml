@@ -911,6 +911,9 @@ pl:
   cs_ambassador_application_date: Zgłoszenia otwarte do 8 listopada 2023 r.
   cs_ambassador_application_subhead: Współpracuj z nauczycielem, aby złożyć wniosek
     już dziś
+  cs_ambassador_application_closed_title: Aplikacje zostały zamknięte.
+  cs_ambassador_application_closed_subhead: Masz pytania o przyszłe możliwości lub
+    chcesz dowiedzieć się więcej? Skontaktuj się z [youngwomen@code.org] (%{email_url}).
   cs_ambassador_application_questions: Pytania? Prosimy o kontakt [youngwomen@code.org]
     (%{email_url})
   cs_ambassador_do_heading: Czym zajmują się ambasadorzy informatyki?

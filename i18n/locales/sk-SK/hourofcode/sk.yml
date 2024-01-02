@@ -895,6 +895,9 @@ sk:
   cs_ambassador_application_date: Prihlášky sú otvorené do 8. novembra 2023
   cs_ambassador_application_subhead: Spolupracujte s učiteľom a odošlite svoju žiadosť
     ešte dnes
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: Otázky? Kontaktujte prosím [youngwomen@code.org]
     (%{email_url})
   cs_ambassador_do_heading: Čo robia ambasátori CS?
