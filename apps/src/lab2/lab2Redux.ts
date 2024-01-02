@@ -32,13 +32,6 @@ import {
   ValidationState,
 } from './progress/ProgressManager';
 import {LevelPropertiesValidator} from './responseValidators';
-import Lab2MetricsReporter from './Lab2MetricsReporter';
-
-interface PageError {
-  errorMessage: string;
-  error?: Error;
-  details?: object;
-}
 
 interface PageError {
   errorMessage: string;

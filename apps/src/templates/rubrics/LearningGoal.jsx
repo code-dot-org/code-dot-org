@@ -168,7 +168,7 @@ export default function LearningGoal({
 
   const renderAutoSaveTextbox = () => {
     return (
-      <div className={`${style.feedbackArea} uitest-learning-goal`}>
+      <div className={style.feedbackArea}>
         <label className={style.evidenceLevelLabel}>
           <span>{i18n.feedback()}</span>
           <textarea
