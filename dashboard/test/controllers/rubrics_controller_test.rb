@@ -304,6 +304,14 @@ class RubricsControllerTest < ActionController::TestCase
   end
 
   test "returns ok and not attempted count when getting aggregate status if no work is attempted" do
+    student = create :student
+    follower = create :follower, student_user: student, user: @teacher
+    followers = []
+    students = []
+    5.times do
+      students << create(:student)
+      followers << create(:follower, section: follower.section, student_user: students[-1], user: @teacher)
+    end
     sign_in @teacher
 
     Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
@@ -311,7 +319,7 @@ class RubricsControllerTest < ActionController::TestCase
 
     get :ai_evaluation_status_for_all, params: {
       id: @rubric.id,
-      sectionId: @follower.section.id,
+      sectionId: follower.section.id,
     }
 
     assert_response :success
@@ -323,8 +331,6 @@ class RubricsControllerTest < ActionController::TestCase
   end
 
   test "returns ok and attempted count when getting aggregate status if work is attempted" do
-    create :user_level, user: @student, script: @script_level.script, level: @level
-
     sign_in @teacher
 
     Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
@@ -344,15 +350,31 @@ class RubricsControllerTest < ActionController::TestCase
   end
 
   test "returns ok and mixed attempted/evaluated count when getting aggregate status" do
-    create :user_level, user: @student, script: @script_level.script, level: @level
+    student = create :student
+    follower = create :follower, student_user: student, user: @teacher
+    followers = []
+    students = []
+
+    new_storage_id = create_storage_id_for_user(student.id)
+    channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, new_storage_id, @script_level.script_id)
+    new_channel_id = channel_token.channel
+    stub_project_source_data(new_channel_id)
+
+    5.times do
+      students << create(:student)
+      followers << create(:follower, section: follower.section, student_user: students[-1], user: @teacher)
+    end
 
     Timecop.freeze do
-      @students.each do |s|
+      students.each do |s|
         # create a new attempt for each student
-        create :user_level, user: s, script: @script_level.script, level: @level
+        new_storage_id = create_storage_id_for_user(s.id)
+        channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, new_storage_id, @script_level.script_id)
+        new_channel_id = channel_token.channel
+        stub_project_source_data(new_channel_id)
       end
       Timecop.travel 1.minute
-      @students.each do |s|
+      students.each do |s|
         # create an AI evaluation for each student
         learning_goal = create :learning_goal, rubric: @rubric
         rubric_ai_evaluation = create(
@@ -378,7 +400,7 @@ class RubricsControllerTest < ActionController::TestCase
 
     get :ai_evaluation_status_for_all, params: {
       id: @rubric.id,
-      sectionId: @follower.section.id,
+      sectionId: follower.section.id,
     }
 
     assert_response :success
@@ -417,6 +439,15 @@ class RubricsControllerTest < ActionController::TestCase
   end
 
   test "returns ok but no evaluation jobs are queued if no work is attempted" do
+    student = create :student
+    follower = create :follower, student_user: student, user: @teacher
+    followers = []
+    students = []
+    5.times do
+      students << create(:student)
+      followers << create(:follower, section: follower.section, student_user: students[-1], user: @teacher)
+    end
+
     sign_in @teacher
 
     Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
@@ -425,22 +456,38 @@ class RubricsControllerTest < ActionController::TestCase
 
     get :run_ai_evaluations_for_all, params: {
       id: @rubric.id,
-      sectionId: @follower.section.id,
+      sectionId: follower.section.id,
     }
 
     assert_response :success
   end
 
   test "returns ok and queues 1 eval job when only 1 student has work that is unevaluated when getting aggregate status" do
-    create :user_level, user: @student, script: @script_level.script, level: @level
+    student = create :student
+    follower = create :follower, student_user: student, user: @teacher
+    followers = []
+    students = []
+    5.times do
+      students << create(:student)
+      followers << create(:follower, section: follower.section, student_user: students[-1], user: @teacher)
+    end
+
+    #create attempt for first student
+    new_storage_id = create_storage_id_for_user(student.id)
+    channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, new_storage_id, @script_level.script_id)
+    new_channel_id = channel_token.channel
+    stub_project_source_data(new_channel_id)
 
     Timecop.freeze do
-      @students.each do |s|
+      students.each do |s|
         # create a new attempt for each student
-        create :user_level, user: s, script: @script_level.script, level: @level
+        new_storage_id = create_storage_id_for_user(s.id)
+        channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, new_storage_id, @script_level.script_id)
+        new_channel_id = channel_token.channel
+        stub_project_source_data(new_channel_id)
       end
       Timecop.travel 1.minute
-      @students.each do |s|
+      students.each do |s|
         # create an AI evaluation for each student
         learning_goal = create :learning_goal, rubric: @rubric
         rubric_ai_evaluation = create(
@@ -474,8 +521,17 @@ class RubricsControllerTest < ActionController::TestCase
   end
 
   test "returns ok and queues 5 jobs when running ai eval for all" do
+    student = create :student
+    follower = create :follower, student_user: student, user: @teacher
+    followers = []
+    students = []
+    5.times do
+      students << create(:student)
+      followers << create(:follower, section: follower.section, student_user: students[-1], user: @teacher)
+    end
+
     Timecop.freeze do
-      @students.each do |s|
+      students.each do |s|
         # create an AI evaluation for each student
         learning_goal = create :learning_goal, rubric: @rubric
         rubric_ai_evaluation = create(
@@ -494,9 +550,12 @@ class RubricsControllerTest < ActionController::TestCase
         )
       end
       Timecop.travel 1.minute
-      @students.each do |s|
+      students.each do |s|
         # create a new attempt for each student
-        create :user_level, user: s, script: @script_level.script, level: @level
+        new_storage_id = create_storage_id_for_user(s.id)
+        channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, new_storage_id, @script_level.script_id)
+        new_channel_id = channel_token.channel
+        stub_project_source_data(new_channel_id)
       end
     end
     sign_in @teacher
@@ -506,7 +565,7 @@ class RubricsControllerTest < ActionController::TestCase
 
     get :ai_evaluation_status_for_all, params: {
       id: @rubric.id,
-      sectionId: @follower.section.id,
+      sectionId: follower.section.id,
     }
 
     assert_response :success
@@ -519,7 +578,7 @@ class RubricsControllerTest < ActionController::TestCase
     EvaluateRubricJob.expects(:perform_later).times(5)
     get :run_ai_evaluations_for_all, params: {
       id: @rubric.id,
-      sectionId: @follower.section.id,
+      sectionId: follower.section.id,
     }
 
     assert_response :success
@@ -563,7 +622,6 @@ class RubricsControllerTest < ActionController::TestCase
   end
 
   test "run ai evaluations for user calls EvaluateRubricJob" do
-    create :user_level, user: @student, script: @script_level.script, level: @level
     sign_in @teacher
 
     Experiment.stubs(:enabled?).with(user: @teacher, script: @script_level.script, experiment_name: 'ai-rubrics').returns(true)
