@@ -103,7 +103,7 @@ When /^I navigate to the embedded version of my project$/ do
   steps <<-GHERKIN
     When I open the share dialog
     And I click selector "#project-share button:contains('Show advanced options')"
-    And I click selector "#project-share li:contains('Embed')"
+    And I click selector "#project-share button:contains('Embed')"
     And I copy the embed code into a new document
   GHERKIN
 end
