@@ -10,8 +10,8 @@ apt_repository 'mysql' do
   # Pin to MySQL 5.7 until we're ready to update to MySQL 8
   components ['mysql-5.7']
 
-  # https://dev.mysql.com/doc/refman/5.7/en/checking-gpg-signature.html
-  key '3A79BD29'
+  # https://dev.mysql.com/doc/refman/8.0/en/gpg-key-archived-packages.html
+  key '5072E1F5'
   keyserver 'keyserver.ubuntu.com'
   retries 3
 end
