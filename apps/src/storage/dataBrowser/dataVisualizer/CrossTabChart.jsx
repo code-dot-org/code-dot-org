@@ -37,8 +37,15 @@ export default function CrossTabChart(props) {
   //    shrink to fit evenly.
   const columnWidth = 99 / (columns.length - 1) + '%';
 
-  const min = Math.min(...numericValues);
-  const max = Math.max(...numericValues);
+  const {min, max} = numericValues.reduce(
+    (values, currentVal) => {
+      return {
+        min: Math.min(currentVal, values.min),
+        max: Math.max(currentVal, values.max),
+      };
+    },
+    {min: Number.POSITIVE_INFINITY, max: Number.NEGATIVE_INFINITY}
+  );
 
   return (
     <div id={CROSS_TAB_CHART_AREA} style={wrapperStyle}>
