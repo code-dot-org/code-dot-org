@@ -1,6 +1,6 @@
 import danceBlocks from '@cdo/apps/dance/blockly/blocks';
 import * as commonBlocks from '@cdo/apps/blocksCommon';
-import {LevelProperties} from '@cdo/apps/lab2/types';
+import {BlockDefinition} from '@cdo/apps/types/blocklyTypes';
 
 const blockUtils = require('@cdo/apps/block_utils');
 
@@ -19,12 +19,12 @@ export function installCommonBlocks(
 
 // Install custom blocks for Dance Party Lab2.
 export function installDanceBlocks(
-  levelProperties: LevelProperties | undefined
+  sharedBlocks: BlockDefinition[] | undefined
 ) {
   danceBlocks.install(Blockly);
   const blocksByCategory = blockUtils.installCustomBlocks({
     blockly: Blockly,
-    blockDefinitions: levelProperties?.sharedBlocks,
+    blockDefinitions: sharedBlocks,
     customInputTypes: danceBlocks.customInputTypes,
   });
   return blocksByCategory; // TODO: use when implementing pathway for toolbox editing for levelbuilders

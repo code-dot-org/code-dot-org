@@ -55,7 +55,9 @@ const DanceView: React.FunctionComponent = () => {
   );
   const isRunning = useTypedSelector(state => state.dance.isRunning);
 
-  const levelProperties = useTypedSelector(state => state.lab.levelProperties);
+  const sharedBlocks = useTypedSelector(
+    state => state.lab.levelProperties?.sharedBlocks || undefined
+  );
 
   const skin = useTypedSelector(
     state => state.lab.levelProperties?.skin || undefined
@@ -77,8 +79,8 @@ const DanceView: React.FunctionComponent = () => {
   }, [skin, isK1]);
 
   useEffect(() => {
-    installDanceBlocks(levelProperties);
-  }, [levelProperties]);
+    installDanceBlocks(sharedBlocks);
+  }, [sharedBlocks]);
 
   // Initialize song manifest and load initial song when level loads.
   useEffect(() => {
