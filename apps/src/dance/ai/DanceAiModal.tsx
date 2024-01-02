@@ -332,16 +332,30 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     startGenerating();
   };
 
-  const handleStartOverClick = () => {
-    analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_RESTARTED, {
-      emojis: inputs,
-    });
-    setInputs([]);
-    setCurrentInputSlot(0);
-    setGeneratingProgress({step: 0, subStep: 0});
-    setGeneratedProgress(0);
-    setMode(Mode.SELECT_INPUTS);
-  };
+  const handleStartOverClick = useCallback(
+    (usingHeader: boolean) => {
+      analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_RESTARTED, {
+        emojis: inputs,
+        usingHeader,
+      });
+      setInputs([]);
+      setCurrentInputSlot(0);
+      setGeneratingProgress({step: 0, subStep: 0});
+      setGeneratedProgress(0);
+      setMode(Mode.SELECT_INPUTS);
+    },
+    [inputs]
+  );
+
+  const handleStartOverClickUsingHeader = useCallback(
+    () => handleStartOverClick(true),
+    [handleStartOverClick]
+  );
+
+  const handleStartOverClickNotUsingHeader = useCallback(
+    () => handleStartOverClick(false),
+    [handleStartOverClick]
+  );
 
   const handleRegenerateClick = () => {
     analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_REGENERATED, {
@@ -594,7 +608,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
       <div
         className={moduleStyles.inputsContainer}
         tabIndex={0}
-        onClick={handleStartOverClick}
+        onClick={handleStartOverClickUsingHeader}
       >
         {getRangeArray(0, SLOT_COUNT - 1).map(index => {
           const item = getItem(inputs[index]);
@@ -949,7 +963,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
               currentMode={mode}
               showFor={[Mode.RESULTS]}
               id="start-over-button"
-              onClick={handleStartOverClick}
+              onClick={handleStartOverClickNotUsingHeader}
               color={Button.ButtonColor.neutralDark}
               className={classNames(
                 moduleStyles.button,

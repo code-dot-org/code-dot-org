@@ -9,6 +9,7 @@ describe('TeacherSections', () => {
     asyncLoadCoteacherInvite: () => {},
     studentSectionIds: [],
     coteacherInvite: null,
+    coteacherInviteForPl: null,
     plSectionIds: [],
     hiddenPlSectionIds: [],
     hiddenStudentSectionIds: [],
@@ -53,6 +54,17 @@ describe('TeacherSections', () => {
     ).to.equal(undefined);
   });
 
+  it('renders PL sections area if coteacher invite for PL', () => {
+    const wrapper = shallow(
+      <TeacherSections {...defaultProps} coteacherInviteForPl={{id: 2}} />
+    );
+    expect(wrapper.find('Connect(ContentContainer)').length).to.equal(2);
+    expect(wrapper.find('Connect(OwnedSections)').length).to.equal(1);
+    expect(
+      wrapper.find('Connect(OwnedSections)').props().isPlSections
+    ).to.equal(true);
+  });
+
   it('renders student sections area if there are student sections', () => {
     const wrapper = shallow(
       <TeacherSections {...defaultProps} studentSectionIds={[1]} />
@@ -82,6 +94,21 @@ describe('TeacherSections', () => {
   it('renders pl sections area if there are pl sections', () => {
     const wrapper = shallow(
       <TeacherSections {...defaultProps} plSectionIds={[1]} />
+    );
+    expect(wrapper.find('Connect(ContentContainer)').length).to.equal(2);
+    expect(wrapper.find('Connect(OwnedSections)').length).to.equal(1);
+    expect(
+      wrapper.find('Connect(OwnedSections)').props().isPlSections
+    ).to.equal(true);
+  });
+
+  it('renders pl sections area if there are pl sections and coteacher invite for PL', () => {
+    const wrapper = shallow(
+      <TeacherSections
+        {...defaultProps}
+        plSectionIds={[1]}
+        coteacherInviteForPl={{id: 2}}
+      />
     );
     expect(wrapper.find('Connect(ContentContainer)').length).to.equal(2);
     expect(wrapper.find('Connect(OwnedSections)').length).to.equal(1);

@@ -200,6 +200,7 @@ class WebLabView extends React.Component {
               frameBorder="0"
               scrolling="no"
               style={iframeStyles}
+              title={msg.projectTypeWeblab()}
             />
             {!this.props.isProjectLevel && <CompletionButton />}
             {this.props.dialog}

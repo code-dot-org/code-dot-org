@@ -17,7 +17,7 @@ require_relative '../../../pegasus/test/fixtures/mock_pegasus'
 # Getting this right is important for compliance with various privacy
 # regulations around the globe, so changes to this behavior should be carefully
 # reviewed by the product team.
-#
+# rubocop:disable CustomCops/PegasusDbUsage
 class DeleteAccountsHelperTest < ActionView::TestCase
   include ProjectsTestUtils
 
@@ -2367,3 +2367,4 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     end
   end
 end
+# rubocop:enable CustomCops/PegasusDbUsage

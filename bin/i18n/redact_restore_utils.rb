@@ -63,39 +63,36 @@ class RedactRestoreUtils
     return JSON.parse(restored)
   end
 
+  # Restores redacted data into a json/yaml/yml file
+  #
+  # @param source [String] the source file path
+  # @param redacted [String] the redacted file path
+  # @param dest [String] the target (restored) file path
+  # @param plugins [Array] the list of plugins to use
+  # @param format [String] the format of the data (md, txt, etc.)
   def self.restore(source, redacted, dest, plugins = [], format = 'md')
-    return unless File.exist?(source)
-    return unless File.exist?(redacted)
+    raise "[#{source}] source file does not exist" unless File.exist?(source)
+    raise "[#{redacted}] redacted file does not exist" unless File.exist?(redacted)
 
-    if I18nScriptUtils.json_file?(source)
-      source_data = I18nScriptUtils.parse_file(source)
-      return unless source_data
+    source_data = I18nScriptUtils.parse_file(source) || {}
+    raise "[#{source}] source data does not exist" if source_data.empty?
 
-      redacted_data = I18nScriptUtils.parse_file(redacted)
-      return unless redacted_data
+    redacted_data = I18nScriptUtils.parse_file(redacted) || {}
+    return if redacted_data.empty?
 
-      restored = RedactRestoreUtils.restore_data(source_data, redacted_data, plugins, format)
-      I18nScriptUtils.write_json_file(dest, restored)
-      return
-    end
+    restore_data = -> {RedactRestoreUtils.restore_data(source_data, redacted_data, plugins, format)}
 
-    # yaml files have a locale key wrapping all content. Redacted files have the translated language key, while the
-    # un-redacted file keeps the English key. We need to extract the data inside the locale key to restore content.
-    if I18nScriptUtils.yaml_file?(source)
-      source_data = I18nScriptUtils.parse_file(source)
-      return unless source_data
-      return unless source_data&.values&.first&.length
+    if I18nScriptUtils.json_file?(dest)
+      I18nScriptUtils.write_json_file(dest, restore_data.call)
+    elsif I18nScriptUtils.yaml_file?(dest)
+      # Some yaml files have a locale key wrapping all content.
+      # Redacted files have the translated language key, while the un-redacted file keeps the English key.
+      # We need to extract the data inside the locale key to restore content.
+      source_data[redacted_data.keys.first] = source_data.delete(source_data.keys.first) if source_data.keys.size == 1
 
-      redacted_data = I18nScriptUtils.parse_file(redacted)
-      return unless redacted_data
-      return unless redacted_data&.values&.first&.length
-
-      restored = RedactRestoreUtils.restore_data(source_data.values.first, redacted_data.values.first, plugins, format)
-      redacted_key = redacted_data.keys.first
-
-      restored = {redacted_key => restored}
-      I18nScriptUtils.write_yaml_file(dest, restored)
-      return
+      return I18nScriptUtils.write_yaml_file(dest, restore_data.call)
+    else
+      raise "[#{dest}] unknown target file format"
     end
   end
 

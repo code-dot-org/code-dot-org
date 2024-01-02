@@ -394,6 +394,8 @@ en:
               name: AI Rubrics
             lesson-52:
               name: Dance Lab2
+            lesson-53:
+              name: Python Lab
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -8019,6 +8021,8 @@ en:
               name: AI Playground
             lesson-13:
               name: Gen AI Blocks Playground
+            lesson-14:
+              name: Test micro:bit lesson
         csc-pilot-2022-ecosystems:
           lesson_groups: {}
           name: csc-pilot-2022-ecosystems
