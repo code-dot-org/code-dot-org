@@ -304,7 +304,6 @@ Feature: Curriculum Catalog Page
     And I wait until element "h4:contains(AI for Oceans)" is visible
     And I click selector "span:contains(Learn More)"
     And I wait until element "h1:contains(AI for Oceans)" is visible
-    
   
   # Curriculum Catalog Filter tests
   
