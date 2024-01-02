@@ -2148,6 +2148,20 @@ tr:
         text: '"Çalıştır"a bastığınızda, hareketli grafik, ona söylediğiniz metni
           söyleyecektir. Şimdi Hareketli Nesne Laboratuvarını kullanmaya başlama ve
           hayal gücünüzün sizi nereye götürdüğünü görme zamanı!'
+    hoc-dance-ai-warmup:
+      2:
+        text: Selam! Adım Miral Kotb ve ben bir dansçı, yazılım geliştirici ve iLuminate'in
+          yaratıcısıyım.
+      3:
+        text: Bilgisayar bilimi, birçok biçimde yaratıcılıkla ilgilidir. Gerçekten
+          de tahmin edilemeyecek kadar çok biçimde. Yani, yazılım yazma kabiliyetiniz
+          varsa, fikirlerinizi bir şeye yatırabilirsiniz. Ben bunu ışıklı kıyafetlerle
+          yaparım. Yazılım yazmak için araçlarınız varsa yapabileceğiniz çok fazla
+          şey vardır ve imkanlar gerçekten de sonsuzdur.
+      5:
+        text: Farklı dansçıları seçmek, dans hareketlerini değiştirmek, dansçıların
+          müziğe tepki göstermesini sağlamak ve dansçıları etkileşime geçirmek için
+          için kod bloklarını kullanacaksınız.
     hoc_dance_congrats:
       1:
         text: 'Kod Saati | Dans Partisi: Partile! '

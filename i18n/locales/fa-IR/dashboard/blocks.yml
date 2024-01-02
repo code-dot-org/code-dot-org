@@ -28,6 +28,8 @@ fa:
             '1.00': متوسط
             '2.00': بزرگ
             '3.00': بسیار بزرگ
+      Dancelab_ai:
+        text: "{IMAGE} جلوه {VALUE} ایجاد کنید"
       Dancelab_alternateMoves:
         text: "{GROUP} هر {N} بار \nبین {MOVE1} و {MOVE2} تغییر موضع می‌دهد"
         options:
@@ -603,12 +605,14 @@ fa:
             '"none"': هیچکدام
             '"rand"': "(تصادفی)"
             '"quads"': زاویه‌ (افکت)
+            '"blooming_petals"': گلبرگ‌های شکوفا
             '"circles"': دایره‌ها
             '"color_cycle"': رنگ‌ها
             '"diamonds"': لوزی‌ها
             '"disco_ball"': دسکو بال
             '"fireworks"': آتش‌بازی
             '"flowers"': گلها (افکت)
+            '"frosted_grid"': شبکه مات
             '"growing_stars"': ستاره‌های بزرگ شونده (افکت)
             '"swirl"': هیپنو (افکت)
             '"kaleidoscope"': هزار رنگ (افکت)
@@ -628,17 +632,27 @@ fa:
             '"stars"': ستاره  (افکت)
             '"music_wave"': امواج (افکت)
           PALETTE:
+            '"autumn"': پاییز (پالت)
             '"rave"': سیاه و سفید (افکت)
             '"cool"': جالب (پالت رنگ)
             '"electronic"': الکترونیکی (پالت)
+            '"grayscale"': سایه‌خاکستری (پالت)
             '"iceCream"': بستنی (پالت)
             '"default"': روشن (پالت)
             '"neon"': نئون (پالت)
             '"ocean"': اقیانوس
             '"rainbow"': رنگین‌کمان (افکت)
+            '"roses"': سرخ (پالت)
+            '"sky"': آسمان
+            '"spring"': بهار
+            '"summer"': تابستانی (پالت)
+            '"sunrise"': طلوع آفتاب
+            '"sunset"': غروب آفتاب
             '"tropical"': استوایی (پالت)
+            '"twinkling"': چشمک‌زن (افکت)
             '"vintage"': آنتیک (پالت)
             '"warm"': گرم (پالت)
+            '"winter"': زمستان
       Dancelab_setDanceSpeed:
         text: تنظیم سرعت رقص {SPRITE} روی {SPEED}
         options:

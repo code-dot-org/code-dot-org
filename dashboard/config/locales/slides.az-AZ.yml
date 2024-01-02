@@ -2311,6 +2311,20 @@ az:
         text: "“İcra et” düyməsini basdığınız zaman sprite istədiyiniz mətni söyləyəcək.
           İndi Sprite Laboratoriyası ilə başlamağın və təsəvvürünüzün sizi hara aparacağını
           görməyin vaxtı gəldi!"
+    hoc-dance-ai-warmup:
+      2:
+        text: Salam! Mənim adım Miral Kotbdur və mən rəqqasə, proqram tərtibatçısı
+          və iLuminate yaradıcısıyam.
+      3:
+        text: Kompüter elmləri yaradıcılıqla çoxsaylı əlaqəlidir. Həqiqətən, ölçüləbilməzdir.
+          Demək istədiyim odur ki, proqram yazmaq bacarığına sahib olduqdan sonra,
+          fikirlərinizi hər şeyə qoya bilərsiniz. Mən bunu yüngül kostyumlarla edirəm.
+          Alətlərə sahib olduqdan sonra, proqram yazmaq üçün  edə biləcəyiniz çox
+          şey var. İmkanlarınız həqiqətən sonsuzdur.
+      5:
+        text: Siz müxtəlif rəqqasları seçmək, onların rəqs hərəkətlərini dəyişdirmək,
+          musiqiyə reaksiya vermək və onu interaktiv etmək üçün kod bloklarından istifadə
+          edəcəksiniz.
     hoc_dance_congrats:
       1:
         text: 'Kod Saatı | Rəqs şənliyi: Şənlik davam edir!'

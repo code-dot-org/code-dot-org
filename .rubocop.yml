@@ -7,15 +7,17 @@ require:
   - rubocop-performance
   - rubocop-rails
   - rubocop-rails-accessibility
-  - './tools/customLinters/rubocop_only_allowed_characters.rb'
-  - './tools/customLinters/rubocop_prefer_mocha_stubs_to_minitest_stub.rb'
+  - "./tools/customLinters/rubocop_only_allowed_characters.rb"
+  - "./tools/customLinters/rubocop_prefer_mocha_stubs_to_minitest_stub.rb"
+  - "./tools/customLinters/rubocop_pegasus_db_usage.rb"
+  - "./tools/customLinters/rubocop_dashboard_db_usage.rb"
 
 AllCops:
   SuggestExtensions: false
   Exclude:
-    - 'apps/**/*'
-    - 'dashboard/db/schema.rb'
-    - 'pegasus/test/test_string.rb' # Parser does not support non-utf8 escape sequences
+    - "apps/**/*"
+    - "dashboard/db/schema.rb"
+    - "pegasus/test/test_string.rb" # Parser does not support non-utf8 escape sequences
   DisplayCopNames: true
   TargetRubyVersion: 2.7
 
@@ -30,7 +32,7 @@ Rails:
 
 CustomCops/OnlyAllowedCharacters:
   Include:
-    - '**/*_mailer.rb'
+    - "**/*_mailer.rb"
 
 Layout/DotPosition:
   EnforcedStyle: trailing
@@ -158,5 +160,4 @@ Style/SymbolArray:
 
 Style/ClassAndModuleChildren:
   Enabled: false
-
 # END BLOCKLIST
