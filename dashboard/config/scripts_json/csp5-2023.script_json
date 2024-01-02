@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-12-14 04:03:00 UTC",
+    "serialized_at": "2023-12-15 22:59:34 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4042,7 +4042,7 @@
     {
       "key": "data_bias",
       "word": "Data Bias",
-      "definition": "the practice of obtaining input or information from a large number of people via the Internet",
+      "definition": "data that does not accurately reflect the full population or phenomenon being studied",
       "properties": {
       },
       "seeding_key": {
