@@ -36,7 +36,7 @@ export type EmojiItem = {
   emoji: string;
 };
 
-export type AIEmojiItem = EmojiItem & {
+export type AiEmojiItem = EmojiItem & {
   modelDescriptiveName: string;
 };
 
