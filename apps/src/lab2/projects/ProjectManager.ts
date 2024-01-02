@@ -64,7 +64,7 @@ export default class ProjectManager {
     this.reduceChannelUpdates = reduceChannelUpdates;
     this.initialSaveComplete = false;
     this.forceReloading = false;
-   this.metricsReporter = metricsReporter;
+    this.metricsReporter = metricsReporter;
   }
 
   getChannelId(): string {
