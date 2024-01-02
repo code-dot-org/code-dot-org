@@ -9,10 +9,10 @@ theme: responsive_full_width
 %section.top
   .wrapper
     %h1=hoc_s(:afe_page_heading)
-    %div.content-wrapper.flex-container.justify-space-between.wrap-reverse{style: "margin-top: 2rem"}
+    %p
+      =hoc_s(:afe_page_top_desc, markdown: :inline, locals: {afe_url: "https://www.amazonfutureengineer.com/"})
+    %div.content-wrapper.flex-container.justify-space-between.wrap-reverse
       .text-wrapper.col-60
-        %p
-          =hoc_s(:afe_page_top_desc, markdown: :inline, locals: {afe_url: "https://www.amazonfutureengineer.com/"})
         %ul.clear-styles
           %li
             %p=hoc_s(:afe_page_top_list_01, markdown: :inline)
@@ -20,9 +20,18 @@ theme: responsive_full_width
             %p=hoc_s(:afe_page_top_list_02, markdown: :inline)
           %li
             %p=hoc_s(:afe_page_top_list_03, markdown: :inline)
-          %li
+          %li{style: "margin-bottom: 1rem"}
             %p=hoc_s(:afe_page_top_list_04, markdown: :inline)
         %a.link-button{href: "#eligibility"}
           =hoc_s(:call_to_action_get_started)
       %figure.col-36
         %img.rounded-corners{src: "/images/afe-page-logos.png", alt: "", style: "position: relative; width: 100%; margin-bottom: 1rem"}
+
+%section#eligibility.bg-neutral-light
+  .wrapper
+    = view :amazon_future_engineer_eligibility
+
+%section
+  .wrapper
+    %h2=hoc_s(:afe_page_programs_heading)
+    = view :amazon_future_engineer_programs
