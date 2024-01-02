@@ -93,6 +93,7 @@ class Services::Lti
   end
 
   # Takes an LTI section and NRPS members array and syncs a single section.
+  # @return {boolean} whether any changes were made
   def self.sync_section_roster(lti_integration, lti_section, nrps_members)
     had_changes = false
     client_id = lti_integration.client_id
