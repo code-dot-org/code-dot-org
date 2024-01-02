@@ -5,26 +5,22 @@ import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 import moduleStyles from './dropdownMenu.module.scss';
 
 export interface DropdownMenuProps {
-  /** Link content */
-  children: React.ReactNode;
-  /** Link id */
+  /** Dropdown  Menu items list */
+  items: {value: string; label: string}[];
+  /** Dropdown onChange handler */
+  onChange: (args: any) => void;
+  /** Dropdown name */
+  name: string;
+  /** Dropdown id */
   id?: string;
   /** Custom class name */
   className?: string;
-  /** Does the link go to an external source? */
-  external?: boolean;
-  /** Should the link open in a new tab? */
-  openInNewTab?: boolean;
-  /** Link destination */
-  href: string;
-  /** Is the link disabled? */
+  /** Is dropdown disabled */
   disabled?: boolean;
-  /** Callback for click event */
-  onClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
-  /** Size of link */
-  size?: ComponentSizeXSToL;
-  /** Type of link */
-  type?: 'primary' | 'secondary';
+  /** Dropdown color */
+  color?: 'white' | 'black';
+  /** Dropdown size */
+  size: ComponentSizeXSToL;
 }
 
 /**
@@ -37,39 +33,33 @@ export interface DropdownMenuProps {
  *
  * ###  Status: ```Wip```
  *
- * Design System: Link Component.
- * Used for internal or external links. Shortcut for general <a> HTML tag (with DSCO styles applied).
- * Can be opened in new tab, have custom onClick, also can be disabled.
+ * Design System: Dropdown Component.
+ * Used to render simple dropdowns with styled select (Dropdown button)]
+ * and browser's native select options.
  */
 const DropdownMenu: React.FunctionComponent<DropdownMenuProps> = ({
-  children,
+  items,
+  onChange,
+  name,
   id,
   className,
-  external,
-  openInNewTab,
-  href = '#',
-  disabled,
-  onClick,
+  disabled = false,
+  color = 'white',
   size = 'm',
-  type = 'primary',
 }) => {
   return (
-    <a
-      className={classNames(
-        moduleStyles.link,
-        moduleStyles[`link-${type}`],
-        moduleStyles[`link-${size}`],
-        className
-      )}
-      href={!disabled ? href : undefined}
+    <select
+      name={name}
+      onChange={onChange}
       id={id}
-      onClick={!disabled ? onClick : undefined}
-      rel={openInNewTab || external ? 'noopener noreferrer' : undefined}
-      target={(openInNewTab || undefined) && '_blank'}
-      {...(disabled ? {'aria-disabled': true} : {})}
+      className={className}
+      disabled={disabled}
     >
-      {children}
-    </a>
+      <option value="">Some default text</option>
+      {items.map(({value, label}) => (
+        <option value={value}>{label}</option>
+      ))}
+    </select>
   );
 };
 

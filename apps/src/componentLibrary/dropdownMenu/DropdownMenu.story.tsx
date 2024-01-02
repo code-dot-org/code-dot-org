@@ -24,74 +24,100 @@ const MultipleTemplate: Story<{
       * Margins on this screen does not represent Component's margins, and are
       only added to improve storybook view *{' '}
     </p>
-    <p>Multiple Links:</p>
+    <p>Multiple Dropdown:</p>
     <div style={{display: 'flex', gap: '20px'}}>
       {args.components?.map(componentArg => (
-        <DropdownMenu key={`${componentArg.children}`} {...componentArg} />
+        <DropdownMenu key={`${componentArg.name}`} {...componentArg} />
       ))}
     </div>
   </>
 );
 
-export const DefaultLink = SingleTemplate.bind({});
-DefaultLink.args = {
-  children: 'Default Link',
-  href: '#',
-  onClick: e => {
-    e.preventDefault();
-    alert('clicked');
-  },
+export const DefaultDropdown = SingleTemplate.bind({});
+DefaultDropdown.args = {
+  name: 'default-dropdown',
+  items: [
+    {value: 'option-1', label: 'Option 1'},
+    {value: 'option-2', label: 'Option 2'},
+  ],
+  onChange: args => console.log(args),
   size: 'm',
 };
 
-export const DisabledLink = SingleTemplate.bind({});
-DisabledLink.args = {
-  children: 'Disabled Link',
-  onClick: e => {
-    e.preventDefault();
-    alert('clicked');
-  },
+export const DisabledDropdown = SingleTemplate.bind({});
+DisabledDropdown.args = {
+  name: 'default-dropdown',
+  items: [
+    {value: 'option-1', label: 'Option 1'},
+    {value: 'option-2', label: 'Option 2'},
+  ],
+  onChange: args => console.log(args),
   disabled: true,
   size: 'm',
 };
 
-export const GroupOfTypesOfLinks = MultipleTemplate.bind({});
-GroupOfTypesOfLinks.args = {
+export const GroupOfDropdownColors = MultipleTemplate.bind({});
+GroupOfDropdownColors.args = {
   components: [
     {
-      children: 'Link M Primary',
-      href: '#',
+      name: 'default-dropdown-white',
+      items: [
+        {value: 'option-1', label: 'Option 1'},
+        {value: 'option-2', label: 'Option 2'},
+      ],
+      onChange: args => console.log(args),
       size: 'm',
+      color: 'white',
     },
     {
-      children: 'Link M Secondary',
-      href: '#',
-      type: 'secondary',
+      name: 'default-dropdown-black',
+      items: [
+        {value: 'option-1', label: 'Option 1'},
+        {value: 'option-2', label: 'Option 2'},
+      ],
+      onChange: args => console.log(args),
       size: 'm',
+      color: 'black',
     },
   ],
 };
-export const GroupOfSizesOfLinks = MultipleTemplate.bind({});
-GroupOfSizesOfLinks.args = {
+export const GroupOfSizesOfDropdown = MultipleTemplate.bind({});
+GroupOfSizesOfDropdown.args = {
   components: [
     {
-      children: 'Link XS',
-      href: '#',
+      name: 'default-dropdown-white',
+      items: [
+        {value: 'option-1', label: 'Option 1'},
+        {value: 'option-2', label: 'Option 2'},
+      ],
+      onChange: args => console.log(args),
       size: 'xs',
     },
     {
-      children: 'Link S',
-      href: '#',
+      name: 'default-dropdown-white',
+      items: [
+        {value: 'option-1', label: 'Option 1'},
+        {value: 'option-2', label: 'Option 2'},
+      ],
+      onChange: args => console.log(args),
       size: 's',
     },
     {
-      children: 'Link M',
-      href: '#',
+      name: 'default-dropdown-white',
+      items: [
+        {value: 'option-1', label: 'Option 1'},
+        {value: 'option-2', label: 'Option 2'},
+      ],
+      onChange: args => console.log(args),
       size: 'm',
     },
     {
-      children: 'Link L',
-      href: '#',
+      name: 'default-dropdown-white',
+      items: [
+        {value: 'option-1', label: 'Option 1'},
+        {value: 'option-2', label: 'Option 2'},
+      ],
+      onChange: args => console.log(args),
       size: 'l',
     },
   ],
