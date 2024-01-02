@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "coursee-maker",
-    "serialized_at": "2023-12-08 16:29:20 UTC",
+    "serialized_at": "2023-12-14 18:33:07 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -137,9 +137,10 @@
       "name": "Sensory toy",
       "absolute_position": 5,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 5,
       "properties": {
+        "overview": "This lesson plan is not available on Code.org's website - instead, [click here to access micro:bit Physical Computing Fundamentals pp. 22-24](https://code.org/maker/assets/CSF-Booklet-Course-E-Nov2023.pdf#page=22)"
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -208,9 +209,10 @@
       "name": "Simple door alarm",
       "absolute_position": 9,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 9,
       "properties": {
+        "overview": "This lesson plan is not available on Code.org's website - instead, [click here to access micro:bit Physical Computing Fundamentals pp. 25-27](https://code.org/maker/assets/CSF-Booklet-Course-E-Nov2023.pdf#page=25)"
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
@@ -299,9 +301,10 @@
       "name": "Tilt alarm",
       "absolute_position": 14,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 14,
       "properties": {
+        "overview": "This lesson plan is not available on Code.org's website - instead, [click here to access micro:bit Physical Computing Fundamentals pp. 28-30](https://code.org/maker/assets/CSF-Booklet-Course-E-Nov2023.pdf#page=28)"
       },
       "seeding_key": {
         "lesson.key": "lesson-7",
@@ -504,6 +507,18 @@
       }
     },
     {
+      "key": "12446fd9-cbf5-4f29-84ee-4c37d2d6fcf4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "12446fd9-cbf5-4f29-84ee-4c37d2d6fcf4",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "coursee-maker-2024"
+      }
+    },
+    {
       "key": "f316db0f-a933-4278-b8d0-676e80b575d0",
       "position": 1,
       "properties": {
@@ -622,6 +637,18 @@
       "seeding_key": {
         "lesson_activity.key": "dbbf7396-eae3-4c59-b931-9e0774f32c73",
         "lesson.key": "If/Else with Bee",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursee-maker-2024"
+      }
+    },
+    {
+      "key": "616eadff-a66a-4e62-98ba-6af6e5feadba",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "616eadff-a66a-4e62-98ba-6af6e5feadba",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "coursee-maker-2024"
       }
@@ -827,6 +854,18 @@
       "seeding_key": {
         "lesson_activity.key": "c9233782-5d42-4b97-a863-8f074b58c7d4",
         "lesson.key": "Functions with Artist",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "coursee-maker-2024"
+      }
+    },
+    {
+      "key": "37df4834-fee1-401c-b842-926c9a64cba3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "37df4834-fee1-401c-b842-926c9a64cba3",
+        "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "coursee-maker-2024"
       }
@@ -1336,6 +1375,17 @@
       }
     },
     {
+      "key": "c2ae74e8-d37a-4b0c-a54c-4fe96f590f39",
+      "position": 1,
+      "properties": {
+        "progression_name": "Sensory Toy"
+      },
+      "seeding_key": {
+        "activity_section.key": "c2ae74e8-d37a-4b0c-a54c-4fe96f590f39",
+        "lesson_activity.key": "12446fd9-cbf5-4f29-84ee-4c37d2d6fcf4"
+      }
+    },
+    {
       "key": "993ce818-d97a-4380-96a9-8a428b17043e",
       "position": 1,
       "properties": {
@@ -1657,6 +1707,17 @@
       "seeding_key": {
         "activity_section.key": "9f4057c6-1599-42bc-97c1-d0e7925d9c00",
         "lesson_activity.key": "dbbf7396-eae3-4c59-b931-9e0774f32c73"
+      }
+    },
+    {
+      "key": "19077b0a-f630-4312-bf42-a032340224b1",
+      "position": 1,
+      "properties": {
+        "progression_name": "Simple Door Alarm"
+      },
+      "seeding_key": {
+        "activity_section.key": "19077b0a-f630-4312-bf42-a032340224b1",
+        "lesson_activity.key": "616eadff-a66a-4e62-98ba-6af6e5feadba"
       }
     },
     {
@@ -2143,6 +2204,17 @@
         "activity_section.key": "28031196-bcb2-45e0-afb8-d990d114e452",
         "lesson_activity.key": "c9233782-5d42-4b97-a863-8f074b58c7d4"
       }
+    },
+    {
+      "key": "40426006-669c-4bd1-9977-a6f3bc1598f5",
+      "position": 1,
+      "properties": {
+        "progression_name": "Tilt Alarm"
+      },
+      "seeding_key": {
+        "activity_section.key": "40426006-669c-4bd1-9977-a6f3bc1598f5",
+        "lesson_activity.key": "37df4834-fee1-401c-b842-926c9a64cba3"
+      }
     }
   ],
   "script_levels": [
@@ -2152,6 +2224,249 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance_2019_01_maker"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance_2019_01_maker"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "coursee-maker-2024",
+        "activity_section.key": "1e63e8c8-4931-4a86-b683-02f32ade3a8f"
+      },
+      "level_keys": [
+        "Dance_2019_01_maker"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance_2019_02_maker"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance_2019_02_maker"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "coursee-maker-2024",
+        "activity_section.key": "2d23e815-582a-4eea-bcc4-8edac2c46251"
+      },
+      "level_keys": [
+        "Dance_2019_02_maker"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance_2019_03_maker"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance_2019_03_maker"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "coursee-maker-2024",
+        "activity_section.key": "d26974fb-e5f9-40df-86d7-565a0107e18c"
+      },
+      "level_keys": [
+        "Dance_2019_03_maker"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance_2019_04_maker"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance_2019_04_maker"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "coursee-maker-2024",
+        "activity_section.key": "ae133ef8-4747-4520-b1f3-88301358a019"
+      },
+      "level_keys": [
+        "Dance_2019_04_maker"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance_2019_05_maker"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance_2019_05_maker"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "coursee-maker-2024",
+        "activity_section.key": "2bce01da-cafd-49f3-85a6-831fa83dcf0a"
+      },
+      "level_keys": [
+        "Dance_2019_05_maker"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance_2019_06_maker"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance_2019_06_maker"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "coursee-maker-2024",
+        "activity_section.key": "35c5f453-8b18-4416-aa9b-66da12aeb26a"
+      },
+      "level_keys": [
+        "Dance_2019_06_maker"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance_2019_07_maker"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance_2019_07_maker"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "coursee-maker-2024",
+        "activity_section.key": "f78b3314-98f9-47f7-8129-aff3226f8744"
+      },
+      "level_keys": [
+        "Dance_2019_07_maker"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance_2019_08_maker"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance_2019_08_maker"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "coursee-maker-2024",
+        "activity_section.key": "099f90d8-2734-45ea-9202-69d545bd97c1"
+      },
+      "level_keys": [
+        "Dance_2019_08_maker"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance_2019_09_maker"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance_2019_09_maker"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "coursee-maker-2024",
+        "activity_section.key": "33bc1376-da88-47ee-97b8-0f12a59e7f76"
+      },
+      "level_keys": [
+        "Dance_2019_09_maker"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dance_2019_10_maker"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance_2019_10_maker"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "coursee-maker-2024",
+        "activity_section.key": "e8d8c922-af23-40c0-aabb-72b208062d20"
+      },
+      "level_keys": [
+        "Dance_2019_10_maker"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "DesigningForAccessibilityMarkdownLevel2022_maker"
+        ],
         "progression": "Designing for Accessibility"
       },
       "bonus": false,
@@ -2169,11 +2484,36 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 12,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Sensory Toy"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course_e_maker_sensory_toy"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "coursee-maker-2024",
+        "activity_section.key": "c2ae74e8-d37a-4b0c-a54c-4fe96f590f39"
+      },
+      "level_keys": [
+        "course_e_maker_sensory_toy"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ConditionalsWithCards-Unplugged2022_maker"
+        ],
         "progression": "Conditionals with Cards - Unplugged Activity"
       },
       "bonus": false,
@@ -2191,11 +2531,14 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionalsVid1_maker"
+        ],
         "progression": "Video: Conditionals: If Statements"
       },
       "bonus": false,
@@ -2213,11 +2556,14 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 15,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals1_predict1_maker"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -2235,11 +2581,14 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 16,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals2_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2257,11 +2606,14 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 17,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals3_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2279,11 +2631,14 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 18,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals4_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2301,11 +2656,14 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 19,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals5_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2323,11 +2681,14 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 20,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals6_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2345,11 +2706,14 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 21,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionalsVidIfElse_maker"
+        ],
         "progression": "Video: Conditionals: If and If/Else Statements"
       },
       "bonus": false,
@@ -2367,11 +2731,14 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 22,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals7_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2389,11 +2756,14 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 23,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals7_predict2_maker"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -2411,12 +2781,15 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 24,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "challenge": true,
+        "level_keys": [
+          "courseD_bee_conditionals8_maker"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -2434,11 +2807,14 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 25,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals9_maker"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2456,11 +2832,14 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 26,
       "position": 13,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals10_maker"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2478,11 +2857,14 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 27,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals_challenge1_maker"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -2500,11 +2882,14 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 28,
       "position": 15,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals_challenge2_maker"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -2522,11 +2907,14 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 29,
       "position": 16,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_2022LessonExtra14a_maker"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -2544,11 +2932,14 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 30,
       "position": 17,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_2022_LessonExtra14b_maker"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -2566,11 +2957,36 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Simple Door Alarm"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course_e_maker_simple_door_alarm"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursee-maker-2024",
+        "activity_section.key": "19077b0a-f630-4312-bf42-a032340224b1"
+      },
+      "level_keys": [
+        "course_e_maker_simple_door_alarm"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Songwriting-Unplugged2022_maker"
+        ],
         "progression": "Songwriting - Functions Unplugged Activity"
       },
       "bonus": false,
@@ -2588,11 +3004,14 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_hero_vid1_maker"
+        ],
         "progression": "Video: Minecraft - The Agent"
       },
       "bonus": false,
@@ -2610,11 +3029,14 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 34,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_01_RETRY_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2632,11 +3054,14 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 35,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_02_Cole_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2654,11 +3079,14 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 36,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_hero_vid2_maker"
+        ],
         "progression": "Video: Minecraft - Repeat Loops"
       },
       "bonus": false,
@@ -2676,11 +3104,14 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 37,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_03_Cole_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2698,11 +3129,14 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 38,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_04_Cole_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2720,11 +3154,14 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 39,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_04POINT5_RYAN_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2742,11 +3179,14 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 40,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_05_Cole_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2764,11 +3204,14 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 41,
       "position": 9,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_06_Cole_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2786,11 +3229,14 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 42,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_hero_vid3_maker"
+        ],
         "progression": "Video: Minecraft - Functions"
       },
       "bonus": false,
@@ -2808,11 +3254,14 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 43,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Function intro Ryan_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2830,11 +3279,14 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 44,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_07_Cole_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2852,11 +3304,14 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 45,
       "position": 13,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_10_RETRY_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2874,11 +3329,14 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 46,
       "position": 14,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_Ali_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2896,11 +3354,14 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 47,
       "position": 15,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_hero_vid4_maker"
+        ],
         "progression": "Video: Minecraft - Congratulations"
       },
       "bonus": false,
@@ -2918,11 +3379,14 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 48,
       "position": 16,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_FP20x20_maker"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -2940,11 +3404,14 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 49,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions_predict1_maker"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -2962,11 +3429,14 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 50,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions2_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2984,11 +3454,14 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 51,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions3_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3006,11 +3479,14 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 52,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions5_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3028,11 +3504,14 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 53,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions7_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3050,11 +3529,14 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 54,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions8a_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3072,11 +3554,14 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 55,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions8b_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3094,11 +3579,14 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 56,
       "position": 8,
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions8c_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3116,11 +3604,14 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 57,
       "position": 9,
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions8_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3138,11 +3629,14 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 58,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseE_Lesson_11_Artist_Practice_maker"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3160,11 +3654,14 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 59,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions_challenge1_maker"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -3182,11 +3679,14 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 60,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_artist_functions_challenge2_maker"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -3204,14 +3704,32 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 61,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Tilt Alarm"
       },
       "bonus": false,
       "seeding_key": {
+        "script_level.level_keys": [
+          "course_e_maker_tilt_alarm"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "coursee-maker-2024",
+        "activity_section.key": "40426006-669c-4bd1-9977-a6f3bc1598f5"
+      },
+      "level_keys": [
+        "course_e_maker_tilt_alarm"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "Dance_2019_01_maker",
         "script_level.level_keys": [
           "Dance_2019_01_maker"
         ],
@@ -3219,20 +3737,11 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "coursee-maker-2024",
         "activity_section.key": "1e63e8c8-4931-4a86-b683-02f32ade3a8f"
-      },
-      "level_keys": [
-        "Dance_2019_01_maker"
-      ]
+      }
     },
     {
-      "chapter": 50,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
       "seeding_key": {
+        "level.key": "Dance_2019_02_maker",
         "script_level.level_keys": [
           "Dance_2019_02_maker"
         ],
@@ -3240,20 +3749,11 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "coursee-maker-2024",
         "activity_section.key": "2d23e815-582a-4eea-bcc4-8edac2c46251"
-      },
-      "level_keys": [
-        "Dance_2019_02_maker"
-      ]
+      }
     },
     {
-      "chapter": 51,
-      "position": 3,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
       "seeding_key": {
+        "level.key": "Dance_2019_03_maker",
         "script_level.level_keys": [
           "Dance_2019_03_maker"
         ],
@@ -3261,20 +3761,11 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "coursee-maker-2024",
         "activity_section.key": "d26974fb-e5f9-40df-86d7-565a0107e18c"
-      },
-      "level_keys": [
-        "Dance_2019_03_maker"
-      ]
+      }
     },
     {
-      "chapter": 52,
-      "position": 4,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
       "seeding_key": {
+        "level.key": "Dance_2019_04_maker",
         "script_level.level_keys": [
           "Dance_2019_04_maker"
         ],
@@ -3282,20 +3773,11 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "coursee-maker-2024",
         "activity_section.key": "ae133ef8-4747-4520-b1f3-88301358a019"
-      },
-      "level_keys": [
-        "Dance_2019_04_maker"
-      ]
+      }
     },
     {
-      "chapter": 53,
-      "position": 5,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
       "seeding_key": {
+        "level.key": "Dance_2019_05_maker",
         "script_level.level_keys": [
           "Dance_2019_05_maker"
         ],
@@ -3303,20 +3785,11 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "coursee-maker-2024",
         "activity_section.key": "2bce01da-cafd-49f3-85a6-831fa83dcf0a"
-      },
-      "level_keys": [
-        "Dance_2019_05_maker"
-      ]
+      }
     },
     {
-      "chapter": 54,
-      "position": 6,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
       "seeding_key": {
+        "level.key": "Dance_2019_06_maker",
         "script_level.level_keys": [
           "Dance_2019_06_maker"
         ],
@@ -3324,20 +3797,11 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "coursee-maker-2024",
         "activity_section.key": "35c5f453-8b18-4416-aa9b-66da12aeb26a"
-      },
-      "level_keys": [
-        "Dance_2019_06_maker"
-      ]
+      }
     },
     {
-      "chapter": 55,
-      "position": 7,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
       "seeding_key": {
+        "level.key": "Dance_2019_07_maker",
         "script_level.level_keys": [
           "Dance_2019_07_maker"
         ],
@@ -3345,20 +3809,11 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "coursee-maker-2024",
         "activity_section.key": "f78b3314-98f9-47f7-8129-aff3226f8744"
-      },
-      "level_keys": [
-        "Dance_2019_07_maker"
-      ]
+      }
     },
     {
-      "chapter": 56,
-      "position": 8,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
       "seeding_key": {
+        "level.key": "Dance_2019_08_maker",
         "script_level.level_keys": [
           "Dance_2019_08_maker"
         ],
@@ -3366,20 +3821,11 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "coursee-maker-2024",
         "activity_section.key": "099f90d8-2734-45ea-9202-69d545bd97c1"
-      },
-      "level_keys": [
-        "Dance_2019_08_maker"
-      ]
+      }
     },
     {
-      "chapter": 57,
-      "position": 9,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
       "seeding_key": {
+        "level.key": "Dance_2019_09_maker",
         "script_level.level_keys": [
           "Dance_2019_09_maker"
         ],
@@ -3387,20 +3833,11 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "coursee-maker-2024",
         "activity_section.key": "33bc1376-da88-47ee-97b8-0f12a59e7f76"
-      },
-      "level_keys": [
-        "Dance_2019_09_maker"
-      ]
+      }
     },
     {
-      "chapter": 58,
-      "position": 10,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
       "seeding_key": {
+        "level.key": "Dance_2019_10_maker",
         "script_level.level_keys": [
           "Dance_2019_10_maker"
         ],
@@ -3408,13 +3845,8 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "coursee-maker-2024",
         "activity_section.key": "e8d8c922-af23-40c0-aabb-72b208062d20"
-      },
-      "level_keys": [
-        "Dance_2019_10_maker"
-      ]
-    }
-  ],
-  "levels_script_levels": [
+      }
+    },
     {
       "seeding_key": {
         "level.key": "DesigningForAccessibilityMarkdownLevel2022_maker",
@@ -3425,6 +3857,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "coursee-maker-2024",
         "activity_section.key": "a2ee8d48-c2bd-4369-a3e3-0638058df064"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "course_e_maker_sensory_toy",
+        "script_level.level_keys": [
+          "course_e_maker_sensory_toy"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "coursee-maker-2024",
+        "activity_section.key": "c2ae74e8-d37a-4b0c-a54c-4fe96f590f39"
       }
     },
     {
@@ -3641,6 +4085,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "coursee-maker-2024",
         "activity_section.key": "0d624097-cb26-4b45-82ea-c4c75805c8e4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "course_e_maker_simple_door_alarm",
+        "script_level.level_keys": [
+          "course_e_maker_simple_door_alarm"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursee-maker-2024",
+        "activity_section.key": "19077b0a-f630-4312-bf42-a032340224b1"
       }
     },
     {
@@ -3993,122 +4449,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "Dance_2019_01_maker",
+        "level.key": "course_e_maker_tilt_alarm",
         "script_level.level_keys": [
-          "Dance_2019_01_maker"
+          "course_e_maker_tilt_alarm"
         ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "coursee-maker-2024",
-        "activity_section.key": "1e63e8c8-4931-4a86-b683-02f32ade3a8f"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Dance_2019_02_maker",
-        "script_level.level_keys": [
-          "Dance_2019_02_maker"
-        ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "coursee-maker-2024",
-        "activity_section.key": "2d23e815-582a-4eea-bcc4-8edac2c46251"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Dance_2019_03_maker",
-        "script_level.level_keys": [
-          "Dance_2019_03_maker"
-        ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "coursee-maker-2024",
-        "activity_section.key": "d26974fb-e5f9-40df-86d7-565a0107e18c"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Dance_2019_04_maker",
-        "script_level.level_keys": [
-          "Dance_2019_04_maker"
-        ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "coursee-maker-2024",
-        "activity_section.key": "ae133ef8-4747-4520-b1f3-88301358a019"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Dance_2019_05_maker",
-        "script_level.level_keys": [
-          "Dance_2019_05_maker"
-        ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "coursee-maker-2024",
-        "activity_section.key": "2bce01da-cafd-49f3-85a6-831fa83dcf0a"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Dance_2019_06_maker",
-        "script_level.level_keys": [
-          "Dance_2019_06_maker"
-        ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "coursee-maker-2024",
-        "activity_section.key": "35c5f453-8b18-4416-aa9b-66da12aeb26a"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Dance_2019_07_maker",
-        "script_level.level_keys": [
-          "Dance_2019_07_maker"
-        ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "coursee-maker-2024",
-        "activity_section.key": "f78b3314-98f9-47f7-8129-aff3226f8744"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Dance_2019_08_maker",
-        "script_level.level_keys": [
-          "Dance_2019_08_maker"
-        ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "coursee-maker-2024",
-        "activity_section.key": "099f90d8-2734-45ea-9202-69d545bd97c1"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Dance_2019_09_maker",
-        "script_level.level_keys": [
-          "Dance_2019_09_maker"
-        ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "coursee-maker-2024",
-        "activity_section.key": "33bc1376-da88-47ee-97b8-0f12a59e7f76"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Dance_2019_10_maker",
-        "script_level.level_keys": [
-          "Dance_2019_10_maker"
-        ],
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "coursee-maker-2024",
-        "activity_section.key": "e8d8c922-af23-40c0-aabb-72b208062d20"
+        "activity_section.key": "40426006-669c-4bd1-9977-a6f3bc1598f5"
       }
     }
   ],

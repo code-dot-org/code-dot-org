@@ -925,6 +925,9 @@ ro:
   cs_ambassador_application_date: Aplicațiile sunt deschise până pe 8 noiembrie 2023
   cs_ambassador_application_subhead: Lucrați cu un profesor pentru a vă trimite cererea
     astăzi
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: Întrebări? Vă rugăm să contactați [youngwomen@code.org]
     (%{email_url})
   cs_ambassador_do_heading: Ce fac ambasadorii CS?

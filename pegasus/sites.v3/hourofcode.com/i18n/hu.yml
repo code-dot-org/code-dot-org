@@ -926,6 +926,9 @@ hu:
   cs_ambassador_application_date: A pályázatok 2023. november 8-ig nyitottak
   cs_ambassador_application_subhead: Együttműködjön egy tanárral, hogy ma nyújtsa
     be jelentkezését
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: Kérdések? Kérjük, lépjen kapcsolatba az [youngwomen@code.org]
     (%{email_url})
   cs_ambassador_do_heading: Mit csinálnak a CS nagykövetei?

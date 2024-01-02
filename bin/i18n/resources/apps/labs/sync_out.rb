@@ -46,7 +46,7 @@ module I18n
 
               malformed_i18n_reporter.process_file(crowdin_locale_file_path)
             end
-
+          ensure
             malformed_i18n_reporter.report
           end
 
