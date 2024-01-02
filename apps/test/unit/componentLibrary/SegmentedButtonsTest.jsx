@@ -51,7 +51,7 @@ describe('Design System - Segmented Buttons', () => {
     );
 
     let segmentedButton1 = screen.getByText('Label');
-    let segmentedButton2 = screen.getByText('Label2');
+    const segmentedButton2 = screen.getByText('Label2');
 
     expect(segmentedButton1).to.exist;
     expect(segmentedButton2).to.exist;
@@ -72,7 +72,6 @@ describe('Design System - Segmented Buttons', () => {
     );
 
     segmentedButton1 = screen.getByText('Label');
-    segmentedButton2 = screen.getByText('Label2');
 
     expect(spyOnChange).to.have.been.calledOnce;
     expect(spyOnChange).to.have.been.calledWith('label-2');
@@ -118,7 +117,7 @@ describe('Design System - Segmented Buttons', () => {
     );
 
     let segmentedButton1 = screen.getByText('Label');
-    let segmentedButton2 = screen.getByText('Label2');
+    const segmentedButton2 = screen.getByText('Label2');
 
     expect(segmentedButton1).to.exist;
     expect(segmentedButton2).to.exist;

@@ -23,8 +23,8 @@ export interface SegmentedButtonsProps {
 }
 
 // Todo:
-// 8. Add aria attributes
-// 9. Add tests
+// 8. Add aria attributes --
+// 9. Add tests ++
 // 16. Add selected change logic (to storybook or to the component itself) ++
 // 10. Add storybook ++
 // 11. Add documentation ++
