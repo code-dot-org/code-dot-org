@@ -15,9 +15,9 @@ require:
 AllCops:
   SuggestExtensions: false
   Exclude:
-    - "apps/**/*"
-    - "dashboard/db/schema.rb"
-    - "pegasus/test/test_string.rb" # Parser does not support non-utf8 escape sequences
+    - 'apps/**/*'
+    - 'dashboard/db/schema.rb'
+    - 'pegasus/test/test_string.rb' # Parser does not support non-utf8 escape sequences
   DisplayCopNames: true
   TargetRubyVersion: 2.7
 
@@ -32,7 +32,7 @@ Rails:
 
 CustomCops/OnlyAllowedCharacters:
   Include:
-    - "**/*_mailer.rb"
+    - '**/*_mailer.rb'
 
 Layout/DotPosition:
   EnforcedStyle: trailing
@@ -160,4 +160,5 @@ Style/SymbolArray:
 
 Style/ClassAndModuleChildren:
   Enabled: false
+  
 # END BLOCKLIST
