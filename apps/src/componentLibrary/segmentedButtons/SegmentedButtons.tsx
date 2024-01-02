@@ -43,8 +43,8 @@ export interface SegmentedButtonsProps {
 /**
  * ### Production-ready Checklist:
  * * (?) implementation of component approved by design team;
- * * (?) has storybook, covered with stories and documentation;
- * * (?) has tests: test every prop, every state and every interaction that's js related;
+ * * (✔) has storybook, covered with stories and documentation;
+ * * (✔) has tests: test every prop, every state and every interaction that's js related;
  * * (see apps/test/unit/componentLibrary/SegmentedButtonsTest.jsx)
  * * (?) passes accessibility checks;
  *
