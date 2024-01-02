@@ -204,11 +204,13 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
 1. `sudo apt-get update`
 1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-11-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript build-essential redis-server rbenv chromium-browser parallel`
     * **Hit enter and select default options for any configuration popups, leaving mysql passwords blank**
+    <details> 
+      <summary>Troubleshoot: `E: Package 'pdftk' has no installation candidate`.</summary>
 
-    * Troubleshoot: `E: Package 'pdftk' has no installation candidate`. If you run into this error, remove `pdftk` from the previous command and run it again. Then try installing `pdftk` another way:
-        * Ubuntu 18.04: `sudo snap install pdftk`. 
-        * If you can't get `pdftk` installed, it is ok to skip installing this package, and keep in mind that the `PDFMergerTest` test may fail when you try to run the pegasus tests locally.
-   
+      - If you run into this error, remove `pdftk` from the previous command and run it again. Then try installing `pdftk` another way:
+          - Ubuntu 18.04: `sudo snap install pdftk`.
+          - If you can't get `pdftk` installed, it is ok to skip installing this package, and keep in mind that the `PDFMergerTest` test may fail when you try to run the pegasus tests locally.
+    </details>
 1. *(If working from an EC2 instance)* `sudo apt-get install -y libreadline-dev libffi-dev`
 1. configure your system so that `~/.bashrc` (or another startup file of your choice) will be run whenever you open a shell
     1. if you are using bash and setting up a new linux system, you may need to modify `~/.bash_profile` or `~/.profile` (your login shell configuration file) as per [this explanation](https://joshstaiger.org/archives/2005/07/bash_profile_vs.html), which recommends adding these lines:
@@ -261,21 +263,28 @@ It is worthwhile to make sure that you are using WSL 2. Attempting to use WSL 1 
     1. Restart your machine. WSL 2 will be the default if your Windows version is sufficiently updated.
     1. `wsl --set-default-version 2`
         1. You may need to [update the WSL 2 Linux kernel](https://docs.microsoft.com/en-us/windows/wsl/wsl2-kernel)
-1. [Install Ubuntu 20.04](https://www.microsoft.com/store/productId/9NBLGGH4MSV6) (Windows Store link)
-    * If you want to follow the Ubuntu setup exactly, Ubuntu 18.04 is available from the [Microsoft docs](https://docs.microsoft.com/en-us/windows/wsl/install-manual).
 1. Make sure virtualization is turned on your BIOS settings.
+1. Install [Ubuntu 20.04](https://www.microsoft.com/store/productId/9NBLGGH4MSV6) or [Ubuntu 22.04.3 LTS](https://apps.microsoft.com/detail/9PN20MSR04DW) 
+    * If you want to follow the Ubuntu setup exactly, Ubuntu 18.04 is available from the [Microsoft docs](https://docs.microsoft.com/en-us/windows/wsl/install-manual).
 1. From the command line, run `wsl`, or from the Start menu, find and launch 'Ubuntu'. When this runs for the first time, WSL will complete installation in the resulting terminal window.
-1. Make it so that you can run apps tests locally. You have two options here:
-    1. If you have Google Chrome installed on Windows, add the following to `~/.bashrc` or your desired shell configuration file to make it accessible from WSL:
-        1. `export CHROME_BIN='/mnt/c/Program Files (x86)/Google/Chrome/Application/chrome.exe'`
-    1. Alternatively, ensure chromium-browser or alternatively google-chrome is installed in WSL
-        1. Try running `chromium-browser`. If this does not work with the error message `Command '/usr/bin/chromium-browser' requires the chromium snap to be installed.`, you can instead install google chrome by running the following:
+1. Optionally configure your **zsh** experience. [instructions](https://itsfoss.com/zsh-ubuntu/)
+1. Make it so that you can run apps tests locally by setting up the `CHROME_BIN` env var. You have a few options here:
+    1. If you have Google Chrome installed on Windows, add the path to chrome.exe to `~/.bashrc` or your desired shell configuration file to make it accessible from WSL, likely one of the following paths:
+        1. `export CHROME_BIN="/mnt/c/Program\ Files\ (x86)/Google/Chrome/Application/chrome.exe"` or
+        1. `export CHROME_BIN="/mnt/c/Program\ Files/Google/Chrome/Application/chrome.exe"`
+    1. Alternatively, ensure chromium-browser or google-chrome is installed in WSL
+        1. Try running `chromium-browser`.
+            1. If that works, add `export CHROME_BIN=$(which chromium-browser)` to your `~/.bashrc` or desired shell configuration file.
+        1. If this does not work with the error message `Command '/usr/bin/chromium-browser' requires the chromium snap to be installed.`, you can instead install google chrome by running the following:
             1. `wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb`
             1. `sudo apt install ./google-chrome-stable_current_amd64.deb`
-1. Followed by the [Ubuntu instructions](#ubuntu-1804) to install required tools on the Ubuntu instance, _with the following observations_:
-    * If google-chrome was installed in the last step, update CHROME_BIN variable to point to google chrome (in step 9), `export CHROME_BIN=$(which google-chrome)`
+            1. Add `export CHROME_BIN=$(which google-chrome)` to your `~/.bashrc` or desired shell configuration file.
+        
+1. Follow the [Ubuntu instructions](#ubuntu-1804) to install required tools on the Ubuntu instance, _with the following modifications:
+    * There is an ongoing clock skew issue going on with wsl. This can cause issues with `apt update`, ssl certs, among other things. You can force your clock to sync with `sudo hwclock -s` to fix these issues temporarily. See the [megathread](https://github.com/microsoft/WSL/issues/10006) for more details.
+    * Skip exporting `CHROME_BIN` since you already did so above.
     * Before updating the root password to empty in SQL (step 10), restart MySQL using `sudo /etc/init.d/mysql restart`
-1. Followed by the [overview instructions](#overview), _with the following observations_:
+1. Follow the [overview instructions](#overview), _with the following modifications:
     * Before running `bundle exec rake install`, restart the mysql service: `sudo service mysql start`
     * If localhost responds slowly and you have exhausted conventional options (e.g. turning off Firewall during testing), try moving the code-dot-org repo outside of the /mnt/ directory (e.g. ~) to improve responsiveness
 
