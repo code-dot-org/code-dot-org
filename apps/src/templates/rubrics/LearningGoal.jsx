@@ -49,7 +49,7 @@ export default function LearningGoal({
     ERROR: 3,
   });
   const [isOpen, setIsOpen] = useState(false);
-  const [autosaveStatus, setAutosaveStatus] = useState(STATUS.notStarted);
+  const [autosaveStatus, setAutosaveStatus] = useState(STATUS.NOT_STARTED);
   const [learningGoalEval, setLearningGoalEval] = useState(null);
   const [displayFeedback, setDisplayFeedback] = useState('');
   const [displayUnderstanding, setDisplayUnderstanding] =
@@ -288,6 +288,7 @@ export default function LearningGoal({
             radioButtonCallback={radioButtonCallback}
             submittedEvaluation={submittedEvaluation}
             isStudent={isStudent}
+            isAutosaving={autosaveStatus === STATUS.IN_PROGRESS}
           />
           {learningGoal.tips && !isStudent && (
             <div>
