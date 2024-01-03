@@ -35,7 +35,7 @@ module ViewOptionsHelper
     :user_id,
     :has_contained_levels,
     :next_level_url,
-    :this_level_url,
+    :current_level_url,
     :responsive_content, # The container for the main page content will be responsive to small screen sizes.
     :answerdash,
     :signed_replay_log_url,

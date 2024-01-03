@@ -147,6 +147,12 @@ class ScriptLevel < ApplicationRecord
     build_script_level_path(this_level)
   end
 
+  # Return this script level
+  def this_level
+    i = script.script_levels.find_index(self)
+    script.script_levels[i]
+  end
+
   def next_level_or_redirect_path_for_user(
     user,
     extras_lesson = nil,
@@ -207,12 +213,6 @@ class ScriptLevel < ApplicationRecord
     i = script.script_levels.find_index(self)
     return nil if i.nil? || i == script.script_levels.length
     script.script_levels[i + 1]
-  end
-
-  # Return this script level
-  def this_level
-    i = script.script_levels.find_index(self)
-    script.script_levels[i]
   end
 
   # Returns the next valid progression level, or nil if no such level exists
