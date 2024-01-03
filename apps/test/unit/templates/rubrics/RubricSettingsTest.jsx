@@ -8,12 +8,26 @@ import RubricSettings from '@cdo/apps/templates/rubrics/RubricSettings';
 import {RubricAiEvaluationStatus} from '@cdo/apps/util/sharedConstants';
 
 describe('RubricSettings', () => {
+  const defaultRubric = {
+    learningGoals: [],
+    lesson: {
+      position: 3,
+      name: 'Data Structures',
+    },
+    level: {
+      name: 'test_level',
+      position: 7,
+    },
+    id: 1,
+  };
+
   it('shows a a button for running analysis if canProvideFeedback is true', () => {
     const wrapper = shallow(
       <RubricSettings
         canProvideFeedback={true}
         teacherHasEnabledAi={true}
         visible
+        rubric={defaultRubric}
       />
     );
     expect(wrapper.find('Button')).to.have.lengthOf(1);
@@ -40,8 +54,8 @@ describe('RubricSettings', () => {
           canProvideFeedback={true}
           teacherHasEnabledAi={true}
           visible
-          rubricId={1}
           studentUserId={10}
+          rubric={defaultRubric}
         />
       );
       await act(async () => {
@@ -64,9 +78,9 @@ describe('RubricSettings', () => {
         <RubricSettings
           canProvideFeedback={true}
           teacherHasEnabledAi={true}
-          rubricId={1}
           studentUserId={10}
           visible
+          rubric={defaultRubric}
         />
       );
       await act(async () => {
@@ -89,9 +103,9 @@ describe('RubricSettings', () => {
         <RubricSettings
           canProvideFeedback={true}
           teacherHasEnabledAi={true}
-          rubricId={1}
           studentUserId={10}
           visible
+          rubric={defaultRubric}
         />
       );
       await act(async () => {
@@ -160,10 +174,10 @@ describe('RubricSettings', () => {
         <RubricSettings
           canProvideFeedback={true}
           teacherHasEnabledAi={true}
-          rubricId={1}
           studentUserId={10}
           refreshAiEvaluations={refreshAiEvaluationsSpy}
           visible
+          rubric={defaultRubric}
         />
       );
       await act(async () => {
@@ -206,9 +220,9 @@ describe('RubricSettings', () => {
         <RubricSettings
           canProvideFeedback={true}
           teacherHasEnabledAi={true}
-          rubricId={1}
           studentUserId={10}
           visible
+          rubric={defaultRubric}
         />
       );
       await act(async () => {
@@ -233,9 +247,9 @@ describe('RubricSettings', () => {
         <RubricSettings
           canProvideFeedback={true}
           teacherHasEnabledAi={true}
-          rubricId={1}
           studentUserId={10}
           visible
+          rubric={defaultRubric}
         />
       );
       await act(async () => {
@@ -260,9 +274,9 @@ describe('RubricSettings', () => {
         <RubricSettings
           canProvideFeedback={true}
           teacherHasEnabledAi={true}
-          rubricId={1}
           studentUserId={10}
           visible
+          rubric={defaultRubric}
         />
       );
       await act(async () => {
