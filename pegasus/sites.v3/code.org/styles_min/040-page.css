@@ -429,11 +429,11 @@ td {
     text-transform: uppercase;
     margin: 0 4px 0;
     padding: 5px 5px 4px;
+    background: var(--neutral_white);
     border: 1px solid var(--neutral_dark20);
     border-radius: 50%;
     outline: 4px solid var(--neutral_white);
     z-index: 1;
-    background: var(--neutral_white);
   }
 }
 
