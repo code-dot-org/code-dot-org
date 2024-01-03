@@ -23,76 +23,74 @@ Below are palettes, background effects, and foreground effects in the order that
 
 PALETTES  
 model_descriptive_name | blockly_id | blockly_user_facing_name  
-autumn | autumn | Autumn  
+fall leaves | autumn | Autumn  
 black and white | rave | Black and White  
-green blue | cool | Cool  
+cool | cool | Cool  
 electronic | electronic | Electronic  
-grayscale | grayscale | Grayscale  
-creamy pastel | iceCream | Ice Cream  
+black and white grayscale | grayscale | Grayscale  
+ice cream pastel | iceCream | Ice Cream  
 rainbow pastel | default | Light  
 neon | neon | Neon  
-blue | ocean | Ocean  
-bright rainbow | rainbow | Rainbow  
-roses | roses | Roses  
-pink blue | sky | Sky  
-green | spring | Spring  
-flower | summer | Summer  
-coral | sunrise | Sunrise  
-purple | sunset | Sunset  
-sweet candy rainbow | tropical | Tropical  
-orange | twinkling | Twinkling  
-retro | vintage | Vintage  
-red orange | warm | Warm  
-icy blue | winter | Winter  
-
+ocean water | ocean | Ocean  
+rainbow stripes | rainbow | Rainbow  
+roses romantic warm | roses | Roses  
+sky sunrise | sky | Sky  
+spring green plants | spring | Spring  
+summer flower | summer | Summer  
+sunrise cozy | sunrise | Sunrise  
+sunset cozy | sunset | Sunset  
+sweet candy | tropical | Tropical  
+fire warm | twinkling | Twinkling  
+groovy | vintage | Vintage  
+warm hot red orange | warm | Warm  
+winter icy blue | winter | Winter  
 BACKGROUND_EFFECTS  
 model_descriptive_name | blockly_id | blockly_user_facing_name  
-moving shapes | quads | Angles  
+geometric shapes | quads | Angles  
 flower petals | blooming_petals | Blooming Petals  
-pulse | circles | Circles  
+round circle geometric | circles | Circles  
 clouds | clouds | Clouds  
-solid colors | color_cycle | Colors  
+simple | color_cycle | Colors  
 diamonds | diamonds | Diamonds  
 disco | disco_ball | Disco Ball  
-firework | fireworks | Fireworks  
-flowers | flowers | Flowers  
+explosion celebration | fireworks | Fireworks  
+flowers plants | flowers | Flowers  
 light grid | frosted_grid | Frosted Grid  
 stars | growing_stars | Growing Stars  
-groovy shapes | higher_power | Higher Power  
-swirl | swirl | Hypno  
+groovy | higher_power | Higher Power  
+swirl twist | swirl | Hypno  
 kaleidoscope | kaleidoscope | Kaleidoscope  
-laser beam | lasers | Laser Dance Floor  
+electronic | lasers | Laser Dance Floor  
 paint splatter | splatter | Paint Splatter  
-rainbow | rainbow | Rainbow  
-dots | ripples_random | Random Ripples  
-circles | ripples | Ripples  
-snow fall | snowflakes | Snow  
-words | text | Song Names  
-galaxy | galaxy | Space  
-sparkles | sparkles | Sparkles  
-spiral | spiral | Spiral  
-squares | disco | Squares  
+rainbow stripes | rainbow | Rainbow  
+dots geometric pattern | ripples_random | Random Ripples  
+round shapes geometric | ripples | Ripples  
+snow | snowflakes | Snow  
+words song music | text | Song Names  
+galaxy space | galaxy | Space  
+bright | sparkles | Sparkles  
+spiral twisty | spiral | Spiral  
+grid geometric | disco | Squares  
 squiggles | squiggles | Squiggles  
 starburst | starburst | Starburst  
 twinkle | stars | Stars  
-sound wave | music_wave | Waves  
-
+music wave geometric | music_wave | Waves  
 FOREGROUND_EFFECTS  
 model_descriptive_name | blockly_id | blockly_user_facing_name  
 bubbles | bubbles | Bubbles  
 hearts | hearts_colorful | Colorful Hearts  
-confetti | confetti | Confetti  
-emojis | emojis | Emojis  
-heart | hearts_red | Hearts  
-music notes | music_notes | Music Notes  
-rainbow paint | paint_drip | Paint Drip  
-pineapple | pineapples | Pineapples  
-pizza | pizzas | Pizzas  
-poop | smiling_poop | Poop  
-rain | rain | Rain  
-rainbow | floating_rainbows | Rainbows  
-smily face | smile_face | Smiles  
-spotlight | spotlight | Spotlight  
+party confetti | confetti | Confetti  
+happy silly faces emojis | emojis | Emojis  
+red hearts | hearts_red | Hearts  
+music notes sound | music_notes | Music Notes  
+rainbow lines | paint_drip | Paint Drip  
+pineapple sweet food | pineapples | Pineapples  
+pizza food | pizzas | Pizzas  
+poop stinky | smiling_poop | Poop  
+rain water | rain | Rain  
+happy | floating_rainbows | Rainbows  
+happy emojis faces | smile_face | Smiles  
+spot light focus | spotlight | Spotlight  
 stage lights | color_lights | Stage Lights  
 stars | exploding_stars | Starburst  
-taco | raining_tacos | Tacos  
+taco food | raining_tacos | Tacos  

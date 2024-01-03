@@ -78,6 +78,8 @@ require_dependency 'queries/school_info'
 require_dependency 'queries/script_activity'
 require 'policies/child_account'
 require 'services/child_account'
+require 'policies/lti'
+require 'services/user'
 
 class User < ApplicationRecord
   include SerializedProperties
@@ -142,6 +144,7 @@ class User < ApplicationRecord
     country_code
     family_name
     ai_rubrics_disabled
+    sort_by_family_name
   )
 
   attr_accessor(
@@ -210,7 +213,10 @@ class User < ApplicationRecord
   has_many :pd_workshops_organized, class_name: 'Pd::Workshop', foreign_key: :organizer_id
 
   has_many :authentication_options, dependent: :destroy
+  accepts_nested_attributes_for :authentication_options
   belongs_to :primary_contact_info, class_name: 'AuthenticationOption', optional: true
+
+  has_many :lti_user_identities, dependent: :destroy
 
   # This custom validator makes email collision checks on the AuthenticationOption
   # model also show up as validation errors for the email field on the User
@@ -267,6 +273,10 @@ class User < ApplicationRecord
   after_save :save_parent_email_preference, if: :parent_email_preference_opt_in_required?
 
   after_save :save_email_reg_partner_preference, if: -> {share_teacher_email_reg_partner_opt_in_radio_choice.present?}
+
+  after_create if: -> {Policies::Lti.lti? self} do
+    Services::Lti.create_lti_user_identity(self)
+  end
 
   before_destroy :soft_delete_channels
 
@@ -402,6 +412,18 @@ class User < ApplicationRecord
     primary_contact_info.try(:hashed_email) || ''
   end
 
+  # Email used for the user's enrollments:
+  # Returns the 'alternateEmail' field from the user's latest accepted teacher application if it exists to
+  # help ensure the enrollment emails are delivered. Otherwise, returns the user's email.
+  def email_for_enrollments
+    latest_accepted_app = Pd::Application::TeacherApplication.where(
+      user: self,
+      status: 'accepted'
+    ).order(application_year: :desc).first&.form_data_hash
+    alternate_email = latest_accepted_app ? latest_accepted_app['alternateEmail'] : ''
+    alternate_email&.empty? ? email : alternate_email
+  end
+
   # assign a course to a facilitator that is qualified to teach it
   def course_as_facilitator=(course)
     courses_as_facilitator << courses_as_facilitator.find_or_create_by(facilitator_id: id, course: course)
@@ -466,26 +488,25 @@ class User < ApplicationRecord
 
   has_many :user_levels, -> {order(id: :desc)}, inverse_of: :user
 
-  # Relationships (sections/followers/students) from being a teacher.
-  has_many :sections, dependent: :destroy
-  has_many :followers, through: :sections
-  has_many :students, through: :followers, source: :student_user
-
-  has_many :section_instructors, foreign_key: 'instructor_id'
+  has_many :section_instructors, foreign_key: 'instructor_id', dependent: :destroy
   has_many :active_section_instructors, -> {where(status: :active)}, class_name: 'SectionInstructor', foreign_key: 'instructor_id'
-  has_many :sections_instructed, through: :active_section_instructors, source: :section
+  has_many :sections_instructed, -> {without_deleted}, through: :active_section_instructors, source: :section
 
-  # TODO once the backfill creates SectionInstructors for every section owner,
-  # this method can be deleted and its references replaced by sections_instructed
-  def sections_owned_or_instructed
-    (sections + sections_instructed).uniq
+  # "sections" previously referred to what is now called :sections_owned.
+  def sections
+    sections_instructed
   end
+
+  # Relationships (sections/followers/students) from being a teacher.
+  has_many :sections_owned, dependent: :destroy, class_name: 'Section'
+  has_many :followers, through: :sections_instructed
+  has_many :students, through: :followers, source: :student_user
 
   # Relationships (sections_as_students/followeds/teachers) from being a
   # student.
   has_many :followeds, -> {order 'followers.id'}, class_name: 'Follower', foreign_key: 'student_user_id', dependent: :destroy
   has_many :sections_as_student, through: :followeds, source: :section
-  has_many :teachers, through: :sections_as_student, source: :user
+  has_many :teachers, through: :sections_as_student, source: :instructors
 
   belongs_to :secret_picture, optional: true
   before_create :generate_secret_picture
@@ -504,7 +525,7 @@ class User < ApplicationRecord
   validates :name, length: {within: 1..70}, allow_blank: true
   validates :name, no_utf8mb4: true
 
-  defer_age = proc {|user| %w(google_oauth2 clever powerschool).include?(user.provider) || user.sponsored?}
+  defer_age = proc {|user| %w(google_oauth2 clever powerschool).include?(user.provider) || user.sponsored? || Policies::Lti.lti?(user)}
 
   validates :age, presence: true, on: :create, unless: defer_age # only do this on create to avoid problems with existing users
   AGE_DROPDOWN_OPTIONS = (4..20).to_a << "21+"
@@ -879,7 +900,7 @@ class User < ApplicationRecord
   def self.new_with_session(params, session)
     return super unless PartialRegistration.in_progress? session
     new_from_partial_registration session do |user|
-      user.attributes = params
+      Services::User.assign_form_params(user, params)
     end
   end
 
@@ -939,6 +960,7 @@ class User < ApplicationRecord
     return false if sponsored?
     return false if oauth?
     return false if parent_managed_account?
+    return false if Policies::Lti.lti? self
     true
   end
 
@@ -1372,7 +1394,7 @@ class User < ApplicationRecord
 
   #sections owned by the user AND not deleted
   def owned_section_ids
-    sections.select(:id).all
+    sections_instructed.select(:id).all
   end
 
   # Is the provided script_level hidden, on account of the section(s) that this
@@ -1465,6 +1487,23 @@ class User < ApplicationRecord
       permission?(UserPermission::LEVELBUILDER)
   end
 
+  AI_TUTOR_EXPERIMENT_NAME = 'ai-tutor'
+
+  # Teachers
+  def can_enable_ai_tutor?
+    !DCDO.get('ai-tutor-disabled', false) && (
+    permission?(UserPermission::AI_TUTOR_ACCESS) ||
+      SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME))
+  end
+
+  # Students
+  def has_ai_tutor_access?
+    !DCDO.get('ai-tutor-disabled', false) && (
+    permission?(UserPermission::AI_TUTOR_ACCESS) ||
+      (get_active_experiment_names_by_teachers.include?(AI_TUTOR_EXPERIMENT_NAME) &&
+      sections_as_student.any?(&:ai_tutor_enabled)))
+  end
+
   def student_of_verified_instructor?
     teachers.any?(&:verified_instructor?)
   end
@@ -1522,6 +1561,10 @@ class User < ApplicationRecord
 
   def mute_music?
     !!mute_music
+  end
+
+  def sort_by_family_name?
+    !!sort_by_family_name
   end
 
   def generate_username
@@ -1690,6 +1733,15 @@ class User < ApplicationRecord
   # Returns an array of experiment name strings
   def get_active_experiment_names
     Experiment.get_all_enabled(user: self).pluck(:name)
+  end
+
+  # Returns an array of experiment name strings that a student's teachers are enrolled in
+  def get_active_experiment_names_by_teachers
+    experiments = []
+    teachers.each do |teacher|
+      experiments.concat(Experiment.get_all_enabled(user: teacher).pluck(:name))
+    end
+    experiments.uniq
   end
 
   # Returns an array of hashes storing data for each unique course assigned to # sections that this user is a part of.
@@ -1875,7 +1927,7 @@ class User < ApplicationRecord
   end
 
   def all_sections
-    sections_as_teacher = student? ? [] : sections.to_a
+    sections_as_teacher = student? ? [] : sections_instructed.to_a
     sections_as_teacher.concat(sections_as_student).uniq
   end
 
@@ -1908,9 +1960,9 @@ class User < ApplicationRecord
     all_scripts
   end
 
-  # return the id of the section the user most recently created.
+  # return the id of the most-recently-created section the user instructs.
   def last_section_id
-    teacher? ? sections.where(hidden: false).last&.id : nil
+    teacher? ? sections_instructed.where(hidden: false).last&.id : nil
   end
 
   # The section which the user most recently joined as a student, or nil if none exists.
@@ -2183,8 +2235,8 @@ class User < ApplicationRecord
       can_edit_email? && sections_as_student.empty?
     else # downgrading to student
       # Teachers with sections cannot downgrade because our validations require sections
-      # to be owned by teachers.
-      sections.empty?
+      # to be taught by teachers.
+      sections_instructed.empty?
     end
   end
 
@@ -2220,6 +2272,8 @@ class User < ApplicationRecord
     # In some cases, a student might have a password but no e-mail (from our old UI)
     return false if encrypted_password.present? && hashed_email.present?
     return false if encrypted_password.present? && parent_email.present?
+    # LTI created accounts should not be teacher managed
+    return false if Policies::Lti.lti? self
     # Lastly, we check for oauth.
     !oauth?
   end
@@ -2254,10 +2308,10 @@ class User < ApplicationRecord
   end
 
   # Get a section a user is in that is assigned to this script. Look first for
-  # sections they are in as a student, otherwise sections they are the owner of
+  # sections they are in as a student, otherwise sections they instruct
   def section_for_script(script)
     sections_as_student.find {|section| section.script_id == script.id} ||
-      sections.find {|section| section.script_id == script.id}
+      sections_instructed.find {|section| section.script_id == script.id}
   end
 
   def lesson_extras_enabled?(unit)
@@ -2590,13 +2644,13 @@ class User < ApplicationRecord
 
   # Returns a list of all grades that the teacher currently has sections for
   private def grades_being_taught
-    @grades_being_taught ||= sections.map(&:grades).flatten.uniq
+    @grades_being_taught ||= sections_instructed.map(&:grades).flatten.uniq
   end
 
   # Returns a list of all curriculums that the teacher currently has sections for
   # ex: ["csf", "csd"]
   private def curriculums_being_taught
-    @curriculums_being_taught ||= sections.filter_map {|section| section.script&.curriculum_umbrella}.uniq
+    @curriculums_being_taught ||= sections_instructed.filter_map {|section| section.script&.curriculum_umbrella}.uniq
   end
 
   private def has_attended_pd?
@@ -2626,7 +2680,7 @@ class User < ApplicationRecord
     # If we're a teacher, we want to go through each of our sections and return
     # a mapping from section id to hidden lessons/units in that section
     hidden_by_section = {}
-    sections.each do |section|
+    sections_instructed.each do |section|
       hidden_by_section[section.id] = hidden_lessons ? hidden_lesson_ids([section]) : hidden_unit_ids([section])
     end
     hidden_by_section

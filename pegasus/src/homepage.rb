@@ -327,156 +327,110 @@ class Homepage
   end
 
   def self.get_blocks(request)
-    if request.language == "en"
-      [
+    [
+      {
+        id: "at-home-en",
+        type: "block",
+        title: "homepage_slot_text_title_hoc",
+        text: "homepage_slot_text_blurb_hoc_2022",
+        color1: "0, 173, 188",
+        color2: "89, 202, 211",
+        url: "https://hourofcode.com",
+        image: "/images/mc/2016_homepage_hocblock.jpg",
+        links:
+          [
+            {
+              text: "homepage_slot_text_link_hoc",
+              url: "/hourofcode"
+            },
+            {
+              text: "homepage_slot_text_link_about_hoc",
+              url: "https://hourofcode.com/"
+            },
+            {
+              text: "homepage_slot_text_link_host",
+              url: "https://hourofcode.com/events"
+            }
+          ]
+      },
+      {
+        id: "students-en",
+        type: "block",
+        title: "homepage_slot_text_title_students",
+        text: "homepage_slot_text_blurb_students_courses",
+        color1: "118, 101, 160",
+        color2: "166, 155, 193",
+        url: CDO.studio_url("/courses"),
+        image: "/shared/images/courses/logo_tall_elementary.jpg",
+        links:
+          [
+            {
+              text: "homepage_slot_text_link_codestudio",
+              url: CDO.studio_url("/")
+            },
+            {
+              text: "homepage_slot_text_link_thebadguys",
+              url: "/thebadguys"
+            },
+            {
+              text: "homepage_slot_text_link_othercourses",
+              url: "/learn/beyond"
+            }
+          ]
+      },
 
-        {
-          id: "at-home-en",
-          type: "block",
-          title: "homepage_slot_text_title_hoc",
-          text: "homepage_slot_text_blurb_hoc_2022",
-          color1: "0, 173, 188",
-          color2: "89, 202, 211",
-          url: "https://hourofcode.com",
-          image: "/images/mc/2016_homepage_hocblock.jpg",
-          links:
-            [
-              {
-                text: "homepage_slot_text_link_hoc",
-                url: "/hourofcode"
-              },
-              {
-                text: "homepage_slot_text_link_about_hoc",
-                url: "https://hourofcode.com/"
-              },
-              {
-                text: "homepage_slot_text_link_host",
-                url: "https://hourofcode.com/events"
-              }
-            ]
-        },
-        {
-          id: "students-en",
-          type: "block",
-          title: "homepage_slot_text_title_students",
-          text: "homepage_slot_text_blurb_students_courses",
-          color1: "118, 101, 160",
-          color2: "166, 155, 193",
-          url: CDO.studio_url("/courses"),
-          image: "/shared/images/courses/logo_tall_elementary.jpg",
-          links:
-            [
-              {
-                text: "homepage_slot_text_link_codestudio",
-                url: CDO.studio_url("/")
-              },
-              {
-                text: "homepage_slot_text_link_thebadguys",
-                url: "/thebadguys"
-              },
-              {
-                text: "homepage_slot_text_link_othercourses",
-                url: "/learn/beyond"
-              }
-            ]
-        },
+      {
+        id: "educators-en",
+        type: "block",
+        title: "homepage_slot_text_title_educators",
+        text: "homepage_slot_text_blurb_educators",
+        color1: "0, 148, 202",
+        color2: "89, 185, 220",
+        url: "/educate",
+        image: "/shared/images/courses/logo_tall_teacher2.jpg",
+        links:
+          [
+            {
+              text: "homepage_slot_text_link_elementary",
+              url: "/educate/curriculum/elementary-school"
+            },
+            {
+              text: "homepage_slot_text_link_middle",
+              url: "/educate/curriculum/middle-school"
+            },
+            {
+              text: "homepage_slot_text_link_high",
+              url: "/educate/curriculum/high-school"
+            }
+          ]
+      },
 
-        {
-          id: "educators-en",
-          type: "block",
-          title: "homepage_slot_text_title_educators",
-          text: "homepage_slot_text_blurb_educators",
-          color1: "0, 148, 202",
-          color2: "89, 185, 220",
-          url: "/educate",
-          image: "/shared/images/courses/logo_tall_teacher2.jpg",
-          links:
-            [
-              {
-                text: "homepage_slot_text_link_elementary",
-                url: "/educate/curriculum/elementary-school"
-              },
-              {
-                text: "homepage_slot_text_link_middle",
-                url: "/educate/curriculum/middle-school"
-              },
-              {
-                text: "homepage_slot_text_link_high",
-                url: "/educate/curriculum/high-school"
-              }
-            ]
-        },
-
-        {
-          id: "advocate-en",
-          type: "block",
-          title: "homepage_slot_text_link_buy",
-          text: "homepage_slot_text_blurb_advocates",
-          color1: "185, 191, 21",
-          color2: "209, 213, 103",
-          url: "/help",
-          image: "/shared/images/courses/logo_tall_map.jpg",
-          links:
-            [
-              {
-                text: "homepage_slot_text_link_stats",
-                url: "/promote"
-              },
-              {
-                text: "homepage_slot_text_link_administrators",
-                url: "/yourschool"
-              },
-              {
-                text: "homepage_slot_text_link_donate",
-                url: "/donate"
-              }
-            ]
-        }
-      ].each {|entry| entry[:image].gsub!("/images/", "/images/fit-400/")}
-    else
-      [
-        {
-          id: "at-home-nonen",
-          type: "blockshort",
-          title: "homepage_slot_text_title_at_home",
-          text: "homepage_slot_text_blurb_at_home",
-          color1: "0, 173, 188",
-          color2: "89, 202, 211",
-          url: CDO.studio_url("/courses"),
-          image: "/images/mc/2016_homepage_hocblock.jpg"
-        },
-        {
-          id: "students-nonen",
-          type: "blockshort",
-          title: "homepage_slot_text_title_students",
-          text: "homepage_slot_text_blurb_students",
-          color1: "118, 101, 160",
-          color2: "166, 155, 193",
-          url: CDO.studio_url("/courses"),
-          image: "/shared/images/courses/logo_tall_elementary.jpg"
-        },
-        {
-          id: "educators-nonen",
-          type: "blockshort",
-          title: "homepage_slot_text_title_educators",
-          text: "homepage_slot_text_blurb_educators",
-          color1: "0, 148, 202",
-          color2: "89, 185, 220",
-          url: CDO.code_org_url("/teach"),
-          image: "/shared/images/courses/logo_tall_teacher2.jpg"
-        },
-        {
-          id: 'dance-nonen',
-          type: "blockshort",
-          title: 'studiobar_dance_title',
-          text: 'studiobar_dance_body',
-          color1: "185, 191, 21",
-          color2: "209, 213, 103",
-          url: '/dance',
-          image: '/shared/images/courses/logo_tall_dance.jpg'
-        }
-      ].each {|entry| entry[:image].gsub!("/images/", "/images/fit-400/")}
-    end
+      {
+        id: "advocate-en",
+        type: "block",
+        title: "homepage_slot_text_link_buy",
+        text: "homepage_slot_text_blurb_advocates",
+        color1: "185, 191, 21",
+        color2: "209, 213, 103",
+        url: "/help",
+        image: "/shared/images/courses/logo_tall_map.jpg",
+        links:
+          [
+            {
+              text: "homepage_slot_text_link_stats",
+              url: "/promote"
+            },
+            {
+              text: "homepage_slot_text_link_administrators",
+              url: "/yourschool"
+            },
+            {
+              text: "homepage_slot_text_link_donate",
+              url: "/donate"
+            }
+          ]
+      }
+    ].each {|entry| entry[:image].gsub!("/images/", "/images/fit-400/")}
   end
 
   def self.get_video(request)
@@ -578,12 +532,12 @@ class Homepage
 
   def self.get_dance_stars
     [
-      "Beyoncé", "BTS", "Harry Styles", "Lizzo", "Post Malone", "Disney's \"Encanto\"", "Nicky Youre",
-      "Katy Perry", "Lil Nas X", "Jonas Brothers", "Panic! At The Disco",
+      "Beyoncé", "BTS", "Harry Styles", "Lizzo", "Post Malone", "Disney's \"Encanto\"", "Rosalía", "Nicky Youre",
+      "Katy Perry", "Lil Nas X", "Jonas Brothers", "FIFTY FIFTY", "Steve Lacy", "Panic! At The Disco",
       "Shawn Mendes", "Nicki Minaj", "Pedro Capó", "Francesco Gabbani", "Sia",
       "Ariana Grande", "Avicii and Aloe Blacc", "Calvin Harris",
       "Carly Rae Jepsen", "Coldplay", "Ed Sheeran", "Imagine Dragons",
-      "J Balvin and Willy William", "Justin Bieber", "Keith Urban", "Lady Gaga",
+      "J Balvin and Willy William", "Justin Bieber", "Lady Gaga",
       "Los del Río", "Madonna", "Mark Ronson (ft. Bruno Mars)", "MC Hammer",
       "Miley Cyrus", "Selena Gomez", "The Weeknd", "Yolanda Be Cool"
     ]

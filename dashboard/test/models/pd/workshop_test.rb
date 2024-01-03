@@ -23,7 +23,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     @organizer_workshop.reload
   end
 
-  # TODO: remove this test when workshop_organizer is deprecated
   test 'query by workshop organizer' do
     # create a workshop with a different organizer, which should not be returned below
     create(:workshop)
@@ -58,7 +57,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'query by enrolled teacher' do
     # Teachers enroll in a workshop as a whole
     teacher = create :teacher
-    create :pd_enrollment, workshop: @workshop, full_name: teacher.name, email: teacher.email
+    create :pd_enrollment, workshop: @workshop, full_name: teacher.name, email: teacher.email_for_enrollments
 
     # create a workshop with a different teacher enrollment, which should not be returned below
     other_workshop = create(:workshop)
@@ -75,7 +74,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_empty Pd::Workshop.enrolled_in_by(teacher)
 
     # Email match only
-    enrollment.update!(email: teacher.email)
+    enrollment.update!(email: teacher.email_for_enrollments)
     assert_equal [@workshop], Pd::Workshop.enrolled_in_by(teacher)
 
     # UserId only
@@ -83,7 +82,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal [@workshop], Pd::Workshop.enrolled_in_by(teacher)
 
     # Both email and user id. Should still find workshop exactly once
-    enrollment.update!(email: teacher.email, user: teacher)
+    enrollment.update!(email: teacher.email_for_enrollments, user: teacher)
     assert_equal [@workshop], Pd::Workshop.enrolled_in_by(teacher)
   end
 
@@ -874,6 +873,18 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     Pd::Workshop.send_teacher_pre_work_csa
   end
 
+  test 'CSA teacher pre-work doesnt send to non-summer workshops' do
+    mock_mail = stub
+    mock_mail.stubs(:deliver_now).returns(nil)
+
+    workshop = create :csa_academic_year_workshop, num_facilitators: 2
+    create_list :pd_enrollment, 3, workshop: workshop
+    Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
+
+    Pd::WorkshopMailer.expects(:teacher_pre_workshop_csa).returns(mock_mail).never
+    Pd::Workshop.send_teacher_pre_work_csa
+  end
+
   test 'workshop starting date picks the day of the first session' do
     workshop = create :workshop, sessions: [
       session1 = create(:pd_session, start: Time.zone.today + 15.days),
@@ -963,7 +974,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal 0, workshop.teachers_attending_all_sessions(filter_by_cdo_scholarship: true).count
   end
 
-  # TODO: remove this test when workshop_organizer is deprecated
   test 'organizer_or_facilitator?' do
     facilitator = create :facilitator
     @organizer_workshop.facilitators << facilitator

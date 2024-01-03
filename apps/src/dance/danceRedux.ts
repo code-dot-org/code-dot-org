@@ -5,7 +5,8 @@ import {
   PayloadAction,
   ThunkDispatch,
 } from '@reduxjs/toolkit';
-import {SongData, SongMetadata, AiOutput} from './types';
+import {SongData, SongMetadata} from './types';
+import {DanceAiModalOutputType} from './ai/types';
 import {queryParams} from '../code-studio/utils';
 import {fetchSignedCookies} from '../utils';
 import {
@@ -15,30 +16,30 @@ import {
   loadSong,
   unloadSong,
   loadSongMetadata,
+  isSongDeprecated,
 } from './songs';
-import {Field} from 'blockly';
 
 export interface DanceState {
   selectedSong: string;
   songData: SongData;
   runIsStarting: boolean;
-  currentAiModalField?: Field;
-  aiOutput?: AiOutput;
+  currentAiModalBlockId: string | undefined;
+  aiOutput?: DanceAiModalOutputType;
+  aiModalOpenedFromFlyout: boolean;
   // Fields below are used only by Lab2 Dance
   isRunning: boolean;
   currentSongMetadata: SongMetadata | undefined;
-  aiModalOpenedFromFlyout: boolean;
 }
 
 const initialState: DanceState = {
   selectedSong: 'macklemore90',
   songData: {},
   runIsStarting: false,
-  currentAiModalField: undefined,
-  aiOutput: AiOutput.AI_BLOCK,
+  currentAiModalBlockId: undefined,
+  aiOutput: DanceAiModalOutputType.AI_BLOCK,
+  aiModalOpenedFromFlyout: false,
   isRunning: false,
   currentSongMetadata: undefined,
-  aiModalOpenedFromFlyout: false,
 };
 
 // THUNKS
@@ -58,11 +59,17 @@ export const initSongs = createAsyncThunk(
       };
       onAuthError: (songId: string) => void;
       onSongSelected?: (songId: string) => void;
+      onSongUnavailable?: (songId: string) => void;
     },
     {dispatch}
   ) => {
-    const {useRestrictedSongs, onAuthError, selectSongOptions, onSongSelected} =
-      payload;
+    const {
+      useRestrictedSongs,
+      onAuthError,
+      selectSongOptions,
+      onSongSelected,
+      onSongUnavailable,
+    } = payload;
 
     // Check for a user-specified manifest file.
     const userManifest = queryParams('manifest') as string;
@@ -82,6 +89,14 @@ export const initSongs = createAsyncThunk(
         !filteredSongSet.size || filteredSongSet.has(song.id)
     );
     const songData = parseSongOptions(songManifest) as SongData;
+
+    if (
+      selectSongOptions.selectedSong &&
+      isSongDeprecated(selectSongOptions.selectedSong) &&
+      onSongUnavailable
+    ) {
+      onSongUnavailable(selectSongOptions.selectedSong);
+    }
     const selectedSong = getSelectedSong(songManifest, selectSongOptions);
 
     // Set selectedSong first, so we don't initially show the wrong song.
@@ -168,21 +183,21 @@ const danceSlice = createSlice({
     setCurrentSongMetadata: (state, action: PayloadAction<SongMetadata>) => {
       state.currentSongMetadata = action.payload;
     },
-    setAiOutput: (state, action: PayloadAction<AiOutput>) => {
+    setAiOutput: (state, action: PayloadAction<DanceAiModalOutputType>) => {
       state.aiOutput = action.payload;
     },
     openAiModal: (
       state,
       action: PayloadAction<{
-        modalField: Field;
+        blockId: string;
         fromFlyout: boolean;
       }>
     ) => {
-      state.currentAiModalField = action.payload.modalField;
+      state.currentAiModalBlockId = action.payload.blockId;
       state.aiModalOpenedFromFlyout = action.payload.fromFlyout;
     },
     closeAiModal: state => {
-      state.currentAiModalField = undefined;
+      state.currentAiModalBlockId = undefined;
       state.aiModalOpenedFromFlyout = false;
     },
   },

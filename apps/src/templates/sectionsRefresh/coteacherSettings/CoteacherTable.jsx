@@ -5,30 +5,73 @@ import i18n from '@cdo/locale';
 import classNames from 'classnames';
 import styles from './coteacher-settings.module.scss';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {StrongText} from '@cdo/apps/componentLibrary/typography';
+import {StrongText, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
+import ReactTooltip from 'react-tooltip';
 
-const getPill = (text, className, icon) => (
-  <div className={classNames(className, styles.tablePill)}>
-    <StrongText>
-      <FontAwesome icon={icon} className={styles.tablePillIcon} />
-      {text}
-    </StrongText>
-  </div>
-);
+const getPendingPill = () => {
+  return (
+    <span style={styles.toolTipBox}>
+      <div
+        className={classNames(styles.tablePending, styles.tablePill)}
+        data-tip
+        data-event="mouseenter focus"
+        data-event-off="mouseleave blur"
+        data-for={'pending-tooltip'}
+        tabIndex="0"
+      >
+        <StrongText>
+          <FontAwesome icon={'ellipsis'} className={styles.tablePillIcon} />
+          {i18n.coteacherPending()}
+        </StrongText>
+      </div>
+      <ReactTooltip
+        id={'pending-tooltip'}
+        role="tooltip"
+        effect="solid"
+        place="top"
+      >
+        <BodyTwoText className={styles.tableToolTipText}>
+          {i18n.coteacherPendingTooltip()}
+        </BodyTwoText>
+      </ReactTooltip>
+    </span>
+  );
+};
 
 const getStatusPill = status => {
   if (!status) {
-    return getPill(i18n.coteacherPending(), styles.tablePending, 'ellipsis');
+    return getPendingPill();
   }
   switch (status) {
     case 'invited':
-      return getPill(i18n.coteacherPending(), styles.tablePending, 'ellipsis');
+      return getPendingPill();
     case 'active':
-      return getPill(i18n.coteacherAccepted(), styles.tableActive, 'check');
+      return (
+        <div className={classNames(styles.tableActive, styles.tablePill)}>
+          <StrongText>
+            <FontAwesome icon={'check'} className={styles.tablePillIcon} />
+            {i18n.coteacherAccepted()}
+          </StrongText>
+        </div>
+      );
     case 'declined':
-      return getPill(i18n.coteacherDeclined(), styles.tableDeclined, 'xmark');
+      return (
+        <div className={classNames(styles.tableDeclined, styles.tablePill)}>
+          <StrongText>
+            <FontAwesome icon={'xmark'} className={styles.tablePillIcon} />
+            {i18n.coteacherDeclined()}
+          </StrongText>
+        </div>
+      );
     default:
-      return getPill(i18n.coteacherError(), styles.tableError, 'xmark');
+      return (
+        <div className={classNames(styles.tableError, styles.tablePill)}>
+          <StrongText>
+            <FontAwesome icon={'xmark'} className={styles.tablePillIcon} />
+            {i18n.coteacherError()}
+          </StrongText>
+        </div>
+      );
   }
 };
 
@@ -65,8 +108,8 @@ export default function CoteacherTable({coteachers, setCoteacherToRemove}) {
   };
 
   return coteachers.length === 0 ? (
-    <div className={classNames(styles.table, styles.tableRow)}>
-      {i18n.coteacherNoCoteachers()}
+    <div className={styles.table}>
+      <div className={styles.tableRow}>{i18n.coteacherNoCoteachers()}</div>
     </div>
   ) : (
     <table className={styles.table}>

@@ -4,6 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "9485e32c-ac7b-47d7-ba60-64e2c2fc4d7a",
+          "notice": "Free Teacher Resources from Amazon Future Engineer",
+          "details": "Code.org has partnered with Amazon Future Engineer to offer teachers at underserved schools a growing number of resources and benefits at no cost! ",
+          "link": "https://code.org/afe",
+          "type": "information",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Get free resources"
+        }
+      ],
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -18,7 +30,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-11-03 18:18:12 UTC",
+    "serialized_at": "2023-12-14 04:02:31 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -801,7 +813,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "<div style=\"column-count: 2; column-gap: 20px; -moz-column-count: 2; width: 100%\"> \n\t<p style=\"break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always; width: 180%\">\n     <b>Create Perfomance Task Written Response Practice</b>\n    </br>\n    </br>\n    In order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n    </br>\n    </br>\n    Sample Prompt: <i> Focus on an app from this level and explain its purpose. Give an example of who a potential user of such an app might be.</i>\n    </p>\n\t<p style=\"break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;\">\n    <img src=\"https://images.code.org/3f77c8efade39dc50d301f0751f767b7-writtenResponse3.png\" alt=\"\" style=\"display: block; margin: auto; float: right;\"/>\n    </p>\n</div>\n</br>\n<div style=\"column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 2; width: 100%\"> \n\t<p style=\"break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;\">\n<a href=\"https://docs.google.com/presentation/d/11bPD5axn1Xjql5050aLfUSYy-G2UJWhQ-nV6nskne_E/edit#slide=id.g22e15123a99_0_388\" target=\"_blank\">Unit Journal Template</a>\n    </p>\n\t<p style=\"break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;\">\n    <b>Exemplar Response for Instructors</b>\n</br>\n<i> (Exemplars will be forthcoming with further College Board updates in Fall 2023)\n    </p>\n </div>"
+            "markdown": "<b>Create Performance Task Written Response Practice</b>\n\nIn order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n\n</br>\n\nSample Prompt: <i> Focus on an app from this level and explain its purpose. Give an example of who a potential user of such an app might be.</i>\n\n\n<a href=\"https://docs.google.com/presentation/d/11bPD5axn1Xjql5050aLfUSYy-G2UJWhQ-nV6nskne_E/edit#slide=id.g22e15123a99_0_388\">Unit Journal Template</a>\n\n<b>Sample Response for Instructors</b> (<i>coming soon...</i>)"
           }
         ]
       },
@@ -870,7 +882,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": " <b>Create Perfomance Task Written Response Practice</b>\n</br>\n\nIn order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n</br>\n\nSample Prompt: <i> Examine the app that you have annotated here and analyze how might you improve the user experience by updating the input, output, and/or layout?.</i>\n\n</br>\n\n<a href=\"https://docs.google.com/presentation/d/11bPD5axn1Xjql5050aLfUSYy-G2UJWhQ-nV6nskne_E/#slide=id.g22e15123a99_0_517\" target=\"_blank\">Unit Journal Template</a>\n\n<b>Sample Response for Instructors</b>\n\n![](https://images.code.org/12964d461b13a57ef617b0385624b739-U3L2.png)"
+            "markdown": " <b>Create Performance Task Written Response Practice</b>\n</br>\n\nIn order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n</br>\n\nSample Prompt: <i>How might you improve the user experience by updating input and/or output?</i>\n\n</br>\n\n<a href=\"https://docs.google.com/presentation/d/11bPD5axn1Xjql5050aLfUSYy-G2UJWhQ-nV6nskne_E/#slide=id.g22e15123a99_0_517\" target=\"_blank\">Unit Journal Template</a>\n\n<b>Sample Response for Instructors</b>\n\n![](https://images.code.org/12964d461b13a57ef617b0385624b739-U3L2.png)"
           }
         ]
       },
@@ -2096,7 +2108,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": " <b>Create Perfomance Task Written Response Practice</b>\n</br>\n\nIn order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n</br>\n\nSample Prompt: <i>Describe the process you used to develop your program. Include the major stages and any challenges you faced.</i>\n\n</br>\n\n<a href=\"https://docs.google.com/presentation/d/11bPD5axn1Xjql5050aLfUSYy-G2UJWhQ-nV6nskne_E/edit#slide=id.g29207375a28_127_0\" target=\"_blank\">Unit Journal Template</a>\n\n<b>Sample Response for Instructors</b>\n"
+            "markdown": " <b>Create Perfomance Task Written Response Practice</b>\n</br>\n\nIn order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n</br>\n\nSample Prompt: <i>Describe the process you used to develop your program. Include any goals that you set, challenges or setbacks that you encountered, and solutions that worked for your team.</i>\n\n</br>\n\n<a href=\"https://docs.google.com/presentation/d/11bPD5axn1Xjql5050aLfUSYy-G2UJWhQ-nV6nskne_E/edit#slide=id.g29207375a28_127_0\" target=\"_blank\">Unit Journal Template</a>\n\n<b>Sample Response for Instructors</b>\n"
           }
         ]
       },

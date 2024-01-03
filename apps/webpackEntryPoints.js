@@ -81,6 +81,7 @@ const CODE_STUDIO_ENTRIES = {
   'levels/_summary': './src/sites/studio/pages/levels/_summary.js',
   'levels/_teacher_markdown': './src/sites/studio/pages/levels/_teacher_markdown.js',
   'levels/_teacher_panel': './src/sites/studio/pages/levels/_teacher_panel.js',
+  'levels/_ai_tutor_panel': './src/sites/studio/pages/levels/_ai_tutor_panel.js',
   'levels/_text_match': './src/sites/studio/pages/levels/_text_match.js',
   'levels/_widget': './src/sites/studio/pages/levels/_widget.js',
   'levels/show': './src/sites/studio/pages/levels/show.js',

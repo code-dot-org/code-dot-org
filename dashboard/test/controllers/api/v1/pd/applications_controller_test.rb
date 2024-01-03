@@ -165,7 +165,6 @@ module Api::V1::Pd
       assert_equal([@csd_teacher_application.id], JSON.parse(@response.body).map {|r| r['id']})
     end
 
-    # TODO: remove this test when workshop_organizer is deprecated
     test 'regional partners can only see their applications in index as workshop organizers' do
       sign_in @workshop_organizer
       get :index
@@ -190,14 +189,12 @@ module Api::V1::Pd
       assert_equal 2, data['csd_teachers']['unreviewed']['total']
     end
 
-    # TODO: remove this test when workshop_organizer is deprecated
     test 'regional partners can show their applications as workshop organizers' do
       sign_in @workshop_organizer
       get :show, params: @test_show_params
       assert_response :success
     end
 
-    # TODO: remove this test when workshop_organizer is deprecated
     test 'regional partners cannot show other applications as workshop organizers' do
       sign_in @workshop_organizer
       get :show, params: {id: @csd_teacher_application}
@@ -222,7 +219,6 @@ module Api::V1::Pd
       assert_response :success
     end
 
-    # TODO: remove this test when workshop_organizer is deprecated
     test 'regional partners can see only their applications in quick_view as workshop organizers' do
       sign_in @workshop_organizer
       get :quick_view, params: @test_quick_view_params
@@ -251,7 +247,6 @@ module Api::V1::Pd
       assert_equal expected_ids, data.map {|a| a['id']}.sort
     end
 
-    # TODO: remove this test when workshop_organizer is deprecated
     test 'regional partners can edit their applications as workshop organizers' do
       sign_in @workshop_organizer
       Pd::Application::TeacherApplication.any_instance.stubs(:deliver_email)
@@ -260,7 +255,6 @@ module Api::V1::Pd
       assert_response :success
     end
 
-    # TODO: remove this test when workshop_organizer is deprecated
     test 'regional partners cannot edit other applications as workshop organizers' do
       sign_in @workshop_organizer
       put :update, params: {id: @csd_teacher_application, application: {status: 'accepted', notes: 'Notes'}}
@@ -441,7 +435,6 @@ module Api::V1::Pd
       assert_equal scholarship_status, @csp_teacher_application.reload.scholarship_status
     end
 
-    # TODO: remove this test when workshop_organizer is deprecated
     test 'Regional partners cannot update form_data as workshop organizers' do
       sign_in @workshop_organizer
       updated_form_data = @csd_teacher_application_with_partner.form_data_hash.merge('alternateEmail' => 'my.other@email.net')
@@ -521,7 +514,6 @@ module Api::V1::Pd
       )
     end
 
-    # TODO: remove this test when workshop_organizer is deprecated
     test 'cohort view as a workshop organizer returns expected columns for a teacher' do
       time = Date.new(2020, 3, 15)
 
@@ -571,7 +563,6 @@ module Api::V1::Pd
       end
     end
 
-    # TODO: remove this test when workshop_organizer is deprecated
     test 'cohort view as a workshop organizer returns expected columns for a teacher without a workshop' do
       time = Date.new(2020, 3, 15)
 
@@ -758,11 +749,9 @@ module Api::V1::Pd
         "To which grades does your school plan to offer CS Principles in the #{APPLICATION_CURRENT_YEAR} school year?",
         "How will you offer CS Principles?",
         "Will you have more than {{min hours}} hours with your {{CS program}} section(s)?",
-        "Will this course replace an existing computer science course in the master schedule? (Teacher's response)",
         "Have you participated in previous yearlong Code.org Professional Learning Programs?",
         "Are you committed to participating in the entire Professional Learning Program?",
         "Please indicate which workshops you are able to attend.",
-        "Will your school be able to pay the fee?",
         "Please provide any additional information you'd like to share about why your application should be considered for a scholarship.",
         "Teacher's gender identity",
         "Teacher's race",
@@ -789,13 +778,8 @@ module Api::V1::Pd
         "Percent of student enrollment by race - Native Hawaiian or other Pacific Islander",
         "Percent of student enrollment by race - American Indian or Native Alaskan",
         "Percent of student enrollment by race - Other",
-        "Are you committed to including this course on the master schedule in #{APPLICATION_CURRENT_YEAR} if this teacher is accepted into the program?",
-        "Will this course replace an existing computer science course in the master schedule? (Principal's response)",
         "How will you implement CS Principles at your school?",
-        "If there is a fee for the program, will your teacher or your school be able to pay for the fee?",
         "Principal authorizes college board to send AP Scores",
-        "Contact name for invoicing",
-        "Contact email or phone number for invoicing",
         "Title I status code (NCES data)",
         "Rural Status",
         "Total student enrollment (NCES data)",
@@ -826,7 +810,6 @@ module Api::V1::Pd
       assert_equal expected, result
     end
 
-    # TODO: remove this test when workshop_organizer is deprecated
     test 'search as workshop organizer finds applications by email for the relevant regional partner' do
       sign_in @workshop_organizer
       get :search, params: {email: @csd_teacher_application_with_partner.user.email}
@@ -840,7 +823,6 @@ module Api::V1::Pd
       assert_equal expected, result
     end
 
-    # TODO: remove this test when workshop_organizer is deprecated
     test 'search as workshop organizer does not reveal applications outside the regional partners cohort' do
       sign_in @workshop_organizer
       get :search, params: {email: @csd_teacher_application.user.email}

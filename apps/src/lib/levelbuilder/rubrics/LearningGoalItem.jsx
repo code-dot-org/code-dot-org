@@ -96,6 +96,9 @@ export default function LearningGoalItem({
             style={{width: '100%', height: 100}}
           />
         </label>
+        <label style={styles.labelAndInput}>
+          Unique Key: {exisitingLearningGoalData.key}
+        </label>
         <Button
           text="Delete key concept"
           color={Button.ButtonColor.red}

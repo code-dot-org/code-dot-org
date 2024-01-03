@@ -10,8 +10,20 @@
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  margin-top: 24px;
   margin-bottom: 24px;
+}
+
+.label {
+  font-size: 16px;
+  margin-top: 24px;
+}
+
+.primaryTeacher {
+  padding: 12px;
+  height: 48px;
+  border: 1px solid $light_gray_200;
+  font-size: 16px;
+  line-height: 150%;
 }
 
 .add {
@@ -21,7 +33,7 @@
 
   .input {
     flex: 1;
-    margin-right: 10px;
+    margin-inline-end: 10px;
     margin-bottom: 0;
     padding: 6px 12px;
   }
@@ -36,7 +48,7 @@
     margin: 0;
   }
 
-  .label {
+  &Label {
     @include label-one;
     font-size: 14px;
     margin-bottom: 0;
@@ -62,10 +74,9 @@
 }
 
 .table {
-  width: 100%;
   border-left: 1px solid $light_gray_200;
   border-right: 1px solid $light_gray_200;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 
   &Row {
     display: flex;
@@ -104,11 +115,12 @@
   &Pill {
     border-radius: 100px;
     padding: 4px 8px;
-    margin-left: 12px;
+    margin-inline-start: 12px;
     font-size: 12px;
     letter-spacing: 0.5px;
     color: $light_black;
     width: fit-content;
+    cursor: default;
   }
 
   &Active {
@@ -120,14 +132,22 @@
   }
 
   &Declined{
-    background-color: $product_negative_light;}
+    background-color: $product_negative_light;
+  }
 
   &Error{
     background-color: $neutral_dark10;
   }
 
   &PillIcon {
-    margin-right: 5px;
+    margin-inline-end: 5px;
+  }
+
+  &ToolTipText {
+    font-size: 13px;
+    color: $neutral_white;
+    margin-bottom: 0;
+    max-width: 365px;
   }
 }
 

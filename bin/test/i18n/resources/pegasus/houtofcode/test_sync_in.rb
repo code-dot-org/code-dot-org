@@ -2,25 +2,23 @@ require_relative '../../../../test_helper'
 require_relative '../../../../../i18n/resources/pegasus/hourofcode/sync_in'
 
 describe I18n::Resources::Pegasus::HourOfCode::SyncIn do
-  def around
-    FakeFS.with_fresh {yield}
+  let(:described_class) {I18n::Resources::Pegasus::HourOfCode::SyncIn}
+  let(:described_instance) {described_class.new}
+
+  around do |test|
+    FakeFS.with_fresh {test.call}
   end
 
   before do
-    STDOUT.stubs(:print)
     I18n::Utils::PegasusMarkdown.stubs(:sanitize_file_header)
   end
 
-  describe '.perform' do
-    it 'calls #execute' do
-      I18n::Resources::Pegasus::HourOfCode::SyncIn.any_instance.expects(:execute).once
-
-      I18n::Resources::Pegasus::HourOfCode::SyncIn.perform
-    end
+  it 'inherits from I18n::Utils::SyncInBase' do
+    assert_equal I18n::Utils::SyncInBase, described_class.superclass
   end
 
-  describe '#execute' do
-    let(:sync_in) {I18n::Resources::Pegasus::HourOfCode::SyncIn.new}
+  describe '#process' do
+    let(:process) {described_instance.process}
 
     context 'when the file containing developer-added strings exists' do
       let(:hoc_origin_i18n_file_path) {CDO.dir('pegasus/sites.v3/hourofcode.com/i18n/en.yml')}
@@ -32,8 +30,7 @@ describe I18n::Resources::Pegasus::HourOfCode::SyncIn do
       end
 
       it 'copies the file to the i18n source dir' do
-        refute File.exist?(i18n_source_hoc_origin_i18n_file_path)
-        sync_in.execute
+        process
         assert File.exist?(i18n_source_hoc_origin_i18n_file_path)
       end
     end
@@ -66,7 +63,7 @@ describe I18n::Resources::Pegasus::HourOfCode::SyncIn do
             expect_hoc_markdown_file_to_i18n_source_dir_copying.in_sequence(execution_sequence)
             expect_i18n_source_file_header_sanitizing.in_sequence(execution_sequence)
 
-            sync_in.execute
+            process
           end
         end
       end

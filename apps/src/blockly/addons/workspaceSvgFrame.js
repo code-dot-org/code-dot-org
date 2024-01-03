@@ -27,12 +27,16 @@ export default class WorkspaceSvgFrame extends SvgFrame {
       frameSizes.WORKSPACE_HEADER_HEIGHT,
       fontSize
     );
-
-    const frameX = this.element_.toolbox_.width_ + frameSizes.MARGIN_SIDE / 2;
+    let frameX = this.getFrameX();
     const frameY =
       frameSizes.MARGIN_TOP -
       this.element_.getMetricsManager().getMetrics().viewTop;
     super.initChildren(frameX, frameY);
+    if (this.element_.RTL) {
+      // Frame Text x coordinate is calculated differently for the workspace frame
+      // than the default frame, so reset the x value here.
+      this.frameText_.setAttribute('x', this.getRtlFrameTextX());
+    }
     this.addBrowserResizeListener();
     this.element_.addChangeListener(onWorkspaceChange);
   }
@@ -45,7 +49,10 @@ export default class WorkspaceSvgFrame extends SvgFrame {
   addBrowserResizeListener() {
     window.addEventListener('resize', () => {
       // Frame size can depend upon workspace size, so we re-render.
-      this.render();
+      // Only resize if the element exists.
+      if (this.frameGroup_) {
+        this.render();
+      }
     });
   }
 
@@ -53,7 +60,7 @@ export default class WorkspaceSvgFrame extends SvgFrame {
    * Overrides the standard render to create a frame within the element, rather than around it.
    */
   render() {
-    const minWidth = this.frameText_.getBoundingClientRect().width;
+    const minWidth = this.frameText_?.getBoundingClientRect().width;
     let width =
       Math.max(
         minWidth,
@@ -86,9 +93,63 @@ export default class WorkspaceSvgFrame extends SvgFrame {
     this.frameClipRect_.setAttribute('y', frameY);
     this.frameBase_.setAttribute('y', frameY);
     this.frameHeader_.setAttribute('y', frameY);
-    this.frameText_.setAttribute(
+    this.frameText_?.setAttribute(
       'y',
       frameY + frameSizes.WORKSPACE_HEADER_HEIGHT / 2
+    );
+    if (this.element_.RTL) {
+      const frameX = this.getFrameX();
+      this.frameClipRect_.setAttribute('x', frameX);
+      this.frameHeader_.setAttribute('x', frameX);
+      this.frameBase_.setAttribute('x', frameX);
+      this.frameText_.setAttribute('x', this.getRtlFrameTextX());
+    }
+  }
+
+  getFrameX() {
+    // In LTR the svg should be to the right of the toolbox, plus a margin.
+    const metricsManager = this.element_.getMetricsManager();
+    let frameX = frameSizes.MARGIN_SIDE / 2;
+    // Toolbox width > 0 if we have a categorized toolbox.
+    const toolboxWidth = metricsManager.getToolboxMetrics().width;
+    // Flyout width > 0 if we have an uncategorized toolbox.
+    const flyoutWidth = metricsManager.getFlyoutMetrics().width;
+    if (toolboxWidth) {
+      frameX += toolboxWidth;
+    } else if (flyoutWidth) {
+      frameX += flyoutWidth;
+    }
+    if (this.element_.RTL) {
+      // In RTL the toolbox is on the right, so we don't need to leave space for
+      // it. However, if the content is wider than the available space, we need to
+      // move the x coordinate to the left so that content "extends" to the left
+      // rather than the right.
+
+      // Actual content width.
+      const contentWidth =
+        metricsManager.getMetrics().contentWidth + 2 * frameSizes.MARGIN_SIDE;
+      // Width of the visible portion of the workspace.
+      const viewWidth =
+        metricsManager.getViewMetrics().width - frameSizes.MARGIN_SIDE;
+      // Offset to move the frame to the left.
+      let offset = 0;
+      if (contentWidth > viewWidth) {
+        offset = contentWidth - viewWidth;
+      }
+      frameX = frameSizes.MARGIN_SIDE / 2 - offset;
+    }
+    return frameX;
+  }
+
+  getRtlFrameTextX() {
+    // Width of the visible portion of the workspace.
+    const viewWidth = this.element_.getMetricsManager().getViewMetrics().width;
+    // In RTL, frame text should be on the right side of the visible portion
+    // of the screen, with a margin.
+    return (
+      viewWidth -
+      this.frameText_.getBoundingClientRect().width -
+      frameSizes.MARGIN_SIDE
     );
   }
 }

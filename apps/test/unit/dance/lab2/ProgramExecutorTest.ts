@@ -5,6 +5,7 @@ import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/Custo
 import {StubFunction} from 'test/types/types';
 import {expect} from '../../../util/reconfiguredChai';
 import * as sinon from 'sinon';
+import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 
 const DanceParty = require('@code-dot-org/dance-party/src/p5.dance');
 
@@ -31,6 +32,7 @@ describe('ProgramExecutor', () => {
     characters: string[],
     timestamps: number[],
     code: string,
+    metricsReporter: LabMetricsReporter,
     programExecutor: ProgramExecutor;
 
   beforeEach(() => {
@@ -97,11 +99,14 @@ describe('ProgramExecutor', () => {
 
     getSongMetadataForPreview.returns(previewMetadata);
 
+    metricsReporter = sinon.createStubInstance(LabMetricsReporter);
+
     programExecutor = new ProgramExecutor(
       'container',
       () => undefined,
       false,
       false,
+      metricsReporter,
       undefined,
       validationCode,
       onEventsChanged,
@@ -152,8 +157,13 @@ describe('ProgramExecutor', () => {
       hooks: expectedHooks,
       interpreter: undefined as unknown as CustomMarshalingInterpreter, // unused
     });
+    const durationMs = 1000;
 
-    await programExecutor.startLivePreview(code, currentSongMetadata);
+    await programExecutor.startLivePreview(
+      code,
+      currentSongMetadata,
+      durationMs
+    );
 
     expect(nativeAPI.ensureSpritesAreLoaded).to.have.been.calledOnce;
     expect(evalWithEvents).to.have.been.calledOnce;
@@ -163,7 +173,8 @@ describe('ProgramExecutor', () => {
     expect(fullCode?.includes(code)).to.be.true;
     expect(runUserSetup).to.have.been.calledOnce;
     expect(nativeAPI.livePreview).to.have.been.calledWithExactly(
-      previewMetadata
+      previewMetadata,
+      durationMs
     );
   });
 

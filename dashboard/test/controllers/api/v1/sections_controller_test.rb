@@ -96,17 +96,17 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal expected, returned_json
   end
 
-  # TODO(TEACH-721): This test is expected to fail after the post-backfill code cleanup.
-  test 'returns owned section even if no SectionInstructor exists' do
-    broken_section = create(:section, user: @teacher, login_type: 'word')
-    # Remove auto-created SectionInstructor to simulate old section that hasn't been backfilled.
-    broken_section.section_instructors.first.really_destroy!
+  test 'returns sections co-taught with a deleted instructor' do
+    cotaught_section = create(:section, user: @teacher, login_type: 'word')
+    coteacher = create(:teacher)
+    create(:section_instructor, instructor: coteacher, section: cotaught_section, status: :active)
+    coteacher.destroy!
 
     sign_in @teacher
     get :index
     assert_response :success
 
-    expected = [@section, @section_with_unit_group, @section_with_script, broken_section].map(&:summarize_without_students).as_json
+    expected = [@section, @section_with_unit_group, @section_with_script, cotaught_section].map(&:summarize_without_students).as_json
     assert_equal expected, returned_json
   end
 
@@ -121,7 +121,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in admin
     get :index
     assert_response :success
-    expected = admin.sections.map(&:summarize_without_students).as_json
+    expected = admin.sections_instructed.map(&:summarize_without_students).as_json
     assert_equal expected, returned_json
   end
 

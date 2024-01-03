@@ -35,30 +35,3 @@ export interface DanceLevelProperties extends LevelProperties {
   defaultSong?: string;
   useRestrictedSongs?: boolean;
 }
-
-export enum AiOutput {
-  AI_BLOCK = 'ai_block',
-  GENERATED_BLOCKS = 'generated_blocks',
-  BOTH = 'both',
-}
-
-export type LabelMaps = {
-  [key in FieldKey]: {[id: string]: string};
-};
-
-export enum FieldKey {
-  BACKGROUND_EFFECT = 'backgroundEffect',
-  FOREGROUND_EFFECT = 'foregroundEffect',
-  BACKGROUND_PALETTE = 'backgroundColor',
-}
-
-export type Results = {[key in FieldKey]: string};
-
-export type Scores = {
-  [key in FieldKey]: number;
-};
-
-export interface GeneratedEffect {
-  results: Results;
-  scores?: Scores;
-}

@@ -30,7 +30,7 @@ def get_social_metadata_for_page(request)
   videos = {
     what_most_schools_dont_teach: {youtube_key: "nKIu9yen5nc", width: 640, height: 360},
     computer_science_is_changing_everything: {youtube_key: "QvyTEx1wyOY", width: 640, height: 360},
-    hour_of_code_worldwide: {youtube_key: "KsOIlDT145A", width: 640, height: 360},
+    hour_of_code_worldwide: {youtube_key: "ybBUd9-0ZJQ", width: 640, height: 360},
     creativity_is: {youtube_key: "VYqHGIR7a_k", width: 640, height: 640}
   }
   # rubocop:enable Lint/UselessAssignment

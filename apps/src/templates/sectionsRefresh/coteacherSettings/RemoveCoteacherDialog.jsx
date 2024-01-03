@@ -5,12 +5,15 @@ import Button from '@cdo/apps/templates/Button';
 import {StrongText} from '@cdo/apps/componentLibrary/typography';
 import AccessibleDialog from '../../AccessibleDialog';
 import styles from './coteacher-settings.module.scss';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 export default function RemoveCoteacherDialog({
   coteacherToRemove,
   setCoteacherToRemove,
   removeSavedCoteacher,
   setCoteachersToAdd,
+  sectionId,
 }) {
   const closeRemoveDialog = useCallback(() => {
     setCoteacherToRemove(null);
@@ -28,15 +31,19 @@ export default function RemoveCoteacherDialog({
         return;
       }
       fetch(`/api/v1/section_instructors/${coteacher.id}`, {
-        type: 'DELETE',
+        headers: {'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')},
+        method: 'DELETE',
       }).then(response => {
         if (response.ok) {
+          analyticsReporter.sendEvent(EVENTS.COTEACHER_REMOVED, {
+            sectionId: sectionId,
+          });
           removeSavedCoteacher(coteacher.id);
         }
         closeRemoveDialog();
       });
     },
-    [closeRemoveDialog, setCoteachersToAdd, removeSavedCoteacher]
+    [closeRemoveDialog, setCoteachersToAdd, removeSavedCoteacher, sectionId]
   );
 
   return (
@@ -77,4 +84,5 @@ RemoveCoteacherDialog.propTypes = {
   setCoteacherToRemove: PropTypes.func.isRequired,
   removeSavedCoteacher: PropTypes.func.isRequired,
   setCoteachersToAdd: PropTypes.func.isRequired,
+  sectionId: PropTypes.number,
 };

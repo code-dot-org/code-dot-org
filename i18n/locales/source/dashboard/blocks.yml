@@ -1876,6 +1876,15 @@ en:
         text: y coordinate of [SPRITE][0]
       KatiesBlocks_glideTo:
         text: "[SPRITE][0] glide to [LOCATION][1]"
+      KatiesBlocks_goldilocks:
+        text: |2-
+           if [CONDITION][0][SPRITE][1]
+          [STATEMENT][2]
+        options:
+          CONDITION:
+            '"solid"': solid
+            '"liquid"': liquid
+            '"gas"': gas
       KatiesBlocks_makeNumSpritesNear:
         text: make [NUM][0] new [ANIMATION_NAME][1] sprites near [LOCATION][2]
       KatiesBlocks_spriteBirdSay:
