@@ -143,8 +143,8 @@ module Pd::WorkshopSurveyResultsHelper
               (v / responses_per_facilitator.values.sum.to_f).round(2)
             end
           else
-            # For non facilitator specific answers, take the average over all surveys
-            (v / surveys.count.to_f).round(2)
+            # For non facilitator specific answers, take the average over all survey responses for each facilitator
+            (v / responses_per_facilitator.values.sum.to_f).round(2)
           end
       else
         v.each do |name, value|

@@ -110,27 +110,39 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
   end
 
   test 'averaging across multiple surveys' do
-    workshop_1 = create :summer_workshop, num_sessions: 1, num_facilitators: 2, num_completed_surveys: 5
-    workshop_2 = create :summer_workshop, num_sessions: 1, num_facilitators: 3, num_completed_surveys: 10
+    workshop_1 = create :workshop, :teachercon, num_sessions: 1, num_facilitators: 2, num_completed_surveys: 5
+    workshop_2 = create :workshop, :teachercon, num_sessions: 1, num_facilitators: 3, num_completed_surveys: 10
 
-    workshop_2.survey_responses.each do |response|
+    workshop_1.survey_responses.each do |response|
       response.update_form_data_hash(
         {
-          how_clearly_presented: {
-            workshop_2.facilitators.first.name => 'Not at all clearly',
-            workshop_2.facilitators.second.name => 'Not at all clearly',
-            workshop_2.facilitators.third.name => 'Not at all clearly'
+          how_happy_after: {
+            workshop_1.facilitators.first.name => 'Extremely happy',
+            workshop_1.facilitators.second.name => 'Extremely happy'
           }
         }
       )
       response.save
     end
 
-    # With 10 people saying "Not at all clearly" to 3 facilitators, and 5 people saying
-    # "Extremely Clearly" to 2 facilitators, we'd expect the answer to be
-    # [(10 * 3 * 1) + (5 * 2 * 5)] / (10 + 30) = 2
+    workshop_2.survey_responses.each do |response|
+      response.update_form_data_hash(
+        {
+          how_happy_after: {
+            workshop_2.facilitators.first.name => 'Not at all happy',
+            workshop_2.facilitators.second.name => 'Not at all happy',
+            workshop_2.facilitators.third.name => 'Not at all happy'
+          }
+        }
+      )
+      response.save
+    end
+
+    # With 10 people saying "Not at all happy" (1 out of 5 score) to 3 facilitators, and 5 people saying "Extremely happy"
+    # (5 out of 5 score) to 2 facilitators, we'd expect the answer to be:
+    # [(10 people * 3 fac * 1 as the score) + (5 people * 2 fac * 5 as the score)] / (30 + 10 distinct fac surveys) = 2
     result_hash = summarize_workshop_surveys(workshops: [workshop_1, workshop_2], facilitator_breakdown: false)
-    assert_equal 2, result_hash[:how_clearly_presented]
+    assert_equal 2, result_hash[:how_happy_after]
   end
 
   test 'get an error if summarizing a mix of workshop surveys' do
