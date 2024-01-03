@@ -26,21 +26,19 @@ import AiAssessment from './AiAssessment';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {UNDERSTANDING_LEVEL_STRINGS} from './rubricHelpers';
 
-const invalidUnderstanding = -1;
+const INVALID_UNDERSTANDING = -1;
 
-export default function LearningGoal({
-  learningGoal,
+export default function LearningGoals({
+  learningGoals,
   teacherHasEnabledAi,
   canProvideFeedback,
   reportingData,
   studentLevelInfo,
-  aiUnderstanding,
-  aiConfidence,
   submittedEvaluation,
   isStudent,
   feedbackAdded,
   setFeedbackAdded,
-  aiEvalInfo,
+  aiEvaluations,
 }) {
   const STATUS = Object.freeze({
     NOT_STARTED: 0,
@@ -48,38 +46,26 @@ export default function LearningGoal({
     FINISHED: 2,
     ERROR: 3,
   });
-  const [isOpen, setIsOpen] = useState(false);
   const [autosaveStatus, setAutosaveStatus] = useState(STATUS.NOT_STARTED);
   const [learningGoalEval, setLearningGoalEval] = useState(null);
   const [displayFeedback, setDisplayFeedback] = useState('');
-  const [displayUnderstanding, setDisplayUnderstanding] =
-    useState(invalidUnderstanding);
+  const [displayUnderstanding, setDisplayUnderstanding] = useState(
+    INVALID_UNDERSTANDING
+  );
+  const [currentLearningGoal, setCurrentLearningGoal] = useState(0);
   const teacherFeedback = useRef('');
-  const understandingLevel = useRef(invalidUnderstanding);
+  const understandingLevel = useRef(INVALID_UNDERSTANDING);
 
-  const aiEnabled = learningGoal.aiEnabled && teacherHasEnabledAi;
+  const aiEnabled =
+    learningGoals[currentLearningGoal].aiEnabled && teacherHasEnabledAi;
   const base_teacher_evaluation_endpoint = '/learning_goal_teacher_evaluations';
 
   // Timer variables for autosaving
   const autosaveTimer = useRef();
   const saveAfter = 2000;
 
-  const handleClick = () => {
-    if (!isStudent) {
-      const eventName = isOpen
-        ? EVENTS.TA_RUBRIC_LEARNING_GOAL_COLLAPSED_EVENT
-        : EVENTS.TA_RUBRIC_LEARNING_GOAL_EXPANDED_EVENT;
-      analyticsReporter.sendEvent(eventName, {
-        ...(reportingData || {}),
-        learningGoalKey: learningGoal.key,
-        learningGoal: learningGoal.learningGoal,
-      });
-    }
-    setIsOpen(!isOpen);
-  };
-
   const handleFeedbackChange = event => {
-    if (studentLevelInfo.user_id && learningGoal.id) {
+    if (studentLevelInfo.user_id && learningGoals[currentLearningGoal].id) {
       if (autosaveTimer.current) {
         clearTimeout(autosaveTimer.current);
       }
@@ -91,11 +77,24 @@ export default function LearningGoal({
     }
   };
 
+  const getAiInfo = learningGoalId => {
+    if (!!aiEvaluations) {
+      const aiInfo = aiEvaluations.find(
+        item => item.learning_goal_id === learningGoalId
+      );
+      return aiInfo;
+    } else {
+      return null;
+    }
+  };
+
+  const aiEvalInfo = getAiInfo(learningGoals[currentLearningGoal].id);
+
   const autosave = () => {
     setAutosaveStatus(STATUS.IN_PROGRESS);
     const bodyData = JSON.stringify({
       studentId: studentLevelInfo.user_id,
-      learningGoalId: learningGoal.id,
+      learningGoalId: learningGoals[currentLearningGoal].id,
       feedback: teacherFeedback.current,
       understanding: understandingLevel.current,
     });
@@ -121,10 +120,10 @@ export default function LearningGoal({
   };
 
   useEffect(() => {
-    if (studentLevelInfo && learningGoal.id) {
+    if (studentLevelInfo && learningGoals[currentLearningGoal].id) {
       const body = JSON.stringify({
         userId: studentLevelInfo.user_id,
-        learningGoalId: learningGoal.id,
+        learningGoalId: learningGoals[currentLearningGoal].id,
       });
       HttpClient.post(
         `${base_teacher_evaluation_endpoint}/get_or_create_evaluation`,
@@ -146,16 +145,16 @@ export default function LearningGoal({
             understandingLevel.current = json.understanding;
           }
         })
-        .catch(error => console.log(error));
+        .catch(error => console.error(error));
     }
-  }, [studentLevelInfo, learningGoal]);
+  }, [studentLevelInfo, learningGoals, currentLearningGoal]);
 
   // Callback to retrieve understanding data from EvidenceLevels
   const radioButtonCallback = radioButtonData => {
     analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_EVIDENCE_LEVEL_SELECTED, {
       ...(reportingData || {}),
-      learningGoalId: learningGoal.id,
-      learningGoal: learningGoal.learningGoal,
+      learningGoalId: learningGoals[currentLearningGoal].id,
+      learningGoal: learningGoals[currentLearningGoal].learningGoal,
       newlySelectedEvidenceLevel: radioButtonData,
       previouslySelectedEvidenceLevel: understandingLevel.current,
     });
@@ -166,7 +165,7 @@ export default function LearningGoal({
 
   const renderAutoSaveTextbox = () => {
     return (
-      <div className={style.feedbackArea}>
+      <div className={`${style.feedbackArea} uitest-learning-goal`}>
         <label className={style.evidenceLevelLabel}>
           <span>{i18n.feedback()}</span>
           <textarea
@@ -212,26 +211,54 @@ export default function LearningGoal({
     );
   };
 
+  const onCarouselPress = buttonValue => {
+    let currentIndex = currentLearningGoal;
+    currentIndex += buttonValue;
+    if (currentIndex < 0) {
+      currentIndex = learningGoals.length - 1;
+    } else if (currentIndex >= learningGoals.length) {
+      currentIndex = 0;
+    }
+    setCurrentLearningGoal(currentIndex);
+    if (!isStudent) {
+      const eventName = EVENTS.TA_RUBRIC_LEARNING_GOAL_SELECTED;
+      analyticsReporter.sendEvent(eventName, {
+        ...(reportingData || {}),
+        learningGoalKey: learningGoals[currentIndex].key,
+        learningGoal: learningGoals[currentIndex].learningGoal,
+      });
+    }
+  };
+
   return (
-    <details className={`${style.learningGoalRow} uitest-learning-goal-row`}>
-      <summary className={style.learningGoalHeader} onClick={handleClick}>
-        <div className={style.learningGoalHeaderLeftSide}>
+    <div className={style.learningGoalsContainer}>
+      <div className={style.learningGoalsHeader}>
+        <button
+          type="button"
+          className={style.learningGoalButton}
+          onClick={() => onCarouselPress(-1)}
+        >
+          <FontAwesome icon="angle-left" />
+        </button>
+        <div className={style.learningGoalsHeaderLeftSide}>
           {/*TODO: [DES-321] Label-two styles here*/}
-          <StrongText>{learningGoal.learningGoal}</StrongText>
+          <StrongText>
+            {learningGoals[currentLearningGoal].learningGoal}
+          </StrongText>
         </div>
-        <div className={style.learningGoalHeaderRightSide}>
-          {aiEnabled && displayUnderstanding === invalidUnderstanding && (
+        <div className={style.learningGoalsHeaderRightSide}>
+          {aiEnabled && displayUnderstanding === INVALID_UNDERSTANDING && (
             <AiToken />
           )}
           {/*TODO: Display status of feedback*/}
           {canProvideFeedback &&
             aiEnabled &&
-            displayUnderstanding === invalidUnderstanding && (
+            displayUnderstanding === INVALID_UNDERSTANDING && (
               <BodyThreeText>{i18n.approve()}</BodyThreeText>
             )}
           {canProvideFeedback &&
             !aiEnabled &&
-            displayUnderstanding === invalidUnderstanding && (
+            displayUnderstanding === INVALID_UNDERSTANDING && (
               <BodyThreeText>{i18n.evaluate()}</BodyThreeText>
             )}
           {displayUnderstanding >= 0 && (
@@ -260,20 +287,27 @@ export default function LearningGoal({
             </div>
           )}
         </div>
-      </summary>
+        <button
+          type="button"
+          className={style.learningGoalButton}
+          onClick={() => onCarouselPress(1)}
+        >
+          <FontAwesome icon="angle-right" />
+        </button>
+      </div>
 
       {/*TODO: Pass through data to child component*/}
       <div>
         {teacherHasEnabledAi &&
           !!studentLevelInfo &&
           !!aiEvalInfo &&
-          aiUnderstanding !== undefined && (
+          aiEvalInfo.understanding !== undefined && (
             <div className={style.openedAiAssessment}>
               <AiAssessment
-                isAiAssessed={learningGoal.aiEnabled}
+                isAiAssessed={learningGoals[currentLearningGoal].aiEnabled}
                 studentName={studentLevelInfo.name}
-                aiConfidence={aiConfidence}
-                aiUnderstandingLevel={aiUnderstanding}
+                aiConfidence={aiEvalInfo.ai_confidence}
+                aiUnderstandingLevel={aiEvalInfo.understanding}
                 aiEvalInfo={aiEvalInfo}
               />
             </div>
@@ -281,8 +315,8 @@ export default function LearningGoal({
         <div className={style.learningGoalExpanded}>
           {!!submittedEvaluation && renderSubmittedFeedbackTextbox()}
           <EvidenceLevels
-            learningGoalKey={learningGoal.key}
-            evidenceLevels={learningGoal.evidenceLevels}
+            learningGoalKey={learningGoals[currentLearningGoal].key}
+            evidenceLevels={learningGoals[currentLearningGoal].evidenceLevels}
             canProvideFeedback={canProvideFeedback}
             understanding={displayUnderstanding}
             radioButtonCallback={radioButtonCallback}
@@ -290,34 +324,34 @@ export default function LearningGoal({
             isStudent={isStudent}
             isAutosaving={autosaveStatus === STATUS.IN_PROGRESS}
           />
-          {learningGoal.tips && !isStudent && (
+          {learningGoals[currentLearningGoal].tips && !isStudent && (
             <div>
               <Heading6>{i18n.tipsForEvaluation()}</Heading6>
               <div className={style.learningGoalTips}>
-                <SafeMarkdown markdown={learningGoal.tips} />
+                <SafeMarkdown
+                  markdown={learningGoals[currentLearningGoal].tips}
+                />
               </div>
             </div>
           )}
           {!!studentLevelInfo && renderAutoSaveTextbox()}
         </div>
       </div>
-    </details>
+    </div>
   );
 }
 
-LearningGoal.propTypes = {
-  learningGoal: learningGoalShape.isRequired,
+LearningGoals.propTypes = {
   teacherHasEnabledAi: PropTypes.bool,
   canProvideFeedback: PropTypes.bool,
   reportingData: reportingDataShape,
   studentLevelInfo: studentLevelInfoShape,
-  aiUnderstanding: PropTypes.number,
-  aiConfidence: PropTypes.number,
   submittedEvaluation: submittedEvaluationShape,
   isStudent: PropTypes.bool,
   feedbackAdded: PropTypes.bool,
   setFeedbackAdded: PropTypes.func,
-  aiEvalInfo: aiEvaluationShape,
+  learningGoals: PropTypes.arrayOf(learningGoalShape),
+  aiEvaluations: PropTypes.arrayOf(aiEvaluationShape),
 };
 
 const AiToken = () => {
