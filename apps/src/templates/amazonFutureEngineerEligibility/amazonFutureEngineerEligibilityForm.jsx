@@ -12,7 +12,7 @@ import SingleCheckbox from '../../code-studio/pd/form_components/SingleCheckbox'
 import color from '@cdo/apps/util/color';
 import fontConstants from '@cdo/apps/fontConstants';
 import {isEmail} from '@cdo/apps/util/formatValidation';
-import DCDO from '@cdo/apps/dcdo';
+import i18n from '@cdo/locale';
 
 const VALIDATION_STATE_ERROR = 'error';
 
@@ -37,10 +37,9 @@ const AFE_CONSENT_BODY = (
 const CSTA_PRIVACY_POLICY_URL = 'https://csteachers.org/privacy-policy/';
 const CSTA_CONSENT_BODY = (
   <span>
-    I give Code.org permission to share my name and email address, and my
-    school's name, address, and NCES ID, with the Computer Science Teachers
-    Association (required if you want a CSTA+ membership). I provide my consent
-    to the use of my personal data as described in the{' '}
+    I opt-in for a free CSTA+ membership and access to Amazon webinars and
+    content. I authorize Code.org to share my personal information with CSTA for
+    membership purposes, as outlined in the{' '}
     <a href={CSTA_PRIVACY_POLICY_URL} target="_blank" rel="noopener noreferrer">
       CSTA Privacy Policy
     </a>
@@ -205,13 +204,12 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
             stepStatus={Status.SUCCEEDED}
             stepName="You teach at an eligible school!"
           />
-          We invite you to enroll in the Amazon Future Engineer program by
-          completing the information below.
+          {i18n.afeCompleteTheFormBelow()}
         </div>
         <form>
           <FieldGroup
             id="email"
-            label="Email"
+            label={i18n.coteacherEmailAddress()}
             type="text"
             required={true}
             onChange={this.handleChange}
@@ -263,87 +261,57 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
             }
           />
           <div>
-            How can Amazon Future Engineer support you and your students?
+            <label
+              style={styles.descriptiveText}
+              htmlFor="professionalRoleSelect"
+            >
+              {i18n.afeWhatIsYourRole()}
+            </label>
+            <select
+              style={styles.dropdownPadding}
+              id="professionalRoleSelect"
+              name="professionalRole"
+              value={this.state.professionalRole}
+              onChange={this.handleRoleChange}
+            >
+              {CSTA_PROFESSIONAL_ROLES.map(role => (
+                <option value={role} key={role}>
+                  {role}
+                </option>
+              ))}
+            </select>
+            <fieldset className="gradebands-group">
+              <legend style={styles.descriptiveText}>
+                {i18n.afeWhatGradeBands()}
+              </legend>
+              {CSTA_GRADE_BANDS.map((grade, index) => (
+                <Checkbox
+                  style={styles.checkboxItem}
+                  key={index}
+                  checked={this.state.gradeBands[index]}
+                  onChange={() => this.handleMultiSelectGradeBands(index)}
+                >
+                  <label style={styles.checkboxLabel} htmlFor={grade}>
+                    {grade}
+                  </label>
+                </Checkbox>
+              ))}
+            </fieldset>
           </div>
+          <div>{i18n.afeSupport()}</div>
           <hr style={styles.sectionBreak} />
           <SingleCheckbox
             name="inspirationKit"
-            label="Send me a Thank You Kit with Amazon Future Engineer-branded
-            gear (t-shirts, drinkware, stickers, and more!)."
+            label={i18n.afeInspirationKit()}
             onChange={this.handleChange}
             value={this.state.inspirationKit}
           />
           <SingleCheckbox
             name="csta"
-            label="Send me a free annual Computer Science Teachers Association Plus
-            (CSTA+) membership - which includes access to Amazon expert-led
-            webinars and other exclusive content."
+            label={CSTA_CONSENT_BODY}
             onChange={this.handleChange}
             value={this.state.csta}
           />
-          {this.state.csta && (
-            <div style={styles.consentIndent}>
-              <p>
-                Since you checked the box above, please consent to sharing your
-                information with the CSTA.
-              </p>
-              <SingleCheckbox
-                name="consentCSTA"
-                label={CSTA_CONSENT_BODY}
-                onChange={this.handleChange}
-                value={this.state.consentCSTA}
-                validationState={
-                  Object.prototype.hasOwnProperty.call(
-                    this.state.errors,
-                    'consentCSTA'
-                  )
-                    ? VALIDATION_STATE_ERROR
-                    : null
-                }
-              />
-              {!!DCDO.get('csta-form-extension', true) && (
-                <div>
-                  <p>Tell CSTA a little bit about yourself:</p>
-                  <label
-                    style={styles.descriptiveText}
-                    htmlFor="professionalRoleSelect"
-                  >
-                    What is your current role?
-                  </label>
-                  <select
-                    style={styles.dropdownPadding}
-                    id="professionalRoleSelect"
-                    name="professionalRole"
-                    value={this.state.professionalRole}
-                    onChange={this.handleRoleChange}
-                  >
-                    {CSTA_PROFESSIONAL_ROLES.map(role => (
-                      <option value={role} key={role}>
-                        {role}
-                      </option>
-                    ))}
-                  </select>
-                  <fieldset className="gradebands-group">
-                    <legend style={styles.descriptiveText}>
-                      What grade bands do you teach?
-                    </legend>
-                    {CSTA_GRADE_BANDS.map((grade, index) => (
-                      <Checkbox
-                        style={styles.checkboxItem}
-                        key={index}
-                        checked={this.state.gradeBands[index]}
-                        onChange={() => this.handleMultiSelectGradeBands(index)}
-                      >
-                        <label style={styles.checkboxLabel} htmlFor={grade}>
-                          {grade}
-                        </label>
-                      </Checkbox>
-                    ))}
-                  </fieldset>
-                </div>
-              )}
-            </div>
-          )}
           <hr style={styles.sectionBreak} />
           <SingleCheckbox
             name="consentAFE"
@@ -360,13 +328,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
             }
             required={true}
           />
-          <div>
-            By clicking Continue, you will receive an email from Amazon Future
-            Engineer to claim your benefits. You will also receive occasional
-            emails from Amazon Future Engineer about new opportunities, such as
-            Amazon Future Engineer scholarships and grants. You always have the
-            choice to adjust your interest settings or unsubscribe.
-          </div>
+          <div>{i18n.afeContinueMessage()}</div>
           <Button id="continue" onClick={this.onContinue} style={styles.button}>
             Continue
           </Button>
