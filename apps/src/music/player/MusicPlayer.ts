@@ -41,30 +41,6 @@ export default class MusicPlayer {
     this.metricsReporter = metricsReporter;
   }
 
-  /**
-   * Initializes the MusicPlayer and {@link SamplePlayer} with the music library.
-   * Playback cannot start until the player is initialized.
-   */
-  initialize(
-    library: MusicLibrary,
-    updateLoadProgress: (value: number) => void
-  ) {
-    this.library = library;
-
-    // Set key and BPM from library if present
-    const libraryBpm = library.getBPM();
-    if (libraryBpm) {
-      this.bpm = this.validateBpm(libraryBpm);
-    }
-    const libraryKey = library.getKey();
-    if (libraryKey) {
-      this.key = this.validateKey(libraryKey);
-    }
-
-    this.samplePlayer.initialize(library, this.bpm, updateLoadProgress);
-    this.samplePlayer.setBpm(bpm);
-  }
-
   updateConfiguration(bpm?: number, key?: Key) {
     if (bpm) {
       this.bpm = this.validateBpm(bpm);
@@ -270,7 +246,7 @@ export default class MusicPlayer {
     } else if (event.type === 'pattern') {
       const patternEvent = event as PatternEvent;
 
-      const results = [];
+      const results: SampleEvent[] = [];
 
       const kit = patternEvent.value.kit;
 
