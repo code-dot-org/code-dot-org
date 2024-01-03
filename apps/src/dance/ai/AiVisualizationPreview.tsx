@@ -64,15 +64,13 @@ const AiVisualizationPreview: React.FunctionComponent<
   useEffect(() => () => executorRef.current?.destroy(), []);
 
   return (
-    <div>
-      <div
-        id={id}
-        style={{width: size, height: size}}
-        className={moduleStyles.previewVisualization}
-        ref={containerRef}
-      />
-    </div>
+    <div
+      id={id}
+      style={{width: size, height: size}}
+      className={moduleStyles.previewVisualization}
+      ref={containerRef}
+    />
   );
 };
 
-export default AiVisualizationPreview;
+export default React.memo(AiVisualizationPreview);
