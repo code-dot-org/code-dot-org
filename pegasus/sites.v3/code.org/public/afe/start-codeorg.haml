@@ -26,7 +26,7 @@ theme: responsive_full_width
           %img{src: "/images/tile-curriculum-catalog.png", alt: ""}
           %p=hoc_s(:curriculum_desc_catalog)
         .content-footer
-          %a.link-button{href: CDO.studio_url("/catalog")}
+          %a.link-button{href: CDO.studio_url("/catalog"), aria:{label: hoc_s(:call_to_action_explore_curriculum_catalog)}}
             =hoc_s(:call_to_action_learn_more)
       .action-block.action-block--one-col.flex-space-between
         .content-wrapper
@@ -34,7 +34,7 @@ theme: responsive_full_width
           %img{src: "/images/tile-facilitator-led-pl.png", alt: ""}
           %p=hoc_s(:facilitator_led_pl_desc)
         .content-footer
-          %a.link-button{href: "/educate/professional-learning/middle-high"}
+          %a.link-button{href: "/educate/professional-learning/middle-high", aria:{label: hoc_s(:aria_label_call_to_action_facilitator_pl)}}
             =hoc_s(:call_to_action_learn_more)
       .action-block.action-block--one-col.flex-space-between
         .content-wrapper
@@ -42,7 +42,7 @@ theme: responsive_full_width
           %img{src: "/images/tile-self-paced-pl.png", alt: ""}
           %p=hoc_s(:self_paced_pl_desc)
         .content-footer
-          %a.link-button{href: "/educate/professional-development-online"}
+          %a.link-button{href: "/educate/professional-development-online", aria:{label: hoc_s(:aria_label_call_to_action_self_paced_pl)}}
             =hoc_s(:call_to_action_learn_more)
 
 = view :section_divider_line

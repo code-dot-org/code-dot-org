@@ -404,6 +404,8 @@
   aria_label_call_to_action_dance_02: "Start part two of the Dance Party activity"
   aria_label_call_to_action_dance_unplugged: "Start the Dance Party unplugged activity"
   aria_label_call_to_action_afe: "Learn more about Amazon Future Engineer"
+  aria_label_call_to_action_facilitator_pl: "Learn more about facilitator-led professional learning workshops"
+  aria_label_call_to_action_self_paced_pl: "Learn more about self-paced professional learning"
   aria_label_call_to_action_teaching_csf: "Start the Teaching Computer Science Fundamentals professional learning program"
   aria_label_call_to_action_teaching_csd: "Start the Teaching Computer Science Discoveries professional learning program"
   aria_label_call_to_action_teaching_csp: "Start the Teaching Computer Science Principles professional learning program"
@@ -551,7 +553,7 @@
   curriculum_desc_csp: "Free, AP® CSP endorsed, high school introductory course that introduces students to the foundational concepts of computer science."
   curriculum_desc_csa_ai_long: "This two-chapter post-AP® CSA module offers high school students hands-on experience with professional software development tools, including GitHub and GitHub Copilot, and imparts them with the real-world skills to develop a computer vision program."
   curriculum_desc_csa_ai_short: "This post-AP® CSA module offers high school students hands-on experience with professional software development tools."
-  curriculum_desc_catalog: "Explore our robust catalog of curriculum offerings for all ages and levels—completely free."
+  curriculum_desc_catalog: "Explore our robust catalog of curriculum offerings for all ages and levels — completely free."
 
   collection_hardware: "Focus on Hardware"
   collection_hardware_desc: "Empowers students to use data and physical devices to solve problems."
