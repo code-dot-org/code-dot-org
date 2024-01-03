@@ -1566,10 +1566,10 @@ class User < ApplicationRecord
     !!sort_by_family_name
   end
 
-  def show_progress_ui_refresh?
-    return show_progress_ui_refresh unless show_progress_ui_refresh.nil?
+  def show_progress_table_v2?
+    return show_progress_table_v2 unless show_progress_table_v2.nil?
 
-    DCDO.get('progress-ui-refresh-default-new', false)
+    DCDO.get('progress-table-v2-default-v2', false)
   end
 
   def generate_username
