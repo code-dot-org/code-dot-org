@@ -90,3 +90,73 @@ export const PROCEDURE_DEFINITION_TYPES = [
 
 // A list of block types associated with the Run button.
 export const SETUP_TYPES = [BLOCK_TYPES.whenRun, BLOCK_TYPES.danceWhenSetup];
+
+// A map of user locales supported by Code.org to locales provided by Google Blockly.
+// For more information, see: https://github.com/google/blockly/tree/master/msg/json
+export const blocklyLocaleMap = {
+  'ar-SA': 'ar',
+  'az-AZ': 'az',
+  'bg-BG': 'bg',
+  'bs-BA': 'bs',
+  'ca-ES': 'ca',
+  'cs-CZ': 'cs',
+  'da-DK': 'da',
+  'de-DE': 'de',
+  'el-GR': 'el',
+  'en-US': 'en',
+  'es-ES': 'es',
+  'es-MX': 'es',
+  'et-EE': 'et',
+  'eu-ES': 'eu',
+  'fa-IR': 'fa',
+  'fi-FI': 'fi',
+  'fil-PH': 'ms', // English provided as broader alternative for Filipino
+  'fr-FR': 'fr',
+  'ga-IE': 'en', // English provided as broader alternative for Irish (Gaelic)
+  'gl-ES': 'gl',
+  'he-IL': 'he',
+  'hi-IN': 'hi',
+  'hr-HR': 'hr',
+  'hu-HU': 'hu',
+  'hy-AM': 'hy',
+  'id-ID': 'id',
+  'is-IS': 'is',
+  'it-IT': 'it',
+  'ja-JP': 'ja',
+  'ka-GE': 'ka',
+  'ko-KR': 'ko',
+  'kk-KZ': 'ru', // Russian provided as regional alternative for Kazakh
+  'km-KH': 'km',
+  'ky-KG': 'ky',
+  'lt-LT': 'lt',
+  'lv-LV': 'lv',
+  'mi-NZ': 'en', // English provided as broader alternative for Maori
+  'mn-MN': 'ru', // Russian provided as regional alternative for Mongolian
+  'mr-IN': 'hi', // Hindi provided as regional alternative for Marathi
+  'my-MM': 'my',
+  'nl-NL': 'nl',
+  'nn-NO': 'nb', // Norwegian Bokmål provided as alternative written standard for Norwegian Nynorsk
+  'no-NO': 'nb',
+  'pl-PL': 'pl',
+  'pt-BR': 'pt-br',
+  'pt-PT': 'pt',
+  'ro-RO': 'ro',
+  'ru-RU': 'ru',
+  'se-FI': 'nb', // Norwegian Bokmål provided as regional alternative for Northern Sami
+  'si-LK': 'si',
+  'sk-SK': 'sk',
+  'sl-SI': 'sl',
+  'sm-WS': 'en', // English provided as broader alternative for Samoan
+  'sq-AL': 'sq',
+  'sr-SP': 'sr',
+  'sv-SE': 'sv',
+  'ta-IN': 'ta',
+  'te-IN': 'te',
+  'th-TH': 'th',
+  'tr-TR': 'tr',
+  'uk-UA': 'uk',
+  'uz-UZ': 'uz',
+  'vi-VN': 'vi',
+  'zh-CN': 'zh-hans',
+  'zh-TW': 'zh-hant',
+};

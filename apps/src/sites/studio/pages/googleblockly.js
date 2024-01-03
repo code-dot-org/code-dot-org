@@ -1,7 +1,20 @@
 import GoogleBlockly from 'blockly/core';
-import locale from 'blockly/msg/en';
 import 'blockly/blocks';
-GoogleBlockly.setLocale(locale);
 import initializeGoogleBlocklyWrapper from '@cdo/apps/blockly/googleBlocklyWrapper';
+import cookies from 'js-cookie';
+import {blocklyLocaleMap} from '@cdo/apps/blockly/constants';
+
+// Blockly provides "messages" files, which are JSON-format files containing human-translated
+// strings that are needed by Blockly.
+// These files map closely, but not exactly, to our supported locales.
+// After importing the desired message set, we need set the locale in Blockly.
+// More information at:
+// https://developers.google.com/blockly/guides/configure/web/translations
+// https://github.com/google/blockly/blob/master/msg/json/README.md
+const localeFromCookies = cookies.get('language_') || 'en-US';
+const blocklyLocale = blocklyLocaleMap[localeFromCookies] || 'en';
+const messages = require(`blockly/msg/${blocklyLocale}`);
+
+GoogleBlockly.setLocale(messages);
 
 window.Blockly = initializeGoogleBlocklyWrapper(GoogleBlockly);
