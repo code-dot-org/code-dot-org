@@ -26,6 +26,7 @@ export default function RubricContainer({
   reportingData,
   open,
   closeRubric,
+  sectionId,
 }) {
   const onLevelForEvaluation = currentLevelName === rubric.level.name;
   const canProvideFeedback = !!studentLevelInfo && onLevelForEvaluation;
@@ -117,6 +118,8 @@ export default function RubricContainer({
           studentUserId={studentLevelInfo && studentLevelInfo['user_id']}
           visible={selectedTab === TAB_NAMES.SETTINGS}
           refreshAiEvaluations={fetchAiEvaluations}
+          studentName={studentLevelInfo && studentLevelInfo.name}
+          sectionId={sectionId}
         />
       )}
     </div>
@@ -131,6 +134,7 @@ RubricContainer.propTypes = {
   currentLevelName: PropTypes.string,
   closeRubric: PropTypes.func,
   open: PropTypes.bool,
+  sectionId: PropTypes.number,
 };
 
 const HeaderTab = ({text, isSelected, onClick}) => {
