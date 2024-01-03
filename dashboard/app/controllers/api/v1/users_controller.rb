@@ -3,7 +3,7 @@ require 'cdo/firehose'
 class Api::V1::UsersController < Api::V1::JSONApiController
   before_action :load_user
   skip_before_action :verify_authenticity_token
-  skip_before_action :load_user, only: [:current, :netsim_signed_in, :post_sort_by_family_name]
+  skip_before_action :load_user, only: [:current, :netsim_signed_in, :post_sort_by_family_name, :post_show_progress_table_v2]
   skip_before_action :clear_sign_up_session_vars, only: [:current]
 
   def load_user
@@ -28,7 +28,8 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         mute_music: current_user.mute_music?,
         under_13: current_user.under_13?,
         over_21: current_user.over_21?,
-        sort_by_family_name: current_user.sort_by_family_name?
+        sort_by_family_name: current_user.sort_by_family_name?,
+        show_progress_table_v2: current_user.get_show_progress_table_v2
       }
     else
       render json: {
@@ -149,7 +150,9 @@ class Api::V1::UsersController < Api::V1::JSONApiController
   def post_show_progress_table_v2
     return head :unauthorized unless current_user
 
-    current_user.show_progress_table_v2 = !!params[:show_progress_table_v2].try(:to_bool)
+    return head :bad_request unless params[:show_progress_table_v2] == "v1" || params[:show_progress_table_v2] == "v2"
+
+    current_user.show_progress_table_v2 = params[:show_progress_table_v2]
     current_user.save
 
     head :no_content
