@@ -1566,6 +1566,12 @@ class User < ApplicationRecord
     !!sort_by_family_name
   end
 
+  def show_progress_ui_refresh?
+    return show_progress_ui_refresh unless show_progress_ui_refresh.nil?
+
+    DCDO.get('progress-ui-refresh-default-new', false)
+  end
+
   def generate_username
     # skip an expensive db query if the name is not valid anyway. we can't depend on validations being run
     return if name.blank? || name.utf8mb4? || (email&.utf8mb4?)
