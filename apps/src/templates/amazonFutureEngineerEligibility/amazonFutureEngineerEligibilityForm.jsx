@@ -3,12 +3,14 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Button, Checkbox} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import ValidationStep, {Status} from '@cdo/apps/lib/ui/ValidationStep';
 import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
 import FieldGroup from '../../code-studio/pd/form_components/FieldGroup';
 import SingleCheckbox from '../../code-studio/pd/form_components/SingleCheckbox';
+import CheckboxDropdown from '@cdo/apps/templates/CheckboxDropdown';
+import style from '../../../style/code-studio/curriculum_catalog_filters.module.scss';
 import color from '@cdo/apps/util/color';
 import fontConstants from '@cdo/apps/fontConstants';
 import {isEmail} from '@cdo/apps/util/formatValidation';
@@ -95,6 +97,10 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
     let gradeBands = [...this.state.gradeBands];
     gradeBands[index] = !gradeBands[index];
     this.setState({gradeBands});
+  };
+
+  handleUpdateAllGradeBands = isSelected => {
+    this.setState({gradeBands: [isSelected, isSelected, isSelected]});
   };
 
   resetSchool = () =>
@@ -230,73 +236,75 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
             Wrong school? <a onClick={this.resetSchool}>Go back</a>
             <br />
           </div>
-          <FieldGroup
-            id="firstName"
-            label="First name"
-            type="text"
-            required={true}
-            onChange={this.handleChange}
-            validationState={
-              Object.prototype.hasOwnProperty.call(
-                this.state.errors,
-                'firstName'
-              )
-                ? VALIDATION_STATE_ERROR
-                : null
-            }
-          />
-          <FieldGroup
-            id="lastName"
-            label="Last name"
-            type="text"
-            required={true}
-            onChange={this.handleChange}
-            validationState={
-              Object.prototype.hasOwnProperty.call(
-                this.state.errors,
-                'lastName'
-              )
-                ? VALIDATION_STATE_ERROR
-                : null
-            }
-          />
-          <div>
-            <label
-              style={styles.descriptiveText}
-              htmlFor="professionalRoleSelect"
-            >
-              {i18n.afeWhatIsYourRole()}
-            </label>
-            <select
-              style={styles.dropdownPadding}
-              id="professionalRoleSelect"
-              name="professionalRole"
-              value={this.state.professionalRole}
-              onChange={this.handleRoleChange}
-            >
-              {CSTA_PROFESSIONAL_ROLES.map(role => (
-                <option value={role} key={role}>
-                  {role}
-                </option>
-              ))}
-            </select>
-            <fieldset className="gradebands-group">
-              <legend style={styles.descriptiveText}>
-                {i18n.afeWhatGradeBands()}
-              </legend>
-              {CSTA_GRADE_BANDS.map((grade, index) => (
-                <Checkbox
-                  style={styles.checkboxItem}
-                  key={index}
-                  checked={this.state.gradeBands[index]}
-                  onChange={() => this.handleMultiSelectGradeBands(index)}
-                >
-                  <label style={styles.checkboxLabel} htmlFor={grade}>
-                    {grade}
-                  </label>
-                </Checkbox>
-              ))}
-            </fieldset>
+          <div style={styles.inputBoxes}>
+            <FieldGroup
+              id="firstName"
+              label={i18n.afeFirstName()}
+              type="text"
+              required={true}
+              onChange={this.handleChange}
+              validationState={
+                Object.prototype.hasOwnProperty.call(
+                  this.state.errors,
+                  'firstName'
+                )
+                  ? VALIDATION_STATE_ERROR
+                  : null
+              }
+            />
+            <FieldGroup
+              id="lastName"
+              label={i18n.afeLastName()}
+              type="text"
+              required={true}
+              onChange={this.handleChange}
+              validationState={
+                Object.prototype.hasOwnProperty.call(
+                  this.state.errors,
+                  'lastName'
+                )
+                  ? VALIDATION_STATE_ERROR
+                  : null
+              }
+            />
+          </div>
+          <div style={styles.inputBoxes}>
+            <div>
+              <label
+                style={styles.descriptiveText}
+                htmlFor="professionalRoleSelect"
+              >
+                {i18n.afeWhatIsYourRole()}
+              </label>
+              <select
+                style={styles.dropdownPadding}
+                id="professionalRoleSelect"
+                name="professionalRole"
+                value={this.state.professionalRole}
+                onChange={this.handleRoleChange}
+              >
+                {CSTA_PROFESSIONAL_ROLES.map(role => (
+                  <option value={role} key={role}>
+                    {role}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div>
+              {i18n.afeWhatGradeBands()}
+              <div className={style.catalogDropdownFilters}>
+                <CheckboxDropdown
+                  key={'gradeBand'}
+                  name={'gradeBand'}
+                  label={i18n.afeGradeBands()}
+                  allOptions={CSTA_GRADE_BANDS}
+                  checkedOptions={this.state.gradeBands}
+                  onChange={e => this.handleMultiSelectGradeBands(e)}
+                  handleSelectAll={() => this.handleUpdateAllGradeBands(true)}
+                  handleClearAll={() => this.handleUpdateAllGradeBands(false)}
+                />
+              </div>
+            </div>
           </div>
           <div>{i18n.afeSupport()}</div>
           <hr style={styles.sectionBreak} />
@@ -370,5 +378,8 @@ const styles = {
   },
   checkboxLabel: {
     paddingLeft: 5,
+  },
+  inputBoxes: {
+    display: 'flex',
   },
 };
