@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2023-11-20 21:01:52 UTC",
+    "serialized_at": "2024-01-02 22:48:40 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -8042,6 +8042,7 @@
       "key": "end_of_course_project_guide",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Activity Guide"
       },
       "seeding_key": {
@@ -8347,6 +8348,7 @@
       "key": "user_input_programs",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Activity Guide"
       },
       "seeding_key": {
