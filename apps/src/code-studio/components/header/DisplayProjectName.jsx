@@ -18,7 +18,7 @@ export default class DisplayProjectName extends React.Component {
   render() {
     return (
       <div className={styles.buttonWrapper}>
-        <div className="project_name_wrapper header_text" tabIndex={0}>
+        <div className="project_name_wrapper header_text">
           <div className="project_name header_text">
             {this.props.projectName}
           </div>
