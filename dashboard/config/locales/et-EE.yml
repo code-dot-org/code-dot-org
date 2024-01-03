@@ -9,6 +9,7 @@ et:
         email: E-post
         error:
           future: ei saa olla tulevikus
+        finish_sign_up_header_error: 'Palun parandage järgmised vead:'
         gender: Sugu
         locale: Keel
         name: Kuvatav nimi
@@ -20,6 +21,7 @@ et:
         personal_email_markdown: Isiklik e-posti aadress [(vajuta siia, kui teil ei
           ole e-posti aadressi)](%{url})
         us_state: Olek
+        user_type: Konto tüüp
         username: Kasutajanimi
     errors:
       messages:

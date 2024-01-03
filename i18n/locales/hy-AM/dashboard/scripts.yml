@@ -155,7 +155,7 @@ hy:
           description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
           student_description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
         mc:
-          title: Minecraft Hour of Code
+          title: Արկածներ Minecraft-ի հետ
           description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world
           description_short: Explore a Minecraft world through code
           student_description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world
@@ -251,6 +251,8 @@ hy:
               display_name: պարունակություն
             practice:
               display_name: Ուսուցիչի փորձեր
+        minecraft:
+          title: Minecraft Ոճաբան
         coursee-draft:
           lesson_groups:
             content:
@@ -1614,3 +1616,18 @@ hy:
               display_name: conditionals
             lessonGroup-5:
               display_name: փոփոխականների
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: ներածություն
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: ներածություն
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: ներածություն
+          lesson_groups:
+            lessonGroup-7:
+              display_name: ներածություն

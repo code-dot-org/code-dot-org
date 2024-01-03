@@ -1,22 +1,5 @@
 module Services
   module LevelFiles
-    # Temporary method to facilitate transitioning all of our .level files from
-    # a single directory into a subdirectory structure based on their
-    # associated Game objects.
-    #
-    # If there exists a level file for the given Level object at a path other
-    # than our new default, move that file into the new default location.
-    #
-    # TODO: move all existing levels into new directory structure and remove
-    def self.reorganize_level_file_into_subdirectory(level)
-      current_path = Policies::LevelFiles.level_file_path(level)
-      desired_path = Policies::LevelFiles.default_level_file_path(level)
-      if current_path != desired_path
-        FileUtils.mkdir_p(File.dirname(desired_path))
-        FileUtils.mv(current_path, desired_path)
-      end
-    end
-
     # Creates or updates the corresponding .level file for the given level
     #
     # @param [Level]
@@ -25,11 +8,6 @@ module Services
       # Don't update the file system unless we both expect to have a file for
       # this level and are ready for that file to be updated.
       return unless Policies::LevelFiles.write_to_file?(level) && level.published
-
-      # TODO: Once we've verified we can successfully invoke this method on old
-      # stable levels, uncomment this line so we can begin applying it to levels
-      # under active development.
-      #Services::LevelFiles.reorganize_level_file_into_subdirectory(level)
 
       file_path = Policies::LevelFiles.level_file_path(level)
       FileUtils.mkdir_p(File.dirname(file_path))

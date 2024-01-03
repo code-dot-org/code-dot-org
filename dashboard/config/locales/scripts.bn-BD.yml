@@ -874,7 +874,6 @@ bn:
             যেতে কোড ব্লকগুলি ব্যবহার করুন।
           student_description: স্টিভ বা অ্যালেক্স কে মাইনক্রাফটের এই দুনিয়ায় অভিযানের
             নিয়ে যেতে কোড ব্লকগুলি ব্যবহার করুন।
-          title: মাইনক্র্যাফট এক ঘণ্টার কোড
         nevada-standards-aligned-fifth-grade-2023:
           lesson_groups:
             lessonGroup-3:
@@ -1002,7 +1001,22 @@ bn:
               display_name: ঘটনাবলী
             csf_loops:
               display_name: চক্র
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: ভূমিকা
+          lessons:
+            lesson-7:
+              name: ভূমিকা
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: ভূমিকা
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
+              name: ভূমিকা
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
               name: ভূমিকা

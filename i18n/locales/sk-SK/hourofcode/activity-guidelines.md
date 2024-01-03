@@ -103,6 +103,7 @@ Svoju aktivitu môžete odoslať vyplnením dotazníka na stránke [Hour of Code
 * Meno a e-mail hlavnej kontaktnej osoby zastupujúcej odosielanú aktivitu
 * Názov aktivity (názov nesmie obsahovať výraz „Hour of Code“)
 * Odkaz na aktivitu
+* Zahŕňa táto aktivita AI: Áno alebo Nie
 * Opis aktivity (maximálny počet znakov je 400) 
     * V opise uveďte, či ide o aktivitu prevažne vykonávanú žiakmi alebo vedenú učiteľom. Okrem toho niektoré školy zaujíma, či sa aktivity Hodiny kódu týkajú noriem Common Core alebo Next Generation Science Standards. Ak sa činnosť týka konkrétnych noriem, zvážte uvedenie týchto informácií.
 * Odporúčané úrovne pre zamýšľaných používateľov. Môžete si pozrieť normy \[Computer Science Teachers' Association's K-12 Standards\](https://k12cs.org/framework-statements-by-grade-band/), v ktorých sú uvedené koncepty informatiky vhodné pre jednotlivé stupne. Medzi príklady stupňov patria napríklad tieto: 
@@ -110,9 +111,9 @@ Svoju aktivitu môžete odoslať vyplnením dotazníka na stránke [Hour of Code
     * 2. – 5. ročník (7 – 10 rokov)
     * 6. – 8. ročník (11 – 13 rokov)
     * 9. ročník a vyššie (14 a viac rokov)
-* Zoznam vyučovacích predmetov, na ktoré sa vaša aktivita vzťahuje (okrem informatiky). Ak napríklad učiteľ matematiky môže vašu aktivitu použiť na vyučovaní o uhloch alebo parabolách, uveďte „Matematika“. Ak máte aktivitu Mad Libs zameranú na výučbu slovies/podstatných mien atď. vyberte „Jazykoveda“.
-* Zoznam programovacích jazykov, ktoré sa v rámci vašej aktivity vyučujú. Napríklad: C/C++, Java, JavaScript atď. alebo jazykovo nezávislé (pre plány hodín, ktoré možno vyučovať vo viacerých jazykoch)
-* Zoznam podporovaných prirodzených jazykov. Poznámka: Za zisťovanie jazyka je zodpovedný poskytovateľ aktivity; všetkých používateľov presmerujeme na jedinú poskytnutú adresu URL.
+* Zoznam programovacích jazykov, ktoré sa v rámci vašej aktivity vyučujú. Napríklad: C/C++, Java, JavaScript atď. alebo jazykovo nezávislé (pre plány hodín, ktoré možno vyučovať vo viacerých jazykoch) vyberte „Jazykoveda“.
+* Zoznam podporovaných prirodzených jazykov. Poznámka: Za zisťovanie jazyka je zodpovedný poskytovateľ aktivity; všetkých používateľov presmerujeme na jedinú poskytnutú adresu URL. alebo jazykovo nezávislé (pre plány hodín, ktoré možno vyučovať vo viacerých jazykoch)
+* Akú úroveň skúseností by mal mať pedagóg, aby mohol využiť vašu aktivitu? (napr. začiatočník alebo pokročilý). A akú úroveň skúseností by mali mať žiaci?
 * Akú úroveň skúseností by mal mať pedagóg, aby mohol využiť vašu aktivitu? (napr. začiatočník alebo pokročilý). A akú úroveň skúseností by mali mať žiaci? Ak chcete pripraviť pokročilejšie aktivity v rámci Hodiny kódu, uveďte do opisu svojej aktivity potrebné predchádzajúce znalosti.
 * Dĺžka vašej aktivity 
     * Len 1 hodina
@@ -166,9 +167,11 @@ Svoju aktivitu môžete odoslať vyplnením dotazníka na stránke [Hour of Code
 
 ## Ako sa budú aktivity hodnotiť
 
-Rôznorodá komisia zložená z učiteľov informatiky vyhodnotí predložené materiály na základe kvalitatívnych a kvantitatívnych kritérií. Zverejnia sa všetky aktivity, ktoré spĺňajú základné kritériá. Učitelia budú môcť filtrovať a zoradiť aktivity tak, aby našli tie najlepšie pre svoju triedu.
+Rôznorodá komisia zložená z učiteľov informatiky vyhodnotí predložené materiály na základe kvalitatívnych a kvantitatívnych kritérií. Zverejnia sa všetky aktivity, ktoré spĺňajú základné kritériá.
 
-Pri hodnotení aktivít a plánov vyučovacích hodín sa budú pri všetkých aktivitách sledovať nasledujúce kritériá a podľa nich sa budú hodnotiť:
+V prípade tradičných kódovacích aktivít bude rôznorodý výbor pedagógov informatiky hodnotiť príspevky na základe kvalitatívnych a kvantitatívnych kritérií. Zverejnia sa všetky aktivity, ktoré spĺňajú základné kritériá. Učitelia budú môcť filtrovať a zoradiť aktivity tak, aby našli tie najlepšie pre svoju triedu.
+
+Ak hodnotiaca komisia ohodnotí aktivitu nulou z hľadiska kvality produkcie (kvôli závažným chybám alebo pokynom, ktoré veľmi sťažujú jej používanie), z hľadiska podpory vzdelávania v nedostatočne zastúpených skupinách (kvôli rasistickému/sexistickému materiálu), z hľadiska vzdelávacej hodnoty (nevysvetľuje koncepty informatiky) alebo zábavnosti/pútavosti (kvôli tomu, že je pre žiakov náročná/odrádzajúca), aktivita nebude zaradená.
 
 - Vysoká kvalita produkcie
 - Podpora vzdelávania všetkých demografických skupín (najmä žiakov nedostatočne zastúpených v informatike, ako sú mladé ženy, žiaci z marginalizovaných rasových a etnických skupín a žiaci so zdravotným postihnutím)
@@ -176,9 +179,9 @@ Pri hodnotení aktivít a plánov vyučovacích hodín sa budú pri všetkých a
 - Zábavnosť a pútavosť
 - Podnecovanie žiakov k tomu, aby vytvorili niečo jedinečné, o čo sa môžu podeliť (v prípade mladších žiakov: s rodičmi a spolužiakmi, v prípade starších žiakov: na internete)
 
-Ak hodnotiaca komisia ohodnotí aktivitu nulou z hľadiska kvality produkcie (kvôli závažným chybám alebo pokynom, ktoré veľmi sťažujú jej používanie), z hľadiska podpory vzdelávania v nedostatočne zastúpených skupinách (kvôli rasistickému/sexistickému materiálu), z hľadiska vzdelávacej hodnoty (nevysvetľuje koncepty informatiky) alebo zábavnosti/pútavosti (kvôli tomu, že je pre žiakov náročná/odrádzajúca), aktivita nebude zaradená.
-
 Okrem toho, aby mohli byť všetky aktivity zaradené do zoznamu, musia spĺňať tieto kritériá:
+
+Pri samoorientovaných aktivitách pre nových učiteľov a študentov bude kontrolná komisia hľadať, či:
 
 - musia byť vhodné pre vyučovanie na verejnej škole (žiadne zbrane, žiadny explicitný obsah/obsah pre dospelých, žiadny náboženský obsah atď.);
 - nesmú vyžadovať registráciu;
@@ -204,20 +207,22 @@ Učitelia a žiaci budú môcť vyhľadávať a filtrovať náš zoznam aktivít
 
 ## Usmernenia na predloženie žiadosti o predbežné kvalitatívne posúdenie
 
-Do svojho kurzu môžete zahrnúť [logo Hodiny kódu](https://hourofcode.com/us/promote/resources#logo), ale nie je to povinné. Ak používate logo Hodiny kódu, pozrite si nižšie uvedené pokyny týkajúce sa ochrannej známky. <u>Za žiadnych okolností nie je povolené používať logo a názov Code.org.</u> Obe sú chránené ochrannou známkou a nie je možné ich používať spolu s názvom značky tretej strany bez výslovného písomného súhlasu.
-
-Poznámka: Toto sú všeobecné usmernenia pre poskytovanie spätnej väzby. Predbežné posúdenie vašej aktivity môže zahŕňať spätnú väzbu vo všetkých týchto kategóriách, prípadne len v jednej či dvoch.
+Činnosti nemusia zahŕňať AI, aj keď sa snažíme ponúknuť viac aktivít súvisiacich s AI.
 
 **Pridajte poznámky pre učiteľa.** Väčšina aktivít by mala byť vykonávaná v réžii žiakov, ale ak aktivitu sprostredkúva alebo riadi učiteľ, uveďte jasné a jednoduché pokyny pre učiteľa vo forme poznámok pre učiteľa na samostatnej adrese URL, ktorú predložíte spolu s aktivitou. Nielen žiaci, ale aj niektorí učitelia sú nováčikmi. Uveďte napríklad tieto informácie:
+
+Všetky aktivity predložené na predbežné posúdenie dostanú spätnú väzbu do 1. septembra. Poskytneme vám aj odkaz na formulár, ktorý môžete použiť na vysvetlenie konkrétnych zmien vykonaných v aktivite v reakcii na spätnú väzbu.
+
+Každá aktivita predložená pred 1. októbrom bude štandardne posúdená bez ohľadu na to, či bola alebo nebola posúdená predbežne. Počas obdobia štandardného posudzovania (september – október) sa hodnotitelia zamerajú na hodnotenie aktivít podľa kritérií opísaných v časti „Ako sa budú aktivity hodnotiť“ vyššie. Pokiaľ nezaznamenáte konkrétne zmeny v aktivite, hodnotitelia sa pri hodnotení aktivít môžu a pravdepodobne aj budú spoliehať na spätnú väzbu z prvotného posúdenia.
 
 - Na akých platformách a v akých prehliadačoch funguje tento kurz najlepšie?
 - Funguje na smartfónoch? Tabletoch?
 - Odporúčate párové programovanie?
 - Čo je potrebné zvážiť pri používaní v triede? Napr. ak sú k dispozícii videá, odporučte učiteľom, aby ich premietli na plátno, aby si ich mohla pozrieť celá trieda.
 
-Všetky aktivity predložené na predbežné posúdenie dostanú spätnú väzbu do 1. septembra. Poskytneme vám aj odkaz na formulár, ktorý môžete použiť na vysvetlenie konkrétnych zmien vykonaných v aktivite v reakcii na spätnú väzbu.
+**Poskytnite spätnú väzbu na konci aktivity.** (Napr.: „Dokončili ste 10 úrovní a zoznámili ste sa s cyklami! Skvelá práca!“)
 
-Každá aktivita predložená pred 1. októbrom bude štandardne posúdená bez ohľadu na to, či bola alebo nebola posúdená predbežne. Počas obdobia štandardného posudzovania (september – október) sa hodnotitelia zamerajú na hodnotenie aktivít podľa kritérií opísaných v časti „Ako sa budú aktivity hodnotiť“ vyššie. Pokiaľ nezaznamenáte konkrétne zmeny v aktivite, hodnotitelia sa pri hodnotení aktivít môžu a pravdepodobne aj budú spoliehať na spätnú väzbu z prvotného posúdenia. @Scratch.“ Použite hashtag **#HourOfCode** (s veľkými písmenami H, O, C).
+**Povzbuďte žiakov, aby po dokončení aktivity o tom napísali na sociálnych sieťach (ak je to vhodné).** Napríklad: „Mám za sebou Hodinu kódu s ________ A čo ty? #HourOfCode“ alebo „Mám za sebou aktivitu #HourOfCode v rámci #CSEdWeek. A čo ty? @Scratch.“ Použite hashtag **#HourOfCode** (s veľkými písmenami H, O, C).
 
 **Vytvorte aktivitu v španielčine alebo v iných jazykoch okrem angličtiny.**
 
@@ -231,7 +236,7 @@ Každá aktivita predložená pred 1. októbrom bude štandardne posúdená bez 
 
 ## Odporúčania na vytvorenie jednohodinových samostatných kurzov
 
-**Poskytnite spätnú väzbu na konci aktivity.** (Napr.: „Dokončili ste 10 úrovní a zoznámili ste sa s cyklami! Skvelá práca!“) Nechceme zabrániť tomuto použitiu, ale chceme sa uistiť, že použitie spadá do niekoľkých limitov:
+Hour of Code® a Hora del Código® sú registrované ochranné známky spoločnosti Code.org. Mnohí z našich partnerov v oblasti výučby používali naše ochranné známky „Hodina kódu“ na svojich webových stránkach v súvislosti s ich aktivitami Hodina Kódexu. Nechceme zabrániť tomuto použitiu, ale chceme sa uistiť, že použitie spadá do niekoľkých limitov:
 
 1. Používajte „Hodinu Kódexu“ iba v súvislosti s nekomerčnými aktivitami CS Education v kontexte kampane Hodina Kódexu a na žiadny iný účel.
 2. Názov „Hour of Code“ sa musí používať tak, aby nenaznačoval, že ide o vašu vlastnú značku, ale že ide skôr o odkaz na občianske hnutie Hour of Code. Dobrý príklad: „Zúčastnite sa hodiny kódu® na Acmecorp.com“. Nevhodné použitie: „Vyskúšajte Hour of Code od Moja spoločnosť“.
@@ -247,13 +252,13 @@ Každá aktivita predložená pred 1. októbrom bude štandardne posúdená bez 
 
 ## Pokyny pre ochranné známky
 
-V záujme presnejšieho sledovania účasti musia všetci partneri, ktorí poskytujú kurzy, na prvú stránku svojich kurzov v rámci Hodiny kódu umiestniť jednopixelové sledovacie obrázky. Pixelový obrázok sa musí nachádzať len na úvodnej stránke. Nepridávajte ho na žiadne ďalšie stránky svojho kurzu.
+Ak bude váš kurz schválený a zaradený na finálnu stránku kurzov, Code.org vám poskytne jedinečný sledovací pixel, ktorý môžete začleniť do svojho kurzu. Pozrite si príklad nižšie. Nepridávajte ho na žiadne ďalšie stránky svojho kurzu.
 
 To nám umožní spočítať používateľov, ktorí absolvujú váš kurz na Hodine kódu. Povedie to k presnejšiemu počítaniu účastníkov vášho kurzu.
 
 Ak bude váš kurz schválený a zaradený na finálnu stránku kurzov, Code.org vám poskytne jedinečný sledovací pixel, ktorý môžete začleniť do svojho kurzu. Pozrite si príklad nižšie.
 
-POZNÁMKA: v prípade inštalovateľných aplikácií (aplikácie pre iOS/Android alebo aplikácie pre počítač) to nie je dôležité.
+IMG SRC = <http://code.org/api/hour/begin_dance.png>
 
 Príklady sledovacích pixelov pre Dance Party:
 
@@ -266,7 +271,7 @@ IMG SRC = <http://code.org/api/hour/begin_dance.png>
 
 ## Sledovací pixel
 
-To nám umožní spočítať používateľov, ktorí absolvujú váš kurz na Hodine kódu. Povedie to k presnejšiemu počítaniu účastníkov vášho kurzu. Je oveľa pravdepodobnejšie, že vaši používatelia budú reagovať na správy od vás o vašej aktivite. Využite medzinárodnú kampaň Hodina kódu počas Týždňa informatiky ako zámienku na to, aby ste vyzvali používateľov, aby sa zapojili, a pomohli nám tak osloviť viac žiakov!
+Propagujte svoju aktivitu vo svojej sieti! Nasmerujte žiakov na svoju stránku Hodina kódu. Je oveľa pravdepodobnejšie, že vaši používatelia budú reagovať na správy od vás o vašej aktivite. Využite medzinárodnú kampaň Hodina kódu počas Týždňa informatiky ako zámienku na to, aby ste vyzvali používateľov, aby sa zapojili, a pomohli nám tak osloviť viac žiakov!
 
 - Prezentujte Hodinu kódu a CSEdWeek na svojich webových stránkach. Napríklad: <http://www.tynker.com/hour-of-code>.
 - Propagujte Hodinu kódu prostredníctvom sociálnych médií, tradičných médií, poštových zoznamov atď. s použitím hashtagu #HourOfCode (s veľkými písmenami H, O, C).
@@ -275,4 +280,4 @@ To nám umožní spočítať používateľov, ktorí absolvujú váš kurz na Ho
 
 [**Späť na začiatok**](#top)
 
-POZNÁMKA: v prípade inštalovateľných aplikácií (aplikácie pre iOS/Android alebo aplikácie pre počítač) to nie je dôležité.
+{{ signup_button }}

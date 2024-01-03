@@ -164,7 +164,7 @@ fr:
         Unplug1: Introduction à l'informatique
         Unplug10: L'Internet
         Unplug11: Résumé et ouverture
-        Unplug2: Algorithmique
+        Unplug2: La pensée computationnelle
         Unplug3: Programmation sur papier quadrillé
         Unplug4: Algorithmes
         Unplug5: Fonctions
@@ -860,6 +860,7 @@ fr:
         artist_intro: Introduction à l'Artiste
         c_and_c_digital_sharing: Partage Numérique
         c_and_c_great_to_create: C'est Super de Créer et de Jouer Équitablement
+        code-break: Prends une Pause de Code
         codebreak_e01: 'Code Break 1.0: Algorithmes avec Hill Harper'
         codebreak_e02: 'Code Break 2.0: Prototypes avec Mark Cuban et Lyndsey Scott'
         codebreak_e03: 'Code Break 3.0: Chiffrement avec Ashton Kutcher et Mia Gil
@@ -1002,6 +1003,7 @@ fr:
         csd_gamelab_velocity: Vitesse
         csd_how_teamwork_works: Comment fonctionne le Travail d'Équipe
         csd_ml_ethics_ai: 'Éthique et IA '
+        csd_ml_how_ai_works: Comment fonctionne l'IA
         csd_ml_import_model: Importer un modèle IA
         csd_ml_intro_ai_lab_july2021: Présentation d'AI Lab
         csd_ml_intro_to_ai_lab: Présentation d'AI Lab
@@ -1071,6 +1073,7 @@ fr:
         hint_videos_d_11_7_last: 'Astuces en vidéo : D.11.7 en Dernier'
         hint_videos_d_11_9_first: 'Astuces en vidéo : D.11.9 en Premier'
         hint_videos_d_11_9_last: 'Astuces en vidéo : D.11.9 en Dernier'
+        hoc-dance-ai-warmup: 'Soirée dansante édition IA : Exercice préparatoire'
         hoc_dance_congrats: Soirée Dansante - C’est party !
         hoc_dance_congrats_2019: Soirée Dansante 2019 - C’est party !
         hoc_dance_events: Soirée Dansante – Événements
@@ -1185,6 +1188,7 @@ fr:
         u7-libraries-explanation: 'Labo des Applis : Crée Tes Propres Blocs - Comment
           Utiliser les Bibliothèques'
         upload_sprites_backgrounds: Téléchargement de sprites et d'arrière-plans personnalisés
+        what-is-creativity: Qu'est-ce que la Créativité ?
         what_is_an_event: Qu'est-ce qu'un événement?
         what_is_cs: Qu'est-ce que l'informatique ?
         why-should-teach-unplugged-activities: 'FAQ : Pourquoi devrais-je enseigner

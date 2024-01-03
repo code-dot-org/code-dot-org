@@ -374,6 +374,17 @@
               },
               "name": "Matemática"
             },
+            "micro_bit": {
+              "expressions": {
+                "ledScreen.on": {
+                  "examples": {
+                    "Four Corners": {
+                      "name": "Quatro Cantos"
+                    }
+                  }
+                }
+              }
+            },
             "turtle": {
               "expressions": {
                 "arcLeft": {
@@ -775,6 +786,22 @@
         "weblab": {
           "categories": {
             "html_tags": {
+              "expressions": {
+                "style": {
+                  "examples": {
+                    "Style": {
+                      "name": "Estilo"
+                    }
+                  }
+                },
+                "title": {
+                  "examples": {
+                    "Title": {
+                      "name": "Título"
+                    }
+                  }
+                }
+              },
               "name": "Tags HTML"
             }
           },

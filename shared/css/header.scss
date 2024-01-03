@@ -5,7 +5,7 @@
  *= require user-menu
  */
 
-@import 'color.scss';
+@import 'color', 'font';
 
 #pageheader-wrapper {
   padding-top: 0;
@@ -82,10 +82,10 @@
       }
 
       .headerlink {
+        @include main-font-regular;
         display: inline-block;
         font-size: 14px;
         margin: 12px 0 0 30px;
-        font-family: 'Gotham 4r', sans-serif;
         color: $white;
         text-decoration: none;
 
@@ -136,7 +136,7 @@
     border: 2px solid $white;
 
     .pairing_name, .display_name, .create_button {
-      font-family: 'Gotham 4r', sans-serif;
+      @include main-font-regular;
     }
 
     .user_options, .create_options, .help_contents {

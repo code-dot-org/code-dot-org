@@ -21,7 +21,7 @@ Anche se prevedi che gli studenti completino le loro attività in modo indipende
 
 <ul>
 <li><b>Invita un oratore ospite</b>: Migliaia di volontari di ogni provenienza aspettano di essere contattati! Usa semplicemente la nostra <a href="https://code.org/volunteer/local">mappa dei volontari</a> per cercarli. Con un'Ora del Codice virtuale, non sei limitato dalla distanza, quindi, se necessario, valuta la possibilità di cercare volontari che offrono il loro aiuto a distanza al di fuori del tuo codice postale. Dopo esserti connesso con un volontario, puoi fare riferimento alla <a href="http://hourofcode.com/us/how-to/volunteers"> Guida pratica per i volontari dell'Ora del Codice </a> per determinare potenziali argomenti, domande di discussione e altro ancora.</li>
-<li><b>Mostra un video ispiratore</b>: Un'altra opzione affidabile per iniziare il tuo evento è mostrare ai partecipanti uno dei nostri tanti <a href="http://hourofcode.com/us/promote/resources#videos">video ispiratori</a>. Molti video durano meno di 5 minuti e presentano l'ispirazione e l'incoraggiamento di alcune celebrità che i tuoi studenti riconosceranno.</li>
+<li><b>Mostra un video motivazionale</b>: un'altra possibilità ben sperimentata per iniziare il tuo evento è mostrare ai partecipanti uno dei nostri tanti <a href="http://hourofcode.com/us/promote/resources#videos">video motivazionali</a>. Molti video durano meno di 5 minuti e presentano l'ispirazione e l'incoraggiamento di alcune celebrità che i tuoi studenti riconosceranno.</li>
 <li><b>Discuti dell'informatica per il bene comune</b>: Trasforma il tuo evento Ora del Codice in un momento per comprendere più a fondo l'informatica considerando l'impatto della tecnologia sulla nostra vita quotidiana. Poni agli studenti domande guida e trasforma l'inizio del tuo evento in una discussione interattiva. Per idee su come avviare la conversazione, dai un'occhiata a queste <a href="https://code.org/csforgood#prompts">domande per la discussione</a>.</li>
 </ul>
 
@@ -66,6 +66,6 @@ Così come avete iniziato l'evento, riunitevi in seguito per festeggiare! Ecco a
 
 [<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
 
-Infine, se non hai iniziato l'evento con un <a href="https://code.org/volunteer/local">oratore ospite</a>, <a href="https://hourofcode.com/us/promote/resources#">un video ispiratore</a>, o <a href="https://code.org/csforgood#prompts">domande per la discussione</a>, questa è un'altra grande opportunità per incorporare anche una di queste esperienze.
+Infine, se non hai iniziato l'evento con un relatore <a href="https://code.org/volunteer/local">ospite</a>, con un video <a href="https://hourofcode.com/us/promote/resources#"></a>motivazionale o con domande finalizzate alla <a href="https://code.org/csforgood#prompts">discussione</a>, questa sarebbe un'altra grande opportunità per riportare anche una di quelle esperienze.
 
 {{ signup_button }}

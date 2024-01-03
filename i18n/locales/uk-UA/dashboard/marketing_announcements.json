@@ -1,0 +1,114 @@
+{
+  "banners": {
+    "csleadersprize": {
+      "title": "",
+      "body": "",
+      "buttonText": "Дізнайтеся більше"
+    },
+    "csjourneys-22": {
+      "title": "",
+      "body": "",
+      "buttonText": "Дізнайтеся більше"
+    },
+    "hoc-more": {
+      "title": "",
+      "body": "Сайт Години коду має більше 500 інформатичних діяльностей для будь-якого віку та рівня досвіду, розроблених Code.org та партнерами.",
+      "buttonText": ""
+    },
+    "superhero": {
+      "title": "",
+      "body": "",
+      "buttonText": "Дізнатися більше"
+    },
+    "csjourneys": {
+      "title": "",
+      "body": "",
+      "buttonText": "Дізнайтеся більше"
+    },
+    "class-schedule-survey": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "back-to-school-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "Дізнайтеся більше"
+    },
+    "teacher-apps-open-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "Приєднуйтесь"
+    },
+    "teacher-apps-closing-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "Приєднуйтесь"
+    },
+    "teacher-apps-nominate-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Визначити вчителя"
+    },
+    "teacher-apps-stillon-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Приєднуйтесь"
+    },
+    "home-learning-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Переглянути ідеї проєктів"
+    },
+    "soonhoc-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "codebytes-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Дізнайтеся більше"
+    },
+    "ai-2020": {
+      "title": "Дослідимо штучний інтелект та машинне навчання",
+      "body": "",
+      "buttonText": "Дізнайтеся більше"
+    },
+    "congrats-certificate-share": {
+      "title": "Спробуйте Годину коду",
+      "body": "Навчитись може кожен!",
+      "buttonText": "Початок"
+    },
+    "coldplay": {
+      "title": "",
+      "body": "",
+      "buttonText": "Спробувати"
+    },
+    "ai-launch-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": "Дізнайтеся більше"
+    },
+    "ai-pl-launch-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": "Дізнайтеся більше"
+    },
+    "state-of-cs-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "hoc-2023": {
+      "title": "Година коду: творчість та ШІ",
+      "body": "Приєднуйтесь до мільйонів людей по всьому світу, щоб організувати Годину коду, з ШІ або без нього, і дізнатися, як працює ШІ. Це може зробити будь-хто і будь-де. Досвід не потрібен.",
+      "buttonText": "Дізнайтеся більше"
+    },
+    "hoc-2023-dance-ai": {
+      "title": "Танцювальна вечірка: версія ШІ",
+      "body": "",
+      "buttonText": "Дізнайтеся більше"
+    }
+  }
+}

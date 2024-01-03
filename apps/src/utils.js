@@ -954,8 +954,12 @@ export function isProductionEnvironment() {
 /**
  * Fetch cookies signed by cloudfront which grant access to restricted content.
  * @returns {Promise<Response>}
- * TODO: Reuse this in Dance Party (Dance.js and songs.js)
  */
-export function fetchSignedCookies() {
-  return fetch('/dashboardapi/sign_cookies', {credentials: 'same-origin'});
+export function fetchSignedCookies(buster = false) {
+  return fetch(
+    `/dashboardapi/sign_cookies${buster ? `?bust=${Date.now()}` : ''}`,
+    {
+      credentials: 'same-origin',
+    }
+  );
 }

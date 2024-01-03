@@ -1028,7 +1028,6 @@ gl:
           description_short: Explora o mundo de Minecraft a través do código
           student_description: Usa bloques de código para acompañar a Steve ou a Alex
             nunha aventura polo mundo de Minecraft
-          title: Hora do Código Minecraft
         netsim:
           title: Simulador de internet
         nevada-standards-aligned-fifth-grade-2023:
@@ -1187,7 +1186,22 @@ gl:
               display_name: Eventos
             csf_loops:
               display_name: Bucles
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Introdución
+          lessons:
+            lesson-7:
+              name: Introdución
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Introdución
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
+              name: Introdución
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
               name: Introdución

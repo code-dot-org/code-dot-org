@@ -1,3 +1,13 @@
 {
-  "continue": "Continuar"
+  "allMessagesSentAreRecorded": "Todos los mensajes enviados al Chat de Inteligencia Artificial se graban.",
+  "anythingPersonalCanNotBeSubmitted": "Para proteger tu privacidad, no debes enviar al chat de Inteligencia Artificial ningún tipo de información personal (nombre, número de teléfono, dirección, etc.).",
+  "continue": "Continuar",
+  "inappropriateMessagesAreFlagged": "Los mensajes inapropiados serán marcados y tu profesor será notificado.",
+  "inappropriateUserMessage": "Este mensaje ha sido marcado como inapropiado.",
+  "tooPersonalUserMessage": "Este mensaje ha sido marcado como demasiado personal.",
+  "userChatMessagePlaceholder": "Añadir un mensaje de chat...",
+  "waitingForChatResponse": "Esperando una respuesta...",
+  "warningModalHeader": "¡Recuerda chatear con responsabilidad!",
+  "warningModalOkButtonText": "Empezar a chatear",
+  "whatIsPersonalInformation": "¿Qué se considera información personal?"
 }

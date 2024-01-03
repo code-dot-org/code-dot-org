@@ -1,3 +1,14 @@
 {
-  "continue": "次へ"
+  "aichatWorkspaceHeader": "AI チャット",
+  "allMessagesSentAreRecorded": "AI Chat に送信されたメッセージはすべて記録されます。",
+  "anythingPersonalCanNotBeSubmitted": "プライバシーを保護するために、個人情報と見なされるもの（名前、電話番号、住所など）をAIチャットに送信しないでください。",
+  "continue": "次へ",
+  "inappropriateMessagesAreFlagged": "不適切なメッセージにはフラグが付けられ、教師に通知されます。",
+  "inappropriateUserMessage": "このメッセージには不適切なフラグが付けられています。",
+  "tooPersonalUserMessage": "このメッセージには不適切なフラグが付けられています。",
+  "userChatMessagePlaceholder": "チャットメッセージを追加...",
+  "waitingForChatResponse": "返事を待っています...",
+  "warningModalHeader": "責任を持ってチャットすることを忘れないでください！",
+  "warningModalOkButtonText": "学習をはじめる",
+  "whatIsPersonalInformation": "個人情報とはどのようなものですか？"
 }

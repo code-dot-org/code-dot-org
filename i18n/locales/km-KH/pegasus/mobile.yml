@@ -473,6 +473,7 @@
   sports_page_title: "Hour of Code Sports"
   sports_og_title: "ជំរុញខ្លួនអ្នក។ នរណាៗក៏អាចរៀនបានដែរ។"
   sports_og_description: "ជើងឯក និងម្ចាស់មេដាយមាស លើកទឹកចិត្តអ្នកឲ្យសាកល្បងកម្មវិធី Hour of Code។ សរសេរកូដសម្រាប់ហ្គេមប្រភេទកីឡាដោយខ្លួនអ្នកផ្ទាល់។"
+  sports_title: "សរសេរកូដបង្កើតហ្គេមកីឡាផ្ទាល់ខ្លួន"
   sports_watch_video: "មេីលវីដេអូ"
   sports_video_title: "ជំរុញខ្លួនអ្នក។ នរណាៗក៏អាចរៀនបានដែរ។"
   sports_select_theme: "ជ្រើសរើសទម្រង់នៃការបង្រៀនរបស់អ្នក"
@@ -524,13 +525,9 @@
   volunteer_engineer_submission_subtitle_generic: 'គ្រូបង្រៀនចំនួន ១០០, ០០០ នាក់នឹងទទួលរៀបចំកម្មវិធី Hour of Code នៅក្នុងថ្នាក់រៀនរបស់ពួកគេនៅឆ្នាំនេះ ចាប់ពីថ្ងៃទី ៧ដល់១៣ ខែធ្នូឆ្នាំ ២០១៥។ ពួកគេត្រូវការជំនួយរបស់អ្នក! '
   volunteer_engineer_submission_subtitle_specific: "គ្រូបង្រៀនចំនួន%{num_teachers} ត្រូវការអ្នកស្ម័គ្រចិត្ត។ អ្នកស្ម័គ្រចិត្តចំនួន<br>%{num_volunteers} បានចុះឈ្មោះ។ សូមចូលរួមជាមួយពួកគេ។"
   volunteer_engineer_submission_intro_background: "កម្មវិធី Hour of Code គឺជាចលនាជាសកល ដើម្បីធ្វើការណែនាំអំពីវិទ្យាសាស្ត្រកុំព្យូទ័រក្នុងរយៈពេលមួយម៉ោងទៅដល់សិស្សរាប់លាននាក់នៅក្នុងជាង១៨០ប្រទេស។ សូមចូលរួមក្នុងសប្តាហ៍នៃការអប់រំវិទ្យាសាស្រ្តកុំព្យូទ័រចាប់ពីថ្ងៃទី ៧ ដល់ថ្ងៃទី ១៣ ខែធ្នូ។"
-  volunteer_engineer_submission_intro_recruit: 'គ្រូបង្រៀនត្រូវការនរណាម្នាក់ <span style="font-family: ''Gotham 7r'', sans-serif;">ដែលមានចំណាប់អារម្មណ៍ខ្លាំងចំពោះការអប់រំវិទ្យាសាស្រ្តកុំព្យូទ័រ</span>ដែលជាអ្នកអាចជួយនៅក្នុងថ្នាក់រៀនបាន ឬនរណាម្នាក់ដែលអាច<span style="font-family: ''Gotham 7r'', sans-serif;">បំផុសគំនិត</span>សិស្សរបស់ពួកគាត់ដោយនិយាយអំពីទំហំនៃសក្តានុពលរបស់វិទ្យាសាស្រ្តកុំព្យូទ័រ (ដែលអាចធ្វើតាមរយៈការឆ្លើយឆ្លងជាវីដេអូ)។'
   volunteer_engineer_submission_intro_recruit_markdown: "គ្រូបង្រៀន​ត្រូវការនរណា​ម្នាក់​ **ដែលមាន​ចំណាប់​អារម្មណ៍ខ្លាំង​ចំពោះ​ការ​អប់រំ​វិទ្យាសាស្រ្ត​កុំព្យូទ័រ​** ដែល​ជា​អ្នក​អាច​ជួយ​នៅ​ក្នុង​ថ្នាក់​រៀន​បាន ឬ​នរណា​ម្នាក់​ដែល​អាច **បំផុស​គំនិត** សិស្ស​របស់​ពួកគាត់ដោយ​និយាយ​អំពី​ទំហំ​នៃ​សក្តានុពលរបស់វិទ្យាសាស្រ្ត​កុំព្យូទ័រ​ (ដែល​អាច​ធ្វើ​តាមរយៈ​ការ​​ឆ្លើយ​ឆ្លង​ជា​វីដេអូ​)។"
-  volunteer_engineer_submission_intro_guide: "សិក្សាបន្ថែមពី<a href=\"%{volunteer_guide}\">កម្មវិធីអ្នកស្ម័គ្រចិត្តរបស់យើងនៅទីនេះ</a>។"
   volunteer_engineer_submission_intro_guide_markdown: "សិក្សាបន្ថែមពី  [កម្មវិធីអ្នកស្ម័គ្រចិត្តរបស់យើងនៅទីនេះ](%{volunteer_guide})."
-  volunteer_engineer_submission_intro_signup: "សូមបញ្ចូលព័ត៌មានដូចខាងក្រោម ប្រសិនបើអ្នកជានិស្សិតវិទ្យាសាស្រ្តកុំព្យូទ័រ ឬអ្នកជំនាញផ្នែកបង្កើតកម្មវិធី។ អ្នកត្រូវមានអាយុយ៉ាងតិចណាស់១៨ឆ្នាំ ដើម្បីចុះឈ្មោះជាអ្នកស្ម័គ្រចិត្ត។ សូមកត់ចំណាំថា រាល់ព័ត៌មានដែលអ្នកបានបំពេញនឹងត្រូវបានបង្ហាញជាសាធារណៈសម្រាប់គ្រប់គ្នាដែលចូលទៅមើល  <a href=\"/volunteer/local\">​ បញ្ជីនៃអ្នកស្ម័គ្រចិត្ត</a>។ ព័ត៌មានដែលមានសញ្ញា<span class=\"form-required-field\">*</span> គឺតម្រូវឲ្យបំពេញជាដាច់ខាត។"
   volunteer_engineer_submission_intro_signup_markdown: "សូមបញ្ចូលព័ត៌មានដូចខាងក្រោម ប្រសិនបើអ្នកជានិស្សិតវិទ្យាសាស្រ្តកុំព្យូទ័រ ឬអ្នកជំនាញផ្នែកបង្កើតកម្មវិធី។ អ្នកត្រូវមានអាយុ​យ៉ាង​តិច ១៨ឆ្នាំទើប​អាច​ចុះ​ឈ្មោះ​ជាអ្នកស្ម័គ្រចិត្ត​។ បញ្ជាក់ ព័ត៌មាន​ដែល​អ្នក​បំពេញក្នុង​ចន្លោះ គឺ​ត្រូវ​បាន​ផ្សព្វផ្សាយ​ជាសាធារណៈ​សម្រាប់​អ្នកដែលកំពុង​ស្វែង​រក​អ្នក​ស្ម័គ្រចិត្ត នៅ [ផែនទី​ស្ម័គ្រចិត្ត​](/volunteer/local)។​ ចន្លោះបំពេញដែលមានសញ្ញា _*_ គឺ​តម្រូវ​ឲ្យបំពេញ​ជា​ដាច់​ខាត​។"
-  volunteer_engineer_submission_intro_links: "តើអ្នកជាគ្រូបង្រៀនកំពុងស្វែងរកអ្នកស្ម័គ្រចិត្តដែរឬទេ? ស្វែងរកអ្នកស្ម័គ្រចិត្តក្នុងតំបន់តាមរយៈ<a href=\"%{volunteer_local}\">ផែនទីអ្នកស្ម័គ្រចិត្ត</a>របស់យើង។"
   volunteer_engineer_submission_intro_links_markdown: "តើអ្នកជាគ្រូបង្រៀនកំពុងស្វែងរកអ្នកស្ម័គ្រចិត្តដែរឬទេ? ស្វែងរកអ្នកស្ម័គ្រចិត្តក្នុងតំបន់តាមរយៈ [ផែនទីអ្នកស្ម័គ្រចិត្ត](%{volunteer_local}) របស់យើង។"
   volunteer_engineer_submission_update_information: "ធ្វើបច្ចុប្បន្នភាពព័ត៌មានរបស់អ្នក"
   volunteer_engineer_submission_header_shared: "ព័ត៌មានដែលបានចែករំលែកជាមួយគ្រូលើផែនទីអ្នកស្ម័គ្រចិត្ត"
@@ -688,6 +685,7 @@
   dashboard_sections_table_secret: "ប្រភេទ ចូលគណនី"
   dashboard_sections_table_grade: "ថ្នាក់"
   dashboard_sections_table_course: "វគ្គសិក្សា"
+  dashboard_sections_table_pairing_allowed: "ការសរសេរកម្មវិធីជាគូ"
   dashboard_sections_table_stage_extras: "ដំណាក់កាលផ្សេងទៀត"
   dashboard_sections_table_students: "សិស្ស"
   dashboard_sections_table_code: "លេខកូដផ្នែក"
@@ -903,7 +901,7 @@
   appinventor_name: "AppInventor Hour of Code"
   blockly_name: "Blockly"
   projguts_name: "ក្តាប់ លាត កន្ត្រៃ"
-  artist_name: "សិល្បករ"
+  artist_name: "វិចិត្រករ"
   monstercoding_name: "ដំណើរផ្សងព្រេងសរសេរកូដនៅលើកោះអាថ៌កំបាំង "
   allcancode_name: "រត់ Marco រត់! "
   csfirst_name: "CS First"
@@ -932,7 +930,7 @@
   pre-express-2018_name: វគ្គសម្រាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន (២០១៨)
   pre-express-2019_name: វគ្គសម្រាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន (២០១៩)
   pre-express-2020_name: វគ្គសម្រាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន (២០២០)
-  express-2022_name: វគ្គសិក្សារហ័ស (2022)
+  express-2022_name: Express Course (2022)
   csd2_name: 'មេរៀនទី២៖ ការអភិវឌ្ឍគេហទំព័រ'
   csd3_name: 'មេរៀនទី៣៖ ស្វែងយល់អំពីចលនានិងល្បែង'
   pre-express_name: វគ្គសម្រាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន
@@ -947,6 +945,7 @@
   applab_name: "មន្ទីរពិសោធន៍កម្មវិធី​"
   gamelab_name: "មន្ទីរពិសោធន៍ហ្គេម"
   basketball_name: "បង្កើតហ្គេមបោះបាល់"
+  sports_name: "សរសេរកូដបង្កើតហ្គេមកីឡាផ្ទាល់ខ្លួន"
   applab_shortdescription_congrats: "App Lab ជាកន្លែងសសរសេរប្រូក្រាម ដែលអាចឲ្យយើងបង្កើតកម្មវិធីសាមញ្ញបាន។ រចនាកម្មវីធី សរសេរកូដបង្កើតកម្មវិធីដោយប្រើប្លុក ឬ ភាសា JavaScript និងអាចចែករំលែកកម្មវិធីអ្នកភ្លាមៗ។ "
   codeorg_gradelevel: "អាយុពី ៤ ទៅ ១០៤ ឆ្នាំ"
   codeintl_gradelevel: "អាយុពី ៤ ទៅ ១០៤ ឆ្នាំ"
@@ -1367,6 +1366,7 @@
   compatibility_hide_this_warning: "លាក់ការព្រមាននេះ"
   compatibility_unsupported_browser: "កម្មវិធីសម្រាប់ស្វែងរករបស់អ្នកមិនអាចប្រើប្រាស់បានទេ។ សូមធ្វើបច្ចុប្បន្នាភាពកម្មវិធីស្វែងរករបស់អ្នកទៅជា <a href='%{supported_browsers_url}', target='_blank'>' មួយនៃកម្មវិធីស្វែងរករបស់យើងខ្ញុំ</a>។ អ្នកអាចសាកល្បងមើលទំព័រនេះម្តងទៀត ប៉ុន្តែសូមអ្នករំពឹងថាមុខងាររបស់វាត្រូវបានខូច។"
   compatibility_unsupported_browser_markdown: "កម្មវិធីសម្រាប់ស្វែងរករបស់អ្នកមិនអាចប្រើប្រាស់បានទេ។ សូមធ្វើបច្ចុប្បន្នាភាពកម្មវិធីស្វែងរករបស់អ្នកទៅជា <a href='%{supported_browsers_url}', target='_blank'>' មួយនៃកម្មវិធីស្វែងរករបស់យើងខ្ញុំ</a>។ អ្នកអាចសាកល្បងមើលទំព័រនេះម្តងទៀត ប៉ុន្តែសូមអ្នករំពឹងថាមុខងាររបស់វាត្រូវបានខូច។"
+  hourofcode_shortcode: "កូដ (Code)\n"
   flappy_shortcode: "ទទះ"
   header_home: "ទំព័រដើម"
   header_my_dashboard: "ផ្ទាំង​គ្រប់គ្រងរបស់ខ្ញុំ"
@@ -1402,6 +1402,7 @@
   header_report_abuse: "រាយការណ៏ចំពោះសកម្មភាពមិនសមរម្យ"
   header_legal: "ភាពឯកជននិងច្បាប់"
   header_legal_privacy: "គោលការណ៍ឯកជនភាព"
+  header_legal_cookie_notice: "សេចក្តីជូនដំណឹងអំពីខូគី"
   header_legal_tos: "លក្ខខណ្ឌ"
   header_screen_reader_hamburger: "ម៉ឺនុយ"
   header_screen_reader_help: "ម៉ឺនុយ​ជំនួយ"
@@ -1427,7 +1428,7 @@
   user_header_view_all: "មើលគម្រោងទាំងអស់"
   user_header_view_project_gallery: "មើលបណ្តុំនៃគម្រោង"
   user_header_view_my_projects: "មើលគម្រោងរបស់ខ្ញុំ"
-  view_all_sections: "មើលផ្នែកទាំងអស់"
+  view_all_sections: "មើលថ្នាក់ទាំងអស់"
   view_section: "មើលផ្នែក"
   view_named_section: "មើល %{section_name}"
   privacy_doc_explanation: "សូមចុចនៅទីនេះសម្រាប់ឯកសារឯកជនភាពរបស់យើង ដែលអាចចែករំលែក ឬបោះពុម្ពសម្រាប់សិស្សរបស់អ្នកបាន។"
@@ -1546,7 +1547,7 @@
   hoc2018_dance_party_box_description: "សរសេរកូដ Dance Party ដើម្បីចែករំលែកជាមួយមិត្ដភក្កិ"
   hoc2018_dance_party_specs: "ភាសា | ទម្រង់ | អាយុ ៦-១០៦"
   hoc2018_dance_party_button: "ចាប់​ផ្ដើម"
-  hoc2018_dance_keep_on_dancing_box_title: "Keep On Dancing"
+  hoc2018_dance_keep_on_dancing_box_title: "បន្តបង្កើតក្បាច់រាំ"
   hoc2018_dance_keep_on_dancing_description: "បន្តលើសពីមួយម៉ោងដំបូង ជាមួយនឹងគំនិតគម្រោងបន្ថែមទៀត។"
   hoc2018_dance_keep_on_dancing_specs: "ភាសា | ទម្រង់ | អាយុ ១៣ ឆ្នាំឡើង"
   hoc2018_dance_keep_on_dancing_button: "ចាប់ផ្តើមវគ្គ ២"

@@ -41,7 +41,7 @@ module CacheMethod
       CacheMethod.cache_options[self] = options
     end
 
-    def cached(method_id, options=cache_options)
+    def cached(method_id, options = cache_options)
       options.reverse_merge! DEFAULT_CACHE_OPTIONS
       cache = options.delete(:cache)
       version = options.delete(:version)

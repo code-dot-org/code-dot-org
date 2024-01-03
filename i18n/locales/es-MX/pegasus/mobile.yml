@@ -529,13 +529,9 @@
   volunteer_engineer_submission_subtitle_generic: '100.000 profesores van a llevar a cabo una Hora del Código en sus aulas este año, del 7 al 13 de Diciembre del 2015. ¡Y necesitan tu ayuda! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} maestros quieren a voluntarios apasionados por la enseñanza de ciencias de la computación para ayudar cons su Horas de Código este Diciembre. <br>%{num_volunteers} voluntarios se han inscripto. Únete a ellos."
   volunteer_engineer_submission_intro_background: "La Hora del Código es un movimiento mundial para introducir la Informática a millones de estudiantes en más de 180 países. Únete a esta iniciativa durante la Semana de Educación en Ciencias de la Computación, del 7 al 13 de Diciembre."
-  volunteer_engineer_submission_intro_recruit: 'A estos maestros les encantaría tener a alguien <span style="font-family: ''Gotham 7r'', sans-serif;"> apasionado por enseñar ciencia de la computación</span>, la cual puede ayudar en el aula, o alguien que pueda <span style="font-family: ''Gotham 7r'', sans-serif;"> inspirar </span> a sus alumnos hablando de la amplitud de posibilidades con las ciencias de la computación (que podría hacerse a través de una video conferencia). Si usted no está buscando ofrecerse como voluntario, <a href="%{url}"> aprenda más</a> acerca de organizar su propio evento de Hora de Código.'
   volunteer_engineer_submission_intro_recruit_markdown: "A los profesores les encantaría tener a alguien **apasionado por la educación en la ciencia de la computación** que pueda ayudar en el aula, o alguien que pueda **inspirar** a sus estudiantes mediante charlas sobre la amplitud de posibilidades que brinda la ciencia de la computación (lo cual podría hacerse a través de un chat de video)."
-  volunteer_engineer_submission_intro_guide: "Conoce más sobre nuestro <a href=\"%{volunteer_guide}\">programa de voluntariado aquí</a>."
   volunteer_engineer_submission_intro_guide_markdown: "Obtén más información sobre nuestro [programa de voluntarios aquí](%{volunteer_guide})."
-  volunteer_engineer_submission_intro_signup: "Ingresa la siguiente información si eres estudiante de ciencias de la computación o profesional de software. Debes tener al menos 18 años de edad para inscribirte como voluntario. Ten en cuenta que todos los que miren el <a href=\"/volunteer/local\">mapa de voluntarios</a> verán los campos que completes en esta sección. Los campos marcados con <span class=\"form-required-field\">*</span> son obligatorios."
   volunteer_engineer_submission_intro_signup_markdown: "Ingresa la siguiente información si eres un estudiante de ciencias de la computación o un profesional del software. Debes tener al menos 18 años para inscribirte como voluntario. Ten en cuenta que todos los campos que completes en esta sección estarán disponibles públicamente para cualquiera que esté mirando el [mapa de voluntarios](/volunteer/local). Los campos marcados con un \"*\" son obligatorios."
-  volunteer_engineer_submission_intro_links: "¿No está buscando ser voluntario? <a href=\"%{learn_more}\"> Aprende más</a> sobre organizar tu propio evento Hora de Código y encontrando un voluntario local en nuestro <a href=\"%{volunteer_local}\"> mapa de voluntariado</a>."
   volunteer_engineer_submission_intro_links_markdown: "¿Eres un profesor buscando voluntarios? Encuentra un voluntario local en nuestro [mapa de voluntarios](%{volunteer_local})."
   volunteer_engineer_submission_update_information: "Actualiza tu información"
   volunteer_engineer_submission_header_shared: "Información compartida con docentes en el mapa de voluntarios"
@@ -1546,6 +1542,7 @@
   header_report_abuse: "Denunciar abuso"
   header_legal: "Privacidad y Legalidad"
   header_legal_privacy: "Política de privacidad"
+  header_legal_cookie_notice: "Aviso de Cookies"
   header_legal_tos: "Términos de uso"
   header_tutorials: "Tutoriales"
   header_screen_reader_hamburger: "Menú"

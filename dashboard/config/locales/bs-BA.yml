@@ -9,11 +9,13 @@ bs:
         email: Email
         error:
           future: ne može biti u budućnosti
+        finish_sign_up_header_error: 'Ispravi ove greške:'
         gender: Spol
         locale: Jezik
         name: Ime za Prikaz
         password: Šifra
         password_confirmation: Potvrda šifre
+        user_type: Tip računa
         username: Korisničko ime
     errors:
       messages:

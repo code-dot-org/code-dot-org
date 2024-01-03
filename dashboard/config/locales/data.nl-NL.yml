@@ -240,35 +240,34 @@ nl:
           aan loop!
         maze_3_4: Argh! Schrijf een programma dat me om de dynamiet heen krijgt en
           naar het biggetje.
-        maze_karel_1_1: Hoi, ik ben een boer. Ik heb je hulp nodig om mijn veld plat
-          te maken zodat ik erop kan verbouwen. Beweeg me naar de hoop modder en gebruik
-          het "verwijder" blok om hem te verwijderen.
-        maze_karel_1_10: Ik moet tot laat werken, dus het is donker buiten, en ik
-          kan zo niet zien hoe hoog de hopen zijn. Ik heb niet alle opties meer die
-          ik had op het "while" blok. Beweeg me over het veld, en als er een heuvel
-          is, verwijder hem.
+        maze_karel_1_1: Hi, ik ben een boer. Ik heb je hulp nodig om mijn veld vlak
+          te maken zodat het klaar is om te beplanten. Beweeg me naar de hoop aarde
+          en gebruik het "verwijder" blok om hem te verwijderen.
+        maze_karel_1_10: Ik moet tot laat werken, dus is het donker buiten en kan
+          ik niet zien hoe hoog de hopen zijn. Ik heb niet alle mogelijkheden meer,
+          die ik met het "zolang" blok had. Beweeg me over het veld, en als er een
+          heuvel is, verwijder hem.
         maze_karel_1_11: 'Het is nog steeds donker buiten. Beweeg me over het veld.
-          Als er een heuvel is, haal hem weg, en als ereen gat is, vul hem op. Hint:
-          gebruik het menu van opties bij het "if" blok.'
-        maze_karel_1_2: Beweeg me naar het gat en vul hem met TWEE scheppen modder,
-          door het "vul" blok te gebruiken.
-        maze_karel_1_3: Beweeg me naar de hoop modder en vertel me hoeveel scheppen
-          ik moet verwijderen, met zo weinig blokken mogelijk.
-        maze_karel_1_4: 'Kun je me helpen om alle vier modderhopen te verwijderen?
-          Hint: gebruik een herhaal blok als dat nodig is.'
-        maze_karel_1_5: 'Help me om al deze gaten te vullen met 5 scheppen modder.
-          Hint: je kunt een "herhaal" blok in het "terwijl" blok zetten.'
-        maze_karel_1_6: Verwijder alle hopen modder met zo weinig blokken mogelijk.
-          De nieuwe opties in het menu van het "terwijl" blok vertellen met of ik
-          op een hoop of een gat sta.
+          Als er een hoop is, haal hem weg, en als er een gat is, vul het op. Hint:
+          gebruik het uitklapmenu van het "als" blok.'
+        maze_karel_1_2: Beweeg me naar het gat en vul het met TWEE scheppen aarde.
+          Gebruik hiervoor het "vul" blok.
+        maze_karel_1_3: Beweeg me naar de hoop aarde en vertel me hoeveel scheppen
+          ik moet verwijderen met zo min mogelijk blokken.
+        maze_karel_1_4: 'Kun je me helpen om alle vier de hopen aarde te verwijderen?
+          Hint: gebruik een herhaal blok als dat kan.'
+        maze_karel_1_5: 'Help me al deze gaten met 5 scheppen aarde te vullen. Hint:
+          je kunt een "herhaal" blok in het "zolang" blok plaatsen.'
+        maze_karel_1_6: Verwijder alle hopen aarde met zo min mogelijk blokken. De
+          nieuwe opties in het uitklapmenu van het "zolang" blok vertellen met of
+          ik op een hoop aarde of een gat sta.
         maze_karel_1_7: Wow, ik heb een superdiep gat gevonden! Ik weet niet hoeveel
-          scheppen ervoor nodig zijn. Kun je een programma schrijven die het gat vult
-          totdat hij opgevuld is?
+          scheppen aarde nodig zijn. Kun je een programma schrijven wat het gat vult
+          tot de grond vlak is?
         maze_karel_1_8: Help me om het gat aan het einde van het veld te vullen, met
-          zo weinig blokken mogelijk.
-        maze_karel_1_9: 'Zorg dat ik alle hopen modder weghaal. Gebruik zo weinig
-          mogelijk blokken te gebruiken. Tip: probeer een "herhaal zolang"-blok te
-          gebruiken.'
+          zo min mogelijk blokken.
+        maze_karel_1_9: 'Laat me al deze hopen aarde weghalen. Probeer zo min mogelijk
+          blokken te gebruiken. Hint: probeer een "zolang" blok te gebruiken.'
         maze_karel_2_1: 'Probeer om de blokken te gebruiken om alle hopen te verwijderen
           en de gaten op te vullen. Probeer om lussen te gebruiken in plaats van teveel
           blokken. Hint: je kunt een lus in een lus gebruiken.'
@@ -584,7 +583,7 @@ nl:
           aan een functie toe te voegen)'
         turtle_3_7: Voeg een input met de naam "lengte" toe aan "teken een huis" en
           teken een groot huis voor de olifant (met randen van 150 pixels lang)
-        turtle_3_8: Pas "teken een huis" aan zodat ik in de hoek linksonder beland
+        turtle_3_8: Pas "teken een huis" zo aan, dat ik in de rechteronderhoek eindig
           na het tekenen van een nieuw huis. Gebruik deze aangepaste functie om drie
           huizen te tekenen.
         turtle_3_9: Kan je deze "teken een huis" functie namaken zonder hulp? Probeer
@@ -772,6 +771,7 @@ nl:
         applab_hoc_share: AppLab Hour of Code - Delen
         applab_hoc_welcome: App Lab Hour of Code - Welkom
         artist_intro: Artiest Intro
+        code-break: Neem een codepauze
         csd_applab_arrays: Inleiding tot Arrays
         csd_applab_parameters: Functies met Parameters
         csd_concept_binary_data: 'Hoe Computers Werken: Binair & Data'
@@ -783,6 +783,7 @@ nl:
         csd_external_waze_data: Waarom Zijn Zoveel Gebruikers Geobsedeerd Door Waze?
         csd_gamelab_animation_tab: Het tabblad Animatie
         csd_gamelab_velocity: Snelheid
+        csd_ml_how_ai_works: Hoe AI werkt
         csd_pair_programming: Programmeren in Tweetallen
         csd_weblab_css_1: Introductie tot CSS - Deel 1
         csd_weblab_css_2: Introductie tot CSS - Deel 2
@@ -884,4 +885,5 @@ nl:
         starwars_intro: 'Star Wars: Bouw een Heelal met Code - Inleiding'
         starwars_typing: 'Star Wars: Bouw een Heelal met Code - JavaScript'
         tutorial_puzzle_challenge: Handleiding voor de Puzzel Opdracht
+        what-is-creativity: Wat is creativiteit?
         writing_first_program: Schrijf je eerste computerprogramma!

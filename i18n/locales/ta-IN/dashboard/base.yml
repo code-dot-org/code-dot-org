@@ -53,6 +53,7 @@ ta:
         gender: 'பாலினம்'
         edit_header: 'கணக்கு விவரங்களை திருத்து'
         finish_sign_up_header: 'உங்கள் கணக்கை உருவாக்குவதை முடிக்கவும்'
+        finish_sign_up_header_error: 'பின்வரும் பிழைகளைத் திருத்துக:'
         finish_sign_up_subheader: 'Code.org கணக்கை உருவாக்கி முடிக்க பின்வரும் தகவலை நிரப்பவும்<strong>%{email}</strong>'
         finish_sign_up_subheader_markdown: 'Code.org கணக்கை உருவாக்கி முடிக்க பின்வரும் தகவலை நிரப்பவும்**%{email}**.'
         finish_sign_up_subheader_provider: 'Code.org கணக்கை உருவாக்கி முடிக்க பின்வரும் தகவலை நிரப்பவும்<strong>%{provider}</strong>க்கான<strong>%{email}</strong>.'
@@ -60,6 +61,7 @@ ta:
         reset_password_token: "நீங்கள் பின்பற்றிய கடவுச்சொல்லை மீட்டமைக்கும் இணைப்பு"
         error:
           future: எதிர்காலத்தில் இருக்க முடியாது
+        user_type: 'கணக்கு வகை'
         us_state: 'மாநிலம்'
   beta: "பீட்டா"
   hello: "ஹலோ உலகம்"
@@ -1281,4 +1283,3 @@ ta:
     binary: "இரும"
     hexadecimal: "ஹெக்ஸாடெசிமல்"
     pixel_format_header: "பிக்சல் வடிவம்"
-

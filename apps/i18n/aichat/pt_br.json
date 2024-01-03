@@ -1,3 +1,14 @@
 {
-  "continue": "Avançar"
+  "aichatWorkspaceHeader": "Bate-papo com IA",
+  "allMessagesSentAreRecorded": "Todas as mensagens enviadas para o AI Chat são gravadas.",
+  "anythingPersonalCanNotBeSubmitted": "Para proteger sua privacidade, qualquer coisa considerada informação pessoal (nome, número de telefone, endereço etc.) não deve ser enviada ao AI chat.",
+  "continue": "Avançar",
+  "inappropriateMessagesAreFlagged": "Mensagens inapropriadas serão sinalizadas e seu professor será notificado.",
+  "inappropriateUserMessage": "Essa mensagem foi marcada como imprópria.",
+  "tooPersonalUserMessage": "Essa mensagem foi marcada como imprópria.",
+  "userChatMessagePlaceholder": "Adicionar uma mensagem de bate-papo...",
+  "waitingForChatResponse": "Esperando por uma resposta...",
+  "warningModalHeader": "Lembre-se de conversar com responsabilidade!",
+  "warningModalOkButtonText": "Comece a conversar",
+  "whatIsPersonalInformation": "O que é considerado informação pessoal?"
 }

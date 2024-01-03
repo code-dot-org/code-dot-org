@@ -10,6 +10,7 @@ gl:
         error:
           future: non pode estar no futuro
         finish_sign_up_header: Remata de crear a túa conta
+        finish_sign_up_header_error: 'Por favor, corrixe os seguintes erros:'
         finish_sign_up_subheader: Completa a seguinte información para acabar de crear
           unha conta de Code.org para <strong>%{email}</strong>.
         finish_sign_up_subheader_markdown: Completa a seguinte información para acabar
@@ -30,6 +31,7 @@ gl:
         personal_email_markdown: Enderezo do correo persoal [(preme aquí se non tes
           un enderezo de correo)](%{url})
         us_state: Estado
+        user_type: Tipo de conta
         username: Nome de usuario
     errors:
       messages:

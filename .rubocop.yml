@@ -8,6 +8,11 @@ require:
   - rubocop-rails
   - rubocop-rails-accessibility
   - './tools/customLinters/rubocop_only_allowed_characters.rb'
+  - './tools/customLinters/rubocop_prefer_mocha_stubs_to_minitest_stub.rb'
+  - './tools/customLinters/rubocop_pegasus_db_usage.rb'
+  - './tools/customLinters/rubocop_dashboard_db_usage.rb'
+  - './tools/customLinters/rubocop_pegasus_requires.rb'
+  - './tools/customLinters/rubocop_dashboard_requires.rb'
 
 AllCops:
   SuggestExtensions: false
@@ -43,6 +48,12 @@ Layout/FirstParameterIndentation:
 Layout/MultilineMethodCallBraceLayout:
   EnforcedStyle: new_line
 
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Layout/MultilineOperationIndentation:
+  EnforcedStyle: indented
+
 Layout/ParameterAlignment:
   EnforcedStyle: with_fixed_indentation
 
@@ -65,6 +76,9 @@ Rails/AssertNot:
 
 Rails/Date:
   EnforcedStyle: strict
+
+Rails/RefuteMethods:
+  EnforcedStyle: refute
 
 Style/AccessModifierDeclarations:
   EnforcedStyle: inline

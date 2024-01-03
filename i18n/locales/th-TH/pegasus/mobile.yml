@@ -416,9 +416,6 @@
   volunteer_engineer_submission_subtitle_generic: 'ครู 100,000 ท่าน กำลังดูแลชั่วโมงแห่งการโค้ดอยู่ในชั้นเรียนของพวกเขาปีนี้ระหว่างวันที่ 7-13 ธันวาคม 2558 พวกเขาต้องการความช่วยเหลือของคุณ '
   volunteer_engineer_submission_subtitle_specific: "ครูจำนวน %{num_teachers} ต้องการอาสาสมัคร<br>จำนวนอาสาสมัคร %{num_volunteers} คนที่ได้ลงทะเบียน เข้าร่วมกับพวกเขา"
   volunteer_engineer_submission_intro_background: "ชั่วโมงแห่งการโค้ดนั้นเป็นการเคลื่อนไหวทั่วโลก เพื่อนำเนื้อหาเบื้องต้นเกี่ยวกับวิทยาการคอมพิวเตอร์ไปยังนักเรียนหลายล้านคนในกว่า 180 ประเทศ โปรดเข้ามามีส่วนร่วมในช่วยเวลาสัปดาห์แห่งการศึกษาวิทยาการคอมพิวเตอร์ วันที่ 7-13 ธันวาคม"
-  volunteer_engineer_submission_intro_recruit: 'ครูหลายคนชอบที่จะมีสักคน<span style="font-family: ''Gotham 7r'', sans-serif;">ที่หลงไหลเกี่ยวกับการศึกษาวิทยาการคอมพิวเตอร์</span> และสามารถช่วยครูได้ในชั้นเรียน หรือใครสักคนที่สามารถจะ<span style="font-family: ''Gotham 7r'', sans-serif;">สร้างแรงบันดาลใจ</span>ให้กับนักเรียนของเขาด้วยการพูดเกี่ยวกับความเป็นไปได้ต่างๆ เกี่ยวกับวิทยาการคอมพิวเตอร์ (ซึ่งอาจจะทำได้ผ่านวีดีโอแชท)'
-  volunteer_engineer_submission_intro_signup: "กรุณากรอกข้อมูลต่อไปนี้ หากคุณคือนักเรียนวิทยาการคอมพิวเตอร์หรือบุคลากรเกี่ยวกับซอฟต์แวร์ ข้อมูลที่กำหนดด้วยเครื่องหมาย <span class=\"form-required-field\">*</span> เป็นข้อมูลที่จำเป็น"
-  volunteer_engineer_submission_intro_links: "ต้องการหาอาสาสมัครหรือไม่ ลองค้นหาอาสาสมัครใกล้เคียงด้วย<a href=\"%{volunteer_local}\">แผนที่อาสาสมัคร</a>ของเรา"
   volunteer_engineer_submission_update_information: "ปรับปรุงข้อมูลของคุณ"
   volunteer_engineer_submission_header_shared: "ข้อมูลที่ใช้ร่วมกันกับครูแในแผนที่ของอาสาสมัคร"
   volunteer_engineer_submission_field_name: "ชื่อ"
@@ -1222,6 +1219,7 @@
   header_help_support: 'การช่วยเหลือและสนับสนุน '
   header_report_bug: "รายงานปัญหา"
   header_legal_privacy: "นโยบายความเป็นส่วนตัว"
+  header_legal_cookie_notice: "ประกาศเกี่ยวกับคุกกี้"
   header_legal_tos: "เงื่อนไขการให้บริการ"
   header_tutorials: "บทช่วยสอน"
   header_documentation: "เอกสารประกอบ"

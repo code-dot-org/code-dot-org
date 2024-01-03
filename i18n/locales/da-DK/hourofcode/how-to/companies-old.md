@@ -5,7 +5,7 @@ title: Sådan afholder man Hour of Code - Virksomheder
 {{ tilmeld_knap }}
 
 # Sådan får du arrangeret, at Hour of Code kommer til din virksomhed
-### Find out how you and your employees can inspire students to try computer science!
+### Find ud af, hvordan du og dine medarbejdere kan inspirere studerende til at prøve datalogi!
 
 ***
 
@@ -57,9 +57,9 @@ Start din Hour of Code med at inspirere dine deltagere og diskutere, hvordan pro
 **Vis en inspirerende video:**
 
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions).
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- The H [our of Code verdensomspændende video](https://www.youtube.com/watch?v=KsOIlDT145A)
+- [Præsident Obama opfordrer alle studerende til at lære datalogi](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- Find flere inspirerende videoer [her](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **Ideas to introduce your Hour of Code activity to students:**
 
@@ -67,7 +67,7 @@ Start din Hour of Code med at inspirere dine deltagere og diskutere, hvordan pro
 - If you are a tech company, demo fun, innovative products your company is working on.
 - If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
 - Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- Se tip til at få piger interesseret i datalogi [her]({{ urls/girls }}).
 
 ## 6. Code!
 **Led deltagere til aktiviteten**

@@ -23,7 +23,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     @organizer_workshop.reload
   end
 
-  # TODO: remove this test when workshop_organizer is deprecated
   test 'query by workshop organizer' do
     # create a workshop with a different organizer, which should not be returned below
     create(:workshop)
@@ -58,7 +57,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'query by enrolled teacher' do
     # Teachers enroll in a workshop as a whole
     teacher = create :teacher
-    create :pd_enrollment, workshop: @workshop, full_name: teacher.name, email: teacher.email
+    create :pd_enrollment, workshop: @workshop, full_name: teacher.name, email: teacher.email_for_enrollments
 
     # create a workshop with a different teacher enrollment, which should not be returned below
     other_workshop = create(:workshop)
@@ -75,7 +74,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_empty Pd::Workshop.enrolled_in_by(teacher)
 
     # Email match only
-    enrollment.update!(email: teacher.email)
+    enrollment.update!(email: teacher.email_for_enrollments)
     assert_equal [@workshop], Pd::Workshop.enrolled_in_by(teacher)
 
     # UserId only
@@ -83,7 +82,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal [@workshop], Pd::Workshop.enrolled_in_by(teacher)
 
     # Both email and user id. Should still find workshop exactly once
-    enrollment.update!(email: teacher.email, user: teacher)
+    enrollment.update!(email: teacher.email_for_enrollments, user: teacher)
     assert_equal [@workshop], Pd::Workshop.enrolled_in_by(teacher)
   end
 
@@ -188,7 +187,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop.end!
     assert_equal 'Ended', workshop.state
     assert_equal 'Ended', workshop.state
-    assert_not_nil workshop.sessions.first.code
+    refute_nil workshop.sessions.first.code
   end
 
   test 'start is idempotent' do
@@ -625,9 +624,9 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     # save out of order
     workshops.shuffle.each(&:save!)
 
-    assert_equal [0, 0, 1, 2], Pd::Workshop.order_by_enrollment_count.map {|w| w.enrollments.count}
-    assert_equal [0, 0, 1, 2], Pd::Workshop.order_by_enrollment_count(desc: false).map {|w| w.enrollments.count}
-    assert_equal [2, 1, 0, 0], Pd::Workshop.order_by_enrollment_count(desc: true).map {|w| w.enrollments.count}
+    assert_equal([0, 0, 1, 2], Pd::Workshop.order_by_enrollment_count.map {|w| w.enrollments.count})
+    assert_equal([0, 0, 1, 2], Pd::Workshop.order_by_enrollment_count(desc: false).map {|w| w.enrollments.count})
+    assert_equal([2, 1, 0, 0], Pd::Workshop.order_by_enrollment_count(desc: true).map {|w| w.enrollments.count})
   end
 
   test 'order_by_enrollment_count with duplicates' do
@@ -640,8 +639,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     # save out of order
     workshops.shuffle.each(&:save!)
 
-    assert_equal [0, 0, 0, 1], Pd::Workshop.order_by_enrollment_count(desc: false).map {|w| w.enrollments.count}
-    assert_equal [1, 0, 0, 0], Pd::Workshop.order_by_enrollment_count(desc: true).map {|w| w.enrollments.count}
+    assert_equal([0, 0, 0, 1], Pd::Workshop.order_by_enrollment_count(desc: false).map {|w| w.enrollments.count})
+    assert_equal([1, 0, 0, 0], Pd::Workshop.order_by_enrollment_count(desc: true).map {|w| w.enrollments.count})
   end
 
   test 'order_by_state' do
@@ -838,7 +837,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     Pd::Workshop.send_reminder_for_upcoming_in_days(10)
   end
 
-  test '10 day reminder for csf workshop does not send pre email to facilitators' do
+  test '10 day reminder for csf workshop sends pre email to facilitators' do
     mock_mail = stub
     mock_mail.stubs(:deliver_now).returns(nil)
 
@@ -846,7 +845,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     create_list :pd_enrollment, 3, workshop: workshop
     Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
 
-    Pd::WorkshopMailer.expects(:facilitator_pre_workshop).returns(mock_mail).never
+    Pd::WorkshopMailer.expects(:facilitator_pre_workshop).returns(mock_mail).times(2)
     Pd::Workshop.send_reminder_for_upcoming_in_days(10)
   end
 
@@ -871,6 +870,18 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
 
     Pd::WorkshopMailer.expects(:teacher_pre_workshop_csa).returns(mock_mail).times(3)
+    Pd::Workshop.send_teacher_pre_work_csa
+  end
+
+  test 'CSA teacher pre-work doesnt send to non-summer workshops' do
+    mock_mail = stub
+    mock_mail.stubs(:deliver_now).returns(nil)
+
+    workshop = create :csa_academic_year_workshop, num_facilitators: 2
+    create_list :pd_enrollment, 3, workshop: workshop
+    Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
+
+    Pd::WorkshopMailer.expects(:teacher_pre_workshop_csa).returns(mock_mail).never
     Pd::Workshop.send_teacher_pre_work_csa
   end
 
@@ -931,7 +942,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
     # Test that scholarship filter works.
     # Set argument to filter to only scholarship teachers to true.
-    assert_equal 2, workshop.teachers_attending_all_sessions(true).count
+    assert_equal 2, workshop.teachers_attending_all_sessions(filter_by_cdo_scholarship: true).count
   end
 
   test 'teachers_attending_all_sessions with a teacher who deleted their account' do
@@ -945,14 +956,14 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
       workshop: workshop
 
     # Should return 1 before we've done anything.
-    assert_equal 1, workshop.teachers_attending_all_sessions(true).count
+    assert_equal 1, workshop.teachers_attending_all_sessions(filter_by_cdo_scholarship: true).count
 
     # Delete the user.
     workshop_participant.destroy!
     workshop.reload
 
     # With no user account, the user doesn't show up in array of attending teachers.
-    assert_equal 0, workshop.teachers_attending_all_sessions(true).count
+    assert_equal 0, workshop.teachers_attending_all_sessions(filter_by_cdo_scholarship: true).count
 
     # Fully purge the user account's PD records,
     # which removes their user ID from attendances.
@@ -960,10 +971,9 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop.reload
 
     # Should still return 0 once we've fully purged the teacher user ID from the attendance
-    assert_equal 0, workshop.teachers_attending_all_sessions(true).count
+    assert_equal 0, workshop.teachers_attending_all_sessions(filter_by_cdo_scholarship: true).count
   end
 
-  # TODO: remove this test when workshop_organizer is deprecated
   test 'organizer_or_facilitator?' do
     facilitator = create :facilitator
     @organizer_workshop.facilitators << facilitator
@@ -1520,9 +1530,9 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert workshop.require_application?
   end
 
-  test 'CSD academic year workshop must require teacher application' do
+  test 'CSD academic year workshop must not require teacher application' do
     workshop = create :csd_academic_year_workshop, regional_partner: @regional_partner
-    assert workshop.require_application?
+    refute workshop.require_application?
   end
 
   test 'CSA summer workshop must require teacher application' do

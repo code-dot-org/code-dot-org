@@ -11,7 +11,7 @@ layout: wide
 
 # 为 Hour of Code™ 和 Computer Science 教育周创建和提交教程和课程的指南
 
-Code.org 在 Code.org 和 Hour of Code 网站上举办各种 Hour of Code™ 活动、课程和视频。 The current list is at [hourofcode.com/learn]({{ urls/learn }}).
+Code.org 在 Code.org 和 Hour of Code 网站上举办各种 Hour of Code™ 活动、课程和视频。 当前的名单在 [hourofcode.com/learn]({{ urls/learn }})上。
 
 想提交自己的自学教程、教师主导的课程或解释计算机科学原理的机器人/创客活动吗？ 加入这个全球运动，帮助世界各地的参与者从一小时的编程开始学习，或者通过多节课、为期一天或为期一周的活动走得更远。
 
@@ -85,7 +85,7 @@ Hour of Code 的目标是让初学者对计算机科学或编程有初步的了�
 
 这些活动应教授计算机科学概念，例如循环、条件、加密或互联网的工作原理。 一项活动还可以讲授计算机科学如何与现实世界中的职业、事件或历史联系起来。 例如，教授用户体验设计以制作对受众或事业有意义的应用程序。 我们不鼓励以编程语法而不是概念为重点的活动。 例如，我们将列出但不重点介绍教学 HTML 的活动。 同样，我们不鼓励将重点放在设置/更改配置选项上，而不是学习如何对算法或流程进行建模的区块编程课程。
 
-*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). 需要安装应用程序、桌面应用程序或游戏机体验的活动还可以，但并不理想。 我们不会列出需要注册或付款的活动。 （机器人活动可能需要购买机器人。）
+*技术要求：* 由于学校和课堂的技术设置千差万别，最好的活动是基于网络或智能手机友好的活动，或者是无需使用计算机即可教授计算机科学概念的非插电式活动（见 http://csunplugged.com/）。 [](http://csunplugged.com/) 需要安装应用程序、桌面应用程序或游戏机体验的活动还可以，但并不理想。 我们不会列出需要注册或付款的活动。 （机器人活动可能需要购买机器人。）
 
 *学生主导（Self-Guided）格式：* 最初的 Hour of Code 主要建立在自学教程或课程的成功基础上，可以选择由老师提供帮助。 现在已经有很多选择了，但如果你想创建一个新的活动，它应该被设计为能让学生们有兴趣的独立完成，或者在课堂上由没有备课或没有计算机背景的老师来指导。 它们应该为学生提供指导，而不是不确定的一小时长的挑战。 理想情况下，说明和教程都会直接集成到编程平台里，以免在教程和编程平台页面间切换。
 
@@ -97,13 +97,14 @@ Hour of Code 的目标是让初学者对计算机科学或编程有初步的了�
 
 ## 如何提交
 
-Visit the [Hour of Code™ Activity Submission page](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform) and complete the questions to submit your activity.
+访问 H [our of Code™ 活动和 AI 提交页面](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform) ，完成问题以提交您的活动。
 
 你需要什么：
 
 * 代表已提交活动的主要联系人的姓名和电子邮件
 * 活动名称（名称中不能包含 “编程一小时”）
 * 活动的 URL 链接
+* 此活动是否包括 AI：是还是否
 * 活动描述（最大字符数：400） 
     * 请在描述中说明是主要由学生指导还是由教师辅导。 此外，一些学校有兴趣知道 Hour of Code 活动是针对共同核心标准还是下一代科学标准。 如果活动涉及特定标准，请考虑包括此信息。
 * 为目标用户推荐的成绩等级。 你可以参考 \[计算机科学教师协会的 K-12 标准\] (https://k12cs.org/framework-statements-by-grade-band/)，了解适合年级的计算机科学概念。 成绩等级示例包括： 
@@ -111,9 +112,9 @@ Visit the [Hour of Code™ Activity Submission page](https://docs.google.com/for
     * 2-5 年级（7-10 岁）
     * 6-8 年级（11-13 岁）
     * 9 年级以上（14 岁以上）
-* 您的活动涵盖的学科领域列表（计算机科学除外）。 例如，如果数学老师可以使用您的活动来教授角度或抛物线，请列为数学。 如果你有一个疯狂的 libs 活动可以教动词/名词/等 选择语言艺术。
-* 您的活动所教授的编程语言列表。 即 C/C++、Java、JavaScript 等 或与语言无关（适用于可以用多种语言教授的教学计划）
-* 支持的自然语言列表。 注意：语言检测由活动提供者负责；我们会将所有用户重定向到提供的单个 URL。
+* 您的活动所涉及的学科列表（计算机科学除外）。 比如数学老师在活动中讲解角度和抛物线，请选择数学。 如果是一个完型填空的活动，进行名词和动词教学， 选择语言艺术。
+* 支持的自然语言列表。 注意：语言检测由活动提供者负责；我们会将所有用户重定向到提供的单个 URL。 或与语言无关（适用于可以用多种语言教授的教学计划）
+* 教育工作者必须具备什么水平的经验才能使用你的活动？ （例如，初学者或舒适。）而且，学生应该具备什么样的经验水平？
 * 教育工作者必须具备什么水平的经验才能使用你的活动？ （例如，初学者或舒适。）而且，学生应该具备什么样的经验水平？ 如果你想准备更高级的 Hour of Code™ 活动，请在活动描述中包括所需的先验知识。
 * 您的活动时长 
     * 仅限 1 小时
@@ -141,11 +142,11 @@ Visit the [Hour of Code™ Activity Submission page](https://docs.google.com/for
     * 未插电
 * “编程一小时” 活动的屏幕截图或营销图片。 请发送至少一张尺寸为 4:3 的图片。 它应该至少为 520 像素 x 390 像素。 这张图片上不应有文字（徽标除外），以便不讲英语的人更容易理解。 如果没有提供合适的图片，我们可能会为您的教程拍摄自己的屏幕截图，也可以选择不列出。 所有图片必须作为.jpg、.jpeg 或.png 的 URL 链接提交。
 * 为了更准确地跟踪参与情况，第三方教程合作伙伴需要在其 Hour of Code 教程的第一页上包含 1 像素的跟踪图像。 有关更多详细信息，请参阅下面的 [Tracking Pixel](#pixel) 部分。
-* Upon finishing your activity, users should be directed to [code.org/api/hour/finish](https://code.org/api/hour/finish) where they will be able to: 
+* 完成活动后，用户应被引导到 [code.org/api/hour/finish，在那里](https://code.org/api/hour/finish) 他们将能够： 
     * 在社交媒体上分享他们完成了《编程一小时》
     * 收到他们完成编程一小时的证书
     * 查看排行榜，了解哪些国家/城市在 Hour of Code 活动中的参与率最高
-    * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [code.org/api/hour/finish](https://code.org/api/hour/finish) as well.
+    * 对于在你的活动上花了一个小时但没有完成的用户，请在你的活动中加入一个按钮，上面写着 “我完成了编程一小时”，该按钮还会链接回到 [code.org/api/hour/](https://code.org/api/hour/finish) finish。
 * （可选）我们可能会通过在线调查/表单链接进行跟进，要求提供以下活动指标的报告： 
     * 对于在线活动（尤其是智能手机/平板电脑应用程序）： 
         * 用户数量
@@ -167,9 +168,11 @@ Visit the [Hour of Code™ Activity Submission page](https://docs.google.com/for
 
 ## 将如何评估活动
 
-一个由计算机科学教育工作者组成的多元化委员会将根据定性和定量标准对参赛作品进行排名。 将列出所有符合基本标准的活动。 教师将能够进行筛选和排序，找到最适合自己课堂的活动。
+**对于 2023 年：** AI 作品将与基本的编程作品分开评估。 将列出所有符合基本标准的活动。
 
-评估活动和教学计划的评分量规将在所有活动中寻找以下标准，并对它们进行相应的排名：
+对于传统的编程活动，由计算机科学教育工作者组成的多元化委员会将根据定性和定量标准对提交的内容进行排名。 将列出所有符合基本标准的活动。 教师将能够进行筛选和排序，找到最适合自己课堂的活动。
+
+评估活动和教学计划的评分标准将在所有活动中寻找以下特质，并相应地对其进行排名：
 
 - 高生产质量
 - 促进所有人口群体的学习（特别是 在计算机科学领域代表性不足的学生，例如年轻女性、来自边缘化种族和族裔群体的学生以及残疾学生）
@@ -177,9 +180,9 @@ Visit the [Hour of Code™ Activity Submission page](https://docs.google.com/for
 - 有趣又引人入胜
 - 鼓励学生创造一些他们可以分享的独特东西（对于年幼的学生：与家长和同学。 对于年龄较大的学生：在互联网上）
 
-如果审查委员会将该活动的制作质量（由于错误或说明很难使用）、促进代表性不足群体的学习（由于种族主义/性别歧视材料）、教育价值（不教授CS概念）或有趣/引人入胜（由于学生难以完成/令人沮丧）将该活动评为零，则该活动将不被列出。
-
 此外，为了被列出，所有活动必须：
+
+对于新教师和学生的自主活动，审查委员会将寻找是否：
 
 - 适合公立学校的课堂（没有枪支、没有明确/成熟的内容、没有宗教内容等）
 - 无需注册
@@ -205,11 +208,13 @@ Visit the [Hour of Code™ Activity Submission page](https://docs.google.com/for
 
 ## 设计一小时自学教程的建议
 
-你可以在教程中包含 [Hour of Code 徽标](https://hourofcode.com/us/promote/resources#logo) ，但这不是必需的。 如果您使用 Hour of Code 徽标，请参阅下面的商标指南。 <u>在任何情况下都不能使用 Code.org 徽标和名称。</u> 两者均已注册商标，未经明确书面许可，不得与第三方品牌名称混合。
+活动不必包括人工智能，但我们希望提供更多与人工智能相关的活动。
 
-**确保普通学生能在一小时内轻松完成学业。** 考虑在最后为学习速度更快的学生添加一个开放式活动。 请记住，大多数孩子绝对是计算机科学和编程的初学者。
+你可以在教程中加入 [Hour of Code log](https://hourofcode.com/us/promote/resources#logo) ，但这不是必需的。 如果您使用 “编程一小时” 徽标，请参阅下面的商标指南。 <u>在任何情况下都不能使用 Code.org 的徽标和名称。</u> 两者均为商标，未经明确书面许可，不得与第三方品牌名称混合。
 
-**包括教师笔记。** 大多数活动都应由学生指导，但如果某项活动是由教师主持或管理的，请在与活动一起提交的单独网址上以教师笔记的形式为教师提供清晰而简单的指导。 学生不仅是新手，有些老师也是新手。 包括以下信息：
+**确保普通学生能够在一小时内轻松完成学业。** 考虑在结尾添加一个开放式活动，让学生能够更快地完成课程。 请记住，大多数孩子都是计算机科学和编程的完全初学者。
+
+**包括教师笔记。** 大多数活动都应以学生为导向，但如果活动由教师主持或管理，请在与活动一起提交的单独网址上以教师备注的形式为教师提供清晰而简单的指导。 不仅学生是新手，有些老师也是新手。 你有吗？
 
 - 本教程最适合哪些平台和浏览器？
 - 它可以在智能手机上使用吗？ 平板电脑？
@@ -248,7 +253,7 @@ Hour of Code® 和 Hora del Codigo® 是 Code.org 的注册商标。 我们的�
 
 ## 追踪像素
 
-为了更准确地跟踪参与情况，我们要求每个教程合作伙伴在其 Hour of Code 教程的第一页上加上 1 像素的追踪图片。 像素图像只能出现在起始页上。 请勿在教程的任何临时页面上添加。
+如果您的教程获得批准并包含在最终教程页面上，Code.org 将为您提供一个独特的追踪像素供您集成到教程中。 参见下面的示例。 请勿在教程的任何临时页面上添加。
 
 这将使我们能够统计完成你的 Hour of Code 教程的用户。 这将为您的教程带来更准确的参与次数。
 

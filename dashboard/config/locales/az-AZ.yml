@@ -4,12 +4,15 @@ az:
     attributes:
       user:
         age: Yaşınız
+        ai_rubrics_disabled: AI Rubrik Xüsusiyyətini deaktiv edin
+        ai_settings_header: AI Parametrləri
         current_password: Cari parol
         edit_header: Hesab Detallarına düzəliş edin
         email: E-poçt
         error:
           future: gələcəkdə ola bilməz
         finish_sign_up_header: Hesabınızı yaratmağı başa çatdırın
+        finish_sign_up_header_error: 'Aşağıdakı səhfləri düzəldin:'
         finish_sign_up_subheader: "<strong>%{email} </strong> Code.org hesabı yaratmağı
           bitirmək üçün aşağıdakı məlumatları doldurun."
         finish_sign_up_subheader_markdown: "**%{email} ** üçün bir Code.org hesabı
@@ -34,6 +37,7 @@ az:
           '
         reset_password_token: İzlədiyiniz parolun sıfırlanması bağlantısı
         us_state: dövlət
+        user_type: Hesab Növü
         username: istifadəçi adı
         verified_teacher: Doğrulanmış Müəllim
     errors:
@@ -157,15 +161,32 @@ az:
       və ya cihazınızda Cookies saxlanmasını qəbul etmiş olursunuz.
     more_information: '"Code.org"un məxfilik siyasətini nəzərdən keçirin.'
   copy: Kopyala
+  course_deprecated:
+    button: Yeni kurrikuluma baxın
+    title: Diqqət edin! Bu kurikulum artıq mövcud deyil, lakin Code.org sizin üçün
+      daha yeni seçimlərə malikdir.
   course_offering:
     headers:
+      collections: Kolleksiyalar
+      csa_labs: CSA Laboratoriyaları
       csc: 'CS Əlaqələri
 
         '
       csf: Kompüter Elmlərinin əsasları
+      express: ifadə
+      favorites: Bəyənilənlər
       hello_world: Salam Dünya
+      labs_and_skills: Laboratoriyalar və Bacarıqlar
       minecraft: Minecraft
+      popular_media: Populyar media
+      self_paced: Öz-özünə templi
       sports: İdman
+      summer_workshops_612: 6-12 Yay Seminarları
+      teacher_led: Müəllimin rəhbərliyi
+      unsupported: Dəstəklənməyən
+      virtual_academic_year_workshops_612: 6–12 Virtual Akademik İli Seminarları
+      workshops_k5: K-5 Seminarları
+      year_long: İl boyu
   courses: marşrutlar
   courses_category: Tam Kurslar
   courses_page:
@@ -488,6 +509,10 @@ az:
     unsubmit-title: Qiymətləndirmənizi geri götürün
     wrong_body: Cavablar təqdim etdiyiniz üçün təşəkkür edirik.
     wrong_title: Təşəkkür
+  level_summary:
+    correct_answer: 'Düzgün cavab
+
+      '
   locked_stage: Bu dərs hazırda kilidli olduğu üçün bu dərsin məzmunu görünmür. Bu
     dərsin üzərində işləmək və ya cavablarınızı nəzərdən keçirmək vaxtı gəldikdə,
     müəlliminiz bu dərsin kilidini aça bilər.
@@ -505,6 +530,7 @@ az:
       error_wrong_provider: Səhv provayder. Zəhmət olmasa, Google ilə daxil olduğunuzdan
         əmin olun.
       login_with_google: Maker App - a Google ilə daxil olun
+    setup_page_title: Maker Quraşdırma
   match:
     correct_body: Bu doğru cavabdır.
     correct_title: Düzgün
@@ -579,6 +605,7 @@ az:
       legal_tos: Xidmət şərtləri
       my_dashboard: İdarəetmə panelim
       professional_learning: Peşəkar təhsil
+      project_beats_documentation: Layihə Sənədləri Beats
       project_gallery: Layihə qalereyası
       report_abuse: Şikayət etmək
       report_bug: Problemi bildirin
@@ -638,6 +665,7 @@ az:
       playlab: Oyun labı
       playlab_k1: Play Lab (Pre-reader)
       poetry: Şeir
+      poetry_hoc: Şeir sənəti
       scratch: Cızıq
       settings: Hesab parametrləri
       signin: Daxil olun
@@ -652,6 +680,7 @@ az:
       thebadguys: Pis Uşaqlar
       view_all: Bütün layihələrə baxın...
       weblab: Veb Laboratoriyası
+  next_level: Növbəti mərhələ
   next_page: Növbəti səhifə
   next_resource: Sonrakı resurs
   next_stage: Bitdi! Növbəti mərhələyə keçin!
@@ -690,6 +719,12 @@ az:
       məlumatda olmaq üçün email ünvanınızı bu hesaba qoşun"
   parent_mailer:
     parent_email_added_subject: Code.org-a xoş gəlmisiniz!
+    parent_permission_confirmation_subject: Övladınızın Code.org saytına daxil olmasına
+      icazə verdiyiniz üçün təşəkkür edirik!
+    parent_permission_reminder_subject: Xatırlatma, övladınızın Code.org saytına daxil
+      olması üçün valideyn razılığı lazımdır
+    parent_permission_request_subject: Övladınızın Code.org saytına daxil olması üçün
+      valideyn razılığı tələb olunur
     student_associated_subject: Code.org üçün giriş məlumatları
   password:
     change_form:
@@ -750,17 +785,38 @@ az:
         sphero: Kürə
         wonder: Əla emalatxana
       school_country:
+        australia: Avstraliya
         barbados: Barbados
         belize: beliz
+        brazil: Braziliya
         canada: Kanada
         chile: Çili
         colombia: Kolumbiya
+        dominican_republic: Dominik Respublikası
+        india: Hindistan
+        indonesia: İndoneziya
         israel: İtrail
+        jamaica: Yamayka
+        kenya: Kenya
+        kosovo: Kosova
         malaysia: Malayziya
+        maldives: Maldiv adaları
         mexico: Meksika
+        mongolia: Monqolustan
+        new_zealand: Yeni Zenlandiya
         paraguay: Paraqvay
+        philippines: Filippin
+        portugal: 'Portuqaliya '
+        puerto_rico: Puerto Riko
+        slovakia: Slovakiya
+        south_korea: Cənubi Koreya
+        spain: 'Ispaniya
+
+          '
         thailand: Tayland
+        trinidad_and_tobago: Trinidad və Tobaqo
         uzbekistan: Özbəkistan
+        vietnam: Vyetnam
       subjects:
         art: İncəsənət
         cs: Kompüter Elmləri
@@ -931,6 +987,7 @@ az:
           abuse_type: Zəhmət olmasa bu məzmunun Xidmət Şərtlərini necə pozduğuna cavab
             verin
           age: Zəhmət olmasa bir yaş göstərin
+          captcha: Bu məzmunu bildirmək üçün CAPTCHA-nı doldurun.
           email: Zəhmət olmasa bir e-poçt ünvanı təqdim edin.
       tos: Bu layihə Code.org-un <a href='http://code.org/tos'>Xidmət Şərtlərini</a>
         pozduğu üçün bildirildi və başqaları ilə paylaşıla bilməz.
@@ -1168,6 +1225,8 @@ az:
     teacher_educator_guide: Təhsil işçisi üçün göstərişlərə baxın
     title: Code.org da qeydiyyatdan keçin
     us_state: dövlət
+    us_state_dropdown_options:
+      other: Mən burada qeyd olunmayan yerdə yaşayıram
     user_type: Siz tələbə yoxsa müəllimsiniz?
     user_type_button: Hesab növünü yeniləyin
     user_type_label: Hesab Növü
@@ -1434,6 +1493,7 @@ az:
     poem-art:
       body: Özünü ifadə et! Animasiyalı şeirlər yaratmaq üçün koddan istifadə edin.
       image_alt: Səhnədə çıxış edən hipster kalamar.
+      title: Şeir sənəti
     pre-express:
       image_alt: Puzzle parçalarından hazırlanmış ağacın qarşısında duran it və təkbuynuzlu
         at.

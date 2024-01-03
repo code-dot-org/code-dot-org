@@ -1,0 +1,68 @@
+{
+  "pt-PT": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "ai-2020": {
+            "buttonText": "Saber mais",
+            "title": "Explore a inteligência artificial e o aprendizado de máquina"
+          },
+          "ai-launch-2023": {
+            "buttonText": "Saber mais"
+          },
+          "ai-pl-launch-2023": {
+            "buttonText": "Saber mais"
+          },
+          "back-to-school-2021": {
+            "buttonText": "Saber mais"
+          },
+          "codebytes-2020": {
+            "buttonText": "Saber mais"
+          },
+          "coldplay": {
+            "buttonText": "Experimentar"
+          },
+          "congrats-certificate-share": {
+            "buttonText": "Começar"
+          },
+          "csjourneys": {
+            "buttonText": "Saber mais"
+          },
+          "csjourneys-22": {
+            "buttonText": "Saber mais"
+          },
+          "csleadersprize": {
+            "buttonText": "Saber mais"
+          },
+          "hoc-2023": {
+            "buttonText": "Saber mais"
+          },
+          "hoc-2023-dance-ai": {
+            "buttonText": "Saber mais"
+          },
+          "hoc-more": {
+            "body": "O site da Hora do Código tem mais de 500 atividades de ciência da computação para todas as idades e níveis de experiência, desenvolvidos pela Code.org e parceiros."
+          },
+          "home-learning-2020": {
+            "buttonText": "Visualizar as Ideias do Projeto"
+          },
+          "superhero": {
+            "buttonText": "Saber mais"
+          },
+          "teacher-apps-closing-2021": {
+            "buttonText": "Junta-te a nós"
+          },
+          "teacher-apps-nominate-2020": {
+            "buttonText": "Indique um Professor"
+          },
+          "teacher-apps-open-2021": {
+            "buttonText": "Junta-te a nós"
+          },
+          "teacher-apps-stillon-2020": {
+            "buttonText": "Junta-te a nós"
+          }
+        }
+      }
+    }
+  }
+}

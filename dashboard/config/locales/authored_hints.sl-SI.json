@@ -463,6 +463,9 @@
         "courseA_maze_seq_challenge2_2021": {
           "courseA_maze_seq_challenge2_a": "Poskusi prešteti polja s prstom. Zapomni si, da ne šteješ začetnega polja."
         },
+        "courseA_maze_seq_challenge2_2023": {
+          "courseA_maze_seq_challenge2_a": "Poskusi prešteti polja s prstom. Zapomni si, da ne šteješ začetnega polja."
+        },
         "courseA_playlab_events_challenge1": {
           "courseA_playlab_events_challenge1_a": "Naj se pingvin Waddles pokaže, ko klikneš taščico Robin.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
           "courseA_playlab_events_challenge1_b": "Naj se duh Boo pokaže, ko klikneš na pingvina Waddlesa.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
@@ -470,6 +473,12 @@
           "courseA_playlab_events_challenge1_d": "Naj se taščica Robin pokaže, ko klikneš na pošast.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseA_playlab_events_challenge12022": {
+          "courseA_playlab_events_challenge1_a": "Naj se pingvin Waddles pokaže, ko klikneš taščico Robin.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_b": "Naj se duh Boo pokaže, ko klikneš na pingvina Waddlesa.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_c": "Naj se pošast Jayden pokaže, ko klikneš na duha Boo!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_d": "Naj se taščica Robin pokaže, ko klikneš na pošast.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseA_playlab_events_challenge12022_2023": {
           "courseA_playlab_events_challenge1_a": "Naj se pingvin Waddles pokaže, ko klikneš taščico Robin.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
           "courseA_playlab_events_challenge1_b": "Naj se duh Boo pokaže, ko klikneš na pingvina Waddlesa.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
           "courseA_playlab_events_challenge1_c": "Naj se pošast Jayden pokaže, ko klikneš na duha Boo!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>",
@@ -505,6 +514,11 @@
           "courseA_playlab_events_challenge2_c": "Lahko narediš, da jezna pošast zarenči.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseA_playlab_events_challenge22022": {
+          "courseA_playlab_events_challenge2_a": "Lahko narediš, da ptička začivka. \n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge2_b": "Lahko narediš, da robot zapiska.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge2_c": "Lahko narediš, da jezna pošast zarenči.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseA_playlab_events_challenge22022_2023": {
           "courseA_playlab_events_challenge2_a": "Lahko narediš, da ptička začivka. \n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>",
           "courseA_playlab_events_challenge2_b": "Lahko narediš, da robot zapiska.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>",
           "courseA_playlab_events_challenge2_c": "Lahko narediš, da jezna pošast zarenči.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
@@ -559,6 +573,11 @@
           "courseB_artist_loops_challenge1_b": "Ko končaš z eno kocko, skoči na naslednjo.",
           "courseB_artist_loops_challenge1_c": "Čez nekatere črte boš moral skočiti ali se premakniti dvakrat. "
         },
+        "courseB_artist_loops_challenge1_2023": {
+          "courseB_artist_loops_challenge1_a": "Takšen blok <xml>  <block type=\"simple_move_up_right\"/></xml> bo risarja premaknil poševno.",
+          "courseB_artist_loops_challenge1_b": "Ko končaš z eno kocko, skoči na naslednjo.",
+          "courseB_artist_loops_challenge1_c": "Čez nekatere črte boš moral skočiti ali se premakniti dvakrat. "
+        },
         "courseB_collector_loops_challenge1": {
           "courseB_collector_loops_challenge1_d": "Poskusi to!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
@@ -575,6 +594,9 @@
           "courseB_collector_loops_challenge1_d": "Poskusi to!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_collector_loops_challenge1_2021": {
+          "courseB_collector_loops_challenge1_d": "Poskusi to!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_collector_loops_challenge1_2023": {
           "courseB_collector_loops_challenge1_d": "Poskusi to!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">5</title>\n        <statement name=\"DO\">\n          <block type=\"maze_moveSouth\">\n            <next>\n              <block type=\"collector_collect\"/>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\">\n                <next>\n                  <block type=\"controls_repeat_simplified\">\n                    <title name=\"TIMES\">5</title>\n                    <statement name=\"DO\">\n                      <block type=\"collector_collect\">\n                        <next>\n                          <block type=\"maze_moveNorth\"/>\n                        </next>\n                      </block>\n                    </statement>\n                    <next>\n                      <block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"maze_moveEast\">\n                            <next>\n                              <block type=\"controls_repeat_simplified\">\n                                <title name=\"TIMES\">5</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_moveSouth\">\n                                    <next>\n                                      <block type=\"collector_collect\"/>\n                                    </next>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_collector_loops_challenge2": {
@@ -601,6 +623,9 @@
         "courseB_maze_seq_challenge1_2021": {
           "courseB_maze_seq_challenge1_a": "Mogoče najkrajša pot ni možna rešitev. "
         },
+        "courseB_maze_seq_challenge1_2023": {
+          "courseB_maze_seq_challenge1_a": "Mogoče najkrajša pot ni možna rešitev. "
+        },
         "courseB_maze_seq_challenge2": {
           "courseB_maze_seq_challenge2_a": "Dodaj ali odstrani bloke, da rešiš ta nivo."
         },
@@ -619,6 +644,9 @@
         "courseB_maze_seq_challenge2_2021": {
           "courseB_maze_seq_challenge2_a": "Dodaj ali odstrani bloke, da rešiš ta nivo."
         },
+        "courseB_maze_seq_challenge2_2023": {
+          "courseB_maze_seq_challenge2_a": "Dodaj ali odstrani bloke, da rešiš ta nivo."
+        },
         "courseC19_playLab_EOC1_2021": {
           "courseE_playLab_scaffold1_a": "`Nastavi igralec 1 na??? sliko` blok se lahko uporablja za dodajanje igralca na oder.",
           "courseE_playLab_scaffold1_b": "Postavite blok »nastavi igralca« pod \\`Ob zagonu', da se bo vaš igralec pojavil na začetku programa.",
@@ -633,6 +661,12 @@
         "courseC19_playLab_EOC2_2021": {
           "courseE_playLab_scaffold1_b": "Morali bi imeti štiri bloke dogodkov »ko puščica«, s smerjo za premikanje pod vsakim.",
           "courseE_playLab_scaffold1_c": "Ko končate, bi morali imeti možnost, da premaknete vašega junaka s puščicami!",
+          "playlab_down": "Da premaknete igralce navzdol, lahko povežete naslednje bloke:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">4</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_left": "Da premaknete igralce levo, lahko povežete naslednje bloke:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">8</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_right": "Da premaknete igralce desno, lahko povežete naslednje bloke:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">2</title>\n      </block>\n    </next>\n  </block>\n  </xml> ",
+          "playlab_up": "Da premaknete igralce navzgor, lahko povežete naslednje bloke:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">1</title>\n      </block>\n    </next>\n  </block>\n  </xml>"
+        },
+        "courseC19_playLab_EOC2_2023": {
           "playlab_down": "Da premaknete igralce navzdol, lahko povežete naslednje bloke:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">4</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
           "playlab_left": "Da premaknete igralce levo, lahko povežete naslednje bloke:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">8</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
           "playlab_right": "Da premaknete igralce desno, lahko povežete naslednje bloke:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">2</title>\n      </block>\n    </next>\n  </block>\n  </xml> ",
@@ -695,6 +729,9 @@
         "courseC_PlayLab_eventsA_embed_2021": {
           "courseC_PlayLab_eventsA_a": "Uporabi smerne tipke za premikanje pingvina. Za dokončanje te ravni ti ni treba napisati nobene kode."
         },
+        "courseC_PlayLab_eventsA_embed_2023": {
+          "courseC_PlayLab_eventsA_a": "Uporabi smerne tipke za premikanje pingvina. Za dokončanje te ravni ti ni treba napisati nobene kode."
+        },
         "courseC_PlayLab_eventsFP2022": {
           "idea1": "_Potrebuješ idejo?_\n\n**Kdo je tam?** Liki naj se prikažejo z naključnimi sličicami, tako da nihče ne bo vedel, kdo se bo pojavil naslednji.",
           "idea2": "\\_Potrebuješ idejo? \\_\n\n**Gremo na pustolovščino** - Spremeni ozadje, nato pa naj liki govorijo o tem, kje so zdaj.\n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">"
@@ -711,6 +748,10 @@
           "idea1": "_Potrebuješ idejo?_\n\n**Kdo je tam?** Liki naj se prikažejo z naključnimi sličicami, tako da nihče ne bo vedel, kdo se bo pojavil naslednji.",
           "idea2": "\\_Potrebuješ idejo? \\_\n\n**Gremo na pustolovščino** - Spremeni ozadje, nato pa naj liki govorijo o tem, kje so zdaj.\n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">",
           "idea3": "\\_Potrebujete idejo? \\_\n\n**Pinball** - Naredite en znak premakniti s smernimi tipkami (uporabite »ko gor puščico«, `ko dol puščica` bloki), nato pa igrajo naključne zvoke, ko trči z drugimi znaki na zaslonu."
+        },
+        "courseC_PlayLab_eventsFP_2023": {
+          "idea1": "_Potrebuješ idejo?_\n\n**Kdo je tam?** Liki naj se prikažejo z naključnimi sličicami, tako da nihče ne bo vedel, kdo se bo pojavil naslednji.",
+          "idea2": "\\_Potrebuješ idejo? \\_\n\n**Gremo na pustolovščino** - Spremeni ozadje, nato pa naj liki govorijo o tem, kje so zdaj.\n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">"
         },
         "courseC_PlayLab_events_challenge1_2021": {
           "courseC_PlayLab_events_challenge_a": "Lahko uporabiš ta blok, da premakneš igralce na različne lokacije znotraj igrišča.\n\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
@@ -729,7 +770,13 @@
         "courseC_artist_loops1b_2021": {
           "courseC_artist_loops1b_a": "To je prvi blok, ki ga boš potreboval:\n\n<xml>\n  <block type=\"draw_turn_by_constant_dropdown\">\n    <title name=\"DIR\">???</title>\n    <title name=\"VALUE\" config=\"45,60,90,120,180\">???</title>\n  </block>\n</xml>\n\nIzbereš lahko levo ali desno in poljubno število stopinj."
         },
+        "courseC_artist_loops1b_2023": {
+          "courseC_artist_loops1b_a": "To je prvi blok, ki ga boš potreboval:\n\n<xml>\n  <block type=\"draw_turn_by_constant_dropdown\">\n    <title name=\"DIR\">???</title>\n    <title name=\"VALUE\" config=\"45,60,90,120,180\">???</title>\n  </block>\n</xml>\n\nIzbereš lahko levo ali desno in poljubno število stopinj."
+        },
         "courseC_artist_loops7a2022": {
+          "courseC_artist_loops7a_a": "Cel krog ima 360°. Pomnoži stopinje v tvojem obratu s številom ponovitev. Je produkt enak 360°?\nPreveri predlagane zasuke, da vidiš, če deluje.\n\nNekaj primerov za začetek:\n– poskusi se 6-krat zavrteti za 60°\n– poskusi se 8-krat zavrteti za 45°\n– poskusi se 12-krat zavrteti za 30°."
+        },
+        "courseC_artist_loops7a_2023": {
           "courseC_artist_loops7a_a": "Cel krog ima 360°. Pomnoži stopinje v tvojem obratu s številom ponovitev. Je produkt enak 360°?\nPreveri predlagane zasuke, da vidiš, če deluje.\n\nNekaj primerov za začetek:\n– poskusi se 6-krat zavrteti za 60°\n– poskusi se 8-krat zavrteti za 45°\n– poskusi se 12-krat zavrteti za 30°."
         },
         "courseC_collector_loops_challenge2": {
@@ -748,6 +795,9 @@
           "courseC_maze_loops_challenge2_b": "Uporabi zanke, da ti ne zmanjka bloka Dobi!"
         },
         "courseC_collector_loops_challenge2_2021": {
+          "courseC_maze_loops_challenge2_b": "Uporabi zanke, da ti ne zmanjka bloka Dobi!"
+        },
+        "courseC_collector_loops_challenge2_2023": {
           "courseC_maze_loops_challenge2_b": "Uporabi zanke, da ti ne zmanjka bloka Dobi!"
         },
         "courseC_flappy_events2_2021": {
@@ -827,6 +877,9 @@
           "courseC_harvester_loops_challenge1_b": "Lahko ponoviš \"Premakni se naprej\" in \"Poberi koruzo\" tolikokrat, kot moraš, nato \"Obrni desno\" na vsakem vogalu",
           "courseC_harvester_loops_challenge1_c": "Najboljši način za zbiranje koruze v sredini uporablja delček \"ponovi\" znotraj drugega delčka \"ponovi\"."
         },
+        "courseC_harvester_loops_challenge1a_2023": {
+          "courseC_harvester_loops_challenge1_c": "Najboljši način za zbiranje koruze v sredini uporablja delček \"ponovi\" znotraj drugega delčka \"ponovi\"."
+        },
         "courseC_harvester_loops_challenge2": {
           "courseC_harvester_loops_challenge2_a": "Eden od načinov za rešitev te naloge je cik-cak. Drug način je spirala! Obstaja veliko različnih rešitev. Bodi vztrajen/-na!",
           "courseC_harvester_loops_challenge2_b": "Ponovi blok 'premakni se naprej' in 'naberi solato' tolikokrat, kot je potrebno, nato pa se obrni na vsakem vogalu.",
@@ -863,6 +916,12 @@
           "courseC_harvester_loops_challenge2_c": "Ta cik-cak vzorec lahko ponovite dvakrat, da dokončate nalogo s samo 20 bloki!",
           "courseC_harvester_loops_challenge2_d": "Ta spiralni vzorec je mogoče kodirati s samo 18 bloki!"
         },
+        "courseC_harvester_loops_challenge2_2023": {
+          "courseC_harvester_loops_challenge2_a": "Eden od načinov za rešitev te naloge je cik-cak. Drug način je spirala! Obstaja veliko različnih rešitev. Bodi vztrajen/-na!",
+          "courseC_harvester_loops_challenge2_b": "Ponovi blok 'premakni se naprej' in 'naberi solato' tolikokrat, kot je potrebno, nato pa se obrni na vsakem vogalu.",
+          "courseC_harvester_loops_challenge2_c": "Ta cik-cak vzorec lahko ponovite dvakrat, da dokončate nalogo s samo 20 bloki!",
+          "courseC_harvester_loops_challenge2_d": "Ta spiralni vzorec je mogoče kodirati s samo 18 bloki!"
+        },
         "courseC_maze_programming6": {
           "courseC_maze_programming6_a": "Obstajata dva načina kako rešiti nalogo!"
         },
@@ -879,6 +938,9 @@
           "courseC_maze_programming6_a": "Obstajata dva načina kako rešiti nalogo!"
         },
         "courseC_maze_programming6_2021": {
+          "courseC_maze_programming6_a": "Obstajata dva načina kako rešiti nalogo!"
+        },
+        "courseC_maze_programming6_2023": {
           "courseC_maze_programming6_a": "Obstajata dva načina kako rešiti nalogo!"
         },
         "courseC_video_angles": {
@@ -900,6 +962,9 @@
           "courseD_artist_nestedLoops3_a": "Poskusi uporabiti blok 'skoči naprej', da prideš od vrha enega kvadrata do mesta, kjer boš začel naslednjega.\n\nČe so tvoji kvadratki visoki 20 pikslov in so 20 pikslov narazen, kako daleč moraš skočiti?"
         },
         "courseD_artist_nestedLoops3_2021": {
+          "courseD_artist_nestedLoops3_a": "Poskusi uporabiti blok 'skoči naprej', da prideš od vrha enega kvadrata do mesta, kjer boš začel naslednjega.\n\nČe so tvoji kvadratki visoki 20 pikslov in so 20 pikslov narazen, kako daleč moraš skočiti?"
+        },
+        "courseD_artist_nestedLoops3_2023": {
           "courseD_artist_nestedLoops3_a": "Poskusi uporabiti blok 'skoči naprej', da prideš od vrha enega kvadrata do mesta, kjer boš začel naslednjega.\n\nČe so tvoji kvadratki visoki 20 pikslov in so 20 pikslov narazen, kako daleč moraš skočiti?"
         },
         "courseD_artist_nestedLoops_challenge2": {
@@ -926,6 +991,10 @@
           "courseD_artist_nestedLoops_challenge2_a": "Če želite narisati pravilen osmerokotnik, se mora Umetnik 8-krat obrniti za 45 stopinj.",
           "courseD_artist_nestedLoops_challenge2_b": "Če želite narisati kvadrat, se mora Umetnik 4-krat obrniti za 90 stopinj."
         },
+        "courseD_artist_nestedLoops_challenge2_2023": {
+          "courseD_artist_nestedLoops_challenge2_a": "Če želite narisati pravilen osmerokotnik, se mora Umetnik 8-krat obrniti za 45 stopinj.",
+          "courseD_artist_nestedLoops_challenge2_b": "Če želite narisati kvadrat, se mora Umetnik 4-krat obrniti za 90 stopinj."
+        },
         "courseD_bee_conditionals_challenge1": {
           "courseD_bee_conditionals_challenge1_b": "V tej uganki bi lahko vsak prostor imel rožo, satovje ali nič. To pomeni, da lahko ponovite svoj pogoj 'če/drugače' na vsakem kvadratku."
         },
@@ -942,6 +1011,9 @@
           "courseD_bee_conditionals_challenge1_b": "V tej uganki bi lahko vsak prostor imel rožo, satovje ali nič. To pomeni, da lahko ponovite svoj pogoj 'če/drugače' na vsakem kvadratku."
         },
         "courseD_bee_conditionals_challenge1_2021": {
+          "courseD_bee_conditionals_challenge1_b": "V tej uganki bi lahko vsak prostor imel rožo, satovje ali nič. To pomeni, da lahko ponovite svoj pogoj 'če/drugače' na vsakem kvadratku."
+        },
+        "courseD_bee_conditionals_challenge1_2023": {
           "courseD_bee_conditionals_challenge1_b": "V tej uganki bi lahko vsak prostor imel rožo, satovje ali nič. To pomeni, da lahko ponovite svoj pogoj 'če/drugače' na vsakem kvadratku."
         },
         "courseD_maze_ramp6": {

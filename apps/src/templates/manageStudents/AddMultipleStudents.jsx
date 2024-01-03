@@ -40,7 +40,13 @@ class AddMultipleStudents extends Component {
 
   add = () => {
     const value = this.refs.studentsTextBox.value;
-    this.props.addMultipleStudents(value.split('\n'));
+    const studentDataArray = value.split('\n').map(line => {
+      const parts = line.split(',');
+      const name = parts[0].trim();
+      const familyName = parts.length > 1 ? parts[1].trim() : null;
+      return {name, familyName};
+    });
+    this.props.addMultipleStudents(studentDataArray);
     firehoseClient.putRecord(
       {
         study: 'teacher-dashboard',
@@ -72,12 +78,13 @@ class AddMultipleStudents extends Component {
           handleClose={this.closeDialog}
         >
           <h2>{i18n.addStudentsMultiple()}</h2>
-          <div>{i18n.addStudentsMultipleInstructions()}</div>
+          <div>{i18n.addStudentsMultipleWithFamilyNameInstructions()}</div>
           <textarea
             rows="15"
             cols="70"
             ref="studentsTextBox"
             style={styles.textarea}
+            aria-label={i18n.addStudentsMultiple()}
           />
           <DialogFooter>
             <Button

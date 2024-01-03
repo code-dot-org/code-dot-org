@@ -80,6 +80,19 @@
           "swimming left and right": "左右游動",
           "wandering": "徘徊"
         },
+        "CourseE_Project_SpriteLab_2023": {
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊"
+        },
         "CourseE_Project_SpriteLab_cupcake_examples2022": {
           "driving with arrow keys": "用方向鍵駕駛",
           "fluttering": "飄移",
@@ -131,6 +144,25 @@
           "wandering2": "徘徊2",
           "wobbling": "搖晃"
         },
+        "CourseE_Project_SpriteLab_cupcake_examples_2023": {
+          "driving with arrow keys": "用方向鍵駕駛",
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "moving with arrow keys": "使用方向鍵移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
         "CourseE_Project_SpriteLab_examples2022": {
           "driving with arrow keys": "用方向鍵駕駛",
           "fluttering": "飄移",
@@ -180,6 +212,25 @@
           "swimming left and right2": "左右游動2",
           "wandering": "徘徊",
           "wandering2": "徘徊2",
+          "wobbling": "搖晃"
+        },
+        "CourseE_Project_SpriteLab_examples_2023": {
+          "driving with arrow keys": "用方向鍵駕駛",
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "moving with arrow keys": "使用方向鍵移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
           "wobbling": "搖晃"
         },
         "CourseE_hoops": {
@@ -262,6 +313,10 @@
           "recovering": "恢復",
           "wandering": "徘徊"
         },
+        "CourseF_outbreak1_2023": {
+          "recovering": "恢復",
+          "wandering": "徘徊"
+        },
         "CourseF_outbreak2": {
           "recovering": "恢復",
           "wandering": "徘徊"
@@ -270,11 +325,19 @@
           "recovering": "恢復",
           "wandering": "徘徊"
         },
+        "CourseF_outbreak2_2023": {
+          "recovering": "恢復",
+          "wandering": "徘徊"
+        },
         "CourseF_outbreak3": {
           "recovering": "恢復",
           "wandering": "徘徊"
         },
         "CourseF_outbreak3_-2022-2": {
+          "recovering": "恢復",
+          "wandering": "徘徊"
+        },
+        "CourseF_outbreak3_2023": {
           "recovering": "恢復",
           "wandering": "徘徊"
         },
@@ -309,6 +372,21 @@
           "spinning right": "向右旋轉",
           "wandering": "徘徊"
         },
+        "CourseF_outbreak4_2023": {
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving with arrow keys": "使用方向鍵移動",
+          "patrolling": "巡邏",
+          "recovering": "恢復",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊"
+        },
         "CourseF_outbreak5": {
           "recovering": "恢復",
           "wandering": "徘徊"
@@ -317,11 +395,19 @@
           "recovering": "恢復",
           "wandering": "徘徊"
         },
+        "CourseF_outbreak5_2023": {
+          "recovering": "恢復",
+          "wandering": "徘徊"
+        },
         "CourseF_outbreak6": {
           "recovering": "恢復",
           "wandering": "徘徊"
         },
         "CourseF_outbreak6_-2022-2": {
+          "recovering": "恢復",
+          "wandering": "徘徊"
+        },
+        "CourseF_outbreak6_2023": {
           "recovering": "恢復",
           "wandering": "徘徊"
         },
@@ -357,6 +443,22 @@
           "spinning right": "向右旋轉",
           "wandering": "徘徊"
         },
+        "CourseF_outbreak7_2023": {
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving left and right": "左右移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving with arrow keys": "使用方向鍵移動",
+          "patrolling": "巡邏",
+          "recovering": "恢復",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊"
+        },
         "CourseF_outbreak8": {
           "growing": "放大",
           "jittering": "抖動",
@@ -374,6 +476,22 @@
           "wandering": "徘徊"
         },
         "CourseF_outbreak8_-2022-2": {
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving left and right": "左右移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving with arrow keys": "使用方向鍵移動",
+          "patrolling": "巡邏",
+          "recovering": "恢復",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊"
+        },
+        "CourseF_outbreak8_2023": {
           "growing": "放大",
           "jittering": "抖動",
           "moving east": "向東移動",
@@ -709,6 +827,18 @@
           "swimming left and right": "左右游動",
           "wandering": "徘徊"
         },
+        "Fish Tank 2-validated_2023": {
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊"
+        },
         "Fish Tank 3-validated2022": {
           "growing": "放大",
           "jittering": "抖動",
@@ -756,6 +886,18 @@
           "shrinking": "縮小",
           "spinning right": "向右旋轉",
           "swimming left and right": "左右游動",
+          "wandering": "徘徊"
+        },
+        "Fish Tank 3-validated_2023": {
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning right": "向右旋轉",
           "wandering": "徘徊"
         },
         "Fish Tank 4-validated2022": {
@@ -807,6 +949,18 @@
           "swimming left and right": "左右游動",
           "wandering": "徘徊"
         },
+        "Fish Tank 4-validated_2023": {
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊"
+        },
         "Fish Tank 5-validated2022": {
           "growing": "放大",
           "jittering": "抖動",
@@ -856,6 +1010,18 @@
           "swimming left and right": "左右游動",
           "wandering": "徘徊"
         },
+        "Fish Tank 5-validated_2023": {
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊"
+        },
         "Fish Tank 6-validated2022": {
           "growing": "放大",
           "jittering": "抖動",
@@ -903,6 +1069,18 @@
           "shrinking": "縮小",
           "spinning right": "向右旋轉",
           "swimming left and right": "左右游動",
+          "wandering": "徘徊"
+        },
+        "Fish Tank 6-validated_2023": {
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning right": "向右旋轉",
           "wandering": "徘徊"
         },
         "OPD-K5-spritelab-2": {
@@ -1030,6 +1208,25 @@
           "wandering": "徘徊",
           "wobbling": "搖晃"
         },
+        "Virtual Pet 1_2023": {
+          "driving with arrow keys": "用方向鍵駕駛",
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "moving with arrow keys": "使用方向鍵移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
         "Virtual Pet 2": {
           "growing": "放大",
           "jittering": "抖動",
@@ -1096,6 +1293,19 @@
           "swimming left and right": "左右游動",
           "wandering": "徘徊"
         },
+        "Virtual Pet 2_2023": {
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊"
+        },
         "Virtual Pet 3_-2022-2": {
           "growing": "放大",
           "jittering": "抖動",
@@ -1160,6 +1370,19 @@
           "swimming left and right2": "左右游動2",
           "wandering": "徘徊",
           "wandering2": "徘徊2"
+        },
+        "Virtual Pet 3_2023": {
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊"
         },
         "Virtual Pet 4": {
           "growing": "放大",
@@ -1539,6 +1762,19 @@
           "swimming left and right": "左右游動",
           "wandering": "徘徊"
         },
+        "courseE_aboutme_2_2023": {
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊"
+        },
         "courseE_aboutme_3": {
           "growing": "放大",
           "jittering": "抖動",
@@ -1590,6 +1826,19 @@
           "spinning left": "向左旋轉",
           "spinning right": "向右旋轉",
           "swimming left and right": "左右游動",
+          "wandering": "徘徊"
+        },
+        "courseE_aboutme_3_2023": {
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
           "wandering": "徘徊"
         },
         "courseE_aboutme_4": {
@@ -1645,6 +1894,19 @@
           "swimming left and right": "左右游動",
           "wandering": "徘徊"
         },
+        "courseE_aboutme_4_2023": {
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊"
+        },
         "courseE_aboutme_5": {
           "growing": "放大",
           "jittering": "抖動",
@@ -1696,6 +1958,19 @@
           "spinning left": "向左旋轉",
           "spinning right": "向右旋轉",
           "swimming left and right": "左右游動",
+          "wandering": "徘徊"
+        },
+        "courseE_aboutme_5_2023": {
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
           "wandering": "徘徊"
         },
         "courseF_apps_aquarium": {
@@ -1765,6 +2040,24 @@
           "wandering": "徘徊",
           "wobbling": "搖晃"
         },
+        "courseF_apps_aquarium_2023": {
+          "driving with arrow keys": "用方向鍵駕駛",
+          "driving with arrow keys2": "使用方向鍵2驅動",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving with arrow keys": "使用方向鍵移動",
+          "moving with arrow keys2": "使用方向鍵2移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
         "courseF_apps_card": {
           "blocking movement": "阻擋運動",
           "driving with arrow keys": "用方向鍵駕駛",
@@ -1799,6 +2092,22 @@
           "wandering": "徘徊"
         },
         "courseF_apps_card_-2022-2": {
+          "blocking movement": "阻擋運動",
+          "driving with arrow keys": "用方向鍵駕駛",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving with arrow keys": "使用方向鍵移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊"
+        },
+        "courseF_apps_card_2023": {
           "blocking movement": "阻擋運動",
           "driving with arrow keys": "用方向鍵駕駛",
           "growing": "放大",
@@ -1864,6 +2173,24 @@
           "wandering": "徘徊"
         },
         "courseF_apps_chatbot_-2022-2": {
+          "blocking movement": "阻擋運動",
+          "driving with arrow keys": "用方向鍵駕駛",
+          "driving with arrow keys2": "使用方向鍵2驅動",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving with arrow keys": "使用方向鍵移動",
+          "moving with arrow keys2": "使用方向鍵2移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊"
+        },
+        "courseF_apps_chatbot_2023": {
           "blocking movement": "阻擋運動",
           "driving with arrow keys": "用方向鍵駕駛",
           "driving with arrow keys2": "使用方向鍵2驅動",
@@ -1948,6 +2275,24 @@
           "spinning right": "向右旋轉",
           "wandering": "徘徊"
         },
+        "courseF_apps_collector_2023": {
+          "driving with arrow keys": "用方向鍵駕駛",
+          "driving with arrow keys2": "使用方向鍵2驅動",
+          "fluttering": "飄移",
+          "flying west and looping": "向西飛行並循環",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving with arrow keys": "使用方向鍵移動",
+          "moving with arrow keys2": "使用方向鍵2移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊"
+        },
         "courseF_apps_madlib": {
           "fluttering": "飄移",
           "growing": "放大",
@@ -1986,6 +2331,24 @@
           "wobbling": "搖晃"
         },
         "courseF_apps_madlib_-2022-2": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "moving with arrow keys": "使用方向鍵移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
+        "courseF_apps_madlib_2023": {
           "fluttering": "飄移",
           "growing": "放大",
           "jittering": "抖動",
@@ -2061,6 +2424,25 @@
           "wandering": "徘徊",
           "wobbling": "搖晃"
         },
+        "courseF_apps_pet_2023": {
+          "driving with arrow keys": "用方向鍵駕駛",
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "moving with arrow keys": "使用方向鍵移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
         "courseF_editable_card": {
           "blocking movement": "阻擋運動",
           "driving with arrow keys": "用方向鍵駕駛",
@@ -2079,6 +2461,22 @@
           "wandering": "徘徊"
         },
         "courseF_editable_card_-2022-2": {
+          "blocking movement": "阻擋運動",
+          "driving with arrow keys": "用方向鍵駕駛",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving with arrow keys": "使用方向鍵移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊"
+        },
+        "courseF_editable_card_2023": {
           "blocking movement": "阻擋運動",
           "driving with arrow keys": "用方向鍵駕駛",
           "growing": "放大",
@@ -2127,6 +2525,22 @@
           "spinning right": "向右旋轉",
           "wandering": "徘徊"
         },
+        "courseF_editable_chatbot_2023": {
+          "blocking movement": "阻擋運動",
+          "driving with arrow keys": "用方向鍵駕駛",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving with arrow keys": "使用方向鍵移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊"
+        },
         "courseF_editable_madlib": {
           "fluttering": "飄移",
           "growing": "放大",
@@ -2147,6 +2561,24 @@
           "wobbling": "搖晃"
         },
         "courseF_editable_madlib_-2022-2": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "moving with arrow keys": "使用方向鍵移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
+        "courseF_editable_madlib_2023": {
           "fluttering": "飄移",
           "growing": "放大",
           "jittering": "抖動",
@@ -2213,7 +2645,40 @@
           "spinning right": "向右旋轉",
           "wandering": "徘徊"
         },
+        "courseF_events_choice_conflict2_2023": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving forward": "向前移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊"
+        },
         "courseF_events_choice_conflict_-2022-2": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving forward": "向前移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊"
+        },
+        "courseF_events_choice_conflict_2023": {
           "fluttering": "飄移",
           "growing": "放大",
           "jittering": "抖動",
@@ -2249,6 +2714,24 @@
           "wobbling": "搖晃"
         },
         "courseF_events_choice_penguin_-2022-2": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving forward": "向前移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
+        "courseF_events_choice_penguin_2023": {
           "fluttering": "飄移",
           "growing": "放大",
           "jittering": "抖動",
@@ -2302,6 +2785,24 @@
           "wandering": "徘徊",
           "wobbling": "搖晃"
         },
+        "courseF_events_choice_pufferfish_2023": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving forward": "向前移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
         "courseF_events_conflict": {
           "fluttering": "飄移",
           "growing": "放大",
@@ -2320,6 +2821,23 @@
           "wandering": "徘徊"
         },
         "courseF_events_conflict_-2022-2": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving forward": "向前移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊"
+        },
+        "courseF_events_conflict_2023": {
           "fluttering": "飄移",
           "growing": "放大",
           "jittering": "抖動",
@@ -2368,6 +2886,22 @@
           "wandering": "徘徊",
           "wobbling": "搖晃"
         },
+        "courseF_events_freeplay_air_2023": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
         "courseF_events_freeplay_animals": {
           "fluttering": "飄移",
           "growing": "放大",
@@ -2385,6 +2919,22 @@
           "wobbling": "搖晃"
         },
         "courseF_events_freeplay_animals_-2022-2": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
+        "courseF_events_freeplay_animals_2023": {
           "fluttering": "飄移",
           "growing": "放大",
           "jittering": "抖動",
@@ -2432,6 +2982,22 @@
           "wandering": "徘徊",
           "wobbling": "搖晃"
         },
+        "courseF_events_freeplay_aquatic_2023": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
         "courseF_events_freeplay_blank": {
           "fluttering": "飄移",
           "growing": "放大",
@@ -2449,6 +3015,22 @@
           "wobbling": "搖晃"
         },
         "courseF_events_freeplay_blank_-2022-2": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
+        "courseF_events_freeplay_blank_2023": {
           "fluttering": "飄移",
           "growing": "放大",
           "jittering": "抖動",
@@ -2496,6 +3078,22 @@
           "wandering": "徘徊",
           "wobbling": "搖晃"
         },
+        "courseF_events_freeplay_food_2023": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
         "courseF_events_freeplay_space": {
           "fluttering": "飄移",
           "growing": "放大",
@@ -2513,6 +3111,22 @@
           "wobbling": "搖晃"
         },
         "courseF_events_freeplay_space_-2022-2": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
+        "courseF_events_freeplay_space_2023": {
           "fluttering": "飄移",
           "growing": "放大",
           "jittering": "抖動",
@@ -2547,6 +3161,24 @@
           "wobbling": "搖晃"
         },
         "courseF_events_key_-2022-2": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving forward": "向前移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
+        "courseF_events_key_2023": {
           "fluttering": "飄移",
           "growing": "放大",
           "jittering": "抖動",
@@ -2604,6 +3236,26 @@
           "wandering": "徘徊",
           "wobbling": "搖晃"
         },
+        "courseF_events_practice_reorder_2023": {
+          "driving with arrow keys": "用方向鍵駕駛",
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving forward": "向前移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "moving with arrow keys": "使用方向鍵移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
         "courseF_events_predict": {
           "growing": "放大",
           "jittering": "抖動",
@@ -2621,6 +3273,19 @@
           "wandering": "徘徊"
         },
         "courseF_events_predict_-2022-2": {
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊"
+        },
+        "courseF_events_predict_2023": {
           "growing": "放大",
           "jittering": "抖動",
           "moving east": "向東移動",
@@ -2669,6 +3334,24 @@
           "wandering": "徘徊",
           "wobbling": "搖晃"
         },
+        "courseF_events_review_2023": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving forward": "向前移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
         "courseF_events_ship": {
           "fluttering": "飄移",
           "growing": "放大",
@@ -2688,6 +3371,24 @@
           "wobbling": "搖晃"
         },
         "courseF_events_ship_-2022-2": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving forward": "向前移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
+        "courseF_events_ship_2023": {
           "fluttering": "飄移",
           "growing": "放大",
           "jittering": "抖動",
@@ -2775,6 +3476,24 @@
           "wandering": "徘徊",
           "wobbling": "搖晃"
         },
+        "courseF_events_time_2023": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving forward": "向前移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
         "courseF_extras_sim": {
           "wandering 1": "到處走走 1",
           "wandering 2": "到處走走 2"
@@ -2808,6 +3527,19 @@
           "spinning right": "向右旋轉",
           "wandering": "徘徊"
         },
+        "courseF_label_predict_2023": {
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊"
+        },
         "courseF_place_fruit": {
           "fluttering": "飄移",
           "growing": "放大",
@@ -2824,6 +3556,21 @@
           "wobbling": "搖晃"
         },
         "courseF_place_fruit_-2022-2": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wobbling": "搖晃"
+        },
+        "courseF_place_fruit_2023": {
           "fluttering": "飄移",
           "growing": "放大",
           "jittering": "抖動",
@@ -2871,6 +3618,16 @@
           "spinning left": "向左旋轉",
           "spinning right": "向右旋轉"
         },
+        "courseF_sprites_behaviors_2023": {
+          "growing": "放大",
+          "moving east": "向東移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉"
+        },
         "courseF_sprites_clouds": {
           "fluttering": "飄移",
           "growing": "放大",
@@ -2888,6 +3645,22 @@
           "wobbling": "搖晃"
         },
         "courseF_sprites_clouds_-2022-2": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
+        "courseF_sprites_clouds_2023": {
           "fluttering": "飄移",
           "growing": "放大",
           "jittering": "抖動",
@@ -2933,6 +3706,21 @@
           "spinning right": "向右旋轉",
           "wobbling": "搖晃"
         },
+        "courseF_sprites_desert_2023": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wobbling": "搖晃"
+        },
         "courseF_sprites_freeplay_air": {
           "fluttering": "飄移",
           "growing": "放大",
@@ -2950,6 +3738,22 @@
           "wobbling": "搖晃"
         },
         "courseF_sprites_freeplay_air_-2022-2": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
+        "courseF_sprites_freeplay_air_2023": {
           "fluttering": "飄移",
           "growing": "放大",
           "jittering": "抖動",
@@ -2997,6 +3801,22 @@
           "wandering": "徘徊",
           "wobbling": "搖晃"
         },
+        "courseF_sprites_freeplay_animals_2023": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
         "courseF_sprites_freeplay_aquatic": {
           "fluttering": "飄移",
           "growing": "放大",
@@ -3014,6 +3834,22 @@
           "wobbling": "搖晃"
         },
         "courseF_sprites_freeplay_aquatic_-2022-2": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
+        "courseF_sprites_freeplay_aquatic_2023": {
           "fluttering": "飄移",
           "growing": "放大",
           "jittering": "抖動",
@@ -3061,6 +3897,22 @@
           "wandering": "徘徊",
           "wobbling": "搖晃"
         },
+        "courseF_sprites_freeplay_blank_2023": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
         "courseF_sprites_freeplay_food": {
           "fluttering": "飄移",
           "growing": "放大",
@@ -3078,6 +3930,22 @@
           "wobbling": "搖晃"
         },
         "courseF_sprites_freeplay_food_-2022-2": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
+        "courseF_sprites_freeplay_food_2023": {
           "fluttering": "飄移",
           "growing": "放大",
           "jittering": "抖動",
@@ -3125,6 +3993,22 @@
           "wandering": "徘徊",
           "wobbling": "搖晃"
         },
+        "courseF_sprites_freeplay_space_2023": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
         "courseF_sprites_make": {
           "fluttering": "飄移",
           "growing": "放大",
@@ -3141,6 +4025,21 @@
           "wobbling": "搖晃"
         },
         "courseF_sprites_make_-2022-2": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wobbling": "搖晃"
+        },
+        "courseF_sprites_make_2023": {
           "fluttering": "飄移",
           "growing": "放大",
           "jittering": "抖動",
@@ -3185,6 +4084,21 @@
           "spinning right": "向右旋轉",
           "wobbling": "搖晃"
         },
+        "courseF_sprites_moreSprites_2023": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wobbling": "搖晃"
+        },
         "courseF_sprites_positioning": {
           "fluttering": "飄移",
           "growing": "放大",
@@ -3201,6 +4115,21 @@
           "wobbling": "搖晃"
         },
         "courseF_sprites_positioning_-2022-2": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wobbling": "搖晃"
+        },
+        "courseF_sprites_positioning_2023": {
           "fluttering": "飄移",
           "growing": "放大",
           "jittering": "抖動",
@@ -3244,6 +4173,19 @@
           "spinning right": "向右旋轉",
           "wandering": "徘徊"
         },
+        "courseF_sprites_predict_2023": {
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊"
+        },
         "courseF_sprites_properties": {
           "fluttering": "飄移",
           "growing": "放大",
@@ -3260,6 +4202,21 @@
           "wobbling": "搖晃"
         },
         "courseF_sprites_properties_-2022-2": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wobbling": "搖晃"
+        },
+        "courseF_sprites_properties_2023": {
           "fluttering": "飄移",
           "growing": "放大",
           "jittering": "抖動",
@@ -3304,6 +4261,21 @@
           "spinning right": "向右旋轉",
           "wobbling": "搖晃"
         },
+        "courseF_sprites_ship_2023": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wobbling": "搖晃"
+        },
         "courseF_text_answer": {
           "fluttering": "飄移",
           "growing": "放大",
@@ -3322,6 +4294,23 @@
           "wandering": "徘徊"
         },
         "courseF_text_answer_-2022-2": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving forward": "向前移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊"
+        },
+        "courseF_text_answer_2023": {
           "fluttering": "飄移",
           "growing": "放大",
           "jittering": "抖動",
@@ -3372,6 +4361,23 @@
           "spinning right": "向右旋轉",
           "wandering": "徘徊"
         },
+        "courseF_text_choice_color_2023": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving forward": "向前移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊"
+        },
         "courseF_text_choice_conversation": {
           "driving with arrow keys": "用方向鍵駕駛",
           "fluttering": "飄移",
@@ -3393,6 +4399,25 @@
           "wobbling": "搖晃"
         },
         "courseF_text_choice_conversation_-2022-2": {
+          "driving with arrow keys": "用方向鍵駕駛",
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "moving with arrow keys": "使用方向鍵移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
+        "courseF_text_choice_conversation_2023": {
           "driving with arrow keys": "用方向鍵駕駛",
           "fluttering": "飄移",
           "growing": "放大",
@@ -3450,6 +4475,25 @@
           "wandering": "徘徊",
           "wobbling": "搖晃"
         },
+        "courseF_text_choice_events_2023": {
+          "driving with arrow keys": "用方向鍵駕駛",
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "moving with arrow keys": "使用方向鍵移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
         "courseF_text_choice_freeplay": {
           "driving with arrow keys": "用方向鍵駕駛",
           "fluttering": "飄移",
@@ -3471,6 +4515,25 @@
           "wobbling": "搖晃"
         },
         "courseF_text_choice_freeplay_-2022-2": {
+          "driving with arrow keys": "用方向鍵駕駛",
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "moving with arrow keys": "使用方向鍵移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
+        "courseF_text_choice_freeplay_2023": {
           "driving with arrow keys": "用方向鍵駕駛",
           "fluttering": "飄移",
           "growing": "放大",
@@ -3528,6 +4591,25 @@
           "wandering": "徘徊",
           "wobbling": "搖晃"
         },
+        "courseF_text_choice_interview_2023": {
+          "driving with arrow keys": "用方向鍵駕駛",
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "moving with arrow keys": "使用方向鍵移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
         "courseF_text_choice_multiprompt": {
           "driving with arrow keys": "用方向鍵駕駛",
           "fluttering": "飄移",
@@ -3549,6 +4631,25 @@
           "wobbling": "搖晃"
         },
         "courseF_text_choice_multiprompt_-2022-2": {
+          "driving with arrow keys": "用方向鍵駕駛",
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "moving with arrow keys": "使用方向鍵移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
+        "courseF_text_choice_multiprompt_2023": {
           "driving with arrow keys": "用方向鍵駕駛",
           "fluttering": "飄移",
           "growing": "放大",
@@ -3601,6 +4702,23 @@
           "spinning right": "向右旋轉",
           "wandering": "徘徊"
         },
+        "courseF_text_choice_title_2023": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving forward": "向前移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊"
+        },
         "courseF_text_concat": {
           "fluttering": "飄移",
           "growing": "放大",
@@ -3619,6 +4737,23 @@
           "wandering": "徘徊"
         },
         "courseF_text_concat_-2022-2": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving forward": "向前移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊"
+        },
+        "courseF_text_concat_2023": {
           "fluttering": "飄移",
           "growing": "放大",
           "jittering": "抖動",
@@ -3669,6 +4804,23 @@
           "spinning right": "向右旋轉",
           "wandering": "徘徊"
         },
+        "courseF_text_events_2023": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving forward": "向前移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊"
+        },
         "courseF_text_print": {
           "fluttering": "飄移",
           "growing": "放大",
@@ -3687,6 +4839,23 @@
           "wandering": "徘徊"
         },
         "courseF_text_print_-2022-2": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving forward": "向前移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊"
+        },
+        "courseF_text_print_2023": {
           "fluttering": "飄移",
           "growing": "放大",
           "jittering": "抖動",
@@ -3737,6 +4906,23 @@
           "spinning right": "向右旋轉",
           "wandering": "徘徊"
         },
+        "courseF_text_prompts_2023": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving forward": "向前移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊"
+        },
         "courseF_text_review": {
           "fluttering": "飄移",
           "growing": "放大",
@@ -3755,6 +4941,23 @@
           "wandering": "徘徊"
         },
         "courseF_text_review_-2022-2": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving forward": "向前移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊"
+        },
+        "courseF_text_review_2023": {
           "fluttering": "飄移",
           "growing": "放大",
           "jittering": "抖動",
@@ -3791,6 +4994,24 @@
           "wobbling": "搖晃"
         },
         "courseF_variables_card_-2022-2": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "moving with arrow keys": "使用方向鍵移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
+        "courseF_variables_card_2023": {
           "fluttering": "飄移",
           "growing": "放大",
           "jittering": "抖動",
@@ -3845,6 +5066,24 @@
           "wandering": "徘徊",
           "wobbling": "搖晃"
         },
+        "courseF_variables_card_finish_2023": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "moving with arrow keys": "使用方向鍵移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
         "courseF_variables_chatbot": {
           "fluttering": "飄移",
           "growing": "放大",
@@ -3865,6 +5104,24 @@
           "wobbling": "搖晃"
         },
         "courseF_variables_chatbot_-2022-2": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "moving with arrow keys": "使用方向鍵移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
+        "courseF_variables_chatbot_2023": {
           "fluttering": "飄移",
           "growing": "放大",
           "jittering": "抖動",
@@ -3919,6 +5176,24 @@
           "wandering": "徘徊",
           "wobbling": "搖晃"
         },
+        "courseF_variables_chatbot_finish_2023": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "moving with arrow keys": "使用方向鍵移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
         "courseF_variables_madlib": {
           "fluttering": "飄移",
           "growing": "放大",
@@ -3939,6 +5214,24 @@
           "wobbling": "搖晃"
         },
         "courseF_variables_madlib_-2022-2": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "moving with arrow keys": "使用方向鍵移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
+        "courseF_variables_madlib_2023": {
           "fluttering": "飄移",
           "growing": "放大",
           "jittering": "抖動",
@@ -3993,6 +5286,24 @@
           "wandering": "徘徊",
           "wobbling": "搖晃"
         },
+        "courseF_variables_madlib_finish_2023": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "moving with arrow keys": "使用方向鍵移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
         "courseF_variables_predict": {
           "growing": "放大",
           "jittering": "抖動",
@@ -4022,6 +5333,19 @@
           "spinning right": "向右旋轉",
           "wandering": "徘徊"
         },
+        "courseF_variables_predict_2023": {
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊"
+        },
         "coursee_helloworld_events": {
           "fluttering": "飄移",
           "growing": "放大",
@@ -4038,6 +5362,296 @@
           "spinning left": "向左旋轉",
           "spinning right": "向右旋轉",
           "wandering": "徘徊"
+        },
+        "coursee_helloworld_events_2023": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving forward": "向前移動",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊"
+        },
+        "csc_animal_adaptaions_fishschool": {
+          "driving with arrow keys": "用方向鍵駕駛",
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving north and looping": "向北移動並迴圈",
+          "moving south": "向南移動",
+          "moving south and looping": "向南移動並迴圈",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "moving with arrow keys": "使用方向鍵移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
+        "csc_animal_adaptations_birds": {
+          "driving with arrow keys": "用方向鍵駕駛",
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving north and looping": "向北移動並迴圈",
+          "moving south": "向南移動",
+          "moving south and looping": "向南移動並迴圈",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "moving with arrow keys": "使用方向鍵移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
+        "csc_animal_adaptations_bugs": {
+          "driving with arrow keys": "用方向鍵駕駛",
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving north and looping": "向北移動並迴圈",
+          "moving south": "向南移動",
+          "moving south and looping": "向南移動並迴圈",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "moving with arrow keys": "使用方向鍵移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
+        "csc_animal_adaptations_butterfly": {
+          "driving with arrow keys": "用方向鍵駕駛",
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving north and looping": "向北移動並迴圈",
+          "moving south": "向南移動",
+          "moving south and looping": "向南移動並迴圈",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "moving with arrow keys": "使用方向鍵移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
+        "csc_animal_adaptations_choice2": {
+          "driving with arrow keys": "用方向鍵駕駛",
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving north and looping": "向北移動並迴圈",
+          "moving south": "向南移動",
+          "moving south and looping": "向南移動並迴圈",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "moving with arrow keys": "使用方向鍵移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
+        "csc_animal_adaptations_choice3": {
+          "driving with arrow keys": "用方向鍵駕駛",
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving north and looping": "向北移動並迴圈",
+          "moving south": "向南移動",
+          "moving south and looping": "向南移動並迴圈",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "moving with arrow keys": "使用方向鍵移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
+        "csc_animal_adaptations_fish": {
+          "driving with arrow keys": "用方向鍵駕駛",
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving north and looping": "向北移動並迴圈",
+          "moving south": "向南移動",
+          "moving south and looping": "向南移動並迴圈",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "moving with arrow keys": "使用方向鍵移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
+        "csc_animal_adaptations_groups": {
+          "driving with arrow keys": "用方向鍵駕駛",
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving north and looping": "向北移動並迴圈",
+          "moving south": "向南移動",
+          "moving south and looping": "向南移動並迴圈",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "moving with arrow keys": "使用方向鍵移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
+        "csc_animal_adaptations_migration": {
+          "driving with arrow keys": "用方向鍵駕駛",
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving north and looping": "向北移動並迴圈",
+          "moving south": "向南移動",
+          "moving south and looping": "向南移動並迴圈",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "moving with arrow keys": "使用方向鍵移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
+        "csc_animal_adaptations_speed": {
+          "driving with arrow keys": "用方向鍵駕駛",
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving north and looping": "向北移動並迴圈",
+          "moving south": "向南移動",
+          "moving south and looping": "向南移動並迴圈",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "moving with arrow keys": "使用方向鍵移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
+        "csc_ecosystems_giraffe_evo_2023": {
+          "driving with arrow keys": "用方向鍵駕駛",
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving north and looping": "向北移動並迴圈",
+          "moving south": "向南移動",
+          "moving south and looping": "向南移動並迴圈",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "moving with arrow keys": "使用方向鍵移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
+        "csc_ecosystems_whale_explain_2023": {
+          "driving with arrow keys": "用方向鍵駕駛",
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving north and looping": "向北移動並迴圈",
+          "moving south": "向南移動",
+          "moving south and looping": "向南移動並迴圈",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "moving with arrow keys": "使用方向鍵移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
+        "csc_ecosystems_whale_movement_2023": {
+          "driving with arrow keys": "用方向鍵駕駛",
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving north and looping": "向北移動並迴圈",
+          "moving south": "向南移動",
+          "moving south and looping": "向南移動並迴圈",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "moving with arrow keys": "使用方向鍵移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
         },
         "helloworld_animals_backgrounds": {
           "driving with arrow keys": "用方向鍵駕駛",
@@ -4250,6 +5864,27 @@
           "wandering": "徘徊",
           "wobbling": "搖晃"
         },
+        "helloworld_food_backgrounds_2023": {
+          "driving with arrow keys": "用方向鍵駕駛",
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving north and looping": "向北移動並迴圈",
+          "moving south": "向南移動",
+          "moving south and looping": "向南移動並迴圈",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "moving with arrow keys": "使用方向鍵移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
         "helloworld_food_backgrounds_soccer-2022": {
           "driving with arrow keys": "用方向鍵駕駛",
           "fluttering": "飄移",
@@ -4313,7 +5948,43 @@
           "wandering": "徘徊",
           "wobbling": "搖晃"
         },
+        "helloworld_food_behaviors_2023": {
+          "driving with arrow keys": "用方向鍵駕駛",
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving north and looping": "向北移動並迴圈",
+          "moving south": "向南移動",
+          "moving south and looping": "向南移動並迴圈",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "moving with arrow keys": "使用方向鍵移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
         "helloworld_food_costumes": {
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wobbling": "搖晃"
+        },
+        "helloworld_food_costumes_2023": {
           "fluttering": "飄移",
           "growing": "放大",
           "jittering": "抖動",
@@ -4346,6 +6017,27 @@
           "wandering": "徘徊"
         },
         "helloworld_food_sounds": {
+          "driving with arrow keys": "用方向鍵駕駛",
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving north and looping": "向北移動並迴圈",
+          "moving south": "向南移動",
+          "moving south and looping": "向南移動並迴圈",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "moving with arrow keys": "使用方向鍵移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
+        "helloworld_food_sounds_2023": {
           "driving with arrow keys": "用方向鍵駕駛",
           "fluttering": "飄移",
           "growing": "放大",
@@ -4768,6 +6460,25 @@
           "spinning left": "向左旋轉",
           "spinning right": "向右旋轉",
           "swimming left and right": "左右游動",
+          "wandering": "徘徊",
+          "wobbling": "搖晃"
+        },
+        "simcustom_2023": {
+          "driving with arrow keys": "用方向鍵駕駛",
+          "fluttering": "飄移",
+          "growing": "放大",
+          "jittering": "抖動",
+          "moving east": "向東移動",
+          "moving east and looping": "向東移動並循環",
+          "moving north": "向北移動",
+          "moving south": "向南移動",
+          "moving west": "向西移動",
+          "moving west and looping": "向西移動並循環",
+          "moving with arrow keys": "使用方向鍵移動",
+          "patrolling": "巡邏",
+          "shrinking": "縮小",
+          "spinning left": "向左旋轉",
+          "spinning right": "向右旋轉",
           "wandering": "徘徊",
           "wobbling": "搖晃"
         }

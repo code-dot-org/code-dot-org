@@ -624,6 +624,11 @@
             "name": "my function"
           }
         },
+        "Course E: Artist Project_examples_2023": {
+          "my function": {
+            "name": "my function"
+          }
+        },
         "Course E: Frozen Project_examples2022": {
           "LOGIC FLOWER": {
             "name": "ロジックの花"
@@ -730,6 +735,69 @@
             "parameters": {
               "length": "長さ",
               "sides": "サイド"
+            }
+          },
+          "draw a star": {
+            "description": "決められた点と、決められた長さの辺を使って星をかきます",
+            "name": "星形 を かく",
+            "parameters": {
+              "length": "長さ",
+              "points": "ポイント"
+            }
+          },
+          "draw a triangle": {
+            "name": "三角形を描画します。",
+            "parameters": {
+              "length": "長さ"
+            }
+          },
+          "small flower": {
+            "name": "小さな花"
+          }
+        },
+        "Course E: Frozen Project_examples_2023": {
+          "LOGIC FLOWER": {
+            "name": "ロジックの花"
+          },
+          "LOGIC FLOWERS": {
+            "name": "ロジックの花"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "ロジックの花 2"
+          },
+          "draw a circle": {
+            "description": "決められた半径の円をかきます",
+            "name": "円 を かく",
+            "parameters": {
+              "radius": "半径"
+            }
+          },
+          "draw a house": {
+            "name": "家 を かく",
+            "parameters": {
+              "length": "長さ"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "風車をかく",
+            "parameters": {
+              "length": "長さ",
+              "repeat": "くりかえし",
+              "sides": "辺"
+            }
+          },
+          "draw a shape": {
+            "name": "図形をかく",
+            "parameters": {
+              "length": "長さ",
+              "sides": "辺"
+            }
+          },
+          "draw a square": {
+            "name": "正方形 を かく",
+            "parameters": {
+              "length": "長さ",
+              "sides": "辺"
             }
           },
           "draw a star": {
@@ -955,6 +1023,56 @@
             }
           }
         },
+        "CourseD_EOC_artist_2023": {
+          "draw a circle": {
+            "description": "決められた半径の円をかきます",
+            "name": "円 を かく",
+            "parameters": {
+              "radius": "半径"
+            }
+          },
+          "draw a house": {
+            "name": "家 を かく",
+            "parameters": {
+              "length": "長さ"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "風車をかく",
+            "parameters": {
+              "length": "長さ",
+              "repeat": "くりかえし",
+              "sides": "辺"
+            }
+          },
+          "draw a shape": {
+            "name": "図形をかく",
+            "parameters": {
+              "length": "長さ",
+              "sides": "辺"
+            }
+          },
+          "draw a square": {
+            "name": "正方形 を かく",
+            "parameters": {
+              "length": "長さ"
+            }
+          },
+          "draw a star": {
+            "description": "決められた点と、決められた長さの辺を使って星をかきます",
+            "name": "星形 を かく",
+            "parameters": {
+              "length": "長さ",
+              "points": "ポイント"
+            }
+          },
+          "draw a triangle": {
+            "name": "三角形を描画します。",
+            "parameters": {
+              "length": "長さ"
+            }
+          }
+        },
         "CourseD_EOC_artist_example2021": {
           "draw a circle": {
             "description": "決められた半径の円をかきます",
@@ -1055,6 +1173,56 @@
             }
           }
         },
+        "CourseD_EOC_artist_example2021_2023": {
+          "draw a circle": {
+            "description": "決められた半径の円をかきます",
+            "name": "円 を かく",
+            "parameters": {
+              "radius": "半径"
+            }
+          },
+          "draw a house": {
+            "name": "家 を かく",
+            "parameters": {
+              "length": "長さ"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "風車をかく",
+            "parameters": {
+              "length": "長さ",
+              "repeat": "くりかえし",
+              "sides": "辺"
+            }
+          },
+          "draw a shape": {
+            "name": "図形をかく",
+            "parameters": {
+              "length": "長さ",
+              "sides": "辺"
+            }
+          },
+          "draw a square": {
+            "name": "正方形 を かく",
+            "parameters": {
+              "length": "長さ"
+            }
+          },
+          "draw a star": {
+            "description": "決められた点と、決められた長さの辺を使って星をかきます",
+            "name": "星形 を かく",
+            "parameters": {
+              "length": "長さ",
+              "points": "ポイント"
+            }
+          },
+          "draw a triangle": {
+            "name": "三角形を描画します。",
+            "parameters": {
+              "length": "長さ"
+            }
+          }
+        },
         "CourseF_app_computer": {
           "reset game": {
             "name": "ゲームをリセットする"
@@ -1066,6 +1234,11 @@
           }
         },
         "CourseF_app_computer_-2022-2": {
+          "reset game": {
+            "name": "ゲームをリセットする"
+          }
+        },
+        "CourseF_app_computer_2023": {
           "reset game": {
             "name": "ゲームをリセットする"
           }
@@ -1110,6 +1283,11 @@
           }
         },
         "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "橋を作る"
+          }
+        },
+        "Function intro Ryan_2023": {
           "build bridge": {
             "name": "橋を作る"
           }
@@ -1271,6 +1449,11 @@
             "name": "道を作る"
           }
         },
+        "MC_HOC_2017_07_Cole_2023": {
+          "clear path": {
+            "name": "道を作る"
+          }
+        },
         "MC_HOC_2017_10_RETRY": {
           "fix long path": {
             "name": "長い道を直す"
@@ -1304,6 +1487,14 @@
           }
         },
         "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "長い道を直す"
+          },
+          "fix short path": {
+            "name": "短い道を直す"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2023": {
           "fix long path": {
             "name": "長い道を直す"
           },
@@ -1351,6 +1542,14 @@
             "name": "短い橋をかける"
           }
         },
+        "MC_HOC_2017_Ali_2023": {
+          "build long bridge": {
+            "name": "長い橋をかける"
+          },
+          "build short bridge": {
+            "name": "短い橋をかける"
+          }
+        },
         "MC_HOC_2017_FP20x20": {
           "function 1": {
             "name": "関数1"
@@ -1384,6 +1583,14 @@
           }
         },
         "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "関数1"
+          },
+          "function 2": {
+            "name": "関数2"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2023": {
           "function 1": {
             "name": "関数1"
           },
@@ -1977,6 +2184,11 @@
             "name": "potential solution"
           }
         },
+        "courseB_artist_loops_challenge2_2023": {
+          "potential solution": {
+            "name": "potential solution"
+          }
+        },
         "courseC_artist_prog3": {
           "draw fire": {
             "name": "ほのおをかく"
@@ -2073,6 +2285,11 @@
             "name": "ブースター"
           }
         },
+        "courseC_artist_prog4_2023": {
+          "booster": {
+            "name": "ブースター"
+          }
+        },
         "courseC_data wizard": {
           "do something": {
             "name": "何かしてください"
@@ -2089,6 +2306,11 @@
           }
         },
         "courseC_data wizard_2021": {
+          "do something": {
+            "name": "何かしてください"
+          }
+        },
+        "courseC_data wizard_2023": {
           "do something": {
             "name": "何かしてください"
           }
@@ -2786,6 +3008,17 @@
             "name": "六角形の列をかく"
           }
         },
+        "courseE_artist_functions10_2023": {
+          "do something": {
+            "name": "何かしてください"
+          },
+          "draw hexagon": {
+            "name": "六角形 を かく"
+          },
+          "draw line of hexagons": {
+            "name": "六角形の列をかく"
+          }
+        },
         "courseE_artist_functions1_copy": {
           "draw ear stems": {
             "name": "メガネをかく"
@@ -2844,6 +3077,14 @@
             "name": "メガネをかく"
           }
         },
+        "courseE_artist_functions2_2023": {
+          "draw a square": {
+            "name": "正方形 を かく"
+          },
+          "draw ear stems": {
+            "name": "メガネをかく"
+          }
+        },
         "courseE_artist_functions2_copy": {
           "draw a square": {
             "name": "正方形 を かく"
@@ -2881,6 +3122,11 @@
           }
         },
         "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "星形 を かく"
+          }
+        },
+        "courseE_artist_functions3_2023": {
           "draw a star": {
             "name": "星形 を かく"
           }
@@ -2930,6 +3176,11 @@
             "name": "星形 を かく"
           }
         },
+        "courseE_artist_functions5_2023": {
+          "draw a star": {
+            "name": "星形 を かく"
+          }
+        },
         "courseE_artist_functions5_copy": {
           "draw a star": {
             "name": "星形 を かく"
@@ -2975,6 +3226,11 @@
           }
         },
         "courseE_artist_functions7_2021": {
+          "draw a window": {
+            "name": "まどをかく"
+          }
+        },
+        "courseE_artist_functions7_2023": {
           "draw a window": {
             "name": "まどをかく"
           }
@@ -3060,6 +3316,20 @@
             "name": "ずれた正方形"
           }
         },
+        "courseE_artist_functions8_2023": {
+          "do something": {
+            "name": "何かしてください"
+          },
+          "draw a line of squares": {
+            "name": "draw a line of squares"
+          },
+          "draw square": {
+            "name": "正方形を かく"
+          },
+          "staggered squares": {
+            "name": "ずれた正方形"
+          }
+        },
         "courseE_artist_functions8a2022": {
           "do something": {
             "name": "何かしてください"
@@ -3093,6 +3363,14 @@
           }
         },
         "courseE_artist_functions8a_2021": {
+          "do something": {
+            "name": "何かしてください"
+          },
+          "draw a square": {
+            "name": "正方形 を かく"
+          }
+        },
+        "courseE_artist_functions8a_2023": {
           "do something": {
             "name": "何かしてください"
           },
@@ -3145,6 +3423,17 @@
           }
         },
         "courseE_artist_functions8b_2021": {
+          "do something": {
+            "name": "何かしてください"
+          },
+          "draw a line of squares": {
+            "name": "draw a line of squares"
+          },
+          "draw square": {
+            "name": "正方形を かく"
+          }
+        },
+        "courseE_artist_functions8b_2023": {
           "do something": {
             "name": "何かしてください"
           },
@@ -3225,6 +3514,20 @@
             "name": "ずれた正方形"
           }
         },
+        "courseE_artist_functions8c_2023": {
+          "do something": {
+            "name": "何かしてください"
+          },
+          "draw a line of squares": {
+            "name": "draw a line of squares"
+          },
+          "draw square": {
+            "name": "正方形を かく"
+          },
+          "staggered squares": {
+            "name": "ずれた正方形"
+          }
+        },
         "courseE_artist_functions9": {
           "do something": {
             "name": "何かしてください"
@@ -3281,6 +3584,17 @@
           }
         },
         "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "何かしてください"
+          },
+          "draw line of triangles": {
+            "name": "三角形の列をかく"
+          },
+          "draw triangle": {
+            "name": "三角形を かく"
+          }
+        },
+        "courseE_artist_functions9_2023": {
           "do something": {
             "name": "何かしてください"
           },
@@ -3376,6 +3690,23 @@
             "name": "ずれた正方形"
           }
         },
+        "courseE_artist_functionsProj_2023": {
+          "draw a line of squares": {
+            "name": "draw a line of squares"
+          },
+          "draw hexagon": {
+            "name": "六角形 を かく"
+          },
+          "draw line of hexagons": {
+            "name": "六角形の列をかく"
+          },
+          "draw square": {
+            "name": "正方形を かく"
+          },
+          "staggered squares": {
+            "name": "ずれた正方形"
+          }
+        },
         "courseE_artist_functions_challenge1": {
           "do something": {
             "name": "何かしてください"
@@ -3417,6 +3748,14 @@
           }
         },
         "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "何かしてください"
+          },
+          "my design": {
+            "name": "私のデザイン"
+          }
+        },
+        "courseE_artist_functions_challenge1_2023": {
           "do something": {
             "name": "何かしてください"
           },
@@ -3472,6 +3811,14 @@
             "name": "私のデザイン"
           }
         },
+        "courseE_artist_functions_challenge2_2023": {
+          "do something": {
+            "name": "何かしてください"
+          },
+          "my design": {
+            "name": "私のデザイン"
+          }
+        },
         "courseE_artist_functions_predict1": {
           "draw a square": {
             "name": "正方形 を かく"
@@ -3513,6 +3860,14 @@
           }
         },
         "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "正方形 を かく"
+          },
+          "draw ear stems": {
+            "name": "メガネをかく"
+          }
+        },
+        "courseE_artist_functions_predict1_2023": {
           "draw a square": {
             "name": "正方形 を かく"
           },
@@ -3592,6 +3947,17 @@
           }
         },
         "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "何かしてください"
+          },
+          "draw line of polygons": {
+            "name": "多角形の列をかく"
+          },
+          "draw polygon": {
+            "name": "多角形をかく"
+          }
+        },
+        "courseE_artist_functions_predict2_2023": {
           "do something": {
             "name": "何かしてください"
           },
@@ -3771,6 +4137,20 @@
             "name": "pumpkin square"
           }
         },
+        "courseE_farmer_functions10a1_2023": {
+          "check square for corn": {
+            "name": "トウモロコシをしゅうかくする"
+          },
+          "get all pumpkins": {
+            "name": "カボチャをすべてとる"
+          },
+          "pick along path": {
+            "name": "道に沿ってしゅうかくする"
+          },
+          "pumpkin square": {
+            "name": "pumpkin square"
+          }
+        },
         "courseE_farmer_functions10b": {
           "navigate": {
             "name": "ナビゲート"
@@ -3872,6 +4252,23 @@
             "name": "pumpkin square"
           }
         },
+        "courseE_farmer_functions11_predict_2023": {
+          "check square for corn": {
+            "name": "トウモロコシをしゅうかくする"
+          },
+          "get all pumpkins": {
+            "name": "カボチャをすべてとる"
+          },
+          "get produce": {
+            "name": "get produce"
+          },
+          "pick along path": {
+            "name": "道に沿ってしゅうかくする"
+          },
+          "pumpkin square": {
+            "name": "pumpkin square"
+          }
+        },
         "courseE_farmer_functions132022": {
           "check for corn": {
             "name": "トウモロコシか調べる"
@@ -3942,6 +4339,20 @@
             "name": "道に沿ってしゅうかくする"
           }
         },
+        "courseE_farmer_functions13_2023": {
+          "check for corn": {
+            "name": "トウモロコシか調べる"
+          },
+          "corn rectangle": {
+            "name": "corn rectangle"
+          },
+          "lettuce stairs": {
+            "name": "lettuce stairs"
+          },
+          "pick along path": {
+            "name": "道に沿ってしゅうかくする"
+          }
+        },
         "courseE_farmer_functions1a2022": {
           "check square for corn": {
             "name": "トウモロコシをしゅうかくする"
@@ -3967,6 +4378,11 @@
             "name": "トウモロコシをしゅうかくする"
           }
         },
+        "courseE_farmer_functions1a_2023": {
+          "check square for corn": {
+            "name": "トウモロコシをしゅうかくする"
+          }
+        },
         "courseE_farmer_functions2b2022": {
           "check square for corn": {
             "name": "トウモロコシをしゅうかくする"
@@ -3988,6 +4404,11 @@
           }
         },
         "courseE_farmer_functions2b_2021": {
+          "check square for corn": {
+            "name": "トウモロコシをしゅうかくする"
+          }
+        },
+        "courseE_farmer_functions2b_2023": {
           "check square for corn": {
             "name": "トウモロコシをしゅうかくする"
           }
@@ -4030,6 +4451,14 @@
           }
         },
         "courseE_farmer_functions2ba_2021": {
+          "check square for corn": {
+            "name": "トウモロコシをしゅうかくする"
+          },
+          "get all pumpkins": {
+            "name": "カボチャをすべてとる"
+          }
+        },
+        "courseE_farmer_functions2ba_2023": {
           "check square for corn": {
             "name": "トウモロコシをしゅうかくする"
           },
@@ -4097,6 +4526,17 @@
             "name": "道に沿ってしゅうかくする"
           }
         },
+        "courseE_farmer_functions3c1_2023": {
+          "check square for corn": {
+            "name": "トウモロコシをしゅうかくする"
+          },
+          "get all pumpkins": {
+            "name": "カボチャをすべてとる"
+          },
+          "pick along path": {
+            "name": "道に沿ってしゅうかくする"
+          }
+        },
         "courseE_farmer_functions3c2022": {
           "check square for corn": {
             "name": "トウモロコシをしゅうかくする"
@@ -4130,6 +4570,14 @@
           }
         },
         "courseE_farmer_functions3c_2021": {
+          "check square for corn": {
+            "name": "トウモロコシをしゅうかくする"
+          },
+          "get all pumpkins": {
+            "name": "カボチャをすべてとる"
+          }
+        },
+        "courseE_farmer_functions3c_2023": {
           "check square for corn": {
             "name": "トウモロコシをしゅうかくする"
           },
@@ -4177,6 +4625,11 @@
             "name": "garden square"
           }
         },
+        "courseE_farmer_functions7a1_2023": {
+          "garden square": {
+            "name": "garden square"
+          }
+        },
         "courseE_farmer_functions8a12022": {
           "garden square": {
             "name": "garden square"
@@ -4198,6 +4651,11 @@
           }
         },
         "courseE_farmer_functions8a1_2021": {
+          "garden square": {
+            "name": "garden square"
+          }
+        },
+        "courseE_farmer_functions8a1_2023": {
           "garden square": {
             "name": "garden square"
           }
@@ -4228,6 +4686,11 @@
           }
         },
         "courseE_farmer_functions9a1_2021": {
+          "garden square": {
+            "name": "garden square"
+          }
+        },
+        "courseE_farmer_functions9a1_2023": {
           "garden square": {
             "name": "garden square"
           }
@@ -4279,6 +4742,11 @@
           }
         },
         "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "ゲームオーバー"
+          }
+        },
+        "courseF_apps_collector_2023": {
           "end game": {
             "name": "ゲームオーバー"
           }
@@ -4548,6 +5016,11 @@
           }
         },
         "courseF_bee_for_challenge1_2021": {
+          "move and get nectar with counter": {
+            "name": "counterを使って、進んでミツをとる"
+          }
+        },
+        "courseF_bee_for_challenge1_2023": {
           "move and get nectar with counter": {
             "name": "counterを使って、進んでミツをとる"
           }

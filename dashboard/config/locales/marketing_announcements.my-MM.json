@@ -1,0 +1,52 @@
+{
+  "my-MM": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "ai-2020": {
+            "buttonText": "ဆက်သင်ယူရန်"
+          },
+          "ai-launch-2023": {
+            "buttonText": "ဆက်သင်ယူရန်"
+          },
+          "ai-pl-launch-2023": {
+            "buttonText": "ဆက်သင်ယူရန်"
+          },
+          "back-to-school-2021": {
+            "buttonText": "ဆက်သင်ယူရန်"
+          },
+          "codebytes-2020": {
+            "buttonText": "ဆက်သင်ယူရန်"
+          },
+          "csjourneys": {
+            "buttonText": "ဆက်သင်ယူရန်"
+          },
+          "csjourneys-22": {
+            "buttonText": "ဆက်သင်ယူရန်"
+          },
+          "csleadersprize": {
+            "buttonText": "ဆက်သင်ယူရန်"
+          },
+          "hoc-2023": {
+            "buttonText": "ဆက်သင်ယူရန်"
+          },
+          "hoc-2023-dance-ai": {
+            "buttonText": "ဆက်သင်ယူရန်"
+          },
+          "superhero": {
+            "buttonText": "ဆက်သင်ယူရန်"
+          },
+          "teacher-apps-closing-2021": {
+            "buttonText": "ကျွန်ပ်တို့နှင့်ပူးပေါင်းပါ"
+          },
+          "teacher-apps-open-2021": {
+            "buttonText": "ကျွန်ပ်တို့နှင့်ပူးပေါင်းပါ"
+          },
+          "teacher-apps-stillon-2020": {
+            "buttonText": "ကျွန်ပ်တို့နှင့်ပူးပေါင်းပါ"
+          }
+        }
+      }
+    }
+  }
+}

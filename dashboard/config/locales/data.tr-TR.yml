@@ -796,6 +796,7 @@ tr:
         artist_intro: 'Ressam: Giriş'
         c_and_c_digital_sharing: Dijital Paylaşım
         c_and_c_great_to_create: Oluşturmak ve Adil Oynamak Mükemmel
+        code-break: Kodlamaya biraz ara verin
         codebreak_e01: 'Kod Kırma 1.0: Hill Harper ile Algoritmalar'
         codebreak_e02: 'Kod Kırma 2.0: Mark Cuban ve Lyndsey Scott ile Prototipler'
         codebreak_e03: 'Kod Kırma 3.0: Ashton Kutcher ve Mia Gil Epner ile Şifreleme'
@@ -880,7 +881,7 @@ tr:
         csa_wrapper_classes_part_2: 'CSA: Sarıcı Sınıfları Bölüm 2'
         csa_writing_a_method: 'CSA: Yöntem Yazma'
         csc-ecosystems-intro: Ekosistemlere Giriş
-        csc-event-short-intro: Etkinlikler Kısa Giriş
+        csc-event-short-intro: Olaylar için Kısa Tanıtım
         csc-mapmakers-intro: 'CSC: Harita yapımcıları\t'
         csc-poem-art-intro: Giriş Videosu
         csc-poem-art-outro: Çıkış Videosu
@@ -920,6 +921,7 @@ tr:
         csd_gamelab_velocity: Hız
         csd_how_teamwork_works: Takım çalışması Nasıl İşler
         csd_ml_ethics_ai: 'Etik ve Yapay Zeka '
+        csd_ml_how_ai_works: Yapay Zeka Nasıl Çalışır?
         csd_ml_import_model: AI Modelini İçe Aktarma
         csd_ml_intro_ai_lab_july2021: AI (Artırılmış Gerçeklik) Laboratuarı'na Giriş
         csd_ml_intro_to_ai_lab: AI (Artırılmış Gerçeklik) Laboratuarı'na Giriş
@@ -1103,6 +1105,7 @@ tr:
         u7-libraries-explanation: 'Uygulama Laboratuvarı: Kendi Bloklarınızı Yapın
           - Kütüphaneler Nasıl Kullanılır'
         upload_sprites_backgrounds: Özel Sprite ve Arka Planlar Yükleme
+        what-is-creativity: Yaratıcılık nedir?
         what_is_an_event: Bir etkinlik nedir?
         what_is_cs: Bilgisayar bilimi nedir?
         why-should-teach-unplugged-activities: 'SSS: "Bağlantısız" aktiviteleri neden

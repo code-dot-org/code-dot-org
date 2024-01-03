@@ -254,6 +254,15 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Spellingswedstrijd"
         },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Basisbegrippen Informatica"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Plannen"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Volgende stappen"
+        },
         "csd2-2019/Headings": {
           "name": "Headings"
         },
@@ -352,6 +361,30 @@
         },
         "pre-express-2019/Spelling Bee": {
           "name": "Spellingswedstrijd"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Lussen"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Gebeurtenissen"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Voorwaardelijke instructies"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Functies"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Variabelen"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "For-lussen"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Sprite Lab"
+        },
+        "k5-onlinepd-2019/Next steps": {
+          "name": "Volgende stappen"
         },
         "coursea-2020/Programming: Happy Maps": {
           "name": "Vrolijke Routes"
@@ -492,6 +525,15 @@
         "express-2021/lesson-1": {
           "name": "Dansfeest"
         },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Basisbegrippen Informatica"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Plannen"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Volgende stappen"
+        },
         "csd1-2022/Storage": {
           "name": "Opslag"
         },
@@ -580,8 +622,93 @@
         "express-2022/Dance Party": {
           "name": "Dansfeest"
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Uur van Code 2013"
+        "csd1-2023/Storage": {
+          "name": "Opslag"
+        },
+        "csd2-2023/Intellectual Property": {
+          "name": "Intellectuele Eigendom"
+        },
+        "csd2-2023/Using Images": {
+          "name": "Afbeeldingen gebruiken"
+        },
+        "csd3-2023/Variables": {
+          "name": "Variabelen"
+        },
+        "csd3-2023/Sprites": {
+          "name": "Sprites"
+        },
+        "csd3-2023/Text": {
+          "name": "Tekst"
+        },
+        "csd3-2023/Conditionals": {
+          "name": "Voorwaardelijke instructies"
+        },
+        "csd3-2023/Velocity": {
+          "name": "Snelheid"
+        },
+        "csd3-2023/Collision Detection": {
+          "name": "Botsingdetectie"
+        },
+        "csd3-2023/Functions": {
+          "name": "Functies"
+        },
+        "csd5-2023/Representing Images": {
+          "name": "Het voorstellen van afbeeldingen"
+        },
+        "csd5-2023/Representing Numbers": {
+          "name": "Het voorstellen van getallen"
+        },
+        "csd6a-2023/Functions": {
+          "name": "Functies"
+        },
+        "csd6b-2023/Functions": {
+          "name": "Functies"
+        },
+        "coursea-2023/Happy Maps": {
+          "name": "Vrolijke Routes"
+        },
+        "courseb-2023/Move It, Move It": {
+          "name": "verplaats het, verplaats het"
+        },
+        "courseb-2023/Getting Loopy": {
+          "name": "Rondjes lopen"
+        },
+        "coursec-2023/The Big Event": {
+          "name": "De grote gebeurtenis"
+        },
+        "coursec-2023/Binary Bracelets": {
+          "name": "Binaire armbanden"
+        },
+        "coursed-2023/Graph Paper Programming": {
+          "name": "Programmeren op Ruitjespapier"
+        },
+        "coursed-2023/Relay Programming": {
+          "name": "Estafette Programmeren"
+        },
+        "coursed-2023/Build a Star Wars Game": {
+          "name": "Bouw een Star Wars Spel!"
+        },
+        "coursed-2023/Dance Party": {
+          "name": "Dansfeest"
+        },
+        "coursed-2023/Conditionals with Cards": {
+          "name": "Statements met Kaarten"
+        },
+        "coursee-2023/Hello World": {
+          "name": "Hallo Wereld"
+        },
+        "coursee-2023/Songwriting": {
+          "name": "Songwriting",
+          "overview": "Een van de meest prachtige structuren in de informatica wereld is de functie. Functies (soms procedures genoemd) zijn mini programma's die telkens opnieuw kunnen gebruikt worden binnen het grotere geheel van je programma. Deze les helpt leerlingen intuïtief te begrijpen waarom brokken code samenvoegen in functies een nuttige praktijk is.  "
+        },
+        "coursef-2023/Outbreak": {
+          "name": "Uitbraak"
+        },
+        "coursef-2023/The Internet": {
+          "name": "Het Internet"
+        },
+        "express-2023/Dance Party": {
+          "name": "Dansfeest"
         },
         "applab-intro/Intro to App Lab": {
           "student_overview": "Aan het einde van deze tutorial bent u in staat een project uit te breiden dat u begon met opbouwen tot een \"Kies uw eigen avontuur\", \"Wenskaart\" of \"Karakterquiz\" app. Tevens kunt u verder gaan met het creëren van meer project die te vinden zijn op de code.org/applab-pagina. "
@@ -618,41 +745,41 @@
           "name": "Kauwgom Speel Lab"
         },
         "hello-world-animals-2021/Hello World": {
-          "overview": "In deze les leren studenten de basis van informatica door te programmeren in Sprite Lab. Sprite Lab is een programma dat u kunt gebruiken om fantasierijke en leuke projecten te creëren. Studenten leren hoe ze sprites kunnen creëren en deze animeren, en hoe ze deze interactief kunnen maken door middel van events. \n\nEr bestaan meerdere versies van deze les. Elke versie leert dezelfde concepten maar bevat andere afbeeldingen om deze aantrekkelijk te maken voor verschillende studenten. Ga voor meer infomatie naar de [start pagina van Hallo Wereld.][0]",
-          "preparation": "-   Speel de puzzels om eventuele probleemgebieden voor uw klas te ontdekken.\n-   Gebruik de middelen bij [CS Connections][0] om een plan te maken voor meer lessen in informatica na de eerste tutorial. ",
-          "purpose": "Deze les heeft als doel studenten voor te bereiden op het creëren van eenvoudige programmeerprojecten in Sprite Lab. Dankzij deze vaardigheden kunnen studenten daarna projecten over elk onderwerp creëren zoals ander schoolproject of iets dat voor hen persoonlijk relevant is. Ga naar [CS Connections][0] voor ideeén over hoe informatica in andere vakken te integreren."
+          "overview": "In deze les leren studenten de basis van informatica door te programmeren in Sprite Lab. Sprite Lab is een programma dat u kunt gebruiken om fantasierijke en leuke projecten te creëren. Studenten leren hoe ze sprites kunnen creëren en deze animeren, en hoe ze deze interactief kunnen maken door middel van events. \n\nEr bestaan meerdere versies van deze les. Elke versie leert dezelfde concepten maar bevat andere afbeeldingen om deze aantrekkelijk te maken voor verschillende studenten. Ga voor meer infomatie naar de [start pagina van Hallo Wereld.](https://code.org/helloworld)",
+          "preparation": "-   Speel de puzzels om eventuele probleemgebieden voor uw klas te ontdekken.\n-   Gebruik de middelen bij [CS Connections](https://code.org/educate/csc) om een plan te maken voor meer lessen in informatica na de eerste tutorial. ",
+          "purpose": "Deze les heeft als doel studenten voor te bereiden op het creëren van eenvoudige programmeerprojecten in Sprite Lab. Dankzij deze vaardigheden kunnen studenten daarna projecten over elk onderwerp creëren zoals ander schoolproject of iets dat voor hen persoonlijk relevant is. Ga naar [CS Connections](https://code.org/educate/csc) voor ideeén over hoe informatica in andere vakken te integreren."
         },
         "hello-world-emoji-2021/Hello World": {
-          "overview": "In deze les leren studenten de basis van informatica door te programmeren in Sprite Lab. Sprite Lab is een programma dat u kunt gebruiken om fantasierijke en leuke projecten te creëren. Studenten leren hoe ze sprites kunnen creëren en deze animeren, en hoe ze deze interactief kunnen maken door middel van events. \n\nEr bestaan meerdere versies van deze les. Elke versie leert dezelfde concepten maar bevat andere afbeeldingen om deze aantrekkelijk te maken voor verschillende studenten. Ga voor meer infomatie naar de [start pagina van Hallo Wereld.][0]",
-          "preparation": "-   Speel de puzzels om eventuele probleemgebieden voor uw klas te ontdekken.\n-   Gebruik de middelen bij [CS Connections][0] om een plan te maken voor meer lessen in informatica na de eerste tutorial. ",
-          "purpose": "Deze les heeft als doel studenten voor te bereiden op het creëren van eenvoudige programmeerprojecten in Sprite Lab. Dankzij deze vaardigheden kunnen studenten daarna projecten over elk onderwerp creëren zoals ander schoolproject of iets dat voor hen persoonlijk relevant is. Ga naar [CS Connections][0] voor ideeén over hoe informatica in andere vakken te integreren."
+          "overview": "In deze les leren studenten de basis van informatica door te programmeren in Sprite Lab. Sprite Lab is een programma dat u kunt gebruiken om fantasierijke en leuke projecten te creëren. Studenten leren hoe ze sprites kunnen creëren en deze animeren, en hoe ze deze interactief kunnen maken door middel van events. \n\nEr bestaan meerdere versies van deze les. Elke versie leert dezelfde concepten maar bevat andere afbeeldingen om deze aantrekkelijk te maken voor verschillende studenten. Ga voor meer infomatie naar de [start pagina van Hallo Wereld.](https://code.org/helloworld)",
+          "preparation": "-   Speel de puzzels om eventuele probleemgebieden voor uw klas te ontdekken.\n-   Gebruik de middelen bij [CS Connections](https://code.org/educate/csc) om een plan te maken voor meer lessen in informatica na de eerste tutorial. ",
+          "purpose": "Deze les heeft als doel studenten voor te bereiden op het creëren van eenvoudige programmeerprojecten in Sprite Lab. Dankzij deze vaardigheden kunnen studenten daarna projecten over elk onderwerp creëren zoals ander schoolproject of iets dat voor hen persoonlijk relevant is. Ga naar [CS Connections](https://code.org/educate/csc) voor ideeén over hoe informatica in andere vakken te integreren."
         },
         "hello-world-food-2021/Hello World": {
-          "overview": "In deze les leren studenten de basis van informatica door te programmeren in Sprite Lab. Sprite Lab is een programma dat u kunt gebruiken om fantasierijke en leuke projecten te creëren. Studenten leren hoe ze sprites kunnen creëren en deze animeren, en hoe ze deze interactief kunnen maken door middel van events. \n\nEr bestaan meerdere versies van deze les. Elke versie leert dezelfde concepten maar bevat andere afbeeldingen om deze aantrekkelijk te maken voor verschillende studenten. Ga voor meer infomatie naar de [start pagina van Hallo Wereld.][0]",
-          "preparation": "-   Speel de puzzels om eventuele probleemgebieden voor uw klas te ontdekken.\n-   Gebruik de middelen bij [CS Connections][0] om een plan te maken voor meer lessen in informatica na de eerste tutorial. ",
-          "purpose": "Deze les heeft als doel studenten voor te bereiden op het creëren van eenvoudige programmeerprojecten in Sprite Lab. Dankzij deze vaardigheden kunnen studenten daarna projecten over elk onderwerp creëren zoals ander schoolproject of iets dat voor hen persoonlijk relevant is. Ga naar [CS Connections][0] voor ideeén over hoe informatica in andere vakken te integreren."
+          "overview": "In deze les leren studenten de basis van informatica door te programmeren in Sprite Lab. Sprite Lab is een programma dat u kunt gebruiken om fantasierijke en leuke projecten te creëren. Studenten leren hoe ze sprites kunnen creëren en deze animeren, en hoe ze deze interactief kunnen maken door middel van events. \n\nEr bestaan meerdere versies van deze les. Elke versie leert dezelfde concepten maar bevat andere afbeeldingen om deze aantrekkelijk te maken voor verschillende studenten. Ga voor meer infomatie naar de [start pagina van Hallo Wereld.](https://code.org/helloworld)",
+          "preparation": "-   Speel de puzzels om eventuele probleemgebieden voor uw klas te ontdekken.\n-   Gebruik de middelen bij [CS Connections](https://code.org/educate/csc) om een plan te maken voor meer lessen in informatica na de eerste tutorial. ",
+          "purpose": "Deze les heeft als doel studenten voor te bereiden op het creëren van eenvoudige programmeerprojecten in Sprite Lab. Dankzij deze vaardigheden kunnen studenten daarna projecten over elk onderwerp creëren zoals ander schoolproject of iets dat voor hen persoonlijk relevant is. Ga naar [CS Connections](https://code.org/educate/csc) voor ideeén over hoe informatica in andere vakken te integreren."
         },
         "hello-world-retro-2021/Hello World": {
-          "overview": "In deze les leren studenten de basis van informatica door te programmeren in Sprite Lab. Sprite Lab is een programma dat u kunt gebruiken om fantasierijke en leuke projecten te creëren. Studenten leren hoe ze sprites kunnen creëren en deze animeren, en hoe ze deze interactief kunnen maken door middel van events. \n\nEr bestaan meerdere versies van deze les. Elke versie leert dezelfde concepten maar bevat andere afbeeldingen om deze aantrekkelijk te maken voor verschillende studenten. Ga voor meer infomatie naar de [start pagina van Hallo Wereld.][0]",
-          "preparation": "-   Speel de puzzels om eventuele probleemgebieden voor uw klas te ontdekken.\n-   Gebruik de middelen bij [CS Connections][0] om een plan te maken voor meer lessen in informatica na de eerste tutorial. ",
-          "purpose": "Deze les heeft als doel studenten voor te bereiden op het creëren van eenvoudige programmeerprojecten in Sprite Lab. Dankzij deze vaardigheden kunnen studenten daarna projecten over elk onderwerp creëren zoals ander schoolproject of iets dat voor hen persoonlijk relevant is. Ga naar [CS Connections][0] voor ideeén over hoe informatica in andere vakken te integreren."
+          "overview": "In deze les leren studenten de basis van informatica door te programmeren in Sprite Lab. Sprite Lab is een programma dat u kunt gebruiken om fantasierijke en leuke projecten te creëren. Studenten leren hoe ze sprites kunnen creëren en deze animeren, en hoe ze deze interactief kunnen maken door middel van events. \n\nEr bestaan meerdere versies van deze les. Elke versie leert dezelfde concepten maar bevat andere afbeeldingen om deze aantrekkelijk te maken voor verschillende studenten. Ga voor meer infomatie naar de [start pagina van Hallo Wereld.](https://code.org/helloworld)",
+          "preparation": "-   Speel de puzzels om eventuele probleemgebieden voor uw klas te ontdekken.\n-   Gebruik de middelen bij [CS Connections](https://code.org/educate/csc) om een plan te maken voor meer lessen in informatica na de eerste tutorial. ",
+          "purpose": "Deze les heeft als doel studenten voor te bereiden op het creëren van eenvoudige programmeerprojecten in Sprite Lab. Dankzij deze vaardigheden kunnen studenten daarna projecten over elk onderwerp creëren zoals ander schoolproject of iets dat voor hen persoonlijk relevant is. Ga naar [CS Connections](https://code.org/educate/csc) voor ideeén over hoe informatica in andere vakken te integreren."
         },
         "hello-world-soccer-2022/Hello World: Food": {
           "name": "Hello World: Voetbal",
-          "overview": "In deze les leren studenten de basis van informatica door te programmeren in Sprite Lab. Sprite Lab is een programma dat u kunt gebruiken om fantasierijke en leuke projecten te creëren. Studenten leren hoe ze sprites kunnen creëren en deze animeren, en hoe ze deze interactief kunnen maken door middel van events. \n\nEr bestaan meerdere versies van deze les. Elke versie leert dezelfde concepten maar bevat andere afbeeldingen om deze aantrekkelijk te maken voor verschillende studenten. Ga voor meer infomatie naar de [start pagina van Hallo Wereld.][0]",
-          "preparation": "-   Speel de puzzels om eventuele probleemgebieden voor uw klas te ontdekken.\n-   Gebruik de middelen bij [CS Connections][0] om een plan te maken voor meer lessen in informatica na de eerste tutorial. ",
-          "purpose": "Deze les heeft als doel studenten voor te bereiden op het creëren van eenvoudige programmeerprojecten in Sprite Lab. Dankzij deze vaardigheden kunnen studenten daarna projecten over elk onderwerp creëren zoals ander schoolproject of iets dat voor hen persoonlijk relevant is. Ga naar [CS Connections][0] voor ideeén over hoe informatica in andere vakken te integreren."
+          "overview": "In deze les leren studenten de basis van informatica door te programmeren in Sprite Lab. Sprite Lab is een programma dat u kunt gebruiken om fantasierijke en leuke projecten te creëren. Studenten leren hoe ze sprites kunnen creëren en deze animeren, en hoe ze deze interactief kunnen maken door middel van events. \n\nEr bestaan meerdere versies van deze les. Elke versie leert dezelfde concepten maar bevat andere afbeeldingen om deze aantrekkelijk te maken voor verschillende studenten. Ga voor meer infomatie naar de [start pagina van Hallo Wereld.](https://code.org/helloworld)",
+          "preparation": "-   Speel de puzzels om eventuele probleemgebieden voor uw klas te ontdekken.\n-   Gebruik de middelen bij [CS Connections](https://code.org/educate/csc) om een plan te maken voor meer lessen in informatica na de eerste tutorial. ",
+          "purpose": "Deze les heeft als doel studenten voor te bereiden op het creëren van eenvoudige programmeerprojecten in Sprite Lab. Dankzij deze vaardigheden kunnen studenten daarna projecten over elk onderwerp creëren zoals ander schoolproject of iets dat voor hen persoonlijk relevant is. Ga naar [CS Connections](https://code.org/educate/csc) voor ideeén over hoe informatica in andere vakken te integreren."
         },
         "hello-world-space-2022/Hello World: Food": {
           "name": "Hallo World: Space",
-          "overview": "In deze les leren studenten de basis van informatica door te programmeren in Sprite Lab. Sprite Lab is een programma dat u kunt gebruiken om fantasierijke en leuke projecten te creëren. Studenten leren hoe ze sprites kunnen creëren en deze animeren, en hoe ze deze interactief kunnen maken door middel van events. \n\nEr bestaan meerdere versies van deze les. Elke versie leert dezelfde concepten maar bevat andere afbeeldingen om deze aantrekkelijk te maken voor verschillende studenten. Ga voor meer infomatie naar de [start pagina van Hallo Wereld.][0]",
-          "preparation": "-   Speel de puzzels om eventuele probleemgebieden voor uw klas te ontdekken.\n-   Gebruik de middelen bij [CS Connections][0] om een plan te maken voor meer lessen in informatica na de eerste tutorial. ",
-          "purpose": "Deze les heeft als doel studenten voor te bereiden op het creëren van eenvoudige programmeerprojecten in Sprite Lab. Dankzij deze vaardigheden kunnen studenten daarna projecten over elk onderwerp creëren zoals ander schoolproject of iets dat voor hen persoonlijk relevant is. Ga naar [CS Connections][0] voor ideeén over hoe informatica in andere vakken te integreren."
+          "overview": "In deze les leren studenten de basis van informatica door te programmeren in Sprite Lab. Sprite Lab is een programma dat u kunt gebruiken om fantasierijke en leuke projecten te creëren. Studenten leren hoe ze sprites kunnen creëren en deze animeren, en hoe ze deze interactief kunnen maken door middel van events. \n\nEr bestaan meerdere versies van deze les. Elke versie leert dezelfde concepten maar bevat andere afbeeldingen om deze aantrekkelijk te maken voor verschillende studenten. Ga voor meer infomatie naar de [start pagina van Hallo Wereld.](https://code.org/helloworld)",
+          "preparation": "-   Speel de puzzels om eventuele probleemgebieden voor uw klas te ontdekken.\n-   Gebruik de middelen bij [CS Connections](https://code.org/educate/csc) om een plan te maken voor meer lessen in informatica na de eerste tutorial. ",
+          "purpose": "Deze les heeft als doel studenten voor te bereiden op het creëren van eenvoudige programmeerprojecten in Sprite Lab. Dankzij deze vaardigheden kunnen studenten daarna projecten over elk onderwerp creëren zoals ander schoolproject of iets dat voor hen persoonlijk relevant is. Ga naar [CS Connections](https://code.org/educate/csc) voor ideeén over hoe informatica in andere vakken te integreren."
         },
         "hero/Minecraft Hour of Code": {
           "name": "Minecraft: Heldenreis",
           "overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Deze les is uitstekend geschikt voor studenten die oud genoeg zijn (groep 1-2) om te kunnen lezen. Jongere studenten zullen de tutorial waarschijnlijk niet afronden, maar zullen de puzzels voor een uurtje wel leuk vinden. Studenten in het voortgezet onderwijs zullen meestal wel de tutorial afronden en wat tijd over hebben om het vrije speelniveau aan het einde te spelen.",
-          "preparation": "### Een week voor je Hour of Code\n\n-   Bekijk de [Hour of Code Educator Guide][0] en [Best Practices from Successful Educators][1] om te beginnen met het plannen van je Hour of Code-evenement. \n-   [Registreer je Hour of Code-evenement][2] als je ondersteuning in de klas wilt ontvangen.\n-   Bekijk en voltooi de online handleiding zelf: [Minecraft: Hero's Journey][3]\n-   Zorg ervoor dat je hem eerst test voordat je je leerlingen vraagt om hem af te maken. Controleer je technologie en beslis of je iets moet oplossen voordat je Hour of Code begint.\n\n### De dag voor de Hour of Code\n\n-   Druk een of meer van de [Exit Ticket-voorbeelden][4] aan het einde van dit lesplan af, of maak er zelf een. \n-   Elke student die de activiteit voltooit, krijgt een [certificate][5]. Print er van tevoren een voor elke student om dit makkelijker te maken aan het einde van je Hour of Code.",
+          "preparation": "### Een week voor je Hour of Code\n\n-   Bekijk de [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) en [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) om te beginnen met het plannen van je Hour of Code-evenement. \n-   [Registreer je Hour of Code-evenement](http://hourofcode.com) als je ondersteuning in de klas wilt ontvangen.\n-   Bekijk en voltooi de online handleiding zelf: [Minecraft: Hero's Journey](studio.code.org/s/hero/lessons/1/levels/1)\n-   Zorg ervoor dat je hem eerst test voordat je je leerlingen vraagt om hem af te maken. Controleer je technologie en beslis of je iets moet oplossen voordat je Hour of Code begint.\n\n### De dag voor de Hour of Code\n\n-   Druk een of meer van de [Exit Ticket-voorbeelden](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) aan het einde van dit lesplan af, of maak er zelf een. \n-   Elke student die de activiteit voltooit, krijgt een [certificate](https://studio.code.org/certificates/batch?course=bWM=). Print er van tevoren een voor elke student om dit makkelijker te maken aan het einde van je Hour of Code.",
           "purpose": "Deze les introduceert de belangrijkste informatica concepten van coderen en programmeren (met behulp van blokken), evenals eenvoudige debugging technieken en hoe functies nuttig kunnen zijn."
         },
         "hoc-encryption/Simple Encryption": {
@@ -688,10 +815,7 @@
           "overview": "In deze les maken In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgeving kennis met het programmeren en informatica. Eerst classificeren studenten objecten als \"vis' of \"niet vis\" in een poging het vuil uit de oceaan te verwijderen. Daarna moeten studenten hun dataset voor de training uitbreiden zodat ook andere zeedieren die in het water thuishoren worden inbegrepen. In het tweede deel van de activiteit, kiezen studenten hun eigen etiketten om toe te passen op willekeurig gegenereerde vissen. Deze data van de training wordt gebruik voor een model voor machinaal leren dat tegen die tijd in staat moet zijn om zelf etiketten op afbeeldingen te plakken. "
         },
         "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Een simulatie programmeren"
         },
         "playlab/Play Lab": {
           "name": "Speel Lab",
@@ -699,8 +823,8 @@
         },
         "poem-art-2021/Poem Art": {
           "name": "Poëzie",
-          "overview": "In deze geïntegreerde CS en ELA les gaan leerlingen een gedicht animeren met code om de stemming van een gedicht te illustreren. Studenten zullen leerlingen een gedicht lezen en detecteren ze de stemming ervan. Vervolgens moeten ze bijbehorende effecten en beelden vinden om de stemming van het gedicht te helpen illustreren. Ten slotte gaan de leerlingen gebeurtenissen (code) gebruiken om een verandering in stemming te illustreren of de introductie van nieuwe beelden in een gedicht te animeren. \n\nDeze les kan worden voltooid als een 1 uur durende op zichzelf staande les. Er is ook een optie om deze les te gebruiken als eerste les van de uit meerdere lessen bestaande module genaamd [Coderen met poëzie][0].",
-          "preparation": "-   Bekijk en voltooi de online handleiding zelf: [Poem Art][0].\n\n-   Probeer de activiteiten eerst uit voordat je de leerlingen vraagt ze uit te voeren. \n\n-   Controleer je technologie en bepaal of je van tevoren iets moet oplossen.\n\n-   Sommige niveaus vereisen geluid om te spelen. Deel van tevoren koptelefoons uit. \n\n-   [Optioneel] 2 post-it’s per leerling voor de beoordeling."
+          "overview": "In deze geïntegreerde CS en ELA les gaan leerlingen een gedicht animeren met code om de stemming van een gedicht te illustreren. Studenten zullen leerlingen een gedicht lezen en detecteren ze de stemming ervan. Vervolgens moeten ze bijbehorende effecten en beelden vinden om de stemming van het gedicht te helpen illustreren. Ten slotte gaan de leerlingen gebeurtenissen (code) gebruiken om een verandering in stemming te illustreren of de introductie van nieuwe beelden in een gedicht te animeren. \n\nDeze les kan worden voltooid als een 1 uur durende op zichzelf staande les. Er is ook een optie om deze les te gebruiken als eerste les van de uit meerdere lessen bestaande module genaamd [Coderen met poëzie](http://studio.code.org/s/poetry-2021).",
+          "preparation": "-   Bekijk en voltooi de online handleiding zelf: [Poem Art](http://studio.code.org/s/poem-art).\n\n-   Probeer de activiteiten eerst uit voordat je de leerlingen vraagt ze uit te voeren. \n\n-   Controleer je technologie en bepaal of je van tevoren iets moet oplossen.\n\n-   Sommige niveaus vereisen geluid om te spelen. Deel van tevoren koptelefoons uit. \n\n-   [Optioneel] 2 post-it’s per leerling voor de beoordeling."
         },
         "starwars/Hour of Code 2015": {
           "student_overview": "In deze les maken studenten van alle leeftijden in een veilige en ondersteunende omgving kennis met informatica en programmeren. Deze les bestaat uit twee versies. "
@@ -712,24 +836,6 @@
           "name": "Tekstcompressie",
           "student_overview": "Op een bepaald moment bereiken we een fysieke limiet wat betreft de snelheid van het verzenden van bits, en als we een grote hoeveelheid informatie sneller willen verzenden, dan moeten we een manier vinden om dezelfde informatie weer te geven in minder bits - we moeten de data comprimeren.  "
         },
-        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
-          "name": "Peer to Peer - Verzend Bits op een Gedeelde Lijn"
-        },
-        "netsim/Peer to Peer - Sending Numbers": {
-          "name": "Peer to Peer - Verzend Getallen"
-        },
-        "netsim/Peer to Peer - Sending Ascii": {
-          "name": "Peer to Peer - Verzend Ascii"
-        },
-        "netsim/Routers and addresses": {
-          "name": "Routers en Adressen"
-        },
-        "netsim/Manual DNS": {
-          "name": "Manuele DNS"
-        },
-        "poetry-hoc3/lesson-1": {
-          "name": "Stemmingsonderzoek"
-        },
         "allthethings/Jigsaw": {
           "name": "Legpuzzel"
         },
@@ -740,7 +846,7 @@
           "name": "Kunstenaar"
         },
         "allthethings/Bee": {
-          "name": "Bee"
+          "name": "Bij"
         },
         "allthethings/PlayLab": {
           "name": "SpeelLab"
@@ -1114,8 +1220,119 @@
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Extreme uitdaging - Omvangrijk"
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Uur van Code 2013"
+        },
         "jigsaw/Jigsaw": {
           "name": "Legpuzzel"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "Peer to Peer - Verzend Bits op een Gedeelde Lijn"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "Peer to Peer - Verzend Getallen"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "Peer to Peer - Verzend Ascii"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Routers en Adressen"
+        },
+        "netsim/Manual DNS": {
+          "name": "Manuele DNS"
+        },
+        "poetry-hoc3/lesson-1": {
+          "name": "Stemmingsonderzoek"
+        },
+        "coursec-2019/End of Course Project: Create a Play Lab Game": {
+          "name": "Project aan het einde van de cursus"
+        },
+        "coursee-2019/End of Course Project": {
+          "name": "Project aan het einde van de cursus"
+        },
+        "coursef-2019/End of Course Project": {
+          "name": "Project aan het einde van de cursus"
+        },
+        "express-2019/Build A Project": {
+          "name": "Project aan het einde van de cursus"
+        },
+        "coursec-2020/End of Course Project: Create a Play Lab Game": {
+          "name": "Project aan het einde van de cursus"
+        },
+        "coursed-2020/End of Course Project": {
+          "name": "Project aan het einde van de cursus"
+        },
+        "coursee-2020/End of Course Project": {
+          "name": "Project aan het einde van de cursus"
+        },
+        "coursef-2020/End of Course Project": {
+          "name": "Project aan het einde van de cursus"
+        },
+        "express-2020/End of Course Project": {
+          "name": "Project aan het einde van de cursus"
+        },
+        "coursea-2021/lesson-1": {
+          "name": "Project aan het einde van de cursus"
+        },
+        "courseb-2021/lesson-1": {
+          "name": "Project aan het einde van de cursus"
+        },
+        "coursec-2021/End of Course Project: Create a Play Lab Game": {
+          "name": "Project aan het einde van de cursus"
+        },
+        "coursed-2021/End of Course Project": {
+          "name": "Project aan het einde van de cursus"
+        },
+        "coursee-2021/End of Course Project": {
+          "name": "Project aan het einde van de cursus"
+        },
+        "coursef-2021/End of Course Project": {
+          "name": "Project aan het einde van de cursus"
+        },
+        "express-2021/End of Course Project": {
+          "name": "Project aan het einde van de cursus"
+        },
+        "coursea-2022/End of Course Project": {
+          "name": "Project aan het einde van de cursus"
+        },
+        "courseb-2022/End of Course Project": {
+          "name": "Project aan het einde van de cursus"
+        },
+        "coursec-2022/End of Course Project": {
+          "name": "Project aan het einde van de cursus"
+        },
+        "coursed-2022/End of Course Project": {
+          "name": "Project aan het einde van de cursus"
+        },
+        "coursee-2022/End of Course Project": {
+          "name": "Project aan het einde van de cursus"
+        },
+        "coursef-2022/End of Course Project": {
+          "name": "Project aan het einde van de cursus"
+        },
+        "express-2022/End of Course Project": {
+          "name": "Project aan het einde van de cursus"
+        },
+        "coursea-2023/End of Course Project": {
+          "name": "Project aan het einde van de cursus"
+        },
+        "courseb-2023/End of Course Project": {
+          "name": "Project aan het einde van de cursus"
+        },
+        "coursec-2023/End of Course Project": {
+          "name": "Project aan het einde van de cursus"
+        },
+        "coursed-2023/End of Course Project": {
+          "name": "Project aan het einde van de cursus"
+        },
+        "coursee-2023/End of Course Project": {
+          "name": "Project aan het einde van de cursus"
+        },
+        "coursef-2023/End of Course Project": {
+          "name": "Project aan het einde van de cursus"
+        },
+        "express-2023/End of Course Project": {
+          "name": "Project aan het einde van de cursus"
         }
       }
     }

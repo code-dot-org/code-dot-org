@@ -1234,6 +1234,12 @@
             "turtle": {
               "expressions": {
                 "arcLeft": {
+                  "content": "Ruchy żółwia nie są ograniczone do przemieszczania się po linii prostej. arcRight(kąt, promień) przesuwa żółwia zgodnie z ruchem wskazówek zegara wzdłuż łuku _kąt_ stopni okręgu wielkości _promień_. Środek okręgu jest \\_promień \\_ pikseli na prawo od początkowej pozycji żółwia i kierunku.",
+                  "examples": {
+                    "Example: Negative Angle": {
+                      "description": "arcLeft zawsze przesuwa żółwia w kierunku przeciwnym do ruchu wskazówek zegara. Dla ujemnego _angle_ żółw przesuwa się o (360+_angle_) stopni."
+                    }
+                  },
                   "palette_params": {
                     "angle": {
                       "type": "liczba"
@@ -1242,40 +1248,87 @@
                       "type": "liczba"
                     }
                   },
+                  "return_value": "Brak wartości zwracanej. Tylko przesuwa żółwia.",
                   "short_description": "Przesuwa żółwia do przodu i w lewo po gładkim, okrągłym łuku."
                 },
                 "arcRight": {
+                  "examples": {
+                    "Example: U-Turn": {
+                      "description": "Płynnie obróć żółwia."
+                    }
+                  },
                   "palette_params": {
                     "angle": {
                       "type": "liczba"
                     },
                     "radius": {
+                      "description": "Promień okręgu, który jest umieszczony po prawej stronie żółwia. promień musi być >= 0.",
                       "type": "liczba"
                     }
-                  }
+                  },
+                  "return_value": "Brak wartości zwracanej. Tylko przesuwa żółwia.",
+                  "short_description": "Przesuń żółwia do przodu i w prawo delikatnym ruchem kołowym.",
+                  "tips": "-   Użyj [penUp()](/docs/applab/penUp) przed wywołaniem arcLeft(), żeby żółw nie rysował, kiedy się porusza.\n-   Możesz ustawić promień na 0, co sprawia, że arcRight() robi to samo, co [turnRight()](/docs/applab/turnRight).\n-   Używaj na zmianę z [arcLeft()](/docs/applab/arcLeft) w celu tworzenia falistych linii."
                 },
                 "dot": {
+                  "content": "Rysowanie kropki jest jednym ze sposobów rysowania żółwiem. Istnieje wiele rzeczy, które możesz narysować za pomocą kropek i linii w połączeniu z możliwością zmiany koloru pisaka, grubości linii i promienia kropki.",
                   "palette_params": {
                     "radius": {
                       "type": "liczba"
                     }
-                  }
+                  },
+                  "tips": "-   Podczas rysowania małych kropek upewnij się, że przesuniesz lub ukryjesz żółwia, abyś mógł je zobaczyć.\n-   Narysuj ogromną kropkę, aby pokolorować ekran na jeden kolor."
+                },
+                "getDirection": {
+                  "content": "Czasami użytkownik kontroluje żółwia, a Twoja aplikacja może potrzebować informacji o tym, w jakim kierunku zwrócony jest żółw. Kierunek to liczba od 0 do 359 stopni.",
+                  "examples": {
+                    "Turning on your Command": {
+                      "description": "Obróć żółwia w losowym kierunku i wyświetl jego kierunek przy każdym kliknięciu przycisku."
+                    }
+                  },
+                  "return_value": "Zwraca liczbę całkowitą z zakresu od 0 do 359 reprezentującą kierunek, w którym zwrócony jest żółw. ",
+                  "short_description": "Zwraca bieżący kierunek, w którym zwrócony jest ten żółw. Zero stopni oznacza, że jest skierowany w górę. Kierunek zwiększa zgodnie z ruchem wskazówek zegara."
                 },
                 "getX": {
+                  "content": "Współrzędna x to odległość żółwia od lewej strony ekranu.",
                   "examples": {
                     "Am I off the screen?": {
+                      "description": "Sprawdza, czy żółw zszedł z ekranu po prawej stronie.",
                       "name": "Czy jestem poza ekranem?"
+                    },
+                    "To the Right": {
+                      "description": "Przesuń żółwia o 50 pikseli w prawo."
                     }
                   },
                   "short_description": "Pobiera aktualną współrzędną x żółwia w pikselach."
                 },
                 "getY": {
+                  "content": "Współrzędna y to odległość żółwia od górnej krawędzi ekranu.",
+                  "examples": {
+                    "Bounce the Turtle": {
+                      "description": "Niech żółw się porusza, ale odbija się od ścian, aby pozostał na ekranie.",
+                      "name": "Odbij Żółwia"
+                    }
+                  },
                   "short_description": "Pobiera aktualną współrzędną y żółwia w pikselach."
                 },
                 "hide": {
-                  "short_description": "Ukrywa żółwia na jego obecnej pozycji."
+                  "examples": {
+                    "Example: Peek-a-Boo": {
+                      "description": "Użyj przycisków, żeby ukryć i pokazać żółwia."
+                    }
+                  },
+                  "short_description": "Ukrywa żółwia na jego obecnej pozycji.",
+                  "tips": "-   [show()](/docs/applab/show) jest często używany z hide.\n-   Polecenia show() i hide() nie wpływają na umiejętność żółwia do rysowania, kontrolują tylko to, czy ikona żółwia jest wyświetlana, czy nie."
                 },
                 "move": {
+                  "content": "Niektóre rysunki łatwiej opisać przez ruchy żółwia _względem_ jego obecnej lokalizacji. W przeciwieństwie do moveForward(pixels), żółw może przesunąć się w stronę inną niż ta, w którą jest obecnie skierowany.",
+                  "examples": {
+                    "Example: Turtle Direction Irrelevant": {
+                      "description": "Narysuj tę samą linię, co w poprzednim przykładzie, ale żółw jest skierowany w inną stronę.",
+                      "name": "Przykład: Kierunek Żółwia Nieistotny"
+                    }
+                  },
                   "palette_params": {
                     "x": {
                       "description": "Liczba pikseli, o którą przesunąć żółwia w prawo.",
@@ -1285,64 +1338,91 @@
                       "description": "Liczba pikseli, o którą przesunąć żółwia w dół.",
                       "type": "liczba"
                     }
-                  }
+                  },
+                  "return_value": "Brak wartości zwracanej. Tylko przesuwa żółwia.",
+                  "short_description": "Przesuwa żółwia, dodając x pikseli do aktualnej współrzędnej x oraz y pikseli do aktualnej współrzędnej y żółwia. ",
+                  "tips": "-   Użyj [penUp()](/docs/applab/penUp) przed wywołaniem move(x,y), aby żółw nie rysował podczas ruchu.\n-   Domyślny rozmiar ekranu to 320 pikseli szerokości i 450 pikseli wysokości, ale możesz przesunąć żółwia poza ekran, wykraczając poza te wymiary.\n-   Istnieją trzy sposoby przesuwania żółwia w linii prostej:\n    -   Określ liczbę pikseli, aby przesunąć żółwia w kierunku, w którym jest skierowany korzystając z [moveForward(pixels)](/docs/applab/moveForward) lub [moveBackward(pixels)](/docs/applab/moveBackward).\n    -   Określ liczbę pikseli w kierunku x i y, aby przesunąć żółwia korzystając z move(x,y), niezależnie od kierunku, w którym żółw jest zwrócony.\n    -   Określ współrzędne x i y na ekranie, aby przesunąć żółwia korzystając z [moveTo(x,y)](/docs/applab/moveTo), niezależnie od kierunku, w którym zwrócony jest żółw.\n\n![](https://images.code.org/7de9a1ac26ad8630ebcb92e608c3803c-image-1445616750775.jpg)"
                 },
                 "moveBackward": {
+                  "content": "Czasami bardziej naturalne jest danie żółwiowi polecenia moveBackward() w linii prostej, zamiast danie żółwiowi polecenie moveForward() o ujemną liczbę pikseli.",
+                  "examples": {
+                    "Example: Parallel Park the Turtle": {
+                      "name": "Przykład: Zaparkuj Żółwiem Równolegle."
+                    }
+                  },
                   "palette_params": {
                     "pixels": {
+                      "description": "Liczba pikseli, o którą przesunąć żółwia do tyłu od jego aktualnego kierunku. Jeśli nie jest podana, żółw przesunie się naprzód o 25 pikseli",
                       "type": "liczba"
                     }
                   },
-                  "short_description": "Przesuwa żółwia do tyłu o daną ilość pikseli od aktualnego kierunku."
+                  "return_value": "Brak wartości zwracanej. Tylko przesuwa żółwia.",
+                  "short_description": "Przesuwa żółwia do tyłu o daną ilość pikseli od aktualnego kierunku.",
+                  "tips": "-   Użyj [penUp()](/docs/applab/penUp) przed wywołaniem moveBackward (), aby żółw nie rysował podczas ruchu.\n-   Domyślny rozmiar ekranu to 320 pikseli szerokości i 450 pikseli wysokości, ale możesz przesunąć żółwia poza ekran, wykraczając poza te wymiary.\n-   Istnieją trzy sposoby przesuwania żółwia w linii prostej:\n    -   Określ liczbę pikseli, aby przesunąć żółwia w kierunku, w którym jest skierowany korzystając z [moveForward(pixels)](/docs/applab/moveForward) lub moveBackward(pixels).\n    -   Określ liczbę pikseli w kierunku x i y, aby przesunąć żółwia korzystając z [move(x,y)](/docs/applab/move), niezależnie od kierunku, w którym żółw jest zwrócony.\n    -   Określ współrzędne x i y na ekranie, aby przesunąć żółwia korzystając z [moveTo(x,y)](/docs/applab/moveTo), niezależnie od kierunku, w którym zwrócony jest żółw."
                 },
                 "moveForward": {
+                  "content": "moveForward() jest najprostszym sposobem na przesunięcie żółwia w linii prostej w kierunku, w którym jest skierowany. W użyciu z turnLeft() oraz turnRight() możesz przemieszczać żółwia w dowolne miejsce lub rysować dowolne obrazy z prostych linii.",
                   "palette_params": {
                     "pixels": {
                       "type": "liczba"
                     }
                   },
+                  "return_value": "Brak wartości zwracanej. Tylko przesuwa żółwia.",
                   "short_description": "Przesuwa żółwia naprzód o daną ilość pikseli w jego aktualnym kierunku."
                 },
                 "moveTo": {
                   "palette_params": {
                     "x": {
+                      "description": "Współrzędna x na ekranie, na którą przesunąć żółwia.",
                       "type": "liczba"
                     },
                     "y": {
+                      "description": "Współrzędna y na ekranie, na którą przesunąć żółwia.",
                       "type": "liczba"
                     }
                   },
+                  "return_value": "Brak wartości zwracanej. Tylko przesuwa żółwia.",
                   "short_description": "Przesuwa żółwia na konkretne (x,y) współrzędne na ekranie."
                 },
                 "penColor": {
                   "palette_params": {
                     "color": {
+                      "description": "Kolor pióra używanego przez żółwia do rysowania linii i kropek.",
                       "type": "Łańcuch"
                     }
                   },
-                  "short_description": "Ustawia kolor pióra używanego przez żółwia do rysowania linii i kropek."
+                  "return_value": "Brak wartości zwracanej. Tylko przesuwa rysunek żółwia.",
+                  "short_description": "Ustawia kolor pióra używanego przez żółwia do rysowania linii i kropek.",
+                  "tips": "-   [`penUp()`(#4dd0e1)](/docs/applab/penUp/) powoduje, że linia nie zostanie narysowana.\n-   Polecenia [`show()`(#4dd0e1)](/docs/applab/show/) i [`hide()`(#4dd0e1)](/docs/applab/hide/) nie wpływają na polecenia rysowania, kontrolują tylko, czy ikona żółwia jest wyświetlana, czy nie.\n-   Przypomnij sobie lekcje z Rozdziału 1 na temat wartości kolorów hex i rgb i zobacz [HTML named colors](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#Color_keywords), aby uzyskać pełną listę wszystkich dostępnych kolorów.\n-   Aby losować wybór kolorów, użyj [`PenRGB(r,g,b)`(#4dd0e1)](/docs/applab/penRGB/) , który przyjmuje parametry liczbowe zamiast ciągu znaków."
                 },
                 "penDown": {
+                  "return_value": "Brak wartości zwracanej. Tylko przesuwa rysunek żółwia.",
                   "short_description": "Opuszcza pióro, aby żółw rysował linię podczas ruchu."
                 },
                 "penRGB": {
                   "palette_params": {
                     "a": {
+                      "description": "Przezroczystość, wartość pomiędzy 0.0 (w pełni przezroczysty) a 1.0 (nieprzezroczysty) koloru używanego przez żółwia do rysowania linii i kropek. Domyślnie to 1.0.",
                       "type": "liczba"
                     },
                     "b": {
+                      "description": "Ilość koloru niebieskiego (wartość od 0 do 255) w piórze używanym przez żółwia do rysowania linii i kropek. ",
                       "type": "liczba"
                     },
                     "g": {
+                      "description": "Ilość koloru zielonego (wartość od 0 do 255) w piórze używanym przez żółwia do rysowania linii i kropek. ",
                       "type": "liczba"
                     },
                     "r": {
+                      "description": "Ilość koloru czerwonego (wartość od 0 do 255) w piórze używanym przez żółwia do rysowania linii i kropek. ",
                       "type": "Liczba"
                     }
                   },
+                  "return_value": "Brak wartości zwracanej. Tylko przesuwa rysunek żółwia.",
                   "short_description": "Używając wartości RGBA, ustawia kolor pióra używanego przez żółwia do rysowania linii i kropek."
                 },
                 "penUp": {
+                  "return_value": "Brak wartości zwracanej. Tylko przesuwa rysunek żółwia.",
                   "short_description": "Podnosi pióro, aby żółw nie rysował linii podczas ruchu."
                 },
                 "penWidth": {
@@ -1351,9 +1431,15 @@
                       "type": "liczba"
                     }
                   },
+                  "return_value": "Brak wartości zwracanej. Tylko przesuwa rysunek żółwia.",
                   "short_description": "Ustawia szerokość linii w pikselach, którą żółw rysuje podczas ruchu."
                 },
                 "show": {
+                  "examples": {
+                    "Example: Peek-a-Boo": {
+                      "description": "Użyj przycisków, żeby ukryć i pokazać żółwia."
+                    }
+                  },
                   "short_description": "Sprawia, że żółw jest widoczny w obecnym miejscu."
                 },
                 "speed": {
@@ -1396,9 +1482,11 @@
                   "content": "Tworzy na ekranie przycisk wyświetlający podany _text_ i do którego odwołuje się dane _id_ na domyślnej pozycji (0,0).\n\nWiele aplikacji używa przycisków, aby pozwolić użytkownikowi zainicjować niektóre działania aplikacji. Kontroler zdarzeń musi zostać stworzony na każdy rodzaj interakcji użytkownika z przyciskiem używając [`onEvent()`(#fff176)](/docs/applab/onEvent/) oraz _id_.",
                   "examples": {
                     "Example: Simple Turtle Control 1": {
+                      "description": "Przesuń żółwia do przodu za każdym wciśnięciem przycisku.",
                       "name": "Przykład: Proste sterowanie żółwiem 1"
                     },
                     "Example: Simple Turtle Control 2": {
+                      "description": "Przesuń żółwia do przodu lub do tyłu w zależności od wciśniętego przycisku.",
                       "name": "Przykład: Proste sterowanie żółwiem 2"
                     }
                   },
@@ -1413,17 +1501,38 @@
                   "short_description": "Tworzy na ekranie przycisk wyświetlający podany tekst i do którego odwołuje się przez dany id, na domyślnej pozycji (0,0)."
                 },
                 "checkbox": {
+                  "examples": {
+                    "Example: Checkbox Click Event": {
+                      "description": "Pobierz i wyświetl wartość pola wyboru."
+                    },
+                    "Example: Privacy Statement": {
+                      "name": "Przykład: Oświadczenie o ochronie prywatności"
+                    }
+                  },
                   "palette_params": {
                     "checked": {
                       "description": "Czy pole wyboru jest początkowo zaznaczone.",
                       "type": "wartość logiczna"
+                    },
+                    "id": {
+                      "description": "Unikalny identyfikator elementu ekranu. Musi zaczynać się literą, nie zawierać spacji, może zawierać litery, cyfry, - oraz \\_. |"
                     }
-                  }
+                  },
+                  "short_description": "Tworzy na ekranie pole wyboru z początkowo określoną wartością logiczną checked i do którego odwołuje się przez dany id, na domyślnej pozycji (0,0)."
                 },
                 "deleteElement": {
                   "examples": {
                     "Delete on Click": {
                       "name": "Usuń po Kliknięciu"
+                    },
+                    "Squash the ant swarm!": {
+                      "description": " Mrówki będą losowo pojawiać się na ekranie co sekundę przez minutę. Kliknij mrówkę, aby ją zgnieść i usunąć z ekranu.",
+                      "name": "Zgnieć rój mrówek!"
+                    }
+                  },
+                  "palette_params": {
+                    "id": {
+                      "description": "ID elementu interfejsu użytkownika, do którego odwołuje się ten kontroler zdarzeń. Musi zaczynać się literą, nie zawierać spacji, może zawierać litery, cyfry, - oraz \\_."
                     }
                   },
                   "short_description": "Usuwa element o podanym id."
@@ -1474,6 +1583,7 @@
                     }
                   },
                   "return_value": "Zwraca ciąg znaków zawierający url obrazka dla danego id.",
+                  "short_description": "Pobiera adres URL dla danego id elementu obrazka.",
                   "tips": "-   Zwrócony ciąg zawiera URL obrazka. Na przykład zwraca http\\:// code.org/images/logo.png jako https\\:// studio.code.org/media?u=http%3A%2F%2Fcode.org%2Fimages%2Flogo.png"
                 },
                 "getNumber": {
@@ -1487,6 +1597,7 @@
                       "description": "Unikalny identyfikator elementu ekranu. Musi zaczynać się literą, nie zawierać spacji, może zawierać litery, cyfry, - oraz \\_."
                     }
                   },
+                  "return_value": "Liczba zawierająca zawartość elementu ekranu.",
                   "short_description": "Pobiera liczbę z określonego elementu ekranu."
                 },
                 "getProperty": {
@@ -1524,8 +1635,14 @@
                       "name": "Czy jestem poza ekranem?"
                     }
                   },
+                  "palette_params": {
+                    "id": {
+                      "description": "ID elementu interfejsu użytkownika, którego znajduje pozycję x. Musi zaczynać się literą, nie zawierać spacji, może zawierać litery, cyfry, - oraz \\_."
+                    }
+                  },
                   "return_value": "Zwraca liczbę reprezentującą bieżącą współrzędną x w pikselach elementu interfejsu użytkownika w wyświetlaczu aplikacji.",
-                  "short_description": "Pobiera pozycję x elementu."
+                  "short_description": "Pobiera pozycję x elementu.",
+                  "tips": "-   Domyślny rozmiar ekranu to 320 pikseli szerokości i 450 pikseli wysokości, ale możesz przenieść element interfejsu użytkownika poza ekran, wykraczając poza te wymiary.\n-   Element interfejsu użytkownika można przesunąć poza ekran, zatem \\_getXPosition () \\_ może zwrócić liczbę ujemną, jeśli element znajduje się poza ekranem po lewej stronie, a \\_getXposition () \\_ może zwrócić liczbę większą niż 320, jeśli element jest poza ekranem po prawej stronie.\n\n<img src='https://images.code.org/7de9a1ac26ad8630ebcb92e608c3803c-image-1445616750775.jpg'>"
                 },
                 "getYPosition": {
                   "examples": {
@@ -1533,14 +1650,26 @@
                       "description": "Sprawdź, czy logo zostało wyświetlone zbyt blisko dolnej krawędzi.",
                       "name": "Czy jestem poza ekranem?"
                     }
+                  },
+                  "palette_params": {
+                    "id": {
+                      "description": "ID elementu interfejsu użytkownika, którego znajduje pozycję x. Musi zaczynać się literą, nie zawierać spacji, może zawierać litery, cyfry, - oraz \\_."
+                    }
                   }
                 },
                 "hideElement": {
                   "examples": {
                     "Blinking": {
-                      "description": " Spraw, by logo Code.org migotało."
+                      "description": " Spraw, by logo Code.org migotało.",
+                      "name": "Miganie"
                     }
                   },
+                  "palette_params": {
+                    "id": {
+                      "description": " ID elementu interfejsu użytkownika, do którego odwołuje się ten kontroler zdarzeń. Musi zaczynać się literą, nie zawierać spacji, może zawierać litery, cyfry, - oraz \\_. "
+                    }
+                  },
+                  "return_value": "Brak wartości zwracanej. Modyfikuje tylko wyświetlanie.",
                   "tips": "-   [showElement](/applab/docs/showElement) jest często używany z hideElement."
                 },
                 "image": {
@@ -1658,6 +1787,9 @@
                   "palette_params": {
                     "checked": {
                       "type": "wartość logiczna"
+                    },
+                    "id": {
+                      "description": "Unikalny identyfikator elementu ekranu. Musi zaczynać się literą, nie zawierać spacji, może zawierać litery, cyfry, - oraz \\_. |"
                     }
                   }
                 },
@@ -1688,6 +1820,9 @@
                   "palette_params": {
                     "height": {
                       "type": "liczba"
+                    },
+                    "id": {
+                      "description": "ID elementu interfejsu użytkownika, do którego odwołuje się ten kontroler zdarzeń. Musi zaczynać się literą, nie zawierać spacji, może zawierać litery, cyfry, - oraz \\_."
                     },
                     "width": {
                       "type": "liczba"
@@ -1721,6 +1856,9 @@
                     "height": {
                       "type": "liczba"
                     },
+                    "id": {
+                      "description": "ID elementu interfejsu użytkownika, do którego odwołuje się ten kontroler zdarzeń. Musi zaczynać się literą, nie zawierać spacji, może zawierać litery, cyfry, - oraz \\_."
+                    },
                     "width": {
                       "type": "liczba"
                     }
@@ -1739,6 +1877,16 @@
                   }
                 },
                 "showElement": {
+                  "examples": {
+                    "Blinking": {
+                      "name": "Miganie"
+                    }
+                  },
+                  "palette_params": {
+                    "id": {
+                      "description": "ID elementu interfejsu użytkownika, do którego odwołuje się ten kontroler zdarzeń. Musi zaczynać się literą, nie zawierać spacji, może zawierać litery, cyfry, - oraz \\_."
+                    }
+                  },
                   "short_description": "Pokazuje element  o podanym id."
                 },
                 "textInput": {

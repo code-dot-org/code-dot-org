@@ -65,6 +65,6 @@ class FeatureModeController < ApplicationController
   # so there is no guarantee the mode will eventually equal the pending mode.)
   private def pending_mode_expired?
     @expired = session[:pending_mode_time].nil? ||
-         (Time.now.to_i > session[:pending_mode_time] + MAX_UPDATE_TIME)
+      (Time.now.to_i > session[:pending_mode_time] + MAX_UPDATE_TIME)
   end
 end

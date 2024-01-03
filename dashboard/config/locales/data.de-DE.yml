@@ -844,6 +844,7 @@ de:
         c_and_c_digital_sharing: Digitale Teilhabe
         c_and_c_great_to_create: Es ist großartig etwas zu erschaffen und fair zu
           spielen
+        code-break: Mache eine Programmierpause
         codebreak_e01: 'Code Break 1.0: Algorithmen mit Hill Harper'
         codebreak_e02: 'Code Break 2.0: Prototypen mit Mark Cuban und Lyndsey Scott'
         codebreak_e03: 'Code Break 3.0: Verschlüsselung mit Ashton Kutcher and Mia
@@ -962,6 +963,7 @@ de:
         csd_gamelab_velocity: Geschwindigkeit
         csd_how_teamwork_works: Wie Teamarbeit funktioniert
         csd_ml_ethics_ai: 'Ethik und KI '
+        csd_ml_how_ai_works: So funktioniert KI
         csd_ml_import_model: Importieren eines KI-Modells
         csd_ml_intro_ai_lab_july2021: Einführung in das KI-Spielelabor
         csd_ml_intro_to_ai_lab: Einführung in das KI-Spielelabor
@@ -1037,6 +1039,7 @@ de:
         hint_videos_d_11_7_last: 'Hinweisvideo: D.11.7 zuletzt'
         hint_videos_d_11_9_first: 'Hinweisvideo: D.11.9 zuerst'
         hint_videos_d_11_9_last: 'Hinweisvideo: D.11.9 zuletzt'
+        hoc-dance-ai-warmup: 'Tanzparty KI-Edition: Aufwärmen'
         hoc_dance_congrats: Tanzparty - Los geht's!
         hoc_dance_congrats_2019: Tanzparty 2019-Party an!
         hoc_dance_events: Tanzparty - Ereignisse
@@ -1141,6 +1144,7 @@ de:
         u7-libraries-explanation: 'App Lab: Baue deine eigenen Blöcke - wie du Bibliotheken
           benutzen kannst'
         upload_sprites_backgrounds: Hochladen benutzerdefinierter Sprites und Hintergründe
+        what-is-creativity: Was ist Kreativität?
         what_is_an_event: Was ist ein Ereignis?
         what_is_cs: Was ist Informatik?
         why-should-teach-unplugged-activities: 'FAQ: Warum sollte ich "unplugged"-Aktivitäten

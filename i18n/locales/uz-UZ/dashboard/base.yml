@@ -53,6 +53,7 @@ uz:
         gender: 'Jinsi'
         edit_header: 'Foydalanuvchi ma''lumotlarini tahrirlash'
         finish_sign_up_header: 'Hisob qaydnomangizni yaratishni yakunlang'
+        finish_sign_up_header_error: 'Iltimos, quyidagi xatolarni to‘g‘rilang:'
         finish_sign_up_subheader: '<strong>%{email} </strong> uchun Code.org hisob qaydnomasini yaratishni tugatish uchun quyidagi ma''lumotlarni to''ldiring.'
         finish_sign_up_subheader_markdown: '**%{email}**  uchun Code.org hisob qaydnomasini yaratishni tugatish uchun quyidagi ma''lumotlarni to''ldiring.'
         finish_sign_up_subheader_provider: '<strong>%{provider}</strong> bilan <strong>%{email} </strong> uchun Code.org hisob qaydnomasini yaratishni tugatish uchun quyidagi ma''lumotlarni to''ldiring.'
@@ -60,6 +61,7 @@ uz:
         reset_password_token: "Siz kirib o'tgan parolni qayta tiklash uchun havola"
         error:
           future: yaqin orada bo`la olmaydi
+        user_type: 'Hisob (Akkaunt) Turi'
         us_state: 'Davlat'
   beta: "beta"
   hello: "Salom Dunyo"
@@ -1271,4 +1273,3 @@ uz:
     binary: "Binarli"
     hexadecimal: "O'n oltilik"
     pixel_format_header: "Piksel formati"
-

@@ -4,6 +4,18 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "announcements": [
+        {
+          "key": "b26da358-97d1-4078-b70a-8f7780c199d4",
+          "notice": "Free Teacher Resources from Amazon Future Engineer",
+          "details": "Code.org has partnered with Amazon Future Engineer to offer teachers at underserved schools a growing number of resources and benefits at no cost! ",
+          "link": "code.org/afe",
+          "type": "bullhorn",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Get free resources"
+        }
+      ],
       "curriculum_umbrella": "CSF",
       "has_lesson_plan": true,
       "hideable_lessons": true,
@@ -20,7 +32,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2023-08-08 17:54:31 UTC",
+    "serialized_at": "2023-11-20 21:01:05 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -3707,7 +3719,7 @@
       "key": "ec43a320-7581-4c0d-b1f8-03f555c407c5",
       "position": 1,
       "properties": {
-        "description": "To build on the skills you learned in CS Fundamentals Course E, click [here](https://code.org/maker/csf-microbit) to check out Extension Lessons with the micro:bit. These [4 micro:bit lessons](https://code.org/maker/assets/CSF-Booklet-Course-E-v5.pdf) cover the following topics: Meet your micro:bit, Events, Impacts of computing, Designing for\nAccessibility, Loops, Conditionals: (if...then), and Functions.\n",
+        "description": "To build on the skills you learned in CS Fundamentals Course E, [click here to check out Extension Lessons with the micro:bit](https://code.org/maker/csf-microbit). These 4 micro:bit lessons cover the following topics: Meet your micro:bit, Events, Impacts of computing, Designing for\nAccessibility, Loops, Conditionals: (if...then), and Functions.\n",
         "name": "Extension Lessons with the micro:bit"
       },
       "seeding_key": {
@@ -3998,14 +4010,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "coursee_helloworld_introtosprites_2023"
+          "CourseE_video_introSpriteLab_2023"
         ],
         "progression": "Video: Hello World: Welcome to Sprite Lab"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "coursee_helloworld_introtosprites_2023"
+          "CourseE_video_introSpriteLab_2023"
         ],
         "lesson.key": "Hello World",
         "lesson_group.key": "csf_sprites",
@@ -4013,7 +4025,7 @@
         "activity_section.key": "78d3474c-3d24-4a0d-bd7a-13e545346178"
       },
       "level_keys": [
-        "coursee_helloworld_introtosprites_2023"
+        "CourseE_video_introSpriteLab_2023"
       ]
     },
     {
@@ -7304,9 +7316,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "coursee_helloworld_introtosprites_2023",
+        "level.key": "CourseE_video_introSpriteLab_2023",
         "script_level.level_keys": [
-          "coursee_helloworld_introtosprites_2023"
+          "CourseE_video_introSpriteLab_2023"
         ],
         "lesson.key": "Hello World",
         "lesson_group.key": "csf_sprites",

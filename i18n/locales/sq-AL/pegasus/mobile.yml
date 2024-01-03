@@ -400,7 +400,7 @@
   starwars_javascript_title: "JavaScript"
   starwars_javascript_description: "Përdor blloqe me tërheqje-lëshim dhe JavaScript."
   starwars_javascript_specs: "Vetëm në gjuhën Angleze | Browserët modern | Moshat 11+"
-  starwars_blocks_title: "Blloqet"
+  starwars_blocks_title: "Kutia e blloqeve"
   starwars_blocks_description: "Përdor blloqet me tërheqje-lëshim."
   starwars_blocks_specs: "Shumë gjuhë | Browserët modern, telefonat e mençur, tableta | Moshat 6-106"
   starwars_platform_text: "Browserat e kohës, smartphones, tableta"
@@ -453,8 +453,6 @@
   volunteer_engineer_submission_title: "Frymëzo nxënësit dhe vullnetarizo"
   volunteer_engineer_submission_subtitle_generic: '100,000 mësues do të organizojnë një Orë të Kodimit në klasën e tyre këtë vit. më 7-13 dhjetor 2015. Ata duan ndihmën tënde! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} e mësuesve kanë nevojë për vullnetarë.<br>%{num_volunteers} vullnetarë janë regjistruar. Bashkoju atyre."
-  volunteer_engineer_submission_intro_signup: "Ju lutemi shkruani të dhënat e mëposhtme në qoftë se jeni student i shkencës kompjuterike ose profesionist i software. Fushat e shënuara me një<span class=\"form-required-field\">*</span>janë të domosdoshme."
-  volunteer_engineer_submission_intro_links: "Keni nevojë të gjeni vullnetarë? Gjej një vullnetar vendor në hartën tonë<a href=\"%{volunteer_local}\">të vullnetarëve</a>."
   volunteer_engineer_submission_field_name: "Emri"
   volunteer_engineer_submission_field_name_placeholder: "Emri i plotë"
   volunteer_engineer_submission_field_company: "Firma (ose Universiteti)"
@@ -568,7 +566,7 @@
   dashboard_navigation_view_progress: "Ecuri"
   dashboard_navigation_view_assessments: "Vlerësimet"
   dashboard_navigation_add_students: "Shto Studentë"
-  dashboard_navigation_manage_students: "Menaxho Studentët"
+  dashboard_navigation_manage_students: "Menaxho nxënësit"
   dashboard_navigation_lesson_plans_resources: "Planet Mësimore dhe Burimet"
   dashboard_navigation_view_stats: "statistikat"
   dashboard_navigation_section: 'Seksioni: %{section_name}'
@@ -587,7 +585,7 @@
   dashboard_sections_table_secret: "Mënyra e logimit"
   dashboard_sections_table_grade: "Notë"
   dashboard_sections_table_course: "Kurs"
-  dashboard_sections_table_pairing_allowed: "Programim në çift"
+  dashboard_sections_table_pairing_allowed: "Programimi në ekip"
   dashboard_sections_table_students: "Studentët"
   dashboard_sections_table_code: "Pjesë Kodi"
   dashboard_sections_name: 'Emri Seksionit'
@@ -655,6 +653,8 @@
   dashboard_puzzle: "Enigmë"
   dashboard_question: "Pyetje"
   dashboard_correctness_correct: "E saktë"
+  dashboard_submission_submitted: "Dorëzuar"
+  dashboard_submission_in_progress: "Në proces"
   stats_hoc_2013_heading: 'Statistika mahnitëse nga Ora e Kodimit e vitit të kaluar. Në vetëm një javë:'
   stats_hoc_2013_image_alt: "Statistikat nga Ora e Kodimit 2013"
   dashboard_teacher: "Mësues"
@@ -756,13 +756,27 @@
   course2_name: "Kursi 2"
   course3_name: "Kursi 3"
   course4_name: "Kursi 4"
+  coursea-draft_name: Kursi A
+  coursea_name: "Kursi A"
+  coursec-draft_name: Kursi C
+  coursec_name: "Kursi C"
+  coursea-2018_name: Kursi A (2018)
+  courseb-2018_name: Kursi B (2018)
+  coursea-2019_name: Kursi A (2019)
+  courseb-2019_name: Kursi B (2019)
+  coursea-2020_name: Kursi A (2020)
+  coursea-2021_name: Kursi A (2021)
   courseb-2021_name: Kursi B (2021)
+  coursec-2021_name: Kursi C (2021)
+  coursed-2021_name: Kursi D (2021)
+  coursef-2021_name: Kursi F (2021)
   coursea-2022_name: Kursi A (2022)
   courseb-2022_name: Kursi B (2022)
   coursec-2022_name: Kursi C (2022)
   coursed-2022_name: Kursi D (2022)
   coursee-2022_name: Kursi E (2022)
   coursef-2022_name: Kursi F (2022)
+  express-2021_name: Kursi Express (2021)
   express-2022_name: Kursi Express (2022)
   accelerated_name: "Kurs i Avancuar"
   20-hour_name: Kurs i Avancuar
@@ -771,6 +785,7 @@
   iceage_name: "Epoka e Akullnajave"
   minecraft_name: "Minecraft"
   applab_name: "Laboratori i Aplikacioneve"
+  gamelab_name: "Game Lab"
   basketball_name: "Realizo një lojë basketbolli"
   sports_name: "Krijo lojën tënde sportive"
   applab_gradelevel: "Moshat 13 +"
@@ -959,6 +974,12 @@
   playlab_shortdescription: "Krijo një histori ose bëj një lojë me Play Lab!"
   infinity_shortdescription: "Perdorni laboratorin e lojrave per te krijuar nje histori ose pafundesi personazhesh Disney."
   artist_shortdescription: "Vizato figura të hatashme dhe dizenjo me Artistin!"
+  coursea-2020_shortdescription_congrats: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
+  courseb-2020_shortdescription_congrats: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
+  coursea-2021_shortdescription_congrats: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
+  courseb-2021_shortdescription_congrats: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
+  coursea-2022_shortdescription_congrats: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
+  courseb-2022_shortdescription_congrats: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
   codeorg_longdescription: "Mëso konceptet bazë të Shkencës Kompjuterike me programimin drag dhe drop. Kjo është një lojë, tutorial i vetë drejtuar që paraqet leksione në video nga Bill Gates, Mark Zuckerberg, Angry Birds dhe Plants vs. Zombies. Mëso ciklet e përsëritur, kushtet dhe algoritmet bazë. E mundësuar ne 34 gjuhë."
   codeintl_longdescription: "Mëso konceptet bazë të Shkencës Kompjuterike me programimin drag dhe drop. Kjo është një lojë, tutorial i vetë drejtuar që paraqet leksione në video nga Bill Gates, Mark Zuckerberg, Angry Birds dhe Plants vs. Zombies. Mëso ciklet e përsëritur, kushtet dhe algoritmet bazë. E mundësuar ne 34 gjuhë."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."
@@ -1191,33 +1212,60 @@
   flappy_shortcode: "përplas flatrat"
   header_my_dashboard: "Paneli im"
   header_courses: "Kurset"
-  header_course_catalog: "Katalogu i kursit"
+  header_course_catalog: "Katalogu i kurseve"
   header_project_gallery: "Projekte"
   header_sections: "Seksionet"
+  header_professional_learning: "Mësimi Profesional"
+  header_educate_overview: "Pasqyra e edukatorit"
+  header_educate_elementary: "Shkolla Fillore"
+  header_educate_middle: "Shkolla e Mesme e ultë"
+  header_educate_high: "Shkolla e Mesme e lartë"
   header_educate_hoc: "Ora e Kodimit"
+  header_educate_partner: "Partner me ne"
+  header_educate_beyond: "Përtej Code.org"
+  header_educate_inspire: "Frymëzoni një student"
+  header_educate_community: "Komuniteti Online"
+  header_educate_tools: "Veglat dhe Videot"
+  header_about_us: "Rreth nesh"
+  header_about_leadership: "Udhëheqja"
+  header_about_donors: "Donatorët"
+  header_about_partners: "Partnerët"
+  header_about_team: "Ekipi i plotë"
+  header_about_news: "Redaksia"
+  header_about_evaluation: "Vlerësim"
+  header_about_jobs: "Karriera"
+  header_about_contact: "Na kontaktoni"
+  header_about_faqs: "(FAQ) Pyetjet e shpeshta"
   header_learn: "Mëso"
+  header_teach: "Mësoni"
   header_stats: "statistikat"
-  header_help_us: "Na Ndihmo"
+  header_help_us: "Na ndihmoni"
   header_about: "Rreth"
+  header_incubator: "Inkubatori"
   header_report_bug: "Raporto një problem"
+  header_report_abuse: "Raporto abuzim"
   header_legal: "Privatësia & Ligjore"
   header_legal_privacy: "Rregullat e Privatësisë"
+  header_legal_cookie_notice: "Njoftim për Cookie"
   header_legal_tos: "Kushtet e shërbimit"
+  header_tutorials: "Tutoriale"
   user_header_label: "Përshëndetje %{username}"
   user_header_team: "Skuadra"
   user_header_my_projects: "Projektet e mia"
   user_header_settings: "Llogaria ime"
   user_header_logout: "Dil"
-  user_header_signin: "Futu"
+  user_header_signin: "Kyçu"
   user_header_create: 'Krijo '
   user_header_applab: 'Laboratori i Aplikacioneve '
   user_header_artist: 'Artisti '
+  user_header_gamelab: "Game Lab"
   user_header_playlab: "Play Lab"
   user_header_dance: "Festë vallëzimi"
   user_header_spritelab: "Sprite Lab"
   user_header_minecraft: "Minecraft"
   user_header_flappy: "Flappy"
   user_header_view_all: "Shiko të gjitha projektet..."
+  view_all_sections: "Shiko të gjitha sesionet"
   applab_tile_start_tutorial: "Fillo"
   aquatic_name: 'Minecraft: Udhëtimi ujor'
   account_sign_up_email_opt_in: "A mund t'ju dërgojmë email-e mbi përditësimin e kurseve tona, mundësitë lokale apo të rejat e shkencave kompjuterike? (afërsisht një herë në muaj)"
@@ -1248,17 +1296,21 @@
   hoc2018_dance_party_main_heading: "Festë vallëzimi"
   hoc2018_dance_party_box_title: "Festë vallëzimi"
   hoc2018_dance_party_button: "Fillo"
+  hoc2018_dance_keep_on_dancing_box_title: "Vazhdoni të kërceni"
   hoc2018_dance_teacher_resources_tile1_button: "Plani Mësimor"
   hoc2018_dance_teacher_resources_tile2_button: "Aktiviteti Unplugged"
   hoc2018_dance_amazon_about_future_engineer_button: "Mëso më shumë"
   footer_powered_by_aws: "Mundësuar nga Amazon Web Services"
   footer_built_on_github: "E ndërtuar në GitHub nga Microsoft"
+  codebytes_skinny_banner_english_only: "Vetëm në anglisht"
   footer_privacy_policy: "Rregullat e Privatësisë"
   footer_about: "Rreth"
+  footer_partners: "Partnerët"
   footer_donate: "Dhuro"
   footer_store: "Dyqani"
   footer_support: "Ndihma dhe Komuniteti"
   footer_terms: "Termat"
+  ai_for_oceans: "IA për oqeanet"
   ai_for_oceans_lesson_plan: "plani mësimor"
   ai_activity: "Aktiviteti"
   ai_description: "Përshkrimi"

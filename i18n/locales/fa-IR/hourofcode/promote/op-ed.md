@@ -4,44 +4,44 @@ title: نمونه OP-ED حامی هفته آموزش علوم کامپیوتر �
 
 {{ signup_button }}
 
-# Write an op-ed in support of Computer Science Education Week
+# در حمایت از هفته آموزش علوم کامپیوتر، مقاله ای بنویسید
 
-### Below is a sample op-ed supportive of Computer Science Education Week–and its goals–that can be used by state and local legislators, business leaders, and more.
+### در زیر نمونه ای از مقاله حمایت از هفته آموزش علوم کامپیوتر و اهداف آن آورده شده است که می تواند توسط قانونگذاران استانی و محلی، رهبران کسب و کار و موارد دیگر مورد استفاده قرار گیرد.
 
-### Visit [advocacy.code.org]({{ urls/advocacy }}) to find state specific information about computer science.
+### برای یافتن اطلاعات خاص استان در مورد علوم کامپیوتر،</a> از advokacy.code.org دیدن کنید.</h3> 
 
 * * *
 
-#### Title: Computing…Where the Jobs Are
+#### عنوان: محاسبات ... جایی که مشاغل هستند
 
-#### By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]
+#### توسط [NAME] و [به همکاری با مربی، سرپرست یا رهبر تجاری توجه کنید]
 
-Computers are everywhere. They’re in our pockets. They’re on our walls. They’re in our cars. They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. And all of these computers have one thing in common. They depend on software to tell them what to do.
+کامپیوترها همه جا هستند. اونا تو جیب ما هستن آنها روی دیوارهای ما هستند. آنها در ماشین های ما هستند. آنها بخش مهمی از زیرساخت های ما هستند، از شبکه های برق گرفته تا چراغ های راهنمایی و عملکرد داخلی بازارهای مالی ما. و همه این کامپیوترها یک چیز مشترک دارند. آنها به نرم‌افزار وابسته هستند تا به آنها بگوید چه کاری انجام دهند.
 
-But who exactly is going to write this software?
+اما دقیقا کی قصد دارد این نرم‌افزار را بنویسد؟
 
-Considering how fast our world is being transformed by technology, you might expect the number of students studying computer science in K-12 education today to be at an all-time high. You’d be wrong. In fact, fewer students are studying computer science, and fewer schools are teaching it, than a decade ago.
+با توجه به سرعت تغییر دنیای ما توسط فناوری، ممکن است انتظار داشته باشید که تعداد دانش آموزانی که در حال تحصیل علوم کامپیوتر در آموزش K-12 هستند امروز به بالاترین حد خود برسد. تو اشتباه ميکني. در حقیقت، نسبت به یک دهه پیش، دانش‌آموزان کمتری در حال تحصیل در رشته کامپیوتر هستند و مدارس کمتری آن را آموزش می‌دهند.
 
-At a time when demand for skilled programmers has never been higher, we’re turning out fewer computer scientists. Even in this time of high unemployment, thousands of jobs, many of them right here in **[INSERT STATE/CITY]**, are going unfilled for lack of enough individuals with the right skill sets.
+در زمانی که تقاضا برای برنامه نویسان ماهر هرگز بیشتر نبوده است، دانشمندان کامپیوتر کمتری پیدا می کنیم. حتی در این دوران بیکاری بالا، هزاران شغل، که بسیاری از آنها در اینجا در **[INSERT STATE/CITY]** هستند، به دلیل کمبود افراد کافی با مجموعه مهارت‌های مناسب، پر نمی‌شوند.
 
-Why is this? And how can we address it?
+چرا این هست؟ و چطور میتوانیم به آن بپردازیم؟
 
-The problem begins in our middle and high schools. Nine out of ten of our schools do not offer computer programming classes. In **[SCHOOL DISTRICT]** last year, only **[NUMBER]** students took the college-level Advanced Placement (AP) Computer Science Exam, just **[%]** of all students who took an AP in our state. We’re simply not doing enough to prepare or encourage our students to pursue these high-paying, vital careers.
+مشکل از مدارس راهنمایی و دبیرستان ما شروع می شود. از هر ده مدرسه ما نه مدرسه کلاس برنامه نویسی کامپیوتر برگزار نمی کنند. در **[SHOOL DISTRICT]** سال گذشته، فقط **[NUMBER]** دانش‌آموز در آزمون علوم رایانه (AP) در سطح کالج شرکت کردند، فقط **[%]</ strong> از همه دانشجویانی که در ایالت ما AP گرفتند. ما حقیقتا به اندازه کافی برای آماده‌سازی یا تشویق دانش آموزانمان برای دنبال کردن این مشاغل پردرآمد و حیاتی کاری انجام نمی دهیم.</p> 
 
-Nearly all major computing innovations were invented here in this country, but we’re at risk of losing that leadership if we don’t do something now.
+تقریباً تمام نوآوری‌های محاسباتی مهم در اینجا در این کشور اختراع شده‌اند، اما اگر اکنون کاری انجام ندهیم، در معرض خطر از دست دادن این رهبری هستیم.
 
-We need to make some changes.
+ما باید تغییراتی ایجاد کنیم.
 
-**[OPTIONAL FOR STATES WHERE THIS APPLIES]**
+**[اختیاری برای کشورهایی که این مورد در آنها اعمال می‌شود]**
 
-One positive change would be to allow rigorous computer science courses to satisfy a high school math or science graduation requirement. In **[INSERT STATE]**, computer science courses are electives. Given academic demands, students cannot afford to take elective computer science courses. And making this change can have a big impact. In states where computer science courses count toward graduation requirements, courses are fifty percent larger with much higher rates of participation by underserved minorities than states that treat computer science as an elective.
+یک تغییر مثبت می تواند اجازه دادن به دوره های دقیق علوم کامپیوتر برای برآورده کردن نیازهای فارغ التحصیلی ریاضی یا علوم دبیرستان باشد. در **[INSERT STATE]**، دروس علوم کامپیوتر انتخابی هستند. با توجه به خواسته های دانشگاهی،دانش آموزان نمی توانند دروس انتخابی علوم کامپیوتر را بگذرانند. و ایجاد این تغییر می‌تواند تأثیر زیادی داشته باشد. در ایالت هایی که دوره های علوم کامپیوتر جزو الزامات فارغ التحصیلی محسوب می شوند، دوره ها پنجاه درصد بیشتر با نرخ مشارکت بسیار بالاتر هستند که توسط اقلیت های ضعیف نسبت به ایالت هایی که علوم کامپیوتر را به عنوان یک درس انتخابی تلقی می کنند.
 
-We should also work with students at a young age to spark their interest in computer science and coding. Our children should not just know how to use apps and play video games – they should know how to create them. Children can learn the basics of coding as early as the second grade.
+ما همچنین باید با دانش آموزان در سنین پایین کار کنیم تا علاقه آنها را به علوم کامپیوتر و کدنویسی افزایش دهیم. کودکان ما نباید فقط نحوه استفاده از برنامه ها و بازی های ویدیویی را بدانند، بلکه باید بدانند که چگونه آنها را بسازند. کودکان می توانند از ابتدای کلاس دوم اصول کدنویسی را یاد بگیرند.
 
-We need to recruit more computer science teachers and encourage professional development within their field. Today there are many online resources that can help teachers access and keep up to date with the latest technology for their students.
+ما باید معلمان علوم کامپیوتر بیشتری را جذب کنیم و توسعه حرفه ای را در حوزه آنها تشویق کنیم. امروزه منابع آنلاین زیادی وجود دارد که می تواند به معلمان کمک کند تا به آخرین فناوری برای دانش آموزان خود دسترسی داشته باشند و به روز باشند.
 
-According to the Bureau of Labor Statistics, by 2020, there will be 9.2 million jobs in STEM fields. Half of those jobs—4.6 million—will be in computing or information technology. And computer science is increasingly foundational knowledge for the 21st Century. Who will fill these jobs if our children are not given the opportunity to gain the skills needed?
+طبق آمار اداره آمار کار، تا سال 2020، 9.2 میلیون شغل در زمینه های STEM وجود خواهد داشت. نیمی از این مشاغل - 4.6 میلیون - در محاسبات یا فناوری اطلاعات خواهد بود. و علوم کامپیوتر به طور فزاینده ای دانش بنیادی برای قرن 21 است. اگر به فرزندان ما فرصت کسب مهارت های مورد نیاز داده نشود، چه کسی این مشاغل را پر خواهد کرد؟
 
-This week, {{ campaign_date/full }}, is Computer Science Education Week. In schools throughout **[STATE]**, our students will be participating in a national Hour of Code, demystifying the subject of computer science and hopefully whetting their appetites to go on and learn more. I will be joining them, and I invite you to join in as well. Everyone should learn how to code. Visit https://hourofcode.com/{{ country }} to learn more and get started. And support our efforts to bring computer science to more schools in **[STATE]**.
+این هفته، {{ campaign_date/full }}، هفته آموزش علوم کامپیوتر است. در تمام مدارس **[STATE]**، دانش آموزان ما در ساعت ملی کد شرکت خواهند کرد و موضوع علوم کامپیوتر را ابهام زدایی می کنند و امیدواریم اشتیاق خود را برای ادامه و یادگیری بیشتر برانگیزند. من به آنها ملحق خواهم شد و از شما نیز دعوت می کنم که به آنها بپیوندید. همه باید یاد بگیرند که چگونه کدنویسی کنند. برای کسب اطلاعات بیشتر و شروع به کار به https://hourofcode.com/{{ کشور }} مراجعه کنید. و از تلاش های ما برای آوردن علوم کامپیوتر به مدارس بیشتری در **[STATE]** حمایت کنید.
 
 {{ signup_button }}

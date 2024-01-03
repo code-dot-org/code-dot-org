@@ -788,6 +788,7 @@ pt:
         PL_CSD_CircuitPlayground_Overview_AppsWithDevices: Visão geral da unidade
           Circuit Playground
         PL_CSD_CircuitPlayground_Setup: Configuração do Circuit Playground
+        PL_CSD_EquityBlindSpotsvid: Viés & Responsabilidade
         PL_CSD_MicroBit_Intro: Introdução ao Micro:bit
         PL_CSD_TeacherTips_Advise: Dicas de professores - Conselhos para novos professores
         PL_CSD_TeacherTips_Debugging: Dicas de professores - Depuração
@@ -802,6 +803,12 @@ pt:
           de solução de problemas
         PL_CSD_Unit4_AppTesting: Teste de protótipo em papel
         PL_CSP_EIPMOverview: Guia das aulas do EIPM
+        PL_CSP_SummerAsync_U1ConnectionsConclusions: Unidade 1 Conexões e Conclusões
+        PL_CSP_SummerAsync_U2ConnectionsConclusions: 'Unidade 3: Conclusões e Conexões'
+        PL_CSP_SummerAsync_U3ConnectionsConclusions: 'Unidade 2: Conclusões e Conexões'
+        PL_CSP_SummerAsync_U3L1Computers: Anteriormente, Em relação a... Unidade 3
+        PL_CSP_SummerAsync_U3L7Debugging: Unidade 3 Lição 7 - Depuração
+        PL_CSP_SummerAsync_Unit2Internet: Anteriormente, Em relação a... Unidade 2
         PL_CSP_TeacherTips_APExam: 'Dicas para professores: preparação para o exame
           AP'
         PL_CSP_TeacherTips_Advice: 'Dicas para professores: conselhos para novos professores
@@ -827,6 +834,7 @@ pt:
         Unplug7: Composição
         Unplug8: Abstração
         Unplug9: Programação por revezamento
+        ai-ethis: Ética & IA
         alg_10_conditionals: Ciência da computação em álgebra - condicionais
         alg_11_coordinate_plane: Ciência da computação em álgebra - plano cartesiano
         alg_12_biggame_variables: Ciência da computação em álgebra - o grande jogo
@@ -861,8 +869,11 @@ pt:
         applab_intro_sounds: Laboratório de Aplicativo - Imagens e Sons
         applab_intro_welcome: Laboratório de App - Como começar
         artist_intro: Introdução ao Artista
+        blockchain-introd: 'Como funciona o Blockchain: Introdução'
         c_and_c_digital_sharing: Compartilhamento Digital
         c_and_c_great_to_create: É Ótimo Criar e Jogar Limpo
+        classic-maze-intro: Labirinto Clássico - Introdução
+        code-break: Faça uma quebra de código
         conditionals_with_cards: Lição offline em Ação - Condicionais com Cartões
         cs-principles-intro-to-objects: 'Princípios de CS: Introdução aos Objetos'
         csa-alias-video: Iguais e aliases
@@ -870,6 +881,7 @@ pt:
         csa-equals-video: O método equals ()
         csa-example-solution-1: 'Codificação ao vivo: um exemplo de solução '
         csa-multi-select-pl: Declarações de seleção múltipla em Java
+        csa-overview: Uma Nova Abordagem para a Ciência da Computação AP A
         csa-pl-calling-methods: Métodos de chamada em Java
         csa-pl-compareTo: O método compareTo ()
         csa-pl-creating-objects: Criando objetos
@@ -918,7 +930,7 @@ pt:
           matrizes'
         csa_row_major_traversal: 'CSA: Linha principal de travessia'
         csa_scanner_class_methods: 'CSA: Métodos de classe de scanner'
-        csa_searching_algorithms: 'CSA: Algoritmos de busca'
+        csa_searching_algorithms: 'CSA: Algoritmos de Busca'
         csa_software_engineering_code_reviews: 'CSA: Engenharia de software - Revisões
           de código'
         csa_sorting_algorithms: 'CSA: Algoritmos de classificação'
@@ -938,7 +950,7 @@ pt:
         csa_wrapper_classes_part_2: 'CSA: Classes de embalagem, parte 2'
         csa_writing_a_method: 'CSA: Escrevendo um método'
         csc-ecosystems-intro: Introdução aos ecossistemas
-        csc-event-short-intro: Breve introdução aos eventos
+        csc-event-short-intro: Breve Introdução aos Eventos
         csc-mapmakers-intro: Codificação de Mapas Interativos
         csc-poem-art-intro: Vídeo de introdução
         csc-poem-art-outro: Outro vídeo
@@ -951,7 +963,7 @@ pt:
         csc_timecapsule_intro: Introdução ao Time Capsule
         csd_app_lab_design_mode: Modo de design do CSD App Lab
         csd_app_lab_events: Eventos do CSD App Lab
-        csd_applab_arrays: Introdução a Arrays
+        csd_applab_arrays: Introdução a Vetores
         csd_applab_designmode: 'Descobertas CS: App Lab - Modo Design'
         csd_applab_designmode_short: Modo de design do laboratório de aplicativos
         csd_applab_loops: Loops em App Lab
@@ -979,15 +991,21 @@ pt:
         csd_gamelab_drawloop: Introdução ao Draw Loop
         csd_gamelab_functions: Chamando e Definindo Funções
         csd_gamelab_if_else: Declarações Se/Senão
+        csd_gamelab_sprites_1: Introdução aos Sprites
         csd_gamelab_velocity: Velocidade
         csd_how_teamwork_works: Como funciona o trabalho em equipe
         csd_ml_ethics_ai: 'Ética e IA '
+        csd_ml_how_ai_works: Como funciona a IA
         csd_ml_import_model: Importando um modelo de IA
-        csd_ml_intro_ai_lab_july2021: Introdução ao AI Lab
-        csd_ml_intro_to_ai_lab: Introdução ao AI Lab
-        csd_ml_model_cards_july2021: Cartões modelo no AI Lab
-        csd_ml_numerical_ai_lab: Dados numéricos no AI Lab
-        csd_ml_training_testing_ai_lan: Treinamento e testes no AI Lab
+        csd_ml_intro_ai_lab_july2021: 'Introdução ao I.A. Lab
+
+          '
+        csd_ml_intro_to_ai_lab: 'Introdução ao I.A. Lab
+
+          '
+        csd_ml_model_cards_july2021: Cartões Modelo no I.A. Lab
+        csd_ml_numerical_ai_lab: Dados Numéricos no I.A. Lab
+        csd_ml_training_testing_ai_lan: Treinamento e Testes no I.A. Lab
         csd_pair_programming: Programação em duplas
         csd_problem_solving_process: O Processo de Resolução de Problemas
         csd_sprite_properties: Propriedades do Sprite
@@ -995,14 +1013,14 @@ pt:
         csd_u6_call_define_functions: 'CSD: Chamando e definindo funções'
         csd_u6_circuit_playground: Computação Física
         csd_u6_if_statements: 'CSD: Declarações If'
-        csd_u6_input_output: Entrada e saída
+        csd_u6_input_output: Entrada e Saída
         csd_u6_variables_part2: Variáveis - Parte 2
         csd_weblab_css_1: Introdução para CSS - Parte 1
         csd_weblab_css_2: Introdução para CSS - Parte 2
         csd_weblab_intro_1: Introdução para o Laboratório Web - Parte 1
         csd_weblab_intro_2: Introdução para o Laboratório Web - Parte 2
         csd_weblab_intro_3: Introdução para o Laboratório Web - Parte 3
-        csd_what_computers_are: O que é um computador?
+        csd_what_computers_are: O que é um Computador?
         csd_what_computers_do: O que os computadores fazem?
         csf21pilot_events: 'Sprite Lab: Sprites em ação'
         csf21pilot_prompts: 'Sprite Lab: texto e instruções'
@@ -1030,6 +1048,13 @@ pt:
         csp_tutorial_datavis1: Visualizador de dados no App Lab - Parte 1
         csp_tutorial_datavis2: Visualizador de dados no App Lab - Parte 2
         csp_tutorial_libraries: Bibliotecas no App Lab
+        dance_ai_event_at_measure: Festa Dançante - Edição IA - Evento Sob Medida
+        dance_ai_events_intro: Festa Dançante - Edição IA - Introdução a Eventos
+        dance_ai_events_measure_noST: Festa Dançante - Edição IA - Eventos Sob Medida
+          Sem Sub
+        dance_ai_how_ai_works: Festa Dançante - Edição IA - Como a IA Funciona
+        dance_ai_intro_to_ai: Festa Dançante - Edição IA - Introdução à IA
+        dance_ai_intro_to_ai_v3: Festa Dançante - Edição IA - Uma Introdução à IA
         elem_pd_2: Ciência da computação no Ensino Fundamental - Vídeo PD 2/2
         enter_your_own_poem: Insira seu próprio poema
         farmer_intro: Introdução à Fazendeira
@@ -1038,6 +1063,7 @@ pt:
         frozen_intro: Introdução à Hora de Código
         frozen_loops: Introdução aos Laços
         function: Funções
+        generative-ai-cobranded: 'Como a IA funciona: IA Generativa'
         gumball_events: Hora do Código com Gumball - Eventos
         gumball_intro: Hora do Código com Gumball - Introdução
         gumball_repeat: Hora do Código com Gumball - Instruções de repetição
@@ -1058,6 +1084,7 @@ pt:
         hint_videos_d_11_7_last: 'Vídeo-dica: D.11.7 Último'
         hint_videos_d_11_9_first: 'Vídeo-dica: D.11.9 Primeiro'
         hint_videos_d_11_9_last: 'Vídeo-dica: D.11.9 Último'
+        hoc-dance-ai-warmup: 'Festa Dançante, Edição para IA: Aquecimento'
         hoc_dance_congrats: Festa Dançante - Festejar!
         hoc_dance_congrats_2019: Dance Party 2019 - Festejar!
         hoc_dance_events: Festa Dançante - Eventos
@@ -1068,6 +1095,14 @@ pt:
         hoc_dance_warmup: Festa Dançante - Aquecimento
         hoc_dance_warmup_2019: Dance Party 2019 - Aquecimento
         hoc_wrapup: Conclusão da Hora do Código
+        how-ai-works-creativity-full: A IA Possui Criatividade e Imaginação?
+        how-ai-works-lessons: 'Como a IA funciona: Visão Geral das Lições'
+        how-ai-works-llms-full: Como os Chatbots e os Grandes Modelos de Linguagem
+          Funcionam
+        how-ai-works-llms-part1: Chatbots e Grandes Modelos de Linguagem (LLMs) Parte
+          1
+        how-ai-works-llms-part2: Chatbots e Grandes Modelos de Linguagem (LLMs) Parte
+          2
         how-to-k5-workshops: 'Fundamentos de CS do Code.org: estudante testado, professor
           aprovado'
         iceage_events: Hora do Código com A Era do Gelo - Eventos
@@ -1080,6 +1115,8 @@ pt:
         infinity_playlab_intro: Laboratório - Introdução
         infinity_playlab_repeat_forever: Laboratório - Repetir infinitamente
         lesson_planning: Planejamento de aula
+        llms-cobranded: 'Como a IA Funciona: Chatbots e Grandes Modelos de Linguagem
+          (LLMs)'
         loop_for: Bloco contador
         loop_times: Bloco repita
         loop_until: Bloco repita até
@@ -1127,6 +1164,7 @@ pt:
         poembot-playtest-events: PoemBot Playtest – Eventos
         poembot-playtest-intro: PoemBot Playtest – Introdução
         poembot-playtest-sprites: PoemBot Playtest – Fadas
+        poetry-programming: Poesia & Programação
         poetry_module_conditionals: Condicionais - Codificação com Poesia
         poetry_module_multichoiceprompts: Prompts de Múltipla Escolha - Codificação
           com Poesia
@@ -1134,11 +1172,14 @@ pt:
           - Codificação com Poesia
         poetry_module_textandvariables: Texto e Variáveis - Codificação com Poesia
         poetry_module_variables: Variáveis - Codificação com Poesia
+        push-yourself: Esforce-se. Todos podem aprender.
         repeat_block: Usando o Bloco Repita
         rough_poemart_congrats: v1 Parabéns à Arte de Poema
         rough_poemart_events: v1Eventos de Arte de Poema
         rough_poemart_imagery: v1 Imagens de Arte de Poema
         rough_poemart_intro: v1 Introdução à Arte de Poema
+        se-cv-intro-to-lessons: 'Engenharia de Software e Visão Computacional: Introdução
+          às Lições'
         songwriting_with_functions: Lição offline em Ação - Composição de músicas
           com funções
         star_quilts_intro_to_artist: 'Star Quilts: Introdução ao artista'
@@ -1162,6 +1203,7 @@ pt:
         u7-libraries-explanation: 'App Lab: Crie seus próprios blocos - Como usar
           bibliotecas'
         upload_sprites_backgrounds: Fazendo upload de sprites e planos de fundo personalizados
+        what-is-creativity: O que é criatividade?
         what_is_an_event: O que é um evento?
         what_is_cs: O que é ciência da computação?
         why-should-teach-unplugged-activities: 'FAQ: Por que devo ensinar atividades

@@ -1,3 +1,14 @@
 {
-  "continue": "Tiếp tục"
+  "aichatWorkspaceHeader": "Trò chuyện AI",
+  "allMessagesSentAreRecorded": "Tất cả các tin nhắn được gửi đến AI Chat đều được ghi lại.",
+  "anythingPersonalCanNotBeSubmitted": "Để bảo vệ quyền riêng tư của bạn, bất kỳ thông tin nào được coi là thông tin cá nhân (tên, số điện thoại, địa chỉ, v.v.) không nên được gửi đến trò chuyện AI.",
+  "continue": "Tiếp tục",
+  "inappropriateMessagesAreFlagged": "Các tin nhắn không phù hợp sẽ được gắn cờ và giáo viên của bạn sẽ được thông báo.",
+  "inappropriateUserMessage": "Tin nhắn này đã được gắn cờ là không phù hợp.",
+  "tooPersonalUserMessage": "Tin nhắn này đã được đánh dấu là quá cá nhân.",
+  "userChatMessagePlaceholder": "Thêm tin nhắn trò chuyện...",
+  "waitingForChatResponse": "Đang chờ phản hồi...",
+  "warningModalHeader": "Hãy nhớ trò chuyện có trách nhiệm!",
+  "warningModalOkButtonText": "Bắt đầu trò chuyện",
+  "whatIsPersonalInformation": "Những gì được coi là thông tin cá nhân?"
 }

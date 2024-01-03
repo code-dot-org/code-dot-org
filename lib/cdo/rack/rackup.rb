@@ -1,5 +1,5 @@
 module Rack
-  def self.with_rackup(dir, params={})
+  def self.with_rackup(dir, params = {})
     port = params[:port] || 3000
     log = '/dev/null'
 

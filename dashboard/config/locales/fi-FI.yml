@@ -10,6 +10,7 @@ fi:
         error:
           future: ei voi olla tulevaisuudessa
         finish_sign_up_header: Viimeistele tilin luominen
+        finish_sign_up_header_error: 'Ole hyvä ja korjaa seuraavat virheet:'
         finish_sign_up_subheader: Täytä seuraavat tiedot viimeistelläksesi Code.org
           tilin <strong>%{email}</strong>.
         finish_sign_up_subheader_markdown: Täytä seuraavat tiedot viimeistelläksesi
@@ -32,6 +33,7 @@ fi:
           jos sinulla ei ole sähköpostiosoitetta)](%{url})
         reset_password_token: Valitsemasi salasanan asetuslinkki
         us_state: Osavaltio
+        user_type: Tilin laji
         username: Käyttäjätunnus
     errors:
       messages:

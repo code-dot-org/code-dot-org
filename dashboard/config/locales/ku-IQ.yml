@@ -10,6 +10,7 @@ ku:
         error:
           future: ناکرێت لە داهاتوو بێت
         finish_sign_up_header: كرداری درووستكردنی هەژمارەكەت تەواوبكە
+        finish_sign_up_header_error: 'تکایە ئەم هەڵانەی خوارەوە ڕاست بکەوە:'
         finish_sign_up_subheader: ئەم زانیاریانەی خوارەوە پڕبكەوە بۆ درووستكردنی هەژماری
           (Code.org) بۆ <strong>%{email}</strong>.
         finish_sign_up_subheader_markdown: ئەم زانیاریانەی خوارەوە پڕبكەوە بۆ درووستكردنی
@@ -30,6 +31,7 @@ ku:
         personal_email_markdown: ناونیشانی پۆستی ئەلکترۆنی کەسی[(کرتە لێرە بکە ئەگەر
           خاوەن پۆستی ئەلکترۆنی نیت)](%{url})
         us_state: پارێزگا
+        user_type: جۆری هەژمار
         username: ناوی بەکارهێنەر
     errors:
       messages:

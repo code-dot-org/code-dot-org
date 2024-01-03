@@ -10,6 +10,7 @@ ca:
         error:
           future: no pot ser en el futur
         finish_sign_up_header: Acabar de crear el seu compte
+        finish_sign_up_header_error: 'Corregeix els errors següents:'
         finish_sign_up_subheader: Empleneu la informació següent per acabar creant
           un compte Code.org per a <strong>%{email}</strong>.
         finish_sign_up_subheader_markdown: Empleneu la informació següent per acabar
@@ -31,6 +32,7 @@ ca:
           una adreça electrònica)](%{url})
         reset_password_token: L'enllaç que has fet servir per restablir la contrasenya
         us_state: Estat/província
+        user_type: Tipus de compte
         username: nom d'usuari
         verified_teacher: Professor verificat
     errors:

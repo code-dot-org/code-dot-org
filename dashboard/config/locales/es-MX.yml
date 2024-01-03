@@ -4,12 +4,15 @@ es-MX:
     attributes:
       user:
         age: Edad
+        ai_rubrics_disabled: Desactivar la función de rúbrica de IA
+        ai_settings_header: Configuración de IA
         current_password: Contraseña actual
         edit_header: Editar información de la cuenta
         email: Correo electrónico
         error:
           future: no puede ser en el futuro
         finish_sign_up_header: Termina de crear tu cuenta
+        finish_sign_up_header_error: 'Por favor, corrige los siguientes errores:'
         finish_sign_up_subheader: Completa la siguiente información para terminar
           de crear tu cuenta en Code.org para <strong>%{email}</strong>.
         finish_sign_up_subheader_markdown: Completa la siguiente información para
@@ -32,6 +35,7 @@ es-MX:
           tienes correo electrónico)](%{url})
         reset_password_token: El enlace para restablecer la contraseña que has seguido
         us_state: Estado/provincia
+        user_type: Tipo de cuenta
         username: Nombre de usuario
         verified_teacher: Profesor Verificado
     errors:
@@ -498,6 +502,8 @@ es-MX:
     unsubmit-title: Cancelar tu evaluación
     wrong_body: Gracias por enviar respuestas.
     wrong_title: Gracias
+  level_summary:
+    correct_answer: Respuesta correcta
   locked_stage: No puedes ver los contenidos de esta etapa porque se encuentra bloqueada.
     Tu docente puede desbloquear esta etapa cuando sea el momento de trabajar en ella
     o para revisar tus respuestas.
@@ -1344,6 +1350,12 @@ es-MX:
         un triángulo.
     conditionals:
       image_alt: Dos manos barajando un mazo de cartas.
+    course2:
+      image_alt: Un collage de rompecabezas de Code.org  mostrando un mago verde,
+        un artista y un pez naranja.
+    course3:
+      image_alt: Un collage de rompecabezas de Code.org que muestra un juego, un zombi
+        y un ninja.
     dance:
       title: Fiesta de baile
     dance-2019:

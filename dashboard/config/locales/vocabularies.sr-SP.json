@@ -212,6 +212,138 @@
         "programming/pre-express/2022": {
           "word": "Programming"
         },
+        "code/csc-adaptations/2023": {
+          "word": "Kod"
+        },
+        "behavior/csc-adaptations/2023": {
+          "word": "Понашање"
+        },
+        "code/csc-ecosystems/2023": {
+          "word": "Kod"
+        },
+        "conditionals/csc-ecosystems/2023": {
+          "word": "Кондиционали"
+        },
+        "variable/csc-ecosystems/2023": {
+          "word": "Променљива"
+        },
+        "code/csc-mappinglandmarks/2023": {
+          "word": "Kod"
+        },
+        "artist/csc-starquilts/2023": {
+          "word": "Уметник"
+        },
+        "comments/csc-starquilts/2023": {
+          "word": "Коментари"
+        },
+        "code/poetry/2023": {
+          "word": "Kod"
+        },
+        "input/csd/2023": {
+          "word": "Унос"
+        },
+        "copyright/csd/2023": {
+          "word": "Ауторска права"
+        },
+        "debugging/csd/2023": {
+          "word": "Отклањање грешака"
+        },
+        "variable/csd/2023": {
+          "word": "Променљива"
+        },
+        "conditionals/csd/2023": {
+          "word": "Кондиционали"
+        },
+        "abstraction/csd/2023": {
+          "word": "Апстракција"
+        },
+        "function/csd/2023": {
+          "word": "Функција"
+        },
+        "debugging/coursea/2023": {
+          "word": "Отклањање грешака"
+        },
+        "programming/coursea/2023": {
+          "word": "Programming"
+        },
+        "debugging/courseb/2023": {
+          "word": "Отклањање грешака"
+        },
+        "programming/courseb/2023": {
+          "word": "Programming"
+        },
+        "debugging/coursec/2023": {
+          "word": "Отклањање грешака"
+        },
+        "programming/coursec/2023": {
+          "word": "Programming"
+        },
+        "debugging/coursed/2023": {
+          "word": "Отклањање грешака"
+        },
+        "programming/coursed/2023": {
+          "word": "Programming"
+        },
+        "conditionals/coursed/2023": {
+          "word": "Кондиционали"
+        },
+        "behavior/coursee/2023": {
+          "word": "Понашање"
+        },
+        "function/coursee/2023": {
+          "word": "Функција"
+        },
+        "conditionals/coursee/2023": {
+          "word": "Кондиционали"
+        },
+        "copyright/coursee/2023": {
+          "word": "Ауторска права"
+        },
+        "define/coursee/2023": {
+          "word": "Дефинисати"
+        },
+        "behavior/coursef/2023": {
+          "word": "Понашање"
+        },
+        "variable/coursef/2023": {
+          "word": "Променљива"
+        },
+        "input/coursef/2023": {
+          "word": "Унос"
+        },
+        "internet/coursef/2023": {
+          "word": "Интернет"
+        },
+        "define/coursef/2023": {
+          "word": "Дефинисати"
+        },
+        "debugging/express/2023": {
+          "word": "Отклањање грешака"
+        },
+        "programming/express/2023": {
+          "word": "Programming"
+        },
+        "behavior/express/2023": {
+          "word": "Понашање"
+        },
+        "conditionals/express/2023": {
+          "word": "Кондиционали"
+        },
+        "function/express/2023": {
+          "word": "Функција"
+        },
+        "variable/express/2023": {
+          "word": "Променљива"
+        },
+        "define/express/2023": {
+          "word": "Дефинисати"
+        },
+        "debugging/pre-express/2023": {
+          "word": "Отклањање грешака"
+        },
+        "programming/pre-express/2023": {
+          "word": "Programming"
+        },
         "conditionals/aquatic/unversioned": {
           "word": "Кондиционали"
         },
@@ -260,14 +392,6 @@
         "debugging/minecraft/unversioned": {
           "word": "Отклањање грешака"
         },
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/playlab/unversioned": {
           "word": "Отклањање грешака"
         },
@@ -286,25 +410,8 @@
         "debugging/starwarsblocks/unversioned": {
           "word": "Отклањање грешака"
         },
-        "code/poem-art/unversioned": {
-          "word": "Kod",
-          "definition": ""
-        },
-        "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+        "code/dance-ai/2023": {
+          "word": "Kod"
         }
       }
     }

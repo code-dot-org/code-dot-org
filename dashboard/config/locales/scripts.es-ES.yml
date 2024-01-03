@@ -383,6 +383,10 @@ es:
             que expongan los escollos éticos en un área de la Inteligencia Artificial
             (IA) de tu elección. '
           title: Nuestro Código Ético de la Inteligencia Artificial
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: Nuestro Código Ético de la Inteligencia Artificial
         ai-lab:
           name: ai-lab
           student_description: Usa estos niveles para conocer el Laboratorio de Inteligencia
@@ -642,9 +646,14 @@ es:
             curso... aún preguntándome de dónde proviene la descripción, el contenido....
           title: andrea-prueba
         angelina-playground:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Aleatorio
           lessons:
             lesson-5:
               name: Evaluaciones
+            lesson-6:
+              name: Lección 1
         applab-1hour:
           description: Este taller está diseñado para dar a los estudiantes una introducción
             básica de 1 hora al laboratorio de aplicaciones. Los estudiantes deberían
@@ -2402,6 +2411,8 @@ es:
               display_name: "¡Demuestra lo que sabes!"
             lessonGroup-5:
               display_name: Lecciones alternativas
+            lessonGroup-7:
+              display_name: Encuesta Piloto
           lessons:
             lesson-1:
               name: Bienvenido a CSA
@@ -2533,6 +2544,8 @@ es:
               display_name: "¡Demuestra lo que sabes!"
             lessonGroup-4:
               display_name: Lecciones alternativas
+            lessonGroup-6:
+              display_name: Encuesta Piloto
           lessons:
             lesson-1:
               name: Atributos
@@ -2540,6 +2553,8 @@ es:
               name: Práctica FRQ
             lesson-12:
               name: Evaluación de la unidad 2
+            lesson-17:
+              name: Proyecto Arte en el Asfalto - Día 2
             lesson-4:
               name: Variables
             lesson-9:
@@ -2652,11 +2667,15 @@ es:
               display_name: "¡Demuestra lo que sabes!"
             lessonGroup-4:
               display_name: Lecciones alternativas
+            lessonGroup-6:
+              display_name: Encuesta Piloto
           lessons:
             lesson-1:
               name: Arrays Unidimensionales (1D)
             lesson-11:
               name: Práctica FRQ
+            lesson-16:
+              name: Proyecto Arte en el Asfalto - Día 2
             lesson-3:
               name: Bucles Para
           title: Arrays y Algoritmos
@@ -2745,7 +2764,11 @@ es:
               display_name: "¡Demuestra lo que sabes!"
             lessonGroup-4:
               display_name: Lecciones alternativas
+            lessonGroup-6:
+              display_name: Encuesta Piloto
           lessons:
+            lesson-17:
+              name: Proyecto Arte en el Asfalto - Día 2
             lesson-9:
               name: Aleatorio
           title: Condiciones y Lógica
@@ -2862,6 +2885,11 @@ es:
               display_name: "¡Demuestra lo que sabes!"
             lessonGroup-4:
               display_name: Lecciones alternativas
+            lessonGroup-6:
+              display_name: Encuesta Piloto
+          lessons:
+            lesson-16:
+              name: Proyecto Arte en el Asfalto - Día 2
           title: Arrays Bidimensionales
         csa5-exemplars:
           lesson_groups:
@@ -2972,6 +3000,11 @@ es:
               display_name: "¡Demuestra lo que sabes!"
             lessonGroup-4:
               display_name: Lecciones alternativas
+            lessonGroup-6:
+              display_name: Encuesta Piloto
+          lessons:
+            lesson-16:
+              name: Proyecto Arte en el Asfalto - Día 2
           student_description: Esta unidad continúa ampliando las estructuras de datos
             para introducirte en la creación de listas utilizando la clase `ArrayList`.
             En el proceso, aprenderás sobre las clases `Integer` y `Double` y utilizarás
@@ -3112,7 +3145,11 @@ es:
               display_name: "¡Demuestra lo que sabes!"
             lessonGroup-5:
               display_name: Lecciones alternativas
+            lessonGroup-6:
+              display_name: Encuesta Piloto
           lessons:
+            lesson-16:
+              name: Proyecto Arte en el Asfalto - Día 2
             lesson-6:
               name: Propiedad intelectual
           student_description: En esta unidad, se practica el diseño y el desarrollo
@@ -3263,9 +3300,13 @@ es:
               display_name: Encuesta
             lessonGroup-5:
               display_name: Lecciones alternativas
+            lessonGroup-6:
+              display_name: Encuesta Piloto
           lessons:
             lesson-11:
               name: Práctica FRQ
+            lesson-15:
+              name: Proyecto Arte en el Asfalto - Día 2
             lesson-7:
               name: Buscando y Ordenando
           student_description: En esta unidad, ampliarás los algoritmos que has aprendido
@@ -3407,6 +3448,11 @@ es:
               display_name: Revisión y Práctica
             lessonGroup-3:
               display_name: Simulacros de Exámenes
+            lessonGroup-4:
+              display_name: Encuesta Piloto
+          lessons:
+            lesson-2:
+              name: Proyecto Arte en el Asfalto - Día 2
           student_description: Esta unidad te prepara para el examen AP CSA repasando
             los conceptos clave, practicando las preguntas de opción múltiple y de
             respuesta libre, y reforzando las estrategias para realizar el examen.
@@ -3629,6 +3675,8 @@ es:
             dirá cuándo es el momento de realizar esta encuesta.
           title: Encuesta Fin de Curso de Descubrimientos de la Informática
         csd-post-survey-2023:
+          title: Encuesta de final de curso
+        csd-post-survey-2024:
           title: Encuesta de final de curso
         csd-sample-online:
           title: Ejemplo de actividades en línea de Descubrimientos de Ciencias de
@@ -3858,6 +3906,25 @@ es:
             a resolver un problema de tu elección.
           title: Resolución de Problemas y Computación ('21-'22)
         csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: El proceso de resolución de problemas'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Computadoras y resolución de problemas'
+            lessonGroup-4:
+              display_name: Lecciones Alternativas
+            lessonGroup-5:
+              display_name: Encuesta
+          student_description: Resolución de Problemas y Computación es una iniciación
+            altamente interactiva y colaborativa al campo de la informática, enmarcada
+            dentro de la búsqueda más amplia de la resolución de problemas. Practicarás
+            el uso de un proceso de resolución de problemas para abordar una serie
+            de rompecabezas, desafíos y escenarios del mundo real. A continuación,
+            aprenderás cómo los ordenadores introducen, emiten, almacenan y procesan
+            información para ayudar a los humanos a resolver problemas.  La unidad
+            concluye con un proyecto en el que diseñarás una aplicación que ayude
+            a resolver un problema de tu elección.
+        csd1-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capítulo 1: El proceso de resolución de problemas'
@@ -4151,6 +4218,19 @@ es:
             un sitio web personal que podrás publicar en Internet.
           title: Desarrollo Web ('21-'22)
         csd2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Creación de páginas Web'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Sitios Web Multipágina'
+          student_description: En la Unidad 2, aprenderás cómo crear y compartir el
+            contenido en tus propias páginas web. Después de decidir qué contenido
+            deseas compartir con los demás, aprenderás a estructurar y diseñar tus
+            páginas mediante HTML y CSS. También practicarás valiosas habilidades
+            de programación, como depurar y comentar. Al final de la unidad, tendrás
+            un sitio web personal que podrás publicar en Internet.
+          title: Desarrollo Web
+        csd2-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capítulo 1: Creación de páginas Web'
@@ -4463,6 +4543,19 @@ es:
             En el proyecto final, desarrollarás un programa personalizado e interactivo."
           title: Animaciones y Juegos Interactivos ('21-'22)
         csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Imágenes y animaciones'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Desarrollo de juegos'
+          student_description: " En la Unidad 3, desarrollarás tu experiencia de programación
+            a medida que programes animaciones, arte interactivo y juegos en el Laboratorio
+            de juegos. La unidad comienza con formas simples y, a partir de los mismos
+            conceptos de programación y el proceso de diseño que usan los científicos
+            informáticos a diario, añade juegos más sofisticados basados en sprites.
+            En el proyecto final, desarrollarás un programa personalizado e interactivo."
+          title: Animaciones Interactivas y Juegos
+        csd3-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capítulo 1: Imágenes y animaciones'
@@ -4805,6 +4898,21 @@ es:
             de soluciones tanto en papel como en el Laboratorio de aplicaciones, y
             probar soluciones con usuarios reales para obtener comentarios y seguir
             adelante.
+        csd4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Diseño orientado al usuario'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Prototipos de aplicaciones'
+          student_description: La Unidad 4 introduce los impactos sociales más amplios
+            que tiene la computación. A través de una serie de desafíos de diseño,
+            aprenderás a comprender mejor las necesidades de los demás mientras desarrollas
+            una solución a un problema. La segunda mitad de la unidad consiste en
+            un proyecto de equipo iterativo, durante el cual los equipos tienen la
+            oportunidad de identificar una necesidad que les importa, crear prototipos
+            de soluciones tanto en papel como en el Laboratorio de aplicaciones, y
+            probar soluciones con usuarios reales para obtener comentarios y seguir
+            adelante.
         csd4-dlp:
           description: Esta es la Unidad 4 del Plan de Aprendizaje Profundo para facilitadores
             de Descubrimientos de Ciencias de la Computación de Code.org en período
@@ -5111,6 +5219,24 @@ es:
             de problemas de datos a un área de tu elección.
           title: Datos y Sociedad ('21-'22)
         csd5-2023:
+          description_short: Aprende cómo las personas usan las computadoras para
+            resolver problemas de datos.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Representación de la información'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Resolución de problemas en los datos'
+          student_description: La Unidad 5 trata sobre la importancia de los datos
+            a la hora de resolver problemas y resalta cómo las computadoras pueden
+            ayudar en este proceso. El primer capítulo explora los diferentes sistemas
+            utilizados para representar información en una computadora, y los desafíos
+            y concesiones planteados al usarlos. En el segundo capítulo, aprenderá
+            cómo se utilizan las colecciones de datos para resolver problemas y cómo
+            las computadoras ayudan a automatizar los pasos de este proceso. Al final
+            del capítulo, se considera cómo se puede aplicar el proceso de resolución
+            de problemas de datos a un área de tu elección.
+          title: Datos y Sociedad
+        csd5-2024:
           description_short: Aprende cómo las personas usan las computadoras para
             resolver problemas de datos.
           lesson_groups:
@@ -5556,7 +5682,27 @@ es:
             un simple prototipo aproximado puede conducir a un producto terminado.
             La unidad concluye con un reto de diseño para utilizar el Circuit Playground
             como base para una innovación de su propio diseño.
+        csd6a-2024:
+          description_short: Aprende a programar con dispositivos físicos.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Entradas y Salidas'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Desarrollo de prototipos físicos'
+          student_description: Esta unidad explora el papel de las plataformas de
+            hardware en la informática y cómo los diferentes sensores pueden proporcionar
+            una entrada y salida más eficaz que el tradicional teclado, ratón y monitor.
+            Utilizando el Laboratorio de Aplicaciones y el Circuit Playground de Adafruit,
+            desarrollarás programas que utilizan las mismas entradas y salidas de
+            hardware que se ven en los dispositivos inteligentes, observando cómo
+            un simple prototipo aproximado puede conducir a un producto terminado.
+            La unidad concluye con un reto de diseño para utilizar el Circuit Playground
+            como base para una innovación de su propio diseño.
         csd6b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Entradas y salidas
+        csd6b-2024:
           lesson_groups:
             lessonGroup-3:
               display_name: Entradas y salidas
@@ -5628,6 +5774,21 @@ es:
             de aprendizaje automático para resolver un problema de relevancia personal.
           title: Inteligencia Artificial y Aprendizaje Automático
         csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Capítulo 1
+            lessonGroup-3:
+              display_name: Capítulo 2
+            lessonGroup-4:
+              display_name: Introducción al Laboratorio de aplicaciones
+          student_description: La Unidad 7 es una introducción práctica al desarrollo
+            de un modelo de aprendizaje automático con datos tabulares. Explorarás
+            cómo los ordenadores aprenden de los datos para tomar decisiones, y luego
+            desarrollarás tus propios proyectos de aprendizaje automático en torno
+            a datos del mundo real. La unidad culmina con el diseño de tu propia aplicación
+            de aprendizaje automático para resolver un problema de relevancia personal.
+          title: Inteligencia Artificial y Aprendizaje Automático
+        csd7-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Capítulo 1
@@ -8862,6 +9023,11 @@ es:
           student_description: "¡Programa tu propio baile para compartirlo con tus
             amigos!"
           title: Fiesta de baile (remix 2019)
+        dance-ai-2023:
+          lessons:
+            lesson-1:
+              name: 'Fiesta de baile: Edición IA'
+          title: 'Fiesta de baile: Edición IA'
         dance-draft:
           title: NO USAR
         dance-extras:
@@ -9196,6 +9362,10 @@ es:
           title: 2021 Descripción General de Deeper Learning en Principios de Informática
         dlp21-overview:
           name: dlp21-descripción
+        draft-hoc-dp-2:
+          lessons:
+            lesson-2:
+              name: plantilla de plan de lecciones de la hora del código
         drafting:
           name: borrador
         duino:
@@ -10351,7 +10521,7 @@ es:
           name: mc
           student_description: Utiliza bloques de código para llevar a Steve o Alex
             en una aventura a través del mundo de Minecraft.
-          title: Hora de Code de Minecraft
+          title: Aventurero de Minecraft
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
@@ -11108,6 +11278,44 @@ es:
             de los estudiantes \n-   Explorar los proyectos de fin de capítulo \n\n**Tiempo
             sugerido:** 2 horas"
           title: 'Preparación para Enseñar la Unidad 1 '
+        self-paced-pl-csd-unit1-2-2023:
+          description: "Este módulo de aprendizaje profesional está diseñado para
+            ayudarte en la enseñanza de la unidad de Resolución de Problemas y Computación
+            de Code.org. \n\n**En este módulo de aprendizaje profesional, podrás:**\n\n-
+            \  Obtener una introducción a la Resolución de Problemas y Computación.\n-
+            \  Practicar los conceptos clave incluidos en la unidad.\n-   Explorar
+            los proyectos de fin de capítulo.\n\n**Tiempo sugerido:** 30 minutos"
+          student_description: "Este módulo de aprendizaje profesional está diseñado
+            para ayudarte en la enseñanza de la unidad de Resolución de Problemas
+            y Computación de Code.org. \n\n**En este módulo de aprendizaje profesional,
+            podrás:**\n\n-   Obtener una introducción a la Resolución de Problemas
+            y Computación.\n-   Practicar los conceptos clave incluidos en la unidad.\n-
+            \  Explorar los proyectos de fin de capítulo.\n\n**Tiempo sugerido:**
+            30 minutos"
+          title: 'Módulo 1: Preparación para la Enseñanza de la Resolución de Problemas
+            y la Computación'
+        self-paced-pl-csd-unit2-2-2023:
+          title: 'Módulo 2: Preparación para la Enseñanza del Desarrollo Web'
+        self-paced-pl-csd-unit3-2-2023:
+          description: "Este módulo de aprendizaje profesional está diseñado para
+            ayudarte en la enseñanza de la unidad de Animaciones y Juegos Interactivos
+            de Code.org. \n\n**En este módulo de aprendizaje profesional, podrás:**\n\n-
+            \  Obtener una introducción a las Animaciones y Juegos Interactivos.\n-
+            \  Practicar los conceptos clave incluidos en la unidad.\n-   Interactuar
+            con el Laboratorio Web.\n-   Explorar los proyectos de fin de capítulo.\n\n**Tiempo
+            sugerido:** 120 minutos"
+          student_description: "Este módulo de aprendizaje profesional está diseñado
+            para ayudarte en la enseñanza de la unidad de Animaciones y Juegos Interactivos
+            de Code.org. \n\n**En este módulo de aprendizaje profesional, podrás:**\n\n-
+            \  Obtener una introducción a las Animaciones y Juegos Interactivos.\n-
+            \  Practicar los conceptos clave incluidos en la unidad.\n-   Interactuar
+            con el Laboratorio Web.\n-   Explorar los proyectos de fin de capítulo.\n\n**Tiempo
+            sugerido:** 120 minutos"
+          title: Preparación para la Enseñanza de Animaciones y Juegos Interactivos
+        self-paced-pl-csd-unit4-2-2023:
+          title: 'Módulo 4:  Preparación para la Enseñanza del Proceso de Diseño'
+        self-paced-pl-csd-unit5-2-2023:
+          title: 'Módulo 5: Preparación para la Enseñanza de los Datos y la Sociedad'
         self-paced-pl-csd1-2021:
           description: "Este módulo es una breve introducción tanto a Code.org como
             a este curso de aprendizaje profesional. \n\n**Tú podrás:**\n\n-   Obtener
@@ -11974,6 +12182,103 @@ es:
               display_name: Contenido
             csd3_2:
               display_name: 'Capítulo 2: Desarrollo de juegos'
+        virtual-pl-csa-summer-2024-day1:
+          title: Día 1
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-3:
+              display_name: Asíncronos Parte 1
+            lessonGroup-4:
+              display_name: Síncronos Parte 2
+            lessonGroup-5:
+              display_name: Asíncronos Parte 2
+            lessonGroup-7:
+              display_name: Introducción
+          lessons:
+            lesson-2:
+              name: Asíncronos Parte 1
+            lesson-3:
+              name: Síncronos Parte 2
+            lesson-4:
+              name: Asíncronos Parte 2
+            lesson-7:
+              name: Introducción
+            lesson-8:
+              name: Apertura del Taller
+          title: Día 1
+        virtual-pl-csa-summer-day2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-3:
+              display_name: Asíncronos Parte 1
+            lessonGroup-4:
+              display_name: Síncronos Parte 2
+            lessonGroup-5:
+              display_name: Asíncronos Parte 2
+          lessons:
+            lesson-2:
+              name: Asíncronos Parte 1
+            lesson-3:
+              name: Síncronos Parte 2
+            lesson-4:
+              name: Asíncronos Parte 2
+          title: Día 2
+        virtual-pl-csa-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-3:
+              display_name: Asíncronos Parte 1
+            lessonGroup-4:
+              display_name: Síncronos Parte 2
+            lessonGroup-5:
+              display_name: Asíncronos Parte 2
+          lessons:
+            lesson-1:
+              name: Introducción
+            lesson-2:
+              name: Asíncronos Parte 1
+            lesson-4:
+              name: Asíncronos Parte 2
+          title: Día 3
+        virtual-pl-csa-summer-day4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-3:
+              display_name: Asíncronos Parte 1
+            lessonGroup-4:
+              display_name: Síncronos Parte 2
+            lessonGroup-5:
+              display_name: Asíncronos Parte 2
+          lessons:
+            lesson-2:
+              name: Asíncronos Parte 1
+            lesson-4:
+              name: Asíncronos Parte 2
+            lesson-5:
+              name: Apertura del Taller
+          title: Día 4
+        virtual-pl-csa-summer-day5:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-4:
+              display_name: Síncronos Parte 2
+            lessonGroup-5:
+              display_name: Asíncronos Parte 2
+          lessons:
+            lesson-1:
+              name: Apertura del Taller
+            lesson-2:
+              name: Asíncronos Parte 1
+            lesson-3:
+              name: Síncronos Parte 2
+            lesson-4:
+              name: Asíncronos Parte 2
         virtual-pl-csd-summer-day1:
           lesson_groups:
             lessonGroup-2:
@@ -12043,6 +12348,67 @@ es:
           lessons:
             lesson-3:
               name: Evaluación
+        virtual-pl-csp-summer-day1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-3:
+              display_name: Síncronos Parte 2
+            lessonGroup-4:
+              display_name: Asíncronos Parte 1
+            lessonGroup-5:
+              display_name: Asíncronos Parte 2
+          lessons:
+            lesson-5:
+              name: Introducción a las actividades asincrónicas
+          title: Día 1
+        virtual-pl-csp-summer-day2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-3:
+              display_name: Asíncronos Parte 1
+            lessonGroup-4:
+              display_name: Síncronos Parte 2
+            lessonGroup-5:
+              display_name: Asíncronos Parte 2
+          lessons:
+            lesson-5:
+              name: Introducción
+          title: Día 2
+        virtual-pl-csp-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-3:
+              display_name: Asíncronos Parte 1
+            lessonGroup-4:
+              display_name: Síncronos Parte 2
+            lessonGroup-5:
+              display_name: Asíncronos Parte 2
+          lessons:
+            lesson-2:
+              name: Asíncronos Parte 1
+          title: Día 3
+        virtual-pl-csp-summer-day4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-3:
+              display_name: Asíncronos Parte 1
+            lessonGroup-4:
+              display_name: Síncronos Parte 2
+            lessonGroup-5:
+              display_name: Asíncronos Parte 2
+          title: Día 4
+        virtual-pl-csp-summer-day5:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-3:
+              display_name: Asíncronos Parte 1
+            lessonGroup-4:
+              display_name: Síncronos Parte 2
         virustest:
           description_short: 'Utiliza el Laboratorio de Sprite para crear una simulación
             de un brote de virus. '
@@ -12602,6 +12968,19 @@ es:
           title: Módulo 7
         vpl-csp-2023-m8:
           title: Módulo 8
+        web-dev-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Creación de páginas Web'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Sitios Web Multipágina'
+          student_description: En la Unidad 2, aprenderás cómo crear y compartir el
+            contenido en tus propias páginas web. Después de decidir qué contenido
+            deseas compartir con los demás, aprenderás a estructurar y diseñar tus
+            páginas mediante HTML y CSS. También practicarás valiosas habilidades
+            de programación, como depurar y comentar. Al final de la unidad, tendrás
+            un sitio web personal que podrás publicar en Internet.
+          title: Desarrollo Web
         web-development-2023:
           lesson_groups:
             lessonGroup-2:

@@ -76,8 +76,6 @@ class FollowerTest < ActiveSupport::TestCase
   end
 
   test 'deleting a follower removes the associated student family name' do
-    DCDO.stubs(:get).with('family-name-features', false).returns(true)
-
     student = @follower.student_user
     student.family_name = 'test'
     student.save!
@@ -89,31 +87,9 @@ class FollowerTest < ActiveSupport::TestCase
     student.reload
 
     assert_nil student.family_name
-
-    DCDO.unstub(:get)
-  end
-
-  test 'family name removal is behind the DCDO flag' do
-    DCDO.stubs(:get).with('family-name-features', false).returns(false)
-
-    student = @follower.student_user
-    student.family_name = 'test'
-    student.save!
-    student.reload
-
-    assert_equal 'test', student.family_name
-
-    @follower.destroy
-    student.reload
-
-    assert_equal 'test', student.family_name
-
-    DCDO.unstub(:get)
   end
 
   test 'deleting one of many followers keeps the associated student family name' do
-    DCDO.stubs(:get).with('family-name-features', false).returns(true)
-
     student = @follower.student_user
     student.family_name = 'test'
     student.save!
@@ -127,8 +103,6 @@ class FollowerTest < ActiveSupport::TestCase
     student.reload
 
     assert_equal 'test', student.family_name
-
-    DCDO.unstub(:get)
   end
 
   test 'cannot create a follower for a PL section and a user with a family name' do

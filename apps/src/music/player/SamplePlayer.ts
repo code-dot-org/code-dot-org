@@ -1,6 +1,7 @@
-import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
+import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import {Effects} from './interfaces/Effects';
 import SoundCache from './SoundCache';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import SoundPlayer from './SoundPlayer';
 
 // Multiplied by the duration of a single beat to determine the length of
@@ -32,15 +33,19 @@ const PREVIEW_GROUP = 'preview';
 export default class SamplePlayer {
   private readonly soundCache: SoundCache;
   private readonly soundPlayer: SoundPlayer;
+  private readonly metricsReporter: LabMetricsReporter;
   private playingSamples: PlayingSample[];
   private isPlaying: boolean;
   private startPlayingAudioTime: number;
   private updateLoadProgress: ((value: number) => void) | undefined;
 
-  constructor() {
+  constructor(
+    metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
+  ) {
     this.playingSamples = [];
     this.isPlaying = false;
     this.startPlayingAudioTime = -1;
+    this.metricsReporter = metricsReporter;
     this.soundCache = new SoundCache();
     this.soundPlayer = new SoundPlayer();
   }

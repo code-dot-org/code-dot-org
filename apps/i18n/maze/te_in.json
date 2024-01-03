@@ -12,7 +12,7 @@
   "collectorCollectedSome": "గొప్ప పని! మీరు సేకరించారు {count, plural, one {1 వస్తువు} other {# అంశాలు}}!",
   "collectorCollectedTooMany": "ఆ స్థలంలో నేను సేకరించడానికి తగినన్ని వస్తువులు లేవు.",
   "collectorTooManyBlocks": "మీరు {blockLimit} బ్లాక్ లను మాత్రమే ఉపయోగించవచ్చు. మీ కోడ్ వైపు ఒకసారి చూడండి, మరియు మళ్లీ ప్రయత్నించండి!",
-  "continue": "కొనసాగు",
+  "continue": "కొనసాగండి",
   "corn": "మొక్కజొన్న",
   "cornTooltip": "కొంత మొక్కజొన్నను కోయండి",
   "didNotCollectAllCrops": "మీరు ఏ పంటలనూ వదిలివేయకుండా చూసుకోండి!",

@@ -1,0 +1,68 @@
+{
+  "mn-MN": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "ai-2020": {
+            "buttonText": "Илүү мэдээлэл авах",
+            "title": "Хиймэл оюун ухаан, машин сурах талаар судлах"
+          },
+          "ai-launch-2023": {
+            "buttonText": "Илүү мэдээлэл авах"
+          },
+          "ai-pl-launch-2023": {
+            "buttonText": "Илүү мэдээлэл авах"
+          },
+          "back-to-school-2021": {
+            "buttonText": "Илүү мэдээлэл авах"
+          },
+          "codebytes-2020": {
+            "buttonText": "Илүү мэдээлэл авах"
+          },
+          "coldplay": {
+            "buttonText": "Үүнийг оролдоорой"
+          },
+          "congrats-certificate-share": {
+            "buttonText": "Эхлэх"
+          },
+          "csjourneys": {
+            "buttonText": "Илүү мэдээлэл авах"
+          },
+          "csjourneys-22": {
+            "buttonText": "Илүү мэдээлэл авах"
+          },
+          "csleadersprize": {
+            "buttonText": "Илүү мэдээлэл авах"
+          },
+          "hoc-2023": {
+            "buttonText": "Илүү мэдээлэл авах"
+          },
+          "hoc-2023-dance-ai": {
+            "buttonText": "Илүү мэдээлэл авах"
+          },
+          "hoc-more": {
+            "body": "Кодын Цаг вэбсайт нь бүх насныханд болон янз бүрийн туршлагатай хүмүүст зориулсан 500 гаруй компьютерийн шинжлэх ухааны үйл ажиллагааг агуулах ба эдгээр Code.org болон түншүүдийн хөгжүүлсэн зүйлс билээ."
+          },
+          "home-learning-2020": {
+            "buttonText": "Төслийн санаануудыг үзэх"
+          },
+          "superhero": {
+            "buttonText": "Илүү мэдээлэл авах"
+          },
+          "teacher-apps-closing-2021": {
+            "buttonText": "Бидэнтэй нэгдээрэй"
+          },
+          "teacher-apps-nominate-2020": {
+            "buttonText": "Багш нэр дэвшүүлэх"
+          },
+          "teacher-apps-open-2021": {
+            "buttonText": "Бидэнтэй нэгдээрэй"
+          },
+          "teacher-apps-stillon-2020": {
+            "buttonText": "Бидэнтэй нэгдээрэй"
+          }
+        }
+      }
+    }
+  }
+}

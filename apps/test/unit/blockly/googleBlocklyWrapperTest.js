@@ -72,7 +72,6 @@ describe('Google Blockly Wrapper', () => {
       'selected',
       'tutorialExplorer_locale',
       'useContractEditor',
-      'useModalFunctionEditor',
       'utils',
       'Trashcan',
       'Variables',

@@ -70,6 +70,10 @@ ms:
         ai-ethics-2021:
           description_audience: Gred 6-12
           title: Kod Etika AI kami
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: Kod Etika AI kami
         ai-temp:
           title: Cara AI Berfungsi
         aiml-2021:
@@ -1354,6 +1358,14 @@ ms:
               display_name: Bab 2
             lessonGroup-4:
               display_name: Pengenalan kepada Makmal Aplikasi
+        csd7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Bab 1
+            lessonGroup-3:
+              display_name: Bab 2
+            lessonGroup-4:
+              display_name: Pengenalan kepada Makmal Aplikasi
         csdu6-playground:
           description_short: Taman permainan CSD U6. Lihat Dan Schneider untuk soalan
           lesson_groups:
@@ -2253,7 +2265,7 @@ ms:
           description_short: Terokai dunia Minecraft melalui pengekodan.
           student_description: Gunakan blok kod untuk membawa Steve atau Alex mengembara
             melalui dunia Minecraft ini.
-          title: Jam Kod Minecraft
+          title: Pengembara Minecraft
         microbit-temp:
           lesson_groups:
             lessonGroup-2:
@@ -2265,6 +2277,7 @@ ms:
             Minecraft anda sendiri.
           student_description: Program haiwan dan makhluk Minecraft lain dalam versi
             Minecraft anda sendiri.
+          title: Pereka Minecraft
         netsim:
           title: Simulator Internet
         nevada-standards-aligned-fifth-grade-2023:
@@ -2587,6 +2600,58 @@ ms:
           title: 'Modul 2: Menavigasi Code.org'
         self-paced-pl-csa2-2023:
           title: 'Modul 2: Menavigasi Code.org'
+        self-paced-pl-csd-unit1-2-2023:
+          description: |-
+            Modul pembelajaran profesional ini direka bentuk untuk membantu anda bersedia untuk mengajar unit Penyelesaian Masalah dan Pengkomputeran Code.org.
+
+            **Dalam modul pembelajaran profesional ini, anda akan:**
+
+            -   Dapatkan pengenalan kepada Penyelesaian Masalah dan Pengkomputeran.
+            -   Mengamalkan konsep utama yang disertakan dalam unit.
+            -   Terokai projek akhir bab.
+
+            **Masa yang dicadangkan:** 30 minit
+          student_description: |-
+            Modul pembelajaran profesional ini direka bentuk untuk membantu anda bersedia untuk mengajar unit Penyelesaian Masalah dan Pengkomputeran Code.org.
+
+            **Dalam modul pembelajaran profesional ini, anda akan:**
+
+            -   Dapatkan pengenalan kepada Penyelesaian Masalah dan Pengkomputeran.
+            -   Mengamalkan konsep utama yang disertakan dalam unit.
+            -   Terokai projek akhir bab.
+
+            **Masa yang dicadangkan:** 30 minit
+          title: 'Modul 1: Persediaan untuk Mengajar Penyelesaian Masalah dan Pengkomputeran'
+        self-paced-pl-csd-unit2-2-2023:
+          title: 'Modul 2: Persediaan untuk Mengajar Pembangunan Web'
+        self-paced-pl-csd-unit3-2-2023:
+          description: |-
+            Modul pembelajaran profesional ini direka bentuk untuk membantu anda bersedia untuk mengajar unit Animasi dan Permainan Interaktif Code.org.
+
+            **Dalam modul pembelajaran profesional ini, anda akan:**
+
+            -   Mendapat pengenalan tentang Animasi dan Permainan Interaktif.
+            -   Mengamalkan konsep utama yang disertakan dalam unit.
+            -   Terlibat dengan Makmal Permainan.
+            -   Terokai projek akhir bab.
+
+            **Masa yang dicadangkan:** 120 minit
+          student_description: |-
+            Modul pembelajaran profesional ini direka bentuk untuk membantu anda bersedia untuk mengajar unit Animasi dan Permainan Interaktif Code.org.
+
+            **Dalam modul pembelajaran profesional ini, anda akan:**
+
+            -   Mendapat pengenalan tentang Animasi dan Permainan Interaktif.
+            -   Mengamalkan konsep utama yang disertakan dalam unit.
+            -   Terlibat dengan Makmal Permainan.
+            -   Terokai projek akhir bab.
+
+            **Masa yang dicadangkan:** 120 minit
+          title: Bersedia untuk Mengajar Animasi dan Permainan Interaktif
+        self-paced-pl-csd-unit4-2-2023:
+          title: 'Modul 4: Persediaan untuk Mengajar Proses Reka Bentuk'
+        self-paced-pl-csd-unit5-2-2023:
+          title: 'Modul 5: Persediaan mengajar data dan masyarakat'
         self-paced-pl-csd1-2021:
           description: |-
             Modul ini adalah pengenalan ringkas kepada Code.org dan kursus pembelajaran profesional.
@@ -3112,6 +3177,17 @@ ms:
               display_name: Jin
             ramp_up:
               display_name: Tingkatkan
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Pengenalan
+          lessons:
+            lesson-7:
+              name: Pengenalan
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Pengenalan
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -3134,6 +3210,10 @@ ms:
           lessons:
             lesson-3:
               name: Penilaian
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Pengenalan
         virustest:
           description_short: Gunakan Makmal Jin untuk mencipta simulasi wabak virus.
           title: Mensimulasikan Wabak

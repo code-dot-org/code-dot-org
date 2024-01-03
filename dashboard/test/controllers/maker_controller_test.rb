@@ -248,6 +248,7 @@ class MakerControllerTest < ActionController::TestCase
 
   test "complete: fails if not given a signature" do
     DCDO.stubs(:get).with('currently_distributing_discount_codes', false).returns(true)
+    DCDO.stubs(:get).with('ai-tutor-disabled', false).returns(true)
     sign_in @teacher
 
     assert_raises ActionController::ParameterMissing do
@@ -257,6 +258,7 @@ class MakerControllerTest < ActionController::TestCase
 
   test "complete: fails if user doesnt have application" do
     DCDO.stubs(:get).with('currently_distributing_discount_codes', false).returns(true)
+    DCDO.stubs(:get).with('ai-tutor-disabled', false).returns(true)
     sign_in @teacher
     post :complete, params: {signature: "My Name"}
     assert_response :not_found
@@ -264,6 +266,7 @@ class MakerControllerTest < ActionController::TestCase
 
   test "complete: fails if application not in the right state" do
     DCDO.stubs(:get).with('currently_distributing_discount_codes', false).returns(true)
+    DCDO.stubs(:get).with('ai-tutor-disabled', false).returns(true)
     sign_in @teacher
 
     # no intention to teach unit 6
@@ -286,6 +289,7 @@ class MakerControllerTest < ActionController::TestCase
 
   test "complete: returns a new code" do
     DCDO.stubs(:get).with('currently_distributing_discount_codes', false).returns(true)
+    DCDO.stubs(:get).with('ai-tutor-disabled', false).returns(true)
     sign_in @teacher
 
     create :circuit_playground_discount_application,
@@ -304,6 +308,7 @@ class MakerControllerTest < ActionController::TestCase
   test "complete: works after admin override" do
     DCDO.stubs(:get).with('facilitator_ids_eligible_for_maker_discount', []).returns([])
     DCDO.stubs(:get).with('currently_distributing_discount_codes', false).returns(true)
+    DCDO.stubs(:get).with('ai-tutor-disabled', false).returns(true)
     sign_in @admin
 
     post :override, params: {user: @teacher.id, full_discount: true}
@@ -424,7 +429,7 @@ class MakerControllerTest < ActionController::TestCase
 
   private
 
-  def ensure_script(script_name, version_year='2000', is_stable=true)
+  def ensure_script(script_name, version_year = '2000', is_stable = true)
     Unit.find_by_name(script_name) ||
       create(:script, name: script_name, family_name: 'devices', version_year: version_year, published_state: is_stable ? Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable : Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview).tap do |script|
         lesson_group = create :lesson_group, script: script

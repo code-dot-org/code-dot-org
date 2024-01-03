@@ -14,10 +14,10 @@ Rekenkundig denken draagt bij aan vaardigheden voor het oplossen van problemen, 
 
 Uw bedrijf kan helpen mensen meer bewust te laten worden over de informatica-beweging tjidens de 'Hour of Code'-campagne. Of u nu als vrijwilliger meedoet of een event voor uw bedrijf plant, al uw moeite kan een grote impact maken op de wijze waarop jonge vrouwen en studenten van gemarginaliseerde raciale en etnische groepen aankijken tegen informatica en hun eigen potentieel.
 
-Check out the steps below to get started, and see our [guide for corporate partners](/files/hoc-corporate-toolkit.pdf) for more on how to get your company excited about the Hour of Code.
+Bekijk de stappen hieronder om aan de slag te gaan en bekijk onze [gids voor zakelijke partners](/files/hoc-corporate-toolkit.pdf) voor meer informatie over hoe je je bedrijf enthousiast kunt maken voor het Hour of Code.
 
-- [Connect with a local school](#connect-with-a-school)
-- [Encourage employees to volunteer with a classroom](#encourage-employees)
+- [Neem contact op met een lokale school](#connect-with-a-school)
+- [Moedig medewerkers aan vrijwillig mee te doen met een klas.](#encourage-employees)
 - [Host uw eigen 'Hour of Code'.](#host-hour-of-code)
 - [Promoot het CodeUur](#promote-hour-of-code)
 - [Meer manieren om 'Hour of Code' te ondersteunen.](#support-hour-of-code)
@@ -26,37 +26,37 @@ Check out the steps below to get started, and see our [guide for corporate partn
 
 <a id="connect-with-a-school"></a>
 
-## Connect with a local school
+## Neem contact op met een lokale school
 
-It's always best to start locally, with schools that you or your employees have a strong connection to, like an alma mater, a child’s school, or a local organization or school that is focused on serving a population that has been historically underrepresented in computer science.
+Het is altijd het beste om lokaal te beginnen, met scholen waar u of uw werknemers een sterke band mee hebben, zoals een alma mater, een kinderschool of een lokale organisatie of school die zich richt op het bedienen van een bevolking die historisch ondervertegenwoordigd was in de informatica.
 
 [![](/images/fit-600/Marketing/2018_HoC-392.jpg)]({{ urls/learn }})
 
-From there, you can visit the school’s website to find appropriate contacts to reach out to, like a principal, vice principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations like the Boys & Girls Clubs of America, a YMCA branch, and more to co-host an event.
+Van daaruit kunt u de website van de school bezoeken om geschikte contactpersonen te vinden waarmee u contact kunt opnemen, zoals een directeur, onderdirecteur, docenten technologie of informatica, of zelfs de PTSA van de school. Je kunt ook samenwerken met organisaties zoals de Boys & Girls Clubs of America, een YMCA-afdeling en meer om samen een evenement te organiseren.
 
-If you are unable to connect with a school, please [contact us](https://support.code.org/hc/en-us/requests/new) and we’ll connect you with one of our local partners if possible.
+Als het u niet lukt om contact op te nemen met een school, [neem dan contact met ons op](https://support.code.org/hc/en-us/requests/new), en wij zullen u verbinden met een van onze locale partners als dat mogelijk is.
 
 * * *
 
 <a id="encourage-employees"></a>
 
-## Encourage employees to volunteer with a classroom
+## Moedig medewerkers aan vrijwillig mee te doen met een klas.
 
 [![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
 
-One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology has impacted your role.
+Een van de meest bevredigende manieren om deel te nemen aan 'Hour of Code' is dit vrijwillig te doen met een klas door fysiek aanwezig te zijn of virtueel. Het mooiste is dat u geen engineer hoeft te zijn om als vrijwilliger mee te mogen doen. Je kunt studenten nog steeds een zinvolle ervaring bieden door je eigen loopbaanervaring te delen en hoe CS of technologie je rol heeft beïnvloed.
 
 [<button>Meld u aan als vrijwilliger</button>]({{ urls/volunteer }})
 
-Once a volunteer registers, a teacher can review their profile on our [volunteer map](https://code.org/volunteer/local) - so profiles should be submitted as complete as possible. If you’re a good fit for their classroom, a teacher will contact you through the platform (we will never share your email address with the teacher). You can then coordinate details directly with the teacher around [how to best volunteer with their classroom](https://hourofcode.com/us/how-to/volunteers).
+Zodra een vrijwilliger zich aameldt kan een leraar zijn of haar profiel evalueren in onze [lijst met vrijwilligers](https://code.org/volunteer/local) - en dus moeten profielen zo compleet mogelijk worden ingediend. Als u geschikt bent voor hun klas, dan zal een leraar contact met u opnemen via het platform (wij zullen nooit uw e-mailadres delen met de leraar). U kunt dan direct informatie bespreken met de leraar met betrekking tot [Hoe het beste als vrijwilliger te werken met hun klas](https://hourofcode.com/us/how-to/volunteers).
 
-For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
+Raadpleeg onze [Gebruiksaanwijzing voor commerciële partners]({{ localized_files/hoc_corporate_toolkit }}) voor meer hulp bij het aanmelden als vrijwilliger en voorbeeldberichten om uw bedrijf enthousiast te maken over 'Hour of Code'.
 
 * * *
 
 <h4><font color="00adbc"><i>"IK VOND HET GEWELDIG om de kinderen zo enthousiast te zien. Een bijzondere ervaring was dat de leraren merkte dat sommige studenten met mindere leerprestaties uitblonken in het denken als een ontwikkelaar en in het helpen van anderen - waardoor ze zich zelfverzekerd voelden."</i></font></h4>
 
--Hour of Code volunteer
+-'Hour of Code'-vrijwilliger
 
 * * *
 
@@ -64,9 +64,9 @@ For more guidance on volunteering and sample messaging to get your company excit
 
 ## Host uw eigen 'Hour of Code'.
 
-If you want to go the extra mile, your company can also host an Hour of Code event. There is no specific formula for hosting an event so we encourage you to be creative! Given that our staff size is small (but mighty!), Code.org does not have a team dedicated to coordinating Hour of Code events. However, here are some tips to get started.
+Als u wat extra moeite wilt doen, dan kan uw bedrijf ook een 'Hour of Code' hosten. Er is geen specifieke formule voor het hosten daarvan en dus moedigen wij u aan creatief te zijn. Aangezien ons personeelsbestand klein (maar groots!) is, heeft Code.org geen team speciaal toegewijd aan het coördineren van 'Hour of Code'-evenementen. We kunnen echter wel wat tips geven om te beginnen.
 
-### 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+### 1. Bekijk deze instructievideo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 ### 2. Leg de datum, format, en locatie van uw evenement vast.
 
@@ -76,7 +76,7 @@ Wij zien evenementen die [virtueel](https://hourofcode.com/us/how-to/virtual) of
 
 #### Voorbeeldagenda:
 
-|Time | Agenda Item | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minutes | Show an [inspirational video](https://hourofcode.com/us/promote/resources#videos)| |5-10 minutes | Introduce yourself and learn more about the students: Where do you work, what do you do, and what do you love most about your job? Wat of wie heeft u geïnspireerd? Wat heeft uw interesse in informatica gewekt? Had u een mentor? Stel vragen aan de studenten en houd tijd over voor V&A. | |30-60 minutes | Code! Als u uw evenement persoonlijk bijwoont, dan is nu het moment daar om vragen te beantwoorden en studenten door middel van moeilijke puzzels te begeleiden. Geef ze niet meteen de oplossing, maar stel ze in plaats daarvan vragen zodat voor zichzelf kunnen beantwoorden wat er fout ging, en moedig studenten aan vragen aan elkaar te stellen als ze deze hebben. Als u virtueel vrijwilligerswerk doet, bespreek dan samen met de leraar wat de beste benadering kan zijn. Het is verstandiger om na het einde van de sessie terug te keren om te zien welke voortgang de studenten hebben gemaakt. | | |1-3 minuten | Bedank iedereen en geef wat inspirerende woorden ter afscheid. Deel wat cadeautjes van uw bedrijf uit ([stickers](#celebrate) zijn geweldig)! | | <br />
+|Tijd | Agendapunt | | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minuten | Laat een [inspirerende video zien | |5-10 minuten](https://hourofcode.com/us/promote/resources#videos)| Stel jezelf voor en leer meer over de studenten: Waar werk je, wat doe je en wat vind je het leukst aan je werk? Wat of wie heeft u geïnspireerd? Wat heeft uw interesse in informatica gewekt? Had u een mentor? Stel vragen aan de studenten en houd tijd over voor V&A. | |30-60 minuten | Code! Als u uw evenement persoonlijk bijwoont, dan is nu het moment daar om vragen te beantwoorden en studenten door middel van moeilijke puzzels te begeleiden. Geef ze niet meteen de oplossing, maar stel ze in plaats daarvan vragen zodat voor zichzelf kunnen beantwoorden wat er fout ging, en moedig studenten aan vragen aan elkaar te stellen als ze deze hebben. Als u virtueel vrijwilligerswerk doet, bespreek dan samen met de leraar wat de beste benadering kan zijn. Het is verstandiger om na het einde van de sessie terug te keren om te zien welke voortgang de studenten hebben gemaakt. | | |1-3 minuten | Bedank iedereen en geef wat inspirerende woorden ter afscheid. Deel wat cadeautjes van uw bedrijf uit ([stickers](#celebrate) zijn geweldig)! | | <br />
 
 #### Overige ideeën die u aan uw evenement kunt toevoegen.
 
@@ -121,7 +121,7 @@ Nadat studenten of gasten hun 'Hour of Code' hebben voltooid, is het tijd om hun
 
 - [Print certificates]({{ urls/certificates }}) for participants and students.
 - [Druk 'Ik heb een Hour of Code" stickers af"]({{ promote/resources_stickers }}) of ga op zoek naar andere beloningen en cadeautjes in de [Code.org Amazon Store](https://code.org/shop).
-- Share photos and videos of your Hour of Code event on social media. Use [#HourOfCode](https://twitter.com/hashtag/hourofcode) and [@codeorg](https://twitter.com/codeorg) so we can highlight your success, too!
+- Share photos and videos of your Hour of Code event on social media. Gebruik [#HourOfCode](https://twitter.com/hashtag/hourofcode) en [@codeorg](https://twitter.com/codeorg) zodat we ook jouw succes kunnen benadrukken!
 
 * * *
 
@@ -135,7 +135,7 @@ Een van de beste manieren om helpen is het verspreiden van informatie en het pro
 
 ### 1. Registreer uw evenement
 
-When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. Tevens kunt u op deze wijze locale scholen of ouders laten weten dat u een evenement bij hen in de buurt zult hosten.
+Wanneer je je [aanmeldt voor je Hour of Code-evenement](/events), ontvang je nuttige e-mailberichten met nieuws en tips voor het organiseren van een succesvol Hour of Code-evenement. Tevens kunt u op deze wijze locale scholen of ouders laten weten dat u een evenement bij hen in de buurt zult hosten.
 
 ### 2. Plaatsen op sociale media
 
@@ -148,7 +148,7 @@ Gebruik deze inhoud als voorbeeld en plaats het op sociale media en deel het met
 
 #### Statistieken
 
-- Did you know only 53% of U.S. schools teach computer science? Give every student the chance to learn one #HourOfCode https://hourofcode.com/
+- Wist je dat slechts 53% van de Amerikaanse scholen computerwetenschappen doceert? Geef elke student de kans om er een te leren #HourOfCode https://hourofcode.com/
 - In de VS is slechts 26% van alle softwareprofessionals een vrouw. Laat meer vrouwen kennis maken met informatica dankzij #HourOfCode https://hourofcode.com/.
 - 67% van alle computerbanen in de VS bevinden zich niet in de technologiesecotr. Laat informatie onderdeel worden van het standaard curriculum met #HourOfCode. https://hourofcode.com/.
 
@@ -162,7 +162,7 @@ Gebruik deze inhoud als voorbeeld en plaats het op sociale media en deel het met
 - Als uw allereerste programmaregel uw leven veranderde, help dan studenten bij u in de buurt met het schrijven van hun eerste #HourOfCode https://code.org/volunteer
 - Als programmeren hebt geleerd - wat is uw verhaal? Inspireer een student uit de buurt door middel van hun eerste #HourOfCode https://code.org/volunteer
 
-<a href="https://hourofcode.com/promote/resources#posters">Find more</a> posters, videos, stickers and other ways to promote your event to your community.
+<a href="https://hourofcode.com/promote/resources#posters">Vind meer</a> posters, video's, stickers en andere manieren om je evenement te promoten bij je community.
 
 * * *
 

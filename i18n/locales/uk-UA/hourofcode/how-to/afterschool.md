@@ -1,5 +1,5 @@
 ---
-title: Hour of Code How-to Guide for After-school
+title: Інструкція по годині коду для позашкільних занять
 ---
 
 {{ signup_button }}
@@ -10,9 +10,9 @@ title: Hour of Code How-to Guide for After-school
 
 Обчислювальне мислення допомагає розвивати навички розв’язання проблем, логіку та креативність. А технології змінюють кожну галузь на планеті. Сьогодні учні мають вчитися не лише використовувати технології, а й створювати їх. Здобуття цих навичок у ранньому віці є основною для успішної кар’єри у 21-му столітті в будь-якій сфері діяльності.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+Спробувати Годину коду - це простий і цікавий спосіб познайомити учнів з інформатикою, можливо, вперше. Якщо вам потрібен додатковий набір рук, щоб допомогти, ви можете знайти [місцевого волонтера, який допоможе]({{ urls/volunteer_local }}) провести Годину коду у вашому позашкільному класі чи клубі.
 
-### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+### Годину коду також можна розміщувати віддалено! Для початку ознайомтеся з нашими [порадами щодо проведення віртуальної події Hour of Code](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
@@ -20,9 +20,9 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 
 ## 2. Оберіть урок
 
-We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+Ми пропонуємо різноманітні [веселі, годинні навчальні посібники]({{ urls/learn }}) для учасників різного віку, створені різноманітними партнерами. [Спробуйте їх!]({{ urls/learn }})
 
-**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
+**Усі навчальні посібники «Година коду»** вимагають мінімального часу підготовки для організаторів та є самостійними, що дозволяє дітям працювати у своєму власному темпі та рівні навичок.
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
@@ -30,13 +30,13 @@ We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for partici
 
 ## Рекламуйте свою Годину коду
 
-Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage others to host their own events.
+Просувайте свою Годину коду за [допомогою цих інструментів]({{ urls/promote }}) та заохочуйте інших проводити власні події.
 
-## 4. Plan your technology needs - computers are optional
+## 4. Плануйте свої технологічні потреби - комп'ютери необов'язкові
 
 Найкращий варіант Години коду включає підключені до Інтернету комп'ютери. Але вам **не** потрібен комп'ютер для кожної дитини, і ви навіть можете робити Годину коду без комп'ютера взагалі.
 
-Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Маєте низьку пропускну здатність?** Плануйте показувати відео на передній частині класу, щоб кожен учень не завантажував власні відео. Або спробуйте вимкнені/автономні навчальні посібники.
 
 Забезпечте навушники своєму класові, або попросіть учнів принести власні, якщо обраний вами підручник працює найкраще зі звуком.
 
@@ -49,31 +49,31 @@ Make sure to test tutorials on student computers or devices to ensure they work 
 **Покажіть надихальні відео:**
 
 - Перше відео з запуску Code.org, в якому показані Біл Гейтс, Марк Цукенберг і зірка НБА Кріс Бош - наявні [ 1-хвилинна](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5-хвилинна](https://www.youtube.com/watch?v=nKIu9yen5nc) і [9-хвилинна](https://www.youtube.com/watch?v=dU1xS07N-FA) версії.
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- Відео « [Година коду» по всьому світу](https://www.youtube.com/watch?v=KsOIlDT145A)
+- [Президент Обама закликав усіх учнів вивчати інформати](https://www.youtube.com/watch?v=6XvmhE1J9PY)ку
 - Знайди більше мотиваційних відео [тут](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **Не біда, якщо ви всі — повні новачки в інформатиці. Ось деякі ідеї, як представити ваш захід Години коду:**
 
 - Поясніть шляхи впливу технологій на наше життя, з прикладами, які хвилюватимуть як хлопчиків, так і дівчаток (кажіть про застосунки та технології, які використовуються для порятунку життя, допомоги людям, зв'язку між людьми тощо).
 - Перелічіть повсякденні речі, які використовують код.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- Дивіться поради щодо того, як зацікавити дівчат інформати [кою тут]({{ urls/girls }}).
 
 **Потрібна додаткова допомога?** Завантажте цей [ план уроку](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
-## 6. Code!
+## 6. Код!
 
-**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+**Направляйте учасників до діяльності** - Напишіть посилання на підручник на дошці. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
-**When someone comes across difficulties it's okay to respond:** - “I don’t know. Спробуймо розібратися разом». – «Технології не завжди працюють так, як ми хочемо». – «Вивчення програмування – це як вивчення нової мови. Неможливо одразу навчитися вільно спілкуватися нею».
+**Коли хтось стикається з труднощами, нормально відповісти:** - «Я не знаю. Спробуймо розібратися разом». – «Технології не завжди працюють так, як ми хочемо». – «Вивчення програмування – це як вивчення нової мови. Неможливо одразу навчитися вільно спілкуватися нею».
 
-**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
+**Що робити, якщо хтось закінчує рано?** - Заохочуйте учасників спробувати ще одну діяльність Година коду на сайті [hourofcode.com/learn]({{ urls/learn }}) - Або попросіть тих, хто закінчує рано, допомогти іншим, хто має проблеми.
 
 ## 7. Святкуйте
 
-- [Print certificates]({{ urls/certificates }}) for your students.
-- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers for your students.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for participants.
+- [Роздрукуйте сертифікати]({{ urls/certificates }}) для своїх учнів.
+- [Друк «Я зробив Годину коду!»]({{ promote/resources_stickers }}) наклейки для ваших учнів.
+- [Замовляйте футболки](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) на замовлення для учасників.
 - Поділіться фотографіями та відео вашого заходу Години коду в соціальних мережах. Використайте #HourOfCode та @codeorg, щоби ми також могли висвітити ваш успіх!
 
 ## Інші ресурси Години коду для педагогів
@@ -85,6 +85,6 @@ Make sure to test tutorials on student computers or devices to ensure they work 
 
 ## Що після Години коду?
 
-Година коду є лише першим кроком на шляху вивчення того, як працюють технології, і як створювати власні програмні застосунки. Help students continue their journey and encourage them to [learn more online](/beyond)!
+Година коду є лише першим кроком на шляху вивчення того, як працюють технології, і як створювати власні програмні застосунки. Допоможіть учням продовжувати свою подорож та заохочуйте їх [дізнаватися більше в Інтернеті](/beyond)!
 
 {{ signup_button }}

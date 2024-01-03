@@ -27,6 +27,10 @@ ka:
         options:
           UNIT:
             '"seconds"': წამები
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"seconds"': წამები
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -40,6 +44,10 @@ ka:
             '"MOOSE"': Moose
             '"ROBOT"': რობოტები
             sprites: ყველა
+          MOVE:
+            MOVES.Rest: არცერთი
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
           MOVE:
             MOVES.Rest: არცერთი
       Dancelab_changeMoveLR:
@@ -244,6 +252,14 @@ ka:
           EFFECT:
             '"diamonds"': ბრილიანტები
             '"none"': არცერთი
+            '"rainbow"': ცისარტყელა
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"diamonds"': ბრილიანტები
+            '"none"': არცერთი
+            '"rainbow"': ცისარტყელა
+          PALETTE:
             '"rainbow"': ცისარტყელა
       Dancelab_setDanceSpeed:
         options:
@@ -490,6 +506,12 @@ ka:
         text: წარმოადგინეთ {NUM} ახალი {ANIMATION_NAME} სპრაიტები [BEHAVIOR][2]
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}თქვას{TEXT1}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': გაზი
+            '"liquid"': სითხე
+            '"solid"': მყარი
       Mikelab_addBehaviorSimple:
         text: სპრაიტი {SPRITE} იწყება {BEHAVIOR}
       Mikelab_changePropBy:

@@ -80,6 +80,19 @@
           "swimming left and right": "kaliwa't kanan ang paglangoy",
           "wandering": "gumagala"
         },
+        "CourseE_Project_SpriteLab_2023": {
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala"
+        },
         "CourseE_Project_SpriteLab_cupcake_examples2022": {
           "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
           "fluttering": "pumapagaspas",
@@ -131,6 +144,25 @@
           "wandering2": "gumagala2",
           "wobbling": "gumulong-gulong"
         },
+        "CourseE_Project_SpriteLab_cupcake_examples_2023": {
+          "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
         "CourseE_Project_SpriteLab_examples2022": {
           "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
           "fluttering": "pumapagaspas",
@@ -180,6 +212,25 @@
           "swimming left and right2": "kaliwa't kanan ang paglangoy2",
           "wandering": "gumagala",
           "wandering2": "gumagala2",
+          "wobbling": "gumulong-gulong"
+        },
+        "CourseE_Project_SpriteLab_examples_2023": {
+          "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
           "wobbling": "gumulong-gulong"
         },
         "CourseE_hoops": {
@@ -262,6 +313,10 @@
           "recovering": "nagpapagaling",
           "wandering": "gumagala"
         },
+        "CourseF_outbreak1_2023": {
+          "recovering": "nagpapagaling",
+          "wandering": "gumagala"
+        },
         "CourseF_outbreak2": {
           "recovering": "nagpapagaling",
           "wandering": "gumagala"
@@ -270,11 +325,19 @@
           "recovering": "nagpapagaling",
           "wandering": "gumagala"
         },
+        "CourseF_outbreak2_2023": {
+          "recovering": "nagpapagaling",
+          "wandering": "gumagala"
+        },
         "CourseF_outbreak3": {
           "recovering": "nagpapagaling",
           "wandering": "gumagala"
         },
         "CourseF_outbreak3_-2022-2": {
+          "recovering": "nagpapagaling",
+          "wandering": "gumagala"
+        },
+        "CourseF_outbreak3_2023": {
           "recovering": "nagpapagaling",
           "wandering": "gumagala"
         },
@@ -308,6 +371,21 @@
           "spinning right": "umiikot pakanan",
           "wandering": "gumagala"
         },
+        "CourseF_outbreak4_2023": {
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "patrolling": "nagpapatrolya",
+          "recovering": "nagpapagaling",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala"
+        },
         "CourseF_outbreak5": {
           "recovering": "nagpapagaling",
           "wandering": "gumagala"
@@ -316,11 +394,19 @@
           "recovering": "nagpapagaling",
           "wandering": "gumagala"
         },
+        "CourseF_outbreak5_2023": {
+          "recovering": "nagpapagaling",
+          "wandering": "gumagala"
+        },
         "CourseF_outbreak6": {
           "recovering": "nagpapagaling",
           "wandering": "gumagala"
         },
         "CourseF_outbreak6_-2022-2": {
+          "recovering": "nagpapagaling",
+          "wandering": "gumagala"
+        },
+        "CourseF_outbreak6_2023": {
           "recovering": "nagpapagaling",
           "wandering": "gumagala"
         },
@@ -356,6 +442,22 @@
           "spinning right": "umiikot pakanan",
           "wandering": "gumagala"
         },
+        "CourseF_outbreak7_2023": {
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving left and right": "paggalaw sa kaliwa at kanan",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "patrolling": "nagpapatrolya",
+          "recovering": "nagpapagaling",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala"
+        },
         "CourseF_outbreak8": {
           "growing": "lumalaki",
           "jittering": "nanginginig",
@@ -373,6 +475,22 @@
           "wandering": "gumagala"
         },
         "CourseF_outbreak8_-2022-2": {
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving left and right": "paggalaw sa kaliwa at kanan",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "patrolling": "nagpapatrolya",
+          "recovering": "nagpapagaling",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala"
+        },
+        "CourseF_outbreak8_2023": {
           "growing": "lumalaki",
           "jittering": "nanginginig",
           "moving east": "gumagalaw sa silangan",
@@ -708,6 +826,18 @@
           "swimming left and right": "kaliwa't kanan ang paglangoy",
           "wandering": "gumagala"
         },
+        "Fish Tank 2-validated_2023": {
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala"
+        },
         "Fish Tank 3-validated2022": {
           "growing": "lumalaki",
           "jittering": "nanginginig",
@@ -755,6 +885,18 @@
           "shrinking": "lumiliit",
           "spinning right": "umiikot pakanan",
           "swimming left and right": "kaliwa't kanan ang paglangoy",
+          "wandering": "gumagala"
+        },
+        "Fish Tank 3-validated_2023": {
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning right": "umiikot pakanan",
           "wandering": "gumagala"
         },
         "Fish Tank 4-validated2022": {
@@ -806,6 +948,18 @@
           "swimming left and right": "kaliwa't kanan ang paglangoy",
           "wandering": "gumagala"
         },
+        "Fish Tank 4-validated_2023": {
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala"
+        },
         "Fish Tank 5-validated2022": {
           "growing": "lumalaki",
           "jittering": "nanginginig",
@@ -855,6 +1009,18 @@
           "swimming left and right": "kaliwa't kanan ang paglangoy",
           "wandering": "gumagala"
         },
+        "Fish Tank 5-validated_2023": {
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala"
+        },
         "Fish Tank 6-validated2022": {
           "growing": "lumalaki",
           "jittering": "nanginginig",
@@ -902,6 +1068,18 @@
           "shrinking": "lumiliit",
           "spinning right": "umiikot pakanan",
           "swimming left and right": "kaliwa't kanan ang paglangoy",
+          "wandering": "gumagala"
+        },
+        "Fish Tank 6-validated_2023": {
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning right": "umiikot pakanan",
           "wandering": "gumagala"
         },
         "OPD-K5-spritelab-2": {
@@ -1029,6 +1207,25 @@
           "wandering": "gumagala",
           "wobbling": "gumulong-gulong"
         },
+        "Virtual Pet 1_2023": {
+          "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
         "Virtual Pet 2": {
           "growing": "lumalaki",
           "jittering": "nanginginig",
@@ -1095,6 +1292,19 @@
           "swimming left and right": "kaliwa't kanan ang paglangoy",
           "wandering": "gumagala"
         },
+        "Virtual Pet 2_2023": {
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala"
+        },
         "Virtual Pet 3_-2022-2": {
           "growing": "lumalaki",
           "jittering": "nanginginig",
@@ -1159,6 +1369,19 @@
           "swimming left and right2": "kaliwa't kanan ang paglangoy2",
           "wandering": "gumagala",
           "wandering2": "gumagala2"
+        },
+        "Virtual Pet 3_2023": {
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala"
         },
         "Virtual Pet 4": {
           "growing": "lumalaki",
@@ -1536,6 +1759,19 @@
           "swimming left and right": "kaliwa't kanan ang paglangoy",
           "wandering": "gumagala"
         },
+        "courseE_aboutme_2_2023": {
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala"
+        },
         "courseE_aboutme_3": {
           "growing": "lumalaki",
           "jittering": "nanginginig",
@@ -1587,6 +1823,19 @@
           "spinning left": "umiikot pakaliwa",
           "spinning right": "umiikot pakanan",
           "swimming left and right": "kaliwa't kanan ang paglangoy",
+          "wandering": "gumagala"
+        },
+        "courseE_aboutme_3_2023": {
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
           "wandering": "gumagala"
         },
         "courseE_aboutme_4": {
@@ -1642,6 +1891,19 @@
           "swimming left and right": "kaliwa't kanan ang paglangoy",
           "wandering": "gumagala"
         },
+        "courseE_aboutme_4_2023": {
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala"
+        },
         "courseE_aboutme_5": {
           "growing": "lumalaki",
           "jittering": "nanginginig",
@@ -1693,6 +1955,19 @@
           "spinning left": "umiikot pakaliwa",
           "spinning right": "umiikot pakanan",
           "swimming left and right": "kaliwa't kanan ang paglangoy",
+          "wandering": "gumagala"
+        },
+        "courseE_aboutme_5_2023": {
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
           "wandering": "gumagala"
         },
         "courseF_apps_aquarium": {
@@ -1762,6 +2037,24 @@
           "wandering": "gumagala",
           "wobbling": "gumulong-gulong"
         },
+        "courseF_apps_aquarium_2023": {
+          "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
+          "driving with arrow keys2": "pagmamaneho gamit ang mga arrow key2",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "moving with arrow keys2": "gumagalaw gamit ang mga arrow key2",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
         "courseF_apps_card": {
           "blocking movement": "blocking movement",
           "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
@@ -1796,6 +2089,22 @@
           "wandering": "gumagala"
         },
         "courseF_apps_card_-2022-2": {
+          "blocking movement": "blocking movement",
+          "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala"
+        },
+        "courseF_apps_card_2023": {
           "blocking movement": "blocking movement",
           "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
           "growing": "lumalaki",
@@ -1861,6 +2170,24 @@
           "wandering": "gumagala"
         },
         "courseF_apps_chatbot_-2022-2": {
+          "blocking movement": "blocking movement",
+          "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
+          "driving with arrow keys2": "pagmamaneho gamit ang mga arrow key2",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "moving with arrow keys2": "gumagalaw gamit ang mga arrow key2",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala"
+        },
+        "courseF_apps_chatbot_2023": {
           "blocking movement": "blocking movement",
           "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
           "driving with arrow keys2": "pagmamaneho gamit ang mga arrow key2",
@@ -1945,6 +2272,24 @@
           "spinning right": "umiikot pakanan",
           "wandering": "gumagala"
         },
+        "courseF_apps_collector_2023": {
+          "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
+          "driving with arrow keys2": "pagmamaneho gamit ang mga arrow key2",
+          "fluttering": "pumapagaspas",
+          "flying west and looping": "lumilipad pakanluran at umiikot",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "moving with arrow keys2": "gumagalaw gamit ang mga arrow key2",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala"
+        },
         "courseF_apps_madlib": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
@@ -1983,6 +2328,24 @@
           "wobbling": "gumulong-gulong"
         },
         "courseF_apps_madlib_-2022-2": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
+        "courseF_apps_madlib_2023": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
           "jittering": "nanginginig",
@@ -2058,6 +2421,25 @@
           "wandering": "gumagala",
           "wobbling": "gumulong-gulong"
         },
+        "courseF_apps_pet_2023": {
+          "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
         "courseF_editable_card": {
           "blocking movement": "blocking movement",
           "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
@@ -2076,6 +2458,22 @@
           "wandering": "gumagala"
         },
         "courseF_editable_card_-2022-2": {
+          "blocking movement": "blocking movement",
+          "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala"
+        },
+        "courseF_editable_card_2023": {
           "blocking movement": "blocking movement",
           "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
           "growing": "lumalaki",
@@ -2124,6 +2522,22 @@
           "spinning right": "umiikot pakanan",
           "wandering": "gumagala"
         },
+        "courseF_editable_chatbot_2023": {
+          "blocking movement": "blocking movement",
+          "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala"
+        },
         "courseF_editable_madlib": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
@@ -2144,6 +2558,24 @@
           "wobbling": "gumulong-gulong"
         },
         "courseF_editable_madlib_-2022-2": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
+        "courseF_editable_madlib_2023": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
           "jittering": "nanginginig",
@@ -2210,7 +2642,40 @@
           "spinning right": "umiikot pakanan",
           "wandering": "gumagala"
         },
+        "courseF_events_choice_conflict2_2023": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala"
+        },
         "courseF_events_choice_conflict_-2022-2": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala"
+        },
+        "courseF_events_choice_conflict_2023": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
           "jittering": "nanginginig",
@@ -2246,6 +2711,24 @@
           "wobbling": "gumulong-gulong"
         },
         "courseF_events_choice_penguin_-2022-2": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
+        "courseF_events_choice_penguin_2023": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
           "jittering": "nanginginig",
@@ -2299,6 +2782,24 @@
           "wandering": "gumagala",
           "wobbling": "gumulong-gulong"
         },
+        "courseF_events_choice_pufferfish_2023": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
         "courseF_events_conflict": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
@@ -2317,6 +2818,23 @@
           "wandering": "gumagala"
         },
         "courseF_events_conflict_-2022-2": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala"
+        },
+        "courseF_events_conflict_2023": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
           "jittering": "nanginginig",
@@ -2365,6 +2883,22 @@
           "wandering": "gumagala",
           "wobbling": "gumulong-gulong"
         },
+        "courseF_events_freeplay_air_2023": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
         "courseF_events_freeplay_animals": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
@@ -2382,6 +2916,22 @@
           "wobbling": "gumulong-gulong"
         },
         "courseF_events_freeplay_animals_-2022-2": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
+        "courseF_events_freeplay_animals_2023": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
           "jittering": "nanginginig",
@@ -2429,6 +2979,22 @@
           "wandering": "gumagala",
           "wobbling": "gumulong-gulong"
         },
+        "courseF_events_freeplay_aquatic_2023": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
         "courseF_events_freeplay_blank": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
@@ -2446,6 +3012,22 @@
           "wobbling": "gumulong-gulong"
         },
         "courseF_events_freeplay_blank_-2022-2": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
+        "courseF_events_freeplay_blank_2023": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
           "jittering": "nanginginig",
@@ -2493,6 +3075,22 @@
           "wandering": "gumagala",
           "wobbling": "gumulong-gulong"
         },
+        "courseF_events_freeplay_food_2023": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
         "courseF_events_freeplay_space": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
@@ -2510,6 +3108,22 @@
           "wobbling": "gumulong-gulong"
         },
         "courseF_events_freeplay_space_-2022-2": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
+        "courseF_events_freeplay_space_2023": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
           "jittering": "nanginginig",
@@ -2544,6 +3158,24 @@
           "wobbling": "gumulong-gulong"
         },
         "courseF_events_key_-2022-2": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
+        "courseF_events_key_2023": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
           "jittering": "nanginginig",
@@ -2601,6 +3233,26 @@
           "wandering": "gumagala",
           "wobbling": "gumulong-gulong"
         },
+        "courseF_events_practice_reorder_2023": {
+          "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
         "courseF_events_predict": {
           "growing": "lumalaki",
           "jittering": "nanginginig",
@@ -2618,6 +3270,19 @@
           "wandering": "gumagala"
         },
         "courseF_events_predict_-2022-2": {
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala"
+        },
+        "courseF_events_predict_2023": {
           "growing": "lumalaki",
           "jittering": "nanginginig",
           "moving east": "gumagalaw sa silangan",
@@ -2666,6 +3331,24 @@
           "wandering": "gumagala",
           "wobbling": "gumulong-gulong"
         },
+        "courseF_events_review_2023": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
         "courseF_events_ship": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
@@ -2685,6 +3368,24 @@
           "wobbling": "gumulong-gulong"
         },
         "courseF_events_ship_-2022-2": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
+        "courseF_events_ship_2023": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
           "jittering": "nanginginig",
@@ -2771,6 +3472,24 @@
           "wandering": "gumagala",
           "wobbling": "gumulong-gulong"
         },
+        "courseF_events_time_2023": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
         "courseF_label_predict": {
           "growing": "lumalaki",
           "jittering": "nanginginig",
@@ -2800,6 +3519,19 @@
           "spinning right": "umiikot pakanan",
           "wandering": "gumagala"
         },
+        "courseF_label_predict_2023": {
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala"
+        },
         "courseF_place_fruit": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
@@ -2816,6 +3548,21 @@
           "wobbling": "gumulong-gulong"
         },
         "courseF_place_fruit_-2022-2": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wobbling": "gumulong-gulong"
+        },
+        "courseF_place_fruit_2023": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
           "jittering": "nanginginig",
@@ -2863,6 +3610,16 @@
           "spinning left": "umiikot pakaliwa",
           "spinning right": "umiikot pakanan"
         },
+        "courseF_sprites_behaviors_2023": {
+          "growing": "lumalaki",
+          "moving east": "gumagalaw sa silangan",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan"
+        },
         "courseF_sprites_clouds": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
@@ -2880,6 +3637,22 @@
           "wobbling": "gumulong-gulong"
         },
         "courseF_sprites_clouds_-2022-2": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
+        "courseF_sprites_clouds_2023": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
           "jittering": "nanginginig",
@@ -2925,6 +3698,21 @@
           "spinning right": "umiikot pakanan",
           "wobbling": "gumulong-gulong"
         },
+        "courseF_sprites_desert_2023": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wobbling": "gumulong-gulong"
+        },
         "courseF_sprites_freeplay_air": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
@@ -2942,6 +3730,22 @@
           "wobbling": "gumulong-gulong"
         },
         "courseF_sprites_freeplay_air_-2022-2": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
+        "courseF_sprites_freeplay_air_2023": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
           "jittering": "nanginginig",
@@ -2989,6 +3793,22 @@
           "wandering": "gumagala",
           "wobbling": "gumulong-gulong"
         },
+        "courseF_sprites_freeplay_animals_2023": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
         "courseF_sprites_freeplay_aquatic": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
@@ -3006,6 +3826,22 @@
           "wobbling": "gumulong-gulong"
         },
         "courseF_sprites_freeplay_aquatic_-2022-2": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
+        "courseF_sprites_freeplay_aquatic_2023": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
           "jittering": "nanginginig",
@@ -3053,6 +3889,22 @@
           "wandering": "gumagala",
           "wobbling": "gumulong-gulong"
         },
+        "courseF_sprites_freeplay_blank_2023": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
         "courseF_sprites_freeplay_food": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
@@ -3070,6 +3922,22 @@
           "wobbling": "gumulong-gulong"
         },
         "courseF_sprites_freeplay_food_-2022-2": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
+        "courseF_sprites_freeplay_food_2023": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
           "jittering": "nanginginig",
@@ -3117,6 +3985,22 @@
           "wandering": "gumagala",
           "wobbling": "gumulong-gulong"
         },
+        "courseF_sprites_freeplay_space_2023": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
         "courseF_sprites_make": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
@@ -3133,6 +4017,21 @@
           "wobbling": "gumulong-gulong"
         },
         "courseF_sprites_make_-2022-2": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wobbling": "gumulong-gulong"
+        },
+        "courseF_sprites_make_2023": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
           "jittering": "nanginginig",
@@ -3177,6 +4076,21 @@
           "spinning right": "umiikot pakanan",
           "wobbling": "gumulong-gulong"
         },
+        "courseF_sprites_moreSprites_2023": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wobbling": "gumulong-gulong"
+        },
         "courseF_sprites_positioning": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
@@ -3193,6 +4107,21 @@
           "wobbling": "gumulong-gulong"
         },
         "courseF_sprites_positioning_-2022-2": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wobbling": "gumulong-gulong"
+        },
+        "courseF_sprites_positioning_2023": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
           "jittering": "nanginginig",
@@ -3236,6 +4165,19 @@
           "spinning right": "umiikot pakanan",
           "wandering": "gumagala"
         },
+        "courseF_sprites_predict_2023": {
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala"
+        },
         "courseF_sprites_properties": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
@@ -3252,6 +4194,21 @@
           "wobbling": "gumulong-gulong"
         },
         "courseF_sprites_properties_-2022-2": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wobbling": "gumulong-gulong"
+        },
+        "courseF_sprites_properties_2023": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
           "jittering": "nanginginig",
@@ -3296,6 +4253,21 @@
           "spinning right": "umiikot pakanan",
           "wobbling": "gumulong-gulong"
         },
+        "courseF_sprites_ship_2023": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wobbling": "gumulong-gulong"
+        },
         "courseF_text_answer": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
@@ -3314,6 +4286,23 @@
           "wandering": "gumagala"
         },
         "courseF_text_answer_-2022-2": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala"
+        },
+        "courseF_text_answer_2023": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
           "jittering": "nanginginig",
@@ -3364,6 +4353,23 @@
           "spinning right": "umiikot pakanan",
           "wandering": "gumagala"
         },
+        "courseF_text_choice_color_2023": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala"
+        },
         "courseF_text_choice_conversation": {
           "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
           "fluttering": "pumapagaspas",
@@ -3385,6 +4391,25 @@
           "wobbling": "gumulong-gulong"
         },
         "courseF_text_choice_conversation_-2022-2": {
+          "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
+        "courseF_text_choice_conversation_2023": {
           "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
@@ -3442,6 +4467,25 @@
           "wandering": "gumagala",
           "wobbling": "gumulong-gulong"
         },
+        "courseF_text_choice_events_2023": {
+          "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
         "courseF_text_choice_freeplay": {
           "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
           "fluttering": "pumapagaspas",
@@ -3463,6 +4507,25 @@
           "wobbling": "gumulong-gulong"
         },
         "courseF_text_choice_freeplay_-2022-2": {
+          "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
+        "courseF_text_choice_freeplay_2023": {
           "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
@@ -3520,6 +4583,25 @@
           "wandering": "gumagala",
           "wobbling": "gumulong-gulong"
         },
+        "courseF_text_choice_interview_2023": {
+          "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
         "courseF_text_choice_multiprompt": {
           "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
           "fluttering": "pumapagaspas",
@@ -3541,6 +4623,25 @@
           "wobbling": "gumulong-gulong"
         },
         "courseF_text_choice_multiprompt_-2022-2": {
+          "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
+        "courseF_text_choice_multiprompt_2023": {
           "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
@@ -3593,6 +4694,23 @@
           "spinning right": "umiikot pakanan",
           "wandering": "gumagala"
         },
+        "courseF_text_choice_title_2023": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala"
+        },
         "courseF_text_concat": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
@@ -3611,6 +4729,23 @@
           "wandering": "gumagala"
         },
         "courseF_text_concat_-2022-2": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala"
+        },
+        "courseF_text_concat_2023": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
           "jittering": "nanginginig",
@@ -3661,6 +4796,23 @@
           "spinning right": "umiikot pakanan",
           "wandering": "gumagala"
         },
+        "courseF_text_events_2023": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala"
+        },
         "courseF_text_print": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
@@ -3679,6 +4831,23 @@
           "wandering": "gumagala"
         },
         "courseF_text_print_-2022-2": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala"
+        },
+        "courseF_text_print_2023": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
           "jittering": "nanginginig",
@@ -3729,6 +4898,23 @@
           "spinning right": "umiikot pakanan",
           "wandering": "gumagala"
         },
+        "courseF_text_prompts_2023": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala"
+        },
         "courseF_text_review": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
@@ -3747,6 +4933,23 @@
           "wandering": "gumagala"
         },
         "courseF_text_review_-2022-2": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala"
+        },
+        "courseF_text_review_2023": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
           "jittering": "nanginginig",
@@ -3783,6 +4986,24 @@
           "wobbling": "gumulong-gulong"
         },
         "courseF_variables_card_-2022-2": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
+        "courseF_variables_card_2023": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
           "jittering": "nanginginig",
@@ -3837,6 +5058,24 @@
           "wandering": "gumagala",
           "wobbling": "gumulong-gulong"
         },
+        "courseF_variables_card_finish_2023": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
         "courseF_variables_chatbot": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
@@ -3857,6 +5096,24 @@
           "wobbling": "gumulong-gulong"
         },
         "courseF_variables_chatbot_-2022-2": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
+        "courseF_variables_chatbot_2023": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
           "jittering": "nanginginig",
@@ -3911,6 +5168,24 @@
           "wandering": "gumagala",
           "wobbling": "gumulong-gulong"
         },
+        "courseF_variables_chatbot_finish_2023": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
         "courseF_variables_madlib": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
@@ -3931,6 +5206,24 @@
           "wobbling": "gumulong-gulong"
         },
         "courseF_variables_madlib_-2022-2": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
+        "courseF_variables_madlib_2023": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
           "jittering": "nanginginig",
@@ -3985,6 +5278,24 @@
           "wandering": "gumagala",
           "wobbling": "gumulong-gulong"
         },
+        "courseF_variables_madlib_finish_2023": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
         "courseF_variables_predict": {
           "growing": "lumalaki",
           "jittering": "nanginginig",
@@ -4014,6 +5325,19 @@
           "spinning right": "umiikot pakanan",
           "wandering": "gumagala"
         },
+        "courseF_variables_predict_2023": {
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala"
+        },
         "coursee_helloworld_events": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
@@ -4030,6 +5354,296 @@
           "spinning left": "umiikot pakaliwa",
           "spinning right": "umiikot pakanan",
           "wandering": "gumagala"
+        },
+        "coursee_helloworld_events_2023": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving forward": "sumusulong",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala"
+        },
+        "csc_animal_adaptaions_fishschool": {
+          "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving north and looping": "gumagalaw sa hilaga at umiikot",
+          "moving south": "gumagalaw sa timog",
+          "moving south and looping": "gumagalaw sa timog at umiikot",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
+        "csc_animal_adaptations_birds": {
+          "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving north and looping": "gumagalaw sa hilaga at umiikot",
+          "moving south": "gumagalaw sa timog",
+          "moving south and looping": "gumagalaw sa timog at umiikot",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
+        "csc_animal_adaptations_bugs": {
+          "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving north and looping": "gumagalaw sa hilaga at umiikot",
+          "moving south": "gumagalaw sa timog",
+          "moving south and looping": "gumagalaw sa timog at umiikot",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
+        "csc_animal_adaptations_butterfly": {
+          "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving north and looping": "gumagalaw sa hilaga at umiikot",
+          "moving south": "gumagalaw sa timog",
+          "moving south and looping": "gumagalaw sa timog at umiikot",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
+        "csc_animal_adaptations_choice2": {
+          "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving north and looping": "gumagalaw sa hilaga at umiikot",
+          "moving south": "gumagalaw sa timog",
+          "moving south and looping": "gumagalaw sa timog at umiikot",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
+        "csc_animal_adaptations_choice3": {
+          "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving north and looping": "gumagalaw sa hilaga at umiikot",
+          "moving south": "gumagalaw sa timog",
+          "moving south and looping": "gumagalaw sa timog at umiikot",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
+        "csc_animal_adaptations_fish": {
+          "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving north and looping": "gumagalaw sa hilaga at umiikot",
+          "moving south": "gumagalaw sa timog",
+          "moving south and looping": "gumagalaw sa timog at umiikot",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
+        "csc_animal_adaptations_groups": {
+          "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving north and looping": "gumagalaw sa hilaga at umiikot",
+          "moving south": "gumagalaw sa timog",
+          "moving south and looping": "gumagalaw sa timog at umiikot",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
+        "csc_animal_adaptations_migration": {
+          "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving north and looping": "gumagalaw sa hilaga at umiikot",
+          "moving south": "gumagalaw sa timog",
+          "moving south and looping": "gumagalaw sa timog at umiikot",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
+        "csc_animal_adaptations_speed": {
+          "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving north and looping": "gumagalaw sa hilaga at umiikot",
+          "moving south": "gumagalaw sa timog",
+          "moving south and looping": "gumagalaw sa timog at umiikot",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
+        "csc_ecosystems_giraffe_evo_2023": {
+          "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving north and looping": "gumagalaw sa hilaga at umiikot",
+          "moving south": "gumagalaw sa timog",
+          "moving south and looping": "gumagalaw sa timog at umiikot",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
+        "csc_ecosystems_whale_explain_2023": {
+          "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving north and looping": "gumagalaw sa hilaga at umiikot",
+          "moving south": "gumagalaw sa timog",
+          "moving south and looping": "gumagalaw sa timog at umiikot",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
+        "csc_ecosystems_whale_movement_2023": {
+          "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving north and looping": "gumagalaw sa hilaga at umiikot",
+          "moving south": "gumagalaw sa timog",
+          "moving south and looping": "gumagalaw sa timog at umiikot",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
         },
         "helloworld_animals_backgrounds": {
           "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
@@ -4242,6 +5856,27 @@
           "wandering": "gumagala",
           "wobbling": "gumulong-gulong"
         },
+        "helloworld_food_backgrounds_2023": {
+          "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving north and looping": "gumagalaw sa hilaga at umiikot",
+          "moving south": "gumagalaw sa timog",
+          "moving south and looping": "gumagalaw sa timog at umiikot",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
         "helloworld_food_backgrounds_soccer-2022": {
           "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
           "fluttering": "pumapagaspas",
@@ -4305,7 +5940,43 @@
           "wandering": "gumagala",
           "wobbling": "gumulong-gulong"
         },
+        "helloworld_food_behaviors_2023": {
+          "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving north and looping": "gumagalaw sa hilaga at umiikot",
+          "moving south": "gumagalaw sa timog",
+          "moving south and looping": "gumagalaw sa timog at umiikot",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
         "helloworld_food_costumes": {
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wobbling": "gumulong-gulong"
+        },
+        "helloworld_food_costumes_2023": {
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
           "jittering": "nanginginig",
@@ -4338,6 +6009,27 @@
           "wandering": "gumagala"
         },
         "helloworld_food_sounds": {
+          "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving north and looping": "gumagalaw sa hilaga at umiikot",
+          "moving south": "gumagalaw sa timog",
+          "moving south and looping": "gumagalaw sa timog at umiikot",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
+        "helloworld_food_sounds_2023": {
           "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
           "fluttering": "pumapagaspas",
           "growing": "lumalaki",
@@ -4604,6 +6296,25 @@
           "spinning left": "umiikot pakaliwa",
           "spinning right": "umiikot pakanan",
           "swimming left and right": "kaliwa't kanan ang paglangoy",
+          "wandering": "gumagala",
+          "wobbling": "gumulong-gulong"
+        },
+        "simcustom_2023": {
+          "driving with arrow keys": "pagmamaneho gamit ang mga arrow key",
+          "fluttering": "pumapagaspas",
+          "growing": "lumalaki",
+          "jittering": "nanginginig",
+          "moving east": "gumagalaw sa silangan",
+          "moving east and looping": "gumagalaw sa silangan at umiikot",
+          "moving north": "gumagalaw sa hilaga",
+          "moving south": "gumagalaw sa timog",
+          "moving west": "gumagalaw sa kanluran",
+          "moving west and looping": "gumagalaw sa kanluran at umiikot",
+          "moving with arrow keys": "gumagalaw gamit ang mga arrow key",
+          "patrolling": "nagpapatrolya",
+          "shrinking": "lumiliit",
+          "spinning left": "umiikot pakaliwa",
+          "spinning right": "umiikot pakanan",
           "wandering": "gumagala",
           "wobbling": "gumulong-gulong"
         }

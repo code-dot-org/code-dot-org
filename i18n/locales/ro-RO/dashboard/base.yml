@@ -53,6 +53,7 @@ ro:
         gender: 'Sex'
         edit_header: 'Editează detaliile contului'
         finish_sign_up_header: 'Finalizează crearea contului tău'
+        finish_sign_up_header_error: 'Te rog să corectezi următoarele greșeli:'
         finish_sign_up_subheader: 'Completează următoarele informații pentru a finaliza crearea unui cont Code.org pentru <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Completează următoarele informații pentru a finaliza crearea unui cont Code.org pentru **%{email}**.'
         finish_sign_up_subheader_provider: 'Completează următoarele informații pentru a finaliza crearea unui cont Code.org cu <strong>%{provider}</strong> pentru<strong>%{email}</strong>.'
@@ -60,6 +61,7 @@ ro:
         reset_password_token: "Linkul pentru resetarea parolei pe care l-ai folosit"
         error:
           future: nu poate fi în viitor
+        user_type: 'Tipul contului'
         us_state: 'Județ'
   beta: "beta"
   hello: "Salutare lume"
@@ -1274,4 +1276,3 @@ ro:
     binary: "Binar"
     hexadecimal: "Hexazecimal"
     pixel_format_header: "Format Pixel"
-

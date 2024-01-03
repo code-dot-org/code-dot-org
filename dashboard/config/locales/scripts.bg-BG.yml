@@ -253,9 +253,14 @@ bg:
           name: андреа-тест
           title: андреа-тест
         angelina-playground:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Случаен
           lessons:
             lesson-5:
               name: Оценки
+            lesson-6:
+              name: Урок 1
         aquatic:
           description_short: Използвай своята изобретателност и умения да решаваш
             проблеми, за да изследваш и построиш подводни светове с код!
@@ -1148,6 +1153,10 @@ bg:
           lesson_groups:
             lessonGroup-5:
               display_name: Проучване
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Проучване
         csd1-dlp:
           lesson_groups:
             content:
@@ -1376,6 +1385,10 @@ bg:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Глава 1: Вход и Изход'
+        csd6a-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Вход и Изход'
         csd7-2021:
           lesson_groups:
             lessonGroup-4:
@@ -1386,6 +1399,8 @@ bg:
             lessonGroup-4:
               display_name: Проучване
         csd7-2023:
+          title: AI и Машинно Обучение
+        csd7-2024:
           title: AI и Машинно Обучение
         csf-2021-pilot:
           lesson_groups:
@@ -2512,7 +2527,7 @@ bg:
           description_short: Изследвайте Minecraft света чрез код.
           student_description: Използвайте блокове с код, за да въведете Steve или
             Alex в приключението чрез този Minecraft свят.
-          title: Minecraft Hour of Code
+          title: Minecraft авантюрист
         microbit-2023:
           lesson_groups:
             lessonGroup-5:
@@ -2839,6 +2854,17 @@ bg:
           lesson_groups:
             content:
               display_name: Съдържание
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Въведение
+          lessons:
+            lesson-7:
+              name: Въведение
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Въведение
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -2847,6 +2873,10 @@ bg:
           lessons:
             lesson-3:
               name: Оценка
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Въведение
         web-development-2023:
           lesson_groups:
             lessonGroup-4:

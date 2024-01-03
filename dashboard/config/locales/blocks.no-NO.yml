@@ -55,6 +55,11 @@
             '"measures"': takter
             '"seconds"': sekunder
         text: etter {TIMESTAMP} {UNIT}
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': takter
+            '"seconds"': sekunder
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -77,6 +82,26 @@
             '"SHARK"': haier
             '"UNICORN"': enhjørninger
             sprites: alle
+          MOVE:
+            '"next"': "(Neste)"
+            '"prev"': "(Forrige)"
+            '"rand"': "(Tilfeldig)"
+            MOVES.ClapHigh: Klapp høyt
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double down
+            MOVES.Drop: Fall
+            MOVES.Floss: Floss
+            MOVES.Fresh: Frisk
+            MOVES.Kick: Stjerne
+            MOVES.Rest: Ingen
+            MOVES.Roll: Kroppsrulling
+            MOVES.ThisOrThat: Dette eller det
+        text: "{GROUP} gjør {MOVE} {DIR} for alltid"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': alle katter
           MOVE:
             '"next"': "(Neste)"
             '"prev"': "(Forrige)"
@@ -503,6 +528,40 @@
             '"electronic"': Elektronisk
             '"iceCream"': Iskrem
             '"neon"': Neon
+            '"rave"': Svart-hvitt
+            '"tropical"': Tropisk
+            '"vintage"': Retro
+            '"warm"': Rødfarger
+        text: velg bakgrunnseffekt {PALETTE} {EFFECT}
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': Tunnel
+            '"color_cycle"': Farger
+            '"diamonds"': Diamanter
+            '"disco"': Kvadrater
+            '"disco_ball"': Discokule
+            '"fireworks"': Fyrverkeri
+            '"galaxy"': Verdensrom
+            '"kaleidoscope"': Kaleidoskop
+            '"lasers"': Laserdansegulv
+            '"none"': Ingen
+            '"rainbow"': Regnbue
+            '"rand"': "(Tilfeldig)"
+            '"snowflakes"': Snø
+            '"sparkles"': Glitter
+            '"spiral"': Spiral
+            '"splatter"': Rosa splætt
+            '"stars"': Stjerner
+            '"swirl"': Hypno
+            '"text"': Sangtittel
+          PALETTE:
+            '"cool"': Blåfarger
+            '"default"': Lys
+            '"electronic"': Elektronisk
+            '"iceCream"': Iskrem
+            '"neon"': Neon
+            '"rainbow"': Regnbue
             '"rave"': Svart-hvitt
             '"tropical"': Tropisk
             '"vintage"': Retro

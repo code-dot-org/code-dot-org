@@ -2,7 +2,7 @@
 
 #wrapper, #app_body {
   color: #292F36;
-  font-family: 'Gotham 4r', sans-serif !important;
+  font-family: var(--main-font);
 }
 
 #wrapper, #main {
@@ -32,7 +32,8 @@
 .accessible .level-0 h3 {
   font-size: 18px;
   margin: 32px 0 10px;
-  font-family: 'Gotham 5r', sans-serif !important;
+  font-family: var(--main-font) !important;
+  font-weight: var(--semi-bold-font-weight) !important;
 }
 
 .opening {

@@ -40,8 +40,10 @@ lt:
         age: 'Amžius'
         gender: 'Lytis'
         edit_header: 'Keisti paskyros duomenis'
+        finish_sign_up_header_error: 'Ištaisyk šias klaidas:'
         error:
           future: negali būti ateitis
+        user_type: 'Paskyros tipas'
         us_state: 'Valstija'
   beta: "beta"
   hello: "Sveikas, pasauli"
@@ -699,4 +701,3 @@ lt:
   copy: 'Kopijuoti'
   pixelation:
     binary: "Dvejetainis"
-

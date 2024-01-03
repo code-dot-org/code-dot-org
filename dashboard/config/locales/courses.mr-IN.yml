@@ -15,6 +15,8 @@ mr:
           assignment_family_title: 'संगणक विज्ञान तत्त्वे:'
         mike-test:
           title: संगणक शास्त्राची मूलतत्त्वे
+        self-paced-pl-csd-unit2-2023:
+          title: वेब डेव्हलपमेंट शिकविणे
     resources:
       curriculum/csd/2017:
         name: अभ्यासक्रम

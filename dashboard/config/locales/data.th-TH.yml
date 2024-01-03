@@ -736,6 +736,7 @@ th:
         csd_gamelab_velocity: ความเร็ว
         csd_how_teamwork_works: การทำงานเป็นทีมอย่างไร
         csd_ml_ethics_ai: 'จริยธรรมและ AI '
+        csd_ml_how_ai_works: AI ทำงานอย่างไร
         csd_ml_import_model: การนำเข้ารูปแบบ AI
         csd_ml_intro_ai_lab_july2021: ความรู้เบื้องต้นเกี่ยวกับ AI Lab
         csd_ml_intro_to_ai_lab: ความรู้เบื้องต้นเกี่ยวกับ AI Lab
@@ -804,6 +805,7 @@ th:
         hint_videos_d_11_7_last: 'คำแนะนำวิดีโอ: D.11.7 ล่าสุด'
         hint_videos_d_11_9_first: 'คำแนะนำวิดีโอ: D.11.9 ครั้งแรก'
         hint_videos_d_11_9_last: 'คำแนะนำวิดีโอ: D.11.9 ล่าสุด'
+        hoc-dance-ai-warmup: 'งานเต้นรำ AI Edition: วอร์มอัพ'
         hoc_dance_congrats: Dance Party - ปาร์ตี้กัน!
         hoc_dance_congrats_2019: Dance Party 2019 - ปาร์ตี้กัน!
         hoc_dance_events_2019: Dance Party 2019 - กิจกรรม
@@ -899,6 +901,7 @@ th:
           - บล็อกข้อมูล
         u7-libraries-explanation: 'App Lab: สร้างบล็อกของคุณเอง - วิธีการใช้ห้องสมุด'
         upload_sprites_backgrounds: การอัปโหลดสไปรท์และพื้นหลังแบบกำหนดเอง
+        what-is-creativity: ความคิดสร้างสรรค์คืออะไร
         what_is_an_event: กิจกรรมคืออะไร?
         what_is_cs: วิทยาการคอมพิวเตอร์คืออะไร
         why-should-teach-unplugged-activities: 'คำถามที่พบบ่อย: ทำไมฉันจึงควรสอนกิจกรรม

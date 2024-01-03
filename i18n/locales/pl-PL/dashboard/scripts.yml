@@ -9,18 +9,21 @@ pl:
           description_short: Kurs 1 jest przeznaczony dla początkujących.
           description_audience: W wieku 4-6
           student_description: Kurs 1 umożliwia początkującym tworzenie programów komputerowych, które pomogą im nauczyć się współpracować z innymi, rozwijać umiejętności rozwiązywania problemów i wytrwać przy rozwiązywaniu trudnych zadań. Przy końcu tego kursu uczniowie tworzą własne gry lub historyjki, którymi mogą podzielić się z innymi. Zalecany dla przedszkola i pierwszej klasy.
+          name: course1
         course2:
           title: Kurs 2
           description: Kurs 2 jest przeznaczony dla uczniów, którzy umieją czytać, ale nie mają doświadczenia w programowaniu. W tym kursie uczniowie będą tworzyć programy do rozwiązywania problemów oraz interaktywne gry lub historyjki, którymi będą mogli dzielić się z innymi. Zalecane dla klas 2-5.
           description_short: Wprowadzenie do informatyki dla uczniów, którzy potrafią czytać.
           description_audience: Powyżej 6 lat (wymagana umiejętność czytania)
           student_description: Kurs 2 jest przeznaczony dla uczniów, którzy umieją czytać, ale nie mają doświadczenia w programowaniu. W tym kursie uczniowie będą tworzyć programy do rozwiązywania problemów oraz interaktywne gry lub historyjki, którymi będą mogli dzielić się z innymi. Zalecane dla klas 2-5.
+          name: course2
         course3:
           title: Kurs 3
           description: Kurs 3 jest przeznaczony dla uczniów, którzy ukończyli Kurs 2. Uczniowie będą wnikać głębiej w zagadnienia programowania wprowadzone w poprzednich kursach, aby tworzyć elastyczne rozwiązania dla bardziej złożonych problemów. Kończąc kurs, uczniowie będą tworzyć interaktywne opowiadania i gry, którymi mogą się dzielić z innymi. Zalecany dla klas 4-5.
           description_short: Zagłębiaj się w programowanie, tworząc gry i interaktywne historie. To jest kontynuacja Kursu 2.
           description_audience: W wieku 8-18
           student_description: Kurs 3 jest przeznaczony dla uczniów, którzy ukończyli Kurs 2. Uczniowie będą wnikać głębiej w zagadnienia programowania wprowadzone w poprzednich kursach, aby tworzyć elastyczne rozwiązania dla bardziej złożonych problemów. Kończąc kurs, uczniowie będą tworzyć interaktywne opowiadania i gry, którymi mogą się dzielić z innymi. Zalecany dla klas 4-5.
+          name: course3
         playlab:
           title: Lab Gier
           description: Utwórz historyjkę lub grę z Play Lab!
@@ -31,6 +34,7 @@ pl:
           description: Rysuj fajne obrazki i wzory z Artystą!
           description_short: Rysuj fajne obrazki i wzory z Artystą!
           student_description: Rysuj fajne obrazki i wzory z Artystą!
+          name: artysta
         hourofcode:
           title: Klasyczny labirynt
           description: Poznaj podstawy informatyki z postaciami z Angry Birds, Plants vs Zombies i Wiewióra z Epoki lodowcotej!
@@ -64,6 +68,7 @@ pl:
           description: Użyj Play Lab, by utworzyć historyjkę lub grę z postaciami z Disney Infinity w rolach głównych.
           description_short: Użyj Play Lab, by utworzyć historyjkę lub grę z postaciami z Disney Infinity w rolach głównych.
           student_description: Użyj Play Lab, by utworzyć historyjkę lub grę z postaciami z Disney Infinity w rolach głównych.
+          name: nieskończoność
         netsim:
           title: Symulator internetowy
           description: Dowiedz się, jak działa Internet.
@@ -149,6 +154,10 @@ pl:
               name: Muzyka
             lesson-50:
               name: Czat AI
+            lesson-51:
+              name: Rubryki AI
+            lesson-52:
+              name: Dance Lab2
         algebraPD2b:
           description: 'Faza 2 Online: Mieszane letnie studia'
           description_short: 'Faza 2 Online: Mieszane letnie studia'
@@ -223,7 +232,7 @@ pl:
           description_short: Dowiedz się, jak programować droidy i utwórz własną grę Star Wars w galaktyce daleko, daleko.
           student_description: Dowiedz się, jak programować droidy i utwórz własną grę Star Wars w galaktyce daleko, daleko.
         mc:
-          title: Godzina Kodowania z Minecraft
+          title: Poszukiwacz przygód z Minecraftem
           description: Użyj bloków kodu, by zabrać Steva lub Alexa na przygodę w świecie gry Minecraft.
           description_short: Odkrywaj świat Minecraft poprzez kodowanie.
           student_description: Użyj bloków kodu, by zabrać Steva lub Alexa na przygodę w świecie gry Minecraft.
@@ -432,10 +441,10 @@ pl:
             practice:
               display_name: Praktyki nauczania
         basketball:
-          title: Wybierz swoją drużynę i zrób grę w koszykówkę
-          description_short: Wybierz swoją drużynę i zrób grę w koszykówkę
-          description: Wybierz swoją drużynę i zrób grę w koszykówkę
-          student_description: Wybierz swoją drużynę i zrób grę w koszykówkę
+          title: Wybierz swoją drużynę i utwórz grę w koszykówkę
+          description_short: Wybierz swoją drużynę i utwórz grę w koszykówkę
+          description: Wybierz swoją drużynę i utwórz grę w koszykówkę
+          student_description: Wybierz swoją drużynę i utwórz grę w koszykówkę
           name: piłka do kosza
         csd2-2017:
           title: CSD Jednostka 2 - Rozwój sieci ('17- '18)
@@ -2890,6 +2899,7 @@ pl:
             cspSurvey:
               display_name: Treści
           student_description: Będziesz programować animacje, sztukę interaktywną i gry w Game Lab.Zacznij od prostych kształtów i buduj bardziej wyszukane animacje i gry oparte na duszku, używając tych samych koncepcji programowania i procesu projektowania, którego informatycy używają w codziennej pracy. W ramach projektu finałowego będziesz opracowywać spersonalizowany program interaktywny.
+          name: csd3-virtual
         ui-test-script-in-course-2017:
           lesson_groups:
             lg_1:
@@ -4731,6 +4741,8 @@ pl:
               name: Badanie pulsu do klonowania
             lesson-12:
               name: Plac zabaw AI
+            lesson-13:
+              name: Plac zabaw Gen AI Blocks
         csc-pilot-2022-ecosystems:
           name: csc-pilot-2022-ecosystems
         csc-pilot-2022-timecapsule:
@@ -4879,6 +4891,8 @@ pl:
           name: csa-pl-standalone-code-2022
           title: Projekty CSA Profesjonalnego kodowania edukacyjnego
           description: Uczestnicy warsztatów będą mogli zobaczyć przykładowe projekty i kod podczas PL z sąsiedztwa, konsoli i teatru.
+        csc-ecosystems:
+          name: csc-ecosystems
         dlp-csd-overview-2022:
           title: Odkrycia informatyki Omówienie głębszego uczenia się
           description: Witamy w programie Głębsze uczenie 2021 dla zaczynających moderatorów Odkryć informatyki.
@@ -5151,6 +5165,8 @@ pl:
               name: To słowo kluczowe
             lesson-15:
               name: Jednostka 2 Ankieta
+            lesson-16:
+              name: 'Piaskownica: Konsola'
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
@@ -5192,6 +5208,10 @@ pl:
               name: Dane dla projektu dobra społecznego [wersja 1-dniowa]
             lesson-14:
               name: Jednstka 3 Ankieta
+            lesson-15:
+              name: 'Piaskownica: Konsola'
+            lesson-17:
+              name: 'Piaskownica: Teatr'
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
@@ -5233,6 +5253,10 @@ pl:
               name: Instrukcje wielokrotnego wyboru
             lesson-15:
               name: Jednostka 4 Ankieta
+            lesson-16:
+              name: 'Piaskownica: Konsola'
+            lesson-18:
+              name: 'Piaskownica: Teatr'
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
@@ -5274,6 +5298,10 @@ pl:
               name: Osobisty projekt narracyjny [Wersja 1-dniowa]
             lesson-14:
               name: Jednostka 5 Ankieta
+            lesson-15:
+              name: 'Piaskownica: Konsola'
+            lesson-17:
+              name: 'Piaskownica: Teatr'
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
@@ -5315,6 +5343,10 @@ pl:
               name: Projekt przetwarzania języka naturalnego [wersja 1-dniowa]
             lesson-14:
               name: Jednostka 6 Ankieta
+            lesson-15:
+              name: 'Piaskownica: Konsola'
+            lesson-17:
+              name: 'Piaskownica: Teatr'
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
@@ -5356,6 +5388,10 @@ pl:
               name: Jednostka 7 Ankieta
             lesson-14:
               name: Kreatywne kodowanie z projektem teatralnym [wersja 1-dniowa]
+            lesson-15:
+              name: 'Piaskownica: Konsola'
+            lesson-17:
+              name: 'Piaskownica: Teatr'
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
@@ -5395,6 +5431,10 @@ pl:
               name: Jednostka 8 Sprawdzian
             lesson-13:
               name: Kreatywne kodowanie w programie Console Project [wersja 1-dniowa]
+            lesson-14:
+              name: 'Piaskownica: Konsola'
+            lesson-16:
+              name: 'Piaskownica: Teatr'
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
@@ -5754,6 +5794,8 @@ pl:
               name: Siatka CSS
             lesson-5:
               name: Oceny/Sprawdziany
+            lesson-6:
+              name: Lekcja 1
           name: angelina-playground
           title: Miejsce Angeliny do robienia rzeczy
         csc-pilot-fa2022-timecapsule:
@@ -5781,7 +5823,7 @@ pl:
             lessonGroup-4:
               display_name: 'Rozdział 2: Budowanie prototypów fizycznych'
           name: urządzenia-2022
-          title: Tworzenie aplikacji dla urządzeń
+          title: Tworzenie aplikacji z urządzeniami (Circuit Playground)
           description: "W jednostce Tworzenie aplikacji za pomocą urządzeń uczniowie badają rolę urządzeń fizycznych w informatyce. Korzystając z App Lab i Adafruit Circuit Playground, uczniowie opracowują programy, które wykorzystują te same wejścia i wyjścia sprzętowe, które widzisz w inteligentnych urządzeniach, patrząc, jak prosty zgrubny prototyp może doprowadzić do gotowego produktu. Następnie uczniowie badają, w jaki sposób można wykorzystać urządzenia fizyczne do reagowania na otaczający ich świat, używając sposobu myślenia „twórcy” do tworzenia prototypów z codziennych materiałów. \n\n**Wskazówki dotyczące wdrażania tworzenia aplikacji za pomocą urządzeń**\n\n-   Ta jednostka wymaga od uczniów dostępu do Circuit Playground - [kliknij tutaj](/s/microbit-2023), aby uzyskać więcej informacji na temat korzystania z Circuit Playground w klasie\n-   Wskazówki dotyczące wspierania uczniów na poziomach programowania i różnicowania zadań są dostępne w [Przewodniku po poziomach programowania](https://code.org/maker/circuitplayground) i [Przewodnik po różnicowaniu](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview)\n\n\\*\\*Rozwój zawodowy: \\*\\* Jeśli jesteś zainteresowany prowadzeniem tego kursu, zalecamy ukończenie bezpłatnego [Tworzenie aplikacji z urządzeniami Moduł Profesjonalnego rozwoju zawodowego we własnym tempie](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview). Moduł został zaprojektowany na 2 godziny. Nie zakłada się wcześniejszego doświadczenia z kodowaniem lub sztuczną inteligencją."
         allthevalidation:
           lessons:
@@ -5819,6 +5861,8 @@ pl:
               name: Pomysły FM
             lesson-4:
               name: Maszyny funkcyjne w Artyście
+            lesson-5:
+              name: AI 3-5
           name: katies-playground
           title: Miejsce Katie do robienia rzeczy
         microbit-2022:
@@ -6367,6 +6411,11 @@ pl:
           description_short: Naucz się programować przy pomocy urządzeń fizycznych
           name: csd6a-2023
         csa9-2023:
+          lessons:
+            lesson-1:
+              name: 'Piaskownica: Konsola'
+            lesson-3:
+              name: 'Piaskownica: Teatr'
           lesson_groups:
             lessonGroup-2:
               display_name: Przegląd i praktyka
@@ -6388,7 +6437,7 @@ pl:
               display_name: Ankieta
           name: mikrobit-2023
           title: Tworzenie aplikacji z urządzeniami (micro:bit) ('23-'24)
-          description: "W jednostce Tworzenie aplikacji na urządzenia uczniowie badają rolę urządzeń fizycznych w informatyce. Korzystając z App Lab i BBC micro:bit, uczniowie opracowują programy wykorzystujące te same wejścia i wyjścia sprzętowe, które widzisz w urządzeniach inteligentnych, patrząc na to, jak prosty prototyp może doprowadzić do gotowego produktu. Następnie badają, w jaki sposób można wykorzystać urządzenia fizyczne do reagowania na otaczający ich świat, używając sposobu myślenia „twórcy” do tworzenia prototypów z codziennych materiałów.\n\n⚠️ Ta jednostka wykorzystuje **micro:bit** do wprowadzenia informatyki z urzdzeniami fizycznymi i sposobu myślenia „twórcy”. Możesz także uczyć tych treści za pomocą urządzeń **circuit plac zabaw**, przypisując jednostkę [Tworzenie aplikacji z urządzeniami (Circuit Playground) unit](/s/devices-2022). Obie jednostki uczą tych samych treści i są równoważne - nie trzeba kupować obu zestawów urządzeń ani uczyć obu jednostek.\n\n::: szczegóły [**Przeglą Wejść i Wyjść**]\n**Opis:** Jednostka ta uwypukla interakcje między wejściami i wyjściami na ekranie micro:bita i aplikacji. Na swoich mikro:bitach uczniowie uczą się kontrolować wejścia, takie jak przyciski i wyjścia, takie jak ekran LED. Wchodzą również w interakcję z wejściami i wyjściami w App Lab, takimi jak przyciski i wejścia tekstowe i rozwijane. Do końca rozdziału, uczniowie będą mogli stworzyć aplikację sterującą urządzeniem, podobną do wielu „inteligentnego” sprzętu, z którego korzystają w codziennym życiu.\n\n**Cele:**\n\n-   Zaprojektuj i zbuduj fizyczne urządzenie obliczeniowe, które integruje fizyczne wejścia i wyjścia z aplikacjami cyfrowymi. \n-   Utwórzcie prototypy aplikacji, które używają fizycznego urządzenia do sterowania aplikacją cyfrową.\n\n**Wielkie pytania:**\n\n-   Jakie wejścia i wyjścia są dostępne na urządzeniu fizycznym?\n-   Jakie wejścia i wyjścia są dostępne w aplikacji?\n-   Jak możemy tworzyć aplikacje, które używają fizycznego urządzenia do sterowania aplikacją cyfrową?\n\n:::\n\n:: Szczegóły [**Przegląd budowania prototypów fizycznych**]\n**Opis:** W tym rozdziale uczniowie skupiają się na tym, jak ich fizyczne urządzenie może wchodzić w interakcje ze światem zewnętrznym. Uczą się, jak używać czujników i akcelerometru do reagowania na środowisko fizyczne. Uczą się dołączać zewnętrzne diody LED i przyciski, które rozszerzają typy urządzeń, które sami mogą wykonać. W całej jednostce uczniowie używają materiałów fizycznych, takich jak papier lub karton, aby rozszerzyć funkcjonalność swoich urządzeń. Pod koniec jednostki stworzą interaktywny projekt artystyczny i opracują prototyp urządzenia fizycznego, które rozwiązuje problem. \n\n**Cele:**\n\n-   Zaprojektuj i zbuduj fizyczne urządzenie obliczeniowe, które integruje czujniki z aplikacjami cyfrowymi. \n-   Utwórzcie prototypy aplikacji, które używają fizycznego urządzenia do rozwiązywania rzeczywistych problemów.\n-   Użyjcie fizycznych urządzeń, aby rozwiązywać problemy w zabawny i innowacyjny sposób.\n\n**Wielkie pytania:**\n\n-   W jaki sposób urządzenie fizyczne wykorzystuje czujniki do reagowania na środowisko fizyczne?\n-   W jaki sposób prosty sprzęt można wykorzystać do opracowywania innowacyjnych nowych produktów?\n\n:::\n\n:: szczegóły [**Wskazówki dotyczące tworzenia aplikacji z urządzeniami**]\n\n-   Ta jednostka wymaga, aby uczniowie mieli dostęp do płytek micro:bit - [kliknij tutaj, aby uzyskać więcej informacji na temat wykorzystania micro:bitów w klasie](https://code.org/maker/microbit)\n-   Wskazówki dotyczące wspierania uczniów na poziomach programowania i różnicowania zadań są dostępne w [Przewodniku po poziomach programowania](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/preview) i [Przewodnik po różnicowaniu](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/preview)\n    :::"
+          description: "W jednostce Tworzenie aplikacji na urządzenia uczniowie badają rolę urządzeń fizycznych w informatyce. Korzystając z App Lab i BBC micro:bit, uczniowie opracowują programy wykorzystujące te same wejścia i wyjścia sprzętowe, które widzisz w urządzeniach inteligentnych, patrząc na to, jak prosty prototyp może doprowadzić do gotowego produktu. Następnie badają, w jaki sposób można wykorzystać urządzenia fizyczne do reagowania na otaczający ich świat, używając sposobu myślenia „twórcy” do tworzenia prototypów z codziennych materiałów.\n\n⚠️ Ta jednostka wykorzystuje **micro:bit** do wprowadzenia informatyki z urzdzeniami fizycznymi i sposobu myślenia „twórcy”. Możesz także uczyć tych treści za pomocą urządzeń **circuit plac zabaw**, przypisując jednostkę [Tworzenie aplikacji z urządzeniami (Circuit Playground) unit](/s/devices). Obie jednostki uczą tych samych treści i są równoważne - nie trzeba kupować obu zestawów urządzeń ani uczyć obu jednostek.\n\n::: szczegóły [**Przeglą Wejść i Wyjść**]\n**Opis:** Jednostka ta uwypukla interakcje między wejściami i wyjściami na ekranie micro:bita i aplikacji. Na swoich mikro:bitach uczniowie uczą się kontrolować wejścia, takie jak przyciski i wyjścia, takie jak ekran LED. Wchodzą również w interakcję z wejściami i wyjściami w App Lab, takimi jak przyciski i wejścia tekstowe i rozwijane. Do końca rozdziału, uczniowie będą mogli stworzyć aplikację sterującą urządzeniem, podobną do wielu „inteligentnego” sprzętu, z którego korzystają w codziennym życiu.\n\n**Cele:**\n\n-   Zaprojektuj i zbuduj fizyczne urządzenie obliczeniowe, które integruje fizyczne wejścia i wyjścia z aplikacjami cyfrowymi. \n-   Utwórzcie prototypy aplikacji, które używają fizycznego urządzenia do sterowania aplikacją cyfrową.\n\n**Wielkie pytania:**\n\n-   Jakie wejścia i wyjścia są dostępne na urządzeniu fizycznym?\n-   Jakie wejścia i wyjścia są dostępne w aplikacji?\n-   Jak możemy tworzyć aplikacje, które używają fizycznego urządzenia do sterowania aplikacją cyfrową?\n\n:::\n\n:: Szczegóły [**Przegląd budowania prototypów fizycznych**]\n**Opis:** W tym rozdziale uczniowie skupiają się na tym, jak ich fizyczne urządzenie może wchodzić w interakcje ze światem zewnętrznym. Uczą się, jak używać czujników i akcelerometru do reagowania na środowisko fizyczne. Uczą się dołączać zewnętrzne diody LED i przyciski, które rozszerzają typy urządzeń, które sami mogą wykonać. W całej jednostce uczniowie używają materiałów fizycznych, takich jak papier lub karton, aby rozszerzyć funkcjonalność swoich urządzeń. Pod koniec jednostki stworzą interaktywny projekt artystyczny i opracują prototyp urządzenia fizycznego, które rozwiązuje problem. \n\n**Cele:**\n\n-   Zaprojektuj i zbuduj fizyczne urządzenie obliczeniowe, które integruje czujniki z aplikacjami cyfrowymi. \n-   Utwórzcie prototypy aplikacji, które używają fizycznego urządzenia do rozwiązywania rzeczywistych problemów.\n-   Użyjcie fizycznych urządzeń, aby rozwiązywać problemy w zabawny i innowacyjny sposób.\n\n**Wielkie pytania:**\n\n-   W jaki sposób urządzenie fizyczne wykorzystuje czujniki do reagowania na środowisko fizyczne?\n-   W jaki sposób prosty sprzęt można wykorzystać do opracowywania innowacyjnych nowych produktów?\n\n:::\n\n:: szczegóły [**Wskazówki dotyczące tworzenia aplikacji z urządzeniami**]\n\n-   Ta jednostka wymaga, aby uczniowie mieli dostęp do płytek micro:bit - [kliknij tutaj, aby uzyskać więcej informacji na temat wykorzystania micro:bitów w klasie](https://code.org/maker/microbit)\n-   Wskazówki dotyczące wspierania uczniów na poziomach programowania i różnicowania zadań są dostępne w [Przewodniku po poziomach programowania](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/preview) i [Przewodnik po różnicowaniu](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/preview)\n    :::"
           student_description: Ta jednostka bada rolę platform sprzętowych w obliczeniach i jak różne czujniki mogą zapewnić bardziej efektywne wejście i wyjście danych niż tradycyjna klawiatura, mysz i monitor. Korzystając z App Lab i BBC micro:bita, opracujesz programy, które wykorzystują te same wejścia i wyjścia sprzętowe, które widzisz w inteligentnych urządzeniach, patrząc na to, jak prosty prototyp może doprowadzić do gotowego produktu. Jednostka kończy się wyzwaniem projektowym, aby użyć micro:bita jako bazy dla innowacji we własnym projekcie.
         vpl-csd-ci-1:
           lesson_groups:
@@ -7338,35 +7387,443 @@ pl:
           lessons:
             lesson-2:
               name: Moduł CSD 3 Synchroniczny
+            lesson-3:
+              name: 'Sesja synchroniczna 2: Lekcja modelu'
+            lesson-6:
+              name: 'Sesja synchroniczna 5: Podsumowanie'
           name: vpl-csd-2023-m3
           title: Moduł 3
         vpl-csd-2023-m4:
           lessons:
             lesson-2:
               name: Moduł CSD 4 Synchroniczny
+            lesson-5:
+              name: 'Sesja synchroniczna 4: Badanie programu nauczania'
+            lesson-6:
+              name: 'Sesja synchroniczna 5: Podsumowanie'
           name: vpl-csd-2023-m4
           title: Moduł 4
         vpl-csd-2023-m5:
           lessons:
             lesson-2:
               name: Moduł CSD 5 Synchroniczny
+            lesson-3:
+              name: 'Sesja synchroniczna 2: Aplikacje i narzędzia'
+            lesson-5:
+              name: 'Sesja synchroniczna 4: Refleksje z lekcji'
+            lesson-6:
+              name: 'Sesja synchroniczna 5: Podsumowanie'
           name: vpl-csd-2023-m5
           title: Moduł 5
         vpl-csd-2023-m6:
           lessons:
             lesson-2:
               name: Moduł CSD 6 Synchroniczny
+            lesson-3:
+              name: 'Sesja synchroniczna 2: Wnioski i powiązania'
+            lesson-4:
+              name: 'Sesja synchroniczna 3: Różnicowanie'
+            lesson-5:
+              name: 'Sesja synchroniczna 4: Wspieranie równości'
+            lesson-6:
+              name: 'Sesja synchroniczna 5: Podsumowanie'
           name: vpl-csd-2023-m6
           title: Moduł 6
         vpl-csd-2023-m7:
           lessons:
             lesson-2:
               name: Moduł CSD 7 Synchroniczny
+            lesson-6:
+              name: 'Sesja synchroniczna 5: Podsumowanie'
           name: vpl-csd-2023-m7
           title: Moduł 7
         vpl-csd-2023-m8:
           lessons:
             lesson-2:
               name: Moduł CSD 8 Synchroniczny
+            lesson-3:
+              name: 'Sesja synchroniczna 2: Wnioski i powiązania'
           name: vpl-csd-2023-m8
           title: Moduł 8
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: Godzina kodowania - Etyka AI
+            lesson-2:
+              name: Społeczne oddziaływanie generatywnej sztucznej inteligencji
+          name: ai-ethics-2023
+          title: Etyka AI
+          description: Lekcje te wprowadzają uczniów w kwestie etyczne dotyczące sztucznej inteligencji. Uczniowie badają różne tematy i bieżące wydarzenia związane z technologiami sztucznej inteligencji, a następnie proszeni są o refleksję i zajęcie stanowiska na temat tego, jak uważają, że te technologie powinny być wykorzystywane w społeczeństwie.
+        draft-hoc-dp:
+          name: draft-hoc-dp
+          title: Potańcówka (szkic)
+        genai-temp:
+          lessons:
+            lesson-1:
+              name: Tymczasowa lekcja dla Ali
+          name: genai-temp
+          title: "[Temp] Generatywna AI"
+          description: Jednostka tymczasowa do pracy z generatywną AI
+        virtual-pl-csp-summer-day1-2024:
+          name: virtual-pl-csp-summer-day1-2024
+        virtual-pl-csa-summer-2024-day1:
+          name: virtual-pl-csa-summer-2024-day1
+          title: Dzień 1
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-1:
+              name: "TLO #1: U1L7 - czarno-białe obrazy"
+            lesson-2:
+              name: "TLO #2: U1L9 - Kompresja bezstratna"
+            lesson-3:
+              name: "TLO #3: U1L10 - Kompresja stratna"
+            lesson-4:
+              name: Rola nauczyciela w ocenie kształtującej
+            lesson-5:
+              name: Wstęp
+            lesson-6:
+              name: Witamy w opisie kursu i egzaminu
+            lesson-8:
+              name: Poprzednio w… Jednostka 1 Lekcja 8
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchroniczna Część 1
+            lessonGroup-3:
+              display_name: Asynchroniczna Część 1
+            lessonGroup-4:
+              display_name: Synchroniczna Część 2
+            lessonGroup-5:
+              display_name: Asynchroniczna Część 2
+          name: virtual-pl-csp-summer-day2
+          title: Dzień 2
+        virtual-pl-csp-summer-day3:
+          lessons:
+            lesson-1:
+              name: Rozumienie siebie i naszej pozycji
+            lesson-2:
+              name: "TLO #4: U2L2 - Budowanie sieci"
+            lesson-4:
+              name: Stosowanie naszej wiedzy na temat tożsamości i stronniczości
+            lesson-5:
+              name: "TLO #6: U2L4 - Routery i redundancja"
+            lesson-6:
+              name: Wprowadzenie do Modułu 3
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchroniczna Część 1
+            lessonGroup-3:
+              display_name: Asynchroniczna Część 1
+            lessonGroup-4:
+              display_name: Synchroniczna Część 2
+            lessonGroup-5:
+              display_name: Asynchroniczna Część 2
+          name: virtual-pl-csp-summer-day3
+          title: Dzień 3
+        virtual-pl-csp-summer-day4:
+          lessons:
+            lesson-1:
+              name: "TLO #7: U3L2 - Wprowadzenie do trybu projektowania"
+            lesson-2:
+              name: U3L3 — Rozwijanie pomysłu na projekt
+            lesson-3:
+              name: "TLO #8: U3L5 - Wprowadzenie do programowania"
+            lesson-7:
+              name: Wprowadzenie do Modułu 4
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchroniczna Część 1
+            lessonGroup-3:
+              display_name: Asynchroniczna Część 1
+            lessonGroup-4:
+              display_name: Synchroniczna Część 2
+            lessonGroup-5:
+              display_name: Asynchroniczna Część 2
+          name: virtual-pl-csp-summer-day4
+          title: Dzień 4
+        virtual-pl-csp-summer-day5:
+          lessons:
+            lesson-5:
+              name: Planowanie swojego roku
+            lesson-6:
+              name: Ceremonie zamknięcia
+            lesson-7:
+              name: Wprowadzenie do Modułu 5
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchroniczna Część 1
+            lessonGroup-3:
+              display_name: Asynchroniczna Część 1
+            lessonGroup-4:
+              display_name: Synchroniczna Część 2
+          name: virtual-pl-csp-summer-day5
+        virtual-pl-csa-summer-day2:
+          lessons:
+            lesson-1:
+              name: Podsumowanie asynchroniczne
+            lesson-2:
+              name: Asynchroniczna Część 1
+            lesson-3:
+              name: Synchroniczna Część 2
+            lesson-4:
+              name: Asynchroniczna Część 2
+            lesson-5:
+              name: 'Eksploracja lekcji: U1L8 - Dziedziczenie'
+            lesson-9:
+              name: Podsumowanie asynchroniczne
+            lesson-10:
+              name: Przejście do trybu asynchronicznego
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchroniczna Część 1
+            lessonGroup-3:
+              display_name: Asynchroniczna Część 1
+            lessonGroup-4:
+              display_name: Synchroniczna Część 2
+            lessonGroup-5:
+              display_name: Asynchroniczna Część 2
+          name: virtual-pl-csa-summer-day2
+          title: Dzień 2
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Wstęp
+            lesson-2:
+              name: Asynchroniczna Część 1
+            lesson-4:
+              name: Asynchroniczna Część 2
+            lesson-9:
+              name: Wprowadzenie do oceniania
+            lesson-10:
+              name: Przejście do trybu asynchronicznego
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchroniczna Część 1
+            lessonGroup-3:
+              display_name: Asynchroniczna Część 1
+            lessonGroup-4:
+              display_name: Synchroniczna Część 2
+            lessonGroup-5:
+              display_name: Asynchroniczna Część 2
+          name: virtual-pl-csa-summer-day3
+          title: Dzień 3
+        virtual-pl-csa-summer-day4:
+          lessons:
+            lesson-2:
+              name: Asynchroniczna Część 1
+            lesson-4:
+              name: Asynchroniczna Część 2
+            lesson-10:
+              name: Przejście do trybu asynchronicznego
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchroniczna Część 1
+            lessonGroup-3:
+              display_name: Asynchroniczna Część 1
+            lessonGroup-4:
+              display_name: Synchroniczna Część 2
+            lessonGroup-5:
+              display_name: Asynchroniczna Część 2
+          name: virtual-pl-csa-summer-day4
+          title: Dzień 4
+        virtual-pl-csa-summer-day5:
+          lessons:
+            lesson-2:
+              name: Część asychroniczna 1
+            lesson-3:
+              name: Synchroniczna Część 2
+            lesson-4:
+              name: Asynchroniczna Część 2
+            lesson-5:
+              name: Wprowadzenie do Jednostki 3
+            lesson-7:
+              name: Ćwicz używanie tablic
+            lesson-10:
+              name: Przejście do trybu asynchronicznego
+            lesson-13:
+              name: Ceremonie zamknięcia
+            lesson-16:
+              name: Ceremonie zamknięcia
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchroniczna Część 1
+            lessonGroup-3:
+              display_name: Część asychroniczna 1
+            lessonGroup-4:
+              display_name: Synchroniczna Część 2
+            lessonGroup-5:
+              display_name: Asynchroniczna Część 2
+          name: virtual-pl-csa-summer-day5
+          title: 'Dzień 5 '
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-1:
+              name: Podsumowanie asynchroniczne
+            lesson-2:
+              name: Asynchroniczna Część 1
+            lesson-3:
+              name: Synchroniczna Część 2
+            lesson-4:
+              name: Asynchroniczna Część 2
+            lesson-7:
+              name: Wstęp
+            lesson-10:
+              name: Wprowadzenie do Async
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchroniczna Część 1
+            lessonGroup-3:
+              display_name: Asynchroniczna Część 1
+            lessonGroup-4:
+              display_name: Synchroniczna Część 2
+            lessonGroup-5:
+              display_name: Asynchroniczna Część 2
+            lessonGroup-7:
+              display_name: Wstęp
+          name: virtual-pl-csa-summer-day1
+          title: Dzień 1
+        virtual-pl-csp-summer-day1:
+          lessons:
+            lesson-5:
+              name: Wprowadzenie do działań asynchronicznych
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchroniczna Część 1
+            lessonGroup-3:
+              display_name: Synchroniczna Część 2
+            lessonGroup-4:
+              display_name: Asynchroniczna Część 1
+            lessonGroup-5:
+              display_name: Asynchroniczna Część 2
+          name: virtual-pl-csp-summer-day1
+          title: Dzień 1
+        csa-postap-se-and-computer-vision-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: GitHub i Copilot'
+            lessonGroup-3:
+              display_name: 'Rozdział 2: Wizja komputerowa'
+          title: Inżynieria oprogramowania i wizja komputerowa
+        draft-hoc-dp-2:
+          lessons:
+            lesson-1:
+              name: Godzina Kodowania (Szkic 2)
+            lesson-2:
+              name: szablon planu lekcji Godziny Kodowania
+          name: draft-hoc-dp-2
+          title: Potańcówka (Szkic 2)
+        self-paced-pl-problem-solving-and-computing-1-2023:
+          name: self-paced-pl-problem-solving-and-computing-1-2023
+        self-paced-pl-problem-solving-and-computing-2-2023:
+          name: self-paced-pl-problem-solving-and-computing-2-2023
+        draft-hoc-dp-2-a:
+          name: draft-hoc-dp-2-a
+          title: 'Potańcówka (październikowy pilot - wersja A) '
+          description_short: Wszystkie piosenki
+          description: Wszystkie piosenki
+        draft-hoc-dp-2-:
+          name: draft-hoc-dp-2-
+          title: 'Potańcówka (październikowy pilot - wersja A) '
+          description_short: Scoped Songs
+          description: Scoped Songs
+        draft-hoc-dp-2-b:
+          name: draft-hoc-dp-2-b
+          title: 'Potańcówka (październikowy pilot - wersja B) '
+          description: Scoped Songs
+        hoc-dp-oct-beta:
+          name: hoc-dp-oct-beta
+          title: 'Potańcówka (Grupa A) Beta '
+        hoc-dp-oct-beta-b:
+          name: hoc-dp-oct-beta-b
+          title: Potańcówka (Grupa B) Beta
+        self-paced-pl-csd-unit1-1-2023:
+          name: self-paced-pl-csd-unit1-1-2023
+        self-paced-pl-csd-unit1-2-2023:
+          name: self-paced-pl-csd-unit1-2-2023
+        dance-ai-2023:
+          lessons:
+            lesson-1:
+              name: 'Potańcówka: edycja A.I.'
+          name: dance-ai-2023
+          title: 'Potańcówka: edycja AI'
+        ai-tutor-test:
+          lessons:
+            lesson-1:
+              name: Test nauczyciela AI
+          name: ai-tutor-test
+        web-dev-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: Tworzenie stron internetowych'
+            lessonGroup-3:
+              display_name: 'Rozdział 2: Wielostronicowe witryny'
+          title: Opracowywaniem stron internetowych
+          student_description: W Części 2 nauczysz się, jak tworzyć i udostępniać treści na Twoich własnych stronach internetowych. Po podjęciu decyzji jaką treść chcesz udostępniać światu nauczysz się, jak konstruować i stylizować swoje strony z wykorzystaniem HTML i CSS. Będziesz też ćwiczyć cenne umiejętności w zakresie programowania takie jak debugowanie, korzystanie  z zasobów i praca zespołowa.
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Ankieta
+            lessonGroup-2:
+              display_name: 'Rozdział 1: Proces rozwiązywania problemów'
+            lessonGroup-3:
+              display_name: 'Rozdział 2: Komputery i rozwiązywanie problemów'
+            lessonGroup-4:
+              display_name: Lekcje alternatywne
+        csd2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: Tworzenie stron internetowych'
+            lessonGroup-3:
+              display_name: 'Rozdział 2: Wielostronicowe witryny'
+          title: Opracowywaniem stron internetowych
+          student_description: W Części 2 nauczysz się, jak tworzyć i udostępniać treści na Twoich własnych stronach internetowych. Po podjęciu decyzji jaką treść chcesz udostępniać światu nauczysz się, jak konstruować i stylizować swoje strony z wykorzystaniem HTML i CSS. Będziesz też ćwiczyć cenne umiejętności w zakresie programowania takie jak debugowanie, korzystanie  z zasobów i praca zespołowa.
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: Obrazy i animacje'
+            lessonGroup-3:
+              display_name: 'Rozdział 2: Budowanie gier'
+          title: Interaktywne animacje i gry
+          student_description: W dziale 3 będziesz korzystać z doświadczeń w zakresie kodowania w trakcie programowania animacji, sztuki interaktywną i gry w Game Lab.Dział rozpoczyna się  od prostych kształtów i buduje się w nim bardziej wyszukane animacje i gry oparte na duszku, używając tych samych koncepcji programowania i procesu projektowania, którego informatycy używają w codziennej pracy. W ramach projektu finałowego będziesz opracowywać spersonalizowany program interaktywny.
+        csd4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: Projektowanie zorientowane na użytkownika'
+            lessonGroup-3:
+              display_name: 'Rozdział 2: Prototypowanie aplikacji'
+          student_description: Dział 4 wprowadza zagadnienia szerszego oddziaływania społecznego informatyki. Poprzez serię wyzwań projektowych będziesz się uczył lepiej rozumieć potrzeby innych, opracowując rozwiązanie problemu. Druga połowa działu składa się z iteracyjnego projektu zespołowego, w trakcie którego zespoły mają możliwość identyfikacji potrzeb, które są dla nich ważne, tworzyć prototypy rozwiązań na papierze i w App Lab oraz testować rozwiązania na prawdziwych użytkownikach, aby uzyskać od nich informacje zwrotne i kształtować dalszą iterację.
+        csd5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: Reprezentowanie Informacji'
+            lessonGroup-3:
+              display_name: 'Rozdział 2: Rozwiązywanie problemów z danymi'
+          title: Dane i społeczeństwo
+          student_description: Dział 5 poświęcony jest znaczeniu danych w rozwiązywaniu problemów oraz podkreślaniu, w jaki sposób komputery mogą pomóc w tym procesie. W pierwszym rozdziale bada się różne systemy używane do przedstawiania informacji na komputerze oraz wyzwań i kompromisów zamieszczone przez tych, którzy go używają. W drugim rozdziale dowiesz się, jak zbieranie danych są używane do rozwiązywania problemów i jak komputery pomagają w automatyzacji kroków tego procesu. Rozdział kończy się przemyśleniem, jak proces rozwiązywania problemu z danym może być stosowany w wybranym przez siebie obszarze.
+          description_short: Dowiedz się, w jaki sposób ludzie używają komputerów, aby rozwiązywać problemy z danymi.
+        csd6a-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: Dane i wyniki'
+            lessonGroup-3:
+              display_name: 'Rozdział 2: Budowanie prototypów fizycznych'
+          description_short: Naucz się programować przy pomocy urządzeń fizycznych
+        csd6b-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Wejścia i wyjścia
+            lessonGroup-4:
+              display_name: Budowanie fizycznych prototypów
+          title: Jednostka 6B - (Opcja B) Tworzenie aplikacji z urządzeniami (micro:bit)
+          student_description: Ta jednostka bada rolę platform sprzętowych w obliczeniach i jak różne czujniki mogą zapewnić bardziej efektywne wejście i wyjście danych niż tradycyjna klawiatura, mysz i monitor. Korzystając z App Lab i BBC micro:bita, opracujesz programy, które wykorzystują te same wejścia i wyjścia sprzętowe, które widzisz w inteligentnych urządzeniach, patrząc na to, jak prosty prototyp może doprowadzić do gotowego produktu. Jednostka kończy się wyzwaniem projektowym, aby użyć micro:bita jako bazy dla innowacji we własnym projekcie.
+        csd7-2024:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Wprowadzenie do App Lab
+            lessonGroup-2:
+              display_name: Rozdział 1
+            lessonGroup-3:
+              display_name: Rozdział 2
+          title: AI i uczenie maszynowe
+        csd-post-survey-2024:
+          title: Ankieta po odbyciu kursu
+          description: Ta jednostka zawiera ankietę po kursie. Ta jednostka może zostać przypisana po ukończeniu przez uczniów końcowej jednostki w tym kursie.

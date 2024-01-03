@@ -11,7 +11,7 @@ layout: wide
 
 # Smjernice za kreiranje i slanje tutorijala i lekcija za Sat kodiranja™ i Sedmicu obrazovanja računarskih nauka
 
-Code.org domaćin je raznih aktivnosti, lekcija i videozapisa Hour of Code™ na web stranicama Code.org i Hour of Code. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
+Code.org domaćin je raznih aktivnosti, lekcija i videozapisa Hour of Code™ na web stranicama Code.org i Hour of Code. Trenutna lista je na []({{ urls/learn }})hourofcode.com/learn.
 
 Želite li predati vlastiti vlastiti vodič, lekciju koju vodi nastavnik ili aktivnost robotike/proizvođača koja objašnjava princip računarske nauke? Pridružite se ovom globalnom pokretu i pomozite učesnicima širom svijeta da započnu sa satom koda ili krenu dalje s aktivnostima s više lekcija, dan-dugo ili sedmično.
 
@@ -46,7 +46,7 @@ Nekoliko savjeta:
 
 Ove aktivnosti su namijenjene studentima da se samostalno usmjeravaju kroz tutorial. Ne zahtijevaju puno nastave od nastavnika ili nastavnika.
 
-**Teacher Facilitated lesson ([example](https://studio.code.org/s/course1/lessons/2/levels/1), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
+**Učiteljska lekcija ([primjer](https://studio.code.org/s/course1/lessons/2/levels/1), [predložak](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
 
 Sada kada su stotine hiljada edukatora isprobali Sat kodiranja, mnoge učionice su spremne za kreativnije aktivnosti koje podučavaju osnove informatike. Da bismo pomogli naprednijim nastavnicima da pronađu inspiraciju, prikupljamo i kuriramo lekcije i planove aktivnosti “vođenih nastavnicima” za veterane Sata kodiranja.
 
@@ -85,11 +85,11 @@ Cilj Sata kodiranja je da početnicima pruži pristupačan prvi ukus informatike
 
 Aktivnosti bi trebale podučavati koncept informatike kao što su petlje, uslovnici, enkripcija ili kako Internet funkcionira. Aktivnost također može podučavati o tome kako se računarska nauka povezuje sa zanimanjima iz stvarnog svijeta, događajima ili historijom. Na primjer, podučavanje UX dizajna za izradu aplikacija koje su značajne za publiku ili uzrok. Mi obeshrabrujemo aktivnosti koje se fokusiraju na sintaksu programiranja, a ne na koncepte. Na primjer, mi ćemo navesti, ali ne i istaknuti, aktivnosti koje podučavaju HTML. Slično tome, obeshrabrujemo lekcije blokiranja programiranja koje se fokusiraju na podešavanje/mijenjanje opcija konfiguracije, a ne na učenje modeliranja algoritma ili procesa.
 
-*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Aktivnosti koje zahtijevaju instalaciju aplikacije, desktop aplikaciju ili doživljaje igraće konzole su u redu, ali nisu idealne. Nećemo popisati aktivnosti koje zahtijevaju prijavu ili plaćanje. (Aktivnosti robotike mogu zahtijevati kupovinu robotike.)
+*Tehnički zahtjevi:* Zbog širokog spektra postavki školske i učionice, najbolje su aktivnosti zasnovane na webu ili pametnim telefonima ili na drugi način unplugged-style aktivnosti koje podučavaju koncepte informatike bez upotrebe računara (vidi http://csunplugged.com/). [](http://csunplugged.com/) Aktivnosti koje zahtijevaju instalaciju aplikacije, desktop aplikaciju ili doživljaje igraće konzole su u redu, ali nisu idealne. Nećemo popisati aktivnosti koje zahtijevaju prijavu ili plaćanje. (Aktivnosti robotike mogu zahtijevati kupovinu robotike.)
 
 *Studentski (Self-vođeni) Format:* Originalni Sat kodiranja izgrađen je uglavnom na uspjehu samo-vođenih tutorijala ili lekcija, opcionalno olakšan od strane nastavnika. Postoji mnogo postojećih opcija, ali ako želite stvoriti novu, ove aktivnosti trebaju biti dizajnirane tako da mogu biti zabavne za učenika koji radi sam ili u učionici čiji nastavnik ima minimalnu prep ili CS pozadinu. Oni bi trebali pružiti upute za studente, za razliku od otvorenog satnog izazova. U idealnom slučaju, upute i vodiči integriraju se izravno u programsku platformu, kako bi se izbjeglo prebacivanje kartica ili prozora između vodiča i programske platforme.
 
-To get a sense of the wide variety of types of tutorials and lesson plans you can create, visit the [Hour of Code Activities page](https://hourofcode.com/us/learn).
+Da biste dobili osjećaj širokog spektra vrsta vodiča i planova lekcija koje možete kreirati, posjetite stranicu [Sat aktivnosti koda.](https://hourofcode.com/us/learn)
 
 [**Nazad na vrh**](#top)
 
@@ -104,6 +104,7 @@ Ono što će vam trebati:
 * Ime i e-mail primarnog kontakta koji predstavlja podnesenu aktivnost
 * Naziv aktivnosti (ne može uključiti “Sat kodiranja” u ime)
 * URL link na aktivnost
+* Da li ova aktivnost uključuje AI: Da ili Ne
 * Opis aktivnosti (maksimalni broj znakova: 400) 
     * U opis navedite da li je to uglavnom vođeno studentima ili olakšano nastavnicima. Pored toga, neke škole su zainteresovane da znaju da li se aktivnosti Sata kodiranja bave zajedničkim osnovnim ili naučnim standardima sledeće generacije. Ako se aktivnost bavi određenim standardima, razmislite o uključivanju ovih informacija.
 * Preporučena razina (e) ocjena (e) za namijenjene korisnike. Možete se pozvati na \[K-12 standardi Udruženja nastavnika računarskih nauka\] (https://k12cs.org/framework-statements-by-grade-band/) za koncepte računarskih nauka koji odgovaraju ocjeni. Razine primjera razreda uključuju: 
@@ -111,9 +112,9 @@ Ono što će vam trebati:
     * 2. i 5. razreda (7-10 godina)
     * 6. i 8. razreda (11-13 godina)
     * Ocjene 9+ (14+ godina)
-* Popis predmetnih područja koje vaša aktivnost pokriva (pored računarskih nauka). Na primjer, ako nastavnik matematike može koristiti vašu aktivnost za podučavanje o uglovima ili parabolama, navedite kao matematiku. Ako imate ludu libs aktivnost koja uči glagole/imenice/itd. odaberite jezične umjetnosti.
-* Popis programskih jezika koje vaše aktivnosti podučava. Tj. C/C ++, Java, JavaScript itd. ili jezik neovisan (za planove lekcija koji se mogu podučavati na više jezika)
-* Spisak podržanih prirodnih jezika. Napomena: Otkrivanje jezika odgovornost je pružatelja aktivnosti; preusmjerit ćemo sve korisnike na navedeni jedinstveni URL.
+* Popis programskih jezika koje vaše aktivnosti podučava. Tj. C/C ++, Java, JavaScript itd. ili jezik neovisan (za planove lekcija koji se mogu podučavati na više jezika) odaberite jezične umjetnosti.
+* Spisak podržanih prirodnih jezika. Napomena: Otkrivanje jezika odgovornost je pružatelja aktivnosti; preusmjerit ćemo sve korisnike na navedeni jedinstveni URL. ili jezik neovisan (za planove lekcija koji se mogu podučavati na više jezika)
+* Koju razinu iskustva treba edukator imati da koristi vašu aktivnost? (Npr. Početnik ili udoban.) I, koji nivo iskustva bi studenti trebali imati?
 * Koju razinu iskustva treba edukator imati da koristi vašu aktivnost? (Npr. Početnik ili udoban.) I, koji nivo iskustva bi studenti trebali imati? Ako želite pripremiti naprednije aktivnosti Sata koda™, molimo Vas da u opis svoje aktivnosti uključite prethodno znanje potrebno.
 * Dužina vaše aktivnosti 
     * Samo 1 sat
@@ -141,11 +142,11 @@ Ono što će vam trebati:
     * Unplugged
 * Snimak zaslona ili marketinška slika aktivnosti Sat koda. Pošaljite barem jednu sliku sa dimenzijama 4:3. Trebao bi biti najmanje 520px po 390px. Ova slika na sebi ne bi trebala imati tekst (osim vašeg logotipa), kako bi bila pristupačnija govornicima koji nisu engleski. Ako odgovarajuća slika nije pružena, možemo snimiti vlastiti snimak zaslona vašeg vodiča ILI možemo odlučiti da je ne nabrojamo. Sve slike moraju biti poslane kao URL link na .jpg, .jpeg ili .png.
 * Da bi preciznije pratili učešće, partneri udžbenika treće strane moraju uključiti slike za praćenje od 1 piksela na prvu stranicu svojih tutorijala za sat koda. Pogledajte odjeljak [Praćenje Pixel](#pixel) u nastavku za više detalja.
-* Upon finishing your activity, users should be directed to [code.org/api/hour/finish](https://code.org/api/hour/finish) where they will be able to: 
+* Po završetku aktivnosti, korisnici bi trebali biti usmjereni na [code.org/api/hour/finish gdje](https://code.org/api/hour/finish) će moći: 
     * Podijelite na društvenim mrežama da su završili Sat kodiranja
     * Primite potvrdu da su završili Sat kodiranja
     * Pogledajte tabele o tome koje zemlje/gradovi imaju najviše stope učešća u aktivnostima Hour of Code
-    * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [code.org/api/hour/finish](https://code.org/api/hour/finish) as well.
+    * Za korisnike koji provode sat vremena na vašoj aktivnosti i ne dovršavaju je, uključite gumb na vašoj aktivnosti na kojem piše “Završio sam sa svojim Satom koda” koje se vraća i na [code.org/api/hour/finish](https://code.org/api/hour/finish) .
 * (Opcionalno) Možemo slijediti vezu putem internetske ankete/obrasca koja traži izvješće o sljedećim mjernim podacima aktivnosti: 
     * Za online aktivnosti (posebno aplikacije za pametne telefone/tablete): 
         * Broj korisnika
@@ -167,9 +168,11 @@ Ono što će vam trebati:
 
 ## Kako će se vrednovati aktivnosti
 
-Raznolika komisija edukatora informatike rangirat će prijave na osnovu kvalitativnih i kvantitativnih kriterijuma. Sve aktivnosti koje odgovaraju osnovnim kriterijima bit će navedene. Nastavnici će moći filtrirati i sortirati kako bi pronašli najbolje aktivnosti za svoju učionicu.
+Raznolika komisija edukatora informatike rangirat će prijave na osnovu kvalitativnih i kvantitativnih kriterijuma. Sve aktivnosti koje odgovaraju osnovnim kriterijima bit će navedene.
 
-Rubrika za vrednovanje aktivnosti i planova lekcija će tražiti sljedeće kriterije za sve aktivnosti i rangirati ih u skladu s tim:
+Za tradicionalne aktivnosti kodiranja, raznovrstan odbor edukatora informatike rangirat će prijave na osnovu kvalitativnih i kvantitativnih kriterija. Sve aktivnosti koje odgovaraju osnovnim kriterijima bit će navedene. Nastavnici će moći filtrirati i sortirati kako bi pronašli najbolje aktivnosti za svoju učionicu.
+
+Ako odbor za pregled ocjenjuje aktivnost nulu u kvaliteti proizvodnje (zbog loših grešaka ili uputa zbog kojih je vrlo teško koristiti), u promociji učenja u nedovoljno zastupljenim grupama (zbog rasistički/seksističkog materijala), u obrazovnoj vrijednosti (ne podučava CS koncepte), ili zabavno/angažovanje (zbog toga što je učenicima otežan/obeshrabrujuće za rad), aktivnost neće biti navedena.
 
 - Visoka kvaliteta proizvodnje
 - Promovirati učenje od strane svih demografskih grupa (esp. studentice nedovoljno zastupljene u CS-u, kao mlade žene, studentice iz marginalizovanih rasnih i etničkih grupa, te studentice sa invaliditetom)
@@ -177,9 +180,9 @@ Rubrika za vrednovanje aktivnosti i planova lekcija će tražiti sljedeće krite
 - Zabava i privlačan
 - Ohrabruje učenike da stvore nešto jedinstveno što mogu podijeliti (Za mlađe učenike: s roditeljima i kolegama iz razreda. Za starce studente: na Internetu)
 
-Ako odbor za pregled ocjenjuje aktivnost nulu u kvaliteti proizvodnje (zbog loših grešaka ili uputa zbog kojih je vrlo teško koristiti), u promociji učenja u nedovoljno zastupljenim grupama (zbog rasistički/seksističkog materijala), u obrazovnoj vrijednosti (ne podučava CS koncepte), ili zabavno/angažovanje (zbog toga što je učenicima otežan/obeshrabrujuće za rad), aktivnost neće biti navedena.
-
 Pored toga, da bi bile navedene, sve aktivnosti moraju:
+
+Za samousmjerene aktivnosti za nove nastavnike i studente komisija za reviziju će tražiti da li:
 
 - Budite prikladni za učionicu javne škole (bez oružja, bez eksplicitnih/zrelih sadržaja, bez vjerskog sadržaja itd.)
 - Zahtijevaju bez prijave
@@ -205,11 +208,13 @@ Nastavnici i učenici moći će pretraživati i filtrirati našu listu aktivnost
 
 ## Prijedlozi za dizajniranje jednosatnih vodiča
 
-Možete uključiti logotip [sata koda](https://hourofcode.com/us/promote/resources#logo) u svoj vodič, ali to nije potrebno. Ako koristite logotip Sat koda, pogledajte smjernice za zaštitni znak u nastavku. <u>Ni pod kojim okolnostima ne mogu se koristiti logotip i ime Code.org.</u> Oba su zaštićeni i ne mogu se povezati s imenom robne marke treće strane bez izričitog pismenog odobrenja.
-
-**Pobrinite se da prosječni student može udobno završiti za sat vremena.** Razmotrite dodavanje otvorene aktivnosti na kraju za učenike koji se brže kreću kroz lekciju. Zapamtite da će većina djece biti apsolutni početnici računarstva i kodiranja.
+Aktivnosti ne moraju uključivati AI, iako želimo ponuditi više aktivnosti povezanih sa AI.
 
 **Uključite bilješke nastavnika.** Većina aktivnosti treba biti usmjerena na studente, ali ako je neka aktivnost olakšana ili kojom upravlja nastavnik, molimo vas da uključite jasne i jednostavne upute za nastavnika u obliku bilješki nastavnika na zasebnom URL-u poslanom s vašom aktivnošću. Ne samo da su studenti novaci, neki od nastavnika su kao dobro. Uključite informacije kao što su:
+
+**Uključite povratne informacije na kraju aktivnosti.** (Npr. “Završili ste 10 razina i naučili o petljama! Odličan posao!”)
+
+**Potaknite studente da objavljuju na društvenim medijima (gdje je to prikladno) kada završe.** Na primjer “Uradio sam sat kodiranja sa ________ Jeste li? #HourOfCode” ili “Učinio sam #HourOfCode kao dio #CSEdWeek. Jeste li?
 
 - Na kojim platformama i preglednicima najbolje funkcionira udžbenik?
 - Radi li na pametnim telefonima? Tablete?
@@ -248,7 +253,7 @@ Hour of Code® i Hora del Código® registrirani su zaštitni znaci tvrtke Code.
 
 ## Praćenje piksela
 
-Da bismo preciznije pratili učešće, tražimo od svakog partnera u vodiču da na prvu stranicu svojih tutorijala Hour of Code uključi sliku za praćenje od 1 piksela. Slika piksela mora biti samo na početnoj stranici. Ne uključujte ni na jednoj privremenoj stranici vašeg udžbenik.
+Ako je vaš udžbenik odobren i uključen na završnu stranicu vodiča, Code.org će vam pružiti jedinstveni piksel za praćenje koji ćete se integrirati u svoj vodič. Pogledajte primjer u nastavku. Ne uključujte ni na jednoj privremenoj stranici vašeg udžbenik.
 
 To će nam omogućiti da brojimo korisnike koji rade vaš vodič za sat koda. To će dovesti do preciznijih broji učešća za vaš tutorial.
 
@@ -258,7 +263,7 @@ NAPOMENA: ovo nije važno učiniti za aplikacije koje se mogu instalirati (iOS/A
 
 Primjer praćenja piksela za Dance Party:
 
-IMG SRC = <http://code.org/api/hour/begin_dance.png>   
+IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/begin_dance.png)   
 
 
 [**Nazad na vrh**](#top)

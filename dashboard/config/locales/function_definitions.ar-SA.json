@@ -616,6 +616,11 @@
             "name": "وظيفتي"
           }
         },
+        "Course E: Artist Project_examples_2023": {
+          "my function": {
+            "name": "وظيفتي"
+          }
+        },
         "Course E: Frozen Project_examples2022": {
           "LOGIC FLOWER": {
             "name": "زهرة المنطق"
@@ -680,6 +685,69 @@
           }
         },
         "Course E: Frozen Project_examples_2021": {
+          "LOGIC FLOWER": {
+            "name": "زهرة المنطق"
+          },
+          "LOGIC FLOWERS": {
+            "name": "أزهار المنطق"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "أزهار المنطق ٢"
+          },
+          "draw a circle": {
+            "description": "ارسم دائرة قُطرها محدد.",
+            "name": "رسم دائرة",
+            "parameters": {
+              "radius": "قُطر"
+            }
+          },
+          "draw a house": {
+            "name": "رسم منزل",
+            "parameters": {
+              "length": "الطول"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "ارسم دولاب الهواء",
+            "parameters": {
+              "length": "الطول",
+              "repeat": "تكرار",
+              "sides": "جوانب"
+            }
+          },
+          "draw a shape": {
+            "name": "ارسم شكل",
+            "parameters": {
+              "length": "الطول",
+              "sides": "جوانب"
+            }
+          },
+          "draw a square": {
+            "name": "رسم مربع",
+            "parameters": {
+              "length": "الطول",
+              "sides": "جوانب"
+            }
+          },
+          "draw a star": {
+            "description": "ارسم نجمة بنقاط وجوانب أطوالها محددة.",
+            "name": "رسم نجمة",
+            "parameters": {
+              "length": "الطول",
+              "points": "نقاط"
+            }
+          },
+          "draw a triangle": {
+            "name": "رسم مثلث",
+            "parameters": {
+              "length": "الطول"
+            }
+          },
+          "small flower": {
+            "name": "زهرة صغيرة"
+          }
+        },
+        "Course E: Frozen Project_examples_2023": {
           "LOGIC FLOWER": {
             "name": "زهرة المنطق"
           },
@@ -947,6 +1015,56 @@
             }
           }
         },
+        "CourseD_EOC_artist_2023": {
+          "draw a circle": {
+            "description": "ارسم دائرة قُطرها محدد.",
+            "name": "رسم دائرة",
+            "parameters": {
+              "radius": "قُطر"
+            }
+          },
+          "draw a house": {
+            "name": "رسم منزل",
+            "parameters": {
+              "length": "الطول"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "ارسم دولاب الهواء",
+            "parameters": {
+              "length": "الطول",
+              "repeat": "تكرار",
+              "sides": "جوانب"
+            }
+          },
+          "draw a shape": {
+            "name": "ارسم شكل",
+            "parameters": {
+              "length": "الطول",
+              "sides": "جوانب"
+            }
+          },
+          "draw a square": {
+            "name": "رسم مربع",
+            "parameters": {
+              "length": "الطول"
+            }
+          },
+          "draw a star": {
+            "description": "ارسم نجمة بنقاط وجوانب أطوالها محددة.",
+            "name": "رسم نجمة",
+            "parameters": {
+              "length": "الطول",
+              "points": "نقاط"
+            }
+          },
+          "draw a triangle": {
+            "name": "رسم مثلث",
+            "parameters": {
+              "length": "الطول"
+            }
+          }
+        },
         "CourseD_EOC_artist_example2021": {
           "draw a circle": {
             "description": "ارسم دائرة قُطرها محدد.",
@@ -1047,6 +1165,56 @@
             }
           }
         },
+        "CourseD_EOC_artist_example2021_2023": {
+          "draw a circle": {
+            "description": "ارسم دائرة قُطرها محدد.",
+            "name": "رسم دائرة",
+            "parameters": {
+              "radius": "قُطر"
+            }
+          },
+          "draw a house": {
+            "name": "رسم منزل",
+            "parameters": {
+              "length": "الطول"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "ارسم دولاب الهواء",
+            "parameters": {
+              "length": "الطول",
+              "repeat": "تكرار",
+              "sides": "جوانب"
+            }
+          },
+          "draw a shape": {
+            "name": "ارسم شكل",
+            "parameters": {
+              "length": "الطول",
+              "sides": "جوانب"
+            }
+          },
+          "draw a square": {
+            "name": "رسم مربع",
+            "parameters": {
+              "length": "الطول"
+            }
+          },
+          "draw a star": {
+            "description": "ارسم نجمة بنقاط وجوانب أطوالها محددة.",
+            "name": "رسم نجمة",
+            "parameters": {
+              "length": "الطول",
+              "points": "نقاط"
+            }
+          },
+          "draw a triangle": {
+            "name": "رسم مثلث",
+            "parameters": {
+              "length": "الطول"
+            }
+          }
+        },
         "CourseF_app_computer": {
           "reset game": {
             "name": "إعادة اللعبة"
@@ -1058,6 +1226,11 @@
           }
         },
         "CourseF_app_computer_-2022-2": {
+          "reset game": {
+            "name": "إعادة اللعبة"
+          }
+        },
+        "CourseF_app_computer_2023": {
           "reset game": {
             "name": "إعادة اللعبة"
           }
@@ -1102,6 +1275,11 @@
           }
         },
         "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "ابن جسراً"
+          }
+        },
+        "Function intro Ryan_2023": {
           "build bridge": {
             "name": "ابن جسراً"
           }
@@ -1248,6 +1426,11 @@
             "name": "طريق سالك"
           }
         },
+        "MC_HOC_2017_07_Cole_2023": {
+          "clear path": {
+            "name": "طريق سالك"
+          }
+        },
         "MC_HOC_2017_10_RETRY": {
           "fix long path": {
             "name": "أصلح المسار الطويل"
@@ -1281,6 +1464,14 @@
           }
         },
         "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "أصلح المسار الطويل"
+          },
+          "fix short path": {
+            "name": "أصلح المسار القصير"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2023": {
           "fix long path": {
             "name": "أصلح المسار الطويل"
           },
@@ -1328,6 +1519,14 @@
             "name": "ابن جسراً قصير"
           }
         },
+        "MC_HOC_2017_Ali_2023": {
+          "build long bridge": {
+            "name": "ابن جسراً طويل"
+          },
+          "build short bridge": {
+            "name": "ابن جسراً قصير"
+          }
+        },
         "MC_HOC_2017_FP20x20": {
           "function 1": {
             "name": "الوظيفة  1"
@@ -1361,6 +1560,14 @@
           }
         },
         "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "الوظيفة  1"
+          },
+          "function 2": {
+            "name": "الوظيفة 2"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2023": {
           "function 1": {
             "name": "الوظيفة  1"
           },
@@ -1951,6 +2158,11 @@
             "name": "حلّ محتمل"
           }
         },
+        "courseB_artist_loops_challenge2_2023": {
+          "potential solution": {
+            "name": "حلّ محتمل"
+          }
+        },
         "courseC_artist_prog3": {
           "draw fire": {
             "name": "ارسم نار"
@@ -2047,6 +2259,11 @@
             "name": "الداعم"
           }
         },
+        "courseC_artist_prog4_2023": {
+          "booster": {
+            "name": "الداعم"
+          }
+        },
         "courseC_data wizard": {
           "do something": {
             "name": "إفعل شيئاً"
@@ -2063,6 +2280,11 @@
           }
         },
         "courseC_data wizard_2021": {
+          "do something": {
+            "name": "إفعل شيئاً"
+          }
+        },
+        "courseC_data wizard_2023": {
           "do something": {
             "name": "إفعل شيئاً"
           }
@@ -2755,6 +2977,17 @@
             "name": "ارسم خطاً من الأشكال السداسية"
           }
         },
+        "courseE_artist_functions10_2023": {
+          "do something": {
+            "name": "إفعل شيئاً"
+          },
+          "draw hexagon": {
+            "name": "ارسم شكلاً سداسياً"
+          },
+          "draw line of hexagons": {
+            "name": "ارسم خطاً من الأشكال السداسية"
+          }
+        },
         "courseE_artist_functions2": {
           "draw a square": {
             "name": "رسم مربع"
@@ -2788,6 +3021,11 @@
             "name": "ارسم يد النظارة"
           }
         },
+        "courseE_artist_functions2_2023": {
+          "draw a square": {
+            "name": "رسم مربع"
+          }
+        },
         "courseE_artist_functions2_copy": {
           "draw a square": {
             "name": "رسم مربع"
@@ -2819,6 +3057,11 @@
           }
         },
         "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "رسم نجمة"
+          }
+        },
+        "courseE_artist_functions3_2023": {
           "draw a star": {
             "name": "رسم نجمة"
           }
@@ -2868,6 +3111,11 @@
             "name": "رسم نجمة"
           }
         },
+        "courseE_artist_functions5_2023": {
+          "draw a star": {
+            "name": "رسم نجمة"
+          }
+        },
         "courseE_artist_functions5_copy": {
           "draw a star": {
             "name": "رسم نجمة"
@@ -2913,6 +3161,11 @@
           }
         },
         "courseE_artist_functions7_2021": {
+          "draw a window": {
+            "name": "ارسم نافذة"
+          }
+        },
+        "courseE_artist_functions7_2023": {
           "draw a window": {
             "name": "ارسم نافذة"
           }
@@ -2998,6 +3251,20 @@
             "name": "مربعات متعاقبة"
           }
         },
+        "courseE_artist_functions8_2023": {
+          "do something": {
+            "name": "إفعل شيئاً"
+          },
+          "draw a line of squares": {
+            "name": "ارسم خط من المربعات"
+          },
+          "draw square": {
+            "name": "ارسم مربعاً"
+          },
+          "staggered squares": {
+            "name": "مربعات متعاقبة"
+          }
+        },
         "courseE_artist_functions8a2022": {
           "do something": {
             "name": "إفعل شيئاً"
@@ -3031,6 +3298,14 @@
           }
         },
         "courseE_artist_functions8a_2021": {
+          "do something": {
+            "name": "إفعل شيئاً"
+          },
+          "draw a square": {
+            "name": "رسم مربع"
+          }
+        },
+        "courseE_artist_functions8a_2023": {
           "do something": {
             "name": "إفعل شيئاً"
           },
@@ -3083,6 +3358,17 @@
           }
         },
         "courseE_artist_functions8b_2021": {
+          "do something": {
+            "name": "إفعل شيئاً"
+          },
+          "draw a line of squares": {
+            "name": "ارسم خط من المربعات"
+          },
+          "draw square": {
+            "name": "ارسم مربعاً"
+          }
+        },
+        "courseE_artist_functions8b_2023": {
           "do something": {
             "name": "إفعل شيئاً"
           },
@@ -3163,6 +3449,20 @@
             "name": "مربعات متعاقبة"
           }
         },
+        "courseE_artist_functions8c_2023": {
+          "do something": {
+            "name": "إفعل شيئاً"
+          },
+          "draw a line of squares": {
+            "name": "ارسم خط من المربعات"
+          },
+          "draw square": {
+            "name": "ارسم مربعاً"
+          },
+          "staggered squares": {
+            "name": "مربعات متعاقبة"
+          }
+        },
         "courseE_artist_functions9": {
           "do something": {
             "name": "إفعل شيئاً"
@@ -3219,6 +3519,17 @@
           }
         },
         "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "إفعل شيئاً"
+          },
+          "draw line of triangles": {
+            "name": "ارسم سطراً من المثلثات"
+          },
+          "draw triangle": {
+            "name": "ارسم مثلثاً"
+          }
+        },
+        "courseE_artist_functions9_2023": {
           "do something": {
             "name": "إفعل شيئاً"
           },
@@ -3314,6 +3625,23 @@
             "name": "مربعات متعاقبة"
           }
         },
+        "courseE_artist_functionsProj_2023": {
+          "draw a line of squares": {
+            "name": "ارسم خط من المربعات"
+          },
+          "draw hexagon": {
+            "name": "ارسم شكلاً سداسياً"
+          },
+          "draw line of hexagons": {
+            "name": "ارسم خطاً من الأشكال السداسية"
+          },
+          "draw square": {
+            "name": "ارسم مربعاً"
+          },
+          "staggered squares": {
+            "name": "مربعات متعاقبة"
+          }
+        },
         "courseE_artist_functions_challenge1": {
           "do something": {
             "name": "إفعل شيئاً"
@@ -3355,6 +3683,14 @@
           }
         },
         "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "إفعل شيئاً"
+          },
+          "my design": {
+            "name": "تصميمي"
+          }
+        },
+        "courseE_artist_functions_challenge1_2023": {
           "do something": {
             "name": "إفعل شيئاً"
           },
@@ -3410,6 +3746,14 @@
             "name": "تصميمي"
           }
         },
+        "courseE_artist_functions_challenge2_2023": {
+          "do something": {
+            "name": "إفعل شيئاً"
+          },
+          "my design": {
+            "name": "تصميمي"
+          }
+        },
         "courseE_artist_functions_predict1": {
           "draw a square": {
             "name": "رسم مربع"
@@ -3441,6 +3785,11 @@
           },
           "draw ear stems": {
             "name": "ارسم يد النظارة"
+          }
+        },
+        "courseE_artist_functions_predict1_2023": {
+          "draw a square": {
+            "name": "رسم مربع"
           }
         },
         "courseE_artist_functions_predict1_copy": {
@@ -3509,6 +3858,17 @@
           }
         },
         "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "إفعل شيئاً"
+          },
+          "draw line of polygons": {
+            "name": "ارسم خطاً من المضلعات"
+          },
+          "draw polygon": {
+            "name": "ارسم مضلعاً"
+          }
+        },
+        "courseE_artist_functions_predict2_2023": {
           "do something": {
             "name": "إفعل شيئاً"
           },
@@ -3688,6 +4048,20 @@
             "name": "مربع اليقطينة"
           }
         },
+        "courseE_farmer_functions10a1_2023": {
+          "check square for corn": {
+            "name": "تفقد المربع من الذرة"
+          },
+          "get all pumpkins": {
+            "name": "احصل على كل اليقطين"
+          },
+          "pick along path": {
+            "name": "التقط على امتداد المسار"
+          },
+          "pumpkin square": {
+            "name": "مربع اليقطينة"
+          }
+        },
         "courseE_farmer_functions10b": {
           "navigate": {
             "name": "تنقّل"
@@ -3789,6 +4163,23 @@
             "name": "مربع اليقطينة"
           }
         },
+        "courseE_farmer_functions11_predict_2023": {
+          "check square for corn": {
+            "name": "تفقد المربع من الذرة"
+          },
+          "get all pumpkins": {
+            "name": "احصل على كل اليقطين"
+          },
+          "get produce": {
+            "name": "اجمع المحصول"
+          },
+          "pick along path": {
+            "name": "التقط على امتداد المسار"
+          },
+          "pumpkin square": {
+            "name": "مربع اليقطينة"
+          }
+        },
         "courseE_farmer_functions132022": {
           "check for corn": {
             "name": "تأكد من وجود الذرة"
@@ -3859,6 +4250,20 @@
             "name": "التقط على امتداد المسار"
           }
         },
+        "courseE_farmer_functions13_2023": {
+          "check for corn": {
+            "name": "تأكد من وجود الذرة"
+          },
+          "corn rectangle": {
+            "name": "مستطيل الذرة"
+          },
+          "lettuce stairs": {
+            "name": "سلّم الخس"
+          },
+          "pick along path": {
+            "name": "التقط على امتداد المسار"
+          }
+        },
         "courseE_farmer_functions1a2022": {
           "check square for corn": {
             "name": "تفقد المربع من الذرة"
@@ -3884,6 +4289,11 @@
             "name": "تفقد المربع من الذرة"
           }
         },
+        "courseE_farmer_functions1a_2023": {
+          "check square for corn": {
+            "name": "تفقد المربع من الذرة"
+          }
+        },
         "courseE_farmer_functions2b2022": {
           "check square for corn": {
             "name": "تفقد المربع من الذرة"
@@ -3905,6 +4315,11 @@
           }
         },
         "courseE_farmer_functions2b_2021": {
+          "check square for corn": {
+            "name": "تفقد المربع من الذرة"
+          }
+        },
+        "courseE_farmer_functions2b_2023": {
           "check square for corn": {
             "name": "تفقد المربع من الذرة"
           }
@@ -3947,6 +4362,14 @@
           }
         },
         "courseE_farmer_functions2ba_2021": {
+          "check square for corn": {
+            "name": "تفقد المربع من الذرة"
+          },
+          "get all pumpkins": {
+            "name": "احصل على كل اليقطين"
+          }
+        },
+        "courseE_farmer_functions2ba_2023": {
           "check square for corn": {
             "name": "تفقد المربع من الذرة"
           },
@@ -4014,6 +4437,17 @@
             "name": "التقط على امتداد المسار"
           }
         },
+        "courseE_farmer_functions3c1_2023": {
+          "check square for corn": {
+            "name": "تفقد المربع من الذرة"
+          },
+          "get all pumpkins": {
+            "name": "احصل على كل اليقطين"
+          },
+          "pick along path": {
+            "name": "التقط على امتداد المسار"
+          }
+        },
         "courseE_farmer_functions3c2022": {
           "check square for corn": {
             "name": "تفقد المربع من الذرة"
@@ -4047,6 +4481,14 @@
           }
         },
         "courseE_farmer_functions3c_2021": {
+          "check square for corn": {
+            "name": "تفقد المربع من الذرة"
+          },
+          "get all pumpkins": {
+            "name": "احصل على كل اليقطين"
+          }
+        },
+        "courseE_farmer_functions3c_2023": {
           "check square for corn": {
             "name": "تفقد المربع من الذرة"
           },
@@ -4094,6 +4536,11 @@
             "name": "مربع الحديقة"
           }
         },
+        "courseE_farmer_functions7a1_2023": {
+          "garden square": {
+            "name": "مربع الحديقة"
+          }
+        },
         "courseE_farmer_functions8a12022": {
           "garden square": {
             "name": "مربع الحديقة"
@@ -4115,6 +4562,11 @@
           }
         },
         "courseE_farmer_functions8a1_2021": {
+          "garden square": {
+            "name": "مربع الحديقة"
+          }
+        },
+        "courseE_farmer_functions8a1_2023": {
           "garden square": {
             "name": "مربع الحديقة"
           }
@@ -4145,6 +4597,11 @@
           }
         },
         "courseE_farmer_functions9a1_2021": {
+          "garden square": {
+            "name": "مربع الحديقة"
+          }
+        },
+        "courseE_farmer_functions9a1_2023": {
           "garden square": {
             "name": "مربع الحديقة"
           }
@@ -4196,6 +4653,11 @@
           }
         },
         "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "إنهاء اللعبة"
+          }
+        },
+        "courseF_apps_collector_2023": {
           "end game": {
             "name": "إنهاء اللعبة"
           }
@@ -4465,6 +4927,11 @@
           }
         },
         "courseF_bee_for_challenge1_2021": {
+          "move and get nectar with counter": {
+            "name": "انتقل واحصل على الرحيق مع العداد"
+          }
+        },
+        "courseF_bee_for_challenge1_2023": {
           "move and get nectar with counter": {
             "name": "انتقل واحصل على الرحيق مع العداد"
           }

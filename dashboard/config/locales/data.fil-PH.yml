@@ -891,6 +891,7 @@ fil:
         artist_intro: Artist Intro
         c_and_c_digital_sharing: Digital na Pagbabahagi
         c_and_c_great_to_create: Mahusay na Gumawa at Maglaro ng Patas
+        code-break: Kumuha ng Code Break
         codebreak_e01: 'Code Break 1.0: Mga Algorithm na may Hill Harper'
         codebreak_e02: 'Code Break 2.0: Mga Prototypes kasama sina Mark Cuban at Lyndsey
           Scott'
@@ -997,6 +998,7 @@ fil:
         csd_gamelab_velocity: Belosidad
         csd_how_teamwork_works: Paano Gumagana Ang Pagtutulungan Ng Magkasama
         csd_ml_ethics_ai: 'Mga Etika at AI '
+        csd_ml_how_ai_works: Paano Gumagana ang AI
         csd_ml_import_model: Pag-import ng isang modelo ng AI
         csd_ml_intro_ai_lab_july2021: Introduksiyon sa AI Lab
         csd_ml_intro_to_ai_lab: Introduksiyon sa AI Lab
@@ -1063,6 +1065,7 @@ fil:
         hint_videos_d_11_7_last: 'Pag-udyuk na mga Video: D.11.7 Huli'
         hint_videos_d_11_9_first: 'Pag-udyuk na mga Video: D.11.9 Una'
         hint_videos_d_11_9_last: 'Pag-udyuk na mga Video: D.11.9 Huli'
+        hoc-dance-ai-warmup: 'Dance Party AI na Edisyon: Paghahanda'
         hoc_dance_congrats: Dance Party - Party On!
         hoc_dance_congrats_2019: Dance Party 2019 - Party On!
         hoc_dance_events: Dance Party - Mga Event
@@ -1172,6 +1175,7 @@ fil:
           - Data block
         u7-libraries-explanation: 'App Lab: Gumawa ng iyong sariling mga bloke-Paano
           Gumamit ng mga Aklat'
+        what-is-creativity: Ano ang Pagkamalikhain?
         what_is_an_event: Ano ang kaganapan?
         what_is_cs: Ano ang computer science?
         why-should-teach-unplugged-activities: 'FAQ: Bakit ko dapat turuan ang mga

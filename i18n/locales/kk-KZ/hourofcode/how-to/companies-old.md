@@ -5,7 +5,7 @@ title: '"Кодтау Сағатын" қалай ұйымдастыруға бо
 {{ signup_button }}
 
 # "Кодтау Сағатын" өзіңіздің кәсіпшілігіңізге қалай таратуға болады?
-### Find out how you and your employees can inspire students to try computer science!
+### Сіз және сіздің қызметкерлеріңіз оқушыларды информатиканы сынап көруге қалай шабыттандыра алатынын біліңіз!
 
 ***
 
@@ -57,9 +57,9 @@ We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participa
 **Жігерлендіруші бейнероликті көрсетіңіз:**
 
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions).
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Дү [ниежүзілік код сағаты бейне](https://www.youtube.com/watch?v=KsOIlDT145A)
+- [Президент Обама барлық студенттерді информатика пәнін үйренуге шақырды](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- Қосымша шабыттандыратын бейнелерді мына [жерден табыңыз](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **Ideas to introduce your Hour of Code activity to students:**
 
@@ -67,7 +67,7 @@ We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participa
 - If you are a tech company, demo fun, innovative products your company is working on.
 - If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
 - Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- Қыздарды информатикаға қызықтыруға арналған кеңестерді мына [жерден қараңыз]({{ urls/girls }}).
 
 ## 6. Code!
 **Шараға тікелей қатысушылар**

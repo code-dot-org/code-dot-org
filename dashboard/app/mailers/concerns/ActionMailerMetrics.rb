@@ -13,6 +13,9 @@ module ActionMailerMetrics
   # ActionMailer that created the message.
   CLASS_HEADER = "X-ActionMailer-Class"
 
+  UNKNOWN_ACTION = 'unknown_action'.freeze
+  UNKNOWN_CLASS = 'unknown_class'.freeze
+
   # Set custom headers on the message so we know where it originated from.
   def set_metrics_headers
     headers[ACTION_HEADER] = action_name
@@ -21,11 +24,13 @@ module ActionMailerMetrics
 
   # Returns the ActionMailer action name which created the given message.
   def self.get_message_action(message)
-    message.header[ACTION_HEADER].to_s
+    message_action = message.header[ACTION_HEADER]
+    message_action ? message_action.to_s : UNKNOWN_ACTION
   end
 
   # Returns the ActionMailer class name which created the given message.
   def self.get_message_class(message)
-    message.header[CLASS_HEADER].to_s
+    message_class = message.header[CLASS_HEADER]
+    message_class ? message_class.to_s : UNKNOWN_CLASS
   end
 end

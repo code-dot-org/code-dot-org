@@ -5,8 +5,12 @@ import SectionsSetUpContainer from '@cdo/apps/templates/sectionsRefresh/Sections
 import sinon from 'sinon';
 import * as utils from '@cdo/apps/code-studio/utils';
 import * as windowUtils from '@cdo/apps/utils';
+import DCDO from '@cdo/apps/dcdo';
 
 describe('SectionsSetUpContainer', () => {
+  beforeEach(() => {
+    DCDO.set('show-coteacher-ui', true);
+  });
   it('renders an initial set up section form', () => {
     const wrapper = shallow(<SectionsSetUpContainer />);
 
@@ -17,8 +21,8 @@ describe('SectionsSetUpContainer', () => {
     const wrapper = shallow(<SectionsSetUpContainer />);
 
     expect(wrapper.find('Heading1').length).to.equal(1);
-    expect(wrapper.find('Button').length).to.equal(3);
-    expect(wrapper.find('Button').at(2).props().text).to.equal(
+    expect(wrapper.find('Button').length).to.equal(4);
+    expect(wrapper.find('Button').last().props().text).to.equal(
       'Finish creating sections'
     );
   });
@@ -27,8 +31,8 @@ describe('SectionsSetUpContainer', () => {
     const wrapper = shallow(<SectionsSetUpContainer sectionToBeEdited={{}} />);
 
     expect(wrapper.find('Heading1').length).to.equal(1);
-    expect(wrapper.find('Button').length).to.equal(2);
-    expect(wrapper.find('Button').at(1).props().text).to.equal('Save');
+    expect(wrapper.find('Button').length).to.equal(3);
+    expect(wrapper.find('Button').last().props().text).to.equal('Save');
   });
 
   it('renders curriculum quick assign', () => {
@@ -37,18 +41,22 @@ describe('SectionsSetUpContainer', () => {
     expect(wrapper.find('CurriculumQuickAssign').length).to.equal(1);
   });
 
-  it('renders advanced settings', () => {
+  it('does not render coteacher if flag is false', () => {
+    DCDO.set('show-coteacher-ui', false);
+
     const wrapper = shallow(<SectionsSetUpContainer />);
 
-    wrapper
-      .find('Button')
-      .at(0)
-      .simulate('click', {preventDefault: () => {}});
-
-    expect(wrapper.find('AdvancedSettingToggles').length).to.equal(1);
+    expect(wrapper.find('Button').length).to.equal(3);
+    expect(wrapper.find('ReactTooltip').length).to.equal(0);
   });
 
-  it('updates caret direction when Advacned Settings is clicked', () => {
+  it('renders coteacher settings', () => {
+    const wrapper = shallow(<SectionsSetUpContainer />);
+
+    expect(wrapper.find('InfoHelpTip').length).to.equal(1);
+  });
+
+  it('updates caret direction when Add Coteachers is clicked', () => {
     const wrapper = shallow(<SectionsSetUpContainer />);
 
     expect(wrapper.find('Button').at(0).props().icon).to.equal('caret-right');
@@ -57,6 +65,28 @@ describe('SectionsSetUpContainer', () => {
       .at(0)
       .simulate('click', {preventDefault: () => {}});
     expect(wrapper.find('Button').at(0).props().icon).to.equal('caret-down');
+  });
+
+  it('renders advanced settings', () => {
+    const wrapper = shallow(<SectionsSetUpContainer />);
+
+    wrapper
+      .find('Button')
+      .at(1)
+      .simulate('click', {preventDefault: () => {}});
+
+    expect(wrapper.find('AdvancedSettingToggles').length).to.equal(1);
+  });
+
+  it('updates caret direction when Advanced Settings is clicked', () => {
+    const wrapper = shallow(<SectionsSetUpContainer />);
+
+    expect(wrapper.find('Button').at(0).props().icon).to.equal('caret-right');
+    wrapper
+      .find('Button')
+      .at(1)
+      .simulate('click', {preventDefault: () => {}});
+    expect(wrapper.find('Button').at(1).props().icon).to.equal('caret-down');
   });
 
   it('validates the form when save is clicked', () => {
@@ -73,7 +103,7 @@ describe('SectionsSetUpContainer', () => {
 
     wrapper
       .find('Button')
-      .at(2)
+      .last()
       .simulate('click', {preventDefault: () => {}});
 
     expect(reportSpy).to.have.been.called.once;
@@ -100,7 +130,7 @@ describe('SectionsSetUpContainer', () => {
 
     wrapper
       .find('Button')
-      .at(2)
+      .last()
       .simulate('click', {preventDefault: () => {}});
 
     expect(fetchSpy).to.have.been.called.once;
@@ -131,7 +161,7 @@ describe('SectionsSetUpContainer', () => {
 
     wrapper
       .find('Button')
-      .at(2)
+      .last()
       .simulate('click', {preventDefault: () => {}});
 
     expect(fetchSpy).to.have.been.called.once;
@@ -168,7 +198,7 @@ describe('SectionsSetUpContainer', () => {
 
     wrapper
       .find('Button')
-      .at(2)
+      .last()
       .simulate('click', {preventDefault: () => {}});
 
     expect(fetchSpy).to.have.been.called.once;
@@ -198,9 +228,9 @@ describe('SectionsSetUpContainer', () => {
 
     const wrapper = shallow(<SectionsSetUpContainer />);
 
-    wrapper
-      .find('Button')
-      .at(1)
+    const buttons = wrapper.find('Button');
+    buttons
+      .at(buttons.length - 2)
       .simulate('click', {preventDefault: () => {}});
 
     expect(fetchSpy).to.have.been.called.once;

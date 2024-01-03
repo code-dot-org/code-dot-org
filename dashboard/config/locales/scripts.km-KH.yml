@@ -7,12 +7,18 @@ km:
           lesson_groups:
             debugging:
               display_name: ការបំបាត់កំហុស (Debugging)
+            introduction:
+              display_name: ការណែនាំ
             lessonGroup-3:
               display_name: អ​ថេរ
         2022drafting:
           lesson_groups:
             lessonGroup-8:
               display_name: កម្មវិធី Hour of Code
+        CSDU3-Draft:
+          description_short: ការសរសេរប្រូក្រាម (Programming)
+        TEMP CSD Unit 3:
+          description_short: ការសរសេរប្រូក្រាម (Programming)
         ai-ethics-2021:
           description_audience: ថ្នាក់ទី ៦ដល់ទី១២
         alltheplcthings:
@@ -24,11 +30,14 @@ km:
             required:
               display_name: ទិដ្ឋភាពទូទៅ
         angelina-playground:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: ចៃដន្យ
           lessons:
             lesson-5:
               name: ការវាយតម្លៃ
         artist:
-          title: សិល្បករ
+          title: វិចិត្រករ
         basketball:
           description: បង្កើតហ្គេមបោះបាល់
           description_short: បង្កើតហ្គេមបោះបាល់
@@ -67,7 +76,7 @@ km:
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
         coursea-2020:
           description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។
           lesson_groups:
@@ -76,7 +85,7 @@ km:
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
         coursea-2021:
           description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។
           lesson_groups:
@@ -96,7 +105,7 @@ km:
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             lessonGroup-5:
               display_name: ចុងបញ្ចប់នៃគម្រោង
         coursea-2023:
@@ -107,7 +116,7 @@ km:
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             lessonGroup-5:
               display_name: ចុងបញ្ចប់នៃគម្រោង
         courseb-2017:
@@ -125,7 +134,7 @@ km:
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
         courseb-2020:
           lesson_groups:
             csf_events:
@@ -133,7 +142,7 @@ km:
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
         courseb-2021:
           lesson_groups:
             csf_events:
@@ -141,7 +150,7 @@ km:
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             lessonGroup-6:
               display_name: ចុងបញ្ចប់នៃគម្រោង
         courseb-2022:
@@ -151,7 +160,7 @@ km:
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             lessonGroup-6:
               display_name: ចុងបញ្ចប់នៃគម្រោង
         courseb-2023:
@@ -161,7 +170,7 @@ km:
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             lessonGroup-6:
               display_name: ចុងបញ្ចប់នៃគម្រោង
         coursec-2017:
@@ -177,7 +186,7 @@ km:
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             end_of_course_project:
               display_name: ចុងបញ្ចប់នៃគម្រោង
         coursec-2020:
@@ -187,7 +196,7 @@ km:
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             end_of_course_project:
               display_name: ចុងបញ្ចប់នៃគម្រោង
         coursec-2021:
@@ -197,7 +206,7 @@ km:
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             end_of_course_project:
               display_name: ចុងបញ្ចប់នៃគម្រោង
           name: វគ្គសិក្សាស៊ី-2021
@@ -208,7 +217,7 @@ km:
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             end_of_course_project:
               display_name: ចុងបញ្ចប់នៃគម្រោង
         coursec-2023:
@@ -218,7 +227,7 @@ km:
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             end_of_course_project:
               display_name: ចុងបញ្ចប់នៃគម្រោង
         coursed-2017:
@@ -242,7 +251,7 @@ km:
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             end_of_course_project:
               display_name: ចុងបញ្ចប់នៃគម្រោង
         coursed-2020:
@@ -254,7 +263,7 @@ km:
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             end_of_course_project:
               display_name: ចុងបញ្ចប់នៃគម្រោង
         coursed-2021:
@@ -266,7 +275,7 @@ km:
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             end_of_course_project:
               display_name: ចុងបញ្ចប់នៃគម្រោង
         coursed-2022:
@@ -278,7 +287,7 @@ km:
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             end_of_course_project:
               display_name: ចុងបញ្ចប់នៃគម្រោង
         coursed-2023:
@@ -290,7 +299,7 @@ km:
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             end_of_course_project:
               display_name: ចុងបញ្ចប់នៃគម្រោង
         coursee-2017:
@@ -465,6 +474,14 @@ km:
           lesson_groups:
             end_of_course_project:
               display_name: ចុងបញ្ចប់នៃគម្រោង
+        csa-u6-dev:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: មេរៀន
+        csa-u7-dev:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: មេរៀន
         csa-videos:
           lesson_groups:
             lessonGroup-3:
@@ -543,6 +560,8 @@ km:
               display_name: Sprites
             lessonGroup-3:
               display_name: អ​ថេរ
+            ramp_up:
+              display_name: ការណែនាំ
             variables:
               display_name: អ​ថេរ
         csf-2022-pilot:
@@ -564,7 +583,7 @@ km:
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
         csp-apprentice-18:
           lesson_groups:
             required:
@@ -837,11 +856,13 @@ km:
         dance-extras-2019:
           description: បន្តលើសពីមួយម៉ោងដំបូង ជាមួយនឹងគំនិតគម្រោងបន្ថែមទៀត។
           student_description: បន្តលើសពីមួយម៉ោងដំបូង ជាមួយនឹងគំនិតគម្រោងបន្ថែមទៀត។
-          title: Keep On Dancing
+          title: បន្តបង្កើតក្បាច់រាំ
         dance-extras-gallery:
           description: បន្តលើសពីមួយម៉ោងដំបូង ជាមួយនឹងគំនិតគម្រោងបន្ថែមទៀត។
           student_description: បន្តលើសពីមួយម៉ោងដំបូង ជាមួយនឹងគំនិតគម្រោងបន្ថែមទៀត។
-          title: Keep On Dancing
+          title: បន្តបង្កើតក្បាច់រាំ
+        dance-unplugged:
+          title: Dance Party Unplugged
         dlp19-csd-mod-fit:
           lesson_groups:
             required:
@@ -916,6 +937,10 @@ km:
           description_audience: 'អាយុ: ៩- ១៨'
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ប្រមូលផ្តុំកម្មវិធីថ្នាក់បឋមសិក្សាដ៏ល្អបំផុតរបស់យេីងសំរាប់សិស្សធំៗ។ '
         express-2019:
+          description: រៀនវិទ្យាសាស្ត្រកុំព្យូទ័រដោយសាកល្បងជាមួយមេរៀនខាងក្រោមតាមយោងទៅតាមពេលវេលារបស់អ្នក!
+            រៀនបង្កើតកម្មវិធីកុំព្យូទ័រ អភិវឌ្ឍជំនាញដោះស្រាយបញ្ហា និងប្រឈមឧបសគ្គជាច្រើន
+            តែមានភាពសប្បាយរីករាយ! បង្កើតហ្គេមជាច្រើន និងគម្រោងច្នៃប្រឌិតផ្សេងៗ ដើម្បីចែករំលែកជាមួយមិត្តភក្តិ
+            ក្រុមគ្រួសារ និងគ្រូរបស់អ្នក។
           description_audience: 'អាយុ: ៩- ១៨'
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ប្រមូលផ្តុំកម្មវិធីថ្នាក់បឋមសិក្សាដ៏ល្អបំផុតរបស់យេីងសំរាប់សិស្សធំៗ។ '
           lesson_groups:
@@ -926,13 +951,21 @@ km:
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             csf_sprites:
               display_name: Sprites
             csf_variables:
               display_name: អ​ថេរ
           name: អុិចប្រេស-2019
+          student_description: រៀនវិទ្យាសាស្ត្រកុំព្យូទ័រដោយសាកល្បងជាមួយមេរៀនខាងក្រោមតាមយោងទៅតាមពេលវេលារបស់អ្នក!
+            រៀនបង្កើតកម្មវិធីកុំព្យូទ័រ អភិវឌ្ឍជំនាញដោះស្រាយបញ្ហា និងប្រឈមឧបសគ្គជាច្រើន
+            តែមានភាពសប្បាយរីករាយ! បង្កើតហ្គេមជាច្រើន និងគម្រោងច្នៃប្រឌិតផ្សេងៗ ដើម្បីចែករំលែកជាមួយមិត្តភក្តិ
+            ក្រុមគ្រួសារ និងគ្រូរបស់អ្នក។
         express-2020:
+          description: រៀនវិទ្យាសាស្ត្រកុំព្យូទ័រដោយសាកល្បងជាមួយមេរៀនខាងក្រោមតាមយោងទៅតាមពេលវេលារបស់អ្នក!
+            រៀនបង្កើតកម្មវិធីកុំព្យូទ័រ អភិវឌ្ឍជំនាញដោះស្រាយបញ្ហា និងប្រឈមឧបសគ្គជាច្រើន
+            តែមានភាពសប្បាយរីករាយ! បង្កើតហ្គេមជាច្រើន និងគម្រោងច្នៃប្រឌិតផ្សេងៗ ដើម្បីចែករំលែកជាមួយមិត្តភក្តិ
+            ក្រុមគ្រួសារ និងគ្រូរបស់អ្នក។
           description_audience: 'អាយុ: ៩- ១៨'
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ប្រមូលផ្តុំកម្មវិធីថ្នាក់បឋមសិក្សាដ៏ល្អបំផុតរបស់យេីងសំរាប់សិស្សធំៗ។ '
           lesson_groups:
@@ -943,14 +976,22 @@ km:
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             csf_sprites:
               display_name: Sprites
             csf_variables:
               display_name: អ​ថេរ
             end_of_course_project:
               display_name: ចុងបញ្ចប់នៃគម្រោង
+          student_description: រៀនវិទ្យាសាស្ត្រកុំព្យូទ័រដោយសាកល្បងជាមួយមេរៀនខាងក្រោមតាមយោងទៅតាមពេលវេលារបស់អ្នក!
+            រៀនបង្កើតកម្មវិធីកុំព្យូទ័រ អភិវឌ្ឍជំនាញដោះស្រាយបញ្ហា និងប្រឈមឧបសគ្គជាច្រើន
+            តែមានភាពសប្បាយរីករាយ! បង្កើតហ្គេមជាច្រើន និងគម្រោងច្នៃប្រឌិតផ្សេងៗ ដើម្បីចែករំលែកជាមួយមិត្តភក្តិ
+            ក្រុមគ្រួសារ និងគ្រូរបស់អ្នក។
         express-2021:
+          description: រៀនវិទ្យាសាស្ត្រកុំព្យូទ័រដោយសាកល្បងជាមួយមេរៀនខាងក្រោមតាមយោងទៅតាមពេលវេលារបស់អ្នក!
+            រៀនបង្កើតកម្មវិធីកុំព្យូទ័រ អភិវឌ្ឍជំនាញដោះស្រាយបញ្ហា និងប្រឈមឧបសគ្គជាច្រើន
+            តែមានភាពសប្បាយរីករាយ! បង្កើតហ្គេមជាច្រើន និងគម្រោងច្នៃប្រឌិតផ្សេងៗ ដើម្បីចែករំលែកជាមួយមិត្តភក្តិ
+            ក្រុមគ្រួសារ និងគ្រូរបស់អ្នក។
           description_audience: 'អាយុ: ៩- ១៨'
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ប្រមូលផ្តុំកម្មវិធីថ្នាក់បឋមសិក្សាដ៏ល្អបំផុតរបស់យេីងសំរាប់សិស្សធំៗ។ '
           lesson_groups:
@@ -961,16 +1002,26 @@ km:
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             csf_sprites:
               display_name: Sprites
             csf_variables:
               display_name: អ​ថេរ
+            csf_warmup:
+              display_name: ការចាប់ផ្តើម
             end_of_course_project:
               display_name: ចុងបញ្ចប់នៃគម្រោង
             lessonGroup-9:
               display_name: ព្រឹត្តិការណ៍
+          student_description: រៀនវិទ្យាសាស្ត្រកុំព្យូទ័រដោយសាកល្បងជាមួយមេរៀនខាងក្រោមតាមយោងទៅតាមពេលវេលារបស់អ្នក!
+            រៀនបង្កើតកម្មវិធីកុំព្យូទ័រ អភិវឌ្ឍជំនាញដោះស្រាយបញ្ហា និងប្រឈមឧបសគ្គជាច្រើន
+            តែមានភាពសប្បាយរីករាយ! បង្កើតហ្គេមជាច្រើន និងគម្រោងច្នៃប្រឌិតផ្សេងៗ ដើម្បីចែករំលែកជាមួយមិត្តភក្តិ
+            ក្រុមគ្រួសារ និងគ្រូរបស់អ្នក។
         express-2022:
+          description: រៀនវិទ្យាសាស្ត្រកុំព្យូទ័រដោយសាកល្បងជាមួយមេរៀនខាងក្រោមតាមយោងទៅតាមពេលវេលារបស់អ្នក!
+            រៀនបង្កើតកម្មវិធីកុំព្យូទ័រ អភិវឌ្ឍជំនាញដោះស្រាយបញ្ហា និងប្រឈមឧបសគ្គជាច្រើន
+            តែមានភាពសប្បាយរីករាយ! បង្កើតហ្គេមជាច្រើន និងគម្រោងច្នៃប្រឌិតផ្សេងៗ ដើម្បីចែករំលែកជាមួយមិត្តភក្តិ
+            ក្រុមគ្រួសារ និងគ្រូរបស់អ្នក។
           description_audience: 'អាយុ: ៩- ១៨'
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ប្រមូលផ្តុំកម្មវិធីថ្នាក់បឋមសិក្សាដ៏ល្អបំផុតរបស់យេីងសំរាប់សិស្សធំៗ។ '
           lesson_groups:
@@ -981,7 +1032,7 @@ km:
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             csf_sprites:
               display_name: Sprites
             csf_variables:
@@ -990,8 +1041,16 @@ km:
               display_name: ចុងបញ្ចប់នៃគម្រោង
             lessonGroup-9:
               display_name: ព្រឹត្តិការណ៍
-          title: វគ្គសិក្សារហ័ស (2022)
+          student_description: រៀនវិទ្យាសាស្ត្រកុំព្យូទ័រដោយសាកល្បងជាមួយមេរៀនខាងក្រោមតាមយោងទៅតាមពេលវេលារបស់អ្នក!
+            រៀនបង្កើតកម្មវិធីកុំព្យូទ័រ អភិវឌ្ឍជំនាញដោះស្រាយបញ្ហា និងប្រឈមឧបសគ្គជាច្រើន
+            តែមានភាពសប្បាយរីករាយ! បង្កើតហ្គេមជាច្រើន និងគម្រោងច្នៃប្រឌិតផ្សេងៗ ដើម្បីចែករំលែកជាមួយមិត្តភក្តិ
+            ក្រុមគ្រួសារ និងគ្រូរបស់អ្នក។
+          title: Express Course (2022)
         express-2023:
+          description: រៀនវិទ្យាសាស្ត្រកុំព្យូទ័រដោយសាកល្បងជាមួយមេរៀនខាងក្រោមតាមយោងទៅតាមពេលវេលារបស់អ្នក!
+            រៀនបង្កើតកម្មវិធីកុំព្យូទ័រ អភិវឌ្ឍជំនាញដោះស្រាយបញ្ហា និងប្រឈមឧបសគ្គជាច្រើន
+            តែមានភាពសប្បាយរីករាយ! បង្កើតហ្គេមជាច្រើន និងគម្រោងច្នៃប្រឌិតផ្សេងៗ ដើម្បីចែករំលែកជាមួយមិត្តភក្តិ
+            ក្រុមគ្រួសារ និងគ្រូរបស់អ្នក។
           description_audience: 'អាយុ: ៩- ១៨'
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រ៖ ប្រមូលផ្តុំកម្មវិធីថ្នាក់បឋមសិក្សាដ៏ល្អបំផុតរបស់យេីងសំរាប់សិស្សធំៗ។ '
           lesson_groups:
@@ -1002,7 +1061,7 @@ km:
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             csf_sprites:
               display_name: Sprites
             csf_variables:
@@ -1011,6 +1070,10 @@ km:
               display_name: ចុងបញ្ចប់នៃគម្រោង
             lessonGroup-9:
               display_name: ព្រឹត្តិការណ៍
+          student_description: រៀនវិទ្យាសាស្ត្រកុំព្យូទ័រដោយសាកល្បងជាមួយមេរៀនខាងក្រោមតាមយោងទៅតាមពេលវេលារបស់អ្នក!
+            រៀនបង្កើតកម្មវិធីកុំព្យូទ័រ អភិវឌ្ឍជំនាញដោះស្រាយបញ្ហា និងប្រឈមឧបសគ្គជាច្រើន
+            តែមានភាពសប្បាយរីករាយ! បង្កើតហ្គេមជាច្រើន និងគម្រោងច្នៃប្រឌិតផ្សេងៗ ដើម្បីចែករំលែកជាមួយមិត្តភក្តិ
+            ក្រុមគ្រួសារ និងគ្រូរបស់អ្នក។
         fit-test:
           lesson_groups:
             required:
@@ -1041,12 +1104,20 @@ km:
           student_description: Minecraft បានត្រលប់មកវិញក្នុងកម្មវិធី Hour of Code
             ជាមួយសកម្មភាពថ្មី‌! ដំណើរផ្សងព្រេងរបស់ Minecraft ជាមួយការសរសេរកូដ។
           title: 'Minecraft: ដំណើរផ្សងព្រេងរបស់វារៈបុរស'
+        k5-onlinepd-2021:
+          lesson_groups:
+            Introduction:
+              display_name: ការណែនាំ
+            k5_getting_started_1:
+              display_name: ការណែនាំ
         mc:
           description: ប្រើប្លក់នៃកូដ នាំ Steve ឬ Alex ធ្វើដំណើរផ្សងព្រេងឆ្លងកាត់ពិភព
             Minecraft នេះ។
           student_description: ប្រើប្លក់នៃកូដ នាំ Steve ឬ Alex ធ្វើដំណើរផ្សងព្រេងឆ្លងកាត់ពិភព
             Minecraft នេះ។
-          title: Minecraft Hour of Code
+          title: Minecraft Adventurer
+        minecraft:
+          title: Minecraft Designer
         nevada-standards-aligned-fifth-grade-2023:
           description_short: សិក្សាអំពីក្បួនទាំងអស់ នៅក្នុងមូលដ្ឋានគ្រឹះនៃវិទ្យាសាស្ដ្រកុំព្យូទ័រ
             និងបង្កើតសិល្បៈផ្ទាល់ខ្លួន រួមទាំងរឿងរ៉ាវ ឬហ្គេម។
@@ -1068,7 +1139,7 @@ km:
         nevada-standards-aligned-first-grade-2023:
           lesson_groups:
             lessonGroup-3:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             lessonGroup-4:
               display_name: ប្រតិបត្តិដដែលៗ
             lessonGroup-6:
@@ -1087,13 +1158,13 @@ km:
           description_short: សេចក្តីណែនាំអំពី វិទ្យាសាស្ដ្រកុំព្យូទ័រ សម្រាប់អ្នកអានមុន។
           lesson_groups:
             lessonGroup-3:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             lessonGroup-4:
               display_name: ប្រតិបត្តិដដែលៗ
         nevada-standards-aligned-second-grade-2023:
           lesson_groups:
             lessonGroup-3:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             lessonGroup-4:
               display_name: ប្រតិបត្តិដដែលៗ
             lessonGroup-5:
@@ -1101,7 +1172,7 @@ km:
         nevada-standards-aligned-third-grade-2023:
           lesson_groups:
             lessonGroup-3:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             lessonGroup-6:
               display_name: ប្រតិបត្តិដដែលៗ
             lessonGroup-8:
@@ -1126,6 +1197,18 @@ km:
               display_name: មាតិកានៃមេរៀន ច
             end_of_course_project:
               display_name: ចុងបញ្ចប់នៃគម្រោង
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: ការណែនាំ
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: សរុបសេចក្តី
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: សរុបសេចក្តី
         pre-express-2017:
           assignment_family_title: វគ្គសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន
           description_audience: 'អាយុ: ៤-៨'
@@ -1139,6 +1222,10 @@ km:
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន
             ឬ ទេីបរៀនអាន៖ ប្រមូលផ្តុំនូវវគ្គសិក្សាថ្នាក់មតេយ្យ និង ថ្នាក់ទីមួយដ៏ល្អបំផុត។ '
         pre-express-2019:
+          description: រៀនវិទ្យាសាស្ត្រកុំព្យូទ័រដោយសាកល្បងជាមួយមេរៀនខាងក្រោមតាមយោងទៅតាមពេលវេលារបស់អ្នក!
+            រៀនបង្កើតកម្មវិធីកុំព្យូទ័រ អភិវឌ្ឍជំនាញដោះស្រាយបញ្ហា និងប្រឈមឧបសគ្គជាច្រើន
+            តែមានភាពសប្បាយរីករាយ! បង្កើតហ្គេមជាច្រើន និងគម្រោងច្នៃប្រឌិតផ្សេងៗ ដើម្បីចែករំលែកជាមួយមិត្តភក្តិ
+            ក្រុមគ្រួសារ និងគ្រូរបស់អ្នក។
           description_audience: 'អាយុ: ៤-៨'
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន
             ឬ ទេីបរៀនអាន៖ ប្រមូលផ្តុំនូវវគ្គសិក្សាថ្នាក់មតេយ្យ និង ថ្នាក់ទីមួយដ៏ល្អបំផុត។ '
@@ -1148,9 +1235,17 @@ km:
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
           name: ព្រី-អុិចប្រេស-2019
+          student_description: រៀនវិទ្យាសាស្ត្រកុំព្យូទ័រដោយសាកល្បងជាមួយមេរៀនខាងក្រោមតាមយោងទៅតាមពេលវេលារបស់អ្នក!
+            រៀនបង្កើតកម្មវិធីកុំព្យូទ័រ អភិវឌ្ឍជំនាញដោះស្រាយបញ្ហា និងប្រឈមឧបសគ្គជាច្រើន
+            តែមានភាពសប្បាយរីករាយ! បង្កើតហ្គេមជាច្រើន និងគម្រោងច្នៃប្រឌិតផ្សេងៗ ដើម្បីចែករំលែកជាមួយមិត្តភក្តិ
+            ក្រុមគ្រួសារ និងគ្រូរបស់អ្នក។
         pre-express-2020:
+          description: រៀនវិទ្យាសាស្ត្រកុំព្យូទ័រដោយសាកល្បងជាមួយមេរៀនខាងក្រោមតាមយោងទៅតាមពេលវេលារបស់អ្នក!
+            រៀនបង្កើតកម្មវិធីកុំព្យូទ័រ អភិវឌ្ឍជំនាញដោះស្រាយបញ្ហា និងប្រឈមឧបសគ្គជាច្រើន
+            តែមានភាពសប្បាយរីករាយ! បង្កើតហ្គេមជាច្រើន និងគម្រោងច្នៃប្រឌិតផ្សេងៗ ដើម្បីចែករំលែកជាមួយមិត្តភក្តិ
+            ក្រុមគ្រួសារ និងគ្រូរបស់អ្នក។
           description_audience: 'អាយុ: ៤-៨'
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន
             ឬ ទេីបរៀនអាន៖ ប្រមូលផ្តុំនូវវគ្គសិក្សាថ្នាក់មតេយ្យ និង ថ្នាក់ទីមួយដ៏ល្អបំផុត។ '
@@ -1160,8 +1255,16 @@ km:
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
+          student_description: រៀនវិទ្យាសាស្ត្រកុំព្យូទ័រដោយសាកល្បងជាមួយមេរៀនខាងក្រោមតាមយោងទៅតាមពេលវេលារបស់អ្នក!
+            រៀនបង្កើតកម្មវិធីកុំព្យូទ័រ អភិវឌ្ឍជំនាញដោះស្រាយបញ្ហា និងប្រឈមឧបសគ្គជាច្រើន
+            តែមានភាពសប្បាយរីករាយ! បង្កើតហ្គេមជាច្រើន និងគម្រោងច្នៃប្រឌិតផ្សេងៗ ដើម្បីចែករំលែកជាមួយមិត្តភក្តិ
+            ក្រុមគ្រួសារ និងគ្រូរបស់អ្នក។
         pre-express-2021:
+          description: រៀនវិទ្យាសាស្ត្រកុំព្យូទ័រដោយសាកល្បងជាមួយមេរៀនខាងក្រោមតាមយោងទៅតាមពេលវេលារបស់អ្នក!
+            រៀនបង្កើតកម្មវិធីកុំព្យូទ័រ អភិវឌ្ឍជំនាញដោះស្រាយបញ្ហា និងប្រឈមឧបសគ្គជាច្រើន
+            តែមានភាពសប្បាយរីករាយ! បង្កើតហ្គេមជាច្រើន និងគម្រោងច្នៃប្រឌិតផ្សេងៗ ដើម្បីចែករំលែកជាមួយមិត្តភក្តិ
+            ក្រុមគ្រួសារ និងគ្រូរបស់អ្នក។
           description_audience: 'អាយុ: ៤-៨'
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន
             ឬ ទេីបរៀនអាន៖ ប្រមូលផ្តុំនូវវគ្គសិក្សាថ្នាក់មតេយ្យ និង ថ្នាក់ទីមួយដ៏ល្អបំផុត។ '
@@ -1171,8 +1274,16 @@ km:
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
+          student_description: រៀនវិទ្យាសាស្ត្រកុំព្យូទ័រដោយសាកល្បងជាមួយមេរៀនខាងក្រោមតាមយោងទៅតាមពេលវេលារបស់អ្នក!
+            រៀនបង្កើតកម្មវិធីកុំព្យូទ័រ អភិវឌ្ឍជំនាញដោះស្រាយបញ្ហា និងប្រឈមឧបសគ្គជាច្រើន
+            តែមានភាពសប្បាយរីករាយ! បង្កើតហ្គេមជាច្រើន និងគម្រោងច្នៃប្រឌិតផ្សេងៗ ដើម្បីចែករំលែកជាមួយមិត្តភក្តិ
+            ក្រុមគ្រួសារ និងគ្រូរបស់អ្នក។
         pre-express-2022:
+          description: រៀនវិទ្យាសាស្ត្រកុំព្យូទ័រដោយសាកល្បងជាមួយមេរៀនខាងក្រោមតាមយោងទៅតាមពេលវេលារបស់អ្នក!
+            រៀនបង្កើតកម្មវិធីកុំព្យូទ័រ អភិវឌ្ឍជំនាញដោះស្រាយបញ្ហា និងប្រឈមឧបសគ្គជាច្រើន
+            តែមានភាពសប្បាយរីករាយ! បង្កើតហ្គេមជាច្រើន និងគម្រោងច្នៃប្រឌិតផ្សេងៗ ដើម្បីចែករំលែកជាមួយមិត្តភក្តិ
+            ក្រុមគ្រួសារ និងគ្រូរបស់អ្នក។
           description_audience: 'អាយុ: ៤-៨'
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន
             ឬ ទេីបរៀនអាន៖ ប្រមូលផ្តុំនូវវគ្គសិក្សាថ្នាក់មតេយ្យ និង ថ្នាក់ទីមួយដ៏ល្អបំផុត។ '
@@ -1183,7 +1294,15 @@ km:
               display_name: ប្រតិបត្តិការដដែលៗ
             csf_sequencing:
               display_name: លំដាប់លំដោយ
+          student_description: រៀនវិទ្យាសាស្ត្រកុំព្យូទ័រដោយសាកល្បងជាមួយមេរៀនខាងក្រោមតាមយោងទៅតាមពេលវេលារបស់អ្នក!
+            រៀនបង្កើតកម្មវិធីកុំព្យូទ័រ អភិវឌ្ឍជំនាញដោះស្រាយបញ្ហា និងប្រឈមឧបសគ្គជាច្រើន
+            តែមានភាពសប្បាយរីករាយ! បង្កើតហ្គេមជាច្រើន និងគម្រោងច្នៃប្រឌិតផ្សេងៗ ដើម្បីចែករំលែកជាមួយមិត្តភក្តិ
+            ក្រុមគ្រួសារ និងគ្រូរបស់អ្នក។
         pre-express-2023:
+          description: រៀនវិទ្យាសាស្ត្រកុំព្យូទ័រដោយសាកល្បងជាមួយមេរៀនខាងក្រោមតាមយោងទៅតាមពេលវេលារបស់អ្នក!
+            រៀនបង្កើតកម្មវិធីកុំព្យូទ័រ អភិវឌ្ឍជំនាញដោះស្រាយបញ្ហា និងប្រឈមឧបសគ្គជាច្រើន
+            តែមានភាពសប្បាយរីករាយ! បង្កើតហ្គេមជាច្រើន និងគម្រោងច្នៃប្រឌិតផ្សេងៗ ដើម្បីចែករំលែកជាមួយមិត្តភក្តិ
+            ក្រុមគ្រួសារ និងគ្រូរបស់អ្នក។
           description_audience: 'អាយុ: ៤-៨'
           description_short: 'សេចក្តីផ្តើមពីវិទ្យាសាស្ត្រកុំព្យូទ័រសំរាប់ក្មេងៗដែលមិនទាន់ចេះអាន
             ឬ ទេីបរៀនអាន៖ ប្រមូលផ្តុំនូវវគ្គសិក្សាថ្នាក់មតេយ្យ និង ថ្នាក់ទីមួយដ៏ល្អបំផុត។ '
@@ -1193,9 +1312,15 @@ km:
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
+          student_description: រៀនវិទ្យាសាស្ត្រកុំព្យូទ័រដោយសាកល្បងជាមួយមេរៀនខាងក្រោមតាមយោងទៅតាមពេលវេលារបស់អ្នក!
+            រៀនបង្កើតកម្មវិធីកុំព្យូទ័រ អភិវឌ្ឍជំនាញដោះស្រាយបញ្ហា និងប្រឈមឧបសគ្គជាច្រើន
+            តែមានភាពសប្បាយរីករាយ! បង្កើតហ្គេមជាច្រើន និងគម្រោងច្នៃប្រឌិតផ្សេងៗ ដើម្បីចែករំលែកជាមួយមិត្តភក្តិ
+            ក្រុមគ្រួសារ និងគ្រូរបស់អ្នក។
         soccer:
           name: បាល់ទាត់
+        sports:
+          title: សរសេរកូដបង្កើតហ្គេមកីឡាផ្ទាល់ខ្លួន
         step:
           title: ជំហាន
         teachercon:
@@ -1205,7 +1330,7 @@ km:
         test-nv-coursea-2023:
           lesson_groups:
             lessonGroup-3:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             lessonGroup-4:
               display_name: ប្រតិបត្តិដដែលៗ
         test-teaching-ap-cs-unit-1:
@@ -1221,7 +1346,7 @@ km:
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             csf_sprites:
               display_name: Sprites
         time4cs-control-unit-2:
@@ -1243,10 +1368,43 @@ km:
             csf_loops:
               display_name: ប្រតិបត្តិដដែលៗ
             csf_sequencing:
-              display_name: លំដាប់
+              display_name: លំដាប់ (Sequencing)
             csf_sprites:
               display_name: Sprites
         time4csdemo:
           lesson_groups:
             csf_sprites:
               display_name: Sprites
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: ការណែនាំ
+          lessons:
+            lesson-7:
+              name: ការណែនាំ
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: ការណែនាំ
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: ការណែនាំ
+            lesson-12:
+              name: សរុបសេចក្តី
+        virtual-pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: សរុបសេចក្តី
+        virtual-pl-csd-summer-day3:
+          lessons:
+            lesson-12:
+              name: សរុបសេចក្តី
+        virtual-pl-csd-summer-day4:
+          lessons:
+            lesson-13:
+              name: សរុបសេចក្តី
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: ការណែនាំ

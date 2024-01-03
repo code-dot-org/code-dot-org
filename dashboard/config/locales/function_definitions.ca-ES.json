@@ -310,6 +310,11 @@
             "name": "la meva funció"
           }
         },
+        "Course E: Artist Project_examples_2023": {
+          "my function": {
+            "name": "la meva funció"
+          }
+        },
         "Course E: Frozen Project_examples2022": {
           "LOGIC FLOWER": {
             "name": "FLOR LÒGICA"
@@ -374,6 +379,69 @@
           }
         },
         "Course E: Frozen Project_examples_2021": {
+          "LOGIC FLOWER": {
+            "name": "FLOR LÒGICA"
+          },
+          "LOGIC FLOWERS": {
+            "name": "FLORS LÒGIQUES"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "FLORS LÒGIQUES2"
+          },
+          "draw a circle": {
+            "description": "dibuixa el cercle a partir del radi especificat",
+            "name": "dibuixar un cercle",
+            "parameters": {
+              "radius": "radi"
+            }
+          },
+          "draw a house": {
+            "name": "dibuixar una casa",
+            "parameters": {
+              "length": "longitud"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "dibuixa un molinet de vent",
+            "parameters": {
+              "length": "longitud",
+              "repeat": "repeteix",
+              "sides": "costats"
+            }
+          },
+          "draw a shape": {
+            "name": "dibuixa una forma",
+            "parameters": {
+              "length": "longitud",
+              "sides": "costats"
+            }
+          },
+          "draw a square": {
+            "name": "dibuixar un quadrat",
+            "parameters": {
+              "length": "longitud",
+              "sides": "costats"
+            }
+          },
+          "draw a star": {
+            "description": "dibuixa una estrella amb les puntes i la longitud dels costats especificats",
+            "name": "dibuixar una estrella",
+            "parameters": {
+              "length": "longitud",
+              "points": "puntes"
+            }
+          },
+          "draw a triangle": {
+            "name": "dibuixa un triangle",
+            "parameters": {
+              "length": "longitud"
+            }
+          },
+          "small flower": {
+            "name": "flor petita"
+          }
+        },
+        "Course E: Frozen Project_examples_2023": {
           "LOGIC FLOWER": {
             "name": "FLOR LÒGICA"
           },
@@ -641,6 +709,56 @@
             }
           }
         },
+        "CourseD_EOC_artist_2023": {
+          "draw a circle": {
+            "description": "dibuixa el cercle a partir del radi especificat",
+            "name": "dibuixar un cercle",
+            "parameters": {
+              "radius": "radi"
+            }
+          },
+          "draw a house": {
+            "name": "dibuixar una casa",
+            "parameters": {
+              "length": "longitud"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "dibuixa un molinet de vent",
+            "parameters": {
+              "length": "longitud",
+              "repeat": "repeteix",
+              "sides": "costats"
+            }
+          },
+          "draw a shape": {
+            "name": "dibuixa una forma",
+            "parameters": {
+              "length": "longitud",
+              "sides": "costats"
+            }
+          },
+          "draw a square": {
+            "name": "dibuixar un quadrat",
+            "parameters": {
+              "length": "longitud"
+            }
+          },
+          "draw a star": {
+            "description": "dibuixa una estrella amb les puntes i la longitud dels costats especificats",
+            "name": "dibuixar una estrella",
+            "parameters": {
+              "length": "longitud",
+              "points": "puntes"
+            }
+          },
+          "draw a triangle": {
+            "name": "dibuixa un triangle",
+            "parameters": {
+              "length": "longitud"
+            }
+          }
+        },
         "CourseD_EOC_artist_example2021": {
           "draw a circle": {
             "description": "dibuixa el cercle a partir del radi especificat",
@@ -741,6 +859,56 @@
             }
           }
         },
+        "CourseD_EOC_artist_example2021_2023": {
+          "draw a circle": {
+            "description": "dibuixa el cercle a partir del radi especificat",
+            "name": "dibuixar un cercle",
+            "parameters": {
+              "radius": "radi"
+            }
+          },
+          "draw a house": {
+            "name": "dibuixar una casa",
+            "parameters": {
+              "length": "longitud"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "dibuixa un molinet de vent",
+            "parameters": {
+              "length": "longitud",
+              "repeat": "repeteix",
+              "sides": "costats"
+            }
+          },
+          "draw a shape": {
+            "name": "dibuixa una forma",
+            "parameters": {
+              "length": "longitud",
+              "sides": "costats"
+            }
+          },
+          "draw a square": {
+            "name": "dibuixar un quadrat",
+            "parameters": {
+              "length": "longitud"
+            }
+          },
+          "draw a star": {
+            "description": "dibuixa una estrella amb les puntes i la longitud dels costats especificats",
+            "name": "dibuixar una estrella",
+            "parameters": {
+              "length": "longitud",
+              "points": "puntes"
+            }
+          },
+          "draw a triangle": {
+            "name": "dibuixa un triangle",
+            "parameters": {
+              "length": "longitud"
+            }
+          }
+        },
         "CourseF_app_computer": {
           "reset game": {
             "name": "reiniciar joc"
@@ -752,6 +920,11 @@
           }
         },
         "CourseF_app_computer_-2022-2": {
+          "reset game": {
+            "name": "reiniciar joc"
+          }
+        },
+        "CourseF_app_computer_2023": {
           "reset game": {
             "name": "reiniciar joc"
           }
@@ -789,6 +962,11 @@
           }
         },
         "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "construir pont"
+          }
+        },
+        "Function intro Ryan_2023": {
           "build bridge": {
             "name": "construir pont"
           }
@@ -886,6 +1064,11 @@
             "name": "netejar camí"
           }
         },
+        "MC_HOC_2017_07_Cole_2023": {
+          "clear path": {
+            "name": "netejar camí"
+          }
+        },
         "MC_HOC_2017_10_RETRY": {
           "fix long path": {
             "name": "arreglar camí llarg"
@@ -919,6 +1102,14 @@
           }
         },
         "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "arreglar camí llarg"
+          },
+          "fix short path": {
+            "name": "arreglar camí curt"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2023": {
           "fix long path": {
             "name": "arreglar camí llarg"
           },
@@ -966,6 +1157,14 @@
             "name": "construir pont curt"
           }
         },
+        "MC_HOC_2017_Ali_2023": {
+          "build long bridge": {
+            "name": "construir pont llarg"
+          },
+          "build short bridge": {
+            "name": "construir pont curt"
+          }
+        },
         "MC_HOC_2017_FP20x20": {
           "function 1": {
             "name": "funció 1"
@@ -999,6 +1198,14 @@
           }
         },
         "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "funció 1"
+          },
+          "function 2": {
+            "name": "funció 2"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2023": {
           "function 1": {
             "name": "funció 1"
           },
@@ -1475,6 +1682,11 @@
             "name": "solució possible"
           }
         },
+        "courseB_artist_loops_challenge2_2023": {
+          "potential solution": {
+            "name": "solució possible"
+          }
+        },
         "courseC_artist_prog3": {
           "draw fire": {
             "name": "dibuixar foc"
@@ -1571,6 +1783,11 @@
             "name": "accelerador"
           }
         },
+        "courseC_artist_prog4_2023": {
+          "booster": {
+            "name": "accelerador"
+          }
+        },
         "courseC_data wizard": {
           "do something": {
             "name": "fer alguna cosa"
@@ -1587,6 +1804,11 @@
           }
         },
         "courseC_data wizard_2021": {
+          "do something": {
+            "name": "fer alguna cosa"
+          }
+        },
+        "courseC_data wizard_2023": {
           "do something": {
             "name": "fer alguna cosa"
           }
@@ -2016,6 +2238,17 @@
             "name": "dibuixar línia d'hexàgons"
           }
         },
+        "courseE_artist_functions10_2023": {
+          "do something": {
+            "name": "fer alguna cosa"
+          },
+          "draw hexagon": {
+            "name": "dibuixar hexàgon"
+          },
+          "draw line of hexagons": {
+            "name": "dibuixar línia d'hexàgons"
+          }
+        },
         "courseE_artist_functions1_copy": {
           "draw ear stems": {
             "name": "dibuixar les branques de les ulleres"
@@ -2074,6 +2307,14 @@
             "name": "dibuixar les branques de les ulleres"
           }
         },
+        "courseE_artist_functions2_2023": {
+          "draw a square": {
+            "name": "dibuixar un quadrat"
+          },
+          "draw ear stems": {
+            "name": "dibuixar les branques de les ulleres"
+          }
+        },
         "courseE_artist_functions2_copy": {
           "draw a square": {
             "name": "dibuixar un quadrat"
@@ -2111,6 +2352,11 @@
           }
         },
         "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "dibuixar una estrella"
+          }
+        },
+        "courseE_artist_functions3_2023": {
           "draw a star": {
             "name": "dibuixar una estrella"
           }
@@ -2160,6 +2406,11 @@
             "name": "dibuixar una estrella"
           }
         },
+        "courseE_artist_functions5_2023": {
+          "draw a star": {
+            "name": "dibuixar una estrella"
+          }
+        },
         "courseE_artist_functions5_copy": {
           "draw a star": {
             "name": "dibuixar una estrella"
@@ -2205,6 +2456,11 @@
           }
         },
         "courseE_artist_functions7_2021": {
+          "draw a window": {
+            "name": "dibuixar una finestra"
+          }
+        },
+        "courseE_artist_functions7_2023": {
           "draw a window": {
             "name": "dibuixar una finestra"
           }
@@ -2290,6 +2546,20 @@
             "name": "quadrats esglaonats"
           }
         },
+        "courseE_artist_functions8_2023": {
+          "do something": {
+            "name": "fer alguna cosa"
+          },
+          "draw a line of squares": {
+            "name": "dibuixar una línia de quadrats"
+          },
+          "draw square": {
+            "name": "dibuixar quadrat"
+          },
+          "staggered squares": {
+            "name": "quadrats esglaonats"
+          }
+        },
         "courseE_artist_functions8a2022": {
           "do something": {
             "name": "fer alguna cosa"
@@ -2323,6 +2593,14 @@
           }
         },
         "courseE_artist_functions8a_2021": {
+          "do something": {
+            "name": "fer alguna cosa"
+          },
+          "draw a square": {
+            "name": "dibuixar un quadrat"
+          }
+        },
+        "courseE_artist_functions8a_2023": {
           "do something": {
             "name": "fer alguna cosa"
           },
@@ -2375,6 +2653,17 @@
           }
         },
         "courseE_artist_functions8b_2021": {
+          "do something": {
+            "name": "fer alguna cosa"
+          },
+          "draw a line of squares": {
+            "name": "dibuixar una línia de quadrats"
+          },
+          "draw square": {
+            "name": "dibuixar quadrat"
+          }
+        },
+        "courseE_artist_functions8b_2023": {
           "do something": {
             "name": "fer alguna cosa"
           },
@@ -2455,6 +2744,20 @@
             "name": "quadrats esglaonats"
           }
         },
+        "courseE_artist_functions8c_2023": {
+          "do something": {
+            "name": "fer alguna cosa"
+          },
+          "draw a line of squares": {
+            "name": "dibuixar una línia de quadrats"
+          },
+          "draw square": {
+            "name": "dibuixar quadrat"
+          },
+          "staggered squares": {
+            "name": "quadrats esglaonats"
+          }
+        },
         "courseE_artist_functions9": {
           "do something": {
             "name": "fer alguna cosa"
@@ -2511,6 +2814,17 @@
           }
         },
         "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "fer alguna cosa"
+          },
+          "draw line of triangles": {
+            "name": "dibuixar línia de triangles"
+          },
+          "draw triangle": {
+            "name": "dibuixar triangle"
+          }
+        },
+        "courseE_artist_functions9_2023": {
           "do something": {
             "name": "fer alguna cosa"
           },
@@ -2606,6 +2920,23 @@
             "name": "quadrats esglaonats"
           }
         },
+        "courseE_artist_functionsProj_2023": {
+          "draw a line of squares": {
+            "name": "dibuixar una línia de quadrats"
+          },
+          "draw hexagon": {
+            "name": "dibuixar hexàgon"
+          },
+          "draw line of hexagons": {
+            "name": "dibuixar línia d'hexàgons"
+          },
+          "draw square": {
+            "name": "dibuixar quadrat"
+          },
+          "staggered squares": {
+            "name": "quadrats esglaonats"
+          }
+        },
         "courseE_artist_functions_challenge1": {
           "do something": {
             "name": "fer alguna cosa"
@@ -2647,6 +2978,14 @@
           }
         },
         "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "fer alguna cosa"
+          },
+          "my design": {
+            "name": "el meu disseny"
+          }
+        },
+        "courseE_artist_functions_challenge1_2023": {
           "do something": {
             "name": "fer alguna cosa"
           },
@@ -2702,6 +3041,14 @@
             "name": "el meu disseny"
           }
         },
+        "courseE_artist_functions_challenge2_2023": {
+          "do something": {
+            "name": "fer alguna cosa"
+          },
+          "my design": {
+            "name": "el meu disseny"
+          }
+        },
         "courseE_artist_functions_predict1": {
           "draw a square": {
             "name": "dibuixar un quadrat"
@@ -2743,6 +3090,14 @@
           }
         },
         "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "dibuixar un quadrat"
+          },
+          "draw ear stems": {
+            "name": "dibuixar les branques de les ulleres"
+          }
+        },
+        "courseE_artist_functions_predict1_2023": {
           "draw a square": {
             "name": "dibuixar un quadrat"
           },
@@ -2822,6 +3177,17 @@
           }
         },
         "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "fer alguna cosa"
+          },
+          "draw line of polygons": {
+            "name": "dibuixar línia de polígons"
+          },
+          "draw polygon": {
+            "name": "dibuixar polígon"
+          }
+        },
+        "courseE_artist_functions_predict2_2023": {
           "do something": {
             "name": "fer alguna cosa"
           },
@@ -2932,6 +3298,20 @@
             "name": "quadrat de carabassa"
           }
         },
+        "courseE_farmer_functions10a1_2023": {
+          "check square for corn": {
+            "name": "buscar blat al quadrat"
+          },
+          "get all pumpkins": {
+            "name": "collir totes les carabasses"
+          },
+          "pick along path": {
+            "name": "collir pel camí"
+          },
+          "pumpkin square": {
+            "name": "quadrat de carabassa"
+          }
+        },
         "courseE_farmer_functions11_predict2022": {
           "check square for corn": {
             "name": "buscar blat al quadrat"
@@ -3001,6 +3381,23 @@
           }
         },
         "courseE_farmer_functions11_predict_2021": {
+          "check square for corn": {
+            "name": "buscar blat al quadrat"
+          },
+          "get all pumpkins": {
+            "name": "collir totes les carabasses"
+          },
+          "get produce": {
+            "name": "collir verdures"
+          },
+          "pick along path": {
+            "name": "collir pel camí"
+          },
+          "pumpkin square": {
+            "name": "quadrat de carabassa"
+          }
+        },
+        "courseE_farmer_functions11_predict_2023": {
           "check square for corn": {
             "name": "buscar blat al quadrat"
           },
@@ -3087,6 +3484,20 @@
             "name": "collir pel camí"
           }
         },
+        "courseE_farmer_functions13_2023": {
+          "check for corn": {
+            "name": "buscar blat"
+          },
+          "corn rectangle": {
+            "name": "rectangle de blat"
+          },
+          "lettuce stairs": {
+            "name": "escala d'enciam"
+          },
+          "pick along path": {
+            "name": "collir pel camí"
+          }
+        },
         "courseE_farmer_functions1a2022": {
           "check square for corn": {
             "name": "buscar blat al quadrat"
@@ -3112,6 +3523,11 @@
             "name": "buscar blat al quadrat"
           }
         },
+        "courseE_farmer_functions1a_2023": {
+          "check square for corn": {
+            "name": "buscar blat al quadrat"
+          }
+        },
         "courseE_farmer_functions2b2022": {
           "check square for corn": {
             "name": "buscar blat al quadrat"
@@ -3133,6 +3549,11 @@
           }
         },
         "courseE_farmer_functions2b_2021": {
+          "check square for corn": {
+            "name": "buscar blat al quadrat"
+          }
+        },
+        "courseE_farmer_functions2b_2023": {
           "check square for corn": {
             "name": "buscar blat al quadrat"
           }
@@ -3170,6 +3591,14 @@
           }
         },
         "courseE_farmer_functions2ba_2021": {
+          "check square for corn": {
+            "name": "buscar blat al quadrat"
+          },
+          "get all pumpkins": {
+            "name": "collir totes les carabasses"
+          }
+        },
+        "courseE_farmer_functions2ba_2023": {
           "check square for corn": {
             "name": "buscar blat al quadrat"
           },
@@ -3232,6 +3661,17 @@
             "name": "collir pel camí"
           }
         },
+        "courseE_farmer_functions3c1_2023": {
+          "check square for corn": {
+            "name": "buscar blat al quadrat"
+          },
+          "get all pumpkins": {
+            "name": "collir totes les carabasses"
+          },
+          "pick along path": {
+            "name": "collir pel camí"
+          }
+        },
         "courseE_farmer_functions3c2022": {
           "check square for corn": {
             "name": "buscar blat al quadrat"
@@ -3272,6 +3712,14 @@
             "name": "collir totes les carabasses"
           }
         },
+        "courseE_farmer_functions3c_2023": {
+          "check square for corn": {
+            "name": "buscar blat al quadrat"
+          },
+          "get all pumpkins": {
+            "name": "collir totes les carabasses"
+          }
+        },
         "courseE_farmer_functions7a12022": {
           "garden square": {
             "name": "quadrat d'hort"
@@ -3293,6 +3741,11 @@
           }
         },
         "courseE_farmer_functions7a1_2021": {
+          "garden square": {
+            "name": "quadrat d'hort"
+          }
+        },
+        "courseE_farmer_functions7a1_2023": {
           "garden square": {
             "name": "quadrat d'hort"
           }
@@ -3322,6 +3775,11 @@
             "name": "quadrat d'hort"
           }
         },
+        "courseE_farmer_functions8a1_2023": {
+          "garden square": {
+            "name": "quadrat d'hort"
+          }
+        },
         "courseE_farmer_functions9a12022": {
           "garden square": {
             "name": "quadrat d'hort"
@@ -3343,6 +3801,11 @@
           }
         },
         "courseE_farmer_functions9a1_2021": {
+          "garden square": {
+            "name": "quadrat d'hort"
+          }
+        },
+        "courseE_farmer_functions9a1_2023": {
           "garden square": {
             "name": "quadrat d'hort"
           }
@@ -3378,6 +3841,11 @@
           }
         },
         "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "finalitza la partida"
+          }
+        },
+        "courseF_apps_collector_2023": {
           "end game": {
             "name": "finalitza la partida"
           }
@@ -3615,6 +4083,11 @@
           }
         },
         "courseF_bee_for_challenge1_2021": {
+          "move and get nectar with counter": {
+            "name": "moure's i recollir nèctar amb comptador"
+          }
+        },
+        "courseF_bee_for_challenge1_2023": {
           "move and get nectar with counter": {
             "name": "moure's i recollir nèctar amb comptador"
           }

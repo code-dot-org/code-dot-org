@@ -10,6 +10,7 @@ bg:
         error:
           future: не може да бъде в бъдещето
         finish_sign_up_header: Завършете създаването на профила си
+        finish_sign_up_header_error: 'Коригирайте следните грешки:'
         finish_sign_up_subheader: Попълнете следната информация, за да приключите
           създаването на Code.org акаунт за <strong>%{email}</strong>.
         finish_sign_up_subheader_markdown: Попълнете следната информация, за да приключите
@@ -31,6 +32,7 @@ bg:
           с имейл адрес)](%{url})
         reset_password_token: Връзката за нулиране на праолата, който сте последвали
         us_state: Регион
+        user_type: Тип акаунт
         username: Потребителско име
         verified_teacher: Удостоверен Учител
     errors:

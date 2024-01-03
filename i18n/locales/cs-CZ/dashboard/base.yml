@@ -53,6 +53,7 @@ cs:
         gender: 'Pohlaví'
         edit_header: 'Upravit Podrobnosti Účtu'
         finish_sign_up_header: 'Dokončete vytvoření účtu'
+        finish_sign_up_header_error: 'Opravte prosím následující chyby:'
         finish_sign_up_subheader: 'Vyplňte následující informace pro vytvoření účtu Code.org <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Vyplňte následující informace pro vytvoření účtu Code.org **%{email}**.'
         finish_sign_up_subheader_provider: 'Vyplňte následující informace pro vytvoření účtu Code.org prostřednictvím poskytovatele <strong>%{provider}</strong> pro <strong>%{email}</strong>.'
@@ -60,6 +61,7 @@ cs:
         reset_password_token: "Odkaz na obnovení hesla, který jsi použil/a."
         error:
           future: nemůže být v budoucnosti
+        user_type: 'Typ účtu'
         us_state: 'Stát (USA)'
   beta: "beta"
   hello: "Ahoj světe"
@@ -1283,4 +1285,3 @@ cs:
     binary: "Binární"
     hexadecimal: "Hexadecimální"
     pixel_format_header: "Formát pixelů"
-

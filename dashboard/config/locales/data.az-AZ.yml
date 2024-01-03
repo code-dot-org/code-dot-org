@@ -792,6 +792,8 @@ az:
         PL_CSD_CircuitPlayground_Setup: 'Oyun Meydançası Quraşdırma
 
           '
+        PL_CSD_EquityBlindSpotsvid: Qərəz və Məsuliyyət
+        PL_CSD_MicroBit_Intro: Micro:bit-ə giriş
         PL_CSD_TeacherTips_Advise: Müəllim İpucuları - Yeni Müəllimlərə Məsləhət
         PL_CSD_TeacherTips_Debugging: Müəllim İpucuları - Sazlama
         PL_CSD_TeacherTips_IntroToCSD: Müəllim məsləhətləri - CS kəşflərinə giriş
@@ -825,6 +827,7 @@ az:
         Unplug7: Mahnı yazma
         Unplug8: Mücərrədlik
         Unplug9: Estafet proqramlaşdırması
+        ai-ethis: Etika və Süni İntellekt
         applab_hoc_designmode: Tətbiq Laboratoriyasının Kod Saatı - Dizayn rejimi
         applab_hoc_onevent: proqram laboratoriya kodu saatı - hadisə əlaqəli
         applab_hoc_setproperty: proqram laboratoriya kodu saatı
@@ -836,8 +839,11 @@ az:
         applab_intro_sounds: Proqram Laboratoriyası - Şəkillər və Səslər
         applab_intro_welcome: Aplikasiya Labaratoriyası - Başlanqıc
         artist_intro: Rəssam oyununa giriş
+        blockchain-introd: 'Blockchain necə işləyir: Giriş'
         c_and_c_digital_sharing: Rəqəmsal paylaşım
         c_and_c_great_to_create: Ədalətli Yaratmaq və Oynamaq Əladır
+        classic-maze-intro: Klassik Labirint - Giriş
+        code-break: Kode Fasilə edin
         codebreak_e01: 'Kod Fasiləsi 1.0: Hill Harper İlə Alqoritmlər'
         codebreak_e02: 'Kod Fasiləsi 2.0: Mark Cuban və Lyndsey Scott ilə Prototiplər'
         codebreak_e03: 'Kod Fasiləsi 3.0: Ashton Kutcher və Mia Gil Epner ilə Şifrələmə'
@@ -858,10 +864,13 @@ az:
         csa-alias-video: Bərabərlər və ləqəblər
         csa-day-in-pm-pl: Lahiyə meneceri nə edir?
         csa-equals-video: bərabərlıq() metodu
+        csa-example-solution-1: Canlı Kodlaşdırma Nümunə Həll
         csa-multi-select-pl: Java-da çox seçimli ifadələr
+        csa-overview: AP kompüter elmlərinə yeni yanaşma A
         csa-pl-calling-methods: Javada Çağırış Üsulları
         csa-pl-compareTo: CompareTo() metodu
         csa-pl-creating-objects: Obyektlərin yaradılması
+        csa-pl-documentation: Java laboratoriyasında sənədlər
         csa-pl-equals-book: Book sinfi üçün equals() metodunun yazılması
         csa-pl-intro-to-equality: Bərabərliyə təqdim etməsi
         csa-pl-intro-to-equals-method: ".equals() metoduna təqdim etməsi"
@@ -870,11 +879,14 @@ az:
           Obyekt Yönlü Proqramlaşdırmaya Giriş
         csa-pl-intro-to-pm: Lahiyənin İdarə Edilməsinə Giriş
         csa-pl-intro-to-strings: Java-da sətirlərə giriş
+        csa-pl-vocab-pm: Layihə İdarəetmə lüğəti
         csa-pl-vpl-m1-unit-3: 3-cü bölmədə proqram təminatı mühəndisliyi
         csa-pl-welcome-to-Neighborhood: Qonşuluğa Xoş Gəlmisiniz
         csa-user-stories: Proqram Mühəndisliyində İstifadəçi Hekayələri
         csa_accessor_methods: 'CSA: Aksesuar Üsulları'
         csa_calling_methods: 'CSA: Çağırış Üsulları'
+        csa_casting: 'CSA: Döküm'
+        csa_column_major_traversal: 'CSA: Sütun-Əsas keçid'
         csa_conditional_statements: 'CSA: Şərti operatorlar'
         csa_constructors: 'CSA: İnşaatçılar'
         csa_creating_a_scanner_object: |2-
@@ -885,12 +897,17 @@ az:
         csa_enhanced_for_loops: |-
           CSA: Gücləndirilmiş For Döngələri
           CSA: Gücləndirilmiş For Lopps
+        csa_enhanced_for_loops_and_2d_arrays: 'CSA: Döngələr və 2D massivlər üçün
+          təkmilləşdirilmiş'
+        csa_equals_and_aliases: 'CSA: Bərabər və ləqəblər'
         csa_for_loops: |-
           CSA: For Döngələri
           CSA: For Loops
+        csa_images_and_pixels: 'CSA: Şəkillər və Piksellər'
         csa_inheritance: 'CSA: Miras'
         csa_instance_variables_and_attributes: 'CSA: Nümunə Dəyişənləri və Atributları'
         csa_modifying_values_in_a_1d_array: 'CSA: 1D Arrayda Dəyərlər Modifikası'
+        csa_multi-selection_statements: 'CSA: Çox Seçim Hesabatları'
         csa_mutator_methods: 'CSA: Mutator üsulları'
         csa_nested_loops: |-
           CSA: Nested Loops
@@ -904,13 +921,30 @@ az:
         csa_printing_in_java: |2-
 
           CSA: Java-da çap
+        csa_private_methods: 'CSA: Şəxsi Metodlar'
+        csa_random_numbers: 'CSA: Təsadüfi Nömrələr'
+        csa_recursion: 'CSA: Rekursiya'
+        csa_remving_data_from_an_arraylist: 'CSA: ArrayList-dən məlumatların çıxarılması'
+        csa_row_major_traversal: 'CSA: Sıra-Major Traversal'
         csa_scanner_class_methods: 'CSA: Skaner Sinif Üsulları'
+        csa_searching_algorithms: 'CSA: Axtarış alqoritmləri'
         csa_software_engineering_code_reviews: 'CSA: Proqram Mühəndisliyi - Kod Baxışları'
+        csa_sorting_algorithms: 'CSA: Çeşidləmə Alqoritmləri'
+        csa_static_methods: 'CSA: Statik Metodlar'
+        csa_static_variables: 'CSA: Statik Dəyişənlər'
+        csa_the_arraylist_class: 'CSA: ArrayList Sinfi'
+        csa_the_equals_method: 'CSA: bərabər () metodu'
         csa_the_tostring_method: |-
           CSA: ToString () Metodu
           CSA: ToString () Üsulu
+        csa_two_dimensional_arrays: 'CSA: İki Ölçülü (2D) Massivlər'
         csa_two_way_selection_and_not: 'CSA: İki Yönlü Seçim və DEYİL'
+        csa_welcome_to_the_theater: 'CSA: Teatra xoş gəlmisiniz'
         csa_while_loops: 'CSA: While Loops'
+        csa_working_with_2d_array_elements: 'CSA: 2D Array Elementləri ilə işləmək'
+        csa_working_with_arraylist_data: 'CSA: ArrayList Data ilə işləmək'
+        csa_wrapper_classes_part_1: 'CSA: Paketləyici Siniflər 1-ci Hissə'
+        csa_wrapper_classes_part_2: 'CSA: Paketləyici Siniflər 2-ci Hissə'
         csa_writing_a_method: 'CSA: Metodun yazılması'
         csc-ecosystems-intro: Ekosistemlər Modulu
         csc-event-short-intro: Hadisələr Qısa Giriş
@@ -952,6 +986,7 @@ az:
         csd_gamelab_velocity: Sürət
         csd_how_teamwork_works: Komanda işi necə işləyir
         csd_ml_ethics_ai: Etika və AI
+        csd_ml_how_ai_works: Süni İntelekt (Sİ) necə işləyir?
         csd_ml_import_model: AI Modelinin idxalı
         csd_ml_intro_ai_lab_july2021: Süni intellekt laboratoriyasına giriş
         csd_ml_intro_to_ai_lab: Süni intellekt laboratoriyasına giriş
@@ -994,12 +1029,14 @@ az:
           2
         csp_tutorial_libraries: aplikasiyalar kitabxanasında tablar
         elem_pd_2: İbtidai Sinif Computer Elmləri - PD video 2/2
+        enter_your_own_poem: Öz Şeirinizi Daxil Edin
         farmer_intro: Fermer oyununa giriş
         flappy_intro: Qanadlı Giriş
         frozen_functions: Funksiyalara giriş
         frozen_intro: Kod Saatına giriş
         frozen_loops: Dövrlərə giriş
         function: Funksiyalar
+        generative-ai-cobranded: 'Süni intellek necə işləyir: Yaradıcı Sİ (süni intellekt)'
         gumball_events: Gumball Kod Saatı - Hadisələr
         gumball_intro: Gumball Kod Saatı - Giriş
         gumball_repeat: Gumball Kod Saatı - Bəyanatları təkrarlayın
@@ -1030,6 +1067,13 @@ az:
         hoc_dance_warmup: Rəqs şənliyi - Qızınma
         hoc_dance_warmup_2019: Rəqs şənliyi - Qızınma
         hoc_wrapup: Kod Saatının yekunu
+        how-ai-works-creativity-full: Süni İntellektin yaradıcılığı və təsəvvürü varmı?
+        how-ai-works-lessons: 'Süni intellekt (Sİ) necə işləyir: Ön baxış'
+        how-ai-works-llms-full: Chat (çət) botları və böyük dil modelləri necə işləyir?
+        how-ai-works-llms-part1: Chat (çət) botları və böyük dil modelləri - 1-ci
+          hissə
+        how-ai-works-llms-part2: Chat (çət) botları və böyük dil modelləri - 2-ci
+          hissə
         how-to-k5-workshops: 'Code.org -un Kompüter Elmlərinin Əsasları: Uşaq yoxlanıldı,
           müəllim təsdiqlədi'
         iceage_events: Buz dövrü kod saatı - Hadisələr
@@ -1042,6 +1086,8 @@ az:
         infinity_playlab_intro: Oyun laboratoriyası - Giriş
         infinity_playlab_repeat_forever: Oyun laboratoriyası - Sonsuzadək Təkrarla
         lesson_planning: Dərs Planlaşdırma
+        llms-cobranded: 'Süni intellek necə işləyir: Chat (çət) botları və böyük dil
+          modelləri'
         loop_for: Sayğac bloku
         loop_times: '"Təkrar et, neçə dəfə" bloku'
         loop_until: '"Təkrar et, ta ki" bloku'
@@ -1093,19 +1139,24 @@ az:
         poembot-playtest-events: PoemBot Playtest Tədbirlər
         poembot-playtest-intro: PoemBot Playtest Giriş
         poembot-playtest-sprites: Poem Bot Playtest Giriş
+        poetry-programming: Poeziya və Proqramlaşdırma
         poetry_module_conditionals: Şərtlər - Poeziya ilə kodlaşdırma
         poetry_module_multichoiceprompts: Çox Seçimli Təkliflər - Poeziya ilə Kodlaşdırma
         poetry_module_planningapp: Şeir Generator Tətbiqinizi Planlaşdırma - Şeir
           ilə Kodlaşdırma
         poetry_module_textandvariables: Mətn və Dəyişənlər - Poeziya ilə kodlaşdırma
         poetry_module_variables: Dəyişənlər - Poeziya ilə kodlaşdırma
+        push-yourself: Limiltərini sına. Hamı öyrənə bilər.
         repeat_block: Dövr bloklarından istifadə etmək
         rough_poemart_congrats: v1 Şeir Sənəti Təbriklər
         rough_poemart_events: v1 Şeir İncəsənət Tədbirləri
         rough_poemart_imagery: v1 Şeir İncəsənət Görünüşü
         rough_poemart_intro: v1 Şeir İncəsənətinə Giriş
+        se-cv-intro-to-lessons: 'Proqram təminatı mühəndisliyi və kompüter görməsi:
+          dərslərə giriş'
         songwriting_with_functions: Ayrılmış Dərs Fəaliyyətdə - Funksiyalarla Mahnı
           Yazmaq
+        star_quilts_intro_to_artist: 'Ulduz yorğanları: Sənətçiyə giriş'
         starquilts_intro_artist: Ulduz yorğanlarına giriş
         starwars_blocks_congrats: 'Ulduz Müharibələri: Qalaktikanı proqramlaşdırın
           - Təbriklər'
@@ -1128,6 +1179,8 @@ az:
           - Məlumat Bloku
         u7-libraries-explanation: 'Tətbiq Laboratoriyası: Öz Bloklarınızı Yaradın
           - Kitabxanalardan Necə İstifadə Etməli'
+        upload_sprites_backgrounds: Xüsusi spraytların və arxa planların yüklənilməsi
+        what-is-creativity: Yaradıcılıq nədir?
         what_is_an_event: Hadisə nədir?
         what_is_cs: Kompüter elmləri nədir?
         why-should-teach-unplugged-activities: 'Tez-tez verilən suallar: Niyə mən

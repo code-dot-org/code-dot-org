@@ -55,24 +55,52 @@ te:
           description_short: కోడ్ ద్వారా Minecraft ప్రపంచాన్ని అన్వేషించండి.
         oceans:
           title: AI ఫర్ ఓషన్స్
+          student_description: ప్రపంచ సమస్యలను పరిష్కరించడానికి AI మరియు మెషిన్ లెర్నింగ్ ఎలా ఉపయోగించవచ్చో తెలుసుకోండి.
         CSDU3-Draft:
           description_short: ప్రోగ్రాము చేయడం
         TEMP CSD Unit 3:
           description_short: ప్రోగ్రాము చేయడం
+        cspunit1-support:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
         CSDU2-Draft:
           description_short: వెబ్ అభివృద్ధి
         CSDU5-Draft:
           description_short: డేటా
         CSDU6-Draft:
           description_short: మేకర్‌ల్యాబ్
+        teachercon:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        alltheplcthings:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csp-online-test:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
         csp1-support:
           title: యూనిట్ 1 ఆన్‌లైన్ ప్రొఫెషనల్ లెర్నింగ్ కోర్సు
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
         basketball:
           title: మీ బృందమును ఎంచుకోండి మరియు ఒక బాస్కెట్‌బాల్ ఆట చేయండి
           description_short: మీ బృందమును ఎంచుకోండి మరియు ఒక బాస్కెట్‌బాల్ ఆట చేయండి
           description: మీ బృందమును ఎంచుకోండి మరియు ఒక బాస్కెట్‌బాల్ ఆట చేయండి
           student_description: మీ బృందమును ఎంచుకోండి మరియు ఒక బాస్కెట్‌బాల్ ఆట చేయండి
           name: బాస్కెట్బాల్
+        csp2-support:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
         minecraft:
           description_short: Minecraft యొక్క మీ స్వంత వెర్షన్లో ప్రోగ్రామ్ జంతువులు మరియు ఇతర Minecraft జీవులు.
           description: Minecraft యొక్క మీ స్వంత వెర్షన్లో ప్రోగ్రామ్ జంతువులు మరియు ఇతర Minecraft జీవులు.
@@ -91,6 +119,18 @@ te:
           title: 'CS ప్రాథమిక పాఠాంశాలు: కోర్సు F'
         sports:
           name: క్రీడలు
+        csp3-support:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csp4-support:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csp5-support:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
         coursed-ramp:
           title: 'CS ప్రాథమిక పాఠాంశాలు: కోర్సు D'
         csd2-old:
@@ -113,6 +153,54 @@ te:
         coursef-2017:
           title: కోర్సు F
           assignment_family_title: కోర్సు F
+        cspnovice:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csp1-dlp:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csp2-dlp:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csp3-dlp:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csp4-dlp:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csp5-dlp:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csd1-dlp:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csd6-dlp:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csd5-dlp:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csd4-dlp:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csd3-dlp:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csd2-dlp:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
         pre-express-2017:
           title: ప్రీ-రీడర్ ఎక్స్‌ప్రెస్
           assignment_family_title: ప్రీ-రీడర్ ఎక్స్‌ప్రెస్
@@ -132,8 +220,80 @@ te:
           assignment_family_title: కోర్సు E
         coursef-2018:
           assignment_family_title: కోర్సు F
+        csd1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csd2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csd3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csd4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csd5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csd6-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csp1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csp2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csp3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csp4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csp5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csp-explore-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csp-create-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csd-novice-18:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csd-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csp-novice-18:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csp-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
         pre-express-2018:
           assignment_family_title: ప్రీ-రీడర్ ఎక్స్‌ప్రెస్
+        fit-test:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
         dance:
           title: డాన్స్ పార్టీ (2018)
           name: డాన్స్
@@ -193,6 +353,10 @@ te:
               display_name: వేరియబుల్స్
             csf_for_loops:
               display_name: ఉచ్చులు కోసం
+        andrea-test:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
         coursec-2019:
           lesson_groups:
             csf_digcit:
@@ -237,6 +401,12 @@ te:
               display_name: షరతులు
             csp_functions:
               display_name: విధులు
+            required:
+              display_name: ఓవర్ వ్యూ
+        csp1-pilot:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -305,12 +475,74 @@ te:
               display_name: జాబితాలు
             csp_loops:
               display_name: ఉచ్చులు
+            required:
+              display_name: ఓవర్ వ్యూ
+        fit2019-novice:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        fit2019-apprentice:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csp3-pilot:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
         csl-vn:
           lesson_groups:
             csf_loops:
               display_name: ఉచ్చులు
             csf_events:
               display_name: ఈవెంట్లు
+        dlp19-csd-mod-fit:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        dlp19-csd-mod-w1:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        dlp19-csd-mod-w2:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        dlp19-csd-mod-w3:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        dlp19-csd-mod-w4:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        dlp19-csp-mod-w1:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        dlp19-csp-mod-w2:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        dlp19-csp-mod-w3:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        dlp19-csp-mod-w4:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csp2-pilot:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csp6-pilot:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
         dance-2019:
           title: డాన్స్ పార్టీ
           description_short: మీ స్నేహితులతో పంచుకోవడానికి ఒక డాన్స్ పార్టీని కోడ్ చేయండి. బియాన్స్, హ్యారీ స్టైల్స్, లిజ్జో, లిల్ నాస్ ఎక్స్, సెలెనా గోమెజ్ నటించారు, డిస్నీ యొక్క “ఎన్కాంటో” నుండి సంగీతం మరియు మరెన్నో!
@@ -352,6 +584,10 @@ te:
               display_name: ఈవెంట్లు
             csf_digcit:
               display_name: డిజిటల్ పౌరసత్వం
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
         csp4-2020:
           lesson_groups:
             csp_variables:
@@ -1076,3 +1312,26 @@ te:
               display_name: షరతులు
             lessonGroup-5:
               display_name: వేరియబుల్స్
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: మా నైతికతల యొక్క AI కోడ్
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: పరిచయం
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: పరిచయం
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: పరిచయం
+          lesson_groups:
+            lessonGroup-7:
+              display_name: పరిచయం
+        csd7-2024:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: యాప్ ల్యాబ్ కు పరిచయం

@@ -519,6 +519,7 @@ zh-CN:
         artist_intro: 小艺术家简介
         c_and_c_digital_sharing: 数字共享
         c_and_c_great_to_create: 创建并实践公平非常的伟大。
+        code-break: 观看代码小憩
         codebreak_e01: 编程解密 1.0：与 Hill Harper 的计算程序
         codebreak_e02: 编程解密 2.0：跟Mark Cuban 和 Lyndsey Scott 一起学雏形和最初形态
         codebreak_e03: 编程解密 3.0：跟 Ashton Kutcher 和 Mia Gil Epner 一起学加密技术
@@ -601,7 +602,7 @@ zh-CN:
         csa_wrapper_classes_part_2: CSA：包装类第 2 部分
         csa_writing_a_method: CSA：编写方法
         csc-ecosystems-intro: 生态系统简介
-        csc-event-short-intro: 活动简短介绍
+        csc-event-short-intro: 事件简介
         csc-poem-art-intro: 简介视频
         csc-poem-art-outro: 结尾视频
         csc-sprite-lab-pixel-editor: 画自己的精灵图
@@ -638,6 +639,7 @@ zh-CN:
         csd_gamelab_velocity: 矢量
         csd_how_teamwork_works: 如何运用团队合作
         csd_ml_ethics_ai: 伦理与人工智能
+        csd_ml_how_ai_works: AI 的工作原理
         csd_ml_import_model: 导入 AI 模型
         csd_ml_intro_ai_lab_july2021: 人工智能实验室的介绍
         csd_ml_intro_to_ai_lab: 人工智能实验室的介绍
@@ -706,6 +708,7 @@ zh-CN:
         hint_videos_d_11_7_last: 提示视频：D.11.7 最后一个
         hint_videos_d_11_9_first: '提示视频: D.11.9 第一个'
         hint_videos_d_11_9_last: 提示视频：D.11.9 最后一个
+        hoc-dance-ai-warmup: 舞会AI版：热身
         hoc_dance_congrats: 舞会 - 继续！
         hoc_dance_congrats_2019: 舞蹈派对 2019 - 开跳！
         hoc_dance_events: 舞蹈派对 - 事件
@@ -806,6 +809,7 @@ zh-CN:
           - 数据块
         u7-libraries-explanation: 应用实验室：创建自己的模块 - 如何使用库
         upload_sprites_backgrounds: 上传自定义精灵和背景
+        what-is-creativity: 什么是创造力?
         what_is_an_event: 什么是事件？
         what_is_cs: 什么是计算机科学？
         why-should-teach-unplugged-activities: 常见问答：为什么我要教"线下"活动？

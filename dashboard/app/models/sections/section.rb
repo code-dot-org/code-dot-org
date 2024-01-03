@@ -23,10 +23,13 @@
 #  restrict_section     :boolean          default(FALSE)
 #  properties           :text(65535)
 #  participant_type     :string(255)      default("student"), not null
+#  lti_integration_id   :bigint
+#  ai_tutor_enabled     :boolean          default(FALSE)
 #
 # Indexes
 #
 #  fk_rails_20b1e5de46        (course_id)
+#  fk_rails_f0d4df9901        (lti_integration_id)
 #  index_sections_on_code     (code) UNIQUE
 #  index_sections_on_user_id  (user_id)
 #
@@ -61,6 +64,13 @@ class Section < ApplicationRecord
   belongs_to :user, optional: true
   alias_attribute :teacher, :user
 
+  has_many :section_instructors, dependent: :destroy
+  has_many :active_section_instructors, -> {where(status: :active)}, class_name: 'SectionInstructor'
+  has_many :instructors, through: :active_section_instructors, class_name: 'User'
+  has_one :lti_section
+  has_one :lti_course, through: :lti_section
+  after_destroy :soft_delete_lti_section
+
   has_many :followers, dependent: :destroy
   accepts_nested_attributes_for :followers
 
@@ -92,6 +102,10 @@ class Section < ApplicationRecord
   validate :pl_sections_must_use_email_logins
   validate :pl_sections_must_use_pl_grade
   validate :participant_type_not_changed
+
+  private def soft_delete_lti_section
+    lti_section.destroy if lti_section
+  end
 
   # PL courses which are run with adults should be set up with teacher accounts so they must use
   # email logins
@@ -146,7 +160,8 @@ class Section < ApplicationRecord
     LOGIN_TYPE_PICTURE = 'picture'.freeze,
     LOGIN_TYPE_WORD = 'word'.freeze,
     LOGIN_TYPE_GOOGLE_CLASSROOM = 'google_classroom'.freeze,
-    LOGIN_TYPE_CLEVER = 'clever'.freeze
+    LOGIN_TYPE_CLEVER = 'clever'.freeze,
+    LOGIN_TYPE_LTI_V1 = 'lti_v1'.freeze
   ]
 
   LOGIN_TYPES_OAUTH = [
@@ -173,6 +188,9 @@ class Section < ApplicationRecord
 
   CSA = 'csa'.freeze
   CSA_PILOT_FACILITATOR = 'csa-pilot-facilitator'.freeze
+
+  # A section can have five co-teachers, plus the owner, for a total of 6
+  INSTRUCTOR_LIMIT = 6
 
   def self.valid_login_type?(type)
     LOGIN_TYPES.include? type
@@ -218,6 +236,23 @@ class Section < ApplicationRecord
   def update_student_sharing(sharing_disabled)
     students.each do |student|
       student.update!(sharing_disabled: sharing_disabled)
+    end
+  end
+
+  after_save :ensure_owner_is_active_instructor
+  def ensure_owner_is_active_instructor
+    return if user.blank?
+
+    si = SectionInstructor.with_deleted.find_by(instructor: user, section_id: id)
+    if si.blank?
+      SectionInstructor.create!(section_id: id, instructor: user, status: :active)
+    elsif si.deleted?
+      si.restore
+      si.status = :active
+      si.save!
+    elsif si.status != 'active'
+      si.status = :active
+      si.save!
     end
   end
 
@@ -279,6 +314,7 @@ class Section < ApplicationRecord
     follower = Follower.with_deleted.find_by(section: self, student_user: student)
 
     return ADD_STUDENT_FAILURE if user_id == student.id
+    return ADD_STUDENT_FAILURE if section_instructors.exists?(instructor: student)
     return ADD_STUDENT_FORBIDDEN unless can_join_section_as_participant?(student)
     # If the section is restricted, return a restricted error unless a user is added by
     # the teacher (Creating a Word or Picture login-based student) or is created via an
@@ -375,11 +411,14 @@ class Section < ApplicationRecord
         students.unscope(:order).distinct(&:id)
       num_students = unique_students.size
 
+      serialized_section_instructors = ActiveModelSerializers::SerializableResource.new(section_instructors, each_serializer: Api::V1::SectionInstructorInfoSerializer).as_json
+
       {
         id: id,
         name: name,
         createdAt: created_at,
         teacherName: teacher.name,
+        sectionInstructors: serialized_section_instructors,
         linkToProgress: "#{base_url}#{id}/progress",
         assignedTitle: title,
         linkToAssigned: link_to_assigned,
@@ -419,7 +458,7 @@ class Section < ApplicationRecord
   end
 
   def provider_managed?
-    false
+    login_type == LOGIN_TYPE_LTI_V1
   end
 
   def at_capacity?
@@ -490,7 +529,7 @@ class Section < ApplicationRecord
 
       # Count students who have made progress on 5+ programming levels in both units
       next unless (csd2_progress_level_ids & csd2_programming_level_ids).count >= 5 &&
-          (csd3_progress_level_ids & csd3_programming_level_ids).count >= 5
+        (csd3_progress_level_ids & csd3_programming_level_ids).count >= 5
 
       num_students_with_sufficient_progress += 1
       return true if num_students_with_sufficient_progress >= 10
@@ -556,4 +595,38 @@ class Section < ApplicationRecord
     self.name = I18n.t('sections.default_name', default: 'Untitled Section') if name.blank?
   end
   before_validation :strip_emoji_from_name
+
+  public def add_instructor(email, current_user)
+    instructor = User.find_by!(email: email, user_type: :teacher)
+    raise ArgumentError.new('inviting self') if instructor == current_user
+
+    deleted_section_instructor = validate_instructor(instructor)
+    deleted_section_instructor&.really_destroy!
+
+    SectionInstructor.create!(
+      section: self,
+      instructor: instructor,
+      status: :invited,
+      invited_by: current_user
+    )
+  end
+
+  # Validates instructor can be added to the section, returns soft-deleted section instructor (if any)
+  public def validate_instructor(instructor)
+    if section_instructors.count >= INSTRUCTOR_LIMIT
+      raise ArgumentError.new('section full')
+    end
+
+    si = SectionInstructor.with_deleted.find_by(instructor: instructor, section: self)
+
+    # Return the instructor for actual deletion if they were soft-deleted
+    if si&.deleted_at.present?
+      return si
+    # Can't re-add someone who is already an instructor (or invited/declined)
+    elsif si.present?
+      raise ArgumentError.new('already invited')
+    elsif students.exists?(email: instructor.email)
+      raise ArgumentError.new('already a student')
+    end
+  end
 end

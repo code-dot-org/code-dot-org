@@ -35,6 +35,12 @@ section.bg-primary-light {
   }
 }
 
+// Hide random whitespace at the bottom
+//  of the page from legacy code
+.container_responsive_full_width > .desktop-feature {
+  display: none;
+}
+
 // Show elements based on screen size
 .show-desktop {
   display: block;
@@ -87,6 +93,8 @@ i.fa-fw {
   &.align-items-start { align-items: flex-start; }
   &.wrap { flex-wrap: wrap; }
   &.wrap-reverse { flex-wrap: wrap-reverse; }
+  &.gap-1 { gap: 1rem }
+  &.gap-2 { gap: 2rem }
 }
 
 // Grid container
@@ -141,79 +149,11 @@ hr {
   }
 }
 
-// Buttons
-a.link-button,
-button,
-.btn,
-input[type=submit] {
-  height: unset;
-  display: inline-block;
-  color: white;
-  background-color: $brand_secondary_default;
-  border: 2px solid $brand_secondary_default;
-  border-radius: $border-radius;
-  padding: .625rem 1rem;
-  margin: 0.5rem 0;
-  font-size: 1rem;
-  font-family: 'Gotham 5r', sans-serif;
-  line-height: 1.2;
-  text-decoration: none;
-  text-align: center;
-  transition: all ease-in-out .2s;
-
-  @media screen and (max-width: $width-sm) {
-    font-size: 0.875rem;
-  }
-
-  &:hover {
-    color: white;
-    background-color: $brand_secondary_dark;
-    border-color: $brand_secondary_dark;
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-  &:focus {
-    @include focus-outline;
-  }
-
-  &:disabled {
-    cursor: default;
-    background-color: $neutral_dark20;
-    border: 2px solid $neutral_dark20;
-    color: $neutral_white;
-  }
-}
-
-a.link-button {
-  &.secondary {
-    background: none;
-    border-color: $neutral_dark;
-    color: $neutral_dark;
-
-    &:hover {
-      background: $neutral_dark10;
-    }
-  }
-
-  &.white {
-    background-color: $neutral_white;
-    border-color: $neutral_white;
-    color: $neutral_dark;
-
-    &:hover {
-      background: $neutral_dark10;
-      border-color: $neutral_dark10;
-    }
-  }
-
-  &.has-icon {
-    .flex-wrapper {
-      display: flex;
-      align-items: center;
-      gap: 0 .75rem;
-    }
-  }
+// Button wrapper for side-by-side buttons
+.button-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 // Basic hero banner
@@ -233,8 +173,36 @@ a.link-button {
 ul {
   margin: 1rem;
 
-  li p {
-    @include body-three;
+  li {
+    line-height: 1.4;
+    margin: 0.5rem 0;
+
+    &:before {
+      color: $neutral-dark;
+    }
+
+    p {
+      @include body-three;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // Clear spacing and list dots
+  &.clear-styles {
+    margin: 0;
+    padding: 0;
+
+    li {
+      padding: 0;
+      text-indent: 0;
+
+      &:before {
+        content: "";
+      }
+    }
   }
 
   // Lists that use icons next to content
@@ -269,7 +237,7 @@ ul {
       }
 
       i {
-        font-size: 1.875rem;
+        font-size: 2rem;
       }
 
       h3 {
@@ -279,79 +247,6 @@ ul {
 
       p {
         @include body-three;
-      }
-    }
-  }
-
-  // Lists that have an arrow shape as li backgrounds
-  &.arrow-list {
-    margin: 1rem 0;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-
-    li {
-      height: 12rem;
-      background: $brand_primary_light;
-      position: relative;
-      padding: 1.5rem 2.5rem;
-      text-indent: 0 !important;
-      display: flex;
-      align-content: start;
-      flex-wrap: wrap;
-      margin: 1.5rem 0;
-
-      @media screen and (max-width: $width-md) {
-        padding: 1rem 1rem 1rem 2rem;
-      }
-
-      @media screen and (max-width: $width-sm) {
-        width: 100% !important;
-        margin-bottom: 0;
-      }
-
-      h3 {
-        @include heading-sm;
-      }
-
-      &:after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 0;
-        height: 0;
-        border-left: 1rem solid $neutral_white;
-        border-top: calc(12rem / 2) solid transparent;
-        border-bottom: calc(12rem / 2) solid transparent;
-      }
-
-      &:before {
-        content: '';
-        position: absolute;
-        right: -1rem;
-        bottom: 0;
-        width: 0;
-        height: 0;
-        border-left: 1rem solid $brand_primary_light;
-        border-top: calc(12rem / 2) solid transparent;
-        border-bottom: calc(12rem / 2) solid transparent;
-      }
-
-      &:nth-child(1) {
-        background: rgba($brand_primary_light, .4);
-
-        &:before {
-          border-left: 1rem solid rgba($brand_primary_light, .4);
-        }
-      }
-
-      &:nth-child(2) {
-        background: rgba($brand_primary_light, .6);
-
-        &:before {
-          border-left: 1rem solid rgba($brand_primary_light, .6);
-        }
       }
     }
   }
@@ -398,6 +293,56 @@ ul {
     }
   }
 
+  // Lists that have progressive content between elements
+  &.progressive-list {
+    margin: 3rem 0 0;
+    display: grid;
+    grid-gap: 1.5rem;
+
+    &.three-col {
+      @media screen and (min-width: $width-lg) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    li {
+      position: relative;
+      text-indent: 0 !important;
+      margin: 1.5rem 0;
+      padding: 1.25rem 1.25rem 1.35rem;
+      background: var(--neutral_light);
+      border-radius: $border-radius;
+
+      // Little top arrow
+      &:before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: 1.25rem;
+        border-bottom: 10px solid var(--neutral_light);
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+      }
+
+      span {
+        position: absolute;
+        top: -1.5rem;
+        left: 0;
+        width: 100%;
+        height: 0.5rem;
+        border-radius: 1rem;
+      }
+
+      &:nth-of-type(1) span { background: var(--brand_primary_light) }
+      &:nth-of-type(2) span { background: var(--brand_primary_default); opacity: 0.75; }
+      &:nth-of-type(3) span { background: var(--brand_primary_dark)}
+
+      h3 {
+        @include heading-sm;
+      }
+    }
+  }
+
   // Lists that show supporters or other text content in a table format
   &.supporters-list {
     margin: 3rem auto;
@@ -422,15 +367,6 @@ ul {
       }
     }
   }
-
-  li {
-    line-height: 1.4;
-    margin: 0.5rem 0;
-
-    &:before {
-      color: $neutral-dark;
-    }
-  }
 }
 
 // Ordered lists
@@ -443,6 +379,26 @@ ol.steps-list {
   margin: unset;
   padding: unset;
 
+  &.four-col {
+    li {
+      width: 20%;
+
+      @media screen and (max-width: $width-sm) {
+        width: 100%;
+      }
+    }
+  }
+
+  &.three-col {
+    li {
+      width: 28%;
+
+      @media screen and (max-width: $width-sm) {
+        width: 100%;
+      }
+    }
+  }
+
   li {
     padding-left: 0 !important;
     text-indent: 0 !important;
@@ -450,12 +406,7 @@ ol.steps-list {
     justify-content: center;
     flex-wrap: wrap;
     text-align: center;
-    width: 20%;
     margin: 3rem 0 2.5rem;
-
-    @media screen and (max-width: $width-sm) {
-      width: 100%;
-    }
 
     a.link-button,
     button,
@@ -562,6 +513,7 @@ form {
     display: block;
     text-align: left;
     font-size: 1rem;
+    font-weight: var(--semi-bold-font-weight);
   }
 
   input, select {
@@ -571,7 +523,8 @@ form {
     padding: 0.5rem;
     border: 1px solid;
     border-radius: $border-radius;
-    font-family: $gotham-regular, sans-serif;
+    font-family: var(--main-font);
+    font-weight: var(--regular-font-weight);
     font-size: 1rem;
     transition: all ease-in-out .2s;
 
@@ -620,6 +573,24 @@ form {
   border-radius: $border-radius;
   display: flex;
   align-content: baseline;
+
+  &.white {
+    background: var(--neutral_white);
+  }
+
+  .new {
+    color: var(--neutral_white);
+    background: var(--brand_accent_default);
+    font-size: 0.75rem;
+    font-family: var(--main-font);
+    font-weight: var(--medium-font-weight);
+    line-height: 1;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: -2px -8px 0 0;
+    padding: 6px 8px 5px;
+    border-radius: 1rem;
+  }
 
   h3 {
     width: 100%;
@@ -694,6 +665,22 @@ form {
     padding-right: 0.5rem;
     margin: 1rem 0 0;
   }
+
+  // Removes margins on the display_video_thumbnail view
+  // so the play button image is vertically centered
+  .videothumbnail {
+    margin-bottom: 1rem;
+
+    .thumbnail-wrapper .thumbnail-image {
+      margin-bottom: 0;
+    }
+  }
+
+  // Shows download button image correctly on modal
+  .modal-body img {
+    width: unset;
+    margin-bottom: 0;
+  }
 }
 
 // Two column action block
@@ -701,12 +688,39 @@ form {
   flex-wrap: wrap;
   overflow: hidden;
 
+  // Use this wrapper on the image or video
+  // to add a margin around it
+  .media-wrapper {
+    & > * {
+      margin: 1.25rem;
+      width: calc(100% - 1.25rem);
+
+      @media (max-width: $width-md) {
+        margin: 0;
+        width: 100%;
+      }
+    }
+
+    &.right > * {
+      float: right;
+
+      html[dir="rtl"] & {
+        float: left;
+      }
+    }
+  }
+
   .text-wrapper {
     padding: 1rem 1.5rem;
   }
 
   h3 {
     @include heading-sm;
+
+    &.heading-md {
+      @include heading-md;
+      font-weight: unset;
+    }
   }
 
   figure.video-responsive {
@@ -726,6 +740,41 @@ form {
   }
 }
 
+// Editorial cards
+// See code.org/teach and code.org/help for examples
+.editorial-cards-wrapper {
+  display: grid;
+  margin-top: 4rem;
+  gap: 2.5rem;
+
+  @media screen and (min-width: $width-sm) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .flex-container {
+    gap: 1.5rem;
+    flex-direction: column;
+
+    &.self-paced-english {
+      gap: 1.3rem;
+
+      @media screen and (max-width: $width-md) {
+        gap: 0;
+      }
+    }
+  }
+
+  img {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+  }
+
+  p {
+    @include body-three;
+  }
+}
+
 // Carousels
 // Uses the carouFredSel jQuery plugin: https://github.com/nzy/carouFredSel
 .carousel-wrapper {
@@ -733,6 +782,45 @@ form {
 
   @media screen and (max-width: $width-sm) {
     padding-bottom: 1rem;
+  }
+
+  // Carousel with prev and next button navigation
+  button.carousel__prev,
+  button.carousel__next {
+    display: none !important;
+  }
+
+  @media screen and (min-width: 1280px) {
+    button.carousel__prev {
+      position: absolute;
+      left: -3.5rem;
+    }
+
+    button.carousel__next {
+      position: absolute;
+      right: -3.5rem;
+    }
+
+    button.carousel__prev,
+    button.carousel__next {
+      display: block !important;
+      top: calc(50% - 50px);
+      background: none;
+      border: none;
+      transform: translateY(-50%);
+      transition: .3s;
+      padding: 0;
+      width: 1.75rem;
+
+      &:hover {
+        background: none;
+        opacity: .8;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
   }
 
   // Set a min-height inline on the .carousel div
@@ -786,6 +874,10 @@ form {
 
       &:focus {
         @include focus-outline;
+
+        &:not(:focus-visible) {
+          outline: none;
+        }
       }
     }
   }
@@ -851,12 +943,12 @@ form {
 
         &::before {
           content: "\f10d";
-          margin: 0 8px 0 0;
+          margin: 0 4px 0 0;
         }
 
         &::after {
           content: "\f10e";
-          margin: 0 0 0 8px;
+          margin: 0 0 0 4px;
         }
       }
     }
@@ -925,12 +1017,8 @@ form {
 // See code.org/teach for an example
 section.quote {
   background: url("/images/banners/banner-bg-lines-neutral-dark.png") center repeat;
-  background-size: 15%;
+  background-size: 12rem;
   background-color: $neutral-dark;
-
-  @media screen and (max-width: $width-sm) {
-    background-size: 50%;
-  }
 
   p {
     font-size: 1.25rem;
@@ -964,20 +1052,6 @@ section.quote {
   span {
     color: $brand_accent_default;
     margin: 0 2px;
-  }
-}
-
-// Modals
-.modal-header {
-
-  button.close {
-    min-width: unset;
-    margin-top: 2px;
-
-    &:hover {
-      background: none;
-      border: none;
-    }
   }
 }
 
@@ -1019,10 +1093,9 @@ section.quote {
   }
 }
 
-// Resources tabs section
-// Works with resources_tabs.haml partial
-// See code.org/teach for an example
-.resources-tabs{
+// Tabs section
+// See code.org/teach or code.org/donate for examples
+.tabs-section{
   margin-top: 2rem;
   min-height: 408px;
 
@@ -1030,6 +1103,7 @@ section.quote {
     border-bottom: 6px solid $brand_primary_default;
     margin: 0 0 3rem;
     align-items: end;
+    gap: 0.25rem;
 
     button.tab {
       color: $neutral_dark;
@@ -1043,6 +1117,7 @@ section.quote {
       cursor: pointer;
       white-space: normal;
       height: -webkit-fit-content;
+      flex: 1;
 
       &:hover {
         background-color: $neutral_dark10;
@@ -1062,11 +1137,13 @@ section.quote {
         background-color: $neutral_dark10;
         color: $neutral_dark;
       }
-    }
-  }
 
-  div.content {
-    text-align: left;
+      // Use this class to hide a tab
+      // - see computer-vision.haml and tabs-section.js for an example
+      &.hide {
+        display: none;
+      }
+    }
   }
 
   // Hides tab content
@@ -1084,11 +1161,16 @@ section.quote {
   }
 
   &.show-tablet-and-mobile {
-    height: unset;
+    height: unset !important;
+    min-height: unset !important;
 
     details {
       padding-left: 0;
       padding-right: 0;
+
+      &:hover {
+        background: none;
+      }
 
       summary {
         @include heading-md;
@@ -1115,21 +1197,25 @@ section.quote {
   }
 }
 
-// Curriculum at a glance section
-// Works with curriculum_glance_section.haml partial
-// See code.org/educate/csp for an example
-.curriculum-glance {
+
+// At a glance sections
+// See code.org/educate/csp and code.org/teach for examples
+.at-a-glance {
   background: $neutral-white;
   border: 1px solid $neutral_dark10;
   border-radius: $border-radius;
-  margin-top: 2rem;
   padding: 1.5rem;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  display: grid;
 
-  @media screen and (max-width: $width-md) {
-    grid-template-columns: unset;
-    gap: 1rem;
+  // Used with two ul elements
+  &.two-col {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+    @media screen and (max-width: $width-md) {
+      grid-template-columns: unset;
+      gap: 1rem;
+    }
   }
 
   ul {
@@ -1155,4 +1241,57 @@ section.quote {
       }
     }
   }
+}
+
+// Subscribe form
+// See code.org/csf for an example
+.subscribe-form {
+  background: url("/images/banners/banner-bg-lines-neutral-dark.png") center repeat;
+  background-size: 22%;
+  background-color: $neutral_dark;
+  border-radius: $border-radius;
+  padding: 2rem;
+
+  @media screen and (max-width: $width-md) {
+    gap: 1rem;
+  }
+
+  @media screen and (max-width: $width-sm) {
+    padding: 1rem;
+    background-size: 50%;
+  }
+
+  .text-wrapper {
+    width: 48%;
+
+    @media screen and (max-width: $width-md) {
+      width: 100%;
+    }
+
+    h2, p {
+      color: $neutral-white;
+    }
+  }
+
+  figure {
+    background: $neutral_light;
+    border-radius: $border-radius;
+    padding: 1rem 0 0;
+
+    @media screen and (max-width: $width-sm) {
+      iframe {
+        height: 500px !important;
+      }
+    }
+  }
+}
+
+// Action wrapper
+// See code.org/donate for example
+.action-wrapper {
+  background: url("/images/banners/banner-bg-lines-neutral-light.png") center repeat;
+  background-size: 10rem;
+  background-color: $brand_primary_default;
+  border-radius: $border-radius;
+  padding: 2rem;
 }

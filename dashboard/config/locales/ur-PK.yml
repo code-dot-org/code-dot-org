@@ -10,6 +10,7 @@ ur:
         error:
           future: مستقبل میں نہیں ہو سکتا
         finish_sign_up_header: اپنا اکاؤنٹ بنانا مکمل کریں
+        finish_sign_up_header_error: 'براے مہربانی نیچے دی گئی غلطیاں درست کیجئے:'
         finish_sign_up_subheader: Code.org پر<strong>%{email}</strong> کا اکاوٗنٹ
           بنانے کے لئے درج زیل معلومات پُر کریں
         finish_sign_up_subheader_markdown: Code.org پر**{email}%** کا اکاوٗنٹ بنانے
@@ -29,6 +30,7 @@ ur:
           نہیں ہے تو یہاں کلک کریں)](%{url})
         reset_password_token: ری سیٹ پاس ورڈ لنک آپ کی پیروی کی ہے
         us_state: حالت
+        user_type: اکاؤنٹ کی قسم
         username: یوزر کا نام
         verified_teacher: تصدیق شدہ استاد
     errors:

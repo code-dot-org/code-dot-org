@@ -55,6 +55,7 @@
         "csa6-exemplars": "نماذج CS6",
         "csa7-exemplars": "نماذج CS7",
         "csa8-exemplars": "نماذج CS8",
+        "csc-bookcovers": "برمجة أغلفة الكتب",
         "csc-ecosystems": "محاكاة النظام البيئي البحري",
         "csc-fables": "وحدة سرد القصص",
         "csc-pilot-fa2022-ecosystem": "csc-pilot-fa2022 - النظام البيئي",
@@ -77,6 +78,7 @@
         "curriculum-sandbox-levels": "مستويات المنهاج الدراسي",
         "dance": "حفلة رقص",
         "dance-2019": "حفلة رقص (2019)",
+        "dance-ai": "حفلة الرقص: إصدار الذكاء الاصطناعي",
         "dance-extras": "استمر في الرقص (2018)",
         "dance-extras-2019": "استمر في الرقص (2019)",
         "dance-unplugged": "ساعة البرمجة - حفلة رقص - غير موصول",
@@ -114,7 +116,7 @@
         "jigsaw": "بانوراما",
         "kaitie-test-script": "سيناريو اختبار كايتي",
         "kodea-pd-2021": "CSF للكمبيوتر الشخصي عبر الإنترنت - كوريا",
-        "mc": "ساعة من البرمجة مع ماين كرافت",
+        "mc": "مغامر في Minecraft",
         "microbit": "إنشاء تطبيقات باستخدام الأجهزة (micro:bit)",
         "minecraft": "ساعة من برمجة ماينكرافت نسخة المصمم",
         "ml-playground": "ملعب ml",
@@ -139,6 +141,7 @@
         "rbo-reference": "المرجع الروبوتي",
         "seesaw-adaptations": "التكيفات المتأرجحة",
         "self-paced-pl-csc": "تعليم اتصالات علوم الكمبيوتر",
+        "self-paced-pl-csd-unit1": "تعليم حل المشكلات والحوسبة",
         "soccer": "كرة القدم",
         "spelling-bee": "نشاط الإملاء",
         "sports": "صمِّم لعبتك الرياضية الخاصة",
@@ -149,8 +152,6 @@
         "testtess": "خصية",
         "text-compression": "ضغط النص",
         "valentine": "عيد الحب",
-        "vpl-csa": "التعلم المهني الافتراضي CSA",
-        "vpl-csp": "مبادئ علوم الكمبيوتر - التعلم المهني الافتراضي",
         "web-development": "تطوير الويب"
       }
     }

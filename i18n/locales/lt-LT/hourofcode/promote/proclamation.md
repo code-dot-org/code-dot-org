@@ -4,55 +4,55 @@ title: Imties rezoliucija, palaikanti kompiuterių mokslo švietimo savaitę ir 
 
 {{ signup_button }}
 
-# Sample Computer Science Education Week resolution
+# Kompiuterių mokslo švietimo savaitės rezoliucijos pavyzdys
 
-### Below is language for a sample resolution supportive of Computer Science Education Week and its goals that can be used by state and local legislators.
+### Žemiau pateikiama kalba, skirta imties rezoliucijai, palaikančiai kompiuterių mokslo švietimo savaitę, ir jos tikslus, kuriuos gali naudoti valstybės ir vietos įstatymų leidėjai.
 
 * * *
 
-#### **RESOLUTION**  
+#### **Rezoliucija**  
 
 
-#### Supporting the goals and ideals of "Computer Science Education Week"
+#### “Kompiuterių mokslo švietimo savaitės” tikslų ir idealų palaikymas
 
-Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
+kadangi informatikos švietimo savaitė pabrėžia esminį informatikos vaidmenį transformuojant mūsų visuomenę ir kaip informatika įgalina inovacijas ir sukuria ekonomines galimybes;
 
-Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
+kadangi skaičiavimo technologijos yra neatsiejama šiuolaikinės kultūros dalis ir keičia tai, kaip žmonės sąveikauja tarpusavyje ir juos supančiu pasauliu;
 
-Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
+kadangi informatika keičia pramonę, kuria naujas prekybos sritis, skatina inovacijas visose mokslo srityse ir skatina produktyvumą nusistovėjusiuose ekonomikos sektoriuose;
 
-Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
+kadangi informatikos sritis yra pagrindinis dalykas, kuriuo grindžiamas mūsų ekonomikos informacinių technologijų sektorius, kuris yra reikšmingas Jungtinių Valstijų ekonominės veiklos veiksnys;
 
-Whereas the field of computer science is a foundational science for the digital age;
+kadangi dirbtinio intelekto raštingumas reiškia žinias, įgūdžius ir požiūrį, susijusį su dirbtinio intelekto veikimu, įskaitant pagrindines informatikos sąvokas, ir kaip saugiai, atsakingai ir etiškai naudoti dirbtinį intelektą;
 
-Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
+kadangi informatikos sritis, įskaitant dirbtinį intelektą, yra technologijos, turinčios galią iš esmės pakeisti beveik visus Jungtinių Valstijų ekonomikos sektorius;
 
-Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
+kadangi technologijų lyderystė visose informatikos srityse, įskaitant dirbtinį intelektą, yra ekonominis ir nacionalinis saugumo reikalavimas;
 
-Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
+kadangi informatikos darbo vietų perspektyvos yra ryškios — visoje šalyje yra daugiau kaip 500 000 atvirų skaičiavimo pozicijų;
 
-Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
+kadangi suteikiant studentams galimybę dalyvauti aukštos kokybės informatikos veikloje, jiems suteikiamos turtingos lauko galimybės ir suteikiami kritinio mąstymo įgūdžiai, kurie tarnaus jiems visą gyvenimą;
 
-Whereas computer science education has challenges to address, including counting computer science classes towards high school graduation requirements, and providing professional development for computer science teachers;
+kadangi visi mokiniai nusipelno kruopštaus pasirengimo informatikos ugdymui, įskaitant galimybę naudotis kvalifikuotais mokytojais, technologijomis ir pagal amžių atitinkančia mokymo programa, reikalinga informatikos mokymuisi pradiniame ir viduriniame mokslo lygmenyse;
 
-Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
+kadangi informatikos švietimui tenka spręsti uždavinius, įskaitant geresnes galimybes visiems studentams lankytis informatikos kursuose ir informatikos mokytojams suteikti profesinį tobulėjimą;
 
-Whereas the field of computer science has significant equity barriers to address, including attracting more participation by females and underrepresented minorities to all levels and branches;
+kadangi informatikos švietimo savaitės metu dalyvavimas Kodekso valandoje gali padėti demystifikuoti informatikos sritį ir paskatinti daugiau studentų imtis tolesnių informatikos studijų;
 
-Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
+kadangi informatikos sritis turi didelių teisingumo kliūčių spręsti, įskaitant įvairių rasės, etninės priklausomybės ir lyties kandidatų pritraukimą ir išsaugojimą visuose lygmenyse ir šakose;
 
-Whereas the week of {{ campaign_date/start_long }}, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it <br />
+kadangi Grace Murray Hopper, viena iš pirmųjų moterų informatikos srityje, sukūrė naujas programavimo kalbas ir pradininkus kompiuterių sistemų standartus, kurie padėjo pagrindą daugeliui informatikos pasiekimų; ir
 
-Resolved, That the (HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD) --
+Kadangi savaitė {{ campaign_date/start_long }}, pagerbiant Grace Hopper gimtadienį, yra paskirta “Kompiuterių mokslo švietimo savaitė”: Todėl dabar ar tai būtų <br />
 
-(1) supports the designation of Computer Science Education Week ({{ campaign_date/full }});
+Išspręsta, kad (NAMAS AR SENATAS, VALSTYBĖ, APSKRITIS, MIESTAS AR MOKYKLOS VALDYBA) --
 
-(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
+(1) remia kompiuterių mokslo švietimo savaitės paskyrimą ({{ campaign_date/full }});
 
-(3) encourages schools, teachers, researchers, universities, business leaders, and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
+(2) skatina mokyklas, pedagogus, tėvus ir politikos formuotojus dalyvauti informatikos švietimo savaitėje, suteikiant galimybę savo mokiniams dalyvauti Kodekso valandoje;
 
-(4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
+(3) skatina mokyklas, mokytojus, mokslininkus, universitetus, verslo lyderius ir politikos formuotojus nustatyti mechanizmus, pagal kuriuos mokytojai galėtų įgyti pažangiausią profesinį tobulėjimą, kad suteiktų tvarios mokymosi patirties informatikos srityje visais švietimo lygmenimis ir skatintų studentus būti veikiami informatikos koncepcijų;
 
-(5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
+(4) skatina galimybes, be kita ko, įgyvendinant esamas programas, moterims ir studentėms iš rasinių ir etninių grupių, kurioms nepakankamai atstovaujama informatikos srityje.
 
 {{ signup_button }}

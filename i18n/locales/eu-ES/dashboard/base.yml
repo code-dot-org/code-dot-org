@@ -41,6 +41,7 @@ eu:
         age: 'Adina'
         gender: 'Generoa'
         edit_header: 'Aldatu kontuaren xehetasunak'
+        finish_sign_up_header_error: 'Zuzendu hurrengo akatsak mesedez:'
         error:
           future: ezin du izan etorkizunean
   beta: "beta"
@@ -588,4 +589,3 @@ eu:
   copy: 'Kopiatu'
   pixelation:
     binary: "Bitarra"
-

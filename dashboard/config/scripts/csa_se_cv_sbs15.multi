@@ -1,0 +1,11 @@
+name 'CSA-SE-CV-SBS15'
+
+question 'I am aware of potential challenges or limitations of training AI models.'
+
+right 'Strongly Agree'
+right 'Agree'
+right 'Neutral'
+right 'Disagree'
+right 'Strongly Disagree'
+
+allow_multiple_attempts true

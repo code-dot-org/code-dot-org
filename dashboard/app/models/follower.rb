@@ -62,11 +62,14 @@ class Follower < ApplicationRecord
     student_user.assign_script(section.script) if section.script
   end
 
-  after_destroy :remove_family_name, if: proc {DCDO.get('family-name-features', false)}
+  after_destroy :remove_family_name
   def remove_family_name
+    # Ignore a deleted student
+    return unless student_user
+
     # If the student is in zero sections, and has a family name set,
     # remove the family name.
-    if student_user.family_name && student_user.sections_as_student.empty?
+    if student_user&.family_name && student_user.sections_as_student.empty?
       # can't remove keys from properties directly, so just set it to nil.
       student_user.family_name = nil
       student_user.save!

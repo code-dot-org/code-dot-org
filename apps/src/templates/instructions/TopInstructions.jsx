@@ -38,6 +38,8 @@ import Button from '../Button';
 import i18n from '@cdo/locale';
 import ContainedLevelResetButton from './ContainedLevelResetButton';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import {rubricShape} from '@cdo/apps/templates/rubrics/rubricShapes';
+import StudentRubricView from '@cdo/apps/templates/rubrics/StudentRubricView';
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
@@ -51,6 +53,7 @@ export const TabType = {
   DOCUMENTATION: 'documentation',
   REVIEW: 'review',
   TEACHER_ONLY: 'teacher-only',
+  TA_RUBRIC: 'rubric',
 };
 
 // Minecraft-specific styles
@@ -119,6 +122,7 @@ class TopInstructions extends Component {
     // than allowing this component to manage its own height.
     explicitHeight: PropTypes.number,
     inLessonPlan: PropTypes.bool,
+    taRubric: rubricShape,
   };
 
   static defaultProps = {
@@ -146,11 +150,13 @@ class TopInstructions extends Component {
       // We don't want to start in the comments tab for CSF since its hidden
       tabSelected:
         this.props.initialSelectedTab ||
-        (teacherViewingStudentWork && this.props.noInstructionsWhenCollapsed
+        (teacherViewingStudentWork &&
+        this.props.noInstructionsWhenCollapsed &&
+        !this.props.taRubric
           ? TabType.COMMENTS
           : TabType.INSTRUCTIONS),
       latestFeedback: null,
-      rubric: null,
+      miniRubric: null,
       studentId: studentId,
       teacherViewingStudentWork: teacherViewingStudentWork,
       fetchingData: true,
@@ -169,7 +175,7 @@ class TopInstructions extends Component {
    * Calculate our initial height (based off of rendered height of instructions)
    */
   componentDidMount() {
-    const {user, serverLevelId, serverScriptId, dynamicInstructions} =
+    const {user, serverLevelId, serverScriptId, dynamicInstructions, taRubric} =
       this.props;
     const {studentId} = this.state;
 
@@ -188,7 +194,13 @@ class TopInstructions extends Component {
 
     const promises = [];
 
-    if (this.isViewingAsStudent && user && serverLevelId && serverScriptId) {
+    if (
+      this.isViewingAsStudent &&
+      user &&
+      serverLevelId &&
+      serverScriptId &&
+      !taRubric
+    ) {
       promises.push(
         topInstructionsDataApi
           .getTeacherFeedbackForStudent(user, serverLevelId, serverScriptId)
@@ -209,11 +221,31 @@ class TopInstructions extends Component {
       );
     }
 
-    if (serverLevelId) {
+    if (serverLevelId && !taRubric) {
       promises.push(
         topInstructionsDataApi.getRubric(serverLevelId).done(data => {
-          this.setState({rubric: data});
+          this.setState({miniRubric: data});
         })
+      );
+    }
+
+    if (
+      !this.state.teacherViewingStudentWork &&
+      user &&
+      this.isViewingAsStudent &&
+      taRubric
+    ) {
+      promises.push(
+        topInstructionsDataApi
+          .getTaRubricFeedbackForStudent(taRubric.id)
+          .then(data => {
+            if (data.value?.length > 0) {
+              this.setState({
+                taRubricEvaluation: data.value,
+                tabSelected: TabType.TA_RUBRIC,
+              });
+            }
+          })
       );
     }
 
@@ -235,6 +267,7 @@ class TopInstructions extends Component {
           .done((data, textStatus, request) => {
             this.setState({
               latestFeedback: request.status === 204 ? null : data,
+              teacherCanLeaveFeedback: true,
               token: request.getResponseHeader('csrf-token'),
             });
           })
@@ -589,14 +622,16 @@ class TopInstructions extends Component {
       displayDocumentationTab,
       displayReviewTab,
       explicitHeight,
+      taRubric,
     } = this.props;
 
     const {
       latestFeedback,
       teacherViewingStudentWork,
-      rubric,
+      miniRubric,
       tabSelected,
       fetchingData,
+      teacherCanLeaveFeedback,
       token,
     } = this.state;
 
@@ -632,12 +667,16 @@ class TopInstructions extends Component {
       mapReference || (referenceLinks && referenceLinks.length > 0);
 
     const displayHelpTab =
-      (levelVideos && levelVideos.length > 0) || levelResourcesAvailable;
+      (levelVideos && levelVideos.length > 0) || !!levelResourcesAvailable;
 
     const displayFeedbackTab =
-      !!rubric ||
-      teacherViewingStudentWork ||
-      (this.isViewingAsStudent && !!latestFeedback);
+      !taRubric &&
+      (!!miniRubric ||
+        (teacherViewingStudentWork && teacherCanLeaveFeedback) ||
+        (this.isViewingAsStudent && !!latestFeedback));
+
+    const displayTaRubricTab =
+      !!taRubric && !teacherViewingStudentWork && this.isViewingAsStudent;
 
     // Teacher is viewing students work and in the Feedback Tab
     const teacherOnly =
@@ -683,8 +722,9 @@ class TopInstructions extends Component {
           isCSDorCSP={isCSDorCSP}
           displayHelpTab={displayHelpTab}
           displayFeedback={displayFeedbackTab}
-          levelHasRubric={!!rubric}
+          levelHasMiniRubric={!!miniRubric}
           displayDocumentationTab={displayDocumentationTab}
+          displayTaRubricTab={displayTaRubricTab}
           displayReviewTab={displayReviewTab}
           isViewingAsTeacher={this.isViewingAsTeacher}
           hasBackgroundMusic={hasBackgroundMusic}
@@ -698,6 +738,7 @@ class TopInstructions extends Component {
           handleDocumentationTabClick={() =>
             this.handleTabClick(TabType.DOCUMENTATION)
           }
+          handleTaRubricTabClick={() => this.handleTabClick(TabType.TA_RUBRIC)}
           handleReviewTabClick={() => this.handleTabClick(TabType.REVIEW)}
           handleTeacherOnlyTabClick={this.handleTeacherOnlyTabClick}
           collapsible={this.props.collapsible}
@@ -722,13 +763,14 @@ class TopInstructions extends Component {
               <TeacherFeedbackTab
                 teacherViewingStudentWork={teacherViewingStudentWork}
                 visible={tabSelected === TabType.COMMENTS}
-                rubric={rubric}
+                rubric={miniRubric}
                 innerRef={ref => (this.commentTab = ref)}
                 latestFeedback={latestFeedback}
                 token={token}
                 serverScriptId={this.props.serverScriptId}
                 serverLevelId={this.props.serverLevelId}
                 teacher={user}
+                allowUnverified={isCSF}
               />
             )}
             {tabSelected === TabType.DOCUMENTATION && (
@@ -758,6 +800,12 @@ class TopInstructions extends Component {
                   ))}
                 </div>
               )}
+            {tabSelected === TabType.TA_RUBRIC && (
+              <StudentRubricView
+                rubric={this.props.taRubric}
+                submittedEvaluation={this.state.taRubricEvaluation}
+              />
+            )}
             {(this.isViewingAsTeacher || isViewingAsInstructorInTraining) &&
               (hasContainedLevels || teacherMarkdown) && (
                 <div>
@@ -902,6 +950,7 @@ export default connect(
       (state.pageConstants &&
         state.pageConstants.isViewingAsInstructorInTraining) ||
       false,
+    taRubric: state.instructions.taRubric,
   }),
   dispatch => ({
     toggleInstructionsCollapsed() {

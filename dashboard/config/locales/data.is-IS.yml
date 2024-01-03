@@ -752,6 +752,7 @@ is:
         applab_intro_sounds: Appsmiðjan - Myndir og hljóð
         applab_intro_welcome: Appsmiðjan - Fyrstu skref
         artist_intro: Kynning á listamanni
+        code-break: Taktu kóðapásu
         conditionals_with_cards: Kennslustund án tölvu - Skilyrði með kortum
         cs-principles-intro-to-objects: 'Grunnhugtök tölvunarfræði: Kynning á hlutum'
         csd_applab_arrays: Kynning á fylkjum
@@ -906,6 +907,7 @@ is:
         u5-traversals-get-list-explanation: Code.org [levelbuilder] - Kynningarmyndband
           - Gagnakubbur
         u7-libraries-explanation: 'Appsmiðjan: Búa til eigin kubba - Notkun kóðasafna'
+        what-is-creativity: Hvað er sköpunargáfa?
         what_is_an_event: Hvað er atvik?
         what_is_cs: Hvað er tölvunarfræði?
         why-should-teach-unplugged-activities: 'Algeng spurning: Af hverju ætti ég

@@ -1034,6 +1034,33 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Правопис"
         },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Основи на компютърните науки"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "Овладяване на Основите: Последователност"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "Овладяване на Основите: Цикли"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "Овладяване на Основите: Условия"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "Овладяване на Основите: Функции"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "Овладяване на Основите: Събития"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "Най-добри Практики за Преподаване на Компютърни Науки"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Планиране"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Следващи стъпки"
+        },
         "csd1-2019/Intro to Problem Solving": {
           "name": "Въведение в Решаването на Проблеми"
         },
@@ -1339,6 +1366,42 @@
         },
         "pre-express-2019/Loops in Ice Age": {
           "name": "Цикли със Скрат"
+        },
+        "k5-onlinepd-2019/Welcome to \"Teaching Computer Science Fundamentals\"": {
+          "name": "Добре дошли в \"Преподаване на Основите на Компютърните Науки\""
+        },
+        "k5-onlinepd-2019/Understanding the Computer Science Fundamentals Courses": {
+          "name": "Разбиране на Курса за Основите на Компютърните Науки"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Повторения"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Събития"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Условия"
+        },
+        "k5-onlinepd-2019/End of Course projects": {
+          "name": "Проекти за Края на Курса"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Функции"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Променливи"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "За циклите"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Sprite Lab"
+        },
+        "k5-onlinepd-2019/Reviewing your reflections": {
+          "name": "Преглеждане на размислите си"
+        },
+        "k5-onlinepd-2019/Next steps": {
+          "name": "Следващи стъпки"
         },
         "coursea-2020/Learn to Drag and Drop": {
           "name": "Научете се да Плъзгате и Пускате"
@@ -1769,9 +1832,36 @@
         "pre-express-2021/Loops with Scrat": {
           "name": "Цикли със Скрат"
         },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Основи на компютърните науки"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "Овладяване на Основите: Последователност"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "Овладяване на Основите: Цикли"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "Овладяване на Основите: Условия"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "Овладяване на Основите: Функции"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "Овладяване на Основите: Събития"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "Най-добри Практики за Преподаване на Компютърни Науки"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Планиране"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Следващи стъпки"
+        },
         "csd1-2022/Intro to Problem Solving": {
           "name": "Въведение в Решаването на Проблеми",
-          "preparation": "**За всяка група**\n\n-   2 листа алуминиево фолио, 5х5 инча всяко\n-   1 контейнер, който може да задържи 3-5 инча вода \n-   Няколко хартиени кърпи или парцали, които могат да бъдат поставени под контейнера \n-   15 стотинки\n-   Едн копие на ръководството на дейността\n\n**За учителя**\n\n-   1 контейнер, който може да задържи 3-5 инча вода \n-   50 стотинки \n-   Допълнителни кърпи или парцали \n-   Проверете форума [\"Учителски салон\"][0] за проверени учители, за да намерите допълнителни стратегии или ресурси, споделени от колеги учители.\n-   Ако преподавате виртуално, разгледайте нашите [Virtual Lesson Modifications][1]."
+          "preparation": "**За всяка група**\n\n-   2 листа алуминиево фолио, 5х5 инча всяко\n-   1 контейнер, който може да задържи 3-5 инча вода \n-   Няколко хартиени кърпи или парцали, които могат да бъдат поставени под контейнера \n-   15 стотинки\n-   Едн копие на ръководството на дейността\n\n**За учителя**\n\n-   1 контейнер, който може да задържи 3-5 инча вода \n-   50 стотинки \n-   Допълнителни кърпи или парцали \n-   Проверете форума [\"Учителски салон\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) за проверени учители, за да намерите допълнителни стратегии или ресурси, споделени от колеги учители.\n-   Ако преподавате виртуално, разгледайте нашите [Virtual Lesson Modifications](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)."
         },
         "csd1-2022/The Problem Solving Process": {
           "name": "Процеса за Решаване на Проблеми"
@@ -2021,8 +2111,257 @@
         "pre-express-2022/Loops with Scrat": {
           "name": "Цикли със Скрат"
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Час на кодирането 2013"
+        "csd1-2023/Intro to Problem Solving": {
+          "name": "Въведение в Решаването на Проблеми",
+          "preparation": "**За всяка група**\n\n-   2 листа алуминиево фолио, 5х5 инча всяко\n-   1 контейнер, който може да задържи 3-5 инча вода \n-   Няколко хартиени кърпи или парцали, които могат да бъдат поставени под контейнера \n-   15 стотинки\n-   Едн копие на ръководството на дейността\n\n**За учителя**\n\n-   1 контейнер, който може да задържи 3-5 инча вода \n-   50 стотинки \n-   Допълнителни кърпи или парцали \n-   Проверете форума [\"Учителски салон\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) за проверени учители, за да намерите допълнителни стратегии или ресурси, споделени от колеги учители.\n-   Ако преподавате виртуално, разгледайте нашите [Virtual Lesson Modifications](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)."
+        },
+        "csd1-2023/The Problem Solving Process": {
+          "name": "Процеса за Решаване на Проблеми"
+        },
+        "csd1-2023/Exploring Problem Solving": {
+          "name": "Изследване на Решаването на Проблеми"
+        },
+        "csd1-2023/What is a Computer?": {
+          "name": "Какво е Компютър?"
+        },
+        "csd1-2023/Storage": {
+          "name": "Съхранение"
+        },
+        "csd1-2023/Project - Propose an App": {
+          "name": "Проект - Предложете Приложение"
+        },
+        "csd3-2023/Variables": {
+          "name": "Променливи"
+        },
+        "csd3-2023/Sprites": {
+          "name": "Спрайт"
+        },
+        "csd3-2023/Sprite Properties": {
+          "name": "Свойства на Спрайта"
+        },
+        "csd3-2023/Text": {
+          "name": "Текст"
+        },
+        "csd3-2023/Conditionals": {
+          "name": "Условия"
+        },
+        "csd3-2023/Keyboard Input": {
+          "name": "Въвеждане от Клавиатурата"
+        },
+        "csd3-2023/Velocity": {
+          "name": "Скорост"
+        },
+        "csd3-2023/Collisions": {
+          "name": "Сблъсъци"
+        },
+        "csd3-2023/Functions": {
+          "name": "Функции"
+        },
+        "csd5-2023/Patterns and Representation": {
+          "name": "Модели и Представяне"
+        },
+        "csd5-2023/ASCII and Binary Representation": {
+          "name": "ASCII и Двоично Представяне"
+        },
+        "csd5-2023/Representing Images": {
+          "name": "Представяне на Изображения"
+        },
+        "csd5-2023/Combining Representations": {
+          "name": "Комбиниране на Представяния"
+        },
+        "csd5-2023/Keeping Data Secret": {
+          "name": "Пазене на Тайни Данни"
+        },
+        "csd5-2023/Project - Create a Representation": {
+          "name": "Проект - Създайте Представяне"
+        },
+        "csd5-2023/Problem Solving with Big Data": {
+          "name": "Решаване ма Проблеми с Големи Данни"
+        },
+        "csd6a-2023/Color LEDs": {
+          "name": "Цветни LEDs"
+        },
+        "csd6a-2023/Functions": {
+          "name": "Функции"
+        },
+        "csd6b-2023/Functions": {
+          "name": "Функции"
+        },
+        "csd7-2023/Introduction to AI Lab": {
+          "name": "Въведение в AI Lab"
+        },
+        "coursea-2023/Learn to Drag and Drop": {
+          "name": "Научете се да Плъзгате и Пускате"
+        },
+        "coursea-2023/Happy Maps": {
+          "name": "Щастливи карти"
+        },
+        "coursea-2023/Sequencing with Scrat": {
+          "name": "Последователност със Скрат",
+          "student_overview": "Прогеамирайте Скрат да стигне жълъда."
+        },
+        "coursea-2023/Programming with Rey and BB-8": {
+          "name": "Програмиране с Рей и BB-8"
+        },
+        "coursea-2023/Loops with Scrat": {
+          "name": "Цикли със Скрат"
+        },
+        "coursea-2023/The Big Event Jr": {
+          "name": "Голямото Събитие Jr."
+        },
+        "coursea-2023/End of Course Project": {
+          "name": "Проект за Края на Курса"
+        },
+        "courseb-2023/Digital Trails": {
+          "name": "Цифрова Следа"
+        },
+        "courseb-2023/Move It, Move It": {
+          "name": "Преместете го, преместете го"
+        },
+        "courseb-2023/Getting Loopy": {
+          "name": "Да повтаряме"
+        },
+        "courseb-2023/The Right App": {
+          "name": "Правилното Приложение"
+        },
+        "courseb-2023/The Big Event Jr": {
+          "name": "Голямото Събитие Jr."
+        },
+        "courseb-2023/Mini-Project: A Royal Battle with Events": {
+          "name": "Мини-Проект: Царска Битка със Събития"
+        },
+        "courseb-2023/End of Course Project": {
+          "name": "Проект за Края на Курса"
+        },
+        "coursec-2023/My Robotic Friends Jr": {
+          "name": "Моите Роботи Приятели Jr."
+        },
+        "coursec-2023/Collecting Treasure with Laurel": {
+          "preparation": "-   Играйте през пъзелите, за да намерите потенциални проблемни области за вашия клас."
+        },
+        "coursec-2023/My Loopy Robotic Friends Jr": {
+          "name": "Моите Циклични Приятели Роботи Jr."
+        },
+        "coursec-2023/Mini-Project: Sticker Art": {
+          "name": "Мини-Проект: Стикер Изкуство"
+        },
+        "coursec-2023/The Big Event": {
+          "name": "Голямото събитие"
+        },
+        "coursec-2023/Mini-Project: Chase Game": {
+          "name": "Мини-Проект: Игра на Гоненица"
+        },
+        "coursec-2023/Binary Bracelets": {
+          "name": "Двоични гривни"
+        },
+        "coursec-2023/End of Course Project": {
+          "name": "Проект за Края на Курса"
+        },
+        "coursed-2023/Graph Paper Programming": {
+          "name": "Програмиране на милиметрова хартия"
+        },
+        "coursed-2023/Relay Programming": {
+          "name": "Повтори програмирането"
+        },
+        "coursed-2023/Dance Party": {
+          "name": "Танцово Парти"
+        },
+        "coursed-2023/Loops in Ice Age": {
+          "name": "Цикли в Ледена Епоха"
+        },
+        "coursed-2023/Conditionals with Cards": {
+          "name": "Условия с карти"
+        },
+        "coursed-2023/End of Course Project": {
+          "name": "Проект за Края на Курса"
+        },
+        "coursee-2023/Private and Personal Information": {
+          "name": "Лична Информация"
+        },
+        "coursee-2023/Mini-Project: About Me": {
+          "name": "Мини-Проект: За Мен"
+        },
+        "coursee-2023/Fancy Shapes using Nested Loops": {
+          "name": "Готини Фигури използвайки Вложени Цикли"
+        },
+        "coursee-2023/Songwriting": {
+          "name": "Писане на песен"
+        },
+        "coursee-2023/Designing for Accessibility": {
+          "name": "Проектиране за Достъпност"
+        },
+        "coursee-2023/End of Course Project": {
+          "name": "Проект за Края на Курса"
+        },
+        "coursef-2023/The Power of Words": {
+          "name": "Силата на Думите"
+        },
+        "coursef-2023/Introducing Sprite Lab": {
+          "name": "Въведение в Sprite Lab",
+          "purpose": "Първият урок е да ентусиазирате учениците за курса и те да свържат собствените си интереси с компютърните науки. "
+        },
+        "coursef-2023/Sprites in Action": {
+          "name": "Спрайтове в Действие",
+          "preparation": "Играйте през нивата и прегледайте слайдовете на урока."
+        },
+        "coursef-2023/Mini-Project: Virtual Pet": {
+          "name": "Мини-Проект: Виртуален Домашен Любимец"
+        },
+        "coursef-2023/Text and Prompts": {
+          "preparation": "Играйте през нивата и прегледайте слайдовете на урока."
+        },
+        "coursef-2023/Mini-Project: User Input Programs": {
+          "name": "Мини-Проект: Програми за Вход от Потребител"
+        },
+        "coursef-2023/Simulating Experiments": {
+          "name": "Симулиране на Експерименти"
+        },
+        "coursef-2023/Outbreak": {
+          "name": "Епидемия"
+        },
+        "coursef-2023/AI For Oceans": {
+          "name": "ИТ За Океани"
+        },
+        "coursef-2023/The Internet": {
+          "name": "Интернет"
+        },
+        "coursef-2023/End of Course Project": {
+          "name": "Проект за Края на Курса"
+        },
+        "express-2023/Swimming Fish in Sprite Lab": {
+          "name": "Плуващи Риби в Sprite Lab"
+        },
+        "express-2023/Sprites in Action": {
+          "name": "Спрайтове в Действие",
+          "preparation": "Играйте през нивата и прегледайте слайдовете на урока."
+        },
+        "express-2023/Dance Party": {
+          "name": "Танцово Парти"
+        },
+        "express-2023/Mini-Project: Sticker Art": {
+          "name": "Мини-Проект: Стикер Изкуство"
+        },
+        "express-2023/Text and Prompts": {
+          "preparation": "Играйте през нивата и прегледайте слайдовете на урока."
+        },
+        "express-2023/For Loops with Bee": {
+          "name": "For Цикли с Пчелата"
+        },
+        "express-2023/End of Course Project": {
+          "name": "Проект за Края на Курса"
+        },
+        "pre-express-2023/Learn to Drag and Drop": {
+          "name": "Научете се да Плъзгате и Пускате"
+        },
+        "pre-express-2023/Sequencing with Scrat": {
+          "name": "Последователност със Скрат",
+          "student_overview": "Прогеамирайте Скрат да стигне жълъда."
+        },
+        "pre-express-2023/Programming with Rey and BB-8": {
+          "name": "Програмиране с Рей и BB-8"
+        },
+        "pre-express-2023/Loops with Scrat": {
+          "name": "Цикли със Скрат"
         },
         "aquatic/Aquatic": {
           "name": "Minecraft: Подводното пътешествие"
@@ -2065,12 +2404,6 @@
         "minecraft/Minecraft Hour of Code Designer": {
           "name": "Minecraft Hour of Code Дизайнер"
         },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
         "playlab/Play Lab": {
           "name": "Театрална лаборатория",
           "student_overview": "В този урок, учащите получават въведение на компютърните науки и създават игра използвайки базов блоков код."
@@ -2081,36 +2414,6 @@
         "text-compression/Text Compression": {
           "name": "Компресия на текста",
           "overview": "По някое време стигаме до физически лимит на колко бързо може да изпращаме битове, и ако искаме да изпратим много информация по-бързо, ние трябва да намерим начин да представим същата информация с по-малко бита - трябва да **компресираме** данните. В този урок, учениците ще използват Widget за Компресиране на Текст, за да компресират части от текст на Английски, като търсят модели и заместващи символи за по-дълги модели текст."
-        },
-        "applab-2hour/Digital Design": {
-          "name": "Дигитален Дизайн"
-        },
-        "netsim/Overview and Setup Instructions": {
-          "name": "Преглед и инструкции за инсталиране"
-        },
-        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
-          "name": "Peer to Peer - изпращане на битове на споделена връзка"
-        },
-        "netsim/Peer to Peer - Sending Ascii": {
-          "name": "Peer to Peer - изпращане на Ascii"
-        },
-        "netsim/Broadcasting messages": {
-          "name": "Съобщения за излъчване"
-        },
-        "netsim/Routers and addresses": {
-          "name": "Маршрутизатори и адреси"
-        },
-        "netsim/Packets and Reliability": {
-          "name": "Пакети и надеждност"
-        },
-        "netsim/Manual DNS": {
-          "name": "Ръчен DNS"
-        },
-        "netsim/Internet Simulator Freeplay": {
-          "name": "Интернет симулатор ФрийПлей"
-        },
-        "odometer/Odometer Widget": {
-          "name": "Крачкомер"
         },
         "allthethings/Jigsaw": {
           "name": "Мозайка"
@@ -2201,6 +2504,9 @@
         },
         "allthethings/lesson-49": {
           "name": "Музика"
+        },
+        "applab-2hour/Digital Design": {
+          "name": "Дигитален Дизайн"
         },
         "20-hour/Introduction to Computer Science": {
           "name": "Въведение в компютърните науки"
@@ -2502,8 +2808,38 @@
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Екстремно предизвикателство - подробности"
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Час на кодирането 2013"
+        },
         "jigsaw/Jigsaw": {
           "name": "Мозайка"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "Преглед и инструкции за инсталиране"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "Peer to Peer - изпращане на битове на споделена връзка"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "Peer to Peer - изпращане на Ascii"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "Съобщения за излъчване"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Маршрутизатори и адреси"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "Пакети и надеждност"
+        },
+        "netsim/Manual DNS": {
+          "name": "Ръчен DNS"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "Интернет симулатор ФрийПлей"
+        },
+        "odometer/Odometer Widget": {
+          "name": "Крачкомер"
         },
         "pixelation/Black & White Pixelation Tutorial": {
           "name": "Черно & бяла пикселизация урок"
@@ -2513,6 +2849,9 @@
         },
         "pixelation/Color Pixelation Examples": {
           "name": "Цветна пикселизация примери"
+        },
+        "ai-ethics-2023/lesson-1": {
+          "overview": "Този урок се основава на предишни дейности, включващи изследвания и намиране на източници за обосноваване на аргумент. В малки групи студентите провеждат изследвания, използвайки видеоклипове и статии, които разкриват етични клопки в областта на изкуствен интелект (AI) по техен избор. След това има възможности за това как ученижите синтезират наученото, за да могат да дадат препоръки за това как изкуствения интелект може да се използва в обществото: създаване на Етичен кодекс на на изкуствения интелект, създавате на AI манифест или проектиране на художествено представяне „Представете си света”."
         }
       }
     }

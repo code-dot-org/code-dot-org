@@ -16,8 +16,8 @@ title: מדריך Hour of Code לחברות
 
 בדקו את השלבים הבאים כדי להתחיל, וראו את [ המדריך שלנו לשותפים ארגוניים ](/files/hoc-corporate-toolkit.pdf)למידע נוסף על איך לגרום לחברה שלכם להתרגש מה-Hour of Code.
 
-- [Connect with a local school](#connect-with-a-school)
-- [Encourage employees to volunteer with a classroom](#encourage-employees)
+- [צור קשר עם בית ספר מקומי](#connect-with-a-school)
+- [עודדו את העובדים להתנדב עם כיתה](#encourage-employees)
 - [ארחו אירוע Hour of Code משלכם](#host-hour-of-code)
 - [Promote the Hour of Code](#promote-hour-of-code)
 - [דרכים נוספות לתמוך ב-Hour of Code](#support-hour-of-code)
@@ -26,31 +26,31 @@ title: מדריך Hour of Code לחברות
 
 <a id="connect-with-a-school"></a>
 
-## Connect with a local school
+## צור קשר עם בית ספר מקומי
 
-It's always best to start locally, with schools that you or your employees have a strong connection to, like an alma mater, a child’s school, or a local organization or school that is focused on serving a population that has been historically underrepresented in computer science.
+תמיד עדיף להתחיל באופן מקומי, עם בתי ספר שיש לך או לעובדים שלך קשר חזק אליהם, כמו אלמה מאטר, בית ספר לילדים, או ארגון או בית ספר מקומי המתמקדים בשירות אוכלוסייה שלא הייתה מיוצגת מבחינה היסטורית במדעי המחשב.
 
 [![](/images/fit-600/Marketing/2018_HoC-392.jpg)]({{ urls/learn }})
 
-From there, you can visit the school’s website to find appropriate contacts to reach out to, like a principal, vice principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations like the Boys & Girls Clubs of America, a YMCA branch, and more to co-host an event.
+משם תוכלו לבקר באתר בית הספר כדי למצוא אנשי קשר מתאימים לפנות אליהם, כמו מנהל, סגן מנהל, מדריכי טכנולוגיה או מדעי המחשב, או אפילו ה- PTSA של בית הספר. אתה יכול גם לשתף פעולה עם ארגונים כמו מועדוני & הבנות הבנים של אמריקה, סניף YMCA ועוד כדי לארח אירוע משותף.
 
-If you are unable to connect with a school, please [contact us](https://support.code.org/hc/en-us/requests/new) and we’ll connect you with one of our local partners if possible.
+אם אינכם מצליחים להתחבר לבית ספר, אנא [צרו איתנו קשר ](https://support.code.org/hc/en-us/requests/new)ואנו נחבר אתכם עם אחד מהשותפים המקומיים שלנו במידת האפשר.
 
 * * *
 
 <a id="encourage-employees"></a>
 
-## Encourage employees to volunteer with a classroom
+## עודדו את העובדים להתנדב עם כיתה
 
 [![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
 
-One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology has impacted your role.
+אחת הדרכים המספקות ביותר להשתתף ב-Hour of Code היא להתנדב בכיתה מקומית, באופן אישי או וירטואלי. והטוב ביותר הוא שאינכם צריכים להיות מהנדסים כדי להתנדב. אתה עדיין יכול לספק חוויה משמעותית לסטודנטים על ידי שיתוף ניסיון הקריירה שלך וכיצד מדעי המחשב או הטכנולוגיה השפיעו על תפקידך.
 
 [<button>הירשמו להתנדבות</button>]({{ urls/volunteer }})
 
-Once a volunteer registers, a teacher can review their profile on our [volunteer map](https://code.org/volunteer/local) - so profiles should be submitted as complete as possible. If you’re a good fit for their classroom, a teacher will contact you through the platform (we will never share your email address with the teacher). You can then coordinate details directly with the teacher around [how to best volunteer with their classroom](https://hourofcode.com/us/how-to/volunteers).
+ברגע שמתנדב/ת נרשמ/ת, מורה יכול לבדוק את הפרופיל שלו [ במפת המתנדבים שלנו ](https://code.org/volunteer/local) - לכן יש להקפיד על שליחת הפרופילים מלאים עד כמה שניתן. אם תתאימו לכיתה, מורה יצור איתכם קשר באמצעות הפלטפורמה (לעולם לא נשתף את כתובת המייל שלך עם המורה). לאחר מכן תוכלו לתאם פרטים ישירות עם המורה [ בנוגע לאיך להתנדב בצורה הטובה ביותר עם הכיתה שלו/ה](https://hourofcode.com/us/how-to/volunteers).
 
-For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
+להדרכה נוספת על התנדבות והעברת הודעות לדוגמה כדי לגרום לחברה שלך להתרגש מ-Hour of Code, עיינו [במדריך שלנו לשותפים ארגוניים]({{ localized_files/hoc_corporate_toolkit }}).
 
 * * *
 
@@ -138,7 +138,7 @@ After students or guests have completed their Hour of Code, it’s time to celeb
     
     ### 1. רישמו את האירוע שלכם
     
-    When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local schools or parents know that you’re hosting an event near them.
+    כשאתה נר [שם לאירוע Hour of Code שלך](/events), תקבל הודעות דוא"ל מועילות עם חדשות וטיפים לאירוח שעת קוד מוצלחת. It’s also how you can let local schools or parents know that you’re hosting an event near them.
     
     ### 2. העלו פוסט ברשת חברתית
     
@@ -167,7 +167,7 @@ After students or guests have completed their Hour of Code, it’s time to celeb
     
     
 
-<a href="https://hourofcode.com/promote/resources#posters">Find more</a> posters, videos, stickers and other ways to promote your event to your community.
+<a href="https://hourofcode.com/promote/resources#posters">מצא עוד</a> פוסטרים, סרטונים, מדבקות ודרכים אחרות לקדם את האירוע שלך לקהילה שלך.
     
     * * *
     

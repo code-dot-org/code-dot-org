@@ -1,0 +1,63 @@
+:ruby
+  slide_item = [
+    {
+      title: hoc_s(:minecraft_cdo_activity_title_aquatic),
+      image: "/images/mc/minecraft-activity-aquatic.png",
+      desc: hoc_s(:minecraft_cdo_activity_desc_aquatic),
+      url: CDO.studio_url("/s/aquatic/lessons/1/levels/1"),
+      url_lesson: CDO.studio_url("/s/aquatic"),
+      aria_label: hoc_s(:aria_label_call_to_action_minecraft_aquatic),
+      aria_label_lesson: hoc_s(:aria_label_call_to_action_minecraft_aquatic_lesson),
+    },
+    {
+      title: hoc_s(:minecraft_cdo_activity_title_journey),
+      image: "/images/mc/minecraft-activity-journey.png",
+      desc: hoc_s(:minecraft_cdo_activity_desc_journey),
+      url: CDO.studio_url("/s/hero/lessons/1/levels/1"),
+      url_lesson: CDO.studio_url("/s/hero"),
+      aria_label: hoc_s(:aria_label_call_to_action_minecraft_journey),
+      aria_label_lesson: hoc_s(:aria_label_call_to_action_minecraft_journey_lesson)
+    },
+    {
+      title: hoc_s(:minecraft_cdo_activity_title_adventurer),
+      image: "/images/mc/minecraft-activity-adventurer.png",
+      desc: hoc_s(:minecraft_cdo_activity_desc_adventurer),
+      url: CDO.studio_url("/s/mc/lessons/1/levels/1"),
+      url_lesson: CDO.studio_url("/s/mc"),
+      aria_label: hoc_s(:aria_label_call_to_action_minecraft_adventurer),
+      aria_label_lesson: hoc_s(:aria_label_call_to_action_minecraft_adventurer_lesson)
+    },
+    {
+      title: hoc_s(:minecraft_cdo_activity_title_designer),
+      image: "/images/mc/minecraft-activity-designer.png",
+      desc: hoc_s(:minecraft_cdo_activity_desc_designer),
+      url: CDO.studio_url("/s/minecraft/lessons/1/levels/1"),
+      url_lesson: CDO.studio_url("/s/minecraft"),
+      aria_label: hoc_s(:aria_label_call_to_action_minecraft_designer),
+      aria_label_lesson: hoc_s(:aria_label_call_to_action_minecraft_designer_lesson)
+    },
+  ]
+
+.carousel-wrapper#minecraft_cdo_activities
+  .carousel.blocks
+    .slides
+      - slide_item.each do |slide_item|
+        .slide
+          .slide-content
+            .action-block.action-block--one-col
+              .content-wrapper
+                %p.overline
+                  =hoc_s(:module_label_grades)
+                  =hoc_s(:module_grade_2_12)
+                %h3
+                  = slide_item[:title]
+                %img{src: "#{slide_item[:image]}", alt: ""}
+                %p.body-three.no-margin-bottom
+                  = slide_item[:desc]
+              .content-footer
+                %a.link-button{href: "#{slide_item[:url]}", "aria-label": "#{slide_item[:aria_label]}"}
+                  =hoc_s(:call_to_action_get_started)
+                %a.link-button.secondary{href: "#{slide_item[:url_lesson]}", "aria-label": "#{slide_item[:aria_label_lesson]}"}
+                  =hoc_s(:call_to_action_view_lesson_plan)
+
+  = view :carousel_pagination, carousel_id: "minecraft_cdo_activities-pagination", carousel_index: "1"

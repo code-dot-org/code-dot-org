@@ -4,55 +4,55 @@ title: Mall för brev som uppmuntrar till deltagande på Computer Science Educat
 
 {{ signup_button }}
 
-# Sample Computer Science Education Week resolution
+# Exempel på Computer Science Education Week resolution
 
-### Below is language for a sample resolution supportive of Computer Science Education Week and its goals that can be used by state and local legislators.
+### Nedan finns språk för en provupplösning som stöder Computer Science Education Week och dess mål som kan användas av statliga och lokala lagstiftare.
 
 * * *
 
-#### **RESOLUTION**  
+#### **UPPLÖSNING**  
 
 
-#### Supporting the goals and ideals of "Computer Science Education Week"
+#### Stödja målen och idealen för ”Computer Science Education Week”
 
-Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
+Computer Science Education Week belyser den avgörande roll som datavetenskap spelar för att förändra vårt samhälle och hur datavetenskap möjliggör innovation och skapar ekonomiska möjligheter.
 
-Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
+Datorteknik är en integrerad del av den moderna kulturen och förändrar hur människor interagerar med varandra och världen omkring dem.
 
-Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
+Datavetenskap förändrar industrin, skapar nya handelsområden, driver innovation inom alla vetenskapsområden och stärker produktiviteten inom etablerade ekonomiska sektorer.
 
-Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
+Datavetenskapsområdet är ett grundläggande ämne som ligger till grund för informationsteknologisektorn i vår ekonomi, som är en betydande bidragsgivare till USA: s ekonomiska produktion.
 
-Whereas the field of computer science is a foundational science for the digital age;
+Artificiell intelligens läskunnighet avser de kunskaper, färdigheter och attityder som är förknippade med hur artificiell intelligens fungerar, inklusive grundläggande begrepp inom datavetenskap, och hur man använder artificiell intelligens på ett säkert, ansvarsfullt och etiskt sätt.
 
-Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
+Datavetenskapens område, inklusive artificiell intelligens, är teknik med befogenhet att i grunden omvandla nästan alla sektorer av Förenta staternas ekonomi.
 
-Whereas the outlook for computer science jobs is bright with over 500,000 open computing positions across the country;
+Tekniskt ledarskap inom alla områden inom datavetenskap, inklusive artificiell intelligens, är ett krav på ekonomisk och nationell säkerhet.
 
-Whereas providing students the chance to participate in high-quality computer science activities exposes them to the rich opportunities the field offers and provides critical thinking skills that will serve them throughout their lives;
+Utsikterna för datavetenskapliga jobb är ljusa med över 500 000 öppna datorpositioner över hela landet.
 
-Whereas all students deserve a thorough preparation in computer science education, including access to the qualified teachers, technology, and age-appropriate curriculum needed to learn computer science at the elementary and secondary levels of education;
+Att ge studenterna möjlighet att delta i datavetenskapliga aktiviteter av hög kvalitet utsätter dem för de rika möjligheter som fältet erbjuder och ger kritiskt tänkande färdigheter som kommer att tjäna dem under hela deras liv.
 
-Whereas computer science education has challenges to address, including counting computer science classes towards high school graduation requirements, and providing professional development for computer science teachers;
+Alla elever förtjänar en grundlig förberedelse i datavetenskaplig utbildning, inklusive tillgång till kvalificerade lärare, teknik och åldersanpassad läroplan som behövs för att lära sig datavetenskap på grundnivå och sekundär nivå.
 
-Whereas participating in an Hour of Code during Computer Science Education Week can serve to demystify the field of computer science and encourage more students to take up further studies of computer science;
+Datavetenskaplig utbildning har utmaningar att ta itu med, bland annat att förbättra tillgången till datavetenskapliga kurser för alla studenter och tillhandahålla professionell utveckling för lärare i datavetenskap.
 
-Whereas the field of computer science has significant equity barriers to address, including attracting more participation by females and underrepresented minorities to all levels and branches;
+Att delta i en Hour of Code under Computer Science Education Week kan tjäna till att avmystifiera området datavetenskap och uppmuntra fler studenter att fortsätta studera datavetenskap.
 
-Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
+Datavetenskapsområdet har betydande rättvisehinder att ta itu med, bland annat att attrahera och behålla ett område med kandidater som är olika i ras, etnicitet och kön på alla nivåer och grenar.
 
-Whereas the week of {{ campaign_date/start_long }}, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it <br />
+Medan Grace Murray Hopper, en av de första kvinnorna inom datavetenskap, konstruerade nya programmeringsspråk och banade väg för standarder för datorsystem som lade grunden för många framsteg inom datavetenskap; och
 
-Resolved, That the (HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD) --
+Medan veckan för {{ campaign_date/start_long }}, för att hedra Grace Hoppers födelsedag, betecknas som ”Computer Science Education Week”: Nu, därför, vare sig det <br />
 
-(1) supports the designation of Computer Science Education Week ({{ campaign_date/full }});
+Löst, att (HUS ELLER SENAT, STAT, LÄN, STAD ELLER SKOLSTYRELSE) -
 
-(2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
+(1) stöder utnämningen av Computer Science Education Week ({{ campaign_date/full }});
 
-(3) encourages schools, teachers, researchers, universities, business leaders, and policymakers to identify mechanisms for teachers to receive cutting edge professional development to provide sustainable learning experiences in computer science at all educational levels and encourage students to be exposed to computer science concepts;
+(2) uppmuntrar skolor, lärare, föräldrar och beslutsfattare att delta i Computer Science Education Week genom att göra det möjligt för sina elever att delta i Hour of Code;
 
-(4) encourages policymakers to remove barriers that prevent computer science classes from being counted as math or science credits toward graduation requirements;
+(3) uppmuntrar skolor, lärare, forskare, universitet, företagsledare och beslutsfattare att identifiera mekanismer för lärare att få avancerad professionell utveckling för att tillhandahålla hållbara inlärningserfarenheter inom datavetenskap på alla utbildningsnivåer och uppmuntra studenter att exponeras för datavetenskapliga begrepp.
 
-(5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
+(4) uppmuntrar möjligheter, bland annat genom befintliga program, för kvinnliga studenter och studenter från ras- och etniska grupper underrepresenterade inom datavetenskap.
 
 {{ signup_button }}

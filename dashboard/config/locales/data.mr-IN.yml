@@ -204,12 +204,14 @@ mr:
         artist_intro: आर्टीस्ट प्रस्तावना
         c_and_c_digital_sharing: डिजिटल शेअरिंग
         c_and_c_great_to_create: फेअर तयार करणे आणि प्ले करणे खूप छान आहे
+        code-break: कोड ब्रेक घ्या
         csc-ecosystems-intro: मरीन इकोसिस्टम सिम्युलेशन
         csc-poem-art-intro: परिचय व्हिडिओ
         csc-poem-art-outro: आऊट्रो व्हिडिओ
         csc-starquilts-intro: जिओमेट्रिक स्टार क्विल्ट कोडिंग
         csc_timecapsule_intro: टाइम कॅप्सूल कोडिंग
         csd_debugging: डीबगिंग
+        csd_ml_how_ai_works: AI कसे कार्य करते
         csd_pair_programming: पेअर प्रोग्रामिंग
         csd_sprite_properties: स्प्राईट प्रॉपर्टीज
         csd_u6_call_define_functions: 'CSD: कॉल करणे आणि कार्ये परिभाषित करणे'
@@ -263,3 +265,4 @@ mr:
         starwars_events: 'स्टार वॉर्स: कोड वापरून आकाशगंगा तयार करणे - इव्हेंट्स'
         starwars_intro: 'स्टार वॉर्स: कोड वापरून आकाशगंगा तयार करणे - प्रस्तावना '
         starwars_typing: 'स्टार वॉर्स: कोड वापरून आकाशगंगा तयार करणे - जावास्क्रिप्ट'
+        what-is-creativity: सर्जनशीलता म्हणजे काय?

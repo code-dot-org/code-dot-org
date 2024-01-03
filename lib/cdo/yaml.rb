@@ -4,7 +4,7 @@ require 'cdo/erb'
 module Cdo
   # Extend YAML with customizations.
   module YAMLExtension
-    def parse_yaml_header(content, locals={})
+    def parse_yaml_header(content, locals = {})
       match = content.match(/\A\s*^(?<yaml>---\s*\n.*?\n?)^(---\s*$\n?)/m)
       return [{}, content] unless match
 
@@ -27,7 +27,7 @@ module Cdo
     # `YAML.safe_load`. And because we do some complicated and potentially
     # dangerous things in the various `config.yml.erb` files loaded by this
     # method, we need to do so.
-    def load_erb_file(path, binding=nil)
+    def load_erb_file(path, binding = nil)
       # rubocop:disable Security/YAMLLoad
       YAML.load(erb_file_to_string(path, binding), path)
       # rubocop:enable Security/YAMLLoad

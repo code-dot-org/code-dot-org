@@ -18,7 +18,7 @@ def get_rows
     application_year: Pd::Application::ActiveApplicationModels::APPLICATION_CURRENT_YEAR
   ).where.not(status: 'incomplete').find_each do |app|
     stats = app.get_latest_school_stats(app.school_id)
-    pay_fee = app.sanitized_form_data_hash[:principal_pay_fee] || app.sanitized_form_data_hash[:pay_fee]
+    pay_fee = app.sanitized_form_data_hash[:pay_fee]
     frl_percent = stats&.frl_eligible_percent
     # principal data is stored as a string with % at the end. Convert to float
     if app.sanitized_form_data_hash[:principal_free_lunch_percent]

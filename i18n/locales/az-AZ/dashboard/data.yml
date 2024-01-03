@@ -688,8 +688,56 @@ az:
         csa_nested_loops: "CSA: Nested Loops\nCSA: İç-içə Döngələr"
         csa_one_dimensional_arrays: "CSA: Bir Ölçülü (1D) Massivlər\nCSA: Bir Ölçülü (1D) Arrays"
         csa_polymorphism: 'CSA: Polimorfizm'
+        csa_casting: 'CSA: Döküm'
+        csa_equals_and_aliases: 'CSA: Bərabər və ləqəblər'
+        csa_multi-selection_statements: 'CSA: Çox Seçim Hesabatları'
+        csa_random_numbers: 'CSA: Təsadüfi Nömrələr'
+        csa_static_methods: 'CSA: Statik Metodlar'
+        csa_static_variables: 'CSA: Statik Dəyişənlər'
+        csa_the_equals_method: 'CSA: bərabər () metodu'
+        csa_welcome_to_the_theater: 'CSA: Teatra xoş gəlmisiniz'
+        enter_your_own_poem: Öz Şeirinizi Daxil Edin
+        csa-example-solution-1: 'Canlı Kodlaşdırma Nümunə Həll'
         csd_sprite_properties: Sprite Xüsusiyyətləri
+        csa-pl-documentation: Java laboratoriyasında sənədlər
+        csa-pl-vocab-pm: Layihə İdarəetmə lüğəti
         csc-ecosystems-intro: Ekosistemlər Modulu
+        PL_CSD_MicroBit_Intro: Micro:bit-ə giriş
+        csa_two_dimensional_arrays: 'CSA: İki Ölçülü (2D) Massivlər'
+        csa_working_with_2d_array_elements: 'CSA: 2D Array Elementləri ilə işləmək'
+        csa_row_major_traversal: 'CSA: Sıra-Major Traversal'
+        csa_column_major_traversal: 'CSA: Sütun-Əsas keçid'
+        csa_enhanced_for_loops_and_2d_arrays: 'CSA: Döngələr və 2D massivlər üçün təkmilləşdirilmiş'
+        csa_images_and_pixels: 'CSA: Şəkillər və Piksellər'
+        csa_wrapper_classes_part_1: 'CSA: Paketləyici Siniflər 1-ci Hissə'
+        csa_wrapper_classes_part_2: 'CSA: Paketləyici Siniflər 2-ci Hissə'
+        csa_the_arraylist_class: 'CSA: ArrayList Sinfi'
+        csa_working_with_arraylist_data: 'CSA: ArrayList Data ilə işləmək'
+        csa_remving_data_from_an_arraylist: 'CSA: ArrayList-dən məlumatların çıxarılması'
+        csa_private_methods: 'CSA: Şəxsi Metodlar'
+        csa_recursion: 'CSA: Rekursiya'
+        csa_searching_algorithms: 'CSA: Axtarış alqoritmləri'
+        csa_sorting_algorithms: 'CSA: Çeşidləmə Alqoritmləri'
+        star_quilts_intro_to_artist: 'Ulduz yorğanları: Sənətçiyə giriş'
+        upload_sprites_backgrounds: Xüsusi spraytların və arxa planların yüklənilməsi
+        PL_CSD_EquityBlindSpotsvid: Qərəz və Məsuliyyət
+        how-ai-works-llms-full: Chat (çət) botları və böyük dil modelləri necə işləyir?
+        how-ai-works-creativity-full: Süni İntellektin yaradıcılığı və təsəvvürü varmı?
+        how-ai-works-llms-part1: Chat (çət) botları və böyük dil modelləri - 1-ci hissə
+        how-ai-works-llms-part2: Chat (çət) botları və böyük dil modelləri - 2-ci hissə
+        llms-cobranded: 'Süni intellek necə işləyir: Chat (çət) botları və böyük dil modelləri'
+        generative-ai-cobranded: 'Süni intellek necə işləyir: Yaradıcı Sİ (süni intellekt)'
+        csa-overview: AP kompüter elmlərinə yeni yanaşma A
+        what-is-creativity: Yaradıcılıq nədir?
+        poetry-programming: Poeziya və Proqramlaşdırma
+        push-yourself: Limiltərini sına. Hamı öyrənə bilər.
+        classic-maze-intro: Klassik Labirint - Giriş
+        code-break: Kode Fasilə edin
+        blockchain-introd: 'Blockchain necə işləyir: Giriş'
+        ai-ethis: Etika və Süni İntellekt
+        how-ai-works-lessons: 'Süni intellekt (Sİ) necə işləyir: Ön baxış'
+        se-cv-intro-to-lessons: 'Proqram təminatı mühəndisliyi və kompüter görməsi: dərslərə giriş'
+        csd_ml_how_ai_works: Süni İntelekt (Sİ) necə işləyir? 
     callout:
       text:
         drag_blocks: '"Get" blokunu sürükləyib şıqqıltı ilə digər blokun aşağısına yapışdırın'

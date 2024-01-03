@@ -1,0 +1,114 @@
+{
+  "banners": {
+    "csleadersprize": {
+      "title": "",
+      "body": "",
+      "buttonText": "اعرف المزيد"
+    },
+    "csjourneys-22": {
+      "title": "",
+      "body": "",
+      "buttonText": "اعرف المزيد"
+    },
+    "hoc-more": {
+      "title": "",
+      "body": "يحتوي موقع Hour of Code \"ساعة من البرمجة\" على أكثر من 100 نشاط في علم الحاسوب لجميع الأعمار ومستويات الخبرة التي طورها موقع Code.org وشركاؤه.",
+      "buttonText": ""
+    },
+    "superhero": {
+      "title": "",
+      "body": "",
+      "buttonText": "تعلّم المزيد"
+    },
+    "csjourneys": {
+      "title": "",
+      "body": "",
+      "buttonText": "اعرف المزيد"
+    },
+    "class-schedule-survey": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "back-to-school-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "اعرف المزيد"
+    },
+    "teacher-apps-open-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "انضم إلينا"
+    },
+    "teacher-apps-closing-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "انضم إلينا"
+    },
+    "teacher-apps-nominate-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "ترشيح معلم"
+    },
+    "teacher-apps-stillon-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "انضم إلينا"
+    },
+    "home-learning-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "اعرض أفكار المشروع"
+    },
+    "soonhoc-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "codebytes-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "اعرف المزيد"
+    },
+    "ai-2020": {
+      "title": "اكتشف الذكاء الاصطناعي والتعلم الآلي",
+      "body": "",
+      "buttonText": "اعرف المزيد"
+    },
+    "congrats-certificate-share": {
+      "title": "",
+      "body": "",
+      "buttonText": "إبدأ"
+    },
+    "coldplay": {
+      "title": "",
+      "body": "",
+      "buttonText": "جربها"
+    },
+    "ai-launch-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": "اعرف المزيد"
+    },
+    "ai-pl-launch-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": "اعرف المزيد"
+    },
+    "state-of-cs-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "hoc-2023": {
+      "title": "ساعة البرمجة: الإبداع مع الذكاء الاصطناعي",
+      "body": "انضم إلى الملايين في جميع أنحاء العالم لتنظيم أنشطة \"ساعة البرمجة\"، باستخدام الذكاء الاصطناعي أو بدونه وتعلم كيفية عمل الذكاء الاصطناعي. يمكن لأي شخص في أي مكان القيام بذلك. ليس هناك حاجة للخبرة.",
+      "buttonText": "اعرف المزيد"
+    },
+    "hoc-2023-dance-ai": {
+      "title": "حفلة الرقص: إصدار الذكاء الاصطناعي",
+      "body": "تعرف على مفاهيم الذكاء الاصطناعي لإنشاء حفلة رقص افتراضية خاصة بك تعرض أفضل الفنانين المعاصرين. مع عشرات الأغاني للاختيار من بينها، يمكنك الوصول إلى كل طالب بغض النظر عن ذوقه الموسيقي. حان الوقت لاستعراض مهاراتك!",
+      "buttonText": "اعرف المزيد"
+    }
+  }
+}

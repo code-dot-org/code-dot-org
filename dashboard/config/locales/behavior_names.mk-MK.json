@@ -79,6 +79,19 @@
           "spinning right": "се врти десно",
           "wandering": "талкање"
         },
+        "CourseE_Project_SpriteLab_2023": {
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање"
+        },
         "CourseE_Project_SpriteLab_cupcake_examples2022": {
           "driving with arrow keys": "возење со стрелките на тастатурата",
           "fluttering": "разлетувањето",
@@ -117,6 +130,25 @@
           "wandering": "талкање",
           "wobbling": "колебливи"
         },
+        "CourseE_Project_SpriteLab_cupcake_examples_2023": {
+          "driving with arrow keys": "возење со стрелките на тастатурата",
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "moving with arrow keys": "се движат со стрелките на тастатурата",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
         "CourseE_Project_SpriteLab_examples2022": {
           "driving with arrow keys": "возење со стрелките на тастатурата",
           "fluttering": "разлетувањето",
@@ -137,6 +169,25 @@
           "wobbling": "колебливи"
         },
         "CourseE_Project_SpriteLab_examples_2021": {
+          "driving with arrow keys": "возење со стрелките на тастатурата",
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "moving with arrow keys": "се движат со стрелките на тастатурата",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
+        "CourseE_Project_SpriteLab_examples_2023": {
           "driving with arrow keys": "возење со стрелките на тастатурата",
           "fluttering": "разлетувањето",
           "growing": "расте",
@@ -232,16 +283,25 @@
         "CourseF_outbreak1_-2022-2": {
           "wandering": "талкање"
         },
+        "CourseF_outbreak1_2023": {
+          "wandering": "талкање"
+        },
         "CourseF_outbreak2": {
           "wandering": "талкање"
         },
         "CourseF_outbreak2_-2022-2": {
           "wandering": "талкање"
         },
+        "CourseF_outbreak2_2023": {
+          "wandering": "талкање"
+        },
         "CourseF_outbreak3": {
           "wandering": "талкање"
         },
         "CourseF_outbreak3_-2022-2": {
+          "wandering": "талкање"
+        },
+        "CourseF_outbreak3_2023": {
           "wandering": "талкање"
         },
         "CourseF_outbreak4": {
@@ -272,16 +332,36 @@
           "spinning right": "се врти десно",
           "wandering": "талкање"
         },
+        "CourseF_outbreak4_2023": {
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving with arrow keys": "се движат со стрелките на тастатурата",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање"
+        },
         "CourseF_outbreak5": {
           "wandering": "талкање"
         },
         "CourseF_outbreak5_-2022-2": {
           "wandering": "талкање"
         },
+        "CourseF_outbreak5_2023": {
+          "wandering": "талкање"
+        },
         "CourseF_outbreak6": {
           "wandering": "талкање"
         },
         "CourseF_outbreak6_-2022-2": {
+          "wandering": "талкање"
+        },
+        "CourseF_outbreak6_2023": {
           "wandering": "талкање"
         },
         "CourseF_outbreak7": {
@@ -312,6 +392,20 @@
           "spinning right": "се врти десно",
           "wandering": "талкање"
         },
+        "CourseF_outbreak7_2023": {
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving with arrow keys": "се движат со стрелките на тастатурата",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање"
+        },
         "CourseF_outbreak8": {
           "growing": "расте",
           "jittering": "нервоза",
@@ -327,6 +421,20 @@
           "wandering": "талкање"
         },
         "CourseF_outbreak8_-2022-2": {
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving with arrow keys": "се движат со стрелките на тастатурата",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање"
+        },
+        "CourseF_outbreak8_2023": {
           "growing": "расте",
           "jittering": "нервоза",
           "moving east": "се движат на исток",
@@ -653,6 +761,18 @@
           "spinning right": "се врти десно",
           "wandering": "талкање"
         },
+        "Fish Tank 2-validated_2023": {
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning right": "се врти десно",
+          "wandering": "талкање"
+        },
         "Fish Tank 3-validated2022": {
           "growing": "расте",
           "jittering": "нервоза",
@@ -690,6 +810,18 @@
           "wandering": "талкање"
         },
         "Fish Tank 3-validated_2021": {
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning right": "се врти десно",
+          "wandering": "талкање"
+        },
+        "Fish Tank 3-validated_2023": {
           "growing": "расте",
           "jittering": "нервоза",
           "moving east": "се движат на исток",
@@ -749,6 +881,18 @@
           "spinning right": "се врти десно",
           "wandering": "талкање"
         },
+        "Fish Tank 4-validated_2023": {
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning right": "се врти десно",
+          "wandering": "талкање"
+        },
         "Fish Tank 5-validated2022": {
           "growing": "расте",
           "jittering": "нервоза",
@@ -797,6 +941,18 @@
           "spinning right": "се врти десно",
           "wandering": "талкање"
         },
+        "Fish Tank 5-validated_2023": {
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning right": "се врти десно",
+          "wandering": "талкање"
+        },
         "Fish Tank 6-validated2022": {
           "growing": "расте",
           "jittering": "нервоза",
@@ -834,6 +990,18 @@
           "wandering": "талкање"
         },
         "Fish Tank 6-validated_2021": {
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning right": "се врти десно",
+          "wandering": "талкање"
+        },
+        "Fish Tank 6-validated_2023": {
           "growing": "расте",
           "jittering": "нервоза",
           "moving east": "се движат на исток",
@@ -969,6 +1137,25 @@
           "wandering": "талкање",
           "wobbling": "колебливи"
         },
+        "Virtual Pet 1_2023": {
+          "driving with arrow keys": "возење со стрелките на тастатурата",
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "moving with arrow keys": "се движат со стрелките на тастатурата",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
         "Virtual Pet 2": {
           "growing": "расте",
           "jittering": "нервоза",
@@ -1034,6 +1221,19 @@
           "spinning right": "се врти десно",
           "wandering": "талкање"
         },
+        "Virtual Pet 2_2023": {
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање"
+        },
         "Virtual Pet 3_-2022-2": {
           "growing": "расте",
           "jittering": "нервоза",
@@ -1074,6 +1274,19 @@
           "wandering": "талкање"
         },
         "Virtual Pet 3_2021": {
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање"
+        },
+        "Virtual Pet 3_2023": {
           "growing": "расте",
           "jittering": "нервоза",
           "moving east": "се движат на исток",
@@ -1460,6 +1673,19 @@
           "spinning right": "се врти десно",
           "wandering": "талкање"
         },
+        "courseE_aboutme_2_2023": {
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање"
+        },
         "courseE_aboutme_3": {
           "growing": "расте",
           "jittering": "нервоза",
@@ -1500,6 +1726,19 @@
           "wandering": "талкање"
         },
         "courseE_aboutme_3_2021": {
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање"
+        },
+        "courseE_aboutme_3_2023": {
           "growing": "расте",
           "jittering": "нервоза",
           "moving east": "се движат на исток",
@@ -1564,6 +1803,19 @@
           "spinning right": "се врти десно",
           "wandering": "талкање"
         },
+        "courseE_aboutme_4_2023": {
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање"
+        },
         "courseE_aboutme_5": {
           "growing": "расте",
           "jittering": "нервоза",
@@ -1604,6 +1856,19 @@
           "wandering": "талкање"
         },
         "courseE_aboutme_5_2021": {
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање"
+        },
+        "courseE_aboutme_5_2023": {
           "growing": "расте",
           "jittering": "нервоза",
           "moving east": "се движат на исток",
@@ -1664,6 +1929,22 @@
           "wandering": "талкање",
           "wobbling": "колебливи"
         },
+        "courseF_apps_aquarium_2023": {
+          "driving with arrow keys": "возење со стрелките на тастатурата",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving with arrow keys": "се движат со стрелките на тастатурата",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
         "courseF_apps_card": {
           "driving with arrow keys": "возење со стрелките на тастатурата",
           "growing": "расте",
@@ -1695,6 +1976,21 @@
           "wandering": "талкање"
         },
         "courseF_apps_card_-2022-2": {
+          "driving with arrow keys": "возење со стрелките на тастатурата",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving with arrow keys": "се движат со стрелките на тастатурата",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање"
+        },
+        "courseF_apps_card_2023": {
           "driving with arrow keys": "возење со стрелките на тастатурата",
           "growing": "расте",
           "jittering": "нервоза",
@@ -1754,6 +2050,21 @@
           "spinning right": "се врти десно",
           "wandering": "талкање"
         },
+        "courseF_apps_chatbot_2023": {
+          "driving with arrow keys": "возење со стрелките на тастатурата",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving with arrow keys": "се движат со стрелките на тастатурата",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање"
+        },
         "courseF_apps_collector": {
           "driving with arrow keys": "возење со стрелките на тастатурата",
           "fluttering": "разлетувањето",
@@ -1785,6 +2096,21 @@
           "wandering": "талкање"
         },
         "courseF_apps_collector_-2022-2": {
+          "driving with arrow keys": "возење со стрелките на тастатурата",
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving with arrow keys": "се движат со стрелките на тастатурата",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање"
+        },
+        "courseF_apps_collector_2023": {
           "driving with arrow keys": "возење со стрелките на тастатурата",
           "fluttering": "разлетувањето",
           "growing": "расте",
@@ -1836,6 +2162,24 @@
           "wobbling": "колебливи"
         },
         "courseF_apps_madlib_-2022-2": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "moving with arrow keys": "се движат со стрелките на тастатурата",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
+        "courseF_apps_madlib_2023": {
           "fluttering": "разлетувањето",
           "growing": "расте",
           "jittering": "нервоза",
@@ -1910,6 +2254,25 @@
           "wandering": "талкање",
           "wobbling": "колебливи"
         },
+        "courseF_apps_pet_2023": {
+          "driving with arrow keys": "возење со стрелките на тастатурата",
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "moving with arrow keys": "се движат со стрелките на тастатурата",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
         "courseF_editable_card": {
           "driving with arrow keys": "возење со стрелките на тастатурата",
           "growing": "расте",
@@ -1926,6 +2289,21 @@
           "wandering": "талкање"
         },
         "courseF_editable_card_-2022-2": {
+          "driving with arrow keys": "возење со стрелките на тастатурата",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving with arrow keys": "се движат со стрелките на тастатурата",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање"
+        },
+        "courseF_editable_card_2023": {
           "driving with arrow keys": "возење со стрелките на тастатурата",
           "growing": "расте",
           "jittering": "нервоза",
@@ -1970,6 +2348,21 @@
           "spinning right": "се врти десно",
           "wandering": "талкање"
         },
+        "courseF_editable_chatbot_2023": {
+          "driving with arrow keys": "возење со стрелките на тастатурата",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving with arrow keys": "се движат со стрелките на тастатурата",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање"
+        },
         "courseF_editable_madlib": {
           "fluttering": "разлетувањето",
           "growing": "расте",
@@ -1989,6 +2382,24 @@
           "wobbling": "колебливи"
         },
         "courseF_editable_madlib_-2022-2": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "moving with arrow keys": "се движат со стрелките на тастатурата",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
+        "courseF_editable_madlib_2023": {
           "fluttering": "разлетувањето",
           "growing": "расте",
           "jittering": "нервоза",
@@ -2052,7 +2463,38 @@
           "spinning right": "се врти десно",
           "wandering": "талкање"
         },
+        "courseF_events_choice_conflict2_2023": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање"
+        },
         "courseF_events_choice_conflict_-2022-2": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање"
+        },
+        "courseF_events_choice_conflict_2023": {
           "fluttering": "разлетувањето",
           "growing": "расте",
           "jittering": "нервоза",
@@ -2086,6 +2528,23 @@
           "wobbling": "колебливи"
         },
         "courseF_events_choice_penguin_-2022-2": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
+        "courseF_events_choice_penguin_2023": {
           "fluttering": "разлетувањето",
           "growing": "расте",
           "jittering": "нервоза",
@@ -2136,6 +2595,23 @@
           "wandering": "талкање",
           "wobbling": "колебливи"
         },
+        "courseF_events_choice_pufferfish_2023": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
         "courseF_events_conflict": {
           "fluttering": "разлетувањето",
           "growing": "расте",
@@ -2153,6 +2629,22 @@
           "wandering": "талкање"
         },
         "courseF_events_conflict_-2022-2": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање"
+        },
+        "courseF_events_conflict_2023": {
           "fluttering": "разлетувањето",
           "growing": "расте",
           "jittering": "нервоза",
@@ -2200,6 +2692,22 @@
           "wandering": "талкање",
           "wobbling": "колебливи"
         },
+        "courseF_events_freeplay_air_2023": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
         "courseF_events_freeplay_animals": {
           "fluttering": "разлетувањето",
           "growing": "расте",
@@ -2217,6 +2725,22 @@
           "wobbling": "колебливи"
         },
         "courseF_events_freeplay_animals_-2022-2": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
+        "courseF_events_freeplay_animals_2023": {
           "fluttering": "разлетувањето",
           "growing": "расте",
           "jittering": "нервоза",
@@ -2264,6 +2788,22 @@
           "wandering": "талкање",
           "wobbling": "колебливи"
         },
+        "courseF_events_freeplay_aquatic_2023": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
         "courseF_events_freeplay_blank": {
           "fluttering": "разлетувањето",
           "growing": "расте",
@@ -2281,6 +2821,22 @@
           "wobbling": "колебливи"
         },
         "courseF_events_freeplay_blank_-2022-2": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
+        "courseF_events_freeplay_blank_2023": {
           "fluttering": "разлетувањето",
           "growing": "расте",
           "jittering": "нервоза",
@@ -2328,6 +2884,22 @@
           "wandering": "талкање",
           "wobbling": "колебливи"
         },
+        "courseF_events_freeplay_food_2023": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
         "courseF_events_freeplay_space": {
           "fluttering": "разлетувањето",
           "growing": "расте",
@@ -2345,6 +2917,22 @@
           "wobbling": "колебливи"
         },
         "courseF_events_freeplay_space_-2022-2": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
+        "courseF_events_freeplay_space_2023": {
           "fluttering": "разлетувањето",
           "growing": "расте",
           "jittering": "нервоза",
@@ -2378,6 +2966,23 @@
           "wobbling": "колебливи"
         },
         "courseF_events_key_-2022-2": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
+        "courseF_events_key_2023": {
           "fluttering": "разлетувањето",
           "growing": "расте",
           "jittering": "нервоза",
@@ -2432,6 +3037,25 @@
           "wandering": "талкање",
           "wobbling": "колебливи"
         },
+        "courseF_events_practice_reorder_2023": {
+          "driving with arrow keys": "возење со стрелките на тастатурата",
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "moving with arrow keys": "се движат со стрелките на тастатурата",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
         "courseF_events_predict": {
           "growing": "расте",
           "jittering": "нервоза",
@@ -2446,6 +3070,19 @@
           "wandering": "талкање"
         },
         "courseF_events_predict_-2022-2": {
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање"
+        },
+        "courseF_events_predict_2023": {
           "growing": "расте",
           "jittering": "нервоза",
           "moving east": "се движат на исток",
@@ -2492,6 +3129,23 @@
           "wandering": "талкање",
           "wobbling": "колебливи"
         },
+        "courseF_events_review_2023": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
         "courseF_events_ship": {
           "fluttering": "разлетувањето",
           "growing": "расте",
@@ -2510,6 +3164,23 @@
           "wobbling": "колебливи"
         },
         "courseF_events_ship_-2022-2": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
+        "courseF_events_ship_2023": {
           "fluttering": "разлетувањето",
           "growing": "расте",
           "jittering": "нервоза",
@@ -2592,6 +3263,23 @@
           "wandering": "талкање",
           "wobbling": "колебливи"
         },
+        "courseF_events_time_2023": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
         "courseF_extras_sim": {
           "wandering 1": "лутање 1",
           "wandering 2": "лутање 2"
@@ -2622,6 +3310,19 @@
           "spinning right": "се врти десно",
           "wandering": "талкање"
         },
+        "courseF_label_predict_2023": {
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање"
+        },
         "courseF_place_fruit": {
           "fluttering": "разлетувањето",
           "growing": "расте",
@@ -2638,6 +3339,21 @@
           "wobbling": "колебливи"
         },
         "courseF_place_fruit_-2022-2": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wobbling": "колебливи"
+        },
+        "courseF_place_fruit_2023": {
           "fluttering": "разлетувањето",
           "growing": "расте",
           "jittering": "нервоза",
@@ -2685,6 +3401,16 @@
           "spinning left": "врти лево",
           "spinning right": "се врти десно"
         },
+        "courseF_sprites_behaviors_2023": {
+          "growing": "расте",
+          "moving east": "се движат на исток",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно"
+        },
         "courseF_sprites_clouds": {
           "fluttering": "разлетувањето",
           "growing": "расте",
@@ -2702,6 +3428,22 @@
           "wobbling": "колебливи"
         },
         "courseF_sprites_clouds_-2022-2": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
+        "courseF_sprites_clouds_2023": {
           "fluttering": "разлетувањето",
           "growing": "расте",
           "jittering": "нервоза",
@@ -2747,6 +3489,21 @@
           "spinning right": "се врти десно",
           "wobbling": "колебливи"
         },
+        "courseF_sprites_desert_2023": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wobbling": "колебливи"
+        },
         "courseF_sprites_freeplay_air": {
           "fluttering": "разлетувањето",
           "growing": "расте",
@@ -2764,6 +3521,22 @@
           "wobbling": "колебливи"
         },
         "courseF_sprites_freeplay_air_-2022-2": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
+        "courseF_sprites_freeplay_air_2023": {
           "fluttering": "разлетувањето",
           "growing": "расте",
           "jittering": "нервоза",
@@ -2811,6 +3584,22 @@
           "wandering": "талкање",
           "wobbling": "колебливи"
         },
+        "courseF_sprites_freeplay_animals_2023": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
         "courseF_sprites_freeplay_aquatic": {
           "fluttering": "разлетувањето",
           "growing": "расте",
@@ -2828,6 +3617,22 @@
           "wobbling": "колебливи"
         },
         "courseF_sprites_freeplay_aquatic_-2022-2": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
+        "courseF_sprites_freeplay_aquatic_2023": {
           "fluttering": "разлетувањето",
           "growing": "расте",
           "jittering": "нервоза",
@@ -2875,6 +3680,22 @@
           "wandering": "талкање",
           "wobbling": "колебливи"
         },
+        "courseF_sprites_freeplay_blank_2023": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
         "courseF_sprites_freeplay_food": {
           "fluttering": "разлетувањето",
           "growing": "расте",
@@ -2892,6 +3713,22 @@
           "wobbling": "колебливи"
         },
         "courseF_sprites_freeplay_food_-2022-2": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
+        "courseF_sprites_freeplay_food_2023": {
           "fluttering": "разлетувањето",
           "growing": "расте",
           "jittering": "нервоза",
@@ -2939,6 +3776,22 @@
           "wandering": "талкање",
           "wobbling": "колебливи"
         },
+        "courseF_sprites_freeplay_space_2023": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
         "courseF_sprites_make": {
           "fluttering": "разлетувањето",
           "growing": "расте",
@@ -2955,6 +3808,21 @@
           "wobbling": "колебливи"
         },
         "courseF_sprites_make_-2022-2": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wobbling": "колебливи"
+        },
+        "courseF_sprites_make_2023": {
           "fluttering": "разлетувањето",
           "growing": "расте",
           "jittering": "нервоза",
@@ -2999,6 +3867,21 @@
           "spinning right": "се врти десно",
           "wobbling": "колебливи"
         },
+        "courseF_sprites_moreSprites_2023": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wobbling": "колебливи"
+        },
         "courseF_sprites_positioning": {
           "fluttering": "разлетувањето",
           "growing": "расте",
@@ -3015,6 +3898,21 @@
           "wobbling": "колебливи"
         },
         "courseF_sprites_positioning_-2022-2": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wobbling": "колебливи"
+        },
+        "courseF_sprites_positioning_2023": {
           "fluttering": "разлетувањето",
           "growing": "расте",
           "jittering": "нервоза",
@@ -3055,6 +3953,19 @@
           "spinning right": "се врти десно",
           "wandering": "талкање"
         },
+        "courseF_sprites_predict_2023": {
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање"
+        },
         "courseF_sprites_properties": {
           "fluttering": "разлетувањето",
           "growing": "расте",
@@ -3071,6 +3982,21 @@
           "wobbling": "колебливи"
         },
         "courseF_sprites_properties_-2022-2": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wobbling": "колебливи"
+        },
+        "courseF_sprites_properties_2023": {
           "fluttering": "разлетувањето",
           "growing": "расте",
           "jittering": "нервоза",
@@ -3115,6 +4041,21 @@
           "spinning right": "се врти десно",
           "wobbling": "колебливи"
         },
+        "courseF_sprites_ship_2023": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wobbling": "колебливи"
+        },
         "courseF_text_answer": {
           "fluttering": "разлетувањето",
           "growing": "расте",
@@ -3132,6 +4073,22 @@
           "wandering": "талкање"
         },
         "courseF_text_answer_-2022-2": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање"
+        },
+        "courseF_text_answer_2023": {
           "fluttering": "разлетувањето",
           "growing": "расте",
           "jittering": "нервоза",
@@ -3179,6 +4136,22 @@
           "spinning right": "се врти десно",
           "wandering": "талкање"
         },
+        "courseF_text_choice_color_2023": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање"
+        },
         "courseF_text_choice_conversation": {
           "driving with arrow keys": "возење со стрелките на тастатурата",
           "fluttering": "разлетувањето",
@@ -3199,6 +4172,25 @@
           "wobbling": "колебливи"
         },
         "courseF_text_choice_conversation_-2022-2": {
+          "driving with arrow keys": "возење со стрелките на тастатурата",
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "moving with arrow keys": "се движат со стрелките на тастатурата",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
+        "courseF_text_choice_conversation_2023": {
           "driving with arrow keys": "возење со стрелките на тастатурата",
           "fluttering": "разлетувањето",
           "growing": "расте",
@@ -3255,6 +4247,25 @@
           "wandering": "талкање",
           "wobbling": "колебливи"
         },
+        "courseF_text_choice_events_2023": {
+          "driving with arrow keys": "возење со стрелките на тастатурата",
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "moving with arrow keys": "се движат со стрелките на тастатурата",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
         "courseF_text_choice_freeplay": {
           "driving with arrow keys": "возење со стрелките на тастатурата",
           "fluttering": "разлетувањето",
@@ -3275,6 +4286,25 @@
           "wobbling": "колебливи"
         },
         "courseF_text_choice_freeplay_-2022-2": {
+          "driving with arrow keys": "возење со стрелките на тастатурата",
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "moving with arrow keys": "се движат со стрелките на тастатурата",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
+        "courseF_text_choice_freeplay_2023": {
           "driving with arrow keys": "возење со стрелките на тастатурата",
           "fluttering": "разлетувањето",
           "growing": "расте",
@@ -3331,6 +4361,25 @@
           "wandering": "талкање",
           "wobbling": "колебливи"
         },
+        "courseF_text_choice_interview_2023": {
+          "driving with arrow keys": "возење со стрелките на тастатурата",
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "moving with arrow keys": "се движат со стрелките на тастатурата",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
         "courseF_text_choice_multiprompt": {
           "driving with arrow keys": "возење со стрелките на тастатурата",
           "fluttering": "разлетувањето",
@@ -3351,6 +4400,25 @@
           "wobbling": "колебливи"
         },
         "courseF_text_choice_multiprompt_-2022-2": {
+          "driving with arrow keys": "возење со стрелките на тастатурата",
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "moving with arrow keys": "се движат со стрелките на тастатурата",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
+        "courseF_text_choice_multiprompt_2023": {
           "driving with arrow keys": "возење со стрелките на тастатурата",
           "fluttering": "разлетувањето",
           "growing": "расте",
@@ -3401,6 +4469,22 @@
           "spinning right": "се врти десно",
           "wandering": "талкање"
         },
+        "courseF_text_choice_title_2023": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање"
+        },
         "courseF_text_concat": {
           "fluttering": "разлетувањето",
           "growing": "расте",
@@ -3418,6 +4502,22 @@
           "wandering": "талкање"
         },
         "courseF_text_concat_-2022-2": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање"
+        },
+        "courseF_text_concat_2023": {
           "fluttering": "разлетувањето",
           "growing": "расте",
           "jittering": "нервоза",
@@ -3465,6 +4565,22 @@
           "spinning right": "се врти десно",
           "wandering": "талкање"
         },
+        "courseF_text_events_2023": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање"
+        },
         "courseF_text_print": {
           "fluttering": "разлетувањето",
           "growing": "расте",
@@ -3482,6 +4598,22 @@
           "wandering": "талкање"
         },
         "courseF_text_print_-2022-2": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање"
+        },
+        "courseF_text_print_2023": {
           "fluttering": "разлетувањето",
           "growing": "расте",
           "jittering": "нервоза",
@@ -3529,6 +4661,22 @@
           "spinning right": "се врти десно",
           "wandering": "талкање"
         },
+        "courseF_text_prompts_2023": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање"
+        },
         "courseF_text_review": {
           "fluttering": "разлетувањето",
           "growing": "расте",
@@ -3546,6 +4694,22 @@
           "wandering": "талкање"
         },
         "courseF_text_review_-2022-2": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање"
+        },
+        "courseF_text_review_2023": {
           "fluttering": "разлетувањето",
           "growing": "расте",
           "jittering": "нервоза",
@@ -3580,6 +4744,24 @@
           "wobbling": "колебливи"
         },
         "courseF_variables_card_-2022-2": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "moving with arrow keys": "се движат со стрелките на тастатурата",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
+        "courseF_variables_card_2023": {
           "fluttering": "разлетувањето",
           "growing": "расте",
           "jittering": "нервоза",
@@ -3633,6 +4815,24 @@
           "wandering": "талкање",
           "wobbling": "колебливи"
         },
+        "courseF_variables_card_finish_2023": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "moving with arrow keys": "се движат со стрелките на тастатурата",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
         "courseF_variables_chatbot": {
           "fluttering": "разлетувањето",
           "growing": "расте",
@@ -3652,6 +4852,24 @@
           "wobbling": "колебливи"
         },
         "courseF_variables_chatbot_-2022-2": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "moving with arrow keys": "се движат со стрелките на тастатурата",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
+        "courseF_variables_chatbot_2023": {
           "fluttering": "разлетувањето",
           "growing": "расте",
           "jittering": "нервоза",
@@ -3705,6 +4923,24 @@
           "wandering": "талкање",
           "wobbling": "колебливи"
         },
+        "courseF_variables_chatbot_finish_2023": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "moving with arrow keys": "се движат со стрелките на тастатурата",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
         "courseF_variables_madlib": {
           "fluttering": "разлетувањето",
           "growing": "расте",
@@ -3724,6 +4960,24 @@
           "wobbling": "колебливи"
         },
         "courseF_variables_madlib_-2022-2": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "moving with arrow keys": "се движат со стрелките на тастатурата",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
+        "courseF_variables_madlib_2023": {
           "fluttering": "разлетувањето",
           "growing": "расте",
           "jittering": "нервоза",
@@ -3777,6 +5031,24 @@
           "wandering": "талкање",
           "wobbling": "колебливи"
         },
+        "courseF_variables_madlib_finish_2023": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "moving with arrow keys": "се движат со стрелките на тастатурата",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
         "courseF_variables_predict": {
           "growing": "расте",
           "jittering": "нервоза",
@@ -3791,6 +5063,19 @@
           "wandering": "талкање"
         },
         "courseF_variables_predict_-2022-2": {
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање"
+        },
+        "courseF_variables_predict_2023": {
           "growing": "расте",
           "jittering": "нервоза",
           "moving east": "се движат на исток",
@@ -3818,6 +5103,295 @@
           "spinning left": "врти лево",
           "spinning right": "се врти десно",
           "wandering": "талкање"
+        },
+        "coursee_helloworld_events_2023": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање"
+        },
+        "csc_animal_adaptaions_fishschool": {
+          "driving with arrow keys": "возење со стрелките на тастатурата",
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving north and looping": "движејќи се на север и јамкајќи",
+          "moving south": "се движат на југ",
+          "moving south and looping": "движење на југ и јамкање",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "moving with arrow keys": "се движат со стрелките на тастатурата",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
+        "csc_animal_adaptations_birds": {
+          "driving with arrow keys": "возење со стрелките на тастатурата",
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving north and looping": "движејќи се на север и јамкајќи",
+          "moving south": "се движат на југ",
+          "moving south and looping": "движење на југ и јамкање",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "moving with arrow keys": "се движат со стрелките на тастатурата",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
+        "csc_animal_adaptations_bugs": {
+          "driving with arrow keys": "возење со стрелките на тастатурата",
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving north and looping": "движејќи се на север и јамкајќи",
+          "moving south": "се движат на југ",
+          "moving south and looping": "движење на југ и јамкање",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "moving with arrow keys": "се движат со стрелките на тастатурата",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
+        "csc_animal_adaptations_butterfly": {
+          "driving with arrow keys": "возење со стрелките на тастатурата",
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving north and looping": "движејќи се на север и јамкајќи",
+          "moving south": "се движат на југ",
+          "moving south and looping": "движење на југ и јамкање",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "moving with arrow keys": "се движат со стрелките на тастатурата",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
+        "csc_animal_adaptations_choice2": {
+          "driving with arrow keys": "возење со стрелките на тастатурата",
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving north and looping": "движејќи се на север и јамкајќи",
+          "moving south": "се движат на југ",
+          "moving south and looping": "движење на југ и јамкање",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "moving with arrow keys": "се движат со стрелките на тастатурата",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
+        "csc_animal_adaptations_choice3": {
+          "driving with arrow keys": "возење со стрелките на тастатурата",
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving north and looping": "движејќи се на север и јамкајќи",
+          "moving south": "се движат на југ",
+          "moving south and looping": "движење на југ и јамкање",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "moving with arrow keys": "се движат со стрелките на тастатурата",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
+        "csc_animal_adaptations_fish": {
+          "driving with arrow keys": "возење со стрелките на тастатурата",
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving north and looping": "движејќи се на север и јамкајќи",
+          "moving south": "се движат на југ",
+          "moving south and looping": "движење на југ и јамкање",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "moving with arrow keys": "се движат со стрелките на тастатурата",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
+        "csc_animal_adaptations_groups": {
+          "driving with arrow keys": "возење со стрелките на тастатурата",
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving north and looping": "движејќи се на север и јамкајќи",
+          "moving south": "се движат на југ",
+          "moving south and looping": "движење на југ и јамкање",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "moving with arrow keys": "се движат со стрелките на тастатурата",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
+        "csc_animal_adaptations_migration": {
+          "driving with arrow keys": "возење со стрелките на тастатурата",
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving north and looping": "движејќи се на север и јамкајќи",
+          "moving south": "се движат на југ",
+          "moving south and looping": "движење на југ и јамкање",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "moving with arrow keys": "се движат со стрелките на тастатурата",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
+        "csc_animal_adaptations_speed": {
+          "driving with arrow keys": "возење со стрелките на тастатурата",
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving north and looping": "движејќи се на север и јамкајќи",
+          "moving south": "се движат на југ",
+          "moving south and looping": "движење на југ и јамкање",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "moving with arrow keys": "се движат со стрелките на тастатурата",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
+        "csc_ecosystems_giraffe_evo_2023": {
+          "driving with arrow keys": "возење со стрелките на тастатурата",
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving north and looping": "движејќи се на север и јамкајќи",
+          "moving south": "се движат на југ",
+          "moving south and looping": "движење на југ и јамкање",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "moving with arrow keys": "се движат со стрелките на тастатурата",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
+        "csc_ecosystems_whale_explain_2023": {
+          "driving with arrow keys": "возење со стрелките на тастатурата",
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving north and looping": "движејќи се на север и јамкајќи",
+          "moving south": "се движат на југ",
+          "moving south and looping": "движење на југ и јамкање",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "moving with arrow keys": "се движат со стрелките на тастатурата",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
+        "csc_ecosystems_whale_movement_2023": {
+          "driving with arrow keys": "возење со стрелките на тастатурата",
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving north and looping": "движејќи се на север и јамкајќи",
+          "moving south": "се движат на југ",
+          "moving south and looping": "движење на југ и јамкање",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "moving with arrow keys": "се движат со стрелките на тастатурата",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
         },
         "helloworld_animals_backgrounds": {
           "driving with arrow keys": "возење со стрелките на тастатурата",
@@ -4028,6 +5602,27 @@
           "wandering": "талкање",
           "wobbling": "колебливи"
         },
+        "helloworld_food_backgrounds_2023": {
+          "driving with arrow keys": "возење со стрелките на тастатурата",
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving north and looping": "движејќи се на север и јамкајќи",
+          "moving south": "се движат на југ",
+          "moving south and looping": "движење на југ и јамкање",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "moving with arrow keys": "се движат со стрелките на тастатурата",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
         "helloworld_food_backgrounds_soccer-2022": {
           "driving with arrow keys": "возење со стрелките на тастатурата",
           "fluttering": "разлетувањето",
@@ -4091,7 +5686,43 @@
           "wandering": "талкање",
           "wobbling": "колебливи"
         },
+        "helloworld_food_behaviors_2023": {
+          "driving with arrow keys": "возење со стрелките на тастатурата",
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving north and looping": "движејќи се на север и јамкајќи",
+          "moving south": "се движат на југ",
+          "moving south and looping": "движење на југ и јамкање",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "moving with arrow keys": "се движат со стрелките на тастатурата",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
         "helloworld_food_costumes": {
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wobbling": "колебливи"
+        },
+        "helloworld_food_costumes_2023": {
           "fluttering": "разлетувањето",
           "growing": "расте",
           "jittering": "нервоза",
@@ -4123,6 +5754,27 @@
           "wandering": "талкање"
         },
         "helloworld_food_sounds": {
+          "driving with arrow keys": "возење со стрелките на тастатурата",
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving north and looping": "движејќи се на север и јамкајќи",
+          "moving south": "се движат на југ",
+          "moving south and looping": "движење на југ и јамкање",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "moving with arrow keys": "се движат со стрелките на тастатурата",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
+        "helloworld_food_sounds_2023": {
           "driving with arrow keys": "возење со стрелките на тастатурата",
           "fluttering": "разлетувањето",
           "growing": "расте",
@@ -4313,6 +5965,25 @@
           "wobbling": "колебливи"
         },
         "simcustom_2021": {
+          "driving with arrow keys": "возење со стрелките на тастатурата",
+          "fluttering": "разлетувањето",
+          "growing": "расте",
+          "jittering": "нервоза",
+          "moving east": "се движат на исток",
+          "moving east and looping": "движејќи се на исток и јамкајќи",
+          "moving north": "се движат на север",
+          "moving south": "се движат на југ",
+          "moving west": "се движи кон запад",
+          "moving west and looping": "се движат на запад и looping",
+          "moving with arrow keys": "се движат со стрелките на тастатурата",
+          "patrolling": "патролирање",
+          "shrinking": "намалување",
+          "spinning left": "врти лево",
+          "spinning right": "се врти десно",
+          "wandering": "талкање",
+          "wobbling": "колебливи"
+        },
+        "simcustom_2023": {
           "driving with arrow keys": "возење со стрелките на тастатурата",
           "fluttering": "разлетувањето",
           "growing": "расте",

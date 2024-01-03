@@ -820,6 +820,7 @@ vi:
         Unplug7: Sáng tác nhạc
         Unplug8: Trừu tượng
         Unplug9: Chương trình chuyển tiếp
+        ai-ethis: Đạo đức & AI
         applab_hoc_designmode: ApplAb Hour of Code - Chế độ Thiết kế
         applab_hoc_onevent: App Lab Hour of Code - OnEvent
         applab_hoc_setproperty: App Lab Hour Code - SetProperty
@@ -831,8 +832,10 @@ vi:
         applab_intro_sounds: App Lab - Hình ảnh và Âm thanh
         applab_intro_welcome: App Lab - Bắt đầu
         artist_intro: Giới thiệu về nghệ sĩ
+        blockchain-introd: 'Cách Blockchain hoạt động: Giới thiệu'
         c_and_c_digital_sharing: Chia sẻ nội dung số
         c_and_c_great_to_create: Sáng tạo và vui chơi công bằng thật tuyệt vời
+        code-break: Giờ giải lao lập trình
         conditionals_with_cards: Unplugged Bài học trong hành động - Điều kiện với
           Thẻ
         cs-principles-intro-to-objects: 'Nguyên tắc CS: Giới thiệu cho các đối tượng'
@@ -945,6 +948,7 @@ vi:
         csd_gamelab_velocity: Vận tốc
         csd_how_teamwork_works: Làm thế nào làm việc theo nhóm
         csd_ml_ethics_ai: 'Đạo đức và AI '
+        csd_ml_how_ai_works: Cách thức hoạt động của AI
         csd_ml_import_model: Nhập mô hình AI
         csd_ml_intro_ai_lab_july2021: Giới thiệu về AI Lab
         csd_ml_intro_to_ai_lab: Giới thiệu về AI Lab
@@ -1085,6 +1089,7 @@ vi:
         poembot-playtest-events: Chơi thử PoemBot Sự kiện
         poembot-playtest-intro: Chơi thử PoemBot Giới thiệu
         poembot-playtest-sprites: Chơi thử PoemBot Nhân vật
+        poetry-programming: Thơ & Lập trình
         poetry_module_conditionals: Điều kiện - Code và Thơ
         poetry_module_multichoiceprompts: Lời nhắc nhiều lựa chọn - Code và Thơ
         poetry_module_planningapp: Lập kế hoạch xây dựng ứng dụng Trình sáng tác thơ
@@ -1121,6 +1126,7 @@ vi:
         u7-libraries-explanation: 'App Lab: Tạo khối của riêng bạn - Làm thế nào để
           sử dụng thư viện'
         upload_sprites_backgrounds: Tải lên tùy chỉnh Sprites và hình nền
+        what-is-creativity: Sáng tạo là gì?
         what_is_an_event: Sự kiện là gì?
         what_is_cs: Khoa học máy tính là gì?
         why-should-teach-unplugged-activities: 'Hỏi đáp: Tại sao tôi nên dạy các hoạt

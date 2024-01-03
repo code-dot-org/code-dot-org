@@ -1,0 +1,114 @@
+{
+  "banners": {
+    "csleadersprize": {
+      "title": "",
+      "body": "",
+      "buttonText": "Узнать больше"
+    },
+    "csjourneys-22": {
+      "title": "",
+      "body": "",
+      "buttonText": "Узнать больше"
+    },
+    "hoc-more": {
+      "title": "",
+      "body": "На сайте Часа кода предлагаются более 500 занятий по компьютерным наукам, разработанных Code.org и партнерами и предназначенных для учащихся любого возраста и уровня подготовки.",
+      "buttonText": ""
+    },
+    "superhero": {
+      "title": "",
+      "body": "",
+      "buttonText": "Подробнее"
+    },
+    "csjourneys": {
+      "title": "",
+      "body": "",
+      "buttonText": "Узнать больше"
+    },
+    "class-schedule-survey": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "back-to-school-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "Узнать больше"
+    },
+    "teacher-apps-open-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "Присоединяйтесь к нам"
+    },
+    "teacher-apps-closing-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "Присоединяйтесь к нам"
+    },
+    "teacher-apps-nominate-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Назначить учителя"
+    },
+    "teacher-apps-stillon-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Присоединяйтесь к нам"
+    },
+    "home-learning-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Просмотр идей проектов"
+    },
+    "soonhoc-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "codebytes-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Узнать больше"
+    },
+    "ai-2020": {
+      "title": "Познакомьтесь с технологиями искусственного интеллекта и машинного обучения",
+      "body": "",
+      "buttonText": "Узнать больше"
+    },
+    "congrats-certificate-share": {
+      "title": "",
+      "body": "",
+      "buttonText": "Начать"
+    },
+    "coldplay": {
+      "title": "",
+      "body": "",
+      "buttonText": "Попробуйте это"
+    },
+    "ai-launch-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": "Узнать больше"
+    },
+    "ai-pl-launch-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": "Узнать больше"
+    },
+    "state-of-cs-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "hoc-2023": {
+      "title": "Час кода: творчество с помощью искусственного интеллекта",
+      "body": "Присоединяйтесь к миллионам людей по всему миру и проведите «Час кода» с использованием искусственного интеллекта или без него и узнайте, как работает искусственный интеллект. Это может сделать кто угодно и где угодно. Опыт не требуется.",
+      "buttonText": "Узнать больше"
+    },
+    "hoc-2023-dance-ai": {
+      "title": "",
+      "body": "",
+      "buttonText": "Узнать больше"
+    }
+  }
+}

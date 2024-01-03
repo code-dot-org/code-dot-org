@@ -53,12 +53,14 @@ ur:
         gender: 'Jinss'
         edit_header: 'اکاؤنٹ کی تفصیلات میں ترمیم کیجیے'
         finish_sign_up_header: 'اپنا اکاؤنٹ بنانا مکمل کریں'
+        finish_sign_up_header_error: 'براے مہربانی نیچے دی گئی غلطیاں درست کیجئے:'
         finish_sign_up_subheader: 'Code.org پر<strong>%{email}</strong> کا اکاوٗنٹ بنانے کے لئے درج زیل معلومات پُر کریں'
         finish_sign_up_subheader_markdown: 'Code.org پر**{email}%** کا اکاوٗنٹ بنانے کے لئے درج زیل معلومات پُر کریں'
         finish_sign_up_subheader_provider: '<strong>%{email}</strong>کے لئے <strong>%{provider}</strong> کے ساتھ Code.org اکاؤنٹ بنانے کے ختم کرنے کے لئے مندرجہ ذیل معلومات کو بھریں.'
         reset_password_token: "ری سیٹ پاس ورڈ لنک آپ کی پیروی کی ہے"
         error:
           future: مستقبل میں نہیں ہو سکتا
+        user_type: 'اکاؤنٹ کی قسم'
         us_state: 'حالت'
   beta: "beta"
   hello: "hello dunia"
@@ -1229,4 +1231,3 @@ ur:
     binary: "ثنائی"
     hexadecimal: "شش اعشاری"
     pixel_format_header: "پکسل فارمیٹ"
-

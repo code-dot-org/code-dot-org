@@ -53,7 +53,7 @@
     },
     "new_name": null,
     "family_name": "minecraft",
-    "serialized_at": "2023-07-03 04:11:37 UTC",
+    "serialized_at": "2023-09-26 23:30:57 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -892,6 +892,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

@@ -10,6 +10,7 @@ sv:
         error:
           future: kan inte vara i framtiden
         finish_sign_up_header: Fortsätt färdigställa ditt konto
+        finish_sign_up_header_error: 'Rätta följande fel:'
         finish_sign_up_subheader: Fyll i följande information för att slutföra skapandet
           av ett Code.org-konto för <strong>%{email}</strong>.
         finish_sign_up_subheader_markdown: Fyll i följande information för att slutföra
@@ -31,6 +32,7 @@ sv:
           en e-postadress)] (%{url})
         reset_password_token: Länken för återställning av lösenord som du har följt
         us_state: Stat
+        user_type: Kontotyp
         username: 'användarnamn
 
           '

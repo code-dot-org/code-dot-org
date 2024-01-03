@@ -115,7 +115,7 @@
         "jigsaw": "拼图",
         "kaitie-test-script": "kaitie 测试脚本",
         "kodea-pd-2021": "CSF Online PD-韩国",
-        "mc": "我的世界 编程一小时",
+        "mc": "《我的世界》大冒险",
         "microbit": "使用设备创建应用程序 (micro:bit)",
         "minecraft": "我的世界 编码时间设计师",
         "ml-playground": "ml-游乐场",
@@ -141,6 +141,7 @@
         "problem-solving-computing": "问题解决和计算",
         "rbo-reference": "机器人引用",
         "self-paced-pl-csc": "教学 CS 连接",
+        "self-paced-pl-csd-unit1": "教授问题解决和计算",
         "soccer": "足球",
         "spelling-bee": "拼写活动",
         "sports": "编写你的体育游戏",
@@ -151,8 +152,6 @@
         "testtess": "testess",
         "text-compression": "文本压缩",
         "valentine": "情人节",
-        "vpl-csa": "CSA 虚拟专业学习",
-        "vpl-csp": "CS 原理虚拟专业学习",
         "web-development": "网页开发"
       }
     }

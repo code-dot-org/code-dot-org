@@ -35,6 +35,7 @@
         "curriculum-sandbox-levels": "სასწავლო გეგმი-sandbox დონეზე",
         "dance": "საცეკვაო წვეულება (2018)",
         "dance-extras": "გააგრძელე ცეკვა (2018)",
+        "dance-unplugged": "ცეკვის პარტია unplugged",
         "deepdive-debugging": "გამართვის გაკვეთილები პედაგოგებისთვის",
         "design-process": "დიზაინის პროცესი",
         "edit-code": "კოდის რედაქტირება",
@@ -54,7 +55,7 @@
         "jigsaw": "ფაზლი",
         "kaitie-test-script": "კაიტი-ტესტი-სკრიპტი",
         "katie-practice": "katie-practice",
-        "mc": "Minecraft-ის კოდის ერთი საათი",
+        "mc": "Minecraft თავგადასავალი",
         "minecraft": "Minecraft-ის კოდის ერთი საათი: დიზაინერი",
         "ml-playground": "ml-სათამაშო მოედანი",
         "oceans": "AI ოკეანეებისთვის",
@@ -69,7 +70,6 @@
         "step": "ნაბიჯი",
         "text-compression": "ტექსტის შეკუმშვა",
         "valentine": "ვალენტინი",
-        "vpl-csp": "CS პრინციპები ვირტუალური პროფესიული სწავლება",
         "web-development": "ვებ დეველოპმენტი"
       }
     }

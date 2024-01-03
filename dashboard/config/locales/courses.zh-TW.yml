@@ -73,9 +73,17 @@ zh-TW:
           description_short: 學習計算機科學的基礎概念。
         mike-test:
           title: 計算機科學基礎
+        self-paced-pl-csd-unit1-2023:
+          title: 問題解決與計算教學
+        self-paced-pl-csd-unit2-2023:
+          title: Web開發教學
+        self-paced-pl-csd-unit5-2023:
+          title: 數據教學與社會
         vpl-csa-2023:
           title: CSA 虛擬專業學習
     resources:
+      csd_guide_to_curriculum_videos/csd/2023:
+        url: https://docs.google.com/document/d/1IAUdYWbayicz2LVqoK4miPsIoG79rlXFHxaJiKwk-wE
       curriculum/csd/2017:
         name: 課程
       curriculum/csd/2018:

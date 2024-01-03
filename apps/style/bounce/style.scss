@@ -66,9 +66,9 @@ $root: "/blockly/media/bounce/"; //TODO: Parameterize for asset pipeline
 }
 
 .bounce-score {
+  @include main-font-bold;
   text-anchor: middle;
   font-size: xx-large;
-  font-family: $gotham-extra-bold;
   fill: white;
   stroke: black;
   stroke-width: 2;
