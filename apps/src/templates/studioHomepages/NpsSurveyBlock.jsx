@@ -10,29 +10,29 @@ import $ from 'jquery';
 const customCssClasses = {
   root: 'nps-survey-root',
   question: {
-    title: 'nps-survey-q-title'
+    title: 'nps-survey-q-title',
   },
   rating: {
     item: 'nps-survey-q-rating-item',
     minText: 'nps-survey-rating-min',
     maxText: 'nps-survey-rating-max',
     root: 'nps-survey-rating-root',
-    selected: 'nps-survey-rating-selected'
+    selected: 'nps-survey-rating-selected',
   },
   row: 'nps-survey-row',
   checkbox: {
     item: 'nps-survey-checkbox',
     itemControl: 'nps-survey-checkbox-item-control',
     materialDecorator: 'nps-survey-checkbox-material-decorator',
-    other: 'nps-survey-comment'
+    other: 'nps-survey-comment',
   },
   error: {
-    locationTop: 'nps-survey-top-error'
+    locationTop: 'nps-survey-top-error',
   },
   navigation: {
-    complete: 'nps-survey-submit-button'
+    complete: 'nps-survey-submit-button',
   },
-  comment: 'nps-survey-comment'
+  comment: 'nps-survey-comment',
 };
 
 export default class NpsSurveyBlock extends React.Component {
@@ -45,13 +45,13 @@ export default class NpsSurveyBlock extends React.Component {
   state = {
     visible: true,
     submitted: false,
-    result: undefined
+    result: undefined,
   };
 
   componentDidMount() {
     $.ajax({
       url: '/form/nps_survey/configuration',
-      type: 'get'
+      type: 'get',
     }).done(result => {
       if (result) {
         this.setState({result: JSON.parse(result.props)});
@@ -71,7 +71,7 @@ export default class NpsSurveyBlock extends React.Component {
       ...submitParams,
       answers: answers,
       form_name: formName,
-      form_version: formVersion
+      form_version: formVersion,
     };
 
     this.onComplete(answers);
@@ -80,7 +80,7 @@ export default class NpsSurveyBlock extends React.Component {
       url: submitApi,
       type: 'post',
       dataType: 'json',
-      data: requestData
+      data: requestData,
     });
   }
 
@@ -122,11 +122,11 @@ const styles = {
     borderWidth: '1px',
     borderStyle: 'solid',
     borderColor: color.border_gray,
-    position: 'relative'
+    position: 'relative',
   },
   dismiss: {
     position: 'absolute',
     left: '130px',
-    bottom: '40px'
-  }
+    bottom: '40px',
+  },
 };

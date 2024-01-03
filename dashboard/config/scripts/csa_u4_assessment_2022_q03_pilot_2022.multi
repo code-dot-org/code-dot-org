@@ -9,3 +9,5 @@ wrong '`Math.random(numList.length)`'
 markdown <<MARKDOWN
 Assume that `numList` is an array that has been correctly constructed and populated with integers. Which of the following expressions produces a valid random index for `numList`?
 MARKDOWN
+
+allow_multiple_attempts true

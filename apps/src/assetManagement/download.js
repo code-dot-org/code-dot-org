@@ -11,7 +11,7 @@
 import $ from 'jquery';
 
 // use this transport for "binary" data type
-$.ajaxTransport('+binary', function(options, originalOptions, jqXHR) {
+$.ajaxTransport('+binary', function (options, originalOptions, jqXHR) {
   // check for conditions and support for blob / arraybuffer response type
   if (
     window.FormData &&
@@ -22,7 +22,7 @@ $.ajaxTransport('+binary', function(options, originalOptions, jqXHR) {
   ) {
     return {
       // create new XMLHttpRequest
-      send: function(headers, callback) {
+      send: function (headers, callback) {
         // setup all variables
         var xhr = new XMLHttpRequest(),
           url = options.url,
@@ -34,7 +34,7 @@ $.ajaxTransport('+binary', function(options, originalOptions, jqXHR) {
           username = options.username || null,
           password = options.password || null;
 
-        xhr.addEventListener('load', function() {
+        xhr.addEventListener('load', function () {
           var data = {};
           data[options.dataType] = xhr.response;
           // make callback and send data
@@ -56,11 +56,11 @@ $.ajaxTransport('+binary', function(options, originalOptions, jqXHR) {
         xhr.responseType = dataType;
         xhr.send(data);
       },
-      abort: function() {}
+      abort: function () {},
     };
   }
 });
 
-module.exports = function(url, dataType) {
+module.exports = function (url, dataType) {
   return $.ajax(url, {dataType});
 };

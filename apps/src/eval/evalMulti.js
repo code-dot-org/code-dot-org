@@ -2,7 +2,7 @@ var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 require('../utils'); // Provides Function.prototype.inherits
 
-var EvalMulti = function(image1, image2) {
+var EvalMulti = function (image1, image2) {
   evalUtils.ensureType(image1, EvalImage);
   evalUtils.ensureType(image2, EvalImage);
 
@@ -27,7 +27,7 @@ var EvalMulti = function(image1, image2) {
 EvalMulti.inherits(EvalImage);
 module.exports = EvalMulti;
 
-EvalMulti.prototype.draw = function(parent) {
+EvalMulti.prototype.draw = function (parent) {
   if (!this.element_) {
     this.element_ = document.createElementNS(Blockly.SVG_NS, 'g');
     parent.appendChild(this.element_);
@@ -39,6 +39,6 @@ EvalMulti.prototype.draw = function(parent) {
   EvalImage.prototype.draw.apply(this, arguments);
 };
 
-EvalImage.prototype.getChildren = function() {
+EvalImage.prototype.getChildren = function () {
   return [this.image1_, this.image2_];
 };

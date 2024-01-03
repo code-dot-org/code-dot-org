@@ -12,9 +12,9 @@ describe('LessonTipIconWithTooltip', () => {
       tip: {
         key: 'tip-1',
         type: 'teachingTip',
-        markdown: ''
+        markdown: '',
       },
-      onClick
+      onClick,
     };
   });
 
@@ -34,7 +34,7 @@ describe('LessonTipIconWithTooltip', () => {
     expect(onClick).to.have.been.calledWith({
       key: 'tip-1',
       type: 'teachingTip',
-      markdown: ''
+      markdown: '',
     });
   });
 });

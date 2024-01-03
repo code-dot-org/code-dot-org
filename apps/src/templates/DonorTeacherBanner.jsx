@@ -3,25 +3,30 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import fontConstants from '@cdo/apps/fontConstants';
 import {putRecord} from '../lib/util/firehose';
-import TeacherInfoBanner from './TeacherInfoBanner';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import color from '../util/color';
+import Button from './Button';
+import i18n from '@cdo/locale';
 
 export default class DonorTeacherBanner extends Component {
   static propTypes = {
     showPegasusLink: PropTypes.bool,
-    source: PropTypes.string.isRequired
+    source: PropTypes.string.isRequired,
   };
 
   initialState = {
     participate: undefined,
-    submitted: false
+    submitted: false,
   };
 
   state = this.initialState;
 
   onParticipateChange = event => {
     this.setState({
-      participate: event.target.id === 'participateYes'
+      participate: event.target.id === 'participateYes',
     });
   };
 
@@ -30,8 +35,9 @@ export default class DonorTeacherBanner extends Component {
       putRecord({
         study: 'afe-schools',
         event: 'submit',
-        data_string: $('input[name="nces-id"]').val()
+        data_string: $('input[name="nces-id"]').val(),
       });
+      analyticsReporter.sendEvent(EVENTS.AFE_HOMEPAGE_BANNER_SUBMIT);
 
       // redirect to form on amazon-future-engineer page
       window.location.assign(pegasus('/amazon-future-engineer#sign-up-today'));
@@ -48,8 +54,8 @@ export default class DonorTeacherBanner extends Component {
       type: 'post',
       data: {
         participate: this.state.participate,
-        source: this.props.source
-      }
+        source: this.props.source,
+      },
     })
       .done(onSuccess)
       .fail(onFailure);
@@ -66,20 +72,16 @@ export default class DonorTeacherBanner extends Component {
   renderBannerContent() {
     return (
       <div>
+        <div style={styles.paragraph}>{i18n.afeBannerParagraph()}</div>
         <div style={styles.paragraph}>
-          Amazon Future Engineer offers free support for participating Code.org
-          classrooms, including posters, free CSTA+ membership, internship and
-          scholarship opportunities, and access to cloud computing resources.
-        </div>
-        <div style={styles.paragraph}>
-          Would you like to participate in the{' '}
+          {i18n.wouldYouLikeToParticipate()}
           {!this.props.showPegasusLink && (
-            <span>Amazon Future Engineer Program?</span>
+            <span>{i18n.amazonFutureEngineerProgram()}</span>
           )}
           {this.props.showPegasusLink && (
             <span>
               <a href={pegasus('/amazon-future-engineer')}>
-                Amazon Future Engineer Program? Learn more
+                Amazon Future Engineer Program?
               </a>
             </span>
           )}
@@ -96,7 +98,7 @@ export default class DonorTeacherBanner extends Component {
                 onChange={this.onParticipateChange}
                 checked={this.state.participate === true}
               />
-              Yes!
+              {i18n.yesExcited()}
             </label>
           </div>
           <div>
@@ -110,7 +112,7 @@ export default class DonorTeacherBanner extends Component {
                 onChange={this.onParticipateChange}
                 checked={this.state.participate === false}
               />
-              No thanks, maybe later
+              {i18n.noThanksMaybeLater()}
             </label>
           </div>
         </div>
@@ -120,21 +122,31 @@ export default class DonorTeacherBanner extends Component {
 
   renderDonorForm() {
     return (
-      <TeacherInfoBanner
-        header="Free stuff from Amazon for your classroom"
-        primaryButton={{
-          onClick: this.handleSubmit,
-          text: 'Submit',
-          disabled: this.state.participate === undefined
-        }}
-        secondaryButton={{
-          isHidden: !this.props.showPegasusLink,
-          href: pegasus('/amazon-future-engineer'),
-          text: 'Learn more'
-        }}
-      >
-        {this.renderBannerContent()}
-      </TeacherInfoBanner>
+      <div style={styles.main}>
+        <div style={styles.message}>
+          <h2 style={styles.heading}>{i18n.freeResources()}</h2>
+          {this.renderBannerContent()}
+          <div style={styles.buttonArea}>
+            <Button
+              onClick={this.handleSubmit}
+              style={styles.button}
+              color={Button.ButtonColor.brandSecondaryDefault}
+              text={i18n.submit()}
+              disabled={this.state.participate === undefined}
+            />
+            {this.props.showPegasusLink && (
+              <Button
+                __useDeprecatedTag
+                href={pegasus('/amazon-future-engineer')}
+                style={styles.secondaryButton}
+                color={Button.ButtonColor.white}
+                text={i18n.learnMore()}
+              />
+            )}
+          </div>
+        </div>
+        <div style={styles.clear} />
+      </div>
     );
   }
 
@@ -143,9 +155,9 @@ export default class DonorTeacherBanner extends Component {
       return (
         <Notification
           type={NotificationType.success}
-          notice="Your response has been submitted!"
-          details="Thank you for your response.  If you are not redirected to the form in a few moments,"
-          detailsLinkText="click here"
+          notice={i18n.yourResponseSubmitted()}
+          details={i18n.thankYouForResponse()}
+          detailsLinkText={i18n.clickHere()}
           detailsLink={pegasus('/amazon-future-engineer#sign-up-today')}
           detailsLinkNewWindow={true}
           dismissible={true}
@@ -155,8 +167,8 @@ export default class DonorTeacherBanner extends Component {
       return (
         <Notification
           type={NotificationType.success}
-          notice="Your response has been submitted!"
-          details="If you change your mind, you can sign up later at the bottom of this page."
+          notice={i18n.yourResponseSubmitted()}
+          details={i18n.changeYourMind()}
           dismissible={true}
         />
       );
@@ -178,15 +190,75 @@ export default class DonorTeacherBanner extends Component {
 
 const styles = {
   paragraph: {
-    marginBottom: 10
+    marginBottom: 10,
+    fontSize: 14,
+    ...fontConstants['main-font-regular'],
+    lineHeight: '22px',
+    color: color.neutral_dark,
   },
   label: {
-    fontFamily: '"Gotham 4r", sans-serif',
-    cursor: 'pointer'
+    ...fontConstants['main-font-regular'],
+    cursor: 'pointer',
   },
   radio: {
     verticalAlign: 'top',
     marginRight: 10,
-    cursor: 'pointer'
-  }
+    cursor: 'pointer',
+  },
+  buttonArea: {
+    display: 'flex',
+  },
+  heading: {
+    marginTop: 16,
+    marginBottom: 16,
+    fontSize: 24,
+    lineHeight: '26px',
+    ...fontConstants['main-font-regular'],
+    color: color.neutral_dark,
+  },
+  button: {
+    marginLeft: 7,
+    marginRight: 7,
+    ...fontConstants['main-font-semi-bold'],
+    lineHeight: '30px',
+    borderWidth: 2,
+    borderStyle: 'solid',
+    borderColor: Button.ButtonColor.brandSecondaryDefault,
+  },
+  secondaryButton: {
+    marginLeft: 7,
+    marginRight: 7,
+    marginTop: 5,
+    boxShadow: 'none',
+    ...fontConstants['main-font-semi-bold'],
+    color: color.neutral_dark,
+    lineHeight: '30px',
+    borderWidth: 2,
+    borderStyle: 'solid',
+    borderColor: color.neutral_dark,
+  },
+  clear: {
+    clear: 'both',
+  },
+  header: {
+    marginTop: 10,
+    marginBottom: 5,
+    marginLeft: 20,
+    marginRight: 20,
+  },
+  main: {
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: color.teal,
+    minHeight: 72,
+    backgroundColor: color.white,
+    overflowWrap: 'break-word',
+  },
+  message: {
+    marginTop: 0,
+    marginBottom: 20,
+    marginLeft: 20,
+    marginRight: 20,
+    fontSize: 14,
+  },
 };

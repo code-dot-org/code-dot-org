@@ -29,9 +29,9 @@ def parse_email_address_string(string)
   # without them being confused with the < > wrapping the email address at the end.
   #
   # Or just treat the entire string as an email address.
-  if !(/(.*)<(.*)>$/ =~ string).nil?
-    {name: $1.strip, email: $2}
-  else
+  if (/(.*)<(.*)>$/ =~ string).nil?
     {name: nil, email: string}
+  else
+    {name: $1.strip, email: $2}
   end
 end

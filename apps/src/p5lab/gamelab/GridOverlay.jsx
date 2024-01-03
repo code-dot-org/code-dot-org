@@ -5,22 +5,22 @@ import React from 'react';
 export const styles = {
   line: {
     stroke: '#000',
-    strokeWidth: 0.8
+    strokeWidth: 0.8,
   },
   semiBoldLine: {
     stroke: '#000',
-    strokeWidth: 1.4
+    strokeWidth: 1.4,
   },
   boldLine: {
     stroke: '#000',
-    strokeWidth: 4
+    strokeWidth: 4,
   },
   show: {
-    display: ''
+    display: '',
   },
   hide: {
-    display: 'none'
-  }
+    display: 'none',
+  },
 };
 
 /**
@@ -35,7 +35,7 @@ export default class GridOverlay extends React.Component {
     height: PropTypes.number,
     mouseX: PropTypes.number,
     mouseY: PropTypes.number,
-    show: PropTypes.bool.isRequired
+    show: PropTypes.bool.isRequired,
   };
 
   render() {

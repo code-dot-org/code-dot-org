@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 54,
+  "created_at": "2023-05-17T23:21:19.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "PL_CSD_EquityBlindSpotsvid",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28814,
+    "name_suffix": "_2021",
+    "encrypted": "false",
+    "long_instructions": "## While you watch\r\n\r\n#### Consider the following question while you watch this video:\r\n\r\n#### **Which of your own identity markers are you most aware of when you are teaching in your computer science classroom? Why?**\r\n___\r\n\r\n<img src=\"https://images.code.org/ed1c067606ddc55ebe59bcb9af138209-image-1684268171621.png\" alt=\"A clipboard with paper on it and a magnifying glass next to it. This icon is used to signal a resource for participants.\" width=\"30px\" style=\"border-radius:10px; float:left; margin: 0px 10px 5px 0px;\">\r\n\r\n#### You may want to refer to the list of identity markers on page 3 of your Activity Packet while you watch to help you.\r\n<br>"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2023-05-17T23:21:19.862+00:00\",\"changed\":[\"cloned from \\\"virtual-pl-csd-summer-day2-Assessment3\\\"\"],\"cloned_from\":\"virtual-pl-csd-summer-day2-Assessment3\"},{\"changed_at\":\"2023-05-17 23:21:23 +0000\",\"changed\":[],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2023-05-17 23:23:41 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2023-05-17 23:39:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2023-05-17 23:42:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2023-05-17 23:44:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2023-05-17 23:49:36 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2023-05-17 23:55:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2023-05-17 23:56:29 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2023-05-17 23:59:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

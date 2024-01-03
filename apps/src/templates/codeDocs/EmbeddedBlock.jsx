@@ -10,16 +10,17 @@ export default function EmbeddedBlock({blockName, link, ariaLabel}) {
   useEffect(() => {
     if (blockName && blockRef.current) {
       const blocksDom = parseElement(`<block type='${blockName}' />`);
-      const blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(
+      const blockSpace = Blockly.createEmbeddedWorkspace(
         blockRef.current,
         blocksDom,
         {
           noScrolling: true,
-          inline: true
+          inline: true,
         }
       );
       shrinkBlockSpaceContainer(blockSpace, true);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [blockRef]);
 
   return (
@@ -39,5 +40,5 @@ export default function EmbeddedBlock({blockName, link, ariaLabel}) {
 EmbeddedBlock.propTypes = {
   blockName: PropTypes.string.isRequired,
   link: PropTypes.string,
-  ariaLabel: PropTypes.string
+  ariaLabel: PropTypes.string,
 };

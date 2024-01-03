@@ -79,7 +79,6 @@ class Pd::Enrollment < ApplicationRecord
     attended_csf_intro_workshop
     csf_course_experience
     csf_courses_planned
-    csf_has_physical_curriculum_guide
     previous_courses
     replace_existing
     csf_intro_intent
@@ -97,7 +96,7 @@ class Pd::Enrollment < ApplicationRecord
   end
 
   def self.for_user(user)
-    where('email = ? OR user_id = ?', user.email, user.id)
+    where('email = ? OR user_id = ?', user.email_for_enrollments, user.id)
   end
 
   # Name split (https://github.com/code-dot-org/code-dot-org/pull/11679) was deployed on 2016-11-09
@@ -183,7 +182,7 @@ class Pd::Enrollment < ApplicationRecord
   end
 
   def resolve_user
-    user || User.find_by_email_or_hashed_email(email)
+    user || User.find_by_email_or_hashed_email(email) || User.find_by(id: application&.user_id)
   end
 
   # Pre-workshop survey URL (if any)
@@ -361,7 +360,7 @@ class Pd::Enrollment < ApplicationRecord
   # Returns true if the given workshop is an Admin or Admin/Counselor workshop
   private_class_method def self.admin_workshop?(workshop)
     workshop.course == Pd::Workshop::COURSE_ADMIN ||
-    workshop.course == Pd::Workshop::COURSE_ADMIN_COUNSELOR
+      workshop.course == Pd::Workshop::COURSE_ADMIN_COUNSELOR
   end
 
   # Returns if the given workshop uses Foorm for survey completion (assuming the workshop does receive exit
@@ -372,8 +371,8 @@ class Pd::Enrollment < ApplicationRecord
   # And returns true otherwise.
   private_class_method def self.currently_receives_foorm_survey(workshop)
     !(workshop.workshop_ending_date < Date.new(2020, 9, 1) && workshop.csf_201?) &&
-    !(workshop.workshop_ending_date < Date.new(2020, 5, 8) &&
-    (workshop.csf_intro? || workshop.local_summer? || workshop.csp_wfrt?))
+      !(workshop.workshop_ending_date < Date.new(2020, 5, 8) &&
+      (workshop.csf_intro? || workshop.local_summer? || workshop.csp_wfrt?))
   end
 
   private_class_method def self.filter_for_foorm_survey_completion(enrollments, select_completed)
@@ -388,9 +387,7 @@ class Pd::Enrollment < ApplicationRecord
     select_completed ? completed_surveys : uncompleted_surveys
   end
 
-  private
-
-  def unused_random_code
+  private def unused_random_code
     CodeGeneration.random_unique_code length: 10, model: Pd::Enrollment
   end
 end

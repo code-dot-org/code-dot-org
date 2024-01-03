@@ -10,7 +10,7 @@ import {getUnpluggedLessonsForScript} from '@cdo/apps/templates/sectionProgress/
 class CreateStandardsReportStep1 extends Component {
   static propTypes = {
     onNext: PropTypes.func.isRequired,
-    unpluggedLessons: PropTypes.array.isRequired
+    unpluggedLessons: PropTypes.array.isRequired,
   };
 
   render() {
@@ -32,11 +32,11 @@ class CreateStandardsReportStep1 extends Component {
         <p>{i18n.pluggedLessonsNote()}</p>
         <DialogFooter rightAlign>
           <Button
-            __useDeprecatedTag
             text={i18n.next()}
             onClick={this.props.onNext}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
             className="uitest-standards-generate-report-next"
+            style={styles.button}
           />
         </DialogFooter>
       </div>
@@ -49,12 +49,15 @@ const styles = {
     fontStyle: 'italic',
     fontWeight: 'bold',
     marginTop: 20,
-    marginBottom: 30
-  }
+    marginBottom: 30,
+  },
+  button: {
+    margin: 0,
+  },
 };
 
 export const UnconnectedCreateStandardsReportStep1 = CreateStandardsReportStep1;
 
 export default connect(state => ({
-  unpluggedLessons: getUnpluggedLessonsForScript(state)
+  unpluggedLessons: getUnpluggedLessonsForScript(state),
 }))(CreateStandardsReportStep1);

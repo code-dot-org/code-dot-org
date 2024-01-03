@@ -1,16 +1,16 @@
 Given(/^I am a workshop administrator with some applications of each type and status$/) do
-  steps %Q{
+  steps <<~GHERKIN
     And I am a workshop administrator
     And I create some fake applications of each type and status
-  }
+  GHERKIN
 end
 
 Given(/^I am a workshop administrator$/) do
   random_name = "TestWorkshopAdmin" + SecureRandom.hex(10)
-  steps %Q{
+  steps <<~GHERKIN
     And I create a teacher named "#{random_name}"
     And I make the teacher a workshop admin
-  }
+  GHERKIN
 end
 
 And(/^I get facilitator access$/) do
@@ -20,25 +20,23 @@ end
 Given /^I am a CSF facilitator named "([^"]*)" for regional partner "([^"]*)"$/ do |facilitator_name, partner_name|
   require_rails_env
 
-  RegionalPartner.find_or_create_by(name: partner_name, group: 1)
+  RegionalPartner.find_or_create_by(name: partner_name, group: 1, is_active: true)
 
-  steps %Q{
+  steps <<~GHERKIN
     And there is a facilitator named "#{facilitator_name}" for course "#{Pd::Workshop::COURSE_CSF}"
     And I sign in as "#{facilitator_name}"
-  }
+  GHERKIN
 end
 
 Given /^I am a program manager named "([^"]*)" for regional partner "([^"]*)"$/ do |pm_name, partner_name|
   require_rails_env
 
-  regional_partner = RegionalPartner.find_or_create_by(name: partner_name, group: 1)
+  regional_partner = RegionalPartner.find_or_create_by(name: partner_name, group: 1, is_active: true)
 
   email, password = generate_user(pm_name)
-  FactoryGirl.create(:program_manager, name: pm_name, email: email, password: password, regional_partner: regional_partner)
+  FactoryBot.create(:program_manager, name: pm_name, email: email, password: password, regional_partner: regional_partner)
 
-  steps %Q{
-    And I sign in as "#{pm_name}"
-  }
+  steps "And I sign in as \"#{pm_name}\""
 end
 
 And(/^I get program manager access$/) do
@@ -47,10 +45,10 @@ end
 
 Given(/^I am a program manager$/) do
   @pm_name = "Program Manager#{Time.now.to_i}_#{rand(1_000_000)}"
-  steps %{
+  steps <<~GHERKIN
     Given I create a teacher named "#{@pm_name}"
     And I get program manager access
-  }
+  GHERKIN
 end
 
 Given(/^I have a regional partner with a teacher application$/) do
@@ -74,8 +72,8 @@ Given /^there is a facilitator named "([^"]+)" for course "([^"]+)"$/ do |name, 
 
   email, password = generate_user(name)
 
-  FactoryGirl.create(:pd_course_facilitator, course: course, facilitator:
-    FactoryGirl.create(:facilitator, name: name, email: email, password: password)
+  FactoryBot.create(:pd_course_facilitator, course: course, facilitator:
+    FactoryBot.create(:facilitator, name: name, email: email, password: password)
   )
 end
 
@@ -83,62 +81,60 @@ Given /^I select the "([^"]*)" facilitator at index (\d+)$/ do |name, index|
   email = @users[name][:email]
   facilitator = "#{name} (#{email})"
 
-  steps %Q{
+  steps <<~GHERKIN
     And I wait until element "#facilitator#{index}" is visible
     And I select the "#{facilitator}" option in dropdown "facilitator#{index}"
-  }
+  GHERKIN
 end
 
 Given /^I open the new workshop form$/ do
-  steps %Q{
+  steps <<~GHERKIN
     And I am on "http://studio.code.org/pd/workshop_dashboard"
     Then I wait until element "button:contains('New Workshop')" is visible
     Then I press "button:contains('New Workshop')" using jQuery
 
     And I wait until element "h2:contains('New Workshop')" is visible
-  }
+  GHERKIN
 end
 
 Given(/^I am a facilitator with started and completed courses$/) do
   random_name = "TestFacilitator" + SecureRandom.hex[0..9]
-  steps %Q{
+  steps <<~GHERKIN
     And I create a teacher named "#{random_name}"
     And I make the teacher named "#{random_name}" a facilitator for course "CS Fundamentals"
     And I create a workshop for course "CS Fundamentals" facilitated by "#{random_name}" with 5 people and start it
     And I create a workshop for course "CS Fundamentals" facilitated by "#{random_name}" with 5 people and end it
     And I create a workshop for course "CS Fundamentals" facilitated by "#{random_name}" with 5 people
-  }
+  GHERKIN
 end
 
 Given(/^I am an organizer with started and completed courses$/) do
   random_name = "TestOrganizer" + SecureRandom.hex[0..9]
-  steps %Q{
+  steps <<~GHERKIN
     And I create a teacher named "#{random_name}"
     And I make the teacher named "#{random_name}" a workshop organizer
     And I create a workshop for course "CS Fundamentals" organized by "#{random_name}" with 5 people and start it
     And I create a workshop for course "CS Fundamentals" organized by "#{random_name}" with 5 people and end it
     And I create a workshop for course "CS Fundamentals" organized by "#{random_name}" with 5 people
-  }
+  GHERKIN
 end
 
 Given(/^I am a teacher who has just followed a workshop certificate link$/) do
   test_teacher_name = "TestTeacher - Certificate Test"
   require_rails_env
 
-  steps %Q{
+  steps <<~GHERKIN
     And I create a teacher named "#{test_teacher_name}"
     And I create a workshop for course "CS Principles" attended by "#{test_teacher_name}" with 3 facilitators and end it
-  }
+  GHERKIN
 
-  enrollment = FactoryGirl.create(
+  enrollment = FactoryBot.create(
     :pd_enrollment,
     :with_attendance,
     :from_user,
     user: find_test_user_by_name(test_teacher_name)
   )
-  steps %Q{
-    And I am on "http://studio.code.org/pd/generate_workshop_certificate/#{enrollment.code}"
-  }
+  steps "And I am on \"http://studio.code.org/pd/generate_workshop_certificate/#{enrollment.code}\""
 end
 
 Given(/^I navigate to the principal approval page for "([^"]*)"$/) do |name|
@@ -150,9 +146,7 @@ Given(/^I navigate to the principal approval page for "([^"]*)"$/) do |name|
   # TODO(Andrew) ensure regional partner in the original application, and remove this:
   application.update!(regional_partner: RegionalPartner.first)
 
-  steps %Q{
-    And I am on "http://studio.code.org/pd/application/principal_approval/#{application.application_guid}"
-  }
+  steps "And I am on \"http://studio.code.org/pd/application/principal_approval/#{application.application_guid}\""
 end
 
 And(/^I make the teacher named "([^"]*)" a facilitator for course "([^"]*)"$/) do |name, course|
@@ -175,7 +169,7 @@ And(/^I make the teacher a workshop admin$/) do
 end
 
 And(/^I complete Section 2 of the teacher PD application$/) do
-  steps %Q{
+  steps <<~GHERKIN
     Then I wait until element "h3" contains text "Section 2: Find Your Region"
     And I press the first "input[name='country']" element
     And I press keys "nonexistent" for element "#school input"
@@ -189,11 +183,11 @@ And(/^I complete Section 2 of the teacher PD application$/) do
     And I select the "Washington" option in dropdown "schoolState"
     And I press keys "98101" for element "input#schoolZipCode"
     And I press the first "input[name='schoolType'][value='Other']" element
-  }
+  GHERKIN
 end
 
 And(/^I complete Section 3 of the teacher PD application$/) do
-  steps %Q{
+  steps <<~GHERKIN
     Then I wait until element "h3" contains text "Section 3: About You"
     And I press the first "input[name='completingOnBehalfOfSomeoneElse'][value='No']" element
     And I press keys "Severus" for element "input#firstName"
@@ -204,21 +198,21 @@ And(/^I complete Section 3 of the teacher PD application$/) do
     And I select the "Washington" option in dropdown "state"
     And I press keys "98101" for element "input#zipCode"
     And I press the first "input[name='howHeard']" element
-  }
+  GHERKIN
 end
 
 And(/^I complete Section 4 of the teacher PD application$/) do
-  steps %Q{
+  steps <<~GHERKIN
     Then I wait until element "h3" contains text "Section 4: Additional Demographic Information"
     And I press the first "input[name='currentRole']" element
     And I press the first "input[name='previousYearlongCdoPd']" element
     And I press "input[name='genderIdentity']:first" using jQuery
     And I press the first "input[name='race']" element
-  }
+  GHERKIN
 end
 
 And(/^I complete Section 5 of the teacher PD application$/) do
-  steps %Q{
+  steps <<~GHERKIN
     Then I wait until element "h3" contains text "Section 5: Administrator/School Leader Information"
     And I press keys "Headmaster" for element "input#principalRole"
     And I press keys "Albus" for element "input#principalFirstName"
@@ -226,18 +220,17 @@ And(/^I complete Section 5 of the teacher PD application$/) do
     And I press keys "socks@hogwarts.edu" for element "input#principalEmail"
     And I press keys "socks@hogwarts.edu" for element "input#principalConfirmEmail"
     And I press keys "5555882300" for element "input#principalPhoneNumber"
-  }
+  GHERKIN
 end
 
 And(/^I complete Section 7 of the teacher PD application$/) do
-  steps %Q{
+  steps <<~GHERKIN
     Then I wait until element "h3" contains text "Section 7: Program Requirements and Submission"
     Then I wait until element "input[name='committed']" is visible
     And I press "input[name='committed']:first" using jQuery
-    And I press the first "input#understandFee" element
     And I click selector "input[name='payFee']" if I see it
     And I press the first "input#agree" element
-  }
+  GHERKIN
 end
 
 And(/^I create some fake applications of each type and status$/) do
@@ -247,7 +240,7 @@ end
 And(/^I am viewing a workshop with fake survey results$/) do
   require_rails_env
 
-  workshop = FactoryGirl.create :summer_workshop,
+  workshop = FactoryBot.create :summer_workshop,
     :ended,
     num_sessions: 5,
     enrolled_and_attending_users: 10,
@@ -256,9 +249,7 @@ And(/^I am viewing a workshop with fake survey results$/) do
   create_fake_survey_questions workshop
   create_fake_daily_survey_results workshop
 
-  steps %Q{
-    And I am on "http://studio.code.org/pd/workshop_dashboard/daily_survey_results/#{workshop.id}"
-  }
+  steps "And I am on \"http://studio.code.org/pd/workshop_dashboard/daily_survey_results/#{workshop.id}\""
 end
 
 def create_fake_survey_questions(workshop)
@@ -420,10 +411,10 @@ def create_fake_survey_questions(workshop)
       }
     ].to_json
   )
-rescue => e
+rescue => exception
   puts "Unable to create SurveyQuestions. If you are running this locally, please make
     sure that you have overridden jotform_forms in your locals.yml"
-  raise e
+  raise exception
 end
 
 def create_fake_daily_survey_results(workshop)
@@ -477,11 +468,11 @@ def create_fake_daily_survey_results(workshop)
   end
 end
 
-def create_enrollment(workshop, name=nil)
+def create_enrollment(workshop, name = nil)
   first_name = name.nil? ? "First - #{SecureRandom.hex}" : name
   last_name = name.nil? ? "Last - #{SecureRandom.hex}" : "Last"
   user = Retryable.retryable(on: [ActiveRecord::RecordInvalid], tries: 5) do
-    FactoryGirl.create :teacher
+    FactoryBot.create :teacher
   end
   Pd::Enrollment.create!(
     first_name: first_name,
@@ -521,7 +512,7 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
     end
 
   workshop = Retryable.retryable(on: [ActiveRecord::RecordNotUnique, ActiveRecord::RecordInvalid], tries: 5) do
-    FactoryGirl.create(:workshop, :funded,
+    FactoryBot.create(:workshop, :funded,
       on_map: true,
       course: course,
       organizer_id: organizer.id,

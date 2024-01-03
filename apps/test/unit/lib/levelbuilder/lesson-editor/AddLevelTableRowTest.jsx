@@ -15,8 +15,8 @@ describe('AddLevelTableRow', () => {
         name: 'Level 1',
         type: 'Applab',
         owner: 'Islay',
-        updated_at: '09/30/20 at 08:37:04 PM'
-      }
+        updated_at: '09/30/20 at 08:37:04 PM',
+      },
     };
   });
 

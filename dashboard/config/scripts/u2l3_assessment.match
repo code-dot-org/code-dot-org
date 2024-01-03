@@ -1,23 +1,26 @@
 name 'U2L3 Assessment'
-encrypted 'yAkayDb/XBOg5jQSOpFPSxXsi2tkscIXk2R7PkDRASyIntt4azSMwMWnegZ/
-56llnpPUaWO/h1q72K/0gyE+pQwnPns7KU1rxHJJ6BcQ1SO2BG6bnbHQkQ/I
-jSTyJHq/PI+y+5UVL7kUo8MUInCGynEf5aKvk3jcEzxLvj8xu62vB80ryxgW
-j2davQVRCF8kLX5WoH6wbQcaw5P9u0lav9JPtnQkuj4Is99Hb8AAp3NQ1KGE
-3bC7f0M8vcIYEYuxgGIh+IYEpWQ6M6jU8AX+pneFeOUMOm2DWtg91RsZuN7g
-6gX6C54TJkrSSQxwSZRIjp1JoEfnLzCvFl9xbIw4thgSehvhjrIAnp49dKFc
-dxeJPbfENldlVCuP/yPf+Pjr0PsLVs1ObL9WKyy+2n6Sw43OftxyU0/pIqWv
-GpSkEgzysYsJKV13DgjOXKOK/cwGMyfZqmpsJeHyyyCBj+Zrj2TJ1uCy3WMT
-4vFUjT0ICFBmGmQaz65V5XxuYmOh5dS2tJJh+t2niGO7vq4BHjzuIRKSEv1C
-yyWpNaNRM71LdFvcc5kCKsI/ak+ZZO4JYd6VlfdRU05CWDg39M2p74bXxrrc
-MMdL6bPbT1a329H9Ui2PXk6xemKVqCA1XY9d3EDKnarS19IDXJuI6yI72gi8
-aItmkwwwOlwyuRxwCBsiNqHjanJ2Yid8WVY99P0WJujmwEpy63ruaK4NiF+Y
-v6Ws119JpBqP1+EPVMDyKl78C/KuYPvh+miRoWMYy4fxNpWDoE/cAyllYPdp
-Qblr8HfqAgPll3vQ8ikEQlA+MfsFvCGc3HM6iEWjA700cooS1f2xZZNPAItQ
-clUV7Pocn2l57cMplNNpxI2CtQfgO1LWPwoflJBjUUK4Z9HyfhkSOEuaEa9G
-NtAkzI+mMGCXNfdNBrSzqIhaLhCJhr5asv740iSNei5rF/Z7wafF27I3imTq
-VLdosjSau1MeB98JBqzY7nEMH4IYfir2hmd+j3kwHlSmz6sZBtbq0Ws2Eeeb
-KX173ZZeeoPknDoUg687oijLl2yFOgcpnsvCPC91I4MXA8G82YlZ7csVcSS9
-SBHT1P09cytjw4TDBbMorCWiLoAcgOXmSB++DhTinogsJchJpe0f6rpwAuP+
-BD9fF/c4nCe+fi3F7UYQBwjdYRv0+7l52r4DaYz6LHHSY/m/U+WN/4Dnm08r
-eklKf/7N0cHG5chX
-'
+title 'IP addresses, Packets and Protocols'
+question 'protocol'
+answer 'A well-known set of rules and standards used to communicate'
+question 'packet'
+answer 'A chunk of information that gets sent on the internet'
+question 'The Internet Protocol (IP)'
+answer 'The required structure of a packet to be sent on the internet'
+question 'IPv4 packet'
+answer 'A packet of data that uses 32-bit addresses'
+
+markdown <<MARKDOWN
+(You may want to have seen the video: IP Addresses and DNS before responding to this)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Answers:
+
+- protocol: A well-known set of rules and standards used to communicate
+- packet: A chunk of information that gets sent on the internet
+- Internet Protocol: The required structure of a packet to be sent on the internet
+- IPv4 packet: A packet of data that uses 32-bit addresses
+
+MARKDOWN
+
+allow_multiple_attempts true

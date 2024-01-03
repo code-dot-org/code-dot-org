@@ -56,10 +56,10 @@ module ActionViewSinatra
       # save locals hash for access by the locals method
       @locals = locals
       super(options, locals)
-    rescue ActionView::Template::Error => e
+    rescue ActionView::Template::Error => exception
       # allow templates to throw a Sinatra::NotFound error to trigger a 404
-      raise e.cause if e.cause.is_a?(Sinatra::NotFound)
-      raise e
+      raise exception.cause if exception.cause.is_a?(Sinatra::NotFound)
+      raise exception
     end
 
     # Our templates currently use a bunch of sinatra methods like resolve_static, redirect, etc.

@@ -17,7 +17,7 @@ class ExpandableImageDialog extends React.Component {
   static propTypes = {
     closeDialog: PropTypes.func.isRequired,
     imgUrl: PropTypes.string,
-    isOpen: PropTypes.bool.isRequired
+    isOpen: PropTypes.bool.isRequired,
   };
 
   render() {
@@ -27,7 +27,11 @@ class ExpandableImageDialog extends React.Component {
         isOpen={this.props.isOpen}
         useUpdatedStyles={true}
       >
-        <img src={this.props.imgUrl} />
+        {
+          // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+          // Verify or update this alt-text as necessary
+        }
+        <img src={this.props.imgUrl} alt="" />
       </BaseDialog>
     );
   }
@@ -36,9 +40,9 @@ class ExpandableImageDialog extends React.Component {
 export default connect(
   state => ({
     isOpen: state.instructionsDialog.open,
-    imgUrl: state.instructionsDialog.imgUrl
+    imgUrl: state.instructionsDialog.imgUrl,
   }),
   {
-    closeDialog
+    closeDialog,
   }
 )(ExpandableImageDialog);

@@ -19,12 +19,12 @@ class ResizablePanes extends Component {
     columnSizes: PropTypes.arrayOf(PropTypes.number).isRequired,
     onChange: PropTypes.func.isRequired,
     children: PropTypes.node,
-    lockedColumns: PropTypes.arrayOf(PropTypes.number)
+    lockedColumns: PropTypes.arrayOf(PropTypes.number),
   };
 
   state = {
     dragging: false,
-    index: 0
+    index: 0,
   };
 
   componentDidMount() {
@@ -41,7 +41,7 @@ class ResizablePanes extends Component {
     this.unFocus();
     this.setState({
       dragging: true,
-      index: parseInt(event.target.dataset.resizerIndex, 10)
+      index: parseInt(event.target.dataset.resizerIndex, 10),
     });
   };
 
@@ -94,7 +94,7 @@ class ResizablePanes extends Component {
     return React.cloneElement(child, {
       ref: `pane-${index}`,
       key: `pane-${index}`,
-      style
+      style,
     });
   }
 
@@ -144,10 +144,10 @@ class ResizablePanes extends Component {
         {
           display: 'flex',
           flexDirection: 'row',
-          flexWrap: 'nowrap'
+          flexWrap: 'nowrap',
         },
         this.props.style
-      )
+      ),
     };
 
     return (
@@ -176,9 +176,9 @@ const styles = {
     height: '100%',
     ':hover': {
       transition: 'all 2s ease',
-      borderColor: 'rgba(0, 0, 0, 0.5)'
-    }
-  }
+      borderColor: 'rgba(0, 0, 0, 0.5)',
+    },
+  },
 };
 
 export default Radium(ResizablePanes);

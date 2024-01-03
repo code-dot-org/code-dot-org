@@ -3,19 +3,19 @@ import {assert} from '../../util/reconfiguredChai';
 var NetSimVizElement = require('@cdo/apps/netsim/NetSimVizElement');
 var NetSimVizNode = require('@cdo/apps/netsim/NetSimVizNode');
 
-describe('NetSimVizNode', function() {
-  describe('defaults', function() {
+describe('NetSimVizNode', function () {
+  describe('defaults', function () {
     var vizNode;
 
-    beforeEach(function() {
+    beforeEach(function () {
       vizNode = new NetSimVizNode();
     });
 
-    it('is a VizElement', function() {
+    it('is a VizElement', function () {
       assert.instanceOf(vizNode, NetSimVizElement);
     });
 
-    it('has default properties', function() {
+    it('has default properties', function () {
       assert.isUndefined(vizNode.address_);
       assert.isUndefined(vizNode.dnsMode_);
       assert.isFalse(vizNode.isRouter);
@@ -23,7 +23,7 @@ describe('NetSimVizNode', function() {
       assert.isFalse(vizNode.isDnsNode);
     });
 
-    it('immediately creates SVG elements', function() {
+    it('immediately creates SVG elements', function () {
       var root = vizNode.getRoot();
       assert.equal('[object SVGGElement]', root[0].toString());
 

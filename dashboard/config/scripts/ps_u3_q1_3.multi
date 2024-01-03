@@ -9,3 +9,5 @@ Consider the following incorrect program, which is intended to move the robot ar
 
 ![](https://images.code.org/a442a51dc20d85327f74693a0e03a876-image-1459378505362.png)
 MARKDOWN
+
+allow_multiple_attempts true

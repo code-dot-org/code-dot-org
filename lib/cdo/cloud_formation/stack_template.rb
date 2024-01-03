@@ -34,14 +34,12 @@ module Cdo::CloudFormation
       erb_file(filename)
     end
 
-    private
-
-    def environment
+    private def environment
       rack_env
     end
 
     # Generate boilerplate Trust Policy for an AWS Service Role.
-    def service_role(service)
+    private def service_role(service)
       document = {
         Statement: [
           Effect: 'Allow',
@@ -52,17 +50,17 @@ module Cdo::CloudFormation
       "AssumeRolePolicyDocument: #{document.to_json}"
     end
 
-    def erb_file(filename, vars={})
+    private def erb_file(filename, vars = {})
       file = File.expand_path filename
       erb_eval(File.read(file), file, vars)
     end
 
     # Inline a file into a CloudFormation template.
-    def file(filename, vars={})
+    private def file(filename, vars = {})
       {'Fn::Sub': erb_file(filename, vars)}.to_json
     end
 
-    def erb_eval(str, filename=nil, local_vars={})
+    private def erb_eval(str, filename = nil, local_vars = {})
       binding = get_binding
       local_vars.each_pair do |key, value|
         binding.local_variable_set(key, value)
@@ -73,30 +71,30 @@ module Cdo::CloudFormation
     end
 
     # Inline a component file into the stack template using local variables as parameters.
-    def component(name, vars = {})
+    private def component(name, vars = {})
       erb_file(aws_dir("cloudformation/components/#{name}.yml.erb"), vars)
     end
 
     # Inline stack resources into the template using local variables as parameters
     # This allows component file to be unindented, and will add a 2-space indent when loaded
-    def resource_component(name, vars = {})
+    private def resource_component(name, vars = {})
       resource_indent = 2
       indent(erb_file(aws_dir("cloudformation/components/#{name}.yml.erb"), vars), resource_indent)
     end
 
     # Adds the specified properties to a YAML document.
-    def add_properties(properties)
+    private def add_properties(properties)
       properties.transform_values(&:to_json).map {|p| p.join(': ')}.join
     end
 
     # Indent all lines in the string by the specified number of characters.
-    def indent(string, chars)
+    private def indent(string, chars)
       string.gsub(/\n/, "\n#{' ' * chars}")
     end
 
     # Creates Binding object used for ERB template context.
     # Must be overridden in subclasses.
-    def get_binding
+    private def get_binding
       binding
     end
   end

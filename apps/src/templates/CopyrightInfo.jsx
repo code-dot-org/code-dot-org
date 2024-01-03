@@ -13,7 +13,7 @@ const CopyrightInfo = () => {
           display: 'flex',
           flexWrap: 'nowrap',
           alignItems: 'baseline',
-          margin: '20px 0 5px 0'
+          margin: '20px 0 5px 0',
         }}
       >
         <a rel="license" href={licenseURL}>
@@ -25,7 +25,7 @@ const CopyrightInfo = () => {
         </a>
         <SafeMarkdown
           markdown={i18n.licenseInformation({
-            link: 'http://creativecommons.org/licenses/by-nc-sa/4.0/'
+            link: 'http://creativecommons.org/licenses/by-nc-sa/4.0/',
           })}
           openExternalLinksInNewTab
         />

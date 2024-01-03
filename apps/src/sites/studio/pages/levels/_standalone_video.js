@@ -58,7 +58,7 @@ $(document).ready(() => {
   );
 
   // Render markdown contents
-  $('.standalone-video > .markdown-container').each(function() {
+  $('.standalone-video > .markdown-container').each(function () {
     const container = this;
     if (!container.dataset.markdown) {
       return;

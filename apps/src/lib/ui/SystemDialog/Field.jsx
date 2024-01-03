@@ -18,7 +18,7 @@ export default class Field extends React.Component {
     labelDetails: PropTypes.node,
     error: PropTypes.any,
     children: PropTypes.element.isRequired,
-    style: PropTypes.object
+    style: PropTypes.object,
   };
 
   constructor(props) {
@@ -32,7 +32,7 @@ export default class Field extends React.Component {
       <div
         style={{
           marginBottom: 15,
-          ...style
+          ...style,
         }}
       >
         {(label || labelDetails) && (
@@ -40,7 +40,7 @@ export default class Field extends React.Component {
             htmlFor={this.uniqueId}
             style={{
               display: 'block',
-              color: color.charcoal
+              color: color.charcoal,
             }}
           >
             {label && (
@@ -62,7 +62,7 @@ const FieldError = ({children}) => (
   <div
     style={{
       color: color.red,
-      fontStyle: 'italic'
+      fontStyle: 'italic',
     }}
   >
     {children}

@@ -24,12 +24,12 @@ const DataDocView = props => {
 
 DataDocView.propTypes = {
   dataDocName: PropTypes.string,
-  dataDocContent: PropTypes.string
+  dataDocContent: PropTypes.string,
 };
 
 DataDocView.defaultProps = {
   dataDocName: 'Un-named Data Doc',
-  dataDocContent: '[No content]'
+  dataDocContent: '[No content]',
 };
 
 export default DataDocView;

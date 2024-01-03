@@ -1,7 +1,7 @@
 import * as Survey from 'survey-react';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Button} from 'react-bootstrap';
+import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import Spinner from '../components/spinner';
 
 const SPINNER_WAIT_MS = 2000;
@@ -16,11 +16,11 @@ export default class Foorm extends React.Component {
     submitParams: PropTypes.object,
     customCssClasses: PropTypes.object,
     onComplete: PropTypes.func,
-    inEditorMode: PropTypes.bool
+    inEditorMode: PropTypes.bool,
   };
 
   static defaultProps = {
-    customCssClasses: {}
+    customCssClasses: {},
   };
 
   defaultCss = {
@@ -28,29 +28,29 @@ export default class Foorm extends React.Component {
     header: 'sv_header foorm-adjust-header',
     body: 'sv_body foorm-adjust-body',
     page: {
-      title: 'sv_page_title foorm-adjust-page-title'
+      title: 'sv_page_title foorm-adjust-page-title',
     },
     checkbox: {
-      itemControl: 'sv_q_checkbox_control_item foorm-adjust-checkbox'
+      itemControl: 'sv_q_checkbox_control_item foorm-adjust-checkbox',
     },
     radiogroup: {
-      itemControl: 'sv_q_radiogroup_control_item foorm-adjust-radio'
+      itemControl: 'sv_q_radiogroup_control_item foorm-adjust-radio',
     },
     matrix: {
-      root: 'sv_q_matrix foorm-adjust-matrix'
+      root: 'sv_q_matrix foorm-adjust-matrix',
     },
     rating: {
-      root: 'sv_q_rating foorm-adjust-rating'
+      root: 'sv_q_rating foorm-adjust-rating',
     },
     navigation: {
       prev: 'sv_prev_button foorm-button foorm-button-left',
       next: 'sv_next_button foorm-button foorm-button-right',
-      complete: 'sv_complete_btn foorm-button'
+      complete: 'sv_complete_btn foorm-button',
     },
     row: 'sv_row foorm-adjust-row',
     dropdown: {
-      control: 'sv_q_dropdown_control foorm-adjust-dropdown-height'
-    }
+      control: 'sv_q_dropdown_control foorm-adjust-dropdown-height',
+    },
   };
 
   constructor(props) {
@@ -60,7 +60,7 @@ export default class Foorm extends React.Component {
       hasError: false,
       statusMessage: null,
       survey: null,
-      submitting: false
+      submitting: false,
     };
 
     Survey.StylesManager.applyTheme('default');
@@ -87,7 +87,7 @@ export default class Foorm extends React.Component {
     let requestData = {
       answers: survey.data,
       form_name: this.props.formName,
-      form_version: this.props.formVersion
+      form_version: this.props.formVersion,
     };
     if (this.props.submitParams) {
       requestData = {...this.props.submitParams, ...requestData};
@@ -95,14 +95,14 @@ export default class Foorm extends React.Component {
     this.setState({
       statusMessage: 'Your responses are being submitted...',
       hasError: false,
-      submitting: true
+      submitting: true,
     });
     const startTime = Date.now();
     $.ajax({
       url: this.props.submitApi,
       type: 'post',
       dataType: 'json',
-      data: requestData
+      data: requestData,
     })
       .done(() => {
         this.setCompletedStatusMessage(
@@ -142,7 +142,7 @@ export default class Foorm extends React.Component {
         statusMessage: statusMessage,
         hasError: hasError,
         survey: survey,
-        submitting: false
+        submitting: false,
       });
     }, timeout);
   }
@@ -179,6 +179,6 @@ export default class Foorm extends React.Component {
 
 const styles = {
   statusMessage: {
-    textAlign: 'center'
-  }
+    textAlign: 'center',
+  },
 };

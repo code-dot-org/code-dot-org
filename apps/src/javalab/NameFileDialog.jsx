@@ -13,7 +13,7 @@ export default class NameFileDialog extends Component {
     saveButtonText: PropTypes.string.isRequired,
     displayTheme: PropTypes.oneOf(Object.values(DisplayTheme)).isRequired,
     errorMessage: PropTypes.string,
-    filename: PropTypes.string
+    filename: PropTypes.string,
   };
 
   constructor(props) {
@@ -26,6 +26,7 @@ export default class NameFileDialog extends Component {
 
   componentDidUpdate(prevProps) {
     if (!prevProps.isOpen && this.props.isOpen) {
+      this.textInput.focus();
       this.textInput.setSelectionRange(0, 0);
     }
   }
@@ -47,7 +48,7 @@ export default class NameFileDialog extends Component {
       saveButtonText,
       displayTheme,
       errorMessage,
-      filename
+      filename,
     } = this.props;
     return (
       <BaseDialog
@@ -55,7 +56,7 @@ export default class NameFileDialog extends Component {
         handleClose={handleClose}
         style={{
           ...styles.dialog,
-          ...(displayTheme === DisplayTheme.DARK && styles.darkDialog)
+          ...(displayTheme === DisplayTheme.DARK && styles.darkDialog),
         }}
         useUpdatedStyles
         hideCloseButton
@@ -64,7 +65,7 @@ export default class NameFileDialog extends Component {
           htmlFor="filenameInput"
           style={{
             ...styles.label,
-            ...(displayTheme === DisplayTheme.DARK && styles.darkDialog)
+            ...(displayTheme === DisplayTheme.DARK && styles.darkDialog),
           }}
         >
           {inputLabel}
@@ -72,7 +73,7 @@ export default class NameFileDialog extends Component {
         <div
           style={{
             ...styles.dialogContent,
-            ...(displayTheme === DisplayTheme.DARK && styles.darkDialog)
+            ...(displayTheme === DisplayTheme.DARK && styles.darkDialog),
           }}
         >
           <input
@@ -82,10 +83,9 @@ export default class NameFileDialog extends Component {
             ref={this.setTextInputRef}
             style={{
               ...styles.dialogInput,
-              ...(displayTheme === DisplayTheme.DARK && styles.darkDialog)
+              ...(displayTheme === DisplayTheme.DARK && styles.darkDialog),
             }}
             onKeyDown={this.onKeyDown}
-            autoFocus
           />
           <div>
             <button
@@ -94,7 +94,7 @@ export default class NameFileDialog extends Component {
                 ...styles.button,
                 ...(displayTheme === DisplayTheme.DARK
                   ? styles.darkButton
-                  : styles.lightSave)
+                  : styles.lightSave),
               }}
               onClick={() => handleSave(this.textInput.value)}
             >
@@ -106,7 +106,7 @@ export default class NameFileDialog extends Component {
                 ...styles.button,
                 ...(displayTheme === DisplayTheme.DARK
                   ? styles.darkButton
-                  : styles.lightCancel)
+                  : styles.lightCancel),
               }}
               onClick={handleClose}
             >
@@ -135,45 +135,45 @@ const styles = {
     textAlign: 'left',
     padding: 20,
     color: color.black,
-    width: 500
+    width: 500,
   },
   darkDialog: {
     backgroundColor: color.dark_slate_gray,
-    color: color.white
+    color: color.white,
   },
   dialogContent: {
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   dialogInput: {
-    margin: 0
+    margin: 0,
   },
   button: {
     width: 100,
     textAlign: 'center',
-    padding: 6
+    padding: 6,
   },
   darkButton: {
     backgroundColor: color.darkest_gray,
-    color: 'white'
+    color: 'white',
   },
   lightSave: {
     backgroundColor: color.cyan,
-    color: color.white
+    color: color.white,
   },
   lightCancel: {
     backgroundColor: color.light_gray,
-    color: color.black
+    color: color.black,
   },
   label: {
-    marginBottom: 0
+    marginBottom: 0,
   },
   errorMessage: {
-    color: color.red
+    color: color.red,
   },
   darkErrorMessage: {
     backgroundColor: color.dark_slate_gray,
-    color: color.lightest_red
-  }
+    color: color.lightest_red,
+  },
 };

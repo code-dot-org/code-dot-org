@@ -10,26 +10,24 @@ class SectionProjectsListWithData extends Component {
 
     // Props provided by redux.
     localeCode: PropTypes.string,
-    sectionId: PropTypes.number
+    sectionId: PropTypes.number,
   };
 
   state = {
     projectsData: {},
-    isLoading: true
+    isLoading: true,
   };
 
   componentDidMount() {
-    const projectsDataUrl = `/dashboardapi/v1/projects/section/${
-      this.props.sectionId
-    }`;
+    const projectsDataUrl = `/dashboardapi/v1/projects/section/${this.props.sectionId}`;
     $.ajax({
       url: projectsDataUrl,
       method: 'GET',
-      dataType: 'json'
+      dataType: 'json',
     }).done(projectsData => {
       this.setState({
         projectsData: projectsData,
-        isLoading: false
+        isLoading: false,
       });
     });
   }
@@ -54,9 +52,10 @@ class SectionProjectsListWithData extends Component {
   }
 }
 
-export const UnconnectedSectionProjectsListWithData = SectionProjectsListWithData;
+export const UnconnectedSectionProjectsListWithData =
+  SectionProjectsListWithData;
 
 export default connect(state => ({
   localeCode: state.locales.localeCode,
-  sectionId: state.teacherSections.selectedSectionId
+  sectionId: state.teacherSections.selectedSectionId,
 }))(SectionProjectsListWithData);

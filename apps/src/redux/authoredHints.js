@@ -26,7 +26,7 @@ const authoredHintsInitialState = {
   /**
    * @type {!AuthoredHint[]}
    */
-  unseenHints: []
+  unseenHints: [],
 };
 
 export default function reducer(state = authoredHintsInitialState, action) {
@@ -37,18 +37,18 @@ export default function reducer(state = authoredHintsInitialState, action) {
     );
     return Object.assign({}, state, {
       unseenHints: state.unseenHints.concat(unseen),
-      seenHints: state.seenHints.concat(seen)
+      seenHints: state.seenHints.concat(seen),
     });
   }
 
   if (action.type === SHOW_NEXT_HINT) {
     const nextHint = Object.assign({}, state.unseenHints[0], {
-      alreadySeen: true
+      alreadySeen: true,
     });
 
     return Object.assign({}, state, {
       unseenHints: state.unseenHints.slice(1),
-      seenHints: state.seenHints.concat([nextHint])
+      seenHints: state.seenHints.concat([nextHint]),
     });
   }
 
@@ -86,7 +86,7 @@ export default function reducer(state = authoredHintsInitialState, action) {
 
     return Object.assign({}, state, {
       unseenHints: newUnseenHints,
-      seenHints: newSeenHints
+      seenHints: newSeenHints,
     });
   }
 
@@ -96,14 +96,14 @@ export default function reducer(state = authoredHintsInitialState, action) {
 export const enqueueHints = (hints, hintsUsedIds) => ({
   type: ENQUEUE_HINTS,
   hints,
-  hintsUsedIds
+  hintsUsedIds,
 });
 
 export const showNextHint = () => ({
-  type: SHOW_NEXT_HINT
+  type: SHOW_NEXT_HINT,
 });
 
 export const displayMissingBlockHints = hints => ({
   type: DISPLAY_MISSING_BLOCK_HINTS,
-  hints
+  hints,
 });

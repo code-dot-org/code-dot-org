@@ -6,3 +6,4 @@ question 'What is the value of x?'
 wrong 'a function'
 right '15'
 wrong 'x'
+allow_multiple_attempts true

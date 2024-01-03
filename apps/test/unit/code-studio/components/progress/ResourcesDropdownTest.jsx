@@ -14,13 +14,13 @@ describe('ResourcesDropdown', () => {
           {
             key: 'key1',
             name: 'Curriculum',
-            url: 'https://example.com/a'
+            url: 'https://example.com/a',
           },
           {
             key: 'key2',
             name: 'Vocabulary',
-            url: 'https://example.com/b'
-          }
+            url: 'https://example.com/b',
+          },
         ]}
       />
     );
@@ -46,13 +46,13 @@ describe('ResourcesDropdown', () => {
           {
             key: 'key1',
             name: 'Curriculum',
-            url: 'https://example.com/a'
+            url: 'https://example.com/a',
           },
           {
             key: 'key2',
             name: 'Vocabulary',
-            url: 'https://example.com/b'
-          }
+            url: 'https://example.com/b',
+          },
         ]}
         studentFacing={true}
       />

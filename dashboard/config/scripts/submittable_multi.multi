@@ -10,3 +10,5 @@ wrong 'teal'
 wrong 'yellow'
 right 'real orange of course'
 wrong 'red'
+
+allow_multiple_attempts true

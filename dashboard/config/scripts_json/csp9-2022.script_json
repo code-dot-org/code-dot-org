@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-25 20:46:55 UTC",
+    "serialized_at": "2023-05-16 23:31:30 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3491,7 +3491,7 @@
       "key": "data_visualizer_in_app_lab_-_part_1",
       "properties": {
         "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/csp_datavisualizerp1_sm-mp4.mp4",
+        "download_url": "https://videos.code.org/levelbuilder/csp_datavisualizerp2_sm-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {
@@ -3504,7 +3504,7 @@
       "key": "data_visualizer_in_app_lab_-_part_2",
       "properties": {
         "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/csp_datavisualizerp2_sm-mp4.mp4",
+        "download_url": "https://videos.code.org/levelbuilder/csp_datavisualizerp1_sm-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {

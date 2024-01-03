@@ -6,6 +6,7 @@
       0.45,
       0.65
     ],
+    "style": "world_blocks",
     "func": "showTitleScreen",
     "docFunc": "gamelab_showTitleScreen",
     "blockText": "show title screen {BREAK} title {TITLE} subtitle {SUBTITLE}",

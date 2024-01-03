@@ -4,7 +4,7 @@ import {action} from '@storybook/addon-actions';
 
 export default {
   title: 'IconLibrary',
-  component: IconLibrary
+  component: IconLibrary,
 };
 
 // Template
@@ -17,5 +17,5 @@ const Template = args => (
 // Stories
 export const Default = Template.bind({});
 Default.args = {
-  assetChosen: action('Selected Icon')
+  assetChosen: action('Selected Icon'),
 };

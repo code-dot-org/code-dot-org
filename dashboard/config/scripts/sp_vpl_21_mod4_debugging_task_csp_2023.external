@@ -1,0 +1,20 @@
+name 'SP-VPL-21-mod4-Debugging-task-CSP_2023'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Task: Locate additional debugging support
+
+## What do I do if my student finds a bug and I don't know how to help them?  
+##
+
+##### **Step 1:** Open a new tab and log into your teacher account on Code.org. 
+##### **Step 2:** Click on the "?" in the upper right hand corner of your screen. 
+##### **Step 3:** Select "Teacher forum" from the dropdown menu.
+##### **Step 4:** Select the "CS Principles" category from the teacher forum homepage. 
+##### **Step 5:** Select the "Coding and Debugging Help" category. 
+##### **Step 6:** Read the post titled "Tips for getting help". 
+##### **Step 7:** Click on two or three topics within this category to get a feel for the types of questions people are asking and the responses they are receiving. 
+<br>
+<img src="https://images.code.org/18bab2357fbc2ab3ca24b79302da6eb6-image-1639785574025.59.27 PM.png" alt="Screenshot of the teacher forum." style="height: 400px; clear: both; margin: 0 20px 20px 0;">
+MARKDOWN

@@ -8,7 +8,8 @@ title: IT Requirements
 
 - We recommend at least a 15 MBit/sec Internet connection for your school.
 - The smallest screen size we support is 1024 x 728 px.
-- You will need a desktop or laptop computer with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. Most tablets and mobile devices are not supported for these courses. See "Mobile and Tablet Support Details" below for device-specific exceptions.
+- You will need a desktop or laptop computer (Chromebooks are included) with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. “See Minimum Supported Browsers and Platforms” below.
+- Most tablets (such as an iPad) and mobile devices are not supported for these courses. See "Mobile and Tablet Support Details" below for device-specific exceptions.
 - All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and Chromebooks in addition to all other modern tablets and laptop or desktop computers.
 - Looking for mobile device support details? Read below.
 
@@ -70,6 +71,7 @@ For the very best experience with all Code.org content, we recommend consulting 
 | Priority                                                                                 | URL                                                                                                                                                    |
 | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Required**                                                                             | `https://code.org`<br/>`https://*.code.org`                                                                                                            |
+| **To ensure CAPTCHA systems can distinguish your usage from automated fraudulent (“bot”) activity** | `https://www.google.com/recaptcha/api.js` |
 | **Optional**                                                                             | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                                               |
 | **To use YouTube hosted videos (Enhanced Privacy Mode)**                                 | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*`                                                         |
 | **To use Code.org hosted videos**                                                        | `https://videos.code.org` |
@@ -80,12 +82,12 @@ For the very best experience with all Code.org content, we recommend consulting 
 
 ## Mobile and Tablet Support Details
 
-All CS Discoveries, CS Principles, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad, like on MacBooks) are required. Most tablets are not supported, with the following exceptions:
+All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. Most tablets are not supported, with the following exceptions:
 
 - Microsoft Surface Pro with an external keyboard
 - iPad running iPadOS 13.4 or later with an external keyboard and an external mouse or touchpad
 
-All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and Chromebooks in addition to all other modern tablets and laptop or desktop computers.
+All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
 
 ### Mobile Phones
 
@@ -99,7 +101,16 @@ We use [YouTube](https://www.youtube.com) to embed videos into Code.org and our 
 
 Before you start Code.org's online courses, test playback for the video below to make sure you're good to go.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
+<!--
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to
+.md.erb without breaking i18n sync, this file should include that partial instead.
+-->
+<figure style="width:100%; height: 100%; margin: 0 auto;">
+  <div class="videodiv" style="position:relative;">
+    <img style="display:block; width:100%; height:auto" src="/images/16x9.png">
+    <div class="insert_video_player" data-video-code="ws8rmHcqXeM" data-download-path="//videos.code.org/new/5-artist-intro.mp4"></div>
+  </div>
+</figure>
 
 This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
 

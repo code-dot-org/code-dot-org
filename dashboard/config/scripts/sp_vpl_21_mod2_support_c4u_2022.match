@@ -1,5 +1,5 @@
 name 'SP-VPL-21-mod2-Support-c4u_2022'
-title 'Check for understanding'
+title 'Check for Understanding'
 description 'Match the question with the best place to go for additional support.'
 height'85'
 question 'I need to create a classroom section. Where can I go to find step-by-step instruction?'
@@ -10,3 +10,5 @@ answer 'Teacher Community'
 
 question 'I wish there was a way to see how long students are spending on each level in Code Studio. Where can I go to request a new feature?'
 answer 'Report a problem'
+
+allow_multiple_attempts true

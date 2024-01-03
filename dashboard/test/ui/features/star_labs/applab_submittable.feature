@@ -4,7 +4,6 @@ Feature: Submittable AppLab
 Background:
   Given I create a teacher-associated student named "Lillian"
   And I am on "http://studio.code.org/s/allthethings/lessons/18/levels/7?noautoplay=true"
-  Then I rotate to landscape
   And I wait to see "#runButton"
 
 Scenario: Submit anything, unsubmit, be able to resubmit.

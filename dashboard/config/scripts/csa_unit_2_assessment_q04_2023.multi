@@ -55,8 +55,8 @@ public Store(String name, String website)
 
 **Option E**
 ```
-public String name;
-private String website;
+private String name;
+public String website;
 
 private Store(String name, String website)
 {  /* implementation not shown */  }
@@ -66,3 +66,5 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 Instance variables for a class should be declared `private`, while the constructor should be declared `public`.
 MARKDOWN
+
+allow_multiple_attempts true

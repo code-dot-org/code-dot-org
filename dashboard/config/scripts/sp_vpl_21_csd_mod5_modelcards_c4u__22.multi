@@ -1,5 +1,5 @@
 name 'SP-VPL-21-CSD-mod5-ModelCards-c4u_-22'
-title 'Check for understanding'
+title 'Check for Understanding'
 description ''
 question '**Which of the following indicates understanding of using model cards to identify machine learning bias?**'
 wrong '"A limitation of the model is that it should not be used in a way that could reduce care for people entering an emergency room."'
@@ -33,3 +33,5 @@ teacher_markdown <<MARKDOWN
 In this example, the date prioritizes medical data based on ER patients in a rural hospital in a cold climate. Common ailments for ER patients at an urban hospital in a warmer climate are de-prioritized resulting in a model with low accuracy for the New Orleans hospital. 
 
 MARKDOWN
+
+allow_multiple_attempts true

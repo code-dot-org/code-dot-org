@@ -1,41 +1,42 @@
 import color from '@cdo/apps/util/color';
+import fontConstants from '@cdo/apps/fontConstants';
 
 const PROGRAM_CSD =
   'Computer Science Discoveries (appropriate for 6th - 10th grade)';
 const PROGRAM_CSP =
-  'Computer Science Principles (appropriate for 9th - 12th grade, and can be implemented as an AP or introductory course)';
+  'Computer Science Principles (appropriate for 9th - 12th grade, and can be implemented as an AP or non-AP introductory course)';
 const PROGRAM_CSA =
   'Computer Science A (appropriate for 10th - 12th grade, and can be implemented as an AP or non-AP introductory Java programming course)';
 
 const styles = {
   indented: {
-    marginLeft: 20
+    marginLeft: 20,
   },
   formText: {
-    fontSize: 14
+    fontSize: 14,
   },
   questionText: {
     fontSize: 14,
     lineHeight: 1.5,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   checkBoxAfterButtonList: {
-    marginTop: -30
+    marginTop: -30,
   },
   bold: {
-    fontFamily: '"Gotham 7r", sans-serif'
+    ...fontConstants['main-font-bold'],
   },
   linkLike: {
-    fontFamily: '"Gotham 7r", sans-serif',
+    ...fontConstants['main-font-bold'],
     cursor: 'pointer',
-    color: color.purple
+    color: color.purple,
   },
   red: {
-    color: color.red
+    color: color.red,
   },
   error: {
-    color: color.red
-  }
+    color: color.red,
+  },
 };
 
 function getProgramInfo(program) {

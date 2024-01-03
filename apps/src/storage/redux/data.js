@@ -24,7 +24,7 @@ const SET_LIBRARY_MANIFEST = 'data/SET_LIBRARY_MANIFEST';
  */
 export const tableType = {
   SHARED: 'shared',
-  PROJECT: 'project'
+  PROJECT: 'project',
 };
 
 const DataState = Record({
@@ -38,18 +38,18 @@ const DataState = Record({
   warningMsg: '',
   isWarningDialogOpen: false,
   isPreviewOpen: false,
-  libraryManifest: {}
+  libraryManifest: {},
 });
 
 const initialState = new DataState();
 
-export default function(state = initialState, action) {
+export default function (state = initialState, action) {
   switch (action.type) {
     case ADD_TABLE_NAME:
       return state.set(
         'tableListMap',
         Object.assign({}, state.tableListMap, {
-          [action.tableName]: action.tableType
+          [action.tableName]: action.tableType,
         })
       );
     case CHANGE_VIEW:
@@ -127,13 +127,13 @@ export default function(state = initialState, action) {
 export const addTableName = (tableName, tableType) => ({
   type: ADD_TABLE_NAME,
   tableName,
-  tableType
+  tableType,
 });
 
 export const changeView = (view, tableName) => ({
   type: CHANGE_VIEW,
   view,
-  tableName
+  tableName,
 });
 
 /**
@@ -143,34 +143,34 @@ export const changeView = (view, tableName) => ({
 
 export const deleteTableName = tableName => ({
   type: DELETE_TABLE_NAME,
-  tableName
+  tableName,
 });
 
 export const updateKeyValueData = keyValueData => ({
   type: UPDATE_KEY_VALUE_DATA,
-  keyValueData
+  keyValueData,
 });
 
 export const updateTableColumns = (tableName, tableColumns) => ({
   type: UPDATE_TABLE_COLUMNS,
   tableName,
-  tableColumns
+  tableColumns,
 });
 
 export const updateTableRecords = (tableName, tableRecords) => ({
   type: UPDATE_TABLE_RECORDS,
   tableName,
-  tableRecords
+  tableRecords,
 });
 
 export const showWarning = (warningMsg, warningTitle) => ({
   type: SHOW_WARNING,
   warningMsg,
-  warningTitle
+  warningTitle,
 });
 
 export const clearWarning = () => ({
-  type: CLEAR_WARNING
+  type: CLEAR_WARNING,
 });
 
 export const showPreview = tableName => ({type: SHOW_PREVIEW, tableName});
@@ -179,5 +179,5 @@ export const hidePreview = () => ({type: HIDE_PREVIEW});
 
 export const setLibraryManifest = libraryManifest => ({
   type: SET_LIBRARY_MANIFEST,
-  libraryManifest
+  libraryManifest,
 });

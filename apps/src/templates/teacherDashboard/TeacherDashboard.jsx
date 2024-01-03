@@ -2,7 +2,7 @@ import React, {useEffect, useRef} from 'react';
 import PropTypes from 'prop-types';
 import {Route, Switch} from 'react-router-dom';
 import TeacherDashboardNavigation, {
-  TeacherDashboardPath
+  TeacherDashboardPath,
 } from './TeacherDashboardNavigation';
 import TeacherDashboardHeader from './TeacherDashboardHeader';
 import StatsTableWithData from './StatsTableWithData';
@@ -27,7 +27,7 @@ function TeacherDashboard({
   sectionName,
   studentCount,
   coursesWithProgress,
-  location
+  location,
 }) {
   const usePrevious = value => {
     const ref = useRef();
@@ -44,6 +44,7 @@ function TeacherDashboard({
       if (prevLocation) {
         action(location, prevLocation);
       }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [prevLocation]);
   };
 
@@ -58,14 +59,14 @@ function TeacherDashboard({
         event: 'click_new_tab',
         data_json: JSON.stringify({
           section_id: sectionId,
-          new_tab: newTab
-        })
+          new_tab: newTab,
+        }),
       },
       {includeUserId: true}
     );
     if (newTab === 'progress') {
       analyticsReporter.sendEvent(EVENTS.PROGRESS_VIEWED, {
-        sectionId: sectionId
+        sectionId: sectionId,
       });
     }
   });
@@ -164,15 +165,15 @@ TeacherDashboard.propTypes = {
   coursesWithProgress: PropTypes.array.isRequired,
 
   // Provided by React router in parent.
-  location: PropTypes.object.isRequired
+  location: PropTypes.object.isRequired,
 };
 
 const styles = {
   text: {
     fontStyle: 'italic',
     textAlign: 'center',
-    paddingTop: 10
-  }
+    paddingTop: 10,
+  },
 };
 
 export default TeacherDashboard;

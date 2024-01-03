@@ -13,6 +13,16 @@ When(/^I click block "([^"]*)"$/) do |block|
   @browser.execute_script("$(\"[#{id_selector}='#{get_block_id(block)}']\").simulate( 'drag', {handle: 'corner', dx: 0, dy: 0, moves: 5});")
 end
 
+# This helps click on a field in Google Blockly.
+When(/^I click block field "([^"]*)"$/) do |selector|
+  code = <<~CODE
+    $("#{selector}")[0].dispatchEvent(new PointerEvent('pointerdown', {bubbles: true}));
+    $("#{selector}")[0].dispatchEvent(new PointerEvent('pointerup', {bubbles: true}));
+  CODE
+
+  @browser.execute_script(code)
+end
+
 # Note: this is an offset relative to the current position of the block
 When /^I drag block "([^"]*)" to offset "([^"]*), ([^"]*)"$/ do |block_id, dx, dy|
   drag_block_relative(get_block_id(block_id), dx, dy)
@@ -81,6 +91,11 @@ Then /^I scroll the ([a-zA-Z]*) blockspace to the bottom$/ do |workspace_type|
   block_space_name = workspace_type + 'BlockSpace'
   scrollable_height = get_scrollable_height(block_space_name)
   @browser.execute_script("Blockly.#{block_space_name}.scrollTo(0, #{scrollable_height})")
+end
+
+# This function only works for Google Blockly
+Then /^I scroll the main blockspace to block "(.*?)"$/ do |block_id|
+  @browser.execute_script("Blockly.mainBlockSpace.centerOnBlock('#{block_id}')")
 end
 
 Then /^block "([^"]*)" is visible in the workspace$/ do |block|
@@ -187,6 +202,23 @@ Then(/^the workspace has "(.*?)" blocks of type "(.*?)"$/) do |n, type|
   expect(result).to eq(n.to_i)
 end
 
+Then(/^all blocks render with no unknown blocks$/) do
+  code = <<~CODE
+    return Blockly.Workspace.getAll().map(workspace => {
+      const hasUnknownBlock = workspace.getAllBlocks().some(block => !!block.unknownBlock);
+      if (hasUnknownBlock) {
+        // element ID has name of block that is failing to render
+        return workspace.getParentSvg().parentElement.id;
+      } else {
+        return null;
+      }
+    });
+  CODE
+
+  result = @browser.execute_script(code)
+  expect(result.compact.empty?).to eq(true), "Blocks named: #{result.compact.join(', ')} unable to render"
+end
+
 Then(/^block "([^"]*)" has (not )?been deleted$/) do |block_id, negation|
   code = "return Blockly.mainBlockSpace.getAllBlocks().some(function (block) { return block.id == '" + get_block_id(block_id) + "'; })"
   result = @browser.execute_script(code)
@@ -259,6 +291,34 @@ end
 Then(/^the project matches my memorized code$/) do
   expect(memorized_code).to_not be_nil
   expect(current_block_xml).to eq(memorized_code)
+end
+
+Then(/^I click toolbox block with selector "(.*?)"$/) do |selector|
+  script = "
+    $('#{selector}').simulate('pointerdown')
+    $('#{selector}').simulate('pointerup')
+  "
+  @browser.execute_script(script)
+end
+
+# This only works for Google Blockly
+Then(/^I click block field that is number (.*?) in the list of blocks and number (.*?) in the field row$/) do |n1, n2|
+  script = "
+    Blockly.mainBlockSpace.getAllBlocks()[#{n1.to_i}].inputList[0].fieldRow[#{n2.to_i}].onClick()
+  "
+  @browser.execute_script(script)
+end
+
+# This only works for Google Blockly
+Then(/^the open flyout has (.*?) blocks$/) do |n|
+  script = "return Blockly.mainBlockSpace.getFlyout().getWorkspace().getTopBlocks().length"
+  expect(@browser.execute_script(script)).to eq(n.to_i)
+end
+
+# This only works for Google Blockly
+Then(/^the function editor workspace has (\d+) blocks$/) do |n|
+  script = "return Blockly.getFunctionEditorWorkspace().getAllBlocks().length"
+  expect(@browser.execute_script(script)).to eq(n)
 end
 
 def current_block_xml

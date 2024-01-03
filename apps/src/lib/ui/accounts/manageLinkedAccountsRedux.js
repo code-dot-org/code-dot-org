@@ -8,7 +8,8 @@ export const initialState = {
   authenticationOptions: {},
   userHasPassword: false,
   isGoogleClassroomStudent: false,
-  isCleverStudent: false
+  isCleverStudent: false,
+  personalAccountLinkingEnabled: false,
 };
 
 const INITIALIZE_STATE = 'manageLinkedAccounts/INITIALIZE_STATE';
@@ -21,14 +22,16 @@ export default function manageLinkedAccounts(state = initialState, action) {
       authenticationOptions,
       userHasPassword,
       isGoogleClassroomStudent,
-      isCleverStudent
+      isCleverStudent,
+      personalAccountLinkingEnabled,
     } = action.state;
     return {
       ...state,
       authenticationOptions,
       userHasPassword,
       isGoogleClassroomStudent,
-      isCleverStudent
+      isCleverStudent,
+      personalAccountLinkingEnabled,
     };
   }
 
@@ -42,7 +45,7 @@ export const convertServerAuthOptions = authOptions => {
       id: option.id,
       credentialType: option.credential_type,
       email: option.email,
-      error: ''
+      error: '',
     };
   });
   return optionLookup;

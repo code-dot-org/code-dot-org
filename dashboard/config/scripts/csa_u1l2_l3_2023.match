@@ -14,3 +14,4 @@ answer 'the rules for how a programmer must write code for a computer to underst
 
 question 'comment'
 answer 'a text note to explain or annotate the code'
+allow_multiple_attempts true

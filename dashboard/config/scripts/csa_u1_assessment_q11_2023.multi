@@ -37,3 +37,5 @@ If the `Painter` object is facing south, it will turn left **three times** befor
 
 So the most number of times that the `turnLeft()` method would be called is 3 times.
 MARKDOWN
+
+allow_multiple_attempts true

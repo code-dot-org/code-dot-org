@@ -12,6 +12,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {lessonIsVisible} from './progressHelpers';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import LessonGroupInfo from '@cdo/apps/templates/progress/LessonGroupInfo';
+import fontConstants from '@cdo/apps/fontConstants';
 
 /**
  * A component that shows a group of lessons. That group has a name and is
@@ -27,27 +28,27 @@ class LessonGroup extends React.Component {
     scriptId: PropTypes.number,
     hasVisibleLesson: PropTypes.bool.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
-    isRtl: PropTypes.bool
+    isRtl: PropTypes.bool,
   };
 
   state = {
     collapsed: false,
-    lessonGroupInfoDialogOpen: false
+    lessonGroupInfoDialogOpen: false,
   };
 
   toggleCollapsed = () =>
     this.setState({
-      collapsed: !this.state.collapsed
+      collapsed: !this.state.collapsed,
     });
 
   openLessonGroupInfoDialog = () => {
     /*
-    Because the info button is on the header which collapses when clicked we have to
-    reverse the collapsing when you click the info button
-    */
+        Because the info button is on the header which collapses when clicked we have to
+        reverse the collapsing when you click the info button
+        */
     this.setState({
       collapsed: !this.state.collapsed,
-      lessonGroupInfoDialogOpen: true
+      lessonGroupInfoDialogOpen: true,
     });
     firehoseClient.putRecord(
       {
@@ -56,8 +57,8 @@ class LessonGroup extends React.Component {
         event: 'view_lesson_group_info',
         data_json: JSON.stringify({
           script_id: this.props.scriptId,
-          lesson_group_id: this.props.groupedLesson.lessonGroup.id
-        })
+          lesson_group_id: this.props.groupedLesson.lessonGroup.id,
+        }),
       },
       {includeUserId: true}
     );
@@ -70,11 +71,8 @@ class LessonGroup extends React.Component {
   render() {
     const {isSummaryView, isPlc, viewAs, isRtl, hasVisibleLesson} = this.props;
 
-    const {
-      description,
-      bigQuestions,
-      displayName
-    } = this.props.groupedLesson.lessonGroup;
+    const {description, bigQuestions, displayName} =
+      this.props.groupedLesson.lessonGroup;
 
     // Adjust styles if locale is RTL
     const headingTextStyle = isRtl ? styles.headingTextRTL : styles.headingText;
@@ -95,7 +93,7 @@ class LessonGroup extends React.Component {
           style={[
             styles.header,
             isPlc && styles.headerBlue,
-            this.state.collapsed && styles.bottom
+            this.state.collapsed && styles.bottom,
           ]}
           onClick={this.toggleCollapsed}
         >
@@ -131,7 +129,7 @@ class LessonGroup extends React.Component {
             style={[
               styles.contents,
               isPlc && styles.contentsBlue,
-              styles.bottom
+              styles.bottom,
             ]}
           >
             <TableType groupedLesson={this.props.groupedLesson} />
@@ -144,41 +142,41 @@ class LessonGroup extends React.Component {
 
 const styles = {
   main: {
-    marginBottom: 20
+    marginBottom: 20,
   },
   header: {
     padding: 20,
     backgroundColor: color.purple,
     fontSize: 18,
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     color: 'white',
     borderTopLeftRadius: 4,
     borderTopRightRadius: 4,
-    cursor: 'pointer'
+    cursor: 'pointer',
   },
   headerBlue: {
-    backgroundColor: color.cyan
+    backgroundColor: color.cyan,
   },
   headingText: {
-    marginLeft: 10
+    marginLeft: 10,
   },
   headingTextRTL: {
-    marginRight: 10
+    marginRight: 10,
   },
   contents: {
     backgroundColor: color.lighter_purple,
-    padding: 20
+    padding: 20,
   },
   contentsBlue: {
-    backgroundColor: color.lightest_cyan
+    backgroundColor: color.lightest_cyan,
   },
   bottom: {
     borderBottomLeftRadius: 4,
-    borderBottomRightRadius: 4
+    borderBottomRightRadius: 4,
   },
   lessonGroupInfo: {
-    padding: 10
-  }
+    padding: 10,
+  },
 };
 
 export const UnconnectedLessonGroup = LessonGroup;
@@ -189,5 +187,5 @@ export default connect((state, ownProps) => ({
   isRtl: state.isRtl,
   hasVisibleLesson: ownProps.groupedLesson.lessons.some(lesson =>
     lessonIsVisible(lesson, state, state.viewAs)
-  )
+  ),
 }))(Radium(LessonGroup));

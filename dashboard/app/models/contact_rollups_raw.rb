@@ -15,7 +15,7 @@ class ContactRollupsRaw < ApplicationRecord
   self.table_name = 'contact_rollups_raw'
 
   def self.extract_email_preferences(limit = nil)
-    select_query = <<-SQL
+    select_query = <<-SQL.squish
       SELECT email, opt_in, updated_at FROM email_preferences
     SQL
     select_query += "LIMIT #{limit}" unless limit.nil?
@@ -25,7 +25,7 @@ class ContactRollupsRaw < ApplicationRecord
   end
 
   def self.extract_parent_emails(limit = nil)
-    source_sql = <<~SQL
+    source_sql = <<~SQL.squish
       SELECT parent_email AS email, 1 AS is_parent, MAX(updated_at) AS updated_at
       FROM users
       WHERE parent_email > ''
@@ -38,7 +38,7 @@ class ContactRollupsRaw < ApplicationRecord
   end
 
   def self.extract_scripts_taught(limit = nil)
-    source_sql = <<~SQL
+    source_sql = <<~SQL.squish
       SELECT
         u.email,
         sc.properties->'$.curriculum_umbrella' AS curriculum_umbrella,
@@ -59,7 +59,7 @@ class ContactRollupsRaw < ApplicationRecord
   end
 
   def self.extract_courses_taught(limit = nil)
-    source_sql = <<~SQL
+    source_sql = <<~SQL.squish
       SELECT u.email, unit_groups.name AS course_name, MAX(se.updated_at) AS updated_at
       FROM users AS u
       JOIN sections AS se ON se.user_id = u.id
@@ -77,7 +77,7 @@ class ContactRollupsRaw < ApplicationRecord
     # "section_type" is not null only in cases where sections was used for
     # PD attendance. It's always null when a section represents an actual
     # classroom of students (the vast majority of rows in the sections table).
-    source_sql = <<~SQL
+    source_sql = <<~SQL.squish
       SELECT u.email, se.section_type, MAX(GREATEST(se.updated_at, f.updated_at)) AS updated_at
         FROM users AS u
         JOIN followers AS f ON u.id = f.student_user_id
@@ -93,7 +93,7 @@ class ContactRollupsRaw < ApplicationRecord
   end
 
   def self.extract_professional_learning_attendance_new_attendance_model(limit = nil)
-    source_sql = <<~SQL
+    source_sql = <<~SQL.squish
       SELECT u.email, pdw.course, MAX(GREATEST(pda.updated_at, pds.updated_at, pdw.updated_at)) AS updated_at
         FROM pd_attendances AS pda
         JOIN pd_sessions AS pds ON pds.id = pda.pd_session_id AND pds.deleted_at IS NULL
@@ -110,7 +110,7 @@ class ContactRollupsRaw < ApplicationRecord
   end
 
   def self.extract_roles_from_user_permissions(limit = nil)
-    source_sql = <<~SQL
+    source_sql = <<~SQL.squish
       SELECT u.email, up.permission, up.updated_at
       FROM user_permissions AS up
       JOIN users AS u ON u.id = up.user_id
@@ -125,7 +125,7 @@ class ContactRollupsRaw < ApplicationRecord
   def self.extract_users_and_geos(limit = nil)
     # An user can have many user_geos records. user_geos records starts with only NULL
     # values until a cronjob runs, does IP-to-address lookup, and update them later.
-    teacher_and_geo_query = <<~SQL
+    teacher_and_geo_query = <<~SQL.squish
       SELECT
         t.email, t.id AS user_id,
         ug.city, ug.state, ug.postal_code, ug.country,
@@ -145,7 +145,7 @@ class ContactRollupsRaw < ApplicationRecord
   end
 
   def self.extract_pd_enrollments(limit = nil)
-    enrollment_email_query = <<~SQL
+    enrollment_email_query = <<~SQL.squish
       SELECT
         e.email,
         w.course,
@@ -162,7 +162,7 @@ class ContactRollupsRaw < ApplicationRecord
   end
 
   def self.extract_census_submissions(limit = nil)
-    submitter_query = <<~SQL
+    submitter_query = <<~SQL.squish
       SELECT submitter_email_address AS email, submitter_role, MAX(updated_at) AS updated_at
       FROM census_submissions
       WHERE submitter_email_address > ''
@@ -175,7 +175,7 @@ class ContactRollupsRaw < ApplicationRecord
   end
 
   def self.extract_school_geos(limit = nil)
-    school_geos_query = <<~SQL
+    school_geos_query = <<~SQL.squish
       SELECT
         t.email,
         s.city, s.state, s.zip,
@@ -209,7 +209,7 @@ class ContactRollupsRaw < ApplicationRecord
     #   apps/src/templates/certificates/petition/PetitionForm.jsx
     #   bin/oneoff/wipe_data/opt_out_petition_emails_under_16
     #
-    forms_query = <<~SQL
+    forms_query = <<~SQL.squish
       SELECT email, kind, data->>'$.role_s' AS role, MAX(updated_at) AS updated_at
       FROM #{CDO.pegasus_db_name}.forms
       WHERE email > '' AND email != 'anonymous@code.org'
@@ -227,7 +227,7 @@ class ContactRollupsRaw < ApplicationRecord
 
   # @param limit [Integer, String] maximum number of rows to extract
   def self.extract_pegasus_form_geos(limit = nil)
-    form_geos_query = <<~SQL
+    form_geos_query = <<~SQL.squish
       SELECT
         f.email,
         fg.city, fg.state, fg.postal_code, fg.country,
@@ -255,7 +255,7 @@ class ContactRollupsRaw < ApplicationRecord
     #
     # @Note: pegasus.contacts has duplicate emails even though its migration says
     # email is unique. Thus, we still have to de-duplicate emails.
-    contact_query = <<~SQL
+    contact_query = <<~SQL.squish
       SELECT email, MAX(unsubscribed_at) AS unsubscribed_at, MAX(updated_at) AS updated_at
       FROM #{CDO.pegasus_db_name}.contacts
       WHERE email > ''
@@ -272,7 +272,7 @@ class ContactRollupsRaw < ApplicationRecord
   def self.teacher_query(columns = '*')
     # This query selects only teacher accounts from the users table
     # because we don't store student email addresses at all.
-    <<-SQL
+    <<-SQL.squish
       SELECT #{columns}
       FROM users
       WHERE email > ''
@@ -284,7 +284,7 @@ class ContactRollupsRaw < ApplicationRecord
   # @param data_columns [String] Columns we want reshaped into a single JSON object
   # @return [String] A SQL statement to extract and reshape data from the source table.
   def self.get_extraction_query(source_name, select_query, *data_columns)
-    <<~SQL
+    <<~SQL.squish
       INSERT INTO #{ContactRollupsRaw.table_name}
         (email, sources, data, data_updated_at, created_at, updated_at)
       SELECT

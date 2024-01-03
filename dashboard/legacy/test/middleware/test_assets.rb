@@ -1,5 +1,3 @@
-# coding: utf-8
-
 require_relative 'files_api_test_base' # Must be required first to establish load paths
 require_relative 'files_api_test_helper'
 require_relative '../../middleware/helpers/asset_bucket'
@@ -427,46 +425,48 @@ class AssetsTest < FilesApiTestBase
     FilesApi.any_instance.stubs(:max_file_size).returns(5)
     FilesApi.any_instance.stubs(:max_app_size).returns(10)
     AssetBucket.any_instance.stubs(:max_resize_size).returns(5)
-    CDO.stub(:newrelic_logging, true) do
-      post_asset_file(@api, "file1.jpg", "1234567890ABC", 'image/jpeg')
-      assert last_response.client_error?, "Error when file is larger than max file size."
+    CDO.stubs(:newrelic_logging).returns(true)
 
-      assert_assets_custom_metric 1, 'FileTooLarge'
+    post_asset_file(@api, "file1.jpg", "1234567890ABC", 'image/jpeg')
+    assert last_response.client_error?, "Error when file is larger than max file size."
 
-      _, filetodelete1 = post_asset_file(@api, "file2.jpg", "1234", 'image/jpeg')
-      assert successful?, "First small file upload is successful."
+    assert_assets_custom_metric 1, 'FileTooLarge'
 
-      assert_assets_custom_metric 1, 'FileTooLarge', 'still only one custom metric recorded'
+    _, filetodelete1 = post_asset_file(@api, "file2.jpg", "1234", 'image/jpeg')
+    assert successful?, "First small file upload is successful."
 
-      _, filetodelete2 = post_asset_file(@api, "file3.jpg", "5678", 'image/jpeg')
-      assert successful?, "Second small file upload is successful."
+    assert_assets_custom_metric 1, 'FileTooLarge', 'still only one custom metric recorded'
 
-      assert_assets_custom_metric 2, 'QuotaCrossedHalfUsed'
-      assert_assets_custom_event 1, 'QuotaCrossedHalfUsed'
+    _, filetodelete2 = post_asset_file(@api, "file3.jpg", "5678", 'image/jpeg')
+    assert successful?, "Second small file upload is successful."
 
-      post_asset_file(@api, "file4.jpg", "ABCD", 'image/jpeg')
-      assert last_response.client_error?, "Error when exceeding max app size."
+    assert_assets_custom_metric 2, 'QuotaCrossedHalfUsed'
+    assert_assets_custom_event 1, 'QuotaCrossedHalfUsed'
 
-      assert_assets_custom_metric 3, 'QuotaExceeded'
-      assert_assets_custom_event 2, 'QuotaExceeded'
+    post_asset_file(@api, "file4.jpg", "ABCD", 'image/jpeg')
+    assert last_response.client_error?, "Error when exceeding max app size."
 
-      assert_newrelic_metrics %w(
-        Custom/FilesApi/FileTooLarge_assets
-        Custom/ListRequests/AssetBucket/BucketHelper.app_size
-        Custom/ListRequests/AssetBucket/BucketHelper.app_size
-        Custom/FilesApi/QuotaCrossedHalfUsed_assets
-        Custom/ListRequests/AssetBucket/BucketHelper.app_size
-        Custom/FilesApi/QuotaExceeded_assets
-      )
+    assert_assets_custom_metric 3, 'QuotaExceeded'
+    assert_assets_custom_event 2, 'QuotaExceeded'
 
-      @api.delete_object(filetodelete1)
-      @api.delete_object(filetodelete2)
+    assert_newrelic_metrics %w(
+      Custom/FilesApi/FileTooLarge_assets
+      Custom/ListRequests/AssetBucket/BucketHelper.app_size
+      Custom/ListRequests/AssetBucket/BucketHelper.app_size
+      Custom/FilesApi/QuotaCrossedHalfUsed_assets
+      Custom/ListRequests/AssetBucket/BucketHelper.app_size
+      Custom/FilesApi/QuotaExceeded_assets
+    )
 
-      assert @api.list_objects.empty?, "No unexpected assets were written to storage."
-    end
+    @api.delete_object(filetodelete1)
+    @api.delete_object(filetodelete2)
+
+    assert @api.list_objects.empty?, "No unexpected assets were written to storage."
+
     FilesApi.any_instance.unstub(:max_file_size)
     FilesApi.any_instance.unstub(:max_app_size)
     AssetBucket.any_instance.unstub(:max_resize_size)
+    CDO.unstub(:newrelic_logging)
   end
 
   def test_assets_resize

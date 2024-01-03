@@ -4,18 +4,32 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "4b5086f0-2a59-433c-b75e-6ceba64d4162",
+          "notice": "Free Teacher Resources from Amazon Future Engineer",
+          "details": "Code.org has partnered with Amazon Future Engineer to offer teachers at underserved schools a growing number of resources and benefits at no cost! ",
+          "link": "https://code.org/afe",
+          "type": "bullhorn",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Get free resources"
+        }
+      ],
       "curriculum_umbrella": "CSA",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
+      "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-10 18:51:27 UTC",
+    "serialized_at": "2023-12-14 04:03:44 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -50,15 +64,39 @@
       }
     },
     {
-      "key": "lessonGroup-4",
+      "key": "lessonGroup-5",
       "user_facing": true,
       "position": 3,
+      "properties": {
+        "display_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa2-2023"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 4,
       "properties": {
         "display_name": "Alternate Lessons",
         "description": "This section contains the one-day version of the Store Management Project."
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2023"
+      }
+    },
+    {
+      "key": "lessonGroup-6",
+      "user_facing": true,
+      "position": 5,
+      "properties": {
+        "display_name": "Sandboxes"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "csa2-2023"
       }
     }
@@ -72,8 +110,9 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/1) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I represent the attributes an object should have in a class?**\n\nIn this lesson, students expand on what they learned about classes in the previous unit to declare instance variables to represent an object's attributes. As students learn about instance variables, they discover the difference between `public` and `private` access and identify the need for encapsulation. Students also revisit inheritance to recall that subclasses share the attributes and behaviors of a class and practice declaring instance variables in a single class and in a superclass and subclass.",
-        "preparation": "* Print copies of the Unit 2 Guide (one for each student)\n* Preview the *Instance Variables and Attributes* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-lesson-3-attributes/36395/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U2L1 Guided Notes (one for each student)\n* Preview the *Instance Variables and Attributes* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-1-attributes/37872) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I represent the attributes an object should have in a class?**\n\nYou previously learned that a class is a blueprint that defines the attributes and behaviors an object should have. In this lesson, you expand on what you learned about classes in the previous unit to declare instance variables to represent an object's attributes. As you learn about instance variables, you discover the difference between `public` and `private` access and identify the need for encapsulation. You also revisit inheritance to recall that subclasses share the attributes and behaviors of a class and practice declaring instance variables in a single class and in a superclass and subclass."
       },
       "seeding_key": {
@@ -90,9 +129,10 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "**How are values assigned to the instance variables?**\n\nStudents have used constructors to create a variety of objects, including `Painter` objects. Students build on their knowledge of instance variables to explore how to assign values to the instance variables when an object is created. Students recall that the constructor they have used in the `Painter` class instantiates a `Painter` object with the same values every time, and they consider the decisions a software engineer needs to make to decide what default values should be assigned to instance variables. Students practice writing no-argument constructors and continue developing the `Dessert` class for the Joyful Pastries food truck.",
-        "preparation": "* Preview the *Constructors* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-lesson-4-constructors/36394/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
-        "student_overview": "**How are values assigned to the instance variables?**\n\nYou have used constructors to create a variety of objects, including `Painter` objects. In this lesson, you build on your knowledge of instance variables to explore how to assign values to the instance variables when an object is created. You recall that the constructor you have used in the `Painter` class instantiates a `Painter` object with the same values every time, and you consider the decisions a software engineer needs to make to decide what default values should be assigned to instance variables. You practice writing no-argument constructors and continue developing the `Dessert` class for the Joyful Pastries food truck."
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.1\n* Topic Questions 5.8\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/2) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
+        "overview": "**How does a constructor assign values to instance variables?**\n\nStudents have used constructors to create a variety of objects, including `Painter` objects. Students build on their knowledge of instance variables to explore how to assign values to the instance variables when an object is created. Students recall that the constructor they have used in the `Painter` class instantiates a `Painter` object with the same values every time, and they consider the decisions a software engineer needs to make to decide what default values should be assigned to instance variables. Students practice writing no-argument constructors and continue developing the `Dessert` class for the Joyful Pastries food truck.",
+        "preparation": "* **(Optional)** Print copies of the U2L2 Guided Notes (one for each student)\n* Preview the *Constructors* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-2-no-argument-constructors/37873) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**How does a constructor assign values to instance variables?**\n\nYou have used constructors to create a variety of objects, including `Painter` objects. In this lesson, you build on your knowledge of instance variables to explore how to assign values to the instance variables when an object is created. You recall that the constructor you have used in the `Painter` class instantiates a `Painter` object with the same values every time, and you consider the decisions a software engineer needs to make to decide what default values should be assigned to instance variables. You practice writing no-argument constructors and continue developing the `Dessert` class for the Joyful Pastries food truck."
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -108,8 +148,9 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.2\n* Topic Questions 5.2\n* Topic Questions 9.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/3) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I create objects with specific values for its instance variables?**\n\nStudents have learned how to write no-argument constructors to assign default values to instance variables and use these to instantiate objects. In this lesson, students consider the limitations of no-argument constructors and learn about using parameterized constructors to assign specific values to the instance variables. Students explore the components of a parameterized constructor and its functionality, then practice writing parameterized constructors in a class.",
-        "preparation": "* Preview the *Overloaded Constructors* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-lesson-4-constructors/36394/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U2L3 Guided Notes (one for each student)\n* Preview the *Overloaded Constructors* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-3-parameterized-constructors/37874) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I create objects with specific values for its instance variables?**\n\nYou have learned how to write no-argument constructors to assign default values to instance variables and use these to instantiate objects. In this lesson, you consider the limitations of no-argument constructors and learn about using parameterized constructors to assign specific values to the instance variables. You explore the components of a parameterized constructor and its functionality, then practice writing parameterized constructors in a class."
       },
       "seeding_key": {
@@ -126,8 +167,9 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.9\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/4) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I reduce ambiguity and redundancies in my program?**\n\nStudents continue building on what they have learned about constructors and parameters to explore the functionality of local variables. Students realize that the scope of local variables is limited to the constructor in which it is declared and learn to use the `this` keyword to refer to the current object and its instance variables. Students also consider how the `this` keyword can be used to minimize redundancies in their code, then practice writing parameterized constructors using the `this` keyword in a class and write parameterized constructors in the `Dessert` class.",
-        "preparation": "* Print copies of the Anticipation Guide handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-lesson-4-constructors/36394/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U2L4 Guided Notes (one for each student)\n* Print copies of the Anticipation Guide handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-4-the-this-keyword/37875) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I reduce ambiguity and redundancies in my program?**\n\nIn this lesson, you continue building on what you have learned about constructors and parameters to explore the functionality of local variables. You realize that the scope of local variables is limited to the constructor in which it is declared and learn to use the `this` keyword to refer to the current object and its instance variables. You also consider how the `this` keyword can be used to minimize redundancies in your code, then practice writing parameterized constructors using the `this` keyword in a class and write parameterized constructors in the `Dessert` class."
       },
       "seeding_key": {
@@ -144,8 +186,9 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/5) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I assign values to the instance variables declared in a superclass from a subclass constructor?**\n\nStudents have learned how to write no-argument and parameterized constructors and used the `this` keyword to refer to the current object. In this lesson, students revisit inheritance and explore how to assign values to the instance variables declared in a superclass from a subclass constructor. Students learn how to use the `super` keyword to call the superclass constructor from a subclass and are introduced to the `Object` class. Students then practice writing no-argument and parameterized constructors in a subclass before applying these concepts to the `Dessert` subclasses they previously created.",
-        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-lesson-4-constructors/36394/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U2L5 Guided Notes (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-5-constructors-and-inheritance/37876) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I assign values to the instance variables declared in a superclass from a subclass constructor?**\n\nYou have learned how to write no-argument and parameterized constructors and use the `this` keyword to refer to the current object. In this lesson, you revisit inheritance and explore how to assign values to the instance variables declared in a superclass from a subclass constructor. You learn how to use the `super` keyword to call the superclass constructor from a subclass and are introduced to the `Object` class. You then practice writing no-argument and parameterized constructors in a subclass before applying these concepts to the `Dessert` subclass you previously created."
       },
       "seeding_key": {
@@ -162,8 +205,9 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/6) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How are the types of variables in Java similar and different?**\n\nIn this lesson, students revisit variables and data types and learn the difference between primitive and reference types. Students investigate variables of type `int`, `double`, `boolean`, and `String` and explore using the assignment operator to initialize or change the value stored in a variable. Students then practice tracing code segments to identify the current values stored in variables.",
-        "preparation": "* Preview the *Creating Variables* video\n* Print copies of the Investigate: Variables handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-lesson-4-constructors/36394/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U2L6 Guided Notes (one for each student)\n* Preview the *Creating Variables* video\n* Print copies of the Investigate: Variables handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-6-variables/37877) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How are the types of variables in Java similar and different?**\n\nIn this lesson, you revisit variables and data types and learn the difference between primitive and reference types. You investigate variables of type `int`, `double`, `boolean`, and `String` and explore using the assignment operator to initialize or change the value stored in a variable. You then practice tracing code segments to identify the current values stored in variables."
       },
       "seeding_key": {
@@ -180,8 +224,9 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.5\n* Topic Questions 5.1\n* Topic Questions 5.4\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/7) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I access the values of an object's instance variables?**\n\nStudents have previously used methods in the `Painter` class to get information about the state of a `Painter` object. In this lesson, students learn about accessor methods and explore their syntax and functionality. They consider why they would use accessor methods in a program and how they might decide when to provide an accessor method for an instance variable. Students then practice writing an accessor method in a class before writing accessor methods in the `Dessert` class and subclass.",
-        "preparation": "* Preview the *Creating a Scanner Object* and *Accessor Methods* videos\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-lesson-4-constructors/36394/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U2L7 Guided Notes (one for each student)\n* Preview the *Creating a Scanner Object* and *Accessor Methods* videos\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-7-accessor-methods/37878) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I access the values of an object's instance variables?**\n\nYou have previously used methods in the `Painter` class to get information about the state of a `Painter` object. In this lesson, you learn about accessor methods and explore their syntax and functionality. You consider why you would use accessor methods in a program and how you might decide when to provide an accessor method for an instance variable. You then practice writing an accessor method in a class before writing accessor methods in the `Dessert` class and subclass."
       },
       "seeding_key": {
@@ -198,9 +243,10 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "overview": "**How can I use variables to perform calculations?**\n\nStudents have learned how to use variables to store primitive values and object references. In this lesson, students explore writing and evaluating expressions using arithmetic operators and compound assignment operators. Students discover how the data type impacts the way an expression is evaluated and the result of dividing an `int` or a `double` value by zero. They also learn about using compound assignment operators and explore the mod ( `%` ) operator.",
-        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-lesson-4-constructors/36394/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
-        "student_overview": "**How can I use variables to perform calculations?**\n\nYou have learned how to use variables to store primitive values and object references. In this lesson, you explore writing and evaluating expressions using arithmetic operators and compound assignment operators. You discover how the data type impacts the way an expression is evaluated and the result of dividing an `int` or a `double` value by zero. You also learn about using compound assignment operators and explore the mod ( `%` ) operator."
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.3\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/8) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
+        "overview": "**How can I use variables and operators to perform calculations?**\n\nStudents have learned how to use variables to store primitive values and object references. In this lesson, students explore writing and evaluating expressions using arithmetic operators and compound assignment operators. Students discover how the data type impacts the way an expression is evaluated and the result of dividing an `int` or a `double` value by zero. They also learn about using compound assignment operators and explore the mod ( `%` ) operator.",
+        "preparation": "* **(Optional)** Print copies of the U2L8 Guided Notes (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-8-operators-and-expressions/37879) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**How can I use variables and operators to perform calculations?**\n\nYou have learned how to use variables to store primitive values and object references. In this lesson, you explore writing and evaluating expressions using arithmetic operators and compound assignment operators. You discover how the data type impacts the way an expression is evaluated and the result of dividing an `int` or a `double` value by zero. You also learn about using compound assignment operators and explore the mod ( `%` ) operator."
       },
       "seeding_key": {
         "lesson.key": "lesson-7",
@@ -216,8 +262,9 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.3\n* Topic Questions 2.4\n* Topic Questions 3.1\n* Topic Questions 5.1\n* Topic Questions 5.5\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/9) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I change the values assigned to an object's instance variables after the object has been created?**\n\nIn this lesson, students learn to write and call mutator methods to change the values stored in an object's instance variables. Students explore the functionality and syntax of a mutator method while also learning more about the methods in the `Scanner` class to get input from a user. They consider scenarios where the value of an instance variable should not be changed and learn how to identify and address invalid values for instance variables. Students then practice writing a mutator method in a class before adding mutator methods to the `Dessert` class and subclass.",
-        "preparation": "* Preview the *Scanner Class Methods* and *Mutator Methods* videos\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-lesson-4-constructors/36394/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teacher",
+        "preparation": "* **(Optional)** Print copies of the U2L9 Guided Notes (one for each student)\n* Preview the *Scanner Class Methods* and *Mutator Methods* videos\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-9-mutator-methods/37880) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teacher",
         "student_overview": "**How can I change the values assigned to an object's instance variables after the object has been created?**\n\nIn this lesson, you learn to write and call mutator methods to change the values stored in an object's instance variables. You explore the functionality and syntax of a mutator method while also learning more about the methods in the `Scanner` class to get input from a user. You consider scenarios where the value of an instance variable should not be changed and learn how to identify and address invalid values for instance variables. You then practice writing a mutator method in a class before adding mutator methods to the `Dessert` class and subclass."
       },
       "seeding_key": {
@@ -234,8 +281,9 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.4\n* Topic Questions 9.1\n* Topic Questions 9.7\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/10) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I easily display information about an object?**\n\nStudents have learned to use accessor methods to obtain information about the state of an object. In this lesson, students explore how to print an object reference and the `toString()` method to easily obtain information about an object. Students revisit the `Object` class and learn how to override its `toString()` method and practice writing a `toString()` method in a class using escape sequences to format output. Students then write a `toString()` method in the `Dessert` class and subclass.",
-        "preparation": "* Preview *The toString() Method* video\n* Print copies of the Unit 2 Study Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-lesson-4-constructors/36394/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teacher",
+        "preparation": "* **(Optional)** Print copies of the U2L10 Guided Notes (one for each student)\n* Preview *The toString() Method* video\n* Print copies of the Unit 2 Study Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-10-printing-objects/37881) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teacher",
         "student_overview": "**How can I easily display information about an object?**\n\nYou have learned to use accessor methods to obtain information about the state of an object. In this lesson, you explore how to print an object reference and the `toString()` method to easily obtain information about an object. You revisit the `Object` class and learn how to override its `toString()` method and practice writing a `toString()` method in a class using escape sequences to format output. You then write a `toString()` method in the `Dessert` class and subclass."
       },
       "seeding_key": {
@@ -254,7 +302,7 @@
       "properties": {
         "assessment": true,
         "overview": "**What business or service do I want to manage using a program?**\n\nFor this project, students use the skills they have developed throughout this unit to create a store management system for a business or service. Students choose the objects for their business that represent something they are interested in or meaningful to them. After brainstorming and planning, students develop their programs to create their store management system.",
-        "preparation": "* Review project setup, requirements, and rubric\n* Print copies of the Store Management Project Planning Guide handout (one for each student)\n* Create code review groups if you are not reusing the same groups\n* Gather several sticky notes for each student\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-store-management-project/36387/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Review project setup, requirements, and rubric\n* Print copies of the Store Management Project Planning Guide handout (one for each student)\n* Create code review groups if you are not reusing the same groups\n* Gather several sticky notes for each student\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-11-store-management-project/37882) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What business or service do I want to manage using a program?**\n\nFor this project, you use the skills you have developed throughout this unit to create a store management system for a business or service. You choose the objects for your business that represent something you are interested in or meaningful to you. After brainstorming and planning, you develop your program to create your store management system."
       },
       "seeding_key": {
@@ -272,7 +320,7 @@
       "relative_position": 12,
       "properties": {
         "overview": "**How will I use what I know about classes and objects to answer a Free Response Question?**\n\nStudents practice developing solutions to AP CSA FRQs on a mock Classes and Objects FRQ. Students apply decomposition and annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
-        "preparation": "* Print the Burger Class FRQ Stations resource\n* Create stations around the classroom as indicated on the Burger Class FRQ Stations resource\n* Print copies of the Burger Class FRQ Graphic Organizer (one for each student)\n* Print copies of the Burger Class FRQ handout (one for each student)\n* Print copies of the Burger Class FRQ Scoring Guidelines (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-2-frq-practice/36386/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Print the Burger Class FRQ Stations resource\n* Create stations around the classroom as indicated on the Burger Class FRQ Stations resource\n* Print copies of the Burger Class FRQ Graphic Organizer (one for each student)\n* Print copies of the Burger Class FRQ handout (one for each student)\n* Print copies of the Burger Class FRQ Scoring Guidelines (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-12-burger-class-frq/37883) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How will I use what I know about classes and objects to answer a Free Response Question?**\n\nYou practice developing solutions to AP CSA FRQs on a mock Classes and Objects FRQ. You apply decomposition and annotation strategies to identify the key components of the problem and validate your solutions using Scoring Guidelines."
       },
       "seeding_key": {
@@ -291,7 +339,7 @@
       "properties": {
         "assessment": true,
         "overview": "Students complete a multiple-choice assessment that covers the unit topics.",
-        "preparation": "* Preview the assessment questions\n* Unlock the assessment questions as indicated on the Unlocking Assessments resource\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-1-assessment/36398/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Preview the assessment questions\n* Unlock the assessment questions as indicated on the Unlocking Assessments resource\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-13-unit-2-assessment/37884) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Congratulations, you completed Unit 2! Assess your progress through the Unit 2 Assessment."
       },
       "seeding_key": {
@@ -301,21 +349,66 @@
       }
     },
     {
-      "key": "lesson-13",
-      "name": "Store Management Project [1-Day Version]",
+      "key": "lesson-15",
+      "name": "Unit 2 Survey",
       "absolute_position": 14,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa2-2023"
+      }
+    },
+    {
+      "key": "lesson-13",
+      "name": "Store Management Project [1-Day Version]",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 15,
       "properties": {
         "assessment": true,
         "overview": "**What business or service do I want to manage using a program?**\n\nFor this project, students use the skills they have developed throughout this unit to create a store management system for a business or service. Students choose the objects for their business that represent something they are interested in or meaningful to them. After brainstorming and planning, students develop their programs to create their store management system.",
-        "preparation": "* Review project requirements and rubric\n* Print copies of the Store Management Project Planning Guide handout (one for each student)",
+        "preparation": "* Review project requirements and rubric\n* Print copies of the Store Management Project Planning Guide handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-11-store-management-project/37882) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What business or service do I want to manage using a program?**\n\nFor this project, you use the skills you have developed throughout this unit to create a store management system for a business or service. You choose the objects for your business that represent something you are interested in or meaningful to you. After brainstorming and planning, you develop your program to create your store management system."
       },
       "seeding_key": {
         "lesson.key": "lesson-13",
         "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa2-2023"
+      }
+    },
+    {
+      "key": "lesson-16",
+      "name": "Sandbox: Console",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-2023"
+      }
+    },
+    {
+      "key": "lesson-17",
+      "name": "Sandbox: The Neighborhood",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "csa2-2023"
       }
     }
@@ -367,7 +460,7 @@
       "key": "27832459-72f3-444c-8329-5ced5106bc5d",
       "position": 1,
       "properties": {
-        "duration": 10,
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -381,7 +474,7 @@
       "key": "83ba7039-7de8-4a47-b7c8-d7f88b3dba9b",
       "position": 2,
       "properties": {
-        "duration": 30,
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -866,6 +959,18 @@
       }
     },
     {
+      "key": "edb418d2-70a1-4e1e-a0e9-f6bc4fd44356",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "edb418d2-70a1-4e1e-a0e9-f6bc4fd44356",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa2-2023"
+      }
+    },
+    {
       "key": "56420ca9-d677-498f-b77e-512720d43d28",
       "position": 1,
       "properties": {
@@ -906,6 +1011,30 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa2-2023"
       }
+    },
+    {
+      "key": "0cda00fd-2377-4e4b-b63c-0746ac0227e8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0cda00fd-2377-4e4b-b63c-0746ac0227e8",
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-2023"
+      }
+    },
+    {
+      "key": "fa230728-2b66-4385-bb76-1f21b1bb9a03",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fa230728-2b66-4385-bb76-1f21b1bb9a03",
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-2023"
+      }
     }
   ],
   "activity_sections": [
@@ -926,7 +1055,7 @@
       "key": "897fc847-8648-4cf2-bf2f-7e2205b79a05",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 2 Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What software engineering characteristics do you want to work on in this unit? How will you know you grew in this area by the end of the unit?*\n\n**Discussion Goal:** Students share characteristics and skills that they want to improve and identify goals.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What software engineering characteristics do you want to work on in this unit? How will you know you grew in this area by the end of the unit?*\n\n**Discussion Goal:** Students share characteristics and skills that they want to improve and identify goals.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1231,18 +1360,6 @@
       }
     },
     {
-      "key": "9dcbbc3d-11f7-4e66-8ce8-3881e45b16cb",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "9dcbbc3d-11f7-4e66-8ce8-3881e45b16cb",
-        "lesson_activity.key": "754a4e44-a101-4dc2-ab78-34cceaf15d30"
-      }
-    },
-    {
       "key": "7da8a190-82af-4dbf-bff3-f7b395b932bf",
       "position": 1,
       "properties": {
@@ -1259,7 +1376,7 @@
       "key": "7efead4a-5f7c-49d6-a9a2-c2f13788f21e",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Read the quote to the class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to write down ideas and thoughts in response to the prompt on a sticky note or scrap piece of paper.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does this quote make you think about or wonder?*\n\n**Discussion Goal:** Students make connections between the quote and scenarios they have encountered or things they have learned in the course so far. These might include sharing their thoughts on real-world scenarios and issues and how this quote relates to these.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1269,34 +1386,6 @@
       },
       "seeding_key": {
         "activity_section.key": "7efead4a-5f7c-49d6-a9a2-c2f13788f21e",
-        "lesson_activity.key": "27832459-72f3-444c-8329-5ced5106bc5d"
-      }
-    },
-    {
-      "key": "00d2c0cd-8d4f-4b61-9d01-667123699690",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the Give One, Get One activity and direct students to participate in a Give One, Get One.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue.\n\nGive One, Get One encourages students to seek and share ideas and information. Students circulate the classroom and pair up with a partner when prompted by the teacher. Each student \"gives\" or shares one of their ideas as the other student \"gets\" or listens and writes it down. The teacher then prompts students to find new partners and repeat the process."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "00d2c0cd-8d4f-4b61-9d01-667123699690",
-        "lesson_activity.key": "27832459-72f3-444c-8329-5ced5106bc5d"
-      }
-    },
-    {
-      "key": "6b4ae249-ef03-4672-a0e4-8d0e78fd6a84",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you learn from each other?*\n* *How did these ideas and thoughts contribute to your identity as a software engineer?*\n\n**Discussion Goal:** Students share the ideas they gathered and identify patterns or common views. Students identify characteristics of a software engineer that relate to the quote and how they share or demonstrate these same characteristics in their personal lives."
-      },
-      "seeding_key": {
-        "activity_section.key": "6b4ae249-ef03-4672-a0e4-8d0e78fd6a84",
         "lesson_activity.key": "27832459-72f3-444c-8329-5ced5106bc5d"
       }
     },
@@ -1447,7 +1536,7 @@
       "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What was useful about the no-argument constructor in the `Painter` class? What was NOT useful about it?*\n\n**Discussion Goal:** Students suggest that creating `Painter` objects with the no-argument constructor meant that they always knew where the object was going to start, what direction it would be facing, and that it had no paint. Students may make connections with achieving consistency and reliability in their programs since they could trust that an object would always be created the same way. They share how a different approach would have been more useful if they wanted the `Painter` object to start at a specific location or with a certain amount of paint.",
-        "duration": "10",
+        "duration": "15",
         "name": "No-Argument Constructors",
         "tips": [
           {
@@ -1581,18 +1670,6 @@
       },
       "seeding_key": {
         "activity_section.key": "e609552b-b2a9-4b06-86c8-a95319e55f3b",
-        "lesson_activity.key": "c066a3a7-45fa-4d38-82fd-f1a42875dc93"
-      }
-    },
-    {
-      "key": "b7041e82-0262-41b2-8cdb-f7e7342fccee",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.2\n* Topic Questions 5.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "b7041e82-0262-41b2-8cdb-f7e7342fccee",
         "lesson_activity.key": "c066a3a7-45fa-4d38-82fd-f1a42875dc93"
       }
     },
@@ -1831,18 +1908,6 @@
       },
       "seeding_key": {
         "activity_section.key": "d8fd9ad5-92d6-44ad-aae4-20d4e4cbeaf2",
-        "lesson_activity.key": "b170c7df-de3a-429e-b09e-7d04f7f66103"
-      }
-    },
-    {
-      "key": "a5b1fa23-9c04-4c9e-91ca-774694b8da9e",
-      "position": 5,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.2\n* Topic Questions 5.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "a5b1fa23-9c04-4c9e-91ca-774694b8da9e",
         "lesson_activity.key": "b170c7df-de3a-429e-b09e-7d04f7f66103"
       }
     },
@@ -2110,18 +2175,6 @@
       }
     },
     {
-      "key": "26b27411-a84f-424f-b1dd-16a1c0fa3f15",
-      "position": 7,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.8\n* Topic Questions 5.9\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "26b27411-a84f-424f-b1dd-16a1c0fa3f15",
-        "lesson_activity.key": "c41d7037-149d-4d64-a6de-9163d984485c"
-      }
-    },
-    {
       "key": "f9d49b90-477e-4a3d-bafc-60c533935ade",
       "position": 1,
       "properties": {
@@ -2329,18 +2382,6 @@
       },
       "seeding_key": {
         "activity_section.key": "6cbc5a60-73ac-4506-b419-9e3b2c4606e2",
-        "lesson_activity.key": "79dee94f-ec7d-4d10-a03d-c45afaaceb65"
-      }
-    },
-    {
-      "key": "f28b886b-3c70-426f-9657-6dc677ac962a",
-      "position": 4,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.2\n* Topic Questions 5.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "f28b886b-3c70-426f-9657-6dc677ac962a",
         "lesson_activity.key": "79dee94f-ec7d-4d10-a03d-c45afaaceb65"
       }
     },
@@ -2579,18 +2620,6 @@
       },
       "seeding_key": {
         "activity_section.key": "dcd37201-e547-41f2-aabf-bc5a40833114",
-        "lesson_activity.key": "546c7b3d-8331-4105-93cf-5dcd1163d6d6"
-      }
-    },
-    {
-      "key": "d560b2f1-ed24-4cbf-84b3-8a466cb7b6a8",
-      "position": 5,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "d560b2f1-ed24-4cbf-84b3-8a466cb7b6a8",
         "lesson_activity.key": "546c7b3d-8331-4105-93cf-5dcd1163d6d6"
       }
     },
@@ -2922,18 +2951,6 @@
       }
     },
     {
-      "key": "0f47920b-1cef-48d9-bd63-b84d0451b19a",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.5\n* Topic Questions 5.4\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "0f47920b-1cef-48d9-bd63-b84d0451b19a",
-        "lesson_activity.key": "135cac53-eb2d-41be-965d-0385af8d16aa"
-      }
-    },
-    {
       "key": "c3c08d30-70ba-456c-8fae-1014e0ffdf22",
       "position": 1,
       "properties": {
@@ -3223,18 +3240,6 @@
       },
       "seeding_key": {
         "activity_section.key": "ef2c504d-585f-45cb-a6d5-7e0dfb04a874",
-        "lesson_activity.key": "5d4e0d6d-abc1-45da-9868-1ceaadf552cb"
-      }
-    },
-    {
-      "key": "e01da207-dd3b-4236-a4fb-9ef2f041cbfc",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.3\n* Topic Questions 1.4\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "e01da207-dd3b-4236-a4fb-9ef2f041cbfc",
         "lesson_activity.key": "5d4e0d6d-abc1-45da-9868-1ceaadf552cb"
       }
     },
@@ -3617,18 +3622,6 @@
       }
     },
     {
-      "key": "640eef3e-d5a9-4363-a6d4-1b858d3830fc",
-      "position": 7,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.4\n* Topic Questions 3.1\n* Topic Questions 5.5\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "640eef3e-d5a9-4363-a6d4-1b858d3830fc",
-        "lesson_activity.key": "53d2b1b5-7bdb-451a-ab1b-dc0ca77ad460"
-      }
-    },
-    {
       "key": "3190d5be-9dac-4f28-869b-0609b3e6f4f4",
       "position": 1,
       "properties": {
@@ -3926,22 +3919,10 @@
       }
     },
     {
-      "key": "bcf680eb-73db-40d2-a120-3cd1cdf11ba6",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.6\n* Topic Questions 9.7\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "bcf680eb-73db-40d2-a120-3cd1cdf11ba6",
-        "lesson_activity.key": "7697bb92-505e-4c62-b19e-2051b02e5604"
-      }
-    },
-    {
       "key": "e31e14fa-1a56-466b-84d0-f75ea317ee74",
       "position": 1,
       "properties": {
-        "description": "The unit assessment project assesses proficiency in the knowledge and skills developed in this unit. It is completed in three class periods to plan and create the program, including writing a superclass and subclasses and incorporating user interaction using the `Scanner` class. Students participate in planning and feedback activities to solve problems, reinforce software development practices and self-image as software engineers, and improve their programs.\n\nIf there is not enough time for the three-day project, a one-day option achieves the targeted learning objectives and goals. If using this option, refer to the [**Store Management Project 1-Day Lesson Plan**](https://studio.code.org/s/csa2-2023/lessons/14). While the one-day option covers the learning objectives and goals, it shortens planning and reflection time. Consider this tradeoff when deciding which version to use."
+        "description": "The unit assessment project assesses proficiency in the knowledge and skills developed in this unit. It is completed in three class periods to plan and create the program, including writing a superclass and subclasses and incorporating user interaction using the `Scanner` class. Students participate in planning and feedback activities to solve problems, reinforce software development practices and self-image as software engineers, and improve their programs.\n\nIf there is not enough time for the three-day project, a one-day option achieves the targeted learning objectives and goals. If using this option, refer to the [**Store Management Project 1-Day Lesson Plan**](https://studio.code.org/s/csa2-2023/lessons/15). While the one-day option covers the learning objectives and goals, it shortens planning and reflection time. Consider this tradeoff when deciding which version to use."
       },
       "seeding_key": {
         "activity_section.key": "e31e14fa-1a56-466b-84d0-f75ea317ee74",
@@ -4641,6 +4622,17 @@
       }
     },
     {
+      "key": "ea6d458e-3ad7-4c8a-a4a1-93f8ab353019",
+      "position": 1,
+      "properties": {
+        "progression_name": "Unit 2 Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "ea6d458e-3ad7-4c8a-a4a1-93f8ab353019",
+        "lesson_activity.key": "edb418d2-70a1-4e1e-a0e9-f6bc4fd44356"
+      }
+    },
+    {
       "key": "4c772fea-386c-4a28-86c0-a5b12079c39c",
       "position": 1,
       "properties": {
@@ -4759,12 +4751,44 @@
       "key": "8658f7a1-39ce-405c-b6fc-6d4b31d4dea4",
       "position": 3,
       "properties": {
-        "description": "**Store Management Project:** Use the rubric on the last page of the Store Management Project Planning Guide to assess the projects.",
+        "description": "**Store Management Project:** Use the rubric in the Store Management Project Planning Guide to assess the projects.",
         "name": "Assessment: Grading the Project"
       },
       "seeding_key": {
         "activity_section.key": "8658f7a1-39ce-405c-b6fc-6d4b31d4dea4",
         "lesson_activity.key": "8c6ec535-6c71-4f3d-89a3-1e9fce1e6036"
+      }
+    },
+    {
+      "key": "f34f3b9d-e95b-491b-aac4-550b1689a0ad",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f34f3b9d-e95b-491b-aac4-550b1689a0ad",
+        "lesson_activity.key": "0cda00fd-2377-4e4b-b63c-0746ac0227e8"
+      }
+    },
+    {
+      "key": "d793ab5a-4792-40d5-80f4-413f94d0b6c7",
+      "position": 1,
+      "properties": {
+        "progression_name": "With Paint Bucket"
+      },
+      "seeding_key": {
+        "activity_section.key": "d793ab5a-4792-40d5-80f4-413f94d0b6c7",
+        "lesson_activity.key": "fa230728-2b66-4385-bb76-1f21b1bb9a03"
+      }
+    },
+    {
+      "key": "f63d4e76-14f2-4fd2-a519-c3d7443405fa",
+      "position": 2,
+      "properties": {
+        "progression_name": "No Paint Bucket"
+      },
+      "seeding_key": {
+        "activity_section.key": "f63d4e76-14f2-4fd2-a519-c3d7443405fa",
+        "lesson_activity.key": "fa230728-2b66-4385-bb76-1f21b1bb9a03"
       }
     }
   ],
@@ -6751,6 +6775,31 @@
       "assessment": true,
       "properties": {
         "level_keys": [
+          "Student End of Unit Survey_csa2-2023"
+        ],
+        "progression": "Unit 2 Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csa2-2023"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa2-2023",
+        "activity_section.key": "ea6d458e-3ad7-4c8a-a4a1-93f8ab353019"
+      },
+      "level_keys": [
+        "Student End of Unit Survey_csa2-2023"
+      ]
+    },
+    {
+      "chapter": 81,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
           "CSA U2 Store Management Project 1-Day_2023"
         ],
         "progression": "Store Management Project"
@@ -6767,6 +6816,80 @@
       },
       "level_keys": [
         "CSA U2 Store Management Project 1-Day_2023"
+      ]
+    },
+    {
+      "chapter": 82,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2023 Console Sandbox"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2023 Console Sandbox"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-2023",
+        "activity_section.key": "f34f3b9d-e95b-491b-aac4-550b1689a0ad"
+      },
+      "level_keys": [
+        "CSA 2023 Console Sandbox"
+      ]
+    },
+    {
+      "chapter": 83,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood Sandbox"
+        ],
+        "progression": "With Paint Bucket"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood Sandbox"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-2023",
+        "activity_section.key": "d793ab5a-4792-40d5-80f4-413f94d0b6c7"
+      },
+      "level_keys": [
+        "CSA 2023 Neighborhood Sandbox"
+      ]
+    },
+    {
+      "chapter": 84,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox"
+        ],
+        "progression": "No Paint Bucket"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-2023",
+        "activity_section.key": "f63d4e76-14f2-4fd2-a519-c3d7443405fa"
+      },
+      "level_keys": [
+        "CSA 2023 Neighborhood - No Bucket Sandbox"
       ]
     }
   ],
@@ -7721,6 +7844,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "Student End of Unit Survey_csa2-2023",
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csa2-2023"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa2-2023",
+        "activity_section.key": "ea6d458e-3ad7-4c8a-a4a1-93f8ab353019"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA U2 Store Management Project 1-Day_2023",
         "script_level.level_keys": [
           "CSA U2 Store Management Project 1-Day_2023"
@@ -7729,6 +7864,42 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa2-2023",
         "activity_section.key": "4e85d584-2b68-45d5-832a-56691499cd9c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2023 Console Sandbox",
+        "script_level.level_keys": [
+          "CSA 2023 Console Sandbox"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-2023",
+        "activity_section.key": "f34f3b9d-e95b-491b-aac4-550b1689a0ad"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2023 Neighborhood Sandbox",
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood Sandbox"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-2023",
+        "activity_section.key": "d793ab5a-4792-40d5-80f4-413f94d0b6c7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2023 Neighborhood - No Bucket Sandbox",
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-2023",
+        "activity_section.key": "f63d4e76-14f2-4fd2-a519-c3d7443405fa"
       }
     }
   ],
@@ -7755,6 +7926,138 @@
       },
       "seeding_key": {
         "resource.key": "_exemplar_store_management_project_planning_guide_1"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U2L10 Guided Notes",
+      "url": "https://docs.google.com/document/d/1rtCEQUhsyPKxUYnHRgENoOtCAopQoPjABdrDEJS_ZMw/edit?usp=sharing",
+      "key": "_exemplar_u2l10_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u2l10_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U2L1 Guided Notes",
+      "url": "https://docs.google.com/document/d/1JpA2-cJ59a4SxpWIiwUdz8ygJLLzJ45vCAWEnmvjfss/edit?usp=sharing",
+      "key": "_exemplar_u2l1_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u2l1_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U2L2 Guided Notes",
+      "url": "https://docs.google.com/document/d/1j0b450ET2przWQJYTvYkdVGwPdvrSVpRxC_ORuuYhXw/edit?usp=sharing",
+      "key": "_exemplar_u2l2_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u2l2_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U2L3 Guided Notes",
+      "url": "https://docs.google.com/document/d/1Fz8bpusC_-9tf_fi-9cQGyuvcwI91eMKKSt-pMeu7pA/edit?usp=sharing",
+      "key": "_exemplar_u2l3_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u2l3_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U2L4 Guided Notes",
+      "url": "https://docs.google.com/document/d/1mZ2TYi_U5V-MmB6YDHxRrdPJaG_n3w9dgPc7q2hsRRQ/edit?usp=sharing",
+      "key": "_exemplar_u2l4_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u2l4_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U2L5 Guided Notes",
+      "url": "https://docs.google.com/document/d/10fBNOIwHiiLO51Fitr4uKtHwGLSW6Sq2Qhdb7KiKsH4/edit?usp=sharing",
+      "key": "_exemplar_u2l5_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u2l5_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U2L7 Guided Notes",
+      "url": "https://docs.google.com/document/d/15Y7g3AI8HPJ8LVt8ttT9HSzXXGH5nWHqYJYkZve06IA/edit?usp=sharing",
+      "key": "_exemplar_u2l7_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u2l7_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U2L7 Guided Notes",
+      "url": "https://docs.google.com/document/d/1xijVpfl96ZodziVU7EZrkMoia6hENe7y9wKtWINzn1w/edit?usp=sharing",
+      "key": "_exemplar_u2l7_guided_notes_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u2l7_guided_notes_1"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U2L8 Guided Notes",
+      "url": "https://docs.google.com/document/d/19gBhx5DIm0YnaUIgaqk3vZ0tdlUnGHGHI_xMnQWslVY/edit?usp=sharing",
+      "key": "_exemplar_u2l8_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u2l8_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U2L9 Guided Notes",
+      "url": "https://docs.google.com/document/d/18PxnbJcnAR4ovl70rgte6otlZiOOml9OASnUr8TlVmk/edit?usp=sharing",
+      "key": "_exemplar_u2l9_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u2l9_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] Unit 2 Guide",
+      "url": "https://docs.google.com/document/d/1TXYNiTnbkFzpuEvReolnu7mrtd8LU6hE1iqx91mNUno/edit?usp=share_link",
+      "key": "_exemplar_unit_2_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_unit_2_guide"
       }
     },
     {
@@ -7938,6 +8241,39 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/csa2-2023/resources",
+      "key": "all_resources_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_2"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csa2-2023/standards",
+      "key": "all_standards_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_2"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csa2-2023/vocab",
+      "key": "all_vocabulary_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_2"
+      }
+    },
+    {
       "name": "Anticipation Guide",
       "url": "https://docs.google.com/document/d/1D5d1uUJGuYqAQP77kKeGDqLfDJIGhE434JGlxmmNhTM/edit?usp=sharing",
       "key": "anticipation_guide",
@@ -8071,6 +8407,54 @@
       },
       "seeding_key": {
         "resource.key": "creating_variables"
+      }
+    },
+    {
+      "name": "CSA Unit 2 Slides",
+      "url": "https://docs.google.com/presentation/d/1nhCPN0RoHtQMdQ0jgJndUrMPejom-2w5vhGbVFTf3i8/edit?usp=sharing",
+      "key": "csa_unit_2_slides",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csa_unit_2_slides"
+      }
+    },
+    {
+      "name": "CSA Unit 2 Word Wall Cards",
+      "url": "https://docs.google.com/document/d/1INlv8xH_l5eCQc09JCb0QYzqlPiEsywNAvyY8qnU3Y8/edit?usp=sharing",
+      "key": "csa_unit_2_word_wall_cards",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csa_unit_2_word_wall_cards"
+      }
+    },
+    {
+      "name": "Guide to Creating and Using Word Walls",
+      "url": "https://docs.google.com/document/d/17-EK3Qz4KtOnN0_5n039nwhxHGSiKtB5ZwUVaQ51OdM/edit?usp=sharing",
+      "key": "guide_to_creating_and_using_word_walls",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_creating_and_using_word_walls"
+      }
+    },
+    {
+      "name": "Guide to Programming Levels in CSA",
+      "url": "https://docs.google.com/document/d/1RJxTkc2WiaE2kcl1wB2Jpn7GkFfNm2DcYqJ8DRtJZD8/edit?usp=sharing",
+      "key": "guide_to_programming_levels_in_csa",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_programming_levels_in_csa"
       }
     },
     {
@@ -8281,6 +8665,19 @@
       }
     },
     {
+      "name": "U2L10 Guided Notes",
+      "url": "https://docs.google.com/document/d/1LzWhhO-px2RyQFZ0sD_55cPl5N42wyOFj20duKdmZPs/edit?usp=sharing",
+      "key": "u2l10_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u2l10_guided_notes"
+      }
+    },
+    {
       "name": "U2L1 Extra Practice",
       "url": "https://docs.google.com/document/d/1xol1ugsQO8w330sOTKis3AB6r0vv0WVjVNBA09JPWtk/edit?usp=sharing",
       "key": "u2l1_extra_practice",
@@ -8291,6 +8688,19 @@
       },
       "seeding_key": {
         "resource.key": "u2l1_extra_practice"
+      }
+    },
+    {
+      "name": "U2L1 Guided Notes",
+      "url": "https://docs.google.com/document/d/17L9RMzHX1dRP3f2jUVr0siB7FjRSMlBlVjKhLt1oQVE/edit?usp=sharing",
+      "key": "u2l1_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u2l1_guided_notes"
       }
     },
     {
@@ -8307,6 +8717,19 @@
       }
     },
     {
+      "name": "U2L2 Guided Notes",
+      "url": "https://docs.google.com/document/d/1uUPYH9F35ZQhR1MavMVyPe0xBOnuvqF1EfR4jgAcO48/edit?usp=sharing",
+      "key": "u2l2_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u2l2_guided_notes"
+      }
+    },
+    {
       "name": "U2L3 Extra Practice",
       "url": "https://docs.google.com/document/d/1WSHs_5PNnAJinD60ZPomsLCT81JxSX4uD7fjwoyf8tw/edit?usp=sharing",
       "key": "u2l3_extra_practice",
@@ -8317,6 +8740,19 @@
       },
       "seeding_key": {
         "resource.key": "u2l3_extra_practice"
+      }
+    },
+    {
+      "name": "U2L3 Guided Notes",
+      "url": "https://docs.google.com/document/d/1rFKbiv-4k6fVptDb4AGsMrjghAnJC9NUrpz1g80wsAE/edit?usp=sharing",
+      "key": "u2l3_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u2l3_guided_notes"
       }
     },
     {
@@ -8333,6 +8769,19 @@
       }
     },
     {
+      "name": "U2L4 Guided Notes",
+      "url": "https://docs.google.com/document/d/1-TyvtYHUvLeIGoV-h-skAJrgQaNDpkq0GuSBoJaBJp8/edit?usp=sharing",
+      "key": "u2l4_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u2l4_guided_notes"
+      }
+    },
+    {
       "name": "U2L5 Extra Practice",
       "url": "https://docs.google.com/document/d/10U-0aKiKWWWncQy19YbQgtfTNSGoTNNWitIJ3cHyPIo/edit?usp=sharing",
       "key": "u2l5_extra_practice",
@@ -8346,6 +8795,19 @@
       }
     },
     {
+      "name": "U2L5 Guided Notes",
+      "url": "https://docs.google.com/document/d/1u9o-UW2K2v44y5EXR3MjLghOrsQHlL1qgYQ9iQD_rAw/edit?usp=sharing",
+      "key": "u2l5_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u2l5_guided_notes"
+      }
+    },
+    {
       "name": "U2L6 Extra Practice",
       "url": "https://docs.google.com/document/d/1tYy7S2iSLLQr9XXPqhxoBxIpYvXzUXExFVE6m6Qi_6E/edit?usp=sharing",
       "key": "u2l6_extra_practice",
@@ -8356,6 +8818,19 @@
       },
       "seeding_key": {
         "resource.key": "u2l6_extra_practice"
+      }
+    },
+    {
+      "name": "U2L6 Guided Notes",
+      "url": "https://docs.google.com/document/d/1g0ajb0DVUAdjsUr-uKRnWnTnI17mvSIo-jA0ZtXnvAE/edit?usp=sharing",
+      "key": "u2l6_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u2l6_guided_notes"
       }
     },
     {
@@ -8384,6 +8859,19 @@
       }
     },
     {
+      "name": "U2L7 Guided Notes",
+      "url": "https://docs.google.com/document/d/1tr2pozUOiLptDGYxlbLwW12Tehy1y9GLS_RnDKpk8EU/edit?usp=sharing",
+      "key": "u2l7_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u2l7_guided_notes"
+      }
+    },
+    {
       "name": "U2L8 Extra Practice",
       "url": "https://docs.google.com/document/d/1Fmy0ZOIM19by7q_e-YzTwex9_8jfAeVFYv7sej5F1v8/edit?usp=sharing",
       "key": "u2l8_extra_practice",
@@ -8397,6 +8885,19 @@
       }
     },
     {
+      "name": "U2L8 Guided Notes",
+      "url": "https://docs.google.com/document/d/1lKEGGyW2SOVwM8lPlJhU5HCgT03fHrVH8H5Bu_O9kGI/edit?usp=sharing",
+      "key": "u2l8_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u2l8_guided_notes"
+      }
+    },
+    {
       "name": "U2L9 Extra Practice",
       "url": "https://docs.google.com/document/d/1uVSlbSDYRQyT8z-9mbQ6lsH3splw4WlxdcYVvniUx2k/edit?usp=sharing",
       "key": "u2l9_extra_practice",
@@ -8407,6 +8908,19 @@
       },
       "seeding_key": {
         "resource.key": "u2l9_extra_practice"
+      }
+    },
+    {
+      "name": "U2L9 Guided Notes",
+      "url": "https://docs.google.com/document/d/1us3iSd5-KZY-yfpipy0P-_yapaBUgfsEn-Wi948fmyI/edit?usp=sharing",
+      "key": "u2l9_guided_notes_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u2l9_guided_notes_1"
       }
     },
     {
@@ -8432,6 +8946,18 @@
       },
       "seeding_key": {
         "resource.key": "unit_2_guide"
+      }
+    },
+    {
+      "name": "Unit 2 Overview",
+      "url": "https://docs.google.com/document/d/1I9s_qs8Foxg2df3YzgeCLDFzBTpYECERm7_iRiUkLMc/edit?usp=share_link",
+      "key": "unit_2_overview",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_2_overview"
       }
     },
     {
@@ -8476,6 +9002,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
+        "resource.key": "_exemplar_u2l1_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
         "resource.key": "_key_u2l1_extra_practice"
       }
     },
@@ -8483,6 +9015,12 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "attributes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "guide_to_programming_levels_in_csa"
       }
     },
     {
@@ -8500,7 +9038,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
-        "resource.key": "unit_2_guide"
+        "resource.key": "u2l1_guided_notes"
       }
     },
     {
@@ -8596,6 +9134,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-14",
+        "resource.key": "_exemplar_u2l4_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
         "resource.key": "_key_anticipation_guide"
       }
     },
@@ -8614,6 +9158,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-14",
+        "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
         "resource.key": "the_this_keyword"
       }
     },
@@ -8626,7 +9176,13 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-14",
-        "resource.key": "unit_2_guide"
+        "resource.key": "u2l4_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "_exemplar_u2l2_guided_notes"
       }
     },
     {
@@ -8644,6 +9200,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-2",
+        "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
         "resource.key": "no-argument_constructors"
       }
     },
@@ -8656,13 +9218,25 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-2",
-        "resource.key": "unit_2_guide"
+        "resource.key": "u2l2_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "_exemplar_u2l3_guided_notes"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-3",
         "resource.key": "_key_u2l3_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "guide_to_programming_levels_in_csa"
       }
     },
     {
@@ -8686,7 +9260,13 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-3",
-        "resource.key": "unit_2_guide"
+        "resource.key": "u2l3_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "_exemplar_u2l7_guided_notes"
       }
     },
     {
@@ -8710,6 +9290,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-4",
+        "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
         "resource.key": "investigate_variables"
       }
     },
@@ -8722,13 +9308,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-4",
-        "resource.key": "unit_2_guide"
+        "resource.key": "u2l6_guided_notes"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-4",
         "resource.key": "variables"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "_exemplar_u2l7_guided_notes_1"
       }
     },
     {
@@ -8752,6 +9344,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-5",
+        "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
         "resource.key": "u2l7_extra_practice"
       }
     },
@@ -8764,7 +9362,13 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-5",
-        "resource.key": "unit_2_guide"
+        "resource.key": "u2l7_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "_exemplar_u2l5_guided_notes"
       }
     },
     {
@@ -8782,19 +9386,37 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-6",
+        "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
         "resource.key": "u2l5_extra_practice"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-6",
-        "resource.key": "unit_2_guide"
+        "resource.key": "u2l5_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "_exemplar_u2l8_guided_notes"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
         "resource.key": "_key_u2l8_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "guide_to_programming_levels_in_csa"
       }
     },
     {
@@ -8812,13 +9434,25 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
-        "resource.key": "unit_2_guide"
+        "resource.key": "u2l8_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "_exemplar_u2l9_guided_notes"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-8",
         "resource.key": "_key_u2l9_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "guide_to_programming_levels_in_csa"
       }
     },
     {
@@ -8848,13 +9482,25 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-8",
-        "resource.key": "unit_2_guide"
+        "resource.key": "u2l9_guided_notes_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "_exemplar_u2l10_guided_notes"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-9",
         "resource.key": "_key_u2l10_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "guide_to_programming_levels_in_csa"
       }
     },
     {
@@ -8878,7 +9524,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-9",
-        "resource.key": "unit_2_guide"
+        "resource.key": "u2l10_guided_notes"
       }
     },
     {
@@ -8889,7 +9535,72 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "_exemplar_unit_2_guide",
+        "script.name": "csa2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_2",
+        "script.name": "csa2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_2",
+        "script.name": "csa2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_2",
+        "script.name": "csa2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csa_unit_2_slides",
+        "script.name": "csa2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csa_unit_2_word_wall_cards",
+        "script.name": "csa2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_creating_and_using_word_walls",
+        "script.name": "csa2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_programming_levels_in_csa",
+        "script.name": "csa2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_2_guide",
+        "script.name": "csa2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_2_overview",
+        "script.name": "csa2-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_2_study_guide",
+        "script.name": "csa2-2023"
+      }
+    }
   ],
   "scripts_student_resources": [
 
@@ -9797,9 +10508,72 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-14",
         "framework.shortcode": "csa",
         "standard.shortcode": "VAR-1.H.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
       }
     },
     {
@@ -9828,6 +10602,13 @@
         "lesson.key": "lesson-2",
         "framework.shortcode": "csa",
         "standard.shortcode": "MOD-2.B.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
       }
     },
     {
@@ -9881,6 +10662,13 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-4",
         "framework.shortcode": "csa",
         "standard.shortcode": "CON-1.A.1"
@@ -9919,6 +10707,13 @@
         "lesson.key": "lesson-4",
         "framework.shortcode": "csa",
         "standard.shortcode": "VAR-1.E.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
       }
     },
     {
@@ -9968,6 +10763,20 @@
         "lesson.key": "lesson-5",
         "framework.shortcode": "csa",
         "standard.shortcode": "MOD-3.A.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
       }
     },
     {
@@ -10024,6 +10833,13 @@
         "lesson.key": "lesson-6",
         "framework.shortcode": "csa",
         "standard.shortcode": "MOD-3.E.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
       }
     },
     {
@@ -10112,6 +10928,13 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-8",
         "framework.shortcode": "csa",
         "standard.shortcode": "CON-1.E.1"
@@ -10175,6 +10998,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-9",
         "framework.shortcode": "csa",
         "standard.shortcode": "MOD-2.D.6"
@@ -10221,9 +11058,25 @@
         "framework.shortcode": "csa",
         "standard.shortcode": "VAR-1.E.11"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
+      }
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

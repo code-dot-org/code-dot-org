@@ -13,3 +13,5 @@ answer 'creates and initializes the elements in an array to a list of values giv
 
 question 'index'
 answer 'the numerical position of an item in an array'
+
+allow_multiple_attempts true

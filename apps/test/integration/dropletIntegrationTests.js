@@ -3,26 +3,26 @@ import * as dropletUtils from '@cdo/apps/dropletUtils';
 import {
   singleton as studioApp,
   stubStudioApp,
-  restoreStudioApp
+  restoreStudioApp,
 } from '@cdo/apps/StudioApp';
 import loadSource from './util/loadSource';
 
 describe('setParamAtIndex', () => {
   let editor, parser, plainTree, arrayTree;
 
-  before(function() {
+  before(function () {
     // Load droplet sources.
     return loadSource('/base/lib/ace/src-noconflict/ace.js')
-      .then(function() {
+      .then(function () {
         return loadSource('/base/lib/ace/src-noconflict/mode-javascript.js');
       })
-      .then(function() {
+      .then(function () {
         return loadSource('/base/lib/ace/src-noconflict/ext-language_tools.js');
       })
-      .then(function() {
+      .then(function () {
         return loadSource('/base/lib/droplet/droplet-full.js');
       })
-      .then(function() {
+      .then(function () {
         assert(window.droplet, 'droplet in global namespace');
       });
   });
@@ -36,7 +36,7 @@ describe('setParamAtIndex', () => {
     dropletCodeTextbox.setAttribute('id', 'dropletCodeTextbox');
     editor = new window.droplet.Editor(dropletCodeTextbox, {
       mode: 'javascript',
-      palette: []
+      palette: [],
     });
 
     studioApp().editor = editor;

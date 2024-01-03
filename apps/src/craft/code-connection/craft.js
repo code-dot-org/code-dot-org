@@ -30,10 +30,10 @@ const COMMON_UI_ASSETS = [
   MEDIA_URL + 'Sliced_Parts/Reset_Button_Up_Slice.png',
   MEDIA_URL + 'Sliced_Parts/MC_Reset_Arrow_Icon.png',
   MEDIA_URL + 'Sliced_Parts/Reset_Button_Down_Slice.png',
-  MEDIA_URL + 'Sliced_Parts/Callout_Tail.png'
+  MEDIA_URL + 'Sliced_Parts/Callout_Tail.png',
 ];
 
-const preloadImage = function(url) {
+const preloadImage = function (url) {
   const img = new Image();
   img.src = url;
 };
@@ -43,13 +43,13 @@ const preloadImage = function(url) {
  * @param {any} input
  */
 function getItemName(input) {
-  if (input.hasOwnProperty('name')) {
+  if (Object.prototype.hasOwnProperty.call(input, 'name')) {
     input = input['name'];
   }
   return input;
 }
 
-export const executeUserCode = function(client, code) {
+export const executeUserCode = function (client, code) {
   let interpreter;
 
   /**
@@ -104,7 +104,7 @@ export const executeUserCode = function(client, code) {
   }
 
   const asyncMethods = {
-    move: function(blockID, direction, callback) {
+    move: function (blockID, direction, callback) {
       createAsyncRequestBlock(
         blockID,
         'move',
@@ -113,7 +113,7 @@ export const executeUserCode = function(client, code) {
         callback
       );
     },
-    turn: function(blockID, direction, callback) {
+    turn: function (blockID, direction, callback) {
       createAsyncRequestBlock(
         blockID,
         'turn',
@@ -122,7 +122,7 @@ export const executeUserCode = function(client, code) {
         callback
       );
     },
-    place: function(blockID, slotNum, direction, callback) {
+    place: function (blockID, slotNum, direction, callback) {
       createAsyncRequestBlock(
         blockID,
         'place',
@@ -131,7 +131,7 @@ export const executeUserCode = function(client, code) {
         callback
       );
     },
-    till: function(blockID, direction, callback) {
+    till: function (blockID, direction, callback) {
       createAsyncRequestBlock(
         blockID,
         'till',
@@ -140,7 +140,7 @@ export const executeUserCode = function(client, code) {
         callback
       );
     },
-    attack: function(blockID, direction, callback) {
+    attack: function (blockID, direction, callback) {
       createAsyncRequestBlock(
         blockID,
         'attack',
@@ -149,7 +149,7 @@ export const executeUserCode = function(client, code) {
         callback
       );
     },
-    destroy: function(blockID, direction, callback) {
+    destroy: function (blockID, direction, callback) {
       createAsyncRequestBlock(
         blockID,
         'destroy',
@@ -158,7 +158,7 @@ export const executeUserCode = function(client, code) {
         callback
       );
     },
-    collect: function(blockID, item, callback) {
+    collect: function (blockID, item, callback) {
       createAsyncRequestBlock(
         blockID,
         'collect',
@@ -167,7 +167,7 @@ export const executeUserCode = function(client, code) {
         callback
       );
     },
-    collectall: function(blockID, callback) {
+    collectall: function (blockID, callback) {
       createAsyncRequestBlock(
         blockID,
         'collect',
@@ -176,7 +176,7 @@ export const executeUserCode = function(client, code) {
         callback
       );
     },
-    drop: function(blockID, slotNum, quantity, direction, callback) {
+    drop: function (blockID, slotNum, quantity, direction, callback) {
       createAsyncRequestBlock(
         blockID,
         'drop',
@@ -185,7 +185,7 @@ export const executeUserCode = function(client, code) {
         callback
       );
     },
-    dropall: function(blockID, direction, callback) {
+    dropall: function (blockID, direction, callback) {
       createAsyncRequestBlock(
         blockID,
         'dropall',
@@ -194,7 +194,7 @@ export const executeUserCode = function(client, code) {
         callback
       );
     },
-    detect: function(blockID, direction, callback) {
+    detect: function (blockID, direction, callback) {
       createAsyncRequestBlock(
         blockID,
         'detect',
@@ -203,7 +203,7 @@ export const executeUserCode = function(client, code) {
         callback
       );
     },
-    inspect: function(blockID, direction, callback) {
+    inspect: function (blockID, direction, callback) {
       createAsyncRequestBlock(
         blockID,
         'inspect',
@@ -212,7 +212,7 @@ export const executeUserCode = function(client, code) {
         callback
       );
     },
-    inspectdata: function(blockID, direction, callback) {
+    inspectdata: function (blockID, direction, callback) {
       createAsyncRequestBlock(
         blockID,
         'inspectdata',
@@ -221,7 +221,7 @@ export const executeUserCode = function(client, code) {
         callback
       );
     },
-    detectredstone: function(blockID, direction, callback) {
+    detectredstone: function (blockID, direction, callback) {
       createAsyncRequestBlock(
         blockID,
         'detectredstone',
@@ -230,7 +230,7 @@ export const executeUserCode = function(client, code) {
         callback
       );
     },
-    getitemdetail: function(blockID, slotNum, callback) {
+    getitemdetail: function (blockID, slotNum, callback) {
       createAsyncRequestBlock(
         blockID,
         'getitemdetail',
@@ -239,7 +239,7 @@ export const executeUserCode = function(client, code) {
         callback
       );
     },
-    getitemspace: function(blockID, slotNum, callback) {
+    getitemspace: function (blockID, slotNum, callback) {
       createAsyncRequestBlock(
         blockID,
         'getitemspace',
@@ -248,7 +248,7 @@ export const executeUserCode = function(client, code) {
         callback
       );
     },
-    getitemcount: function(blockID, slotNum, callback) {
+    getitemcount: function (blockID, slotNum, callback) {
       createAsyncRequestBlock(
         blockID,
         'getitemcount',
@@ -257,7 +257,7 @@ export const executeUserCode = function(client, code) {
         callback
       );
     },
-    transfer: function(blockID, srcSlotNum, quantity, dstSlotNum, callback) {
+    transfer: function (blockID, srcSlotNum, quantity, dstSlotNum, callback) {
       createAsyncRequestBlock(
         blockID,
         'transfer',
@@ -266,17 +266,17 @@ export const executeUserCode = function(client, code) {
         callback
       );
     },
-    tptoplayer: function(blockID, callback) {
+    tptoplayer: function (blockID, callback) {
       createAsyncRequestBlock(blockID, 'tptoplayer', null, {}, callback);
     },
-    wait: function(blockID, milliseconds, callback) {
+    wait: function (blockID, milliseconds, callback) {
       studioApp().highlight(blockID);
       setTimeout(() => {
         callback();
         interpreter.run();
       }, milliseconds);
     },
-    executeasother: function(blockID, origin, position, command, callback) {
+    executeasother: function (blockID, origin, position, command, callback) {
       createAsyncRequestBlock(
         blockID,
         'executeasother',
@@ -285,7 +285,7 @@ export const executeUserCode = function(client, code) {
         callback
       );
     },
-    executedetect: function(
+    executedetect: function (
       blockID,
       origin,
       position,
@@ -305,12 +305,12 @@ export const executeUserCode = function(client, code) {
           detectBlock: detectBlock,
           detectData: detectData,
           detectPos: detectPos,
-          command: command
+          command: command,
         },
         callback
       );
     },
-    timesetbyname: function(blockID, time, callback) {
+    timesetbyname: function (blockID, time, callback) {
       createAsyncRequestBlock(
         blockID,
         'timesetbyname',
@@ -319,7 +319,7 @@ export const executeUserCode = function(client, code) {
         callback
       );
     },
-    timesetbynumber: function(blockID, time, callback) {
+    timesetbynumber: function (blockID, time, callback) {
       createAsyncRequestBlock(
         blockID,
         'timesetbynumber',
@@ -328,7 +328,7 @@ export const executeUserCode = function(client, code) {
         callback
       );
     },
-    weather: function(blockID, type, callback) {
+    weather: function (blockID, type, callback) {
       createAsyncRequestBlock(
         blockID,
         'weather',
@@ -337,7 +337,7 @@ export const executeUserCode = function(client, code) {
         callback
       );
     },
-    tptotarget: function(blockID, victim, destination, callback) {
+    tptotarget: function (blockID, victim, destination, callback) {
       createAsyncRequestBlock(
         blockID,
         'tptargettotarget',
@@ -346,7 +346,7 @@ export const executeUserCode = function(client, code) {
         callback
       );
     },
-    tptopos: function(blockID, victim, destination, callback) {
+    tptopos: function (blockID, victim, destination, callback) {
       createAsyncRequestBlock(
         blockID,
         'tptargettopos',
@@ -355,7 +355,7 @@ export const executeUserCode = function(client, code) {
         callback
       );
     },
-    fill: function(blockID, from, to, tileName, tileData, callback) {
+    fill: function (blockID, from, to, tileName, tileData, callback) {
       createAsyncRequestBlock(
         blockID,
         'fill',
@@ -364,7 +364,7 @@ export const executeUserCode = function(client, code) {
         callback
       );
     },
-    give: function(blockID, player, item, amount, callback) {
+    give: function (blockID, player, item, amount, callback) {
       createAsyncRequestBlock(
         blockID,
         'give',
@@ -373,12 +373,12 @@ export const executeUserCode = function(client, code) {
           player: player,
           itemName: item['name'],
           data: item['data'],
-          amount: amount
+          amount: amount,
         },
         callback
       );
     },
-    kill: function(blockID, target, callback) {
+    kill: function (blockID, target, callback) {
       createAsyncRequestBlock(
         blockID,
         'kill',
@@ -387,7 +387,7 @@ export const executeUserCode = function(client, code) {
         callback
       );
     },
-    setblock: function(blockID, position, item, oldBlockHandling, callback) {
+    setblock: function (blockID, position, item, oldBlockHandling, callback) {
       createAsyncRequestBlock(
         blockID,
         'setblock',
@@ -396,12 +396,12 @@ export const executeUserCode = function(client, code) {
           position: position,
           tileName: item['name'],
           tileData: item['data'],
-          oldBlockHandling: oldBlockHandling
+          oldBlockHandling: oldBlockHandling,
         },
         callback
       );
     },
-    summon: function(blockID, entityType, spawnPos, callback) {
+    summon: function (blockID, entityType, spawnPos, callback) {
       createAsyncRequestBlock(
         blockID,
         'summon',
@@ -410,7 +410,7 @@ export const executeUserCode = function(client, code) {
         callback
       );
     },
-    testforblock: function(blockID, position, item, callback) {
+    testforblock: function (blockID, position, item, callback) {
       createAsyncRequestBlock(
         blockID,
         'testforblock',
@@ -419,7 +419,7 @@ export const executeUserCode = function(client, code) {
         callback
       );
     },
-    testforblocks: function(blockID, begin, end, destination, mode, callback) {
+    testforblocks: function (blockID, begin, end, destination, mode, callback) {
       createAsyncRequestBlock(
         blockID,
         'testforblocks',
@@ -428,7 +428,7 @@ export const executeUserCode = function(client, code) {
         callback
       );
     },
-    clone: function(
+    clone: function (
       blockID,
       begin,
       end,
@@ -446,12 +446,12 @@ export const executeUserCode = function(client, code) {
           end: end,
           destination: destination,
           maskMode: maskMode,
-          cloneMode: cloneMode
+          cloneMode: cloneMode,
         },
         callback
       );
     },
-    clonefiltered: function(
+    clonefiltered: function (
       blockID,
       begin,
       end,
@@ -471,29 +471,29 @@ export const executeUserCode = function(client, code) {
           maskMode: 'filtered',
           cloneMode: cloneMode,
           tileName: item['name'],
-          tileData: item['data']
+          tileData: item['data'],
         },
         callback
       );
-    }
+    },
   };
 
   const methods = {
-    item: function(blockID, name, data) {
+    item: function (blockID, name, data) {
       studioApp().highlight(blockID);
       return {name: name, data: data};
     },
-    createBlockPos: function(x, y, z, prefix) {
+    createBlockPos: function (x, y, z, prefix) {
       return encodeURIComponent(`${prefix}${x} ${prefix}${y} ${prefix}${z}`);
     },
-    createBlockPosFromVec3: function(vec3, prefix) {
+    createBlockPosFromVec3: function (vec3, prefix) {
       return encodeURIComponent(
         `${prefix}${vec3.x} ${prefix}${vec3.y} ${prefix}${vec3.z}`
       );
     },
-    getVec3: function(x, y, z) {
+    getVec3: function (x, y, z) {
       return {x: `${x}`, y: `${y}`, z: `${z}`};
-    }
+    },
   };
 
   // Register async methods
@@ -517,7 +517,7 @@ export default class Craft {
     Craft.initialConfig = config;
 
     // Initial connection status check to show pop-up if user is not connected to M:EE
-    client.connectionStatusUpdate(function(result) {
+    client.connectionStatusUpdate(function (result) {
       if (result === false) {
         Craft.showConnectToCodeConnectionPopup();
       }
@@ -529,27 +529,27 @@ export default class Craft {
 
     // Push initial level properties into the Redux store
     studioApp().setPageConstants(config, {
-      isMinecraft: true
+      isMinecraft: true,
     });
 
     Craft.render(config);
   }
 
   static render(config) {
-    const onMount = function() {
+    const onMount = function () {
       studioApp().init({
         enableShowCode: false,
-        ...config
+        ...config,
       });
 
       var itemTypeKeys = Object.keys(items);
-      itemTypeKeys.forEach(function(itemType) {
-        items[itemType].forEach(function(item) {
+      itemTypeKeys.forEach(function (itemType) {
+        items[itemType].forEach(function (item) {
           preloadImage(item[0]);
         });
       });
 
-      COMMON_UI_ASSETS.forEach(function(url) {
+      COMMON_UI_ASSETS.forEach(function (url) {
         preloadImage(url);
       });
     };
@@ -582,7 +582,7 @@ export default class Craft {
    * Click the run button.  Start the program.
    */
   static runButtonClick() {
-    client.connectionStatusUpdate(function(result) {
+    client.connectionStatusUpdate(function (result) {
       // Only can run when minecraft is connected to code connection
       if (result === true) {
         console.log('run');
@@ -609,19 +609,19 @@ export default class Craft {
     });
   }
 
-  static showConnectToCodeConnectionPopup = function() {
+  static showConnectToCodeConnectionPopup = function () {
     var popupDiv = document.createElement('div');
     popupDiv.innerHTML = require('./dialogs/connectToCodeConnection.html.ejs')({
-      image: studioApp().assetUrl()
+      image: studioApp().assetUrl(),
     });
     var popupDialog = studioApp().createModalDialog({
       contentDiv: popupDiv,
-      onHidden: function() {},
-      id: 'craft-popup-connect'
+      onHidden: function () {},
+      id: 'craft-popup-connect',
     });
     dom.addClickTouchEvent(
       document.getElementById('download-button'),
-      function() {
+      function () {
         var win = window.open(
           'https://education.minecraft.net/get-started/download',
           '_blank'
@@ -632,23 +632,23 @@ export default class Craft {
     );
     dom.addClickTouchEvent(
       document.getElementById('close-popup'),
-      function() {
+      function () {
         popupDialog.hide();
       }.bind(this)
     );
     popupDialog.show();
   };
 
-  static showImportFromShareLinkPopup = function(callback) {
+  static showImportFromShareLinkPopup = function (callback) {
     let shareLink;
     const popupDiv = document.createElement('div');
     popupDiv.innerHTML = require('./dialogs/importFromShareLink.html.ejs')();
     const popupDialog = studioApp().createModalDialog({
       contentDiv: popupDiv,
-      onHidden: function() {
+      onHidden: function () {
         callback(shareLink);
       },
-      id: 'craft-popup-import'
+      id: 'craft-popup-import',
     });
     dom.addClickTouchEvent(document.getElementById('import-button'), () => {
       shareLink = $('#share-link').val();
@@ -663,17 +663,17 @@ export default class Craft {
     popupDialog.show();
   };
 
-  static showErrorMessagePopup = function(title, message) {
+  static showErrorMessagePopup = function (title, message) {
     const popupDiv = document.createElement('div');
     popupDiv.innerHTML = require('./dialogs/errorMessage.html.ejs')({
       title,
-      message
+      message,
     });
 
     const popupDialog = studioApp().createModalDialog({
       contentDiv: popupDiv,
-      onHidden: function() {},
-      id: 'craft-popup-error'
+      onHidden: function () {},
+      id: 'craft-popup-error',
     });
 
     dom.addClickTouchEvent(document.getElementById('close-popup'), () => {

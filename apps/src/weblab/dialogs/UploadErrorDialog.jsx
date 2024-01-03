@@ -22,5 +22,5 @@ export default function UploadErrorDialog({isOpen, handleClose, ...props}) {
 
 UploadErrorDialog.propTypes = {
   isOpen: PropTypes.bool.isRequired,
-  handleClose: PropTypes.func.isRequired
+  handleClose: PropTypes.func.isRequired,
 };

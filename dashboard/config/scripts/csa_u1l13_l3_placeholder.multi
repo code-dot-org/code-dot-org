@@ -7,3 +7,5 @@ MARKDOWN
 
 wrong 'True'
 right 'False'
+
+allow_multiple_attempts true

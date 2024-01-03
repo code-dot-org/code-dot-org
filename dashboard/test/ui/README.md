@@ -24,10 +24,6 @@ This is the best option for rapid iteration while writing a new test. ChromeDriv
 
 If you get the error `unknown error: cannot get automation extension`, follow the [chromedriver-helper instructions](https://github.com/flavorjones/chromedriver-helper#updating-to-latest-chromedriver) to upgrade to latest chromedriver.
 
-If you get the error `session not created: Chrome version must be between 71 and 75`, you may need a newer version of `chromedriver`. Download a version of chromedriver that matches your current version of Chrome [here]([url](https://chromedriver.chromium.org/downloads)), unzip it, and reference the file path of your new version of chromedriver [here](https://github.com/code-dot-org/code-dot-org/blob/d7b3ba84adf30ef2844c538e7206ca4bd3565ea9/dashboard/test/ui/utils/selenium_browser.rb#L9) as follows:
-
-`Selenium::WebDriver::Chrome.driver_path = [path to your chromedriver]`
-
 ### With remote browsers: Sauce Labs
 
 Running tests remotely on [Sauce Labs](https://saucelabs.com) lets you review results, view visual logs of test runs and even watch live video of your tests running on different browsers in real-time.
@@ -99,13 +95,13 @@ Run one feature in one saucelabs browser against your local machine with html ou
 
 `./runner.rb -l -f features/big_game_remix.feature -c Chrome --html`
 
-Run **eyes tests** on one feature in one saucelabs browser against your local machine with html output (requires SauceConnect, described earlier)
+Run **eyes tests** on one feature in one saucelabs browser against your local machine with html output (requires SauceConnect and api_key for eyes testing described in See Also below)
 
 `./runner.rb -l -f features/angle_helper.feature -c Chrome --html --eyes`
 
 ## Tips
 
-- If you're new to [Cucumber](http://cukes.info/), read about [Cucumber scenarios](https://github.com/cucumber/cucumber/wiki/Feature-Introduction), especially the keywords [Given When Then](https://github.com/cucumber/cucumber/wiki/Given-When-Then).
+- If you're new to [Cucumber](https://cucumber.io), read about [Cucumber scenarios](https://cucumber.io/docs/guides/overview/), especially the keywords [Given When Then](https://cucumber.io/docs/gherkin/reference/).
 - When debugging test scripts, it can be helpful to add pauses, such as: `And I wait for 5 seconds`.
 - If you're missing data locally, try running `bundle exec rake seed:ui_test` from the dashboard directory
 

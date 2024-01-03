@@ -25,8 +25,8 @@ const DataDocFormEditor = props => {
       method: 'PUT',
       data: {
         name: dataDocName,
-        content: dataDocContent
-      }
+        content: dataDocContent,
+      },
     })
       .done(() => {
         setIsSaving(false);
@@ -88,20 +88,20 @@ const DataDocFormEditor = props => {
 
 const styles = {
   label: {
-    marginBottom: 20
+    marginBottom: 20,
   },
   input: {
-    marginLeft: 10
+    marginLeft: 10,
   },
   helptip: {
-    marginLeft: 10
-  }
+    marginLeft: 10,
+  },
 };
 
 DataDocFormEditor.propTypes = {
   dataDocKey: PropTypes.string,
   originalDataDocName: PropTypes.string,
-  originalDataDocContent: PropTypes.string
+  originalDataDocContent: PropTypes.string,
 };
 
 export default DataDocFormEditor;

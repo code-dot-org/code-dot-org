@@ -14,7 +14,7 @@ module Pd::Application
       assert_nil teacher_application.application_guid
 
       teacher_application.save!
-      assert_not_nil teacher_application.application_guid
+      refute_nil teacher_application.application_guid
     end
 
     test 'existing guid is preserved' do
@@ -45,6 +45,22 @@ module Pd::Application
 
       assert_equal 'Dr. Dumbledore', application_with_principal_title.principal_greeting
       assert_equal 'Albus Dumbledore', application_without_principal_title.principal_greeting
+    end
+
+    test 'updating form data re-calculates regional partner' do
+      partner_1 = create :regional_partner
+      partner_2 = create :regional_partner
+      hash_with_partner_1 = build TEACHER_APPLICATION_HASH_FACTORY, regional_partner_id: partner_1.id
+      hash_with_partner_2 = build TEACHER_APPLICATION_HASH_FACTORY, regional_partner_id: partner_2.id
+      application = create :pd_teacher_application
+
+      assert_nil application.regional_partner_id
+
+      application.update(form_data_hash: hash_with_partner_1)
+      assert_equal application.reload.regional_partner_id, partner_1.id
+
+      application.update(form_data_hash: hash_with_partner_2)
+      assert_equal application.reload.regional_partner_id, partner_2.id
     end
 
     test 'meets criteria says an application meets criteria when all YES_NO fields are marked yes' do
@@ -86,8 +102,8 @@ module Pd::Application
     end
 
     test 'accepted_at updates times' do
-      today = Date.today.to_time
-      tomorrow = Date.tomorrow.to_time
+      today = Time.zone.today.to_time
+      tomorrow = Time.zone.tomorrow.to_time
       application = create :pd_teacher_application
       assert_nil application.accepted_at
 
@@ -164,7 +180,7 @@ module Pd::Application
 
       application.update_user_school_info!
       refute_equal original_user_school_info_id, user.school_info_id
-      assert_not_nil user.school_info_id
+      refute_nil user.school_info_id
     end
 
     test 'update_user_school_info does nothing when user has no school info and does not have enough info for new school' do
@@ -189,18 +205,26 @@ module Pd::Application
     test 'get_first_selected_workshop single local workshop' do
       Pd::Workshop.any_instance.stubs(:process_location)
 
-      workshop = create :workshop, location_address: 'Address', sessions_from: Date.today, num_sessions: 1
+      workshop = create :workshop, location_address: 'Address', sessions_from: Time.zone.today, num_sessions: 1
       application = create :pd_teacher_application, form_data_hash: (
       build :pd_teacher_application_hash,
         regional_partner_workshop_ids: [workshop.id],
-        able_to_attend_multiple: ["#{Date.today.strftime '%B %-d, %Y'} in Address"]
+        able_to_attend_multiple: ["#{Time.zone.today.strftime '%B %-d, %Y'} in Address"]
       )
 
       assert_equal workshop, application.get_first_selected_workshop
     end
 
     test 'get_first_selected_workshop multiple local workshops' do
-      workshops = (1..3).map {|i| create :workshop, num_sessions: 2, sessions_from: Date.today + i, location_address: %w(tba TBA tba)[i - 1]}
+      addresses = %w(tba TBA tba)
+      workshops = (1..3).map do |i|
+        create(
+          :workshop,
+          num_sessions: 2,
+          sessions_from: Time.zone.today + i,
+          location_address: addresses[i - 1]
+        )
+      end
 
       application = create :pd_teacher_application, form_data_hash: (
       build(:pd_teacher_application_hash, :with_multiple_workshops,
@@ -217,7 +241,7 @@ module Pd::Application
     end
 
     test 'get_first_selected_workshop multiple local workshops no selection returns first' do
-      workshops = (1..2).map {|i| create :workshop, num_sessions: 2, sessions_from: Date.today + i}
+      workshops = (1..2).map {|i| create :workshop, num_sessions: 2, sessions_from: Time.zone.today + i}
 
       application = create :pd_teacher_application, form_data_hash: (
       build(:pd_teacher_application_hash, :with_multiple_workshops,
@@ -253,7 +277,7 @@ module Pd::Application
     end
 
     test 'get_first_selected_workshop ignores deleted workshop from multiple list' do
-      workshops = (1..2).map {|i| create :workshop, num_sessions: 2, sessions_from: Date.today + i}
+      workshops = (1..2).map {|i| create :workshop, num_sessions: 2, sessions_from: Time.zone.today + i}
 
       application = create :pd_teacher_application, form_data_hash: (
       build(:pd_teacher_application_hash, :with_multiple_workshops,
@@ -270,8 +294,8 @@ module Pd::Application
     end
 
     test 'get_first_selected_workshop picks correct workshop even when multiple are on the same day' do
-      workshop_1 = create :workshop, num_sessions: 2, sessions_from: Date.today + 2
-      workshop_2 = create :workshop, num_sessions: 2, sessions_from: Date.today + 2
+      workshop_1 = create :workshop, num_sessions: 2, sessions_from: Time.zone.today + 2
+      workshop_2 = create :workshop, num_sessions: 2, sessions_from: Time.zone.today + 2
       workshop_1.update_column(:location_address, 'Location 1')
       workshop_2.update_column(:location_address, 'Location 2')
 
@@ -298,26 +322,26 @@ module Pd::Application
       ['csp', 'csd'].each do |course|
         columns = TeacherApplication.columns_to_remove(course)
         columns.keys.each do |k|
-          columns[k].each {|c| refute c.to_s.include?(course)}
+          columns[k].each {|c| refute_includes(c.to_s, course)}
         end
       end
     end
 
     test 'csv_filtered_labels' do
       csv_filtered_labels_csd = TeacherApplication.csv_filtered_labels('csd')
-      assert csv_filtered_labels_csd[:teacher].include? :csd_which_grades
-      refute csv_filtered_labels_csd[:teacher].include? :csp_which_grades
-      refute csv_filtered_labels_csd[:teacher].include? :csa_which_grades
+      assert_includes(csv_filtered_labels_csd[:teacher], :csd_which_grades)
+      refute_includes(csv_filtered_labels_csd[:teacher], :csp_which_grades)
+      refute_includes(csv_filtered_labels_csd[:teacher], :csa_which_grades)
 
       csv_filtered_labels_csp = TeacherApplication.csv_filtered_labels('csp')
-      refute csv_filtered_labels_csp[:teacher].include? :csd_which_grades
-      assert csv_filtered_labels_csp[:teacher].include? :csp_which_grades
-      refute csv_filtered_labels_csp[:teacher].include? :csa_which_grades
+      refute_includes(csv_filtered_labels_csp[:teacher], :csd_which_grades)
+      assert_includes(csv_filtered_labels_csp[:teacher], :csp_which_grades)
+      refute_includes(csv_filtered_labels_csp[:teacher], :csa_which_grades)
 
       csv_filtered_labels_csa = TeacherApplication.csv_filtered_labels('csa')
-      refute csv_filtered_labels_csa[:teacher].include? :csd_which_grades
-      refute csv_filtered_labels_csa[:teacher].include? :csp_which_grades
-      assert csv_filtered_labels_csa[:teacher].include? :csa_which_grades
+      refute_includes(csv_filtered_labels_csa[:teacher], :csd_which_grades)
+      refute_includes(csv_filtered_labels_csa[:teacher], :csp_which_grades)
+      assert_includes(csv_filtered_labels_csa[:teacher], :csa_which_grades)
     end
 
     test 'csv_header' do
@@ -326,22 +350,22 @@ module Pd::Application
       csa_plan_offer_question = "To which grades does your school plan to offer CSA in the #{APPLICATION_CURRENT_YEAR} school year?"
 
       csv_header_csd = CSV.parse(TeacherApplication.csv_header('csd'))[0]
-      assert csv_header_csd.include? csd_plan_offer_question
-      refute csv_header_csd.include? csp_plan_offer_question
-      refute csv_header_csd.include? csa_plan_offer_question
-      assert_equal 90, csv_header_csd.length
+      assert_includes(csv_header_csd, csd_plan_offer_question)
+      refute_includes(csv_header_csd, csp_plan_offer_question)
+      refute_includes(csv_header_csd, csa_plan_offer_question)
+      assert_equal 83, csv_header_csd.length
 
       csv_header_csp = CSV.parse(TeacherApplication.csv_header('csp'))[0]
-      refute csv_header_csp.include? csd_plan_offer_question
-      assert csv_header_csp.include? csp_plan_offer_question
-      refute csv_header_csp.include? csa_plan_offer_question
-      assert_equal 92, csv_header_csp.length
+      refute_includes(csv_header_csp, csd_plan_offer_question)
+      assert_includes(csv_header_csp, csp_plan_offer_question)
+      refute_includes(csv_header_csp, csa_plan_offer_question)
+      assert_equal 85, csv_header_csp.length
 
       csv_header_csa = CSV.parse(TeacherApplication.csv_header('csa'))[0]
-      refute csv_header_csa.include? csd_plan_offer_question
-      refute csv_header_csd.include? csp_plan_offer_question
-      assert csv_header_csa.include? csa_plan_offer_question
-      assert_equal 94, csv_header_csa.length
+      refute_includes(csv_header_csa, csd_plan_offer_question)
+      refute_includes(csv_header_csd, csp_plan_offer_question)
+      assert_includes(csv_header_csa, csa_plan_offer_question)
+      assert_equal 87, csv_header_csa.length
     end
 
     test 'school cache' do
@@ -384,21 +408,21 @@ module Pd::Application
       TeacherApplication::FILTERED_LABELS.clear
 
       filtered_labels_csd = TeacherApplication.filtered_labels('csd')
-      assert filtered_labels_csd.include? :csd_which_grades
-      refute filtered_labels_csd.include? :csp_which_grades
-      refute filtered_labels_csd.include? :csa_which_grades
+      assert_includes(filtered_labels_csd, :csd_which_grades)
+      refute_includes(filtered_labels_csd, :csp_which_grades)
+      refute_includes(filtered_labels_csd, :csa_which_grades)
       assert_equal ['csd'], TeacherApplication::FILTERED_LABELS.keys
 
       filtered_labels_csp = TeacherApplication.filtered_labels('csp')
-      refute filtered_labels_csp.include? :csd_which_grades
-      assert filtered_labels_csp.include? :csp_which_grades
-      refute filtered_labels_csp.include? :csa_which_grades
+      refute_includes(filtered_labels_csp, :csd_which_grades)
+      assert_includes(filtered_labels_csp, :csp_which_grades)
+      refute_includes(filtered_labels_csp, :csa_which_grades)
       assert_equal ['csd', 'csp'], TeacherApplication::FILTERED_LABELS.keys
 
       filtered_labels_csa = TeacherApplication.filtered_labels('csa')
-      refute filtered_labels_csa.include? :csd_which_grades
-      refute filtered_labels_csa.include? :csp_which_grades
-      assert filtered_labels_csa.include? :csa_which_grades
+      refute_includes(filtered_labels_csa, :csd_which_grades)
+      refute_includes(filtered_labels_csa, :csp_which_grades)
+      assert_includes(filtered_labels_csa, :csa_which_grades)
       assert_equal ['csd', 'csp', 'csa'], TeacherApplication::FILTERED_LABELS.keys
     end
 
@@ -432,34 +456,6 @@ module Pd::Application
       application.update!(status: 'unreviewed')
       assert_equal Time.zone.now, application.updated_at
       assert_equal 3, application.status_log.count
-    end
-
-    test 'setting an auto-email status queues up an email' do
-      application = create :pd_teacher_application
-      assert_empty application.emails
-
-      application.expects(:queue_email).with('accepted')
-      application.update!(status: 'accepted')
-    end
-
-    test 'setting an non auto-email status does not queue up a status email' do
-      application = create :pd_teacher_application
-      assert_empty application.emails
-
-      application.expects(:queue_email).never
-      application.update!(status: 'pending')
-    end
-
-    test 'setting an auto-email status deletes unsent emails for the application' do
-      unrelated_email = create :pd_application_email
-      application = create :pd_teacher_application
-      associated_sent_email = create :pd_application_email, application: application, sent_at: Time.now
-      associated_unsent_email = create :pd_application_email, application: application
-
-      application.update!(status: 'pending_space_availability')
-      assert Email.exists?(unrelated_email.id)
-      assert Email.exists?(associated_sent_email.id)
-      refute Email.exists?(associated_unsent_email.id)
     end
 
     test 'test non course dynamically required fields' do
@@ -510,17 +506,15 @@ module Pd::Application
     end
 
     test 'should_send_decision_email?' do
-      application = build :pd_teacher_application, status: :pending
+      partner = create :regional_partner, applications_decision_emails: RegionalPartner::SENT_BY_SYSTEM
+      application_hash = build :pd_teacher_application_hash, regional_partner_id: partner.id
+      application = create :pd_teacher_application, form_data_hash: application_hash
 
       # no auto-email status: no email
       refute application.should_send_decision_email?
 
-      # auto-email status with no partner: yes email
+      # auto-email status with partner emails sent_by_system: yes email
       application.status = :accepted
-      assert application.should_send_decision_email?
-
-      # auto-email status, partner with sent_by_system: yes email
-      application.regional_partner = build(:regional_partner, applications_decision_emails: RegionalPartner::SENT_BY_SYSTEM)
       assert application.should_send_decision_email?
 
       # auto-email status, partner with sent_by_partner: no email
@@ -534,17 +528,18 @@ module Pd::Application
 
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csd],
+        will_teach: options[:will_teach].first,
         csd_which_grades: ['6'],
         enough_course_hours: options[:enough_course_hours].first,
         previous_yearlong_cdo_pd: ['CS Principles'],
         committed: options[:committed].first,
         race: options[:race].first(2),
         principal_approval: principal_options[:do_you_approve].first,
-        principal_schedule_confirmed: principal_options[:committed_to_master_schedule].first,
         principal_free_lunch_percent: 50,
         principal_underrepresented_minority_percent: 50
 
-      application = create :pd_teacher_application, regional_partner: (create :regional_partner), form_data_hash: application_hash
+      application = create :pd_teacher_application, form_data_hash: application_hash
+      create :census_summary, school_year: application.census_year, school_id: application.school_id, teaches_cs: Census::CensusSummary::TEACHES[:NO]
       application.auto_score!
 
       assert_equal(
@@ -555,11 +550,11 @@ module Pd::Application
             committed: YES,
             previous_yearlong_cdo_pd: YES,
             principal_approval: YES,
-            principal_schedule_confirmed: YES,
           },
           meets_scholarship_criteria_scores: {
             free_lunch_percent: YES,
             underrepresented_minority_percent: YES,
+            not_teaching_in_access_report: YES,
           },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
@@ -572,6 +567,7 @@ module Pd::Application
 
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csp],
+        will_teach: options[:will_teach].first,
         csp_which_grades: ['12'],
         enough_course_hours: options[:enough_course_hours].first,
         previous_yearlong_cdo_pd: ['CS Discoveries'],
@@ -579,11 +575,11 @@ module Pd::Application
         committed: options[:committed].first,
         race: options[:race].first(2),
         principal_approval: principal_options[:do_you_approve].first,
-        principal_schedule_confirmed: principal_options[:committed_to_master_schedule].first,
         principal_free_lunch_percent: 50,
         principal_underrepresented_minority_percent: 50
 
-      application = create :pd_teacher_application, regional_partner: (create :regional_partner), form_data_hash: application_hash
+      application = create :pd_teacher_application, form_data_hash: application_hash
+      create :census_summary, school_year: application.census_year, school_id: application.school_id, teaches_cs: Census::CensusSummary::TEACHES[:NO]
       application.auto_score!
 
       assert_equal(
@@ -594,11 +590,11 @@ module Pd::Application
             committed: YES,
             previous_yearlong_cdo_pd: YES,
             principal_approval: YES,
-            principal_schedule_confirmed: YES,
           },
           meets_scholarship_criteria_scores: {
             free_lunch_percent: YES,
             underrepresented_minority_percent: YES,
+            not_teaching_in_access_report: YES,
           },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
@@ -611,6 +607,7 @@ module Pd::Application
 
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csa],
+        will_teach: options[:will_teach].first,
         csa_already_know: options[:csa_already_know].first,
         csa_phone_screen: options[:csa_phone_screen].first,
         csa_which_grades: ['12'],
@@ -620,11 +617,11 @@ module Pd::Application
         committed: options[:committed].first,
         race: options[:race].first(2),
         principal_approval: principal_options[:do_you_approve].first,
-        principal_schedule_confirmed: principal_options[:committed_to_master_schedule].first,
         principal_free_lunch_percent: 50,
         principal_underrepresented_minority_percent: 50
 
-      application = create :pd_teacher_application, regional_partner: (create :regional_partner), form_data_hash: application_hash
+      application = create :pd_teacher_application, form_data_hash: application_hash
+      create :census_summary, school_year: application.census_year, school_id: application.school_id, teaches_cs: Census::CensusSummary::TEACHES[:NO]
       application.auto_score!
 
       assert_equal(
@@ -637,11 +634,11 @@ module Pd::Application
             committed: YES,
             previous_yearlong_cdo_pd: YES,
             principal_approval: YES,
-            principal_schedule_confirmed: YES,
           },
           meets_scholarship_criteria_scores: {
             free_lunch_percent: YES,
             underrepresented_minority_percent: YES,
+            not_teaching_in_access_report: YES,
           },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
@@ -653,6 +650,7 @@ module Pd::Application
 
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csp],
+        will_teach: options[:will_teach].first,
         csp_which_grades: ['12'],
         enough_course_hours: options[:enough_course_hours].first,
         previous_yearlong_cdo_pd: ['CS Discoveries'],
@@ -660,7 +658,7 @@ module Pd::Application
         committed: options[:committed].first,
         race: [options[:race].second]
 
-      application = create :pd_teacher_application, regional_partner: (create :regional_partner), form_data_hash: application_hash
+      application = create :pd_teacher_application, form_data_hash: application_hash
       application.auto_score!
 
       assert_equal(
@@ -671,7 +669,9 @@ module Pd::Application
             committed: YES,
             previous_yearlong_cdo_pd: YES,
           },
-          meets_scholarship_criteria_scores: {},
+          meets_scholarship_criteria_scores: {
+            not_teaching_in_access_report: YES,
+          },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
       )
@@ -683,17 +683,18 @@ module Pd::Application
 
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csd],
-        csd_which_grades: %w(11 12),
+        will_teach: options[:will_teach].last,
+        csd_which_grades: nil,
         enough_course_hours: options[:enough_course_hours].last,
         previous_yearlong_cdo_pd: ['CS Discoveries'],
         committed: options[:committed].last,
         race: [options[:race].first],
         principal_approval: principal_options[:do_you_approve].last,
-        principal_schedule_confirmed: principal_options[:committed_to_master_schedule].third,
         principal_free_lunch_percent: 49,
         principal_underrepresented_minority_percent: 49
 
-      application = create :pd_teacher_application, regional_partner: nil, form_data_hash: application_hash
+      application = create :pd_teacher_application, form_data_hash: application_hash
+      create :census_summary, school_year: application.census_year, school_id: application.school_id, teaches_cs: Census::CensusSummary::TEACHES[:YES]
       application.auto_score!
 
       assert_equal(
@@ -704,11 +705,11 @@ module Pd::Application
             committed: NO,
             previous_yearlong_cdo_pd: NO,
             principal_approval: NO,
-            principal_schedule_confirmed: NO,
           },
           meets_scholarship_criteria_scores: {
             free_lunch_percent: NO,
             underrepresented_minority_percent: NO,
+            not_teaching_in_access_report: NO,
           },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
@@ -721,18 +722,19 @@ module Pd::Application
 
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csp],
-        csp_which_grades: [options[:csp_which_grades].last],
+        will_teach: options[:will_teach].last,
+        csp_which_grades: nil,
         enough_course_hours: options[:enough_course_hours].last,
         previous_yearlong_cdo_pd: 'CS Principles',
         csp_how_offer: options[:csp_how_offer].first,
         committed: options[:committed].last,
         race: [options[:race].first],
         principal_approval: principal_options[:do_you_approve].last,
-        principal_schedule_confirmed: principal_options[:committed_to_master_schedule].third,
         principal_free_lunch_percent: 49,
         principal_underrepresented_minority_percent: 49
 
-      application = create :pd_teacher_application, regional_partner: nil, form_data_hash: application_hash
+      application = create :pd_teacher_application, form_data_hash: application_hash
+      create :census_summary, school_year: application.census_year, school_id: application.school_id, teaches_cs: Census::CensusSummary::TEACHES[:YES]
       application.auto_score!
 
       assert_equal(
@@ -743,11 +745,11 @@ module Pd::Application
             committed: NO,
             previous_yearlong_cdo_pd: NO,
             principal_approval: NO,
-            principal_schedule_confirmed: NO,
           },
           meets_scholarship_criteria_scores: {
             free_lunch_percent: NO,
             underrepresented_minority_percent: NO,
+            not_teaching_in_access_report: NO,
           },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
@@ -760,20 +762,21 @@ module Pd::Application
 
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csa],
+        will_teach: options[:will_teach].last,
         csa_already_know: options[:csa_already_know].last,
         csa_phone_screen: options[:csa_phone_screen].last,
-        csa_which_grades: [options[:csa_which_grades].last],
+        csa_which_grades: nil,
         enough_course_hours: options[:enough_course_hours].last,
         previous_yearlong_cdo_pd: 'Computer Science A (CSA)',
         csa_how_offer: options[:csa_how_offer].first,
         committed: options[:committed].last,
         race: [options[:race].first],
         principal_approval: principal_options[:do_you_approve].last,
-        principal_schedule_confirmed: principal_options[:committed_to_master_schedule].third,
         principal_free_lunch_percent: 49,
         principal_underrepresented_minority_percent: 49
 
-      application = create :pd_teacher_application, regional_partner: nil, form_data_hash: application_hash
+      application = create :pd_teacher_application, form_data_hash: application_hash
+      create :census_summary, school_year: application.census_year, school_id: application.school_id, teaches_cs: Census::CensusSummary::TEACHES[:YES]
       application.auto_score!
 
       assert_equal(
@@ -786,11 +789,11 @@ module Pd::Application
             committed: NO,
             previous_yearlong_cdo_pd: NO,
             principal_approval: NO,
-            principal_schedule_confirmed: NO,
           },
           meets_scholarship_criteria_scores: {
             free_lunch_percent: NO,
             underrepresented_minority_percent: NO,
+            not_teaching_in_access_report: NO,
           },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
@@ -802,16 +805,14 @@ module Pd::Application
 
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csp],
-        principal_approval: principal_options[:do_you_approve].first,
-        principal_schedule_confirmed: principal_options[:committed_to_master_schedule].fourth
+        principal_approval: principal_options[:do_you_approve].first
 
       application = create :pd_teacher_application, form_data_hash: application_hash
 
       application.auto_score!
 
       response_scores_hash = application.response_scores_hash
-
-      assert_nil response_scores_hash[:meets_minimum_criteria_scores][:principal_schedule_confirmed]
+      assert_nil response_scores_hash[:meets_minimum_criteria_scores][:free_lunch_percent]
     end
 
     test 'principal_approval_state' do
@@ -821,7 +822,7 @@ module Pd::Application
       incomplete = "Incomplete - Admin email sent on Oct 8"
       Timecop.freeze Date.new(2020, 10, 8) do
         application.stubs(:deliver_email)
-        application.queue_email :admin_approval, deliver_now: true
+        application.send_pd_application_email :admin_approval
         assert_equal incomplete, application.reload.principal_approval_state
       end
 
@@ -835,24 +836,23 @@ module Pd::Application
       assert_equal 'Not required', application.reload.principal_approval_state
 
       create :pd_principal_approval_application, teacher_application: application, approved: 'Yes'
-      assert application.reload.principal_approval_state.include? 'Complete - Admin said Yes on'
+      assert_includes(application.reload.principal_approval_state, 'Complete - Admin said Yes on')
     end
 
     test 'scholarship criteria uses regional partner set fields when specified' do
-      regional_partner = build :regional_partner,
+      regional_partner = create :regional_partner,
         frl_guardrail_percent: REGIONAL_PARTNER_DEFAULT_GUARDRAILS[:frl_not_rural] + 2,
         urg_guardrail_percent: REGIONAL_PARTNER_DEFAULT_GUARDRAILS[:urg] - 2
 
       # Does not meet Free and Reduced Lunch criteria but does meet Underrepresented Group criteria
       principal_options = Pd::Application::PrincipalApprovalApplication.options
-      application_hash = build :pd_teacher_application_hash,
+      application_hash = build TEACHER_APPLICATION_HASH_FACTORY,
         principal_approval: principal_options[:do_you_approve].first,
-        principal_schedule_confirmed: principal_options[:committed_to_master_schedule].first,
-        principal_wont_replace_existing_course: principal_options[:replace_course].first,
         principal_free_lunch_percent: REGIONAL_PARTNER_DEFAULT_GUARDRAILS[:frl_not_rural] + 1,
-        principal_underrepresented_minority_percent: REGIONAL_PARTNER_DEFAULT_GUARDRAILS[:urg] - 1
+        principal_underrepresented_minority_percent: REGIONAL_PARTNER_DEFAULT_GUARDRAILS[:urg] - 1,
+        regional_partner_id: regional_partner.id
 
-      application = create :pd_teacher_application, regional_partner: regional_partner, form_data_hash: application_hash
+      application = create :pd_teacher_application, form_data_hash: application_hash
       application.auto_score!
 
       # Regional partner defined guardrails: FRL = (default + 2)%, URG = (default - 2)%
@@ -861,18 +861,17 @@ module Pd::Application
     end
 
     test 'scholarship criteria uses default guardrails when regional partner does not specify' do
-      regional_partner = build :regional_partner
+      regional_partner = create :regional_partner
 
       # Meets Free and Reduced Lunch criteria but not Underrepresented Group criteria
       principal_options = Pd::Application::PrincipalApprovalApplication.options
       application_hash = build :pd_teacher_application_hash,
         principal_approval: principal_options[:do_you_approve].first,
-        principal_schedule_confirmed: principal_options[:committed_to_master_schedule].first,
-        principal_wont_replace_existing_course: principal_options[:replace_course].first,
         principal_free_lunch_percent: REGIONAL_PARTNER_DEFAULT_GUARDRAILS[:frl_not_rural],
-        principal_underrepresented_minority_percent: REGIONAL_PARTNER_DEFAULT_GUARDRAILS[:urg] - 1
+        principal_underrepresented_minority_percent: REGIONAL_PARTNER_DEFAULT_GUARDRAILS[:urg] - 1,
+        regional_partner_id: regional_partner.id
 
-      application = create :pd_teacher_application, regional_partner: regional_partner, form_data_hash: application_hash
+      application = create :pd_teacher_application, form_data_hash: application_hash
       application.auto_score!
 
       # Regional partner did not set guardrails, default to 50% for both (40% for FRL for rural schools)
@@ -885,12 +884,10 @@ module Pd::Application
       principal_options = Pd::Application::PrincipalApprovalApplication.options
       application_hash = build :pd_teacher_application_hash,
         principal_approval: principal_options[:do_you_approve].first,
-        principal_schedule_confirmed: principal_options[:committed_to_master_schedule].first,
-        principal_wont_replace_existing_course: principal_options[:replace_course].first,
         principal_free_lunch_percent: REGIONAL_PARTNER_DEFAULT_GUARDRAILS[:frl_not_rural],
         principal_underrepresented_minority_percent: REGIONAL_PARTNER_DEFAULT_GUARDRAILS[:urg] - 1
 
-      application = create :pd_teacher_application, regional_partner: nil, form_data_hash: application_hash
+      application = create :pd_teacher_application, form_data_hash: application_hash
       application.auto_score!
 
       # No partner guardrails default to 50% for both (40% for FRL for rural schools)
@@ -900,10 +897,11 @@ module Pd::Application
 
     test 'require assigned workshop for registration-related statuses when emails sent by system' do
       workshop_required_statuses = TeacherApplication::WORKSHOP_REQUIRED_STATUSES
-      partner = build :regional_partner, applications_decision_emails: RegionalPartner::SENT_BY_SYSTEM
+      partner = create :regional_partner, applications_decision_emails: RegionalPartner::SENT_BY_SYSTEM
       workshop = create :workshop
+      hash_with_partner = build TEACHER_APPLICATION_HASH_FACTORY, regional_partner_id: partner.id
       application = create :pd_teacher_application, {
-        regional_partner: partner
+        form_data_hash: hash_with_partner
       }
 
       workshop_required_statuses.each do |status|
@@ -921,9 +919,10 @@ module Pd::Application
 
     test 'do not require assigned workshop for registration-related statuses if emails sent by partner' do
       statuses = TeacherApplication::WORKSHOP_REQUIRED_STATUSES
-      partner = build :regional_partner, applications_decision_emails: RegionalPartner::SENT_BY_PARTNER
+      partner = create :regional_partner, applications_decision_emails: RegionalPartner::SENT_BY_PARTNER
+      form_data_with_partner = build TEACHER_APPLICATION_HASH_FACTORY, regional_partner_id: partner.id
       application = create :pd_teacher_application, {
-        regional_partner: partner
+        form_data_hash: form_data_with_partner
       }
 
       statuses.each do |status|
@@ -934,9 +933,10 @@ module Pd::Application
 
     test 'do not require workshop for non-registration-related statuses' do
       statuses = TeacherApplication.statuses - TeacherApplication::WORKSHOP_REQUIRED_STATUSES
-      partner = build :regional_partner, applications_decision_emails: RegionalPartner::SENT_BY_PARTNER
+      partner = create :regional_partner, applications_decision_emails: RegionalPartner::SENT_BY_PARTNER
+      form_data_with_partner = build TEACHER_APPLICATION_HASH_FACTORY, regional_partner_id: partner.id
       application = create :pd_teacher_application, {
-        regional_partner: partner
+        form_data_hash: form_data_with_partner
       }
 
       statuses.each do |status|
@@ -948,19 +948,22 @@ module Pd::Application
     test 'meets_scholarship_criteria' do
       application = create :pd_teacher_application
       test_cases = [
-        {underrepresented_minority_percent: YES, free_lunch_percent: YES, verdict: YES},
-        {underrepresented_minority_percent: YES, free_lunch_percent: nil, verdict: YES},
-        {underrepresented_minority_percent: YES, free_lunch_percent: NO, verdict: YES},
-        {underrepresented_minority_percent: nil, free_lunch_percent: YES, verdict: YES},
-        {underrepresented_minority_percent: nil, free_lunch_percent: nil, verdict: REVIEWING_INCOMPLETE},
-        {underrepresented_minority_percent: nil, free_lunch_percent: NO, verdict: REVIEWING_INCOMPLETE},
-        {underrepresented_minority_percent: NO, free_lunch_percent: YES, verdict: YES},
-        {underrepresented_minority_percent: NO, free_lunch_percent: nil, verdict: REVIEWING_INCOMPLETE},
-        {underrepresented_minority_percent: NO, free_lunch_percent: NO, verdict: NO}
+        {underrepresented_minority_percent: YES, free_lunch_percent: YES, not_teaching_in_access_report: YES, verdict: YES},
+        {underrepresented_minority_percent: YES, free_lunch_percent: YES, not_teaching_in_access_report: NO, verdict: YES},
+        {underrepresented_minority_percent: YES, free_lunch_percent: NO, not_teaching_in_access_report: YES, verdict: YES},
+        {underrepresented_minority_percent: NO, free_lunch_percent: YES, not_teaching_in_access_report: YES, verdict: YES},
+        {underrepresented_minority_percent: YES, free_lunch_percent: YES, not_teaching_in_access_report: nil, verdict: YES},
+        {underrepresented_minority_percent: YES, free_lunch_percent: nil, not_teaching_in_access_report: YES, verdict: YES},
+        {underrepresented_minority_percent: nil, free_lunch_percent: YES, not_teaching_in_access_report: YES, verdict: YES},
+        {underrepresented_minority_percent: YES, free_lunch_percent: NO, not_teaching_in_access_report: NO, verdict: YES},
+        {underrepresented_minority_percent: nil, free_lunch_percent: nil, not_teaching_in_access_report: nil, verdict: REVIEWING_INCOMPLETE},
+        {underrepresented_minority_percent: nil, free_lunch_percent: NO, not_teaching_in_access_report: NO, verdict: REVIEWING_INCOMPLETE},
+        {underrepresented_minority_percent: NO, free_lunch_percent: nil, not_teaching_in_access_report: NO, verdict: REVIEWING_INCOMPLETE},
+        {underrepresented_minority_percent: NO, free_lunch_percent: NO, not_teaching_in_access_report: NO, verdict: NO},
       ]
 
       test_cases.each do |test_case|
-        input = test_case.slice(:underrepresented_minority_percent, :free_lunch_percent)
+        input = test_case.slice(:underrepresented_minority_percent, :free_lunch_percent, :not_teaching_in_access_report)
         application.update(response_scores: {meets_scholarship_criteria_scores: input}.to_json)
 
         output = application.meets_scholarship_criteria
@@ -1076,66 +1079,60 @@ module Pd::Application
       assert application.allow_sending_principal_email?
     end
 
-    test 'test allow_sending_admin_approval_teacher_reminder_email?' do
+    test 'test send_admin_approval_reminders_to_teachers' do
+      TeacherApplication.any_instance.stubs(:deliver_email)
+
+      # If we are any status other than awaiting_admin_approval, we cannot send
+      (TeacherApplication.statuses - ['awaiting_admin_approval']).each do |status|
+        application = create :pd_teacher_application
+        application.update!(status: status)
+        create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
+        TeacherApplication.send_admin_approval_reminders_to_teachers
+        assert_empty application.emails.where(email_type: 'admin_approval_teacher_reminder')
+      end
+
       # If we are awaiting_admin_approval, we can send.
       application = create :pd_teacher_application
       application.update!(status: 'awaiting_admin_approval')
       create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
-      assert application.allow_sending_admin_approval_teacher_reminder_email?
+      TeacherApplication.send_admin_approval_reminders_to_teachers
+      assert_equal 1, application.emails.where.not(sent_at: nil).where(email_type: 'admin_approval_teacher_reminder').count
 
-      # If we are unreviewed, we cannot send.
+      # If we sent a teacher reminder email any time before, we cannot send.
       application = create :pd_teacher_application
-      application.update!(status: 'unreviewed')
-      create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
-      refute application.allow_sending_admin_approval_teacher_reminder_email?
-
-      # If we are pending, we cannot send.
-      application = create :pd_teacher_application
-      application.update!(status: 'pending')
-      create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
-      refute application.allow_sending_admin_approval_teacher_reminder_email?
-
-      # If we are pending_space_availability, we can't send.
-      application = create :pd_teacher_application
-      application.update!(status: 'pending_space_availability')
-      create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
-      refute application.allow_sending_admin_approval_teacher_reminder_email?
-
-      # If we're no longer unreviewed/pending, we can't send.
-      application = create :pd_teacher_application
-      application.update!(status: 'accepted')
-      create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
-      refute application.allow_sending_admin_approval_teacher_reminder_email?
-
-      # If we created a teacher reminder email any time before, we can't send.
-      application = create :pd_teacher_application
-      create :pd_application_email, application: application, email_type: 'admin_approval_teacher_reminder', created_at: 14.days.ago
-      create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
-      refute application.allow_sending_admin_approval_teacher_reminder_email?
+      create :pd_application_email, application: application, email_type: 'admin_approval_teacher_reminder', created_at: 14.days.ago, sent_at: 14.days.ago
+      create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 14.days.ago, sent_at: 14.days.ago
+      assert_equal 1, application.emails.where.not(sent_at: nil).where(email_type: 'admin_approval_teacher_reminder').count
+      TeacherApplication.send_admin_approval_reminders_to_teachers
+      assert_equal 1, application.emails.where.not(sent_at: nil).where(email_type: 'admin_approval_teacher_reminder').count
 
       # If principal approval is not required, we can't send.
       application = create :pd_teacher_application
       application.update!(principal_approval_not_required: true)
       create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
-      refute application.allow_sending_admin_approval_teacher_reminder_email?
+      TeacherApplication.send_admin_approval_reminders_to_teachers
+      assert_empty application.emails.where(email_type: 'admin_approval_teacher_reminder')
 
       # If we already have a principal response, we can't send.
       application = create :pd_teacher_application
       create :pd_principal_approval_application, teacher_application: application
       create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
-      refute application.allow_sending_admin_approval_teacher_reminder_email?
+      TeacherApplication.send_admin_approval_reminders_to_teachers
+      assert_empty application.emails.where(email_type: 'admin_approval_teacher_reminder')
 
       # If we created a principal email < 5 days ago, we can't send.
       application = create :pd_teacher_application
       application.update!(status: 'awaiting_admin_approval')
       create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 1.day.ago
-      refute application.allow_sending_admin_approval_teacher_reminder_email?
+      TeacherApplication.send_admin_approval_reminders_to_teachers
+      assert_empty application.emails.where(email_type: 'admin_approval_teacher_reminder')
 
       # If we created a principal email >= 5 days ago, we can send.
       application = create :pd_teacher_application
       application.update!(status: 'awaiting_admin_approval')
       create :pd_application_email, application: application, email_type: 'admin_approval', created_at: 6.days.ago
-      assert application.allow_sending_admin_approval_teacher_reminder_email?
+      TeacherApplication.send_admin_approval_reminders_to_teachers
+      assert_equal 1, application.emails.where.not(sent_at: nil).where(email_type: 'admin_approval_teacher_reminder').count
     end
 
     def assert_status_log(expected, application)

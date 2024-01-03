@@ -1,11 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {mount} from 'enzyme';
 import {expect} from '../../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {
   LockStatus,
   saveLockState,
-  useGetLockState
+  useGetLockState,
 } from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDataApi';
 import * as useFetch from '@cdo/apps/util/useFetch';
 
@@ -16,7 +17,7 @@ describe('LessonLockDataApi', () => {
 
   // Functional react component to host the useGetLockState hook
   let useGetLockStateReturnValue = {
-    current: null
+    current: null,
   };
   const UseGetLockStateHarness = ({unitId, lessonId, sectionId}) => {
     useGetLockStateReturnValue.current = useGetLockState(
@@ -37,21 +38,21 @@ describe('LessonLockDataApi', () => {
                 user_level_data: {},
                 name: 'Student1',
                 locked: true,
-                readonly_answers: false
+                readonly_answers: false,
               },
               {
                 user_level_data: {},
                 name: 'Student2',
                 locked: false,
-                readonly_answers: false
-              }
-            ]
-          }
-        }
+                readonly_answers: false,
+              },
+            ],
+          },
+        },
       };
       sinon.stub(useFetch, 'useFetch').returns({
         loading: false,
-        data: fakeLockStatusData
+        data: fakeLockStatusData,
       });
       mount(
         <UseGetLockStateHarness
@@ -66,13 +67,13 @@ describe('LessonLockDataApi', () => {
         {
           name: 'Student1',
           lockStatus: 'Locked',
-          userLevelData: {}
+          userLevelData: {},
         },
         {
           name: 'Student2',
           lockStatus: 'Editable',
-          userLevelData: {}
-        }
+          userLevelData: {},
+        },
       ]);
       useFetch.useFetch.restore();
     });
@@ -85,25 +86,25 @@ describe('LessonLockDataApi', () => {
         {
           name: 'Student1',
           lockStatus: LockStatus.Editable,
-          userLevelData: {}
+          userLevelData: {},
         },
         {
           name: 'Student2',
           lockStatus: LockStatus.Editable,
-          userLevelData: {}
-        }
+          userLevelData: {},
+        },
       ];
       const newLockState = [
         {
           name: 'Student1',
           lockStatus: LockStatus.Editable,
-          userLevelData: {}
+          userLevelData: {},
         },
         {
           name: 'Student2',
           lockStatus: LockStatus.Locked,
-          userLevelData: {}
-        }
+          userLevelData: {},
+        },
       ];
 
       saveLockState(previousLockState, newLockState, 'fake-csrf');
@@ -112,7 +113,7 @@ describe('LessonLockDataApi', () => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'X-CSRF-Token': 'fake-csrf'
+          'X-CSRF-Token': 'fake-csrf',
         },
         credentials: 'same-origin',
         body: JSON.stringify({
@@ -120,13 +121,19 @@ describe('LessonLockDataApi', () => {
             {
               user_level_data: {},
               locked: true,
-              readonly_answers: false
-            }
-          ]
-        })
+              readonly_answers: false,
+            },
+          ],
+        }),
       });
 
       window.fetch.restore();
     });
   });
+
+  UseGetLockStateHarness.propTypes = {
+    unitId: PropTypes.number,
+    lessonId: PropTypes.number,
+    sectionId: PropTypes.number,
+  };
 });

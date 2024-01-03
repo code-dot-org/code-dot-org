@@ -6,7 +6,7 @@ import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import manageStudents, {
   setLoginType,
-  setShowSharingColumn
+  setShowSharingColumn,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import teacherSections, {
   setSections,
@@ -14,7 +14,7 @@ import teacherSections, {
   setRosterProvider,
   setCourseOfferings,
   setShowLockSectionField, // DCDO Flag - show/hide Lock Section field
-  setStudentsForCurrentSection
+  setStudentsForCurrentSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
 import sectionAssessments from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
@@ -23,11 +23,11 @@ import sectionStandardsProgress from '@cdo/apps/templates/sectionProgress/standa
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashboard';
 import currentUser, {
-  setCurrentUserHasSeenStandardsReportInfo
+  setCurrentUserHasSeenStandardsReportInfo,
 } from '@cdo/apps/templates/currentUserRedux';
 import {
   setCoursesWithProgress,
-  setScriptId
+  setScriptId,
 } from '../../../../redux/unitSelectionRedux';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 
@@ -39,11 +39,11 @@ const {
   validCourseOfferings,
   localeCode,
   hasSeenStandardsReportInfo,
-  coursesWithProgress
+  coursesWithProgress,
 } = scriptData;
 const baseUrl = `/teacher_dashboard/sections/${section.id}`;
 
-$(document).ready(function() {
+$(document).ready(function () {
   registerReducers({
     teacherSections,
     manageStudents,
@@ -53,7 +53,7 @@ $(document).ready(function() {
     sectionAssessments,
     currentUser,
     sectionStandardsProgress,
-    locales
+    locales,
   });
   const store = getStore();
   store.dispatch(
@@ -79,8 +79,16 @@ $(document).ready(function() {
   if (defaultScriptId) {
     store.dispatch(setScriptId(defaultScriptId));
   }
-
-  store.dispatch(setCoursesWithProgress(coursesWithProgress));
+  // Reorder coursesWithProgress so that the current section is at the top and other sections are in order from newest to oldest
+  const reorderedCourses = [
+    ...coursesWithProgress.filter(
+      course => course.id !== section.course_version_id
+    ),
+    ...coursesWithProgress.filter(
+      course => course.id === section.course_version_id
+    ),
+  ].reverse();
+  store.dispatch(setCoursesWithProgress(reorderedCourses));
 
   ReactDOM.render(
     <Provider store={store}>

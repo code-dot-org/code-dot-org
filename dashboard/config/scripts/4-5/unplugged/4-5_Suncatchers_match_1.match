@@ -16,3 +16,5 @@ answer '**STAR**'
 
 question '/script_assets/4-5_images/unplugged/suncatchers_1_a4.png'
 answer '**RAMP**'
+
+allow_multiple_attempts true

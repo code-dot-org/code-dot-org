@@ -1,4 +1,4 @@
-exports.addReadyListener = function(callback) {
+exports.addReadyListener = function (callback) {
   if (document.readyState === 'complete') {
     setTimeout(callback, 1);
   } else {
@@ -6,7 +6,7 @@ exports.addReadyListener = function(callback) {
   }
 };
 
-exports.getTouchEventName = function(eventName) {
+exports.getTouchEventName = function (eventName) {
   var isIE11Touch = window.navigator.pointerEnabled;
   var isIE10Touch = window.navigator.msPointerEnabled;
   var isStandardTouch = !(isIE11Touch || isIE10Touch);
@@ -31,7 +31,7 @@ exports.getTouchEventName = function(eventName) {
  * @param {function) handler
  * @param {boolean} suppressTouchDefault - Should we preventDefault on touch events
  */
-var addEvent = function(
+var addEvent = function (
   element,
   eventName,
   handler,
@@ -41,12 +41,12 @@ var addEvent = function(
   // what we bind right here.
   var boundEvents = {};
 
-  var bindEvent = function(type, eventName, handler) {
+  var bindEvent = function (type, eventName, handler) {
     element.addEventListener(eventName, handler, false);
     boundEvents[type] = {name: eventName, handler: handler};
   };
 
-  var unbindEvent = function(type) {
+  var unbindEvent = function (type) {
     var eventInfo = boundEvents[type];
     if (eventInfo) {
       element.removeEventListener(eventInfo.name, eventInfo.handler);
@@ -60,7 +60,7 @@ var addEvent = function(
   // Optionally add touch handler
   var touchEvent = exports.getTouchEventName(eventName);
   if (touchEvent) {
-    bindEvent('touch', touchEvent, function(e) {
+    bindEvent('touch', touchEvent, function (e) {
       // Stop mouse events and suppress default event handler to prevent
       // unintentional double-clicking
       if (suppressTouchDefault) {
@@ -83,7 +83,7 @@ var addEvent = function(
         'pointermove',
         'MSPointerMove',
         'pointerup',
-        'MSPointerUp'
+        'MSPointerUp',
       ];
       if (IEEvents.includes(touchEvent)) {
         unbindEvent('click');
@@ -94,17 +94,17 @@ var addEvent = function(
   }
 
   // Return function that unbinds all handlers
-  return function() {
+  return function () {
     unbindEvent('click');
     unbindEvent('touch');
   };
 };
 
-exports.addMouseDownTouchEvent = function(element, handler) {
+exports.addMouseDownTouchEvent = function (element, handler) {
   return addEvent(element, 'mousedown', handler);
 };
 
-exports.addMouseUpTouchEvent = function(
+exports.addMouseUpTouchEvent = function (
   element,
   handler,
   suppressTouchDefault = true
@@ -112,11 +112,11 @@ exports.addMouseUpTouchEvent = function(
   return addEvent(element, 'mouseup', handler, suppressTouchDefault);
 };
 
-exports.addMouseMoveTouchEvent = function(element, handler) {
+exports.addMouseMoveTouchEvent = function (element, handler) {
   return addEvent(element, 'mousemove', handler);
 };
 
-exports.addClickTouchEvent = function(element, handler) {
+exports.addClickTouchEvent = function (element, handler) {
   return addEvent(element, 'click', handler);
 };
 
@@ -126,47 +126,47 @@ var TOUCH_MAP = {
   click: {
     standard: 'touchstart',
     ie10: 'MSPointerDown',
-    ie11: 'pointerdown'
+    ie11: 'pointerdown',
   },
   mousedown: {
     standard: 'touchstart',
     ie10: 'MSPointerDown',
-    ie11: 'pointerdown'
+    ie11: 'pointerdown',
   },
   mouseup: {
     standard: 'touchend',
     ie10: 'MSPointerUp',
-    ie11: 'pointerup'
+    ie11: 'pointerup',
   },
   mousemove: {
     standard: 'touchmove',
     ie10: 'MSPointerMove',
-    ie11: 'pointermove'
-  }
+    ie11: 'pointermove',
+  },
 };
 exports.TOUCH_MAP = TOUCH_MAP;
 
-exports.isMobile = function() {
+exports.isMobile = function () {
   var reg = /Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile/;
   return reg.test(window.navigator.userAgent);
 };
 
-exports.isWindowsTouch = function() {
+exports.isWindowsTouch = function () {
   var reg = /MSIE.*Touch/;
   return reg.test(window.navigator.userAgent);
 };
 
-exports.isAndroid = function() {
+exports.isAndroid = function () {
   var reg = /Android/;
   return reg.test(window.navigator.userAgent);
 };
 
-exports.isIOS = function() {
+exports.isIOS = function () {
   var reg = /iP(hone|od|ad)/;
   return reg.test(window.navigator.userAgent);
 };
 
-exports.isIPad = function() {
+exports.isIPad = function () {
   var reg = /iPad/i;
   return reg.test(window.navigator.userAgent);
 };

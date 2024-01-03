@@ -5,16 +5,16 @@ import Spinner from '../../../components/spinner';
 import Results from './results';
 import color from '@cdo/apps/util/color';
 import SubmissionsDownloadForm from './submissions_download_form';
-import {Button} from 'react-bootstrap';
+import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {PermissionPropType, WorkshopAdmin} from '../../permission';
 import {connect} from 'react-redux';
 
 export class ResultsLoader extends React.Component {
   static propTypes = {
     params: PropTypes.shape({
-      workshopId: PropTypes.string.isRequired
+      workshopId: PropTypes.string.isRequired,
     }),
-    permission: PermissionPropType.isRequired
+    permission: PermissionPropType.isRequired,
   };
 
   state = {loading: true, hasErrors: false};
@@ -24,14 +24,12 @@ export class ResultsLoader extends React.Component {
   }
 
   load() {
-    const url = `/api/v1/pd/workshops/${
-      this.props.params['workshopId']
-    }/foorm/generic_survey_report`;
+    const url = `/api/v1/pd/workshops/${this.props.params['workshopId']}/foorm/generic_survey_report`;
 
     this.loadRequest = $.ajax({
       method: 'GET',
       url: url,
-      dataType: 'json'
+      dataType: 'json',
     })
       .done(data => {
         this.setState({
@@ -41,13 +39,13 @@ export class ResultsLoader extends React.Component {
           thisWorkshop: data['this_workshop'],
           workshopTabs: Object.keys(data['this_workshop']),
           courseName: data['course_name'],
-          workshopRollups: data['workshop_rollups']
+          workshopRollups: data['workshop_rollups'],
         });
       })
       .error(() => {
         this.setState({
           loading: false,
-          hasErrors: true
+          hasErrors: true,
         });
       });
   }
@@ -93,19 +91,19 @@ export class ResultsLoader extends React.Component {
 const styles = {
   errorContainer: {
     marginTop: 15,
-    marginLeft: 15
+    marginLeft: 15,
   },
   errorDetailsBox: {
     backgroundColor: color.lightest_gray,
     padding: 20,
     maxWidth: 550,
-    marginTop: 20
+    marginTop: 20,
   },
   csvExportButton: {
-    float: 'right'
-  }
+    float: 'right',
+  },
 };
 
 export default connect(state => ({
-  permission: state.workshopDashboard.permission
+  permission: state.workshopDashboard.permission,
 }))(ResultsLoader);

@@ -8,3 +8,5 @@ right 'Slightly disagree'
 right 'Disagree'
 right 'Strongly disagree'
 right 'I did not do the Explore Performance Task'
+
+allow_multiple_attempts true

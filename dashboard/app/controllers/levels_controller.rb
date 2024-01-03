@@ -7,8 +7,8 @@ EMPTY_XML = '<xml></xml>'.freeze
 class LevelsController < ApplicationController
   include LevelsHelper
   include ActiveSupport::Inflector
-  before_action :authenticate_user!, except: [:show, :embed_level, :get_rubric, :get_serialized_maze]
-  before_action :require_levelbuilder_mode_or_test_env, except: [:show, :embed_level, :get_rubric, :get_serialized_maze]
+  before_action :authenticate_user!, except: [:show, :level_properties, :embed_level, :get_rubric, :get_serialized_maze]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:show, :level_properties, :embed_level, :get_rubric, :get_serialized_maze]
   load_and_authorize_resource except: [:create]
 
   before_action :set_level, only: [:show, :edit, :update, :destroy]
@@ -17,6 +17,7 @@ class LevelsController < ApplicationController
 
   # All level types that can be requested via /levels/new
   LEVEL_CLASSES = [
+    Aichat,
     Ailab,
     Applab,
     Artist,
@@ -44,11 +45,13 @@ class LevelsController < ApplicationController
     Match,
     Maze,
     Multi,
+    Music,
     NetSim,
     Odometer,
     Pixelation,
     Poetry,
     PublicKeyCryptography,
+    Pythonlab,
     StandaloneVideo,
     StarWarsGrid,
     Studio,
@@ -132,10 +135,17 @@ class LevelsController < ApplicationController
 
     view_options(
       full_width: true,
+      no_footer: @game&.no_footer?,
       small_footer: @game&.uses_small_footer? || @level&.enable_scrolling?,
       has_i18n: @game.has_i18n?,
       blocklyVersion: params[:blocklyVersion]
     )
+  end
+
+  # Get a JSON summary of a level's properties, used in modern labs that don't
+  # reload the page between level views.
+  def level_properties
+    render json: @level.summarize_for_lab2_properties(nil)
   end
 
   # GET /levels/1/edit
@@ -196,7 +206,7 @@ class LevelsController < ApplicationController
     # as the toolbox for required and recommended block editors, plus
     # the special "pick one" block
     can_use_solution_blocks = @level.respond_to?(:get_solution_blocks) &&
-        @level.properties['solution_blocks']
+      @level.properties['solution_blocks']
     should_use_solution_blocks = ['required_blocks', 'recommended_blocks'].include?(type)
     if can_use_solution_blocks && should_use_solution_blocks
       blocks = @level.get_solution_blocks + ["<block type=\"pick_one\"></block>"]
@@ -284,7 +294,18 @@ class LevelsController < ApplicationController
       return
     end
 
-    @level.assign_attributes(level_params)
+    update_level_params = level_params.to_h
+
+    # Parse the incoming level_data JSON so that it's stored in the database as a
+    # first-order member of the properties JSON, rather than simply as a string of
+    # JSON belonging to a single property.
+    update_level_params[:level_data] = JSON.parse(level_params[:level_data]) if level_params[:level_data]
+    # Update level data with validations, and remove from level properties.
+    # We can remove this once validations are read from level properties directly.
+    update_level_params[:level_data]["validations"] = JSON.parse(update_level_params[:validations]) if update_level_params[:validations]
+    update_level_params[:validations] = nil if level_params[:validations]
+
+    @level.assign_attributes(update_level_params)
     @level.log_changes(current_user)
 
     if @level.save
@@ -299,8 +320,8 @@ class LevelsController < ApplicationController
       log_save_error(@level)
       render json: @level.errors, status: :unprocessable_entity
     end
-  rescue ArgumentError, ActiveRecord::RecordInvalid => e
-    render status: :not_acceptable, plain: e.message
+  rescue ArgumentError, ActiveRecord::RecordInvalid => exception
+    render status: :not_acceptable, plain: exception.message
   end
 
   # POST /levels/:id/update_start_code
@@ -364,10 +385,10 @@ class LevelsController < ApplicationController
 
     begin
       @level = type_class.create_from_level_builder(params, create_level_params)
-    rescue ArgumentError => e
-      render(status: :not_acceptable, plain: e.message) && return
-    rescue ActiveRecord::RecordInvalid => invalid
-      render(status: :not_acceptable, plain: invalid) && return
+    rescue ArgumentError => exception
+      render(status: :not_acceptable, plain: exception.message) && return
+    rescue ActiveRecord::RecordInvalid => exception
+      render(status: :not_acceptable, plain: exception) && return
     end
     if params[:do_not_redirect]
       render json: @level
@@ -424,6 +445,12 @@ class LevelsController < ApplicationController
         @game = Game.ailab
       elsif @type_class == Javalab
         @game = Game.javalab
+      elsif @type_class == Music
+        @game = Game.music
+      elsif @type_class == Aichat
+        @game = Game.aichat
+      elsif @type_class == Pythonlab
+        @game = Game.pythonlab
       end
       @level = @type_class.new
       render :edit
@@ -444,10 +471,10 @@ class LevelsController < ApplicationController
     else
       render json: {redirect: edit_level_url(@new_level)}
     end
-  rescue ArgumentError => e
-    render(status: :not_acceptable, plain: e.message)
-  rescue ActiveRecord::RecordInvalid => invalid
-    render(status: :not_acceptable, plain: invalid)
+  rescue ArgumentError => exception
+    render(status: :not_acceptable, plain: exception.message)
+  rescue ActiveRecord::RecordInvalid => exception
+    render(status: :not_acceptable, plain: exception)
   end
 
   # GET /levels/:id/embed_level
@@ -464,10 +491,8 @@ class LevelsController < ApplicationController
     render 'levels/show'
   end
 
-  private
-
   # Use callbacks to share common setup or constraints between actions.
-  def set_level
+  private def set_level
     @level =
       if params.include? :key
         Level.find_by_key params[:key]
@@ -477,8 +502,8 @@ class LevelsController < ApplicationController
     @game = @level.game
   end
 
-  # Never trust parameters from the scary internet, only allow the white list through.
-  def level_params
+  # Never trust parameters from the scary internet, only allow the allow-list through.
+  private def level_params
     permitted_params = [
       :name,
       :notes,
@@ -511,6 +536,9 @@ class LevelsController < ApplicationController
 
       # Poetry-specific
       {available_poems: []},
+
+      # Dance Party-specific
+      {song_selection: []},
     ]
 
     # http://stackoverflow.com/questions/8929230/why-is-the-first-element-always-blank-in-my-rails-multi-select
@@ -523,7 +551,8 @@ class LevelsController < ApplicationController
       :play_sound_options,
       :helper_libraries,
       :block_pools,
-      :available_poems
+      :available_poems,
+      :song_selection
     ]
     multiselect_params.each do |param|
       params[:level][param].delete_if(&:empty?) if params[:level][param].is_a? Array
@@ -532,14 +561,14 @@ class LevelsController < ApplicationController
     # Reference links should be stored as an array.
     if params[:level][:reference_links].is_a? String
       params[:level][:reference_links] = params[:level][:reference_links].split("\r\n")
-      params[:level][:reference_links].delete_if(&:blank?)
+      params[:level][:reference_links].compact_blank!
     end
 
     permitted_params.concat(Level.permitted_params)
     params[:level].permit(permitted_params)
   end
 
-  def set_solution_image_url(level)
+  private def set_solution_image_url(level)
     level_source = LevelSource.find_identical_or_create(
       level,
       params[:program].strip_utf8mb4
@@ -554,7 +583,7 @@ class LevelsController < ApplicationController
 
   # Gathers data on top pain points for level builders by logging error details
   # to Firehose / Redshift.
-  def log_save_error(level)
+  private def log_save_error(level)
     FirehoseClient.instance.put_record(
       :analysis,
       {

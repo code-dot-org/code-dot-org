@@ -26,22 +26,23 @@ class FormsTest < Minitest::Test
     end
 
     it 'events_by_country' do
-      @form.update(processed_data: {location_country_code_s: 'IT'}.to_json)
+      @form.update(data: {hoc_event_country_s: 'IT'}.to_json)
       assert_equal([{country_code: 'IT', count: 1}], Forms.events_by_country(DEFAULT_KIND))
     end
 
     it 'events_by_state' do
-      @form.update(processed_data: {location_country_code_s: 'US', location_state_code_s: 'CA'}.to_json)
+      @form.update(data: {hoc_event_country_s: 'US'}.to_json)
+      @form.update(processed_data: {location_state_code_s: 'CA'}.to_json)
       assert_equal([{state_code: 'CA', count: 1}], Forms.events_by_state(DEFAULT_KIND))
     end
 
     it 'events_by_name' do
       processed_data = {
-        location_country_code_s: 'US',
         location_state_code_s: 'CA',
         location_city_s: 'San Diego'
       }
       @form.update(processed_data: processed_data.to_json)
+      @form.update(data: JSON.parse(@form.data).merge({hoc_event_country_s: 'US'}).to_json)
       events = Forms.events_by_name(DEFAULT_KIND, 'US', 'CA')
       assert_equal([{name: DEFAULT_DATA[:organization_name_s], city: processed_data[:location_city_s]}], events)
     end

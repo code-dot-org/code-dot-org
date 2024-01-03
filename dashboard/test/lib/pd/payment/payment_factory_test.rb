@@ -42,11 +42,9 @@ module Pd::Payment
 
     test 'counselor admin calculator' do
       # Mix of public and private types
-      workshop_counselor = create :counselor_workshop, :ended, :funded
-      workshop_admin = create :admin_workshop, :ended, :funded
+      workshop_admin_counselor = create :admin_counselor_workshop, :ended
 
-      assert_equal PaymentCalculatorCounselorAdmin, PaymentFactory.get_calculator_class(workshop_counselor)
-      assert_equal PaymentCalculatorCounselorAdmin, PaymentFactory.get_calculator_class(workshop_admin)
+      assert_equal PaymentCalculatorCounselorAdmin, PaymentFactory.get_calculator_class(workshop_admin_counselor)
     end
 
     test 'unpaid' do
@@ -72,7 +70,7 @@ module Pd::Payment
       workshop_standard = create :csp_academic_year_workshop, :ended, on_map: true, funded: true
 
       standard_summary = PaymentFactory.get_payment(workshop_standard)
-      assert_not_nil standard_summary
+      refute_nil standard_summary
       assert standard_summary.instance_of?(WorkshopSummary)
       assert_equal PaymentCalculatorStandard, standard_summary.calculator_class
     end

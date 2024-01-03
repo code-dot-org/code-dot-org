@@ -1,4 +1,3 @@
-/* global $ */
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -15,33 +14,33 @@ import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 export default class Pairing extends React.Component {
   static propTypes = {
     source: PropTypes.string,
-    handleClose: PropTypes.func
+    handleClose: PropTypes.func,
   };
 
   state = {
     pairings: [],
     sections: [],
     hasError: false,
-    loading: true
+    loading: true,
   };
 
   UNSAFE_componentWillMount() {
     $.ajax({
       url: this.props.source,
       method: 'GET',
-      dataType: 'json'
+      dataType: 'json',
     })
       .done(result => {
         this.setState({
           pairings: result.pairings,
           sections: result.sections,
-          loading: false
+          loading: false,
         });
       })
       .fail(result => {
         this.setState({
           loading: false,
-          hasError: true
+          hasError: true,
         });
       });
   }
@@ -50,7 +49,7 @@ export default class Pairing extends React.Component {
     this.setState({
       pairings: [],
       sections: this.state.sections,
-      selectedSectionId: +event.target.value
+      selectedSectionId: +event.target.value,
     });
   };
 
@@ -59,14 +58,14 @@ export default class Pairing extends React.Component {
     $.ajax({
       type: 'GET',
       url: `/dashboardapi/user_menu?showCreateMenu=${showCreateMenu}`,
-      success: data => $('#sign_in_or_user').html(data)
+      success: data => $('#sign_in_or_user').html(data),
     });
   };
 
   handleAddPartners = studentIds => {
     this.setState({
       hasError: false,
-      loading: true
+      loading: true,
     });
     const pairings = this.selectedSection().students.filter(
       student => studentIds.indexOf(student.id) !== -1
@@ -80,12 +79,12 @@ export default class Pairing extends React.Component {
         data_json: JSON.stringify({
           location: window.location.href,
           number_partners: pairings.length,
-          section_id: this.selectedSection().id
-        })
+          section_id: this.selectedSection().id,
+        }),
       },
       {
         includeUserId: true,
-        useProgressScriptId: true
+        useProgressScriptId: true,
       }
     );
 
@@ -95,7 +94,7 @@ export default class Pairing extends React.Component {
       contentType: 'application/json; charset=utf-8',
       method: 'PUT',
       dataType: 'json',
-      context: this
+      context: this,
     })
       .done(() => {
         this.props.handleClose && this.props.handleClose();
@@ -104,7 +103,7 @@ export default class Pairing extends React.Component {
       .fail((jqXHR, textStatus, errorThrown) => {
         this.setState({
           hasError: true,
-          loading: false
+          loading: false,
         });
       });
   };
@@ -112,7 +111,7 @@ export default class Pairing extends React.Component {
   handleStop = event => {
     this.setState({
       hasError: false,
-      loading: true
+      loading: true,
     });
 
     $.ajax({
@@ -120,11 +119,11 @@ export default class Pairing extends React.Component {
       data: JSON.stringify({pairings: []}),
       contentType: 'application/json; charset=utf-8',
       method: 'PUT',
-      dataType: 'json'
+      dataType: 'json',
     })
       .done(() => {
         this.setState({
-          pairings: []
+          pairings: [],
         });
         this.refreshUserMenu();
         this.props.handleClose && this.props.handleClose();
@@ -132,7 +131,7 @@ export default class Pairing extends React.Component {
       .fail((_, textStatus, errorThrown) => {
         this.setState({
           hasError: true,
-          loading: false
+          loading: false,
         });
       });
 
@@ -232,15 +231,15 @@ export default class Pairing extends React.Component {
 const styles = {
   pairingSelector: {
     maxHeight: window.innerHeight * 0.8 - 100,
-    overflowY: 'auto'
+    overflowY: 'auto',
   },
   spinner: {
-    marginTop: '10px'
+    marginTop: '10px',
   },
   leftButton: {
-    marginLeft: 0
+    marginLeft: 0,
   },
   errorMessage: {
-    color: color.red
-  }
+    color: color.red,
+  },
 };

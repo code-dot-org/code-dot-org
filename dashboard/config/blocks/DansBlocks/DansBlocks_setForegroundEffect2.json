@@ -2,7 +2,7 @@
   "category": "Experimental",
   "config": {
     "func": "setForegroundEffect2",
-    "blockText": "do {EFFECT} effect",
+    "blockText": "[Don't Use] do {EFFECT} effect",
     "args": [
       {
         "name": "EFFECT",
@@ -46,6 +46,7 @@
       240,
       0.45,
       0.65
-    ]
+    ],
+    "style": "world_blocks"
   }
 }

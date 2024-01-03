@@ -34,7 +34,7 @@ export default class BaseDialog extends React.Component {
     soundPlayer: PropTypes.object,
     overflow: PropTypes.string,
     // Temporary prop until AnimationPickerBody is redesigned
-    backdropStyle: PropTypes.object
+    backdropStyle: PropTypes.object,
   };
 
   componentDidMount() {
@@ -88,17 +88,17 @@ export default class BaseDialog extends React.Component {
       bodyStyle = {
         ...bodyStyle,
         width: '90%',
-        marginLeft: '-45%'
+        marginLeft: '-45%',
       };
     }
     if (this.props.fullHeight) {
       bodyStyle = {
         ...bodyStyle,
-        height: '80%'
+        height: '80%',
       };
       modalBodyStyle = {
         ...modalBodyStyle,
-        boxSizing: 'border-box'
+        boxSizing: 'border-box',
       };
     }
 
@@ -120,19 +120,19 @@ export default class BaseDialog extends React.Component {
         maxHeight: !this.props.fixedHeight && '80vh',
         overflowX: overflowX,
         overflowY: overflowY,
-        borderRadius: 4
+        borderRadius: 4,
       };
       if (this.props.useFlexbox) {
         modalBodyStyle = {
           ...modalBodyStyle,
           display: 'flex',
-          flexDirection: 'column'
+          flexDirection: 'column',
         };
       }
       bodyStyle = {
         ...bodyStyle,
         width: this.props.fixedWidth || BASE_DIALOG_WIDTH,
-        marginLeft: -this.props.fixedWidth / 2 || -350
+        marginLeft: -this.props.fixedWidth / 2 || -350,
       };
       xCloseStyle = {
         position: 'absolute',
@@ -141,7 +141,7 @@ export default class BaseDialog extends React.Component {
         padding: 10,
         color: '#ddd',
         cursor: 'pointer',
-        fontSize: 24
+        fontSize: 24,
       };
     } else if (this.props.noModalStyles) {
       modalClassNames = '';
@@ -152,9 +152,9 @@ export default class BaseDialog extends React.Component {
       ...bodyStyle,
       ...(this.props.hideBackdrop && {
         position: 'initial',
-        marginLeft: 0
+        marginLeft: 0,
       }),
-      ...this.props.style
+      ...this.props.style,
     };
 
     modalBodyClassNames = [modalBodyClassNames, this.props.bodyClassName]

@@ -1,0 +1,70 @@
+@import "color.scss";
+@import "breakpoints";
+
+.dialogContainer {
+  min-height: 18rem;
+  display: flex;
+  flex-flow: column;
+
+  hr {
+    border: 1px solid $neutral_dark;
+    margin: 1rem 0;
+  }
+
+  h3 {
+    margin: 0;
+  }
+}
+
+.lowerContainer {
+  // screen sizes larger than mobile
+  @media screen and (min-width: $width-sm) {
+    margin-top: auto;
+  }
+
+  // mobile screen sizes
+  @media screen and (max-width: $width-sm) {
+    margin-top: 1em;
+
+    hr {
+      display: none;
+    }
+  }
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 1em;
+
+  // screen sizes larger than mobile
+  @media screen and (min-width: $width-sm) {
+    justify-content: space-between;
+  }
+
+  // mobile screen sizes
+  @media screen and (max-width: $width-sm) {
+    margin-top: 1em;
+    justify-content: center;
+    flex-direction: column-reverse;
+
+    button,
+    a,
+    a:link,
+    a:visited {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  button,
+  a,
+  a:link,
+  a:visited {
+    margin: 0;
+    font-size: 1rem;
+    height: 2.5rem;
+    line-height: 2.25rem;
+  }
+}
+

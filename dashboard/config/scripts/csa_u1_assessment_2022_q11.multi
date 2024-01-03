@@ -17,3 +17,5 @@ while(!myPainter.isFacingWest()) {
 
 What is the most number of times that the `turnLeft()` method would be called?
 MARKDOWN
+
+allow_multiple_attempts true

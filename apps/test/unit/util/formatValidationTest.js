@@ -2,7 +2,7 @@ import {
   isEmail,
   isZipCode,
   isInt,
-  isPercent
+  isPercent,
 } from '@cdo/apps/util/formatValidation';
 import {expect} from 'chai';
 

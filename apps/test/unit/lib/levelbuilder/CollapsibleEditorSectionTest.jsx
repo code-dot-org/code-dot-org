@@ -2,12 +2,13 @@ import React from 'react';
 import {shallow, mount} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
+import moduleStyles from '@cdo/apps/lib/levelbuilder/levelbuilder.module.scss';
 
 describe('CollapsibleEditorSection', () => {
   let defaultProps;
   beforeEach(() => {
     defaultProps = {
-      title: 'Section Title'
+      title: 'Section Title',
     };
   });
 
@@ -25,7 +26,9 @@ describe('CollapsibleEditorSection', () => {
     expect(icon.props().icon).to.include('compress');
 
     const editorsWrapper = wrapper.children().last();
-    expect(editorsWrapper.props().style.width).to.equal(970);
+    expect(editorsWrapper.props().className).to.include(
+      moduleStyles.nonFullWidth
+    );
   });
 
   it('renders in full width', () => {
@@ -35,7 +38,9 @@ describe('CollapsibleEditorSection', () => {
       </CollapsibleEditorSection>
     );
     const editorsWrapper = wrapper.children().last();
-    expect(editorsWrapper.props().style.width).to.equal(null);
+    expect(editorsWrapper.props().className).to.not.include(
+      moduleStyles.nonFullWidth
+    );
   });
 
   it('clicking h2 collapses area', () => {
@@ -48,7 +53,7 @@ describe('CollapsibleEditorSection', () => {
     let icon = wrapper.find('FontAwesome');
     expect(icon.props().icon).to.include('compress');
 
-    wrapper.find('h2').simulate('click');
+    wrapper.find('button').simulate('click');
 
     expect(wrapper.find('FontAwesome').props().icon).to.include('expand');
   });

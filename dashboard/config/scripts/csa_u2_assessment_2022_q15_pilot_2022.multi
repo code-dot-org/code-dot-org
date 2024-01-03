@@ -14,3 +14,5 @@ You say "goodbye",
 I say "hello".
 ```
 MARKDOWN
+
+allow_multiple_attempts true

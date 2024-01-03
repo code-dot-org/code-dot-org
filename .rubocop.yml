@@ -8,6 +8,11 @@ require:
   - rubocop-rails
   - rubocop-rails-accessibility
   - './tools/customLinters/rubocop_only_allowed_characters.rb'
+  - './tools/customLinters/rubocop_prefer_mocha_stubs_to_minitest_stub.rb'
+  - './tools/customLinters/rubocop_pegasus_db_usage.rb'
+  - './tools/customLinters/rubocop_dashboard_db_usage.rb'
+  - './tools/customLinters/rubocop_pegasus_requires.rb'
+  - './tools/customLinters/rubocop_dashboard_requires.rb'
 
 AllCops:
   SuggestExtensions: false
@@ -16,7 +21,7 @@ AllCops:
     - 'dashboard/db/schema.rb'
     - 'pegasus/test/test_string.rb' # Parser does not support non-utf8 escape sequences
   DisplayCopNames: true
-  TargetRubyVersion: 2.6
+  TargetRubyVersion: 2.7
 
 Rails:
   Enabled: true
@@ -31,20 +36,11 @@ CustomCops/OnlyAllowedCharacters:
   Include:
     - '**/*_mailer.rb'
 
-Layout/ParameterAlignment:
-  EnforcedStyle: with_fixed_indentation
-
 Layout/DotPosition:
   EnforcedStyle: trailing
 
-Style/EmptyElse:
-  EnforcedStyle: empty
-
 Layout/EmptyLineBetweenDefs:
   AllowAdjacentOneLineDefs: true
-
-Style/EmptyMethod:
-  EnforcedStyle: expanded
 
 Layout/FirstParameterIndentation:
   EnforcedStyle: consistent
@@ -52,11 +48,14 @@ Layout/FirstParameterIndentation:
 Layout/MultilineMethodCallBraceLayout:
   EnforcedStyle: new_line
 
-Style/NumericLiterals:
-  MinDigits: 7
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
 
-Style/Semicolon:
-  AllowAsExpressionSeparator: true
+Layout/MultilineOperationIndentation:
+  EnforcedStyle: indented
+
+Layout/ParameterAlignment:
+  EnforcedStyle: with_fixed_indentation
 
 Layout/SpaceInsideBlockBraces:
   EnforcedStyle: no_space
@@ -64,6 +63,37 @@ Layout/SpaceInsideBlockBraces:
 
 Layout/SpaceInsideHashLiteralBraces:
   EnforcedStyle: no_space
+
+Naming/RescuedExceptionsVariableName:
+  PreferredName: exception
+
+# This Cop by default uses a custom Include directive which in our
+# project would also include pegasus
+# see https://github.com/rubocop/rubocop-rails/blob/d81af275bba3d06e30156596c2c057cf68f8272b/config/default.yml#L213C11-L213C11
+Rails/AssertNot:
+  Include:
+    - dashboard/**/test/**/*
+
+Rails/Date:
+  EnforcedStyle: strict
+
+Rails/RefuteMethods:
+  EnforcedStyle: refute
+
+Style/AccessModifierDeclarations:
+  EnforcedStyle: inline
+
+Style/EmptyElse:
+  EnforcedStyle: empty
+
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+
+Style/NumericLiterals:
+  MinDigits: 7
+
+Style/Semicolon:
+  AllowAsExpressionSeparator: true
 
 Style/WordArray:
   MinSize: 5
@@ -82,22 +112,28 @@ Metrics/AbcSize:
 Metrics/BlockNesting:
   Enabled: false
 
+Layout/ClosingParenthesisIndentation:
+  Enabled: false
+
+Layout/ExtraSpacing:
+  Enabled: false
+
 Layout/LineLength:
   Enabled: false
 
 Metrics/ModuleLength:
   Enabled: false
 
+# ActiveRecord does not implement a `detect` method and `find` has its own
+# meaning. Correcting ActiveRecord methods with this cop should be considered
+# unsafe, so out of an abundance of caution disable this everywhere.
+Performance/Detect:
+  Enabled: false
+
 Style/AsciiComments:
   Enabled: false
 
 Style/BarePercentLiterals:
-  Enabled: false
-
-Layout/ClosingParenthesisIndentation:
-  Enabled: false
-
-Layout/ExtraSpacing:
   Enabled: false
 
 Style/IdenticalConditionalBranches:

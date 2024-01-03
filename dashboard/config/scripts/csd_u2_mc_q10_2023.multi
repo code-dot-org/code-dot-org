@@ -1,8 +1,13 @@
 name 'CSD U2 MC Q10_2023'
-title 'Question 1'
 type 'multi'
-question 'Placeholder Question Text'
-right 'Placeholder Answer'
-wrong 'Placeholder Answer'
-wrong 'Placeholder Answer'
-wrong 'Placeholder Answer'
+question 'Which of the following is an example of your digital footprint?'
+wrong 'Your birthday'
+wrong 'Your address'
+wrong 'Your phone number'
+wrong 'Your name'
+right 'All of the above'
+teacher_markdown <<MARKDOWN
+**Content: Unit 2 Lesson 5**
+MARKDOWN
+
+allow_multiple_attempts true

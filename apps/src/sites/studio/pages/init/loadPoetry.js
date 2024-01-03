@@ -27,7 +27,7 @@ export default function loadPoetry(options) {
         study: 'sprite_default_load',
         study_group: 'poetry',
         event: 'backup_animations_used',
-        project_id: getCurrentId()
+        project_id: getCurrentId(),
       });
       return initializeOptionsAndPoetry(poetry, options);
     });

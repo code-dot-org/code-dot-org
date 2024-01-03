@@ -96,7 +96,7 @@ describe('MockFirebase', () => {
               foo: {bar: 1},
               // This key's presence is incorrect, and makes it hard to test
               // features which do sparse updates to deeply nested keys.
-              'foo/bar': 1
+              'foo/bar': 1,
             });
             done();
           });
@@ -164,7 +164,7 @@ describe('MockFirebase', () => {
         firebaseName: 'test-firebase-name',
         firebaseSharedAuthToken: 'test-firebase-shared-auth-token',
         firebaseAuthToken: 'test-firebase-auth-token',
-        showRateLimitAlert: () => {}
+        showRateLimitAlert: () => {},
       });
       channelRef = getProjectDatabase();
       channelRef.autoFlush();

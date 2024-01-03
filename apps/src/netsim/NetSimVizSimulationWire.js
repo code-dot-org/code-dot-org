@@ -14,7 +14,7 @@ var NetSimVizWire = require('./NetSimVizWire');
  * @constructor
  * @augments NetSimVizWire
  */
-var NetSimVizSimulationWire = (module.exports = function(
+var NetSimVizSimulationWire = (module.exports = function (
   sourceWire,
   getElementByEntityId
 ) {
@@ -51,7 +51,7 @@ NetSimVizSimulationWire.inherits(NetSimVizWire);
  * Configuring a wire means looking up the viz nodes that will be its endpoints.
  * @param {NetSimWire} sourceWire
  */
-NetSimVizSimulationWire.prototype.configureFrom = function(sourceWire) {
+NetSimVizSimulationWire.prototype.configureFrom = function (sourceWire) {
   this.correspondingWireId_ = sourceWire.entityID;
   this.correspondingWireUuid_ = sourceWire.uuid;
 
@@ -81,7 +81,7 @@ NetSimVizSimulationWire.prototype.configureFrom = function(sourceWire) {
  * ID of the NetSimEntity that maps to this visualization element.
  * @returns {number}
  */
-NetSimVizSimulationWire.prototype.getCorrespondingEntityId = function() {
+NetSimVizSimulationWire.prototype.getCorrespondingEntityId = function () {
   return this.correspondingWireId_;
 };
 
@@ -89,7 +89,7 @@ NetSimVizSimulationWire.prototype.getCorrespondingEntityId = function() {
  * @param {NetSimEntity} entity
  * @returns {boolean} TRUE if this VizElement represents the given NetSimEntity.
  */
-NetSimVizSimulationWire.prototype.representsEntity = function(entity) {
+NetSimVizSimulationWire.prototype.representsEntity = function (entity) {
   return (
     this.correspondingWireId_ === entity.entityID &&
     this.correspondingWireUuid_ === entity.uuid
@@ -101,7 +101,7 @@ NetSimVizSimulationWire.prototype.representsEntity = function(entity) {
  * another viznode of matching ID being added, and begins its exit animation.
  * @override
  */
-NetSimVizSimulationWire.prototype.kill = function() {
+NetSimVizSimulationWire.prototype.kill = function () {
   NetSimVizSimulationWire.superPrototype.kill.call(this);
   this.correspondingWireId_ = undefined;
   this.correspondingWireUuid_ = undefined;

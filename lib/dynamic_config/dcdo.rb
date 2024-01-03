@@ -9,18 +9,6 @@ require 'dynamic_config/adapters/json_file_adapter'
 require 'dynamic_config/adapters/memory_adapter'
 
 class DCDOBase < DynamicConfigBase
-  # Adds a listener whose on_change() method will be invoked at least
-  # once whenever the configuration changes. The on_change() method
-  # will be invoked on an arbitrary thread and must not block.
-  def add_change_listener(listener)
-    @datastore_cache.add_change_listener(listener)
-  end
-
-  # Updates the cached configuration, for testing only.
-  def update_cache_for_test
-    @datastore_cache.update_cache
-  end
-
   # Factory method for creating DCDOBase objects
   # @returns [DCDOBase]
   def self.create
@@ -42,11 +30,18 @@ class DCDOBase < DynamicConfigBase
     {
       'frontend-i18n-tracking': DCDO.get('frontend-i18n-tracking', false),
       clearerSignUpUserType: DCDO.get('clearerSignUpUserType', false),
+      'pl-teacher-application-off-season': DCDO.get('pl_teacher_application', false),
       'csa-homepage-banner-2022': DCDO.get('csa-homepage-banner-2022', false),
       'csa-skinny-banner': DCDO.get('csa-skinny-banner', false),
-      'webserial-on-chromeos': DCDO.get('webserial-on-chromeos', true),
       'csta-form-extension': DCDO.get('csta-form-extension', false),
-      'pl-launch-hero-banner': DCDO.get('pl-launch-hero-banner', false)
+      'pl-launch-hero-banner': DCDO.get('pl-launch-hero-banner', false),
+      'curriculum-launch-hero-banner': DCDO.get('curriculum-launch-hero-banner', false),
+      'curriculum-launch-skinny-banner': DCDO.get('curriculum-launch-skinny-banner', false),
+      'ai-pl-launch-banners': DCDO.get('ai-pl-launch-banners', false),
+      cpa_experience: DCDO.get('cpa_experience', false),
+      gender: DCDO.get('gender', false),
+      'show-coteacher-ui': DCDO.get('show-coteacher-ui', true),
+      'amplitude-event-sample-rates': DCDO.get('amplitude-event-sample-rates', {})
     }
   end
 end

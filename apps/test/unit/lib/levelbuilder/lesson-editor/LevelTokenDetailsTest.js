@@ -12,11 +12,11 @@ const defaultScriptLevel = {
     {
       name: 'Level 1',
       id: '2',
-      url: '/fake/url/'
-    }
+      url: '/fake/url/',
+    },
   ],
   activeId: '2',
-  expand: true
+  expand: true,
 };
 
 const assertCheckboxVisible = (wrapper, name, visible) => {
@@ -53,7 +53,7 @@ describe('LevelTokenDetails', () => {
       lessonExtrasAvailableForUnit: false,
       isProfessionalLearningCourse: false,
       allowMajorCurriculumChanges: true,
-      inactiveLevelNames: []
+      inactiveLevelNames: [],
     };
   });
 
@@ -128,7 +128,7 @@ describe('LevelTokenDetails', () => {
           bonus: true,
           assessment: true,
           challenge: true,
-          instructor_in_training: true
+          instructor_in_training: true,
         }}
       />
     );

@@ -42,7 +42,7 @@ describe('ActivitySectionCardButtons', () => {
       allowMajorCurriculumChanges: true,
       isLastActivity: false,
       isLastActivitySection: false,
-      vocabularies: []
+      vocabularies: [],
     };
   });
 
@@ -168,8 +168,8 @@ describe('ActivitySectionCardButtons', () => {
             key: 'word1',
             word: 'word1',
             definition: 'definition1',
-            commonSenseMedia: false
-          }
+            commonSenseMedia: false,
+          },
         ]}
       />
     );

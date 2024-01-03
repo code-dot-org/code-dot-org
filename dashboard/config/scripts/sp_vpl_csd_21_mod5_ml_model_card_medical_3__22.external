@@ -3,11 +3,14 @@ title 'Introduction to Machine Learning'
 description ''
 
 markdown <<MARKDOWN
-# Model cards
+# Model Cards
 
-##### Model cards are a way of representing important information about a trained machine learning model. These cards can be used to help uncover bias within the model. 
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
 
-## Medical priority models 
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">Model cards are a way of representing important information about a trained machine learning model. These cards can be used to help uncover bias within the model. 
+</p></div>
+
+## Medical Priority Models 
 
 ##### After students discover bias in the original medical priority machine learning model, they will move on to use model cards to evaluate other models for potential bias. Students will use cards similar to those below to decide whether or not they would recommend the machine learning model for use in a medical priority app.  
 

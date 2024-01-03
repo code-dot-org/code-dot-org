@@ -27,3 +27,5 @@ The following demonstrates tracing through the code segment:
 
 ![](https://images.code.org/b372383c3045a18e861d16bd1653b018-image-1674527204303.gif)
 MARKDOWN
+
+allow_multiple_attempts true

@@ -25,3 +25,5 @@ for (int j = 1; j < 11; j += 3)
 ```
 Which of the following code segments will produce the same output as the code segment above?
 MARKDOWN
+
+allow_multiple_attempts true

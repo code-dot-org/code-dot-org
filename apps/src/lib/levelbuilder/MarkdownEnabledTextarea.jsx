@@ -10,7 +10,7 @@ import FindProgrammingExpressionDialog from './lesson-editor/FindProgrammingExpr
 export const markdownFeaturesShape = PropTypes.shape({
   imageUpload: PropTypes.bool,
   programmingExpression: PropTypes.bool,
-  resourceLink: PropTypes.bool
+  resourceLink: PropTypes.bool,
 });
 
 export default class MarkdownEnabledTextarea extends React.Component {
@@ -19,11 +19,11 @@ export default class MarkdownEnabledTextarea extends React.Component {
     name: PropTypes.string,
     inputRows: PropTypes.number,
     handleMarkdownChange: PropTypes.func.isRequired,
-    features: markdownFeaturesShape
+    features: markdownFeaturesShape,
   };
 
   static defaultProps = {
-    features: {}
+    features: {},
   };
 
   constructor(props) {
@@ -153,7 +153,7 @@ const styles = {
   container: {
     flex: '1 1 500px',
     maxWidth: 970,
-    margin: 5
+    margin: 5,
   },
   input: {
     width: '100%',
@@ -162,9 +162,9 @@ const styles = {
     color: '#555',
     border: '1px solid #ccc',
     borderRadius: 4,
-    margin: 0
+    margin: 0,
   },
   icon: {
-    marginRight: 7
-  }
+    marginRight: 7,
+  },
 };

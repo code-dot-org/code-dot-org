@@ -11,7 +11,7 @@ export function SingleMethod({
   method,
   programmingEnvironmentName,
   programmingEnvironmentLanguage,
-  isSmallWindow
+  isSmallWindow,
 }) {
   return (
     <div id={`method-${method.key}`}>
@@ -51,7 +51,7 @@ export function SingleMethod({
           <h4>{i18n.additionalInformationHeader()}</h4>
           <EnhancedSafeMarkdown
             markdown={i18n.additionalInformationText({
-              externalLinkUrl: method.externalLink.trim()
+              externalLinkUrl: method.externalLink.trim(),
             })}
           />
         </div>
@@ -64,7 +64,7 @@ export function MethodOverloadSection({
   overloads,
   programmingEnvironmentName,
   programmingEnvironmentLanguage,
-  isSmallWindow
+  isSmallWindow,
 }) {
   const [isOpen, setIsOpen] = useState(true);
   const icon = isOpen ? 'caret-down' : 'caret-up';
@@ -98,7 +98,7 @@ export default function MethodWithOverloads({
   method,
   programmingEnvironmentName,
   programmingEnvironmentLanguage,
-  isSmallWindow
+  isSmallWindow,
 }) {
   return (
     <div style={styles.container}>
@@ -128,28 +128,29 @@ const methodShape = PropTypes.shape({
   externalLink: PropTypes.string,
   parameters: PropTypes.arrayOf(PropTypes.object),
   examples: PropTypes.arrayOf(PropTypes.object),
-  overloads: PropTypes.arrayOf(PropTypes.object)
+  overloads: PropTypes.arrayOf(PropTypes.object),
+  returnValue: PropTypes.string,
 });
 
 SingleMethod.propTypes = {
   method: methodShape.isRequired,
   programmingEnvironmentName: PropTypes.string,
   programmingEnvironmentLanguage: PropTypes.string,
-  isSmallWindow: PropTypes.bool
+  isSmallWindow: PropTypes.bool,
 };
 
 MethodOverloadSection.propTypes = {
   overloads: PropTypes.arrayOf(methodShape),
   programmingEnvironmentName: PropTypes.string,
   programmingEnvironmentLanguage: PropTypes.string,
-  isSmallWindow: PropTypes.bool
+  isSmallWindow: PropTypes.bool,
 };
 
 MethodWithOverloads.propTypes = {
   method: methodShape.isRequired,
   programmingEnvironmentName: PropTypes.string,
   programmingEnvironmentLanguage: PropTypes.string,
-  isSmallWindow: PropTypes.bool
+  isSmallWindow: PropTypes.bool,
 };
 
 const styles = {
@@ -160,7 +161,7 @@ const styles = {
     borderRadius: 5,
     padding: 5,
     marginBottom: 10,
-    minWidth: 'fit-content'
+    minWidth: 'fit-content',
   },
   openOverloadHeader: {
     backgroundColor: color.lightest_gray,
@@ -170,7 +171,7 @@ const styles = {
     borderRadius: '5px 5px 0px 0px',
     padding: 5,
     marginTop: 15,
-    fontSize: 20
+    fontSize: 20,
   },
   closedOverloadHeader: {
     backgroundColor: color.lightest_gray,
@@ -180,13 +181,13 @@ const styles = {
     borderRadius: '5px',
     padding: 5,
     marginTop: 15,
-    fontSize: 20
+    fontSize: 20,
   },
   overloadBox: {
     borderStyle: 'solid',
     borderColor: color.lighter_gray,
     borderWidth: 1,
     borderRadius: '0px 0px 5px 5px',
-    padding: 3
-  }
+    padding: 3,
+  },
 };

@@ -12,7 +12,7 @@ var NBSP = '\u00A0';
  * @param {string|jsnumber} val
  * @param {boolean} marked
  */
-var Token = function(val, marked) {
+var Token = function (val, marked) {
   this.val_ = val;
   this.marked_ = marked;
 
@@ -27,7 +27,7 @@ var Token = function(val, marked) {
 };
 module.exports = Token;
 
-Token.prototype.isParenthesis = function() {
+Token.prototype.isParenthesis = function () {
   return this.val_ === '(' || this.val_ === ')';
 };
 
@@ -38,7 +38,7 @@ Token.prototype.isParenthesis = function() {
  * @param {string?} markClass Class name to use if token is marked
  * @returns {number} the length of the added text element
  */
-Token.prototype.renderToParent = function(element, xPos, markClass) {
+Token.prototype.renderToParent = function (element, xPos, markClass) {
   var text, textLength;
 
   text = document.createElementNS(Blockly.SVG_NS, 'text');
@@ -71,7 +71,7 @@ Token.prototype.renderToParent = function(element, xPos, markClass) {
 /**
  * Sets string representation of value.
  */
-Token.prototype.setStringRepresentation_ = function() {
+Token.prototype.setStringRepresentation_ = function () {
   if (!jsnums.isSchemeNumber(this.val_) || typeof this.val_ === 'number') {
     this.nonRepeated_ = this.val_;
     return;
@@ -102,7 +102,7 @@ Token.prototype.setStringRepresentation_ = function() {
  * @param {number} x
  * @returns {string} the number with commas inserted in thousandth's place
  */
-Token.numberWithCommas_ = function(x) {
+Token.numberWithCommas_ = function (x) {
   var parts = x.toString().split('.');
   parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   return parts.join('.');

@@ -17,3 +17,5 @@ Correct answer:
 * Two programmers solving the same problem using Top-Down Design should arrive at identical programs.
 	* Explanation: Often, there are multiple correct ways to arrive at a solution. Two programmers working separately on the same problem could come up with different ways to solve that problem, so their programs will also be different.
 MARKDOWN
+
+allow_multiple_attempts true

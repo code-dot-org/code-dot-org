@@ -31,10 +31,10 @@ class CoursesController < ApplicationController
 
   def index
     view_options(full_width: true, responsive_content: true, no_padding_container: true, has_i18n: true)
-    @is_teacher = (current_user&.teacher?) || params[:view] == 'teacher'
     @is_english = request.language == 'en'
     @is_signed_out = current_user.nil?
     @force_race_interstitial = params[:forceRaceInterstitial]
+    @courses_announcement = Announcements.get_localized_announcement_for_page("/courses")
     @modern_elementary_courses_available = Unit.modern_elementary_courses_available?(request.locale)
   end
 
@@ -51,7 +51,7 @@ class CoursesController < ApplicationController
       return
     end
 
-    sections = current_user.try {|u| u.sections.all.reject(&:hidden).map(&:summarize)}
+    sections = current_user.try {|u| u.sections_instructed.all.reject(&:hidden).map(&:summarize)}
     @sections_with_assigned_info = sections&.map {|section| section.merge!({"isAssigned" => section[:course_id] == @unit_group.id})}
 
     @locale_code = request.locale
@@ -98,7 +98,7 @@ class CoursesController < ApplicationController
     raise ActiveRecord::ReadOnlyRecord if @unit_group.try(:plc_course)
     @unit_group_data = {
       course_summary: @unit_group.summarize(@current_user, for_edit: true),
-      script_names: Unit.all.map(&:name),
+      script_names: Unit.all.select {|unit| unit.is_course? == false}.map(&:name),
       course_families: UnitGroup.family_names,
       version_year_options: UnitGroup.get_version_year_options
     }
@@ -154,9 +154,7 @@ class CoursesController < ApplicationController
     ).to_h
   end
 
-  private
-
-  def get_unit_group
+  private def get_unit_group
     course_name = params[:course_name]
 
     unit_group = UnitGroup.get_from_cache(course_name)
@@ -171,12 +169,12 @@ class CoursesController < ApplicationController
     unit_group
   end
 
-  def set_unit_group
+  private def set_unit_group
     @unit_group = get_unit_group
     raise ActiveRecord::RecordNotFound unless @unit_group
   end
 
-  def check_plc_enrollment
+  private def check_plc_enrollment
     if @unit_group.plc_course
       authorize! :show, Plc::UserCourseEnrollment
       user_course_enrollments = [Plc::UserCourseEnrollment.find_by(user: current_user, plc_course: @unit_group.plc_course)]
@@ -185,13 +183,13 @@ class CoursesController < ApplicationController
     end
   end
 
-  def render_no_access
+  private def render_no_access
     if current_user && !current_user.admin? && !can?(:read, @unit_group)
       render :no_access
     end
   end
 
-  def course_params
+  private def course_params
     cp = params.permit(:version_year, :family_name, :has_verified_resources, :has_numbered_units, :pilot_experiment, :published_state, :instruction_type, :instructor_audience, :participant_audience, :announcements).to_h
     cp[:announcements] = JSON.parse(cp[:announcements]) if cp[:announcements]
     cp[:published_state] = Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development unless cp[:published_state]
@@ -199,13 +197,13 @@ class CoursesController < ApplicationController
     cp
   end
 
-  def set_redirect_override
+  private def set_redirect_override
     if params[:course_name] && params[:no_redirect]
       VersionRedirectOverrider.set_course_redirect_override(session, params[:course_name])
     end
   end
 
-  def redirect_unit_group(unit_group)
+  private def redirect_unit_group(unit_group)
     # Return nil if unit_group is nil or we know the user can view the version requested.
     return nil if !unit_group || unit_group.can_view_version?(current_user)
 

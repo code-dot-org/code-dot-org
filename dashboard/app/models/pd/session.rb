@@ -106,9 +106,7 @@ class Pd::Session < ApplicationRecord
     workshop.started_at.nil? || start - 48.hours > Time.zone.now
   end
 
-  private
-
-  def unused_random_code
+  private def unused_random_code
     CodeGeneration.random_unique_code length: 4, model: Pd::Session
   end
 end

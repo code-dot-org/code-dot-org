@@ -1,0 +1,486 @@
+{
+  "script": {
+    "name": "self-paced-pl-csp1-2023",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "curriculum_umbrella": "CSP Self Paced PL",
+      "has_verified_resources": true,
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "tts": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2023-07-04 01:54:11 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "self-paced-pl-csp1-2023"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp1-2023"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Welcome to Codeorg",
+      "name": "Welcome to Code.org",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "overview": "You will:\n\n* Get an introduction to Code.org and CS Principles.",
+        "student_overview": "You will:\n\n* Get an introduction to Code.org and CS Principles."
+      },
+      "seeding_key": {
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp1-2023"
+      }
+    },
+    {
+      "key": "Welcome to “Teaching CS Principles”",
+      "name": "Welcome to “Teaching CS Principles”",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+        "overview": "You will:\n\n* Learn how to engage in these professional learning modules.",
+        "student_overview": "You will:\n\n* Learn how to engage in these professional learning modules."
+      },
+      "seeding_key": {
+        "lesson.key": "Welcome to “Teaching CS Principles”",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp1-2023"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "fe6e8a19-b285-4035-ab77-f50e4804fff6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fe6e8a19-b285-4035-ab77-f50e4804fff6",
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp1-2023"
+      }
+    },
+    {
+      "key": "41e1c413-10b4-47ee-95e4-4353849896cb",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "41e1c413-10b4-47ee-95e4-4353849896cb",
+        "lesson.key": "Welcome to “Teaching CS Principles”",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp1-2023"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "afd54361-f0de-45d7-9666-e022f43a4c3e",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "afd54361-f0de-45d7-9666-e022f43a4c3e",
+        "lesson_activity.key": "fe6e8a19-b285-4035-ab77-f50e4804fff6"
+      }
+    },
+    {
+      "key": "2d562cee-53ea-45a8-bb41-36c7ad91dc49",
+      "position": 2,
+      "properties": {
+        "progression_name": "Welcome to Code.org"
+      },
+      "seeding_key": {
+        "activity_section.key": "2d562cee-53ea-45a8-bb41-36c7ad91dc49",
+        "lesson_activity.key": "fe6e8a19-b285-4035-ab77-f50e4804fff6"
+      }
+    },
+    {
+      "key": "9867549c-5394-4a6e-a34e-476f2a78da41",
+      "position": 3,
+      "properties": {
+        "progression_name": "Welcome to CS Principles"
+      },
+      "seeding_key": {
+        "activity_section.key": "9867549c-5394-4a6e-a34e-476f2a78da41",
+        "lesson_activity.key": "fe6e8a19-b285-4035-ab77-f50e4804fff6"
+      }
+    },
+    {
+      "key": "cff4df42-5317-4975-8f37-d728b4c8befe",
+      "position": 1,
+      "properties": {
+        "progression_name": "Engaging with professional learning modules"
+      },
+      "seeding_key": {
+        "activity_section.key": "cff4df42-5317-4975-8f37-d728b4c8befe",
+        "lesson_activity.key": "41e1c413-10b4-47ee-95e4-4353849896cb"
+      }
+    },
+    {
+      "key": "ab093523-4c0c-404d-a927-15fe84141086",
+      "position": 2,
+      "properties": {
+        "progression_name": "Wrap up"
+      },
+      "seeding_key": {
+        "activity_section.key": "ab093523-4c0c-404d-a927-15fe84141086",
+        "lesson_activity.key": "41e1c413-10b4-47ee-95e4-4353849896cb"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSP-mod1-Overview-Welcome_2023"
+        ],
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-CSP-mod1-Overview-Welcome_2023"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp1-2023",
+        "activity_section.key": "afd54361-f0de-45d7-9666-e022f43a4c3e"
+      },
+      "level_keys": [
+        "SP-VPL-21-CSP-mod1-Overview-Welcome_2023"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-welcome-vid_2023"
+        ],
+        "progression": "Welcome to Code.org"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-welcome-vid_2023"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp1-2023",
+        "activity_section.key": "2d562cee-53ea-45a8-bb41-36c7ad91dc49"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod1-welcome-vid_2023"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-CSisFoundational_2023"
+        ],
+        "progression": "Welcome to Code.org"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-CSisFoundational_2023"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp1-2023",
+        "activity_section.key": "2d562cee-53ea-45a8-bb41-36c7ad91dc49"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod1-CSisFoundational_2023"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-AboutCSP_2023"
+        ],
+        "progression": "Welcome to CS Principles"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-AboutCSP_2023"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp1-2023",
+        "activity_section.key": "9867549c-5394-4a6e-a34e-476f2a78da41"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod1-AboutCSP_2023"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-22-CSP-mod1-NewTeacherAdvice_2023"
+        ],
+        "progression": "Welcome to CS Principles"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-22-CSP-mod1-NewTeacherAdvice_2023"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp1-2023",
+        "activity_section.key": "9867549c-5394-4a6e-a34e-476f2a78da41"
+      },
+      "level_keys": [
+        "SP-VPL-22-CSP-mod1-NewTeacherAdvice_2023"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-ModuleOverview-CSP_2023"
+        ],
+        "progression": "Engaging with professional learning modules"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-ModuleOverview-CSP_2023"
+        ],
+        "lesson.key": "Welcome to “Teaching CS Principles”",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp1-2023",
+        "activity_section.key": "cff4df42-5317-4975-8f37-d728b4c8befe"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod1-ModuleOverview-CSP_2023"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-ActivityOverview-CSP_2023"
+        ],
+        "progression": "Engaging with professional learning modules"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-ActivityOverview-CSP_2023"
+        ],
+        "lesson.key": "Welcome to “Teaching CS Principles”",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp1-2023",
+        "activity_section.key": "cff4df42-5317-4975-8f37-d728b4c8befe"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod1-ActivityOverview-CSP_2023"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-CSP-21-Navigation_2023"
+        ],
+        "progression": "Wrap up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSP-21-Navigation_2023"
+        ],
+        "lesson.key": "Welcome to “Teaching CS Principles”",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp1-2023",
+        "activity_section.key": "ab093523-4c0c-404d-a927-15fe84141086"
+      },
+      "level_keys": [
+        "SP-VPL-CSP-21-Navigation_2023"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-CSP-mod1-Overview-Welcome_2023",
+        "script_level.level_keys": [
+          "SP-VPL-21-CSP-mod1-Overview-Welcome_2023"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp1-2023",
+        "activity_section.key": "afd54361-f0de-45d7-9666-e022f43a4c3e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod1-welcome-vid_2023",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-welcome-vid_2023"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp1-2023",
+        "activity_section.key": "2d562cee-53ea-45a8-bb41-36c7ad91dc49"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod1-CSisFoundational_2023",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-CSisFoundational_2023"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp1-2023",
+        "activity_section.key": "2d562cee-53ea-45a8-bb41-36c7ad91dc49"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod1-AboutCSP_2023",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-AboutCSP_2023"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp1-2023",
+        "activity_section.key": "9867549c-5394-4a6e-a34e-476f2a78da41"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-22-CSP-mod1-NewTeacherAdvice_2023",
+        "script_level.level_keys": [
+          "SP-VPL-22-CSP-mod1-NewTeacherAdvice_2023"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp1-2023",
+        "activity_section.key": "9867549c-5394-4a6e-a34e-476f2a78da41"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod1-ModuleOverview-CSP_2023",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-ModuleOverview-CSP_2023"
+        ],
+        "lesson.key": "Welcome to “Teaching CS Principles”",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp1-2023",
+        "activity_section.key": "cff4df42-5317-4975-8f37-d728b4c8befe"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod1-ActivityOverview-CSP_2023",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-ActivityOverview-CSP_2023"
+        ],
+        "lesson.key": "Welcome to “Teaching CS Principles”",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp1-2023",
+        "activity_section.key": "cff4df42-5317-4975-8f37-d728b4c8befe"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSP-21-Navigation_2023",
+        "script_level.level_keys": [
+          "SP-VPL-CSP-21-Navigation_2023"
+        ],
+        "lesson.key": "Welcome to “Teaching CS Principles”",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csp1-2023",
+        "activity_section.key": "ab093523-4c0c-404d-a927-15fe84141086"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

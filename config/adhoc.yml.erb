@@ -8,6 +8,7 @@ dashboard_secret_key_base: not a secret
 
 # needed by storage_id helper
 poste_secret: not a real secret
+channels_api_secret: not a real secret
 
 
 # Engineers need to be able to see raw HTTP error pages so they can debug their feature branch on an adhoc.
@@ -21,6 +22,15 @@ firebase_secret: !Secret
 firebase_shared_secret: !Secret
 
 # Until we have a better configuration setting service, use AWS Secrets Manager to store these non-secret values.
-db_cluster_id: !Secret
-db_proxy_reporting_endpoint: !Secret
-db_writer_endpoint: !Secret
+db_cluster_id: !StackSecret
+db_endpoint_writer: !StackSecret
+db_endpoint_proxy_writer: !StackSecret
+db_endpoint_proxy_reader: !StackSecret
+db_endpoint_proxy_reporting: !StackSecret
+
+# Database credentials (username & password) are stored in an AWS Secret in a JSON format required by RDS Proxy:
+# https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-proxy-setup.html#rds-proxy-secrets-arns
+db_credential_admin: !StackSecret
+db_credential_writer: !StackSecret
+db_credential_reader: !StackSecret
+

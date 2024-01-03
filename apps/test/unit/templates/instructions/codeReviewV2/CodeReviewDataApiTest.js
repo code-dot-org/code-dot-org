@@ -1,6 +1,6 @@
 import {expect} from '../../../../util/reconfiguredChai';
 import CodeReviewDataApi, {
-  timelineElementType
+  timelineElementType,
 } from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewDataApi';
 import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
@@ -10,20 +10,20 @@ const fakeCommitData = [
     id: 1,
     createdAt: '2022-03-04T04:58:42.000Z',
     comment: 'First commit',
-    projectVersion: 'asdfjkl'
+    projectVersion: 'asdfjkl',
   },
   {
     id: 2,
     createdAt: '2022-03-13T04:58:42.000Z',
     comment: 'Second commit',
-    projectVersion: 'lkjfds'
+    projectVersion: 'lkjfds',
   },
   {
     id: 3,
     createdAt: '2022-03-20T04:58:42.000Z',
     comment: 'Third commit',
-    projectVersion: 'wlkjdujx'
-  }
+    projectVersion: 'wlkjdujx',
+  },
 ];
 
 const fakeReviewData = [
@@ -38,16 +38,16 @@ const fakeReviewData = [
         commentText: 'Great work on this!',
         name: 'Steve',
         timestampString: '2022-03-31T04:58:42.000Z',
-        isResolved: false
+        isResolved: false,
       },
       {
         id: 124,
         commentText: 'Could you add more comments?',
         name: 'Karen',
         timestampString: '2022-03-31T04:58:42.000Z',
-        isResolved: false
-      }
-    ]
+        isResolved: false,
+      },
+    ],
   },
   {
     id: 22,
@@ -60,17 +60,17 @@ const fakeReviewData = [
         commentText: 'Great work on this!',
         name: 'Steve',
         timestampString: '2022-03-31T04:58:42.000Z',
-        isResolved: false
+        isResolved: false,
       },
       {
         id: 124,
         commentText: 'Could you add more comments?',
         name: 'Karen',
         timestampString: '2022-03-31T04:58:42.000Z',
-        isResolved: false
-      }
-    ]
-  }
+        isResolved: false,
+      },
+    ],
+  },
 ];
 
 const fakeChannelId = 1;
@@ -142,7 +142,7 @@ describe('CodeReviewDataApi', () => {
         done: successCallback => {
           successCallback(fakeReviewData[0]);
           return {fail: () => {}};
-        }
+        },
       });
     });
 
@@ -157,8 +157,8 @@ describe('CodeReviewDataApi', () => {
         type: 'PATCH',
         headers: {'X-CSRF-Token': undefined},
         data: {
-          isClosed: true
-        }
+          isClosed: true,
+        },
       });
     });
 
@@ -185,7 +185,7 @@ describe('CodeReviewDataApi', () => {
         done: successCallback => {
           successCallback(fakeReviewData[0]);
           return {fail: () => {}};
-        }
+        },
       });
     });
 
@@ -204,8 +204,8 @@ describe('CodeReviewDataApi', () => {
           scriptId: fakeScriptId,
           projectLevelId: fakeProjectLevelId,
           levelId: fakeLevelId,
-          version: fakeVersion
-        }
+          version: fakeVersion,
+        },
       });
     });
 
@@ -233,7 +233,7 @@ describe('CodeReviewDataApi', () => {
         done: successCallback => {
           successCallback(fakeReviewData[0]);
           return {fail: () => {}};
-        }
+        },
       });
     });
 
@@ -261,7 +261,7 @@ describe('CodeReviewDataApi', () => {
 
     it('calls code_review_comments endpoint if profanity is not found', async () => {
       sinon.stub(utils, 'findProfanity').returns({
-        done: successCallback => successCallback(null)
+        done: successCallback => successCallback(null),
       });
 
       await dataApi.submitNewCodeReviewComment(fakeComment, fakeReviewId);
@@ -272,8 +272,8 @@ describe('CodeReviewDataApi', () => {
         headers: {'X-CSRF-Token': undefined},
         data: {
           codeReviewId: fakeReviewId,
-          comment: fakeComment
-        }
+          comment: fakeComment,
+        },
       });
       utils.findProfanity.restore();
     });
@@ -295,7 +295,7 @@ describe('CodeReviewDataApi', () => {
         done: successCallback => {
           successCallback(fakeReviewData[0]);
           return {fail: () => {}};
-        }
+        },
       });
     });
 
@@ -310,8 +310,8 @@ describe('CodeReviewDataApi', () => {
         type: 'PATCH',
         headers: {'X-CSRF-Token': undefined},
         data: {
-          isResolved: true
-        }
+          isResolved: true,
+        },
       });
     });
   });

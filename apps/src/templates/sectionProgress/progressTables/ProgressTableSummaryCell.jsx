@@ -6,7 +6,7 @@ import {studentLessonProgressType} from '@cdo/apps/templates/progress/progressTy
 function BorderedBox({borderColor, onClick, children}) {
   const boxStyle = {
     ...styles.container,
-    borderColor: borderColor
+    borderColor: borderColor,
   };
   return (
     <div style={boxStyle} onClick={onClick} className="uitest-summary-cell">
@@ -17,14 +17,14 @@ function BorderedBox({borderColor, onClick, children}) {
 BorderedBox.propTypes = {
   borderColor: PropTypes.string.isRequired,
   onClick: PropTypes.func,
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 export default class ProgressTableSummaryCell extends React.Component {
   static propTypes = {
     studentId: PropTypes.number.isRequired,
     studentLessonProgress: studentLessonProgressType,
     isAssessmentLesson: PropTypes.bool,
-    onSelectDetailView: PropTypes.func
+    onSelectDetailView: PropTypes.func,
   };
 
   heightForPercent(percent) {
@@ -32,11 +32,8 @@ export default class ProgressTableSummaryCell extends React.Component {
   }
 
   render() {
-    const {
-      studentLessonProgress,
-      isAssessmentLesson,
-      onSelectDetailView
-    } = this.props;
+    const {studentLessonProgress, isAssessmentLesson, onSelectDetailView} =
+      this.props;
 
     if (!studentLessonProgress) {
       return (
@@ -53,19 +50,19 @@ export default class ProgressTableSummaryCell extends React.Component {
 
     const incompleteStyle = {
       backgroundColor: color.level_not_tried,
-      height: this.heightForPercent(studentLessonProgress.incompletePercent)
+      height: this.heightForPercent(studentLessonProgress.incompletePercent),
     };
 
     const imperfectStyle = {
       backgroundColor: color.level_passed,
-      height: this.heightForPercent(studentLessonProgress.imperfectPercent)
+      height: this.heightForPercent(studentLessonProgress.imperfectPercent),
     };
 
     const completedStyle = {
       backgroundColor: isAssessmentLesson
         ? color.level_submitted
         : color.level_perfect,
-      height: this.heightForPercent(studentLessonProgress.completedPercent)
+      height: this.heightForPercent(studentLessonProgress.completedPercent),
     };
 
     return (
@@ -84,10 +81,10 @@ const styles = {
     margin: 10,
     boxSizing: 'border-box',
     borderWidth: 1,
-    borderStyle: 'solid'
-  }
+    borderStyle: 'solid',
+  },
 };
 
 export const unitTestExports = {
-  BorderedBox
+  BorderedBox,
 };

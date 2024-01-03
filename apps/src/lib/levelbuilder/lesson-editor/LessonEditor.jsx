@@ -11,20 +11,21 @@ import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import RelatedLessons from './RelatedLessons';
+import color from '@cdo/apps/util/color';
 import {
   relatedLessonShape,
   activityShape,
   resourceShape,
   vocabularyShape,
   programmingExpressionShape,
-  standardShape
+  standardShape,
 } from '@cdo/apps/lib/levelbuilder/shapes';
 import $ from 'jquery';
 import {connect} from 'react-redux';
 import {
   getSerializedActivities,
   mapActivityDataForEditor,
-  initActivities
+  initActivities,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
@@ -35,6 +36,7 @@ class LessonEditor extends Component {
     initialObjectives: PropTypes.arrayOf(PropTypes.object).isRequired,
     initialLessonData: PropTypes.object,
     unitInfo: PropTypes.object,
+    rubricId: PropTypes.number,
 
     // from redux
     activities: PropTypes.arrayOf(activityShape).isRequired,
@@ -44,7 +46,7 @@ class LessonEditor extends Component {
       .isRequired,
     standards: PropTypes.arrayOf(standardShape).isRequired,
     opportunityStandards: PropTypes.arrayOf(standardShape).isRequired,
-    initActivities: PropTypes.func.isRequired
+    initActivities: PropTypes.func.isRequired,
   };
 
   constructor(props) {
@@ -69,7 +71,7 @@ class LessonEditor extends Component {
       preparation: this.props.initialLessonData.preparation || '',
       announcements: this.props.initialLessonData.announcements || [],
       objectives: this.props.initialObjectives,
-      originalLessonData: this.props.initialLessonData
+      originalLessonData: this.props.initialLessonData,
     };
   }
 
@@ -105,8 +107,8 @@ class LessonEditor extends Component {
         standards: JSON.stringify(this.props.standards),
         opportunityStandards: JSON.stringify(this.props.opportunityStandards),
         announcements: JSON.stringify(this.state.announcements),
-        originalLessonData: JSON.stringify(this.state.originalLessonData)
-      })
+        originalLessonData: JSON.stringify(this.state.originalLessonData),
+      }),
     })
       .done(data => {
         if (shouldCloseAfterSave) {
@@ -124,13 +126,21 @@ class LessonEditor extends Component {
           this.setState({
             lastSaved: Date.now(),
             isSaving: false,
-            originalLessonData: data
+            originalLessonData: data,
           });
         }
       })
       .fail(error => {
         this.setState({isSaving: false, error: error.responseText});
       });
+  };
+
+  hasRubric = () => {
+    return !!this.props.rubricId;
+  };
+
+  getLessonId = () => {
+    return this.props.initialLessonData.id;
   };
 
   handleUpdateAnnouncements = newAnnouncements => {
@@ -154,13 +164,14 @@ class LessonEditor extends Component {
       assessment,
       purpose,
       preparation,
-      announcements
+      announcements,
     } = this.state;
     const {
       relatedLessons,
       standards,
       opportunityStandards,
-      unitInfo
+      unitInfo,
+      rubricId,
     } = this.props;
     const frameworks = this.props.initialLessonData.frameworks;
 
@@ -298,7 +309,7 @@ class LessonEditor extends Component {
             features={{
               imageUpload: true,
               resourceLink: true,
-              programmingExpression: true
+              programmingExpression: true,
             }}
           />
           <TextareaWithMarkdownPreview
@@ -339,7 +350,7 @@ class LessonEditor extends Component {
                 features={{
                   imageUpload: true,
                   resourceLink: true,
-                  programmingExpression: true
+                  programmingExpression: true,
                 }}
               />
               <TextareaWithMarkdownPreview
@@ -352,7 +363,7 @@ class LessonEditor extends Component {
                 features={{
                   imageUpload: true,
                   resourceLink: true,
-                  programmingExpression: true
+                  programmingExpression: true,
                 }}
               />
             </CollapsibleEditorSection>
@@ -460,6 +471,26 @@ class LessonEditor extends Component {
             allowMajorCurriculumChanges={allowMajorCurriculumChanges}
           />
         </CollapsibleEditorSection>
+        {!this.hasRubric() && (
+          <a
+            className="btn add-rubric"
+            style={styles.addRubric}
+            href={'/rubrics/new?lessonId=' + this.getLessonId()}
+          >
+            <i style={styles.buttonText} className="fa fa-plus-circle" />
+            Add Rubric
+          </a>
+        )}
+        {this.hasRubric() && (
+          <a
+            className="btn add-rubric"
+            style={styles.addRubric}
+            href={'/rubrics/' + rubricId + '/edit'}
+          >
+            <i style={styles.buttonText} className="fa fa-plus-circle" />
+            Edit Rubric
+          </a>
+        )}
 
         <SaveBar
           handleSave={this.handleSave}
@@ -479,7 +510,7 @@ class LessonEditor extends Component {
 
 const styles = {
   editor: {
-    width: '100%'
+    width: '100%',
   },
   input: {
     width: '100%',
@@ -488,20 +519,31 @@ const styles = {
     color: '#555',
     border: '1px solid #ccc',
     borderRadius: 4,
-    margin: 0
+    margin: 0,
   },
   checkbox: {
-    margin: '0 0 0 7px'
+    margin: '0 0 0 7px',
   },
   dropdown: {
     margin: '0 6px',
-    width: 300
+    width: 300,
   },
   warning: {
     fontSize: 20,
     fontStyle: 'italic',
-    padding: 10
-  }
+    padding: 10,
+  },
+  addRubric: {
+    fontSize: 14,
+    color: 'white',
+    background: color.cyan,
+    border: `1px solid ${color.cyan}`,
+    boxShadow: 'none',
+    margin: `5px 20px 0px`,
+  },
+  buttonText: {
+    marginRight: 7,
+  },
 };
 
 export const UnconnectedLessonEditor = LessonEditor;
@@ -513,9 +555,9 @@ export default connect(
     vocabularies: state.vocabularies,
     programmingExpressions: state.programmingExpressions,
     standards: state.standards,
-    opportunityStandards: state.opportunityStandards
+    opportunityStandards: state.opportunityStandards,
   }),
   {
-    initActivities
+    initActivities,
   }
 )(LessonEditor);

@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import ShareAllowedDialog from './ShareAllowedDialog';
 import ShareDisallowedDialog from './ShareDisallowedDialog';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
 
 class ShareDialog extends Component {
   static propTypes = {
@@ -11,16 +12,24 @@ class ShareDialog extends Component {
     isProjectLevel: PropTypes.bool.isRequired,
     allowSignedOutShare: PropTypes.bool,
     // Only applicable to Dance Party projects, used to Tweet at song artist.
-    selectedSong: PropTypes.string
+    selectedSong: PropTypes.string,
+    shareUrl: PropTypes.string,
+    thumbnailUrl: PropTypes.string,
+    isAbusive: PropTypes.bool,
+    canPrint: PropTypes.bool,
+    canPublish: PropTypes.bool,
+    isPublished: PropTypes.bool,
+    channelId: PropTypes.string,
+    appType: PropTypes.string,
+    onClickPopup: PropTypes.func,
+    hideBackdrop: BaseDialog.propTypes.hideBackdrop,
+    canShareSocial: PropTypes.bool,
+    userSharingDisabled: PropTypes.bool,
   };
 
   render() {
-    const {
-      signInState,
-      isProjectLevel,
-      allowSignedOutShare,
-      ...otherProps
-    } = this.props;
+    const {signInState, isProjectLevel, allowSignedOutShare, ...otherProps} =
+      this.props;
     // If we're on a project level (i.e. /projects/appname), always show signed
     // in version of the dialog
 
@@ -39,5 +48,5 @@ class ShareDialog extends Component {
 export const UnconnectedShareDialog = ShareDialog;
 
 export default connect(state => ({
-  signInState: state.currentUser.signInState
+  signInState: state.currentUser.signInState,
 }))(ShareDialog);

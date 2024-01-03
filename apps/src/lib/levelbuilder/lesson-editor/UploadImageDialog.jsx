@@ -12,7 +12,7 @@ export default function UploadImageDialog({
   isOpen,
   handleClose,
   uploadImage,
-  allowExpandable = true
+  allowExpandable = true,
 }) {
   const [imgUrl, setImgUrl] = useState(undefined);
   const [expandable, setExpandable] = useState(false);
@@ -43,8 +43,8 @@ export default function UploadImageDialog({
       method: 'post',
       body: formData,
       headers: {
-        'X-CSRF-Token': csrfContainer && csrfContainer.content
-      }
+        'X-CSRF-Token': csrfContainer && csrfContainer.content,
+      },
     })
       .then(response => response.json())
       .then(handleResult)
@@ -81,8 +81,11 @@ export default function UploadImageDialog({
   return (
     <LessonEditorDialog isOpen={isOpen} handleClose={handleDialogClose}>
       <h2>Upload Image</h2>
-
-      {imgUrl && <img src={imgUrl} />}
+      {
+        // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+        // Verify or update this alt-text as necessary
+      }
+      {imgUrl && <img src={imgUrl} alt="" />}
       <input
         type="file"
         name="file"
@@ -118,7 +121,7 @@ export default function UploadImageDialog({
         <Button
           text={i18n.closeAndSave()}
           onClick={handleCloseAndSave}
-          color={Button.ButtonColor.orange}
+          color={Button.ButtonColor.brandSecondaryDefault}
           className="save-upload-image-button"
           disabled={isUploading}
         />{' '}
@@ -136,18 +139,18 @@ UploadImageDialog.propTypes = {
   allowExpandable: PropTypes.bool,
   isOpen: PropTypes.bool.isRequired,
   handleClose: PropTypes.func.isRequired,
-  uploadImage: PropTypes.func.isRequired
+  uploadImage: PropTypes.func.isRequired,
 };
 
 const styles = {
   checkbox: {
-    margin: '0 0 0 7px'
+    margin: '0 0 0 7px',
   },
   label: {
-    margin: '10px 0'
+    margin: '10px 0',
   },
   spinner: {
     fontSize: 25,
-    padding: 10
-  }
+    padding: 10,
+  },
 };

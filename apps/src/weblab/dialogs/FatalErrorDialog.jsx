@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import commonI18n from '@cdo/locale';
 import weblabI18n from '@cdo/weblab/locale';
 import StylizedBaseDialog, {
-  FooterButton
+  FooterButton,
 } from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 import SupportArticleMarkdown from '@cdo/apps/weblab/SupportArticleMarkdown';
 import {reload} from '@cdo/apps/utils';
@@ -40,7 +40,7 @@ export default function FatalErrorDialog({
       onClick={handleClose}
       key="confirm"
       type="confirm"
-    />
+    />,
   ];
 
   return (
@@ -59,5 +59,5 @@ FatalErrorDialog.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   errorMessage: PropTypes.string.isRequired,
   handleClose: PropTypes.func.isRequired,
-  handleResetProject: PropTypes.func.isRequired
+  handleResetProject: PropTypes.func.isRequired,
 };

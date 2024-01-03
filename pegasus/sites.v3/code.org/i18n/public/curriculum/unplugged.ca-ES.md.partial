@@ -10,12 +10,12 @@ Hem recopilat una llista de totes les nostres lliçons sense connexió perquè l
 <br>
 <div class="col-50">
 Ens referim a lliçons en que els estudiants no treballen amb un ordinador "sense connexió." Els alumnes sovint treballaran amb paper i llapis o manipulant elements físics.  Són oportunitats cinestèsiques col·locades de forma intencionada per ajudar els alumnes a digerir conceptes complicats de formes relacionades amb les seves vivencies. <br><br>
-Unplugged lessons are particularly useful for building and maintaining a collaborative classroom environment, and they are useful touchstone experiences you can refer to when introducing more abstract concepts. Each of these activities can either be used alone or with other computer science lessons on related concepts.
+Les liçons sense connexió són especialment útils per fomentar i estimular una dinàmica col·laborativa a l'aula, i ajuden a establir uns coneixements bàsics que aniran molt bé a l'hora d'introduir conceptes més abstractes. Totes aquestes activitats es poden fer independentment o en combinació amb altres lliçons d'informàtica sobre conceptes relacionats.
 </div>
 
 <div class="col-50" style="text-align:center">
 <img src="/images/new-main.jpg" width="90%">
-<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Ages 4+, English only
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;A partir de 4 anys, només en anglès
 </div>
 
 <div style="clear: both;"></div>
@@ -60,56 +60,56 @@ th, td {
 </style>
 <table style="width:100%">
   <tr>
-    <th><center><big>Course</th>
-    <th><center><big>Lesson Plan</th>
-    <th width=10%><center><big>Concept</th>
-    <th width=20%><center><big>Video</th>
+    <th><center><big>Curs</th>
+    <th><center><big>Pla de la lliçó</th>
+    <th width=10%><center><big>Concepte</th>
+    <th width=20%><center><big>Vídeo</th>
      <tr>
-    <th rowspan="3" id="t01">Course A</th>
-    <td width=40%><a href="https://studio.code.org/s/coursea-2022/lessons/3">A.3 - Happy Maps</a><br><small>This unplugged lesson brings together teams with a simple task: get the "flurb" to the fruit. Students will practice writing precise instructions as they work to translate instructions into the symbols provided. If problems arise in the code, students should also work together to recognize bugs and build solutions.</td><td>Sequencing</td> <td>{{ curriculum/unplugged/coursea_one_video_thumbnail }}</td>
+    <th rowspan="3" id="t01">Curs A</th>
+    <td width=40%><a href="https://studio.code.org/s/coursea-2022/lessons/3">A.3 - Mapes feliços</a><br><small>Aquesta lliçó sense connexió fa que es formin equips amb una missió senzilla: portar el "flurb" a la fruita. Els alumnes practicaran la redacció d'instruccions precises a mesura que tradueixen les instruccions als símbols proporcionats. Si sorgeixen problemes amb el codi, també haurien de treballar junts per identificar errors i trobar solucions.</td><td>Seqüenciació</td> <td>{{ curriculum/unplugged/coursea_one_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td width=40%><a href="https://studio.code.org/s/coursea-2022/lessons/7">A.7 - Happy Loops</a><br><small>This activity revisits Happy Maps. This time, student will be solving bigger, longer puzzles with their code, leading them to see utility in structures that let them write longer code in an easier way.</td><td>Loops</td> <td><img src="/images/a7.png" width="90%"></td>
+    <td width=40%><a href="https://studio.code.org/s/coursea-2022/lessons/7">A.7 - Bucles feliços</a><br><small>Aquesta activitat fa un repàs de l'activitat dels Mapes feliços. Aquesta vegada, els alumnes faran servir el codi per resoldre uns trencaclosques més grans i llargs, la qual cosa els portarà a veure la utilitat de les estructures que els permeten escriure codi més llarg de maneres més senzilles.</td><td>Bucles</td> <td><img src="/images/a7.png" width="90%"></td>
   <tr>
-    <td width=40%><a href="https://studio.code.org/s/coursea-2022/lessons/11">A.11 - The Big Event Jr.</a><br><small>Events are a great way to add variety to a pre-written algorithm. Sometimes you want your program to be able to respond to the user exactly when the user wants it to. That is what events are for.</td><td>Events</td> <td>{{ curriculum/unplugged/coursea_three_video_thumbnail }}</td>
-  </tr>
-       <tr>
-    <th rowspan="3" id="t02">Course B</th>
-    <td><a href="https://studio.code.org/s/courseb-2022/lessons/2">B.2 - Move It, Move It</a><br><small>This lesson will work to prepare students mentally for the coding exercises that they will encounter over the length of this course. In small teams, students will use physical activity to program their classmates to step carefully from place to place until a goal is achieved.</td><td>Sequencing</td> <td>{{ curriculum/unplugged/courseb_one_video_thumbnail }}</td>
-  </tr>
-  <tr>
-    <td><a href="https://studio.code.org/s/courseb-2022/lessons/6">B.6 - Getting Loopy</a><br><small>As we start to write longer and more interesting programs, our code often contains a lot of repetition. In this lesson, students will learn about how loops can be used to more easily communicate instructions that have a lot of repetition by looking at the repeated patterns of movement in a dance.</td><td>Loops</td> <td>{{ curriculum/unplugged/courseb_two_video_thumbnail }}</td>
-  <tr>
-    <td><a href="https://studio.code.org/s/courseb-2022/lessons/10">B.10 - The Right App</a><br><small>This lesson has students recognize that computer science can help people in real life. First, students empathize with several fictional smartphone users in order to help them find the “right app” that addresses their needs. Then, students exercise empathy and creativity to sketch their own smartphone app that addresses the needs of one additional user.</td><td>Impacts of Computing</td> <td><img src="/images/b10.png" width="90%"></td>
+    <td width=40%><a href="https://studio.code.org/s/coursea-2022/lessons/11">A.11 - El gran esdeveniment Jr.</a><br><small>Els esdeveniments són una gran manera d'afegir varietat a un algorisme ja escrit. De vegades, cal que els programes reaccionin exactament quan l'usuari vol. Per això serveixen els esdeveniments.</td><td>Esdeveniments</td> <td>{{ curriculum/unplugged/coursea_three_video_thumbnail }}</td>
   </tr>
        <tr>
-    <th rowspan="4" id="t03">Course C</th>
-    <td><a href="https://studio.code.org/s/coursec-2022/lessons/2">C.2 - My Robotic Friends Jr.</a><br><i>*Supplies: Plastic cups (10/group of 2-3)</i><br><small>Using a set of symbols in place of code, students will design algorithms to instruct a "robot" to stack cups in different patterns. Students will take turns participating as the robot, responding only to the algorithm defined by their peers. This segment teaches students the connection between symbols and actions, the difference between an algorithm and a program, and the valuable skill of debugging.</td><td>Sequencing</td><td>{{ curriculum/unplugged/coursec_one_video_thumbnail }}</td>
+    <th rowspan="3" id="t02">Curs B</th>
+    <td><a href="https://studio.code.org/s/courseb-2022/lessons/2">B.2 - A moure's!</a><br><small>Aquesta lliçó prepara mentalment els alumnes pels exercicis de programació que faran al llarg d'aquest curs. En grups reduïts, els alumnes faran servir l'activitat física per programar els seus companys perquè es vagin movent fins arribar a un objectiu.</td><td>Seqüenciació</td> <td>{{ curriculum/unplugged/courseb_one_video_thumbnail }}</td>
   </tr>
   <tr>
-   <td><a href="https://studio.code.org/s/coursec-2022/lessons/7">C.7 - My Loopy Robotic Friend Jr</a><br><i>*Supplies: Paper cups (20/group of 4)</i><br><small>Overview
-Building on the initial "My Robotic Friends" activity, students tackle larger and more complicated designs. In order to program their "robots" to complete these bigger designs, students will need to identify repeated patterns in their instructions that could be replaced with a loop.</td><td>Loops</td><td>{{ curriculum/unplugged/coursec_three_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/courseb-2022/lessons/6">B.6 - Fem bucles</a><br><small>A mesura que comencem a escriure programes més llargs i interessants, el codi sovint conté moltes repeticions. En aquesta lliçó, els alumnes aprendran que els bucles es poden fer servir per comunicar més fàcilment les instruccions que contenen moltes repeticions, i per fer-ho es fixaran en els patrons de moviments repetits que formen part d'un ball.</td><td>Bucles</td> <td>{{ curriculum/unplugged/courseb_two_video_thumbnail }}</td>
+  <tr>
+    <td><a href="https://studio.code.org/s/courseb-2022/lessons/10">B.10 - L'aplicació ideal</a><br><small>Aquesta lliçó fa veure als alumnes que la informàtica pot ajudar les persones a la vida real. En primer lloc, s'identificaran amb diversos usuaris ficticis de telèfons intel·ligents per ajudar-los a trobar "l'aplicació ideal" que més s'adapti a les seves necessitats. Després, posaran en pràctica l'empatia i la creativitat per esbossar una aplicació mòbil que s'adapti a les necessitats d'un altre usuari.</td><td>Els impactes de la informàtica</td> <td><img src="/images/b10.png" width="90%"></td>
+  </tr>
+       <tr>
+    <th rowspan="4" id="t03">Curs C</th>
+    <td><a href="https://studio.code.org/s/coursec-2022/lessons/2">C.2 - Els meus amics robòtics Jr.</a><br><i>*Materials: gots de plàstic (10/grup de 2-3)</i><br><small>Fent servir un conjunt de símbols en comptes de codi, els alumnes dissenyaran algorismes per donar instruccions a un "robot" perquè faci piles de gots formant patrons diferents. Els alumnes faran torns per ser el robot, i només seguiran l'algorisme definit pels seus companys. Aquest segment ensenya els alumnes la relació entre els símbols i les accions, la diferència entre un algorisme i un programa, i el valor de saber depurar.</td><td>Seqüenciació</td><td>{{ curriculum/unplugged/coursec_one_video_thumbnail }}</td>
+  </tr>
+  <tr>
+   <td><a href="https://studio.code.org/s/coursec-2022/lessons/7">C.7 - Els meus amics robòtics amb bucles Jr.</a><br><i>*Materials: gots de paper (20/grup de 4)</i><br><small>Resum
+A partir de l'activitat inicial "Els meus amics robótics", els alumnes faran dissenys més grans i enrevessats. Per tal de programar els seuse "robots" perquè facin aquests dissenys més grans, hauran d'identificar els patrons que es repeteixen a les seves instruccions i que es podrien substituir per un bucle.</td><td>Loops</td><td>{{ curriculum/unplugged/coursec_three_video_thumbnail }}</td>
   </tr>
       <tr>
-   <td><a href="https://studio.code.org/s/coursec-2022/lessons/11">C.11 - The Big Event</a><br><small>Students will soon learn that events are a great way to add flexibility to a pre-written algorithm. Sometimes you want your program to be able to respond to the user exactly when the user wants it to. Events can make your program more interesting and interactive.</td><td>Events</td><td>{{ curriculum/unplugged/coursec_four_video_thumbnail }}</td>
+   <td><a href="https://studio.code.org/s/coursec-2022/lessons/11">C.11 - El gran esdeveniment</a><br><small>Els alumnes de seguida s'adonaran que els esdeveniments són una manera fantàstica d'aportar flexibilitat a un algorisme ja escrit. De vegades, cal que els programes reaccionin exactament quan l'usuari vol. Els esdeveniments poden fer que el teu programa sigui més interessant i interactiu.</td><td>Esdeveniments</td><td>{{ curriculum/unplugged/coursec_four_video_thumbnail }}</td>
    </tr>
        </tr>
-     <td><a href="https://studio.code.org/s/coursec-2022/lessons/15">C.15 - Binary Bracelets</a><br><i>*Supplies: Markers. Optional – 18 black/18 white beads, 1 pipe cleaner per student</i><br><small>Binary is extremely important in the world of computers. The majority of computers today store all sorts of information in binary form. This lesson helps demonstrate how it is possible to take something from real life and translate it into a series of ons and offs.</td><td>Binary</td><td>{{ curriculum/unplugged/coursec_two_video_thumbnail }}</td>
+     <td><a href="https://studio.code.org/s/coursec-2022/lessons/15">C.15 - Polseres binàries</a><br><i>*Materials: Retoladors. Opsional – 18 boletes negres/18 boletes blances, 1 netejapipes per alumne</i><br><small>El codi binari és sumament important en el món de la informàtica. La majoria dels ordinadors d'avui emmagatzemen tot tipus d'informació en forma binària. Aquesta lliçó ajuda a demonstrar com podem agafar una cosa de la vida quotidiana i convertir-la a un seguit d'apagats i encesos.</td><td>Binari</td><td>{{ curriculum/unplugged/coursec_two_video_thumbnail }}</td>
   </tr>
          <tr>
-    <th rowspan="3" id="t04">Course D</th>
-    <td><a href="https://studio.code.org/s/coursed-2022/lessons/2">D.2 - Graph Paper Programming<br></a><small>By "programming" one another to draw pictures, students get an opportunity to experience some of the core concepts of programming in a fun and accessible way. The class will start by having students use symbols to instruct each other to color squares on graph paper in an effort to reproduce an existing picture. If there’s time, the lesson can conclude with images that the students create themselves.</td><td>Sequencing</td><td>{{ curriculum/unplugged/coursed_one_video_thumbnail }}</td>
+    <th rowspan="3" id="t04">Curs D</th>
+    <td><a href="https://studio.code.org/s/coursed-2022/lessons/2">D.2 - Programació amb paper quadriculat<br></a><small>En "programar-se" entre ells per fer dibuixos, els alumnes tenen l'oportunitat d'experimentar amb alguns dels conceptes principals de la programació d'una manera divertida i accessible. El punt de partida de la classe consisteix a demanar als alumnes que facin servir símbols per donar-se instruccions mútuament per pintar quadrats en un paper quadriculat per tal de reproduir una imatge existent. Si teniu temps, podeu acabar fent que creïn les seves pròpies imatges.</td><td>Seqüenciació</td><td>{{ curriculum/unplugged/coursed_one_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursed-2022/lessons/4">D.4 - Relay Programming<br></a><small>This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.</td><td>Sequencing</td><td>{{ curriculum/unplugged/coursed_two_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursed-2022/lessons/4">D.4 - Programació amb relleus<br></a><small>Aquesta activitat començarà amb una lliçó breu sobre depuració i persistència, i de seguida passarà a ser una cursa contra rellotge en què els alumnes es reparteixen en equips i escriuen un programa instrucció a instrucció.</td><td>Seqüenciació</td><td>{{ curriculum/unplugged/coursed_two_video_thumbnail }}</td>
       </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursed-2022/lessons/12">D.12 - Conditionals with Cards</a><br><small>This lesson demonstrates how conditionals can be used to tailor a program to specific information. We don’t always have all of the information we need when writing a program. Sometimes you will want to do something different in one situation than in another, even if you don't know what situation will be true when your code runs. That is where conditionals come in. Els condicionals permeten que l'ordinador prengui una decisió, en base a la informació que és verdadera en qualsevol moment que el vostre codi es posi en funcionament.+</td><td>Condicionals</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursed-2022/lessons/12">D.12 - Condicionals amb cartes</a><br><small>Aquesta lliçó demostra com es poden fer servir els condicionals per tal que un programa s'ajusti a una informació concreta. No sempre tenim tota la informació necessària per escriure un programa. De vegades volem fer coses diferents segons la situació, fins i tot si no sabem quina situació es donarà quan executis el codi. I aquí és on entren els condicionals. Els condicionals permeten que l'ordinador prengui una decisió, en base a la informació que és verdadera en qualsevol moment que el vostre codi es posi en funcionament.+</td><td>Condicionals</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
 
   </tr>
   <tr>
     <th rowspan="3" id="t05">Course E</th>
-    <td><a href="https://studio.code.org/s/coursee-2022/lessons/9">E.9 - Editor de cançons</a><br><small>Una de les estructures més magnífiques al món de les ciències informàtiques és la funció. Functions (sometimes called procedures) are mini programs that you can use over and over inside of your bigger program. Aquesta lliçó ajudarà als alumnes a entendre de forma intuitiva perquè combinar grups grans de codis en funcions pot ser una pràctica tan útil.</td><td>Functions</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursee-2022/lessons/9">E.9 - Editor de cançons</a><br><small>Una de les estructures més magnífiques al món de les ciències informàtiques és la funció. Les funcions (de vegades anomenades procediments) són miniprogrames que es poden utilitzar una vegada i una altra dins d'un programa més gran. Aquesta lliçó ajudarà als alumnes a entendre de forma intuitiva perquè combinar grups grans de codis en funcions pot ser una pràctica tan útil.</td><td>Functions</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
   </tr>
   <tr>
     <td><a href="https://studio.code.org/s/coursee-2022/lessons/15">E.15 - Disenyar per a l'accessibilitat</a><br><small>En aquesta lliçó, els alumnes aprendran l'accessibilitat i el valor d'empatia a través de la pluja d'idees aproximada i dissenyant solucions accessibles per aplicaciones hipotètiques..</td><td>Impactes de la Informàtica</td><td><img src="/images/e18.png" width="90%"></td>
@@ -123,24 +123,24 @@ Building on the initial "My Robotic Friends" activity, students tackle larger an
    </td><td>Variables</td><td>{{ curriculum/unplugged/coursef_one_video_thumbnail }}</td>
   </tr>
         <tr>
-    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 - For Loop Fun</a><br><i>*Supplies: Dice (3 dice/group of 2-4)</i><br><small>We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops that have extra structures built right in. Aquestes noves estructures permetran que els alumnes creïn un codi que sigui més potent i dinàmic.</td><td>Per llaços</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 - Diversió amb el bucle "for"</a><br><i>*Materials: daus (3 daus/grup de 2-4)</i><br><small>Sabem que els bucles ens permeten fer una cosa moltes vegades, però ara aprendrem com fer servir uns bucles que tenen estructures addicionals a dins. Aquestes noves estructures permetran que els alumnes creïn un codi que sigui més potent i dinàmic.</td><td>Per llaços</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td><a href="https://studio.code.org/s/coursef-2022/lessons/15">F.15 -Internet</a><br><small>Encara que moltes persones utilitzin internet a diari, no hi ha tantes que saben com funciona. In this lesson, students will pretend to flow through the internet, all the while learning about connections, URLs, IP Addresses, and the DNS.</td><td>Data</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursef-2022/lessons/15">F.15 -Internet</a><br><small>Encara que moltes persones utilitzin internet a diari, no hi ha tantes que saben com funciona. En aquesta lliçó, els alumnes fingiran que naveguen per internet mentre aprenen sobre connexions, URL, adreces IP i DNS.</td><td>Dades</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>
   </tr>
 </table>
 
 <p style="clear:both"></p>
 
 ***
-## Additional Unplugged lessons
+## Lliçons sense connexió addicionals
 
-The following lessons are organized by concept and can be found in earlier versions of our CS Fundamentals courses. Additional resources you may want to consult as you plan to use these lessons include:
-* [2019 Course A-F Curriculum Guide](https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview) | [2019 Course A-F Supply List](https://docs.google.com/document/d/e/2PACX-1vRLQiHVgq1oIXytilpBZDoeEn2_JcIN__r600AbUKTSGkQDaydXAGKpmUu1J7mTVBEkh9ZOnGcBDQQt/pub) | [2019 Course Amazon Lists](https://www.amazon.com/ideas/amzn1.account.AFRP6N2PQKQ73HHEN6SJNS5ONHEA)
-* [2018 Course A-F Curriculum Guide](https://code.org/curriculum/docs/csf/CSF_Curriculum_Guide_2018_smaller.pdf)
-* [2017 Course A-F Curriculum Guide (v2)](https://code.org/curriculum/docs/csf/CSF_TeacherGuide_CoursesA-F_v2a_small.pdf)
-* [Course 1-4 Curriculum Guide](http://code.org/curriculum/docs/k-5/complete_compressed.pdf)
-* [CSF Flashcards](https://code.org/curriculum/docs/k-5/flashCards.pdf) <br><br>
+Les lliçons següents s'organitzen per concepte i es poden trobar en versions anteriors dels nostres cursos de Fonaments de la Informàtica. Alguns recursos addicionals que potser us interessarà consultar mentre planifiqueu fer aquestes lliçons inclouen:
+* [Guia del pla d'estudis del curs Curs A-F - 2019](https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview) | [Llista de materials per al Curs A-F -2019](https://docs.google.com/document/d/e/2PACX-1vRLQiHVgq1oIXytilpBZDoeEn2_JcIN__r600AbUKTSGkQDaydXAGKpmUu1J7mTVBEkh9ZOnGcBDQQt/pub) | [Llistes d'Amazon per al Curs - 2019](https://www.amazon.com/ideas/amzn1.account.AFRP6N2PQKQ73HHEN6SJNS5ONHEA)
+* [Guia del pla d'estudis del Curs A-F - 2018](https://code.org/curriculum/docs/csf/CSF_Curriculum_Guide_2018_smaller.pdf)
+* [Guia del pla d'estudis del Curs A-F - 2017 (versió 2)](https://code.org/curriculum/docs/csf/CSF_TeacherGuide_CoursesA-F_v2a_small.pdf)
+* [Guia del pla d'estudis del Curs 1-4](http://code.org/curriculum/docs/k-5/complete_compressed.pdf)
+* [Targetes de Fonaments de la Informàtica](https://code.org/curriculum/docs/k-5/flashCards.pdf) <br><br>
 
 <style>
 table, th, td {
@@ -159,77 +159,78 @@ th, td {
 </style>
 <table style="width:100%">
   <tr>
-    <th><center><big>Concept</th>
-    <th width=65%><center><big>Lesson Plan <br>
-<small> Lesson Plan includes additional resources (slides, videos, answer keys, etc).
+    <th><center><big>Concepte</th>
+    <th width=65%><center><big>Pla de la lliçó <br>
+<small> El pla de la lliçó inclou recursos addicionals (diapositives, vídeos, fulls de respostes, etc.).
 </th>
-    <th><center><big>Resources</th>
+    <th><center><big>Recursos</th>
      <tr>
-    <th rowspan="2" id=t07 width=5%>Digital Citizenship</th>
-    <td><a href="https://curriculum.code.org/csf-19/coursef/18">Crowdsourcing</a></td> <td>{{ curriculum/unplugged/archive_one_video_thumbnail }}</td>
+    <th rowspan="2" id=t07 width=5%>Ciutadania digital</th>
+    <td><a href="https://curriculum.code.org/csf-19/coursef/18">Col·laboració</a></td> <td>{{ curriculum/unplugged/archive_one_video_thumbnail }}</td>
   </tr>
   <tr>
-      <td colspan="2">*Common Sense Education has a <a href="https://www.commonsense.org/education/digital-citizenship/curriculum">full Digital Citizenship Curriculum</a> that includes many unplugged activities.</td>
+      <td colspan="2">*Common Sense Education disposa d'un <a href="https://www.commonsense.org/education/digital-citizenship/curriculum">pla d'estudis complet sobre ciutadania digital</a> que inclou moltes activitats sense connexió.</td>
     <tr>
-    <th id=t07>Binary</th>
-        <td><a href="https://curriculum.code.org/csf-20/coursed/16/">Binary Images </a><br><small>*Supplies:Optional - Groupings of opposite items to display to students. Though many people think of binary as strictly zeros and ones, students will be introduced to the idea that information can be represented in a variety of binary options. This lesson takes that concept one step further as it illustrates how a computer can store even more complex information (such as images and colors) in binary, as well.</td><td>{{ curriculum/unplugged/coursed_four_video_thumbnail }}</td>
+    <th id=t07>Binari</th>
+        <td><a href="https://curriculum.code.org/csf-20/coursed/16/">Imatges binàries </a><br><small>*Materials: Opcional - Grups d'objectes oposats per ensenyar als alumnes. Tot i que hi ha molta gent que creu que el codi binari només consisteix a zeros i uns, es farà veure als alumnes que la informació es pot representar de moltes maneres binàries. Aquesta lliçó porta aquest concepte un pas més enllà, ja que ensenya que un ordinador també pot emmagatzemar informació encara més complexa (com ara imatges i colors) en binari.</td><td>{{ curriculum/unplugged/coursed_four_video_thumbnail }}</td>
  </tr>
     <tr>
-    <th id=t07>Loops</th>
-        <td><a href="https://curriculum.code.org/csf-18/coursee/6/">My Loopy Robotic Friends</a><br><small>Here, students learn the simplicity and utility of loops by “programming” their friends using the language from "My Robotic Friends." Once loops are introduced, students will find that they can build bigger structures faster.
+    <th id=t07>Bucles</th>
+        <td><a href="https://curriculum.code.org/csf-18/coursee/6/">Els meus amics robòtics</a><br><small>Aquí, els alumnes aprendran sobre la simplicitat i la utilitat dels bucles mentre "programen" els seus amics amb el llenguatge de l'activitat "Els meus amics robòtics". Un cop s'introdueixen els bucles, els alumnes s'adonaran que poden construir estructures més grans, més ràpidament.
 </td> <td>{{ curriculum/unplugged/archive_two_video_thumbnail }}</td>
   </tr>
-     <th rowspan="2" id=t07>Functions</th>
-    <td><a href="https://code.org/curriculum/course3/4/Teacher">Functional Suncatchers</a><br><small>In this lesson, students will make a suncatcher out of string, beads, and a special charm. The students will follow a series of repetitive steps, then be asked to identify certain sets of “skills” that are duplicated several times. Once those skills are defined, they will be called from a main program and the whole beautiful process of creation will be recorded on a single sheet of paper. The final program will be geared toward the entire class, whatever their type of string, beads, and charms. To effectively allow for this, students will need to “abstract out” the details of their specific materials and create vague terms for an individual’s supplies. This use of generic placeholders is a wonderful introduction to variables.</td> <td><a href="https://youtu.be/d1MdyeXy0v0">Lesson Video</a><br><a href="https://www.youtube.com/watch?v=Rb5DNYhLb7I">See Lesson in Action</a><br><a href="https://www.code.org/curriculum/course3/4/Key-Activity4-FunctionalSuncatchers.pdf">Activity Answer Key <a href="https://www.code.org/curriculum/course3/4/Key-Assessment4-FunctionalSkills.pdf">Assessment Answer Key</a></td>
+     <th rowspan="2" id=t07>Funcions</th>
+    <td><a href="https://code.org/curriculum/course3/4/Teacher">Atrapa-somnis funcionals</a><br><small>En aquesta lliçó, els alumnes faran un atrapa-somnis amb corda, boletes i un penjoll especial. Els alumnes seguiran una sèrie de passos repetitius, i després se'ls demanarà que identifiquin certs conjunts “d'habilitats” que es dupliquen diverses vegades. Un cop definides aquestes habilitats, es cridaran des d'un programa principal i tot el procés de creació quedarà registrar en un full de paper. El programa final implicarà tota la classe, sigui quin sigui el tipus de corda, de boletes i de penjolls que hagin fet servir. Per tal que això sigui possible, els alumnes hauran "d'abstraure" els detalls dels materials específics que facin servir per crear uns termes generals per descriure els materials de cadascun.  Aquest ús de nomenclatura general és una manera fantàstica d'introduir les variables.</td> <td><a href="https://youtu.be/d1MdyeXy0v0">Vídeo de la lliçó</a><br><a href="https://www.youtube.com/watch?v=Rb5DNYhLb7I">Vegeu la lliçó en acció</a><br><a href="https://www.code.org/curriculum/course3/4/Key-Activity4-FunctionalSuncatchers.pdf">Full de respostes de l'activitat <a href="https://www.code.org/curriculum/course3/4/Key-Assessment4-FunctionalSkills.pdf">Full de respostes de l'avaluació</a></td>
   </tr>
   <tr>
-    <td><a href="https://curriculum.code.org/csf-1718/coursef/21/">Songwriting with Parameters</a><br><small>One of the most magnificent structures in the computer science world is the function. Functions (sometimes called procedures) are mini programs that you can use over and over inside of your bigger program. This lesson will help students intuitively understand why combining chunks of code into functions is such a helpful practice, and how they can use those structures even when chunks of code are slightly different.
+    <td><a href="https://curriculum.code.org/csf-1718/coursef/21/">Composició de cançons amb paràmetres</a><br><small>Una de les estructures més fantàstiques del món de la informàtica és la funció. Les funcions (de vegades anomenades procediments) són miniprogrames que es poden utilitzar una vegada i una altra dins d'un programa més gran. Aquesta lliçó ajudarà els alumnes a comprendre intuïtivament per què combinar trossos de codi en funcions resulta tan útil, i com poden utilitzar aquestes estructures fins i tot quan els trossos de codi són una mica diferents.
 </td> <td>{{ curriculum/unplugged/archive_three_video_thumbnail }}</td>
   </tr>
-     <th rowspan="6" id=t07>Algorithms</th>
-    <td><a href="https://curriculum.code.org/csf-1718/coursee/10/">Dice Race</a><br><small>In this lesson, students will relate the concept of algorithms back to real-life activities by playing the Dice Race game. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.
+     <th rowspan="6" id=t07>Algorismes</th>
+    <td><a href="https://curriculum.code.org/csf-1718/coursee/10/">Cursa de daus</a><br><small>En aquesta lliçó, els alumnes relacionaran el concepte dels algorismes amb activitats de la vida quotidiana jugant a curses de daus. L'objectiu és començar a adquirir les habilitats necessàries per traduir situacions del món real a escenaris virtuals, i viceversa.
 </td> <td>{{ curriculum/unplugged/archive_four_video_thumbnail }}</td>
   </tr>
   <tr>
-    <td><a href="https://curriculum.code.org/csf-18/coursee/1">My Robotic Friends</a><br><small>Using a predefined symbol key, your students will figure out how to guide one another to accomplish specific tasks without using any verbal commands. This segment teaches students the connection between symbols and actions, the difference between an algorithm and a program, and the valuable skill of debugging.</td> <td>{{ curriculum/unplugged/archive_five_video_thumbnail }}</td>
+    <td><a href="https://curriculum.code.org/csf-18/coursee/1">Els meus amics robòtics</a><br><small>Amb un full de símbols predefinits, els alumnes descobriran com guiar-se els uns als altres per dur a terme tasques concretes sense fer servir cap ordre verbal. Aquest segment ensenya els alumnes la relació entre els símbols i les accions, la diferència entre un algorisme i un programa, i el valor de saber depurar.</td> <td>{{ curriculum/unplugged/archive_five_video_thumbnail }}</td>
   </tr>
     <tr>
-    <td><a href="https://curriculum.code.org/csf-18/coursec/4/">Real-Life Algorithms: Paper Planes</a><br><small>In this lesson, students will relate the concept of algorithms back to everyday activities. After discussing algorithms, students will make paper airplanes using an algorithm. The goal here is to start building the skills to translate real world situations to online scenarios and vice versa.</td> <td>{{ curriculum/unplugged/archive_six_video_thumbnail }}</td>
+    <td><a href="https://curriculum.code.org/csf-18/coursec/4/">Algorismes de la vida quotidiana: Avions de paper</a><br><small>En aquesta lliçó, els alumnes relacionaran el concepte dels algorismes amb activitats de la vida quotidiana. Després de parlar sobre els algorismes, els alumnes faran avions de paper a través d'un algorisme. L'objectiu és començar a adquirir les habilitats necessàries per traduir situacions del món real a escenaris virtuals, i viceversa.</td> <td>{{ curriculum/unplugged/archive_six_video_thumbnail }}</td>
   </tr>
     <tr>
-    <td><a href="https://curriculum.code.org/csf-18/coursea/3/">Real Life Algorithms: Plant a Seed</a><br><small>In this lesson, students will relate the concept of algorithms back to everyday, real-life activities by planting an actual seed. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.</td> <td>{{ curriculum/unplugged/archive_seven_video_thumbnail }}</td>
+    <td><a href="https://curriculum.code.org/csf-18/coursea/3/">Algorismes de la vida quotidiana: Planta una llavor</a><br><small>En aquesta lliçó, els alumnes relacionaran el concepte dels algorismes amb activitats quotidianes i de la vida real, i per fer-ho plantaran una llavor. L'objectiu és començar a adquirir les habilitats necessàries per traduir situacions del món real a escenaris virtuals, i viceversa.</td> <td>{{ curriculum/unplugged/archive_seven_video_thumbnail }}</td>
   </tr>
     <tr>
-    <td><a href="https://curriculum.code.org/csf-1718/coursef/10/">Tangrams</a><br><small>This lesson shows us something important about algorithms. As long as you keep an algorithm simple, there are lots of ways to use it. However, if you want to make sure everyone produces the same outcome, then your algorithm needs more detail. Students will learn the difference between a detailed and general algorithm while playing with tangrams.</td> <td>{{ curriculum/unplugged/archive_eight_video_thumbnail }}</td>
+    <td><a href="https://curriculum.code.org/csf-1718/coursef/10/">Tangrams</a><br><small>Aquesta lliçó ens ensenya una cosa molt important sobre els algorismes. Mentre l'algorisme sigui senzill, hi ha moltes maneres de fer-lo servir. Ara bé, si la intenció és que tothom obtingui el mateix resultat, l'algorisme haurà de ser més detallat. Els alumnes aprendran la diferència entre un algorisme detallat i un algorisme general mentre juguen amb tangrams.</td> <td>{{ curriculum/unplugged/archive_eight_video_thumbnail }}</td>
   </tr>
   </tr>
     <tr>
   </tr>
     </tr>
-     <th id=t07 rowspan="4">Computational Thinking</th>
+     <th id=t07 rowspan="4">Pensament computacional</th>
         <tr>
-        <td><a href="https://code.org/curriculum/course3/1/Teacher">Computational Thinking</a><br><small>For this activity, no instructions are provided. Instead, students will use examples of what imaginary players have done to figure out how to play the game. This lesson gives students the opportunity to practice the four arts of computational thinking (decomposition, pattern matching, abstraction, and algorithms) in one cohesive activity.</td> <td><a href="https://youtu.be/TlAaklrolA0">Lesson Video</a><br><a href="https://www.youtube.com/watch?v=b4a7Ty1TpKU">See Lesson in Action</a><br><a href="https://www.code.org/curriculum/course3/1/Key-Activity1-ComputationalThinking.pdf">Activity Answer Key </a></td>
+        <td><a href="https://code.org/curriculum/course3/1/Teacher">Pensament computacional</a><br><small>Per aquesta activitat no es proporcionen instruccions. Els alumnes faran servir exemples d'allò que han fet uns jugadors imaginaris per descobrir com es juga al joc. Aquesta lliçó dona als alumnes l'oportunitat de posar en pràctica els quatre arts del pensament computacional (descomposició, concordança de patrons, abstracció i algorismes) en una activitat cohesionada</td> <td><a href="https://youtu.be/TlAaklrolA0">Vídeo de la lliçó</a><br><a href="https://www.youtube.com/watch?v=b4a7Ty1TpKU">See La lliçó en acció</a><br><a href="https://www.code.org/curriculum/course3/1/Key-Activity1-ComputationalThinking.pdf">Respostes de l'activitat </a></td>
         </tr>
-        <td><a href="https://studio.code.org/unplugged/unplug2.pdf">Computational Thinking with Monsters</a><br><small>With nothing but paper and markers, students will learn the four steps of computational thinking. After a brief introduction, students should be split into groups where they will have to create directions for other students to draw a specific monster (from a catalog of pre-selected monsters). The entire task must be decomposed, then teams will analyze all monsters in the catalog for patterns, abstract similar details from the monsters, then use that information to create an algorithm (directions) for another team to draw a certain monster. Teams will then switch algorithms with another group and draw the monster based on what that algorithm indicates. Is the drawing what the original team intended?</td> <td>{{ curriculum/unplugged/archive_nine_video_thumbnail }}</td>
+        <td><a href="https://studio.code.org/unplugged/unplug2.pdf">Pensament computacional amb monstres</a><br><small>Els alumnes aprendran els quatre passos del pensament computacional ajudats només de fulls de paper i retoladors. Després d'una introducció breu, els alumnes es divideixen en grups per crear instruccions perquè els altres alumnes dibuixin un monstre concret (extret d'un catàleg de monstres preseleccionats). La tasca s'ha de descomposar per complet: els equips analitzaran tots els monstres del catàleg per trobar-hi patrons, abstraure detalls similars entre els monstres i, per última faran servir la informació per crear un algorisme (instruccions) perquè un altre equip dibuixo un monstre concret. Llavors, els equips s'intercanviaran els algorismes amb un altre grup i dibuixaran el monstre segons el que indiqui l'algorisme. El dibuix ha quedat com pretenia l'equip que l'ha ideat?</td> <td>{{ curriculum/unplugged/archive_nine_video_thumbnail }}</td>
   <tr>
-    <td><a href="https://curriculum.code.org/csf-18/coursea/1/">Unspotted Bugs</a><br><small>This lesson will guide students through the steps of debugging. Students will learn the mantra: "What happened? What was supposed to happen? What does that tell you?" </td> <td>{{ curriculum/unplugged/archive_ten_video_thumbnail }}</td>
+    <td><a href="https://curriculum.code.org/csf-18/coursea/1/">Errors no detectats</a><br><small>Aquesta lliçó guiarà els alumnes pels passos de la depuració. Els alumnes aprendran el següent mantra: “Què ha passat? Què se suposa que havia de passar? I això, què et diu?" </td> <td>{{ curriculum/unplugged/archive_ten_video_thumbnail }}</td>
   </tr>
     </tr>
-     <th rowspan="2" id=t07>Persistence</th>
-  <td><a href="https://curriculum.code.org/csf-18/coursec/1/">Building a Foundation</a><br><small>New and unsolved problems are often pretty hard. If we want to have any chance of making something creative, useful, and clever, then we need to be willing to attack hard problems even if it means failing a few times before we succeed. In this lesson, students will be building a structure with common materials. The structure will be tested on its ability to hold a textbook for more than ten seconds. Most students will not get this right the first time, but it's important they push through and keep trying.</td> <td>{{ curriculum/unplugged/archive_eleven_video_thumbnail }}</td>
+     <th rowspan="2" id=t07>Persistència</th>
+  <td><a href="https://curriculum.code.org/csf-18/coursec/1/">Posant les bases</a><br><small>Els problemes nous i sense resoldre solen resultar força difícils. Si aspirem a fer alguna cosa que sigui creativa, útil i ben pensada, haurem d'estar disposats a fer front els problemes difícils, encara que això impliqui fallar diverses vegades abans d'arribar al nostre objectiu. En aquesta lliçó, els alumnes construiran una estructura amb materials d'ús freqüent. Es posarà a prova si l'estructura és capaç d'aguantar el pes d'un llibre de text durant més de deu segons. La majoria no ho aconseguiran a la primera, però és important que no es rendeixin i que segueixin intentant-ho.</td> <td>{{ curriculum/unplugged/archive_eleven_video_thumbnail }}</td>
   </tr>
   <tr>
- <td><a href="https://curriculum.code.org/csf-18/coursea/2/">Stevie and the Big Project</a><br><small>When students run into a barrier while answering a question or working on a project, it’s so easy for them to get frustrated and give up. This lesson will introduce students to the idea that frustration can be an important part of learning. Here, frustration is presented as a step in the creative process, rather than a sign of failure. This lesson can be done over one or two class sessions. If you have more time, feel free to draw out the building and revising phase of the Marble Run activity.</td> <td>{{ curriculum/unplugged/archive_twelve_video_thumbnail }}</td>
+ <td><a href="https://curriculum.code.org/csf-18/coursea/2/">La Sabina i el seu projecte</a><br><small>Quan els alumnes es troben amb un obstacle quan han de respondre una pregunta o fer un projecte, és molt fàcil que se sentint frustrats i vulguin abandonar. Aquesta lliçó els ensenyarà que la frustració pot ser una part important de l'aprenentatge. Aquí, la frustració es presenta com un pas del procés creatiu i no com un signe de fracàs. Aquesta lliçó es pot fer al llarg d'una o dues sessions. Si teniu més temps, podeu allargar la fase de construcció i revisió de l'activitat del circuit de bales.</td> <td>{{ curriculum/unplugged/archive_twelve_video_thumbnail }}</td>
   </tr>
-     <th id=t07>Abstraction</th>
-    <td><a href="https://code.org/curriculum/course4/5/Teacher">Mad Glibs</a><br><small>Abstraction is one of the most important skills for a computer scientist to understand. It simplifies problems and prevents unnecessary repetition. A good coder uses abstraction just about every time she creates a program. This activity will have your students analyze stories for differences so that they can abstract them away. Those abstracted stories become templates for fun and crazy new ones.</td> <td><a href="https://youtu.be/TctGRrUdkcc">Lesson Video</a><br><a href="https://www.code.org/curriculum/course4/5/Key-Activity5-MadGlibs.pdf">Activity Answer Key</a><br><a href="https://www.code.org/curriculum/course4/5/Key-Assessment5-MadGlibs.pdf">Assessment Answer Key </a></td>
+     <th id=t07>Abstracció</th>
+    <td><a href="https://code.org/curriculum/course4/5/Teacher">Històries d'espais buits</a><br><small>L'abstracció és una de les habilitats més importants que ha de dominar un informàtic. Simplifica els problemes i evita les repeticions innecessàries. Un bon programador fa sevir l'abstracció gairebé sempre que crea un programa. En aquesta activitat, els alumnes analitzaran històries per buscar diferències i abstraure-les. Aquestes històries abstretes es converteixen en plantilles per fer-ne unes altres de noves i divertides.</td> <td><a href="https://youtu.be/TctGRrUdkcc">Vídeo de la lliçó</a><br><a href="https://www.code.org/curriculum/course4/5/Key-Activity5-MadGlibs.pdf">Respostes de l'activitat</a><br><a href="https://www.code.org/curriculum/course4/5/Key-Assessment5-MadGlibs.pdf">Respostes de l'avaluació </a></td>
   </tr>
 <tr>
    <th id=t07>Variables</th>
-​     <td><a href="https://curriculum.code.org/csf-20/coursef/7/">Envelope Variables</a><br><i>*Supplies: Envelopes (1-4/group of 2-4)</i><br><small>Variables are used as placeholders for values such as numbers or words. Variables allow for a lot of freedom in programming. Instead of having to type out a phrase many times or remember an obscure number, computer scientists can use variables to reference them. This lesson helps to explain what variables are and how we can use them in many different ways. The idea of variables isn't an easy concept to grasp, so we recommend allowing plenty of time for discussion at the end of the lesson.</td><td>{{ curriculum/unplugged/coursef_one_video_thumbnail }}</td>
+​     <td><a href="https://curriculum.code.org/csf-20/coursef/7/">Variables amb sobres</a><br><i>*Materials: Sobres (1-4/grup de 2-4)</i><br><small>Les variables es fan servir com a marcadors per valors com ara números o paraules. Les variables ens donen molta llibertat a l'hora de programar. En lloc d'haver d'escriure una frase moltes vegades o de recordar un número difícil, els informàtics fan servir variables per referenciar-les. Aquesta lliçó ajuda a explicar què són les variables i que es poden fer servir de moltes maneres diferents. La idea de variables no és un concepte fàcil d'entendre, de manera que us recomanem que reserveu força temps per la conversa del final de la lliçó.</td><td>{{ curriculum/unplugged/coursef_one_video_thumbnail }}</td>
 </tr>
 </table>
 
 
 <p style="clear:both"></p>
 
+{{ visit_partial_event_logger }}

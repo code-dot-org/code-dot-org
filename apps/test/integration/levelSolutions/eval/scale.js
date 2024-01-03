@@ -5,9 +5,9 @@ var solutionXml = blockUtils.mathBlockXml('scale', {
   IMAGE: blockUtils.mathBlockXml('functional_square', {
     SIZE: blockUtils.mathBlockXml('functional_math_number', null, {NUM: 50}),
     COLOR: blockUtils.mathBlockXml('functional_string', null, {VAL: 'red'}),
-    STYLE: blockUtils.mathBlockXml('functional_string', null, {VAL: 'solid'})
+    STYLE: blockUtils.mathBlockXml('functional_string', null, {VAL: 'solid'}),
   }),
-  FACTOR: blockUtils.mathBlockXml('functional_math_number', null, {NUM: 2})
+  FACTOR: blockUtils.mathBlockXml('functional_math_number', null, {NUM: 2}),
 });
 
 module.exports = {
@@ -16,24 +16,24 @@ module.exports = {
   levelDefinition: {
     solutionBlocks: solutionXml,
     requiredBlocks: '',
-    freePlay: false
+    freePlay: false,
   },
   tests: [
     {
       description: 'Nothing',
       expected: {
         result: false,
-        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK
+        testResult: TestResults.EMPTY_FUNCTIONAL_BLOCK,
       },
-      xml: '<xml>' + '</xml>'
+      xml: '<xml>' + '</xml>',
     },
     {
       description: 'correct answer',
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         var user = document.getElementById('user');
         var rect = user.querySelector('rect');
 
@@ -49,54 +49,54 @@ module.exports = {
         assert(rect.getAttribute('height', 50));
         return true;
       },
-      xml: '<xml>' + solutionXml + '</xml>'
+      xml: '<xml>' + solutionXml + '</xml>',
     },
     {
       description: 'correct answer: smaller size, bigger scale',
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
       xml:
         '<xml>' +
         blockUtils.mathBlockXml('scale', {
           IMAGE: blockUtils.mathBlockXml('functional_square', {
             SIZE: blockUtils.mathBlockXml('functional_math_number', null, {
-              NUM: 25
+              NUM: 25,
             }),
             COLOR: blockUtils.mathBlockXml('functional_string', null, {
-              VAL: 'red'
+              VAL: 'red',
             }),
             STYLE: blockUtils.mathBlockXml('functional_string', null, {
-              VAL: 'solid'
-            })
+              VAL: 'solid',
+            }),
           }),
           FACTOR: blockUtils.mathBlockXml('functional_math_number', null, {
-            NUM: 4
-          })
+            NUM: 4,
+          }),
         }) +
-        '</xml>'
+        '</xml>',
     },
     {
       description: 'correct answer: bigger size, no scale',
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
       xml:
         '<xml>' +
         blockUtils.mathBlockXml('functional_square', {
           SIZE: blockUtils.mathBlockXml('functional_math_number', null, {
-            NUM: 100
+            NUM: 100,
           }),
           COLOR: blockUtils.mathBlockXml('functional_string', null, {
-            VAL: 'red'
+            VAL: 'red',
           }),
           STYLE: blockUtils.mathBlockXml('functional_string', null, {
-            VAL: 'solid'
-          })
+            VAL: 'solid',
+          }),
         }) +
-        '</xml>'
-    }
-  ]
+        '</xml>',
+    },
+  ],
 };

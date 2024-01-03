@@ -5,7 +5,7 @@ import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 import {PUZZLE_PAGE_NONE} from './progressTypes';
 import {
   activityCssClass,
-  resultFromStatus
+  resultFromStatus,
 } from '@cdo/apps/code-studio/activityUtils';
 import _ from 'lodash';
 
@@ -184,7 +184,7 @@ function lessonProgressForStudent(studentLevelProgress, lessonLevels) {
     LevelStatus.perfect,
     LevelStatus.submitted,
     LevelStatus.free_play_complete,
-    LevelStatus.completed_assessment
+    LevelStatus.completed_assessment,
   ];
 
   let attempted = 0;
@@ -217,7 +217,7 @@ function lessonProgressForStudent(studentLevelProgress, lessonLevels) {
     imperfectPercent: getPercent(imperfect),
     completedPercent: getPercent(completed),
     timeSpent: timeSpent,
-    lastTimestamp: lastTimestamp
+    lastTimestamp: lastTimestamp,
   };
 }
 
@@ -253,7 +253,7 @@ export function lessonProgressForSection(sectionLevelProgress, lessons) {
 }
 
 /**
- * The level object passed down to use via the server (and stored in
+ * The level object passed down to us via the server (and stored in
  * script.lessons.levels) contains more data than we need. This parses the parts
  * we care about to conform to our `levelType` object.
  */
@@ -262,6 +262,8 @@ export const processedLevel = level => {
     id: level.activeId || level.id,
     url: level.url,
     name: level.name,
+    app: level.app,
+    usesLab2: level.uses_lab2,
     progression: level.progression,
     progressionDisplayName: level.progression_display_name,
     kind: level.kind,
@@ -279,7 +281,7 @@ export const processedLevel = level => {
         ? level.page_number
         : PUZZLE_PAGE_NONE,
     sublevels:
-      level.sublevels && level.sublevels.map(level => processedLevel(level))
+      level.sublevels && level.sublevels.map(level => processedLevel(level)),
   };
 };
 
@@ -324,15 +326,15 @@ export const levelProgressFromServer = serverProgress => {
     timeSpent: serverProgress.time_spent,
     teacherFeedbackReviewState: serverProgress.teacher_feedback_review_state,
     lastTimestamp: serverProgress.last_progress_at,
-    pages: getPagesProgress(serverProgress)
+    pages: getPagesProgress(serverProgress),
   };
 };
 
 /**
  * Given an object from the server with student progress data keyed by level ID,
  * parse the progress data into our canonical studentLevelProgressType
- * @param {{levelId:serverProgress}} serverStudentProgress
- * @returns {{levelId:studentLevelProgressType}}
+ * @param {{[levelId: number]:serverProgress}} serverStudentProgress
+ * @returns {{[levelId: number]:studentLevelProgressType}}
  */
 export const processServerStudentProgress = serverStudentProgress => {
   return _.mapValues(serverStudentProgress, progress =>

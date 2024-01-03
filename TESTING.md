@@ -1,8 +1,15 @@
 # Testing
 
-We use automated tests to maintain quality in our codebase. Here's an overview of the kinds of tests we use, and how to run them.
+If you're new to code.org, try getting these tests working first:
+1. [Apps Tests](#apps-tests)
+2. [Dashboard Tests](#dashboard-tests)
+
+Before running tests, you should follow the [setup guide](./SETUP.md).
 
 ## Kinds of tests
+
+We use automated tests to maintain quality in our codebase. Here's an overview of the kinds of tests we use, and how to run them:
+
 * Apps directory
   * Unit Tests - Used to test client-side functionality of some of our levels, applab, and applab controls
   * Integration Tests - Used to test level solutions and some block behaviors
@@ -28,37 +35,73 @@ We use automated tests to maintain quality in our codebase. Here's an overview o
 
 ## Running tests
 
-### Using CircleCI
-
-By default, commits on branches will be tested using CircleCI, which performs a full install, build, and runs tests for changed sub-projects.
-
-Tests are run for the last commit in any given push. E.g., if you make 5 commits, push them all, only the last commit will get tested.
-
-Controlling tests:
-
-* CI can be skipped for a given commit by including the text `[ci skip]` in the commit message
-* By default, tests are only run for sub-projects which have been changed in your given branch. You can force-run all tests for a given commit by including the text `[test all]` in your commit message.
-* UI tests are run automatically. They can be disabled for a given run by including `[skip ui]` in your commit message
-* There are several other options for which tests are run on circle, which are documented here: https://github.com/code-dot-org/code-dot-org/blob/003a3e89e7eca48873827b53de8c69ab8808ec0d/lib/rake/circle.rake#L16-L51
-* Tests can be re-run with the "Rebuild" button on CircleCI.
-* Tests can be debugged by running "Rebuild with SSH", which enables SSH for the duration of the test and keeps it open for 30 minutes after tests are complete.
-
-If you’d like to make an empty commit to force run tests with a flag, you can use git’s --allow-empty command: `git commit --allow-empty -m "Run all tests [test all]"`
-
-Contributor pull requests do not build by default, but can be triggered to build by a GitHub organization team member. Note that the given PR should be scanned to ensure there is no malicious code and that no secrets would be displayed in test output.
-
-If you have a personal email address additionally added to GitHub, you can re-set code-dot-org build notifications to go to your @code.org email address at: https://circleci.com/account/notifications
 
 ### Top-level Test Helpers
 
-Our top-level `lib/rake/test.rake` file contains a handful of tasks that can be used to start tests for our different sub-projects. A full, up-to-date list of these can be found by running `rake --tasks | grep test:`.
+Our top-level `lib/rake/test.rake` file contains a handful of tasks that can be used to start tests for our different sub-projects. A full, up-to-date list of these can be found by running `bundle exec rake --tasks | grep test:`.
 
 Worth noting:
 
-* `rake test:all` - runs all tests across all sub-projects
-* `rake test:apps`, `rake test:pegasus`, `rake test:blockly_core` ... etc  - runs tests for specific sub-project
-* `rake test:changed` - detects which sub-projects have changed in this branch, runs those tests
-* `rake test:changed:apps` - runs apps tests if sub-project folder has changed
+* `bundle exec rake test:all` - runs all tests across all sub-projects
+* `bundle exec rake test:apps`, `bundle exec rake test:pegasus`, `bundle exec rake test:blockly_core` ... etc  - runs tests for specific sub-project
+* `bundle exec rake test:changed` - detects which sub-projects have changed in this branch, runs those tests
+* `bundle exec rake test:changed:apps` - runs apps tests if sub-project folder has changed
+* `bundle exec rake test:dashboard` - runs dashboard tests, but see [Dashboard Tests](#dashboard-tests) below for first time setup
+  
+
+### Apps Tests
+
+`yarn test` will lint all of the apps code and run unit and integration tests. Run this from the `apps/` directory. You can expect a full test run to take about 4-8 minutes.
+
+It's also possible to run a subset of tests:
+
+* `yarn lint`
+* `yarn test:unit`
+* `yarn test:integration`
+* `yarn test:unit --entry=./test/unit/gridUtilsTest.js`
+
+To debug tests in Chrome, append `--browser=Chrome --watchTests` to any test command.
+
+For more details, see [apps/README.md](./apps/README.md#running-tests).
+
+### Dashboard Tests
+
+Dashboard tests commands below should be run from the `dashboard/` directory: 
+
+`cd dashboard`
+
+Before running dashboard tests for the first time, run these commands to seed the required test data
+
+1. `RAILS_ENV=test bundle exec rake assets:precompile`
+2. `RAILS_ENV=test UTF8=1 bundle exec rake db:reset db:test:prepare` : seed the DB with test data
+3. `cd ../pegasus && RAILS_ENV=test bundle exec rake test:reset_dependencies && cd ../dashboard` : the pegasus test DB must be seeded as well.
+
+To run all dashboard tests, which takes about 15 mintues:
+
+`RAILS_ENV=test bundle exec rails test`
+
+If you have trouble running the tests, see [troubleshooting dashboard tests](#troubleshooting-dashboard-tests) below.
+
+#### Running a subset of Dashboard tests
+
+If you just want to run a single file of tests
+`bundle exec spring testunit ./path/to/your/test.rb` 
+(if you get a seemingly unrelated error `Unable to autoload constant..` try running `spring stop` and trying again)
+
+To run a specific unit test
+`bundle exec spring testunit ./path/to/your/test.rb --name your_amazing_test_name`
+The test name is `test_` concatenated with the name of the test listed in the test file (convert spaces to underscores). Ex: If the test is called "testing some unit" you would use `--name test_testing_some_unit`.
+
+You can get a local coverage report with
+`COVERAGE=1 bundle exec ruby -Itest ./path/to/your/test.rb`
+
+
+
+### UI Tests and Eyes Tests
+We have a set of integration tests, divided into "UI tests" (Selenium+Cucumber) and "Eyes tests" (Selenium+Cucumber+Applitools).  These tests live in [dashboard/test/ui](dashboard/test/ui) - for information on setting up and running these tests, see [the README in that directory](dashboard/test/ui) and our [guide to adding an eyes test](docs/testing-with-applitools-eyes.md).
+Or you can just use this shortcut (after you've installed chromedriver):
+
+`bundle exec rake test:ui feature=dashboard/test/ui/features/sometest.feature`
 
 ### Shared and Lib Tests
 Tests in the `shared/` and `lib/` directories need to be run slightly differently since they are outside of our Rails environment.
@@ -69,64 +112,6 @@ To run a test file in either directory, `cd` into it before running the tests.
 cd shared
 bundle exec ruby -Itest ./test/path/to/your/test.rb
 ``` 
-
-### Apps Tests
-`npm test` will lint all of the apps code and run unit and integration tests. Run this from the `apps` directory. You can expect a full test run to take about 4-8 minutes.
-
-It's also possible to run a subset of tests:
-
-* `npm run lint`
-* `npm run test:unit`
-* `npm run test:integration`
-* `npm run test:entry -- --entry=./test/unit/gridUtilsTest.js`
-
-To debug tests in Chrome, prepend `BROWSER=Chrome WATCH=1` to any test command.
-
-See [the apps readme](./apps/README.md) for more details.
-
-### Dashboard Tests
-Before running dashboard tests for the first time, run the below command to seed the required test data
-
- `RAILS_ENV=test bundle exec rake assets:precompile`
-
-To run all dashboard tests, which takes about 15 mintues
-
-`cd dashboard && RAILS_ENV=test bundle exec rails test` 
-
-If you just want to run a single file of tests, from the dashboard directory you can run
-`bundle exec spring testunit ./path/to/your/test.rb` 
-(if you get a seemingly unrelated error `Unable to autoload constant..` try running `spring stop` and trying again)
-or
-`RAILS_ENV=test bundle exec spring testunit ./path/to/your/test.rb`
-
-To run a specific unit test, from the dashboard directory you can run
-`bundle exec spring testunit ./path/to/your/test.rb --name your_amazing_test_name`
-The test name is `test_` concatenated with the name of the test listed in the test file (convert spaces to underscores). Ex: If the test is called "testing some unit" you would use `--name test_testing_some_unit`.
-
-You can get a local coverage report with
-`COVERAGE=1 bundle exec ruby -Itest ./path/to/your/test.rb`
-
-#### Common issues and potential fixes
-
-1. If you get a bunch of complaints about database, like missing tables or how some tables haven't been seeded, here are some things you can try in order from least to most drastic before running your tests again:
-
-    1. `RAILS_ENV=test bundle exec rake seed:secret_pictures seed:secret_words`
-    
-    2. Stop spring process (which can sometimes have stale data) and then rerun the tests, which will automatically start a new instance of spring.
-      `spring stop` 
-
-    3. recreate your local dashboard test db and reseed the data via:
-        * `UTF8=1 RAILS_ENV=test bundle exec rake db:reset db:test:prepare`
-        * if you forgot to specify `UTF8=1`, fix it by running: `echo "ALTER DATABASE dashboard_test CHARACTER SET utf8 COLLATE utf8_unicode_ci;" | mysql -uroot`
-
-2. If you get an error about missing db fields, try migrating your test database:
-`RAILS_ENV=test rake db:migrate`
-
-### UI Tests and Eyes Tests
-We have a set of integration tests, divided into "UI tests" (Selenium+Cucumber) and "Eyes tests" (Selenium+Cucumber+Applitools).  These tests live in [dashboard/test/ui](dashboard/test/ui) - for information on setting up and running these tests, see [the README in that directory](dashboard/test/ui) and our [guide to adding an eyes test](docs/testing-with-applitools-eyes.md).
-Or you can just use this shortcut (after you've installed chromedriver):
-
-`bundle exec rake test:ui feature=dashboard/test/ui/features/sometest.feature`
 
 ### Pegasus Tests
 `cd pegasus && rake test` will run all of our pegasus Ruby tests. This usually takes ~20 seconds to run.
@@ -151,6 +136,23 @@ If you've made a change that caused an eyes failiure, log into Applitools and ch
 * [Testing IE9](docs/testing-ie9.md)
 
 # Troubleshooting
+
+## Troubleshooting dashboard tests
+
+1. If you get a bunch of complaints about database, like missing tables or how some tables haven't been seeded, here are some things you can try in order from least to most drastic before running your tests again:
+
+    1. `RAILS_ENV=test bundle exec rake seed:secret_pictures seed:secret_words`
+    
+    2. Stop spring process (which can sometimes have stale data) and then rerun the tests, which will automatically start a new instance of spring.
+      `spring stop` 
+
+    3. recreate your local dashboard test db and reseed the data via:
+        * `UTF8=1 RAILS_ENV=test bundle exec rake db:reset db:test:prepare`
+        * if you forgot to specify `UTF8=1`, fix it by running: `echo "ALTER DATABASE dashboard_test CHARACTER SET utf8 COLLATE utf8_unicode_ci;" | mysql -uroot`
+
+2. If you get an error about missing db fields, try migrating your test database:
+`RAILS_ENV=test rake db:migrate`
+
 ## Linux
 ### SyntheticEvent.augmentClass is not a function
 ```

@@ -29,7 +29,7 @@ export default class ReportAbuseForm extends React.Component {
     email: PropTypes.string,
     age: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     requireCaptcha: PropTypes.bool,
-    captchaSiteKey: PropTypes.string
+    captchaSiteKey: PropTypes.string,
   };
 
   componentDidMount() {
@@ -108,7 +108,7 @@ export default class ReportAbuseForm extends React.Component {
           />
           <input type="hidden" name="name" defaultValue={this.props.name} />
           <div style={{display: this.props.email ? 'none' : 'block'}}>
-            <div>{msg.email()}</div>
+            <label htmlFor="uitest-email">{msg.email()}</label>
             <input
               type="text"
               style={{width: INPUT_WIDTH}}
@@ -128,7 +128,7 @@ export default class ReportAbuseForm extends React.Component {
             />
           </div>
 
-          <div>{msg.abusiveUrl()}</div>
+          <label htmlFor="uitest-abuse-url">{msg.abusiveUrl()}</label>
           <input
             type="text"
             readOnly={!!this.props.abuseUrl}
@@ -141,7 +141,7 @@ export default class ReportAbuseForm extends React.Component {
           <div>
             <SafeMarkdown
               markdown={msg.abuseTypeQuestion({
-                url: 'https://code.org/tos'
+                url: 'https://code.org/tos',
               })}
             />
           </div>
@@ -150,6 +150,7 @@ export default class ReportAbuseForm extends React.Component {
             name="abuse_type"
             ref="abuse_type"
             id="uitest-abuse-type"
+            aria-label={msg.abuseTypes()}
           >
             <option value="" />
             <option value="harassment">{msg.abuseTypeHarassment()}</option>
@@ -158,7 +159,7 @@ export default class ReportAbuseForm extends React.Component {
             <option value="other">{msg.abuseTypeOther()}</option>
           </select>
 
-          <div>{msg.abuseFormDetail()}</div>
+          <label htmlFor="uitest-abuse-detail">{msg.abuseFormDetail()}</label>
           <textarea
             style={{width: INPUT_WIDTH, height: 100}}
             name="abuse_detail"
@@ -178,7 +179,7 @@ export default class ReportAbuseForm extends React.Component {
             <SafeMarkdown
               markdown={msg.abuseFormAcknowledge({
                 privacy_url: 'https://code.org/privacy',
-                tos_url: 'https://code.org/tos'
+                tos_url: 'https://code.org/tos',
               })}
             />
           </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import applabMsg from '@cdo/applab/locale';
 import PropertyRow from './PropertyRow';
 import ColorPickerPropertyRow from './ColorPickerPropertyRow';
 
@@ -8,7 +9,7 @@ export default class BorderProperties extends React.Component {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleBorderWidthChange: PropTypes.func.isRequired,
     handleBorderColorChange: PropTypes.func.isRequired,
-    handleBorderRadiusChange: PropTypes.func.isRequired
+    handleBorderRadiusChange: PropTypes.func.isRequired,
   };
 
   render() {
@@ -16,24 +17,24 @@ export default class BorderProperties extends React.Component {
       element,
       handleBorderWidthChange,
       handleBorderColorChange,
-      handleBorderRadiusChange
+      handleBorderRadiusChange,
     } = this.props;
 
     return (
       <div>
         <PropertyRow
-          desc={'border width (px)'}
+          desc={applabMsg.designElementProperty_borderWidthPx()}
           isNumber
           initialValue={parseInt(element.style.borderWidth, 10)}
           handleChange={handleBorderWidthChange}
         />
         <ColorPickerPropertyRow
-          desc={'border color'}
+          desc={applabMsg.designElementProperty_borderColor()}
           initialValue={element.style.borderColor}
           handleChange={handleBorderColorChange}
         />
         <PropertyRow
-          desc={'border radius (px)'}
+          desc={applabMsg.designElementProperty_borderRadiusPx()}
           isNumber
           initialValue={parseInt(element.style.borderRadius, 10)}
           handleChange={handleBorderRadiusChange}

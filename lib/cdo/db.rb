@@ -65,11 +65,11 @@ def sequel_connect(writer, reader, validation_frequency: nil, query_timeout: nil
 
   if multi_statements
     # Configure connection with the MULTI_STATEMENTS flag set that allows multiple statements in one database call.
-    db_options[:flags] = ::Mysql2::Client::MULTI_STATEMENTS
+    db_options[:flags] = Mysql2::Client::MULTI_STATEMENTS
   end
 
   if (reader_uri = URI(reader)) != URI(writer) &&
-    Gatekeeper.allows('pegasus_read_replica')
+      Gatekeeper.allows('pegasus_read_replica')
 
     db_options[:servers] = {read_only: Sequel::Database.send(:uri_to_options, reader_uri)}
   end
@@ -98,11 +98,13 @@ Sequel::Database.extension :sequel_4_dataset_methods
 # Enable string literals in dataset filtering methods for backwards compatibility.
 Sequel::Database.extension :auto_literal_strings
 
+# rubocop:disable CustomCops/PegasusDbUsage
 PEGASUS_DB = sequel_connect CDO.pegasus_db_writer, CDO.pegasus_db_reader
 POSTE_DB = PEGASUS_DB
 # Use Pegasus as the default database for Sequel Models.
 Sequel::Model.db = PEGASUS_DB
 PEGASUS_DB.singleton_class.prepend StaticModels
+# rubocop:enable CustomCops/PegasusDbUsage
 
 DASHBOARD_DB = sequel_connect CDO.dashboard_db_writer, CDO.dashboard_db_reader
 DASHBOARD_REPORTING_DB_READER = sequel_connect CDO.dashboard_reporting_db_reader, CDO.dashboard_reporting_db_reader

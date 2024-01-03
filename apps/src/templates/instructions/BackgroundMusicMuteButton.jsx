@@ -7,7 +7,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {
   muteCookieValue,
   setMuteCookie,
-  removeMuteCookie
+  removeMuteCookie,
 } from '../../util/muteCookieHelpers';
 import {setMuteMusic, SignInState} from '@cdo/apps/templates/currentUserRedux';
 import UserPreferences from '../../lib/util/UserPreferences';
@@ -20,15 +20,14 @@ function BackgroundMusicMuteButton({
   currentUserBackgroundMusicMuted,
   setMuteMusic,
   muteBackgroundMusic,
-  unmuteBackgroundMusic
+  unmuteBackgroundMusic,
 }) {
   const initialMuteState = signedIn
     ? currentUserBackgroundMusicMuted
     : muteCookieValue();
 
-  const [isBackgroundMusicMuted, setIsBackgroundMusicMuted] = useState(
-    initialMuteState
-  );
+  const [isBackgroundMusicMuted, setIsBackgroundMusicMuted] =
+    useState(initialMuteState);
 
   const updateMuteMusic = updatedMuteValue => {
     signedIn ? new UserPreferences().setMuteMusic(updatedMuteValue) : {};
@@ -65,8 +64,8 @@ function BackgroundMusicMuteButton({
       event: 'mute-toggle',
       data_json: JSON.stringify({
         labType: labType,
-        muteLabel: muteLabel
-      })
+        muteLabel: muteLabel,
+      }),
     };
     firehoseClient.putRecord(record);
   };
@@ -90,7 +89,7 @@ function BackgroundMusicMuteButton({
           ? isBackgroundMusicMuted
             ? styles.musicOff
             : styles.musicOn
-          : {})
+          : {}),
       }}
     />
   );
@@ -106,22 +105,22 @@ BackgroundMusicMuteButton.propTypes = {
   setMuteMusic: PropTypes.func.isRequired,
   currentUserBackgroundMusicMuted: PropTypes.bool.isRequired,
   muteBackgroundMusic: PropTypes.func.isRequired,
-  unmuteBackgroundMusic: PropTypes.func.isRequired
+  unmuteBackgroundMusic: PropTypes.func.isRequired,
 };
 
 export const styles = {
   button: {
     whiteSpace: 'nowrap',
-    minWidth: 'fit-content'
+    minWidth: 'fit-content',
   },
   musicOn: {
     color: 'rgb(118, 101, 160)',
-    backgroundColor: 'rgb(255, 255, 255)'
+    backgroundColor: 'rgb(255, 255, 255)',
   },
   musicOff: {
     color: 'rgb(255, 255, 255)',
-    backgroundColor: 'rgb(166, 155, 193)'
-  }
+    backgroundColor: 'rgb(166, 155, 193)',
+  },
 };
 
 export const UnconnectedBackgroundMusicMuteButton = BackgroundMusicMuteButton;
@@ -131,11 +130,11 @@ export default connect(
     currentUserBackgroundMusicMuted: state.currentUser.isBackgroundMusicMuted,
     signedIn: state.currentUser.signInState === SignInState.SignedIn,
     muteBackgroundMusic: state.instructions.muteBackgroundMusic,
-    unmuteBackgroundMusic: state.instructions.unmuteBackgroundMusic
+    unmuteBackgroundMusic: state.instructions.unmuteBackgroundMusic,
   }),
   dispatch => ({
     setMuteMusic(isBackgroundMusicMuted) {
       dispatch(setMuteMusic(isBackgroundMusicMuted));
-    }
+    },
   })
 )(BackgroundMusicMuteButton);

@@ -43,6 +43,21 @@ module GitHub
     end
   end
 
+  # @param branch_name [String] The name of the branch to check for
+  # @param at_commit [String] Optional: A commit hash which we expect to match
+  #   the latest commit to the specified branch
+  # @return [Boolean] Whether or not a branch with the specified name already
+  #   exists in the repository.
+  def self.branch_exists?(branch_name, at_commit: nil)
+    configure_octokit
+    response = Octokit.branch(REPO, branch_name)
+    return false unless response
+    return response.commit.sha.start_with?(at_commit) if at_commit.present?
+    return true
+  rescue Octokit::NotFound
+    return false
+  end
+
   # Creates a new branch with the given name based on the base_branch branch and
   # merges the given commit into it. If all goes well, pushes the new branch to GitHub.
   # Note: assumes it is run from an environment with a git worktree called
@@ -111,6 +126,21 @@ module GitHub
     response['number']
   end
 
+  # Octokit Documentation: https://octokit.github.io/octokit.rb/Octokit/Client/PullRequests.html#pull_requests-instance_method
+  # @param base [String] The base branch of the requested pull request.
+  # @param head [String] The head branch of the requested pull request.
+  # @param title [String] The title of the requested pull request.
+  # @param body [String] The body for the pull request (optional). Supports GFM.
+  # @return [nil | Integer] The PR number of the first PR found for this base
+  #         and head, or a new PR if one didn't already exist.
+  def self.find_or_create_pull_request(base:, head:, title:, body: nil)
+    configure_octokit
+    existing_pull_requests = Octokit.pull_requests(REPO, {base: base, head: head})
+    return existing_pull_requests.first['number'] unless existing_pull_requests.empty?
+
+    return create_pull_request(base: base, head: head, title: title, body: body)
+  end
+
   # Octokit Documentation: http://octokit.github.io/octokit.rb/Octokit/Client/Issues.html#update_issue-instance_method
   # @param base [String | Integer] the numeric id of the PR to be updated
   # @param lables [Array[String]] array of strings to be set as new labels for the PR
@@ -129,7 +159,7 @@ module GitHub
   # @raise [ArgumentError] If the PR has already been merged.
   # @raise [Exception] From calling Octokit.merge_pull_request.
   # @return [Boolean] Whether the PR was merged.
-  def self.merge_pull_request(pr_number, commit_message='')
+  def self.merge_pull_request(pr_number, commit_message = '')
     configure_octokit
 
     # Let async mergeability check finish before proceeding.
@@ -150,11 +180,11 @@ module GitHub
     end
 
     if attempt_count >= 30
-      raise ArgumentError.new("PR\##{pr_number} mergeability check timed out")
+      raise ArgumentError.new("PR##{pr_number} mergeability check timed out")
     elsif pr['merged']
-      raise ArgumentError.new("PR\##{pr_number} is already merged")
+      raise ArgumentError.new("PR##{pr_number} is already merged")
     elsif !pr['mergeable']
-      raise ArgumentError.new("PR\##{pr_number} is not mergeable")
+      raise ArgumentError.new("PR##{pr_number} is not mergeable")
     end
     response = Octokit.merge_pull_request(REPO, pr_number, commit_message)
     response['merged']
@@ -222,6 +252,21 @@ module GitHub
     true
   end
 
+  # Octokit Documentation: http://octokit.github.io/octokit.rb/Octokit/Client/Commits.html#compare-instance_method
+  # @param base [String] The base branch to compare against.
+  # @param compare [String] The comparison branch to compare.
+  # @return [Boolean] Whether compare is ahead of base, i.e., whether compare has commits
+  #   missing in base.
+  def self.ahead?(base:, compare:)
+    response = Octokit.compare(REPO, base, compare)
+    response.ahead_by > 0
+  rescue Octokit::InternalServerError
+    # This can happen for comparisons with extremely large diffs. See https://developer.github.com/v3/repos/commits/#compare-two-commits
+    # In this case, we can safely assume that we are indeed ahead, since there
+    # otherwise would not be a diff to break on
+    true
+  end
+
   # Octokit Documentation: http://octokit.github.io/octokit.rb/Octokit/Client/Repositories.html#branch-instance_method
   # @param branch [String] The name of the branch.
   # @raise [Octokit::NotFound] If the specified branch does not exist.
@@ -239,7 +284,7 @@ module GitHub
   # @param title [String] The title of the candidate pull request.
   # @raise [RuntimeError] If the environment is not development.
   def self.open_pull_request_in_browser(base:, head:, title:)
-    open_url "https://github.com/#{REPO}/compare/#{base}...#{head}"\
+    open_url "https://github.com/#{REPO}/compare/#{base}...#{head}" \
       "?expand=1&title=#{CGI.escape title}"
   end
 

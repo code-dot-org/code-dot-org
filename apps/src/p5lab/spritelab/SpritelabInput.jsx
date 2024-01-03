@@ -17,17 +17,17 @@ class SpritelabInput extends React.Component {
         promptType: PropTypes.string,
         promptText: PropTypes.string,
         variableName: PropTypes.string,
-        choices: PropTypes.arrayOf(PropTypes.string)
+        choices: PropTypes.arrayOf(PropTypes.string),
       })
     ).isRequired,
     onPromptAnswer: PropTypes.func.isRequired,
     isRunning: PropTypes.bool.isRequired,
-    isPaused: PropTypes.bool.isRequired
+    isPaused: PropTypes.bool.isRequired,
   };
 
   state = {
     userInput: '',
-    collapsed: false
+    collapsed: false,
   };
 
   userInputSubmit(value) {
@@ -56,7 +56,7 @@ class SpritelabInput extends React.Component {
 
   toggleCollapsed = () =>
     this.setState({
-      collapsed: !this.state.collapsed
+      collapsed: !this.state.collapsed,
     });
 
   constructSpriteMap = memoize(animationPropsByKey => {
@@ -125,10 +125,15 @@ class SpritelabInput extends React.Component {
                   disabled={disabled}
                   style={styles.choiceSpriteContainer}
                 >
+                  {
+                    // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+                    // Verify or update this alt-text as necessary
+                  }
                   <img
                     src={spriteMap[choice]}
                     value={choice}
                     style={styles.choiceSpriteImage}
+                    alt=""
                   />
                 </button>
               ) : (
@@ -182,11 +187,11 @@ const styles = {
     textAlign: 'center',
     position: 'absolute',
     bottom: 0,
-    width: '100%'
+    width: '100%',
   },
   prompt: {
     color: 'white',
-    fontSize: 15
+    fontSize: 15,
   },
   promptText: {
     lineHeight: '2em',
@@ -195,34 +200,34 @@ const styles = {
     maxWidth: 'calc(100% - 100px)',
     textOverflow: 'ellipsis',
     overflow: 'hidden',
-    whiteSpace: 'nowrap'
+    whiteSpace: 'nowrap',
   },
   icon: {
-    color: 'white'
+    color: 'white',
   },
   inputRow: {
     padding: 0,
     marginBottom: 2,
-    marginTop: 2
+    marginTop: 2,
   },
   inputArea: {
     width: 'calc(100% - 80px)',
-    margin: 0
+    margin: 0,
   },
   submitButton: {
     padding: 4,
-    margin: '2px 5px'
+    margin: '2px 5px',
   },
   circle: {
     position: 'absolute',
     left: 10,
     paddingRight: 8,
     paddingTop: 6,
-    fontSize: 11
+    fontSize: 11,
   },
   number: {
     color: 'rgb(34, 42, 51)',
-    fontSize: 9
+    fontSize: 9,
   },
   choiceButton: {
     fontSize: 15,
@@ -231,20 +236,20 @@ const styles = {
     maxWidth: 'calc(33% - 16px)',
     textOverflow: 'ellipsis',
     overflow: 'hidden',
-    whiteSpace: 'nowrap'
+    whiteSpace: 'nowrap',
   },
   choiceSpriteContainer: {
     padding: 0,
     background: 'transparent',
-    border: '1px solid transparent'
+    border: '1px solid transparent',
   },
   choiceSpriteImage: {
     margin: 0,
     height: 32,
     width: 32,
     objectFit: 'contain',
-    opacity: 1
-  }
+    opacity: 1,
+  },
 };
 
 export default connect(state => ({
@@ -252,5 +257,5 @@ export default connect(state => ({
   channelId: state.pageConstants.channelId,
   inputList: state.spritelabInputList || [],
   isRunning: selectors.isRunning(state),
-  isPaused: selectors.isPaused(state)
+  isPaused: selectors.isPaused(state),
 }))(SpritelabInput);

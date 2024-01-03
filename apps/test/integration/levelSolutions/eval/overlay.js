@@ -6,18 +6,18 @@ var solutionXml = blockUtils.mathBlockXml('overlay', {
     IMAGE: blockUtils.mathBlockXml('functional_circle', {
       COLOR: blockUtils.mathBlockXml('functional_string', null, {VAL: 'red'}),
       STYLE: blockUtils.mathBlockXml('functional_string', null, {
-        VAL: 'outline'
+        VAL: 'outline',
       }),
-      SIZE: blockUtils.mathBlockXml('functional_math_number', null, {NUM: 50})
+      SIZE: blockUtils.mathBlockXml('functional_math_number', null, {NUM: 50}),
     }),
     X: blockUtils.mathBlockXml('functional_math_number', null, {NUM: 5}),
-    Y: blockUtils.mathBlockXml('functional_math_number', null, {NUM: 10})
+    Y: blockUtils.mathBlockXml('functional_math_number', null, {NUM: 10}),
   }),
   BOTTOM: blockUtils.mathBlockXml('functional_circle', {
     COLOR: blockUtils.mathBlockXml('functional_string', null, {VAL: 'blue'}),
     STYLE: blockUtils.mathBlockXml('functional_string', null, {VAL: 'outline'}),
-    SIZE: blockUtils.mathBlockXml('functional_math_number', null, {NUM: 50})
-  })
+    SIZE: blockUtils.mathBlockXml('functional_math_number', null, {NUM: 50}),
+  }),
 });
 
 module.exports = {
@@ -26,16 +26,16 @@ module.exports = {
   levelDefinition: {
     solutionBlocks: solutionXml,
     requiredBlocks: '',
-    freePlay: false
+    freePlay: false,
   },
   tests: [
     {
       description: 'correct answer',
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
+        testResult: TestResults.ALL_PASS,
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert(solutionXml);
 
         var user = document.getElementById('user');
@@ -58,7 +58,7 @@ module.exports = {
         assert(g.getAttribute('transform') === ' translate(200 200)');
         return true;
       },
-      xml: '<xml>' + solutionXml + '</xml>'
-    }
-  ]
+      xml: '<xml>' + solutionXml + '</xml>',
+    },
+  ],
 };

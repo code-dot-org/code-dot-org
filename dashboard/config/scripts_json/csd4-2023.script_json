@@ -4,21 +4,37 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "45b14035-d069-49b6-9240-021f81c39e53",
+          "notice": "Free Teacher Resources from Amazon Future Engineer",
+          "details": "Code.org has partnered with Amazon Future Engineer to offer teachers at underserved schools a growing number of resources and benefits at no cost! ",
+          "link": "https://code.org/afe",
+          "type": "bullhorn",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Get free resources"
+        }
+      ],
+      "curriculum_umbrella": "CSD",
+      "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
-      "is_course": true,
       "is_migrated": true,
       "project_sharing": true,
+      "show_calendar": true,
       "student_detail_progress_view": true,
-      "version_year": "2023"
+      "tts": true,
+      "version_year": "2023",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
-    "family_name": "csd4",
-    "serialized_at": "2023-03-10 02:00:09 UTC",
-    "published_state": "in_development",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "family_name": null,
+    "serialized_at": "2023-12-12 03:16:30 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csd4-2023"
     }
@@ -1663,6 +1679,19 @@
       }
     },
     {
+      "key": "9bfaef53-4ea2-4808-9a2c-0c1dd8d5ab8c",
+      "position": 2,
+      "properties": {
+        "description": "**Code Studio:** Have students answer 5 quick survey questions at the beginning of this unit. Once at least 5 students have completed the survey you will be able to view the anonymized results in the Teacher Dashboard. Some of these questions will be asked again at the end of the first project, which can be helpful in seeing student growth and shifts in attitudes throughout the unit.",
+        "name": "Reflection",
+        "progression_name": "Check-In Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "9bfaef53-4ea2-4808-9a2c-0c1dd8d5ab8c",
+        "lesson_activity.key": "77ec11ab-5d60-4e72-a198-8d1c6f1f28f0"
+      }
+    },
+    {
       "key": "7571ea51-b14b-47ad-b0d5-6041f530639f",
       "position": 1,
       "properties": {
@@ -1716,7 +1745,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Reducing Printed Materials**\r\n\r\nThe User Profiles are used for reference only.  Students can look at digital versions during this activity.  Assign each student a link, rather than handing out the actual profiles.\r\n\r\nIf you choose to print out the user profiles, they can be reused, as long as the students are told not to write on them.\r\n\r\n"
+            "markdown": "**Reducing Printed Materials:** The User Profiles are used for reference only. Students can look at digital versions during this activity. Assign each student a link, rather than handing out the actual profiles.\n\n**Generating Alternative Profiles:** These profiles are provided as a baseline, but you may decide to augment these profiles or generate entirely new ones to better suit your classroom. You could even consider using a generative AI tool like ChatGPT or Bard to re-imagine these profiles from another perspective - [click here to see an example from our Teacher Forum](https://forum.code.org/t/lesson-2-alternate-user-profiles-for-teaching-empathy/38454) of a teacher who used ChatGPT to re-imagine these profiles as teenagers.\n\nFor more information on using generative AI as a teaching aide, consider reviewing our [AI 101 Professional Learning Series](https://code.org/ai/pl/101)\n"
           }
         ]
       },
@@ -1792,7 +1821,7 @@
       "key": "1fea07e1-eae0-41d3-ae12-970748f5d122",
       "position": 7,
       "properties": {
-        "description": "**Display**: The next three slides contain different products for each user group to react to - waterproof boots, a bicycle, and chocolate cupcakes. Students will react to each product as their user by filling out a row in the activity guide. The guide asks students to make a distinction between the _usability_ of an item for their user and whether a user likes or dislikes it. You may want to go through the first one as a group so you can model that a product may be aesthetically appealing, but not very usable, or usable but not aesthetically appealing.",
+        "description": "**Display**: The next three slides contain different products for each user profile to react to - waterproof boots, a bicycle, and chocolate cupcakes. Students will react to each product as their user by filling out a row in the activity guide. The guide asks students to make a distinction between the _usability_ of an item for their user and whether a user likes or dislikes it. You may want to go through the first one as a group so you can model that a product may be aesthetically appealing, but not very usable, or usable but not aesthetically appealing.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1895,12 +1924,12 @@
       "key": "d29b9554-5efb-4071-b8c4-bab2a3decabe",
       "position": 1,
       "properties": {
-        "description": "**Video:** Watch the Design Thinking Process video with students. Stop the video after Step 5 (around 3:10).",
+        "description": "**Video:** Show students the [r the_design_thinking_process/csd/2023] video in the slides. Stop the video after Step 5 (around 3:10).\n\n",
         "name": "Introduce Design Thinking\r",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Design Thinking:** Today's activity, as well as this entire unit, are heavily influenced by Design Thinking. This is a very open-ended, creative process that may be hard to visualize if you've never participated in a design thinking activity yourself. The resources below can help you imagine what your classroom will look like during these design thinking activities. \r\n\r\n* [What is Design Thinking? A Handy Guide for Educators](https://www.makersempire.com/what-is-design-thinking-a-handy-guide-for-classroom-teachers/).\r\n* [Design Thinking: Lessons for the Classroom](https://www.edutopia.org/blog/design-thinking-betty-ray)\r\n* [Design Thinking Teacher Training (Video)](https://www.youtube.com/watch?v=qqM8lf3zfFo)\r\n\r\nSome of these resources are framed around science classrooms or physical prototypes, which is different from this unit which ultimately focuses on creating apps. Regardless, they should offer some clarity on what the entire process looks like from start-to-finish and what your classroom may look-and-sound like during these activities.\r\n"
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
           }
         ]
       },
@@ -1925,7 +1954,13 @@
       "position": 3,
       "properties": {
         "description": "The Design Thinking Process is very similar to our Problem Solving Process - both are centered around empathy, and both have a similar cycle for defining, preparing, trying, and reflecting. Over the next few weeks, we’re going to practice this process so we can design products and apps for people in our communities and around the world. Today and tomorrow, we’re going to practice a shorter version of this process by brainstorming different groups of people and their needs, then designing smart clothing products to meet those needs.",
-        "remarks": true
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Design Thinking:** Today's activity, as well as this entire unit, are heavily influenced by Design Thinking. This is a very open-ended, creative process that may be hard to visualize if you've never participated in a design thinking activity yourself. The resources below can help you imagine what your classroom will look like during these design thinking activities. \n\n* [What is Design Thinking? A Handy Guide for Educators](https://www.makersempire.com/what-is-design-thinking-a-handy-guide-for-classroom-teachers/).\n* [Design Thinking: Lessons for the Classroom](https://www.edutopia.org/blog/design-thinking-betty-ray)\n* [Design Thinking Teacher Training (Video)](https://www.youtube.com/watch?v=qqM8lf3zfFo)\n\nSome of these resources are framed around science classrooms or physical prototypes, which is different from this unit which ultimately focuses on creating apps. Regardless, they should offer some clarity on what the entire process looks like from start-to-finish and what your classroom may look-and-sound like during these activities.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "9edfdc5d-b944-4084-9b53-237d7b9a6dd0",
@@ -1948,7 +1983,7 @@
       "key": "7e238b95-4448-4c9b-b611-75e5cdf93bcc",
       "position": 5,
       "properties": {
-        "description": "**Distribute:** Hand out the activity guide to each student, as well as markers, sticky notes, and poster paper for each group.",
+        "description": "**Distribute:** Hand out the activity guide to each student, as well as markers, sticky notes, and poster paper for each team.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2028,7 +2063,7 @@
       "key": "3b0ebd21-ff67-4518-b773-5c82334daac7",
       "position": 10,
       "properties": {
-        "description": "**Choose Specific User:** Ask groups to pick one of the user categories they’ve created. Do your best to ensure a good mix of categories in the classroom but it's not a problem if some groups choose similar user categories.\n\n**Brainstorm & Categorize Needs:** Students will repeat the brainstorming process to identify a list of potential concerns, interests, and needs of the user they picked. Begin by brainstorming on the activity guide, then creating post-its for two or three of their ideas to share on the poster board. Encourage students to think carefully about what might be important to those people."
+        "description": "**Choose Specific User:** Ask teams to pick one of the user categories they’ve created. Do your best to ensure a good mix of categories in the classroom but it's not a problem if some teams choose similar user categories.\n\n**Brainstorm & Categorize Needs:** Students will repeat the brainstorming process to identify a list of potential concerns, interests, and needs of the user they picked. Begin by brainstorming on the activity guide, then creating post-its for two or three of their ideas to share on the poster board. Encourage students to think carefully about what might be important to those people."
       },
       "seeding_key": {
         "activity_section.key": "3b0ebd21-ff67-4518-b773-5c82334daac7",
@@ -2056,7 +2091,7 @@
       "key": "7cef88ed-001f-49e6-a8a0-ff21c5441788",
       "position": 12,
       "properties": {
-        "description": "**Choose Specific Need:** Ask groups to pick the specific need for their user that they want to address. They should try to pick a need they think could be addressed by smart clothing so in some cases they may need to be a little creative in thinking about these needs.\n\n**Share Out:** By this point, each group should have settled on a specific user group and a need or interest that group has. Ask groups to share their user group and need with the rest of the class."
+        "description": "**Choose Specific Need:** Ask teams to pick the specific need for their user that they want to address. They should try to pick a need they think could be addressed by smart clothing so in some cases they may need to be a little creative in thinking about these needs.\n\n**Share Out:** By this point, each team should have settled on a specific user group and a need or interest that group has. Ask teams to share their user group and need with the rest of the class."
       },
       "seeding_key": {
         "activity_section.key": "7cef88ed-001f-49e6-a8a0-ff21c5441788",
@@ -2079,7 +2114,7 @@
       "key": "c650328b-0bdd-4d21-9e12-dc349303107e",
       "position": 14,
       "properties": {
-        "description": "**Discuss Pros and Cons:** Once students have brainstormed solutions individually, have students share their ideas with their group and discuss the pros and cons of each solution. Encourage students to use the discussion to build on each other's ideas, possibly generating even more potential solutions.",
+        "description": "**Discuss Pros and Cons:** Once students have brainstormed solutions individually, have students share their ideas with their team and discuss the pros and cons of each solution. Encourage students to use the discussion to build on each other's ideas, possibly generating even more potential solutions.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2096,7 +2131,7 @@
       "key": "db516a06-c456-4c41-8668-b0a946bf0a6b",
       "position": 15,
       "properties": {
-        "description": "**Choose Specific Solution:** Have the group choose a specific solution they will focus on. They may decide to combine solutions from their discussion or use a brand new solution that developed during the discussion. This decision will guide the product they create in tomorrow's activity."
+        "description": "**Choose Specific Solution:** Have the teams choose a specific solution they will focus on. They may decide to combine solutions from their discussion or use a brand new solution that developed during the discussion. This decision will guide the product they create in tomorrow's activity."
       },
       "seeding_key": {
         "activity_section.key": "db516a06-c456-4c41-8668-b0a946bf0a6b",
@@ -2136,7 +2171,7 @@
       "key": "0cabc257-19f6-4027-a210-6f165580a029",
       "position": 1,
       "properties": {
-        "description": "**Prompt:** Today's activity involved a lot of brainstorming with your group. What is one example from today where a group member had an idea that you hadn't considered before? How did that idea affect some of the decisions you made?",
+        "description": "**Prompt:** Today's activity involved a lot of brainstorming with your team. What is one example from today where a team member had an idea that you hadn't considered before? How did that idea affect some of the decisions you made?",
         "name": "Journal\r"
       },
       "seeding_key": {
@@ -2148,7 +2183,7 @@
       "key": "b791db00-8437-45fe-8891-c46b99190326",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Allow students a minute to think silently before having them share with their tables and then the class as a whole.\n\n**Discussion Goal**: Students should reflect on how different voices helped elevate the ideas the group had and may have contributed to the product they will begin designing tomorrow. This attention to teamwork and valuing others' ideas will be important throughout the unit as students work together to develop apps for others.\n\n"
+        "description": "**Discuss:** Allow students a minute to think silently before having them share with their tables and then the class as a whole.\n\n**Discussion Goal**: Students should reflect on how different voices helped elevate the ideas the team had and may have contributed to the product they will begin designing tomorrow. This attention to teamwork and valuing others' ideas will be important throughout the unit as students work together to develop apps for others.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "b791db00-8437-45fe-8891-c46b99190326",
@@ -2159,7 +2194,7 @@
       "key": "842f3beb-4bf8-44c6-a010-6933f7d46db8",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** As students enter the classroom, redistribute the activity guides from yesterday. If a student was absent, have them join an existing group and use the same user, needs, and solutions as that group."
+        "description": "**Distribute:** As students enter the classroom, redistribute the activity guides from yesterday. If a student was absent, have them join an existing team and use the same user, needs, and solutions as that team."
       },
       "seeding_key": {
         "activity_section.key": "842f3beb-4bf8-44c6-a010-6933f7d46db8",
@@ -2182,7 +2217,7 @@
       "key": "8df7b0f7-22c5-41d8-85d7-de65c112685b",
       "position": 3,
       "properties": {
-        "description": "**Discuss:** Allow students a minute to remind themselves of their work yesterday. Once they’ve written these notes in their journal, ask them to take turns sharing this information with their groups from yesterday.\n\n**Discussion Goal**: This is a quick refresher of the work that students did yesterday and an opportunity to share different product ideas before making a decision as a group in the first part of the activity.\n\n"
+        "description": "**Discuss:** Allow students a minute to remind themselves of their work yesterday. Once they’ve written these notes in their journal, ask them to take turns sharing this information with their teams from yesterday.\n\n**Discussion Goal**: This is a quick refresher of the work that students did yesterday and an opportunity to share different product ideas before making a decision as a team in the first part of the activity.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "8df7b0f7-22c5-41d8-85d7-de65c112685b",
@@ -2193,7 +2228,7 @@
       "key": "2c340e36-d35f-442a-89f0-3063d4cbd47a",
       "position": 4,
       "properties": {
-        "description": "There are a lot of different users and needs that we’re designing for. Today, we’ll complete the Try and Reflect stages of this activity. Your group will have a chance to design your own smart clothing product for your user, and share your ideas with the class.",
+        "description": "There are a lot of different users and needs that we’re designing for. Today, we’ll complete the Try and Reflect stages of this activity. Your team will have a chance to design your own smart clothing product for your user, and share your ideas with the class.",
         "remarks": true
       },
       "seeding_key": {
@@ -2232,7 +2267,7 @@
       "key": "51518c58-a74c-4e40-9a45-e04d51e0514b",
       "position": 2,
       "properties": {
-        "description": "**Distribute:** The User Centered Design (Try & Reflect) Activity Guide to each group. If available, also distribute poster paper to each group.\n\n\n\n#### User Centered Design (Try & Reflect)"
+        "description": "**Distribute:** The User Centered Design (Try & Reflect) Activity Guide to each team If available, also distribute poster paper to each team.\n\n\n\n#### User Centered Design (Try & Reflect)"
       },
       "seeding_key": {
         "activity_section.key": "51518c58-a74c-4e40-9a45-e04d51e0514b",
@@ -2267,7 +2302,7 @@
       "key": "8f191079-75b9-46a5-96b6-efe624e51c6b",
       "position": 5,
       "properties": {
-        "description": "**Do This:** Have students answer the questions on the second page of the activity guide and be prepared to share the results with their peers.\n\n**Circulate:** Check in with students as they summarize their thoughts on this reflection guide. As students answer these questions, they may decide to make last-minute changes to their product.\n\n\n\n**Share Out:** Have groups take turns sharing out the products they designed. They should be sure to share their intended user and their needs, and how the product addresses those needs. When they finish, encourage other groups to give feedback in the form of “I like…” and “I wish… statements.",
+        "description": "**Do This:** Have students answer the questions on the second page of the activity guide and be prepared to share the results with their peers.\n\n**Circulate:** Check in with students as they summarize their thoughts on this reflection guide. As students answer these questions, they may decide to make last-minute changes to their product.\n\n\n\n**Share Out:** Have groups take turns sharing out the products they designed. They should be sure to share their intended user and their needs, and how the product addresses those needs. When they finish, encourage other teams to give feedback in the form of “I like…” and “I wish… statements.",
         "name": "Reflect\r",
         "tips": [
           {
@@ -4081,8 +4116,14 @@
       "key": "90c03622-4771-4660-8c57-c38aa3e03cdd",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Give each team one copy of the Paper Prototype User Testing Activity Guide. Also give each team a copy of the User Test Cases Activity Guide - one copy for each user the team plans to test with.\n\n\n\n#### Paper Prototype User Testing\n\n",
-        "name": "Preparing for Testing\r"
+        "description": "**Distribute:** Give each team one copy of the Paper Prototype User Testing Activity Guide. Also give each team a copy of the User Test Cases Activity Guide - one copy for each user the team plans to test with.\n\n\n\n#### Paper Prototype User Testing\n\n**Overview:** Read through the (1) Overview section of the activity guide together. This gives an overview of today’s activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r what_s_for_lunch_testing/csd/2023] video in the slides. This gives a model for what the testing process should look like.",
+        "name": "Preparing for Testing\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "90c03622-4771-4660-8c57-c38aa3e03cdd",
@@ -4093,7 +4134,7 @@
       "key": "c1b7c6cb-d645-4b38-a555-2eff5174842f",
       "position": 2,
       "properties": {
-        "description": "**Overview:** Read through the (1) Overview section of the activity guide together. This gives an overview of today’s activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r what_s_for_lunch_testing/csd4/2023] video in the slides. This gives a model for what the testing process should look like.\n\n**Discuss:** What did you notice about how this test was run? Ask students to share in their teams, then call out a few responses for the class. Specifically, highlight the following observations:\n\n- The user is the person who is testing the app in the form of the paper prototype. They should pretend to execute the “app” by pressing on the prototype with their fingers in the way that makes the most sense.\n- The user speaks through what they are thinking-out-loud. They can also offer helpful suggestions in our critiquing form with sentences starting with “I like…”, “I wish…”, and “I wonder… “\n- The computer reacts to what the user does. If the user tries something that isn’t a part of the app navigation diagram, then the computer doesn’t react.\n- The narrator is the person who is running the test. This person will introduce the team members, the app, and its purpose.\n- The observers are the other students in the team. They will watch the interaction and write down in their notes what they see the user do in response to the computer. They don’t make any comments themselves - they just take notes.\n\n**Assign Roles:** Read through the (2) Assign Roles for Testing section of the activity guide. Have students discuss in their teams which roles they will take on in the first round of testing. There should be only one narrator and only one computer, and all other team members can be observers. \n\n**Create Test Cases:** Read through the (3) Create Test Cases section of the activity guide. Students will work in the User Test Cases Activity Guide for this section, filling in the App Introduction section and completing the left-column of the table. They should not fill in the rest of the table - the user will do this instead.\n\n**Circulate:** Monitor students as they fill in the User Test Cases Activity Guide. Make sure they are only filling in the left-most column with the tasks they want their user to test - the rest of the chart should be blank."
+        "description": "\n**Discuss:** What did you notice about how this test was run? Ask students to share in their teams, then call out a few responses for the class. Specifically, highlight the following observations:\n\n- The user is the person who is testing the app in the form of the paper prototype. They should pretend to execute the “app” by pressing on the prototype with their fingers in the way that makes the most sense.\n- The user speaks through what they are thinking-out-loud. They can also offer helpful suggestions in our critiquing form with sentences starting with “I like…”, “I wish…”, and “I wonder… “\n- The computer reacts to what the user does. If the user tries something that isn’t a part of the app navigation diagram, then the computer doesn’t react.\n- The narrator is the person who is running the test. This person will introduce the team members, the app, and its purpose.\n- The observers are the other students in the team. They will watch the interaction and write down in their notes what they see the user do in response to the computer. They don’t make any comments themselves - they just take notes.\n\n**Assign Roles:** Read through the (2) Assign Roles for Testing section of the activity guide. Have students discuss in their teams which roles they will take on in the first round of testing. There should be only one narrator and only one computer, and all other team members can be observers. \n\n**Create Test Cases:** Read through the (3) Create Test Cases section of the activity guide. Students will work in the User Test Cases Activity Guide for this section, filling in the App Introduction section and completing the left-column of the table. They should not fill in the rest of the table - the user will do this instead.\n\n**Circulate:** Monitor students as they fill in the User Test Cases Activity Guide. Make sure they are only filling in the left-most column with the tasks they want their user to test - the rest of the chart should be blank."
       },
       "seeding_key": {
         "activity_section.key": "c1b7c6cb-d645-4b38-a555-2eff5174842f",
@@ -4258,8 +4299,14 @@
       "key": "072b8b4e-3063-4d54-aeab-bd0d22f0b11b",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r intro_to_design_mode/csd4/2023] video in the slides. This video introduces the design mode interface that students will use for the rest of the unit. Today’s lesson focuses just on the drag-and-drop design elements; the Events in AppLab lesson focuses on the coding elements\n",
-        "progression_name": "Video: Intro to Design Mode"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r intro_to_design_mode/csd/2023] video in the slides. This video introduces the design mode interface that students will use for the rest of the unit. Today’s lesson focuses just on the drag-and-drop design elements; the Events in AppLab lesson focuses on the coding elements\n",
+        "progression_name": "Video: Intro to Design Mode",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "072b8b4e-3063-4d54-aeab-bd0d22f0b11b",
@@ -4645,8 +4692,14 @@
       "key": "a825d3ec-41aa-46d7-a8b1-ae7cf48017db",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r events_in_app_lab_1/csd4/2023] video in the slides.\n",
-        "progression_name": "Video: Events in App Lab"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r events_in_app_lab_1/csd/2023] video in the slides.\n",
+        "progression_name": "Video: Events in App Lab",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "a825d3ec-41aa-46d7-a8b1-ae7cf48017db",
@@ -5776,6 +5829,31 @@
       "assessment": true,
       "properties": {
         "level_keys": [
+          "intro-pulse-survey_csd4_2023"
+        ],
+        "progression": "Check-In Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "intro-pulse-survey_csd4_2023"
+        ],
+        "lesson.key": "Designing With Empathy",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd4-2023",
+        "activity_section.key": "9bfaef53-4ea2-4808-9a2c-0c1dd8d5ab8c"
+      },
+      "level_keys": [
+        "intro-pulse-survey_csd4_2023"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
           "csd-pulse-check-survey-1-levelgroup U4Ch1_2023"
         ],
         "progression": "Reflection"
@@ -5795,7 +5873,7 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 3,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5820,7 +5898,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 4,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5845,7 +5923,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 5,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5870,7 +5948,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5895,7 +5973,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5920,7 +5998,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5945,7 +6023,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -5970,7 +6048,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -5995,7 +6073,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -6020,7 +6098,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6045,7 +6123,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6070,7 +6148,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6095,7 +6173,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -6120,7 +6198,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6145,7 +6223,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -6170,7 +6248,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 7,
       "activity_section_position": 3,
       "assessment": true,
@@ -6195,7 +6273,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6220,7 +6298,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6245,7 +6323,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6270,7 +6348,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6295,7 +6373,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6320,7 +6398,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -6345,7 +6423,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6370,7 +6448,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -6395,7 +6473,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 7,
       "activity_section_position": 3,
       "assessment": true,
@@ -6420,7 +6498,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6445,7 +6523,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -6470,7 +6548,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6495,7 +6573,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6520,7 +6598,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6545,6 +6623,18 @@
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "intro-pulse-survey_csd4_2023",
+        "script_level.level_keys": [
+          "intro-pulse-survey_csd4_2023"
+        ],
+        "lesson.key": "Designing With Empathy",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd4-2023",
+        "activity_section.key": "9bfaef53-4ea2-4808-9a2c-0c1dd8d5ab8c"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "csd-pulse-check-survey-1-levelgroup U4Ch1_2023",
@@ -6922,45 +7012,45 @@
     {
       "name": "All Code",
       "url": "/s/csd4-2023/code",
-      "key": "all_code",
+      "key": "all_code_6",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_code"
+        "resource.key": "all_code_6"
       }
     },
     {
       "name": "All Resources",
       "url": "/s/csd4-2023/resources",
-      "key": "all_resources",
+      "key": "all_resources_7",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_resources"
+        "resource.key": "all_resources_7"
       }
     },
     {
       "name": "All Standards",
       "url": "/s/csd4-2023/standards",
-      "key": "all_standards",
+      "key": "all_standards_7",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_standards"
+        "resource.key": "all_standards_7"
       }
     },
     {
       "name": "All Vocabulary",
       "url": "/s/csd4-2023/vocab",
-      "key": "all_vocabulary",
+      "key": "all_vocabulary_7",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_vocabulary"
+        "resource.key": "all_vocabulary_7"
       }
     },
     {
@@ -7124,13 +7214,25 @@
       }
     },
     {
-      "name": "CSD Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1lTLydMBm2M5a5tq_35m-qj8Gat79WUYBWfpB3ikQyuY/view",
-      "key": "csd_curriculum_guide",
+      "name": "CSD Guide to Assessment",
+      "url": "https://docs.google.com/document/d/1IO5XgPW_Apil_Uziq5hAMCBgilm8txZ3sp8atxiKiLU/view",
+      "key": "csd_guide_to_assessment_4",
       "properties": {
+        "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csd_curriculum_guide"
+        "resource.key": "csd_guide_to_assessment_4"
+      }
+    },
+    {
+      "name": "CSD Guide to Curriculum Videos",
+      "url": "https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view",
+      "key": "csd_guide_to_curriculum_videos_4",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_curriculum_videos_4"
       }
     },
     {
@@ -7138,29 +7240,43 @@
       "url": "https://docs.google.com/document/d/145lvpomqz0tUuzXLbkAFgP9zMDpECMwFYiEIG1_hQFg/view",
       "key": "csd_guide_to_debugging",
       "properties": {
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "csd_guide_to_debugging"
       }
     },
     {
-      "name": "CSD Implementation Guide",
-      "url": "https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view",
-      "key": "csd_implementation_guide",
+      "name": "CSD Guide to Differentiation",
+      "url": "https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view",
+      "key": "csd_guide_to_differentiation_3",
       "properties": {
+        "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csd_implementation_guide"
+        "resource.key": "csd_guide_to_differentiation_3"
       }
     },
     {
-      "name": "CSD Learning Frameworks",
-      "url": "https://docs.google.com/document/d/1WlmAr6CeU4NAQhPAa0YAO-ujVTls_12fOP3lbc2SLxo/view",
-      "key": "csd_learning_frameworks",
+      "name": "CSD Guide to Teaching and Learning Strategies",
+      "url": "https://docs.google.com/document/d/1Cg5iTwERoX25Y2DdLNmrPCbVB2d9FPGfUMUvcnVoN8Q/view",
+      "key": "csd_guide_to_teaching_and_learning_strategies_4",
       "properties": {
+        "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csd_learning_frameworks"
+        "resource.key": "csd_guide_to_teaching_and_learning_strategies_4"
+      }
+    },
+    {
+      "name": "CSD Guide to Using Resources",
+      "url": "https://docs.google.com/document/d/1NYJMHZYnAZYNctehlQOImSstsu48sRGOMbi4It4ZjkI/view",
+      "key": "csd_guide_to_using_resources_5",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_using_resources_5"
       }
     },
     {
@@ -7263,11 +7379,11 @@
     },
     {
       "name": "Events in App Lab",
-      "url": "https://docs.google.com/presentation/d/1jYIPe_TXe63sjGUzED8sUyzWXWGJHrA-GQzXe7_tmHU/template/preview",
+      "url": "https://youtu.be/npa2r4t6y2A",
       "key": "events_in_app_lab",
       "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "events_in_app_lab"
@@ -7283,6 +7399,18 @@
       },
       "seeding_key": {
         "resource.key": "events_in_app_lab_1"
+      }
+    },
+    {
+      "name": "Events in App Lab",
+      "url": "https://docs.google.com/presentation/d/1jYIPe_TXe63sjGUzED8sUyzWXWGJHrA-GQzXe7_tmHU/view",
+      "key": "events_in_app_lab_2",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "events_in_app_lab_2"
       }
     },
     {
@@ -7935,6 +8063,17 @@
       }
     },
     {
+      "name": "The Problem Solving Process with Design",
+      "url": "https://docs.google.com/document/d/1qgiwCyO7948qPSWbTvYmR7DjH0nkh8HpfxP1HxubDis/view",
+      "key": "the_problem_solving_process_3",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "the_problem_solving_process_3"
+      }
+    },
+    {
       "name": "Understanding Your User",
       "url": "https://docs.google.com/presentation/d/1ay4VDFZ1PTA6LBUksPJRz_6aU7cVy5FXHSHuMrmfUl8/template/preview",
       "key": "understanding_your_user",
@@ -8314,6 +8453,12 @@
       "seeding_key": {
         "lesson.key": "Events in App Lab",
         "resource.key": "events_in_app_lab_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in App Lab",
+        "resource.key": "events_in_app_lab_2"
       }
     },
     {
@@ -8740,31 +8885,37 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "all_code",
+        "resource.key": "all_code_6",
         "script.name": "csd4-2023"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_resources",
+        "resource.key": "all_resources_7",
         "script.name": "csd4-2023"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_standards",
+        "resource.key": "all_standards_7",
         "script.name": "csd4-2023"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_vocabulary",
+        "resource.key": "all_vocabulary_7",
         "script.name": "csd4-2023"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "csd_curriculum_guide",
+        "resource.key": "csd_guide_to_assessment_4",
+        "script.name": "csd4-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_curriculum_videos_4",
         "script.name": "csd4-2023"
       }
     },
@@ -8776,19 +8927,31 @@
     },
     {
       "seeding_key": {
-        "resource.key": "csd_implementation_guide",
+        "resource.key": "csd_guide_to_differentiation_3",
         "script.name": "csd4-2023"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "csd_learning_frameworks",
+        "resource.key": "csd_guide_to_teaching_and_learning_strategies_4",
+        "script.name": "csd4-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_using_resources_5",
         "script.name": "csd4-2023"
       }
     },
     {
       "seeding_key": {
         "resource.key": "teacher_forum",
+        "script.name": "csd4-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "the_problem_solving_process_3",
         "script.name": "csd4-2023"
       }
     }
@@ -10023,6 +10186,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

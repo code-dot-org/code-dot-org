@@ -37,24 +37,24 @@ const LessonLock = ({unitId, lessonId, isHidden}) => {
 LessonLock.propTypes = {
   unitId: PropTypes.number.isRequired,
   lessonId: PropTypes.number.isRequired,
-  isHidden: PropTypes.bool
+  isHidden: PropTypes.bool,
 };
 
 const styles = {
   main: {
-    marginTop: 5
+    marginTop: 5,
   },
   buttonContainer: {
     marginLeft: 15,
-    marginRight: 15
+    marginRight: 15,
   },
   // Using 'margin' instead of 'marginTop' intentionally to override styling
   button: {
     paddingLeft: 0,
     paddingRight: 0,
     width: '100%',
-    margin: '5px 0px 0px 0px'
-  }
+    margin: '5px 0px 0px 0px',
+  },
 };
 
 export default LessonLock;

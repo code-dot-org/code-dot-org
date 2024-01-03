@@ -4,7 +4,7 @@ const SET_LOCK_APPLICATION_PERMISSION =
   'application_dashboard/SET_LOCK_APPLICATION_PERMISSION';
 
 const initialState = {
-  permissions: {}
+  permissions: {},
 };
 
 export default function reducer(state = initialState, action) {
@@ -14,8 +14,8 @@ export default function reducer(state = initialState, action) {
         ...state,
         permissions: {
           ...state.permissions,
-          workshopAdmin: action.enabled
-        }
+          workshopAdmin: action.enabled,
+        },
       };
 
     case SET_LOCK_APPLICATION_PERMISSION:
@@ -23,8 +23,8 @@ export default function reducer(state = initialState, action) {
         ...state,
         permissions: {
           ...state.permissions,
-          lockApplication: action.enabled
-        }
+          lockApplication: action.enabled,
+        },
       };
 
     default:
@@ -33,10 +33,10 @@ export default function reducer(state = initialState, action) {
 }
 export const setWorkshopAdminPermission = enabled => ({
   type: SET_WORKSHOP_ADMIN_PERMISSION,
-  enabled
+  enabled,
 });
 
 export const setLockApplicationPermission = enabled => ({
   type: SET_LOCK_APPLICATION_PERMISSION,
-  enabled
+  enabled,
 });

@@ -9,7 +9,7 @@ export default class VisibilitySensor extends React.Component {
   static propTypes = {
     onVisible: PropTypes.func,
     onHidden: PropTypes.func,
-    children: PropTypes.element
+    children: PropTypes.element,
   };
 
   componentDidMount() {

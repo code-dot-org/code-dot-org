@@ -19,9 +19,12 @@ export default storybook => {
                 level_name: 'Documenting all that you know',
                 submission_date: '2/19/2017',
                 escalation_date: '4/3/2/2017',
-                review_ids: [[1, 'escalated'], [2, 'accepted']],
+                review_ids: [
+                  [1, 'escalated'],
+                  [2, 'accepted'],
+                ],
                 status: 'escalated',
-                escalated_review_id: 1
+                escalated_review_id: 1,
               },
               {
                 submitter: 'Daenerys Targaryen',
@@ -34,14 +37,14 @@ export default storybook => {
                   [3, 'accepted'],
                   [4, 'rejected'],
                   [5, 'escalated'],
-                  [6, '']
+                  [6, ''],
                 ],
                 status: 'escalated',
-                escalated_review_id: 5
-              }
+                escalated_review_id: 5,
+              },
             ]}
           />
-        )
-      }
+        ),
+      },
     ]);
 };

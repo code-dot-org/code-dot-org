@@ -10,7 +10,7 @@ export default class InputPrompt extends Component {
   static propTypes = {
     question: PropTypes.string.isRequired,
     onInputReceived: PropTypes.func.isRequired,
-    currentValue: PropTypes.string
+    currentValue: PropTypes.string,
   };
   state = {value: this.props.currentValue};
 
@@ -44,21 +44,21 @@ export default class InputPrompt extends Component {
 
 const styles = {
   form: {
-    background: '#fff'
+    background: '#fff',
   },
   wrapper: {
-    margin: 20
+    margin: 20,
   },
   question: {
-    fontSize: fontSize
+    fontSize: fontSize,
   },
   input: {
     fontSize: fontSize,
     width: '100%',
     height: '2em',
-    boxSizing: 'border-box'
+    boxSizing: 'border-box',
   },
   submit: {
-    fontSize: fontSize
-  }
+    fontSize: fontSize,
+  },
 };

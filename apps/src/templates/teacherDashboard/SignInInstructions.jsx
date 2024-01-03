@@ -10,7 +10,7 @@ export default class SignInInstructions extends React.Component {
   static propTypes = {
     loginType: PropTypes.oneOf(Object.values(SectionLoginType)).isRequired,
     sectionCode: PropTypes.string,
-    studioUrlPrefix: PropTypes.string
+    studioUrlPrefix: PropTypes.string,
   };
   render() {
     const {loginType, sectionCode, studioUrlPrefix} = this.props;
@@ -24,7 +24,7 @@ export default class SignInInstructions extends React.Component {
               markdown={i18n.signingInWordPic1({
                 joinLink: `${studioUrlPrefix}/sections/${sectionCode}`,
                 sectionCode: sectionCode,
-                codeOrgLink: pegasus('/')
+                codeOrgLink: pegasus('/'),
               })}
             />
             <p style={styles.listAlign}>{i18n.signingInWordPic2()}</p>
@@ -39,7 +39,7 @@ export default class SignInInstructions extends React.Component {
               markdown={i18n.signingInWordPic1({
                 joinLink: `${studioUrlPrefix}/sections/${sectionCode}`,
                 sectionCode: sectionCode,
-                codeOrgLink: pegasus('/')
+                codeOrgLink: pegasus('/'),
               })}
             />
             <p style={styles.listAlign}>{i18n.signingInWordPic2()}</p>
@@ -52,7 +52,7 @@ export default class SignInInstructions extends React.Component {
             <p>{i18n.signingInEmailIntro()}</p>
             <SafeMarkdown
               markdown={i18n.signingInEmailGoogle1({
-                codeOrgLink: pegasus('/')
+                codeOrgLink: pegasus('/'),
               })}
             />
             <p style={styles.listAlign}>{i18n.signingInEmail2()}</p>
@@ -64,7 +64,7 @@ export default class SignInInstructions extends React.Component {
             <p>{i18n.signingInGoogleIntro()}</p>
             <SafeMarkdown
               markdown={i18n.signingInEmailGoogle1({
-                codeOrgLink: pegasus('/')
+                codeOrgLink: pegasus('/'),
               })}
             />
             <p style={styles.listAlign}>{i18n.signingInGoogle2()}</p>
@@ -84,6 +84,7 @@ export default class SignInInstructions extends React.Component {
             <img
               style={styles.sublistAlign}
               src="/shared/images/clever_code_org_logo.png"
+              alt=""
             />
           </div>
         )}
@@ -94,12 +95,12 @@ export default class SignInInstructions extends React.Component {
 
 const styles = {
   heading: {
-    color: color.purple
+    color: color.purple,
   },
   listAlign: {
-    marginLeft: 10
+    marginLeft: 10,
   },
   sublistAlign: {
-    marginLeft: 20
-  }
+    marginLeft: 20,
+  },
 };

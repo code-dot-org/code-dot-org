@@ -7,6 +7,7 @@ import Sounds from '../../Sounds';
 import SearchBar from '@cdo/apps/templates/SearchBar';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import i18n from '@cdo/locale';
+import fontConstants from '@cdo/apps/fontConstants';
 
 const SOUND_CATEGORIES = {
   accent: 'Accent',
@@ -46,7 +47,7 @@ const SOUND_CATEGORIES = {
   tap: 'Tap',
   transition: 'Transition',
   whoosh: 'Whoosh',
-  all: 'All'
+  all: 'All',
 };
 
 /**
@@ -55,13 +56,13 @@ const SOUND_CATEGORIES = {
 export default class SoundLibrary extends React.Component {
   static propTypes = {
     alignment: PropTypes.string,
-    assetChosen: PropTypes.func.isRequired
+    assetChosen: PropTypes.func.isRequired,
   };
 
   state = {
     search: '',
     category: '',
-    selectedSound: {}
+    selectedSound: {},
   };
 
   UNSAFE_componentWillMount() {
@@ -70,13 +71,13 @@ export default class SoundLibrary extends React.Component {
 
   search = e => {
     this.setState({
-      search: e.target.value
+      search: e.target.value,
     });
   };
 
   selectSound = sound => {
     this.setState({
-      selectedSound: sound
+      selectedSound: sound,
     });
   };
 
@@ -86,7 +87,7 @@ export default class SoundLibrary extends React.Component {
         study: 'sound-dialog-2',
         study_group: 'library-tab',
         event: 'choose-library-sound',
-        data_json: this.state.selectedSound.sourceUrl
+        data_json: this.state.selectedSound.sourceUrl,
       },
       {includeUserId: true}
     );
@@ -101,7 +102,7 @@ export default class SoundLibrary extends React.Component {
   clearCategories = () => {
     this.setState({
       category: '',
-      search: ''
+      search: '',
     });
     this.sounds.stopAllAudio();
   };
@@ -168,31 +169,31 @@ export default class SoundLibrary extends React.Component {
 const styles = {
   button: {
     float: 'right',
-    margin: '20px 0px'
+    margin: '20px 0px',
   },
   categoryArea: {
     float: 'left',
     marginBottom: 20,
     overflowY: 'scroll',
-    height: 320
+    height: 320,
   },
   allCategoriesText: {
     fontSize: 16,
     color: color.purple,
-    font: 'Gotham 5r',
+    ...fontConstants['main-font-semi-bold'],
     paddingRight: 5,
-    cursor: 'pointer'
+    cursor: 'pointer',
   },
   breadcrumbs: {
     float: 'left',
-    marginTop: 16
+    marginTop: 16,
   },
   categoryText: {
-    fontSize: 14
+    fontSize: 14,
   },
   searchBarContainer: {
     width: '300px',
     float: 'right',
-    marginBottom: 10
-  }
+    marginBottom: 10,
+  },
 };

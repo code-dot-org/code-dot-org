@@ -42,7 +42,7 @@ export function newBoard() {
   const board = new five.Board({
     io: io,
     debug: false,
-    repl: false
+    repl: false,
   });
 
   io.emit('connect');
@@ -54,7 +54,7 @@ export function newBoard() {
 export function stubComponentInitialization(component) {
   // component would be a reference to five.Sensor, etc.
   sinon.stub(component.prototype, 'once');
-  component.prototype.once.withArgs('data').callsFake(function(_, callback) {
+  component.prototype.once.withArgs('data').callsFake(function (_, callback) {
     // Pretend we got a real analog value back on the component's pin.
     setSensorAnalogValue(this, INITIAL_ANALOG_VALUE);
     callback();

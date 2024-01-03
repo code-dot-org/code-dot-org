@@ -11,7 +11,8 @@ const DEFAULT_PROPS = {
   sectionName: 'My Section',
   location: {},
   studentCount: 5,
-  coursesWithProgress: fakeCoursesWithProgress
+  coursesWithProgress: fakeCoursesWithProgress,
+  sectionVersionId: 2,
 };
 
 describe('TeacherDashboard', () => {

@@ -4,10 +4,11 @@ import msg from '@cdo/locale';
 import color from '../util/color';
 import {getStore} from '@cdo/apps/redux';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
+import fontConstants from '@cdo/apps/fontConstants';
 
 export const ParamType = {
   TABLE: 'TABLE',
-  COLUMN: 'COLUMN'
+  COLUMN: 'COLUMN',
 };
 
 export default class GetColumnParamPicker extends React.Component {
@@ -15,7 +16,7 @@ export default class GetColumnParamPicker extends React.Component {
     param: PropTypes.oneOf(Object.values(ParamType)).isRequired,
     table: PropTypes.string,
     onClose: PropTypes.func.isRequired,
-    onChoose: PropTypes.func.isRequired
+    onChoose: PropTypes.func.isRequired,
   };
 
   state = {columns: []};
@@ -84,15 +85,15 @@ export default class GetColumnParamPicker extends React.Component {
 const styles = {
   title: {
     paddingLeft: '15px',
-    fontFamily: "'Gotham 7r', sans-serif",
-    color: color.teal
+    ...fontConstants['main-font-bold'],
+    color: color.teal,
   },
   option: {
     paddingLeft: '30px',
-    fontFamily: "'Gotham 7r', sans-serif",
-    color: color.purple
+    ...fontConstants['main-font-bold'],
+    color: color.purple,
   },
   error: {
-    padding: '30px'
-  }
+    padding: '30px',
+  },
 };

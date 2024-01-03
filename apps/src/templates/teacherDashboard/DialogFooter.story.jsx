@@ -4,7 +4,7 @@ import Button from '../Button';
 
 export default {
   name: 'DialogFooter',
-  component: DialogFooter
+  component: DialogFooter,
 };
 
 const OneButtonTemplate = args => (

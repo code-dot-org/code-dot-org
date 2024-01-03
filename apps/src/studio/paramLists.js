@@ -3,12 +3,12 @@ var utils = require('../utils');
 var _ = require('lodash');
 var skin, level;
 
-exports.initWithSkinAndLevel = function(skinData, levelData) {
+exports.initWithSkinAndLevel = function (skinData, levelData) {
   skin = skinData;
   level = levelData;
 };
 
-exports.getPlaySoundValues = function(withRandom) {
+exports.getPlaySoundValues = function (withRandom) {
   var names;
   if (withRandom) {
     names = ['random'];
@@ -33,7 +33,7 @@ exports.getPlaySoundValues = function(withRandom) {
 
   if (level && level.paramRestrictions && level.paramRestrictions.playSound) {
     var restrictions = level.paramRestrictions.playSound;
-    names = names.filter(function(name) {
+    names = names.filter(function (name) {
       return restrictions[name];
     });
   }
@@ -45,17 +45,17 @@ exports.getPlaySoundValues = function(withRandom) {
  * Returns a list of sounds for our droplet playSound block.
  */
 
-exports.playSoundDropdown = function() {
+exports.playSoundDropdown = function () {
   var skinSoundMetadata = utils.valueOr(skin.soundMetadata, []);
 
-  return exports.getPlaySoundValues(true).map(function(sound) {
+  return exports.getPlaySoundValues(true).map(function (sound) {
     var lowercaseSound = sound.toLowerCase().trim();
-    var handleChooseClick = function(callback) {
+    var handleChooseClick = function (callback) {
       var playbackOptions = Object.assign(
         {
-          volume: 1.0
+          volume: 1.0,
         },
-        _.find(skinSoundMetadata, function(metadata) {
+        _.find(skinSoundMetadata, function (metadata) {
           return metadata.name.toLowerCase().trim() === lowercaseSound;
         })
       );
@@ -66,7 +66,7 @@ exports.playSoundDropdown = function() {
     return {
       text: utils.quote(sound),
       display: utils.quote(sound),
-      click: handleChooseClick
+      click: handleChooseClick,
     };
   });
 };

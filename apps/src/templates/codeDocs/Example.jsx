@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
+import i18n from '@cdo/locale';
 
 export default function Example({example, programmingEnvironmentName}) {
   const content = (
@@ -25,10 +27,17 @@ export default function Example({example, programmingEnvironmentName}) {
               src={embedUrl}
               style={{
                 ...styles.embeddedApp,
-                ...embeddedIdeStyles[programmingEnvironmentName]
+                ...embeddedIdeStyles[programmingEnvironmentName],
               }}
+              title={i18n.embeddedExampleFor({
+                name: programmingEnvironmentName,
+              })}
             />
-            {example.image && <img src={example.image} />}
+            {
+              // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+              // Verify or update this alt-text as necessary
+            }
+            {example.image && <img src={example.image} alt="" />}
           </div>
         </div>
       );
@@ -49,12 +58,19 @@ export default function Example({example, programmingEnvironmentName}) {
                 src={embedUrl}
                 style={{
                   width: '100%',
-                  height: enteredHeight * 1.5
+                  height: enteredHeight * 1.5,
                 }}
+                title={i18n.embeddedExampleFor({
+                  name: programmingEnvironmentName,
+                })}
               />
             </div>
           </div>
-          {example.image && <img src={example.image} />}
+          {
+            // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+            // Verify or update this alt-text as necessary
+          }
+          {example.image && <img src={example.image} alt="" />}
         </div>
       );
     }
@@ -62,7 +78,11 @@ export default function Example({example, programmingEnvironmentName}) {
     return (
       <div>
         {content}
-        {example.image && <img src={example.image} />}
+        {
+          // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+          // Verify or update this alt-text as necessary
+        }
+        {example.image && <img src={example.image} alt="" />}
       </div>
     );
   }
@@ -70,42 +90,42 @@ export default function Example({example, programmingEnvironmentName}) {
 
 Example.propTypes = {
   example: PropTypes.object,
-  programmingEnvironmentName: PropTypes.string
+  programmingEnvironmentName: PropTypes.string,
 };
 
 const styles = {
   example: {
     display: 'flex',
-    gap: 20
+    gap: 20,
   },
   embeddedApp: {
     border: 0,
-    transformOrigin: '0 0'
-  }
+    transformOrigin: '0 0',
+  },
 };
 
 const embeddedIdeStyles = {
   applab: {
     width: 375,
     height: 620,
-    transform: 'scale(0.7)'
+    transform: 'scale(0.7)',
   },
   gamelab: {
     width: 450,
     height: 781,
-    transform: 'scale(0.5)'
-  }
+    transform: 'scale(0.5)',
+  },
 };
 
 const embeddedIdeContainerStyles = {
   applab: {
     width: '280px',
     height: '450px',
-    paddingTop: '10px'
+    paddingTop: '10px',
   },
   gamelab: {
     width: '240px',
     height: '400px',
-    paddingTop: '20px'
-  }
+    paddingTop: '20px',
+  },
 };

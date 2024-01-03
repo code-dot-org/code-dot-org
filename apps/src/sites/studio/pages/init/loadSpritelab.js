@@ -26,7 +26,7 @@ export default function loadSpritelab(options) {
         study: 'sprite_default_load',
         study_group: 'spritelab',
         event: 'backup_animations_used',
-        project_id: getCurrentId()
+        project_id: getCurrentId(),
       });
 
       return initializeOptionsAndSpritelab(spritelab, options);
@@ -35,9 +35,8 @@ export default function loadSpritelab(options) {
 
 function initializeOptionsAndSpritelab(spritelab, options) {
   // Bind helper that provides project metadata for gamelab autosave
-  options.getAnimationList = spritelab.getSerializedAnimationList.bind(
-    spritelab
-  );
+  options.getAnimationList =
+    spritelab.getSerializedAnimationList.bind(spritelab);
 
   spritelab.injectStudioApp(studioApp());
   appMain(spritelab, levels, options);

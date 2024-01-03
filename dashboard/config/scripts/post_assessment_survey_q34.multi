@@ -7,3 +7,5 @@ right 'Sort of hard'
 right 'Hard'
 right 'Very hard'
 right 'I did not take the CS Principles AP Exam'
+
+allow_multiple_attempts true

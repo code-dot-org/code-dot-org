@@ -1,6 +1,3 @@
-# Maddie (6/12/2020) disabled in IE because "And I press keys" step does not work in IE.
-# https://github.com/code-dot-org/code-dot-org/pull/24646
-@no_ie
 @no_mobile
 Feature: Libraries
 

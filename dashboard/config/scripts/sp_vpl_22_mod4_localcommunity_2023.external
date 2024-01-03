@@ -1,0 +1,28 @@
+name 'SP-VPL-22-mod4-LocalCommunity_2023'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Connect with your local community
+
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">Another way to make CS come alive for your students is to involve your local community. Not only does involving your community in your classroom enhance the student learning experience by adding relevance to the curriculum, it also raises awareness about CS education in the broader community.
+</p></div>
+
+
+## Ideas for connecting with your local community
+
+* ##### Invite a former student or guardian of a current student to come to class as a guest speaker. 
+* ##### Have students design a website or app prototype for a local business.
+* ##### Invite the person who runs the school website to class to provide feedback on student websites.
+* ##### Design an interactive card for a service member, residents of an elderly community, etc.
+* ##### Partner with a younger grade level to create games that younger students might use to practice skills they are learning.
+
+## Make a plan
+
+##### What is one concrete step you will take to engage your local community in your CS class? 
+
+
+
+MARKDOWN

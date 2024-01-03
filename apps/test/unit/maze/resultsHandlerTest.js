@@ -10,12 +10,12 @@ const ResultsHandler = require('@cdo/apps/maze/results/resultsHandler');
 
 import {MazeController} from '@code-dot-org/maze';
 
-const createResultsHandlerForSubtype = require('@cdo/apps/maze/results/utils')
-  .createResultsHandlerForSubtype;
+const createResultsHandlerForSubtype =
+  require('@cdo/apps/maze/results/utils').createResultsHandlerForSubtype;
 
-describe('ResultsHandlers', function() {
-  describe('createResultsHandlerForSubtype util', function() {
-    it('can select the correct subtype handler for a given controller', function() {
+describe('ResultsHandlers', function () {
+  describe('createResultsHandlerForSubtype util', function () {
+    it('can select the correct subtype handler for a given controller', function () {
       const skinToExpected = {
         farmer: FarmerHandler,
         farmer_night: FarmerHandler,
@@ -26,25 +26,25 @@ describe('ResultsHandlers', function() {
         planter: PlanterHandler,
         harvester: HarvesterHandler,
         letters: WordsearchHandler,
-        "unimplemented skin that doesn't exist": ResultsHandler
+        "unimplemented skin that doesn't exist": ResultsHandler,
       };
 
       Object.entries(skinToExpected).forEach(([key, value]) => {
         const mazeController = new MazeController(
           {
-            serializedMaze: [[{tileType: 0}]]
+            serializedMaze: [[{tileType: 0}]],
           },
           {},
           {
             skinId: key,
             level: {
-              flowerType: 'redWithNectar'
-            }
+              flowerType: 'redWithNectar',
+            },
           }
         );
 
         const handler = createResultsHandlerForSubtype(mazeController, {
-          level: {}
+          level: {},
         });
         expect(handler).to.be.an.instanceof(value);
       });

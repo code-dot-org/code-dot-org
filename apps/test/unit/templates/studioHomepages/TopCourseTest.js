@@ -3,7 +3,7 @@ import {Provider} from 'react-redux';
 import {mount} from 'enzyme';
 import {
   // assert,
-  expect
+  expect,
 } from '../../../util/reconfiguredChai';
 import i18n from '@cdo/locale';
 import TopCourse from '@cdo/apps/templates/studioHomepages/TopCourse';
@@ -29,7 +29,6 @@ describe('TopCourse', () => {
     expect(
       wrapper.containsMatchingElement(
         <div>
-          <img />
           <div>{topCourse.assignableName}</div>
           <div>
             <div>You are currently working on {topCourse.lessonName}.</div>

@@ -13,7 +13,7 @@ export const FacilitatorScoringFields = {
         </p>
         <p>5: Current CS instructor</p>
       </div>
-    )
+    ),
   },
   gradesTaught: {
     title: 'Teaching Experience',
@@ -29,7 +29,7 @@ export const FacilitatorScoringFields = {
           lead
         </p>
       </div>
-    )
+    ),
   },
   experienceTeachingThisCourse: {
     title: 'Content Knowledge',
@@ -39,7 +39,7 @@ export const FacilitatorScoringFields = {
         <p>3: Has taught CS, but not this curriculum</p>
         <p>5: Has taught this curriculum to the appropriate grade level</p>
       </div>
-    )
+    ),
   },
   completedPd: {
     title: 'Content Knowledge',
@@ -58,7 +58,7 @@ export const FacilitatorScoringFields = {
           curriculum
         </p>
       </div>
-    )
+    ),
   },
   whyShouldAllHaveAccess: {
     title: 'Equity',
@@ -77,7 +77,7 @@ export const FacilitatorScoringFields = {
           teachers regardless of background or certification
         </p>
       </div>
-    )
+    ),
   },
   skillsAreasToImprove: {
     title: 'Growth Minded',
@@ -89,7 +89,7 @@ export const FacilitatorScoringFields = {
         </p>
         <p>5: Describes at least two strengths and two areas of improvement</p>
       </div>
-    )
+    ),
   },
   inquiryBasedLearning: {
     title: 'Teaching Experience',
@@ -108,7 +108,7 @@ export const FacilitatorScoringFields = {
           example of an inquiry-based activity they have led
         </p>
       </div>
-    )
+    ),
   },
   whyInterested: {
     title: 'Program Commitment',
@@ -127,7 +127,7 @@ export const FacilitatorScoringFields = {
           5: Describes what they want to learn AND the impact they want to make
         </p>
       </div>
-    )
+    ),
   },
   question_1: {
     title: 'Equity',
@@ -139,7 +139,7 @@ export const FacilitatorScoringFields = {
         <p>3: One clear strategy for engaging and supporting all teachers</p>
         <p>5: Two clear strategies for engaging and supporting all teachers</p>
       </div>
-    )
+    ),
   },
   question_2: {
     title: 'Equity',
@@ -151,7 +151,7 @@ export const FacilitatorScoringFields = {
         <p>3: One clear strategy for engaging and supporting teachers</p>
         <p>5: Two clear strategies for engaging and supporting teachers</p>
       </div>
-    )
+    ),
   },
   question_3: {
     title: 'Growth Minded',
@@ -171,7 +171,7 @@ export const FacilitatorScoringFields = {
           demonstrates a growth mindset that is also open to receiving feedback
         </p>
       </div>
-    )
+    ),
   },
   question_4: {
     title: 'Growth Minded',
@@ -192,7 +192,7 @@ export const FacilitatorScoringFields = {
           feedback
         </p>
       </div>
-    )
+    ),
   },
   question_5: {
     title: 'Leadership',
@@ -211,6 +211,6 @@ export const FacilitatorScoringFields = {
           determine success
         </p>
       </div>
-    )
-  }
+    ),
+  },
 };

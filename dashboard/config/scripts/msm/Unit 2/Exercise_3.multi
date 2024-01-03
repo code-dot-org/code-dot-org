@@ -11,3 +11,5 @@ wrong 'circle: 5 solid blue -> circle '
 
 
 
+
+allow_multiple_attempts true

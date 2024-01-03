@@ -14,7 +14,7 @@ export default class StandardsReportCurrentCourseInfo extends Component {
     unitDescription: PropTypes.string.isRequired,
     numStudentsInSection: PropTypes.number,
     numLessonsCompleted: PropTypes.number,
-    numLessonsInUnit: PropTypes.number
+    numLessonsInUnit: PropTypes.number,
   };
 
   getLinkToOverview() {
@@ -35,7 +35,7 @@ export default class StandardsReportCurrentCourseInfo extends Component {
           <p>{this.props.unitDescription} </p>
           <SafeMarkdown
             markdown={i18n.mapsToCSTAStandards({
-              cstaLink: cstaStandardsURL
+              cstaLink: cstaStandardsURL,
             })}
           />
         </div>
@@ -68,25 +68,25 @@ const styles = {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'flex-start',
-    width: '100%'
+    width: '100%',
   },
   classProgress: {
     display: 'flex',
     flexDirection: 'column',
-    marginLeft: 30
+    marginLeft: 30,
   },
   courseOverview: {
-    width: '75%'
+    width: '75%',
   },
   scriptLink: {
-    color: color.teal
+    color: color.teal,
   },
   statsRow: {
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   lessonNote: {
-    marginTop: 10
-  }
+    marginTop: 10,
+  },
 };

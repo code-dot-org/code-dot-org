@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import WorkshopAssignmentLoader, {
-  SUBJECT_TYPES
+  SUBJECT_TYPES,
 } from './workshop_assignment_loader';
 
 export default class DetailViewWorkshopAssignmentResponse extends React.Component {
@@ -12,11 +12,11 @@ export default class DetailViewWorkshopAssignmentResponse extends React.Componen
     assignedWorkshop: PropTypes.shape({
       id: PropTypes.number,
       name: PropTypes.string,
-      url: PropTypes.string
+      url: PropTypes.string,
     }).isRequired,
     year: PropTypes.number,
     editing: PropTypes.bool.isRequired,
-    onChange: PropTypes.func.isRequired
+    onChange: PropTypes.func.isRequired,
   };
 
   render() {

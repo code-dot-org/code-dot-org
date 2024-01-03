@@ -12,7 +12,7 @@ const DEFAULT_PROPS = {
   tableColumns: [],
   tableName: 'tableName',
   tableRecords: [],
-  onShowWarning: () => {}
+  onShowWarning: () => {},
 };
 
 describe('DataTable', () => {
@@ -40,7 +40,7 @@ describe('DataTable', () => {
 
       const wrapper = createDataTable({
         rowsPerPage: 1,
-        tableRecords: ['{"a": 3}', '{"b": null}']
+        tableRecords: ['{"a": 3}', '{"b": null}'],
       });
 
       let pagination = wrapper.find('PaginationWrapper').at(0);

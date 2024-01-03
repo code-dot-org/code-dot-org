@@ -4,7 +4,7 @@ import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import manageLinkedAccounts, {
   convertServerAuthOptions,
-  initializeState
+  initializeState,
 } from './manageLinkedAccountsRedux';
 import ManageLinkedAccounts from './ManageLinkedAccounts';
 
@@ -14,7 +14,8 @@ export default class ManageLinkedAccountsController {
     authenticationOptions,
     userHasPassword,
     isGoogleClassroomStudent,
-    isCleverStudent
+    isCleverStudent,
+    personalAccountLinkingEnabled
   ) {
     registerReducers({manageLinkedAccounts});
     const store = getStore();
@@ -24,7 +25,8 @@ export default class ManageLinkedAccountsController {
         authenticationOptions,
         userHasPassword,
         isGoogleClassroomStudent,
-        isCleverStudent
+        isCleverStudent,
+        personalAccountLinkingEnabled,
       })
     );
 

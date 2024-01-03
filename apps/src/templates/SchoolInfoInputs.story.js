@@ -5,7 +5,7 @@ import SchoolInfoInputs from './SchoolInfoInputs';
 class SchoolInfoInputsWrapper extends Component {
   static propTypes = {
     showErrors: PropTypes.bool,
-    showRequiredIndicator: PropTypes.bool
+    showRequiredIndicator: PropTypes.bool,
   };
 
   state = {
@@ -15,7 +15,7 @@ class SchoolInfoInputsWrapper extends Component {
     schoolName: '',
     schoolCity: '',
     schoolState: '',
-    schoolZip: ''
+    schoolZip: '',
   };
 
   onCountryChange(_, event) {
@@ -36,7 +36,7 @@ class SchoolInfoInputsWrapper extends Component {
   onSchoolNotFoundChange(field, event) {
     let newValue = event ? event.target.value : '';
     this.setState({
-      [field]: newValue
+      [field]: newValue,
     });
   }
 
@@ -66,7 +66,7 @@ class SchoolInfoInputsWrapper extends Component {
 
 export default {
   title: 'SchoolInfoInputs',
-  component: SchoolInfoInputs
+  component: SchoolInfoInputs,
 };
 
 const Template = args => <SchoolInfoInputsWrapper {...args} />;
@@ -74,7 +74,7 @@ const Template = args => <SchoolInfoInputsWrapper {...args} />;
 export const SchoolInfoRequired = Template.bind({});
 SchoolInfoRequired.args = {
   showErrors: true,
-  showRequiredIndicator: true
+  showRequiredIndicator: true,
 };
 
 export const SchoolInfoNotRequired = Template.bind({});

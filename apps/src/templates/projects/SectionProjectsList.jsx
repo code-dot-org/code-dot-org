@@ -12,7 +12,7 @@ class SectionProjectsList extends Component {
     showProjectThumbnails: PropTypes.bool.isRequired,
     // The prefix for the code studio url in the current environment,
     // e.g. '//studio.code.org' or '//localhost-studio.code.org:3000'.
-    studioUrlPrefix: PropTypes.string.isRequired
+    studioUrlPrefix: PropTypes.string.isRequired,
   };
 
   constructor(props) {
@@ -24,7 +24,7 @@ class SectionProjectsList extends Component {
 
     this.state = {
       studentNames,
-      selectedStudent: ALL_STUDENTS
+      selectedStudent: ALL_STUDENTS,
     };
   }
 
@@ -83,14 +83,14 @@ class SectionProjectsList extends Component {
 
 const styles = {
   filterComponent: {
-    float: 'right'
+    float: 'right',
   },
   filterRow: {
-    paddingBottom: 10
+    paddingBottom: 10,
   },
   clearDiv: {
-    clear: 'both'
-  }
+    clear: 'both',
+  },
 };
 
 export default SectionProjectsList;

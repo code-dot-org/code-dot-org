@@ -18,21 +18,21 @@ class ShowSecret extends Component {
     loginType: PropTypes.string.isRequired,
     id: PropTypes.number.isRequired,
     sectionId: PropTypes.number.isRequired,
-    resetDisabled: PropTypes.bool,
+    secretLoginDisabled: PropTypes.bool,
 
     // Provided in redux
     setSecretImage: PropTypes.func.isRequired,
-    setSecretWords: PropTypes.func.isRequired
+    setSecretWords: PropTypes.func.isRequired,
   };
 
   state = {
-    isShowing: !!this.props.initialIsShowing
+    isShowing: !!this.props.initialIsShowing,
   };
 
   show = () => {
     const {sectionId, id, loginType} = this.props;
     this.setState({
-      isShowing: true
+      isShowing: true,
     });
     firehoseClient.putRecord(
       {
@@ -42,8 +42,8 @@ class ShowSecret extends Component {
         data_json: JSON.stringify({
           sectionId: sectionId,
           studentId: id,
-          loginType: loginType
-        })
+          loginType: loginType,
+        }),
       },
       {includeUserId: true}
     );
@@ -52,7 +52,7 @@ class ShowSecret extends Component {
   hide = () => {
     const {sectionId, id, loginType} = this.props;
     this.setState({
-      isShowing: false
+      isShowing: false,
     });
     firehoseClient.putRecord(
       {
@@ -62,8 +62,8 @@ class ShowSecret extends Component {
         data_json: JSON.stringify({
           sectionId: sectionId,
           studentId: id,
-          loginType: loginType
-        })
+          loginType: loginType,
+        }),
       },
       {includeUserId: true}
     );
@@ -73,16 +73,14 @@ class ShowSecret extends Component {
     const {sectionId, id, loginType} = this.props;
     const dataToUpdate = {
       secrets: 'reset_secrets',
-      student: {id: this.props.id}
+      student: {id: this.props.id},
     };
 
     $.ajax({
-      url: `/dashboardapi/sections/${this.props.sectionId}/students/${
-        this.props.id
-      }`,
+      url: `/dashboardapi/sections/${this.props.sectionId}/students/${this.props.id}`,
       method: 'PATCH',
       contentType: 'application/json;charset=UTF-8',
-      data: JSON.stringify(dataToUpdate)
+      data: JSON.stringify(dataToUpdate),
     })
       .done(data => {
         if (this.props.loginType === SectionLoginType.picture) {
@@ -98,8 +96,8 @@ class ShowSecret extends Component {
             data_json: JSON.stringify({
               sectionId: sectionId,
               studentId: id,
-              loginType: loginType
-            })
+              loginType: loginType,
+            }),
           },
           {includeUserId: true}
         );
@@ -113,8 +111,8 @@ class ShowSecret extends Component {
   };
 
   render() {
-    const {resetDisabled} = this.props;
-    const tooltipId = resetDisabled && _.uniqueId();
+    const {secretLoginDisabled} = this.props;
+    const tooltipId = secretLoginDisabled ? _.uniqueId() : '';
     const showButtonText =
       this.props.loginType === SectionLoginType.word
         ? i18n.showWords()
@@ -127,12 +125,19 @@ class ShowSecret extends Component {
     return (
       <div>
         {!this.state.isShowing && (
-          <Button
-            __useDeprecatedTag
-            onClick={this.show}
-            color={Button.ButtonColor.white}
-            text={showButtonText}
-          />
+          <span data-for={tooltipId} data-tip>
+            <Button
+              onClick={this.show}
+              color={Button.ButtonColor.white}
+              text={showButtonText}
+              disabled={secretLoginDisabled}
+              className="uitest-show-picture-or-word"
+              style={styles.button}
+            />
+            <ReactTooltip id={tooltipId} role="tooltip" effect="solid">
+              <div>{i18n.disabledForTeacherAccountsTooltip()}</div>
+            </ReactTooltip>
+          </span>
         )}
         {this.state.isShowing && (
           <div>
@@ -140,32 +145,26 @@ class ShowSecret extends Component {
               <p>{this.props.secretWord}</p>
             )}
             {this.props.loginType === SectionLoginType.picture && (
+              // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+              // Verify or update this alt-text as necessary
               <img
                 src={pegasus('/images/' + this.props.secretPicture)}
                 style={styles.image}
+                alt=""
               />
             )}
-            <span data-for={tooltipId} data-tip>
-              <Button
-                __useDeprecatedTag
-                onClick={this.reset}
-                color={Button.ButtonColor.blue}
-                text={i18n.reset()}
-                style={styles.reset}
-                disabled={resetDisabled}
-                className="uitest-reset-password"
-              />
-              {resetDisabled && (
-                <ReactTooltip id={tooltipId} role="tooltip" effect="solid">
-                  <div>{i18n.resetTeacherPasswordTooltip()}</div>
-                </ReactTooltip>
-              )}
-            </span>
             <Button
-              __useDeprecatedTag
+              onClick={this.reset}
+              color={Button.ButtonColor.blue}
+              text={i18n.reset()}
+              style={{...styles.button, ...styles.reset}}
+              className="uitest-reset-password"
+            />
+            <Button
               onClick={this.hide}
               color={Button.ButtonColor.white}
               text={hideButtonText}
+              style={styles.button}
             />
           </div>
         )}
@@ -176,11 +175,15 @@ class ShowSecret extends Component {
 
 const styles = {
   reset: {
-    marginRight: 10
+    marginRight: 10,
   },
   image: {
-    width: 45
-  }
+    width: 45,
+  },
+  button: {
+    margin: 0,
+    boxShadow: 'inset 0 2px 0 0 rgb(255 255 255 / 40%)',
+  },
 };
 
 export const UnconnectedShowSecret = ShowSecret;
@@ -193,6 +196,6 @@ export default connect(
     },
     setSecretWords(id, words) {
       dispatch(setSecretWords(id, words));
-    }
+    },
   })
 )(ShowSecret);

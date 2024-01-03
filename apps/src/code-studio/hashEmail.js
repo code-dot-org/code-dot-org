@@ -3,7 +3,7 @@ import MD5 from 'crypto-js/md5';
 
 const EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 
-export default function(options) {
+export default function (options) {
   // Hash the email, if it is an email.
   const email = normalizeEmail($(options.email_selector).val());
   if (email !== '' && EMAIL_REGEX.test(email)) {

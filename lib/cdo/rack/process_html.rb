@@ -49,15 +49,13 @@ module Rack
       [status, headers, response]
     end
 
-    private
-
-    def process_doc(doc, env)
+    private def process_doc(doc, env)
       nodes = ::Nokogiri::XML::NodeSet.new(doc)
       nodes += doc.xpath(@xpath) unless @xpath.nil?
       @block.call(nodes, env) unless nodes.empty?
     end
 
-    def should_process?(env, status, headers, body)
+    private def should_process?(env, status, headers, body)
       # Skip processing empty entity body responses and responses with
       # no-transform set.
       if Utils::STATUS_WITH_NO_ENTITY_BODY.include?(status) ||

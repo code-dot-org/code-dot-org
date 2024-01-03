@@ -1,0 +1,7 @@
+#child-account-consent-container{
+  :"data-permission-granted" => @permission_granted,
+  :"data-permission-granted-date" => @permission_granted_date,
+}
+
+- content_for(:head) do
+  %script{src: webpack_asset_path('js/policy_compliance/child_account_consent.js')}

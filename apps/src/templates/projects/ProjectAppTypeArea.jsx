@@ -9,6 +9,7 @@ import Button from '../Button';
 import {connect} from 'react-redux';
 import {appendProjects, setHasOlderProjects} from './projectsRedux';
 import i18n from '@cdo/locale';
+import fontConstants from '@cdo/apps/fontConstants';
 
 const NUM_PROJECTS_TO_ADD = 12;
 
@@ -35,7 +36,7 @@ class ProjectAppTypeArea extends React.Component {
 
     // from redux dispatch
     appendProjects: PropTypes.func.isRequired,
-    setHasOlderProjects: PropTypes.func.isRequired
+    setHasOlderProjects: PropTypes.func.isRequired,
   };
 
   constructor(props) {
@@ -46,13 +47,13 @@ class ProjectAppTypeArea extends React.Component {
         : 0,
       numProjects: this.props.numProjectsToShow,
       // Disables the View More button when a network request is pending.
-      disableViewMore: false
+      disableViewMore: false,
     };
   }
 
   UNSAFE_componentWillReceiveProps(nextProps) {
     this.setState({
-      maxNumProjects: nextProps.projectList ? nextProps.projectList.length : 0
+      maxNumProjects: nextProps.projectList ? nextProps.projectList.length : 0,
     });
   }
 
@@ -78,6 +79,7 @@ class ProjectAppTypeArea extends React.Component {
         projects={filteredList}
         galleryType={this.props.galleryType}
         isDetailView={this.props.isDetailView}
+        showReportAbuseHeader
       />
     );
   }
@@ -115,7 +117,7 @@ class ProjectAppTypeArea extends React.Component {
     return $.ajax({
       method: 'GET',
       url: `/api/v1/projects/gallery/public/${projectType}/${MAX_PROJECTS_PER_CATEGORY}/${oldestPublishedAt}`,
-      dataType: 'json'
+      dataType: 'json',
     }).done(data => {
       // olderProjects all have an older publishedAt date than oldestProject.
       const olderProjects = data[projectType];
@@ -198,7 +200,7 @@ class ProjectAppTypeArea extends React.Component {
 
 const styles = {
   grid: {
-    width: styleConstants['content-width']
+    width: styleConstants['content-width'],
   },
   labHeading: {
     textAlign: 'left',
@@ -207,7 +209,7 @@ const styles = {
     marginBottom: 0,
     paddingBottom: 0,
     paddingTop: 0,
-    float: 'left'
+    float: 'left',
   },
   viewMore: {
     color: color.neutral_dark,
@@ -215,29 +217,29 @@ const styles = {
     marginTop: 35,
     marginBottom: 16,
     cursor: 'pointer',
-    fontFamily: '"Gotham 5r", sans-serif'
+    ...fontConstants['main-font-semi-bold'],
   },
   viewMoreButtons: {
     float: 'right',
-    marginRight: 22
+    marginRight: 22,
   },
   buttonRightMargin: {
-    marginRight: 20
+    marginRight: 20,
   },
   iconPaddingLeft: {
-    paddingLeft: 6
+    paddingLeft: 6,
   },
   iconPaddingRight: {
-    paddingRight: 6
+    paddingRight: 6,
   },
   clear: {
-    clear: 'both'
-  }
+    clear: 'both',
+  },
 };
 
 export default connect(
   (state, ownProps) => ({
-    hasOlderProjects: state.projects.hasOlderProjects[ownProps.labKey]
+    hasOlderProjects: state.projects.hasOlderProjects[ownProps.labKey],
   }),
   {appendProjects, setHasOlderProjects}
 )(ProjectAppTypeArea);

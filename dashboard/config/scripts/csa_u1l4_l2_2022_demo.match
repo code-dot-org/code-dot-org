@@ -17,3 +17,5 @@ answer 'a value passed to a method or constructor when the method or constructor
 markdown <<MARKDOWN
 
 MARKDOWN
+
+allow_multiple_attempts true

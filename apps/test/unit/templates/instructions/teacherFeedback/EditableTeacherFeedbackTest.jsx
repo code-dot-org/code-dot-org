@@ -22,7 +22,8 @@ const DEFAULT_PROPS = {
   verifiedInstructor: true,
   selectedSectionId: 789,
   canHaveFeedbackReviewState: true,
-  updateUserProgress: () => {}
+  allowUnverified: false,
+  updateUserProgress: () => {},
 };
 
 const RUBRIC = {
@@ -30,7 +31,7 @@ const RUBRIC = {
   performanceLevel1: 'exceeded expectations',
   performanceLevel2: 'met expectations',
   performanceLevel3: 'approaches expectations',
-  performanceLevel4: 'no evidence of trying'
+  performanceLevel4: 'no evidence of trying',
 };
 
 const FEEDBACK = {
@@ -39,7 +40,7 @@ const FEEDBACK = {
   id: 5,
   level_id: 123,
   performance: null,
-  student_id: 1
+  student_id: 1,
 };
 
 const setUp = (overrideProps = {}) => {
@@ -128,7 +129,7 @@ describe('EditableTeacherFeedback', () => {
   describe('with previous feedback given', () => {
     it('displays EditableFeedbackStatus if latestFeedback exists', () => {
       const latestFeedback = {
-        student_seen_feedback: new Date()
+        student_seen_feedback: new Date(),
       };
 
       const wrapper = setUp({latestFeedback});
@@ -140,7 +141,7 @@ describe('EditableTeacherFeedback', () => {
     it('displays the rubric if there is a rubric', () => {
       const latestFeedback = {
         ...FEEDBACK,
-        performance: 'performanceLevel2'
+        performance: 'performanceLevel2',
       };
 
       const wrapper = setUp({rubric: RUBRIC, latestFeedback: latestFeedback});
@@ -165,11 +166,11 @@ describe('EditableTeacherFeedback', () => {
     it('does not render EditableReviewState if not canHaveFeedbackReviewState', () => {
       const latestFeedback = {
         ...FEEDBACK,
-        review_state: ReviewStates.completed
+        review_state: ReviewStates.completed,
       };
       const wrapper = setUp({
         latestFeedback,
-        canHaveFeedbackReviewState: false
+        canHaveFeedbackReviewState: false,
       });
 
       const keepWorkingComponent = wrapper.find(EditableReviewState);
@@ -179,7 +180,7 @@ describe('EditableTeacherFeedback', () => {
     it('renders EditableReviewState with expected props (completed)', () => {
       const latestFeedback = {
         ...FEEDBACK,
-        review_state: ReviewStates.completed
+        review_state: ReviewStates.completed,
       };
       const wrapper = setUp({latestFeedback});
 
@@ -193,7 +194,7 @@ describe('EditableTeacherFeedback', () => {
     it('renders EditableReviewState with expected props (awaitingReview)', () => {
       const latestFeedback = {
         ...FEEDBACK,
-        is_awaiting_teacher_review: true
+        is_awaiting_teacher_review: true,
       };
       const wrapper = setUp({latestFeedback});
 

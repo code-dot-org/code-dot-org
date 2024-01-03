@@ -1,53 +1,97 @@
+import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
+import {Effects} from './interfaces/Effects';
 import MusicLibrary from './MusicLibrary';
-import {Effects} from './MusicPlayer';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
 // Using require() to import JS in TS files
 const soundApi = require('./sound');
+
+// Multiplied by the duration of a single beat to determine the length of
+// time to fade out a sound, if trimming to a specific duration. This results
+// in a duration slightly smaller than a 16th note (0.25 of a beat), and 16th
+// notes are the shortest possible notes, so the release duration should never
+// be longer than a sound.
+const RELEASE_DURATION_FACTOR = 0.2;
 
 export interface SampleEvent {
   offsetSeconds: number;
   sampleId: string;
   triggered: boolean;
   effects?: Effects;
+  lengthSeconds?: number;
 }
 
 interface PlayingSample {
   eventStart: number;
   uniqueId: number;
-  triggered: boolean;
 }
 
 const MAIN_AUDIO_GROUP = 'mainaudio';
 const PREVIEW_GROUP = 'preview';
-const GROUP_PREFIX = 'all';
 
 /**
  * Handles playback of individual samples.
  */
 export default class SamplePlayer {
+  private readonly metricsReporter: LabMetricsReporter;
   private playingSamples: PlayingSample[];
   private isPlaying: boolean;
   private startPlayingAudioTime: number;
   private isInitialized: boolean;
+  private groupPath: string;
 
-  constructor() {
+  constructor(
+    metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
+  ) {
     this.playingSamples = [];
     this.isPlaying = false;
     this.startPlayingAudioTime = -1;
     this.isInitialized = false;
+    this.groupPath = '';
+    this.metricsReporter = metricsReporter;
   }
 
-  initialize(library: MusicLibrary) {
+  initialize(
+    library: MusicLibrary,
+    bpm: number,
+    updateLoadProgress: (value: number) => void
+  ) {
     const soundList = library.groups
       .map(group => {
         return group.folders.map(folder => {
-          return folder.sounds.map(sound => {
-            return group.path + '/' + folder.path + '/' + sound.src;
-          });
+          return folder.sounds
+            .map(sound => {
+              // Skip loading sequenced sounds; these are generated at runtime
+              // and made up of individual instrument samples.
+              if (!sound.sequence) {
+                return {
+                  path: group.path + '/' + folder.path + '/' + sound.src,
+                  restricted: sound.restricted,
+                };
+              }
+            })
+            .filter(sound => sound !== undefined);
         });
       })
       .flat(2);
-    soundApi.InitSound(soundList);
+
+    const secondsPerBeat = 60 / bpm;
+    soundApi.InitSound(soundList, {
+      // Calculate release time using release duration factor
+      releaseTimeSeconds: secondsPerBeat * RELEASE_DURATION_FACTOR,
+      // Use a delay value of a half of a beat
+      delayTimeSeconds: secondsPerBeat / 2,
+      reportSoundLibraryLoadTime: (loadTimeMs: number) => {
+        this.metricsReporter.reportLoadTime(
+          'SoundLibraryLoadTime',
+          loadTimeMs,
+          [{name: 'Library', value: library.name}]
+        );
+      },
+      updateLoadProgress: updateLoadProgress,
+    });
+
+    this.groupPath = library.groups[0].path;
 
     this.isInitialized = true;
   }
@@ -56,29 +100,72 @@ export default class SamplePlayer {
     return this.isInitialized;
   }
 
-  startPlayback(sampleEventList: SampleEvent[]) {
+  /**
+   * Start playback with the given sample events.
+   * @param sampleEventList samples to play
+   * @param playTimeOffsetSeconds the number of seconds to offset playback by.
+   */
+  startPlayback(
+    sampleEventList: SampleEvent[],
+    playTimeOffsetSeconds?: number
+  ) {
     if (!this.isInitialized) {
-      console.warn('Sample player not initialized.');
+      this.logUninitialized();
       return;
     }
 
     this.stopPlayback();
-
-    this.startPlayingAudioTime = soundApi.GetCurrentAudioTime();
+    this.startPlayingAudioTime =
+      soundApi.GetCurrentAudioTime() - (playTimeOffsetSeconds || 0);
     this.isPlaying = true;
 
     this.playSamples(sampleEventList);
+
+    soundApi.StartPlayback();
   }
 
-  previewSample(sampleId: string, onStop: () => any) {
+  previewSample(sampleId: string, onStop?: () => void) {
     if (!this.isInitialized) {
-      console.warn('Sample player not initialized.');
+      this.logUninitialized();
       return;
     }
 
     this.cancelPreviews();
 
-    soundApi.PlaySound(GROUP_PREFIX + '/' + sampleId, PREVIEW_GROUP, 0, onStop);
+    soundApi.PlaySound(
+      this.groupPath + '/' + sampleId,
+      PREVIEW_GROUP,
+      0,
+      onStop
+    );
+  }
+
+  previewSamples(events: SampleEvent[], onStop?: () => void) {
+    if (!this.isInitialized) {
+      this.logUninitialized();
+      return;
+    }
+
+    this.cancelPreviews();
+
+    let counter = 0;
+    const onStopWrapper = onStop
+      ? () => {
+          counter++;
+          if (counter === events.length) {
+            onStop();
+          }
+        }
+      : undefined;
+
+    events.forEach(event => {
+      soundApi.PlaySound(
+        this.groupPath + '/' + event.sampleId,
+        PREVIEW_GROUP,
+        soundApi.GetCurrentAudioTime() + event.offsetSeconds,
+        onStopWrapper
+      );
+    });
   }
 
   playing(): boolean {
@@ -96,7 +183,7 @@ export default class SamplePlayer {
 
   playSamples(sampleEvents: SampleEvent[]) {
     if (!this.isInitialized) {
-      console.warn('Sample player not initialized.');
+      this.logUninitialized();
       return;
     }
 
@@ -116,22 +203,25 @@ export default class SamplePlayer {
       // Note that we still don't play sounds older than that, because they might
       // have been scheduled for some time ago, and Web Audio will play a
       // sound immediately if its target time is in the past.
-      const delayCompensation = sampleEvent.triggered ? 0.1 : 0;
+      // We have a similar, but smaller, grace period for non-triggered sounds,
+      // since it might take a little time to start playing all the sounds in a
+      // complex song.
+      const delayCompensation = sampleEvent.triggered ? 0.1 : 0.05;
 
       if (eventStart >= currentAudioTime - delayCompensation) {
         const uniqueId = soundApi.PlaySound(
-          GROUP_PREFIX + '/' + sampleEvent.sampleId,
+          this.groupPath + '/' + sampleEvent.sampleId,
           MAIN_AUDIO_GROUP,
           eventStart,
           null,
           false,
-          sampleEvent.effects
+          sampleEvent.effects,
+          sampleEvent.lengthSeconds
         );
 
         this.playingSamples.push({
           eventStart,
           uniqueId,
-          triggered: sampleEvent.triggered
         });
       }
     }
@@ -150,7 +240,7 @@ export default class SamplePlayer {
   }
 
   /**
-   * Stops all non-triggered samples that have not yet been played.
+   * Stops all samples that have not yet been played.
    */
   stopAllSamplesStillToPlay() {
     if (!this.isPlaying) {
@@ -158,12 +248,13 @@ export default class SamplePlayer {
     }
 
     for (const sample of this.playingSamples) {
-      if (
-        !sample.triggered &&
-        sample.eventStart > soundApi.GetCurrentAudioTime()
-      ) {
+      if (sample.eventStart > soundApi.GetCurrentAudioTime()) {
         soundApi.StopSoundByUniqueId(MAIN_AUDIO_GROUP, sample.uniqueId);
       }
     }
+  }
+
+  private logUninitialized() {
+    this.metricsReporter.logWarning('Sample player not initialized.');
   }
 }

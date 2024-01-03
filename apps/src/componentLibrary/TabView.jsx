@@ -12,13 +12,13 @@ class TabView extends React.Component {
       PropTypes.shape({
         key: PropTypes.string.isRequired,
         name: PropTypes.string.isRequired,
-        renderFn: PropTypes.func.isRequired
+        renderFn: PropTypes.func.isRequired,
       })
-    )
+    ),
   };
 
   state = {
-    activeTab: this.props.tabs[0]
+    activeTab: this.props.tabs[0],
   };
 
   render() {
@@ -31,7 +31,7 @@ class TabView extends React.Component {
                 styles.tab,
                 this.state.activeTab?.key === tabInfo.key
                   ? styles.activeTab
-                  : styles.inactiveTab
+                  : styles.inactiveTab,
               ]}
               key={tabInfo.key}
               onClick={() => this.setState({activeTab: tabInfo})}
@@ -52,7 +52,7 @@ const styles = {
     padding: 10,
     borderStyle: 'solid',
     borderWidth: 1,
-    borderColor: color.lighter_gray
+    borderColor: color.lighter_gray,
   },
   tab: {
     padding: '2px 16px',
@@ -60,20 +60,20 @@ const styles = {
     display: 'inline-block',
     cursor: 'pointer',
     fontSize: 20,
-    lineHeight: '28px'
+    lineHeight: '28px',
   },
   activeTab: {
     backgroundColor: color.teal,
     borderRadius: 25,
-    color: color.white
+    color: color.white,
   },
   inactiveTab: {
     backgroundColor: color.lightest_gray,
     color: color.dark_charcoal,
     ':hover': {
-      color: color.teal
-    }
-  }
+      color: color.teal,
+    },
+  },
 };
 
 export default Radium(TabView);

@@ -20,7 +20,7 @@ export class JavalabEditorTabMenu extends Component {
     fileIsVisible: PropTypes.bool,
     fileIsValidation: PropTypes.bool,
     activeTabKey: PropTypes.string,
-    orderedTabKeys: PropTypes.array
+    orderedTabKeys: PropTypes.array,
   };
 
   dropdownElements = () => {
@@ -34,13 +34,13 @@ export class JavalabEditorTabMenu extends Component {
       fileIsVisible,
       fileIsValidation,
       activeTabKey,
-      orderedTabKeys
+      orderedTabKeys,
     } = this.props;
 
     let elements = [
       <button onClick={renameFromTabMenu} key="rename" type="button">
         {javalabMsg.rename()}
-      </button>
+      </button>,
     ];
     const tabsLength = orderedTabKeys.length;
     const index = orderedTabKeys.indexOf(activeTabKey);

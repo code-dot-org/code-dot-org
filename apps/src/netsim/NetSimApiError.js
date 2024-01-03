@@ -11,7 +11,7 @@ require('../utils'); // provide Function.prototype.inherits
  * @constructor
  * @extends Error
  */
-var NetSimApiError = (module.exports = function(request) {
+var NetSimApiError = (module.exports = function (request) {
   /** @type {string} */
   this.name = 'NetSimApiError';
 
@@ -52,5 +52,5 @@ NetSimApiError.inherits(Error);
 NetSimApiError.ValidationError = {
   MALFORMED: 'malformed',
   CONFLICT: 'conflict',
-  LIMIT_REACHED: 'limit_reached'
+  LIMIT_REACHED: 'limit_reached',
 };

@@ -14,7 +14,7 @@ describe('RemoveLessonDialog', () => {
       lessonPosToRemove: 2,
       lessonName: 'Lesson Name',
       handleClose,
-      removeLesson
+      removeLesson,
     };
   });
 

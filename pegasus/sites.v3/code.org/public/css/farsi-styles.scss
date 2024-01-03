@@ -1,0 +1,31 @@
+// Custom styles for code.org/farsi
+// — supplemental to shared/css/design-system-pegasus.scss
+
+@import 'color', 'font', 'breakpoints', 'typography', 'barlow-semi-condensed-font';
+
+.farsi-timeline {
+  margin: 3em 0 0;
+
+  span {
+    @include overline-two;
+    color: $brand_primary_default;
+    vertical-align: top;
+  }
+
+  p:last-child {
+    border-top: 1px solid $neutral_dark20;
+    margin-bottom: 0.25rem;
+    padding-top: 1rem;
+  }
+}
+
+#farsi-carousel {
+
+  p {
+    margin-bottom: 0;
+
+    @media screen and (max-width: $width-sm) {
+      margin-bottom: 1rem;
+    }
+  }
+}

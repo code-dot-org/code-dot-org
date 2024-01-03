@@ -14,13 +14,13 @@ const TEXT_Y_OFFSET = -7;
 
 export const styles = {
   text: {
-    textAnchor: 'middle'
+    textAnchor: 'middle',
   },
   rect: {
     stroke: '#bdc3c7',
     strokeWidth: 2,
-    fill: 'rgba(255,255,255,0.8)'
-  }
+    fill: 'rgba(255,255,255,0.8)',
+  },
 };
 
 /**
@@ -38,7 +38,7 @@ export default class TooltipOverlay extends React.Component {
     // Set of tooltip text provider functions.  See the end of this file for examples.
     providers: PropTypes.arrayOf(PropTypes.func),
     // Normally the tooltip is below the curosr
-    tooltipAboveCursor: PropTypes.bool
+    tooltipAboveCursor: PropTypes.bool,
   };
 
   getTooltipStrings() {
@@ -58,7 +58,7 @@ export default class TooltipOverlay extends React.Component {
       width: TEXT_RECT_WIDTH,
       height:
         tooltipCount * TEXT_RECT_HEIGHT +
-        Math.max(0, tooltipCount - 1) * BETWEEN_RECT_MARGIN
+        Math.max(0, tooltipCount - 1) * BETWEEN_RECT_MARGIN,
     };
   }
 

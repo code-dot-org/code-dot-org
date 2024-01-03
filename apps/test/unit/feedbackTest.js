@@ -24,11 +24,11 @@ describe('FeedbackUtils', () => {
           options = {
             feedbackType: TestResults.FREE_PLAY,
             level: {
-              validationEnabled: true
+              validationEnabled: true,
             },
             appStrings: {
-              reinfFeedbackMsg: "You're finished!"
-            }
+              reinfFeedbackMsg: "You're finished!",
+            },
           };
 
           sinon.stub(msg, 'finalStage').callsFake(() => finalStageMsg);
@@ -106,7 +106,7 @@ describe('FeedbackUtils', () => {
 
           it('returns next stage message if lesson completed', () => {
             options.response = {
-              lesson_changing: {previous: {name: 'Lesson Name'}}
+              lesson_changing: {previous: {name: 'Lesson Name'}},
             };
             assert.equal(
               feedbackUtils.getFeedbackMessage(options),

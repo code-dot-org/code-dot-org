@@ -28,7 +28,7 @@ Feature: Creating and deleting data docs
     And element "a" contains the name of the temp data doc
     And the element contains the path to the temp data doc
     And I click the icon to edit the temp data doc
-    And I wait until element "#edit-data-doc" is visible
+    And I wait for the temp data doc edit page to load
     And I press keys "New description of Doc" for element "textarea"
     And I click "button[type='submit']" to load a new page
 

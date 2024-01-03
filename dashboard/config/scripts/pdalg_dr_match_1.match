@@ -25,3 +25,4 @@ markdown <<MARKDOWN
 
 Given a number of dollars, produce the number of 50 cent treats you could purchase
 MARKDOWN
+allow_multiple_attempts true

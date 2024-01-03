@@ -84,16 +84,17 @@ var ALLOWED_KEYS = new Set([
   'aiEnabled',
   'aiModelId',
   'aiModelName',
-  'isCurriculumLevel'
+  'isCurriculumLevel',
+  'recaptchaSiteKey',
 ]);
 
 const initialState = {
-  assetUrl() {}
+  assetUrl() {},
 };
 
 export default function reducer(state = initialState, action) {
   if (action.type === SET_PAGE_CONSTANTS) {
-    Object.keys(action.props).forEach(function(key) {
+    Object.keys(action.props).forEach(function (key) {
       if (!ALLOWED_KEYS.has(key)) {
         throw new Error(
           `Property "${key}" may not be set using the ${action.type} action.`
@@ -135,6 +136,6 @@ export default function reducer(state = initialState, action) {
 export function setPageConstants(props) {
   return {
     type: SET_PAGE_CONSTANTS,
-    props: props
+    props: props,
   };
 }

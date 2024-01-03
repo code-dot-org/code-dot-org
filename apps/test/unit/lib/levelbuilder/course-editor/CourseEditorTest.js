@@ -6,7 +6,7 @@ import {
   stubRedux,
   restoreRedux,
   getStore,
-  registerReducers
+  registerReducers,
 } from '@cdo/apps/redux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import createResourcesReducer from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
@@ -18,7 +18,7 @@ import {
   PublishedState,
   InstructionType,
   InstructorAudience,
-  ParticipantAudience
+  ParticipantAudience,
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
 
@@ -45,7 +45,7 @@ const defaultProps = {
   initialInstructorAudience: InstructorAudience.teacher,
   initialParticipantAudience: ParticipantAudience.student,
   teacherResources: [],
-  studentResources: []
+  studentResources: [],
 };
 
 describe('CourseEditor', () => {
@@ -59,7 +59,7 @@ describe('CourseEditor', () => {
     registerReducers({
       teacherSections,
       resources: createResourcesReducer('teacherResource'),
-      studentResources: createResourcesReducer('studentResource')
+      studentResources: createResourcesReducer('studentResource'),
     });
   });
 
@@ -83,7 +83,7 @@ describe('CourseEditor', () => {
         <CourseEditor
           {...defaultProps}
           teacherResources={[
-            {id: 1, key: 'curriculum', name: 'Curriculum', url: '/foo'}
+            {id: 1, key: 'curriculum', name: 'Curriculum', url: '/foo'},
           ]}
         />
       );
@@ -107,18 +107,12 @@ describe('CourseEditor', () => {
     const wrapper = createWrapper({});
     expect(wrapper.find('TextareaWithMarkdownPreview').length).to.equal(2);
     expect(
-      wrapper
-        .find('TextareaWithMarkdownPreview')
-        .at(0)
-        .prop('markdown')
+      wrapper.find('TextareaWithMarkdownPreview').at(0).prop('markdown')
     ).to.equal(
       '# Student description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* '
     );
     expect(
-      wrapper
-        .find('TextareaWithMarkdownPreview')
-        .at(1)
-        .prop('markdown')
+      wrapper.find('TextareaWithMarkdownPreview').at(1).prop('markdown')
     ).to.equal(
       '# Teacher description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* '
     );
@@ -144,12 +138,12 @@ describe('CourseEditor', () => {
       const courseEditor = wrapper.find('CourseEditor');
 
       let returnData = {
-        coursePath: '/courses/test-course'
+        coursePath: '/courses/test-course',
       };
       server.respondWith('PUT', `/courses/test-course`, [
         200,
         {'Content-Type': 'application/json'},
-        JSON.stringify(returnData)
+        JSON.stringify(returnData),
       ]);
 
       const saveBar = wrapper.find('SaveBar');
@@ -185,7 +179,7 @@ describe('CourseEditor', () => {
       server.respondWith('PUT', `/courses/test-course`, [
         404,
         {'Content-Type': 'application/json'},
-        returnData
+        returnData,
       ]);
 
       const saveBar = wrapper.find('SaveBar');
@@ -217,12 +211,12 @@ describe('CourseEditor', () => {
       const courseEditor = wrapper.find('CourseEditor');
 
       let returnData = {
-        coursePath: '/courses/test-course'
+        coursePath: '/courses/test-course',
       };
       server.respondWith('PUT', `/courses/test-course`, [
         200,
         {'Content-Type': 'application/json'},
-        JSON.stringify(returnData)
+        JSON.stringify(returnData),
       ]);
 
       const saveBar = wrapper.find('SaveBar');
@@ -252,7 +246,7 @@ describe('CourseEditor', () => {
       server.respondWith('PUT', `/courses/test-course`, [
         404,
         {'Content-Type': 'application/json'},
-        returnData
+        returnData,
       ]);
 
       const saveBar = wrapper.find('SaveBar');
@@ -287,7 +281,7 @@ describe('CourseEditor', () => {
       const courseEditor = wrapper.find('CourseEditor');
       courseEditor.setState({
         publishedState: PublishedState.pilot,
-        pilotExperiment: ''
+        pilotExperiment: '',
       });
 
       const saveBar = wrapper.find('SaveBar');
@@ -323,7 +317,7 @@ describe('CourseEditor', () => {
     const courseEditor = wrapper.find('CourseEditor');
     courseEditor.setState({
       versionYear: '1991',
-      familyName: ''
+      familyName: '',
     });
 
     const saveBar = wrapper.find('SaveBar');
@@ -356,7 +350,7 @@ describe('CourseEditor', () => {
     const courseEditor = wrapper.find('CourseEditor');
     courseEditor.setState({
       versionYear: '',
-      familyName: 'new-family-name'
+      familyName: 'new-family-name',
     });
 
     const saveBar = wrapper.find('SaveBar');

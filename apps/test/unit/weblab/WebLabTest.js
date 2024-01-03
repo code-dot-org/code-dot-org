@@ -5,17 +5,17 @@ import {
   getStore,
   registerReducers,
   stubRedux,
-  restoreRedux
+  restoreRedux,
 } from '@cdo/apps/redux';
 import reducers from '@cdo/apps/weblab/reducers';
 import {
   changeMaxProjectCapacity,
-  changeFullScreenPreviewOn
+  changeFullScreenPreviewOn,
 } from '@cdo/apps/weblab/actions';
 import {
   singleton as studioApp,
   stubStudioApp,
-  restoreStudioApp
+  restoreStudioApp,
 } from '@cdo/apps/StudioApp';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import WebLab from '@cdo/apps/weblab/WebLab';
@@ -40,7 +40,7 @@ describe('WebLab', () => {
     registerReducers(reducers);
     config = {
       skin: {},
-      level: {}
+      level: {},
     };
     sinon.stub(ReactDOM, 'render');
     sinon.stub(getStore(), 'dispatch');
@@ -128,7 +128,7 @@ describe('WebLab', () => {
     beforeEach(() => {
       brambleHost = {
         disableInspector: sinon.stub(),
-        enableInspector: sinon.stub()
+        enableInspector: sinon.stub(),
       };
       weblab.brambleHost = brambleHost;
     });
@@ -152,7 +152,7 @@ describe('WebLab', () => {
     let config;
     beforeEach(() => {
       config = {
-        containerId: 'container-id'
+        containerId: 'container-id',
       };
       weblab.studioApp_ = studioApp();
       sinon.stub(studioApp(), 'setConfigValues_');
@@ -194,7 +194,7 @@ describe('WebLab', () => {
     beforeEach(() => {
       brambleHost = {
         enableFullscreenPreview: callback => callback(),
-        disableInspector: sinon.stub()
+        disableInspector: sinon.stub(),
       };
       weblab.brambleHost = brambleHost;
     });
@@ -223,7 +223,7 @@ describe('WebLab', () => {
       sinon.stub(project, 'autosave');
       eventStub = {
         preventDefault: sinon.stub(),
-        returnValue: undefined
+        returnValue: undefined,
       };
     });
 
@@ -279,7 +279,7 @@ describe('WebLab', () => {
       weblab.brambleHost = {
         validateProjectChanged: callback => {
           callback(false);
-        }
+        },
       };
       weblab.onFinish(false);
       expect(reportStub).to.have.been.calledWith(false, false);
@@ -293,7 +293,7 @@ describe('WebLab', () => {
       level: 123,
       program: '',
       submitted: true,
-      onComplete: onSubmitComplete
+      onComplete: onSubmitComplete,
     };
 
     beforeEach(() => {
@@ -312,7 +312,7 @@ describe('WebLab', () => {
       expect(reportStub).to.have.been.calledWith({
         ...defaultValues,
         result: true,
-        testResult: TestResults.FREE_PLAY
+        testResult: TestResults.FREE_PLAY,
       });
     });
 
@@ -323,8 +323,8 @@ describe('WebLab', () => {
         ...defaultValues,
         ...{
           result: false,
-          testResult: TestResults.FREE_PLAY_UNCHANGED_FAIL
-        }
+          testResult: TestResults.FREE_PLAY_UNCHANGED_FAIL,
+        },
       });
     });
   });
@@ -339,7 +339,7 @@ describe('WebLab', () => {
 
     it('rejects with error if brambleHost syncFiles has an error', () => {
       weblab.brambleHost = {
-        syncFiles: callback => callback('error')
+        syncFiles: callback => callback('error'),
       };
       weblab.getCodeAsync().catch(error => {
         expect(error).to.equal('error');
@@ -348,7 +348,7 @@ describe('WebLab', () => {
 
     it('resolves with files version id when brambleHost syncFiles has no error', () => {
       weblab.brambleHost = {
-        syncFiles: callback => callback('error')
+        syncFiles: callback => callback('error'),
       };
       weblab.initialFilesVersionId = 'version-id';
       weblab.getCodeAsync().then(val => {
@@ -386,12 +386,12 @@ describe('WebLab', () => {
       files = [
         {
           filename: 'file1.html',
-          versionId: '2'
+          versionId: '2',
         },
         {
           filename: 'file2.html',
-          versionId: '2'
-        }
+          versionId: '2',
+        },
       ];
       sinon.stub(assetListStore, 'list').returns(files);
       sinon.stub(filesApi, 'basePath').returns('stubbedpath');
@@ -409,7 +409,7 @@ describe('WebLab', () => {
       project.filesVersionId = '1';
       const newFilesVersionId = '2';
       weblab.brambleHost = {
-        syncFiles: sinon.stub()
+        syncFiles: sinon.stub(),
       };
       weblab.onFilesReady(files, newFilesVersionId);
       expect(assetListStore.reset).to.have.been.calledOnceWith(files);
@@ -417,13 +417,13 @@ describe('WebLab', () => {
         {
           name: 'file1.html',
           url: 'stubbedpath',
-          versionId: '2'
+          versionId: '2',
         },
         {
           name: 'file2.html',
           url: 'stubbedpath',
-          versionId: '2'
-        }
+          versionId: '2',
+        },
       ]);
       expect(weblab.initialFilesVersionId).to.equal('1');
       expect(project.filesVersionId).to.equal('2');

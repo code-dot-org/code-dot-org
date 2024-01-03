@@ -8,7 +8,7 @@ module.exports = {
     solutionBlocks: blockUtils.mathBlockXml('functional_star', {
       COLOR: blockUtils.mathBlockXml('functional_string', null, {VAL: 'green'}),
       STYLE: blockUtils.mathBlockXml('functional_string', null, {VAL: 'solid'}),
-      SIZE: blockUtils.mathBlockXml('functional_math_number', null, {NUM: 200})
+      SIZE: blockUtils.mathBlockXml('functional_math_number', null, {NUM: 200}),
     }),
     ideal: Infinity,
     toolbox: blockUtils.createToolbox(
@@ -48,10 +48,10 @@ module.exports = {
     startBlocks: blockUtils.mathBlockXml('functional_star', {
       COLOR: blockUtils.mathBlockXml('functional_string', null, {VAL: 'black'}),
       STYLE: blockUtils.mathBlockXml('functional_string', null, {VAL: 'solid'}),
-      SIZE: blockUtils.mathBlockXml('functional_math_number', null, {NUM: 200})
+      SIZE: blockUtils.mathBlockXml('functional_math_number', null, {NUM: 200}),
     }),
     requiredBlocks: '',
-    freePlay: false
+    freePlay: false,
   },
 
   custom: {
@@ -60,6 +60,6 @@ module.exports = {
     toolbox: '',
     startBlocks: '',
     requiredBlocks: '',
-    freePlay: false
-  }
+    freePlay: false,
+  },
 };

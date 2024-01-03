@@ -27,7 +27,10 @@ module Cdo::CloudFormation
     # Hard-coded constants and default values.
     CHEF_BIN = '/usr/local/bin/chef-cdo-app'
     CHEF_KEY = rack_env?(:adhoc) ? 'adhoc/chef' : 'chef'
-    IMAGE_ID = ENV['IMAGE_ID'] || 'ami-07d0cf3af28718ef8' # ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-20190722.1
+    # Temporarily introduce per-environment differences, so we can gradually roll out this update.
+    # Use Ubuntu 20 (ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-20230517) for adhocs and our main build pipeline: staging, test, and production
+    # Use Ubuntu 18 (ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-20190722.1) everywhere else (ie, levelbuilder and gateway)
+    IMAGE_ID = ENV['IMAGE_ID'] || (rack_env?(:staging, :test, :production, :adhoc) ? 'ami-0261755bbcb8c4a84' : 'ami-07d0cf3af28718ef8')
     INSTANCE_TYPE = rack_env?(:production) ? 'm5.12xlarge' : 't2.2xlarge'
     ORIGIN = "https://github.com/code-dot-org/code-dot-org.git"
     CHEF_VERSION = '17.6.18'
@@ -51,7 +54,7 @@ module Cdo::CloudFormation
     def initialize(**options)
       options[:stack_name]  ||= CDO.stack_name
       options[:filename]    ||= 'cloud_formation_stack.yml.erb'
-      super(options)
+      super(**options)
       options = @options = OpenStruct.new(options)
 
       # Various option defaults.
@@ -131,7 +134,7 @@ To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`."
     # S3 path to bootstrap script.
     # Note: Uploads bootstrap script to S3 as a side effect.
     def bootstrap_script_path
-      @bootstrap_script ||= begin
+      @bootstrap_script_path ||= begin
         unless dry_run
           Aws::S3::Client.new.put_object(
             bucket: S3_BUCKET,
@@ -146,7 +149,7 @@ To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`."
     # S3 path to subdomain SSL certificate.
     # Note: uploads certificate to S3 as a side effect.
     def ssl_certs_path
-      @certs_path ||= begin
+      @ssl_certs_path ||= begin
         unless dry_run
           Dir.chdir(aws_dir('cloudformation')) do
             RakeUtils.bundle_exec './update_certs',
@@ -195,9 +198,7 @@ To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`."
       )
     end
 
-    private
-
-    def get_binding
+    private def get_binding
       binding
     end
   end

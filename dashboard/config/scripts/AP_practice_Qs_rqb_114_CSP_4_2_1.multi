@@ -22,3 +22,5 @@ Learning Objective: **4.2.1** and Essential Knowledge statements: **4.2.1B**
  (D) This answer is correct. Even programs that take longer than polynomial time to run may still run in a reasonable time for small inputs.
 
 MARKDOWN
+
+allow_multiple_attempts true

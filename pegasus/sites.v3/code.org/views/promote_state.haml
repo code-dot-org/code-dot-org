@@ -40,7 +40,7 @@
     - if data[:pd_funding_s] == "No"
       .fa-stack
         %i.fa.fa-circle.fa-stack-2x
-        %i.fa.fa-times-circle.fa-stack-1x
+        %i.fa.fa-times-circle.fa-stack-2x
       .fact-text
         No dedicated state funding for CS PD
     - elsif data[:pd_funding_s] == "Yes"
@@ -50,14 +50,14 @@
     - elsif data[:pd_funding_s] == "Other"
       .fa-stack
         %i.fa.fa-circle.fa-stack-2x
-        %i.fa.fa-times-circle.fa-stack-1x
+        %i.fa.fa-times-circle.fa-stack-2x
       .fact-text
         = data[:pd_funding_exception_s]
   .fact.icon-fact
     - if data[:require_hs_s] == "No"
       .fa-stack
         %i.fa.fa-circle.fa-stack-2x
-        %i.fa.fa-times-circle.fa-stack-1x
+        %i.fa.fa-times-circle.fa-stack-2x
       .fact-text
         Does not require all high schools to offer CS
     - elsif data[:require_hs_s] == "Yes"
@@ -67,7 +67,7 @@
     - elsif data[:require_hs_s] == "Other"
       .fa-stack
         %i.fa.fa-circle.fa-stack-2x
-        %i.fa.fa-times-circle.fa-stack-1x
+        %i.fa.fa-times-circle.fa-stack-2x
       .fact-text
         = data[:require_hs_exception_s]
 
@@ -75,7 +75,7 @@
     - if data[:cs_standards_s] == "No"
       .fa-stack
         %i.fa.fa-circle.fa-stack-2x
-        %i.fa.fa-times-circle.fa-stack-1x
+        %i.fa.fa-times-circle.fa-stack-2x
       .fact-text
         No K-12 CS curriculum standards
     - elsif data[:cs_standards_s] == "Yes"
@@ -85,7 +85,7 @@
     - elsif data[:cs_standards_s] == "Other"
       .fa-stack
         %i.fa.fa-circle.fa-stack-2x
-        %i.fa.fa-times-circle.fa-stack-1x
+        %i.fa.fa-times-circle.fa-stack-2x
       .fact-text
         = data[:cs_standards_exception_s]
 

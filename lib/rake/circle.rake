@@ -111,30 +111,30 @@ namespace :circle do
       container_features = `find ./features -name '*.feature' | sort`.split("\n").map {|f| f[2..]}
       eyes_features = `grep -lr '@eyes' features`.split("\n")
       container_eyes_features = container_features & eyes_features
-      RakeUtils.system_stream_output "bundle exec ./runner.rb" \
-          " --feature #{container_features.join(',')}" \
-          " --pegasus localhost.code.org:3000" \
-          " --dashboard localhost-studio.code.org:3000" \
-          " --circle" \
-          " --#{use_saucelabs ? "config #{ui_test_browsers.join(',')}" : 'local'}" \
-          " --parallel #{use_saucelabs ? 16 : 8}" \
-          " --abort_when_failures_exceed 10" \
-          " --retry_count 2" \
-          " --output-synopsis" \
-          " --with-status-page" \
-          " --html"
+      RakeUtils.system_stream_output "bundle exec ./runner.rb " \
+          "--feature #{container_features.join(',')} " \
+          "--pegasus localhost.code.org:3000 " \
+          "--dashboard localhost-studio.code.org:3000 " \
+          "--circle " \
+          "--#{use_saucelabs ? "config #{ui_test_browsers.join(',')}" : 'local'} " \
+          "--parallel #{use_saucelabs ? 16 : 8} " \
+          "--abort_when_failures_exceed 10 " \
+          "--retry_count 2 " \
+          "--output-synopsis " \
+          "--with-status-page " \
+          "--html"
       if test_eyes?
-        RakeUtils.system_stream_output "bundle exec ./runner.rb" \
-            " --eyes" \
-            " --feature #{container_eyes_features.join(',')}" \
-            " --config Chrome,iPhone" \
-            " --pegasus localhost.code.org:3000" \
-            " --dashboard localhost-studio.code.org:3000" \
-            " --circle" \
-            " --parallel 10" \
-            " --retry_count 1" \
-            " --with-status-page" \
-            " --html"
+        RakeUtils.system_stream_output "bundle exec ./runner.rb " \
+            "--eyes " \
+            "--feature #{container_eyes_features.join(',')} " \
+            "--config Chrome,iPhone " \
+            "--pegasus localhost.code.org:3000 " \
+            "--dashboard localhost-studio.code.org:3000 " \
+            "--circle " \
+            "--parallel 10 " \
+            "--retry_count 1 " \
+            "--with-status-page " \
+            "--html"
       end
     end
     close_sauce_connect if use_saucelabs || test_eyes?
@@ -204,7 +204,7 @@ def start_sauce_connect
   tar_name = sc_download_url.split('/')[-1]
   dir_name = tar_name.chomp('.tar.gz')
 
-  RakeUtils.system_stream_output "wget #{sc_download_url}"
+  RakeUtils.system_stream_output "wget --quiet #{sc_download_url}"
   RakeUtils.system_stream_output "tar -xzf #{tar_name}"
   Dir.chdir(Dir.glob(dir_name)[0]) do
     # Run sauce connect a second time on failure, known periodic "Error bringing up tunnel VM." disconnection-after-connect issue, e.g. https://circleci.com/gh/code-dot-org/code-dot-org/20930

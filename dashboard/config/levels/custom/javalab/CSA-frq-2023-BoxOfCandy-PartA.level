@@ -1,0 +1,39 @@
+<Javalab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 68,
+  "created_at": "2023-06-21T20:03:19.000Z",
+  "level_num": "custom",
+  "user_id": 19026,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "CSA-frq-2023-BoxOfCandy",
+    "long_instructions": "##BoxOfCandy FRQ (Part A)\r\n\r\nThis question involves pieces of candy in a box. The `Candy` class represents a single piece of candy. \r\n\r\n```\r\npublic class Candy \r\n{ \r\n\t/** Returns a String representing the flavor of this piece of candy */ \r\n    public String getFlavor() \r\n    { /* implementation not shown */ } \r\n    \r\n    // There may be instance variables, constructors, and methods that are not shown. \r\n} \r\n```\r\n\r\nThe `BoxOfCandy` class represents a candy box where the candy is arranged in a rectangular grid. The instance variable of the class, `box`, is a rectangular two-dimensional array of `Candy` objects. A location in the candy box may contain a piece of candy or may be empty. A piece of candy is represented by a `Candy` object. An empty location is represented by `null`. You will write two methods of the `BoxOfCandy` class.\r\n\r\nWrite the `moveCandyToFirstRow` method, which attempts to ensure that the `box` element at row `0` and column `col` contains a piece of candy, using the following steps. \r\n* If the element at row `0` and column `col` already contains a piece of candy, then `box` is unchanged and the method returns `true`. \r\n* If the element at row `0` and column `col` does not contain a piece of candy, then the method `searches` the remaining rows of column `col` for a piece of candy. If a piece of candy can be found in column `col`, it is moved to row `0`, its previous location is set to `null`, and the method returns `true`; otherwise, the method returns `false`. \r\n\r\nIn the following example, the grid represents the contents of `box`. An empty square in the grid is `null` in `box`. A non-empty square in the grid represents a `box` element that contains a `Candy` object. The string in the square of the grid indicates the flavor of the piece of candy. \r\n\r\n![](https://images.code.org/8c9c771a353a6f9316a7d4cfe1d7bd7f-image-1687364743885.25.41 PM.png)\r\n\r\nThe method call `moveCandyToFirstRow(0)` returns `false` because the `box` element at row `0` and column `0` does not contain a piece of candy and there are no pieces of candy in column `0` that can be moved to row `0`. The contents of `box` are unchanged. \r\n\r\nThe method call `moveCandyToFirstRow(1)` returns `true` because the box element at row `0` and column `1` already contains a piece of candy. The contents of `box` are unchanged.\r\n\r\nThe method call `moveCandyToFirstRow(2)` moves one of the two pieces of candy in column `2` to row `0` of column `2`, sets the previous location of the piece of candy that was moved to `null`, and returns `true`. The new contents of `box` could be either of the following. \r\n\r\n![](https://images.code.org/a64b76742f61280d9cbc57914346ae3e-image-1687364831347.27.06 PM.png)\r\n\r\nComplete the `moveCandyToFirstRow` method.",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "BoxOfCandy.java": {
+        "text": "public class BoxOfCandy \n{ \n  /** box contains at least one row and is initialized in the constructor. */ \n  private Candy[][] box; \n  \n  /** \n    * Moves one piece of candy in column col, if necessary and possible, so that the box \n    * element in row 0 of column col contains a piece of candy, as described in part (a). \n    * Returns false if there is no piece of candy in column col and returns true otherwise. \n    * Precondition: col is a valid column index in box. \n    */ \n  public boolean moveCandyToFirstRow(int col) \n  { /* to be implemented in part (a) */ } \n  \n  /** \n    * Removes from box and returns a piece of candy with flavor specified by the parameter, or \n    * returns null if no such piece is found, as described in part (b) \n    */ \n  public Candy removeNextByFlavor(String flavor) \n  { /* to be implemented in part (b) */ } \n  \n  // There may be instance variables, constructors, and methods that are not shown. \n}\n",
+        "isVisible": true,
+        "tabOrder": 0
+      },
+      "Candy.java": {
+        "text": "public class Candy\n{\n    private String flavor;\n\n    /** Constructor initializes Candy object */\n    public Candy(String flavor)\n    {\n        this.flavor = flavor;\n    }\n\n    /** Returns a String representing the flavor of this piece of candy */ \n    public String getFlavor()\n    {\n        return flavor;\n    }\n}",
+        "isVisible": true,
+        "tabOrder": 1
+      },
+      "BoxOfCandyTest.java": {
+        "text": "import static org.junit.jupiter.api.Assertions.*;\n\nimport org.junit.jupiter.api.BeforeEach;\nimport org.junit.jupiter.api.DisplayName;\nimport org.junit.jupiter.api.Test;\nimport org.junit.jupiter.api.TestMethodOrder;\nimport org.junit.jupiter.api.MethodOrderer.OrderAnnotation;\nimport org.junit.jupiter.api.Order;\n\n\n@TestMethodOrder(OrderAnnotation.class)\n@DisplayName(\"BoxOfCandy Test\")\npublic class BoxOfCandyTest\n{\n  \n    private static Candy[][] getShallowCopy(Candy[][] box)\n    {\n        Candy[][] shallowCopy = new Candy[box.length][box[0].length];\n        \n        for(int r = 0; r < shallowCopy.length; r++)\n            for(int c = 0; c < shallowCopy[0].length; c++)\n                shallowCopy[r][c] = box[r][c];\n        \n        return shallowCopy;\n    }\n    \n    // references must be to exact same objects\n    public static boolean equals(Candy[][] one, Candy[][] two)\n    {\n        if(one.length != two.length || one[0].length != two[0].length)\n            return false;\n        \n        for(int r = 0; r < one.length; r++)\n            for(int c = 0; c < one[0].length; c++)\n                if(one[r][c] != two[r][c])\n                    return false;\n        \n        return true;\n    }\n   \n    @Test\n    @Order(1)\n    @DisplayName(\"Test 1: MoveCandyToFirstRow\")\n    public void testMoveCandyToFirstRow()\n    {\n        BoxOfCandy boc = new BoxOfCandy();\n        boc.box = new Candy[4][3];\n        boc.box[0][1] = new Candy(\"lime\");\n        boc.box[1][1] = new Candy(\"orange\");\n        boc.box[2][2] = new Candy(\"cherry\");\n        boc.box[3][1] = new Candy(\"lemon\");\n        boc.box[3][2] = new Candy(\"grape\");\n        \n        Candy[][] expectedResult = getShallowCopy(boc.box);\n        \n        assertTrue( ! boc.moveCandyToFirstRow(0) );\n        assertTrue(equals(expectedResult, boc.box));\n        \n        assertTrue(boc.moveCandyToFirstRow(1));\n        assertTrue(equals(expectedResult, boc.box));\n        \n        Candy[][] expectedResultAlt = getShallowCopy(expectedResult);\n        \n        expectedResult[0][2] = expectedResult[2][2];\n        expectedResult[2][2] = null;\n        \n        expectedResultAlt[0][2] = expectedResultAlt[3][2];\n        expectedResultAlt[3][2] = null;\n        \n        assertTrue(boc.moveCandyToFirstRow(2));\n        assertTrue(\n                equals(expectedResult, boc.box) ||\n                equals(expectedResultAlt, boc.box));\n    }\n\n}",
+        "isVisible": true,
+        "tabOrder": 2
+      }
+    },
+    "encrypted_examples": [
+
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2023-06-21 20:03:26 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":19026,\"changed_by_email\":\"brandon.spellman@code.org\"},{\"changed_at\":\"2023-07-04 16:38:57 +0000\",\"changed\":[],\"changed_by_id\":19026,\"changed_by_email\":\"brandon.spellman@code.org\"},{\"changed_at\":\"2023-07-24 13:01:15 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":19026,\"changed_by_email\":\"brandon.spellman@code.org\"}]"
+}]]></config>
+</Javalab>

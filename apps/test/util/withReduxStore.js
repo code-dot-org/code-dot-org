@@ -18,12 +18,12 @@ export default {
         combineReducers({
           isRtl,
           responsive,
-          ...reducers
+          ...reducers,
         }),
         preloadedState
       );
       return <Provider store={this.store}>{story()}</Provider>;
     });
     return this;
-  }
+  },
 };

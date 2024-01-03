@@ -1,4 +1,3 @@
-/*global dashboard*/
 import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
@@ -8,6 +7,7 @@ import color from '@cdo/apps/util/color';
 import {Heading2} from '@cdo/apps/lib/ui/Headings';
 import Button from '@cdo/apps/templates/Button';
 import {findProfanity} from '@cdo/apps/utils';
+import fontConstants from '@cdo/apps/fontConstants';
 
 /**
  * @readonly
@@ -17,9 +17,10 @@ export const PublishState = {
   DEFAULT: 'default',
   ERROR_PUBLISH: 'error_publish',
   INVALID_INPUT: 'invalid_input',
+  PII_INPUT: 'pII_input',
   PROFANE_INPUT: 'profane_input',
   TOO_LONG: 'too_long',
-  ERROR_UNPUBLISH: 'error_unpublish'
+  ERROR_UNPUBLISH: 'error_unpublish',
 };
 
 /**
@@ -32,7 +33,7 @@ export default class LibraryPublisher extends React.Component {
     onUnpublishSuccess: PropTypes.func.isRequired,
     libraryDetails: PropTypes.object.isRequired,
     libraryClientApi: PropTypes.object.isRequired,
-    onShareTeacherLibrary: PropTypes.func
+    onShareTeacherLibrary: PropTypes.func,
   };
 
   constructor(props) {
@@ -55,7 +56,8 @@ export default class LibraryPublisher extends React.Component {
       libraryName: libraryParser.suggestName(props.libraryDetails.libraryName),
       libraryDescription: props.libraryDetails.libraryDescription,
       selectedFunctions: validSelectedFunctions,
-      profaneWords: null
+      profaneWords: null,
+      pIIWords: null,
     };
   }
 
@@ -92,7 +94,7 @@ export default class LibraryPublisher extends React.Component {
       if (profaneWords && profaneWords.length > 0) {
         this.setState({
           publishState: PublishState.PROFANE_INPUT,
-          profaneWords
+          profaneWords,
         });
       } else {
         this.publish();
@@ -120,8 +122,16 @@ export default class LibraryPublisher extends React.Component {
       libraryJson,
       error => {
         console.warn(`Error publishing library: ${error}`);
+
+        // Note: Profanity checking student code happens before the LibraryPublisher is rendered,
+        // and profanity checking the name/description happens before calling publish().
         if (error.message.includes('httpStatusCode: 413')) {
           this.setState({publishState: PublishState.TOO_LONG});
+        } else if (error.cause?.pIIWords) {
+          this.setState({
+            publishState: PublishState.PII_INPUT,
+            pIIWords: error.cause.pIIWords,
+          });
         } else {
           this.setState({publishState: PublishState.ERROR_PUBLISH});
         }
@@ -132,7 +142,7 @@ export default class LibraryPublisher extends React.Component {
           libraryName,
           libraryDescription,
           publishing: true,
-          latestLibraryVersion: data && data.versionId
+          latestLibraryVersion: data && data.versionId,
         });
 
         onPublishSuccess(libraryName);
@@ -151,7 +161,7 @@ export default class LibraryPublisher extends React.Component {
           onChange={this.setLibraryName}
           onBlur={event =>
             this.setState({
-              libraryName: libraryParser.suggestName(event.target.value)
+              libraryName: libraryParser.suggestName(event.target.value),
             })
           }
         />
@@ -262,16 +272,22 @@ export default class LibraryPublisher extends React.Component {
   };
 
   displayError = () => {
-    const {publishState, profaneWords} = this.state;
+    const {publishState, pIIWords, profaneWords} = this.state;
     let errorMessage;
     switch (publishState) {
       case PublishState.INVALID_INPUT:
         errorMessage = i18n.libraryPublishInvalid();
         break;
+      case PublishState.PII_INPUT:
+        errorMessage = i18n.libraryDetailsPII({
+          pIICount: pIIWords.length,
+          pIIWords: pIIWords.join(', '),
+        });
+        break;
       case PublishState.PROFANE_INPUT:
         errorMessage = i18n.libraryDetailsProfanity({
           profanityCount: profaneWords.length,
-          profaneWords: profaneWords.join(', ')
+          profaneWords: profaneWords.join(', '),
         });
         break;
       case PublishState.ERROR_PUBLISH:
@@ -301,7 +317,7 @@ export default class LibraryPublisher extends React.Component {
           libraryName: undefined,
           libraryDescription: undefined,
           publishing: false,
-          latestLibraryVersion: -1
+          latestLibraryVersion: -1,
         });
         onUnpublishSuccess();
       },
@@ -411,46 +427,46 @@ const styles = {
     color: color.red,
     width: '90%',
     paddingTop: 8,
-    fontStyle: 'italic'
+    fontStyle: 'italic',
   },
   functionSelector: {
     display: 'flex',
     alignItems: 'center',
-    margin: '10px 10px 10px 0'
+    margin: '10px 10px 10px 0',
   },
   largerCheckbox: {
     width: 20,
-    height: 20
+    height: 20,
   },
   selectAllFunctionsLabel: {
     margin: 0,
     fontSize: 20,
-    fontFamily: '"Gotham 5r", sans-serif'
+    ...fontConstants['main-font-semi-bold'],
   },
   functionLabel: {
     margin: 0,
-    fontSize: 20
+    fontSize: 20,
   },
   info: {
     fontSize: 12,
     fontStyle: 'italic',
-    lineHeight: 1.2
+    lineHeight: 1.2,
   },
   textInput: {
     fontSize: 14,
     padding: 6,
-    color: color.dimgray
+    color: color.dimgray,
   },
   description: {
     width: '98%',
-    resize: 'vertical'
+    resize: 'vertical',
   },
   unpublishButton: {
     right: 0,
-    position: 'absolute'
+    position: 'absolute',
   },
   button: {
     margin: 0,
-    marginTop: 20
-  }
+    marginTop: 20,
+  },
 };

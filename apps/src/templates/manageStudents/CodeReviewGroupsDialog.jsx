@@ -8,6 +8,7 @@ import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 import {addDroppableIdToGroups} from '../codeReviewGroups/CodeReviewGroupsUtils';
 import CodeReviewGroupsStatusToggle from '../codeReviewGroups/CodeReviewGroupsStatusToggle';
 import CodeReviewGroupsManager from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsManager';
+import fontConstants from '@cdo/apps/fontConstants';
 
 // Width taken from UI mocks (meant to fit in a minimum screen width of 1024px with some extra space)
 const DIALOG_WIDTH = 934;
@@ -16,18 +17,18 @@ const SUBMIT_STATES = {
   DEFAULT: 'default',
   SUBMITTING: 'submitting',
   SUCCESS: 'success',
-  ERROR: 'error'
+  ERROR: 'error',
 };
 
 const LOADING_STATES = {
   LOADING: 'loading',
   LOADED: 'loaded',
-  ERROR: 'error'
+  ERROR: 'error',
 };
 
 export default function CodeReviewGroupsDialog({
   buttonContainerStyle,
-  dataApi
+  dataApi,
 }) {
   const [groups, setGroups] = useState([]);
   const [groupsHaveChanged, setGroupsHaveChanged] = useState(false);
@@ -113,6 +114,7 @@ export default function CodeReviewGroupsDialog({
         setLoadingStatus(LOADING_STATES.LOADED);
       })
       .fail(() => setLoadingStatus(LOADING_STATES.ERROR));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const submitNewGroups = () => {
@@ -158,26 +160,26 @@ export default function CodeReviewGroupsDialog({
 
 CodeReviewGroupsDialog.propTypes = {
   dataApi: PropTypes.object.isRequired,
-  buttonContainerStyle: PropTypes.object
+  buttonContainerStyle: PropTypes.object,
 };
 
 const styles = {
   buttonContainer: {
-    marginLeft: 5
+    marginLeft: 5,
   },
   checkIcon: {
-    padding: 5
+    padding: 5,
   },
   successMessageContainer: {
-    fontFamily: '"Gotham 5r", sans-serif',
-    color: color.level_perfect
+    ...fontConstants['main-font-semi-bold'],
+    color: color.level_perfect,
   },
   errorMessageContainer: {
-    fontFamily: '"Gotham 5r", sans-serif',
-    color: color.red
+    ...fontConstants['main-font-semi-bold'],
+    color: color.red,
   },
   button: {
     boxShadow: 'inset 0 2px 0 0 rgba(255, 255, 255, 0.8)',
-    marginTop: 0
-  }
+    marginTop: 0,
+  },
 };

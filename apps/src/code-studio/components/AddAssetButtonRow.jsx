@@ -12,13 +12,13 @@ export const assetButtonStyles = {
     marginTop: 5,
     fontSize: 'large',
     fontWeight: 'lighter',
-    marginRight: 10
+    marginRight: 10,
   },
   buttonRow: {
     display: 'flex',
     flexFlow: 'row',
-    alignItems: 'center'
-  }
+    alignItems: 'center',
+  },
 };
 
 const RecordButton = ({onSelectRecord, disabled}) => (
@@ -38,7 +38,7 @@ const RecordButton = ({onSelectRecord, disabled}) => (
 
 RecordButton.propTypes = {
   onSelectRecord: PropTypes.func,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
 };
 
 /**
@@ -55,7 +55,7 @@ export default class AddAssetButtonRow extends React.Component {
     onSelectRecord: PropTypes.func.isRequired,
     statusMessage: PropTypes.string,
     recordDisabled: PropTypes.bool,
-    hideAudioRecording: PropTypes.bool
+    hideAudioRecording: PropTypes.bool,
   };
 
   render() {

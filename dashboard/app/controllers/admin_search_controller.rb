@@ -86,8 +86,8 @@ class AdminSearchController < ApplicationController
         display_name: pilot_params[:display_name],
         allow_joining_via_url: pilot_params[:allow_joining_via_url]
       )
-    rescue StandardError => e
-      return render status: :bad_request, json: {error: e.message}
+    rescue StandardError => exception
+      return render status: :bad_request, json: {error: exception.message}
     end
 
     redirect_to :pilots

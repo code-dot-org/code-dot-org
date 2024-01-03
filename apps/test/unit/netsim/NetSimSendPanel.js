@@ -20,41 +20,41 @@ function simulateEnterKeyPress(jQueryElement) {
   jQueryElement.trigger(e);
 }
 
-describe('NetSimSendPanel', function() {
+describe('NetSimSendPanel', function () {
   var testShard, localNode, remoteNode;
   var panel, rootDiv, stubNetSim;
 
-  beforeEach(function() {
+  beforeEach(function () {
     NetSimTestUtils.initializeGlobalsToDefaultValues();
     NetSimGlobals.getLevelConfig().defaultEnabledEncodings = ['binary'];
 
     testShard = NetSimTestUtils.fakeShard();
-    NetSimLocalClientNode.create(testShard, 'Local Lois', function(_, node) {
+    NetSimLocalClientNode.create(testShard, 'Local Lois', function (_, node) {
       localNode = node;
     });
-    NetSimLocalClientNode.create(testShard, 'Remote Ralph', function(_, node) {
+    NetSimLocalClientNode.create(testShard, 'Remote Ralph', function (_, node) {
       remoteNode = node;
     });
     assert(localNode && remoteNode, 'Created test nodes');
 
-    localNode.connectToClient(remoteNode, function() {});
-    remoteNode.connectToClient(localNode, function() {});
+    localNode.connectToClient(remoteNode, function () {});
+    remoteNode.connectToClient(localNode, function () {});
 
     rootDiv = $('<div>');
     stubNetSim = {
-      animateSetWireState: function() {},
+      animateSetWireState: function () {},
       myNode: localNode,
       runLoop_: {
         tick: {
-          register: function() {}
-        }
+          register: function () {},
+        },
       },
-      updateLayout: function() {}
+      updateLayout: function () {},
     };
   });
 
-  describe('in single-bit mode', function() {
-    beforeEach(function() {
+  describe('in single-bit mode', function () {
+    beforeEach(function () {
       NetSimGlobals.getLevelConfig().messageGranularity =
         MessageGranularity.BITS;
       panel = new NetSimSendPanel(
@@ -64,24 +64,21 @@ describe('NetSimSendPanel', function() {
       );
     });
 
-    it("sends a single bit on 'Set Wire' button click", function() {
+    it("sends a single bit on 'Set Wire' button click", function () {
       panel.packets_[0].setPacketBinary('1000');
-      panel
-        .getBody()
-        .find('#set-wire-button')
-        .click();
+      panel.getBody().find('#set-wire-button').click();
       assert.equal('000', panel.packets_[0].getPacketBinary());
     });
 
-    it('sends a single bit on pressing enter', function() {
+    it('sends a single bit on pressing enter', function () {
       panel.packets_[0].setPacketBinary('1000');
       simulateEnterKeyPress(rootDiv.find('textarea.message'));
       assert.equal('000', panel.packets_[0].getPacketBinary());
     });
   });
 
-  describe('in packet mode', function() {
-    beforeEach(function() {
+  describe('in packet mode', function () {
+    beforeEach(function () {
       NetSimGlobals.getLevelConfig().messageGranularity =
         MessageGranularity.PACKETS;
       panel = new NetSimSendPanel(
@@ -91,17 +88,14 @@ describe('NetSimSendPanel', function() {
       );
     });
 
-    it("sends all packets on 'Send' button click", function() {
+    it("sends all packets on 'Send' button click", function () {
       panel.packets_[0].setPacketBinary('1000');
-      panel
-        .getBody()
-        .find('#send-button')
-        .click();
+      panel.getBody().find('#send-button').click();
       panel.tick({time: 0});
       assert.equal('', panel.packets_[0].getPacketBinary());
     });
 
-    it('sends all packets on pressing enter', function() {
+    it('sends all packets on pressing enter', function () {
       panel.packets_[0].setPacketBinary('1000');
       simulateEnterKeyPress(rootDiv.find('textarea.message'));
       panel.tick({time: 0});

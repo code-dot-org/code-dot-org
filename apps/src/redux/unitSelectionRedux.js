@@ -10,7 +10,7 @@ export const SET_COURSES = 'unitSelection/SET_COURSES';
 export const setScriptId = scriptId => ({type: SET_SCRIPT, scriptId});
 export const setCoursesWithProgress = coursesWithProgress => ({
   type: SET_COURSES,
-  coursesWithProgress
+  coursesWithProgress,
 });
 
 // Selectors
@@ -44,10 +44,14 @@ export const getSelectedScriptDescription = state => {
   return getSelectedUnit(state) ? getSelectedUnit(state).description : null;
 };
 
+export const doesCurrentCourseUseFeedback = state => {
+  return !!getSelectedUnit(state)?.is_feedback_enabled;
+};
+
 // Initial state of unitSelectionRedux
 const initialState = {
   scriptId: null,
-  coursesWithProgress: {}
+  coursesWithProgress: {},
 };
 
 export default function unitSelection(state = initialState, action) {
@@ -59,14 +63,14 @@ export default function unitSelection(state = initialState, action) {
     return {
       ...state,
       coursesWithProgress: action.coursesWithProgress,
-      scriptId: state.scriptId === null ? firstUnit?.id : state.scriptId
+      scriptId: state.scriptId === null ? firstUnit?.id : state.scriptId,
     };
   }
 
   if (action.type === SET_SCRIPT) {
     return {
       ...state,
-      scriptId: action.scriptId
+      scriptId: action.scriptId,
     };
   }
 

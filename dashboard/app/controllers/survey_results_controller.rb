@@ -28,7 +28,7 @@ class SurveyResultsController < ApplicationController
       )
     end
     if whitelisted_params[:nps_comment] &&
-      whitelisted_params[:nps_comment].length > 1000
+        whitelisted_params[:nps_comment].length > 1000
       whitelisted_params[:nps_comment] = whitelisted_params[:nps_comment].
         truncate(1000)
     end

@@ -4,3 +4,5 @@ wrong 'Nothing. This code will leave only level ground.', feedback: 'Incorrect. 
 right 'This code will leave the pile completely untouched.', feedback: 'Correct!'
 wrong 'This code will leave the holes completely untouched.', feedback: 'Incorrect. The `while` loop will handle any size loop, but there is no code to remove dirt from the pile.'
 wrong 'This code will leave the last hole untouched.', feedback: 'Incorrect. There is no code to remove dirt from the pile.'
+
+allow_multiple_attempts false

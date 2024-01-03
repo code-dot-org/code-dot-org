@@ -1,6 +1,7 @@
 import {
   SET_SCRIPT,
-  getSelectedScriptName
+  getSelectedScriptName,
+  doesCurrentCourseUseFeedback,
 } from '@cdo/apps/redux/unitSelectionRedux';
 
 export const ALL_STUDENT_FILTER = 0;
@@ -30,25 +31,25 @@ const initialState = {
   isLoading: false,
   assessmentId: 0,
   questionIndex: 0,
-  studentId: ALL_STUDENT_FILTER
+  studentId: ALL_STUDENT_FILTER,
 };
 
 // Question types for assessments.
 export const QuestionType = {
   MULTI: 'Multi',
   MATCH: 'Match',
-  FREE_RESPONSE: 'FreeResponse'
+  FREE_RESPONSE: 'FreeResponse',
 };
 
 // Question types for surveys.
 const SurveyQuestionType = {
   MULTI: 'multi',
-  FREE_RESPONSE: 'free_response'
+  FREE_RESPONSE: 'free_response',
 };
 
 const MultiAnswerStatus = {
   CORRECT: 'correct',
-  INCORRECT: 'incorrect'
+  INCORRECT: 'incorrect',
 };
 
 const ANSWER_LETTERS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K'];
@@ -83,44 +84,44 @@ const SET_QUESTION_INDEX = 'sectionAssessments/SET_QUESTION_INDEX';
 export const setAssessmentResponses = (scriptId, assessments) => ({
   type: SET_ASSESSMENT_RESPONSES,
   scriptId,
-  assessments
+  assessments,
 });
 export const setAssessmentQuestions = (scriptId, assessments) => ({
   type: SET_ASSESSMENTS_QUESTIONS,
   scriptId,
-  assessments
+  assessments,
 });
 export const setFeedback = (scriptId, feedback) => ({
   type: SET_FEEDBACK,
   scriptId,
-  feedback
+  feedback,
 });
 export const startLoadingAssessments = () => ({
-  type: START_LOADING_ASSESSMENTS
+  type: START_LOADING_ASSESSMENTS,
 });
 export const finishLoadingAssessments = () => ({
-  type: FINISH_LOADING_ASSESSMENTS
+  type: FINISH_LOADING_ASSESSMENTS,
 });
 export const setAssessmentId = assessmentId => ({
   type: SET_ASSESSMENT_ID,
-  assessmentId: assessmentId
+  assessmentId: assessmentId,
 });
 export const setInitialAssessmentId = scriptId => ({
   type: SET_INITIAL_ASSESSMENT_ID,
-  scriptId: scriptId
+  scriptId: scriptId,
 });
 export const setQuestionIndex = questionIndex => ({
   type: SET_QUESTION_INDEX,
-  questionIndex: questionIndex
+  questionIndex: questionIndex,
 });
 export const setStudentId = studentId => ({
   type: SET_STUDENT_ID,
-  studentId: studentId
+  studentId: studentId,
 });
 export const setSurveys = (scriptId, surveys) => ({
   type: SET_SURVEYS,
   scriptId,
-  surveys
+  surveys,
 });
 
 export const asyncLoadAssessments = (sectionId, scriptId) => {
@@ -167,7 +168,7 @@ export default function sectionAssessments(state = initialState, action) {
     return {
       ...state,
       studentId: ALL_STUDENT_FILTER,
-      questionIndex: 0
+      questionIndex: 0,
     };
   }
   if (action.type === SET_ASSESSMENT_ID) {
@@ -175,26 +176,26 @@ export default function sectionAssessments(state = initialState, action) {
       ...state,
       assessmentId: action.assessmentId,
       questionIndex: 0,
-      studentId: ALL_STUDENT_FILTER
+      studentId: ALL_STUDENT_FILTER,
     };
   }
   if (action.type === SET_INITIAL_ASSESSMENT_ID) {
     const assessmentId = getFirstAssessmentId(state, action.scriptId);
     return {
       ...state,
-      assessmentId
+      assessmentId,
     };
   }
   if (action.type === SET_STUDENT_ID) {
     return {
       ...state,
-      studentId: action.studentId
+      studentId: action.studentId,
     };
   }
   if (action.type === SET_QUESTION_INDEX) {
     return {
       ...state,
-      questionIndex: action.questionIndex
+      questionIndex: action.questionIndex,
     };
   }
   if (action.type === SET_ASSESSMENT_RESPONSES) {
@@ -202,8 +203,8 @@ export default function sectionAssessments(state = initialState, action) {
       ...state,
       assessmentResponsesByScript: {
         ...state.assessmentResponsesByScript,
-        [action.scriptId]: action.assessments
-      }
+        [action.scriptId]: action.assessments,
+      },
     };
   }
   if (action.type === SET_FEEDBACK) {
@@ -211,8 +212,8 @@ export default function sectionAssessments(state = initialState, action) {
       ...state,
       feedbackByScript: {
         ...state.feedbackByScript,
-        [action.scriptId]: action.feedback
-      }
+        [action.scriptId]: action.feedback,
+      },
     };
   }
   if (action.type === SET_SURVEYS) {
@@ -220,8 +221,8 @@ export default function sectionAssessments(state = initialState, action) {
       ...state,
       surveysByScript: {
         ...state.surveysByScript,
-        [action.scriptId]: action.surveys
-      }
+        [action.scriptId]: action.surveys,
+      },
     };
   }
   if (action.type === SET_ASSESSMENTS_QUESTIONS) {
@@ -229,22 +230,22 @@ export default function sectionAssessments(state = initialState, action) {
       ...state,
       assessmentQuestionsByScript: {
         ...state.assessmentQuestionsByScript,
-        [action.scriptId]: action.assessments
+        [action.scriptId]: action.assessments,
       },
       // Default the assessmentId to the first assessment in the structure
-      assessmentId: parseInt(Object.keys(action.assessments)[0])
+      assessmentId: parseInt(Object.keys(action.assessments)[0]),
     };
   }
   if (action.type === START_LOADING_ASSESSMENTS) {
     return {
       ...state,
-      isLoading: true
+      isLoading: true,
     };
   }
   if (action.type === FINISH_LOADING_ASSESSMENTS) {
     return {
       ...state,
-      isLoading: false
+      isLoading: false,
     };
   }
 
@@ -264,7 +265,7 @@ export const getCurrentScriptAssessmentList = state => {
   if (doesCurrentCourseUseFeedback(state)) {
     tempAssessmentList = tempAssessmentList.concat({
       id: ASSESSMENT_FEEDBACK_OPTION_ID,
-      name: 'All teacher feedback in this unit'
+      name: 'All teacher feedback in this unit',
     });
   }
   return tempAssessmentList;
@@ -309,9 +310,9 @@ export const getCurrentQuestion = state => {
             return {
               text: answer,
               correct: false,
-              letter: ANSWER_LETTERS[index]
+              letter: ANSWER_LETTERS[index],
             };
-          })
+          }),
       };
     } else {
       return emptyQuestion;
@@ -334,13 +335,13 @@ export const getCurrentQuestion = state => {
         return {
           question: question.question_text,
           answers: answers,
-          questionType: QuestionType.MULTI
+          questionType: QuestionType.MULTI,
         };
       } else if (question.type === QuestionType.FREE_RESPONSE) {
         return {
           question: question.question_text,
           answers: null,
-          questionType: QuestionType.FREE_RESPONSE
+          questionType: QuestionType.FREE_RESPONSE,
         };
       } else if (question.type === QuestionType.MATCH) {
         const answers = question.answers.map(answer => {
@@ -353,7 +354,7 @@ export const getCurrentQuestion = state => {
           question: question.question,
           answers: answers,
           options: options,
-          questionType: QuestionType.MATCH
+          questionType: QuestionType.MATCH,
         };
       }
     } else {
@@ -384,7 +385,7 @@ export const getMultipleChoiceStructureForCurrentAssessment = state => {
         id: question.level_id,
         question: question.question_text,
         questionNumber: question.question_index + 1,
-        correctAnswer: getCorrectAnswer(question.answers)
+        correctAnswer: getCorrectAnswer(question.answers),
       };
     });
 };
@@ -424,9 +425,9 @@ export const getStudentMCResponsesForCurrentAssessment = state => {
       .map(answer => {
         return {
           responses: indexesToAnswerString(answer.student_result),
-          isCorrect: answer.status === MultiAnswerStatus.CORRECT
+          isCorrect: answer.status === MultiAnswerStatus.CORRECT,
         };
-      })
+      }),
   };
 };
 
@@ -451,7 +452,7 @@ export const getMatchStructureForCurrentAssessment = state => {
         question: question.question,
         questionNumber: question.question_index + 1,
         answers: question.answers,
-        options: question.options
+        options: question.options,
       };
     });
 };
@@ -488,9 +489,9 @@ export const getStudentMatchResponsesForCurrentAssessment = state => {
       .filter(answer => answer.type === QuestionType.MATCH)
       .map(answer => {
         return {
-          responses: answer.student_result
+          responses: answer.student_result,
         };
-      })
+      }),
   };
 };
 
@@ -523,7 +524,7 @@ export const getStudentAnswersForCurrentQuestion = state => {
           answer: question.student_result
             ? indexesToAnswerString(question.student_result)
             : '-',
-          correct: question.status === 'correct'
+          correct: question.status === 'correct',
         });
       }
     }
@@ -549,7 +550,7 @@ export const getAssessmentsFreeResponseResults = state => {
     .map(question => ({
       questionText: question.question_text,
       questionNumber: question.question_index + 1,
-      responses: []
+      responses: [],
     }));
 
   const studentResponses = getAssessmentResponsesForCurrentScript(state);
@@ -580,7 +581,7 @@ export const getAssessmentsFreeResponseResults = state => {
           questionsAndResults[index].responses.push({
             id: studentId,
             name: studentObject.student_name,
-            response: response.student_result
+            response: response.student_result,
           });
         }
       });
@@ -612,7 +613,7 @@ export const getSurveyFreeResponseQuestions = state => {
         questionNumber: question.question_index + 1,
         answers: question.results.map((response, index) => {
           return {index: index, response: response.result};
-        })
+        }),
       };
     });
 };
@@ -669,11 +670,11 @@ export const getMultipleChoiceSurveyResults = state => {
             percentAnswered: Math.floor(
               (answerTotals[index] / totalAnswered) * 100
             ),
-            text: answer
+            text: answer,
           };
         }),
         notAnswered: Math.floor((notAnswered / totalAnswered) * 100),
-        totalAnswered: totalAnswered
+        totalAnswered: totalAnswered,
       };
     });
 };
@@ -708,14 +709,14 @@ export const getStudentsMCandMatchSummaryForCurrentAssessment = state => {
   state.teacherSections.selectedStudents.forEach(student => {
     allStudentsByIds[student.id] = {
       student_name: student.name,
-      responses_by_assessment: {}
+      responses_by_assessment: {},
     };
   });
 
   // Combine the list of all students with the list of student responses.
   allStudentsByIds = {
     ...allStudentsByIds,
-    ...studentResponses
+    ...studentResponses,
   };
 
   let currentStudentsIds = Object.keys(allStudentsByIds);
@@ -738,7 +739,7 @@ export const getStudentsMCandMatchSummaryForCurrentAssessment = state => {
         name: studentsObject.student_name,
         isSubmitted: false,
         inProgress: false,
-        submissionTimeStamp: notStartedFakeTimestamp
+        submissionTimeStamp: notStartedFakeTimestamp,
       };
     }
     // Transform that data into what we need for this particular table, in this case
@@ -761,7 +762,7 @@ export const getStudentsMCandMatchSummaryForCurrentAssessment = state => {
       inProgress: inProgress,
       isSubmitted: studentsAssessment.submitted,
       submissionTimeStamp: submissionTimeStamp,
-      url: studentsAssessment.url
+      url: studentsAssessment.url,
     };
   });
 
@@ -783,7 +784,7 @@ export const getExportableSubmissionStatusData = state => {
       numMultipleChoice: student.numMultipleChoice,
       numMatchCorrect: student.numMatchCorrect,
       numMatch: student.numMatch,
-      submissionTimestamp: student.submissionTimeStamp
+      submissionTimestamp: student.submissionTimeStamp,
     });
   });
   return summaryStudentStatus;
@@ -812,11 +813,11 @@ export const getMultipleChoiceSectionSummary = state => {
         return {
           multipleChoiceOption: ANSWER_LETTERS[index],
           isCorrect: answer.correct,
-          numAnswered: 0
+          numAnswered: 0,
         };
       }),
       totalAnswered: 0,
-      notAnswered: 0
+      notAnswered: 0,
     };
   });
 
@@ -881,11 +882,11 @@ export const getMatchSectionSummary = state => {
             return {
               answer: question.answers[indexA].text,
               isCorrect: indexA === indexO,
-              numAnswered: 0
+              numAnswered: 0,
             };
-          })
+          }),
         };
-      })
+      }),
     };
   });
 
@@ -989,7 +990,7 @@ export const getExportableSurveyData = state => {
     const rowBase = {
       lesson: currentSurvey.lesson_name,
       questionNumber: questionResults.question_index + 1,
-      questionText: questionResults.question
+      questionText: questionResults.question,
     };
 
     if (questionResults.type === SurveyQuestionType.MULTI) {
@@ -1003,7 +1004,7 @@ export const getExportableSurveyData = state => {
           answer: questionResults.answer_texts[answerIndex],
           numberAnswered: questionResults.results.filter(
             result => result.answer_index === answerIndex
-          ).length
+          ).length,
         });
       }
     } else if (questionResults.type === SurveyQuestionType.FREE_RESPONSE) {
@@ -1011,7 +1012,7 @@ export const getExportableSurveyData = state => {
         responses.push({
           ...rowBase,
           answer: questionResults.results[j].result,
-          numberAnswered: 1
+          numberAnswered: 1,
         });
       }
     }
@@ -1051,7 +1052,7 @@ export const getExportableAssessmentData = state => {
             response.type === QuestionType.MULTI
               ? indexesToAnswerString(response.student_result)
               : response.student_result,
-          correct: response.status
+          correct: response.status,
         });
       }
     }
@@ -1078,14 +1079,6 @@ export const getExportableFeedbackData = state => {
   return feedback;
 };
 
-/*
- * Only show feedback option if its CSD and CSP
- * */
-export const doesCurrentCourseUseFeedback = state => {
-  const scriptName = getSelectedScriptName(state) || '';
-  return scriptName.includes('csp') || scriptName.includes('csd');
-};
-
 export const isCurrentScriptCSD = state => {
   const scriptName = getSelectedScriptName(state) || '';
   return scriptName.includes('csd');
@@ -1095,7 +1088,8 @@ export const isCurrentScriptCSD = state => {
  *  @returns {boolean} true if current studentId has submitted responses for current script.
  */
 export const currentStudentHasResponses = state => {
-  return !!getAssessmentResponsesForCurrentScript(state).hasOwnProperty(
+  return !!Object.prototype.hasOwnProperty.call(
+    getAssessmentResponsesForCurrentScript(state),
     state.sectionAssessments.studentId
   );
 };
@@ -1148,7 +1142,7 @@ const computeScriptAssessmentList = (state, scriptId) => {
   const assessments = Object.values(assessmentStructure).map(assessment => {
     return {
       id: assessment.id,
-      name: assessment.name
+      name: assessment.name,
     };
   });
 
@@ -1156,7 +1150,7 @@ const computeScriptAssessmentList = (state, scriptId) => {
   const surveys = Object.keys(surveysStructure).map(surveyId => {
     return {
       id: parseInt(surveyId),
-      name: surveysStructure[surveyId].lesson_name
+      name: surveysStructure[surveyId].lesson_name,
     };
   });
 
@@ -1175,7 +1169,7 @@ const loadAssessmentResponsesFromServer = (sectionId, scriptId) => {
     url: `/dashboardapi/assessments/section_responses`,
     method: 'GET',
     contentType: 'application/json;charset=UTF-8',
-    data: payload
+    data: payload,
   });
 };
 
@@ -1186,7 +1180,7 @@ const loadAssessmentQuestionsFromServer = scriptId => {
     url: `/dashboardapi/assessments`,
     method: 'GET',
     contentType: 'application/json;charset=UTF-8',
-    data: payload
+    data: payload,
   });
 };
 
@@ -1197,7 +1191,7 @@ const loadSurveysFromServer = (sectionId, scriptId) => {
     url: `/dashboardapi/assessments/section_surveys`,
     method: 'GET',
     contentType: 'application/json;charset=UTF-8',
-    data: payload
+    data: payload,
   });
 };
 
@@ -1208,6 +1202,6 @@ const loadFeedbackFromServer = (sectionId, scriptId) => {
     url: `/dashboardapi/assessments/section_feedback`,
     method: 'GET',
     contentType: 'application/json;charset=UTF-8',
-    data: payload
+    data: payload,
   });
 };

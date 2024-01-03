@@ -5,8 +5,7 @@ Background:
   And I wait for the page to fully load
 
 Scenario: Connect two blocks from toolbox
-  When I rotate to landscape
-  And I drag block "1" to offset "300, 150"
+  When I drag block "1" to offset "300, 150"
   And I drag block "3" to offset "300, 80"
   And I wait for 1 seconds
   Then block "10" is child of block "9"

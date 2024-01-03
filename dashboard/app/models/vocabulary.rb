@@ -136,16 +136,14 @@ class Vocabulary < ApplicationRecord
     end
   end
 
-  private
-
   # A simple helper function to encapsulate creating a unique key, since this
   # model does not have a unique identifier field of its own.
-  def get_localized_property(property_name)
+  private def get_localized_property(property_name)
     key = Services::GloballyUniqueIdentifiers.build_vocab_key(self)
     Services::I18n::CurriculumSyncUtils.get_localized_property(self, property_name, key)
   end
 
-  def check_readonly_fields
+  private def check_readonly_fields
     errors.add(:word, "cannot be updated") if word_changed?
     errors.add(:definition, "cannot be updated for common sense media vocabulary") if common_sense_media && definition_changed?
   end

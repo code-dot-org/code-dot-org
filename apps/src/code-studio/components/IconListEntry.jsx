@@ -11,7 +11,7 @@ export default class IconListEntry extends React.Component {
     iconId: PropTypes.string.isRequired,
     altMatch: PropTypes.string.isRequired,
     query: PropTypes.instanceOf(RegExp).isRequired,
-    search: PropTypes.string.isRequired
+    search: PropTypes.string.isRequired,
   };
 
   highlightSearch(str) {
@@ -35,14 +35,14 @@ export default class IconListEntry extends React.Component {
       altMatchText: {
         float: 'left',
         fontSize: '13px',
-        color: '#999'
+        color: '#999',
       },
       iconLabel: {
         float: 'left',
         margin: '0 5px',
         fontSize: '13px',
-        color: '#000'
-      }
+        color: '#000',
+      },
     };
 
     let iconLabel, columnWidth, altMatchText;
@@ -75,7 +75,7 @@ export default class IconListEntry extends React.Component {
       float: 'left',
       width: columnWidth,
       height: '35px',
-      cursor: 'pointer'
+      cursor: 'pointer',
     };
 
     const asset = 'fa-' + this.props.iconId;

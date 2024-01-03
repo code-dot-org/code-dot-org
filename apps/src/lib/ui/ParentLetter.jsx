@@ -7,10 +7,8 @@ import {queryParams} from '../../code-studio/utils';
 import color from '../../util/color';
 import i18n from '@cdo/locale';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {EmailLinks} from '@cdo/apps/util/sharedConstants';
 
-const PRIVACY_PLEDGE_URL = 'https://studentprivacypledge.org/signatories/';
-const COMMON_SENSE_ARTICLE_URL =
-  'https://medium.com/@codeorg/code-orgs-commitment-to-student-privacy-earns-accolades-cae1cca35632';
 const RESEARCH_ARTICLE_URL =
   'https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536';
 const ENGAGEMENT_URL =
@@ -21,7 +19,7 @@ const LOGIN_TYPE_NAMES = {
   [SectionLoginType.google_classroom]: 'Google Classroom accounts',
   [SectionLoginType.picture]: 'picture passwords',
   [SectionLoginType.word]: 'secret words',
-  [SectionLoginType.email]: 'personal logins'
+  [SectionLoginType.email]: 'personal logins',
 };
 
 /**
@@ -46,22 +44,22 @@ class ParentLetter extends React.Component {
     section: PropTypes.shape({
       id: PropTypes.number.isRequired,
       loginType: PropTypes.oneOf(Object.values(SectionLoginType)).isRequired,
-      code: PropTypes.string.isRequired
+      code: PropTypes.string.isRequired,
     }).isRequired,
     students: PropTypes.arrayOf(
       PropTypes.shape({
         id: PropTypes.number.isRequired,
         name: PropTypes.string.isRequired,
         secretPicturePath: PropTypes.string,
-        secretWords: PropTypes.string
+        secretWords: PropTypes.string,
       })
     ),
     teacherName: PropTypes.string.isRequired,
-    logoUrl: PropTypes.string
+    logoUrl: PropTypes.string,
   };
 
   static defaultProps = {
-    students: []
+    students: [],
   };
 
   componentDidMount() {
@@ -92,14 +90,14 @@ class ParentLetter extends React.Component {
           <SafeMarkdown
             markdown={i18n.parentLetterIntro({
               homeLink: pegasus('/'),
-              studentName: studentName
+              studentName: studentName,
             })}
           />
           <h1>{i18n.parentLetterStep1()}</h1>
           <SafeMarkdown
             markdown={i18n.parentLetterStep1Details({
               engagementLink: ENGAGEMENT_URL,
-              videosLink: pegasus(`/educate/resources/videos`)
+              videosLink: pegasus(`/educate/resources/videos`),
             })}
           />
           <h1>{i18n.parentLetterStep2()}</h1>
@@ -114,27 +112,27 @@ class ParentLetter extends React.Component {
             markdown={i18n.parentLetterStep2Details({
               studentName: studentName,
               projectsLink: studio('/projects/public'),
-              atHomeLink: pegasus('/athome')
+              atHomeLink: pegasus('/athome'),
             })}
           />
           <h1>{i18n.parentLetterStep3()}</h1>
           <SafeMarkdown
             markdown={i18n.parentLetterStep3Details({
-              accountEditLink: studio('/users/edit')
+              accountEditLink: studio('/users/edit'),
             })}
           />
           <h1>{i18n.parentLetterWhy()}</h1>
           <SafeMarkdown
             markdown={i18n.parentLetterWhyDetails({
-              researchLink: RESEARCH_ARTICLE_URL
+              researchLink: RESEARCH_ARTICLE_URL,
             })}
           />
           <h1>{i18n.parentLetterStudentPrivacy()}</h1>
           <SafeMarkdown
             markdown={i18n.parentLetterStudentPrivacyDetails({
-              pledgeLink: PRIVACY_PLEDGE_URL,
-              commonSenseLink: COMMON_SENSE_ARTICLE_URL,
-              privacyPolicyLink: pegasus('/privacy/student-privacy')
+              pledgeLink: EmailLinks.STUDENT_PRIVACY_PLEDGE_URL,
+              commonSenseLink: EmailLinks.COMMON_SENSE_MEDIA_URL,
+              privacyPolicyLink: EmailLinks.PRIVACY_POLICY_URL,
             })}
           />
           <p>{i18n.parentLetterClosing()}</p>
@@ -152,21 +150,21 @@ export default connect(state => ({
     state.teacherSections.sections[state.teacherSections.selectedSectionId],
   students: state.teacherSections.selectedStudents,
   teacherName: state.currentUser.userName,
-  studentId: queryParams('studentId')
+  studentId: queryParams('studentId'),
 }))(ParentLetter);
 
 const Header = ({logoUrl}) => {
   return (
     <header style={styles.header}>
-      <img src={logoUrl} style={styles.codeOrgLogo} />
+      <img src={logoUrl} style={styles.codeOrgLogo} alt={i18n.codeLogo()} />
     </header>
   );
 };
 Header.propTypes = {
-  logoUrl: PropTypes.string.isRequired
+  logoUrl: PropTypes.string.isRequired,
 };
 Header.defaultProps = {
-  logoUrl: '/shared/images/CodeLogo_White.png'
+  logoUrl: '/shared/images/CodeLogo_White.png',
 };
 
 const SignInInstructions = ({
@@ -174,7 +172,7 @@ const SignInInstructions = ({
   secretPicturePath,
   secretWords,
   sectionCode,
-  studentName
+  studentName,
 }) => {
   let steps;
   switch (loginType) {
@@ -184,7 +182,7 @@ const SignInInstructions = ({
           <li>
             <SafeMarkdown
               markdown={i18n.parentLetterClever1({
-                cleverLink: 'https://www.clever.com'
+                cleverLink: 'https://www.clever.com',
               })}
             />
           </li>
@@ -194,6 +192,7 @@ const SignInInstructions = ({
             <img
               src="/shared/images/clever_code_org_logo.png"
               style={styles.cleverCodeOrgLogo}
+              alt={i18n.codeLogoClever()}
             />
           </li>
         </ol>
@@ -225,6 +224,7 @@ const SignInInstructions = ({
                 <img
                   src={pegasus(`/images/${secretPicturePath}`)}
                   style={{width: 60, margin: 10}}
+                  alt={i18n.parentLetterPicturePasswordImg()}
                 />
               </span>
             )}
@@ -246,7 +246,7 @@ const SignInInstructions = ({
           <li>
             <p>
               {i18n.parentLetterSecretWords({
-                secretWords: secretWords ? `(${secretWords})` : ''
+                secretWords: secretWords ? `(${secretWords})` : '',
               })}
             </p>
           </li>
@@ -271,7 +271,7 @@ const SignInInstructions = ({
     <div>
       <SafeMarkdown
         markdown={i18n.parentLetterLoginType({
-          loginTypeName: loginTypeName
+          loginTypeName: loginTypeName,
         })}
       />
       {steps}
@@ -283,14 +283,14 @@ SignInInstructions.propTypes = {
   secretPicturePath: PropTypes.string,
   secretWords: PropTypes.string,
   sectionCode: PropTypes.string, // TODO: Conditional required
-  studentName: PropTypes.string
+  studentName: PropTypes.string,
 };
 
 const GoToSignIn = () => (
   <li>
     <SafeMarkdown
       markdown={i18n.parentLetterSignIn({
-        studioLink: studio('/')
+        studioLink: studio('/'),
       })}
     />
   </li>
@@ -302,7 +302,7 @@ const GoToSectionSignIn = ({sectionCode, studentName}) => {
     <li>
       <SafeMarkdown
         markdown={i18n.parentLetterSectionSignIn({
-          sectionLink: sectionUrl
+          sectionLink: sectionUrl,
         })}
       />
     </li>
@@ -310,11 +310,11 @@ const GoToSectionSignIn = ({sectionCode, studentName}) => {
 };
 GoToSectionSignIn.propTypes = {
   sectionCode: PropTypes.string.isRequired,
-  studentName: PropTypes.string
+  studentName: PropTypes.string,
 };
 
 const styles = {
   cleverCodeOrgLogo: {width: 60, margin: 10},
   codeOrgLogo: {height: 42, margin: '4px 16px'},
-  header: {backgroundColor: color.teal, marginBottom: 30}
+  header: {backgroundColor: color.teal, marginBottom: 30},
 };

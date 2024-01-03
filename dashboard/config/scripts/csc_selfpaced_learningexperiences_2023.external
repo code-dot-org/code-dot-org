@@ -3,33 +3,25 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Teaching CS Connections
+# Key Strategies
 
-##### Welcome! This free self-paced professional learning module is designed help you prepare to teach Code.org's CS Connections curriculum. 
-
-
-<img src="https://images.code.org/1cd0ec71458414495502b9598efd2028-image-1639773441510.37.01 PM.png" alt="Image of AI bot and a model card" style="border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;">
+##### Finally, consider the following strategies as you plan and prepare to create positive learning computer science experiences for your students.
 
 
-## In this module, you will:
+<img src="https://images.code.org/4c4b6d046560e06ffc2ee3e73ee5601c-image-1679963901855.png" alt="Image of singing bird" style="border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;">
 
-* ##### Get an overview of CS Connections.
-* ##### Set up a plan to implement a CS Connections module.
-* ##### Practice key concepts included in lessons.
-* ##### Preview end of module projects.
-* ##### Consider strategies to create positive CS learning experiences.
 
-### **Suggested time:** 75 minutes
+## Role of the Teacher
 
-## Take the pre-survey
+* #### Decide when you will guide students and when students will guide each other.
+* #### Model debugging for students with think-alouds to share your problem solving process.
 
-##### Code.org values and is responsive to feedback. Please fill out <a href="https://studio.code.org/form/csd_selfpaced_pl_presurvey" target="blank" rel="noopener noreferrer">this short pre-survey</a> to  tell us about who you are and how we can best support you.
+## Discovery and Inquiry
 
-<a class="btn btn-large btn-primary" href="https://studio.code.org/form/csd_selfpaced_pl_presurvey" target="blank" rel="noopener noreferrer">Take the pre-survey</a>
+* #### Encourage student-led exploration of concepts to help students build their own understanding. 
 
-## Let's get started!
+## Classroom Community
 
-<div style="clear:both"/>
-
+* #### Set a culture of learning from peers and welcoming mistakes as part of the learning process.
 
 MARKDOWN

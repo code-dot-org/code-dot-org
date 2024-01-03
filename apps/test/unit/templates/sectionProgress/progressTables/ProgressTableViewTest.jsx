@@ -5,7 +5,7 @@ import {Provider} from 'react-redux';
 import {expect} from '../../../../util/reconfiguredChai';
 import {mount} from 'enzyme';
 import ProgressTableView, {
-  UnconnectedProgressTableView
+  UnconnectedProgressTableView,
 } from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableView';
 import ProgressTableStudentList from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableStudentList';
 import ProgressTableContentView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableContentView';
@@ -16,6 +16,7 @@ import ProgressTableDetailCell from '@cdo/apps/templates/sectionProgress/progres
 import ProgressTableLevelIconSet from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLevelIconSet';
 import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
 import {createStore, combineReducers} from 'redux';
+import currentUser from '@cdo/apps/templates/currentUserRedux';
 import progress from '@cdo/apps/code-studio/progressRedux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
@@ -27,7 +28,7 @@ import {
   fakeLessonWithLevels,
   fakeStudents,
   fakeScriptData,
-  fakeProgressTableReduxInitialState
+  fakeProgressTableReduxInitialState,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
 import * as progressTableHelpers from '@cdo/apps/templates/sectionProgress/progressTables/progressTableHelpers';
 
@@ -46,11 +47,12 @@ const initialState = fakeProgressTableReduxInitialState(
 const setUp = (currentView = ViewType.SUMMARY, overrideState = {}) => {
   const store = createStore(
     combineReducers({
+      currentUser,
       progress,
       teacherSections,
       sectionProgress,
       unitSelection,
-      locales
+      locales,
     }),
     _.merge({}, initialState, overrideState)
   );
@@ -148,7 +150,7 @@ describe('ProgressTableView', () => {
       getSummaryCellFormattersStub.returns([
         () => <div />, // main cell formatter
         timeSpentFormatterStub,
-        lastUpdatedFormatterStub
+        lastUpdatedFormatterStub,
       ]);
 
       const container = setUp(ViewType.SUMMARY)
@@ -218,7 +220,7 @@ describe('ProgressTableView', () => {
       getDetailCellFormattersStub.returns([
         () => <div />, // main cell formatter
         timeSpentFormatterStub,
-        lastUpdatedFormatterStub
+        lastUpdatedFormatterStub,
       ]);
 
       const container = setUp(ViewType.DETAIL)
@@ -234,9 +236,7 @@ describe('ProgressTableView', () => {
   });
 
   it('adds rows to state when a row is toggled', () => {
-    const wrapper = setUp()
-      .find(UnconnectedProgressTableView)
-      .instance();
+    const wrapper = setUp().find(UnconnectedProgressTableView).instance();
 
     expect(wrapper.state.rows).to.have.lengthOf(STUDENTS.length);
 
@@ -250,9 +250,7 @@ describe('ProgressTableView', () => {
   });
 
   it('restores original rows when a row is toggled twice', () => {
-    const wrapper = setUp()
-      .find(UnconnectedProgressTableView)
-      .instance();
+    const wrapper = setUp().find(UnconnectedProgressTableView).instance();
 
     expect(wrapper.state.rows).to.have.lengthOf(STUDENTS.length);
 
@@ -265,5 +263,27 @@ describe('ProgressTableView', () => {
     );
     wrapper.onToggleRow(rowData.student.id);
     expect(wrapper.state.rows).to.have.lengthOf(STUDENTS.length);
+  });
+
+  it('sorts by family name', () => {
+    // The default test helper sorts by given name
+    const givenNameWrapper = setUp()
+      .find(UnconnectedProgressTableView)
+      .instance();
+
+    const overrideState = {currentUser: {isSortedByFamilyName: true}};
+    const familyNameWrapper = setUp(ViewType.SUMMARY, overrideState)
+      .find(UnconnectedProgressTableView)
+      .instance();
+
+    expect(givenNameWrapper.state.rows).to.have.lengthOf(STUDENTS.length);
+    expect(familyNameWrapper.state.rows).to.have.lengthOf(STUDENTS.length);
+
+    // The student generator makes the first student have the first given name
+    // alphabetically. The last student has the first family name alphabetically
+    expect(givenNameWrapper.state.rows[0].student.id).to.equal(0);
+    expect(familyNameWrapper.state.rows[0].student.id).to.equal(
+      STUDENTS.length - 1
+    );
   });
 });

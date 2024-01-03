@@ -11,11 +11,11 @@ module StiFactory
     end
 
     def with_type(type)
-      if self.type != type
+      if self.type == type
+        self
+      else
         self.type = type
         becomes(type.constantize)
-      else
-        self
       end
     end
   end
@@ -36,9 +36,7 @@ module StiFactory
       instance
     end
 
-    private
-
-    def identify_target_class(attributes)
+    private def identify_target_class(attributes)
       return(class_name_from_column_definition || name) if attributes.nil?
 
       class_name = attributes.delete(inheritance_column.to_sym)
@@ -46,11 +44,11 @@ module StiFactory
       class_name || name
     end
 
-    def force_load_of_unreferenced_subclass(class_name)
+    private def force_load_of_unreferenced_subclass(class_name)
       require class_name.underscore unless Object.const_defined?(class_name)
     end
 
-    def class_name_from_column_definition
+    private def class_name_from_column_definition
       columns.find {|col| col.name.to_s == inheritance_column.to_s}.try(:default)
     end
   end

@@ -21,13 +21,13 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
 
     // Provided by redux
     instructionsHeight: PropTypes.number.isRequired,
-    setInstructionsMaxHeightAvailable: PropTypes.func.isRequired
+    setInstructionsMaxHeightAvailable: PropTypes.func.isRequired,
   };
 
   // only used so that we can rerender when resized
   state = {
     windowWidth: undefined,
-    windowHeight: undefined
+    windowHeight: undefined,
   };
 
   setCodeWorkspaceContainerRef = element => {
@@ -39,10 +39,8 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
    * call adjustTopPaneHeight as our maxHeight may need adjusting.
    */
   onResize = () => {
-    const {
-      windowWidth: lastWindowWidth,
-      windowHeight: lastWindowHeight
-    } = this.state;
+    const {windowWidth: lastWindowWidth, windowHeight: lastWindowHeight} =
+      this.state;
     const windowWidth = $(window).width();
     const windowHeight = $(window).height();
 
@@ -68,9 +66,7 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
     const INSTRUCTIONS_RESERVE = 150;
 
     const {instructionsHeight, setInstructionsMaxHeightAvailable} = this.props;
-    const codeWorkspaceHeight = this.codeWorkspaceContainer
-      .getWrappedInstance()
-      .getRenderedHeight();
+    const codeWorkspaceHeight = this.codeWorkspaceContainer.getRenderedHeight();
 
     // Continue here even if the workspace height is measured at zero. Workspace
     // height at zero is a somewhat common case after rotating the screen on
@@ -97,12 +93,8 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
   }
 
   render() {
-    const {
-      instructionsStyle,
-      workspaceStyle,
-      instructionsHeight,
-      children
-    } = this.props;
+    const {instructionsStyle, workspaceStyle, instructionsHeight, children} =
+      this.props;
 
     return (
       <span>
@@ -120,11 +112,11 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
 
 export default connect(
   state => ({
-    instructionsHeight: state.instructions.renderedHeight
+    instructionsHeight: state.instructions.renderedHeight,
   }),
   dispatch => ({
     setInstructionsMaxHeightAvailable(maxHeight) {
       dispatch(setInstructionsMaxHeightAvailable(maxHeight));
-    }
+    },
   })
 )(UnwrappedInstructionsWithWorkspace);

@@ -2,7 +2,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/deprecatedChai';
 import {UnconnectedManageStudentsSharingCell as ManageStudentsSharingCell} from '@cdo/apps/templates/manageStudents/ManageStudentsSharingCell';
-import {Checkbox} from 'react-bootstrap';
+import {Checkbox} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 describe('ManageStudentsSharingCell', () => {

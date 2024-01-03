@@ -4,7 +4,7 @@ import {
   CHANGE_INTERFACE_MODE,
   VIEW_ANIMATION_JSON,
   HIDE_ANIMATION_JSON,
-  TOGGLE_GRID_OVERLAY
+  TOGGLE_GRID_OVERLAY,
 } from './actions';
 import {reducers as jsDebuggerReducers} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import animationList from './redux/animationList';
@@ -66,5 +66,5 @@ module.exports = {
   textConsole,
   spritelabInputList,
   poetry,
-  locales
+  locales,
 };

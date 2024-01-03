@@ -8,7 +8,7 @@ import sinon from 'sinon';
 
 const DEFAULT_PROPS = {
   latestReviewState: null,
-  onReviewStateChange: () => {}
+  onReviewStateChange: () => {},
 };
 
 const setUp = overrideProps => {
@@ -33,14 +33,14 @@ describe('EditableReviewState', () => {
 
   it('displays a checked checkbox if reviewState is keepWorking and student is not awaiting review', () => {
     const wrapper = setUp({
-      latestReviewState: ReviewStates.keepWorking
+      latestReviewState: ReviewStates.keepWorking,
     });
     expect(wrapper.instance().checkbox.checked).to.be.true;
   });
 
   it('displays a indeterminate checkbox if reviewState is keepWorking and student is awaiting reivew', () => {
     const wrapper = setUp({
-      latestReviewState: ReviewStates.awaitingReview
+      latestReviewState: ReviewStates.awaitingReview,
     });
     expect(wrapper.instance().checkbox.indeterminate).to.be.true;
   });
@@ -61,7 +61,7 @@ describe('EditableReviewState', () => {
 
       const wrapper = setUp({
         onReviewStateChange: onReviewStateChangeStub,
-        latestReviewState: null
+        latestReviewState: null,
       });
 
       wrapper.instance().checkbox.checked = true;
@@ -75,7 +75,7 @@ describe('EditableReviewState', () => {
 
       const wrapper = setUp({
         onReviewStateChange: onReviewStateChangeStub,
-        latestReviewState: null
+        latestReviewState: null,
       });
 
       wrapper.find('input').simulate('change');
@@ -91,7 +91,7 @@ describe('EditableReviewState', () => {
 
       const wrapper = setUp({
         onReviewStateChange: onReviewStateChangeStub,
-        latestReviewState: ReviewStates.keepWorking
+        latestReviewState: ReviewStates.keepWorking,
       });
 
       wrapper.find('input').simulate('change');
@@ -103,14 +103,14 @@ describe('EditableReviewState', () => {
   describe('starting with an indeterminate box', () => {
     it('displays waiting for teacher review text', () => {
       const wrapper = setUp({
-        latestReviewState: ReviewStates.awaitingReview
+        latestReviewState: ReviewStates.awaitingReview,
       });
       expect(wrapper.contains(i18n.waitingForTeacherReviewLabel())).to.be.true;
     });
 
     it('displays tooltip with awaiting review content', () => {
       const wrapper = setUp({
-        latestReviewState: ReviewStates.awaitingReview
+        latestReviewState: ReviewStates.awaitingReview,
       });
 
       const tooltip = wrapper.find('ReactTooltip');
@@ -124,7 +124,7 @@ describe('EditableReviewState', () => {
 
       const wrapper = setUp({
         latestReviewState: ReviewStates.awaitingReview,
-        onReviewStateChange: onReviewStateChangeStub
+        onReviewStateChange: onReviewStateChangeStub,
       });
 
       wrapper.find('input').simulate('change');
@@ -137,7 +137,7 @@ describe('EditableReviewState', () => {
 
       const wrapper = setUp({
         latestReviewState: ReviewStates.awaitingReview,
-        onReviewStateChange: onReviewStateChangeStub
+        onReviewStateChange: onReviewStateChangeStub,
       });
 
       wrapper.find('input').simulate('change');

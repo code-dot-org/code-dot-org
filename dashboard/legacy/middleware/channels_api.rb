@@ -75,7 +75,7 @@ class ChannelsApi < Sinatra::Base
 
     begin
       _, remix_parent_id = storage_decrypt_channel_id(request.GET['parent']) if request.GET['parent']
-    rescue ArgumentError, OpenSSL::Cipher::CipherError
+    rescue ArgumentError, OpenSSL::Cipher::CipherError, Projects::ValidationError
       bad_request
     end
 
@@ -102,13 +102,17 @@ class ChannelsApi < Sinatra::Base
       data.delete('shouldPublish')
     end
 
-    id = project.create(
-      data.merge('createdAt' => timestamp, 'updatedAt' => timestamp),
-      ip: request.ip,
-      type: data['projectType'],
-      published_at: published_at,
-      remix_parent_id: remix_parent_id,
-    )
+    begin
+      id = project.create(
+        data.merge('createdAt' => timestamp, 'updatedAt' => timestamp),
+        ip: request.ip,
+        type: data['projectType'],
+        published_at: published_at,
+        remix_parent_id: remix_parent_id,
+        )
+    rescue Projects::ValidationError
+      bad_request
+    end
 
     redirect "/v3/channels/#{id}", 301
   end
@@ -169,16 +173,16 @@ class ChannelsApi < Sinatra::Base
 
     # Channels for project-backed levels are created without a project_type. The
     # type is then determined by client-side logic when the project is updated.
-    project_type = value.delete('projectType')
+    project_type = value["projectType"]
 
     begin
       value = Projects.new(get_storage_id).update(id, value, request.ip, locale: request.locale, project_type: project_type)
-    rescue ArgumentError, OpenSSL::Cipher::CipherError, ProfanityPrivacyError => e
-      if e.class == ProfanityPrivacyError
+    rescue ArgumentError, OpenSSL::Cipher::CipherError, ProfanityPrivacyError, Projects::ValidationError => exception
+      if exception.instance_of?(ProfanityPrivacyError)
         dont_cache
         status 422
         content_type :json
-        return {nameFailure: e.flagged_text}.to_json
+        return {nameFailure: exception.flagged_text}.to_json
       else
         bad_request
       end
@@ -203,12 +207,16 @@ class ChannelsApi < Sinatra::Base
   post %r{/v3/channels/([^/]+)/publish/([^/]+)} do |channel_id, project_type|
     not_authorized unless owns_channel?(channel_id)
     bad_request unless ALL_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
-    forbidden if sharing_disabled? && CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
-    forbidden if Projects.in_restricted_share_mode(channel_id, project_type)
+    forbidden('Sharing disabled for user account') if sharing_disabled? && CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
+    forbidden('Project in restricted share mode') if Projects.in_restricted_share_mode(channel_id, project_type)
 
-    # Once we have back-filled the project_type column for all channels,
-    # it will no longer be necessary to specify the project type here.
-    Projects.new(get_storage_id).publish(channel_id, project_type, current_user).to_json
+    begin
+      # Once we have back-filled the project_type column for all channels,
+      # it will no longer be necessary to specify the project type here.
+      Projects.new(get_storage_id).publish(channel_id, project_type, current_user).to_json
+    rescue Projects::PublishError => exception
+      forbidden(exception.message)
+    end
   end
 
   #
@@ -280,8 +288,8 @@ class ChannelsApi < Sinatra::Base
     language = request.language
 
     value = explain_share_failure(id)
-    intl_value = language != 'en' ?
-      explain_share_failure(id, language) : nil
+    intl_value = language == 'en' ?
+      nil : explain_share_failure(id, language)
     {
       share_failure: value,
       intl_share_failure: intl_value,

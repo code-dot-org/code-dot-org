@@ -3,7 +3,7 @@ import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import CodeReviewTimeline from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimeline';
 import CodeReviewTimelineElement, {
-  codeReviewTimelineElementType
+  codeReviewTimelineElementType,
 } from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineElement';
 import CodeReviewTimelineCommit from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineCommit';
 import CodeReviewTimelineReview from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineReview';
@@ -16,7 +16,7 @@ const DEFAULT_PROPS = {
       createdAt: '2022-03-04T04:58:42.000Z',
       comment: 'First commit',
       projectVersion: 'asdfjkl',
-      timelineElementType: timelineElementType.commit
+      timelineElementType: timelineElementType.commit,
     },
     {
       id: 1,
@@ -31,7 +31,7 @@ const DEFAULT_PROPS = {
           commenterName: 'Steve',
           commenterId: 987,
           createdAt: '2022-03-31T04:58:42.000Z',
-          isResolved: false
+          isResolved: false,
         },
         {
           id: 124,
@@ -39,22 +39,22 @@ const DEFAULT_PROPS = {
           commenterName: 'Karen',
           commenterId: 654,
           createdAt: '2022-03-31T04:58:42.000Z',
-          isResolved: false
-        }
-      ]
+          isResolved: false,
+        },
+      ],
     },
     {
       id: 2,
       createdAt: '2022-03-20T04:58:42.000Z',
       comment: 'Second commit (after review)',
       projectVersion: 'lkjfds',
-      timelineElementType: timelineElementType.commit
-    }
+      timelineElementType: timelineElementType.commit,
+    },
   ],
   addCodeReviewComment: () => {},
   closeReview: () => {},
   toggleResolveComment: () => {},
-  deleteCodeReviewComment: () => {}
+  deleteCodeReviewComment: () => {},
 };
 
 const setUp = (overrideProps = {}) => {

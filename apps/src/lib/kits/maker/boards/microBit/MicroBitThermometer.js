@@ -15,9 +15,8 @@ export default class MicroBitThermometer extends EventEmitter {
         this.currentTemp !==
         this.board.mb.analogChannel[SENSOR_CHANNELS.tempSensor]
       ) {
-        this.currentTemp = this.board.mb.analogChannel[
-          SENSOR_CHANNELS.tempSensor
-        ];
+        this.currentTemp =
+          this.board.mb.analogChannel[SENSOR_CHANNELS.tempSensor];
         this.emit('change');
       }
     });
@@ -25,31 +24,31 @@ export default class MicroBitThermometer extends EventEmitter {
 
     Object.defineProperties(this, {
       raw: {
-        get: function() {
+        get: function () {
           return this.board.mb.analogChannel[SENSOR_CHANNELS.tempSensor];
-        }
+        },
       },
       celsius: {
-        get: function() {
+        get: function () {
           return this.raw;
-        }
+        },
       },
       fahrenheit: {
-        get: function() {
+        get: function () {
           let rawValue = (this.celsius * 9) / 5 + 32;
           return roundToHundredth(rawValue);
-        }
+        },
       },
       C: {
-        get: function() {
+        get: function () {
           return this.celsius;
-        }
+        },
       },
       F: {
-        get: function() {
+        get: function () {
           return this.fahrenheit;
-        }
-      }
+        },
+      },
     });
   }
 

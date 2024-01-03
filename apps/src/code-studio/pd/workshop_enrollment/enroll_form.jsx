@@ -4,13 +4,15 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import $ from 'jquery';
+/* eslint-disable no-restricted-imports */
 import {
   FormGroup,
   Button,
   ControlLabel,
   HelpBlock,
-  Alert
+  Alert,
 } from 'react-bootstrap';
+/* eslint-enable no-restricted-imports */
 import Select from 'react-select';
 import {ButtonList} from '../form_components/ButtonList.jsx';
 import FieldGroup from '../form_components/FieldGroup';
@@ -38,21 +40,21 @@ const SCHOOL_TYPES_MAPPING = {
   'Public school': 'public',
   'Private school': 'private',
   'Charter school': 'charter',
-  Other: 'other'
+  Other: 'other',
 };
 
 const DESCRIBE_ROLES = [
   'School Administrator',
   'District Administrator',
   'Parent',
-  'Other'
+  'Other',
 ];
 
 const CSF_ROLES = [
   'Classroom Teacher',
   'Media Specialist',
   'Tech Teacher',
-  'Librarian'
+  'Librarian',
 ].concat(DESCRIBE_ROLES);
 
 const ADMIN_COUNSELOR_ROLES = ['Administrator', 'Counselor', 'Other'];
@@ -66,7 +68,7 @@ const GRADES_TEACHING = [
   'Grade 4',
   'Grade 5',
   'Grade 6-8',
-  'Grade 9-12'
+  'Grade 9-12',
 ];
 
 const CSF_COURSES = {
@@ -77,7 +79,7 @@ const CSF_COURSES = {
   courseE: 'Course E',
   courseF: 'Course F',
   express: 'Express',
-  courses14_accelerated: 'Courses 1-4 or Accelerated'
+  courses14_accelerated: 'Courses 1-4 or Accelerated',
 };
 
 const ATTENDED_CSF_COURSES_OPTIONS = {
@@ -85,23 +87,19 @@ const ATTENDED_CSF_COURSES_OPTIONS = {
     'Yes, this year',
   'Yes, I attended a CS Fundamentals Intro workshop in a previous academic year.':
     'Yes, prior year',
-  'Nope, I have never attended a CS Fundamentals workshop.': 'No'
-};
-
-const CSF_HAS_CURIICULUM_COPY_OPTIONS = {
-  'Yes, and I will bring it to the workshop.': 'Yes',
-  'Nope. I will need a new copy provided. Thanks!': 'No'
+  'Nope, I have never attended a CS Fundamentals workshop.': 'No',
 };
 
 const REPLACE_EXISTING_OPTIONS = [
   'Yes, this course will replace an existing computer science course',
   'No, this course will be added to the schedule in addition to an existing computer science course',
   'No, this will be the only computer science course on the master schedule',
-  'I don’t know'
+  'I don’t know',
 ];
 
 export default class EnrollForm extends React.Component {
   static propTypes = {
+    user_id: PropTypes.number.isRequired,
     workshop_id: PropTypes.number.isRequired,
     workshop_course: PropTypes.string,
     first_name: PropTypes.string,
@@ -109,7 +107,7 @@ export default class EnrollForm extends React.Component {
     onSubmissionComplete: PropTypes.func,
     workshop_subject: PropTypes.string,
     previous_courses: PropTypes.arrayOf(PropTypes.string).isRequired,
-    collect_demographics: PropTypes.bool
+    collect_demographics: PropTypes.bool,
   };
 
   constructor(props) {
@@ -121,7 +119,7 @@ export default class EnrollForm extends React.Component {
       isSubmitting: false,
       errors: {},
       showFormErrorMessage: false,
-      submissionErrorMessage: ''
+      submissionErrorMessage: '',
     };
   }
 
@@ -253,10 +251,11 @@ export default class EnrollForm extends React.Component {
         school_name: this.state.school_info.school_name,
         school_state: this.state.school_info.school_state,
         school_zip: this.state.school_info.school_zip,
-        school_type: this.schoolType()
+        school_type: this.schoolType(),
       };
     }
     const params = {
+      user_id: this.props.user_id,
       first_name: this.state.first_name,
       last_name: this.state.last_name,
       email: this.state.email,
@@ -271,10 +270,6 @@ export default class EnrollForm extends React.Component {
       explain_csf_course_other: this.state.explain_csf_course_other,
       attended_csf_intro_workshop:
         ATTENDED_CSF_COURSES_OPTIONS[this.state.attended_csf_intro_workshop],
-      csf_has_physical_curriculum_guide:
-        CSF_HAS_CURIICULUM_COPY_OPTIONS[
-          this.state.csf_has_physical_curriculum_guide
-        ],
       previous_courses: this.state.previous_courses,
       replace_existing: this.state.replace_existing,
       csf_intro_intent: this.state.csf_intro_intent,
@@ -282,7 +277,7 @@ export default class EnrollForm extends React.Component {
       years_teaching: this.state.years_teaching,
       years_teaching_cs: this.state.years_teaching_cs,
       taught_ap_before: this.state.taught_ap_before,
-      planning_to_teach_ap: this.state.planning_to_teach_ap
+      planning_to_teach_ap: this.state.planning_to_teach_ap,
     };
     this.submitRequest = $.ajax({
       method: 'POST',
@@ -294,19 +289,20 @@ export default class EnrollForm extends React.Component {
         result?.responseJSON?.workshop_enrollment_status === 'error' &&
           this.setState({
             submissionErrorMessage:
-              result?.responseJSON?.error_message || 'unknown error'
+              result?.responseJSON?.error_message || 'unknown error',
           });
         this.props.onSubmissionComplete(result);
-      }
+      },
     });
   }
 
   validateRequiredFields() {
     let errors = this.getErrors();
     const missingRequiredFields = this.getMissingRequiredFields();
-    const schoolInfoErrors = SchoolAutocompleteDropdownWithCustomFields.validate(
-      this.state.school_info
-    );
+    const schoolInfoErrors =
+      SchoolAutocompleteDropdownWithCustomFields.validate(
+        this.state.school_info
+      );
 
     if (
       missingRequiredFields.length ||
@@ -343,13 +339,13 @@ export default class EnrollForm extends React.Component {
       {
         answerText: `${NOT_TEACHING} ${EXPLAIN}`,
         inputValue: this.state.explain_not_teaching,
-        onInputChange: this.handleNotTeachingChange
+        onInputChange: this.handleNotTeachingChange,
       },
       {
         answerText: `${OTHER} ${EXPLAIN}`,
         inputValue: this.state.explain_teaching_other,
-        onInputChange: this.handleTeachingOtherChange
-      }
+        onInputChange: this.handleTeachingOtherChange,
+      },
     ]);
 
     const csfIntroIntentLabel =
@@ -367,14 +363,14 @@ export default class EnrollForm extends React.Component {
       'I have available time on my schedule for teaching computer science.',
       'I want to learn computer science concepts.',
       'Computer science is a required subject in my region.',
-      'I am here to bring information back to my school or district.'
+      'I am here to bring information back to my school or district.',
     ];
 
     const cspReturningTeachersTaughtAPLabel = `Have you taught an Advanced Placement (AP) course before?`;
     const cspReturningTeachersTaughtAPAnswers = [
       'Yes, AP CS Principles or AP CS A',
       'Yes, but in another subject',
-      'No'
+      'No',
     ];
 
     const cspReturningTeachersPlanningAPLabel = `Are you planning to teach CS Principles as an AP course?`;
@@ -382,7 +378,7 @@ export default class EnrollForm extends React.Component {
       'Yes',
       'No',
       'Both AP and non-AP',
-      'Unsure / Still deciding'
+      'Unsure / Still deciding',
     ];
 
     const csfCourses = Object.keys(CSF_COURSES)
@@ -392,11 +388,11 @@ export default class EnrollForm extends React.Component {
         {
           answerText: `${OTHER} ${EXPLAIN}`,
           inputValue: this.state.explain_csf_course_other,
-          onInputChange: this.handleCsfCourseOtherChange
-        }
+          onInputChange: this.handleCsfCourseOtherChange,
+        },
       ]);
     const previousCourses = this.props.previous_courses.concat([
-      'I don’t have experience teaching any of these courses'
+      'I don’t have experience teaching any of these courses',
     ]);
 
     const roles =
@@ -418,7 +414,10 @@ export default class EnrollForm extends React.Component {
             onChange={this.handleChange}
             defaultValue={this.props.first_name}
             validationState={
-              this.state.errors.hasOwnProperty('first_name')
+              Object.prototype.hasOwnProperty.call(
+                this.state.errors,
+                'first_name'
+              )
                 ? VALIDATION_STATE_ERROR
                 : null
             }
@@ -431,7 +430,10 @@ export default class EnrollForm extends React.Component {
             required={true}
             onChange={this.handleChange}
             validationState={
-              this.state.errors.hasOwnProperty('last_name')
+              Object.prototype.hasOwnProperty.call(
+                this.state.errors,
+                'last_name'
+              )
                 ? VALIDATION_STATE_ERROR
                 : null
             }
@@ -444,12 +446,11 @@ export default class EnrollForm extends React.Component {
             required={true}
             onChange={this.handleChange}
             defaultValue={this.props.email}
-            readOnly={!!this.props.email}
             title={
               this.props.email ? 'Email can be changed in account settings' : ''
             }
             validationState={
-              this.state.errors.hasOwnProperty('email')
+              Object.prototype.hasOwnProperty.call(this.state.errors, 'email')
                 ? VALIDATION_STATE_ERROR
                 : null
             }
@@ -463,7 +464,10 @@ export default class EnrollForm extends React.Component {
               required={true}
               onChange={this.handleChange}
               validationState={
-                this.state.errors.hasOwnProperty('confirm_email')
+                Object.prototype.hasOwnProperty.call(
+                  this.state.errors,
+                  'confirm_email'
+                )
                   ? VALIDATION_STATE_ERROR
                   : null
               }
@@ -481,7 +485,7 @@ export default class EnrollForm extends React.Component {
           <FormGroup>
             <FormGroup
               validationState={
-                this.state.errors.hasOwnProperty('role')
+                Object.prototype.hasOwnProperty.call(this.state.errors, 'role')
                   ? VALIDATION_STATE_ERROR
                   : null
               }
@@ -518,7 +522,10 @@ export default class EnrollForm extends React.Component {
                 onChange={this.handleChange}
                 selectedItems={this.state.grades_teaching}
                 validationState={
-                  this.state.errors.hasOwnProperty('grades_teaching')
+                  Object.prototype.hasOwnProperty.call(
+                    this.state.errors,
+                    'grades_teaching'
+                  )
                     ? VALIDATION_STATE_ERROR
                     : null
                 }
@@ -540,7 +547,10 @@ export default class EnrollForm extends React.Component {
               onChange={this.handleChange}
               selectedItems={this.state.csf_intro_intent}
               validationState={
-                this.state.errors.hasOwnProperty('csf_intro_intent')
+                Object.prototype.hasOwnProperty.call(
+                  this.state.errors,
+                  'csf_intro_intent'
+                )
                   ? VALIDATION_STATE_ERROR
                   : null
               }
@@ -558,7 +568,10 @@ export default class EnrollForm extends React.Component {
               onChange={this.handleChange}
               selectedItems={this.state.csf_intro_other_factors}
               validationState={
-                this.state.errors.hasOwnProperty('csf_intro_other_factors')
+                Object.prototype.hasOwnProperty.call(
+                  this.state.errors,
+                  'csf_intro_other_factors'
+                )
                   ? VALIDATION_STATE_ERROR
                   : null
               }
@@ -577,11 +590,11 @@ export default class EnrollForm extends React.Component {
                   'none',
                   'a few lessons',
                   'most lessons',
-                  'all lessons'
+                  'all lessons',
                 ]}
                 questions={Object.keys(CSF_COURSES).map(key => ({
                   label: CSF_COURSES[key],
-                  name: key
+                  name: key,
                 }))}
                 selectedItems={this.state.csf_course_experience}
               />
@@ -594,7 +607,10 @@ export default class EnrollForm extends React.Component {
                 onChange={this.handleChange}
                 selectedItems={this.state.csf_courses_planned}
                 validationState={
-                  this.state.errors.hasOwnProperty('csf_courses_planned')
+                  Object.prototype.hasOwnProperty.call(
+                    this.state.errors,
+                    'csf_courses_planned'
+                  )
                     ? VALIDATION_STATE_ERROR
                     : null
                 }
@@ -610,32 +626,14 @@ export default class EnrollForm extends React.Component {
                 onChange={this.handleChange}
                 selectedItems={this.state.attended_csf_intro_workshop}
                 validationState={
-                  this.state.errors.hasOwnProperty(
+                  Object.prototype.hasOwnProperty.call(
+                    this.state.errors,
                     'attended_csf_intro_workshop'
                   )
                     ? VALIDATION_STATE_ERROR
                     : null
                 }
                 errorText={this.state.errors.attended_csf_intro_workshop}
-                type="radio"
-                required={true}
-              />
-              <ButtonList
-                id="csf_has_physical_curriculum_guide"
-                key="csf_has_physical_curriculum_guide"
-                answers={Object.keys(CSF_HAS_CURIICULUM_COPY_OPTIONS)}
-                groupName="csf_has_physical_curriculum_guide"
-                label="Do you have a physical copy of the 2019-2020 CS Fundamentals Curriculum Guide that you can bring to the workshop?"
-                onChange={this.handleChange}
-                selectedItems={this.state.csf_has_physical_curriculum_guide}
-                validationState={
-                  this.state.errors.hasOwnProperty(
-                    'csf_has_physical_curriculum_guide'
-                  )
-                    ? VALIDATION_STATE_ERROR
-                    : null
-                }
-                errorText={this.state.errors.csf_has_physical_curriculum_guide}
                 type="radio"
                 required={true}
               />
@@ -653,7 +651,10 @@ export default class EnrollForm extends React.Component {
               onChange={this.handleChange}
               selectedItems={this.state.previous_courses}
               validationState={
-                this.state.errors.hasOwnProperty('previous_courses')
+                Object.prototype.hasOwnProperty.call(
+                  this.state.errors,
+                  'previous_courses'
+                )
                   ? VALIDATION_STATE_ERROR
                   : null
               }
@@ -671,7 +672,10 @@ export default class EnrollForm extends React.Component {
               onChange={this.handleChange}
               selectedItems={this.state.replace_existing}
               validationState={
-                this.state.errors.hasOwnProperty('replace_existing')
+                Object.prototype.hasOwnProperty.call(
+                  this.state.errors,
+                  'replace_existing'
+                )
                   ? VALIDATION_STATE_ERROR
                   : null
               }
@@ -693,7 +697,10 @@ export default class EnrollForm extends React.Component {
                 required={true}
                 onChange={this.handleChange}
                 validationState={
-                  this.state.errors.hasOwnProperty('years_teaching')
+                  Object.prototype.hasOwnProperty.call(
+                    this.state.errors,
+                    'years_teaching'
+                  )
                     ? VALIDATION_STATE_ERROR
                     : null
                 }
@@ -706,7 +713,10 @@ export default class EnrollForm extends React.Component {
                 required={true}
                 onChange={this.handleChange}
                 validationState={
-                  this.state.errors.hasOwnProperty('years_teaching_cs')
+                  Object.prototype.hasOwnProperty.call(
+                    this.state.errors,
+                    'years_teaching_cs'
+                  )
                     ? VALIDATION_STATE_ERROR
                     : null
                 }
@@ -721,7 +731,10 @@ export default class EnrollForm extends React.Component {
                 onChange={this.handleChange}
                 selectedItems={this.state.taught_ap_before}
                 validationState={
-                  this.state.errors.hasOwnProperty('taught_ap_before')
+                  Object.prototype.hasOwnProperty.call(
+                    this.state.errors,
+                    'taught_ap_before'
+                  )
                     ? VALIDATION_STATE_ERROR
                     : null
                 }
@@ -737,7 +750,10 @@ export default class EnrollForm extends React.Component {
                 onChange={this.handleChange}
                 selectedItems={this.state.planning_to_teach_ap}
                 validationState={
-                  this.state.errors.hasOwnProperty('planning_to_teach_ap')
+                  Object.prototype.hasOwnProperty.call(
+                    this.state.errors,
+                    'planning_to_teach_ap'
+                  )
                     ? VALIDATION_STATE_ERROR
                     : null
                 }
@@ -808,10 +824,7 @@ export default class EnrollForm extends React.Component {
       ) {
         requiredFields.push('csf_intro_intent');
       } else if (this.props.workshop_subject === DEEP_DIVE) {
-        requiredFields.push(
-          'attended_csf_intro_workshop',
-          'csf_has_physical_curriculum_guide'
-        );
+        requiredFields.push('attended_csf_intro_workshop');
       }
     }
 

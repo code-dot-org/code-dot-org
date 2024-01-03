@@ -9,7 +9,6 @@ describe('TeacherApplication', () => {
     apiEndpoint: '/path/to/endpoint',
     options: {},
     accountEmail: 'user@email.com',
-    userId: 1
   };
 
   describe('getInitialData', () => {
@@ -41,13 +40,13 @@ describe('TeacherApplication', () => {
         teacherApplication.findOne('FormController').props.getInitialData()
       ).to.deep.equal({
         ...parsedData,
-        school: schoolId
+        school: schoolId,
       });
     });
     it('overwrites existing school id if the saved form data has school id', () => {
       teacherApplication.mergeProps({
         savedFormData: `{"school": "16"}`,
-        schoolId
+        schoolId,
       });
       expect(
         teacherApplication.findOne('FormController').props.getInitialData()
@@ -68,13 +67,13 @@ describe('TeacherApplication', () => {
       teacherApplication.mergeProps({
         savedFormData,
         schoolId,
-        allowPartialSaving: false
+        allowPartialSaving: false,
       });
       expect(
         teacherApplication.findOne('FormController').props.getInitialData()
       ).to.deep.equal({
         ...parsedData,
-        school: schoolId
+        school: schoolId,
       });
     });
   });

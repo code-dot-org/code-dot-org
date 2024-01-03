@@ -13,7 +13,7 @@ const DEFAULT_PROPS = {
   name: TEST_NAME,
   selected: false,
   text: TEST_TEXT,
-  singleEntry: false
+  singleEntry: false,
 };
 
 describe('FilterChoice', () => {
@@ -68,8 +68,8 @@ describe('FilterChoice', () => {
 
     wrapper.find('input').simulate('change', {
       target: {
-        checked: testNewCheckedValue
-      }
+        checked: testNewCheckedValue,
+      },
     });
 
     expect(callback).to.have.been.calledOnce.and.calledWith(

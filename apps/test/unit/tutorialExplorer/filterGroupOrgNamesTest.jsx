@@ -15,7 +15,7 @@ const TEST_CALLBACK = () => {};
 const DEFAULT_PROPS = {
   orgName: TEST_ORG_NAME,
   uniqueOrgNames: TEST_UNIQUE_ORG_NAMES,
-  onUserInput: TEST_CALLBACK
+  onUserInput: TEST_CALLBACK,
 };
 
 describe('FilterGroupOrgNames', () => {

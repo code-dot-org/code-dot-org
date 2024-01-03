@@ -5,14 +5,14 @@ import ObjectiveLine from './ObjectiveLine';
 export default class ObjectivesEditor extends Component {
   static propTypes = {
     objectives: PropTypes.arrayOf(PropTypes.object).isRequired,
-    updateObjectives: PropTypes.func.isRequired
+    updateObjectives: PropTypes.func.isRequired,
   };
 
   constructor(props) {
     super(props);
 
     this.state = {
-      currentlyEditingIndex: null
+      currentlyEditingIndex: null,
     };
   }
 
@@ -36,7 +36,7 @@ export default class ObjectivesEditor extends Component {
 
   handleEdit = idx => {
     this.setState({
-      currentlyEditingIndex: idx
+      currentlyEditingIndex: idx,
     });
   };
 
@@ -50,7 +50,7 @@ export default class ObjectivesEditor extends Component {
       this.props.updateObjectives(objectives.slice(0, objectives.length - 1));
     }
     this.setState({
-      currentlyEditingIndex: null
+      currentlyEditingIndex: null,
     });
   };
 
@@ -60,11 +60,11 @@ export default class ObjectivesEditor extends Component {
     const newObjectives = [...objectives];
     newObjectives[currentlyEditingIndex] = {
       ...objectives[currentlyEditingIndex],
-      description: newDescription
+      description: newDescription,
     };
     this.props.updateObjectives(newObjectives);
     this.setState({
-      currentlyEditingIndex: null
+      currentlyEditingIndex: null,
     });
   };
 
@@ -75,7 +75,7 @@ export default class ObjectivesEditor extends Component {
       objectives.concat([{description: '', key: newObjectiveKey}])
     );
     this.setState({
-      currentlyEditingIndex: objectives.length
+      currentlyEditingIndex: objectives.length,
     });
   };
 
@@ -93,14 +93,14 @@ export default class ObjectivesEditor extends Component {
               <tr>
                 <th
                   style={{
-                    width: '90%'
+                    width: '90%',
                   }}
                 >
                   Description
                 </th>
                 <th
                   style={{
-                    width: '30%'
+                    width: '30%',
                   }}
                 >
                   Actions
@@ -145,6 +145,6 @@ const styles = {
     padding: 7,
     textAlign: 'center',
     marginTop: 10,
-    marginLeft: 0
-  }
+    marginLeft: 0,
+  },
 };

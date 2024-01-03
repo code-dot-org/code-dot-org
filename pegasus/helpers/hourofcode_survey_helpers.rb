@@ -1,5 +1,5 @@
 def generate_hoc_survey_report
-  PEGASUS_DB[:forms].where(kind: 'HocSurvey2014').map do |row|
+  PEGASUS_DB[:forms].where(kind: 'HocSurvey2014').filter_map do |row|
     data = JSON.parse(row[:data]) rescue {}
 
     {
@@ -23,5 +23,5 @@ def generate_hoc_survey_report
       district: data['teacher_district_s'],
       prize_choice: data['prize_choice_s']
     }
-  end.compact
+  end
 end

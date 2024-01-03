@@ -19,3 +19,5 @@ Book b = new Book();
 
 Which of the following code segments, written in the same class, would not run?
 MARKDOWN
+
+allow_multiple_attempts true

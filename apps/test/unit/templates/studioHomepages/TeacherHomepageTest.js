@@ -15,7 +15,6 @@ const DEFAULT_PROPS = {
   topCourse,
   plCourses,
   topPlCourse,
-  isEnglish: true,
   joinedStudentSections: [],
   joinedPlSections: [],
   ncesSchoolId: 'school-id',
@@ -25,7 +24,7 @@ const DEFAULT_PROPS = {
   teacherEmail: 'teacher@code.org',
   teacherName: 'Teacher',
   hasFeedback: false,
-  currentUserId: 42
+  currentUserId: 42,
 };
 
 const setUp = (overrideProps = {}) => {
@@ -38,7 +37,7 @@ describe('TeacherHomepage', () => {
   const successResponse = () => [
     200,
     {'Content-Type': 'application/json'},
-    JSON.stringify({})
+    JSON.stringify({}),
   ];
   beforeEach(() => {
     server = sinon.fakeServer.create();
@@ -52,14 +51,10 @@ describe('TeacherHomepage', () => {
     sessionStorage.getItem.restore();
   });
 
-  it('shows a non-extended Header Banner that says My Dashboard', () => {
+  it('shows a Header Banner that says My Dashboard', () => {
     const wrapper = setUp();
-    const headerBanner = wrapper.find('Connect(HeaderBanner)');
-    assert.deepEqual(headerBanner.props(), {
-      headingText: 'My Dashboard',
-      short: true,
-      backgroundUrl: '/shared/images/banners/teacher-homepage-hero.jpg'
-    });
+    const headerBanner = wrapper.find('HeaderBanner');
+    expect(headerBanner.props().headingText).to.equal('My Dashboard');
   });
 
   it('renders 2 ProtectedStatefulDivs', () => {
@@ -80,7 +75,7 @@ describe('TeacherHomepage', () => {
     expect(analyticsSpy).to.have.been.calledOnce;
     expect(analyticsSpy.firstCall.args).to.deep.eq([
       'Teacher Login',
-      {'user id': 42}
+      {'user id': 42},
     ]);
 
     // After setting the session value to true, we should not see sessionStorage.setItem or analyticsSpy called again.
@@ -113,17 +108,16 @@ describe('TeacherHomepage', () => {
     );
   });
 
-  it('renders a MarketingAnnouncementBanner if isEnglish and specialAnnouncement exists', () => {
+  it('renders a MarketingAnnouncementBanner specialAnnouncement exists', () => {
     const specialAnnouncement = {
       title: 'An announcement',
       image: '/image',
       body: 'body',
       buttonUrl: '/button',
-      buttonText: 'press me'
+      buttonText: 'press me',
     };
     const wrapper = setUp({
-      isEnglish: true,
-      specialAnnouncement
+      specialAnnouncement,
     });
     assert(wrapper.find('MarketingAnnouncementBanner').exists());
   });
@@ -136,21 +130,30 @@ describe('TeacherHomepage', () => {
       description: 'description',
       link: '/link',
       image: '/image',
-      id: 'id'
+      id: 'id',
     };
     const wrapper = setUp({
-      announcement
+      announcement,
     });
     assert(!wrapper.find('Notification').exists());
   });
 
-  it('renders a CensusTeacherBanner if showCensusBanner is true', () => {
+  /*
+    We have disabled the Census Teacher Banner on the Teacher Homepage (November 2023) to conserve
+    space. If we decide to show the banner again this test will need to be updated. See
+    TeacherHomepage.jsx to make the banner show.
+   */
+  it('does not render CensusTeacherBanner even if showCensusBanner is true', () => {
     const wrapper = setUp({showCensusBanner: true});
-    assert(wrapper.find('CensusTeacherBanner').exists());
+    assert(!wrapper.find('CensusTeacherBanner').exists());
   });
 
-  it('renders a DonorTeacherBanner if isEnglish and donorBannerName exists', () => {
-    const wrapper = setUp({isEnglish: true, donorBannerName: 'Donor Name'});
+  /*
+    This test will need to be updated according to whether the banner is showing,
+    as determined by shouldShowAFEBanner in TeacherHomepage.jsx.
+   */
+  it('renders a DonorTeacherBanner if afeEligible is true', () => {
+    const wrapper = setUp({afeEligible: true});
     assert(wrapper.find('DonorTeacherBanner').exists());
   });
 
@@ -168,7 +171,7 @@ describe('TeacherHomepage', () => {
       isTeacher: true,
       hasFeedback: false,
       courses: courses,
-      topCourse: topCourse
+      topCourse: topCourse,
     });
     assert.deepEqual(recentCourses.at(1).props(), {
       showAllCoursesLink: true,
@@ -176,7 +179,7 @@ describe('TeacherHomepage', () => {
       hasFeedback: false,
       isProfessionalLearningCourse: true,
       courses: plCourses,
-      topCourse: topPlCourse
+      topCourse: topPlCourse,
     });
   });
 
@@ -189,7 +192,7 @@ describe('TeacherHomepage', () => {
       isTeacher: true,
       hasFeedback: false,
       courses: courses,
-      topCourse: topCourse
+      topCourse: topCourse,
     });
   });
 
@@ -202,7 +205,7 @@ describe('TeacherHomepage', () => {
       isTeacher: true,
       hasFeedback: false,
       courses: courses,
-      topCourse: topCourse
+      topCourse: topCourse,
     });
     assert.deepEqual(recentCourses.at(1).props(), {
       showAllCoursesLink: true,
@@ -210,7 +213,7 @@ describe('TeacherHomepage', () => {
       hasFeedback: false,
       isProfessionalLearningCourse: true,
       courses: [],
-      topCourse: topPlCourse
+      topCourse: topPlCourse,
     });
   });
 
@@ -223,7 +226,7 @@ describe('TeacherHomepage', () => {
       isTeacher: true,
       hasFeedback: false,
       courses: courses,
-      topCourse: topCourse
+      topCourse: topCourse,
     });
     assert.deepEqual(recentCourses.at(1).props(), {
       showAllCoursesLink: true,
@@ -231,7 +234,7 @@ describe('TeacherHomepage', () => {
       hasFeedback: false,
       isProfessionalLearningCourse: true,
       courses: plCourses,
-      topCourse: null
+      topCourse: null,
     });
   });
 
@@ -254,7 +257,7 @@ describe('TeacherHomepage', () => {
     const wrapper = setUp({
       plCourses: plCourses,
       topPlCourse: topPlCourse,
-      hasFeedback: true
+      hasFeedback: true,
     });
     assert.equal(wrapper.find('ParticipantFeedbackNotification').length, 1);
   });
@@ -263,7 +266,7 @@ describe('TeacherHomepage', () => {
     const wrapper = setUp({
       plCourses: plCourses,
       topPlCourse: topPlCourse,
-      hasFeedback: false
+      hasFeedback: false,
     });
     assert.equal(wrapper.find('ParticipantFeedbackNotification').length, 0);
   });
@@ -272,7 +275,7 @@ describe('TeacherHomepage', () => {
     const wrapper = setUp({
       plCourses: [],
       topPlCourse: null,
-      hasFeedback: true
+      hasFeedback: true,
     });
     assert.equal(wrapper.find('ParticipantFeedbackNotification').length, 0);
   });

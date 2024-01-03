@@ -1,5 +1,3 @@
-/* global dashboard */
-
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -23,6 +21,10 @@ import LibraryCreationDialog from './libraries/LibraryCreationDialog';
 import QRCode from 'qrcode.react';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import Button from '../../templates/Button';
+import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import defaultThumbnail from '@cdo/static/projects/project_default.png';
+import fontConstants from '@cdo/apps/fontConstants';
 
 function recordShare(type) {
   if (!window.dashboard) {
@@ -35,14 +37,14 @@ function recordShare(type) {
       study_group: 'v1',
       event: 'project-share',
       project_id: dashboard.project && dashboard.project.getCurrentId(),
-      data_string: type
+      data_string: type,
     },
     {includeUserId: true}
   );
 }
 
 function wrapShareClick(handler, type) {
-  return function() {
+  return function () {
     try {
       recordShare(type);
     } finally {
@@ -88,7 +90,7 @@ class ShareAllowedDialog extends React.Component {
     hideBackdrop: BaseDialog.propTypes.hideBackdrop,
     canShareSocial: PropTypes.bool.isRequired,
     userSharingDisabled: PropTypes.bool,
-    inRestrictedShareMode: PropTypes.bool
+    inRestrictedShareMode: PropTypes.bool,
   };
 
   state = {
@@ -99,7 +101,10 @@ class ShareAllowedDialog extends React.Component {
     isTwitterAvailable: false,
     isFacebookAvailable: false,
     replayVideoUnavailable: false,
-    hasBeenCopied: false
+    hasBeenCopied: false,
+    isLoadingAccountAndProjectAge: false,
+    isAccountOldEnoughToPublish: false,
+    isProjectOldEnoughToPublish: false,
   };
 
   componentDidMount() {
@@ -115,18 +120,42 @@ class ShareAllowedDialog extends React.Component {
         isTwitterAvailable => this.setState({isTwitterAvailable})
       );
     }
+
+    this.checkProjectAndAccountAge();
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
     if (this.props.isOpen && !prevProps.isOpen) {
       recordShare('open');
       this.setState({hasBeenCopied: false});
+
+      this.checkProjectAndAccountAge();
     }
   }
 
+  checkProjectAndAccountAge = () => {
+    if (this.isPublishAllowed() && dashboard.project) {
+      this.setState({isLoadingAccountAndProjectAge: true});
+
+      const appType = dashboard.project.getStandaloneApp();
+      const channelId = dashboard.project.getCurrentId();
+      fetch(`/projects/${appType}/${channelId}/can_publish_age_status`)
+        .then(response => response.json())
+        .then(data => {
+          this.setState({
+            isProjectOldEnoughToPublish:
+              data.project_existed_long_enough_to_publish,
+            isAccountOldEnoughToPublish:
+              data.user_existed_long_enough_to_publish,
+            isLoadingAccountAndProjectAge: false,
+          });
+        });
+    }
+  };
+
   replayVideoNotFound = () => {
     this.setState({
-      replayVideoUnavailable: true
+      replayVideoUnavailable: true,
     });
   };
 
@@ -138,14 +167,14 @@ class ShareAllowedDialog extends React.Component {
     recordShare('close');
     this.props.onClose();
     this.setState({
-      replayVideoUnavailable: false
+      replayVideoUnavailable: false,
     });
   };
 
   showSendToPhone = event => {
     this.setState({
       showSendToPhone: true,
-      showAdvancedOptions: false
+      showAdvancedOptions: false,
     });
     event.preventDefault();
   };
@@ -158,7 +187,7 @@ class ShareAllowedDialog extends React.Component {
   showAdvancedOptions = () => {
     this.setState({
       showSendToPhone: false,
-      showAdvancedOptions: true
+      showAdvancedOptions: true,
     });
   };
 
@@ -177,12 +206,49 @@ class ShareAllowedDialog extends React.Component {
     );
   };
 
+  // inRestrictedShareMode overrides canPublish and canShareSocial
+  isPublishAllowed = () =>
+    this.props.canPublish && !this.props.inRestrictedShareMode;
+  isSocialShareAllowed = () =>
+    this.props.canShareSocial && !this.props.inRestrictedShareMode;
+
+  getWarningText = showPublishInfo => {
+    if (this.props.inRestrictedShareMode) {
+      return i18n.restrictedShareInfo();
+    }
+
+    if (this.state.replayVideoUnavailable) {
+      return i18n.downloadReplayVideoButtonError();
+    }
+
+    // The following warnings require showPublishInfo to be true
+    if (!showPublishInfo) {
+      return null;
+    }
+
+    if (!this.props.thumbnailUrl) {
+      return i18n.thumbnailWarning();
+    }
+
+    if (
+      !this.state.isLoadingAccountAndProjectAge &&
+      !this.state.isAccountOldEnoughToPublish
+    ) {
+      return i18n.publishFailedAccountTooNew();
+    }
+
+    if (
+      !this.state.isLoadingAccountAndProjectAge &&
+      !this.state.isProjectOldEnoughToPublish
+    ) {
+      return i18n.publishFailedProjectTooNew();
+    }
+  };
+
   render() {
     const {
       canPrint,
-      canPublish,
       isPublished,
-      inRestrictedShareMode,
       canShareSocial,
       appType,
       selectedSong,
@@ -193,12 +259,15 @@ class ShareAllowedDialog extends React.Component {
       isUnpublishPending,
       onClickPopup,
       exportApp,
-      channelId
+      channelId,
     } = this.props;
 
-    // inRestrictedShareMode overrides canPublish and canShareSocial
-    const publishAllowed = canPublish && !inRestrictedShareMode;
-    const socialShareAllowed = canShareSocial && !inRestrictedShareMode;
+    const {
+      isAccountOldEnoughToPublish,
+      isProjectOldEnoughToPublish,
+      isLoadingAccountAndProjectAge,
+    } = this.state;
+
     const modalClass = 'modal-content no-modal-icon';
 
     const isDroplet = appType === 'applab' || appType === 'gamelab';
@@ -207,7 +276,7 @@ class ShareAllowedDialog extends React.Component {
     const hasThumbnail = !!this.props.thumbnailUrl;
     const thumbnailUrl = hasThumbnail
       ? this.props.thumbnailUrl
-      : '/blockly/media/projects/project_default.png';
+      : defaultThumbnail;
 
     const facebookShareUrl =
       'https://www.facebook.com/sharer/sharer.php?u=' +
@@ -238,7 +307,7 @@ class ShareAllowedDialog extends React.Component {
         iframeHeight: applabConstants.APP_HEIGHT + 140,
         // Extra 32 pixels added to account for phone frame
         // Extra 40 pixels added to account for left and right padding divs (20 px each side)
-        iframeWidth: applabConstants.APP_WIDTH + 32 + 40
+        iframeWidth: applabConstants.APP_WIDTH + 32 + 40,
       };
     } else if (appType === 'gamelab') {
       embedOptions = {
@@ -246,9 +315,17 @@ class ShareAllowedDialog extends React.Component {
         // #visualizationColumn.wireframeShare css
         iframeHeight: p5labConstants.APP_HEIGHT + 357,
         // Extra 40 pixels added to account for left and right padding divs (20 px each side)
-        iframeWidth: p5labConstants.APP_WIDTH + 40
+        iframeWidth: p5labConstants.APP_WIDTH + 40,
       };
     }
+
+    const showPublishInfo = this.isPublishAllowed() && !isPublished;
+    const disablePublishButton =
+      !hasThumbnail ||
+      !isAccountOldEnoughToPublish ||
+      !isProjectOldEnoughToPublish;
+
+    const warningText = this.getWarningText(showPublishInfo);
 
     return (
       <div>
@@ -282,7 +359,7 @@ class ShareAllowedDialog extends React.Component {
                 className={modalClass}
                 style={{position: 'relative'}}
               >
-                <p className="dialog-title">{i18n.shareTitle()}</p>
+                <h5 className="dialog-title">{i18n.shareTitle()}</h5>
                 {isAbusive && (
                   <AbuseError
                     i18n={{
@@ -290,8 +367,8 @@ class ShareAllowedDialog extends React.Component {
                       contact_us: i18n.contactUs({
                         url: `https://support.code.org/hc/en-us/requests/new?&description=${encodeURIComponent(
                           `Abuse error for project at url: ${shareUrl}`
-                        )}`
-                      })
+                        )}`,
+                      }),
                     }}
                     className="alert-error"
                     style={styles.abuseStyle}
@@ -303,58 +380,68 @@ class ShareAllowedDialog extends React.Component {
                 )}
                 <div style={{clear: 'both'}}>
                   <div style={styles.thumbnail}>
-                    <img style={styles.thumbnailImg} src={thumbnailUrl} />
+                    <img
+                      style={styles.thumbnailImg}
+                      src={thumbnailUrl}
+                      alt={i18n.projectThumbnail()}
+                    />
                   </div>
                   <div>
-                    <button
-                      type="button"
+                    <Button
+                      color={Button.ButtonColor.brandSecondaryDefault}
                       id="sharing-dialog-copy-button"
+                      icon="clipboard"
                       style={{
                         ...styles.button,
                         ...styles.copyButton,
-                        ...(this.state.hasBeenCopied && styles.copyButtonLight)
+                        ...(this.state.hasBeenCopied && styles.copyButtonLight),
                       }}
                       onClick={wrapShareClick(this.copy, 'copy')}
+                      text={i18n.copyLinkToProject()}
                       value={shareUrl}
-                    >
-                      <FontAwesome icon="clipboard" style={{fontSize: 16}} />
-                      <span style={{paddingLeft: 10}}>
-                        {i18n.copyLinkToProject()}
-                      </span>
-                    </button>
+                    />
                     <DownloadReplayVideoButton
                       style={{...styles.button, marginBottom: 8}}
                       onError={this.replayVideoNotFound}
                     />
                   </div>
                 </div>
-                <div className="social-buttons">
-                  <a
+                <div className="social-buttons" style={{marginTop: 12}}>
+                  <Button
+                    color={Button.ButtonColor.neutralDark}
                     id="sharing-phone"
                     href=""
                     onClick={wrapShareClick(
                       this.showSendToPhone,
                       'send-to-phone'
                     )}
+                    style={styles.sendToPhoneButton}
                   >
                     <FontAwesome icon="mobile-phone" style={{fontSize: 36}} />
-                    <span>{i18n.sendToPhone()}</span>
-                  </a>
-                  {publishAllowed && !isPublished && (
-                    <button
-                      type="button"
-                      id="share-dialog-publish-button"
-                      style={
-                        hasThumbnail ? styles.button : styles.buttonDisabled
-                      }
-                      onClick={wrapShareClick(this.publish, 'publish')}
-                      disabled={!hasThumbnail}
-                      className="no-mc"
-                    >
-                      {i18n.publish()}
-                    </button>
-                  )}
-                  {publishAllowed && isPublished && (
+                    <span style={styles.sendToPhoneSpan}>
+                      {i18n.sendToPhone()}
+                    </span>
+                  </Button>
+
+                  {showPublishInfo &&
+                    (isLoadingAccountAndProjectAge ? (
+                      <Spinner size="medium" style={styles.loadingSpinner} />
+                    ) : (
+                      <Button
+                        type="button"
+                        color={Button.ButtonColor.neutralDark}
+                        id="share-dialog-publish-button"
+                        style={
+                          hasThumbnail ? styles.button : styles.buttonDisabled
+                        }
+                        onClick={wrapShareClick(this.publish, 'publish')}
+                        disabled={disablePublishButton}
+                        className="no-mc"
+                      >
+                        <span>{i18n.publish()}</span>
+                      </Button>
+                    ))}
+                  {this.isPublishAllowed() && isPublished && (
                     <PendingButton
                       id="share-dialog-unpublish-button"
                       isPending={isUnpublishPending}
@@ -373,7 +460,7 @@ class ShareAllowedDialog extends React.Component {
                     </a>
                   )}
                   {/* prevent buttons from overlapping when unpublish is pending */}
-                  {socialShareAllowed && !isUnpublishPending && (
+                  {this.isSocialShareAllowed() && !isUnpublishPending && (
                     <span>
                       {this.state.isFacebookAvailable && (
                         <a
@@ -384,6 +471,7 @@ class ShareAllowedDialog extends React.Component {
                             onClickPopup.bind(this),
                             'facebook'
                           )}
+                          style={styles.socialLink}
                         >
                           <FontAwesome icon="facebook" />
                         </a>
@@ -397,6 +485,7 @@ class ShareAllowedDialog extends React.Component {
                             onClickPopup.bind(this),
                             'twitter'
                           )}
+                          style={styles.socialLink}
                         >
                           <FontAwesome icon="twitter" />
                         </a>
@@ -422,24 +511,13 @@ class ShareAllowedDialog extends React.Component {
                     <div style={{clear: 'both'}} />
                   </div>
                 )}
-                {publishAllowed && !isPublished && !hasThumbnail && (
-                  <div style={{clear: 'both', marginTop: 10}}>
-                    <span style={{fontSize: 12}} className="thumbnail-warning">
-                      {i18n.thumbnailWarning()}
-                    </span>
-                  </div>
-                )}
-                {inRestrictedShareMode && (
-                  <div style={{clear: 'both', marginTop: 10}}>
-                    <span style={{fontSize: 12}} className="thumbnail-warning">
-                      {i18n.restrictedShareInfo()}
-                    </span>
-                  </div>
-                )}
-                {this.state.replayVideoUnavailable && (
-                  <div style={{clear: 'both', marginTop: 10}}>
-                    <span style={{fontSize: 12}} className="thumbnail-warning">
-                      {i18n.downloadReplayVideoButtonError()}
+                {warningText && (
+                  <div style={styles.warningMessageContainer}>
+                    <span
+                      style={styles.thumbnailWarning}
+                      className="thumbnail-warning"
+                    >
+                      {warningText}
                     </span>
                   </div>
                 )}
@@ -469,71 +547,72 @@ class ShareAllowedDialog extends React.Component {
 const styles = {
   modal: {
     width: 720,
-    marginLeft: -360
+    marginLeft: -360,
   },
   abuseStyle: {
     border: '1px solid',
     borderRadius: 10,
     padding: 10,
-    marginBottom: 20
+    marginBottom: 20,
   },
   abuseTextStyle: {
     color: '#b94a48',
-    fontSize: 14
+    fontSize: 14,
   },
   shareWarning: {
     color: color.red,
     fontSize: 13,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   button: {
-    backgroundColor: color.purple,
-    borderWidth: 0,
-    color: color.white,
-    fontSize: 'larger',
+    // TODO: [Phase 2] Remove this once we have a new updated button component
+    fontSize: 'large',
+    height: 45,
     paddingTop: 12.5,
     paddingBottom: 12.5,
     paddingLeft: 10,
     paddingRight: 10,
     marginTop: 0,
+    marginRight: 16,
     marginBottom: 0,
     marginLeft: 0,
-    marginRight: 8,
-    verticalAlign: 'top'
+    verticalAlign: 'top',
   },
   buttonDisabled: {
-    backgroundColor: color.gray,
-    borderWidth: 0,
-    color: color.white,
-    fontSize: 'larger',
+    height: 45,
+    fontSize: 'large',
     paddingTop: 12.5,
     paddingBottom: 12.5,
     paddingLeft: 10,
-    paddingRight: 10,
+    paddingRight: 5,
     marginTop: 0,
+    marginRight: 8,
     marginBottom: 0,
     marginLeft: 0,
-    marginRight: 8,
-    verticalAlign: 'top'
+    verticalAlign: 'top',
   },
   copyButton: {
     paddingTop: 12.5,
     paddingBottom: 12.5,
-    marginBottom: 5
+    marginLeft: 0,
+    marginBottom: 0,
+    marginTop: 0,
+    marginRight: 16,
+    fontSize: 'large',
   },
   copyButtonLight: {
-    backgroundColor: color.light_purple
+    backgroundColor: color.light_purple,
   },
   thumbnail: {
     float: 'left',
-    marginRight: 10,
+    marginRight: 16,
     width: 125,
     height: 125,
     overflow: 'hidden',
     borderRadius: 2,
     border: '1px solid rgb(187,187,187)',
     backgroundColor: color.white,
-    position: 'relative'
+    position: 'relative',
   },
   thumbnailImg: {
     position: 'absolute',
@@ -543,32 +622,59 @@ const styles = {
     height: 'auto',
     transform: 'translate(-50%,-50%)',
     msTransform: 'translate(-50%,-50%)',
-    WebkitTransform: 'translate(-50%,-50%)'
+    WebkitTransform: 'translate(-50%,-50%)',
+  },
+  thumbnailWarning: {
+    fontSize: 12,
+    ...fontConstants['main-font-bold'],
   },
   sendToPhoneContainer: {
     width: '100%',
-    marginTop: 15
+    marginTop: 15,
+  },
+  sendToPhoneButton: {
+    margin: 0,
+    marginRight: 16,
+    fontSize: 'large',
+    padding: '0 16px',
+    paddingRight: 6,
+    height: 45,
+  },
+  sendToPhoneSpan: {
+    padding: 0,
+    paddingLeft: 10,
+    verticalAlign: 'text-top',
   },
   sendToPhoneLeft: {
     float: 'left',
     width: '70%',
     paddingRight: 20,
-    boxSizing: 'border-box'
+    boxSizing: 'border-box',
   },
   sendToPhoneRight: {
     float: 'right',
-    width: '30%'
-  }
+    width: '30%',
+  },
+  socialLink: {
+    marginRight: 16,
+  },
+  loadingSpinner: {
+    marginRight: 16,
+  },
+  warningMessageContainer: {
+    clear: 'both',
+    marginTop: 10,
+  },
 };
 
 export const UnconnectedShareAllowedDialog = ShareAllowedDialog;
 
 export default connect(
   state => ({
-    exportApp: state.pageConstants.exportApp,
+    exportApp: state.pageConstants?.exportApp,
     isOpen: state.shareDialog.isOpen,
     isUnpublishPending: state.shareDialog.isUnpublishPending,
-    inRestrictedShareMode: state.project.inRestrictedShareMode
+    inRestrictedShareMode: state.project.inRestrictedShareMode,
   }),
   dispatch => ({
     onClose: () => dispatch(hideShareDialog()),
@@ -578,6 +684,6 @@ export default connect(
     },
     onUnpublish(projectId) {
       dispatch(unpublishProject(projectId));
-    }
+    },
   })
 )(ShareAllowedDialog);

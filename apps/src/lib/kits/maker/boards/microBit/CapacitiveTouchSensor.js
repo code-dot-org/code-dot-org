@@ -25,10 +25,10 @@ export default class CapacitiveTouchSensor extends EventEmitter {
 
     Object.defineProperties(this, {
       isPressed: {
-        get: function() {
+        get: function () {
           return this.connected;
-        }
-      }
+        },
+      },
     });
   }
 

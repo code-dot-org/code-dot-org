@@ -116,7 +116,7 @@ export default class Collidable {
    * remove any that are complete.
    */
   updateActions() {
-    this.actions_.forEach(function(action) {
+    this.actions_.forEach(function (action) {
       action.update(this);
     }, this);
 

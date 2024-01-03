@@ -238,7 +238,7 @@ module Pd::Payment
         assert teacher_summary.qualified?
         assert_equal 1, teacher_summary.days
         assert_equal 6, teacher_summary.hours
-        assert_not_nil teacher_summary.payment
+        refute_nil teacher_summary.payment
       end
 
       assert_equal 1, workshop_summary.total_teacher_attendance_days

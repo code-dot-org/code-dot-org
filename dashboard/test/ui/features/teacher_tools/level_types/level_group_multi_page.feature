@@ -4,8 +4,7 @@ Feature: Level Group
 
 Background:
   Given I am on "http://studio.code.org/s/allthethings/lessons/23/levels/2/page/1?noautoplay=true"
-  Then I rotate to landscape
-  And I wait to see ".nextPageButton"
+  Then I wait to see ".nextPageButton"
   And element ".nextPageButton" is visible
 
 Scenario: multi page level numbering

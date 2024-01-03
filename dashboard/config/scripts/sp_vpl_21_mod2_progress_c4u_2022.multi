@@ -1,5 +1,5 @@
 name 'SP-VPL-21-mod2-progress-c4u_2022'
-title 'Check for understanding'
+title 'Check for Understanding'
 description ''
 question 'Which level is best used to assess student understanding of the lesson objectives?'
 wrong 'Level 3'
@@ -19,3 +19,5 @@ teacher_markdown <<MARKDOWN
 
 Visit the <a href="https://support.code.org/hc/en-us/articles/115000693231-Viewing-student-progress" target="blank" > *viewing student progress*</a> support article to learn more about tracking student progress. 
 MARKDOWN
+
+allow_multiple_attempts true

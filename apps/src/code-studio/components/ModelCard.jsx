@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import color from '@cdo/apps/util/color';
+import fontConstants from '@cdo/apps/fontConstants';
 
 class FeatureDetails extends React.Component {
   static propTypes = {
-    feature: PropTypes.object
+    feature: PropTypes.object,
   };
 
   render() {
@@ -31,7 +32,7 @@ class FeatureDetails extends React.Component {
 
 export default class ModelCard extends React.Component {
   static propTypes = {
-    model: PropTypes.object
+    model: PropTypes.object,
   };
 
   render() {
@@ -109,7 +110,7 @@ const styles = {
     whiteSpace: 'normal',
     lineHeight: 1.5,
     maxHeight: 'calc(80vh - 150px)',
-    overflow: 'scroll'
+    overflow: 'scroll',
   },
   subPanel: {
     backgroundColor: color.lightest_gray,
@@ -117,23 +118,23 @@ const styles = {
     borderColor: color.gray,
     marginBottom: 10,
     padding: 10,
-    overflowWrap: 'break-word'
+    overflowWrap: 'break-word',
   },
   bold: {
-    fontFamily: "'Gotham 7r', sans-serif"
+    ...fontConstants['main-font-bold'],
   },
   header: {
-    fontFamily: "'Gotham 7r', sans-serif",
+    ...fontConstants['main-font-bold'],
     marginTop: 0,
-    lineHeight: '20px'
+    lineHeight: '20px',
   },
   heading: {
-    fontFamily: "'Gotham 7r', sans-serif",
+    ...fontConstants['main-font-bold'],
     fontSize: 14,
     marginBottom: 5,
-    textAlign: 'center'
+    textAlign: 'center',
   },
   details: {
-    marginBottom: 0
-  }
+    marginBottom: 0,
+  },
 };

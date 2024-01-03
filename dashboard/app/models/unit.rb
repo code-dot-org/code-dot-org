@@ -45,6 +45,7 @@ class Unit < ApplicationRecord
   include Curriculum::CourseTypes
   include Curriculum::AssignableCourse
   include Rails.application.routes.url_helpers
+  include Unit::TextToSpeech
 
   include Seeded
   has_many :lesson_groups, -> {order(:position)}, foreign_key: 'script_id', dependent: :destroy
@@ -122,6 +123,7 @@ class Unit < ApplicationRecord
             :vocabularies,
             :programming_expressions,
             :objectives,
+            {rubric: {learning_goals: :learning_goal_evidence_levels}},
             :standards,
             :opportunity_standards
           ]
@@ -159,6 +161,7 @@ class Unit < ApplicationRecord
       message: 'cannot start with a tilde or dot or contain slashes'
     }
 
+  validates_presence_of :link
   validates :published_state, acceptance: {accept: Curriculum::SharedCourseConstants::PUBLISHED_STATE.to_h.values.push(nil), message: 'must be nil, in_development, pilot, beta, preview or stable'}
   validate :deeper_learning_courses_cannot_be_launched
 
@@ -195,6 +198,8 @@ class Unit < ApplicationRecord
   after_save :generate_plc_objects
 
   UNIT_DIRECTORY = "#{Rails.root}/config/scripts".freeze
+
+  TEACHER_FEEDBACK_INITIATIVES = %w(CSF CSC CSD CSP CSA).freeze
 
   def prevent_course_version_change?
     resources.any? ||
@@ -279,6 +284,10 @@ class Unit < ApplicationRecord
   #   said json.  Expect this to be nil on levelbulider, since those objects
   #   are created, not seeded. Used by the staging build to identify when a
   #   unit is being updated, so we can regenerate PDFs.
+  # is_deprecated - true if the unit is deprecated. If this flag is set, we will redirect
+  #   all /s, /lessons and /levels page in that unit to our "This course is deprecated" page.
+  #   We don't use published_state here because some courses in the deprecated published state
+  #   are not ready to be redirected. In the future we should unify these two states.
   serialized_attrs %w(
     hideable_lessons
     professional_learning_course
@@ -306,6 +315,7 @@ class Unit < ApplicationRecord
     is_migrated
     seeded_from
     use_legacy_lesson_plans
+    is_deprecated
   )
 
   def self.twenty_hour_unit
@@ -340,13 +350,11 @@ class Unit < ApplicationRecord
       end
     end
 
-    private
-
-    def visible_units
+    private def visible_units
       @@visible_units ||= all_scripts.select(&:launched?).to_a.freeze
     end
 
-    def log_script_yml_write(log_event_type:, unit_name:, old_size:, new_size:, lessons_i18n:, metadata_i18n:)
+    private def log_script_yml_write(log_event_type:, unit_name:, old_size:, new_size:, lessons_i18n:, metadata_i18n:)
       record = {
         study: 'scripts_en_yml',
         event: log_event_type,
@@ -390,7 +398,7 @@ class Unit < ApplicationRecord
 
   # Find the lesson based on its relative position, lockable value, and if it has a lesson plan.
   # Raises `ActiveRecord::RecordNotFound` if no matching lesson is found.
-  def lesson_by_relative_position(position, unnumbered_lesson = false)
+  def lesson_by_relative_position(position, unnumbered_lesson: false)
     if unnumbered_lesson
       lessons.where(lockable: true, has_lesson_plan: false).find_by!(relative_position: position)
     else
@@ -514,8 +522,8 @@ class Unit < ApplicationRecord
     @@level_cache[level.id] = level if level && should_cache?
     @@level_cache[level.name] = level if level && should_cache?
     level
-  rescue => e
-    raise e, "Error finding level #{level_identifier}: #{e}"
+  rescue => exception
+    raise exception, "Error finding level #{level_identifier}: #{exception}"
   end
 
   def cached
@@ -785,7 +793,7 @@ class Unit < ApplicationRecord
     script_levels.map do |script_level|
       script_level.levels.map do |level|
         next if level.contained_levels.empty? ||
-          !TEXT_RESPONSE_TYPES.include?(level.contained_levels.first.class)
+          TEXT_RESPONSE_TYPES.exclude?(level.contained_levels.first.class)
         text_response_levels << {
           script_level: script_level,
           levels: [level.contained_levels.first]
@@ -861,6 +869,10 @@ class Unit < ApplicationRecord
       standards_with_lessons << standard_summary
     end
     standards_with_lessons
+  end
+
+  def duration_in_minutes
+    lessons.sum(&:total_lesson_duration)
   end
 
   def under_curriculum_umbrella?(specific_curriculum_umbrella)
@@ -966,15 +978,6 @@ class Unit < ApplicationRecord
       }
     end
     summarized_lesson_levels
-  end
-
-  def text_to_speech_enabled?
-    tts?
-  end
-
-  # Generates TTS files for each level in a unit.
-  def tts_update(update_all = false)
-    levels.each {|l| l.tts_update(update_all)}
   end
 
   def hint_prompt_enabled?
@@ -1243,10 +1246,10 @@ class Unit < ApplicationRecord
 
         copied_unit
       end
-    rescue => e
+    rescue => exception
       filepath_to_delete = Unit.script_json_filepath(new_name)
-      File.delete(filepath_to_delete) if File.exist?(filepath_to_delete)
-      raise e, "Error: #{e.message}"
+      FileUtils.rm_f(filepath_to_delete)
+      raise exception, "Error: #{exception.message}"
     end
   end
 
@@ -1345,13 +1348,13 @@ class Unit < ApplicationRecord
       if Rails.application.config.levelbuilder_mode
         Unit.merge_and_write_i18n(i18n, unit_name, metadata_i18n, log_event_type: 'write_script')
       end
-    rescue StandardError => e
-      errors.add(:base, e.to_s)
+    rescue StandardError => exception
+      errors.add(:base, exception.to_s)
       return false
     end
     update_teacher_resources(general_params[:resourceIds])
     update_student_resources(general_params[:studentResourceIds])
-    tts_update(true) if need_to_update_tts
+    tts_update(update_all: true) if need_to_update_tts
     begin
       if Rails.application.config.levelbuilder_mode
         unit = Unit.find_by_name(unit_name)
@@ -1359,8 +1362,8 @@ class Unit < ApplicationRecord
         unit.write_script_json
       end
       true
-    rescue StandardError => e
-      errors.add(:base, e.to_s)
+    rescue StandardError => exception
+      errors.add(:base, exception.to_s)
       return false
     end
   end
@@ -1583,7 +1586,7 @@ class Unit < ApplicationRecord
   end
 
   def unit_without_lesson_plans?
-    lessons.select(&:has_lesson_plan).empty?
+    lessons.none?(&:has_lesson_plan)
   end
 
   def summarize_for_rollup(user = nil)
@@ -1628,7 +1631,7 @@ class Unit < ApplicationRecord
   #   initializeHiddenScripts in hiddenLessonRedux.js.
   def section_hidden_unit_info(user)
     return {} unless user && can_be_instructor?(user)
-    hidden_section_ids = SectionHiddenScript.where(script_id: id, section: user.sections).pluck(:section_id)
+    hidden_section_ids = SectionHiddenScript.where(script_id: id, section: user.sections_instructed).pluck(:section_id)
     hidden_section_ids.index_with([id])
   end
 
@@ -1637,6 +1640,7 @@ class Unit < ApplicationRecord
   def summarize_header
     {
       name: name,
+      displayName: title_for_display,
       disablePostMilestone: disable_post_milestone?,
       student_detail_progress_view: student_detail_progress_view?,
       age_13_required: logged_out_age_13_required?,
@@ -1899,8 +1903,14 @@ class Unit < ApplicationRecord
       version_year: version_year,
       name: launched? ? localized_title : localized_title + " *",
       position: unit_group_units&.first&.position,
-      description: localized_description ? Services::MarkdownPreprocessor.process(localized_description) : nil
+      description: localized_description ? Services::MarkdownPreprocessor.process(localized_description) : nil,
+      is_feedback_enabled: teacher_feedback_enabled?
     }
+  end
+
+  private def teacher_feedback_enabled?
+    initiative = get_course_version&.course_offering&.marketing_initiative
+    TEACHER_FEEDBACK_INITIATIVES.include? initiative
   end
 
   def summarize_for_assignment_dropdown

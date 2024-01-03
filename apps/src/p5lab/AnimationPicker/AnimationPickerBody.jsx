@@ -6,12 +6,12 @@ import msg from '@cdo/locale';
 import ScrollableList from '../AnimationTab/ScrollableList.jsx';
 import * as dialogStyles from './styles';
 import AnimationPickerListItem, {
-  getCategory
+  getCategory,
 } from './AnimationPickerListItem.jsx';
 import SearchBar from '@cdo/apps/templates/SearchBar';
 import {
   searchAssets,
-  filterAnimations
+  filterAnimations,
 } from '@cdo/apps/code-studio/assets/searchAssets';
 import Button from '@cdo/apps/templates/Button';
 import {AnimationProps} from '@cdo/apps/p5lab/shapes';
@@ -19,9 +19,10 @@ import {isMobileDevice} from '@cdo/apps/util/browser-detector';
 import {PICKER_TYPE} from './AnimationPicker.jsx';
 import style from './animation-picker-body.module.scss';
 import AnimationUploadButton from './AnimationUploadButton.jsx';
-import experiments from '@cdo/apps/util/experiments';
 
 const MAX_SEARCH_RESULTS = 40;
+const LEVEL_COSTUMES = 'level_costumes';
+const BACKGROUNDS = 'backgrounds';
 
 export default class AnimationPickerBody extends React.Component {
   static propTypes = {
@@ -31,7 +32,6 @@ export default class AnimationPickerBody extends React.Component {
     onAnimationSelectionComplete: PropTypes.func.isRequired,
     playAnimations: PropTypes.bool.isRequired,
     libraryManifest: PropTypes.object.isRequired,
-    hideUploadOption: PropTypes.bool.isRequired,
     hideAnimationNames: PropTypes.bool.isRequired,
     navigable: PropTypes.bool.isRequired,
     defaultQuery: PropTypes.object,
@@ -39,13 +39,13 @@ export default class AnimationPickerBody extends React.Component {
     hideCostumes: PropTypes.bool.isRequired,
     selectedAnimations: PropTypes.arrayOf(AnimationProps).isRequired,
     pickerType: PropTypes.string.isRequired,
-    shouldRestrictAnimationUpload: PropTypes.bool.isRequired
+    shouldWarnOnAnimationUpload: PropTypes.bool.isRequired,
   };
 
   state = {
     searchQuery: '',
     categoryQuery: '',
-    currentPage: 0
+    currentPage: 0,
   };
 
   componentDidMount() {
@@ -58,37 +58,17 @@ export default class AnimationPickerBody extends React.Component {
       );
       let nextQuery = this.props.defaultQuery || {
         categoryQuery: '',
-        searchQuery: ''
+        searchQuery: '',
       };
       this.setState({
         ...nextQuery,
         currentPage,
         results,
-        pageCount
+        pageCount,
       });
     }
   }
 
-  // Can be safely removed once the 'backgroundsTab' experiment is removed.
-  UNSAFE_componentWillReceiveProps(nextProps) {
-    if (this.props.defaultQuery !== nextProps.defaultQuery) {
-      const currentPage = 0;
-      const {results, pageCount} = this.searchAssetsWrapper(
-        currentPage,
-        nextProps.defaultQuery
-      );
-      let nextQuery = nextProps.defaultQuery || {
-        categoryQuery: '',
-        searchQuery: ''
-      };
-      this.setState({
-        ...nextQuery,
-        currentPage,
-        results,
-        pageCount
-      });
-    }
-  }
   searchAssetsWrapper = (page, config = {}) => {
     let {searchQuery, categoryQuery, libraryManifest} = config;
 
@@ -129,7 +109,7 @@ export default class AnimationPickerBody extends React.Component {
       this.setState({
         results: [...(results || []), ...newResults],
         currentPage: nextPage,
-        pageCount
+        pageCount,
       });
     }
   };
@@ -137,7 +117,7 @@ export default class AnimationPickerBody extends React.Component {
   onSearchQueryChange = searchQuery => {
     const currentPage = 0;
     let {results, pageCount} = this.searchAssetsWrapper(currentPage, {
-      searchQuery
+      searchQuery,
     });
     results = filterAnimations(results, this.props);
     this.setState({searchQuery, currentPage, results, pageCount});
@@ -147,7 +127,7 @@ export default class AnimationPickerBody extends React.Component {
     const categoryQuery = getCategory(event.target);
     const currentPage = 0;
     let {results, pageCount} = this.searchAssetsWrapper(currentPage, {
-      categoryQuery
+      categoryQuery,
     });
     results = filterAnimations(results, this.props);
     this.setState({categoryQuery, currentPage, results, pageCount});
@@ -159,28 +139,45 @@ export default class AnimationPickerBody extends React.Component {
       searchQuery: '',
       currentPage: 0,
       results: [],
-      pageCount: 0
+      pageCount: 0,
     });
   };
 
   animationCategoriesRendering() {
     let categories = Object.keys(this.props.libraryManifest.categories || []);
     if (this.props.hideBackgrounds) {
-      categories = categories.filter(category => category !== 'backgrounds');
+      categories = categories.filter(category => category !== BACKGROUNDS);
+    }
+    // Level-specific animations currently have the following categories:
+    // "level_costumes", "backgrounds", "animals".
+    // We want to hide the "animals" category which has only one animation in it.
+    // It will be displayed in the "all" category added below.
+    // There is an "animals" category because a level-specific animation was uploaded with the
+    // "animals" category BEFORE the sprite upload feature dictated that level-specific animations
+    // can only be categorized as "costume" or "background".
+    // WE check if LEVEL_COSTUMES is in the category list below since it implies that these are
+    // level-specific animations (as opposed to library animations) and therefore the need for
+    // the filtering described above.
+    if (categories.includes(LEVEL_COSTUMES)) {
+      categories = categories.filter(
+        category => category === BACKGROUNDS || category === LEVEL_COSTUMES
+      );
     }
     categories.push('all');
-    return categories.map(category => (
-      <AnimationPickerListItem
-        key={category}
-        label={
-          msg[`animationCategory_${category}`]
-            ? msg[`animationCategory_${category}`]()
-            : category
-        }
-        category={category}
-        onClick={this.onCategoryChange}
-      />
-    ));
+    return categories.map(category => {
+      const label = msg[`animationCategory_${category}`]?.() ?? category;
+      return (
+        <AnimationPickerListItem
+          key={category}
+          label={label}
+          category={category}
+          onClick={this.onCategoryChange}
+          isAnimationJsonMode={
+            this.props.pickerType === PICKER_TYPE.animationJson
+          }
+        />
+      );
+    });
   }
 
   animationItemsRendering(animations) {
@@ -216,29 +213,29 @@ export default class AnimationPickerBody extends React.Component {
     }
     const {searchQuery, categoryQuery, results} = this.state;
     const {
-      hideUploadOption,
       onDrawYourOwnClick,
       onUploadClick,
       onAnimationSelectionComplete,
-      shouldRestrictAnimationUpload
+      shouldWarnOnAnimationUpload,
     } = this.props;
+    const animationJsonMode =
+      this.props.pickerType === PICKER_TYPE.animationJson;
 
     const searching = searchQuery !== '';
     const inCategory = categoryQuery !== '';
-    const isBackgroundsTab =
-      this.props.pickerType === 'backgrounds' &&
-      experiments.isEnabled(experiments.BACKGROUNDS_AND_UPLOAD);
+    const isBackgroundsTab = this.props.pickerType === BACKGROUNDS;
     // Display second "Done" button. Useful for mobile, where the original "done" button might not be on screen when
     // animation picker is loaded. 600 pixels is minimum height of the animation picker.
     const shouldDisplaySecondDoneButton = isMobileDevice();
-    // We show the draw your own and upload buttons if the user is either:
-    // Not currently searching and not in a category, unless that category is backgrounds
-    // OR they are searching but there were no results
+    // We show the draw your own and upload buttons if the user is:
+    // Either not currently searching and not in a category, unless that category is backgrounds
+    // OR they are searching but there were no results,
+    // AND they are not in animationJsonMode.
+    // animationJsonMode is used for the Generate Animation JSON levelbuilder tool in SelectStartAnimations.
     const showDrawAndUploadButtons =
-      (!searching && (!inCategory || isBackgroundsTab)) || results.length === 0;
-    // We are showing the upload button if it should be visible per the previous boolean and
-    // hideUploadOption is not set to true.
-    const showingUploadButton = !hideUploadOption && showDrawAndUploadButtons;
+      ((!searching && (!inCategory || isBackgroundsTab)) ||
+        results.length === 0) &&
+      !animationJsonMode;
 
     return (
       <div style={{marginBottom: 10}}>
@@ -246,13 +243,13 @@ export default class AnimationPickerBody extends React.Component {
           <Button
             text={msg.done()}
             onClick={onAnimationSelectionComplete}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
           />
         )}
         <h1 style={dialogStyles.title}>
-          {msg.animationPicker_title({assetType})}
+          {!animationJsonMode && msg.animationPicker_title({assetType})}
         </h1>
-        {showingUploadButton && (
+        {showDrawAndUploadButtons && (
           <WarningLabel>{msg.animationPicker_warning()}</WarningLabel>
         )}
         <SearchBar
@@ -296,15 +293,11 @@ export default class AnimationPickerBody extends React.Component {
                   icon="pencil"
                   onClick={onDrawYourOwnClick}
                 />
-                {!hideUploadOption && (
-                  <AnimationUploadButton
-                    onUploadClick={onUploadClick}
-                    shouldRestrictAnimationUpload={
-                      shouldRestrictAnimationUpload
-                    }
-                    isBackgroundsTab={isBackgroundsTab}
-                  />
-                )}
+                <AnimationUploadButton
+                  onUploadClick={onUploadClick}
+                  shouldWarnOnAnimationUpload={shouldWarnOnAnimationUpload}
+                  isBackgroundsTab={isBackgroundsTab}
+                />
               </div>
             )}
             {searchQuery === '' &&
@@ -320,7 +313,7 @@ export default class AnimationPickerBody extends React.Component {
               className="ui-test-selector-done-button"
               text={msg.done()}
               onClick={onAnimationSelectionComplete}
-              color={Button.ButtonColor.orange}
+              color={Button.ButtonColor.brandSecondaryDefault}
             />
           </div>
         )}
@@ -333,5 +326,5 @@ export const WarningLabel = ({children}) => (
   <span style={{color: color.red}}>{children}</span>
 );
 WarningLabel.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
 };

@@ -60,7 +60,7 @@ export const commands = {
   getTitle() {
     return {
       title: this.screenText.title,
-      subtitle: this.screenText.subtitle
+      subtitle: this.screenText.subtitle,
     };
   },
 
@@ -89,7 +89,7 @@ export const commands = {
             // ...convert each string in the array to a number...
             .map(Number)
             // ...remove NaN values. (ex. 'whenClick: 0' results in [Nan, 0] above)
-            .filter(function(value) {
+            .filter(function (value) {
               return !Number.isNaN(value);
             })
         );
@@ -192,7 +192,7 @@ export const commands = {
           console.log(this.criteria);
           return {
             state: 'failed',
-            feedback: commands.chooseFailureFeedback(this.criteria)
+            feedback: commands.chooseFailureFeedback(this.criteria),
           };
         }
         break;
@@ -203,7 +203,7 @@ export const commands = {
         if (this.currentFrame() > this.validationFrames.pass) {
           return {
             state: 'succeeded',
-            feedback: this.successMessage
+            feedback: this.successMessage,
           };
         }
         break;
@@ -234,7 +234,7 @@ export const commands = {
         tint: this.nativeSpriteMap[spriteId].tint || '',
         scale: this.nativeSpriteMap[spriteId].getScale(),
         speed: this.nativeSpriteMap[spriteId].speed,
-        rotation: this.nativeSpriteMap[spriteId].rotation
+        rotation: this.nativeSpriteMap[spriteId].rotation,
       });
     }
   },
@@ -304,7 +304,7 @@ export const commands = {
     if (firstFailed > -1) {
       return criteria[firstFailed].feedback;
     }
-  }
+  },
 };
 
 /**

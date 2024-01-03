@@ -17,7 +17,7 @@ export default class ModelManagerDialog extends React.Component {
     onClose: PropTypes.func.isRequired,
     autogenerateML: PropTypes.func,
     // Levelbuilders can pre-populate App Lab levels with a pre-trained model.
-    levelbuilderModel: PropTypes.object
+    levelbuilderModel: PropTypes.object,
   };
 
   state = {
@@ -27,7 +27,7 @@ export default class ModelManagerDialog extends React.Component {
     isImportPending: false,
     isDeletePending: false,
     confirmDialogOpen: false,
-    deletionStatus: undefined
+    deletionStatus: undefined,
   };
 
   componentDidUpdate(prevProps) {
@@ -45,26 +45,26 @@ export default class ModelManagerDialog extends React.Component {
     this.setState({isModelListPending: true});
     $.ajax({
       url: '/api/v1/ml_models/names',
-      method: 'GET'
+      method: 'GET',
     }).then(models => {
       if (this.props.levelbuilderModel?.id) {
         $.ajax({
           url: `/api/v1/ml_models/${this.props.levelbuilderModel.id}`,
-          method: 'GET'
+          method: 'GET',
         }).then(metadata => {
           this.props.levelbuilderModel.metadata = metadata;
           models.unshift(this.props.levelbuilderModel);
           this.setState({
             isModelListPending: false,
             models,
-            selectedModel: models[0]
+            selectedModel: models[0],
           });
         });
       } else {
         this.setState({
           isModelListPending: false,
           models,
-          selectedModel: models[0]
+          selectedModel: models[0],
         });
       }
     });
@@ -80,7 +80,7 @@ export default class ModelManagerDialog extends React.Component {
         study: 'ai-ml',
         study_group: 'trained-models',
         event: 'import-to-applab',
-        data_json: JSON.stringify({modelId: modelId})
+        data_json: JSON.stringify({modelId: modelId}),
       },
       {includeUserId: true}
     );
@@ -112,14 +112,14 @@ export default class ModelManagerDialog extends React.Component {
     this.setState({isDeletePending: true});
     $.ajax({
       url: `/api/v1/ml_models/${this.state.selectedModel.id}`,
-      method: 'DELETE'
+      method: 'DELETE',
     }).then(response => {
       if (response.status === 'failure') {
         this.setState({
           deletionStatus: i18n.aiTrainedModelsDeleteModelFailed({
-            id: response.id
+            id: response.id,
           }),
-          isDeletePending: false
+          isDeletePending: false,
         });
       } else {
         this.setState({confirmDialogOpen: false, isDeletePending: false});
@@ -172,7 +172,7 @@ export default class ModelManagerDialog extends React.Component {
                 <br />
                 <Button
                   text={i18n.import()}
-                  color={Button.ButtonColor.orange}
+                  color={Button.ButtonColor.brandSecondaryDefault}
                   onClick={this.importMLModel}
                   disabled={noModels}
                   isPending={this.state.isImportPending}
@@ -211,7 +211,7 @@ export default class ModelManagerDialog extends React.Component {
             <div>
               <Button
                 text={i18n.no()}
-                color={Button.ButtonColor.orange}
+                color={Button.ButtonColor.brandSecondaryDefault}
                 onClick={this.closeConfirmDialog}
               />
               <Button
@@ -238,24 +238,24 @@ export default class ModelManagerDialog extends React.Component {
 const styles = {
   dialog: {
     padding: '0 15px',
-    cursor: 'default'
+    cursor: 'default',
   },
   left: {
     float: 'left',
     width: '40%',
     padding: 20,
-    boxSizing: 'border-box'
+    boxSizing: 'border-box',
   },
   right: {
     float: 'left',
     width: '60%',
     padding: 20,
-    boxSizing: 'border-box'
+    boxSizing: 'border-box',
   },
   header: {
     textAlign: 'center',
     fontSize: 24,
-    marginTop: 20
+    marginTop: 20,
   },
   message: {
     color: color.dark_charcoal,
@@ -263,10 +263,10 @@ const styles = {
     margin: DEFAULT_MARGIN,
     overflow: 'hidden',
     lineHeight: '15px',
-    whiteSpace: 'pre-wrap'
+    whiteSpace: 'pre-wrap',
   },
   spinner: {
     height: 'calc(80vh - 140px)',
-    color: color.dark_charcoal
-  }
+    color: color.dark_charcoal,
+  },
 };

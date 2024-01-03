@@ -15,8 +15,8 @@ const IncubatorBanner = () => {
         buttons={[
           {
             url: '/incubator',
-            text: i18n.seeIncubatorProjects()
-          }
+            text: i18n.seeIncubatorProjects(),
+          },
         ]}
         marginBottom={'0'}
       />

@@ -9,14 +9,14 @@ import {
   getStore,
   registerReducers,
   stubRedux,
-  restoreRedux
+  restoreRedux,
 } from '@cdo/apps/redux';
 import projectsReducer, {
-  appendProjects
+  appendProjects,
 } from '@cdo/apps/templates/projects/projectsRedux';
 import {
   allowConsoleErrors,
-  allowConsoleWarnings
+  allowConsoleWarnings,
 } from '../../../util/throwOnConsole';
 
 function wrapped(element) {
@@ -27,15 +27,15 @@ const ProjectProvider = connect((state, ownProps) => ({
   projectList: state.projects.projectLists[ownProps.labKey].map(project => {
     return {
       projectData: project,
-      currentGallery: 'public'
+      currentGallery: 'public',
     };
-  })
+  }),
 }))(ProjectAppTypeArea);
 
 function generateFakeProjects(numProjects, projectType) {
   return generateFakeProjectData(numProjects, projectType).map(data => ({
     projectData: data,
-    currentGallery: 'public'
+    currentGallery: 'public',
   }));
 }
 
@@ -47,7 +47,7 @@ function generateFakeProjectData(numProjects, projectType) {
     type: projectType,
     publishedAt: new Date(startTime + projectNum).toISOString(),
     publishedToPublic: true,
-    publishedToClass: true
+    publishedToClass: true,
   }));
 }
 
@@ -86,12 +86,7 @@ describe('ProjectAppTypeArea', () => {
         />
       );
       expect(wrapper.find('ProjectCard')).to.have.length(12);
-      expect(
-        wrapper
-          .find('Button')
-          .first()
-          .text()
-      ).to.equal('View more');
+      expect(wrapper.find('Button').first().text()).to.equal('View more');
       expect(stubAjax).not.to.have.been.called;
     });
 
@@ -156,7 +151,7 @@ describe('ProjectAppTypeArea', () => {
 
       // Simulate the network request completing.
       ajaxDeferred.resolve({
-        applab: generateFakeProjectData(40, 'applab')
+        applab: generateFakeProjectData(40, 'applab'),
       });
       wrapper.setProps({}); // Force refresh
 

@@ -2,21 +2,21 @@ import PropTypes from 'prop-types';
 import React from 'react';
 var msg = require('./locale');
 
-var StepButton = function(props) {
+var StepButton = function (props) {
   var classes = 'launch float-right';
   if (!props.showStepButton) {
     classes += ' hide';
   }
   return (
     <button type="button" id="stepButton" className={classes}>
-      <img src="/blockly/media/1x1.gif" />
+      <img src="/blockly/media/1x1.gif" alt="" />
       {msg.step()}
     </button>
   );
 };
 
 StepButton.propTypes = {
-  showStepButton: PropTypes.bool.isRequired
+  showStepButton: PropTypes.bool.isRequired,
 };
 
 module.exports = StepButton;

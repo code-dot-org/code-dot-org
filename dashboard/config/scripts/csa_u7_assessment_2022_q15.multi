@@ -21,3 +21,5 @@ public class Barcode {
 
 Which of the following is a correct header for a method of the `Barcode` class that would return an updated value for `UPC` but the method cannot be used in a class other than `Barcode`?
 MARKDOWN
+
+allow_multiple_attempts true

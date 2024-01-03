@@ -24,3 +24,5 @@ public static boolean mystery(String str) {
 
 Which of the following calls to `mystery` will return `true`?
 MARKDOWN
+
+allow_multiple_attempts true

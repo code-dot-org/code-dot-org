@@ -45,12 +45,12 @@ def handler(event:, context:)
         result: 'Ok',
         data: Base64.encode64(output.to_h.to_json)
       }
-    rescue => e
-      puts "Error: #{e.full_message}"
+    rescue => exception
+      puts "Error: #{exception.full_message}"
       {
         recordId: record['recordId'],
         result: 'ProcessingFailed',
-        data: Base64.encode64({error: e.full_message}.to_json)
+        data: Base64.encode64({error: exception.full_message}.to_json)
       }
     end
   }

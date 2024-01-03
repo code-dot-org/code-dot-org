@@ -65,7 +65,7 @@ class ContactRollupsRawTest < ActiveSupport::TestCase
 
     # we're not actually interested in user IDs in contact rollups
     # just a simple example of something we could extract in a subquery
-    subquery = <<~SQL
+    subquery = <<~SQL.squish
       SELECT parent_email AS email, MAX(updated_at) AS updated_at, MAX(id) AS higher_student_id
       FROM users
       GROUP BY parent_email
@@ -85,7 +85,7 @@ class ContactRollupsRawTest < ActiveSupport::TestCase
 
   test 'get_extraction_query looks as expected when called with a single column' do
     select_query = 'SELECT email, opt_in, updated_at FROM email_preferences'
-    expected_sql = <<~SQL
+    expected_sql = <<~SQL.squish
       INSERT INTO #{ContactRollupsRaw.table_name}
         (email, sources, data, data_updated_at, created_at, updated_at)
       SELECT
@@ -104,7 +104,7 @@ class ContactRollupsRawTest < ActiveSupport::TestCase
 
   test 'get_extraction_query looks as expected when called with multiple columns' do
     select_query = 'SELECT email, birthday, gender, updated_at FROM users'
-    expected_sql = <<~SQL
+    expected_sql = <<~SQL.squish
       INSERT INTO #{ContactRollupsRaw.table_name}
         (email, sources, data, data_updated_at, created_at, updated_at)
       SELECT

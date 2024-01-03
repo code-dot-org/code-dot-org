@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {getStore} from '@cdo/apps/redux';
 import MigrateToMultiAuth from '@cdo/apps/lib/ui/accounts/MigrateToMultiAuth';
+import LockoutLinkedAccounts from '@cdo/apps/templates/policy_compliance/LockoutLinkedAccounts';
 import AddParentEmailController from '@cdo/apps/lib/ui/accounts/AddParentEmailController';
 import RemoveParentEmailController from '@cdo/apps/lib/ui/accounts/RemoveParentEmailController';
 import ChangeEmailController from '@cdo/apps/lib/ui/accounts/ChangeEmailController';
@@ -26,13 +27,13 @@ const {
   isCleverStudent,
   dependedUponForLogin,
   dependentStudents,
-  studentCount
+  studentCount,
+  personalAccountLinkingEnabled,
 } = scriptData;
 
 $(document).ready(() => {
-  const migrateMultiAuthMountPoint = document.getElementById(
-    'migrate-multi-auth'
-  );
+  const migrateMultiAuthMountPoint =
+    document.getElementById('migrate-multi-auth');
   if (migrateMultiAuthMountPoint) {
     const store = getStore();
     ReactDOM.render(
@@ -48,7 +49,7 @@ $(document).ready(() => {
     displayedParentEmail.text(parentEmail);
     displayedParentEmail.effect('highlight', {
       duration: 1500,
-      color: color.orange
+      color: color.orange,
     });
   };
   new AddParentEmailController({
@@ -58,11 +59,11 @@ $(document).ready(() => {
       '#add-parent-email-modal_user_parent_email_preference_opt_in'
     ),
     link: $('#add-parent-email-link'),
-    onSuccessCallback: updateDisplayedParentEmail
+    onSuccessCallback: updateDisplayedParentEmail,
   });
   new RemoveParentEmailController({
     form: $('#remove-parent-email-form'),
-    link: $('#remove-parent-email-link')
+    link: $('#remove-parent-email-link'),
   });
   new ChangeEmailController({
     form: $('#change-email-modal-form'),
@@ -71,7 +72,7 @@ $(document).ready(() => {
     userAge,
     userType,
     isPasswordRequired,
-    emailChangedCallback: onEmailChanged
+    emailChangedCallback: onEmailChanged,
   });
 
   new ChangeUserTypeController($('#change-user-type-modal-form'), userType);
@@ -79,6 +80,34 @@ $(document).ready(() => {
   const addPasswordMountPoint = document.getElementById('add-password-fields');
   if (addPasswordMountPoint) {
     new AddPasswordController($('#add-password-form'), addPasswordMountPoint);
+  }
+
+  const lockoutLinkedAccountsMountPoint = document.getElementById(
+    'lockout-linked-accounts'
+  );
+  if (lockoutLinkedAccountsMountPoint) {
+    ReactDOM.render(
+      <LockoutLinkedAccounts
+        apiUrl={lockoutLinkedAccountsMountPoint.getAttribute('data-api-url')}
+        pendingEmail={lockoutLinkedAccountsMountPoint.getAttribute(
+          'data-pending-email'
+        )}
+        requestDate={
+          new Date(
+            Date.parse(
+              lockoutLinkedAccountsMountPoint.getAttribute('data-request-date')
+            )
+          )
+        }
+        permissionStatus={lockoutLinkedAccountsMountPoint.getAttribute(
+          'data-permission-status'
+        )}
+        userEmail={lockoutLinkedAccountsMountPoint.getAttribute(
+          'data-user-email'
+        )}
+      />,
+      lockoutLinkedAccountsMountPoint
+    );
   }
 
   const manageLinkedAccountsMountPoint = document.getElementById(
@@ -90,7 +119,8 @@ $(document).ready(() => {
       authenticationOptions,
       isPasswordRequired,
       isGoogleClassroomStudent,
-      isCleverStudent
+      isCleverStudent,
+      personalAccountLinkingEnabled
     );
   }
 
@@ -120,12 +150,12 @@ function onEmailChanged(newEmail, newHashedEmail) {
 }
 
 function initializeCreatePersonalAccountControls() {
-  $('#edit_user_create_personal_account').on('submit', function(e) {
+  $('#edit_user_create_personal_account').on('submit', function (e) {
     if ($('#create_personal_user_email').length) {
       window.dashboard.hashEmail({
         email_selector: '#create_personal_user_email',
         hashed_email_selector: '#create_personal_user_hashed_email',
-        age_selector: '#user_age'
+        age_selector: '#user_age',
       });
     }
   });

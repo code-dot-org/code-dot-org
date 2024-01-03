@@ -30,11 +30,11 @@ describe('ImageWithStatus', () => {
     );
     const image = new Image();
     image.src = CAT_IMAGE_URL;
-    image.onload = function() {
+    image.onload = function () {
       // There's no guarantee we'll hit this onload after the onload in
       // ImageWithStatus, so wait until the next clock tick before checking
       // expectations.
-      setTimeout(function() {
+      setTimeout(function () {
         root.update();
         const loaded = root.find('div[data-image-status="loaded"]');
         expect(loaded).to.have.length(1);
@@ -53,11 +53,11 @@ describe('ImageWithStatus', () => {
     );
     const image = new Image();
     image.src = CAT_IMAGE_URL;
-    image.onload = function() {
+    image.onload = function () {
       // There's no guarantee we'll hit this onload after the onload in
       // ImageWithStatus, so wait until the next clock tick before checking
       // expectations.
-      setTimeout(function() {
+      setTimeout(function () {
         root.update();
         const loaded = root.find('div[data-image-status="loaded"]');
         expect(loaded).to.have.length(1);
@@ -85,11 +85,11 @@ describe('ImageWithStatus', () => {
     );
     const image = new Image();
     image.src = BOGUS_IMAGE_URL;
-    image.onerror = function() {
+    image.onerror = function () {
       // There's no guarantee we'll hit this onerror after the onerror in
       // ImageWithStatus, so wait until the next clock tick before checking
       // expectations.
-      setTimeout(function() {
+      setTimeout(function () {
         root.update();
         const error = root.find('div[data-image-status="error"]');
         expect(error).to.have.length(1);

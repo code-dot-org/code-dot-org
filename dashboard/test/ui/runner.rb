@@ -1,7 +1,8 @@
 #!/usr/bin/env ruby
 require_relative '../../../deployment'
 
-ROOT = File.expand_path('../../../..', __FILE__)
+UI_TEST_DIR = File.expand_path(__dir__)
+ROOT = File.expand_path('../../..', UI_TEST_DIR)
 
 # Set up gems listed in the Gemfile.
 ENV['BUNDLE_GEMFILE'] ||= "#{ROOT}//Gemfile"
@@ -10,6 +11,7 @@ require 'bundler/setup'
 
 require 'cdo/aws/s3'
 require 'cdo/chat_client'
+require 'cdo/data/logging/infrastructure_logger'
 require 'cdo/git_utils'
 require 'cdo/rake_utils'
 require 'cdo/test_flakiness'
@@ -35,10 +37,10 @@ ENV['BUILD'] ||= `git rev-parse --short HEAD`
 
 GIT_BRANCH = GitUtils.current_branch
 COMMIT_HASH = RakeUtils.git_revision
-LOCAL_LOG_DIRECTORY = 'log'
+LOCAL_LOG_DIRECTORY = File.join(UI_TEST_DIR, 'log')
 S3_LOGS_BUCKET = 'cucumber-logs'
 S3_LOGS_PREFIX = ENV['CI'] ? "circle/#{ENV['CIRCLE_BUILD_NUM']}" : "#{Socket.gethostname}/#{GIT_BRANCH}"
-LOG_UPLOADER = AWS::S3::LogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX, true)
+LOG_UPLOADER = AWS::S3::LogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX, make_public: true)
 
 #
 # Run a set of UI/Eyes tests according to the provided options.
@@ -64,9 +66,11 @@ def main(options)
 
   run_results = Parallel.map(browser_feature_generator, parallel_config(options.parallel_limit)) do |browser, feature|
     run_feature browser, feature, options
-  rescue => e
-    ChatClient.log "Exception: #{e.message}", color: 'red'
+  rescue => exception
+    ChatClient.log "Exception: #{exception.message}", color: 'red'
     raise
+  ensure
+    Infrastructure::Logger.flush
   end
 
   # Produce a final report if we aborted due to excess failures
@@ -147,14 +151,14 @@ def parse_options
       end
       opts.on("-p", "--pegasus Domain", String, "Specify an override domain for code.org, e.g. localhost.code.org:3000") do |p|
         if p == 'localhost:3000'
-          print "WARNING: Some tests may fail using '-p localhost:3000' because cookies will not be available.\n"\
+          print "WARNING: Some tests may fail using '-p localhost:3000' because cookies will not be available.\n" \
                 "Try '-p localhost.code.org:3000' instead (this is the default when using '-l').\n"
         end
         options.pegasus_domain = p
       end
       opts.on("-d", "--dashboard Domain", String, "Specify an override domain for studio.code.org, e.g. localhost-studio.code.org:3000") do |d|
         if d == 'localhost:3000'
-          print "WARNING: Some tests may fail using '-d localhost:3000' because cookies will not be available.\n"\
+          print "WARNING: Some tests may fail using '-d localhost:3000' because cookies will not be available.\n" \
                 "Try '-d localhost-studio.code.org:3000' instead (this is the default when using '-l').\n"
         end
         options.dashboard_domain = d
@@ -233,7 +237,7 @@ def parse_options
     opt_parser.parse!(ARGV)
     # Standardize: Drop leading dot-slash on feature paths
     options.features = ARGV + (options.features || []).
-        map! {|feature| feature.gsub(/^\.\//, '')}
+      map! {|feature| feature.gsub(/^\.\//, '')}
 
     if options.force_db_access
       options.pegasus_db_access = true
@@ -265,7 +269,7 @@ def select_browser_configs(options)
     }]
   end
 
-  browsers = JSON.parse(File.read('browsers.json'))
+  browsers = JSON.parse(File.read(File.join(UI_TEST_DIR, 'browsers.json')))
   if options.config
     options.config.map do |name|
       browsers.detect {|b| b['name'] == name}.tap do |browser|
@@ -289,8 +293,8 @@ def upload_log_and_get_public_link(filename, metadata)
   # TODO: Set content type dynamically based on filename extension.
   log_url = LOG_UPLOADER.upload_file(filename, {content_type: 'text/html', metadata: metadata})
   " <a href='#{log_url}'>☁ Log on S3</a>"
-rescue Exception => msg
-  ChatClient.log "Uploading log to S3 failed: #{msg}"
+rescue Exception => exception
+  ChatClient.log "Uploading log to S3 failed: #{exception}"
   return ''
 end
 
@@ -300,9 +304,9 @@ end
 
 def open_log_files
   FileUtils.mkdir_p(LOCAL_LOG_DIRECTORY)
-  $success_log = File.open("#{LOCAL_LOG_DIRECTORY}/success.log", 'w')
-  $error_log = File.open("#{LOCAL_LOG_DIRECTORY}/error.log", 'w')
-  $errorbrowsers_log = File.open("#{LOCAL_LOG_DIRECTORY}/errorbrowsers.log", 'w')
+  $success_log = File.open(File.join(LOCAL_LOG_DIRECTORY, "success.log"), 'w')
+  $error_log = File.open(File.join(LOCAL_LOG_DIRECTORY, "error.log"), 'w')
+  $errorbrowsers_log = File.open(File.join(LOCAL_LOG_DIRECTORY, "errorbrowsers.log"), 'w')
 end
 
 def close_log_files
@@ -330,18 +334,30 @@ def run_tests(env, feature, arguments, log_prefix)
   start_time = Time.now
   cmd = "cucumber #{feature} #{arguments}"
   puts "#{log_prefix}#{cmd}"
-  Open3.popen3(env, cmd) do |stdin, stdout, stderr, wait_thr|
+  Open3.popen3(env, cmd, chdir: UI_TEST_DIR) do |stdin, stdout, stderr, wait_thr|
     stdin.close
     stdout = stdout.read
     stderr = stderr.read
     cucumber_succeeded = wait_thr.value.exitstatus == 0
     eyes_succeeded = count_eyes_errors(stdout) == 0
-    return cucumber_succeeded, eyes_succeeded, stdout, stderr, Time.now - start_time
+    duration = Time.now - start_time
+    extra_dimensions = {test_type: test_type,
+                        feature_name: feature}
+    # Metrics for individual feature runs. They will be flushed once all of them run
+    Infrastructure::Logger.put("runner_feature_success", cucumber_succeeded ? 1 : 0, extra_dimensions)
+    Infrastructure::Logger.put("runner_feature_failure", cucumber_succeeded ? 0 : 1, extra_dimensions)
+    Infrastructure::Logger.put("runner_feature_execution_time", duration, extra_dimensions)
+    return cucumber_succeeded, eyes_succeeded, stdout, stderr, duration
   end
 end
 
 def features_to_run
-  $features_to_run ||= $options.features.empty? ? Dir.glob('features/**/*.feature') : $options.features
+  $features_to_run ||=
+    if $options.features.empty?
+      Dir.glob(File.join(UI_TEST_DIR, 'features', '**', '*.feature'))
+    else
+      $options.features
+    end
 end
 
 #
@@ -358,12 +374,14 @@ end
 # ]
 #
 def browser_features
-  ($browsers.product features_to_run).map do |browser, feature|
+  ($browsers.product features_to_run).filter_map do |browser, feature|
+    full_feature_path = File.expand_path(feature)
+    relative_feature_path = Pathname.new(full_feature_path).relative_path_from(UI_TEST_DIR).to_s
     arguments = cucumber_arguments_for_browser(browser, $options)
-    scenario_count = ParallelTests::Cucumber::Scenarios.all([feature], test_options: arguments).length
+    scenario_count = ParallelTests::Cucumber::Scenarios.all([full_feature_path], test_options: arguments).length
     next if scenario_count.zero?
-    [browser, feature]
-  end.compact
+    [browser, relative_feature_path]
+  end
 end
 
 def test_type
@@ -413,6 +431,15 @@ def report_tests_finished(start_time, run_results)
     end
   end
 
+  extra_dimensions = {test_type: test_type}
+  success_rate = run_results.count > 0 ? (1.0 * suite_success_count) / run_results.count : nil
+  Infrastructure::Logger.put('runner_feature_tests_success', suite_success_count, extra_dimensions)
+  Infrastructure::Logger.put('runner_feature_tests_failure', failures.count, extra_dimensions)
+  Infrastructure::Logger.put('runner_feature_tests_success_rate', success_rate, extra_dimensions)
+  Infrastructure::Logger.put('runner_feature_tests_flaky_reruns', total_flaky_reruns, extra_dimensions)
+  Infrastructure::Logger.put('runner_feature_tests_successful_flaky_reruns', total_flaky_successful_reruns, extra_dimensions)
+  Infrastructure::Logger.put('runner_feature_tests_count', run_results.count, extra_dimensions)
+  Infrastructure::Logger.flush
   ChatClient.log "#{suite_success_count} succeeded.  #{failures.count} failed. " \
   "Test count: #{run_results.count}. " \
   "Total duration: #{RakeUtils.format_duration(suite_duration)}. " \
@@ -440,10 +467,10 @@ def scheme_for_environment
 end
 
 def generate_status_page(suite_start_time)
-  test_status_template = File.read('test_status.haml')
+  test_status_template = File.read(File.join(UI_TEST_DIR, 'test_status.haml'))
   haml_engine = Haml::Engine.new(test_status_template)
   File.write(
-    status_page_filename,
+    File.join(UI_TEST_DIR, status_page_filename),
     haml_engine.render(
       Object.new,
       {
@@ -462,7 +489,7 @@ def generate_status_page(suite_start_time)
 end
 
 def test_run_identifier(browser, feature)
-  feature_name = feature.gsub('features/', '').gsub('.feature', '').tr('/', '_')
+  feature_name = feature.gsub(/.*features\//, '').gsub('.feature', '').tr('/', '_')
   browser_name = browser_name_or_unknown(browser)
   "#{browser_name}_#{feature_name}" + (eyes? ? '_eyes' : '')
 end
@@ -475,8 +502,8 @@ end
 def flakiness_for_test(test_run_identifier)
   return nil if $stop_calculating_flakiness
   TestFlakiness.summary_for(:test_flakiness, test_run_identifier)
-rescue Exception => e
-  puts "Error calculating flakiness: #{e.full_message}. Will stop calculating test flakiness for this run."
+rescue Exception => exception
+  puts "Error calculating flakiness: #{exception.full_message}. Will stop calculating test flakiness for this run."
   $stop_calculating_flakiness = true
   nil
 end
@@ -485,8 +512,8 @@ end
 def estimate_for_test(test_run_identifier)
   return nil if $stop_calculating_flakiness
   TestFlakiness.summary_for(:test_estimate, test_run_identifier)
-rescue Exception => e
-  puts "Error calculating estimate: #{e.full_message}. Will stop calculating test flakiness for this run."
+rescue Exception => exception
+  puts "Error calculating estimate: #{exception.full_message}. Will stop calculating test flakiness for this run."
   $stop_calculating_flakiness = true
   nil
 end
@@ -547,9 +574,9 @@ end
 # return all text after "Failing Scenarios"
 def output_synopsis(output_text, log_prefix)
   # example output:
-  # ["    And I press \"resetButton\"                                                                                                                                    # step_definitions/steps.rb:63\n",
-  #  "    Then element \"#runButton\" is visible                                                                                                                         # step_definitions/steps.rb:124\n",
-  #  "    And element \"#resetButton\" is hidden                                                                                                                         # step_definitions/steps.rb:130\n",
+  # ["    And I press \"resetButton\"            # step_definitions/steps.rb:63\n",
+  #  "    Then element \"#runButton\" is visible # step_definitions/steps.rb:124\n",
+  #  "    And element \"#resetButton\" is hidden # step_definitions/steps.rb:130\n",
   #  "\n",
   #  "Failing Scenarios:\n",
   #  "cucumber features/artist.feature:11 # Scenario: Loading the first level\n",
@@ -602,15 +629,15 @@ end
 
 def html_output_filename(test_run_string, options)
   if options.html
-    "#{LOCAL_LOG_DIRECTORY}/#{test_run_string}_output.html"
+    File.join(LOCAL_LOG_DIRECTORY, "#{test_run_string}_output.html")
   end
 end
 
 def rerun_filename(test_run_string)
-  "#{LOCAL_LOG_DIRECTORY}/#{test_run_string}.rerun"
+  File.join(LOCAL_LOG_DIRECTORY, "#{test_run_string}.rerun")
 end
 
-def tag(tag, run=true)
+def tag(tag, run = true)
   return skip_tag(tag) unless run
   " -t #{tag}"
 end
@@ -631,9 +658,6 @@ def cucumber_arguments_for_browser(browser, options)
       if browser['mobile']
         # iOS browsers will only run eyes tests tagged with @eyes_mobile.
         tag('@eyes_mobile')
-      elsif browser['browserName'] == 'Internet Explorer'
-        # IE will only run eyes tests tagged with @eyes_ie.
-        tag('@eyes_ie')
       else
         # All other desktop browsers, including Chrome, will run any eyes test
         # tagged with @eyes.
@@ -642,7 +666,6 @@ def cucumber_arguments_for_browser(browser, options)
   else
     # Make sure eyes tests don't run when --eyes is not specified.
     arguments += skip_tag('@eyes_mobile')
-    arguments += skip_tag('@eyes_ie')
     arguments += skip_tag('@eyes')
   end
 
@@ -651,12 +674,11 @@ def cucumber_arguments_for_browser(browser, options)
   arguments += skip_tag('@no_phone') if browser['name'] == 'iPhone'
   arguments += skip_tag('@only_phone') unless browser['name'] == 'iPhone'
   arguments += skip_tag('@no_circle') if options.is_circle
-  arguments += skip_tag('@no_ie') if browser['browserName'] == 'Internet Explorer'
 
-  # Only run in IE during a DTT. always run locally or during circle runs.
+  # always run locally or during circle runs.
   # Note that you may end up running in more than one browser if you use flags
-  # like [test safari], [test ie] or [test firefox] during a circle run.
-  arguments += skip_tag('@only_one_browser') if browser['browserName'] != 'Internet Explorer' && !options.local && !options.is_circle
+  # like [test safari] or [test firefox] during a circle run.
+  arguments += skip_tag('@only_one_browser') if !options.local && !options.is_circle
 
   arguments += skip_tag('@chrome') if browser['browserName'] != 'chrome' && !options.local
   arguments += skip_tag('@no_chrome') if browser['browserName'] == 'chrome'

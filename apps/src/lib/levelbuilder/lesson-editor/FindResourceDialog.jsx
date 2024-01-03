@@ -13,7 +13,7 @@ class FindResourceDialog extends Component {
     isOpen: PropTypes.bool.isRequired,
     handleConfirm: PropTypes.func.isRequired,
     handleClose: PropTypes.func.isRequired,
-    resources: PropTypes.arrayOf(resourceShape)
+    resources: PropTypes.arrayOf(resourceShape),
   };
 
   constructor(props) {
@@ -22,7 +22,7 @@ class FindResourceDialog extends Component {
       selectedResourceKey:
         this.props.resources.length > 0
           ? this.props.resources[0].markdownKey
-          : ''
+          : '',
     };
   }
 
@@ -71,7 +71,7 @@ class FindResourceDialog extends Component {
               e.preventDefault();
               this.props.handleConfirm(this.state.selectedResourceKey);
             }}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
           />
         </DialogFooter>
       </LessonEditorDialog>
@@ -82,5 +82,5 @@ class FindResourceDialog extends Component {
 export const UnconnectedFindResourceDialog = FindResourceDialog;
 
 export default connect(state => ({
-  resources: state.resources
+  resources: state.resources,
 }))(FindResourceDialog);

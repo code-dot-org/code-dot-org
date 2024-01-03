@@ -7,7 +7,7 @@ module.exports = {
   example1: {
     solutionBlocks: blockUtils.calcBlockXml('functional_times', [
       blockUtils.calcBlockXml('functional_plus', [1, 2]),
-      blockUtils.calcBlockXml('functional_plus', [3, 4])
+      blockUtils.calcBlockXml('functional_plus', [3, 4]),
     ]),
     ideal: Infinity,
     toolbox: blockUtils.createToolbox(
@@ -22,7 +22,7 @@ module.exports = {
     ),
     startBlocks: '',
     requiredBlocks: '',
-    freePlay: false
+    freePlay: false,
   },
 
   custom: {
@@ -31,6 +31,6 @@ module.exports = {
     toolbox: '',
     startBlocks: '',
     requiredBlocks: '',
-    freePlay: false
-  }
+    freePlay: false,
+  },
 };

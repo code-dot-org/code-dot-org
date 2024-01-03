@@ -1,5 +1,3 @@
-/* global mapboxgl, MapboxGeocoder */
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
@@ -14,16 +12,16 @@ var selectize;
 // This is for older browsers that don't support remove.
 // We need this to clear the popups when the user clicks "View All" to see all classes or when a different class is selected in the results list.
 if (!('remove' in Element.prototype)) {
-  Element.prototype.remove = function() {
+  Element.prototype.remove = function () {
     if (this.parentNode) {
       this.parentNode.removeChild(this);
     }
   };
 }
 
-$(function() {
+$(function () {
   selectize = $('#class-search-facets select').selectize({
-    plugins: ['remove_button']
+    plugins: ['remove_button'],
   });
 
   setFacetDefaults();
@@ -32,9 +30,9 @@ $(function() {
     accessToken: mapboxgl.accessToken,
     mapboxgl: mapboxgl,
     marker: false,
-    types: 'country,region,district,postcode,locality,place'
+    types: 'country,region,district,postcode,locality,place',
   });
-  geocoder.on('result', function(result) {
+  geocoder.on('result', function (result) {
     var loc = result.result.geometry.coordinates;
     map_loc = loc[1] + ',' + loc[0];
     submitForm();
@@ -45,21 +43,21 @@ $(function() {
   stickMap();
 
   //re-evaluate the page footer offset on window resize
-  $(window).resize(function() {
+  $(window).resize(function () {
     stickMap();
   });
 
   // Trigger query when a facet is changed.
   $('#class-search-facets')
     .find('select')
-    .change(function() {
+    .change(function () {
       submitForm();
     });
 });
 
 function stickMap() {
   $('#map').sticky({
-    bottomSpacing: $('#pagefooter').height() + 50
+    bottomSpacing: $('#pagefooter').height() + 50,
   });
 }
 
@@ -84,10 +82,10 @@ function getParams(form_data) {
 
   params.push({
     name: 'coordinates',
-    value: map_loc
+    value: map_loc,
   });
 
-  $.each(form_data, function(key, field) {
+  $.each(form_data, function (key, field) {
     if (field.value !== '' && field.name !== 'location') {
       params.push(field);
     }
@@ -97,7 +95,7 @@ function getParams(form_data) {
 }
 
 function sendQuery(params) {
-  $.post('/forms/ClassSubmission/query', $.param(params), function(response) {
+  $.post('/forms/ClassSubmission/query', $.param(params), function (response) {
     var locations = getLocations(response);
     updateResults(locations);
   }).fail(displayQueryError);
@@ -115,7 +113,7 @@ function updateResults(locations) {
 }
 
 function setFacetDefaults() {
-  $.each(selectize, function(key, select) {
+  $.each(selectize, function (key, select) {
     // Class format dropdown selects "Out of school" by default
     // and all other dropdowns are cleared.
     if (selectize[key].id === 'class-format-category') {
@@ -152,72 +150,78 @@ function loadMap(locations) {
     properties: {
       description: location.html,
       title: location.title,
-      index
+      index,
     },
     geometry: {
       type: 'Point',
-      coordinates: [parseFloat(location.lon), parseFloat(location.lat)]
-    }
+      coordinates: [parseFloat(location.lon), parseFloat(location.lat)],
+    },
   }));
   map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v11',
     zoom: 10,
     minZoom: 1,
-    center: [lng, lat]
+    center: [lng, lat],
   });
-  map.on('load', function() {
-    map.loadImage('/images/map-markers/dot-marker.png', function(error, image) {
-      if (error) {
-        logToCloud.addPageAction(logToCloud.PageAction.MapboxMarkerLoadError, {
-          error
+  map.on('load', function () {
+    map.loadImage(
+      '/images/map-markers/dot-marker.png',
+      function (error, image) {
+        if (error) {
+          logToCloud.addPageAction(
+            logToCloud.PageAction.MapboxMarkerLoadError,
+            {
+              error,
+            }
+          );
+          throw error;
+        }
+        map.addImage('dot-marker', image);
+        map.addSource('places', {
+          type: 'geojson',
+          data: {
+            type: 'FeatureCollection',
+            features: featureList,
+          },
         });
-        throw error;
+        // Add a layer showing the places.
+        map.addLayer({
+          id: 'places',
+          type: 'symbol',
+          source: 'places',
+          layout: {
+            'icon-image': 'dot-marker',
+            'icon-allow-overlap': true,
+          },
+        });
+
+        // When a click event occurs on a feature in the places layer, open a popup at the
+        // location of the feature, with description HTML from its properties.
+        map.on('click', 'places', function (e) {
+          var coordinates = e.features[0].geometry.coordinates.slice();
+
+          // Ensure that if the map is zoomed out such that multiple
+          // copies of the feature are visible, the popup appears
+          // over the copy being pointed to.
+          while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+          }
+          resultList(featureList, lng, lat, e.features[0].properties.index + 1);
+          createPopUp(e.features[0]);
+        });
+
+        // Change the cursor to a pointer when the mouse is over the places layer.
+        map.on('mouseenter', 'places', function () {
+          map.getCanvas().style.cursor = 'pointer';
+        });
+
+        // Change it back to a pointer when it leaves.
+        map.on('mouseleave', 'places', function () {
+          map.getCanvas().style.cursor = '';
+        });
       }
-      map.addImage('dot-marker', image);
-      map.addSource('places', {
-        type: 'geojson',
-        data: {
-          type: 'FeatureCollection',
-          features: featureList
-        }
-      });
-      // Add a layer showing the places.
-      map.addLayer({
-        id: 'places',
-        type: 'symbol',
-        source: 'places',
-        layout: {
-          'icon-image': 'dot-marker',
-          'icon-allow-overlap': true
-        }
-      });
-
-      // When a click event occurs on a feature in the places layer, open a popup at the
-      // location of the feature, with description HTML from its properties.
-      map.on('click', 'places', function(e) {
-        var coordinates = e.features[0].geometry.coordinates.slice();
-
-        // Ensure that if the map is zoomed out such that multiple
-        // copies of the feature are visible, the popup appears
-        // over the copy being pointed to.
-        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-          coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-        }
-        resultList(featureList, lng, lat, e.features[0].properties.index + 1);
-        createPopUp(e.features[0]);
-      });
-
-      // Change the cursor to a pointer when the mouse is over the places layer.
-      map.on('mouseenter', 'places', function() {
-        map.getCanvas().style.cursor = 'pointer';
-      });
-
-      // Change it back to a pointer when it leaves.
-      map.on('mouseleave', 'places', function() {
-        map.getCanvas().style.cursor = '';
-      });
-    });
+    );
   });
   // builds the side menu with the list of classes
   if (featureList.length > 0) {
@@ -227,7 +231,7 @@ function loadMap(locations) {
 
 function setDetailsTrigger() {
   var details_trigger = '.location-details-trigger';
-  $('#map').on('click', details_trigger, function() {
+  $('#map').on('click', details_trigger, function () {
     $(details_trigger).colorbox({inline: true, width: '50%', open: true});
   });
 }
@@ -235,7 +239,7 @@ function setDetailsTrigger() {
 function flyToLocation(currentFeature) {
   map.flyTo({
     center: currentFeature.geometry.coordinates,
-    zoom: 15
+    zoom: 15,
   });
 }
 
@@ -270,7 +274,7 @@ function resultList(featureList, lng, lat, activeIndex) {
         clearPopUp();
         map.flyTo({
           center: [lng, lat],
-          zoom: 10
+          zoom: 10,
         });
       }}
     />,

@@ -9,6 +9,7 @@
       "0.35",
       "0.62"
     ],
+    "style": "math_blocks",
     "args": [
       {
         "name": "VALUE",

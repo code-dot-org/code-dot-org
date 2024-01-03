@@ -11,7 +11,7 @@ import React, {Component} from 'react';
 export const STATUS = {
   LOADING: 'loading',
   LOADED: 'loaded',
-  ERROR: 'error'
+  ERROR: 'error',
 };
 
 export class ImageWithStatus extends Component {
@@ -19,7 +19,7 @@ export class ImageWithStatus extends Component {
     src: PropTypes.string.isRequired,
     width: PropTypes.number.isRequired,
     height: PropTypes.number,
-    wrapperStyle: PropTypes.object
+    wrapperStyle: PropTypes.object,
   };
 
   constructor(props) {
@@ -29,7 +29,7 @@ export class ImageWithStatus extends Component {
     this.handleImageError = this.handleImageError.bind(this);
 
     this.state = {
-      imageStatus: STATUS.LOADING
+      imageStatus: STATUS.LOADING,
     };
   }
 
@@ -50,12 +50,17 @@ export class ImageWithStatus extends Component {
   render() {
     return (
       <div style={this.props.wrapperStyle}>
+        {
+          // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+          // Verify or update this alt-text as necessary
+        }
         <img
           src={this.props.src}
           width={this.props.width}
           height={this.props.height}
           onLoad={this.handleImageLoad}
           onError={this.handleImageError}
+          alt=""
         />
         <div data-image-status={this.state.imageStatus} />
       </div>

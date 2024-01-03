@@ -11,7 +11,7 @@ export const addAnnouncement = ({
   type,
   visibility,
   dismissible,
-  buttonText
+  buttonText,
 }) => ({
   type: ADD_ANNOUNCEMENT,
   key,
@@ -21,13 +21,13 @@ export const addAnnouncement = ({
   announcementType: type,
   visibilityType: visibility,
   dismissible,
-  buttonText
+  buttonText,
 });
 
 export const VisibilityType = {
   teacher: 'Teacher-only',
   student: 'Student-only',
-  teacherAndStudent: 'Teacher and student'
+  teacherAndStudent: 'Teacher and student',
 };
 
 export const announcementShape = PropTypes.shape({
@@ -38,7 +38,7 @@ export const announcementShape = PropTypes.shape({
   type: PropTypes.oneOf(Object.values(NotificationType)).isRequired,
   visibility: PropTypes.oneOf(Object.values(VisibilityType)),
   dismissible: PropTypes.bool,
-  buttonText: PropTypes.string
+  buttonText: PropTypes.string,
 });
 
 export default function announcements(state = [], action) {
@@ -51,7 +51,7 @@ export default function announcements(state = [], action) {
       type: action.announcementType,
       visibility: action.visibilityType,
       dismissible: action.dismissible,
-      buttonText: action.buttonText
+      buttonText: action.buttonText,
     });
   }
 

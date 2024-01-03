@@ -8,9 +8,9 @@ const style = {
   item: {
     backgroundColor: color.charcoal,
     ':hover': {
-      backgroundColor: color.charcoal
+      backgroundColor: color.charcoal,
     },
-    cursor: 'default'
+    cursor: 'default',
   },
   wrapper: {
     fontSize: 16,
@@ -18,26 +18,26 @@ const style = {
     height: rowHeight,
     color: color.white,
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   selectedColumn: {
     ...cellStyle,
     width: columnWidths.selected,
-    marginLeft: -10
+    marginLeft: -10,
   },
   titleColumn: {
     ...cellStyle,
-    width: columnWidths.title
+    width: columnWidths.title,
   },
   statusColumn: {
     ...cellStyle,
-    width: columnWidths.status
+    width: columnWidths.status,
   },
   languageColumn: {
     ...cellStyle,
     width: columnWidths.language,
-    marginRight: -10
-  }
+    marginRight: -10,
+  },
 };
 
 export default class AssignmentVersionMenuHeader extends Component {

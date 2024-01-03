@@ -48,7 +48,7 @@ describe('WorkshopTableLoader', () => {
     server.respondWith('GET', 'fake-query-url', [
       200,
       {'Content-Type': 'application/json'},
-      responseJson
+      responseJson,
     ]);
 
     const Child = sinon.stub().returns(null);
@@ -65,7 +65,7 @@ describe('WorkshopTableLoader', () => {
     expect(Child.calledOnce).to.be.true;
     expect(Child.getCall(0).args[0]).to.eql({
       workshops: fakeWorkshopsData,
-      onDelete: null
+      onDelete: null,
     });
   });
 
@@ -77,7 +77,7 @@ describe('WorkshopTableLoader', () => {
         queryParams={{
           date_order: 'desc',
           state: 'In Progress',
-          empty: null // Empty params are filtered out / not added to the url
+          empty: null, // Empty params are filtered out / not added to the url
         }}
       >
         <Child />
@@ -101,13 +101,13 @@ describe('WorkshopTableLoader', () => {
 
     loader.setState({
       loading: false,
-      workshops: fakeWorkshopsData
+      workshops: fakeWorkshopsData,
     });
 
     expect(Child.calledOnce).to.be.true;
     expect(Child.getCall(0).args[0]).to.eql({
       workshops: fakeWorkshopsData,
-      onDelete: loader.instance().handleDelete
+      onDelete: loader.instance().handleDelete,
     });
   });
 
@@ -121,7 +121,7 @@ describe('WorkshopTableLoader', () => {
 
     loader.setState({
       loading: false,
-      workshops: []
+      workshops: [],
     });
 
     expect(Child.called).to.be.false;
@@ -139,7 +139,7 @@ describe('WorkshopTableLoader', () => {
 
     loader.setState({
       loading: false,
-      workshops: []
+      workshops: [],
     });
 
     expect(Child.called).to.be.false;

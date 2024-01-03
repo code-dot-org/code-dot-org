@@ -9,7 +9,7 @@ import {
   roleOptions,
   courseTopics,
   frequencyOptions,
-  pledge
+  pledge,
 } from './censusQuestions';
 import SchoolAutocompleteDropdownWithLabel from './SchoolAutocompleteDropdownWithLabel';
 import CountryAutocompleteDropdown from '../CountryAutocompleteDropdown';
@@ -25,7 +25,7 @@ export const censusFormPrefillDataShape = PropTypes.shape({
   schoolType: PropTypes.string,
   schoolName: PropTypes.string,
   schoolState: PropTypes.string,
-  schoolZip: PropTypes.string
+  schoolZip: PropTypes.string,
 });
 
 class CensusForm extends Component {
@@ -33,7 +33,7 @@ class CensusForm extends Component {
     prefillData: censusFormPrefillDataShape,
     initialSchoolYear: PropTypes.number,
     schoolDropdownOption: PropTypes.object,
-    onSchoolDropdownChange: PropTypes.func
+    onSchoolDropdownChange: PropTypes.func,
   };
 
   constructor(props) {
@@ -68,11 +68,11 @@ class CensusForm extends Component {
         followUpMore: '',
         acceptedPledge: false,
         share: '',
-        optIn: ''
+        optIn: '',
       },
       errors: {
-        invalidEmail: false
-      }
+        invalidEmail: false,
+      },
     };
   }
 
@@ -81,8 +81,8 @@ class CensusForm extends Component {
       {
         submission: {
           ...this.state.submission,
-          [field]: event.target.value
-        }
+          [field]: event.target.value,
+        },
       },
       this.checkShowFollowUp
     );
@@ -96,8 +96,8 @@ class CensusForm extends Component {
     this.setState({
       submission: {
         ...this.state.submission,
-        [field]: event ? event.value : ''
-      }
+        [field]: event ? event.value : '',
+      },
     });
   };
 
@@ -105,7 +105,7 @@ class CensusForm extends Component {
     const twentyHours = this.state.submission.twentyHours;
     this.setState(
       {
-        showFollowUp: twentyHours === 'SOME' || twentyHours === 'ALL'
+        showFollowUp: twentyHours === 'SOME' || twentyHours === 'ALL',
       },
       this.checkShowPledge
     );
@@ -114,7 +114,7 @@ class CensusForm extends Component {
   checkShowPledge() {
     const role = this.state.submission.role;
     this.setState({
-      showPledge: role === 'TEACHER' || role === 'ADMINISTRATOR'
+      showPledge: role === 'TEACHER' || role === 'ADMINISTRATOR',
     });
   }
 
@@ -122,8 +122,8 @@ class CensusForm extends Component {
     this.setState({
       submission: {
         ...this.state.submission,
-        acceptedPledge: !this.state.submission.acceptedPledge
-      }
+        acceptedPledge: !this.state.submission.acceptedPledge,
+      },
     });
   }
 
@@ -131,8 +131,8 @@ class CensusForm extends Component {
     this.setState({
       submission: {
         ...this.state.submission,
-        otherCS: !this.state.submission.otherCS
-      }
+        otherCS: !this.state.submission.otherCS,
+      },
     });
   }
 
@@ -146,13 +146,13 @@ class CensusForm extends Component {
 
   selectOption(option) {
     this.setState({
-      selectedTopics: this.state.selectedTopics.concat(option)
+      selectedTopics: this.state.selectedTopics.concat(option),
     });
   }
 
   clearOption(option) {
     this.setState({
-      selectedTopics: _.without(this.state.selectedTopics, option)
+      selectedTopics: _.without(this.state.selectedTopics, option),
     });
   }
 
@@ -194,7 +194,7 @@ class CensusForm extends Component {
       school_type: 'school',
       state: 'school',
       zip: 'school',
-      school_name: 'school'
+      school_name: 'school',
     };
 
     const errorJSON = error.responseJSON;
@@ -203,7 +203,7 @@ class CensusForm extends Component {
       let newErrors = this.state.errors;
       newErrors[errorKey] = true;
       this.setState({
-        errors: newErrors
+        errors: newErrors,
       });
     });
   }
@@ -276,8 +276,8 @@ class CensusForm extends Component {
           tenHours: this.validateNotBlank(this.state.submission.tenHours),
           twentyHours: this.validateNotBlank(this.state.submission.twentyHours),
           share: this.validateNotBlank(this.state.submission.share),
-          optIn: this.validateNotBlank(this.state.submission.optIn)
-        }
+          optIn: this.validateNotBlank(this.state.submission.optIn),
+        },
       },
       this.censusFormSubmit
     );
@@ -304,7 +304,7 @@ class CensusForm extends Component {
         url: '/dashboardapi/v1/census/CensusYourSchool2017v7',
         type: 'post',
         dataType: 'json',
-        data: $('#census-form').serialize()
+        data: $('#census-form').serialize(),
       })
         .done(this.processResponse)
         .fail(this.processError.bind(this));
@@ -394,7 +394,7 @@ class CensusForm extends Component {
                 <input
                   type="text"
                   name="school_name_s"
-                  value={this.state.schoolName}
+                  value={submission.schoolName}
                   onChange={this.handleChange.bind(this, 'schoolName')}
                   style={styles.input}
                 />
@@ -714,7 +714,7 @@ class CensusForm extends Component {
           <Button
             id="submit-button"
             onClick={() => this.validateSubmission()}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
             text={i18n.submit()}
             size={Button.ButtonSize.large}
             style={{marginTop: '10px'}}

@@ -35,10 +35,20 @@ module ProjectsList
       storage_id = storage_id_for_user_id(user_id)
       Projects.new(storage_id).get_active_projects.each do |project|
         channel_id = storage_encrypt_channel_id(storage_id, project[:id])
-        project_data = get_project_row_data(project, channel_id, nil, true)
+        project_data = get_project_row_data(project, channel_id, with_library: true)
         personal_projects_list << project_data if project_data
       end
       personal_projects_list
+    end
+
+    def user_has_project_type(user_id, types)
+      storage_id = storage_id_for_user_id(user_id)
+      Projects.new(storage_id).get_active_projects.each do |project|
+        if types.include?(project[:project_type])
+          return true
+        end
+      end
+      false
     end
 
     # Look up every project associated with the provided user_id, and project state, excluding those that are hidden.
@@ -54,7 +64,7 @@ module ProjectsList
 
       projects_query.each do |project|
         channel_id = storage_encrypt_channel_id(storage_id, project[:id])
-        project_data = get_project_row_data(project, channel_id, nil, true)
+        project_data = get_project_row_data(project, channel_id, with_library: true)
         personal_projects_list << project_data if project_data
       end
 
@@ -129,7 +139,7 @@ module ProjectsList
         featured_published_projects[project_group] = []
         project_types.each do |project_type|
           featured_published_projects[project_group] <<
-          fetch_featured_projects_by_type(project_type)
+            fetch_featured_projects_by_type(project_type)
         end
         featured_published_projects[project_group].flatten!
       end
@@ -172,13 +182,13 @@ module ProjectsList
     #   where `version` corresponds to an S3 version of the library.
     # @return [Array<String>] The channel_ids of libraries that have been updated since the given version.
     def fetch_updated_library_channels(libraries)
-      project_ids = libraries.map do |library|
+      project_ids = libraries.filter_map do |library|
         _, id = storage_decrypt_channel_id(library['channel_id'])
         library['project_id'] = id
         id
       rescue
         nil
-      end.compact.uniq
+      end.uniq
 
       return [] if project_ids.nil_or_empty?
 
@@ -263,7 +273,7 @@ module ProjectsList
     # pull various fields out of the student and project records to populate
     # a data structure that can be used to populate a UI component displaying a
     # single project.
-    def get_project_row_data(project, channel_id, student = nil, with_library = false)
+    def get_project_row_data(project, channel_id, student = nil, with_library: false)
       project_value = project[:value] ? JSON.parse(project[:value]) : {}
       return nil if project_value['hidden'] == true || project_value['hidden'] == 'true'
 
@@ -333,7 +343,7 @@ module ProjectsList
             exclude(published_at: nil).
             order(Sequel.desc(:published_at)).
             limit(limit).
-            map {|project_and_user| get_published_project_and_user_data project_and_user}.compact
+            filter_map {|project_and_user| get_published_project_and_user_data project_and_user}
         end
       end
     end

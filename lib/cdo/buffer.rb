@@ -80,14 +80,12 @@ module Cdo
       reset_if_forked
       timeout_at = now + timeout
       until (wait = timeout_at - now) < 0 || @buffer.empty?
-        @log.info "Flushing #{self.class}, waiting #{wait} seconds"
-        schedule_flush(true)
+        @log.debug "Flushing #{self.class}, waiting #{wait} seconds"
+        schedule_flush(force: true)
         # Block until the pending flush is completed or timeout is reached.
         @task.wait(wait.infinite? ? nil : wait)
       end
     end
-
-    private
 
     # Extend ScheduledTask to support rescheduling after being executed.
     class RescheduledTask < Concurrent::ScheduledTask
@@ -117,13 +115,13 @@ module Cdo
     # Track time each object was added to the buffer.
     BufferObject = Struct.new(:object, :added_at)
 
-    def now
+    private def now
       Process.clock_gettime(Process::CLOCK_MONOTONIC)
     end
 
     # Schedule a flush in the future when the next batch is ready.
     # @param [Boolean] force flush batch even if not full.
-    def schedule_flush(force = false)
+    private def schedule_flush(force: false)
       @buffer.synchronize do
         @task.reschedule {batch_ready(force)} unless @buffer.empty?
       end
@@ -132,7 +130,7 @@ module Cdo
     # Determine when the next batch of existing buffered objects will be ready to be flushed.
     # @param [Boolean] force flush batch even if not full.
     # @return [Float] Seconds until the next batch can be flushed.
-    def batch_ready(force)
+    private def batch_ready(force)
       raise ArgumentError.new('Empty buffer') if @buffer.empty?
 
       # Wait until max_interval has passed since the earliest object to flush a non-full batch.
@@ -151,26 +149,26 @@ module Cdo
     end
 
     # Flush a batch of objects from the buffer.
-    def flush_batch
+    private def flush_batch
       @last_flush = now
       flush(take_batch.map(&:object))
-    rescue => e
-      Honeybadger.notify(e)
+    rescue => exception
+      Honeybadger.notify(exception)
     end
 
     # Take a single batch of objects from the buffer.
-    def take_batch
+    private def take_batch
       batch = []
       @buffer.synchronize do
         batch << @buffer.shift until
           @buffer.empty? ||
-            batch.length >= @batch_count ||
-            size((batch + [@buffer.first]).map(&:object)) > @batch_size
+              batch.length >= @batch_count ||
+              size((batch + [@buffer.first]).map(&:object)) > @batch_size
       end
       batch
     end
 
-    def reset_if_forked
+    private def reset_if_forked
       @buffer.synchronize do
         if $$ != @ruby_pid
           @buffer.clear

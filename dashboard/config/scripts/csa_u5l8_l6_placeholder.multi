@@ -27,3 +27,4 @@ right 'ret[i][j] = arr[i][j + 1];'
 wrong 'arr[i][j] = ret[i][j - 1];'
 wrong 'arr[i][j] = ret[i][j + 1];'
 wrong 'arr[i][j] = ret[i][j];'
+allow_multiple_attempts true

@@ -123,7 +123,7 @@ def clean_email_content(folder_name)
   # Replace "[A-Z]{10}" string in each file by "enrollment_code".
   # Save result to cleaned_folder to file with the same name.
   shell_command = "find #{folder_name} -type f -name '*.html' -exec sh -c 'base=$(basename {});\
-  sed -E \"s/[A-Z]\{10\}/enrollment_code/\" {} > \"#{cleaned_folder}/$base\"' \\;"
+  sed -E \"s/[A-Z]{10}/enrollment_code/\" {} > \"#{cleaned_folder}/$base\"' \\;"
 
   puts "Cleaning email content in folder #{folder_name} -> #{cleaned_folder}"
   puts "Executing: #{shell_command}"
@@ -150,10 +150,10 @@ def download_workshop_emails(output_folder)
     # However it has DateTime field that changes, so we exclude it from the comparison.
     # If we really want to compare headers, we will have to update diff command to ignore DateTime regex.
     # IO.copy_stream(open(base + preview), "#{output_folder}/#{preview}.html")
-  rescue => e
+  rescue => exception
     puts "\nFailed to download #{preview}"
-    puts "Error class: #{e.class.name}"
-    puts "Error msg: #{e.message}"
+    puts "Error class: #{exception.class.name}"
+    puts "Error msg: #{exception.message}"
   end
   puts
 end
@@ -168,9 +168,9 @@ def compare_workshop_emails(folder1, folder2)
   system(shell_command)
 
   puts "Comparision result saved to diffresult.txt"
-rescue => e
-  puts "Error class: #{e.class.name}"
-  puts "Error message: #{e.message}"
+rescue => exception
+  puts "Error class: #{exception.class.name}"
+  puts "Error message: #{exception.message}"
 end
 
 def main

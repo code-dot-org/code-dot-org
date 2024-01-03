@@ -17,7 +17,7 @@ class CreateStandardsReportStep2 extends Component {
     //redux
     teacherComment: PropTypes.string,
     versionYear: PropTypes.string,
-    familyName: PropTypes.string
+    familyName: PropTypes.string,
   };
 
   commentChanged = event => {
@@ -52,7 +52,7 @@ class CreateStandardsReportStep2 extends Component {
                 markdown={i18n.createStandardsReportSuggestion2Link({
                   standardsOverviewLink: `http://curriculum.code.org/csf-${versionYear.slice(
                     -2
-                  )}/${familyName}/standards`
+                  )}/${familyName}/standards`,
                 })}
               />
             )}
@@ -69,7 +69,7 @@ class CreateStandardsReportStep2 extends Component {
                 projectsLink: teacherDashboardUrl(
                   this.props.sectionId,
                   '/projects'
-                )
+                ),
               })}
             />
           </li>
@@ -82,20 +82,21 @@ class CreateStandardsReportStep2 extends Component {
           }
           onChange={this.commentChanged}
           style={styles.textArea}
+          aria-label={i18n.createStandardsReportStep2()}
         />
         <DialogFooter>
           <Button
-            __useDeprecatedTag
             text={i18n.back()}
             onClick={this.props.onBack}
             color={Button.ButtonColor.gray}
+            style={styles.backButton}
           />
           <Button
-            __useDeprecatedTag
             text={i18n.createReport()}
             onClick={this.props.handleConfirm}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
             className="uitest-standards-generate-report-finish"
+            style={styles.createButton}
           />
         </DialogFooter>
       </div>
@@ -106,16 +107,23 @@ class CreateStandardsReportStep2 extends Component {
 const styles = {
   textArea: {
     minHeight: 100,
-    width: '95%'
+    width: '95%',
   },
   header: {
     display: 'flex',
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   optionalText: {
-    paddingLeft: 10
-  }
+    paddingLeft: 10,
+  },
+  createButton: {
+    margin: 0,
+  },
+  backButton: {
+    margin: 0,
+    boxShadow: 'inset 0 2px 0 0 rgb(255 255 255 / 40%)',
+  },
 };
 
 export const UnconnectedCreateStandardsReportStep2 = CreateStandardsReportStep2;
@@ -123,5 +131,5 @@ export const UnconnectedCreateStandardsReportStep2 = CreateStandardsReportStep2;
 export default connect(state => ({
   teacherComment: state.sectionStandardsProgress.teacherComment,
   versionYear: getCurrentUnitData(state).version_year,
-  familyName: getCurrentUnitData(state).family_name
+  familyName: getCurrentUnitData(state).family_name,
 }))(CreateStandardsReportStep2);

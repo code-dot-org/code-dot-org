@@ -1,45 +1,42 @@
 ---
-title: Teacher Resources - Write your first computer program
-nav: hoc_teacher_resources_nav
-theme: responsive
-video_player: true
+title: Recursos del professor - Escriu el teu primer programa informàtic
 ---
 
-# Write your first computer program: An Hour of Code Tutorial
+# Escriu el teu primer programa informàtic: Tutorial d'una Hora del Codi
 
 {{ hoc_maze_video }}
 
 [col-50]
 
-## Teacher Resources
+## Recursos del professor
 
-### Lesson Plans:
+### Plans de les lliçons:
 
-- [Write your first computer program]({{ hoc_hourofcode_cb_url }})
+- [Escriu el teu primer programa informàtic]({{ hoc_hourofcode_cb_url }})
 
-### Extension Activities:
+### Activitats d'ampliació:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [Més enllà d'una Hora del Codi](http://code.org/learn/beyond)
+- [Fonaments de la informàtica: Curs 2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### Altres recursos del professor:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Guia d'ús de l'Hora del Codi per a educadors](https://hourofcode.com/how-to)
+- [Bones pràctiques d'educadors brillants](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Esdeveniment en directe: [Guia de l'Hora del Codi per a educadors](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
 [col-50]
 
-## Overview
+## Resum
 
-Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 37 languages.
+Aprèn els conceptes bàsics de la informàtica amb la programació d'arrossegar i deixar anar. Aquest tutorial es pot fer de manera independent, té l'aparença d'un joc i inclou vídeos on apareixen Bill Gates, Mark Zuckerberg, Angry Birds i Plantes vs. Zombis. Aprèn a fer servir bucles de repetició, condicionals i algorismes bàsics. Disponible en 37 idiomes.
 
-**Recommended Age Range:** 4-104
+**Edats recomanades:** Entre 4 i 104
 
-**Technology Requirements:** Modern browsers, smartphones + tablets
+**Requisits tecnològics:** Navegadors moderns telèfons intel·ligents i tauletes
 
-<a href="http://studio.code.org/hoc/reset"><button>Try the tutorial</button></a>
+<a href="http://studio.code.org/hoc/reset"><button>Proveu el tutorial</button></a>
 
 [/col-50]

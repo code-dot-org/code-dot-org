@@ -1,7 +1,7 @@
 /** @file Test maker droplet config behavior */
 import {expect} from '../../../../util/reconfiguredChai';
 import dropletConfig, {
-  configMicrobit
+  configMicrobit,
 } from '@cdo/apps/lib/kits/maker/dropletConfig';
 import {CP_COMPONENT_EVENTS} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
 import {MB_COMPONENT_EVENTS} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
@@ -22,7 +22,7 @@ describe('maker/dropletConfig.js', () => {
         '"down"',
         '"open"',
         '"shake"',
-        '"up"'
+        '"up"',
       ]);
     });
 
@@ -89,20 +89,6 @@ describe('maker/dropletConfig.js', () => {
       ).to.deep.equal(['"change"', '"data"']);
     });
 
-    // Enable when captouch is on by default
-    describe.skip('touchPads', () => {
-      [0, 1, 2, 3, 6, 9, 10, 12].forEach(pin => {
-        it(`touchPad${pin} dropdown`, () => {
-          expect(
-            dropletConfig.getBoardEventDropdownForParam(
-              `touchPad${pin}`,
-              CP_COMPONENT_EVENTS
-            )
-          ).to.deep.equal(['"down"', '"up"']);
-        });
-      });
-    });
-
     // micro:bit specific components
     it('buttonA dropdown', () => {
       expect(
@@ -129,7 +115,7 @@ describe('maker/dropletConfig.js', () => {
         dropletConfig.stringifySong([
           ['A1', 1 / 4],
           ['B2', 1 / 4],
-          ['C3', 1 / 2]
+          ['C3', 1 / 2],
         ])
       ).to.equal('[' + '["A1",0.25], ' + '["B2",0.25], ' + '["C3",0.5]' + ']');
     });

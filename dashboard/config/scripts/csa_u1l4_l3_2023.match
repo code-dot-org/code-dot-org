@@ -14,3 +14,4 @@ answer 'a block of code that has the same name as the class and tells the comput
 
 question 'behavior'
 answer 'an action that an object can perform'
+allow_multiple_attempts true

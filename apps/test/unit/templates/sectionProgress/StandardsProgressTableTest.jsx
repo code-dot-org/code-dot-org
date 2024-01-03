@@ -3,7 +3,7 @@ import {expect} from '../../../util/reconfiguredChai';
 import {mount} from 'enzyme';
 import {
   standardsData,
-  lessonCompletedByStandard
+  lessonCompletedByStandard,
 } from '../../../../src/templates/sectionProgress/standards/standardsTestHelpers';
 import {UnconnectedStandardsProgressTable as StandardsProgressTable} from '../../../../src/templates/sectionProgress/standards/StandardsProgressTable';
 

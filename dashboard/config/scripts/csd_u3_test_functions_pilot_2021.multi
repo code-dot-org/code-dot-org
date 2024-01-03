@@ -7,3 +7,5 @@ wrong 'They are a good way to store user input to use later in the program.'
 wrong 'They make the program run faster.'
 wrong 'They are necessary for any program to run.'
 right 'They let you use the same code in different places in the program without having to rewrite it.'
+
+allow_multiple_attempts true

@@ -1,27 +1,40 @@
 @import "color.scss";
-@import "./theme/tokens-dark";
 
 .patternPanel {
   font-size: 13px;
+  user-select: none;
 }
 
 .row {
-  height: 24px;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    background-color: rgba($background_gray, 0.2);
+  }
 }
 
-.name {
+.nameContainer {
   display: inline-block;
-  width: 80px;
-  vertical-align: top;
+  width: 100px;
+  vertical-align: middle;
+  padding-left: 3px;
+
+  .name {
+    cursor: pointer;
+    user-select: none;
+  }
 }
 
 .outerCell {
   display: inline-block;
-  width: 20px;
-  height: 20px;
-  padding-top: 2px;
+  padding: 5px 3px;
   box-sizing: border-box;
   cursor: pointer;
+
+  &Playing {
+    background-color: $light-gray;
+  }
 }
 
 .cell {

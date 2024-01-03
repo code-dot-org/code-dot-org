@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csd-playground",
-    "serialized_at": "2023-02-20 20:21:29 UTC",
+    "serialized_at": "2023-12-13 21:21:18 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -182,6 +182,87 @@
       },
       "seeding_key": {
         "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "lesson-10",
+      "name": "Pulse Survey to Clone",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "Color LEDs",
+      "name": "Color LEDs",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "In this lesson, students learn how to use the 10 color LEDs on the Circuit Playground. Students will control the color and intensity of each LED, then use what they have learned to program light patterns to create a light show on their Circuit Playground.\n\n**Question of the Day:** How can you use the colored LEDs in an app?",
+        "preparation": "- Prepare a board and USB cable for each pair of students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "In this lesson, you will learn how to access and control the colored LEDs on the Circuit Playground."
+      },
+      "seeding_key": {
+        "lesson.key": "Color LEDs",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "lesson-12",
+      "name": "AI Playground",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "lesson-13",
+      "name": "Gen AI Blocks Playground",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "lesson-14",
+      "name": "Test micro:bit lesson",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 14,
+      "properties": {
+        "overview": "This lesson plan is not available on Code.org's website - instead, [click here to access the micro:bit PDFs](https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf)",
+        "student_overview": "Learn how to use micro:bits on Microsoft Makecode!"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
         "lesson_group.key": "",
         "script.name": "csd-playground"
       }
@@ -614,6 +695,96 @@
       "seeding_key": {
         "lesson_activity.key": "e6b2171c-3646-449d-8e8c-7bbb2df34db5",
         "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "2eff2040-dbbf-4e9a-9bce-f5120cd48091",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2eff2040-dbbf-4e9a-9bce-f5120cd48091",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "f97fc7a8-81f5-43a0-bbe2-99fa2580c6dd",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f97fc7a8-81f5-43a0-bbe2-99fa2580c6dd",
+        "lesson.key": "Color LEDs",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "18c60a8a-8966-4779-8e7d-2c48f3feaac7",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "18c60a8a-8966-4779-8e7d-2c48f3feaac7",
+        "lesson.key": "Color LEDs",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "8f053849-1aa6-4a32-a3d9-9d07eabe370a",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8f053849-1aa6-4a32-a3d9-9d07eabe370a",
+        "lesson.key": "Color LEDs",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "552ffd9b-c7b2-4a3e-934c-fde476c9ac00",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "552ffd9b-c7b2-4a3e-934c-fde476c9ac00",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "bf5a65c2-6081-47ce-ba56-2ebdc0885e54",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bf5a65c2-6081-47ce-ba56-2ebdc0885e54",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "6366e51d-234a-4ec4-b784-8c5d22f48a2e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6366e51d-234a-4ec4-b784-8c5d22f48a2e",
+        "lesson.key": "lesson-14",
         "lesson_group.key": "",
         "script.name": "csd-playground"
       }
@@ -1812,6 +1983,213 @@
       "seeding_key": {
         "activity_section.key": "d900e8cd-0704-4c10-b765-16f567905128",
         "lesson_activity.key": "e6b2171c-3646-449d-8e8c-7bbb2df34db5"
+      }
+    },
+    {
+      "key": "4837d466-7593-409f-af3d-6276bb460446",
+      "position": 1,
+      "properties": {
+        "progression_name": "Pulse Survey!"
+      },
+      "seeding_key": {
+        "activity_section.key": "4837d466-7593-409f-af3d-6276bb460446",
+        "lesson_activity.key": "2eff2040-dbbf-4e9a-9bce-f5120cd48091"
+      }
+    },
+    {
+      "key": "a0851826-795b-4bb7-8d68-a2f28b929db7",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _What is a list?  What do you use lists for?_",
+        "name": "Journal"
+      },
+      "seeding_key": {
+        "activity_section.key": "a0851826-795b-4bb7-8d68-a2f28b929db7",
+        "lesson_activity.key": "f97fc7a8-81f5-43a0-bbe2-99fa2580c6dd"
+      }
+    },
+    {
+      "key": "c9d2c3e9-e1da-44be-9efc-f6a05ea8ef28",
+      "position": 2,
+      "properties": {
+        "description": "**Share Out:** Once students have had time to write down their own thoughts, have them share out with the whole class. Work as a class to try to get an understanding of what a list is. "
+      },
+      "seeding_key": {
+        "activity_section.key": "c9d2c3e9-e1da-44be-9efc-f6a05ea8ef28",
+        "lesson_activity.key": "f97fc7a8-81f5-43a0-bbe2-99fa2580c6dd"
+      }
+    },
+    {
+      "key": "88aa9763-ee75-42da-9173-77badbc4a1eb",
+      "position": 3,
+      "properties": {
+        "description": "**Discussion Goal:** While the types of lists students come up with vary from class to class, the two main characteristics of lists that students should understand is that they usually are comprised of items of the same type (tasks to complete, names of people, song titles, grocery items, etc.) and that they have an order.  Some common types of lists include a to-do list, a class roster, a playlist, or a grocery list."
+      },
+      "seeding_key": {
+        "activity_section.key": "88aa9763-ee75-42da-9173-77badbc4a1eb",
+        "lesson_activity.key": "f97fc7a8-81f5-43a0-bbe2-99fa2580c6dd"
+      }
+    },
+    {
+      "key": "e3317abe-e88c-4b4b-9dda-ac47b35765dc",
+      "position": 4,
+      "properties": {
+        "description": "Lists are useful in programming too when we want to access the same type of item in a certain order. For example, the small colored LEDs in a ring around the center of your circuit playground can be represented as a list of LEDs, with a starting LED and an ending LED. Today we’re going to learn how to program these LEDs, and we’ll use a list to access each individual LED.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e3317abe-e88c-4b4b-9dda-ac47b35765dc",
+        "lesson_activity.key": "f97fc7a8-81f5-43a0-bbe2-99fa2580c6dd"
+      }
+    },
+    {
+      "key": "0ebc1984-9661-4996-9d90-adf02a53d510",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transition:** Send students to Code Studio",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0ebc1984-9661-4996-9d90-adf02a53d510",
+        "lesson_activity.key": "18c60a8a-8966-4779-8e7d-2c48f3feaac7"
+      }
+    },
+    {
+      "key": "7b1a9caf-8cc2-4287-b479-f23f02b7f0bf",
+      "position": 2,
+      "properties": {
+        "progression_name": "Predict"
+      },
+      "seeding_key": {
+        "activity_section.key": "7b1a9caf-8cc2-4287-b479-f23f02b7f0bf",
+        "lesson_activity.key": "18c60a8a-8966-4779-8e7d-2c48f3feaac7"
+      }
+    },
+    {
+      "key": "87b7a761-b0db-4cc6-b207-b823dacb6802",
+      "position": 3,
+      "properties": {
+        "description": "**Discussion Goal:** Students may be able to guess the behavior of the code, but they may be slightly off in predicting which lights will light up. There isn't a clear orientation on the circuit playground, but students should be able to \"work backwards\" to determine which lights are which. Students may also notice that the lights start with 0, which is the \"first\" light on the board.\n\n",
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "**List Terminology:** A list in javascript is formally called an **array**. The `colorLEDs[x]` block uses an array to access each LED.  The number inside the [square brackets] is called the **index**. We might say `colorLEDs[0]` represents the LED at index 0, or `colorLEDs[5]` represents the LED at index 5. \n\nArrays are discussed in more depth in a later lesson and students do not need to have a strong understanding of arrays by the end of this lesson. At a bare minimum, students should understand that the “first” LED starts at index 0, and the “last” LED is at index 9."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "87b7a761-b0db-4cc6-b207-b823dacb6802",
+        "lesson_activity.key": "18c60a8a-8966-4779-8e7d-2c48f3feaac7"
+      }
+    },
+    {
+      "key": "7ea8ca6a-2f8d-47a1-a298-e57a640b4360",
+      "position": 4,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "7ea8ca6a-2f8d-47a1-a298-e57a640b4360",
+        "lesson_activity.key": "18c60a8a-8966-4779-8e7d-2c48f3feaac7"
+      }
+    },
+    {
+      "key": "f06b9ba6-24bc-4761-bc19-ecc8c0bcf535",
+      "position": 5,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "f06b9ba6-24bc-4761-bc19-ecc8c0bcf535",
+        "lesson_activity.key": "18c60a8a-8966-4779-8e7d-2c48f3feaac7"
+      }
+    },
+    {
+      "key": "62cf707a-f7f6-48ea-9b7e-fbfebfa054d7",
+      "position": 6,
+      "properties": {
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "62cf707a-f7f6-48ea-9b7e-fbfebfa054d7",
+        "lesson_activity.key": "18c60a8a-8966-4779-8e7d-2c48f3feaac7"
+      }
+    },
+    {
+      "key": "3466e38c-3d3d-4c35-acc1-c65f4260ba18",
+      "position": 7,
+      "properties": {
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "3466e38c-3d3d-4c35-acc1-c65f4260ba18",
+        "lesson_activity.key": "18c60a8a-8966-4779-8e7d-2c48f3feaac7"
+      }
+    },
+    {
+      "key": "cfc20bd5-6574-49a0-b0e6-800591d574f2",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _LEDs are used as output in many devices that we use every day. Try to think of at least one device that uses an LED and describe how it helps make the device more usable or communicates with the user._",
+        "name": "Journal"
+      },
+      "seeding_key": {
+        "activity_section.key": "cfc20bd5-6574-49a0-b0e6-800591d574f2",
+        "lesson_activity.key": "8f053849-1aa6-4a32-a3d9-9d07eabe370a"
+      }
+    },
+    {
+      "key": "66d591ab-e5f5-49bb-9f1c-a1a4df541dd2",
+      "position": 2,
+      "properties": {
+        "description": "**Discussion Goal:** Students should make connections between today’s lesson and devices they use outside of class. Some examples may include:\n- A washing or drying machine that lights up to indicate when clothes are finished\n- A credit card machine that uses different colored LEDs to indicate how a transaction is processing\n- Any device that uses a red light to indicate an error\n- Devices that turn on an LED when in the dark to make the device easier to use\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "66d591ab-e5f5-49bb-9f1c-a1a4df541dd2",
+        "lesson_activity.key": "8f053849-1aa6-4a32-a3d9-9d07eabe370a"
+      }
+    },
+    {
+      "key": "11a80cbd-1ec4-40dd-9eb4-be1958ce36b3",
+      "position": 1,
+      "properties": {
+        "progression_name": "CNN Widget Test"
+      },
+      "seeding_key": {
+        "activity_section.key": "11a80cbd-1ec4-40dd-9eb4-be1958ce36b3",
+        "lesson_activity.key": "552ffd9b-c7b2-4a3e-934c-fde476c9ac00"
+      }
+    },
+    {
+      "key": "248e598c-713a-4c8a-b9bb-27b0e4e72a06",
+      "position": 1,
+      "properties": {
+        "progression_name": "Border Test"
+      },
+      "seeding_key": {
+        "activity_section.key": "248e598c-713a-4c8a-b9bb-27b0e4e72a06",
+        "lesson_activity.key": "bf5a65c2-6081-47ce-ba56-2ebdc0885e54"
+      }
+    },
+    {
+      "key": "2b88c060-f758-4572-b9ba-04cdc501c84f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2b88c060-f758-4572-b9ba-04cdc501c84f",
+        "lesson_activity.key": "6366e51d-234a-4ec4-b784-8c5d22f48a2e"
       }
     }
   ],
@@ -3640,6 +4018,281 @@
       "level_keys": [
         "microbit test v1"
       ]
+    },
+    {
+      "chapter": 74,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "intro-pulse-survey"
+        ],
+        "progression": "Pulse Survey!"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "intro-pulse-survey"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "4837d466-7593-409f-af3d-6276bb460446"
+      },
+      "level_keys": [
+        "intro-pulse-survey"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Color LEDs - P_2023"
+        ],
+        "progression": "Predict"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Color LEDs - P_2023"
+        ],
+        "lesson.key": "Color LEDs",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "7b1a9caf-8cc2-4287-b479-f23f02b7f0bf"
+      },
+      "level_keys": [
+        "CSD U6 - Color LEDs - P_2023"
+      ]
+    },
+    {
+      "chapter": 76,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Color LEDs - SB1_2023"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Color LEDs - SB1_2023"
+        ],
+        "lesson.key": "Color LEDs",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "7ea8ca6a-2f8d-47a1-a298-e57a640b4360"
+      },
+      "level_keys": [
+        "CSD U6 - Color LEDs - SB1_2023"
+      ]
+    },
+    {
+      "chapter": 77,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Color LEDs - SB2_2023"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Color LEDs - SB2_2023"
+        ],
+        "lesson.key": "Color LEDs",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "7ea8ca6a-2f8d-47a1-a298-e57a640b4360"
+      },
+      "level_keys": [
+        "CSD U6 - Color LEDs - SB2_2023"
+      ]
+    },
+    {
+      "chapter": 78,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Color LEDs - SB3_2023"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Color LEDs - SB3_2023"
+        ],
+        "lesson.key": "Color LEDs",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "7ea8ca6a-2f8d-47a1-a298-e57a640b4360"
+      },
+      "level_keys": [
+        "CSD U6 - Color LEDs - SB3_2023"
+      ]
+    },
+    {
+      "chapter": 79,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Color LEDs - SB4_2023"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Color LEDs - SB4_2023"
+        ],
+        "lesson.key": "Color LEDs",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "7ea8ca6a-2f8d-47a1-a298-e57a640b4360"
+      },
+      "level_keys": [
+        "CSD U6 - Color LEDs - SB4_2023"
+      ]
+    },
+    {
+      "chapter": 80,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Color LEDs - Prac_2023"
+        ],
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Color LEDs - Prac_2023"
+        ],
+        "lesson.key": "Color LEDs",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "f06b9ba6-24bc-4761-bc19-ecc8c0bcf535"
+      },
+      "level_keys": [
+        "CSD U6 - Color LEDs - Prac_2023"
+      ]
+    },
+    {
+      "chapter": 81,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Color LEDs - A_2023"
+        ],
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Color LEDs - A_2023"
+        ],
+        "lesson.key": "Color LEDs",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "62cf707a-f7f6-48ea-9b7e-fbfebfa054d7"
+      },
+      "level_keys": [
+        "CSD U6 - Color LEDs - A_2023"
+      ]
+    },
+    {
+      "chapter": 82,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Color LEDs - Chal_2023"
+        ],
+        "progression": "Challenge"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Color LEDs - Chal_2023"
+        ],
+        "lesson.key": "Color LEDs",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "3466e38c-3d3d-4c35-acc1-c65f4260ba18"
+      },
+      "level_keys": [
+        "CSD U6 - Color LEDs - Chal_2023"
+      ]
+    },
+    {
+      "chapter": 83,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "cnn widget test"
+        ],
+        "progression": "CNN Widget Test"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cnn widget test"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "11a80cbd-1ec4-40dd-9eb4-be1958ce36b3"
+      },
+      "level_keys": [
+        "cnn widget test"
+      ]
+    },
+    {
+      "chapter": 84,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Dan - gen block test"
+        ],
+        "progression": "Border Test"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dan - gen block test"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "248e598c-713a-4c8a-b9bb-27b0e4e72a06"
+      },
+      "level_keys": [
+        "Dan - gen block test"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -4518,6 +5171,138 @@
         "script.name": "csd-playground",
         "activity_section.key": "d900e8cd-0704-4c10-b765-16f567905128"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "intro-pulse-survey",
+        "script_level.level_keys": [
+          "intro-pulse-survey"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "4837d466-7593-409f-af3d-6276bb460446"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Color LEDs - P_2023",
+        "script_level.level_keys": [
+          "CSD U6 - Color LEDs - P_2023"
+        ],
+        "lesson.key": "Color LEDs",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "7b1a9caf-8cc2-4287-b479-f23f02b7f0bf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Color LEDs - SB1_2023",
+        "script_level.level_keys": [
+          "CSD U6 - Color LEDs - SB1_2023"
+        ],
+        "lesson.key": "Color LEDs",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "7ea8ca6a-2f8d-47a1-a298-e57a640b4360"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Color LEDs - SB2_2023",
+        "script_level.level_keys": [
+          "CSD U6 - Color LEDs - SB2_2023"
+        ],
+        "lesson.key": "Color LEDs",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "7ea8ca6a-2f8d-47a1-a298-e57a640b4360"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Color LEDs - SB3_2023",
+        "script_level.level_keys": [
+          "CSD U6 - Color LEDs - SB3_2023"
+        ],
+        "lesson.key": "Color LEDs",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "7ea8ca6a-2f8d-47a1-a298-e57a640b4360"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Color LEDs - SB4_2023",
+        "script_level.level_keys": [
+          "CSD U6 - Color LEDs - SB4_2023"
+        ],
+        "lesson.key": "Color LEDs",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "7ea8ca6a-2f8d-47a1-a298-e57a640b4360"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Color LEDs - Prac_2023",
+        "script_level.level_keys": [
+          "CSD U6 - Color LEDs - Prac_2023"
+        ],
+        "lesson.key": "Color LEDs",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "f06b9ba6-24bc-4761-bc19-ecc8c0bcf535"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Color LEDs - A_2023",
+        "script_level.level_keys": [
+          "CSD U6 - Color LEDs - A_2023"
+        ],
+        "lesson.key": "Color LEDs",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "62cf707a-f7f6-48ea-9b7e-fbfebfa054d7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Color LEDs - Chal_2023",
+        "script_level.level_keys": [
+          "CSD U6 - Color LEDs - Chal_2023"
+        ],
+        "lesson.key": "Color LEDs",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "3466e38c-3d3d-4c35-acc1-c65f4260ba18"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cnn widget test",
+        "script_level.level_keys": [
+          "cnn widget test"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "11a80cbd-1ec4-40dd-9eb4-be1958ce36b3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dan - gen block test",
+        "script_level.level_keys": [
+          "Dan - gen block test"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "248e598c-713a-4c8a-b9bb-27b0e4e72a06"
+      }
     }
   ],
   "resources": [
@@ -4556,6 +5341,31 @@
       },
       "seeding_key": {
         "resource.key": "book_cover_1"
+      }
+    },
+    {
+      "name": "Color LEDs",
+      "url": "https://docs.google.com/presentation/d/1nwzgFaeFI12fgnJ5uLn5Sd7Wq0G4cZpw5U7RjZmCFJ4/template/preview",
+      "key": "color_leds",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1nwzgFaeFI12fgnJ5uLn5Sd7Wq0G4cZpw5U7RjZmCFJ4/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "color_leds"
+      }
+    },
+    {
+      "name": "Color Lights",
+      "url": "https://drive.google.com/file/d/1EEZhq_8Ljs77kLQoriJj24frEkFfHIKZ/view?usp=sharing",
+      "key": "color_lights",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "color_lights"
       }
     },
     {
@@ -4761,6 +5571,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Color LEDs",
+        "resource.key": "color_leds"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Color LEDs",
+        "resource.key": "color_lights"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Innovations in Computing",
         "resource.key": "computer_science_is_changing_everything"
       }
@@ -4947,6 +5769,55 @@
   "lessons_programming_expressions": [
     {
       "seeding_key": {
+        "lesson.key": "Color LEDs",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "blink"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Color LEDs",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "color"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Color LEDs",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "colorLeds"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Color LEDs",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "intensity"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Color LEDs",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "on"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Color LEDs",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "pulse"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Color LEDs",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "toggle"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Sprites",
         "programming_environment.name": "gamelab",
         "programming_expression.key": "createSprite"
@@ -4989,6 +5860,16 @@
       "seeding_key": {
         "lesson.key": "Innovations in Computing",
         "objective.key": "43157d11-cd32-45a6-bf01-a58915905177"
+      }
+    },
+    {
+      "key": "740fcd3c-8d5e-4514-b5ec-81956a47a0d3",
+      "properties": {
+        "description": "Use the color LED block to individually control each color LED"
+      },
+      "seeding_key": {
+        "lesson.key": "Color LEDs",
+        "objective.key": "740fcd3c-8d5e-4514-b5ec-81956a47a0d3"
       }
     },
     {
@@ -5043,6 +5924,41 @@
     }
   ],
   "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Color LEDs",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Color LEDs",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Color LEDs",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Color LEDs",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Color LEDs",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-02"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Innovations in Computing",
@@ -5136,6 +6052,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

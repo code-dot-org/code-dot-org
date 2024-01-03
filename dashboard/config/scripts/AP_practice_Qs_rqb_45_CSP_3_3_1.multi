@@ -24,3 +24,5 @@ Learning Objective: **3.3.1** and Essential Knowledge statements: **3.3.1C**
  (D) This option is incorrect. There are "lossless" compression formats that allow files to be restored to their uncompressed state with no loss of information or quality, such as the ZIP file format.
 
 MARKDOWN
+
+allow_multiple_attempts true

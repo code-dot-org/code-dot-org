@@ -9,5 +9,5 @@ export const COLORS = {
   publicKey: color.lighter_teal,
   privateKey: color.lightest_purple,
   publicNumber: color.lightest_yellow,
-  secretNumber: color.lighter_orange
+  secretNumber: color.lighter_orange,
 };

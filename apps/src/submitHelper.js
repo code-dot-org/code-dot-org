@@ -60,7 +60,7 @@ function onPuzzleSubmit() {
   showConfirmationDialog({
     title: commonMsg.submitYourProject(),
     text: commonMsg.submitYourProjectConfirm(),
-    onConfirm: () => onPuzzleComplete(true)
+    onConfirm: () => onPuzzleComplete(true),
   });
 }
 
@@ -71,7 +71,7 @@ function onPuzzleUnsubmit() {
   showConfirmationDialog({
     title: commonMsg.unsubmitYourProject(),
     text: commonMsg.unsubmitYourProjectConfirm(),
-    onConfirm: unsubmit
+    onConfirm: unsubmit,
   });
 }
 
@@ -82,7 +82,7 @@ function unsubmit() {
   $.post(
     unsubmitUrl,
     {_method: 'PUT', user_level: {submitted: false}},
-    function() {
+    function () {
       location.reload();
     }
   );
@@ -120,19 +120,19 @@ function showConfirmationDialog(config) {
 
   const dialog = studioApp.createModalDialog({
     contentDiv: contentDiv,
-    defaultBtnSelector: '#confirm-button'
+    defaultBtnSelector: '#confirm-button',
   });
 
   const cancelButton = buttons.querySelector('#again-button');
   if (cancelButton) {
-    dom.addClickTouchEvent(cancelButton, function() {
+    dom.addClickTouchEvent(cancelButton, function () {
       dialog.hide();
     });
   }
 
   const confirmButton = buttons.querySelector('#confirm-button');
   if (confirmButton) {
-    dom.addClickTouchEvent(confirmButton, function() {
+    dom.addClickTouchEvent(confirmButton, function () {
       if (config.onConfirm) {
         config.onConfirm();
       }

@@ -1,10 +1,8 @@
-/* global jQuery, CDOSounds */
-
 import React from 'react';
 import {LegacyMatchErrorDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
 import {registerGetResult, onAnswerChanged} from './codeStudioLevels';
 
-jQuery.fn.swap = function(b) {
+jQuery.fn.swap = function (b) {
   // method from: http://blog.pengoworks.com/index.cfm/2008/9/24/A-quick-and-dirty-swap-method-for-jQuery
   b = jQuery(b)[0];
   var a = this[0];
@@ -83,7 +81,7 @@ export default class Match {
       response: response,
       result: !wrongAnswer,
       errorDialog: wrongAnswer ? <LegacyMatchErrorDialog /> : null,
-      valid
+      valid,
     };
   }
   getAppName() {
@@ -92,9 +90,7 @@ export default class Match {
   // Disable drag on all answers, including those which have been moved to the
   // .match_answersdest column.
   lockAnswers() {
-    $(this.container)
-      .find('.mainblock li.answer')
-      .draggable('destroy');
+    $(this.container).find('.mainblock li.answer').draggable('destroy');
   }
   getCurrentAnswerFeedback() {
     throw 'getCurrentAnswerFeedback not implemented';
@@ -107,13 +103,11 @@ export default class Match {
   //   * answers are only droppable on slots within the same container
   //   * answers cannot be dragged outside of the container.
   initMatch() {
-    $(this.container)
-      .find('.mainblock .match_answers li.answer')
-      .draggable({
-        revert: 'invalid',
-        stack: '.answer',
-        containment: this.container
-      });
+    $(this.container).find('.mainblock .match_answers li.answer').draggable({
+      revert: 'invalid',
+      stack: '.answer',
+      containment: this.container,
+    });
 
     this.makeInitialAnswersDroppable(this.container);
 
@@ -154,7 +148,7 @@ export default class Match {
             var slot = $(event.target);
             this.moveAnswerToSlot(slot, answer);
           }
-        }
+        },
       });
   }
 
@@ -211,7 +205,7 @@ export default class Match {
 
         // and animate back to its new location
         $(event.target).animate({top: '0px'});
-      }
+      },
     });
   }
 
@@ -221,9 +215,7 @@ export default class Match {
     // Obtain a list of html elements for slots ahead of time, so
     // that we don't misplace anything later when those indices change.
 
-    const slots = $(this.container)
-      .find('.match_slots .emptyslot')
-      .toArray();
+    const slots = $(this.container).find('.match_slots .emptyslot').toArray();
 
     for (let i = 0; i < this.lastAttempt.length; i++) {
       const slot = $(slots[i]);

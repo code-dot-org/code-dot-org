@@ -6,3 +6,4 @@ right 'a little too easy.'
 right 'just about right.'
 right 'a little too difficult.'
 right 'way too difficult.'
+allow_multiple_attempts true

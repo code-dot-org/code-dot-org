@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-01-13 00:17:42 UTC",
+    "serialized_at": "2023-04-21 21:48:05 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -471,6 +471,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-Devices-22-pre-survey"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,

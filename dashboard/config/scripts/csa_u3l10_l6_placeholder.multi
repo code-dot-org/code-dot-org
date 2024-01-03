@@ -20,3 +20,4 @@ wrong '0'
 right '15'
 wrong '12'
 wrong '8'
+allow_multiple_attempts true

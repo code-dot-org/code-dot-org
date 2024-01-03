@@ -3,7 +3,7 @@ import ImagePicker from './ImagePicker';
 
 export default {
   title: 'ImagePicker',
-  component: ImagePicker
+  component: ImagePicker,
 };
 
 // Template
@@ -13,5 +13,5 @@ const Template = args => <ImagePicker {...args} />;
 export const WithWarning = Template.bind({});
 WithWarning.args = {
   showUnderageWarning: true,
-  uploadsEnabled: true
+  uploadsEnabled: true,
 };

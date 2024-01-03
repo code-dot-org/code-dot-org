@@ -8,3 +8,5 @@ markdown <<MARKDOWN
 
 Are you 18 years old (or older)?
 MARKDOWN
+
+allow_multiple_attempts true

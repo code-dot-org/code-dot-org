@@ -6,3 +6,5 @@ wrong 'They want headings to be one color, but paragraphs to be a different colo
 right 'They want some images to float left, and other images to float right.'
 wrong 'They want all the pages on their site to have the same style.'
 wrong 'They want make a special color using RGB codes.'
+
+allow_multiple_attempts true

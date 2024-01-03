@@ -14,13 +14,13 @@ export default connect(
     isAttached: selectors.isAttached(state),
     isPaused: selectors.isPaused(state),
     isEditWhileRun: selectors.isEditWhileRun(state),
-    canRunNext: selectors.canRunNext(state)
+    canRunNext: selectors.canRunNext(state),
   }),
   {
     stepIn: actions.stepIn,
     stepOver: actions.stepOver,
     stepOut: actions.stepOut,
-    togglePause: actions.togglePause
+    togglePause: actions.togglePause,
   }
 )(
   class DebugButtons extends React.Component {
@@ -36,7 +36,7 @@ export default connect(
       isPaused: PropTypes.bool.isRequired,
       isEditWhileRun: PropTypes.bool.isRequired,
       isAttached: PropTypes.bool.isRequired,
-      canRunNext: PropTypes.bool.isRequired
+      canRunNext: PropTypes.bool.isRequired,
     };
 
     // Wrap button actions to add tracking of presses to investigate student use
@@ -97,7 +97,11 @@ export default connect(
               style={{display: canRunNext ? 'none' : 'inline-block'}}
               disabled={!isAttached}
             >
-              <img src="/blockly/media/1x1.gif" className="pause-btn icon21" />
+              <img
+                src="/blockly/media/1x1.gif"
+                className="pause-btn icon21"
+                alt=""
+              />
               {i18n.pause()}
             </button>
             {
@@ -110,9 +114,14 @@ export default connect(
               onClick={this.togglePause}
               style={{display: canRunNext ? 'inline-block' : 'none'}}
             >
+              {
+                // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+                // Verify or update this alt-text as necessary
+              }
               <img
                 src="/blockly/media/1x1.gif"
                 className="continue-btn icon21"
+                alt=""
               />
               {i18n.continue()}
             </button>
@@ -127,9 +136,14 @@ export default connect(
               disabled={!isPaused || !isAttached || isEditWhileRun}
               title={isEditWhileRun ? i18n.editDuringRunMessage() : undefined}
             >
+              {
+                // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+                // Verify or update this alt-text as necessary
+              }
               <img
                 src="/blockly/media/1x1.gif"
                 className="step-over-btn icon21"
+                alt=""
               />
               {i18n.stepOver()}
             </button>
@@ -142,9 +156,14 @@ export default connect(
               disabled={!isPaused || !isAttached || isEditWhileRun}
               title={isEditWhileRun ? i18n.editDuringRunMessage() : undefined}
             >
+              {
+                // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+                // Verify or update this alt-text as necessary
+              }
               <img
                 src="/blockly/media/1x1.gif"
                 className="step-out-btn icon21"
+                alt=""
               />
               {i18n.stepOut()}
             </button>
@@ -159,9 +178,14 @@ export default connect(
               disabled={(!isPaused && isAttached) || isEditWhileRun}
               title={isEditWhileRun ? i18n.editDuringRunMessage() : undefined}
             >
+              {
+                // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+                // Verify or update this alt-text as necessary
+              }
               <img
                 src="/blockly/media/1x1.gif"
                 className="step-in-btn icon21"
+                alt=""
               />
               {i18n.stepIn()}
             </button>

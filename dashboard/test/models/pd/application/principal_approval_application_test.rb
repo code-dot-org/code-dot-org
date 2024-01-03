@@ -2,6 +2,10 @@ require 'test_helper'
 
 module Pd::Application
   class PrincipalApprovalApplicationTest < ActiveSupport::TestCase
+    setup_all do
+      Pd::Application::ApplicationBase.any_instance.stubs(:deliver_email)
+    end
+
     test 'does not require user or status' do
       application = build :pd_principal_approval_application, user: nil, status: nil, approved: 'Yes'
       assert application.valid?
@@ -72,15 +76,13 @@ module Pd::Application
 
     test 'create placeholder and send mail creates a placeholder and sends principal approval' do
       teacher_application = create :pd_teacher_application
-      Pd::Application::TeacherApplicationMailer.expects(:admin_approval).
-        with(instance_of(Pd::Application::TeacherApplication)).
-        returns(mock {|mail| mail.expects(:deliver_now)})
 
       assert_creates Pd::Application::PrincipalApprovalApplication do
         Pd::Application::PrincipalApprovalApplication.create_placeholder_and_send_mail(teacher_application)
       end
 
       assert Pd::Application::PrincipalApprovalApplication.last.placeholder?
+      assert_equal 1, teacher_application.emails.where.not(sent_at: nil).where(email_type: 'admin_approval').count
     end
   end
 end

@@ -28,7 +28,7 @@ const defaultProps = {
   versions: {},
   redirectScriptUrl: null,
   unitCalendarLessons: [],
-  completedLessonNumber: undefined
+  completedLessonNumber: undefined,
 };
 
 const setUp = (overrideProps = {}) => {

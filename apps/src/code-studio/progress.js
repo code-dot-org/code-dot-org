@@ -18,14 +18,14 @@ import {
   setIsAge13Required,
   setLessonExtrasEnabled,
   queryUserProgress as reduxQueryUserProgress,
-  useDbProgress
+  useDbProgress,
 } from './progressRedux';
 import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {pageTypes} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {renderTeacherPanel} from './teacherPanelHelpers';
 import {
   setUserRoleInCourse,
-  CourseRoles
+  CourseRoles,
 } from '@cdo/apps/templates/currentUserRedux';
 
 var progress = module.exports;
@@ -40,7 +40,7 @@ function showDisabledBubblesModal() {
 /**
  * If milestone posts are disabled, show an alert about progress not being tracked.
  */
-progress.showDisabledBubblesAlert = function() {
+progress.showDisabledBubblesAlert = function () {
   const store = getStore();
   const {postMilestoneDisabled} = store.getState().progress;
   if (!postMilestoneDisabled) {
@@ -52,7 +52,7 @@ progress.showDisabledBubblesAlert = function() {
     left: 0,
     right: 0,
     top: 45,
-    zIndex: 1000
+    zIndex: 1000,
   });
   $(document.body).append(div);
 
@@ -78,7 +78,7 @@ progress.showDisabledBubblesAlert = function() {
  *   page level.
  * @returns {Promise<void>}
  */
-progress.generateLessonProgress = function(
+progress.generateLessonProgress = function (
   scriptData,
   lessonGroupData,
   lessonData,
@@ -92,17 +92,18 @@ progress.generateLessonProgress = function(
 ) {
   const store = getStore();
 
-  const {name, disablePostMilestone, age_13_required} = scriptData;
+  const {name, displayName, disablePostMilestone, age_13_required} = scriptData;
 
   initializeStoreWithProgress(
     store,
     {
       name,
+      displayName,
       lessonGroups: lessonGroupData,
       lessons: [lessonData],
       disablePostMilestone,
       age_13_required,
-      id: lessonData.script_id
+      id: lessonData.script_id,
     },
     currentLevelId,
     false,
@@ -173,33 +174,33 @@ function getLevelProgress(signedIn, progressData, scriptName) {
       return Promise.resolve({
         usingDbProgress: true,
         levelResults: extractLevelResults(progressData),
-        unitProgress: progressData.progress
+        unitProgress: progressData.progress,
       });
     case false:
       // User is not signed in, return a resolved promise with progress data
       // retrieved from session storage
       return Promise.resolve({
         usingDbProgress: false,
-        levelResults: clientState.levelProgress(scriptName)
+        levelResults: clientState.levelProgress(scriptName),
       });
     case null:
       // We do not know if user is signed in or not, send a request to the server
       // to find out if the user is signed in and retrieve progress information
       return $.ajax({
         url: `/api/user_progress/${scriptName}`,
-        data: {user_id: clientState.queryParams('user_id')}
+        data: {user_id: clientState.queryParams('user_id')},
       })
         .then(data => {
           if (data.signedIn) {
             return {
               usingDbProgress: true,
               levelResults: extractLevelResults(data),
-              unitProgress: data.progress
+              unitProgress: data.progress,
             };
           } else {
             return {
               usingDbProgress: false,
-              levelResults: clientState.levelProgress(scriptName)
+              levelResults: clientState.levelProgress(scriptName),
             };
           }
         })
@@ -234,7 +235,7 @@ function extractLevelResults(userProgressResponse) {
  * @param {boolean} scriptData.age_13_required
  * Fetch and store progress for the course overview page.
  */
-progress.initCourseProgress = function(scriptData) {
+progress.initCourseProgress = function (scriptData) {
   const store = getStore();
   initializeStoreWithProgress(store, scriptData, null, true);
   queryUserProgress(store, scriptData, null);
@@ -242,7 +243,7 @@ progress.initCourseProgress = function(scriptData) {
 
 /* Set our initial view type (Participant or Instructor) from current user's user_type
  * or our query string. */
-progress.initViewAs = function(store, isSignedInUser, isInstructor) {
+progress.initViewAs = function (store, isSignedInUser, isInstructor) {
   // Default to Participant, unless current user is a teacher
   let initialViewAs = ViewType.Participant;
   if (isInstructor) {
@@ -260,7 +261,7 @@ progress.initViewAs = function(store, isSignedInUser, isInstructor) {
   store.dispatch(setViewType(initialViewAs));
 };
 
-progress.retrieveProgress = function(scriptName, scriptData, currentLevelId) {
+progress.retrieveProgress = function (scriptName, scriptData, currentLevelId) {
   const store = getStore();
   return $.getJSON(`/api/script_structure/${scriptName}`, scriptData => {
     initializeStoreWithProgress(store, scriptData, currentLevelId, true);
@@ -290,8 +291,8 @@ function queryUserProgress(store, scriptData, currentLevelId) {
       );
     }
 
-    const postMilestoneDisabled = store.getState().progress
-      .postMilestoneDisabled;
+    const postMilestoneDisabled =
+      store.getState().progress.postMilestoneDisabled;
     if (data.signedIn && postMilestoneDisabled) {
       showDisabledBubblesModal();
     }
@@ -336,7 +337,8 @@ function initializeStoreWithProgress(
   isFullProgress,
   saveAnswersBeforeNavigation = false,
   isLessonExtras = false,
-  currentPageNumber
+  currentPageNumber,
+  displayName
 ) {
   store.dispatch(
     initProgress({
@@ -348,6 +350,7 @@ function initializeStoreWithProgress(
       peerReviewLessonInfo: scriptData.peerReviewLessonInfo,
       scriptId: scriptData.id,
       scriptName: scriptData.name,
+      scriptDisplayName: scriptData.displayName,
       unitTitle: scriptData.title,
       unitDescription: scriptData.description,
       unitStudentDescription: scriptData.studentDescription,
@@ -355,7 +358,7 @@ function initializeStoreWithProgress(
       courseId: scriptData.course_id,
       isFullProgress: isFullProgress,
       isLessonExtras: isLessonExtras,
-      currentPageNumber: currentPageNumber
+      currentPageNumber: currentPageNumber,
     })
   );
 

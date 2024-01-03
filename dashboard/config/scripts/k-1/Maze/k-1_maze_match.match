@@ -18,3 +18,5 @@ answer '/script_assets/k_1_images/move_blocks/WW.png'
 
 question '/script_assets/k_1_images/maze_images/maze_WSS.png'
 answer '/script_assets/k_1_images/move_blocks/WSS.png'
+
+allow_multiple_attempts true

@@ -3,9 +3,9 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-## What do I do if my student finds a bug and I don't know how to help them?  
+# Task: Locate Additional Debugging Support
 
-# Task: Locate additional debugging support
+## What do I do if my student finds a bug and I don't know how to help them?  
 
 <img src="https://images.code.org/4563813b48357d9c4b7ca30c0ca6896e-image-1628700039166.40.19 AM.png" alt="Screenshot of the teacher forum." style="float: left; height: 300px; clear: both; margin: 0 20px 20px 0;">
 

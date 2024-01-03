@@ -16,3 +16,5 @@ answer 'create a new object with a specific name and set of starting attributes'
 
 question 'compile'
 answer 'to translate a computer program from a high-level language into another language'
+
+allow_multiple_attempts true

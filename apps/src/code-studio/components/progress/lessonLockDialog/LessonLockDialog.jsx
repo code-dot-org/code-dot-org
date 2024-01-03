@@ -13,11 +13,12 @@ import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpe
 import {
   LockStatus,
   useGetLockState,
-  saveLockState
+  saveLockState,
 } from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDataApi';
 import StudentRow from '@cdo/apps/code-studio/components/progress/lessonLockDialog/StudentRow';
 import SkeletonRows from '@cdo/apps/code-studio/components/progress/lessonLockDialog/SkeletonRows';
 import _ from 'lodash';
+import fontConstants from '@cdo/apps/fontConstants';
 
 function LessonLockDialog({
   unitId,
@@ -25,7 +26,7 @@ function LessonLockDialog({
   handleClose,
   selectedSectionId,
   refetchSectionLockStatus,
-  lessonIsHidden
+  lessonIsHidden,
 }) {
   const {loading, serverLockState} = useGetLockState(
     unitId,
@@ -108,7 +109,7 @@ function LessonLockDialog({
         if (json.error) {
           setError(
             i18n.errorSavingLockStatusWithMessage({
-              errorMessage: json.error
+              errorMessage: json.error,
             })
           );
         } else {
@@ -243,7 +244,7 @@ function LessonLockDialog({
   // Main rendering logic
   //
   const responsiveHeight = {
-    maxHeight: window.innerHeight * 0.8 - 100
+    maxHeight: window.innerHeight * 0.8 - 100,
   };
 
   return (
@@ -273,7 +274,7 @@ function LessonLockDialog({
           type="button"
           style={{
             ...progressStyles.blueButton,
-            ...hiddenUnlessSelectedSection
+            ...hiddenUnlessSelectedSection,
           }}
           onClick={handleSave}
           disabled={saving}
@@ -293,7 +294,7 @@ LessonLockDialog.propTypes = {
 
   // Provided by redux
   selectedSectionId: PropTypes.number,
-  refetchSectionLockStatus: PropTypes.func.isRequired
+  refetchSectionLockStatus: PropTypes.func.isRequired,
 };
 
 const styles = {
@@ -306,14 +307,14 @@ const styles = {
     whiteSpace: 'normal',
     // maxHeight provided in render method based on window size
     overflowY: 'scroll',
-    textAlign: 'left'
+    textAlign: 'left',
   },
   title: {
     color: color.teal,
     fontSize: 20,
     fontWeight: 900,
     marginTop: 15,
-    marginBottom: 15
+    marginBottom: 15,
   },
   headerRow: {
     borderWidth: 1,
@@ -322,44 +323,43 @@ const styles = {
     backgroundColor: color.teal,
     padding: 10,
     fontSize: '100%',
-    fontFamily: '"Gotham 4r", sans-serif',
-    fontWeight: 'bold'
+    ...fontConstants['main-font-regular'],
   },
   descriptionText: {
     marginTop: 10,
-    marginBottom: 10
+    marginBottom: 10,
   },
   studentTable: {
-    width: '100%'
+    width: '100%',
   },
   buttonContainer: {
     textAlign: 'right',
-    marginRight: 15
+    marginRight: 15,
   },
   hidden: {
-    display: 'none'
+    display: 'none',
   },
   saveError: {
     color: color.red,
     fontStyle: 'italic',
-    marginRight: 10
+    marginRight: 10,
   },
   hiddenError: {
     color: color.red,
     fontStyle: 'italic',
-    marginBottom: 10
-  }
+    marginBottom: 10,
+  },
 };
 
 export const UnconnectedLessonLockDialog = LessonLockDialog;
 
 export default connect(
   state => ({
-    selectedSectionId: state.teacherSections.selectedSectionId
+    selectedSectionId: state.teacherSections.selectedSectionId,
   }),
   dispatch => ({
     refetchSectionLockStatus(sectionId, lockStatus) {
       dispatch(refetchSectionLockStatus(sectionId, lockStatus));
-    }
+    },
   })
 )(LessonLockDialog);

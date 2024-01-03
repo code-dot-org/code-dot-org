@@ -6,3 +6,5 @@ right '1,000 times bigger'
 wrong '100,000 times bigger'
 wrong '1,000,000 times bigger'
 wrong '1,000,000,000 times bigger'
+
+allow_multiple_attempts true

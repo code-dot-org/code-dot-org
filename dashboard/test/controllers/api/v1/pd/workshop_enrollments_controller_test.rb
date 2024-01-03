@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestCase
+class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCase
   setup do
     @organizer = create :workshop_organizer
     @program_manager = create :program_manager
@@ -68,7 +68,6 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
     assert_equal @unrelated_enrollment.email, response_json[0]['email']
   end
 
-  # TODO: remove this test when workshop_organizer is deprecated
   test 'workshop organizers can see enrollments in their workshops' do
     sign_in @organizer
     get :index, params: {workshop_id: @organizer_workshop.id}
@@ -78,7 +77,6 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
     assert_equal @organizer_workshop_enrollment.email, response_json[0]['email']
   end
 
-  # TODO: remove this test when workshop_organizer is deprecated
   test 'workshop organizers cannot see enrollments in workshops they are not organizing' do
     sign_in @organizer
     get :index, params: {workshop_id: @unrelated_workshop.id}
@@ -145,7 +143,6 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
     refute Pd::Enrollment.exists?(@unrelated_enrollment.id)
   end
 
-  # TODO: remove this test when workshop_organizer is deprecated
   test 'organizers can delete enrollments from their own workshops' do
     sign_in @organizer
 
@@ -154,7 +151,6 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
     refute Pd::Enrollment.exists?(@organizer_workshop_enrollment.id)
   end
 
-  # TODO: remove this test when workshop_organizer is deprecated
   test 'organizers cannot delete enrollments from workshops they are not organizing' do
     sign_in @organizer
 
@@ -242,8 +238,10 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
   end
 
   test 'enrollments can be created' do
+    @teacher = create :teacher
     assert_creates(Pd::Enrollment) do
       post :create, params: {
+        user_id: @teacher.id,
         workshop_id: @workshop.id,
         school_info: school_info_params
       }.merge(enrollment_test_params)
@@ -262,6 +260,7 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
     assert_nil Pd::Enrollment.find_by(pd_workshop_id: workshop.id)
 
     post :create, params: {
+      user_id: @teacher.id,
       workshop_id: workshop.id,
       first_name: "Janine",
       last_name: "Teagues",
@@ -270,12 +269,11 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
       role: "Counselor",
       grades_teaching: ["Kindergarten", "Grade 1", "Grade 2"],
       attended_csf_intro_workshop: "No",
-      csf_course_experience: {"Course A": "none", "Course B": "a few lessons", "Course E": "most lessons"},
+      csf_course_experience: {'Course A': "none", 'Course B': "a few lessons", 'Course E': "most lessons"},
       csf_courses_planned: ["Course E", "Course F"],
       csf_intro_intent: "No",
       years_teaching: "30",
       years_teaching_cs: "10",
-      csf_has_physical_curriculum_guide: "No",
       previous_courses: "I don’t have experience teaching any of these courses",
       replace_existing: "I don’t know",
       csf_intro_other_factors: "I want to learn computer science concepts.",
@@ -288,9 +286,40 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
     refute_nil Pd::Enrollment.find_by(pd_workshop_id: workshop.id)
   end
 
-  test 'creating a duplicate enrollment sends \'duplicate\' workshop enrollment status' do
+  test 'creating an enrollment can find user and submit if enrollment email is alternate email' do
+    teacher = create :teacher
+    sign_in teacher
+
+    application = create :pd_teacher_application, user: teacher, status: 'accepted'
+    app_alt_email = application.form_data_hash['alternateEmail']
+
+    refute_equal teacher.email, app_alt_email
+    assert_equal teacher.email_for_enrollments, app_alt_email
+
     params = enrollment_test_params.merge(
       {
+        user_id: teacher.id,
+        email: app_alt_email,
+        email_confirmation: app_alt_email,
+        workshop_id: @workshop.id,
+        school_info: school_info_params
+      }
+    )
+    post :create, params: params
+
+    assert_response :success
+
+    response_body = JSON.parse(@response.body)
+    assert_equal RESPONSE_MESSAGES[:SUCCESS], response_body["workshop_enrollment_status"]
+    assert response_body["account_exists"]
+    refute_nil Pd::Enrollment.find_by(pd_workshop_id: @workshop.id)
+  end
+
+  test 'creating a duplicate enrollment sends \'duplicate\' workshop enrollment status' do
+    @teacher = create :teacher
+    params = enrollment_test_params.merge(
+      {
+        user_id: @teacher.id,
         first_name: @enrollment.first_name,
         last_name: @enrollment.last_name,
         email: @enrollment.email,
@@ -302,10 +331,10 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
     assert_equal RESPONSE_MESSAGES[:DUPLICATE], JSON.parse(@response.body)["workshop_enrollment_status"]
   end
 
-  # TODO: remove this test when workshop_organizer is deprecated
   test 'creating an enrollment with email match from organizer sends \'own\' workshop enrollment status' do
     params = enrollment_test_params.merge(
       {
+        user_id: @organizer.id,
         full_name: @organizer.name,
         email: @organizer.email,
         confirmation_email: @organizer.email,
@@ -319,6 +348,7 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
   test 'creating an enrollment with email match from program manager organizer sends \'own\' workshop enrollment status' do
     params = enrollment_test_params.merge(
       {
+        user_id: @program_manager.id,
         full_name: @program_manager.name,
         email: @program_manager.email,
         confirmation_email: @program_manager.email,
@@ -332,6 +362,7 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
   test 'creating an enrollment with email match from facilitator sends \'own\' workshop enrollment status' do
     params = enrollment_test_params.merge(
       {
+        user_id: @facilitator.id,
         full_name: @facilitator.name,
         email: @facilitator.email,
         confirmation_email: @facilitator.email,
@@ -343,6 +374,7 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
   end
 
   test 'creating an enrollment with errors sends \'error\' workshop enrollment status' do
+    @teacher = create :teacher
     params = enrollment_test_params.merge(
       {
         first_name: '',
@@ -350,6 +382,7 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
       }
     )
     post :create, params: {
+      user_id: @teacher.id,
       workshop_id: @workshop.id,
       pd_enrollment: params,
       school_info: school_info_params
@@ -429,7 +462,7 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
 
   test 'edit' do
     workshop = create :summer_workshop
-    enrollment = create :pd_enrollment, first_name: 'Rubeus', last_name: 'Hagrid', workshop: workshop
+    enrollment = create :pd_enrollment, first_name: 'Rubeus', last_name: 'Hagrid', email: 'rubeushagrid@code.org', workshop: workshop
 
     admin = create :workshop_admin
     sign_in admin
@@ -437,12 +470,14 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
     post :edit, params: {
       id: enrollment.id,
       first_name: 'Harry',
-      last_name: 'Potter'
+      last_name: 'Potter',
+      email: 'harrypotter@code.org'
     }
 
     enrollment.reload
     assert_equal 'Harry', enrollment.first_name
     assert_equal 'Potter', enrollment.last_name
+    assert_equal 'harrypotter@code.org', enrollment.email
   end
 
   test 'non-workshop-admins cannot move enrollments' do

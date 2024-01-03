@@ -6,15 +6,21 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {
   fakeLesson,
   fakeLevels,
-  createStoreWithHiddenLesson
+  createStoreWithHiddenLesson,
 } from './progressTestHelpers';
+
+export default {
+  title: 'DetailProgressTable',
+  component: DetailProgressTable,
+};
 
 const lessons = [
   fakeLesson('Jigsaw', 1),
   fakeLesson('Maze', 2),
   fakeLesson('Artist', 3),
-  fakeLesson('Something', 4)
+  fakeLesson('Something', 4),
 ];
+
 const levelsByLesson = [
   [
     {
@@ -23,11 +29,11 @@ const levelsByLesson = [
       isLocked: false,
       url: '/step1/level1',
       name: 'First progression',
-      levelNumber: 1
+      levelNumber: 1,
     },
     ...fakeLevels(5, {startLevel: 2}).map(level => ({
       ...level,
-      progression: 'Second Progression'
+      progression: 'Second Progression',
     })),
     {
       id: '40',
@@ -35,47 +41,35 @@ const levelsByLesson = [
       isLocked: false,
       url: '/step3/level1',
       name: 'Last progression',
-      levelNumber: 7
-    }
+      levelNumber: 7,
+    },
   ],
   fakeLevels(2),
   fakeLevels(2),
-  fakeLevels(2)
+  fakeLevels(2),
 ];
 
 const groupedLesson = {lessons, levelsByLesson};
 
-export default storybook => {
-  storybook.storiesOf('Progress/DetailProgressTable', module).addStoryTable([
-    {
-      name: 'simple DetailProgressTable',
-      story: () => (
-        <Provider
-          store={createStoreWithHiddenLesson(ViewType.Instructor, null)}
-        >
-          <DetailProgressTable groupedLesson={groupedLesson} />
-        </Provider>
-      )
-    },
-    {
-      name: 'with hidden lesson as instructor',
-      description: 'lesson 2 should be white with dashed outline',
-      story: () => (
-        <Provider store={createStoreWithHiddenLesson(ViewType.Instructor, '2')}>
-          <DetailProgressTable groupedLesson={groupedLesson} />
-        </Provider>
-      )
-    },
-    {
-      name: 'with hidden lesson as participant',
-      description: 'lesson 2 should be invisible',
-      story: () => (
-        <Provider
-          store={createStoreWithHiddenLesson(ViewType.Participant, '2')}
-        >
-          <DetailProgressTable groupedLesson={groupedLesson} />
-        </Provider>
-      )
-    }
-  ]);
-};
+const Template = store => (
+  <Provider store={store}>
+    <DetailProgressTable groupedLesson={groupedLesson} />
+  </Provider>
+);
+
+export const Simple = Template.bind({});
+Simple.args = createStoreWithHiddenLesson(ViewType.Instructor, null);
+
+// Lesson 2 should be white with dashed outline.
+export const WithHiddenLessonAsInstructor = Template.bind({});
+WithHiddenLessonAsInstructor.args = createStoreWithHiddenLesson(
+  ViewType.Instructor,
+  '2'
+);
+
+// Lesson 2 should be invisible.
+export const WithHiddenLessonAsParticipant = Template.bind({});
+WithHiddenLessonAsParticipant.args = createStoreWithHiddenLesson(
+  ViewType.Participant,
+  '2'
+);

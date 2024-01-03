@@ -1,0 +1,22 @@
+name 'SP-VPL-PostSuvey-22-Q6_aiml'
+title 'Check for understanding'
+description ''
+question 'After completing this professional learning, I have a basic understanding of what my students will learn in the Creating Apps for Devices unit.'
+right 'Strongly disagree'
+right 'Disagree'
+right 'Neutral'
+right 'Agree'
+right 'Strongly agree'
+
+
+markdown <<MARKDOWN
+
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+allow_multiple_attempts true

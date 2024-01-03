@@ -3,6 +3,7 @@ import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import PropTypes from 'prop-types';
 import NewCourseFields from '../NewCourseFields';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
 
 export default function NewUnitForm(props) {
   const [isCourse, setIsCourse] = useState('');
@@ -11,6 +12,7 @@ export default function NewUnitForm(props) {
   const [instructorAudience, setInstructorAudience] = useState('');
   const [participantAudience, setParticipantAudience] = useState('');
   const [instructionType, setInstructionType] = useState('');
+  const [submitDialogOpen, setSubmitDialogOpen] = useState(false);
 
   const getScriptName = () => {
     const name =
@@ -40,11 +42,58 @@ export default function NewUnitForm(props) {
     setFamilyName(familyName);
   };
 
+  const savingDetailsAndButton = React.useCallback(
+    () => (
+      <div className="savingDetailsAndButton">
+        <input name="is_migrated" value={true} type="hidden" />
+        <input name="lesson_groups" value={'[]'} type="hidden" />
+        <br />
+        <button
+          className="btn btn-primary"
+          style={styles.buttonStyle}
+          onClick={() => setSubmitDialogOpen(true)}
+          type="button"
+        >
+          Save Changes
+        </button>
+      </div>
+    ),
+    [setSubmitDialogOpen]
+  );
+
+  const submitDialog = React.useCallback(
+    () => (
+      <BaseDialog
+        isOpen={submitDialogOpen}
+        handleClose={() => setSubmitDialogOpen(false)}
+      >
+        <div className="submitDialog">
+          <p>
+            Are you sure you want to submit this unit? These fields are very
+            difficult to change after submission.
+            <br />
+            It is recommended that you double check each field with another
+            person if you are unsure.
+          </p>
+          <button
+            className="btn btn-submit-dialog"
+            type="submit"
+            style={styles.buttonStyle}
+          >
+            Submit
+          </button>
+        </div>
+      </BaseDialog>
+    ),
+    [submitDialogOpen, setSubmitDialogOpen]
+  );
+
   return (
     <form action="/s" method="post">
       <RailsAuthenticityToken />
       <label>
-        Is this unit going to be in a course with one unit or multiple units?
+        Is this unit going to be a standalone unit or part of a course with
+        multiple units?
         <select
           style={styles.dropdown}
           value={isCourse}
@@ -55,17 +104,25 @@ export default function NewUnitForm(props) {
             {''}
           </option>
           <option key={'multi-unit'} value={'false'}>
-            {'Multiple Units'}
+            {'Part of a course'}
           </option>
           <option key={'single-unit'} value={'true'}>
-            {'Single Unit'}
+            {'Standalone unit'}
           </option>
-          ))}
         </select>
         <HelpTip>
           <p>
-            There are two different types of courses we support. A course with
-            multiple units and a course that is a single unit.
+            Standalone units are designed to exist on their own. Use this when
+            the unit won't appear inside of a Course with /courses/ in the URL.
+          </p>
+          <p>
+            Units inside a course can be found within a Course that has a
+            /courses/ URL and shares resources between other units in that
+            course.
+          </p>
+          <p>
+            For example: How AI Works is a standalone unit, but CSD Unit 1 is
+            contained within the CSD course.
           </p>
         </HelpTip>
       </label>
@@ -137,7 +194,7 @@ export default function NewUnitForm(props) {
                 value={isCourse === 'true'}
                 type="hidden"
               />
-              <SavingDetailsAndButton />
+              {savingDetailsAndButton()}
             </div>
           )}
         </div>
@@ -156,9 +213,10 @@ export default function NewUnitForm(props) {
             </HelpTip>
             <input name="script[name]" />
           </label>
-          <SavingDetailsAndButton />
+          {savingDetailsAndButton()}
         </div>
       )}
+      {submitDialog()}
     </form>
   );
 }
@@ -166,33 +224,16 @@ export default function NewUnitForm(props) {
 NewUnitForm.propTypes = {
   families: PropTypes.arrayOf(PropTypes.string).isRequired,
   versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
-  familiesCourseTypes: PropTypes.object.isRequired
+  familiesCourseTypes: PropTypes.object.isRequired,
 };
 
 const styles = {
   dropdown: {
-    margin: '0 6px'
+    margin: '0 6px',
   },
   buttonStyle: {
     marginLeft: 0,
     marginTop: 10,
-    marginBottom: 20
-  }
+    marginBottom: 20,
+  },
 };
-
-function SavingDetailsAndButton() {
-  return (
-    <div>
-      <input name="is_migrated" value={true} type="hidden" />
-      <input name="lesson_groups" value={'[]'} type="hidden" />
-      <br />
-      <button
-        className="btn btn-primary"
-        type="submit"
-        style={styles.buttonStyle}
-      >
-        Save Changes
-      </button>
-    </div>
-  );
-}

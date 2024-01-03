@@ -22,3 +22,5 @@ System.out.println(conditionRating);
 
 What is printed when this code segment is executed?
 MARKDOWN
+
+allow_multiple_attempts true

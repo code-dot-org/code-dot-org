@@ -7,11 +7,11 @@ import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 describe('Workshop Enrollment School Info', () => {
   const fakeRouter = {
-    createHref() {}
+    createHref() {},
   };
 
   const context = {
-    router: fakeRouter
+    router: fakeRouter,
   };
 
   it('shows Total Attendance column for local summer workshop', () => {
@@ -153,7 +153,7 @@ describe('Workshop Enrollment School Info', () => {
       'Years Teaching',
       'Years Teaching CS',
       'Taught AP Before?',
-      'Planning to teach AP?'
+      'Planning to teach AP?',
     ].forEach(question => {
       expect(
         workshopEnrollmentSchoolInfo

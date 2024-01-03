@@ -3,7 +3,7 @@
 Feature: Personal Project Gallery
 
 Background:
-  Given I create a student named "Project_Creator"
+  Given I create a teacher-associated student named "Project_Creator"
 
 Scenario: Can Toggle to the Public Project Gallery
   Given I am on "http://studio.code.org/projects"
@@ -33,6 +33,7 @@ Scenario: Can Rename a Project
   Then I click selector ".ui-projects-table-dropdown"
   And I press the child number 0 of class ".pop-up-menu-item"
   And I wait until element ".ui-project-rename-input" is visible
+  And I clear the text from element ".ui-project-rename-input"
   And I press keys "New Name" for element ".ui-project-rename-input"
   Then I click selector ".ui-projects-rename-save"
   And I wait until element ".ui-projects-rename-save" is not visible

@@ -16,7 +16,7 @@ var DnsMode = NetSimConstants.DnsMode;
 var EncodingType = NetSimConstants.EncodingType;
 var fakeShard = NetSimTestUtils.fakeShard;
 
-describe('NetSimVisualization', function() {
+describe('NetSimVisualization', function () {
   var testShard,
     alphaNode,
     betaNode,
@@ -29,7 +29,7 @@ describe('NetSimVisualization', function() {
     gammaWire,
     netSimVis;
 
-  beforeEach(function() {
+  beforeEach(function () {
     NetSimTestUtils.initializeGlobalsToDefaultValues();
   });
 
@@ -38,7 +38,7 @@ describe('NetSimVisualization', function() {
    * its SVG element within.
    * @returns {jQuery}
    */
-  var makeRootDiv = function() {
+  var makeRootDiv = function () {
     return $('<div>');
   };
 
@@ -47,9 +47,9 @@ describe('NetSimVisualization', function() {
    * @param {string} displayName
    * @returns {NetSimVizSimulationNode}
    */
-  var makeRemoteClient = function(displayName) {
+  var makeRemoteClient = function (displayName) {
     var newClient;
-    NetSimLocalClientNode.create(testShard, displayName, function(e, n) {
+    NetSimLocalClientNode.create(testShard, displayName, function (e, n) {
       newClient = n;
     });
     assert.isDefined(newClient, 'Failed to create a remote client.');
@@ -60,9 +60,9 @@ describe('NetSimVisualization', function() {
    * Synchronous router creation on shard for test
    * @returns {NetSimVizSimulationNode}
    */
-  var makeRemoteRouter = function() {
+  var makeRemoteRouter = function () {
     var newRouter;
-    NetSimRouterNode.create(testShard, function(e, r) {
+    NetSimRouterNode.create(testShard, function (e, r) {
       newRouter = r;
     });
     assert.isDefined(newRouter, 'Failed to create a remote router.');
@@ -75,15 +75,15 @@ describe('NetSimVisualization', function() {
    * @param {number} remoteNodeID
    * @returns {NetSimVizSimulationWire}
    */
-  var makeRemoteWire = function(localVizNode, remoteVizNode, elements) {
+  var makeRemoteWire = function (localVizNode, remoteVizNode, elements) {
     var newWire;
     NetSimWire.create(
       testShard,
       {
         localNodeID: localVizNode.getCorrespondingEntityId(),
-        remoteNodeID: remoteVizNode.getCorrespondingEntityId()
+        remoteNodeID: remoteVizNode.getCorrespondingEntityId(),
       },
-      function(e, w) {
+      function (e, w) {
         newWire = w;
       }
     );
@@ -94,8 +94,8 @@ describe('NetSimVisualization', function() {
     );
   };
 
-  var getVizNodeByEntityID_ = function(_type, id) {
-    return this.filter(function(element) {
+  var getVizNodeByEntityID_ = function (_type, id) {
+    return this.filter(function (element) {
       return (
         element instanceof NetSimVizNode &&
         element.getCorrespondingEntityId &&
@@ -106,14 +106,14 @@ describe('NetSimVisualization', function() {
 
   function createNode(shard, name) {
     var newNode;
-    NetSimLocalClientNode.create(shard, name, function(e, n) {
+    NetSimLocalClientNode.create(shard, name, function (e, n) {
       newNode = n;
     });
     assert.isDefined(newNode, 'Failed to create a client.');
     return newNode;
   }
 
-  it('does not mismap elements across shard reset', function() {
+  it('does not mismap elements across shard reset', function () {
     // Fake NetSim
     var netsim = new NetSim();
     netSimVis = new NetSimVisualization(makeRootDiv(), netsim.runLoop_);
@@ -157,7 +157,7 @@ describe('NetSimVisualization', function() {
     assert.equal(4, netSimVis.elements_.length);
     assert.equal(
       2,
-      netSimVis.elements_.filter(function(element) {
+      netSimVis.elements_.filter(function (element) {
         return element.isDying();
       }).length
     );
@@ -175,8 +175,8 @@ describe('NetSimVisualization', function() {
     assert(netSimVis.elements_[1].representsEntity(newNode2));
   });
 
-  describe('broadcast mode', function() {
-    beforeEach(function() {
+  describe('broadcast mode', function () {
+    beforeEach(function () {
       NetSimGlobals.getLevelConfig().broadcastMode = true;
 
       testShard = fakeShard();
@@ -203,14 +203,14 @@ describe('NetSimVisualization', function() {
       netSimVis.updateBroadcastModeWires_();
     });
 
-    it('hides the original wires', function() {
+    it('hides the original wires', function () {
       assert.equal(alphaWire.getRoot().css('display'), 'none');
       assert.equal(betaWire.getRoot().css('display'), 'none');
       assert.equal(deltaWire.getRoot().css('display'), 'none');
       assert.equal(gammaWire.getRoot().css('display'), 'none');
     });
 
-    it('creates fake wires', function() {
+    it('creates fake wires', function () {
       // We expect:
       //   4 nodes
       //   4 real but hidden wires
@@ -220,7 +220,7 @@ describe('NetSimVisualization', function() {
       assert.equal(15, netSimVis.elements_.length);
     });
 
-    it('pulls ALL elements to the foreground', function() {
+    it('pulls ALL elements to the foreground', function () {
       netSimVis.pullElementsToForeground();
       var i;
       for (i = 0; i < netSimVis.elements_.length; i++) {
@@ -245,8 +245,8 @@ describe('NetSimVisualization', function() {
    * 2) n -> N <- n
    *    (two nodes trying to connect to a third node)
    */
-  describe('router network with peripheral connection', function() {
-    beforeEach(function() {
+  describe('router network with peripheral connection', function () {
+    beforeEach(function () {
       testShard = fakeShard();
 
       alphaNode = makeRemoteClient('alpha');
@@ -267,7 +267,7 @@ describe('NetSimVisualization', function() {
       netSimVis.localNode = alphaNode;
     });
 
-    it('correctly retrieves all attached wires', function() {
+    it('correctly retrieves all attached wires', function () {
       var alphaWires = netSimVis.getWiresAttachedToNode(alphaNode);
       assert.sameMembers(alphaWires, [alphaWire, deltaWire]);
 
@@ -275,7 +275,7 @@ describe('NetSimVisualization', function() {
       assert.sameMembers(routerWires, [alphaWire, betaWire]);
     });
 
-    it('correctly retrieves all locally attached wires', function() {
+    it('correctly retrieves all locally attached wires', function () {
       var alphaWires = netSimVis.getLocalWiresAttachedToNode(alphaNode);
       assert.sameMembers(alphaWires, [alphaWire]);
 
@@ -283,7 +283,7 @@ describe('NetSimVisualization', function() {
       assert.sameMembers(routerWires, []);
     });
 
-    it('correctly retrieves all reciprocated wires', function() {
+    it('correctly retrieves all reciprocated wires', function () {
       var alphaWires = netSimVis.getReciprocatedWiresAttachedToNode(alphaNode);
       assert.sameMembers(alphaWires, [alphaWire]);
 
@@ -297,7 +297,7 @@ describe('NetSimVisualization', function() {
       assert.sameMembers(routerWires, [alphaWire, betaWire]);
     });
 
-    it('pulls the correct elements to the foreground', function() {
+    it('pulls the correct elements to the foreground', function () {
       netSimVis.pullElementsToForeground();
 
       // Foreground elements
@@ -312,8 +312,8 @@ describe('NetSimVisualization', function() {
       assert.isFalse(deltaWire.isForeground);
     });
 
-    describe('DNS Mode', function() {
-      it('updates all viznodes when DNS mode changes', function() {
+    describe('DNS Mode', function () {
+      it('updates all viznodes when DNS mode changes', function () {
         netSimVis.setDnsMode(DnsMode.AUTOMATIC);
         assert.equal(DnsMode.AUTOMATIC, alphaNode.dnsMode_);
         assert.equal(DnsMode.AUTOMATIC, betaNode.dnsMode_);
@@ -325,12 +325,12 @@ describe('NetSimVisualization', function() {
         assert.equal(DnsMode.MANUAL, deltaNode.dnsMode_);
       });
 
-      it('creates new viznodes with the current DNS mode', function() {
+      it('creates new viznodes with the current DNS mode', function () {
         netSimVis.setDnsMode(DnsMode.AUTOMATIC);
         var newNode = makeRemoteClient('gamma');
 
         // Trigger visualization update, synchronous in tests.
-        testShard.nodeTable.refresh(function() {
+        testShard.nodeTable.refresh(function () {
           netSimVis.onNodeTableChange_();
         });
 
@@ -343,11 +343,11 @@ describe('NetSimVisualization', function() {
       });
     });
 
-    describe('Encodings', function() {
+    describe('Encodings', function () {
       var DECIMAL_ONLY = [EncodingType.DECIMAL];
       var BINARY_AND_ASCII = [EncodingType.BINARY, EncodingType.ASCII];
 
-      it('updates all vizwires when encodings change', function() {
+      it('updates all vizwires when encodings change', function () {
         netSimVis.setEncodings(DECIMAL_ONLY);
         assert.sameMembers(DECIMAL_ONLY, alphaWire.encodings_);
         assert.sameMembers(DECIMAL_ONLY, betaWire.encodings_);
@@ -359,7 +359,7 @@ describe('NetSimVisualization', function() {
         assert.sameMembers(BINARY_AND_ASCII, deltaWire.encodings_);
       });
 
-      it('creates new vizwires with the current encodings', function() {
+      it('creates new vizwires with the current encodings', function () {
         netSimVis.setEncodings(DECIMAL_ONLY);
 
         // Confirm that delta has no reciprocal wires.
@@ -370,7 +370,7 @@ describe('NetSimVisualization', function() {
         makeRemoteWire(deltaNode, router, [deltaNode, router]);
 
         // Trigger visualization update, synchronous in tests.
-        testShard.wireTable.refresh(function() {
+        testShard.wireTable.refresh(function () {
           netSimVis.onWireTableChange_();
         });
 

@@ -36,7 +36,7 @@ const DEFAULT_PROPS = {
   longInstructions: 'long instructions',
   clearFeedback: () => {},
   hideOverlay: () => {},
-  setInstructionsRenderedHeight: () => {}
+  setInstructionsRenderedHeight: () => {},
 };
 
 const setUp = (overrideProps = {}) => {
@@ -50,7 +50,7 @@ describe('InstructionsCsfMiddleCol', () => {
     const wrapper = setUp({
       hasShortAndLongInstructions: true,
       collapsed: true,
-      shortInstructions
+      shortInstructions,
     });
     expect(wrapper.find(Instructions).prop('instructions')).to.equal(
       shortInstructions
@@ -64,7 +64,7 @@ describe('InstructionsCsfMiddleCol', () => {
       hasShortAndLongInstructions: false,
       collapsed: false,
       shortInstructions,
-      longInstructions
+      longInstructions,
     });
     expect(wrapper.find(Instructions).prop('instructions')).to.equal(
       shortInstructions
@@ -76,7 +76,7 @@ describe('InstructionsCsfMiddleCol', () => {
     const wrapper = setUp({
       hasShortAndLongInstructions: true,
       collapsed: false,
-      longInstructions
+      longInstructions,
     });
     expect(wrapper.find(Instructions).prop('instructions')).to.equal(
       longInstructions
@@ -119,7 +119,7 @@ describe('InstructionsCsfMiddleCol', () => {
   it('display InlineHint when hints and not collapsed', () => {
     const hint = {
       hintId: 'hint-id',
-      markdown: 'hint markdown'
+      markdown: 'hint markdown',
     };
     const wrapper = setUp({hints: [hint], collapsed: false});
     expect(wrapper.find(InlineHint)).to.have.length(1);
@@ -128,7 +128,7 @@ describe('InstructionsCsfMiddleCol', () => {
   it('hide InlineHints when hints exist and collapsed', () => {
     const hint = {
       hintId: 'hint-id',
-      markdown: 'hint markdown'
+      markdown: 'hint markdown',
     };
     const wrapper = setUp({hints: [hint], collapsed: true});
     expect(wrapper.find(InlineHint)).to.have.length(0);
@@ -137,7 +137,7 @@ describe('InstructionsCsfMiddleCol', () => {
   it('displays InlineFeedback when feedback and not collapsed', () => {
     const feedback = {
       message: 'some feedback',
-      isFailure: false
+      isFailure: false,
     };
     const wrapper = setUp({feedback, collapsed: false});
     expect(wrapper.find(InlineFeedback)).to.have.length(1);
@@ -146,7 +146,7 @@ describe('InstructionsCsfMiddleCol', () => {
   it('hides InlineFeedback when feedback exists and collapsed', () => {
     const feedback = {
       message: 'some feedback',
-      isFailure: false
+      isFailure: false,
     };
     const wrapper = setUp({feedback, collapsed: true});
     expect(wrapper.find(InlineFeedback)).to.have.length(0);

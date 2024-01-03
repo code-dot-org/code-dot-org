@@ -1,5 +1,14 @@
 import {assert, expect} from '../../util/reconfiguredChai';
 import sinon from 'sinon';
+import pageConstantsReducer, {
+  setPageConstants,
+} from '@cdo/apps/redux/pageConstants';
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux,
+} from '@cdo/apps/redux';
 
 var testUtils = require('../../util/testUtils');
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
@@ -44,9 +53,8 @@ a.third-rule {
 
 const STYLE_CSS_CONTENT = `@font-face {
   font-family: 'FontAwesome';
-  src: url("applab/fontawesome-webfont.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
+  font-display: block;
+  src: url("applab/fa-brands-400.woff2") format('woff2');
 }
 `;
 
@@ -54,13 +62,13 @@ const JQUERY_JS_CONTENT = 'jquery content';
 const PNG_ASSET_CONTENT = 'asset content';
 const FONTAWESOME_CONTENT = 'fontawesome content';
 
-describe('Applab Exporter,', function() {
+describe('Applab Exporter,', function () {
   var server;
   let stashedCookieKey;
 
   testUtils.setExternalGlobals();
 
-  beforeEach(function() {
+  beforeEach(function () {
     server = sinon.fakeServerWithClock.create();
     server.respondWith(
       /\/blockly\/js\/webpack-runtime\.js\?__cb__=\d+/,
@@ -92,7 +100,7 @@ describe('Applab Exporter,', function() {
     );
     server.respondWith(/\/webpack_output\/.*\.png/, PNG_ASSET_CONTENT);
     server.respondWith(
-      /\/fonts\/fontawesome-webfont\.woff2\?__cb__=\d+/,
+      /^https:\/\/dsco.code.org\/assets\/font-awesome-pro/,
       FONTAWESOME_CONTENT
     );
     server.respondWith(
@@ -103,13 +111,13 @@ describe('Applab Exporter,', function() {
 
     assetPrefix.init({
       channel: 'some-channel-id',
-      assetPathPrefix: '/v3/assets/'
+      assetPathPrefix: '/v3/assets/',
     });
 
     assets.listStore.list.returns([
       {filename: 'foo.png'},
       {filename: 'bar.png'},
-      {filename: 'zoo.mp3'}
+      {filename: 'zoo.mp3'},
     ]);
     server.respondWith('/v3/assets/some-channel-id/foo.png', 'foo.png content');
     server.respondWith('/v3/assets/some-channel-id/bar.png', 'bar.png content');
@@ -170,7 +178,7 @@ describe('Applab Exporter,', function() {
         iframeEmbed: false,
         lastAttempt: null,
         submittable: false,
-        widgetMode: false
+        widgetMode: false,
       },
       showUnusedBlocks: true,
       fullWidth: true,
@@ -207,7 +215,7 @@ describe('Applab Exporter,', function() {
       report: {
         fallback_response: null,
         callback: null,
-        sublevelCallback: null
+        sublevelCallback: null,
       },
       isUS: true,
       send_to_phone_url: 'http://localhost-studio.code.org:3000/sms/send',
@@ -222,7 +230,7 @@ describe('Applab Exporter,', function() {
           'Code.org%20uses%20p5.play,%20which%20is%20licensed%20under%20%3Ca%20href=%22http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html%22%3Ethe%20GNU%20LGPL%202.1%3C/a%3E.',
         powered_by_aws: 'Powered by Amazon Web Services',
         trademark:
-          '\u0026copy;%20Code.org,%202017.%20Code.org\u0026reg;,%20the%20CODE%20logo%20and%20Hour%20of%20Code\u0026reg;%20are%20trademarks%20of%20Code.org.'
+          '\u0026copy;%20Code.org,%202017.%20Code.org\u0026reg;,%20the%20CODE%20logo%20and%20Hour%20of%20Code\u0026reg;%20are%20trademarks%20of%20Code.org.',
       },
       teacherMarkdown: null,
       dialog: {
@@ -233,31 +241,39 @@ describe('Applab Exporter,', function() {
         sublevelCallback: null,
         app: 'applab',
         level: 'custom',
-        shouldShowDialog: true
+        shouldShowDialog: true,
       },
-      locale: 'en_us'
+      locale: 'en_us',
     });
 
     stashedCookieKey = window.userNameCookieKey;
     window.userNameCookieKey = 'CoolUser';
+    stubRedux();
+    registerReducers({pageConstants: pageConstantsReducer});
+    getStore().dispatch(
+      setPageConstants({
+        isCurriculumLevel: true,
+      })
+    );
   });
 
-  afterEach(function() {
+  afterEach(function () {
     server.restore();
     window.fetch.restore();
     assetPrefix.init({});
     window.userNameCookieKey = stashedCookieKey;
+    restoreRedux();
   });
 
-  describe("when assets can't be fetched,", function() {
-    beforeEach(function() {
+  describe("when assets can't be fetched,", function () {
+    beforeEach(function () {
       server.respondWith(
         /\/blockly\/js\/en_us\/common_locale\.js\?__cb__=\d+/,
         [500, {}, '']
       );
     });
 
-    it('should reject the promise with an error', function(done) {
+    it('should reject the promise with an error', function (done) {
       server.respondImmediately = true;
       let zipPromise = Exporter.exportAppToZip(
         'my-app',
@@ -270,11 +286,11 @@ describe('Applab Exporter,', function() {
         </div>`
       );
       zipPromise.then(
-        function() {
+        function () {
           assert.fail('Expected zipPromise not to resolve');
           done();
         },
-        function(error) {
+        function (error) {
           assert.equal(error.message, 'failed to fetch assets');
           done();
         }
@@ -282,9 +298,9 @@ describe('Applab Exporter,', function() {
     });
   });
 
-  describe('when exporting,', function() {
+  describe('when exporting,', function () {
     var zipFiles = {};
-    beforeEach(function(done) {
+    beforeEach(function (done) {
       server.respondImmediately = true;
       let zipPromise = Exporter.exportAppToZip(
         'my-app',
@@ -301,19 +317,19 @@ describe('Applab Exporter,', function() {
         </div>`
       );
 
-      zipPromise.then(function(zip) {
+      zipPromise.then(function (zip) {
         var relativePaths = [];
-        zip.forEach(function(relativePath, file) {
+        zip.forEach(function (relativePath, file) {
           relativePaths.push(relativePath);
         });
-        var zipAsyncPromises = relativePaths.map(function(path) {
+        var zipAsyncPromises = relativePaths.map(function (path) {
           var zipObject = zip.file(path);
           if (zipObject) {
             return zipObject.async('string');
           }
         });
-        Promise.all(zipAsyncPromises).then(function(fileContents) {
-          relativePaths.forEach(function(path, index) {
+        Promise.all(zipAsyncPromises).then(function (fileContents) {
+          relativePaths.forEach(function (path, index) {
             zipFiles[path] = fileContents[index];
           });
           done();
@@ -321,7 +337,7 @@ describe('Applab Exporter,', function() {
       }, done);
     });
 
-    describe('will produce a zip file, which', function() {
+    describe('will produce a zip file, which', function () {
       it('should contain a bunch of files', () => {
         const files = Object.keys(zipFiles);
         files.sort();
@@ -337,7 +353,10 @@ describe('Applab Exporter,', function() {
           'my-app/applab/assets/blockly/media/bar.jpg',
           'my-app/applab/assets/blockly/media/foo.png',
           'my-app/applab/assets/blockly/media/third.jpg',
-          'my-app/applab/fontawesome-webfont.woff2',
+          'my-app/applab/fa-brands-400.woff2',
+          'my-app/applab/fa-regular-400.woff2',
+          'my-app/applab/fa-solid-900.woff2',
+          'my-app/applab/fa-v4compatibility.woff2',
           'my-app/assets/',
           'my-app/assets/bar.png',
           'my-app/assets/default.mp3',
@@ -345,11 +364,11 @@ describe('Applab Exporter,', function() {
           'my-app/assets/zoo.mp3',
           'my-app/code.js',
           'my-app/index.html',
-          'my-app/style.css'
+          'my-app/style.css',
         ]);
       });
 
-      it('should contain an applab-api.js file', function() {
+      it('should contain an applab-api.js file', function () {
         assert.property(zipFiles, 'my-app/applab/applab-api.js');
         assert.equal(
           zipFiles['my-app/applab/applab-api.js'],
@@ -357,7 +376,7 @@ describe('Applab Exporter,', function() {
         );
       });
 
-      it('should contain an applab.css file', function() {
+      it('should contain an applab.css file', function () {
         assert.property(zipFiles, 'my-app/applab/applab.css');
         assert.equal(
           zipFiles['my-app/applab/applab.css'],
@@ -394,7 +413,7 @@ describe('Applab Exporter,', function() {
         });
       });
 
-      it('should contain a style.css file', function() {
+      it('should contain a style.css file', function () {
         assert.property(zipFiles, 'my-app/style.css');
       });
 
@@ -402,25 +421,25 @@ describe('Applab Exporter,', function() {
         assert.include(zipFiles['my-app/style.css'], STYLE_CSS_CONTENT);
       });
 
-      it('should contain a code.js file', function() {
+      it('should contain a code.js file', function () {
         assert.property(zipFiles, 'my-app/code.js');
       });
 
-      it('should contain a README.txt file', function() {
+      it('should contain a README.txt file', function () {
         assert.property(zipFiles, 'my-app/README.txt');
       });
 
-      it('should contain the asset files used by the project', function() {
+      it('should contain the asset files used by the project', function () {
         assert.property(zipFiles, 'my-app/assets/foo.png');
         assert.property(zipFiles, 'my-app/assets/bar.png');
         assert.property(zipFiles, 'my-app/assets/zoo.mp3');
       });
 
-      it('should contain the sound library files referenced by the project', function() {
+      it('should contain the sound library files referenced by the project', function () {
         assert.property(zipFiles, 'my-app/assets/default.mp3');
       });
 
-      it('should rewrite urls in html to point to the correct asset files', function() {
+      it('should rewrite urls in html to point to the correct asset files', function () {
         var el = document.createElement('html');
         el.innerHTML = zipFiles['my-app/index.html'];
         assert.equal(
@@ -433,7 +452,7 @@ describe('Applab Exporter,', function() {
         );
       });
 
-      it('should rewrite urls in the code to point to the correct asset files', function() {
+      it('should rewrite urls in the code to point to the correct asset files', function () {
         assert.equal(
           zipFiles['my-app/code.js'],
           'console.log("hello");\nplaySound("assets/zoo.mp3");\nplaySound("assets/default.mp3");'
@@ -554,7 +573,7 @@ describe('Applab Exporter,', function() {
             'hi',
             'd',
             'e',
-            'f'
+            'f',
           ]);
           done();
         }
@@ -571,9 +590,9 @@ describe('getAppOptionsFile helper function', () => {
       channel: 'this should be there',
       level: {
         isK1: 'this should not show up',
-        skin: 'this should show up'
+        skin: 'this should show up',
       },
-      keyMissingFromAllowlist: 'should not show up'
+      keyMissingFromAllowlist: 'should not show up',
     });
     assert.equal(
       getAppOptionsFile(),

@@ -1,0 +1,34 @@
+.carousel-wrapper#tenth-anniversary-testimonials-carousel
+  .carousel
+    .slides
+      .slide
+        %p.quote-text=hoc_s(:tenth_anniversary_testimonials_01)
+        %p.no-margin-bottom Denise Lee <span>•</span> Teacher
+      .slide
+        %p.quote-text=hoc_s(:tenth_anniversary_testimonials_02)
+        %p.no-margin-bottom Diane Berner <span>•</span> Teacher
+      .slide
+        %p.quote-text=hoc_s(:tenth_anniversary_testimonials_03)
+        %p.no-margin-bottom Eileen Lennon <span>•</span> Teacher
+
+  .pagination
+    #tenth-anniversary-testimonials-carousel-pagination
+
+%script{:src=>'/js/jquery.carouFredSel-6.2.1-packed.js'}
+%script{:src=>'/js/jquery.touchSwipe.min.js'}
+:javascript
+  $(document).ready(function() {
+
+    var id = '#tenth-anniversary-testimonials-carousel';
+    // Define the carousel using the ID.
+    $(id + ' .slides').carouFredSel({
+      items : 1,
+      auto  : false,
+      responsive : true,
+      pagination : '#tenth-anniversary-testimonials-carousel-pagination',
+      swipe	: {
+        onTouch : true,
+        onMouse : false
+      },
+    });
+  });

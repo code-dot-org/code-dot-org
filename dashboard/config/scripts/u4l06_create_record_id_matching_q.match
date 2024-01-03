@@ -19,3 +19,5 @@ markdown <<MARKDOWN
 
 ![](https://images.code.org/96256e9e5ee62574a2a36228cc21b394-image-1441997547688.52.01 PM.png)
 MARKDOWN
+
+allow_multiple_attempts true

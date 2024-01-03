@@ -8,11 +8,12 @@ import BaseDialog from '../../templates/BaseDialog';
 import Button from '../../templates/Button';
 import SchoolInfoInputs, {
   SCHOOL_TYPES_HAVING_NCES_SEARCH,
-  SCHOOL_TYPES_HAVING_NAMES
+  SCHOOL_TYPES_HAVING_NAMES,
 } from '../../templates/SchoolInfoInputs';
 import firehoseClient from '../util/firehose';
 import {combineReducers, createStore} from 'redux';
 import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';
+import fontConstants from '@cdo/apps/fontConstants';
 
 const FIREHOSE_EVENTS = {
   // Interstitial is displayed to the teacher.
@@ -22,12 +23,12 @@ const FIREHOSE_EVENTS = {
   // School information saved successfully
   SAVE_SUCCESS: 'save_success',
   // School information failed to save
-  SAVE_FAILURE: 'save_failure'
+  SAVE_FAILURE: 'save_failure',
 };
 
 const store = createStore(
   combineReducers({
-    mapbox: mapboxReducer
+    mapbox: mapboxReducer,
   })
 );
 
@@ -48,11 +49,11 @@ export default class SchoolInfoInterstitial extends React.Component {
         country: PropTypes.string,
         school_type: PropTypes.string,
         school_name: PropTypes.string,
-        full_address: PropTypes.string
+        full_address: PropTypes.string,
       }).isRequired,
-      mapboxAccessToken: PropTypes.string
+      mapboxAccessToken: PropTypes.string,
     }).isRequired,
-    onClose: PropTypes.func.isRequired
+    onClose: PropTypes.func.isRequired,
   };
 
   constructor(props) {
@@ -83,7 +84,7 @@ export default class SchoolInfoInterstitial extends React.Component {
       ncesSchoolId: initialNcesSchoolId,
       showSchoolInfoUnknownError: false,
       errors: {},
-      isOpen: true
+      isOpen: true,
     };
 
     if (this.props.scriptData.mapboxAccessToken) {
@@ -103,8 +104,8 @@ export default class SchoolInfoInterstitial extends React.Component {
         this.state.ncesSchoolId && this.state.ncesSchoolId !== '-1' ? 1 : 0,
       data_json: JSON.stringify({
         isComplete: SchoolInfoInterstitial.isSchoolInfoComplete(this.state),
-        ...data
-      })
+        ...data,
+      }),
     });
   }
 
@@ -142,7 +143,7 @@ export default class SchoolInfoInterstitial extends React.Component {
     // backfilled by records on the server.
     if (ncesSchoolId && ncesSchoolId !== '-1') {
       return {
-        'user[school_info_attributes][school_id]': ncesSchoolId
+        'user[school_info_attributes][school_id]': ncesSchoolId,
       };
     }
 
@@ -150,7 +151,7 @@ export default class SchoolInfoInterstitial extends React.Component {
     if (!country || !schoolType) {
       return {
         'user[school_info_attributes][country]': country,
-        'user[school_info_attributes][school_type]': schoolType
+        'user[school_info_attributes][school_type]': schoolType,
       };
     }
 
@@ -163,7 +164,7 @@ export default class SchoolInfoInterstitial extends React.Component {
       return {
         'user[school_info_attributes][country]': country,
         'user[school_info_attributes][school_type]': schoolType,
-        'user[school_info_attributes][school_id]': ncesSchoolId
+        'user[school_info_attributes][school_id]': ncesSchoolId,
       };
     }
 
@@ -172,14 +173,14 @@ export default class SchoolInfoInterstitial extends React.Component {
         'user[school_info_attributes][country]': country,
         'user[school_info_attributes][school_type]': schoolType,
         'user[school_info_attributes][school_name]': this.state.schoolName,
-        'user[school_info_attributes][full_address]': this.state.schoolLocation
+        'user[school_info_attributes][full_address]': this.state.schoolLocation,
       };
     }
 
     return {
       'user[school_info_attributes][country]': country,
       'user[school_info_attributes][school_type]': schoolType,
-      'user[school_info_attributes][full_address]': this.state.schoolLocation
+      'user[school_info_attributes][full_address]': this.state.schoolLocation,
     };
   }
 
@@ -226,20 +227,20 @@ export default class SchoolInfoInterstitial extends React.Component {
     }
     return {
       errors,
-      isValid
+      isValid,
     };
   };
 
   handleSchoolInfoSubmit = () => {
     const {errors, isValid} = this.validateSubmission();
     this.setState({
-      errors
+      errors,
     });
     if (!isValid) {
       return;
     }
     this.logEvent(FIREHOSE_EVENTS.SUBMIT, {
-      attempt: this.state.showSchoolInfoUnknownError ? 2 : 1
+      attempt: this.state.showSchoolInfoUnknownError ? 2 : 1,
     });
 
     const schoolData = this.buildSchoolData();
@@ -250,19 +251,19 @@ export default class SchoolInfoInterstitial extends React.Component {
       data: {
         _method: 'patch',
         [authTokenName]: authTokenValue,
-        ...schoolData
-      }
+        ...schoolData,
+      },
     })
       .done(() => {
         this.logEvent(FIREHOSE_EVENTS.SAVE_SUCCESS, {
-          attempt: this.state.showSchoolInfoUnknownError ? 2 : 1
+          attempt: this.state.showSchoolInfoUnknownError ? 2 : 1,
         });
 
         this.props.onClose();
       })
       .fail(() => {
         this.logEvent(FIREHOSE_EVENTS.SAVE_FAILURE, {
-          attempt: this.state.showSchoolInfoUnknownError ? 2 : 1
+          attempt: this.state.showSchoolInfoUnknownError ? 2 : 1,
         });
 
         if (!this.state.showSchoolInfoUnknownError) {
@@ -305,7 +306,7 @@ export default class SchoolInfoInterstitial extends React.Component {
     let newValue = event ? event.target.value : '';
     this.setState({
       [field]: newValue,
-      errors: {}
+      errors: {},
     });
   };
 
@@ -365,7 +366,7 @@ export default class SchoolInfoInterstitial extends React.Component {
                 style={styles.button}
                 size="large"
                 text={i18n.save()}
-                color={Button.ButtonColor.orange}
+                color={Button.ButtonColor.brandSecondaryDefault}
                 id="save-button"
               />
             </div>
@@ -380,11 +381,11 @@ const styles = {
   container: {
     margin: 20,
     color: color.charcoal,
-    fontSize: 13
+    fontSize: 13,
   },
   heading: {
     fontSize: 16,
-    fontFamily: "'Gotham 5r', sans-serif"
+    ...fontConstants['main-font-semi-bold'],
   },
   middle: {
     marginTop: 20,
@@ -396,19 +397,19 @@ const styles = {
     borderRightWidth: 0,
     borderLeftWidth: 0,
     borderStyle: 'solid',
-    borderColor: color.lighter_gray
+    borderColor: color.lighter_gray,
   },
   bottom: {
     display: 'flex',
-    justifyContent: 'flex-end'
+    justifyContent: 'flex-end',
   },
   error: {
-    color: color.red
+    color: color.red,
   },
   button: {
     marginLeft: 7,
     marginRight: 7,
     marginTop: 15,
-    marginBottom: 15
-  }
+    marginBottom: 15,
+  },
 };

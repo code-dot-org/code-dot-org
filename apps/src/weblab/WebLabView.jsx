@@ -41,7 +41,7 @@ class WebLabView extends React.Component {
     showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
     dialog: PropTypes.element,
     maxProjectCapacity: PropTypes.number.isRequired,
-    projectSize: PropTypes.number.isRequired
+    projectSize: PropTypes.number.isRequired,
   };
 
   componentDidMount() {
@@ -62,7 +62,7 @@ class WebLabView extends React.Component {
 
     return weblabMsg.currentProjectCapacity({
       currentMegabytes,
-      totalMegabytes
+      totalMegabytes,
     });
   };
 
@@ -75,7 +75,7 @@ class WebLabView extends React.Component {
     let iframeStyles = {
       position: 'absolute',
       width: '100%',
-      height: `calc(100% - ${iframeHeightOffset}px)`
+      height: `calc(100% - ${iframeHeightOffset}px)`,
     };
 
     return (
@@ -156,7 +156,7 @@ class WebLabView extends React.Component {
                           max={maxProjectCapacity}
                           containerStyle={{
                             float: 'left',
-                            height: styleConstants['workspace-headers-height']
+                            height: styleConstants['workspace-headers-height'],
                           }}
                         />
                       )}
@@ -200,6 +200,7 @@ class WebLabView extends React.Component {
               frameBorder="0"
               scrolling="no"
               style={iframeStyles}
+              title={msg.projectTypeWeblab()}
             />
             {!this.props.isProjectLevel && <CompletionButton />}
             {this.props.dialog}
@@ -216,8 +217,8 @@ export default connect(state => ({
   isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
   isInspectorOn: state.inspectorOn,
   isFullScreenPreviewOn: state.fullScreenPreviewOn,
-  showProjectTemplateWorkspaceIcon: !!state.pageConstants
-    .showProjectTemplateWorkspaceIcon,
+  showProjectTemplateWorkspaceIcon:
+    !!state.pageConstants.showProjectTemplateWorkspaceIcon,
   maxProjectCapacity: state.maxProjectCapacity,
-  projectSize: state.projectSize
+  projectSize: state.projectSize,
 }))(WebLabView);

@@ -2,7 +2,7 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import {mount} from 'enzyme';
 import {
-  expect
+  expect,
   // assert
 } from '../../../util/reconfiguredChai';
 import CourseCard from '@cdo/apps/templates/studioHomepages/CourseCard';
@@ -29,7 +29,6 @@ describe('CourseCard', () => {
     expect(
       wrapper.containsMatchingElement(
         <a href={courses[0].link}>
-          <img />
           <div>{courses[0].title}</div>
           <div>
             {courses[0].description}
@@ -55,7 +54,6 @@ describe('CourseCard', () => {
     expect(
       wrapper.containsMatchingElement(
         <a href={courses[0].link}>
-          <img />
           <div>{courses[0].title}</div>
           <div>
             {courses[0].description}

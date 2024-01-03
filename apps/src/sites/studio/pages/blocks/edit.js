@@ -2,21 +2,23 @@ import $ from 'jquery';
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
 import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
 import jsonic from 'jsonic';
-import {parseElement} from '@cdo/apps/xml';
 import {installCustomBlocks} from '@cdo/apps/block_utils';
 import {customInputTypes as spritelabCustomInputTypes} from '@cdo/apps/p5lab/spritelab/blocks';
-import {customInputTypes as dancelabCustomInputTypes} from '@cdo/apps/dance/blocks';
+import {customInputTypes as dancelabCustomInputTypes} from '@cdo/apps/dance/blockly/blocks';
 import {valueTypeTabShapeMap} from '@cdo/apps/p5lab/spritelab/constants';
 import animationList, {
-  setInitialAnimationList
+  setInitialAnimationList,
 } from '@cdo/apps/p5lab/redux/animationList';
 import {getDefaultListMetadata} from '@cdo/apps/assetManagement/animationLibraryApi';
 import {getStore, registerReducers} from '@cdo/apps/redux';
+import {BlocklyVersion} from '@cdo/apps/blockly/constants';
 
 const VALID_COLOR = 'black';
 const INVALID_COLOR = '#d00';
 
 let poolField, nameField, helperEditor, configEditor, validationDiv;
+let hasLintingErrors = false;
+let isValidBlockConfig = false;
 
 $(document).ready(() => {
   registerReducers({animationList: animationList});
@@ -38,7 +40,7 @@ function initializeEditPage(defaultSprites) {
     assetUrl,
     valueTypeTabShapeMap: valueTypeTabShapeMap(Blockly),
     typeHints: true,
-    isBlockEditMode: true
+    isBlockEditMode: true,
   });
 
   const blockConfigElement = document.getElementById('block_config');
@@ -59,32 +61,44 @@ function initializeEditPage(defaultSprites) {
   const helperCodeElement = document.getElementById('block_helper_code');
   configEditor = initializeCodeMirror(blockConfigElement, 'application/json', {
     callback: validateBlockConfig,
-    onUpdateLinting: onUpdateLinting
+    onUpdateLinting: onUpdateLinting,
   });
 
   helperEditor = initializeCodeMirror(helperCodeElement, 'javascript', {
     callback: _ => validateBlockConfig(),
-    onUpdateLinting: onUpdateLinting
+    onUpdateLinting: onUpdateLinting,
   });
   poolField.addEventListener('change', updateBlockPreview);
 
   if (blocks) {
     updateBlockPreview();
+    validateBlockConfig();
   }
+  setSubmitButtonState();
 
-  $('.alert.alert-success')
-    .delay(5000)
-    .fadeOut(1000);
+  $('.alert.alert-success').delay(5000).fadeOut(1000);
 }
 
 function onUpdateLinting(_, errors) {
-  const submitButton = document.querySelector('#block_submit');
   if (errors.length) {
-    submitButton.setAttribute('disabled', 'disabled');
+    hasLintingErrors = true;
   } else {
-    submitButton.removeAttribute('disabled');
+    hasLintingErrors = false;
   }
+  setSubmitButtonState();
 }
+
+const setSubmitButtonState = () => {
+  const disabled = hasLintingErrors || !isValidBlockConfig;
+  ['#block_clone', '#block_submit'].forEach(buttonId => {
+    const button = document.querySelector(buttonId);
+    if (disabled) {
+      button.setAttribute('disabled', 'disabled');
+    } else {
+      button.removeAttribute('disabled');
+    }
+  });
+};
 
 function validateBlockConfig(editor) {
   try {
@@ -92,11 +106,26 @@ function validateBlockConfig(editor) {
       JSON.parse(editor.getValue());
     }
     updateBlockPreview();
+    validateBlockRenders();
+    isValidBlockConfig = true;
     validationDiv.text('Config and helper code appear valid.');
     validationDiv.css('color', VALID_COLOR);
   } catch (err) {
+    isValidBlockConfig = false;
     validationDiv.text(err.toString());
     validationDiv.css('color', INVALID_COLOR);
+  }
+}
+
+// Only apply this validation to pools being rendered in Google Blockly,
+// as those are the pools where we have UI tests and want to prevent
+// levelbuilder changes from causing them to fail
+function validateBlockRenders() {
+  if (
+    Blockly.version === BlocklyVersion.GOOGLE &&
+    Blockly.mainBlockSpace.getAllBlocks().some(block => !!block.unknownBlock)
+  ) {
+    throw 'Blockly is unable to render a block with the given configuration.';
   }
 }
 
@@ -130,19 +159,18 @@ function updateBlockPreview() {
         pool: poolField.value,
         category: 'Custom',
         config: parsedConfig,
-        helperCode: helperEditor && helperEditor.getValue()
-      }
+        helperCode: helperEditor && helperEditor.getValue(),
+      },
     ],
-    customInputTypes
+    customInputTypes,
   });
-  const blocksDom = parseElement(`<block type="${blockName}" />`);
+  const block = `<block type="${blockName}" />`;
   Blockly.mainBlockSpace.clear();
-  Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, blocksDom);
+  Blockly.cdoUtils.loadBlocksToWorkspace(Blockly.mainBlockSpace, block);
   Blockly.addChangeListener(Blockly.mainBlockSpace, onBlockSpaceChange);
 }
 
 function onBlockSpaceChange() {
-  document.getElementById(
-    'code-preview'
-  ).innerText = Blockly.getWorkspaceCode();
+  document.getElementById('code-preview').innerText =
+    Blockly.getWorkspaceCode();
 }

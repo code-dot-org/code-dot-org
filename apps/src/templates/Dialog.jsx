@@ -15,28 +15,28 @@ export const styles = {
     marginTop: -165,
     width: 120,
     height: 200,
-    float: 'left'
+    float: 'left',
   },
   title: {
     fontSize: 27,
     lineHeight: '30px',
     marginBottom: 15,
-    color: color.purple
+    color: color.purple,
   },
   body: {
     fontSize: 24,
     lineHeight: '27px',
     color: color.purple,
-    whiteSpace: 'normal'
+    whiteSpace: 'normal',
   },
   buttons: {
-    marginTop: 10
+    marginTop: 10,
   },
   rightButton: {
-    float: 'right'
+    float: 'right',
   },
   buttonClear: {
-    clear: 'both'
+    clear: 'both',
   },
   footer: {
     borderColor: color.light_gray,
@@ -44,22 +44,22 @@ export const styles = {
     borderWidth: 0,
     borderTopWidth: 2,
     marginTop: 15,
-    paddingTop: 15
-  }
+    paddingTop: 15,
+  },
 };
 
 export function Title({children}) {
   return <h1 style={styles.title}>{children}</h1>;
 }
 Title.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
 export function Body({children}) {
   return <div style={styles.body}>{children}</div>;
 }
 Body.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
 export function Confirm(props) {
@@ -73,7 +73,7 @@ export function Confirm(props) {
 }
 Confirm.propTypes = {
   children: PropTypes.node,
-  type: PropTypes.string
+  type: PropTypes.string,
 };
 
 export function Cancel(props) {
@@ -84,7 +84,7 @@ export function Cancel(props) {
   );
 }
 Cancel.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
 export function Buttons({children}) {
@@ -100,21 +100,21 @@ export function Buttons({children}) {
   );
 }
 Buttons.propTypes = {
-  children: childrenOfType(Cancel, Confirm)
+  children: childrenOfType(Cancel, Confirm),
 };
 
 export function Footer({children}) {
   return <div style={styles.footer}>{children}</div>;
 }
 Footer.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
 export var Icon = Radium(function Icon({src}) {
   return <span style={[styles.icon, {backgroundImage: `url(${src})`}]} />;
 });
 Icon.propTypes = {
-  src: PropTypes.string.isRequired
+  src: PropTypes.string.isRequired,
 };
 
 export default class Dialog extends React.Component {
@@ -129,7 +129,7 @@ export default class Dialog extends React.Component {
     onCancel: whenNoChildOfTypes(Buttons),
     confirmText: whenNoChildOfTypes(Buttons),
     onConfirm: whenNoChildOfTypes(Buttons),
-    confirmType: whenNoChildOfTypes(Buttons)
+    confirmType: whenNoChildOfTypes(Buttons),
   };
 
   handleKeyDown = event => {

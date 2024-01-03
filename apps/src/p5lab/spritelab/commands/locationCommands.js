@@ -8,7 +8,7 @@ export const commands = {
       North: location => ({x: location.x, y: location.y - distance}),
       East: location => ({x: location.x + distance, y: location.y}),
       South: location => ({x: location.x, y: location.y + distance}),
-      West: location => ({x: location.x - distance, y: location.y})
+      West: location => ({x: location.x - distance, y: location.y}),
     };
     if (
       location === undefined ||
@@ -38,5 +38,5 @@ export const commands = {
     let x = Math.floor(Math.random() * (max - min + 1)) + min;
     let y = Math.floor(Math.random() * (max - min + 1)) + min;
     return {x: x, y: y};
-  }
+  },
 };

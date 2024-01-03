@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "csp3-virtual",
-    "serialized_at": "2021-11-22 19:56:35 UTC",
+    "serialized_at": "2023-05-17 14:07:33 UTC",
     "published_state": "preview",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -134,6 +134,7 @@
       "key": "ebe205a1-8127-4035-9088-18945a13673e",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -147,6 +148,7 @@
       "key": "7e616854-565e-4ab7-af3a-bf95921d80a1",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -160,6 +162,7 @@
       "key": "0f8f3093-da5b-4282-9756-f1587f58d09f",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -173,6 +176,7 @@
       "key": "2e3da278-d67f-4a15-8503-251a31c286b7",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -186,6 +190,7 @@
       "key": "54f554a5-ea88-4c8f-962c-46c450971e32",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {
@@ -199,6 +204,7 @@
       "key": "8f55fcdf-55db-40e3-afa2-e86b62912869",
       "position": 1,
       "properties": {
+        "duration": 45,
         "name": "Levels"
       },
       "seeding_key": {

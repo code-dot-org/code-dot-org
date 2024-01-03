@@ -13,7 +13,7 @@ import blankImg from '../../static/common_images/1x1.gif';
 
 export const FinishButton = () => (
   <button type="button" id="finishButton" className="share">
-    <img src="/blockly/media/1x1.gif" />
+    <img src="/blockly/media/1x1.gif" alt="" />
     {msg.finish()}
   </button>
 );
@@ -32,7 +32,7 @@ export const RunButton = Radium(props => (
 RunButton.propTypes = {
   hidden: PropTypes.bool,
   style: PropTypes.object,
-  runButtonText: PropTypes.string
+  runButtonText: PropTypes.string,
 };
 RunButton.displayName = 'RunButton';
 
@@ -45,7 +45,7 @@ export const ResetButton = Radium(props => (
       'launch',
       'blocklyLaunch',
       props.hideText && 'hideText',
-      props.hidden && 'hide'
+      props.hidden && 'hide',
     ])}
     style={[commonStyles.hidden, props.style]}
   >
@@ -56,7 +56,7 @@ export const ResetButton = Radium(props => (
 ResetButton.propTypes = {
   hidden: PropTypes.bool,
   style: PropTypes.object,
-  hideText: PropTypes.bool
+  hideText: PropTypes.bool,
 };
 ResetButton.displayName = 'ResetButton';
 
@@ -97,7 +97,7 @@ UnconnectedGameButtons.propTypes = {
   widgetMode: PropTypes.bool,
   showFinishButton: PropTypes.bool,
   children: PropTypes.node,
-  noRunResetButton: PropTypes.bool
+  noRunResetButton: PropTypes.bool,
 };
 UnconnectedGameButtons.displayName = 'GameButtons';
 
@@ -108,5 +108,5 @@ export default connect(state => ({
   playspacePhoneFrame: state.pageConstants.playspacePhoneFrame,
   nextLevelUrl: state.pageConstants.nextLevelUrl,
   showSkipButton: state.pageConstants.isChallengeLevel,
-  widgetMode: state.pageConstants.widgetMode
+  widgetMode: state.pageConstants.widgetMode,
 }))(UnconnectedGameButtons);

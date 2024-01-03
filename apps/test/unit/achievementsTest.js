@@ -9,7 +9,7 @@ describe('achievements', () => {
       const state = {};
       expect(achievements.puzzleComplete(state)).to.include({
         isAchieved: true,
-        message: 'Puzzle completed!'
+        message: 'Puzzle completed!',
       });
     });
   });
@@ -21,13 +21,13 @@ describe('achievements', () => {
         .callsFake(() => 1);
       const state = {
         pageConstants: {
-          serverLevelId: 123
-        }
+          serverLevelId: 123,
+        },
       };
 
       expect(achievements.usingHints(state)).to.include({
         isAchieved: true,
-        message: 'Using just one hint!'
+        message: 'Using just one hint!',
       });
 
       stub.restore();
@@ -39,13 +39,13 @@ describe('achievements', () => {
         .callsFake(() => 3);
       const state = {
         pageConstants: {
-          serverLevelId: 123
-        }
+          serverLevelId: 123,
+        },
       };
 
       expect(achievements.usingHints(state)).to.include({
         isAchieved: false,
-        message: 'Using hints'
+        message: 'Using hints',
       });
 
       stub.restore();

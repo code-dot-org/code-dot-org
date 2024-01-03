@@ -10,3 +10,4 @@ question 'traverse'
 answer 'to move through an array'
 question '2D array'
 answer 'an array of arrays often represented as a table with rows and columns'
+allow_multiple_attempts true

@@ -20,8 +20,10 @@ describe('ProgrammingEnvironmentEditor', () => {
         description: 'A description of spritelab',
         editorLanguage: 'blockly',
         blockPoolName: 'GamelabJr',
-        categories: [{id: 1, key: 'sprites', name: 'Sprites', color: '#00FF00'}]
-      }
+        categories: [
+          {id: 1, key: 'sprites', name: 'Sprites', color: '#00FF00'},
+        ],
+      },
     };
     fetchSpy = sinon.stub(window, 'fetch');
   });
@@ -84,7 +86,7 @@ describe('ProgrammingEnvironmentEditor', () => {
         ok: true,
         json: () => {
           return {};
-        }
+        },
       })
     );
     const saveBar = wrapper.find('SaveBar');
@@ -106,7 +108,7 @@ describe('ProgrammingEnvironmentEditor', () => {
         'blockPoolName',
         'projectUrl',
         'imageUrl',
-        'categories'
+        'categories',
       ].sort()
     );
     expect(fetchCallBody.title).to.equal('Spritelab');

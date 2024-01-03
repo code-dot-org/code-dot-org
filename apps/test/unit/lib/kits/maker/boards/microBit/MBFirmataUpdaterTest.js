@@ -5,17 +5,17 @@ import {
   MICROBIT_FIRMATA_V1_URL,
   MICROBIT_FIRMATA_V2_URL,
   MICROBIT_IDS_V1,
-  MICROBIT_IDS_V2
+  MICROBIT_IDS_V2,
 } from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 import MBFirmataUpdater from '@cdo/apps/lib/kits/maker/boards/microBit/MBFirmataUpdater';
 import microBitReducer, {
-  setMicroBitFirmataUpdatePercent
+  setMicroBitFirmataUpdatePercent,
 } from '@cdo/apps/lib/kits/maker/microBitRedux';
 import {
   getStore,
   registerReducers,
   stubRedux,
-  restoreRedux
+  restoreRedux,
 } from '@cdo/apps/redux';
 
 describe('MBFirmataUpdater', () => {

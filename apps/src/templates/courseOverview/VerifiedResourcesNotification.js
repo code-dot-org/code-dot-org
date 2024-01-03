@@ -24,5 +24,5 @@ export default class VerifiedResourcesNotification extends PureComponent {
 }
 VerifiedResourcesNotification.propTypes = {
   width: PropTypes.number,
-  inLesson: PropTypes.bool
+  inLesson: PropTypes.bool,
 };

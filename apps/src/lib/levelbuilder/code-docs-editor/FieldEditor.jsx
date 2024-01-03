@@ -35,7 +35,7 @@ export default function FieldEditor({field, updateField}) {
 
 FieldEditor.propTypes = {
   field: PropTypes.object,
-  updateField: PropTypes.func
+  updateField: PropTypes.func,
 };
 
 const styles = {
@@ -46,7 +46,7 @@ const styles = {
     color: '#555',
     border: `1px solid ${color.bootstrap_border_color}`,
     borderRadius: 4,
-    margin: 0
+    margin: 0,
   },
   selectInput: {
     boxSizing: 'border-box',
@@ -55,6 +55,6 @@ const styles = {
     border: `1px solid ${color.bootstrap_border_color}`,
     borderRadius: 4,
     marginLeft: 5,
-    width: 350
-  }
+    width: 350,
+  },
 };

@@ -17,9 +17,9 @@ def sync_submissions
   JOT_FORM_CLASSES.each do |survey_class|
     survey_class.all_form_ids.each do |form_id|
       survey_class.sync_from_jotform form_id
-    rescue => e
+    rescue => exception
       # One form fails to sync doesn't stop other forms from syncing
-      Honeybadger.notify e
+      Honeybadger.notify exception
     end
   end
 end
@@ -27,9 +27,9 @@ end
 def sync_questions
   Pd::SurveyQuestion.all.each do |survey|
     survey.sync_from_jotform
-  rescue => e
+  rescue => exception
     # One form fails to sync doesn't stop other forms from syncing
-    Honeybadger.notify e
+    Honeybadger.notify exception
   end
 end
 

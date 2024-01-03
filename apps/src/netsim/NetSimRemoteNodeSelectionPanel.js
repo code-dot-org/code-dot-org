@@ -51,7 +51,7 @@ var BUTTON_DEBOUNCE_DURATION_MS = 100;
  * @constructor
  * @augments NetSimPanel
  */
-var NetSimRemoteNodeSelectionPanel = (module.exports = function(
+var NetSimRemoteNodeSelectionPanel = (module.exports = function (
   rootDiv,
   options,
   callbacks
@@ -107,7 +107,7 @@ var NetSimRemoteNodeSelectionPanel = (module.exports = function(
   function buttonDebounce(callback) {
     return _.debounce(callback, BUTTON_DEBOUNCE_DURATION_MS, {
       leading: true,
-      trailing: false
+      trailing: false,
     });
   }
 
@@ -153,7 +153,7 @@ var NetSimRemoteNodeSelectionPanel = (module.exports = function(
   NetSimPanel.call(this, rootDiv, {
     className: 'netsim-lobby-panel',
     panelTitle: this.getLocalizedPanelTitle(),
-    userToggleable: false
+    userToggleable: false,
   });
 
   if (options.disableControls) {
@@ -165,11 +165,9 @@ NetSimRemoteNodeSelectionPanel.inherits(NetSimPanel);
 /**
  * Recreate markup within panel body.
  */
-NetSimRemoteNodeSelectionPanel.prototype.render = function() {
+NetSimRemoteNodeSelectionPanel.prototype.render = function () {
   // Clone the reference area (with handlers) before we re-render
-  var referenceArea = $('#reference_area')
-    .first()
-    .clone(true);
+  var referenceArea = $('#reference_area').first().clone(true);
 
   // Create boilerplate panel markup
   NetSimRemoteNodeSelectionPanel.superPrototype.render.call(this);
@@ -185,7 +183,7 @@ NetSimRemoteNodeSelectionPanel.prototype.render = function() {
       incomingConnectionNodes: this.incomingConnectionNodes_,
       remoteNode: this.remoteNode_,
       canSeeTeacherLog:
-        levelConfig.showAddRouterButton && this.canCurrentUserSeeTeacherLog_()
+        levelConfig.showAddRouterButton && this.canCurrentUserSeeTeacherLog_(),
     })
   );
   this.getBody().html(newMarkup);
@@ -193,9 +191,7 @@ NetSimRemoteNodeSelectionPanel.prototype.render = function() {
   this.updateLayout();
 
   // Move the reference area to beneath the instructions
-  this.getBody()
-    .find('.reference-area-placeholder')
-    .append(referenceArea);
+  this.getBody().find('.reference-area-placeholder').append(referenceArea);
 
   // Teachers and admins get a special "Reset Simulation" button
   if (this.canCurrentUserResetShard()) {
@@ -231,7 +227,7 @@ NetSimRemoteNodeSelectionPanel.prototype.render = function() {
  * @returns {function}
  */
 function unlessDisabled(callback) {
-  return function(jQueryEvent) {
+  return function (jQueryEvent) {
     if (!$(jQueryEvent.target).is('[disabled]')) {
       callback(jQueryEvent);
     }
@@ -243,7 +239,7 @@ function unlessDisabled(callback) {
  * resize. Currently just adjusts the height of the lobby table to keep
  * everything onscreen.
  */
-NetSimRemoteNodeSelectionPanel.prototype.updateLayout = function() {
+NetSimRemoteNodeSelectionPanel.prototype.updateLayout = function () {
   var lobbyTable = this.getBody().find('#netsim-scrolling-lobby');
   var container = this.getBody().closest('#netsim-disconnected');
 
@@ -254,12 +250,7 @@ NetSimRemoteNodeSelectionPanel.prototype.updateLayout = function() {
 
     if (overflow > 0) {
       var newHeight = lobbyTable.height() - overflow;
-      var minHeight =
-        1.1 *
-        lobbyTable
-          .find('tr')
-          .first()
-          .outerHeight(true);
+      var minHeight = 1.1 * lobbyTable.find('tr').first().outerHeight(true);
       lobbyTable.height(Math.max(newHeight, minHeight));
     }
   }
@@ -269,7 +260,7 @@ NetSimRemoteNodeSelectionPanel.prototype.updateLayout = function() {
  * @returns {string} a localized panel title appropriate to the current level
  *          configuration
  */
-NetSimRemoteNodeSelectionPanel.prototype.getLocalizedPanelTitle = function() {
+NetSimRemoteNodeSelectionPanel.prototype.getLocalizedPanelTitle = function () {
   var levelConfig = NetSimGlobals.getLevelConfig();
 
   if (levelConfig.canConnectToClients && levelConfig.canConnectToRouters) {
@@ -289,30 +280,31 @@ NetSimRemoteNodeSelectionPanel.prototype.getLocalizedPanelTitle = function() {
  * @returns {string} localized lobby instructions appropriate to the current
  *          level configuration
  */
-NetSimRemoteNodeSelectionPanel.prototype.getLocalizedLobbyInstructions = function() {
-  var levelConfig = NetSimGlobals.getLevelConfig();
+NetSimRemoteNodeSelectionPanel.prototype.getLocalizedLobbyInstructions =
+  function () {
+    var levelConfig = NetSimGlobals.getLevelConfig();
 
-  if (levelConfig.canConnectToClients && levelConfig.canConnectToRouters) {
-    return i18n.lobbyInstructionsGeneral();
-  } else if (levelConfig.canConnectToClients) {
-    return i18n.lobbyInstructionsForPeers();
-  } else if (levelConfig.canConnectToRouters) {
-    if (levelConfig.broadcastMode) {
-      return i18n.lobbyInstructionsForRooms();
+    if (levelConfig.canConnectToClients && levelConfig.canConnectToRouters) {
+      return i18n.lobbyInstructionsGeneral();
+    } else if (levelConfig.canConnectToClients) {
+      return i18n.lobbyInstructionsForPeers();
+    } else if (levelConfig.canConnectToRouters) {
+      if (levelConfig.broadcastMode) {
+        return i18n.lobbyInstructionsForRooms();
+      }
+      return i18n.lobbyInstructionsForRouters();
     }
-    return i18n.lobbyInstructionsForRouters();
-  }
-  return i18n.lobbyInstructionsGeneral();
-};
+    return i18n.lobbyInstructionsGeneral();
+  };
 
 /**
  * @param {Event} jQueryEvent
  * @private
  */
-NetSimRemoteNodeSelectionPanel.prototype.onJoinClick_ = function(jQueryEvent) {
+NetSimRemoteNodeSelectionPanel.prototype.onJoinClick_ = function (jQueryEvent) {
   var target = $(jQueryEvent.target);
   var nodeID = target.data('nodeId');
-  var clickedNode = _.find(this.nodesOnShard_, function(node) {
+  var clickedNode = _.find(this.nodesOnShard_, function (node) {
     return node.entityID === nodeID;
   });
 
@@ -323,7 +315,7 @@ NetSimRemoteNodeSelectionPanel.prototype.onJoinClick_ = function(jQueryEvent) {
  * @param {NetSimNode} node
  * @returns {boolean}
  */
-NetSimRemoteNodeSelectionPanel.prototype.isMyNode = function(node) {
+NetSimRemoteNodeSelectionPanel.prototype.isMyNode = function (node) {
   return this.myNodeID_ === node.entityID;
 };
 
@@ -333,7 +325,7 @@ NetSimRemoteNodeSelectionPanel.prototype.isMyNode = function(node) {
  * @param {NetSimNode} connectionTarget
  * @returns {boolean} whether connection to the target is allowed
  */
-NetSimRemoteNodeSelectionPanel.prototype.canConnectToNode = function(
+NetSimRemoteNodeSelectionPanel.prototype.canConnectToNode = function (
   connectionTarget
 ) {
   // Can't connect to own node
@@ -359,7 +351,7 @@ NetSimRemoteNodeSelectionPanel.prototype.canConnectToNode = function(
 /**
  * @returns {boolean} TRUE if we have an open outgoing connection request.
  */
-NetSimRemoteNodeSelectionPanel.prototype.hasOutgoingRequest = function() {
+NetSimRemoteNodeSelectionPanel.prototype.hasOutgoingRequest = function () {
   return !!this.remoteNode_;
 };
 
@@ -368,7 +360,7 @@ NetSimRemoteNodeSelectionPanel.prototype.hasOutgoingRequest = function() {
  * @param {NetSimNode} node
  * @returns {boolean} TRUE if the given node should show up in the lobby
  */
-NetSimRemoteNodeSelectionPanel.prototype.shouldShowNode = function(node) {
+NetSimRemoteNodeSelectionPanel.prototype.shouldShowNode = function (node) {
   var levelConfig = NetSimGlobals.getLevelConfig();
   var isClient = node.getNodeType() === NodeType.CLIENT;
   var isRouter = node.getNodeType() === NodeType.ROUTER;
@@ -381,7 +373,7 @@ NetSimRemoteNodeSelectionPanel.prototype.shouldShowNode = function(node) {
  * @returns {boolean} TRUE if the current user is the only client node connected
  *          to the shard right now.
  */
-NetSimRemoteNodeSelectionPanel.prototype.isUserAlone = function() {
+NetSimRemoteNodeSelectionPanel.prototype.isUserAlone = function () {
   return !this.nodesOnShard_.some(
     node => !this.isMyNode(node) && node.getNodeType() === NodeType.CLIENT
   );
@@ -390,35 +382,38 @@ NetSimRemoteNodeSelectionPanel.prototype.isUserAlone = function() {
 /**
  * @returns {boolean} TRUE if the current user has a choice of sections to join.
  */
-NetSimRemoteNodeSelectionPanel.prototype.isUserInMultipleSections = function() {
-  return this.isUserInMultipleSections_;
-};
+NetSimRemoteNodeSelectionPanel.prototype.isUserInMultipleSections =
+  function () {
+    return this.isUserInMultipleSections_;
+  };
 
 /**
  * @returns {boolean} TRUE if we expect the current user to have permission to
  *          perform a shard reset.  Only governs display of shard reset button,
  *          actual reset is authenticated on the server.
  */
-NetSimRemoteNodeSelectionPanel.prototype.canCurrentUserResetShard = function() {
-  return NetSimUtils.doesUserOwnShard(this.user_, this.shardID_);
-};
+NetSimRemoteNodeSelectionPanel.prototype.canCurrentUserResetShard =
+  function () {
+    return NetSimUtils.doesUserOwnShard(this.user_, this.shardID_);
+  };
 
-NetSimRemoteNodeSelectionPanel.prototype.canCurrentUserSeeTeacherLog_ = function() {
-  return NetSimUtils.doesUserOwnShard(this.user_, this.shardID_);
-};
+NetSimRemoteNodeSelectionPanel.prototype.canCurrentUserSeeTeacherLog_ =
+  function () {
+    return NetSimUtils.doesUserOwnShard(this.user_, this.shardID_);
+  };
 
 /**
  * @returns {boolean} TRUE if it's currently possible to add a new router.
  *          Drives whether the "Add Router" button should be displayed.
  */
-NetSimRemoteNodeSelectionPanel.prototype.canAddRouter = function() {
+NetSimRemoteNodeSelectionPanel.prototype.canAddRouter = function () {
   var levelConfig = NetSimGlobals.getLevelConfig();
   if (this.hasOutgoingRequest() || !levelConfig.showAddRouterButton) {
     return false;
   }
 
   var routerLimit = NetSimRouterNode.getMaximumRoutersPerShard();
-  var routerCount = this.nodesOnShard_.filter(function(node) {
+  var routerCount = this.nodesOnShard_.filter(function (node) {
     return NodeType.ROUTER === node.getNodeType();
   }).length;
   return routerCount < routerLimit;
@@ -428,18 +423,14 @@ NetSimRemoteNodeSelectionPanel.prototype.canAddRouter = function() {
  * Disable all of the buttons within the panel (does not apply to panel-header
  * buttons!)
  */
-NetSimRemoteNodeSelectionPanel.prototype.disableEverything = function() {
-  this.getBody()
-    .find('.netsim-button')
-    .attr('disabled', true);
+NetSimRemoteNodeSelectionPanel.prototype.disableEverything = function () {
+  this.getBody().find('.netsim-button').attr('disabled', true);
 };
 
 /**
  * Enable all of the buttons within the panel (does not apply to panel-header
  * buttons!)
  */
-NetSimRemoteNodeSelectionPanel.prototype.enableEverything = function() {
-  this.getBody()
-    .find('.netsim-button')
-    .removeAttr('disabled');
+NetSimRemoteNodeSelectionPanel.prototype.enableEverything = function () {
+  this.getBody().find('.netsim-button').removeAttr('disabled');
 };

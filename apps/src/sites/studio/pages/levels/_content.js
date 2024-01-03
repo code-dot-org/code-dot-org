@@ -12,7 +12,7 @@ $(document).ready(() => {
   // Load app specific Blockly blocks. This will enable level creators to write
   // Blockly XML and render the blocks directly in the level text.
   Blockly.assetUrl = assetUrl;
-  Blockly.Css.inject(document);
+  Blockly.cdoUtils.injectCss(document);
   // Install the common Blockly blocks
   commonBlocks.install(window.Blockly, {});
   if (hasScriptData('script[data-associatedBlocks]')) {
@@ -30,20 +30,20 @@ $(document).ready(() => {
       }
       appBlocks.install(window.Blockly, {
         skin,
-        app: associatedBlocks
+        app: associatedBlocks,
       });
     } catch (error) {
       console.error(
         `Unable to load blockly blocks for ${associatedBlocks}: ${error}`
       );
       logToCloud.addPageAction(logToCloud.PageAction.BlockLoadFailed, {
-        associatedBlocks
+        associatedBlocks,
       });
     }
   }
 
   // Render Markdown
-  $('.content-level > .markdown-container').each(function() {
+  $('.content-level > .markdown-container').each(function () {
     const container = this;
     if (!container.dataset.markdown) {
       return;
@@ -52,7 +52,7 @@ $(document).ready(() => {
     ReactDom.render(
       React.createElement(SafeMarkdown, container.dataset, null),
       container,
-      function() {
+      function () {
         // After the Markdown is rendered, render any Blockly blocks defined in
         // <xml> blocks.
         convertXmlToBlockly(container);

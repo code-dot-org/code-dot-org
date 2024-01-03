@@ -7,7 +7,7 @@ import sectionStandardsProgress, {
   getNumberLessonsCompleted,
   getPluggedLessonCompletionStatus,
   getUnpluggedLessonCompletionStatus,
-  getLessonSelectionStatus
+  getLessonSelectionStatus,
 } from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
 import {
   lessonId,
@@ -18,7 +18,7 @@ import {
   stateForTeacherMarkedCompletedLesson,
   stateForCompletedLesson,
   stateForPartiallyCompletedLesson,
-  fakeState
+  fakeState,
 } from '@cdo/apps/templates/sectionProgress/standards/standardsTestHelpers';
 
 describe('sectionStandardsProgressRedux', () => {
@@ -71,7 +71,7 @@ describe('sectionStandardsProgressRedux', () => {
             numStudents: 4,
             numStudentsCompleted: 0,
             unplugged: false,
-            url: 'https://curriculum.code.org/csf-19/coursea/2'
+            url: 'https://curriculum.code.org/csf-19/coursea/2',
           },
           {
             completed: false,
@@ -81,8 +81,8 @@ describe('sectionStandardsProgressRedux', () => {
             numStudents: 4,
             numStudentsCompleted: 0,
             unplugged: true,
-            url: 'https://curriculum.code.org/csf-19/coursea/3'
-          }
+            url: 'https://curriculum.code.org/csf-19/coursea/3',
+          },
         ],
         16: [
           {
@@ -93,7 +93,7 @@ describe('sectionStandardsProgressRedux', () => {
             numStudents: 4,
             numStudentsCompleted: 0,
             unplugged: true,
-            url: 'https://curriculum.code.org/csf-19/coursea/1'
+            url: 'https://curriculum.code.org/csf-19/coursea/1',
           },
           {
             completed: false,
@@ -103,8 +103,8 @@ describe('sectionStandardsProgressRedux', () => {
             numStudents: 4,
             numStudentsCompleted: 0,
             unplugged: false,
-            url: 'https://curriculum.code.org/csf-19/coursea/2'
-          }
+            url: 'https://curriculum.code.org/csf-19/coursea/2',
+          },
         ],
         17: [
           {
@@ -115,7 +115,7 @@ describe('sectionStandardsProgressRedux', () => {
             numStudents: 4,
             numStudentsCompleted: 0,
             unplugged: true,
-            url: 'https://curriculum.code.org/csf-19/coursea/1'
+            url: 'https://curriculum.code.org/csf-19/coursea/1',
           },
           {
             completed: false,
@@ -125,9 +125,9 @@ describe('sectionStandardsProgressRedux', () => {
             numStudents: 4,
             numStudentsCompleted: 0,
             unplugged: false,
-            url: 'https://curriculum.code.org/csf-19/coursea/2'
-          }
-        ]
+            url: 'https://curriculum.code.org/csf-19/coursea/2',
+          },
+        ],
       });
     });
 
@@ -144,7 +144,7 @@ describe('sectionStandardsProgressRedux', () => {
             numStudents: 4,
             numStudentsCompleted: 4,
             unplugged: false,
-            url: 'https://curriculum.code.org/csf-19/coursea/2'
+            url: 'https://curriculum.code.org/csf-19/coursea/2',
           },
           {
             completed: false,
@@ -154,8 +154,8 @@ describe('sectionStandardsProgressRedux', () => {
             numStudents: 4,
             numStudentsCompleted: 0,
             unplugged: true,
-            url: 'https://curriculum.code.org/csf-19/coursea/3'
-          }
+            url: 'https://curriculum.code.org/csf-19/coursea/3',
+          },
         ],
         16: [
           {
@@ -166,7 +166,7 @@ describe('sectionStandardsProgressRedux', () => {
             numStudents: 4,
             numStudentsCompleted: 0,
             unplugged: true,
-            url: 'https://curriculum.code.org/csf-19/coursea/1'
+            url: 'https://curriculum.code.org/csf-19/coursea/1',
           },
           {
             completed: true,
@@ -176,8 +176,8 @@ describe('sectionStandardsProgressRedux', () => {
             numStudents: 4,
             numStudentsCompleted: 4,
             unplugged: false,
-            url: 'https://curriculum.code.org/csf-19/coursea/2'
-          }
+            url: 'https://curriculum.code.org/csf-19/coursea/2',
+          },
         ],
         17: [
           {
@@ -188,7 +188,7 @@ describe('sectionStandardsProgressRedux', () => {
             numStudents: 4,
             numStudentsCompleted: 0,
             unplugged: true,
-            url: 'https://curriculum.code.org/csf-19/coursea/1'
+            url: 'https://curriculum.code.org/csf-19/coursea/1',
           },
           {
             completed: true,
@@ -198,9 +198,9 @@ describe('sectionStandardsProgressRedux', () => {
             numStudents: 4,
             numStudentsCompleted: 4,
             unplugged: false,
-            url: 'https://curriculum.code.org/csf-19/coursea/2'
-          }
-        ]
+            url: 'https://curriculum.code.org/csf-19/coursea/2',
+          },
+        ],
       });
     });
 
@@ -215,7 +215,7 @@ describe('sectionStandardsProgressRedux', () => {
             numStudents: 4,
             numStudentsCompleted: 4,
             unplugged: false,
-            url: 'https://curriculum.code.org/csf-19/coursea/2'
+            url: 'https://curriculum.code.org/csf-19/coursea/2',
           },
           {
             completed: false,
@@ -225,8 +225,8 @@ describe('sectionStandardsProgressRedux', () => {
             numStudents: 4,
             numStudentsCompleted: 0,
             unplugged: true,
-            url: 'https://curriculum.code.org/csf-19/coursea/3'
-          }
+            url: 'https://curriculum.code.org/csf-19/coursea/3',
+          },
         ],
         16: [
           {
@@ -237,7 +237,7 @@ describe('sectionStandardsProgressRedux', () => {
             numStudents: 4,
             numStudentsCompleted: 1,
             unplugged: true,
-            url: 'https://curriculum.code.org/csf-19/coursea/1'
+            url: 'https://curriculum.code.org/csf-19/coursea/1',
           },
           {
             completed: true,
@@ -247,8 +247,8 @@ describe('sectionStandardsProgressRedux', () => {
             numStudents: 4,
             numStudentsCompleted: 4,
             unplugged: false,
-            url: 'https://curriculum.code.org/csf-19/coursea/2'
-          }
+            url: 'https://curriculum.code.org/csf-19/coursea/2',
+          },
         ],
         17: [
           {
@@ -259,7 +259,7 @@ describe('sectionStandardsProgressRedux', () => {
             numStudents: 4,
             numStudentsCompleted: 1,
             unplugged: true,
-            url: 'https://curriculum.code.org/csf-19/coursea/1'
+            url: 'https://curriculum.code.org/csf-19/coursea/1',
           },
           {
             completed: true,
@@ -269,9 +269,9 @@ describe('sectionStandardsProgressRedux', () => {
             numStudents: 4,
             numStudentsCompleted: 4,
             unplugged: false,
-            url: 'https://curriculum.code.org/csf-19/coursea/2'
-          }
-        ]
+            url: 'https://curriculum.code.org/csf-19/coursea/2',
+          },
+        ],
       });
     });
   });
@@ -285,7 +285,7 @@ describe('sectionStandardsProgressRedux', () => {
           number: 1,
           url: 'https://curriculum.code.org/csf-19/coursea/1',
           completed: false,
-          inProgress: false
+          inProgress: false,
         },
         {
           id: 664,
@@ -293,8 +293,8 @@ describe('sectionStandardsProgressRedux', () => {
           number: 3,
           url: 'https://curriculum.code.org/csf-19/coursea/3',
           completed: false,
-          inProgress: false
-        }
+          inProgress: false,
+        },
       ]);
     });
   });
@@ -306,7 +306,7 @@ describe('sectionStandardsProgressRedux', () => {
       ).to.deep.equal({
         completed: false,
         inProgress: false,
-        numStudentsCompleted: 0
+        numStudentsCompleted: 0,
       });
     });
 
@@ -320,7 +320,7 @@ describe('sectionStandardsProgressRedux', () => {
       ).to.deep.equal({
         completed: false,
         inProgress: false,
-        numStudentsCompleted: 0
+        numStudentsCompleted: 0,
       });
     });
 
@@ -334,7 +334,7 @@ describe('sectionStandardsProgressRedux', () => {
       ).to.deep.equal({
         completed: true,
         inProgress: false,
-        numStudentsCompleted: 1
+        numStudentsCompleted: 1,
       });
     });
   });
@@ -346,7 +346,7 @@ describe('sectionStandardsProgressRedux', () => {
       ).to.deep.equal({
         completed: false,
         inProgress: false,
-        numStudentsCompleted: 0
+        numStudentsCompleted: 0,
       });
     });
 
@@ -359,7 +359,7 @@ describe('sectionStandardsProgressRedux', () => {
       ).to.deep.equal({
         completed: false,
         inProgress: true,
-        numStudentsCompleted: 2
+        numStudentsCompleted: 2,
       });
     });
 
@@ -369,7 +369,7 @@ describe('sectionStandardsProgressRedux', () => {
       ).to.deep.equal({
         completed: true,
         inProgress: true,
-        numStudentsCompleted: 4
+        numStudentsCompleted: 4,
       });
     });
   });

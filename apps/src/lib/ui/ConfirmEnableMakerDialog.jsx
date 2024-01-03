@@ -8,60 +8,43 @@ import Dialog, {
   Body,
   Footer,
   Confirm,
-  Cancel
+  Cancel,
 } from '../../templates/Dialog';
-import experiments from '@cdo/apps/util/experiments';
 
 const style = {
   description: {
-    fontSize: 'smaller'
+    fontSize: 'smaller',
   },
   warning: {
     color: color.red,
     fontSize: 'smaller',
     fontStyle: 'italic',
     textAlign: 'center',
-    padding: 10
+    padding: 10,
   },
   footerButtons: {
     display: 'flex',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   buttonGroupSpacing: {
-    marginLeft: 15
-  }
+    marginLeft: 15,
+  },
 };
 
 export class ConfirmEnableMakerDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     handleConfirm: PropTypes.func.isRequired,
-    handleCancel: PropTypes.func.isRequired
+    handleCancel: PropTypes.func.isRequired,
   };
-
-  state = {
-    microBitExperimentEnabled: false
-  };
-
-  componentDidMount() {
-    this.setState({
-      microBitExperimentEnabled: experiments.isEnabled('microbit')
-    });
-  }
 
   render() {
     return (
       <Dialog
         isOpen={this.props.isOpen}
-        confirmText={this.state.microBitExperimentEnabled ? null : msg.enable()}
-        onConfirm={
-          this.state.microBitExperimentEnabled
-            ? null
-            : () => this.props.handleConfirm('circuitPlayground')
-        }
-        onCancel={
-          this.state.microBitExperimentEnabled ? null : this.props.handleCancel
-        }
+        confirmText={null}
+        onConfirm={null}
+        onCancel={null}
         handleClose={this.props.handleCancel}
       >
         <Title>{msg.enableMakerDialogTitle()}</Title>
@@ -72,33 +55,24 @@ export class ConfirmEnableMakerDialog extends Component {
               {msg.enableMakerDialogSetupPageLinkText()}
             </a>
           </div>
-          {this.state.microBitExperimentEnabled ? (
-            <div style={style.warning}>{msg.enableMakerDialogWarning()}</div>
-          ) : (
-            <div style={style.warning}>
-              {msg.enableMakerDialogWarningOnlyCP()}
-            </div>
-          )}
-          {this.state.microBitExperimentEnabled && (
-            <Footer key="footer">
-              <div style={style.footerButtons}>
-                <Cancel onClick={this.props.handleCancel} />
-                <div>
-                  <Confirm onClick={() => this.props.handleConfirm('microbit')}>
-                    {msg.useMicroBit()}
-                  </Confirm>
-                  <Confirm
-                    onClick={() =>
-                      this.props.handleConfirm('circuitPlayground')
-                    }
-                    style={style.buttonGroupSpacing}
-                  >
-                    {msg.useCircuitPlayground()}
-                  </Confirm>
-                </div>
+          <div style={style.warning}>{msg.enableMakerDialogWarning()}</div>
+
+          <Footer key="footer">
+            <div style={style.footerButtons}>
+              <Cancel onClick={this.props.handleCancel} />
+              <div>
+                <Confirm onClick={() => this.props.handleConfirm('microbit')}>
+                  {msg.useMicroBit()}
+                </Confirm>
+                <Confirm
+                  onClick={() => this.props.handleConfirm('circuitPlayground')}
+                  style={style.buttonGroupSpacing}
+                >
+                  {msg.useCircuitPlayground()}
+                </Confirm>
               </div>
-            </Footer>
-          )}
+            </div>
+          </Footer>
         </Body>
       </Dialog>
     );

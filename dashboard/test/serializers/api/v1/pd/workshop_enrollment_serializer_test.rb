@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Api::V1::Pd::WorkshopEnrollmentSerializerTest < ::ActionController::TestCase
+class Api::V1::Pd::WorkshopEnrollmentSerializerTest < ActionController::TestCase
   include Pd::Application::ActiveApplicationModels
   include Pd::EnrollmentConstants
 
@@ -9,7 +9,7 @@ class Api::V1::Pd::WorkshopEnrollmentSerializerTest < ::ActionController::TestCa
     expected_attributes = [
       :id, :first_name, :last_name, :email, :alternate_email, :application_id, :district_name, :school, :role,
       :grades_teaching, :attended_csf_intro_workshop, :csf_course_experience,
-      :csf_courses_planned, :csf_has_physical_curriculum_guide, :user_id, :attended,
+      :csf_courses_planned, :user_id, :attended,
       :pre_workshop_survey, :previous_courses, :replace_existing, :attendances,
       :scholarship_status, :enrolled_date, :years_teaching, :years_teaching_cs,
       :taught_ap_before, :planning_to_teach_ap

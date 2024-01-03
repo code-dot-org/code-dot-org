@@ -91,6 +91,9 @@ export const commands = {
   draggableFunc() {
     return spriteArg => {
       let sprite = this.getSpriteArray(spriteArg)[0];
+      if (!sprite) {
+        return;
+      }
       const allSprites = this.getSpriteArray({costume: 'all'});
       if (this.p5.mousePressedOver(sprite) && this.p5.mouseWentDown()) {
         const topOtherSprite = Math.max(
@@ -208,7 +211,7 @@ export const commands = {
       actionCommands.moveToward.apply(this, [
         spriteArg,
         5,
-        closestTarget.position
+        closestTarget.position,
       ]);
     };
   },
@@ -221,5 +224,5 @@ export const commands = {
   removeBehaviorSimple(spriteArg, behavior) {
     let sprites = this.getSpriteArray(spriteArg);
     sprites.forEach(sprite => this.removeBehavior(sprite, behavior));
-  }
+  },
 };

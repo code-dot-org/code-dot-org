@@ -5,7 +5,7 @@ import * as dialogHelper from '../code-studio/levels/dialogHelper';
 
 export default class ContinueButton extends React.Component {
   state = {
-    submitting: false
+    submitting: false,
   };
 
   onClick = () => {

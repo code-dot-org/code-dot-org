@@ -10,10 +10,10 @@ export class CdoFieldImageDropdown extends FieldGridDropdown {
     // assuming that the number of options usually won't change that drastically,
     // so the number of columns can probably stay the same.
     const initialOptions = fixMenuGenerator(menuGenerator, width, height);
-    const numColumns =
-      initialOptions.length <= 7
-        ? 1
-        : Math.floor(Math.sqrt(initialOptions.length));
+    const numColumns = Math.max(
+      4,
+      Math.floor(Math.sqrt(initialOptions.length))
+    );
 
     super(
       () => fixMenuGenerator(menuGenerator, width, height),
@@ -111,7 +111,7 @@ export class CdoFieldImageDropdown extends FieldGridDropdown {
   }
 }
 
-function fixMenuGenerator(menuGenerator, width, height) {
+export function fixMenuGenerator(menuGenerator, width, height) {
   // Google Blockly supports images in dropdowns but has a different format,
   // so we just need to restructure our menu items before passing through to
   // the FieldDropdown constructor.
@@ -132,7 +132,3 @@ function fixMenuGenerator(menuGenerator, width, height) {
     return [{src: url, width: width, height: height, alt: code_id}, code_id];
   });
 }
-
-export var __TestInterface = {
-  fixMenuGenerator: fixMenuGenerator
-};

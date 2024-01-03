@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {CROSS_TAB_CHART_AREA} from './constants';
 import * as color from '../../../util/color';
+import fontConstants from '@cdo/apps/fontConstants';
 
 export default function CrossTabChart(props) {
   if (!props.records || !props.selectedColumn1 || !props.selectedColumn2) {
@@ -75,7 +76,7 @@ export default function CrossTabChart(props) {
                     : {
                         ...innerCellStyle,
                         width: columnWidth,
-                        backgroundColor: getColorForValue(value, min, max)
+                        backgroundColor: getColorForValue(value, min, max),
                       };
                 return (
                   <td key={column} style={cellStyle}>
@@ -96,7 +97,7 @@ CrossTabChart.propTypes = {
   numericColumns: PropTypes.arrayOf(PropTypes.string).isRequired,
   chartTitle: PropTypes.string,
   selectedColumn1: PropTypes.string,
-  selectedColumn2: PropTypes.string
+  selectedColumn2: PropTypes.string,
 };
 
 /**
@@ -125,7 +126,7 @@ export function createPivotTable(records, numericColumns, rowName, columnName) {
   // Sort columns
   let columns;
   if (numericColumns.includes(columnName)) {
-    columns = [...pivotedColumns].sort(function(a, b) {
+    columns = [...pivotedColumns].sort(function (a, b) {
       return a - b;
     });
   } else {
@@ -152,38 +153,38 @@ export function getColorForValue(value, min, max) {
 }
 
 const wrapperStyle = {
-  width: '100%'
+  width: '100%',
 };
 const chartTitleStyle = {
-  fontFamily: '"Gotham 7r", sans-serif',
+  ...fontConstants['main-font-bold'],
   fontSize: 16,
   lineHeight: '16px',
-  color: 'black'
+  color: 'black',
 };
 const tableStyle = {
-  width: '100%'
+  width: '100%',
 };
 const cellStyle = {
   height: '2em',
   border: '1px solid black',
-  textAlign: 'center'
+  textAlign: 'center',
 };
 const topCellStyle = {
   ...cellStyle,
   backgroundColor: color.lightest_gray,
-  color: 'black'
+  color: 'black',
 };
 const leftCellStyle = {
   ...cellStyle,
   backgroundColor: color.dark_charcoal,
   color: 'white',
   padding: '0 1em',
-  whiteSpace: 'nowrap'
+  whiteSpace: 'nowrap',
 };
 const innerCellStyle = {
   ...cellStyle,
-  overflow: 'hidden'
+  overflow: 'hidden',
 };
 const axisTitleStyle = {
-  fontFamily: '"Gotham 5r", sans-serif'
+  ...fontConstants['main-font-semi-bold'],
 };

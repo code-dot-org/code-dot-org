@@ -166,12 +166,10 @@ class GatekeeperBase < DynamicConfigBase
   end
 
   def refresh
-    @datastore_cache.update_cache
+    @datastore_cache.update_local_cache
   end
 
-  private
-
-  def stringify_keys(hsh)
+  private def stringify_keys(hsh)
     hsh.inject({}) do |hash, pair|
       hash[pair[0].to_s] = pair[1]
       hash

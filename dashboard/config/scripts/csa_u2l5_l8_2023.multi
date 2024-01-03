@@ -29,3 +29,5 @@ While the `Teacher` class inherits the attributes and behaviors of the `Person` 
 
 Since the `Person` class is the superclass, does not inherit anything from the subclass. Additionally, it cannot access the instance variables in the `Teacher` class.
 MARKDOWN
+
+allow_multiple_attempts true

@@ -6,7 +6,7 @@ export default class AssessmentSelector extends Component {
   static propTypes = {
     assessmentList: PropTypes.array.isRequired,
     assessmentId: PropTypes.number,
-    onChange: PropTypes.func.isRequired
+    onChange: PropTypes.func.isRequired,
   };
 
   render() {

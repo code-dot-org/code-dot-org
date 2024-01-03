@@ -11,7 +11,7 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 const studentData = [
   {id: 1, name: 'studentb'},
   {id: 3, name: 'studentc'},
-  {id: 0, name: 'studenta'}
+  {id: 0, name: 'studenta'},
 ];
 
 describe('SectionProgress', () => {
@@ -27,7 +27,7 @@ describe('SectionProgress', () => {
       section: {
         id: 2,
         script: {id: 123},
-        students: studentData
+        students: studentData,
       },
       coursesWithProgress: [],
       currentView: ViewType.SUMMARY,
@@ -37,18 +37,18 @@ describe('SectionProgress', () => {
         lessons: [
           {
             id: 456,
-            levels: [{id: '789'}]
-          }
+            levels: [{id: '789'}],
+          },
         ],
         csf: true,
-        hasStandards: true
+        hasStandards: true,
       },
       isLoadingProgress: false,
       scriptFriendlyName: 'My Script',
       showStandardsIntroDialog: false,
       studentLastUpdateByUnit: {
-        1: Date.now()
-      }
+        1: Date.now(),
+      },
     };
   });
 

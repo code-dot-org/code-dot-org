@@ -28,16 +28,13 @@ describe('StandardsViewHeaderButtons', () => {
             id: 2,
             name: 'Lesson Name',
             number: 1,
-            url: 'fakeurl.com'
-          }
+            url: 'fakeurl.com',
+          },
         ]}
       />
     );
 
-    wrapper
-      .find('Button')
-      .at(0)
-      .simulate('click');
+    wrapper.find('Button').at(0).simulate('click');
     expect(wrapper.find('LessonStatusDialog')).to.have.lengthOf(1);
   });
   it('opens create report dialog', () => {
@@ -52,16 +49,13 @@ describe('StandardsViewHeaderButtons', () => {
             id: 2,
             name: 'Lesson Name',
             number: 1,
-            url: 'fakeurl.com'
-          }
+            url: 'fakeurl.com',
+          },
         ]}
       />
     );
 
-    wrapper
-      .find('Button')
-      .at(1)
-      .simulate('click');
+    wrapper.find('Button').at(1).simulate('click');
     expect(wrapper.find('CreateStandardsReportDialog')).to.have.length(1);
   });
 });

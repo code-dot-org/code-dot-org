@@ -13,7 +13,7 @@ class ManageStudents extends React.Component {
     // Provided by redux
     sectionId: PropTypes.number,
     isLoadingStudents: PropTypes.bool.isRequired,
-    loadSectionStudentData: PropTypes.func.isRequired
+    loadSectionStudentData: PropTypes.func.isRequired,
   };
 
   componentDidMount() {
@@ -28,7 +28,10 @@ class ManageStudents extends React.Component {
         {isLoadingStudents && <Spinner />}
         {!isLoadingStudents && (
           <div>
-            <SyncOmniAuthSectionControl sectionId={sectionId} />
+            <SyncOmniAuthSectionControl
+              sectionId={sectionId}
+              studioUrlPrefix={studioUrlPrefix}
+            />
             <ManageStudentsTable studioUrlPrefix={studioUrlPrefix} />
           </div>
         )}
@@ -42,11 +45,11 @@ export const UnconnectedManageStudents = ManageStudents;
 export default connect(
   state => ({
     sectionId: state.teacherSections.selectedSectionId,
-    isLoadingStudents: state.manageStudents.isLoadingStudents
+    isLoadingStudents: state.manageStudents.isLoadingStudents,
   }),
   dispatch => ({
     loadSectionStudentData(sectionId) {
       dispatch(loadSectionStudentData(sectionId));
-    }
+    },
   })
 )(ManageStudents);

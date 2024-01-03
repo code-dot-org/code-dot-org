@@ -36,18 +36,19 @@ levels.sandbox = {
   ideal: Infinity,
   requiredBlocks: [],
   scale: {
-    snapRadius: 2
+    snapRadius: 2,
   },
   freePlay: true,
   toolbox: tb(),
-  startBlocks: '<block type="when_run" deletable="false" x="20" y="20"></block>'
+  startBlocks:
+    '<block type="when_run" deletable="false" x="20" y="20"></block>',
 };
 
 // Base config for levels created via levelbuilder
 levels.custom = utils.extend(levels.sandbox, {
   editCode: true,
   codeFunctions: GamelabBlocks,
-  startBlocks: null
+  startBlocks: null,
 });
 
 levels.ec_sandbox = utils.extend(levels.custom, {});

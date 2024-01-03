@@ -14,3 +14,4 @@ answer 'the first line of the constructor which includes the public keyword, the
 
 question 'default value'
 answer 'a predefined value that is used by a program when the user does not provide a value'
+allow_multiple_attempts true

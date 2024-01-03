@@ -13,11 +13,11 @@ class ConfirmDeleteButton extends React.Component {
     buttonText: PropTypes.string.isRequired,
     confirmText: PropTypes.string,
     containerStyle: PropTypes.any,
-    onConfirmDelete: PropTypes.func.isRequired
+    onConfirmDelete: PropTypes.func.isRequired,
   };
 
   state = {
-    open: false
+    open: false,
   };
 
   handleClose = () => this.setState({open: false});

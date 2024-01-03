@@ -1,0 +1,24 @@
+name 'SP-VPL-21-mod3-CV-Equity-CSP_2023'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Course overview
+
+<img src="https://images.code.org/1921d8592415dd29aac839a0cab4cc06-image-1638489374840.jpg" alt="Three students show their coding on a laptop computer and smile at the camera." style="border-radius:20px; float: right; height: 250px; clear: both; margin: 0 20px 20px 20px;">
+
+## Computer Science Principles is:
+
+* ##### An introductory computer science course for high school students developed by the College Board. 
+* ##### Mapped to CTSA standards and the College Board's CS Principles Conceptual Framework. 
+* ##### Focused on topics such as the internet, cybersecurity, data, and foundational coding concepts.
+* ##### Designed to offer students opportunities to build their own apps and data models aligned to their personal interests.
+<br>
+
+##### Code.org's CS Principles course is mapped to <a href="https://csteachers.org/k12standards/" target="blank" rel="noopener noreferrer">CSTA standards</a> and aligns with the College Board's five "Big Ideas" and six "Computational Thinking Practices" outlined in their <a href="https://apcentral.collegeboard.org/pdf/ap-computer-science-principles-conceptual-framework-2020-21.pdf" target="blank" rel="noopener noreferrer">AP CS Principles Conceptual Framework</a>: 
+
+<img src="https://images.code.org/5c9a5deb56c5b0003242b07c6baca66b-image-1653433024503.10.41 PM.png" align="center" alt="Table including the five Big Ideas and six Computational Thinking Practices. The Big Ideas are Creative Development, Data, Algorithms and Programming, Computer Systems & Networks, and Impact of Computing. The Computational Thinking Practices are Computational Solution Design, Algorithms and Program Development, Abstraction in Program Development, Code Analysis, Computing Innovations, and Responsible Computing.">
+
+##### CS Principles can be offered both as an AP and non-AP course. In either case, the curriculum is designed to be implemented over the span of one year, with five units per semester. Later in this module, you'll learn more about the content of the exam.
+
+MARKDOWN

@@ -14,38 +14,46 @@ module.exports = {
     borderLeftWidth: 1,
     margin: '0 0 8px 0',
     padding: '2px 6px',
-    fontSize: 14
+    fontSize: 14,
   },
   toggleButtonStyle: {
     borderRightWidth: '0 !important',
     borderTopLeftRadius: 0,
     borderTopRightRadius: 0,
     borderBottomRightRadius: 0,
-    borderBottomLeftRadius: 0
+    borderBottomLeftRadius: 0,
   },
   firstButtonStyle: {
     borderBottomLeftRadius: 4,
-    borderTopLeftRadius: 4
+    borderTopLeftRadius: 4,
   },
   lastButtonStyle: {
     borderRightWidth: '1px !important',
     borderBottomRightRadius: 4,
-    borderTopRightRadius: 4
+    borderTopRightRadius: 4,
   },
   activeStyle: {
     backgroundColor: color.orange,
     color: color.white,
-    boxShadow: '2px 2px 5px ' + color.shadow + ' inset'
+    boxShadow: '2px 2px 5px ' + color.shadow + ' inset',
+  },
+  //TODO: [Design2-53] remove this once we have a SegmentedButton component and use that instead
+  rebrandedLikeButtonStyle: {
+    boxShadow: 'none',
+    padding: '7px 16px',
+    fontWeight: 600,
+    fontSize: '0.875rem',
+    lineHeight: 'unset',
   },
   inactiveStyle: {
     backgroundColor: color.white,
-    color: color.light_gray,
-    boxShadow: '0px 1px 5px ' + color.shadow
+    color: color.light_black,
+    boxShadow: '0px 1px 5px ' + color.shadow,
   },
   hiddenStyle: {
-    display: 'none'
+    display: 'none',
   },
   iconStyle: {
-    margin: '0 0.3em'
-  }
+    margin: '0 0.3em',
+  },
 };

@@ -12,7 +12,7 @@ import MultipleChoiceSurveyQuestionDialog from './MultipleChoiceSurveyQuestionDi
 import {multipleChoiceDataPropType} from './assessmentDataShapes';
 
 export const COLUMNS = {
-  QUESTION: 0
+  QUESTION: 0,
 };
 
 const ANSWER_COLUMN_WIDTH = 40;
@@ -53,15 +53,15 @@ const answerColumnsFormatter = (
  */
 class MultipleChoiceSurveyOverviewTable extends Component {
   static propTypes = {
-    multipleChoiceSurveyData: PropTypes.arrayOf(multipleChoiceDataPropType)
+    multipleChoiceSurveyData: PropTypes.arrayOf(multipleChoiceDataPropType),
   };
 
   state = {
     [COLUMNS.QUESTION]: {
       direction: 'desc',
-      position: 0
+      position: 0,
     },
-    selectedQuestionIndex: -1
+    selectedQuestionIndex: -1,
   };
 
   getSortingColumns = () => {
@@ -76,10 +76,10 @@ class MultipleChoiceSurveyOverviewTable extends Component {
         sortingOrder: {
           FIRST: 'asc',
           asc: 'desc',
-          desc: 'asc'
+          desc: 'asc',
         },
-        selectedColumn
-      })
+        selectedColumn,
+      }),
     });
   };
 
@@ -110,19 +110,19 @@ class MultipleChoiceSurveyOverviewTable extends Component {
       props: {
         style: {
           ...tableLayoutStyles.headerCell,
-          ...styles.answerColumnHeader
-        }
-      }
+          ...styles.answerColumnHeader,
+        },
+      },
     },
     cell: {
       formatters: [answerColumnsFormatter],
       props: {
         style: {
           ...tableLayoutStyles.cell,
-          ...styles.answerColumnCell
-        }
-      }
-    }
+          ...styles.answerColumnCell,
+        },
+      },
+    },
   });
 
   getAnswerColumn = columnLabel => ({
@@ -132,36 +132,36 @@ class MultipleChoiceSurveyOverviewTable extends Component {
       props: {
         style: {
           ...tableLayoutStyles.headerCell,
-          ...styles.answerColumnHeader
-        }
-      }
+          ...styles.answerColumnHeader,
+        },
+      },
     },
     cell: {
       formatters: [answerColumnsFormatter],
       props: {
         style: {
           ...tableLayoutStyles.cell,
-          ...styles.answerColumnCell
-        }
-      }
-    }
+          ...styles.answerColumnCell,
+        },
+      },
+    },
   });
 
   getQuestionColumn = (sortable, numAnswers) => ({
     property: 'question',
     header: {
       label: i18n.question(),
-      props: {style: tableLayoutStyles.headerCell}
+      props: {style: tableLayoutStyles.headerCell},
     },
     cell: {
       formatters: [this.questionFormatter],
       props: {
         style: {
           ...tableLayoutStyles.cell,
-          ...styles.questionCell
-        }
-      }
-    }
+          ...styles.questionCell,
+        },
+      },
+    },
   });
 
   getColumns = sortable => {
@@ -180,13 +180,13 @@ class MultipleChoiceSurveyOverviewTable extends Component {
     return [
       this.getQuestionColumn(sortable, numAnswerColumns),
       ...columnLabelNames,
-      this.getNotAnsweredColumn()
+      this.getNotAnsweredColumn(),
     ];
   };
 
   onBodyRow(row, {rowIndex, rowKey}) {
     return {
-      style: {height: MIN_ROW_HEIGHT}
+      style: {height: MIN_ROW_HEIGHT},
     };
   }
 
@@ -203,7 +203,7 @@ class MultipleChoiceSurveyOverviewTable extends Component {
     const sortedRows = sort.sorter({
       columns,
       sortingColumns,
-      sort: orderBy
+      sort: orderBy,
     })(this.props.multipleChoiceSurveyData);
 
     const questionIndex = this.state.selectedQuestionIndex;
@@ -229,29 +229,29 @@ class MultipleChoiceSurveyOverviewTable extends Component {
 const styles = {
   table: {
     ...tableLayoutStyles.table,
-    tableLayout: 'fixed'
+    tableLayout: 'fixed',
   },
   answerColumnHeader: {
     width: ANSWER_COLUMN_WIDTH,
     textAlign: 'center',
-    height: MIN_ROW_HEIGHT
+    height: MIN_ROW_HEIGHT,
   },
   answerColumnCell: {
     padding: 0,
-    height: '100%'
+    height: '100%',
   },
   answerColumnCellContent: {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    height: '100%'
+    height: '100%',
   },
   questionCell: {
-    height: MIN_ROW_HEIGHT
+    height: MIN_ROW_HEIGHT,
   },
   link: {
-    color: color.teal
-  }
+    color: color.teal,
+  },
 };
 
 export default MultipleChoiceSurveyOverviewTable;

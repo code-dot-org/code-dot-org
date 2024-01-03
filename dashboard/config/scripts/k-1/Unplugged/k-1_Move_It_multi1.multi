@@ -9,3 +9,5 @@ wrong '/script_assets/k_1_images/unplugged_images/rightright.png'
 right '/script_assets/k_1_images/unplugged_images/leftleft.png'
 wrong '/script_assets/k_1_images/unplugged_images/upleft.png'
 wrong '/script_assets/k_1_images/unplugged_images/leftdown.png'
+
+allow_multiple_attempts true

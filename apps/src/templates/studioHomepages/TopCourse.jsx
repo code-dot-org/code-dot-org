@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
+import fontConstants from '@cdo/apps/fontConstants';
 import i18n from '@cdo/locale';
 import color from '../../util/color';
 import styleConstants from '../../styleConstants';
@@ -16,17 +17,12 @@ class TopCourse extends Component {
     assignableName: PropTypes.string.isRequired,
     lessonName: PropTypes.string.isRequired,
     linkToOverview: PropTypes.string.isRequired,
-    linkToLesson: PropTypes.string.isRequired
+    linkToLesson: PropTypes.string.isRequired,
   };
 
   render() {
-    const {
-      assignableName,
-      lessonName,
-      linkToOverview,
-      linkToLesson,
-      isRtl
-    } = this.props;
+    const {assignableName, lessonName, linkToOverview, linkToLesson, isRtl} =
+      this.props;
     const localeStyle = isRtl ? styles.ltr : styles.rtl;
 
     return (
@@ -67,13 +63,13 @@ const styles = {
     height: 200,
     width: styleConstants['content-width'],
     marginBottom: 20,
-    backgroundColor: color.neutral_light
+    backgroundColor: color.neutral_light,
   },
   header: {
     position: 'absolute',
     width: styleConstants['content-width'],
     height: 80,
-    backgroundColor: color.brand_primary_default
+    backgroundColor: color.brand_primary_default,
   },
   name: {
     paddingTop: 10,
@@ -82,7 +78,7 @@ const styles = {
     paddingRight: 25,
     marginTop: 15,
     fontSize: 30,
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     color: color.neutral_white,
     width: styleConstants['content-width'] - 35,
     zIndex: 2,
@@ -90,7 +86,7 @@ const styles = {
     display: 'inline',
     whiteSpace: 'nowrap',
     textOverflow: 'ellipsis',
-    overflow: 'hidden'
+    overflow: 'hidden',
   },
   description: {
     paddingLeft: 25,
@@ -100,29 +96,29 @@ const styles = {
     marginTop: 80,
     fontSize: 14,
     lineHeight: 1.5,
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     color: color.neutral_dark,
     width: '65%',
     boxSizing: 'border-box',
     position: 'absolute',
-    zIndex: 2
+    zIndex: 2,
   },
   buttonBox: {
     marginTop: 120,
-    zIndex: 2
+    zIndex: 2,
   },
   lessonButton: {
     marginLeft: 20,
-    marginRight: 25
+    marginRight: 25,
   },
   ltr: {
-    float: 'left'
+    float: 'left',
   },
   rtl: {
-    float: 'right'
-  }
+    float: 'right',
+  },
 };
 
 export default connect(state => ({
-  isRtl: state.isRtl
+  isRtl: state.isRtl,
 }))(Radium(TopCourse));

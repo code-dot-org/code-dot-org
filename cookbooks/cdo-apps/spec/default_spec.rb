@@ -13,7 +13,7 @@ describe 'cdo-apps::default' do
       node.automatic['memory']['total'] = "#{(8 * 1024 * 1024)}kB"
       node.automatic['cpu']['total'] = 32
       node.automatic['lsb']['codename'] = 'trusty'
-      node.automatic[:home] = ENV['HOME']
+      node.automatic[:home] = Dir.home
       node.name node_name
       node.override.merge! chef_overrides
     end.converge(described_recipe)

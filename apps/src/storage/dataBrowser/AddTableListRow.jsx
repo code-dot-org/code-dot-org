@@ -5,12 +5,12 @@ import dataStyles from './data-styles.module.scss';
 import classNames from 'classnames';
 
 const INITIAL_STATE = {
-  newTableName: ''
+  newTableName: '',
 };
 
 class AddTableListRow extends React.Component {
   static propTypes = {
-    onTableAdd: PropTypes.func.isRequired
+    onTableAdd: PropTypes.func.isRequired,
   };
 
   state = {...INITIAL_STATE};

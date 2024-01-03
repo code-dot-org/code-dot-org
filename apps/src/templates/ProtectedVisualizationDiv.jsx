@@ -24,7 +24,7 @@ export function isResponsiveFromState(state) {
 class ProtectedVisualizationDiv extends React.Component {
   static propTypes = {
     isResponsive: PropTypes.bool.isRequired,
-    children: PropTypes.node
+    children: PropTypes.node,
   };
 
   render() {
@@ -39,5 +39,5 @@ class ProtectedVisualizationDiv extends React.Component {
   }
 }
 export default connect(state => ({
-  isResponsive: isResponsiveFromState(state)
+  isResponsive: isResponsiveFromState(state),
 }))(ProtectedVisualizationDiv);

@@ -5,3 +5,5 @@ wrong 'The `if fishCaught = 5` condition should be changed to `if algae = 5`. ',
 right 'The `remove coral` sprite should be changed to `remove boat` sprite. .', feedback: 'Correct!'
 wrong 'The `remove coral` sprite should be changed to `remove fish` sprite.', feedback: 'Incorrect.'
 
+
+allow_multiple_attempts false

@@ -1,8 +1,8 @@
 ---
-title: Hour of Code and CSEdWeek Advisory Committee
+title: Kodekso valanda ir CSEDWeek patariamasis komitetas
 ---
 
-# Hour of Code and CSEdWeek Advisory Committee
+# Kodekso valanda ir CSEDWeek patariamasis komitetas
 
 {{ advisory-committee/about_headshots }}
 

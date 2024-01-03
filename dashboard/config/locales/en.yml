@@ -65,7 +65,9 @@ en:
         age: 'Age'
         gender: 'Gender'
         edit_header: 'Edit Account Details'
+        ai_settings_header: 'AI Settings'
         finish_sign_up_header: 'Finish creating your account'
+        finish_sign_up_header_error: 'Please correct the following errors:'
         finish_sign_up_subheader: 'Fill out the following information to finish creating a Code.org account for <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Fill out the following information to finish creating a Code.org account for **%{email}**.'
         finish_sign_up_subheader_provider: 'Fill out the following information to finish creating a Code.org account with <strong>%{provider}</strong> for <strong>%{email}</strong>.'
@@ -73,6 +75,9 @@ en:
         reset_password_token: "The reset password link you have followed"
         error:
           future: can't be in the future
+        user_type: 'Account Type'
+        us_state: 'State'
+        ai_rubrics_disabled: 'Disable AI Rubric Feature'
 
   beta: "beta"
   hello: "Hello world"
@@ -83,6 +88,7 @@ en:
   unsubmit: Unsubmit
   previous_page: Previous page
   next_page: Next page
+  next_level: Next level
   next_resource: Next resource
   done_with_module: Done with this Learning Module
   cancel: "Cancel"
@@ -186,7 +192,6 @@ en:
     data_collection_us: "I understand that Code.org is a US-based not-for-profit website and that the laws governing data collection in the U.S. may differ from the laws in my country."
     visit_privacy: 'Visit Code.org’s [Privacy Policy](%{privacy_url}) to learn more.'
     student_terms_markdown: "Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our [privacy policy](http://code.org/privacy) for more information."
-    additional_information: "We need some additional information to continue signing you up."
     user_type_button: "Update Account Type"
     user_type_label: "Account Type"
     user_type_student: "Student"
@@ -214,6 +219,9 @@ en:
     parent_account_checkbox: "I am a parent/guardian signing up on behalf of my child"
     parent_account_email_progress_permission: "Can we email you with occasional updates on your child’s progress and projects, and updates about their course and computer science? [(See our privacy policy)](%{privacy_policy_url})"
     parent_account_email_label: "Parent/Guardian Email"
+    us_state: 'State'
+    us_state_dropdown_options:
+      other: "I live somewhere not listed here"
   school_info:
     title: 'School Information (optional)'
     school_country: 'School Country'
@@ -282,6 +290,9 @@ en:
   parent_mailer:
     student_associated_subject: 'Login information for Code.org'
     parent_email_added_subject: 'Welcome to Code.org!'
+    parent_permission_request_subject: "Parental consent needed for your child's access to Code.org"
+    parent_permission_reminder_subject: "Reminder, parental consent needed for your child's access to Code.org"
+    parent_permission_confirmation_subject: "Thank you for approving your child's access to Code.org!"
   teacher_mailer:
     new_teacher_subject: 'Welcome to Code.org!'
     delete_teacher_subject: 'Code.org notification: Your account has been deleted'
@@ -367,6 +378,7 @@ en:
       sprite_lab_documentation: "Sprite Lab Documentation"
       sprite_lab_tutorials: "Sprite Lab Tutorials"
       web_lab_documentation: "Web Lab Documentation"
+      project_beats_documentation: "Project Beats Documentation"
       educate_overview: "Educator Overview"
       educate_elementary: "Elementary School"
       educate_middle: "Middle School"
@@ -886,6 +898,8 @@ en:
     submit-incomplete-body: "You left some questions incomplete.  You cannot edit your assessment after submitting it.  Are you sure?"
     submit-complete-title: "Submit your assessment"
     submit-complete-body: "You cannot edit your assessment after submitting it.  Are you sure?"
+  level_summary:
+    correct_answer: "Correct Answer"
   match:
     wrong_title: "Incorrect solution"
     wrong_body: "The solution you've entered is not correct.  Please try again!"
@@ -1182,7 +1196,7 @@ en:
       workshop_facilitator: 'Workshop Facilitator'
       workshop_course: 'Workshop Course'
       email_opt_in: 'Can we email you about Code.org’s international program, updates to our courses, or other computer science news?'
-      legal_opt_in: 'By submitting this form, you are agreeing to allow Code.org to share information on how you use Code.org and the Professional Learning resources with the Code.org International Partner(s) in your country, school district, and facilitators. We will share your contact information, which courses/units you are using and aggregate data about your classes with these partners. This includes the number of students in your classes, the demographic breakdown of your classroom, and the name of your school and district. We will not share any information about individual students with our partners: all student information will be de-identified and aggregated. Our International Partners and facilitators are contractually obliged to treat this information with the same level of confidentiality as Code.org.'
+      legal_opt_in: 'By submitting this form, you are agreeing to allow Code.org to share information on how you use Code.org and the Professional Learning resources with the Code.org International Partner(s) in your country. We will share with these partners your contact information (such as name and email address), the information you provide about your school, which courses/units you are using, and aggregate data about these courses (such as the number of students using each course). We will not share any information about individual students with our partners: all student information will be de-identified and aggregated. Our International Partners and facilitators are contractually obliged to treat this information with the same level of confidentiality as Code.org.'
     form_entries:
       gender:
         male: 'Male'
@@ -1191,17 +1205,37 @@ en:
         not_listed: 'Preferred term not listed'
         none: 'Prefer not to answer'
       school_country:
+        australia: 'Australia'
         barbados: 'Barbados'
         belize: 'Belize'
+        brazil: 'Brazil'
         canada: 'Canada'
         chile: 'Chile'
         colombia: 'Colombia'
+        dominican_republic: 'Dominican Republic'
+        india: 'India'
+        indonesia: 'Indonesia'
         israel: 'Israel'
+        italy: 'Italy'
+        jamaica: 'Jamaica'
+        kenya: 'Kenya'
+        kosovo: 'Kosovo'
         malaysia: 'Malaysia'
+        maldives: 'Maldives'
         mexico: 'Mexico'
+        mongolia: 'Mongolia'
+        new_zealand: 'New Zealand'
         paraguay: 'Paraguay'
+        philippines: 'Philippines'
+        portugal: 'Portugal'
+        puerto_rico: 'Puerto Rico'
+        slovakia: 'Slovakia'
+        south_korea: 'South Korea'
+        spain: 'Spain'
         thailand: 'Thailand'
+        trinidad_and_tobago: 'Trinidad and Tobago'
         uzbekistan: 'Uzbekistan'
+        vietnam: 'Vietnam'
       ages:
         ages_under_6: '< 6 years old'
         ages_7_8: '7-8 years old'
@@ -1250,6 +1284,8 @@ en:
         csf_express: 'CS Fundamentals (Pre-Express or Express)'
         csd: 'CS Discoveries'
         csp: 'CS Principles'
+        csa: 'CS A'
+        other: 'Other'
         not_applicable: "Not applicable"
       email_opt_in:
         opt_in_yes: 'Yes'
@@ -1271,6 +1307,26 @@ en:
     no_teacher_email:
       body_markdown: 'Your account doesn’t have an email address. Please [visit your account settings](%{user_registration}) to add your email address before completing this form.'
   courses_category: 'Full Courses'
+  course_offering:
+    headers:
+      favorites: 'Favorites'
+      labs_and_skills: 'Labs and Skills'
+      minecraft: 'Minecraft'
+      hello_world: 'Hello World'
+      popular_media: 'Popular Media'
+      sports: 'Sports'
+      express: 'Express'
+      csf: 'CS Fundamentals'
+      csc: 'CS Connections'
+      year_long: 'Year Long'
+      csa_labs: 'CSA Labs'
+      self_paced: 'Self-Paced'
+      teacher_led: 'Teacher-Led'
+      collections: 'Collections'
+      workshops_k5: 'K-5 Workshops'
+      summer_workshops_612: '6-12 Summer Workshops'
+      virtual_academic_year_workshops_612: '6–12 Virtual Academic Year Workshops'
+      unsupported: 'Unsupported'
   cookie_banner:
     message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
     more_information: "See Code.org's Privacy Policy."
@@ -1291,6 +1347,7 @@ en:
       error_invalid_user: 'Invalid user id. Please try logging in again.'
       error_no_code: 'Please enter your login code.'
       confirm_login: 'Select "Confirm" to log in with your Google account.'
+    setup_page_title: 'Maker Setup'
   parent_email_banner:
     text: "**Are you a parent or guardian?** Link your email to this account to stay updated on your child’s progress and projects!"
     link_your_email: "Link your email"
@@ -1326,3 +1383,22 @@ en:
     binary: "Binary"
     hexadecimal: "Hexadecimal"
     pixel_format_header: "Pixel Format"
+  course_deprecated:
+    title: "Heads up! This curriculum is no longer available, but Code.org has newer options available for you."
+    button: "View new curriculum"
+  hoc_tutorial_email_subject: "Rock the Hour of Code with Code.org Tutorials!"
+  hoc_tutorial_email_content:
+    dear_teacher: "Dear %{teacher_name},"
+    intro_step_by_step_guide: "We're so excited that you're holding an Hour of Code event using Code.org's free activities and tutorials! We're honored to have educators like you introducing students to the exciting world of coding. Here's a step-by-step guide to ensure a successful Hour of Code event:"
+    sign_up_step: "**Sign Up** (Optional… but awesome!): Create a free Code.org account for access to a personal dashboard where you can manage your classroom's Hour of Code! [Sign up here](%{url})."
+    create_classroom_section: "**Create a Classroom Section** (Also optional… but super useful!): Creating a classroom section allows you to track your students' progress, view their work, and even leave them feedback! [Set up your section here](%{section_setup_url}). And for all our newbies, here's a [handy guide](%{guide_url}) to help you out!"
+    pick_perfect_activity: "**Pick the Perfect Activity**: [Select the best Hour of Code tutorial](%{url}) for your event. Explore the options and assign your chosen tutorial to your section, so your students will know exactly where to start."
+    plan_like_pro: "**Plan Like a Pro**: Many of our tutorials come with a [lesson plan](%{lesson_plan_url}). It's like a secret recipe for success! Check out your lesson plan before the big event."
+    let_fun_begin: "**Let the Fun Begin!**: Guided by the lesson plan, start your journey into the world of coding. Remember: You don't need to have all the answers! Your enthusiasm and the shared curiosity with your students will help everyone learn together."
+    hip_hip_hooray: "**Hip, Hip, Hooray!**: Once the hour wraps up, let's celebrate those brilliant young coders. Certificates, stickers, or even a round of applause — it all counts. Find our [printable certificates here](%{url})."
+    more_adventures_await: "**More Adventures Await**: Did you spot any new coders hungry for more? Introduce them to more computer science curricula on Code.org!"
+    explore_course: "Explore our treasure trove of free courses"
+    learn_about_ai: "Learn about Artificial Intelligence"
+    thank_you: "THANK YOU for championing computer science education. Our team wishes you and your students an unforgettable Hour of Code!"
+    founder: "Founder, Code.org"
+    your_friends: "Your Friends at Code.org"

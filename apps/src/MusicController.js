@@ -47,7 +47,7 @@ function debug(msg) {
  *        completed, will play a random track after given duration (in ms).
  * @constructor
  */
-var MusicController = function(
+var MusicController = function (
   audioPlayer,
   assetUrl,
   trackDefinitions,
@@ -87,7 +87,7 @@ var MusicController = function(
   // If the video player gets pulled up, make sure we stop the music.
   document.addEventListener(
     'videoShown',
-    function() {
+    function () {
       debug('video shown');
       if (this.nowPlaying_ || this.betweenTrackTimeout_) {
         this.wasPlayingWhenVideoShown_ = true;
@@ -104,7 +104,7 @@ var MusicController = function(
   // If the video player gets closed, make sure we re-start the music.
   document.addEventListener(
     'videoHidden',
-    function() {
+    function () {
       if (
         this.wasPlayingWhenVideoShown_ &&
         this.loopRandomWithDelay_ &&
@@ -128,7 +128,7 @@ module.exports = MusicController;
  */
 function buildTrackData(trackDefinitions, assetUrl) {
   trackDefinitions = utils.valueOr(trackDefinitions, []);
-  return trackDefinitions.map(function(trackDef) {
+  return trackDefinitions.map(function (trackDef) {
     var assetUrls = [];
     assetUrls.push(assetUrl(trackDef.name + '.mp3'));
     if (trackDef.hasOgg) {
@@ -141,7 +141,7 @@ function buildTrackData(trackDefinitions, assetUrl) {
       volume: utils.valueOr(trackDef.volume, 1),
       sound: null,
       isLoaded: false,
-      group: trackDef.group
+      group: trackDef.group,
     };
   });
 }
@@ -149,17 +149,17 @@ function buildTrackData(trackDefinitions, assetUrl) {
 /**
  * Preload all music assets
  */
-MusicController.prototype.preload = function() {
+MusicController.prototype.preload = function () {
   if (!this.audioPlayer_) {
     return;
   }
 
-  this.trackList_.forEach(function(track) {
+  this.trackList_.forEach(function (track) {
     track.sound = this.audioPlayer_.registerByFilenamesAndID(
       track.assetUrls,
       track.name
     );
-    track.sound.onLoad = function() {
+    track.sound.onLoad = function () {
       debug('done loading ' + track.name);
       track.isLoaded = true;
       if (this.playOnLoad_ === track.name) {
@@ -169,7 +169,7 @@ MusicController.prototype.preload = function() {
   }, this);
 };
 
-MusicController.prototype.setMuteMusic = function(
+MusicController.prototype.setMuteMusic = function (
   isBackgroundMusicMuted,
   track
 ) {
@@ -181,7 +181,7 @@ MusicController.prototype.setMuteMusic = function(
  * Begins playing a particular piece of music immediately.
  * @param {string} trackName
  */
-MusicController.prototype.play = function(trackName) {
+MusicController.prototype.play = function (trackName) {
   debug('play ' + trackName);
   if (!this.audioPlayer_ || this.muteMusic_) {
     return;
@@ -213,14 +213,14 @@ MusicController.prototype.play = function(trackName) {
 /**
  * Sets the current group of music to play.
  */
-MusicController.prototype.setGroup = function(group) {
+MusicController.prototype.setGroup = function (group) {
   this.currentGroup_ = group;
 };
 
 /**
  * Stops playing whatever music is currently playing, immediately.
  */
-MusicController.prototype.stop = function() {
+MusicController.prototype.stop = function () {
   if (!this.nowPlaying_) {
     return;
   }
@@ -235,7 +235,7 @@ MusicController.prototype.stop = function() {
  * Fades music to nothing, then stops it.
  * @param {number} [durationSeconds] in seconds.  Default 3.
  */
-MusicController.prototype.fadeOut = function(durationSeconds) {
+MusicController.prototype.fadeOut = function (durationSeconds) {
   if (!this.nowPlaying_) {
     return;
   }
@@ -251,7 +251,7 @@ MusicController.prototype.fadeOut = function(durationSeconds) {
   // Stop the audio after the fade.
   // Add a small margin due to poor fade granularity on fallback player.
   window.setTimeout(
-    function() {
+    function () {
       this.stop();
     }.bind(this),
     1000 * durationSeconds + 100
@@ -264,13 +264,13 @@ MusicController.prototype.fadeOut = function(durationSeconds) {
  *        is started.
  * @private
  */
-MusicController.prototype.whenMusicStopped_ = function(musicName) {
+MusicController.prototype.whenMusicStopped_ = function (musicName) {
   if (this.nowPlaying_ === musicName) {
     this.nowPlaying_ = null;
   }
   if (this.loopRandomWithDelay_ && !this.wasPlayingWhenVideoShown_) {
     this.betweenTrackTimeout_ = window.setTimeout(
-      function() {
+      function () {
         this.betweenTrackTimeout_ = null;
         if (!this.nowPlaying_ && !this.wasPlayingWhenVideoShown_) {
           this.play();
@@ -286,8 +286,8 @@ MusicController.prototype.whenMusicStopped_ = function(musicName) {
  * @returns {MusicTrack|undefined}
  * @private
  */
-MusicController.prototype.getTrackByName_ = function(name) {
-  return _.find(this.trackList_, function(track) {
+MusicController.prototype.getTrackByName_ = function (name) {
+  return _.find(this.trackList_, function (track) {
     return track.name === name;
   });
 };
@@ -296,7 +296,7 @@ MusicController.prototype.getTrackByName_ = function(name) {
  * @returns {MusicTrack|undefined}
  * @private
  */
-MusicController.prototype.getRandomTrack_ = function() {
+MusicController.prototype.getRandomTrack_ = function () {
   const groupTracks = this.trackList_.filter(t => {
     return !this.currentGroup_ || t.group === this.currentGroup_;
   });

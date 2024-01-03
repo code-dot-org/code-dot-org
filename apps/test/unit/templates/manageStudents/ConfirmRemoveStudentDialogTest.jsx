@@ -3,16 +3,16 @@ import {mount} from 'enzyme';
 import i18n from '@cdo/locale';
 import {assert} from '../../../util/reconfiguredChai';
 import ConfirmRemoveStudentDialog, {
-  MINIMUM_TEST_PROPS
+  MINIMUM_TEST_PROPS,
 } from '@cdo/apps/templates/manageStudents/ConfirmRemoveStudentDialog';
 import Button from '@cdo/apps/templates/Button';
 import {
   Header,
-  ConfirmCancelFooter
+  ConfirmCancelFooter,
 } from '@cdo/apps/lib/ui/SystemDialog/SystemDialog';
 import {
   ADD_A_PERSONAL_LOGIN_HELP_URL,
-  RELEASE_OR_DELETE_RECORDS_EXPLANATION
+  RELEASE_OR_DELETE_RECORDS_EXPLANATION,
 } from '@cdo/apps/lib/util/urlHelpers';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 

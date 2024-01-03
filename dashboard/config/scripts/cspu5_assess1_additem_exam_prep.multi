@@ -23,3 +23,5 @@ _cartTotal = cartTotal + 1;_
 
 Since the variable cartTotal is already initialized in line 1, the word "var" is not necessary because that would create a new local variable instead of adding on to the existing cartTotal.
 MARKDOWN
+
+allow_multiple_attempts true

@@ -14,7 +14,7 @@ const fakeSublevels = [
     description: 'Sublevel 1 is lots of fun',
     position: 1,
     letter: 'a',
-    status: 'perfect'
+    status: 'perfect',
   },
   {
     id: '2',
@@ -24,8 +24,8 @@ const fakeSublevels = [
     description: 'Sublevel 2 has cool stuff to do',
     position: 2,
     letter: 'b',
-    status: 'not_tried'
-  }
+    status: 'not_tried',
+  },
 ];
 
 const DEFAULT_PROPS = {
@@ -39,8 +39,8 @@ const DEFAULT_PROPS = {
     script_url: '/s/script',
     name: 'Bubble Choice',
     type: 'BubbleChoice',
-    teacher_markdown: 'Students should work on which ever bubble they like'
-  }
+    teacher_markdown: 'Students should work on which ever bubble they like',
+  },
 };
 
 describe('BubbleChoice', () => {
@@ -82,7 +82,7 @@ describe('BubbleChoice', () => {
       const level = {
         ...DEFAULT_PROPS.level,
         previous_level_url: null,
-        redirect_url: null
+        redirect_url: null,
       };
       const wrapper = mount(<BubbleChoice {...DEFAULT_PROPS} level={level} />);
 
@@ -107,7 +107,7 @@ describe('BubbleChoice', () => {
       const level = {
         ...DEFAULT_PROPS.level,
         previous_level_url: null,
-        script_url: null
+        script_url: null,
       };
       const wrapper = mount(<BubbleChoice {...DEFAULT_PROPS} level={level} />);
       const buttons = wrapper.find('button');
@@ -121,7 +121,7 @@ describe('BubbleChoice', () => {
       const level = {
         ...DEFAULT_PROPS.level,
         redirect_url: null,
-        script_url: null
+        script_url: null,
       };
       const wrapper = mount(<BubbleChoice {...DEFAULT_PROPS} level={level} />);
       const buttons = wrapper.find('button');

@@ -14,7 +14,7 @@ markdown <<MARKDOWN
 
 ##### **It is NOT required that students have access to internet-connected computers at home.**
 
-## Required Materials / Supplies
+## Suggested Materials / Supplies
 
 ### General course materials:
 
@@ -36,16 +36,43 @@ markdown <<MARKDOWN
 
 ##### In addition to those general course materials, the following items are called for in specific units:
 
-* **Unit 1 - Problem Solving and Computing**
+**Unit 1 - Problem Solving and Computing**
 
-	* Option 1 - <a href="https://studio.code.org/s/csd1-2022/lessons/1" target="blank" rel="noopener noreferrer" >Aluminum Boats:</a> Aluminum foil and containers that can hold water
-	* Option 2 - <a href="https://studio.code.org/s/csd1-2022/lessons/9/" target="blank" rel="noopener noreferrer" >Newspaper Table:</a> A set of newspapers and several tape dispensers
-	* Option 3 - <a href="https://studio.code.org/s/csd1-2022/lessons/10" target="blank" rel="noopener noreferrer">Spaghetti Bridge:</a> Several boxes of spaghetti and several glue guns
-	* Option 4 - <a href="https://studio.code.org/s/csd1-2022/lessons/11" target="blank" rel="noopener noreferrer" >Paper Tower:</a> a ream of printer paper
+* Lesson 1 - <a href="https://studio.code.org/s/csd1-2023/lessons/1" target="blank" rel="noopener noreferrer" >Introduction to Problem Solving (Aluminum Boats):</a> 
+   * Aluminum foil
+   * Container for water
+   * Pennies *(pennies can be replaced with some other kind of weight of the same size.*
+   
+_**Note:** Alternate activities are available if you do not have access to these supplies. See the dropdown section below to view the alternate options._
 
-<div>
 
-* **Unit 6 - Physical Computing**
-Classroom set of Circuit Playgrounds (1 board and micro USB cable for every 2 students). Check out <a href="http://code.org/circuitplayground" target="blank" rel="noopener noreferrer" >code.org/circuitplayground</a> for more details.
+**Unit 6 - Creating Apps with Devices (Option A and Option B)**
 
+* Option A: Classroom set of Circuit Playgrounds. Check out <a href="https://code.org/maker/circuitplayground" target="blank" rel="noopener noreferrer">code.org/maker/circuitplayground</a> for more details.
+* Option B: Classroom set of micro:bit devices. Check out <a href="https://code.org/maker/microbit" target="blank" rel="noopener noreferrer">code.org/maker/microbit</a> for more details.
+* Maker supplies, such as empty tissue boxes or cardboard rolls or scratch paper
+
+_**Note:** The Creating Apps with Devices unit has **two** implementation options - one for those using circuit playgrounds and one for those using micro:bit. Teachers should **not** buy both sets of devices or teach both unit options as they are equivalent and cover the same content._
+
+<br>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 1.2em; font-weight: bold;">Alternate Lesson 1 Activities</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+Lesson 1 has alternate lesson activities available if you do not have access to the supplies listed above. These alternate lessons include:
+
+* Lesson 1: Alternate Lesson Option 1 - <a href="https://studio.code.org/s/csd1-2023/lessons/9/" target="blank" rel="noopener noreferrer" >Introduction to Problem Solving (Newspaper Table):</a> 
+   * A set of newspapers
+   * Several tape dispensers
+<br>
+* Lesson 1: Alternate Lesson Option 2 - <a href="https://studio.code.org/s/csd1-2023/lessons/10" target="blank" rel="noopener noreferrer">Introduction to Problem Solving (Spaghetti Bridge):</a>
+   * Several boxes of spaghetti
+   * Several glue guns
+<br>
+* Lesson 1: Alternate Lesson Option 3 - <a href="https://studio.code.org/s/csd1-2023/lessons/11" target="blank" rel="noopener noreferrer" >Introduction to Problem Solving (Paper Tower):</a>
+   * A ream of printer paper
+    </p>
+    </div>
+    </details>
 MARKDOWN

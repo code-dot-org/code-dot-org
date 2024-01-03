@@ -36,25 +36,25 @@ var allBlocks = [
   'stone',
   'tnt',
   'tree',
-  'wool'
+  'wool',
 ];
 
 // Install extensions to Blockly's language and JavaScript generator.
-exports.install = function(blockly, blockInstallOptions) {
+exports.install = function (blockly, blockInstallOptions) {
   var dropdownBlocks = (blockInstallOptions.level.availableBlocks || []).concat(
     JSON.parse(window.localStorage.getItem('craftPlayerInventory')) || []
   );
 
   var dropdownBlockSet = {};
 
-  dropdownBlocks.forEach(function(type) {
+  dropdownBlocks.forEach(function (type) {
     dropdownBlockSet[type] = true;
   });
 
   var craftBlockOptions = {
     inventoryBlocks: Object.keys(dropdownBlockSet),
     ifBlockOptions: blockInstallOptions.level.ifBlockOptions,
-    placeBlockOptions: blockInstallOptions.level.placeBlockOptions
+    placeBlockOptions: blockInstallOptions.level.placeBlockOptions,
   };
 
   var inventoryBlocksEmpty =
@@ -66,40 +66,40 @@ exports.install = function(blockly, blockInstallOptions) {
 
   blockly.Blocks.craft_moveForward = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.appendDummyInput().appendField(
         new blockly.FieldLabel(i18n.blockMoveForward())
       );
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
-  blockly.getGenerator().craft_moveForward = function() {
+  blockly.getGenerator().craft_moveForward = function () {
     return "moveForward('block_id_" + this.id + "');\n";
   };
 
   blockly.Blocks.craft_moveBackward = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.appendDummyInput().appendField(
         new blockly.FieldLabel(i18n.blockMoveBackward())
       );
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
-  blockly.getGenerator().craft_moveBackward = function() {
+  blockly.getGenerator().craft_moveBackward = function () {
     return "moveBackward('block_id_" + this.id + "');\n";
   };
 
   blockly.Blocks.craft_turn = {
     // Block for turning left or right.
     helpUrl: 'http://code.google.com/p/blockly/wiki/Turn',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.appendDummyInput().appendField(
         new blockly.FieldDropdown(this.DIRECTIONS),
@@ -107,15 +107,15 @@ exports.install = function(blockly, blockInstallOptions) {
       );
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
   blockly.Blocks.craft_turn.DIRECTIONS = [
     [i18n.blockTurnLeft() + ' \u21BA', 'left'],
-    [i18n.blockTurnRight() + ' \u21BB', 'right']
+    [i18n.blockTurnRight() + ' \u21BB', 'right'],
   ];
 
-  blockly.getGenerator().craft_turn = function() {
+  blockly.getGenerator().craft_turn = function () {
     // Generate JavaScript for turning left or right.
     var dir = this.getFieldValue('DIR');
     var methodCall = dir === 'left' ? 'turnLeft' : 'turnRight';
@@ -124,23 +124,23 @@ exports.install = function(blockly, blockInstallOptions) {
 
   blockly.Blocks.craft_destroyBlock = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.appendDummyInput().appendField(
         new blockly.FieldLabel(i18n.blockDestroyBlock())
       );
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
-  blockly.getGenerator().craft_destroyBlock = function() {
+  blockly.getGenerator().craft_destroyBlock = function () {
     return "destroyBlock('block_id_" + this.id + "');\n";
   };
 
   blockly.Blocks.craft_ifBlockAhead = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       var dropdownOptions = blockTypesToDropdownOptions(
         craftBlockOptions.ifBlockOptions || allDropdownBlocks
       );
@@ -154,10 +154,10 @@ exports.install = function(blockly, blockInstallOptions) {
       this.appendStatementInput('DO').appendField(i18n.blockWhileXAheadDo());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
-  blockly.getGenerator().craft_ifBlockAhead = function() {
+  blockly.getGenerator().craft_ifBlockAhead = function () {
     var innerCode = blockly.getGenerator().statementToCode(this, 'DO');
     var blockType = this.getFieldValue('TYPE');
     return (
@@ -173,16 +173,16 @@ exports.install = function(blockly, blockInstallOptions) {
 
   blockly.Blocks.craft_ifLavaAhead = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
       this.appendDummyInput().appendField(i18n.blockIfLavaAhead());
       this.appendStatementInput('DO').appendField(i18n.blockWhileXAheadDo());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
-  blockly.getGenerator().craft_ifLavaAhead = function() {
+  blockly.getGenerator().craft_ifLavaAhead = function () {
     var innerCode = blockly.getGenerator().statementToCode(this, 'DO');
     return (
       'ifLavaAhead(function() {\n' +
@@ -195,7 +195,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
   blockly.Blocks.craft_placeBlock = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       var dropdownOptions = blockTypesToDropdownOptions(
         craftBlockOptions.placeBlockOptions || allDropdownBlocks
       );
@@ -208,10 +208,10 @@ exports.install = function(blockly, blockInstallOptions) {
         .appendField(dropdown, 'TYPE');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
-  blockly.getGenerator().craft_placeBlock = function() {
+  blockly.getGenerator().craft_placeBlock = function () {
     var blockType = this.getFieldValue('TYPE');
     return 'placeBlock("' + blockType + '", \'block_id_' + this.id + "');\n";
   };
@@ -220,12 +220,12 @@ exports.install = function(blockly, blockInstallOptions) {
     [i18n.directionForward(), '0'],
     [i18n.directionBack(), '2'],
     [i18n.directionLeft(), '3'],
-    [i18n.directionRight(), '1']
+    [i18n.directionRight(), '1'],
   ];
 
   blockly.Blocks.craft_placeBlockDirection = {
     helpUrl: '',
-    init: function() {
+    init: function () {
       var dropdownOptions = blockTypesToDropdownOptions(
         craftBlockOptions.placeBlockOptions || allDropdownBlocks
       );
@@ -240,10 +240,10 @@ exports.install = function(blockly, blockInstallOptions) {
         .appendField(new blockly.FieldDropdown(fourDirections), 'DIR');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
-    }
+    },
   };
 
-  blockly.getGenerator().craft_placeBlockDirection = function() {
+  blockly.getGenerator().craft_placeBlockDirection = function () {
     var blockType = this.getFieldValue('TYPE');
     var direction = this.getFieldValue('DIR');
     return (

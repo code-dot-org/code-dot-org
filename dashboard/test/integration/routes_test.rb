@@ -24,7 +24,7 @@ class RoutesTest < ActionDispatch::IntegrationTest
 
     get '/s/dance-2019/lessons/1/levels/10'
     assert_caching_disabled response.headers['Cache-Control']
-    assert_not_nil cookies['_learn_session_test']
+    refute_nil cookies['_learn_session_test']
   end
 
   def test_level_starter_assets_handles_periods
