@@ -20,35 +20,19 @@ export interface SegmentedButtonsProps {
   selectedButtonValue: string;
   /** Segmented Buttons onChange handler */
   onChange: (value: string) => void;
+  /** Custom className */
+  className?: string;
 }
-
-// Todo:
-// 8. Add aria attributes --
-// 9. Add tests ++
-// 16. Add selected change logic (to storybook or to the component itself) ++
-// 10. Add storybook ++
-// 11. Add documentation ++
-// 12. Add prop types ++
-// 13. Add default props ++
-// 14. Add sizes ++
-// 15. Add icons ++
-// 7. Add keyboard navigation ++
-// 5. Add focus state ++
-// 4. Add hover state ++
-// 2. Add selected state ++
-// 3. Add disabled state ++
-// 6. Add active state ++
-// 16. check different types appearance ++
 
 /**
  * ### Production-ready Checklist:
- * * (?) implementation of component approved by design team;
+ * * (✔) implementation of component approved by design team;
  * * (✔) has storybook, covered with stories and documentation;
  * * (✔) has tests: test every prop, every state and every interaction that's js related;
  * * (see apps/test/unit/componentLibrary/SegmentedButtonsTest.jsx)
  * * (?) passes accessibility checks;
  *
- * ###  Status: ```Wip```
+ * ###  Status: ```Ready for dev```
  * Design System: Segmented Buttons Component.
  * Can be used to render Segmented Buttons. (Group of Buttons)
  */
@@ -56,6 +40,7 @@ const SegmentedButtons: React.FunctionComponent<SegmentedButtonsProps> = ({
   buttons,
   selectedButtonValue,
   onChange,
+  className,
   size = 'm',
   type = 'withLabel',
 }) => {
@@ -63,7 +48,8 @@ const SegmentedButtons: React.FunctionComponent<SegmentedButtonsProps> = ({
     <div
       className={classnames(
         moduleStyles.segmentedButtons,
-        moduleStyles[`segmentedButtons-${size}`]
+        moduleStyles[`segmentedButtons-${size}`],
+        className
       )}
     >
       {buttons.map(({label, disabled, iconLeft, iconRight, icon, value}) => (
