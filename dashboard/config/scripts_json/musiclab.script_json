@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "musiclab",
-    "serialized_at": "2023-10-13 00:07:10 UTC",
+    "serialized_at": "2024-01-02 19:14:49 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -63,6 +63,21 @@
         "lesson_group.key": "",
         "script.name": "musiclab"
       }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Free Play",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "musiclab"
+      }
     }
   ],
   "lesson_activities": [
@@ -86,6 +101,18 @@
       "seeding_key": {
         "lesson_activity.key": "a993a33d-6517-4f75-b2b7-9ce228b5d8cf",
         "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "musiclab"
+      }
+    },
+    {
+      "key": "3500a676-0418-4ab8-bd17-92aa1ddba561",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3500a676-0418-4ab8-bd17-92aa1ddba561",
+        "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "musiclab"
       }
@@ -121,6 +148,16 @@
       "seeding_key": {
         "activity_section.key": "cbec4ea2-4833-419b-be54-319a81a14e44",
         "lesson_activity.key": "a993a33d-6517-4f75-b2b7-9ce228b5d8cf"
+      }
+    },
+    {
+      "key": "99955130-0092-4c53-8d9f-3af376974d52",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "99955130-0092-4c53-8d9f-3af376974d52",
+        "lesson_activity.key": "3500a676-0418-4ab8-bd17-92aa1ddba561"
       }
     }
   ],
@@ -220,6 +257,132 @@
       "level_keys": [
         "SNAP"
       ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_freeplay_intro"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "musiclab",
+        "activity_section.key": "99955130-0092-4c53-8d9f-3af376974d52"
+      },
+      "level_keys": [
+        "musiclab_freeplay_intro"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_freeplay_loops"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "musiclab",
+        "activity_section.key": "99955130-0092-4c53-8d9f-3af376974d52"
+      },
+      "level_keys": [
+        "musiclab_freeplay_loops"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_freeplay_play_together"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "musiclab",
+        "activity_section.key": "99955130-0092-4c53-8d9f-3af376974d52"
+      },
+      "level_keys": [
+        "musiclab_freeplay_play_together"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_freeplay_triggers"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "musiclab",
+        "activity_section.key": "99955130-0092-4c53-8d9f-3af376974d52"
+      },
+      "level_keys": [
+        "musiclab_freeplay_triggers"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_freeplay_outro"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "musiclab",
+        "activity_section.key": "99955130-0092-4c53-8d9f-3af376974d52"
+      },
+      "level_keys": [
+        "musiclab_freeplay_outro"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_standalone"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "musiclab",
+        "activity_section.key": "99955130-0092-4c53-8d9f-3af376974d52"
+      },
+      "level_keys": [
+        "musiclab_standalone"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -269,6 +432,78 @@
         "lesson_group.key": "",
         "script.name": "musiclab",
         "activity_section.key": "cbec4ea2-4833-419b-be54-319a81a14e44"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_freeplay_intro",
+        "script_level.level_keys": [
+          "musiclab_freeplay_intro"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "musiclab",
+        "activity_section.key": "99955130-0092-4c53-8d9f-3af376974d52"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_freeplay_loops",
+        "script_level.level_keys": [
+          "musiclab_freeplay_loops"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "musiclab",
+        "activity_section.key": "99955130-0092-4c53-8d9f-3af376974d52"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_freeplay_play_together",
+        "script_level.level_keys": [
+          "musiclab_freeplay_play_together"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "musiclab",
+        "activity_section.key": "99955130-0092-4c53-8d9f-3af376974d52"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_freeplay_triggers",
+        "script_level.level_keys": [
+          "musiclab_freeplay_triggers"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "musiclab",
+        "activity_section.key": "99955130-0092-4c53-8d9f-3af376974d52"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_freeplay_outro",
+        "script_level.level_keys": [
+          "musiclab_freeplay_outro"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "musiclab",
+        "activity_section.key": "99955130-0092-4c53-8d9f-3af376974d52"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_standalone",
+        "script_level.level_keys": [
+          "musiclab_standalone"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "musiclab",
+        "activity_section.key": "99955130-0092-4c53-8d9f-3af376974d52"
       }
     }
   ],
