@@ -76,8 +76,6 @@ module Pd::Application
 
     has_many :emails, class_name: 'Pd::Application::Email', foreign_key: 'pd_application_id'
 
-    has_one :enrollment, class_name: 'Pd::Enrollment', foreign_key: 'application_id'
-
     before_validation :set_course_from_program, if: -> {form_data_changed?}
     before_validation :set_status_from_admin_approval, if: -> {properties_changed?}
     validates :status, exclusion: {in: ['interview'], message: '%{value} is reserved for facilitator applications.'}
@@ -321,6 +319,10 @@ module Pd::Application
 
       # No match? Return the first workshop
       workshops.first
+    end
+
+    def enrollment
+      Pd::Enrollment.find_by(user: user, workshop: pd_workshop_id)
     end
 
     def enrolled?

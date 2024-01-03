@@ -20,22 +20,23 @@ module Api::V1::Pd
       application_data = empty_application_data
 
       ROLES.each do |role|
-        apps = get_applications_by_role(role, include_associations: false).
-          select(:status, "count(id) AS total").
-          group(:status)
+        apps = get_applications_by_role(role, include_associations: false)
+
+        apps_statuses = apps.select(:status, "count(id) AS total").group(:status)
 
         if regional_partner_value == REGIONAL_PARTNERS_NONE
-          apps = apps.where(regional_partner_id: nil)
+          apps_statuses = apps_statuses.where(regional_partner_id: nil)
         elsif regional_partner_value && regional_partner_value != REGIONAL_PARTNERS_ALL
-          apps = apps.where(regional_partner_id: regional_partner_value)
+          apps_statuses = apps_statuses.where(regional_partner_id: regional_partner_value)
         end
 
-        apps.group(:status).each do |group|
+        apps_statuses.group(:status).each do |group|
           application_data[role][group.status] = {total: group.total}
         end
 
-        enrollments = apps.count(&:enrolled?)
-        application_data[role][:enrolled] = {total: enrollments}
+        enrollments = apps.count {|a| a.try(:enrolled?)}
+        application_data[role]['enrolled'] = {total: enrollments}
+        application_data[role]['accepted'][:total] -= enrollments if application_data[role]['accepted']
       end
 
       render json: application_data
