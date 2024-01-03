@@ -403,6 +403,40 @@ td {
   padding: 15px;
 }
 
+/* Styles for the "OR" divider line between paragraphs
+  - see code.org/afe for an example */
+.or-divider-line {
+  position: relative;
+  text-align: center;
+  margin: 0.75rem 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--neutral_dark20);
+    z-index: 0;
+  }
+
+  & > p {
+    position: relative;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    margin: 0 4px 0;
+    padding: 5px 5px 4px;
+    border: 1px solid var(--neutral_dark20);
+    border-radius: 50%;
+    outline: 4px solid var(--neutral_white);
+    z-index: 1;
+    background: var(--neutral_white);
+  }
+}
+
 /* for homepage 2.0.. */
 #homepage .clear {
   clear: both;
