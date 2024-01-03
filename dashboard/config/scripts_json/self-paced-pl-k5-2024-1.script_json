@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-12-13 23:25:16 UTC",
+    "serialized_at": "2024-01-02 22:04:32 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -334,6 +334,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U2L1 CFU how use internet_2023_K5CSConcepts"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -379,6 +382,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Begin_2023_K5CSConcepts_TextPage"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -448,6 +454,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Begin_2023_K5CSConcepts1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -493,6 +502,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U2L1 CFU how use internet_2023_K5CSConcepts1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -514,6 +526,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Begin_2023_K5CSConcepts2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -607,6 +622,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_while2_2023_K5CSConcepts"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -628,6 +646,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Begin_2023_K5CSConcepts2_5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -649,6 +670,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_while3_2023_K5CSConcepts"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -670,6 +694,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_while1_2023_K5CSConcepts"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -691,6 +718,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals1_predict1_2023_K5CSConcepts"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -712,6 +742,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Begin_2023_K5CSConcepts2_6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -733,6 +766,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals4_2023_K5CSConcepts"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -754,6 +790,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals2_2023_K5CSConcepts"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -775,6 +814,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Begin_2023_K5Concepts1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -800,6 +842,30 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
+          "U2L4 CSP CFU terms2022_2023_K5Concepts"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-1",
+        "activity_section.key": "10d782a2-c481-4248-af54-d9e5588fc8cc"
+      },
+      "level_keys": [
+        "U2L4 CSP CFU terms2022_2023_K5Concepts"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals3_2023_K5CSConcepts"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
           "courseD_bee_conditionals3_2023_K5CSConcepts"
         ],
         "lesson.key": "lesson-5",
@@ -812,11 +878,14 @@
       ]
     },
     {
-      "chapter": 25,
-      "position": 3,
-      "activity_section_position": 3,
+      "chapter": 26,
+      "position": 4,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Begin_2023_K5CSConcepts9"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -833,11 +902,14 @@
       ]
     },
     {
-      "chapter": 26,
-      "position": 4,
-      "activity_section_position": 4,
+      "chapter": 27,
+      "position": 5,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U2L1 CFU how use internet_2023_K5CSConcepts2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -854,11 +926,14 @@
       ]
     },
     {
-      "chapter": 27,
-      "position": 5,
-      "activity_section_position": 5,
+      "chapter": 28,
+      "position": 6,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals6_2023_K5CSConcepts"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -875,11 +950,14 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Assessment_copy_2023_K5CSConcepts"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1166,6 +1244,18 @@
         "level.key": "OPD-K5 Begin_2023_K5Concepts1",
         "script_level.level_keys": [
           "OPD-K5 Begin_2023_K5Concepts1"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-1",
+        "activity_section.key": "10d782a2-c481-4248-af54-d9e5588fc8cc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L4 CSP CFU terms2022_2023_K5Concepts",
+        "script_level.level_keys": [
+          "U2L4 CSP CFU terms2022_2023_K5Concepts"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "",

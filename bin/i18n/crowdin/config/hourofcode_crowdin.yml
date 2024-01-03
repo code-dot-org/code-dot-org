@@ -3,7 +3,7 @@
 #
 "project_identifier" : "hour-of-code"
 "project_id" : "55536"
-"base_path" : "i18n/locales"
+"base_path_env": "I18N_SOURCE_DIR"
 
 # API Credentials must be loaded from a separate identity file. See
 # https://support.crowdin.com/configuration-file/#split-project-configuration-and-api-credentials
@@ -14,11 +14,11 @@
 #
 files: [
   {
-    "source": "/source/hourofcode/en.yml",
+    "source": "/hourofcode/en.yml",
     "translation": "/%language%/hourofcode/%original_file_name%",
     "update_option": "update_as_unapproved"
   }, {
-    "source": "/source/hourofcode/**/*.md",
+    "source": "/hourofcode/**/*.md",
     "translation": "/%language%/hourofcode/**/%file_name%.md",
     "update_option": "update_as_unapproved"
   }
