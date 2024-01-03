@@ -110,7 +110,7 @@ export const blocklyLocaleMap = {
   'eu-ES': 'eu',
   'fa-IR': 'fa',
   'fi-FI': 'fi',
-  'fil-PH': 'ms', // English provided as broader alternative for Filipino
+  'fil-PH': 'en', // English provided as broader alternative for Filipino
   'fr-FR': 'fr',
   'ga-IE': 'en', // English provided as broader alternative for Irish (Gaelic)
   'gl-ES': 'gl',
