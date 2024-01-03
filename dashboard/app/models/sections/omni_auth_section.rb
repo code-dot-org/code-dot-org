@@ -38,7 +38,7 @@ class OmniAuthSection < Section
   def self.from_omniauth(code:, type:, owner_id:, students:, section_name: I18n.t('sections.default_name', default: 'Untitled Section'))
     oauth_section = with_deleted.where(code: code).first_or_create
 
-    course_name_limit = type == Section::LOGIN_TYPE_CLEVER ? CleverSection.column_for_attribute(:name).limit : GoogleClassroomSection.column_for_attribute(:name).limit
+    course_name_limit = OmniAuthSection.column_for_attribute(:name).limit
     oauth_section.name = section_name.length > course_name_limit ? section_name.truncate(course_name_limit) : section_name
 
     # Add the user as an owner if the section does not exist. Otherwise add as a coteacher to existing section.
