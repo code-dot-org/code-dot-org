@@ -23,7 +23,7 @@ module Pd::WorkshopSurveyResultsHelper
     # Works on arrays where everything is a teachercon survey
     surveys = workshops.flat_map(&:survey_responses)
 
-    raise 'Currently just summarizes Local Summer and Teachercon surveys' unless
+    raise 'Currently just summarizes Teachercon surveys' unless
       surveys.all?(Pd::TeacherconSurvey)
 
     return Hash.new if surveys.empty?
