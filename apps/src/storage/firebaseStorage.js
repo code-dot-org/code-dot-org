@@ -540,6 +540,14 @@ FirebaseStorage.resetForTesting = function () {
   resetConfigForTesting();
 };
 
+// Current tables are live updated, the data is NOT copied into
+// the student project, instead a new type of firebase node is created
+// like /v3/channels/NZfs8i-ivpdJe_CXtPfHtOCssNIRTY1oKd5uXfSiuyI/current_tables/Daily Weather
+// as opposed to a normal table that would be like 
+// /v3/channels/NZfs8i-ivpdJe_CXtPfHtOCssNIRTY1oKd5uXfSiuyI/storage/tables/Daily Weather
+//
+// Current tables can be found in https://console.firebase.google.com/project/cdo-v3-shared/database/cdo-v3-shared/data/~2Fv3~2Fchannels~2Fshared~2Fmetadata~2Fmanifest~2Ftables
+// where the table has `current: true` set in the manifest object
 FirebaseStorage.addCurrentTableToProject = function (
   tableName,
   onSuccess,
