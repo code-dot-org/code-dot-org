@@ -3,24 +3,22 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Teaching CS Connections
+# Programming with Behaviors
 
-##### **Welcome! This professional learning module is designed to help you prepare to teach Code.org's CS Connections.** 
-
-##### Computer Science Connections are modules that integrate computer science (CS) and other subjects like math, language arts,science, and social studies. The modules are designed with the new-to-CS student and teacher in mind. Each module includes three to five 45-minute lessons.
+##### So far you have learned to set up your program with sprites and backgrounds and how to use events to make your program interactive. In this lesson, you will learn how to animate your sprite using behaviors.
 
 <img src="https://images.code.org/205cc0e8da353930786208309788529d-image-1679953465855.png" alt="Image of a cartoon octopus holding a microphone and wearing a hat" style="border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;">
 
 
 ## In this module, you will:
 
-* ##### Gain an overview of CS Connections.
-* ##### Create a plan to implement a CS Connections module.
-* ##### Practice key computer science concepts included in lessons.
-* ##### Preview platform features and lesson resources.
-* ##### Consider strategies to create positive CS learning experiences.
+* ##### Learn about using behavior blocks in your program.
+* ##### Practice using different behavior blocks.
+* ##### Create an interactive program using behaviors.
+* ##### Combine your knowledge of events and behaviors to make a creative program.
 
-### **Suggested time:** 75 minutes
+
+### **Suggested time:** 15 minutes
 
 
 ## Let's get started!
