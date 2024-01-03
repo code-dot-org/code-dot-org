@@ -40,7 +40,6 @@ Scenario: Teacher starts a new application and submits it
   And I press the first "input[name='willTeach']" element
   And I press the first "input[name='csdWhichGrades']" element
   And I press the first "input[name='enoughCourseHours']" element
-  And I press the first "input[name='replaceExisting']" element
   Then I see no difference for "Section 6: Implementation Plan"
   And I press the first "button#next" element
 
@@ -136,7 +135,6 @@ Scenario: Teacher saves, re-opens, and submits an application
   And I press the first "input[name='willTeach']" element
   And I press the first "input[name='csdWhichGrades']" element
   And I press the first "input[name='enoughCourseHours']" element
-  And I press the first "input[name='replaceExisting']" element
   And I press the first "button#next" element
 
   # Section 7
@@ -148,7 +146,7 @@ Scenario: Teacher starts a new csp application and submits it
   And I am on "http://studio.code.org/pd/application/teacher"
   And I wait until element "h1" contains text "Professional Learning Program Teacher Application"
   Then I wait until element "h3" contains text "Section 1: Choose Your Program"
-  And I press the first "input[name='program'][value='Computer Science Principles (appropriate for 9th - 12th grade, and can be implemented as an AP or introductory course)']" element
+  And I press the first "input[name='program'][value='Computer Science Principles (appropriate for 9th - 12th grade, and can be implemented as an AP or non-AP introductory course)']" element
   And I press the first "button#next" element
 
   # Section 2
@@ -173,7 +171,6 @@ Scenario: Teacher starts a new csp application and submits it
   And I press the first "input[name='cspWhichGrades']" element
   And I press the first "input[name='cspHowOffer']" element
   And I press the first "input[name='enoughCourseHours']" element
-  And I press the first "input[name='replaceExisting']" element
   And I press the first "button#next" element
 
   # Section 7
@@ -215,7 +212,6 @@ Scenario: Teacher starts a new csa application and submits it
   And I press the first "input[name='csaWhichGrades']" element
   And I press the first "input[name='csaHowOffer']" element
   And I press the first "input[name='enoughCourseHours']" element
-  And I press the first "input[name='replaceExisting']" element
   And I press the first "button#next" element
 
   # Section 7

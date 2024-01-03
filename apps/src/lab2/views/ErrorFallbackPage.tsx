@@ -12,6 +12,7 @@ export const ErrorUI: React.FunctionComponent<ErrorUIProps> = ({message}) => (
       <img
         className={moduleStyles.pageErrorImage}
         src="/shared/images/sad-bee-avatar.png"
+        alt=""
       />
       <div>{i18n.loadingError()}</div>
       {message && (

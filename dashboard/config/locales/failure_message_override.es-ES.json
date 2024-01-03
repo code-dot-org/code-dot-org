@@ -2,6 +2,7 @@
   "es-ES": {
     "data": {
       "failure_message_override": {
+        "Eval Strings Images .2": "Asegúrate de añadir la cadena \"Universo\" para que el código cree \"Hola, Universo\".",
         "MC HOC 2016 Level 2-2": "Usa los comandos de 'avanzar' y 'girar' para hacer mover a la gallina",
         "MC HOC 2016 Level 3": "Usa un bloque de 'para siempre' y comandos de 'avanzar' y 'girar' para hacer que el pollo deambule",
         "MC HOC 2016 Level 4": "Si las gallinas se mueven en la misma dirección, usa 'girar al azar' para hacer que las gallinas giren al azar entre izquierda o derecha",

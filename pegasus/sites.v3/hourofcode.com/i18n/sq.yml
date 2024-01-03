@@ -903,6 +903,9 @@ sq:
   cs_ambassador_application_date: Aplikimet hapen deri më 8 nëntor 2023
   cs_ambassador_application_subhead: Punoni me një mësues për të paraqitur aplikimin
     tuaj sot
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: Pyetje? Ju lutemi kontaktoni [youngwomen@code.org]
     (%{email_url})
   cs_ambassador_do_heading: Çfarë bëjnë ambasadorët e CS?

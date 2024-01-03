@@ -16,6 +16,7 @@ import {
   studentLevelInfoShape,
 } from './rubricShapes';
 import LearningGoal from './LearningGoal';
+import LearningGoals from './LearningGoals';
 import Button from '@cdo/apps/templates/Button';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import classnames from 'classnames';
@@ -203,24 +204,39 @@ export default function RubricContent({
           </div>
         )}
       </div>
-      <div className={style.learningGoalContainer}>
-        {rubric.learningGoals.map(lg => (
-          <LearningGoal
-            key={lg.key}
-            learningGoal={lg}
-            teacherHasEnabledAi={teacherHasEnabledAi}
-            canProvideFeedback={canProvideFeedback}
-            reportingData={reportingData}
-            studentLevelInfo={studentLevelInfo}
-            aiUnderstanding={getAiUnderstanding(lg.id)}
-            aiConfidence={getAiConfidence(lg.id)}
-            isStudent={false}
-            feedbackAdded={feedbackAdded}
-            setFeedbackAdded={setFeedbackAdded}
-            aiEvalInfo={getAiInfo(lg.id)}
-          />
-        ))}
-      </div>
+      {experiments.isEnabled('ai-rubrics-redesign') ? (
+        <LearningGoals
+          learningGoals={rubric.learningGoals}
+          teacherHasEnabledAi={teacherHasEnabledAi}
+          canProvideFeedback={canProvideFeedback}
+          reportingData={reportingData}
+          studentLevelInfo={studentLevelInfo}
+          isStudent={false}
+          feedbackAdded={feedbackAdded}
+          setFeedbackAdded={setFeedbackAdded}
+          aiEvaluations={aiEvaluations}
+        />
+      ) : (
+        <div className={style.learningGoalContainer}>
+          {rubric.learningGoals.map(lg => (
+            <LearningGoal
+              key={lg.key}
+              learningGoal={lg}
+              teacherHasEnabledAi={teacherHasEnabledAi}
+              canProvideFeedback={canProvideFeedback}
+              reportingData={reportingData}
+              studentLevelInfo={studentLevelInfo}
+              aiUnderstanding={getAiUnderstanding(lg.id)}
+              aiConfidence={getAiConfidence(lg.id)}
+              isStudent={false}
+              feedbackAdded={feedbackAdded}
+              setFeedbackAdded={setFeedbackAdded}
+              aiEvalInfo={getAiInfo(lg.id)}
+            />
+          ))}
+        </div>
+      )}
+
       {canProvideFeedback && (
         <div className={style.rubricContainerFooter}>
           <div className={style.submitToStudentButtonAndError}>

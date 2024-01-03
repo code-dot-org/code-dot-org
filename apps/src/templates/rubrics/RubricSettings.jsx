@@ -38,9 +38,30 @@ const STATUS = {
   PROFANITY_ERROR: 'profanity_error',
 };
 
+const STATUS_ALL = {
+  // we are waiting for initial status from the server
+  INITIAL_LOAD: 'initial_load',
+  // at least one student has work which is ready to evaluate
+  READY: 'ready',
+  EVALUATION_PENDING: 'evaluation_pending',
+  // at least one student's work was evaluated
+  SUCCESS: 'success',
+  // no students have attempted this level
+  NOT_ATTEMPTED: 'not_attempted',
+  // all attempted work has already been evaluated
+  ALREADY_EVALUATED: 'already_evaluated',
+  ERROR: 'error',
+};
+
 const fetchAiEvaluationStatus = (rubricId, studentUserId) => {
   return fetch(
     `/rubrics/${rubricId}/ai_evaluation_status_for_user?user_id=${studentUserId}`
+  );
+};
+
+const fetchAiEvaluationStatusAll = (rubricId, sectionId) => {
+  return fetch(
+    `/rubrics/${rubricId}/ai_evaluation_status_for_all?section_id=${sectionId}`
   );
 };
 
@@ -50,6 +71,8 @@ export default function RubricSettings({
   visible,
   refreshAiEvaluations,
   rubric,
+  studentName,
+  sectionId,
 }) {
   const rubricId = rubric.id;
   const {lesson} = rubric;
@@ -61,6 +84,8 @@ export default function RubricSettings({
       status === STATUS.EVALUATION_RUNNING,
     [status]
   );
+  const [statusAll, setStatusAll] = useState(STATUS_ALL.INITIAL_LOAD);
+  const [unevaluatedCount, setUnevaluatedCount] = useState(0);
 
   const statusText = () => {
     switch (status) {
@@ -87,13 +112,43 @@ export default function RubricSettings({
     }
   };
 
+  const statusAllText = () => {
+    switch (statusAll) {
+      case STATUS_ALL.INITIAL_LOAD:
+        return i18n.aiEvaluationStatus_initial_load();
+      case STATUS_ALL.READY:
+        return i18n.aiEvaluationStatusAll_ready({
+          unevaluatedCount: unevaluatedCount,
+        });
+      case STATUS_ALL.SUCCESS:
+        return i18n.aiEvaluationStatus_success();
+      case STATUS_ALL.EVALUATION_PENDING:
+        return i18n.aiEvaluationStatus_pending();
+      case STATUS_ALL.ERROR:
+        return i18n.aiEvaluationStatus_error();
+      case STATUS.ALREADY_EVALUATED:
+        return i18n.aiEvaluationStatusAll_already_evaluated();
+      case STATUS.NOT_ATTEMPTED:
+        return i18n.aiEvaluationStatusAll_not_attempted();
+    }
+  };
+
+  const studentButtonText = () => {
+    return i18n.runAiAssessment({
+      studentName: studentName,
+    });
+  };
+
   useEffect(() => {
-    if (!!rubricId && !!studentUserId) {
+    if (!!rubricId && !!studentUserId && !!sectionId) {
       fetchAiEvaluationStatus(rubricId, studentUserId).then(response => {
         if (!response.ok) {
           setStatus(STATUS.ERROR);
         } else {
           response.json().then(data => {
+            // we can't fetch the csrf token from the DOM because CSRF protection
+            // is disabled on script level pages.
+            setCsrfToken(data.csrfToken);
             if (!data.attempted) {
               setStatus(STATUS.NOT_ATTEMPTED);
             } else if (data.lastAttemptEvaluated) {
@@ -111,19 +166,35 @@ export default function RubricSettings({
             ) {
               setStatus(STATUS.PROFANITY_ERROR);
             } else {
-              // we can't fetch the csrf token from the DOM because CSRF protection
-              // is disabled on script level pages.
-              setCsrfToken(data.csrfToken);
               setStatus(STATUS.READY);
             }
           });
         }
       });
+      fetchAiEvaluationStatusAll(rubricId, sectionId).then(response => {
+        if (!response.ok) {
+          setStatusAll(STATUS_ALL.ERROR);
+        } else {
+          response.json().then(data => {
+            // we can't fetch the csrf token from the DOM because CSRF protection
+            // is disabled on script level pages.
+            setCsrfToken(data.csrfToken);
+            setUnevaluatedCount(data.attemptedUnevaluatedCount);
+            if (data.attemptedCount === 0) {
+              setStatusAll(STATUS_ALL.NOT_ATTEMPTED);
+            } else if (data.attemptedUnevaluatedCount === 0) {
+              setStatusAll(STATUS_ALL.ALREADY_EVALUATED);
+            } else {
+              setStatusAll(STATUS_ALL.READY);
+            }
+          });
+        }
+      });
     }
-  }, [rubricId, studentUserId]);
+  }, [rubricId, studentUserId, sectionId]);
 
   useEffect(() => {
-    if (polling && !!rubricId && !!studentUserId) {
+    if (polling && !!rubricId && !!studentUserId && !!sectionId) {
       const intervalId = setInterval(() => {
         fetchAiEvaluationStatus(rubricId, studentUserId).then(response => {
           if (!response.ok) {
@@ -154,10 +225,29 @@ export default function RubricSettings({
             });
           }
         });
+        fetchAiEvaluationStatusAll(rubricId, sectionId).then(response => {
+          if (!response.ok) {
+            setStatusAll(STATUS_ALL.ERROR);
+          } else {
+            response.json().then(data => {
+              // we can't fetch the csrf token from the DOM because CSRF protection
+              // is disabled on script level pages.
+              setCsrfToken(data.csrfToken);
+              setUnevaluatedCount(data.attemptedUnevaluatedCount);
+              if (data.attemptedCount === 0) {
+                setStatusAll(STATUS_ALL.NOT_ATTEMPTED);
+              } else if (data.attemptedUnevaluatedCount === 0) {
+                setStatusAll(STATUS_ALL.ALREADY_EVALUATED);
+              } else {
+                setStatusAll(STATUS_ALL.READY);
+              }
+            });
+          }
+        });
       }, 5000);
       return () => clearInterval(intervalId);
     }
-  }, [rubricId, studentUserId, polling, refreshAiEvaluations]);
+  }, [rubricId, studentUserId, polling, sectionId, refreshAiEvaluations]);
 
   const handleRunAiAssessment = () => {
     setStatus(STATUS.EVALUATION_PENDING);
@@ -173,6 +263,24 @@ export default function RubricSettings({
     }).then(response => {
       if (!response.ok) {
         setStatus(STATUS.ERROR);
+      }
+    });
+  };
+
+  const handleRunAiAssessmentAll = () => {
+    setStatusAll(STATUS_ALL.EVALUATION_PENDING);
+    const url = `/rubrics/${rubricId}/run_ai_evaluations_for_all`;
+    const params = {section_id: sectionId};
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': csrfToken,
+      },
+      body: JSON.stringify(params),
+    }).then(response => {
+      if (!response.ok) {
+        setStatus(STATUS_ALL.ERROR);
       }
     });
   };
@@ -210,7 +318,7 @@ export default function RubricSettings({
           </div>
           <Button
             className="uitest-run-ai-assessment"
-            text={i18n.runAiAssessment()}
+            text={studentButtonText()}
             color={Button.ButtonColor.brandSecondaryDefault}
             onClick={handleRunAiAssessment}
             style={{margin: 0}}
@@ -218,11 +326,30 @@ export default function RubricSettings({
           >
             {polling && <i className="fa fa-spinner fa-spin" />}
           </Button>
-          {statusText() && (
-            <BodyTwoText className="uitest-eval-status-text">
-              {statusText()}
+          <BodyTwoText className="uitest-eval-status-text">
+            {statusText() || ''}
+          </BodyTwoText>
+          <div>
+            <BodyTwoText>
+              <StrongText>{i18n.aiAssessmentAll()}</StrongText>
             </BodyTwoText>
-          )}
+            <BodyTwoText>{i18n.runAiAssessmentDescriptionAll()}</BodyTwoText>
+          </div>
+          <Button
+            className="uitest-run-ai-assessment-all"
+            text={i18n.runAiAssessmentAll()}
+            color={Button.ButtonColor.brandSecondaryDefault}
+            onClick={handleRunAiAssessmentAll}
+            style={{margin: 0}}
+            disabled={statusAll !== STATUS_ALL.READY}
+          >
+            {statusAll === STATUS_ALL.EVALUATION_PENDING && (
+              <i className="fa fa-spinner fa-spin" />
+            )}
+          </Button>
+          <BodyTwoText className="uitest-eval-status-all-text">
+            {statusAllText() || ''}
+          </BodyTwoText>
         </div>
       )}
     </div>
@@ -237,4 +364,6 @@ RubricSettings.propTypes = {
   visible: PropTypes.bool,
   refreshAiEvaluations: PropTypes.func,
   rubric: rubricShape.isRequired,
+  studentName: PropTypes.string,
+  sectionId: PropTypes.number,
 };
