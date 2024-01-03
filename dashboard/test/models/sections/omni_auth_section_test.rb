@@ -205,4 +205,20 @@ class OmniAuthSectionTest < ActiveSupport::TestCase
     section.set_exact_student_list(updated_students)
     assert_equal updated_students.pluck(:id).sort, section.reload.students.pluck(:id).sort
   end
+
+  test 'truncate section name when too long' do
+    owner = create :teacher
+    course_name = 'test' * 65
+
+    section = OmniAuthSection.from_omniauth(
+      code: 'G-222222',
+      type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM,
+      owner_id: owner.id,
+      students: [],
+      section_name: course_name
+    )
+    section.reload
+    assert_equal OmniAuthSection.column_for_attribute(:name).limit, section.name.length
+    assert section.name.end_with?('...')
+  end
 end
