@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-09 16:44:57 UTC",
+    "serialized_at": "2023-10-04 16:49:18 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -16199,6 +16199,18 @@
       }
     },
     {
+      "name": "Animation and Game Design Template",
+      "url": "https://docs.google.com/presentation/d/1O1oWeMbIOetBbgmuwyXlUDmlr6L9ygQi0wLG89w_uq0/edit?usp=sharing",
+      "key": "animation_and_game_design_template",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "animation_and_game_design_template"
+      }
+    },
+    {
       "name": "Animation Tab",
       "url": "https://drive.google.com/file/d/1ytsY-Hv17uCKmwY4Af7OpljWdsLtGfTn/view",
       "key": "animation_tab",
@@ -17548,18 +17560,6 @@
       "seeding_key": {
         "resource.key": "velocity_and_the_counter_pattern"
       }
-    },
-    {
-      "name": "Web Design Template",
-      "url": "https://docs.google.com/presentation/d/1L7BgZu3XJVajibAfhK4c9o2R1_-nMC0ND_R3mXgN2wg/edit",
-      "key": "web_design_template",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "web_design_template"
-      }
     }
   ],
   "lessons_resources": [
@@ -17908,6 +17908,12 @@
     {
       "seeding_key": {
         "lesson.key": "Programming for a Purpose",
+        "resource.key": "animation_and_game_design_template"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming for a Purpose",
         "resource.key": "exemplar_-_animation_and_game_design_activity_guide"
       }
     },
@@ -17927,12 +17933,6 @@
       "seeding_key": {
         "lesson.key": "Programming for a Purpose",
         "resource.key": "the_problem_solving_process"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming for a Purpose",
-        "resource.key": "web_design_template"
       }
     },
     {
@@ -18934,7 +18934,7 @@
     {
       "key": "1118818b-05e9-48b7-b3c9-dc29838b4a8c",
       "properties": {
-        "description": "Apply variables, shapes, and ranomNumber concepts to create a program."
+        "description": "Apply variables, shapes, and randomNumber concepts to create a program."
       },
       "seeding_key": {
         "lesson.key": "Mini-Project - Robot Faces",

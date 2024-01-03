@@ -88,7 +88,7 @@ class DSLDefined < Level
     end
   end
 
-  def self.setup(data, md5=nil)
+  def self.setup(data, md5 = nil)
     level = find_or_create_by({name: data[:name].strip})
     level.send(:write_attribute, 'properties', {})
 
@@ -102,7 +102,7 @@ class DSLDefined < Level
   end
 
   # Use DSL class to parse string
-  def self.parse(str, filename, name=nil)
+  def self.parse(str, filename, name = nil)
     dsl_class.parse(str, filename, name)
   end
 

@@ -1,0 +1,11 @@
+name 'CSA-SE-CV-SAS03'
+
+question 'AI-generated real-world examples in this module enhanced my learning experience.'
+
+right 'Strongly Agree'
+right 'Agree'
+right 'Neutral'
+right 'Disagree'
+right 'Strongly Disagree'
+
+allow_multiple_attempts true

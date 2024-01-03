@@ -188,6 +188,7 @@ export const fakeStudents = studentCount => {
     .map((_, i) => ({
       id: i,
       name: `student-${i}`,
+      familyName: `student-${studentCount - i}`,
     }));
 };
 
@@ -256,6 +257,9 @@ export const fakeProgressTableReduxInitialState = (
   const sectionId = randomNumberUpTo100();
 
   return {
+    currentUser: {
+      isSortedByFamilyName: false,
+    },
     progress: {
       lessonGroups: [],
       lessons: lessons,
@@ -286,6 +290,5 @@ export const fakeProgressTableReduxInitialState = (
     },
     unitSelection: {scriptId: scriptData.id},
     locales: {localeCode: 'en-US'},
-    isRtl: false,
   };
 };

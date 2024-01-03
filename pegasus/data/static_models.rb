@@ -122,7 +122,7 @@ module StaticModels
     end
 
     def order(key)
-      self.class.new sort {|a, b| a[key].to_s <=> b[key].to_s}
+      self.class.new(sort {|a, b| a[key].to_s <=> b[key].to_s})
     end
   end
 end

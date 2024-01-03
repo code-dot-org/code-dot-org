@@ -9,7 +9,7 @@ class CurriculumCatalogController < ApplicationController
     @language_native_name = language_info[:native]
 
     @is_signed_out = current_user.nil?
-    @is_teacher = current_user&.teacher?
+    @is_teacher = current_user&.teacher? || false
 
     if @is_teacher
       @sections_for_teacher = current_user.try {|u| u.sections.all.reject(&:hidden).map(&:summarize)}
@@ -22,7 +22,8 @@ class CurriculumCatalogController < ApplicationController
       languageNativeName: @language_native_name,
       isSignedOut: @is_signed_out,
       isTeacher: @is_teacher,
-      sections: @sections_for_teacher
+      sections: @sections_for_teacher,
+      isInUS: request.country.to_s.casecmp?('rd') || request.country.to_s.casecmp?('us')
     }
   end
 end

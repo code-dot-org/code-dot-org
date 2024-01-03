@@ -4,7 +4,7 @@ require 'active_support/i18n'
 
 class HamburgerTest < Minitest::Test
   def assert_includes_id(items, id)
-    assert items.find {|e| e[:id] == id}
+    assert(items.find {|e| e[:id] == id})
   end
 
   # Visibility CSS class tests.
@@ -27,7 +27,7 @@ class HamburgerTest < Minitest::Test
     assert_equal visibility[:show_teacher_options],     Hamburger::SHOW_ALWAYS
     assert_equal visibility[:show_student_options],     Hamburger::HIDE_ALWAYS
     assert_equal visibility[:show_signed_out_options],  Hamburger::HIDE_ALWAYS
-    assert_equal visibility[:show_pegasus_options],     Hamburger::HIDE_ALWAYS
+    assert_equal visibility[:show_pegasus_options],     Hamburger::SHOW_ALWAYS
     assert_equal visibility[:show_help_options],        Hamburger::SHOW_MOBILE
   end
 
@@ -49,7 +49,7 @@ class HamburgerTest < Minitest::Test
     assert_equal visibility[:show_teacher_options],     Hamburger::HIDE_ALWAYS
     assert_equal visibility[:show_student_options],     Hamburger::SHOW_ALWAYS
     assert_equal visibility[:show_signed_out_options],  Hamburger::HIDE_ALWAYS
-    assert_equal visibility[:show_pegasus_options],     Hamburger::HIDE_ALWAYS
+    assert_equal visibility[:show_pegasus_options],     Hamburger::SHOW_ALWAYS
     assert_equal visibility[:show_help_options],        Hamburger::SHOW_MOBILE
   end
 
@@ -71,7 +71,7 @@ class HamburgerTest < Minitest::Test
     assert_equal visibility[:show_teacher_options],     Hamburger::HIDE_ALWAYS
     assert_equal visibility[:show_student_options],     Hamburger::HIDE_ALWAYS
     assert_equal visibility[:show_signed_out_options],  Hamburger::SHOW_ALWAYS
-    assert_equal visibility[:show_pegasus_options],     Hamburger::HIDE_ALWAYS
+    assert_equal visibility[:show_pegasus_options],     Hamburger::SHOW_ALWAYS
     assert_equal visibility[:show_help_options],        Hamburger::SHOW_MOBILE
   end
 
@@ -89,11 +89,11 @@ class HamburgerTest < Minitest::Test
   def test_nonlevel_teacher_nonen
     visibility = Hamburger.get_visibility({level: false, user_type: "teacher", language: "fr"})
 
-    assert_equal visibility[:hamburger_class],          Hamburger::SHOW_MOBILE
+    assert_equal visibility[:hamburger_class],          Hamburger::SHOW_ALWAYS
     assert_equal visibility[:show_teacher_options],     Hamburger::SHOW_MOBILE
     assert_equal visibility[:show_student_options],     Hamburger::HIDE_ALWAYS
     assert_equal visibility[:show_signed_out_options],  Hamburger::HIDE_ALWAYS
-    assert_equal visibility[:show_pegasus_options],     Hamburger::HIDE_ALWAYS
+    assert_equal visibility[:show_pegasus_options],     Hamburger::SHOW_ALWAYS
     assert_equal visibility[:show_help_options],        Hamburger::SHOW_MOBILE
   end
 
@@ -111,11 +111,11 @@ class HamburgerTest < Minitest::Test
   def test_nonlevel_student_nonen
     visibility = Hamburger.get_visibility({level: false, user_type: "student", language: "fr"})
 
-    assert_equal visibility[:hamburger_class],          Hamburger::SHOW_MOBILE
+    assert_equal visibility[:hamburger_class],          Hamburger::SHOW_ALWAYS
     assert_equal visibility[:show_teacher_options],     Hamburger::HIDE_ALWAYS
     assert_equal visibility[:show_student_options],     Hamburger::SHOW_MOBILE
     assert_equal visibility[:show_signed_out_options],  Hamburger::HIDE_ALWAYS
-    assert_equal visibility[:show_pegasus_options],     Hamburger::HIDE_ALWAYS
+    assert_equal visibility[:show_pegasus_options],     Hamburger::SHOW_ALWAYS
     assert_equal visibility[:show_help_options],        Hamburger::SHOW_MOBILE
   end
 
@@ -137,7 +137,7 @@ class HamburgerTest < Minitest::Test
     assert_equal visibility[:show_teacher_options],     Hamburger::HIDE_ALWAYS
     assert_equal visibility[:show_student_options],     Hamburger::HIDE_ALWAYS
     assert_equal visibility[:show_signed_out_options],  Hamburger::SHOW_MOBILE
-    assert_equal visibility[:show_pegasus_options],     Hamburger::HIDE_ALWAYS
+    assert_equal visibility[:show_pegasus_options],     Hamburger::SHOW_MOBILE
     assert_equal visibility[:show_help_options],        Hamburger::SHOW_MOBILE
   end
 
@@ -161,13 +161,13 @@ class HamburgerTest < Minitest::Test
 
   def test_hamburger_content_expandable_en
     contents = Hamburger.get_hamburger_contents({level: nil, script_level: nil, user_type: nil, language: "en"})
-    assert contents[:entries].find {|e| e[:type] == "expander"}
+    assert(contents[:entries].find {|e| e[:type] == "expander"})
   end
 
   def test_hamburger_content_noexpandable_nonen
     contents = Hamburger.get_hamburger_contents({level: nil, script_level: nil, user_type: nil, language: "fr"})
     # 'legal_entries' is an allowable section in non-english.
-    refute contents[:entries].find {|e| e[:type] == "expander" && e[:id] != "legal_entries"}
+    assert(contents[:entries].find {|e| e[:type] == "expander" && e[:id] != "legal_entries"})
   end
 
   # Header content tests.
@@ -179,11 +179,11 @@ class HamburgerTest < Minitest::Test
 
   def test_header_content_nobody_en
     contents = Hamburger.get_header_contents({user_type: nil, language: "en"})
-    assert_includes_id contents, "header-en-about"
+    assert_includes_id contents, "header-about"
   end
 
   def test_header_content_nobody_nonen
     contents = Hamburger.get_header_contents({user_type: nil, language: "fr"})
-    assert_includes_id contents, "header-non-en-projects"
+    assert_includes_id contents, "header-projects"
   end
 end

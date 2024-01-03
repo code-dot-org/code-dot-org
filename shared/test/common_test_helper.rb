@@ -2,10 +2,12 @@
 ENV['RACK_ENV'] = 'test'
 ENV['UNIT_TEST'] = '1'
 
+require 'fakefs/safe'
 require 'minitest/autorun'
 require 'rack/test'
 require 'minitest/reporters'
 require 'minitest/around/unit'
+require 'minitest-spec-context'
 require 'minitest/stub_const'
 require 'mocha/mini_test'
 require 'vcr'
@@ -42,7 +44,9 @@ end
 # Truncate database tables to ensure repeatable tests.
 DASHBOARD_TEST_TABLES = %w(channel_tokens user_project_storage_ids projects project_commits code_review_comments code_reviews).freeze
 DASHBOARD_TEST_TABLES.each do |table|
+  # rubocop:disable CustomCops/DashboardDbUsage
   DASHBOARD_DB[table.to_sym].truncate
+  # rubocop:enable CustomCops/DashboardDbUsage
 end.freeze
 
 module SetupTest
@@ -76,11 +80,21 @@ module SetupTest
     CDO.stubs(newrelic_logging: true)
 
     VCR.use_cassette(cassette_name, record: record_mode) do
+      # rubocop:disable CustomCops/PegasusDbUsage
       PEGASUS_DB.transaction(rollback: :always) do
+        # rubocop:disable CustomCops/DashboardDbUsage
         DASHBOARD_DB.transaction(rollback: :always) do
+          # Use Minitest#stub here even though we generally prefer Mocha#stubs.
+          # Mocha keeps its stubbing logic simple in an attempt to avoid
+          # overcomplicating tests, but in this case we specifically do need a
+          # dynamic return value, which Mocha does not support.
+          # rubocop:disable CustomCops/PreferMochaStubsToMinitestStub
           AWS::S3.stub(:random, proc {random.bytes(16).unpack1('H*')}, &block)
+          # rubocop:enable CustomCops/PreferMochaStubsToMinitestStub
         end
+        # rubocop:enable CustomCops/DashboardDbUsage
       end
+      # rubocop:enable CustomCops/PegasusDbUsage
     end
 
     # Cached S3-client objects contain AWS credentials,
@@ -90,7 +104,9 @@ module SetupTest
 
     # Reset AUTO_INCREMENT, since it is unaffected by transaction rollback.
     DASHBOARD_TEST_TABLES.each do |table|
+      # rubocop:disable CustomCops/DashboardDbUsage
       DASHBOARD_DB.execute("ALTER TABLE `#{table}` AUTO_INCREMENT = 1")
+      # rubocop:enable CustomCops/DashboardDbUsage
     end
   end
 end

@@ -14,6 +14,7 @@ import {currentLocation} from '@cdo/apps/utils';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import $ from 'jquery';
+import fontConstants from '@cdo/apps/fontConstants';
 
 const WorkshopCard = props => {
   return (
@@ -179,8 +180,11 @@ class RegionalPartnerSearch extends Component {
       <div>
         {this.state.showZip && (
           <form onSubmit={this.handleZipSubmit}>
-            <label style={styles.schoolZipLabel}>School ZIP Code:</label>
+            <label style={styles.schoolZipLabel} htmlFor="zipCode">
+              School ZIP Code:
+            </label>
             <input
+              id="zipCode"
               type="text"
               value={this.state.zipValue}
               onChange={this.handleZipChange}
@@ -254,11 +258,7 @@ class RegionalPartnerSearch extends Component {
               </p>
               <p>
                 All of our curriculum, tools, and courses are also available for
-                your school at no cost. Or,{' '}
-                <a href="/educate/curriculum/3rd-party">
-                  contact one of these computer science providers
-                </a>{' '}
-                for other Professional Development options in your area.
+                your school at no cost.
               </p>
               {this.shouldDisplayApplicationLink() && (
                 <StartApplicationButton
@@ -344,9 +344,9 @@ class RegionalPartnerSearch extends Component {
                                   This Regional Partner is not offering{' '}
                                   {currCourse.name} workshops at this time.
                                   Code.org will review your application and
-                                  contact you with options for joining the
-                                  program hosted by a Regional Partner from a
-                                  different region.
+                                  contact you with options for joining a virtual
+                                  cohort of {currCourse.name} teachers from
+                                  another region.
                                 </div>
                               </>
                             }
@@ -526,10 +526,10 @@ const styles = {
     marginTop: 20,
   },
   bold: {
-    fontFamily: '"Gotham 7r", sans-serif',
+    ...fontConstants['main-font-bold'],
   },
   linkLike: {
-    fontFamily: '"Gotham 7r", sans-serif',
+    ...fontConstants['main-font-bold'],
     cursor: 'pointer',
     color: color.purple,
   },

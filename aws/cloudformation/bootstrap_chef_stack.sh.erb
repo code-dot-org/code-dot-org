@@ -90,8 +90,6 @@ mkdir -p $(dirname $FIRST_BOOT)
 cat <<JSON > $FIRST_BOOT
 {
   "cdo-nginx": {
-    "dashboard_hostname": "$DASHBOARD_DOMAIN_NAME",
-    "pegasus_hostname": "$PEGASUS_DOMAIN_NAME",
 <% unless load_balancer -%>
     "ssl_cert": {
       "content": "$CERT"
@@ -101,8 +99,10 @@ cat <<JSON > $FIRST_BOOT
     },
     "ssl_key": {
       "content": "$KEY"
-    }
+    },
 <% end -%>
+    "dashboard_hostname": "$DASHBOARD_DOMAIN_NAME",
+    "pegasus_hostname": "$PEGASUS_DOMAIN_NAME"
   },
   "cdo-repository": {
     <% if commit %>

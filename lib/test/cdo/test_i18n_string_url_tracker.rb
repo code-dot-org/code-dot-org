@@ -305,7 +305,7 @@ class TestI18nStringUrlTracker < Minitest::Test
     I18nStringUrlTracker.instance.log(test_record[:url], test_record[:source], test_record[:string_key], test_record[:scope], test_record[:separator])
     I18nStringUrlTracker.instance.log(test_record[:url], test_record[:source] + '2', test_record[:string_key], test_record[:scope], test_record[:separator])
     I18nStringUrlTracker.instance.send(:flush)
-    assert_equal %w(test test2), @firehose_records&.map {|x| x[:source]}
+    assert_equal(%w(test test2), @firehose_records&.map {|x| x[:source]})
   end
 
   def test_log_given_unknown_string_key_should_not_be_logged

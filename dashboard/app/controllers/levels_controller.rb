@@ -51,6 +51,7 @@ class LevelsController < ApplicationController
     Pixelation,
     Poetry,
     PublicKeyCryptography,
+    Pythonlab,
     StandaloneVideo,
     StarWarsGrid,
     Studio,
@@ -144,7 +145,7 @@ class LevelsController < ApplicationController
   # Get a JSON summary of a level's properties, used in modern labs that don't
   # reload the page between level views.
   def level_properties
-    render json: @level.summarize_for_lab2_properties
+    render json: @level.summarize_for_lab2_properties(nil)
   end
 
   # GET /levels/1/edit
@@ -205,7 +206,7 @@ class LevelsController < ApplicationController
     # as the toolbox for required and recommended block editors, plus
     # the special "pick one" block
     can_use_solution_blocks = @level.respond_to?(:get_solution_blocks) &&
-        @level.properties['solution_blocks']
+      @level.properties['solution_blocks']
     should_use_solution_blocks = ['required_blocks', 'recommended_blocks'].include?(type)
     if can_use_solution_blocks && should_use_solution_blocks
       blocks = @level.get_solution_blocks + ["<block type=\"pick_one\"></block>"]
@@ -448,6 +449,8 @@ class LevelsController < ApplicationController
         @game = Game.music
       elsif @type_class == Aichat
         @game = Game.aichat
+      elsif @type_class == Pythonlab
+        @game = Game.pythonlab
       end
       @level = @type_class.new
       render :edit
@@ -533,6 +536,9 @@ class LevelsController < ApplicationController
 
       # Poetry-specific
       {available_poems: []},
+
+      # Dance Party-specific
+      {song_selection: []},
     ]
 
     # http://stackoverflow.com/questions/8929230/why-is-the-first-element-always-blank-in-my-rails-multi-select
@@ -545,7 +551,8 @@ class LevelsController < ApplicationController
       :play_sound_options,
       :helper_libraries,
       :block_pools,
-      :available_poems
+      :available_poems,
+      :song_selection
     ]
     multiselect_params.each do |param|
       params[:level][param].delete_if(&:empty?) if params[:level][param].is_a? Array

@@ -14,7 +14,9 @@ MERGE_EMOJI = "\u{1F500}".freeze
 
 def create_branch(branch)
   require 'eyes_selenium'
+  # rubocop:disable CustomCops/DashboardRequires
   require_relative '../../dashboard/test/ui/utils/selenium_browser'
+  # rubocop:enable CustomCops/DashboardRequires
   EyesUtils.check_eyes_set
   eyes = Applitools::Selenium::Eyes.new
   eyes.api_key = CDO.applitools_eyes_api_key

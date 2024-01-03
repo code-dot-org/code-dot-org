@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "curriculum_umbrella": "CSC Self Paced PL",
       "has_verified_resources": true,
       "is_course": true,
       "is_migrated": true,
@@ -13,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "self-paced-pl-csc",
-    "serialized_at": "2023-07-03 14:48:37 UTC",
+    "serialized_at": "2023-12-05 19:45:31 UTC",
     "published_state": "stable",
     "instruction_type": "self_paced",
     "instructor_audience": "universal_instructor",
@@ -524,6 +525,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "CSC-SelfPaced-sprite1_2023"
         ],
@@ -549,6 +551,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "CSC-SelfPaced-sprite2_2023"
         ],
@@ -574,6 +577,7 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "CSC-SelfPaced-behavior_2023"
         ],
@@ -599,6 +603,7 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "CSC-SelfPaced-eventsclick2_2023"
         ],
@@ -674,6 +679,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "CSC-SelfPaced-spritebehavior_2023"
         ],
@@ -699,6 +705,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "CSC-SelfPaced-eventsclick_2023"
         ],
@@ -724,6 +731,7 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "CSC-SelfPaced-touches_2023"
         ],
@@ -874,6 +882,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "CSC-SelfPaced-customization1_2023"
         ],
@@ -949,6 +958,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "CSC-SelfPaced-teacherpanel_2023"
         ],
@@ -1024,6 +1034,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "CSC-SelfPaced-skillbuildinglevel_2023"
         ],
@@ -1049,6 +1060,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "CSC-SelfPaced-freeplay_2023"
         ],
@@ -1074,6 +1086,7 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "CSC-SelfPaced-choicelevel_2023"
         ],
@@ -1842,6 +1855,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

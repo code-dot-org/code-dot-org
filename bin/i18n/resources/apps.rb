@@ -8,6 +8,15 @@ module I18n
         ExternalSources.sync_in
         Labs.sync_in
       end
+
+      def self.sync_out
+        Animations.sync_out
+        ExternalSources.sync_out
+        Labs.sync_out
+
+        # Should be called when Labs have been synced-out
+        TextToSpeech.sync_out
+      end
     end
   end
 end

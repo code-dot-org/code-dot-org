@@ -28,7 +28,7 @@ const isUser = (role: string) => {
 };
 
 const displayUserMessage = (status: string, chatMessageText: string) => {
-  if (status === Status.OK) {
+  if (status === Status.OK || status === Status.UNKNOWN) {
     return (
       <div
         className={classNames(moduleStyles.message, moduleStyles.userMessage)}
@@ -36,7 +36,7 @@ const displayUserMessage = (status: string, chatMessageText: string) => {
         {chatMessageText}
       </div>
     );
-  } else if (status === 'inappropriate') {
+  } else if (status === Status.INAPPROPRIATE) {
     return (
       <div
         className={classNames(
@@ -56,6 +56,18 @@ const displayUserMessage = (status: string, chatMessageText: string) => {
         )}
       >
         {TOO_PERSONAL_MESSAGE}
+      </div>
+    );
+  } else if (status === Status.ERROR) {
+    return (
+      <div
+        className={classNames(
+          moduleStyles.message,
+          // TODO: Add dedicated error message styling.
+          moduleStyles.tooPersonalMessage
+        )}
+      >
+        {'There was an error getting a response. Please try again.'}
       </div>
     );
   } else {
@@ -80,10 +92,12 @@ const displayAssistantMessage = (status: string, chatMessageText: string) => {
 };
 
 const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({message}) => {
-  const botTitle = useSelector(
-    (state: {lab: LabState}) =>
-      (state.lab.levelProperties as AichatLevelProperties | undefined)?.botTitle
-  );
+  const botTitle =
+    useSelector(
+      (state: {lab: LabState}) =>
+        (state.lab.levelProperties as AichatLevelProperties | undefined)
+          ?.botTitle
+    ) || 'EduBot';
   return (
     <div id={`ChatMessage id: ${message.id}`}>
       {isUser(message.role) && (

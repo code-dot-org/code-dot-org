@@ -1,15 +1,29 @@
 import _ from 'lodash';
+import msg from '@cdo/locale';
 import {SVG_NS} from '@cdo/apps/constants';
 import Button from '@cdo/apps/templates/Button';
 import {updatePointerBlockImage} from '@cdo/apps/blockly/addons/cdoSpritePointer';
 import CdoFieldFlyout from '@cdo/apps/blockly/addons/cdoFieldFlyout';
 import {spriteLabPointers} from '@cdo/apps/p5lab/spritelab/blockly/constants';
-// This file contains customizations to Google Blockly Sprite Lab blocks.
+import {blocks as behaviorBlocks} from './behaviorBlocks';
+import {BLOCK_TYPES, NO_OPTIONS_MESSAGE} from '@cdo/apps/blockly/constants';
+import {FALSEY_DEFAULT, readBooleanAttribute} from '@cdo/apps/blockly/utils';
+import {
+  editButtonHandler,
+  toolboxConfigurationSupportsEditButton,
+} from './proceduresBlocks';
 
+const INPUTS = {
+  FLYOUT: 'flyout_input',
+  STACK: 'STACK',
+};
+
+// This file contains customizations to Google Blockly Sprite Lab blocks.
 export const blocks = {
   // Creates and returns a toggle button field. This field should be
   // added to the block after other inputs have been created.
-  initializeMiniToolbox() {
+  // miniToolboxBlocks is a backwards-compatible parameter used in CDO Blockly.
+  initializeMiniToolbox(miniToolboxBlocks, renderToolboxBeforeStack = false) {
     // Function to create the flyout
     const createFlyoutField = function (block) {
       const flyoutKey = CdoFieldFlyout.getFlyoutId(block);
@@ -19,9 +33,18 @@ export const blocks = {
         name: 'FLYOUT',
         isFlyoutVisible: true,
       });
-      block
-        .appendDummyInput('flyout_input')
-        .appendField(flyoutField, flyoutKey);
+
+      block.appendDummyInput(INPUTS.FLYOUT).appendField(flyoutField, flyoutKey);
+      // By default, the flyout is added after the stack input (at the bottom of the block).
+      // This flag is used by behavior and function definitions, mainly in the modal function editor,
+      // to add the flyout before the stack input (at the top of the block).
+      if (
+        renderToolboxBeforeStack &&
+        block.getInput(INPUTS.FLYOUT) &&
+        block.getInput(INPUTS.STACK)
+      ) {
+        block.moveInputBefore(INPUTS.FLYOUT, INPUTS.STACK);
+      }
       return flyoutField;
     };
 
@@ -29,12 +52,12 @@ export const blocks = {
     // deletes the flyout depending on the current visibility.
     const toggleFlyout = function () {
       const block = this.getSourceBlock();
-      if (!block.getInput('flyout_input')) {
+      if (!block.getInput(INPUTS.FLYOUT)) {
         const flyoutField = createFlyoutField(block);
         flyoutField.showEditor();
         flyoutField.render_();
       } else {
-        block.removeInput('flyout_input');
+        block.removeInput(INPUTS.FLYOUT);
       }
     };
 
@@ -64,8 +87,15 @@ export const blocks = {
   },
 
   // Adds a toggle button field to a block. Requires other inputs to already exist.
-  appendMiniToolboxToggle(miniToolboxBlocks, flyoutToggleButton) {
+  appendMiniToolboxToggle(
+    miniToolboxBlocks,
+    flyoutToggleButton,
+    renderingInFunctionEditor = false
+  ) {
+    // In the function editor, this call prevents a dummy input from being used as a
+    // row separator between the function definition in the mini-toolbox.
     this.setInputsInline(true);
+
     // We set the inputs to align left so that if the flyout is larger than the
     // inputs will be aligned with the left edge of the block.
     this.inputList.forEach(input => {
@@ -80,25 +110,32 @@ export const blocks = {
     // https://github.com/google/blockly-samples/tree/master/plugins/renderer-inline-row-separators
     const lastInput = this.inputList[this.inputList.length - 1];
     // Force add a dummy input at the end of the block, if needed.
-    if (lastInput.type !== Blockly.inputTypes.DUMMY) {
+    if (
+      ![Blockly.inputTypes.DUMMY, Blockly.inputTypes.STATEMENT].includes(
+        lastInput.type
+      )
+    ) {
       this.appendDummyInput();
     }
 
     if (this.workspace.rendered) {
-      const imageSourceId = this.id;
       this.workspace.registerToolboxCategoryCallback(
         CdoFieldFlyout.getFlyoutId(this),
-        function (workspace) {
+        () => {
           let blocks = [];
-          miniToolboxBlocks.forEach(blockType =>
-            blocks.push({
+          miniToolboxBlocks.forEach(blockType => {
+            const block = {
               kind: 'block',
               type: blockType,
-              extraState: {
-                imageSourceId: imageSourceId,
-              },
-            })
-          );
+            };
+            // The function editor toolbox doesn't need to track its parent.
+            if (!renderingInFunctionEditor) {
+              block.extraState = {
+                imageSourceId: this.id,
+              };
+            }
+            blocks.push(block);
+          });
           return blocks;
         }
       );
@@ -107,6 +144,11 @@ export const blocks = {
     // Blockly mutators are extensions add custom serialization to a block.
     // Serialize the state of the toggle icon to determine whether a
     // flyout field is needed immediately upon loading the block.
+    // If we're just rendering the block in the function editor, we don't
+    // need to serialize the state.
+    if (renderingInFunctionEditor) {
+      return;
+    }
 
     // JSON serialization hooks
     this.saveExtraState = function () {
@@ -132,8 +174,10 @@ export const blocks = {
     };
     this.domToMutation = function (xmlElement) {
       const useDefaultIcon =
+        // Assume default icon if no XML attribute present
+        !xmlElement.hasAttribute('useDefaultIcon') ||
         // Coerce string to Boolean
-        xmlElement.getAttribute('useDefaultIcon') === 'true';
+        readBooleanAttribute(xmlElement, 'useDefaultIcon', FALSEY_DEFAULT);
       flyoutToggleButton.setIcon(useDefaultIcon);
     };
   },
@@ -174,6 +218,162 @@ export const blocks = {
         onBlockImageSourceChange(event, this);
       };
     }
+  },
+
+  installBehaviorBlocks() {
+    Blockly.common.defineBlocks(behaviorBlocks);
+
+    const generator = Blockly.getGenerator();
+    generator.behavior_definition = function (block) {
+      // Define a procedure with a return value.
+      const funcName = generator.nameDB_.getName(
+        block.behaviorId,
+        Blockly.Names.NameType.PROCEDURE
+      );
+
+      // Holds the additional code that is prefixed (injected before every statement) and/or
+      // suffixed (injected after every statement) to the main block of code
+      let xfix1 = '';
+      if (generator.STATEMENT_PREFIX) {
+        xfix1 += generator.injectId(generator.STATEMENT_PREFIX, block);
+      }
+      if (generator.STATEMENT_SUFFIX) {
+        xfix1 += generator.injectId(generator.STATEMENT_SUFFIX, block);
+      }
+      if (xfix1) {
+        xfix1 = generator.prefixLines(xfix1, generator.INDENT);
+      }
+      let loopTrap = '';
+      if (generator.INFINITE_LOOP_TRAP) {
+        loopTrap = generator.prefixLines(
+          generator.injectId(generator.INFINITE_LOOP_TRAP, block),
+          generator.INDENT
+        );
+      }
+
+      // Translate all the inner blocks within the current block into code
+      const branch = generator.statementToCode(block, 'STACK');
+      let returnValue =
+        generator.valueToCode(block, 'RETURN', generator.ORDER_NONE) || '';
+
+      // Contains the same code as xfix1 if both are present, but applied before the return statement
+      let xfix2 = '';
+      if (branch && returnValue) {
+        xfix2 = xfix1;
+      }
+      if (returnValue) {
+        returnValue = generator.INDENT + 'return ' + returnValue + ';\n';
+      }
+      const args = [];
+      args.push(
+        generator.nameDB_.getName(
+          msg.thisSprite(),
+          Blockly.Names.NameType.VARIABLE
+        )
+      );
+      const variables = block.getVars();
+      for (let i = 0; i < variables.length; i++) {
+        args[i] = generator.nameDB_.getName(
+          variables[i],
+          Blockly.Names.NameType.VARIABLE
+        );
+      }
+      let code =
+        'function ' +
+        funcName +
+        '(' +
+        args.join(', ') +
+        ') {\n' +
+        xfix1 +
+        loopTrap +
+        branch +
+        xfix2 +
+        returnValue +
+        '}';
+      code = generator.scrub_(block, code);
+      // Add % so as not to collide with helper functions in definitions list.
+      generator.definitions_['%' + funcName] = code;
+      return null;
+    };
+    generator.gamelab_behavior_get = function () {
+      const name = generator.nameDB_.getName(this.behaviorId, 'PROCEDURE');
+      return [`new Behavior(${name}, [])`, generator.ORDER_ATOMIC];
+    };
+    generator.sprite_parameter_get = generator.variables_get;
+  },
+
+  // All logic for behavior picker custom input type
+  addBehaviorPickerEditButton(
+    block,
+    inputConfig,
+    currentInputRow,
+    dropdownField
+  ) {
+    const behaviorsFound =
+      dropdownField.getOptions().length > 1 ||
+      dropdownField.getOptions()[0][1] !== NO_OPTIONS_MESSAGE;
+
+    // Behavior editing is only permitted using the modal function editor.
+    if (
+      behaviorsFound &&
+      Blockly.useModalFunctionEditor &&
+      // TODO: Support editing behaviors from within a modal editor workspace.
+      block.workspace.id === Blockly.getMainWorkspace().id &&
+      toolboxConfigurationSupportsEditButton(block)
+    ) {
+      const editButton = new Blockly.FieldButton({
+        value: msg.edit(),
+        onClick: editButtonHandler,
+        colorOverrides: {button: 'blue', text: 'white'},
+        allowReadOnlyClick: true, // We support showing the editor even if viewing in read only mode.
+      });
+      block.inputList[block.inputList.length - 1].appendField(
+        editButton,
+        'EDIT'
+      );
+      // getProcedureModel is defined on procedure blocks as part of
+      // @blockly/block-shareable-procedures
+      // For this block, we will get the procedure based on selected
+      // dropdown field option.
+      block.getProcedureModel = function () {
+        const fieldValue = block.getFieldValue(inputConfig.name);
+        const procedureMap = block.workspace.getProcedureMap();
+        let procedure = undefined;
+        for (const value of procedureMap.values()) {
+          if (value.name === fieldValue) {
+            procedure = value;
+            break;
+          }
+        }
+        return procedure;
+      };
+    }
+  },
+  // Get a list of behavior options for a dropdown field, based on
+  // blocks found on the main workspace.
+  getAllBehaviorOptions() {
+    const noBehaviorLabel = msg.behaviorsNotFound();
+    const noBehaviorOption = [noBehaviorLabel, NO_OPTIONS_MESSAGE];
+    // Behavior definition blocks are always moved to the hidden workspace.
+    const definitionWorkspace = Blockly.getHiddenDefinitionWorkspace();
+    if (!definitionWorkspace) {
+      return [noBehaviorOption];
+    }
+    const behaviorBlocks = definitionWorkspace
+      .getTopBlocks()
+      .filter(block => block.type === BLOCK_TYPES.behaviorDefinition);
+    // Menu options are an array, each option containing a human-readable part,
+    // and a language-neutral string. Both are the same in this case.
+    const behaviorOptions = behaviorBlocks.map(block => [
+      block.getProcedureModel().name,
+      block.behaviorId,
+    ]);
+    behaviorOptions.sort();
+    // Add a "No behaviors found" option, if needed
+    if (behaviorOptions.length === 0) {
+      behaviorOptions.push(noBehaviorOption);
+    }
+    return behaviorOptions;
   },
 };
 

@@ -28,6 +28,6 @@ class Api::V1::Pd::CourseFacilitatorsControllerTest < ActionController::TestCase
     get :index
     assert_response :success
     response_body = JSON.parse(response.body)
-    assert_equal [facilitator2, facilitator1].map(&:email), response_body.map {|f| f['email']}
+    assert_equal([facilitator2, facilitator1].map(&:email), response_body.map {|f| f['email']})
   end
 end

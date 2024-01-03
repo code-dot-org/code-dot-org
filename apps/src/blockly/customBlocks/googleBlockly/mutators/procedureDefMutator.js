@@ -1,13 +1,21 @@
 /**
- * This is a direct copy of `procedureDefMutator` from @blockly/block-shareable-procedures
- * with the compose() and decompose() methods removed. These methods automatically
+ * This is a modified version of `procedureDefMutator` from @blockly/block-shareable-procedures.
+ * We removed compose() and decompose() methods. These methods automatically
  * add a gear icon UI that we do not want. A future version of the plugin will
  * export this mutator (and other extensions), but this will require bumping to
- * Blockly v10.
- * TODO: Once we are on Blockly v10, remove this file.
+ * Blockly v10. We also updated the mutation and extra state methods to save the function's
+ * description.
+ * TODO: Once we are on Blockly v10, we can simplify this by importing `procedureDefMutator`
+ * from @blockly/block-shareable-procedures and calling the duplicated methods inside our versions of them.
+ * This will allow us to get rid of duplicated code.
  */
 
 import {ObservableParameterModel} from '@blockly/block-shareable-procedures';
+import {FALSEY_DEFAULT, readBooleanAttribute} from '@cdo/apps/blockly/utils';
+import {
+  getBlockDescription,
+  setBlockDescription,
+} from './functionMutatorHelpers';
 
 /**
  * A type guard which checks if the given block is a procedure block.
@@ -58,28 +66,41 @@ export const procedureDefMutator = {
   domToMutation: function (xmlElement) {
     for (let i = 0; i < xmlElement.childNodes.length; i++) {
       const node = xmlElement.childNodes[i];
-      if (node.nodeName.toLowerCase() !== 'arg') continue;
-      const varId = node.getAttribute('varid');
-      this.getProcedureModel().insertParameter(
-        new ObservableParameterModel(
-          this.workspace,
-          node.getAttribute('name'),
-          undefined,
-          varId
-        ),
-        i
-      );
+      const nodeName = node.nodeName.toLowerCase();
+      if (nodeName === 'arg') {
+        const varId = node.getAttribute('varid');
+        this.getProcedureModel().insertParameter(
+          new ObservableParameterModel(
+            this.workspace,
+            node.getAttribute('name'),
+            undefined,
+            varId
+          ),
+          i
+        );
+      } else if (nodeName === 'description') {
+        this.description = node.textContent;
+      }
     }
+
+    this.userCreated = readBooleanAttribute(
+      xmlElement,
+      'userCreated',
+      FALSEY_DEFAULT
+    );
     this.setStatements_(xmlElement.getAttribute('statements') !== 'false');
   },
 
   /**
-   * Returns the state of this block as a JSON serializable object.
-   * @returns The state of this block, eg the parameters and statements.
+   * Returns a JSON serializable value which represents the extra state of the block.
+   * @returns The state of this block, e.g. the parameters and statements.
    */
   saveExtraState: function () {
     const state = Object.create(null);
+    state['description'] = getBlockDescription(this);
     state['procedureId'] = this.getProcedureModel().getId();
+    state['initialDeleteConfig'] = this.isDeletable();
+    state['userCreated'] = this.userCreated;
 
     const params = this.getProcedureModel().getParameters();
     if (!params.length && this.hasStatements_) return state;
@@ -102,9 +123,8 @@ export const procedureDefMutator = {
   },
 
   /**
-   * Applies the given state to this block.
-   * @param state The state to apply to this block, eg the parameters and
-   *     statements.
+   * Accepts a JSON serializable state value and applies it to the block.
+   * @param state The state to apply to this block (see saveExtraState above).
    */
   loadExtraState: function (state) {
     const map = this.workspace.getProcedureMap();
@@ -131,8 +151,11 @@ export const procedureDefMutator = {
       }
     }
 
+    setBlockDescription(this, state);
     this.doProcedureUpdate();
+    this.setDeletable(state['initialDeleteConfig'] === false ? false : true);
     this.setStatements_(state['hasStatements'] === false ? false : true);
+    this.userCreated = state['userCreated'];
   },
 
   /**

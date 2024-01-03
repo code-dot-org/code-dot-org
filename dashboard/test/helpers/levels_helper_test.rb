@@ -13,6 +13,8 @@ class LevelsHelperTest < ActionView::TestCase
 
   setup do
     @level = create(:maze)
+    @game = Game.custom_maze
+    @is_start_mode = false
 
     def request
       OpenStruct.new(
@@ -107,7 +109,6 @@ class LevelsHelperTest < ActionView::TestCase
 
   test "blockly_options 'embed' is true for widget levels not in start mode" do
     @level = create(:applab, embed: false, widget_mode: true)
-    @is_start_mode = false
     assert blockly_options[:embed]
   end
 
@@ -234,9 +235,9 @@ class LevelsHelperTest < ActionView::TestCase
 
     callouts = select_and_remember_callouts
 
-    assert callouts.any? {|callout| callout['id'] == callout1.id}
-    assert callouts.any? {|callout| callout['id'] == callout2.id}
-    assert callouts.none? {|callout| callout['id'] == irrelevant_callout.id}
+    assert(callouts.any? {|callout| callout['id'] == callout1.id})
+    assert(callouts.any? {|callout| callout['id'] == callout2.id})
+    assert(callouts.none? {|callout| callout['id'] == irrelevant_callout.id})
   end
 
   test "should localize callouts" do
@@ -249,7 +250,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     callouts = select_and_remember_callouts
 
-    assert callouts.any? {|c| c['localized_text'] == 'Hit "Run" to try your program'}
+    assert(callouts.any? {|c| c['localized_text'] == 'Hit "Run" to try your program'})
   end
 
   test 'app_options returns camelCased view option on Blockly level' do
@@ -284,7 +285,7 @@ class LevelsHelperTest < ActionView::TestCase
     @level = create :applab
     create(:script_level, script: @script, levels: [@level])
 
-    assert_not_nil app_options['channel']
+    refute_nil app_options['channel']
   end
 
   test 'app_options does not set a channel if the level is cached' do
@@ -348,51 +349,77 @@ class LevelsHelperTest < ActionView::TestCase
 
     # Request it for a different level, should get a different channel
     level = create(:level, :blockly)
-    assert_not_equal channel, get_channel_for(level, script.id)
+    refute_equal channel, get_channel_for(level, script.id)
   end
 
-  test 'uses_google_blockly is false if not set' do
+  test 'use_google_blockly is false if not set' do
+    Experiment.stubs(:enabled?).returns(false)
     @level = build :level
     refute use_google_blockly
+    Experiment.unstub(:enabled?)
+    reset_view_options
+  end
+
+  test 'use_google_blockly is false if Experiment is enabled but is_start_mode is true' do
+    @is_start_mode = true
+    Experiment.stubs(:enabled?).returns(true)
+    @level = build :level
+    refute use_google_blockly
+    Experiment.unstub(:enabled?)
+  end
+
+  test 'use_google_blockly is true if Experiment is enabled for google_blockly otherwise' do
+    Experiment.stubs(:enabled?).returns(true)
+    @level = build :level
+    assert use_google_blockly
+    Experiment.unstub(:enabled?)
+  end
+
+  test 'use_google_blockly is true if Experiment is enabled for google_blockly' do
+    Experiment.stubs(:enabled?).returns(true)
+    @level = build :level
+    assert use_google_blockly
+    Experiment.unstub(:enabled?)
   end
 
   test 'use_google_blockly is true if blocklyVersion is set to Google in view_options' do
+    Experiment.stubs(:enabled?).returns(false)
     view_options(blocklyVersion: 'google')
     @level = build :level
     assert use_google_blockly
-
+    Experiment.unstub(:enabled?)
     reset_view_options
   end
 
-  test 'use_google_blockly is false if blocklyVersion is set to Cdo in view_options' do
+  test 'use_google_blockly is true if blocklyVersion is set to Google in view_options even if start_mode is true' do
+    @is_start_mode = true
+    Experiment.stubs(:enabled?).returns(false)
+    view_options(blocklyVersion: 'google')
+    @level = build :level
+    assert use_google_blockly
+    Experiment.unstub(:enabled?)
+    reset_view_options
+  end
+
+  test 'use_google_blockly is false if blocklyVersion is set to Cdo in view_options even if level uses google_blockly' do
+    Experiment.stubs(:enabled?).returns(false)
     view_options(blocklyVersion: 'cdo')
     @level = build :level
+    @level.stubs(:uses_google_blockly?).returns(true)
     refute use_google_blockly
-
+    Experiment.unstub(:enabled?)
     reset_view_options
   end
 
-  test 'use_google_blockly is true if level.uses_google_blockly?' do
-    Level.any_instance.stubs(:uses_google_blockly?).returns(true)
+  test 'use_google_blockly is true if level uses google_blockly and blocklyVersion is not set to cdo' do
+    Experiment.stubs(:enabled?).returns(false)
+    view_options(blocklyVersion: nil)
     @level = build :level
+    @level.stubs(:uses_google_blockly?).returns(true)
     assert use_google_blockly
-
-    Level.unstub(:uses_google_blockly?)
-  end
-
-  test 'use_google_blockly is false if level.uses_google_blockly? but disable_google_blockly is set' do
-    GamelabJr.any_instance.stubs(:uses_google_blockly?).returns(true)
-    @level = build :spritelab
-    assert use_google_blockly
-
-    DCDO.stubs(:get).with('disable_google_blockly', []).returns(['GamelabJr'])
-    refute use_google_blockly
-
-    # Should be case insensitive
-    DCDO.stubs(:get).with('disable_google_blockly', []).returns(['gamelabjr'])
-    refute use_google_blockly
-
-    DCDO.unstub(:get)
+    @level.unstub(:uses_google_blockly?)
+    Experiment.unstub(:enabled?)
+    reset_view_options
   end
 
   test 'applab levels should not load channel when viewing student solution of a student without a channel' do
@@ -420,7 +447,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     # channel exists
     create :channel_token, level: @level, storage_id: fake_storage_id_for_user_id(@user.id)
-    assert_not_nil get_channel_for(@level, script.id, @user)
+    refute_nil get_channel_for(@level, script.id, @user)
 
     # calling app_options should set readonly_workspace, since we're viewing for
     # different user
@@ -439,7 +466,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     create :channel_token, level: @level, storage_id: fake_storage_id_for_user_id(@user.id)
     @channel_id = get_channel_for(@level, script.id, @user)
-    assert_not_nil @channel_id
+    refute_nil @channel_id
 
     _,  @project_id = storage_decrypt_channel_id(@channel_id)
     create :code_review, user_id: @user.id, project_id: @project_id
@@ -528,8 +555,8 @@ class LevelsHelperTest < ActionView::TestCase
     # "Load the level" as the navigator
     sign_in @navigator
     assert_equal true, app_options[:level]['isNavigator']
-    assert_not_nil app_options[:level]['pairingDriver']
-    assert_not_nil app_options[:level]['pairingChannelId']
+    refute_nil app_options[:level]['pairingDriver']
+    refute_nil app_options[:level]['pairingChannelId']
 
     # calling app_options should not set readonly_workspace
     app_options
@@ -612,7 +639,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     app_options = question_options
 
-    assert_not app_options[:level]['submittable']
+    refute app_options[:level]['submittable']
   end
 
   test 'submittable level is submittable for student with teacher' do
@@ -671,7 +698,7 @@ class LevelsHelperTest < ActionView::TestCase
     @script = create(:script)
     @script.update(professional_learning_course: 'Professional Learning Course')
     @script_level = create(:script_level, levels: [@level], script: @script)
-    assert_not can_view_solution?
+    refute can_view_solution?
 
     sign_out user
     user = create :levelbuilder
@@ -679,15 +706,15 @@ class LevelsHelperTest < ActionView::TestCase
     assert can_view_solution?
 
     @script.update(name: 'algebra')
-    assert_not can_view_solution?
+    refute can_view_solution?
 
     @script.update(name: 'some pd script')
     @script_level = nil
-    assert_not can_view_solution?
+    refute can_view_solution?
 
     @script_level = create(:script_level, levels: [@level], script: @script)
     @level.update(ideal_level_source_id: nil)
-    assert_not can_view_solution?
+    refute can_view_solution?
   end
 
   test 'show solution link shows link for appropriate users' do
@@ -707,10 +734,10 @@ class LevelsHelperTest < ActionView::TestCase
     sign_out user
     user = create :student
     sign_in user
-    assert_not can_view_solution?
+    refute can_view_solution?
 
     sign_out user
-    assert_not can_view_solution?
+    refute can_view_solution?
   end
 
   test 'build_script_level_path differentiates lesson and survey' do
@@ -845,16 +872,19 @@ class LevelsHelperTest < ActionView::TestCase
     @user_level = create :user_level, user: current_user, best_result: 20, script: @script, level: @level
 
     standalone = false
-    assert_not include_multi_answers?(standalone)
+    refute include_multi_answers?(standalone)
   end
 
   test 'section first_activity_at should not be nil when finding experiments' do
     Experiment.stubs(:should_cache?).returns true
     teacher = create(:teacher)
-    experiment = create(:teacher_based_experiment,
+    @script = create :script
+    experiment = create(
+      :teacher_based_experiment,
       earliest_section_at: DateTime.now - 1.day,
       latest_section_at: DateTime.now + 1.day,
       percentage: 100,
+      script: @script
     )
     Experiment.update_cache
     section = create(:section, user: teacher)

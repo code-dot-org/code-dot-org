@@ -84,6 +84,7 @@ export default class SignInInstructions extends React.Component {
             <img
               style={styles.sublistAlign}
               src="/shared/images/clever_code_org_logo.png"
+              alt=""
             />
           </div>
         )}

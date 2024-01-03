@@ -45,6 +45,7 @@ const urlByProvider = {
 const importUrlByProvider = {
   [OAuthSectionTypes.google_classroom]: '/dashboardapi/import_google_classroom',
   [OAuthSectionTypes.clever]: '/dashboardapi/import_clever_classroom',
+  [SectionLoginType.lti_v1]: '/lti/v1/sync_course',
 };
 
 //
@@ -63,11 +64,14 @@ const SET_SHOW_LOCK_SECTION_FIELD =
 /** Sets teacher's current authentication providers */
 const SET_AUTH_PROVIDERS = 'teacherDashboard/SET_AUTH_PROVIDERS';
 const SET_SECTIONS = 'teacherDashboard/SET_SECTIONS';
+const SET_COTEACHER_INVITE = 'teacherDashboard/SET_COTEACHER_INVITE';
+const SET_COTEACHER_INVITE_FOR_PL =
+  'teacherDashboard/SET_COTEACHER_INVITE_FOR_PL';
 export const SELECT_SECTION = 'teacherDashboard/SELECT_SECTION';
 const REMOVE_SECTION = 'teacherDashboard/REMOVE_SECTION';
 const TOGGLE_SECTION_HIDDEN = 'teacherSections/TOGGLE_SECTION_HIDDEN';
 /** Opens add section UI */
-const CREATE_SECION_BEGIN = 'teacherDashboard/CREATE_SECION_BEGIN';
+const CREATE_SECTION_BEGIN = 'teacherDashboard/CREATE_SECTION_BEGIN';
 /** Opens section edit UI, might load existing section info */
 const EDIT_SECTION_BEGIN = 'teacherDashboard/EDIT_SECTION_BEGIN';
 /** Makes staged changes to section being edited */
@@ -322,7 +326,7 @@ export const beginCreatingSection = (
   unitId,
   participantType
 ) => ({
-  type: CREATE_SECION_BEGIN,
+  type: CREATE_SECTION_BEGIN,
   courseOfferingId,
   courseVersionId,
   unitId,
@@ -401,42 +405,78 @@ export const finishEditingSection = () => (dispatch, getState) => {
 export const asyncLoadSectionData = id => dispatch => {
   dispatch({type: ASYNC_LOAD_BEGIN});
 
-  let apis = [
-    '/dashboardapi/sections',
-    '/dashboardapi/sections/valid_course_offerings',
-    '/dashboardapi/sections/available_participant_types',
+  const promises = [
+    fetchJSON('/dashboardapi/sections').then(sections =>
+      dispatch(setSections(sections))
+    ),
+    fetchJSON('/dashboardapi/sections/valid_course_offerings').then(offerings =>
+      dispatch(setCourseOfferings(offerings))
+    ),
+    fetchJSON('/dashboardapi/sections/available_participant_types').then(
+      participantTypes =>
+        dispatch(
+          setAvailableParticipantTypes(
+            participantTypes.availableParticipantTypes
+          )
+        )
+    ),
   ];
 
   // If section id is provided, load students for the current section.
   if (id) {
-    apis.push('/dashboardapi/sections/' + id + '/students');
+    promises.push(
+      fetchJSON(`/dashboardapi/sections/${id}/students`).then(students =>
+        dispatch(setStudentsForCurrentSection(id, students))
+      )
+    );
   }
 
-  return Promise.all(apis.map(fetchJSON))
-    .then(
-      ([
-        sections,
-        validCourseOfferings,
-        availableParticipantTypes,
-        students,
-      ]) => {
-        dispatch(setCourseOfferings(validCourseOfferings));
-        dispatch(
-          setAvailableParticipantTypes(
-            availableParticipantTypes.availableParticipantTypes
-          )
-        );
-        dispatch(setSections(sections));
-        if (id) {
-          dispatch(setStudentsForCurrentSection(id, students));
-        }
-      }
-    )
+  return Promise.all(promises)
     .catch(err => {
       console.error(err.message);
     })
     .then(() => {
       dispatch({type: ASYNC_LOAD_END});
+    });
+};
+
+/**
+ * Load coteacher invites
+ */
+
+export const setCoteacherInvite = coteacherInvite => ({
+  type: SET_COTEACHER_INVITE,
+  coteacherInvite,
+});
+
+export const setCoteacherInviteForPl = coteacherInviteForPl => ({
+  type: SET_COTEACHER_INVITE_FOR_PL,
+  coteacherInviteForPl,
+});
+
+export const asyncLoadCoteacherInvite = () => dispatch => {
+  fetchJSON('/api/v1/section_instructors')
+    .then(sectionInstructors => {
+      const coteacherInviteForPl = sectionInstructors.find(instructorInvite => {
+        return (
+          instructorInvite.status === 'invited' &&
+          instructorInvite.participant_type !== 'student'
+        );
+      });
+      const coteacherInviteForClassrooms = sectionInstructors.find(
+        instructorInvite => {
+          return (
+            instructorInvite.status === 'invited' &&
+            instructorInvite.participant_type === 'student'
+          );
+        }
+      );
+
+      dispatch(setCoteacherInvite(coteacherInviteForClassrooms));
+      dispatch(setCoteacherInviteForPl(coteacherInviteForPl));
+    })
+    .catch(err => {
+      console.error(err.message);
     });
 };
 
@@ -528,6 +568,14 @@ export const importOrUpdateRoster =
     let sectionId;
 
     dispatch({type: IMPORT_ROSTER_REQUEST});
+    if (provider === SectionLoginType.lti_v1) {
+      return fetch(`${importSectionUrl}?section_code=${courseId}`).then(() =>
+        dispatch({
+          type: IMPORT_ROSTER_SUCCESS,
+          sectionId,
+        })
+      );
+    }
     return fetchJSON(importSectionUrl, {courseId, courseName})
       .then(newSection => (sectionId = newSection.id))
       .then(() => dispatch(asyncLoadSectionData()))
@@ -727,6 +775,20 @@ export default function teacherSections(state = initialState, action) {
     };
   }
 
+  if (action.type === SET_COTEACHER_INVITE) {
+    return {
+      ...state,
+      coteacherInvite: action.coteacherInvite,
+    };
+  }
+
+  if (action.type === SET_COTEACHER_INVITE_FOR_PL) {
+    return {
+      ...state,
+      coteacherInviteForPl: action.coteacherInviteForPl,
+    };
+  }
+
   if (action.type === SELECT_SECTION) {
     let sectionId;
     if (action.sectionId) {
@@ -803,7 +865,7 @@ export default function teacherSections(state = initialState, action) {
     };
   }
 
-  if (action.type === CREATE_SECION_BEGIN) {
+  if (action.type === CREATE_SECTION_BEGIN) {
     const initialSectionData = newSectionData(action.participantType);
     if (action.courseOfferingId) {
       initialSectionData.courseOfferingId = action.courseOfferingId;
@@ -1028,7 +1090,10 @@ export default function teacherSections(state = initialState, action) {
   if (action.type === SET_ROSTER_PROVIDER) {
     // No-op if this action is called with a non-OAuth section type,
     // since this action is triggered on every section load.
-    if (OAuthSectionTypes[action.rosterProvider]) {
+    if (
+      OAuthSectionTypes[action.rosterProvider] ||
+      action.rosterProvider === SectionLoginType.lti_v1
+    ) {
       return {
         ...state,
         rosterProvider: action.rosterProvider,
@@ -1225,6 +1290,7 @@ export const sectionFromServerSection = serverSection => ({
     : null,
   isAssignedCSA: serverSection.is_assigned_csa,
   participantType: serverSection.participant_type,
+  sectionInstructors: serverSection.section_instructors,
 });
 
 /**

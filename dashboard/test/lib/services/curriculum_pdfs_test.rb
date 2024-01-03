@@ -7,17 +7,16 @@ module Services
 
     setup do
       PDF.stubs(:generate_from_url)
-      AWS::S3.unstub(:cached_exists_in_bucket?)
     end
 
     test 'get_pdfless_lessons will only include lessons not present in S3' do
       unit_with_lesson_pdfs = create :script, :with_lessons, seeded_from: Time.now
-      AWS::S3.stubs(:cached_exists_in_bucket?).with do |_bucket, key|
+      AWS::S3.stubs(:exists_in_bucket).with do |_bucket, key|
         key.include?(unit_with_lesson_pdfs.name)
       end.returns(true)
 
       unit_without_lesson_pdfs = create :script, :with_lessons, seeded_from: Time.now
-      AWS::S3.stubs(:cached_exists_in_bucket?).with do |_bucket, key|
+      AWS::S3.stubs(:exists_in_bucket).with do |_bucket, key|
         key.include?(unit_without_lesson_pdfs.name)
       end.returns(false)
 
@@ -26,6 +25,7 @@ module Services
     end
 
     test 'get_pdfless_lessons excludes lessons without lesson plans' do
+      AWS::S3.stubs(:exists_in_bucket).returns(false)
       unit_with_lesson_plans = create :script, :with_lessons
       unit_without_lesson_plans = create :script, :with_lessons
       unit_without_lesson_plans.lessons.each do |lesson|

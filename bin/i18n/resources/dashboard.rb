@@ -1,35 +1,55 @@
-require 'fileutils'
-
-Dir[File.expand_path('../dashboard/**/*.rb', __FILE__)].sort.each {|file| require file}
+require_relative '../i18n_script_utils'
 
 module I18n
   module Resources
     module Dashboard
-      I18N_SOURCE_DIR_PATH = CDO.dir(File.join(I18N_SOURCE_DIR, 'dashboard')).freeze
+      DIR_NAME = 'dashboard'.freeze
+      ORIGIN_I18N_DIR_PATH = CDO.dir('dashboard/config/locales').freeze
+      I18N_SOURCE_DIR_PATH = CDO.dir(I18N_SOURCE_DIR, DIR_NAME).freeze
+      I18N_BACKUP_DIR_PATH = CDO.dir(I18N_ORIGINAL_DIR, DIR_NAME).freeze
 
       def self.sync_in
-        FileUtils.mkdir_p(I18N_SOURCE_DIR_PATH)
-
+        BaseContent.sync_in
         Blocks.sync_in
         CourseContent.sync_in
         CourseOfferings.sync_in
         Courses.sync_in
         CurriculumContent.sync_in
+        DataContent.sync_in
+        DeviseContent.sync_in
         Docs.sync_in
+        MarketingAnnouncements.sync_in
+        RestrictedContent.sync_in
         Scripts.sync_in
         SharedFunctions.sync_in
+        Slides.sync_in
         Standards.sync_in
+        UnpluggedContent.sync_in
+      end
 
-        puts 'Copying Dashboard source files'
-        # Special case the un-prefixed Yaml file.
-        FileUtils.cp(CDO.dir('dashboard/config/locales/en.yml'), File.join(I18N_SOURCE_DIR_PATH, 'base.yml'))
-        # Copy in needed files from dashboard
-        FileUtils.cp(CDO.dir('dashboard/config/locales/data.en.yml'), File.join(I18N_SOURCE_DIR_PATH, 'data.yml'))
-        FileUtils.cp(CDO.dir('dashboard/config/locales/devise.en.yml'), File.join(I18N_SOURCE_DIR_PATH, 'devise.yml'))
-        FileUtils.cp(CDO.dir('dashboard/config/locales/restricted.en.yml'), File.join(I18N_SOURCE_DIR_PATH, 'restricted.yml'))
-        FileUtils.cp(CDO.dir('dashboard/config/locales/slides.en.yml'), File.join(I18N_SOURCE_DIR_PATH, 'slides.yml'))
-        FileUtils.cp(CDO.dir('dashboard/config/locales/unplugged.en.yml'), File.join(I18N_SOURCE_DIR_PATH, 'unplugged.yml'))
+      def self.sync_out
+        BaseContent.sync_out
+        Blocks.sync_out
+        CourseContent.sync_out
+        CourseOfferings.sync_out
+        Courses.sync_out
+        CurriculumContent.sync_out
+        DataContent.sync_out
+        DeviseContent.sync_out
+        Docs.sync_out
+        MarketingAnnouncements.sync_out
+        RestrictedContent.sync_out
+        Scripts.sync_out
+        SharedFunctions.sync_out
+        Slides.sync_out
+        Standards.sync_out
+        UnpluggedContent.sync_out
+
+        # Should be called when all the Dashboard locale files have been synced-out
+        TextToSpeech.sync_out
       end
     end
   end
 end
+
+Dir[File.expand_path('../dashboard/**/*.rb', __FILE__)].sort.each {|file| require file}

@@ -42,7 +42,6 @@ const CurriculumCatalogCard = ({
   topics = [],
   pathToCourse,
   onAssignSuccess,
-  quickViewDisplayed,
   deviceCompatibility,
   description,
   professionalLearningProgram,
@@ -51,6 +50,10 @@ const CurriculumCatalogCard = ({
   selfPacedPlCourseOfferingPath,
   isExpanded,
   onQuickViewClick,
+  isInUS,
+  availableResources,
+  isSignedOut,
+  isTeacher,
   ...props
 }) => (
   <CustomizableCurriculumCatalogCard
@@ -79,9 +82,12 @@ const CurriculumCatalogCard = ({
     quickViewButtonText={i18n.quickView()}
     imageAltText={imageAltText}
     translationIconTitle={i18n.courseInYourLanguage()}
-    pathToCourse={pathToCourse + '?viewAs=Instructor'}
+    pathToCourse={`${
+      isSignedOut || isTeacher
+        ? pathToCourse + '?viewAs=Instructor'
+        : pathToCourse
+    }`}
     onAssignSuccess={onAssignSuccess}
-    quickViewDisplayed={quickViewDisplayed}
     deviceCompatibility={deviceCompatibility}
     description={description}
     professionalLearningProgram={professionalLearningProgram}
@@ -90,6 +96,10 @@ const CurriculumCatalogCard = ({
     selfPacedPlCourseOfferingPath={selfPacedPlCourseOfferingPath}
     isExpanded={isExpanded}
     onQuickViewClick={onQuickViewClick}
+    isInUS={isInUS}
+    availableResources={availableResources}
+    isSignedOut={isSignedOut}
+    isTeacher={isTeacher}
     {...props}
   />
 );
@@ -118,7 +128,6 @@ CurriculumCatalogCard.propTypes = {
   scriptId: PropTypes.number,
   isStandAloneUnit: PropTypes.bool,
   onAssignSuccess: PropTypes.func,
-  quickViewDisplayed: PropTypes.bool,
   deviceCompatibility: PropTypes.string,
   description: PropTypes.string,
   professionalLearningProgram: PropTypes.string,
@@ -127,6 +136,10 @@ CurriculumCatalogCard.propTypes = {
   selfPacedPlCourseOfferingPath: PropTypes.string,
   isExpanded: PropTypes.bool,
   onQuickViewClick: PropTypes.func,
+  isInUS: PropTypes.bool,
+  availableResources: PropTypes.object,
+  isTeacher: PropTypes.bool.isRequired,
+  isSignedOut: PropTypes.bool.isRequired,
 };
 
 const CustomizableCurriculumCatalogCard = ({
@@ -151,7 +164,6 @@ const CustomizableCurriculumCatalogCard = ({
   isSignedOut,
   onAssignSuccess,
   courseId,
-  quickViewDisplayed,
   deviceCompatibility,
   description,
   professionalLearningProgram,
@@ -160,11 +172,13 @@ const CustomizableCurriculumCatalogCard = ({
   selfPacedPlCourseOfferingPath,
   isExpanded,
   onQuickViewClick,
+  isInUS,
+  availableResources,
   ...props
 }) => {
   const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
 
-  const handleClickAssign = () => {
+  const handleClickAssign = cardType => {
     setIsAssignDialogOpen(true);
     analyticsReporter.sendEvent(
       EVENTS.CURRICULUM_CATALOG_ASSIGN_CLICKED_EVENT,
@@ -172,6 +186,7 @@ const CustomizableCurriculumCatalogCard = ({
         curriculum_offering: courseKey,
         has_sections: sectionsForDropdown.length > 0,
         is_signed_in: !isSignedOut,
+        card_type: cardType,
       }
     );
   };
@@ -213,12 +228,18 @@ const CustomizableCurriculumCatalogCard = ({
     }
   };
 
+  const quickViewButtonColor =
+    !isSignedOut && !isTeacher
+      ? Button.ButtonColor.brandSecondaryDefault
+      : Button.ButtonColor.neutralDark;
+
   return (
     <div className={style.cardsContainer}>
       <div>
         <div
           className={classNames(
             style.curriculumCatalogCardContainer,
+            isExpanded ? style.expandedCard : '',
             isEnglish
               ? style.curriculumCatalogCardContainer_english
               : style.curriculumCatalogCardContainer_notEnglish
@@ -255,33 +276,24 @@ const CustomizableCurriculumCatalogCard = ({
                   : style.buttonsContainer_notEnglish
               )}
             >
-              {quickViewDisplayed ? (
+              <Button
+                color={quickViewButtonColor}
+                type="button"
+                onClick={onQuickViewClick}
+                aria-label={quickViewButtonDescription}
+                text={i18n.quickView()}
+                className={style.buttonFlex}
+              />
+              {(isSignedOut || isTeacher) && (
                 <Button
-                  color={Button.ButtonColor.neutralDark}
+                  color={Button.ButtonColor.brandSecondaryDefault}
                   type="button"
-                  onClick={onQuickViewClick}
-                  aria-label={quickViewButtonDescription}
-                  text={'Quick View'}
-                />
-              ) : (
-                <Button
-                  __useDeprecatedTag
-                  color={Button.ButtonColor.neutralDark}
-                  type="button"
-                  href={pathToCourse}
-                  aria-label={i18n.quickViewDescription({
-                    course_name: courseDisplayName,
-                  })}
-                  text={i18n.learnMore()}
+                  onClick={() => handleClickAssign('top-card')}
+                  aria-label={assignButtonDescription}
+                  text={assignButtonText}
+                  className={style.buttonFlex}
                 />
               )}
-              <Button
-                color={Button.ButtonColor.brandSecondaryDefault}
-                type="button"
-                onClick={handleClickAssign}
-                aria-label={assignButtonDescription}
-                text={assignButtonText}
-              />
             </div>
           </div>
         </div>
@@ -303,6 +315,12 @@ const CustomizableCurriculumCatalogCard = ({
           assignButtonOnClick={handleClickAssign}
           assignButtonDescription={assignButtonDescription}
           onClose={onQuickViewClick}
+          isInUS={isInUS}
+          imageSrc={imageSrc}
+          imageAltText={imageAltText}
+          availableResources={availableResources}
+          isSignedOut={isSignedOut}
+          isTeacher={isTeacher}
         />
       )}
     </div>
@@ -329,7 +347,7 @@ CustomizableCurriculumCatalogCard.propTypes = {
   scriptId: PropTypes.number,
   isStandAloneUnit: PropTypes.bool,
   sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
-  isTeacher: PropTypes.bool,
+  isTeacher: PropTypes.bool.isRequired,
   isSignedOut: PropTypes.bool.isRequired,
   onAssignSuccess: PropTypes.func,
   // for screenreaders
@@ -337,7 +355,6 @@ CustomizableCurriculumCatalogCard.propTypes = {
   quickViewButtonDescription: PropTypes.string.isRequired,
   assignButtonDescription: PropTypes.string.isRequired,
   // for expanded card
-  quickViewDisplayed: PropTypes.bool,
   deviceCompatibility: PropTypes.string,
   description: PropTypes.string,
   professionalLearningProgram: PropTypes.string,
@@ -346,6 +363,8 @@ CustomizableCurriculumCatalogCard.propTypes = {
   selfPacedPlCourseOfferingPath: PropTypes.string,
   isExpanded: PropTypes.bool,
   onQuickViewClick: PropTypes.func,
+  isInUS: PropTypes.bool,
+  availableResources: PropTypes.object,
 };
 
 export default connect(

@@ -5,6 +5,7 @@ import {
   UnconnectedManageLinkedAccounts as ManageLinkedAccounts,
   ENCRYPTED,
 } from '@cdo/apps/lib/ui/accounts/ManageLinkedAccounts';
+import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 
 const DEFAULT_PROPS = {
   userType: 'student',
@@ -13,6 +14,7 @@ const DEFAULT_PROPS = {
   userHasPassword: true,
   isGoogleClassroomStudent: false,
   isCleverStudent: false,
+  personalAccountLinkingEnabled: true,
 };
 
 describe('ManageLinkedAccounts', () => {
@@ -247,5 +249,48 @@ describe('ManageLinkedAccounts', () => {
     );
     const googleConnectButton = wrapper.find('BootstrapButton').at(0);
     expect(googleConnectButton).to.have.attr('disabled');
+  });
+
+  describe('CPA lockout to prevent students from connecting oauth accounts without parent permission', () => {
+    beforeEach(() => {
+      replaceOnWindow('CPA_EXPERIENCE', 'true');
+    });
+
+    afterEach(() => {
+      restoreOnWindow('CPA_EXPERIENCE', undefined);
+    });
+
+    it('disables the connect buttons when personal account linking is disabled', () => {
+      const wrapper = mount(
+        <ManageLinkedAccounts
+          {...DEFAULT_PROPS}
+          personalAccountLinkingEnabled={false}
+        />
+      );
+
+      const googleConnectButton = wrapper.find('BootstrapButton').at(0);
+      expect(googleConnectButton).to.have.attr('disabled');
+      expect(googleConnectButton).to.be.disabled();
+
+      const msftConnectButton = wrapper.find('BootstrapButton').at(1);
+      expect(msftConnectButton).to.have.attr('disabled');
+      expect(msftConnectButton).to.be.disabled();
+
+      const facebookConnectButton = wrapper.find('BootstrapButton').at(3);
+      expect(facebookConnectButton).to.have.attr('disabled');
+      expect(facebookConnectButton).to.be.disabled();
+    });
+
+    it('does not disable the Clever connect button even when the other buttons are disabled', () => {
+      const wrapper = mount(
+        <ManageLinkedAccounts
+          {...DEFAULT_PROPS}
+          personalAccountLinkingEnabled={false}
+        />
+      );
+      const cleverConnectButton = wrapper.find('BootstrapButton').at(2);
+      expect(cleverConnectButton).to.not.have.attr('disabled');
+      expect(cleverConnectButton).to.not.be.disabled();
+    });
   });
 });
