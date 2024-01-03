@@ -72,7 +72,6 @@ const Tag: React.FunctionComponent<TagProps> = ({
       )}
     >
       <div
-        tabIndex={0}
         role="tooltip"
         aria-describedby={tooltipId}
         className={moduleStyles.tag}
