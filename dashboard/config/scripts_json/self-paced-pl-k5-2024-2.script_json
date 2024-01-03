@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-12-14 21:22:31 UTC",
+    "serialized_at": "2024-01-02 17:26:06 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -685,10 +685,37 @@
     },
     {
       "chapter": 18,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-k5-2_reflect_events_2024"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-k5-2_reflect_events_2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-2",
+        "activity_section.key": "f86ec33a-b3c7-44be-994a-02bc876d8456"
+      },
+      "level_keys": [
+        "pl-k5-2_reflect_events_2024"
+      ]
+    },
+    {
+      "chapter": 19,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-k5-2-behaviors -intro_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -705,11 +732,14 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-k5-2_events_behaviors-2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -726,11 +756,14 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-k5-2_animal_adaptations_behavior_bugs_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -747,11 +780,14 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-k5-2_behaviors_custom_2023"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -768,11 +804,14 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-k5-2_animal_adaptations_behaviors2_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -789,8 +828,29 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "k5_CS_PL_ event_behavior_2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-2",
+        "activity_section.key": "4caa3d8c-dc93-4434-944e-3af657f2bda7"
+      },
+      "level_keys": [
+        "k5_CS_PL_ event_behavior_2024"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -798,7 +858,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "pl-k5-2_matching_vocab_2024"
+          "pl-k5-2-terminology_matching_2024"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
@@ -806,15 +866,18 @@
         "activity_section.key": "56177a5f-9d2a-40d8-be32-83910b7b0c5f"
       },
       "level_keys": [
-        "pl-k5-2_matching_vocab_2024"
+        "pl-k5-2-terminology_matching_2024"
       ]
     },
     {
-      "chapter": 24,
-      "position": 7,
+      "chapter": 26,
+      "position": 8,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-k5-2_freeplayvideo_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -831,11 +894,14 @@
       ]
     },
     {
-      "chapter": 25,
-      "position": 8,
+      "chapter": 27,
+      "position": 9,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-k5-2_helloworld_freeplay_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -852,11 +918,14 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-k5-2_PLexperiences_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -873,11 +942,14 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 29,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-k5-2-nextSteps_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1101,6 +1173,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "pl-k5-2_reflect_events_2024",
+        "script_level.level_keys": [
+          "pl-k5-2_reflect_events_2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-2",
+        "activity_section.key": "f86ec33a-b3c7-44be-994a-02bc876d8456"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "pl-k5-2-behaviors -intro_2024",
         "script_level.level_keys": [
           "pl-k5-2-behaviors -intro_2024"
@@ -1161,9 +1245,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-k5-2_matching_vocab_2024",
+        "level.key": "k5_CS_PL_ event_behavior_2024",
         "script_level.level_keys": [
-          "pl-k5-2_matching_vocab_2024"
+          "k5_CS_PL_ event_behavior_2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-2",
+        "activity_section.key": "4caa3d8c-dc93-4434-944e-3af657f2bda7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-k5-2-terminology_matching_2024",
+        "script_level.level_keys": [
+          "pl-k5-2-terminology_matching_2024"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
