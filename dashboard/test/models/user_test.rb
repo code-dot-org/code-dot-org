@@ -796,6 +796,12 @@ class UserTest < ActiveSupport::TestCase
     refute follower.student_user.reload.admin?
   end
 
+  test "show_progress_table_v2? defaults to default" do
+    user = create :user
+
+    assert_equal "default", user.get_show_progress_table_v2
+  end
+
   test "short name" do
     assert_equal 'Laurel', build(:user, name: 'Laurel Fan').short_name # first name last name
     assert_equal 'Winnie', build(:user, name: 'Winnie the Pooh').short_name # middle name
