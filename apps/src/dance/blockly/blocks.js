@@ -1,5 +1,5 @@
 import i18n from '@cdo/locale';
-import CdoFieldDanceAi from './ai/cdoFieldDanceAi';
+import CdoFieldDanceAi from '../ai/cdoFieldDanceAi';
 
 // This color palette is limited to colors which have different hues, therefore
 // it should not contain different shades of the same color such as
@@ -102,7 +102,7 @@ const customInputTypes = {
 
 export default {
   customInputTypes,
-  install(blockly, blockInstallOptions) {
+  install(blockly) {
     Blockly.cdoUtils.registerCustomProcedureBlocks();
     // Legacy style block definitions :(
     const generator = blockly.getGenerator();
