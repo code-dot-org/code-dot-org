@@ -30,10 +30,10 @@ section#eligibility {
     padding: 2rem;
     background-color: var(--neutral_white);
     border: 1px solid var(--neutral_dark20);
-    border-left: 0;
+    border-inline-start: 0;
 
     @media screen and (max-width: $width-sm) {
-      border-left: 1px solid var(--neutral_dark20);
+      border-inline-start: 1px solid var(--neutral_dark20);
       border-top: 0;
     }
 
