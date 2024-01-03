@@ -14,10 +14,6 @@ section.top {
 }
 
 section#eligibility {
-  .form, .requirements {
-    background-color: var(--neutral_white);
-    border: 1px solid var(--neutral_dark20);
-  }
 
   .form {
     flex: 2.5;
@@ -26,6 +22,9 @@ section#eligibility {
   .requirements {
     flex: 1;
     padding: 2rem;
+    background-color: var(--neutral_white);
+    border: 1px solid var(--neutral_dark20);
+    border-left: 0;
 
     p {
       margin-bottom: 0;
