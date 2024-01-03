@@ -7,7 +7,7 @@ require 'net/http'
 require 'csv'
 require 'date'
 require 'datapackage'
-require_relative '../../../dashboard/legacy/middleware/helpers/firebase_helper'
+require_relative '../../../dashboard/legacy/middleware/helpers/firebase_helper' # TODO: unfirebase
 
 US_DATA_URL = "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv"
 MAX_DAYS = 90 # there are 55 states/territories, and the table must be less than 5000 total rows (5000/55 = 90.9)

@@ -11,7 +11,7 @@ abort 'Script already running' unless only_one_running?(__FILE__)
 
 require_relative '../../../deployment'
 require 'ostruct'
-require_relative '../../../dashboard/legacy/middleware/helpers/firebase_helper'
+require_relative '../../../dashboard/legacy/middleware/helpers/firebase_helper' # TODO: unfirebase
 require 'cdo/profanity_filter'
 require 'rest-client'
 
