@@ -202,11 +202,6 @@ export default function RubricSettings({
       )}
       {canProvideFeedback && (
         <div className={style.aiAssessmentOptions}>
-          {/* {experiments.isEnabled('ai-rubrics-redesign') && (
-            <div className={style.selectors}>
-              <SectionSelector reloadOnChange={true} requireSelection={false} />
-            </div>
-          )} */}
           <div>
             <BodyTwoText>
               <StrongText>{i18n.aiAssessment()}</StrongText>
