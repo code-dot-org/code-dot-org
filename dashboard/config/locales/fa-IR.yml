@@ -4,6 +4,7 @@ fa:
     attributes:
       user:
         age: سن
+        ai_rubrics_disabled: غیرفعال کردن ویژگی سرفصل هوش مصنوعی
         ai_settings_header: تنظیمات هوش مصنوعی
         current_password: رمز عبور فعلی
         edit_header: ویرایش اطلاعات کاربری

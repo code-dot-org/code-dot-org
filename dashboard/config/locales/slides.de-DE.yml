@@ -2784,6 +2784,20 @@ de:
         text: Wenn du auf "Ausführen" drückst, wird das Sprite den Text sagen, den
           du ihm sagst. Jetzt ist es an der Zeit, mit Sprite Lab loszulegen und zu
           sehen, wohin deine Fantasie dich führt!
+    hoc-dance-ai-warmup:
+      2:
+        text: Hallo, mein Name ist Miral Kotb und ich bin Tänzer, Softwareentwickler
+          und Entwickler von iLuminate.
+      3:
+        text: Die Informatik hat in vielerlei Hinsicht mit Kreativität zu tun. Unermesslich,
+          wirklich. Ich meine, wenn man erst einmal die Fähigkeit hat, Software zu
+          schreiben, kann man Ideen in alles einbringen. Ich mache das mit leichten
+          Anzügen. Es gibt so viel, was man tun kann, wenn man erst einmal die Werkzeuge
+          zum Schreiben von Software hat, und die Möglichkeiten sind wirklich endlos.
+      5:
+        text: Du wirst Codeblöcke verwenden, um verschiedene Tänzer auszuwählen, ihre
+          Tanzbewegungen zu ändern, sie auf die Musik reagieren zu lassen und sie
+          interaktiv zu machen.
     hoc_dance_congrats:
       1:
         image: notes/hoc_dance_congrats_1.png

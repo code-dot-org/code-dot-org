@@ -9,6 +9,8 @@ require:
   - rubocop-rails-accessibility
   - './tools/customLinters/rubocop_only_allowed_characters.rb'
   - './tools/customLinters/rubocop_prefer_mocha_stubs_to_minitest_stub.rb'
+  - './tools/customLinters/rubocop_pegasus_db_usage.rb'
+  - './tools/customLinters/rubocop_dashboard_db_usage.rb'
 
 AllCops:
   SuggestExtensions: false

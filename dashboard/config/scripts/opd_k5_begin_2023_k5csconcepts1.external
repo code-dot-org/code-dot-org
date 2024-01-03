@@ -1,0 +1,11 @@
+name 'OPD-K5 Begin_2023_K5CSConcepts1'
+skip_dialog true
+markdown <<MARKDOWN
+# Algorithms
+
+Congratulations! You just wrote an algorithm! **Algorithm** is a key term used in computer science. Algorithms are like **step-by-step recipes** for solving problems. It's a clear set of instructions that tells you what to do, just like following a recipe to bake cookies. Creating an algorithm is like **giving directions to a computer** so it knows exactly what steps to take.
+
+You just created an algorithm for Laurel to get to the treasure. 
+Let’s create another algorithm.
+
+MARKDOWN
