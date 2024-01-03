@@ -7,7 +7,7 @@ import {blocklyLocaleMap} from '@cdo/apps/blockly/constants';
 // Blockly provides "messages" files, which are JSON-format files containing human-translated
 // strings that are needed by Blockly.
 // These files map closely, but not exactly, to our supported locales.
-// After importing the desired message set, we need set the locale in Blockly.
+// After importing the desired message set, we need to set the locale in Blockly.
 // More information at:
 // https://developers.google.com/blockly/guides/configure/web/translations
 // https://github.com/google/blockly/blob/master/msg/json/README.md
