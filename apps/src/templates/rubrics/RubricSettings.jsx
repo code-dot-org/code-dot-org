@@ -46,12 +46,12 @@ const fetchAiEvaluationStatus = (rubricId, studentUserId) => {
 
 export default function RubricSettings({
   canProvideFeedback,
-  rubricId,
   studentUserId,
   visible,
   refreshAiEvaluations,
   rubric,
 }) {
+  const rubricId = rubric.id;
   const {lesson} = rubric;
   const [csrfToken, setCsrfToken] = useState('');
   const [status, setStatus] = useState(STATUS.INITIAL_LOAD);
@@ -233,7 +233,6 @@ RubricSettings.propTypes = {
   canProvideFeedback: PropTypes.bool,
   teacherHasEnabledAi: PropTypes.bool,
   updateTeacherAiSetting: PropTypes.func,
-  rubricId: PropTypes.number,
   studentUserId: PropTypes.number,
   visible: PropTypes.bool,
   refreshAiEvaluations: PropTypes.func,
