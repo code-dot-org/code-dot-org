@@ -13,7 +13,6 @@ import {LabState} from '@cdo/apps/lab2/lab2Redux';
 import {DanceLevelProperties, DanceProjectSources} from '../../types';
 import {registerReducers} from '@cdo/apps/redux';
 import {installCommonBlocks, installDanceBlocks} from '../../blockly/setup';
-import undefined from 'react-with-context';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 const commonI18n = require('@cdo/locale');
 
