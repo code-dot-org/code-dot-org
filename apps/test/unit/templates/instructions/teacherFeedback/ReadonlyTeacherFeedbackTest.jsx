@@ -10,7 +10,7 @@ import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 const DEFAULT_PROPS = {
   rubric: null,
   visible: true,
-  latestFeedback: null
+  latestFeedback: null,
 };
 
 const RUBRIC = {
@@ -18,7 +18,7 @@ const RUBRIC = {
   performanceLevel1: 'exceeded expectations',
   performanceLevel2: 'met expectations',
   performanceLevel3: 'approaches expectations',
-  performanceLevel4: 'no evidence of trying'
+  performanceLevel4: 'no evidence of trying',
 };
 
 const FEEDBACK = {
@@ -27,7 +27,7 @@ const FEEDBACK = {
   id: 5,
   level_id: 123,
   performance: null,
-  student_id: 1
+  student_id: 1,
 };
 
 const setUp = (overrideProps = {}) => {
@@ -44,14 +44,14 @@ describe('ReadonlyTeacherFeedback', () => {
   describe('without previous feedback given', () => {
     it('does not display last updated', () => {
       const wrapper = setUp({
-        rubric: RUBRIC
+        rubric: RUBRIC,
       });
       expect(wrapper.find('#ui-test-feedback-time')).to.have.length(0);
     });
 
     it('displays rubric with expected props if there is a rubric', () => {
       const wrapper = setUp({
-        rubric: RUBRIC
+        rubric: RUBRIC,
       });
       const rubric = wrapper.find(Rubric);
       expect(rubric).to.have.length(1);
@@ -61,14 +61,14 @@ describe('ReadonlyTeacherFeedback', () => {
 
     it('does not display the comment area', () => {
       const wrapper = setUp({
-        rubric: RUBRIC
+        rubric: RUBRIC,
       });
       expect(wrapper.find(Comment)).to.have.lengthOf(0);
     });
 
     it('does not display ReadOnlyReviewState', () => {
       const wrapper = setUp({
-        rubric: RUBRIC
+        rubric: RUBRIC,
       });
       expect(wrapper.find(ReadOnlyReviewState)).to.have.lengthOf(0);
     });
@@ -77,7 +77,7 @@ describe('ReadonlyTeacherFeedback', () => {
   describe('with previous feedback given', () => {
     it('does not render rubric if there is no rubric for the level', () => {
       const wrapper = setUp({
-        latestFeedback: FEEDBACK
+        latestFeedback: FEEDBACK,
       });
       expect(wrapper.find(Rubric)).to.have.lengthOf(0);
     });
@@ -85,12 +85,12 @@ describe('ReadonlyTeacherFeedback', () => {
     it('renders rubric with expected props if there is a rubric for the level', () => {
       const latestFeedback = {
         ...FEEDBACK,
-        performance: 'performanceLevel2'
+        performance: 'performanceLevel2',
       };
 
       const wrapper = setUp({
         rubric: RUBRIC,
-        latestFeedback
+        latestFeedback,
       });
 
       const rubric = wrapper.find(Rubric);
@@ -102,7 +102,7 @@ describe('ReadonlyTeacherFeedback', () => {
 
     it('renders the comment with expected props if there is a comment', () => {
       const wrapper = setUp({
-        latestFeedback: FEEDBACK
+        latestFeedback: FEEDBACK,
       });
       const confirmCommentArea = wrapper.find(Comment).first();
       expect(confirmCommentArea.props().isEditable).to.equal(false);
@@ -113,12 +113,12 @@ describe('ReadonlyTeacherFeedback', () => {
       const latestFeedback = {
         ...FEEDBACK,
         comment: '',
-        performance: 'performanceLevel2'
+        performance: 'performanceLevel2',
       };
 
       const wrapper = setUp({
         rubric: RUBRIC,
-        latestFeedback
+        latestFeedback,
       });
 
       expect(wrapper.find(Comment)).to.have.lengthOf(0);
@@ -127,7 +127,7 @@ describe('ReadonlyTeacherFeedback', () => {
     it('renders ReadOnlyReviewState with expected props - keepWorking', () => {
       const latestFeedback = {
         ...FEEDBACK,
-        review_state: ReviewStates.keepWorking
+        review_state: ReviewStates.keepWorking,
       };
       const wrapper = setUp({latestFeedback});
       const reviewState = wrapper.find(ReadOnlyReviewState);
@@ -140,7 +140,7 @@ describe('ReadonlyTeacherFeedback', () => {
     it('renders ReadOnlyReviewState with expected props - awaiting Review', () => {
       const latestFeedback = {
         ...FEEDBACK,
-        is_awaiting_teacher_review: true
+        is_awaiting_teacher_review: true,
       };
       const wrapper = setUp({latestFeedback});
       const reviewState = wrapper.find(ReadOnlyReviewState);
@@ -156,7 +156,7 @@ describe('ReadonlyTeacherFeedback', () => {
 
       const latestFeedback = {
         created_at: yesterday,
-        comment: 'Great!'
+        comment: 'Great!',
       };
 
       const wrapper = setUp({latestFeedback});

@@ -4,3 +4,4 @@ question 'What is the name of the parameter?'
 wrong 'g'
 right 'y'
 wrong '3'
+allow_multiple_attempts true

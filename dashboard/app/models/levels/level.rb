@@ -38,6 +38,7 @@ class Level < ApplicationRecord
   has_one :level_concept_difficulty, dependent: :destroy
   has_many :level_sources
   has_many :hint_view_requests
+  has_many :rubrics, dependent: :destroy
 
   before_validation :strip_name
   before_destroy :remove_empty_script_levels
@@ -55,8 +56,8 @@ class Level < ApplicationRecord
 
   validate :validate_game, on: [:create, :update]
 
-  after_save :write_custom_level_file
-  after_destroy :delete_custom_level_file
+  after_save {Services::LevelFiles.write_custom_level_file(self)}
+  after_destroy {Services::LevelFiles.delete_custom_level_file(self)}
 
   accepts_nested_attributes_for :level_concept_difficulty, update_only: true
 
@@ -91,7 +92,7 @@ class Level < ApplicationRecord
     teacher_markdown
     bubble_choice_description
     thumbnail_url
-    start_html
+    start_libraries
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
@@ -101,7 +102,7 @@ class Level < ApplicationRecord
 
   # https://github.com/rails/rails/issues/3508#issuecomment-29858772
   # Include type in serialization.
-  def serializable_hash(options=nil)
+  def serializable_hash(options = nil)
     super.merge 'type' => type
   end
 
@@ -205,7 +206,7 @@ class Level < ApplicationRecord
           i18n_key = "data.callouts.#{name}.#{callout_definition['localization_key']}"
           callout_text = (should_localize? &&
             I18n.t(i18n_key, default: nil)) ||
-            callout_definition['callout_text']
+              callout_definition['callout_text']
 
           Callout.new(
             element_id: callout_definition['element_id'],
@@ -245,18 +246,6 @@ class Level < ApplicationRecord
     hash
   end
 
-  def should_write_custom_level_file?
-    write_to_file? && published
-  end
-
-  def write_custom_level_file
-    if should_write_custom_level_file?
-      file_path = Level.level_file_path(name)
-      File.write(file_path, to_xml)
-      file_path
-    end
-  end
-
   def should_allow_pairing?(current_script_id)
     if type == "LevelGroup"
       return false
@@ -270,12 +259,6 @@ class Level < ApplicationRecord
     end
 
     !(current_parent&.type == "LevelGroup")
-  end
-
-  def self.level_file_path(level_name)
-    level_paths = Dir.glob(Rails.root.join("config/scripts/**/#{level_name}.level"))
-    raise("Multiple .level files for '#{name}' found: #{level_paths}") if level_paths.many?
-    level_paths.first || Rails.root.join("config/scripts/levels/#{level_name}.level")
   end
 
   def to_xml(options = {})
@@ -304,20 +287,13 @@ class Level < ApplicationRecord
 
   def filter_level_attributes(level_hash)
     %w(name id updated_at type solution_level_source_id ideal_level_source_id md5).each {|field| level_hash.delete field}
-    level_hash.reject! {|_, v| v.nil?}
+    level_hash.compact!
     level_hash
   end
 
   def report_bug_url(request)
     message = "Bug in Level #{name}\n#{request.url}\n#{request.user_agent}\n"
     "https://support.code.org/hc/en-us/requests/new?&description=#{CGI.escape(message)}"
-  end
-
-  def delete_custom_level_file
-    if write_to_file?
-      file_path = Dir.glob(Rails.root.join("config/scripts/**/#{name}.level")).first
-      File.delete(file_path) if file_path && File.exist?(file_path)
-    end
   end
 
   # Overriden in subclasses, provides a summary for rendering thumbnails on the
@@ -327,6 +303,7 @@ class Level < ApplicationRecord
   end
 
   TYPES_WITHOUT_IDEAL_LEVEL_SOURCE = [
+    'Aichat', # no ideal solution
     'Ailab', # no ideal solution
     'Applab', # freeplay
     'Bounce', # no ideal solution
@@ -349,12 +326,14 @@ class Level < ApplicationRecord
     'Map', # no user submitted content
     'Match', # dsl defined, covered in dsl
     'Multi', # dsl defined, covered in dsl
+    'Music', # no ideal solution
     'BubbleChoice', # dsl defined, covered in dsl
     'NetSim', # widget
     'Odometer', # widget
     'Pixelation', # widget
     'Poetry', # no ideal solution
     'PublicKeyCryptography', # widget
+    'Pythonlab', # no ideal solution
     'ScriptCompletion', # unknown
     'StandaloneVideo', # no user submitted content
     'TextCompression', # widget
@@ -381,15 +360,15 @@ class Level < ApplicationRecord
 
   def self.where_we_want_to_calculate_ideal_level_source
     where.not(type: TYPES_WITHOUT_IDEAL_LEVEL_SOURCE).
-    where(ideal_level_source_id: nil).
-    to_a.reject {|level| level.try(:free_play)}
+      where(ideal_level_source_id: nil).
+      to_a.reject {|level| level.try(:free_play)}
   end
 
   def calculate_ideal_level_source_id
     ideal_level_source =
       level_sources.
-      includes(:activities).
-      max_by {|level_source| level_source.activities.where("test_result >= #{Activity::FREE_PLAY_RESULT}").count}
+        includes(:activities).
+        max_by {|level_source| level_source.activities.where("test_result >= #{Activity::FREE_PLAY_RESULT}").count}
 
     update_attribute(:ideal_level_source_id, ideal_level_source.id) if ideal_level_source
   end
@@ -436,8 +415,8 @@ class Level < ApplicationRecord
 
   def reject_illegal_chars
     if name&.match /[^A-Za-z0-9 !"&'()+,\-.:=?_|]/
-      msg = "\"#{name}\" may only contain letters, numbers, spaces, "\
-      "and the following characters: !\"&'()+,\-.:=?_|"
+      msg = "\"#{name}\" may only contain letters, numbers, spaces, " \
+      "and the following characters: !\"&'()+,-.:=?_|"
       errors.add(:name, msg)
     end
   end
@@ -450,7 +429,7 @@ class Level < ApplicationRecord
     end
   end
 
-  def log_changes(user=nil)
+  def log_changes(user = nil)
     return unless changed?
 
     log = JSON.parse(audit_log || "[]")
@@ -610,6 +589,10 @@ class Level < ApplicationRecord
     false
   end
 
+  def uses_lab2?
+    false
+  end
+
   # Create a copy of this level named new_name
   # @param [String] new_name
   # @param [String] editor_experiment
@@ -680,8 +663,8 @@ class Level < ApplicationRecord
       level.save!
 
       level
-    rescue Exception => e
-      raise e, "Failed to clone Level #{name.inspect} as #{new_name.inspect}. Message:\n#{e.message}", e.backtrace
+    rescue Exception => exception
+      raise exception, "Failed to clone Level #{name.inspect} as #{new_name.inspect}. Message:\n#{exception.message}", exception.backtrace
     end
   end
 
@@ -710,7 +693,7 @@ class Level < ApplicationRecord
 
   def show_help_and_tips_in_level_editor?
     (uses_droplet? || is_a?(Blockly) || is_a?(Weblab) || is_a?(Ailab) || is_a?(Javalab)) &&
-    !(is_a?(NetSim) || is_a?(GamelabJr) || is_a?(Dancelab) || is_a?(BubbleChoice))
+      !(is_a?(NetSim) || is_a?(GamelabJr) || is_a?(Dancelab) || is_a?(BubbleChoice))
   end
 
   def localized_teacher_markdown
@@ -743,7 +726,7 @@ class Level < ApplicationRecord
   # hint_prompt_enabled for the sake of the level editing experience if any of
   # the scripts associated with the level are hint_prompt_enabled.
   def hint_prompt_enabled?
-    script_levels.map(&:script).select(&:hint_prompt_enabled?).any?
+    script_levels.map(&:script).any?(&:hint_prompt_enabled?)
   end
 
   # Define search filter fields
@@ -798,12 +781,29 @@ class Level < ApplicationRecord
     }
   end
 
-  private
+  # Summarize the properties for a lab2 level.
+  # Called by ScriptLevelsController.level_properties.
+  # These properties are usually just the serialized properties for
+  # the level, which usually include levelData.  If this level is a
+  # StandaloneVideo then we put its properties into levelData.
+  def summarize_for_lab2_properties(script)
+    video = specified_autoplay_video&.summarize(false)&.camelize_keys
+    properties_camelized = properties.camelize_keys
+    properties_camelized[:levelData] = video if video
+    properties_camelized[:type] = type
+    properties_camelized[:appName] = game&.app
+    properties_camelized[:useRestrictedSongs] = game.use_restricted_songs?
+    properties_camelized
+  end
+
+  def project_type
+    return game&.app
+  end
 
   # Returns the level name, removing the name_suffix first (if present), and
   # also removing any additional suffixes of the format "_NNNN" which might
   # represent a version year.
-  def base_name
+  private def base_name
     base_name = name
     if name_suffix
       strip_suffix_regex = /^(.*)#{Regexp.escape(name_suffix)}$/
@@ -815,7 +815,7 @@ class Level < ApplicationRecord
 
   # repeatedly strip any version year suffix of the form _NNNN or -NNNN ()e.g. _2017 or -2017)
   # from the input string.
-  def strip_version_year_suffixes(str)
+  private def strip_version_year_suffixes(str)
     year_suffix_regex = /^(.*)[_-][0-9]{4}$/
     loop do
       matchdata = str.match(year_suffix_regex)
@@ -823,9 +823,5 @@ class Level < ApplicationRecord
       str = matchdata.captures.first
     end
     str
-  end
-
-  def write_to_file?
-    custom? && !is_a?(DSLDefined) && Rails.application.config.levelbuilder_mode
   end
 end

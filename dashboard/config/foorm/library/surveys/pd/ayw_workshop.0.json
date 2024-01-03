@@ -294,6 +294,369 @@
         },
         {
           "type": "panel",
+          "name": "ayw_workshop_3_4_panel",
+          "visibleIf": "({workshop_agenda}='in_person' and {workshop_subject}='Academic Year Workshop 3 + 4')",
+          "elements": [
+            {
+              "type": "html",
+              "name": "teaching_units_space",
+              "html": "\n<p></p>"
+            },
+            {
+              "type": "html",
+              "name": "Intro_teaching_units",
+              "html": "\n<p></p><b><font size=3> How much do you agree or disagree with the following statements about how this workshop prepared you to teach the {workshop_course} course? </p>"
+            },
+            {
+              "type": "html",
+              "name": "question1",
+              "visible": false,
+              "html": "COURSE: {workshop_course}"
+            },
+            {
+              "type": "rating",
+              "name": "csdpilot_discuss_with_peers_w34",
+              "visibleIf": "{workshop_course}='CS Discoveries' and ({workshop_id} = '12272' or {workshop_id} = '12784' or {workshop_id} = '12273' or {workshop_id} = '12786' or {workshop_id} = '13094')",
+              "title": "I had opportunities to discuss CS Discoveries course implementation roadblocks and successes with peers during this module.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "better_prepared_unit5csd_w34",
+              "visibleIf": "{workshop_course}='CS Discoveries' and {workshop_id} <> '12272' and {workshop_id} <> '12784' and {workshop_id} <> '12273' and {workshop_id} <> '12786' and {workshop_id} <> '13094'",
+              "title": "I feel prepared to teach Unit 5 after attending this workshop.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "better_prepared_unit6csd_w34",
+              "visibleIf": "{workshop_course}='CS Discoveries' and {workshop_id} <> '12272' and {workshop_id} <> '12784' and {workshop_id} <> '12273' and {workshop_id} <> '12786' and {workshop_id} <> '13094'",
+              "title": "I feel prepared to teach Unit 6 after attending this workshop.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "unit6_level_types_w34",
+              "visibleIf": "{workshop_course}='CS Discoveries' and {workshop_id} <> '12272' and {workshop_id} <> '12784' and {workshop_id} <> '12273' and {workshop_id} <> '12786' and {workshop_id} <> '13094'",
+              "title": "I recognize different lesson level types and how to use each of them to support Unit 6 instruction.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "problem_solve_proc_prog_w34",
+              "visibleIf": "{workshop_course}='CS Discoveries' and {workshop_id} <> '12272' and {workshop_id} <> '12784' and {workshop_id} <> '12273' and {workshop_id} <> '12786' and {workshop_id} <> '13094'",
+              "title": "Through this workshop, I feel prepared to use the Problem Solving Process for Programming to reinforce persistence and support students when facing challenges.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "better_prepared_unit7csp_w34",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "I feel prepared to teach Unit 7 (I feel prepared to teach concepts such as parameters, arguments and libraries). ",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "csp_unit9_w34",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "I feel better prepared to teach Unit 9 after attending this workshop.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "csp_unit10_w34",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "I feel better prepared to teach Unit 10 after attending this workshop.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "csp_unit10_project_w34",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "I feel prepared to guide students through the project associated with Unit 10.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "csp_unit10_project_buy_in_w34",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "I have strategies to engage students and ensure they buy in to work through the project in Unit 10.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "opportunities_discuss_peers_w34",
+              "visibleIf": "{workshop_course}='CS Discoveries' or {workshop_course}='CS Principles'",
+              "title": "I had opportunities to discuss teaching strategies with peers during this module.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "csdpilot_confidence_cs_concepts_w34",
+              "visibleIf": "{workshop_course}='CS Discoveries' and ({workshop_id} = '12272' or {workshop_id} = '12784' or {workshop_id} = '12273' or {workshop_id} = '12786' or {workshop_id} = '13094')",
+              "title": "As a result of this workshop, I feel confident about the computer science concepts I need to master before teaching CS Discoveries next week.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "find_resources_w34",
+              "visibleIf": "({workshop_course}='CS Discoveries' and {workshop_id} <> '12272' and {workshop_id} <> '12784' and {workshop_id} <> '12273' and {workshop_id} <> '12786' and {workshop_id} <> '13094') or {workshop_course}='CS Principles'",
+              "title": "I know where to find resources to help me teach the units we have covered.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "differentiation_w34",
+              "visibleIf": "{workshop_course}='CS Discoveries' and {workshop_id} <> '12272' and {workshop_id} <> '12784' and {workshop_id} <> '12273' and {workshop_id} <> '12786' and {workshop_id} <> '13094'",
+              "title": "After attending this workshop I understand how to apply differentiation strategies when teaching Unit 5.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "data_analysis_w34",
+              "visibleIf": "{workshop_course}='CS Discoveries' and {workshop_id} <> '12272' and {workshop_id} <> '12784' and {workshop_id} <> '12273' and {workshop_id} <> '12786' and {workshop_id} <> '13094'",
+              "title": "Through this workshop, I feel ready to guide students in the use of the Problem Solving Process for Data to draw conclusions about data.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "csdpilot_reflect_role_w34",
+              "visibleIf": "{workshop_course}='CS Discoveries' and ({workshop_id} = '12272' or {workshop_id} = '12784' or {workshop_id} = '12273' or {workshop_id} = '12786' or {workshop_id} = '13094')",
+              "title": "This workshop provided me with the opportunity to reflect on my role in supporting student learning.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "csdpilot_confidence_ability_support_w34",
+              "visibleIf": "{workshop_course}='CS Discoveries' and ({workshop_id} = '12272' or {workshop_id} = '12784' or {workshop_id} = '12273' or {workshop_id} = '12786' or {workshop_id} = '13094')",
+              "title": "After this workshop, I feel confident in my ability to support student learning during group work, pair programming, and in giving and receiving feedback.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "csdpilot_cs_ed_community_w34",
+              "visibleIf": "{workshop_course}='CS Discoveries' and ({workshop_id} = '12272' or {workshop_id} = '12784' or {workshop_id} = '12273' or {workshop_id} = '12786' or {workshop_id} = '13094')",
+              "title": "I have a plan to connect to the CS Education community and develop new skills after this workshop.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "html",
+              "name": "prep_ap_exam_space",
+              "html": "\n<p></p>"
+            },
+            {
+              "type": "html",
+              "name": "Intro_prep_ap_exam",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "html": "\n<p></p><b><font size=3> How much do you agree or disagree with the following statements about your readiness to prepare your students for the {workshop_course} AP Exam? </p>"
+            },
+            {
+              "type": "rating",
+              "name": "csp_multiple_choice_apexam_w34",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "I know how and when to prepare students for the multiple-choice section of the AP exam.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "assess_cpt_w34",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "I am confident I can explain how students will be assessed on content and skills on the Create Performance Task of the AP exam.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "make_lessons_cpt_w34",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "After attending this workshop, I have strategies to lead my students through the Make lessons in Unit 7 to adequately prepare them for the Create Performance Task.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "troublepoints_cpt_w34",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "Through my participation in this workshop, I feel prepared to support my students for the AP Exam’s Create Performance Task by identifying potential trouble points in their project ideas.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "mvp_cpt_w34",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "I am confident I can help students keep their projects within the scope of the Create Performance Task while defining project ideas that fit the criteria of a minimum viable product.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "barriers_w34",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "I have identified the barriers keeping students from feeling included in CS education at my school.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "html",
+              "name": "inclusion_space",
+              "html": "\n<p></p>"
+            },
+            {
+              "type": "html",
+              "name": "inclusion_intro",
+              "html": "\n<p></p><b><font size=3> How much do you agree or disagree with the following statements about how this workshop prepared you to foster an inclusive classroom environment in your {workshop_course} course? </p>"
+            },
+            {
+              "type": "rating",
+              "name": "strategies_ensure_inclusion_w34",
+              "visibleIf": "{workshop_course}='CS Discoveries' or {workshop_course}='CS Principles'",
+              "title": "This workshop provided me with new ideas and strategies to ensure that my classroom is inclusive.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "plan_develop_w34",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "I am committed to implementing a plan to differentiate teaching to create an inclusive classroom environment during unit 7.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "next_steps_commitment_w34",
+              "visibleIf": "{workshop_course}='CS Discoveries' or {workshop_course}='CS Principles'",
+              "title": "As a result of this workshop series, I feel empowered to take next steps to implement my commitment to foster equitable access, diversity, and inclusion in my CS classroom.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "plan_measure_w34",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "I feel ready to track the progress of my inclusion plan: I know how and what to measure as outcomes and supports.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "resources_equity_w34",
+              "visibleIf": "{workshop_course}='CS Discoveries' or {workshop_course}='CS Principles'",
+              "title": "Through the academic year workshops, I now know where to find information and resources to implement my commitment to foster an equitable and inclusive CS classroom.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "learning_in_context_w34",
+              "visibleIf": "{workshop_course}='CS Discoveries' and {workshop_id} <> '12272' and {workshop_id} <> '12784' and {workshop_id} <> '12273' and {workshop_id} <> '12786' and {workshop_id} <> '13094'",
+              "title": "After attending this workshop I feel prepared to incorporate strategies to promote learning in context in my CS classroom.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "min_stereotype_w34",
+              "visibleIf": "{workshop_course}='CS Discoveries'",
+              "title": "As a result of this workshop, I want to implement strategies to minimize stereotype threats in my classroom (e.g. present role models from diverse groups, promote a growth mindset about intelligence, support students’ sense of belonging, create fair tests, convey high standards and assure students of their ability to meet them).",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "html",
+              "name": "csdpilot_plans_next_year_space",
+              "html": "\n<p></p>"
+            },
+            {
+              "type": "html",
+              "name": "csdpilot_plans_next_year_intro",
+              "visibleIf": "{workshop_course}='CS Discoveries' and ({workshop_id} = '12272' or {workshop_id} = '12784' or {workshop_id} = '12273' or {workshop_id} = '12786' or {workshop_id} = '13094')",
+              "html": "\n<p></p><b><font size=3> What are your plans to teach {workshop_course} next school year? </p>"
+            },
+            {
+              "type": "radiogroup",
+              "name": "csdpilot_plan_to_teach_next_year_w34",
+              "visibleIf": "{workshop_course}='CS Discoveries' and ({workshop_id} = '12272' or {workshop_id} = '12784' or {workshop_id} = '12273' or {workshop_id} = '12786' or {workshop_id} = '13094')",
+              "title": "Do you plan to teach CS Discoveries next school year?",
+              "choices": [
+                {
+                  "value": "yes",
+                  "text": "Yes"
+                },
+                {
+                  "value": "no",
+                  "text": "No"
+                },
+                {
+                  "value": "not_sure",
+                  "text": "I'm not sure yet"
+                }
+              ]
+            },
+            {
+              "type": "rating",
+              "name": "csdpilot_plan_units_to_teach_next_year_w34",
+              "visibleIf": "{workshop_course}='CS Discoveries' and ({workshop_id} = '12272' or {workshop_id} = '12784' or {workshop_id} = '12273' or {workshop_id} = '12786' or {workshop_id} = '13094') and {csdpilot_plan_to_teach_next_year_w34} = 'yes' ",
+              "title": "I have a plan for the units I will teach next year.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            }
+          ]
+        },
+        {
+          "type": "panel",
           "name": "curriculum_satisfaction_panel",
           "elements": [
             {
@@ -337,11 +700,13 @@
                 },
                 {
                   "value": "ability_impact_barriers",
+                  "natalia_comment": "NOTE: added conditional logic by RP 08/16/2023",
+                  "visibleIf": "{regional_partner_name} <> 'Broward County Public Schools' and {regional_partner_name}<>  'Florida International University' and {regional_partner_name} <> 'Orlando Science Center' and {regional_partner_name} <> 'Tampa Bay STEM Network' and {regional_partner_name} <> 'University of North Florida & STEM2 Hub'",
                   "text": "Through my participation in this workshop I am better able to impact the barriers to access, diversity, and inclusion that students face in my CS classroom."
                 },
                 {
                   "value": "diversity_recruitment_plan",
-                  "visibleIf": "{workshop_course}='CS Principles' or {workshop_course}='Computer Science A'",
+                  "visibleIf": "({workshop_course}='CS Principles' or {workshop_course}='Computer Science A') and ({regional_partner_name} <> 'Broward County Public Schools' and {regional_partner_name}<>  'Florida International University' and {regional_partner_name} <> 'Orlando Science Center' and {regional_partner_name} <> 'Tampa Bay STEM Network' and {regional_partner_name} <> 'University of North Florida & STEM2 Hub')",
                   "text": "After attending this workshop I have developed a recruitment plan to influence the diversity of the students in my current or future {workshop_course} classroom."
                 }
               ]
@@ -351,12 +716,17 @@
         {
           "type": "panel",
           "name": "teaching_ap_panel",
-          "visibleIf": "{workshop_course}='CS Principles' or {workshop_course}='Computer Science A'",
+          "visibleIf": "{workshop_course}='CS Principles' ",
           "elements": [
             {
               "type": "html",
+              "name": "teaching_ap_space",
+              "html": "\n<p></p>"
+            },
+            {
+              "type": "html",
               "name": "Intro_teaching_ap",
-              "html": "<b><font size=3> How much do you agree or disagree with the following statements about teaching an AP Computer Science course? </p>"
+              "html": "\n<p></p><b><font size=3> How much do you agree or disagree with the following statements about teaching an AP Computer Science course? </p>"
             },
             {
               "type": "rating",
@@ -429,10 +799,6 @@
                   "text": "I feel better prepared to teach my {workshop_course} class after attending this workshop."
                 },
                 {
-                  "value": "share_with_peers",
-                  "text": "I had the opportunity to share my challenges, solutions, and ideas with peers during this workshop."
-                },
-                {
                   "value": "content_appropriate_timing",
                   "text": "The content of this workshop effectively supports me at what I plan to teach at this time of the year."
                 }
@@ -457,7 +823,7 @@
             {
               "type": "radiogroup",
               "name": "postwork_complete",
-              "visibleIf": "{workshop_agenda}<>'module1'",
+              "visibleIf": "{workshop_agenda}<>'module1' and {workshop_agenda}<>'in_person'",
               "title": "After the prior module, you received some post-work. Did you complete it? ",
               "choices": [
                 {
@@ -477,7 +843,7 @@
             {
               "type": "comment",
               "name": "postwork_comment",
-              "visibleIf": "{workshop_agenda}<>'module1'",
+              "visibleIf": "{workshop_agenda}<>'module1' and {workshop_agenda}<>'in_person'",
               "title": "If you have any thoughts on how we can improve the post-work to be more helpful to participants in future workshops, please use this space to share them.",
               "maxLength": 4000,
               "cols": 60,

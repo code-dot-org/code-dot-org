@@ -14,7 +14,7 @@ describe('OrderableList', () => {
       list: [{key: '1'}, {key: '2'}, {key: '3'}],
       setList: setListSpy,
       addButtonText: 'Add New',
-      renderItem: renderItemSpy
+      renderItem: renderItemSpy,
     };
   });
 
@@ -24,7 +24,7 @@ describe('OrderableList', () => {
     expect(renderItemSpy.getCalls().map(c => c.args[0])).to.eql([
       {key: '1'},
       {key: '2'},
-      {key: '3'}
+      {key: '3'},
     ]);
   });
 
@@ -37,40 +37,31 @@ describe('OrderableList', () => {
 
   it('can remove item from list', () => {
     const wrapper = shallow(<OrderableList {...defaultProps} />);
-    wrapper
-      .find('.fa-trash')
-      .at(1)
-      .simulate('click');
+    wrapper.find('.fa-trash').at(1).simulate('click');
     expect(setListSpy).to.be.calledOnce.and.calledWith([
       {key: '1'},
-      {key: '3'}
+      {key: '3'},
     ]);
   });
 
   it('can move item up in list', () => {
     const wrapper = shallow(<OrderableList {...defaultProps} />);
     // The first item does not have a caret up, so we are moving the second item up here
-    wrapper
-      .find('.fa-caret-up')
-      .at(0)
-      .simulate('click');
+    wrapper.find('.fa-caret-up').at(0).simulate('click');
     expect(setListSpy).to.be.calledOnce.and.calledWith([
       {key: '2'},
       {key: '1'},
-      {key: '3'}
+      {key: '3'},
     ]);
   });
 
   it('can move down up in list', () => {
     const wrapper = shallow(<OrderableList {...defaultProps} />);
-    wrapper
-      .find('.fa-caret-down')
-      .at(0)
-      .simulate('click');
+    wrapper.find('.fa-caret-down').at(0).simulate('click');
     expect(setListSpy).to.be.calledOnce.and.calledWith([
       {key: '2'},
       {key: '1'},
-      {key: '3'}
+      {key: '3'},
     ]);
   });
 

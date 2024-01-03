@@ -1,0 +1,69 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2023-06-20T18:20:02.000Z",
+  "level_num": "custom",
+  "user_id": 976,
+  "properties": {
+    "encrypted": "false",
+    "level_data": {
+      "library": "happy",
+      "sounds": {
+        "remix_happy": [
+          "drums_1",
+          "drums_2"
+        ]
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "id": "when-run-block",
+              "type": "when_run_simple2",
+              "x": 34,
+              "y": 34
+            }
+          ]
+        },
+        "variables": [
+          {
+            "name": "currentTime"
+          },
+          {
+            "name": "i"
+          }
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ]
+        }
+      },
+      "text": "Let’s lay down a beat!\n## Do This\n1. Snap a `play`(#7435b2) block under the `when run`(#fca401) block, and click on the sound name to open the Sound Library. The Sound Library has all the sounds you can choose from for remixing this song. We're making a beat, so pick something with the little drum icon next to it.\n2. Hit the `Run`(#fca401) button to take a listen.",
+      "validations": [
+        {
+          "conditions": [
+            {
+              "name": "played_sounds_together",
+              "value": 1
+            }
+          ],
+          "message": "Sounds great!",
+          "next": "true"
+        },
+        {
+          "message": "Wait, take a listen before you move to the next step!"
+        }
+      ]
+    },
+    "hide_share_and_remix": "true",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2023-06-20 18:21:49 +0000\",\"changed\":[],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-20 18:22:43 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-20 18:24:08 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-20 18:24:48 +0000\",\"changed\":[],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-20 18:27:00 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-20 18:27:11 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-20 19:10:04 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-21 22:41:08 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-21 22:41:34 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-06-21 22:41:58 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-07-05 20:54:17 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-07-05 20:56:05 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-07-05 20:57:54 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-07-13 22:06:49 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-07-24 18:13:40 +0000\",\"changed\":[],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-07-24 19:13:54 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-07-24 22:12:18 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2023-07-24 22:14:21 +0000\",\"changed\":[\"hide_share_and_remix\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

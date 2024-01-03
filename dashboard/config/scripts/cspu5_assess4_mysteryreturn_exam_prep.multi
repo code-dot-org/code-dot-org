@@ -38,3 +38,5 @@ Looking at the code, _count_ is set to 0 and at the very end, _count_ is returne
 
 Since count is returned, the number of adjacent items that are in ascending order is returned.
 MARKDOWN
+
+allow_multiple_attempts true

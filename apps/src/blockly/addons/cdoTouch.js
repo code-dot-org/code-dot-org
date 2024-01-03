@@ -5,7 +5,7 @@ export default function initializeTouch(blocklyWrapper) {
     blocklyWrapper.Touch.setClientFromTouch;
 
   // This change is needed to make our UI tests work on iPad, iPhone, and Safari 12
-  blocklyWrapper.Touch.setClientFromTouch = function(e) {
+  blocklyWrapper.Touch.setClientFromTouch = function (e) {
     // Safari doesn't support e.changedTouches
     if (!e.changedTouches) {
       return;

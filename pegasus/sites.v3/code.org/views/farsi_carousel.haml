@@ -1,0 +1,55 @@
+.carousel-wrapper#farsi-carousel
+  .carousel{style: "height: 275px"}
+    .slides.rtl
+      .slide.with-image
+        %img{src: "/images/farsi/farsi-page-founders-01.png", alt: ""}
+        .text-wrapper
+          %p
+            =hoc_s(:farsi_page_founders_slide_01)
+      .slide.with-image
+        %img{src: "/images/farsi/farsi-page-founders-02.png", alt: ""}
+        .text-wrapper
+          %p
+            =hoc_s(:farsi_page_founders_slide_02)
+      .slide.with-image
+        %img{src: "/images/farsi/farsi-page-founders-03.png", alt: ""}
+        .text-wrapper
+          %p
+            =hoc_s(:farsi_page_founders_slide_03)
+      .slide.with-image
+        %img{src: "/images/farsi/farsi-page-founders-04.png", alt: ""}
+        .text-wrapper
+          %p
+            =hoc_s(:farsi_page_founders_slide_04)
+      .slide.with-image
+        %img{src: "/images/farsi/farsi-page-founders-05.png", alt: ""}
+        .text-wrapper
+          %p
+            =hoc_s(:farsi_page_founders_slide_05)
+      .slide.with-image
+        %img{src: "/images/farsi/farsi-page-founders-06.png", alt: ""}
+        .text-wrapper
+          %p
+            =hoc_s(:farsi_page_founders_slide_06)
+
+  .pagination
+    #farsi-carousel-pagination
+
+%script{:src=>'/js/jquery.carouFredSel-6.2.1-packed.js'}
+%script{:src=>'/js/jquery.touchSwipe.min.js'}
+:javascript
+  $(document).ready(function() {
+
+    var id = '#farsi-carousel';
+    // Define the carousel using the ID.
+    $(id + ' .slides').carouFredSel({
+      items : 1,
+      auto  : false,
+      responsive : true,
+      pagination : '#farsi-carousel-pagination',
+      swipe	: {
+        onTouch : true,
+        onMouse : false
+      }
+    });
+  });

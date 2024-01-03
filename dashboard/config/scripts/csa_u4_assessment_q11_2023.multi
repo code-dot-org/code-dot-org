@@ -65,3 +65,5 @@ boolean b = false || true;
 boolean b = true;
 ```
 MARKDOWN
+
+allow_multiple_attempts true

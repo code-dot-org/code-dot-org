@@ -6,7 +6,7 @@ import {Provider} from 'react-redux';
 
 export default {
   title: 'LibraryTable',
-  component: LibraryTable
+  component: LibraryTable,
 };
 
 const personalProjectsList = [
@@ -18,7 +18,7 @@ const personalProjectsList = [
     name: 'Library Project',
     libraryDescription:
       'A really, really long description that should be truncated!',
-    libraryPublishedAt: 1575586799000 // Random epoch timestamp in the past
+    libraryPublishedAt: 1575586799000, // Random epoch timestamp in the past
   },
   {
     id: '2',
@@ -27,20 +27,20 @@ const personalProjectsList = [
     libraryName: 'New Library',
     name: 'Library Project V2',
     libraryDescription: 'A second try',
-    libraryPublishedAt: Date.now()
+    libraryPublishedAt: Date.now(),
   },
   // This project does not have a library so it *should not* be displayed in the table.
   {
     id: '3',
     channel: 'ghi789',
     type: 'applab',
-    name: 'Library Project V2'
-  }
+    name: 'Library Project V2',
+  },
 ];
 
 const DEFAULT_PROPS = {
   personalProjectsList,
-  unpublishProjectLibrary: action('unpublishing')
+  unpublishProjectLibrary: action('unpublishing'),
 };
 
 const Template = args => (
@@ -53,5 +53,5 @@ export const Default = Template.bind({});
 
 export const NoLibraries = Template.bind({});
 NoLibraries.args = {
-  personalProjectsList: []
+  personalProjectsList: [],
 };

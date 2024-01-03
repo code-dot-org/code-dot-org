@@ -1,5 +1,5 @@
 module Pd::Application
-  class TeacherApplicationMailer < ActionMailer::Base
+  class TeacherApplicationMailer < ApplicationMailer
     CODE_ORG_DEFAULT_NOTIFICATION_EMAIL = 'Becky Kenemuth <teacher@code.org>'
     default from: 'Code.org <noreply@code.org>'
     default bcc: MailerConstants::PLC_EMAIL_LOG
@@ -11,7 +11,7 @@ module Pd::Application
         mail(
           to: @application.formatted_applicant_email,
           reply_to: @application.formatted_partner_contact_email,
-          subject: "We've received your application for #{@application.regional_partner.name}'s Professional Learning Program!"
+          subject: "#{@application.regional_partner.name} has received your application for Code.org's Professional Learning Program",
         )
       else
         mail(
@@ -64,8 +64,8 @@ module Pd::Application
       mail(
         to: @application.formatted_principal_email,
         reply_to: @application.formatted_partner_contact_email,
-        subject: "Action Needed: #{@application.applicant_full_name} has applied to" \
-            " #{@application.effective_regional_partner_name}'s Professional Learning Program!"
+        subject: "Action Needed: #{@application.applicant_full_name} has applied to " \
+            "#{@application.effective_regional_partner_name}'s Professional Learning Program!"
       )
     end
 

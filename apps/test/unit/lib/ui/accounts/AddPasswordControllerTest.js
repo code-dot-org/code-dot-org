@@ -69,9 +69,9 @@ describe('AddPasswordController', () => {
           form.trigger('ajax:error', [
             {
               responseJSON: {
-                password: ['test-password-error']
-              }
-            }
+                password: ['test-password-error'],
+              },
+            },
           ])
         );
         await expect(
@@ -83,8 +83,8 @@ describe('AddPasswordController', () => {
         stub(form, 'submit').callsFake(() =>
           form.trigger('ajax:error', [
             {
-              status: 400
-            }
+              status: 400,
+            },
           ])
         );
         await expect(

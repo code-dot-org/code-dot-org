@@ -15,7 +15,7 @@ import ProtectedVisualizationDiv from '@cdo/apps/templates/ProtectedVisualizatio
 import VisualizationOverlay from '@cdo/apps/templates/VisualizationOverlay';
 import CrosshairOverlay from '@cdo/apps/templates/CrosshairOverlay';
 import TooltipOverlay, {
-  coordinatesProvider
+  coordinatesProvider,
 } from '@cdo/apps/templates/TooltipOverlay';
 import i18n from '@cdo/locale';
 import {toggleGridOverlay} from './actions';
@@ -26,7 +26,7 @@ import {
   cancelLocationSelection,
   selectLocation,
   updateLocation,
-  isPickingLocation
+  isPickingLocation,
 } from './redux/locationPicker';
 import {calculateOffsetCoordinates} from '@cdo/apps/utils';
 import {isMobileDevice} from '@cdo/apps/util/browser-detector';
@@ -55,14 +55,14 @@ class P5LabVisualizationColumn extends React.Component {
     selectPicker: PropTypes.func.isRequired,
     updatePicker: PropTypes.func.isRequired,
     consoleMessages: PropTypes.array.isRequired,
-    isRtl: PropTypes.bool
+    isRtl: PropTypes.bool,
   };
 
   // Cache app-space mouse coordinates, which we get from the
   // VisualizationOverlay when they change.
   state = {
     mouseX: -1,
-    mouseY: -1
+    mouseY: -1,
   };
 
   pickerPointerMove = e => {
@@ -156,7 +156,7 @@ class P5LabVisualizationColumn extends React.Component {
     const divGameLabStyle = {
       touchAction: 'none',
       width: APP_WIDTH,
-      height: APP_HEIGHT
+      height: APP_HEIGHT,
     };
     if (this.props.pickingLocation) {
       divGameLabStyle.zIndex = MODAL_Z_INDEX;
@@ -243,21 +243,21 @@ class P5LabVisualizationColumn extends React.Component {
 
 const styles = {
   containedInstructions: {
-    marginTop: 10
+    marginTop: 10,
   },
   selectStyle: {
-    width: APP_WIDTH
+    width: APP_WIDTH,
   },
   checkbox: {
     flex: 'none',
     marginBottom: 3,
-    marginRight: 4
+    marginRight: 4,
   },
   checkboxLabel: {
     display: 'flex',
     alignItems: 'center',
-    fontSize: 13
-  }
+    fontSize: 13,
+  },
 };
 
 export default connect(
@@ -271,12 +271,12 @@ export default connect(
     pickingLocation: isPickingLocation(state.locationPicker),
     requestTime: state.locationPicker.requestTime,
     consoleMessages: state.textConsole,
-    isRtl: state.isRtl
+    isRtl: state.isRtl,
   }),
   dispatch => ({
     toggleShowGrid: mode => dispatch(toggleGridOverlay(mode)),
     cancelPicker: () => dispatch(cancelLocationSelection()),
     updatePicker: loc => dispatch(updateLocation(loc)),
-    selectPicker: loc => dispatch(selectLocation(loc))
+    selectPicker: loc => dispatch(selectLocation(loc)),
   })
 )(P5LabVisualizationColumn);

@@ -1,6 +1,8 @@
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import React from 'react';
-import {Button} from 'react-bootstrap';
+import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {studio, pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import color from '@cdo/apps/util/color';
 
@@ -15,10 +17,11 @@ export default class AmazonFutureEngineerAccountConfirmation extends React.Compo
     firehoseClient.putRecord(
       {
         study: 'amazon-future-engineer-eligibility',
-        event: 'sign_up_button_press'
+        event: 'sign_up_button_press',
       },
       {callback: () => (window.location = SIGN_UP_URL)}
     );
+    analyticsReporter.sendEvent(EVENTS.AFE_SIGN_UP_BUTTON_PRESS);
   };
 
   signInButtonPress = event => {
@@ -27,10 +30,11 @@ export default class AmazonFutureEngineerAccountConfirmation extends React.Compo
     firehoseClient.putRecord(
       {
         study: 'amazon-future-engineer-eligibility',
-        event: 'sign_in_button_press'
+        event: 'sign_in_button_press',
       },
       {callback: () => (window.location = SIGN_IN_URL)}
     );
+    analyticsReporter.sendEvent(EVENTS.AFE_SIGN_IN_BUTTON_PRESS);
   };
 
   render() {
@@ -64,13 +68,13 @@ export default class AmazonFutureEngineerAccountConfirmation extends React.Compo
 const styles = {
   button: {
     backgroundColor: color.orange,
-    color: color.white
+    color: color.white,
   },
   header: {
     marginTop: '10px',
-    marginBottom: '10px'
+    marginBottom: '10px',
   },
   body: {
-    marginBottom: '10px'
-  }
+    marginBottom: '10px',
+  },
 };

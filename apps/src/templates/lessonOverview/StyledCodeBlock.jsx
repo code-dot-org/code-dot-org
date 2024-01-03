@@ -3,7 +3,7 @@ import React from 'react';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import EmbeddedBlock from '@cdo/apps/templates/codeDocs/EmbeddedBlock';
 
-export const buildProgrammingExpressionMarkdown = function(
+export const buildProgrammingExpressionMarkdown = function (
   programmingExpression
 ) {
   let block = `\`${programmingExpression.syntax}\``;
@@ -36,6 +36,8 @@ StyledCodeBlock.propTypes = {
     color: PropTypes.string,
     syntax: PropTypes.string.isRequired,
     link: PropTypes.string,
-    parameters: PropTypes.array
-  }).isRequired
+    parameters: PropTypes.array,
+    name: PropTypes.string,
+    blockName: PropTypes.string,
+  }).isRequired,
 };

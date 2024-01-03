@@ -100,7 +100,7 @@
         margin-right: 0;
       }
       a {
-        font-family: $gotham-regular;
+        @include main-font-regular;
         color: $white;
         text-decoration: none;
         html[dir=rtl], .rtl & {
@@ -109,13 +109,13 @@
       }
 
       #about-more {
-        font-family: $gotham-regular;
+        @include main-font-regular;
         color: $white;
         text-decoration: none;
         cursor: pointer;
       }
       #educate-more {
-        font-family: $gotham-regular;
+        @include main-font-regular;
         color: $white;
         text-decoration: none;
         cursor: pointer;
@@ -210,7 +210,7 @@
     background: $dark_teal;
   }
 
-  @media(max-width: 970px) {
+  @media(max-width: 1010px) {
     &.show-mobile {
       display: block;
     }

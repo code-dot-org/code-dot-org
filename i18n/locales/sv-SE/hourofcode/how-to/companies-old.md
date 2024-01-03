@@ -9,23 +9,23 @@ title: Hur hålla i en Kodtimme - företag
 
 ***
 
-## Connect with local classrooms and volunteer for the Hour of Code
+## Kom i kontakt med lokala klassrum och gör volontärarbete för Hour of Code
 Code.org offers the opportunity for your employees to [connect]({{ urls/volunteer }}) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
 
-[<button>Sign up to volunteer!</button>]({{ urls/volunteer }})
+[<button>Registrera dig för att bli volontär!</button>]({{ urls/volunteer }})
 <br>
 <br>
 
 For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
 
-## Additional ways companies can support the Hour of Code
+## Fler sätt som företag kan stödja Hour of Code
 
 - Ask your CEO to [send a company-wide email]({{ promote/sample_emails }}) emphasizing the importance of computer science and encouraging employees to spread the word.
 - Host an Hour of Code Happy Hour with coworkers to try the [activities]({{ urls/learn }}).
-- Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
+- Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. Se instruktionsguiden för evenemang nedan.
 
 
-# How to host an Hour of Code event with students
+# Hur man ordnar Hour of Code med studerande
 
 ## 1. Marknadsför din Hour of Code
 - Promote your [Hour of Code]({{ urls/promote }}) event and encourage others to host.
@@ -33,25 +33,25 @@ For more instructions on encouraging employees and connecting your employees wit
 
 ## 2. Se den här video-guiden <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 
-## 3. Choose an activity
+## 3. Välj en aktivitet
 We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participants of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
 
 **All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
 
 [<img src="/images/fit-700/tutorials.png" />]({{ urls/learn }})
 
-## 4. Plan your technology needs - computers are optional
+## 4. Planera dina teknikbehov - datorer är valfria
 
 Den bästa Hour of Code-upplevelsen fås med datorer med internet. But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
 
 **Plan Ahead!** Do the following before your event starts:
 
-- Test activities on computers or devices. Make sure they work properly on browsers with sound and video.
+- Testa aktiviteterna på datorn eller andra enheter. Försäkra dig om att de fungerar bra i webbläsaren med ljud och video.
 - Provide headphones, or ask participants to bring their own, if the activity you choose works best with sound.
-- **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When participants partner up, they help each other and rely less on the organizer. De ser också att programmering är socialt och bygger på samarbete.
-- **Have low bandwidth?** Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
+- **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Då deltagarna arbetar i par hjälper de varandra och är mindre beroende av organisatören. De ser också att programmering är socialt och bygger på samarbete.
+- **Have low bandwidth?** Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Eller prova aktiviteterna som varken kräver internet eller teknik.
 
-## 5.  Start your Hour of Code off with an inspiring video
+## 5.  Börja din Hour of Code med en inspirerande video
 Sparka igång din Hour of Code genom inspirerande deltagare och diskutera hur datavetenskap påverkar alla delar av våra liv. Share more about what inspired you to pursue computer science and your role at your company.
 
 **Visa en inspirerande video:**
@@ -69,7 +69,7 @@ Sparka igång din Hour of Code genom inspirerande deltagare och diskutera hur da
 - Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
 - Se tips för att få tjejer intresserade av datavetenskap [här](http://code.org/girls)
 
-## 6. Code!
+## 6. Koda!
 **Visa eleverna till aktiviteten**
 
 - Write the activity link on a whiteboard. Find the link listed on the [information for your selected activity]({{ urls/learn }}) under the number of participants.

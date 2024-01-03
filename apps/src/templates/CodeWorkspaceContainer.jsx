@@ -19,7 +19,7 @@ class CodeWorkspaceContainer extends React.Component {
     // Provided by redux
     hidden: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool.isRequired,
-    noVisualization: PropTypes.bool.isRequired
+    noVisualization: PropTypes.bool.isRequired,
   };
 
   /**
@@ -44,7 +44,7 @@ class CodeWorkspaceContainer extends React.Component {
       ...(isRtl && styles.mainRtl),
       ...(noVisualization && isRtl && styles.noVisualizationRtl),
       ...(hidden && commonStyles.hidden),
-      ...style
+      ...style,
     };
 
     return (
@@ -64,11 +64,11 @@ export default connect(
       state.pageConstants.hideSource &&
       !state.pageConstants.visualizationInWorkspace,
     isRtl: state.isRtl,
-    noVisualization: state.pageConstants.noVisualization
+    noVisualization: state.pageConstants.noVisualization,
   }),
   undefined,
   null,
-  {withRef: true}
+  {forwardRef: true}
 )(CodeWorkspaceContainer);
 
 const styles = {
@@ -78,13 +78,13 @@ const styles = {
     top: 0,
     right: 0,
     bottom: 0,
-    marginLeft: 15 // margin gives space for vertical resizer
+    marginLeft: 15, // margin gives space for vertical resizer
   },
   mainRtl: {
     right: undefined,
     left: 0,
     marginLeft: 0,
-    marginRight: 15
+    marginRight: 15,
   },
   codeWorkspace: {
     position: 'absolute',
@@ -97,14 +97,14 @@ const styles = {
     borderLeftStyle: 'none',
     borderTopWidth: 1,
     borderTopStyle: 'solid',
-    borderTopColor: '#ddd'
+    borderTopColor: '#ddd',
   },
   noVisualization: {
     // Overrides left set in css
     left: 0,
-    marginLeft: 0
+    marginLeft: 0,
   },
   noVisualizationRtl: {
-    right: 0
-  }
+    right: 0,
+  },
 };

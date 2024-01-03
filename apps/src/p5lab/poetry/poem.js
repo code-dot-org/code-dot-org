@@ -1,4 +1,3 @@
-/* global appOptions */
 import msg from '@cdo/poetry/locale';
 import {POEMS, PoetryStandaloneApp, TIME_CAPSULE_POEMS} from './constants';
 
@@ -12,7 +11,7 @@ export function getPoem(key) {
     locales: poemList[key].locales,
     author: poemList[key].author,
     title: poemList[key].title || msg[`${key}Title`](),
-    lines: poemList[key].linesSplit || msg[`${key}Lines`]().split('\n')
+    lines: poemList[key].linesSplit || msg[`${key}Lines`]().split('\n'),
   };
 }
 

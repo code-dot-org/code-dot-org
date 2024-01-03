@@ -15,7 +15,6 @@ ro:
             '0.75': mic
             '1.00': mediu
             '2.00': mare
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
@@ -23,7 +22,6 @@ ro:
             '0.75': mic
             '1.00': mediu
             '2.00': mare
-            '3.00': extra large
       Dancelab_alternateMoves:
         text: "{GROUP} alternează fiecare {N} \nmăsuri între {MOVE1} și {MOVE2}"
         options:
@@ -71,6 +69,11 @@ ro:
           UNIT:
             '"measures"': măsuri
             '"seconds"': secunde
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': măsuri
+            '"seconds"': secunde
       Dancelab_changeColorBy:
         text: schimbă {COLOR} {METHOD} cu {AMOUNT}
         options:
@@ -110,6 +113,27 @@ ro:
             MOVES.Kick: Stea
             MOVES.ThisOrThat: Asta sau aia
             MOVES.Rest: Nici unul
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} fă {MOVE} {DIR} tot mereu"
+        options:
+          GROUP:
+            '"CAT"': pisicile
+            '"SLOTH"': leneși
+          MOVE:
+            MOVES.Roll: Corpul ca un val
+            MOVES.ClapHigh: Bate din palme sus
+            MOVES.Dab: Mişcare dab
+            MOVES.DoubleJam: Dublă jos
+            MOVES.Drop: Cădere
+            MOVES.Floss: Flutură
+            MOVES.Fresh: Vioi
+            MOVES.Clown: Stil Gangnam
+            MOVES.Kick: Stea
+            MOVES.ThisOrThat: Asta sau aia
+            MOVES.Rest: Nici unul
+            '"next"': "(Următorul)"
+            '"prev"': "(Precedentul)"
+            '"rand"': Aleatoriu
       Dancelab_changeMoveLR:
         text: "{SPRITE} fă {MOVE} {DIR} tot mereu"
         options:
@@ -453,26 +477,6 @@ ro:
             '18': '18'
             '19': '19'
             '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
-            '40': '40'
           COSTUME:
             '"ALIEN"': extratereștrii
             '"BEAR"': urșii
@@ -589,6 +593,51 @@ ro:
             '"iceCream"': Îngheţată
             '"default"': Lumină
             '"neon"': Neon
+            '"tropical"': Tropical
+            '"vintage"': Vechi
+            '"warm"': Cald
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          setează efectul de fundal la
+          {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Nici unul
+            '"rand"': Aleatoriu
+            '"quads"': Îngeri
+            '"circles"': Cercuri
+            '"color_cycle"': Culori
+            '"diamonds"': Diamante
+            '"disco_ball"': Glob de discotecă
+            '"fireworks"': Artificii
+            '"flowers"': Flori
+            '"growing_stars"': Stele crescânde
+            '"swirl"': Hipnotic
+            '"kaleidoscope"': Caleidoscope
+            '"lasers"': Ring de dans cu lasere
+            '"splatter"': Stropi de vopsea
+            '"rainbow"': Curcubeu
+            '"ripples_random"': Ondulații aleatorii
+            '"ripples"': Ondulații
+            '"snowflakes"': Zăpadă
+            '"text"': Nume cântec
+            '"galaxy"': Spaţiu
+            '"sparkles"': Scântei
+            '"spiral"': Spirală
+            '"disco"': Pătrate
+            '"squiggles"': Mâzgălituri
+            '"starburst"': Accelerare
+            '"stars"': Stele
+            '"music_wave"': Valuri
+          PALETTE:
+            '"rave"': Negru şi alb
+            '"cool"': Interesant
+            '"electronic"': Electronic
+            '"iceCream"': Îngheţată
+            '"default"': Lumină
+            '"neon"': Neon
+            '"ocean"': Ocean
+            '"rainbow"': Curcubeu
             '"tropical"': Tropical
             '"vintage"': Vechi
             '"warm"': Cald
@@ -998,8 +1047,6 @@ ro:
         options:
           INPUT1:
             '1': suc de lămâie
-            '3': baking soda
-            '5': both
       DansBlocks_setForegroundEffect2:
         text: realizează efectul {EFFECT}
         options:
@@ -1016,8 +1063,6 @@ ro:
         options:
           INPUT1:
             '1': suc de lămâie
-            '3': baking soda
-            '5': both
       FunctionBlocks_communicate:
         text: Comunică {VAR1} cu {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:
@@ -1233,6 +1278,19 @@ ro:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_layoutSprites:
+        text: schema {GROUP} de forma {FORMAT}
+        options:
+          FORMAT:
+            '"border"': margine
+            '"circle"': cerc
+            '"grid"': rețea
+            '"top"': rândul de sus
+            '"row"': rând
+            '"bottom"': rândul de jos
+            '"left"': coloana stângă
+            '"column"': coloană
+            '"right"': coloana dreaptă
       gamelab_locationAt:
         text: 'locaţie x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1259,6 +1317,18 @@ ro:
             '"spiral"': spirală
       gamelab_makeNewSpriteAnon:
         text: face noi {ANIMATION_NAME} sprite la {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': margine
+            '"circle"': cerc
+            '"grid"': rețea
+            '"top"': rândul de sus
+            '"row"': rând
+            '"bottom"': rândul de jos
+            '"left"': coloana stângă
+            '"column"': coloană
+            '"right"': coloana dreaptă
       gamelab_makeNumSprites:
         text: creează {NUM} noi {ANIMATION_NAME} spirite
       gamelab_makeProjectile:
@@ -1487,11 +1557,9 @@ ro:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': încet
             '5': normal
             '7': repede
-            '9': extra fast
       gamelab_setTint:
         text: schimbă culoarea {THIS} cu {COLOR}
       gamelab_setupScoreboard:
@@ -1618,6 +1686,16 @@ ro:
         text: coordonatele x ale {SPRITE}
       gamelab_yLocationOf:
         text: coordonatele y ale {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} culisează către {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': solid
+            '"liquid"': lichid
+            '"gas"': gaz
+      KatiesBlocks_tumbling:
+        text: acrobatică
       Mikelab_addBehaviorSimple:
         text: sprite {SPRITE} începe {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -1936,14 +2014,10 @@ ro:
         options:
           INPUT1:
             '1': suc de lămâie
-            '3': baking soda
-            '5': both
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
             '1': suc de lămâie
-            '3': baking soda
-            '5': both
       ParticlesBlocks_statesOfMatter:
         options:
           BEHAVIOR:
@@ -2168,7 +2242,6 @@ ro:
         text: când apare linia {N}
         options:
           'N':
-            '0': "???"
             '1': '1'
             '2': '2'
             '3': '3'
@@ -2192,8 +2265,6 @@ ro:
         text: ia-o la stânga
       RyanLab_turnRight:
         text: ia-o la dreapta
-      SpriteLab2Beta_spriteSay:
-        text: sprite {SPRITE} spun {TEXT} pentru {SECONDS} secunde
       Vector_createSpriteWith:
         text: |-
           crea sprite
@@ -2230,18 +2301,24 @@ ro:
         options:
           PORTION:
             '1': toate
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': toate
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE}spune{SPEECH}"
+      adaptations_adaptationBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): învârtit spre dreapta
+            new Behavior(spinning_left, []): învârtit spre stânga
+            new Behavior(fluttering, []): fluturat
+            new Behavior(jittering, []): tremurat
+            new Behavior(wobbling, []): clătinat
+            new Behavior(wandering, []): rătăcit
+            new Behavior(patrolling, []): patrulare
+      adaptations_startFollowing:
+        text: "{SPRITE}începe să urmărească {TARGET}"
       binary_drawBin:
         text: trage binar {BIN}
       binary_drawDec:
@@ -2366,6 +2443,21 @@ ro:
           DIR:
             right: dreapta ↻
             left: stânga ↺
+      ecosystems_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      storylab_printText:
+        text: afişează {TEXT}
       storylab_setForegroundEffect2:
         text: realizează efectul {EFFECT}
         options:
@@ -2380,5 +2472,3 @@ ro:
         text: stabilește titlul {HEADING}
       storylab_setSubheading:
         text: stabilește subtitlul {SUBHEADING}
-      validation_validatedBackground:
-        text: setează fundalul cu {IMG}

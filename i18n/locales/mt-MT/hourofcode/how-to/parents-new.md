@@ -1,5 +1,5 @@
 ---
-title: How-to guide for parents
+title: Gwida dwar kif għall-ġenituri
 ---
 
 # How to do an Hour of Code with your child

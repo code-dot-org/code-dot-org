@@ -1,0 +1,19 @@
+{
+  "blockly_blockPlaySoundAtMeasureTooltip": "mängi heli",
+  "blockly_blockPlaySoundTooltip": "mängi heli",
+  "blockly_blockRepeatTooltip": "korda",
+  "blockly_blockWhenRun": "pärast käivitamist",
+  "blockly_blockWhenRunTooltip": "pärast käivitamist",
+  "blockly_toolboxCategoryEffects": "Efektid",
+  "blockly_toolboxCategoryEvents": "Sündmused",
+  "blockly_toolboxCategoryFunctions": "Funktsioonid",
+  "blockly_toolboxCategoryLogic": "Loogika",
+  "blockly_toolboxCategoryMath": "Matemaatika",
+  "blockly_toolboxCategoryVariables": "Muutujad",
+  "continue": "Jätka",
+  "feedback": "Tagasiside",
+  "panelHeaderInstructions": "Juhised",
+  "panelHeaderWorkspace": "Tööruum: ",
+  "share": "Jaga",
+  "startOver": "Alusta uuesti"
+}

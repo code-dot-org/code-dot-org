@@ -19,3 +19,5 @@ System.out.println( /* missing code */ );
 
 Which of the following could replace `/* missing code */` so that the code segment works as intended?
 MARKDOWN
+
+allow_multiple_attempts true

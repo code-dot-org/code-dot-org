@@ -1,46 +1,9 @@
 ---
 lt:
   slides:
-    maze_intro:
+    20_wrapup:
       1:
-        text: Sveiki atvykę į savo pirmąją „Programavimo valandą“ (Hour of Code)!
-          Pažiūrėkime, kaip atrodo programavimas.
-      2:
-        text: Naudosime Blockly, vizualią programavimo kalbą, kurioje reikia vilkti
-          ir sujungti blokelius, kad parašyti programos kodą.
-      3:
-        text: Dažniausiai kodas yra rašomas ranka, tačiau Blockly turi vizualią aplinką.
-          Kiekvienas blokelis atitinką vieną eilutę tikro rašomo kodo.
-      4:
-        text: 'Susipažinsite su programavimo pagrindais, kurie yra naudojami visur:
-          nuo programėlių kūrimo iki robotų valdymo.'
-      5:
-        text: Programa yra instrukcijų sąrašas, kurias turi įvykdyti Jūsų kompiuteris.
-      6:
-        text: Jūsų pirmosios programos tikslas yra nuvesti paukštį per labirintą iki
-          žalios kiaulės.
-      7:
-        text: Kairėje yra labirintas, kuriame veikia Jūsų programa. Kiekvienos užduoties
-          instrukcijos yra matomos labirinto apačioje.
-      8:
-        text: Labirinto dešinėje yra priemonės, su kuriomis galima valdyti paukštį.
-          Jomis reikės naudotis rašant savo programas.
-      9:
-        text: Dešinėje yra baltas darbo laukas, į kurį reikės nuvilkti blokelius,
-          kad sudėlioti programą. Jeigu norite pašalinti blokelį, jį reikia nuvilkti
-          į šiukšlinę kampe.
-      10:
-        text: Kiekvienas blokelis yra viena instrukcija. Jeigu baltame lauke bus vienas
-          blokelis „ženk į priekį“ ir nuspausite mygtuką „Paleisti programą“, paukštis
-          pajudės per vieną laukelį į priekį.
-      11:
-        text: Norėdami, kad paukštis atliktų kelis veiksmus, sujunkite blokelius vieną
-          paskui kitą.
-      12:
-        text: Jeigu jau paleidote programą vieną kartą, galite ją pataisyti ir paspausti
-          mygtuką „Iš naujo“.
-      13:
-        text: Einam ir pagaudykim kiaules!
+        text: Jau greitai bus galima pamatyti pastabas!
     artist_intro:
       1:
         text: Labas, aš esu JR! Kiekvienai lenktyninių automobilių komandai reikia
@@ -116,40 +79,73 @@ lt:
         image: pastabos/flappy10.jpg
         text: Paskutinėje užduotyje galėsite sukurti savo žaidimą ir pasidalinti jį
           su draugais. Linkime smagiai praleisti laiką!
-    loop_times:
+    frozen_functions:
       1:
-        text: Labas, aš esu Markas! Pasimokykime apie ciklus. Naudojant ciklus, galima
-          nurodyti kompiuteriui, kad jis pakartotų bet kurias pasirinktas komandas
-          iš naujo ir iš naujo, tūkstančius ar net milijonus kartų.
+        text: Labas, aš esu Krisas Bošas. Esu profesionalus krepšininkas ir programuodavau
+          mokykloje.
+    frozen_intro:
       2:
-        text: Šioje užduotyje reikia pajudinti paukštį per 5 laukelius, kad jis pagautų
-          kiaulę.
+        text: Čiuoždami galėsite sukurti snaigių raštus ir šiomis žiemos grožybėmis
+          pasidalinti su draugais.
       3:
-        text: Panaudokime naują blokelį „Kartok“.
+        text: Toliau Tu mokysiesi programavimo pagrindų. Tradiciškai programavime
+          naudojamas tekstas, bet mes naudosime Blockly, kuris naudoja blokelius,
+          kuriuos gali tempti ir paleisti rašydamas programą. Tai naudoja net universiteto
+          studentai mokydamiesi pagrindų. Po blokeliais Tu vistiek kuri programinį
+          kodą.
+      10:
+        text: Prisimink, Tu gali pakeisti pikselių ir laipsnių skaičių spausdamas
+          ant rodyklių šalia jų.
+    function:
+      1:
+        text: Labas, mano vardas Brina, aš esu programuotoja ir dirbu prie Instagram
+          programos. Susipažinsime su funkcijomis. Funkciją sudaro keletas komandų,
+          įdėtų į ją. Norint tas komandas atlikti, mums tereikės panaudoti vieną funkcijos
+          blokelį.
+      2:
+        text: Taip pat išmoksite sukurti savo funkcijas. Funkcijos blokelis kampe
+          turi žvaigždę, o šalia žvaigždės yra tos funkcijos pavadinimas.
+      3:
+        text: Blokeliai, kurie yra įdėti po funkcijos pavadinimu, pasako, ką ši funkcija
+          atliks. Šiame pavyzdyje funkcijos pavadinimas yra „užpildyk 5“, ir ji susideda
+          iš vieno kartojimo blokelio bei blokelio „užpildyk 1“.
       4:
-        text: Užduot sulipdę 5 blokelius „ženk į priekį“...
+        text: Nors funkcija jau yra baltame darbo lauke, ūkininkė tos funkcijos neatliks.
+          Kad ji ją atliktų, mes turime ištraukti ir padėti blokelį į darbo lauką
+          su reikalingos funkcijos pavadinimu, šiuo atveju „užpildyk 5“.
       5:
-        text: Mes galime įdėti blokelį „ženk į priekį“ į blokelio „kartok“ vidų. Taip
-          pat reikia nurodyti skaičių kartojimo blokelyje, kad paukštis žinotų, kiek
-          kartų kartoti šį veiksmą.
-      6:
-        text: 'Dar vienas svarbus dalykas: į blokelio „kartok“ vidų galima įdėti daugiau
-          nei vieną komandą.'
-      7:
-        text: Sėkmės naudojant kartojimo blokelį!
-    loop_until:
+        text: 'Pasismaginkime su funkcijomis! '
+    gumball_intro:
+      9:
+        text: Pradėk mokytis, o po to galėsi sukurti savo žaidimą su įvairiais veikėjais,
+          kurie gali bendrauti, keisti savo nuotaiką, pelnyti taškus, mėtyti daiktus
+          ir panašiai. Viskas priklauso nuo tavo fantazijos!
+    hoc_wrapup:
       1:
-        text: Labas, aš esu Chris. Gruzijoje aš studijavau informatiką. Išmėginkime
-          kartu naują blokelį „Kartok, kol“.
+        text: Sveikinu! Išspręsdamas paskutinę užduotį, tu parašei kodą, kurį perskaitęs
+          BET KURIS robotas galės rasti kelią bet kokio ilgio labirinte, tunelyje,
+          kas jis bebūtų – zombis, paukštis, robotas marse ar savarankiškai vairuojantis
+          automobilis.
       2:
-        text: O jeigu mes nežinotume, kiek toli reikia skristi paukščiui, kad jis
-          pasiektų kiaulę?
+        text: Pagrindiniai dalykai, kokius čia panaudojai, yra naudojami kiekvienoje
+          programoje, kokią tik esi išbandęs ar dar išbandysi. Tu mokeisi ir išmokai
+          kartojimo komandas, kartojimą, kol įvyks koks nors įvykis, sąlyginius sakinius
+          „jei-tai“ ir „jei-priešingu atveju“.
       3:
-        text: Jeigu į „kartok, kol“ blokelio vidų įdėsime blokelį „ženk į priekį“,
-          paukštis eis į priekį TOL, KOL pasieks kiaulę (arba atsitrenks į sieną).
+        text: Jeigu Jums patiko „Programavimo valandos“ kursas, apsilankykite code.org
+          svetainėje ir toliau mokykitės informatikos! Kai užbaigsite mūsų pateiktą
+          20-ties valandų kursą, būsite įgijęs programavimo pagrindus ir galėsite
+          mokytis, kaip galima sukurti programėles telefonams, valdyti robotus, kurti
+          žaidimus ir t. t.
       4:
-        text: 'Dar vienas svarbus dalykas: į blokelio „kartok, kol“ vidų, taip pat
-          kaip ir į „kartok“ blokelio vidų, galima įdėti daugiau nei vieną komandą.'
+        text: 'Technologijos keičia viską, ką mes darome ir visiškai nesvarbu, ar
+          esate jaunas ar senas: programuoti yra smagu, tai kūrybinga ir tai išmokti
+          gali kiekvienas!'
+    iceage_intro:
+      9:
+        text: Pradėk mokytis, o po to galėsi sukurti savo žaidimą su įvairiais veikėjais,
+          kurie gali bendrauti, keisti savo nuotaiką, pelnyti taškus, mėtyti daiktus
+          ir panašiai. Viskas priklauso nuo tavo fantazijos!
     if:
       1:
         text: 'Labas, aš esu Bilas! Dabar išmoksime naują labai svarbų dalyką: sąlygos
@@ -196,35 +192,11 @@ lt:
     if_else_scrat:
       4:
         text: Padėk tai voverei pasiekti gilę!
-    function:
-      1:
-        text: Labas, mano vardas Brina, aš esu programuotoja ir dirbu prie Instagram
-          programos. Susipažinsime su funkcijomis. Funkciją sudaro keletas komandų,
-          įdėtų į ją. Norint tas komandas atlikti, mums tereikės panaudoti vieną funkcijos
-          blokelį.
-      2:
-        text: Taip pat išmoksite sukurti savo funkcijas. Funkcijos blokelis kampe
-          turi žvaigždę, o šalia žvaigždės yra tos funkcijos pavadinimas.
-      3:
-        text: Blokeliai, kurie yra įdėti po funkcijos pavadinimu, pasako, ką ši funkcija
-          atliks. Šiame pavyzdyje funkcijos pavadinimas yra „užpildyk 5“, ir ji susideda
-          iš vieno kartojimo blokelio bei blokelio „užpildyk 1“.
-      4:
-        text: Nors funkcija jau yra baltame darbo lauke, ūkininkė tos funkcijos neatliks.
-          Kad ji ją atliktų, mes turime ištraukti ir padėti blokelį į darbo lauką
-          su reikalingos funkcijos pavadinimu, šiuo atveju „užpildyk 5“.
-      5:
-        text: 'Pasismaginkime su funkcijomis! '
-    loop_while:
-      1:
-        text: 'Labas, mano vardas Makinde. Susipažinkime su blokeliu „kol“. '
-      2:
-        text: "„Kol“ blokelis veikia štai taip: bus atliekamas tas veiksmas, kuris
-          yra į jį įdėtas. Jis vyks TOL, KOL aprašytas veiksmas šalia žodžio „KOL“
-          bus teisingas."
-      3:
-        text: Pavyzdžiui, jeigu ūkininkė stovi ant purvo krūvos, ji ją tol nukasinės,
-          kol ta purvo krūva bus nukasta.
+    infinity_playlab_intro:
+      7:
+        text: Pradėk mokytis, o po to galėsi sukurti savo žaidimą su įvairiais veikėjais,
+          kurie gali bendrauti, pelnyti taškus, mėtyti robotus, vyšnias, žiežirbas,
+          ledus ir panašiai. Viskas priklauso nuo tavo fantazijos!
     loop_for:
       1:
         text: Labas, mano vardas Trina, aš dirbu Pixar kompanijoje. Prisidėjau prie
@@ -243,6 +215,97 @@ lt:
           kvadratą. Po to jis vis pridės po 10 prie dabartinės kraštinės, kol skaičius
           pasieks 90 pikselių. Taigi, bus nubrėžti kvadratai su kraštinėmis 50, 60,
           70, 80 ir 90.
+    loop_times:
+      1:
+        text: Labas, aš esu Markas! Pasimokykime apie ciklus. Naudojant ciklus, galima
+          nurodyti kompiuteriui, kad jis pakartotų bet kurias pasirinktas komandas
+          iš naujo ir iš naujo, tūkstančius ar net milijonus kartų.
+      2:
+        text: Šioje užduotyje reikia pajudinti paukštį per 5 laukelius, kad jis pagautų
+          kiaulę.
+      3:
+        text: Panaudokime naują blokelį „Kartok“.
+      4:
+        text: Užduot sulipdę 5 blokelius „ženk į priekį“...
+      5:
+        text: Mes galime įdėti blokelį „ženk į priekį“ į blokelio „kartok“ vidų. Taip
+          pat reikia nurodyti skaičių kartojimo blokelyje, kad paukštis žinotų, kiek
+          kartų kartoti šį veiksmą.
+      6:
+        text: 'Dar vienas svarbus dalykas: į blokelio „kartok“ vidų galima įdėti daugiau
+          nei vieną komandą.'
+      7:
+        text: Sėkmės naudojant kartojimo blokelį!
+    loop_until:
+      1:
+        text: Labas, aš esu Chris. Gruzijoje aš studijavau informatiką. Išmėginkime
+          kartu naują blokelį „Kartok, kol“.
+      2:
+        text: O jeigu mes nežinotume, kiek toli reikia skristi paukščiui, kad jis
+          pasiektų kiaulę?
+      3:
+        text: Jeigu į „kartok, kol“ blokelio vidų įdėsime blokelį „ženk į priekį“,
+          paukštis eis į priekį TOL, KOL pasieks kiaulę (arba atsitrenks į sieną).
+      4:
+        text: 'Dar vienas svarbus dalykas: į blokelio „kartok, kol“ vidų, taip pat
+          kaip ir į „kartok“ blokelio vidų, galima įdėti daugiau nei vieną komandą.'
+    loop_while:
+      1:
+        text: 'Labas, mano vardas Makinde. Susipažinkime su blokeliu „kol“. '
+      2:
+        text: "„Kol“ blokelis veikia štai taip: bus atliekamas tas veiksmas, kuris
+          yra į jį įdėtas. Jis vyks TOL, KOL aprašytas veiksmas šalia žodžio „KOL“
+          bus teisingas."
+      3:
+        text: Pavyzdžiui, jeigu ūkininkė stovi ant purvo krūvos, ji ją tol nukasinės,
+          kol ta purvo krūva bus nukasta.
+    maze_intro:
+      1:
+        text: Sveiki atvykę į savo pirmąją „Programavimo valandą“ (Hour of Code)!
+          Pažiūrėkime, kaip atrodo programavimas.
+      2:
+        text: Naudosime Blockly, vizualią programavimo kalbą, kurioje reikia vilkti
+          ir sujungti blokelius, kad parašyti programos kodą.
+      3:
+        text: Dažniausiai kodas yra rašomas ranka, tačiau Blockly turi vizualią aplinką.
+          Kiekvienas blokelis atitinką vieną eilutę tikro rašomo kodo.
+      4:
+        text: 'Susipažinsite su programavimo pagrindais, kurie yra naudojami visur:
+          nuo programėlių kūrimo iki robotų valdymo.'
+      5:
+        text: Programa yra instrukcijų sąrašas, kurias turi įvykdyti Jūsų kompiuteris.
+      6:
+        text: Jūsų pirmosios programos tikslas yra nuvesti paukštį per labirintą iki
+          žalios kiaulės.
+      7:
+        text: Kairėje yra labirintas, kuriame veikia Jūsų programa. Kiekvienos užduoties
+          instrukcijos yra matomos labirinto apačioje.
+      8:
+        text: Labirinto dešinėje yra priemonės, su kuriomis galima valdyti paukštį.
+          Jomis reikės naudotis rašant savo programas.
+      9:
+        text: Dešinėje yra baltas darbo laukas, į kurį reikės nuvilkti blokelius,
+          kad sudėlioti programą. Jeigu norite pašalinti blokelį, jį reikia nuvilkti
+          į šiukšlinę kampe.
+      10:
+        text: Kiekvienas blokelis yra viena instrukcija. Jeigu baltame lauke bus vienas
+          blokelis „ženk į priekį“ ir nuspausite mygtuką „Paleisti programą“, paukštis
+          pajudės per vieną laukelį į priekį.
+      11:
+        text: Norėdami, kad paukštis atliktų kelis veiksmus, sujunkite blokelius vieną
+          paskui kitą.
+      12:
+        text: Jeigu jau paleidote programą vieną kartą, galite ją pataisyti ir paspausti
+          mygtuką „Iš naujo“.
+      13:
+        text: Einam ir pagaudykim kiaules!
+    mc_2016_intro:
+      1:
+        text: 'Labas, aš esu Jens – pagrindinis Minecraft žaidimo projektuotojas.
+          Šiose pamokėlėse galėsi susikurti savo Minecraft žaidimą. Pamatysi Minecraft
+          aplinką, kurioje veiksmas sustojo: avys nejuda, viščiukai nededa kiaušinių,
+          o zombiai negaudo žmonių. Nuo tavęs priklausys, kaip parašysi kodą ir kaip
+          veiks tavo Minecraft pasaulis.'
     parameters:
       1:
         text: Labas, mano vardas Janete, aš dirbu su programa Zynga.
@@ -270,71 +333,8 @@ lt:
       8:
         text: Šalia parametro reikia prikabinti skaičių - kokio ilgio nori, kad būtų
           trikampio kraštinė. Tą skaičių galima rasti kategorijoje „Matematika“.
-    hoc_wrapup:
-      1:
-        text: Sveikinu! Išspręsdamas paskutinę užduotį, tu parašei kodą, kurį perskaitęs
-          BET KURIS robotas galės rasti kelią bet kokio ilgio labirinte, tunelyje,
-          kas jis bebūtų – zombis, paukštis, robotas marse ar savarankiškai vairuojantis
-          automobilis.
-      2:
-        text: Pagrindiniai dalykai, kokius čia panaudojai, yra naudojami kiekvienoje
-          programoje, kokią tik esi išbandęs ar dar išbandysi. Tu mokeisi ir išmokai
-          kartojimo komandas, kartojimą, kol įvyks koks nors įvykis, sąlyginius sakinius
-          „jei-tai“ ir „jei-priešingu atveju“.
-      3:
-        text: Jeigu Jums patiko „Programavimo valandos“ kursas, apsilankykite code.org
-          svetainėje ir toliau mokykitės informatikos! Kai užbaigsite mūsų pateiktą
-          20-ties valandų kursą, būsite įgijęs programavimo pagrindus ir galėsite
-          mokytis, kaip galima sukurti programėles telefonams, valdyti robotus, kurti
-          žaidimus ir t. t.
-      4:
-        text: 'Technologijos keičia viską, ką mes darome ir visiškai nesvarbu, ar
-          esate jaunas ar senas: programuoti yra smagu, tai kūrybinga ir tai išmokti
-          gali kiekvienas!'
-    20_wrapup:
-      1:
-        text: Jau greitai bus galima pamatyti pastabas!
-    frozen_intro:
-      2:
-        text: Čiuoždami galėsite sukurti snaigių raštus ir šiomis žiemos grožybėmis
-          pasidalinti su draugais.
-      3:
-        text: Toliau Tu mokysiesi programavimo pagrindų. Tradiciškai programavime
-          naudojamas tekstas, bet mes naudosime Blockly, kuris naudoja blokelius,
-          kuriuos gali tempti ir paleisti rašydamas programą. Tai naudoja net universiteto
-          studentai mokydamiesi pagrindų. Po blokeliais Tu vistiek kuri programinį
-          kodą.
-      10:
-        text: Prisimink, Tu gali pakeisti pikselių ir laipsnių skaičių spausdamas
-          ant rodyklių šalia jų.
-    frozen_functions:
-      1:
-        text: Labas, aš esu Krisas Bošas. Esu profesionalus krepšininkas ir programuodavau
-          mokykloje.
     playlab_intro:
       6:
         text: Pradėk mokytis, o po to galėsi sukurti savo žaidimą su įvairiais veikėjais,
           kurie gali bendrauti, keisti savo nuotaiką, pelnyti taškus, mėtyti ugnies
           kamuolius ir panašiai. Viskas priklauso nuo tavo fantazijos.
-    infinity_playlab_intro:
-      7:
-        text: Pradėk mokytis, o po to galėsi sukurti savo žaidimą su įvairiais veikėjais,
-          kurie gali bendrauti, pelnyti taškus, mėtyti robotus, vyšnias, žiežirbas,
-          ledus ir panašiai. Viskas priklauso nuo tavo fantazijos!
-    gumball_intro:
-      9:
-        text: Pradėk mokytis, o po to galėsi sukurti savo žaidimą su įvairiais veikėjais,
-          kurie gali bendrauti, keisti savo nuotaiką, pelnyti taškus, mėtyti daiktus
-          ir panašiai. Viskas priklauso nuo tavo fantazijos!
-    iceage_intro:
-      9:
-        text: Pradėk mokytis, o po to galėsi sukurti savo žaidimą su įvairiais veikėjais,
-          kurie gali bendrauti, keisti savo nuotaiką, pelnyti taškus, mėtyti daiktus
-          ir panašiai. Viskas priklauso nuo tavo fantazijos!
-    mc_2016_intro:
-      1:
-        text: 'Labas, aš esu Jens – pagrindinis Minecraft žaidimo projektuotojas.
-          Šiose pamokėlėse galėsi susikurti savo Minecraft žaidimą. Pamatysi Minecraft
-          aplinką, kurioje veiksmas sustojo: avys nejuda, viščiukai nededa kiaušinių,
-          o zombiai negaudo žmonių. Nuo tavęs priklausys, kaip parašysi kodą ir kaip
-          veiks tavo Minecraft pasaulis.'

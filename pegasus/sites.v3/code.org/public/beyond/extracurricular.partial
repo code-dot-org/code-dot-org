@@ -62,24 +62,13 @@ social:
 <div style="clear:both"></div>
 <br>
 
-<a class="linktag" id="empowher" href="https://empowher.metrohacks.org/" target="_blank">
-  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/empowher.png" alt="EmpowHer logo">
-</a>
-<div style="width: 85%; float: left">
-  <a class="linktag" id="empowher" href="https://empowher.metrohacks.org/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>MetroHacks EmpowHer</strong></h3></a>
-  <p>MetroHacks EmpowHer is a free, completely virtual, team-based competition for high school girls to create a CS-based project addressing an issue in their community. No prior experience in computer science is necessary to participate, as we provide workshop and mentorship programs that offer resources for all skill levels. National award winners will win over $9,000 in scholarships!</p>
-  <p><i>Registration ends in late May.</i></p>
-</div>
-<div style="clear:both"></div>
-<br>
-
 <a class="linktag" id="microsoft-imagine-cup" href="https://imaginecup.microsoft.com/en-us/junior" target="_blank">
-  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/avatars/microsoft.jpg" alt="Microsoft logo">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/avatars/microsoft.png" alt="Microsoft logo">
 </a>
 <div style="width: 85%; float: left">
   <a class="linktag" id="microsoft-imagine-cup" href="https://imaginecup.microsoft.com/en-us/junior" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Microsoft’s Imagine Cup Jr.</strong></h3></a>
   <p>This global AI for Good challenge introduces students to Microsoft’s AI for Good initiatives, empowering them to solve a problem in the world with the power of AI.</p>
-  <p><i>Submission deadline is May 21.</i></p>
+  <p><i>Submission deadline is mid-to-late May.</i></p>
 </div>
 <div style="clear:both"></div>
 <br>
@@ -165,19 +154,8 @@ social:
   <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">Camps and immersion programs</h2>
 </div>
 <div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
-<a class="linktag" id="ai4all" href="https://ai-4-all.org/summer-programs/" target="_blank">
-  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/avatars/ai4all.png" alt="AI4All logo">
-</a>
-<div style="width: 85%; float: left">
-  <a class="linktag" id="ai4all" href="https://ai-4-all.org/summer-programs/" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>AI4All Summer Programs</strong></h3></a>
-  <p>AI4All summer programs include hands-on learning, mentorship by top AI practitioners, and supportive peer networks at top universities. No coding experience is necessary. For high school students from groups historically excluded from AI.</p>
-  <p><i>Program dates vary.</i></p>
-</div>
-<div style="clear:both"></div>
-<br>
-
 <a class="linktag" id="msft-digigirlz" href="https://www.microsoft.com/en-us/diversity/programs/digigirlz/default.aspx" target="_blank">
-  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/avatars/microsoft.jpg" alt="Microsoft logo">
+  <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/avatars/microsoft.png" alt="Microsoft logo">
 </a>
 <div style="width: 85%; float: left">
   <a class="linktag" id="msft-digigirlz" href="https://www.microsoft.com/en-us/diversity/programs/digigirlz/default.aspx" target="_blank"><h3 style="margin-top:0; color:#7665a0"><strong>Digigirlz at Microsoft</strong></h3></a>

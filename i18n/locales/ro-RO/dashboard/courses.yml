@@ -48,3 +48,86 @@ ro:
           description_short: Un curs introductiv în știința calculatoarelor care permite elevilor să creeze artefacte autentice.
           description_student: Descoperiri în știința calculatoarelor (Descoperiri în CS) este un curs introductiv care le permite elevilor să creeze artefacte autentice și să-i antreneze în știința calculatoarelor la un nivel mediu de creativitate, comunicare, rezolvare a problemelor și amuzament.
           description_teacher: Descoperiri în știința calculatoarelor (Descoperiri în CS) este un curs introductiv care le permite elevilor să creeze artefacte autentice și să-i antreneze în știința calculatoarelor la un nivel mediu de creativitate, comunicare, rezolvare a problemelor și amuzament.
+        csd-pilot:
+          description_student: Descoperiri în știința calculatoarelor (Descoperiri în CS) este un curs introductiv care le permite elevilor să creeze artefacte autentice și să-i antreneze în știința calculatoarelor la un nivel mediu de creativitate, comunicare, rezolvare a problemelor și amuzament.
+        time4cs-control: {}
+        time4cs-experiment: {}
+        csp-2020:
+          description_short: Învățați concepte fundamentale ale științei calculatoarelor.
+        csd-2020:
+          description_short: Un curs introductiv în știința calculatoarelor care permite elevilor să creeze artefacte autentice.
+          description_student: Descoperiri în știința calculatoarelor (Descoperiri în CS) este un curs introductiv care le permite elevilor să creeze artefacte autentice și să-i antreneze în știința calculatoarelor la un nivel mediu de creativitate, comunicare, rezolvare a problemelor și amuzament.
+          description_teacher: Descoperiri în știința calculatoarelor (Descoperiri în CS) este un curs introductiv care le permite elevilor să creeze artefacte autentice și să-i antreneze în știința calculatoarelor la un nivel mediu de creativitate, comunicare, rezolvare a problemelor și amuzament.
+        csp-2021:
+          description_short: Învățați concepte fundamentale ale științei calculatoarelor.
+        csa-pilot: {}
+        mike-test:
+          title: Fundamentele informaticii
+        self-paced-pl-csd-2021: {}
+        self-paced-pl-csp-2021: {}
+        csa-pilot-facilitator: {}
+        csp-2022:
+          description_short: Învățați concepte fundamentale ale științei calculatoarelor.
+        csa-pilot-extra: {}
+        vpl-csd-summer-pilot-2022: {}
+        csa-async-2022: {}
+        vpl-csd-summer-pilot-ci-2022: {}
+        self-paced-pl-csa-2022: {}
+        self-paced-pl-csd-2022: {}
+        self-paced-pl-csp-2022: {}
+        vpl-csd-ayw-pilot-2022: {}
+        self-paced-pl-physical-computing-2022: {}
+        csp-2023:
+          description_short: Învățați concepte fundamentale ale științei calculatoarelor.
+        self-paced-pl-csa-2023: {}
+        tess-testing-focus-on-creativity-2023: {}
+        csd-2023:
+          title: Descoperiri în știința calculatoarelor
+        focus-on-creativity-2023:
+          title: Centrare pe Creativitate (Descoperirile Informaticii)
+        focus-on-data-2023:
+          title: Centrare pe Date (Descoperirile Informaticii)
+        focus-on-design-with-purpose-2023:
+          title: Centrare pe Desenarea cu un Scop (Descoperirile Informaticii)
+        focus-on-impact-in-society-2023:
+          title: Centrare pe Impactul în Societate (Descoperirile Informaticii)
+        vpl-csd-summer-ci-2023: {}
+        self-paced-pl-physical-computing-2023: {}
+        self-paced-pl-csd-2023: {}
+        self-paced-pl-microbit-2023: {}
+        pl-csd-summer-2023: {}
+        virtual-pl-csd-summer-2023: {}
+        self-paced-pl-csp-2023: {}
+        self-paced-pl-aiml-2023: {}
+        vpl-csp-2023: {}
+        vpl-csa-2023: {}
+        vpl-csd-2023: {}
+        virtual-pl-csa-summer-2024: {}
+        virtual-pl-csp-summer-2024: {}
+        self-paced-pl-csd-unit1-2023: {}
+        self-paced-pl-csd-unit2-2023:
+          title: Predarea Dezvoltării Web
+        self-paced-pl-csd-unit3-2023: {}
+        self-paced-pl-csd-unit4-2023: {}
+        self-paced-pl-csd-unit5-2023: {}
+        web-dev-2024: {}
+        csd-2024: {}
+    resources:
+      curriculum/csd/2017:
+        name: Curriculum
+      teacher_forum_6/csd/2017:
+        name: Forum profesori
+      curriculum/csd/2018:
+        name: Curriculum
+      teacher_forum_6/csd/2018:
+        name: Forum profesori
+      curriculum/csd/2019:
+        name: Curriculum
+      teacher_forum/csd/2019:
+        name: Forum profesori
+      curriculum/csd/2020:
+        name: Curriculum
+      teacher_forum/csd/2020:
+        name: Forum profesori
+      getting_started_with_csd/csd/2021:
+        name: Cum să Începi cu CSD

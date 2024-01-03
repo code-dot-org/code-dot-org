@@ -1,9 +1,9 @@
 {
-  "continue": "Hald fram",
   "areYouSure": "Er du sikker?",
   "cancel": "Avbryt",
-  "yes": "Ja",
+  "continue": "Hald fram",
+  "finish": "Fullfør",
   "no": "Nei",
   "run": "Køyr",
-  "finish": "Fullfør"
+  "yes": "Ja"
 }

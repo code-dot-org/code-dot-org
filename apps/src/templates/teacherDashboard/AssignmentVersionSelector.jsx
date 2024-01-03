@@ -4,14 +4,13 @@ import i18n from '@cdo/locale';
 import {assignmentCourseVersionShape} from './shapes';
 import PopUpMenu, {STANDARD_PADDING} from '../../lib/ui/PopUpMenu';
 import AssignmentVersionMenuItem, {
-  columnWidths
+  columnWidths,
 } from './AssignmentVersionMenuItem';
 import AssignmentVersionMenuHeader from './AssignmentVersionMenuHeader';
 import _ from 'lodash';
+import fontConstants from '@cdo/apps/fontConstants';
 
-const menuItemWidth = _(columnWidths)
-  .values()
-  .reduce(_.add);
+const menuItemWidth = _(columnWidths).values().reduce(_.add);
 const menuWidth = menuItemWidth + 2 * STANDARD_PADDING;
 
 export default class AssignmentVersionSelector extends Component {
@@ -21,12 +20,12 @@ export default class AssignmentVersionSelector extends Component {
     selectedCourseVersionId: PropTypes.number,
     courseVersions: PropTypes.objectOf(assignmentCourseVersionShape),
     disabled: PropTypes.bool,
-    rightJustifiedPopupMenu: PropTypes.bool
+    rightJustifiedPopupMenu: PropTypes.bool,
   };
 
   state = {
     isMenuOpen: false,
-    targetPoint: {top: 0, left: 0}
+    targetPoint: {top: 0, left: 0},
   };
 
   handleMouseDown = e => {
@@ -44,11 +43,11 @@ export default class AssignmentVersionSelector extends Component {
     const rect = this.select.getBoundingClientRect();
     const targetPoint = {
       top: rect.bottom + window.pageYOffset,
-      left: rect.left + window.pageXOffset
+      left: rect.left + window.pageXOffset,
     };
     this.setState({
       isMenuOpen: true,
-      targetPoint
+      targetPoint,
     });
   }
 
@@ -65,19 +64,15 @@ export default class AssignmentVersionSelector extends Component {
   };
 
   render() {
-    const {
-      dropdownStyle,
-      courseVersions,
-      disabled,
-      selectedCourseVersionId
-    } = this.props;
+    const {dropdownStyle, courseVersions, disabled, selectedCourseVersionId} =
+      this.props;
 
     const popupMenuXOffset = this.props.rightJustifiedPopupMenu
       ? -menuWidth / 2
       : 0;
     const menuOffset = {
       x: popupMenuXOffset,
-      y: 0
+      y: 0,
     };
 
     let orderedCourseVersions = _.orderBy(courseVersions, 'key', 'desc');
@@ -130,15 +125,15 @@ export default class AssignmentVersionSelector extends Component {
 const styles = {
   version: {
     display: 'inline-block',
-    marginTop: 4
+    marginTop: 4,
   },
   dropdownLabel: {
-    fontFamily: '"Gotham 5r", sans-serif'
+    ...fontConstants['main-font-semi-bold'],
   },
   popUpMenuStyle: {
     // must appear in front of .modal from application.scss
     zIndex: 1051,
     maxWidth: null,
-    width: menuWidth
-  }
+    width: menuWidth,
+  },
 };

@@ -9,3 +9,5 @@ right 'White'
 right 'Two or more races'
 right 'Other'
 right 'Prefer not to answer'
+
+allow_multiple_attempts true

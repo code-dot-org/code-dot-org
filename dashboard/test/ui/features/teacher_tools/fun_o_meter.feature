@@ -3,7 +3,6 @@ Feature: Fun-O-Meter
 
 Scenario: Rate a Puzzle
   Given I am on "http://studio.code.org/s/allthethings/lessons/4/levels/4?noautoplay=true"
-  And I rotate to landscape
   And I wait for the page to fully load
 
   When I drag block "4" to block "11" plus offset 35, 30
@@ -13,7 +12,6 @@ Scenario: Rate a Puzzle
   Then element "#puzzleRatingButtons" is visible
 
   When I reload the page
-  And I rotate to landscape
   And I wait for the page to fully load
   And I press "runButton"
   And I wait to see ".congrats"
@@ -27,7 +25,6 @@ Scenario: Rate a Puzzle
   And I wait until "puzzleRatings" in localStorage equals "[]"
 
   Given I am on "http://studio.code.org/s/allthethings/lessons/4/levels/4?noautoplay=true"
-  And I rotate to landscape
   And I wait for the page to fully load
 
   When I press "runButton"

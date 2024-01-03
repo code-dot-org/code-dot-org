@@ -1,13 +1,12 @@
-# Creates a SNS topic and Lambda which publish events to Honeybadger. This allows for any Cloudwatch Alarm
-# to specify the HoneybadgerSNSTopic as the notification action to integrate with Honeybadger.
+# Resources used for monitoring and alerting on issues
 #
-# Requires ADMIN=1.
-# Also requires specifying parameters via environment variables or locals.yml for the initial stack creation.
+# Requires ADMIN=1 to deploy IAM resources.
+# Also requires specifying parameters via
+# environment variables or locals.yml for the
+# initial stack creation.
 
 ---
-AWSTemplateFormatVersion: 2010-09-09
-Description: >-
-  Resources used for monitoring and alerting on infrastructure issues.
+Description: Resources used for monitoring and alerting on infrastructure issues.
 
 Parameters:
   HoneybadgerApiKey:
@@ -18,6 +17,15 @@ Parameters:
     NoEcho: true
 
 Resources:
+
+  # ---------------------------------------------
+  # Creates a SNS topic and Lambda which publish
+  # events to Honeybadger. This allows for any
+  # Cloudwatch Alarm to specify the
+  # HoneybadgerSNSTopic as the notification
+  # action to integrate with Honeybadger.
+  # ---------------------------------------------
+
   HoneybadgerLambda:
     Type: AWS::Lambda::Function
     Properties:

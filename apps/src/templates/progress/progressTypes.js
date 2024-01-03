@@ -14,7 +14,7 @@ export const PUZZLE_PAGE_NONE = -1;
  */
 export const studentType = PropTypes.shape({
   id: PropTypes.number.isRequired,
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
 });
 
 /**
@@ -44,7 +44,7 @@ const levelShape = {
   icon: PropTypes.string,
   isUnplugged: PropTypes.bool,
   isConceptLevel: PropTypes.bool,
-  pageNumber: PropTypes.number
+  pageNumber: PropTypes.number,
   /** sublevels: PropTypes.array */ // See below
 };
 // Avoid recursive definition
@@ -71,7 +71,7 @@ export const levelWithProgressType = PropTypes.shape({
   status: PropTypes.string.isRequired,
   paired: PropTypes.bool,
   isLocked: PropTypes.bool,
-  isCurrentLevel: PropTypes.bool
+  isCurrentLevel: PropTypes.bool,
 });
 
 /**
@@ -105,7 +105,7 @@ const studentLevelProgressShape = {
   paired: PropTypes.bool.isRequired,
   timeSpent: PropTypes.number,
   lastTimestamp: PropTypes.number,
-  teacherFeedbackReviewState: PropTypes.oneOf(Object.keys(ReviewStates))
+  teacherFeedbackReviewState: PropTypes.oneOf(Object.keys(ReviewStates)),
   /** pages: PropTypes.array */ // See below
 };
 // Avoid recursive definition
@@ -141,7 +141,7 @@ export const lessonType = PropTypes.shape({
   lesson_feedback_url: PropTypes.string,
   isFocusArea: PropTypes.bool.isRequired,
   description_student: PropTypes.string,
-  description_teacher: PropTypes.string
+  description_teacher: PropTypes.string,
 });
 
 /**
@@ -158,7 +158,7 @@ export const studentLessonProgressType = PropTypes.shape({
   imperfectPercent: PropTypes.number.isRequired,
   completedPercent: PropTypes.number.isRequired,
   timeSpent: PropTypes.number.isRequired,
-  lastTimestamp: PropTypes.number.isRequired
+  lastTimestamp: PropTypes.number.isRequired,
 });
 
 /**
@@ -174,7 +174,7 @@ const lessonGroupShape = {
   id: PropTypes.number,
   displayName: PropTypes.string,
   bigQuestions: PropTypes.string,
-  description: PropTypes.string
+  description: PropTypes.string,
 };
 
 /**
@@ -192,5 +192,5 @@ export const groupedLessonsType = PropTypes.shape({
   lessonGroup: PropTypes.shape(lessonGroupShape),
   lessons: PropTypes.arrayOf(lessonType).isRequired,
   levelsByLesson: PropTypes.arrayOf(PropTypes.arrayOf(levelWithProgressType))
-    .isRequired
+    .isRequired,
 });

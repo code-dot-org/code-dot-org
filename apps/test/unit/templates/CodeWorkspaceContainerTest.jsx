@@ -11,7 +11,7 @@ describe('CodeWorkspaceContainer', () => {
   const MINIMUM_PROPS = {
     hidden: false,
     isRtl: false,
-    noVisualization: false
+    noVisualization: false,
   };
 
   beforeEach(() => {
@@ -99,7 +99,7 @@ describe('CodeWorkspaceContainer', () => {
     expect(wrapper).to.have.style('marginLeft', '0px');
 
     wrapper.setProps({
-      noVisualization: true
+      noVisualization: true,
     });
     expect(wrapper).to.have.style('left', '0px');
     expect(wrapper).to.have.style('right', '0px');

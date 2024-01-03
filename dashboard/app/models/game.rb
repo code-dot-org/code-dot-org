@@ -58,6 +58,9 @@ class Game < ApplicationRecord
   AILAB = 'ailab'.freeze
   JAVALAB = 'javalab'.freeze
   POETRY = 'poetry'.freeze
+  MUSIC = 'music'.freeze
+  AICHAT = 'aichat'.freeze
+  PYTHONLAB = 'pythonlab'.freeze
 
   def self.bounce
     @@game_bounce ||= find_by_name("Bounce")
@@ -179,6 +182,18 @@ class Game < ApplicationRecord
     @@game_poetry ||= find_by_name('Poetry')
   end
 
+  def self.music
+    @@game_music ||= find_by_name('Music')
+  end
+
+  def self.aichat
+    @@game_aichat ||= find_by_name('Aichat')
+  end
+
+  def self.pythonlab
+    @@game_pythonlab ||= find_by_name('Pythonlab')
+  end
+
   def unplugged?
     app == UNPLUG
   end
@@ -225,7 +240,11 @@ class Game < ApplicationRecord
   end
 
   def uses_small_footer?
-    [NETSIM, APPLAB, TEXT_COMPRESSION, GAMELAB, WEBLAB, DANCE, FISH, AILAB, JAVALAB].include? app
+    [NETSIM, APPLAB, TEXT_COMPRESSION, GAMELAB, WEBLAB, DANCE, FISH, AILAB, JAVALAB, AICHAT, PYTHONLAB].include? app
+  end
+
+  def no_footer?
+    false
   end
 
   # True if the app takes responsibility for showing footer info
@@ -246,7 +265,13 @@ class Game < ApplicationRecord
   end
 
   def channel_backed?
-    [APPLAB, GAMELAB, WEBLAB, PIXELATION, SPRITELAB, JAVALAB, POETRY].include? app
+    [APPLAB, GAMELAB, WEBLAB, PIXELATION, SPRITELAB, JAVALAB, POETRY, MUSIC].include? app
+  end
+
+  def use_restricted_songs?
+    return false unless [DANCE, MUSIC].include? app
+    dev_with_credentials = rack_env?(:development) && !!CDO.cloudfront_key_pair_id
+    CDO.cdn_enabled || dev_with_credentials || (rack_env?(:test) && ENV['CI'])
   end
 
   # Format: name:app:intro_video
@@ -323,6 +348,9 @@ class Game < ApplicationRecord
     Ailab:ailab
     Javalab:javalab
     Poetry:poetry
+    Music:music
+    Aichat:aichat
+    Pythonlab:pythonlab
   )
 
   def self.setup

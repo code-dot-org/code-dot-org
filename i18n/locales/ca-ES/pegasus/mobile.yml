@@ -274,6 +274,7 @@
   homepage_slot_text_link_stats: "Veure les estadístiques"
   homepage_slot_text_link_buy: "Involucra't"
   homepage_slot_text_link_donate: "Fes una donació"
+  homepage_slot_text_link_thebadguys: "Programa amb The Bad Guys"
   homepage_gallery_header: "Més de %{project_count} milions de projectes  Code.org creats"
   homepage_header_donors: "Code.org dóna gràcies als seus patrocinadors"
   homepage_donors_seall: "Mostra'ls tots"
@@ -374,6 +375,7 @@
   volunteer_engineer_submission_field_description: "Descripció"
   volunteer_engineer_submission_field_email: "Correu electrònic"
   volunteer_engineer_submission_field_email_placeholder: "Correu electrònic"
+  volunteer_engineer_submission_field_email_preference_privacy: "(Vegeu la nostra política de privacitat)"
   volunteer_engineer_submission_field_email_preference_yes: 'Sí'
   volunteer_engineer_submission_field_email_preference_no: 'No'
   volunteer_engineer_submission_submit: "Envia"
@@ -458,6 +460,7 @@
   dashboard_progress_completed_too_many_blocks: "completat, massa blocs"
   dashboard_progress_completed_perfect: "completat, perfecte"
   dashboard_progress_furthest_level_attempted: "nivell més alt intentat"
+  dashboard_progress_submitted: "enviat"
   dashboard_progress_pair_programming: "programació per parelles"
   dashboard_sections_new_section: "Nova secció"
   dashboard_sections_jumbotron_instruction: "Crea noves seccions i afegeix-hi alumnes. Les seccions t'ajuden a organitzar els estudiants en grups més petits de manera que puguis fer un seguiment del seu progrés i administrar els seus comptes."
@@ -508,7 +511,7 @@
   dashboard_course4: 'Curs 4 (beta): '
   dashboard_curriculum: "Pla d'estudis"
   dashboard_curriculum_overview: "Resum del curriculum de cicle superior de primària"
-  dashboard_overview: "Vista general"
+  dashboard_overview: "Resum"
   dashboard_sequence: "Seqüència"
   dashboard_framework: "Marc de treball"
   dashboard_standards: "Estàndards"
@@ -584,6 +587,7 @@
   older_systems_subheading: "Aquestes hauria de funcionar en navegadors antics. Per accedir a totes les classes, actualitza't a un <a href=\"http://browsehappy.com/\" target=\"_blank\"> navegador Web modern.</a>"
   mobile_devices: "Tutorials per a dispositius mòbils"
   frozen_name: "Programa amb l'Anna i l'Elsa"
+  starwars_name: 'La guerra de les galàxies: Crea una galàxia amb codi'
   codeorg_name: "Laberint clàssic"
   codeintl_name: "Laberint clàssic"
   khan_name: "Una introducció a JavaScript"
@@ -638,15 +642,25 @@
   coursec-2021_name: Curs C (2021)
   coursed-2021_name: Curs D (2021)
   coursee-2021_name: Curs E (2021)
+  coursef-2021_name: Curs F (2021)
+  coursea-2022_name: Curs A (2022)
+  courseb-2022_name: Curs B (2022)
+  coursec-2022_name: Curs C (2022)
+  coursed-2022_name: Curs D (2022)
+  coursee-2022_name: Curs E (2022)
+  coursef-2022_name: Curs F (2022)
   express-2021_name: Curs exprés (2021)
+  express-2022_name: Curs Express (2022)
   accelerated_name: "Curs accelerat"
   express_name: "Curs exprés"
   20-hour_name: Curs accelerat
   classicmaze_name: "Laberint clàssic"
   iceage_name: "Edat de gel"
   minecraft_name: "Minecraft"
+  text-compression_name: Compressió de text
   applab_name: "Laboratori d'aplicacions"
   gamelab_name: "Laboratori de jocs"
+  applab_gradelevel: "A partir de 13 anys"
   applab_shortdescription_congrats: "El Laboratori d'aplicacions és un entorn de programació on podeu crear aplicacions simples. Dissenyeu una aplicació, programeu-la amb blocs o JavaScript per fer-la funcionar i compartiu-la en pocs segons"
   codeorg_gradelevel: "Edat 4-104"
   codeintl_gradelevel: "Edat 4-104"
@@ -1072,10 +1086,22 @@
   compatibility_unsupported_browser_markdown: "El vostre navegador no és compatible. Sisplau, actualitzeu-lo a [un dels nostres navegadors compatibles](%{supported_browsers_url}). Podeu provar de veure la pàgina, però la funcionalitat es podria veure afectada."
   hourofcode_shortcode: "Codificar o programar"
   flappy_shortcode: "aleteig"
+  header_my_dashboard: "El meu panell de control"
   header_courses: "cursos"
   header_course_catalog: "Catàleg de cursos"
   header_project_gallery: "Projectes"
+  header_sections: "Seccions"
+  header_professional_learning: "Formació professional"
+  header_educate_overview: "Resum del docent"
+  header_educate_elementary: "Escola primària"
+  header_educate_middle: "E.S.O."
+  header_educate_high: "Batxillerat"
   header_educate_hoc: "L'hora del codi"
+  header_educate_partner: "Col·laboreu amb nosaltres"
+  header_educate_beyond: "Més enllà de Code.org"
+  header_educate_inspire: "Inspireu un alumne"
+  header_educate_community: "Comunitat virtual"
+  header_educate_tools: "Eines i vídeos"
   header_about_us: "Sobre nosaltres"
   header_about_leadership: "Lideratge"
   header_about_donors: "Donants"
@@ -1091,16 +1117,20 @@
   header_stats: "Estadístiques"
   header_help_us: "Ajuda'ns"
   header_about: "Qui som"
+  header_incubator: "Incubadora"
   header_help_support: 'Ajuda i suport '
   header_report_bug: "Informar d'un problema"
-  header_legal_privacy: "Política de privadesa"
+  header_legal_privacy: "Política de privacitat"
+  header_legal_cookie_notice: "Política de galetes"
   header_legal_tos: "Condicions d'ús"
+  header_tutorials: "Tutorials"
   sprite_lab_documentation: "Documentació del Laboratori d'Sprites"
+  header_documentation: "Documentació"
   user_header_label: "Hola %{username}"
   user_header_team: "Equip"
   user_header_settings: "El meu compte"
   user_header_logout: "Tanca la sessió"
-  user_header_signin: "Inicia la sessió"
+  user_header_signin: "Iniciar sessió"
   user_header_create: 'Crea '
   user_header_applab: 'Laboratori d''aplicacions '
   user_header_artist: 'Artista '
@@ -1111,6 +1141,8 @@
   user_header_minecraft: "Minecraft"
   user_header_flappy: "Flappy"
   user_header_view_all: "Mostra tots els projectes..."
+  user_header_view_my_projects: "Veure els meus projectes"
+  view_all_sections: "Veure totes les seccions"
   hero_name: 'Minecraft: El viatge de l''heroi'
   applab_tile_start_tutorial: "Comença"
   applab_tile_teacher_guide: "Veure la guia docent"
@@ -1125,7 +1157,7 @@
   hoc_overview_partner_activities_link: "Veure activitats"
   hoc_overview_start_tutorial: "Comença"
   hoc_overview_view_teacher_guide: "Veure la guia docent"
-  hoc2018_creativity_create: "Crea"
+  hoc2018_creativity_create: "Crear"
   hoc2018_creativity_what_will_you_create: "Què crearàs?"
   hoc2018_mc_page_title: "Tutorials de l'Hora del codi de Minecraft"
   hoc2018_mc_details: "Moltes llengües | Navegadors moderns i tablets | Més de 6 anys"
@@ -1142,7 +1174,7 @@
   hoc2018_mc_download_adventurer: "Baixeu la versió sense connexió de l'Aventurer Minecraft."
   hoc2018_mc_educators: "Per a docents"
   hoc2018_mc_educators_box1_title: "Programeu amb Minecraft"
-  hoc2018_mc_educators_box1_desc: 'L''edició d''educació de Minecraft proporciona un currículum, exercicis i programació a Minecraft segons els estàndards educatius.'
+  hoc2018_mc_educators_box1_desc: "L'edició d'educació de Minecraft proporciona un currículum, exercicis i programació a Minecraft segons els estàndards educatius."
   hoc2018_mc_educators_box1_button: "Comença"
   hoc2018_mc_educators_box2_title: "Baixeu la guia didàctica"
   hoc2018_mc_educators_box2_desc: "Aquest joc d'eines us ajudarà a organitzar una Hora del codi i a motivar els alumnes a aprendre informàtica."
@@ -1180,6 +1212,9 @@
   hoc2018_mc_homepage_try_it: "Proveu-ho"
   hoc2018_mc_back_journey: "Minecraft torna amb l'Hora del Codi amb una activitat nova de trinca! Viatja a través de Minecraft amb el codi."
   hoc2018_mc_teacher_guide: "Veure la guia docent"
+  hoc2018_mc_minecraft_education: "Minecraft Education"
+  hoc2018_mc_continue_learning: "Segueix aprenent amb Minecraft."
+  hoc2018_mc_go_to_mc_education: "Anar a Minecraft Education"
   hoc2018_mc_short_description_shorter: "Utilitza la creativitat i les habilitats de resolució de problemes per explorar i crear mons submarins amb codi."
   hoc2018_mc_journey: "Un viatge a través del Minecraft amb codi."
   hoc2018_dance_party_main_heading: "Festa de ball"
@@ -1204,20 +1239,23 @@
   hoc2018_mc_with_microsoft: "En associació amb"
   hoc2022_mc_mee_title: "Minecraft Escape Estate"
   hoc2022_mc_mee_description: 'Escapar de la misteriosa mansió per l''alba i guanyar un milió de maragdes! El nou tutorial de Minecraft Hora del Codi ja està disponible a Minecraft: Educació Edició per a Windows, Mac, Chromebook, Ipad i Mòbil. Comença amb recursos educatius gratuïts, formacions i vídeos. '
-  hoc2022_mc_mee_timecraft_description: 'Viatja en el temps per salvar el futur en aquesta lliçó de codificació gratuïta a Minecraft: Education Edition.'
+  hoc2022_mc_mee_timecraft_description: "Viatja en el temps per salvar el futur en aquesta lliçó de codificació gratuïta a Minecraft: Education Edition."
   footer_powered_by_aws: "Funciona amb Amazon Web Services"
   footer_built_on_github: "Fet amb GitHub de Microsoft"
-  footer_privacy_policy: "Política de privadesa"
+  codebytes_skinny_banner_english_only: "Només en anglès"
+  footer_privacy_policy: "Política de privacitat"
   footer_about: "Qui som"
   footer_partners: "Socis"
   footer_donate: "Feu una donació"
   footer_store: "Botiga"
   footer_support: "Suport"
   footer_terms: "Condicions"
+  ai_for_oceans: "IA per Oceans"
   ai_for_oceans_lesson_plan: "unitat didàctica/lliço"
   ai_in_partnership_with: "En associació amb"
   ai_activity: "Activitat"
   ai_description: "Descripció"
+  outbreak_tile_title: "Brots"
   footer_cookie_notice: "Política de galetes"
   hoc2022_banner_title: "Explora, Juga, Crea!"
   hoc2022_banner_description: "Explora l'univers, marca un gol, mou-te — hi ha tantes maneres de provar les ciències informàtiques!"
@@ -1227,7 +1265,7 @@
   hoc2022_landing_page_explore_description: "Obriu portes a nous mons amb les ciències informàtiques!"
   hoc2022_landing_page_play_title: "Juga"
   hoc2022_landing_page_play_description: "Sortiu al camp i marqueu!"
-  hoc2022_landing_page_create_title: "Crea"
+  hoc2022_landing_page_create_title: "Crear"
   hoc2022_landing_page_create_description: "Feu alguna cosa estranya i meravellosa!"
   hoc2022_landing_page_banner_alt_left: "Un alienígena ballant al costat de Saturn a l'espai"
   hoc2022_landing_page_banner_alt_right: "Un robot driblant una pilota de futbol a l'espai davant d'un coet enlairant"

@@ -28,3 +28,5 @@ Going through the code line by line:
 * You remove the number at index 3. 
 * The array now looks like: data = [10,38,23]
 MARKDOWN
+
+allow_multiple_attempts true

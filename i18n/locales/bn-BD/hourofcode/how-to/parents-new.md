@@ -1,5 +1,5 @@
 ---
-title: How-to guide for parents
+title: পিতামাতার জন্য কিভাবে গাইড করবেন
 ---
 
 # How to do an Hour of Code with your child

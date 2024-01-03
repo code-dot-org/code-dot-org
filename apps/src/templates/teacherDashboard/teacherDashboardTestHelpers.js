@@ -13,7 +13,7 @@ export const testSection = {
   pairingAllowed: true,
   studentCount: 10,
   code: 'PMTKVH',
-  participantType: 'student'
+  participantType: 'student',
 };
 export const noStudentsSection = {
   id: 11,
@@ -30,7 +30,7 @@ export const noStudentsSection = {
   pairingAllowed: true,
   studentCount: 0,
   code: 'PMTKVH',
-  participantType: 'student'
+  participantType: 'student',
 };
 
 export const courseOfferings = {
@@ -58,9 +58,9 @@ export const courseOfferings = {
             name: 'Course A',
             path: '/s/coursea-2017',
             lesson_extras_available: true,
-            position: null
-          }
-        }
+            position: null,
+          },
+        },
       },
       2: {
         id: 2,
@@ -79,11 +79,11 @@ export const courseOfferings = {
             name: 'Course A (2018)',
             path: '/s/coursea-2018',
             lesson_extras_available: true,
-            position: null
-          }
-        }
-      }
-    }
+            position: null,
+          },
+        },
+      },
+    },
   },
   2: {
     id: 2,
@@ -110,7 +110,7 @@ export const courseOfferings = {
             path: '/s/csd1-2017',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
-            position: 1
+            position: 1,
           },
           4: {
             id: 4,
@@ -118,9 +118,9 @@ export const courseOfferings = {
             path: '/s/csd2-2017',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
-            position: 2
-          }
-        }
+            position: 2,
+          },
+        },
       },
       4: {
         id: 4,
@@ -140,7 +140,7 @@ export const courseOfferings = {
             path: '/s/csd1-2018',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
-            position: 1
+            position: 1,
           },
           6: {
             id: 6,
@@ -148,11 +148,11 @@ export const courseOfferings = {
             path: '/s/csd2-2018',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
-            position: 2
-          }
-        }
-      }
-    }
+            position: 2,
+          },
+        },
+      },
+    },
   },
   3: {
     id: 3,
@@ -179,7 +179,7 @@ export const courseOfferings = {
             path: '/s/csa1-2022',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
-            position: 1
+            position: 1,
           },
           8: {
             id: 8,
@@ -187,11 +187,11 @@ export const courseOfferings = {
             path: '/s/csa2-2022',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
-            position: 2
-          }
-        }
-      }
-    }
+            position: 2,
+          },
+        },
+      },
+    },
   },
   4: {
     id: 4,
@@ -218,11 +218,11 @@ export const courseOfferings = {
             path: '/s/flappy',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
-            position: null
-          }
-        }
-      }
-    }
+            position: null,
+          },
+        },
+      },
+    },
   },
   5: {
     id: 5,
@@ -249,11 +249,11 @@ export const courseOfferings = {
             path: '/s/hello-world',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
-            position: null
-          }
-        }
-      }
-    }
+            position: null,
+          },
+        },
+      },
+    },
   },
   6: {
     id: 6,
@@ -280,11 +280,11 @@ export const courseOfferings = {
             path: '/s/poem-art',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
-            position: null
-          }
-        }
-      }
-    }
+            position: null,
+          },
+        },
+      },
+    },
   },
   7: {
     id: 7,
@@ -311,11 +311,11 @@ export const courseOfferings = {
             path: '/s/artist',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
-            position: null
-          }
-        }
-      }
-    }
+            position: null,
+          },
+        },
+      },
+    },
   },
   8: {
     id: 8,
@@ -342,7 +342,7 @@ export const courseOfferings = {
             path: '/s/self-paced-pl-csp1-2021',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
-            position: 1
+            position: 1,
           },
           14: {
             id: 14,
@@ -350,11 +350,11 @@ export const courseOfferings = {
             path: '/s/self-paced-pl-csp2-2021',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
-            position: 2
-          }
-        }
-      }
-    }
+            position: 2,
+          },
+        },
+      },
+    },
   },
   9: {
     id: 9,
@@ -381,9 +381,9 @@ export const courseOfferings = {
             path: '/s/vpl-csp-2020',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
-            position: null
-          }
-        }
+            position: null,
+          },
+        },
       },
       12: {
         id: 12,
@@ -403,16 +403,17 @@ export const courseOfferings = {
             path: '/s/vpl-csp-2021',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
-            position: null
-          }
-        }
-      }
-    }
-  }
+            position: null,
+          },
+        },
+      },
+    },
+  },
 };
 
 export const fakeCoursesWithProgress = [
   {
+    id: 1,
     display_name: 'Course A',
     units: [
       {
@@ -420,18 +421,19 @@ export const fakeCoursesWithProgress = [
         version_year: '2018',
         key: 'coursea-2018',
         name: 'Course A (2018)',
-        position: null
+        position: null,
       },
       {
         id: 1,
         version_year: '2017',
         key: 'coursea-2017',
         name: 'Course A (2017)',
-        position: null
-      }
-    ]
+        position: null,
+      },
+    ],
   },
   {
+    id: 2,
     display_name: 'CS Discoveries 2018',
     units: [
       {
@@ -439,18 +441,19 @@ export const fakeCoursesWithProgress = [
         version_year: null,
         key: 'csd1-2018',
         name: 'Unit 1',
-        position: 1
+        position: 1,
       },
       {
         id: 6,
         version_year: null,
         key: 'csd2-2018',
         name: 'Unit 2',
-        position: 2
-      }
-    ]
+        position: 2,
+      },
+    ],
   },
   {
+    id: 3,
     display_name: 'Flappy',
     units: [
       {
@@ -459,8 +462,8 @@ export const fakeCoursesWithProgress = [
         key: 'flappy',
         name: 'Flappy',
         position: null,
-        description: 'Make a flappy game!'
-      }
-    ]
-  }
+        description: 'Make a flappy game!',
+      },
+    ],
+  },
 ];

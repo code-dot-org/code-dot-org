@@ -11,7 +11,7 @@ import {
   SyncOmniAuthSectionButton,
   READY,
   IN_PROGRESS,
-  SUCCESS
+  SUCCESS,
 } from '@cdo/apps/lib/ui/SyncOmniAuthSectionControl';
 
 describe('SyncOmniAuthSectionControl', () => {
@@ -44,7 +44,7 @@ describe('SyncOmniAuthSectionControl', () => {
       sectionCode: 'G-123456',
       sectionName: 'Test Google Classroom Section',
       sectionProvider: OAuthSectionTypes.google_classroom,
-      updateRoster: updateRoster
+      updateRoster: updateRoster,
     };
   });
 
@@ -199,10 +199,7 @@ describe('SyncOmniAuthSectionControl', () => {
       expect(wrapper.find(BaseDialog).prop('isOpen')).to.equal(true);
       // Now that we're in a failure state, test that we stay
       // in it on click!
-      wrapper
-        .find(BaseDialog)
-        .find(Button)
-        .simulate('click');
+      wrapper.find(BaseDialog).find(Button).simulate('click');
       expect(wrapper.find(BaseDialog).prop('isOpen')).to.equal(false);
       expect(
         wrapper.find(SyncOmniAuthSectionButton).prop('buttonState')

@@ -2,84 +2,20 @@
   "mk-MK": {
     "data": {
       "vocabularies": {
-        "function/hero/unversioned": {
-          "word": "Функција"
-        },
-        "code/poem-art/2021": {
-          "word": "Код"
-        },
-        "code/artist/unversioned": {
-          "word": "Код"
-        },
-        "loops/aquatic/unversioned": {
-          "word": "Лупови"
-        },
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/sports/unversioned": {
-          "word": "Код"
-        },
-        "variable/coursef/2022": {
-          "word": "Променлива"
-        },
-        "input/coursef/2022": {
+        "input/csd/2021": {
           "word": "Влез"
         },
-        "define/coursef/2022": {
-          "word": "Дефинирајте"
-        },
-        "function/coursee/2022": {
-          "word": "Функција"
-        },
-        "define/coursee/2022": {
-          "word": "Дефинирајте"
-        },
-        "function/express/2022": {
-          "word": "Функција"
-        },
-        "variable/express/2022": {
+        "variable/csd/2021": {
           "word": "Променлива"
         },
-        "define/express/2022": {
-          "word": "Дефинирајте"
-        },
-        "data/coursec/2022": {
-          "word": "Податоци"
-        },
-        "input/csd/2022": {
-          "word": "Влез"
-        },
-        "variable/csd/2022": {
-          "word": "Променлива"
-        },
-        "function/csd/2022": {
+        "function/csd/2021": {
           "word": "Функција"
         },
-        "code/poem-art/unversioned": {
-          "word": "Код",
-          "definition": ""
+        "function/coursee/2021": {
+          "word": "Функција"
         },
-        "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+        "define/coursee/2021": {
+          "word": "Дефинирајте"
         },
         "variable/coursef/2021": {
           "word": "Променлива"
@@ -99,20 +35,113 @@
         "define/express/2021": {
           "word": "Дефинирајте"
         },
-        "function/coursee/2021": {
-          "word": "Функција"
+        "input/csd/2022": {
+          "word": "Влез"
         },
-        "define/coursee/2021": {
-          "word": "Дефинирајте"
-        },
-        "variable/csd/2021": {
+        "variable/csd/2022": {
           "word": "Променлива"
         },
-        "function/csd/2021": {
+        "function/csd/2022": {
           "word": "Функција"
         },
-        "input/csd/2021": {
+        "data/coursec/2022": {
+          "word": "Податоци"
+        },
+        "function/coursee/2022": {
+          "word": "Функција"
+        },
+        "define/coursee/2022": {
+          "word": "Дефинирајте"
+        },
+        "variable/coursef/2022": {
+          "word": "Променлива"
+        },
+        "input/coursef/2022": {
           "word": "Влез"
+        },
+        "define/coursef/2022": {
+          "word": "Дефинирајте"
+        },
+        "function/express/2022": {
+          "word": "Функција"
+        },
+        "variable/express/2022": {
+          "word": "Променлива"
+        },
+        "define/express/2022": {
+          "word": "Дефинирајте"
+        },
+        "code/csc-adaptations/2023": {
+          "word": "Код"
+        },
+        "code/csc-ecosystems/2023": {
+          "word": "Код"
+        },
+        "variable/csc-ecosystems/2023": {
+          "word": "Променлива"
+        },
+        "code/csc-mappinglandmarks/2023": {
+          "word": "Код"
+        },
+        "comments/csc-starquilts/2023": {
+          "word": "Коментари"
+        },
+        "code/poetry/2023": {
+          "word": "Код"
+        },
+        "input/csd/2023": {
+          "word": "Влез"
+        },
+        "variable/csd/2023": {
+          "word": "Променлива"
+        },
+        "function/csd/2023": {
+          "word": "Функција"
+        },
+        "data/coursec/2023": {
+          "word": "Податоци"
+        },
+        "function/coursee/2023": {
+          "word": "Функција"
+        },
+        "define/coursee/2023": {
+          "word": "Дефинирајте"
+        },
+        "variable/coursef/2023": {
+          "word": "Променлива"
+        },
+        "input/coursef/2023": {
+          "word": "Влез"
+        },
+        "define/coursef/2023": {
+          "word": "Дефинирајте"
+        },
+        "function/express/2023": {
+          "word": "Функција"
+        },
+        "variable/express/2023": {
+          "word": "Променлива"
+        },
+        "define/express/2023": {
+          "word": "Дефинирајте"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Лупови"
+        },
+        "code/artist/unversioned": {
+          "word": "Код"
+        },
+        "function/hero/unversioned": {
+          "word": "Функција"
+        },
+        "code/poem-art/2021": {
+          "word": "Код"
+        },
+        "code/sports/unversioned": {
+          "word": "Код"
+        },
+        "code/dance-ai/2023": {
+          "word": "Код"
         }
       }
     }

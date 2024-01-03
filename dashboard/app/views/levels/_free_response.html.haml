@@ -1,19 +1,22 @@
 :ruby
-  js_data = {}
   level ||= @level
   last_attempt = @last_attempt unless local_assigns.has_key? :last_attempt
   in_level_group ||= false
   left_align = local_assigns[:left_align]
   is_contained_level ||= false
+  js_data = {
+    response_count: @responses&.count || 0,
+    is_contained_level: is_contained_level
+  }
 
 - if level.solution.present? && is_contained_level && Policies::InlineAnswer.visible_for_script_level?(current_user, @script_level)
   %div{id: "containedLevelAnswer0"}
     .free-response{class: "contained"}
       = render partial: 'levels/teacher_markdown', locals: {data: {'teacher_markdown' => level.solution}}
 
-- if in_level_group # The LevelGroup will collect results for each level.
+- if in_level_group || is_contained_level # The LevelGroup will collect results for each level.
   :javascript
-    window.dashboard.codeStudioLevels.registerLevel(#{level.id}, new FreeResponse(#{level.id}, #{!!level.optional}));
+    window.dashboard.codeStudioLevels.registerLevel(#{level.id}, new FreeResponse(#{level.id}, #{!!level.optional}, #{level.allow_multiple_attempts?}));
 
 - else # Otherwise we need to provide a `getResult` function.
   :javascript
@@ -31,6 +34,8 @@
     );
 
 .free-response{:class => ('left-aligned' if left_align)}
+  - if DCDO.get("show_level_summary_entry_point", false) && !in_level_group
+    %div#summaryEntryPoint
   - title = level.get_property(:title)
   - if title.present? && (!in_level_group || is_contained_level)
     %h1= title
@@ -50,10 +55,12 @@
 
   - height = level.height || '80'
   - placeholder = level.get_property(:placeholder) || I18n.t('free_response.placeholder')
-  %textarea.response{id: "level_#{level.id}", placeholder: placeholder, style: "height: #{height}px;", readonly: @view_options.readonly_workspace}= last_attempt
+  - readonly = @view_options.readonly_workspace || (!level.allow_multiple_attempts? && last_attempt.present?)
+  %textarea.response{id: "level_#{level.id}", placeholder: placeholder, style: "height: #{height}px;", readonly: readonly}= last_attempt
 
   -# Don't render the dialog partial if we're inside a LevelGroup.
-  = render partial: 'levels/dialog', locals: {app: 'free_response'} unless in_level_group
+  - show_next_page_link = readonly && !level.submittable?
+  = render partial: 'levels/dialog', locals: {app: 'free_response', next_level_link: @next_level_link, show_next_page_link: show_next_page_link} unless (in_level_group || is_contained_level)
   = render partial: 'levels/teacher_markdown', locals: {data: {'teacher_markdown' => level.solution}} unless is_contained_level
 
 - content_for(:head) do

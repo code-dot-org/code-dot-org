@@ -9,7 +9,7 @@ var studioUrlPrefix = scriptData.studio_url;
  */
 var urlMap = {
   '/print_signin_cards': '/login_info',
-  '/manage': '/manage_students'
+  '/manage': '/manage_students',
 };
 
 function redirectToDashboard() {

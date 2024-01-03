@@ -17,14 +17,14 @@ export default class ActivityCardAndPreview extends Component {
     activitySectionMetrics: PropTypes.array.isRequired,
     updateActivitySectionMetrics: PropTypes.func.isRequired,
     hasLessonPlan: PropTypes.bool.isRequired,
-    allowMajorCurriculumChanges: PropTypes.bool.isRequired
+    allowMajorCurriculumChanges: PropTypes.bool.isRequired,
   };
 
   constructor(props) {
     super(props);
 
     this.state = {
-      collapsed: false
+      collapsed: false,
     };
   }
 
@@ -79,20 +79,20 @@ const styles = {
     display: 'flex',
     flexDirection: 'row',
     margin: 10,
-    width: '100%'
+    width: '100%',
   },
   editor: {
-    width: '55%'
+    width: '55%',
   },
   preview: {
     width: '45%',
-    marginLeft: 20
+    marginLeft: 20,
   },
   previewBox: {
     border: '1px solid black',
-    padding: '0px 25px 10px 25px'
+    padding: '0px 25px 10px 25px',
   },
   noPreview: {
-    fontStyle: 'italic'
-  }
+    fontStyle: 'italic',
+  },
 };

@@ -10,3 +10,5 @@ wrong 'Easy to create and easy to solve'
 markdown <<MARKDOWN
 
 MARKDOWN
+
+allow_multiple_attempts true

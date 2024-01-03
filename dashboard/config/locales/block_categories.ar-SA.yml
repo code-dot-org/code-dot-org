@@ -11,7 +11,7 @@ ar:
       Comment: تعليق
       Comments: 'تعليقات
 
-'
+        '
       Conditionals: الجمل الشرطية
       Dancers: الراقصون
       Default: الافتراضي
@@ -22,10 +22,10 @@ ar:
       Game/Score: لعبة/نقطة
       Games/Score: 'ألعاب/نقطة
 
-'
+        '
       Groups: 'مجموعات
 
-'
+        '
       Input: الإدخال
       Location: الموقع
       Locations: مواقع
@@ -35,12 +35,12 @@ ar:
       Numbers: أرقام
       Properties: 'خصائص
 
-'
+        '
       Sprites: النقوش المتحركة
       Text: النص
       Variables: المتغيرات
       'Variables ': 'المتغيرات
 
-'
+        '
       'Variables  ': 'المتغيرات  '
       World: العالم

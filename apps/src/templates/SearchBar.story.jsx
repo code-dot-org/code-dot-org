@@ -3,7 +3,7 @@ import SearchBar from './SearchBar';
 
 export default {
   title: 'SearchBar',
-  component: SearchBar
+  component: SearchBar,
 };
 
 const Template = args => (
@@ -16,10 +16,10 @@ const Template = args => (
 
 export const SearchButtonNoClear = Template.bind({});
 SearchButtonNoClear.args = {
-  clearButton: false
+  clearButton: false,
 };
 
 export const SearchButtonClear = Template.bind({});
 SearchButtonClear.args = {
-  clearButton: true
+  clearButton: true,
 };

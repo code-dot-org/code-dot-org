@@ -1,6 +1,6 @@
 # This can be viewed on non-production environments at /rails/mailers/pd_regional_partner_mini_contact_mailer
 class PdRegionalPartnerMiniContactMailerPreview < ActionMailer::Preview
-  include FactoryGirl::Syntax::Methods
+  include FactoryBot::Syntax::Methods
 
   def contact_receipt_with_partner
     rp = build :regional_partner

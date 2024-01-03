@@ -17,6 +17,9 @@
         "csd-2022/board-events": {
           "display_name": "Event Papan"
         },
+        "csd-2022/circuit-playground": {
+          "display_name": "Circuit Playground Ikhtisar"
+        },
         "csd-2022/classes": {
           "display_name": "Kelas"
         },
@@ -101,11 +104,14 @@
         "csd-2022/patterns-overview": {
           "display_name": "Tinjauan"
         },
-        "csd-2022/physical-input": {
-          "display_name": "Input Fisik"
-        },
         "csd-2022/playing-notes": {
           "display_name": "Catatan Permainan"
+        },
+        "csd-2022/problem-solving-process": {
+          "display_name": "Proses Pemecahan Masalah"
+        },
+        "csd-2022/problem-solving-process-general": {
+          "display_name": "Proses Pemecahan Masalah"
         },
         "csd-2022/sprite-properties": {
           "display_name": "Properti Sprite"

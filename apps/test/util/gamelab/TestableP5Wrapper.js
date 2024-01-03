@@ -17,10 +17,10 @@ export default function createP5Wrapper() {
 function createP5WrapperWithInterpreter(interpreter) {
   let p5Wrapper = new P5Wrapper();
   p5Wrapper.init({
-    onExecutionStarting: function() {},
-    onPreload: function() {},
-    onSetup: function() {},
-    onDraw: function() {}
+    onExecutionStarting: function () {},
+    onPreload: function () {},
+    onSetup: function () {},
+    onDraw: function () {},
   });
   p5Wrapper.startExecution();
 

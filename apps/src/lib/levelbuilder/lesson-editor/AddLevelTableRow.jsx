@@ -7,7 +7,7 @@ import color from '@cdo/apps/util/color';
 export default class AddLevelTableRow extends Component {
   static propTypes = {
     addLevel: PropTypes.func.isRequired,
-    level: PropTypes.object.isRequired
+    level: PropTypes.object.isRequired,
   };
 
   constructor(props) {
@@ -15,7 +15,7 @@ export default class AddLevelTableRow extends Component {
 
     this.state = {
       creatingClonedLevel: false,
-      error: null
+      error: null,
     };
   }
 
@@ -37,12 +37,10 @@ export default class AddLevelTableRow extends Component {
     const newLevelName = prompt('Enter new level name');
     if (newLevelName) {
       $.ajax({
-        url: `/levels/${
-          level.id
-        }/clone?name=${newLevelName}&do_not_redirect=true`,
+        url: `/levels/${level.id}/clone?name=${newLevelName}&do_not_redirect=true`,
         method: 'POST',
         dataType: 'json',
-        contentType: 'application/json;charset=UTF-8'
+        contentType: 'application/json;charset=UTF-8',
       })
         .done(data => {
           this.props.addLevel(data);
@@ -51,13 +49,13 @@ export default class AddLevelTableRow extends Component {
         .fail(error => {
           this.setState({
             creatingClonedLevel: false,
-            error: this.determineErrorMessage(error.responseText, newLevelName)
+            error: this.determineErrorMessage(error.responseText, newLevelName),
           });
         });
     } else {
       this.setState({
         creatingClonedLevel: false,
-        error: 'Please provide name for the cloned level'
+        error: 'Please provide name for the cloned level',
       });
     }
   };

@@ -1,0 +1,64 @@
+{
+  "is-IS": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "ai-2020": {
+            "buttonText": "Nánar"
+          },
+          "ai-launch-2023": {
+            "buttonText": "Nánar"
+          },
+          "ai-pl-launch-2023": {
+            "buttonText": "Nánar"
+          },
+          "back-to-school-2021": {
+            "buttonText": "Nánar"
+          },
+          "codebytes-2020": {
+            "buttonText": "Nánar"
+          },
+          "coldplay": {
+            "buttonText": "Prófið hana"
+          },
+          "congrats-certificate-share": {
+            "buttonText": "Byrja"
+          },
+          "csjourneys": {
+            "buttonText": "Nánar"
+          },
+          "csjourneys-22": {
+            "buttonText": "Nánar"
+          },
+          "csleadersprize": {
+            "buttonText": "Nánar"
+          },
+          "hoc-2023": {
+            "buttonText": "Nánar"
+          },
+          "hoc-2023-dance-ai": {
+            "buttonText": "Nánar"
+          },
+          "hoc-more": {
+            "body": "Á vef Klukkustundar kóðunar (Hour of Code) má finna yfir 100 verkefni í tölvunarfræði fyrir alla aldurshópa og reynslustig, þróuð af Code.org og samstarfsaðilum."
+          },
+          "superhero": {
+            "buttonText": "Nánar"
+          },
+          "teacher-apps-closing-2021": {
+            "buttonText": "Vertu með"
+          },
+          "teacher-apps-nominate-2020": {
+            "buttonText": "Tilnefna kennara"
+          },
+          "teacher-apps-open-2021": {
+            "buttonText": "Vertu með"
+          },
+          "teacher-apps-stillon-2020": {
+            "buttonText": "Vertu með"
+          }
+        }
+      }
+    }
+  }
+}

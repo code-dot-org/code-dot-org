@@ -7,16 +7,15 @@ import Dialog from '@cdo/apps/templates/Dialog';
 import {connect} from 'react-redux';
 import {
   addStandard,
-  removeStandard
+  removeStandard,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/standardsEditorRedux';
 import {standardShape, frameworkShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import SearchBox from '@cdo/apps/lib/levelbuilder/lesson-editor/SearchBox';
 
 function StandardsEditor(props) {
   const [standardToRemove, setStandardToRemove] = useState(null);
-  const [confirmRemovalDialogOpen, setConfirmRemovalDialogOpen] = useState(
-    false
-  );
+  const [confirmRemovalDialogOpen, setConfirmRemovalDialogOpen] =
+    useState(false);
   const [frameworkShortcode, setFrameworkShortcode] = useState(null);
 
   const actionsCellFormatter = (actions, {rowData}) => {
@@ -40,66 +39,66 @@ function StandardsEditor(props) {
         header: {
           label: 'Framework',
           props: {
-            style: {width: '20%'}
-          }
+            style: {width: '20%'},
+          },
         },
         cell: {
           props: {
             style: {
-              ...lessonEditorTableStyles.cell
-            }
-          }
-        }
+              ...lessonEditorTableStyles.cell,
+            },
+          },
+        },
       },
       {
         property: 'shortcode',
         header: {
           label: 'Shortcode',
           props: {
-            style: {width: '10%'}
-          }
+            style: {width: '10%'},
+          },
         },
         cell: {
           props: {
             style: {
-              ...lessonEditorTableStyles.cell
-            }
-          }
-        }
+              ...lessonEditorTableStyles.cell,
+            },
+          },
+        },
       },
       {
         property: 'description',
         header: {
           label: 'Description',
           props: {
-            style: {width: '63%'}
-          }
+            style: {width: '63%'},
+          },
         },
         cell: {
           props: {
             style: {
-              ...lessonEditorTableStyles.cell
-            }
-          }
-        }
+              ...lessonEditorTableStyles.cell,
+            },
+          },
+        },
       },
       {
         property: 'actions',
         header: {
           label: 'Actions',
           props: {
-            style: {width: '7%'}
-          }
+            style: {width: '7%'},
+          },
         },
         cell: {
           formatters: [actionsCellFormatter],
           props: {
             style: {
-              ...lessonEditorTableStyles.actionsCell
-            }
-          }
-        }
-      }
+              ...lessonEditorTableStyles.actionsCell,
+            },
+          },
+        },
+      },
     ];
     return columns;
   };
@@ -129,7 +128,7 @@ function StandardsEditor(props) {
     label: `${standard.frameworkShortcode.toUpperCase()} - ${
       standard.shortcode
     } - ${standard.description}`,
-    standard: standard
+    standard: standard,
   });
 
   const constructSearchOptions = json => {
@@ -154,10 +153,14 @@ function StandardsEditor(props) {
   const searchBoxKey = `${frameworkShortcode},${standardShortcodes}`;
   return (
     <div>
-      <label>
+      <label htmlFor="framework">
         <strong>Filter by framework</strong>
       </label>
-      <select onChange={handleSelectFramework} style={styles.select}>
+      <select
+        onChange={handleSelectFramework}
+        style={styles.select}
+        id="framework"
+      >
         <option value="">(none)</option>
         {props.frameworks.map(framework => (
           <option key={framework.shortcode} value={framework.shortcode}>
@@ -177,7 +180,7 @@ function StandardsEditor(props) {
         searchUrl={'standards/search'}
         constructOptions={constructSearchOptions}
         additionalQueryParams={{
-          framework: frameworkShortcode
+          framework: frameworkShortcode,
         }}
       />
       <br />
@@ -187,9 +190,7 @@ function StandardsEditor(props) {
       </Table.Provider>
       {confirmRemovalDialogOpen && (
         <Dialog
-          body={`Are you sure you want to remove standard "${
-            standardToRemove.shortcode
-          }" from this lesson?`}
+          body={`Are you sure you want to remove standard "${standardToRemove.shortcode}" from this lesson?`}
           cancelText="Cancel"
           confirmText="Delete"
           confirmType="danger"
@@ -210,14 +211,14 @@ StandardsEditor.propTypes = {
 
   // provided by redux
   addStandard: PropTypes.func.isRequired,
-  removeStandard: PropTypes.func.isRequired
+  removeStandard: PropTypes.func.isRequired,
 };
 
 const styles = {
   actionsColumn: {
     display: 'flex',
     justifyContent: 'space-evenly',
-    backgroundColor: 'white'
+    backgroundColor: 'white',
   },
   remove: {
     fontSize: 14,
@@ -226,19 +227,16 @@ const styles = {
     cursor: 'pointer',
     textAlign: 'center',
     width: 50,
-    lineHeight: '30px'
+    lineHeight: '30px',
   },
   select: {
-    width: 400
-  }
+    width: 400,
+  },
 };
 
 export const UnconnectedStandardsEditor = StandardsEditor;
 
-export default connect(
-  state => ({}),
-  {
-    addStandard,
-    removeStandard
-  }
-)(StandardsEditor);
+export default connect(state => ({}), {
+  addStandard,
+  removeStandard,
+})(StandardsEditor);

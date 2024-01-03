@@ -18,3 +18,5 @@ for (int index = 5; index >= 0; index--) {
 
 What would be printed as a result of running this code?
 MARKDOWN
+
+allow_multiple_attempts true

@@ -18,5 +18,5 @@ export default function ResetSuccessDialog({isOpen, handleClose, ...props}) {
 
 ResetSuccessDialog.propTypes = {
   isOpen: PropTypes.bool.isRequired,
-  handleClose: PropTypes.func.isRequired
+  handleClose: PropTypes.func.isRequired,
 };

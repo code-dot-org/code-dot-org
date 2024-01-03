@@ -118,6 +118,7 @@ ne:
           description_short: Create a story or make a game with Gumball Play Lab!
           student_description: Create a story or make a game with Gumball Play Lab!
         starwars:
+          title: 'Star Wars: Building a Galaxy With Code (JavaScript)'
           description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
           description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
           student_description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
@@ -126,7 +127,7 @@ ne:
           description_short: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
           student_description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
         mc:
-          title: Minecraft Hour of Code
+          title: Minecraft Adventurer
           description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world
           description_short: Explore a Minecraft world through code
           student_description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world
@@ -1401,6 +1402,22 @@ ne:
           lesson_groups:
             lessonGroup-2:
               display_name: Content
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
         csp1-2023:
           lesson_groups:
             csp_unit1_2020:
@@ -1431,3 +1448,198 @@ ne:
           lesson_groups:
             csp_unit9_2020:
               display_name: "(old) Unit 9: Data"
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Assessments
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: घटनाहरु
+        express-2023:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: घटनाहरु
+            csf_loops:
+              display_name: Loops
+            csf_conditionals:
+              display_name: Conditionals
+            csf_functions:
+              display_name: Functions
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: For Loops
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: घटनाहरु
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: घटनाहरु
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: घटनाहरु
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digital Citizenship
+            csf_events:
+              display_name: घटनाहरु
+            csf_loops:
+              display_name: Loops
+            csf_conditionals:
+              display_name: Conditionals
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            ramp_up:
+              display_name: Nested Loops
+            csf_functions:
+              display_name: Functions
+            csf_nested_loops:
+              display_name: Conditionals
+        vpl-csd-ci-1:
+          title: 'Module 1 : Préparation à l''enseignement de la résolution de problèmes et de l''informatique'
+          description: |-
+            Ce module d'apprentissage professionnel est conçu pour vous aider à vous préparer à enseigner l'unité Résolution de problèmes et informatique de Code.org.
+
+            **Dans ce module d'apprentissage professionnel, vous devrez :**.
+
+            -   Obtenir une introduction à la résolution de problèmes et à l'informatique.
+            -   Mettre en pratique les concepts clés inclus dans l'unité.
+            -   Explorer les projets de fin de chapitre.
+
+            \*\*Durée suggérée : 30 minutes.
+
+            Traduit avec www.DeepL.com/Translator (version gratuite)
+          student_description: |-
+            Ce module d'apprentissage professionnel est conçu pour vous aider à vous préparer à enseigner l'unité Résolution de problèmes et informatique de Code.org.
+
+            **Dans ce module d'apprentissage professionnel, vous devrez :**.
+
+            -   Obtenir une introduction à la résolution de problèmes et à l'informatique.
+            -   Mettre en pratique les concepts clés inclus dans l'unité.
+            -   Explorer les projets de fin de chapitre.
+
+            \*\*Durée suggérée : 30 minutes.
+
+            Traduit avec www.DeepL.com/Translator (version gratuite)
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Introduction
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Introduction
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital Citizenship
+            lessonGroup-4:
+              display_name: Variables
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital Citizenship
+            lessonGroup-4:
+              display_name: Loops
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital Citizenship
+            lessonGroup-4:
+              display_name: Loops
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital Citizenship
+            lessonGroup-4:
+              display_name: Loops
+            lessonGroup-6:
+              display_name: घटनाहरु
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital Citizenship
+            lessonGroup-4:
+              display_name: Loops
+            lessonGroup-5:
+              display_name: घटनाहरु
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital Citizenship
+            lessonGroup-6:
+              display_name: Loops
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Nested Loops
+            lessonGroup-4:
+              display_name: Functions
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Conditionals
+            lessonGroup-5:
+              display_name: Variables
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Introduction
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Introduction
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Introduction
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Introduction
+        self-paced-pl-csd-unit1-2-2023:
+          title: 'Module 1 : Préparation à l''enseignement de la résolution de problèmes et de l''informatique'
+          description: |-
+            Ce module d'apprentissage professionnel est conçu pour vous aider à vous préparer à enseigner l'unité Résolution de problèmes et informatique de Code.org.
+
+            **Dans ce module d'apprentissage professionnel, vous devrez :**.
+
+            -   Obtenir une introduction à la résolution de problèmes et à l'informatique.
+            -   Mettre en pratique les concepts clés inclus dans l'unité.
+            -   Explorer les projets de fin de chapitre.
+
+            \*\*Durée suggérée : 30 minutes.
+
+            Traduit avec www.DeepL.com/Translator (version gratuite)
+          student_description: |-
+            Ce module d'apprentissage professionnel est conçu pour vous aider à vous préparer à enseigner l'unité Résolution de problèmes et informatique de Code.org.
+
+            **Dans ce module d'apprentissage professionnel, vous devrez :**.
+
+            -   Obtenir une introduction à la résolution de problèmes et à l'informatique.
+            -   Mettre en pratique les concepts clés inclus dans l'unité.
+            -   Explorer les projets de fin de chapitre.
+
+            \*\*Durée suggérée : 30 minutes.
+
+            Traduit avec www.DeepL.com/Translator (version gratuite)

@@ -14,7 +14,7 @@ export default class Alert extends React.Component {
     closeDelayMillis: PropTypes.number,
     sideMargin: PropTypes.number,
     bottomMargin: PropTypes.number,
-    childPadding: PropTypes.string
+    childPadding: PropTypes.string,
   };
 
   render() {
@@ -24,24 +24,24 @@ export default class Alert extends React.Component {
         zIndex: 1000,
         marginTop: 20,
         marginLeft: valueOr(this.props.sideMargin, 50),
-        marginRight: valueOr(this.props.sideMargin, 50)
+        marginRight: valueOr(this.props.sideMargin, 50),
       },
       typeSpecific: {
         error: {
           borderColor: color.bootstrap_error_border,
           backgroundColor: color.bootstrap_error_background,
-          color: color.bootstrap_error_text
+          color: color.bootstrap_error_text,
         },
         warning: {
           borderColor: color.bootstrap_warning_border,
           backgroundColor: color.bootstrap_warning_background,
-          color: color.black
+          color: color.black,
         },
         notification: {
           borderColor: color.light_green,
           backgroundColor: color.lighter_green,
-          color: color.realgreen
-        }
+          color: color.realgreen,
+        },
       },
       child: {
         // from bootstrap's alert
@@ -49,7 +49,7 @@ export default class Alert extends React.Component {
         marginBottom: valueOr(this.props.bottomMargin, 20),
         textShadoow: '0 1px 0 rgba(255, 255, 255, 0.5)',
         border: '1px solid',
-        borderRadius: 4
+        borderRadius: 4,
       },
       closeButton: {
         margin: 0,
@@ -68,13 +68,13 @@ export default class Alert extends React.Component {
         opacity: 0.2,
         position: 'relative',
         top: -2,
-        right: -21
-      }
+        right: -21,
+      },
     };
 
     const childStyle = {
       ...styles.child,
-      ...styles.typeSpecific[this.props.type]
+      ...styles.typeSpecific[this.props.type],
     };
     let closeButton = '';
     if (this.props.closeDelayMillis) {
@@ -84,6 +84,7 @@ export default class Alert extends React.Component {
         <button
           type="button"
           style={styles.closeButton}
+          className="no-mc"
           onClick={this.props.onClose}
         >
           <span>&times;</span>

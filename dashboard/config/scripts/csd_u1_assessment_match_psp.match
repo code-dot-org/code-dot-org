@@ -10,3 +10,5 @@ question 'Try'
 answer 'Painting the mural.'
 question 'Reflect'
 answer 'Discussing what they like about their mural and how they could improve it.'
+
+allow_multiple_attempts true

@@ -2,6 +2,254 @@
   "fil-PH": {
     "data": {
       "mini_rubric": {
+        "CDU U6 Playground Sound Board_2019": {
+          "rubric_key_concept": "Gumawa at baguhin ang mga hilera, bumuo ng software para makontrol ang iba't ibang pisikal na device.",
+          "rubric_performance_level_1": "Gumagana ang program gaya ng inilarawan, na may hindi bababa sa apat na board ng kaganapan na bawat isa ay nagpapalitaw ng magkakaibang serye ng mga tala.",
+          "rubric_performance_level_2": "Ang program ay gumaganap ng serye ng mga tala kapag na-trigger ng partikular na kaganapan sa board, ngunit maaaring may mga error sa code na pumipigil dito na gumana nang eksakto tulad ng inilarawan.",
+          "rubric_performance_level_3": "Mayroong code sa program na maaaring gumawa ng serye ng mga tala sa buzzer, ngunit ang code ay hindi maaaring ma-trigger ng board ng kaganapan, o ang mga malalaking error sa code ay pumipigil sa pag-play ng mga tala.",
+          "rubric_performance_level_4": "Walang mga pagkakasunud-sunod ng mga tala sa program, o walang code upang makagawa ng buzzer output."
+        },
+        "CDU U6 Playground Sound Board_2021": {
+          "rubric_key_concept": "Gumawa at baguhin ang mga hilera, bumuo ng software para makontrol ang iba't ibang pisikal na device.",
+          "rubric_performance_level_1": "Gumagana ang program gaya ng inilarawan, na may hindi bababa sa apat na board ng kaganapan na bawat isa ay nagpapalitaw ng magkakaibang serye ng mga tala.",
+          "rubric_performance_level_2": "Ang program ay gumaganap ng serye ng mga tala kapag na-trigger ng partikular na kaganapan sa board, ngunit maaaring may mga error sa code na pumipigil dito na gumana nang eksakto tulad ng inilarawan.",
+          "rubric_performance_level_3": "Mayroong code sa program na maaaring gumawa ng serye ng mga tala sa buzzer, ngunit ang code ay hindi maaaring ma-trigger ng board ng kaganapan, o ang mga malalaking error sa code ay pumipigil sa pag-play ng mga tala.",
+          "rubric_performance_level_4": "Walang mga pagkakasunud-sunod ng mga tala sa program, o walang code upang makagawa ng buzzer output."
+        },
+        "CSD U6 LED all_2019": {
+          "rubric_key_concept": "Bumuo ng software para makontrol ang iba't ibang pisikal na device.",
+          "rubric_performance_level_1": "Gumagana ang program gaya ng inilarawan sa mga tagubilin, na ang mga button ay nagti-trigger sa LED na i-on, kumislap, pulso, o i-off. Walang hindi kinakailangang code.",
+          "rubric_performance_level_2": "Ang mga on at off na button ng program ay parehong gumagana, ngunit maaaring mayroong hindi kinakailangang code na hindi makakaapekto sa functionality ng dalawang button na iyon.",
+          "rubric_performance_level_3": "Hindi bababa sa isa sa mga button maliban sa \"on\" ay gumagana, o ang mga tamang block para makontrol ang LED ay kasama sa program, ngunit hindi na-trigger nang tama ng isang kaganapan.",
+          "rubric_performance_level_4": "Walang mga button maliban sa \"on\" na gumagana, at walang code na maaaring magamit upang kontrolin ang LED."
+        },
+        "CSD U6 LED all_2021": {
+          "rubric_key_concept": "Bumuo ng software para makontrol ang iba't ibang pisikal na device.",
+          "rubric_performance_level_1": "Gumagana ang program gaya ng inilarawan sa mga tagubilin, na ang mga button ay nagti-trigger sa LED na i-on, kumislap, pulso, o i-off. Walang hindi kinakailangang code.",
+          "rubric_performance_level_2": "Ang mga on at off na button ng program ay parehong gumagana, ngunit maaaring mayroong hindi kinakailangang code na hindi makakaapekto sa functionality ng dalawang button na iyon.",
+          "rubric_performance_level_3": "Hindi bababa sa isa sa mga button maliban sa \"on\" ay gumagana, o ang mga tamang block para makontrol ang LED ay kasama sa program, ngunit hindi na-trigger nang tama ng isang kaganapan.",
+          "rubric_performance_level_4": "Walang mga button maliban sa \"on\" na gumagana, at walang code na maaaring magamit upang kontrolin ang LED."
+        },
+        "CSD U6 analog rgb 3_2019": {
+          "rubric_key_concept": "Bumuo ng program na tumutugon sa iba't ibang input ng hardware, kabilang ang mga ginagawa at hindi aktibong kinokontrol ng user. Kilalanin ang pangangailangan sa iba't ibang uri ng input, parehong analog at digital, at kinakatawan ang mga value ng mga input na iyon sa iba't ibang paraan.",
+          "rubric_performance_level_1": "Ang program ay nagpapakita ng malawak na hanay ng mga kulay bilang tugon sa mga pagbabago sa liwanag, temperatura, at tunog. Walang hindi kinakailangang code sa program",
+          "rubric_performance_level_2": "Nakikita ng program ang mga pagbabago sa liwanag, temperatura at mga tunog, at nakikitang nagbabago ng kulay bilang tugon sa kahit isa sa mga sensor na ito.",
+          "rubric_performance_level_3": "Ang program ay nagbabago ng kulay at gumagamit ng hindi bababa sa tatlong analog sensor upang makita ang mga pagbabago sa kapaligiran.",
+          "rubric_performance_level_4": "Ang program ay gumagamit ng mga analog sensor o hindi nagbabago ng mga kulay."
+        },
+        "CSD U6 analog rgb 3_2021": {
+          "rubric_key_concept": "Bumuo ng program na tumutugon sa iba't ibang input ng hardware, kabilang ang mga ginagawa at hindi aktibong kinokontrol ng user. Kilalanin ang pangangailangan sa iba't ibang uri ng input, parehong analog at digital, at kinakatawan ang mga value ng mga input na iyon sa iba't ibang paraan.",
+          "rubric_performance_level_1": "Ang program ay nagpapakita ng malawak na hanay ng mga kulay bilang tugon sa mga pagbabago sa liwanag, temperatura, at tunog. Walang hindi kinakailangang code sa program",
+          "rubric_performance_level_2": "Nakikita ng program ang mga pagbabago sa liwanag, temperatura at mga tunog, at nakikitang nagbabago ng kulay bilang tugon sa kahit isa sa mga sensor na ito.",
+          "rubric_performance_level_3": "Ang program ay nagbabago ng kulay at gumagamit ng hindi bababa sa tatlong analog sensor upang makita ang mga pagbabago sa kapaligiran.",
+          "rubric_performance_level_4": "Ang program ay gumagamit ng mga analog sensor o hindi nagbabago ng mga kulay."
+        },
+        "CSD U6 circuit smart bike blinker buttons_2019": {
+          "rubric_key_concept": "Kumonekta, mag-troubleshoot, at mag-debug ng mga panlabas na device at pinagsamang mga computing system.",
+          "rubric_performance_level_1": "Gumagana ang program tulad ng inilarawan, na ang kaliwang panlabas na LED ay kumikislap kapag ang kaliwang button ay pinindot at ang kanang panlabas na LED ay kumikislap kapag ang kanang button ay pinindot.",
+          "rubric_performance_level_2": "Tumutugon ang panlabas na LED kapag pinindot ang button sa circuit playground, ngunit maaaring hindi gumana nang eksakto tulad ng inilarawan.",
+          "rubric_performance_level_3": "Ang panlabas na LED ay pisikal na konektado sa circuit playground, at mayroong code upang kontrolin ang LED mula sa program, ngunit pinipigilan ito ng mga error na tumugon nang maayos sa board.",
+          "rubric_performance_level_4": "Walang panlabas na LED na konektado sa board o walang code na magpapahintulot sa program na kontrolin ang LED."
+        },
+        "CSD U6 circuit smart bike blinker buttons_2021": {
+          "rubric_key_concept": "Kumonekta, mag-troubleshoot, at mag-debug ng mga panlabas na device at pinagsamang mga computing system.",
+          "rubric_performance_level_1": "Gumagana ang program tulad ng inilarawan, na ang kaliwang panlabas na LED ay kumikislap kapag ang kaliwang button ay pinindot at ang kanang panlabas na LED ay kumikislap kapag ang kanang button ay pinindot.",
+          "rubric_performance_level_2": "Tumutugon ang panlabas na LED kapag pinindot ang button sa circuit playground, ngunit maaaring hindi gumana nang eksakto tulad ng inilarawan.",
+          "rubric_performance_level_3": "Ang panlabas na LED ay pisikal na konektado sa circuit playground, at mayroong code upang kontrolin ang LED mula sa program, ngunit pinipigilan ito ng mga error na tumugon nang maayos sa board.",
+          "rubric_performance_level_4": "Walang panlabas na LED na konektado sa board o walang code na magpapahintulot sa program na kontrolin ang LED."
+        },
+        "CSD U6 circuit smart bike final_2019": {
+          "rubric_key_concept": "Bumuo ng interactive na pisikal na prototype na nagsasama ng hardware at software, kabilang ang mga simpleng circuit.",
+          "rubric_performance_level_1": "Gumagana ang program tulad ng inilarawan, na may panlabas na button na kumokontrol sa buzzer at dalawang panlabas na LED na kinokontrol ng kaliwa at kanang mga button. Ang mga kulay na LED ay naka-on sa dilim.",
+          "rubric_performance_level_2": "Ang program ay gumagana sa pangkalahatan tulad ng inilarawan, na may panlabas na button na nagpapalitaw ng tugon sa board, at mga panlabas na LED na kinokontrol ng pakikipag-ugnayan ng board.",
+          "rubric_performance_level_3": "Ang program ay nagsasama ng ilang elemento ng disenyo, kabilang ang hindi bababa sa isang panlabas na elemento na konektado sa board na may circuit at maaaring tumugon o magti-trigger ng tugon sa board.",
+          "rubric_performance_level_4": "Ang program ay hindi nagsasama ng mga panlabas na elemento o ang mga panlabas na elemento ay hindi maaaring makipag-ugnayan sa board."
+        },
+        "CSD U6 circuit smart bike final_2021": {
+          "rubric_key_concept": "Bumuo ng interactive na pisikal na prototype na nagsasama ng hardware at software, kabilang ang mga simpleng circuit.",
+          "rubric_performance_level_1": "Gumagana ang program tulad ng inilarawan, na may panlabas na button na kumokontrol sa buzzer at dalawang panlabas na LED na kinokontrol ng kaliwa at kanang mga button. Ang mga kulay na LED ay naka-on sa dilim.",
+          "rubric_performance_level_2": "Ang program ay gumagana sa pangkalahatan tulad ng inilarawan, na may panlabas na button na nagpapalitaw ng tugon sa board, at mga panlabas na LED na kinokontrol ng pakikipag-ugnayan ng board.",
+          "rubric_performance_level_3": "Ang program ay nagsasama ng ilang elemento ng disenyo, kabilang ang hindi bababa sa isang panlabas na elemento na konektado sa board na may circuit at maaaring tumugon o magti-trigger ng tugon sa board.",
+          "rubric_performance_level_4": "Ang program ay hindi nagsasama ng mga panlabas na elemento o ang mga panlabas na elemento ay hindi maaaring makipag-ugnayan sa board."
+        },
+        "CSD U6 create LED app 2_2019": {
+          "rubric_key_concept": "Bumuo ng software para makontrol ang iba't ibang pisikal na device.",
+          "rubric_performance_level_1": "Binibigyang-daan ng program ang user na kontrolin ang LED sa maraming paraan, at lahat ng interactive na elemento ay lalabas na gumagana ayon sa nilalayon.",
+          "rubric_performance_level_2": "Binibigyang-daan ng program ang user na kontrolin ang LED sa maraming paraan, at lahat ng interactive na elemento ay lalabas na gumagana ayon sa nilalayon.",
+          "rubric_performance_level_3": "Ang program ay may code na nauugnay sa LED, ngunit may mga makabuluhang error na pumipigil sa user na kontrolin ang LED ayon sa nilalayon.",
+          "rubric_performance_level_4": "Walang code na nauugnay sa pagkontrol sa LED sa app."
+        },
+        "CSD U6 create LED app 2_2021": {
+          "rubric_key_concept": "Bumuo ng software para makontrol ang iba't ibang pisikal na device.",
+          "rubric_performance_level_1": "Binibigyang-daan ng program ang user na kontrolin ang LED sa maraming paraan, at lahat ng interactive na elemento ay lalabas na gumagana ayon sa nilalayon.",
+          "rubric_performance_level_2": "Binibigyang-daan ng program ang user na kontrolin ang LED sa maraming paraan, at lahat ng interactive na elemento ay lalabas na gumagana ayon sa nilalayon.",
+          "rubric_performance_level_3": "Ang program ay may code na nauugnay sa LED, ngunit may mga makabuluhang error na pumipigil sa user na kontrolin ang LED ayon sa nilalayon.",
+          "rubric_performance_level_4": "Walang code na nauugnay sa pagkontrol sa LED sa app."
+        },
+        "CSD U6 emotion machine 4_2019": {
+          "rubric_key_concept": "Gumamit ng mga tagapangasiwa ng kaganapan upang tumugon sa pakikipag-ugnayan ng user, at gumamit ng mga setting upang manipulahin ang mga katangian ng mga elemento sa isang system.",
+          "rubric_performance_level_1": "Ang program ay may tatlong mga button na may tamang mga label, at kapag ang button ay na-click, ang tamang icon at paglalarawan ng emosyon ay lilitaw.",
+          "rubric_performance_level_2": "Ang program ay may tatlong mga button, at ang program ay tumutugon sa ilang paraan sa bawat pag-click sa button, ngunit ang tugon ay maaaring hindi eksakto tulad ng inilarawan sa mga tagubilin.",
+          "rubric_performance_level_3": "Hindi bababa sa isang button maliban sa \"Masaya\" na button ang tumutugon sa pag-click sa anumang paraan.",
+          "rubric_performance_level_4": "Walang mga button maliban sa \"Masaya\" na button ang tumutugon sa pag-click."
+        },
+        "CSD U6 emotion machine 4_2021": {
+          "rubric_key_concept": "Gumamit ng mga tagapangasiwa ng kaganapan upang tumugon sa pakikipag-ugnayan ng user, at gumamit ng mga setting upang manipulahin ang mga katangian ng mga elemento sa isang system.",
+          "rubric_performance_level_1": "Ang program ay may tatlong mga button na may tamang mga label, at kapag ang button ay na-click, ang tamang icon at paglalarawan ng emosyon ay lilitaw.",
+          "rubric_performance_level_2": "Ang program ay may tatlong mga button, at ang program ay tumutugon sa ilang paraan sa bawat pag-click sa button, ngunit ang tugon ay maaaring hindi eksakto tulad ng inilarawan sa mga tagubilin.",
+          "rubric_performance_level_3": "Hindi bababa sa isang button maliban sa \"Masaya\" na button ang tumutugon sa pag-click sa anumang paraan.",
+          "rubric_performance_level_4": "Walang mga button maliban sa \"Masaya\" na button ang tumutugon sa pag-click."
+        },
+        "CSD U6 for loop led personalize_2019": {
+          "rubric_performance_level_1": "Gumagana ang lahat ng limang button gaya ng inilarawan gamit ang sa mga loop, at ginagamit ng mga loop ang haba ng hilera bilang kondisyon ng paglabas, na walang mga error o hindi kinakailangang code.",
+          "rubric_performance_level_2": "Ang mga on at off na button ay gumagana tulad ng inilarawan gamit ang para sa mga loop, at walang mga error sa code.",
+          "rubric_performance_level_3": "Ang mga para sa loop ay ginagamit upang i-on at i-off ang mga LED, ngunit maaaring may mga error na pumipigil sa mga button na gumana tulad ng inilarawan.",
+          "rubric_performance_level_4": "Walang para sa mga loop sa code."
+        },
+        "CSD U6 for loop led personalize_2021": {
+          "rubric_performance_level_1": "Gumagana ang lahat ng limang button gaya ng inilarawan gamit ang sa mga loop, at ginagamit ng mga loop ang haba ng hilera bilang kondisyon ng paglabas, na walang mga error o hindi kinakailangang code.",
+          "rubric_performance_level_2": "Ang mga on at off na button ay gumagana tulad ng inilarawan gamit ang para sa mga loop, at walang mga error sa code.",
+          "rubric_performance_level_3": "Ang mga para sa loop ay ginagamit upang i-on at i-off ang mga LED, ngunit maaaring may mga error na pumipigil sa mga button na gumana tulad ng inilarawan.",
+          "rubric_performance_level_4": "Walang para sa mga loop sa code."
+        },
+        "CSD U6 getProperty buzzer_2019": {
+          "rubric_key_concept": "Gumamit ng mga getter upang ma-access ang mga katangian ng mga elemento sa isang system.",
+          "rubric_performance_level_1": "Gumagana ang program tulad ng inilarawan, gamit ang value ng drop down na menu upang baguhin ang haba ng buzzer.",
+          "rubric_performance_level_2": "Ginagamit ng program ang value ng drop down na menu, ngunit maaaring may mga maliliit na error na pumipigil sa program na tumakbo nang eksakto tulad ng inilarawan.",
+          "rubric_performance_level_3": "Kasama sa program ang code sa pagkuha ng value ng drop down na menu, ngunit pinipigilan ito ng malalaking error sa code na gumana nang maayos.",
+          "rubric_performance_level_4": "Hindi ina-access ng program ang value ng drop down na menu."
+        },
+        "CSD U6 getProperty buzzer_2021": {
+          "rubric_key_concept": "Gumamit ng mga getter upang ma-access ang mga katangian ng mga elemento sa isang system.",
+          "rubric_performance_level_1": "Gumagana ang program tulad ng inilarawan, gamit ang value ng drop down na menu upang baguhin ang haba ng buzzer.",
+          "rubric_performance_level_2": "Ginagamit ng program ang value ng drop down na menu, ngunit maaaring may mga maliliit na error na pumipigil sa program na tumakbo nang eksakto tulad ng inilarawan.",
+          "rubric_performance_level_3": "Kasama sa program ang code sa pagkuha ng value ng drop down na menu, ngunit pinipigilan ito ng malalaking error sa code na gumana nang maayos.",
+          "rubric_performance_level_4": "Hindi ina-access ng program ang value ng drop down na menu."
+        },
+        "CSD U6 goalie_2019": {
+          "rubric_key_concept": "Gumamit ng mga getter at setter para manipulahin ang mga katangian.",
+          "rubric_performance_level_1": "Kapag ang program ay tumatakbo, ang bola ay gumagalaw nang maayos sa kaliwa ng screen sa isang makatwirang bilis.",
+          "rubric_performance_level_2": "Kapag ang program ay tumakbo, ang bola ay gumagalaw sa buong screen.",
+          "rubric_performance_level_3": "Na-access ng program ang kasalukuyang posisyon ng bola at ginamit ito para i-update ang property na \"x\" ng bola, ngunit pinipigilan ng mga error sa program ang paglipat ng bola sa screen.",
+          "rubric_performance_level_4": "Ang kasalukuyang posisyon ng bola ay hindi ginagamit upang i-update ang \"x\" na katangian nito."
+        },
+        "CSD U6 goalie_2021": {
+          "rubric_key_concept": "Gumamit ng mga getter at setter para manipulahin ang mga katangian.",
+          "rubric_performance_level_1": "Kapag ang program ay tumatakbo, ang bola ay gumagalaw nang maayos sa kaliwa ng screen sa isang makatwirang bilis.",
+          "rubric_performance_level_2": "Kapag ang program ay tumakbo, ang bola ay gumagalaw sa buong screen.",
+          "rubric_performance_level_3": "Na-access ng program ang kasalukuyang posisyon ng bola at ginamit ito para i-update ang property na \"x\" ng bola, ngunit pinipigilan ng mga error sa program ang paglipat ng bola sa screen.",
+          "rubric_performance_level_4": "Ang kasalukuyang posisyon ng bola ay hindi ginagamit upang i-update ang \"x\" na katangian nito."
+        },
+        "CSD U6 light pattern off_2019": {
+          "rubric_key_concept": "I-access ang mga elemento sa mga hilera, at bumuo ng software para makontrol ang iba't ibang pisikal na device.",
+          "rubric_performance_level_1": "Ang program ay gumagana tulad ng inilarawan, may tatlong mga pindutan, dalawa sa mga ito ay pinaaandar ang mga kulay na LED sa natatanging pattern, at isa sa kung saan ay pinapatay ang mga kulay na LED. Walang hindi kinakailangang code sa program.",
+          "rubric_performance_level_2": "Ang program ay karaniwang gumagana tulad ng inilarawan, may tatlong mga button, dalawa sa mga ito ay pinaaandar ang mga ilaw sa natatanging pattern, at function na pinapatay ang mga kulay na LED. Maaaring may mga maliliit na error sa program.",
+          "rubric_performance_level_3": "Mayroong code sa program na nag-on at nag-off ng mga LED, ngunit maaaring may mga malalaking error na pumipigil sa program na gumana nang maayos.",
+          "rubric_performance_level_4": "Walang bagong code na nag-on at nag-off sa mga LED."
+        },
+        "CSD U6 light pattern off_2021": {
+          "rubric_key_concept": "I-access ang mga elemento sa mga hilera, at bumuo ng software para makontrol ang iba't ibang pisikal na device.",
+          "rubric_performance_level_1": "Ang program ay gumagana tulad ng inilarawan, may tatlong mga pindutan, dalawa sa mga ito ay pinaaandar ang mga kulay na LED sa natatanging pattern, at isa sa kung saan ay pinapatay ang mga kulay na LED. Walang hindi kinakailangang code sa program.",
+          "rubric_performance_level_2": "Ang program ay karaniwang gumagana tulad ng inilarawan, may tatlong mga button, dalawa sa mga ito ay pinaaandar ang mga ilaw sa natatanging pattern, at function na pinapatay ang mga kulay na LED. Maaaring may mga maliliit na error sa program.",
+          "rubric_performance_level_3": "Mayroong code sa program na nag-on at nag-off ng mga LED, ngunit maaaring may mga malalaking error na pumipigil sa program na gumana nang maayos.",
+          "rubric_performance_level_4": "Walang bagong code na nag-on at nag-off sa mga LED."
+        },
+        "CSD U6 params starchaser 5_2019": {
+          "rubric_performance_level_1": "Gumagana ang program tulad ng inilarawan at kasama ang lahat ng mga function na may mga parameter tulad ng inilarawan sa mga tagubilin. (moveStar, loopStar, at checkStar)",
+          "rubric_performance_level_2": "Kasama sa program ang maraming function na may mga parameter at sa pangkalahatan ay gumagana tulad ng inilarawan, ngunit maaaring may kasamang maliliit na error na nakakaapekto sa gameplay.",
+          "rubric_performance_level_3": "Kasama sa program ang hindi bababa sa isang function na may mga parameter, ngunit maaaring may mga malalaking error sa code na pumipigil sa laro na gumana.",
+          "rubric_performance_level_4": "Hindi kasama ng program ang anumang mga function na may mga parameter."
+        },
+        "CSD U6 params starchaser 5_2021": {
+          "rubric_performance_level_1": "Gumagana ang program tulad ng inilarawan at kasama ang lahat ng mga function na may mga parameter tulad ng inilarawan sa mga tagubilin. (moveStar, loopStar, at checkStar)",
+          "rubric_performance_level_2": "Kasama sa program ang maraming function na may mga parameter at sa pangkalahatan ay gumagana tulad ng inilarawan, ngunit maaaring may kasamang maliliit na error na nakakaapekto sa gameplay.",
+          "rubric_performance_level_3": "Kasama sa program ang hindi bababa sa isang function na may mga parameter, ngunit maaaring may mga malalaking error sa code na pumipigil sa laro na gumana.",
+          "rubric_performance_level_4": "Hindi kasama ng program ang anumang mga function na may mga parameter."
+        },
+        "CSD U6 setProperty hidden 2_2019": {
+          "rubric_key_concept": "Gumamit ng mga tagapangasiwa ng mga kaganapan upang tumugon sa pakikipag-ugnayan ng user",
+          "rubric_performance_level_1": "Kapag pinindot ang \"itigilAlarmButton\", ang status text ay magiging \"NAKA-OFF\" at mawawala ang button. Walang dagdag na code sa program.",
+          "rubric_performance_level_2": "Kapag pinindot ang \"itigilAlarmButton,\" tumutugon ang program sa ilang paraan, ngunit hindi kinakailangan na tulad ng inilarawan sa mga tagubilin, o maaaring mayroong hindi kinakailangang code na na-trigger ng kaganapan.",
+          "rubric_performance_level_3": "Nagawa ang pangalawang kaganapan, ngunit maaaring hindi ito ma-trigger sa mga naaangkop na oras, o maaaring lumikha ang program ng mga hindi kinakailangang kaganapan.",
+          "rubric_performance_level_4": "Walang nalikhang mga bagong kaganapan."
+        },
+        "CSD U6 setProperty hidden 2_2021": {
+          "rubric_key_concept": "Gumamit ng mga tagapangasiwa ng mga kaganapan upang tumugon sa pakikipag-ugnayan ng user",
+          "rubric_performance_level_1": "Kapag pinindot ang \"itigilAlarmButton\", ang status text ay magiging \"NAKA-OFF\" at mawawala ang button. Walang dagdag na code sa program.",
+          "rubric_performance_level_2": "Kapag pinindot ang \"itigilAlarmButton,\" tumutugon ang program sa ilang paraan, ngunit hindi kinakailangan na tulad ng inilarawan sa mga tagubilin, o maaaring mayroong hindi kinakailangang code na na-trigger ng kaganapan.",
+          "rubric_performance_level_3": "Nagawa ang pangalawang kaganapan, ngunit maaaring hindi ito ma-trigger sa mga naaangkop na oras, o maaaring lumikha ang program ng mga hindi kinakailangang kaganapan.",
+          "rubric_performance_level_4": "Walang nalikhang mga bagong kaganapan."
+        },
+        "CSD U6 setProperty xy_2019": {
+          "rubric_key_concept": "Gumamit ng mga setter upang i-access at manipulahin ang mga katangian ng mga elemento sa isang system.",
+          "rubric_performance_level_1": "Ang pulang parihaba ay nasa tamang posisyon, at walang ibang mga parihaba ang nailipat. Ang program ay gumagamit lamang ng dalawang block.",
+          "rubric_performance_level_2": "Inilipat ang pulang parihaba, ngunit maaaring wala ito sa tamang posisyon, o maaaring may mga karagdagang block ng code. Ang iba pang mga parihaba ay nasa kanilang orihinal na mga posisyon.",
+          "rubric_performance_level_3": "Ang ilang mga parihaba ay inilipat, ngunit ang larawan ay hindi katulad ng halimbawa.",
+          "rubric_performance_level_4": "ng mga parihaba ay hindi nailipat."
+        },
+        "CSD U6 setProperty xy_2021": {
+          "rubric_key_concept": "Gumamit ng mga setter upang i-access at manipulahin ang mga katangian ng mga elemento sa isang system.",
+          "rubric_performance_level_1": "Ang pulang parihaba ay nasa tamang posisyon, at walang ibang mga parihaba ang nailipat. Ang program ay gumagamit lamang ng dalawang block.",
+          "rubric_performance_level_2": "Inilipat ang pulang parihaba, ngunit maaaring wala ito sa tamang posisyon, o maaaring may mga karagdagang block ng code. Ang iba pang mga parihaba ay nasa kanilang orihinal na mga posisyon.",
+          "rubric_performance_level_3": "Ang ilang mga parihaba ay inilipat, ngunit ang larawan ay hindi katulad ng halimbawa.",
+          "rubric_performance_level_4": "ng mga parihaba ay hindi nailipat."
+        },
+        "CSD U6 tugowar buzzer_2019": {
+          "rubric_key_concept": "Bumuo ng program na tumutugon sa iba't ibang input ng hardware, lumikha at gumamit ng function na gumagamit ng mga parameter upang gawing pangkalahatan ang pag-uugali.",
+          "rubric_performance_level_1": "Ang program ay tumutugon sa kaliwa at kanang mga button at gumagamit ng maraming mga function na may mga parameter tulad ng inilarawan sa gabay ng proyekto.",
+          "rubric_performance_level_2": "Tumutugon ang program sa kahit isang hardware input at gumagamit ng kahit isang function na may parameter gaya ng inilalarawan sa gabay ng proyekto.",
+          "rubric_performance_level_3": "Tumutugon ang program sa input ng hardware at gumagamit ng function na may parameter, ngunit maaaring may mga error na pumipigil sa kanila na gumana tulad ng inilarawan.",
+          "rubric_performance_level_4": "Ang program ay hindi gumagamit ng hardware input o hindi kasama ang function na may mga parameter."
+        },
+        "CSD U6 tugowar buzzer_2021": {
+          "rubric_key_concept": "Bumuo ng program na tumutugon sa iba't ibang input ng hardware, lumikha at gumamit ng function na gumagamit ng mga parameter upang gawing pangkalahatan ang pag-uugali.",
+          "rubric_performance_level_1": "Ang program ay tumutugon sa kaliwa at kanang mga button at gumagamit ng maraming mga function na may mga parameter tulad ng inilarawan sa gabay ng proyekto.",
+          "rubric_performance_level_2": "Tumutugon ang program sa kahit isang hardware input at gumagamit ng kahit isang function na may parameter gaya ng inilalarawan sa gabay ng proyekto.",
+          "rubric_performance_level_3": "Tumutugon ang program sa input ng hardware at gumagamit ng function na may parameter, ngunit maaaring may mga error na pumipigil sa kanila na gumana tulad ng inilarawan.",
+          "rubric_performance_level_4": "Ang program ay hindi gumagamit ng hardware input o hindi kasama ang function na may mga parameter."
+        },
+        "CSDU6 - LED toggle buttonL up_2019": {
+          "rubric_key_concept": "Bumuo ng program na tumutugon sa iba't ibang input ng hardware.",
+          "rubric_performance_level_1": "Gumagana ang program tulad ng inilarawan, na ang LED ay naka-on kapag pinindot ng user ang button pababa at naka-off kapag binitawan ng user ang button. Walang hindi kinakailangang code.",
+          "rubric_performance_level_2": "Gumagamit ang program ng tagapangasiwa ng kaganapan para makita ang pagbitaw ng button, ngunit maaaring hindi ito tumugon gaya ng inilarawan, o maaaring may hindi kinakailangang code na kasama sa program.",
+          "rubric_performance_level_3": "Gumagamit ang program ng tagapangasiwa ng board ng kaganapan, ngunit may sapat na mga error na sapat na hindi matukoy ng program ang paglabas ng button.",
+          "rubric_performance_level_4": "Ang program ay hindi gumagamit ng tagapangasiwa ng board ng kaganapan."
+        },
+        "CSDU6 - LED toggle buttonL up_2021": {
+          "rubric_key_concept": "Bumuo ng program na tumutugon sa iba't ibang input ng hardware.",
+          "rubric_performance_level_1": "Gumagana ang program tulad ng inilarawan, na ang LED ay naka-on kapag pinindot ng user ang button pababa at naka-off kapag binitawan ng user ang button. Walang hindi kinakailangang code.",
+          "rubric_performance_level_2": "Gumagamit ang program ng tagapangasiwa ng kaganapan para makita ang pagbitaw ng button, ngunit maaaring hindi ito tumugon gaya ng inilarawan, o maaaring may hindi kinakailangang code na kasama sa program.",
+          "rubric_performance_level_3": "Gumagamit ang program ng tagapangasiwa ng board ng kaganapan, ngunit may sapat na mga error na sapat na hindi matukoy ng program ang paglabas ng button.",
+          "rubric_performance_level_4": "Ang program ay hindi gumagamit ng tagapangasiwa ng board ng kaganapan."
+        },
+        "CSDU6 arrays select variable_2019": {
+          "rubric_key_concept": "I-access ang isang elemento sa isang hilera.",
+          "rubric_performance_level_1": "Ang program ay random na nagpapakita ng pagtutugma ng kulay at kumbinasyon ng icon tulad ng inilarawan sa mga tagubilin. Ang mga elemento sa hilera ay ina-access gamit ang variable na \"myIndex\", at walang hindi kinakailangang code sa program.",
+          "rubric_performance_level_2": "Ang program ay random na nagpapakita ng kumbinasyon ng kulay at icon. Ang mga elemento sa hilera ay ina-access gamit ang variable na \"myIndex\", kahit na maaaring may mga maliliit na error na pumipigil sa program na tumakbo nang eksakto tulad ng inilarawan.",
+          "rubric_performance_level_3": "Ginagamit ang index notation upang ma-access ang elemento sa isang hilera, bagama't maaaring may malalaking error sa program na pumipigil sa paggana nito nang maayos.",
+          "rubric_performance_level_4": "Hindi ginagamit ang index notation."
+        },
+        "CSDU6 arrays select variable_2021": {
+          "rubric_key_concept": "I-access ang isang elemento sa isang hilera.",
+          "rubric_performance_level_1": "Ang program ay random na nagpapakita ng pagtutugma ng kulay at kumbinasyon ng icon tulad ng inilarawan sa mga tagubilin. Ang mga elemento sa hilera ay ina-access gamit ang variable na \"myIndex\", at walang hindi kinakailangang code sa program.",
+          "rubric_performance_level_2": "Ang program ay random na nagpapakita ng kumbinasyon ng kulay at icon. Ang mga elemento sa hilera ay ina-access gamit ang variable na \"myIndex\", kahit na maaaring may mga maliliit na error na pumipigil sa program na tumakbo nang eksakto tulad ng inilarawan.",
+          "rubric_performance_level_3": "Ginagamit ang index notation upang ma-access ang elemento sa isang hilera, bagama't maaaring may malalaking error sa program na pumipigil sa paggana nito nang maayos.",
+          "rubric_performance_level_4": "Hindi ginagamit ang index notation."
+        },
+        "CSDU6 making new arrays_2019": {
+          "rubric_key_concept": "Gumawa at baguhin ang mga hilera.",
+          "rubric_performance_level_1": "Ang isang bagong hilera ay nilikha at iniimbak sa variable, at ang mga elemento ng hilera ay random na ina-access upang i-play kapag pinindot ang kanang button.",
+          "rubric_performance_level_2": "Ang isang bagong hilera ay nilikha at iniimbak sa variable, ngunit maaaring may mga hindi nauugnay na mga error na pumipigil sa tala sa pag-play kapag pinindot ang kanang button.",
+          "rubric_performance_level_3": "Ang bagong hilera ay nilikha, ngunit ito ay maaaring hindi naka-imbak sa elemento, o ito ay walang laman, kaya ang program ay hindi maaaring gumana tulad ng inilarawan.",
+          "rubric_performance_level_4": "Walang mga hilera sa program."
+        },
+        "CSDU6 making new arrays_2021": {
+          "rubric_key_concept": "Gumawa at baguhin ang mga hilera.",
+          "rubric_performance_level_1": "Ang isang bagong hilera ay nilikha at iniimbak sa variable, at ang mga elemento ng hilera ay random na ina-access upang i-play kapag pinindot ang kanang button.",
+          "rubric_performance_level_2": "Ang isang bagong hilera ay nilikha at iniimbak sa variable, ngunit maaaring may mga hindi nauugnay na mga error na pumipigil sa tala sa pag-play kapag pinindot ang kanang button.",
+          "rubric_performance_level_3": "Ang bagong hilera ay nilikha, ngunit ito ay maaaring hindi naka-imbak sa elemento, o ito ay walang laman, kaya ang program ay hindi maaaring gumana tulad ng inilarawan.",
+          "rubric_performance_level_4": "Walang mga hilera sa program."
+        },
         "allthethings-mini-rubric-gamelab": {
           "rubric_key_concept": "Pangunahing Konsepto"
         }

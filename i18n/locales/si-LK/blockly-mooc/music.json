@@ -1,0 +1,16 @@
+{
+  "blockly_blockRepeatTooltip": "repeat",
+  "blockly_blockWhenRun": "දුවන විට",
+  "blockly_blockWhenRunTooltip": "දුවන විට",
+  "blockly_functionNamePlaceholder": "මගේ ශ්‍රිතය",
+  "blockly_toolboxCategoryEvents": "වැඩසටහන්",
+  "blockly_toolboxCategoryFunctions": "ශ්‍රිතයන්",
+  "blockly_toolboxCategoryLogic": "තර්කය",
+  "blockly_toolboxCategoryMath": "ගණිත",
+  "blockly_toolboxCategoryVariables": "විචල්‍යන්",
+  "share": "බෙදා ගන්න",
+  "startOver": "මුල සිට නැවත අරඹන්න",
+  "panelHeaderInstructions": "උපදෙස්",
+  "panelHeaderWorkspace": "වැඩ අවකාශය: ",
+  "continue": "කරගෙන යන්න"
+}

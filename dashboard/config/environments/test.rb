@@ -1,11 +1,12 @@
 Dashboard::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
-  # The test environment is used exclusively to run your application's
-  # test suite. You never need to work with it otherwise. Remember that
-  # your test database is "scratch space" for the test suite and is wiped
-  # and recreated between test runs. Don't rely on the data there!
-  config.cache_classes = true
+  # We sometimes use Spring in test, so want to enable live reloading if and
+  # only if this is an environment in which Spring is running
+  # https://guides.rubyonrails.org/configuring.html#config-cache-classes
+  # https://stackoverflow.com/a/70566038/1810460
+  # https://github.com/rails/spring/issues/598#issuecomment-1268885973
+  config.cache_classes = !(defined?(Spring::Env) && Spring::Env.new.server_running?)
 
   # Do not eager load code on boot. This avoids loading your whole application
   # just for the purpose of running a single test. If you are using a tool that
@@ -73,10 +74,6 @@ Dashboard::Application.configure do
 
   # Set to :debug to see everything in the log.
   config.log_level = :info
-
-  # Whether or not to skip script preloading. Setting this to true
-  # significantly speeds up server startup time.
-  config.skip_script_preload = false
 
   config.experiment_cache_time_seconds = 0
 end

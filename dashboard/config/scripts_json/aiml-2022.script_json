@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2023-01-30 18:10:02 UTC",
+    "serialized_at": "2023-05-26 22:44:04 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -5152,7 +5152,7 @@
       "key": "a46bdb47-2ee6-4d15-a1c0-5189c97c136c",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the [r numerical_data_in_ai_lab_1/aiml/2022] video, which outlines how numerical data can be used in AI Lab and how accuracy is calculated.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio and open the first level. Students will spend most of the lesson exploring data in the first panel and recording their results on the activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out \n[r numerical_data_in_ai_lab/aiml/2022] to each student.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the [r numerical_data_in_ai_lab_1/aiml/2022] video, which outlines how numerical data can be used in AI Lab and how accuracy is calculated.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio and open the first level. Students will spend most of the lesson exploring data in the first panel and recording their results on the activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out \n[r numerical_data_in_ai_lab_1/aiml/2022] to each student.\n",
         "name": "Investigating Data\r",
         "progression_name": "Safari Model"
       },

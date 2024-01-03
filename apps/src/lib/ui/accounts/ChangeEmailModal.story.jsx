@@ -5,18 +5,18 @@ import {action} from '@storybook/addon-actions';
 const DEFAULT_PROPS = {
   handleSubmit: action('handleSubmit callback'),
   handleCancel: action('handleCancel callback'),
-  isPasswordRequired: true
+  isPasswordRequired: true,
 };
 
 export default {
   title: 'ChangeEmailModal',
-  component: ChangeEmailModal
+  component: ChangeEmailModal,
 };
 
 const container = {
   margin: 'auto',
   width: '50%',
-  padding: '10px'
+  padding: '10px',
 };
 
 const Template = args => (
@@ -27,10 +27,10 @@ const Template = args => (
 
 export const StudentView = Template.bind({});
 StudentView.args = {
-  userType: 'student'
+  userType: 'student',
 };
 
 export const TeacherView = Template.bind({});
 TeacherView.args = {
-  userType: 'teacher'
+  userType: 'teacher',
 };

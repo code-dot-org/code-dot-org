@@ -93,9 +93,7 @@ export function getSharedDatabase() {
 }
 
 export function getProjectDatabase() {
-  const path = `v3/channels/${config.channelId}${
-    config.firebaseChannelIdSuffix
-  }`;
+  const path = `v3/channels/${config.channelId}${config.firebaseChannelIdSuffix}`;
   return getPathRef(getFirebase(config.firebaseName), path);
 }
 

@@ -7,7 +7,7 @@ import {Direction, Position} from '../constants';
  * @constructor
  * @implements CustomGameLogic
  */
-var BigGameLogic = function(studio, options) {
+var BigGameLogic = function (studio, options) {
   options = options || {};
 
   CustomGameLogic.apply(this, arguments);
@@ -22,7 +22,7 @@ var BigGameLogic = function(studio, options) {
 };
 BigGameLogic.inherits(CustomGameLogic);
 
-BigGameLogic.prototype.onTick = function() {
+BigGameLogic.prototype.onTick = function () {
   if (this.studio_.tickCount === 1) {
     this.onFirstTick_();
     this.studio_.playerScore = 100;
@@ -76,10 +76,10 @@ BigGameLogic.prototype.onTick = function() {
   ) {
     this.studio_.vanishActor({spriteIndex: this.playerSpriteIndex});
     setTimeout(
-      function() {
+      function () {
         this.studio_.setSprite({
           spriteIndex: this.playerSpriteIndex,
-          value: 'visible'
+          value: 'visible',
         });
       }.bind(this),
       20 * 40 + 50
@@ -106,12 +106,12 @@ BigGameLogic.prototype.onTick = function() {
     score.setAttribute('visibility', 'hidden');
     this.studio_.showTitleScreen({
       title: 'Game Over',
-      text: 'Click Reset to Play Again'
+      text: 'Click Reset to Play Again',
     });
     for (var i = 0; i < this.studio_.spriteCount; i++) {
       this.studio_.setSprite({
         spriteIndex: i,
-        value: 'hidden'
+        value: 'hidden',
       });
     }
     this.finished = true;
@@ -120,15 +120,15 @@ BigGameLogic.prototype.onTick = function() {
   }
 };
 
-BigGameLogic.prototype.reset = function() {
+BigGameLogic.prototype.reset = function () {
   this.finished = false;
 };
 
 /**
  * When game starts logic
  */
-BigGameLogic.prototype.onFirstTick_ = function() {
-  var func = function(Studio, Globals) {
+BigGameLogic.prototype.onFirstTick_ = function () {
+  var func = function (Studio, Globals) {
     Studio.setBackground(null, this.getVar_('background'));
     Studio.setSpritePosition(
       null,
@@ -157,7 +157,7 @@ BigGameLogic.prototype.onFirstTick_ = function() {
  * Update a sprite's x coordinates using the user updateFunction. If
  * sprite goes of screen, we reset to the other side of the screen.
  */
-BigGameLogic.prototype.updateSpriteX_ = function(spriteIndex, updateFunction) {
+BigGameLogic.prototype.updateSpriteX_ = function (spriteIndex, updateFunction) {
   var sprite = this.studio_.sprite[spriteIndex];
   // sprite.x is the left. get the center
   var centerX = sprite.x + sprite.width / 2;
@@ -176,7 +176,7 @@ BigGameLogic.prototype.updateSpriteX_ = function(spriteIndex, updateFunction) {
     // sprite has returned to screen, make it visible again
     this.studio_.setSprite({
       spriteIndex: this.studio_.sprite.indexOf(sprite),
-      value: 'visible'
+      value: 'visible',
     });
   }
 };
@@ -184,7 +184,7 @@ BigGameLogic.prototype.updateSpriteX_ = function(spriteIndex, updateFunction) {
 /**
  * Update the player sprite, using the user provided function.
  */
-BigGameLogic.prototype.handleUpdatePlayer_ = function(key) {
+BigGameLogic.prototype.handleUpdatePlayer_ = function (key) {
   var playerSprite = this.studio_.sprite[this.playerSpriteIndex];
   if (!playerSprite.visible) {
     return;
@@ -209,7 +209,7 @@ BigGameLogic.prototype.handleUpdatePlayer_ = function(key) {
 /**
  * Reset sprite to the opposite side of the screen
  */
-BigGameLogic.prototype.resetSprite_ = function(sprite) {
+BigGameLogic.prototype.resetSprite_ = function (sprite) {
   if (sprite.dir === Direction.EAST) {
     sprite.x = 0 - sprite.width;
   } else {
@@ -221,7 +221,7 @@ BigGameLogic.prototype.resetSprite_ = function(sprite) {
   );
   this.studio_.setSprite({
     spriteIndex: this.studio_.sprite.indexOf(sprite),
-    value: 'hidden'
+    value: 'hidden',
   });
 };
 
@@ -230,7 +230,7 @@ BigGameLogic.prototype.resetSprite_ = function(sprite) {
  * @param {number} x Current x location of target
  * @returns {number} New x location of target
  */
-BigGameLogic.prototype.update_target = function(x) {
+BigGameLogic.prototype.update_target = function (x) {
   return this.getFunc_('update-target')(x);
 };
 
@@ -239,7 +239,7 @@ BigGameLogic.prototype.update_target = function(x) {
  * @param {number} x Current x location of the danger sprite
  * @returns {number} New x location of the danger target
  */
-BigGameLogic.prototype.update_danger = function(x) {
+BigGameLogic.prototype.update_danger = function (x) {
   return this.getFunc_('update-danger')(x);
 };
 
@@ -249,7 +249,7 @@ BigGameLogic.prototype.update_danger = function(x) {
  * @param {number} y Current y location of player. (is this in an inverted coordinate space?)
  * @returns {number} New y location of the player
  */
-BigGameLogic.prototype.update_player = function(key, y) {
+BigGameLogic.prototype.update_player = function (key, y) {
   key = parseInt(key, 10);
   return this.getFunc_('update-player')(key, y);
 };
@@ -259,7 +259,7 @@ BigGameLogic.prototype.update_player = function(key, y) {
  * @param {number} x An x location
  * @returns {boolean} True if x location is onscreen?
  */
-BigGameLogic.prototype.onscreen = function(x) {
+BigGameLogic.prototype.onscreen = function (x) {
   return this.getFunc_('on-screen?')(x);
 };
 
@@ -271,7 +271,7 @@ BigGameLogic.prototype.onscreen = function(x) {
  * @param {number} cy Collider's y location
  * @returns {boolean} True if objects collide
  */
-BigGameLogic.prototype.collide = function(px, py, cx, cy) {
+BigGameLogic.prototype.collide = function (px, py, cx, cy) {
   return this.getFunc_('collide?')(px, py, cx, cy);
 };
 

@@ -10,3 +10,4 @@ question 'row'
 answer 'a horizontal (left to right) series of data in a 2D array'
 question 'column'
 answer 'a vertical (up and down) series of data in a 2D array'
+allow_multiple_attempts true

@@ -1,0 +1,9 @@
+name 'vpl-csa-module-7-clone-projects-level_-f_2023'
+display_name 'Unit 7 Creative Coding with The Theater Project Examples'
+description 'Explore one or more of these examples of the Unit 7 Creative Coding with The Theater Project.  Students will also explore these projects to help brainstorm ideas for their own projects in this unit. '
+
+sublevels
+level 'CSA U7L1-L1a_2023'
+level 'CSA U7L1-L1b_2023'
+level 'CSA U7L1-L1c_2023'
+level 'CSA U7L1-L1d_2023'

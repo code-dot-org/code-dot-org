@@ -16,3 +16,5 @@ answer 'a process to track progress while writing code, including a snapshot of 
 
 question 'argument'
 answer 'the value given to an attribute when initializing an object'
+
+allow_multiple_attempts true

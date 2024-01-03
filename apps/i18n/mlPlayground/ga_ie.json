@@ -1,74 +1,14 @@
 {
-  "navigateForward": "Ar aghaidh",
-  "navigateBack": "Ar ais",
-  "tryAgain": "Bain triail eile as",
-  "navigateDone": "Críochnaigh",
-  "saveProgress": "Sábháil",
-  "correctAnswer": "Ceart",
-  "incorrectAnswer": "Mícheart",
-  "modelCardPossibleValuesMinimum": "íosluach",
-  "modelCardPossibleValuesMaximum": "uasluach",
-  "columnInspectorDescription": "Cur Síos",
-  "columnDetailsMinimumValue": "íosluach",
   "columnDetailsMaximumValue": "uasluach",
+  "columnDetailsMinimumValue": "íosluach",
+  "columnInspectorDescription": "Cur Síos",
+  "correctAnswer": "Ceart",
   "dataCardLastUpdated": "Athrú is déanaí",
   "datasets": {
-    "medical_priority": {
+    "abalone": {
       "fields": {
-        "age": {
-          "id": "aois"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "weather": {
-          "id": "aimsir"
-        },
-        "day": {
-          "id": "lá"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "corn": {
-          "id": "arbhar"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "dath"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "aois"
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Description": {
-          "id": "Cur Síos"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "size": {
-          "id": "méid"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "chicken": {
-          "id": "sicín"
+        "Length": {
+          "id": "Fad"
         }
       }
     },
@@ -82,21 +22,35 @@
         }
       }
     },
-    "student_alcohol_consumption": {
+    "boba_toy": {
+      "fields": {
+        "banana": {
+          "id": "banana"
+        }
+      }
+    },
+    "census_part": {
       "fields": {
         "age": {
           "id": "aois"
         }
       }
     },
-    "naan_toy": {
+    "club_random_toy": {
       "fields": {
-        "chicken": {
-          "id": "sicín"
+        "color": {
+          "id": "dath"
         }
       }
     },
-    "census_part": {
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Aois"
+        }
+      }
+    },
+    "insurance_cost": {
       "fields": {
         "age": {
           "id": "aois"
@@ -110,77 +64,70 @@
         }
       }
     },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "Tír"
+        },
+        "Dance": {
+          "id": "Damhsa"
+        },
+        "Music": {
+          "id": "Ceol"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "aois"
+        }
+      }
+    },
     "movies": {
       "fields": {
-        "Score": {
-          "id": "Scór"
-        },
         "Country": {
           "id": "Tír"
         },
         "Name": {
           "id": "Ainm"
         },
+        "Score": {
+          "id": "Scór"
+        },
         "Star": {
           "id": "Réalta"
         }
       }
     },
-    "songs": {
+    "naan_toy": {
       "fields": {
-        "Artist": {
-          "id": "Ealaíontóir"
+        "chicken": {
+          "id": "sicín"
+        }
+      }
+    },
+    "nutrition": {
+      "fields": {
+        "Description": {
+          "id": "Cur Síos"
         }
       }
     },
     "safari_toy": {
       "name": "Safáraí"
     },
-    "abalone": {
+    "salad_toy": {
       "fields": {
-        "Length": {
-          "id": "Fad"
+        "chicken": {
+          "id": "sicín"
         }
       }
     },
-    "student_survey": {
+    "salsa_toy": {
       "fields": {
-        "Music": {
-          "id": "Ceol"
-        },
-        "Dance": {
-          "id": "Damhsa"
-        },
-        "Country": {
-          "id": "Tír"
-        },
-        "Internet": {
-          "id": "An tIdirlíon"
-        },
-        "Achievements": {
-          "id": "Éachtaí"
-        },
-        "Age": {
-          "id": "Aois",
-          "description": "Aois"
-        },
-        "Gender": {
-          "id": "Inscne",
-          "description": "Inscne"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "banana"
-        }
-      }
-    },
-    "heart": {
-      "fields": {
-        "Age": {
-          "id": "Aois"
+        "corn": {
+          "id": "arbhar"
         }
       }
     },
@@ -191,18 +138,71 @@
         }
       }
     },
-    "loneliness_music": {
+    "shapes_v2_toy": {
       "fields": {
-        "Music": {
-          "id": "Ceol"
+        "size": {
+          "id": "méid"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "lá"
+        },
+        "weather": {
+          "id": "aimsir"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Ealaíontóir"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "aois"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "Éachtaí"
+        },
+        "Age": {
+          "description": "Aois",
+          "id": "Aois"
+        },
+        "Country": {
+          "id": "Tír"
         },
         "Dance": {
           "id": "Damhsa"
         },
-        "Country": {
-          "id": "Tír"
+        "Gender": {
+          "description": "Inscne",
+          "id": "Inscne"
+        },
+        "Internet": {
+          "id": "An tIdirlíon"
+        },
+        "Music": {
+          "id": "Ceol"
         }
       }
     }
-  }
+  },
+  "incorrectAnswer": "Mícheart",
+  "modelCardPossibleValuesMaximum": "uasluach",
+  "modelCardPossibleValuesMinimum": "íosluach",
+  "navigateBack": "Ar ais",
+  "navigateDone": "Críochnaigh",
+  "navigateForward": "Ar aghaidh",
+  "saveProgress": "Sábháil",
+  "tryAgain": "Bain triail eile as"
 }

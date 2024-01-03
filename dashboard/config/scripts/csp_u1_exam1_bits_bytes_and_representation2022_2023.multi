@@ -21,3 +21,5 @@ DAT-1.A.3: Bit is shorthand for binary digit and is either 0 or 1.
 DAT-1.A.4: A byte is 8 bits. 
 :::
 MARKDOWN
+
+allow_multiple_attempts true

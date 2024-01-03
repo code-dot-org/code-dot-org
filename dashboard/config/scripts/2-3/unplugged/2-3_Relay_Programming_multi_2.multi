@@ -7,3 +7,5 @@ question 'Which image-program combo does not contain mistakes?'
 wrong '/script_assets/2-3_images/unplugged/relay_programming_2_a1.png'
 wrong '/script_assets/2-3_images/unplugged/relay_programming_2_a2.png'
 right '/script_assets/2-3_images/unplugged/relay_programming_2_a3.png'
+
+allow_multiple_attempts true

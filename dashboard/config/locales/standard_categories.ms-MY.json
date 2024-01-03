@@ -2,20 +2,188 @@
   "ms-MY": {
     "data": {
       "standard_categories": {
-        "DAT-1": {
-          "description": "Cara komputer mewakili data adalah berbeza daripada cara data ditafsir dan dipaparkan untuk pengguna. Program digunakan untuk menterjemah data kepada perwakilan yang lebih mudah difahami oleh orang ramai."
+        "1": {
+          "description": "Pelajar menunjukkan pemikiran kreatif, membina pengetahuan, dan membangunkan produk dan proses inovatif menggunakan teknologi."
         },
-        "IOC-2": {
-          "description": "Penggunaan inovasi pengkomputeran mungkin melibatkan risiko kepada keselamatan dan identiti peribadi anda."
+        "2": {
+          "description": "Pelajar menggunakan media digital dan persekitaran untuk berkomunikasi dan bekerja secara kolaboratif, termasuk pada jarak jauh, untuk menyokong pembelajaran individu dan menyumbang kepada pembelajaran orang lain."
         },
-        "DAT-1.D": {
-          "description": "Bandingkan algoritma pemampatan data untuk menentukan yang terbaik dalam konteks tertentu."
+        "3": {
+          "description": "Pelajar menggunakan alat digital untuk mengumpulkan, menilai, dan menggunakan maklumat."
         },
-        "IOC-2.B": {
-          "description": "Terangkan bagaimana sumber pengkomputeran boleh dilindungi dan boleh disalahgunakan."
+        "3-A-i": {
+          "description": "Sifat Pembelajaran - manusia vs mesin"
+        },
+        "3-A-ii": {
+          "description": "Sifat Pembelajaran - mencari corak dalam data"
+        },
+        "3-A-iii": {
+          "description": "Sifat Pembelajaran - melatih model"
+        },
+        "3-A-iv": {
+          "description": "Sifat Pembelajaran - constructinv vs menggunakan penaakulan"
+        },
+        "3-A-v": {
+          "description": "Sifat Pembelajaran - menyesuaikan perwakilan dalaman"
+        },
+        "3-A-vi": {
+          "description": "Sifat Pembelajaran - belajar dari pengalaman"
+        },
+        "3-B-i": {
+          "description": "Rangkaian Neural - struktur rangkaian saraf"
+        },
+        "3-B-ii": {
+          "description": "Rangkaian Neural - pelarasan berat badan"
+        },
+        "3-C-i": {
+          "description": "Set data - set ciri"
+        },
+        "3-C-ii": {
+          "description": "Set data - set data besar"
+        },
+        "3-C-iii": {
+          "description": "Set data - bias"
+        },
+        "4": {
+          "description": "Pelajar menggunakan kemahiran berfikir kritis untuk merancang dan menjalankan penyelidikan, mengurus projek, menyelesaikan masalah, dan membuat keputusan termaklum menggunakan alat dan sumber digital yang sesuai."
+        },
+        "5": {
+          "description": "Pelajar memahami isu-isu manusia, budaya, dan masyarakat yang berkaitan dengan teknologi dan mengamalkan tingkah laku undang-undang dan etika."
+        },
+        "6": {
+          "description": "Pelajar menunjukkan pemahaman yang baik tentang konsep, sistem dan operasi teknologi."
+        },
+        "AAP-1": {
+          "description": "Untuk mencari penyelesaian khusus untuk masalah umum, pengaturcara mewakili dan menyusun data dalam pelbagai cara."
+        },
+        "AAP-1.A": {
+          "description": "Mewakili nilai dengan pembolehubah."
+        },
+        "AAP-1.B": {
+          "description": "Tentukan nilai pembolehubah akibat tugasan."
+        },
+        "AAP-1.C": {
+          "description": "Mewakili daftar atau string menggunakan pembolehubah."
+        },
+        "AAP-1.D": {
+          "description": "Untuk abstraksi data: \na. Kembangkan abstraksi data menggunakan daftar untuk menyimpan beberapa elemen.\nb Jelaskan bagaimana penggunaan abstraksi data menguruskan kerumitan dalam kod program."
+        },
+        "AAP-2": {
+          "description": "Cara pernyataan diurutkan dan digabungkan dalam program menentukan hasil yang dikira. Program menggabungkan lelaran dan pemilihan konstruk untuk mewakili pengulangan dan membuat keputusan untuk mengendalikan nilai input yang berbeza-beza."
+        },
+        "AAP-2.A": {
+          "description": "Nyatakan algoritma yang menggunakan penjujukan tanpa menggunakan bahasa pengaturcaraan."
+        },
+        "AAP-2.B": {
+          "description": "Mewakili proses algoritma langkah demi langkah menggunakan pernyataan kod berurutan."
+        },
+        "AAP-2.C": {
+          "description": "Menilai ungkapan yang menggunakan operator aritmetik."
+        },
+        "AAP-2.D": {
+          "description": "Menilai ungkapan yang memanipulasi rentetan."
+        },
+        "AAP-2.E": {
+          "description": "Untuk hubungan antara dua pemboleh ubah, ungkapan, atau nilai: \na. Mewakili menggunakan operator relasional\nb. Evaluasi ungkapan yang menggunakan operator relasional."
+        },
+        "AAP-2.F": {
+          "description": "Untuk hubungan antara nilai Boolean:\na. Mewakili menggunakan operator logik.\nb. Evaluasi ungkapan yang menggunakan operator logik."
+        },
+        "AAP-2.G": {
+          "description": "Nyatakan algoritma yang menggunakan pemilihan tanpa menggunakan bahasa pengaturcaraan."
+        },
+        "AAP-2.H": {
+          "description": "Untuk seleksi:\na. Mewakili menggunakan pernyataan bersyarat.\nb Tentukan hasil pernyataan bersyarat."
+        },
+        "AAP-2.I": {
+          "description": "Untuk seleksi bersarang:\na. Mewakili menggunakan pernyataan bersyarat bersarang. \nb Tentukan hasil pernyataan bersyarat bersarang."
+        },
+        "AAP-2.J": {
+          "description": "Ekspresikan algoritma yang menggunakan lelaran tanpa menggunakan bahasa pengaturcaraan."
+        },
+        "AAP-2.K": {
+          "description": "Untuk iterasi:\na. mewakili menggunakan pernyataan iterasi.\nb Tentukan hasil atau kesan sampingan dari pernyataan iterasi."
+        },
+        "AAP-2.L": {
+          "description": "Bandingkan pelbagai algoritma untuk menentukan sama ada ia menghasilkan kesan sampingan atau hasil yang sama."
+        },
+        "AAP-2.M": {
+          "description": "Untuk algoritma: \na Buat algoritma. \nb Gabungkan dan ubah suai algoritma sedia ada."
+        },
+        "AAP-2.N": {
+          "description": "Untuk operasi senarai:\na. Tulis ungkapan yang menggunakan prosedur pengindeksan senarai dan senarai.\nb. Evaluasi ungkapan yang menggunakan prosedur pengindeksan daftar dan senarai."
+        },
+        "AAP-2.O": {
+          "description": "Untuk algoritma yang melibatkan unsur-unsur dari daftar:\na. mewakili menggunakan pernyataan berulang untuk melintasi daftar.\nb Tentukan hasil algoritma dengan senarai traversals."
+        },
+        "AAP-2.P": {
+          "description": "Untuk algoritma carian binari:\na. Tentukan bilangan lelaran yang diperlukan untuk mencari nilai dalam set data. \nb Terangkan keperluan yang diperlukan untuk menyelesaikan carian binari."
+        },
+        "AAP-3": {
+          "description": "Pengaturcara memecahkan masalah menjadi kepingan yang lebih kecil dan lebih mudah diurus. Dengan membuat prosedur dan memanfaatkan parameter, pengaturcara umum proses yang boleh digunakan semula. Prosedur membolehkan pengaturcara membuat kod sedia ada yang telah diuji, yang membolehkan pengaturcara menulis program dengan lebih cepat dan lebih yakin."
+        },
+        "AAP-3.A": {
+          "description": "Untuk panggilan prosedur:\na. Tulis pernyataan untuk memanggil prosedur.\nb Tentukan hasil atau kesan panggilan prosedur."
+        },
+        "AAP-3.B": {
+          "description": "Untuk panggilan prosedur:\na. Tulis pernyataan untuk memanggil prosedur.\nb Tentukan hasil atau kesan panggilan prosedur."
+        },
+        "AAP-3.C": {
+          "description": "Membangunkan abstraksi prosedur untuk menguruskan kerumitan dalam program dengan menulis prosedur."
+        },
+        "AAP-3.D": {
+          "description": "Pilih perpustakaan yang sesuai atau segmen kod sedia ada untuk digunakan dalam membuat program baru."
+        },
+        "AAP-3.E": {
+          "description": "Untuk menjana nilai rawak: \na. Tulis ungkapan untuk menjana nilai yang mungkin. \nb Nilai ungkapan untuk menentukan hasil yang mungkin."
+        },
+        "AAP-3.F": {
+          "description": "Untuk simulasi:\na. Jelaskan bagaimana komputer boleh digunakan untuk mewakili fenomena atau hasil dunia nyata. \nb Bandingkan penggunaan simulasi dengan konteks dunia nyata."
+        },
+        "AAP-4": {
+          "description": "Terdapat masalah yang tidak dapat diselesaikan oleh komputer, dan walaupun komputer dapat menyelesaikan masalah, ia mungkin tidak dapat melakukannya dalam waktu yang munasabah."
+        },
+        "AAP-4.A": {
+          "description": "Untuk menentukan kecekapan algoritma:\na. Jelaskan perbezaan antara algoritma yang berjalan dalam masa yang munasabah dan yang tidak berjalan dalam masa yang munasabah. \nb Kenal pasti situasi di mana penyelesaian heuristik mungkin lebih sesuai."
+        },
+        "AAP-4.B": {
+          "description": "Jelaskan kewujudan masalah yang tidak dapat diputuskan dalam sains komputer."
+        },
+        "AP": {
+          "description": "Algoritma & Pengaturcaraan"
+        },
+        "APR": {
+          "description": "Aritmetik Dengan Polinomial Dan Ungkapan Rasional"
+        },
+        "BF": {
+          "description": "Fungsi Bangunan"
+        },
+        "BI-1": {
+          "description": "Komputer melihat dunia menggunakan sensor"
+        },
+        "BI-2": {
+          "description": "Ejen mengekalkan perwakilan dunia dan menggunakannya untuk alasan"
+        },
+        "BI-3": {
+          "description": "Komputer boleh belajar dari data"
+        },
+        "BI-4": {
+          "description": "Ejen pintar memerlukan pelbagai jenis pengetahuan untuk berinteraksi secara semula jadi dengan manusia"
+        },
+        "BI-5": {
+          "description": "AI boleh memberi kesan kepada masyarakat dengan cara positif dan negatif"
+        },
+        "C": {
+          "description": "Bulatan"
+        },
+        "CC": {
+          "description": "Mengira Dan Kardinaliti"
         },
         "CD": {
           "description": "Peranti Komputer & Komunikasi"
+        },
+        "CED": {
+          "description": "Mewujudkan Persamaan"
         },
         "CI": {
           "description": "Kesan kepada Komuniti, Global dan Etika"
@@ -23,29 +191,254 @@
         "CL": {
           "description": "Kerjasama"
         },
+        "CN": {
+          "description": "Sistem Nombor Kompleks"
+        },
+        "CO": {
+          "description": "Kesesuaian"
+        },
+        "CON-1": {
+          "description": "Cara pembolehubah dan pengendali diurutkan dan digabungkan dalam ungkapan menentukan hasil yang dikira."
+        },
+        "CON-1.A": {
+          "description": "Menilai ungkapan aritmetik dalam kod program"
+        },
+        "CON-1.B": {
+          "description": "Menilai apa yang disimpan dalam variabel sebagai hasil dari ekspresi dengan pernyataan tugasan"
+        },
+        "CON-1.C": {
+          "description": "Menilai ungkapan aritmetik yang menggunakan pemutus."
+        },
+        "CON-1.D": {
+          "description": "Evaluasi ekspresi yang menggunakan metode kelas Matematika."
+        },
+        "CON-1.E": {
+          "description": "Menilai ungkapan Boolean yang menggunakan operator hubungan dalam kod program."
+        },
+        "CON-1.F": {
+          "description": "Menilai compoudn ungkapan Boolean dalam kod program."
+        },
+        "CON-1.G": {
+          "description": "Bandingkan dan kontras ekspresi Boolean bersamaan."
+        },
+        "CON-1.H": {
+          "description": "Bandingkan rujukan objek menggunakan ekspresi Boolean dalam kod program."
+        },
+        "CON-2": {
+          "description": "Pengaturcara menggabungkan lelaran dan pemilihan ke dalam kod sebagai cara memberikan arahan untuk komputer memproses setiap nilai input yang mungkin"
+        },
+        "CON-2.A": {
+          "description": "Mewakili percabangan proses logik dengan menggunakan pernyataan bersyarat."
+        },
+        "CON-2.B": {
+          "description": "Mewakili percabangan proses logik dengan menggunakan pernyataan bersyarat bersarang."
+        },
+        "CON-2.C": {
+          "description": "Mewakili proses lelaran menggunakan whileloop a."
+        },
+        "CON-2.D": {
+          "description": "Untuk algoritma dalam konteks spesifikasi tertentu yang tidak memerlukan penggunaan traversals: • Kenal pasti algoritma standard. • Ubahsuai algoritma standard. • Membangunkan algoritma."
+        },
+        "CON-2.E": {
+          "description": "Mewakili proses lelaran menggunakan untuk loop."
+        },
+        "CON-2.F": {
+          "description": "Untuk algoritma dalam konteks spesifikasi tertentu yang melibatkan objek String • Kenal pasti algoritma standard. • Ubahsuai algoritma standard. • Membangunkan algoritma."
+        },
+        "CON-2.G": {
+          "description": "Mewakili proses lelaran bersarang"
+        },
+        "CON-2.H": {
+          "description": "Hitung jumlah pelaksanaan pernyataan dan perbandingan run-time informal pernyataan berulang."
+        },
+        "CON-2.I": {
+          "description": "Untuk algoritma dalam konteks spesifikasi tertentu yang memerlukan penggunaan traversals array: • Kenal pasti algoritma standard. • Ubahsuai algoritma standard. • Membangunkan algoritma."
+        },
+        "CON-2.J": {
+          "description": "Untuk algoritma dalam konteks spesifikasi tertentu yang memerlukan penggunaan traversals ArrayList: • Mengenal pasti algoritma standard. • Ubahsuai algoritma standard. • Membangunkan algoritma."
+        },
+        "CON-2.K": {
+          "description": "Terapkan algoritma carian berurutan/linear untuk mencari maklumat tertentu dalam array atau ArrayList objek."
+        },
+        "CON-2.L": {
+          "description": "Memohon jenis pemilihan dan algoritma jenis sisipan untuk menyusun unsur-unsur array atau ArrayList objek."
+        },
+        "CON-2.M": {
+          "description": "Hitung jumlah pelaksanaan pernyataan dan tidak rasmi run-time perbandingan algoritma menyusun."
+        },
+        "CON-2.N": {
+          "description": "Untuk Algoritma dalam konteks spesifikasi tertentu yang memerlukan penggunaan traversals array 2D: • Kenal pasti algoritma standard. • Ubahsuai algoritma standard. • Membangunkan algoritma."
+        },
+        "CON-2.O": {
+          "description": "Tentukan hasil melaksanakan kaedah rekursif."
+        },
+        "CON-2.P": {
+          "description": "Terapkan algoritma carian rekursif untuk maklumat dalam String, 1D array, atau ArrayList objek."
+        },
+        "CON-2.Q": {
+          "description": "Terapkan algoritma rekursif untuk menyusun elemen array atau ArrayList objek."
+        },
+        "CP": {
+          "description": "Kebarangkalian Bersyarat Dan Peraturan Kebarangkalian"
+        },
         "CPP": {
           "description": "Amalan & Pengaturcaraan Pengkomputeran"
+        },
+        "CRD-1": {
+          "description": "Menggabungkan pelbagai perspektif melalui kerjasama meningkatkan inovasi pengkomputeran yang sedang dibangunkan."
+        },
+        "CRD-1.A": {
+          "description": "Terangkan bagaimana inovasi pengkomputeran diperbaiki melalui kerjasama."
+        },
+        "CRD-1.B": {
+          "description": "Terangkan bagaimana inovasi pengkomputeran dibangunkan oleh kumpulan orang."
+        },
+        "CRD-1.C": {
+          "description": "Menunjukkan kemahiran interpersonal yang berkesan semasa kerjasama."
+        },
+        "CRD-2": {
+          "description": "Pembangun membuat dan berinovasi menggunakan proses reka bentuk berulang yang berfokus pada pengguna, yang menggabungkan kitaran pelaksanaan/maklum balas, dan meninggalkan ruang yang cukup untuk eksperimen dan pengambilan risiko."
+        },
+        "CRD-2.A": {
+          "description": "Terangkan tujuan inovasi pengkomputeran."
+        },
+        "CRD-2.B": {
+          "description": "Terangkan bagaimana program atau segmen kod berfungsi."
+        },
+        "CRD-2.C": {
+          "description": "Kenal pasti input ke program."
+        },
+        "CRD-2.D": {
+          "description": "Kenal pasti output yang dihasilkan oleh program."
+        },
+        "CRD-2.E": {
+          "description": "Membangunkan program menggunakan proses pembangunan."
+        },
+        "CRD-2.F": {
+          "description": "Reka bentuk program dan antara muka penggunanya."
+        },
+        "CRD-2.G": {
+          "description": "Terangkan tujuan segmen kod atau program dengan menulis dokumentasi."
+        },
+        "CRD-2.H": {
+          "description": "Mengakui segmen kod yang digunakan dari sumber lain."
+        },
+        "CRD-2.I": {
+          "description": "Untuk kesilapan dalam algoritma atau program: \na. Kenal pasti ralat. \nb Betulkan ralat."
+        },
+        "CRD-2.J": {
+          "description": "Kenal pasti input dan output yang diharapkan atau tingkah laku yang sesuai yang dapat digunakan untuk memeriksa ketepatan algoritma atau program."
+        },
+        "CS": {
+          "description": "Sistem Pengkomputeran"
+        },
+        "CSN-1": {
+          "description": "Sistem komputer dan rangkaian memudahkan bagaimana data dipindahkan."
+        },
+        "CSN-1.A": {
+          "description": "Terangkan bagaimana peranti pengkomputeran berfungsi bersama dalam rangkaian."
+        },
+        "CSN-1.B": {
+          "description": "Terangkan bagaimana Internet berfungsi."
+        },
+        "CSN-1.C": {
+          "description": "Terangkan bagaimana data dihantar melalui Internet melalui paket."
+        },
+        "CSN-1.D": {
+          "description": "Terangkan perbezaan antara Internet dan World Wide Web."
+        },
+        "CSN-2": {
+          "description": "Pengkomputeran selari dan diedarkan memanfaatkan pelbagai komputer untuk menyelesaikan masalah kompleks dengan lebih cepat atau memproses set data yang besar."
+        },
+        "CSN-2.A": {
+          "description": "Bandingkan penyelesaian masalah yang menggunakan pengkomputeran berurutan, selari, dan diedarkan."
+        },
+        "CSN-2.B": {
+          "description": "Tentukan kecekapan penyelesaian berurutan dan selari."
+        },
+        "CSN-2.C": {
+          "description": "Huraikan faedah dan cabaran pengkomputeran selari dan diedarkan."
         },
         "CT": {
           "description": "Pengiraan pemikiran"
         },
-        "L": {
-          "description": "Bahasa"
+        "D1": {
+          "description": "Membangunkan Soalan dan pertanyaan perancangan"
         },
-        "RI": {
-          "description": "Bacaan Bermaklumat"
+        "D2.Civ": {
+          "description": "Sivik"
         },
-        "RL": {
-          "description": "Membaca Sastera"
+        "D2.Eco": {
+          "description": "Ekonomi"
         },
-        "SL": {
-          "description": "Bercakap & Mendengar"
+        "D3.Claims": {
+          "description": "Membangunkan Tuntutan dan Menggunakan Bukti"
         },
-        "W": {
-          "description": "Penulisan"
+        "D3.Sources": {
+          "description": "Mengumpul dan Menilai Sumber"
         },
-        "C": {
-          "description": "Bulatan"
+        "D4.Action": {
+          "description": "Mengambil Tindakan Bermaklumat"
+        },
+        "D4.Conclusions": {
+          "description": "Berkomunikasi dan Mengkritik Kesimpulan"
+        },
+        "DA": {
+          "description": "Data & Analisis"
+        },
+        "DAT-1": {
+          "description": "Cara komputer mewakili data adalah berbeza daripada cara data ditafsir dan dipaparkan untuk pengguna. Program digunakan untuk menterjemah data kepada perwakilan yang lebih mudah difahami oleh orang ramai."
+        },
+        "DAT-1.A": {
+          "description": "Terangkan bagaimana data boleh diwakili menggunakan bit."
+        },
+        "DAT-1.B": {
+          "description": "Jelaskan akibat menggunakan bit untuk mewakili data."
+        },
+        "DAT-1.C": {
+          "description": "Untuk nombor binari:\na. Kira binari (base 2) bersamaan dengan integer positif (base 10) dan sebaliknya. \nb Bandingkan dan memerintahkan nombor binari."
+        },
+        "DAT-1.D": {
+          "description": "Bandingkan algoritma pemampatan data untuk menentukan yang terbaik dalam konteks tertentu."
+        },
+        "DAT-2": {
+          "description": "Program boleh digunakan untuk memproses data, yang membolehkan pengguna mencari maklumat dan mencipta pengetahuan baru."
+        },
+        "DAT-2.A": {
+          "description": "Terangkan maklumat apa yang boleh diekstrak dari data."
+        },
+        "DAT-2.B": {
+          "description": "Terangkan maklumat apa yang boleh diekstrak dari metadata."
+        },
+        "DAT-2.C": {
+          "description": "Kenal pasti cabaran yang berkaitan dengan pemprosesan data."
+        },
+        "DAT-2.D": {
+          "description": "Ekstrak maklumat dari data menggunakan program."
+        },
+        "DAT-2.E": {
+          "description": "Terangkan bagaimana program boleh digunakan untuk mendapatkan wawasan dan pengetahuan dari data."
+        },
+        "EE": {
+          "description": "Ungkapan Dan Persamaan"
+        },
+        "ESS": {
+          "description": "Sains Bumi dan Angkasa"
+        },
+        "ESS1": {
+          "description": "Tempat Bumi di Alam Semesta"
+        },
+        "ESS2": {
+          "description": "Sistem Bumi"
+        },
+        "ESS3": {
+          "description": "Aktiviti Bumi dan Manusia"
+        },
+        "ETS": {
+          "description": "Kejuruteraan dalam Sains"
+        },
+        "ETS1": {
+          "description": "Rekabentuk Kejuruteraan"
         },
         "F": {
           "description": "Fungsi"
@@ -53,26 +446,287 @@
         "G": {
           "description": "Geometri"
         },
+        "GMD": {
+          "description": "Pengukuran Geometri Dan Dimensi"
+        },
+        "GPE": {
+          "description": "Menyatakan Sifat Geometri Dengan Persamaan"
+        },
+        "IC": {
+          "description": "Kesan Pengkomputeran"
+        },
+        "ID": {
+          "description": "Menafsirkan Data Kategori Dan Kuantitatif"
+        },
+        "IF": {
+          "description": "Menafsirkan Fungsi"
+        },
+        "IOC-1": {
+          "description": "Walaupun inovasi pengkomputeran biasanya direka untuk mencapai tujuan tertentu, mereka mungkin mempunyai akibat yang tidak diingini."
+        },
+        "IOC-1.A": {
+          "description": "Terangkan bagaimana kesan inovasi pengkomputeran boleh bermanfaat dan berbahaya."
+        },
+        "IOC-1.B": {
+          "description": "Terangkan bagaimana inovasi pengkomputeran boleh memberi impak di luar tujuan yang dimaksudkan."
+        },
+        "IOC-1.C": {
+          "description": "Huraikan isu-isu yang menyumbang kepada jurang digital."
+        },
+        "IOC-1.D": {
+          "description": "Terangkan bagaimana bias wujud dalam inovasi pengkomputeran."
+        },
+        "IOC-1.E": {
+          "description": "Terangkan bagaimana orang mengambil bahagian dalam proses penyelesaian masalah pada skala besar."
+        },
+        "IOC-1.F": {
+          "description": "Terangkan bagaimana penggunaan pengkomputeran dapat menimbulkan masalah undang-undang dan etika."
+        },
+        "IOC-2": {
+          "description": "Penggunaan inovasi pengkomputeran mungkin melibatkan risiko kepada keselamatan dan identiti peribadi anda."
+        },
+        "IOC-2.A": {
+          "description": "Terangkan risiko kepada privasi daripada mengumpul dan menyimpan data peribadi pada sistem komputer."
+        },
+        "IOC-2.B": {
+          "description": "Terangkan bagaimana sumber pengkomputeran boleh dilindungi dan boleh disalahgunakan."
+        },
+        "IOC-2.C": {
+          "description": "Terangkan bagaimana akses yang tidak dibenarkan kepada sumber pengkomputeran diperolehi."
+        },
+        "L": {
+          "description": "Bahasa"
+        },
+        "LE": {
+          "description": "Model Linear, Kuadratik, Dan Eksponen ★"
+        },
+        "LS": {
+          "description": "Sains Hayat"
+        },
+        "LS1": {
+          "description": "Dari Molekul ke Organisma: Struktur dan Proses"
+        },
+        "LS2": {
+          "description": "Ekosistem: Interaksi, Tenaga, dan Dinamik"
+        },
+        "LS3": {
+          "description": "Keturunan: Warisan dan Variasi Sifat"
+        },
+        "LS4": {
+          "description": "Evolusi Biologi: Perpaduan dan Kepelbagaian"
+        },
+        "MD": {
+          "description": "Menggunakan Kebarangkalian Untuk Membuat Keputusan"
+        },
+        "MG": {
+          "description": "Pemodelan Dengan Geometri"
+        },
+        "MOD-1": {
+          "description": "Sesetengah objek atau konsep sering diwakili bahawa pengaturcara boleh menggunakan kod sedia ada yang telah diuji, membolehkan mereka menulis penyelesaian dengan lebih cepat dan dengan tahap keyakinan yang lebih tinggi"
+        },
+        "MOD-1.A": {
+          "description": "Memanggil metode kelas Sistem untuk menghasilkan output ke konsol."
+        },
+        "MOD-1.B": {
+          "description": "Jelaskan hubungan antara kelas dan objek."
+        },
+        "MOD-1.C": {
+          "description": "Kenal pasti, menggunakan tandatangannya, pembina yang betul dipanggil."
+        },
+        "MOD-1.D": {
+          "description": "Untuk membuat objek: a. Cipta objek dengan memanggil pembina tanpa parameter. b. Buat objek dengan memanggil pembina dengan parameter."
+        },
+        "MOD-1.E": {
+          "description": "Panggil kaedah tidak sah bukan statik tanpa parameter."
+        },
+        "MOD-1.F": {
+          "description": "Panggil kaedah tidak sah bukan statik dengan parameter"
+        },
+        "MOD-1.G": {
+          "description": "Panggil kaedah bukan tidak sah bukan statik dengan atau tanpa parameter"
+        },
+        "MOD-1.H": {
+          "description": "Panggil kaedah statik."
+        },
+        "MOD-2": {
+          "description": "Pengaturcara menggunakan kod untuk mewakili objek fizikal atau konsep bukan fizikal, nyata atau dibayangkan, dengan menentukan kelas berdasarkan attirbutes dan/atau tingkah laku objek atau konsep"
+        },
+        "MOD-2.A": {
+          "description": "Menetapkan akses dan keterlihatan kekangan untuk kelas, data, pembina, dan kaedah."
+        },
+        "MOD-2.B": {
+          "description": "Tentukan variabel contoh untuk atribut yang akan diinisialisasi melalui konstruktor kelas."
+        },
+        "MOD-2.C": {
+          "description": "Desribe fungsi dan penggunaan kod program thorugh komen."
+        },
+        "MOD-2.D": {
+          "description": "Tentukan tingkah laku objek melalui metode non-void tanpa prameters ditulis dalam kelas."
+        },
+        "MOD-2.E": {
+          "description": "Tentukan tingkah laku objek melalui metode void dengan atau tanpa parameter yang ditulis dalam kelas."
+        },
+        "MOD-2.F": {
+          "description": "Tentukan tingkah laku objek melalui metode non-void dengan parameter yang ditulis dalam kelas."
+        },
+        "MOD-2.G": {
+          "description": "Tentukan tingkah laku kelas melalui metode statik."
+        },
+        "MOD-2.H": {
+          "description": "Tentukan variabel statik yang tergolong dalam kelas."
+        },
+        "MOD-3": {
+          "description": "Ketika kelas mulitple mengandungi atribut dan tingkah laku umum, pengaturcara membuat kelas baru yang mengandungi atribut dan tingkah laku bersama yang membentuk hierachy. Pengubahsuaian yang dibuat pada tahap tertinggi hierarki berlaku untuk subkelas."
+        },
+        "MOD-3.A": {
+          "description": "Menetapkan penglihatan peribadi pembolehubah contoh untuk merangkum sifat-sifat objek."
+        },
+        "MOD-3.B": {
+          "description": "Buat hubungan warisan dari subkelas ke superclass."
+        },
+        "MOD-3.C": {
+          "description": "Tentukan pembolehubah rujukan superclass yang akan diberikan kepada objek subkelas dalam hierarki yang sama."
+        },
+        "MOD-3.D": {
+          "description": "Kaedah panggilan dalam hubungan warisan."
+        },
+        "MOD-3.E": {
+          "description": "Memanggil metode kelas Object melalui warisan."
+        },
         "MP": {
           "description": "Amalan Matematik"
         },
         "NBT": {
           "description": "Nombor Dan Operasi Dalam Asas Sepuluh"
         },
+        "NF": {
+          "description": "Nombor Dan Operasi - Pecahan"
+        },
+        "NI": {
+          "description": "Rangkaian & Internet"
+        },
+        "NS": {
+          "description": "Sistem Nombor"
+        },
         "OA": {
           "description": "Operasi Dan Pemikiran Algebra"
         },
-        "1": {
-          "description": "Pelajar menunjukkan pemikiran kreatif, membina pengetahuan, dan membangunkan produk dan proses inovatif menggunakan teknologi."
+        "PS": {
+          "description": "Sains Fizikal"
         },
-        "2": {
-          "description": "Pelajar menggunakan media digital dan persekitaran untuk berkomunikasi dan bekerja secara kolaboratif, termasuk pada jarak jauh, untuk menyokong pembelajaran individu dan menyumbang kepada pembelajaran orang lain."
+        "PS1": {
+          "description": "Perkara dan Interaksinya"
         },
-        "4": {
-          "description": "Pelajar menggunakan kemahiran berfikir kritis untuk merancang dan menjalankan penyelidikan, mengurus projek, menyelesaikan masalah, dan membuat keputusan termaklum menggunakan alat dan sumber digital yang sesuai."
+        "PS2": {
+          "description": "Gerakan dan Kestabilan: Angkatan dan Interaksi"
         },
-        "6": {
-          "description": "Pelajar menunjukkan pemahaman yang baik tentang konsep, sistem dan operasi teknologi."
+        "PS3": {
+          "description": "Tenaga"
+        },
+        "PS4": {
+          "description": "Gelombang dan Aplikasi mereka dalam Teknologi dalam Pemindahan Maklumat"
+        },
+        "Q": {
+          "description": "Kuantiti"
+        },
+        "REI": {
+          "description": "Penaakulan Dengan Persamaan Dan Ketidaksamaan"
+        },
+        "RF": {
+          "description": "Membaca Kemahiran Asas"
+        },
+        "RH": {
+          "description": "Membaca Sejarah/Pengajian Sosial"
+        },
+        "RI": {
+          "description": "Bacaan Bermaklumat"
+        },
+        "RL": {
+          "description": "Membaca Sastera"
+        },
+        "RN": {
+          "description": "Sistem Nombor Sebenar"
+        },
+        "RP": {
+          "description": "Nisbah Dan Hubungan Berkadar"
+        },
+        "RST": {
+          "description": "Sains Membaca/Teknikal"
+        },
+        "SL": {
+          "description": "Bercakap & Mendengar"
+        },
+        "SP": {
+          "description": "Statistik Dan Kebarangkalian"
+        },
+        "SRT": {
+          "description": "Kesamaan, Segitiga Kanan, Dan Trigonometri"
+        },
+        "SSE": {
+          "description": "Melihat Struktur Dalam Ungkapan"
+        },
+        "TF": {
+          "description": "Fungsi Trigonometri"
+        },
+        "VAR-1": {
+          "description": "Untuk mencari penyelesaian khusus untuk masalah umum, pengaturcara memasukkan pembolehubah dalam kod mereka supaya algoritma yang sama berjalan menggunakan nilai input yang berbeza"
+        },
+        "VAR-1.A": {
+          "description": "Buat literal rentetan"
+        },
+        "VAR-1.B": {
+          "description": "Kenal pasti kategori jenis data yang paling sesuai untuk spesifikasi tertentu"
+        },
+        "VAR-1.C": {
+          "description": "Mengisytiharkan pembolehubah jenis yang betul untuk mewakili data primitif"
+        },
+        "VAR-1.D": {
+          "description": "Tentukan pemboleh ubah jenis yang betul untuk mewakili data rujukan."
+        },
+        "VAR-1.E": {
+          "description": "Untuk kelas String: a. Buat objek String. b. Metode String Panggilan."
+        },
+        "VAR-1.F": {
+          "description": "Untuk kelas pembungkus: a. Cipta objek Integer. b. Panggil kaedah Integer. c. Cipta objek Double. d. Panggil metode Double."
+        },
+        "VAR-1.G": {
+          "description": "Terangkan di mana pembolehubah boleh digunakan dalam kod program."
+        },
+        "VAR-1.H": {
+          "description": "Menilai ungkapan rujukan objek yang menggunakan kata kunci ini."
+        },
+        "VAR-2": {
+          "description": "Untuk menguruskan sejumlah besar data atau hubungan kompleks dalam data, pengaturcara menulis kod yang mengumpulkan data bersama ke dalam struktur data tunggal tanpa membuat pemboleh ubah individu untuk setiap nilai."
+        },
+        "VAR-2.A": {
+          "description": "Mewakili koleksi data rujukan primitif atau objek yang berkaitan menggunakan satu dimensi (1D) objek array."
+        },
+        "VAR-2.B": {
+          "description": "Melintasi unsur-unsur dalam array 1D."
+        },
+        "VAR-2.C": {
+          "description": "Melintasi unsur-unsur dalam objek array 1D menggunakan dipertingkatkan untuk loop."
+        },
+        "VAR-2.D": {
+          "description": "Mewakili koleksi terkait referensi objek datat menggunakan objek ArrayList."
+        },
+        "VAR-2.E": {
+          "description": "Untuk objek ArrayList: • Traverse menggunakan untuk atau sementara gelung. • Traverse menggunakan dipertingkatkan untuk gelung."
+        },
+        "VAR-2.F": {
+          "description": "Mewakili koleksi data rujukan primitif atau objek yang berkaitan menggunakan dua dimensi (2D) objek array."
+        },
+        "VAR-2.G": {
+          "description": "Untuk objek tatasusunan 2D: • Traverse menggunakan bersarang untuk gelung. • Traverse menggunakan bersarang dipertingkatkan untuk gelung."
+        },
+        "VM": {
+          "description": "Kuantiti Vektor Dan Matriks"
+        },
+        "W": {
+          "description": "Penulisan"
+        },
+        "WHST": {
+          "description": "Menulis HS/S/T"
         }
       }
     }

@@ -9,11 +9,11 @@ import ReactDOM from 'react-dom';
 
 export default class Image extends React.Component {
   static propTypes = {
-    style: PropTypes.object.isRequired
+    style: PropTypes.object.isRequired,
   };
 
   state = {
-    loaded: false
+    loaded: false,
   };
 
   onImageLoad = () => this.setState({loaded: true});
@@ -30,20 +30,23 @@ export default class Image extends React.Component {
     if (this.state.loaded) {
       style = {
         opacity: 1,
-        transition: 'opacity 200ms ease-in'
+        transition: 'opacity 200ms ease-in',
       };
     } else {
       style = {
-        opacity: 0.1
+        opacity: 0.1,
       };
     }
 
     return (
+      // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+      // Verify or update this alt-text as necessary
       <img
         ref="img"
         {...this.props}
         style={{...this.props.style, ...style}}
         onLoad={this.onImageLoad}
+        alt=""
       />
     );
   }

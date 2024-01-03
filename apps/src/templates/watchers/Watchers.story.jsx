@@ -7,7 +7,7 @@ export default storybook => {
     debugButtons: false,
     add: () => {},
     update: () => {},
-    remove: () => {}
+    remove: () => {},
   };
 
   storybook.storiesOf('Watchers', module).addStoryTable([
@@ -22,7 +22,7 @@ export default storybook => {
             appType="gamelab"
           />
         </div>
-      )
+      ),
     },
     {
       name: 'with one watcher',
@@ -31,13 +31,13 @@ export default storybook => {
           <Watchers
             {...defaultProps}
             watchedExpressions={Immutable.fromJS([
-              {expression: 'cool', uuid: 1234}
+              {expression: 'cool', uuid: 1234},
             ])}
             isRunning={true}
             appType="gamelab"
           />
         </div>
-      )
-    }
+      ),
+    },
   ]);
 };

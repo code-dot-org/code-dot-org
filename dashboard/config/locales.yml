@@ -140,7 +140,7 @@
 "fil": "fil-PH"
 "fil-PH":
   english: "Filipino"
-  native: "Pilipino"
+  native: "Filipino"
 
 "fr": "fr-FR"
 "fr-FR":
@@ -393,6 +393,11 @@
   english: "Slovenian"
   native: "Slovenščina"
   webfonts: false
+
+"sm": "sm-WS"
+"sm-WS":
+  english: "Samoan"
+  native: "Sāmoa"
 
 "sq": "sq-AL"
 "sq-AL":

@@ -4,7 +4,7 @@ var testUtils = require('../../util/testUtils');
 
 var setPropertyDropdown = require('@cdo/apps/applab/setPropertyDropdown');
 
-describe('setPropertyDropdown', function() {
+describe('setPropertyDropdown', function () {
   var stripQuotes = setPropertyDropdown.__TestInterface.stripQuotes;
   var getDropdownProperties =
     setPropertyDropdown.__TestInterface.getDropdownProperties;
@@ -13,14 +13,14 @@ describe('setPropertyDropdown', function() {
 
   testUtils.setExternalGlobals();
 
-  it('stripQuotes', function() {
+  it('stripQuotes', function () {
     assert.equal(stripQuotes('"double"'), 'double');
     assert.equal(stripQuotes("'single'"), 'single');
     assert.equal(stripQuotes('noquotes'), 'noquotes');
     assert.equal(stripQuotes('"mismatched\''), '"mismatched\'');
   });
 
-  it('getInternalPropertyInfo', function() {
+  it('getInternalPropertyInfo', function () {
     var info;
 
     // Check that internal picture property can be accessed either by .image or .picture
@@ -57,7 +57,7 @@ describe('setPropertyDropdown', function() {
     assert.isUndefined(info);
   });
 
-  it('getDropdownProperties', function() {
+  it('getDropdownProperties', function () {
     var list;
 
     // image elements should have .image but not .picture
@@ -109,7 +109,7 @@ describe('setPropertyDropdown', function() {
     assert(foundBackgroundColor);
   });
 
-  it('getPropertyValueDropdown', function() {
+  it('getPropertyValueDropdown', function () {
     // given all of the property types for a generic unknown element:
     let list = getDropdownProperties(false, 'UNKNOWN');
     for (let object of list) {

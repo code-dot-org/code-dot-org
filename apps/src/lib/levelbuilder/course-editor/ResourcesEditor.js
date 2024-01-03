@@ -12,14 +12,14 @@ export default class ResourcesEditor extends Component {
     resources: PropTypes.arrayOf(resourceShape).isRequired,
     studentFacing: PropTypes.bool,
     courseVersionId: PropTypes.number,
-    getRollupsUrl: PropTypes.string
+    getRollupsUrl: PropTypes.string,
   };
 
   constructor(props) {
     super(props);
 
     this.state = {
-      errorString: ''
+      errorString: '',
     };
   }
 
@@ -64,9 +64,9 @@ const styles = {
     marginTop: 10,
     marginBottom: 10,
     border: '1px solid ' + color.light_gray,
-    padding: 10
+    padding: 10,
   },
   error: {
-    color: 'red'
-  }
+    color: 'red',
+  },
 };

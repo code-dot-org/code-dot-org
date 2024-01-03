@@ -38,8 +38,10 @@ hr:
         age: 'Godine'
         gender: 'Spol'
         edit_header: 'Uredi podatke o računu'
+        finish_sign_up_header_error: 'Molimo ispravite sljedeće pogreške:'
         error:
           future: ne može biti u budućnosti
+        user_type: 'Vrsta računa'
   beta: "beta"
   hello: "Pozdrav svima"
   welcome_back: "Dobrodošao natrag, %{name}"
@@ -112,7 +114,6 @@ hr:
     agree_us_data_transfer_teacher: '**Pristajem na to da Code.org može prenositi podatke (uključujući osobne podatke) prikupljene mojim korištenjem (i korištenjem mojih učenika) ove stranice u Sjedinjene Države** u svrhu hostinga i obrade takvih podataka.'
     data_collection_us: "Razumijem da je Code.org neprofitna internetska stranica sa sjedištem u SAD-u i da se zakoni koji uređuju prikupljanje podataka u SAD-u mogu razlikovati od zakona u mojoj zemlji."
     visit_privacy: 'Posjetite Code.orgova [Pravila privatnosti](%{privacy_url}) da biste saznali više.'
-    additional_information: "Trebamo dodatne informacije kako bi nastavili vašu prijavu."
     user_type_label: "Vrsta računa"
     user_type_student: "Učenik"
     user_type_teacher: "Učitelj"
@@ -704,6 +705,7 @@ hr:
         csf_express: 'Osnove RZ (Pred-Brzi ili Brzi)'
         csd: 'RZ otkrića'
         csp: 'Principi RZ'
+        other: 'Ostalo'
         not_applicable: "Nije primjenjivo"
       email_opt_in:
         opt_in_yes: 'Da'
@@ -711,6 +713,9 @@ hr:
     international_opt_in:
       instructions: "Ispuni donji obrazac kako bi naznačio da si 1) prisustvovao radionici koju je vodio jedan od međunarodnih partnera Code.org i 2) pristaješ podijeliti tvoje podatke s našim međunarodnim partnerom u tvojoj zemlji kako bi oni mogli ti oni kao učitelju informatike mogli pomoći."
       facilitator_not_applicable: "Nije primjenjivo"
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
   cookie_banner:
     more_information: "Pogledaj politiku privatnosti Code.org."
     accept: 'Slažem se'

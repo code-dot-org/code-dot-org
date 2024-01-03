@@ -2,14 +2,473 @@
   "ka-GE": {
     "data": {
       "programming_environments": {
-        "weblab": {
-          "name": "ვებ ლაბორატორია"
+        "applab": {
+          "categories": {
+            "advanced": {
+              "name": "დამატებით"
+            },
+            "canvas": {
+              "expressions": {
+                "circle": {
+                  "palette_params": {
+                    "radius": {
+                      "description": "წრის რადიუსი, პიქსელებში."
+                    }
+                  }
+                },
+                "drawImage": {
+                  "palette_params": {
+                    "id": {
+                      "description": "The x პოზიცია პიქსელებში ზედა მარცხენა კუთხეში გამოსახულება მიაპყროს."
+                    },
+                    "x": {
+                      "description": "The x პოზიცია პიქსელებში ზედა მარცხენა კუთხეში გამოსახულება მიაპყროს."
+                    },
+                    "y": {
+                      "description": "Y პოზიცია გამოსახულების ზედა მარცხენა კუთხის პიქსელებში დახატვა."
+                    }
+                  }
+                },
+                "getAlpha": {
+                  "palette_params": {
+                    "x": {
+                      "description": "x პოზიცია პიქსელებში, სურათის ზედა მარცხენა კუთხიდან დაწყებული."
+                    },
+                    "y": {
+                      "description": "Y პოზიცია პიქსელებში, სურათის ზედა მარცხენა კუთხიდან დაწყებული."
+                    }
+                  },
+                  "short_description": "აბრუნებს ალფა (გაუმჭვირვალეობის) რაოდენობას (0-დან 255-მდე) მოცემულ სურათზე მოცემულ x და y პოზიციაზე მდებარე პიქსელის ფერში."
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "x": {
+                      "description": "x პოზიცია პიქსელებში, სურათის ზედა მარცხენა კუთხიდან დაწყებული."
+                    },
+                    "y": {
+                      "description": "Y პოზიცია პიქსელებში, სურათის ზედა მარცხენა კუთხიდან დაწყებული."
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "x": {
+                      "description": "x პოზიცია პიქსელებში, სურათის ზედა მარცხენა კუთხიდან დაწყებული."
+                    },
+                    "y": {
+                      "description": "Y პოზიცია პიქსელებში, სურათის ზედა მარცხენა კუთხიდან დაწყებული."
+                    }
+                  }
+                },
+                "getImageData": {
+                  "palette_params": {
+                    "height": {
+                      "description": "სურათის მონაცემების გადასაღებად შემოსაზღვრული მართკუთხედის სიმაღლე."
+                    },
+                    "width": {
+                      "description": "გამოსახულების მონაცემების გადასაღებად შემოსაზღვრული მართკუთხედის სიგანე."
+                    },
+                    "x": {
+                      "description": "X პოზიცია პიქსელებში გადაღების დასაწყებად."
+                    },
+                    "y": {
+                      "description": "Y პოზიცია პიქსელებში გადაღების დასაწყებად."
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "x": {
+                      "description": "x პოზიცია პიქსელებში, სურათის ზედა მარცხენა კუთხიდან დაწყებული."
+                    },
+                    "y": {
+                      "description": "Y პოზიცია პიქსელებში, სურათის ზედა მარცხენა კუთხიდან დაწყებული."
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "x": {
+                      "description": "პიქსელებში x პოზიცია, რომელიც იწყება სურათის ზედა მარცხენა კუთხიდან, მონაცემების ტილოზე დასაყენებლად."
+                    },
+                    "y": {
+                      "description": "Y პოზიცია პიქსელებში, სურათის ზედა მარცხენა კუთხიდან დაწყებული, მონაცემების ტილოზე დასაყენებლად."
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "height": {
+                      "description": "ვერტიკალური სიმაღლე ოთხკუთხედის პიქსელებში."
+                    },
+                    "width": {
+                      "description": "ჰორიზონტალური სიგანე ოთხკუთხედის პიქსელებში."
+                    },
+                    "x": {
+                      "description": "x პოზიცია მართკუთხედის ზედა მარცხენა კუთხის პიქსელებში."
+                    },
+                    "y": {
+                      "description": "Y პოზიცია მართკუთხედის ზედა მარცხენა კუთხის პიქსელებში."
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "alphaValue": {
+                      "description": "თანხის alpha (opacity) (0-დან 255) მითითებული pixel."
+                    },
+                    "x": {
+                      "description": "x პოზიცია პიქსელებში, სურათის ზედა მარცხენა კუთხიდან დაწყებული."
+                    },
+                    "y": {
+                      "description": "Y პოზიცია პიქსელებში, სურათის ზედა მარცხენა კუთხიდან დაწყებული."
+                    }
+                  },
+                  "short_description": "ადგენს ალფა (გაუმჭვირვალეობის) რაოდენობას (0-დან 255-მდე) მოცემულ სურათის მონაცემებში მოცემულ x და y პოზიციაზე მდებარე პიქსელის ფერში."
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "blueValue": {
+                      "description": "თანხის ლურჯი (0-დან 255) მითითებული pixel."
+                    },
+                    "x": {
+                      "description": "x პოზიცია პიქსელებში, სურათის ზედა მარცხენა კუთხიდან დაწყებული."
+                    },
+                    "y": {
+                      "description": "Y პოზიცია პიქსელებში, სურათის ზედა მარცხენა კუთხიდან დაწყებული."
+                    }
+                  },
+                  "short_description": "მითითებული თანხა ლურჯი (დაწყებული 0 255) ფერი pixel მდებარეობს მოცემულ x და y პოზიცია მოცემული გამოსახულების მონაცემები BlueValue შეყვანის თანხა."
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "greenValue": {
+                      "description": "თანხის მწვანე (0-დან 255) მითითებული pixel."
+                    },
+                    "x": {
+                      "description": "x პოზიცია პიქსელებში, სურათის ზედა მარცხენა კუთხიდან დაწყებული."
+                    },
+                    "y": {
+                      "description": "Y პოზიცია პიქსელებში, სურათის ზედა მარცხენა კუთხიდან დაწყებული."
+                    }
+                  },
+                  "short_description": "ადგენს მწვანე ფერის რაოდენობას (0-დან 255-მდე) მოცემულ სურათის მონაცემებში მოცემული პიქსელის ფერში x და y პოზიცია მოცემულ სურათის მონაცემებში GreenValue შეყვანის ოდენობამდე."
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "alpha": {
+                      "description": "სურვილისამებრ. თანხის opacity (0-დან 255) მითითებული pixel. უპირობოდ 255 (სრული opacity)."
+                    },
+                    "blue": {
+                      "description": "თანხის ლურჯი (0-დან 255) მითითებული pixel."
+                    },
+                    "green": {
+                      "description": "თანხის მწვანე (0-დან 255) მითითებული pixel."
+                    },
+                    "red": {
+                      "description": "თანხის წითელი (0-დან 255) მითითებული pixel."
+                    },
+                    "x": {
+                      "description": "x პოზიცია პიქსელებში, სურათის ზედა მარცხენა კუთხიდან დაწყებული."
+                    },
+                    "y": {
+                      "description": "Y პოზიცია პიქსელებში, სურათის ზედა მარცხენა კუთხიდან დაწყებული."
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "redValue": {
+                      "description": "თანხის წითელი (0-დან 255) მითითებული pixel."
+                    },
+                    "x": {
+                      "description": "x პოზიცია პიქსელებში, სურათის ზედა მარცხენა კუთხიდან დაწყებული."
+                    },
+                    "y": {
+                      "description": "Y პოზიცია პიქსელებში, სურათის ზედა მარცხენა კუთხიდან დაწყებული."
+                    }
+                  },
+                  "short_description": "ამ სურათის მონაცემებში მოცემული x და y პოზიციაზე მდებარე პიქსელის ფერში ადგენს წითლის რაოდენობას (0-დან 255-მდე) მოცემულ სურათის მონაცემებში RedValue შეყვანის ოდენობას."
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "description": "SetTimeout ფუნქციის მიერ დაბრუნებული მნიშვნელობა გაუქმების მიზნით."
+                    }
+                  }
+                },
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "ფუნქციის თითოეულ შესრულებას შორის მილიწამების რაოდენობა."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "რაოდენობის მილიწამებში დაველოდოთ შესრულებაში ფუნქცია."
+                    }
+                  }
+                },
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "ფუნქცია"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "tableName": {
+                      "description": "ცხრილის სახელი ჩანაწერების მისაღებად."
+                    }
+                  }
+                },
+                "getKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "გასაღების სახელი უნდა იყოს მოძიებული."
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "ფუნქცია"
+                    }
+                  }
+                },
+                "getUserId": {
+                  "short_description": "იღებს უნიკალურ იდენტიფიკატორს ამ აპის ამჟამინდელი მომხმარებლისთვის."
+                },
+                "onRecordEvent": {
+                  "palette_params": {
+                    "table": {
+                      "description": "ცხრილის სახელი, რომელზეც ვრცელდება ეს ღონისძიების დამმუშავებელი."
+                    }
+                  }
+                },
+                "setKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "სახელი გასაღები უნდა იყოს შენახული."
+                    },
+                    "value": {
+                      "description": "მონაცემები ინახება."
+                    }
+                  },
+                  "short_description": "ინახავს გასაღების/მნიშვნელობის წყვილს App Lab- ის გასაღები/მნიშვნელობის მონაცემთა შენახვაში და მოქმედების დასრულებისას დარეკვის ფუნქციას უწოდებს."
+                },
+                "startWebRequest": {
+                  "palette_params": {
+                    "url": {
+                      "description": "სერვისის ვებ მისამართი, რომელიც აბრუნებს მონაცემებს."
+                    }
+                  }
+                }
+              },
+              "name": "მონაცემები"
+            },
+            "functions": {
+              "name": "ფუნქციები"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "მაქსიმალური დაბრუნებული რიცხვი"
+                    },
+                    "min": {
+                      "description": "მინიმალური დაბრუნებული რიცხვი"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "მაქსიმალური დაბრუნებული რიცხვი"
+                    },
+                    "min": {
+                      "description": "მინიმალური დაბრუნებული რიცხვი"
+                    }
+                  }
+                }
+              },
+              "name": "მათემატიკა"
+            },
+            "turtle": {
+              "expressions": {
+                "arcLeft": {
+                  "short_description": "მოძრაობს კუს წინ და მარცხნივ გლუვ, წრიულ რკალში."
+                },
+                "getX": {
+                  "short_description": "იღებს მიმდინარე x კოორდინატს კუს პიქსელებში."
+                },
+                "getY": {
+                  "short_description": "იღებს მიმდინარე y კოორდინატს კუს პიქსელებში."
+                },
+                "hide": {
+                  "short_description": "კუს უხილავს ხდის მის ამჟამინდელ ადგილას."
+                },
+                "move": {
+                  "palette_params": {
+                    "x": {
+                      "description": "პიქსელების რაოდენობა კუს მარჯვნივ გადასაადგილებლად."
+                    },
+                    "y": {
+                      "description": "პიქსელების რაოდენობა კუს ქვემოთ გადასაადგილებლად."
+                    }
+                  }
+                },
+                "moveBackward": {
+                  "short_description": "მოძრაობს კუს უკან მოცემული რაოდენობის პიქსელი მიმდინარე მიმართულებით."
+                },
+                "moveForward": {
+                  "short_description": "მოძრაობს კუს წინ მოცემული რაოდენობის პიქსელი მიმდინარე მიმართულებით."
+                },
+                "moveTo": {
+                  "short_description": "მოძრაობს კუს კონკრეტულ (x, y) პოზიციაზე ეკრანზე."
+                },
+                "penColor": {
+                  "short_description": "ადგენს კალმის ფერს, რომელსაც კუს იყენებს ხაზებისა და წერტილების ხატვისთვის."
+                },
+                "penDown": {
+                  "short_description": "აყენებს კალამი ქვემოთ, ასე რომ კუს ამახვილებს ხაზს მის უკან, როგორც ის მოძრაობს."
+                },
+                "penRGB": {
+                  "short_description": "გამოყენება RGBA ღირებულებები, ადგენს ფერი კალამი გამოიყენება კუს ხატვის ხაზები და წერტილები."
+                },
+                "penUp": {
+                  "short_description": "Picks კალამი up ისე კუს არ მიაპყროს ხაზი, როგორც ეს მოძრაობს."
+                },
+                "penWidth": {
+                  "short_description": "ადგენს ხაზის სიგანეს პიქსელებში, რომელსაც კუ ხატავს მის უკან მოძრაობისას."
+                },
+                "show": {
+                  "short_description": "კუს ხილულს ხდის მის ამჟამინდელ ადგილას."
+                },
+                "speed": {
+                  "short_description": "ადგენს აპის შესრულების სიჩქარეს, რომელიც მოიცავს კუს სიჩქარეს."
+                },
+                "turnLeft": {
+                  "short_description": "ბრუნავს მითითებული კუთხით დატოვებულ კუს. კუს პოზიცია იგივე რჩება."
+                },
+                "turnRight": {
+                  "short_description": "ბრუნავს კუს მარჯვნივ მითითებული კუთხით. კუს პოზიცია იგივე რჩება."
+                },
+                "turnTo": {
+                  "short_description": "ცვლის კუს მიმართულებას კონკრეტული კუთხით. 0 არის ზემოთ, 90 არის სწორი, 180 ქვემოთ და 270 დარჩა."
+                }
+              }
+            },
+            "ui_controls": {
+              "expressions": {
+                "button": {
+                  "short_description": "ქმნის ღილაკს ეკრანზე ჩვენებისას ტექსტი გათვალისწინებული და მითითებული მიერ მოცემული id at default ადგილმდებარეობა (0,0)."
+                },
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "ფუნქცია"
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "მუსიკის შექმნა"
+                    }
+                  },
+                  "short_description": "უკრავს MP3 ფორმატის ხმოვან ფაილს მითითებული ბმულიდან."
+                },
+                "setProperty": {
+                  "palette_params": {
+                    "property": {
+                      "description": "ქონების შეცვლა."
+                    }
+                  },
+                  "short_description": "ადგენს ქონებას ახალ მნიშვნელობას მითითებულ ელემენტზე."
+                },
+                "setScreen": {
+                  "short_description": "ადგენს ეკრანზე მოცემულ ScreenID- ს."
+                },
+                "showElement": {
+                  "short_description": "აჩვენებს ელემენტს მოწოდებული ID- ით."
+                },
+                "textLabel": {
+                  "short_description": "ქმნის ტექსტურ ეტიკეტს ეკრანზე, რომელიც აჩვენებს მოცემულ ID- ს მიერ მითითებულ ტექსტს ნაგულისხმევ ადგილას (0,0)."
+                }
+              }
+            },
+            "variables": {
+              "expressions": {
+                "addPair": {
+                  "return_value": "არცერთი"
+                },
+                "declareAssign_list_123": {
+                  "short_description": "გამოაცხადეთ და მიანიჭეთ მასივი ცვლადს"
+                },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "სიმებიანი ძიება."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "სიმებიანი ძიება."
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "სიგრძის სიმებიანი"
+                }
+              },
+              "name": "ცვლადები"
+            }
+          },
+          "description": "აპლიკაციების ლაბორატორია არის პროგრამირების გარემო, სადაც მარტივი აპლიკაციების შექმნა შეგიძლიათ. შექმენით აპლიკაცია, დაწერეთ კოდი ბლოკებით ან JavaScript–ით შემდეგ კი გაუზიარეთ იგი სხვებს.",
+          "name": "App Lab"
         },
         "gamelab": {
-          "name": "თამაშების ლაბი",
           "categories": {
+            "control": {
+              "expressions": {
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "ფუნქციის თითოეულ შესრულებას შორის მილიწამების რაოდენობა."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "რაოდენობის მილიწამებში დაველოდოთ შესრულებაში ფუნქცია."
+                    }
+                  }
+                }
+              }
+            },
+            "drawing": {
+              "name": "ნახატი"
+            },
+            "functions": {
+              "name": "ფუნქციები"
+            },
             "game_lab": {
-              "name": "თამაშების ლაბი",
               "expressions": {
                 "mouseIsOver": {
                   "palette_params": {
@@ -32,14 +491,15 @@
                     }
                   },
                   "short_description": "უკრავს MP3 ფორმატის ხმოვან ფაილს მითითებული ბმულიდან."
+                },
+                "showMobileControls": {
+                  "content": "ცვლის მობილურ კონტროლს, რომელიც ჩანს სათამაშო სივრცის ქვეშ.",
+                  "short_description": "ცვლის მობილურ კონტროლს, რომელიც ჩანს სათამაშო სივრცის ქვეშ."
                 }
-              }
-            },
-            "sprites": {
-              "name": "სპრაიტები"
+              },
+              "name": "თამაშების ლაბი"
             },
             "groups": {
-              "name": "ჯგუფები",
               "expressions": {
                 "add": {
                   "palette_params": {
@@ -76,174 +536,116 @@
                     }
                   }
                 }
-              }
-            },
-            "drawing": {
-              "name": "ნახატი"
+              },
+              "name": "ჯგუფები"
             },
             "math": {
-              "name": "მათემატიკა",
               "expressions": {
                 "randomNumber": {
                   "palette_params": {
-                    "min": {
-                      "description": "მინიმალური დაბრუნებული რიცხვი"
-                    },
                     "max": {
                       "description": "მაქსიმალური დაბრუნებული რიცხვი"
+                    },
+                    "min": {
+                      "description": "მინიმალური დაბრუნებული რიცხვი"
                     }
                   }
                 },
                 "randomNumber_min_max": {
                   "palette_params": {
-                    "min": {
-                      "description": "მინიმალური დაბრუნებული რიცხვი"
-                    },
                     "max": {
                       "description": "მაქსიმალური დაბრუნებული რიცხვი"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "ცვლადები"
-            },
-            "functions": {
-              "name": "ფუნქციები"
-            }
-          }
-        },
-        "applab": {
-          "name": "App Lab",
-          "description": "აპლიკაციების ლაბორატორია არის პროგრამირების გარემო, სადაც მარტივი აპლიკაციების შექმნა შეგიძლიათ. შექმენით აპლიკაცია, დაწერეთ კოდი ბლოკებით ან JavaScript–ით შემდეგ კი გაუზიარეთ იგი სხვებს.",
-          "categories": {
-            "ui_controls": {
-              "expressions": {
-                "onEvent": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "ფუნქცია"
-                    }
-                  }
-                },
-                "playSound": {
-                  "examples": {
-                    "Making Music": {
-                      "name": "მუსიკის შექმნა"
-                    }
-                  },
-                  "short_description": "უკრავს MP3 ფორმატის ხმოვან ფაილს მითითებული ბმულიდან."
-                }
-              }
-            },
-            "data": {
-              "name": "მონაცემები",
-              "expressions": {
-                "getPrediction": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "ფუნქცია"
-                    }
-                  }
-                }
-              }
-            },
-            "control": {
-              "expressions": {
-                "timedLoop": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "ფუნქცია"
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "მათემატიკა",
-              "expressions": {
-                "randomNumber_min_max": {
-                  "palette_params": {
+                    },
                     "min": {
                       "description": "მინიმალური დაბრუნებული რიცხვი"
-                    },
-                    "max": {
-                      "description": "მაქსიმალური დაბრუნებული რიცხვი"
-                    }
-                  }
-                },
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "მინიმალური დაბრუნებული რიცხვი"
-                    },
-                    "max": {
-                      "description": "მაქსიმალური დაბრუნებული რიცხვი"
                     }
                   }
                 }
-              }
+              },
+              "name": "მათემატიკა"
             },
-            "variables": {
-              "name": "ცვლადები",
-              "expressions": {
-                "addPair": {
-                  "return_value": "არცერთი"
-                }
-              }
-            },
-            "functions": {
-              "name": "ფუნქციები"
-            },
-            "advanced": {
-              "name": "დამატებით"
-            }
-          }
-        },
-        "spritelab": {
-          "name": "სპრიტის ლაბორატორია",
-          "categories": {
             "sprites": {
+              "expressions": {
+                "sprite.height": {
+                  "return_value": "სიმაღლის Sprite."
+                },
+                "sprite.width": {
+                  "return_value": "სიგანე Sprite."
+                }
+              },
               "name": "სპრაიტები"
             },
-            "world": {
-              "name": "სამყარო"
-            },
-            "location": {
-              "name": "მდებარეობები"
-            },
+            "variables": {
+              "expressions": {
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "სიმებიანი ძიება."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "სიმებიანი ძიება."
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "სიგრძის სიმებიანი"
+                }
+              },
+              "name": "ცვლადები"
+            }
+          },
+          "name": "თამაშების ლაბი"
+        },
+        "spritelab": {
+          "categories": {
             "actions": {
               "name": "მოქმედებები"
-            },
-            "events": {
-              "name": "მოვლენები"
             },
             "behaviors": {
               "name": "ქცევა"
             },
-            "loops": {
-              "name": "ციკლები"
+            "comments": {
+              "name": "კომენტარები"
             },
-            "variables": {
-              "name": "ცვლადები"
-            },
-            "math": {
-              "name": "მათემატიკა"
-            },
-            "logic": {
-              "name": "ლოგიკა"
+            "events": {
+              "name": "მოვლენები"
             },
             "functions": {
               "name": "ფუნქციები"
             },
+            "location": {
+              "name": "მდებარეობები"
+            },
+            "logic": {
+              "name": "ლოგიკა"
+            },
+            "loops": {
+              "name": "ციკლები"
+            },
+            "math": {
+              "name": "მათემატიკა"
+            },
+            "sprites": {
+              "name": "სპრაიტები"
+            },
             "text": {
               "name": "ტექსტი"
             },
-            "comments": {
-              "name": "კომენტარები"
+            "variables": {
+              "name": "ცვლადები"
+            },
+            "world": {
+              "name": "სამყარო"
             }
-          }
+          },
+          "name": "სპრიტის ლაბორატორია"
+        },
+        "weblab": {
+          "name": "ვებ ლაბორატორია"
         }
       }
     }

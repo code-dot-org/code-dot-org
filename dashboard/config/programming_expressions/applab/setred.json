@@ -6,6 +6,7 @@
   "content": "One advantage of using a canvas for apps containing images or drawing is that you can access the image data at the pixel level. This allows your app to process an image just like many image editing programs.\n\n**How pixel colors work**: The color you see in a pixel on the screen is made up of 4 values. The red, green, blue, and alpha values of a pixel determine exactly the shade of color that appears on the screen. Each of these values ranges from a minimum of 0 up to a maximum of 255. They are usually listed in the order of Red, Green, Blue, then Alpha - or RGBA. A fully red (and only red) pixel would be written as (255, 0, 0, 255). A black pixel is (0, 0, 0, 255). So reducing a pixel's color values will cause it to be closer to black. The alpha value is special because it shows how opaque the pixel should be in comparison to other pixels on the same spot at the screen. So an alpha value of 0 would make a pixel fully transparent (regardless of the other color values) and 255 is fully visible.",
   "examples": [
     {
+      "name": "Basic Example",
       "description": "",
       "code": "```\n// Change the red value of a single pixel to zero.\ncreateCanvas('canvas1');\nsetFillColor('red');\nrect(0, 0, 100, 200);\nvar imageData = getImageData(0, 0, 100, 200);\nconsole.log(getRed(imageData, 50, 50));\nsetRed(imageData, 50, 50, 0);\nputImageData(imageData, 0, 0);\nconsole.log(getRed(imageData, 50, 50));\n```"
     },

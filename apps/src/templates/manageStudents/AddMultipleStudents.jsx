@@ -12,11 +12,11 @@ class AddMultipleStudents extends Component {
   static propTypes = {
     sectionId: PropTypes.number,
     // Provided by redux
-    addMultipleStudents: PropTypes.func.isRequired
+    addMultipleStudents: PropTypes.func.isRequired,
   };
 
   state = {
-    isDialogOpen: false
+    isDialogOpen: false,
   };
 
   openDialog = () => {
@@ -27,8 +27,8 @@ class AddMultipleStudents extends Component {
         study_group: 'manage-students-actions',
         event: 'add-students-button-click',
         data_json: JSON.stringify({
-          sectionId: this.props.sectionId
-        })
+          sectionId: this.props.sectionId,
+        }),
       },
       {includeUserId: true}
     );
@@ -40,15 +40,21 @@ class AddMultipleStudents extends Component {
 
   add = () => {
     const value = this.refs.studentsTextBox.value;
-    this.props.addMultipleStudents(value.split('\n'));
+    const studentDataArray = value.split('\n').map(line => {
+      const parts = line.split(',');
+      const name = parts[0].trim();
+      const familyName = parts.length > 1 ? parts[1].trim() : null;
+      return {name, familyName};
+    });
+    this.props.addMultipleStudents(studentDataArray);
     firehoseClient.putRecord(
       {
         study: 'teacher-dashboard',
         study_group: 'manage-students-actions',
         event: 'add-students-confirm',
         data_json: JSON.stringify({
-          sectionId: this.props.sectionId
-        })
+          sectionId: this.props.sectionId,
+        }),
       },
       {includeUserId: true}
     );
@@ -59,7 +65,7 @@ class AddMultipleStudents extends Component {
     return (
       <div>
         <Button
-          __useDeprecatedTag
+          style={styles.button}
           onClick={this.openDialog}
           color={Button.ButtonColor.gray}
           text={i18n.addStudentsMultiple()}
@@ -72,25 +78,26 @@ class AddMultipleStudents extends Component {
           handleClose={this.closeDialog}
         >
           <h2>{i18n.addStudentsMultiple()}</h2>
-          <div>{i18n.addStudentsMultipleInstructions()}</div>
+          <div>{i18n.addStudentsMultipleWithFamilyNameInstructions()}</div>
           <textarea
             rows="15"
             cols="70"
             ref="studentsTextBox"
             style={styles.textarea}
+            aria-label={i18n.addStudentsMultiple()}
           />
           <DialogFooter>
             <Button
-              __useDeprecatedTag
+              style={styles.button}
               text={i18n.dialogCancel()}
               onClick={this.closeDialog}
               color={Button.ButtonColor.gray}
             />
             <Button
-              __useDeprecatedTag
+              style={styles.button}
               text={i18n.done()}
               onClick={this.add}
-              color={Button.ButtonColor.orange}
+              color={Button.ButtonColor.brandSecondaryDefault}
             />
           </DialogFooter>
         </BaseDialog>
@@ -103,11 +110,15 @@ const styles = {
   dialog: {
     paddingLeft: 20,
     paddingRight: 20,
-    paddingBottom: 20
+    paddingBottom: 20,
   },
   textarea: {
-    width: '75%'
-  }
+    width: '75%',
+  },
+  button: {
+    margin: 0,
+    marginBottom: 5,
+  },
 };
 
 export default connect(
@@ -115,6 +126,6 @@ export default connect(
   dispatch => ({
     addMultipleStudents(names) {
       dispatch(addMultipleAddRows(names));
-    }
+    },
   })
 )(AddMultipleStudents);

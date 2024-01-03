@@ -10,3 +10,4 @@ right "The unicorn's x value increases"
 markdown <<MARKDOWN
 
 MARKDOWN
+allow_multiple_attempts true

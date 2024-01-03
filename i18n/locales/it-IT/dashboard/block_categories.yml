@@ -4,6 +4,7 @@ it:
       Actions: Azioni
       Advanced: Avanzate
       Behaviors: Comportamenti
+      'Behaviors ': 'Comportamenti '
       Boolean: Booleano
       Brushes: Pennelli
       Category: Categoria
@@ -20,8 +21,9 @@ it:
       Game/Score: Gioco/Punteggio
       Games/Score: Giochi/Punteggio
       Groups: Gruppi
+      Image: Immagine
       Input: Input
-      Location: Luogo
+      Location: Posizione
       Locations: Posizioni
       Logic: Logica
       Loops: Cicli

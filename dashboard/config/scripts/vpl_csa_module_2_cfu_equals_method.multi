@@ -63,3 +63,5 @@ Flower border = fill;
 Which of the following statements will return false?
  
 MARKDOWN
+
+allow_multiple_attempts true

@@ -52,6 +52,7 @@ fi:
         gender: 'Sukupuoli'
         edit_header: 'Muokkaa tiliä'
         finish_sign_up_header: 'Viimeistele tilin luominen'
+        finish_sign_up_header_error: 'Ole hyvä ja korjaa seuraavat virheet:'
         finish_sign_up_subheader: 'Täytä seuraavat tiedot viimeistelläksesi Code.org tilin <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Täytä seuraavat tiedot viimeistelläksesi Code.org tili **%{email}**.'
         finish_sign_up_subheader_provider: 'Täytä seuraavat tiedot viimeistelläksesi Code.org -tilin luomisen palvelun <strong>%{provider}</strong> tunnuksella <strong>%{email}</strong>.'
@@ -59,6 +60,8 @@ fi:
         reset_password_token: "Valitsemasi salasanan asetuslinkki"
         error:
           future: ei voi olla tulevaisuudessa
+        user_type: 'Tilin laji'
+        us_state: 'Osavaltio'
   beta: "beta"
   hello: "Hei maailma"
   welcome_back: "Tervetuloa takaisin, %{name}"
@@ -166,7 +169,6 @@ fi:
     data_collection_us: "Ymmärrän, että Code.org on yhdysvaltalainen voittoa tavoittelematon verkkosivusto ja että Yhdysvaltojen tietojen keruuta koskevat lait saattavat poiketa suomen laeista."
     visit_privacy: 'Lue lisää Code.orgin [Tietosuojakäytäntö(]%{privacy_url}) sivuilla.'
     student_terms_markdown: "Sähköpostiosoitteita ei tallenneta muodossa, joka antaisi meidän ottaa yhteyttä oppilaisiin. Oppilaat eivät koskaan saa sähköpostia sivustolta Code.org muutoin kuin salasanan palauttamiseksi. Katso [tietosuojakäytännöstä](http://code.org/privacy) lisää tietoa."
-    additional_information: "Tarvitsemme joitakin lisätietoja voidaksesi jatkaa kirjautumista."
     user_type_button: "Aseta tilin laji"
     user_type_label: "Tilin laji"
     user_type_student: "Oppilas"
@@ -184,6 +186,7 @@ fi:
     parent_account_checkbox: "Olen lapseni puolesta ilmoittautuva vanhempi/huoltaja"
     parent_account_email_progress_permission: "Voimmeko lähettää sinulle satunnaisia päivityksiä sähköpostitse lapsesi edistymisestä ja projekteista sekä päivityksiä lapsesi kurssista ja tietotekniikasta? [(Katso tietosuojakäytäntömme)] (%{privacy_policy_url})"
     parent_account_email_label: "Vanhemman/Huoltajan sähköpostiosoite"
+    us_state: 'Osavaltio'
   school_info:
     title: 'Koulun tiedot (valinnainen)'
     school_country: 'Koulun maa'
@@ -871,9 +874,14 @@ fi:
       robotics:
         kodable: 'Kodable'
         other: "Muut"
+      workshop_course:
+        other: 'Muut'
       email_opt_in:
         opt_in_yes: 'Kyllä'
         opt_in_no: 'Ei'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
   cookie_banner:
     message: 'Jatkamalla sivustollemme tai napsauttamalla "Hyväksyn," hyväksyt evästeiden tallentamisen laitteellesi.'
     more_information: "Katso Code.org -sivuston tietosuojakäytäntö."

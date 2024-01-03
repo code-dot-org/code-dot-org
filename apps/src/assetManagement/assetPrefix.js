@@ -12,6 +12,7 @@ const ABSOLUTE_CDO_CURRICULUM_REGEXP = new RegExp(
   '^https://curriculum.code.org/',
   'i'
 );
+const ABSOLUTE_CDO_IMAGES_REGEXP = new RegExp('^https://images.code.org/', 'i');
 
 export const DATA_URL_PREFIX_REGEX = new RegExp('^data:image');
 
@@ -55,7 +56,10 @@ export function fixPath(filename) {
   // exported app, in which case our media proxy won't be good for anything
   // anyway.
   if (ABSOLUTE_REGEXP.test(filename) && window.location.protocol !== 'file:') {
-    if (ABSOLUTE_CDO_CURRICULUM_REGEXP.test(filename)) {
+    if (
+      ABSOLUTE_CDO_CURRICULUM_REGEXP.test(filename) ||
+      ABSOLUTE_CDO_IMAGES_REGEXP.test(filename)
+    ) {
       // We know that files served from this location will respond with the
       // access-control-allow-origin: * header, meaning no CORS issue & no need
       // for the media proxy.
@@ -79,8 +83,16 @@ export function fixPath(filename) {
     return filename.replace(SOUND_PREFIX, soundPathPrefix);
   }
 
+  const state = getStore().getState();
+
+  // If a curriculum level is remixed, any images that were copied from a starter asset
+  // image contains 'image://' in its filenmae.
+  // We want to strip this starter asset prefix from the filename so that the correct
+  // image file path is returned.
+  if (!state.pageConstants?.isCurriculumLevel) {
+    filename = filename.replace(STARTER_ASSET_PREFIX, '');
+  }
   if (STARTER_ASSET_PREFIX_REGEX.test(filename)) {
-    const state = getStore().getState();
     return filename.replace(
       STARTER_ASSET_PREFIX,
       starterAssetPathPrefix(state.level.name)

@@ -24,3 +24,5 @@ teacher_markdown <<MARKDOWN
 
 <div class="clear"></div>
 MARKDOWN
+
+allow_multiple_attempts true

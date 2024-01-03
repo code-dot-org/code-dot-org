@@ -25,3 +25,5 @@ for(int i = 0; i < 14; i = i + 3){
 ```
 
 MARKDOWN
+
+allow_multiple_attempts true

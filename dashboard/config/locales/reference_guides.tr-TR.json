@@ -5,9 +5,6 @@
         "csd-2022/accelerometer-events": {
           "display_name": "İvmeölçer olayları"
         },
-        "csd-2022/analog-sensors": {
-          "display_name": "Analog Sensörler"
-        },
         "csd-2022/app-lab": {
           "display_name": "App Laboratuvarı"
         },
@@ -22,6 +19,9 @@
         },
         "csd-2022/booleans-and-comparison-operators": {
           "display_name": "Boolean ve Karşılaştırma Operatörleri"
+        },
+        "csd-2022/circuit-playground": {
+          "display_name": "Devre Oyun Alanına Genel Bakış"
         },
         "csd-2022/classes": {
           "display_name": "Sınıflar"
@@ -119,11 +119,14 @@
         "csd-2022/patterns-overview": {
           "display_name": "Genel Bakış"
         },
-        "csd-2022/physical-input": {
-          "display_name": "Fiziksel Girdi"
-        },
         "csd-2022/playing-notes": {
           "display_name": "Notaları çalma"
+        },
+        "csd-2022/problem-solving-process": {
+          "display_name": "Problem çözme süreci"
+        },
+        "csd-2022/problem-solving-process-general": {
+          "display_name": "Problem çözme süreci"
         },
         "csd-2022/random-numbers": {
           "display_name": "Rastgele Sayılar"

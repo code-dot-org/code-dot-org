@@ -61,18 +61,29 @@ de:
           description: Lerne funktionales Programmieren mithilfe von Algebra.
           description_short: Lerne funktionales Programmieren mithilfe von Algebra.
           student_description: Lerne funktionales Programmieren mithilfe von Algebra.
+          name: Algebra
         infinity:
           title: Disney Infinity Spielelabor
           description: Verwende das Spielelabor, um eine Geschichte oder ein Spiel mit den Disney Infinity Figuren zu erstellen.
           description_short: Verwende das Spielelabor, um eine Geschichte oder ein Spiel mit den Disney Infinity Figuren zu erstellen.
           student_description: Verwende das Spielelabor, um eine Geschichte oder ein Spiel mit den Disney Infinity Figuren zu erstellen.
           name: Infinity
+        algebrademo:
+          title: Algebra-Demo
+          description: Eine Handvoll Puzzle zur Demonstration der Umgebung und der Programmiersprache, die in Code.org CS in Algebra verwendet werden
+          description_short: Eine Handvoll Puzzle zur Demonstration der Umgebung und der Programmiersprache, die in Code.org CS in Algebra verwendet werden
+          student_description: Eine Handvoll Puzzle zur Demonstration der Umgebung und der Programmiersprache, die in Code.org CS in Algebra verwendet werden
         K5PD:
+          title: K5 Professional Development (alt)
           description: 'For the latest online Professional Development resources for elementary school teachers here: <https://studio.code.org/s/k5-onlinepd>'
           student_description: 'For the latest online Professional Development resources for elementary school teachers here: <https://studio.code.org/s/k5-onlinepd>'
         netsim:
           title: Internet-Simulator
+          description: Erfahren Sie, wie das Internet funktioniert.
+          description_short: Erfahren Sie, wie das Internet funktioniert.
+          student_description: Erfahren Sie, wie das Internet funktioniert.
         pixelation:
+          title: Pixelierung
           description: Erstelle Bilder mit Bits und Bytes.
           description_short: Erstelle Bilder mit Bits und Bytes.
           student_description: Erstelle Bilder mit Bits und Bytes.
@@ -82,6 +93,7 @@ de:
           description_short: Dieser 20-stündige Kurs umfasst die Informatik- und Programmierkonzepte aus den Kursen 2-4.
           description_audience: 'Alter: 10-18'
           student_description: Dieser 20-stündige Kurs umfasst die Informatik- und Programmierkonzepte aus den Kursen 2-4. Der Kurs eignet sich für Kinder und Jugendliche zwischen 10 und 18 Jahren. Unsere Kurse 2-4 vermitteln umfassendere Kenntnisse!
+          name: 20 Stunden
         edit-code:
           title: Code bearbeiten
           description: Code bearbeiten
@@ -114,115 +126,265 @@ de:
           description_short: Lerne die Grundlagen der Computertechnologie mit Deinen Lieblingsfiguren kennen!
           student_description: Teste die Grundlagen der Informatik mit Charakteren aus Angry Birds und Pflanzen gegen Zombies!
         CodeStudioPuzzleChallenge:
+          title: Code Studio Puzzle-Herausforderung
+          description: Probiere diese lustigen Programmierpuzzle aus. Gib dein Bestes!
           description_short: Fordere Dich selbst heraus!
+          student_description: Probiere diese lustigen Programmierpuzzle aus. Gib dein Bestes!
         Tutorial Video - Code Studio Puzzle Challenge:
+          title: Anleitung - Code Studio Puzzle-Herausforderung
+          description: Probiere diese lustigen Programmierpuzzle aus. Gib dein Bestes!
           description_short: Fordere Dich selbst heraus!
-        cspunit1: {}
+          student_description: Probiere diese lustigen Programmierpuzzle aus. Gib dein Bestes!
+        cspunit1:
+          title: "(alt) CS-Prinzipien Einheit 1 — Digitale Information"
+          description: In dieser Lerneinheit werden die technischen Herausforderungen und Fragen untersucht, die sich aus der Notwendigkeit ergeben, digitale Informationen in Computern darzustellen und zwischen Menschen und Rechengeräten zu übertragen. Dieses Gerät ist eine Pilotversion und wird nicht mehr unterstützt oder aktualisiert. Sie finden die neuen Einheiten unter code.org/educate/csp.
+          description_short: Diese Lerneinheit ist eine Pilotversion und wird nicht mehr unterstützt oder aktualisiert. Sie finden die neuen Einheiten unter code.org/educate/csp.
+          student_description: In dieser Lerneinheit werden die technischen Herausforderungen und Fragen untersucht, die sich aus der Notwendigkeit ergeben, digitale Informationen in Computern darzustellen und zwischen Menschen und Rechengeräten zu übertragen. Dieses Gerät ist eine Pilotversion und wird nicht mehr unterstützt oder aktualisiert. Sie finden die neuen Einheiten unter code.org/educate/csp.
         algebraPD:
+          title: Informatik in Algebra PD
           description: 'Phase 1: Online Einführung'
           description_short: 'Phase 1: Online Einführung'
           student_description: 'Phase 1: Online Einführung'
-        algPDmiami: {}
+        algPDmiami:
+          title: Informatik in Algebra PD
+          description: Unterrichten Sie Algebra durch funktionale Programmierung
+          description_short: Unterrichten Sie Algebra durch funktionale Programmierung
+          student_description: Unterrichten Sie Algebra durch funktionale Programmierung
         text-compression:
           title: Text-Kompression
-        CSPPD: {}
-        CSPLessonSamples: {}
+          description: Komprimieren Sie Text, indem Sie sich wiederholende Muster identifizieren.
+          description_short: Komprimieren Sie Text, indem Sie sich wiederholende Muster identifizieren.
+          student_description: Komprimieren Sie Text, indem Sie sich wiederholende Muster identifizieren.
+        CSPPD:
+          title: Grundlagen der Informatik PD
+          description: 'Phase 1: Online-Einführung für CSP'
+          description_short: 'Phase 1: Online-Einführung für CSP'
+          student_description: 'Phase 1: Online-Einführung für CSP'
+        CSPLessonSamples:
+          title: Beispiele für CSP-Lektionen
+          description: Unterrichtsbeispiele für CSP
+          description_short: Unterrichtsbeispiele für CSP
+          student_description: Unterrichtsbeispiele für CSP
         ECSPD:
+          title: Erkundung der Informatik PD
           description: 'Phase 1: Online Einführung'
           description_short: 'Phase 1: Online Einführung'
           student_description: 'Phase 1: Online Einführung'
+          name: ECSPD
         sciencePD:
+          title: Informatik in den Naturwissenschaften PD
           description: 'Phase 1: Online Einführung'
           description_short: 'Phase 1: Online Einführung'
           student_description: 'Phase 1: Online Einführung'
-        rbo-reference: {}
-        cspunit3: {}
-        algebraPD3: {}
+        rbo-reference:
+          title: rbo-referenz
+          description: rbo-referenz
+          description_short: rbo-referenz
+          student_description: rbo-referenz
+        Test Wednesday:
+          title: Test-Mittwoch
+          description: Test-Mittwoch
+          description_short: Test-Mittwoch
+          student_description: Test-Mittwoch
+        cspunit3:
+          title: "(alt) CS-Prinzipien Einheit 3 - Programmierung"
+          description: In dieser Einheit werden die grundlegenden Konzepte der Computerprogrammierung vorgestellt, die die Erstellung umfangreicher, interaktiver Apps ermöglichen. In diesem Kurs werden JavaScript als Programmiersprache und App Lab als Programmierumgebung zum Erstellen von Apps verwendet. Die in diesen Lektionen erlernten Konzepte beziehen sich jedoch auf alle Programmiersprachen und Tools.
+          description_short: Diese Lerneinheit ist eine Pilotversion und wird nicht mehr unterstützt oder aktualisiert. Sie finden die neuen Einheiten unter code.org/educate/csp.
+          student_description: In dieser Einheit werden die grundlegenden Konzepte der Computerprogrammierung vorgestellt, die die Erstellung umfangreicher, interaktiver Apps ermöglichen. In diesem Kurs werden JavaScript als Programmiersprache und App Lab als Programmierumgebung zum Erstellen von Apps verwendet. Die in diesen Lektionen erlernten Konzepte beziehen sich jedoch auf alle Programmiersprachen und Tools.
+        algebraPD3:
+          title: Phase 3 PD
+          description: Unterrichten Sie Algebra durch Baustein-basierte funktionale Programmierung
+          description_short: Unterrichten Sie Algebra durch Baustein-basierte funktionale Programmierung
+          student_description: Unterrichten Sie Algebra durch Baustein-basierte funktionale Programmierung
         ECSPD-NexTech:
+          title: Erkundung der Informatik PD
           description: 'Phase 1: Online Einführung'
           description_short: 'Phase 1: Online Einführung'
           logo_image: nextech\_logo.png
           student_description: 'Phase 1: Online Einführung'
         ECSPD-iZone:
+          title: Erkundung der Informatik PD
           description: 'Phase 1: Online Einführung'
           description_short: 'Phase 1: Online Einführung'
           logo_image: izone\_logo.png
           student_description: 'Phase 1: Online Einführung'
         algebraPD-NexTech:
+          title: Informatik in Algebra PD
           description: 'Phase 1: Online Einführung'
           description_short: 'Phase 1: Online Einführung'
           logo_image: nextech\_logo.png
           student_description: 'Phase 1: Online Einführung'
         algebraPD-iZone:
+          title: Informatik in Algebra PD
           description: 'Phase 1: Online Einführung'
           description_short: 'Phase 1: Online Einführung'
           logo_image: izone\_logo.png
           student_description: 'Phase 1: Online Einführung'
         sciencePD-NexTech:
+          title: Informatik in den Naturwissenschaften PD
           description: 'Phase 1: Online Einführung'
           description_short: 'Phase 1: Online Einführung'
           logo_image: nextech\_logo.png
           student_description: 'Phase 1: Online Einführung'
         sciencePD-iZone:
+          title: Informatik in den Naturwissenschaften PD
           description: 'Phase 1: Online Einführung'
           description_short: 'Phase 1: Online Einführung'
           logo_image: izone\_logo.png
           student_description: 'Phase 1: Online Einführung'
-        Testing: {}
-        cspunit2: {}
+        sciencePD2:
+          title: 'CS in den Naturwissenschaften: Teil 2'
+          description: Phase 2 Online-gemischte Sommer-Lernpfad
+          description_short: Phase 2 Online-gemischte Sommer-Lernpfad
+          student_description: Phase 2 Online-gemischte Sommer-Lernpfad
+        sciencePD3:
+          title: 'CS in den Naturwissenschaften: Teil 3'
+          description: Unterstützung für das akademische Jahr - 1. Semester
+          description_short: Unterstützung für das akademische Jahr - 1. Semester
+          student_description: Unterstützung für das akademische Jahr - 1. Semester
+        Testing:
+          title: Testen
+          description: Testen
+          description_short: Testen
+          student_description: Testen
+        cspunit2:
+          title: "(alt) CS-Prinzipien Einheit 2 - Das Internet"
+          description: In dieser Einheit erweitern die Schüler ihr Verständnis des Internets und seiner Funktionsweise, indem sie auf den Konzepten aufbauen, die sie beim Senden von Bits in Lerneinheit 1 gelernt haben. Diese Lerneinheit ist eine Pilot-Version und wird nicht mehr unterstützt oder aktualisiert. Sie finden die neuen Lerneinheiten unter code.org/educate/csp.
+          description_short: Diese Lerneinheit ist eine Pilotversion und wird nicht mehr unterstützt oder aktualisiert. Sie finden die neuen Einheiten unter code.org/educate/csp.
+          student_description: In dieser Einheit erweitern die Schüler ihr Verständnis des Internets und seiner Funktionsweise, indem sie auf den Konzepten aufbauen, die sie beim Senden von Bits in Lerneinheit 1 gelernt haben. Diese Lerneinheit ist eine Pilot-Version und wird nicht mehr unterstützt oder aktualisiert. Sie finden die neuen Lerneinheiten unter code.org/educate/csp.
         algebraPD2a:
+          title: Informatik in Algebra PD
           description: 'Phase 2 Online: Gemischtes Sommerstudium'
           description_short: 'Phase 2 Online: Gemischtes Sommerstudium'
           student_description: 'Phase 2 Online: Gemischtes Sommerstudium'
-        allthethings: {}
+        allthethings:
+          title: All die Dinge!
+          description: |-
+            Hallo! Dies ist eine spezielle Lerneinheit, die Code.org für das Testen von Benutzeroberflächen (UI) verwendet. Keine der Lektionen oder Stufen in dieser Lerneinheit ist für den Unterricht bestimmt!
+
+            Wenn du kein Code.org-Ingenieur sind, es aber geschafft hast, diese Einheit zu entdecken: Herzlichen Glückwunsch! Es ist, als hättest du auf unserer Website ein Geheimnis entdeckt! Wenn du jedoch weitere Informationen zu unseren Lehrplänen oder Tools suchst, empfehlen wir dir, stattdessen <https://code.org/educate/> zu besuchen.
+
+            Wenn du ein Code.org-Ingenieur bist: Dieses Skript enthält alle Leveltypen für UI-Tests. Bitte melde dich an, um Applab Levels zu testen (Applab Levels funktionieren von Haus aus nur, wenn du angemeldet bist. Normalerweise müssen sich die Leute anmelden, aber das ist nur für ein ganzes Skript durchsetzbar und wäre für dieses Skript nervig).
+          description_short: Alle Leveltypen für UI-Tests
+          student_description: |-
+            Hallo! Dies ist eine spezielle Lerneinheit, die Code.org für das Testen von Benutzeroberflächen (UI) verwendet. Keine der Lektionen oder Stufen in dieser Lerneinheit ist für den Unterricht bestimmt!
+
+            Wenn du kein Code.org-Ingenieur sind, es aber geschafft hast, diese Einheit zu entdecken: Herzlichen Glückwunsch! Es ist, als hättest du auf unserer Website ein Geheimnis entdeckt! Wenn du jedoch weitere Informationen zu unseren Lehrplänen oder Tools suchst, empfehlen wir dir, stattdessen <https://code.org/educate/> zu besuchen.
+
+            Wenn du ein Code.org-Ingenieur bist: Dieses Skript enthält alle Leveltypen für UI-Tests. Bitte melde dich an, um Applab Levels zu testen (Applab Levels funktionieren von Haus aus nur, wenn du angemeldet bist. Normalerweise müssen sich die Leute anmelden, aber das ist nur für ein ganzes Skript durchsetzbar und wäre für dieses Skript nervig).
+          name: alldieDinge
+          lessons:
+            lesson-49:
+              name: Musik
         algebraPD2b:
+          title: Informatik in Algebra PD
           description: 'Phase 2 Online: Gemischtes Sommerstudium'
           description_short: 'Phase 2 Online: Gemischtes Sommerstudium'
           student_description: 'Phase 2 Online: Gemischtes Sommerstudium'
-        cspfacilitator: {}
+        cspfacilitator:
+          title: 'Workshop für Moderatoren zu den CS-Prinzipien '
+          description: Online-Level für den PD-Workshop
+          description_short: Online-Level für den PD-Workshop
+          student_description: Online-Level für den PD-Workshop
         K5-OnlinePD:
+          title: Unterrichten von Grundlagen der Informatik (2017)
           description: Lernen Sie mit diesem kostenlosen Online-Kurs zum Selbststudium, wie man Informatik mit Hilfe von „Grundlagen der Informatik“ von Code.org Informatik unterrichtet.
           description_short: Lernen Sie mit diesem kostenlosen Online-Kurs zum Selbststudium, wie man Informatik mit Hilfe von „Grundlagen der Informatik“ von Code.org Informatik unterrichtet.
           student_description: Lernen Sie mit diesem kostenlosen Online-Kurs zum Selbststudium, wie man Informatik mit Hilfe von „Grundlagen der Informatik“ von Code.org Informatik unterrichtet.
+          name: K5-Online-CD
         ECSPD2:
+          title: 'Entdeckung der Informatik PD: Gemischter Sommer Lernpfad'
           description: 'Phase 2 Online: Gemischtes Sommerstudium'
           description_short: 'Phase 2 Online: Gemischtes Sommerstudium'
           student_description: 'Phase 2 Online: Gemischtes Sommerstudium'
+        equityPD:
+          title: Leitung einer Diskussion über Gerechtigkeit
+          description: Wie man eine Diskussion über Eigenkapital in einem Code.org-PD leitet
+          description_short: Wie man eine Diskussion über Eigenkapital in einem Code.org-PD leitet
+          student_description: Wie man eine Diskussion über Eigenkapital in einem Code.org-PD leitet
         algebraPD2:
           title: CS in Algebra Teil 2
+          description: Unterstützung für das akademische Jahr
+          description_short: Unterstützung für das akademische Jahr
+          student_description: Unterstützung für das akademische Jahr
         sciencePD2b:
+          title: Informatik in der Naturwissenschaften PD Phase 2b
           description: 'Phase 2 Online: Gemischtes Sommerstudium'
           description_short: 'Phase 2 Online: Gemischtes Sommerstudium'
           student_description: 'Phase 2 Online: Gemischtes Sommerstudium'
-        equity-pd: {}
-        science-PD2: {}
-        Equity-OnlinePD: {}
+        equity-pd:
+          title: Leitung einer Diskussion über Gerechtigkeit
+          description: Wie man eine Diskussion über Eigenkapital in einem Code.org-PD leitet
+          description_short: Wie man eine Diskussion über Eigenkapital in einem Code.org-PD leitet
+          student_description: Wie man eine Diskussion über Eigenkapital in einem Code.org-PD leitet
+        science-PD2:
+          title: Informatik in der Naturwissenschaften PD Phase 2b
+          description: Phase 2 Online-gemischte Sommer-Lernpfad
+          description_short: Phase 2 Online-gemischte Sommer-Lernpfad
+          student_description: Phase 2 Online-gemischte Sommer-Lernpfad
+        Equity-OnlinePD:
+          title: Mehr Chancengleichheit im Informatikunterricht schaffen
+          description: Entwickeln Sie mit diesem kostenlosen Online-Kurs zum Selbststudium Strategien zur Schaffung von Gerechtigkeit in Ihrem Unterricht.
+          description_short: Entwickeln Sie gerechte Unterrichtsstrategien mit diesem kostenlosen Online-Kurs zum Selbststudium.
+          student_description: Entwickeln Sie mit diesem kostenlosen Online-Kurs zum Selbststudium Strategien zur Schaffung von Gerechtigkeit in Ihrem Unterricht.
         sciencePD2b-iZone:
+          title: Informatik in der Naturwissenschaften PD Phase 2b
           description: 'Phase 2 Online: Gemischtes Sommerstudium'
           description_short: 'Phase 2 Online: Gemischtes Sommerstudium'
           student_description: 'Phase 2 Online: Gemischtes Sommerstudium'
         ECSPD2-iZone:
+          title: 'Entdeckung der Informatik PD: Gemischter Sommer Lernpfad'
           description: 'Phase 2 Online: Gemischtes Sommerstudium'
           description_short: 'Phase 2 Online: Gemischtes Sommerstudium'
           student_description: 'Phase 2 Online: Gemischtes Sommerstudium'
         ECSPD2-NexTech:
+          title: 'Entdeckung der Informatik PD: Gemischter Sommer Lernpfad'
           description: 'Phase 2 Online: Gemischtes Sommerstudium'
           description_short: 'Phase 2 Online: Gemischtes Sommerstudium'
           student_description: 'Phase 2 Online: Gemischtes Sommerstudium'
-        odometer: {}
+        CSPPD2:
+          title: 'Grundlagen der Informatik PD: Gemischtes Sommerstudium'
+          description: 8-stündiger Online-Kurs, der auf der 5-tägigen Präsenzerfahrung aufbaut und den Lehrern hilft, sich auf den Semesterbeginn vorzubereiten
+          description_short: 'Gemischtes Sommerstudium: 8 Stunden online'
+          student_description: 8-stündiger Online-Kurs, der auf der 5-tägigen Präsenzerfahrung aufbaut und den Lehrern hilft, sich auf den Semesterbeginn vorzubereiten
+        odometer:
+          title: Kilometerzähler-Widget
+          description: Verwenden Sie das Kilometerzähler-Widget, um Kilometerzähler mit verschiedenen Zahlenbasen zu steuern. Binär, Dezimal und Hexadezimal sind die in der Informatik am häufigsten verwendeten Zahlensysteme.
+          description_short: Verwenden Sie das Kilometerzähler-Widget, um Kilometerzähler mit verschiedenen Zahlenbasen zu steuern.
+          student_description: Verwenden Sie das Kilometerzähler-Widget, um Kilometerzähler mit verschiedenen Zahlenbasen zu steuern. Binär, Dezimal und Hexadezimal sind die in der Informatik am häufigsten verwendeten Zahlensysteme.
         asUnplugged:
+          title: Unplugged nach der Schule
+          description: '"Unplugged nach der Schule" wurde entwickelt, um computergestütztes Denken und Informatik-Ideen durch Offline-Spiele und Basteln zu vermitteln. Diese Unterrichtseinheiten wurden speziell für informelle Unterrichtsräume konzipiert und eignen sich hervorragend für sich allein oder in Kombination mit "Nach der Schule 1". Dieser Kurs konzentriert sich auf Lernen durch Unterhaltung. Empfohlen für die Klassen (Alter 5-6).'
+          description_short: Kurzer Unplugged-Kurs für informelles Lernen
           description_audience: Alter 6-13
+          student_description: '"Unplugged nach der Schule" wurde entwickelt, um computergestütztes Denken und Informatik-Ideen durch Offline-Spiele und Basteln zu vermitteln. Diese Unterrichtseinheiten wurden speziell für informelle Unterrichtsräume konzipiert und eignen sich hervorragend für sich allein oder in Kombination mit "Nach der Schule 1". Dieser Kurs konzentriert sich auf Lernen durch Unterhaltung. Empfohlen für die Klassen (Alter 5-6).'
         afterschool1:
+          title: Nach der Schule 1
+          description: '"Nach der Schule 1" ist für informelle Klassenzimmer konzipiert, in denen die Schüler unterschiedlichen Alters sind und eine Bewertung nicht erforderlich ist. Dieser Kurs konzentriert sich auf unterhaltsames Lernen mit unterschiedlichen Umsetzungsoptionen, alles in 10 Sitzungen oder weniger. Alleine oder mit "Nach der Schule Unplugged" verwenden. Empfohlen für die Klassen 3-8.'
+          description_short: Kurzkurs für informelles Lernen
           description_audience: Alter 7-13
         vigenere:
+          title: Vigenere Chiffrier-Widget
           description: Verwende das Vigenere-Cipher-Widget, um die Ver- und Entschlüsselung von Nachrichten mit Hilfe einer Vigenere-Chiffre zu untersuchen.
           description_short: Verwende das Vigenere-Cipher-Widget, um die Ver- und Entschlüsselung von Nachrichten mit Hilfe einer Vigenere-Chiffre zu untersuchen.
           student_description: Verwende das Vigenere-Cipher-Widget, um die Ver- und Entschlüsselung von Nachrichten mit Hilfe einer Vigenere-Chiffre zu untersuchen.
-        algebraPD3a: {}
-        sciencePD3_pre1: {}
+        algebraPD3a:
+          title: Informatik in Algebra PD
+          description: 'Phase 3 (Teil 2): Gemischtes Online-Schuljahresstudium CS in Algebra'
+          description_short: 'Phase 3 (Teil 1): Gemischtes Online-Schuljahresstudium CS in Algebra'
+          student_description: 'Phase 3 (Teil 2): Gemischtes Online-Schuljahresstudium CS in Algebra'
+        sciencePD3_pre1:
+          title: CS in Naturwissenschaften PD3 vor dem ersten persönlichen Gespräch
+          description: 'Phase 3: Entwicklung des akademischen Jahres (Segment Eins)'
+          description_short: 'Phase 3: Entwicklung des akademischen Jahres Vorab 1'
+          student_description: 'Phase 3: Entwicklung des akademischen Jahres (Segment Eins)'
         frequency_analysis:
+          title: Frequenzanalyse-Widget
+          description: Verwenden Sie das Frequenzanalyse-Widget, um die Buchstabenhäufigkeit in einem Eingabetext im Vergleich zu den erwarteten Häufigkeiten für Standard-Englisch zu analysieren. Verwenden Sie diesen Vergleich, um zu untersuchen, wie Shift- und Substitution-Chiffren geknackt werden können.
           description_short: Verwende das Frequenzanalyse-Widget, um Buchstabenhäufigkeiten in einem Text im Vergleich zu erwarteten Häufigkeiten zu analysieren. Knacke Verschiebungs- und Substitutions-Chiffren.
-        ECSPD3-Unit2: {}
+          student_description: Verwenden Sie das Frequenzanalyse-Widget, um die Buchstabenhäufigkeit in einem Eingabetext im Vergleich zu den erwarteten Häufigkeiten für Standard-Englisch zu analysieren. Verwenden Sie diesen Vergleich, um zu untersuchen, wie Shift- und Substitution-Chiffren geknackt werden können.
+        ECSPD3-Unit2:
+          title: 'Informatik erkunden: Einheit 2'
         ECSPD3-Unit3: {}
         ECSPD3-Unit4: {}
         ECSPD3-Unit5: {}
@@ -230,7 +392,8 @@ de:
         cspunit4draft:
           description_short: Daten
         ScienceP3OLPT2: {}
-        algebraPD3b: {}
+        algebraPD3b:
+          title: Informatik in Algebra PD
         CSPPD3-Unit2: {}
         Special Fun:
           description_audience: 'Alter: 10-18'
@@ -242,7 +405,11 @@ de:
           description_short: Erstelle eine Geschichte oder ein Spiel mit dem Spielelabor!
           student_description: Erstelle eine Geschichte oder ein Spiel mit dem Spielelabor!
           name: Eiszeit
-        cspunit3temp: {}
+        cspunit3temp:
+          title: "(alt) CS-Prinzipien Einheit 3 - Programmierung"
+          description: In dieser Einheit werden die grundlegenden Konzepte der Computerprogrammierung vorgestellt, die die Erstellung umfangreicher, interaktiver Apps ermöglichen. In diesem Kurs werden JavaScript als Programmiersprache und App Lab als Programmierumgebung zum Erstellen von Apps verwendet. Die in diesen Lektionen erlernten Konzepte beziehen sich jedoch auf alle Programmiersprachen und Tools.
+          description_short: Diese Lerneinheit ist eine Pilotversion und wird nicht mehr unterstützt oder aktualisiert. Sie finden die neuen Einheiten unter code.org/educate/csp.
+          student_description: In dieser Einheit werden die grundlegenden Konzepte der Computerprogrammierung vorgestellt, die die Erstellung umfangreicher, interaktiver Apps ermöglichen. In diesem Kurs werden JavaScript als Programmiersprache und App Lab als Programmierumgebung zum Erstellen von Apps verwendet. Die in diesen Lektionen erlernten Konzepte beziehen sich jedoch auf alle Programmiersprachen und Tools.
         gumball:
           title: Gumball Spielelabor
           description: Erstelle eine Geschichte oder ein Spiel mit dem Spielelabor!
@@ -259,7 +426,7 @@ de:
           description_short: Lerne, Droiden zu programmieren und erschaffe dein eigenes Star Wars Spiel in einer weit, weit entfernten Galaxie.
           student_description: Lerne, Droiden zu programmieren und erschaffe dein eigenes Star Wars Spiel in einer weit, weit entfernten Galaxie.
         mc:
-          title: Minecraft Hour of Code
+          title: Minecraft Abenteurer
           description: Verwende Code-Bausteine, um Steve oder Alex auf einem Abenteuer durch die Minecraft-Welt zu begleiten.
           description_short: Erkunde eine Minecraft-Welt durch programmieren
           student_description: Verwende Code-Bausteine, um Steve oder Alex auf einem Abenteuer durch die Minecraft-Welt zu begleiten.
@@ -270,8 +437,10 @@ de:
           student_description: Lerne, wie KI und maschinelles Lernen zur Lösung von Weltproblemen eingesetzt werden können.
           name: Ozeane
         ScienceP3OLPT3: {}
-        cspunit5: {}
-        cspunit4: {}
+        cspunit5:
+          description_short: Diese Lerneinheit ist eine Pilotversion und wird nicht mehr unterstützt oder aktualisiert. Sie finden die neuen Einheiten unter code.org/educate/csp.
+        cspunit4:
+          description_short: Diese Lerneinheit ist eine Pilotversion und wird nicht mehr unterstützt oder aktualisiert. Sie finden die neuen Einheiten unter code.org/educate/csp.
         cspunit6draft: {}
         cspunit6:
           description_short: Lerne, Daten in App Lab-Anwendungen zu sammeln und zu verwenden.
@@ -285,8 +454,11 @@ de:
           student_description: Lerne funktionales Programmieren mithilfe von Algebra
         algebraPD1:
           title: CS in Algebra Teil 1
+          description: Unterrichten Sie Algebra durch funktionale Programmierung
           description_short: 'Phase 1: Online Einführung'
-        algebraPD3c: {}
+          student_description: Unterrichten Sie Algebra durch funktionale Programmierung
+        algebraPD3c:
+          title: Informatik in Algebra PD
         csp1-2017:
           title: Grundsätze der Informatik Lerneinheit 1 - Das Internet ('17-'18)
           description: Diese Lerneinheit befasst sich mit den technischen Aufgaben und Fragen, die sich aus der Notwendigkeit ergeben, digitale Informationen mithilfe von Computern darzustellen und sie zwischen Menschen und Rechnern zu übertragen. Die Lerneinheit untersucht dann die Struktur und das Design des Internets und die Auswirkungen dieser Designentscheidungen.
@@ -344,25 +516,46 @@ de:
           student_description: In dieser Lerneinheit werden die grundlegenden Konzepte der Computerprogrammierung weiterentwickelt, welche die Erstellung reichhaltiger, interaktiver Anwendungen ermöglicht. Dieser Kurs verwendet JavaScript als Programmiersprache und App Lab als Programmierumgebung zur Erstellung von Anwendungen. Die in diesen Lektionen erlernten Konzepte umfassen jedoch alle Programmiersprachen und Werkzeuge.
         csp6: {}
         CSDU3-Draft:
+          title: " TEMP CSD Unit 3 - Interaktive Spiele und Animationen"
+          description: Temporärer Arbeitsplatz, um an U3 von Disco zu arbeiten
           description_short: Programmierung
         2016_sciencePD_phase1:
+          title: 'CS in den Naturwissenschaften: Teil 1'
           description: In Partnerschaft mit dem Projekt GUTS
           description_short: In Partnerschaft mit dem Projekt GUTS
           student_description: In Partnerschaft mit dem Projekt GUTS
         TEMP CSD Unit 3:
+          title: " TEMP CSD Unit 3 - Interaktive Spiele und Animationen"
           description_short: Programmierung
         CSF_Secret_Sample:
+          title: Geheimes Beispiel
+          description: Test der neuen Bildungsphilosophie
+          description_short: Das ist ein Geheimnis... psst
           description_audience: 'Alter: 8-18'
+          student_description: Test der neuen Bildungsphilosophie
         ECSPD1:
+          title: ECS Teil 1
+          description: Zweistündige Einführung in Ihr Professional Learning-Programm für den ECS-Lehrplan Version 5
           description_short: 'Phase 1: Online Einführung'
-        algebraFacilitator: {}
+          student_description: Zweistündige Einführung in Ihr Professional Learning-Programm für den ECS-Lehrplan Version 5
+        algebraFacilitator:
+          title: Informatik in Algebra Moderationsvorbereitung
+          description: Unterrichten Sie Algebra durch funktionale Programmierung
+          description_short: Unterrichten Sie Algebra durch funktionale Programmierung
+          student_description: Unterrichten Sie Algebra durch funktionale Programmierung
         sciencePD1:
+          title: 'CS in den Naturwissenschaften: Teil 1'
           description: In Partnerschaft mit dem Projekt GUTS
           description_short: 'Phase 1: Online Einführung'
           student_description: In Partnerschaft mit dem Projekt GUTS
         cspoptional:
+          title: CS-Prinzipien optionale Unterrichtseinheiten
+          description: Optionale Lektionen und Inhalte für alle Einheiten der CS-Prinzipien sind hier aufgelistet
           description_short: Optional
+          student_description: Optionale Lektionen und Inhalte für alle Einheiten der CS-Prinzipien sind hier aufgelistet
         cspunit1-support:
+          title: Online-Unterstützung für CSP Unit 1
+          description: Das ist ein professioneller Lernkurs zum Testen
           lesson_groups:
             required:
               display_name: Übersicht
@@ -370,7 +563,9 @@ de:
               display_name: Inhalt
             practice:
               display_name: Lehrer Übungen
+          student_description: Das ist ein professioneller Lernkurs zum Testen
         test-teaching-ap-cs-unit-1:
+          title: Testen Sie CPS PD
           lesson_groups:
             required:
               display_name: Übersicht
@@ -378,27 +573,77 @@ de:
               display_name: Inhalt
             practice:
               display_name: Lehrer Übungen
-        cspunit1-support-test: {}
-        csp-facilitators: {}
-        cspassessment: {}
+        allthehiddenthings:
+          title: All die versteckten Dinge!
+          description: Unveröffentlichte Leveltypen für UI-Tests als Administrator
+          description_short: Unveröffentlichte Leveltypen für UI-Tests als Administrator
+          student_description: Unveröffentlichte Leveltypen für UI-Tests als Administrator
+        cspunit1-support-test:
+          title: CSP Einheit 1 Unterstützung für Lehrer
+          description: Online-Unterstützung für CSP Unit 1
+          student_description: Online-Unterstützung für CSP Unit 1
+        cspunit1-tools:
+          title: Abschluss der NetSim-Aufgabe
+          description: Einführung in den Internet-Simulator und eine Diskussion darüber, wie wir ihn verwenden, um das Internet zu unterrichten
+          student_description: Einführung in den Internet-Simulator und eine Diskussion darüber, wie wir ihn verwenden, um das Internet zu unterrichten
+        csp-facilitators:
+          title: Überblick über das CSP-Tool
+          description: Eine Sammlung von Tools aus dem Kurs CS-Prinzipien. Diese Level bieten einen Einblick in die Tools, die wir im gesamten Lehrplan verwenden, um
+          description_short: Einführung in die CS-Prinzipien für neue Moderatoren
+          student_description: Eine Sammlung von Tools aus dem Kurs CS-Prinzipien. Diese Level bieten einen Einblick in die Tools, die wir im gesamten Lehrplan verwenden, um
+        cspassessment:
+          title: "[Deprecated] Bewertung der CS-Prinzipien"
+          description: 'Dieser Test ist veraltet und soll im Sommer 2017 entfernt werden. Die Schüler können den Test abschließen und ihre eigenen Ergebnisse sehen, aber ein Lehrer kann keine Ergebnisse für Schüler in einem Abschnitt sehen. Bitte nutzen Sie die offizielle CSP-Praxisprüfung des College Board. [Dieser Multiple-Choice-Test mit 55 Fragen behandelt Fragen zu sieben großen Ideen der Informatik: Kreativität, Abstraktion, Daten, Algorithmen, Programmierung, Internet und globale Auswirkungen.]'
+          description_short: Dieser Test ist veraltet und soll im Sommer 2017 entfernt werden.
+          student_description: 'Dieser Test ist veraltet und soll im Sommer 2017 entfernt werden. Die Schüler können den Test abschließen und ihre eigenen Ergebnisse sehen, aber ein Lehrer kann keine Ergebnisse für Schüler in einem Abschnitt sehen. Bitte nutzen Sie die offizielle CSP-Praxisprüfung des College Board. [Dieser Multiple-Choice-Test mit 55 Fragen behandelt Fragen zu sieben großen Ideen der Informatik: Kreativität, Abstraktion, Daten, Algorithmen, Programmierung, Internet und globale Auswirkungen.]'
         cspexam1-mWU7ilDYM9:
+          title: Der abschließende Test der CS-Prinzipien — Teil 1
+          description: 'Dieser Multiple-Choice-Test mit 25 Fragen behandelt Fragen zu den 7 großen Ideen der Informatik: Kreativität, Abstraktion, Daten, Algorithmen, Programmierung, Internet und globale Auswirkungen.'
           description_short: Diese Multiple-Choice-Prüfung umfasst Fragen zu 7 großen Ideen der Informatik. Sie ist der erste Teil einer zweiteiligen Prüfung mit 50 Fragen.
+          student_description: 'Dieser Multiple-Choice-Test mit 25 Fragen behandelt Fragen zu den 7 großen Ideen der Informatik: Kreativität, Abstraktion, Daten, Algorithmen, Programmierung, Internet und globale Auswirkungen.'
         cspexam2-AKwgAh1ac5:
+          title: Der abschließende Test der CS-Prinzipien — Teil 2
+          description: 'Dieser Multiple-Choice-Test mit 25 Fragen behandelt Fragen zu den 7 großen Ideen der Informatik: Kreativität, Abstraktion, Daten, Algorithmen, Programmierung, Internet und globale Auswirkungen. Es ist Teil 2 einer zweiteiligen Prüfung mit 50 Fragen'
           description_short: Diese Multiple-Choice-Prüfung umfasst Fragen zu 7 wichtigen Konzepten der Informatik. Sie ist der 2. Teil einer zweiteiligen Prüfung mit 50 Fragen.
-        CSDU4-Draft: {}
+          student_description: 'Dieser Multiple-Choice-Test mit 25 Fragen behandelt Fragen zu den 7 großen Ideen der Informatik: Kreativität, Abstraktion, Daten, Algorithmen, Programmierung, Internet und globale Auswirkungen. Es ist Teil 2 einer zweiteiligen Prüfung mit 50 Fragen'
+        CSDU4-Draft:
+          title: " TEMP CSD Einheit 4 - Der Designprozess"
+          description: Temporärer Arbeitsplatz, um an U4 von Disco zu arbeiten
+          description_short: Designprozess und App Lab
         CSDU1-Draft:
+          description: Temporärer Arbeitsplatz, um an U1 von Disco zu arbeiten
           description_short: Problemlösung
         CSDU2-Draft:
+          description: Temporärer Arbeitsplatz, um an U2 von Disco zu arbeiten
           description_short: Webentwicklung
         CSDU5-Draft:
+          description: Temporärer Arbeitsplatz, um an U5 von Disco zu arbeiten
           description_short: Daten
+        CSDU6-Draft:
+          description: Temporärer Arbeitsplatz, um an U6 von Disco zu arbeiten
+          description_short: Makerlab
         CSF_Secret_Sample_Story:
+          title: Geheime Probe mit einer Geschichte
+          description: Test einer neuen Bildungsphilosophie mit führender Handlung
+          description_short: Das ist ein Geheimnis... shhhh
           description_audience: 'Alter: 8-18+'
+          student_description: Test einer neuen Bildungsphilosophie mit führender Handlung
         MikeTest:
+          title: MikeTest
+          description: Ich versuche nichts kaputtzumachen
+          description_short: Nur ein Skript zum Herumspielen
           description_audience: Alter 8-98
+          student_description: Ich versuche nichts kaputtzumachen
         artistExemplar:
+          title: Künstlerexemplar
+          description: Diese Künstler-Level werden Drittklässler vom Hocker hauen
+          description_short: Wie können wir die Künstler-Levels so richtig zum Summen bringen?
           description_audience: 'Alter: 8-18'
+          student_description: Diese Künstler-Level werden Drittklässler vom Hocker hauen
         teachercon:
+          title: TeacherCon Unterstützung
+          description: Wir werden dies während der TeacherCon verwenden, um Unterstützungen und Materialien für die Sitzungen bereitzustellen
+          description_short: Wir werden dies während der TeacherCon verwenden, um Unterstützungen und Materialien für die Sitzungen bereitzustellen
           lesson_groups:
             required:
               display_name: Übersicht
@@ -406,29 +651,68 @@ de:
               display_name: Inhalt
             practice:
               display_name: Lehrer Übungen
+          student_description: Wir werden dies während der TeacherCon verwenden, um Unterstützungen und Materialien für die Sitzungen bereitzustellen
         kinderTest: {}
         gradeKinder:
           title: Kindergarten
+          description: Planungsskript für CSF 2.0
+          description_short: Planungsskript für CSF 2.0
           description_audience: Alter 5-18
         grade4:
           title: 4.  Klasse
+          description: Planungsskript für CSF 2.0
+          description_short: Planungsskript für CSF 2.0
           description_audience: Alter 9-99
         grade1:
           title: 1.  Klasse
+          description: Planungsskript für CSF 2.0
+          description_short: Planungsskript für CSF 2.0
           description_audience: Alter 5-18
         grade5:
           title: 5.  Klasse
+          description: Planungsskript für CSF 2.0
+          description_short: Planungsskript für CSF 2.0
           description_audience: Alter 10-110
-        ecs-unit1: {}
-        ecs-unit2: {}
-        ecs-unit3: {}
-        ecs-unit4: {}
-        ecs-unit5: {}
-        ecs-unit6: {}
+          student_description: Planungsskript für CSF 2.0
+        ecs-unit1:
+          title: ECS-Einheit 1
+          description: 'Einheit 1: Mensch-Computer-Interaktion'
+          description_short: 'Einheit 1: Mensch-Computer-Interaktion'
+          student_description: 'Einheit 1: Mensch-Computer-Interaktion'
+        ecs-unit2:
+          title: ECS-Einheit 2
+          description: 'Einheit 2: Problemlösung'
+          description_short: 'Einheit 2: Problemlösung'
+          student_description: 'Einheit 2: Problemlösung'
+        ecs-unit3:
+          title: ECS-Einheit 3
+          description: 'Einheit 3: Webdesign'
+          description_short: 'Einheit 3: Webdesign'
+          student_description: 'Einheit 3: Webdesign'
+        ecs-unit4:
+          title: ECS-Einheit 4
+          description: 'Einheit 4: Programmieren'
+          description_short: 'Einheit 4: Programmieren'
+          student_description: 'Einheit 4: Programmieren'
+        ecs-unit5:
+          title: ECS-Einheit 5
+          description: 'Einheit 5: Computer- und Datenanalyse'
+          description_short: 'Einheit 5: Computer- und Datenanalyse'
+          student_description: 'Einheit 5: Computer- und Datenanalyse'
+        ecs-unit6:
+          title: ECS-Einheit 6
+          description: 'Einheit 6: Robotik'
+          description_short: 'Einheit 6: Robotik'
+          student_description: 'Einheit 6: Robotik'
         grade3:
           title: 3.  Klasse
+          description: Planungsskript für CSF 2.0
+          description_short: Planungsskript für CSF 2.0
           description_audience: Alter 5-18
         alltheplcthings:
+          title: Beispielkurs für PLC-Dinge
+          description: Dies ist ein Beispielkurs, der alle Besonderheiten von PLC enthält. Die Einschreibung in diesen Kurs bringt nichts. Im Moment ist es nur eine Kopie von TeacherCon
+          description_short: Dies ist ein Beispielkurs, der alle Besonderheiten von PLC enthält
           lesson_groups:
             required:
               display_name: Übersicht
@@ -436,6 +720,7 @@ de:
               display_name: Inhalt
             practice:
               display_name: Lehrer Übungen
+          student_description: Dies ist ein Beispielkurs, der alle Besonderheiten von PLC enthält. Die Einschreibung in diesen Kurs bringt nichts. Im Moment ist es nur eine Kopie von TeacherCon
         csd3-2017:
           title: 'Erkenntnisse aus der Informatik Lerneinheit 3: Animationen und Spiele (''17-''18)'
           description: In Lerneinheit 3 arbeiten Sie bei der Programmierung von Animationen, interaktiver Kunst und Spielen im Game Lab mit Ihrer Programmiererfahrung. Die Lerneinheit beginnt mit einfachen Formen und baut auf anspruchsvollere spritebasierte Spiele auf, wobei dieselben Programmierkonzepte und der Designprozess eingesetzt werden, die Informatiker täglich verwenden. Beim dem abschließenden Projekt entwickeln Sie ein personalisiertes, interaktives Programm.
@@ -451,14 +736,24 @@ de:
           student_description: In Lerneinheit 3 arbeiten Sie bei der Programmierung von Animationen, interaktiver Kunst und Spielen im Game Lab mit Ihrer Programmiererfahrung. Die Lerneinheit beginnt mit einfachen Formen und baut auf anspruchsvollere spritebasierte Spiele auf, wobei dieselben Programmierkonzepte und der Designprozess eingesetzt werden, die Informatiker täglich verwenden. Beim dem abschließenden Projekt entwickeln Sie ein personalisiertes, interaktives Programm.
         grade2:
           title: 2.  Klasse
+          description: Planungsskript für CSF 2.0
+          description_short: Planungsskript für CSF 2.0
           description_audience: Alter 5-18
         transferring-over: {}
-        k5concepts: {}
-        algebrapdnext: {}
-        csp-pre-survey: {}
+        k5concepts:
+          title: K5-Konzepte
+        algebrapdnext:
+          title: Informatik in Algebra PD Phase 2
+          description: Unterrichten Sie Algebra durch funktionale Programmierung
+          description_short: "\\\\tPhase 3: Unterstützung für das Schuljahr"
+          student_description: Unterrichten Sie Algebra durch funktionale Programmierung
+        csp-pre-survey:
+          title: CS-Prinzipien Vor-Befragung
+          name: csp-vor-befragung
         csd1-2017:
           title: Erkenntnisse aus der Informatik - Lerneinheit 1 - Problemlösung ('17-'18)
           description_short: Erfahren Sie, wie Menschen mit Computern arbeiten, um Probleme zu lösen.
+          description: " \nEinheit 1 ist eine hochgradig interaktive und kollaborative Einführung in das Gebiet der Informatik im Rahmen des umfassenderen Strebens nach Problemlösungen. Du übst, einen Problemlösungsprozess anzuwenden, um eine Reihe von Rätseln, Herausforderungen und realen Szenarien zu lösen. Als Nächstes lernst du, wie Computer Informationen eingeben, ausgeben, speichern und verarbeiten, um Menschen bei der Lösung von Problemen zu helfen. Die Einheit endet mit einem Projekt, in dem du eine Anwendung entwirfst, mit der du ein Problem deiner Wahl lösen kannst."
           lesson_groups:
             cspSurvey:
               display_name: Umfrage
@@ -466,7 +761,11 @@ de:
               display_name: 'Kapitel 1: Der Problemlösungsprozess'
             csd1_2:
               display_name: 'Kapitel 2: Computer und Problemlösung'
+          student_description: " \nEinheit 1 ist eine hochgradig interaktive und kollaborative Einführung in das Gebiet der Informatik im Rahmen des umfassenderen Strebens nach Problemlösungen. Du übst, einen Problemlösungsprozess anzuwenden, um eine Reihe von Rätseln, Herausforderungen und realen Szenarien zu lösen. Als Nächstes lernst du, wie Computer Informationen eingeben, ausgeben, speichern und verarbeiten, um Menschen bei der Lösung von Problemen zu helfen. Die Einheit endet mit einem Projekt, in dem du eine Anwendung entwirfst, mit der du ein Problem deiner Wahl lösen kannst."
         csp-online-test:
+          title: Testbereich für CSP-Online-Unterstützung
+          description_short: Dies ist ein Beispielkurs zum Testen von csp online pd
+          description: Dies ist ein Testraum für Online-PD. Die Einschreibung in diesen Kurs bringt nichts.
           lesson_groups:
             required:
               display_name: Übersicht
@@ -474,8 +773,11 @@ de:
               display_name: Inhalt
             practice:
               display_name: Lehrer Übungen
+          student_description: Dies ist ein Testraum für Online-PD. Die Einschreibung in diesen Kurs bringt nichts.
         csp1-support:
+          title: Einheit 1 Professioneller Online-Lernkurs
           description_short: Professioneller Kurs für Lehrer zu den Grundsätzen der Informatik Lerneinheit 1
+          description: Dies ist eine Reihe von Online-Hilfen, die in einem professionellen Lernkurs für CSP-Lehrer zusammengefasst sind, die sich auf den Unterricht von Einheit 1 vorbereiten.
           lesson_groups:
             required:
               display_name: Übersicht
@@ -483,13 +785,18 @@ de:
               display_name: Inhalt
             practice:
               display_name: Lehrer Übungen
+          student_description: Dies ist eine Reihe von Online-Hilfen, die in einem professionellen Lernkurs für CSP-Lehrer zusammengefasst sind, die sich auf den Unterricht von Einheit 1 vorbereiten.
         basketball:
           title: Wähle Dein Team und spiele eine Runde Basketball
           description_short: Wähle Dein Team und spiele eine Runde Basketball
           description: Wähle Dein Team und spiele eine Runde Basketball
           student_description: Wähle Dein Team und spiele eine Runde Basketball
           name: Basketball
-        hoc-encryption: {}
+        hoc-encryption:
+          title: 'Hour of Code: Einfache Verschlüsselung'
+          description_short: In dieser Lektion werden die Schüler in die Notwendigkeit von Verschlüsselung und einfachen Techniken zum Entschlüsseln (oder Knacken) geheimer Nachrichten eingeführt.
+          description: In dieser Lektion werden die Schüler in die Notwendigkeit von Verschlüsselung und einfachen Techniken zum Entschlüsseln (oder Knacken) geheimer Nachrichten eingeführt.
+          student_description: In dieser Lektion werden die Schüler in die Notwendigkeit von Verschlüsselung und einfachen Techniken zum Entschlüsseln (oder Knacken) geheimer Nachrichten eingeführt.
         csd2-2017:
           title: 'Erkenntnisse aus der Informatik Lerneinheit 2: Web-Entwicklung (''17-''18)'
           description_short: Lernen Sie, Ihre eigene Website in Web Lab zu erstellen.
@@ -503,7 +810,9 @@ de:
               display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
           student_description: In Lerneinheit 2 lernen Sie, wie Sie Inhalte auf Ihren eigenen Webseiten erstellen und weitergeben können. Nachdem Sie entschieden haben, welche Inhalte Sie mit der Allgemeinheit teilen möchten, lernen Sie, wie Sie Ihre Seiten mit HTML und CSS strukturieren und gestalten können. Außerdem üben Sie wertvolle Programmierkenntnisse wie Fehlerbeseitigung/Debugging und Kommentieren. Am Ende der Lerneinheit haben Sie eine private Website erstellt, die Sie im Internet veröffentlichen können.
         csp2-support:
+          title: Einheit 2 Professioneller Online-Lernkurs
           description_short: Professioneller Kurs für Lehrer zu den Grundsätzen der Informatik Lerneinheit 2
+          description: 'Dies ist eine Reihe von Online-Hilfen, die in einem professionellen Lernkurs für CSP-Lehrer zusammengefasst sind, die sich auf den Unterricht von Einheit 2 vorbereiten. '
           lesson_groups:
             required:
               display_name: Übersicht
@@ -511,6 +820,7 @@ de:
               display_name: Inhalt
             practice:
               display_name: Lehrer Übungen
+          student_description: 'Dies ist eine Reihe von Online-Hilfen, die in einem professionellen Lernkurs für CSP-Lehrer zusammengefasst sind, die sich auf den Unterricht von Einheit 2 vorbereiten. '
         csd4-2017:
           title: Erkenntnisse aus der Informatik Lerneinheit 4 - Das Entwicklungs-/Designverfahren ('17-'18)
           description_short: Lernen Sie, wie Sie ein Programm entwerfen, das den Bedürfnissen Ihrer Benutzer entspricht.
@@ -531,16 +841,32 @@ de:
         flappy-impact-study:
           title: Flappy Code mit Umfrage
           description_short: 'Schreibe dein eigenes Flappy Bird in weniger als 10 Minuten! '
+          description: Willst du dein eigenes Spiel in weniger als 10 Minuten schreiben? Probiere unser Flappy Code-Einführung aus! Diese Version bietet Umfragen vor und nach der Bearbeitung, um Hour of Code weiter zu verbessern. Bitten Sie Ihre Klasse, 10 Minuten vor Ende des Unterrichts zur Umfrage zu springen.
+          student_description: Willst du dein eigenes Spiel in weniger als 10 Minuten schreiben? Probiere unser Flappy Code-Einführung aus! Diese Version bietet Umfragen vor und nach der Bearbeitung, um Hour of Code weiter zu verbessern. Bitten Sie Ihre Klasse, 10 Minuten vor Ende des Unterrichts zur Umfrage zu springen.
         coursea-draft:
+          title: 'CS-Grundlagen: Kurs A'
           description_short: Eine Einführung in die Informatik für Leseanfänger.
+          description: "Kurs A richtet sich an Leseanfänger. Die SchülerInnen erstellen Computerprogramme, die ihnen helfen, mit anderen zusammenzuarbeiten, Fähigkeiten zur Problemlösung zu entwickeln und schwierige Aufgaben zu bewältigen. Am Ende dieses Kurses erstellen die Schüler ihr eigenes Spiel oder ihre eigene Geschichte, die sie teilen können. \nEmpfohlen für Klassen (Alter 5 Jahre)."
+          student_description: "Kurs A richtet sich an Leseanfänger. Die SchülerInnen erstellen Computerprogramme, die ihnen helfen, mit anderen zusammenzuarbeiten, Fähigkeiten zur Problemlösung zu entwickeln und schwierige Aufgaben zu bewältigen. Am Ende dieses Kurses erstellen die Schüler ihr eigenes Spiel oder ihre eigene Geschichte, die sie teilen können. \nEmpfohlen für Klassen (Alter 5 Jahre)."
         courseb-draft:
+          title: 'CS-Grundlagen: Kurs B'
           description_short: Eine Einführung in die Informatik für Leseanfänger.
+          description: Kurs B richtet sich an Leseanfänger. Die Schüler erstellen Computerprogramme, die ihnen helfen, mit anderen zusammenzuarbeiten, Fähigkeiten zur Problemlösung zu entwickeln und schwierige Aufgaben zu bewältigen. Am Ende dieses Kurses erstellen die Schüler ihr eigenes Spiel oder ihre eigene Geschichte, die sie teilen können. Empfohlen für die 1. Klasse.
+          student_description: Kurs B richtet sich an Leseanfänger. Die Schüler erstellen Computerprogramme, die ihnen helfen, mit anderen zusammenzuarbeiten, Fähigkeiten zur Problemlösung zu entwickeln und schwierige Aufgaben zu bewältigen. Am Ende dieses Kurses erstellen die Schüler ihr eigenes Spiel oder ihre eigene Geschichte, die sie teilen können. Empfohlen für die 1. Klasse.
         coursec-draft:
+          title: 'CS-Grundlagen: Kurs C'
           description_short: Lerne die Grundlagen der Informatik und erstelle Deine eigene Kunst, Geschichten und Spiele.
+          description: In diesem Kurs erstellen die SchülerInnen Programme zur Lösung von Problemen und entwickeln interaktive Spiele oder Geschichten, die sie teilen können. Für die 2. Klasse empfohlen.
+          student_description: In diesem Kurs erstellen die SchülerInnen Programme zur Lösung von Problemen und entwickeln interaktive Spiele oder Geschichten, die sie teilen können. Für die 2. Klasse empfohlen.
         coursed-draft:
+          title: 'CS-Grundlagen: Kurs D'
           description_short: Lerne die Grundlagen der Informatik und erstelle Deine eigene Kunst, Geschichten und Spiele.
+          description: In diesem Kurs erstellen die SchülerInnen Programme zur Lösung von Problemen und entwickeln interaktive Spiele oder Geschichten, die sie teilen können. Empfohlen für die 3. Klasse.
+          student_description: In diesem Kurs erstellen die SchülerInnen Programme zur Lösung von Problemen und entwickeln interaktive Spiele oder Geschichten, die sie teilen können. Empfohlen für die 3. Klasse.
         coursee-draft:
+          title: 'CS-Grundlagen: Kurs E'
           description_short: Lerne die Grundlagen der Informatik und erstelle Deine eigene Kunst, Geschichten und Spiele.
+          description: In diesem Kurs erstellen die SchülerInnen Programme zur Lösung von Problemen und entwickeln interaktive Spiele oder Geschichten, die sie teilen können. Der Kurs gipfelt in einem mehrtägigen Projekt. Empfohlen für die 4. Klasse.
           lesson_groups:
             content:
               display_name: Inhalt
@@ -548,18 +874,26 @@ de:
               display_name: Projekt am Ende des Kurses
             extra_course_content:
               display_name: Extra Kurs Inhalte
+          student_description: In diesem Kurs erstellen die SchülerInnen Programme zur Lösung von Problemen und entwickeln interaktive Spiele oder Geschichten, die sie teilen können. Der Kurs gipfelt in einem mehrtägigen Projekt. Empfohlen für die 4. Klasse.
         coursef-draft:
+          title: 'CS-Grundlagen: Kurs F'
           description_short: Lerne die Grundlagen der Informatik und erstelle Deine eigene Kunst, Geschichten und Spiele.
+          description: In diesem Kurs erstellen die Schülerinnen Programme zur Lösung von Problemen und entwickeln interaktive Spiele oder Geschichten, die sie teilen können. Der Kurs gipfelt in einem mehrtägigen Projekt. Empfohlen für die 5. Klasse.
           lesson_groups:
             content:
               display_name: Inhalt
             end_of_course_project:
               display_name: Projekt am Ende des Kurses
+          student_description: In diesem Kurs erstellen die Schülerinnen Programme zur Lösung von Problemen und entwickeln interaktive Spiele oder Geschichten, die sie teilen können. Der Kurs gipfelt in einem mehrtägigen Projekt. Empfohlen für die 5. Klasse.
         classic-hoc-impact-study:
+          title: Hour of Code mit Umfrage
           description_short: Lerne die Grundlagen der Computertechnologie mit Deinen Lieblingsfiguren kennen!
+          description: Probiere die Grundlagen der Informatik mit Charakteren aus Angry Birds und Plants vs. Zombies aus! Diese Version beinhaltet Umfragen vor und nach der Bearbeitung, um Hour of Code weiter zu verbessern. Bitten Sie Ihre Klasse, 10 Minuten vor Ende des Unterrichts zur Umfrage vorzuspringen.
         hoc-impact-study:
           title: Klassisches Labyrinth mit Umfrage
           description_short: Lerne die Grundlagen der Computertechnologie mit Deinen Lieblingsfiguren kennen!
+          description: Probiere die Grundlagen der Informatik mit Charakteren aus Angry Birds und Plants vs. Zombies aus! Diese Version beinhaltet Umfragen vor und nach der Bearbeitung, um Hour of Code weiter zu verbessern. Bitten Sie Ihre Klasse, 10 Minuten vor Ende des Unterrichts zur Umfrage vorzuspringen.
+          student_description: Probiere die Grundlagen der Informatik mit Charakteren aus Angry Birds und Plants vs. Zombies aus! Diese Version beinhaltet Umfragen vor und nach der Bearbeitung, um Hour of Code weiter zu verbessern. Bitten Sie Ihre Klasse, 10 Minuten vor Ende des Unterrichts zur Umfrage vorzuspringen.
         sports:
           title: Programmiere Dein eigenes Sport-Spiel
           description_short: Kombiniere Elemente unterschiedlicher Sportarten
@@ -570,7 +904,9 @@ de:
         2016_sciencePD_phase2b: {}
         sciencepd3-2016: {}
         csp3-support:
+          title: Einheit 3 Professioneller Online-Lernkurs
           description_short: Professioneller Kurs für Lehrer zu den Grundsätzen der Informatik Lerneinheit 3
+          description: Dies ist eine Reihe von Online-Hilfen, die in einem professionellen Lernkurs für CSP-Lehrer zusammengefasst sind, die sich auf den Unterricht von Einheit 3 vorbereiten.
           lesson_groups:
             required:
               display_name: Übersicht
@@ -578,9 +914,12 @@ de:
               display_name: Inhalt
             practice:
               display_name: Lehrer Übungen
+          student_description: Dies ist eine Reihe von Online-Hilfen, die in einem professionellen Lernkurs für CSP-Lehrer zusammengefasst sind, die sich auf den Unterricht von Einheit 3 vorbereiten.
         csdgraveyard: {}
         csp4-support:
+          title: Einheit 4 Professioneller Online-Lernkurs
           description_short: Professioneller Kurs für Lehrer zu den Grundsätzen der Informatik Lerneinheit 4
+          description: Dies ist eine Reihe von Online-Hilfen, die in einem professionellen Lernkurs für CSP-Lehrer zusammengefasst sind, die sich auf den Unterricht von Einheit 4 vorbereiten.
           lesson_groups:
             required:
               display_name: Übersicht
@@ -588,18 +927,32 @@ de:
               display_name: Inhalt
             practice:
               display_name: Lehrer Übungen
-        sciencepd4: {}
+          student_description: Dies ist eine Reihe von Online-Hilfen, die in einem professionellen Lernkurs für CSP-Lehrer zusammengefasst sind, die sich auf den Unterricht von Einheit 4 vorbereiten.
+        sciencepd4:
+          title: 'CS in den Naturwissenschaften: Teil 4'
+          description_short: 'Phase 3: Reflektieren des Erstsemester-Workshops'
+          description: 'Phase 3: Reflektieren des Erstsemester-Workshops'
+          student_description: 'Phase 3: Reflektieren des Erstsemester-Workshops'
         csp-ca-a: {}
         science-pd-ol-pt-5: {}
         csf2harvey:
+          title: Mr. Harveys Klasse
+          description: Spezielle Blase nur für unsere Klasse!
           lesson_groups:
             end_of_course_project:
               display_name: Projekt am Ende des Kurses
             content:
               display_name: Inhalt
-        sciencepd5: {}
+          student_description: Spezielle Blase nur für unsere Klasse!
+        sciencepd5:
+          title: 'CS in den Naturwissenschaften: Teil 5'
+          description_short: 'Phase 3: Bereite dich auf den Workshop für das zweite Semester vor'
+          description: 'Phase 3: Bereite dich auf den Workshop für das zweite Semester vor'
+          student_description: 'Phase 3: Bereite dich auf den Workshop für das zweite Semester vor'
         csp5-support:
+          title: Einheit 5 Professioneller Online-Lernkurs
           description_short: Professioneller Kurs für Lehrer zu den Grundsätzen der Informatik Lerneinheit 5
+          description: "#### **Dieser Kurs ist mit einer Version des Kurses verknüpft, die nicht mehr unterstützt wird. Bitte besuchen Sie unsere Kursübersichtsseite (<https://studio.code.org/courses>), um unsere aktuellsten Lehrpläne zu sehen.**\n\nDies ist eine Reihe von Online-Hilfen, die in einem professionellen Lernkurs für CSP-Lehrer zusammengefasst sind, die sich auf den Unterricht von Einheit 5 vorbereiten."
           lesson_groups:
             required:
               display_name: Übersicht
@@ -607,7 +960,12 @@ de:
               display_name: Inhalt
             practice:
               display_name: Lehrer Übungen
-        csp6-support: {}
+          student_description: Dies ist eine Reihe von Online-Hilfen, die in einem professionellen Lernkurs für CSP-Lehrer zusammengefasst sind, um sich auf den Unterricht von Einheit 5 vorzubereiten.
+          name: csp5-Unterstützung
+        csp6-support:
+          title: AP Vorbereitung und Ressourcen für Lehrer
+          description: 'DEMNÄCHST: In Kürze wird diese Seite eine Reihe von Ressourcen für Lehrer enthalten, die sich auf die AP-Prüfung vorbereiten'
+          student_description: 'DEMNÄCHST: In Kürze wird diese Seite eine Reihe von Ressourcen für Lehrer enthalten, die sich auf die AP-Prüfung vorbereiten'
         csppostap-2017:
           title: Grundsätze der Informatik Post-AP - Datenbanken und Verwendung von Daten in Ihren Apps ('17-'18)
           description_short: Lerne, Daten in App Lab-Anwendungen zu sammeln und zu verwenden.
@@ -624,6 +982,12 @@ de:
               display_name: 'Kapitel 1: Programmierung mit Hardware'
             csd6_2:
               display_name: 'Chapter 2: Aufbau von physischen Prototypen'
+        workshop-gamelab:
+          title: Spiel-Labor-Workshop
+          description_audience: Lehrer, die an einem persönlichen Spiel Labor-Workshop teilnehmen
+          description_short: Levelfortschritt im Rahmen eines Spiel-Labor-Workshops vor Ort
+          description: Dieser Levelfortschritt soll einen persönlichen Spiel Labor-Workshop begleiten. Dies ist nicht dazu gedacht, das Tool oder die CS-Konzepte zu vermitteln, sondern vielmehr einen Workshop-Moderator dabei zu unterstützen, den Teilnehmern die Bandbreite vom Spiele Labor näherzubringen.
+          student_description: Dieser Levelfortschritt soll einen persönlichen Spiel Labor-Workshop begleiten. Dies ist nicht dazu gedacht, das Tool oder die CS-Konzepte zu vermitteln, sondern vielmehr einen Workshop-Moderator dabei zu unterstützen, den Teilnehmern die Bandbreite vom Spiele Labor näherzubringen.
         csd5-draft:
           title: Entwurf zu Informatik 5
           lesson_groups:
@@ -641,7 +1005,8 @@ de:
           description_audience: SchülerInnen der Mittel- und Oberschule
           description: Dieser Workshop ist so konzipiert, dass die SchülerInnen in 2 Stunden eine grundlegende Einführung in das App-Lab erhalten. Auch SchülerInnen mit unterschiedlichem Vorwissen im Bereich der Informatik sollten mitmachen können und Spaß daran haben, etwas zu kreieren.
           student_description: Dieser Workshop ist so konzipiert, dass die SchülerInnen in 2 Stunden eine grundlegende Einführung in das App-Lab erhalten. Auch SchülerInnen mit unterschiedlichem Vorwissen im Bereich der Informatik sollten mitmachen können und Spaß daran haben, etwas zu kreieren.
-        coursed-ramp: {}
+        coursed-ramp:
+          title: 'CS-Grundlagen: Kurs D'
         workshop-maker:
           title: Maker Toolkit Workshop
           description_audience: Lehrer, die an einem persönlichen Workshop zu Maker Toolkit teilnehmen
@@ -680,9 +1045,13 @@ de:
         csd3-old:
           title: Erkenntnisse aus der Informatik Lerneinheit 3 (VERALTET)
           description_short: 2016/2017 Entwurf Erkenntnisse aus der Informatik Lerneinheit 3
+          description: Dies ist der ursprüngliche Entwurf der CSD Lerneinheit 3, der im Herbst 2016 veröffentlicht wurde. Sofern Sie keine SchülerInnen haben, die diesen Kurs derzeit verwenden, sollten Sie stattdessen die aktualisierte Version dieser Lerneinheit unter studio.code.org/s/csd3-2019 verwenden - dieser ursprüngliche Entwurf ist bis zum 1. Juli 2017 verfügbar.
+          student_description: Dies ist der ursprüngliche Entwurf der CSD Lerneinheit 3, der im Herbst 2016 veröffentlicht wurde. Sofern Sie keine SchülerInnen haben, die diesen Kurs derzeit verwenden, sollten Sie stattdessen die aktualisierte Version dieser Lerneinheit unter studio.code.org/s/csd3-2019 verwenden - dieser ursprüngliche Entwurf ist bis zum 1. Juli 2017 verfügbar.
         csd1-old:
           title: Erkenntnisse aus der Informatik Lerneinheit 1 (VERALTET)
           description_short: 2016/2017 Entwurf Erkenntnisse aus der Informatik Lerneinheit 1
+          description: Dies ist der ursprüngliche Entwurf der CSD Lerneinheit 1, der ursprünglich im Herbst 2016 veröffentlicht wurde. Diese Version wurde durch eine aktualisierte Lerneinheit unter studio.code.org/s/csd1-2019 ersetzt und ist nur noch bis zum 1. Juli 2017 verfügbar.
+          student_description: Dies ist der ursprüngliche Entwurf der CSD Lerneinheit 1, der ursprünglich im Herbst 2016 veröffentlicht wurde. Diese Version wurde durch eine aktualisierte Lerneinheit unter studio.code.org/s/csd1-2019 ersetzt und ist nur noch bis zum 1. Juli 2017 verfügbar.
         csd2-draft: {}
         csd1-draft: {}
         csd3-chapters: {}
@@ -707,6 +1076,7 @@ de:
             cspSurvey:
               display_name: Umfrage
           student_description: Willkommen bei der Befragung nach dem Kurs zu Grundsätzen der Informatik von Code.org. Diese Befragung dauert ca. 15 Minuten. Ihre Antworten sind privat und anonym- Ihr Lehrer kann anonyme Gesamtergebnisse für die gesamte Klasse einsehen. Die Ergebnisse sind für Ihren Lehrer und für Code.org von entscheidender Bedeutung, um den Kurs weiterzuführen und zu verbessern. Vielen Dank für Ihre Zeit und Aufmerksamkeit.
+          name: CSP-Abschluss-Umfrage
         public-key-cryptography:
           title: Kryptographie-Widgets mit öffentlichem Schlüssel
         csd2-old:
@@ -720,6 +1090,7 @@ de:
           description_short: Eine Einführung in die Informatik für Leseanfänger.
           description: Erlernen der Grundlagen der Informatik und der Internetsicherheit. Erstellen eines eigenen Spiels oder einer eigenen Geschichte am Ende des Kurses, die mit anderen geteilt werden kann.
           student_description: Erlernen der Grundlagen der Informatik und der Internetsicherheit. Erstellen eines eigenen Spiels oder einer eigenen Geschichte am Ende des Kurses, die mit anderen geteilt werden kann.
+          name: kursa-2017
         courseb-2017:
           title: Kurs B
           assignment_family_title: Kurs B
@@ -727,6 +1098,7 @@ de:
           description_short: Eine Einführung in die Informatik für Leseanfänger. (Ähnlich wie Kurs A, aber mit mehr Abwechslung für ältere Schüler.)
           description: Erlernen der Grundlagen der Informatik und der Internetsicherheit. Erstellen eines eigenen Spiels oder einer eigenen Geschichte am Ende des Kurses, die mit anderen geteilt werden kann.
           student_description: Erlernen der Grundlagen der Informatik und der Internetsicherheit. Erstellen eines eigenen Spiels oder einer eigenen Geschichte am Ende des Kurses, die mit anderen geteilt werden kann.
+          name: kursb-2017
         coursec-2017:
           title: Kurs C
           assignment_family_title: Kurs C
@@ -734,6 +1106,7 @@ de:
           description_short: Lerne die Grundlagen der Informatik und erstelle Deine eigene Kunst, Geschichten und Spiele.
           description: Erstellen Sie Programme mit Sequenzen, Schleifen und Ereignissen. Übersetzen Sie Ihre Initialen in Binärzahlen, untersuchen Sie verschiedene Techniken der Problemlösung und lernen Sie, wie Sie mit Cybermobbing umgehen können. Erstellen Sie am Ende des Kurses Ihr ganz eigenes Spiel oder Ihre eigene Geschichte, die Sie mit anderen teilen können!
           student_description: Erstellen Sie Programme mit Sequenzen, Schleifen und Ereignissen. Übersetzen Sie Ihre Initialen in Binärzahlen, untersuchen Sie verschiedene Techniken der Problemlösung und lernen Sie, wie Sie mit Cybermobbing umgehen können. Erstellen Sie am Ende des Kurses Ihr ganz eigenes Spiel oder Ihre eigene Geschichte, die Sie mit anderen teilen können!
+          name: kursc-2017
         coursed-2017:
           title: Kurs D
           assignment_family_title: Kurs D
@@ -741,6 +1114,7 @@ de:
           description_short: Behandele Konzepte aus Kurs C, und gehe dann weiter mit Algorithmen, verschachtelten Schleifen, Bedingungen und mehr.
           description: Lernen Sie neue Kodierungskonzepte kennen, unter anderem Algorithmen, geschachtelte Schleifen, `während`-Schleifen, Bedingungen und Ereignisse. Sie werden in das Konzept der digitalen Bürgerschaft eingeführt, bevor Sie Ihr eigenes Spiel oder Ihre eigene Geschichte erstellen, die Sie mit anderen teilen können.
           student_description: Lernen Sie neue Kodierungskonzepte kennen, unter anderem Algorithmen, geschachtelte Schleifen, `während`-Schleifen, Bedingungen und Ereignisse. Sie werden in das Konzept der digitalen Bürgerschaft eingeführt, bevor Sie Ihr eigenes Spiel oder Ihre eigene Geschichte erstellen, die Sie mit anderen teilen können.
+          name: kursd-2017
         coursee-2017:
           title: Kurs E
           assignment_family_title: Kurs E
@@ -757,6 +1131,7 @@ de:
             extra_course_content:
               display_name: Extra Kurs Inhalte
           student_description: Beginne mit der Programmierung von Algorithmen, Schleifen, Bedingungen und Ereignissen und dann geht es weiter mit Funktionen. Im zweiten Teil dieses Kurses entwirfst und erstellst du ein Grundstein-Projekt, das du mit deinen Freunden und deiner Familie teilen kannst.
+          name: kurse-2017
         coursef-2017:
           title: Kurs F
           assignment_family_title: Kurs F
@@ -828,6 +1203,7 @@ de:
             content:
               display_name: Inhalt
           student_description: Dies ist Lerneinheit 1 des Plans für Vertieftes Lernen von Code.org - Grundsätze der Informatik für Moderatoren in der Ausbildung. Hier finden Sie Denkanstöße und Anleitungen zur Demonstration der Kenntnisse aus Lerneinheit 1 des Lehrplans von Code.org  - Grundsätze der Informatik. Peer-Review-Artikel sind unten auf dieser Seite verfügbar, sobald Sie Ihre eigenen Reflexionen zu dieser Lerneinheit eingereicht haben.
+          name: csp1-dlp
         csp2-dlp:
           title: Grundsätze der Informatik Lerneinheit 2 Vertieftes Lernen
           description_audience: Grundsätze der Informatik - Moderatoren in der Ausbildung
@@ -964,6 +1340,7 @@ de:
         csp-pre-survey-test-2017: {}
         csp3-research-mxghyt:
           title: Grundsätze der Informatik Lerneinheit 3 - Einführung in die Programmierung (Teilziele)
+          description: In dieser Einheit werden die grundlegenden Konzepte der Computerprogrammierung vorgestellt, die die Erstellung umfangreicher, interaktiver Apps ermöglichen. In diesem Kurs werden JavaScript als Programmiersprache und App Lab als Programmierumgebung zum Erstellen von Apps verwendet. Die in diesen Lektionen erlernten Konzepte beziehen sich jedoch auf alle Programmiersprachen und Tools.
           lesson_groups:
             csp3_1:
               display_name: 'Kapitel 1: Programmiersprachen und Algorithmen'
@@ -971,6 +1348,7 @@ de:
               display_name: Kapitel über Bewertung
             cspSurvey:
               display_name: Umfrage
+          student_description: In dieser Einheit werden die grundlegenden Konzepte der Computerprogrammierung vorgestellt, die die Erstellung umfangreicher, interaktiver Apps ermöglichen. In diesem Kurs werden JavaScript als Programmiersprache und App Lab als Programmierumgebung zum Erstellen von Apps verwendet. Die in diesen Lektionen erlernten Konzepte beziehen sich jedoch auf alle Programmiersprachen und Tools.
         csd4-draft:
           title: Informatik Lerneinheit 4 - Überarbeitungen - Entwurf
           lesson_groups:
@@ -1061,11 +1439,13 @@ de:
         csp3-staging:
           title: CSP 3 Proposed Changes Temporary Staging Ground
           description_short: Temporary staging ground for Oct. changes to csp3
+          description: Dies ist eine Nachbildung der Live-Levels in /s/csp3-2017, wobei neue und geänderte Stufen hinzugefügt wurden. BEARBEITE KEINE LIVE-LEVELS.
           lesson_groups:
             csp3_1:
               display_name: 'Kapitel 1: Programmiersprachen und Algorithmen'
             cspAssessment:
               display_name: Kapitel über Bewertung
+          student_description: Dies ist eine Nachbildung der Live-Levels in /s/csp3-2017, wobei neue und geänderte Stufen hinzugefügt wurden. BEARBEITE KEINE LIVE-LEVELS.
         pwc:
           title: Zugang von PwC zu Ihrem potenziellen Studienplan
           description: Wir bei PwC sind davon überzeugt, dass alle SchülerInnen das Potenzial haben, die Führungskräfte von morgen und technisch orientierte Arbeitskräfte zu sein. Access Your Potential- Nutze dein Potenzial - ist unser Engagement, mit dem wir dazu beitragen, Chancenungleichheiten auszugleichen, indem wir junge Menschen, insbesondere aus benachteiligten Gemeinschaften, mit den finanziellen, technologischen und karriererelevanten Kenntnisse ausstatten, die sie benötigen, um ihren Lebensweg zu ändern. Wir freuen uns, unseren Technologie- und Karriere-Lehrplan Access Your Potential- Nutze dein Potenzial für die Mittelstufe als Teil unseres Engagements vorzustellen.
@@ -1073,10 +1453,11 @@ de:
         allthesurveys:
           title: Alle Befragungen
           description_short: Bereitstellungsbereich für die Durchführung und das Testen von Code.org-Befragungen
+          name: alldieUmfragen
         k1hoc2017:
           title: Hour of Code 2017 für die Vorschule bis zur 1. Klasse
         hero:
-          title: 'Minecraft: Hero’s Journey'
+          title: Minecraft Helden Reise
           description_short: Minecraft ist zurück - mit einer brandneuen Aktivität für Hour of Code!
           description: Minecraft präsentiert eine brandneue Aktivität zur Hour of Code! Entdecke die Welt von Minecraft mit Code.
           student_description: Minecraft präsentiert eine brandneue Aktivität zur Hour of Code! Entdecke die Welt von Minecraft mit Code.
@@ -1277,6 +1658,7 @@ de:
           student_description: Diese Lerneinheit befasst sich mit den technischen Aufgaben und Fragen, die sich aus der Notwendigkeit ergeben, digitale Informationen mithilfe von Computern darzustellen und sie zwischen Menschen und Rechnern zu übertragen. Die Lerneinheit untersucht dann die Struktur und das Design des Internets und die Auswirkungen dieser Designentscheidungen.
         csd1-2018:
           title: Erkenntnisse aus der Informatik - Lerneinheit 1 - Problemlösung ('18-'19)
+          description: " \nEinheit 1 ist eine hochgradig interaktive und kollaborative Einführung in das Gebiet der Informatik im Rahmen des umfassenderen Strebens nach Problemlösungen. Du übst, einen Problemlösungsprozess anzuwenden, um eine Reihe von Rätseln, Herausforderungen und realen Szenarien zu lösen. Als Nächstes lernst du, wie Computer Informationen eingeben, ausgeben, speichern und verarbeiten, um Menschen bei der Lösung von Problemen zu helfen. Die Einheit endet mit einem Projekt, in dem du eine Anwendung entwirfst, mit der du ein Problem deiner Wahl lösen kannst."
           description_short: Erfahren Sie, wie Menschen mit Computern arbeiten, um Probleme zu lösen.
           lesson_groups:
             cspSurvey:
@@ -1285,6 +1667,7 @@ de:
               display_name: 'Kapitel 1: Der Problemlösungsprozess'
             csd1_2:
               display_name: 'Kapitel 2: Computer und Problemlösung'
+          student_description: " \nEinheit 1 ist eine hochgradig interaktive und kollaborative Einführung in das Gebiet der Informatik im Rahmen des umfassenderen Strebens nach Problemlösungen. Du übst, einen Problemlösungsprozess anzuwenden, um eine Reihe von Rätseln, Herausforderungen und realen Szenarien zu lösen. Als Nächstes lernst du, wie Computer Informationen eingeben, ausgeben, speichern und verarbeiten, um Menschen bei der Lösung von Problemen zu helfen. Die Einheit endet mit einem Projekt, in dem du eine Anwendung entwirfst, mit der du ein Problem deiner Wahl lösen kannst."
         csd4-2018:
           title: Erkenntnisse aus der Informatik Lektion 4 - Das Internet ('18-'19)
           description: Die Lerneinheit 4 stellt die breiteren sozialen Auswirkungen der Informatik vor. Anhand einer Reihe von Design-Aufgaben lernen Sie, wie Sie die Bedürfnisse anderer besser verstehen und gleichzeitig eine Lösung für ein Problem entwickeln können. Die zweite Hälfte der Lerneinheit besteht aus einem iterativen Teamprojekt, bei dem die Teams die Möglichkeit haben, einen Bedarf zu identifizieren, der ihnen am Herzen liegt, Lösungen sowohl auf Papier als auch im App-Lab prototypisch zu entwickeln und Lösungen mit realen Benutzern zu testen, um Feedback zu erhalten und die Iteration weiter voranzutreiben.
@@ -1321,6 +1704,7 @@ de:
           student_description: Diese Lerneinheit erforscht die Art und Weise, wie digitale Informationen kodiert, dargestellt und manipuliert werden. Die Fähigkeit, Daten digital zu bearbeiten, sie zu visualisieren und Muster, Trends und mögliche Bedeutungen zu erkennen, gehört zu den wichtigen praktischen Kenntnissen, die Informatiker tagtäglich anwenden. Zu verstehen, woher die Daten stammen, eine Idee zu haben, was man aus ihnen lernen oder extrahieren könnte, und in der Lage zu sein, rechnergestützte Werkzeuge zur Handhabung von Daten und zur Kommunikation darüber zu verwenden, sind die wesentlichsten Kenntnisse, die in der Lerneinheit angesprochen werden.
         csp3-2018:
           title: Grundsätze der Informatik Lerneinheit 3 - Einführung in die Programmierung ('18-'19)
+          description: In dieser Einheit werden die grundlegenden Konzepte der Computerprogrammierung vorgestellt, die die Erstellung umfangreicher, interaktiver Apps ermöglichen. In diesem Kurs werden JavaScript als Programmiersprache und App Lab als Programmierumgebung zum Erstellen von Apps verwendet. Die in diesen Lektionen erlernten Konzepte beziehen sich jedoch auf alle Programmiersprachen und Tools.
           lesson_groups:
             csp3_1_2018:
               display_name: 'Einheit 3: Einführung in die Programmierung'
@@ -1328,6 +1712,7 @@ de:
               display_name: Kapitel über Bewertung
             cspSurvey:
               display_name: Umfrage
+          student_description: In dieser Einheit werden die grundlegenden Konzepte der Computerprogrammierung vorgestellt, die die Erstellung umfangreicher, interaktiver Apps ermöglichen. In diesem Kurs werden JavaScript als Programmiersprache und App Lab als Programmierumgebung zum Erstellen von Apps verwendet. Die in diesen Lektionen erlernten Konzepte beziehen sich jedoch auf alle Programmiersprachen und Tools.
         csp-explore-2018:
           title: Erkunden - AP Performance Task Prep ('18-'19)
           description: 'Diese Lerneinheiten sollen Ihnen helfen, das AP Explore Performance Task zu verstehen, sich darauf vorzubereiten und es durchzuführen. Jede "Lektion" enthält Links zu hilfreichen Dokumenten, bei deren Lektüre Ihnen Ihr Lehrer behilflich sein kann. HINWEIS: Der zweite Punkt in der ersten Lerneinheit bezieht sich nicht direkt auf die Explore PT, sondern behandelt die allgemeine technische Einrichtung und die Werkzeuge, die Sie benötigen, um verschiedene Objekte der Erkundungs- und der Erstellungsaufgabe abzuarbeiten.'
@@ -1629,7 +2014,7 @@ de:
         frozen-2018-test-b:
           title: Neues `Frozen`- Skript
         aquatic:
-          title: 'Minecraft: Voyage Aquatic'
+          title: 'Minecraft: Aquatische Bedingungen Reise'
           description_short: Nutze deine Kreativität und deine Problemlösungsfähigkeiten, um mit Code Unterwasserwelten zu bauen und zu erforschen!
           description: Minecraft ist zurück - mit einer brandneuen Aktivität! Setzen Sie Ihre Kreativität und Problemlösungsfähigkeiten ein, um Unterwasserwelten mit Code zu erforschen und zu bauen.
           student_description: Minecraft ist zurück - mit einer brandneuen Aktivität! Setzen Sie Ihre Kreativität und Problemlösungsfähigkeiten ein, um Unterwasserwelten mit Code zu erforschen und zu bauen.
@@ -1957,6 +2342,7 @@ de:
           student_description: Diese Lerneinheit erforscht die Art und Weise, wie digitale Informationen kodiert, dargestellt und manipuliert werden. Die Fähigkeit, Daten digital zu bearbeiten, sie zu visualisieren und Muster, Trends und mögliche Bedeutungen zu erkennen, gehört zu den wichtigen praktischen Kenntnissen, die Informatiker tagtäglich anwenden. Zu verstehen, woher die Daten stammen, eine Idee zu haben, was man aus ihnen lernen oder extrahieren könnte, und in der Lage zu sein, rechnergestützte Werkzeuge zur Handhabung von Daten und zur Kommunikation darüber zu verwenden, sind die wesentlichsten Kenntnisse, die in der Lerneinheit angesprochen werden.
         csp3-2019:
           title: Grundsätze der Informatik Lektion 3 - Einführung in die Programmierung ('19-'20)
+          description: In dieser Einheit werden die grundlegenden Konzepte der Computerprogrammierung vorgestellt, die die Erstellung umfangreicher, interaktiver Apps ermöglichen. In diesem Kurs werden JavaScript als Programmiersprache und App Lab als Programmierumgebung zum Erstellen von Apps verwendet. Die in diesen Lektionen erlernten Konzepte beziehen sich jedoch auf alle Programmiersprachen und Tools.
           lesson_groups:
             csp3_1_2018:
               display_name: 'Einheit 3: Einführung in die Programmierung'
@@ -1964,6 +2350,7 @@ de:
               display_name: Kapitel über Bewertung
             cspSurvey:
               display_name: Umfrage
+          student_description: In dieser Einheit werden die grundlegenden Konzepte der Computerprogrammierung vorgestellt, die die Erstellung umfangreicher, interaktiver Apps ermöglichen. In diesem Kurs werden JavaScript als Programmiersprache und App Lab als Programmierumgebung zum Erstellen von Apps verwendet. Die in diesen Lektionen erlernten Konzepte beziehen sich jedoch auf alle Programmiersprachen und Tools.
         csp4-2019:
           title: Grundsätze der Informatik Lerneinheit 4 - Big Data und Privatspäre ('19-'20)
           description: Die datenreiche Welt, in der wir leben, bringt viele komplexe Fragen in Bezug auf öffentliche Ordnung, Recht, Ethik und gesellschaftliche Auswirkungen mit sich. Ziel dieser Lerneinheit ist es, eine abgerundete und ausgewogene Sicht auf die Daten in der Welt zu entwickeln, einschließlich der positiven und negativen Auswirkungen dieser Daten, und die Grundlagen zu verstehen, wie und warum moderne Verschlüsselung funktioniert.
@@ -2750,11 +3137,14 @@ de:
               display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
         csp2-2020:
           title: Grundsätze der Informatik Lerneinheit 2 - Das Internet ('20-'21)
+          description_short: Erstellen Sie das Internet mit dem Internet-Simulator von Grund auf.
+          description: Diese Einheit zeigt, wie das Internet konzipiert wurde, um Milliarden von Geräten und Menschen miteinander zu verbinden. Erfahren Sie, wie die verschiedenen Protokolle des Internets funktionieren, und erstellen Sie sie mit dem Internet-Simulator selbst. Denken Sie dann an die guten und schlechten Auswirkungen des Internets auf das moderne Leben.
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Lektion 2: Das Internet'
             cspSurvey2020:
               display_name: "(Post-Course Survey) Überprüfung nach dem Kurs"
+          student_description: Diese Einheit zeigt, wie das Internet konzipiert wurde, um Milliarden von Geräten und Menschen miteinander zu verbinden. Erfahren Sie, wie die verschiedenen Protokolle des Internets funktionieren, und erstellen Sie sie mit dem Internet-Simulator selbst. Denken Sie dann an die guten und schlechten Auswirkungen des Internets auf das moderne Leben.
         csp3-2020:
           title: Grundsätze der Informatik Lerneinheit 3 - Einführung in das App-Design ('20-'21)
           lesson_groups:
@@ -2789,9 +3179,11 @@ de:
           title: Grundsätze der Informatik 20-21 Lehrplan-Ausbildung für Moderatoren
         csp3-virtual:
           title: Einführung in die Schildkrötenprogrammierung in App Lab - im eigenen Tempo
+          description: In dieser Einheit werden die grundlegenden Konzepte der Computerprogrammierung vorgestellt, die die Erstellung umfangreicher, interaktiver Apps ermöglichen. In diesem Kurs werden JavaScript als Programmiersprache und App Lab als Programmierumgebung zum Erstellen von Apps verwendet. Die in diesen Lektionen erlernten Konzepte beziehen sich jedoch auf alle Programmiersprachen und Tools.
           lesson_groups:
             csp3_1_2018:
               display_name: 'Einheit 3: Einführung in die Programmierung'
+          student_description: In dieser Einheit werden die grundlegenden Konzepte der Computerprogrammierung vorgestellt, die die Erstellung umfangreicher, interaktiver Apps ermöglichen. In diesem Kurs werden JavaScript als Programmiersprache und App Lab als Programmierumgebung zum Erstellen von Apps verwendet. Die in diesen Lektionen erlernten Konzepte beziehen sich jedoch auf alle Programmiersprachen und Tools.
         jess-test-script:
           title: Jess' Drehbuch
         csd2-virtual:
@@ -2974,11 +3366,14 @@ de:
             csp_unit1_2020:
               display_name: 'Einheit 1: Digitale Informationen'
         csp2-2021:
+          description: Diese Einheit zeigt, wie das Internet konzipiert wurde, um Milliarden von Geräten und Menschen miteinander zu verbinden. Erfahren Sie, wie die verschiedenen Protokolle des Internets funktionieren, und erstellen Sie sie mit dem Internet-Simulator selbst. Denken Sie dann an die guten und schlechten Auswirkungen des Internets auf das moderne Leben.
+          description_short: Erstellen Sie das Internet mit dem Internet-Simulator von Grund auf.
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Lektion 2: Das Internet'
             lessonGroup-2:
               display_name: Umfrage
+          student_description: Diese Einheit zeigt, wie das Internet konzipiert wurde, um Milliarden von Geräten und Menschen miteinander zu verbinden. Erfahren Sie, wie die verschiedenen Protokolle des Internets funktionieren, und erstellen Sie sie mit dem Internet-Simulator selbst. Denken Sie dann an die guten und schlechten Auswirkungen des Internets auf das moderne Leben.
         csp3-2021:
           lesson_groups:
             csp_unit3_2020:
@@ -3341,6 +3736,7 @@ de:
           description: Willkommen bei der Befragung nach dem Kurs zu Grundsätzen der Informatik von Code.org. Diese Befragung dauert ca. 15 Minuten. Ihre Antworten sind privat und anonym- Ihr Lehrer kann anonyme Gesamtergebnisse für die gesamte Klasse einsehen. Die Ergebnisse sind für Ihren Lehrer und für Code.org von entscheidender Bedeutung, um den Kurs weiterzuführen und zu verbessern. Vielen Dank für Ihre Zeit und Aufmerksamkeit.
           student_description: Willkommen bei der Befragung nach dem Kurs zu Grundsätzen der Informatik von Code.org. Diese Befragung dauert ca. 15 Minuten. Ihre Antworten sind privat und anonym- Ihr Lehrer kann anonyme Gesamtergebnisse für die gesamte Klasse einsehen. Die Ergebnisse sind für Ihren Lehrer und für Code.org von entscheidender Bedeutung, um den Kurs weiterzuführen und zu verbessern. Vielen Dank für Ihre Zeit und Aufmerksamkeit.
         aiml-2021:
+          title: Modul KI und maschinelles Lernen
           lesson_groups:
             lessonGroup-4:
               display_name: Umfrage
@@ -3348,6 +3744,7 @@ de:
           lesson_groups:
             lessonGroup-4:
               display_name: Umfrage
+          title: "  KI  und maschinelles Lernen"
         kodea-pd-2021:
           description: Lernen Sie mit diesem kostenlosen Online-Kurs zum Selbststudium, wie man Informatik mit Hilfe von „Grundlagen der Informatik“ von Code.org Informatik unterrichtet.
           student_description: Lernen Sie mit diesem kostenlosen Online-Kurs zum Selbststudium, wie man Informatik mit Hilfe von „Grundlagen der Informatik“ von Code.org Informatik unterrichtet.
@@ -3376,16 +3773,63 @@ de:
           lesson_groups:
             lessonGroup-2:
               display_name: Willkommen
+            lessonGroup-3:
+              display_name: Navigieren in Code.org
+            lessonGroup-5:
+              display_name: Vorbereitung auf den Unterricht von CS Discoveries
           title: 'Modul 1: Willkommen'
-        self-paced-pl-csd2-2021: {}
-        self-paced-pl-csd3-2021: {}
-        self-paced-pl-csd4-2021: {}
-        self-paced-pl-csd5-2021: {}
-        self-paced-pl-csd6-2021: {}
+          description: "Dieses Modul ist eine kurze Einführung sowohl in Code.org als auch in diesen professionellen Lernkurs. \n\n\\*\\*Aktivitäten des Moduls: \\*\\*\n\n– Einführung in Code.org und CS Discoveries teil.\n– Sie erfahren, wie Sie an diesem professionellen Lernkurs teilnehmen können.\n\n\\*\\*Geschätzte Dauer: \\*\\* 10 Minuten"
+          student_description: "Dieses Modul ist eine kurze Einführung sowohl in Code.org als auch in diesen professionellen Lernkurs. \n\n\\*\\*Aktivitäten des Moduls: \\*\\*\n\n– Einführung in Code.org und CS Discoveries teil.\n– Sie erfahren, wie Sie an diesem professionellen Lernkurs teilnehmen können.\n\n\\*\\*Geschätzte Dauer: \\*\\* 10 Minuten"
+        self-paced-pl-csd2-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Navigieren in Code.org
+          title: 'Modul 2: Navigieren in Code.org'
+          description: |-
+            Dieses Modul soll Ihnen Orientierung geben, wie Sie die Werkzeuge nutzen und im Kurs Informatik-Entdeckungen verwenden, um die SchülerInnen im Unterricht zu unterstützen
+
+            **Aktivtäten:**
+
+            –   Navigieren auf der Website Code.org und in den Werkzeugen für Lehrer.
+            –   Einrichtung eines Klassenzimmers.
+            –   Finden und Verwenden der Unterrichtspläne und Ressource für Lehrer.
+
+            **Geschätzte Dauer:** 60 Minuten
+          student_description: |-
+            Dieses Modul soll Ihnen Orientierung geben, wie Sie die Werkzeuge nutzen und im Kurs Informatik-Entdeckungen verwenden, um die SchülerInnen im Unterricht zu unterstützen
+
+            **Aktivtäten:**
+
+            –   Navigieren auf der Website Code.org und in den Werkzeugen für Lehrer.
+            –   Einrichtung eines Klassenzimmers.
+            –   Finden und Verwenden der Unterrichtspläne und Ressource für Lehrer.
+
+            **Geschätzte Dauer:** 60 Minuten
+        self-paced-pl-csd3-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Überblick über CS Discoveries
+          title: 'Modul 3: Überblick über CS Discoveries'
+          description: "Dieses Modul gibt Ihnen einen Überblick über den Kurs CS Discoveries, wobei der Schwerpunkt auf den Konzepten liegt, die die Schüler lernen, und den Tools, die die Schüler während des gesamten Kurses verwenden werden. Die Teilnahme an diesem Modul hilft Ihnen dabei, Entscheidungen über die Auswahl der Kursinhalte zu treffen, die Sie in Ihrem Unterricht implementieren werden. \n\n\\*\\*Aktivitäten des Moduls: \\*\\*\n\n– Umfassender Überblick über den Lehrplan von CS Discoveries.\n– Sie machen Sie sich mit den Programmierumgebungen vertraut, die in CS Discoveries verwendet werden.\n– Sie können auswählen, welche Einheiten von CS Discoveries Sie in Ihrer Klasse unterrichten möchten.\n\n\\*\\*Geschätzte Dauer: \\*\\* 60 Minuten"
+          student_description: "Dieses Modul gibt Ihnen einen Überblick über den Kurs CS Discoveries, wobei der Schwerpunkt auf den Konzepten liegt, die die Schüler lernen, und den Tools, die die Schüler während des gesamten Kurses verwenden werden. Die Teilnahme an diesem Modul hilft Ihnen dabei, Entscheidungen über die Auswahl der Kursinhalte zu treffen, die Sie in Ihrem Unterricht implementieren werden. \n\n\\*\\*Aktivitäten des Moduls: \\*\\*\n\n– Umfassender Überblick über den Lehrplan von CS Discoveries.\n– Sie machen Sie sich mit den Programmierumgebungen vertraut, die in CS Discoveries verwendet werden.\n– Sie können auswählen, welche Einheiten von CS Discoveries Sie in Ihrer Klasse unterrichten möchten.\n\n\\*\\*Geschätzte Dauer: \\*\\* 60 Minuten"
+        self-paced-pl-csd4-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Lehren und lernen im Kurs CS Discoveries
+          title: 'Modul 4: Lehren und lernen in CS Discoveries'
+          description: "In diesem Modul lernen Sie authentische CS-Übungen für die SchülerInnen im Kurs Entdeckungen kennen. Zu diesen Übungen gehören das Debuggen, die Verwendung von Ressourcen und die Paarprogrammierung. Sie befassen sich außerdem mit der Rolle des Lehrers in einem CS Discoverie-Klassenzimmer und erstellen einen Plan, wie Sie die Schüler beim Unterrichten des Kurses beim Lernen unterstützen. \n\n\\*\\*Aktivitäten des Moduls: \\*\\*\n\n— Diskussion über die Rolle von LehrerInnen im CS Discoveries-Klassenzimmer. \n— Authentische CS-Praktiken, die die SchülerInnen im Laufe des Kurses CS Discoveries entwickeln werden.\n— Erstellen eines Plans zur Differenzierung, kontinuierlichen Bewertung und Förderung einer Kultur der Inklusion. \n\n\\*\\*Geschätzte Dauer: \\*\\* 50 Minuten"
+          student_description: "In diesem Modul lernen Sie authentische CS-Übungen für die SchülerInnen im Kurs Entdeckungen kennen. Zu diesen Übungen gehören das Debuggen, die Verwendung von Ressourcen und die Paarprogrammierung. Sie befassen sich außerdem mit der Rolle des Lehrers in einem CS Discoverie-Klassenzimmer und erstellen einen Plan, wie Sie die Schüler beim Unterrichten des Kurses beim Lernen unterstützen. \n\n\\*\\*Aktivitäten des Moduls: \\*\\*\n\n— Diskussion über die Rolle von LehrerInnen im CS Discoveries-Klassenzimmer. \n— Authentische CS-Praktiken, die die SchülerInnen im Laufe des Kurses CS Discoveries entwickeln werden.\n— Erstellen eines Plans zur Differenzierung, kontinuierlichen Bewertung und Förderung einer Kultur der Inklusion. \n\n\\*\\*Geschätzte Dauer: \\*\\* 50 Minuten"
+        self-paced-pl-csd5-2021:
+          title: Unterrichten von KI und maschinellem Lernen
+          description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde \"KI und maschinelles Lernen\" vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung in die künstliche Intelligenz und maschinelles Lernen.\n– Üben der wichtigsten Konzepte der Einheit.\n– Beschäftigung mit AI Lab und App Lab.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 120 Minuten"
+          student_description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde \"KI und maschinelles Lernen\" vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung in die künstliche Intelligenz und maschinelles Lernen.\n– Trainieren eines Modells des maschinellen Lernens mithilfe von AI Lab.\n– Beschäftigung mit Apps des maschinellen Lernens.\n– Aspekte der Auswirkungen von KI und maschinellem Lernen auf die Realität\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 120 Minuten"
+        self-paced-pl-csd6-2021:
+          description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde \"KI und maschinelles Lernen\" vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung in die künstliche Intelligenz und maschinelles Lernen.\n– Trainieren eines Modells des maschinellen Lernens mithilfe von AI Lab.\n– Beschäftigung mit Apps des maschinellen Lernens.\n– Aspekte der Auswirkungen von KI und maschinellem Lernen auf die Realität\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 120 Minuten"
         self-paced-pl-csd7-2021: {}
         self-paced-pl-csd8-2021: {}
         self-paced-pl-csp1-2021: {}
-        self-paced-pl-csp2-2021: {}
+        self-paced-pl-csp2-2021:
+          title: 'Modul 2: Navigieren in Code.org'
         self-paced-pl-csp3-2021: {}
         self-paced-pl-csp4-2021: {}
         self-paced-pl-csp5-2021: {}
@@ -3486,6 +3930,9 @@ de:
         hello-world-draft:
           title: '"Hallo, Welt!"'
         csa-self-paced-pl:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Navigieren in Code.org
           title: Navigieren in Code.org für Lehrer von CSA Pilot
           description: "Dieses Modul soll Ihnen Orientierung geben, wie Sie die Werkzeuge nutzen, im die Schüler im CSA-Unterricht zu unterstützen. \n\n**Sie lernen Folgendes:**\n\n–   Navigieren auf der Website Code.org und in den Werkzeugen für Lehrer.\n–   Finden und Verwenden der Unterrichtspläne und Ressource für Lehrer. \n\n**Empfohlene Zeit:** 1 Stunde"
           name: csa-self-paced-pl
@@ -3551,10 +3998,12 @@ de:
             lessonGroup-4:
               display_name: Demos und Ressourcen
         tesstest921: {}
-        hello-world-animals: {}
+        hello-world-animals:
+          title: 'Hallo Welt: Tiere'
         hello-world-emoji:
           title: 'Hallo Welt: Emoji'
-        hello-world-retro: {}
+        hello-world-retro:
+          title: 'Hallo Welt: Retro'
         hello-world-batman:
           title: Hallo Welt
         csa4-exemplars:
@@ -3567,6 +4016,11 @@ de:
               display_name: Inhalt
             lessonGroup-2:
               display_name: Inhalt
+        ai-ethics:
+          title: Unser KI-Ethikkodex
+          description_audience: 6.  bis 12. Klasse
+        dance-unplugged:
+          title: Hour of Code – Tanzparty – Offline
         csc-things:
           name: csc-things
           title: 'CSC Brain Dump '
@@ -3636,15 +4090,19 @@ de:
             lessonGroup-5:
               display_name: Sandbox
         ai-ethics-2021:
+          title: Unser KI-Ethikkodex
           description_audience: Klassen 6-12
         poem-art-2021:
           title: Dichtkunst
-        poetry-2021: {}
+        poetry-2021:
+          title: Code ist Poesie
         hello-world-food-2021: {}
         hello-world-emoji-2021:
           title: 'Hallo Welt: Emoji'
-        hello-world-animals-2021: {}
-        hello-world-retro-2021: {}
+        hello-world-animals-2021:
+          title: 'Hallo Welt: Tiere'
+        hello-world-retro-2021:
+          title: 'Hallo Welt: Retro'
         spelling-bee-2021: {}
         explore-data-1-2021:
           title: Datenvisualisierung
@@ -3745,6 +4203,9 @@ de:
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Lektion 2: Das Internet'
+          description: Diese Einheit zeigt, wie das Internet konzipiert wurde, um Milliarden von Geräten und Menschen miteinander zu verbinden. Erfahren Sie, wie die verschiedenen Protokolle des Internets funktionieren, und erstellen Sie sie mit dem Internet-Simulator selbst. Denken Sie dann an die guten und schlechten Auswirkungen des Internets auf das moderne Leben.
+          student_description: Diese Einheit zeigt, wie das Internet konzipiert wurde, um Milliarden von Geräten und Menschen miteinander zu verbinden. Erfahren Sie, wie die verschiedenen Protokolle des Internets funktionieren, und erstellen Sie sie mit dem Internet-Simulator selbst. Denken Sie dann an die guten und schlechten Auswirkungen des Internets auf das moderne Leben.
+          description_short: Erstellen Sie das Internet mit dem Internet-Simulator von Grund auf.
         csp3-2022:
           lesson_groups:
             csp_unit3_2020:
@@ -3936,7 +4397,8 @@ de:
               display_name: Inhalt
         pltess: {}
         self-paced-pl-csa1-2022: {}
-        self-paced-pl-csa2-2022: {}
+        self-paced-pl-csa2-2022:
+          title: 'Modul 2: Navigieren in Code.org'
         self-paced-pl-csa3-2022: {}
         csa7-pilot-extra:
           lesson_groups:
@@ -4024,6 +4486,9 @@ de:
           description: "In diesem professionellen Lernmodul bereiten Sie sich auf die Code.org-Stunde \"Physische Informatik\" vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung in die physische Informatik.\n– Üben der wichtigsten Konzepte der Einheit.\n– Beschäftigung mit der Hersteller-App.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 90 Minuten"
           student_description: "In diesem professionellen Lernmodul bereiten Sie sich auf die Code.org-Stunde \"Physische Informatik\" vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung in die physische Informatik.\n– Üben der wichtigsten Konzepte der Einheit.\n– Beschäftigung mit der Hersteller-App.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 90 Minuten"
         vpl-csd7-ci-pilot-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Unterrichten von KI und maschinellem Lernen
           title: 'Modul 7: Vorbereitung auf den Unterricht KI und maschinelles Lernen'
           description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde \"KI und maschinelles Lernen\" vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung in KI und maschinelles Lernen.\n– Üben der wichtigsten Konzepte der Einheit.\n– Beschäftigung mit AI Lab und App Lab.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 120 Minuten"
           student_description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde \"KI und maschinelles Lernen\" vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung in KI und maschinelles Lernen.\n– Üben der wichtigsten Konzepte der Einheit.\n– Beschäftigung mit AI Lab und App Lab.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 120 Minuten"
@@ -4108,6 +4573,7 @@ de:
           title: Befragung zu „Grundsätze der Informatik“ nach dem Kurs
         aiml-2022:
           name: aiml-2022
+          title: Modul KI und maschinelles Lernen
           description_short: Erfahren Sie mehr über künstliche Intelligenz und maschinelles Lernen
         vpl-csd-2022: {}
         vpl-csp-2022: {}
@@ -4116,15 +4582,55 @@ de:
             lessonGroup-2:
               display_name: Willkommen
           title: 'Modul 1: Willkommen'
-        self-paced-pl-csd2-2022: {}
-        self-paced-pl-csd3-2022: {}
-        self-paced-pl-csd4-2022: {}
+          description: "Dieses Modul ist eine kurze Einführung sowohl in Code.org als auch in diesen professionellen Lernkurs. \n\n\\*\\*Aktivitäten des Moduls: \\*\\*\n\n– Einführung in Code.org und CS Discoveries teil.\n– Sie erfahren, wie Sie an diesem professionellen Lernkurs teilnehmen können.\n\n\\*\\*Geschätzte Dauer: \\*\\* 10 Minuten"
+          student_description: "Dieses Modul ist eine kurze Einführung sowohl in Code.org als auch in diesen professionellen Lernkurs. \n\n\\*\\*Aktivitäten des Moduls: \\*\\*\n\n– Einführung in Code.org und CS Discoveries teil.\n– Sie erfahren, wie Sie an diesem professionellen Lernkurs teilnehmen können.\n\n\\*\\*Geschätzte Dauer: \\*\\* 10 Minuten"
+        self-paced-pl-csd2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Navigieren in Code.org
+          title: 'Modul 2: Navigieren in Code.org'
+          description: |-
+            Dieses Modul soll Ihnen Orientierung geben, wie Sie die Werkzeuge nutzen und im Kurs Informatik-Entdeckungen verwenden, um die SchülerInnen im Unterricht zu unterstützen
+
+            **Aktivtäten:**
+
+            –   Navigieren auf der Website Code.org und in den Werkzeugen für Lehrer.
+            –   Einrichtung eines Klassenzimmers.
+            –   Finden und Verwenden der Unterrichtspläne und Ressource für Lehrer.
+
+            **Geschätzte Dauer:** 60 Minuten
+          student_description: |-
+            Dieses Modul soll Ihnen Orientierung geben, wie Sie die Werkzeuge nutzen und im Kurs Informatik-Entdeckungen verwenden, um die SchülerInnen im Unterricht zu unterstützen
+
+            **Aktivtäten:**
+
+            –   Navigieren auf der Website Code.org und in den Werkzeugen für Lehrer.
+            –   Einrichtung eines Klassenzimmers.
+            –   Finden und Verwenden der Unterrichtspläne und Ressource für Lehrer.
+
+            **Geschätzte Dauer:** 60 Minuten
+        self-paced-pl-csd3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Überblick über CS Discoveries
+          title: 'Modul 3: Überblick über CS Discoveries'
+          description: "Dieses Modul gibt Ihnen einen Überblick über den Kurs CS Discoveries, wobei der Schwerpunkt auf den Konzepten liegt, die die Schüler lernen, und den Tools, die die Schüler während des gesamten Kurses verwenden werden. Die Teilnahme an diesem Modul hilft Ihnen dabei, Entscheidungen über die Auswahl der Kursinhalte zu treffen, die Sie in Ihrem Unterricht implementieren werden. \n\n\\*\\*Aktivitäten des Moduls: \\*\\*\n\n– Umfassender Überblick über den Lehrplan von CS Discoveries.\n– Sie machen Sie sich mit den Programmierumgebungen vertraut, die in CS Discoveries verwendet werden.\n– Sie können auswählen, welche Einheiten von CS Discoveries Sie in Ihrer Klasse unterrichten möchten.\n\n\\*\\*Geschätzte Dauer: \\*\\* 60 Minuten"
+          student_description: "Dieses Modul gibt Ihnen einen Überblick über den Kurs CS Discoveries, wobei der Schwerpunkt auf den Konzepten liegt, die die Schüler lernen, und den Tools, die die Schüler während des gesamten Kurses verwenden werden. Die Teilnahme an diesem Modul hilft Ihnen dabei, Entscheidungen über die Auswahl der Kursinhalte zu treffen, die Sie in Ihrem Unterricht implementieren werden. \n\n\\*\\*Aktivitäten des Moduls: \\*\\*\n\n– Umfassender Überblick über den Lehrplan von CS Discoveries.\n– Sie machen Sie sich mit den Programmierumgebungen vertraut, die in CS Discoveries verwendet werden.\n– Sie können auswählen, welche Einheiten von CS Discoveries Sie in Ihrer Klasse unterrichten möchten.\n\n\\*\\*Geschätzte Dauer: \\*\\* 60 Minuten"
+        self-paced-pl-csd4-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Lehren und lernen im Kurs CS Discoveries
+          title: 'Modul 4: Lehren und lernen in CS Discoveries'
+          description: "In diesem Modul lernen Sie authentische CS-Übungen für die SchülerInnen im Kurs Entdeckungen kennen. Zu diesen Übungen gehören das Debuggen, die Verwendung von Ressourcen und die Paarprogrammierung. Sie befassen sich außerdem mit der Rolle des Lehrers in einem CS Discoverie-Klassenzimmer und erstellen einen Plan, wie Sie die Schüler beim Unterrichten des Kurses beim Lernen unterstützen. \n\n\\*\\*Aktivitäten des Moduls: \\*\\*\n\n— Diskussion über die Rolle von LehrerInnen im CS Discoveries-Klassenzimmer. \n— Authentische CS-Praktiken, die die SchülerInnen im Laufe des Kurses CS Discoveries entwickeln werden.\n— Erstellen eines Plans zur Differenzierung, kontinuierlichen Bewertung und Förderung einer Kultur der Inklusion. \n\n\\*\\*Geschätzte Dauer: \\*\\* 50 Minuten"
+          student_description: "In diesem Modul lernen Sie authentische CS-Übungen für die SchülerInnen im Kurs Entdeckungen kennen. Zu diesen Übungen gehören das Debuggen, die Verwendung von Ressourcen und die Paarprogrammierung. Sie befassen sich außerdem mit der Rolle des Lehrers in einem CS Discoverie-Klassenzimmer und erstellen einen Plan, wie Sie die Schüler beim Unterrichten des Kurses beim Lernen unterstützen. \n\n\\*\\*Aktivitäten des Moduls: \\*\\*\n\n— Diskussion über die Rolle von LehrerInnen im CS Discoveries-Klassenzimmer. \n— Authentische CS-Praktiken, die die SchülerInnen im Laufe des Kurses CS Discoveries entwickeln werden.\n— Erstellen eines Plans zur Differenzierung, kontinuierlichen Bewertung und Förderung einer Kultur der Inklusion. \n\n\\*\\*Geschätzte Dauer: \\*\\* 50 Minuten"
         self-paced-pl-csp1-2022: {}
-        self-paced-pl-csp2-2022: {}
+        self-paced-pl-csp2-2022:
+          title: 'Modul 2: Navigieren in Code.org'
         self-paced-pl-csp3-2022: {}
         self-paced-pl-csp4-2022: {}
         csa9-2022: {}
         csa-pl-standalone-code-2022: {}
+        csc-ecosystems: {}
         dlp-csd-overview-2022: {}
         dlp-csd-mod1-2022: {}
         dlp-csd-mod2-2022: {}
@@ -4147,6 +4653,8 @@ de:
         alltheblocklythings: {}
         self-paced-pl-csd5-2022:
           title: Unterrichten von KI und maschinellem Lernen
+          description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde \"KI und maschinelles Lernen\" vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung in die künstliche Intelligenz und maschinelles Lernen.\n– Üben der wichtigsten Konzepte der Einheit.\n– Beschäftigung mit AI Lab und App Lab.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 120 Minuten"
+          student_description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde \"KI und maschinelles Lernen\" vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung in die künstliche Intelligenz und maschinelles Lernen.\n– Üben der wichtigsten Konzepte der Einheit.\n– Beschäftigung mit AI Lab und App Lab.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 120 Minuten"
         vpl-csa-2022: {}
         csa-labs-2022: {}
         csa-draft-pl: {}
@@ -4235,10 +4743,35 @@ de:
               display_name: Inhalt
             lessonGroup-4:
               display_name: Alternate Lessons (alternative Lerneinheiten)
-        csa5-2023: {}
-        csa6-2023: {}
-        csa7-2023: {}
-        csa8-2023: {}
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-4:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
+        csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-4:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
+        csa7-2023:
+          lessons:
+            lesson-6:
+              name: Geistiges Eigentum
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-5:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-4:
+              display_name: Umfrage
+            lessonGroup-5:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
         vpl-csd3-ayw-pilot-2022: {}
         vpl-csd4-ayw-pilot-2022: {}
         csa-magpie-lab: {}
@@ -4252,44 +4785,49 @@ de:
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
-              display_name: Kapitel 1
+              display_name: 'Kapitel 1: Der Problemlösungsprozess'
             lessonGroup-3:
-              display_name: Kapitel 2
-          title: Problemlösung
+              display_name: 'Kapitel 2: Computer und Problemlösung'
+            lessonGroup-5:
+              display_name: Umfrage
         csd2-2023:
           title: Webentwicklung
+          student_description: In Lerneinheit 2 lernen Sie, wie Sie Inhalte auf Ihren eigenen Webseiten erstellen und veröffentlichen können. Nachdem Sie entschieden haben, welche Inhalte Sie mit der Welt teilen möchten, lernen Sie, wie Sie Ihre Seiten mit HTML und CSS strukturieren und gestalten können. Außerdem üben Sie wertvolle Programmierkenntnisse, wie z. B. Fehlerbehebung/Debugging, Verwendung von Ressourcen und Teamarbeit.
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitel 1: Benutzerzentriertes Design'
             lessonGroup-3:
               display_name: 'Kapitel 2: App Prototyping'
-          title: Der Entwurfsprozess
+          student_description: Die Lerneinheit 4 stellt die breiteren sozialen Auswirkungen der Informatik vor. Anhand einer Reihe von Design-Aufgaben lernen Sie, wie Sie die Bedürfnisse anderer besser verstehen und gleichzeitig eine Lösung für ein Problem entwickeln können. Die zweite Hälfte der Lerneinheit besteht aus einem iterativen Teamprojekt, bei dem die Teams die Möglichkeit haben, einen Bedarf zu identifizieren, der ihnen am Herzen liegt, Lösungen sowohl auf Papier als auch im App-Lab prototypisch zu entwickeln und Lösungen mit realen Benutzern zu testen, um Feedback zu erhalten und die Iteration weiter voranzutreiben.
         csd5-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitel 1: Darstellung von Informationen'
             lessonGroup-3:
               display_name: 'Kapitel 2: Datenprobleme lösen'
+          description_short: Erfahren Sie, wie Menschen Computer verwenden, um Datenprobleme zu lösen.
+          student_description: Lerneinheit 5 befasst sich mit der Bedeutung von Daten bei der Lösung von Problemen und erklärt, wie Computer dabei helfen können. Das erste Kapitel befasst sich mit verschiedenen Systemen, die zur Darstellung von Informationen in einem Computer verwendet werden, sowie mit den Aufgaben und Kompromissen, die mit ihrer Verwendung einhergehen. Im zweiten Kapitel erfahren Sie, wie Datensammlungen zur Lösung von Problemen verwendet werden und wie Computer dabei helfen, die Schritte dieses Prozesses zu automatisieren. Das Kapitel schließt mit der Überlegung, wie ein Problemlösungsprozess für Daten in einem Bereich Ihrer Wahl eingesetzt werden kann.
         csd3-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitel 1: Bilder und Animationen'
             lessonGroup-3:
               display_name: 'Kapitel 2: Erstellen von Spielen'
+          student_description: In Lerneinheit 3 arbeiten Sie bei der Programmierung von Animationen, interaktiver Kunst und Spielen im Game Lab mit Ihrer Programmiererfahrung. Die Lerneinheit beginnt mit einfachen Formen und baut auf anspruchsvollere spritebasierte Spiele auf, wobei dieselben Programmierkonzepte und der Designprozess eingesetzt werden, die Informatiker täglich verwenden. Beim dem abschließenden Projekt entwickeln Sie ein personalisiertes, interaktives Programm.
         csd6-2023:
           lesson_groups:
-            lessonGroup-2:
-              display_name: Kapitel 1
             lessonGroup-3:
-              display_name: Kapitel 2
-          title: Physische Datenverarbeitung
+              display_name: 'Chapter 2: Aufbau von physischen Prototypen'
+          description_short: Programmieren mit Geräten lernen.
         csd7-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Kapitel 1
             lessonGroup-3:
               display_name: Kapitel 2
+            lessonGroup-4:
+              display_name: Einführung in AppLab
         physcomp-temp:
           lesson_groups:
             lessonGroup-3:
@@ -4315,6 +4853,8 @@ de:
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Lektion 2: Das Internet'
+          student_description: Diese Einheit zeigt, wie das Internet konzipiert wurde, um Milliarden von Geräten und Menschen miteinander zu verbinden. Erfahren Sie, wie die verschiedenen Protokolle des Internets funktionieren, und erstellen Sie sie mit dem Internet-Simulator selbst. Denken Sie dann an die guten und schlechten Auswirkungen des Internets auf das moderne Leben.
+          description_short: Erstellen Sie das Internet mit dem Internet-Simulator von Grund auf.
         csp3-2023:
           lesson_groups:
             csp_unit3_2020:
@@ -4382,11 +4922,15 @@ de:
         csp-post-survey-2023:
           title: Befragung zu „Grundsätze der Informatik“ nach dem Kurs
         self-paced-pl-csa1-2023: {}
-        self-paced-pl-csa2-2023: {}
+        self-paced-pl-csa2-2023:
+          title: 'Modul 2: Navigieren in Code.org'
         self-paced-pl-csa3-2023: {}
         csa-examples-22: {}
         amy-playground: {}
-        angelina-playground: {}
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Bewertung
         csc-pilot-fa2022-timecapsule: {}
         csc-pilot-fa2022-ecosystem: {}
         csp-playground:
@@ -4398,6 +4942,7 @@ de:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Chapter 2: Aufbau von physischen Prototypen'
+          title: Apps mit Geräten erstellen (Circuit Playground)
         allthevalidation: {}
         vpl-csd5-ayw-pilot-2022: {}
         vpl-csd6-ayw-pilot-2022: {}
@@ -4423,3 +4968,882 @@ de:
         self-paced-pl-csc-2023: {}
         csc-ecosystems-2023: {}
         csc-adaptations-2023: {}
+        drafting:
+          name: entwerfen
+        tess-testing-problem-solving-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitel 1
+            lessonGroup-3:
+              display_name: Kapitel 2
+          title: Problemlösung
+        testing-focus-on-creativity1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitel 1
+          title: Problemlösung
+        testing-focus-on-creativity2:
+          title: Webentwicklung
+        poetry-2023: {}
+        poemmaker-2023: {}
+        dlp-core-2023: {}
+        csc-particles-2023: {}
+        csc-bookcovers-2023: {}
+        pre-express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Schleifen
+            csf_events:
+              display_name: Ereignisse
+          description: Lernen Sie Informatik, indem Sie die folgenden Lektionen in Ihrem eigenen Tempo testen! Lernen Sie, Computerprogramme zu erstellen, Fähigkeiten für Problemlösungen zu entwickeln und lustige Aufgaben zu bewältigen! Erstellen Sie Spiele und kreative Projekte, die Sie mit Freunden, Familie und Lehrern teilen können.
+          student_description: Lernen Sie Informatik, indem Sie die folgenden Lektionen in Ihrem eigenen Tempo testen! Lernen Sie, Computerprogramme zu erstellen, Fähigkeiten für Problemlösungen zu entwickeln und lustige Aufgaben zu bewältigen! Erstellen Sie Spiele und kreative Projekte, die Sie mit Freunden, Familie und Lehrern teilen können.
+          description_short: 'Eine Einführung in die Informatik für Leseanfänger: Kombiniert das Beste aus unseren Kursen für die Vorschule und für Erstklässler.'
+          description_audience: 'Alter: 4-8'
+        express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequencing
+            csf_sprites:
+              display_name: Sprites
+            lessonGroup-9:
+              display_name: Ereignisse
+            csf_loops:
+              display_name: Schleifen
+            csf_conditionals:
+              display_name: Bedingungen
+            csf_functions:
+              display_name: Funktionen
+            csf_variables:
+              display_name: Variablen
+            csf_for_loops:
+              display_name: Schleifen mit dem Wiederhol-Block
+            end_of_course_project:
+              display_name: Projekt am Ende des Kurses
+          description: Lernen Sie Informatik, indem Sie die folgenden Lektionen in Ihrem eigenen Tempo testen! Lernen Sie, Computerprogramme zu erstellen, Fähigkeiten für Problemlösungen zu entwickeln und lustige Aufgaben zu bewältigen! Erstellen Sie Spiele und kreative Projekte, die Sie mit Freunden, Familie und Lehrern teilen können.
+          student_description: Lernen Sie Informatik, indem Sie die folgenden Lektionen in Ihrem eigenen Tempo testen! Lernen Sie, Computerprogramme zu erstellen, Fähigkeiten für Problemlösungen zu entwickeln und lustige Aufgaben zu bewältigen! Erstellen Sie Spiele und kreative Projekte, die Sie mit Freunden, Familie und Lehrern teilen können.
+          description_short: 'Eine Einführung in die Informatik: kombiniert das Beste aus unserem Grundschullehrplan für ältere SchülerInnen.'
+          description_audience: 'Alter: 9-18'
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalen Staatsbürgerschaft
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Schleifen
+            csf_events:
+              display_name: Ereignisse
+            lessonGroup-5:
+              display_name: Projekt am Ende des Kurses
+          title: Kurs A (2021)
+          student_description: Erlernen der Grundlagen der Informatik und der Internetsicherheit. Erstellen eines eigenen Spiels oder einer eigenen Geschichte am Ende des Kurses, die mit anderen geteilt werden kann.
+          description_short: Eine Einführung in die Informatik für Leseanfänger.
+          description_audience: 'Alter: 4-7'
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalen Staatsbürgerschaft
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Schleifen
+            csf_impacts:
+              display_name: Auswirkungen der Datenverarbeitung
+            csf_events:
+              display_name: Ereignisse
+            lessonGroup-6:
+              display_name: Projekt am Ende des Kurses
+          title: Kurs B (2021)
+          student_description: Erlernen der Grundlagen der Informatik und der Internetsicherheit. Erstellen eines eigenen Spiels oder einer eigenen Geschichte am Ende des Kurses, die mit anderen geteilt werden kann.
+          description_short: Eine Einführung in die Informatik für Leseanfänger. (Ähnlich wie Kurs A, aber mit mehr Konzepttiefe.)
+          description_audience: 'Alter: 5-8'
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalen Staatsbürgerschaft
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Schleifen
+            csf_events:
+              display_name: Ereignisse
+            csf_data:
+              display_name: Daten
+            end_of_course_project:
+              display_name: Projekt am Ende des Kurses
+          title: Kurs C (2021)
+          student_description: Erstellen Sie Programme mit Sequenzen, Schleifen und Ereignissen. Übersetzen Sie Ihre Initialen in Binärzahlen, untersuchen Sie verschiedene Techniken der Problemlösung und lernen Sie, wie Sie mit Cybermobbing umgehen können. Erstellen Sie am Ende des Kurses Ihr ganz eigenes Spiel oder Ihre eigene Geschichte, die Sie mit anderen teilen können!
+          description_short: Lerne die Grundlagen der Informatik und erstelle Deine eigene Kunst, Geschichten und Spiele.
+          description_audience: 'Alter: 6-10'
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digitalen Staatsbürgerschaft
+            csf_sequencing:
+              display_name: Sequencing
+            csf_events:
+              display_name: Ereignisse
+            csf_loops:
+              display_name: Schleifen
+            csf_conditionals:
+              display_name: Bedingungen
+            end_of_course_project:
+              display_name: Projekt am Ende des Kurses
+          title: Kurs D (2021)
+          description_short: Erfahre mehr über bedingte Anweisungen. Kreiere Deine eigene Kunst, Deine eigenen Spiele und sogar eine Tanzparty.
+          description_audience: 'Alter: 7-11'
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalen Staatsbürgerschaft
+            csf_sprites:
+              display_name: Sprites
+            ramp_up:
+              display_name: Verschachtelte Schleifen
+            csf_functions:
+              display_name: Funktionen
+            csf_nested_loops:
+              display_name: Bedingungen
+            lessonGroup-7:
+              display_name: Auswirkungen der Datenverarbeitung
+            end_of_course_project:
+              display_name: Projekt am Ende des Kurses
+          description_short: Erlernen Sie die Grundlagen von Grafikobjekten, Nested Loops und Funktionen.
+          description_audience: 'Alter: 8-12'
+        problem-solving-computing-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Der Problemlösungsprozess'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Computer und Problemlösung'
+        web-development-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Umfrage
+          title: Webentwicklung
+          student_description: In Lerneinheit 2 lernen Sie, wie Sie Inhalte auf Ihren eigenen Webseiten erstellen und veröffentlichen können. Nachdem Sie entschieden haben, welche Inhalte Sie mit der Welt teilen möchten, lernen Sie, wie Sie Ihre Seiten mit HTML und CSS strukturieren und gestalten können. Außerdem üben Sie wertvolle Programmierkenntnisse, wie z. B. Fehlerbehebung/Debugging, Verwendung von Ressourcen und Teamarbeit.
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Bilder und Animationen'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Erstellen von Spielen'
+            lessonGroup-4:
+              display_name: Umfrage
+          student_description: In Lerneinheit 3 arbeiten Sie bei der Programmierung von Animationen, interaktiver Kunst und Spielen im Game Lab mit Ihrer Programmiererfahrung. Die Lerneinheit beginnt mit einfachen Formen und baut auf anspruchsvollere spritebasierte Spiele auf, wobei dieselben Programmierkonzepte und der Designprozess eingesetzt werden, die Informatiker täglich verwenden. Beim dem abschließenden Projekt entwickeln Sie ein personalisiertes, interaktives Programm.
+        design-process-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Benutzerzentriertes Design'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: App Prototyping'
+            lessonGroup-4:
+              display_name: Umfrage
+          student_description: Die Lerneinheit 4 stellt die breiteren sozialen Auswirkungen der Informatik vor. Anhand einer Reihe von Design-Aufgaben lernen Sie, wie Sie die Bedürfnisse anderer besser verstehen und gleichzeitig eine Lösung für ein Problem entwickeln können. Die zweite Hälfte der Lerneinheit besteht aus einem iterativen Teamprojekt, bei dem die Teams die Möglichkeit haben, einen Bedarf zu identifizieren, der ihnen am Herzen liegt, Lösungen sowohl auf Papier als auch im App-Lab prototypisch zu entwickeln und Lösungen mit realen Benutzern zu testen, um Feedback zu erhalten und die Iteration weiter voranzutreiben.
+        data-society-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Darstellung von Informationen'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Datenprobleme lösen'
+            lessonGroup-4:
+              display_name: Umfrage
+          description_short: Erfahren Sie, wie Menschen Computer verwenden, um Datenprobleme zu lösen.
+          student_description: Lerneinheit 5 befasst sich mit der Bedeutung von Daten bei der Lösung von Problemen und erklärt, wie Computer dabei helfen können. Das erste Kapitel befasst sich mit verschiedenen Systemen, die zur Darstellung von Informationen in einem Computer verwendet werden, sowie mit den Aufgaben und Kompromissen, die mit ihrer Verwendung einhergehen. Im zweiten Kapitel erfahren Sie, wie Datensammlungen zur Lösung von Problemen verwendet werden und wie Computer dabei helfen, die Schritte dieses Prozesses zu automatisieren. Das Kapitel schließt mit der Überlegung, wie ein Problemlösungsprozess für Daten in einem Bereich Ihrer Wahl eingesetzt werden kann.
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Einführung in AppLab
+            lessonGroup-3:
+              display_name: Kapitel 1
+            lessonGroup-4:
+              display_name: Kapitel 2
+            lessonGroup-5:
+              display_name: Umfrage
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Der Problemlösungsprozess'
+            lessonGroup-4:
+              display_name: Umfrage
+        focus-on-creativity2-2023:
+          title: Webentwicklung
+          student_description: In Lerneinheit 2 lernen Sie, wie Sie Inhalte auf Ihren eigenen Webseiten erstellen und veröffentlichen können. Nachdem Sie entschieden haben, welche Inhalte Sie mit der Welt teilen möchten, lernen Sie, wie Sie Ihre Seiten mit HTML und CSS strukturieren und gestalten können. Außerdem üben Sie wertvolle Programmierkenntnisse, wie z. B. Fehlerbehebung/Debugging, Verwendung von Ressourcen und Teamarbeit.
+        focus-on-creativity3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Bilder und Animationen'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Erstellen von Spielen'
+          student_description: In Lerneinheit 3 arbeiten Sie bei der Programmierung von Animationen, interaktiver Kunst und Spielen im Game Lab mit Ihrer Programmiererfahrung. Die Lerneinheit beginnt mit einfachen Formen und baut auf anspruchsvollere spritebasierte Spiele auf, wobei dieselben Programmierkonzepte und der Designprozess eingesetzt werden, die Informatiker täglich verwenden. Beim dem abschließenden Projekt entwickeln Sie ein personalisiertes, interaktives Programm.
+        csc-starquilts-2023: {}
+        focus-on-creativity4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Chapter 2: Aufbau von physischen Prototypen'
+          description_short: Programmieren mit Geräten lernen.
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Der Problemlösungsprozess'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Computer und Problemlösung'
+            lessonGroup-5:
+              display_name: Umfrage
+        focus-on-hardware2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Darstellung von Informationen'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Datenprobleme lösen'
+          description_short: Erfahren Sie, wie Menschen Computer verwenden, um Datenprobleme zu lösen.
+          student_description: Lerneinheit 5 befasst sich mit der Bedeutung von Daten bei der Lösung von Problemen und erklärt, wie Computer dabei helfen können. Das erste Kapitel befasst sich mit verschiedenen Systemen, die zur Darstellung von Informationen in einem Computer verwendet werden, sowie mit den Aufgaben und Kompromissen, die mit ihrer Verwendung einhergehen. Im zweiten Kapitel erfahren Sie, wie Datensammlungen zur Lösung von Problemen verwendet werden und wie Computer dabei helfen, die Schritte dieses Prozesses zu automatisieren. Das Kapitel schließt mit der Überlegung, wie ein Problemlösungsprozess für Daten in einem Bereich Ihrer Wahl eingesetzt werden kann.
+        focus-on-hardware3a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Chapter 2: Aufbau von physischen Prototypen'
+          description_short: Programmieren mit Geräten lernen.
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Der Problemlösungsprozess'
+            lessonGroup-4:
+              display_name: Umfrage
+        focus-on-data2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Darstellung von Informationen'
+          description_short: Erfahren Sie, wie Menschen Computer verwenden, um Datenprobleme zu lösen.
+          student_description: Lerneinheit 5 befasst sich mit der Bedeutung von Daten bei der Lösung von Problemen und erklärt, wie Computer dabei helfen können. Das erste Kapitel befasst sich mit verschiedenen Systemen, die zur Darstellung von Informationen in einem Computer verwendet werden, sowie mit den Aufgaben und Kompromissen, die mit ihrer Verwendung einhergehen. Im zweiten Kapitel erfahren Sie, wie Datensammlungen zur Lösung von Problemen verwendet werden und wie Computer dabei helfen, die Schritte dieses Prozesses zu automatisieren. Das Kapitel schließt mit der Überlegung, wie ein Problemlösungsprozess für Daten in einem Bereich Ihrer Wahl eingesetzt werden kann.
+        focus-on-data2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Darstellung von Informationen'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Datenprobleme lösen'
+          description_short: Erfahren Sie, wie Menschen Computer verwenden, um Datenprobleme zu lösen.
+          student_description: Lerneinheit 5 befasst sich mit der Bedeutung von Daten bei der Lösung von Problemen und erklärt, wie Computer dabei helfen können. Das erste Kapitel befasst sich mit verschiedenen Systemen, die zur Darstellung von Informationen in einem Computer verwendet werden, sowie mit den Aufgaben und Kompromissen, die mit ihrer Verwendung einhergehen. Im zweiten Kapitel erfahren Sie, wie Datensammlungen zur Lösung von Problemen verwendet werden und wie Computer dabei helfen, die Schritte dieses Prozesses zu automatisieren. Das Kapitel schließt mit der Überlegung, wie ein Problemlösungsprozess für Daten in einem Bereich Ihrer Wahl eingesetzt werden kann.
+        focus-on-data3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Einführung in AppLab
+            lessonGroup-3:
+              display_name: Kapitel 1
+            lessonGroup-4:
+              display_name: Kapitel 2
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Der Problemlösungsprozess'
+            lessonGroup-4:
+              display_name: Umfrage
+        self-paced-pl-k5-getting-started: {}
+        focus-on-design-with-purpose2-2023:
+          title: Webentwicklung
+          student_description: In Lerneinheit 2 lernen Sie, wie Sie Inhalte auf Ihren eigenen Webseiten erstellen und veröffentlichen können. Nachdem Sie entschieden haben, welche Inhalte Sie mit der Welt teilen möchten, lernen Sie, wie Sie Ihre Seiten mit HTML und CSS strukturieren und gestalten können. Außerdem üben Sie wertvolle Programmierkenntnisse, wie z. B. Fehlerbehebung/Debugging, Verwendung von Ressourcen und Teamarbeit.
+        focus-on-design-with-purpose3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Benutzerzentriertes Design'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: App Prototyping'
+          student_description: Die Lerneinheit 4 stellt die breiteren sozialen Auswirkungen der Informatik vor. Anhand einer Reihe von Design-Aufgaben lernen Sie, wie Sie die Bedürfnisse anderer besser verstehen und gleichzeitig eine Lösung für ein Problem entwickeln können. Die zweite Hälfte der Lerneinheit besteht aus einem iterativen Teamprojekt, bei dem die Teams die Möglichkeit haben, einen Bedarf zu identifizieren, der ihnen am Herzen liegt, Lösungen sowohl auf Papier als auch im App-Lab prototypisch zu entwickeln und Lösungen mit realen Benutzern zu testen, um Feedback zu erhalten und die Iteration weiter voranzutreiben.
+        focus-on-design-with-purpose4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Chapter 2: Aufbau von physischen Prototypen'
+          description_short: Programmieren mit Geräten lernen.
+        self-paced-k5-pl-getting-started: {}
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Der Problemlösungsprozess'
+            lessonGroup-4:
+              display_name: Umfrage
+        focus-on-coding2-2023:
+          title: Webentwicklung
+          student_description: In Lerneinheit 2 lernen Sie, wie Sie Inhalte auf Ihren eigenen Webseiten erstellen und veröffentlichen können. Nachdem Sie entschieden haben, welche Inhalte Sie mit der Welt teilen möchten, lernen Sie, wie Sie Ihre Seiten mit HTML und CSS strukturieren und gestalten können. Außerdem üben Sie wertvolle Programmierkenntnisse, wie z. B. Fehlerbehebung/Debugging, Verwendung von Ressourcen und Teamarbeit.
+        focus-on-coding3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Bilder und Animationen'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Erstellen von Spielen'
+          student_description: In Lerneinheit 3 arbeiten Sie bei der Programmierung von Animationen, interaktiver Kunst und Spielen im Game Lab mit Ihrer Programmiererfahrung. Die Lerneinheit beginnt mit einfachen Formen und baut auf anspruchsvollere spritebasierte Spiele auf, wobei dieselben Programmierkonzepte und der Designprozess eingesetzt werden, die Informatiker täglich verwenden. Beim dem abschließenden Projekt entwickeln Sie ein personalisiertes, interaktives Programm.
+        focus-on-coding4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Chapter 2: Aufbau von physischen Prototypen'
+          description_short: Programmieren mit Geräten lernen.
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Der Problemlösungsprozess'
+            lessonGroup-4:
+              display_name: Umfrage
+        focus-on-impact-in-society2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Benutzerzentriertes Design'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: App Prototyping'
+          student_description: Die Lerneinheit 4 stellt die breiteren sozialen Auswirkungen der Informatik vor. Anhand einer Reihe von Design-Aufgaben lernen Sie, wie Sie die Bedürfnisse anderer besser verstehen und gleichzeitig eine Lösung für ein Problem entwickeln können. Die zweite Hälfte der Lerneinheit besteht aus einem iterativen Teamprojekt, bei dem die Teams die Möglichkeit haben, einen Bedarf zu identifizieren, der ihnen am Herzen liegt, Lösungen sowohl auf Papier als auch im App-Lab prototypisch zu entwickeln und Lösungen mit realen Benutzern zu testen, um Feedback zu erhalten und die Iteration weiter voranzutreiben.
+        focus-on-impact-in-society3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Darstellung von Informationen'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Datenprobleme lösen'
+          description_short: Erfahren Sie, wie Menschen Computer verwenden, um Datenprobleme zu lösen.
+          student_description: Lerneinheit 5 befasst sich mit der Bedeutung von Daten bei der Lösung von Problemen und erklärt, wie Computer dabei helfen können. Das erste Kapitel befasst sich mit verschiedenen Systemen, die zur Darstellung von Informationen in einem Computer verwendet werden, sowie mit den Aufgaben und Kompromissen, die mit ihrer Verwendung einhergehen. Im zweiten Kapitel erfahren Sie, wie Datensammlungen zur Lösung von Problemen verwendet werden und wie Computer dabei helfen, die Schritte dieses Prozesses zu automatisieren. Das Kapitel schließt mit der Überlegung, wie ein Problemlösungsprozess für Daten in einem Bereich Ihrer Wahl eingesetzt werden kann.
+        focus-on-impact-in-society4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitel 1
+            lessonGroup-3:
+              display_name: Einführung in AppLab
+            lessonGroup-4:
+              display_name: Kapitel 2
+        csd6a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Chapter 2: Aufbau von physischen Prototypen'
+          description_short: Programmieren mit Geräten lernen.
+        csa9-2023: {}
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ein- und Ausgaben
+            lessonGroup-5:
+              display_name: Umfrage
+        vpl-csd-ci-1:
+          title: 'Modul 1: Vorbereitung auf den Unterricht Problemlösung und Informatik'
+          description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde \"Problemlösung und Informatik\" vor. \n\n**Aktivitäten in diesem professionellen Lernmodul:**\n\n– Sie erhalten eine Einführung in das Problemlösen und die Informatik.\n– Sie üben die wichtigsten Konzepte der Unterrichtseinheit.\n– Sie erkunden die Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 30 Minuten"
+          student_description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde \"Problemlösung und Informatik\" vor. \n\n**Aktivitäten in diesem professionellen Lernmodul:**\n\n– Sie erhalten eine Einführung in das Problemlösen und die Informatik.\n– Sie üben die wichtigsten Konzepte der Unterrichtseinheit.\n– Sie erkunden die Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 30 Minuten"
+        vpl-csd-ci-2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Webentwicklung unterrichten
+          title: 'Modul 2: Vorbereitung auf das Unterrichten der Webentwicklung'
+          description: "In diesem professionellen Lernmodul bereiten Sie sich auf die Code.org-Stunde Webentwicklung vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung in die Webentwicklung.\n– Üben der wichtigsten Konzepte der Lerneinheit.\n– Beschäftigung mit Web Lab.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 90 Minuten"
+          student_description: "In diesem professionellen Lernmodul bereiten Sie sich auf die Code.org-Stunde Webentwicklung vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung in die Webentwicklung.\n– Üben der wichtigsten Konzepte der Lerneinheit.\n– Beschäftigung mit Web Lab.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 90 Minuten"
+        vpl-csd-ci-3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vorbereitung auf das Unterrichten von interaktiven Animationen und Spielen
+          title: 'Modul 3: Vorbereitung auf das Unterrichten von interaktiven Animationen und Spielen '
+          description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde Interaktive Animationen und Spiele vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung in interaktive Animationen und Spiele.\n– Üben der wichtigsten Konzepte der Unterrichtseinheit.\n– Beschäftigung mit Game Lab.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 120 Minuten"
+          student_description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde Interaktive Animationen und Spiele vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung in interaktive Animationen und Spiele.\n– Üben der wichtigsten Konzepte der Unterrichtseinheit.\n– Beschäftigung mit Game Lab.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 120 Minuten"
+        vpl-csd-ci-4:
+          title: " Modul 4: Vorbereitung auf das Unterrichten des Design-Prozesses"
+          description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde \"Design-Prozess\" vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Eine Einführung in den Designprozess.\n– Üben der wichtigsten Konzepte der Einheit.\n– Beschäftigung mit App Lab.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 90 Minuten"
+          student_description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde \"Design-Prozess\" vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Eine Einführung in den Designprozess.\n– Üben der wichtigsten Konzepte der Einheit.\n– Beschäftigung mit App Lab.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 90 Minuten"
+        vpl-csd-ci-5:
+          title: 'Modul 5: Vorbereitung auf den Unterricht Fakten und Gesellschaft'
+          description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde \"Daten und Gesellschaft\" vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung in das Thema \"Daten und Gesellschaft.\n– Üben der wichtigsten Konzepte der Stunde.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 90 Minuten"
+          student_description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde \"Daten und Gesellschaft\" vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung in das Thema \"Daten und Gesellschaft.\n– Üben der wichtigsten Konzepte der Stunde.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 90 Minuten"
+        vpl-csd-ci-6: {}
+        vpl-csd-ci-7:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Unterrichten von KI und maschinellem Lernen
+          title: 'Modul 7: Vorbereitung auf den Unterricht KI und maschinelles Lernen'
+          description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde \"KI und maschinelles Lernen\" vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung in KI und maschinelles Lernen.\n– Üben der wichtigsten Konzepte der Einheit.\n– Beschäftigung mit AI Lab und App Lab.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 120 Minuten"
+          student_description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde \"KI und maschinelles Lernen\" vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung in KI und maschinelles Lernen.\n– Üben der wichtigsten Konzepte der Einheit.\n– Beschäftigung mit AI Lab und App Lab.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 120 Minuten"
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Chapter 2: Aufbau von physischen Prototypen'
+            lessonGroup-5:
+              display_name: Umfrage
+        focus-on-creativity4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ein- und Ausgaben
+        focus-on-hardware3b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ein- und Ausgaben
+        focus-on-design-with-purpose4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ein- und Ausgaben
+        ai-temp:
+          title: So funktioniert KI
+        focus-on-coding4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ein- und Ausgaben
+        csd6b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ein- und Ausgaben
+        vpl-csd-ci-6b: {}
+        self-paced-pl-physical-computing1-2023: {}
+        self-paced-pl-physical-computing2-2023: {}
+        self-paced-pl-csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Willkommen
+          title: 'Modul 1: Willkommen'
+          description: "Dieses Modul ist eine kurze Einführung sowohl in Code.org als auch in diesen professionellen Lernkurs. \n\n\\*\\*Aktivitäten des Moduls: \\*\\*\n\n– Einführung in Code.org und CS Discoveries teil.\n– Sie erfahren, wie Sie an diesem professionellen Lernkurs teilnehmen können.\n\n\\*\\*Geschätzte Dauer: \\*\\* 10 Minuten"
+          student_description: "Dieses Modul ist eine kurze Einführung sowohl in Code.org als auch in diesen professionellen Lernkurs. \n\n\\*\\*Aktivitäten des Moduls: \\*\\*\n\n– Einführung in Code.org und CS Discoveries teil.\n– Sie erfahren, wie Sie an diesem professionellen Lernkurs teilnehmen können.\n\n\\*\\*Geschätzte Dauer: \\*\\* 10 Minuten"
+        self-paced-pl-csd2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Navigieren in Code.org
+          title: 'Modul 2: Navigieren in Code.org'
+          description: |-
+            Dieses Modul soll Ihnen Orientierung geben, wie Sie die Werkzeuge nutzen und im Kurs Informatik-Entdeckungen verwenden, um die SchülerInnen im Unterricht zu unterstützen
+
+            **Aktivtäten:**
+
+            –   Navigieren auf der Website Code.org und in den Werkzeugen für Lehrer.
+            –   Einrichtung eines Klassenzimmers.
+            –   Finden und Verwenden der Unterrichtspläne und Ressource für Lehrer.
+
+            **Geschätzte Dauer:** 60 Minuten
+          student_description: |-
+            Dieses Modul soll Ihnen Orientierung geben, wie Sie die Werkzeuge nutzen und im Kurs Informatik-Entdeckungen verwenden, um die SchülerInnen im Unterricht zu unterstützen
+
+            **Aktivtäten:**
+
+            –   Navigieren auf der Website Code.org und in den Werkzeugen für Lehrer.
+            –   Einrichtung eines Klassenzimmers.
+            –   Finden und Verwenden der Unterrichtspläne und Ressource für Lehrer.
+
+            **Geschätzte Dauer:** 60 Minuten
+        self-paced-pl-csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Überblick über CS Discoveries
+          title: 'Modul 3: Überblick über CS Discoveries'
+          description: "Dieses Modul gibt Ihnen einen Überblick über den Kurs CS Discoveries, wobei der Schwerpunkt auf den Konzepten liegt, die die Schüler lernen, und den Tools, die die Schüler während des gesamten Kurses verwenden werden. Die Teilnahme an diesem Modul hilft Ihnen dabei, Entscheidungen über die Auswahl der Kursinhalte zu treffen, die Sie in Ihrem Unterricht implementieren werden. \n\n\\*\\*Aktivitäten des Moduls: \\*\\*\n\n– Umfassender Überblick über den Lehrplan von CS Discoveries.\n– Sie machen Sie sich mit den Programmierumgebungen vertraut, die in CS Discoveries verwendet werden.\n– Sie können auswählen, welche Einheiten von CS Discoveries Sie in Ihrer Klasse unterrichten möchten.\n\n\\*\\*Geschätzte Dauer: \\*\\* 60 Minuten"
+          student_description: "Dieses Modul gibt Ihnen einen Überblick über den Kurs CS Discoveries, wobei der Schwerpunkt auf den Konzepten liegt, die die Schüler lernen, und den Tools, die die Schüler während des gesamten Kurses verwenden werden. Die Teilnahme an diesem Modul hilft Ihnen dabei, Entscheidungen über die Auswahl der Kursinhalte zu treffen, die Sie in Ihrem Unterricht implementieren werden. \n\n\\*\\*Aktivitäten des Moduls: \\*\\*\n\n– Umfassender Überblick über den Lehrplan von CS Discoveries.\n– Sie machen Sie sich mit den Programmierumgebungen vertraut, die in CS Discoveries verwendet werden.\n– Sie können auswählen, welche Einheiten von CS Discoveries Sie in Ihrer Klasse unterrichten möchten.\n\n\\*\\*Geschätzte Dauer: \\*\\* 60 Minuten"
+        self-paced-pl-csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Lehren und lernen im Kurs CS Discoveries
+          title: 'Modul 4: Lehren und lernen in CS Discoveries'
+          description: "In diesem Modul lernen Sie authentische CS-Übungen für die SchülerInnen im Kurs Entdeckungen kennen. Zu diesen Übungen gehören das Debuggen, die Verwendung von Ressourcen und die Paarprogrammierung. Sie befassen sich außerdem mit der Rolle des Lehrers in einem CS Discoverie-Klassenzimmer und erstellen einen Plan, wie Sie die Schüler beim Unterrichten des Kurses beim Lernen unterstützen. \n\n\\*\\*Aktivitäten des Moduls: \\*\\*\n\n— Diskussion über die Rolle von LehrerInnen im CS Discoveries-Klassenzimmer. \n— Authentische CS-Praktiken, die die SchülerInnen im Laufe des Kurses CS Discoveries entwickeln werden.\n— Erstellen eines Plans zur Differenzierung, kontinuierlichen Bewertung und Förderung einer Kultur der Inklusion. \n\n\\*\\*Geschätzte Dauer: \\*\\* 50 Minuten"
+          student_description: "In diesem Modul lernen Sie authentische CS-Übungen für die SchülerInnen im Kurs Entdeckungen kennen. Zu diesen Übungen gehören das Debuggen, die Verwendung von Ressourcen und die Paarprogrammierung. Sie befassen sich außerdem mit der Rolle des Lehrers in einem CS Discoverie-Klassenzimmer und erstellen einen Plan, wie Sie die Schüler beim Unterrichten des Kurses beim Lernen unterstützen. \n\n\\*\\*Aktivitäten des Moduls: \\*\\*\n\n— Diskussion über die Rolle von LehrerInnen im CS Discoveries-Klassenzimmer. \n— Authentische CS-Praktiken, die die SchülerInnen im Laufe des Kurses CS Discoveries entwickeln werden.\n— Erstellen eines Plans zur Differenzierung, kontinuierlichen Bewertung und Förderung einer Kultur der Inklusion. \n\n\\*\\*Geschätzte Dauer: \\*\\* 50 Minuten"
+        self-paced-pl-csd5-2023:
+          title: 'Modul 7: Vorbereitung auf den Unterricht KI und maschinelles Lernen'
+          description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde \"KI und maschinelles Lernen\" vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung in die künstliche Intelligenz und maschinelles Lernen.\n– Üben der wichtigsten Konzepte der Einheit.\n– Beschäftigung mit AI Lab und App Lab.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 120 Minuten"
+          student_description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde \"KI und maschinelles Lernen\" vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung in die künstliche Intelligenz und maschinelles Lernen.\n– Üben der wichtigsten Konzepte der Einheit.\n– Beschäftigung mit AI Lab und App Lab.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 120 Minuten"
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Einführung
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tag 1
+          title: Tag 1
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Zusammenfassung
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tag 2
+          title: Tag 2
+        pl-csd-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tag 3
+          title: Tag 3
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: Zusammenfassung
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tag 4
+          title: Tag 4
+        pl-csd-summer-day5: {}
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Einführung
+            lesson-12:
+              name: Zusammenfassung
+          title: Tag 1
+        virtual-pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Zusammenfassung
+          title: Tag 2
+        virtual-pl-csd-summer-day3:
+          lessons:
+            lesson-12:
+              name: Zusammenfassung
+          title: Tag 3
+        virtual-pl-csd-summer-day4:
+          lessons:
+            lesson-13:
+              name: Zusammenfassung
+          title: Tag 4
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: Prüfung
+        self-paced-pl-microbit1: {}
+        self-paced-pl-microbit2: {}
+        seesaw-adaptations: {}
+        csp-bingo-2023: {}
+        csd-post-survey-2023:
+          title: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        focus-on-data-post-survey-2023:
+          title: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        focus-on-impact-in-society-post-survey-2023:
+          title: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        focus-on-coding-post-survey-2023:
+          title: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        focus-on-design-with-purpose-post-survey-2023:
+          title: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        focus-on-hardware-post-survey-2023:
+          title: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        focus-on-creativity-post-survey-2023:
+          title: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalen Staatsbürgerschaft
+            lessonGroup-3:
+              display_name: Sprites
+            lessonGroup-4:
+              display_name: Variablen
+            lessonGroup-6:
+              display_name: Projekt am Ende des Kurses
+          description_audience: 'Alter: 9-13'
+          description_short: Lernen Sie alle Konzepte in den Grundlagen der Informatik und erstellen Sie Ihre eigene Zeichnung, Geschichte oder Ihr eigenes Spiel.
+        ey-ecosystems: {}
+        self-paced-pl-csp1-2023: {}
+        self-paced-pl-csp2-2023:
+          title: 'Modul 2: Navigieren in Code.org'
+        self-paced-pl-csp3-2023: {}
+        self-paced-pl-csp4-2023: {}
+        musiclab: {}
+        csa-software-engineering: {}
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klassen
+        hoc-amazon-poc: {}
+        musiclab-2023: {}
+        csa-frq-practice-2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klassen
+        csa-frq-practice-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klassen
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Daten
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klassen
+        csa-frq-practice-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klassen
+        csa-frq-practice-pre2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klassen
+        self-paced-pl-aiml1: {}
+        self-paced-pl-aiml2: {}
+        musiclab-pilot: {}
+        tesspltest23: {}
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalen Staatsbürgerschaft
+            lessonGroup-3:
+              display_name: Sequencing
+            lessonGroup-4:
+              display_name: Schleifen
+            lessonGroup-5:
+              display_name: Auswirkungen der Datenverarbeitung
+          description_audience: 'Alter: 4-7'
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Daten
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalen Staatsbürgerschaft
+            lessonGroup-3:
+              display_name: Sequencing
+            lessonGroup-4:
+              display_name: Schleifen
+            lessonGroup-5:
+              display_name: Auswirkungen der Datenverarbeitung
+            lessonGroup-6:
+              display_name: Daten
+          description_audience: 'Alter: 4-7'
+          description_short: Eine Einführung in die Informatik für Leseanfänger.
+        nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: Daten
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalen Staatsbürgerschaft
+            lessonGroup-3:
+              display_name: Sequencing
+            lessonGroup-4:
+              display_name: Schleifen
+            lessonGroup-5:
+              display_name: Auswirkungen der Datenverarbeitung
+            lessonGroup-6:
+              display_name: Ereignisse
+            lessonGroup-7:
+              display_name: Projekt am Ende des Kurses
+            lessonGroup-8:
+              display_name: Daten
+          description_audience: 'Alter: 5-8'
+          description_short: Eine Einführung in die Informatik für Leseanfänger. (Ähnlich wie Kurs A, aber mit mehr Konzepttiefe.)
+        nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: Computersysteme
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalen Staatsbürgerschaft
+            lessonGroup-3:
+              display_name: Sequencing
+            lessonGroup-4:
+              display_name: Schleifen
+            lessonGroup-5:
+              display_name: Ereignisse
+            lessonGroup-6:
+              display_name: Daten
+            lessonGroup-8:
+              display_name: Computersysteme
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalen Staatsbürgerschaft
+            lessonGroup-3:
+              display_name: Sequencing
+            lessonGroup-4:
+              display_name: Auswirkungen der Datenverarbeitung
+            lessonGroup-6:
+              display_name: Schleifen
+            lessonGroup-7:
+              display_name: Daten
+            lessonGroup-8:
+              display_name: Projekt am Ende des Kurses
+          description_audience: 'Alter: 7-11'
+          description_short: Erfahre mehr über bedingte Anweisungen. Kreiere Deine eigene Kunst, Deine eigenen Spiele und sogar eine Tanzparty.
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Verschachtelte Schleifen
+            lessonGroup-4:
+              display_name: Funktionen
+            lessonGroup-6:
+              display_name: Projekt am Ende des Kurses
+          description_audience: 'Alter: 8-12'
+          description_short: Erlernen Sie die Grundlagen von Grafikobjekten, Nested Loops und Funktionen.
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
+          description_audience: 'Alter: 9-13'
+          description_short: Lernen Sie alle Konzepte in den Grundlagen der Informatik und erstellen Sie Ihre eigene Zeichnung, Geschichte oder Ihr eigenes Spiel.
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
+            lessonGroup-3:
+              display_name: Bedingungen
+            lessonGroup-5:
+              display_name: Variablen
+            lessonGroup-6:
+              display_name: Auswirkungen der Datenverarbeitung
+            lessonGroup-7:
+              display_name: Projekt am Ende des Kurses
+          description_audience: 'Alter: 9-13'
+          description_short: Lernen Sie alle Konzepte in den Grundlagen der Informatik und erstellen Sie Ihre eigene Zeichnung, Geschichte oder Ihr eigenes Spiel.
+        vpl-csp-2023-m1:
+          title: Modul 1
+        vpl-csp-2023-m2:
+          title: Modul 2
+        vpl-csp-2023-m3:
+          title: Modul 3
+        vpl-csp-2023-m4:
+          title: Modul 4
+        vpl-csp-2023-m5:
+          title: Modul 5
+        vpl-csp-2023-m6:
+          title: Modul 6
+        vpl-csp-2023-m7:
+          title: Modul 7
+        vpl-csp-2023-m8:
+          title: Modul 8
+        vpl-csa-2023-m1:
+          title: Modul 1
+        how-ai-works-2023:
+          title: So funktioniert KI
+        vpl-csa-2023-m2:
+          title: Modul 2
+        vpl-csa-2023-m3:
+          title: Modul 3
+        vpl-csa-2023-m4:
+          title: Modul 4
+        vpl-csa-2023-m5:
+          title: Modul 5
+        vpl-csa-2023-m6:
+          title: Modul 6
+        vpl-csa-2023-m7:
+          title: Modul 7
+        vpl-csa-2023-m8:
+          title: Modul 8
+        pl-csd-2023-m1: {}
+        vpl-csd-2023-m1:
+          title: Modul 1
+        vpl-csd-2023-m2:
+          title: Modul 2
+        vpl-csd-2023-m3:
+          title: Modul 3
+        vpl-csd-2023-m4:
+          title: Modul 4
+        vpl-csd-2023-m5:
+          title: Modul 5
+        vpl-csd-2023-m6:
+          title: Modul 6
+        vpl-csd-2023-m7:
+          title: Modul 7
+        vpl-csd-2023-m8:
+          title: Modul 8
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: Unser KI-Ethikkodex
+        draft-hoc-dp: {}
+        genai-temp: {}
+        virtual-pl-csp-summer-day1-2024: {}
+        virtual-pl-csa-summer-2024-day1:
+          title: Tag 1
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Einführung
+          title: Tag 2
+        virtual-pl-csp-summer-day3:
+          title: Tag 3
+        virtual-pl-csp-summer-day4:
+          title: Tag 4
+        virtual-pl-csp-summer-day5: {}
+        virtual-pl-csa-summer-day2:
+          title: Tag 2
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Einführung
+          title: Tag 3
+        virtual-pl-csa-summer-day4:
+          title: Tag 4
+        virtual-pl-csa-summer-day5: {}
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Einführung
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Einführung
+          title: Tag 1
+        virtual-pl-csp-summer-day1:
+          title: Tag 1
+        csa-postap-se-and-computer-vision-2023: {}
+        draft-hoc-dp-2: {}
+        self-paced-pl-problem-solving-and-computing-1-2023: {}
+        self-paced-pl-problem-solving-and-computing-2-2023: {}
+        draft-hoc-dp-2-a: {}
+        draft-hoc-dp-2-: {}
+        draft-hoc-dp-2-b: {}
+        hoc-dp-oct-beta: {}
+        hoc-dp-oct-beta-b: {}
+        self-paced-pl-csd-unit1-1-2023: {}
+        self-paced-pl-csd-unit1-2-2023:
+          title: 'Modul 1: Vorbereitung auf den Unterricht Problemlösung und Informatik'
+          description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde \"Problemlösung und Informatik\" vor. \n\n**Aktivitäten in diesem professionellen Lernmodul:**\n\n– Sie erhalten eine Einführung in das Problemlösen und die Informatik.\n– Sie üben die wichtigsten Konzepte der Unterrichtseinheit.\n– Sie erkunden die Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 30 Minuten"
+          student_description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde \"Problemlösung und Informatik\" vor. \n\n**Aktivitäten in diesem professionellen Lernmodul:**\n\n– Sie erhalten eine Einführung in das Problemlösen und die Informatik.\n– Sie üben die wichtigsten Konzepte der Unterrichtseinheit.\n– Sie erkunden die Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 30 Minuten"
+        dance-ai-2023: {}
+        self-paced-pl-csd-unit2-1-2023: {}
+        self-paced-pl-csd-unit2-2-2023:
+          title: 'Modul 2: Vorbereitung auf das Unterrichten der Webentwicklung'
+        self-paced-pl-csd-unit3-1-2023: {}
+        self-paced-pl-csd-unit3-2-2023:
+          title: Vorbereitung auf das Unterrichten von interaktiven Animationen und Spielen
+          description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde Interaktive Animationen und Spiele vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung in interaktive Animationen und Spiele.\n– Üben der wichtigsten Konzepte der Unterrichtseinheit.\n– Beschäftigung mit Game Lab.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 120 Minuten"
+          student_description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde Interaktive Animationen und Spiele vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung in interaktive Animationen und Spiele.\n– Üben der wichtigsten Konzepte der Unterrichtseinheit.\n– Beschäftigung mit Game Lab.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 120 Minuten"
+        self-paced-pl-csd-unit4-1-2023: {}
+        self-paced-pl-csd-unit4-2-2023:
+          title: " Modul 4: Vorbereitung auf das Unterrichten des Design-Prozesses"
+        self-paced-pl-csd-unit5-1-2023: {}
+        self-paced-pl-csd-unit5-2-2023:
+          title: 'Modul 5: Vorbereitung auf den Unterricht Fakten und Gesellschaft'
+        ai-tutor-test: {}
+        web-dev-2024:
+          title: Webentwicklung
+          student_description: In Lerneinheit 2 lernen Sie, wie Sie Inhalte auf Ihren eigenen Webseiten erstellen und veröffentlichen können. Nachdem Sie entschieden haben, welche Inhalte Sie mit der Welt teilen möchten, lernen Sie, wie Sie Ihre Seiten mit HTML und CSS strukturieren und gestalten können. Außerdem üben Sie wertvolle Programmierkenntnisse, wie z. B. Fehlerbehebung/Debugging, Verwendung von Ressourcen und Teamarbeit.
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Umfrage
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Der Problemlösungsprozess'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Computer und Problemlösung'
+        csd2-2024:
+          title: Webentwicklung
+          student_description: In Lerneinheit 2 lernen Sie, wie Sie Inhalte auf Ihren eigenen Webseiten erstellen und veröffentlichen können. Nachdem Sie entschieden haben, welche Inhalte Sie mit der Welt teilen möchten, lernen Sie, wie Sie Ihre Seiten mit HTML und CSS strukturieren und gestalten können. Außerdem üben Sie wertvolle Programmierkenntnisse, wie z. B. Fehlerbehebung/Debugging, Verwendung von Ressourcen und Teamarbeit.
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Bilder und Animationen'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Erstellen von Spielen'
+          student_description: In Lerneinheit 3 arbeiten Sie bei der Programmierung von Animationen, interaktiver Kunst und Spielen im Game Lab mit Ihrer Programmiererfahrung. Die Lerneinheit beginnt mit einfachen Formen und baut auf anspruchsvollere spritebasierte Spiele auf, wobei dieselben Programmierkonzepte und der Designprozess eingesetzt werden, die Informatiker täglich verwenden. Beim dem abschließenden Projekt entwickeln Sie ein personalisiertes, interaktives Programm.
+        csd4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Benutzerzentriertes Design'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: App Prototyping'
+          student_description: Die Lerneinheit 4 stellt die breiteren sozialen Auswirkungen der Informatik vor. Anhand einer Reihe von Design-Aufgaben lernen Sie, wie Sie die Bedürfnisse anderer besser verstehen und gleichzeitig eine Lösung für ein Problem entwickeln können. Die zweite Hälfte der Lerneinheit besteht aus einem iterativen Teamprojekt, bei dem die Teams die Möglichkeit haben, einen Bedarf zu identifizieren, der ihnen am Herzen liegt, Lösungen sowohl auf Papier als auch im App-Lab prototypisch zu entwickeln und Lösungen mit realen Benutzern zu testen, um Feedback zu erhalten und die Iteration weiter voranzutreiben.
+        csd5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Darstellung von Informationen'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Datenprobleme lösen'
+          student_description: Lerneinheit 5 befasst sich mit der Bedeutung von Daten bei der Lösung von Problemen und erklärt, wie Computer dabei helfen können. Das erste Kapitel befasst sich mit verschiedenen Systemen, die zur Darstellung von Informationen in einem Computer verwendet werden, sowie mit den Aufgaben und Kompromissen, die mit ihrer Verwendung einhergehen. Im zweiten Kapitel erfahren Sie, wie Datensammlungen zur Lösung von Problemen verwendet werden und wie Computer dabei helfen, die Schritte dieses Prozesses zu automatisieren. Das Kapitel schließt mit der Überlegung, wie ein Problemlösungsprozess für Daten in einem Bereich Ihrer Wahl eingesetzt werden kann.
+          description_short: Erfahren Sie, wie Menschen Computer verwenden, um Datenprobleme zu lösen.
+        csd6a-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Chapter 2: Aufbau von physischen Prototypen'
+          description_short: Programmieren mit Geräten lernen.
+        csd6b-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ein- und Ausgaben
+        csd7-2024:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Einführung in AppLab
+            lessonGroup-2:
+              display_name: Kapitel 1
+            lessonGroup-3:
+              display_name: Kapitel 2
+        csd-post-survey-2024:
+          title: "(Post-Course Survey) Überprüfung nach dem Kurs"

@@ -50,9 +50,6 @@ ka:
       expired: "ვადაგასულია, მოითხოვეთ ახალი"
       not_found: "არ მოიძებნა"
       not_locked: "არ იყო დაბლოკილი"
-      not_saved:
-        one: "1 შეცდომა აფერხებს %{resource}-ის შენახვას:"
-        other: "%{count} შეცდომა აფერხებს %{resource}-ის შენახვას:"
     invitations:
       send_instructions: 'მოწვევა გაგზავნილია მისამართზე %{email}.'
       invitation_token_invalid: 'მოწვევა არავალიდურია!'

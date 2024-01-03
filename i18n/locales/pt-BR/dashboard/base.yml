@@ -52,7 +52,9 @@ pt:
         age: 'Idade'
         gender: 'Gênero'
         edit_header: 'Editar Detalhes da Conta'
+        ai_settings_header: 'Configurações da I.A.'
         finish_sign_up_header: 'Finalize a criação da sua conta'
+        finish_sign_up_header_error: 'Corrija os seguintes erros:'
         finish_sign_up_subheader: 'Preencha as informações a seguir para concluir a criação da sua conta Code.org <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Preencha as informações a seguir para concluir a criação da sua conta Code.org para **%{email}**.'
         finish_sign_up_subheader_provider: 'Preencha as informações a seguir para concluir a criação de uma conta do Code.org usando seu <strong>%{provider}</strong> para <strong>%{email}</strong>.'
@@ -60,6 +62,9 @@ pt:
         reset_password_token: "O link de redefinição de senha que você seguiu"
         error:
           future: não pode estar no futuro
+        user_type: 'Tipo de conta'
+        us_state: 'Estado'
+        ai_rubrics_disabled: 'Desativar o Recurso IA Rubric'
   beta: "beta"
   hello: "Olá, mundo!"
   welcome_back: "Bem-vindo de volta, %{name}"
@@ -69,6 +74,7 @@ pt:
   unsubmit: Cancelar envio
   previous_page: Página anterior
   next_page: Próxima página
+  next_level: Próximo nível
   next_resource: Próximo recurso
   done_with_module: Concluído com este Módulo de Aprendizagem
   cancel: "Cancelar"
@@ -129,6 +135,7 @@ pt:
     not_linked: "Desculpe, sua conta de Code.org não está ligada ao seu %{provider}. Você terá que entrar digitando sua senha abaixo."
     use_clever: "Desculpe, sua conta do Code.org não está ligada à sua %{provider}. Por favor entre através do seu Portal Clever."
     invalid_provider: "Desculpe-nos, contas do(a) empresa %{provider} não podem ser associadas à contas do Code.org."
+    migration_required: "Desculpe, não podemos conectar ou desconectar contas que ainda estão usando a experiência de conta antiga. Atualize para a nova experiência da conta."
     unable_to_connect_provider: "Não foi possível conecta sua conta do Code.org ao seu %{provider}. Por favor tente novamente."
     disconnect_successful: "Sucesso! Desconectamos a conta externa da sua conta do Code.org."
     already_in_use: "Seu %{provider} já está conectado a outra conta do Code.org."
@@ -171,7 +178,6 @@ pt:
     data_collection_us: "Entendo que o Code.org é um site sem fins lucrativos com sede nos EUA e que as leis que regem a coleta de dados nos EUA podem diferir das leis do meu país."
     visit_privacy: 'Visite a [Política de Privacidade](%{privacy_url}) do Code.org para saber mais.'
     student_terms_markdown: "Os endereços de email não são armazenados em um formulário que nos permita entrar em contato com os alunos. Os alunos nunca receberão emails do Code.org, exceto para recuperação de senha. Veja nossa [política de privacidade] (http://code.org/privacy) para mais informações."
-    additional_information: "Precisamos de mais informações para continuar com o processo de inscrição."
     user_type_button: "Atualizar Tipo de Conta"
     user_type_label: "Tipo de conta"
     user_type_student: "Estudante"
@@ -199,6 +205,9 @@ pt:
     parent_account_checkbox: "Sou pai/responsável, atuando em nome do(a) meu(minha) filho(a)"
     parent_account_email_progress_permission: "Podemos enviar e-mails com atualizações ocasionais sobre o progresso e os projetos do(a) seu(sua) filho(a), bem como atualizações sobre seu curso e seus conhecimentos em informática? [(consulte nossa política de privacidade)]%{privacy_policy_url})"
     parent_account_email_label: "E-mail do Pai/Responsável"
+    us_state: 'Estado'
+    us_state_dropdown_options:
+      other: "Eu moro num lugar não listado aqui"
   school_info:
     title: 'Informações da escola (opcional)'
     school_country: 'País da Escola'
@@ -267,9 +276,13 @@ pt:
   parent_mailer:
     student_associated_subject: 'Informações de login para Code.org'
     parent_email_added_subject: 'Bem-vindo ao Code.org!'
+    parent_permission_request_subject: "É necessário o consentimento dos pais ou responsáveis para o acesso de seu filho ao Code.org"
+    parent_permission_reminder_subject: "Lembrete: É necessário o consentimento dos pais ou responsáveis para o acesso de seu filho ao Code.org"
+    parent_permission_confirmation_subject: "Obrigado por aprovar o acesso de seu filho ao Code.org!"
   teacher_mailer:
     new_teacher_subject: 'Bem-vindo ao Code.org!'
     delete_teacher_subject: 'Notificação Code.org: Sua conta foi deletada'
+    verified_teacher_subject: 'Verificação de professores na Code.org - Sucesso'
   section:
     your_section:
       one: 'Sua turma:'
@@ -351,6 +364,7 @@ pt:
       sprite_lab_documentation: "Documentação do Sprite Lab"
       sprite_lab_tutorials: "Tutoriais do Sprite Lab"
       web_lab_documentation: "Documentação do Web Lab"
+      project_beats_documentation: "Documentação do Project Beats"
       educate_overview: "Visão Geral do Educador"
       educate_elementary: "Ensino Fundamental"
       educate_middle: "Ensino Fundamental II"
@@ -377,6 +391,7 @@ pt:
       help_us: "Ajude-nos"
       teach: "Ensinar"
       about: "Sobre"
+      incubator: "Incubadora"
       legal: "Termos & Privacidade"
       legal_privacy: "Política de Privacidade"
       legal_cookie_notice: "Aviso sobre Cookies"
@@ -396,7 +411,7 @@ pt:
       team: 'Equipe'
       driver: 'Conectado'
       navigator: 'Parceiro'
-      create: 'Criar'
+      create: ''
       algebra_game: 'Álgebra'
       applab: 'Laboratório de Aplicativo'
       artist: 'Artista'
@@ -422,7 +437,7 @@ pt:
       playlab: 'Laboratório'
       playlab_k1: 'Laboratório de Jogos (Pré-leitor)'
       poetry: 'Poesia'
-      poetry_hoc: 'Arte poética'
+      poetry_hoc: 'Arte Poética'
       scratch: 'Scratch'
       sports: 'Esportes'
       spritelab: 'Laboratório de Sprite'
@@ -432,7 +447,7 @@ pt:
       thebadguys: 'Os caras maus'
       loading: 'Carregando...'
       weblab: 'Laboratório Web'
-      view_all: 'Ver todos os projetos...'
+      view_all: 'Veja todos os projetos...'
     popup:
       progress_for_user: "progresso de %{name}'s"
       progress: 'Seu progresso'
@@ -582,9 +597,9 @@ pt:
   footer:
     thank_you: 'Agradecemos nossos <a href="https://code.org/about/donors">doadores</a>, <a href="https://code.org/about/partners">parceiros</a>, nossa <a href="https://code.org/about/team">equipe</a>, nosso pessoal de vídeo e nossos <a href="https://code.org/about/advisors">professores</a> por sua ajuda na criação do Code Studio.'
     help_from_html: 'Queremos especialmente reconhecer os engenheiros da Amazon, Google e Microsoft que ajudaram a criar estes materiais.'
-    help_from_html_old: 'Engenheiros da Amazon, Google e Microsoft ajudaram a criar estes materiais.'
+    help_from_html_old: 'Engenheiros da Amazon, Google e Microsoft ajudaram a criar esses materiais.'
     art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Todos os direitos reservados.<br />Star Wars&#8482; &copy; %{current_year} Disney e Lucasfilm. Todos os direitos reservados.<br />Frozen&#8482; &copy; %{current_year} Disney. Todos os direitos reservados.<br />A Era do Gelo&#8482; &copy; %{current_year} 20th Century Fox. Todos os direitos reservados.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Todos os direitos reservados.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Todos os direitos reservados.<br />O Incrível Mundo de Gumball é uma marca registrada e &copy; 2015 Cartoon Network.'
-    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Todos os direitos reservados. Star Wars&#8482; &copy; %{current_year} Disney e Lucasfilm. Todos os direitos reservados. Frozen&#8482; &copy; %{current_year} Disney. Todos os direitos reservados. A Era do Gelo&#8482; &copy; %{current_year} 20th Century Fox. Todos os direitos reservados. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Todos os direitos reservados. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Todos os direitos reservados. O Incrível Mundo de Gumball é uma marca registrada e &copy; 2015 Cartoon Network.'
+    art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Todos os direitos reservados. Star Wars&#8482; &copy; %{current_year} Disney e Lucasfilm. Todos os direitos reservados. Frozen&#8482; &copy; %{current_year} Disney. Todos os direitos reservados. Era do Gelo&#8482; &copy; %{current_year} 20th Century Fox. Todos os direitos reservados. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Todos os direitos reservados. Plants vs Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Todos os direitos reservados. DreamWorks Os Bandidos &copy; %{current_year} DreamWorks Animation LLC. Todos os direitos reservados.'
     code_from_html: 'A Code.org usa o p5.play, que tem a licensa <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html"> GNU LGPL 2.1</a>.'
     powered_by_aws: 'Powered by Amazon Web Services'
     built_on_github: 'Construído no GitHub da Microsoft'
@@ -606,7 +621,10 @@ pt:
     make_my_own_app: 'Criar meu próprio aplicativo'
     how_it_works: 'Como funciona (Ver o Código)'
     try_hour_of_code: 'Faça uma Hora do Código!'
+    store: 'Armazenar'
     cookie_notice: 'Aviso sobre Cookies'
+    view_code: 'Ver códigos'
+    locale_select: "Selecione o idioma"
   reference_area:
     title: 'Precisa de ajuda?'
     subtitle: 'Veja os vídeos e as dicas'
@@ -631,6 +649,8 @@ pt:
       applab_unsupported_tablet: "App Lab funciona melhor em um computador desktop ou laptop com um mouse e um teclado. Você pode ter problemas usando esta ferramenta no seu dispositivo atual."
       gamelab_unsupported_tablet: "O Laboratório de Jogos funciona melhor em um computador desktop ou um laptop com um mouse e um teclado. Você pode ter problemas usando esta ferramenta no seu dispositivo atual."
       weblab_unsupported_locale_storage: "Você pode ter problemas ao usar o Laboratório Web no modo de Navegação Privativa. Por favor recarregue seu projeto no modo normal. Desculpe pela inconveniência."
+  deprecation:
+    algebra_lab: "O currículo e o conteúdo do CS em Álgebra estão sendo descontinuados. Nos próximos meses, esse laboratório não estará mais disponível. Em vez disso, confira [Bootstrap: Algebra] (%{bootstrap_algebra_url}). [Saiba mais] (%{cs_algebra_url})."
   slow_loading: 'Isso está demorando mais do que o normal...'
   try_reloading: 'Tente recarregar a página'
   next_stage: 'Concluído! Continuar para a próxima fase'
@@ -669,64 +689,139 @@ pt:
       body_short: "Projete um aplicativo, programe com blocos ou JavaScript para fazê-lo funcionar, e então compartilhe seu aplicativo em apenas alguns segundos."
       audience: 'A partir de 13 anos'
       cta: 'Saiba como'
+      image_alt: 'Um coelhinho roxo usando uma mochila movida a foguete.'
+    applab-intro:
+      image_alt: 'Uma mão está tocando no centro da tela de um smartphone. Luzes e brilhos estão saindo da tela.'
     aquatic:
       title: "Minecraft"
+      image_alt: 'Steve e Alex do Minecraft estão olhando para você.'
+    artist:
+      image_alt: 'Uma pessoa caricatural segurando um lápis enorme e desenhando um triângulo.'
+    conditionals:
+      image_alt: 'Duas mãos embaralhando um baralho de cartas.'
+    course1:
+      image_alt: 'A abelha e o peixe-laranja da Code.org em frente a algum código.'
+    course2:
+      image_alt: 'Uma colagem de quebra-cabeças da Code.org mostrando um mago verde, um artista e um peixe laranja.'
+    course3:
+      image_alt: 'Uma colagem de quebra-cabeças da Code.org mostrando um jogo, zumbi e ninja.'
+    course4:
+      image_alt: 'Uma colagem de quebra-cabeças da Code.org mostrando futebol, animais de estimação e um artista.'
+    coursea:
+      image_alt: 'Uma colagem de quebra-cabeças da Code.org mostrando um elefante e um esquilo.'
+    courseb:
+      image_alt: 'Uma colagem de quebra-cabeças da Code.org mostrando um explorador, pedras preciosas e uma flor.'
+    coursec:
+      image_alt: 'Uma colagem de quebra-cabeças da Code.org mostrando um esquilo, números binários e um pássaro vermelho do jogo Angry Birds.'
+    coursed:
+      image_alt: 'Uma colagem de quebra-cabeças da Code.org mostrando uma abelha, flores, mel e um porco verde do jogo Angry Birds.'
+    coursee:
+      image_alt: 'Uma colagem de quebra-cabeças da Code.org mostrando uma pessoa segurando uma pá, abóbora, pomar e vaca.'
+    coursef:
+      image_alt: 'Uma colagem de quebra-cabeças da Code.org mostrando formas geométricas coloridas, um pirata vermelho e um artista.'
     dance-2019:
       title: 'Festa dançante'
+      image_alt: 'Um gato feliz, uma preguiça e um tubarão dançando.'
+    dance-2022:
+      image_alt: 'Um alienígena verde e um robô dançando com Saturno ao fundo.'
     dance:
       title: 'Festa dançante'
+      image_alt: 'Um gato legal e um tubarão feliz dançando em uma festa.'
+    donate:
+      image_alt: 'Uma criança apontando para a tela de um notebook mostrando um quebra-cabeça da Code.org.'
+    elementary:
+      image_alt: 'Uma abelha e um esquilo parados em um campo em frente a um arco-íris.'
+    express:
+      image_alt: 'Zumbi Plants vs Zombies e planta ao lado de Flappy Bird.'
     flappy:
       title: 'Código do Flappy bird'
       body: 'Quer criar seu próprio jogo em menos de 10 minutos? Experimente nosso tutorial sobre o Código do Flappy bird!'
+      image_alt: 'Um pássaro amarelo voando entre tubos verdes.'
     frozen:
       title: "Frozen"
+      image_alt: 'Anna e Elsa do filme Frozen. Entre eles está uma imagem de Anna desenhando uma forma bonita no gelo usando seus patins de gelo.'
     gallery:
       title: "Galeria"
       body: "Veja uma galeria de aplicativos e imagens artísticas criadas por nossos usuários"
+      image_alt: 'Um artista desenhando muitos círculos e um gato, um morcego e um fantasma parados em uma terra de férias de inverno.'
     gamelab:
       title: "Laboratório de Jogos"
       body: "O Laboratório de Jogos é um ambiente de programação onde você pode criar animações simples e jogos com objetos e personagens que interagem uns com os outros."
       audience: "A partir de 13 anos"
       cta: "Saiba como"
+      image_alt: 'Muitas pessoas e animais de desenhos animados parados na calçada sorrindo.'
+    hello-world-food:
+      image_alt: 'Muitos animais, alienígenas e emojis orbitando a Terra.'
     hello-world:
       title: 'Olá Mundo'
       body: 'Selecione entre quatro temas divertidos para codificar os personagens interativos em um mundo criado por você.'
     hero:
       title: "Minecraft"
       body: "O Minecraft está de volta para a Hora do Código com uma nova atividade! Viaje através de Minecraft com código."
+      image_alt: 'Um Golem de Ferro do Minecraft em frente a uma visão aérea de Anna resolvendo um quebra-cabeça.'
     hoc-encryption:
       title: "Criptografia simples"
       body: "Os alunos vão aprender técnicas para criar e quebrar mensagens encriptadas."
+      image_alt: 'Um gráfico de barras das frequências das letras no idioma inglês.'
     hoc:
       title: 'Labirinto clássico'
       body: 'Experimente as noções básicas de ciência da computação. Milhões de pessoas já experimentaram.'
+      image_alt: 'Uma colagem de imagens mostrando código, Mark Zuckerberg e Angry Birds.'
+    hourofcode:
+      image_alt: 'Uma colagem de imagens mostrando código, Mark Zuckerberg e Angry Birds.'
     hoc2014:
       try_new_tutorial: 'Experimente nosso novo tutorial da Hora do Código na versão beta'
       try_frozen: 'O Artista com Anna e Elsa, do filme Frozen'
     infinity:
       title: "Laboratório infinito"
       body: "Use o Laboratório para criar uma história ou um jogo usando personagens da Disney Infinity."
+      image_alt: 'Cinco personagens de Froze, Tangled e Big Hero 6 juntos.'
+    map:
+      image_alt: 'Uma imagem cinza dos Estados Unidos com cerca de 20 estados destacados em roxo.'
+    mc_escape:
+      image_alt: 'Um personagem do Minecraft usando uma cartola e um monóculo enquanto abre um baú cheio de esmeraldas.'
+    mc:
+      image_alt: 'Anna e Steve do Minecraft em frente a um quebra-cabeça do Minecraft da Code.org.'
     minecraft:
       title: "Minecraft"
       body: "Explore o mundo de Minecraft usando códigos."
+      image_alt: 'Anna e Steve do Minecraft em frente a um quebra-cabeça do Minecraft da Code.org.'
     minecraft2016:
       title: "Minecraft"
       body: "Crie animais e outras criaturas de Minecraft em sua própria versão do Minecraft."
+    oceans:
+      image_alt: 'Um robô no oceano examinando várias criaturas marinhas.'
+    playlab:
+      image_alt: 'Uma colagem de imagens mostrando um gato azul, um cachorro pateta e uma doninha pré-histórica.'
     poem-art:
-      title: 'Arte poética'
+      title: 'Arte Poética'
+      body: 'Expresse-se! Use código para criar poemas animados.'
+      image_alt: 'Uma lula hipster se apresentando em um palco.'
+    pre-express-2017:
+      image_alt: 'Um cachorro e um unicórnio em frente a uma árvore feita de peças de quebra-cabeça.'
+    pre-express-2018:
+      image_alt: 'Um cachorro e um unicórnio em frente a uma árvore feita de peças de quebra-cabeça.'
+    pre-express-2019:
+      image_alt: 'Um cachorro e um unicórnio em frente a uma árvore feita de peças de quebra-cabeça.'
+    pre-express:
+      image_alt: 'Um cachorro e um unicórnio em frente a uma árvore feita de peças de quebra-cabeça.'
     sports:
       title: "Esportes"
       body: "Faça um jogo de basquete ou misture os esportes."
+      image_alt: 'Os logotipos da NBA e da WNBA exibidos ao lado de uma bola de futebol, bola de futebol, disco de hóquei e basquete.'
     starwars:
       title: "Star Wars"
+      image_alt: 'R2-D2, Leia, Rey e BB-8 parados em um deserto.'
     text-compression:
       title: "Compressão de texto"
       body: "Nesta lição, os alunos irão usar a Ferramenta de Compressão de Texto para comprimir texto substituindo padrões por símbolos."
+      image_alt: 'Texto sendo compactado substituindo palavras inteiras por um único símbolo.'
     weblab:
       title: "Laboratório Web (beta)"
       body: "O Laboratório Web é um ambiente de programação onde você pode criar páginas web simples usando HTML e CSS. Crie suas páginas e compartilhe o seu site em segundos."
       audience: "A partir de 13 anos"
       cta: "Saiba como"
+      image_alt: 'Uma tela de computador exibindo código HTML.'
     widgets:
       title: "Widgets"
       body: "Os alunos podem colocar as mãos na massa para explorar os conceitos do nosso curso de Princípios da Ciência da Computação utilizando essas ferramentas digitais. Eles podem usar os \"widgets\" como bem entenderem ou criar uma lição envolvendo um único conceito para suas aulas."
@@ -785,6 +880,8 @@ pt:
     submit-incomplete-body: "Você deixou algumas perguntas incompletas.  Não é possível editar sua avaliação depois de enviá-la.  Tem certeza disso?"
     submit-complete-title: "Envie sua avaliação"
     submit-complete-body: "Não é possível editar sua avaliação depois de enviá-la.  Tem certeza disso?"
+  level_summary:
+    correct_answer: "Resposta Correta"
   match:
     wrong_title: "Solução incorreta"
     wrong_body: "Sua solução não está correta. Tente novamente!"
@@ -910,6 +1007,7 @@ pt:
           age: 'Especifique uma idade'
           abuse_type: 'Diga como esse conteúdo viola os Termos de Serviço'
           abuse_detail: 'Forneça detalhes sobre o conteúdo que você está reportando'
+          captcha: 'Por favor, preencha o CAPTCHA para denunciar esse conteúdo.'
         abusive_url: 'URL do conteúdo reportado'
         abuse_type:
           question: 'Como esse conteúdo viola os%{link_start}Termos de Serviço%{link_end}?'
@@ -932,6 +1030,7 @@ pt:
     instructor_feedback: 'Feedback do instrutor'
     peer_feedback: 'Feedback de colegas'
     outdated: 'Este feedback foi adicionado para uma versão enviada anteriormente'
+    review_count: 'Você deve completar %{review_count} avaliações para esta unidade'
     peer_review: 'Revisão em grupo'
   external_links:
     disclaimer: Aviso
@@ -998,6 +1097,11 @@ pt:
   no_course_access_teacher: "Você não tem acesso a esta unidade. Se você acredita que deve ter acesso a esta unidade, por favor, escreva para support@code.org para que possamos corrigir a situação."
   no_script_access_student: "Você não tem acesso a esta unidade. Por favor, pergunte ao seu professor em qual unidade você deveria estar."
   no_script_access_teacher: "Você não tem acesso a esta unidade. Se você acredita que deve ter acesso a esta unidade, por favor, escreva para support@code.org para que possamos corrigir a situação."
+  no_level_access_student: "Você não tem acesso a esse nível. Pergunte ao seu professor em qual nível você deve estar."
+  no_level_access_teacher: "Você não tem acesso a esse nível. Se você acredita que deveria ter acesso a esse nível, escreva para support@code.org para que possamos corrigir a situação."
+  no_exemplar: "Não existe nenhum exemplar para esse nível."
+  no_exemplar_access_student: "Os alunos não podem acessar o código exemplar. Pergunte ao seu professor em qual nível você deve estar."
+  no_exemplar_access_teacher: "Somente professores verificados podem acessar o código exemplar. Se você quiser se tornar um professor verificado, escreva para support@code.org."
   return_unit_overview: 'Ir para visão geral da unidade'
   return_course_overview: 'Ir para visão geral da unidade'
   view_all_units: 'Visualizar todas unidades'
@@ -1015,8 +1119,13 @@ pt:
       school_city: 'Cidade da Escola'
       school_city_district: 'Cidade/Distrito da escola'
       school_country: 'País da Escola'
+      school_department_region: 'Departamento/Região Escolar'
       colombian_school_city: 'Cidade da Escola'
+      colombian_chilean_school_department: 'Departamento/Região Escolar'
+      colombian_school_municipality: 'Município escolar'
       colombian_chilean_school_name: 'Nome da escola'
+      chilean_school_commune: 'Comuna'
+      chilean_school_id: 'Carteira de identidade escolar'
       ages: 'Qual idade(s) você ensina este ano?'
       subjects: 'Qual(is) disciplina(s) você ensina este ano?'
       resources: 'Quais dos seguintes recursos de educação de Ciência da Computação você utiliza?'
@@ -1034,13 +1143,37 @@ pt:
         not_listed: 'Termo preferido não listado'
         none: 'Prefiro não responder'
       school_country:
+        australia: 'Austrália'
+        barbados: 'Barbados'
+        belize: 'Belize'
+        brazil: 'Brasil'
         canada: 'Canadá'
         chile: 'Chile'
         colombia: 'Colômbia'
+        dominican_republic: 'República Dominicana'
+        india: 'Índia'
+        indonesia: 'Indonésia'
         israel: 'Israel'
+        italy: 'Itália'
+        jamaica: 'Jamaica'
+        kenya: 'Quênia'
+        kosovo: 'Kosovo'
         malaysia: 'Malásia'
+        maldives: 'República das Maldivas'
         mexico: 'México'
+        mongolia: 'Mongólia'
+        new_zealand: 'Nova Zelândia'
+        paraguay: 'Paraguai'
+        philippines: 'Filipinas'
+        portugal: 'Portugal'
+        puerto_rico: 'Porto Rico'
+        slovakia: 'Eslováquia'
+        south_korea: 'República de Corea'
+        spain: 'Espanha'
         thailand: 'Tailândia'
+        trinidad_and_tobago: 'Trinidad e Tobago'
+        uzbekistan: 'Uzbequistão'
+        vietnam: 'Vietnã'
       ages:
         ages_under_6: '< 6 anos de idade'
         ages_7_8: '7-8 anos de idade'
@@ -1089,6 +1222,7 @@ pt:
         csf_express: 'Fundamentos de Ciência da Computação (Pré-Expresso ou Expresso)'
         csd: 'Descobertas da Ciência da Computação'
         csp: 'Princípios da CC'
+        other: 'Outros'
         not_applicable: "Não aplicável"
       email_opt_in:
         opt_in_yes: 'Sim'
@@ -1098,7 +1232,9 @@ pt:
       intro: "Obrigado por tomar tempo para receber formação sobre o currículo do Code.org. Nossa missão para trazer oportunidades de educação em ciência da computação para todas as crianças em todas as escolas de todo o mundo não seria possível sem você."
       instructions: "Por favor preencha o formulário abaixo para indicar que 1) você participou de um workshop dirigido por um dos parceiros internacionais do Code.org, e 2) você concorda em compartilhar suas informações com o nosso parceiro international em seu país para que nós possamos ajudar a apoiar a sua jornada como um professor de ciência da computação."
       thanks_markdown: "Obrigado por enviar! Estamos ansiosos para atendê-lo conforme você se familiariza com os currículos e as ferramentas do Code.org. Continue compartilhando suas perguntas e feedback conosco escrevendo para [support@code.org](%{support_email_url}) ou postando no [fórum de professores](%{teacher_forum_url})!"
+      facilitator_not_listed: "Meu facilitador não está listado"
       facilitator_not_applicable: "Não aplicável"
+      organizer_not_listed: "Meu organizador não está listado"
     logged_out:
       heading: 'Obrigado pelo seu interesse no Programa de Aprendizagem Profissional!'
       body: 'Para começar, primeiro você precisa estar logado em sua conta do Code.org. Se você quiser mais informações sobre o programa antes de iniciar sua aplicação, por favor verifique a <a href="%{url}">visão geral do Programa de Aprendizagem Profissional</a>.'
@@ -1108,6 +1244,26 @@ pt:
     no_teacher_email:
       body_markdown: 'Sua conta não possui um endereço de email. Por favor visite as configurações de sua conta (%{user_registration}) para adicionar o seu endereço de email antes de completar este formulário.'
   courses_category: 'Cursos Completos'
+  course_offering:
+    headers:
+      favorites: 'FAVORITOS'
+      labs_and_skills: 'Laboratórios e habilidades'
+      minecraft: 'Minecraft'
+      hello_world: 'Olá Mundo'
+      popular_media: 'Mídia popular'
+      sports: 'Esportes'
+      express: 'Expresso'
+      csf: 'Conceitos básicos da CC'
+      csc: 'Conexões de CC'
+      year_long: 'Durante todo o ano'
+      csa_labs: 'Laboratórios CSA'
+      self_paced: 'Inindividualizado'
+      teacher_led: 'Liderado por professores'
+      collections: 'Coleções'
+      workshops_k5: 'Workshops K-5'
+      summer_workshops_612: '6-12 workshops de verão'
+      virtual_academic_year_workshops_612: 'Workshops virtuais de 6 a 12 anos acadêmicos'
+      unsupported: 'Incompatível'
   cookie_banner:
     message: 'Ao continuar a navegar em nosso site ou ao clicar em "Eu concordo", você concorda com o armazenamento de cookies em seu computador ou dispositivo.'
     more_information: "Consulte a Política de Privacidade do Code.org."
@@ -1127,12 +1283,16 @@ pt:
       error_wrong_provider: 'Provedor incorreto. Confirme se você está fazendo login com o Google.'
       error_invalid_user: 'Identificação de usuário inválida. Tente fazer login novamente.'
       error_no_code: 'Digite seu código de login.'
+      confirm_login: 'Selecione “Confirmar” para fazer login com sua conta do Google.'
+    setup_page_title: 'Configuração do Maker'
   parent_email_banner:
     text: "**Você é pai ou responsável?** Associe seu e-mail a esta conta para se manter atualizado em relação ao progresso e aos projetos do(a) seu(sua) filho(a)!"
     link_your_email: "Associe seu e-mail"
     not_now: "Agora não"
   behaviors:
     this_sprite: "este personagem"
+  unit_prefix: "Unidade  %{n}"
+  code_org_logo_alt: "Code.org Home"
   teacher_feedback: "Feedback do Professor"
   lesson_lock:
     error:
@@ -1142,4 +1302,40 @@ pt:
       forbidden: "O usuário não pode atualizar o status bloqueável do aluno"
   reset_predict_progress_button: "Excluir resposta"
   pixelation:
+    raw_format: "Formato bruto"
+    raw_format_alt: "Visualize bits sem qualquer formatação"
+    readable_format: "Formato legível"
+    readable_format_alt: "Exibir bits separados por pixel"
+    save_image: "Salvar imagem"
+    actual_size: "Tamanho real"
+    image_file_format_header: "Formato de arquivo de imagem"
+    image_file_format_width: "Largura: 1 byte"
+    image_file_format_height: "Altura: 1 byte"
+    image_file_format_bits_per_pixel: "Bits por pixel: 1 byte"
+    image_file_format_data_a: "n bits de dados em pixels"
+    image_file_format_data_b: "n = Largura * Altura * Bits por pixel"
+    image_width: "Largura da imagem"
+    image_height: "Altura da imagem"
+    bits_per_pixel_header: "Bits por pixel"
     binary: "Binário"
+    hexadecimal: "Hexadecimal"
+    pixel_format_header: "Formato de pixel"
+  course_deprecated:
+    title: "Atenção! Esse currículo não está mais disponível, mas a Code.org tem opções mais recentes disponíveis para você."
+    button: "Visualize o novo currículo"
+  hoc_tutorial_email_subject: "Arrase na Hora do Código com os tutoriais da Code.org!"
+  hoc_tutorial_email_content:
+    dear_teacher: "Caro %{teacher_name},"
+    intro_step_by_step_guide: "Estamos muito animador por você estar realizando um evento da Hora do Código usando as atividades e tutoriais gratuitos da Code.org! Temos a honra de ter educadores como você apresentando aos alunos o incrível mundo da programação. Aqui está um guia com um passo a passo para garantir um evento bem-sucedido da Hora do Código:"
+    sign_up_step: "**Inscreva-se** (Opcional…, mas incrível!): Crie uma conta gratuita na Code.org para obter acesso um painel pessoal que vai lhe auxiliar a gerenciar a Hora do Código da sua sala de aula! [Inscreva-se aqui] (%{url})."
+    create_classroom_section: "**Crie uma seção de sala de aula** (Também é opcional…, mas muito útil!): Criar uma seção para a sua sala de aula permite que você acompanhe o progresso de seus alunos, visualize seus trabalhos e até registre um feedback! [Configure sua seção aqui] (%{section_setup_url}). E para todos os nossos novatos, aqui está um [guia prático] (%{guide_url}) muito útil a vocês!"
+    pick_perfect_activity: "**Escolha a Atividade Perfeita**: [Selecione o melhor tutorial da Hora do Código] (%{url}) para o seu evento. Explore as opções e atribua o tutorial escolhido à sua seção, para que seus alunos saibam exatamente por onde começar."
+    plan_like_pro: "**Planeje como um profissional: muitos de nossos tutoriais vêm com um [plano de aula] (%{lesson_plan_url}). É como uma receita secreta para o sucesso! Confira seu plano de aula antes do grande evento."
+    let_fun_begin: "**Que a diversão comece!**: Guiado pelo plano de aula, comece sua jornada no mundo da codificação. Lembre-se: você não precisa ter todas as respostas! Seu entusiasmo e a curiosidade compartilhada com seus alunos ajudarão todos a aprenderem juntos."
+    hip_hip_hooray: "**Hip, Hip, Hooray!**: Quando chegarmos ao final, vamos celebrar esses jovens e brilhantes programadores. Certificados, adesivos e até mesmo uma salva de palmas — tudo conta. Encontre nossos [certificados imprimíveis aqui] (%{url})."
+    more_adventures_await: "**Mais aventuras aguardam**: Você viu algum novo programador ávido por mais? Apresente-os a mais currículos na área da Ciência da Computação no Code.org!"
+    explore_course: "Explore nosso tesouro de cursos gratuitos"
+    learn_about_ai: "Aprenda sobre Inteligência Artificial (IA)"
+    thank_you: "OBRIGADO por defender o ensino da Ciência da Computação. Nossa equipe deseja a você e a seus alunos uma Hora do Código inesquecível!"
+    founder: "Fundador, Code.org"
+    your_friends: "Seus Amigos na Code.org"

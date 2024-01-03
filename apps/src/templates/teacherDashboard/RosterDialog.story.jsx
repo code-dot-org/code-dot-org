@@ -6,7 +6,7 @@ import {stubRailsAuthenticityToken} from '../../../test/util/stubRailsAuthentici
 export default {
   name: 'RosterDialog',
   component: RosterDialog,
-  decorators: [dialogIsOpen, railsAuthenticityTokenIsStubbed]
+  decorators: [dialogIsOpen, railsAuthenticityTokenIsStubbed],
 };
 
 const SelectSectionTemplate = args => (
@@ -17,33 +17,33 @@ const SelectSectionTemplate = args => (
         id: '123',
         name: 'New Test Classroom',
         section: 'Section 1',
-        enrollment_code: '19uag24'
+        enrollment_code: '19uag24',
       },
       {
         id: '456',
         name: 'Other Test Classroom',
         section: 'Section 3A',
-        enrollment_code: 't108sh5'
+        enrollment_code: 't108sh5',
       },
       {
         id: '101',
         name: 'Intro to CS',
         section: 'Section A',
-        enrollment_code: 'rt508yg'
+        enrollment_code: 'rt508yg',
       },
       {
         id: '102',
         name: 'Intro to CS',
         section: 'Section B',
-        enrollment_code: '12gjl42'
-      }
+        enrollment_code: '12gjl42',
+      },
     ]}
   />
 );
 
 export const GoogleClassroomSelectSection = SelectSectionTemplate.bind({});
 GoogleClassroomSelectSection.args = {
-  provider: OAuthSectionTypes.google_classroom
+  provider: OAuthSectionTypes.google_classroom,
 };
 
 export const CleverClassroomSelectSection = SelectSectionTemplate.bind({});
@@ -53,7 +53,7 @@ const LoadingTemplate = args => <RosterDialog rosterProvider={args.provider} />;
 
 export const GoogleClassroomLoading = LoadingTemplate.bind({});
 GoogleClassroomLoading.args = {
-  provider: OAuthSectionTypes.google_classroom
+  provider: OAuthSectionTypes.google_classroom,
 };
 
 export const CleverClassroomLoading = LoadingTemplate.bind({});
@@ -65,7 +65,7 @@ const NoSectionsFoundTemplate = args => (
 
 export const GoogleClassroomNoSectionsFound = NoSectionsFoundTemplate.bind({});
 GoogleClassroomNoSectionsFound.args = {
-  provider: OAuthSectionTypes.google_classroom
+  provider: OAuthSectionTypes.google_classroom,
 };
 
 export const CleverClassroomNoSectionsFound = NoSectionsFoundTemplate.bind({});
@@ -80,7 +80,7 @@ const LoadErrorTemplate = args => (
 
 export const GoogleClassroomLoadError = LoadErrorTemplate.bind({});
 GoogleClassroomLoadError.args = {
-  provider: OAuthSectionTypes.google_classroom
+  provider: OAuthSectionTypes.google_classroom,
 };
 
 export const CleverClassroomLoadError = LoadErrorTemplate.bind({});

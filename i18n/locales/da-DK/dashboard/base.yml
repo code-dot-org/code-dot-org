@@ -53,6 +53,7 @@ da:
         gender: 'Køn'
         edit_header: 'Rediger kontooplysninger'
         finish_sign_up_header: 'Afslut oprettelsen af din konto'
+        finish_sign_up_header_error: 'Ret venligst følgende fejl:'
         finish_sign_up_subheader: 'Udfyld følgende oplysninger for at afslutte oprettelsen af en Code.org konto for <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Udfyld de følgende oplysninger for at oprette en Code-org-konto med e-mailadressen **%{email}**.'
         finish_sign_up_subheader_provider: 'Udfyld følgende oplysninger for at afslutte oprettelsen af en Code.org konto <strong>%{provider}</strong> for <strong>%{email}</strong>.'
@@ -60,6 +61,8 @@ da:
         reset_password_token: "Adgangskode linket du har brugt"
         error:
           future: kan ikke være i fremtiden
+        user_type: 'Kontotype'
+        us_state: 'Region'
   beta: "beta"
   hello: "Hej verden"
   welcome_back: "Velkommen tilbage %{name}"
@@ -171,7 +174,6 @@ da:
     data_collection_us: "Jeg forstår, at Code.org er et non-profit-websted baseret i USA, og at lovgivningen om dataindsamling i USA kan afvige fra lovene i mit land."
     visit_privacy: 'Besøg Code.org''s [Privacy Policy](%{privacy_url}) for at lære mere.'
     student_terms_markdown: "E-mailadresser er ikke gemt i form af, at vi kontakter eleverne. Elever vil aldrig modtage e-mails fra Code.org, bortset fra, at hvis det er genopretning af adgangskoder. Se vores [privatlivspolitik](http://code.org/privacy) for mere information."
-    additional_information: "Vi har brug for nogle ekstra oplysninger til at fortsætte med at logge dig."
     user_type_button: "Opdater kontotype"
     user_type_label: "Kontotype"
     user_type_student: "Elev"
@@ -199,6 +201,7 @@ da:
     parent_account_checkbox: "Jeg er en forælder eller en værge, der tilmelder sig på vegne af mit barn"
     parent_account_email_progress_permission: "Kan vi sende dig e-mail lejligheds med opdateringer om dit barns fremskridt og projekter og opdateringer om deres kursus og datalogi? [(Se vores privatlivspolitik)] (%{privacy_policy_url})"
     parent_account_email_label: "Forælderens eller værgens e-mailadresse"
+    us_state: 'Region'
   school_info:
     title: 'Skoleoplysninger (valgfrit)'
     school_country: 'Skolens land'
@@ -534,6 +537,7 @@ da:
     all_students_must_be_in_current_section: "Alle de studerende skal i øjeblikket indskrives i din sektion."
     already_enrolled_in_new_section: "Du kan ikke flytte disse studenter, fordi de allerede er i den nye sektion."
     third_party_login: "Du kan ikke flytte studenter til en sektion, der er synkroniseret med en tredjepartsværktøj."
+    not_correct_participant_type: "Du kan ikke flytte disse brugere, fordi du ikke har adgang til de brugere i den nye sektion."
   share:
     title: "Lære om Code Studio"
     description: "Enhver kan lære programmering. Lav spil, apps og kunst med kode."
@@ -542,6 +546,7 @@ da:
     male: 'Mand'
     female: 'Kvinde'
     non_binary: 'Ikke-binær'
+    not_listed: 'Fortrukken betegnelse er ikke angivet'
     none: 'Foretrækker ikke at svare'
   user_type:
     student: 'studerende'
@@ -554,6 +559,7 @@ da:
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     code_from_html: 'Code.org bruger p5.play, hvilket er licenseret under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1</a>.'
     powered_by_aws: 'Powered by Amazon Web Services'
+    google_copyright: '&copy; Google Inc. bruges med tilladelse. Google Classroom er et varemærke tilhørende Google Inc. '
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE logo og Hour of Code&reg; er varemærker tilhørende Code.org.'
     copyright: 'Copyright'
     more: 'Mere'
@@ -570,6 +576,8 @@ da:
     make_my_own_app: 'Byg min egen app'
     how_it_works: 'Sådan fungerer det'
     try_hour_of_code: 'Prøv en Time med kode!'
+    view_code: 'Vis kode'
+    locale_select: "Vælg sprog"
   reference_area:
     title: 'Brug for hjælp?'
     subtitle: 'Se disse videoer og tips'
@@ -632,25 +640,71 @@ da:
       body_short: "Design en app, kod med blokke eller brug JavaScript for at få det til at virke, og så derefter del din app på få sekunder."
       audience: 'Alder 13+'
       cta: 'Lær hvordan'
+      image_alt: 'En lilla kanin iført en raketdrevet rygsæk. '
+    applab-intro:
+      image_alt: 'En hånd trykker på midten af en smartphone-skærm. Lys og gnister kommer ud af skærmen. '
     aquatic:
       title: "Minecraft"
+      image_alt: 'Steve og Alex fra Minecraft kigger på dig. '
+    artist:
+      image_alt: 'En tegneserie figur holder en kæmpe blyant og tegner en trekant. '
+    conditionals:
+      image_alt: 'To hænder blander et sæt kort.'
+    course1:
+      image_alt: 'Code.org humlebien og den orange fisk står foran noget kode. '
+    course2:
+      image_alt: 'En collage af Code.org puslespil viser en grøn troldmand, kunstner og en orange fisk. '
+    course3:
+      image_alt: 'En collage af Code.org puslespil der viser et spil, zombie og en ninja.'
+    course4:
+      image_alt: 'En collage af Code.org puslespil der viser en fodbold, kæledyr og en kunstner. '
+    coursea:
+      image_alt: 'En collage af Code.org puslespil der viser en elefant og et egern. '
+    courseb:
+      image_alt: 'En collage af Code.org puslespil der viser en opdagelsesrejsende, ædselstene og en blomst. '
+    coursec:
+      image_alt: 'En collage af Code.org puslespil der viser et egern, binære tal, og en rød fugl fra spillet Angry Birds. '
+    coursed:
+      image_alt: 'En collage af Code.org puslespil der viser en bi, blomster, honning, og en grøn gris fra spillet Angry Birds. '
+    coursee:
+      image_alt: 'En collage af Code.org puslespil der viser en person der holder en skovl, græskar, frugtplantage og en ko. '
+    coursef:
+      image_alt: 'En collage af Code.org puslespil der viser farverige geometriske former, en rød pirat og en kunstner. '
     dance-2019:
       title: 'Dance Party'
+      image_alt: 'En glad kat, dovendyr og haj der danser. '
+    dance-2022:
+      image_alt: 'En grøn alien og en robot der danser med Saturn i baggrunden. '
     dance:
       title: 'Dance Party'
+      image_alt: 'En sej kat og glad haj der danser til en fest. '
+    donate:
+      image_alt: 'Et barn der peger på en bærbar skærm der viser et Code.org puslespil. '
+    elementary:
+      image_alt: 'En humlebi og et egern der står på en mark foran en regnbue. '
+    express:
+      image_alt: 'Plants vs Zombies zombien og planten står ved siden af Flappy Bird. '
     flappy:
       title: 'Flappy kode'
       body: 'Vil du skrive dit eget spil på mindre end 10 minutter? Prøv vores Flappy kode undervisning!'
+      image_alt: 'En gul fugl der flyver imellem grønne rør. '
     frozen:
       title: "Frozen"
+      image_alt: 'Anna og Elsa fra filmen Frozen. Imellem dem er der et billede af Anna der tegner et flot mønster i isen med hendes skøjter. '
     gallery:
       title: "Galleri"
       body: "Se et galleri af app og kunstnerbilleder skabt af vores brugere"
+      image_alt: 'En kunstner der tegner en masse cirkler og en kat, flagermus og et spøgelse der står i et vinter landskab. '
     gamelab:
       title: "Spil Laboratoriet"
       body: "Game Lab er et programmeringsmiljø, hvor du kan lave simple animationer og spil med genstande og figurer, der interagere med hinanden."
       audience: "Alder 13+"
       cta: "Lær hvordan"
+      image_alt: 'Mange tegneserie mennesker og dyr der står på et fortov og smiler. '
+    hello-world-food:
+      image_alt: 'Mange dyr, aliens og emojier der kredser rundt om jorden. '
+    hello-world:
+      body: 'Vælg imellem fire sjove temaer til at kode interaktive figurer i en verden du laver. '
     hero:
       title: "Minecraft"
       body: "Minecraft er tilbage med en splinterny aktivitet i En Times Kodning! En rejse gennem Minecraft ved hjælp af kode."
@@ -900,6 +954,7 @@ da:
         male: 'Mand'
         female: 'Kvinde'
         non_binary: 'Ikke-binær'
+        not_listed: 'Fortrukken betegnelse er ikke angivet'
         none: 'Foretrækker ikke at svare'
       school_country:
         canada: 'Canada'
@@ -932,9 +987,14 @@ da:
       robotics:
         kodable: 'Kodable'
         other: "Andre"
+      workshop_course:
+        other: 'Andre'
       email_opt_in:
         opt_in_yes: 'Ja'
         opt_in_no: 'Nej'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
   cookie_banner:
     more_information: "Se Code.org's privatlivspolitik."
     accept: 'Jeg er enig'

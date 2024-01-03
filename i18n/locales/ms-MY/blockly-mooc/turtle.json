@@ -38,6 +38,8 @@
   "drawATriangle": "lukiskan satu bentuk segi tiga",
   "drawUpperWave": "lukis bentuk gelombang atas",
   "drawLowerWave": "lukis bentuk gelombang bawah",
+  "drawShape": "lukis bentuk",
+  "drawShapeWithSideLength": "lukis bentuk dengan panjang sisi",
   "drawSticker": "lukis pelekat",
   "drawStickerWithSize": "lukis pelekat dengan ukuran",
   "forward": "ke hadapan",
@@ -103,5 +105,6 @@
   "turtleVisibilityTooltip": "Jadikan artis kelihatan atau tidak kelihatan.",
   "widthTooltip": "Tukar lebar pensil.",
   "withSize": "dengan saiz",
+  "withSideLength": "dengan panjang sisi",
   "wrongColour": "Warna gambar anda salah. Untuk Puzzle ini, ianya perlukan %1."
 }

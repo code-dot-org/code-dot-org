@@ -9,14 +9,14 @@ import i18n from '@cdo/locale';
  */
 export default class IconLibrary extends React.Component {
   static propTypes = {
-    assetChosen: PropTypes.func.isRequired
+    assetChosen: PropTypes.func.isRequired,
   };
 
   state = {search: ''};
 
   search = e => {
     this.setState({
-      search: e.target.value.toLowerCase().replace(/[^-a-z0-9]/g, '')
+      search: e.target.value.toLowerCase().replace(/[^-a-z0-9]/g, ''),
     });
   };
 

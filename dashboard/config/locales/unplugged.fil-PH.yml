@@ -2,8 +2,346 @@
 fil:
   data:
     unplugged:
+      BigEvent:
+        desc: Ang mga estudyante ay pinapakilala sa mga pang-program na konsepto ng
+          mga "events", kung saan ito ay mga aksyon na parating sinubaybayan ng isang
+          kompyuter. Ang guro ay pipindot ng isang button sa papel na remote at ang
+          mga estudyante ay tutugon ayon sa button na napindot.
+        title: The Big Event
+      BigEvent_2018:
+        desc: Ang mga estudyante ay pinapakilala sa mga pang-program na konsepto ng
+          mga "events", kung saan ito ay mga aksyon na parating sinubaybayan ng isang
+          kompyuter. Ang guro ay pipindot ng isang button sa papel na remote at ang
+          mga estudyante ay tutugon ayon sa button na napindot.
+        title: The Big Event
+      BigEvent_2019:
+        desc: Ang mga estudyante ay pinapakilala sa mga pang-program na konsepto ng
+          mga "events", kung saan ito ay mga aksyon na parating sinubaybayan ng isang
+          kompyuter. Ang guro ay pipindot ng isang button sa papel na remote at ang
+          mga estudyante ay tutugon ayon sa button na napindot.
+        title: The Big Event
+      BinaryBracelets:
+        desc: Ang mga estudyante ay lilikha ng mga pulseras bilang isang representasyon
+          ng unang letra ng kanilang pangalan sa binary, Ang mga estudyante ay matuto
+          na ang mga datos ay maaaring irepresenta at itago sa higit sa isang pamamaraan.
+        title: Binary na mga Pulseras
+      BinaryBracelets_2018:
+        desc: Ang mga estudyante ay lilikha ng mga pulseras bilang isang representasyon
+          ng unang letra ng kanilang pangalan sa binary, Ang mga estudyante ay matuto
+          na ang mga datos ay maaaring irepresenta at itago sa higit sa isang pamamaraan.
+        title: Binary na mga Pulseras
+      BinaryBracelets_2019:
+        desc: Ang mga estudyante ay lilikha ng mga pulseras bilang isang representasyon
+          ng unang letra ng kanilang pangalan sa binary, Ang mga estudyante ay matuto
+          na ang mga datos ay maaaring irepresenta at itago sa higit sa isang pamamaraan.
+        title: Binary na mga Pulseras
+      BinaryImages:
+        desc: Kahit karamihan sa mga tao ay nag-iisip sa binary bilang zeros at ones
+          lang, ang ating nakaraan mga kurso ay nagtuturo sa mga estudyante na ang
+          impormasyon ay maaaring irepresenta sa iba't ibang mga opsyon sa binary.
+          Ang araling ito ay gumagamit sa konseptong ito habang ipinapakita kung paano
+          ang kompyuter nagtatago ng mas komplikadong mga impormasyon (gaya ng mga
+          larawan at mga kulay) pati na rin sa binary.
+        title: Binary na mga Larawan
+      BinaryImages_2018:
+        desc: Kahit karamihan sa mga tao ay nag-iisip sa binary bilang zeros at ones
+          lang, ang ating nakaraan mga kurso ay nagtuturo sa mga estudyante na ang
+          impormasyon ay maaaring irepresenta sa iba't ibang mga opsyon sa binary.
+          Ang araling ito ay gumagamit sa konseptong ito habang ipinapakita kung paano
+          ang kompyuter nagtatago ng mas komplikadong mga impormasyon (gaya ng mga
+          larawan at mga kulay) pati na rin sa binary.
+        title: Binary na mga Larawan
+      BinaryImages_2019:
+        desc: Kahit karamihan sa mga tao ay nag-iisip sa binary bilang zeros at ones
+          lang, ang ating nakaraan mga kurso ay nagtuturo sa mga estudyante na ang
+          impormasyon ay maaaring irepresenta sa iba't ibang mga opsyon sa binary.
+          Ang araling ito ay gumagamit sa konseptong ito habang ipinapakita kung paano
+          ang kompyuter nagtatago ng mas komplikadong mga impormasyon (gaya ng mga
+          larawan at mga kulay) pati na rin sa binary.
+        title: Binary na mga Larawan
+      Booleans:
+        desc: Ang mga boolean ay ang pang-apat at huling tipo ng datos na matutunan
+          mo sa kursong ito. Sa gawaing ito, matutunan mo kung ano ang mga Boolean,
+          at kung paano sila nakakatulong sa atin na magsulat ng mga functions na
+          lohikal na nag-iisip
+        title: Mga Booleans at Lohika
+      BuildingAFoundation:
+        desc: Ang mga estudyante ay gagawa ng isang istraktura gamit ang mga binigay
+          na mga suplay. Ang mga istraktura ay dapat kumukumpleto ng isang gawain
+          (maabot ang isang tiyak na taas o magpasan ng isang tiyak na timbang), at
+          ang mga estudyante ay magtatalakay sa pagiging masigasig kapag ang mga bagay
+          ay naging kumplikado.
+        title: Gumawa ng Foundation
+      BuildingAFoundation_2019:
+        desc: 'nawala ang pagsasalin: en-US.data.unplugged.BuildingAFoundation_2018.desc'
+        title: 'nawala ang pagsasalin: en-US.data.unplugged.BuildingAFoundation_2018.title'
+      CollisionDetection:
+        desc: Ang pagtukoy sa mga bagay sa screen touch ay isang mahalagang aspeto
+          ng karamihang mga laro. Sa araling ito, titingnan natin kung paano ang Pythagorean
+          Theorem at ang Distance Formula ay maaaring gamitin para masukat ang distansiya
+          sa pagitan ng dalawang punto sa isang plane, at pagkatapos ay magpasya tayo
+          kung ang dalawang punto na iyon (o mga karakter sa laro) ay nagkabanggaan.
+        title: Pagtukoy sa Banggaan at ang Pythagorean na Theorem
+      ComputationalThinking:
+        desc: Ang mga estudyante ay gagamit ng mga hakbang sa kompyutasyonal na pag-iisip
+          (paghati-hati, pagtugma ng mga paterno, paglalahat, algorimo) para malaman
+          kung paano laruin ang laro na walang dalang instruksiyon.
+        title: Computational Thinking
+      Conditionals:
+        desc: Para matuto tungkol sa mga kondisyonal na mga pahayag, ang mga estudyante
+          ay maglalaro ng isang baraha na laro at maglikha ng mga patakaran gaya ng
+          "kung makakuha ako ng pulang baraha, makakapuntos ako" at "kung makakuha
+          ako ng itim na baraha, makakapuntos ka."
+        title: Mga conditional
+      ConditionalsPiecewiseFunctions:
+        desc: Ang mga parameters na pinasa natin sa mga functions ay naging sanhi
+          na mabago ang output ayon sa isang napakamatibay na paterno. Kung gusto
+          natin ang mga parameters na may halaga, na maglikha ng mga output gamit
+          ang isang paterno ngunit ang ibang halaga ay gagamit ng ibang paterno. Ito
+          ay kung saan kinakailangan ang mga kondisyonal...
+        title: Mga Kondisyonal at Piecewise na mga Functions
+      Conditionals_2018:
+        desc: Para matuto tungkol sa mga kondisyonal na mga pahayag, ang mga estudyante
+          ay maglalaro ng isang baraha na laro at maglikha ng mga patakaran gaya ng
+          "kung makakuha ako ng pulang baraha, makakapuntos ako" at "kung makakuha
+          ako ng itim na baraha, makakapuntos ka."
+        title: Mga conditional
+      Conditionals_2019:
+        desc: Para matuto tungkol sa mga kondisyonal na mga pahayag, ang mga estudyante
+          ay maglalaro ng isang baraha na laro at maglikha ng mga patakaran gaya ng
+          "kung makakuha ako ng pulang baraha, makakapuntos ako" at "kung makakuha
+          ako ng itim na baraha, makakapuntos ka."
+        title: Mga conditional
+      Contracts:
+        desc: Ang mga kontrata ay nagbibigay sa ating ng paraan para maunawaan at
+          matalakay ang mga functions. Sa araling ito, titingnan natin kung paano
+          ang mga kontrata nakakatulong sa atin na intindihin ang mga bagong wika
+          na pang-program o function.
+        title: Mga Kontrata, Domain, at ang Abot
+      Crowdsourcing:
+        desc: Ang mga estudyante ay gagamit ng crowdsourcing, isang paraan sa paglutas
+          ng problema sa computer science, mas mainam na kumpletohin ang isang gawain
+          sa buong klase kaysa kung ang isang estudyante ay susubok ng mag-isa.
+        title: Pag-crowdsourcing
+      Crowdsourcing_2019:
+        desc: 'nawala ang pagsasalin: en-US.data.unplugged.Crowdsourcing_2018.desc'
+        title: 'nawala ang pagsasalin: en-US.data.unplugged.Crowdsourcing_2018.title'
+      DesignRecipe:
+        desc: Sa huling yugto, ang mga estudyante ay magsusulat ng iilang napakasimple
+          na mga functions - ngunit ang mas sopistikadong mga function ay nangangailangan
+          ng mas maingat na pamamaraan. Ang Recipe ng Pagdisenyo ay isang inayos na
+          pamamaraan sa pagsulat ng mga functions kalakip na ang pagsusulat ng mga
+          test cases para masiguro na ang mga functions ay gumagana gaya ng inaasahan
+          natin.
+        title: Ang Resipe ng Pag-disenyo
+      DiceRace:
+        desc: Ang araling ito ay tumatawag sa mga pamamaraan na gumagamit tayo ng
+          mga algoritmo sa ating araw-araw na buhay. Bilang bahagi nito, ang mga estudyante
+          ay magkilala at magsulay ng isang algoritmo para sa isang laro na betu-beto
+          na karera.
+        title: 'Mga Totoong Buhay na mga Algoritmo: Betu-beto na Habulan'
+      DigitalCitizenship:
+        desc: Ang mga estudyante ay tutuklas sa kaibahan ng pribadong impormasyon
+          at personal na impormasyon, para matanto nila kung alin ang ligtas at di-ligtas
+          na ibahagi online.
+        title: Digital na Pagkamamamayan
+      DigitalFootprint:
+        desc: Ang mga guro ay magpapakilala sa mga estudyante ng ideya na paglagay
+          ng impormasyon tungkol sa kanilang mga sarili online ay lilikha ng isang
+          digital na yapak o "bakas" na mayroong kahihinatnan.
+        title: Ang Iyong Digital na Bakas
+      DigitalFootprint_2018:
+        desc: Ang mga guro ay magpapakilala sa mga estudyante ng ideya na paglagay
+          ng impormasyon tungkol sa kanilang mga sarili online ay lilikha ng isang
+          digital na yapak o "bakas" na mayroong kahihinatnan.
+        title: Ang Iyong Digital na Bakas
+      DigitalFootprint_2019:
+        desc: Ang mga guro ay magpapakilala sa mga estudyante ng ideya na paglagay
+          ng impormasyon tungkol sa kanilang mga sarili online ay lilikha ng isang
+          digital na yapak o "bakas" na mayroong kahihinatnan.
+        title: Ang Iyong Digital na Bakas
+      EnvelopeVariables:
+        desc: Ang mga variables at nagbibigay sa atin ng maraming kalayaan sa computer
+          science. Ang araling ito ay nakakatulong na ilarawan kung ano ang mga variables
+          at paano natin magagamit ang mga ito sa napakaraming pamamaraan. Gamitin
+          ang gawaing ito bago (o may kaugnayan) sa aralin tungkol sa paglalahat para
+          makuha talaga ang ideya.
+        title: Balot ng mga Variables
+      EnvelopeVariables_2019:
+        desc: 'nawala ang pagsasalin: en-US.data.unplugged.EnvelopeVariables_2018.desc'
+        title: 'nawala ang pagsasalin: en-US.data.unplugged.EnvelopeVariables_2018.title'
+      ForLoopFun:
+        desc: Alam natin na ang loop ay nagbibigay sa atin ng daan na magawa ang mga
+          bagay nang paulit-ulit, ngunit ngayon ay pag-aaralan natin ang tungkol sa
+          paggamit ng mga loop na may karagdagang istraktura na binuo sa loob nito.
+        title: Saya sa For Loop
+      ForLoopFun_2019:
+        desc: 'nawala ang pagsasalin: en-US.data.unplugged.ForLoopFun_2018.desc'
+        title: 'nawala ang pagsasalin: en-US.data.unplugged.ForLoopFun_2018.title'
+      FunctionalSuncatchers:
+        desc: Ang mga estudyante ay lilikha ng algoritmo gamit ang mga variable at
+          mga functions (piraso ng code na gusto mung gamitin nang paulit-ulit) para
+          makalikha ng mga suncatchers gamit ang sinulid at mga beads.
+        title: Functional na mga Suncatchers
+      GettingLoopy:
+        desc: Ang araling ito ay nagpapakila ng isang pang-program na konsepto ng
+          mga loops (inuulit na mga utos) sa pamamagitan ng isang sayaw na gawain.
+          Ang mga estudyante ay matutuo ng isang simpleng koreograpiya, at pagkatapos
+          ay tuturan na ulitin ito.
+        title: Pagiging Loopy
+      GettingLoopy_2018:
+        desc: Ang araling ito ay nagpapakila ng isang pang-program na konsepto ng
+          mga loops (inuulit na mga utos) sa pamamagitan ng isang sayaw na gawain.
+          Ang mga estudyante ay matutuo ng isang simpleng koreograpiya, at pagkatapos
+          ay tuturan na ulitin ito.
+        title: Pagiging Loopy
+      GettingLoopy_2019:
+        desc: Ang araling ito ay nagpapakila ng isang pang-program na konsepto ng
+          mga loops (inuulit na mga utos) sa pamamagitan ng isang sayaw na gawain.
+          Ang mga estudyante ay matutuo ng isang simpleng koreograpiya, at pagkatapos
+          ay tuturan na ulitin ito.
+        title: Pagiging Loopy
+      GoingPlacesSafely:
+        desc: Ang Internet ay makapangyarihan, ngunit kung minsan ay mapanganib na
+          lugar. Ang mg guro ay nagbibigay ng payo kung paano maging ligtas habang
+          nagbabaybay sa Internet.
+        title: Matiwasay na pagpunta sa mga lugar
+      GoingPlacesSafely_2018:
+        desc: Ang Internet ay makapangyarihan, ngunit kung minsan ay mapanganib na
+          lugar. Ang mg guro ay nagbibigay ng payo kung paano maging ligtas habang
+          nagbabaybay sa Internet.
+        title: Matiwasay na pagpunta sa mga lugar
+      GoingPlacesSafely_2019:
+        desc: Ang Internet ay makapangyarihan, ngunit kung minsan ay mapanganib na
+          lugar. Ang mg guro ay nagbibigay ng payo kung paano maging ligtas habang
+          nagbabaybay sa Internet.
+        title: Matiwasay na pagpunta sa mga lugar
+      GraphPaperProgramming:
+        desc: Ang mga estudyante ay magsusulat ng isang algoritmo (isang hanay ng
+          mga instruksiyon) gamit ang isang hanay ng mga paunang nabigyang kahulugan
+          na mga utos para gabayan ang kanilang mga kamag-aral na makagawa ng isang
+          drowing.
+        title: Graph Paper Programming
+      GraphPaperProgramming_2018:
+        desc: Ang mga estudyante ay magsusulat ng isang algoritmo (isang hanay ng
+          mga instruksiyon) gamit ang isang hanay ng mga paunang nabigyang kahulugan
+          na mga utos para gabayan ang kanilang mga kamag-aral na makagawa ng isang
+          drowing.
+        title: Graph Paper Programming
+      GraphPaperProgramming_2019:
+        desc: Ang mga estudyante ay magsusulat ng isang algoritmo (isang hanay ng
+          mga instruksiyon) gamit ang isang hanay ng mga paunang nabigyang kahulugan
+          na mga utos para gabayan ang kanilang mga kamag-aral na makagawa ng isang
+          drowing.
+        title: Graph Paper Programming
+      GraphingData_2019:
+        desc: Sa araling ito, ang mga mag-aaral ay mangongolekta ng data mula sa isang
+          proyekto sa Play Lab o totoong sitwasyon at gagamitin ito upang gumawa ng
+          mga hula.
+        title: Paglalarawan ng Data
+      Internet:
+        desc: Ang mga estudyante ay magpapadala ng mga mensahe na kumakatawan sa iba't
+          ibang pamamaraan sa pag-transmit sa Internet gamit ang mga piraso ng papel.
+        title: Internet
+      Internet_2019:
+        desc: 'nawala ang pagsasalin: en-US.data.unplugged.Internet_2018.desc'
+        title: 'nawala ang pagsasalin: en-US.data.unplugged.Internet_2018.title'
+      MadGlibs:
+        desc: Ang paglalahat ay isa sa mga pinakaimportanteng kakayahan na dapat mauunawaan
+          ng isang kompyuter na siyentipiko. Ang gawaing ito ay magpapasuri sa iyong
+          mga estudyante ng mga kuwento para sa kanilang kaibahan para maaari nilang
+          ma-abstract ang mga ito. Ang mga nilahat ng mga kuwento ay maging mga template
+          para sa isang masaya at nakakaaliw na mga bagong template.
+        title: Mad Glibs
+      MoveIt:
+        desc: Ang mga estudyante ay lilikha ng mga simpleng algoritmo (grupo ng mga
+          instruksiyon) para mapagalaw ang karakter sa maze gamit ang isang utos.
+        title: Iusog mo, Iusog mo
+      MoveItMoveIt_2018:
+        title: Galawin ito, Galawin ito
+      MoveItMoveIt_2019:
+        title: Galawin ito, Galawin ito
+      PaperPlanes:
+        desc: Ang araling ito ay nagpapahiwatig ng mga pamamaraan na ginagamit natin
+          ang mga algorithmo sa ating pang-araw-araw na buhay, espesipiko ang paggawa
+          ng mga papel na eroplano. Ang araling ito ay nagbigay tuon sa buong larawan
+          ng computer science at kung paano ang mga algoritmo nagdadala ng mga mahahalagang
+          bahagi.
+        title: 'Mga Totoong-buhay na Algoritmo: Papel na Eroplano'
+      PaperPlanes_2018:
+        desc: Ang araling ito ay nagpapahiwatig ng mga pamamaraan na ginagamit natin
+          ang mga algorithmo sa ating pang-araw-araw na buhay, espesipiko ang paggawa
+          ng mga papel na eroplano. Ang araling ito ay nagbigay tuon sa buong larawan
+          ng computer science at kung paano ang mga algoritmo nagdadala ng mga mahahalagang
+          bahagi.
+        title: 'Mga Totoong-buhay na Algoritmo: Papel na Eroplano'
+      PaperPlanes_2019:
+        desc: Ang araling ito ay nagpapahiwatig ng mga pamamaraan na ginagamit natin
+          ang mga algorithmo sa ating pang-araw-araw na buhay, espesipiko ang paggawa
+          ng mga papel na eroplano. Ang araling ito ay nagbigay tuon sa buong larawan
+          ng computer science at kung paano ang mga algoritmo nagdadala ng mga mahahalagang
+          bahagi.
+        title: 'Mga Totoong-buhay na Algoritmo: Papel na Eroplano'
+      PlantASeed:
+        desc: Ang araling ito ay nagpapahiwatig sa mga pamamaraan na gumamit tayo
+          ng mga algoritmo sa ating pang-araw-araw na buhay, gamit ang pagtatanim
+          ng buto bilang halimbawa. Ito ay nagpapakita din sa buong larawan ng computer
+          science at kung paano ang algoritmo nagdadala ng mga mahalagang bahagi.
+        title: 'Mga Totoong-buhay na Algoritmo: Pagtatanim ng Buto'
+      PlantASeed_2018:
+        desc: Ang araling ito ay nagpapahiwatig sa mga pamamaraan na gumamit tayo
+          ng mga algoritmo sa ating pang-araw-araw na buhay, gamit ang pagtatanim
+          ng buto bilang halimbawa. Ito ay nagpapakita din sa buong larawan ng computer
+          science at kung paano ang algoritmo nagdadala ng mga mahalagang bahagi.
+        title: 'Mga Totoong-buhay na Algoritmo: Pagtatanim ng Buto'
+      PlantASeed_2019:
+        desc: Ang araling ito ay nagpapahiwatig sa mga pamamaraan na gumamit tayo
+          ng mga algoritmo sa ating pang-araw-araw na buhay, gamit ang pagtatanim
+          ng buto bilang halimbawa. Ito ay nagpapakita din sa buong larawan ng computer
+          science at kung paano ang algoritmo nagdadala ng mga mahalagang bahagi.
+        title: 'Mga Totoong-buhay na Algoritmo: Pagtatanim ng Buto'
+      RelayProgramming:
+        desc: Ang mga estudyante ay tatakbo sa isang hatirang-karera, kung saan sila
+          ay tatakbo sa paligid ng bakuran para makasulat ng isang algoritmo ayon
+          sa "Graph Paper Programming" na larawan. Maaari lang silang magsulat ng
+          isang instruksiyon sa bawat oras at kung may mali sa isang lugar, kailangan
+          nilang burahin lahat pabalik sa puntong iyon.
+        title: Relay Programming
+      RelayProgramming_2018:
+        desc: Magsisimula ang aktibidad na ito sa isang maikling aralin sa pag-debug
+          at pagtitiyaga, pagkatapos ay mabilisang lilipat sa karera laban sa orasan
+          habang ang mga mag-aaral ay naghahati-hati sa mga team at nagtutulungan
+          upang magsulat ng programa isang instruksiyon sa bawat pagkakataon.
+        title: Relay Programming
+      RelayProgramming_2018_2019:
+        desc: Magsisimula ang aktibidad na ito sa isang maikling aralin sa pag-debug
+          at pagtitiyaga, pagkatapos ay mabilisang lilipat sa karera laban sa orasan
+          habang ang mga mag-aaral ay naghahati-hati sa mga team at nagtutulungan
+          upang magsulat ng programa isang instruksiyon sa bawat pagkakataon.
+        title: Relay Programming
+      SongwritingParameters:
+        desc: Ang mga estudyante ay gagamit ng konsepto ng koro sa isang awitin para
+          matutunan ang tungkol sa pagtukoy at pagtawag ng mga functions.
+        title: Pagsusulat ng Awit
+      SongwritingParameters_2019:
+        desc: 'nawala ang pagsasalin: en-US.data.unplugged.SongwritingParameters_2018.desc'
+        title: 'nawala ang pagsasalin: en-US.data.unplugged.SongwritingParameters_2018.title'
+      SongwritingWithParameters:
+        desc: 'Isa sa pinakahanga-hangang istraktura sa mundo ng computer science
+          ay ang function. Ang mga functions (minsan ay tinatawag na mga pamamaraan)
+          ay maliliit na mga programa na maaari mong gamitin nang paulit-ulit sa loob
+          ng isang mas malaki na programa. Ang araling ito ay makakatulong sa iyong
+          mga estudyante na likas na makakaunawa kung bakit ang pagsama-sama ng mga
+          piraso ng code sa isang function ay lubhang nakakatulong na kasanayan.  '
+        title: Pagsulat ng Awit Gamit ang mga Parameter
+      TangramAlgorithms:
+        desc: Ang araling ito ay nagpapakita sa atin ng isang bagay na mahalaga tungkol
+          sa mga algoritmo. Kung gagawin mo ang isang algoritmo na simple lang, mayroong
+          maraming pamamaraan para magamit ito. Kung gusto mong masiguro na lahat
+          ay magtatapos sa parehong bagay, ang iyong algoritmo ay nangangailangan
+          ng mas maraming detalye.
+        title: Tangram na mga Algoritmo
       Unplug1:
-        title: Panimula sa Computer Science
         desc: Ipinapakilala ng araling ito ang konsepto ng Computer Science at ipinapaliwanag
           kung ano ang ginagawa ng Computer scientist. Sa katapusan ng activity na
           ito, ang mga mag-aaral ay may pagkakataon upang malaman ang papel na ginagampanan
@@ -13,8 +351,19 @@ fil:
           na nauugnay sa mga aralin na susunod, ngunit ang pagtatanghal sa mga ito
           sa isang masaya at mapaglarong paraan ay mas produktibo kaysa sa paghihintay
           para sa higit pang advanced na mga pagkakataon.
+        title: Panimula sa Computer Science
+      Unplug10:
+        desc: Sa araling ito, ang mga estudyante ay magpapanggap na dumaloy sa Internet,
+          at sa proseso ay mapag-aralan ang tungkol sa mga web addresses, IPs at mga
+          DNS.
+        title: The Internet
+      Unplug11:
+        desc: Ang huling pagtatapos sa unang 20-oras na serye ay makakatulong sa klase
+          na gunitain ang kanilang mga paboritong sandali, habang nagbibigay sa kanila
+          sa mga susunod na mga hakbang na maaari nilang kunin kung sila ay interesadong
+          magpatuloy sa kanilang paglalakbay sa computer science.
+        title: Tapusin na
       Unplug2:
-        title: Computational Thinking
         desc: Walang ibang gamit kundi ang papel at mga marker, ang mga estudyante
           ay matututo sa apat na mga hakbang ng kompyutasiyonal na pag-iisip. Pagkatapos
           ng maikling panimula, ang mga estudyante ay dapat hahatiin sa mga koponan
@@ -28,16 +377,16 @@ fil:
           magpapalitan ng mga algoritmo sa ibang grupo at gumuhit ng isang halimaw
           ayon sa kung ano ang nakalagay sa algoritmo. Ang drowing ba ay kung ano
           ang pakay ng orihinal na koponan?
+        title: Computational Thinking
       Unplug3:
-        title: Graph Paper Programming
         desc: Sa pamamagitan ng pag-program sa bawat isa na magguhit ng mga larawan,
           ang mga estudyante ay magsimulang maintindihan kung ano talaga ang pag-program.
           Ang klase ay magsisimula sa pagbigay ng instruksiyon ng mga estudyante sa
           isa't isa na kulayan ang mga parisukat sa graph na papel sa pagsisikap na
           makopya ang kasalukuyang larawan. Kung may oras pa, ang aralin ay magtatapos
           sa mga larawan na nalikha ng mga estudyante para sa sarili nila.
+        title: Graph Paper Programming
       Unplug4:
-        title: Mga algorithm
         desc: Ang araling ito ay naglalakip sa mga algoritmo. Gamit ang mga tangram
           na hugis at ang graph na papel, ang unang pagsasanay ay magpapakita kung
           gaano ka importante ang paggawa sa mga instruksiyon na malinaw at hindi
@@ -45,8 +394,8 @@ fil:
           mo maaring matupi papel para makagawa ng parihaba, bigyan diin na ang ilang
           pamamaraan ay nangangailangan ng mas marami o mas kaunti na tupi kaysa sa
           iba.
+        title: Mga algorithm
       Unplug5:
-        title: Mga function
         desc: Sa araling ito, ang mga estudyante ay gagawa ng isang suncatcher mula
           sa mga lubid, mga beads, at iisang espesyal na alindog. Ang mga estudyante
           ay susunod sa isang serye ng paulit-ulit na mga  hakbang, at pagkatapos
@@ -60,646 +409,297 @@ fil:
           na mga materyales at maglikha ng mga hindi malinaw na mga termino para sa
           indibidwal na suplay. Ang paggamit ng mga karaniwang placeholder ay isang
           magandang panimula sa mga variables.
+        title: Mga function
       Unplug6:
-        title: Mga kondisyon
         desc: Ito ay isang laro para sa klase. Pagkatapos ipakilala ang ideya ng mga
           kondisyonal, mga if na pahayag,  at mga loops, ang klase ay maaaring magsasanay
           nang sabay-sabay gamit ang isang paunang nasulat na programa, isang kahon
           ng mga kards, at ang suwerte ng pagbunot.
+        title: Mga kondisyon
       Unplug7:
-        title: Song Writing
         desc: Ang pagbabasa ng mga liriko ay madaling maunawaan na gawin ng karamihan
           sa mga estudyante. Gagagawa kami ng isang gawain na isang karaniwang kaalaman
           at lilipat sa isang matatag na edukasyon tungkol sa pag-define at pagtawag
           ng mga functions. Kapag ang estudyante ay kabisado na sa pag-define/pagtawag
           na proseso, tayo ay magdadagdag ng karagdagang kakayahan na kalakip ng pagpasa
           ng mga parameter sa loob ng mga function calls na iyon.
+        title: Song Writing
       Unplug8:
-        title: Abstraction
         desc: Ang gawaing ito ang bumubuo sa pang-araw-araw na gawain ng iyong mga
           estudyante at ang Mad-Lib na istilo ng pag-iisip na laro ay makakatulong
           sa iyong klase na matuto tungkol sa pagkaepektibo ng paglalahat.
+        title: Abstraction
       Unplug9:
-        title: Relay Programming
         desc: Ang araling ito ay magdadala ng isang ideya mula sa nakaraang gawain
           (4. Graph Paper na Pag-Program) at gagamitin ang mga kakayahang iyon upang
           bigyang-diin ang kahalagahan ng pagkompleto ng mga programa na gumagana
           ayon sa pagkasunod-sunod at palaging pagsusuri sa mga programa para sa mga
           "bugs".
-      Unplug10:
-        title: The Internet
-        desc: Sa araling ito, ang mga estudyante ay magpapanggap na dumaloy sa Internet,
-          at sa proseso ay mapag-aralan ang tungkol sa mga web addresses, IPs at mga
-          DNS.
-      Unplug11:
-        title: Tapusin na
-        desc: Ang huling pagtatapos sa unang 20-oras na serye ay makakatulong sa klase
-          na gunitain ang kanilang mga paboritong sandali, habang nagbibigay sa kanila
-          sa mga susunod na mga hakbang na maaari nilang kunin kung sila ay interesadong
-          magpatuloy sa kanilang paglalakbay sa computer science.
-      UnplugHappyMaps:
-        title: Happy Maps
-        desc: Ang mga estudyante ay lilikha ng mga simpleng algoritmo (grupo ng mga
-          instruksiyon) para mapagalaw ang karakter sa maze gamit ang isang utos.
-      MoveIt:
-        title: Iusog mo, Iusog mo
-        desc: Ang mga estudyante ay lilikha ng mga simpleng algoritmo (grupo ng mga
-          instruksiyon) para mapagalaw ang karakter sa maze gamit ang isang utos.
-      PlantASeed:
-        title: 'Mga Totoong-buhay na Algoritmo: Pagtatanim ng Buto'
-        desc: Ang araling ito ay nagpapahiwatig sa mga pamamaraan na gumamit tayo
-          ng mga algoritmo sa ating pang-araw-araw na buhay, gamit ang pagtatanim
-          ng buto bilang halimbawa. Ito ay nagpapakita din sa buong larawan ng computer
-          science at kung paano ang algoritmo nagdadala ng mga mahalagang bahagi.
-      BuildingAFoundation:
-        title: Gumawa ng Foundation
-        desc: Ang mga estudyante ay gagawa ng isang istraktura gamit ang mga binigay
-          na mga suplay. Ang mga istraktura ay dapat kumukumpleto ng isang gawain
-          (maabot ang isang tiyak na taas o magpasan ng isang tiyak na timbang), at
-          ang mga estudyante ay magtatalakay sa pagiging masigasig kapag ang mga bagay
-          ay naging kumplikado.
-      GettingLoopy:
-        title: Pagiging Loopy
-        desc: Ang araling ito ay nagpapakila ng isang pang-program na konsepto ng
-          mga loops (inuulit na mga utos) sa pamamagitan ng isang sayaw na gawain.
-          Ang mga estudyante ay matutuo ng isang simpleng koreograpiya, at pagkatapos
-          ay tuturan na ulitin ito.
-      RelayProgramming:
         title: Relay Programming
-        desc: Ang mga estudyante ay tatakbo sa isang hatirang-karera, kung saan sila
-          ay tatakbo sa paligid ng bakuran para makasulat ng isang algoritmo ayon
-          sa "Graph Paper Programming" na larawan. Maaari lang silang magsulat ng
-          isang instruksiyon sa bawat oras at kung may mali sa isang lugar, kailangan
-          nilang burahin lahat pabalik sa puntong iyon.
-      Conditionals:
-        title: Mga conditional
-        desc: Para matuto tungkol sa mga kondisyonal na mga pahayag, ang mga estudyante
-          ay maglalaro ng isang baraha na laro at maglikha ng mga patakaran gaya ng
-          "kung makakuha ako ng pulang baraha, makakapuntos ako" at "kung makakuha
-          ako ng itim na baraha, makakapuntos ka."
-      BigEvent:
-        title: The Big Event
-        desc: Ang mga estudyante ay pinapakilala sa mga pang-program na konsepto ng
-          mga "events", kung saan ito ay mga aksyon na parating sinubaybayan ng isang
-          kompyuter. Ang guro ay pipindot ng isang button sa papel na remote at ang
-          mga estudyante ay tutugon ayon sa button na napindot.
-      GoingPlacesSafely:
-        title: Matiwasay na pagpunta sa mga lugar
-        desc: Ang Internet ay makapangyarihan, ngunit kung minsan ay mapanganib na
-          lugar. Ang mg guro ay nagbibigay ng payo kung paano maging ligtas habang
-          nagbabaybay sa Internet.
-      GraphPaperProgramming:
-        title: Graph Paper Programming
-        desc: Ang mga estudyante ay magsusulat ng isang algoritmo (isang hanay ng
-          mga instruksiyon) gamit ang isang hanay ng mga paunang nabigyang kahulugan
-          na mga utos para gabayan ang kanilang mga kamag-aral na makagawa ng isang
-          drowing.
-      PaperPlanes:
-        title: 'Mga Totoong-buhay na Algoritmo: Papel na Eroplano'
-        desc: Ang araling ito ay nagpapahiwatig ng mga pamamaraan na ginagamit natin
-          ang mga algorithmo sa ating pang-araw-araw na buhay, espesipiko ang paggawa
-          ng mga papel na eroplano. Ang araling ito ay nagbigay tuon sa buong larawan
-          ng computer science at kung paano ang mga algoritmo nagdadala ng mga mahahalagang
-          bahagi.
-      BinaryBracelets:
-        title: Binary na mga Pulseras
-        desc: Ang mga estudyante ay lilikha ng mga pulseras bilang isang representasyon
-          ng unang letra ng kanilang pangalan sa binary, Ang mga estudyante ay matuto
-          na ang mga datos ay maaaring irepresenta at itago sa higit sa isang pamamaraan.
-      DigitalFootprint:
-        title: Ang Iyong Digital na Bakas
-        desc: Ang mga guro ay magpapakilala sa mga estudyante ng ideya na paglagay
-          ng impormasyon tungkol sa kanilang mga sarili online ay lilikha ng isang
-          digital na yapak o "bakas" na mayroong kahihinatnan.
-      ComputationalThinking:
-        title: Computational Thinking
-        desc: Ang mga estudyante ay gagamit ng mga hakbang sa kompyutasyonal na pag-iisip
-          (paghati-hati, pagtugma ng mga paterno, paglalahat, algorimo) para malaman
-          kung paano laruin ang laro na walang dalang instruksiyon.
-      FunctionalSuncatchers:
-        title: Functional na mga Suncatchers
-        desc: Ang mga estudyante ay lilikha ng algoritmo gamit ang mga variable at
-          mga functions (piraso ng code na gusto mung gamitin nang paulit-ulit) para
-          makalikha ng mga suncatchers gamit ang sinulid at mga beads.
-      SongwritingParameters:
-        title: Pagsusulat ng Awit
-        desc: Ang mga estudyante ay gagamit ng konsepto ng koro sa isang awitin para
-          matutunan ang tungkol sa pagtukoy at pagtawag ng mga functions.
-      DiceRace:
-        title: 'Mga Totoong Buhay na mga Algoritmo: Betu-beto na Habulan'
-        desc: Ang araling ito ay tumatawag sa mga pamamaraan na gumagamit tayo ng
-          mga algoritmo sa ating araw-araw na buhay. Bilang bahagi nito, ang mga estudyante
-          ay magkilala at magsulay ng isang algoritmo para sa isang laro na betu-beto
-          na karera.
-      Internet:
-        title: Internet
-        desc: Ang mga estudyante ay magpapadala ng mga mensahe na kumakatawan sa iba't
-          ibang pamamaraan sa pag-transmit sa Internet gamit ang mga piraso ng papel.
-      Crowdsourcing:
-        title: Pag-crowdsourcing
-        desc: Ang mga estudyante ay gagamit ng crowdsourcing, isang paraan sa paglutas
-          ng problema sa computer science, mas mainam na kumpletohin ang isang gawain
-          sa buong klase kaysa kung ang isang estudyante ay susubok ng mag-isa.
-      DigitalCitizenship:
-        title: Digital na Pagkamamamayan
-        desc: Ang mga estudyante ay tutuklas sa kaibahan ng pribadong impormasyon
-          at personal na impormasyon, para matanto nila kung alin ang ligtas at di-ligtas
-          na ibahagi online.
-      TangramAlgorithms:
-        title: Tangram na mga Algoritmo
-        desc: Ang araling ito ay nagpapakita sa atin ng isang bagay na mahalaga tungkol
-          sa mga algoritmo. Kung gagawin mo ang isang algoritmo na simple lang, mayroong
-          maraming pamamaraan para magamit ito. Kung gusto mong masiguro na lahat
-          ay magtatapos sa parehong bagay, ang iyong algoritmo ay nangangailangan
-          ng mas maraming detalye.
-      EnvelopeVariables:
-        title: Balot ng mga Variables
-        desc: Ang mga variables at nagbibigay sa atin ng maraming kalayaan sa computer
-          science. Ang araling ito ay nakakatulong na ilarawan kung ano ang mga variables
-          at paano natin magagamit ang mga ito sa napakaraming pamamaraan. Gamitin
-          ang gawaing ito bago (o may kaugnayan) sa aralin tungkol sa paglalahat para
-          makuha talaga ang ideya.
-      MadGlibs:
-        title: Mad Glibs
-        desc: Ang paglalahat ay isa sa mga pinakaimportanteng kakayahan na dapat mauunawaan
-          ng isang kompyuter na siyentipiko. Ang gawaing ito ay magpapasuri sa iyong
-          mga estudyante ng mga kuwento para sa kanilang kaibahan para maaari nilang
-          ma-abstract ang mga ito. Ang mga nilahat ng mga kuwento ay maging mga template
-          para sa isang masaya at nakakaaliw na mga bagong template.
-      ForLoopFun:
-        title: Saya sa For Loop
-        desc: Alam natin na ang loop ay nagbibigay sa atin ng daan na magawa ang mga
-          bagay nang paulit-ulit, ngunit ngayon ay pag-aaralan natin ang tungkol sa
-          paggamit ng mga loop na may karagdagang istraktura na binuo sa loob nito.
-      SongwritingWithParameters:
-        title: Pagsulat ng Awit Gamit ang mga Parameter
-        desc: 'Isa sa pinakahanga-hangang istraktura sa mundo ng computer science
-          ay ang function. Ang mga functions (minsan ay tinatawag na mga pamamaraan)
-          ay maliliit na mga programa na maaari mong gamitin nang paulit-ulit sa loob
-          ng isang mas malaki na programa. Ang araling ito ay makakatulong sa iyong
-          mga estudyante na likas na makakaunawa kung bakit ang pagsama-sama ng mga
-          piraso ng code sa isang function ay lubhang nakakatulong na kasanayan.  '
-      BinaryImages:
-        title: Binary na mga Larawan
-        desc: Kahit karamihan sa mga tao ay nag-iisip sa binary bilang zeros at ones
-          lang, ang ating nakaraan mga kurso ay nagtuturo sa mga estudyante na ang
-          impormasyon ay maaaring irepresenta sa iba't ibang mga opsyon sa binary.
-          Ang araling ito ay gumagamit sa konseptong ito habang ipinapakita kung paano
-          ang kompyuter nagtatago ng mas komplikadong mga impormasyon (gaya ng mga
-          larawan at mga kulay) pati na rin sa binary.
+      UnplugHappyMaps:
+        desc: Ang mga estudyante ay lilikha ng mga simpleng algoritmo (grupo ng mga
+          instruksiyon) para mapagalaw ang karakter sa maze gamit ang isang utos.
+        title: Happy Maps
+      UnplugHappyMaps_2018:
+        desc: Ang mga estudyante ay lilikha ng mga simpleng algoritmo (grupo ng mga
+          instruksiyon) para mapagalaw ang karakter sa maze gamit ang isang utos.
+        title: Happy Maps
+      UnplugHappyMaps_2019:
+        desc: Ang mga estudyante ay lilikha ng mga simpleng algoritmo (grupo ng mga
+          instruksiyon) para mapagalaw ang karakter sa maze gamit ang isang utos.
+        title: Happy Maps
       VideoGamesCoordinatePlanes:
-        title: Mga Video Games at mga Coordinate Planes
         desc: Tuklasin kung paano ang mga video games na gusto mong laruin ay pinapatakbo
           sa pamamagitan ng algebra! Tuklasin kung paano ang mga ekspresyon sa algebra
           at ang coordinate plane ay maaaring makatulong sa atin na unawain kung paano
           gumagana ang mga video games, at pagkatapos ay magsimulang magplano para
           sa video game na ililikha mo.
-      Contracts:
-        title: Mga Kontrata, Domain, at ang Abot
-        desc: Ang mga kontrata ay nagbibigay sa ating ng paraan para maunawaan at
-          matalakay ang mga functions. Sa araling ito, titingnan natin kung paano
-          ang mga kontrata nakakatulong sa atin na intindihin ang mga bagong wika
-          na pang-program o function.
-      DesignRecipe:
-        title: Ang Resipe ng Pag-disenyo
-        desc: Sa huling yugto, ang mga estudyante ay magsusulat ng iilang napakasimple
-          na mga functions - ngunit ang mas sopistikadong mga function ay nangangailangan
-          ng mas maingat na pamamaraan. Ang Recipe ng Pagdisenyo ay isang inayos na
-          pamamaraan sa pagsulat ng mga functions kalakip na ang pagsusulat ng mga
-          test cases para masiguro na ang mga functions ay gumagana gaya ng inaasahan
-          natin.
-      Booleans:
-        title: Mga Booleans at Lohika
-        desc: Ang mga boolean ay ang pang-apat at huling tipo ng datos na matutunan
-          mo sa kursong ito. Sa gawaing ito, matutunan mo kung ano ang mga Boolean,
-          at kung paano sila nakakatulong sa atin na magsulat ng mga functions na
-          lohikal na nag-iisip
-      ConditionalsPiecewiseFunctions:
-        title: Mga Kondisyonal at Piecewise na mga Functions
-        desc: Ang mga parameters na pinasa natin sa mga functions ay naging sanhi
-          na mabago ang output ayon sa isang napakamatibay na paterno. Kung gusto
-          natin ang mga parameters na may halaga, na maglikha ng mga output gamit
-          ang isang paterno ngunit ang ibang halaga ay gagamit ng ibang paterno. Ito
-          ay kung saan kinakailangan ang mga kondisyonal...
-      CollisionDetection:
-        title: Pagtukoy sa Banggaan at ang Pythagorean na Theorem
-        desc: Ang pagtukoy sa mga bagay sa screen touch ay isang mahalagang aspeto
-          ng karamihang mga laro. Sa araling ito, titingnan natin kung paano ang Pythagorean
-          Theorem at ang Distance Formula ay maaaring gamitin para masukat ang distansiya
-          sa pagitan ng dalawang punto sa isang plane, at pagkatapos ay magpasya tayo
-          kung ang dalawang punto na iyon (o mga karakter sa laro) ay nagkabanggaan.
-      courseA_unplugged_loops:
-        title: Naka-Unplug na mga Loop
-        desc: Sa araling ito, matutunan mo ang tungkol sa mga loops!
-      courseB_unplugged_MRF:
-        title: Unplugged na Aktibidad
-        desc: Sa araling ito, ikaw ay 'mag-program' sa iyong mga kaibigan!
-      courseB_unplugged_loopyMRF:
-        title: Unplugged na Aktibidad
-        desc: Tulad sa "My Robotic Friends", ikaw ay "mag-program" ng iyong mga kaibigan,
-          ngunit ngayon ay gamit ang mga loops!
-      courseC_Unplugged_ScreenOutTheMean:
-        title: Unplugged na Aktibidad
-        desc: Ngayon, matutunan mo kung ano ang gagawin kapag may isang tao na nambabastos
-          online.
-      courseD_unplugged_digitalCitizenship:
-        title: Unplugged na Aktibidad
-        desc: Ngayon matutunan mo kung ano ang ibig sabihin ng maging isang Digital
-          na Mamamayan.
-      courseE_unplugged_privateInformation:
-        title: 'Edukasyon na Sentido Komun: Pribado at Personal na Impormasyon '
-        desc: Ngayon ay matutunan mo ang pagkakaiba ng privado at personal na impormasyon!
-      courseF_unplugged_powerOfWords:
-        title: Unplugged na Aktibidad
-        desc: Ngayon, matutunan mo kung ano ang gagawin kapag may isang tao na nambabastos
-          online.
-      deeper learning description:
-        desc: 'nawala ang pagsasalin: en-US.data.unplugged.desc'
-      courseAB_unplugged_plantASeed:
-        title: 'Mga Totoong-buhay na Algoritmo: Pagtatanim ng Buto'
-        desc: Ang araling ito ay nagpapahiwatig sa mga pamamaraan na gumamit tayo
-          ng mga algoritmo sa ating pang-araw-araw na buhay, gamit ang pagtatanim
-          ng buto bilang halimbawa. Ito ay nagpapakita din sa buong larawan ng computer
-          science at kung paano ang algoritmo nagdadala ng mga mahalagang bahagi.
-      courseA_unplugged_happyMaps:
-        title: Happy Maps
-        desc: Ang mga estudyante ay lilikha ng mga simpleng algoritmo (grupo ng mga
-          instruksiyon) para mapagalaw ang karakter sa maze gamit ang isang utos.
-      courseA_unplugged_goingPlacesSafely:
-        title: Matiwasay na pagpunta sa mga lugar
-        desc: Ang Internet ay makapangyarihan, ngunit kung minsan ay mapanganib na
-          lugar. Ang mg guro ay nagbibigay ng payo kung paano maging ligtas habang
-          nagbabaybay sa Internet.
+        title: Mga Video Games at mga Coordinate Planes
       courseABC_unplugged_bigEvent:
-        title: The Big Event
         desc: Ang mga estudyante ay pinapakilala sa mga pang-program na konsepto ng
           mga "events", kung saan ito ay mga aksyon na parating sinubaybayan ng isang
           kompyuter. Ang guro ay pipindot ng isang button sa papel na remote at ang
           mga estudyante ay tutugon ayon sa button na napindot.
+        title: The Big Event
+      courseAB_unplugged_plantASeed:
+        desc: Ang araling ito ay nagpapahiwatig sa mga pamamaraan na gumamit tayo
+          ng mga algoritmo sa ating pang-araw-araw na buhay, gamit ang pagtatanim
+          ng buto bilang halimbawa. Ito ay nagpapakita din sa buong larawan ng computer
+          science at kung paano ang algoritmo nagdadala ng mga mahalagang bahagi.
+        title: 'Mga Totoong-buhay na Algoritmo: Pagtatanim ng Buto'
+      courseA_unplugged_goingPlacesSafely:
+        desc: Ang Internet ay makapangyarihan, ngunit kung minsan ay mapanganib na
+          lugar. Ang mg guro ay nagbibigay ng payo kung paano maging ligtas habang
+          nagbabaybay sa Internet.
+        title: Matiwasay na pagpunta sa mga lugar
+      courseA_unplugged_happyMaps:
+        desc: Ang mga estudyante ay lilikha ng mga simpleng algoritmo (grupo ng mga
+          instruksiyon) para mapagalaw ang karakter sa maze gamit ang isang utos.
+        title: Happy Maps
+      courseA_unplugged_loops:
+        desc: Sa araling ito, matutunan mo ang tungkol sa mga loops!
+        title: Naka-Unplug na mga Loop
+      courseA_unplugged_loops_2018:
+        desc: Sa araling ito, matutunan mo ang tungkol sa mga loops!
+        title: Naka-Unplug na mga Loop
+      courseA_unplugged_loops_2019:
+        desc: Sa araling ito, matutunan mo ang tungkol sa mga loops!
+        title: Naka-Unplug na mga Loop
+      courseB_unplugged_CnC_2018:
+        desc: Pinahiram sa Computer Science Fundamentals ng team sa Copyright and
+          Creativity, umiiral ang araling ito upang tulungan ang mga mag-aaral na
+          maunawaan ang malikhaing proseso ng pagbabahagi at inspirasyon. Kasabay
+          nito ang pagsulong ng malikhaing pagpapahayag at ang pangangailangang maging
+          patas sa malikhaing gawain.
+        title: Mahusay na Gumawa at Maglaro ng Patas
+      courseB_unplugged_CnC_2019:
+        desc: Pinahiram sa Computer Science Fundamentals ng team sa Copyright and
+          Creativity, umiiral ang araling ito upang tulungan ang mga mag-aaral na
+          maunawaan ang malikhaing proseso ng pagbabahagi at inspirasyon. Kasabay
+          nito ang pagsulong ng malikhaing pagpapahayag at ang pangangailangang maging
+          patas sa malikhaing gawain.
+        title: Mahusay na Gumawa at Maglaro ng Patas
+      courseB_unplugged_MRF:
+        desc: Sa araling ito, ikaw ay 'mag-program' sa iyong mga kaibigan!
+        title: Unplugged na Aktibidad
+      courseB_unplugged_MRF_2018:
+        desc: Matutong magprograma sa pamamagitan ng pagsulat ng code para sa mga
+          kaibigan mo!
+        title: Ang Robot Kong Mga Kaibigan
+      courseB_unplugged_MRF_2019:
+        desc: Matutong magprograma sa pamamagitan ng pagsulat ng code para sa mga
+          kaibigan mo!
+        title: Ang Robot Kong Mga Kaibigan
       courseB_unplugged_digitalFootprint:
-        title: Ang Iyong Digital na Bakas
         desc: Ang mga guro ay magpapakilala sa mga estudyante ng ideya na paglagay
           ng impormasyon tungkol sa kanilang mga sarili online ay lilikha ng isang
           digital na yapak o "bakas" na mayroong kahihinatnan.
+        title: Ang Iyong Digital na Bakas
+      courseB_unplugged_loopyMRF:
+        desc: Tulad sa "My Robotic Friends", ikaw ay "mag-program" ng iyong mga kaibigan,
+          ngunit ngayon ay gamit ang mga loops!
+        title: Unplugged na Aktibidad
+      courseB_unplugged_loopyMRF_2019:
+        title: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
+      courseB_unplugged_passwords_2019:
+        desc: Tuklasin kung bakit gumagamit ng mga password ang mga tao, alamin ang
+          mga benepisyo ng paggamit ng mga password, at tumuklas ng mga diskarte sa
+          paggawa at pagpapanatiling matatag at secure na mga password.
+        title: Mga Makapangyarihang Password
+      courseC_Unplugged_ScreenOutTheMean:
+        desc: Ngayon, matutunan mo kung ano ang gagawin kapag may isang tao na nambabastos
+          online.
+        title: Unplugged na Aktibidad
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        desc: Ngayon, matutunan mo kung ano ang gagawin kapag may isang tao na nambabastos
+          online.
+        title: Unplugged na Aktibidad
+      courseC_Unplugged_ScreenOutTheMean_2019:
+        desc: Ngayon, matutunan mo kung ano ang gagawin kapag may isang tao na nambabastos
+          online.
+        title: Unplugged na Aktibidad
+      courseC_unplugged_binaryBracelets:
+        desc: Ang mga estudyante ay lilikha ng mga pulseras bilang isang representasyon
+          ng unang letra ng kanilang pangalan sa binary, Ang mga estudyante ay matuto
+          na ang mga datos ay maaaring irepresenta at itago sa higit sa isang pamamaraan.
+        title: Binary na mga Pulseras
       courseC_unplugged_buildingAFoundation:
-        title: Gumawa ng Foundation
         desc: Ang mga estudyante ay gagawa ng isang istraktura gamit ang mga binigay
           na mga suplay. Ang mga istraktura ay dapat kumukumpleto ng isang gawain
           (maabot ang isang tiyak na taas o magpasan ng isang tiyak na timbang), at
           ang mga estudyante ay magtatalakay sa pagiging masigasig kapag ang mga bagay
           ay naging kumplikado.
+        title: Gumawa ng Foundation
+      courseC_unplugged_gettingLoopy:
+        desc: Ang araling ito ay nagpapakila ng isang pang-program na konsepto ng
+          mga loops (inuulit na mga utos) sa pamamagitan ng isang sayaw na gawain.
+          Ang mga estudyante ay matutuo ng isang simpleng koreograpiya, at pagkatapos
+          ay tuturan na ulitin ito.
+        title: Pagiging Loopy
       courseC_unplugged_paperPlanes:
-        title: 'Mga Totoong-buhay na Algoritmo: Papel na Eroplano'
         desc: Ang araling ito ay nagpapahiwatig ng mga pamamaraan na ginagamit natin
           ang mga algorithmo sa ating pang-araw-araw na buhay, espesipiko ang paggawa
           ng mga papel na eroplano. Ang araling ito ay nagbigay tuon sa buong larawan
           ng computer science at kung paano ang mga algoritmo nagdadala ng mga mahahalagang
           bahagi.
-      courseC_unplugged_gettingLoopy:
-        title: Pagiging Loopy
-        desc: Ang araling ito ay nagpapakila ng isang pang-program na konsepto ng
-          mga loops (inuulit na mga utos) sa pamamagitan ng isang sayaw na gawain.
-          Ang mga estudyante ay matutuo ng isang simpleng koreograpiya, at pagkatapos
-          ay tuturan na ulitin ito.
-      courseC_unplugged_binaryBracelets:
-        title: Binary na mga Pulseras
-        desc: Ang mga estudyante ay lilikha ng mga pulseras bilang isang representasyon
-          ng unang letra ng kanilang pangalan sa binary, Ang mga estudyante ay matuto
-          na ang mga datos ay maaaring irepresenta at itago sa higit sa isang pamamaraan.
-      courseD_unplugged_graphPaperProgramming:
-        title: Graph Paper Programming
-        desc: Ang mga estudyante ay magsusulat ng isang algoritmo (isang hanay ng
-          mga instruksiyon) gamit ang isang hanay ng mga paunang nabigyang kahulugan
-          na mga utos para gabayan ang kanilang mga kamag-aral na makagawa ng isang
-          drowing.
-      courseD_unplugged_relayProgramming:
-        title: Relay Programming
-        desc: Ang mga estudyante ay tatakbo sa isang hatirang-karera, kung saan sila
-          ay tatakbo sa paligid ng bakuran para makasulat ng isang algoritmo ayon
-          sa "Graph Paper Programming" na larawan. Maaari lang silang magsulat ng
-          isang instruksiyon sa bawat oras at kung may mali sa isang lugar, kailangan
-          nilang burahin lahat pabalik sa puntong iyon.
-      courseD_unplugged_conditionalsCards:
-        title: Mga Conditional gamit ang mga Card
-        desc: Para matuto tungkol sa mga kondisyonal na mga pahayag, ang mga estudyante
-          ay maglalaro ng isang baraha na laro at maglikha ng mga patakaran gaya ng
-          "kung makakuha ako ng pulang baraha, makakapuntos ako" at "kung makakuha
-          ako ng itim na baraha, makakapuntos ka."
+        title: 'Mga Totoong-buhay na Algoritmo: Papel na Eroplano'
       courseD_unplugged_binaryImages:
-        title: Binary na mga Larawan
         desc: Kahit karamihan sa mga tao ay nag-iisip sa binary bilang zeros at ones
           lang, ang ating nakaraan mga kurso ay nagtuturo sa mga estudyante na ang
           impormasyon ay maaaring irepresenta sa iba't ibang mga opsyon sa binary.
           Ang araling ito ay gumagamit sa konseptong ito habang ipinapakita kung paano
           ang kompyuter nagtatago ng mas komplikadong mga impormasyon (gaya ng mga
           larawan at mga kulay) pati na rin sa binary.
+        title: Binary na mga Larawan
+      courseD_unplugged_conditionalsCards:
+        desc: Para matuto tungkol sa mga kondisyonal na mga pahayag, ang mga estudyante
+          ay maglalaro ng isang baraha na laro at maglikha ng mga patakaran gaya ng
+          "kung makakuha ako ng pulang baraha, makakapuntos ako" at "kung makakuha
+          ako ng itim na baraha, makakapuntos ka."
+        title: Mga Conditional gamit ang mga Card
+      courseD_unplugged_digitalCitizenship:
+        desc: Ngayon matutunan mo kung ano ang ibig sabihin ng maging isang Digital
+          na Mamamayan.
+        title: Unplugged na Aktibidad
+      courseD_unplugged_digitalCitizenship_2018:
+        desc: Ngayon matutunan mo kung ano ang ibig sabihin ng maging isang Digital
+          na Mamamayan.
+        title: Unplugged na Aktibidad
+      courseD_unplugged_digitalCitizenship_2019:
+        desc: Ngayon matutunan mo kung ano ang ibig sabihin ng maging isang Digital
+          na Mamamayan.
+        title: Unplugged na Aktibidad
+      courseD_unplugged_graphPaperProgramming:
+        desc: Ang mga estudyante ay magsusulat ng isang algoritmo (isang hanay ng
+          mga instruksiyon) gamit ang isang hanay ng mga paunang nabigyang kahulugan
+          na mga utos para gabayan ang kanilang mga kamag-aral na makagawa ng isang
+          drowing.
+        title: Graph Paper Programming
+      courseD_unplugged_relayProgramming:
+        desc: Ang mga estudyante ay tatakbo sa isang hatirang-karera, kung saan sila
+          ay tatakbo sa paligid ng bakuran para makasulat ng isang algoritmo ayon
+          sa "Graph Paper Programming" na larawan. Maaari lang silang magsulat ng
+          isang instruksiyon sa bawat oras at kung may mali sa isang lugar, kailangan
+          nilang burahin lahat pabalik sa puntong iyon.
+        title: Relay Programming
+      courseE_simon_says_2019:
+        desc: "Maglaro at isipin kung anong mga utos ang kailangan upang makuha ang
+          tamang resulta.\r\n\r\n![test image](https://code.org/images/logo.png)"
+        title: Sabi ni Simon
+      courseE_unplugged_CnC_2018:
+        desc: Pinahiram sa Computer Science Fundamentals ng team sa Copyright at Creativity,
+          umiiral ang araling ito upang tulungan ang mga mag-aaral na maunawaan ang
+          mga hamon at benepisyo ng paggalang sa pagmamay-ari at copyright, partikular
+          sa mga digital na kapaligiran. Dapat hikayatin ang mga mag-aaral na igalang
+          ang mga karapatan ng mga artista bilang isang mahalagang bahagi ng pagiging
+          etikal na digital na mamamayan.
+        title: Digital na Pagbabahagi
+      courseE_unplugged_CnC_2019:
+        desc: Pinahiram sa Computer Science Fundamentals ng team sa Copyright at Creativity,
+          umiiral ang araling ito upang tulungan ang mga mag-aaral na maunawaan ang
+          mga hamon at benepisyo ng paggalang sa pagmamay-ari at copyright, partikular
+          sa mga digital na kapaligiran. Dapat hikayatin ang mga mag-aaral na igalang
+          ang mga karapatan ng mga artista bilang isang mahalagang bahagi ng pagiging
+          etikal na digital na mamamayan.
+        title: Digital na Pagbabahagi
+      courseE_unplugged_accessAbility_2019:
+        desc: Matuto tungkol sa pagiging madaling ma-access at ang halaga ng empatiya
+          sa pamamagitan ng brainstorming at pagdidisenyo ng mga naa-access na solusyon
+          sa mga hypothetical na app.
+        title: Kakayahang Pag-access
+      courseE_unplugged_crowdsourcing:
+        desc: Ang mga estudyante ay gagamit ng crowdsourcing, isang paraan sa paglutas
+          ng problema sa computer science, mas mainam na kumpletohin ang isang gawain
+          sa buong klase kaysa kung ang isang estudyante ay susubok ng mag-isa.
+        title: Pag-crowdsourcing
       courseE_unplugged_diceRace:
-        title: 'Mga Totoong-Buhay na Algorimo: Betu-beto na Habulan'
         desc: Ang araling ito ay tumatawag sa mga pamamaraan na gumagamit tayo ng
           mga algoritmo sa ating araw-araw na buhay. Bilang bahagi nito, ang mga estudyante
           ay magkilala at magsulay ng isang algoritmo para sa isang laro na betu-beto
           na karera.
-      courseE_unplugged_songwritingParameters:
-        title: Pagsulat ng Awit na may mga Paremeters
-        desc: Ang mga estudyante ay gagamit ng konsepto ng koro sa isang awitin para
-          matutunan ang tungkol sa pagtukoy at pagtawag ng mga functions.
+        title: 'Mga Totoong-Buhay na Algorimo: Betu-beto na Habulan'
       courseE_unplugged_internet:
-        title: Internet
         desc: Ang mga estudyante ay magpapadala ng mga mensahe na kumakatawan sa iba't
           ibang pamamaraan sa pag-transmit sa Internet gamit ang mga piraso ng papel.
-      courseE_unplugged_crowdsourcing:
-        title: Pag-crowdsourcing
-        desc: Ang mga estudyante ay gagamit ng crowdsourcing, isang paraan sa paglutas
-          ng problema sa computer science, mas mainam na kumpletohin ang isang gawain
-          sa buong klase kaysa kung ang isang estudyante ay susubok ng mag-isa.
+        title: Internet
+      courseE_unplugged_privateInformation:
+        desc: Ngayon ay matutunan mo ang pagkakaiba ng privado at personal na impormasyon!
+        title: 'Edukasyon na Sentido Komun: Pribado at Personal na Impormasyon '
+      courseE_unplugged_privateInformation_2019:
+        desc: Binuo ng Common Sense Education, ang araling ito ay tungkol sa pagkakaiba
+          sa pagitan ng impormasyong ligtas na ibahagi online at impormasyong hindi.
+        title: Pribado at Personal na Impormasyon
       courseE_unplugged_songwriting:
-        title: Pagsusulat ng Awit
         desc: Ang mga estudyante ay gagamit ng konsepto ng koro sa isang awitin para
           matutunan ang tungkol sa pagtukoy at pagtawag ng mga functions.
-      courseF_unplugged_tangrams:
-        title: Tangram na mga Algoritmo
-        desc: Ang araling ito ay nagpapakita sa atin ng isang bagay na mahalaga tungkol
-          sa mga algoritmo. Kung gagawin mo ang isang algoritmo na simple lang, mayroong
-          maraming pamamaraan para magamit ito. Kung gusto mong masiguro na lahat
-          ay magtatapos sa parehong bagay, ang iyong algoritmo ay nangangailangan
-          ng mas maraming detalye.
+        title: Pagsusulat ng Awit
+      courseE_unplugged_songwritingParameters:
+        desc: Ang mga estudyante ay gagamit ng konsepto ng koro sa isang awitin para
+          matutunan ang tungkol sa pagtukoy at pagtawag ng mga functions.
+        title: Pagsulat ng Awit na may mga Paremeters
       courseF_unplugged_envelopeVariables:
-        title: Balot ng mga Variables
         desc: Ang mga variables at nagbibigay sa atin ng maraming kalayaan sa computer
           science. Ang araling ito ay nakakatulong na ilarawan kung ano ang mga variables
           at paano natin magagamit ang mga ito sa napakaraming pamamaraan. Gamitin
           ang gawaing ito bago (o may kaugnayan) sa aralin tungkol sa paglalahat para
           makuha talaga ang ideya.
+        title: Balot ng mga Variables
       courseF_unplugged_forLoopFun:
-        title: Saya sa For Loop
         desc: Alam natin na ang loop ay nagbibigay sa atin ng daan na magawa ang mga
           bagay nang paulit-ulit, ngunit ngayon ay pag-aaralan natin ang tungkol sa
           paggamit ng mga loop na may karagdagang istraktura na binuo sa loob nito.
+        title: Saya sa For Loop
+      courseF_unplugged_powerOfWords:
+        desc: Ngayon, matutunan mo kung ano ang gagawin kapag may isang tao na nambabastos
+          online.
+        title: Unplugged na Aktibidad
+      courseF_unplugged_powerOfWords_2019:
+        desc: 'nawala ang pagsasalin: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.desc'
+        title: 'nawala ang pagsasalin: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
       courseF_unplugged_songwritingParameters:
-        title: Pagsulat ng Awit Gamit ang mga Parameter
         desc: 'Isa sa pinakahanga-hangang istraktura sa mundo ng computer science
           ay ang function. Ang mga functions (minsan ay tinatawag na mga pamamaraan)
           ay maliliit na mga programa na maaari mong gamitin nang paulit-ulit sa loob
           ng isang mas malaki na programa. Ang araling ito ay makakatulong sa iyong
           mga estudyante na likas na makakaunawa kung bakit ang pagsama-sama ng mga
           piraso ng code sa isang function ay lubhang nakakatulong na kasanayan.  '
-      courseB_unplugged_MRF_2018:
-        title: Ang Robot Kong Mga Kaibigan
-        desc: Matutong magprograma sa pamamagitan ng pagsulat ng code para sa mga
-          kaibigan mo!
-      PlantASeed_2018:
-        title: 'Mga Totoong-buhay na Algoritmo: Pagtatanim ng Buto'
-        desc: Ang araling ito ay nagpapahiwatig sa mga pamamaraan na gumamit tayo
-          ng mga algoritmo sa ating pang-araw-araw na buhay, gamit ang pagtatanim
-          ng buto bilang halimbawa. Ito ay nagpapakita din sa buong larawan ng computer
-          science at kung paano ang algoritmo nagdadala ng mga mahalagang bahagi.
-      UnplugHappyMaps_2018:
-        title: Happy Maps
-        desc: Ang mga estudyante ay lilikha ng mga simpleng algoritmo (grupo ng mga
-          instruksiyon) para mapagalaw ang karakter sa maze gamit ang isang utos.
-      GoingPlacesSafely_2018:
-        title: Matiwasay na pagpunta sa mga lugar
-        desc: Ang Internet ay makapangyarihan, ngunit kung minsan ay mapanganib na
-          lugar. Ang mg guro ay nagbibigay ng payo kung paano maging ligtas habang
-          nagbabaybay sa Internet.
-      courseA_unplugged_loops_2018:
-        title: Naka-Unplug na mga Loop
-        desc: Sa araling ito, matutunan mo ang tungkol sa mga loops!
-      BigEvent_2018:
-        title: The Big Event
-        desc: Ang mga estudyante ay pinapakilala sa mga pang-program na konsepto ng
-          mga "events", kung saan ito ay mga aksyon na parating sinubaybayan ng isang
-          kompyuter. Ang guro ay pipindot ng isang button sa papel na remote at ang
-          mga estudyante ay tutugon ayon sa button na napindot.
-      GraphPaperProgramming_2018:
-        title: Graph Paper Programming
-        desc: Ang mga estudyante ay magsusulat ng isang algoritmo (isang hanay ng
-          mga instruksiyon) gamit ang isang hanay ng mga paunang nabigyang kahulugan
-          na mga utos para gabayan ang kanilang mga kamag-aral na makagawa ng isang
-          drowing.
-      courseD_unplugged_digitalCitizenship_2018:
-        title: Unplugged na Aktibidad
-        desc: Ngayon matutunan mo kung ano ang ibig sabihin ng maging isang Digital
-          na Mamamayan.
-      courseC_Unplugged_ScreenOutTheMean_2018:
-        title: Unplugged na Aktibidad
-        desc: Ngayon, matutunan mo kung ano ang gagawin kapag may isang tao na nambabastos
-          online.
-      Conditionals_2018:
-        title: Mga conditional
+        title: Pagsulat ng Awit Gamit ang mga Parameter
+      courseF_unplugged_tangrams:
+        desc: Ang araling ito ay nagpapakita sa atin ng isang bagay na mahalaga tungkol
+          sa mga algoritmo. Kung gagawin mo ang isang algoritmo na simple lang, mayroong
+          maraming pamamaraan para magamit ito. Kung gusto mong masiguro na lahat
+          ay magtatapos sa parehong bagay, ang iyong algoritmo ay nangangailangan
+          ng mas maraming detalye.
+        title: Tangram na mga Algoritmo
+      deeper learning description:
+        desc: 'nawala ang pagsasalin: en-US.data.unplugged.desc'
+      timeforcs_demo_conditionals:
         desc: Para matuto tungkol sa mga kondisyonal na mga pahayag, ang mga estudyante
           ay maglalaro ng isang baraha na laro at maglikha ng mga patakaran gaya ng
           "kung makakuha ako ng pulang baraha, makakapuntos ako" at "kung makakuha
           ako ng itim na baraha, makakapuntos ka."
-      DigitalFootprint_2018:
-        title: Ang Iyong Digital na Bakas
-        desc: Ang mga guro ay magpapakilala sa mga estudyante ng ideya na paglagay
-          ng impormasyon tungkol sa kanilang mga sarili online ay lilikha ng isang
-          digital na yapak o "bakas" na mayroong kahihinatnan.
-      BinaryImages_2018:
-        title: Binary na mga Larawan
-        desc: Kahit karamihan sa mga tao ay nag-iisip sa binary bilang zeros at ones
-          lang, ang ating nakaraan mga kurso ay nagtuturo sa mga estudyante na ang
-          impormasyon ay maaaring irepresenta sa iba't ibang mga opsyon sa binary.
-          Ang araling ito ay gumagamit sa konseptong ito habang ipinapakita kung paano
-          ang kompyuter nagtatago ng mas komplikadong mga impormasyon (gaya ng mga
-          larawan at mga kulay) pati na rin sa binary.
-      PaperPlanes_2018:
-        title: 'Mga Totoong-buhay na Algoritmo: Papel na Eroplano'
-        desc: Ang araling ito ay nagpapahiwatig ng mga pamamaraan na ginagamit natin
-          ang mga algorithmo sa ating pang-araw-araw na buhay, espesipiko ang paggawa
-          ng mga papel na eroplano. Ang araling ito ay nagbigay tuon sa buong larawan
-          ng computer science at kung paano ang mga algoritmo nagdadala ng mga mahahalagang
-          bahagi.
-      GettingLoopy_2018:
-        title: Pagiging Loopy
-        desc: Ang araling ito ay nagpapakila ng isang pang-program na konsepto ng
-          mga loops (inuulit na mga utos) sa pamamagitan ng isang sayaw na gawain.
-          Ang mga estudyante ay matutuo ng isang simpleng koreograpiya, at pagkatapos
-          ay tuturan na ulitin ito.
-      BinaryBracelets_2018:
-        title: Binary na mga Pulseras
-        desc: Ang mga estudyante ay lilikha ng mga pulseras bilang isang representasyon
-          ng unang letra ng kanilang pangalan sa binary, Ang mga estudyante ay matuto
-          na ang mga datos ay maaaring irepresenta at itago sa higit sa isang pamamaraan.
-      MoveItMoveIt_2018:
-        title: Galawin ito, Galawin ito
-      courseB_unplugged_CnC_2018:
-        title: Mahusay na Gumawa at Maglaro ng Patas
-        desc: Pinahiram sa Computer Science Fundamentals ng team sa Copyright and
-          Creativity, umiiral ang araling ito upang tulungan ang mga mag-aaral na
-          maunawaan ang malikhaing proseso ng pagbabahagi at inspirasyon. Kasabay
-          nito ang pagsulong ng malikhaing pagpapahayag at ang pangangailangang maging
-          patas sa malikhaing gawain.
-      courseE_unplugged_CnC_2018:
-        title: Digital na Pagbabahagi
-        desc: Pinahiram sa Computer Science Fundamentals ng team sa Copyright at Creativity,
-          umiiral ang araling ito upang tulungan ang mga mag-aaral na maunawaan ang
-          mga hamon at benepisyo ng paggalang sa pagmamay-ari at copyright, partikular
-          sa mga digital na kapaligiran. Dapat hikayatin ang mga mag-aaral na igalang
-          ang mga karapatan ng mga artista bilang isang mahalagang bahagi ng pagiging
-          etikal na digital na mamamayan.
-      RelayProgramming_2018:
-        title: Relay Programming
-        desc: Magsisimula ang aktibidad na ito sa isang maikling aralin sa pag-debug
-          at pagtitiyaga, pagkatapos ay mabilisang lilipat sa karera laban sa orasan
-          habang ang mga mag-aaral ay naghahati-hati sa mga team at nagtutulungan
-          upang magsulat ng programa isang instruksiyon sa bawat pagkakataon.
-      courseB_unplugged_MRF_2019:
-        title: Ang Robot Kong Mga Kaibigan
-        desc: Matutong magprograma sa pamamagitan ng pagsulat ng code para sa mga
-          kaibigan mo!
-      BuildingAFoundation_2019:
-        title: 'nawala ang pagsasalin: en-US.data.unplugged.BuildingAFoundation_2018.title'
-        desc: 'nawala ang pagsasalin: en-US.data.unplugged.BuildingAFoundation_2018.desc'
-      courseB_unplugged_loopyMRF_2019:
-        title: 'Mga Loop: Ang aking Loopy na Robotik na mga Kaibigan'
-      Conditionals_2019:
         title: Mga conditional
-        desc: Para matuto tungkol sa mga kondisyonal na mga pahayag, ang mga estudyante
-          ay maglalaro ng isang baraha na laro at maglikha ng mga patakaran gaya ng
-          "kung makakuha ako ng pulang baraha, makakapuntos ako" at "kung makakuha
-          ako ng itim na baraha, makakapuntos ka."
-      courseF_unplugged_powerOfWords_2019:
-        title: 'nawala ang pagsasalin: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
-        desc: 'nawala ang pagsasalin: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.desc'
-      EnvelopeVariables_2019:
-        title: 'nawala ang pagsasalin: en-US.data.unplugged.EnvelopeVariables_2018.title'
-        desc: 'nawala ang pagsasalin: en-US.data.unplugged.EnvelopeVariables_2018.desc'
-      ForLoopFun_2019:
-        title: 'nawala ang pagsasalin: en-US.data.unplugged.ForLoopFun_2018.title'
-        desc: 'nawala ang pagsasalin: en-US.data.unplugged.ForLoopFun_2018.desc'
-      GraphPaperProgramming_2019:
-        title: Graph Paper Programming
-        desc: Ang mga estudyante ay magsusulat ng isang algoritmo (isang hanay ng
-          mga instruksiyon) gamit ang isang hanay ng mga paunang nabigyang kahulugan
-          na mga utos para gabayan ang kanilang mga kamag-aral na makagawa ng isang
-          drowing.
-      RelayProgramming_2018_2019:
-        title: Relay Programming
-        desc: Magsisimula ang aktibidad na ito sa isang maikling aralin sa pag-debug
-          at pagtitiyaga, pagkatapos ay mabilisang lilipat sa karera laban sa orasan
-          habang ang mga mag-aaral ay naghahati-hati sa mga team at nagtutulungan
-          upang magsulat ng programa isang instruksiyon sa bawat pagkakataon.
-      courseD_unplugged_digitalCitizenship_2019:
-        title: Unplugged na Aktibidad
-        desc: Ngayon matutunan mo kung ano ang ibig sabihin ng maging isang Digital
-          na Mamamayan.
-      BinaryImages_2019:
-        title: Binary na mga Larawan
-        desc: Kahit karamihan sa mga tao ay nag-iisip sa binary bilang zeros at ones
-          lang, ang ating nakaraan mga kurso ay nagtuturo sa mga estudyante na ang
-          impormasyon ay maaaring irepresenta sa iba't ibang mga opsyon sa binary.
-          Ang araling ito ay gumagamit sa konseptong ito habang ipinapakita kung paano
-          ang kompyuter nagtatago ng mas komplikadong mga impormasyon (gaya ng mga
-          larawan at mga kulay) pati na rin sa binary.
-      courseE_unplugged_privateInformation_2019:
-        title: Pribado at Personal na Impormasyon
-        desc: Binuo ng Common Sense Education, ang araling ito ay tungkol sa pagkakaiba
-          sa pagitan ng impormasyong ligtas na ibahagi online at impormasyong hindi.
-      SongwritingParameters_2019:
-        title: 'nawala ang pagsasalin: en-US.data.unplugged.SongwritingParameters_2018.title'
-        desc: 'nawala ang pagsasalin: en-US.data.unplugged.SongwritingParameters_2018.desc'
-      courseE_unplugged_CnC_2019:
-        title: Digital na Pagbabahagi
-        desc: Pinahiram sa Computer Science Fundamentals ng team sa Copyright at Creativity,
-          umiiral ang araling ito upang tulungan ang mga mag-aaral na maunawaan ang
-          mga hamon at benepisyo ng paggalang sa pagmamay-ari at copyright, partikular
-          sa mga digital na kapaligiran. Dapat hikayatin ang mga mag-aaral na igalang
-          ang mga karapatan ng mga artista bilang isang mahalagang bahagi ng pagiging
-          etikal na digital na mamamayan.
-      Internet_2019:
-        title: 'nawala ang pagsasalin: en-US.data.unplugged.Internet_2018.title'
-        desc: 'nawala ang pagsasalin: en-US.data.unplugged.Internet_2018.desc'
-      Crowdsourcing_2019:
-        title: 'nawala ang pagsasalin: en-US.data.unplugged.Crowdsourcing_2018.title'
-        desc: 'nawala ang pagsasalin: en-US.data.unplugged.Crowdsourcing_2018.desc'
-      GettingLoopy_2019:
-        title: Pagiging Loopy
-        desc: Ang araling ito ay nagpapakila ng isang pang-program na konsepto ng
-          mga loops (inuulit na mga utos) sa pamamagitan ng isang sayaw na gawain.
-          Ang mga estudyante ay matutuo ng isang simpleng koreograpiya, at pagkatapos
-          ay tuturan na ulitin ito.
-      courseC_Unplugged_ScreenOutTheMean_2019:
-        title: Unplugged na Aktibidad
-        desc: Ngayon, matutunan mo kung ano ang gagawin kapag may isang tao na nambabastos
-          online.
-      BigEvent_2019:
-        title: The Big Event
-        desc: Ang mga estudyante ay pinapakilala sa mga pang-program na konsepto ng
-          mga "events", kung saan ito ay mga aksyon na parating sinubaybayan ng isang
-          kompyuter. Ang guro ay pipindot ng isang button sa papel na remote at ang
-          mga estudyante ay tutugon ayon sa button na napindot.
-      BinaryBracelets_2019:
-        title: Binary na mga Pulseras
-        desc: Ang mga estudyante ay lilikha ng mga pulseras bilang isang representasyon
-          ng unang letra ng kanilang pangalan sa binary, Ang mga estudyante ay matuto
-          na ang mga datos ay maaaring irepresenta at itago sa higit sa isang pamamaraan.
-      PaperPlanes_2019:
-        title: 'Mga Totoong-buhay na Algoritmo: Papel na Eroplano'
-        desc: Ang araling ito ay nagpapahiwatig ng mga pamamaraan na ginagamit natin
-          ang mga algorithmo sa ating pang-araw-araw na buhay, espesipiko ang paggawa
-          ng mga papel na eroplano. Ang araling ito ay nagbigay tuon sa buong larawan
-          ng computer science at kung paano ang mga algoritmo nagdadala ng mga mahahalagang
-          bahagi.
-      PlantASeed_2019:
-        title: 'Mga Totoong-buhay na Algoritmo: Pagtatanim ng Buto'
-        desc: Ang araling ito ay nagpapahiwatig sa mga pamamaraan na gumamit tayo
-          ng mga algoritmo sa ating pang-araw-araw na buhay, gamit ang pagtatanim
-          ng buto bilang halimbawa. Ito ay nagpapakita din sa buong larawan ng computer
-          science at kung paano ang algoritmo nagdadala ng mga mahalagang bahagi.
-      UnplugHappyMaps_2019:
-        title: Happy Maps
-        desc: Ang mga estudyante ay lilikha ng mga simpleng algoritmo (grupo ng mga
-          instruksiyon) para mapagalaw ang karakter sa maze gamit ang isang utos.
-      GoingPlacesSafely_2019:
-        title: Matiwasay na pagpunta sa mga lugar
-        desc: Ang Internet ay makapangyarihan, ngunit kung minsan ay mapanganib na
-          lugar. Ang mg guro ay nagbibigay ng payo kung paano maging ligtas habang
-          nagbabaybay sa Internet.
-      courseA_unplugged_loops_2019:
-        title: Naka-Unplug na mga Loop
-        desc: Sa araling ito, matutunan mo ang tungkol sa mga loops!
-      MoveItMoveIt_2019:
-        title: Galawin ito, Galawin ito
-      DigitalFootprint_2019:
-        title: Ang Iyong Digital na Bakas
-        desc: Ang mga guro ay magpapakilala sa mga estudyante ng ideya na paglagay
-          ng impormasyon tungkol sa kanilang mga sarili online ay lilikha ng isang
-          digital na yapak o "bakas" na mayroong kahihinatnan.
-      courseB_unplugged_CnC_2019:
-        title: Mahusay na Gumawa at Maglaro ng Patas
-        desc: Pinahiram sa Computer Science Fundamentals ng team sa Copyright and
-          Creativity, umiiral ang araling ito upang tulungan ang mga mag-aaral na
-          maunawaan ang malikhaing proseso ng pagbabahagi at inspirasyon. Kasabay
-          nito ang pagsulong ng malikhaing pagpapahayag at ang pangangailangang maging
-          patas sa malikhaing gawain.
-      GraphingData_2019:
-        title: Paglalarawan ng Data
-        desc: Sa araling ito, ang mga mag-aaral ay mangongolekta ng data mula sa isang
-          proyekto sa Play Lab o totoong sitwasyon at gagamitin ito upang gumawa ng
-          mga hula.
-      courseE_unplugged_accessAbility_2019:
-        title: Kakayahang Pag-access
-        desc: Matuto tungkol sa pagiging madaling ma-access at ang halaga ng empatiya
-          sa pamamagitan ng brainstorming at pagdidisenyo ng mga naa-access na solusyon
-          sa mga hypothetical na app.
-      courseE_simon_says_2019:
-        title: Sabi ni Simon
-        desc: "Maglaro at isipin kung anong mga utos ang kailangan upang makuha ang
-          tamang resulta.\r\n\r\n![test image](https://code.org/images/logo.png)"
-      courseB_unplugged_passwords_2019:
-        title: Mga Makapangyarihang Password
-        desc: Tuklasin kung bakit gumagamit ng mga password ang mga tao, alamin ang
-          mga benepisyo ng paggamit ng mga password, at tumuklas ng mga diskarte sa
-          paggawa at pagpapanatiling matatag at secure na mga password.
       timeforcs_demo_crowdsourcing:
-        title: Pag-crowdsourcing
         desc: '_Tala ni Josh: taliwas sa unang aralin, na-format ko ang isang ito
           tulad ng karaniwang hindi naka-plug na aralin._'
-      timeforcs_demo_conditionals:
-        title: Mga conditional
-        desc: Para matuto tungkol sa mga kondisyonal na mga pahayag, ang mga estudyante
-          ay maglalaro ng isang baraha na laro at maglikha ng mga patakaran gaya ng
-          "kung makakuha ako ng pulang baraha, makakapuntos ako" at "kung makakuha
-          ako ng itim na baraha, makakapuntos ka."
+        title: Pag-crowdsourcing

@@ -28,7 +28,7 @@ describe('AddLevelFilters', () => {
       ownerId: '',
       unitId: '',
       levelType: '',
-      levelName: ''
+      levelName: '',
     };
   });
 
@@ -49,7 +49,7 @@ describe('AddLevelFilters', () => {
     const input = wrapper.find('input');
     expect(input.props().value).to.include('');
     input.simulate('change', {
-      target: {value: 'Level Name'}
+      target: {value: 'Level Name'},
     });
     expect(handleChangeLevelName).to.have.been.calledOnce;
 

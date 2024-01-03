@@ -73,7 +73,7 @@ Block.all.each do |shared_block|
       remove_block(level, name)
       similar_blocks << block
     end
-  rescue => e
-    puts "Failed on #{level.name}, #{e}"
+  rescue => exception
+    puts "Failed on #{level.name}, #{exception}"
   end
 end

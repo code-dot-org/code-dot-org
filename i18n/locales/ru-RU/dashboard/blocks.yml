@@ -2,8 +2,8 @@
 ru:
   data:
     blocks:
-      AmysBlocks_moving_with_arrow_keys:
-        text: перемещение NESW с помощью клавиш со стрелками
+      AmysBlocks_playerBehaviors:
+        text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:
         text: запросить у пользователя {QUESTION} переменную {VAR} с параметрами выбора {A}{B}{C}
       AmysBlocks_spriteSayVar:
@@ -75,6 +75,11 @@ ru:
           UNIT:
             '"measures"': такты
             '"seconds"': секунд
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': такты
+            '"seconds"': секунд
       Dancelab_changeColorBy:
         text: изменить {COLOR} {METHOD} на {AMOUNT}
         options:
@@ -114,6 +119,27 @@ ru:
             MOVES.Kick: Звезда
             MOVES.ThisOrThat: То или это
             MOVES.Rest: Нет
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} делать {MOVE} {DIR} всегда"
+        options:
+          GROUP:
+            '"CAT"': кошки
+            '"SLOTH"': ленивцы
+          MOVE:
+            MOVES.Roll: Массажер
+            MOVES.ClapHigh: Высокий хлопок
+            MOVES.Dab: Дэб
+            MOVES.DoubleJam: Удвоить усилия
+            MOVES.Drop: Опустить
+            MOVES.Floss: Флосс
+            MOVES.Fresh: Свежий
+            MOVES.Clown: Гангнам
+            MOVES.Kick: Звезда
+            MOVES.ThisOrThat: То или это
+            MOVES.Rest: Нет
+            '"next"': "(Следующий)"
+            '"prev"': "(Предыдущий)"
+            '"rand"': "(Случайный)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} делать {MOVE} {DIR} всегда"
         options:
@@ -597,6 +623,52 @@ ru:
             '"tropical"': Тропический
             '"vintage"': Винтаж
             '"warm"': Красный
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          "установить фоновый эффект
+          {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Нет
+            '"rand"': "(Случайный)"
+            '"quads"': Углы
+            '"circles"': Туннель
+            '"color_cycle"': Цвета
+            '"diamonds"': Алмазы
+            '"disco_ball"': Зеркальный шар
+            '"fireworks"': Фейерверк
+            '"flowers"': Цветы
+            '"growing_stars"': Растущие звезды
+            '"higher_power"': Higher Power
+            '"swirl"': Гипно
+            '"kaleidoscope"': Калейдоскоп
+            '"lasers"': Лазерный танцпол
+            '"splatter"': Брызги краски
+            '"rainbow"': Радуга
+            '"ripples_random"': Случайные круги на воде
+            '"ripples"': Круги на воде
+            '"snowflakes"': Снег
+            '"text"': Название песни
+            '"galaxy"': Космос
+            '"sparkles"': Блестки
+            '"spiral"': Спираль
+            '"disco"': Квадраты
+            '"squiggles"': Завитки
+            '"starburst"': Вспышка звёздообразования
+            '"stars"': Звезды
+            '"music_wave"': Волны
+          PALETTE:
+            '"rave"': Черно-белый
+            '"cool"': Классный
+            '"electronic"': Электронный
+            '"iceCream"': Мороженое
+            '"default"': Свет
+            '"neon"': Неон
+            '"ocean"': Океан
+            '"rainbow"': Радуга
+            '"tropical"': Тропический
+            '"vintage"': Винтаж
+            '"warm"': Красный
       Dancelab_setDanceSpeed:
         text: измените скорость танца {SPRITE} на {SPEED}
         options:
@@ -1058,6 +1130,8 @@ ru:
         text: избегание целей
       gamelab_beginCollectingData:
         text: начать сбор данных {BREAK} значение {VALUE} с меткой {LABEL}
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE} отскакивает от {TARGET}"
       gamelab_changePropBy:
@@ -1251,6 +1325,19 @@ ru:
             '"z"': z
       gamelab_layoutGrid:
         text: компоновка спрайтов в виде сетки
+      gamelab_layoutSprites:
+        text: расстановка {GROUP} как {FORMAT}
+        options:
+          FORMAT:
+            '"border"': граница
+            '"circle"': круг
+            '"grid"': сетка
+            '"top"': верхний ряд
+            '"row"': шеренга
+            '"bottom"': нижний ряд
+            '"left"': левый столбец
+            '"column"': столбец
+            '"right"': правый столбец
       gamelab_locationAt:
         text: 'местоположение x: {X} Y: {Y}'
       gamelab_locationModifier:
@@ -1277,6 +1364,18 @@ ru:
             '"spiral"': спираль
       gamelab_makeNewSpriteAnon:
         text: сделать новые {ANIMATION_NAME} спрайт на {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': граница
+            '"circle"': круг
+            '"grid"': сетка
+            '"top"': верхний ряд
+            '"row"': шеренга
+            '"bottom"': нижний ряд
+            '"left"': левый столбец
+            '"column"': столбец
+            '"right"': правый столбец
       gamelab_makeNumSprites:
         text: создать {NUM} новых {ANIMATION_NAME} спрайтов
       gamelab_makeProjectile:
@@ -1674,6 +1773,16 @@ ru:
         text: x координата {SPRITE}
       gamelab_yLocationOf:
         text: y координата {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} плавно перейти к {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': твердый
+            '"liquid"': жидкий
+            '"gas"': газ
+      KatiesBlocks_tumbling:
+        text: акробатика
       Mikelab_addBehaviorSimple:
         text: Спрайт {SPRITE} начинает {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -2333,8 +2442,6 @@ ru:
         text: повернуть налево
       RyanLab_turnRight:
         text: повернуть направо
-      SpriteLab2Beta_spriteSay:
-        text: Спрайт {SPRITE} Сказать {TEXT} Для {SECONDS} Секунд
       Vector_createSpriteWith:
         text: |-
           создать спрайт
@@ -2440,6 +2547,19 @@ ru:
             '"quarantining"': уходить на карантин при заболевании
             '"avoiding"': социальное дистанцирование
             '"none"': оставаться неподвижным
+      adaptations_adaptationBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): вращение вправо
+            new Behavior(spinning_left, []): вращение влево
+            new Behavior(fluttering, []): дрожание
+            new Behavior(jittering, []): дрожание
+            new Behavior(wobbling, []): колебание
+            new Behavior(wandering, []): хождение
+            new Behavior(patrolling, []): патрулирование
+      adaptations_startFollowing:
+        text: "{SPRITE} начинает следовать {TARGET}"
       binary_drawBin:
         text: рисовать двоичный {BIN}
       binary_drawBinScreen:
@@ -2582,8 +2702,24 @@ ru:
           DIR:
             right: направо ↻
             left: налево ↺
+      ecosystems_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       storylab_clearHeadings:
         text: понятные заголовки
+      storylab_printText:
+        text: Печати {TEXT}
       storylab_setForegroundEffect2:
         text: выполнить эффект  {EFFECT}
         options:
@@ -2600,7 +2736,3 @@ ru:
         text: запрос пользователя {QUESTION} для переменной {VAR} с вариантами {A}
       storylab_setSubheading:
         text: установить подзаголовок {SUBHEADING}
-      validation_validatedBackground:
-        text: установить фон для {IMG}
-      validation_validatedSound:
-        text: PLAYSound {SOUND}

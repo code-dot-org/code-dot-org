@@ -19,3 +19,5 @@ question "Is the value of the variable dice equal to 5?"
 answer "dice == 5"
 
 
+
+allow_multiple_attempts true

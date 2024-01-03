@@ -1,6 +1,6 @@
 {
   "published": true,
-  "title": "CS Fundamentals Deep Dive Pre Survey",
+  "title": "Code.org K-5 Deep Dive Pre Survey",
   "pages": [
     {
       "name": "overview",
@@ -8,7 +8,7 @@
         {
           "type": "html",
           "name": "question1",
-          "html": "<p>Thank you for completing the pre-survey for the CS Fundamentals Deep Dive workshop. </p>\n\n<p>The purpose of this survey is to:</p>\n\n<ul>\n<li>Help us understand how best to support your development</li>\n<li>Help us understand where and how to improve our program</li>\n</ul>\n\n<p>Your individual responses here are completely confidential and will never be tied back to you in any way. Your honesty and candor is appreciated. This survey should take about 5 minutes to complete.</p>\n\n<p>As a reminder, <strong>the Deep Dive workshop is intended for teachers with at least some experience implementing CS Fundamentals curriculum</strong>. If you have not taught at least two lessons from this curriculum and will not be able to do so prior to this workshop, we recommend you cancel your registration and enroll in a CS Fundamentals Intro workshop.</p>"
+          "html": "<p>Thank you for completing the pre-survey for Code.org's K-5 Deep Dive workshop. </p>\n\n<p>The purpose of this survey is to:</p>\n\n<ul>\n<li>Help us understand how best to support your development</li>\n<li>Help us understand where and how to improve our program</li>\n</ul>\n\n<p>Your individual responses here are completely confidential and will never be tied back to you in any way. Your honesty and candor is appreciated. This survey should take about 5 minutes to complete.</p>\n\n<p>As a reminder, <strong>the Deep Dive workshop is intended for teachers with at least some experience implementing CS Fundamentals curriculum</strong>. If you have not taught at least two lessons from this curriculum and will not be able to do so prior to this workshop, we recommend you cancel your registration and enroll in a Code.org K-5 Intro workshop.</p>"
         }
       ]
     },

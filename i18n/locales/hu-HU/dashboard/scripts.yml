@@ -71,6 +71,7 @@ hu:
           description_short: A 20 órás tanfolyam kiterjed az alapvető számítógépes tudományra és a programozási fogalmakra a 2-4. tanfolyamban.
           description_audience: 10-től 18 éves korig
           student_description: Ez a 20 órás kurzus bemutatja a  számítástechnika és programozás alap fogalmait. A kurzus általános iskolásoknak lett kitalálva, de mindenki számára jó időtöltés lehet.
+          name: 20 órás
         edit-code:
           title: Kód szerkesztése
           description: Kód szerkesztése
@@ -107,6 +108,10 @@ hu:
           description: '2.  Fázis: Online összetett nyári tanulmány'
           description_short: '2.  Fázis: Online összetett nyári tanulmány'
           student_description: '2.  Fázis: Online összetett nyári tanulmány'
+        allthethings:
+          lessons:
+            lesson-49:
+              name: Zene
         algebraPD2b:
           description: '2.  Fázis: Online összetett nyári tanulmány'
           description_short: '2.  Fázis: Online összetett nyári tanulmány'
@@ -152,6 +157,7 @@ hu:
           description_short: írj egy történetet vagy készíts egy játékot a Gumball Játéklaborban!
           student_description: írj egy történetet vagy készíts egy játékot a Gumball Játéklaborban!
         starwars:
+          title: 'Star Wars: Egy galaxis építése kóddal (JavaScript)'
           description: Tanulj meg droidokat programozni és készítsd el a saját Star Wars játékodat egy messzi, messzi galaxisban.
           description_short: Tanulj meg droidokat programozni és készítsd el a saját Star Wars játékodat egy messzi, messzi galaxisban.
           student_description: Tanulj meg droidokat programozni és készítsd el a saját Star Wars játékodat egy messzi, messzi galaxisban.
@@ -160,7 +166,7 @@ hu:
           description_short: Tanulj meg droidokat programozni és készítsd el a saját Star Wars játékodat egy messzi, messzi galaxisban.
           student_description: Tanulj meg droidokat programozni és készítsd el a saját Star Wars játékodat egy messzi, messzi galaxisban.
         mc:
-          title: Minecraft Kódolás Órája
+          title: Minecraft kaland
           description: Használj blokkokat a programozáshoz és kalandozz el Steve-vel vagy Alexszel a Minecraft világába
           description_short: Fedezd fel a Minecraft világát kódolással
           student_description: Használj blokkokat a programozáshoz és kalandozz el Steve-vel vagy Alexszel a Minecraft világába
@@ -876,7 +882,7 @@ hu:
             csp_conditionals:
               display_name: Feltételek
             csp_functions:
-              display_name: funkciók
+              display_name: Függvények
             csp_project:
               display_name: Projekt
         dance-extras:
@@ -909,7 +915,7 @@ hu:
             csf_events:
               display_name: Események
             csf_loops:
-              display_name: hurkok
+              display_name: Ciklusok
             csf_conditionals:
               display_name: Feltételek
             csf_binary:
@@ -930,7 +936,7 @@ hu:
             csf_nested_loops:
               display_name: Egymásba ágyazott ciklusok
             csf_functions:
-              display_name: funkciók
+              display_name: Függvények
             end_of_course_project:
               display_name: Kurzus Projekt vége
           student_description: Kezdje el a kódolást algoritmusokkal, hurkokkal, feltételekkel és eseményekkel, majd továbbléphet a funkciókra. A kurzus második részében tervezzen és hozzon létre egy capstone projektet, amit megoszthat barátaival és családjával.
@@ -938,11 +944,11 @@ hu:
           title: Expressz tanfolyam (2019)
           lesson_groups:
             csf_loops:
-              display_name: hurkok
+              display_name: Ciklusok
             csf_conditionals:
               display_name: Feltételek
             csf_functions:
-              display_name: funkciók
+              display_name: Függvények
             csf_variables:
               display_name: változók
             csf_for_loops:
@@ -978,7 +984,7 @@ hu:
             csf_binary:
               display_name: Bináris
             csf_loops:
-              display_name: hurkok
+              display_name: Ciklusok
             csf_events:
               display_name: Események
             csf_data:
@@ -1000,7 +1006,7 @@ hu:
             csf_digcit:
               display_name: Digitális állampolgárság
             csf_loops:
-              display_name: hurkok
+              display_name: Ciklusok
             csf_events:
               display_name: Események
           student_description: Ismerje meg a számítástechnika és az internetbiztonság alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz.
@@ -1011,14 +1017,14 @@ hu:
             csf_digcit:
               display_name: Digitális állampolgárság
             csf_loops:
-              display_name: hurkok
+              display_name: Ciklusok
             csf_events:
               display_name: Események
           student_description: Ismerje meg a számítástechnika és az internetbiztonság alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz.
         pre-express-2019:
           lesson_groups:
             csf_loops:
-              display_name: hurkok
+              display_name: Ciklusok
             csf_events:
               display_name: Események
         csd2-2019:
@@ -1062,7 +1068,7 @@ hu:
             csp_conditionals:
               display_name: Feltételek
             csp_functions:
-              display_name: funkciók
+              display_name: Függvények
             csp_project:
               display_name: Projekt
             required:
@@ -1132,7 +1138,7 @@ hu:
             csp_conditionals:
               display_name: Feltételek
             csp_functions:
-              display_name: funkciók
+              display_name: Függvények
             csp_project:
               display_name: Projekt
         csp2-pilot-staging:
@@ -1143,7 +1149,7 @@ hu:
             csp_conditionals:
               display_name: Feltételek
             csp_functions:
-              display_name: funkciók
+              display_name: Függvények
             csp_project:
               display_name: Projekt
         csp4-pilot-staging:
@@ -1153,7 +1159,7 @@ hu:
             csp_conditionals:
               display_name: Feltételek
             csp_functions:
-              display_name: funkciók
+              display_name: Függvények
             csp_project:
               display_name: Projekt
         csp5-pilot-staging:
@@ -1161,7 +1167,7 @@ hu:
             csp_lists:
               display_name: Listák
             csp_loops:
-              display_name: hurkok
+              display_name: Ciklusok
             csp_project:
               display_name: Projekt
         csp6-pilot-staging:
@@ -1171,7 +1177,7 @@ hu:
             csp_conditionals:
               display_name: Feltételek
             csp_functions:
-              display_name: funkciók
+              display_name: Függvények
             csp_project:
               display_name: Projekt
         csp8-pilot-staging:
@@ -1181,7 +1187,7 @@ hu:
             csp_conditionals:
               display_name: Feltételek
             csp_functions:
-              display_name: funkciók
+              display_name: Függvények
             csp_project:
               display_name: Projekt
         csp9-pilot-staging:
@@ -1191,7 +1197,7 @@ hu:
             csp_conditionals:
               display_name: Feltételek
             csp_functions:
-              display_name: funkciók
+              display_name: Függvények
             csp_project:
               display_name: Projekt
         csp10-pilot-staging:
@@ -1201,7 +1207,7 @@ hu:
             csp_conditionals:
               display_name: Feltételek
             csp_functions:
-              display_name: funkciók
+              display_name: Függvények
             csp_project:
               display_name: Projekt
         csd-post-survey-2018:
@@ -1217,7 +1223,7 @@ hu:
             csp_lists:
               display_name: Listák
             csp_loops:
-              display_name: hurkok
+              display_name: Ciklusok
             csp_project:
               display_name: Projekt
             required:
@@ -1268,7 +1274,7 @@ hu:
         csl-vn:
           lesson_groups:
             csf_loops:
-              display_name: hurkok
+              display_name: Ciklusok
             csf_events:
               display_name: Események
         dlp19-csd-mod-fit:
@@ -1367,7 +1373,7 @@ hu:
             csp_conditionals:
               display_name: Feltételek
             csp_functions:
-              display_name: funkciók
+              display_name: Függvények
             csp_project:
               display_name: Projekt
         time4cs-control-unit-2:
@@ -1379,13 +1385,13 @@ hu:
             csf_nested_loops:
               display_name: Egymásba ágyazott ciklusok
             csf_functions:
-              display_name: funkciók
+              display_name: Függvények
             end_of_course_project:
               display_name: Kurzus Projekt vége
         time4cs-control-unit-1:
           lesson_groups:
             csf_loops:
-              display_name: hurkok
+              display_name: Ciklusok
             csf_conditionals:
               display_name: Feltételek
             csf_events:
@@ -1397,7 +1403,7 @@ hu:
         time4cs-experiment-unit-1:
           lesson_groups:
             csf_loops:
-              display_name: hurkok
+              display_name: Ciklusok
             csf_conditionals:
               display_name: Feltételek
             csf_events:
@@ -1417,7 +1423,7 @@ hu:
             csp_conditionals:
               display_name: Feltételek
             csp_functions:
-              display_name: funkciók
+              display_name: Függvények
             csp_project:
               display_name: Projekt
             cspSurvey2020:
@@ -1427,7 +1433,7 @@ hu:
             csp_lists:
               display_name: Listák
             csp_loops:
-              display_name: hurkok
+              display_name: Ciklusok
             csp_project:
               display_name: Projekt
             cspSurvey2020:
@@ -1485,7 +1491,7 @@ hu:
             csf_digcit:
               display_name: Digitális állampolgárság
             csf_loops:
-              display_name: hurkok
+              display_name: Ciklusok
             csf_events:
               display_name: Események
           student_description: Ismerje meg a számítástechnika és az internetbiztonság alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz.
@@ -1496,7 +1502,7 @@ hu:
             csf_digcit:
               display_name: Digitális állampolgárság
             csf_loops:
-              display_name: hurkok
+              display_name: Ciklusok
             csf_events:
               display_name: Események
           student_description: Ismerje meg a számítástechnika és az internetbiztonság alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz.
@@ -1510,7 +1516,7 @@ hu:
             csf_binary:
               display_name: Bináris
             csf_loops:
-              display_name: hurkok
+              display_name: Ciklusok
             csf_events:
               display_name: Események
             csf_data:
@@ -1525,7 +1531,7 @@ hu:
             csf_events:
               display_name: Események
             csf_loops:
-              display_name: hurkok
+              display_name: Ciklusok
             csf_conditionals:
               display_name: Feltételek
             csf_binary:
@@ -1546,7 +1552,7 @@ hu:
             csf_nested_loops:
               display_name: Egymásba ágyazott ciklusok
             csf_functions:
-              display_name: funkciók
+              display_name: Függvények
             end_of_course_project:
               display_name: Kurzus Projekt vége
           student_description: Kezdje el a kódolást algoritmusokkal, hurkokkal, feltételekkel és eseményekkel, majd továbbléphet a funkciókra. A kurzus második részében tervezzen és hozzon létre egy capstone projektet, amit megoszthat barátaival és családjával.
@@ -1572,11 +1578,11 @@ hu:
           title: Expressz tanfolyam (2020)
           lesson_groups:
             csf_loops:
-              display_name: hurkok
+              display_name: Ciklusok
             csf_conditionals:
               display_name: Feltételek
             csf_functions:
-              display_name: funkciók
+              display_name: Függvények
             csf_variables:
               display_name: változók
             csf_for_loops:
@@ -1588,7 +1594,7 @@ hu:
         pre-express-2020:
           lesson_groups:
             csf_loops:
-              display_name: hurkok
+              display_name: Ciklusok
             csf_events:
               display_name: Események
         csp1-2020:
@@ -1731,7 +1737,7 @@ hu:
             csp_conditionals:
               display_name: Feltételek
             csp_functions:
-              display_name: funkciók
+              display_name: Függvények
             csp_project:
               display_name: Projekt
         csp5-2021:
@@ -1739,7 +1745,7 @@ hu:
             csp_lists:
               display_name: Listák
             csp_loops:
-              display_name: hurkok
+              display_name: Ciklusok
             csp_project:
               display_name: Projekt
             lessonGroup-5:
@@ -1767,12 +1773,13 @@ hu:
             lessonGroup-2:
               display_name: Kérdőív
         coursea-2021:
+          description: 'Az A kurzus számítástechnikai tantervet kínál azoknak az olvasással épp csak ismerkedő gyerekek számára, beleértve akár az óvodásokat is. A diákok megtanulnak programozni olyan parancsokkal, mint a ciklusok és az események. Az ebben a kurzusban bemutatott leckék arra is megtanítják a diákokat, hogy értelmesen együttműködjenek másokkal, vizsgálják meg a különböző problémamegoldó technikákat, a kihívást jelentő feladatok megoldásával kitartóak legyenek, és megismerjék az internetbiztonságot. '
           description_short: Bevezetés a számítástechnikába az előolvasók számára.
           lesson_groups:
             csf_digcit:
               display_name: Digitális állampolgárság
             csf_loops:
-              display_name: hurkok
+              display_name: Ciklusok
             csf_events:
               display_name: Események
             lessonGroup-5:
@@ -1783,7 +1790,7 @@ hu:
             csf_digcit:
               display_name: Digitális állampolgárság
             csf_loops:
-              display_name: hurkok
+              display_name: Ciklusok
             csf_events:
               display_name: Események
             lessonGroup-6:
@@ -1797,7 +1804,7 @@ hu:
             csf_binary:
               display_name: Bináris
             csf_loops:
-              display_name: hurkok
+              display_name: Ciklusok
             csf_events:
               display_name: Események
             csf_data:
@@ -1810,7 +1817,7 @@ hu:
             csf_events:
               display_name: Események
             csf_loops:
-              display_name: hurkok
+              display_name: Ciklusok
             csf_conditionals:
               display_name: Feltételek
             csf_binary:
@@ -1832,7 +1839,7 @@ hu:
             csf_nested_loops:
               display_name: Feltételek
             csf_functions:
-              display_name: funkciók
+              display_name: Függvények
             end_of_course_project:
               display_name: Kurzus Projekt vége
         coursef-2021:
@@ -1859,11 +1866,11 @@ hu:
             csf_warmup:
               display_name: Bemelegítés
             csf_loops:
-              display_name: hurkok
+              display_name: Ciklusok
             csf_conditionals:
               display_name: Feltételek
             csf_functions:
-              display_name: funkciók
+              display_name: Függvények
             csf_variables:
               display_name: változók
             csf_for_loops:
@@ -1877,7 +1884,7 @@ hu:
         pre-express-2021:
           lesson_groups:
             csf_loops:
-              display_name: hurkok
+              display_name: Ciklusok
             csf_events:
               display_name: Események
         csf-2021-pilot:
@@ -2109,6 +2116,8 @@ hu:
               display_name: Tartalom
             lessonGroup-2:
               display_name: Tartalom
+        dance-unplugged:
+          title: Offline táncos buli
         csc-things:
           name: csc-things
           title: 'CSC információk tárháza '
@@ -2229,11 +2238,12 @@ hu:
             csf_digcit:
               display_name: Digitális állampolgárság
             csf_loops:
-              display_name: hurkok
+              display_name: Ciklusok
             csf_events:
               display_name: Események
             lessonGroup-5:
               display_name: Kurzus Projekt vége
+          description: 'Az A kurzus számítástechnikai tantervet kínál azoknak az olvasással épp csak ismerkedő gyerekek számára, beleértve akár az óvodásokat is. A diákok megtanulnak programozni olyan parancsokkal, mint a ciklusok és az események. Az ebben a kurzusban bemutatott leckék arra is megtanítják a diákokat, hogy értelmesen együttműködjenek másokkal, vizsgálják meg a különböző problémamegoldó technikákat, a kihívást jelentő feladatok megoldásával kitartóak legyenek, és megismerjék az internetbiztonságot. '
           student_description: Ismerje meg a számítástechnika és az internetbiztonság alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz.
           description_short: Bevezetés a számítástechnikába az előolvasók számára.
         express-2022:
@@ -2243,11 +2253,11 @@ hu:
             lessonGroup-9:
               display_name: Események
             csf_loops:
-              display_name: hurkok
+              display_name: Ciklusok
             csf_conditionals:
               display_name: Feltételek
             csf_functions:
-              display_name: funkciók
+              display_name: Függvények
             csf_variables:
               display_name: változók
             csf_for_loops:
@@ -2271,7 +2281,7 @@ hu:
             csp_conditionals:
               display_name: Feltételek
             csp_functions:
-              display_name: funkciók
+              display_name: Függvények
             csp_project:
               display_name: Projekt
         csp5-2022:
@@ -2279,7 +2289,7 @@ hu:
             csp_lists:
               display_name: Listák
             csp_loops:
-              display_name: hurkok
+              display_name: Ciklusok
             csp_project:
               display_name: Projekt
             lessonGroup-5:
@@ -2289,7 +2299,7 @@ hu:
             csf_digcit:
               display_name: Digitális állampolgárság
             csf_loops:
-              display_name: hurkok
+              display_name: Ciklusok
             csf_events:
               display_name: Események
             lessonGroup-6:
@@ -2300,7 +2310,7 @@ hu:
             csf_digcit:
               display_name: Digitális állampolgárság
             csf_loops:
-              display_name: hurkok
+              display_name: Ciklusok
             csf_events:
               display_name: Események
             csf_data:
@@ -2336,7 +2346,7 @@ hu:
             csf_events:
               display_name: Események
             csf_loops:
-              display_name: hurkok
+              display_name: Ciklusok
             csf_conditionals:
               display_name: Feltételek
             end_of_course_project:
@@ -2350,7 +2360,7 @@ hu:
             ramp_up:
               display_name: Egymásba ágyazott ciklusok
             csf_functions:
-              display_name: funkciók
+              display_name: Függvények
             csf_nested_loops:
               display_name: Feltételek
             end_of_course_project:
@@ -2375,7 +2385,7 @@ hu:
         pre-express-2022:
           lesson_groups:
             csf_loops:
-              display_name: hurkok
+              display_name: Ciklusok
             csf_events:
               display_name: Események
         csa2-2022:
@@ -2549,7 +2559,7 @@ hu:
             lesson-2:
               name: Java laboratórium
             lesson-6:
-              name: hurkok
+              name: Ciklusok
           lesson_groups:
             lessonGroup-2:
               display_name: Kérdőív
@@ -2573,6 +2583,24 @@ hu:
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+            lessonGroup-4:
+              display_name: Kérdőív
         hello-world-space-2022:
           title: 'Helló Világ: Space'
         hello-world-soccer-2022:
@@ -2580,16 +2608,11 @@ hu:
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
-              display_name: 1.  fejezet
+              display_name: '1.  fejezet: A probléma-megoldási folyamat'
             lessonGroup-3:
-              display_name: 2.  fejezet
-          title: Problémamegoldás
-        csd6-2023:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: 1.  fejezet
-            lessonGroup-3:
-              display_name: 2.  fejezet
+              display_name: '2.  fejezet: Számítógépek és problémamegoldás'
+            lessonGroup-5:
+              display_name: Kérdőív
         csd7-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2617,7 +2640,7 @@ hu:
             csp_conditionals:
               display_name: Feltételek
             csp_functions:
-              display_name: funkciók
+              display_name: Függvények
             csp_project:
               display_name: Projekt
         csp5-2023:
@@ -2625,7 +2648,7 @@ hu:
             csp_lists:
               display_name: Adat
             csp_loops:
-              display_name: hurkok
+              display_name: Ciklusok
             csp_project:
               display_name: Projekt
             lessonGroup-5:
@@ -2637,7 +2660,7 @@ hu:
             lessonGroup-2:
               display_name: Tanfomlyam Utáni Felmérés
             lessonGroup-3:
-              display_name: hurkok
+              display_name: Ciklusok
             lessonGroup-5:
               display_name: Projekt
         csp7-2023:
@@ -2656,3 +2679,354 @@ hu:
           lesson_groups:
             lessonGroup-2:
               display_name: Tanfomlyam Utáni Felmérés
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Felmérők
+        tess-testing-problem-solving-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 1.  fejezet
+            lessonGroup-3:
+              display_name: 2.  fejezet
+          title: Problémamegoldás
+        testing-focus-on-creativity1:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 1.  fejezet
+          title: Problémamegoldás
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Ciklusok
+            csf_events:
+              display_name: Események
+        express-2023:
+          lesson_groups:
+            csf_sprites:
+              display_name: sprite-ok
+            lessonGroup-9:
+              display_name: Események
+            csf_loops:
+              display_name: Ciklusok
+            csf_conditionals:
+              display_name: Feltételek
+            csf_functions:
+              display_name: Függvények
+            csf_variables:
+              display_name: változók
+            csf_for_loops:
+              display_name: Számláló ciklusok
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitális állampolgárság
+            csf_loops:
+              display_name: Ciklusok
+            csf_events:
+              display_name: Események
+            lessonGroup-5:
+              display_name: Kurzus Projekt vége
+          description: 'Az A kurzus számítástechnikai tantervet kínál azoknak az olvasással épp csak ismerkedő gyerekek számára, beleértve akár az óvodásokat is. A diákok megtanulnak programozni olyan parancsokkal, mint a ciklusok és az események. Az ebben a kurzusban bemutatott leckék arra is megtanítják a diákokat, hogy értelmesen együttműködjenek másokkal, vizsgálják meg a különböző problémamegoldó technikákat, a kihívást jelentő feladatok megoldásával kitartóak legyenek, és megismerjék az internetbiztonságot. '
+          student_description: Ismerje meg a számítástechnika és az internetbiztonság alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz.
+          description_short: Bevezetés a számítástechnikába az előolvasók számára.
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitális állampolgárság
+            csf_loops:
+              display_name: Ciklusok
+            csf_events:
+              display_name: Események
+            lessonGroup-6:
+              display_name: Kurzus Projekt vége
+          student_description: Ismerje meg a számítástechnika és az internetbiztonság alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz.
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitális állampolgárság
+            csf_loops:
+              display_name: Ciklusok
+            csf_events:
+              display_name: Események
+            csf_data:
+              display_name: Adat
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
+          student_description: Hozzon létre programokat szekvenálással, hurkokkal és eseményekkel. Fordítsa le a monogramját binárisra, vizsgálja meg a különböző problémamegoldó technikákat, és megtanulja, hogyan reagáljon a kiberzaklatásra. A kurzus végén hozd létre saját játékodat vagy történeted, amit megoszthatsz!
+          description_short: Ismerje meg a számítástechnika alapjait, és hozzon létre saját műalkotásokat, történeteket és játékokat.
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digitális állampolgárság
+            csf_events:
+              display_name: Események
+            csf_loops:
+              display_name: Ciklusok
+            csf_conditionals:
+              display_name: Feltételek
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitális állampolgárság
+            csf_sprites:
+              display_name: sprite-ok
+            ramp_up:
+              display_name: Egymásba ágyazott ciklusok
+            csf_functions:
+              display_name: Függvények
+            csf_nested_loops:
+              display_name: Feltételek
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
+        problem-solving-computing-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '1.  fejezet: A probléma-megoldási folyamat'
+            lessonGroup-3:
+              display_name: '2.  fejezet: Számítógépek és problémamegoldás'
+        web-development-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Kérdőív
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Kérdőív
+        design-process-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Kérdőív
+        data-society-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Kérdőív
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 1.  fejezet
+            lessonGroup-4:
+              display_name: 2.  fejezet
+            lessonGroup-5:
+              display_name: Kérdőív
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '1.  fejezet: A probléma-megoldási folyamat'
+            lessonGroup-4:
+              display_name: Kérdőív
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '1.  fejezet: A probléma-megoldási folyamat'
+            lessonGroup-3:
+              display_name: '2.  fejezet: Számítógépek és problémamegoldás'
+            lessonGroup-5:
+              display_name: Kérdőív
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '1.  fejezet: A probléma-megoldási folyamat'
+            lessonGroup-4:
+              display_name: Kérdőív
+        focus-on-data3-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 1.  fejezet
+            lessonGroup-4:
+              display_name: 2.  fejezet
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '1.  fejezet: A probléma-megoldási folyamat'
+            lessonGroup-4:
+              display_name: Kérdőív
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '1.  fejezet: A probléma-megoldási folyamat'
+            lessonGroup-4:
+              display_name: Kérdőív
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '1.  fejezet: A probléma-megoldási folyamat'
+            lessonGroup-4:
+              display_name: Kérdőív
+        focus-on-impact-in-society4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 1.  fejezet
+            lessonGroup-4:
+              display_name: 2.  fejezet
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Kérdőív
+        devices-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Kérdőív
+        ai-temp:
+          title: Hogyan működik az MI?
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Bevezető
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Bevezető
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: Értékelés
+        csd-post-survey-2023:
+          title: Tanfomlyam Utáni Felmérés
+        focus-on-data-post-survey-2023:
+          title: Tanfomlyam Utáni Felmérés
+        focus-on-impact-in-society-post-survey-2023:
+          title: Tanfomlyam Utáni Felmérés
+        focus-on-coding-post-survey-2023:
+          title: Tanfomlyam Utáni Felmérés
+        focus-on-design-with-purpose-post-survey-2023:
+          title: Tanfomlyam Utáni Felmérés
+        focus-on-hardware-post-survey-2023:
+          title: Tanfomlyam Utáni Felmérés
+        focus-on-creativity-post-survey-2023:
+          title: Tanfomlyam Utáni Felmérés
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitális állampolgárság
+            lessonGroup-3:
+              display_name: sprite-ok
+            lessonGroup-4:
+              display_name: változók
+            lessonGroup-6:
+              display_name: Kurzus Projekt vége
+          description_short: Ismerje meg a Computer Science Fundamentals összes koncepcióját, és hozzon létre saját művészetét, történetét vagy
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Adat
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitális állampolgárság
+            lessonGroup-4:
+              display_name: Ciklusok
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Adat
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitális állampolgárság
+            lessonGroup-4:
+              display_name: Ciklusok
+            lessonGroup-6:
+              display_name: Adat
+          description_short: Bevezetés a számítástechnikába az előolvasók számára.
+          description: Az A kurzus számítástechnikai tantervet kínál azoknak az olvasással épp csak ismerkedő gyerekek számára, beleértve akár az óvodásokat is. A diákok megtanulnak programozni olyan parancsokkal, mint a ciklusok és az események. Az ebben a kurzusban bemutatott leckék arra is megtanítják a diákokat, hogy értelmesen együttműködjenek másokkal, vizsgálják meg a különböző problémamegoldó technikákat, a kihívást jelentő feladatok megoldásával kitartóak legyenek, és megismerjék az internetbiztonságot.
+        nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: Adat
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitális állampolgárság
+            lessonGroup-4:
+              display_name: Ciklusok
+            lessonGroup-6:
+              display_name: Események
+            lessonGroup-7:
+              display_name: Kurzus Projekt vége
+            lessonGroup-8:
+              display_name: Adat
+        nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: Számítástechnikai rendszerek
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitális állampolgárság
+            lessonGroup-4:
+              display_name: Ciklusok
+            lessonGroup-5:
+              display_name: Események
+            lessonGroup-6:
+              display_name: Adat
+            lessonGroup-8:
+              display_name: Számítástechnikai rendszerek
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitális állampolgárság
+            lessonGroup-6:
+              display_name: Ciklusok
+            lessonGroup-7:
+              display_name: Adat
+            lessonGroup-8:
+              display_name: Kurzus Projekt vége
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Egymásba ágyazott ciklusok
+            lessonGroup-4:
+              display_name: Függvények
+            lessonGroup-6:
+              display_name: Kurzus Projekt vége
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: sprite-ok
+          description_short: Ismerje meg a Computer Science Fundamentals összes koncepcióját, és hozzon létre saját művészetét, történetét vagy
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: sprite-ok
+            lessonGroup-3:
+              display_name: Feltételek
+            lessonGroup-5:
+              display_name: változók
+            lessonGroup-7:
+              display_name: Kurzus Projekt vége
+          description_short: Ismerje meg a Computer Science Fundamentals összes koncepcióját, és hozzon létre saját művészetét, történetét vagy
+        how-ai-works-2023:
+          title: Hogyan működik az MI?
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Bevezető
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Bevezető
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Bevezető
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Bevezető
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Kérdőív
+            lessonGroup-2:
+              display_name: '1.  fejezet: A probléma-megoldási folyamat'
+            lessonGroup-3:
+              display_name: '2.  fejezet: Számítógépek és problémamegoldás'
+        csd7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 1.  fejezet
+            lessonGroup-3:
+              display_name: 2.  fejezet
+        csd-post-survey-2024:
+          title: Tanfomlyam Utáni Felmérés

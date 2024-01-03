@@ -2,12 +2,1045 @@
   "ca-ES": {
     "data": {
       "programming_environments": {
-        "gamelab": {
-          "name": "Laboratori de jocs",
+        "applab": {
           "categories": {
-            "game_lab": {
-              "name": "Laboratori de jocs",
+            "advanced": {
               "expressions": {
+                "setStyle": {
+                  "palette_params": {
+                    "css": {
+                      "type": "Cadenes"
+                    },
+                    "id": {
+                      "type": "Cadenes"
+                    }
+                  }
+                }
+              },
+              "name": "Avançat"
+            },
+            "canvas": {
+              "expressions": {
+                "circle": {
+                  "palette_params": {
+                    "radius": {
+                      "description": "El radi del cercle, en píxels."
+                    }
+                  }
+                },
+                "drawImage": {
+                  "palette_params": {
+                    "id": {
+                      "description": "La posició x en píxels de la cantonada superior esquerra de la imatge que es dibuixarà."
+                    },
+                    "x": {
+                      "description": "La posició x en píxels de la cantonada superior esquerra de la imatge que es dibuixarà."
+                    },
+                    "y": {
+                      "description": "La posició y en píxels de la cantonada superior esquerra de la imatge que es dibuixarà."
+                    }
+                  }
+                },
+                "getAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objecte"
+                    },
+                    "x": {
+                      "description": "La posició x en píxels a partir de la cantonada superior esquerra de la imatge."
+                    },
+                    "y": {
+                      "description": "La posició y en píxels a partir de la cantonada superior esquerra de la imatge."
+                    }
+                  },
+                  "short_description": "Retorna la quantitat d'alfa (opacitat) (entre 0 i 255) al color del píxel ubicat a la posició x i y donades a les dades d'imatge donades."
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objecte"
+                    },
+                    "x": {
+                      "description": "La posició x en píxels a partir de la cantonada superior esquerra de la imatge."
+                    },
+                    "y": {
+                      "description": "La posició y en píxels a partir de la cantonada superior esquerra de la imatge."
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objecte"
+                    },
+                    "x": {
+                      "description": "La posició x en píxels a partir de la cantonada superior esquerra de la imatge."
+                    },
+                    "y": {
+                      "description": "La posició y en píxels a partir de la cantonada superior esquerra de la imatge."
+                    }
+                  }
+                },
+                "getImageData": {
+                  "palette_params": {
+                    "height": {
+                      "description": "L'alçada del rectangle de delimitació per capturar les dades de la imatge."
+                    },
+                    "width": {
+                      "description": "L'amplada del rectangle de delimitació per capturar les dades de la imatge."
+                    },
+                    "x": {
+                      "description": "La posició x en píxels per iniciar la captura."
+                    },
+                    "y": {
+                      "description": "La posició y en píxels per iniciar la captura."
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objecte"
+                    },
+                    "x": {
+                      "description": "La posició x en píxels a partir de la cantonada superior esquerra de la imatge."
+                    },
+                    "y": {
+                      "description": "La posició y en píxels a partir de la cantonada superior esquerra de la imatge."
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objecte"
+                    },
+                    "x": {
+                      "description": "La posició x en píxels a partir de la cantonada superior esquerra de la imatge que es farà servir per col·locar les dades al llenç."
+                    },
+                    "y": {
+                      "description": "La posició y en píxels a partir de la cantonada superior esquerra de la imatge que es farà servir per col·locar les dades al llenç."
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "height": {
+                      "description": "L'alçada vertical en píxels del rectangle."
+                    },
+                    "width": {
+                      "description": "L'amplada horitzontal en píxels del rectangle."
+                    },
+                    "x": {
+                      "description": "La posició x en píxels de la cantonada superior esquerra del rectangle."
+                    },
+                    "y": {
+                      "description": "La posició y en píxels de la cantonada superior esquerra del rectangle."
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "alphaValue": {
+                      "description": "La quantitat d'alfa (opacitat) entre 0 i 255) que s'establirà per al píxel."
+                    },
+                    "imageData": {
+                      "type": "objecte"
+                    },
+                    "x": {
+                      "description": "La posició x en píxels a partir de la cantonada superior esquerra de la imatge."
+                    },
+                    "y": {
+                      "description": "La posició y en píxels a partir de la cantonada superior esquerra de la imatge."
+                    }
+                  },
+                  "short_description": "Estableix la quantitat d'alfa (opacitat) (entre 0 i 255) al color del píxel ubicat a la posició x i y donades a les dades d'imatge donades."
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "blueValue": {
+                      "description": "La quantitat de blau (de 0 a 255) que s'establirà per al píxel."
+                    },
+                    "imageData": {
+                      "type": "objecte"
+                    },
+                    "x": {
+                      "description": "La posició x en píxels a partir de la cantonada superior esquerra de la imatge."
+                    },
+                    "y": {
+                      "description": "La posició y en píxels a partir de la cantonada superior esquerra de la imatge."
+                    }
+                  },
+                  "short_description": "Estableix la quantitat de blau (de 0 a 255) del color del píxel situat a la posició x i y indicades a les dades de la imatge indicades segons la quantitat introduïda a blueValue."
+                },
+                "setFillColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Cadenes"
+                    }
+                  }
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "greenValue": {
+                      "description": "La quantitat de verd (de 0 a 255) que s'establirà per al píxel."
+                    },
+                    "imageData": {
+                      "type": "objecte"
+                    },
+                    "x": {
+                      "description": "La posició x en píxels a partir de la cantonada superior esquerra de la imatge."
+                    },
+                    "y": {
+                      "description": "La posició y en píxels a partir de la cantonada superior esquerra de la imatge."
+                    }
+                  },
+                  "short_description": "Estableix la quantitat de verd (de 0 a 255) del color del píxel situat a la posició x i y indicades a les dades de la imatge indicades segons la quantitat introduïda a greenValue."
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "alpha": {
+                      "description": "Opcional. La quantitat d'opacitat (de 0 a 255) que s'establirà per al píxel. L'opacitat per defecte és de 255 (opacitat total)."
+                    },
+                    "blue": {
+                      "description": "La quantitat de blau (de 0 a 255) que s'establirà per al píxel."
+                    },
+                    "green": {
+                      "description": "La quantitat de verd (de 0 a 255) que s'establirà per al píxel."
+                    },
+                    "imageData": {
+                      "type": "objecte"
+                    },
+                    "red": {
+                      "description": "La quantitat de vermell (de 0 a 255) que s'establirà per al píxel."
+                    },
+                    "x": {
+                      "description": "La posició x en píxels a partir de la cantonada superior esquerra de la imatge."
+                    },
+                    "y": {
+                      "description": "La posició y en píxels a partir de la cantonada superior esquerra de la imatge."
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objecte"
+                    },
+                    "redValue": {
+                      "description": "La quantitat de vermell (de 0 a 255) que s'establirà per al píxel."
+                    },
+                    "x": {
+                      "description": "La posició x en píxels a partir de la cantonada superior esquerra de la imatge."
+                    },
+                    "y": {
+                      "description": "La posició y en píxels a partir de la cantonada superior esquerra de la imatge."
+                    }
+                  },
+                  "short_description": "Estableix la quantitat de vermell (de 0 a 255) del color del píxel situat a la posició x i y indicades a les dades de la imatge indicades segons la quantitat introduïda a redValue."
+                },
+                "setStrokeColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Cadenes"
+                    }
+                  }
+                }
+              }
+            },
+            "circuit": {
+              "expressions": {
+                "buzzer.play": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "buzzer.playNotes": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "buzzer.playSong": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "isPressed": {
+                  "return_value": "Booleà"
+                },
+                "toggleSwitch.isOpen": {
+                  "return_value": "Booleà"
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "description": "El valor retornat per la funció setTimout per cancelar."
+                    }
+                  }
+                },
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "El nombre de mil·lisegons entre cada execució de la funció."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "El nombre de mil·lisegons que passaran abans d'executar la funció."
+                    }
+                  }
+                },
+                "stopTimedLoop": {
+                  "palette_params": {
+                    "loop": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funció"
+                    },
+                    "ms": {
+                      "type": "Número"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "objecte"
+                    }
+                  }
+                },
+                "createRecordSync": {
+                  "palette_params": {
+                    "table": {
+                      "type": "Cadenes"
+                    }
+                  }
+                },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "objecte"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "objecte"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "options": {
+                      "type": "objecte"
+                    },
+                    "tableName": {
+                      "description": "El nom de la taula de la qual s'obtindran els registres."
+                    }
+                  }
+                },
+                "getColumn": {
+                  "palette_params": {
+                    "column": {
+                      "type": "Cadenes"
+                    },
+                    "table": {
+                      "type": "Cadenes"
+                    }
+                  }
+                },
+                "getKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "El nom de la clau que es recuperarà."
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funció"
+                    },
+                    "id": {
+                      "type": "Cadenes"
+                    },
+                    "name": {
+                      "type": "Cadenes"
+                    }
+                  }
+                },
+                "getUserId": {
+                  "short_description": "Obté l'identificador únic de l'usuari actual de l'aplicació."
+                },
+                "onRecordEvent": {
+                  "palette_params": {
+                    "table": {
+                      "description": "El nom de la taula a la qual afecta aquest controlador d'esdeveniments."
+                    }
+                  }
+                },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "objecte"
+                    }
+                  }
+                },
+                "readRecordsSync": {
+                  "palette_params": {
+                    "table": {
+                      "type": "Cadenes"
+                    }
+                  }
+                },
+                "setKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "El nom de la clau que s'emmagatzemarà."
+                    },
+                    "value": {
+                      "description": "Les dades que s'emmagatzemaran."
+                    }
+                  },
+                  "short_description": "Emmagatzema una parella de clau/valor a l'emmagatzematge de dades de clau/valor del Laboratori d'Aplicacions i crida la funció de crida de retorn quan finalitza l'acció."
+                },
+                "startWebRequest": {
+                  "palette_params": {
+                    "url": {
+                      "description": "L'adreça web d'un servei que retorna dades."
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "objecte"
+                    }
+                  }
+                }
+              },
+              "name": "Dades"
+            },
+            "functions": {
+              "name": "Funcions"
+            },
+            "maker": {
+              "expressions": {
+                "pinMode": {
+                  "palette_params": {
+                    "mode": {
+                      "type": "Cadenes"
+                    },
+                    "pin": {
+                      "type": "Número"
+                    }
+                  }
+                }
+              }
+            },
+            "math": {
+              "expressions": {
+                "mathPow": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Número"
+                    },
+                    "y": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "mathSqrt": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "moduloOperator": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Número"
+                    },
+                    "y": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "El nombre màxim de retornats"
+                    },
+                    "min": {
+                      "description": "El nombre mínim de retornats"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "El nombre màxim de retornats"
+                    },
+                    "min": {
+                      "description": "El nombre mínim de retornats"
+                    }
+                  }
+                }
+              },
+              "name": "Matemàtiques"
+            },
+            "micro_bit": {
+              "expressions": {
+                "ledScreen.off": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Número"
+                    },
+                    "y": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "ledScreen.on": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Número"
+                    },
+                    "y": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "ledScreen.scrollNumber": {
+                  "palette_params": {
+                    "number": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "ledScreen.scrollString": {
+                  "palette_params": {
+                    "String": {
+                      "type": "Cadenes"
+                    }
+                  }
+                },
+                "ledScreen.toggle": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Número"
+                    },
+                    "y": {
+                      "type": "Número"
+                    }
+                  }
+                }
+              }
+            },
+            "turtle": {
+              "expressions": {
+                "arcLeft": {
+                  "short_description": "Mou la tortuga endavant i cap a l'esquerra tot fent un arc circular suau."
+                },
+                "getX": {
+                  "short_description": "Obté la coordenada x actual de la tortuga en píxels."
+                },
+                "getY": {
+                  "short_description": "Obté la coordenada y actual de la tortuga en píxels."
+                },
+                "hide": {
+                  "short_description": "Fa que la tortuga sigui invisible en la seva ubicació actual."
+                },
+                "move": {
+                  "palette_params": {
+                    "x": {
+                      "description": "El nombre de píxels per moure la tortuga cap la dreta."
+                    },
+                    "y": {
+                      "description": "El nombre de píxels per moure la tortuga cap avall."
+                    }
+                  }
+                },
+                "moveBackward": {
+                  "short_description": "Mou la tortuga cap enrere el nombre de píxels indicat en la direcció actual."
+                },
+                "moveForward": {
+                  "short_description": "Mou la tortuga cap endavant el nombre de píxels indicat en la direcció actual."
+                },
+                "moveTo": {
+                  "short_description": "Mou la tortuga a una posició específica (x, y) a la pantalla."
+                },
+                "penColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Cadenes"
+                    }
+                  },
+                  "short_description": "Estableix el color del bolígraf que fa servir la tortuga per dibuixar línies i punts."
+                },
+                "penDown": {
+                  "short_description": "Baixa el bolígraf perquè la tortuga deixi una línia mentre es va movent."
+                },
+                "penRGB": {
+                  "palette_params": {
+                    "r": {
+                      "type": "Número"
+                    }
+                  },
+                  "short_description": "Fa servir valors RGBA per establir el color del bolígraf que fa servir la tortuga per dibuixar línies i punts."
+                },
+                "penUp": {
+                  "short_description": "Alça el bolígraf perquè la tortuga no dibuixi una línia mentre es mou."
+                },
+                "penWidth": {
+                  "short_description": "Estableix l'amplada de la línia, en píxels, del rastre que dibuixa la tortuga mentre es mou."
+                },
+                "show": {
+                  "short_description": "Fa que la tortuga sigui visible en la seva ubicació actual."
+                },
+                "speed": {
+                  "short_description": "Estableix la velocitat d'execució de l'aplicació, inclosa la velocidad de la tortuga."
+                },
+                "turnLeft": {
+                  "short_description": "Gira la tortuga a l'esquerra segons l'angle especificat. La posició de la tortuga es manté igual."
+                },
+                "turnRight": {
+                  "short_description": "Gira la tortuga a la dreta segons l'angle especificat. La posició de la tortuga es manté igual."
+                },
+                "turnTo": {
+                  "short_description": "Canvia la direcció de la tortuga segons un angle específic. 0 és amunt, 90 és dreta, 180 és avall i 270 és esquerra."
+                }
+              }
+            },
+            "ui_controls": {
+              "expressions": {
+                "button": {
+                  "short_description": "Crea un botó a la pantalla en què hi surt el text introduït i referenciat per l'identificador proporcionat a la ubicació per defecte (0,0)."
+                },
+                "getProperty": {
+                  "palette_params": {
+                    "id": {
+                      "type": "Cadenes"
+                    },
+                    "property": {
+                      "type": "Cadenes"
+                    }
+                  }
+                },
+                "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "Créixer i encongir-se"
+                    }
+                  },
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funció"
+                    },
+                    "id": {
+                      "type": "Cadenes"
+                    },
+                    "type": {
+                      "type": "Cadenes"
+                    }
+                  }
+                },
+                "playSound": {
+                  "palette_params": {
+                    "loop": {
+                      "type": "Booleà"
+                    }
+                  },
+                  "short_description": "Reprodueix el fitxer de so MP3 a partir de l'URL indicada."
+                },
+                "playSpeech": {
+                  "palette_params": {
+                    "gender": {
+                      "type": "Cadenes"
+                    },
+                    "language": {
+                      "type": "Cadenes"
+                    },
+                    "text": {
+                      "type": "Cadenes"
+                    }
+                  }
+                },
+                "rgb": {
+                  "palette_params": {
+                    "a": {
+                      "type": "Número"
+                    },
+                    "b": {
+                      "type": "Número"
+                    },
+                    "g": {
+                      "type": "Número"
+                    },
+                    "r": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "setProperty": {
+                  "palette_params": {
+                    "id": {
+                      "type": "Cadenes"
+                    },
+                    "property": {
+                      "description": "La propietat que es canviarà.",
+                      "type": "Cadenes"
+                    }
+                  },
+                  "short_description": "Estableix una propietat amb un valor nou per a l'element especificat."
+                },
+                "setScreen": {
+                  "short_description": "Configura la pantalla amb el screenId indicat."
+                },
+                "showElement": {
+                  "short_description": "Mostra l'element que porta l'identificador proporcionat."
+                },
+                "textLabel": {
+                  "short_description": "Crea una etiqueta de text a la pantalla en què hi surt el text introduït i referenciat per l'identificador proporcionat a la ubicació per defecte (0,0)."
+                }
+              }
+            },
+            "variables": {
+              "expressions": {
+                "addPair": {
+                  "palette_params": {
+                    "key": {
+                      "type": "Cadenes"
+                    }
+                  },
+                  "return_value": "Cap"
+                },
+                "declareAssign_list_123": {
+                  "short_description": "Declara i assigna una matriu a una variable"
+                },
+                "declareAssign_object": {
+                  "examples": {
+                    "Choose Your Own Adventure": {
+                      "name": "Tria la teva pròpia aventura"
+                    }
+                  }
+                },
+                "getValue": {
+                  "palette_params": {
+                    "key": {
+                      "type": "Cadenes"
+                    }
+                  }
+                },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "La cadena que es buscarà:"
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "La cadena que es buscarà:"
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "La longitud de la cadena"
+                }
+              },
+              "name": "Variables"
+            }
+          },
+          "description": "El Laboratori d'aplicacions és un entorn de programació on podeu crear aplicacions simples. Dissenyeu una aplicació, programeu-la amb blocs o JavaScript per fer-la funcionar i compartiu-la en pocs segons.",
+          "name": "Laboratori d'aplicacions"
+        },
+        "gamelab": {
+          "categories": {
+            "control": {
+              "expressions": {
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "El nombre de mil·lisegons entre cada execució de la funció."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "El nombre de mil·lisegons que passaran abans d'executar la funció."
+                    }
+                  }
+                }
+              }
+            },
+            "drawing": {
+              "expressions": {
+                "arc": {
+                  "palette_params": {
+                    "h": {
+                      "type": "Número"
+                    },
+                    "start": {
+                      "type": "Número"
+                    },
+                    "stop": {
+                      "type": "Número"
+                    },
+                    "w": {
+                      "type": "Número"
+                    },
+                    "x": {
+                      "type": "Número"
+                    },
+                    "y": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "background": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Cadenes"
+                    }
+                  }
+                },
+                "ellipse": {
+                  "palette_params": {
+                    "h": {
+                      "type": "Número"
+                    },
+                    "w": {
+                      "type": "Número"
+                    },
+                    "x": {
+                      "type": "Número"
+                    },
+                    "y": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "fill": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Cadenes"
+                    }
+                  }
+                },
+                "line": {
+                  "palette_params": {
+                    "x1": {
+                      "type": "Número"
+                    },
+                    "x2": {
+                      "type": "Número"
+                    },
+                    "y1": {
+                      "type": "Número"
+                    },
+                    "y2": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "point": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Número"
+                    },
+                    "y": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "h": {
+                      "type": "Número"
+                    },
+                    "w": {
+                      "type": "Número"
+                    },
+                    "x": {
+                      "type": "Número"
+                    },
+                    "y": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "regularPolygon": {
+                  "palette_params": {
+                    "sides": {
+                      "type": "Número"
+                    },
+                    "size": {
+                      "type": "Número"
+                    },
+                    "x": {
+                      "type": "Número"
+                    },
+                    "y": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "rgb": {
+                  "palette_params": {
+                    "a": {
+                      "type": "Número"
+                    },
+                    "b": {
+                      "type": "Número"
+                    },
+                    "g": {
+                      "type": "Número"
+                    },
+                    "r": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Estrella"
+                    }
+                  },
+                  "palette_params": {
+                    "x1": {
+                      "type": "Número"
+                    },
+                    "x2": {
+                      "type": "Número"
+                    },
+                    "y1": {
+                      "type": "Número"
+                    },
+                    "y2": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "stroke": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Cadenes"
+                    }
+                  }
+                },
+                "strokeWeight": {
+                  "palette_params": {
+                    "size": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "text": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Número"
+                    },
+                    "str": {
+                      "type": "Cadenes"
+                    },
+                    "width": {
+                      "type": "Número"
+                    },
+                    "x": {
+                      "type": "Número"
+                    },
+                    "y": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "textAlign": {
+                  "palette_params": {
+                    "horiz": {
+                      "type": "Cadenes"
+                    },
+                    "vert": {
+                      "type": "Cadenes"
+                    }
+                  }
+                },
+                "textFont": {
+                  "palette_params": {
+                    "font": {
+                      "type": "Cadenes"
+                    }
+                  }
+                },
+                "textSize": {
+                  "palette_params": {
+                    "pixels": {
+                      "type": "Número"
+                    }
+                  }
+                }
+              },
+              "name": "Dibuix"
+            },
+            "functions": {
+              "name": "Funcions"
+            },
+            "game_lab": {
+              "expressions": {
+                "keyDown": {
+                  "palette_params": {
+                    "code": {
+                      "type": "Cadenes"
+                    }
+                  }
+                },
+                "keyWentDown": {
+                  "palette_params": {
+                    "code": {
+                      "type": "Cadenes"
+                    }
+                  }
+                },
+                "keyWentUp": {
+                  "palette_params": {
+                    "code": {
+                      "type": "Cadenes"
+                    }
+                  }
+                },
+                "mouseDown": {
+                  "palette_params": {
+                    "button": {
+                      "type": "Cadenes"
+                    }
+                  }
+                },
                 "mouseIsOver": {
                   "palette_params": {
                     "sprite": {
@@ -27,23 +1060,73 @@
                     "Black and White": {
                       "name": "Blanc i negre"
                     }
+                  },
+                  "palette_params": {
+                    "button": {
+                      "type": "Cadenes"
+                    }
                   }
-                }
-              }
-            },
-            "sprites": {
-              "expressions": {
-                "getSpeed": {
-                  "examples": {
-                    "Spiral": {
-                      "name": "Espiral"
+                },
+                "mouseWentUp": {
+                  "palette_params": {
+                    "button": {
+                      "type": "Cadenes"
+                    }
+                  }
+                },
+                "playSound": {
+                  "palette_params": {
+                    "loop": {
+                      "type": "Booleà"
+                    },
+                    "url": {
+                      "type": "Cadenes"
+                    }
+                  },
+                  "short_description": "Reprodueix el fitxer de so MP3 a partir de l'URL indicada."
+                },
+                "playSpeech": {
+                  "palette_params": {
+                    "gender": {
+                      "type": "Cadenes"
+                    },
+                    "language": {
+                      "type": "Cadenes"
+                    },
+                    "text": {
+                      "type": "Cadenes"
+                    }
+                  }
+                },
+                "showMobileControls": {
+                  "content": "Canvia els controls mòbils visibles sota l'espai de joc.",
+                  "palette_params": {
+                    "dpadFourWay": {
+                      "type": "Booleà"
+                    },
+                    "dpadVisible": {
+                      "type": "Booleà"
+                    },
+                    "mobileOnly": {
+                      "type": "Booleà"
+                    },
+                    "spaceButtonVisible": {
+                      "type": "Booleà"
+                    }
+                  },
+                  "short_description": "Canvia els controls mòbils visibles sota l'espai de joc."
+                },
+                "stopSound": {
+                  "palette_params": {
+                    "url": {
+                      "type": "Cadenes"
                     }
                   }
                 }
-              }
+              },
+              "name": "Laboratori de jocs"
             },
             "groups": {
-              "name": "Grups",
               "expressions": {
                 "add": {
                   "palette_params": {
@@ -59,10 +1142,53 @@
                     }
                   }
                 },
+                "get": {
+                  "palette_params": {
+                    "i": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "pointToEach": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Número"
+                    },
+                    "y": {
+                      "type": "Número"
+                    }
+                  }
+                },
                 "remove": {
                   "palette_params": {
                     "sprite": {
                       "type": "Sprite"
+                    }
+                  }
+                },
+                "setAnimationEach": {
+                  "palette_params": {
+                    "label": {
+                      "type": "Cadenes"
+                    }
+                  }
+                },
+                "setColliderEach": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Número"
+                    },
+                    "rotationOffset": {
+                      "type": "Número"
+                    },
+                    "type": {
+                      "type": "Cadenes"
+                    },
+                    "width/radius": {
+                      "type": "Número"
+                    },
+                    "yOffset": {
+                      "type": "Número"
                     }
                   }
                 },
@@ -73,147 +1199,305 @@
                     }
                   }
                 },
+                "setHeightEach": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "setLifetimeEach": {
+                  "palette_params": {
+                    "lifetime": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "setMirrorXEach": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "setMirrorYEach": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "setRotateToDirectionEach": {
+                  "palette_params": {
+                    "bool": {
+                      "type": "Booleà"
+                    }
+                  }
+                },
+                "setRotationEach": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "setRotationSpeedEach": {
+                  "palette_params": {
+                    "speed": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "setScaleEach": {
+                  "palette_params": {
+                    "scale": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "setSpeedAndDirectionEach": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "Número"
+                    },
+                    "speed": {
+                      "type": "Número"
+                    }
+                  }
+                },
                 "setTintEach": {
                   "palette_params": {
                     "color": {
                       "type": "Color"
                     }
                   }
-                }
-              }
-            },
-            "drawing": {
-              "name": "Dibuix",
-              "expressions": {
-                "shape": {
-                  "examples": {
-                    "Star": {
-                      "name": "Estrella"
+                },
+                "setVelocityEach": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Número"
+                    },
+                    "y": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "setVelocityXEach": {
+                  "palette_params": {
+                    "velocity": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "setVelocityYEach": {
+                  "palette_params": {
+                    "velocity": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "setVisibleEach": {
+                  "palette_params": {
+                    "bool": {
+                      "type": "Booleà"
+                    }
+                  }
+                },
+                "setWidthEach": {
+                  "palette_params": {
+                    "width": {
+                      "type": "Número"
                     }
                   }
                 }
-              }
+              },
+              "name": "Grups"
             },
             "math": {
-              "name": "Matemàtiques",
               "expressions": {
+                "mathSqrt": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "moduloOperator": {
+                  "palette_params": {
+                    "value1": {
+                      "type": "Número"
+                    },
+                    "value2": {
+                      "type": "Número"
+                    }
+                  }
+                },
                 "randomNumber": {
                   "palette_params": {
-                    "min": {
-                      "description": "El nombre mínim de retornats"
-                    },
                     "max": {
                       "description": "El nombre màxim de retornats"
+                    },
+                    "min": {
+                      "description": "El nombre mínim de retornats"
                     }
                   }
                 },
                 "randomNumber_min_max": {
                   "palette_params": {
-                    "min": {
-                      "description": "El nombre mínim de retornats"
-                    },
                     "max": {
                       "description": "El nombre màxim de retornats"
+                    },
+                    "min": {
+                      "description": "El nombre mínim de retornats"
                     }
                   }
                 }
-              }
+              },
+              "name": "Matemàtiques"
+            },
+            "sprites": {
+              "expressions": {
+                "createSprite": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Número"
+                    },
+                    "width": {
+                      "type": "Número"
+                    },
+                    "x": {
+                      "type": "Número"
+                    },
+                    "y": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Espiral"
+                    }
+                  }
+                },
+                "mirrorX": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "mirrorY": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "pointTo": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Número"
+                    },
+                    "y": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "setAnimation": {
+                  "palette_params": {
+                    "label": {
+                      "type": "Cadenes"
+                    }
+                  }
+                },
+                "setCollider": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Número"
+                    },
+                    "rotationOffset": {
+                      "type": "Número"
+                    },
+                    "type": {
+                      "type": "Cadenes"
+                    },
+                    "width/radius": {
+                      "type": "Número"
+                    },
+                    "xOffset": {
+                      "type": "Número"
+                    },
+                    "yOffset": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "setFrame": {
+                  "palette_params": {
+                    "frame": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "setSpeedAndDirection": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "Número"
+                    },
+                    "speed": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "setVelocity": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Número"
+                    },
+                    "y": {
+                      "type": "Número"
+                    }
+                  }
+                },
+                "sprite.height": {
+                  "return_value": "L'alçade de l'sprite"
+                },
+                "sprite.width": {
+                  "return_value": "Amplada de l'sprite."
+                }
+              },
+              "name": "Sprites"
             },
             "variables": {
-              "name": "Variables",
               "expressions": {
                 "assign_x": {
                   "short_description": "Assigna el valor a una variable existent. Per exemple, x = 0;"
-                }
-              }
-            },
-            "functions": {
-              "name": "Funcions"
-            }
-          }
-        },
-        "applab": {
-          "name": "Laboratori d'aplicacions",
-          "description": "El Laboratori d'aplicacions és un entorn de programació on podeu crear aplicacions simples. Dissenyeu una aplicació, programeu-la amb blocs o JavaScript per fer-la funcionar i compartiu-la en pocs segons.",
-          "categories": {
-            "ui_controls": {
-              "expressions": {
-                "onEvent": {
-                  "examples": {
-                    "Shrink and Grow": {
-                      "name": "Créixer i encongir-se"
-                    }
-                  },
+                },
+                "includes": {
                   "palette_params": {
-                    "callback": {
-                      "type": "Funció"
-                    }
-                  }
-                }
-              }
-            },
-            "data": {
-              "expressions": {
-                "getPrediction": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "Funció"
-                    }
-                  }
-                }
-              }
-            },
-            "control": {
-              "expressions": {
-                "timedLoop": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "Funció"
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "Matemàtiques",
-              "expressions": {
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "El nombre mínim de retornats"
-                    },
-                    "max": {
-                      "description": "El nombre màxim de retornats"
+                    "searchValue": {
+                      "description": "La cadena que es buscarà:"
                     }
                   }
                 },
-                "randomNumber": {
+                "indexOf": {
                   "palette_params": {
-                    "min": {
-                      "description": "El nombre mínim de retornats"
-                    },
-                    "max": {
-                      "description": "El nombre màxim de retornats"
+                    "searchValue": {
+                      "description": "La cadena que es buscarà:"
                     }
                   }
+                },
+                "length": {
+                  "return_value": "La longitud de la cadena"
                 }
-              }
-            },
-            "variables": {
-              "name": "Variables",
-              "expressions": {
-                "addPair": {
-                  "return_value": "Cap"
-                }
-              }
-            },
-            "functions": {
-              "name": "Funcions"
+              },
+              "name": "Variables"
             }
-          }
+          },
+          "name": "Laboratori de jocs"
         },
         "spritelab": {
-          "name": "Laboratori de personatges",
           "categories": {
             "actions": {
               "name": "Accions"
@@ -221,25 +1505,29 @@
             "events": {
               "name": "Esdeveniments"
             },
-            "loops": {
-              "name": "Bucles"
-            },
-            "variables": {
-              "name": "Variables"
-            },
-            "math": {
-              "name": "Matemàtiques"
+            "functions": {
+              "name": "Funcions"
             },
             "logic": {
               "name": "Lògic"
             },
-            "functions": {
-              "name": "Funcions"
+            "loops": {
+              "name": "Bucles"
+            },
+            "math": {
+              "name": "Matemàtiques"
             },
             "text": {
               "name": "Text"
+            },
+            "variables": {
+              "name": "Variables"
             }
-          }
+          },
+          "name": "Laboratori de personatges"
+        },
+        "weblab": {
+          "name": "Laboratori Web"
         }
       }
     }

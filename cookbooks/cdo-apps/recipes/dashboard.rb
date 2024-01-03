@@ -1,2 +1,2 @@
-::Chef::Recipe.include CdoApps
+Chef::Recipe.include CdoApps
 setup_app 'dashboard'

@@ -1,0 +1,22 @@
+{
+  "blockly_blockPlaySoundTooltip": "geluid afspelen",
+  "blockly_blockPlaySoundAtMeasureTooltip": "geluid afspelen",
+  "blockly_blockRepeatTooltip": "herhaal",
+  "blockly_blockWhenRun": "als gestart",
+  "blockly_blockWhenRunTooltip": "als gestart",
+  "blockly_functionNamePlaceholder": "mijn functie",
+  "blockly_toolboxCategoryEffects": "Effecten",
+  "blockly_toolboxCategoryEvents": "Gebeurtenissen",
+  "blockly_toolboxCategoryFunctions": "Functies",
+  "blockly_toolboxCategoryLogic": "Logica",
+  "blockly_toolboxCategoryMath": "Wiskunde",
+  "blockly_toolboxCategoryPlay": "Geluiden",
+  "blockly_toolboxCategoryVariables": "Variabelen",
+  "feedback": "Feedback",
+  "share": "Delen",
+  "startOver": "Begin opnieuw",
+  "upload": "Uploaden",
+  "panelHeaderInstructions": "Instructies",
+  "panelHeaderWorkspace": "Werkplaats: ",
+  "continue": "Doorgaan"
+}

@@ -31,20 +31,20 @@ module.exports = {
         '    </next>' +
         '  </block>' +
         '</xml>',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        setTimeout(function() {
+        setTimeout(function () {
           Studio.onPuzzleComplete();
         }, 10000);
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.isFalse(window.Studio.sprite[0].visible, 'sprite is hidden');
         return true;
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       // Move south, east, and northwest, and ensure we end up at 0,0
@@ -75,21 +75,21 @@ module.exports = {
         '    </next>' +
         '  </block>' +
         '</xml>',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        setTimeout(function() {
+        setTimeout(function () {
           Studio.onPuzzleComplete();
         }, 10000);
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(window.Studio.sprite[0].x, 0, 'sprite is at the far left');
         assert.equal(window.Studio.sprite[0].y, 0, 'sprite is at the top');
         return true;
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
+        testResult: TestResults.FREE_PLAY,
+      },
     },
     {
       // Move souteast, west, and north, and ensure we end up at 0,0
@@ -120,21 +120,21 @@ module.exports = {
         '    </next>' +
         '  </block>' +
         '</xml>',
-      runBeforeClick: function(assert) {
+      runBeforeClick: function (assert) {
         // add a completion on timeout since this is a freeplay level
-        setTimeout(function() {
+        setTimeout(function () {
           Studio.onPuzzleComplete();
         }, 10000);
       },
-      customValidator: function(assert) {
+      customValidator: function (assert) {
         assert.equal(window.Studio.sprite[0].x, 0, 'sprite is at the far left');
         assert.equal(window.Studio.sprite[0].y, 0, 'sprite is at the top');
         return true;
       },
       expected: {
         result: true,
-        testResult: TestResults.FREE_PLAY
-      }
-    }
-  ]
+        testResult: TestResults.FREE_PLAY,
+      },
+    },
+  ],
 };

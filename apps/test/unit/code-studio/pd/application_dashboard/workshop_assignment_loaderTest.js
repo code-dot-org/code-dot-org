@@ -32,7 +32,7 @@ describe('WorkshopAssignmentLoader', () => {
     sandbox.server.respondWith(url, [
       200,
       {'Content-Type': 'application/json'},
-      JSON.stringify(response)
+      JSON.stringify(response),
     ]);
 
   const respondWithLocal = response => respondWith(/filter/, response);
@@ -66,11 +66,11 @@ describe('WorkshopAssignmentLoader', () => {
       respondWithLocal({
         workshops: [
           {id: 1, date_and_location_name: 'Dec 10 - 15, 2018, Seattle WA'},
-          {id: 2, date_and_location_name: 'Dec 15 - 20, 2018, Buffalo NY'}
-        ]
+          {id: 2, date_and_location_name: 'Dec 15 - 20, 2018, Buffalo NY'},
+        ],
       });
       respondWithTeachercon([
-        {id: 11, date_and_location_name: 'July 22 - 27, 2018, Phoenix AZ'}
+        {id: 11, date_and_location_name: 'July 22 - 27, 2018, Phoenix AZ'},
       ]);
       sandbox.server.respond();
 
@@ -83,7 +83,7 @@ describe('WorkshopAssignmentLoader', () => {
       expect(select.prop('workshops')).to.eql([
         {value: 1, label: 'Dec 10 - 15, 2018, Seattle WA'},
         {value: 2, label: 'Dec 15 - 20, 2018, Buffalo NY'},
-        {value: 11, label: 'July 22 - 27, 2018, Phoenix AZ'}
+        {value: 11, label: 'July 22 - 27, 2018, Phoenix AZ'},
       ]);
     });
   });
@@ -104,8 +104,8 @@ describe('WorkshopAssignmentLoader', () => {
       respondWithLocal({
         workshops: [
           {id: 1, date_and_location_name: 'Dec 10 - 15, 2018, Seattle WA'},
-          {id: 2, date_and_location_name: 'Dec 15 - 20, 2018, Buffalo NY'}
-        ]
+          {id: 2, date_and_location_name: 'Dec 15 - 20, 2018, Buffalo NY'},
+        ],
       });
       sandbox.server.respond();
 
@@ -117,7 +117,7 @@ describe('WorkshopAssignmentLoader', () => {
       expect(select).to.have.length(1);
       expect(select.prop('workshops')).to.eql([
         {value: 1, label: 'Dec 10 - 15, 2018, Seattle WA'},
-        {value: 2, label: 'Dec 15 - 20, 2018, Buffalo NY'}
+        {value: 2, label: 'Dec 15 - 20, 2018, Buffalo NY'},
       ]);
     });
   });

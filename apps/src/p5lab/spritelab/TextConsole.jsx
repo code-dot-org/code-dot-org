@@ -10,7 +10,7 @@ export const AUTO_CLOSE_TIME = 4000;
 
 export const styles = {
   hide: {
-    display: 'none'
+    display: 'none',
   },
   console: {
     display: '',
@@ -20,7 +20,7 @@ export const styles = {
     width: '100%',
     marginTop: margin,
     transitionProperty: 'max-height',
-    transitionDuration: '1000ms'
+    transitionDuration: '1000ms',
   },
   expandButton: {
     position: 'absolute',
@@ -34,7 +34,7 @@ export const styles = {
     fontSize: 'inherit',
     lineHeight: 'inherit',
     borderRadius: 0,
-    fontFamily: 'monospace'
+    fontFamily: 'monospace',
   },
   text: {
     fontSize: 15,
@@ -42,37 +42,37 @@ export const styles = {
     background: 'rgba(255, 255, 255, 0.8)',
     borderRadius: 3,
     margin: '0px 3px 3px 3px',
-    lineHeight: '1.4em'
-  }
+    lineHeight: '1.4em',
+  },
 };
 
 export const transitionStyles = {
   entering: {
     overflow: 'auto',
-    maxHeight: maxHeight
+    maxHeight: maxHeight,
   },
   entered: {
     overflow: 'auto',
-    maxHeight: maxHeight
+    maxHeight: maxHeight,
   },
   exiting: {
     overflow: 'auto',
-    maxHeight: lineHeight + margin * 2
+    maxHeight: lineHeight + margin * 2,
   },
   exited: {
     overflow: 'hidden',
     maxHeight: lineHeight + margin * 2,
-    whiteSpace: 'nowrap'
-  }
+    whiteSpace: 'nowrap',
+  },
 };
 
 export default class TextConsole extends React.Component {
   static propTypes = {
-    consoleMessages: PropTypes.array.isRequired
+    consoleMessages: PropTypes.array.isRequired,
   };
 
   state = {
-    open: false
+    open: false,
   };
 
   timeout = 0;
@@ -156,7 +156,7 @@ export default class TextConsole extends React.Component {
               }}
               style={{
                 ...styles.console,
-                ...transitionStyles[state]
+                ...transitionStyles[state],
               }}
             >
               {this.getLines(state)}

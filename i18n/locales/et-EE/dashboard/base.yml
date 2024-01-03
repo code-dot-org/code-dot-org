@@ -43,8 +43,11 @@ et:
         age: 'Vanus'
         gender: 'Sugu'
         edit_header: 'Muuda kasutajakonto üksikasju'
+        finish_sign_up_header_error: 'Palun parandage järgmised vead:'
         error:
           future: ei saa olla tulevikus
+        user_type: 'Konto tüüp'
+        us_state: 'Olek'
   beta: "beeta"
   hello: "Tere maailm"
   welcome_back: "Tere tulemast tagasi, %{name}"
@@ -130,16 +133,17 @@ et:
     agree_us_data_transfer_teacher: '**Nõustun, et Code.org võib edastada andmeid (muu hulgas isikuandmeid) selle kohta, kuidas ma (ja minu õpilased) seda saiti kasutan, Ameerika Ühendriikidesse**, eesmärgiga neid andmeid säilitada ja töödelda.'
     data_collection_us: "Saan aru, et Code.org on Ameerika Ühendriikide mittetulunduslik veebisait ja Ameerika Ühendriikides kehtivad andmekaitseseadused võivad erineda minu koduriigis kehtivatest."
     visit_privacy: 'Lisateavet leiab veebisaidi Code.org [privaatsuspoliitikast](%{privacy_url}).'
-    additional_information: "Meil on vaja täiendavat teavet, et sind registreerida."
     user_type_label: "Konto tüüp"
     user_type_student: "Õpilane"
     user_type_teacher: "Õpetaja"
     field_is_required: "on nõutud"
     accept_terms: "Pead konto loomiseks nõustuma"
+    email_preference_privacy: "(Vaata privaatsusreegleid)"
     email_preference_yes: "Jah"
     email_preference_no: "Ei"
     share_teacher_email_reg_partner_preference_yes: "Jah"
     share_teacher_email_reg_partner_preference_no: "Ei"
+    us_state: 'Olek'
   school_info:
     private: 'Privaatne'
     public: 'Avalik'
@@ -792,9 +796,16 @@ et:
       robotics:
         kodable: 'Kodable'
         other: "Muu"
+      workshop_course:
+        other: 'Muu'
       email_opt_in:
         opt_in_yes: 'Jah'
         opt_in_no: 'Ei'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
+      csf: 'Arvutiteaduse põhialused'
+      csc: 'Arvutiteaduse ühendused (CS Connections)'
   cookie_banner:
     accept: 'Olen nõus'
   page_not_found_title: "Lehte ei leitud"

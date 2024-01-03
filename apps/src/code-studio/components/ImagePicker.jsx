@@ -8,6 +8,7 @@ import ImageURLInput from './ImageURLInput';
 import {ICON_PREFIX} from '@cdo/apps/applab/constants';
 import {RecordingFileType} from './recorders';
 import i18n from '@cdo/locale';
+import fontConstants from '@cdo/apps/fontConstants';
 
 const extensionFilter = {
   // Note: .jfif files will be converted to .jpg by the server.
@@ -15,7 +16,7 @@ const extensionFilter = {
   audio: '.mp3, .wav',
   document: '.jpg, .jpeg, .gif, .png, .pdf, .doc, .docx',
   // Default set of valid extensions (used if type filter is not specified)
-  default: '.jpg, .jpeg, .jfif, .gif, .png, .mp3, .wav, .pdf, .doc, .docx'
+  default: '.jpg, .jpeg, .jfif, .gif, .png, .mp3, .wav, .pdf, .doc, .docx',
 };
 
 /**
@@ -37,7 +38,7 @@ export default class ImagePicker extends React.Component {
     currentImageType: PropTypes.string,
     //For logging purposes
     projectId: PropTypes.string,
-    elementId: PropTypes.string
+    elementId: PropTypes.string,
   };
 
   state = {mode: ImageMode.FILE};
@@ -93,40 +94,58 @@ export default class ImagePicker extends React.Component {
   render() {
     const styles = {
       root: {
-        margin: '0 0 0 5px'
+        margin: '0 0 0 5px',
       },
       fileModeToggle: {
         float: 'left',
         margin: '0 20px 0 0',
-        fontFamily: this.state.mode === ImageMode.FILE ? '"Gotham 5r"' : null,
         color: this.state.mode === ImageMode.FILE ? null : '#999',
         fontSize: '16px',
-        cursor: 'pointer'
+        cursor: 'pointer',
       },
       iconModeToggle: {
         margin: 0,
         fontSize: '16px',
-        fontFamily: this.state.mode === ImageMode.ICON ? '"Gotham 5r"' : null,
         color: this.state.mode === ImageMode.ICON ? null : '#999',
-        cursor: 'pointer'
+        cursor: 'pointer',
       },
       urlModeToggle: {
         margin: '0 20px 0 0',
         fontSize: '16px',
-        fontFamily: this.state.mode === ImageMode.URL ? '"Gotham 5r"' : null,
         color: this.state.mode === ImageMode.URL ? null : '#999',
-        cursor: 'pointer'
+        cursor: 'pointer',
       },
       divider: {
         borderColor: color.purple,
-        margin: '5px 0'
+        margin: '5px 0',
       },
       warning: {
         color: color.red,
         fontSize: 13,
-        fontWeight: 'bold'
-      }
+        fontWeight: 'bold',
+      },
     };
+
+    if (this.state.mode === ImageMode.FILE) {
+      styles.fileModeToggle = {
+        ...styles.fileModeToggle,
+        ...fontConstants['main-font-semi-bold'],
+      };
+    }
+
+    if (this.state.mode === ImageMode.ICON) {
+      styles.iconModeToggle = {
+        ...styles.iconModeToggle,
+        ...fontConstants['main-font-semi-bold'],
+      };
+    }
+
+    if (this.state.mode === ImageMode.URL) {
+      styles.urlModeToggle = {
+        ...styles.urlModeToggle,
+        ...fontConstants['main-font-semi-bold'],
+      };
+    }
 
     let modeSwitch,
       title = this.props.assetChosen ? (

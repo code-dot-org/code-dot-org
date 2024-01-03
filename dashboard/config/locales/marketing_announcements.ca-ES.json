@@ -1,0 +1,70 @@
+{
+  "ca-ES": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "ai-2020": {
+            "buttonText": "Més informació",
+            "title": "Endinseu-vos en la intel·ligència artificial i l'aprenentatge automàtic"
+          },
+          "ai-launch-2023": {
+            "buttonText": "Més informació"
+          },
+          "ai-pl-launch-2023": {
+            "buttonText": "Més informació"
+          },
+          "back-to-school-2021": {
+            "buttonText": "Més informació"
+          },
+          "codebytes-2020": {
+            "buttonText": "Més informació"
+          },
+          "coldplay": {
+            "buttonText": "Proveu-ho"
+          },
+          "congrats-certificate-share": {
+            "buttonText": "Comença"
+          },
+          "csjourneys": {
+            "buttonText": "Més informació"
+          },
+          "csjourneys-22": {
+            "buttonText": "Més informació"
+          },
+          "csleadersprize": {
+            "buttonText": "Més informació"
+          },
+          "hoc-2023": {
+            "body": "Uneix-te a milions de persones a tot el món per organitzar una hora de codificació, amb IA o sense i aprendre com funciona la IA. Qualsevol persona, en qualsevol lloc pot fer-ho. No cal experiència.",
+            "buttonText": "Més informació",
+            "title": "Hora del Codi: Creativitat amb IA"
+          },
+          "hoc-2023-dance-ai": {
+            "buttonText": "Més informació"
+          },
+          "hoc-more": {
+            "body": "El lloc web d'Hora del Codi té més de 100 activitats de ciències de la computació per a totes les edats i nivells d'experiència, desenvolupats per Code.org i socis."
+          },
+          "home-learning-2020": {
+            "buttonText": "Veure idees de projectes"
+          },
+          "superhero": {
+            "buttonText": "Més informació"
+          },
+          "teacher-apps-closing-2021": {
+            "buttonText": "Uneix-te"
+          },
+          "teacher-apps-nominate-2020": {
+            "buttonText": "Designar un professor"
+          },
+          "teacher-apps-open-2021": {
+            "buttonText": "Uneix-te"
+          },
+          "teacher-apps-stillon-2020": {
+            "buttonText": "Uneix-te"
+          }
+        }
+      }
+    }
+  }
+}

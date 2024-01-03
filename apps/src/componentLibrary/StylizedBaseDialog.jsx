@@ -16,39 +16,34 @@ import Button from '@cdo/apps/templates/Button';
 const FooterButtonType = makeEnum('cancel', 'confirm', 'default');
 const FooterButtonColor = {
   [FooterButtonType.cancel]: Button.ButtonColor.gray,
-  [FooterButtonType.confirm]: Button.ButtonColor.orange
+  [FooterButtonType.confirm]: Button.ButtonColor.brandSecondaryDefault,
 };
 
 const DialogStyle = makeEnum('default', 'simple');
 
 export function FooterButton(props) {
-  function color() {
-    if (props.color) {
-      return props.color;
-    }
-
-    return FooterButtonColor[props.type];
-  }
+  const {type, color, ...buttonProps} = props;
+  const buttonColor = color || FooterButtonColor[type] || undefined;
 
   // TODO: We shouldn't need to override <Button/> styles -- they should likely be default.
   // Tracked by https://codedotorg.atlassian.net/browse/STAR-1616.
   const style = {
     ...styles.buttons.all,
-    ...(styles.buttons[props.type] || {})
+    ...(styles.buttons[props.type] || {}),
   };
 
-  return <Button style={style} color={color()} {...props} />;
+  return <Button style={style} color={buttonColor} {...buttonProps} />;
 }
 
 // This component renders a <Button/>, so it will also accept/require any propTypes
 // from that component.
 FooterButton.propTypes = {
   type: PropTypes.oneOf(Object.keys(FooterButtonType)).isRequired,
-  color: PropTypes.string
+  color: PropTypes.string,
 };
 
 FooterButton.defaultProps = {
-  type: FooterButtonType.default
+  type: FooterButtonType.default,
 };
 
 export default function StylizedBaseDialog(props) {
@@ -86,7 +81,7 @@ export default function StylizedBaseDialog(props) {
       text={props.confirmationButtonText}
       onClick={props.handleConfirmation || props.handleClose}
       disabled={props.disableConfirmationButton}
-    />
+    />,
   ];
 
   return (
@@ -105,7 +100,7 @@ export default function StylizedBaseDialog(props) {
         style={{
           ...styles.container,
           ...(styles.body[props.type] || {}),
-          overflowY: props.stickyHeaderFooter && 'auto'
+          overflowY: props.stickyHeaderFooter && 'auto',
         }}
       >
         {props.body ? props.body : props.children}
@@ -117,7 +112,7 @@ export default function StylizedBaseDialog(props) {
             style={{
               ...styles.container,
               ...styles.footer,
-              justifyContent: props.footerJustification
+              justifyContent: props.footerJustification,
             }}
           >
             {props.renderFooter(defaultButtons)}
@@ -136,7 +131,7 @@ StylizedBaseDialog.propTypes = {
   footerJustification: PropTypes.oneOf([
     'flex-start',
     'flex-end',
-    'space-between'
+    'space-between',
   ]),
   renderFooter: PropTypes.func.isRequired,
   hideFooter: PropTypes.bool,
@@ -147,7 +142,7 @@ StylizedBaseDialog.propTypes = {
   handleClose: PropTypes.func.isRequired,
   handleCancellation: PropTypes.func,
   type: PropTypes.oneOf(Object.keys(DialogStyle)),
-  stickyHeaderFooter: PropTypes.bool
+  stickyHeaderFooter: PropTypes.bool,
 };
 
 StylizedBaseDialog.defaultProps = {
@@ -156,31 +151,31 @@ StylizedBaseDialog.defaultProps = {
   hideFooter: false,
   confirmationButtonText: i18n.dialogOK(),
   cancellationButtonText: i18n.dialogCancel(),
-  type: DialogStyle.default
+  type: DialogStyle.default,
 };
 
 const GUTTER = 20;
 const styles = {
   container: {
-    padding: `0 ${GUTTER}px`
+    padding: `0 ${GUTTER}px`,
   },
   title: {
-    color: color.dark_charcoal
+    color: color.dark_charcoal,
   },
   hr: {
     margin: 0,
-    borderColor: color.lighter_gray
+    borderColor: color.lighter_gray,
   },
   body: {
-    [DialogStyle.default]: {padding: GUTTER}
+    [DialogStyle.default]: {padding: GUTTER},
   },
   footer: {
     display: 'flex',
     alignItems: 'center',
-    padding: `${GUTTER / 2}px ${GUTTER - 3}px` // -3 to account for 3px-margin around <Button/>
+    padding: `${GUTTER / 2}px ${GUTTER - 3}px`, // -3 to account for 3px-margin around <Button/>
   },
   buttons: {
     all: {boxShadow: 'none', flexShrink: 0},
-    [FooterButtonType.confirm]: {borderColor: color.orange}
-  }
+    [FooterButtonType.confirm]: {borderColor: color.orange},
+  },
 };

@@ -12,7 +12,7 @@ import SwipePrompt from '@cdo/apps/templates/SwipePrompt';
 export default class CraftVisualizationColumn extends React.Component {
   static propTypes = {
     showFinishButton: PropTypes.bool.isRequired,
-    showScore: PropTypes.bool.isRequired
+    showScore: PropTypes.bool.isRequired,
   };
 
   render() {

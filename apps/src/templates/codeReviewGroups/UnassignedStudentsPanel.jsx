@@ -5,10 +5,11 @@ import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import JavalabButton from '@cdo/apps/javalab/JavalabButton';
 import StudentGroup from './StudentGroup';
+import fontConstants from '@cdo/apps/fontConstants';
 
 export default function UnassignedStudentsPanel({
   unassignedGroup,
-  onUnassignAllClick
+  onUnassignAllClick,
 }) {
   return (
     <div style={styles.unassignedStudentsPanel}>
@@ -40,7 +41,7 @@ export default function UnassignedStudentsPanel({
 
 UnassignedStudentsPanel.propTypes = {
   unassignedGroup: PropTypes.object.isRequired,
-  onUnassignAllClick: PropTypes.func.isRequired
+  onUnassignAllClick: PropTypes.func.isRequired,
 };
 
 export const HEADER_STYLE = {
@@ -51,12 +52,12 @@ export const HEADER_STYLE = {
   padding: '5px 10px',
   border: `1px solid ${color.lighter_gray}`,
   background: color.lightest_gray,
-  fontFamily: '"Gotham 5r", sans-serif',
-  fontSize: 14
+  ...fontConstants['main-font-semi-bold'],
+  fontSize: 14,
 };
 
 export const HEADER_TITLE_STYLE = {
-  margin: '5px'
+  margin: '5px',
 };
 
 export const BUTTON_STYLE = {
@@ -64,7 +65,7 @@ export const BUTTON_STYLE = {
   color: color.dark_charcoal,
   borderRadius: 4,
   border: `1px solid ${color.dark_charcoal}`,
-  fontSize: 14
+  fontSize: 14,
 };
 
 export const GROUPS_CONTAINER_STYLE = {
@@ -73,18 +74,18 @@ export const GROUPS_CONTAINER_STYLE = {
   height: 355,
   overflow: 'auto',
   border: `1px solid ${color.lightest_gray}`,
-  padding: '10px 4px 0 0'
+  padding: '10px 4px 0 0',
 };
 
 const styles = {
   unassignedStudentsPanel: {
-    width: 400
+    width: 400,
   },
   header: HEADER_STYLE,
   headerTitle: HEADER_TITLE_STYLE,
   button: BUTTON_STYLE,
   groupsContainer: GROUPS_CONTAINER_STYLE,
   studentGroup: {
-    height: 355
-  }
+    height: 355,
+  },
 };

@@ -14,3 +14,5 @@ teacher_markdown <<MARKDOWN
 
 With this in mind, when programmers work together it is imperative that one's code is easy to read at first glance. Most notably, it should be clear to every team member what a function does so the programmer does not need to explain their code multiple times. Abstraction and clean code makes team programming more efficient.
 MARKDOWN
+
+allow_multiple_attempts true

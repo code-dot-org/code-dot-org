@@ -17,3 +17,5 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 47 character + another 47 with shift = 94 total characters.  You'd need 7 bits to encode that many characters.
 MARKDOWN
+
+allow_multiple_attempts true

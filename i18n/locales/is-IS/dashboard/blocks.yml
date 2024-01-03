@@ -9,19 +9,11 @@ is:
       BadGuys_setSizeAll_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': miðlungs
-            '2.00': large
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': miðlungs
-            '2.00': large
-            '3.00': extra large
       Dancelab_alternateMoves:
         text: "{GROUP} skipta hverja {N} takta \nmilli {MOVE1} og {MOVE2}"
         options:
@@ -70,6 +62,11 @@ is:
           UNIT:
             '"measures"': takta
             '"seconds"': sekúndur
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': takta
+            '"seconds"': sekúndur
       Dancelab_changeColorBy:
         text: breyta {COLOR} {METHOD} um {AMOUNT}
         options:
@@ -109,6 +106,27 @@ is:
             MOVES.Kick: Stjarna
             MOVES.ThisOrThat: Þetta eða hitt
             MOVES.Rest: Ekkert
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} gera {MOVE} {DIR} alltaf"
+        options:
+          GROUP:
+            '"CAT"': allir kettir
+            '"SLOTH"': letidýr
+          MOVE:
+            MOVES.Roll: Hlykkja
+            MOVES.ClapHigh: Háklappa
+            MOVES.Dab: Dabba
+            MOVES.DoubleJam: Dobla niður
+            MOVES.Drop: Droppa
+            MOVES.Floss: Flossa
+            MOVES.Fresh: Freska
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Stjarna
+            MOVES.ThisOrThat: Þetta eða hitt
+            MOVES.Rest: Ekkert
+            '"next"': "(Næsti)"
+            '"prev"': "(Fyrri)"
+            '"rand"': "(Handahóf)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} gerir {MOVE} {DIR} alltaf"
         options:
@@ -448,26 +466,6 @@ is:
             '18': '18'
             '19': '19'
             '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
-            '40': '40'
           COSTUME:
             '"ALIEN"': allar geimverur
             '"BEAR"': birnir
@@ -580,6 +578,48 @@ is:
             '"iceCream"': Rjómaís
             '"default"': Ljós
             '"neon"': Neon
+            '"tropical"': Hitabelti
+            '"vintage"': Klassískt
+            '"warm"': Hlýlegt
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: stilla bakgrunn {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Ekkert
+            '"rand"': "(Handahóf)"
+            '"quads"': Horn
+            '"circles"': Hringir
+            '"color_cycle"': Litir
+            '"diamonds"': Demantar
+            '"disco_ball"': Diskókúla
+            '"fireworks"': Flugeldar
+            '"flowers"': Blóm
+            '"growing_stars"': Vaxandi stjörnur
+            '"swirl"': Dáleiðsla
+            '"kaleidoscope"': Breytilegt mynstur
+            '"lasers"': Laser dansgólf
+            '"splatter"': Málningarslettur
+            '"rainbow"': Regnbogi
+            '"ripples_random"': Handahófsgárur
+            '"ripples"': Gárur
+            '"snowflakes"': Snjór
+            '"text"': Nöfn laga
+            '"galaxy"': Geimur
+            '"sparkles"': Glitrandi
+            '"spiral"': Spírall
+            '"disco"': Reitir
+            '"squiggles"': Hrafnaspark
+            '"starburst"': Stjörnublossi
+            '"stars"': Stjörnur
+            '"music_wave"': Bylgjur
+          PALETTE:
+            '"rave"': Svarthvítt
+            '"cool"': Svalt
+            '"electronic"': Rafmagnað
+            '"iceCream"': Rjómaís
+            '"default"': Ljós
+            '"neon"': Neon
+            '"rainbow"': Regnbogi
             '"tropical"': Hitabelti
             '"vintage"': Klassískt
             '"warm"': Hlýlegt
@@ -1173,6 +1213,19 @@ is:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_layoutSprites:
+        text: stilla {GROUP} upp sem {FORMAT}
+        options:
+          FORMAT:
+            '"border"': rammi
+            '"circle"': hringur
+            '"grid"': fylking
+            '"top"': efri röð
+            '"row"': bekkur
+            '"bottom"': neðri röð
+            '"left"': vinstri röð
+            '"column"': í röð upp
+            '"right"': hægri röð
       gamelab_locationAt:
         text: 'staður x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1197,6 +1250,18 @@ is:
             '"spiral"': spírall
       gamelab_makeNewSpriteAnon:
         text: aalab búa til nýja {ANIMATION_NAME} veru á stað {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': rammi
+            '"circle"': hringur
+            '"grid"': fylking
+            '"top"': efri röð
+            '"row"': bekkur
+            '"bottom"': neðri röð
+            '"left"': vinstri röð
+            '"column"': í röð upp
+            '"right"': hægri röð
       gamelab_makeNumSprites:
         text: búa til {NUM} nýja {ANIMATION_NAME} kvika
       gamelab_makeProjectile:
@@ -1209,9 +1274,7 @@ is:
       gamelab_makeSpritesWithSize:
         options:
           SIZE:
-            '30': small
             '50': miðlungs
-            '100': large
       gamelab_mirrorSprite:
         text: "{SPRITE} snýr {DIRECTION}"
         options:
@@ -1330,10 +1393,7 @@ is:
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
-            '25': extra small
-            '50': small
             '75': miðlungs
-            '100': large
       gamelab_setPrompt:
         text: biðja notanda {QUESTION} um breytu {VAR}
       gamelab_setPromptWithChoices:
@@ -1354,10 +1414,7 @@ is:
           PROPERTY:
             '"scale"': stærð
           SIZE:
-            '25': extra small
-            '50': small
             '75': miðlungs
-            '100': large
       gamelab_setSizes:
         text: stilla {SPRITE} {PROPERTY} á {N}%
         options:
@@ -1368,11 +1425,9 @@ is:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': hægt
             '5': venjulegt
             '7': hratt
-            '9': extra fast
       gamelab_setTint:
         text: breyta lit {THIS} í {COLOR}
       gamelab_setupSim:
@@ -1462,6 +1517,8 @@ is:
         text: x hnit {SPRITE}
       gamelab_yLocationOf:
         text: y hnit {SPRITE}
+      KatiesBlocks_tumbling:
+        text: veltist
       Mikelab_addBehaviorSimple:
         text: vera {SPRITE} byrjar {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -1876,8 +1933,6 @@ is:
         text: snúa til vinstri
       RyanLab_turnRight:
         text: snúa til hægri
-      SpriteLab2Beta_spriteSay:
-        text: vera {SPRITE} segir {TEXT} í {SECONDS} sekúndur
       Vector_createSpriteWith:
         text: |-
           búa til veru
@@ -1914,16 +1969,10 @@ is:
         options:
           PORTION:
             '1': allt
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': allt
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE} segir {SPEECH}"
       binary_drawBin:
@@ -2068,6 +2117,21 @@ is:
           DIR:
             right: hægri ↻
             left: vinstri ↺
+      ecosystems_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      storylab_printText:
+        text: prenta {TEXT}
       storylab_setForegroundEffect2:
         options:
           EFFECT:
@@ -2076,5 +2140,3 @@ is:
             '"hearts"': hjörtu
             '"rain"': regn
             '"starburst"': Stjörnublossi
-      validation_validatedBackground:
-        text: stilla bakgrunn á {IMG}

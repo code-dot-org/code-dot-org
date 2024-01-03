@@ -1,37 +1,37 @@
 ---
-title: Hour of Code How-to Guide
+title: Tund kood juhend
 ---
 
 {{ signup_button }}
 
 # How to plan your Hour of Code
 
-### Join the movement and introduce your students to computer science with these steps.
+### Liitu liikumise ja tutvustada oma õpilastele infotehnoloogia neid samme.
 
-Students today should learn how to create technology, not just use it.
+Tänapäeva õpilased peaksid õppima tehnoloogiat looma, mitte ainult seda kasutama.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time! Find an activity that fits your setting, whether in-class or after-school, in-person or virtual. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}) after checking out the steps below:
+Kooditunni proovimine on lihtne ja lõbus viis tutvustada õpilastele arvutiteadust, võib-olla esimest korda! Leidke tegevus, mis sobib teie seadistusele, olenemata sellest, kas klassis või pärast kooli, isiklikult või virtuaalset. Vaadake meie [osalemise juhendit, kui teil on veel küsimusi]({{ localized_files/participation_guide }}) pärast allolevate sammude kontrollimist:
 
-- [Watch the Hour of Code how-to video](#how-to-video)
-- [Explore activities and tutorials](#explore-activities)
-- [Create your plan for the day](#create-your-plan)
+- [Vaadake kooditund, kuidas videot](#how-to-video)
+- [Tutvuge tegevuste ja õpetustega](#explore-activities)
+- [Loo oma päeva plaan](#create-your-plan)
 - [Promote your Hour of Code](#promote-your-hour)
-- [How to start your Hour of Code strong](#how-to-start)
-- [Get coding](#code)
-- [Celebrate your students' success](#celebrate)
+- [Kuidas alustada oma kooditund tugev](#how-to-start)
+- [Hangi kodeerimine](#code)
+- [Tähista oma õpilaste edu](#celebrate)
 - [Teised KoodiTund materjalid õpetajatele](#other-resources)
 
 * * *
 
 <a id="how-to-video"></a>
 
-## 1. Watch the Hour of Code how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. Vaadake kooditund, kuidas videot <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
 <a id="explore-activities"></a>
 
-## 2. Explore activities and tutorials
+## 2. Tutvuge tegevuste ja õpetustega
 
 We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for all age groups and experience levels. It’s popular for students to try self-led tutorials, though many activities include lesson plans for teachers to guide discussion or extend the activity as well.
 
@@ -43,7 +43,7 @@ Explore the activities and decide ahead of time if you want to choose a single t
 
 <a id="create-your-plan"></a>
 
-## 3. Create your plan for the day
+## 3. Loo oma päeva plaan
 
 ### Think about your technology needs - computers are optional!
 
@@ -56,13 +56,13 @@ Explore the activities and decide ahead of time if you want to choose a single t
 
 ### Pick a day and time
 
-People around the world join in the Hour of Code celebration during CS Education Week (December 5-11) when the latest tutorials and activities are released. But you can do an Hour of Code any day of the year!
+Inimesed üle maailma liituda Hour of Code tähistamine ajal CS Education Week (detsember 5-11), kui viimased õpetused ja tegevused on vabastatud. But you can do an Hour of Code any day of the year!
 
 * * *
 
 <a id="promote-your-hour"></a>
 
-## 4. Promote your Hour of Code
+## 4. Reklaamige oma koodi tund
 
 Now that you've planned your event, it's time to start promoting it!
 
@@ -72,11 +72,11 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+Kui [registreerute oma kooditunni üritusele](/events), saate kasulikku e-posti teatist koos uudiste ja näpunäidetega eduka kooditunni korraldamiseks. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
-Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. Or print inspirational posters for your classroom! Students are more excited to participate in a subject when they see people who look like them encouraging it.
+Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. Või printige oma klassiruumi inspireerivaid plakateid! Students are more excited to participate in a subject when they see people who look like them encouraging it.
 
 {{ promote_new_posters }}
 
@@ -86,7 +86,7 @@ Learn more about posters, videos, stickers and other ways to [promote your event
 
 <a id="how-to-start"></a>
 
-## 5. How to start your Hour of Code strong
+## 5. Kuidas alustada oma kooditund tugev
 
 Once your Hour of Code celebration has arrived, make sure you start your event strong with some of these tools and tips.
 
@@ -97,21 +97,21 @@ Näita inspireerivat videot:
 - Algne Code.org käivitamise video, milles esinevad Bill Gates, Mark Zuckerberg ja NBA korvpallitäht Chris Bosh. (Saadaval on[ 1-minutiline](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5-minutiline](https://www.youtube.com/watch?v=nKIu9yen5nc), ja[ 9-minutiline](https://www.youtube.com/watch?v=dU1xS07N-FA) versioon)
 - Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
+Ära muretse, kui sa ei tunne arvutiteaduse valdkonda. Siin on mõned ideed, kuidas KoodiTund sisse juhatada:
 
 - Selgita, kuidas tehnoloogia mõjutab meie elusid ning too näiteid, mis on nii poistele kui tüdrukutele arusaadavad. Räägi äppidest ja tehnoloogiatest, mida kasutades saab päästa inimelusid, aidata inimesi, suhelda ka kaugel asuvate inimestega jne.
 - Nimeta asju, mis igapäevaelus kasutavad programmeerimist.
-- See tips for getting young women interested in computer science [here]({{ urls/girls }}).
+- Vaadake näpunäiteid saada noored naised huvitatud infotehnoloogia [siin]({{ urls/girls }}).
 
 * * *
 
 <a id="code"></a>
 
-## 6. Get coding!
+## 6. Hangi kodeerimine!
 
 Juhata osalised tegevuse juurde
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
+- Kirjutage juhendaja link tahvlil. Leidke link, mis on loetletud valitud juhendaja []({{ urls/learn }})teabes.
 
 Kui osalejad satuvad raskustesse, siis võid vastata:
 
@@ -128,7 +128,7 @@ Mida teha, kui õpilane saab varem valmis?
 
 <a id="celebrate"></a>
 
-## 7. Celebrate your students' success
+## 7. Tähista oma õpilaste edu
 
 [col-33]
 
@@ -136,7 +136,7 @@ Mida teha, kui õpilane saab varem valmis?
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [Printige oma õpil]({{ urls/certificates }}) astele sertifikaadid.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
 - Jagage KoodiTund ürituse fotosid ja videosid sotsiaalmeedias. Kasuta #HourOfCode ja @codeord, kes saaksime samuti teie edusamme jagada!
 
@@ -151,6 +151,6 @@ Mida teha, kui õpilane saab varem valmis?
 
 ### Mis saab pärast KoodiTund ürituse läbiviimist?
 
-Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
+Arvutiteadus ei pea lõpetama kooditunniga! [Vaadake](/beyond) , kuidas tuua CS-i oma kooli ja õpilastele.
 
 {{ signup_button }}

@@ -1,0 +1,55 @@
+{
+  "tg-TJ": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "ai-2020": {
+            "buttonText": "Маълумоти бештар"
+          },
+          "ai-launch-2023": {
+            "buttonText": "Маълумоти бештар"
+          },
+          "ai-pl-launch-2023": {
+            "buttonText": "Маълумоти бештар"
+          },
+          "back-to-school-2021": {
+            "buttonText": "Маълумоти бештар"
+          },
+          "codebytes-2020": {
+            "buttonText": "Маълумоти бештар"
+          },
+          "coldplay": {
+            "buttonText": "Дида бароед"
+          },
+          "csjourneys": {
+            "buttonText": "Маълумоти бештар"
+          },
+          "csjourneys-22": {
+            "buttonText": "Маълумоти бештар"
+          },
+          "csleadersprize": {
+            "buttonText": "Маълумоти бештар"
+          },
+          "hoc-2023": {
+            "buttonText": "Маълумоти бештар"
+          },
+          "hoc-2023-dance-ai": {
+            "buttonText": "Маълумоти бештар"
+          },
+          "superhero": {
+            "buttonText": "Маълумоти бештар"
+          },
+          "teacher-apps-closing-2021": {
+            "buttonText": "Ба мо ҳамроҳ шавед"
+          },
+          "teacher-apps-open-2021": {
+            "buttonText": "Ба мо ҳамроҳ шавед"
+          },
+          "teacher-apps-stillon-2020": {
+            "buttonText": "Ба мо ҳамроҳ шавед"
+          }
+        }
+      }
+    }
+  }
+}

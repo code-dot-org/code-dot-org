@@ -18,17 +18,24 @@ describe('StudentHomepage', () => {
     codeOrgUrlPrefix: 'http://localhost:3000',
     studentId: 123,
     isEnglish: true,
-    showVerifiedTeacherWarning: false
+    showVerifiedTeacherWarning: false,
+    specialAnnouncement: {
+      id: 'id',
+      image: '/image',
+      title: 'title',
+      body: 'body',
+      link: '/link',
+      description: 'description',
+      buttonUrl: '/url',
+      buttonText: 'press me',
+      heading: 'heading',
+    },
   };
 
-  it('shows a non-extended Header Banner that says My Dashboard', () => {
+  it('shows a Header Banner that says My Dashboard', () => {
     const wrapper = shallow(<StudentHomepage {...TEST_PROPS} />);
     const headerBanner = wrapper.find(HeaderBanner);
-    assert.deepEqual(headerBanner.props(), {
-      headingText: 'My Dashboard',
-      short: true,
-      backgroundUrl: '/shared/images/banners/teacher-homepage-hero.jpg'
-    });
+    expect(headerBanner.props().headingText).to.equal('My Dashboard');
   });
 
   it('references a ProtectedStatefulDiv for flashes', () => {
@@ -43,7 +50,7 @@ describe('StudentHomepage', () => {
       courses: courses,
       topCourse: topCourse,
       isTeacher: false,
-      hasFeedback: false
+      hasFeedback: false,
     });
   });
 
@@ -56,7 +63,7 @@ describe('StudentHomepage', () => {
     const wrapper = shallow(<StudentHomepage {...TEST_PROPS} />);
     const joinSectionArea = wrapper.find('JoinSectionArea');
     assert.deepEqual(joinSectionArea.props(), {
-      initialJoinedStudentSections: joinedSections
+      initialJoinedStudentSections: joinedSections,
     });
   });
 
@@ -68,18 +75,9 @@ describe('StudentHomepage', () => {
     analyticsSpy.restore();
   });
 
-  it('shows the special announcement for English', () => {
-    const wrapper = shallow(
-      <StudentHomepage {...TEST_PROPS} isEnglish={true} />
-    );
-    assert(wrapper.find('SpecialAnnouncement').exists());
-  });
-
-  it('does not show the special announcement for non-English', () => {
-    const wrapper = shallow(
-      <StudentHomepage {...TEST_PROPS} isEnglish={false} />
-    );
-    assert.isFalse(wrapper.find('SpecialAnnouncement').exists());
+  it('shows the special announcement for all languages', () => {
+    const wrapper = shallow(<StudentHomepage {...TEST_PROPS} />);
+    assert(wrapper.find('MarketingAnnouncementBanner').exists());
   });
 
   it('displays a notification for verified teacher permissions if showVerifiedTeacherWarning is true', () => {

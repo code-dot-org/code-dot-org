@@ -2,14 +2,561 @@
   "ar-SA": {
     "data": {
       "programming_environments": {
-        "weblab": {
-          "name": "مختبر الويب"
+        "applab": {
+          "categories": {
+            "advanced": {
+              "name": "مُتقدم"
+            },
+            "canvas": {
+              "expressions": {
+                "circle": {
+                  "palette_params": {
+                    "radius": {
+                      "description": "نصف قطر الدائرة بالبكسل."
+                    }
+                  }
+                },
+                "drawImage": {
+                  "palette_params": {
+                    "id": {
+                      "description": "موضع x بالبكسل في الزاوية اليسرى العليا من الصورة المراد رسمها."
+                    },
+                    "x": {
+                      "description": "موضع x بالبكسل في الزاوية اليسرى العليا من الصورة المراد رسمها."
+                    },
+                    "y": {
+                      "description": "موضع y بالبكسل في الزاوية اليسرى العليا من الصورة المراد رسمها."
+                    }
+                  }
+                },
+                "getAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "كائن"
+                    },
+                    "x": {
+                      "description": "موضع x بالبكسل بدءًا من الزاوية اليسرى العليا للصورة."
+                    },
+                    "y": {
+                      "description": "الموضع y بالبكسل بدءًا من الزاوية اليسرى العليا للصورة."
+                    }
+                  },
+                  "short_description": "تُرجع كمية ألفا (العتامة) (تتراوح من 0 إلى 255) في لون البكسل الموجود في موضع x و y المحدد في بيانات الصورة المحددة."
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "كائن"
+                    },
+                    "x": {
+                      "description": "موضع x بالبكسل بدءًا من الزاوية اليسرى العليا للصورة."
+                    },
+                    "y": {
+                      "description": "الموضع y بالبكسل بدءًا من الزاوية اليسرى العليا للصورة."
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "كائن"
+                    },
+                    "x": {
+                      "description": "موضع x بالبكسل بدءًا من الزاوية اليسرى العليا للصورة."
+                    },
+                    "y": {
+                      "description": "الموضع y بالبكسل بدءًا من الزاوية اليسرى العليا للصورة."
+                    }
+                  }
+                },
+                "getImageData": {
+                  "palette_params": {
+                    "height": {
+                      "description": "ارتفاع المستطيل المحيط لالتقاط بيانات الصورة."
+                    },
+                    "width": {
+                      "description": "عرض المستطيل المحيط لالتقاط بيانات الصورة."
+                    },
+                    "x": {
+                      "description": "موضع x بالبكسل لبدء الالتقاط."
+                    },
+                    "y": {
+                      "description": "الموضع y بالبكسل لبدء الالتقاط."
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "كائن"
+                    },
+                    "x": {
+                      "description": "موضع x بالبكسل بدءًا من الزاوية اليسرى العليا للصورة."
+                    },
+                    "y": {
+                      "description": "الموضع y بالبكسل بدءًا من الزاوية اليسرى العليا للصورة."
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "كائن"
+                    },
+                    "x": {
+                      "description": "موضع x بالبكسل بدءًا من الزاوية اليسرى العليا للصورة لوضع البيانات على اللوحة."
+                    },
+                    "y": {
+                      "description": "الموضع y بالبكسل بدءًا من الزاوية اليسرى العليا للصورة لوضع البيانات على اللوحة القماشية."
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "height": {
+                      "description": "الارتفاع الرأسي بالبكسل للمستطيل."
+                    },
+                    "width": {
+                      "description": "العرض الأفقي بالبكسل للمستطيل."
+                    },
+                    "x": {
+                      "description": "موضع x بالبكسل في الزاوية اليسرى العليا من المستطيل."
+                    },
+                    "y": {
+                      "description": "الموضع y بالبكسل في الزاوية اليسرى العليا من المستطيل."
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "alphaValue": {
+                      "description": "مقدار ألفا (العتامة) (من 0 إلى 255) المطلوب ضبطه في البكسل."
+                    },
+                    "imageData": {
+                      "type": "كائن"
+                    },
+                    "x": {
+                      "description": "موضع x بالبكسل بدءًا من الزاوية اليسرى العليا للصورة."
+                    },
+                    "y": {
+                      "description": "الموضع y بالبكسل بدءًا من الزاوية اليسرى العليا للصورة."
+                    }
+                  },
+                  "short_description": "يضبط مقدار ألفا (العتامة) (يتراوح من 0 إلى 255) في لون البكسل الموجود في موضع x و y المحدد في بيانات الصورة المحددة."
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "blueValue": {
+                      "description": "مقدار اللون الأزرق (من 0 إلى 255) المطلوب ضبطه في البكسل."
+                    },
+                    "imageData": {
+                      "type": "كائن"
+                    },
+                    "x": {
+                      "description": "موضع x بالبكسل بدءًا من الزاوية اليسرى العليا للصورة."
+                    },
+                    "y": {
+                      "description": "الموضع y بالبكسل بدءًا من الزاوية اليسرى العليا للصورة."
+                    }
+                  },
+                  "short_description": "يضبط مقدار اللون الأزرق (الذي يتراوح من 0 إلى 255) في لون البكسل الموجود في موضع x و y المحدد في بيانات الصورة المحددة إلى مقدار إدخال BlueValue."
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "greenValue": {
+                      "description": "مقدار اللون الأخضر (من 0 إلى 255) المطلوب ضبطه في البكسل."
+                    },
+                    "imageData": {
+                      "type": "كائن"
+                    },
+                    "x": {
+                      "description": "موضع x بالبكسل بدءًا من الزاوية اليسرى العليا للصورة."
+                    },
+                    "y": {
+                      "description": "الموضع y بالبكسل بدءًا من الزاوية اليسرى العليا للصورة."
+                    }
+                  },
+                  "short_description": "يضبط مقدار اللون الأخضر (الذي يتراوح من 0 إلى 255) في لون البكسل الموجود في موضع x و y المحدد في بيانات الصورة المحددة إلى مقدار إدخال GreenValue."
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "alpha": {
+                      "description": "اختياري. مقدار العتامة (من 0 إلى 255) المطلوب ضبطه في البكسل. القيمة الافتراضية هي 255 (العتامة الكاملة)."
+                    },
+                    "blue": {
+                      "description": "مقدار اللون الأزرق (من 0 إلى 255) المطلوب ضبطه في البكسل."
+                    },
+                    "green": {
+                      "description": "مقدار اللون الأخضر (من 0 إلى 255) المطلوب ضبطه في البكسل."
+                    },
+                    "imageData": {
+                      "type": "كائن"
+                    },
+                    "red": {
+                      "description": "مقدار اللون الأحمر (من 0 إلى 255) المطلوب ضبطه في البكسل."
+                    },
+                    "x": {
+                      "description": "موضع x بالبكسل بدءًا من الزاوية اليسرى العليا للصورة."
+                    },
+                    "y": {
+                      "description": "الموضع y بالبكسل بدءًا من الزاوية اليسرى العليا للصورة."
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "كائن"
+                    },
+                    "redValue": {
+                      "description": "مقدار اللون الأحمر (من 0 إلى 255) المطلوب ضبطه في البكسل."
+                    },
+                    "x": {
+                      "description": "موضع x بالبكسل بدءًا من الزاوية اليسرى العليا للصورة."
+                    },
+                    "y": {
+                      "description": "الموضع y بالبكسل بدءًا من الزاوية اليسرى العليا للصورة."
+                    }
+                  },
+                  "short_description": "يضبط مقدار اللون الأحمر (الذي يتراوح من 0 إلى 255) في لون البكسل الموجود في موضع x و y المحدد في بيانات الصورة المحددة إلى مقدار إدخال RedValue."
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "description": "القيمة التي تم إرجاعها بواسطة وظيفة setTimeout للإلغاء."
+                    }
+                  }
+                },
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "عدد المللي ثانية بين كل تنفيذ للوظيفة."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "عدد المللي ثانية التي يجب انتظارها قبل تنفيذ الوظيفة."
+                    }
+                  }
+                },
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "وظيفة "
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "كائن"
+                    }
+                  }
+                },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "كائن"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "كائن"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "options": {
+                      "type": "كائن"
+                    },
+                    "tableName": {
+                      "description": "اسم الجدول الذي سيتم استرداد السجلات منه."
+                    }
+                  }
+                },
+                "getKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "اسم المفتاح الذي سيتم استرداده."
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "وظيفة "
+                    }
+                  }
+                },
+                "getUserId": {
+                  "short_description": "يحصل على معرف فريد للمستخدم الحالي لهذا التطبيق."
+                },
+                "onRecordEvent": {
+                  "palette_params": {
+                    "table": {
+                      "description": "اسم الجدول الذي ينطبق عليه معالج الأحداث هذا."
+                    }
+                  }
+                },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "كائن"
+                    }
+                  }
+                },
+                "setKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "اسم المفتاح الذي سيتم تخزينه."
+                    },
+                    "value": {
+                      "description": "البيانات التي سيتم تخزينها."
+                    }
+                  },
+                  "short_description": "يخزن زوج المفاتيح/القيمة في مخزن بيانات المفاتيح/القيمة في App Lab، ويستدعي وظيفة رد الاتصال عند انتهاء الإجراء."
+                },
+                "startWebRequest": {
+                  "palette_params": {
+                    "url": {
+                      "description": "عنوان الويب الخاص بالخدمة التي تقوم بإرجاع البيانات."
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "كائن"
+                    }
+                  }
+                }
+              },
+              "name": "البيانات"
+            },
+            "functions": {
+              "name": "دوال"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "قام بإرجاع أكبر عدد"
+                    },
+                    "min": {
+                      "description": "قام بإرجاع أصغر عدد"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "قام بإرجاع أكبر عدد"
+                    },
+                    "min": {
+                      "description": "قام بإرجاع أصغر عدد"
+                    }
+                  }
+                }
+              },
+              "name": "العمليات الحسابية"
+            },
+            "turtle": {
+              "expressions": {
+                "arcLeft": {
+                  "short_description": "تحرك السلحفاة إلى الأمام وإلى اليسار في قوس دائري سلس."
+                },
+                "getX": {
+                  "short_description": "يحصل على إحداثيات x الحالية بوحدات البكسل للسلحفاة."
+                },
+                "getY": {
+                  "short_description": "يحصل على إحداثيات y الحالية بوحدات البكسل الخاصة بالسلحفاة."
+                },
+                "hide": {
+                  "short_description": "يجعل السلحفاة غير مرئية في موقعها الحالي."
+                },
+                "move": {
+                  "palette_params": {
+                    "x": {
+                      "description": "عدد وحدات البكسل لتحريك السلحفاة إلى اليمين."
+                    },
+                    "y": {
+                      "description": "عدد وحدات البكسل لتحريك السلحفاة لأسفل."
+                    }
+                  }
+                },
+                "moveBackward": {
+                  "short_description": "تحرك السلحفاة للخلف بعدد معين من وحدات البكسل من الاتجاه الحالي."
+                },
+                "moveForward": {
+                  "short_description": "يحرك السلحفاة إلى الأمام بعدد معين من وحدات البكسل في الاتجاه الحالي."
+                },
+                "moveTo": {
+                  "short_description": "ينقل السلحفاة إلى موضع محدد (x، y) على الشاشة."
+                },
+                "penColor": {
+                  "short_description": "يضبط لون القلم الذي تستخدمه السلحفاة لرسم الخطوط والنقاط."
+                },
+                "penDown": {
+                  "short_description": "يضع القلم جانبًا حتى ترسم السلحفاة خطًا خلفه أثناء تحركه."
+                },
+                "penRGB": {
+                  "short_description": "باستخدام قيم RGBA، يضبط لون القلم الذي تستخدمه السلحفاة لرسم الخطوط والنقاط."
+                },
+                "penUp": {
+                  "short_description": "تلتقط القلم حتى لا ترسم السلحفاة خطًا أثناء تحركها."
+                },
+                "penWidth": {
+                  "short_description": "يضبط عرض الخط بالبكسل الذي ترسمه السلحفاة خلفه أثناء تحركه."
+                },
+                "show": {
+                  "short_description": "يجعل السلحفاة مرئية في موقعها الحالي."
+                },
+                "speed": {
+                  "short_description": "تحدد سرعة تنفيذ التطبيق، والتي تتضمن سرعة السلحفاة."
+                },
+                "turnLeft": {
+                  "short_description": "تقوم بتدوير السلحفاة إلى اليسار بالزاوية المحددة. يظل وضع السلحفاة كما هو."
+                },
+                "turnRight": {
+                  "short_description": "تقوم بتدوير السلحفاة يمينًا بالزاوية المحددة. يظل وضع السلحفاة كما هو."
+                },
+                "turnTo": {
+                  "short_description": "يغير اتجاه السلحفاة إلى زاوية محددة. 0 لأعلى، 90 لليمين، 180 لأسفل، 270 لليسار."
+                }
+              }
+            },
+            "ui_controls": {
+              "expressions": {
+                "button": {
+                  "short_description": "يقوم بإنشاء زر على الشاشة يعرض النص المقدم والمشار إليه بواسطة المعرف المحدد في الموقع الافتراضي (0,0)."
+                },
+                "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "الانكماش والنمو"
+                    }
+                  },
+                  "palette_params": {
+                    "callback": {
+                      "type": "وظيفة "
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "إنشاء موسيقى"
+                    }
+                  },
+                  "short_description": "شغِّل ملف الصوت بصيغة MP3 من الرابط المحدد."
+                },
+                "setProperty": {
+                  "palette_params": {
+                    "property": {
+                      "description": "الخاصية المراد تغييرها."
+                    }
+                  },
+                  "short_description": "يقوم بتعيين خاصية إلى قيمة جديدة للعنصر المحدد."
+                },
+                "setScreen": {
+                  "short_description": "يضبط الشاشة على معرف الشاشة المحدد."
+                },
+                "showElement": {
+                  "short_description": "يعرض العنصر بالمعرف المقدم."
+                },
+                "textLabel": {
+                  "short_description": "يقوم بإنشاء تسمية نصية على الشاشة تعرض النص المقدم والمشار إليه بواسطة المعرف المحدد في الموقع الافتراضي (0,0)."
+                }
+              }
+            },
+            "variables": {
+              "expressions": {
+                "addPair": {
+                  "return_value": "لا شيء"
+                },
+                "declareAssign_list_123": {
+                  "short_description": "قم بتعريف مصفوفة وتعيينها لمتغير"
+                },
+                "declareAssign_x": {
+                  "short_description": "يقوم بتحديد القيمة الأولية للمتغير وتعيينها."
+                },
+                "declareNoAssign_x": {
+                  "short_description": "يقوم بتحديد متغير بالاسم المحدد."
+                },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "السلسلة المراد البحث عنها."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "السلسلة المراد البحث عنها."
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "طول السلسلة"
+                }
+              },
+              "name": "المتغيرات"
+            }
+          },
+          "description": "مختبر التطبيقات App Lab بيئة برمجية يمكنك من خلالها تصميم التطبيقات البسيطة. لذا؛ صمِّم تطبيقًا وقم بترميزه باستخدام القطع البرمجية أو لغة جافا سكريبت لعمل التطبيق، ثم شارِك تطبيقك في ثوانٍ.",
+          "name": "مختبر التطبيق"
         },
         "gamelab": {
-          "name": "مختبر اللعب",
           "categories": {
+            "control": {
+              "expressions": {
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "عدد المللي ثانية بين كل تنفيذ للوظيفة."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "عدد المللي ثانية التي يجب انتظارها قبل تنفيذ الوظيفة."
+                    }
+                  }
+                }
+              }
+            },
+            "drawing": {
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "الركل"
+                    }
+                  }
+                }
+              },
+              "name": "الرسم"
+            },
+            "functions": {
+              "name": "دوال"
+            },
             "game_lab": {
-              "name": "مختبر اللعب",
               "expressions": {
                 "mouseIsOver": {
                   "palette_params": {
@@ -39,23 +586,15 @@
                     }
                   },
                   "short_description": "شغِّل ملف الصوت بصيغة MP3 من الرابط المحدد."
+                },
+                "showMobileControls": {
+                  "content": "يغير عناصر التحكم المحمولة المرئية أسفل مساحة اللعب.",
+                  "short_description": "يغير عناصر التحكم المحمولة المرئية أسفل مساحة اللعب."
                 }
-              }
-            },
-            "sprites": {
-              "name": "النقوش المتحركة",
-              "expressions": {
-                "getSpeed": {
-                  "examples": {
-                    "Spiral": {
-                      "name": "حلزوني"
-                    }
-                  }
-                }
-              }
+              },
+              "name": "مختبر اللعب"
             },
             "groups": {
-              "name": "مجموعات",
               "expressions": {
                 "add": {
                   "palette_params": {
@@ -92,324 +631,135 @@
                     }
                   }
                 }
-              }
-            },
-            "drawing": {
-              "name": "الرسم",
-              "expressions": {
-                "shape": {
-                  "examples": {
-                    "Star": {
-                      "name": "الركل"
-                    }
-                  }
-                }
-              }
+              },
+              "name": "مجموعات"
             },
             "math": {
-              "name": "العمليات الحسابية",
               "expressions": {
                 "randomNumber": {
                   "palette_params": {
-                    "min": {
-                      "description": "قام بإرجاع أصغر عدد"
-                    },
                     "max": {
                       "description": "قام بإرجاع أكبر عدد"
+                    },
+                    "min": {
+                      "description": "قام بإرجاع أصغر عدد"
                     }
                   }
                 },
                 "randomNumber_min_max": {
                   "palette_params": {
-                    "min": {
-                      "description": "قام بإرجاع أصغر عدد"
-                    },
                     "max": {
                       "description": "قام بإرجاع أكبر عدد"
+                    },
+                    "min": {
+                      "description": "قام بإرجاع أصغر عدد"
                     }
                   }
                 }
-              }
+              },
+              "name": "العمليات الحسابية"
+            },
+            "sprites": {
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "حلزوني"
+                    }
+                  }
+                },
+                "sprite.height": {
+                  "return_value": "ارتفاع الكائن."
+                },
+                "sprite.width": {
+                  "return_value": "عرض الكائن."
+                }
+              },
+              "name": "النقوش المتحركة"
             },
             "variables": {
-              "name": "المتغيرات",
               "expressions": {
                 "assign_x": {
                   "short_description": "يقوم بتعيين قيمة لمتغير تم الإعلان عنه مسبقًا."
                 },
+                "declareAssign_x": {
+                  "short_description": "يقوم بتحديد القيمة الأولية للمتغير وتعيينها."
+                },
                 "declareNoAssign_x": {
                   "short_description": "يقوم بتحديد متغير بالاسم المحدد."
                 },
-                "declareAssign_x": {
-                  "short_description": "يقوم بتحديد القيمة الأولية للمتغير وتعيينها."
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "السلسلة المراد البحث عنها."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "السلسلة المراد البحث عنها."
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "طول السلسلة"
                 }
-              }
-            },
-            "functions": {
-              "name": "دوال"
+              },
+              "name": "المتغيرات"
             }
-          }
+          },
+          "name": "مختبر اللعب"
         },
-        "applab": {
-          "name": "مختبر التطبيق",
-          "description": "مختبر التطبيقات App Lab بيئة برمجية يمكنك من خلالها تصميم التطبيقات البسيطة. لذا؛ صمِّم تطبيقًا وقم بترميزه باستخدام القطع البرمجية أو لغة جافا سكريبت لعمل التطبيق، ثم شارِك تطبيقك في ثوانٍ.",
-          "categories": {
-            "ui_controls": {
-              "expressions": {
-                "onEvent": {
-                  "examples": {
-                    "Shrink and Grow": {
-                      "name": "الانكماش والنمو"
-                    }
-                  },
-                  "palette_params": {
-                    "callback": {
-                      "type": "وظيفة "
-                    }
-                  }
-                },
-                "playSound": {
-                  "examples": {
-                    "Making Music": {
-                      "name": "إنشاء موسيقى"
-                    }
-                  },
-                  "short_description": "شغِّل ملف الصوت بصيغة MP3 من الرابط المحدد."
-                }
-              }
-            },
-            "canvas": {
-              "expressions": {
-                "getAlpha": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "كائن"
-                    }
-                  }
-                },
-                "getBlue": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "كائن"
-                    }
-                  }
-                },
-                "getGreen": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "كائن"
-                    }
-                  }
-                },
-                "getRed": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "كائن"
-                    }
-                  }
-                },
-                "putImageData": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "كائن"
-                    }
-                  }
-                },
-                "setAlpha": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "كائن"
-                    }
-                  }
-                },
-                "setBlue": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "كائن"
-                    }
-                  }
-                },
-                "setGreen": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "كائن"
-                    }
-                  }
-                },
-                "setRGB": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "كائن"
-                    }
-                  }
-                },
-                "setRed": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "كائن"
-                    }
-                  }
-                }
-              }
-            },
-            "data": {
-              "name": "البيانات",
-              "expressions": {
-                "createRecord": {
-                  "palette_params": {
-                    "record": {
-                      "type": "كائن"
-                    }
-                  }
-                },
-                "deleteRecord": {
-                  "palette_params": {
-                    "record": {
-                      "type": "كائن"
-                    }
-                  }
-                },
-                "drawChart": {
-                  "palette_params": {
-                    "options": {
-                      "type": "كائن"
-                    }
-                  }
-                },
-                "drawChartFromRecords": {
-                  "palette_params": {
-                    "options": {
-                      "type": "كائن"
-                    }
-                  }
-                },
-                "getPrediction": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "وظيفة "
-                    }
-                  }
-                },
-                "readRecords": {
-                  "palette_params": {
-                    "terms": {
-                      "type": "كائن"
-                    }
-                  }
-                },
-                "updateRecord": {
-                  "palette_params": {
-                    "record": {
-                      "type": "كائن"
-                    }
-                  }
-                }
-              }
-            },
-            "control": {
-              "expressions": {
-                "timedLoop": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "وظيفة "
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "العمليات الحسابية",
-              "expressions": {
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "قام بإرجاع أصغر عدد"
-                    },
-                    "max": {
-                      "description": "قام بإرجاع أكبر عدد"
-                    }
-                  }
-                },
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "قام بإرجاع أصغر عدد"
-                    },
-                    "max": {
-                      "description": "قام بإرجاع أكبر عدد"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "المتغيرات",
-              "expressions": {
-                "declareNoAssign_x": {
-                  "short_description": "يقوم بتحديد متغير بالاسم المحدد."
-                },
-                "declareAssign_x": {
-                  "short_description": "يقوم بتحديد القيمة الأولية للمتغير وتعيينها."
-                },
-                "addPair": {
-                  "return_value": "لا شيء"
-                }
-              }
-            },
-            "functions": {
-              "name": "دوال"
-            },
-            "advanced": {
-              "name": "مُتقدم"
-            }
-          }
+        "javalab": {
+          "name": "مختبر Java"
         },
         "spritelab": {
-          "name": "مختبر الرسوم المتحركة",
           "categories": {
-            "sprites": {
-              "name": "النقوش المتحركة"
-            },
-            "world": {
-              "name": "العالم"
-            },
-            "location": {
-              "name": "مواقع"
-            },
             "actions": {
               "name": "الإجراءات"
-            },
-            "events": {
-              "name": "الأحداث"
             },
             "behaviors": {
               "name": "السلوك"
             },
-            "loops": {
-              "name": "الحلقات"
+            "comments": {
+              "name": "تعليقات\n"
             },
-            "variables": {
-              "name": "المتغيرات"
-            },
-            "math": {
-              "name": "العمليات الحسابية"
-            },
-            "logic": {
-              "name": "المنطق"
+            "events": {
+              "name": "الأحداث"
             },
             "functions": {
               "name": "دوال"
             },
+            "location": {
+              "name": "مواقع"
+            },
+            "logic": {
+              "name": "المنطق"
+            },
+            "loops": {
+              "name": "الحلقات"
+            },
+            "math": {
+              "name": "العمليات الحسابية"
+            },
+            "sprites": {
+              "name": "النقوش المتحركة"
+            },
             "text": {
               "name": "النص"
             },
-            "comments": {
-              "name": "تعليقات\n"
+            "variables": {
+              "name": "المتغيرات"
+            },
+            "world": {
+              "name": "العالم"
             }
-          }
+          },
+          "name": "مختبر الرسوم المتحركة"
         },
-        "javalab": {
-          "name": "مختبر Java"
+        "weblab": {
+          "name": "مختبر الويب"
         }
       }
     }

@@ -2,63 +2,53 @@
   "dv-MV": {
     "data": {
       "vocabularies": {
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "copyright/coursee/2022": {
+        "copyright/csd/2021": {
           "word": "ކޮޕީރައިޓްސް"
-        },
-        "drop/courseb/2022": {
-          "word": "ޑްރޮޕް"
-        },
-        "drop/pre-express/2022": {
-          "word": "ޑްރޮޕް"
-        },
-        "drop/coursea/2022": {
-          "word": "ޑްރޮޕް"
-        },
-        "copyright/csd/2022": {
-          "word": "ކޮޕީރައިޓްސް"
-        },
-        "code/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "drop/courseb/2021": {
-          "word": "ޑްރޮޕް"
         },
         "drop/coursea/2021": {
           "word": "ޑްރޮޕް"
         },
-        "drop/pre-express/2021": {
+        "drop/courseb/2021": {
           "word": "ޑްރޮޕް"
         },
         "copyright/coursee/2021": {
           "word": "ކޮޕީރައިޓްސް"
         },
-        "copyright/csd/2021": {
+        "drop/pre-express/2021": {
+          "word": "ޑްރޮޕް"
+        },
+        "copyright/csd/2022": {
           "word": "ކޮޕީރައިޓްސް"
+        },
+        "drop/coursea/2022": {
+          "word": "ޑްރޮޕް"
+        },
+        "drop/courseb/2022": {
+          "word": "ޑްރޮޕް"
+        },
+        "copyright/coursee/2022": {
+          "word": "ކޮޕީރައިޓްސް"
+        },
+        "drop/pre-express/2022": {
+          "word": "ޑްރޮޕް"
+        },
+        "copyright/csd/2023": {
+          "word": "ކޮޕީރައިޓްސް"
+        },
+        "drop/coursea/2023": {
+          "word": "ޑްރޮޕް"
+        },
+        "drop/courseb/2023": {
+          "word": "ޑްރޮޕް"
+        },
+        "copyright/coursee/2023": {
+          "word": "ކޮޕީރައިޓްސް"
+        },
+        "drop/pre-express/2023": {
+          "word": "ޑްރޮޕް"
+        },
+        "network/how-ai-works/2023": {
+          "word": "ނެޓްވޯކް"
         }
       }
     }

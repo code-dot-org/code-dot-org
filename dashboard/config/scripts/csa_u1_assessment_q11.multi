@@ -26,3 +26,5 @@ III. false
 IV. ! false
 
 MARKDOWN
+
+allow_multiple_attempts true

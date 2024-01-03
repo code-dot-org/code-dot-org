@@ -14,11 +14,24 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Oled informaatika õpetaja? Vaata teisi arvutiteaduse hariduse nädala materjale</a>'
   csedweek_banner_teachers_text: "Oled informaatika õpetaja? Vaata teisi arvutiteaduse hariduse nädala materjale"
   n_have_learned_an_hoc: "<h1>Proovi</h1><h2>KoodiTund</h2><h3># served</h3>"
+  try_hoc_num_served: "<h1>Proovi</h1><h2>KoodiTundi</h2><h3>%{num} osalejat</h3>"
+  try_hoc_num_served_markdown: |-
+    # Proovi
+
+    ## Kooditund
+
+    ### %{num} osalejat #Try an
+
+## Hour of Code
+
+### %{num} served
   anybody_can_learn: "Igaüks võib õppida."
   learn_now: "Õpi nüüd"
   petition_message: "Igal õpilasel igas koolis peaks olema võimalus õppida arvutiteadust"
   petition_sign_message: 'Kui nõustud, logi sisse enda nimega. Liitu # teistega.'
+  petition_sign_message_num: "Kui nõustud, kirjuta oma nimi ja liitu meie meililistiga koos %{num} teistega."
   petition_join_others: 'Ühine # teistega'
+  petition_join_others_num: "Liitu %{num} teistega"
   name: "Nimi"
   email: "E-post"
   zipcode: "Postikood või riik"
@@ -27,7 +40,9 @@
   twentyhours_text: "Lõpetasid oma esimese KoodiTunni? Õpi rohkem informaatika ja programmeerimise mõistete kohta selle järgneva kursuse abil."
   og_title: 'Iga laps väärib võimalust'
   og_title_soon: "Koodi Tund on siin"
+  og_title_here: "KoodiTund on kohal!"
   og_description: "Igal õpilasel igas koolis peaks olema võimalus õppida arvutiteadust."
+  og_description_celeb: "Proovi uusi õpetusi, võida videokõne kuulsusega endale või oma klassile!"
   csedweek_og_title: "Koodi Tund on siin"
   csedweek_og_description: "Koodi Tund on globaalne liikumine mis ühendab kümneid miljoneid õpilasi igas vanuses, 180+ riigis ning üle 45 keeles."
   hoc2014_heading: "Liitu <a href=\"http://hourofcode.com\">KoodiTunniga</a><br/>8-14 detsembril, 2014<br/>"
@@ -371,9 +386,6 @@
   volunteer_engineer_submission_subtitle_generic: '100,000 õpetajat korraldavad 2015. aastal, 7.–13. detsembril, KoodiTunni oma klassis. Nad vajavad Sinu abi! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} õpetajat otsib vabatahtlikke.<br>%{num_volunteers} vabatahtlikku on juba registreerinud. Liitu nendega."
   volunteer_engineer_submission_intro_background: "KoodiTund on globaalne liikumine, mille eesmärk on anda tunnine sissejuhatus arvutiteadusesse. See üritus jõuab sadade miljonite õpilasteni enam kui 180 riigis. Palun tule samuti osalema arvutiteaduse õppe nädala raames, mis toimub 7.-13. detsembril."
-  volunteer_engineer_submission_intro_recruit: 'Õpetajad otsivad vabatahtlikke, <span style="font-family: ''Gotham 7r'', sans-serif;">kes tahaksid õpetada arvutiteaduse </span> ja kes aitaksid neid klassiruumis või kes <span style="font-family: ''Gotham 7r'', sans-serif;">inspireeriks</span> nende õpilasi ja räägiks arvutiteaduse arvukatest võimalustest (seda saab teha ka videovestluse või Skype teel).'
-  volunteer_engineer_submission_intro_signup: "Palun sisesta järgnev info, kui oled arvutiteaduse jmt tudeng või programmeerija. Väljad märgiga <span class=\"form-required-field\">*</span> on kohustuslikud."
-  volunteer_engineer_submission_intro_links: "Kas olete õpetaja otsib vabatahtlikke? Leia kohalikke vabatahtlike meie <a href=\"%{volunteer_local}\"> vabatahtlike kaardilt</a>."
   volunteer_engineer_submission_update_information: "Uuendage oma andmeid"
   volunteer_engineer_submission_header_shared: "Vabatahtlike kaardil õpetajatega jagatud informatsioon"
   volunteer_engineer_submission_field_name: "Nimi"
@@ -398,6 +410,7 @@
   volunteer_engineer_submission_field_email: "E-posti aadress"
   volunteer_engineer_submission_field_email_desc: "Sinu emaili ei jagata kunagi, kuid me saadame sulle õpetajate poolt päringuid."
   volunteer_engineer_submission_field_email_placeholder: "E-posti aadress"
+  volunteer_engineer_submission_field_email_preference_privacy: "(Vaata privaatsusreegleid)"
   volunteer_engineer_submission_field_email_preference_yes: 'Jah'
   volunteer_engineer_submission_field_email_preference_no: 'Ei'
   volunteer_engineer_submission_final_paragraph: "Sind märgitakse kaardil kohalike õpetajate jaoks, kes võtavad Sinuga ühendust seoses KoodiTunni või muu vabatahtliku võimaluste raames. Sinu email ja täpset aadressi ei jagata KUNAGI meie poolt. Kuid kõik muu info (Kaasa arvatud ligikaudne asukoht) on avalikult nähtav kohalikele õpetajatele."
@@ -1188,7 +1201,7 @@
   hoc2018_mc_download_adventurer: "Lae alla Minecraft Seikleja offline versioon."
   hoc2018_mc_educators: "Haridustöötajatele"
   hoc2018_mc_educators_box1_title: "Programmeeri Minecrafti abil"
-  hoc2018_mc_educators_box1_desc: 'Minecraft: Education Edition pakub standarditele vastavat tunnikava ja koolitust, et Minecrafti abil programmeerida.'
+  hoc2018_mc_educators_box1_desc: "Minecraft: Education Edition pakub standarditele vastavat tunnikava ja koolitust, et Minecrafti abil programmeerida."
   hoc2018_mc_educators_box1_button: "Alusta"
   hoc2018_mc_educators_box2_title: "Laadige alla juhend haridusedendajatele"
   hoc2018_mc_educators_box2_desc: "Need tööriistad aitavad teil viia läbi KoodiTundi ja tutvustada oma õpilastele infotehnoloogiat."

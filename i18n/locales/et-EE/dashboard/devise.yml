@@ -50,9 +50,6 @@ et:
       expired: "on aegunud, palun telli uus"
       not_found: "ei leitud"
       not_locked: "ei olnud lukustatud"
-      not_saved:
-        one: "1 viga keelas %{resource} salvestamast:"
-        other: "%{count} viga ei lasknud seda %{resource} salvestada:"
     invitations:
       send_instructions: 'Kutse on saadetud %{email}.'
       invitation_token_invalid: 'Kutse ei ole kehtiv!'

@@ -10,26 +10,26 @@ import PercentAnsweredCell from './PercentAnsweredCell';
 
 export const COLUMNS = {
   NAME: 0,
-  ANSWER: 1
+  ANSWER: 1,
 };
 
 const studentAnswerPropType = PropTypes.shape({
   id: PropTypes.number,
   name: PropTypes.string,
   answer: PropTypes.string,
-  correct: PropTypes.bool
+  correct: PropTypes.bool,
 });
 
 class MultipleChoiceByQuestionTable extends Component {
   static propTypes = {
-    studentAnswers: PropTypes.arrayOf(studentAnswerPropType)
+    studentAnswers: PropTypes.arrayOf(studentAnswerPropType),
   };
 
   state = {
     [COLUMNS.ANSWER]: {
       direction: 'desc',
-      position: 0
-    }
+      position: 0,
+    },
   };
 
   getSortingColumns = () => {
@@ -43,10 +43,10 @@ class MultipleChoiceByQuestionTable extends Component {
         sortingOrder: {
           FIRST: 'asc',
           asc: 'desc',
-          desc: 'asc'
+          desc: 'asc',
         },
-        selectedColumn
-      })
+        selectedColumn,
+      }),
     });
   };
 
@@ -70,29 +70,29 @@ class MultipleChoiceByQuestionTable extends Component {
         header: {
           label: i18n.studentName(),
           props: {
-            style: tableLayoutStyles.headerCell
-          }
+            style: tableLayoutStyles.headerCell,
+          },
         },
         cell: {
           props: {
-            style: tableLayoutStyles.cell
-          }
-        }
+            style: tableLayoutStyles.cell,
+          },
+        },
       },
       {
         property: 'answer',
         header: {
           label: i18n.answer(),
           props: {
-            style: tableLayoutStyles.headerCell
+            style: tableLayoutStyles.headerCell,
           },
-          transforms: [sortable]
+          transforms: [sortable],
         },
         cell: {
           formatters: [this.answerCellFormatter],
-          props: {style: tableLayoutStyles.cell}
-        }
-      }
+          props: {style: tableLayoutStyles.cell},
+        },
+      },
     ];
     return dataColumns;
   };
@@ -110,7 +110,7 @@ class MultipleChoiceByQuestionTable extends Component {
     const sortedRows = sort.sorter({
       columns,
       sortingColumns,
-      sort: orderBy
+      sort: orderBy,
     })(this.props.studentAnswers);
 
     return (

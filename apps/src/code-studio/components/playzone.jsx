@@ -37,25 +37,25 @@ export default class PlayZone extends React.Component {
 
 const styles = {
   container: {
-    margin: 20
+    margin: 20,
   },
   primaryHeader: {
-    fontSize: '200%'
+    fontSize: '200%',
   },
   secondaryHeader: {
-    color: color.charcoal
+    color: color.charcoal,
   },
   courseblockContainer: {
     width: 720,
-    paddingTop: 20
+    paddingTop: 20,
   },
   continueButton: {
     marginTop: 20,
-    marginRight: 0
-  }
+    marginRight: 0,
+  },
 };
 
 PlayZone.propTypes = {
   lessonName: PropTypes.string.isRequired,
-  onContinue: PropTypes.func.isRequired
+  onContinue: PropTypes.func.isRequired,
 };

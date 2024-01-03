@@ -2,7 +2,7 @@ var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 require('../utils'); // Provides Function.prototype.inherits
 
-var EvalCircle = function(radius, style, color) {
+var EvalCircle = function (radius, style, color) {
   evalUtils.ensureNumber(radius);
   evalUtils.ensureStyle(style);
   evalUtils.ensureColor(color);
@@ -16,7 +16,7 @@ var EvalCircle = function(radius, style, color) {
 EvalCircle.inherits(EvalImage);
 module.exports = EvalCircle;
 
-EvalCircle.prototype.draw = function(parent) {
+EvalCircle.prototype.draw = function (parent) {
   if (!this.element_) {
     this.element_ = document.createElementNS(Blockly.SVG_NS, 'circle');
     parent.appendChild(this.element_);
@@ -28,7 +28,7 @@ EvalCircle.prototype.draw = function(parent) {
   EvalImage.prototype.draw.apply(this, arguments);
 };
 
-EvalCircle.prototype.rotate = function() {
+EvalCircle.prototype.rotate = function () {
   // No-op. Rotating the circle svg gives us some problems when we convert to
   // a bitmap.
 };

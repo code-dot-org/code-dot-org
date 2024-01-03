@@ -1,140 +1,55 @@
 {
-  "navigateForward": "Продовжити",
-  "navigateBack": "Назад",
-  "tryAgain": "Спробуйте знову",
-  "navigateDone": "Кінець",
-  "saveProgress": "Зберегти",
-  "correctAnswer": "Правильно",
-  "incorrectAnswer": "Неправильно",
-  "modelCardPossibleValuesMinimum": "мінімум",
-  "modelCardPossibleValuesMaximum": "максимум",
-  "columnInspectorDescription": "Опис",
-  "columnDetailsMinimumValue": "мінімум",
+  "addFeatureButton": "Додати ознаку",
+  "aiBotAltText": "ШІ-бот",
+  "aiBotBeamAltText": "Промінь сканера ШІ-бота",
+  "aiBotBodyAltText": "Тіло ШІ-бота",
+  "aiBotHeadAltText": "Голова ШІ-бота",
+  "animationDescriptionsHeader": "Опис анімації",
+  "animationDescriptionsTesting": "ШІ-бот сканує вхідні рядки нерозмічених даних з тестового набору даних. Коли кожен рядок проходить під променем ШІ-бота, він робить прогноз, додаючи значення до стовпця мітки.",
+  "animationDescriptionsTraining": "Марковані рядки з навчального набору даних потрапляють у відкриту голову ШІ-бота.",
+  "columnDetailsInformation": "Інформація про стовпчик",
   "columnDetailsMaximumValue": "максимум",
+  "columnDetailsMinimumValue": "мінімум",
+  "columnDetailsNumericalTypeError": "Числові стовпці не можуть містити текст.",
+  "columnDetailsTooManyLabels": "У цьому стовпчику знайдено  {labelCount} значень. Графік буде показано лише тоді, коли їх {maxLabelCount} або менше.",
+  "columnDetailsValueRange": "діапазон",
+  "columnInspectorDataType": "Тип даних",
+  "columnInspectorDescription": "Опис",
+  "columnType_categorical": "категорійний",
+  "columnType_numerical": "числовий",
+  "correctAnswer": "Правильно",
+  "crossTabRelationshipHeader": "Інформація про зв'язки",
+  "crossTabTooMuchData": "Вибрані дані занадто великі, щоб відобразити їх у таблиці.",
+  "dataCardDefaultHeader": "Деталі",
   "dataCardLastUpdated": "Останнє оновлення",
+  "dataCardPotentialMisuses": "Потенційні зловживання",
+  "dataCardPotentialUses": "Потенційне використання",
+  "dataCardRemovedRows": "{rowCount} {rowCount, plural, one {ряд} few {ряди} many {рядів} other {рядів}} знято, тому що {rowCount, plural, one {це} few {вони} many {вони} other {вони}} містили порожні клітини.",
+  "dataCardRowCount": "Ряди даних",
+  "dataCardSource": "Джерело",
+  "dataCardWarningLargeDataset": "Попередження: Набори даних з більш ніж {rowCount} рядками сповільнять роботу користувача.",
+  "dataDisplayRowCount": "Є {rowCount} рядків даних.",
+  "dataDisplayRowCountTruncated": "Є {rowCount} рядків даних. (Показано перші {rowLimit} рядки)",
+  "datasetDescriptionLabel": "Про дані",
+  "datasetDescriptionPlaceholder": "Як збиралися дані? Хто їх збирав? Коли їх збирали?",
   "datasets": {
-    "medical_priority": {
+    "abalone": {
       "fields": {
-        "age": {
-          "id": "вік"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "weather": {
-          "id": "погода"
+        "Height": {
+          "id": "Висота"
         },
-        "day": {
-          "id": "день"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "onion": {
-          "id": "цибуля"
-        },
-        "avocado": {
-          "id": "авокадо"
-        },
-        "corn": {
-          "id": "кукурудза"
-        },
-        "lime": {
-          "id": "лайм"
+        "Length": {
+          "id": "Тривалість"
         }
       }
     },
     "bike_sharing": {
       "fields": {
+        "Month": {
+          "id": "Місяць"
+        },
         "index": {
           "id": "індекс"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "mushrooms": {
-          "id": "гриби"
-        },
-        "lobster": {
-          "id": "лобстер"
-        },
-        "bacon": {
-          "id": "шинка"
-        },
-        "cheese": {
-          "id": "сир"
-        },
-        "meat": {
-          "id": "м'ясо"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "колір"
-        },
-        "music": {
-          "id": "музика"
-        },
-        "food": {
-          "id": "їжа"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "вік"
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Category": {
-          "id": "Категорія"
-        },
-        "Description": {
-          "id": "Опис"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "strawberry": {
-          "id": "полуниця"
-        },
-        "lime": {
-          "id": "лайм"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "sides": {
-          "id": "сторони"
-        },
-        "size": {
-          "id": "розмір"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "avocado": {
-          "id": "авокадо"
-        },
-        "chicken": {
-          "id": "курка"
-        },
-        "fruit": {
-          "id": "фрукт"
-        },
-        "cheese": {
-          "id": "сир"
         }
       }
     },
@@ -148,29 +63,10 @@
         }
       }
     },
-    "student_alcohol_consumption": {
+    "boba_toy": {
       "fields": {
-        "school": {
-          "id": "школа"
-        },
-        "age": {
-          "id": "вік"
-        },
-        "health": {
-          "id": "здоров’я"
-        }
-      }
-    },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "курка"
-        },
-        "onion": {
-          "id": "цибуля"
-        },
-        "cheese": {
-          "id": "сир"
+        "banana": {
+          "id": "банан"
         }
       }
     },
@@ -181,67 +77,158 @@
         }
       }
     },
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "колір"
+        },
+        "food": {
+          "id": "їжа"
+        },
+        "music": {
+          "id": "музика"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Вік"
+        }
+      }
+    },
+    "icecream_toppings_toy": {
+      "fields": {
+        "Preference": {
+          "id": "Уподобання"
+        }
+      }
+    },
+    "insurance_cost": {
+      "fields": {
+        "age": {
+          "id": "вік"
+        }
+      }
+    },
     "loneliness_interests": {
       "fields": {
         "Internet": {
           "id": "Інтернет"
+        },
+        "Writing": {
+          "id": "Написання"
+        }
+      }
+    },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "Країна"
+        },
+        "Music": {
+          "id": "Музика"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "вік"
         }
       }
     },
     "movies": {
       "fields": {
-        "Score": {
-          "id": "Рахунок"
-        },
         "Country": {
           "id": "Країна"
         },
         "Name": {
           "id": "Ім’я"
         },
+        "Score": {
+          "id": "Рахунок"
+        },
         "Star": {
           "id": "Зірка"
         }
       }
     },
-    "songs": {
+    "naan_toy": {
       "fields": {
-        "Artist": {
-          "id": "Художник"
+        "cheese": {
+          "id": "сир"
+        },
+        "chicken": {
+          "id": "курка"
+        },
+        "onion": {
+          "id": "цибуля"
         }
       }
     },
-    "safari_toy": {
+    "nutrition": {
       "fields": {
-        "people": {
-          "id": "люди"
+        "Category": {
+          "id": "Категорія"
         },
-        "rhino": {
-          "id": "носоріг"
-        },
-        "elephant": {
-          "id": "слон"
-        },
-        "trees": {
-          "id": "дерева"
+        "Description": {
+          "id": "Опис"
         }
+      }
+    },
+    "pizza_toppings_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Все, що завгодно, окрім рекомендацій щодо піци.",
+          "potentialUses": "Допоможіть порекомендувати, яку піцу варто купити новому клієнту."
+        },
+        "description": "Опитування клієнтів у піцерії про те, чи подобаються їм певні комбінації піци."
       },
-      "name": "Сафарі"
-    },
-    "abalone": {
       "fields": {
-        "Length": {
-          "id": "Тривалість"
+        "Anchovies": {
+          "description": "Чи були в піці анчоуси?",
+          "id": "Анчоуси"
         },
-        "Height": {
-          "id": "Висота"
-        }
-      }
-    },
-    "zoo": {
-      "fields": {
-        "Aquatic": {
-          "id": "Водні"
+        "Bacon": {
+          "description": "У піці був бекон?",
+          "id": "Бекон"
+        },
+        "Broccoli": {
+          "description": "Чи була в піці броколі?",
+          "id": "Броколі"
+        },
+        "Extra Cheese": {
+          "description": "Чи був у піци додатковий сир?",
+          "id": "Екстра сир"
+        },
+        "Fried Chicken": {
+          "description": "У піці була смажена курка?",
+          "id": "Смажена курка"
+        },
+        "Ham": {
+          "description": "У піці була шинка?",
+          "id": "Шинка"
+        },
+        "Olives": {
+          "description": "Чи були в піці оливки?",
+          "id": "Оливки"
+        },
+        "Pepperoni": {
+          "description": "У піці було пепероні?",
+          "id": "Пепероні"
+        },
+        "Peppers": {
+          "description": "У піці були перці?",
+          "id": "Перці"
+        },
+        "Preference": {
+          "description": "Як Вам сподобалася піца?",
+          "id": "Уподобання"
+        },
+        "Sausage": {
+          "description": "Чи була в піці ковбаса?",
+          "id": "Ковбаса"
         }
       }
     },
@@ -255,45 +242,90 @@
         }
       }
     },
-    "student_survey": {
+    "poutine_toy": {
       "fields": {
-        "Music": {
-          "id": "Музика"
+        "bacon": {
+          "id": "шинка"
         },
-        "Country": {
-          "id": "Країна"
+        "cheese": {
+          "id": "сир"
         },
-        "Internet": {
-          "id": "Інтернет"
+        "lobster": {
+          "id": "лобстер"
         },
-        "Achievements": {
-          "id": "Досягнення"
+        "meat": {
+          "id": "м'ясо"
         },
-        "Age": {
-          "id": "Вік",
-          "description": "Вік"
-        },
-        "Height": {
-          "id": "Висота",
-          "description": "Висота"
-        },
-        "Gender": {
-          "id": "Стать",
-          "description": "Стать"
+        "mushrooms": {
+          "id": "гриби"
         }
       }
     },
-    "boba_toy": {
+    "raspado_toy": {
       "fields": {
-        "banana": {
-          "id": "банан"
+        "lime": {
+          "id": "лайм"
+        },
+        "strawberry": {
+          "id": "полуниця"
         }
       }
     },
-    "heart": {
+    "safari_toy": {
       "fields": {
-        "Age": {
-          "id": "Вік"
+        "alligator": {
+          "id": "алігатор"
+        },
+        "elephant": {
+          "id": "слон"
+        },
+        "people": {
+          "id": "люди"
+        },
+        "rhino": {
+          "id": "носоріг"
+        },
+        "trees": {
+          "id": "дерева"
+        }
+      },
+      "name": "Сафарі"
+    },
+    "salad_toy": {
+      "fields": {
+        "avocado": {
+          "id": "авокадо"
+        },
+        "beans": {
+          "id": "боби"
+        },
+        "cheese": {
+          "id": "сир"
+        },
+        "chicken": {
+          "id": "курка"
+        },
+        "fruit": {
+          "id": "фрукт"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "avocado": {
+          "id": "авокадо"
+        },
+        "beans": {
+          "id": "боби"
+        },
+        "corn": {
+          "id": "кукурудзу"
+        },
+        "lime": {
+          "id": "лайм"
+        },
+        "onion": {
+          "id": "цибуля"
         }
       }
     },
@@ -307,15 +339,150 @@
         }
       }
     },
-    "loneliness_music": {
+    "shapes_v2_toy": {
       "fields": {
-        "Music": {
-          "id": "Музика"
+        "sides": {
+          "id": "сторони"
+        },
+        "size": {
+          "id": "розмір"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "день"
+        },
+        "weather": {
+          "id": "погода"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Художник"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "вік"
+        },
+        "health": {
+          "id": "здоров’я"
+        },
+        "school": {
+          "id": "школа"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "Досягнення"
+        },
+        "Age": {
+          "description": "Вік",
+          "id": "Вік"
         },
         "Country": {
           "id": "Країна"
+        },
+        "Empathy": {
+          "id": "Емпатія"
+        },
+        "Gender": {
+          "description": "Стать",
+          "id": "Стать"
+        },
+        "Height": {
+          "description": "Висота",
+          "id": "Висота"
+        },
+        "Internet": {
+          "id": "Інтернет"
+        },
+        "Music": {
+          "id": "Музика"
+        },
+        "Writing": {
+          "id": "Написання"
+        }
+      }
+    },
+    "taco_toppings_toy": {
+      "fields": {
+        "Preference": {
+          "id": "Уподобання"
+        }
+      }
+    },
+    "zoo": {
+      "fields": {
+        "Aquatic": {
+          "id": "Водні"
         }
       }
     }
-  }
+  },
+  "generateResultsHeader": "Тестування моделі",
+  "incorrectAnswer": "Неправильно",
+  "modelCardAccuracy": "Точність",
+  "modelCardDatasetDetails": "Про дані",
+  "modelCardDatasetDetailsSize": "Розмір набору даних",
+  "modelCardDatasetDetailsSizeCount": "{rowCount} рядів",
+  "modelCardFeatures": "Ознаки",
+  "modelCardFeaturesAndLabel": "Ознаки та мітки",
+  "modelCardIntendedUse": "Очікуване використання",
+  "modelCardLabel": "Мітка",
+  "modelCardLimitations": "Обмеження та застереження",
+  "modelCardPossibleValues": "Можливі значення",
+  "modelCardPossibleValuesMaximum": "максимум",
+  "modelCardPossibleValuesMinimum": "мінімум",
+  "modelNameLabel": "Назва моделі",
+  "navigateBack": "Назад",
+  "navigateDone": "Кінець",
+  "navigateForward": "Продовжити",
+  "potentialMisusesDescription": "Опишіть будь-які обмеження в тому, як ця модель була створена або як її слід використовувати. Можна вказати щось на кшталт: \"Уникайте використання цієї моделі для...\" або \"Будьте обережні щодо...\".\nВажливими питаннями для розгляду є:",
+  "potentialMisusesDescriptionEnough": "Чи зібрано достатньо даних, щоб бути впевненими в точності моделі?",
+  "potentialMisusesDescriptionRepresent": "Чи представляють дані всіх можливих користувачів і сценарії?",
+  "potentialMisusesDescriptionSituations": "Чи існують ситуації, коли цю модель точно не варто використовувати?",
+  "potentialMisusesLabel": "Обмеження та застереження",
+  "potentialMisusesPlaceholder": "Напишіть короткий опис.",
+  "potentialUsesDescription": "Опишіть проблему, яку, на вашу думку, ця модель може допомогти вирішити, або один потенційний застосунок, який хтось міг би створити за допомогою цієї моделі.",
+  "potentialUsesLabel": "Очікуване використання",
+  "potentialUsesPlaceholder": "Напишіть короткий опис.",
+  "predictAIBotPredicts": "ШІ прогнозує",
+  "predictButton": "Прогнозування",
+  "predictHeader": "Спробуйте!",
+  "predictPlaceholder": "min {minimum}, max {maximum}",
+  "predictionStatement": "Прогнозувати {output} на основі {inputs}",
+  "resultsAccuracy": "Точність",
+  "resultsDetailsButton": "Деталі",
+  "resultsHeader": "Результат",
+  "resultsPreviousResults": "Попередні результати",
+  "resultsTableActualValueHeader": "Фактичне",
+  "resultsTableFeatureHeader": "Ознаки",
+  "resultsTablePredictedValueHeader": "Прогнозування ШІ",
+  "resultsTablePredictionRange": "Прогнози становлять +/- {percentage}% діапазону",
+  "saveModelColumnCountLabel": "Описи стовпців",
+  "saveModelColumnTypeFeature": "ознака",
+  "saveModelColumnTypeLabel": "мітка",
+  "saveModelFieldRequired": "обов'язкове",
+  "saveProgress": "Зберегти",
+  "saveStatus_failure": "Сталася помилка. Модель не збережено. Будь ласка, спробуйте ще раз.",
+  "saveStatus_piiProfanity": "Вашу модель не вдалося зберегти, оскільки вона містить ненормативну лексику або особисту інформацію (наприклад, електронну пошту, адресу, номер телефону).",
+  "saveStatus_success": "Модель збережено!",
+  "scatterPlotLabel": "Інформація про зв'язки",
+  "selectDatasetErrorTooFewColumns": "Будь ласка, завантажте {fileType} файл із принаймні {count} стовпцями.",
+  "selectDatasetErrorTooFewRows": "Будь ласка, завантажте {fileType} файл із принаймні {count} рядками.",
+  "selectDatasetUploadFileButton": "Завантажити {fileType}",
+  "selectLabelButton": "Вибрати мітку",
+  "trainModelButtonText": "Тренувати",
+  "trainModelHeading": "Тренування",
+  "tryAgain": "Спробувати знову",
+  "uniqueOptionsWarningMessage": "Категорійні стовпці з більш ніж {valueCount} унікальних значень не можуть бути обрані як мітка або ознака."
 }

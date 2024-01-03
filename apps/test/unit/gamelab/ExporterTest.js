@@ -4,15 +4,24 @@ import sinon from 'sinon';
 var testUtils = require('../../util/testUtils');
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 import Exporter from '@cdo/apps/p5lab/gamelab/Exporter';
+import pageConstantsReducer, {
+  setPageConstants,
+} from '@cdo/apps/redux/pageConstants';
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux,
+} from '@cdo/apps/redux';
 
 const emptyAnimationOpts = {
   animationList: {
     orderedKeys: [],
     propsByKey: {},
-    pendingFrames: {}
+    pendingFrames: {},
   },
   allAnimationsSingleFrame: false,
-  pauseAnimationsByDefault: false
+  pauseAnimationsByDefault: false,
 };
 
 const WEBPACK_RUNTIME_JS_CONTENT = 'webpack-runtime.js content';
@@ -34,13 +43,13 @@ a.third-rule {
 const JQUERY_JS_CONTENT = 'jquery content';
 const PNG_ASSET_CONTENT = 'asset content';
 
-describe('The Gamelab Exporter,', function() {
+describe('The Gamelab Exporter,', function () {
   var server;
   let stashedCookieKey;
 
   testUtils.setExternalGlobals();
 
-  beforeEach(function() {
+  beforeEach(function () {
     server = sinon.fakeServerWithClock.create();
     server.respondWith(
       /\/blockly\/js\/webpack-runtime\.js\?__cb__=\d+/,
@@ -74,7 +83,7 @@ describe('The Gamelab Exporter,', function() {
 
     assetPrefix.init({
       channel: 'some-channel-id',
-      assetPathPrefix: '/v3/assets/'
+      assetPathPrefix: '/v3/assets/',
     });
 
     if (!window.dashboard.assets.listStore.list.returns) {
@@ -83,7 +92,7 @@ describe('The Gamelab Exporter,', function() {
     window.dashboard.assets.listStore.list.returns([
       {filename: 'foo.png'},
       {filename: 'bar.png'},
-      {filename: 'zoo.mp3'}
+      {filename: 'zoo.mp3'},
     ]);
     server.respondWith('/v3/assets/some-channel-id/foo.png', 'foo.png content');
     server.respondWith('/v3/assets/some-channel-id/bar.png', 'bar.png content');
@@ -95,24 +104,32 @@ describe('The Gamelab Exporter,', function() {
 
     stashedCookieKey = window.userNameCookieKey;
     window.userNameCookieKey = 'CoolUser';
+    stubRedux();
+    registerReducers({pageConstants: pageConstantsReducer});
+    getStore().dispatch(
+      setPageConstants({
+        isCurriculumLevel: true,
+      })
+    );
   });
 
-  afterEach(function() {
+  afterEach(function () {
     server.restore();
     assetPrefix.init({});
     window.userNameCookieKey = stashedCookieKey;
+    restoreRedux();
   });
 
-  describe("when assets can't be fetched,", function() {
-    beforeEach(function() {
+  describe("when assets can't be fetched,", function () {
+    beforeEach(function () {
       server.respondWith(/\/blockly\/js\/p5play\/p5\.js\?__cb__=\d+/, [
         500,
         {},
-        ''
+        '',
       ]);
     });
 
-    it('should reject the promise with an error', function(done) {
+    it('should reject the promise with an error', function (done) {
       server.respondImmediately = true;
       let zipPromise = Exporter.exportAppToZip(
         'my-app',
@@ -120,11 +137,11 @@ describe('The Gamelab Exporter,', function() {
         emptyAnimationOpts
       );
       zipPromise.then(
-        function() {
+        function () {
           assert.fail('Expected zipPromise not to resolve');
           done();
         },
-        function(error) {
+        function (error) {
           assert.equal(error.message, 'failed to fetch assets');
           done();
         }
@@ -132,9 +149,9 @@ describe('The Gamelab Exporter,', function() {
     });
   });
 
-  describe('when exporting,', function() {
+  describe('when exporting,', function () {
     var zipFiles = {};
-    beforeEach(function(done) {
+    beforeEach(function (done) {
       server.respondImmediately = true;
       let zipPromise = Exporter.exportAppToZip(
         'my-app',
@@ -142,19 +159,19 @@ describe('The Gamelab Exporter,', function() {
         emptyAnimationOpts
       );
 
-      zipPromise.then(function(zip) {
+      zipPromise.then(function (zip) {
         var relativePaths = [];
-        zip.forEach(function(relativePath, file) {
+        zip.forEach(function (relativePath, file) {
           relativePaths.push(relativePath);
         });
-        var zipAsyncPromises = relativePaths.map(function(path) {
+        var zipAsyncPromises = relativePaths.map(function (path) {
           var zipObject = zip.file(path);
           if (zipObject) {
             return zipObject.async('string');
           }
         });
-        Promise.all(zipAsyncPromises).then(function(fileContents) {
-          relativePaths.forEach(function(path, index) {
+        Promise.all(zipAsyncPromises).then(function (fileContents) {
+          relativePaths.forEach(function (path, index) {
             zipFiles[path] = fileContents[index];
           });
           done();
@@ -162,7 +179,7 @@ describe('The Gamelab Exporter,', function() {
       }, done);
     });
 
-    describe('will produce a zip file, which', function() {
+    describe('will produce a zip file, which', function () {
       it('should contain a bunch of files', () => {
         const files = Object.keys(zipFiles);
         files.sort();
@@ -178,21 +195,21 @@ describe('The Gamelab Exporter,', function() {
           'my-app/gamelab.css',
           'my-app/index.html',
           'my-app/p5.js',
-          'my-app/p5.play.js'
+          'my-app/p5.play.js',
         ]);
       });
 
-      it('should contain a p5.js file', function() {
+      it('should contain a p5.js file', function () {
         assert.property(zipFiles, 'my-app/p5.js');
         assert.equal(zipFiles['my-app/p5.js'], P5_JS_CONTENT);
       });
 
-      it('should contain a p5.play.js file', function() {
+      it('should contain a p5.play.js file', function () {
         assert.property(zipFiles, 'my-app/p5.play.js');
         assert.equal(zipFiles['my-app/p5.play.js'], P5_PLAY_JS_CONTENT);
       });
 
-      it('should contain a gamelab-api.js file', function() {
+      it('should contain a gamelab-api.js file', function () {
         assert.property(zipFiles, 'my-app/gamelab-api.js');
         assert.equal(
           zipFiles['my-app/gamelab-api.js'],
@@ -200,7 +217,7 @@ describe('The Gamelab Exporter,', function() {
         );
       });
 
-      it('should contain a gamelab.css file', function() {
+      it('should contain a gamelab.css file', function () {
         assert.property(zipFiles, 'my-app/gamelab.css');
         assert.equal(zipFiles['my-app/gamelab.css'], GAMELAB_CSS_CONTENT);
       });
@@ -231,21 +248,21 @@ describe('The Gamelab Exporter,', function() {
         });
       });
 
-      it('should contain a code.js file', function() {
+      it('should contain a code.js file', function () {
         assert.property(zipFiles, 'my-app/code.js');
       });
 
-      it('should contain the asset files used by the project', function() {
+      it('should contain the asset files used by the project', function () {
         assert.property(zipFiles, 'my-app/assets/foo.png');
         assert.property(zipFiles, 'my-app/assets/bar.png');
         assert.property(zipFiles, 'my-app/assets/zoo.mp3');
       });
 
-      it('should contain the sound library files referenced by the project', function() {
+      it('should contain the sound library files referenced by the project', function () {
         assert.property(zipFiles, 'my-app/assets/default.mp3');
       });
 
-      it('should rewrite urls in the code to point to the correct asset files', function() {
+      it('should rewrite urls in the code to point to the correct asset files', function () {
         expect(zipFiles['my-app/code.js']).to.include(
           'console.log("hello");\nplaySound("assets/zoo.mp3");\nplaySound("assets/default.mp3");'
         );

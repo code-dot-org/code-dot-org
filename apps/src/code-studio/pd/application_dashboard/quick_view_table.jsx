@@ -5,7 +5,7 @@ import ReactTooltip from 'react-tooltip';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 import color from '@cdo/apps/util/color';
-import {Button} from 'react-bootstrap';
+import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import _, {orderBy} from 'lodash';
 import {StatusColors, getApplicationStatuses} from './constants';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
@@ -19,11 +19,11 @@ export class QuickViewTable extends React.Component {
     statusFilter: PropTypes.string,
     regionalPartnerName: PropTypes.string,
     regionalPartnerGroup: PropTypes.number,
-    isWorkshopAdmin: PropTypes.bool
+    isWorkshopAdmin: PropTypes.bool,
   };
 
   static contextTypes = {
-    router: PropTypes.object.isRequired
+    router: PropTypes.object.isRequired,
   };
 
   constructor(props) {
@@ -38,12 +38,12 @@ export class QuickViewTable extends React.Component {
       sortingColumns: {
         [sortColumnIndex]: {
           direction,
-          position: 0
-        }
+          position: 0,
+        },
       },
 
       // track live in-memory changes, to avoid unnecessary API refresh
-      applicationsDelta: {}
+      applicationsDelta: {},
     };
   }
 
@@ -54,8 +54,8 @@ export class QuickViewTable extends React.Component {
     this.setState({
       applicationsDelta: {
         ...this.state.applicationsDelta,
-        [applicationId]: {principal_approval}
-      }
+        [applicationId]: {principal_approval},
+      },
     });
   };
 
@@ -66,7 +66,7 @@ export class QuickViewTable extends React.Component {
   constructColumns() {
     const sortable = wrappedSortable(this.getSortingColumns, this.onSort, {
       container: {whiteSpace: 'nowrap'},
-      default: {color: color.light_gray}
+      default: {color: color.light_gray},
     });
 
     let columns = [];
@@ -74,17 +74,17 @@ export class QuickViewTable extends React.Component {
       {
         property: 'id',
         header: {
-          label: 'Actions'
+          label: 'Actions',
         },
         cell: {
-          formatters: [this.formatActionsCell]
-        }
+          formatters: [this.formatActionsCell],
+        },
       },
       {
         property: 'date_applied',
         header: {
           label: 'Submitted',
-          transforms: [sortable]
+          transforms: [sortable],
         },
         cell: {
           formatters: [
@@ -92,49 +92,49 @@ export class QuickViewTable extends React.Component {
               date_applied
                 ? new Date(date_applied).toLocaleDateString('en-us', {
                     month: 'long',
-                    day: 'numeric'
+                    day: 'numeric',
                   })
-                : 'Not Yet Submitted'
-          ]
-        }
+                : 'Not Yet Submitted',
+          ],
+        },
       },
       {
         property: 'applicant_name',
         header: {
           label: 'Name',
-          transforms: [sortable]
-        }
+          transforms: [sortable],
+        },
       },
       {
         property: 'district_name',
         header: {
           label: 'School District',
-          transforms: [sortable]
-        }
+          transforms: [sortable],
+        },
       },
       {
         property: 'school_name',
         header: {
           label: 'School Name',
-          transforms: [sortable]
-        }
+          transforms: [sortable],
+        },
       },
       {
         property: 'status',
         header: {
           label: 'Status',
-          transforms: [sortable]
+          transforms: [sortable],
         },
         cell: {
           formatters: [
-            status => getApplicationStatuses()[status] || _.upperFirst(status)
+            status => getApplicationStatuses()[status] || _.upperFirst(status),
           ],
           transforms: [
             status => ({
-              style: {...styles.statusCellCommon, ...styles.statusCell[status]}
-            })
-          ]
-        }
+              style: {...styles.statusCellCommon, ...styles.statusCell[status]},
+            }),
+          ],
+        },
       }
     );
 
@@ -143,7 +143,7 @@ export class QuickViewTable extends React.Component {
         property: 'principal_approval_state',
         header: {
           label: 'Admin Approval State',
-          transforms: [sortable]
+          transforms: [sortable],
         },
         cell: {
           formatters: [
@@ -157,40 +157,40 @@ export class QuickViewTable extends React.Component {
                 PrincipalApprovalState.complete
               )
                 ? principal_approval_state
-                : ''
-          ]
-        }
+                : '',
+          ],
+        },
       },
       {
         property: 'principal_approval_not_required',
         header: {
           label: 'Admin Approval Required',
-          transforms: [sortable]
+          transforms: [sortable],
         },
         cell: {
-          formatters: [this.formatPrincipalApprovalCell]
-        }
+          formatters: [this.formatPrincipalApprovalCell],
+        },
       },
       {
         property: 'meets_criteria',
         header: {
           label: 'Meets Guidelines',
-          transforms: [sortable]
-        }
+          transforms: [sortable],
+        },
       },
       {
         property: 'meets_scholarship_criteria',
         header: {
           label: 'Meets Scholarship Requirements',
-          transforms: [sortable]
-        }
+          transforms: [sortable],
+        },
       },
       {
         property: 'friendly_scholarship_status',
         header: {
           label: 'Scholarship Teacher?',
-          transforms: [sortable]
-        }
+          transforms: [sortable],
+        },
       }
     );
 
@@ -199,22 +199,22 @@ export class QuickViewTable extends React.Component {
       {property: 'notes_2', label: 'Notes 2'},
       {property: 'notes_3', label: 'Notes 3'},
       {property: 'notes_4', label: 'Notes 4'},
-      {property: 'notes_5', label: 'Notes 5'}
+      {property: 'notes_5', label: 'Notes 5'},
     ].forEach(notesField => {
       columns.push({
         property: notesField.property,
         header: {
           label: notesField.label,
-          transforms: [sortable]
+          transforms: [sortable],
         },
         cell: {
           formatters: [this.formatNotesTooltip],
           transforms: [
             () => ({
-              style: {...styles.notesCell}
-            })
-          ]
-        }
+              style: {...styles.notesCell},
+            }),
+          ],
+        },
       });
     });
 
@@ -230,9 +230,9 @@ export class QuickViewTable extends React.Component {
       sortingOrder: {
         FIRST: 'asc',
         asc: 'desc',
-        desc: 'asc'
+        desc: 'asc',
       },
-      selectedColumn
+      selectedColumn,
     });
 
     this.setState({sortingColumns});
@@ -246,7 +246,7 @@ export class QuickViewTable extends React.Component {
     if (Object.keys(this.state.applicationsDelta).length > 0) {
       rows = rows.map(row => ({
         ...row,
-        ...this.state.applicationsDelta[row.id]
+        ...this.state.applicationsDelta[row.id],
       }));
     }
     return rows;
@@ -312,7 +312,7 @@ export class QuickViewTable extends React.Component {
     const sortedRows = sort.sorter({
       columns: this.columns,
       sortingColumns,
-      sort: orderBy
+      sort: orderBy,
     })(rows);
 
     return (
@@ -333,27 +333,27 @@ export class QuickViewTable extends React.Component {
 
 const styles = {
   container: {
-    overflowX: 'auto'
+    overflowX: 'auto',
   },
   table: {
-    width: '100%'
+    width: '100%',
   },
   statusCellCommon: {
-    padding: '5px'
+    padding: '5px',
   },
   statusCell: StatusColors,
   notesCell: {
-    maxWidth: '200px'
+    maxWidth: '200px',
   },
   notesCellContent: {
     whiteSpace: 'nowrap',
     overflow: 'hidden',
     textOverflow: 'ellipsis',
-    paddingLeft: '2px'
-  }
+    paddingLeft: '2px',
+  },
 };
 
 export default connect(state => ({
   regionalPartnerGroup: state.regionalPartners.regionalPartnerGroup,
-  isWorkshopAdmin: state.applicationDashboard.permissions.workshopAdmin
+  isWorkshopAdmin: state.applicationDashboard.permissions.workshopAdmin,
 }))(QuickViewTable);

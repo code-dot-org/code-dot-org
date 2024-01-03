@@ -39,3 +39,5 @@ requires 30 minutes of program execution time. The procedure runs eight times wi
 
 
 MARKDOWN
+
+allow_multiple_attempts true

@@ -15,13 +15,14 @@ import DropdownField from './DropdownField';
 import DataVisualizer from './DataVisualizer';
 import Snapshot from './Snapshot';
 import placeholderImage from './placeholder.png';
+import fontConstants from '@cdo/apps/fontConstants';
 
 export const OperatorType = {
   EQUAL: 0,
   LESS_THAN: 1,
   LESS_THAN_OR_EQUAL: 2,
   GREATER_THAN: 3,
-  GREATER_THAN_OR_EQUAL: 4
+  GREATER_THAN_OR_EQUAL: 4,
 };
 
 export const INITIAL_STATE = {
@@ -34,7 +35,7 @@ export const INITIAL_STATE = {
   filterColumn: '',
   filterOperator: OperatorType.EQUAL,
   filterValue: '',
-  screen: ''
+  screen: '',
 };
 
 class VisualizerModal extends React.Component {
@@ -43,7 +44,7 @@ class VisualizerModal extends React.Component {
     isRtl: PropTypes.bool.isRequired,
     tableColumns: PropTypes.arrayOf(PropTypes.string).isRequired,
     tableName: PropTypes.string.isRequired,
-    tableRecords: PropTypes.array.isRequired
+    tableRecords: PropTypes.array.isRequired,
   };
 
   state = {...INITIAL_STATE};
@@ -138,9 +139,10 @@ class VisualizerModal extends React.Component {
       case ChartType.CROSS_TAB:
         return msg.crossTab();
       default:
-        return chartType;
+        return '';
     }
   }
+
   getDisplayNameForOperator(operator) {
     switch (operator) {
       case OperatorType.GREATER_THAN:
@@ -187,7 +189,7 @@ class VisualizerModal extends React.Component {
       options.push(
         msg.dataVisualizerFilterDescription({
           column: this.state.filterColumn,
-          value: this.state.filterValue
+          value: this.state.filterValue,
         })
       );
     }
@@ -213,14 +215,14 @@ class VisualizerModal extends React.Component {
     let disabledOptions = [];
     const disableNonNumericColumns = [
       ChartType.SCATTER_PLOT,
-      ChartType.HISTOGRAM
+      ChartType.HISTOGRAM,
     ].includes(this.state.chartType);
     if (disableNonNumericColumns) {
       disabledOptions = _.difference(this.props.tableColumns, numericColumns);
     }
     const isMultiColumnChart = [
       ChartType.SCATTER_PLOT,
-      ChartType.CROSS_TAB
+      ChartType.CROSS_TAB,
     ].includes(this.state.chartType);
     const isFilterColumnNumeric = numericColumns.includes(
       this.state.filterColumn
@@ -251,7 +253,7 @@ class VisualizerModal extends React.Component {
               <h2 style={styles.h2}>
                 {' '}
                 {msg.exploreDataset({
-                  datasetName: this.props.tableName
+                  datasetName: this.props.tableName,
                 })}{' '}
               </h2>
 
@@ -278,7 +280,7 @@ class VisualizerModal extends React.Component {
                   ChartType.BAR_CHART,
                   ChartType.HISTOGRAM,
                   ChartType.SCATTER_PLOT,
-                  ChartType.CROSS_TAB
+                  ChartType.CROSS_TAB,
                 ]}
                 getDisplayNameForOption={this.getDisplayNameForChartType}
                 value={this.state.chartType}
@@ -286,7 +288,7 @@ class VisualizerModal extends React.Component {
                   this.setState({
                     chartType: parseFloat(event.target.value),
                     selectedColumn1: '',
-                    selectedColumn2: ''
+                    selectedColumn2: '',
                   })
                 }
               />
@@ -339,7 +341,7 @@ class VisualizerModal extends React.Component {
                 overflow:
                   this.state.chartType === ChartType.CROSS_TAB
                     ? 'auto'
-                    : 'hidden'
+                    : 'hidden',
               }}
             >
               {this.canDisplayChart() ? (
@@ -371,7 +373,7 @@ class VisualizerModal extends React.Component {
                   this.setState({
                     filterColumn: event.target.value,
                     filterOperator: OperatorType.EQUAL,
-                    filterValue: ''
+                    filterValue: '',
                   })
                 }
                 inlineLabel
@@ -384,14 +386,14 @@ class VisualizerModal extends React.Component {
                     OperatorType.GREATER_THAN_OR_EQUAL,
                     OperatorType.EQUAL,
                     OperatorType.LESS_THAN_OR_EQUAL,
-                    OperatorType.LESS_THAN
+                    OperatorType.LESS_THAN,
                   ]}
                   getDisplayNameForOption={this.getDisplayNameForOperator}
                   disabledOptions={[]}
                   value={this.state.filterOperator}
                   onChange={event =>
                     this.setState({
-                      filterOperator: parseFloat(event.target.value)
+                      filterOperator: parseFloat(event.target.value),
                     })
                   }
                   inlineLabel
@@ -429,25 +431,25 @@ class VisualizerModal extends React.Component {
 
 const styles = {
   container: {
-    display: 'inline-block'
+    display: 'inline-block',
   },
   containerRtl: {
-    marginLeft: '10px'
+    marginLeft: '10px',
   },
   modalBody: {
     display: 'flex',
     flexDirection: 'column',
-    height: '100%'
+    height: '100%',
   },
   h2: {
-    margin: '0 0 10px 0'
+    margin: '0 0 10px 0',
   },
   input: {
     ...rowStyle.container,
-    float: 'left'
+    float: 'left',
   },
   chartArea: {
-    flexGrow: 1
+    flexGrow: 1,
   },
   placeholderContainer: {
     position: 'relative',
@@ -455,16 +457,16 @@ const styles = {
     textAlign: 'center',
     backgroundImage: `url('${placeholderImage}')`,
     backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center'
+    backgroundPosition: 'center',
   },
   placeholderText: {
     position: 'absolute',
     width: '100%',
     bottom: '50%',
-    fontFamily: '"Gotham 5r", sans-serif, sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     fontSize: 20,
-    color: color.dark_charcoal
-  }
+    color: color.dark_charcoal,
+  },
 };
 
 export const UnconnectedVisualizerModal = VisualizerModal;
@@ -472,5 +474,5 @@ export default connect(state => ({
   isRtl: state.isRtl,
   tableColumns: state.data.tableColumns || [],
   tableRecords: state.data.tableRecords || [],
-  tableName: state.data.tableName || ''
+  tableName: state.data.tableName || '',
 }))(VisualizerModal);

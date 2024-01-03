@@ -1,9 +1,9 @@
 {
   "absolute": "mutlak",
+  "agentDiamondPathCongrats": "Tebrikler, elmas yolu buldun! Şimdiye kadar {count, plural, one{1 diamond} other {# diamonds}} topladın!",
   "agentGenericFailureMessage": "Kodlamaya devam et! Yardımcı olması için Agent'ı kullanmayı unutma.",
   "agentTooFewBlocksFailureMessage": "Agent'ı doğru noktaya ulaştırmak için her defasında sadece bir blok eklemeye çalış.",
   "at": "de",
-  "agentDiamondPathCongrats": "Tebrikler, elmas yolu buldun! Şimdiye kadar {count, plural, one{1 diamond} other {# diamonds}} topladın!",
   "blockActionAdd": "ekle",
   "blockActionAttack": "saldır",
   "blockActionClone": "blokları kopyala",

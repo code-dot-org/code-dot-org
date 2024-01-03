@@ -2,6 +2,8 @@
 fil:
   data:
     blocks:
+      AmysBlocks_playerBehaviors:
+        text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:
         text: prompt user {QUESTION} sa variable {VAR} na may pagpipiliang {A}{B}{C}
       AmysBlocks_spriteSayVar:
@@ -16,7 +18,6 @@ fil:
             '0.75': maliit
             '1.00': katamtaman
             '2.00': malaki
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         text: itakda ang laki ng {SPRITE} sa {SIZE}
         options:
@@ -25,7 +26,6 @@ fil:
             '0.75': maliit
             '1.00': katamtaman
             '2.00': malaki
-            '3.00': extra large
       Dancelab_alternateMoves:
         text: "Ang {GROUP} ay maghahalinhinan bawat {N} measure \nsa pagitan ng {MOVE1} at {MOVE2}"
         options:
@@ -73,6 +73,11 @@ fil:
           UNIT:
             '"measures"': measure
             '"seconds"': mga segundo
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': measure
+            '"seconds"': mga segundo
       Dancelab_changeColorBy:
         text: palitan ang {COLOR} {METHOD} ng {AMOUNT}
         options:
@@ -112,6 +117,27 @@ fil:
             MOVES.Kick: Bituin
             MOVES.ThisOrThat: Ito o Iyan
             MOVES.Rest: Wala
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} ang {MOVE} {DIR} magpakailanman"
+        options:
+          GROUP:
+            '"CAT"': mga Pusa
+            '"SLOTH"': sloths
+          MOVE:
+            MOVES.Roll: Body Roll
+            MOVES.ClapHigh: Pumalakpak sa Itaas
+            MOVES.Dab: Mag-dab
+            MOVES.DoubleJam: Doble Pababa
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Sariwa
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Bituin
+            MOVES.ThisOrThat: Ito o Iyan
+            MOVES.Rest: Wala
+            '"next"': "(Kasunod)"
+            '"prev"': "(Nauna)"
+            '"rand"': "(Random)"
       Dancelab_changeMoveLR:
         text: Gagawin ng {SPRITE} ang {MOVE} {DIR} magpakailanman
         options:
@@ -592,6 +618,50 @@ fil:
             '"tropical"': Tropical
             '"vintage"': Vintage
             '"warm"': Warm
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          "itakda ang background effect
+          {PALETTE} {EFFECT}"
+        options:
+          EFFECT:
+            '"none"': Wala
+            '"rand"': "(Random)"
+            '"quads"': Mga Anggulo
+            '"circles"': Mga bilog
+            '"color_cycle"': Mga Kulay
+            '"diamonds"': Diyamante
+            '"disco_ball"': Disco Ball
+            '"fireworks"': Fireworks
+            '"flowers"': Mga Bulaklak
+            '"growing_stars"': Growing Stars
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kaleidoscope
+            '"lasers"': Laser Dance Floor
+            '"splatter"': Isaboy ang Pintura
+            '"rainbow"': Bahaghari
+            '"ripples_random"': Random Ripples
+            '"ripples"': Ripples
+            '"snowflakes"': Niyebe
+            '"text"': Mga Pangalan ng Awit
+            '"sparkles"': Sparkles
+            '"spiral"': Spiral
+            '"disco"': Mga kwadrado
+            '"squiggles"': Squiggles
+            '"starburst"': Starburst
+            '"stars"': Mga Bituin
+            '"music_wave"': Mga Alon
+          PALETTE:
+            '"rave"': Itim at Puti
+            '"cool"': Cool
+            '"electronic"': Electronic
+            '"iceCream"': Sorbetes
+            '"default"': Ilaw
+            '"neon"': Neon
+            '"ocean"': Dagat
+            '"rainbow"': Bahaghari
+            '"tropical"': Tropical
+            '"vintage"': Vintage
+            '"warm"': Warm
       Dancelab_setDanceSpeed:
         text: itakda ang bilis ng {SPRITE} dance sa {SPEED}
         options:
@@ -1004,8 +1074,6 @@ fil:
         options:
           INPUT1:
             '1': katas ng limon
-            '3': baking soda
-            '5': both
       DansBlocks_setForegroundEffect2:
         text: gawin ang {EFFECT} effect
         options:
@@ -1022,8 +1090,6 @@ fil:
         options:
           INPUT1:
             '1': katas ng limon
-            '3': baking soda
-            '5': both
       FunctionBlocks_communicate:
         text: Makipag-ugnay sa {VAR1} gamit ang {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:
@@ -1052,6 +1118,8 @@ fil:
         text: iniiwasan ang mga target
       gamelab_beginCollectingData:
         text: simulan ang pagkolekta ng data {BREAK} value {VALUE} may label {LABEL}
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE} tumalbog sa {TARGET}"
       gamelab_changePropBy:
@@ -1243,6 +1311,19 @@ fil:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_layoutSprites:
+        text: i-layout ang {GROUP} bilang isang {FORMAT}
+        options:
+          FORMAT:
+            '"border"': border
+            '"circle"': bilog
+            '"grid"': grid
+            '"top"': pinakamataas na hilera
+            '"row"': hilera
+            '"bottom"': pinakamababang hilera
+            '"left"': kaliwang kolum
+            '"column"': kolum
+            '"right"': kanang kolum
       gamelab_locationAt:
         text: 'Lokasyon x: {X} y {Y}'
       gamelab_locationModifier:
@@ -1269,6 +1350,18 @@ fil:
             '"spiral"': paikid
       gamelab_makeNewSpriteAnon:
         text: gumawa ng bagong {ANIMATION_NAME} sprite sa {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': border
+            '"circle"': bilog
+            '"grid"': grid
+            '"top"': pinakamataas na hilera
+            '"row"': hilera
+            '"bottom"': pinakamababang hilera
+            '"left"': kaliwang kolum
+            '"column"': kolum
+            '"right"': kanang kolum
       gamelab_makeNumSprites:
         text: gumawa ng {NUM} bagong {ANIMATION_NAME} mga tiyanak
       gamelab_makeProjectile:
@@ -1499,11 +1592,9 @@ fil:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': mabagal
             '5': normal
             '7': mabilis
-            '9': extra fast
       gamelab_setTint:
         text: baguhin ang kulay ng {THIS} sa {COLOR}
       gamelab_setupScoreboard:
@@ -1661,6 +1752,16 @@ fil:
         text: x coordinate ng {SPRITE}
       gamelab_yLocationOf:
         text: y ang mga {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} dumausdos sa {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': matibay
+            '"liquid"': likido
+            '"gas"': gas
+      KatiesBlocks_tumbling:
+        text: gumulung-gulong
       Mikelab_addBehaviorSimple:
         text: sprite {SPRITE} ay nagsisimula {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -1975,14 +2076,10 @@ fil:
         options:
           INPUT1:
             '1': katas ng limon
-            '3': baking soda
-            '5': both
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
             '1': katas ng limon
-            '3': baking soda
-            '5': both
       ParticlesBlocks_statesOfMatter:
         text: "{BEHAVIOR}"
         options:
@@ -2188,7 +2285,6 @@ fil:
         text: kapag lumalabas ang linya {N}.
         options:
           'N':
-            '0': "???"
             '1': '1'
             '2': '2'
             '3': '3'
@@ -2212,8 +2308,6 @@ fil:
         text: kumaliwa
       RyanLab_turnRight:
         text: kumanan
-      SpriteLab2Beta_spriteSay:
-        text: sprite {SPRITE} sinasabi {TEXT} para sa {SECONDS} segundo
       Vector_createSpriteWith:
         text: |-
           lumikha ng sprite
@@ -2250,18 +2344,25 @@ fil:
         options:
           PORTION:
             '1': lahat
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': lahat
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE} sabihin ang {SPEECH}"
+      adaptations_adaptationBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): umiikot pakanan
+            new Behavior(spinning_left, []): umiikot pakaliwa
+            new Behavior(fluttering, []): pumapagaspas
+            new Behavior(jittering, []): nanginginig
+            new Behavior(wobbling, []): gumulong-gulong
+            new Behavior(wandering, []): gumagala
+            new Behavior(patrolling, []): nagpapatrolya
+      adaptations_startFollowing:
+        text: "{SPRITE} nagsisimulang sumunod {TARGET}"
       binary_drawBin:
         text: Gumuhit ng binary {BIN}
       binary_drawBinScreen:
@@ -2364,6 +2465,22 @@ fil:
           DIR:
             right: right ↻
             left: kaliwang ↺
+      ecosystems_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      storylab_printText:
+        text: print {TEXT}
       storylab_setForegroundEffect2:
         text: gawin ang {EFFECT} effect
         options:
@@ -2378,5 +2495,3 @@ fil:
         text: i-set ang heading {HEADING}
       storylab_setSubheading:
         text: i-set ang subheading {SUBHEADING}
-      validation_validatedBackground:
-        text: Itakda ang background sa {IMG}

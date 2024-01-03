@@ -2,6 +2,7 @@
   "category": "Experimental",
   "config": {
     "func": "layoutGrid",
-    "blockText": "layout sprites as a grid"
+    "blockText": "layout sprites as a grid",
+    "style": "default"
   }
 }

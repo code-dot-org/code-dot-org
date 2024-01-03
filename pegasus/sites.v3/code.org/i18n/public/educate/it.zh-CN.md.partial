@@ -10,7 +10,8 @@ theme: responsive
 
 - 我们建议学校的网络连接至少15兆比特/秒。
 - 我们支持的最小屏幕尺寸是1024 x 728 px。
-- 你需要带鼠标（或触摸板）和键盘的台式电脑或笔记本电脑，用于我们的初中和高中级别课程：计算机科学探索、计算机科学原理和应用实验室导论。 大多数平板电脑和移动设备不支持这些课程。 请参阅下面的“移动设备和平板电脑支持详情”，了解特定设备例外情况。
+- You will need a desktop or laptop computer (Chromebooks are included) with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. “See Minimum Supported Browsers and Platforms” below.
+- Most tablets (such as an iPad) and mobile devices are not supported for these courses. 请参阅下面的“移动设备和平板电脑支持详情”，了解特定设备例外情况。
 - 除各种现代平板电脑和笔记本电脑或台式电脑外，诸如K-5课程（计算机科学基础）和编程一小时活动等所有其他内容在iPad和Chromebook上兼容。
 - 寻找移动设备支持详情？ 阅读以下内容。
 
@@ -82,12 +83,12 @@ theme: responsive
 
 ## 移动设备/平板电脑支持详情
 
-所有计算机科学探索、计算机科学原理和应用实验室导论课程都不兼容平板电脑或移动设备，需要全键盘和鼠标（或触摸板，如MacBook上的）。 大多数平板电脑不支持，但有以下例外：
+All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. 大多数平板电脑不支持，但有以下例外：
 
 - 带外接键盘的微软Surface Pro
 - 带外接键盘和外接鼠标或触摸板且运行iPadOS 13.4及以上版本的iPad
 
-除各种现代平板电脑和笔记本电脑或台式电脑外，诸如K-5课程（计算机科学基础）和编程一小时活动等所有其他内容在iPad和Chromebook上兼容。
+All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
 
 ### 手机
 
@@ -101,15 +102,25 @@ theme: responsive
 
 在你开始Code.org的在线课程之前，请测试以下视频的播放，以确保你准备就绪。
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
 
-这是贯穿整个课程的播放器。 它将尝试通过YouTube显示视频，如果YouTube被屏蔽，将使用我们的“后备”播放器显示Code.org托管视频。
+<!--
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to 
+.md.erb without breaking i18n sync, this file should include that partial instead.
+-->
+<figure style="width:100%; height: 100%; margin: 0 auto;">
+  <div class="videodiv" style="position:relative;">
+    <img style="display:block; width:100%; height:auto" src="/images/16x9.png">
+    <div class="insert_video_player" data-video-code="ws8rmHcqXeM" data-download-path="//videos.code.org/new/5-artist-intro.mp4"></div>
+  </div>
+</figure>
+
+This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
 
 ### 视频无法播放？
 
-如果视频无法播放，你可以给我们发送电子邮件：support@code.org。
+If video does not work, you can email us at support@code.org.
 
-然而，你仍然可以在没有视频的情况下使用我们的教程。
+However, you can still use our tutorials without video.
 
 1. 我们已经使所有的视频[可以一起下载](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH)。 如果你的学校带宽较低，我们建议你下载视频并在共享屏幕上给学生展示。
 2. 在我们的教程中，我们为每个视频添加了一个绿色下载链接图标<img src="/images/green-download.png" width=25 height=25 />，让学生可以下载单个教程视频。
@@ -119,8 +130,8 @@ theme: responsive
 
 ## 谷歌应用程序/G-Suite用户的特殊设置
 
-如果你是G-suite管理员，记得检查你对YouTube的限制设置。 如果你已指定“严格限制YouTube访问”设置，或如果你看到“此视频已被限制”的消息，你可以将我们的频道添加到已批准频道列表。 请参阅来自谷歌的[这个指南](https://support.google.com/a/answer/6245597)，了解如何将我们的频道添加到已批准列表。 你也可以参阅[这个指南](https://support.google.com/a/answer/6212415?hl=en)以进一步了解不同的设置以及哪种设置最适合你的课堂。
+If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
 
 ## 仍然存在困难？
 
-我们将为你提供帮助，只需给我们发送电子邮件：support@code.org！
+We'll help you out - just email us at support@code.org!

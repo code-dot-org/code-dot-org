@@ -9,3 +9,5 @@ wrong 'wrong answer'
 markdown <<MARKDOWN
 An online music application wants to show information about songs and music artists. What kind of relationship would a `Song`(#e7e8ea) and `MusicArtist`(#e7e8ea) class have?
 MARKDOWN
+
+allow_multiple_attempts true

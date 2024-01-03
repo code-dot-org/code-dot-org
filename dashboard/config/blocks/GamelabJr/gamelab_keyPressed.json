@@ -6,6 +6,7 @@
       1,
       0.74
     ],
+    "style": "event_blocks",
     "func": "keyPressed",
     "docFunc": "gamelab_keyPressed",
     "blockText": "{CONDITION} {KEY} pressed",

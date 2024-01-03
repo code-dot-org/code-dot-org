@@ -1,13 +1,13 @@
 import {assert} from '../../../util/reconfiguredChai';
 import stats, {
-  setCompletedLevelCount
+  setCompletedLevelCount,
 } from '@cdo/apps/templates/teacherDashboard/statsRedux';
 
 // Key-value pairs where the key is the student id and value is
 // the count of completed levels for that student.
 const completedLevelCountByStudentId = {
   2: 111,
-  5: 22
+  5: 22,
 };
 
 describe('statsRedux', () => {
@@ -21,7 +21,7 @@ describe('statsRedux', () => {
       );
       const nextState = stats(initialState, action);
       const expectedState = {
-        123: completedLevelCountByStudentId
+        123: completedLevelCountByStudentId,
       };
 
       assert.deepEqual(nextState.completedLevelCountBySectionId, expectedState);
@@ -30,7 +30,7 @@ describe('statsRedux', () => {
     it('sets completedLevelCountBySectionId for multiple sections', () => {
       const moreCompletedLevelCountByStudentId = {
         6: 70,
-        1: 100
+        1: 100,
       };
       const firstAction = setCompletedLevelCount(
         123,
@@ -44,7 +44,7 @@ describe('statsRedux', () => {
       const secondState = stats(firstState, secondAction);
       const expectedState = {
         123: completedLevelCountByStudentId,
-        321: moreCompletedLevelCountByStudentId
+        321: moreCompletedLevelCountByStudentId,
       };
 
       assert.deepEqual(

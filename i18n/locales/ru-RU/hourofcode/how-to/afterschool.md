@@ -30,7 +30,7 @@ title: 'Час кода: руководство для внеклассных з
 
 ## 3. Продвигайте свой Час Программирования
 
-Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage others to host their own events.
+Продвигайте свой « [Час кода» с помощью этих инструментов]({{ urls/promote }}) и поощряйте других проводить свои собственные мероприятия.
 
 ## 4. Определите вашу потребность в оборудовании - компьютеры не обязательны
 
@@ -57,7 +57,7 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 - Расскажите о том, как технология влияет на нашу жизнь, приводя примеры, которые понравятся как мальчикам, так и девочкам (Расскажите о приложениях и технологиях, используемых для того, чтобы спасти жизни, помогать людям, находить новые знакомства и т. д).
 - Составьте список вещей, немыслимых в повседневной жизни без программирования.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- Ознакомьтесь с советами по привлечению девушек к информатике [здесь]({{ urls/girls }}).
 
 **Нужны дополнительные рекомендации?** Скачайте этот [шаблон плана урока](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
@@ -67,13 +67,13 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 **Если кто-то столкнулся с трудностями, будет правильно ответить:** - Я не знаю. "Давай разберемся вместе". –"Технология не всегда работает так, как мы хотим". – "Изучение программирования - это как изучение нового языка, вы не сразу заговорите свободно".
 
-**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
+**Что делать, если кто-то закончит раньше срока?** - Предложите участникам попробовать еще одно упражнение «Час кода» на сайте [hourofcode.com/learn]({{ urls/learn }}) . Или попросите тех, кто закончил обучение раньше срока, помочь тем, у кого возникли проблемы.
 
 ## 7. Отпразднуйте
 
-- [Print certificates]({{ urls/certificates }}) for your students.
-- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers for your students.
-- [Закажите оригинальную футболку](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) для участников.
+- [Напечатайте сертификаты]({{ urls/certificates }}) для ваших учеников.
+- [Распечатайте «Я провел час кода!»]({{ promote/resources_stickers }}) наклейки для ваших учеников.
+- [Закажите изготовленные на заказ футболки](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) для участников.
 - Поделитесь фотографиями и видео о вашем Часе Кода в социальных медиа. Используйте хештеги #HourOfCode и @codeorg, чтобы мы тоже смогли отметить ваш успех!
 
 ## Другие материалы для учителей Часа Программирования
@@ -85,6 +85,6 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## Час Кода: а что дальше?
 
-Час Кода - это всего лишь первый шаг в освоении того, как работают технологии и как создавать приложения. Help students continue their journey and encourage them to [learn more online](/beyond)!
+Час Кода - это всего лишь первый шаг в освоении того, как работают технологии и как создавать приложения. Помогите учащимся продолжить свой путь и побудите их [узнавать больше в Интернете](/beyond)!
 
 {{ signup_button }}

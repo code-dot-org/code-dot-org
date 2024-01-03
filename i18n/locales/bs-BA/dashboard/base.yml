@@ -39,8 +39,10 @@ bs:
         age: 'Starost'
         gender: 'Spol'
         edit_header: 'Preuredi Detalje Računa'
+        finish_sign_up_header_error: 'Ispravi ove greške:'
         error:
           future: ne može biti u budućnosti
+        user_type: 'Tip računa'
   beta: "beta"
   hello: "Pozdrav svijete"
   welcome_back: "Dobrodošao/la natrag, %{name}"
@@ -117,7 +119,6 @@ bs:
     valid_password: "Ispravna lozinka!"
     invalid_password: "Lozinka mora biti duga najmanje 6 znakova"
     mismatch_password: "Dvije lozinke koje ste unijeli se ne podudaraju"
-    additional_information: "Trebamo dodatne informacije kako bismo nastavili vašu prijavu."
     user_type_label: "Tip računa"
     user_type_student: "Učenik"
     user_type_teacher: "Učitelj"
@@ -642,6 +643,8 @@ bs:
       robotics:
         kodable: 'Kodable'
         other: "Ostalo"
+      workshop_course:
+        other: 'Ostalo'
       email_opt_in:
         opt_in_yes: 'Da'
         opt_in_no: 'Ne'

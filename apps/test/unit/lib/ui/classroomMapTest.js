@@ -27,7 +27,7 @@ describe('classroomMap.js', () => {
       const fakeName = 'My example school';
       const input = {
         ...SAMPLE_LOCATION,
-        school_name_s: fakeName
+        school_name_s: fakeName,
       };
       assert.include(
         compileHTML(1, input),
@@ -38,7 +38,7 @@ describe('classroomMap.js', () => {
     it('school name guards against JavaScript injection', () => {
       const input = {
         ...SAMPLE_LOCATION,
-        school_name_s: `<a onmouseover="alert('gotcha')">Fake Name</a>`
+        school_name_s: `<a onmouseover="alert('gotcha')">Fake Name</a>`,
       };
       assert.include(
         compileHTML(1, input),
@@ -52,13 +52,13 @@ describe('classroomMap.js', () => {
 
       const withAddress = {
         ...SAMPLE_LOCATION,
-        school_address_s: fakeAddress
+        school_address_s: fakeAddress,
       };
       assert.include(compileHTML(1, withAddress), expectedMarkup);
 
       const withoutAddress = {
         ...withAddress,
-        school_address_s: null
+        school_address_s: null,
       };
       assert.notInclude(compileHTML(1, withoutAddress), expectedMarkup);
     });
@@ -66,7 +66,7 @@ describe('classroomMap.js', () => {
     it('school address guards against JavaScript injection', () => {
       const input = {
         ...SAMPLE_LOCATION,
-        school_address_s: `<a onmouseover="alert('gotcha')">Fake Address</a>`
+        school_address_s: `<a onmouseover="alert('gotcha')">Fake Address</a>`,
       };
       assert.include(
         compileHTML(1, input),
@@ -78,7 +78,7 @@ describe('classroomMap.js', () => {
       const withoutClassFormat = {
         ...SAMPLE_LOCATION,
         class_format_s: null,
-        class_format_category_s: null
+        class_format_category_s: null,
       };
       assert.notInclude(compileHTML(1, withoutClassFormat), 'Format:');
 
@@ -88,7 +88,7 @@ describe('classroomMap.js', () => {
         ...withoutClassFormat,
         class_format_s: fakeFormat,
         class_format_category_s: fakeCategoryFormat,
-        school_tuition_s: null
+        school_tuition_s: null,
       };
       assert.include(
         compileHTML(1, withFormatNoTuition),
@@ -99,7 +99,7 @@ describe('classroomMap.js', () => {
 
       const withFormatPublic = {
         ...withFormatNoTuition,
-        school_tuition_s: 'no'
+        school_tuition_s: 'no',
       };
       assert.include(
         compileHTML(1, withFormatPublic),
@@ -110,7 +110,7 @@ describe('classroomMap.js', () => {
 
       const withFormatPrivate = {
         ...withFormatNoTuition,
-        school_tuition_s: 'yes'
+        school_tuition_s: 'yes',
       };
       assert.include(
         compileHTML(1, withFormatPrivate),
@@ -123,13 +123,13 @@ describe('classroomMap.js', () => {
     it('optionally includes a line for school level', () => {
       const withoutLevel = {
         ...SAMPLE_LOCATION,
-        school_level_ss: null
+        school_level_ss: null,
       };
       assert.notInclude(compileHTML(1, withoutLevel), 'Level(s)');
 
       const withLevel = {
         ...withoutLevel,
-        school_level_ss: ['elementary', 'middle_school', 'high_school']
+        school_level_ss: ['elementary', 'middle_school', 'high_school'],
       };
       assert.include(
         compileHTML(1, withLevel),
@@ -140,13 +140,13 @@ describe('classroomMap.js', () => {
     it('optionally includes a line for class languages', () => {
       const withoutLanguages = {
         ...SAMPLE_LOCATION,
-        class_languages_all_ss: null
+        class_languages_all_ss: null,
       };
       assert.notInclude(compileHTML(1, withoutLanguages), 'Language(s)');
 
       const withLanguages = {
         ...withoutLanguages,
-        class_languages_all_ss: ['Ruby', 'JavaScript']
+        class_languages_all_ss: ['Ruby', 'JavaScript'],
       };
       assert.include(
         compileHTML(1, withLanguages),
@@ -158,8 +158,8 @@ describe('classroomMap.js', () => {
       const input = {
         ...SAMPLE_LOCATION,
         class_languages_all_ss: [
-          `<a onmouseover="alert('gotcha')">Classic ASP</a>`
-        ]
+          `<a onmouseover="alert('gotcha')">Classic ASP</a>`,
+        ],
       };
       assert.include(
         compileHTML(1, input),
@@ -206,7 +206,7 @@ describe('classroomMap.js', () => {
     it('school name guards against JavaScript injection', () => {
       const input = {
         ...SAMPLE_LOCATION,
-        school_name_s: `<a onmouseover="alert('gotcha')">Fake Name</a>`
+        school_name_s: `<a onmouseover="alert('gotcha')">Fake Name</a>`,
       };
       compileHTML(1, input);
       assert.include(
@@ -218,14 +218,14 @@ describe('classroomMap.js', () => {
     it('optionally includes a line for school website', () => {
       const withoutWebsite = {
         ...SAMPLE_LOCATION,
-        school_website_s: null
+        school_website_s: null,
       };
       compileHTML(1, withoutWebsite);
       assert.notInclude(locationDetailsDiv.innerHTML, 'Website:');
 
       const withWebsite = {
         ...withoutWebsite,
-        school_website_s: 'https://example.com'
+        school_website_s: 'https://example.com',
       };
       compileHTML(1, withWebsite);
       assert.include(
@@ -237,7 +237,7 @@ describe('classroomMap.js', () => {
     it('will fill in a missing protocol for a school website', () => {
       const withoutWebsite = {
         ...SAMPLE_LOCATION,
-        school_website_s: 'example.com'
+        school_website_s: 'example.com',
       };
       compileHTML(1, withoutWebsite);
 
@@ -250,7 +250,7 @@ describe('classroomMap.js', () => {
     it('school website guards against quote injection', () => {
       const input = {
         ...SAMPLE_LOCATION,
-        school_website_s: `https://example.com" onmouseover="alert('gotcha')`
+        school_website_s: `https://example.com" onmouseover="alert('gotcha')`,
       };
       compileHTML(1, input);
       assert.include(
@@ -262,7 +262,7 @@ describe('classroomMap.js', () => {
     it('school website guards against javascript href', () => {
       const input = {
         ...SAMPLE_LOCATION,
-        school_website_s: `javascript:alert('gotcha')`
+        school_website_s: `javascript:alert('gotcha')`,
       };
       compileHTML(1, input);
       assert.notInclude(
@@ -274,7 +274,7 @@ describe('classroomMap.js', () => {
     it('optionally includes a line for class description', () => {
       const withoutWebsite = {
         ...SAMPLE_LOCATION,
-        class_description_s: null
+        class_description_s: null,
       };
       compileHTML(1, withoutWebsite);
       assert.notInclude(
@@ -284,7 +284,7 @@ describe('classroomMap.js', () => {
 
       const withWebsite = {
         ...withoutWebsite,
-        class_description_s: 'Fake class description'
+        class_description_s: 'Fake class description',
       };
       compileHTML(1, withWebsite);
       assert.include(
@@ -296,7 +296,7 @@ describe('classroomMap.js', () => {
     it('class description guards against JavaScript injection', () => {
       const input = {
         ...SAMPLE_LOCATION,
-        class_description_s: `<a onmouseover="alert('gotcha')">Fake Description</a>`
+        class_description_s: `<a onmouseover="alert('gotcha')">Fake Description</a>`,
       };
       compileHTML(1, input);
       assert.include(
@@ -323,7 +323,7 @@ const SAMPLE_LOCATION = {
   class_languages_all_ss: ['C#', 'Python'],
   school_name_sort_s: 'code by the needle',
   distance: 3.7068423199924205,
-  id: 2165377
+  id: 2165377,
 };
 
 const SAMPLE_RESPONSE = {
@@ -346,11 +346,11 @@ const SAMPLE_RESPONSE = {
           'Code.org Code Studio',
           'HTML',
           'JavaScript',
-          'Ruby'
+          'Ruby',
         ],
         school_name_sort_s: 'virtruvian elementary',
         distance: 32.789735611616116,
-        id: 4994975
+        id: 4994975,
       },
       SAMPLE_LOCATION,
       {
@@ -371,14 +371,14 @@ const SAMPLE_RESPONSE = {
           'PHP',
           'Ruby',
           'C++',
-          'Arduino'
+          'Arduino',
         ],
         school_name_sort_s: 'bloom county library',
         distance: 51.74041989440649,
-        id: 2953353
-      }
-    ]
-  }
+        id: 2953353,
+      },
+    ],
+  },
 };
 
 const EXPECTED_LOCATIONS = [
@@ -386,24 +386,21 @@ const EXPECTED_LOCATIONS = [
     lat: '49.9025854',
     lon: '-129.3042705',
     title: 'Virtruvian Elementary',
-    html:
-      '<h3 class="entry-detail">Virtruvian Elementary</h3><div class="entry-detail">2020 Example Way, Mukilteo, WA, United States</div><div class="entry-detail"><strong>Format: </strong>Out of school - Afterschool program (private)</div><div class="entry-detail"><strong>Level(s): </strong>Preschool, Elementary</div><div class="entry-detail"><strong>Language(s): </strong>Code.org Code Studio, HTML, JavaScript, Ruby</div><div><a id="location-details-trigger-0" class="location-details-trigger" onclick="event.preventDefault();" href="#location-details-0">More information</a></div>',
-    zoom: 10
+    html: '<h3 class="entry-detail">Virtruvian Elementary</h3><div class="entry-detail">2020 Example Way, Mukilteo, WA, United States</div><div class="entry-detail"><strong>Format: </strong>Out of school - Afterschool program (private)</div><div class="entry-detail"><strong>Level(s): </strong>Preschool, Elementary</div><div class="entry-detail"><strong>Language(s): </strong>Code.org Code Studio, HTML, JavaScript, Ruby</div><div><a id="location-details-trigger-0" class="location-details-trigger" onclick="event.preventDefault();" href="#location-details-0">More information</a></div>',
+    zoom: 10,
   },
   {
     lat: '44.6409',
     lon: '-124.348',
     title: 'Code on the Road',
-    html:
-      '<h3 class="entry-detail">Code on the Road</h3><div class="entry-detail">Example Building 8th floor\nSeattle, WA 98109\nUnited States</div><div class="entry-detail"><strong>Format: </strong>Out of school - Other out of school (private)</div><div class="entry-detail"><strong>Level(s): </strong>High school, College</div><div class="entry-detail"><strong>Language(s): </strong>C#, Python</div><div><a id="location-details-trigger-1" class="location-details-trigger" onclick="event.preventDefault();" href="#location-details-1">More information</a></div>',
-    zoom: 10
+    html: '<h3 class="entry-detail">Code on the Road</h3><div class="entry-detail">Example Building 8th floor\nSeattle, WA 98109\nUnited States</div><div class="entry-detail"><strong>Format: </strong>Out of school - Other out of school (private)</div><div class="entry-detail"><strong>Level(s): </strong>High school, College</div><div class="entry-detail"><strong>Language(s): </strong>C#, Python</div><div><a id="location-details-trigger-1" class="location-details-trigger" onclick="event.preventDefault();" href="#location-details-1">More information</a></div>',
+    zoom: 10,
   },
   {
     lat: '107.16035650000001',
     lon: ' 125.5214185',
     title: 'Bloom County Library',
-    html:
-      '<h3 class="entry-detail">Bloom County Library</h3><div class="entry-detail">151 Wildacre Rd SW Lakewood WA 98499</div><div class="entry-detail"><strong>Format: </strong>Out of school - Other out of school (public)</div><div class="entry-detail"><strong>Level(s): </strong>Elementary, Middle school, High school</div><div class="entry-detail"><strong>Language(s): </strong>Scratch, JavaScript, PHP, Ruby, C++, Arduino</div><div><a id="location-details-trigger-2" class="location-details-trigger" onclick="event.preventDefault();" href="#location-details-2">More information</a></div>',
-    zoom: 10
-  }
+    html: '<h3 class="entry-detail">Bloom County Library</h3><div class="entry-detail">151 Wildacre Rd SW Lakewood WA 98499</div><div class="entry-detail"><strong>Format: </strong>Out of school - Other out of school (public)</div><div class="entry-detail"><strong>Level(s): </strong>Elementary, Middle school, High school</div><div class="entry-detail"><strong>Language(s): </strong>Scratch, JavaScript, PHP, Ruby, C++, Arduino</div><div><a id="location-details-trigger-2" class="location-details-trigger" onclick="event.preventDefault();" href="#location-details-2">More information</a></div>',
+    zoom: 10,
+  },
 ];

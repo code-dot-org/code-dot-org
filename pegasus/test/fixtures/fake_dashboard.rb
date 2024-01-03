@@ -236,12 +236,12 @@ module FakeDashboard
 
   # Patch Mysql2Adapter to only create the specified tables when loading the schema.
   module SchemaTableFilter
-    def create_table(name, options = {})
+    def create_table(table_name, id: :primary_key, primary_key: nil, force: nil, **options)
       if (::FakeDashboard::FAKE_DB.keys.map(&:to_s) + [
         ActiveRecord::Base.schema_migrations_table_name,
         ActiveRecord::Base.internal_metadata_table_name,
-      ]).include?(name)
-        super(name, options)
+      ]).include?(table_name)
+        super
       end
     end
   end
@@ -249,15 +249,22 @@ module FakeDashboard
 
   # Patch Mysql2Adapter to stub create_view when loading the schema.
   module SchemaViewFilter
-    def create_view(name, options = {})
+    def create_view(name, **)
     end
   end
   ActiveRecord::ConnectionAdapters::Mysql2Adapter.prepend SchemaViewFilter
 
   # Patch Mysql2Adapter to create temporary tables instead of persistent ones.
   module TempTableFilter
-    def create_table(name, options = {})
-      super(name, options.merge(temporary: true))
+    def create_table(table_name, id: :primary_key, primary_key: nil, force: nil, **options)
+      super(table_name, id: id, primary_key: primary_key, force: force, temporary: true, **options)
+    end
+
+    # Required as of Rails 6.1, which changed `create_table` to no longer pass
+    # along the `temporary` flag when dropping tables with `force`.
+    # See: https://github.com/rails/rails/commit/c3ca9b00e3c5f839311c55549f25f7afe8120f9d
+    def drop_table(table_name, **options)
+      super(table_name, temporary: true, **options)
     end
 
     # Temporary tables may shadow persistent tables we don't want to drop.
@@ -309,7 +316,9 @@ module FakeDashboard
     ActiveRecord::Base.establish_connection
     ActiveRecord::Schema.verbose = false
     ActiveRecord::Base.transaction do
+      # rubocop:disable CustomCops/DashboardRequires
       require_relative('../../../dashboard/db/schema')
+      # rubocop:enable CustomCops/DashboardRequires
     end
 
     # Reuse the same connection in Sequel to share access to the temporary tables.

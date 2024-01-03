@@ -53,6 +53,7 @@ is:
         gender: 'Kyn'
         edit_header: 'Breyta upplýsingum reiknings'
         finish_sign_up_header: 'Ljúka við að stofna aðgang'
+        finish_sign_up_header_error: 'Vinsamlegast leiðréttu eftirfarandi villur:'
         finish_sign_up_subheader: 'Færðu inn eftirfarandi upplýsingar til að ljúka við að stofna Code.org aðgang fyrir <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Færðu inn eftirfarandi upplýsingar til að ljúka við að stofna Code.org aðgang fyrir **%{email}**.'
         finish_sign_up_subheader_provider: 'Færðu inn eftirfarandi upplýsingar til að ljúka við að stofna Code.org aðgang hjá <strong>%{provider}</strong> fyrir <strong>%{email}</strong>.'
@@ -60,6 +61,8 @@ is:
         reset_password_token: "Tengillinn sem þú hefur notað til að endurstilla lykilorðið"
         error:
           future: má ekki vera í framtíð
+        user_type: 'Tegund aðgangs'
+        us_state: 'Fylki'
   beta: "beta"
   hello: "Halló heimur"
   welcome_back: "Velkomin/n aftur, %{name}"
@@ -172,7 +175,6 @@ is:
     data_collection_us: "Ég skil að Code.org er bandarískt sjálfseignarvefsvæði og að bandarísk lög um söfnun gagna gætu verið önnur en lög í mínu landi."
     visit_privacy: 'Lestu [Persónuverndarstefnu](%{privacy_url}) Code.org til að fá nánari upplýsingar.'
     student_terms_markdown: "Netföng eru ekki geymd á sniði sem gerir okkur kleift að hafa samband við nemendur. Nemendur munu aldrei fá póst frá Code.org nema til að endurstilla aðgangsorð. Sjá nánar um þetta í [persónuverndarstefnu](http://code.org/privacy) okkar."
-    additional_information: "Við þurfum viðbótarupplýsingar til að geta haldið áfram að skrá þig."
     user_type_button: "Uppfæra tegund aðgangs"
     user_type_label: "Tegund aðgangs"
     user_type_student: "nemandi"
@@ -193,6 +195,7 @@ is:
     parent_account_checkbox: "Ég er foreldri/forráðamaður sem er að skrá fyrir hönd barns míns"
     parent_account_email_progress_permission: "Megum við senda þér af og til netpóst með upplýsingum um framvindu og verkefni barns þíns, og upplýsingum um námskeiðið og tölvunarfræði? [(Sjá persónuverndarstefnu okkar)](%{privacy_policy_url})"
     parent_account_email_label: "Netfang foreldris/forráðamanns"
+    us_state: 'Fylki'
   school_info:
     title: 'Upplýsingar skóla (val)'
     school_country: 'Land skóla'
@@ -1068,6 +1071,7 @@ is:
         csf_express: 'Grunnatriði TF (Forstig Hraðferðar eða Hraðferð)'
         csd: 'Uppgötvanir tölvunarfræði'
         csp: 'Grunnhugtök tölvunarfræði'
+        other: 'Annað'
         not_applicable: "Á ekki við"
       email_opt_in:
         opt_in_yes: 'Já'
@@ -1089,6 +1093,11 @@ is:
     no_teacher_email:
       body_markdown: 'Aðgangurinn þinn er ekki með skráð netfang. Vinsamlegast [farðu í notendastillingar þínar](%{user_registration}) til að bæta við netfangi þínu áður en þú fyllir út þetta form.'
   courses_category: 'Heil námskeið'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
+      sports: 'Íþróttir'
+      csf: 'TF Grunnur'
   cookie_banner:
     message: 'Með því að halda áfram að vafra á vef okkar eða smella á "Ég samþykki" samþykkir þú vistun fótspora (cookies) á tölvu þinni eða tæki.'
     more_information: "Sjá persónuverndarstefnu Code.org."

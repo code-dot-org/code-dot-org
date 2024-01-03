@@ -8,8 +8,8 @@ import color from '@cdo/apps/util/color';
 export class ResultsLoader extends React.Component {
   static propTypes = {
     params: PropTypes.shape({
-      workshopId: PropTypes.string.isRequired
-    })
+      workshopId: PropTypes.string.isRequired,
+    }),
   };
 
   state = {loading: true, errors: null};
@@ -19,14 +19,12 @@ export class ResultsLoader extends React.Component {
   }
 
   load() {
-    const url = `/api/v1/pd/workshops/${
-      this.props.params['workshopId']
-    }/generic_survey_report`;
+    const url = `/api/v1/pd/workshops/${this.props.params['workshopId']}/generic_survey_report`;
 
     this.loadRequest = $.ajax({
       method: 'GET',
       url: url,
-      dataType: 'json'
+      dataType: 'json',
     })
       .done(data => {
         this.setState({
@@ -36,13 +34,13 @@ export class ResultsLoader extends React.Component {
           sessions: Object.keys(data['this_workshop']),
           courseName: data['course_name'],
           workshopRollups: data['workshop_rollups'],
-          facilitatorRollups: data['facilitator_rollups']
+          facilitatorRollups: data['facilitator_rollups'],
         });
       })
       .fail(jqXHR => {
         this.setState({
           loading: false,
-          errors: (jqXHR.responseJSON || {}).errors
+          errors: (jqXHR.responseJSON || {}).errors,
         });
       });
   }
@@ -87,12 +85,12 @@ export class ResultsLoader extends React.Component {
 const styles = {
   errorContainer: {
     marginTop: 15,
-    marginLeft: 15
+    marginLeft: 15,
   },
   errorDetailsBox: {
     backgroundColor: color.lightest_gray,
     padding: 20,
     maxWidth: 550,
-    marginTop: 20
-  }
+    marginTop: 20,
+  },
 };

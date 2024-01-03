@@ -3,7 +3,7 @@ import React from 'react';
 import FeaturedProjectsTable from './FeaturedProjectsTable';
 import {
   featuredProjectDataPropType,
-  featuredProjectTableTypes
+  featuredProjectTableTypes,
 } from './projectConstants';
 
 export default class FeaturedProjects extends React.Component {
@@ -11,7 +11,7 @@ export default class FeaturedProjects extends React.Component {
     currentFeaturedProjects: PropTypes.arrayOf(featuredProjectDataPropType)
       .isRequired,
     archivedUnfeaturedProjects: PropTypes.arrayOf(featuredProjectDataPropType)
-      .isRequired
+      .isRequired,
   };
 
   render() {

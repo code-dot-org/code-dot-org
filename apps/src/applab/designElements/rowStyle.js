@@ -13,34 +13,34 @@ export var input = {
   MozBorderRadius: 4,
   borderRadius: 4,
   border: '1px solid ' + color.light_gray,
-  verticalAlign: 'middle'
+  verticalAlign: 'middle',
 };
 
 export var enumInput = {
   marginBottom: 0,
-  border: '1px solid ' + color.light_gray
+  border: '1px solid ' + color.light_gray,
 };
 
 export var container = {
   paddingLeft: 20,
-  marginBottom: 8
+  marginBottom: 8,
 };
 
 export var maxWidth = {
-  maxWidth: 245
+  maxWidth: 245,
 };
 
 export var description = {
-  paddingLeft: 2
+  paddingLeft: 2,
 };
 
 export var checkbox = {
   width: 20,
   height: 20,
   fontSize: 20,
-  paddingLeft: 2
+  paddingLeft: 2,
 };
 
 export var link = {
-  cursor: 'pointer'
+  cursor: 'pointer',
 };

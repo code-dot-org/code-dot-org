@@ -46,3 +46,5 @@ III. `arr[i][0] = ret[i][arr[0].length - 1];`
 
 
 MARKDOWN
+
+allow_multiple_attempts true

@@ -1,5 +1,5 @@
 ---
-title: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code
+title: Vzorec OP-Ed Podpora Teden izobraževanja računalništva in ura kodiranja
 ---
 
 {{ signup_button }}

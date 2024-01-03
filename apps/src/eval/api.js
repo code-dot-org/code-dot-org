@@ -12,7 +12,7 @@ var EvalPolygon = require('./evalPolygon');
 
 // We don't use blockId at all in Eval since everything is evaluated at once.
 
-exports.display = function(object) {
+exports.display = function (object) {
   if (object === undefined) {
     object = '';
   }
@@ -28,52 +28,52 @@ exports.display = function(object) {
   Eval.displayedObject = object;
 };
 
-exports.circle = function(size, style, color) {
+exports.circle = function (size, style, color) {
   return new EvalCircle(size, style, color);
 };
 
-exports.triangle = function(size, style, color) {
+exports.triangle = function (size, style, color) {
   return new EvalTriangle(size, style, color);
 };
 
-exports.overlay = function(top, bottom) {
+exports.overlay = function (top, bottom) {
   return new EvalMulti(top, bottom);
 };
 
-exports.underlay = function(bottom, top) {
+exports.underlay = function (bottom, top) {
   return new EvalMulti(top, bottom);
 };
 
-exports.square = function(size, style, color) {
+exports.square = function (size, style, color) {
   return new EvalRect(size, size, style, color);
 };
 
-exports.rectangle = function(width, height, style, color) {
+exports.rectangle = function (width, height, style, color) {
   return new EvalRect(width, height, style, color);
 };
 
-exports.ellipse = function(width, height, style, color) {
+exports.ellipse = function (width, height, style, color) {
   return new EvalEllipse(width, height, style, color);
 };
 
-exports.text = function(text, fontSize, color) {
+exports.text = function (text, fontSize, color) {
   return new EvalText(text, fontSize, color);
 };
 
-exports.star = function(radius, style, color) {
+exports.star = function (radius, style, color) {
   var innerRadius = ((3 - Math.sqrt(5)) / 2) * radius;
   return new EvalStar(5, innerRadius, radius, style, color);
 };
 
-exports.radialStar = function(points, inner, outer, style, color) {
+exports.radialStar = function (points, inner, outer, style, color) {
   return new EvalStar(points, inner, outer, style, color);
 };
 
-exports.polygon = function(points, length, style, color) {
+exports.polygon = function (points, length, style, color) {
   return new EvalPolygon(points, length, style, color);
 };
 
-exports.placeImage = function(x, y, image) {
+exports.placeImage = function (x, y, image) {
   evalUtils.ensureNumber(x);
   evalUtils.ensureNumber(y);
   evalUtils.ensureType(image, EvalImage);
@@ -91,7 +91,7 @@ exports.placeImage = function(x, y, image) {
   return image;
 };
 
-exports.offset = function(x, y, image) {
+exports.offset = function (x, y, image) {
   evalUtils.ensureNumber(x);
   evalUtils.ensureNumber(y);
   evalUtils.ensureType(image, EvalImage);
@@ -103,19 +103,19 @@ exports.offset = function(x, y, image) {
   return image;
 };
 
-exports.rotateImage = function(degrees, image) {
+exports.rotateImage = function (degrees, image) {
   evalUtils.ensureNumber(degrees);
 
   image.rotate(degrees);
   return image;
 };
 
-exports.scaleImage = function(factor, image) {
+exports.scaleImage = function (factor, image) {
   image.scale(factor, factor);
   return image;
 };
 
-exports.stringAppend = function(first, second) {
+exports.stringAppend = function (first, second) {
   evalUtils.ensureString(first);
   evalUtils.ensureString(second);
 
@@ -123,7 +123,7 @@ exports.stringAppend = function(first, second) {
 };
 
 // polling for values
-exports.stringLength = function(str) {
+exports.stringLength = function (str) {
   evalUtils.ensureString(str);
 
   return str.length;

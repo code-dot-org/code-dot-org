@@ -2,6 +2,9 @@
   "ar-SA": {
     "data": {
       "reference_guides": {
+        "csd-2022/ai-lab": {
+          "display_name": "مختبر الذكاء الاصطناعي"
+        },
         "csd-2022/app-lab": {
           "display_name": "مختبر التطبيق"
         },
@@ -13,6 +16,9 @@
         },
         "csd-2022/board-events": {
           "display_name": "أحداث اللوحة"
+        },
+        "csd-2022/circuit-playground": {
+          "display_name": "نظرة عامة على ملعب الدائرة"
         },
         "csd-2022/classes": {
           "display_name": "الفصول الدراسية"
@@ -47,6 +53,9 @@
         "csd-2022/images-in-html": {
           "display_name": "الصور بصيغة HTML"
         },
+        "csd-2022/introduction-to-ai-lab": {
+          "display_name": "مقدمة لمختبر الذكاء الاصطناعي"
+        },
         "csd-2022/javascript": {
           "display_name": "جافا سكريبت"
         },
@@ -62,6 +71,9 @@
         "csd-2022/maker-toolkit-overview": {
           "display_name": "لمحة عامة"
         },
+        "csd-2022/model-cards-in-ai-lab": {
+          "display_name": "بطاقات نموذجية في مختبر الذكاء الاصطناعي"
+        },
         "csd-2022/multi-screen-apps": {
           "display_name": "التطبيقات متعددة الشاشات"
         },
@@ -74,8 +86,11 @@
         "csd-2022/patterns-overview": {
           "display_name": "لمحة عامة"
         },
-        "csd-2022/physical-input": {
-          "display_name": "المدخلات المادية"
+        "csd-2022/problem-solving-process": {
+          "display_name": "عملية حل المشكلات"
+        },
+        "csd-2022/problem-solving-process-general": {
+          "display_name": "عملية حل المشكلات"
         },
         "csd-2022/sprite-properties": {
           "display_name": "خصائص الكائنات"
@@ -97,6 +112,27 @@
         },
         "csd-2022/which-type-of-chart": {
           "content": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+        },
+        "csd-2022/accuracy-in-ai-lab": {
+          "display_name": "الدقة في مختبر الذكاء الاصطناعي"
+        },
+        "csd-2022/creating-a-survey": {
+          "display_name": "إنشاء استطلاع"
+        },
+        "csd-2022/importing-a-model-in-app-lab": {
+          "display_name": "استيراد نموذج في مختبر التطبيق"
+        },
+        "csd-2022/selecting-a-label": {
+          "display_name": "اختيار تسمية"
+        },
+        "csd-2022/selecting-features": {
+          "display_name": "تحديد الميزات"
+        },
+        "csd-2022/using-data-with-categorical-features": {
+          "display_name": "استخدام البيانات ذات الميزات الفئوية"
+        },
+        "csd-2022/using-data-with-numerical-features": {
+          "display_name": "استخدام البيانات ذات الميزات العددية"
         }
       }
     }

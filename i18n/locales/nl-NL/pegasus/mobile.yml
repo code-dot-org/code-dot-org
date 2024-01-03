@@ -528,13 +528,9 @@
   volunteer_engineer_submission_subtitle_generic: '100.000 leerkrachten geven dit jaar een Uur Code in hun klaslokaal, 7-13 dec 2015. Ze willen jouw hulp! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} leerkrachten zijn op zoek naar vrijwilligers om dit jaar in December te helpen met hun Uur Code.<br>%{num_volunteers} vrijwilligers hebben zich aangemeld. Doe mee!"
   volunteer_engineer_submission_intro_background: "Het Uur Code is een wereldwijde beweging om een uur informatica uit te proberen, met een bereik van tientallen miljoenen leerlingen in meer dan 180 landen. Doe mee tijdens de Computer Science Eductaion Week, 7-13 december."
-  volunteer_engineer_submission_intro_recruit: 'Deze leerkrachten zijn op zoek naa iemand die <span style="font-family: ''Gotham 7r'', sans-serif;">gepassioneerd is over informaticaonderwijs</span> die kan helpen in de klas, of iemand die hun leerlingen kan <span style="font-family: ''Gotham 7r'', sans-serif;">inspireren</span> door ze te vertellen over wat je allemaal kan doen met informatie (dat zou via videochat kunnen). Als je geen vrijwilliger wil worden, <a href="%{url}">lees hier</a> over het organiseren van je eigen Uur Code.'
   volunteer_engineer_submission_intro_recruit_markdown: "Leraren zouden graag iemand hebben die **gepassioneerd is door informaticaonderwijs** die kan helpen in de klas, of voor iemand die **inspireer** hun leerlingen kan door te praten over de brede mogelijkheden met informatica (dat kan via een videochat)."
-  volunteer_engineer_submission_intro_guide: "Lees hier meer over ons <a href=\"%{volunteer_guide}\">vrijwilligersprogramma</a>."
   volunteer_engineer_submission_intro_guide_markdown: "Lees meer over ons [vrijwilligersprogramma hier] (%{volunteer_guide})."
-  volunteer_engineer_submission_intro_signup: "Voer de volgende gegevens in als je een informaticastudent of software ontwikkelaar bent. Velden met een <span class=\"form-required-field\">*</span> zijn verplicht."
   volunteer_engineer_submission_intro_signup_markdown: "Voer de volgende informatie in als u een student informatica of softwareprofessional bent. Je moet minstens 18 jaar oud zijn om je als vrijwilliger aan te melden. Houd er rekening mee dat alle velden die u in dit gedeelte invult, openbaar beschikbaar zijn voor iedereen die naar de [vrijwilligerskaart] (/vrijwilliger/local) kijkt. Velden gemarkeerd met een _*_ zijn verplicht."
-  volunteer_engineer_submission_intro_links: "Ben je op zoek naar vrijwilligers? Vind een vrijwilliger op onze <a href=\"%{volunteer_local}\">kaart</a>."
   volunteer_engineer_submission_intro_links_markdown: "Ben je een leraar die vrijwilligers zoekt? Vind een lokale vrijwilliger op onze [vrijwilligerskaart] (%{volunteer_local})."
   volunteer_engineer_submission_update_information: "Uw gegevens bijwerken"
   volunteer_engineer_submission_header_shared: "Informatie gedeeld met docenten op de vrijwilligerskaart"
@@ -1486,6 +1482,7 @@
   compatibility_hide_this_warning: "Verberg deze waarschuwing"
   compatibility_unsupported_browser: "Uw browser wordt niet ondersteund. Probeer uw browser te upgraden naar <a href='%{supported_browsers_url}', target='_blank'> een van onze ondersteunde browsers</a>. U kunt proberen de pagina te bekijken, maar verwacht problemen met de functionaliteit."
   compatibility_unsupported_browser_markdown: "Uw browser wordt niet ondersteund. Probeer uw browser te upgraden naar <a href='%{supported_browsers_url}', target='_blank'> een van onze ondersteunde browsers</a>. U kunt proberen de pagina te bekijken, maar verwacht problemen met de functionaliteit."
+  hourofcode_shortcode: "Code"
   flappy_shortcode: "flapperen"
   header_home: "Home"
   header_my_dashboard: "Mijn Dashboard"
@@ -1525,6 +1522,7 @@
   header_report_abuse: "Misbruik melden"
   header_legal: "Privacy & juridisch"
   header_legal_privacy: "Privacybeleid"
+  header_legal_cookie_notice: "Cookiebeleid"
   header_legal_tos: "Gebruiksvoorwaarden"
   header_tutorials: "Tutorials"
   header_screen_reader_hamburger: "Menu"
@@ -1630,7 +1628,7 @@
   hoc2018_mc_download_adventurer: "Download de offline versie van Minecraft avonturier."
   hoc2018_mc_educators: "Voor docenten"
   hoc2018_mc_educators_box1_title: "Programmeren met Minecraft"
-  hoc2018_mc_educators_box1_desc: 'Minecraft: Education Edition biedt op standaarden afgestemd curriculum, training en codering in Minecraft.'
+  hoc2018_mc_educators_box1_desc: "Minecraft: Education Edition biedt op standaarden afgestemd curriculum, training en codering in Minecraft."
   hoc2018_mc_educators_box1_button: "Aan de slag"
   hoc2018_mc_educators_box2_title: "Gids voor facilitator downloaden"
   hoc2018_mc_educators_box2_desc: "Deze toolkit helpt je om een Hour of Code te hosten en je studenten te betrekken bij informatica."
@@ -1731,7 +1729,7 @@
   hoc2018_mc_with_microsoft: "In samenwerking met"
   hoc2018_mc_thank_microsoft: "  We danken Microsoft voor het ondersteunen van onze visie en missie om ervoor te zorgen dat elk kind de kans krijgt om informatica te leren en de vaardigheden om te slagen in de 21e eeuw.  "
   hoc2019_mc_mee_title: "Minecraft AI voorgoed"
-  hoc2019_mc_mee_description1: 'De nieuwe Minecraft Hour of Code-zelfstudie is nu beschikbaar in Minecraft: Education Edition voor Windows, Mac en iPad. Leer de basisprincipes van coderen en verken AI met je studenten!'
+  hoc2019_mc_mee_description1: "De nieuwe Minecraft Hour of Code-zelfstudie is nu beschikbaar in Minecraft: Education Edition voor Windows, Mac en iPad. Leer de basisprincipes van coderen en verken AI met je studenten!"
   hoc2019_mc_mee_description2: "Krijg toegang tot gratis bronnen, waaronder een lesplan, video's, curriculum informatica en lerarentrainingen."
   hoc2019_mc_more_coding_resources: "Meer coderingsbronnen"
   hoc2019_dance_previous_versions: "Op zoek naar een vorige versie van Dance Party?  \nKlik hier om [Deel 1] (%{dance_2018_link}) en [Deel 2] (%{dance_extras_2018_link}) vanaf 2018 te starten."
@@ -1744,15 +1742,15 @@
   page_not_available_description: "Het spijt ons, de door u opgevraagde pagina is niet langer beschikbaar op dit adres. Als je nog steeds toegang nodig hebt, stuur dan een e-mail naar [support@code.org] (%{support_email_link})."
   page_not_available_button: "Terug naar huis"
   hoc2020_mc_available_code_org: "Beschikbaar op Code.org"
-  hoc2020_mc_available_mee: 'Beschikbaar in Minecraft: Education Edition'
+  hoc2020_mc_available_mee: "Beschikbaar in Minecraft: Education Edition"
   hoc2020_mc_mee_title: "Minecraft Tale of Two Villages"
-  hoc2020_mc_mee_description: 'De nieuwe Minecraft Hour of Code-zelfstudie is nu beschikbaar in Minecraft: Education Edition voor Windows, Mac, Chromebook en iPad. Leer de basisprincipes van coderen en ontdek diversiteit en inclusie met je studenten! Krijg toegang tot gratis bronnen, waaronder een lesplan, video''s, curriculum informatica, equity-lessen en lerarentrainingen.'
+  hoc2020_mc_mee_description: "De nieuwe Minecraft Hour of Code-zelfstudie is nu beschikbaar in Minecraft: Education Edition voor Windows, Mac, Chromebook en iPad. Leer de basisprincipes van coderen en ontdek diversiteit en inclusie met je studenten! Krijg toegang tot gratis bronnen, waaronder een lesplan, video's, curriculum informatica, equity-lessen en lerarentrainingen."
   hoc2021_mc_mee_title: "Minecraft TimeCraft"
-  hoc2021_mc_mee_description: 'Reis terug in de tijd en leer coderen! De nieuwe Minecraft Hour of Code-tutorial is nu beschikbaar in Minecraft: Education Edition voor Windows, Mac, Chromebook en iPad. Ga aan de slag met gratis educatieve bronnen, trainingen en video''s.'
+  hoc2021_mc_mee_description: "Reis terug in de tijd en leer coderen! De nieuwe Minecraft Hour of Code-tutorial is nu beschikbaar in Minecraft: Education Edition voor Windows, Mac, Chromebook en iPad. Ga aan de slag met gratis educatieve bronnen, trainingen en video's."
   hoc2021_mc_mee_villages_title: "Verhaal van twee dorpen"
-  hoc2021_mc_mee_villages_description: 'Leer de basisbeginselen van coderen en verken diversiteit en inclusie met je leerlingen in Minecraft: Education Edition.'
+  hoc2021_mc_mee_villages_description: "Leer de basisbeginselen van coderen en verken diversiteit en inclusie met je leerlingen in Minecraft: Education Edition."
   hoc2021_mc_mee_ai_title: "AI voor goed"
-  hoc2021_mc_mee_ai_description: 'Verken AI met je leerlingen en leer coderen in Minecraft: Education Edition.'
+  hoc2021_mc_mee_ai_description: "Verken AI met je leerlingen en leer coderen in Minecraft: Education Edition."
   footer_powered_by_aws: "Aangedreven door Amazon webservices"
   footer_built_on_github: "Gebouwd op GitHub van Microsoft"
   codebytes_skinny_banner_title: "Doe mee met ons op 7-11 december voor onze CodeBytes live minilessen!"
@@ -1801,7 +1799,7 @@
   ai_zooniverse: "Zooniverse - Snapshot Berg Zebra"
   ai_zooniverse_description: "Help de bedreigde Cape Mountain Zebra te beschermen door de verschillende dieren in de afbeeldingen te identificeren."
   ai_audience: "Publiek"
-  ai_minecraft_description: 'Krijg toegang tot gratis bronnen, waaronder een lesplan, video''s, curriculum informatica en lerarentrainingen. (Vereist Minecraft: Education Edition)'
+  ai_minecraft_description: "Krijg toegang tot gratis bronnen, waaronder een lesplan, video's, curriculum informatica en lerarentrainingen. (Vereist Minecraft: Education Edition)"
   ai_k_12_audience: "K-12 (lezen vereist)"
   ai_microsoft_workshop: "Gratis virtuele workshops van Microsoft"
   ai_microsoft_workshop_description: "Wekt nieuwsgierigheid op met gratis STEM- en coderingsworkshops."

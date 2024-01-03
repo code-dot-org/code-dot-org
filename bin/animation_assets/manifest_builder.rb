@@ -19,7 +19,7 @@ SPRITELAB_MANIFEST_PATH = "animation-manifests/manifests/"
 class Hash
   # Like Enumerable::map but returns a Hash instead of an Array
   def hmap(&block)
-    Hash[map {|k, v| yield k, v}]
+    map {|k, v| yield k, v}.to_h
   end
 
   # Drop a key from the hash, returning the hash (destructive)
@@ -40,13 +40,19 @@ class ManifestBuilder
     @warnings = []
   end
 
+  def default_s3_bucket
+    @default_s3_bucket ||= Aws::S3::Bucket.new(DEFAULT_S3_BUCKET)
+  end
+
+  def animation_objects
+    @animation_objects ||= get_animation_objects
+  end
+
   #
   # Main Entry Point
   #
   def rebuild_animation_library_manifest
     # Connect to S3 and get a listing of all objects in the animation library bucket
-    bucket = Aws::S3::Bucket.new(DEFAULT_S3_BUCKET)
-    animation_objects = get_animation_objects(bucket)
     info "Found #{animation_objects.size} animations."
 
     info "Building animation metadata..."
@@ -74,7 +80,7 @@ class ManifestBuilder
         #{dim 'd[ o_0 ]b'}
     EOS
 
-    if @options[:spritelab] && @options[:upload_to_s3]
+    if upload_spritelab_to_s3?
       manifest_filename = generate_spritelab_manifest_filename
       info "Uploading #{manifest_filename} to S3"
       AWS::S3.upload_to_bucket(
@@ -88,8 +94,8 @@ class ManifestBuilder
     end
 
   # Report any issues while talking to S3 and suggest most likely steps for fixing it.
-  rescue Aws::Errors::ServiceError => service_error
-    warn service_error.inspect
+  rescue Aws::Errors::ServiceError => exception
+    warn exception.inspect
     warn <<-EOS.unindent
 
       #{bold 'There was an error talking to S3.'}  Make sure you have credentials set using one of:
@@ -108,8 +114,6 @@ class ManifestBuilder
   #
   def download_entire_animation_library
     # Connect to S3 and get a listing of all objects in the animation library bucket
-    bucket = Aws::S3::Bucket.new(DEFAULT_S3_BUCKET)
-    animation_objects = get_animation_objects(bucket)
     info "Found #{animation_objects.size} animations."
 
     info "Downloading library..."
@@ -142,10 +146,10 @@ class ManifestBuilder
         objects['json'].get(response_target: json_destination)
         verbose "Writing #{png_destination}"
         objects['png'].get(response_target: png_destination)
-      rescue Aws::Errors::ServiceError => service_error
+      rescue Aws::Errors::ServiceError => exception
         next <<~WARN
           There was an error retrieving #{name}.json and #{name}.png from S3:
-          #{service_error}
+          #{exception}
           The animation has been skipped.
         WARN
       end
@@ -163,8 +167,8 @@ class ManifestBuilder
     EOS
 
   # Report any issues while talking to S3 and suggest most likely steps for fixing it.
-  rescue Aws::Errors::ServiceError => service_error
-    warn service_error.inspect
+  rescue Aws::Errors::ServiceError => exception
+    warn exception.inspect
     warn <<-EOS.unindent
 
       #{bold 'There was an error talking to S3.'}  Make sure you have credentials set using one of:
@@ -180,9 +184,6 @@ class ManifestBuilder
   # Returns a map of names and aliases used in animation metadata
   # for translation
   def get_animation_strings
-    bucket = Aws::S3::Bucket.new(DEFAULT_S3_BUCKET)
-    animation_objects = get_animation_objects(bucket)
-
     animation_metadata = build_animation_metadata(animation_objects, read_old_metadata)
     strings = Hash.new
     animation_metadata.each do |_, metadata|
@@ -194,16 +195,17 @@ class ManifestBuilder
     return strings.sort.to_h
   end
 
+  def initial_animation_metadata
+    @initial_animation_metadata ||= build_animation_metadata(animation_objects, {})
+  end
+
   # Takes in a locale (for the file suffix) and a map of string translations
   # and replaces the aliases of the aliases of the animations with their translation.
   # Then, the localized manifest is uploaded to S3 with the suffix .{locale}.json
   def upload_localized_manifest(locale, strings)
-    return unless @options[:spritelab] && @options[:upload_to_s3]
+    return unless upload_spritelab_to_s3?
 
-    @bucket ||= Aws::S3::Bucket.new(DEFAULT_S3_BUCKET)
-    @animation_objects ||= get_animation_objects(@bucket)
-
-    animation_metadata = build_animation_metadata(@animation_objects, {})
+    animation_metadata = initial_animation_metadata.deep_dup
     animation_metadata.each do |_, metadata|
       metadata['aliases'] = metadata['aliases'].map {|aliaz| strings[aliaz]}
       metadata['aliases'].delete_if(&:blank?)
@@ -229,7 +231,7 @@ class ManifestBuilder
 
   # Given an S3 bucket, return map of animation file objects:
   # ret_val['animation_name'] = {'json': JSON file, 'png': PNG file}
-  def get_animation_objects(bucket)
+  def get_animation_objects(bucket = default_s3_bucket)
     animations_by_name = {}
     prefix = @options[:spritelab] ? 'spritelab' : 'gamelab'
     bucket.objects({prefix: prefix}).each do |object_summary|
@@ -321,16 +323,16 @@ class ManifestBuilder
       begin
         json_response = objects['json'].get
         metadata = JSON.parse(json_response.body.read)
-      rescue Aws::Errors::ServiceError => service_error
+      rescue Aws::Errors::ServiceError => exception
         next <<~WARN
           There was an error retrieving #{name}.json from S3:
-          #{service_error}
+          #{exception}
           The animation has been skipped.
         WARN
-      rescue JSON::JSONError => json_error
+      rescue JSON::JSONError => exception
         next <<~WARN
           There was an error parsing #{name}.json:
-          #{json_error}
+          #{exception}
           The animation has been skipped.
         WARN
       end
@@ -353,10 +355,10 @@ class ManifestBuilder
       # consistently reference the version they originally imported.
       begin
         metadata['version'] = objects['png'].object.version_id
-      rescue Aws::Errors::ServiceError => service_error
+      rescue Aws::Errors::ServiceError => exception
         next <<~WARN
           There was an error retrieving the version_id for #{name}.png from S3:
-          #{service_error}
+          #{exception}
           The animation has been skipped.
         WARN
       end
@@ -454,5 +456,9 @@ class ManifestBuilder
 
   def warn(s)
     puts(s)
+  end
+
+  def upload_spritelab_to_s3?
+    @options[:spritelab] && @options[:upload_to_s3]
   end
 end

@@ -11,13 +11,14 @@ import i18n from '@cdo/locale';
 import {
   lessonIsVisible,
   lessonIsLockedForUser,
-  lessonIsLockedForAllStudents
+  lessonIsLockedForAllStudents,
 } from './progressHelpers';
 import ProgressLessonTeacherInfo from './ProgressLessonTeacherInfo';
 import FocusAreaIndicator from './FocusAreaIndicator';
 import ReactTooltip from 'react-tooltip';
 import _ from 'lodash';
 import Button from '../Button';
+import fontConstants from '@cdo/apps/fontConstants';
 
 class ProgressLesson extends React.Component {
   static propTypes = {
@@ -37,7 +38,7 @@ class ProgressLesson extends React.Component {
     isLockedForAllStudents: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool,
     isMiniView: PropTypes.bool,
-    lockStatusLoaded: PropTypes.bool.isRequired
+    lockStatusLoaded: PropTypes.bool.isRequired,
   };
 
   constructor(props) {
@@ -47,7 +48,7 @@ class ProgressLesson extends React.Component {
       // collapse everything except current lesson
       collapsed:
         props.viewAs !== ViewType.Instructor &&
-        props.currentLessonId !== props.lesson.id
+        props.currentLessonId !== props.lesson.id,
     };
   }
 
@@ -57,14 +58,14 @@ class ProgressLesson extends React.Component {
       this.setState({
         collapsed:
           this.state.collapsed &&
-          nextProps.currentLessonId !== this.props.lesson.id
+          nextProps.currentLessonId !== this.props.lesson.id,
       });
     }
   }
 
   toggleCollapsed = () =>
     this.setState({
-      collapsed: !this.state.collapsed
+      collapsed: !this.state.collapsed,
     });
 
   onClickStudentLessonPlan = () => {
@@ -75,8 +76,8 @@ class ProgressLesson extends React.Component {
         event: 'open_student_lesson_plan',
         data_json: JSON.stringify({
           lesson_id: this.props.lesson.id,
-          script_id: this.props.scriptId
-        })
+          script_id: this.props.scriptId,
+        }),
       },
       {includeUserId: true}
     );
@@ -92,7 +93,7 @@ class ProgressLesson extends React.Component {
       isLockedForUser,
       isLockedForAllStudents,
       selectedSectionId,
-      isRtl
+      isRtl,
     } = this.props;
 
     if (!isVisible) {
@@ -104,7 +105,7 @@ class ProgressLesson extends React.Component {
     const title = lesson.lessonNumber
       ? i18n.lessonNumbered({
           lessonNumber: lesson.lessonNumber,
-          lessonName: lesson.name
+          lessonName: lesson.name,
         })
       : lesson.name;
 
@@ -140,7 +141,7 @@ class ProgressLesson extends React.Component {
         className="uitest-progress-lesson"
         style={{
           ...styles.outer,
-          ...((hiddenForStudents || showAsLocked) && styles.hiddenOrLocked)
+          ...((hiddenForStudents || showAsLocked) && styles.hiddenOrLocked),
         }}
       >
         <div
@@ -148,16 +149,28 @@ class ProgressLesson extends React.Component {
             ...styles.main,
             ...(((hiddenForStudents && viewAs === ViewType.Participant) ||
               isLockedForUser) &&
-              styles.translucent)
+              styles.translucent),
           }}
         >
           <div
             style={{
               ...styles.heading,
-              ...{marginBottom: this.state.collapsed ? 0 : 15}
+              ...{marginBottom: this.state.collapsed ? 0 : 15},
             }}
           >
-            <div style={styles.headingText} onClick={this.toggleCollapsed}>
+            <div
+              style={styles.headingText}
+              onClick={this.toggleCollapsed}
+              tabIndex="0"
+              role="button"
+              onKeyDown={e => {
+                if ([' ', 'Enter', 'Spacebar'].includes(e.key)) {
+                  e.preventDefault();
+                  this.toggleCollapsed();
+                }
+              }}
+              aria-expanded={!this.state.collapsed}
+            >
               <FontAwesome icon={caret} style={caretStyle} />
               {hiddenForStudents && (
                 <FontAwesome icon="eye-slash" style={styles.icon} />
@@ -168,7 +181,7 @@ class ProgressLesson extends React.Component {
                     icon={showAsLocked ? 'lock' : 'unlock'}
                     style={{
                       ...styles.icon,
-                      ...(!showAsLocked && styles.unlockedIcon)
+                      ...(!showAsLocked && styles.unlockedIcon),
                     }}
                   />
                   {!showAsLocked && viewAs === ViewType.Instructor && (
@@ -252,23 +265,23 @@ const styles = {
     marginTop: 3,
     marginBottom: 15,
     marginLeft: 3,
-    marginRight: 3
+    marginRight: 3,
   },
   main: {
-    padding: 20
+    padding: 20,
   },
   heading: {
     fontSize: 18,
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   headingText: {
     cursor: 'pointer',
-    flexGrow: 1
+    flexGrow: 1,
   },
   buttonStyle: {
-    marginLeft: 'auto'
+    marginLeft: 'auto',
   },
   hiddenOrLocked: {
     borderStyle: 'dashed',
@@ -276,34 +289,33 @@ const styles = {
     marginTop: 0,
     marginBottom: 12,
     marginLeft: 0,
-    marginRight: 0
+    marginRight: 0,
   },
   translucent: {
-    opacity: 0.6
+    opacity: 0.6,
   },
   caret: {
-    marginRight: 10
+    marginRight: 10,
   },
   caretRTL: {
-    marginLeft: 10
+    marginLeft: 10,
   },
   icon: {
     marginRight: 5,
     fontSize: 18,
-    color: color.cyan
+    color: color.cyan,
   },
   unlockedIcon: {
-    color: color.orange
+    color: color.orange,
   },
   notAuthorizedWarning: {
     color: color.red,
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontStyle: 'italic',
-    marginTop: 10
+    ...fontConstants['main-font-semi-bold-italic'],
+    marginTop: 10,
   },
   learnMoreLink: {
-    marginLeft: 5
-  }
+    marginLeft: 5,
+  },
 };
 
 export const UnconnectedProgressLesson = ProgressLesson;
@@ -335,5 +347,5 @@ export default connect((state, ownProps) => ({
   isMiniView: state.progress.isMiniView,
   lockStatusLoaded:
     state.progress.unitProgressHasLoaded &&
-    state.lessonLock.lessonsBySectionIdLoaded
+    state.lessonLock.lessonsBySectionIdLoaded,
 }))(ProgressLesson);

@@ -70,6 +70,7 @@ mn:
           description_short: Энэхүү 20 цагийн сургалт нь 2-4 курсийн компьютерийн шинжлэх ухаан ба програмчлалын үндсэн ойлголтуудыг хамардаг.
           description_audience: 10-18 насныхан
           student_description: Энэхүү 20 цагийн сургалт нь 2-4 курсийн компьютерийн шинжлэх ухаан ба програмчлалын үндсэн ойлголтуудыг хамардаг. Энэ курс нь 10-18 насныханд зориулагдсан. Илүү сайн туршлага авахын тулд 2-4 курсүүдийг шалгаарай!
+          name: 20 цаг
         events:
           title: Үйл явдлууд
           description: Үйл явдлууд
@@ -97,6 +98,10 @@ mn:
           student_description: Ууртай шувуу, Ургамал ба Зомбигоос сонгосон дүрээр компьютерын шинжлэх ухааны үндсийг оролдоорой!
         text-compression:
           title: Текстийн шахалт
+        allthethings:
+          lessons:
+            lesson-49:
+              name: Хөгжим
         K5-OnlinePD:
           description: Code.org-ийн Компьютерийн шинжлэх ухааны үндсийг ашиглан энэхүү үнэгүй онлайн хичээлийг ашиглан компьютерийн шинжлэх ухааныг заах талаар сурч аваарай.
           description_short: Code.org-ийн Компьютерийн шинжлэх ухааны үндсийг ашиглан энэхүү үнэгүй онлайн хичээлийг ашиглан компьютерийн шинжлэх ухааныг заах талаар сурч аваарай.
@@ -111,6 +116,8 @@ mn:
           student_description: Vigenere шифрлэх багаж ашиглаж Vigenere шифрээр мессеж шифрлэж, шифр тайлалтыг судлах.
         frequency_analysis:
           description_short: Текст доторх үсгийн давтамжийг хүлээгдэж буй давтамжтай харьцуулан дүн шинжилгээ хийх багажийг ашиглаарай. Шифтийг эвдэж орлуулах шифр.
+        cspunit4draft:
+          description_short: Өгөгдөл
         Special Fun:
           description_audience: 10-18 насныхан
         SpecialSeries:
@@ -126,6 +133,7 @@ mn:
           description_short: Гамболл тоглоомын лаборатори дээр түүх бүтээж, тоглоом хийе!
           student_description: Гамболл тоглоомын лаборатори дээр түүх бүтээж, тоглоом хийе!
         starwars:
+          title: 'Оддын дайн: Галаксиг кодоор бүтээх (JavaScript)'
           description: Дройд програмыг сурч, алс холын галактикт өөрийн Оддын дайны тоглоомыг зохиоорой.
           description_short: Дройд програмыг сурч, алс холын галактикт өөрийн Оддын дайны тоглоомыг зохиоорой.
           student_description: Дройд програмыг сурч, алс холын галактикт өөрийн Оддын дайны тоглоомыг зохиоорой.
@@ -134,7 +142,7 @@ mn:
           description_short: Дройд програмыг сурч, алс холын галактикт өөрийн Оддын дайны тоглоомыг зохиоорой.
           student_description: Дройд програмыг сурч, алс холын галактикт өөрийн Оддын дайны тоглоомыг зохиоорой.
         mc:
-          title: Майнкрафт Кодын цаг
+          title: Minecraft адал явдал эрэгч
           description: Энэхүү Minecraft ертөнцөөр дамжуулан Стив эсвэл Алексийг адал явдалд оруулахын тулд кодын блокуудыг ашиглаарай.
           description_short: Кодоор дамжуулж Майнкрафтын ертөнцийг нээгээрэй.
           student_description: Энэхүү Minecraft ертөнцөөр дамжуулан Стив эсвэл Алексийг адал явдалд оруулахын тулд кодын блокуудыг ашиглаарай.
@@ -224,6 +232,8 @@ mn:
           description_short: Энэхүү олон сонголтот үнэлгээ нь компьютерийн шинжлэх ухааны 7 том санаа бодлыг хамарсан асуултуудыг хамардаг. Энэ нь 2 хэсэгт 50-аас дээш асуулт бүхий шалгалтын 1-р хэсэг юм.
         cspexam2-AKwgAh1ac5:
           description_short: Энэхүү олон сонголтот үнэлгээ нь компьютерийн шинжлэх ухааны 7 том санаа бодлыг хамарсан асуултуудыг хамардаг. Энэ нь 2 хэсэгт 50-аас дээш асуулт бүхий шалгалтын 2-р хэсэг юм.
+        CSDU5-Draft:
+          description_short: Өгөгдөл
         CSF_Secret_Sample_Story:
           description_audience: 8-18 насныхан+
         MikeTest:
@@ -349,6 +359,7 @@ mn:
           description_short: Спортуудыг холих, тохируулах
           description: Спортуудыг холих, тохируулах
           student_description: Спортуудыг холих, тохируулах
+          name: спорт
         csp3-support:
           description_short: CSP Нэгж 3-д зориулсан багшийн мэргэжлийн сургалт
           lesson_groups:
@@ -780,6 +791,7 @@ mn:
           description_short: Minecraft нь Кодын цагийн цоо шинэ үйл ажиллагаатай буцаж ирлээ!
           description: Minecraft нь цоо шинэ үйл ажиллагаагаар Кодын цагт буцаж ирлээ! Код бүхий Minecraft-аар аялах.
           student_description: Minecraft нь цоо шинэ үйл ажиллагаагаар Кодын цагт буцаж ирлээ! Код бүхий Minecraft-аар аялах.
+          name: баатар
         applab-intro-staging:
           title: Апп Лаб-н тайзны танилцуулга
         csp-explore-2017:
@@ -1277,6 +1289,7 @@ mn:
           description_short: Кэти Перри, Мадонна, Ж. Балвин, Сиа, Кэйт Урбан, Сиара, бусад 25-ыг онцолж байна!
           description: Найзуудтайгаа хуваалцахын тулд өөрийн бүжгийн үдэшлэгийг кодчилоорой!
           student_description: Найзуудтайгаа хуваалцахын тулд өөрийн бүжгийн үдэшлэгийг кодчилоорой!
+          name: бүжгийн
         frozen-2018-test-b:
           title: Frozen-н шинэ скрипт
         aquatic:
@@ -1284,6 +1297,7 @@ mn:
           description_short: Усны доорх ертөнцийг хайж олох, бүтээхэд өөрийн бүтээлч байдал, асуудлыг шийдвэрлэх чадвараа ашиглана уу!
           description: Minecraft нь цоо шинэ үйл ажиллагаагаар эргэж ирлээ! Усны доорх ертөнцийг хайж олох, бүтээхэд өөрийн бүтээлч байдал, асуудлыг шийдвэрлэх чадвараа ашиглана уу.
           student_description: Minecraft нь цоо шинэ үйл ажиллагаагаар эргэж ирлээ! Усны доорх ертөнцийг хайж олох, бүтээхэд өөрийн бүтээлч байдал, асуудлыг шийдвэрлэх чадвараа ашиглана уу.
+          name: усны
         sconyers:
           title: Трэйсийн тоглоомын талбай
         dance-draft:
@@ -1314,6 +1328,8 @@ mn:
               display_name: Босгох
             csf_variables:
               display_name: Хувьсагчууд
+            csf_data:
+              display_name: Өгөгдөл
             csf_for_loops:
               display_name: Гогцоонд зориулав
             csf_internet:
@@ -1426,6 +1442,8 @@ mn:
               display_name: Гогцоонууд
             csf_events:
               display_name: Үйл явдлууд
+            csf_data:
+              display_name: Өгөгдөл
           student_description: Дараалал, гогцоо, үйл явдал бүхий програмууд үүсгэ. Эх үсгээ хоёртын хэл рүү орчуулж, асуудлыг шийдэх өөр арга техникийг судалж, кибер дайралтад хэрхэн хариу үйлдэл үзүүлэхээ сур. Хичээлийн төгсгөлд та өөрийнхөө хуваалцаж болох өөрийн гэсэн тоглоом эсвэл түүхийг бий болго!
         csp-mid-survey:
           title: CSР сурагчийн жилийн дундуурх судалгаа
@@ -2233,6 +2251,8 @@ mn:
               display_name: Гогцоонууд
             csf_events:
               display_name: Үйл явдлууд
+            csf_data:
+              display_name: Өгөгдөл
           student_description: Дараалал, гогцоо, үйл явдал бүхий програмууд үүсгэ. Эх үсгээ хоёртын хэл рүү орчуулж, асуудлыг шийдэх өөр арга техникийг судалж, кибер дайралтад хэрхэн хариу үйлдэл үзүүлэхээ сур. Хичээлийн төгсгөлд та өөрийнхөө хуваалцаж болох өөрийн гэсэн тоглоом эсвэл түүхийг бий болго!
         coursed-2020:
           title: Хичээл D (2019)
@@ -2284,6 +2304,8 @@ mn:
               display_name: Дижитал иргэншил
             csf_variables:
               display_name: Хувьсагчууд
+            csf_data:
+              display_name: Өгөгдөл
             csf_for_loops:
               display_name: Гогцоонд зориулав
             csf_sprites:
@@ -2569,6 +2591,8 @@ mn:
               display_name: Гогцоонууд
             csf_events:
               display_name: Үйл явдлууд
+            csf_data:
+              display_name: Өгөгдөл
           student_description: Дараалал, гогцоо, үйл явдал бүхий програмууд үүсгэ. Эх үсгээ хоёртын хэл рүү орчуулж, асуудлыг шийдэх өөр арга техникийг судалж, кибер дайралтад хэрхэн хариу үйлдэл үзүүлэхээ сур. Хичээлийн төгсгөлд та өөрийнхөө хуваалцаж болох өөрийн гэсэн тоглоом эсвэл түүхийг бий болго!
         coursed-2021:
           title: Хичээл D (2021)
@@ -2779,6 +2803,8 @@ mn:
               display_name: Хичээлүүд
             lessonGroup-3:
               display_name: Төсөл
+        dance-unplugged:
+          title: Бүжгийн үдэшлэгийг салгав
         spelling-bee:
           title: Зөв бичих дүрэм заах зөгий
         csd-post-survey-2021:
@@ -2885,6 +2911,8 @@ mn:
               display_name: Гогцоонууд
             csf_events:
               display_name: Үйл явдлууд
+            csf_data:
+              display_name: Өгөгдөл
           student_description: Дараалал, гогцоо, үйл явдал бүхий програмууд үүсгэ. Эх үсгээ хоёртын хэл рүү орчуулж, асуудлыг шийдэх өөр арга техникийг судалж, кибер дайралтад хэрхэн хариу үйлдэл үзүүлэхээ сур. Хичээлийн төгсгөлд та өөрийнхөө хуваалцаж болох өөрийн гэсэн тоглоом эсвэл түүхийг бий болго!
           description_short: Компьютерийн шинжлэх ухааны үндсийг мэдэж, өөрийн урлаг, түүх, тоглоом зохиох.
           description_audience: 6-10 насныхан
@@ -3069,6 +3097,8 @@ mn:
               display_name: Судалгаа
         csa1-2023:
           lessons:
+            lesson-2:
+              name: Жава Лаб
             lesson-6:
               name: Гогцоонууд
           lesson_groups:
@@ -3080,29 +3110,57 @@ mn:
               name: Хувьсагчууд
         csa3-2023:
           lessons:
+            lesson-1:
+              name: Нэг хэмжээст (1D) массивууд
             lesson-3:
               name: Гогцоонд зориулав
+        csa7-2023:
+          lessons:
+            lesson-6:
+              name: Оюуны өмч
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Судалгаа
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '1-р бүлэг: Асуудал шийдэх үйл явц'
+            lessonGroup-3:
+              display_name: '2-р бүлэг: Компьютер ба асуудал шийдэх'
+            lessonGroup-5:
+              display_name: Судалгаа
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: '1-р бүлэг: Хэрэглэгч төвтэй дизайн'
             lessonGroup-3:
               display_name: '2-р бүлэг: Программын ноорог'
-          title: Дизайны үйл явц
+          student_description: Нэгж 4 нь тооцооллын нийгмийн өргөн нөлөөг танилцуулдаг. Хэд хэдэн дизайны сорилтыг даван туулснаар аливаа асуудлын шийдлийг боловсруулж байхдаа бусдын хэрэгцээг хэрхэн илүү сайн ойлгох талаар суралцах болно. Хэсгийн хоёрдугаар хагас нь давтагдсан багийн төслөөс бүрдэх бөгөөд багуудын үеэр тэдний анхаарах хэрэгцээ, прототипийн шийдлүүдийг цаасан дээр болон App Lab-д тодорхойлох, бодит хэрэглэгчидтэй туршилтын шийдлүүдийг санал авах, цааш нь жолоодох боломжтой болно.
         csd5-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: '1-р бүлэг: Мэдээллийг төлөөлөх'
             lessonGroup-3:
               display_name: '2-р бүлэг: Өгөгдлийн асуудлыг шийдэх'
+          description_short: Хүмүүс өгөгдлийн асуудлыг шийдвэрлэхэд компьютер хэрхэн ашигладаг талаар олж мэдээрэй.
+          student_description: 5-р нэгж нь асуудлыг шийдвэрлэхэд өгөгдлийн ач холбогдлын талаар өгүүлж, компьютерууд энэ үйл явцад хэрхэн тусалж болохыг тодруулж өгдөг. Эхний бүлэгт компьютерт мэдээллийг илэрхийлэхэд ашигладаг өөр өөр системүүд, тэдгээрийг ашиглахад тулгарч буй бэрхшээл, арилжааллын талаар авч үзсэн болно. Хоёрдахь бүлэгт та хэрхэн мэдээлэл цуглуулах асуудлыг шийдвэрлэхэд ашигладаг, компьютерууд энэ үйл явцыг хэрхэн яаж автоматжуулахад тусалдаг болохыг олж мэдэх болно. Бүлэг нь өгөгдлийн асуудлыг шийдвэрлэх үйл явцыг таны сонгосон хэсэгт хэрхэн хэрэгжүүлж болох талаар авч үзсэнээр дуусдаг.
         csd3-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: '1-р бүлэг: Зураг ба анимэйшн'
             lessonGroup-3:
               display_name: '2-р бүлэг: Барилгын тоглоом'
+          student_description: " 3-р нэгж дээр та Тоглоомын лабораторид анимейшн, интерактив урлаг, тоглоом програмчлах замаар өөрийн кодчилох туршлага дээр үндэслэх болно. Энэ нэгж нь энгийн хэлбэрээс эхэлж, илүү боловсронгуй шидтэний тоглоом дээр суурилдаг бөгөөд ижил төстэй програмчлалын үзэл баримтлал, компьютерийн эрдэмтэд өдөр бүр ашигладаг дизайны процессыг ашигладаг. Төгсгөлийн төсөлд та хувийн байдлаар интерактив хөтөлбөр боловсруулах болно."
         csd6-2023:
-          title: Биет тооцоолол
+          lesson_groups:
+            lessonGroup-3:
+              display_name: '2-р бүлэг: Биет ноорог үүсгэх'
+          description_short: Биет төхөөрөмжөөр програмчилж сур.
+        csd7-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Апп Лаб-н танилцуулга
         physcomp-temp:
           lesson_groups:
             lessonGroup-3:
@@ -3129,6 +3187,8 @@ mn:
               display_name: Төсөл
         csp5-2023:
           lesson_groups:
+            csp_lists:
+              display_name: Өгөгдөл
             csp_loops:
               display_name: Гогцоонууд
             csp_traversals:
@@ -3175,6 +3235,10 @@ mn:
               display_name: Хичээлийн дараах судалгаа
         csp-post-survey-2023:
           title: КШУ-ны зарчмууд Хичээлийн дараах судалгаа
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Үнэлгээ
         csp-playground:
           title: CSP тоглоомын талбай
         devices-2022:
@@ -3193,3 +3257,647 @@ mn:
               display_name: Апп Лаб-н танилцуулга
             lessonGroup-3:
               display_name: Оролт ба гаралт
+        pre-express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Дараалуулах
+            csf_loops:
+              display_name: Гогцоонууд
+            csf_events:
+              display_name: Үйл явдлууд
+          description_short: 'Урьдчилан уншигчдад зориулсан компьютерийн шинжлэх ухааны танилцуулга: манай цэцэрлэгийн шилдэг анги болон нэгдүгээр ангийн сургалтуудыг нэгтгэдэг.'
+          description_audience: 4-8 насныхан
+        express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Дараалуулах
+            csf_sprites:
+              display_name: Шидтэнгүүд
+            lessonGroup-9:
+              display_name: Үйл явдлууд
+            csf_loops:
+              display_name: Гогцоонууд
+            csf_conditionals:
+              display_name: Нөхцлүүд
+            csf_functions:
+              display_name: Функцүүд
+            csf_variables:
+              display_name: Хувьсагчууд
+            csf_for_loops:
+              display_name: Гогцоонд зориулав
+          description_short: 'Компьютерийн шинжлэх ухааны танилцуулга: ахлах ангийн сурагчдад зориулсан манай сургуулийн хамгийн сайн сургалтын хөтөлбөрийг нэгтгэдэг.'
+          description_audience: 9-18 насныхан
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Дижитал иргэншил
+            csf_sequencing:
+              display_name: Дараалуулах
+            csf_loops:
+              display_name: Гогцоонууд
+            csf_events:
+              display_name: Үйл явдлууд
+          student_description: Компьютерийн шинжлэх ухаан, интернетийн аюулгүй байдлын үндсийг мэдэж аваарай. Хичээлийн төгсгөлд та өөрийнхөө хуваалцаж болох өөрийн гэсэн тоглоом эсвэл түүхийг бий болго.
+          description_short: Анхлан сурагчдын компьютерын шинжлэх ухааны танилцуулга.
+          description_audience: 4-7 насныхан
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Дижитал иргэншил
+            csf_sequencing:
+              display_name: Дараалуулах
+            csf_loops:
+              display_name: Гогцоонууд
+            csf_impacts:
+              display_name: Тооцооллын нөлөө
+            csf_events:
+              display_name: Үйл явдлууд
+          student_description: Компьютерийн шинжлэх ухаан, интернетийн аюулгүй байдлын үндсийг мэдэж аваарай. Хичээлийн төгсгөлд та өөрийнхөө хуваалцаж болох өөрийн гэсэн тоглоом эсвэл түүхийг бий болго.
+          description_short: Урьдчилан уншигчдад зориулсан компьютерийн шинжлэх ухааны танилцуулга. Курс А-тай адилхан боловч нэмэлт ойлголтын гүнтэй.
+          description_audience: 5-8 насныхан
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Дижитал иргэншил
+            csf_sequencing:
+              display_name: Дараалуулах
+            csf_loops:
+              display_name: Гогцоонууд
+            csf_events:
+              display_name: Үйл явдлууд
+            csf_data:
+              display_name: Өгөгдөл
+          student_description: Дараалал, гогцоо, үйл явдал бүхий програмууд үүсгэ. Эх үсгээ хоёртын хэл рүү орчуулж, асуудлыг шийдэх өөр арга техникийг судалж, кибер дайралтад хэрхэн хариу үйлдэл үзүүлэхээ сур. Хичээлийн төгсгөлд та өөрийнхөө хуваалцаж болох өөрийн гэсэн тоглоом эсвэл түүхийг бий болго!
+          description_short: Компьютерийн шинжлэх ухааны үндсийг мэдэж, өөрийн урлаг, түүх, тоглоом зохиох.
+          description_audience: 6-10 насныхан
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Дижитал иргэншил
+            csf_sequencing:
+              display_name: Дараалуулах
+            csf_events:
+              display_name: Үйл явдлууд
+            csf_loops:
+              display_name: Гогцоонууд
+            csf_conditionals:
+              display_name: Нөхцлүүд
+          title: Хичээл D (2021)
+          description_short: Нөхцөлт мэдэгдлийн талаар мэдэж аваарай. Өөрийн урлаг, тоглоом, тэр ч байтугай бүжгийн үдэшлэг зохио.
+          description_audience: 7-11 насныхан
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Дижитал иргэншил
+            csf_sprites:
+              display_name: Шидтэнгүүд
+            ramp_up:
+              display_name: Сараалжсан гогцоо
+            csf_functions:
+              display_name: Функцүүд
+            csf_nested_loops:
+              display_name: Нөхцлүүд
+            lessonGroup-7:
+              display_name: Тооцооллын нөлөө
+          description_audience: 8-12 насныхан
+        problem-solving-computing-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '1-р бүлэг: Асуудал шийдэх үйл явц'
+            lessonGroup-3:
+              display_name: '2-р бүлэг: Компьютер ба асуудал шийдэх'
+        web-development-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Судалгаа
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '1-р бүлэг: Зураг ба анимэйшн'
+            lessonGroup-3:
+              display_name: '2-р бүлэг: Барилгын тоглоом'
+            lessonGroup-4:
+              display_name: Судалгаа
+          student_description: " 3-р нэгж дээр та Тоглоомын лабораторид анимейшн, интерактив урлаг, тоглоом програмчлах замаар өөрийн кодчилох туршлага дээр үндэслэх болно. Энэ нэгж нь энгийн хэлбэрээс эхэлж, илүү боловсронгуй шидтэний тоглоом дээр суурилдаг бөгөөд ижил төстэй програмчлалын үзэл баримтлал, компьютерийн эрдэмтэд өдөр бүр ашигладаг дизайны процессыг ашигладаг. Төгсгөлийн төсөлд та хувийн байдлаар интерактив хөтөлбөр боловсруулах болно."
+        design-process-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '1-р бүлэг: Хэрэглэгч төвтэй дизайн'
+            lessonGroup-3:
+              display_name: '2-р бүлэг: Программын ноорог'
+            lessonGroup-4:
+              display_name: Судалгаа
+          student_description: Нэгж 4 нь тооцооллын нийгмийн өргөн нөлөөг танилцуулдаг. Хэд хэдэн дизайны сорилтыг даван туулснаар аливаа асуудлын шийдлийг боловсруулж байхдаа бусдын хэрэгцээг хэрхэн илүү сайн ойлгох талаар суралцах болно. Хэсгийн хоёрдугаар хагас нь давтагдсан багийн төслөөс бүрдэх бөгөөд багуудын үеэр тэдний анхаарах хэрэгцээ, прототипийн шийдлүүдийг цаасан дээр болон App Lab-д тодорхойлох, бодит хэрэглэгчидтэй туршилтын шийдлүүдийг санал авах, цааш нь жолоодох боломжтой болно.
+        data-society-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '1-р бүлэг: Мэдээллийг төлөөлөх'
+            lessonGroup-3:
+              display_name: '2-р бүлэг: Өгөгдлийн асуудлыг шийдэх'
+            lessonGroup-4:
+              display_name: Судалгаа
+          description_short: Хүмүүс өгөгдлийн асуудлыг шийдвэрлэхэд компьютер хэрхэн ашигладаг талаар олж мэдээрэй.
+          student_description: 5-р нэгж нь асуудлыг шийдвэрлэхэд өгөгдлийн ач холбогдлын талаар өгүүлж, компьютерууд энэ үйл явцад хэрхэн тусалж болохыг тодруулж өгдөг. Эхний бүлэгт компьютерт мэдээллийг илэрхийлэхэд ашигладаг өөр өөр системүүд, тэдгээрийг ашиглахад тулгарч буй бэрхшээл, арилжааллын талаар авч үзсэн болно. Хоёрдахь бүлэгт та хэрхэн мэдээлэл цуглуулах асуудлыг шийдвэрлэхэд ашигладаг, компьютерууд энэ үйл явцыг хэрхэн яаж автоматжуулахад тусалдаг болохыг олж мэдэх болно. Бүлэг нь өгөгдлийн асуудлыг шийдвэрлэх үйл явцыг таны сонгосон хэсэгт хэрхэн хэрэгжүүлж болох талаар авч үзсэнээр дуусдаг.
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Апп Лаб-н танилцуулга
+            lessonGroup-5:
+              display_name: Судалгаа
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '1-р бүлэг: Асуудал шийдэх үйл явц'
+            lessonGroup-4:
+              display_name: Судалгаа
+        focus-on-creativity3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '1-р бүлэг: Зураг ба анимэйшн'
+            lessonGroup-3:
+              display_name: '2-р бүлэг: Барилгын тоглоом'
+          student_description: " 3-р нэгж дээр та Тоглоомын лабораторид анимейшн, интерактив урлаг, тоглоом програмчлах замаар өөрийн кодчилох туршлага дээр үндэслэх болно. Энэ нэгж нь энгийн хэлбэрээс эхэлж, илүү боловсронгуй шидтэний тоглоом дээр суурилдаг бөгөөд ижил төстэй програмчлалын үзэл баримтлал, компьютерийн эрдэмтэд өдөр бүр ашигладаг дизайны процессыг ашигладаг. Төгсгөлийн төсөлд та хувийн байдлаар интерактив хөтөлбөр боловсруулах болно."
+        focus-on-creativity4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: '2-р бүлэг: Биет ноорог үүсгэх'
+          description_short: Биет төхөөрөмжөөр програмчилж сур.
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '1-р бүлэг: Асуудал шийдэх үйл явц'
+            lessonGroup-3:
+              display_name: '2-р бүлэг: Компьютер ба асуудал шийдэх'
+            lessonGroup-5:
+              display_name: Судалгаа
+        focus-on-hardware2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '1-р бүлэг: Мэдээллийг төлөөлөх'
+            lessonGroup-3:
+              display_name: '2-р бүлэг: Өгөгдлийн асуудлыг шийдэх'
+          description_short: Хүмүүс өгөгдлийн асуудлыг шийдвэрлэхэд компьютер хэрхэн ашигладаг талаар олж мэдээрэй.
+          student_description: 5-р нэгж нь асуудлыг шийдвэрлэхэд өгөгдлийн ач холбогдлын талаар өгүүлж, компьютерууд энэ үйл явцад хэрхэн тусалж болохыг тодруулж өгдөг. Эхний бүлэгт компьютерт мэдээллийг илэрхийлэхэд ашигладаг өөр өөр системүүд, тэдгээрийг ашиглахад тулгарч буй бэрхшээл, арилжааллын талаар авч үзсэн болно. Хоёрдахь бүлэгт та хэрхэн мэдээлэл цуглуулах асуудлыг шийдвэрлэхэд ашигладаг, компьютерууд энэ үйл явцыг хэрхэн яаж автоматжуулахад тусалдаг болохыг олж мэдэх болно. Бүлэг нь өгөгдлийн асуудлыг шийдвэрлэх үйл явцыг таны сонгосон хэсэгт хэрхэн хэрэгжүүлж болох талаар авч үзсэнээр дуусдаг.
+        focus-on-hardware3a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: '2-р бүлэг: Биет ноорог үүсгэх'
+          description_short: Биет төхөөрөмжөөр програмчилж сур.
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '1-р бүлэг: Асуудал шийдэх үйл явц'
+            lessonGroup-4:
+              display_name: Судалгаа
+        focus-on-data2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '1-р бүлэг: Мэдээллийг төлөөлөх'
+          description_short: Хүмүүс өгөгдлийн асуудлыг шийдвэрлэхэд компьютер хэрхэн ашигладаг талаар олж мэдээрэй.
+          student_description: 5-р нэгж нь асуудлыг шийдвэрлэхэд өгөгдлийн ач холбогдлын талаар өгүүлж, компьютерууд энэ үйл явцад хэрхэн тусалж болохыг тодруулж өгдөг. Эхний бүлэгт компьютерт мэдээллийг илэрхийлэхэд ашигладаг өөр өөр системүүд, тэдгээрийг ашиглахад тулгарч буй бэрхшээл, арилжааллын талаар авч үзсэн болно. Хоёрдахь бүлэгт та хэрхэн мэдээлэл цуглуулах асуудлыг шийдвэрлэхэд ашигладаг, компьютерууд энэ үйл явцыг хэрхэн яаж автоматжуулахад тусалдаг болохыг олж мэдэх болно. Бүлэг нь өгөгдлийн асуудлыг шийдвэрлэх үйл явцыг таны сонгосон хэсэгт хэрхэн хэрэгжүүлж болох талаар авч үзсэнээр дуусдаг.
+        focus-on-data2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '1-р бүлэг: Мэдээллийг төлөөлөх'
+            lessonGroup-3:
+              display_name: '2-р бүлэг: Өгөгдлийн асуудлыг шийдэх'
+          description_short: Хүмүүс өгөгдлийн асуудлыг шийдвэрлэхэд компьютер хэрхэн ашигладаг талаар олж мэдээрэй.
+          student_description: 5-р нэгж нь асуудлыг шийдвэрлэхэд өгөгдлийн ач холбогдлын талаар өгүүлж, компьютерууд энэ үйл явцад хэрхэн тусалж болохыг тодруулж өгдөг. Эхний бүлэгт компьютерт мэдээллийг илэрхийлэхэд ашигладаг өөр өөр системүүд, тэдгээрийг ашиглахад тулгарч буй бэрхшээл, арилжааллын талаар авч үзсэн болно. Хоёрдахь бүлэгт та хэрхэн мэдээлэл цуглуулах асуудлыг шийдвэрлэхэд ашигладаг, компьютерууд энэ үйл явцыг хэрхэн яаж автоматжуулахад тусалдаг болохыг олж мэдэх болно. Бүлэг нь өгөгдлийн асуудлыг шийдвэрлэх үйл явцыг таны сонгосон хэсэгт хэрхэн хэрэгжүүлж болох талаар авч үзсэнээр дуусдаг.
+        focus-on-data3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Апп Лаб-н танилцуулга
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '1-р бүлэг: Асуудал шийдэх үйл явц'
+            lessonGroup-4:
+              display_name: Судалгаа
+        focus-on-design-with-purpose3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '1-р бүлэг: Хэрэглэгч төвтэй дизайн'
+            lessonGroup-3:
+              display_name: '2-р бүлэг: Программын ноорог'
+          student_description: Нэгж 4 нь тооцооллын нийгмийн өргөн нөлөөг танилцуулдаг. Хэд хэдэн дизайны сорилтыг даван туулснаар аливаа асуудлын шийдлийг боловсруулж байхдаа бусдын хэрэгцээг хэрхэн илүү сайн ойлгох талаар суралцах болно. Хэсгийн хоёрдугаар хагас нь давтагдсан багийн төслөөс бүрдэх бөгөөд багуудын үеэр тэдний анхаарах хэрэгцээ, прототипийн шийдлүүдийг цаасан дээр болон App Lab-д тодорхойлох, бодит хэрэглэгчидтэй туршилтын шийдлүүдийг санал авах, цааш нь жолоодох боломжтой болно.
+        focus-on-design-with-purpose4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: '2-р бүлэг: Биет ноорог үүсгэх'
+          description_short: Биет төхөөрөмжөөр програмчилж сур.
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '1-р бүлэг: Асуудал шийдэх үйл явц'
+            lessonGroup-4:
+              display_name: Судалгаа
+        focus-on-coding3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '1-р бүлэг: Зураг ба анимэйшн'
+            lessonGroup-3:
+              display_name: '2-р бүлэг: Барилгын тоглоом'
+          student_description: " 3-р нэгж дээр та Тоглоомын лабораторид анимейшн, интерактив урлаг, тоглоом програмчлах замаар өөрийн кодчилох туршлага дээр үндэслэх болно. Энэ нэгж нь энгийн хэлбэрээс эхэлж, илүү боловсронгуй шидтэний тоглоом дээр суурилдаг бөгөөд ижил төстэй програмчлалын үзэл баримтлал, компьютерийн эрдэмтэд өдөр бүр ашигладаг дизайны процессыг ашигладаг. Төгсгөлийн төсөлд та хувийн байдлаар интерактив хөтөлбөр боловсруулах болно."
+        focus-on-coding4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: '2-р бүлэг: Биет ноорог үүсгэх'
+          description_short: Биет төхөөрөмжөөр програмчилж сур.
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '1-р бүлэг: Асуудал шийдэх үйл явц'
+            lessonGroup-4:
+              display_name: Судалгаа
+        focus-on-impact-in-society2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '1-р бүлэг: Хэрэглэгч төвтэй дизайн'
+            lessonGroup-3:
+              display_name: '2-р бүлэг: Программын ноорог'
+          student_description: Нэгж 4 нь тооцооллын нийгмийн өргөн нөлөөг танилцуулдаг. Хэд хэдэн дизайны сорилтыг даван туулснаар аливаа асуудлын шийдлийг боловсруулж байхдаа бусдын хэрэгцээг хэрхэн илүү сайн ойлгох талаар суралцах болно. Хэсгийн хоёрдугаар хагас нь давтагдсан багийн төслөөс бүрдэх бөгөөд багуудын үеэр тэдний анхаарах хэрэгцээ, прототипийн шийдлүүдийг цаасан дээр болон App Lab-д тодорхойлох, бодит хэрэглэгчидтэй туршилтын шийдлүүдийг санал авах, цааш нь жолоодох боломжтой болно.
+        focus-on-impact-in-society3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '1-р бүлэг: Мэдээллийг төлөөлөх'
+            lessonGroup-3:
+              display_name: '2-р бүлэг: Өгөгдлийн асуудлыг шийдэх'
+          description_short: Хүмүүс өгөгдлийн асуудлыг шийдвэрлэхэд компьютер хэрхэн ашигладаг талаар олж мэдээрэй.
+          student_description: 5-р нэгж нь асуудлыг шийдвэрлэхэд өгөгдлийн ач холбогдлын талаар өгүүлж, компьютерууд энэ үйл явцад хэрхэн тусалж болохыг тодруулж өгдөг. Эхний бүлэгт компьютерт мэдээллийг илэрхийлэхэд ашигладаг өөр өөр системүүд, тэдгээрийг ашиглахад тулгарч буй бэрхшээл, арилжааллын талаар авч үзсэн болно. Хоёрдахь бүлэгт та хэрхэн мэдээлэл цуглуулах асуудлыг шийдвэрлэхэд ашигладаг, компьютерууд энэ үйл явцыг хэрхэн яаж автоматжуулахад тусалдаг болохыг олж мэдэх болно. Бүлэг нь өгөгдлийн асуудлыг шийдвэрлэх үйл явцыг таны сонгосон хэсэгт хэрхэн хэрэгжүүлж болох талаар авч үзсэнээр дуусдаг.
+        focus-on-impact-in-society4-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Апп Лаб-н танилцуулга
+        csd6a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: '2-р бүлэг: Биет ноорог үүсгэх'
+          description_short: Биет төхөөрөмжөөр програмчилж сур.
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Оролт ба гаралт
+            lessonGroup-5:
+              display_name: Судалгаа
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: '2-р бүлэг: Биет ноорог үүсгэх'
+            lessonGroup-5:
+              display_name: Судалгаа
+        focus-on-creativity4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Оролт ба гаралт
+        focus-on-hardware3b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Оролт ба гаралт
+        focus-on-design-with-purpose4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Оролт ба гаралт
+        focus-on-coding4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Оролт ба гаралт
+        csd6b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Оролт ба гаралт
+        self-paced-pl-csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Мэндчилгээ
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Танилцуулга
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 1-р өдөр
+          title: 1-р өдөр
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Дуусгах
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 2-р өдөр
+          title: 2-р өдөр
+        pl-csd-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 3-р өдөр
+          title: 3-р өдөр
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: Дуусгах
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 4-р өдөр
+          title: 4-р өдөр
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Танилцуулга
+            lesson-12:
+              name: Дуусгах
+          title: 1-р өдөр
+        virtual-pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Дуусгах
+          title: 2-р өдөр
+        virtual-pl-csd-summer-day3:
+          lessons:
+            lesson-12:
+              name: Дуусгах
+          title: 3-р өдөр
+        virtual-pl-csd-summer-day4:
+          lessons:
+            lesson-13:
+              name: Дуусгах
+          title: 4-р өдөр
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: Үнэлгээ
+        csd-post-survey-2023:
+          title: Хичээлийн дараах судалгаа
+        focus-on-data-post-survey-2023:
+          title: Хичээлийн дараах судалгаа
+        focus-on-impact-in-society-post-survey-2023:
+          title: Хичээлийн дараах судалгаа
+        focus-on-coding-post-survey-2023:
+          title: Хичээлийн дараах судалгаа
+        focus-on-design-with-purpose-post-survey-2023:
+          title: Хичээлийн дараах судалгаа
+        focus-on-hardware-post-survey-2023:
+          title: Хичээлийн дараах судалгаа
+        focus-on-creativity-post-survey-2023:
+          title: Хичээлийн дараах судалгаа
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Дижитал иргэншил
+            lessonGroup-3:
+              display_name: Шидтэнгүүд
+            lessonGroup-4:
+              display_name: Хувьсагчууд
+          description_audience: 9-13 насныхан
+          description_short: Компьютерийн шинжлэх ухааны суурь ойлголтуудын талаархи бүх ойлголтыг мэдэж, өөрийн урлагийн бүтээл, түүх, тоглоом зохиогоорой.
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ангиуд
+        csa-frq-practice-2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ангиуд
+        csa-frq-practice-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ангиуд
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Өгөгдөл
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ангиуд
+        csa-frq-practice-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ангиуд
+        csa-frq-practice-pre2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ангиуд
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Дижитал иргэншил
+            lessonGroup-3:
+              display_name: Дараалуулах
+            lessonGroup-4:
+              display_name: Гогцоонууд
+            lessonGroup-5:
+              display_name: Тооцооллын нөлөө
+          description_audience: 4-7 насныхан
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Өгөгдөл
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Дижитал иргэншил
+            lessonGroup-3:
+              display_name: Дараалуулах
+            lessonGroup-4:
+              display_name: Гогцоонууд
+            lessonGroup-5:
+              display_name: Тооцооллын нөлөө
+            lessonGroup-6:
+              display_name: Өгөгдөл
+          description_audience: 4-7 насныхан
+          description_short: Анхлан сурагчдын компьютерын шинжлэх ухааны танилцуулга.
+        nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: Өгөгдөл
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Дижитал иргэншил
+            lessonGroup-3:
+              display_name: Дараалуулах
+            lessonGroup-4:
+              display_name: Гогцоонууд
+            lessonGroup-5:
+              display_name: Тооцооллын нөлөө
+            lessonGroup-6:
+              display_name: Үйл явдлууд
+            lessonGroup-8:
+              display_name: Өгөгдөл
+          description_audience: 5-8 насныхан
+          description_short: Урьдчилан уншигчдад зориулсан компьютерийн шинжлэх ухааны танилцуулга. Курс А-тай адилхан боловч нэмэлт ойлголтын гүнтэй.
+        nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: Тооцооллын систем
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Дижитал иргэншил
+            lessonGroup-3:
+              display_name: Дараалуулах
+            lessonGroup-4:
+              display_name: Гогцоонууд
+            lessonGroup-5:
+              display_name: Үйл явдлууд
+            lessonGroup-6:
+              display_name: Өгөгдөл
+            lessonGroup-8:
+              display_name: Тооцооллын систем
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Дижитал иргэншил
+            lessonGroup-3:
+              display_name: Дараалуулах
+            lessonGroup-4:
+              display_name: Тооцооллын нөлөө
+            lessonGroup-6:
+              display_name: Гогцоонууд
+            lessonGroup-7:
+              display_name: Өгөгдөл
+          description_audience: 7-11 насныхан
+          description_short: Нөхцөлт мэдэгдлийн талаар мэдэж аваарай. Өөрийн урлаг, тоглоом, тэр ч байтугай бүжгийн үдэшлэг зохио.
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Сараалжсан гогцоо
+            lessonGroup-4:
+              display_name: Функцүүд
+          description_audience: 8-12 насныхан
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Шидтэнгүүд
+          description_audience: 9-13 насныхан
+          description_short: Компьютерийн шинжлэх ухааны суурь ойлголтуудын талаархи бүх ойлголтыг мэдэж, өөрийн урлагийн бүтээл, түүх, тоглоом зохиогоорой.
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Шидтэнгүүд
+            lessonGroup-3:
+              display_name: Нөхцлүүд
+            lessonGroup-5:
+              display_name: Хувьсагчууд
+            lessonGroup-6:
+              display_name: Тооцооллын нөлөө
+          description_audience: 9-13 насныхан
+          description_short: Компьютерийн шинжлэх ухааны суурь ойлголтуудын талаархи бүх ойлголтыг мэдэж, өөрийн урлагийн бүтээл, түүх, тоглоом зохиогоорой.
+        vpl-csp-2023-m1:
+          title: Модуль 1
+        vpl-csp-2023-m2:
+          title: Модуль 2
+        vpl-csp-2023-m3:
+          title: Модуль 3
+        vpl-csp-2023-m4:
+          title: Модуль 4
+        vpl-csp-2023-m5:
+          title: Модуль 5
+        vpl-csp-2023-m6:
+          title: Модуль 6
+        vpl-csp-2023-m7:
+          title: Модуль 7
+        vpl-csp-2023-m8:
+          title: Модуль 8
+        vpl-csa-2023-m1:
+          title: Модуль 1
+        vpl-csa-2023-m2:
+          title: Модуль 2
+        vpl-csa-2023-m3:
+          title: Модуль 3
+        vpl-csa-2023-m4:
+          title: Модуль 4
+        vpl-csa-2023-m5:
+          title: Модуль 5
+        vpl-csa-2023-m6:
+          title: Модуль 6
+        vpl-csa-2023-m7:
+          title: Модуль 7
+        vpl-csa-2023-m8:
+          title: Модуль 8
+        vpl-csd-2023-m1:
+          title: Модуль 1
+        vpl-csd-2023-m2:
+          title: Модуль 2
+        vpl-csd-2023-m3:
+          title: Модуль 3
+        vpl-csd-2023-m4:
+          title: Модуль 4
+        vpl-csd-2023-m5:
+          title: Модуль 5
+        vpl-csd-2023-m6:
+          title: Модуль 6
+        vpl-csd-2023-m7:
+          title: Модуль 7
+        vpl-csd-2023-m8:
+          title: Модуль 8
+        virtual-pl-csa-summer-2024-day1:
+          title: 1-р өдөр
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Танилцуулга
+          title: 2-р өдөр
+        virtual-pl-csp-summer-day3:
+          title: 3-р өдөр
+        virtual-pl-csp-summer-day4:
+          title: 4-р өдөр
+        virtual-pl-csa-summer-day2:
+          title: 2-р өдөр
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Танилцуулга
+          title: 3-р өдөр
+        virtual-pl-csa-summer-day4:
+          title: 4-р өдөр
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Танилцуулга
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Танилцуулга
+          title: 1-р өдөр
+        virtual-pl-csp-summer-day1:
+          title: 1-р өдөр
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Судалгаа
+            lessonGroup-2:
+              display_name: '1-р бүлэг: Асуудал шийдэх үйл явц'
+            lessonGroup-3:
+              display_name: '2-р бүлэг: Компьютер ба асуудал шийдэх'
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '1-р бүлэг: Зураг ба анимэйшн'
+            lessonGroup-3:
+              display_name: '2-р бүлэг: Барилгын тоглоом'
+          student_description: " 3-р нэгж дээр та Тоглоомын лабораторид анимейшн, интерактив урлаг, тоглоом програмчлах замаар өөрийн кодчилох туршлага дээр үндэслэх болно. Энэ нэгж нь энгийн хэлбэрээс эхэлж, илүү боловсронгуй шидтэний тоглоом дээр суурилдаг бөгөөд ижил төстэй програмчлалын үзэл баримтлал, компьютерийн эрдэмтэд өдөр бүр ашигладаг дизайны процессыг ашигладаг. Төгсгөлийн төсөлд та хувийн байдлаар интерактив хөтөлбөр боловсруулах болно."
+        csd4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '1-р бүлэг: Хэрэглэгч төвтэй дизайн'
+            lessonGroup-3:
+              display_name: '2-р бүлэг: Программын ноорог'
+          student_description: Нэгж 4 нь тооцооллын нийгмийн өргөн нөлөөг танилцуулдаг. Хэд хэдэн дизайны сорилтыг даван туулснаар аливаа асуудлын шийдлийг боловсруулж байхдаа бусдын хэрэгцээг хэрхэн илүү сайн ойлгох талаар суралцах болно. Хэсгийн хоёрдугаар хагас нь давтагдсан багийн төслөөс бүрдэх бөгөөд багуудын үеэр тэдний анхаарах хэрэгцээ, прототипийн шийдлүүдийг цаасан дээр болон App Lab-д тодорхойлох, бодит хэрэглэгчидтэй туршилтын шийдлүүдийг санал авах, цааш нь жолоодох боломжтой болно.
+        csd5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '1-р бүлэг: Мэдээллийг төлөөлөх'
+            lessonGroup-3:
+              display_name: '2-р бүлэг: Өгөгдлийн асуудлыг шийдэх'
+          student_description: 5-р нэгж нь асуудлыг шийдвэрлэхэд өгөгдлийн ач холбогдлын талаар өгүүлж, компьютерууд энэ үйл явцад хэрхэн тусалж болохыг тодруулж өгдөг. Эхний бүлэгт компьютерт мэдээллийг илэрхийлэхэд ашигладаг өөр өөр системүүд, тэдгээрийг ашиглахад тулгарч буй бэрхшээл, арилжааллын талаар авч үзсэн болно. Хоёрдахь бүлэгт та хэрхэн мэдээлэл цуглуулах асуудлыг шийдвэрлэхэд ашигладаг, компьютерууд энэ үйл явцыг хэрхэн яаж автоматжуулахад тусалдаг болохыг олж мэдэх болно. Бүлэг нь өгөгдлийн асуудлыг шийдвэрлэх үйл явцыг таны сонгосон хэсэгт хэрхэн хэрэгжүүлж болох талаар авч үзсэнээр дуусдаг.
+          description_short: Хүмүүс өгөгдлийн асуудлыг шийдвэрлэхэд компьютер хэрхэн ашигладаг талаар олж мэдээрэй.
+        csd6a-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: '2-р бүлэг: Биет ноорог үүсгэх'
+          description_short: Биет төхөөрөмжөөр програмчилж сур.
+        csd6b-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Оролт ба гаралт
+        csd7-2024:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Апп Лаб-н танилцуулга
+        csd-post-survey-2024:
+          title: Хичээлийн дараах судалгаа

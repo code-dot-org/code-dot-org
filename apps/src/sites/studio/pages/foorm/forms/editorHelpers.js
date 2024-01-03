@@ -3,7 +3,7 @@ import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
 import {
   setQuestions,
   setHasJSONError,
-  setHasLintError
+  setHasLintError,
 } from '@cdo/apps/code-studio/pd/foorm/editor/foormEditorRedux';
 import _ from 'lodash';
 
@@ -32,7 +32,7 @@ export const lintFoormKeys = (text, options, cm) => {
         message: 'Question names should only contain letters and underscores.',
         severity: 'error',
         from: cm.posFromIndex(match.index),
-        to: cm.posFromIndex(match.index + match[0].length)
+        to: cm.posFromIndex(match.index + match[0].length),
       });
     }
   }
@@ -63,7 +63,7 @@ export function populateCodeMirror() {
 
   codeMirror = initializeCodeMirror(codeMirrorArea, 'application/json', {
     callback: _.debounce(onCodeMirrorChange, 250),
-    additionalAnnotations: lintFoormKeys
+    additionalAnnotations: lintFoormKeys,
   });
 }
 

@@ -146,6 +146,21 @@ class SchoolDistrict < ApplicationRecord
           }
         end
       end
+
+      CDO.log.info "Seeding 2021-2022 school district data"
+      import_options_2122 = {col_sep: ",", headers: true, quote_char: "\x00", encoding: 'bom|utf-8'}
+      AWS::S3.seed_from_file('cdo-nces', "2021-2022/ccd/district.csv") do |filename|
+        SchoolDistrict.merge_from_csv(filename, import_options_2122, true, is_dry_run: false, ignore_attributes: ['last_known_school_year_open']) do |row|
+          {
+            id:                           row['Agency ID - NCES Assigned [District] Latest available year'].tr('"=', '').to_i,
+            name:                         row['Agency Name'].upcase,
+            city:                         row['Location City [District] 2021-22'].to_s.upcase.presence,
+            state:                        row['Location State Abbr [District] 2021-22'].strip.to_s.upcase.presence,
+            zip:                          row['Location ZIP [District] 2021-22'].tr('"=', ''),
+            last_known_school_year_open:  OPEN_SCHOOL_STATUSES.include?(row['Updated Status [District] 2021-22']) ? '2021-2022' : nil
+          }
+        end
+      end
     end
   end
 
@@ -160,7 +175,7 @@ class SchoolDistrict < ApplicationRecord
   # @param ignore_attributes [Array] List of attributes included in a given import that should not be used to determine whether a record is being "updated" or "unchanged". Allows us to more clearly identify which schools have real changes to existing data.
   # @param parse_row [Block] A block to parse a row of new data -- see School.seed_from_s3 for examples.
   def self.seed_s3_object(bucket, filepath, import_options, is_dry_run: false, ignore_attributes: [], &parse_row)
-    AWS::S3.seed_from_file(bucket, filepath, is_dry_run) do |filename|
+    AWS::S3.seed_from_file(bucket, filepath, dry_run: is_dry_run) do |filename|
       merge_from_csv(
         filename,
         import_options,
@@ -210,15 +225,15 @@ class SchoolDistrict < ApplicationRecord
       raise "This was a dry run. No rows were modified or added. Set dry_run: false to modify db" if is_dry_run
     ensure
       future_tense_dry_run = is_dry_run ? ' to be' : ''
-      summary_message = "School District seeding: done processing #{filename}.\n"\
-        "#{new_districts.length} new districts#{future_tense_dry_run} added.\n"\
-        "#{updated_districts} districts#{future_tense_dry_run} updated.\n"\
+      summary_message = "School District seeding: done processing #{filename}.\n" \
+        "#{new_districts.length} new districts#{future_tense_dry_run} added.\n" \
+        "#{updated_districts} districts#{future_tense_dry_run} updated.\n" \
         "#{unchanged_districts} districts#{future_tense_dry_run} unchanged (district considered changed if only update was adding new columns included in this import).\n"
 
       # More detailed logging in dry run mode
       if !new_districts.empty? && is_dry_run
         summary_message <<
-          "Districts#{future_tense_dry_run} added:\n"\
+          "Districts#{future_tense_dry_run} added:\n" \
           "#{new_districts.map {|district| district[:name]}.join("\n")}\n"
       end
 

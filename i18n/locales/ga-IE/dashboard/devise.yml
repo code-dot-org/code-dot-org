@@ -50,9 +50,6 @@ ga:
       expired: "thar am, ba chóir duit ceann nua a iarraidh"
       not_found: "gan aimsiú"
       not_locked: "gan glasáil"
-      not_saved:
-        one: "Níor sábháladh an %{resource} seo mar gheall ar earráid amháin:"
-        other: "Níor sábháladh an %{resource} seo mar gheall ar %{count} earráid:"
     invitations:
       send_instructions: 'Seoladh cuireadh chuig %{email}.'
       invitation_token_invalid: 'Tá an ceadchomhartha ón chuireadh neamhbhailí!'

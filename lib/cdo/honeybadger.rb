@@ -15,10 +15,10 @@ module Honeybadger
 
     Dir.chdir(dashboard_dir) do
       system(
-        'bundle exec honeybadger deploy '\
-          "--environment=#{environment} "\
-          "--revision=#{revision} "\
-          "--user=#{environment} "\
+        'bundle exec honeybadger deploy ' \
+          "--environment=#{environment} " \
+          "--revision=#{revision} " \
+          "--user=#{environment} " \
           "--api-key=#{CDO.dashboard_honeybadger_api_key}"
       )
     end
@@ -35,6 +35,11 @@ module Honeybadger
   # stderr - captured stderr from the command
   def self.notify_command_error(command, status, stdout, stderr)
     return if stderr.to_s.empty? && status == 0
+
+    # Temporarily ignore this high-volume deprecation warning, until we can
+    # implement alternatives to the deprecated functionality.
+    # TODO: eliminate this warning, and remove this exception
+    return if stderr.start_with?("WARNING: MYSQL_OPT_RECONNECT is deprecated and will be removed in a future version.")
 
     error_message, backtrace = parse_exception_dump stderr
 

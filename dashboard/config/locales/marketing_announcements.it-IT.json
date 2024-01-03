@@ -1,0 +1,72 @@
+{
+  "it-IT": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "ai-2020": {
+            "buttonText": "Ulteriori informazioni",
+            "title": "Esplora l'intelligenza artificiale e l'apprendimento automatico"
+          },
+          "ai-launch-2023": {
+            "buttonText": "Ulteriori informazioni"
+          },
+          "ai-pl-launch-2023": {
+            "buttonText": "Ulteriori informazioni"
+          },
+          "back-to-school-2021": {
+            "buttonText": "Ulteriori informazioni"
+          },
+          "codebytes-2020": {
+            "buttonText": "Ulteriori informazioni"
+          },
+          "coldplay": {
+            "buttonText": "Prova"
+          },
+          "congrats-certificate-share": {
+            "buttonText": "Inizia"
+          },
+          "csjourneys": {
+            "buttonText": "Ulteriori informazioni"
+          },
+          "csjourneys-22": {
+            "buttonText": "Ulteriori informazioni"
+          },
+          "csleadersprize": {
+            "buttonText": "Ulteriori informazioni"
+          },
+          "hoc-2023": {
+            "body": "Unisciti a milioni di persone in tutto il mondo per organizzare un'ora di programmazione, con o senza AI, e scoprire come funziona l'AI. Chiunque, ovunque può farlo. Non è necessaria alcuna esperienza.",
+            "buttonText": "Ulteriori informazioni",
+            "title": "Ora del Codice - La creatività con l'Intelligenza Artificiale"
+          },
+          "hoc-2023-dance-ai": {
+            "body": "Scopri i concetti di intelligenza artificiale (AI) per creare il tuo Dance Party virtuale con i migliori artisti di oggi. Con decine di brani tra cui scegliere, coinvolgi ogni studente indipendentemente dai suoi gusti musicali. È ora di dimostrare le tue abilità!",
+            "buttonText": "Ulteriori informazioni",
+            "title": "Ballando col codice: edizione IA"
+          },
+          "hoc-more": {
+            "body": "Il sito Web “The Hour of Code” offre più di 100 attività legate all’informatica adatte a tutte le età e a tutti livelli di esperienza, sviluppate da Code.org e dai suoi partner."
+          },
+          "home-learning-2020": {
+            "buttonText": "Visualizza le idee di progetto"
+          },
+          "superhero": {
+            "buttonText": "Ulteriori informazioni"
+          },
+          "teacher-apps-closing-2021": {
+            "buttonText": "Unisciti a noi"
+          },
+          "teacher-apps-nominate-2020": {
+            "buttonText": "Nomina un Insegnante"
+          },
+          "teacher-apps-open-2021": {
+            "buttonText": "Unisciti a noi"
+          },
+          "teacher-apps-stillon-2020": {
+            "buttonText": "Unisciti a noi"
+          }
+        }
+      }
+    }
+  }
+}

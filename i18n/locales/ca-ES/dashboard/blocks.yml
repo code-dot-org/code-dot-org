@@ -2,11 +2,63 @@
 ca:
   data:
     blocks:
+      AmysBlocks_addTarget:
+        text: "{TARGET} {OPT} {SPRITE} "
+        options:
+          OPT:
+            '"follows"': segueix
+            '"avoids"': evita
+      AmysBlocks_goldilocks:
+        text: |2-
+           si {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"too much"': massa
+            '"just right"': perfecte
+            '"too little"': massa poc
+      AmysBlocks_goldilocksElse:
+        text: |2-
+           si massa{SPRITE}
+          {STATEMENT}else si perfecte
+          {STATEMENT3}else si massa poc
+          {STATEMENT2}
+      AmysBlocks_makeNumSprites:
+        text: fer {NUM} sprites {ANIMATION_NAME} nous {LOCATION}
+      AmysBlocks_playerBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): moure's al N-S-E-O amb les tecles de fletxa
+      AmysBlocks_setPromptWithChoices:
+        text: preguntar l'usuari {QUESTION} per la variable {VAR} amb les opcions {A}{B}{C}
       AmysBlocks_spriteSayVar:
         text: "{SPRITE}dir{TEXT1}"
+      BadGuys_makeNewBadGuysSprite:
+        text: fer nou sprite {ANIMATION_NAME} a {LOCATION}
+      BadGuys_setSizeAll_dropdown:
+        text: establir la mida de tots els sprites a {SIZE}
+        options:
+          SIZE:
+            '0.50': diminut
+            '0.75': petit
+            '1.00': mig
+            '2.00': gran
+            '3.00': extragran
+      BadGuys_setSize_dropdown:
+        text: establir la mida de [SPRITE] a [SIZE]
+        options:
+          SIZE:
+            '0.50': diminut
+            '0.75': petit
+            '1.00': mig
+            '2.00': gran
+            '3.00': extragran
       Dancelab_alternateMoves:
+        text: "{GROUP} alterna cada {N} compassos \nentre {MOVE1} i {MOVE2}"
         options:
           GROUP:
+            sprites: tot
             '"ALIEN"': tots els extraterrestres
             '"BEAR"': óssos
             '"CAT"': tots els gats
@@ -17,6 +69,8 @@ ca:
             '"PINEAPPLE"': pinyes
             '"ROBOT"': tots els robots
             '"SHARK"': taurons
+            '"SLOTH"': peresosos
+            '"UNICORN"': unicorns
           MOVE1:
             MOVES.Roll: Rodar per terra
             MOVES.ClapHigh: aplaudir ben fort
@@ -47,6 +101,11 @@ ca:
           UNIT:
             '"measures"': mesures
             '"seconds"': segons
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': mesures
+            '"seconds"': segons
       Dancelab_changeColorBy:
         text: canvi {COLOR} {METHOD} per {AMOUNT}
         options:
@@ -58,6 +117,7 @@ ca:
         text: "{GROUP} fer {MOVE} {DIR} per sempre"
         options:
           GROUP:
+            sprites: tot
             '"ALIEN"': tots els extraterrestres
             '"BEAR"': óssos
             '"CAT"': tots els gats
@@ -68,6 +128,8 @@ ca:
             '"PINEAPPLE"': pinyes
             '"ROBOT"': tots els robots
             '"SHARK"': taurons
+            '"SLOTH"': peresosos
+            '"UNICORN"': unicorns
           MOVE:
             '"next"': "(Següent)"
             '"prev"': "(Anterior)"
@@ -83,6 +145,27 @@ ca:
             MOVES.Kick: Estrella
             MOVES.ThisOrThat: Aquest o aquell
             MOVES.Rest: Cap
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} fer {MOVE} {DIR} per sempre"
+        options:
+          GROUP:
+            '"CAT"': tots els gats
+            '"SLOTH"': peresosos
+          MOVE:
+            MOVES.Roll: Rodar per terra
+            MOVES.ClapHigh: aplaudir ben fort
+            MOVES.Dab: Dansa d'amagar el cap
+            MOVES.DoubleJam: Baixada doble
+            MOVES.Drop: Deixar anar
+            MOVES.Floss: Provocació
+            MOVES.Fresh: Fresc
+            MOVES.Clown: Pallasso
+            MOVES.Kick: Estrella
+            MOVES.ThisOrThat: Aquest o aquell
+            MOVES.Rest: Cap
+            '"next"': "(Següent)"
+            '"prev"': "(Anterior)"
+            '"rand"': "(Aleatori)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} fer {MOVE} {DIR} per sempre"
         options:
@@ -115,6 +198,7 @@ ca:
         text: canvi {GROUP} {PROPERTY} per {VAL}
         options:
           GROUP:
+            sprites: tot
             '"ALIEN"': tots els extraterrestres
             '"BEAR"': óssos
             '"CAT"': tots els gats
@@ -125,6 +209,8 @@ ca:
             '"PINEAPPLE"': pinyes
             '"ROBOT"': tots els robots
             '"SHARK"': taurons
+            '"SLOTH"': peresosos
+            '"UNICORN"': unicorns
           PROPERTY:
             '"scale"': mida
             '"width"': amplada
@@ -136,6 +222,7 @@ ca:
         text: "{GROUP} fer {MOVE} {DIR} un cop"
         options:
           GROUP:
+            sprites: tot
             '"ALIEN"': tots els extraterrestres
             '"BEAR"': óssos
             '"CAT"': tots els gats
@@ -146,17 +233,31 @@ ca:
             '"PINEAPPLE"': pinyes
             '"ROBOT"': tots els robots
             '"SHARK"': taurons
+            '"SLOTH"': peresosos
+            '"UNICORN"': unicorns
           MOVE:
             '"rand"': "(Aleatori)"
+            MOVES.XBend: Doblegar-se
             MOVES.Roll: Rodar per terra
+            MOVES.XClapSide: Aplaudir
             MOVES.ClapHigh: aplaudir ben fort
             MOVES.Dab: Dansa d'amagar el cap
+            MOVES.XFever: Disco
             MOVES.DoubleJam: Baixada doble
             MOVES.Drop: Deixar anar
             MOVES.Floss: Provocació
             MOVES.Fresh: Fresc
             MOVES.Clown: Pallasso
+            MOVES.XHeadHips: Cap i malucs
+            MOVES.XHop: Saltar
+            MOVES.XHighKick: Cop de peu
+            MOVES.XKnee: Genoll
+            MOVES.XKneel: Agenollar-se
+            MOVES.XOle: Olé
+            MOVES.XArmsSide: Estirar els braços
+            MOVES.XSlide: Lliscar
             MOVES.Kick: Estrella
+            MOVES.XArmsUp: Estirar-se
             MOVES.ThisOrThat: Aquest o aquell
             MOVES.Rest: Cap
       Dancelab_doMoveLR:
@@ -164,15 +265,27 @@ ca:
         options:
           MOVE:
             '"rand"': "(Aleatori)"
+            MOVES.XBend: Doblegar-se
             MOVES.Roll: Rodar per terra
+            MOVES.XClapSide: Aplaudir
             MOVES.ClapHigh: aplaudir ben fort
             MOVES.Dab: Dansa d'amagar el cap
+            MOVES.XFever: Disco
             MOVES.DoubleJam: Baixada doble
             MOVES.Drop: Deixar anar
             MOVES.Floss: Provocació
             MOVES.Fresh: Fresc
             MOVES.Clown: Pallasso
+            MOVES.XHeadHips: Cap i malucs
+            MOVES.XHop: Saltar
+            MOVES.XHighKick: Cop de peu
+            MOVES.XKnee: Genoll
+            MOVES.XKneel: Agenollar-se
+            MOVES.XOle: Olé
+            MOVES.XArmsSide: Estirar els braços
+            MOVES.XSlide: Lliscar
             MOVES.Kick: Estrella
+            MOVES.XArmsUp: Estirar-se
             MOVES.ThisOrThat: Aquest o aquell
             MOVES.Rest: Cap
       Dancelab_everySeconds:
@@ -195,6 +308,7 @@ ca:
             '"mid"': mig
             '"high"': agut
       Dancelab_getProp:
+        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': mida
@@ -203,6 +317,7 @@ ca:
             '"rotation"': rotació
             '"x"': posició horitzontal
             '"y"': posició vertical
+            '"tint"': tint
       Dancelab_getTime:
         text: "{UNIT} transcorregut"
         options:
@@ -227,10 +342,17 @@ ca:
             MOVES.ThisOrThat: Aquest o aquell
             MOVES.Rest: Cap
       Dancelab_ifTime:
+        text: |-
+          si {UNIT} és {OP} {N}
+          {DO1} {DO2}
         options:
           UNIT:
             '"measures"': mesures
             '"seconds"': segons
+          OP:
+            '">"': ">"
+            '"<"': "<"
+            '"="': "="
       Dancelab_jumpTo:
         text: "{SPRITE} salta a {LOCATION}"
         options:
@@ -246,8 +368,10 @@ ca:
             "{x: 300, y: 300}": part inferior dreta
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": atzar
       Dancelab_jumpToEach:
+        text: fer saltar {GROUP} a {LOCATION}
         options:
           GROUP:
+            sprites: tot
             '"ALIEN"': tots els extraterrestres
             '"BEAR"': óssos
             '"CAT"': tots els gats
@@ -258,6 +382,8 @@ ca:
             '"PINEAPPLE"': pinyes
             '"ROBOT"': tots els robots
             '"SHARK"': taurons
+            '"SLOTH"': peresosos
+            '"UNICORN"': unicorns
           LOCATION:
             "{x: 200, y: 100}": part superior
             "{x: 200, y: 300}": part inferior
@@ -270,9 +396,10 @@ ca:
             "{x: 300, y: 300}": part inferior dreta
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": atzar
       Dancelab_layoutSprites:
-        text: disposició {GROUP} com a {FORMAT}
+        text: disposar {GROUP} com a {FORMAT}
         options:
           GROUP:
+            sprites: tot
             '"ALIEN"': tots els extraterrestres
             '"BEAR"': óssos
             '"CAT"': tots els gats
@@ -283,26 +410,41 @@ ca:
             '"PINEAPPLE"': pinyes
             '"ROBOT"': tots els robots
             '"SHARK"': taurons
+            '"SLOTH"': peresosos
+            '"UNICORN"': unicorns
           FORMAT:
-            '"border"': frontera
+            '"border"': marges
             '"inner"': plaça interior
+            '"diamond"': diamant
             '"circle"': cercle
             '"grid"': quadrícula
+            '"top"': fila superior
             '"row"': classe
+            '"bottom"': fila inferior
+            '"left"': columna esquerra
             '"column"': columna
+            '"right"': columna dreta
             '"x"': cruïlla
             '"plus"': més
+            '"spiral"': espiral
+            '"infinity"': línia infinita
             '"random"': atzar
       Dancelab_makeAnonymousDanceSprite:
+        text: fer un {COSTUME} nou a {LOCATION}
         options:
           COSTUME:
+            '"ALIEN"': alienígena
             '"BEAR"': Ós
+            '"CAT"': gat
             '"DOG"': gos
             '"DUCK"': ànec
             '"FROG"': Granota
             '"MOOSE"': tots els ants
             '"PINEAPPLE"': Pinya
+            '"ROBOT"': robot
             '"SHARK"': Tauró
+            '"SLOTH"': peresós
+            '"UNICORN"': unicorn
           LOCATION:
             "{x: 200, y: 100}": part superior
             "{x: 200, y: 300}": part inferior
@@ -320,13 +462,18 @@ ca:
           anomenat {NAME} a {LOCATION}
         options:
           COSTUME:
+            '"ALIEN"': alienígena
             '"BEAR"': Ós
+            '"CAT"': gat
             '"DOG"': gos
             '"DUCK"': ànec
             '"FROG"': Granota
             '"MOOSE"': tots els ants
             '"PINEAPPLE"': Pinya
+            '"ROBOT"': robot
             '"SHARK"': Tauró
+            '"SLOTH"': peresós
+            '"UNICORN"': unicorn
           LOCATION:
             "{x: 200, y: 100}": part superior
             "{x: 200, y: 300}": part inferior
@@ -363,26 +510,6 @@ ca:
             '18': '18'
             '19': '19'
             '20': '20'
-            '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
-            '40': '40'
           COSTUME:
             '"ALIEN"': tots els extraterrestres
             '"BEAR"': óssos
@@ -394,15 +521,24 @@ ca:
             '"PINEAPPLE"': pinyes
             '"ROBOT"': tots els robots
             '"SHARK"': taurons
+            '"SLOTH"': peresosos
+            '"UNICORN"': unicorns
           LAYOUT:
-            '"border"': frontera
+            '"border"': marges
             '"inner"': plaça interior
+            '"diamond"': diamant
             '"circle"': cercle
             '"grid"': quadrícula
+            '"top"': fila superior
             '"row"': classe
+            '"bottom"': fila inferior
+            '"left"': columna esquerra
             '"column"': columna
+            '"right"': columna dreta
             '"x"': cruïlla
             '"plus"': més
+            '"spiral"': espiral
+            '"infinity"': línia infinita
             '"random"': atzar
       Dancelab_mixColors:
         text: barrejar {COLOR1} i {COLOR2}
@@ -424,8 +560,10 @@ ca:
           EFFECT:
             '"none"': Cap
             '"circles"': Túnel
+            '"color_cycle"': Colors
             '"diamonds"': Diamants
             '"disco_ball"': Bola de discoteca
+            '"fireworks"': Focs artificials
             '"swirl"': Hipnosi
             '"kaleidoscope"': Calidoscopi
             '"lasers"': Zona de ball amb làser
@@ -441,8 +579,12 @@ ca:
           PALETTE:
             '"rave"': Blanc i negre
             '"cool"': Blues
+            '"electronic"': Electrònic
+            '"iceCream"': Gelat
             '"default"': Llum
             '"neon"': Neó
+            '"tropical"': Tropical
+            '"vintage"': Vintage
             '"warm"': Vermells
       Dancelab_setBackgroundEffectWithPalette:
         text: definir l'efecte de fons {PALETTE} {EFFECT}
@@ -451,25 +593,81 @@ ca:
             '"none"': Cap
             '"rand"': "(Aleatori)"
             '"circles"': Túnel
+            '"quads"': Angles
+            '"color_cycle"': Colors
             '"diamonds"': Diamants
             '"disco_ball"': Bola de discoteca
+            '"fireworks"': Focs artificials
+            '"flowers"': Flors
+            '"growing_stars"': Estrelles creixents
             '"swirl"': Hipnosi
             '"kaleidoscope"': Calidoscopi
             '"lasers"': Zona de ball amb làser
             '"splatter"': Esquitxades de pintura
             '"rainbow"': Arc de Sant Martí
+            '"ripples_random"': Ones aleatòries
+            '"ripples"': Ones
+            '"snowflakes"': Neu
+            '"text"': Títol de la cançó
+            '"squiggles"': Guixots
+            '"galaxy"': Espai
+            '"sparkles"': Guspires
+            '"spiral"': Espiral
+            '"disco"': Requadres
+            '"stars"': Estrelles
+            '"music_wave"': Onades
+          PALETTE:
+            '"rave"': Blanc i negre
+            '"cool"': Blues
+            '"electronic"': Electrònic
+            '"iceCream"': Gelat
+            '"default"': Llum
+            '"neon"': Neó
+            '"tropical"': Tropical
+            '"vintage"': Vintage
+            '"warm"': Vermells
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: definir l'efecte de fons {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Cap
+            '"rand"': "(Aleatori)"
+            '"quads"': Angles
+            '"circles"': Túnel
+            '"color_cycle"': Colors
+            '"diamonds"': Diamants
+            '"disco_ball"': Bola de discoteca
+            '"fireworks"': Focs artificials
+            '"flowers"': Flors
+            '"growing_stars"': Estrelles creixents
+            '"swirl"': Hipnosi
+            '"kaleidoscope"': Calidoscopi
+            '"lasers"': Zona de ball amb làser
+            '"splatter"': Esquitxades de pintura
+            '"rainbow"': Arc de Sant Martí
+            '"ripples_random"': Ones aleatòries
+            '"ripples"': Ones
             '"snowflakes"': Neu
             '"text"': Títol de la cançó
             '"galaxy"': Espai
             '"sparkles"': Guspires
             '"spiral"': Espiral
             '"disco"': Requadres
+            '"squiggles"': Guixots
+            '"starburst"': esclat d'estrelles
             '"stars"': Estrelles
+            '"music_wave"': Onades
           PALETTE:
             '"rave"': Blanc i negre
             '"cool"': Blues
+            '"electronic"': Electrònic
+            '"iceCream"': Gelat
             '"default"': Llum
             '"neon"': Neó
+            '"ocean"': Oceà
+            '"rainbow"': Arc de Sant Martí
+            '"tropical"': Tropical
+            '"vintage"': Vintage
             '"warm"': Vermells
       Dancelab_setDanceSpeed:
         text: canviar {SPRITE} velocitat de dansa a {SPEED}
@@ -484,6 +682,7 @@ ca:
         text: canviar {GROUP} velocitat de dansa a {SPEED}
         options:
           GROUP:
+            sprites: tot
             '"ALIEN"': tots els extraterrestres
             '"BEAR"': óssos
             '"CAT"': tots els gats
@@ -494,6 +693,8 @@ ca:
             '"PINEAPPLE"': pinyes
             '"ROBOT"': tots els robots
             '"SHARK"': taurons
+            '"SLOTH"': peresosos
+            '"UNICORN"': unicorns
           SPEED:
             '1': normal
             '2': ràpid
@@ -510,10 +711,13 @@ ca:
             '"hearts_red"': Cors
             '"music_notes"': Notes de música
             '"pineapples"': Pinyes
+            '"pizzas"': Pizzes
             '"smiling_poop"': Caca
             '"rain"': Pluja
             '"floating_rainbows"': Arc de Sant Martí
             '"smile_face"': Cara somrient
+            '"spotlight"': Focus
+            '"color_lights"': Llums d'escenari
             '"raining_tacos"': Tacs
       Dancelab_setForegroundEffectExtended:
         text: definir l'efecte de fons {EFFECT}
@@ -522,14 +726,21 @@ ca:
             '"none"': Cap
             '"rand"': "(Aleatori)"
             '"bubbles"': Bombolles
+            '"hearts_colorful"': Cors de colors
             '"confetti"': Confeti
+            '"emojis"': Emoticones
             '"hearts_red"': Cors
             '"music_notes"': Notes de música
+            '"paint_drip"': Gota de pintura
             '"pineapples"': Pinyes
+            '"pizzas"': Pizzes
             '"smiling_poop"': Caca
             '"rain"': Pluja
             '"floating_rainbows"': Arc de Sant Martí
             '"smile_face"': Cara somrient
+            '"spotlight"': Focus
+            '"color_lights"': Llums d'escenari
+            '"exploding_stars"': esclat d'estrelles
             '"raining_tacos"': Tacs
       Dancelab_setProp:
         text: 'configurar {SPRITE} {PROPERTY} a {VAL} '
@@ -545,6 +756,7 @@ ca:
         text: configurar {GROUP} {PROPERTY} a {VAL}
         options:
           GROUP:
+            sprites: tot
             '"ALIEN"': tots els extraterrestres
             '"BEAR"': óssos
             '"CAT"': tots els gats
@@ -555,6 +767,8 @@ ca:
             '"PINEAPPLE"': pinyes
             '"ROBOT"': tots els robots
             '"SHARK"': taurons
+            '"SLOTH"': peresosos
+            '"UNICORN"': unicorns
           PROPERTY:
             '"scale"': mida
             '"width"': amplada
@@ -562,6 +776,7 @@ ca:
             '"rotation"': rotació
             '"x"': posició horitzontal
             '"y"': posició vertical
+            '"tint"': tint
       Dancelab_setPropRandom:
         text: aleatoritzar {SPRITE} {PROPERTY}
         options:
@@ -572,10 +787,12 @@ ca:
             '"rotation"': rotació
             '"x"': posició horitzontal
             '"y"': posició vertical
+            '"tint"': tint
       Dancelab_setPropRandomEach:
         text: aleatoritzar {GROUP} {PROPERTY}
         options:
           GROUP:
+            sprites: tot
             '"ALIEN"': tots els extraterrestres
             '"BEAR"': óssos
             '"CAT"': tots els gats
@@ -586,6 +803,8 @@ ca:
             '"PINEAPPLE"': pinyes
             '"ROBOT"': tots els robots
             '"SHARK"': taurons
+            '"SLOTH"': peresosos
+            '"UNICORN"': unicorns
           PROPERTY:
             '"scale"': mida
             '"width"': amplada
@@ -593,12 +812,14 @@ ca:
             '"rotation"': rotació
             '"x"': posició horitzontal
             '"y"': posició vertical
+            '"tint"': tint
       Dancelab_setTint:
         text: configurar {SPRITE} tint a {VAL}
       Dancelab_setTintEach:
         text: configurar {THIS} tint a {VAL}
         options:
           THIS:
+            sprites: tot
             '"ALIEN"': tots els extraterrestres
             '"BEAR"': óssos
             '"CAT"': tots els gats
@@ -609,10 +830,13 @@ ca:
             '"PINEAPPLE"': pinyes
             '"ROBOT"': tots els robots
             '"SHARK"': taurons
+            '"SLOTH"': peresosos
+            '"UNICORN"': unicorns
       Dancelab_setTintEachInline:
         text: configurar {THIS} tint a {VAL}
         options:
           THIS:
+            sprites: tot
             '"ALIEN"': tots els extraterrestres
             '"BEAR"': óssos
             '"CAT"': tots els gats
@@ -623,14 +847,21 @@ ca:
             '"PINEAPPLE"': pinyes
             '"ROBOT"': tots els robots
             '"SHARK"': taurons
+            '"SLOTH"': peresosos
+            '"UNICORN"': unicorns
       Dancelab_setTintInline:
         text: configurar {SPRITE} tint a {VAL}
       Dancelab_setVisible:
         text: conjunt {SPRITE} visible per {VISIBILITY}
+        options:
+          VISIBILITY:
+            'true': visible
+            'false': invisible
       Dancelab_setVisibleEach:
         text: configurar {THIS} visibilitat a {VISIBILITY}
         options:
           THIS:
+            sprites: tot
             '"ALIEN"': tots els extraterrestres
             '"BEAR"': óssos
             '"CAT"': tots els gats
@@ -641,6 +872,11 @@ ca:
             '"PINEAPPLE"': pinyes
             '"ROBOT"': tots els robots
             '"SHARK"': taurons
+            '"SLOTH"': peresosos
+            '"UNICORN"': unicorns
+          VISIBILITY:
+            'true': visible
+            'false': invisible
       Dancelab_startMapping:
         text: "{SPRITE} comença a {PROPERTY} seguit de {RANGE}"
         options:
@@ -651,13 +887,16 @@ ca:
             '"rotation"': rotació
             '"x"': posició horitzontal
             '"y"': posició vertical
+            '"tint"': tint
           RANGE:
             '"bass"': baix
             '"mid"': mig
             '"treble"': agut
       Dancelab_startMappingEach:
+        text: El {GROUP} comença {PROPERTY} després de {RANGE}
         options:
           GROUP:
+            sprites: tot
             '"ALIEN"': tots els extraterrestres
             '"BEAR"': óssos
             '"CAT"': tots els gats
@@ -668,6 +907,8 @@ ca:
             '"PINEAPPLE"': pinyes
             '"ROBOT"': tots els robots
             '"SHARK"': taurons
+            '"SLOTH"': peresosos
+            '"UNICORN"': unicorns
           PROPERTY:
             '"scale"': mida
             '"width"': amplada
@@ -675,12 +916,13 @@ ca:
             '"rotation"': rotació
             '"x"': posició horitzontal
             '"y"': posició vertical
+            '"tint"': tint
           RANGE:
             '"bass"': baix
             '"mid"': mig
             '"treble"': agut
       Dancelab_stopMapping:
-        text: "{SPRITE} s'atura a {PROPERTY} seguit {RANGE}"
+        text: "{SPRITE} para de {PROPERTY} després de {RANGE}"
         options:
           PROPERTY:
             '"scale"': mida
@@ -690,13 +932,16 @@ ca:
             '"x"': posició horitzontal
             '"y"': posició vertical
             '"direction"': direcció del moviment
+            '"tint"': tint
           RANGE:
             '"bass"': baix
             '"mid"': mig
             '"treble"': agut
       Dancelab_stopMappingEach:
+        text: "{GROUP} para de {PROPERTY} després de {RANGE}"
         options:
           GROUP:
+            sprites: tot
             '"ALIEN"': tots els extraterrestres
             '"BEAR"': óssos
             '"CAT"': tots els gats
@@ -707,6 +952,8 @@ ca:
             '"PINEAPPLE"': pinyes
             '"ROBOT"': tots els robots
             '"SHARK"': taurons
+            '"SLOTH"': peresosos
+            '"UNICORN"': unicorns
           PROPERTY:
             '"scale"': mida
             '"width"': amplada
@@ -715,18 +962,57 @@ ca:
             '"x"': posició horitzontal
             '"y"': posició vertical
             '"direction"': direcció del moviment
+            '"tint"': tint
           RANGE:
             '"bass"': baix
             '"mid"': mig
             '"treble"': agut
       Dancelab_translateStrings:
+        text: traduir {STRING}
         options:
           STRING:
+            '"music_wave"': Onades
+            '"ripples"': Ones
+            '"ripples_random"': Ones aleatòries
+            '"quads"': Angles
+            '"flowers"': Flors
+            '"popsicles"': Gelats de gel
+            '"squiggles"': Guixots
+            '"growing_stars"': Estrelles creixents
+            '"emojis"': Emoticones
             '"hearts_colorful"': Cors
+            '"paint_drio"': Gota de pintura
+            '"exploding_stars"': esclat d'estrelles
+            '"row_top"': fila superior
+            '"row_bottom"': fila inferior
+            '"column_left"': columna esquerra
+            '"column_right"': columna dreta
+            '"diamond"': diamant
+            '"mural"': Mural
+            '"safari"': Safari
+            '"network"': Xarxa
+            '"highway"': Carretera
+            '"stream"': Rierol
+            '"tile"': Rajola
+            '"shadow"': Ombra
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
             '"x"': x
+            '"y"': 'y'
+            '"z"': z
+            '"0"': '0'
             '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
             '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
             '"8"': '8'
+            '"9"': '9'
       Dancelab_whenKey:
         text: quan la {KEY} és premuda
         options:
@@ -737,11 +1023,42 @@ ca:
             '"right"': dret
             '"space"': espai
             '"enter"': introduïu
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
             '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
             '"x"': x
+            '"y"': 'y'
+            '"z"': z
+            '"0"': '0'
             '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
             '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
             '"8"': '8'
+            '"9"': '9'
       Dancelab_whenPeak:
         text: quan al pic de {RANGE}
         options:
@@ -753,55 +1070,116 @@ ca:
         text: configuració
       Dancelab_whenSetup2:
         text: configuració
+      Dancelab_whenSetupSong:
+        options:
+          SONG:
+            '"macklemore90"': Macklemore - Can't Hold Us
+            '"hammer"': MC Hammer - U Can't Touch This
+            '"peas"': The Black Eyed Peas - I Got a Feeling
       DansBlocks_getMicroscope:
         text: El microscopi té {INPUT1}
         options:
           INPUT1:
             '1': suc de llimona
-            '3': baking soda
-            '5': both
+            '3': bicarbonat de sodi
+            '5': tots dos
       DansBlocks_setForegroundEffect2:
+        text: fer efecte {EFFECT}
         options:
           EFFECT:
             '"bubbles"': Bombolles
             '"confetti"': Confeti
             '"hearts"': cors
+            '"emojis"': emoticones alegres
+            '"rain"': pluja
+            '"starburst"': esclat d'estrelles
+            '"glass"': vidre trencat
+            '"twinkling"': centelleig
       DansBlocks_setMicroscope:
+        text: Establir microscopi a {INPUT1}
         options:
           INPUT1:
             '1': suc de llimona
-            '3': baking soda
-            '5': both
+            '3': bicarbonat de sodi
+            '5': tots dos
+      DansBlocks_testRectangle:
+        text: 'fer rectangle x: {X} y: {Y} w: {W} h: {H} color: {COLOR}'
+      FunctionBlocks_addEightBlock:
+        text: afegirVuit
+      FunctionBlocks_addFiveBlock:
+        text: afegirCinc
+      FunctionBlocks_addFourBlock:
+        text: afegirQuatre
+      FunctionBlocks_addNineBlock:
+        text: afegirNou
+      FunctionBlocks_addOneBlock:
+        text: afegirUn
+      FunctionBlocks_addSevenBlock:
+        text: afegirSet
+      FunctionBlocks_addSixBlock:
+        text: afegirSis
+      FunctionBlocks_addThreeBlock:
+        text: afegirTres
+      FunctionBlocks_addTwoBlock:
+        text: afegirDos
       FunctionBlocks_communicate:
         text: Comunicar {VAR1} amb {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:
         text: fer {NUM} nou {ANIMATION_NAME} sprites  {BEHAVIOR}
       FunctionBlocks_representManipulative:
         text: representar {NUM} nou {ANIMATION_NAME} sprites [BEHAVIOR][2]
+      FunctionBlocks_representManipulative_test:
+        text: "[testing] representar {NUM} sprites {ANIMATION_NAME} nous"
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}dir{TEXT1}"
+      gamelab_addBehaviorSimple:
+        text: sprite {SPRITE} comença a {BEHAVIOR}
       gamelab_addTarget:
+        text: "{SPRITE} porta l'objectiu {TARGET} a {OPT}"
         options:
           OPT:
+            '"follow"': seguir
             '"avoid"': evitar
+      gamelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       gamelab_atTime:
+        text: a les {N} {UNIT}
         options:
           UNIT:
             '"seconds"': segons
+            '"frames"': fotogrames
+      gamelab_avoidingTargets:
+        text: evitar els objectius
+      gamelab_beginCollectingData:
+        text: començar a recollir dades {BREAK} valor {VALUE} amb l'etiqueta {LABEL}
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
+      gamelab_bounceOff:
+        text: "{SPRITE} rebota contra {TARGET}"
       gamelab_changePropBy:
         text: canvi {SPRITE} {PROPERTY} per {VAL}
         options:
           PROPERTY:
             '"scale"': mida
             '"rotation"': rotació
+            '"x"': posició x
+            '"y"': posició y
             '"direction"': direcció del moviment
             '"speed"': velocitat
+      gamelab_changeVarBy:
+        text: canviar {VARIABLE} en {VAL}
       gamelab_checkTouching:
+        text: "{CONDITION} {SPRITE1} toca {SPRITE2}"
         options:
           CONDITION:
             '"when"': quan
             '"while"': mentres
+      gamelab_clickedOn:
+        text: quan clic a {SPRITE}
+      gamelab_clickedSpritePointer:
+        text: "{SPRITE}"
       gamelab_collectibleBehaviors:
+        text: "{BEHAVIOR}"
         options:
           BEHAVIOR:
             new Behavior(spinning_right, []): voltejar cap a la dreta
@@ -813,23 +1191,65 @@ ca:
             new Behavior(patrolling, []): rondar
             new Behavior(moving_west_and_looping, []): anar cap a l'oest en bucle
             new Behavior(moving_east_and_looping, []): anar cap a l'est en bucle
+      gamelab_comment:
+        text: 'comentari: {COMMENT}'
+      gamelab_costumeImage:
+        text: "{COSTUME}"
+      gamelab_countByAnimation:
+        text: nombre de {SPRITE}
+      gamelab_createNewSprite:
+        text: "fer un sprite nou \n anomenat {NAME} \n amb el vestit {COSTUME} \n a {LOCATION}"
+      gamelab_destroy:
+        text: eliminar {THIS}
+      gamelab_draggable:
+        text: es pot arrossegar
+      gamelab_drawLine:
+        text: dibuixar línia {COLOR}  {LOC1}  {LOC2}
+      gamelab_edgesDisplace:
+        text: les vores impedeixen que {SPRITE} es mogui
       gamelab_everyInterval:
         text: 'cada {N} {UNIT} '
         options:
           UNIT:
             '"seconds"': segons
+            '"frames"': fotogrames
+      gamelab_followingTargets:
+        text: seguir els objectius
+      gamelab_getAllSprites:
+        text: tots els sprites
       gamelab_getProp:
+        text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': mida
             '"rotation"': rotació
+            '"x"': posició x
+            '"y"': posició y
             '"direction"': direcció del moviment
+            '"tint"': tint
             '"speed"': velocitat
+      gamelab_getThisSprite:
+        text: "{CHOICE} sprite"
+        options:
+          CHOICE:
+            '"this"': aquest
+            '"other"': altres
       gamelab_getTime:
+        text: temps en {UNIT}
         options:
           UNIT:
             '"seconds"': segons
+            '"frames"': fotogrames
+      gamelab_glideTo:
+        text: "{SPRITE} patina cap a {LOCATION}"
+      gamelab_hideTitleScreen:
+        text: ocultar pantalla de títol
+      gamelab_ifVarEquals:
+        text: |-
+          si {NUM} ={VAL}
+          {STATEMENT}
       gamelab_int10:
+        text: "{VALUE}"
         options:
           VALUE:
             '1': '1'
@@ -842,7 +1262,10 @@ ca:
             '8': '8'
             '9': '9'
             '10': '10'
+      gamelab_isCostumeEqual:
+        text: el vestit de {SPRITE} és {COSTUME}
       gamelab_isKeyPressed:
+        text: es prem {KEY}
         options:
           KEY:
             '"up"': cap amunt
@@ -850,11 +1273,40 @@ ca:
             '"left"': esquerra
             '"right"': dret
             '"space"': espai
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
             '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
             '"x"': x
+            '"y"': 'y'
+            '"z"': z
+      gamelab_isTouchingEdges:
+        text: "{SPRITE} toca les vores"
+      gamelab_isTouchingSprite:
+        text: "{SPRITE} toca {TARGET}"
       gamelab_jumpTo:
         text: "{SPRITE} salta a {LOCATION}"
       gamelab_keyPressed:
+        text: "{CONDITION} es prem {KEY}"
         options:
           CONDITION:
             '"when"': quan
@@ -865,32 +1317,174 @@ ca:
             '"left"': esquerra
             '"right"': dret
             '"space"': espai
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
             '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': 'n'
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
             '"x"': x
+            '"y"': 'y'
+            '"z"': z
+      gamelab_layoutGrid:
+        text: disposar sprites en una quadrícula
+      gamelab_layoutSprites:
+        text: disposar {GROUP} com a {FORMAT}
+        options:
+          FORMAT:
+            '"border"': marges
+            '"circle"': cercle
+            '"grid"': quadrícula
+            '"top"': fila superior
+            '"row"': classe
+            '"bottom"': fila inferior
+            '"left"': columna esquerra
+            '"column"': columna
+            '"right"': columna dreta
+      gamelab_locationAt:
+        text: 'ubicació x: {X} y: {Y}'
+      gamelab_locationModifier:
+        text: "{DISTANCE} píxels {DIRECTION} de {LOCATION}"
+        options:
+          DIRECTION:
+            '"North"': nord
+            '"East"': est
+            '"South"': sud
+            '"West"': oest
+      gamelab_locationMouse:
+        text: ubicació del ratolí
+      gamelab_locationOf:
+        text: ubicació de {SPRITE}
+      gamelab_location_picker:
+        text: "{LOCATION}"
+      gamelab_makeBurst:
+        text: crear efecte {EFFECT} amb {NUM} {ANIMATION_NAME} sprites
+        options:
+          EFFECT:
+            '"burst"': esclat
+            '"pop"': saltar
+            '"rain"': pluja
+            '"spiral"': espiral
+      gamelab_makeNewSpriteAnon:
+        text: fer nou sprite {ANIMATION_NAME} a {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': marges
+            '"circle"': cercle
+            '"grid"': quadrícula
+            '"top"': fila superior
+            '"row"': classe
+            '"bottom"': fila inferior
+            '"left"': columna esquerra
+            '"column"': columna
+            '"right"': columna dreta
+      gamelab_makeNumSprites:
+        text: fer {NUM} sprites {ANIMATION_NAME} nous
       gamelab_makeProjectile:
+        text: "crear projectil \n{ANIMATION_NAME} des de {LOCATION} amb velocitat {SPEED}en direcció{DIRECTION}"
         options:
           DIRECTION:
             '0': dret
             '90': avall
             '180': esquerra
             '270': cap amunt
+      gamelab_makeSpritesWithSize:
+        text: fer {NUM} sprites {SIZE} {COSTUME} nous
+        options:
+          SIZE:
+            '30': petit
+            '50': mig
+            '100': gran
       gamelab_mirrorSprite:
+        text: "{SPRITE} orientat a {DIRECTION}"
         options:
           DIRECTION:
             '"right"': dret
             '"left"': esquerra
+      gamelab_mouseLocation:
+        text: ubicació del ratolí
+      gamelab_moveBackward:
+        text: moure {SPRITE} {DISTANCE} píxels cap enrere
+      gamelab_moveForward:
+        text: moure {SPRITE} {DISTANCE} píxels endavant
+      gamelab_moveInDirection:
+        text: moure {SPRITE} {DISTANCE} píxels {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': nord
+            '"East"': est
+            '"South"': sud
+            '"West"': oest
+      gamelab_moveToward:
+        text: moure {SPRITE} {DISTANCE} píxels cap a {TARGET}
+      gamelab_newSpritePointer:
+        text: "{SPRITE}"
+      gamelab_objectSpritePointer:
+        text: "{SPRITE}"
+      gamelab_patrollingUpDown:
+        text: patrullar amunt i avall
+      gamelab_playSound:
+        text: reproduir so {SOUND}
       gamelab_playSoundOptions:
+        text: reproduir so {SOUND}
         options:
           SOUND:
+            "'sound://category_accent/puzzle_game_accent_a_01.mp3'": èmfasi
+            "'sound://category_digital/boing_2.mp3'": boing
+            "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": saltar
+            "'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'": centelleig
+            "'sound://category_app/app_button_1.mp3'": botó
             "'sound://category_collect/clicky_crunch.mp3'": cruixit
+            "'sound://category_swish/quick_swing.mp3'": balanceig
+            "'sound://category_nature/summer_night_loop.mp3'": nit d'estiu
+            "'sound://category_background/ocean_waves.mp3'": ones marines
+            "'sound://category_nature/south_carolina_beach_ripple.mp3'": ona mar
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": bombolla
             "'sound://category_animals/bear.mp3'": Ós
+            "'sound://category_animals/cat.mp3'": gat
             "'sound://category_animals/cow.mp3'": vaca
+            "'sound://category_animals/pig.mp3'": porc
             "'sound://category_animals/sheep.mp3'": ovella
+            "'sound://category_animals/goat.mp3'": cabra
             "'sound://category_animals/chicken.mp3'": gallina
+            "'sound://category_animals/rooster.mp3'": gall
+            "'sound://category_animals/elephant.mp3'": elefant
             "'sound://category_animals/dolphin.mp3'": Dofí
+            "'sound://category_nature/thunderstorm_1.mp3'": tempesta
+            "'sound://category_animals/chick.mp3'": pollet
             "'sound://category_animals/dog.mp3'": gos
+            "'sound://category_animals/tiger.mp3'": tigre
+            "'sound://category_collect/trill_stings.mp3'": vibració
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": arpa
+            "'sound://category_tap/vibrant_positive_tap_1.mp3'": copet
+            "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": encert
+            "'sound://category_transition/trippy_robotic_transition.mp3'": transició robòtica
+            "'sound://category_transition/star_dust_particle_10.mp3'": pols d'estrelles
+            "'sound://category_whoosh/alien_ship_flyby_whoosh_3_slow.mp3'": nau alienígena
+            "'sound://category_projectile/retro_game_magic_spell_6.mp3'": encanteri màgic
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": seleccionar
+            "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": baix capritxós
             "'sound://category_digital/jump_7.mp3'": salt
       gamelab_playSoundOptionsSoccer:
+        text: reproduir so {SOUND}
         options:
           SOUND:
             "'sound://category_sports/Airhorn_SFX.mp3'": botzina d'aire
@@ -901,6 +1495,7 @@ ca:
             "'sound://category_sports/Double_Whistle_SFX.mp3'": dos xiulets
             "'sound://category_sports/One_Whistle_SFX.mp3'": xiulet
       gamelab_playSoundOptionsSpace:
+        text: reproduir so {SOUND}
         options:
           SOUND:
             "'sound://category_space/Blackhole_SFX.mp3'": forat negre
@@ -908,42 +1503,111 @@ ca:
             "'sound://category_space/Carina_SFX.mp3'": carina
             "'sound://category_space/Cassiopeia_SFX.mp3'": cassiopea
             "'sound://category_space/Crab_nebula_SFX.mp3'": nebulosa del cranc
+            "'sound://category_space/Galactic_center_SFX.mp3'": centre galàctic
             "'sound://category_space/Launch_SFX.mp3'": llançar
             "'sound://category_space/Lift_Off.mp3'": aixecar
             "'sound://category_space/Pillars_SFX.mp3'": pilars
             "'sound://category_space/Southern_ring_SFX.mp3'": anell del sud
             "'sound://category_space/Supernova_SFX.mp3'": supernova
             "'sound://category_space/Tycho_SFX.mp3'": tycho
+            "'sound://category_space/Whirlpool_galaxy_SFX.mp3'": galaxia espiral
+      gamelab_playSpeech:
+        text: reproduir gravació {SOUND}
       gamelab_playerBehaviors:
+        text: "{BEHAVIOR}"
         options:
           BEHAVIOR:
             new Behavior(moving_with_arrow_keys, []): moure amb les tecles de fletxa
             new Behavior(driving_with_arrow_keys, []): dirigir amb les tecles de fletxa
+            draggable(): es pot arrossegar
+      gamelab_pointInDirection:
+        text: posar {SPRITE} de cara a {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': nord
+            '"East"': est
+            '"South"': sud
+            '"West"': oest
+      gamelab_printText:
+        text: imprimir {TEXT}
       gamelab_randColor:
         text: color aleatori
       gamelab_randomColor:
         text: color aleatori
+      gamelab_randomLocation:
+        text: ubicació aleatòria
+      gamelab_removeAllBehaviors:
+        text: "{SPRITE} ho para tot"
+      gamelab_removeBehaviorSimple:
+        text: sprite {SPRITE} para {BEHAVIOR}
+      gamelab_removeTint:
+        text: eliminar color de {THIS}
       gamelab_repeatForever:
         text: repetir per sempre
+      gamelab_resetTimer:
+        text: reiniciar cronòmetre
+      gamelab_setAnimation:
+        text: canviar {THIS} vestit per {ANIMATION}
       gamelab_setBackground:
         text: definir el color de fons {COLOR}
       gamelab_setBackgroundImage:
+        text: establir fons a {IMG}
         options:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': cova
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ciutat
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': herba contínua
+            '"https://studio.code.org/blockly/media/skins/studio/background.png"': pista
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': desert
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': camí desèrtic
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': terreny agrícola
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': herba flotant
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': façana de casa
+            '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': galàxia
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': quadrícula
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': cuina
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': sala d'estar
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': prat
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': vista d'un parc
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': pins
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': Arc de Sant Martí
+            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': ciència-ficció
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': camp de futbol
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': estapa
+            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': estrelles
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': metro
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': sol i arc de Sant Martí
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': rajos de sol
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': pista de tenis
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': illa amb arbre
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': metro
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': sota l'aigua
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': l'hivern
             undefined: cap
+      gamelab_setBackgroundImageAs:
+        text: establir fons a {IMG}
+      gamelab_setDefaultSpriteSize:
+        text: establir la mida per defecte dels sprites a {SIZE}
+        options:
+          SIZE:
+            '25': diminut
+            '50': petit
+            '75': mig
+            '100': gran
+      gamelab_setPrompt:
+        text: preguntar l'usuari {QUESTION} per la variable {VAR}
+      gamelab_setPromptWith2Choices:
+        text: preguntar l'usuari {QUESTION} per la variable {VAR} amb les opcions {A}{B}
+      gamelab_setPromptWithChoices:
+        text: preguntar l'usuari {QUESTION} per la variable {VAR} amb les opcions {A}{B}{C}
       gamelab_setProp:
         text: configurar {SPRITE} {PROPERTY} a {VAL}
         options:
           PROPERTY:
             '"scale"': mida
             '"rotation"': rotació
+            '"x"': posició x
+            '"y"': posició y
             '"direction"': direcció del moviment
             '"speed"': velocitat
       gamelab_setProp_dropdown:
@@ -951,6 +1615,11 @@ ca:
         options:
           PROPERTY:
             '"scale"': mida
+          SIZE:
+            '25': diminut
+            '50': petit
+            '75': mig
+            '100': gran
       gamelab_setSizes:
         text: configurar {SPRITE} {PROPERTY} a {N}%
         options:
@@ -959,23 +1628,102 @@ ca:
             '"width"': amplada
             '"height"': alçcada
       gamelab_setSpeed_dropdown:
+        text: establir la velocitat de [SPRITE] a {SIZE}
         options:
           SIZE:
-            '1': extra slow
+            '1': extralent
             '3': lent
             '5': normal
             '7': ràpid
-            '9': extra fast
+            '9': extraràpid
+      gamelab_setTint:
+        text: canviar el color de {THIS} a {COLOR}
+      gamelab_setupScoreboard:
+        text: "dibuixar tauler de puntuació \n{SPRITE1COSTUME}puntuació{VAR1}{SPRITE2COSTUME}puntuació{VAR2}objectiu{SPRITE3COSTUME}"
+      gamelab_setupSim:
+        text: |-
+          configurar simulació amb
+          {SPRITE1N}{SPRITE1COSTUME}velocitat{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}velocitat{SPRITE2SPEED}
+          recopilant
+          {SPRITE3N}{SPRITE3COSTUME}
+      gamelab_showTitleScreen:
+        text: mostrar pantalla de títol {BREAK} títol {TITLE} subtítol {SUBTITLE}
       gamelab_spriteClicked:
+        text: "{CONDITION} clic a {SPRITE}"
         options:
           CONDITION:
             '"when"': quan
             '"while"': mentres
+      gamelab_spriteSay:
+        text: "{SPRITE} diu {SPEECH}"
+      gamelab_spriteSayTime:
+        text: "{SPRITE}diu{TEXT1}durant{NUM}segons"
+      gamelab_spriteThink:
+        text: "{SPRITE} pensa {SPEECH}"
+      gamelab_spriteThinkTime:
+        text: "{SPRITE}pensa{TEXT1}durant{NUM}segons"
+      gamelab_spriteThink_fables2:
+        text: "{SPRITE} pensa {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Mmm...
+            '"Time to make friends with the sheep."': És hora de fer-se amic de les ovelles.
+            '"She''ll never recognize me now."': Ara seguir que no em reconeixerà!
+            '"This costume keeps me warm."': Aquest vestit és molt abrigat.
+            '"I am actually a wolf."': En realitat soc un llop.
+      gamelab_spriteThink_fables3:
+        text: "{SPRITE} pensa {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Mmm...
+            '"I''m feeling sleepy."': Tinc son.
+            '"No one could ever beat me."': Sóc invencible.
+            '"I''ve done this race before."': Aquesta cursa ja l'he feta.
+            '"My feet are bigger than Turtle''s feet."': Els meus peus són més grans que el de la tortuga.
+      gamelab_spriteThink_fables4:
+        text: "{SPRITE} pensa {THOUGHT}"
+        options:
+          THOUGHT:
+            '"Hmm..."': Mmm...
+            '"I''m so hungry."': Quina gana que tinc.
+            '"I''m a visitor in this town."': Estic de visita.
+            '"If we share, we''ll all have something to eat. "': Si ho compartim, podrem menjar tots.
+            '"I''ll trick everyone into giving me their food."': Enganyaré algú perquè em doni el seu menjar.
+      gamelab_startAvoiding:
+        text: "{SPRITE} comença a evitar {TARGET}"
+      gamelab_startFollowing:
+        text: "{SPRITE} comença a seguir {TARGET}"
+      gamelab_startGliding:
+        text: "{SPRITE} comença a lliscar"
+      gamelab_stopAvoiding:
+        text: "{SPRITE} comença a evitar els altres sprites"
+      gamelab_stopCollectingData:
+        text: deixar de recopilar dades
+      gamelab_stopFollowing:
+        text: "{SPRITE} para de seguir els altres sprites"
+      gamelab_stopGliding:
+        text: "{SPRITE} para de lliscar"
+      gamelab_subjectSpritePointer:
+        text: "{SPRITE}"
+      gamelab_textJoin:
+        text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
+      gamelab_textVariableJoin:
+        text: "{VAR}{TEXT2}"
+      gamelab_tumbling:
+        text: fer acrobàcies
       gamelab_turn:
+        text: girar {SPRITE}{N} graus cap al {DIRECTION}
         options:
           DIRECTION:
             '"right"': dret
             '"left"': esquerra
+      gamelab_updateTitleWithColor:
+        text: mostrar pantalla de títol {BREAK} títol {TITLE} de color {COLOR}
+      gamelab_whenAllPromptsAnswered:
+        text: quan es responen totes les preguntes
+      gamelab_whenDownArrow:
+        text: quan es prem la fletxa avall
       gamelab_whenKey:
         text: quan la {KEY} és premuda
         options:
@@ -985,7 +1733,26 @@ ca:
             '"left"': esquerra
             '"right"': dret
             '"space"': espai
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      gamelab_whenLeftArrow:
+        text: quan es prem la fletxa esquerra
+      gamelab_whenPromptAnswered:
+        text: quan es respon {VAR}
+      gamelab_whenRightArrow:
+        text: quan es prem la fletxa dreta
+      gamelab_whenSpriteCreated:
+        text: quan es crea {SPRITE}
+      gamelab_whenTouching:
+        text: quan {SPRITE1} toca {SPRITE2}
+      gamelab_whenUpArrow:
+        text: quan es prem la fletxa amunt
+      gamelab_whileDownArrow:
+        text: mentre es prem la fletxa avall
       gamelab_whileKey:
+        text: mentre es prem {KEY}
         options:
           KEY:
             '"up"': cap amunt
@@ -993,11 +1760,80 @@ ca:
             '"left"': esquerra
             '"right"': dret
             '"space"': espai
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
+      gamelab_whileLeftArrow:
+        text: mentre es prem la fletxa esquerra
+      gamelab_whileRightArrow:
+        text: mentre es prem la fletxa dreta
+      gamelab_whileTouching:
+        text: mentre {SPRITE1} toca {SPRITE2}
+      gamelab_whileUpArrow:
+        text: mentre es prem la fletxa amunt
+      gamelab_withPercentChance:
+        text: |-
+          si probabilitat de {NUM}%
+          {STATEMENT}
+      gamelab_withPercentChanceDropdown:
+        text: |2-
+           probabilitat {NUM}
+           {STATEMENT}
+        options:
+          NUM:
+            '10': molt baixa
+            '25': baixa
+            '50': 50%
+            '75': alta
+            '90': molt alta
+      gamelab_xLocationOf:
+        text: coordenada x de {SPRITE}
+      gamelab_yLocationOf:
+        text: coordenada y de {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} patina cap a {LOCATION}"
+      KatiesBlocks_goldilocks:
+        text: |2-
+           si {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"solid"': sòlid
+            '"liquid"': líquid
+            '"gas"': gas
+      KatiesBlocks_spriteBirdSay:
+        text: "{SPRITE} diu {SPEECH}"
+        options:
+          SPEECH:
+            '"My beak is pointy and strong to find insects in tree bark."': Tinc el bec punxegut i fort per trobar insectes a l'escorça dels arbres.
+            '"I have a beak like a scoop to catch fish."': Tinc el bec com una cullera per agafar peixos.
+      KatiesBlocks_tumbling:
+        text: fer acrobàcies
+      Mikelab_addBehaviorSimple:
+        text: sprite {SPRITE} comença a {BEHAVIOR}
+      Mikelab_addTrainingData:
+        text: 'afegir dades d''entrenament: {NAME},{LOCATION}'
+        options:
+          NAME:
+            "{x: 201, y: 100}": objecte
+            "{x: 200, y: 100}": peixos
+          LOCATION:
+            "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": peixos
+            "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": no peix
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": la-meva-etiqueta
+            "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": no la-meva-etiqueta
+      Mikelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
+      Mikelab_beginDataCollection:
+        text: preguntar l'usuari {QUESTION} per la variable {VAR} amb les opcions {A}{B}{C}
       Mikelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': mida
             '"rotation"': rotació
+            '"x"': posició x
+            '"y"': posició y
             '"direction"': direcció del moviment
       Mikelab_createNewSprite:
         options:
@@ -1011,19 +1847,37 @@ ca:
             "{x: 300, y: 100}": part superior dreta
             "{x: 100, y: 300}": part inferior esquerra
             "{x: 300, y: 300}": part inferior dreta
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Aleatori
+      Mikelab_getNext:
+        text: obtenir l'objecte següent
       Mikelab_getProp:
         options:
           PROPERTY:
             '"scale"': mida
             '"rotation"': rotació
+            '"x"': posició x
+            '"y"': posició y
             '"direction"': direcció del moviment
-      Mikelab_groupChangePropBy:
+      Mikelab_groupChangeAnim:
+        text: canviar {SELECT} {COSTUME} per {COSTUME2}
         options:
+          SELECT:
+            '"all"': tot
+            '"this"': aquest
+      Mikelab_groupChangePropBy:
+        text: canviar {PROPERTY} de {SELECT} {COSTUME} en {VAL}
+        options:
+          SELECT:
+            '"all"': tot
+            '"this"': aquest
           PROPERTY:
             '"scale"': mida
             '"rotation"': rotació
+            '"x"': posició x
+            '"y"': posició y
             '"direction"': direcció del moviment
       Mikelab_groupCreateNewSprite:
+        text: fer un {COSTUME} nou a {LOCATION}
         options:
           LOCATION:
             "{x: 200, y: 100}": part superior
@@ -1035,18 +1889,83 @@ ca:
             "{x: 300, y: 100}": part superior dreta
             "{x: 100, y: 300}": part inferior esquerra
             "{x: 300, y: 300}": part inferior dreta
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Aleatori
+      Mikelab_groupDestroy:
+        text: eliminar {SELECT} {COSTUME}
+        options:
+          SELECT:
+            '"all"': tot
+            '"this"': aquest
+      Mikelab_groupDisplace:
+        text: tots els {COSTUME} impedeixen que {COSTUME2} es mogui
+      Mikelab_groupEdgesDisplace:
+        text: les vores impedeixen que {COSTUME} es mogui
       Mikelab_groupGetProp:
+        text: "{SELECT} {PROPERTY} de {COSTUME}"
         options:
+          SELECT:
+            '"average"': mitjana
+            '"this"': aquest
           PROPERTY:
             '"scale"': mida
             '"rotation"': rotació
+            '"x"': posició x
+            '"y"': posició y
             '"direction"': direcció del moviment
+      Mikelab_groupRemoveAllBehaviors:
+        text: parar {SELECT} comportaments de {COSTUME}
+        options:
+          SELECT:
+            '"all"': tot
+            '"this"': aquest
+      Mikelab_groupRemoveBehaviorSimple:
+        text: "{SELECT}{COSTUME} para {BEHAVIOR}"
+        options:
+          SELECT:
+            '"all"': tot
+            '"this"': aquest
+      Mikelab_groupRemoveTint:
+        text: eliminar color de {SELECT}{COSTUME}
+        options:
+          SELECT:
+            '"all"': tot
+            '"this"': aquest
       Mikelab_groupSetProp:
+        text: establir {PROPERTY} de {SELECT} {COSTUME} a {VAL}
         options:
+          SELECT:
+            '"all"': tot
+            '"this"': aquest
           PROPERTY:
             '"scale"': mida
             '"rotation"': rotació
+            '"x"': posició x
+            '"y"': posició y
             '"direction"': direcció del moviment
+      Mikelab_groupSetTint:
+        text: canviar color de {SELECT} {COSTUME} a {COLOR}
+        options:
+          SELECT:
+            '"all"': tot
+            '"this"': aquest
+      Mikelab_groupWhenClickedOn:
+        text: quan clic a {COSTUME}
+      Mikelab_groupWhenXTouchesY:
+        text: quan {COSTUME} toca {COSTUME2}
+      Mikelab_groupWhileClicked:
+        text: mentre es fa clic a {COSTUME}
+      Mikelab_groupWhileTouchingAny:
+        text: |-
+          mentre {COSTUME} toca {COSTUME2}
+          {STATEMENT}
+      Mikelab_hasBehavior:
+        text: "{SPRITE} fa l'acció de {BEHAVIOR}"
+      Mikelab_hideFish:
+        text: eliminar {TRASH}
+        options:
+          TRASH:
+            object: objecte
+            fish: peixos
       Mikelab_ifDanceIs:
         text: |-
           si {SPRITE} està fent {DANCE}
@@ -1064,26 +1983,118 @@ ca:
             MOVES.Kick: Estrella
             MOVES.ThisOrThat: Aquest o aquell
             MOVES.Rest: Cap
+      Mikelab_ifLabel:
+        text: |-
+          si {DANCE}
+          fer {DO1} si no {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: peixos
+            MOVES.Clown: la-meva-etiqueta
+      Mikelab_ifRecognizeLabel:
+        text: |-
+          si reconeix objecte com a {DANCE}
+          fer {DO1} si no {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: peixos
+            MOVES.Clown: la-meva-etiqueta
+      Mikelab_ifRecognizeLabelOnly:
+        text: |-
+          si reconeix objecte com a {DANCE}
+          fer {DO1}
+        options:
+          DANCE:
+            MOVES.ClapHigh: peixos
+            MOVES.Clown: no la-meva-etiqueta
+      Mikelab_joinText:
+        text: "{TEXT} {NEXT}"
+      Mikelab_locationAt:
+        text: 'ubicació x: {X} y: {Y}'
+      Mikelab_location_picker:
+        text: "{LOCATION}"
+      Mikelab_poemTextJoin:
+        text: "{TEXT1} {VAR} {TEXT2}"
+        options:
+          TEXT1:
+            '"Balancing on the "': '"Fent equlibris sobre"'
+            '"A chubby cat "': '"Un gat gros"'
+            '"The "': '"La"'
+          TEXT2:
+            '" fence"': '" tanca"'
+            '""': "“”"
+            '" breeze blows"': '" bufa una brisa"'
       Mikelab_randomColor:
         text: color aleatori
+      Mikelab_removeBehaviorSimple:
+        text: sprite {SPRITE} para {BEHAVIOR}
       Mikelab_repeatUntilComplete:
         text: repetir per sempre
+      Mikelab_sendBad:
+        text: moure objecte a l'esquerra
+      Mikelab_sendGood:
+        text: moure objecte a la dreta
       Mikelab_setBG:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': ciutat
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': herba contínua
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': camí desèrtic
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': terreny agrícola
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': herba flotant
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': façana de casa
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': cuina
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': sala d'estar
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': prat
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': vista d'un parc
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': pins
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': camp de futbol
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': estapa
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': metro
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': sol i arc de Sant Martí
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': rajos de sol
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': pista de tenis
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': illa amb arbre
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': metro
       Mikelab_setProp:
         options:
           PROPERTY:
             '"scale"': mida
             '"rotation"': rotació
+            '"x"': posició x
+            '"y"': posició y
             '"direction"': direcció del moviment
+      Mikelab_setupLevel:
+        text: |-
+          nivell de configuració amb
+          {A1}{A2}{A3}{A4}
+          {A5}{A6}{A7}{A8}
+          {B1}{B2}{B3}{B4}
+          {B5}{B6}{B7}{B8}
+      Mikelab_setupOutbreak:
+        text: |-
+          configuració del brot
+          població:{SPRITE2N}
+          {TOGGLE}virus
+      Mikelab_setupSim:
+        text: |-
+          configurar simulació amb
+          {SPRITE1N}{SPRITE1COSTUME}velocitat{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}velocitat{SPRITE2SPEED}
+          recopilant
+          {SPRITE3N}{SPRITE3COSTUME}
       Mikelab_showScoreboard:
         options:
           CORNER:
             '"right"': dret
             '"left"': esquerra
+      Mikelab_showText:
+        options:
+          PREPOSITION:
+            '"above"': a sobre
+            '"below"': a sota
       Mikelab_sprite:
+        text: nou sprite {COSTUME} a {LOCATION}
         options:
           LOCATION:
             "{x: 200, y: 100}": part superior
@@ -1095,6 +2106,9 @@ ca:
             "{x: 300, y: 100}": part superior dreta
             "{x: 100, y: 300}": part inferior esquerra
             "{x: 300, y: 300}": part inferior dreta
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Aleatori
+      Mikelab_whenClickedOn:
+        text: quan clic a {SPRITE}
       Mikelab_whenKeyPressed:
         text: quan la {KEY} és premuda
         options:
@@ -1103,6 +2117,7 @@ ca:
             '"down"': fletxa cap avall
             '"left"': fletxa esquerra
             '"right"': fletxa dreta
+            '"space"': barra d’espai
             '"w"': W
             '"a"': A
             '"s"': S
@@ -1114,11 +2129,15 @@ ca:
             '"down"': fletxa cap avall
             '"left"': fletxa esquerra
             '"right"': fletxa dreta
+            '"space"': barra d’espai
             '"w"': W
             '"a"': A
             '"s"': S
             '"d"': D
+      Mikelab_whenMouseClicked:
+        text: quan clic al ratolí
       Mikelab_whenYesNoClicked:
+        text: quan clic a {KEY}
         options:
           KEY:
             '"yes"': sí
@@ -1130,20 +2149,51 @@ ca:
             '"down"': fletxa cap avall
             '"left"': fletxa esquerra
             '"right"': fletxa dreta
+            '"space"': barra d’espai
+      Mikelab_xLocationOf:
+        text: coordenada x de {SPRITE}
+      Mikelab_yLocationOf:
+        text: coordenada y de {SPRITE}
+      Outbreak_beginCongregating:
+        text: els monstres comencen a congregar-se
+      Outbreak_beginQuarantining:
+        text: Els monstres comencen a fer quarantena quan es posen malalts
+      Outbreak_beginSocialDistancing:
+        text: els monstres comencen a mantenir la distància de seguretat
+      Outbreak_beginWandering:
+        text: els monstres comencen a deambular
+      Outbreak_beginWearingMasks:
+        text: els monstres comencen a posar-se la mascareta
+      Outbreak_layoutBorder:
+        text: disposar els monstres en un marge
+      Outbreak_layoutClusters:
+        text: disposar monstres en grups de {NUM}
+      Outbreak_layoutGrid:
+        text: disposar monstres en una quadrícula
+      Outbreak_layoutRandom:
+        text: disposar monstres aleatòriament
+      Outbreak_setSpeed:
+        text: establir la velocitat del monstre a {VAL}
+      Outbreak_setupOutbreak:
+        text: establir la Ciutat dels Monstres amb {COUNT} monstres
+      Outbreak_stopMoving:
+        text: els monstres deixen de moure's
       ParticlesBlocks_getMicroscope:
         text: El microscopi té {INPUT1}
         options:
           INPUT1:
             '1': suc de llimona
-            '3': baking soda
-            '5': both
+            '3': bicarbonat de sodi
+            '5': tots dos
       ParticlesBlocks_setMicroscope:
+        text: Establir microscopi a {INPUT1}
         options:
           INPUT1:
             '1': suc de llimona
-            '3': baking soda
-            '5': both
+            '3': bicarbonat de sodi
+            '5': tots dos
       ParticlesBlocks_statesOfMatter:
+        text: "{BEHAVIOR}"
         options:
           BEHAVIOR:
             new Behavior(solid, []): sòlid
@@ -1157,26 +2207,104 @@ ca:
             '"liquid"': partícula líquida
             '"gas"': partícula de gas
       ParticlesBlocks_statesOfMatter_testing:
+        text: "[Testing] Establir {COSTUME} al comportament de {BEHAVIOR}"
         options:
           BEHAVIOR:
             '"solid"': Partícula sòlida
             '"liquid"': partícula líquida
             '"gas"': partícula de gas
       Poetry_addFrame:
+        text: establir marc a {BRUSH}
         options:
           BRUSH:
+            '"bamboo"': bambú
+            '"beaded"': amb pedreria
+            '"brick"': maó
+            '"decorative"': decoratiu
+            '"donuts"': anelles
+            '"fire"': foc
+            '"flowers"': flors
+            '"gilded"': daurat
             '"hearts"': cors
+            '"iceCream"': gelat
+            '"leaves"': fulles
+            '"metal"': marc metàl·lic
+            '"pawPrints"': petjades de potetes
             '"rainbow"': Arc de Sant Martí
+            '"stars"': estrelles
+            '"swirls"': remolins
+            '"waves"': onades
+            '"wood"': marc de fusta
+            '"zigzag"': ziga-zaga
+      Poetry_addLine:
+        text: afegir línia {LINE}
+      Poetry_addTextHighlight:
+        text: afegir ressaltat de text {COLOR}
+      Poetry_animateText:
+        text: animar text
+      Poetry_destroy:
+        text: eliminar {ANIMATION_NAME}
+      Poetry_glideTo:
+        text: "{SPRITE} patina cap a {LOCATION}"
+      Poetry_hideText:
+        text: amagar text
+      Poetry_makeBurst:
+        text: crear efecte {EFFECT} amb {NUM} {ANIMATION_NAME} sprites
+        options:
+          EFFECT:
+            '"burst"': esclat
+            '"pop"': saltar
+            '"rain"': pluja
+            '"spiral"': espiral
+      Poetry_makeNewSpriteAnon:
+        text: fer nou sprite {ANIMATION_NAME} a {LOCATION}
+      Poetry_makeNumSprites:
+        text: fer {NUM} sprites {ANIMATION_NAME} nous
       Poetry_playMusic:
+        text: reproduir música {SOUND}
         options:
           SOUND:
+            '"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"': viu
+            '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': calmat
+            '"sound://category_nature/steady_campfire_loop.mp3"': foguera
+            '"sound://category_nature/rain_loop.mp3"': pluja fina
+            '"sound://category_background/fire_burning.mp3"': llar de foc
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': bosc
+            '"sound://category_loops/vibrant_game_harping_down_forever_loop_2_accent.mp3"': arpes
+            '"sound://category_loops/faultering_desicion_loop1.mp3"': embruixat
+            '"sound://category_background/inside_plane.mp3"': brunzit
+            '"sound://category_loops/red_flag_loop1.mp3"': missió
             '"sound://category_nature/summer_night_loop.mp3"': nit
+            '"sound://category_background/ocean_waves.mp3"': oceà
+            '"sound://category_background/rain_thunderstorm_calm.mp3"': pluja
+            '"sound://category_background/rainforest_ambient_sound.mp3"': selva tropical
+            '"sound://category_background/repitition.mp3"': cavalcar
+            '"sound://category_background/wavering_wind.mp3"': somnolent
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': lent
+            '"sound://category_background/waterfall.mp3"': cascada
       Poetry_playSound:
+        text: reproduir so {SOUND}
         options:
           SOUND:
+            '"sound://category_bell/long_bell_notification.mp3"': timbre
+            '"sound://category_explosion/puzzle_game_break_magic_05.mp3"': trencar
+            '"sound://category_digital/boing_2.mp3"': boing
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': bombolla
+            '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': conversa de fons
+            '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': desinflar
+            '"sound://category_jump/retro_game_enemy_jump_3.mp3"': fracàs
+            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': voleteig
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': salt
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': llum
+            '"sound://category_poof/puzzle_game_poof_04.mp3"': puf!
+            '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': escàner
+            '"sound://category_background/typewriter.mp3"': màquina d'escriure
+            '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': emocionant
+            '"sound://category_achievements/peaceful_win_1.mp3"': victòria
+            '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': remolí
+            '"sound://category_achievements/peaceful_win_6.mp3"': mòbil de vent
       Poetry_playSoundOptionsSpace:
+        text: reproduir so {SOUND}
         options:
           SOUND:
             "'sound://category_space/Blackhole_SFX.mp3'": forat negre
@@ -1184,55 +2312,137 @@ ca:
             "'sound://category_space/Carina_SFX.mp3'": carina
             "'sound://category_space/Cassiopeia_SFX.mp3'": cassiopea
             "'sound://category_space/Crab_nebula_SFX.mp3'": nebulosa del cranc
+            "'sound://category_space/Galactic_center_SFX.mp3'": centre galàctic
             "'sound://category_space/Launch_SFX.mp3'": llançar
             "'sound://category_space/Lift_Off.mp3'": aixecar
             "'sound://category_space/Pillars_SFX.mp3'": pilars
             "'sound://category_space/Southern_ring_SFX.mp3'": anell del sud
             "'sound://category_space/Supernova_SFX.mp3'": supernova
             "'sound://category_space/Tycho_SFX.mp3'": tycho
+            "'sound://category_space/Whirlpool_galaxy_SFX.mp3'": galaxia espiral
+      Poetry_setAuthor:
+        text: establir autor {AUTHOR}
       Poetry_setBackground:
         text: definir el color de fons {COLOR}
       Poetry_setBackgroundEffect:
+        text: establir fons amb {EFFECT} {PALETTE}
         options:
           EFFECT:
+            '"blooming"': floració
             '"bubbles"': Bombolles
             '"clouds"': ennuvolat
             '"confetti"': Confeti
+            '"darkCircles"': esvaïment
+            '"fadeColors"': gelat
             '"hearts"': cors
             '"space"': Espai
+            '"rain"': pluja
+            '"ripples"': ondulació
+            '"colors"': canviants
             '"stars"': Estrelles
+            '"squiggles"': onades
           PALETTE:
+            '"autumn"': tardor
+            '"sunrise"': alba
+            '"sunset"': capvespre
+            '"grayscale"': grisos
+            '"ocean"': oceà
             '"rainbow"': Arc de Sant Martí
+            '"roses"': roses
+            '"sky"': cel
+            '"spring"': molla
+            '"summer"': estiu
             '"winter"': l'hivern
+      Poetry_setBackgroundImageAs:
+        text: establir fons a {IMG}
+      Poetry_setFont:
+        text: establir tipus de lletra {FONT}
+        options:
+          FONT:
+            '"Arial"': Arial
+            '"Arial Black"': Arial Black
+            '"Courier"': Courier
+            '"Cursive"': A mà
+            '"Impact"': Impact
+            '"Georgia"': Georgia
+            '"Times"': Times
+      Poetry_setFontColor:
+        text: establir el color del text {FILL}
       Poetry_setForegroundEffect:
+        text: fer efecte {EFFECT}
         options:
           EFFECT:
             '"bubbles"': Bombolles
             '"confetti"': Confeti
             '"hearts"': cors
+            '"emojis"': emoticones alegres
+            '"rain"': pluja
+            '"starburst"': esclat d'estrelles
+            '"glass"': vidre trencat
+            '"twinkling"': centelleig
+      Poetry_setPrompt:
+        text: preguntar l'usuari {LEFT_QUOTE}{NAME}{RIGHT_QUOTE} per la variable {VAR}
+      Poetry_setPromptWithChoices:
+        text: preguntar l'usuari {LEFT_QUOTE}{TEXT}{RIGHT_QUOTE} per la variable {VAR} amb les opcions {LEFT_QUOTE_A}{A}{RIGHT_QUOTE_A} {LEFT_QUOTE_B}{B}{RIGHT_QUOTE_B} {LEFT_QUOTE_C}{C}{RIGHT_QUOTE_C}
+      Poetry_setSize:
+        text: establir la mida de {SPRITE} a {VAL}
+      Poetry_setTextEffect:
+        text: establir efecte de text {EFFECT}
+        options:
+          EFFECT:
+            '"fade"': difuminar
+            '"flyLeft"': volar des de l'esquerra
+            '"flyRight"': volar des de la dreta
+            '"flyTop"': volar des de dalt
+            '"flyBottom"': volar des de baix
+            '"typewriter"': màquina d'escriure
+      Poetry_setTitle:
+        text: establir títol {TITLE}
+      Poetry_showText:
+        text: mostra text
       Poetry_startBehavior:
+        text: 'sprite {ANIMATION_NAME} comença a {BEHAVIOR} '
         options:
           BEHAVIOR:
             '"fluttering"': voletejar
             '"growing"': créixer
             '"jittering"': tremolar
+            '"moving_north_and_looping"': acrobàcia cap al nord
+            '"moving_south_and_looping"': acrobàcia cap al sud
+            '"moving_east_and_looping"': acrobàcia cap a l'est
+            '"moving_west_and_looping"': acrobàcia cap a l'oest
             '"shrinking"': encongir-se
             '"spinning_left"': voltejar cap a l'esquerra
             '"spinning_right"': voltejar cap a la dreta
+            '"swimming_left_and_right"': natació
             '"wandering"': deambular
             '"wobbling"': balancejar
       Poetry_stopBehavior:
+        text: 'sprite {ANIMATION_NAME} para {BEHAVIOR} '
         options:
           BEHAVIOR:
             '"fluttering"': voletejar
             '"growing"': créixer
             '"jittering"': tremolar
+            '"moving_north_and_looping"': acrobàcia cap al nord
+            '"moving_south_and_looping"': acrobàcia cap al sud
+            '"moving_east_and_looping"': acrobàcia cap a l'est
+            '"moving_west_and_looping"': acrobàcia cap a l'oest
             '"shrinking"': encongir-se
             '"spinning_left"': voltejar cap a l'esquerra
             '"spinning_right"': voltejar cap a la dreta
+            '"swimming_left_and_right"': natació
             '"wandering"': deambular
             '"wobbling"': balancejar
+            '"all"': "--tots els comportaments--"
+      Poetry_stringValue:
+        text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
+      Poetry_textConcat:
+        text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
+      Poetry_textVariableJoin:
+        text: "{VAR}{TEXT2}"
       Poetry_whenLineShows:
+        text: quan apareix la línia {N}
         options:
           'N':
             '0': "???"
@@ -1251,26 +2461,170 @@ ca:
             '13': '13'
             '14': '14'
             '15': '15'
+      Poetry_whenPromptAnswered:
+        text: quan es respon {VAR}
       RyanLab_moveForward:
         text: avança
       RyanLab_turnLeft:
         text: girar a l'esquerra
       RyanLab_turnRight:
         text: girar a la dreta
+      Vector_createSpriteWith:
+        text: |-
+          crear sprite
+          fer{STATEMENT}
+      Vector_log:
+        text: registrar missatge {MESSAGE}
       Vector_positionCenter:
         text: centre
+      Vector_push:
+        text: establir velocitat {VECTOR}
+      Vector_randomLocation:
+        text: ubicació aleatòria
+      Vector_setColor:
+        text: establir color a {COLOR}
+      Vector_setSize:
+        text: conjunt amplada {WIDTH} alçada {HEIGHT}
+      Vector_teleportTo:
+        text: establir posició {POSITION}
+      Vector_vectorNorth:
+        text: nord
       Vector_where:
+        text: cada sprite en què {PROPERTY} és {VALUE} fa {STATEMENT}
         options:
           PROPERTY:
             "'shapeColor'": color
       aalab_layoutSprites:
+        text: disposar monstres com a {FORMAT}
         options:
           FORMAT:
             '"grid"': quadrícula
-            '"border"': frontera
+            '"border"': marges
             '"row"': classe
             '"random"': atzar
+      aalab_levelFailure:
+        text: alumne {STATE} amb {KEY}
+        options:
+          STATE:
+            '0': aprovats
+            '3': suspesos
+      aalab_setSpeed:
+        text: establir la velocitat del monstre a {VAL}
+      aalab_setupSim:
+        text: establir la Ciutat dels Monstres amb {COUNT} monstres
+      aalab_someGraduallyStartIntervention:
+        text: "{PORTION} de monstres comencen a {BEHAVIOR} {RATE}"
+        options:
+          PORTION:
+            '1': tot
+            '0.75': la majoria
+            '0.5': la meitat
+            '0.25': alguns
+          RATE:
+            '"immediately"': immediatament
+            '"quickly"': ràpidament
+            '"gradually"': gradualment
+            '"slowly"': lentament
+          BEHAVIOR:
+            '"wandering"': deambular aleatòriament
+            '"congregating"': congregar-se
+            '"quarantining"': fer quarantena quan estan malalts
+            '"avoiding"': mantenir la distància social
+            '"none"': quedar-se quiets
+      aalab_someStartIntervention:
+        text: "{PORTION} de monstres comencen a {BEHAVIOR}"
+        options:
+          PORTION:
+            '1': tot
+            '0.75': la majoria
+            '0.5': la meitat
+            '0.25': alguns
+          BEHAVIOR:
+            '"wandering"': deambular aleatòriament
+            '"congregating"': congregar-se
+            '"quarantining"': fer quarantena quan estan malalts
+            '"avoiding"': mantenir la distància social
+            '"none"': quedar-se quiets
+      aalab_spriteSayChoices:
+        text: "{SPRITE} diu {SPEECH}"
+        options:
+          SPEECH:
+            '"I have spoken."': I és tal com dic.
+            '"Bounty hunting is a complicated profession."': La professió de caça-recompenses no és gens fàcil.
+            '"I will initiate self-destruct."': Iniciaré l'autodestrucció.
+            '"This is the way."': Així és com ha de ser.
+            '"People get built different. We don’t need to figure it out, we just need to respect it."': Cadascú és diferent. No cal que ho entenguem, sinó que ho respectem.
+            '"You don’t need a mirror to look good. You’re beautiful on the inside."': No et cal un mirall per veure't bé. El que importa és com ets per dins.
+            '"Sometimes life is scary and dark. That is why we must find the light."': De vegades, la vida és tot foscor. Per això hem de seguir la llum.
+            '"Everything small is just a smaller version of something big."': Tot el que és petit és només una versió reduïda d'una cosa gran.
+            '"Suckin’ at something is the first step to being sorta good at something."': Ser una patata en alguna cosa és el primer pas per arribar a fer-ho bé.
+            '"Life happens wherever you are, whether you make it or not."': La vida segueix el seu propi curs, siguis on siguis, facis el que facis.
+            '"You can’t knock me down!"': No podràs amb mi!
+            '"Roar!"': Grrrrr!
+            '"My first girlfriend turned into the moon."': La meva primera nòvia es va convertir en la lluna.
+            '"True humility is the only antidote to shame."': La humilitat autèntica és l'únic antídot contra la vergonya.
+            '"You are stronger and wiser and freer than you have ever been."': Ets més fort i savi i lliure que mai.
+            '"You have to try every time. You can''t quit because you''re afraid you might fail."': Ho has d'intentar una vegada i una altra. No pots rendir-te per por de caure.
+      aalab_startIntervention:
+        text: els monstres comencen a {BEHAVIOR}
+        options:
+          BEHAVIOR:
+            wandering: deambular aleatòriament
+            '"congregating"': congregar-se
+            '"quarantining"': fer quarantena quan estan malalts
+            '"avoiding"': mantenir la distància social
+            '"none"': quedar-se quiets
+      adaptations_adaptationBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): voltejar cap a la dreta
+            new Behavior(spinning_left, []): voltejar cap a l'esquerra
+            new Behavior(fluttering, []): voletejar
+            new Behavior(jittering, []): tremolar
+            new Behavior(wobbling, []): balancejar
+            new Behavior(wandering, []): deambular
+            new Behavior(patrolling, []): rondar
+      adaptations_spriteBirdSay:
+        text: "{SPRITE} diu {SPEECH}"
+        options:
+          SPEECH:
+            '"My beak is pointy and strong to find insects in tree bark."': Tinc el bec punxegut i fort per trobar insectes a l'escorça dels arbres.
+            '"I have a beak like a scoop to catch fish."': Tinc el bec com una cullera per agafar peixos.
+      adaptations_startFollowing:
+        text: "{SPRITE} comença a seguir {TARGET}"
+      binary_drawBin:
+        text: dibuixar binari {BIN}
+      binary_drawBinScreen:
+        text: |-
+          dibuixar pantalla
+          {B1}
+          {B2}
+          {B3}
+          {B4}
+          {B5}
+          {B6}
+          {B7}
+          {B8}
+      binary_drawDec:
+        text: dibuixar decimal {DEC}
+      binary_drawPixelHere:
+        text: establir píxel {VAL}
+        options:
+          VAL:
+            '0': apagat
+            '1': encès
+            '"toggle"': alternar
+      binary_drawString:
+        text: dibuixar cadena {STR}
+      binary_goTo:
+        text: saltar a {LOC}
+      binary_goToHome:
+        text: saltar a la part superior esquerra
+      binary_gridSize:
+        text: establir mida de la quadrícula a {SIZE}
       binary_move:
+        text: moure's en direcció {DIR}
         options:
           DIR:
             '"up"': cap amunt
@@ -1286,6 +2640,10 @@ ca:
             '"left"': esquerra
             '"right"': dret
             '"space"': espai
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       craft_ifPath:
         text: |-
           si camí {DIR}
@@ -1316,6 +2674,8 @@ ca:
             "'sand'": sorra
             "'darkPrismarine'": prismarina fosca
             "'seaLantern'": llanterna de mar
+      craft_log:
+        text: registrar missatge {MESSAGE}
       craft_moveForward:
         text: avança
       craft_placeBlock:
@@ -1375,13 +2735,46 @@ ca:
           DIR:
             right: dreta ↻
             left: esquerra ↺
+      ecosystems_goldilocks:
+        text: |2-
+           si {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"too much"': massa
+            '"just right"': perfecte
+            '"too little"': massa poc
+      ecosystems_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      storylab_clearHeadings:
+        text: esborrar títols
+      storylab_printText:
+        text: imprimir {TEXT}
       storylab_setForegroundEffect2:
+        text: fer efecte {EFFECT}
         options:
           EFFECT:
             '"bubbles"': Bombolles
             '"confetti"': Confeti
             '"hearts"': cors
+            '"rain"': pluja
+            '"starburst"': esclat d'estrelles
+            '"twinkling"': centelleig
       storylab_setHeading:
         text: establir encapçalament {HEADING}
+      storylab_setPromptWithChoice:
+        text: preguntar l'usuari {QUESTION} per la variable {VAR} amb l'opció {A}
       storylab_setSubheading:
         text: establir encapçalament {SUBHEADING}

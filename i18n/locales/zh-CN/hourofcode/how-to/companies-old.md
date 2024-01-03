@@ -31,7 +31,7 @@ For more instructions on encouraging employees and connecting your employees wit
 - Promote your [Hour of Code]({{ urls/promote }}) event and encourage others to host.
 - 鼓励您公司的软件工程师参观当地课堂，以便帮助引导他们开展编程一小时，并鼓励学生们学习计算机科学。 They can [sign up]({{ urls/volunteer_engineer }}) to be connected with a classroom.
 
-## 2. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 2. 观看此指导视频 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
 
 ## 3. Choose an activity
 We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participants of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
@@ -67,7 +67,7 @@ We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participa
 - 如果您所在的是一家科技公司，可以演示您公司的有趣的， 创新的产品。
 - 如果您不是一家科技公司，可以讨论您公司是如何使用技术来解决问题和完成目标的。
 - 邀请您公司的软件工程师谈谈为什么他们决定学习计算机科学以及他们目前从事的项目。
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- [在此处查看让女孩对计算机科学感兴趣的小贴士]({{ urls/girls }})。
 
 ## 6. 编程吧！
 **在活动中指导参与者**

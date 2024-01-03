@@ -12,8 +12,8 @@ const shapes = {
     tags_international_languages: PropTypes.string,
     tags_grade: PropTypes.string,
     tags_programming_language: PropTypes.string,
-    tags_accessibility: PropTypes.string
-  })
+    tags_accessibility: PropTypes.string,
+  }),
 };
 
 export default shapes;

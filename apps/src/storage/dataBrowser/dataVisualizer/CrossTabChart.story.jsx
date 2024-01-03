@@ -4,7 +4,7 @@ import _ from 'lodash';
 
 export default {
   title: 'CrossTabChart',
-  component: CrossTabChart
+  component: CrossTabChart,
 };
 
 const Template = args => <CrossTabChart {...args} />;
@@ -15,7 +15,7 @@ BasicExample.args = {
   numericColumns: [],
   selectedColumn1: 'Date',
   selectedColumn2: 'Wind Direction',
-  chartTitle: 'Study of the wind'
+  chartTitle: 'Study of the wind',
 };
 
 function makeFakeRecords() {
@@ -25,14 +25,14 @@ function makeFakeRecords() {
     '3/6 Fri',
     '3/7 Sat',
     '3/8 Sun',
-    '3/9 Mon'
+    '3/9 Mon',
   ];
   const DIRECTIONS = ['E', 'NE', 'N', 'Northwest', 'W', 'SW', 'S', 'SE'];
   const result = [];
   for (let i = 0; i < 1000; i++) {
     result.push({
       Date: _.sample(DATES),
-      'Wind Direction': _.sample(DIRECTIONS)
+      'Wind Direction': _.sample(DIRECTIONS),
     });
   }
   return result;

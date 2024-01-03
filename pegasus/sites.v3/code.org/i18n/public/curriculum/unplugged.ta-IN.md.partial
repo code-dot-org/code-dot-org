@@ -231,3 +231,4 @@ th, td {
 
 <p style="clear:both"></p>
 
+{{ visit_partial_event_logger }}

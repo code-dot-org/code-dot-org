@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import i18n from '@cdo/locale';
 import color from '../util/color';
+import fontConstants from '@cdo/apps/fontConstants';
 
 export default class SchoolTypeDropdown extends Component {
   static propTypes = {
@@ -10,12 +11,12 @@ export default class SchoolTypeDropdown extends Component {
     country: PropTypes.string,
     fieldName: PropTypes.string,
     showRequiredIndicator: PropTypes.bool,
-    showErrorMsg: PropTypes.bool
+    showErrorMsg: PropTypes.bool,
   };
 
   static defaultProps = {
     value: '',
-    fieldName: 'user[school_info_attributes][school_type]'
+    fieldName: 'user[school_info_attributes][school_type]',
   };
 
   render() {
@@ -67,15 +68,15 @@ export default class SchoolTypeDropdown extends Component {
 const styles = {
   asterisk: {
     fontSize: 20,
-    fontFamily: '"Gotham 5r", sans-serif',
-    color: color.red
+    ...fontConstants['main-font-semi-bold'],
+    color: color.red,
   },
   errors: {
     fontSize: 14,
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     color: color.red,
     paddingTop: 5,
-    paddingBottom: 5
+    paddingBottom: 5,
   },
   singleLineLayoutStyles: {
     display: 'table-cell',
@@ -83,18 +84,18 @@ const styles = {
     verticalAlign: 'middle',
     minHeight: 42,
     fontSize: 13,
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     color: '#333',
-    padding: 0
+    padding: 0,
   },
   singleLineContainerStyles: {
     display: 'table',
-    width: '100%'
+    width: '100%',
   },
   selectStyle: {
     width: 390,
     verticalAlign: 'top',
     marginBottom: '5px',
-    marginTop: '5px'
-  }
+    marginTop: '5px',
+  },
 };

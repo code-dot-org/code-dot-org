@@ -14,7 +14,7 @@ const DEFAULT_PROPS = {
   tableRecords: [],
   libraryManifest: {},
   onShowWarning: () => {},
-  onViewChange: () => {}
+  onViewChange: () => {},
 };
 
 describe('DataTableView', () => {
@@ -64,7 +64,7 @@ describe('DataTableView', () => {
 
       // Switch to 'Debug view' so we can render the link to the 'Table view'
       wrapper.setState({
-        showDebugView: true
+        showDebugView: true,
       });
 
       let viewLink = wrapper.find('#uitest-tableDebugLink').at(0);

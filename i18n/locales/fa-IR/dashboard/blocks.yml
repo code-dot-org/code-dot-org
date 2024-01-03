@@ -1,16 +1,17 @@
+---
 fa:
   data:
     blocks:
-      AmysBlocks_moving_with_arrow_keys:
-        text: حرکت به شمال/شرق/جنوب/غرب با کلیدهای جهت
+      AmysBlocks_playerBehaviors:
+        text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:
-        text: به کاربر برای متغیر [VAR][1] سوال [QUESTION][0] با انتخابهای [A][2][B][3][C][4] را بفرست
+        text: به کاربر برای متغیر {VAR} سوال {QUESTION} با انتخابهای {A}{B}{C} را بفرست
       AmysBlocks_spriteSayVar:
-        text: "[SPRITE][0] میگوید: [TEXT1][1]"
+        text: "{SPRITE} میگوید: {TEXT1}"
       BadGuys_makeNewBadGuysSprite:
-        text: یک اسپرایت جدید [ANIMATION_NAME][0] در محل [LOCATION][1] بساز
+        text: یک اسپرایت جدید {ANIMATION_NAME} در محل {LOCATION} بساز
       BadGuys_setSizeAll_dropdown:
-        text: تنظیم اندازه‌ی تمام اسپرایتها به [SIZE][0]
+        text: تنظیم اندازه‌ی تمام اسپرایتها به {SIZE}
         options:
           SIZE:
             '0.50': بسیار کوچک
@@ -19,7 +20,7 @@ fa:
             '2.00': بزرگ
             '3.00': بسیار بزرگ
       BadGuys_setSize_dropdown:
-        text: تنظیم اندازه [SPRITE][0] به [SIZE][1]
+        text: تنظیم اندازه {SPRITE} به {SIZE}
         options:
           SIZE:
             '0.50': بسیار کوچک
@@ -27,18 +28,20 @@ fa:
             '1.00': متوسط
             '2.00': بزرگ
             '3.00': بسیار بزرگ
+      Dancelab_ai:
+        text: "{IMAGE} جلوه {VALUE} ایجاد کنید"
       Dancelab_alternateMoves:
-        text: "[GROUP][0] هر [N][1] بار \nبین [MOVE1][2] و [MOVE2][3] تغییر موضع می‌دهد"
+        text: "{GROUP} هر {N} بار \nبین {MOVE1} و {MOVE2} تغییر موضع می‌دهد"
         options:
           GROUP:
             sprites: همه
-            '"ALIEN"': فضایی ها
+            '"ALIEN"': آدم فضایی‌ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
             '"FROG"': قورباغه‌ها
             '"MOOSE"': گوزن بزرگ
             '"PINEAPPLE"': آناناسها
-            '"ROBOT"': روبات ها
+            '"ROBOT"': روبات‌ها
             '"SHARK"': کوسه‌ها
             '"SLOTH"': خرس تنبلها
             '"UNICORN"': تک‌شاخها
@@ -47,11 +50,11 @@ fa:
             MOVES.ClapHigh: کلپ های (رقص)
             MOVES.Dab: داب (رقص)
             MOVES.DoubleJam: پریدن با دو پا روی زمین - دابل داون (رقص)
-            MOVES.Drop: دراپ (رقص)
+            MOVES.Drop: انداختن
             MOVES.Floss: فلاس - قر دادن (رقص)
             MOVES.Fresh: فِرِش (رقص)
             MOVES.Clown: گنگام (رقص)
-            MOVES.Kick: استار - ستاره (رقص)
+            MOVES.Kick: ستاره
             MOVES.ThisOrThat: دیس اور دت (رقص)
             MOVES.Rest: هیچکدام
           MOVE2:
@@ -59,7 +62,7 @@ fa:
             MOVES.ClapHigh: کلپ های (رقص)
             MOVES.Dab: داب (رقص)
             MOVES.DoubleJam: پریدن با دو پا روی زمین - دابل داون (رقص)
-            MOVES.Drop: دراپ (رقص)
+            MOVES.Drop: انداختن
             MOVES.Floss: فلاس - قر دادن (رقص)
             MOVES.Fresh: فِرِش (رقص)
             MOVES.Clown: گنگام (رقص)
@@ -67,30 +70,35 @@ fa:
             MOVES.ThisOrThat: دیس اور دت (رقص)
             MOVES.Rest: هیچکدام
       Dancelab_atTimestamp:
-        text: بعد از [TIMESTAMP][0][UNIT][1]
+        text: بعد از {TIMESTAMP}{UNIT}
+        options:
+          UNIT:
+            '"measures"': اندازه‌ها
+            '"seconds"': ثانیه
+      Dancelab_atTimestampNotAfter:
         options:
           UNIT:
             '"measures"': اندازه‌ها
             '"seconds"': ثانیه
       Dancelab_changeColorBy:
-        text: تغییر [COLOR][0][METHOD][1] به اندازه [AMOUNT][2]
+        text: تغییر {COLOR}{METHOD} به اندازه {AMOUNT}
         options:
           METHOD:
             '"hue"': چرده‌ی رنگ
             '"saturation"': اشباع رنگ
             '"brightness"': روشنایی
       Dancelab_changeMoveEachLR:
-        text: "[GROUP][0] برای همیشه [MOVE][1][DIR][2] را انجام می‌دهد"
+        text: "{GROUP} برای همیشه {MOVE}{DIR} را انجام می‌دهد"
         options:
           GROUP:
             sprites: همه
-            '"ALIEN"': فضایی ها
+            '"ALIEN"': آدم فضایی‌ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
             '"FROG"': قورباغه‌ها
             '"MOOSE"': گوزن بزرگ
             '"PINEAPPLE"': آناناسها
-            '"ROBOT"': روبات ها
+            '"ROBOT"': روبات‌ها
             '"SHARK"': کوسه‌ها
             '"SLOTH"': خرس تنبلها
             '"UNICORN"': تک‌شاخها
@@ -102,15 +110,35 @@ fa:
             MOVES.ClapHigh: کلپ های (رقص)
             MOVES.Dab: داب (رقص)
             MOVES.DoubleJam: پریدن با دو پا روی زمین - دابل داون (رقص)
-            MOVES.Drop: دراپ (رقص)
+            MOVES.Drop: انداختن
             MOVES.Floss: فلاس - قر دادن (رقص)
             MOVES.Fresh: فِرِش (رقص)
             MOVES.Clown: گنگام (رقص)
-            MOVES.Kick: استار - ستاره (رقص)
+            MOVES.Kick: ستاره
             MOVES.ThisOrThat: دیس اور دت (رقص)
             MOVES.Rest: هیچکدام
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} برای همیشه {MOVE}{DIR} را انجام می‌دهد"
+        options:
+          GROUP:
+            '"SLOTH"': خرس تنبلها
+          MOVE:
+            MOVES.Roll: بادی رول - خم شدن (رقص)
+            MOVES.ClapHigh: کلپ های (رقص)
+            MOVES.Dab: داب (رقص)
+            MOVES.DoubleJam: پریدن با دو پا روی زمین - دابل داون (رقص)
+            MOVES.Drop: انداختن
+            MOVES.Floss: فلاس - قر دادن (رقص)
+            MOVES.Fresh: فِرِش (رقص)
+            MOVES.Clown: گنگام (رقص)
+            MOVES.Kick: ستاره
+            MOVES.ThisOrThat: دیس اور دت (رقص)
+            MOVES.Rest: هیچکدام
+            '"next"': "(بعدی)"
+            '"prev"': "(قبلی)"
+            '"rand"': "(تصادفی)"
       Dancelab_changeMoveLR:
-        text: "[SPRITE][0] برای همیشه [MOVE][1][DIR][2] را انجام بدهد"
+        text: "{SPRITE} برای همیشه {MOVE}{DIR} را انجام بدهد"
         options:
           MOVE:
             '"next"': "(بعدی)"
@@ -120,15 +148,15 @@ fa:
             MOVES.ClapHigh: کلپ های (رقص)
             MOVES.Dab: داب (رقص)
             MOVES.DoubleJam: پریدن با دو پا روی زمین - دابل داون (رقص)
-            MOVES.Drop: دراپ (رقص)
+            MOVES.Drop: انداختن
             MOVES.Floss: فلاس - قر دادن (رقص)
             MOVES.Fresh: فِرِش (رقص)
             MOVES.Clown: گنگام (رقص)
-            MOVES.Kick: استار - ستاره (رقص)
+            MOVES.Kick: ستاره
             MOVES.ThisOrThat: دیس اور دت (رقص)
             MOVES.Rest: هیچکدام
       Dancelab_changePropBy:
-        text: تغییر [SPRITE][0][PROPERTY][1] به اندازه [VAL][2]
+        text: تغییر {SPRITE}{PROPERTY} به اندازه {VAL}
         options:
           PROPERTY:
             '"scale"': اندازه
@@ -137,17 +165,17 @@ fa:
             '"x"': موقعیت افقی
             '"y"': موقعیت عمودی
       Dancelab_changePropEachBy:
-        text: تغییر [GROUP][0][PROPERTY][1] به اندازه [VAL][2]
+        text: تغییر {GROUP}{PROPERTY} به اندازه {VAL}
         options:
           GROUP:
             sprites: همه
-            '"ALIEN"': فضایی ها
+            '"ALIEN"': آدم فضایی‌ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
             '"FROG"': قورباغه‌ها
             '"MOOSE"': گوزن بزرگ
             '"PINEAPPLE"': آناناسها
-            '"ROBOT"': روبات ها
+            '"ROBOT"': روبات‌ها
             '"SHARK"': کوسه‌ها
             '"SLOTH"': خرس تنبلها
             '"UNICORN"': تک‌شاخها
@@ -158,17 +186,17 @@ fa:
             '"x"': موقعیت افقی
             '"y"': موقعیت عمودی
       Dancelab_doMoveEachLR:
-        text: "[GROUP][0] برای یکبار [MOVE][1][DIR][2] را انجام دهد"
+        text: "{GROUP} برای یکبار {MOVE}{DIR} را انجام دهد"
         options:
           GROUP:
             sprites: همه
-            '"ALIEN"': فضایی ها
+            '"ALIEN"': آدم فضایی‌ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
             '"FROG"': قورباغه‌ها
             '"MOOSE"': گوزن بزرگ
             '"PINEAPPLE"': آناناسها
-            '"ROBOT"': روبات ها
+            '"ROBOT"': روبات‌ها
             '"SHARK"': کوسه‌ها
             '"SLOTH"': خرس تنبلها
             '"UNICORN"': تک‌شاخها
@@ -181,7 +209,7 @@ fa:
             MOVES.Dab: داب (رقص)
             MOVES.XFever: دیسکو
             MOVES.DoubleJam: پریدن با دو پا روی زمین - دابل داون (رقص)
-            MOVES.Drop: دراپ (رقص)
+            MOVES.Drop: انداختن
             MOVES.Floss: فلاس - قر دادن (رقص)
             MOVES.Fresh: فِرِش (رقص)
             MOVES.Clown: گنگام (رقص)
@@ -193,12 +221,12 @@ fa:
             MOVES.XOle: اوله (رقص فلامنکو)
             MOVES.XArmsSide: ریچ (رقص)
             MOVES.XSlide: اسلاید (رقص)
-            MOVES.Kick: استار - ستاره (رقص)
+            MOVES.Kick: ستاره
             MOVES.XArmsUp: کشش دست
             MOVES.ThisOrThat: دیس اور دت (رقص)
             MOVES.Rest: هیچکدام
       Dancelab_doMoveLR:
-        text: "[SPRITE][0] یکبار [MOVE][1][DIR][2] را انجام دهد"
+        text: "{SPRITE} یکبار {MOVE}{DIR} را انجام دهد"
         options:
           MOVE:
             '"rand"': "(تصادفی)"
@@ -209,7 +237,7 @@ fa:
             MOVES.Dab: داب (رقص)
             MOVES.XFever: دیسکو
             MOVES.DoubleJam: پریدن با دو پا روی زمین - دابل داون (رقص)
-            MOVES.Drop: دراپ (رقص)
+            MOVES.Drop: انداختن
             MOVES.Floss: فلاس - قر دادن (رقص)
             MOVES.Fresh: فِرِش (رقص)
             MOVES.Clown: گنگام (رقص)
@@ -221,31 +249,31 @@ fa:
             MOVES.XOle: اوله (رقص فلامنکو)
             MOVES.XArmsSide: ریچ (رقص)
             MOVES.XSlide: اسلاید (رقص)
-            MOVES.Kick: استار - ستاره (رقص)
+            MOVES.Kick: ستاره
             MOVES.XArmsUp: کشش دست
             MOVES.ThisOrThat: دیس اور دت (رقص)
             MOVES.Rest: هیچکدام
       Dancelab_everySeconds:
-        text: 'هر [N][0][UNIT][1] تکرار کن'
+        text: هر {N}{UNIT} تکرار کن
         options:
           UNIT:
             '"measures"': اندازه‌ها
             '"seconds"': ثانیه
       Dancelab_everyVerseChorus:
-        text: 'هر [UNIT][0]'
+        text: هر {UNIT}
         options:
           UNIT:
             '"verse"': بیت
             '"chorus"': همخوانی
       Dancelab_getEnergy:
-        text: دریافت [RANGE][0]
+        text: دریافت {RANGE}
         options:
           RANGE:
             '"low"': صدای بم
             '"mid"': صدای متوسط
             '"high"': صدای زیر
       Dancelab_getProp:
-        text: "[SPRITE][0][PROPERTY][1]"
+        text: "{SPRITE}{PROPERTY}"
         options:
           PROPERTY:
             '"scale"': اندازه
@@ -255,30 +283,28 @@ fa:
             '"y"': موقعیت عمودی
             '"tint"': ته رنگ
       Dancelab_getTime:
-        text: زمان حاضر به [UNIT][0]
+        text: زمان حاضر به {UNIT}
         options:
           UNIT:
             '"measures"': اندازه‌ها
             '"seconds"': ثانیه
       Dancelab_ifDanceIs:
-        text: |-
-          اگر [SPRITE][0] ، [DANCE][1] را انجام می‌دهد [DO1][2][DO2][3]
+        text: اگر {SPRITE} ، {DANCE} را انجام می‌دهد {DO1}{DO2}
         options:
           DANCE:
             MOVES.ClapHigh: کلپ های (رقص)
             MOVES.Clown: گنگام (رقص)
             MOVES.Dab: داب (رقص)
             MOVES.DoubleJam: پریدن با دو پا روی زمین - دابل داون (رقص)
-            MOVES.Drop: دراپ (رقص)
+            MOVES.Drop: انداختن
             MOVES.Floss: فلاس - قر دادن (رقص)
             MOVES.Fresh: فِرِش (رقص)
             MOVES.Roll: بادی رول - خم شدن (رقص)
-            MOVES.Kick: استار - ستاره (رقص)
+            MOVES.Kick: ستاره
             MOVES.ThisOrThat: دیس اور دت (رقص)
             MOVES.Rest: هیچکدام
       Dancelab_ifTime:
-        text: |-
-          اگر [UNIT][0] ، [OP][N] است [DO1][3][DO2][4]
+        text: اگر {UNIT} ، [OP][N] است {DO1}{DO2}
         options:
           UNIT:
             '"measures"': اندازه‌ها
@@ -288,7 +314,7 @@ fa:
             '"<"': "<"
             '"="': "="
       Dancelab_jumpTo:
-        text: "[SPRITE][0] به [LOCATION][1] پرش می‌کند"
+        text: "{SPRITE} به {LOCATION} پرش می‌کند"
         options:
           LOCATION:
             "{x: 200, y: 100}": بالا
@@ -299,20 +325,20 @@ fa:
             "{x: 100, y: 100}": بالا چپ
             "{x: 300, y: 100}": بالا راست
             "{x: 100, y: 300}": پایین چپ
-            "{x: 300, y: 300}": پایین راست
+            "{x: 300, y: 300}": سمت راست پایین
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": در هم
       Dancelab_jumpToEach:
-        text: '[GROUP][0] به [LOCATION][1] پرش می‌کند'
+        text: "{GROUP} به {LOCATION} پرش می‌کند"
         options:
           GROUP:
             sprites: همه
-            '"ALIEN"': فضایی ها
+            '"ALIEN"': آدم فضایی‌ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
             '"FROG"': قورباغه‌ها
             '"MOOSE"': گوزن بزرگ
             '"PINEAPPLE"': آناناسها
-            '"ROBOT"': روبات ها
+            '"ROBOT"': روبات‌ها
             '"SHARK"': کوسه‌ها
             '"SLOTH"': خرس تنبلها
             '"UNICORN"': تک‌شاخها
@@ -325,20 +351,20 @@ fa:
             "{x: 100, y: 100}": بالا چپ
             "{x: 300, y: 100}": بالا راست
             "{x: 100, y: 300}": پایین چپ
-            "{x: 300, y: 300}": پایین راست
+            "{x: 300, y: 300}": سمت راست پایین
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": در هم
       Dancelab_layoutSprites:
-        text: '[GROUP][0] را به شکل [FORMAT][1] طراحی کن'
+        text: "{GROUP} را به شکل {FORMAT} طراحی کن"
         options:
           GROUP:
             sprites: همه
-            '"ALIEN"': فضایی ها
+            '"ALIEN"': آدم فضایی‌ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
             '"FROG"': قورباغه‌ها
             '"MOOSE"': گوزن بزرگ
             '"PINEAPPLE"': آناناسها
-            '"ROBOT"': روبات ها
+            '"ROBOT"': روبات‌ها
             '"SHARK"': کوسه‌ها
             '"SLOTH"': خرس تنبلها
             '"UNICORN"': تک‌شاخها
@@ -360,7 +386,7 @@ fa:
             '"infinity"': خط بینهایت
             '"random"': در هم
       Dancelab_makeAnonymousDanceSprite:
-        text: یک [COSTUME][0] در [LOCATION][1] بساز
+        text: یک {COSTUME} در {LOCATION} بساز
         options:
           COSTUME:
             '"ALIEN"': بیگانه
@@ -384,11 +410,10 @@ fa:
             "{x: 100, y: 100}": بالا چپ
             "{x: 300, y: 100}": بالا راست
             "{x: 100, y: 300}": پایین چپ
-            "{x: 300, y: 300}": پایین راست
+            "{x: 300, y: 300}": سمت راست پایین
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": در هم
       Dancelab_makeNewDanceSprite:
-        text: |-
-          یک [COSTUME][0] جدید بساز به نام [NAME][1] در محل [LOCATION][2]
+        text: یک {COSTUME} جدید بساز به نام {NAME} در محل {LOCATION}
         options:
           COSTUME:
             '"ALIEN"': بیگانه
@@ -412,11 +437,10 @@ fa:
             "{x: 100, y: 100}": بالا چپ
             "{x: 300, y: 100}": بالا راست
             "{x: 100, y: 300}": پایین چپ
-            "{x: 300, y: 300}": پایین راست
+            "{x: 300, y: 300}": سمت راست پایین
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": در هم
       Dancelab_makeNewDanceSpriteGroup:
-        text: |-
-          [N][0] [COSTUME][1] جدید بساز با [LAYOUT][2]
+        text: "{N} {COSTUME} جدید بساز با {LAYOUT}"
         options:
           'N':
             '2': '2'
@@ -459,7 +483,7 @@ fa:
             '39': '39'
             '40': '40'
           COSTUME:
-            '"ALIEN"': فضایی ها
+            '"ALIEN"': آدم فضایی‌ها
             '"BEAR"': خرسها
             '"CAT"': گربه ها
             '"DOG"': سگ ها
@@ -467,7 +491,7 @@ fa:
             '"FROG"': قورباغه‌ها
             '"MOOSE"': گوزن بزرگ
             '"PINEAPPLE"': آناناسها
-            '"ROBOT"': روبات ها
+            '"ROBOT"': روبات‌ها
             '"SHARK"': کوسه‌ها
             '"SLOTH"': خرس تنبلها
             '"UNICORN"': تک‌شاخها
@@ -489,9 +513,9 @@ fa:
             '"infinity"': خط بینهایت
             '"random"': در هم
       Dancelab_mixColors:
-        text: ترکیب [COLOR1][0] و [COLOR2][1]
+        text: ترکیب {COLOR1} و {COLOR2}
       Dancelab_nMeasures:
-        text: "اندازه‌ی [N][0]"
+        text: اندازه‌ی {N}
       Dancelab_onPointerDown:
         text: وقتی نشانگر پایین بود
       Dancelab_onPointerDrag:
@@ -501,14 +525,12 @@ fa:
       Dancelab_randomColor:
         text: رنگ تصادفی
       Dancelab_setBackground:
-        text: تنظیم رنگ پس‌زمینه روی [COLOR][0]
+        text: تنظیم رنگ پس‌زمینه روی {COLOR}
       Dancelab_setBackgroundEffect:
-        text: |-
-          تنظیم افکت پس‌زمینه روی [EFFECT][0][PALETTE][1]
+        text: تنظیم افکت پس‌زمینه روی {EFFECT}{PALETTE}
         options:
           EFFECT:
             '"none"': هیچکدام
-            "? \"['circles','color_cycle', 'diamonds', 'disco_ball', 'fireworks', 'swirl', 'kaleidoscope', 'lasers', 'splatter', 'rainbow', 'snowflakes', 'text', 'galaxy', 'sparkles', 'spiral', 'disco', 'stars'][randomInt(0,16)]\"": "(تصادفی)"
             '"circles"': دایره‌ها
             '"color_cycle"': رنگ‌ها
             '"diamonds"': لوزی‌ها
@@ -521,7 +543,7 @@ fa:
             '"rainbow"': رنگین‌کمان (افکت)
             '"snowflakes"': برف (افکت)
             '"text"': اسم آواز (افکت)
-            '"galaxy"': فضا  (افکت)
+            '"galaxy"': فضا
             '"sparkles"': درخشش (افکت)
             '"spiral"': مارپیچ (افکت)
             '"disco"': مربع (افکت)
@@ -537,8 +559,7 @@ fa:
             '"vintage"': آنتیک (پالت)
             '"warm"': گرم (پالت)
       Dancelab_setBackgroundEffectWithPalette:
-        text: |-
-          تنظیم افکت پس‌زمینه روی [PALETTE][0][EFFECT][1]
+        text: تنظیم افکت پس‌زمینه روی {PALETTE}{EFFECT}
         options:
           EFFECT:
             '"none"': هیچکدام
@@ -561,7 +582,7 @@ fa:
             '"snowflakes"': برف (افکت)
             '"text"': اسم آواز (افکت)
             '"squiggles"': موج موج (افکت)
-            '"galaxy"': فضا  (افکت)
+            '"galaxy"': فضا
             '"sparkles"': درخشش (افکت)
             '"spiral"': مارپیچ (افکت)
             '"disco"': مربع (افکت)
@@ -577,8 +598,63 @@ fa:
             '"tropical"': استوایی (پالت)
             '"vintage"': آنتیک (پالت)
             '"warm"': گرم (پالت)
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: تنظیم افکت پس‌زمینه روی {PALETTE}{EFFECT}
+        options:
+          EFFECT:
+            '"none"': هیچکدام
+            '"rand"': "(تصادفی)"
+            '"quads"': زاویه‌ (افکت)
+            '"blooming_petals"': گلبرگ‌های شکوفا
+            '"circles"': دایره‌ها
+            '"color_cycle"': رنگ‌ها
+            '"diamonds"': لوزی‌ها
+            '"disco_ball"': دسکو بال
+            '"fireworks"': آتش‌بازی
+            '"flowers"': گلها (افکت)
+            '"frosted_grid"': شبکه مات
+            '"growing_stars"': ستاره‌های بزرگ شونده (افکت)
+            '"swirl"': هیپنو (افکت)
+            '"kaleidoscope"': هزار رنگ (افکت)
+            '"lasers"': نور لیزر سالن رقص (افکت)
+            '"splatter"': رنگ پاشی (افکت)
+            '"rainbow"': رنگین‌کمان (افکت)
+            '"ripples_random"': شنهای تصادفی (افکت)
+            '"ripples"': شن (افکت)
+            '"snowflakes"': برف (افکت)
+            '"text"': اسم آواز (افکت)
+            '"galaxy"': فضا
+            '"sparkles"': درخشش (افکت)
+            '"spiral"': مارپیچ (افکت)
+            '"disco"': مربع (افکت)
+            '"squiggles"': موج موج (افکت)
+            '"starburst"': استارباست (افکت)
+            '"stars"': ستاره  (افکت)
+            '"music_wave"': امواج (افکت)
+          PALETTE:
+            '"autumn"': پاییز (پالت)
+            '"rave"': سیاه و سفید (افکت)
+            '"cool"': جالب (پالت رنگ)
+            '"electronic"': الکترونیکی (پالت)
+            '"grayscale"': سایه‌خاکستری (پالت)
+            '"iceCream"': بستنی (پالت)
+            '"default"': روشن (پالت)
+            '"neon"': نئون (پالت)
+            '"ocean"': اقیانوس
+            '"rainbow"': رنگین‌کمان (افکت)
+            '"roses"': سرخ (پالت)
+            '"sky"': آسمان
+            '"spring"': بهار
+            '"summer"': تابستانی (پالت)
+            '"sunrise"': طلوع آفتاب
+            '"sunset"': غروب آفتاب
+            '"tropical"': استوایی (پالت)
+            '"twinkling"': چشمک‌زن (افکت)
+            '"vintage"': آنتیک (پالت)
+            '"warm"': گرم (پالت)
+            '"winter"': زمستان
       Dancelab_setDanceSpeed:
-        text: تنظیم سرعت رقص [SPRITE][0] روی [SPEED][1]
+        text: تنظیم سرعت رقص {SPRITE} روی {SPEED}
         options:
           SPEED:
             '1': عادی
@@ -587,17 +663,17 @@ fa:
             '0.5': آرام
             '0.25': بسیار آهسته
       Dancelab_setDanceSpeedEach:
-        text: تنظیم سرعت رقص [GROUP][0] روی [SPEED][1]
+        text: تنظیم سرعت رقص {GROUP} روی {SPEED}
         options:
           GROUP:
             sprites: همه
-            '"ALIEN"': فضایی ها
+            '"ALIEN"': آدم فضایی‌ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
             '"FROG"': قورباغه‌ها
             '"MOOSE"': گوزن بزرگ
             '"PINEAPPLE"': آناناسها
-            '"ROBOT"': روبات ها
+            '"ROBOT"': روبات‌ها
             '"SHARK"': کوسه‌ها
             '"SLOTH"': خرس تنبلها
             '"UNICORN"': تک‌شاخها
@@ -608,11 +684,10 @@ fa:
             '0.5': آرام
             '0.25': بسیار آهسته
       Dancelab_setForegroundEffect:
-        text: تنظیم افکت پیش‌زمینه روی [EFFECT][0]
+        text: تنظیم افکت پیش‌زمینه روی {EFFECT}
         options:
           EFFECT:
             '"none"': هیچکدام
-            "? \"['bubbles', 'confetti', 'hearts_red', 'music_notes', 'pineapples', 'pizzas', 'smiling_poop', 'rain', 'floating_rainbows', 'smile_face', 'spotlight', 'color_lights', 'raining_tacos'][randomInt(0,12)]\"": "(تصادفی)"
             '"bubbles"': حباب (افکت)
             '"confetti"': کاغذ رنگی (افکت)
             '"hearts_red"': قلب (افکت)
@@ -627,7 +702,7 @@ fa:
             '"color_lights"': نور صحنه (افکت)
             '"raining_tacos"': تاکو (افکت)
       Dancelab_setForegroundEffectExtended:
-        text: تنظیم افکت پیش‌زمینه روی [EFFECT][0]
+        text: تنظیم افکت پیش‌زمینه روی {EFFECT}
         options:
           EFFECT:
             '"none"': هیچکدام
@@ -650,7 +725,7 @@ fa:
             '"exploding_stars"': استارباست (افکت)
             '"raining_tacos"': تاکو (افکت)
       Dancelab_setProp:
-        text: '[SPRITE][0][PROPERTY][1] را روی [VAL][2] تنظیم کن'
+        text: "{SPRITE}{PROPERTY} را روی {VAL} تنظیم کن"
         options:
           PROPERTY:
             '"scale"': اندازه
@@ -659,17 +734,17 @@ fa:
             '"x"': موقعیت افقی
             '"y"': موقعیت عمودی
       Dancelab_setPropEach:
-        text: '[GROUP][0][PROPERTY][1] را روی [VAL][2] تنظیم کن'
+        text: "{GROUP}{PROPERTY} را روی {VAL} تنظیم کن"
         options:
           GROUP:
             sprites: همه
-            '"ALIEN"': فضایی ها
+            '"ALIEN"': آدم فضایی‌ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
             '"FROG"': قورباغه‌ها
             '"MOOSE"': گوزن بزرگ
             '"PINEAPPLE"': آناناسها
-            '"ROBOT"': روبات ها
+            '"ROBOT"': روبات‌ها
             '"SHARK"': کوسه‌ها
             '"SLOTH"': خرس تنبلها
             '"UNICORN"': تک‌شاخها
@@ -681,7 +756,7 @@ fa:
             '"y"': موقعیت عمودی
             '"tint"': ته رنگ
       Dancelab_setPropRandom:
-        text: '[SPRITE][0][PROPERTY][1] را بهم بریز'
+        text: "{SPRITE}{PROPERTY} را بهم بریز"
         options:
           PROPERTY:
             '"scale"': اندازه
@@ -691,17 +766,17 @@ fa:
             '"y"': موقعیت عمودی
             '"tint"': ته رنگ
       Dancelab_setPropRandomEach:
-        text: '[GROUP][0][PROPERTY][1] را بهم بریز'
+        text: "{GROUP}{PROPERTY} را بهم بریز"
         options:
           GROUP:
             sprites: همه
-            '"ALIEN"': فضایی ها
+            '"ALIEN"': آدم فضایی‌ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
             '"FROG"': قورباغه‌ها
             '"MOOSE"': گوزن بزرگ
             '"PINEAPPLE"': آناناسها
-            '"ROBOT"': روبات ها
+            '"ROBOT"': روبات‌ها
             '"SHARK"': کوسه‌ها
             '"SLOTH"': خرس تنبلها
             '"UNICORN"': تک‌شاخها
@@ -713,57 +788,57 @@ fa:
             '"y"': موقعیت عمودی
             '"tint"': ته رنگ
       Dancelab_setTint:
-        text: تنظیم مقدار رنگ [SPRITE][0] به [VAL][1]
+        text: تنظیم مقدار رنگ {SPRITE} به {VAL}
       Dancelab_setTintEach:
-        text: تنظیم مقدار رنگ [THIS][0] به [VAL][1]
+        text: تنظیم مقدار رنگ {THIS} به {VAL}
         options:
           THIS:
             sprites: همه
-            '"ALIEN"': فضایی ها
+            '"ALIEN"': آدم فضایی‌ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
             '"FROG"': قورباغه‌ها
             '"MOOSE"': گوزن بزرگ
             '"PINEAPPLE"': آناناسها
-            '"ROBOT"': روبات ها
+            '"ROBOT"': روبات‌ها
             '"SHARK"': کوسه‌ها
             '"SLOTH"': خرس تنبلها
             '"UNICORN"': تک‌شاخها
       Dancelab_setTintEachInline:
-        text: تنظیم مقدار رنگ [THIS][0] به [VAL][1]
+        text: تنظیم مقدار رنگ {THIS} به {VAL}
         options:
           THIS:
             sprites: همه
-            '"ALIEN"': فضایی ها
+            '"ALIEN"': آدم فضایی‌ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
             '"FROG"': قورباغه‌ها
             '"MOOSE"': گوزن بزرگ
             '"PINEAPPLE"': آناناسها
-            '"ROBOT"': روبات ها
+            '"ROBOT"': روبات‌ها
             '"SHARK"': کوسه‌ها
             '"SLOTH"': خرس تنبلها
             '"UNICORN"': تک‌شاخها
       Dancelab_setTintInline:
-        text: تنظیم مقدار رنگ [SPRITE][0] به [VAL][1]
+        text: تنظیم مقدار رنگ {SPRITE} به {VAL}
       Dancelab_setVisible:
-        text: تنظیم مشاهده [SPRITE][0] به [VISIBILITY][1]
+        text: تنظیم مشاهده {SPRITE} به {VISIBILITY}
         options:
           VISIBILITY:
             'true': نمایان
             'false': نامرئی
       Dancelab_setVisibleEach:
-        text: تنظیم مشاهده [THIS][0] به [VISIBILITY][1]
+        text: تنظیم مشاهده {THIS} به {VISIBILITY}
         options:
           THIS:
             sprites: همه
-            '"ALIEN"': فضایی ها
+            '"ALIEN"': آدم فضایی‌ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
             '"FROG"': قورباغه‌ها
             '"MOOSE"': گوزن بزرگ
             '"PINEAPPLE"': آناناسها
-            '"ROBOT"': روبات ها
+            '"ROBOT"': روبات‌ها
             '"SHARK"': کوسه‌ها
             '"SLOTH"': خرس تنبلها
             '"UNICORN"': تک‌شاخها
@@ -771,7 +846,7 @@ fa:
             'true': نمایان
             'false': نامرئی
       Dancelab_startMapping:
-        text: "[SPRITE][0] بعد از [RANGE][2] ، [PROPERTY][1] را شروع میکند"
+        text: "{SPRITE} بعد از {RANGE} ، {PROPERTY} را شروع میکند"
         options:
           PROPERTY:
             '"scale"': اندازه
@@ -785,17 +860,17 @@ fa:
             '"mid"': صدای متوسط
             '"treble"': صدای زیر
       Dancelab_startMappingEach:
-        text: "[GROUP][0] بعد از [RANGE][2] ، [PROPERTY][1] را شروع میکند"
+        text: "{GROUP} بعد از {RANGE} ، {PROPERTY} را شروع میکند"
         options:
           GROUP:
             sprites: همه
-            '"ALIEN"': فضایی ها
+            '"ALIEN"': آدم فضایی‌ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
             '"FROG"': قورباغه‌ها
             '"MOOSE"': گوزن بزرگ
             '"PINEAPPLE"': آناناسها
-            '"ROBOT"': روبات ها
+            '"ROBOT"': روبات‌ها
             '"SHARK"': کوسه‌ها
             '"SLOTH"': خرس تنبلها
             '"UNICORN"': تک‌شاخها
@@ -811,7 +886,7 @@ fa:
             '"mid"': صدای متوسط
             '"treble"': صدای زیر
       Dancelab_stopMapping:
-        text: "[SPRITE][0] بعد از [RANGE][2] ، [PROPERTY][1] را متوقف می‌سازد"
+        text: "{SPRITE} بعد از {RANGE} ، {PROPERTY} را متوقف می‌سازد"
         options:
           PROPERTY:
             '"scale"': اندازه
@@ -826,17 +901,17 @@ fa:
             '"mid"': صدای متوسط
             '"treble"': صدای زیر
       Dancelab_stopMappingEach:
-        text: "[GROUP][0] بعد از [RANGE][2] ، [PROPERTY][1] را متوقف می‌سازد"
+        text: "{GROUP} بعد از {RANGE} ، {PROPERTY} را متوقف می‌سازد"
         options:
           GROUP:
             sprites: همه
-            '"ALIEN"': فضایی ها
+            '"ALIEN"': آدم فضایی‌ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
             '"FROG"': قورباغه‌ها
             '"MOOSE"': گوزن بزرگ
             '"PINEAPPLE"': آناناسها
-            '"ROBOT"': روبات ها
+            '"ROBOT"': روبات‌ها
             '"SHARK"': کوسه‌ها
             '"SLOTH"': خرس تنبلها
             '"UNICORN"': تک‌شاخها
@@ -853,7 +928,7 @@ fa:
             '"mid"': صدای متوسط
             '"treble"': صدای زیر
       Dancelab_translateStrings:
-        text: ترجمه [STRING][0]
+        text: ترجمه {STRING}
         options:
           STRING:
             '"music_wave"': امواج (افکت)
@@ -889,6 +964,7 @@ fa:
             '"y"': 'y'
             '"z"': z
             '"0"': '0'
+            '"1"': '1'
             '"2"': '2'
             '"3"': '3'
             '"4"': '4'
@@ -898,7 +974,7 @@ fa:
             '"8"': '8'
             '"9"': '9'
       Dancelab_whenKey:
-        text: وقتی [KEY][0] زده شد
+        text: وقتی {KEY} زده شد
         options:
           KEY:
             '"up"': بالا
@@ -933,6 +1009,7 @@ fa:
             '"y"': 'y'
             '"z"': z
             '"0"': '0'
+            '"1"': '1'
             '"2"': '2'
             '"3"': '3'
             '"4"': '4'
@@ -942,7 +1019,7 @@ fa:
             '"8"': '8'
             '"9"': '9'
       Dancelab_whenPeak:
-        text: وقتی [RANGE][0] به نقطه اوج رسید
+        text: وقتی {RANGE} به نقطه اوج رسید
         options:
           RANGE:
             '0': صدای بم
@@ -959,14 +1036,14 @@ fa:
             '"hammer"': MC Hammer - U Can't Touch This
             '"peas"': آهنگ The Black Eyed Peas - I Got a Feeling
       DansBlocks_getMicroscope:
-        text: میکروسکوپ [INPUT1][0] دارد
+        text: میکروسکوپ {INPUT1} دارد
         options:
           INPUT1:
             '1': آب لیمو
             '3': جوش شیرین
             '5': هر دو
       DansBlocks_setForegroundEffect2:
-        text: اجرای افکت [EFFECT][0]
+        text: اجرای افکت {EFFECT}
         options:
           EFFECT:
             '"bubbles"': حباب (افکت)
@@ -978,14 +1055,14 @@ fa:
             '"glass"': شیشه شکسته (افکت)
             '"twinkling"': چشمک زن (افکت)
       DansBlocks_setMicroscope:
-        text: میکروسکوپ را روی [0][INPUT1] تنظیم کنید
+        text: میکروسکوپ را روی [0][null] تنظیم کنید
         options:
           INPUT1:
             '1': آب لیمو
             '3': جوش شیرین
             '5': هر دو
       DansBlocks_testRectangle:
-        text: 'ایجاد مستطیل x: [X][0] y: [Y][1] w: [W][2] h: [H][3] رنگ: [COLOR][4]'
+        text: 'ایجاد مستطیل x: {X} y: {Y} w: {W} h: {H} رنگ: {COLOR}'
       FunctionBlocks_addEightBlock:
         text: 8 واحد اضافه کنید
       FunctionBlocks_addFiveBlock:
@@ -1005,27 +1082,27 @@ fa:
       FunctionBlocks_addTwoBlock:
         text: 2 واحد اضافه کنید
       FunctionBlocks_communicate:
-        text: ارتباط [VAR1][0] با [SPRITE1COSTUME][1]
+        text: ارتباط {VAR1} با {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:
-        text: ایجاد [NUM][0] اسپرایت جدید که [BEHAVIOR][2]
+        text: ایجاد {NUM} اسپرایت جدید که {BEHAVIOR}
       FunctionBlocks_representManipulative:
-        text: نماینده [BEHAVIOR][2] [NUM][0] اسپرایت [ANIMATION_NAME][1] جدید
+        text: نماینده [BEHAVIOR][2] {NUM} اسپرایت {ANIMATION_NAME} جدید
       FunctionBlocks_representManipulative_test:
         text: "[testing] نشان دهنده[0][NUM] جدید[1][ANIMATION_NAME] اسپرایتها"
       FunctionBlocks_spriteSayVar:
-        text: "[SPRITE][0] میگوید: [TEXT1][1]"
+        text: "{SPRITE} میگوید: {TEXT1}"
       gamelab_addBehaviorSimple:
-        text: اسپرایت [SPRITE][0] ، [BEHAVIOR][1] را شروع می‌کند
+        text: اسپرایت {SPRITE} ، {BEHAVIOR} را شروع می‌کند
       gamelab_addTarget:
-        text: "[SPRITE] ، هدف [0][TARGET] را به [1][OPT][2] می‌برد"
+        text: "[SPRITE] ، هدف [0][TARGET] را به [1]{OPT} می‌برد"
         options:
           OPT:
             '"follow"': دنبال کن
             '"avoid"': جلوگیری
       gamelab_allSpritesWithAnimation:
-        text: "[ANIMATION][0]"
+        text: "{ANIMATION}"
       gamelab_atTime:
-        text: در [N][0][UNIT][1]
+        text: در {N}{UNIT}
         options:
           UNIT:
             '"seconds"': ثانیه
@@ -1033,11 +1110,13 @@ fa:
       gamelab_avoidingTargets:
         text: دوری از هدفها
       gamelab_beginCollectingData:
-        text: آغاز جمع‌آوری داده [BREAK][0] با مقدار [VALUE][1] با برچسب [LABEL][2]
+        text: آغاز جمع‌آوری داده {BREAK} با مقدار {VALUE} با برچسب {LABEL}
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
-        text: "[SPRITE][0] به [TARGET][1] می‌رسد و برمی‌گردد"
+        text: "{SPRITE} به {TARGET} می‌رسد و برمی‌گردد"
       gamelab_changePropBy:
-        text: تغییر [SPRITE][0][PROPERTY][1] به اندازه [VAL][2]
+        text: تغییر {SPRITE}{PROPERTY} به اندازه {VAL}
         options:
           PROPERTY:
             '"scale"': اندازه
@@ -1047,50 +1126,50 @@ fa:
             '"direction"': جهت حرکت
             '"speed"': سرعت
       gamelab_changeVarBy:
-        text: تغییر [VARIABLE][0] به اندازه [VAL][1]
+        text: تغییر {VARIABLE} به اندازه {VAL}
       gamelab_checkTouching:
-        text: "[CONDITION][0][SPRITE1][1] با [SPRITE2][2] برخورد می‌کند"
+        text: "{CONDITION}{SPRITE1} با {SPRITE2} برخورد می‌کند"
         options:
           CONDITION:
             '"when"': وقتی
-            '"while"': '"while"'
+            '"while"': هنگامی‌که
       gamelab_clickedOn:
-        text: وقتی [SPRITE][0] کلیک شد
+        text: وقتی {SPRITE} کلیک شد
       gamelab_clickedSpritePointer:
-        text: "[SPRITE][0]"
+        text: "{SPRITE}"
       gamelab_collectibleBehaviors:
-        text: "[BEHAVIOR][0]"
+        text: "{BEHAVIOR}"
         options:
           BEHAVIOR:
-            "new Behavior(spinning_right, [])": چرخش به راست
-            "new Behavior(spinning_left, [])": چرخش به چپ
-            "new Behavior(fluttering, [])": بال زدن
-            "new Behavior(jittering, [])": با عصبانیت رفتار کردن
-            "new Behavior(wobbling, [])": تلوتلو خوردن
-            "new Behavior(wandering, [])": گردش کردن
-            "new Behavior(patrolling, [])": گشت‌زنی
-            "new Behavior(moving_west_and_looping, [])": حرکت به سمت غرب و درست کردن حلقه‏
-            "new Behavior(moving_east_and_looping, [])": حرکت به سمت شرق و درست کردن حلقه‏
-            "new Behavior(moving_north_and_looping, [])": حرکت به سمت شمال و درست کردن حلقه‏
-            "new Behavior(moving_south_and_looping, [])": حرکت به سمت جنوب و درست کردن حلقه‏
+            new Behavior(spinning_right, []): چرخش به سمت راست
+            new Behavior(spinning_left, []): چرخش به سمت چپ
+            new Behavior(fluttering, []): بال زدن
+            new Behavior(jittering, []): با عصبانیت رفتار کردن
+            new Behavior(wobbling, []): تلوتلو خوردن
+            new Behavior(wandering, []): گردش کردن
+            new Behavior(patrolling, []): گشت‌ زدن
+            new Behavior(moving_west_and_looping, []): حرکت به سمت غرب و درست کردن حلقه‏
+            new Behavior(moving_east_and_looping, []): حرکت به سمت شرق و درست کردن حلقه‏
+            new Behavior(moving_north_and_looping, []): حرکت به سمت شمال و درست کردن حلقه‏
+            new Behavior(moving_south_and_looping, []): حرکت به سمت جنوب و درست کردن حلقه‏
       gamelab_comment:
-        text: 'توضیح: [COMMENT][0]'
+        text: 'توضیح: {COMMENT}'
       gamelab_costumeImage:
-        text: "[COSTUME][0]"
+        text: "{COSTUME}"
       gamelab_countByAnimation:
-        text: تعداد [SPRITE][0]
+        text: تعداد {SPRITE}
       gamelab_createNewSprite:
-        text: "یک اسپرایت جدید بساز \n نام آن را [NAME][0] بگذار \n لباس آن [COSTUME][1] \n در مکان [LOCATION][2]"
+        text: "یک اسپرایت جدید بساز \n نام آن را {NAME} بگذار \n لباس آن {COSTUME} \n در مکان {LOCATION}"
       gamelab_destroy:
-        text: '[THIS][0] را حذف کن'
+        text: "{THIS} را حذف کن"
       gamelab_draggable:
         text: قابل کشیدن باشد
       gamelab_drawLine:
-        text: کشیدن خط [COLOR][0] [LOC1][1] [LOC2][2]
+        text: کشیدن خط {COLOR} {LOC1} {LOC2}
       gamelab_edgesDisplace:
-        text: کناره‌ها [SPRITE][0] را از حرکت باز می‌دارند
+        text: کناره‌ها {SPRITE} را از حرکت باز می‌دارند
       gamelab_everyInterval:
-        text: 'هر [N][0][UNIT][1] تکرار کن'
+        text: هر {N}{UNIT} تکرار کن
         options:
           UNIT:
             '"seconds"': ثانیه
@@ -1100,7 +1179,7 @@ fa:
       gamelab_getAllSprites:
         text: تمام اسپرایتها
       gamelab_getProp:
-        text: "[SPRITE][0][PROPERTY][1]"
+        text: "{SPRITE}{PROPERTY}"
         options:
           PROPERTY:
             '"scale"': اندازه
@@ -1111,27 +1190,27 @@ fa:
             '"tint"': ته رنگ
             '"speed"': سرعت
       gamelab_getThisSprite:
-        text: "اسپرایت [CHOICE][0]"
+        text: اسپرایت {CHOICE}
         options:
           CHOICE:
             '"this"': این
             '"other"': سایر
       gamelab_getTime:
-        text: زمان به [UNIT][0]
+        text: زمان به {UNIT}
         options:
           UNIT:
             '"seconds"': ثانیه
             '"frames"': فریم
       gamelab_glideTo:
-        text: "[SPRITE][0] آرام به [LOCATION][1] می‌رود"
+        text: "{SPRITE} آرام به {LOCATION} می‌رود"
       gamelab_hideTitleScreen:
         text: مخفی کردن صفحه عنوان
       gamelab_ifVarEquals:
         text: |-
-          اگر [NUM][0] = [VAL][1]
-          [STATEMENT][2]
+          اگر {NUM} = {VAL}
+          {STATEMENT}
       gamelab_int10:
-        text: "[VALUE][0]"
+        text: "{VALUE}"
         options:
           VALUE:
             '1': '1'
@@ -1145,9 +1224,9 @@ fa:
             '9': '9'
             '10': '10'
       gamelab_isCostumeEqual:
-        text: "لباس [SPRITE][0] [COSTUME][1] است"
+        text: لباس {SPRITE} {COSTUME} است
       gamelab_isKeyPressed:
-        text: "[KEY][0] زده شده است"
+        text: "{KEY} زده شده است"
         options:
           KEY:
             '"up"': بالا
@@ -1181,17 +1260,17 @@ fa:
             '"y"': 'y'
             '"z"': z
       gamelab_isTouchingEdges:
-        text: "[SPRITE][0] با کناره‌ها برخورد کرده است"
+        text: "{SPRITE} با کناره‌ها برخورد کرده است"
       gamelab_isTouchingSprite:
-        text: "[SPRITE][0] با [TARGET][1] برخورد کرده است"
+        text: "{SPRITE} با {TARGET} برخورد کرده است"
       gamelab_jumpTo:
-        text: "[SPRITE][0] به [LOCATION][1] پرش می‌کند"
+        text: "{SPRITE} به {LOCATION} پرش می‌کند"
       gamelab_keyPressed:
-        text: "[CONDITION][0][KEY][1] فشرده شده است"
+        text: "{CONDITION}{KEY} فشرده شده است"
         options:
           CONDITION:
             '"when"': وقتی
-            '"while"': '"while"'
+            '"while"': هنگامی‌که
           KEY:
             '"up"': بالا
             '"down"': پایین
@@ -1225,10 +1304,23 @@ fa:
             '"z"': z
       gamelab_layoutGrid:
         text: اسپرایتها را به شکل شبکه منظم کن
+      gamelab_layoutSprites:
+        text: "{GROUP} را به شکل {FORMAT} طراحی کن"
+        options:
+          FORMAT:
+            '"border"': حاشیه
+            '"circle"': دایره‌
+            '"grid"': شبکه
+            '"top"': ردیف بالا
+            '"row"': کلاس
+            '"bottom"': ردیف پایین
+            '"left"': ستون چپ
+            '"column"': ستون
+            '"right"': ستون راست
       gamelab_locationAt:
-        text: 'مختصات x: [X][0] , y: [Y][1]'
+        text: 'مختصات x: {X} , y: {Y}'
       gamelab_locationModifier:
-        text: "[DISTANCE][0] پیکسل [DIRECTION][1] از [LOCATION][2]"
+        text: "{DISTANCE} پیکسل {DIRECTION} از {LOCATION}"
         options:
           DIRECTION:
             '"North"': شمال
@@ -1238,11 +1330,11 @@ fa:
       gamelab_locationMouse:
         text: مکان ماوس
       gamelab_locationOf:
-        text: مکان [SPRITE][0]
+        text: مکان {SPRITE}
       gamelab_location_picker:
-        text: "[LOCATION][0]"
+        text: "{LOCATION}"
       gamelab_makeBurst:
-        text: ایجاد افکت [EFFECT][0] با [NUM][1][ANIMATION_NAME][2] اسپرایت
+        text: ایجاد افکت {EFFECT} با {NUM}{ANIMATION_NAME} اسپرایت
         options:
           EFFECT:
             '"burst"': انفجار
@@ -1250,11 +1342,23 @@ fa:
             '"rain"': بارانی
             '"spiral"': مارپیچ
       gamelab_makeNewSpriteAnon:
-        text: یک اسپرایت جدید [ANIMATION_NAME][0] در محل [LOCATION][1] بساز
+        text: یک اسپرایت جدید {ANIMATION_NAME} در محل {LOCATION} بساز
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': حاشیه
+            '"circle"': دایره‌
+            '"grid"': شبکه
+            '"top"': ردیف بالا
+            '"row"': کلاس
+            '"bottom"': ردیف پایین
+            '"left"': ستون چپ
+            '"column"': ستون
+            '"right"': ستون راست
       gamelab_makeNumSprites:
-        text: '[NUM][0] اسپرایت جدید [ANIMATION_NAME][1] بساز'
+        text: "{NUM} اسپرایت جدید {ANIMATION_NAME} بساز"
       gamelab_makeProjectile:
-        text: "پرتابه [ANIMATION_NAME][0] را در مکان [LOCATION][1] با سرعت [SPEED][2] و جهت [DIRECTION][3] ایجاد کن"
+        text: پرتابه {ANIMATION_NAME} را در مکان {LOCATION} با سرعت {SPEED} و جهت {DIRECTION} ایجاد کن
         options:
           DIRECTION:
             '0': سمت راست
@@ -1262,14 +1366,14 @@ fa:
             '180': سمت چپ
             '270': بالا
       gamelab_makeSpritesWithSize:
-        text: '[NUM][0] اسپرایت جدید [SIZE][1][COSTUME][2] بساز'
+        text: "{NUM} اسپرایت جدید {SIZE}{COSTUME} بساز"
         options:
           SIZE:
             '30': کوچک
             '50': متوسط
             '100': بزرگ
       gamelab_mirrorSprite:
-        text: "[SPRITE][0] به سمت [DIRECTION][1]"
+        text: "{SPRITE} به سمت {DIRECTION}"
         options:
           DIRECTION:
             '"right"': سمت راست
@@ -1277,11 +1381,11 @@ fa:
       gamelab_mouseLocation:
         text: مکان ماوس
       gamelab_moveBackward:
-        text: '[SPRITE][0] را به اندازه [DISTANCE][1] پیکسل به عقب حرکت بده'
+        text: "{SPRITE} را به اندازه {DISTANCE} پیکسل به عقب حرکت بده"
       gamelab_moveForward:
-        text: '[SPRITE][0] را به اندازه [DISTANCE][1] پیکسل به جلو حرکت بده'
+        text: "{SPRITE} را به اندازه {DISTANCE} پیکسل به جلو حرکت بده"
       gamelab_moveInDirection:
-        text: '[SPRITE][0] را به اندازه [DISTANCE][1] پیکسل به [DIRECTION][2] حرکت بده'
+        text: "{SPRITE} را به اندازه {DISTANCE} پیکسل به {DIRECTION} حرکت بده"
         options:
           DIRECTION:
             '"North"': شمال
@@ -1289,17 +1393,17 @@ fa:
             '"South"': جنوب
             '"West"': غرب
       gamelab_moveToward:
-        text: '[SPRITE][0] را به اندازه [DISTANCE][1] پیکسل به سمت [TARGET][2] حرکت بده'
+        text: "{SPRITE} را به اندازه {DISTANCE} پیکسل به سمت {TARGET} حرکت بده"
       gamelab_newSpritePointer:
-        text: "[SPRITE][0]"
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: "[SPRITE][0]"
+        text: "{SPRITE}"
       gamelab_patrollingUpDown:
         text: گشت زنی در بالا و پایین
       gamelab_playSound:
-        text: '[SOUND][0] را پخش کن'
+        text: "{SOUND} را پخش کن"
       gamelab_playSoundOptions:
-        text: '[SOUND][0] را پخش کن'
+        text: "{SOUND} را پخش کن"
         options:
           SOUND:
             "'sound://category_accent/puzzle_game_accent_a_01.mp3'": تن صدا
@@ -1339,7 +1443,7 @@ fa:
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": صدای باس
             "'sound://category_digital/jump_7.mp3'": پرش
       gamelab_playSoundOptionsSoccer:
-        text: '[SOUND][0] را پخش کن'
+        text: "{SOUND} را پخش کن"
         options:
           SOUND:
             "'sound://category_sports/Airhorn_SFX.mp3'": شیپور
@@ -1350,7 +1454,7 @@ fa:
             "'sound://category_sports/Double_Whistle_SFX.mp3'": صدای دو سوت
             "'sound://category_sports/One_Whistle_SFX.mp3'": سوت
       gamelab_playSoundOptionsSpace:
-        text: '[SOUND][0] را پخش کن'
+        text: "{SOUND} را پخش کن"
         options:
           SOUND:
             "'sound://category_space/Blackhole_SFX.mp3'": صدای سیاه‌چاله
@@ -1367,16 +1471,16 @@ fa:
             "'sound://category_space/Tycho_SFX.mp3'": تایکو (tycho) (صدا)
             "'sound://category_space/Whirlpool_galaxy_SFX.mp3'": صدای کهکشان مارپیچی
       gamelab_playSpeech:
-        text: '[SOUND][0] را پخش کن'
+        text: "{SOUND} را پخش کن"
       gamelab_playerBehaviors:
-        text: "[BEHAVIOR][0]"
+        text: "{BEHAVIOR}"
         options:
           BEHAVIOR:
-            "new Behavior(moving_with_arrow_keys, [])": حرکت با کلیدهای پیکان
-            "new Behavior(driving_with_arrow_keys, [])": رانندگی با کلیدهای پیکان
+            new Behavior(moving_with_arrow_keys, []): حرکت با کلیدهای جهت‌دار
+            new Behavior(driving_with_arrow_keys, []): رانندگی با کلیدهای جهت‌دار
             draggable(): قابل کشیدن باشد
       gamelab_pointInDirection:
-        text: '[SPRITE][0] در جهت [DIRECTION][1]'
+        text: "{SPRITE} در جهت {DIRECTION}"
         options:
           DIRECTION:
             '"North"': شمال
@@ -1384,7 +1488,7 @@ fa:
             '"South"': جنوب
             '"West"': غرب
       gamelab_printText:
-        text: چاپ [TEXT][0]
+        text: چاپ {TEXT}
       gamelab_randColor:
         text: رنگ تصادفی
       gamelab_randomColor:
@@ -1392,21 +1496,21 @@ fa:
       gamelab_randomLocation:
         text: مکان تصادفی
       gamelab_removeAllBehaviors:
-        text: "[SPRITE][0] همه‌چیز را متوقف می‌کند"
+        text: "{SPRITE} همه‌چیز را متوقف می‌کند"
       gamelab_removeBehaviorSimple:
-        text: اسپرایت [SPRITE][0] ، [BEHAVIOR][1] را متوقف می‌کند
+        text: اسپرایت {SPRITE} ، {BEHAVIOR} را متوقف می‌کند
       gamelab_removeTint:
-        text: حذف رنگ از [THIS][0]
+        text: حذف رنگ از {THIS}
       gamelab_repeatForever:
         text: تکرار بی‌پایان
       gamelab_resetTimer:
         text: ریست کردن زمانسنج
       gamelab_setAnimation:
-        text: لباس [THIS][0] را به [ANIMATION][1] تغییر بده
+        text: لباس {THIS} را به {ANIMATION} تغییر بده
       gamelab_setBackground:
-        text: تنظیم رنگ پس‌زمینه روی [COLOR][0]
+        text: تنظیم رنگ پس‌زمینه روی {COLOR}
       gamelab_setBackgroundImage:
-        text: تنظیم پس‌زمینه روی [IMG][0]
+        text: تنظیم پس‌زمینه روی {IMG}
         options:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': غار
@@ -1420,7 +1524,7 @@ fa:
             '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': جلوی خانه
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': کهکشان
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': شبکه
-            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'آشپزخانه'
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': آشپزخانه
             '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': اتاق نشیمن
             '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': چمنزار
             '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': چشم‌انداز پارک
@@ -1429,7 +1533,7 @@ fa:
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': علمی تخیلی
             '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': زمین فوتبال
             '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': مرحله
-            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': ستاره ها
+            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': ستاره‌ها
             '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': مترو
             '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': خورشید و رنگین کمان (تصویر)
             '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': نور خورشید
@@ -1440,9 +1544,9 @@ fa:
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': زمستان
             undefined: هیچکدام
       gamelab_setBackgroundImageAs:
-        text: تنظیم پس‌زمینه روی [IMG][0]
+        text: تنظیم پس‌زمینه روی {IMG}
       gamelab_setDefaultSpriteSize:
-        text: تنظیم اندازه‌ی پیشفرض اسپرایت جدید به [SIZE][0]
+        text: تنظیم اندازه‌ی پیشفرض اسپرایت جدید به {SIZE}
         options:
           SIZE:
             '25': بسیار کوچک
@@ -1450,13 +1554,13 @@ fa:
             '75': متوسط
             '100': بزرگ
       gamelab_setPrompt:
-        text: به کاربر برای متغیر [VAR][1] سوال [QUESTION][0] بفرست
+        text: به کاربر برای متغیر {VAR} سوال {QUESTION} بفرست
       gamelab_setPromptWith2Choices:
-        text: به کاربر برای متغیر [VAR][1] سوال [QUESTION][0] با انتخابهای [A][2][B][3] را بفرست
+        text: به کاربر برای متغیر {VAR} سوال {QUESTION} با انتخابهای {A}{B} را بفرست
       gamelab_setPromptWithChoices:
-        text: به کاربر برای متغیر [VAR][1] سوال [QUESTION][0] با انتخابهای [A][2][B][3][C][4] را بفرست
+        text: به کاربر برای متغیر {VAR} سوال {QUESTION} با انتخابهای {A}{B}{C} را بفرست
       gamelab_setProp:
-        text: '[SPRITE][0][PROPERTY][1] را روی [VAL][2] تنظیم کن'
+        text: "{SPRITE}{PROPERTY} را روی {VAL} تنظیم کن"
         options:
           PROPERTY:
             '"scale"': اندازه
@@ -1466,7 +1570,7 @@ fa:
             '"direction"': جهت حرکت
             '"speed"': سرعت
       gamelab_setProp_dropdown:
-        text: '[SPRITE][0][PROPERTY][1] را روی [SIZE][2] تنظیم کن'
+        text: "{SPRITE}{PROPERTY} را روی {SIZE} تنظیم کن"
         options:
           PROPERTY:
             '"scale"': اندازه
@@ -1476,13 +1580,13 @@ fa:
             '75': متوسط
             '100': بزرگ
       gamelab_setSizes:
-        text: '[SPRITE][0][PROPERTY][1] را روی [N][2]% تنظیم کن'
+        text: "{SPRITE}{PROPERTY} را روی {N}% تنظیم کن"
         options:
           PROPERTY:
             '"scale"': اندازه
             '"height"': ارتفاع
       gamelab_setSpeed_dropdown:
-        text: تنظیم سرعت [SPRITE][0] به [SIZE][1]
+        text: تنظیم سرعت {SPRITE} به {SIZE}
         options:
           SIZE:
             '1': خیلی آهسته
@@ -1491,34 +1595,34 @@ fa:
             '7': سریع
             '9': خیلی سریع
       gamelab_setTint:
-        text: تغییر رنگ [THIS][0] به [COLOR][1]
+        text: تغییر رنگ {THIS} به {COLOR}
       gamelab_setupScoreboard:
-        text: "ترسیم برگه امتیاز \n[SPRITE1COSTUME][0] امتیاز[VAR1][1][SPRITE2COSTUME][2]امتیاز[VAR2][3]هدف[SPRITE3COSTUME][4]"
+        text: "ترسیم برگه امتیاز \n{SPRITE1COSTUME} امتیاز{VAR1}{SPRITE2COSTUME}امتیاز{VAR2}هدف{SPRITE3COSTUME}"
       gamelab_setupSim:
         text: |-
           راه‌اندازی شبیه‌سازی با
-          [SPRITE1N][0][SPRITE1COSTUME][1]سرعت[SPRITE1SPEED][2]
-          [SPRITE2N][3][SPRITE2COSTUME][4]سرعت[SPRITE2SPEED][5]
+          {SPRITE1N}{SPRITE1COSTUME}سرعت{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}سرعت{SPRITE2SPEED}
           جمع‌آوری
-          [SPRITE3N][6][SPRITE3COSTUME][7]
+          {SPRITE3N}{SPRITE3COSTUME}
       gamelab_showTitleScreen:
-        text: نمایش صفحه عنوان [BREAK][0] عنوان [TITLE][1] عنوان فرعی [SUBTITLE][2]
+        text: نمایش صفحه عنوان {BREAK} عنوان {TITLE} عنوان فرعی {SUBTITLE}
       gamelab_spriteClicked:
-        text: "[CONDITION][0][SPRITE][1] کلیک شد"
+        text: "{CONDITION}{SPRITE} کلیک شد"
         options:
           CONDITION:
             '"when"': وقتی
-            '"while"': '"while"'
+            '"while"': هنگامی‌که
       gamelab_spriteSay:
-        text: "[SPRITE][0] میگوید: [SPEECH][1]"
+        text: "{SPRITE} میگوید: {SPEECH}"
       gamelab_spriteSayTime:
-        text: "[SPRITE][0] برای [NUM][2] ثانیه میگوید: [TEXT1][1]"
+        text: "{SPRITE} برای {NUM} ثانیه میگوید: {TEXT1}"
       gamelab_spriteThink:
-        text: "[SPRITE][0] فکر می‌کند به [SPEECH][1]"
+        text: "{SPRITE} فکر می‌کند به {SPEECH}"
       gamelab_spriteThinkTime:
-        text: "[SPRITE][0] برای [NUM][2] ثانیه به [TEXT1][1] فکر میکند"
+        text: "{SPRITE} برای {NUM} ثانیه به {TEXT1} فکر میکند"
       gamelab_spriteThink_fables2:
-        text: "[SPRITE][0] فکر می‌کند به [THOUGHT][1]"
+        text: "{SPRITE} فکر می‌کند به {THOUGHT}"
         options:
           THOUGHT:
             '"Hmm..."': در حال فکر...
@@ -1527,7 +1631,7 @@ fa:
             '"This costume keeps me warm."': این لباس گرم نگهم میداره
             '"I am actually a wolf."': من در اصل یه گرگم.
       gamelab_spriteThink_fables3:
-        text: "[SPRITE][0] فکر می‌کند به [THOUGHT][1]"
+        text: "{SPRITE} فکر می‌کند به {THOUGHT}"
         options:
           THOUGHT:
             '"Hmm..."': در حال فکر...
@@ -1536,7 +1640,7 @@ fa:
             '"I''ve done this race before."': من قبلاً این مسابقه رو داده‌م.
             '"My feet are bigger than Turtle''s feet."': پاهای من از پاهای لاکپشت هم بزرگتره.
       gamelab_spriteThink_fables4:
-        text: "[SPRITE][0] فکر می‌کند به [THOUGHT][1]"
+        text: "{SPRITE} فکر می‌کند به {THOUGHT}"
         options:
           THOUGHT:
             '"Hmm..."': در حال فکر...
@@ -1545,41 +1649,41 @@ fa:
             '"If we share, we''ll all have something to eat. "': اگه باهم شریک بشیم یه چیزی برای خوردن خواهیم داشت.
             '"I''ll trick everyone into giving me their food."': من همه رو گول میزنم تا غذاشون رو بدن بهم.
       gamelab_startAvoiding:
-        text: "[SPRITE][0] مراقب است با [TARGET][1] برخورد نکند"
+        text: "{SPRITE} مراقب است با {TARGET} برخورد نکند"
       gamelab_startFollowing:
-        text: "[SPRITE][0] [TARGET][1] را دنبال میکند"
+        text: "{SPRITE} {TARGET} را دنبال میکند"
       gamelab_startGliding:
-        text: "[SPRITE][0] شروع به حرکت آرام میکند"
+        text: "{SPRITE} شروع به حرکت آرام میکند"
       gamelab_stopAvoiding:
-        text: "[SPRITE][0]مراقب برخورد با اسپرایتهای دیگر است"
+        text: "{SPRITE}مراقب برخورد با اسپرایتهای دیگر است"
       gamelab_stopCollectingData:
         text: توقف در جمع‌آوری داده‌ها
       gamelab_stopFollowing:
-        text: "[SPRITE][0] تعقیب [TARGET][1] را متوقف میکند"
+        text: "{SPRITE} تعقیب [TARGET][1] را متوقف میکند"
       gamelab_stopGliding:
-        text: "[SPRITE][0] حرکت آرامش را متوقف میکند"
+        text: "{SPRITE} حرکت آرامش را متوقف میکند"
       gamelab_subjectSpritePointer:
-        text: "[SPRITE][0]"
+        text: "{SPRITE}"
       gamelab_textJoin:
-        text: "[LEFT_QUOTE][0][TEXT1][1][RIGHT_QUOTE][2][TEXT2][3]"
+        text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
       gamelab_textVariableJoin:
-        text: "[VAR][0][TEXT2][1]"
+        text: "{VAR}{TEXT2}"
       gamelab_tumbling:
         text: جست و خیز کردن
       gamelab_turn:
-        text: '[SPRITE][0] را به سمت [DIRECTION][1] [N][2] درجه تغییر جهت بده'
+        text: "{SPRITE} را به سمت {DIRECTION} {N} درجه تغییر جهت بده"
         options:
           DIRECTION:
             '"right"': سمت راست
             '"left"': سمت چپ
       gamelab_updateTitleWithColor:
-        text: نمایش صفحه عنوان [BREAK][0] عنوان [TITLE] رنگ [1][COLOR][2]
+        text: نمایش صفحه عنوان {BREAK} عنوان [TITLE] رنگ [1]{COLOR}
       gamelab_whenAllPromptsAnswered:
         text: وقتی تمام دستورات پاسخ داده شدند
       gamelab_whenDownArrow:
         text: وقتی دکمه پایین فشرده شد
       gamelab_whenKey:
-        text: وقتی [KEY][0] زده شد
+        text: وقتی {KEY} زده شد
         options:
           KEY:
             '"up"': بالا
@@ -1594,19 +1698,19 @@ fa:
       gamelab_whenLeftArrow:
         text: وقتی دکمه چپ فشرده شد
       gamelab_whenPromptAnswered:
-        text: وقتی [VAR][0] پاسخ داده شد
+        text: وقتی {VAR} پاسخ داده شد
       gamelab_whenRightArrow:
         text: وقتی دکمه راست فشرده شد
       gamelab_whenSpriteCreated:
-        text: وقتی [SPRITE][0] ایجاد شد
+        text: وقتی {SPRITE} ایجاد شد
       gamelab_whenTouching:
-        text: تا زمانیکه [SPRITE1][0] با [SPRITE2][1] در تماس است
+        text: تا زمانیکه {SPRITE1} با {SPRITE2} در تماس است
       gamelab_whenUpArrow:
         text: وقتی دکمه بالا فشرده شد
       gamelab_whileDownArrow:
         text: وقتی دکمه پایین فشرده شده
       gamelab_whileKey:
-        text: وقتی [KEY][0] زده شد
+        text: وقتی {KEY} زده شد
         options:
           KEY:
             '"up"': بالا
@@ -1623,15 +1727,13 @@ fa:
       gamelab_whileRightArrow:
         text: وقتی دکمه راست فشرده شده
       gamelab_whileTouching:
-        text: تا زمانیکه [SPRITE1][0] با [SPRITE2][1] در تماس است
+        text: تا زمانیکه {SPRITE1} با {SPRITE2} در تماس است
       gamelab_whileUpArrow:
         text: تا زمانیکه دکمه بالا فشرده شده
       gamelab_withPercentChance:
-        text: |-
-          اگر شانس [NUM][0]% است [STATEMENT][1]
+        text: اگر شانس {NUM}% است {STATEMENT}
       gamelab_withPercentChanceDropdown:
-        text: |2-
-          برای شانس [NUM][0]% [STATEMENT][1]
+        text: برای شانس {NUM}% {STATEMENT}
         options:
           NUM:
             '10': خیلی کم
@@ -1640,13 +1742,23 @@ fa:
             '75': بالا
             '90': خیلی بالا
       gamelab_xLocationOf:
-        text: مختصات x مربوط به [SPRITE][0]
+        text: مختصات x مربوط به {SPRITE}
       gamelab_yLocationOf:
-        text: مختصات y مربوط به [SPRITE][0]
+        text: مختصات y مربوط به {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} آرام به {LOCATION} می‌رود"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': جامد
+            '"liquid"': مایع
+            '"gas"': گاز
+      KatiesBlocks_tumbling:
+        text: جست و خیز کردن
       Mikelab_addBehaviorSimple:
-        text: اسپرایت [SPRITE][0] ، [BEHAVIOR][1] را شروع می‌کند
+        text: اسپرایت {SPRITE} ، {BEHAVIOR} را شروع می‌کند
       Mikelab_addTrainingData:
-        text: 'داده‌های آموزشی: [NAME][0][LOCATION][1] را اضافه کن'
+        text: 'داده‌های آموزشی: {NAME}{LOCATION} را اضافه کن'
         options:
           NAME:
             "{x: 201, y: 100}": شیء
@@ -1657,9 +1769,9 @@ fa:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": برچسب من
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": غیر از برچسب من
       Mikelab_allSpritesWithAnimation:
-        text: "[ANIMATION][0]"
+        text: "{ANIMATION}"
       Mikelab_beginDataCollection:
-        text: به کاربر برای متغیر [VAR][1] سوال [QUESTION][0] با انتخابهای [A][2][B][3][C][4] را بفرست
+        text: به کاربر برای متغیر {VAR} سوال {QUESTION} با انتخابهای {A}{B}{C} را بفرست
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1679,7 +1791,7 @@ fa:
             "{x: 100, y: 100}": بالا چپ
             "{x: 300, y: 100}": بالا راست
             "{x: 100, y: 300}": پایین چپ
-            "{x: 300, y: 300}": پایین راست
+            "{x: 300, y: 300}": سمت راست پایین
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": تصادفی
       Mikelab_getNext:
         text: دریافت شیء بعدی
@@ -1692,13 +1804,13 @@ fa:
             '"y"': پوزیشن y
             '"direction"': جهت حرکت
       Mikelab_groupChangeAnim:
-        text: تغییر [SELECT][0][COSTUME][1] به [COSTUME2][2]
+        text: تغییر {SELECT}{COSTUME} به {COSTUME2}
         options:
           SELECT:
             '"all"': همه
             '"this"': این
       Mikelab_groupChangePropBy:
-        text: تغییر [PROPERTY][0] به [SELECT][1] [COSTUME][2] به اندازه [VAL][3]
+        text: تغییر {PROPERTY} به {SELECT} {COSTUME} به اندازه {VAL}
         options:
           SELECT:
             '"all"': همه
@@ -1710,7 +1822,7 @@ fa:
             '"y"': پوزیشن y
             '"direction"': جهت حرکت
       Mikelab_groupCreateNewSprite:
-        text: یک [COSTUME][0] در [LOCATION][1] بساز
+        text: یک {COSTUME} در {LOCATION} بساز
         options:
           LOCATION:
             "{x: 200, y: 100}": بالا
@@ -1721,20 +1833,20 @@ fa:
             "{x: 100, y: 100}": بالا چپ
             "{x: 300, y: 100}": بالا راست
             "{x: 100, y: 300}": پایین چپ
-            "{x: 300, y: 300}": پایین راست
+            "{x: 300, y: 300}": سمت راست پایین
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": تصادفی
       Mikelab_groupDestroy:
-        text: '[SELECT][0][COSTUME][1] را حذف کن'
+        text: "{SELECT}{COSTUME} را حذف کن"
         options:
           SELECT:
             '"all"': همه
             '"this"': این
       Mikelab_groupDisplace:
-        text: تمام [COSTUME][0] ، [COSTUME2][1] را از حرکت باز میدارند
+        text: تمام {COSTUME} ، {COSTUME2} را از حرکت باز میدارند
       Mikelab_groupEdgesDisplace:
-        text: کناره‌ها [COSTUME][0] را از حرکت باز می‌دارند
+        text: کناره‌ها {COSTUME} را از حرکت باز می‌دارند
       Mikelab_groupGetProp:
-        text: "[PROPERTY][2] [SELECT][0][COSTUME][1]"
+        text: "{PROPERTY} {SELECT}{COSTUME}"
         options:
           SELECT:
             '"average"': متوسط
@@ -1746,25 +1858,25 @@ fa:
             '"y"': پوزیشن y
             '"direction"': جهت حرکت
       Mikelab_groupRemoveAllBehaviors:
-        text: رفتارهای [SELECT][0][COSTUME][1] را متوقف کن
+        text: رفتارهای {SELECT}{COSTUME} را متوقف کن
         options:
           SELECT:
             '"all"': همه
             '"this"': این
       Mikelab_groupRemoveBehaviorSimple:
-        text: "[SELECT][0][COSTUME][1] [BEHAVIOR][2] را متوقف میکند"
+        text: "{SELECT}{COSTUME} {BEHAVIOR} را متوقف میکند"
         options:
           SELECT:
             '"all"': همه
             '"this"': این
       Mikelab_groupRemoveTint:
-        text: رنگ [SELECT][0][COSTUME][1] را حذف کن
+        text: رنگ {SELECT}{COSTUME} را حذف کن
         options:
           SELECT:
             '"all"': همه
             '"this"': این
       Mikelab_groupSetProp:
-        text: '[PROPERTY][0] [SELECT][1][COSTUME][2] را روی [VAL][3] تنظیم کن'
+        text: "{PROPERTY} {SELECT}{COSTUME} را روی {VAL} تنظیم کن"
         options:
           SELECT:
             '"all"': همه
@@ -1776,82 +1888,79 @@ fa:
             '"y"': پوزیشن y
             '"direction"': جهت حرکت
       Mikelab_groupSetTint:
-        text: رنگ [SELECT][0][COSTUME][1] را به [COLOR][2] تغییر بده
+        text: رنگ {SELECT}{COSTUME} را به {COLOR} تغییر بده
         options:
           SELECT:
             '"all"': همه
             '"this"': این
       Mikelab_groupWhenClickedOn:
-        text: وقتی [COSTUME][0] کلیک شد
+        text: وقتی {COSTUME} کلیک شد
       Mikelab_groupWhenXTouchesY:
-        text: وقتی [COSTUME][0] با [COSTUME2][1] برخورد میکند
+        text: وقتی {COSTUME} با {COSTUME2} برخورد میکند
       Mikelab_groupWhileClicked:
-        text: وقتی روی [COSTUME][0] کلیک میشود
+        text: وقتی روی {COSTUME} کلیک میشود
       Mikelab_groupWhileTouchingAny:
-        text: |-
-          تا زمانیکه [COSTUME][0] با [COSTUME2][1][STATEMENT][2] در تماس است
+        text: تا زمانیکه {COSTUME} با {COSTUME2}{STATEMENT} در تماس است
       Mikelab_hasBehavior:
-        text: "[SPRITE][0] در حال حاضر [BEHAVIOR][1]"
+        text: "{SPRITE} در حال حاضر {BEHAVIOR}"
       Mikelab_hideFish:
-        text: حذف [TRASH][0]
+        text: حذف {TRASH}
         options:
           TRASH:
             object: شیء
             fish: ماهی
       Mikelab_ifDanceIs:
-        text: |-
-          اگر [SPRITE][0] ، [DANCE][1] را انجام می‌دهد [DO1][2][DO2][3]
+        text: اگر {SPRITE} ، {DANCE} را انجام می‌دهد {DO1}{DO2}
         options:
           DANCE:
             MOVES.ClapHigh: کلپ های (رقص)
             MOVES.Clown: گنگام (رقص)
             MOVES.Dab: داب (رقص)
             MOVES.DoubleJam: پریدن با دو پا روی زمین - دابل داون (رقص)
-            MOVES.Drop: دراپ (رقص)
+            MOVES.Drop: انداختن
             MOVES.Floss: فلاس - قر دادن (رقص)
             MOVES.Fresh: فِرِش (رقص)
             MOVES.Roll: بادی رول - خم شدن (رقص)
-            MOVES.Kick: استار - ستاره (رقص)
+            MOVES.Kick: ستاره
             MOVES.ThisOrThat: دیس اور دت (رقص)
             MOVES.Rest: هیچکدام
       Mikelab_ifLabel:
         text: |-
-          اگر [DANCE][0]
-          [DO1][1] را اجرا کن در غیر اینصورت [DO2][2] را اجرا کن
+          اگر {DANCE}
+          {DO1} را اجرا کن در غیر اینصورت {DO2} را اجرا کن
         options:
           DANCE:
             MOVES.ClapHigh: ماهی
             MOVES.Clown: برچسب من
       Mikelab_ifRecognizeLabel:
         text: |-
-          اگر شیء به عنوان [DANCE][0] شناخته شد
-          [DO1][1] را اجرا کن در غیر اینصورت [DO2][2] را اجرا کن
-
+          اگر شیء به عنوان {DANCE} شناخته شد
+          {DO1} را اجرا کن در غیر اینصورت {DO2} را اجرا کن
         options:
           DANCE:
             MOVES.ClapHigh: ماهی
             MOVES.Clown: برچسب من
       Mikelab_ifRecognizeLabelOnly:
         text: |-
-          اگر شیء به عنوان [DANCE][0] شناخته شد
-          [DO1][1] را اجرا کن
+          اگر شیء به عنوان {DANCE} شناخته شد
+          {DO1} را اجرا کن
         options:
           DANCE:
             MOVES.ClapHigh: ماهی
             MOVES.Clown: غیر از برچسب من
       Mikelab_joinText:
-        text: "[TEXT][0] [NEXT][1]"
+        text: "{TEXT} {NEXT}"
       Mikelab_locationAt:
-        text: 'مختصات x: [X][0] , y: [Y][1]'
+        text: 'مختصات x: {X} , y: {Y}'
       Mikelab_location_picker:
-        text: "[LOCATION][0]"
+        text: "{LOCATION}"
       Mikelab_poemTextJoin:
-        text: "[TEXT1][0] [VAR][1] [TEXT2][2]"
+        text: "{TEXT1} {VAR} {TEXT2}"
         options:
           TEXT1:
             '"Balancing on the "': '"متعادل کردن روی"'
             '"A chubby cat "': '"یگ گربه خپله"'
-            '"The "': ' '
+            '"The "': ''
           TEXT2:
             '" fence"': '"حصار"'
             '""': '""'
@@ -1859,7 +1968,7 @@ fa:
       Mikelab_randomColor:
         text: رنگ تصادفی
       Mikelab_removeBehaviorSimple:
-        text: اسپرایت [SPRITE][0] ، [BEHAVIOR][1] را متوقف می‌کند
+        text: اسپرایت {SPRITE} ، {BEHAVIOR} را متوقف می‌کند
       Mikelab_repeatUntilComplete:
         text: تکرار بی‌پایان
       Mikelab_sendBad:
@@ -1875,7 +1984,7 @@ fa:
             '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': مزرعه
             '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': علف
             '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': جلوی خانه
-            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'آشپزخانه'
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': آشپزخانه
             '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': اتاق نشیمن
             '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': چمنزار
             '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': چشم‌انداز پارک
@@ -1899,22 +2008,22 @@ fa:
       Mikelab_setupLevel:
         text: |-
           سطح را با اینها تنظیم کن:
-          [A1][0][A2][1][A3][2][A4][3]
-          [A5][4][A6][5][A7][6][A8][7]
-          [B1][8][B2][9][B3][10][B4][11]
-          [B5][12][B6][13][B7][14][B8][15]
+          {A1}{A2}{A3}{A4}
+          {A5}{A6}{A7}{A8}
+          {B1}{B2}{B3}{B4}
+          {B5}{B6}{B7}{B8}
       Mikelab_setupOutbreak:
         text: |-
           راه‌اندازی شیوع ویروس:
-          جمعیت: [SPRITE2N][0]
-           ویروس [TOGGLE][1]
+          جمعیت: {SPRITE2N}
+           ویروس {TOGGLE}
       Mikelab_setupSim:
         text: |-
           راه‌اندازی شبیه‌سازی با
-          [SPRITE1N][0][SPRITE1COSTUME][1]سرعت[SPRITE1SPEED][2]
-          [SPRITE2N][3][SPRITE2COSTUME][4]سرعت[SPRITE2SPEED][5]
+          {SPRITE1N}{SPRITE1COSTUME}سرعت{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}سرعت{SPRITE2SPEED}
           جمع‌آوری
-          [SPRITE3N][6][SPRITE3COSTUME][7]
+          {SPRITE3N}{SPRITE3COSTUME}
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -1926,7 +2035,7 @@ fa:
             '"above"': بالا
             '"below"': زیر
       Mikelab_sprite:
-        text: یک اسپرایت جدید [COSTUME][0] در محل [LOCATION][1]
+        text: یک اسپرایت جدید {COSTUME} در محل {LOCATION}
         options:
           LOCATION:
             "{x: 200, y: 100}": بالا
@@ -1937,12 +2046,12 @@ fa:
             "{x: 100, y: 100}": بالا چپ
             "{x: 300, y: 100}": بالا راست
             "{x: 100, y: 300}": پایین چپ
-            "{x: 300, y: 300}": پایین راست
+            "{x: 300, y: 300}": سمت راست پایین
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": تصادفی
       Mikelab_whenClickedOn:
-        text: وقتی [SPRITE][0] کلیک شد
+        text: وقتی {SPRITE} کلیک شد
       Mikelab_whenKeyPressed:
-        text: وقتی [KEY][0] زده شد
+        text: وقتی {KEY} زده شد
         options:
           KEY:
             '"up"': فلش سمت بالا
@@ -1969,11 +2078,11 @@ fa:
       Mikelab_whenMouseClicked:
         text: وقتی ماوس کلیک کرد
       Mikelab_whenYesNoClicked:
-        text: وقتی [KEY][0] کلیک شد
+        text: وقتی {KEY} کلیک شد
         options:
           KEY:
-            '"yes"': 'بله'
-            '"no"': 'نه'
+            '"yes"': بله
+            '"no"': نه
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -1983,9 +2092,9 @@ fa:
             '"right"': فلش سمت راست
             '"space"': کلید اسپیس
       Mikelab_xLocationOf:
-        text: مختصات x مربوط به [SPRITE][0]
+        text: مختصات x مربوط به {SPRITE}
       Mikelab_yLocationOf:
-        text: مختصات y مربوط به [SPRITE][0]
+        text: مختصات y مربوط به {SPRITE}
       Outbreak_beginCongregating:
         text: هیولاها شروع به تجمع می‌کنند
       Outbreak_beginQuarantining:
@@ -1999,40 +2108,40 @@ fa:
       Outbreak_layoutBorder:
         text: هیولاها را در حاشیه مرتب کن
       Outbreak_layoutClusters:
-        text: هیولاها را در [NUM][0] دسته گروه‌بندی کن
+        text: هیولاها را در {NUM} دسته گروه‌بندی کن
       Outbreak_layoutGrid:
         text: هیولاها را به شکل شبکه‌ای منظم کن
       Outbreak_layoutRandom:
         text: هیولاها را به شکل تصادفی دسته‌بندی کن
       Outbreak_setSpeed:
-        text: تنظیم سرعت هیولا روی [VAL][0]
+        text: تنظیم سرعت هیولا روی {VAL}
       Outbreak_setupOutbreak:
-        text: شهر هیولاها را با [COUNT][0] هیولا بساز
+        text: شهر هیولاها را با {COUNT} هیولا بساز
       Outbreak_stopMoving:
         text: هیولاها متوقف می‌شوند
       ParticlesBlocks_getMicroscope:
-        text: میکروسکوپ [INPUT1][0] دارد
+        text: میکروسکوپ {INPUT1} دارد
         options:
           INPUT1:
             '1': آب لیمو
             '3': جوش شیرین
             '5': هر دو
       ParticlesBlocks_setMicroscope:
-        text: میکروسکوپ را روی [0][INPUT1] تنظیم کنید
+        text: میکروسکوپ را روی [0][null] تنظیم کنید
         options:
           INPUT1:
             '1': آب لیمو
             '3': جوش شیرین
             '5': هر دو
       ParticlesBlocks_statesOfMatter:
-        text: "[BEHAVIOR][0]"
+        text: "{BEHAVIOR}"
         options:
           BEHAVIOR:
-            "new Behavior(solid, [])": جامد
-            "new Behavior(liquid, [])": مایع
-            "new Behavior(wandering, [])": گاز
+            new Behavior(solid, []): جامد
+            new Behavior(liquid, []): مایع
+            new Behavior(wandering, []): گاز
       ParticlesBlocks_statesOfMatter2:
-        text: رفتار [COSTUME][0] تا [BEHAVIOR][1] را تنظیم کنید
+        text: رفتار {COSTUME} تا {BEHAVIOR} را تنظیم کنید
         options:
           BEHAVIOR:
             '"solid"': 'ذرات جامد '
@@ -2046,7 +2155,7 @@ fa:
             '"liquid"': ذرات مایع
             '"gas"': ذرات گاز
       Poetry_addFrame:
-        text: قاب را روی [BRUSH][0] تنظیم کن
+        text: قاب را روی {BRUSH} تنظیم کن
         options:
           BRUSH:
             '"bamboo"': بامبو (برس)
@@ -2055,33 +2164,33 @@ fa:
             '"decorative"': تزئینی
             '"donuts"': دونات
             '"fire"': آتش
-            '"flowers"': گلها
+            '"flowers"': گل‌ها
             '"gilded"': طلاکاری شده
             '"hearts"': قلب
             '"iceCream"': بستنی
-            '"leaves"': برگ ها
+            '"leaves"': برگ‌ها
             '"metal"': قاب فلزی
             '"pawPrints"': رد پا
             '"rainbow"': رنگین کمان
-            '"stars"': ستاره ها
+            '"stars"': ستاره‌ها
             '"swirls"': چرخشی
             '"waves"': امواج
             '"wood"': قاب چوبی
             '"zigzag"': زیگزاگ
       Poetry_addLine:
-        text: افزودن خط [LINE][0]
+        text: افزودن خط {LINE}
       Poetry_addTextHighlight:
-        text: افزودن متن هایلایت [COLOR][0]
+        text: افزودن متن هایلایت {COLOR}
       Poetry_animateText:
         text: متن متحرک
       Poetry_destroy:
-        text: حذف [ANIMATION_NAME][0]
+        text: حذف {ANIMATION_NAME}
       Poetry_glideTo:
-        text: "[SPRITE][0] آرام به [LOCATION][1] می‌رود"
+        text: "{SPRITE} آرام به {LOCATION} می‌رود"
       Poetry_hideText:
         text: مخفی کردن متن
       Poetry_makeBurst:
-        text: ایجاد افکت [EFFECT][0] با [NUM][1][ANIMATION_NAME][2] اسپرایت
+        text: ایجاد افکت {EFFECT} با {NUM}{ANIMATION_NAME} اسپرایت
         options:
           EFFECT:
             '"burst"': انفجار
@@ -2089,16 +2198,16 @@ fa:
             '"rain"': بارانی
             '"spiral"': مارپیچ
       Poetry_makeNewSpriteAnon:
-        text: یک اسپرایت جدید [ANIMATION_NAME][0] در محل [LOCATION][1] بساز
+        text: یک اسپرایت جدید {ANIMATION_NAME} در محل {LOCATION} بساز
       Poetry_makeNumSprites:
-        text: '[NUM][0] اسپرایت جدید [ANIMATION_NAME][1] بساز'
+        text: "{NUM} اسپرایت جدید {ANIMATION_NAME} بساز"
       Poetry_playMusic:
-        text: پخش [SOUND][0]
+        text: پخش {SOUND}
         options:
           SOUND:
             '"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"': درخشان (صدا)
             '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': آرام (صدا)
-            '"sound://category_nature/steady_campfire_loop.mp3"': آتش کمپ
+            '"sound://category_nature/steady_campfire_loop.mp3"': آتش کمپینگ
             '"sound://category_nature/rain_loop.mp3"': نم‌نم باران (صدا)
             '"sound://category_background/fire_burning.mp3"': کنار آتش (صدا)
             '"sound://category_nature/forest_woodland_ambience_2.mp3"': جنگل
@@ -2115,7 +2224,7 @@ fa:
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': آرام
             '"sound://category_background/waterfall.mp3"': آبشار (صدا)
       Poetry_playSound:
-        text: '[SOUND][0] را پخش کن'
+        text: "{SOUND} را پخش کن"
         options:
           SOUND:
             '"sound://category_bell/long_bell_notification.mp3"': زنگ
@@ -2136,7 +2245,7 @@ fa:
             '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': گردباد (صدا)
             '"sound://category_achievements/peaceful_win_6.mp3"': لوله‌های فلزی  (صدا)
       Poetry_playSoundOptionsSpace:
-        text: '[SOUND][0] را پخش کن'
+        text: "{SOUND} را پخش کن"
         options:
           SOUND:
             "'sound://category_space/Blackhole_SFX.mp3'": صدای سیاه‌چاله
@@ -2153,11 +2262,11 @@ fa:
             "'sound://category_space/Tycho_SFX.mp3'": تایکو (tycho) (صدا)
             "'sound://category_space/Whirlpool_galaxy_SFX.mp3'": صدای کهکشان مارپیچی
       Poetry_setAuthor:
-        text: 'نویسنده: [AUTHOR][0]'
+        text: 'نویسنده: {AUTHOR}'
       Poetry_setBackground:
-        text: تنظیم پس‌زمینه روی [COLOR][0]
+        text: تنظیم پس‌زمینه روی {COLOR}
       Poetry_setBackgroundEffect:
-        text: تنظیم پس‌زمینه روی [EFFECT][0][PALETTE][1]
+        text: تنظیم پس‌زمینه روی {EFFECT}{PALETTE}
         options:
           EFFECT:
             '"blooming"': گل کردن (افکت)
@@ -2186,9 +2295,9 @@ fa:
             '"summer"': تابستانی (پالت)
             '"winter"': زمستان
       Poetry_setBackgroundImageAs:
-        text: تنظیم پس‌زمینه روی [IMG][0]
+        text: تنظیم پس‌زمینه روی {IMG}
       Poetry_setFont:
-        text: 'تنظیم فونت: [FONT][0]'
+        text: 'تنظیم فونت: {FONT}'
         options:
           FONT:
             '"Arial"': Arial
@@ -2199,9 +2308,9 @@ fa:
             '"Georgia"': Georgia
             '"Times"': Times
       Poetry_setFontColor:
-        text: 'تنظیم رنگ متن: [FILL][0]'
+        text: 'تنظیم رنگ متن: {FILL}'
       Poetry_setForegroundEffect:
-        text: اجرای افکت [EFFECT][0]
+        text: اجرای افکت {EFFECT}
         options:
           EFFECT:
             '"bubbles"': حباب (افکت)
@@ -2213,13 +2322,13 @@ fa:
             '"glass"': شیشه شکسته (افکت)
             '"twinkling"': چشمک زن (افکت)
       Poetry_setPrompt:
-        text: برای متغیر [VAR][3] به کاربر [LEFT_QUOTE][0][NAME][1][RIGHT_QUOTE][2] پیام بده
+        text: برای متغیر {VAR} به کاربر {LEFT_QUOTE}{NAME}{RIGHT_QUOTE} پیام بده
       Poetry_setPromptWithChoices:
-        text: برای متغیر [VAR][3] با انتخابهای [LEFT_QUOTE_A][4][A][5][RIGHT_QUOTE_A][6] [LEFT_QUOTE_B][7][B][8][RIGHT_QUOTE_B][9] [LEFT_QUOTE_C][10][C][11][RIGHT_QUOTE_C][12] به کاربر [LEFT_QUOTE][0][NAME][1][RIGHT_QUOTE][2] پیام بده
+        text: برای متغیر {VAR} با انتخابهای {LEFT_QUOTE_A}{A}{RIGHT_QUOTE_A} {LEFT_QUOTE_B}{B}{RIGHT_QUOTE_B} {LEFT_QUOTE_C}{C}{RIGHT_QUOTE_C} به کاربر {LEFT_QUOTE}{TEXT}{RIGHT_QUOTE} پیام بده
       Poetry_setSize:
-        text: تنظیم اندازه [SPRITE][0] به [VAL][1]
+        text: تنظیم اندازه {SPRITE} به {VAL}
       Poetry_setTextEffect:
-        text: تنظیم افکت متن روی [EFFECT][0]
+        text: تنظیم افکت متن روی {EFFECT}
         options:
           EFFECT:
             '"fade"': محو شدن (افکت)
@@ -2229,11 +2338,11 @@ fa:
             '"flyBottom"': پرواز از پایین (افکت)
             '"typewriter"': ماشین تایپ (صدا)
       Poetry_setTitle:
-        text: 'تنظیم عنوان: [TITLE][0]'
+        text: 'تنظیم عنوان: {TITLE}'
       Poetry_showText:
         text: نمایش متن
       Poetry_startBehavior:
-        text: 'اسپرایت [ANIMATION_NAME][0] ، [BEHAVIOR][1] را شروع می‌کند '
+        text: 'اسپرایت {ANIMATION_NAME} ، {BEHAVIOR} را شروع می‌کند '
         options:
           BEHAVIOR:
             '"fluttering"': بال زدن
@@ -2243,14 +2352,14 @@ fa:
             '"moving_south_and_looping"': حرکت حلقوی به سمت جنوب
             '"moving_east_and_looping"': حرکت حلقوی به سمت شرق
             '"moving_west_and_looping"': حرکت حلقوی به سمت غرب
-            '"shrinking"': منقبض شدن
-            '"spinning_left"': چرخش به چپ
-            '"spinning_right"': چرخش به راست
+            '"shrinking"': کوچک شدن
+            '"spinning_left"': چرخش به سمت چپ
+            '"spinning_right"': چرخش به سمت راست
             '"swimming_left_and_right"': شنا
             '"wandering"': گردش کردن
             '"wobbling"': تلوتلو خوردن
       Poetry_stopBehavior:
-        text: 'اسپرایت [ANIMATION_NAME][0] ، [BEHAVIOR][1] را متوقف می‌کند '
+        text: 'اسپرایت {ANIMATION_NAME} ، {BEHAVIOR} را متوقف می‌کند '
         options:
           BEHAVIOR:
             '"fluttering"': بال زدن
@@ -2260,24 +2369,23 @@ fa:
             '"moving_south_and_looping"': حرکت حلقوی به سمت جنوب
             '"moving_east_and_looping"': حرکت حلقوی به سمت شرق
             '"moving_west_and_looping"': حرکت حلقوی به سمت غرب
-            '"shrinking"': منقبض شدن
-            '"spinning_left"': چرخش به چپ
-            '"spinning_right"': چرخش به راست
+            '"shrinking"': کوچک شدن
+            '"spinning_left"': چرخش به سمت چپ
+            '"spinning_right"': چرخش به سمت راست
             '"swimming_left_and_right"': شنا
             '"wandering"': گردش کردن
             '"wobbling"': تلوتلو خوردن
             '"all"': "- تمام کارها -"
       Poetry_stringValue:
-        text: "[LEFT_QUOTE][0][TEXT][1][RIGHT_QUOTE][2]"
+        text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
       Poetry_textConcat:
-        text: "[LEFT_QUOTE][0][TEXT1][1][TEXT2][2][RIGHT_QUOTE][3]"
+        text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
       Poetry_textVariableJoin:
-        text: "[VAR][0][TEXT2][1]"
+        text: "{VAR}{TEXT2}"
       Poetry_whenLineShows:
-        text: وقتی خط [N][0] نمایش داده شد
+        text: وقتی خط {N} نمایش داده شد
         options:
           'N':
-            '0': "???"
             '1': '1'
             '2': '2'
             '3': '3'
@@ -2294,42 +2402,40 @@ fa:
             '14': '14'
             '15': '15'
       Poetry_whenPromptAnswered:
-        text: وقتی [VAR][0] پاسخ داده شد
+        text: وقتی {VAR} پاسخ داده شد
       RyanLab_moveForward:
-        text: برو جلو
+        text: حرکت به جلو
       RyanLab_turnLeft:
-        text: بپیچ به چپ
+        text: به چپ بپیچید
       RyanLab_turnRight:
-        text: بپیچ به راست
-      SpriteLab2Beta_spriteSay:
-        text: اسپرایت [SPRITE][0] جمله [TEXT][1] را برای [SECONDS][2] ثانیه می‌گوید
+        text: به راست بپیچید
       Vector_createSpriteWith:
         text: |-
           ایجاد اسپرایت
-          [STATEMENT][0] را اجرا کن
+          {STATEMENT} را اجرا کن
       Vector_log:
-        text: ثبت پیام [MESSAGE][0]
+        text: ثبت پیام {MESSAGE}
       Vector_positionCenter:
         text: مرکز
       Vector_push:
-        text: 'تنظیم شتاب: [VECTOR][0]'
+        text: 'تنظیم شتاب: {VECTOR}'
       Vector_randomLocation:
         text: مکان تصادفی
       Vector_setColor:
-        text: تنظیم رنگ روی [COLOR][0]
+        text: تنظیم رنگ روی {COLOR}
       Vector_setSize:
-        text: 'تنظیم عرض روی: [WIDTH][0] و ارتفاع روی: [HEIGHT][1]'
+        text: 'تنظیم عرض روی: {WIDTH} و ارتفاع روی: {HEIGHT}'
       Vector_teleportTo:
-        text: تنظیم موقعیت روی [POSITION][0]
+        text: تنظیم موقعیت روی {POSITION}
       Vector_vectorNorth:
         text: شمال
       Vector_where:
-        text: هر اسپرایتی که [PROPERTY][0] آن [VALUE][1] است [STATEMENT][2] را انجام دهد
+        text: هر اسپرایتی که {PROPERTY} آن {VALUE} است {STATEMENT} را انجام دهد
         options:
           PROPERTY:
             "'shapeColor'": رنگ
       aalab_layoutSprites:
-        text: هیولاها را به شکل [FORMAT][0] منظم کن
+        text: هیولاها را به شکل {FORMAT} منظم کن
         options:
           FORMAT:
             '"grid"': شبکه
@@ -2337,17 +2443,17 @@ fa:
             '"row"': کلاس
             '"random"': در هم
       aalab_levelFailure:
-        text: دانش‌آموز [STATE][0] با کلید [KEY][1]
+        text: دانش‌آموز {STATE} با کلید {KEY}
         options:
           STATE:
             '0': موفقیت
             '3': شکست
       aalab_setSpeed:
-        text: تنظیم سرعت هیولا روی [VAL][0]
+        text: تنظیم سرعت هیولا روی {VAL}
       aalab_setupSim:
-        text: شهر هیولاها را با [COUNT][0] هیولا بساز
+        text: شهر هیولاها را با {COUNT} هیولا بساز
       aalab_someGraduallyStartIntervention:
-        text: "[PORTION][0] هیولاها [RATE][1] شروع به [BEHAVIOR][2] می‌کنند"
+        text: "{PORTION} هیولاها {RATE} شروع به {BEHAVIOR} می‌کنند"
         options:
           PORTION:
             '1': همه
@@ -2366,7 +2472,7 @@ fa:
             '"avoiding"': فاصله گرفتن اجتماعی
             '"none"': بی حرکت ماندن
       aalab_someStartIntervention:
-        text: "[PORTION][0] هیولاها شروع به [BEHAVIOR][1] می‌کنند"
+        text: "{PORTION} هیولاها شروع به {BEHAVIOR} می‌کنند"
         options:
           PORTION:
             '1': همه
@@ -2380,7 +2486,7 @@ fa:
             '"avoiding"': فاصله گرفتن اجتماعی
             '"none"': بی حرکت ماندن
       aalab_spriteSayChoices:
-        text: "[SPRITE][0] میگوید: [SPEECH][1]"
+        text: "{SPRITE} میگوید: {SPEECH}"
         options:
           SPEECH:
             '"I have spoken."': من گفته‌ام
@@ -2400,7 +2506,7 @@ fa:
             '"You are stronger and wiser and freer than you have ever been."': تو قویتر و داناتر و آزادتر از هر زمان دیگه‌ای هستی.
             '"You have to try every time. You can''t quit because you''re afraid you might fail."': هربار باید تلاش کنی. نباید از ترس شکست تلاش رو بزاری کنار.
       aalab_startIntervention:
-        text: هیولاها شروع به [BEHAVIOR][0] می‌کنند
+        text: هیولاها شروع به {BEHAVIOR} می‌کنند
         options:
           BEHAVIOR:
             wandering: پرسه زدن بی هدف
@@ -2408,38 +2514,51 @@ fa:
             '"quarantining"': رفتن به قرنطینه در زمان بیماری
             '"avoiding"': فاصله گرفتن اجتماعی
             '"none"': بی حرکت ماندن
+      adaptations_adaptationBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): چرخش به سمت راست
+            new Behavior(spinning_left, []): چرخش به سمت چپ
+            new Behavior(fluttering, []): بال زدن
+            new Behavior(jittering, []): با عصبانیت رفتار کردن
+            new Behavior(wobbling, []): تلوتلو خوردن
+            new Behavior(wandering, []): گردش کردن
+            new Behavior(patrolling, []): گشت‌ زدن
+      adaptations_startFollowing:
+        text: "{SPRITE} {TARGET} را دنبال میکند"
       binary_drawBin:
-        text: 'کشیدن دودویی: [BIN][0]'
+        text: 'کشیدن دودویی: {BIN}'
       binary_drawBinScreen:
         text: |-
           صفحه را رسم کن:
-          [B1][0]
-          [B2][1]
-          [B3][2]
-          [B4][3]
-          [B5][4]
-          [B6][5]
-          [B7][6]
-          [B8][7]
+          {B1}
+          {B2}
+          {B3}
+          {B4}
+          {B5}
+          {B6}
+          {B7}
+          {B8}
       binary_drawDec:
-        text: 'کشیدن اعشاری: [DEC][0]'
+        text: 'کشیدن اعشاری: {DEC}'
       binary_drawPixelHere:
-        text: 'تنظیم پیکسل: [VAL][0]'
+        text: 'تنظیم پیکسل: {VAL}'
         options:
           VAL:
-            '0': 'خاموش'
-            '1': 'فعال'
+            '0': خاموش
+            '1': فعال
             '"toggle"': تغییر وضع دادن
       binary_drawString:
-        text: 'کشیدن رشته: [STR][0]'
+        text: 'کشیدن رشته: {STR}'
       binary_goTo:
-        text: 'پرش به: [LOC][0]'
+        text: 'پرش به: {LOC}'
       binary_goToHome:
         text: پرش به بالا و سمت چپ
       binary_gridSize:
-        text: تنظیم اندازه چهارخانه روی [SIZE][0]
+        text: تنظیم اندازه چهارخانه روی {SIZE}
       binary_move:
-        text: حرکت به [DIR][0]
+        text: حرکت به {DIR}
         options:
           DIR:
             '"up"': بالا
@@ -2447,7 +2566,7 @@ fa:
             '"left"': سمت چپ
             '"right"': سمت راست
       binary_whenKey:
-        text: وقتی [KEY][0] زده شد
+        text: وقتی {KEY} زده شد
         options:
           KEY:
             '"up"': بالا
@@ -2461,8 +2580,8 @@ fa:
             '"d"': d
       craft_ifPath:
         text: |-
-          اگر مسیر [DIR][0] باشد
-          [STATEMENT][1]
+          اگر مسیر {DIR} باشد
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": جلو
@@ -2470,8 +2589,8 @@ fa:
             "'left'": به سمت چپ
       craft_ifStandingOn:
         text: |-
-          اگر روی [TYPE][0] ایستاده است
-          [STATEMENT][1]
+          اگر روی {TYPE} ایستاده است
+          {STATEMENT}
         options:
           TYPE:
             "'blueCoralBlock'": مرجان آبی‌رنگ
@@ -2482,19 +2601,19 @@ fa:
             "'seaLantern'": فانوس زیردریایی
       craft_ifStandingOnLimit:
         text: |-
-          اگر روی [TYPE][0] ایستاده است
-          [STATEMENT][1]
+          اگر روی {TYPE} ایستاده است
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": شن
             "'darkPrismarine'": بلوک سبزآبی تیره
             "'seaLantern'": فانوس زیردریایی
       craft_log:
-        text: ثبت پیام [MESSAGE][0]
+        text: ثبت پیام {MESSAGE}
       craft_moveForward:
-        text: برو جلو
+        text: حرکت به جلو
       craft_placeBlock:
-        text: 'قرار بده: [blockType][0]'
+        text: 'قرار بده: {blockType}'
         options:
           blockType:
             '"strippedOak"': درخت بلوط بدون پوست
@@ -2529,13 +2648,13 @@ fa:
       craft_repeatUntilConduit:
         text: |-
           تکرار کن تا زمانیکه کانال کامل شود:
-          [STATEMENT][0]
+          {STATEMENT}
       craft_repeatUntilGoal:
         text: |-
           تکرار کنید تا زمانی که به هدف برسیم:
-          [STATEMENT][0]
+          {STATEMENT}
       craft_spawnEntity:
-        text: '[ENTITY][0] را تولید مثل کن'
+        text: "{ENTITY} را تولید مثل کن"
         options:
           ENTITY:
             '"cod"': ماهی کاد
@@ -2545,15 +2664,31 @@ fa:
             '"squid"': ماهی مرکب
             '"tropicalFish"': ماهی استوایی
       craft_turn:
-        text: چرخش به [DIR][0]
+        text: چرخش به {DIR}
         options:
           DIR:
             right: راست ↻
             left: چپ ↺
+      ecosystems_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       storylab_clearHeadings:
         text: پاک کردن عنوانها
+      storylab_printText:
+        text: چاپ {TEXT}
       storylab_setForegroundEffect2:
-        text: اجرای افکت [EFFECT][0]
+        text: اجرای افکت {EFFECT}
         options:
           EFFECT:
             '"bubbles"': حباب (افکت)
@@ -2563,12 +2698,8 @@ fa:
             '"starburst"': استارباست (افکت)
             '"twinkling"': چشمک زن (افکت)
       storylab_setHeading:
-        text: 'عنوان را تنظیم کن: [HEADING][0]'
+        text: 'عنوان را تنظیم کن: {HEADING}'
       storylab_setPromptWithChoice:
-        text: به کاربر برای متغیر [VAR][1] سوال [QUESTION][0] با انتخاب [A][2] را بفرست
+        text: به کاربر برای متغیر {VAR} سوال {QUESTION} با انتخاب {A} را بفرست
       storylab_setSubheading:
-        text: 'عنوان فرعی را تنظیم کن: [SUBHEADING][0]'
-      validation_validatedBackground:
-        text: تنظیم پس‌زمینه روی [IMG][0]
-      validation_validatedSound:
-        text: '[SOUND][0] را پخش کن'
+        text: 'عنوان فرعی را تنظیم کن: {SUBHEADING}'

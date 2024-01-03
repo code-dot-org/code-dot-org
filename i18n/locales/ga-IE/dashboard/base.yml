@@ -52,6 +52,7 @@ ga:
         gender: 'Inscne'
         edit_header: 'Cuir Sonraí an Chuntais in Eagar'
         finish_sign_up_header: 'Críochnaigh an próiseas cláraithe'
+        finish_sign_up_header_error: 'Ceartaigh na hearráidí seo a leanas:'
         finish_sign_up_subheader: 'Líon isteach an t-eolas seo a leanas chun cuntas Code.org a chruthú le haghaidh <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Líon isteach an t-eolas seo a leanas chun cuntas Code.org a chruthú le haghaidh **%{email}**.'
         finish_sign_up_subheader_provider: 'Líon isteach an t-eolas seo a leanas chun cuntas Code.org a chruthú le <strong>%{provider}</strong> le haghaidh <strong>%{email}</strong>.'
@@ -59,6 +60,8 @@ ga:
         reset_password_token: "Tá an nasc a chliceáil tú chun d'fhocal faire a athshocrú"
         error:
           future: earráid - dáta sa todhchaí
+        user_type: 'Cineál Cuntais'
+        us_state: 'Stát'
   beta: "béite"
   hello: "Dia dhuit a dhomhain"
   welcome_back: "Fáilte ar ais a %{name}"
@@ -167,7 +170,6 @@ ga:
     data_collection_us: "Is suíomh gréasáin neamhbhrabúis é Code.org atá bunaithe sna SAM, agus d'fhéadfadh na dlíthe lena rialaítear bailiú sonraí sna SAM a bheith difriúil ó na dlíthe i do thír féin."
     visit_privacy: 'Tabhair cuairt ar [Pholasaí Príobháideachais](%{privacy_url}) chun tuilleadh a fhoghlaim.'
     student_terms_markdown: "Ní stórálaimid seoltaí ríomhphoist ar bhealach a ligfeadh dúinn dul i dteagmháil le daltaí. Ní bhfaighidh daltaí aon ríomhphost ó Code.org seachas chun focal faire a athshocrú. Féach ár [bpolasaí príobháideachais](http://code.org/privacy) chun tuilleadh eolais a fháil."
-    additional_information: "Teastaíonn tuilleadh eolais uainn sular féidir linn tú a chlárú."
     user_type_button: "Athraigh Cineál an Chuntais"
     user_type_label: "Cineál Cuntais"
     user_type_student: "Dalta"
@@ -186,6 +188,7 @@ ga:
     parent_account_checkbox: "Is tuismitheoir/caomhnóir mé agus tá mé ag clárú ar son mo pháiste"
     parent_account_email_progress_permission: "An bhfuil cead againn ríomhphost a sheoladh chugat anois is arís le heolas faoi dhul chun cinn do pháiste, faoin chúrsa, agus faoin ríomheolaíocht go ginearálta? [(Féach ár bpolasaí príobháideachais)](%{privacy_policy_url})"
     parent_account_email_label: "Seoladh R-Phoist Tuismitheora/Caomhnóra"
+    us_state: 'Stát'
   school_info:
     title: 'Eolas faoin scoil (roghnach)'
     school_country: 'Tír na Scoile'
@@ -1041,6 +1044,7 @@ ga:
         csf_express: 'Buntús na Ríomheolaíochta (Réamh-luathchúrsa nó luathchúrsa)'
         csd: 'Fionnachtana sa Ríomheolaíocht'
         csp: 'Foras Feasa ar an Ríomheolaíocht'
+        other: 'Eile'
       email_opt_in:
         opt_in_yes: 'Tá'
         opt_in_no: 'Níl'
@@ -1058,6 +1062,11 @@ ga:
     no_teacher_email:
       body_markdown: 'Níl aon seoladh ríomhphoist ceangailte le do chuntas. Ní mór duit seoladh ríomhphoist a chur le do chuntas sna [socruithe](%{user_registration}) sula líonfaidh tú an fhoirm seo isteach.'
   courses_category: 'Cúrsaí Iomlána'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
+      sports: 'Spórt'
+      csf: 'Buntús na Ríomheolaíochta'
   cookie_banner:
     message: 'Má chliceálann tú "Glacaim leis" nó má leanann tú ar aghaidh ag brabhsáil, glacfaidh tú le stóráil fianán ar do ríomhaire nó gléas soghluaiste.'
     more_information: "Polasaí Príobháideachais Code.org."

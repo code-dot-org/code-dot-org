@@ -107,8 +107,8 @@ class TeacherFeedback < ApplicationRecord
   def self.latest_per_teacher
     # Only select feedback from teachers who lead sections in which the student is still enrolled
     # and get the latest feedback per teacher for each student on each level
-    where(id: joins(:student_sections).
-        where('sections.user_id = teacher_id').
+    where(id: joins(student_sections: :instructors).
+        where('instructor_id = teacher_id').
         group([:teacher_id, :student_id, :level_id]).
         # This SQL string is not at risk for injection vulnerabilites because
         # it's just a hardcoded string, so it's safe to wrap in Arel.sql
@@ -239,9 +239,7 @@ class TeacherFeedback < ApplicationRecord
     return review_state == REVIEW_STATES.keepWorking && student_updated_since_feedback?
   end
 
-  private
-
-  def student_updated_since_feedback?
+  private def student_updated_since_feedback?
     user_level.present? && user_level.updated_at > created_at
   end
 end

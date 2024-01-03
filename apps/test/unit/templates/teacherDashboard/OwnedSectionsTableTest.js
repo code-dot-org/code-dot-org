@@ -3,18 +3,25 @@ import React from 'react';
 import {shallow, mount} from 'enzyme';
 import * as Table from 'reactabular-table';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
-import {createStore, combineReducers} from 'redux';
 import {Provider} from 'react-redux';
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux,
+} from '@cdo/apps/redux';
 import {
   UnconnectedOwnedSectionsTable as OwnedSectionsTable,
   sectionLinkFormatter,
   courseLinkFormatter,
   loginInfoFormatter,
   studentsFormatter,
-  COLUMNS
+  COLUMNS,
 } from '@cdo/apps/templates/teacherDashboard/OwnedSectionsTable';
 import Button from '@cdo/apps/templates/Button';
-import {teacherSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import teacherSections, {
+  setSections,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 const GRADE_COLUMN = COLUMNS.GRADE.toString();
 
@@ -35,8 +42,8 @@ const sectionRowData = [
     assignmentNames: ['CS Discoveries', 'Unit 1: Problem Solving'],
     assignmentPaths: [
       '//localhost-studio.code.org:3000/courses/csd',
-      '//localhost-studio.code.org:3000/s/csd1-2019'
-    ]
+      '//localhost-studio.code.org:3000/s/csd1-2019',
+    ],
   },
   {
     id: 2,
@@ -46,7 +53,7 @@ const sectionRowData = [
     grades: ['4'],
     loginType: 'google_classroom',
     providerManaged: true,
-    hidden: false
+    hidden: false,
   },
   {
     id: 3,
@@ -57,7 +64,7 @@ const sectionRowData = [
     scriptId: 168,
     grades: ['3'],
     providerManaged: false,
-    hidden: false
+    hidden: false,
   },
   {
     id: 4,
@@ -68,8 +75,8 @@ const sectionRowData = [
     providerManaged: false,
     hidden: false,
     assignmentNames: [],
-    assignmentPaths: []
-  }
+    assignmentPaths: [],
+  },
 ];
 
 const sectionGradesRowData = [
@@ -84,7 +91,7 @@ const sectionGradesRowData = [
     providerManaged: true,
     hidden: false,
     assignmentNames: [],
-    assignmentPaths: []
+    assignmentPaths: [],
   },
   {
     id: 2,
@@ -97,7 +104,7 @@ const sectionGradesRowData = [
     providerManaged: true,
     hidden: false,
     assignmentNames: [],
-    assignmentPaths: []
+    assignmentPaths: [],
   },
   {
     id: 3,
@@ -111,7 +118,7 @@ const sectionGradesRowData = [
     providerManaged: false,
     hidden: false,
     assignmentNames: [],
-    assignmentPaths: []
+    assignmentPaths: [],
   },
   {
     id: 4,
@@ -123,7 +130,7 @@ const sectionGradesRowData = [
     providerManaged: false,
     hidden: false,
     assignmentNames: [],
-    assignmentPaths: []
+    assignmentPaths: [],
   },
   {
     id: 5,
@@ -137,7 +144,7 @@ const sectionGradesRowData = [
     hidden: false,
     loginType: SectionLoginType.picture,
     assignmentNames: [],
-    assignmentPaths: []
+    assignmentPaths: [],
   },
   {
     id: 6,
@@ -149,7 +156,7 @@ const sectionGradesRowData = [
     hidden: false,
     loginType: SectionLoginType.picture,
     assignmentNames: [],
-    assignmentPaths: []
+    assignmentPaths: [],
   },
   {
     id: 7,
@@ -161,8 +168,8 @@ const sectionGradesRowData = [
     hidden: false,
     loginType: SectionLoginType.picture,
     assignmentNames: [],
-    assignmentPaths: []
-  }
+    assignmentPaths: [],
+  },
 ];
 
 const plSectionRowData = [
@@ -178,7 +185,7 @@ const plSectionRowData = [
     providerManaged: true,
     hidden: false,
     assignmentNames: [],
-    assignmentPaths: []
+    assignmentPaths: [],
   },
   {
     id: 2,
@@ -192,7 +199,7 @@ const plSectionRowData = [
     providerManaged: true,
     hidden: false,
     assignmentNames: [],
-    assignmentPaths: []
+    assignmentPaths: [],
   },
   {
     id: 3,
@@ -207,32 +214,33 @@ const plSectionRowData = [
     providerManaged: false,
     hidden: false,
     assignmentNames: [],
-    assignmentPaths: []
-  }
+    assignmentPaths: [],
+  },
 ];
 
 // Scramble these for the table to start un-ordered
-const initialState = {
-  teacherSections: {
-    sections: {
-      '1': sectionGradesRowData[5],
-      '2': sectionGradesRowData[0],
-      '3': sectionGradesRowData[2],
-      '4': sectionGradesRowData[4],
-      '5': sectionGradesRowData[3],
-      '6': sectionGradesRowData[1],
-      '7': sectionGradesRowData[6]
-    }
-  }
-};
+const sections = [
+  sectionGradesRowData[5],
+  sectionGradesRowData[0],
+  sectionGradesRowData[2],
+  sectionGradesRowData[4],
+  sectionGradesRowData[3],
+  sectionGradesRowData[1],
+  sectionGradesRowData[6],
+];
 
 describe('OwnedSectionsTable Sorting', () => {
-  const store = createStore(
-    combineReducers({
-      teacherSections
-    }),
-    initialState
-  );
+  let store;
+  beforeEach(() => {
+    stubRedux();
+    registerReducers({teacherSections});
+    store = getStore();
+    store.dispatch(setSections(sections));
+  });
+
+  afterEach(() => {
+    restoreRedux();
+  });
 
   it('can be sorted correctly by grade', () => {
     const wrapper = mount(
@@ -400,14 +408,8 @@ describe('OwnedSectionsTable', () => {
     it('courseLinkFormatter provides links to course information and section information', () => {
       const rowData = sectionRowData[0];
       const courseLinkCol = shallow(courseLinkFormatter(null, {rowData}));
-      const courseLink = courseLinkCol
-        .find('a')
-        .at(0)
-        .props().href;
-      const sectionLink = courseLinkCol
-        .find('a')
-        .at(1)
-        .props().href;
+      const courseLink = courseLinkCol.find('a').at(0).props().href;
+      const sectionLink = courseLinkCol.find('a').at(1).props().href;
       assert.equal(
         courseLink,
         '//localhost-studio.code.org:3000/courses/csd?section_id=1'
@@ -421,14 +423,8 @@ describe('OwnedSectionsTable', () => {
     it('courseLinkFormatter contains course text and section text', () => {
       const rowData = sectionRowData[0];
       const courseLinkCol = shallow(courseLinkFormatter(null, {rowData}));
-      const courseText = courseLinkCol
-        .find('a')
-        .at(0)
-        .text();
-      const sectionText = courseLinkCol
-        .find('a')
-        .at(1)
-        .text();
+      const courseText = courseLinkCol.find('a').at(0).text();
+      const sectionText = courseLinkCol.find('a').at(1).text();
       assert.equal(courseText, 'CS Discoveries');
       assert.equal(sectionText, 'Unit 1: Problem Solving');
     });
@@ -440,7 +436,7 @@ describe('OwnedSectionsTable', () => {
       const link = courseLinkCol.find(Button).prop('href');
       const text = courseLinkCol.find(Button).prop('text');
       assert.equal(button, '<Button />');
-      assert.equal(link, '/courses');
+      assert.equal(link, '/catalog');
       assert.equal(text, 'Find a course');
     });
 

@@ -20,3 +20,5 @@ The correct answer:
 
 * Multiple functions can contain identical code as long as the names are different. Functions have to be named differently in order for the program to know which function to correctly run, it does not matter if the same lines of code are in multiple functions.
 MARKDOWN
+
+allow_multiple_attempts true

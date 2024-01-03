@@ -4,7 +4,7 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
   constructor(workspace) {
     super();
     this.workspace = workspace;
-    this.id = 'cdoTrashcan';
+    this.id = `cdoTrashcan-${this.getSafeWorkspaceId()}`;
 
     /**
      * Current open/close state of the lid.
@@ -44,13 +44,22 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
       capabilities: [
         Blockly.ComponentManager.Capability.DELETE_AREA,
         Blockly.ComponentManager.Capability.DRAG_TARGET,
-        Blockly.ComponentManager.Capability.POSITIONABLE
-      ]
+        Blockly.ComponentManager.Capability.POSITIONABLE,
+      ],
     });
     this.workspace.recordDragTargets();
   }
 
+  getSafeWorkspaceId() {
+    // Google Blockly's workspace ids are randomly generated and can
+    // include invalid characters for element ids. Remove everything
+    // except alphanumeric characters and whitespace, then collapse
+    // multiple adjacent whitespace to single spaces.
+    return this.workspace.id.replace(/[^\w\s\']|_/g, '').replace(/\s+/g, ' ');
+  }
+
   createTrashcanSvg() {
+    const idSuffix = this.getSafeWorkspaceId();
     this.svgGroup_ = Blockly.utils.dom.createSvgElement(
       Blockly.utils.Svg.G,
       {class: 'blocklyTrash'},
@@ -60,7 +69,7 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
     // trashcan body
     const bodyClipPath = Blockly.utils.dom.createSvgElement(
       Blockly.utils.Svg.CLIPPATH,
-      {id: 'blocklyTrashBodyClipPath'},
+      {id: `blocklyTrashBodyClipPath-${idSuffix}`},
       this.svgGroup_
     );
     Blockly.utils.dom.createSvgElement(
@@ -68,14 +77,14 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
       {
         width: WIDTH,
         height: BODY_HEIGHT,
-        y: LID_HEIGHT
+        y: LID_HEIGHT,
       },
       bodyClipPath
     );
     const SPRITE = {
       width: 96,
       height: 124,
-      url: 'sprites.png'
+      url: 'sprites.png',
     };
     const body = Blockly.utils.dom.createSvgElement(
       Blockly.utils.Svg.IMAGE,
@@ -84,7 +93,7 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
         x: -SPRITE_LEFT,
         height: SPRITE.height,
         y: -SPRITE_TOP,
-        'clip-path': 'url(#blocklyTrashBodyClipPath)'
+        'clip-path': `url(#blocklyTrashBodyClipPath-${idSuffix})`,
       },
       this.svgGroup_
     );
@@ -97,7 +106,7 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
     // trashcan lid
     const lidClipPath = Blockly.utils.dom.createSvgElement(
       Blockly.utils.Svg.CLIPPATH,
-      {id: 'blocklyTrashLidClipPath'},
+      {id: `blocklyTrashLidClipPath-${idSuffix}`},
       this.svgGroup_
     );
     Blockly.utils.dom.createSvgElement(
@@ -112,7 +121,7 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
         x: -SPRITE_LEFT,
         height: SPRITE.height,
         y: -SPRITE_TOP,
-        'clip-path': 'url(#blocklyTrashLidClipPath)'
+        'clip-path': `url(#blocklyTrashLidClipPath-${idSuffix})`,
       },
       this.svgGroup_
     );
@@ -141,7 +150,7 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
         r: 33,
         stroke: '#c00',
         'stroke-width': 5,
-        fill: 'none'
+        fill: 'none',
       },
       this.notAllowed_
     );
@@ -155,8 +164,7 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
       let trashcanVisibility = 'hidden';
       let toolboxVisibility = 'visible';
       // Don't show the trashcan if the block is being dragged out of the toolbox.
-      const isDraggingFromToolbox = !!Blockly.mainBlockSpace?.currentGesture_
-        ?.flyout_;
+      const isDraggingFromToolbox = !!this.workspace.currentGesture_?.flyout_;
       if (!isDraggingFromToolbox && blocklyEvent.isStart) {
         trashcanVisibility = 'visible';
         toolboxVisibility = 'hidden';
@@ -164,7 +172,9 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
 
       // query selector for uncategorized toolbox contents
       document
-        .querySelectorAll('.blocklyFlyout .blocklyWorkspace')
+        .querySelectorAll(
+          '.blocklyFlyout:not(.blockFieldFlyout) .blocklyWorkspace'
+        )
         .forEach(x => {
           x.style.visibility = toolboxVisibility;
         });
@@ -196,7 +206,7 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
    * @param {!Blockly.MetricsManager.UiMetrics} metrics The workspace metrics.
    */
   position(metrics) {
-    const toolboxWidth = Blockly.cdoUtils.getToolboxWidth();
+    const toolboxWidth = Blockly.cdoUtils.getToolboxWidth(this.workspace);
 
     // Position container
     this.container.style.height = `${metrics.viewMetrics.height}px`;
@@ -263,9 +273,16 @@ export default class CdoTrashcan extends GoogleBlockly.DeleteArea {
    */
   animateLid_() {
     const delta = 1 / (ANIMATION_FRAMES + 1);
+    const previousLidOpen = this.lidOpen_;
     this.lidOpen_ += this.isLidOpen ? delta : -delta;
     this.lidOpen_ = Math.min(this.lidOpen_, 1);
     this.lidOpen_ = Math.max(this.lidOpen_, 0);
+
+    if (previousLidOpen === 0 && this.lidOpen_ === 0) {
+      // We need to animate the first time we see a 0 value (fully closed)
+      // but after that we do not need to animate again.
+      return;
+    }
 
     this.setLidAngle_(this.lidOpen_ * MAX_LID_ANGLE);
 

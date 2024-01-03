@@ -69,9 +69,9 @@ User.where(username: nil).
 
       raise ActiveRecord::Rollback unless options[:actually_update]
     end
-  rescue => ex
+  rescue => exception
     generate_username_errors += 1
-    CDO.log.error ex
+    CDO.log.error exception
   end
 end
 
@@ -88,9 +88,9 @@ User.where(provider: nil).
 
       raise ActiveRecord::Rollback unless options[:actually_update]
     end
-  rescue => ex
+  rescue => exception
     destroy_user_errors += 1
-    CDO.log.error ex
+    CDO.log.error exception
   end
 end
 

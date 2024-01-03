@@ -36,9 +36,9 @@ def generate_pdf_file(base_url, pdf_conversion_info, fetchfile_for_pdf)
 
   begin
     PDF.generate_from_url(url, pdf_conversion_info.output_pdf_path, verbose: true)
-  rescue Exception => e
+  rescue Exception => exception
     ChatClient.log "PDF generation failure for #{url}"
-    ChatClient.log "/quote #{e.message}\n#{CDO.backtrace e}", message_format: 'text'
+    ChatClient.log "/quote #{exception.message}\n#{CDO.backtrace exception}", message_format: 'text'
     raise
   end
 

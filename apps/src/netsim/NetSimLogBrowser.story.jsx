@@ -4,11 +4,11 @@ import NetSimLogBrowser from './NetSimLogBrowser';
 import Packet from './Packet';
 import {createUuid} from '@cdo/apps/utils';
 
-const range = function(i) {
+const range = function (i) {
   return new Array(i).fill().map((_, i) => i);
 };
 
-const randInt = function(i) {
+const randInt = function (i) {
   return Math.floor(i * Math.random());
 };
 
@@ -30,7 +30,7 @@ export default storybook => {
       ` - Traffic To and From ${address}`,
     logBrowserHeader_sentByAnyone: () => 'sent by anyone',
     logBrowserHeader_sentByName: ({name}) => `sent by ${name}`,
-    logBrowserHeader_teacherView: () => 'Teacher View'
+    logBrowserHeader_teacherView: () => 'Teacher View',
   };
 
   const simplePacket = [];
@@ -38,7 +38,7 @@ export default storybook => {
     Packet.HeaderType.TO_ADDRESS,
     Packet.HeaderType.FROM_ADDRESS,
     Packet.HeaderType.PACKET_INDEX,
-    Packet.HeaderType.PACKET_COUNT
+    Packet.HeaderType.PACKET_COUNT,
   ];
 
   const lipsumWords = `Lorem ipsum dolor sit amet,
@@ -64,7 +64,7 @@ export default storybook => {
       'packet-info': `${packetNum} of ${packetCount}`,
       message: range(randInt(20))
         .map(() => lipsumWords[randInt(lipsumWords.length)])
-        .join(' ')
+        .join(' '),
     };
   });
 
@@ -86,7 +86,7 @@ export default storybook => {
             senderNames={senderNames}
           />
         </div>
-      )
+      ),
     },
     {
       name: 'Student filters',
@@ -107,7 +107,7 @@ export default storybook => {
             senderNames={senderNames}
           />
         </div>
-      )
+      ),
     },
     {
       name: 'Teacher view',
@@ -127,7 +127,7 @@ export default storybook => {
             teacherView
           />
         </div>
-      )
-    }
+      ),
+    },
   ]);
 };

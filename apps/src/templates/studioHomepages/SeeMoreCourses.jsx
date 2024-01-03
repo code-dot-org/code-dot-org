@@ -16,11 +16,11 @@ import PropTypes from 'prop-types';
 export default class SeeMoreCourses extends Component {
   static propTypes = {
     courses: shapes.courses,
-    isProfessionalLearningCourse: PropTypes.bool
+    isProfessionalLearningCourse: PropTypes.bool,
   };
 
   state = {
-    open: false
+    open: false,
   };
 
   showMoreCourses() {
@@ -50,7 +50,7 @@ export default class SeeMoreCourses extends Component {
         {!this.state.open && (
           <Button
             onClick={this.showMoreCourses.bind(this)}
-            color={Button.ButtonColor.gray}
+            color={Button.ButtonColor.neutralDark}
             icon="caret-down"
             text={i18n.viewMore()}
             style={styles.button}
@@ -65,11 +65,11 @@ const styles = {
   spacer: {
     width: 20,
     float: 'left',
-    color: color.white
+    color: color.white,
   },
   button: {
     float: 'right',
     margin: 0,
-    marginBottom: 20
-  }
+    marginBottom: 20,
+  },
 };

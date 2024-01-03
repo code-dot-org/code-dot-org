@@ -6,6 +6,7 @@
   "content": "In real life you sometimes need add items to the end of the list, and make the list larger. *appendItem(list, item)* makes the \"list\" one larger and inserts the \"item\" at the end of the list. If the append is successful, *appendItem()* returns true, otherwise it returns false.",
   "examples": [
     {
+      "name": "Basic Example",
       "description": "",
       "code": "```\n// List of favorite movies.\nvar myFavoriteMovies=[];\nappendItem(myFavoriteMovies, \"Star Wars\");\nappendItem(myFavoriteMovies, \"Lord of the Rings\");\nappendItem(myFavoriteMovies, \"Harry Potter\");\nconsole.log(myFavoriteMovies);\n```"
     },

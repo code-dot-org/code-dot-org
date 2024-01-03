@@ -366,6 +366,7 @@
   homepage_slot_text_link_buy: "მონაწილეობის მიღება"
   homepage_slot_text_link_donate: "შემოწირულობა"
   homepage_slot_text_link_shop: "მაისურები, ქუდები და სხვა"
+  homepage_slot_text_link_thebadguys: "კოდი ცუდ ბიჭებთან"
   homepage_slot_text_link_administrators: "შეიტანეთ CS თქვენს სკოლაში ან უბანში"
   homepage_gallery_header: "Code.org-ზე შექმნილია %{project_count} მილიონზე მეტი პროექტი"
   homepage_header_donors: "Code.org მადლობას უხდის მხარდამჭერებს"
@@ -518,13 +519,9 @@
   volunteer_engineer_submission_subtitle_generic: 'წელს, 7-13 დეკემბერს, 100,000 მასწავლებელი ჩაატარებს კოდის ერთ საათს თავის კლასში. მათ თქვენი დახმარება სჭირდებათ! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} მასწავლებელს სჭირდება მოხალისე. <br>%{num_volunteers} მოხალისე უკვე დარეგისტრირდა."
   volunteer_engineer_submission_intro_background: "კოდის ერთი საათი არის გლობალური მოძრაობა, რომლის მიზანია ინფორმატიკისა და პროგრამირების გავრცელება 180+ ქვეყენაში ათობით მილიონი მოსწავლისთვის. თქვენც ჩაერთეთ ინფორმატიკის საგანმანათლებლო კვირეულში, რომელიც დეკემბრის 7-13 რიცხვებში ტარდება."
-  volunteer_engineer_submission_intro_recruit: 'მასწავლებლებს გაუხარდებოდათ, რომ ჰყავდეთ <span style="font-family: ''Gotham 7r'', sans-serif;">ვინმე, ვისაც უყვარს პროგრამირების სწავლება</span> და შეუძლია დაეხმაროს მათ კლასში, ან ვინმე, <span style="font-family: ''Gotham 7r'', sans-serif;">ვინც შეძლებდა, შთაეგონებინა</span> მოსწავლეები, მოეყოლა კომპიუტერული მეცნიერების უსაზღვრო შესაძლებლობების შესახებ (თუნდაც ვიდეო ზარით).'
   volunteer_engineer_submission_intro_recruit_markdown: "მასწავლებლებს გაუხარდებოდათ, რომ ჰყავდეთ **ვინმე, ვისაც უყვარს პროგრამირების სწავლება** და შეუძლია დაეხმაროს მათ კლასში, ან ვინმე, **ვინც შეძლებდა, შთაეგონებინა** მოსწავლეები, მოეყოლა კომპიუტერული მეცნიერების უსაზღვრო შესაძლებლობების შესახებ (თუნდაც ვიდეო ზარით)."
-  volunteer_engineer_submission_intro_guide: "შეისწავლეთ მეტი ჩვენი <a href=\"%{volunteer_guide}\">სამოხალისეო პროგრამის შესახებ აქ</a>."
   volunteer_engineer_submission_intro_guide_markdown: "გაიგეთ მეტი ჩვენი [მოხალისეობის პროგრამის შესახებ აქ](%{volunteer_guide})."
-  volunteer_engineer_submission_intro_signup: "შეავსეთ შემდეგი ველები, თუ ხართ კომპიუტერული მეცნიერების სტუდენტი ან დეველოპერი. დასარეგისტრირებლად უნდა იყოთ მინიმუმ 18 წლის. დააკვირდით, რომ ამ სექციაში თქვენ მიერ შეყვანილი ინფორმაცია საჯაროდ იქნება ხელმისაწვდომი <a href=\"/volunteer/local\">მოხალისეების რუკაზე</a>. ველები, რომლებიც მონიშნულია სიმბოლოთი <span class=\"form-required-field\">*</span>, სავალდებულოა."
   volunteer_engineer_submission_intro_signup_markdown: "შეავსეთ შემდეგი ველები, თუ ხართ კომპიუტერული მეცნიერების სტუდენტი, ან დეველოპერი. დასარეგისტრირებლად უნდა იყოთ მინიმუმ 18 წლის. გაითვალისწინეთ, რომ ამ სექციაში თქვენ მიერ შეყვანილი ინფორმაცია საჯაროდ იქნება ხელმისაწვდომი [მოხალისეების რუკაზე](/volunteer/local). ველები, რომლებიც მონიშნულია _*_ სიმბოლოთი, სავალდებულოა."
-  volunteer_engineer_submission_intro_links: "მასწავლებელი ხართ და მოხალისეებს ეძებთ? იპოვეთ ადგილობრივი მოხალისე <a href=\"%{volunteer_local}\">მოხალისეთა რუკაზე</a>."
   volunteer_engineer_submission_intro_links_markdown: "მასწავლებელი ხართ და მოხალისეებს ეძებთ? იპოვეთ ადგილობრივი მოხალისე [მოხალისეთა რუკაზე](%{volunteer_local})."
   volunteer_engineer_submission_update_information: "თქვენი ინფორმაციის განახლება"
   volunteer_engineer_submission_header_shared: "მოხალისეთა რუკაზე მასწავლებლებთან გაზიარებული ინფორმაცია"
@@ -1477,6 +1474,7 @@
   header_stats: "სტატისტიკა"
   header_help_us: "დაგვეხმარე"
   header_about: "გაიცანით"
+  header_incubator: "ინკუბატორი"
   header_teacher_community: "მასწავლებელთა კოლექტივი"
   header_help_support: 'დახმარება და მხარდაჭერა '
   header_report_bug: "მოგვახსენეთ ტექნიკური ხარვეზის შესახებ"
@@ -1547,6 +1545,7 @@
   applab_tile_teacher_guide: "იხილეთ მასწავლებლის სახელმძღვანელო"
   aquatic_name: 'Minecraft: მოგზაურობა წყლის'
   account_sign_up_email_opt_in: "შეიძლება, რომ ელფოსტით მოგწეროთ კურსების განახლებები, ადგილობრივი შესაძლებლობები და სხვა სიახლეები კომპიუტერული მეცნიერებების შესახებ?"
+  account_sign_up_child_accept_terms: "ვადასტურებ, რომ მე მაქვს ჩემი მშობლის ან კანონიერი მეურვის ნებართვა, გამოიყენოს Code.org მომსახურება."
   hoc_overview_dance_title: "ცეკვა"
   hoc_overview_dance_subtitle: "კოდი Dance Party გაუზიაროს თქვენს მეგობრებს. Katy Perry, მადონა, ჯ ბალვინი, სია, კეიტ ურბანი, Ciara და კიდევ 25!"
   hoc_overview_dance_2019_subtitle: "კოდი Dance Party გაუზიაროს თქვენს მეგობრებს. რომელშიც Katy Perry, Shawn Mendes, პანიკა! დისკო, Lil Nas X, Jonas Brothers, Nicki Minaj, და კიდევ 34!"
@@ -1588,7 +1587,7 @@
   hoc2018_mc_download_adventurer: "Minecraft თავგადასავლის გადმოწერა."
   hoc2018_mc_educators: "პედაგოგებისთვის"
   hoc2018_mc_educators_box1_title: "კოდი Minecraft"
-  hoc2018_mc_educators_box1_desc: 'Minecraft: განათლება Edition უზრუნველყოფს სტანდარტების შეესაბამება სასწავლო გეგმა, სასწავლო და კოდირების Minecraft.'
+  hoc2018_mc_educators_box1_desc: "Minecraft: განათლება Edition უზრუნველყოფს სტანდარტების შეესაბამება სასწავლო გეგმა, სასწავლო და კოდირების Minecraft."
   hoc2018_mc_educators_box1_button: "დავიწყოთ"
   hoc2018_mc_educators_box2_title: "ჩამოტვირთეთ ფასილიტატორის სახელმძღვანელო"
   hoc2018_mc_educators_box2_desc: "ეს ინსტრუმენტარიტი დაგეხმარებათ უმასპინძლოთ კოდის საათს და ჩაერთოთ თქვენს სტუდენტებს კომპიუტერულ მეცნიერებაში."
@@ -1694,7 +1693,7 @@
   hoc2018_mc_with_microsoft: "პარტნიორობით"
   hoc2018_mc_thank_microsoft: "ჩვენ მადლობას ვუხდით Microsoft- ს ჩვენი ხედვისა და მისიის მხარდასაჭერად, რათა უზრუნველყოს ყველა ბავშვს აქვს შესაძლებლობა ისწავლოს კომპიუტერული მეცნიერება და უნარი წარმატების მისაღწევად 21-ე საუკუნეში."
   hoc2019_mc_mee_title: "Minecraft AI კარგი"
-  hoc2019_mc_mee_description1: 'ახალი Minecraft საათი კოდექსის სამეურვეო ახლა ხელმისაწვდომია Minecraft: განათლების გამოცემა Windows, Mac და iPad. ვისწავლოთ საფუძვლები კოდირების და შეისწავლონ AI თქვენი სტუდენტები!'
+  hoc2019_mc_mee_description1: "ახალი Minecraft საათი კოდექსის სამეურვეო ახლა ხელმისაწვდომია Minecraft: განათლების გამოცემა Windows, Mac და iPad. ვისწავლოთ საფუძვლები კოდირების და შეისწავლონ AI თქვენი სტუდენტები!"
   hoc2019_mc_mee_description2: "უფასო რესურსებზე წვდომა გაკვეთილის გეგმის, ვიდეოების, კომპიუტერული მეცნიერების სასწავლო გეგმისა და მასწავლებელთა ტრენინგების ჩათვლით."
   hoc2019_mc_more_coding_resources: "მეტი კოდირების რესურსები"
   hoc2019_dance_previous_versions: "ვეძებთ წინა ვერსია Dance Party?  \nდააწკაპუნეთ აქ, რათა დაიწყოს [ნაწილი 1] (%{dance_2018_link}) და [ნაწილი 2] (%{dance_extras_2018_link}) საწყისი 2018."
@@ -1707,18 +1706,18 @@
   page_not_available_description: "ჩვენ ვწუხვართ, თქვენს მიერ მოთხოვნილი გვერდი აღარ არის ხელმისაწვდომი ამ მისამართზე. თუ თქვენ ჯერ კიდევ გჭირდებათ წვდომა, გთხოვთ მოგვწეროთ [support@code.org] (%{support_email_link})."
   page_not_available_button: "სახლში დაბრუნება"
   hoc2020_mc_available_code_org: "ხელმისაწვდომია Code.org-ზე"
-  hoc2020_mc_available_mee: 'ხელმისაწვდომია Minecraft- ში: განათლების გამოცემა'
+  hoc2020_mc_available_mee: "ხელმისაწვდომია Minecraft- ში: განათლების გამოცემა"
   hoc2020_mc_mee_title: "Minecraft ზღაპარი ორი სოფელი"
-  hoc2020_mc_mee_description: 'ახალი Minecraft საათი კოდი tutorial ახლა ხელმისაწვდომია Minecraft: განათლების გამოცემა Windows, Mac, Chromebook და iPad. ისწავლეთ კოდირების საფუძვლები და შეისწავლოთ მრავალფეროვნება და ჩართულობა თქვენს სტუდენტებთან! უფასო რესურსებზე წვდომა გაკვეთილის გეგმის, ვიდეოების, კომპიუტერული მეცნიერების სასწავლო გეგმის, კაპიტალის გაკვეთილების და მასწავლებელთა ტრენინგების ჩათვლით.'
+  hoc2020_mc_mee_description: "ახალი Minecraft საათი კოდი tutorial ახლა ხელმისაწვდომია Minecraft: განათლების გამოცემა Windows, Mac, Chromebook და iPad. ისწავლეთ კოდირების საფუძვლები და შეისწავლოთ მრავალფეროვნება და ჩართულობა თქვენს სტუდენტებთან! უფასო რესურსებზე წვდომა გაკვეთილის გეგმის, ვიდეოების, კომპიუტერული მეცნიერების სასწავლო გეგმის, კაპიტალის გაკვეთილების და მასწავლებელთა ტრენინგების ჩათვლით."
   hoc2021_mc_mee_title: "Minecraft TimeCraft"
-  hoc2021_mc_mee_description: 'იმოგზაუროთ დროში და ვისწავლოთ კოდი! ახალი Minecraft საათი კოდი tutorial ახლა ხელმისაწვდომია Minecraft: განათლების გამოცემა Windows, Mac, Chromebook და iPad. დავიწყოთ უფასო საგანმანათლებლო რესურსებით, ტრენინგებით და ვიდეოებით.'
+  hoc2021_mc_mee_description: "იმოგზაუროთ დროში და ვისწავლოთ კოდი! ახალი Minecraft საათი კოდი tutorial ახლა ხელმისაწვდომია Minecraft: განათლების გამოცემა Windows, Mac, Chromebook და iPad. დავიწყოთ უფასო საგანმანათლებლო რესურსებით, ტრენინგებით და ვიდეოებით."
   hoc2021_mc_mee_villages_title: "ზღაპარი ორი სოფელი"
-  hoc2021_mc_mee_villages_description: 'ვისწავლოთ კოდირების საფუძვლები და შეისწავლონ მრავალფეროვნება და ჩართულობა თქვენს სტუდენტებთან Minecraft- ში: განათლების გამოცემა.'
+  hoc2021_mc_mee_villages_description: "ვისწავლოთ კოდირების საფუძვლები და შეისწავლონ მრავალფეროვნება და ჩართულობა თქვენს სტუდენტებთან Minecraft- ში: განათლების გამოცემა."
   hoc2021_mc_mee_ai_title: "AI კარგი"
-  hoc2021_mc_mee_ai_description: 'ექსპლორ AI თქვენი სტუდენტები და ვისწავლოთ კოდი Minecraft: განათლება გამოცემა.'
+  hoc2021_mc_mee_ai_description: "ექსპლორ AI თქვენი სტუდენტები და ვისწავლოთ კოდი Minecraft: განათლება გამოცემა."
   hoc2022_mc_mee_title: "Minecraft სასახლიდან გაქცევა"
   hoc2022_mc_mee_description: 'გაიქეცი მისტიური სასახლიდან გამთენიისას და მიიღე მილიონი ზურმუხტი! ახალი Minecraft კოდის ერთი საათის ტუტორიალი ახლა ხელმისაწვდომია Minecraft-ში: საგანმანათლებლო გამოცემა Windows, Mac, Chromebook, Ipad და Mobile-თვის.დაიწყე უფასო საგანმანათლებლო რესურსებით, ტრენინგებით და ვიდეოებით.'
-  hoc2022_mc_mee_timecraft_description: 'იმოგზაურეთ წარსულში, რომ გადაარჩინოთ მომავალი პროგრამირების ამ უფასო გაკვეთილში Minecraft-ში: სასწავლო რედაქცია.'
+  hoc2022_mc_mee_timecraft_description: "იმოგზაურეთ წარსულში, რომ გადაარჩინოთ მომავალი პროგრამირების ამ უფასო გაკვეთილში Minecraft-ში: სასწავლო რედაქცია."
   footer_powered_by_aws: "შექმნილია Amazon Web Services დახმარებით"
   footer_built_on_github: "აგებულია GitHub- ზე Microsoft- ისგან"
   codebytes_skinny_banner_title: "შემოგვიერთდით 7-11 დეკემბერს ჩვენი კოდების ცოცხალი მინი-გაკვეთილები!"
@@ -1767,7 +1766,7 @@
   ai_zooniverse: "Zooniverse - Snapshot მთის ზებრა"
   ai_zooniverse_description: "დახმარება დაიცვას გადაშენების პირას მყოფი Cape Mountain Zebra მიერ საიდენტიფიკაციო სხვადასხვა ცხოველები images."
   ai_audience: "აუდიტორია"
-  ai_minecraft_description: 'უფასო რესურსებზე წვდომა გაკვეთილის გეგმის, ვიდეოების, კომპიუტერული მეცნიერების სასწავლო გეგმისა და მასწავლებელთა ტრენინგების ჩათვლით. (მოითხოვს Minecraft: განათლება გამოცემა)'
+  ai_minecraft_description: "უფასო რესურსებზე წვდომა გაკვეთილის გეგმის, ვიდეოების, კომპიუტერული მეცნიერების სასწავლო გეგმისა და მასწავლებელთა ტრენინგების ჩათვლით. (მოითხოვს Minecraft: განათლება გამოცემა)"
   ai_k_12_audience: "K-12 (საჭიროა კითხვა)"
   ai_microsoft_workshop: "უფასო ვირტუალური სემინარები Microsoft- ისგან"
   ai_microsoft_workshop_description: "Spark ცნობისმოყვარეობა უფასო ღეროვანი და კოდირების სემინარები."

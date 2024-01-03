@@ -18,8 +18,8 @@ class VocabulariesControllerTest < ActionController::TestCase
       post :create, params: {word: 'Algorithm', definition: 'definition of algorithm', courseVersionId: course_version.id}
       assert_response :success
     end
-    assert(@response.body.include?('Algorithm'))
-    assert(@response.body.include?('definition of algorithm'))
+    assert_includes(@response.body, 'Algorithm')
+    assert_includes(@response.body, 'definition of algorithm')
   end
 
   test "can update from params" do
@@ -31,7 +31,7 @@ class VocabulariesControllerTest < ActionController::TestCase
 
     vocabulary.reload
     assert_equal 'updated definition', vocabulary.definition
-    assert(@response.body.include?('updated definition'))
+    assert_includes(@response.body, 'updated definition')
   end
 
   test "can update vocab from params" do
@@ -45,7 +45,7 @@ class VocabulariesControllerTest < ActionController::TestCase
 
     vocabulary.reload
     assert_equal 'updated definition', vocabulary.definition
-    assert(@response.body.include?('updated definition'))
+    assert_includes(@response.body, 'updated definition')
     assert_equal [lesson], vocabulary.lessons
   end
 

@@ -10,7 +10,8 @@ theme: responsive
 
 - Kami menyarankan koneksi Internet paling tidak 15MBit/dtk dtk untuk sekolah Anda.
 - Ukuran layar terkecil yang kami dukung adalah 1024 x 728 px.
-- Anda akan memerlukan komputer desktop atau laptop dengan mouse (atau touchpad) dan keyboard untuk kursus tingkat SMP dan SMA: CS Discoveries, CS Principles, dan Intro to App Lab. Sebagian besar tablet dan perangkat seluler tidak didukung untuk kursus-kursus ini. Lihat "Detail Dukungaun untuk Ponsel dan Tablet" berikut untuk mendapatkan pengecualian khusus.
+- You will need a desktop or laptop computer (Chromebooks are included) with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. “See Minimum Supported Browsers and Platforms” below.
+- Most tablets (such as an iPad) and mobile devices are not supported for these courses. Lihat "Detail Dukungaun untuk Ponsel dan Tablet" berikut untuk mendapatkan pengecualian khusus.
 - Semua konten lain, seperti kursus K-5 (Dasar-dasar Ilmu Komputer) dan kegiatan Hour of Code kompatibel pada iPad dan Chromebook seperti halnya pada semua tablet modern lain dan laptop atau komputer desktop.
 - Mencari detail dukungan untuk perangkat seluler? Baca di bawah.
 
@@ -82,12 +83,12 @@ Untuk mendapatkan pengalaman terbaik dengan semua konten Code.org, kami sarankan
 
 ## Detail Dukungan untuk Ponsel dan Tablet
 
-Semua kursus CS Discoveries, CS Principles, dan Intro to App Lab tidak kompatibel dengan tablet atau perangkat seluler. Anda wajib menggunakan keyboard dan mouse (atau touchpad, seperti pada MacBook). Sebagian besar tablet tidak didukung, dengan pengecualian berikut:
+All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. Sebagian besar tablet tidak didukung, dengan pengecualian berikut:
 
 - Microsoft Surface Pro dengan keyboard eksternal
 - iPad yang menggunakan iPadOS 13.4 atau di atasnya dengan keyboard eksternal dan mouse atau touchpad eksternal
 
-Semua konten lain, seperti kursus K-5 (Dasar-dasar Ilmu Komputer) dan kegiatan Hour of Code kompatibel pada iPad dan Chromebook seperti halnya pada semua tablet modern lain dan laptop atau komputer desktop.
+All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
 
 ### Ponsel
 
@@ -101,15 +102,25 @@ Kami menggunakan [YouTube](https://www.youtube.com) untuk menyematkan video ke C
 
 Sebelum memulai kursus online Code.org, cobalah memutar video berikut untuk memastikan bahwa Anda sudah siap melakukannya.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
 
-Inilah pemutar video yang digunakan dalam kurikulum. Pemutar ini akan mencoba menampilkan video melalui YouTube dan, jika YouTube diblokir, akan menampilkan video yang dihosting oleh Code.org dengan menggunakan pemutar "fallback" kami.
+<!--
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to 
+.md.erb without breaking i18n sync, this file should include that partial instead.
+-->
+<figure style="width:100%; height: 100%; margin: 0 auto;">
+  <div class="videodiv" style="position:relative;">
+    <img style="display:block; width:100%; height:auto" src="/images/16x9.png">
+    <div class="insert_video_player" data-video-code="ws8rmHcqXeM" data-download-path="//videos.code.org/new/5-artist-intro.mp4"></div>
+  </div>
+</figure>
+
+This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
 
 ### Video tidak dapat diputar?
 
-Jika videonya tidak terputar, silakan kirim email kepada kami di support@code.org.
+If video does not work, you can email us at support@code.org.
 
-Meski demikian, Anda tetap dapat menggunakan tutorial kami tanpa video.
+However, you can still use our tutorials without video.
 
 1. Kami telah menyediakan semua video kami [untuk diunduh](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). Jika sekolah Anda memiliki bandwidth yang rendah, kami sarankan untuk mengunduh videonya dan memperlihatkannya kepada siswa di layar bersama (shared screen).
 2. Di dalam tutorialnya, kami juga telah menambahkan ikon tautan unduhan berwarna hijau <img src="/images/green-download.png" width=25 height=25 /> untuk tiap video, sehingga siswa dapat mengunduh video tutorial.
@@ -119,8 +130,8 @@ Meski demikian, Anda tetap dapat menggunakan tutorial kami tanpa video.
 
 ## Pengaturan khusus untuk pengguna Google AppsG-Suite
 
-Jika Anda adalah administrator G-suite, pastikan untuk memeriksa pengaturan pembatasan Anda untuk YouTube. Jika Anda telah menetapkan pengaturan "Akses YouTube Terbatas Ketat" atau jika Anda melihat pesan 'video ini telah dibatasi', Anda dapat menambahkan saluran kami ke daftar saluran yang disetujui. Lihat [panduan ini](https://support.google.com/a/answer/6245597) dari Google untuk mempelajari cara menambahkan saluran kami ke daftar yang disetujui. Anda juga dapat melihat [panduan ini](https://support.google.com/a/answer/6212415?hl=en) untuk mempelajari berbagai pengaturan dan apa yang terbaik bagi kelas Anda.
+If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
 
 ## Masih ada masalah?
 
-Kami akan membantu Anda - cukup kirim email kepada kami di support@code.org!
+We'll help you out - just email us at support@code.org!

@@ -6,7 +6,7 @@ import sinon from 'sinon';
 import {Factory} from 'rosie';
 import EnrollmentsPanel, {
   MOVE_ENROLLMENT_BUTTON_NAME,
-  EDIT_ENROLLMENT_NAME_BUTTON_NAME
+  EDIT_ENROLLMENT_NAME_BUTTON_NAME,
 } from '@cdo/apps/code-studio/pd/workshop_dashboard/EnrollmentsPanel';
 import './workshopFactory';
 
@@ -20,7 +20,7 @@ describe('EnrollmentsPanel', () => {
     'account_required_for_attendance?': false,
     capacity: 10,
     enrolled_teacher_count: 5,
-    'scholarship_workshop?': false
+    'scholarship_workshop?': false,
   };
 
   beforeEach(() => {
@@ -124,7 +124,7 @@ describe('EnrollmentsPanel', () => {
     );
 
     wrapper.instance().handleClickChangeEnrollments({
-      target: {name: MOVE_ENROLLMENT_BUTTON_NAME}
+      target: {name: MOVE_ENROLLMENT_BUTTON_NAME},
     });
     wrapper.update();
     assert(
@@ -164,7 +164,7 @@ describe('EnrollmentsPanel', () => {
 
     // Open the move enrollments dialog
     wrapper.instance().handleClickChangeEnrollments({
-      target: {name: MOVE_ENROLLMENT_BUTTON_NAME}
+      target: {name: MOVE_ENROLLMENT_BUTTON_NAME},
     });
     wrapper.update();
     assert(
@@ -182,9 +182,7 @@ describe('EnrollmentsPanel', () => {
     // Respond to the server request
     server.respondWith(
       'POST',
-      `/api/v1/pd/enrollments/move?destination_workshop_id=${destinationWorkshopId}&enrollment_ids[]=${
-        enrollments[0].id
-      }`,
+      `/api/v1/pd/enrollments/move?destination_workshop_id=${destinationWorkshopId}&enrollment_ids[]=${enrollments[0].id}`,
       [204, {}, '']
     );
     server.respond();
@@ -214,7 +212,7 @@ describe('EnrollmentsPanel', () => {
     );
 
     wrapper.instance().handleClickChangeEnrollments({
-      target: {name: EDIT_ENROLLMENT_NAME_BUTTON_NAME}
+      target: {name: EDIT_ENROLLMENT_NAME_BUTTON_NAME},
     });
     wrapper.update();
     assert(
@@ -222,9 +220,13 @@ describe('EnrollmentsPanel', () => {
         EDIT_ENROLLMENT_NAME_BUTTON_NAME
     );
 
-    // Confirm the updated name
-    const updatedName = {firstName: 'Rubeus', lastName: 'Hagrid'};
-    wrapper.instance().handleEditEnrollmentConfirmed(updatedName);
+    // Confirm the updated name and email
+    const updatedInfo = {
+      firstName: 'Rubeus',
+      lastName: 'Hagrid',
+      email: 'rubeushagrid@code.org',
+    };
+    wrapper.instance().handleEditEnrollmentConfirmed(updatedInfo);
     wrapper.update();
     assert(wrapper.state('enrollmentChangeDialogOpen') === null);
     assert.deepEqual([], wrapper.state('selectedEnrollments'));
@@ -266,7 +268,7 @@ describe('EnrollmentsPanel', () => {
 
   it('should show survey results button for CSF Intro past May 2020', () => {
     sampleCSFWorkshop.sessions = [
-      {start: '2020-05-08T09:00:00.000Z', end: '2020-05-08T17:00:00.000Z'}
+      {start: '2020-05-08T09:00:00.000Z', end: '2020-05-08T17:00:00.000Z'},
     ];
 
     const wrapper = mount(
@@ -291,7 +293,7 @@ describe('EnrollmentsPanel', () => {
 
   it('should not show survey results button for CSF Intro pre May 2020', () => {
     sampleCSFWorkshop.sessions = [
-      {start: '2020-04-08T09:00:00.000Z', end: '2020-04-08T17:00:00.000Z'}
+      {start: '2020-04-08T09:00:00.000Z', end: '2020-04-08T17:00:00.000Z'},
     ];
     const wrapper = mount(
       <EnrollmentsPanel

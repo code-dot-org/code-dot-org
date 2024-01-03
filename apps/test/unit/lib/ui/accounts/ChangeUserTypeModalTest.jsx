@@ -14,7 +14,7 @@ describe('ChangeUserTypeModal', () => {
 
   const DEFAULT_PROPS = {
     handleSubmit: () => {},
-    handleCancel: () => {}
+    handleCancel: () => {},
   };
 
   // Helpers for selecting particular elements/components
@@ -66,8 +66,8 @@ describe('ChangeUserTypeModal', () => {
       wrapper.setState({
         values: {
           email: '',
-          emailOptIn: 'yes'
-        }
+          emailOptIn: 'yes',
+        },
       });
 
       expect(wrapper.text()).to.include(
@@ -79,8 +79,8 @@ describe('ChangeUserTypeModal', () => {
       wrapper.setState({
         values: {
           email: 'invalidEmail@nowhere',
-          emailOptIn: 'yes'
-        }
+          emailOptIn: 'yes',
+        },
       });
 
       expect(wrapper.text()).to.include(
@@ -93,11 +93,11 @@ describe('ChangeUserTypeModal', () => {
       wrapper.setState({
         values: {
           email: '',
-          emailOptIn: 'yes'
+          emailOptIn: 'yes',
         },
         serverErrors: {
-          email: serverError
-        }
+          email: serverError,
+        },
       });
 
       expect(wrapper.text()).to.include(serverError);
@@ -108,8 +108,8 @@ describe('ChangeUserTypeModal', () => {
       wrapper.setState({
         values: {
           email: email,
-          emailOptIn: ''
-        }
+          emailOptIn: '',
+        },
       });
 
       expect(wrapper.text()).to.include(
@@ -123,11 +123,11 @@ describe('ChangeUserTypeModal', () => {
       wrapper.setState({
         values: {
           email: email,
-          emailOptIn: ''
+          emailOptIn: '',
         },
         serverErrors: {
-          emailOptIn: serverError
-        }
+          emailOptIn: serverError,
+        },
       });
 
       expect(wrapper.text()).to.include(serverError);
@@ -137,8 +137,8 @@ describe('ChangeUserTypeModal', () => {
       wrapper.setState({
         values: {
           email: '',
-          emailOptIn: ''
-        }
+          emailOptIn: '',
+        },
       });
 
       expect(submitButton(wrapper)).to.have.prop('disabled', true);
@@ -148,8 +148,8 @@ describe('ChangeUserTypeModal', () => {
       wrapper.setState({
         values: {
           email: 'me@example.com',
-          emailOptIn: 'yes'
-        }
+          emailOptIn: 'yes',
+        },
       });
 
       expect(submitButton(wrapper)).to.have.prop('disabled', false);
@@ -160,12 +160,12 @@ describe('ChangeUserTypeModal', () => {
     it('on email', () => {
       wrapper.setState({
         serverErrors: {
-          email: 'test-server-error'
-        }
+          email: 'test-server-error',
+        },
       });
       expect(wrapper.state().serverErrors.email).to.equal('test-server-error');
       emailInput(wrapper).simulate('change', {
-        target: {value: 'me@example.com'}
+        target: {value: 'me@example.com'},
       });
       expect(wrapper.state().serverErrors.email).to.be.undefined;
     });
@@ -173,8 +173,8 @@ describe('ChangeUserTypeModal', () => {
     it('on email opt-in', () => {
       wrapper.setState({
         serverErrors: {
-          emailOptIn: 'test-server-error'
-        }
+          emailOptIn: 'test-server-error',
+        },
       });
       expect(wrapper.state().serverErrors.emailOptIn).to.equal(
         'test-server-error'
@@ -195,18 +195,18 @@ describe('ChangeUserTypeModal', () => {
       expect(wrapper.state().saveState).to.equal('initial');
       expect(wrapper.state().serverErrors).to.deep.equal({
         email: undefined,
-        emailOptIn: undefined
+        emailOptIn: undefined,
       });
       wrapper.instance().onSubmitFailure({
         serverErrors: {
           email: 'test-email-server-error',
-          emailOptIn: 'test-opt-in-server-error'
-        }
+          emailOptIn: 'test-opt-in-server-error',
+        },
       });
       expect(wrapper.state().saveState).to.equal('initial');
       expect(wrapper.state().serverErrors).to.deep.equal({
         email: 'test-email-server-error',
-        emailOptIn: 'test-opt-in-server-error'
+        emailOptIn: 'test-opt-in-server-error',
       });
     });
   });

@@ -4,3 +4,5 @@ wrong 'The bird will get to the pig.', feedback: 'Incorrect. The bird turns the 
 wrong 'The bird will only go straight.', feedback: 'Incorrect. The bird turns the wrong way at the end.'
 right 'The bird will turn the wrong way at the end.', feedback: 'Correct!'
 wrong 'I don\'t know.', feedback: 'The bird should go North at the end, not South.'
+
+allow_multiple_attempts false

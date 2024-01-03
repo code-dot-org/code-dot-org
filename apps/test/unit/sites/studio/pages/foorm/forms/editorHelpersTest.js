@@ -2,7 +2,7 @@ import {assert} from 'chai';
 import {lintFoormKeys} from '@cdo/apps/sites/studio/pages/foorm/forms/editorHelpers';
 
 const fakeCodeMirror = {
-  posFromIndex: x => ({from: 0, to: 1})
+  posFromIndex: x => ({from: 0, to: 1}),
 };
 
 const testValidJson = `{

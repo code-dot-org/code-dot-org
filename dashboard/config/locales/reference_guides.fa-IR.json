@@ -3,415 +3,103 @@
     "data": {
       "reference_guides": {
         "csd-2022/accelerometer-events": {
-          "display_name": "رویدادهای شتاب سنج",
-          "content": ""
-        },
-        "csd-2022/accuracy-in-ai-lab": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/ai-lab": {
-          "display_name": ""
-        },
-        "csd-2022/analog-sensors": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/animation-tab": {
-          "display_name": "",
-          "content": ""
+          "display_name": "رویدادهای شتاب سنج"
         },
         "csd-2022/app-lab": {
-          "display_name": "آزمایشگاه نرم افزار",
-          "content": ""
+          "display_name": "لابراتوار اپ"
         },
         "csd-2022/applab-overview": {
-          "display_name": "بررسی اجمالی",
-          "content": ""
-        },
-        "csd-2022/arrays": {
-          "display_name": "",
-          "content": ""
+          "display_name": "مرور کلی"
         },
         "csd-2022/board-events": {
-          "display_name": "رویدادهای بورد",
-          "content": ""
-        },
-        "csd-2022/body-styling": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/booleans-and-comparison-operators": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/changing-screens": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/changing-sensor-scale": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/checking-multiple-conditions-with-if-else-if": {
-          "display_name": "",
-          "content": ""
+          "display_name": "رویدادهای بورد"
         },
         "csd-2022/circuit-playground": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/circuits-and-buttons": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/circuits-and-leds": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/classes": {
-          "display_name": "",
-          "content": ""
+          "display_name": "مرور کلی زمین بازی مدار"
         },
         "csd-2022/collision-detection": {
-          "display_name": "تشخیص تصادم",
-          "content": ""
-        },
-        "csd-2022/color-lights": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/counter-patterns-with-event": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/creating-a-survey": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/creative-commons-search": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/css": {
-          "display_name": "",
-          "content": ""
+          "display_name": "تشخیص تصادم"
         },
         "csd-2022/css-overview": {
-          "display_name": "بررسی اجمالی",
-          "content": ""
-        },
-        "csd-2022/data-and-change-events": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/debugging-html": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/debugging-variable-scope-functions": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/debugging-with-watchers": {
-          "display_name": "",
-          "content": ""
+          "display_name": "مرور کلی"
         },
         "csd-2022/design-mode": {
-          "display_name": "حالت طراحی",
-          "content": ""
-        },
-        "csd-2022/design-mode-elements": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/designing-screens-with-code": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/drawing-shapes": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/editing-images": {
-          "display_name": "",
-          "content": ""
+          "display_name": "حالت طراحی"
         },
         "csd-2022/for-loops": {
-          "display_name": "حلقه های \"برای\"",
-          "content": ""
-        },
-        "csd-2022/formatting-html": {
-          "display_name": "",
-          "content": ""
+          "display_name": "حلقه های \"برای\""
         },
         "csd-2022/functions": {
-          "display_name": "توابع",
-          "content": ""
+          "display_name": "توابع"
         },
         "csd-2022/game-lab": {
-          "display_name": "کارگاه بازی سازی",
-          "content": ""
+          "display_name": "لابراتوار بازی"
         },
         "csd-2022/game-lab-overview": {
-          "display_name": "بررسی اجمالی",
-          "content": ""
-        },
-        "csd-2022/headings-and-paragraphs": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/html": {
-          "display_name": "",
-          "content": ""
+          "display_name": "مرور کلی"
         },
         "csd-2022/html-overview": {
-          "display_name": "بررسی اجمالی",
-          "content": ""
-        },
-        "csd-2022/html-tags": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/hyperlinks": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/if-else-statements": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/if-statements": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/if-statements-2": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/images-in-html": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/importing-a-model-in-app-lab": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/importing-screens": {
-          "display_name": "",
-          "content": ""
+          "display_name": "مرور کلی"
         },
         "csd-2022/introduction-to-ai-lab": {
-          "display_name": "",
-          "content": ""
+          "display_name": "معرفی آزمایشگاه هوش مصنوعی"
         },
         "csd-2022/javascript": {
-          "display_name": "ویژوال بیسیک",
-          "content": ""
+          "display_name": "ویژوال بیسیک"
         },
         "csd-2022/javascript-overview": {
-          "display_name": "بررسی اجمالی",
-          "content": ""
-        },
-        "csd-2022/layout-properties": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/list-filter-pattern": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/list-reduce-pattern": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/list-scrolling-pattern": {
-          "display_name": "",
-          "content": ""
+          "display_name": "مرور کلی"
         },
         "csd-2022/lists": {
-          "display_name": "فهرست‌ها",
-          "content": ""
+          "display_name": "لیست ها"
         },
         "csd-2022/maker-toolkit": {
-          "display_name": "جعبه ابزار Maker",
-          "content": ""
+          "display_name": "جعبه ابزار Maker"
         },
         "csd-2022/maker-toolkit-overview": {
-          "display_name": "بررسی اجمالی",
-          "content": ""
+          "display_name": "مرور کلی"
         },
         "csd-2022/model-cards-in-ai-lab": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/modifying-arrays": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/multi-frame-animations": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/multi-screen-apps": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/naming-variables": {
-          "display_name": "",
-          "content": ""
+          "display_name": "کارت‌های مدل در آزمایشگاه هوش مصنوعی"
         },
         "csd-2022/other": {
-          "display_name": "دیگر",
-          "content": ""
+          "display_name": "دیگر"
         },
         "csd-2022/other-overview": {
-          "display_name": "بررسی اجمالی",
-          "content": ""
-        },
-        "csd-2022/patterns": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/patterns-2": {
-          "display_name": "",
-          "content": ""
+          "display_name": "مرور کلی"
         },
         "csd-2022/patterns-overview": {
-          "display_name": "بررسی اجمالی",
-          "content": ""
-        },
-        "csd-2022/physical-input": {
-          "display_name": "",
-          "content": ""
+          "display_name": "مرور کلی"
         },
         "csd-2022/playing-notes": {
-          "display_name": "نکات بازی",
-          "content": ""
+          "display_name": "نکات بازی"
         },
-        "csd-2022/producing-output": {
-          "display_name": "",
-          "content": ""
+        "csd-2022/problem-solving-process": {
+          "display_name": "فرایند حل مسئله"
         },
-        "csd-2022/random-list-access": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/random-numbers": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/responding-to-user-input": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/saving-and-uploading-csv-files": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/selecting-a-label": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/selecting-features": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/shapes-and-parameters": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/sprite-interactions": {
-          "display_name": "",
-          "content": ""
+        "csd-2022/problem-solving-process-general": {
+          "display_name": "فرایند حل مسئله"
         },
         "csd-2022/sprite-properties": {
-          "display_name": "ویژگی‌های اسپرایت",
-          "content": ""
+          "display_name": "ویژگی‌های اسپرایت"
         },
         "csd-2022/sprites": {
-          "display_name": "اسپرایت",
-          "content": ""
-        },
-        "csd-2022/style-sheets": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/tableDataStorage": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/taking-input-with-getproperty": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/text-properties": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/the-accelerometer": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/the-counter-pattern": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/the-counter-pattern-2": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/the-draw-loop": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/timed-for-loop": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/timed-loop": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/update-screen-pattern": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/using-data-with-categorical-features": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/using-data-with-numerical-features": {
-          "display_name": "",
-          "content": ""
-        },
-        "csd-2022/variable-with-string-concatenation-pattern": {
-          "display_name": "",
-          "content": ""
+          "display_name": "اسپرایت"
         },
         "csd-2022/variables": {
-          "display_name": "متغیرها",
-          "content": ""
+          "display_name": "متغیرها"
         },
         "csd-2022/velocity": {
-          "display_name": "",
-          "content": ""
+          "display_name": "سرعت"
         },
         "csd-2022/velocity-and-the-counter-pattern": {
-          "display_name": "الگوی شمارشگر و سرعت",
-          "content": ""
+          "display_name": "الگوی شمارشگر و سرعت"
         },
         "csd-2022/web-lab": {
-          "display_name": "آزمایشگاه شبکه",
-          "content": ""
-        },
-        "csd-2022/when-to-make-a-function": {
-          "display_name": "",
-          "content": ""
+          "display_name": "لابراتوار شبکه"
         },
         "csd-2022/which-type-of-chart": {
-          "display_name": "",
-          "content": ""
+          "content": "![](https://curriculum.code.org/media/uploads/Screenshot-2020-02-27-at-10.56.17-PM.png)"
         }
       }
     }

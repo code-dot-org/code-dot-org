@@ -14,7 +14,7 @@ if (window.location.href && window.location.href.indexOf('?') > -1) {
     ifr.src = src;
   }
 }
-window.handleIFrameMessage = function(e) {
+window.handleIFrameMessage = function (e) {
   if (typeof e.data === 'object') {
     return;
   }
@@ -79,7 +79,7 @@ window.handleIFrameMessage = function(e) {
   ) {
     var urls = {
       docurl: encodeURIComponent(document.URL),
-      referrer: encodeURIComponent(document.referrer)
+      referrer: encodeURIComponent(document.referrer),
     };
     iframe.contentWindow.postMessage(
       JSON.stringify({type: 'urls', value: urls}),

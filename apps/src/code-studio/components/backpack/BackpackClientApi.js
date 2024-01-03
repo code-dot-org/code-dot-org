@@ -20,7 +20,7 @@ export default class BackpackClientApi {
   fetchChannelId(callback) {
     $.ajax({
       url: '/backpacks/channel',
-      type: 'get'
+      type: 'get',
     }).done(response => {
       this.channelId = response.channel;
       callback();

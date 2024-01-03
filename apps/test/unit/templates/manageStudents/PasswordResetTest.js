@@ -21,7 +21,7 @@ describe('PasswordReset', () => {
     );
     wrapper.find('Button').simulate('click');
     wrapper.find('input').simulate('change', {
-      target: {value: 'short'}
+      target: {value: 'short'},
     });
     const saveButton = wrapper.find('Button').first();
     saveButton.simulate('click');

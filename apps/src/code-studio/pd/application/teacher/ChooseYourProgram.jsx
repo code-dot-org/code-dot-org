@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import {FormGroup} from 'react-bootstrap';
+import {FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {
   PageLabels,
-  SectionHeaders
+  SectionHeaders,
 } from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import {styles, getProgramInfo} from './TeacherApplicationConstants';
 import {RegionalPartnerMiniContactPopupLink} from '@cdo/apps/code-studio/pd/regional_partner_mini_contact/RegionalPartnerMiniContact';
@@ -18,11 +18,16 @@ const CSP_URL = 'https://code.org/educate/csp';
 const CSA_URL = 'https://code.org/educate/csa';
 
 const ChooseYourProgram = props => {
+  const [programChanged, setProgramChanged] = useState(false);
+
   const onProgramChange = newProgram => {
+    if (props.data.program) {
+      setProgramChanged(true);
+    }
     props.onChange(newProgram);
     analyticsReporter.sendEvent(EVENTS.PROGRAM_PICKED_EVENT, {
       'professional learning program': getProgramInfo(newProgram.program)
-        .shortName
+        .shortName,
     });
   };
 
@@ -63,6 +68,15 @@ const ChooseYourProgram = props => {
             name="program"
             onChange={program => onProgramChange(program)}
           />
+          {programChanged && (
+            <p>
+              Note: If you have previously started the application and decide to
+              change your program, that will impact which questions you need to
+              answer to complete the application. In this case, please check all
+              pages to make sure you have answered all questions for this new
+              program choice.
+            </p>
+          )}
         </FormGroup>
       </LabelsContext.Provider>
     </FormContext.Provider>
@@ -73,11 +87,11 @@ ChooseYourProgram.propTypes = {
   errors: PropTypes.arrayOf(PropTypes.string).isRequired,
   errorMessages: PropTypes.object.isRequired,
   data: PropTypes.object.isRequired,
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired,
 };
 
 ChooseYourProgram.associatedFields = [
-  ...Object.keys(PageLabels.chooseYourProgram)
+  ...Object.keys(PageLabels.chooseYourProgram),
 ];
 
 export default ChooseYourProgram;

@@ -1,88 +1,456 @@
 ca:
   data:
     progressions:
+      '"If/Else" with the Bee': '"If/else" amb l''Abella'
+      8-Bit Binary Number Widget: Widget de números binaris de 8 bits
+      AI Lab and Isaac's Data: El Laboratori d'Intel·ligència Artificial i les dades de l'Isaac
+      AI Lab and Kim's Data: El Laboratori d'Intel·ligència Artificial i les dades de la Kim
       AI Machine Learning - Video: Aprenentatge automàtica amb IA - Vídeo
+      'AI for Oceans: Fish vs Not Fish': 'I.A. per l''oceà: Peix o No peix'
+      'AI for Oceans: Types of Fish': 'I.A. per l''oceà: tipus de peixos'
       'AI: Impact on Society - Video': 'IA: Impacte en la societat - Vídeo'
       'AI: Training Data & Bias - Video': 'IA: Dades d''entrenament i biaixos - Vídeo'
+      Accelerometer Events: Esdeveniments d'acceleròmetre
+      Add Content and HTML: Afegeix contingut i HTML
+      Add Content and Structure to Your Page: Afegeix contingut i estructura a la teva pàgina
+      Add Movement: Afegeix un moviment
+      Add Sprites: Afegeix sprites
+      Add Style: Afegeix un estil
+      Add Style to Your Page: Afegeix un estil a la teva pàgina
+      Add Text: Afegeix text
+      Add a Welcome Screen: Afegeix una pantalla d'inici
+      Adding Images: Afegir imatges
+      Adding New Screens: Afegir pantalles noves
+      Adding Pages: Afegir pàgines
+      Adding Screens: Afegir pantalles
+      Alternative Datasets: Conjunts de dades alternatius
+      Animate Your Scene: Anima la teva escena
+      App Lab Intro - Video: Introducció al Laboratori d'Aplicacions - Vídeo
+      'App Project: Screen Design': 'Projecte d''aplicacions: Disseny de pantalla'
+      'App: Choose a Kid''s Movie': 'Aplicació: Escull la pel·lícula per nens'
+      'App: Friend Finder': 'Aplicació: Cercador d''amics'
+      'App: Guess the Number': 'Aplicació: Endevina el número'
+      'App: How Many Countries': 'Aplicació: Quants països'
+      'App: Improved Pet App': 'Aplicació: Aplicació de mascotes millorada'
+      'App: Is It Your Birthday?': 'Aplicació: És el teu aniversari?'
+      'App: My Famous Birthday': 'Aplicació: El meu aniversari famós'
+      'App: National Parks': 'Aplicació: Parcs Nacionals'
+      'App: Outfit Picker': 'Aplicació: Seleccionador de vestits'
+      'App: Pet Chooser': 'Aplicació: Seleccionador de mascotes'
+      'App: Stamp Notebook': 'Aplicació: Llibreta de segells'
+      'App: Story Creator': 'Aplicació: Creador d''històries'
+      'App: The Fastest Finger': 'Aplicació: El dit més ràpid'
+      'App: Where Should I Live?': 'Aplicació: On hauria de viure?'
+      Artist Intro with JR Hildebrand: Introducció a l'Artista amb J. R. Hildebrand
+      Artist Intro with JR Hildebrande: Introducció a l'Artista amb J. R. Hildebrand
+      Artist Project: Projecte de l'Artista
       'Artist: Variables': 'Artista: Variables'
       Assessment: Avaluació
+      Attribution: Atribució
       Back and Forth: Anada i tornada
+      Basic Conditionals: Condicionals bàsics
       Bass, Mid, and Treble: Greus, mitjans i aguts
+      Be a Super Digital Citizen: Sigues un ciutadà digital de primera
+      Begin planning your project: Comença a planificar el teu projecte
+      Begin planning your project_2018: Comença a planificar el teu projecte_2018
       Binary Bracelets - Unplugged Activity: Polseres binàries - Activitat sense connexió
+      Binary Number Widget: Widget de números binaris
+      Binary Numbers: Números binaris
+      Board Events: Esdeveniments amb placa
+      Board Input and Output: Entrada i sortida de la placa
+      Book Recommender App: 'Aplicació: Recomanació de llibres'
+      Book Recommender Model Card: Targeta de model de l'aplicació de recomanació de llibres
+      Boolean Comparison: Comparació booleana
+      Build a Platform Jumper: Crea una plataforma de salt
+      Build a Screen: Crea una pantalla
+      Building a UI with Design Mode: Crea una interfície d'usuari amb Design Mode
+      Building an App: Crear una aplicació
+      Button Circuits: Circuits amb botó
+      CS Discoveries Post-Course Survey: Enquesta post-curs Descobriments Informàtics
+      CS Discoveries Post-course Survey: Enquesta post-curs Descobriments Informàtics
+      CSD U3 Interactive Card Exemplar: Exemple de targeta interactiva - Descobriments Informàtics U3
+      CSD U3 platform intro: Presentació de la plataforma - Descobriments Informàtics U3
+      'CSD: For Loop': 'Bucles "for" - Descobriments Informàtics U3'
+      Cake Defender: Defensa de pastissos
+      Cake Survey: Enquesta sobre pastissos
       Challenge: Repte
+      Challenge Levels: Nivells de repte
+      Challenge/Practice: Repte/Pràctica
+      'Challenge: Lists': 'Repte: Llistes'
+      'Challenge: RGB Colors': 'Repte: Colors RGB'
+      Challenges: Reptes
+      Change: Canviar
+      Check Your Work: Revisa la teva feina
+      Check for Understanding: Comprovar si hi ha comprensió
+      Check-In Survey: Enquesta de registre
+      Checking for a Winner: Cercant d'un guanyador
+      'Choice Levels: Customize Your App': 'Nivells d''elecció: personalitza la teva aplicació'
+      Choose Your Own Adventure: Tria la teva pròpia aventura
+      Choosing Good IDs: Escollir bons identificadors
+      Club Datasets: Conjunts de dades del club
+      Code Prediction: Predicció de codi
+      Code Your Own Flappy Game: Programa el teu propi joc Flappy
+      Code Your Page: Programa la teva pàgina
+      Collector Game: Joc de La Col·leccionista
+      Collisions: Col·lisions
+      Collisions in Games: Col·lisions als jocs
+      Color LEDs: LED de colors
+      Combining Projects: Combinar projectes
+      Combining Representations: Combinar representacions
       Conditionals with Cards - Unplugged Activity: Condicionals amb cartes - Activitat sense connexió
+      'Conditionals: If Statements': 'Condicionals: sentències if'
+      'Conditionals: If and If/Else Statements': 'Condicionals: sentències if i if/else'
+      Control Your Player: Controla el teu jugador
+      'Course E: Play Lab Project': 'Curs E: Projecte del Laboratori de Jocs'
+      'Course F: Artist Project': 'Curs F: Projecte amb l''Artista'
+      'Course F: Artist Project - Revise': 'Curs F: Projecte amb l''Artista - Revisar'
+      'Course F: Play Lab Project': 'Curs F: Projecte del Laboratori de Jocs'
+      'Course F: Play Lab Project - Revise': 'Curs F: Projecte del Laboratori de Jocs - Revisar'
+      Crack Random Substitution: Desxifra la substitució aleatòria
+      Crack a Caesar Cipher: Desxifra un xifrat Cèsar
+      Create Your Own Animation: Crea la teva pròpia animació
+      Create Your Sprites: Crea els teus sprites
+      Create a Background: Crea un fons
+      Create a Google Form: Crea un formulari de Google
+      Create a Story: Crea una història
+      Create an App in App Lab: Crea una aplicació al Laboratori d'Aplicacions
       Create your project: Crear el teu propi projecte
+      Customize: Personalitzar
+      Customize Your App: Personalitza la teva aplicació
+      Customizing Your App: Personalitzant la teva aplicació
       Dance Crews: Grups de dansa
+      Data Visualization: Visualització de dades
+      De-bugging with the Step Button: Depurar amb el botó de pas
       Debugging: Depuració
+      Debugging with the Step Button: Depurar amb el botó de pas
+      'Demo App: Interactive Card': 'Aplicació de demostració: Targeta interactiva'
+      Demo Apps: Aplicacions de demostració
       Design Mode: Mode de disseny
+      Design Your Game: Dissenya el teu joc
+      Design Your Prototype: Dissenya el teu prototip
+      Design a Screen for your App: Dissenya una pantalla per a la teva aplicació
+      Design an AI App - AI Lab: Dissenyar una aplicació d'I.A. - Laboratori d'Intel·ligència Artificial
+      Design an AI App - App Lab: Dissenyar una aplicació d'I.A. - Laboratori d'Aplicacions
       Designing for Accessibility: Dissenyar per garantir l'accessibilitat
+      Digital Sharing - Unplugged Activity: Compartir contingut digital - Activitat sense connexió
+      Draw Your Background: Dibuixa el teu fons
+      Draw a Background: Dibuixa un fons
       Drawing: Dibuix
+      Driver Alert System: Sistema d'alerta del controlador
+      End-Of-Unit Survey: Enquesta de final d'unitat
+      End-of-Unit Survey: Enquesta de final d'unitat
+      Escape Room Example: Exemple d'escape room
       Events: Esdeveniments
+      Events and Linking Screens: Esdeveniments i enllaçar pantalles
+      Events and Properties: Esdeveniments i propietats
       Example: Exemple
+      Example Animated Scene: Exemple d'escena animada
+      Example App Types: Exemples de tipus d'aplicacions
+      'Example App: Zoo Classification': 'Exemple d''aplicació: Classificació en un zoo'
+      Example Apps: Exemples d'aplicacions
       Example Projects: Projectes d'exemple
       Example projects: Projectes d'exemple
+      Exemplar Personal Websites: Exemples de pàgines web personals
+      Expanding Personal Website: Ampliar la pàgina web personal
+      Expanding Your Website: Ampliar la teva pàgina web personal
+      Experiment with Web Lab: Experimenta amb el Laboratori Web
       Exploration: Exploració
+      'Exploration: Clicker Game': 'Exploració: Joc de clics'
+      'Exploration: For Loops': 'Exploració: Bucles "for"'
       'Exploration: Rikki''s Poster': 'Exploració: El pòster de la Rikki'
+      'Exploration: Sample Apps': 'Exploració: Exemples d''aplicacions'
+      'Exploration: Sample Programs': 'Exploració: Programes d''exemple'
       'Exploration: Sample Project': 'Exploració: Projecte de mostra'
+      Exploring CS in Entertainment: Exploració de la informàtica en l'entreteniment
+      Exploring more CSS: Descobrir més sobre CSS
+      Extra: Extra
+      Extra Challenge: Repte extra
+      'Extra Challenge: Sound Board': 'Repte extra: Taula de so'
+      Field Collector App: Aplicació d'ubicacions geogràfiques
+      Final Room Escape App: Aplicació final d'Escape Room
+      Find the Wizard: Trobar el bruixot
+      Finish a Screen: Acabar la pantalla
+      Finish the Prototype: Acabar el prototip
+      Finishing Functions: Acabar les funcions
+      Finishing Touches: Retocs finals
+      Flyer Game: Joc de volants
+      Follow the Algorithm - Unplugged Activity: Seguim l'algorisme - Activitat sense connexió
+      Follow the Mouse: Seguim el ratolí
+      Fonts and Style: Fonts i estil
+      FoodFight: FoodFight
+      For Loop Fun - Unplugged Activity: Diversió amb bucles "for" - Activitat sense connexió
       For Loops: Bucles "for"
+      For Loops and Color LEDs: Bucles "for" i LED de colors
+      For Loops and Repeat Blocks: Bucles "for" i blocs de repetició
       Free Play: Joc lliure
       'Free Play: Make a Scene': 'Joc lliure: Fem una escena'
       'Free Play: Make an Interactive Scene': 'Joc lliure: Fem una escena interactiva'
+      Fruit and Veggie Explorer: Explorador de fruites i verdures
       Functions: Funcions
       Functions with Parameters: Funcions amb Paràmetres
       Get In Formation: Tothom al seu lloc
+      Getters and Setters: Getters i Setters
+      Getting Properties: Obtenir propietats
       Graph Paper Programming - Unplugged Activity: Programació amb paper quadriculat - Activitat sense connexió
+      Green Glass Door: Porta de vidre verd
+      Guess The Number: Endevina el número
+      Headings: Títols
+      Hello World: Hola, món
+      How to Create a Simple Function: Com crear una funció senzilla
       How to Make a Sprite: Com crear un sprite
+      Human Device Interaction: Interacció humà-dispositiu
+      Ice Age Loops: Bucles a l'Edat de gel
+      Images and Sounds: Imatges i sons
+      Import Your Model: Importa el teu model
+      Import a Model: Importa un model
+      Importing Your Model: Important el teu model
+      Improved Shoe Recommender: Recomanació de sabates millorada
+      Incorporate Feedback: Incorporar comentaris
+      Innovation Research: Investigació sobre innovació
+      Input Examples: Exemples d'entrada
+      Input with If-Else: Entrada de dades amb if/else
+      InspirationalArtwork: Dissenys inspiradors
+      Interactive Art: Art interactiu
+      Intro Video: Introducció de vídeo
+      Intro to Flyer Game: Introducció al joc dels volants
+      Intro to For Loops: Introducció als bucles "for"
+      Intro to Side Scrollers: Introducció als desplaçadors laterals
+      Intro to Sprites: Introducció als sprites
+      Intro to Variables: Introducció a les variables
+      Introducing Sprite Lab: Introducció al Laboratori d'Sprites
+      Introduction: Introducció
+      Introduction to Arrays: Introducció a les matrius
+      Investigate: Investigar
+      Isaac's Survey Data: Dades de l'enquesta de l'Isaac
+      Iteration and Parameters: Iteració i paràmetres
       Keep On Dancing!: Que el ritme no pari!
+      Keeping Data Secret: Mantenir les dades en secret
+      Keyboard Input: Entrada de teclat
+      Kim's Survey: L'enquesta de la Kim
+      Kim's Survey Data: Dades de l'enquesta de la Kim
+      LED Apps: Aplicacions amb LED
+      Layout with CSS: Disseny amb CSS
+      Learning from Simulations: Aprendre amb simulacions
+      Lesson Extra: Lliçó addicional
       Lesson Extras: Lliçons addicionals
+      Level Overview: Resum del nivell
       Levels: Nivells
+      Light Show: Espectacle de llums
+      Linking Pages: Enllaçar pàgines
+      Linking Screens: Enllaçar pantalles
       Lists: Llistes
+      Looking for Patterns: Buscar patrons
+      Looping: Fent bucle
+      Loops with the Artist: Bucles amb l'Artista
+      Make Your Sprites: Fes els teus sprites
+      Make a Prediction: Fes una predicció
+      Make an Interactive Card: Fes un targeta interactiva
+      Make it Interactive: Fes-la interactiva
+      Making Scenes: Fer escenes
+      Making Songs: Fer cançons
+      Making Sounds: Fer sons
+      Making an Interactive Card: Fer una targeta interactiva
+      'Maze Intro: Programming with Blocks': 'Introducció al laberint: Programació amb blocs'
       Measures: Compassos
+      Medical Dataset Model Cards: Targetes de models de conjunt de dades mèdiques
+      Medical Priority App: Aplicació de prioritats mèdiques
       'Minecraft: Hero''s Journey': 'Minecraft: El viatge de l''heroi'
       'Mini-Project: About Me': 'Miniprojecte: Coses sobre mi'
+      'Mini-Project: Alien Dance Moves': 'Miniprojecte: Passos de ball alienígenes'
+      'Mini-Project: Alien Dance Party': 'Miniprojecte: Festa de ball alienígena'
+      'Mini-Project: Clicker Game': 'Miniprojecte: Joc de clics'
+      'Mini-Project: Collector Game': 'Miniprojecte: Joc de la Col·leccionista'
       'Mini-Project: Create a Virtual Pet': 'Mini-Projecte: Fem una mascota virtual'
+      'Mini-Project: Outbreak Simulator': 'Miniprojecte: Simulador de brots'
       'Mini-Project: Royal Battle': 'Miniprojecte: Batalla real'
       "Mini-Project: Snowflake #1": "Miniprojecte: Floc de neu 1"
       "Mini-Project: Snowflake #2": "Miniprojecte: Floc de neu 2"
       'Mini-Project: Sticker Art': 'Miniprojecte: Art amb adhesius'
+      'Mini-Project: Swimming Fish': 'Miniprojecte: Peixos, a nedar'
+      'Mini-Project: Swimming Fish (continued)': 'Miniprojecte: Peixos, a nedar (continuació)'
+      'Mini-Project: User Input Programs': 'Miniprojecte: Programes amb informació de l''usuari'
+      'Mini-Project: Virtual Pet': 'Miniprojecte: Mascota virtual'
       'Mini-project: Chase Game': 'Miniprojecte: Joc de persecució'
       'Mini-project: Flappy Game': 'Miniprojecte: Joc amb el Flappy'
+      'Mini-project: Interactive Poster': 'Miniprojecte: Pòster interactiu'
       'Mini-project: Jorge the Dog': 'Miniprojecte: El gosset Jorge'
       'Mini-project: Sticker Art': 'Miniprojecte: Art amb adhesius'
       'Mini-project: Sticker Design': 'Miniprojecte: Disseny d''adhesius'
+      Modify simulation variables: Modificar les variables de la simulació
       More Buttons: Més botons
+      More Input: Més dades d'entrada
+      More Parameters: Més paràmetres
+      Motorcycle: Moto
       Move It Move it Video  - Unplugged Activity: A moure's - Activitat sense connexió
+      Movement with the Counter Pattern: Moviment amb el patró de comptador
+      Multiframe Animations: Animacions amb multifotogrames
+      Musical Arrays: Matrius musicals
+      My Loopy Robotic Friends - Unplugged Activity: Els meus amics robòtics amb bucles - Activitat sense connexió
       My Online Neighborhood: El meu barri d'internet
       My Robotic Friends - Unplugged Activity: Els meus amics robòtics - Activitat sense connexió
-      Overview: Vista general
+      Nested Loops with the Bee: Bucles imbricats amb l'Abella
+      New Challenge Introduction: Introducció al nou repte
+      New Shapes: Formes noves
+      Orientation: Orientació
+      Overview: Resum
+      'Overview: Design Mode': 'Resum: Design Mode'
+      'Overview: If Statements': 'Resum: Sentències if'
+      'Overview: Images': 'Resum: Imatges'
+      'Overview: onEvent': 'Resum: onEvent'
+      'Overview: setPosition': 'Resum: setPosition'
       Pair Programming: Programació per parelles
+      Pet Recommender: Recomanació de mascotes
       Picturing Data: Dades en imatges
+      Pizza Party Data: Dades de la festa de la pizza
+      Pizza Recommendations: Recomanacions de pizzes
+      Plan Your Project: Planifica el teu projecte
+      Plan Your Scene: Planifica la teva escena
       Planning: Planificació
+      Platform Jumper - Background and Variables: Plataforma de salt - Context i variables
+      Platform Jumper - Items: Plataforma de salt - Objectes
+      Platform Jumper - Platforms: Plataforma de salt - Plataformes
+      Platform Jumper - Player: Plataforma de salt - Jugador
+      Platform Jumper Review: Revisió de la plataforma de salt
+      Player Controls: Controls del jugador
+      Playing Notes: Reproduir notes
+      Playing with Notes: Jugar amb notes
+      Post-Course Survey Instructions: Instruccions per l'enquesta post curs
       Practice: Pràctica
+      Predict: Fes una predicció
       Prediction: Predicció
+      Prepare for your presentation: Prepara't per la presentació
+      Prepare for your presentation_2018: Prepara't per la presentació_2018
+      Problem Solving: Resolució de problemes
+      Problem Solving Process for Programming: Procés de resolució de problemes en programació
       Programming with Rey and BB-8: Programació amb la Rey i el BB-8
+      Programs that Repeat: Programes que es repeteixen
       Project: Projecte
+      Project - Background and Variables: Projecte - Context i variables
+      Project - Sprites and Interactions: Projecte - Sprites i interaccions
       Project Guide: Guia del projecte
+      Project Work: Feina del projecte
       Properties: Propietats
+      Publishing Your Website: Publica la teva web
       Quarter Notes: Notes negres
+      Quick Check: Comprovació ràpida
+      RGB Exploration: Exploració sobre RGB
+      Raspado Recommender: Recomanació de granissats
+      Reading Sensors: Sensors de lectura
+      Recognizing Expressions: Reconeixent expressions
+      Recognizing Fish: Reconeixent peixos
+      Recognizing Fish Features: Reconeixent atributs dels peixos
+      Recognizing Shapes: Reconeixent formes
       Reflection: Reflexió
       Relay Programming - Unplugged Activity: Programació amb relleus - Activitat sense connexió
+      Repeat Blocks: Blocs de repetició
+      Repeat Blocks with BB-8: Blocs de repetició amb el BB-8
+      Repeat Blocks with the Artist: Blocs de repetició amb l'Artista
+      Repeat Unit Statements: Sentències "repetir unitat"
+      Repeat Until Statements: Sentències "repetir fins/until"
+      Representing Images: Representant imatges
       Review: Repàs
+      Review Your Animated Scene: Revisa la teva escena animada
+      Review Your App: Revisa la teva aplicació
+      Review Your Game: Revisa el teu joc
+      Review Your Page: Revisa la teva pàgina
+      Review Your Scene: Revisa la teva escena
+      'Review: CSS': 'Revisió: CSS'
+      'Review: HTML': 'Revisió: HTML'
+      Run a simulation: Executar una simulació
+      Safari App: Aplicació Safari
+      Safari Model: Model Safari
+      Same Game: Mateix joc
+      Sample Apps for Good: Exemples d'Apps for Good
+      Sample Games: Exemples de jocs
+      Sample Personal Web Pages: Exemples de pàgines web personals
+      Sample Personal Websites: Exemples de pàgines web personals
+      Sample Programs: Exemples de programes
+      Sample Web Page: Exemple de pàgina web
+      Sample Website: Exemple de pàgina web
+      Scoring & Scoreboard: Puntuació i marcador
+      Screen Design: Disseny de pantalla
+      Sensor Events: Sensor d'esdeveniments
+      Sensors to Colors: Sensors de colors
+      Set Up Sprites: Configurar sprites
+      Setting Properties: Configurar propietats
+      Setup: Configuració
+      Shapes and the Draw Loop: Formes i el bucle de dibuix
+      Share Out: Posada en comú
+      Share Your App: Comparteix la teva aplicació
+      Share Your Pages: Comparteix les teves pàgines
+      Share Your Stylesheets: Comparteix els teus fulls d'estil
+      Shoe Recommendation Survey: Enquesta de recomanació de sabates
+      Shoe Recommender: Recomanació de sabates
+      Side Scroller: Desplaçador lateral
+      Simple Circuits: Circuits simples
       Skill Building: Desenvolupament d'habilitats
       Skill-Building: Desenvolupament d'habilitats
+      Sliders: Barres lliscants
+      Smart Bike - Blinkers: Bicicleta intel·ligent - Intermitents
+      Social Sleuth: Investigador social
+      Songwriting - Functions Unplugged Activity: Composició de cançons / Funcions - Activitat sense connexió
       Speed it Up, Slow it Down: Ara ràpid, ara lent
+      Sprite Lab Project: Projecte del Laboratori d'Sprites
+      Sprite Movement: Moviment d'sprites
       Sprite Properties: Propietats de l'sprite
+      Sprites and the Draw Loop: Sprites i el bucle de dibuix
+      Star Chaser: Perseguidor d'estrelles
+      Styling Text: Afegir estil al text
+      Styling with Classes: Estil amb classes
+      Styling your Website: Afegeix un estil a la teva web
+      Teach A.I. a new word: Ensenya una paraula nova a la IA
       Teach AI a New Word: Ensenya una paraula nova a la IA
+      'Technique: Frequency Analysis': 'Tècnica: Anàlisi de freqüències'
+      Terminology Recap: Recapitulació de termes
+      Text Compression: Compressió de text
+      The Animation Tab: La pestanya Animació
+      The Artist in Code Studio: L'Artista a Code Studio
+      The Big Event - Unplugged Activity: El gran esdeveniment - Activitat sense connexió
+      The Buzzer: El brunzidor
+      The Collector: La Col·leccionista
       The Harvester: L'agricultora
+      The Internet - Unplugged Activity: Internet - Activitat sense connexió
+      The Power of Words - Unplugged Activity: El poder de les paraules - Activitat sense connexió
+      The Right App - Unplugged Activity: L'aplicació adequada - Activitat sense connexió
+      Top Websites: Pàgines web més populars
+      Train AI to Clean the Ocean: Entrena una IA per netejar l'oceà
+      Train a Model in AI Lab: Entrena un model al El Laboratori d'Intel·ligència Artificial
       Train an AI to Clean the Ocean: Entrena una IA per netejar l'oceà
+      UI Element Properties: Propietats dels elements de la interfície de l'usuari
+      Ultimate Shoe Recommender: Recomanació definitiva de sabates
+      Unit 5 Lesson 1 Overview: Resum Unitat 5 Lliçó 1
+      Unplugged Activity: Activitat sense connexió
+      Updating Your Prototype: Actualitzant el teu prototip
+      Upload Your Images: Puja les teves imatges
+      User Interface: Interfície d'usuari
+      Using Getters and Setters: Ús de getters i setters
+      Using HTML Tags: Ús d'etiquetes HTML
+      Using Random Numbers: Ús de nombres aleatoris
       Using Training Data: Ús de dades d'entrenament
+      Using the LED: Ús de LED
+      Using the Repeat Block: Utilitzant el bloc de repetició
+      Using the Switch: Ús de la funció "switch"
       Variables: Variables
+      Velocity: Velocitat
+      Velocity and the Counter Pattern: La velocitat i el patró de comptador
       Video: Vídeo
+      Video - Encryption and Public Keys: 'Vídeo: Xifrat i claus públiques'
+      Video - Functions: Vídeo - Funcions
+      Video - If Statements: Vídeo - Sentències if
+      Video - Introduction to Arrays: Vídeo - Introducció a les matrius
       'Video - Maze Intro: Programming with Blocks': 'Vídeo - Introducció al laberint: Programació amb blocs'
+      Video - Parameters: Vídeo - Paràmetres
+      Video - The Counter Pattern: Vídeo - El patró de comptador
+      Video - Variables: Vídeo - Variables
       'Video:  Debugging with the Step Button': 'Vídeo:  Depurar amb el botó de pas'
+      'Video:  Minecraft - The Agent': 'Vídeo - Minecraft - L''Agent'
+      'Video:  Text  and Prompts': 'Vídeo: Text i indicadors'
       'Video: "If/Else"': 'Vídeo: “If/Else”'
+      'Video: AI: What is Machine Learning?': 'Vídeo: IA: Què és l''aprenentatge automàtic?'
+      'Video: Amazon and Data': 'Vídeo: Amazon i dades'
       'Video: Artist Intro with JR Hildebrand': 'Vídeo: Introducció a l''Artista amb J. R. Hildebrand'
       'Video: Artist Intro with JR Hildebrande': 'Vídeo: Introducció a l''Artista amb J. R. Hildebrand'
+      'Video: Circuits and Logic': 'Vídeo: Circuits i lògica'
       'Video: Code Your Own Flappy Game': 'Vídeo: Programa el teu propi joc amb el Flappy'
       'Video: Conditionals: If Statements': 'Vídeo: Condicionals: sentències if'
       'Video: Conditionals: If and If/Else Statements': 'Vídeo: Condicionals: sentències if i if/else'
@@ -92,16 +460,35 @@ ca:
       'Video: Dance Party Properties': 'Vídeo: Festa de ball - Propietats'
       'Video: Dance Party Warm Up': 'Vídeo: Festa de ball - Escalfament'
       'Video: De-bugging with the Step Button': 'Vídeo: Depurar amb el botó de pas'
+      'Video: Debugging': 'Vídeo: Depuració'
       'Video: Debugging with Scrat ': 'Vídeo: Depuració amb l''Scrat '
       'Video: Debugging with the Step Button': 'Vídeo: Depurar amb el botó de pas'
       'Video: Events': 'Vídeo: Esdeveniments'
+      'Video: Events in App Lab': 'Vídeo: Esdeveniments al Laboratori d''Aplicacions'
       'Video: Follow The Digital Trail': 'Vídeo: Seguim el rastre digital'
+      'Video: Getting Loopy': 'Vídeo: Fem bucles'
+      'Video: Happy Maps - Unplugged Activity': 'Vídeo: Mapes feliços - Activitat sense connexió'
+      'Video: Harvesting with Conditionals': 'Vídeo: Fem la collita amb condicionals'
+      'Video: Hello World: Do What You Want': 'Vídeo: Hola, Món: Fes el que vulguis'
+      'Video: Hello World: Programming with Events': 'Vídeo: Hola, Món: Programació amb esdeveniments'
+      'Video: Hello World: Welcome to Sprite Lab': 'Vídeo: Hola, Món: Benvinguts al Laboratori d''Sprites'
+      'Video: How Search Works': 'Vídeo: Com funciona la cerca'
+      'Video: How to Create a Simple Function': 'Vídeo: Com crear una funció senzilla'
       'Video: How to Make a Sprite': 'Vídeo: Com fer un sprite'
+      'Video: IOSP Model': 'Vídeo: El model IOSP'
       'Video: Ice Age Loops': 'Vídeo: Bucles a l''Edat de gel'
+      'Video: Impact on Society': 'Vídeo: Impacte en la societat'
+      'Video: Impacts on Society': 'Vídeo: Impactes en la societat'
+      'Video: Intro to CSS - Part 1': 'Vídeo: Introducció a CSS - Part 1'
+      'Video: Intro to CSS - Part 2': 'Vídeo: Introducció a CSS - Part 2'
+      'Video: Intro to Design Mode': 'Vídeo: Introducció a Design Mode'
       'Video: Introducing Sprite Lab': 'Vídeo: Introducció al Laboratori d''Sprites'
       'Video: Introduction to Play Lab': 'Vïdeo: Introducció al Laboratori de Jocs'
+      'Video: Introduction to Variables': 'Vïdeo: Introducció a les variables'
       'Video: Loops in Artist': 'Vídeo: Bucles a l''Artista'
       'Video: Loops with the Artist': 'Vídeo: Bucles amb l''Artista'
+      'Video: Lots of Sprites': 'Vídeo: Molts sprites'
+      'Video: Managing Disagreement': 'Vídeo: La gestió del desacord'
       'Video: Maze Intro - Programming with Blocks': 'Vídeo: Introducció al laberint - Programació amb blocs'
       'Video: Maze Intro - Programming with Blocks ': 'Vídeo: Introducció al laberint - Programació amb blocs '
       'Video: Maze Intro: Programming with Blocks': 'Vídeo: Introducció al laberint: Programació amb blocs'
@@ -116,22 +503,52 @@ ca:
       'Video: Minecraft: Voyage Aquatic Repeat Until': 'Vídeo: Minecraft: Viatge Aquàtic i repetir "until"'
       'Video: Nested Loops': 'Vídeo: Bucles imbricats'
       'Video: Nested Loops with the Bee': 'Vídeo: Bucles imbricats amb l''abella'
+      'Video: Netflix and Data': 'Vídeo: Netflix i dades'
+      'Video: Outbreak Simulator: Events': 'Vídeo: Simulador de brots: Esdeveniments'
+      'Video: Outbreak Simulator: Free Play': 'Vídeo: Simulador de brots: Joc lliure'
+      'Video: Outbreak Simulator: Introduction': 'Vídeo: Simulador de brots: Introducció'
+      'Video: Outbreak Simulator: Thinking Like a Scientist': 'Vídeo: Simulador de brots: Pensa com un científic'
+      'Video: Pair Programming': 'Vídeo: Programació per parelles'
+      'Video: Pair Programming ': 'Vídeo: Programació per parelles '
       'Video: Programming with Blocks': 'Vídeo: Programació amb blocs'
       'Video: Programming with Rey and BB-8': 'Vídeo: Programació amb la Rey i el BB-8'
       'Video: Properties': 'Vídeo: Propietats'
+      'Video: Publishing Your Website': 'Vídeo: Publica la teva web'
+      'Video: Repeat Blocks': 'Vídeo: Blocs de repetició'
       'Video: Repeat Blocks with BB-8': 'Vídeo: Blocs de repetició amb el BB-8'
+      'Video: Repeat Blocks with the Artist': 'Vídeo: Blocs de repetició amb l''Artista'
       'Video: Repeat Until Blocks': 'Vídeo: Blocs de repetició "until"'
       'Video: Repeat Until Statements': 'Vídeo: sentències de repetició "until"'
       'Video: Sprites in Action': 'Vídeo: Sprites en acció'
       'Video: Star Wars Project': 'Vídeo: Projecte de La guerra de les galàxies'
+      'Video: Teamwork': 'Vídeo: Treball en equip'
+      'Video: Text and Prompts': 'Vídeo: Text i preguntes'
       'Video: The Artist in Code Studio': 'Vídeo: L''artista a Code Studio'
       'Video: The Big Event - Unplugged Activity': 'Vídeo: El gran esdeveniment: Activitat sense connexió'
       'Video: The Collector': 'Vídeo: La col·leccionista'
       'Video: The Harvester': 'Vídeo: L''agricultora'
+      'Video: Training Data & Bias': 'Vídeo: Dades d''entrenament i biaixos'
+      'Video: Training Data and Bias': 'Vídeo: Dades d''entrenament i biaixos'
+      'Video: Unplugged Variables in Envelopes': 'Vídeo: Sense connexió - Variables en sobres'
       'Video: Using the Repeat Block': 'Vídeo: El bloc de repetició'
+      'Video: Variables in Artist': 'Vídeo: Variables a l''Artista'
       'Video: Warm Up': 'Vídeo: Escalfament'
+      'Video: Waze and Data': 'Vídeo: Waze i dades'
+      'Video: What is Machine Learning?': 'Vídeo: Què és l''aprenentatge automàtic?'
       'Video: While Loops with the Farmer': 'Vídeo: Bucles "while" amb l''agricultora'
       'Video: Wrap-up': 'Vídeo: Recapitulació'
       Warm Up: Escalfament
+      Website Project: Projecte d'una pàgina web
+      Welcome to Monster Town: Benvinguts a la Ciutat dels Monstres
       Where'd They Go?: A on han anat?
+      While Loops with the Farmer: Bucles "while" amb l'agricultora
+      'Widget: Text Compression': 'Widget: Compressió de text'
       Wrap-up: Recapitulació
+      'You Choose: Improve Your App': 'Tu tries: Millora la teva aplicació'
+      'You Choose: Restaurant Recommendations': 'Tu tries: Recomanacions de restaurants'
+      Your Personal Website: La teva pàgina web personal
+      Your Team Project: El teu projecte en equip
+      Zoo Predictions: Prediccions al zoo
+      getText vs getNumber: getText vs. getNumber
+      isTouching: estàTocant
+      setProperty: establirPropietat

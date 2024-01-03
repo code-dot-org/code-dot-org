@@ -8,3 +8,5 @@ answer 'stores a value'
 answer 'an ordered sequence of characters'
 answer 'joins together two or more strings end-to-end to make a new string'
 answer 'affects the sequential flow of control by executing different statements based on the value of a Boolean expression'
+
+allow_multiple_attempts true

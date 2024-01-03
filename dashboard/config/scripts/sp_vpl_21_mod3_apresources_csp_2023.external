@@ -1,0 +1,27 @@
+name 'SP-VPL-21-mod3-APResources-CSP_2023'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Task: Explore AP exam resources
+
+<img src="https://images.code.org/50248908a20d8ab8dd0aece94081d5cf-image-1639432092358.47.58 PM.png" alt="Three images of teachers smiling at the camera.">
+
+#### You are not alone in supporting students with developing the skills and reinforcing the content knowledge necessary for the AP exam. Click on the following links to check out resources to support your students.
+##
+
+* #### **<a href="https://apcentral.collegeboard.org/courses/ap-computer-science-principles/exam/past-exam-questions" target="blank" rel="noopener noreferrer">College Board Past Exam Questions</a>**: Each year, the College Board releases sample responses and scoring guidelines for the Create Performance Task. These are great resources to better understand how the Create Performance Task is scored on the rubric.
+##
+* #### **<a href="https://myap.collegeboard.org/" target="blank" rel="noopener noreferrer">AP Classroom</a>**: Sign up for an AP Classroom account to access a host of resources including:
+	* #####**AP Daily Videos**: Short, searchable instructional segments you can assign to students alongside topic questions to address misunderstandings.
+	* #####**Topic questions**: Formative questions to check student understanding as you teach. Assign topic questions to reveal student misunderstandings and target your lessons.
+	* #####**Question bank**: The question bank is a searchable database of real AP questions. 
+	##### Navigate to <a href="https://apcentral.collegeboard.org/instructional-resources/ap-classroom/get-started?course=ap-computer-science-principles" target="blank" rel="noopener noreferrer">this page</a> to learn more about how to get started on AP Classroom.
+##
+* #### **Publicly-accessible practice exams**: AP CS Principles is relatively new, but there is an ever-growing set of resources available to help students prepare for the exam.
+	* #####<a href="https://www.khanacademy.org/computing/ap-computer-science-principles/ap-csp-exam-preparation" target="blank" rel="noopener noreferrer">Khan Academy</a>
+	* #####<a href="https://codehs.com/course/6166/overview" target="blank" rel="noopener noreferrer">CodeHS</a>
+##
+
+#### Additionally, the <a href="https://docs.google.com/document/d/1l9VDL92DCIbTNhTiLGIr-enBOTM4wEDTTQOBlJ7bBhM/edit?usp=sharing" target="blank" rel="noopener noreferrer">Code.org Computer Science Principles Topic Coverage Resource</a> provides information about how to map AP topics to our curriculum if you would like to revisit specific lessons.
+MARKDOWN

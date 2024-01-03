@@ -1,9 +1,0 @@
-{
-    "blocks": {
-      "languageVersion": 0,
-      "blocks": [
-        {"type": "when_run_simple2", "x": 30, "y": 30}
-      ]
-    },
-    "variables": [{"name": "currentTime"}, {"name": "i"}]
-  }

@@ -13,3 +13,5 @@ Look at the code segment below. Which of the following correctly identifies the 
 Painter art = new Painter();
 ```
 MARKDOWN
+
+allow_multiple_attempts true

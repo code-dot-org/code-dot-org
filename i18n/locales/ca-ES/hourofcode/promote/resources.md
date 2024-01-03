@@ -6,9 +6,9 @@ title: Recursos
 
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
 
-# Promote the Hour of Code
+# Promocioneu l'Hora del Codi
 
-### Find all the resources you need to bring attention to your Hour of Code. Not sure where to begin? Start with our [how-to guide for hosting an Hour of Code]({{ how_to_url }})!
+### Aquí trobareu tots els recursos necessaris per generar interès sobre la vostra Hora del Codi. No sabeu per on començar? Seguiu la nostra[guia orientativa sobre com celebrar una Hora del Codi]({{ how_to_url }})!</h3> 
 
 * * *
 
@@ -16,17 +16,17 @@ title: Recursos
 
 <a id="posters"></a>
 
-## Hang these posters in your school
+## Pengeu aquests pòsters a l'escola
 
-A new poster set is available featuring Malala, Stephen Curry, Shakira and more! This year, each set will also come with 6 posters and 126 "I did the Hour of Code" stickers. Supplies are limited, so [order your posters](https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH) soon. To print on your own, simply click an image below to view and save a printable version.
+Tenim una col·lecció nova de pòsters disponibles on apareixen Malala, Stephen Curry, Shakira i molts personatges més! Aquest any, cada col·lecció inclou 6 pòsters i 126 adhesius de "He fet l'Hora del Codi". Per imprimir-los vosaltres mateixos, només heu de fer clic a la imatge següent per veure i desar una versió imprimible.
 
 {{ promote_new_posters }}
 
-* Looking for our posters from previous years? [Find them here]({{ promote/previous_posters_url }})!
+* Busqueu els pòsters dels anys anteriors? [Els trobareu aquí]({{ promote/previous_posters_url }})!
 
 <a id="social"></a>
 
-## Post these on social media
+## Publiqueu-los a les xarxes socials
 
 [![image](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -36,148 +36,169 @@ A new poster set is available featuring Malala, Stephen Curry, Shakira and more!
 
 <a id="logo"></a>
 
-## Use the Hour of Code logo to spread the word
+## Feu servir el logotip de l'Hora del Codi per fer córrer la veu
 
 [![image]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![image]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
 
-[Download hi-res versions](https://images.code.org/share/hour-of-code-logo.zip)
+[Descarregueu les versions en baixa resolució](https://images.code.org/share/hour-of-code-logo.zip)
 
-**"Hour of Code" and "Hora del Código" are trademarked. We don't want to prevent their usage, but we do want to make sure usage fits within a few limits:**
+**"Hour of Code" i "Hora del Código" són marques registrades. No volem evitar-ne l'ús, però sí que volem assegurar-nos que s'utilitzin dins de certs límits:**
 
-1. Any reference to "Hour of Code" or "Hora del Código" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement.
+1. Qualsevol referència a "Hour of Code" o "Hora del Código" s'ha de fer de manera que no sembli que la marca és vostra; ha de quedar clar que és un moviment popular.
 
 <ul style="margin-top: 0px">
   <li>
-    <strong>Good example</strong>: "Participate in the Hour of Code™ at YOUR-COMPANY.com."
+    <strong>Exemple d'un ús correcte</strong>: "Participeu a l'Hora del Codi™ a LA-VOSTRA-EMPRESA.com". 
   </li>
   <li>
-    <strong>Bad example</strong>: "Try Hour of Code by YOUR-COMPANY."
+    <strong>Exemple d'un ús incorrecte</strong>: "Fes l'Hora del Codi de LA-VOSTRA-EMPRESA". 
   </li>
 </ul>
 
-1. Use a "TM" superscript in the most prominent places you mention "Hour of Code" and a "Ⓡ" superscript in the most prominent places you mention "Hora del Código", both on your web site and in app descriptions.
-2. Include language on your page (or in the footer), including links to the CSEdWeek and [Code.org]({{ codeorg_link }}) websites, that says the following:
+1. Feu servir el símbol "TM" en els llocs més visibles en què mencioneu Hour of Code, i el símbol "Ⓡ" en els llocs més visibles en què mencioneu "Hora del Código", tant a la vostra web com a les descripcions d'aplicacions.
+2. Inclogueu el missatge següent a la vostra web (o al peu de pàgina), amb enllaços a les pàgines web de la Setmana de l'Educació en Ciències de la Computació (CSEdWeek) i de [Code.org]({{ codeorg_link }}):</p> 
     
-    *“The 'Hour of Code™'/'Hora del Código®' is a global initiative by Computer Science Education Week [csedweek.org] and Code.org [code.org] to introduce millions of students to one hour of computer science and computer programming.”*
-
-3. No use of "Hour of Code" or "Hora del Código" in app names.
+    *“The 'Hour of Code™'/"Hora del Código®" és una iniciativa global impulsada per la Setmana de l'Educació en Ciències de la Computació [csedweek.org] i Code.org [code.org] per proporcionar a milions d'alumnes una hora dedicada a la informàtica i a la programació".*</li> 
+    
+    * No feu servir "Hour of Code" o "Hora del Código" als noms de les vostres aplicacions.</ol> 
+    
+    
 
 <a id="stickers"></a>
 
-## Print these stickers to give to your students
-
-(Stickers are 1" diameter, 63 per sheet) <br />
-
-[![image](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
+    
+    ## Imprimiu aquests adhesius per repartir-los entre els alumnes
+    
+    (Els adhesius fan 2,5 cm de diàmetre i n'hi ha 63 per pàgina)<br />
+    
+    [![image](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
+    
+    
 
 <a id="sample-emails"></a>
 
-## Invite people in your community to your Hour of Code and promote your event through email
-
-### Find [more information and language you can use]({{ promote/stats_url }}) when talking about the Hour of Code.
-
-* * *
+    
+    ## Convideu membres de la vostra comunitat a l'Hora del Codi i promocioneu l'esdeveniment per correu electrònic
+    
+    ### Consulteu [més informació i el llenguatge que podeu fer servir]({{ promote/stats_url }}) quan parleu sobre l'Hora del Codi.
+    
+    * * *
+    
+    
 
 <a id="email"></a>
 
-### Ask your school, employer, or friends to sign up:
-
-**Subject line:** Join me and over 100 million students for an Hour of Code <br />
-
-Computers are everywhere, changing every industry on the planet. But only 51% of all high schools offer computer science. Good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
-
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
-
-This year, let's make it even bigger. I’m asking you to join the Hour of Code {{ campaign_date/year }}. Please get involved with an Hour of Code event during Computer Science Education Week, {{ campaign_date/full }}.
-
-Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
-
-Get started at http://hourofcode.com/{{ country_language }} <br />
-
-* * *
+    
+    ### Demaneu a la vostra escola, empresa o amics que s'inscriguin:
+    
+    **Assumpte:** Sumeu-vos a més de 100 milions d'alumnes en una Hora del Codi <br />
+    
+    Els ordinadors estan per tot arreu i estan canviant totes les professions. Tot i això, només el 51% dels instituts de tot el món ofereixen cursos d'informàtica. La bona notícia és que estem fent tot el possible per canviar-ho! Si heu sentit a parlar de l'Hora del Codi, ja sabreu que ha fet història. Més de 100 milions d'alumnes han fet una Hora del Codi.
+    
+    With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Totes les Apple Store del món han celebrat una Hora del Codi, i personatges tan importants com l'expresident dels Estats Units, Barack Obama, i el primer ministre del Canadà, Justin Trudeau, van escriure les seves primeres línies de codi dins d'aquesta campanya.
+    
+    Fem que aquest any sigui encara més gran. Us demano que us sumeu a l'Hora del Codi {{ campaign_date/year }}. Participeu en un esdeveniment de l'Hora del Codi durant la Setmana de l'Educació en Ciències de la Computació, {{ campaign_date/full }}.
+    
+    Feu córrer la veu. Organitzeu un esdeveniment. Demaneu a una escola que s'hi registri. O feu l'Hora del Codi vosaltres mateixos... Tothom es pot beneficiar d'aprendre els fonaments de la informàtica.
+    
+    Comenceu a http://hourofcode.com/{{ country_language }}<br />
+    
+    * * *
+    
+    
 
 <a id="help-schools"></a>
 
-### Volunteer at a school:
-
-#### [Find more resources and information about volunteering in schools here]({{ how_to_volunteers_url }}).
-
-**Subject line:** Can we help you host an Hour of Code?
-
-Between {{ campaign_date/short }}, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code at their school. It’s an opportunity for every child to learn how the technology around us works.
-
-[Our organization/My name] would love to help [school name] run an Hour of Code event. We can help teachers host an Hour of Code in their classrooms (we don’t even need computers!) or if you would like to host a school assembly, we can arrange for a speaker to talk about how technology works and what it’s like to be a software engineer.
-
-The students will create their own apps or games they can show their parents, and we’ll also print Hour of Code certificates they can bring home. And, it’s fun! With interactive, hands-on activities, students will learn computational thinking skills in an approachable way.
-
-Computers are everywhere, changing every industry on the planet. But only 51% of all high schools offer computer science. The good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history - more than 100 million students around the world have tried an Hour of Code. Even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
-
-You can read more about the event at http://hourofcode.com. Or, let us know if you’d like to schedule some time to talk about how [school name] can participate. <br />
-
-* * *
+    
+    ### Feu-vos voluntaris en una escola:
+    
+    #### [Aquí trobareu més recursos i informació sobre com fer-se voluntari en una escola]({{ how_to_volunteers_url }}).
+    
+    **Assumpte:** Us podem ajudar a organitzar una Hora del Codi?
+    
+    Entre {{ campaign_date/short }}, 10% dels alumnes de tot el món celebraran la Setmana de l'Educació en Ciències de la Computació amb una Hora del Codi a l'escola. És una oportunitat per a què tots els nens i nenes aprenguin com funciona la tecnologia que ens envolta.
+    
+    [A la meva organització/el meu nom] li encatnaria ajudar [nom de l'escola] a organitzar un esdeveniment de l'Hora del Codi. Podem ajudar els professors a celebrar una Hora del Codi a les seves aules (ni tan sols fan falta ordinadors!), o si preferiu celebrar una trobada escolar, podem coordinar la visita d'un ponent perquè expliqui com funciona la tecnologia i com és ser enginyer informàtic.
+    
+    Els alumnes crearan les seves pròpies aplicacions o jocs i després podran ensenyar-los als seus pares, i també imprimirem certificats de l'Hora del Codi perquè se'ls emportin a casa. I, a més... és molt divertit! A través d'unes activitats interactives i pràctiques, els alumnes adquiriran habilitats de pensament computacional d'una manera accessible.
+    
+    Els ordinadors estan per tot arreu i estan canviant totes les professions. Tot i això, només el 51% dels instituts de tot el món ofereixen cursos d'informàtica. La bona notícia és que estem fent tot el possible per canviar-ho! Si heu sentit a parlar de l'Hora del Codi, ja sabreu que ha fet història: més de 100 milions d'alumnes d'arreu del món han fet una Hora del Codi. Fins i tot personatges tan importants com l'expresident dels Estats Units, Barack Obama, i el primer ministre del Canadà, Justin Trudeau, van escriure les seves primeres línies de codi dins d'aquesta campanya.
+    
+    Podeu llegir més informació sobre l'esdeveniment a http://hourofcode.com. O, si ho preferiu, podem buscar una estona per parlar sobre com l'escola [nom de l'escola] pot participar-hi.<br />
+    
+    * * *
+    
+    
 
 <a id="parents"></a>
 
-### Tell parents about your school's event:
-
-**Subject line:** Our students are changing the future with an Hour of Code
-
-Dear Parents,
-
-We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
-
-But only a fraction of us are learning **how** technology works. Only 51% of all high schools offer computer science.
-
-That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week ({{ campaign_date/full }}). More than 100 million students worldwide have already tried an Hour of Code. Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st-century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
-
-This is a chance to change the future of education in [TOWN/CITY NAME].
-
-See http://hourofcode.com/{{ country_language }} for details, and help spread the word. <br />
-
-* * *
+    
+    ### Expliqueu als pares que fareu l'esdeveniment a la vostra escola:
+    
+    **Assumpte:** Els nostres alumnes canviaran el futur amb una Hora del Codi
+    
+    Benvolguts pares i mares,
+    
+    Vivim en un món envoltat de tecnologia. I som conscients que, sigui quina sigui la professió que triïn de grans, la seva capacitat de progressar dependrà cada vegada més de la seva comprensió d'aquesta tecnologia.
+    
+    Això no obstant, som molt pocs els qui estem aprenent **com** funciona la tecnologia. Només el 51% dels instituts de tot el món ofereixen cursos d'informàtica.
+    
+    És per això que la nostra escola participarà en l'esdeveniment educatiu més gran de la història, l'Hora del Codi, durant la Setmana de l'Educació en Ciències de la Computació ({{ campaign_date/full }}). Més de 100 milions d'alumnes d'arreu del món ja han fet una Hora del Codi. Amb la nostra Hora del Codi, des de l'escola [NOM DE L'ESCOLA] diem alt i clar que estem preparats per ensenyar aquestes habilitats fonamentals del segle XXI. Per tal de poder seguir oferint activitats de programació als alumnes, volem que l'esdeveniment de l'Hora del Codi sigui enorme. Us animem a fer-vos voluntaris, a contactar amb els mitjans de comunicació locals, a compartir la notícia a les xarxes socials i a plantejar-vos organitzar altres esdeveniments de l'Hora del Codi a la vostra comunitat.
+    
+    Aquesta és una oportunitat fantàstica per canviar el futur de l'educació a [NOM CIUTAT/POBLE].
+    
+    Vegeu http://hourofcode.com/{{ country_language }} per a més informació, i ajudeu-nos a fer córrer la veu.<br />
+    
+    * * *
+    
+    
 
 <a id="media-pitch"></a>
 
-### Invite media to attend your event:
-
-#### [Check out our press kit for more information on inviting media to your event.]({{ promote/press_kit_url }})
-
-**Subject line**: Local school joins mission to introduce students to computer science
-
-Computers are everywhere, changing every industry on the planet, but only 51% of all high schools offer computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. La bona notícia és, estem en el camí de canviar això.
-
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. Even President Obama wrote his first line of code as part of the campaign.
-
-That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 6-12).
-
-I'm writing to invite you to attend our kickoff assembly and to see kids start the activity on [DATE].
-
-The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st-century success. Please join us.
-
-Contact: [YOUR NAME], [TITLE], cell: (212) 555-5555 When: [DATE and TIME of your event] Where: [ADDRESS and DIRECTIONS]
-
-I look forward to being in touch. <br />
-
-* * *
+    
+    ### Convideu els mitjas de comunicació al vostre esdeveniment:
+    
+    #### [Consulteu el nostre dossier de premsa per a més informació sobre com convidar els mitjans als vostres esdeveniments.]({{ promote/press_kit_url }})
+    
+    **Subject line**: Local school joins mission to introduce students to computer science
+    
+    Els ordinadors estan per tot arreu i estan canviant totes les professions del planeta, però només el 51% dels instituts d'arreu del món ofereixen cursos d'informàtica. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. La bona notícia és, estem en el camí de canviar això.
+    
+    With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. Even President Obama wrote his first line of code as part of the campaign.
+    
+    És per això que els [nombre] alumnes de [nom de l'escola] se sumaran a l'esdeveniment educatiu més gran de la història, l'Hora del Codi, durant la Setmana de l'Educació en Ciències de la Computacció (del 6 al 12 de desembre).
+    
+    I'm writing to invite you to attend our kickoff assembly and to see kids start the activity on [DATE].
+    
+    The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st-century success. Please join us.
+    
+    Contact: [YOUR NAME], [TITLE], cell: (212) 555-5555 When: [DATE and TIME of your event] Where: [ADDRESS and DIRECTIONS]
+    
+    I look forward to being in touch. <br />
+    
+    * * *
+    
+    
 
 <a id="politicians"></a>
 
-### Invite a local politician to your school's event:
-
-#### [Need more info? Take a look at our resources for inviting politicians to attend your event]({{ how_to_public_officials_url }}).
-
-**Subject line**: Join our school as we change the future with an Hour of Code
-
-Dear [Mayor/Governor/Representative/Senator LAST NAME]:
-
-Did you know that computing is the #1 source of wages in the U.S.? There are more than 500,000 computing jobs open nationwide, but last year only 42,969 computer science students graduated into the workforce.
-
-Computer science is foundational for every industry today, yet most schools don’t offer it. At [SCHOOL NAME], we are trying to change that.
-
-That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week ({{ campaign_date/full }}). More than 100 million students worldwide have already tried an Hour of Code.
-
-I'm writing to invite you to join our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st-century skills. We want to ensure that our students are on the forefront of creating technology of the future—not just consuming it.
-
-Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
-
-{{ signup_button }}
+    
+    ### Convideu un membre del govern local a l'esdeveniment de la vostra escola:
+    
+    #### [Necessiteu més informació? Consulteu els nostres recursos per convidar membres del govern al vostre esdeveniment]({{ how_to_public_officials_url }}).
+    
+    **Assumpte:**: Acompanyeu la nostra escola mentre canviem el futur amb una Hora del Codi
+    
+    Benvolgut [Sr./Sra. alcalde/conseller/regidor]:
+    
+    Sabíeu que el camp de la informàtica representa la primera font d'ingressos als Estats Units? Hi ha més de 500.000 ofertes de feina disponibles a tot el país, però l'any passat només van entrar al món laboral 42.969 estudiants d'informàtica.
+    
+    La informàtica és essencial per totes les indústries d'avui dia, però la majoria de les escoles no l'ensenyen. I des de l'escola [NOM DE L'ESCOLA], volem fer tot el possible per posar-hi remei.
+    
+    És per això que la nostra escola participarà en l'esdeveniment educatiu més gran de la història, l'Hora del Codi, durant la Setmana de l'Educació en Ciències de la Computació ({{ campaign_date/full }}). Més de 100 milions d'alumnes d'arreu del món ja han fet una Hora del Codi.
+    
+    Us escric per convidar-vos a participar en el nostre esdeveniment de l'Hora del Codi i fer una petita intervenció a la trobada inaugural. Se celebrarà el [DIA, HORA, LLOC] i ens ajudarà a dir ben alt i clar que a [nom de la ciutat o el poble] estem preparats per ensenyar als nostres alumnes unes habilitats essencials per al segle XXI. Volem garantir que els nostres alumnes són a l'avantguarda de la tecnologia del futur com a creadors, i no només com a consumidors.
+    
+    Si us plau, poseu-vos en contacte amb mi al [telèfon o adreça de correu electrònic]. Espero la vostra resposta.
+    
+    {{ signup_button }}

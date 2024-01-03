@@ -5,11 +5,11 @@
         "CT": {
           "description": "Computational Thinking"
         },
-        "L": {
-          "description": "भाषा"
-        },
         "F": {
           "description": "Functions"
+        },
+        "L": {
+          "description": "भाषा"
         }
       }
     }

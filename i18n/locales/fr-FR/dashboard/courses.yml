@@ -48,3 +48,49 @@ fr:
           description_short: Un cours d’initiation à l’informatique qui permet aux élèves de créer d’authentiques artéfacts.
           description_student: Découvertes de l’Informatique (CS Discoveries) est un cours d'initiation à l'informatique qui permet aux élèves de créer d’authentiques artéfacts et d'utiliser l'informatique comme moyen de créativité, de communication, de résolution de problèmes et d'amusement.
           description_teacher: Découvertes de l’Informatique (CS Discoveries) est un cours d'initiation à l'informatique qui permet aux élèves de créer d’authentiques artéfacts et d'utiliser l'informatique comme moyen de créativité, de communication, de résolution de problèmes et d'amusement.
+        csd-pilot:
+          title: CSD Cours Pilote
+          description_student: Découvertes de l’Informatique (CS Discoveries) est un cours d'initiation à l'informatique qui permet aux élèves de créer d’authentiques artéfacts et d'utiliser l'informatique comme moyen de créativité, de communication, de résolution de problèmes et d'amusement.
+        csp-2020:
+          description_short: Apprenez les concepts fondamentaux de l’Informatique.
+        csd-2020:
+          description_short: Un cours d’initiation à l’informatique qui permet aux élèves de créer d’authentiques artéfacts.
+          description_student: Découvertes de l’Informatique (CS Discoveries) est un cours d'initiation à l'informatique qui permet aux élèves de créer d’authentiques artéfacts et d'utiliser l'informatique comme moyen de créativité, de communication, de résolution de problèmes et d'amusement.
+          description_teacher: Découvertes de l’Informatique (CS Discoveries) est un cours d'initiation à l'informatique qui permet aux élèves de créer d’authentiques artéfacts et d'utiliser l'informatique comme moyen de créativité, de communication, de résolution de problèmes et d'amusement.
+        csp-2021:
+          description_short: Apprenez les concepts fondamentaux de l’Informatique.
+        mike-test:
+          title: Les bases de l'Informatique
+        csp-2022:
+          description_short: Apprenez les concepts fondamentaux de l’Informatique.
+        csp-2023:
+          description_short: Apprenez les concepts fondamentaux de l’Informatique.
+        csd-2023:
+          title: Les Découvertes de l’Informatique
+        vpl-csa-2023:
+          title: Formation professionnelle virtuelle CSA
+        self-paced-pl-csd-unit1-2023:
+          title: Enseignement de la résolution de problèmes et de l'informatique
+        self-paced-pl-csd-unit2-2023:
+          title: Formation au développement Web
+        self-paced-pl-csd-unit5-2023:
+          title: Enseigner, données et société
+    resources:
+      curriculum/csd/2017:
+        name: Programme
+      teacher_forum_6/csd/2017:
+        name: Forum des enseignants
+      curriculum/csd/2018:
+        name: Programme
+      teacher_forum_6/csd/2018:
+        name: Forum des enseignants
+      curriculum/csd/2019:
+        name: Programme
+      teacher_forum/csd/2019:
+        name: Forum des enseignants
+      curriculum/csd/2020:
+        name: Programme
+      teacher_forum/csd/2020:
+        name: Forum des enseignants
+      csd_programming_levels_guide/csd/2022:
+        name: Guide des niveaux de programmation CSD

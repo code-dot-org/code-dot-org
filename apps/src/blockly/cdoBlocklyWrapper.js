@@ -1,5 +1,14 @@
-import {BlocklyVersion} from '@cdo/apps/constants';
-import {CLAMPED_NUMBER_REGEX} from './constants';
+import {
+  BlocklyVersion,
+  CLAMPED_NUMBER_REGEX,
+  stringIsXml,
+} from '@cdo/apps/blockly/constants';
+import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
+import customBlocks from './customBlocks/cdoBlockly/index.js';
+import {parseElement as parseXmlElement} from '../xml';
+import {getStore} from '@cdo/apps/redux';
+import {setHasIncompatibleSources} from '../redux/blockly';
+import * as blockUtils from '../block_utils';
 
 const INFINITE_LOOP_TRAP =
   '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
@@ -17,23 +26,23 @@ const LOOP_HIGHLIGHT_RE = new RegExp(
  * object without affecting apps code.
  * See also ./googleBlocklyWrapper.js
  */
-const BlocklyWrapper = function(blocklyInstance) {
+const BlocklyWrapper = function (blocklyInstance) {
   this.version = BlocklyVersion.CDO;
   this.blockly_ = blocklyInstance;
-  this.wrapReadOnlyProperty = function(propertyName) {
+  this.wrapReadOnlyProperty = function (propertyName) {
     Object.defineProperty(this, propertyName, {
-      get: function() {
+      get: function () {
         return this.blockly_[propertyName];
-      }
+      },
     });
-    this.wrapSettableProperty = function(propertyName) {
+    this.wrapSettableProperty = function (propertyName) {
       Object.defineProperty(this, propertyName, {
-        get: function() {
+        get: function () {
           return this.blockly_[propertyName];
         },
-        set: function(newValue) {
+        set: function (newValue) {
           this.blockly_[propertyName] = newValue;
-        }
+        },
       });
     };
   };
@@ -171,36 +180,36 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapSettableProperty('typeHints');
   blocklyWrapper.wrapSettableProperty('valueTypeTabShapeMap');
 
-  blocklyWrapper.BlockSpace.prototype.registerGlobalVariables = function() {}; // Not implemented.
+  blocklyWrapper.BlockSpace.prototype.registerGlobalVariables = function () {}; // Not implemented.
 
-  blocklyWrapper.BlockSpace.prototype.getContainer = function() {
+  blocklyWrapper.BlockSpace.prototype.getContainer = function () {
     return this.blockSpaceEditor.getSVGElement().parentNode;
   };
 
-  blocklyWrapper.getGenerator = function() {
+  blocklyWrapper.getGenerator = function () {
     return blocklyWrapper.Generator.get('JavaScript');
   };
 
-  blocklyWrapper.addChangeListener = function(blockspace, handler) {
+  blocklyWrapper.addChangeListener = function (blockspace, handler) {
     if (!blockspace) {
       return;
     }
     blockspace.getCanvas().addEventListener('blocklyBlockSpaceChange', handler);
   };
 
-  blocklyWrapper.setInfiniteLoopTrap = function() {
+  blocklyWrapper.setInfiniteLoopTrap = function () {
     Blockly.JavaScript.INFINITE_LOOP_TRAP = INFINITE_LOOP_TRAP;
   };
 
-  blocklyWrapper.clearInfiniteLoopTrap = function() {
+  blocklyWrapper.clearInfiniteLoopTrap = function () {
     Blockly.JavaScript.INFINITE_LOOP_TRAP = '';
   };
 
-  blocklyWrapper.getInfiniteLoopTrap = function() {
+  blocklyWrapper.getInfiniteLoopTrap = function () {
     return Blockly.JavaScript.INFINITE_LOOP_TRAP;
   };
 
-  blocklyWrapper.loopHighlight = function(apiName, blockId) {
+  blocklyWrapper.loopHighlight = function (apiName, blockId) {
     var args = "'block_id_" + blockId + "'";
     if (blockId === undefined) {
       args = '%1';
@@ -210,13 +219,18 @@ function initializeBlocklyWrapper(blocklyInstance) {
     );
   };
 
-  blocklyWrapper.getWorkspaceCode = function(opt_showHidden) {
+  blocklyWrapper.getWorkspaceCode = function (opt_showHidden) {
     const code = Blockly.Generator.blockSpaceToCode(
       'JavaScript',
       null,
       !!opt_showHidden
     );
     return strip(code);
+  };
+
+  // We renamed createReadOnlyBlockSpace to createEmbeddedWorkspace for clarity.
+  blocklyWrapper.createEmbeddedWorkspace = function (container, xml, options) {
+    return Blockly.BlockSpace.createReadOnlyBlockSpace(container, xml, options);
   };
 
   // The second argument to Google Blockly's blockToCode specifies whether to
@@ -227,11 +241,11 @@ function initializeBlocklyWrapper(blocklyInstance) {
   // Blockly, which allows us to change the usage across apps code to treat the
   // second argument as opt_thisOnly rather than opt_showHidden.
   const originalBlockToCode = blocklyWrapper.JavaScript.blockToCode;
-  blocklyWrapper.JavaScript.blockToCode = function(block, opt_thisOnly) {
+  blocklyWrapper.JavaScript.blockToCode = function (block, opt_thisOnly) {
     return originalBlockToCode.call(this, block, true /* opt_showHidden */);
   };
 
-  blocklyWrapper.Input.prototype.getFieldRow = function() {
+  blocklyWrapper.Input.prototype.getFieldRow = function () {
     return this.titleRow;
   };
 
@@ -242,37 +256,126 @@ function initializeBlocklyWrapper(blocklyInstance) {
     blocklyWrapper.Block.prototype.getTitleValue;
 
   blocklyWrapper.cdoUtils = {
-    blockLimitExceeded: function(blockType) {
+    loadBlocksToWorkspace(blockSpace, source) {
+      const isXml = stringIsXml(source);
+      if (!isXml) {
+        getStore().dispatch(setHasIncompatibleSources(true));
+        source = '';
+      }
+      Blockly.Xml.domToBlockSpace(blockSpace, parseXmlElement(source));
+    },
+    blockLimitExceeded: function (blockType) {
       const blockLimits = Blockly.mainBlockSpace.blockSpaceEditor.blockLimits;
       return blockLimits.blockLimitExceeded && blockLimits.blockLimitExceeded();
     },
-    getBlockFields: function(block) {
+    getBlockFields: function (block) {
       return block.getTitles();
     },
-    getToolboxWidth: function() {
+    getToolboxWidth: function () {
       return Blockly.mainBlockSpaceEditor.getToolboxWidth();
     },
-    getBlockLimit: function(blockType) {
+    getBlockLimit: function (blockType) {
       return Blockly.mainBlockSpace.blockSpaceEditor.blockLimits.getLimit(
         blockType
       );
     },
-    isWorkspaceReadOnly: function(workspace) {
+    isWorkspaceReadOnly: function (workspace) {
       return workspace.isReadOnly();
     },
-    setHSV: function(block, h, s, v) {
+    setHSV: function (block, h, s, v) {
       block.setHSV(h, s, v);
     },
-    workspaceSvgResize: function(workspace) {
+    workspaceSvgResize: function (workspace) {
       return workspace.blockSpaceEditor.svgResize();
     },
-    bindBrowserEvent: function(element, name, thisObject, func, useCapture) {
+    bindBrowserEvent: function (element, name, thisObject, func, useCapture) {
       return Blockly.bindEvent_(element, name, thisObject, func, useCapture);
     },
-    getField: function(type) {
+    getField: function (type) {
       return new Blockly.FieldTextInput('', getFieldInputChangeHandler(type));
-    }
+    },
+    getCode: function (workspace) {
+      return Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(workspace));
+    },
+    soundField: function (onClick) {
+      return new Blockly.FieldDropdown([['Choose', 'Choose']], onClick);
+    },
+    locationField: function (
+      icon,
+      onClick,
+      block,
+      inputConfig,
+      currentInputRow
+    ) {
+      const fieldRow = currentInputRow.getFieldRow();
+      const fieldLabel = fieldRow[fieldRow.length - 1];
+      const transformTextSetLabel = value => {
+        if (value) {
+          try {
+            const loc = JSON.parse(value);
+            fieldLabel.setValue(
+              `${inputConfig.label}(${loc.x}, ${APP_HEIGHT - loc.y})`
+            );
+          } catch (e) {
+            // Just ignore bad values
+          }
+        }
+      };
+      const color = block.getHexColour();
+      return new Blockly.FieldButton(
+        icon,
+        onClick,
+        color,
+        transformTextSetLabel
+      );
+    },
+    injectCss(document) {
+      return Blockly.Css.inject(document);
+    },
+    resizeSvg(blockSpace) {
+      return blockSpace.blockSpaceEditor.svgResize();
+    },
+    registerCustomProcedureBlocks() {
+      // Google Blockly only. Registers custom blocks for modal function editor.
+    },
+    partitionBlocksByType() {
+      // Google Blockly only. Used to load/render certain block types before others.
+    },
+    appendSharedFunctions(source, functionsXml) {
+      const isXml = stringIsXml(source);
+      if (isXml) {
+        return blockUtils.appendNewFunctions(source, functionsXml);
+      } else {
+        // CDO Blockly is not equipped to handle json projects, and we will reset the
+        // project to empty in loadBlocksToWorkspace if it is json. So if we see
+        // json here, we just return the json as-is.
+        return source;
+      }
+    },
   };
+  blocklyWrapper.customBlocks = customBlocks;
+
+  // Pointer block behavior is handled in the cdo blockly repo,
+  // so we can safely return an empty string here.
+  blocklyWrapper.getPointerBlockImageUrl = () => {
+    return '';
+  };
+
+  // No-op for CDO Blockly.
+  blocklyWrapper.setHiddenDefinitionWorkspace = _ => {};
+
+  // CDO Blockly does not have a concept of a hidden definition workspace,
+  // so we return undefined here.
+  blocklyWrapper.getHiddenDefinitionWorkspace = () => {
+    return undefined;
+  };
+
+  // CDO Blockly does not have a separate workspace for the function editor,
+  // so we return undefined here.
+  blocklyWrapper.getFunctionEditorWorkspace = () => {
+    return undefined;
+  };
+
   return blocklyWrapper;
 }
 

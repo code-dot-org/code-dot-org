@@ -2,8 +2,95 @@
   "ne-NP": {
     "data": {
       "programming_environments": {
+        "applab": {
+          "categories": {
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Function"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Function"
+                    }
+                  }
+                }
+              }
+            },
+            "functions": {
+              "name": "Functions"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "The maximum number returned"
+                    },
+                    "min": {
+                      "description": "The minimum number returned"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "The maximum number returned"
+                    },
+                    "min": {
+                      "description": "The minimum number returned"
+                    }
+                  }
+                }
+              },
+              "name": "Math"
+            },
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Function"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "Plays the MP3 sound file from the specified URL."
+                }
+              }
+            },
+            "variables": {
+              "name": "Variables"
+            }
+          },
+          "description": "App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.",
+          "name": "App Lab"
+        },
         "gamelab": {
           "categories": {
+            "drawing": {
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "तारा"
+                    }
+                  }
+                }
+              }
+            },
+            "functions": {
+              "name": "Functions"
+            },
             "game_lab": {
               "expressions": {
                 "playSound": {
@@ -12,7 +99,6 @@
               }
             },
             "groups": {
-              "name": "समूहहरु",
               "expressions": {
                 "setColorEach": {
                   "palette_params": {
@@ -28,153 +114,67 @@
                     }
                   }
                 }
-              }
-            },
-            "drawing": {
-              "expressions": {
-                "shape": {
-                  "examples": {
-                    "Star": {
-                      "name": "तारा"
-                    }
-                  }
-                }
-              }
+              },
+              "name": "समूहहरु"
             },
             "math": {
-              "name": "Math",
               "expressions": {
                 "randomNumber": {
                   "palette_params": {
-                    "min": {
-                      "description": "The minimum number returned"
-                    },
                     "max": {
                       "description": "The maximum number returned"
+                    },
+                    "min": {
+                      "description": "The minimum number returned"
                     }
                   }
                 },
                 "randomNumber_min_max": {
                   "palette_params": {
-                    "min": {
-                      "description": "The minimum number returned"
-                    },
                     "max": {
                       "description": "The maximum number returned"
+                    },
+                    "min": {
+                      "description": "The minimum number returned"
                     }
                   }
                 }
-              }
+              },
+              "name": "Math"
             },
             "variables": {
               "name": "Variables"
-            },
-            "functions": {
-              "name": "Functions"
-            }
-          }
-        },
-        "applab": {
-          "name": "App Lab",
-          "description": "App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.",
-          "categories": {
-            "ui_controls": {
-              "expressions": {
-                "onEvent": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "Function"
-                    }
-                  }
-                },
-                "playSound": {
-                  "short_description": "Plays the MP3 sound file from the specified URL."
-                }
-              }
-            },
-            "data": {
-              "expressions": {
-                "getPrediction": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "Function"
-                    }
-                  }
-                }
-              }
-            },
-            "control": {
-              "expressions": {
-                "timedLoop": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "Function"
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "Math",
-              "expressions": {
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "The minimum number returned"
-                    },
-                    "max": {
-                      "description": "The maximum number returned"
-                    }
-                  }
-                },
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "The minimum number returned"
-                    },
-                    "max": {
-                      "description": "The maximum number returned"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "Variables"
-            },
-            "functions": {
-              "name": "Functions"
             }
           }
         },
         "spritelab": {
           "categories": {
-            "world": {
-              "name": "विश्व"
-            },
             "actions": {
               "name": "Actions"
             },
             "events": {
               "name": "घटनाहरु"
             },
-            "loops": {
-              "name": "Loops"
-            },
-            "variables": {
-              "name": "Variables"
-            },
-            "math": {
-              "name": "Math"
+            "functions": {
+              "name": "Functions"
             },
             "logic": {
               "name": "लजिक"
             },
-            "functions": {
-              "name": "Functions"
+            "loops": {
+              "name": "Loops"
+            },
+            "math": {
+              "name": "Math"
             },
             "text": {
               "name": "Text"
+            },
+            "variables": {
+              "name": "Variables"
+            },
+            "world": {
+              "name": "विश्व"
             }
           }
         }

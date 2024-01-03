@@ -4,7 +4,7 @@ var flatten = require('../utils').flatten;
  * Stores information about a current Maze execution.  Execution consists of a
  * series of steps, where each step may contain one or more actions.
  */
-var ExecutionInfo = function(options) {
+var ExecutionInfo = function (options) {
   options = options || {};
   this.terminated_ = false;
   this.terminationValue_ = null; // See terminateWithValue method.
@@ -23,22 +23,22 @@ module.exports = ExecutionInfo;
  * - Any other value: app-specific failure.
  * @param {object} value the termination value
  */
-ExecutionInfo.prototype.terminateWithValue = function(value) {
+ExecutionInfo.prototype.terminateWithValue = function (value) {
   if (!this.terminated_) {
     this.terminationValue_ = value;
   }
   this.terminated_ = true;
 };
 
-ExecutionInfo.prototype.isTerminated = function() {
+ExecutionInfo.prototype.isTerminated = function () {
   return this.terminated_;
 };
 
-ExecutionInfo.prototype.terminationValue = function() {
+ExecutionInfo.prototype.terminationValue = function () {
   return this.terminationValue_;
 };
 
-ExecutionInfo.prototype.queueAction = function(command, blockId) {
+ExecutionInfo.prototype.queueAction = function (command, blockId) {
   var action = {command: command, blockId: blockId};
   if (this.collection_) {
     this.collection_.push(action);
@@ -53,7 +53,7 @@ ExecutionInfo.prototype.queueAction = function(command, blockId) {
  * step is true, the list will contain the actions for one step, otherwise it
  * will be the entire queue.
  */
-ExecutionInfo.prototype.getActions = function(singleStep) {
+ExecutionInfo.prototype.getActions = function (singleStep) {
   var actions = [];
   if (singleStep && this.stepsRemaining()) {
     actions.push(this.steps_.shift());
@@ -70,7 +70,7 @@ ExecutionInfo.prototype.getActions = function(singleStep) {
   return flatten(actions);
 };
 
-ExecutionInfo.prototype.stepsRemaining = function() {
+ExecutionInfo.prototype.stepsRemaining = function () {
   return this.steps_.length > 0;
 };
 
@@ -97,14 +97,14 @@ function onLastStep(steps) {
  * Collect all actions queued up between now and the call to stopCollecting,
  * and put them in a single step
  */
-ExecutionInfo.prototype.collectActions = function() {
+ExecutionInfo.prototype.collectActions = function () {
   if (this.collection_) {
     throw new Error('Already collecting');
   }
   this.collection_ = [];
 };
 
-ExecutionInfo.prototype.stopCollecting = function() {
+ExecutionInfo.prototype.stopCollecting = function () {
   if (!this.collection_) {
     throw new Error('Not currently collecting');
   }
@@ -116,7 +116,7 @@ ExecutionInfo.prototype.stopCollecting = function() {
  * If the user has executed too many actions, we're probably in an infinite
  * loop.  Set termination value to Infinity
  */
-ExecutionInfo.prototype.checkTimeout = function() {
+ExecutionInfo.prototype.checkTimeout = function () {
   if (this.ticks-- < 0) {
     this.terminateWithValue(Infinity);
   }

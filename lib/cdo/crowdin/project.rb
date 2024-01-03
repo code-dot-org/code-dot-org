@@ -17,7 +17,7 @@ module Crowdin
       @id = project_identifier
       @crowdin_client = Crowdin::Client.new do |config|
         config.api_token = api_token
-        config.project_id = Crowdin::Client::CDO_PROJECT_IDS[@id]
+        config.project_id = @id
       end
       # For more specific requests outside of the crowdin-api gem
       self.class.base_uri("https://api.crowdin.com/api/v2")
@@ -61,14 +61,14 @@ module Crowdin
       raise CrowdinServiceUnavailableError if response.code == 503
 
       response
-    rescue Net::ReadTimeout, Net::OpenTimeout, CrowdinRateLimitError, CrowdinInternalServerError, CrowdinServiceUnavailableError => error
+    rescue Net::ReadTimeout, Net::OpenTimeout, CrowdinRateLimitError, CrowdinInternalServerError, CrowdinServiceUnavailableError => exception
       # Handle a timeout by simply retrying. We default to three attempts before
       # giving up; if this doesn't work out, other things we could consider:
       #
       #   - increasing the default number of attempts
       #   - increasing the number of attempts for certain high-failure-rate calls
       #   - increasing the timeout, either globally or for this specific call
-      warn "Crowdin.export_file(#{file_id}) error: #{error}"
+      warn "Crowdin.export_file(#{file_id}) error: #{exception}"
       sleep(3) if response&.code == 429
       raise if attempts <= 1
       export_file(file_id, language, etag: etag, attempts: attempts - 1)
@@ -88,7 +88,7 @@ module Crowdin
     end
 
     def list_languages
-      result = @crowdin_client.get_project(Crowdin::Client::CDO_PROJECT_IDS[@id])
+      result = @crowdin_client.get_project(@id)
       result['data']['targetLanguages']
     end
 

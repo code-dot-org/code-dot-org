@@ -42,7 +42,7 @@ social:
 
 <a id="event-1"></a>
 <div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
-  <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">Your questions about CS careers, answered!</h2>
+  <h2 style="margin-top:0; margin-bottom:0; color:#ffffff">Your questions about CS careers, answered!</h2>
 </div>
 <div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
   <img src="/images/csjourneys/footstep.png" style="width: 10%; float: right; margin-top:-50px">
@@ -97,7 +97,7 @@ social:
 
 <a id="event-2"></a>
 <div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
-  <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">College Project Showcase</h2>
+  <h2 style="margin-top:0; margin-bottom:0; color:#ffffff">College Project Showcase</h2>
 </div>
 <div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
   <img src="/images/csjourneys/footstep.png" style="width: 10%; float: right; margin-top:-50px">
@@ -161,7 +161,7 @@ social:
 
 <a id="event-3"></a>
 <div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
-  <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">Alternatives to the 4-year college degree</h2>
+  <h2 style="margin-top:0; margin-bottom:0; color:#ffffff">Alternatives to the 4-year college degree</h2>
 </div>
 <div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
   <img src="/images/csjourneys/footstep.png" style="width: 10%; float: right; margin-top:-50px">
@@ -180,7 +180,7 @@ social:
     <img src="/images/csjourneys/vikram-sreedhar.png" style="border-radius:50%; width:55%" alt="Vikram Sreedhar">
     <p style="margin-top:10px"><strong>Vikram Sreedhar</strong>
     <br>
-    Co-Founder/Chief Technology Officer 
+    Co-Founder/Chief Technology Officer
     <br>
     <a href="https://shimmer.care/" target="_blank">shimmer</a></p>
   </div>
@@ -188,7 +188,7 @@ social:
     <img src="/images/csjourneys/johnny-tyson.png" style="border-radius:50%; width:55%" alt="Johnny Tyson III">
     <p style="margin-top:10px"><strong>Johnny Tyson III</strong>
     <br>
-    Thrive Apprentice 
+    Thrive Apprentice
     <br>
     <a href="https://www.verizon.com/" target="_blank">Verizon</a></p>
   </div>
@@ -219,7 +219,7 @@ social:
 
 <a id="event-4"></a>
 <div class="col-100" style="padding:25px; background-color: #00adbc; border-radius:15px 15px 0 0">
-  <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">Making connections and building support networks</h2>
+  <h2 style="margin-top:0; margin-bottom:0; color:#ffffff">Making connections and building support networks</h2>
 </div>
 <div class="col-100" style="padding:25px; border: 1px solid #00adbc; border-radius:0 0 15px 15px; border-top:none">
   <img src="/images/csjourneys/footstep.png" style="width: 10%; float: right; margin-top:-50px">
@@ -230,7 +230,7 @@ social:
     <img src="/images/csjourneys/kyle-ali.jpg" style="border-radius:50%; width:55%" alt="Kyle Ali">
     <p style="margin-top:10px"><strong>Kyle Ali</strong>
     <br>
-    Head of Pre-College Programs 
+    Head of Pre-College Programs
     <br>
     <a href="https://edu.google.com/code-with-google/" target="_blank">Google</a></p>
   </div>
@@ -238,7 +238,7 @@ social:
     <img src="/images/csjourneys/andrea-olson.jpg" style="border-radius:50%; width:55%" alt="Andrea Delgado-Olson">
     <p style="margin-top:10px"><strong>Andrea Delgado-Olson</strong>
     <br>
-    Executive Director 
+    Executive Director
     <br>
     <a href="https://nativesintech.org/" target="_blank">Natives in Tech</a></p>
   </div>
@@ -254,7 +254,7 @@ social:
     <img src="/images/csjourneys/kia-huggan.jpg" style="border-radius:50%; width:55%" alt="Kianjai Huggan">
     <p style="margin-top:10px"><strong>Kianjai Huggan</strong>
     <br>
-    Curriculum Coordinator 
+    Curriculum Coordinator
     <br>
     <a href="https://www.blackgirlscode.com/" target="_blank">Black Girls CODE</a></p>
   </div>

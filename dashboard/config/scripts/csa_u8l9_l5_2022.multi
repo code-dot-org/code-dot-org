@@ -10,3 +10,5 @@ wrong 'The array cannot be sorted.'
 markdown <<MARKDOWN
 What is always true about applying binary search on an array?
 MARKDOWN
+
+allow_multiple_attempts true

@@ -8,13 +8,13 @@ import * as callouts from '@cdo/apps/code-studio/callouts';
 import {
   getContainedLevelResultInfo,
   getValidatedResult,
-  initializeContainedLevel
+  initializeContainedLevel,
 } from '@cdo/apps/containedLevels';
 import {
   getStore,
   registerReducers,
   stubRedux,
-  restoreRedux
+  restoreRedux,
 } from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import GameButtons from '@cdo/apps/templates/GameButtons';
@@ -32,9 +32,9 @@ describe('getContainedLevelResultInfo', () => {
       result: false,
       errorType: null,
       submitted: false,
-      valid: true
+      valid: true,
     },
-    feedback: 'This is feedback'
+    feedback: 'This is feedback',
   };
 
   let gameButtons;
@@ -94,7 +94,7 @@ describe('getContainedLevelResultInfo', () => {
       testResult: TestResults.CONTAINED_LEVEL_RESULT,
       program: 1,
       feedback: 'This is feedback',
-      submitted: false
+      submitted: false,
     });
   });
 
@@ -123,7 +123,7 @@ describe('getContainedLevelResultInfo', () => {
     store.dispatch(
       setInstructionsConstants({
         ...store.getState().instructions,
-        hasContainedLevels: newValue
+        hasContainedLevels: newValue,
       })
     );
   }

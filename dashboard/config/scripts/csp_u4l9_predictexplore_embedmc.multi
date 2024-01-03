@@ -12,3 +12,5 @@ markdown <<MARKDOWN
 Read the code below and make a prediction.
 
 MARKDOWN
+
+allow_multiple_attempts false

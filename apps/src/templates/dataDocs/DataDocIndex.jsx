@@ -24,9 +24,9 @@ DataDocIndex.propTypes = {
     PropTypes.shape({
       key: PropTypes.string,
       name: PropTypes.string,
-      content: PropTypes.string
+      content: PropTypes.string,
     })
-  )
+  ),
 };
 
 export default DataDocIndex;

@@ -10,7 +10,7 @@ const FAKE_ON_SORT_BY = () => {};
 const DEFAULT_PROPS = {
   defaultSortBy: 'popularityrank',
   sortBy: 'popularityrank',
-  onUserInput: FAKE_ON_SORT_BY
+  onUserInput: FAKE_ON_SORT_BY,
 };
 
 describe('FilterGroupSortBy', () => {

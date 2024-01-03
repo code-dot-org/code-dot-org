@@ -2,9 +2,6 @@
   "fr-FR": {
     "data": {
       "mini_rubric": {
-        "allthethings-mini-rubric-gamelab": {
-          "rubric_key_concept": "Concept Clé"
-        },
         "CSD U2 Image assessment_2021": {
           "rubric_key_concept": "Structurer le contenu d'une page web en utilisant le langage HTML (ajouter une image à une page web).  Attribuer correctement le nom des autres lorsqu'ils utilisent leur travail.",
           "rubric_performance_level_1": "L'image s'affiche correctement et un attribut `alt` donne une description test raisonnable de l'image.  Aucun code inutile n'est inclus dans la balise « img ».  L'attribution est précise et l'image est nommée de manière appropriée.",
@@ -12,6 +9,12 @@
           "rubric_performance_level_3": "La balise `img` est utilisée et une adresse source pour l'image est fournie, mais il peut y avoir des erreurs mineures de syntaxe ou des fautes d'orthographe qui empêchent l'image de s'afficher correctement.  L'image peut ne pas être disponible pour une utilisation légale sur la page web."
         },
         "CSD U2 Image assessment_2022": {
+          "rubric_key_concept": "Structurer le contenu d'une page web en utilisant le langage HTML (ajouter une image à une page web).  Attribuer correctement le nom des autres lorsqu'ils utilisent leur travail.",
+          "rubric_performance_level_1": "L'image s'affiche correctement et un attribut `alt` donne une description test raisonnable de l'image.  Aucun code inutile n'est inclus dans la balise « img ».  L'attribution est précise et l'image est nommée de manière appropriée.",
+          "rubric_performance_level_2": "L'image s'affiche correctement et est utilisée conformément à la description de sa licence d'exploitation.",
+          "rubric_performance_level_3": "La balise `img` est utilisée et une adresse source pour l'image est fournie, mais il peut y avoir des erreurs mineures de syntaxe ou des fautes d'orthographe qui empêchent l'image de s'afficher correctement.  L'image peut ne pas être disponible pour une utilisation légale sur la page web."
+        },
+        "CSD U2 Image assessment_2023": {
           "rubric_key_concept": "Structurer le contenu d'une page web en utilisant le langage HTML (ajouter une image à une page web).  Attribuer correctement le nom des autres lorsqu'ils utilisent leur travail.",
           "rubric_performance_level_1": "L'image s'affiche correctement et un attribut `alt` donne une description test raisonnable de l'image.  Aucun code inutile n'est inclus dans la balise « img ».  L'attribution est précise et l'image est nommée de manière appropriée.",
           "rubric_performance_level_2": "L'image s'affiche correctement et est utilisée conformément à la description de sa licence d'exploitation.",
@@ -31,6 +34,13 @@
           "rubric_performance_level_3": "Il existe une balise `<a>`, mais des erreurs de syntaxe ou des problèmes avec le nom de la page peuvent l'empêcher de fonctionner.\n",
           "rubric_performance_level_4": "Aucune nouvelle page n'a été créée et il n'y a pas de liens.\n"
         },
+        "CSD U2 adding pages_2023": {
+          "rubric_key_concept": "Création d'un artefact numérique, création de liens dans un site de plusieurs pages\n",
+          "rubric_performance_level_1": "Une nouvelle page a été créée et porte un nom unique et descriptif se terminant par « .html ». Il existe un lien de la page index.html vers la nouvelle page et de la nouvelle page vers index.html.",
+          "rubric_performance_level_2": "Il existe au moins un lien fonctionnel d'une page HTML à une autre.\n",
+          "rubric_performance_level_3": "Il existe une balise `<a>`, mais des erreurs de syntaxe ou des problèmes avec le nom de la page peuvent l'empêcher de fonctionner.\n",
+          "rubric_performance_level_4": "Aucune nouvelle page n'a été créée et il n'y a pas de liens.\n"
+        },
         "CSD U2 classes haikus_2021": {
           "rubric_performance_level_1": "La classe et l'ensemble de règles sont créés correctement, tous les éléments du haïku choisi sont inclus et il y a au moins trois règles dans l'ensemble de règles.",
           "rubric_performance_level_2": "Une classe et un ensemble de règles sont créés et la plupart des éléments de la section haïku choisie du site web sont concernés par cette classe, mais il peut y avoir quelques erreurs mineures pour certaines parties du texte, ou il peut y avoir moins de trois règles dans l'ensemble de règles.",
@@ -39,6 +49,11 @@
         },
         "CSD U2 classes haikus_2022": {
           "rubric_performance_level_1": "La classe et l'ensemble de règles sont créés correctement, tous les éléments du haïku choisi sont inclus et il y a au moins trois règles dans l'ensemble de règles.",
+          "rubric_performance_level_2": "Une classe et un ensemble de règles sont créés et la plupart des éléments de la section haïku choisie du site web sont concernés par cette classe, mais il peut y avoir quelques erreurs mineures pour certaines parties du texte, ou il peut y avoir moins de trois règles dans l'ensemble de règles.",
+          "rubric_performance_level_3": "Une classe et un ensemble de règles sont créés, et au moins certains éléments du site web sont dans cette classe, mais il peut y avoir des erreurs majeures qui empêchent le texte d'être stylé.",
+          "rubric_performance_level_4": "Aucune classe ou ensemble de règles n'est créé, ou aucun élément de site web n'est placé dans la classe."
+        },
+        "CSD U2 classes haikus_2023": {
           "rubric_performance_level_2": "Une classe et un ensemble de règles sont créés et la plupart des éléments de la section haïku choisie du site web sont concernés par cette classe, mais il peut y avoir quelques erreurs mineures pour certaines parties du texte, ou il peut y avoir moins de trois règles dans l'ensemble de règles.",
           "rubric_performance_level_3": "Une classe et un ensemble de règles sont créés, et au moins certains éléments du site web sont dans cette classe, mais il peut y avoir des erreurs majeures qui empêchent le texte d'être stylé.",
           "rubric_performance_level_4": "Aucune classe ou ensemble de règles n'est créé, ou aucun élément de site web n'est placé dans la classe."
@@ -56,6 +71,16 @@
           "rubric_performance_level_2": "Les paragraphes sont d'une nouvelle couleur ou d'une nouvelle taille.",
           "rubric_performance_level_3": "Les paragraphes ont un ensemble de règles spéciales dans la feuille de style, et la propriété couleur ou taille est utilisée, mais il y a suffisamment d'erreurs pour que le texte ne change pas de couleur ou de taille.  Il existe un code HTML qui tente de lier la feuille de style à la page web.",
           "rubric_performance_level_4": "Il n'y a pas de jeu de règles spécial pour les paragraphes ou les propriétés de couleur ou de taille ne sont pas utilisées dans le jeu de règles.  Il n'y a pas de code pour lier la feuille de style à la page web."
+        },
+        "CSD Web CSS Assessment_2023": {
+          "rubric_key_concept": "Créez une feuille de style et créez un lien vers cette feuille dans le HTML. La feuille de style comprend une règle qui modifie l'élément paragraphe d'une page web.",
+          "rubric_performance_level_1": "Les paragraphes ont une nouvelle couleur et une nouvelle taille, et il n'y a pas d'erreur ou d'incohérence dans le code HTML ou CSS.",
+          "rubric_performance_level_2": "Les paragraphes sont d'une nouvelle couleur ou d'une nouvelle taille.",
+          "rubric_performance_level_3": "Les paragraphes ont un ensemble de règles spéciales dans la feuille de style, et la propriété couleur ou taille est utilisée, mais il y a suffisamment d'erreurs pour que le texte ne change pas de couleur ou de taille.  Il existe un code HTML qui tente de lier la feuille de style à la page web.",
+          "rubric_performance_level_4": "Il n'y a pas de jeu de règles spécial pour les paragraphes ou les propriétés de couleur ou de taille ne sont pas utilisées dans le jeu de règles.  Il n'y a pas de code pour lier la feuille de style à la page web."
+        },
+        "allthethings-mini-rubric-gamelab": {
+          "rubric_key_concept": "Concept Clé"
         }
       }
     }

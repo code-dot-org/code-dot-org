@@ -40,15 +40,13 @@ class UserLevelsController < ApplicationController
     return head :ok
   end
 
-  private
-
-  def set_user_level
+  private def set_user_level
     return unless params[:id]
     @user_level = UserLevel.find(params[:id])
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
-  def user_level_params
+  private def user_level_params
     params.require(:user_level).permit(:best_result, :submitted)
   end
 end

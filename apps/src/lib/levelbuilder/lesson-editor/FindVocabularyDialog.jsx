@@ -12,7 +12,7 @@ export default class FindVocabularyDialog extends Component {
     isOpen: PropTypes.bool.isRequired,
     handleConfirm: PropTypes.func.isRequired,
     handleClose: PropTypes.func.isRequired,
-    vocabularies: PropTypes.arrayOf(vocabularyShape)
+    vocabularies: PropTypes.arrayOf(vocabularyShape),
   };
 
   constructor(props) {
@@ -21,7 +21,7 @@ export default class FindVocabularyDialog extends Component {
       selectedVocabularyKey:
         this.props.vocabularies.length > 0
           ? this.props.vocabularies[0].markdownKey
-          : ''
+          : '',
     };
   }
 
@@ -62,7 +62,7 @@ export default class FindVocabularyDialog extends Component {
               e.preventDefault();
               this.props.handleConfirm(this.state.selectedVocabularyKey);
             }}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
           />
         </DialogFooter>
       </LessonEditorDialog>

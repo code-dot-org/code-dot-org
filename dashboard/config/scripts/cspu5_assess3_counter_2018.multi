@@ -29,3 +29,5 @@ Going through the code line by line:
 * _n_ will equal 0 after it has looped 3 times and exit the loop
 * Therefore, when _counter_ is displayed, 3 is printed to the console
 MARKDOWN
+
+allow_multiple_attempts true

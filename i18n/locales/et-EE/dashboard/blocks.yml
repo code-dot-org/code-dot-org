@@ -5,19 +5,11 @@ et:
       BadGuys_setSizeAll_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': keskmine
-            '2.00': large
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': keskmine
-            '2.00': large
-            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -63,6 +55,11 @@ et:
           UNIT:
             '"measures"': ühikud
             '"seconds"': sekundit
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': ühikud
+            '"seconds"': sekundit
       Dancelab_changeColorBy:
         text: muuda {COLOR} {METHOD} {AMOUNT}
         options:
@@ -101,6 +98,26 @@ et:
             MOVES.Kick: Täht
             MOVES.ThisOrThat: Seda või teist
             MOVES.Rest: Mitte ükski
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} {MOVE} {DIR} tee igavesti"
+        options:
+          GROUP:
+            '"CAT"': kõik kassid
+          MOVE:
+            MOVES.Roll: Rulli
+            MOVES.ClapHigh: Kõrge plaks
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Topelt jam
+            MOVES.Drop: Kükita
+            MOVES.Floss: Floss
+            MOVES.Fresh: Uus
+            MOVES.Clown: Kloun
+            MOVES.Kick: Täht
+            MOVES.ThisOrThat: Seda või teist
+            MOVES.Rest: Mitte ükski
+            '"next"': "(Järgmine)"
+            '"prev"': "(Eelmine)"
+            '"rand"': "(Juhuslik)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} tee {MOVE} {DIR} igavesti"
         options:
@@ -452,6 +469,24 @@ et:
             '"text"': Laulu pealkiri
             '"spiral"': Spiraal
             '"disco"': Ruudud
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          määra taustaefekt
+          {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Mitte ükski
+            '"rand"': "(Juhuslik)"
+            '"color_cycle"': Värvid
+            '"diamonds"': Teemantid
+            '"swirl"': Hypno
+            '"rainbow"': Vikerkaar
+            '"snowflakes"': Lumi
+            '"text"': Laulu pealkiri
+            '"spiral"': Spiraal
+            '"disco"': Ruudud
+          PALETTE:
+            '"rainbow"': Vikerkaar
       Dancelab_setDanceSpeed:
         text: sea {SPRITE} tantsu kiirus {SPEED}
         options:
@@ -874,10 +909,27 @@ et:
             '"w"': w
             '"x"': x
             '"z"': z
+      gamelab_layoutSprites:
+        text: paigutus {GROUP} nagu {FORMAT}
+        options:
+          FORMAT:
+            '"border"': piir
+            '"circle"': ring
+            '"grid"': ruudustikus
+            '"row"': rida
+            '"column"': veerg
       gamelab_makeBurst:
         options:
           EFFECT:
             '"rain"': vihm
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': piir
+            '"circle"': ring
+            '"grid"': ruudustikus
+            '"row"': rida
+            '"column"': veerg
       gamelab_makeProjectile:
         options:
           DIRECTION:
@@ -888,9 +940,7 @@ et:
       gamelab_makeSpritesWithSize:
         options:
           SIZE:
-            '30': small
             '50': keskmine
-            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -908,8 +958,11 @@ et:
             "'sound://category_animals/cat.mp3'": kass
             "'sound://category_animals/cow.mp3'": lehm
             "'sound://category_animals/sheep.mp3'": lammas
+            "'sound://category_animals/goat.mp3'": kits
             "'sound://category_animals/chicken.mp3'": kana
+            "'sound://category_animals/elephant.mp3'": elevant
             "'sound://category_animals/dolphin.mp3'": delfiin
+            "'sound://category_animals/chick.mp3'": tibu
             "'sound://category_animals/dog.mp3'": koer
             "'sound://category_digital/jump_7.mp3'": hüppa
       gamelab_randColor:
@@ -926,7 +979,9 @@ et:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': koobas
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': linn
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': kõrb
+            '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': galaktika
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': ruudustikus
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': heinamaa
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': vikerkaar
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': veealune
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': talv
@@ -934,10 +989,7 @@ et:
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
-            '25': extra small
-            '50': small
             '75': keskmine
-            '100': large
       gamelab_setProp:
         text: muuda {SPRITE} {PROPERTY} {VAL}
         options:
@@ -954,10 +1006,7 @@ et:
           PROPERTY:
             '"scale"': suurus
           SIZE:
-            '25': extra small
-            '50': small
             '75': keskmine
-            '100': large
       gamelab_setSizes:
         text: muuda {SPRITE} {PROPERTY} {N}%
         options:
@@ -968,11 +1017,9 @@ et:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': aeglane
             '5': tavaline
             '7': kiire
-            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:
@@ -1129,6 +1176,7 @@ et:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': linn
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': heinamaa
       Mikelab_setProp:
         options:
           PROPERTY:
@@ -1192,6 +1240,7 @@ et:
       Poetry_addFrame:
         options:
           BRUSH:
+            '"brick"': tellis
             '"hearts"': südamed
             '"rainbow"': vikerkaar
       Poetry_makeBurst:
@@ -1201,11 +1250,13 @@ et:
       Poetry_playMusic:
         options:
           SOUND:
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': mets
             '"sound://category_nature/summer_night_loop.mp3"': öö
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': aeglane
       Poetry_playSound:
         options:
           SOUND:
+            '"sound://category_bell/long_bell_notification.mp3"': kell
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': hüppa
       Poetry_setBackground:
         text: määra taustavärv {COLOR}
@@ -1249,16 +1300,10 @@ et:
         options:
           PORTION:
             '1': kõik
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': kõik
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       binary_move:
         options:
           DIR:

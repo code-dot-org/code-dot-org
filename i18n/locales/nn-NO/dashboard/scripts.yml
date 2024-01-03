@@ -117,6 +117,9 @@ nn:
           description: Alle nivå typer for UI tester
           description_short: Alle nivå typer for UI tester
           student_description: Alle nivå typer for UI tester
+          lessons:
+            lesson-49:
+              name: Musikk
         algebraPD2b:
           description: 'Fase 2 Online: Blanda sommarstudie'
           description_short: 'Fase 2 Online: Blanda sommarstudie'
@@ -168,6 +171,7 @@ nn:
           description_short: Lag ei historie eller eit spel med Gumball spel-lab!
           student_description: Lag ei historie eller eit spel med Gumball spel-lab!
         starwars:
+          title: 'Star Wars: Bygg ein galakse med kode(JavaScript)'
           description: Lær å programmere droner og skap ditt eige Star Wars-spel i ein galakse langt, langt borte.
           description_short: Lær å programmere droner og skap ditt eige Star Wars-spel i ein galakse langt, langt borte.
           student_description: Lær å programmere droner og skap ditt eige Star Wars-spel i ein galakse langt, langt borte.
@@ -176,7 +180,7 @@ nn:
           description_short: Lær å programmere droner og skap ditt eige Star Wars-spel i ein galakse langt, langt borte.
           student_description: Lær å programmere droner og skap ditt eige Star Wars-spel i ein galakse langt, langt borte.
         mc:
-          title: Kodetimen med Minecraft
+          title: Minecraft-eventyrar
           description: Bruk kodeblokker for å ta Steve eller Alex med på eit eventyr gjennom denne Minecraft-verda
           description_short: Utforsk ei Minecraft-verd gjennom kode
           student_description: Bruk kodeblokker for å ta Steve eller Alex med på eit eventyr gjennom denne Minecraft-verda
@@ -2179,6 +2183,8 @@ nn:
               display_name: Innhald
             lessonGroup-2:
               display_name: Innhald
+        dance-unplugged:
+          title: Dansefest utan datamaskin
         spelling-bee:
           title: Stavekonkurranse
         csa5-exemplars:
@@ -2542,6 +2548,32 @@ nn:
           lesson_groups:
             lessonGroup-2:
               display_name: Innhald
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+        csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+        csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+            lessonGroup-4:
+              display_name: Undersøking
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapittel 1: Problemløsingsprosessen'
+            lessonGroup-3:
+              display_name: 'Kapittel 2: Datamaskiner og problemløsing'
+            lessonGroup-5:
+              display_name: Undersøking
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2560,6 +2592,10 @@ nn:
               display_name: 'Kapittel 1: Bilder og animasjonar'
             lessonGroup-3:
               display_name: 'Kapittel 2: Bygge spel'
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapittel 2: Bygge fysiske prototypar'
         physcomp-temp:
           lesson_groups:
             lessonGroup-3:
@@ -2628,6 +2664,10 @@ nn:
           lesson_groups:
             lessonGroup-2:
               display_name: Undersøking etter kurs
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Vurderingar
         devices-2022:
           lesson_groups:
             lessonGroup-4:
@@ -2636,3 +2676,380 @@ nn:
           lesson_groups:
             lessonGroup-4:
               display_name: 'Kapittel 2: Bygge fysiske prototypar'
+        pre-express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sekvensiering
+            csf_loops:
+              display_name: Løkker
+            csf_events:
+              display_name: Hendingar
+        express-2023:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sekvensiering
+            csf_sprites:
+              display_name: Sprites
+            lessonGroup-9:
+              display_name: Hendingar
+            csf_loops:
+              display_name: Løkker
+            csf_conditionals:
+              display_name: Betingelser
+            csf_functions:
+              display_name: Funksjonar
+            csf_variables:
+              display_name: Variablar
+            csf_for_loops:
+              display_name: For-løkker
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt statsborgerskap
+            csf_sequencing:
+              display_name: Sekvensiering
+            csf_loops:
+              display_name: Løkker
+            csf_events:
+              display_name: Hendingar
+          description_short: Ein introduksjon til informatikk for dei som ikkje kan lese.
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt statsborgerskap
+            csf_sequencing:
+              display_name: Sekvensiering
+            csf_loops:
+              display_name: Løkker
+            csf_events:
+              display_name: Hendingar
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt statsborgerskap
+            csf_sequencing:
+              display_name: Sekvensiering
+            csf_loops:
+              display_name: Løkker
+            csf_events:
+              display_name: Hendingar
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digitalt statsborgerskap
+            csf_sequencing:
+              display_name: Sekvensiering
+            csf_events:
+              display_name: Hendingar
+            csf_loops:
+              display_name: Løkker
+            csf_conditionals:
+              display_name: Betingelser
+          title: Kurs D (2021)
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt statsborgerskap
+            csf_sprites:
+              display_name: Sprites
+            ramp_up:
+              display_name: Løkker i løkke
+            csf_functions:
+              display_name: Funksjonar
+            csf_nested_loops:
+              display_name: Betingelser
+        problem-solving-computing-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapittel 1: Problemløsingsprosessen'
+            lessonGroup-3:
+              display_name: 'Kapittel 2: Datamaskiner og problemløsing'
+        web-development-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Undersøking
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapittel 1: Bilder og animasjonar'
+            lessonGroup-3:
+              display_name: 'Kapittel 2: Bygge spel'
+            lessonGroup-4:
+              display_name: Undersøking
+        design-process-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapittel 1: Bruke sentrert design'
+            lessonGroup-3:
+              display_name: 'Kapittel 2: Prototyping av app'
+            lessonGroup-4:
+              display_name: Undersøking
+        data-society-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapittel 1: Representere informasjon'
+            lessonGroup-3:
+              display_name: 'Kapittel 2: Problemløsing med data'
+            lessonGroup-4:
+              display_name: Undersøking
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Undersøking
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapittel 1: Problemløsingsprosessen'
+            lessonGroup-4:
+              display_name: Undersøking
+        focus-on-creativity3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapittel 1: Bilder og animasjonar'
+            lessonGroup-3:
+              display_name: 'Kapittel 2: Bygge spel'
+        focus-on-creativity4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Kapittel 2: Bygge fysiske prototypar'
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapittel 1: Problemløsingsprosessen'
+            lessonGroup-3:
+              display_name: 'Kapittel 2: Datamaskiner og problemløsing'
+            lessonGroup-5:
+              display_name: Undersøking
+        focus-on-hardware2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapittel 1: Representere informasjon'
+            lessonGroup-3:
+              display_name: 'Kapittel 2: Problemløsing med data'
+        focus-on-hardware3a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Kapittel 2: Bygge fysiske prototypar'
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapittel 1: Problemløsingsprosessen'
+            lessonGroup-4:
+              display_name: Undersøking
+        focus-on-data2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapittel 1: Representere informasjon'
+        focus-on-data2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapittel 1: Representere informasjon'
+            lessonGroup-3:
+              display_name: 'Kapittel 2: Problemløsing med data'
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapittel 1: Problemløsingsprosessen'
+            lessonGroup-4:
+              display_name: Undersøking
+        focus-on-design-with-purpose3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapittel 1: Bruke sentrert design'
+            lessonGroup-3:
+              display_name: 'Kapittel 2: Prototyping av app'
+        focus-on-design-with-purpose4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Kapittel 2: Bygge fysiske prototypar'
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapittel 1: Problemløsingsprosessen'
+            lessonGroup-4:
+              display_name: Undersøking
+        focus-on-coding3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapittel 1: Bilder og animasjonar'
+            lessonGroup-3:
+              display_name: 'Kapittel 2: Bygge spel'
+        focus-on-coding4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Kapittel 2: Bygge fysiske prototypar'
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapittel 1: Problemløsingsprosessen'
+            lessonGroup-4:
+              display_name: Undersøking
+        focus-on-impact-in-society2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapittel 1: Bruke sentrert design'
+            lessonGroup-3:
+              display_name: 'Kapittel 2: Prototyping av app'
+        focus-on-impact-in-society3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapittel 1: Representere informasjon'
+            lessonGroup-3:
+              display_name: 'Kapittel 2: Problemløsing med data'
+        csd6a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapittel 2: Bygge fysiske prototypar'
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Undersøking
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Kapittel 2: Bygge fysiske prototypar'
+            lessonGroup-5:
+              display_name: Undersøking
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Introduksjon
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Introduksjon
+        csd-post-survey-2023:
+          title: Undersøking etter kurs
+        focus-on-data-post-survey-2023:
+          title: Undersøking etter kurs
+        focus-on-impact-in-society-post-survey-2023:
+          title: Undersøking etter kurs
+        focus-on-coding-post-survey-2023:
+          title: Undersøking etter kurs
+        focus-on-design-with-purpose-post-survey-2023:
+          title: Undersøking etter kurs
+        focus-on-hardware-post-survey-2023:
+          title: Undersøking etter kurs
+        focus-on-creativity-post-survey-2023:
+          title: Undersøking etter kurs
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalt statsborgerskap
+            lessonGroup-3:
+              display_name: Sprites
+            lessonGroup-4:
+              display_name: Variablar
+          description_short: Lær alle konspta i grunnleggande informatikk og skap din eigen kunst, historie eller spel.
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalt statsborgerskap
+            lessonGroup-3:
+              display_name: Sekvensiering
+            lessonGroup-4:
+              display_name: Løkker
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalt statsborgerskap
+            lessonGroup-3:
+              display_name: Sekvensiering
+            lessonGroup-4:
+              display_name: Løkker
+          description_short: Ein introduksjon til informatikk for dei som ikkje kan lese.
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalt statsborgerskap
+            lessonGroup-3:
+              display_name: Sekvensiering
+            lessonGroup-4:
+              display_name: Løkker
+            lessonGroup-6:
+              display_name: Hendingar
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalt statsborgerskap
+            lessonGroup-3:
+              display_name: Sekvensiering
+            lessonGroup-4:
+              display_name: Løkker
+            lessonGroup-5:
+              display_name: Hendingar
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitalt statsborgerskap
+            lessonGroup-3:
+              display_name: Sekvensiering
+            lessonGroup-6:
+              display_name: Løkker
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Løkker i løkke
+            lessonGroup-4:
+              display_name: Funksjonar
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
+          description_short: Lær alle konspta i grunnleggande informatikk og skap din eigen kunst, historie eller spel.
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
+            lessonGroup-3:
+              display_name: Betingelser
+            lessonGroup-5:
+              display_name: Variablar
+          description_short: Lær alle konspta i grunnleggande informatikk og skap din eigen kunst, historie eller spel.
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Introduksjon
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Introduksjon
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Introduksjon
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Introduksjon
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Undersøking
+            lessonGroup-2:
+              display_name: 'Kapittel 1: Problemløsingsprosessen'
+            lessonGroup-3:
+              display_name: 'Kapittel 2: Datamaskiner og problemløsing'
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapittel 1: Bilder og animasjonar'
+            lessonGroup-3:
+              display_name: 'Kapittel 2: Bygge spel'
+        csd4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapittel 1: Bruke sentrert design'
+            lessonGroup-3:
+              display_name: 'Kapittel 2: Prototyping av app'
+        csd5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapittel 1: Representere informasjon'
+            lessonGroup-3:
+              display_name: 'Kapittel 2: Problemløsing med data'
+        csd6a-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapittel 2: Bygge fysiske prototypar'
+        csd-post-survey-2024:
+          title: Undersøking etter kurs

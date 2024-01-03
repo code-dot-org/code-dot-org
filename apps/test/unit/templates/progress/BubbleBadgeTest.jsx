@@ -3,11 +3,11 @@ import {mount, shallow} from 'enzyme';
 import BubbleBadge, {
   KeepWorkingBadge,
   AssessmentBadge,
-  BadgeType
+  BadgeType,
 } from '@cdo/apps/templates/progress/BubbleBadge';
 import {
   BubbleSize,
-  BubbleShape
+  BubbleShape,
 } from '@cdo/apps/templates/progress/BubbleFactory';
 import {expect} from '../../../util/reconfiguredChai';
 import color from '@cdo/apps/util/color';

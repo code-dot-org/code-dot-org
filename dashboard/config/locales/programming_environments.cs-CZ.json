@@ -2,14 +2,563 @@
   "cs-CZ": {
     "data": {
       "programming_environments": {
-        "weblab": {
-          "name": "Web Lab"
+        "applab": {
+          "categories": {
+            "advanced": {
+              "name": "Pokročilé"
+            },
+            "canvas": {
+              "expressions": {
+                "circle": {
+                  "palette_params": {
+                    "radius": {
+                      "description": "Poloměr kružnice v pixelech."
+                    }
+                  }
+                },
+                "drawImage": {
+                  "palette_params": {
+                    "id": {
+                      "description": "Pozice x v pixelech levého horního rohu obrázku, který chcete nakreslit."
+                    },
+                    "x": {
+                      "description": "Pozice x v pixelech levého horního rohu obrázku, který chcete nakreslit."
+                    },
+                    "y": {
+                      "description": "Poloha y v pixelech levého horního rohu obrázku, který chcete nakreslit."
+                    }
+                  }
+                },
+                "getAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objekt"
+                    },
+                    "x": {
+                      "description": "Pozice x v pixelech počínaje levým horním rohem obrázku."
+                    },
+                    "y": {
+                      "description": "Poloha y v pixelech počínaje levým horním rohem obrázku."
+                    }
+                  },
+                  "short_description": "Vrátí množství alfa (opacity) (v rozmezí od 0 do 255) v barvě obrazového bodu umístěného na dané pozici x a y v daných obrazových datech."
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objekt"
+                    },
+                    "x": {
+                      "description": "Pozice x v pixelech počínaje levým horním rohem obrázku."
+                    },
+                    "y": {
+                      "description": "Poloha y v pixelech počínaje levým horním rohem obrázku."
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objekt"
+                    },
+                    "x": {
+                      "description": "Pozice x v pixelech počínaje levým horním rohem obrázku."
+                    },
+                    "y": {
+                      "description": "Poloha y v pixelech počínaje levým horním rohem obrázku."
+                    }
+                  }
+                },
+                "getImageData": {
+                  "palette_params": {
+                    "height": {
+                      "description": "Výška ohraničujícího obdélníku pro zachycení obrazových dat."
+                    },
+                    "width": {
+                      "description": "Šířka ohraničujícího obdélníku pro zachycení obrazových dat."
+                    },
+                    "x": {
+                      "description": "Pozice x v pixelech pro spuštění snímání."
+                    },
+                    "y": {
+                      "description": "Pozice y v pixelech pro spuštění snímání."
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objekt"
+                    },
+                    "x": {
+                      "description": "Pozice x v pixelech počínaje levým horním rohem obrázku."
+                    },
+                    "y": {
+                      "description": "Poloha y v pixelech počínaje levým horním rohem obrázku."
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objekt"
+                    },
+                    "x": {
+                      "description": "Pozice x v pixelech počínaje levým horním rohem obrázku pro umístění dat na plátno."
+                    },
+                    "y": {
+                      "description": "Pozice y v pixelech počínaje levým horním rohem obrázku pro umístění dat na plátno."
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "height": {
+                      "description": "Svislá výška obdélníku v pixelech."
+                    },
+                    "width": {
+                      "description": "Vodorovná šířka obdélníku v pixelech."
+                    },
+                    "x": {
+                      "description": "Pozice x v pixelech levého horního rohu obdélníku."
+                    },
+                    "y": {
+                      "description": "Poloha y v pixelech levého horního rohu obdélníku."
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "alphaValue": {
+                      "description": "Množství alfa (opacity) (od 0 do 255), které se má nastavit v pixelu."
+                    },
+                    "imageData": {
+                      "type": "objekt"
+                    },
+                    "x": {
+                      "description": "Pozice x v pixelech počínaje levým horním rohem obrázku."
+                    },
+                    "y": {
+                      "description": "Poloha y v pixelech počínaje levým horním rohem obrázku."
+                    }
+                  },
+                  "short_description": "Nastavuje velikost alfa (krytí) (v rozmezí od 0 do 255) v barvě obrazového bodu umístěného na dané pozici x a y v daných obrazových datech."
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "blueValue": {
+                      "description": "Množství modré (od 0 do 255), které se má nastavit v pixelu."
+                    },
+                    "imageData": {
+                      "type": "objekt"
+                    },
+                    "x": {
+                      "description": "Pozice x v pixelech počínaje levým horním rohem obrázku."
+                    },
+                    "y": {
+                      "description": "Poloha y v pixelech počínaje levým horním rohem obrázku."
+                    }
+                  },
+                  "short_description": "Nastaví velikost modré (v rozmezí od 0 do 255) v barvě pixelu umístěného na dané pozici x a y v daných obrazových datech na vstupní hodnotu BlueValue."
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "greenValue": {
+                      "description": "Množství zelené (od 0 do 255), které se má nastavit v pixelu."
+                    },
+                    "imageData": {
+                      "type": "objekt"
+                    },
+                    "x": {
+                      "description": "Pozice x v pixelech počínaje levým horním rohem obrázku."
+                    },
+                    "y": {
+                      "description": "Poloha y v pixelech počínaje levým horním rohem obrázku."
+                    }
+                  },
+                  "short_description": "Nastaví množství zelené (v rozmezí od 0 do 255) v barvě pixelu umístěného na dané pozici x a y v daných obrazových datech na vstupní hodnotu GreenValue."
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "alpha": {
+                      "description": "Volitelné. Množství krytí (od 0 do 255), které se má nastavit v pixelu. Výchozí nastavení je 255 (plná neprůhlednost)."
+                    },
+                    "blue": {
+                      "description": "Množství modré (od 0 do 255), které se má nastavit v pixelu."
+                    },
+                    "green": {
+                      "description": "Množství zelené (od 0 do 255), které se má nastavit v pixelu."
+                    },
+                    "imageData": {
+                      "type": "objekt"
+                    },
+                    "red": {
+                      "description": "Množství červené (od 0 do 255), které se má nastavit v pixelu."
+                    },
+                    "x": {
+                      "description": "Pozice x v pixelech počínaje levým horním rohem obrázku."
+                    },
+                    "y": {
+                      "description": "Poloha y v pixelech počínaje levým horním rohem obrázku."
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objekt"
+                    },
+                    "redValue": {
+                      "description": "Množství červené (od 0 do 255), které se má nastavit v pixelu."
+                    },
+                    "x": {
+                      "description": "Pozice x v pixelech počínaje levým horním rohem obrázku."
+                    },
+                    "y": {
+                      "description": "Poloha y v pixelech počínaje levým horním rohem obrázku."
+                    }
+                  },
+                  "short_description": "Nastaví množství červené (v rozmezí od 0 do 255) v barvě obrazového bodu umístěného na dané pozici x a y v daných obrazových datech na vstupní hodnotu RedValue."
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "description": "Hodnota vrácená funkcí setTimeout pro zrušení."
+                    }
+                  }
+                },
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Počet milisekund mezi jednotlivými provedením funkce."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Počet milisekund, které musíte počkat před provedením funkce."
+                    }
+                  }
+                },
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funkce"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "objekt"
+                    }
+                  }
+                },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "objekt"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "objekt"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "options": {
+                      "type": "objekt"
+                    },
+                    "tableName": {
+                      "description": "Název tabulky, ze které chcete načíst záznamy."
+                    }
+                  }
+                },
+                "getKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "Název klíče, který má být načten."
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funkce"
+                    }
+                  }
+                },
+                "getUserId": {
+                  "short_description": "Získá jedinečný identifikátor pro aktuálního uživatele této aplikace."
+                },
+                "onRecordEvent": {
+                  "palette_params": {
+                    "table": {
+                      "description": "Název tabulky, na kterou se vztahuje tato obsluha události."
+                    }
+                  }
+                },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "objekt"
+                    }
+                  }
+                },
+                "setKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "Název klíče, který má být uložen."
+                    },
+                    "value": {
+                      "description": "Data, která mají být uložena."
+                    }
+                  },
+                  "short_description": "Uloží pár klíč/hodnota do úložiště dat klíč/hodnota aplikace App Lab a po dokončení akce vyvolá funkci zpětného volání."
+                },
+                "startWebRequest": {
+                  "palette_params": {
+                    "url": {
+                      "description": "Webová adresa služby, která vrací data."
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "objekt"
+                    }
+                  }
+                }
+              },
+              "name": "Data"
+            },
+            "functions": {
+              "name": "Funkce"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Minimální číslo vrácené"
+                    },
+                    "min": {
+                      "description": "Minimální číslo vrácené"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Minimální číslo vrácené"
+                    },
+                    "min": {
+                      "description": "Minimální číslo vrácené"
+                    }
+                  }
+                }
+              },
+              "name": "Matematické"
+            },
+            "turtle": {
+              "expressions": {
+                "arcLeft": {
+                  "short_description": "Přesune želvu dopředu a doleva v hladkém kruhovém oblouku."
+                },
+                "getX": {
+                  "short_description": "Získá aktuální souřadnici x v pixelech želvy."
+                },
+                "getY": {
+                  "short_description": "Získá aktuální souřadnici y v pixelech želvy."
+                },
+                "hide": {
+                  "short_description": "Dělá želvu neviditelnou na svém aktuálním místě."
+                },
+                "move": {
+                  "palette_params": {
+                    "x": {
+                      "description": "Počet pixelů pro pohyb želvy doprava."
+                    },
+                    "y": {
+                      "description": "Počet pixelů pro pohyb želvy dolů."
+                    }
+                  }
+                },
+                "moveBackward": {
+                  "short_description": "Přesune želvu dozadu o daný počet obrazových bodů od aktuálního směru."
+                },
+                "moveForward": {
+                  "short_description": "Posune želvu dopředu o daný počet obrazových bodů v aktuálním směru."
+                },
+                "moveTo": {
+                  "short_description": "Přesune želvu do určité polohy (x, y) na obrazovce."
+                },
+                "penColor": {
+                  "short_description": "Nastavuje barvu pera používaného želvou pro kreslení čar a teček."
+                },
+                "penDown": {
+                  "short_description": "Položí pero dolů, aby želva při pohybu nakreslila čáru za ním."
+                },
+                "penRGB": {
+                  "short_description": "Pomocí hodnot RGBA nastaví barvu pera používaného želvou pro kreslení čar a teček."
+                },
+                "penUp": {
+                  "short_description": "Zvedne pero tak, aby želva při pohybu nekreslila čáru."
+                },
+                "penWidth": {
+                  "short_description": "Nastaví šířku čáry v obrazových bodech, kterou želva kreslí za ní při pohybu."
+                },
+                "show": {
+                  "short_description": "Zviditelní želvu na svém aktuálním místě."
+                },
+                "speed": {
+                  "short_description": "Nastavuje rychlost provádění aplikace, která zahrnuje rychlost želvy."
+                },
+                "turnLeft": {
+                  "short_description": "Otočí želvu vlevo o zadaný úhel. Pozice želvy zůstává stejná."
+                },
+                "turnRight": {
+                  "short_description": "Otočí želvu doprava o zadaný úhel. Pozice želvy zůstává stejná."
+                },
+                "turnTo": {
+                  "short_description": "Změní směr želvy na určitý úhel. 0 je nahoru, 90 je vpravo, 180 je dolů a 270 je vlevo."
+                }
+              }
+            },
+            "ui_controls": {
+              "expressions": {
+                "button": {
+                  "short_description": "Vytvoří tlačítko na obrazovce zobrazující text poskytnutý a odkazovaný daným id ve výchozím umístění (0,0)."
+                },
+                "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "Smršťování a růst"
+                    }
+                  },
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funkce"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "Přehraje MP3 soubor z vybrané URL."
+                },
+                "setProperty": {
+                  "palette_params": {
+                    "property": {
+                      "description": "Vlastnost, kterou chcete změnit."
+                    }
+                  },
+                  "short_description": "Nastaví vlastnost na novou hodnotu pro zadaný prvek."
+                },
+                "setScreen": {
+                  "short_description": "Nastaví obrazovku na daný ScreenID."
+                },
+                "showElement": {
+                  "short_description": "Zobrazí prvek s uvedeným id."
+                },
+                "textLabel": {
+                  "short_description": "Vytvoří textový popisek na obrazovce zobrazující text poskytnutý a odkazovaný daným id ve výchozím umístění (0,0)."
+                }
+              }
+            },
+            "variables": {
+              "expressions": {
+                "addPair": {
+                  "return_value": "Žádný"
+                },
+                "declareAssign_list_123": {
+                  "short_description": "Deklarace a přiřazení pole k proměnné"
+                },
+                "declareAssign_object": {
+                  "examples": {
+                    "Choose Your Own Adventure": {
+                      "name": "Volba vlastního dobrodružství"
+                    }
+                  }
+                },
+                "declareAssign_x": {
+                  "short_description": "Deklaruje nějakou proměnnou a přiřadí jí počáteční hodnotu."
+                },
+                "declareNoAssign_x": {
+                  "short_description": "Deklaruje proměnnou s daným názvem."
+                },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Řetězec, který chcete vyhledat."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Řetězec, který chcete vyhledat."
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "Délka řetězce"
+                }
+              },
+              "name": "Proměnné"
+            }
+          },
+          "description": "App Lab je programovací prostředí, kde můžete tvořit jednoduché aplikace. Navrhni aplikaci, rozpohybuj ji kódem s bloky nebo s JavaScriptem a ve vteřině svou aplikaci nasdílej.",
+          "name": "App Lab"
         },
         "gamelab": {
-          "name": "Game Lab",
           "categories": {
+            "control": {
+              "expressions": {
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Počet milisekund mezi jednotlivými provedením funkce."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Počet milisekund, které musíte počkat před provedením funkce."
+                    }
+                  }
+                }
+              }
+            },
+            "drawing": {
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Kopou"
+                    }
+                  }
+                }
+              },
+              "name": "Kreslení"
+            },
+            "functions": {
+              "name": "Funkce"
+            },
             "game_lab": {
-              "name": "Game Lab",
               "expressions": {
                 "mouseIsOver": {
                   "palette_params": {
@@ -34,23 +583,15 @@
                 },
                 "playSound": {
                   "short_description": "Přehraje MP3 soubor z vybrané URL."
+                },
+                "showMobileControls": {
+                  "content": "Změní mobilní ovládací prvky viditelné pod herním prostorem.",
+                  "short_description": "Změní mobilní ovládací prvky viditelné pod herním prostorem."
                 }
-              }
-            },
-            "sprites": {
-              "name": "Postavy",
-              "expressions": {
-                "getSpeed": {
-                  "examples": {
-                    "Spiral": {
-                      "name": "Spirála"
-                    }
-                  }
-                }
-              }
+              },
+              "name": "Game Lab"
             },
             "groups": {
-              "name": "Skupiny",
               "expressions": {
                 "add": {
                   "palette_params": {
@@ -87,326 +628,135 @@
                     }
                   }
                 }
-              }
-            },
-            "drawing": {
-              "name": "Kreslení",
-              "expressions": {
-                "shape": {
-                  "examples": {
-                    "Star": {
-                      "name": "Kopou"
-                    }
-                  }
-                }
-              }
+              },
+              "name": "Skupiny"
             },
             "math": {
-              "name": "Matematické",
               "expressions": {
                 "randomNumber": {
                   "palette_params": {
-                    "min": {
+                    "max": {
                       "description": "Minimální číslo vrácené"
                     },
-                    "max": {
+                    "min": {
                       "description": "Minimální číslo vrácené"
                     }
                   }
                 },
                 "randomNumber_min_max": {
                   "palette_params": {
-                    "min": {
+                    "max": {
                       "description": "Minimální číslo vrácené"
                     },
-                    "max": {
+                    "min": {
                       "description": "Minimální číslo vrácené"
                     }
                   }
                 }
-              }
+              },
+              "name": "Matematické"
+            },
+            "sprites": {
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Spirála"
+                    }
+                  }
+                },
+                "sprite.height": {
+                  "return_value": "Výška sprite."
+                },
+                "sprite.width": {
+                  "return_value": "Šířka sprite."
+                }
+              },
+              "name": "Postavy"
             },
             "variables": {
-              "name": "Proměnné",
               "expressions": {
                 "assign_x": {
                   "short_description": "Přiřadí hodnotu existující proměnné. Například, x = 0;"
                 },
+                "declareAssign_x": {
+                  "short_description": "Deklaruje nějakou proměnnou a přiřadí jí počáteční hodnotu."
+                },
                 "declareNoAssign_x": {
                   "short_description": "Deklaruje proměnnou s daným názvem."
                 },
-                "declareAssign_x": {
-                  "short_description": "Deklaruje nějakou proměnnou a přiřadí jí počáteční hodnotu."
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Řetězec, který chcete vyhledat."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Řetězec, který chcete vyhledat."
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "Délka řetězce"
                 }
-              }
-            },
-            "functions": {
-              "name": "Funkce"
+              },
+              "name": "Proměnné"
             }
-          }
+          },
+          "name": "Game Lab"
         },
-        "applab": {
-          "name": "App Lab",
-          "description": "App Lab je programovací prostředí, kde můžete tvořit jednoduché aplikace. Navrhni aplikaci, rozpohybuj ji kódem s bloky nebo s JavaScriptem a ve vteřině svou aplikaci nasdílej.",
-          "categories": {
-            "ui_controls": {
-              "expressions": {
-                "onEvent": {
-                  "examples": {
-                    "Shrink and Grow": {
-                      "name": "Smršťování a růst"
-                    }
-                  },
-                  "palette_params": {
-                    "callback": {
-                      "type": "Funkce"
-                    }
-                  }
-                },
-                "playSound": {
-                  "short_description": "Přehraje MP3 soubor z vybrané URL."
-                }
-              }
-            },
-            "canvas": {
-              "expressions": {
-                "getAlpha": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "objekt"
-                    }
-                  }
-                },
-                "getBlue": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "objekt"
-                    }
-                  }
-                },
-                "getGreen": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "objekt"
-                    }
-                  }
-                },
-                "getRed": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "objekt"
-                    }
-                  }
-                },
-                "putImageData": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "objekt"
-                    }
-                  }
-                },
-                "setAlpha": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "objekt"
-                    }
-                  }
-                },
-                "setBlue": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "objekt"
-                    }
-                  }
-                },
-                "setGreen": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "objekt"
-                    }
-                  }
-                },
-                "setRGB": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "objekt"
-                    }
-                  }
-                },
-                "setRed": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "objekt"
-                    }
-                  }
-                }
-              }
-            },
-            "data": {
-              "name": "Data",
-              "expressions": {
-                "createRecord": {
-                  "palette_params": {
-                    "record": {
-                      "type": "objekt"
-                    }
-                  }
-                },
-                "deleteRecord": {
-                  "palette_params": {
-                    "record": {
-                      "type": "objekt"
-                    }
-                  }
-                },
-                "drawChart": {
-                  "palette_params": {
-                    "options": {
-                      "type": "objekt"
-                    }
-                  }
-                },
-                "drawChartFromRecords": {
-                  "palette_params": {
-                    "options": {
-                      "type": "objekt"
-                    }
-                  }
-                },
-                "getPrediction": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "Funkce"
-                    }
-                  }
-                },
-                "readRecords": {
-                  "palette_params": {
-                    "terms": {
-                      "type": "objekt"
-                    }
-                  }
-                },
-                "updateRecord": {
-                  "palette_params": {
-                    "record": {
-                      "type": "objekt"
-                    }
-                  }
-                }
-              }
-            },
-            "control": {
-              "expressions": {
-                "timedLoop": {
-                  "palette_params": {
-                    "callback": {
-                      "type": "Funkce"
-                    }
-                  }
-                }
-              }
-            },
-            "math": {
-              "name": "Matematické",
-              "expressions": {
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Minimální číslo vrácené"
-                    },
-                    "max": {
-                      "description": "Minimální číslo vrácené"
-                    }
-                  }
-                },
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Minimální číslo vrácené"
-                    },
-                    "max": {
-                      "description": "Minimální číslo vrácené"
-                    }
-                  }
-                }
-              }
-            },
-            "variables": {
-              "name": "Proměnné",
-              "expressions": {
-                "declareNoAssign_x": {
-                  "short_description": "Deklaruje proměnnou s daným názvem."
-                },
-                "declareAssign_object": {
-                  "examples": {
-                    "Choose Your Own Adventure": {
-                      "name": "Volba vlastního dobrodružství"
-                    }
-                  }
-                },
-                "declareAssign_x": {
-                  "short_description": "Deklaruje nějakou proměnnou a přiřadí jí počáteční hodnotu."
-                },
-                "addPair": {
-                  "return_value": "Žádný"
-                }
-              }
-            },
-            "functions": {
-              "name": "Funkce"
-            },
-            "advanced": {
-              "name": "Pokročilé"
-            }
-          }
+        "javalab": {
+          "name": "Java Lab"
         },
         "spritelab": {
-          "name": "Laboratoř Sprite",
           "categories": {
-            "sprites": {
-              "name": "Postavy"
-            },
-            "world": {
-              "name": "Prostředí"
-            },
-            "location": {
-              "name": "Umístění"
-            },
             "actions": {
               "name": "Akce"
-            },
-            "events": {
-              "name": "Události"
             },
             "behaviors": {
               "name": "Chování"
             },
-            "loops": {
-              "name": "Cykly"
+            "comments": {
+              "name": "Komentáře"
             },
-            "variables": {
-              "name": "Proměnné"
-            },
-            "math": {
-              "name": "Matematické"
-            },
-            "logic": {
-              "name": "Logické"
+            "events": {
+              "name": "Události"
             },
             "functions": {
               "name": "Funkce"
             },
+            "location": {
+              "name": "Umístění"
+            },
+            "logic": {
+              "name": "Logické"
+            },
+            "loops": {
+              "name": "Cykly"
+            },
+            "math": {
+              "name": "Matematické"
+            },
+            "sprites": {
+              "name": "Postavy"
+            },
             "text": {
               "name": "Text"
             },
-            "comments": {
-              "name": "Komentáře"
+            "variables": {
+              "name": "Proměnné"
+            },
+            "world": {
+              "name": "Prostředí"
             }
-          }
+          },
+          "name": "Laboratoř Sprite"
         },
-        "javalab": {
-          "name": "Java Lab"
+        "weblab": {
+          "name": "Web Lab"
         }
       }
     }

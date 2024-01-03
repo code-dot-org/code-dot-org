@@ -7,13 +7,13 @@ import {Provider} from 'react-redux';
 import {createStore, combineReducers} from 'redux';
 import applicationDashboardReducers, {
   setWorkshopAdminPermission,
-  setLockApplicationPermission
+  setLockApplicationPermission,
 } from './reducers';
 import regionalPartnerReducers, {
   setRegionalPartners,
   setRegionalPartnerFilter,
   setRegionalPartnerGroup,
-  getInitialRegionalPartnerFilter
+  getInitialRegionalPartnerFilter,
 } from '../components/regional_partners_reducers';
 import {UNMATCHED_PARTNER_OPTION} from '../components/regional_partner_dropdown';
 import Header from '../components/header';
@@ -30,12 +30,12 @@ import _ from 'lodash';
 const ROOT_PATH = '/pd/application_dashboard';
 // eslint-disable-next-line react-hooks/rules-of-hooks
 const browserHistory = useRouterHistory(createHistory)({
-  basename: ROOT_PATH
+  basename: ROOT_PATH,
 });
 const store = createStore(
   combineReducers({
     applicationDashboard: applicationDashboardReducers,
-    regionalPartners: regionalPartnerReducers
+    regionalPartners: regionalPartnerReducers,
   })
 );
 
@@ -47,23 +47,23 @@ export const DASHBOARD_COURSES = {
   csd_teachers: {
     type: 'teacher',
     name: 'CS Discoveries Teacher Applications',
-    course: 'csd'
+    course: 'csd',
   },
   csp_teachers: {
     type: 'teacher',
     name: 'CS Principles Teacher Applications',
-    course: 'csp'
+    course: 'csp',
   },
   csa_teachers: {
     type: 'teacher',
     name: 'Computer Science A Teacher Applications',
-    course: 'csa'
+    course: 'csa',
   },
   incomplete_applications: {
     type: 'teacher',
     name: 'Incomplete Teacher Applications',
-    course: 'course_tbd'
-  }
+    course: 'course_tbd',
+  },
 };
 
 export default class ApplicationDashboard extends React.Component {
@@ -72,11 +72,11 @@ export default class ApplicationDashboard extends React.Component {
       PropTypes.shape({
         id: PropTypes.number,
         name: PropTypes.string,
-        group: PropTypes.number
+        group: PropTypes.number,
       })
     ).isRequired,
     isWorkshopAdmin: PropTypes.bool,
-    canLockApplications: PropTypes.bool
+    canLockApplications: PropTypes.bool,
   };
 
   UNSAFE_componentWillMount() {
@@ -130,7 +130,7 @@ export default class ApplicationDashboard extends React.Component {
                         ? [{name: 'Application Details', path: ''}]
                         : [
                             {name: DASHBOARD_COURSES[path].name, path: path},
-                            {name: 'Application Details', path: ''}
+                            {name: 'Application Details', path: ''},
                           ]
                     }
                     component={DetailView}
@@ -155,7 +155,7 @@ export default class ApplicationDashboard extends React.Component {
                       applicationType={cohort_path_name}
                       role={path}
                     />
-                  )
+                  ),
                 ];
               })
             )}

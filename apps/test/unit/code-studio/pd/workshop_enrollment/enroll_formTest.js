@@ -23,11 +23,12 @@ describe('Enroll Form', () => {
   });
 
   const props = {
+    user_id: 1,
     workshop_id: 1,
     first_name: 'Rubeus',
     email: 'rhagrid@hogwarts.edu',
     previous_courses: ['Transfiguration', 'Potions', 'Herbology'],
-    onSubmissionComplete: () => {}
+    onSubmissionComplete: () => {},
   };
 
   const school_id = '60001411118';
@@ -36,14 +37,15 @@ describe('Enroll Form', () => {
     school_name: 'Summit Leadership Academy High Desert',
     school_state: 'CA',
     school_type: 'charter',
-    school_zip: '92345'
+    school_zip: '92345',
   };
 
   const baseParams = {
+    user_id: 1,
     first_name: 'Rubeus',
     last_name: 'Hagrid',
     email: props.email,
-    school_info: school_info
+    school_info: school_info,
   };
 
   const extraParams = {
@@ -51,11 +53,10 @@ describe('Enroll Form', () => {
     grades_teaching: ['Pre-K'],
     csf_intro_intent: 'Yes',
     attended_csf_intro_workshop: 'Yes',
-    csf_has_physical_curriculum_guide: 'Yes',
     years_teaching: '10',
     years_teaching_cs: '5',
     taught_ap_before: 'Yes',
-    planning_to_teach_ap: 'Yes'
+    planning_to_teach_ap: 'Yes',
   };
 
   const testValidateFields = (form, params, errorProperty) => {
@@ -76,11 +77,12 @@ describe('Enroll Form', () => {
     const extraRequiredParams = ['role', 'grades_teaching'];
     const requiredParams = {
       ...baseParams,
-      ...pick(extraParams, extraRequiredParams)
+      ...pick(extraParams, extraRequiredParams),
     };
     beforeEach(() => {
       enrollForm = shallow(
         <EnrollForm
+          user_id={props.user_id}
           workshop_id={props.workshop_id}
           workshop_course="CS Fundamentals"
           first_name={props.first_name}
@@ -125,11 +127,12 @@ describe('Enroll Form', () => {
     const extraRequiredParams = ['role', 'grades_teaching', 'csf_intro_intent'];
     const requiredParams = {
       ...baseParams,
-      ...pick(extraParams, extraRequiredParams)
+      ...pick(extraParams, extraRequiredParams),
     };
     beforeEach(() => {
       enrollForm = shallow(
         <EnrollForm
+          user_id={props.user_id}
           workshop_id={props.workshop_id}
           workshop_course="CS Fundamentals"
           workshop_subject={SubjectNames.SUBJECT_CSF_101}
@@ -168,11 +171,12 @@ describe('Enroll Form', () => {
     const extraRequiredParams = ['role', 'grades_teaching', 'csf_intro_intent'];
     const requiredParams = {
       ...baseParams,
-      ...pick(extraParams, extraRequiredParams)
+      ...pick(extraParams, extraRequiredParams),
     };
     beforeEach(() => {
       enrollForm = shallow(
         <EnrollForm
+          user_id={props.user_id}
           workshop_id={props.workshop_id}
           workshop_course="CS Fundamentals"
           workshop_subject={SubjectNames.SUBJECT_CSF_DISTRICT}
@@ -212,15 +216,15 @@ describe('Enroll Form', () => {
       'role',
       'grades_teaching',
       'attended_csf_intro_workshop',
-      'csf_has_physical_curriculum_guide'
     ];
     const requiredParams = {
       ...baseParams,
-      ...pick(extraParams, extraRequiredParams)
+      ...pick(extraParams, extraRequiredParams),
     };
     beforeEach(() => {
       enrollForm = shallow(
         <EnrollForm
+          user_id={props.user_id}
           workshop_id={props.workshop_id}
           workshop_course="CS Fundamentals"
           workshop_subject={SubjectNames.SUBJECT_CSF_201}
@@ -257,11 +261,12 @@ describe('Enroll Form', () => {
 
   describe('CSP Enroll Form', () => {
     const requiredParams = {
-      ...baseParams
+      ...baseParams,
     };
     beforeEach(() => {
       enrollForm = shallow(
         <EnrollForm
+          user_id={props.user_id}
           workshop_id={props.workshop_id}
           workshop_course="CS Principles"
           first_name={props.first_name}
@@ -302,6 +307,7 @@ describe('Enroll Form', () => {
     beforeEach(() => {
       enrollForm = shallow(
         <EnrollForm
+          user_id={props.user_id}
           workshop_id={props.workshop_id}
           workshop_course="CS Principles"
           first_name={props.first_name}
@@ -331,15 +337,16 @@ describe('Enroll Form', () => {
       'years_teaching',
       'years_teaching_cs',
       'taught_ap_before',
-      'planning_to_teach_ap'
+      'planning_to_teach_ap',
     ];
     const requiredParams = {
       ...baseParams,
-      ...pick(extraParams, extraRequiredParams)
+      ...pick(extraParams, extraRequiredParams),
     };
     beforeEach(() => {
       enrollForm = shallow(
         <EnrollForm
+          user_id={props.user_id}
           workshop_id={props.workshop_id}
           workshop_course="CS Principles"
           workshop_subject={SubjectNames.SUBJECT_CSP_FOR_RETURNING_TEACHERS}
@@ -395,6 +402,7 @@ describe('Enroll Form', () => {
     beforeEach(() => {
       enrollForm = shallow(
         <EnrollForm
+          user_id={props.user_id}
           workshop_id={props.workshop_id}
           workshop_course="Admin/Counselor Workshop"
           first_name={props.first_name}
@@ -434,11 +442,12 @@ describe('Enroll Form', () => {
   describe('All Enroll Forms', () => {
     const requiredParams = {
       ...baseParams,
-      ...pick(extraParams, ['role', 'grades_teaching'])
+      ...pick(extraParams, ['role', 'grades_teaching']),
     };
     beforeEach(() => {
       enrollForm = shallow(
         <EnrollForm
+          user_id={props.user_id}
           workshop_id={props.workshop_id}
           workshop_course="CS Fundamentals"
           first_name={props.first_name}
@@ -454,16 +463,16 @@ describe('Enroll Form', () => {
         school_name: 'Hogwarts School of Witchcraft and Wizardry',
         school_state: 'Washington',
         school_zip: '12345',
-        school_type: 'Private school'
+        school_type: 'Private school',
       };
       const expectedSchoolInfo = {
         ...school_info_without_id,
-        school_type: 'private'
+        school_type: 'private',
       };
       let expectedData = {...requiredParams, school_info: expectedSchoolInfo};
       enrollForm.setState({
         ...requiredParams,
-        school_info: school_info_without_id
+        school_info: school_info_without_id,
       });
 
       enrollForm.find('#submit').simulate('click');
@@ -481,7 +490,7 @@ describe('Enroll Form', () => {
       expect(jQuery.ajax.calledOnce).to.be.true;
       expect(JSON.parse(jQuery.ajax.getCall(0).args[0].data)).to.deep.equal({
         ...requiredParams,
-        school_info: {school_id: school_id}
+        school_info: {school_id: school_id},
       });
     });
 
@@ -508,6 +517,7 @@ describe('Enroll Form', () => {
       // prop but never an email prop, which caused a bug in the past.
       enrollForm = shallow(
         <EnrollForm
+          user_id={props.user_id}
           workshop_id={props.workshop_id}
           first_name={'Student'}
           email={''}

@@ -1,34 +1,25 @@
 name 'cspu3_assess1_outputdrawing'
-encrypted 'pq9f92Y5WNlsMzzAPz6r+jYi6xDMy0MEZYoUN+qOPpSctbWVC9Ig492NTaBh
-WMUnql7xwqS4SjJZKTRnhI2g2WT072c8G+JvysxTj9xtiBnr4E+YXJGbE7IU
-P+pJZWtg4FY918oly79aRfR9NhLbVjK2EkQvAz/A2eOl2gp4mTBU7tgdATcq
-ffNW+7Y/+zAaSwYFhntx4EBU5TKH8lAf4x3w5zIu7+q5DWvMflcMCasSx+GJ
-s0xVV4HRhJmrerOZEz9RlOnXQaDahuyc5sDXK+z9mOYLmkIYZlRsj2aIwhvo
-yE7dhz0uv3EML1W0JcO3epwQEJ6EVr1d0cG62qNGGJAWPNOjT0mmuKRTIGss
-4TvZupo01Et22tw4bBbSGm87eAVaqBEX3tndaLqXbMZSTcD5A2VSjFThRBc6
-/r+JlgFWwI44KQNHr2r17pnpnOd5cgO2DrS507djVf3GObKlY6agIEL2UpyV
-CihGUnL04B+WmNs9sqlhrP6fTVCDERXO8uH23GCd4gTrBZR1tB1PvMpmp5WJ
-KQkJYpSqnW9fW8nTLH1K8j4s2NqcYBWZJb2uwquv3paHeSczyEZ4SdLLaph3
-OOE9JHIP3bKT2VarkiFmzFkQC8a2lv0YLr68mk7uDAKymPcGemJ0HiTHhbkH
-743LR+EHX7sRaJPqhr+B/nYivDuApbK/EEoCRP0RWcWQVH4XaV7aZJNJU6Z4
-vZ+/z3a84uXLVmekKGE/nT3E00GniJttirhlFaYEWMB3Ygb7gaKojbjFXpoO
-NaFhissyB5FGeAT1OeZxb5s7x7aWlvMhoHvTeHnbhbuInEQB3wMcc0uVzpDv
-veq83VHxX5hUnpNvAMblZqL8WtcBrpzdY2GGlD1wBSSgKqTWTam47jUdb/tM
-YVC/pMvKFjXdT8rSJKYhAqGZbPv7IpzLG9RY5g2dGKGO3N51OYK5UKrRqM7X
-YqIu/TGKxb/S8wZNunXijH+3zYvOa7yw2XtSc1ct+j44p7halSPWFXHSqzlM
-Hpb98JWRCBremwUG82DzWizF5kzX2Hf9FiR9qYG8RUWduEKkoNHyj56lxoyn
-r8ScZf9z1Q+q1D28IJ1nOqtygeIXjuFURzJJ1QesxC3i8Hl3EbLIzrAfvQnh
-z9d/HRw86uF4vris+Sc+45JpEWcNOY90iEWREejBDNXlEHHt50EIMNDk2g0+
-kQGQIj55jRWOFBZVFhmqFF35R87QO1GtuTdYkJF46N5OmcQ4woFIQTTWFZY0
-I4TTM8ZExIxzpOPMhu4D/FQhF0ZEiqSmYM2ZghNLazCnGqOSZDcQMczBAvIY
-mRMZdVK4+xkzAmglQE+lFUvDw7G78SfMDtgenaMnOUdPe3DxO6QblaXeoyyB
-/gSrAsAVuVcIS5S5a7JLtwKVcSeoNMPqQtOegt4AW+WWuIzSURJoZPxwDECr
-ghPsgUq3GnVNyldFClrZvoV7X2WgRcENMz/a7Y+HNKmN9PfG4MhuMvQRg/MQ
-zHe2SwAAL4Gl2fxefGWO5ldaBpAD/3ZhByjxrvR/l6IHSyB6eg70KLA98o5u
-A24XCsQRne1q4Lou5p7HbeuYMAOnOX4qQ5lPrViw3p6C98pixB9zccIi1uVe
-xDATTcCr0dwf62V5wBtWiF3LdsGxW8JLCzpOkPeuZRv859QprvqdM97wNhsX
-ubTZBwx7iIR+pezaqfVkEl7Nai0v/qICjoQkrYGBf7pQvhtR96vf9IuJIYvN
-smmWLn0vdfaROMly6lW0F7aSe1CYQq/MvXnfKGEOw8CnxOZmPWmayxvBl2L0
-Z94QJledOo78H9twDjwruLEVH5iCCwrCD1pMaMWti805hmQEafa6Hr+26Seb
-6W2ZugqkNFGorJZVLf/P6ZoqRnp0qSSwkzJmE0o=
-'
+wrong 'https://images.code.org/1ddd36415858d0e056a5c2c589942d1c-image-1474952938406.png'
+right 'https://images.code.org/398d74d563ef5805ac454c32f380eefc-image-1474952945880.png'
+wrong 'https://images.code.org/541ead4415ca46143c28488e98959ce1-image-1474952952694.png'
+wrong 'https://images.code.org/b4285d50fecbf87a4367874309418048-image-1478615622554.png'
+wrong 'https://images.code.org/fbec51267ca027aac826af9f96ac9df6-image-1474952964806.png'
+
+markdown <<MARKDOWN
+Which of the following images represents the most likely output produced by the code segment given below?
+
+![](https://images.code.org/e97c38a42f3b9970454a91d7e4af2ff6-image-1474953070863.png)
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Going through the given chunk of code line by line:
+
+* Line 1: A for loop is written. Given the beginning "i = 0" and the condition "i < 15", the code inside the loop will run 15 times.
+* Line 2: The robot will move forward somewhere between 15 and 75 steps, the number of steps is chosen at random.
+* Line 3: The robot turns 90 degrees to the right.
+
+Lines 2 and 3 are repeated 15 times, so there will be 15 lines made. As the robot turns 90 degrees each time, the corner it turns will be right angles. By process of elimination (right angles, and the robot moves forward 15 times with varied distances each time), an answer can be chosen.
+MARKDOWN
+
+allow_multiple_attempts true

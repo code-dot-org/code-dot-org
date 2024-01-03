@@ -9,7 +9,7 @@ const SET_POEM_LIST = 'poetry/SET_POEM_LIST';
 
 const initialState = {
   selectedPoem: {key: '', title: '', author: '', lines: []},
-  poemList: {}
+  poemList: {},
 };
 
 /**
@@ -26,13 +26,13 @@ export default function reducer(state, action) {
           key: action.key || '',
           title: action.title || '',
           author: action.author || '',
-          lines: [...(action.lines || [])]
-        }
+          lines: [...(action.lines || [])],
+        },
       };
     case SET_POEM_LIST:
       return {
         ...state,
-        poemList: action.poemList
+        poemList: action.poemList,
       };
     default:
       return state;
@@ -46,14 +46,14 @@ export default function reducer(state, action) {
 export function setPoem(poem) {
   return {
     type: SET_POEM,
-    ...poem
+    ...poem,
   };
 }
 
 export function setPoemList(poemList) {
   return {
     type: SET_POEM_LIST,
-    poemList
+    poemList,
   };
 }
 

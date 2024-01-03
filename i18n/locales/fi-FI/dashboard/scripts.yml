@@ -161,6 +161,7 @@ fi:
           description_short: Luo tarina tai rakenna peli käyttäen Gumball Pelilabraa!
           student_description: Luo tarina tai rakenna peli käyttäen Gumball Pelilabraa!
         starwars:
+          title: 'Tähtien sota: Rakenna galaksi koodaten (JavaScript)'
           description: Opettele ohjelmoimaan droideja ja luo kaukaiseen galaksiin ikioma Tähtien Sota -pelisi.
           description_short: Opettele ohjelmoimaan droideja ja luo kaukaiseen galaksiin ikioma Tähtien Sota -pelisi.
           student_description: Opettele ohjelmoimaan droideja ja luo kaukaiseen galaksiin ikioma Tähtien Sota -pelisi.
@@ -169,7 +170,7 @@ fi:
           description_short: Opettele ohjelmoimaan droideja ja luo kaukaiseen galaksiin ikioma Tähtien Sota -pelisi.
           student_description: Opettele ohjelmoimaan droideja ja luo kaukaiseen galaksiin ikioma Tähtien Sota -pelisi.
         mc:
-          title: Minecraft Koodaustunti
+          title: Minecraft seikkailija
           description: Käytä koodipalikoita viedäksesi Steven tai Alexin seikkailulle läpi Minecraft-maailman
           description_short: Tutki Minecraft-maailmaa koodin kautta
           student_description: Käytä koodipalikoita viedäksesi Steven tai Alexin seikkailulle läpi Minecraft-maailman
@@ -1622,6 +1623,18 @@ fi:
           lessons:
             lesson-3:
               name: Silmukat
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Kysely
+        csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Luku 1: Ongelmanratkaisu prosessi'
+            lessonGroup-3:
+              display_name: 'Luku 2: Tietokoneet ja ongelmanratkaisu'
+            lessonGroup-5:
+              display_name: Kysely
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -1640,6 +1653,10 @@ fi:
               display_name: 'Luku 1: Kuvia ja animaatioita'
             lessonGroup-3:
               display_name: 'Luku 2: Pelien rakentaminen'
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Luku 2: Laitteiston syöte'
         physcomp-temp:
           lesson_groups:
             lessonGroup-3:
@@ -1666,6 +1683,10 @@ fi:
               display_name: Listat
             lessonGroup-3:
               display_name: Silmukat
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Arvioinnit
         devices-2022:
           lesson_groups:
             lessonGroup-4:
@@ -1673,4 +1694,325 @@ fi:
         microbit-2022:
           lesson_groups:
             lessonGroup-4:
+              display_name: 'Luku 2: Laitteiston syöte'
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Silmukat
+            csf_events:
+              display_name: Tapahtumat
+        express-2023:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: Tapahtumat
+            csf_loops:
+              display_name: Silmukat
+            csf_conditionals:
+              display_name: Ehtolausekkeet
+            csf_functions:
+              display_name: Funktiot
+            csf_variables:
+              display_name: Muuttujat
+            csf_for_loops:
+              display_name: Silmukat
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalinen kansalaisuus
+            csf_loops:
+              display_name: Silmukat
+            csf_events:
+              display_name: Tapahtumat
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalinen kansalaisuus
+            csf_loops:
+              display_name: Silmukat
+            csf_events:
+              display_name: Tapahtumat
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalinen kansalaisuus
+            csf_loops:
+              display_name: Silmukat
+            csf_events:
+              display_name: Tapahtumat
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digitaalinen kansalaisuus
+            csf_events:
+              display_name: Tapahtumat
+            csf_loops:
+              display_name: Silmukat
+            csf_conditionals:
+              display_name: Ehtolausekkeet
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalinen kansalaisuus
+            ramp_up:
+              display_name: Sisäkkäiset silmukat
+            csf_functions:
+              display_name: Funktiot
+            csf_nested_loops:
+              display_name: Ehtolausekkeet
+        problem-solving-computing-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Luku 1: Ongelmanratkaisu prosessi'
+            lessonGroup-3:
+              display_name: 'Luku 2: Tietokoneet ja ongelmanratkaisu'
+        web-development-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Kysely
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Luku 1: Kuvia ja animaatioita'
+            lessonGroup-3:
+              display_name: 'Luku 2: Pelien rakentaminen'
+            lessonGroup-4:
+              display_name: Kysely
+        design-process-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Luku 1: Käyttäjäkeskeinen suunnittelu'
+            lessonGroup-3:
+              display_name: 'Luku 2: Apsin prototypointi'
+            lessonGroup-4:
+              display_name: Kysely
+        data-society-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Luku 1: Tiedon esittäminen'
+            lessonGroup-3:
+              display_name: 'Luku 2: Tieto-ongelmien ratkaisu'
+            lessonGroup-4:
+              display_name: Kysely
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Kysely
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Luku 1: Ongelmanratkaisu prosessi'
+            lessonGroup-4:
+              display_name: Kysely
+        focus-on-creativity3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Luku 1: Kuvia ja animaatioita'
+            lessonGroup-3:
+              display_name: 'Luku 2: Pelien rakentaminen'
+        focus-on-creativity4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Luku 2: Laitteiston syöte'
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Luku 1: Ongelmanratkaisu prosessi'
+            lessonGroup-3:
+              display_name: 'Luku 2: Tietokoneet ja ongelmanratkaisu'
+            lessonGroup-5:
+              display_name: Kysely
+        focus-on-hardware2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Luku 1: Tiedon esittäminen'
+            lessonGroup-3:
+              display_name: 'Luku 2: Tieto-ongelmien ratkaisu'
+        focus-on-hardware3a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Luku 2: Laitteiston syöte'
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Luku 1: Ongelmanratkaisu prosessi'
+            lessonGroup-4:
+              display_name: Kysely
+        focus-on-data2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Luku 1: Tiedon esittäminen'
+        focus-on-data2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Luku 1: Tiedon esittäminen'
+            lessonGroup-3:
+              display_name: 'Luku 2: Tieto-ongelmien ratkaisu'
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Luku 1: Ongelmanratkaisu prosessi'
+            lessonGroup-4:
+              display_name: Kysely
+        focus-on-design-with-purpose3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Luku 1: Käyttäjäkeskeinen suunnittelu'
+            lessonGroup-3:
+              display_name: 'Luku 2: Apsin prototypointi'
+        focus-on-design-with-purpose4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Luku 2: Laitteiston syöte'
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Luku 1: Ongelmanratkaisu prosessi'
+            lessonGroup-4:
+              display_name: Kysely
+        focus-on-coding3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Luku 1: Kuvia ja animaatioita'
+            lessonGroup-3:
+              display_name: 'Luku 2: Pelien rakentaminen'
+        focus-on-coding4a-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Luku 2: Laitteiston syöte'
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Luku 1: Ongelmanratkaisu prosessi'
+            lessonGroup-4:
+              display_name: Kysely
+        focus-on-impact-in-society2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Luku 1: Käyttäjäkeskeinen suunnittelu'
+            lessonGroup-3:
+              display_name: 'Luku 2: Apsin prototypointi'
+        focus-on-impact-in-society3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Luku 1: Tiedon esittäminen'
+            lessonGroup-3:
+              display_name: 'Luku 2: Tieto-ongelmien ratkaisu'
+        csd6a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Luku 2: Laitteiston syöte'
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Kysely
+        devices-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 'Luku 2: Laitteiston syöte'
+            lessonGroup-5:
+              display_name: Kysely
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Johdanto
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Johdanto
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaalinen kansalaisuus
+            lessonGroup-4:
+              display_name: Muuttujat
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaalinen kansalaisuus
+            lessonGroup-4:
+              display_name: Silmukat
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaalinen kansalaisuus
+            lessonGroup-4:
+              display_name: Silmukat
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaalinen kansalaisuus
+            lessonGroup-4:
+              display_name: Silmukat
+            lessonGroup-6:
+              display_name: Tapahtumat
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaalinen kansalaisuus
+            lessonGroup-4:
+              display_name: Silmukat
+            lessonGroup-5:
+              display_name: Tapahtumat
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digitaalinen kansalaisuus
+            lessonGroup-6:
+              display_name: Silmukat
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Sisäkkäiset silmukat
+            lessonGroup-4:
+              display_name: Funktiot
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ehtolausekkeet
+            lessonGroup-5:
+              display_name: Muuttujat
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Johdanto
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Johdanto
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Johdanto
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Johdanto
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Kysely
+            lessonGroup-2:
+              display_name: 'Luku 1: Ongelmanratkaisu prosessi'
+            lessonGroup-3:
+              display_name: 'Luku 2: Tietokoneet ja ongelmanratkaisu'
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Luku 1: Kuvia ja animaatioita'
+            lessonGroup-3:
+              display_name: 'Luku 2: Pelien rakentaminen'
+        csd4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Luku 1: Käyttäjäkeskeinen suunnittelu'
+            lessonGroup-3:
+              display_name: 'Luku 2: Apsin prototypointi'
+        csd5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Luku 1: Tiedon esittäminen'
+            lessonGroup-3:
+              display_name: 'Luku 2: Tieto-ongelmien ratkaisu'
+        csd6a-2024:
+          lesson_groups:
+            lessonGroup-3:
               display_name: 'Luku 2: Laitteiston syöte'

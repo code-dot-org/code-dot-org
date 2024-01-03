@@ -70,7 +70,7 @@ class Applab < Blockly
   # List of possible palette categories
   def self.palette_categories
     %w(uicontrols canvas data turtle control math variables functions goals) +
-        maker_palette_categories
+      maker_palette_categories
   end
 
   def self.maker_palette_categories
@@ -106,8 +106,8 @@ class Applab < Blockly
       self.code_functions = JSON.parse(code_functions)
     end
     true
-  rescue JSON::ParserError => e
-    errors.add(:code_functions, "#{e.class.name}: #{e.message}")
+  rescue JSON::ParserError => exception
+    errors.add(:code_functions, "#{exception.class.name}: #{exception.message}")
     return false
   end
 
@@ -117,8 +117,8 @@ class Applab < Blockly
       properties[property_field] = JSON.parse value
     end
     true
-  rescue JSON::ParserError => e
-    errors.add(property_field, "#{e.class.name}: #{e.message}")
+  rescue JSON::ParserError => exception
+    errors.add(property_field, "#{exception.class.name}: #{exception.message}")
     return false
   end
 

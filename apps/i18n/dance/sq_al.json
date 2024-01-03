@@ -1,7 +1,12 @@
 {
-  "danceFeedbackNeedNewDancer": "Ju keni nevojë të krijoni një kërcimtar.",
-  "danceFeedbackNoDancers": "Ju nuk keni asnjë kërcimtar.",
-  "danceFeedbackNoBackground": "Ju duhet të shtonji një efekt në sfond.",
+  "danceAiModalBack": "Kthehu",
+  "danceAiModalClose": "Mbyll",
+  "danceAiModalCodeButton": "Kod\n",
+  "danceAiModalExplanationButton": "Mëso më shumë",
+  "danceFeedbackKeepCoding": "Vazhdo të kodosh! Ti je duke përdorur të gjithë tipet e nevojshëm të blloqeve, por jo në mënyrën e duhur.",
   "danceFeedbackNeedDifferentDance": "Ju duhet të përdorni një kërcim tjetër.",
-  "danceFeedbackNeedTwoDancers": "Ju keni nevojë të krijoni dy kërcimtarë."
+  "danceFeedbackNeedNewDancer": "Ju keni nevojë të krijoni një kërcimtar.",
+  "danceFeedbackNeedTwoDancers": "Ju keni nevojë të krijoni dy kërcimtarë.",
+  "danceFeedbackNoBackground": "Ju duhet të shtonji një efekt në sfond.",
+  "danceFeedbackNoDancers": "Ju nuk keni asnjë kërcimtar."
 }

@@ -4,7 +4,7 @@ require 'cdo/yaml'
 require 'json'
 require_relative './text_render'
 
-def http_content_type(type, params={})
+def http_content_type(type, params = {})
   params = params.map {|k, v| "#{k}=#{v}"}.join('; ')
   params.empty? ? type : [type, params].join('; ')
 end
@@ -17,12 +17,12 @@ def http_expires_in(seconds)
   http_expires_at(Time.now + seconds)
 end
 
-def http_host_and_port(host, port=80)
+def http_host_and_port(host, port = 80)
   return host if port == 80
   "#{host}:#{port}"
 end
 
-def social_metadata(request, header=nil)
+def social_metadata(request, header = nil)
   metadata = {}
 
   # Metatags common to all sites.
@@ -49,7 +49,7 @@ end
 class HttpDocument
   attr_accessor :status, :headers, :body
 
-  def initialize(body, headers={}, status=200)
+  def initialize(body, headers = {}, status = 200)
     @body = body
 
     @headers = {}
@@ -59,7 +59,7 @@ class HttpDocument
     @status = status
   end
 
-  def self.from_file(path, headers={}, status=200)
+  def self.from_file(path, headers = {}, status = 200)
     content_type = content_type_from_path(path)
     new(File.read(path), {'Content-Type' => content_type, 'X-Pegasus-File' => path}.merge(headers))
   end
@@ -80,7 +80,7 @@ class HttpDocument
     @headers['Content-Type'].to_s.include?('text/markdown')
   end
 
-  def to_html!(locals, options={})
+  def to_html!(locals, options = {})
     to_html_from_haml!(locals, options) if haml?
     to_html_from_markdown!(locals, options) if markdown?
 
@@ -91,9 +91,7 @@ class HttpDocument
     apply_theme!(locals)
   end
 
-  private
-
-  def apply_encoding!
+  private def apply_encoding!
     # Ruby can't always detect utf-8 encoded data so if the content type indicates that this is
     # utf-8, FORCE Ruby to consider it such.
     if charset?('utf-8')
@@ -102,7 +100,7 @@ class HttpDocument
     end
   end
 
-  def apply_theme!(locals)
+  private def apply_theme!(locals)
     theme = headers['X-Pegasus-Theme'] || 'theme'
     return if theme == 'none'
 
@@ -136,7 +134,7 @@ class HttpDocument
     @headers['Content-Length'] = @body.bytesize.to_s
   end
 
-  def apply_view!(locals)
+  private def apply_view!(locals)
     view = headers['X-Pegasus-View']
     return if view.nil? || view == 'none'
 
@@ -170,11 +168,11 @@ class HttpDocument
     content_type_from_extname(File.extname(path))
   end
 
-  def default_charset
+  private def default_charset
     'utf-8'
   end
 
-  def resolve_template(site, view)
+  private def resolve_template(site, view)
     FileUtility.find_first_existing(
       String.multiply_concat(
         [
@@ -186,7 +184,7 @@ class HttpDocument
     )
   end
 
-  def to_html_from_haml!(locals, options)
+  private def to_html_from_haml!(locals, options)
     header, haml = YAML.parse_yaml_header(@body, locals)
     header['social'] = social_metadata(locals[:request], header)
 
@@ -200,7 +198,7 @@ class HttpDocument
     @headers['X-Pegasus-Header'] = header.to_json
   end
 
-  def to_html_from_markdown!(locals, options)
+  private def to_html_from_markdown!(locals, options)
     header, markdown = YAML.parse_yaml_header(@body)
     header['social'] = social_metadata(locals[:request], header)
 
@@ -238,7 +236,7 @@ module Pegasus
     end
 
     after do
-      response.headers.keys.each {|i| response.headers.delete(i) if /^X-Pegasus-/.match?(i);}
+      response.headers.keys.each {|i| response.headers.delete(i) if /^X-Pegasus-/.match?(i)}
 
       status = response.status.to_s.to_i
       message = "#{status} returned for #{request.site}#{request.path_info}"
@@ -274,7 +272,7 @@ module Pegasus
       body([document.body])
     end
 
-    def deliver_manipulated_image(path, format, mode, width, height=nil)
+    def deliver_manipulated_image(path, format, mode, width, height = nil)
       content_type format.to_sym
       cache_control :public, :must_revalidate, max_age: settings.image_max_age
 
@@ -293,7 +291,7 @@ module Pegasus
       types.push(type).join(',')
     end
 
-    def render(document, locals={})
+    def render(document, locals = {})
       document.to_html!(
         locals.merge(
           {
@@ -308,7 +306,7 @@ module Pegasus
       deliver(document)
     end
 
-    def resolve_document(root, uri, headers={})
+    def resolve_document(root, uri, headers = {})
       base = File.join(root, uri)
 
       extnames = settings.template_extnames
@@ -364,8 +362,8 @@ module Pegasus
         content_type :json
         cache_control :private, :must_revalidate, max_age: 0
         kind.submit(request, params).to_json
-      rescue FormError => e
-        halt 400, {'Content-Type' => 'text/json'}, e.errors.to_json
+      rescue FormError => exception
+        halt 400, {'Content-Type' => 'text/json'}, exception.errors.to_json
       end
     end
   end
@@ -384,8 +382,8 @@ class CurriculumRouter < Pegasus::Base
 
   get '/curriculum/:kind' do |kind|
     # Temporarily prevent non K-5/MSM curriculum from appearing on production.
-    unless CurriculumCourse::PRODUCTION_COURSES.include? kind
-      pass if rack_env == :production
+    if !CurriculumCourse::PRODUCTION_COURSES.include?(kind) && (rack_env == :production)
+      pass
     end
 
     pass unless request.site == 'code.org'
@@ -414,8 +412,8 @@ class CurriculumRouter < Pegasus::Base
   end
 
   get '/curriculum/:kind/docs/*' do |kind, file|
-    unless CurriculumCourse::PRODUCTION_COURSES.include? kind
-      pass if rack_env == :production
+    if !CurriculumCourse::PRODUCTION_COURSES.include?(kind) && (rack_env == :production)
+      pass
     end
 
     pass unless request.site == 'code.org'
@@ -426,8 +424,8 @@ class CurriculumRouter < Pegasus::Base
   end
 
   get '/curriculum/:kind/*' do |kind, parts|
-    unless CurriculumCourse::PRODUCTION_COURSES.include? kind
-      pass if rack_env == :production
+    if !CurriculumCourse::PRODUCTION_COURSES.include?(kind) && (rack_env == :production)
+      pass
     end
 
     pass unless request.site == 'code.org'

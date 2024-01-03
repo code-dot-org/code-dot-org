@@ -10,3 +10,5 @@ wrong 'Code inside the body never runs.'
 markdown <<MARKDOWN
 Which of the following is **ALWAYS** true for **BOTH** `while` loops and `if` statements?
 MARKDOWN
+
+allow_multiple_attempts true

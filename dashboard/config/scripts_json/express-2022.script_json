@@ -15,12 +15,17 @@
         "artist"
       ],
       "project_widget_visible": true,
+      "supported_locales": [
+        "fa-AF",
+        "fa-IR",
+        "sq-AL"
+      ],
       "tts": true,
       "version_year": "2022"
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2022-11-17 16:57:03 UTC",
+    "serialized_at": "2023-11-01 21:17:57 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -21336,6 +21341,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

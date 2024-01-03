@@ -21,3 +21,5 @@ Going through the given chunk of code line by line:
 
 Lines 2 and 3 are repeated 15 times, so there will be 15 lines made. As the robot turns 90 degrees each time, the corner it turns will be right angles. By process of elimination (right angles, and the robot moves forward 15 times with varied distances each time), an answer can be chosen.
 MARKDOWN
+
+allow_multiple_attempts true

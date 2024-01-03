@@ -37,8 +37,10 @@ kk:
         age: 'Жасы'
         gender: 'Жынысы'
         edit_header: 'Жеке парақша мәліметтерін өзгерту'
+        finish_sign_up_header_error: 'Өтінеміз көрсетілген қателерді түзетіңіз:'
         error:
           future: болашақта болуы мүмкін емес
+        user_type: 'Аккаунт Түрі'
   beta: "бета"
   hello: "Сәлем, әлем"
   welcome_back: "Қайта оралуыңызбен, %{name}"
@@ -109,7 +111,6 @@ kk:
     valid_password: "Жарамды құпия сөз!"
     invalid_password: "Құпия сөз 6 символдан кем болмауы керек"
     mismatch_password: "Еңгізілген құпия сөздер сәйкес келмейді"
-    additional_information: "Сізді тіркеу үшін бізге қосымша ақпарат керек."
     user_type_label: "Аккаунт Түрі"
     user_type_student: "Оқушы"
     user_type_teacher: "Мұғалім"
@@ -610,9 +611,15 @@ kk:
       robotics:
         kodable: 'Kodable'
         other: "Басқасы"
+      workshop_course:
+        other: 'Басқасы'
       email_opt_in:
         opt_in_yes: 'Иә'
         opt_in_no: 'Жоқ'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
+      sports: 'Спорттар'
   cookie_banner:
     accept: 'Мен келісемін'
   copy: 'Көшіру'

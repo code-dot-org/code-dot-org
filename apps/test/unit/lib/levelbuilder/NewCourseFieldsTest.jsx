@@ -20,7 +20,7 @@ describe('NewCourseFieldsTest', () => {
       setVersionYear,
       instructorAudience: '',
       participantAudience: '',
-      instructionType: ''
+      instructionType: '',
     };
   });
 
@@ -37,7 +37,7 @@ describe('NewCourseFieldsTest', () => {
       familyName: 'family-1',
       instructorAudience: 'teacher',
       participantAudience: 'student',
-      instructionType: 'teacher_led'
+      instructionType: 'teacher_led',
     });
     expect(wrapper.find('.isVersionedSelector').length).to.equal(1);
 
@@ -49,7 +49,7 @@ describe('NewCourseFieldsTest', () => {
       familyName: '',
       instructorAudience: '',
       participantAudience: '',
-      instructionType: ''
+      instructionType: '',
     });
 
     expect(wrapper.find('.isVersionedSelector').length).to.equal(0);
@@ -68,7 +68,7 @@ describe('NewCourseFieldsTest', () => {
       familyName: 'family-1',
       instructorAudience: 'teacher',
       participantAudience: 'student',
-      instructionType: 'teacher_led'
+      instructionType: 'teacher_led',
     });
     expect(wrapper.find('.isVersionedSelector').length).to.equal(1);
 
@@ -119,7 +119,7 @@ describe('NewCourseFieldsTest', () => {
       familyName: 'family-1',
       instructorAudience: 'teacher',
       participantAudience: 'student',
-      instructionType: 'teacher_led'
+      instructionType: 'teacher_led',
     });
     expect(wrapper.find('.isVersionedSelector').length).to.equal(1);
     expect(wrapper.find('CourseTypeEditor').length).to.equal(1);
@@ -182,7 +182,7 @@ describe('NewCourseFieldsTest', () => {
       familyName: 'family-1',
       instructorAudience: 'teacher',
       participantAudience: 'student',
-      instructionType: 'teacher_led'
+      instructionType: 'teacher_led',
     });
     expect(wrapper.find('.isVersionedSelector').length).to.equal(1);
     expect(wrapper.find('CourseTypeEditor').length).to.equal(1);

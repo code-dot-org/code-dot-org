@@ -4,3 +4,4 @@ wrong 'Both planes will move one space along the grid, then stop.', feedback: 'I
 right 'Both planes will start moving and not stop.', feedback: 'Correct! These behaviors tell the planes to start moving and keep going.'
 wrong 'One plane will move first, and the other plane will move later.', feedback: 'Incorrect. Each block of code in Sprite Lab runs instantly after the next.'
 wrong 'The planes will crash.', feedback: 'Incorrect. The planes are not positioned in a way that will make them touch.'
+allow_multiple_attempts false

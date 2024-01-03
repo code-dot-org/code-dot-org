@@ -18,11 +18,11 @@ export default class AddLevelDialog extends Component {
     addLevel: PropTypes.func.isRequired,
     activityPosition: PropTypes.number.isRequired,
     activitySection: activitySectionShape.isRequired,
-    allowMajorCurriculumChanges: PropTypes.bool.isRequired
+    allowMajorCurriculumChanges: PropTypes.bool.isRequired,
   };
 
   state = {
-    levelPosToRemove: null
+    levelPosToRemove: null,
   };
 
   handleRemoveLevel = levelPos => {
@@ -74,7 +74,7 @@ export default class AddLevelDialog extends Component {
           <Button
             text={i18n.closeAndSave()}
             onClick={this.props.handleConfirm}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
             className="save-add-levels-button"
           />
         </DialogFooter>
@@ -86,33 +86,33 @@ export default class AddLevelDialog extends Component {
 const styles = {
   dialog: {
     width: 970,
-    marginLeft: -500
+    marginLeft: -500,
   },
   dialogContent: {
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   topArea: {
     display: 'flex',
     flexDirection: 'column',
-    margin: 15
+    margin: 15,
   },
   bottomArea: {
     display: 'flex',
     flexDirection: 'column',
-    margin: 15
+    margin: 15,
   },
   textArea: {
-    width: '95%'
+    width: '95%',
   },
   levelsBox: {
     border: '1px solid black',
     width: '95%',
     height: '100%',
-    padding: 10
+    padding: 10,
   },
   filtersAndLevels: {
     display: 'flex',
-    flexDirection: 'column'
-  }
+    flexDirection: 'column',
+  },
 };

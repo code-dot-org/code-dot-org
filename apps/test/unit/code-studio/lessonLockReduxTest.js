@@ -7,11 +7,11 @@ import {
   stubRedux,
   restoreRedux,
   registerReducers,
-  getStore
+  getStore,
 } from '@cdo/apps/redux';
 import {
   NO_SECTION,
-  selectSection
+  selectSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import reducer, {
   LockStatus,
@@ -26,7 +26,7 @@ import reducer, {
   CLOSE_LOCK_DIALOG,
   fullyLockedLessonMapping,
   setSectionLockStatus,
-  refetchSectionLockStatus
+  refetchSectionLockStatus,
 } from '@cdo/apps/code-studio/lessonLockRedux';
 
 // some arbitrary data in a form we expect to receive from the server
@@ -42,7 +42,7 @@ describe('lessonLockRedux reducer tests', () => {
 
       assert.deepEqual(nextState.lessonsBySectionId, {
         [section1Id]: fakeSectionData[section1Id].lessons,
-        [section2Id]: fakeSectionData[section2Id].lessons
+        [section2Id]: fakeSectionData[section2Id].lessons,
       });
     });
   });
@@ -68,8 +68,8 @@ describe('lessonLockRedux reducer tests', () => {
           name: 'student4',
           lockStatus: LockStatus.Locked,
           userLevelData:
-            fakeSectionData[section2Id].lessons[lesson1Id][0].user_level_data
-        }
+            fakeSectionData[section2Id].lessons[lesson1Id][0].user_level_data,
+        },
       ]);
     });
 
@@ -109,18 +109,18 @@ describe('lessonLockRedux reducer tests', () => {
         {
           userLevelData: student1.user_level_data,
           name: student1.name,
-          lockStatus: LockStatus.Locked
+          lockStatus: LockStatus.Locked,
         },
         {
           userLevelData: student2.user_level_data,
           name: student2.name,
-          lockStatus: LockStatus.Editable
+          lockStatus: LockStatus.Editable,
         },
         {
           userLevelData: student3.user_level_data,
           name: student3.name,
-          lockStatus: LockStatus.ReadonlyAnswers
-        }
+          lockStatus: LockStatus.ReadonlyAnswers,
+        },
       ];
       assert.deepEqual(nextState.lockStatus, expected);
     });
@@ -249,13 +249,13 @@ describe('saveLockDialog', () => {
       {
         user_level_data: student2.user_level_data,
         locked: false,
-        readonly_answers: true
+        readonly_answers: true,
       },
       {
         user_level_data: student3.user_level_data,
         locked: false,
-        readonly_answers: false
-      }
+        readonly_answers: false,
+      },
     ]);
 
     lastRequest.respond(
@@ -292,18 +292,18 @@ describe('saveLockDialog', () => {
       {
         user_level_data: student1.user_level_data,
         locked: true,
-        readonly_answers: false
+        readonly_answers: false,
       },
       {
         user_level_data: student2.user_level_data,
         locked: true,
-        readonly_answers: false
+        readonly_answers: false,
       },
       {
         user_level_data: student3.user_level_data,
         locked: true,
-        readonly_answers: false
-      }
+        readonly_answers: false,
+      },
     ]);
 
     lastRequest.respond(
@@ -325,99 +325,99 @@ describe('saveLockDialog', () => {
 describe('fullyLockedLessonMapping', () => {
   const sections = {
     // all lessons fully locked
-    '11': {
-      '1360': [
+    11: {
+      1360: [
         {
           // Note: Actual state has more fields, I've filtered to just those
           // that we care about, for simplicity
           name: 'student1',
-          locked: true
+          locked: true,
         },
         {
           name: 'student2',
-          locked: true
-        }
+          locked: true,
+        },
       ],
-      '1361': [
+      1361: [
         {
           name: 'student1',
-          locked: true
+          locked: true,
         },
         {
           name: 'student2',
-          locked: true
-        }
-      ]
+          locked: true,
+        },
+      ],
     },
     // no lessons fully locked
-    '12': {
+    12: {
       // some students are locked, others arent
-      '1360': [
+      1360: [
         {
           name: 'student1',
-          locked: false
+          locked: false,
         },
         {
           name: 'student2',
-          locked: true
-        }
+          locked: true,
+        },
       ],
       // entirely unlocked
-      '1361': [
+      1361: [
         {
           name: 'student1',
-          locked: false
+          locked: false,
         },
         {
           name: 'student2',
-          locked: false
-        }
-      ]
+          locked: false,
+        },
+      ],
     },
     // mix of fully locked lessons and not
-    '13': {
-      '1360': [
+    13: {
+      1360: [
         {
           name: 'student1',
-          locked: true
+          locked: true,
         },
         {
           name: 'student2',
-          locked: true
-        }
+          locked: true,
+        },
       ],
       // entirely unlocked
-      '1361': [
+      1361: [
         {
           name: 'student1',
-          locked: true
+          locked: true,
         },
         {
           name: 'student2',
-          locked: false
-        }
-      ]
-    }
+          locked: false,
+        },
+      ],
+    },
   };
 
   it('maps to true for fully locked lessons', () => {
     assert.deepEqual(fullyLockedLessonMapping(sections['11']), {
-      '1360': true,
-      '1361': true
+      1360: true,
+      1361: true,
     });
   });
 
   it('maps to false for non-fully locked lessons', () => {
     assert.deepEqual(fullyLockedLessonMapping(sections['12']), {
-      '1360': false,
-      '1361': false
+      1360: false,
+      1361: false,
     });
   });
 
   it('works when some of our lessons are locked and others arent', () => {
     assert.deepEqual(fullyLockedLessonMapping(sections['13']), {
-      '1360': true,
-      '1361': false
+      1360: true,
+      1361: false,
     });
   });
 
@@ -441,7 +441,7 @@ describe('refetchSectionLockStatus', () => {
       done: successCallback => {
         successCallback(lockStatusResponse);
         return {fail: () => {}};
-      }
+      },
     });
   });
 
@@ -453,16 +453,14 @@ describe('refetchSectionLockStatus', () => {
   it('updates lessonsBySectionId', async () => {
     // Initial set up of lessonLockRedux with fakeSectionData
     store.dispatch(setSectionLockStatus(fakeSectionData));
-    let student2 = store.getState().lessonLock.lessonsBySectionId[section1Id][
-      lesson1Id
-    ][1];
+    let student2 =
+      store.getState().lessonLock.lessonsBySectionId[section1Id][lesson1Id][1];
     assert.equal(student2.locked, false);
 
     // Refetch lessonLock data with updated lock status for lesson1 student 2
     store.dispatch(refetchSectionLockStatus(section1Id, scriptId));
-    student2 = store.getState().lessonLock.lessonsBySectionId[section1Id][
-      lesson1Id
-    ][1];
+    student2 =
+      store.getState().lessonLock.lessonsBySectionId[section1Id][lesson1Id][1];
     assert.equal(student2.locked, true);
   });
 });

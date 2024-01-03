@@ -10,6 +10,13 @@ import {hidePublishDialog, publishProject} from './publishDialogRedux';
 import {RestrictedPublishProjectTypes} from '@cdo/apps/util/sharedConstants';
 import color from '@cdo/apps/util/color';
 
+const PUBLISH_FAILED_RESPONSE_MESSAGES = {
+  sharingDisabled: 'Sharing disabled for user account',
+  projectInRestrictedShareMode: 'Project in restricted share mode',
+  userTooNew: 'User too new to publish channel',
+  projectTooNew: 'Project too new to publish channel',
+};
+
 class PublishDialog extends Component {
   static propTypes = {
     // from redux state
@@ -27,11 +34,12 @@ class PublishDialog extends Component {
 
     // specify additional behavior after successful call to onConfirmPublish,
     // if not overridden by onConfirmPublishOverride.
-    afterPublish: PropTypes.func
+    afterPublish: PropTypes.func,
   };
 
   state = {
-    publishFailedStatus: null
+    publishFailedStatus: null,
+    publishFailedReason: '',
   };
 
   confirm = () => {
@@ -52,21 +60,43 @@ class PublishDialog extends Component {
   };
 
   onPublishError = err => {
-    this.setState({publishFailedStatus: err.status});
+    this.setState({
+      publishFailedStatus: err.status,
+      publishFailedReason: err.response,
+    });
   };
 
   getErrorMessage = () => {
-    const {publishFailedStatus} = this.state;
+    const {publishFailedStatus, publishFailedReason} = this.state;
     const {projectType} = this.props;
     if (!publishFailedStatus) {
       return null;
     } else if (
       publishFailedStatus === 403 &&
-      RestrictedPublishProjectTypes.includes(projectType)
+      RestrictedPublishProjectTypes.includes(projectType) &&
+      publishFailedReason ===
+        PUBLISH_FAILED_RESPONSE_MESSAGES.projectInRestrictedShareMode
     ) {
       return i18n.publishFailedRestrictedShare();
-    } else if (publishFailedStatus === 403) {
+    } else if (
+      publishFailedStatus === 403 &&
+      publishFailedReason === PUBLISH_FAILED_RESPONSE_MESSAGES.sharingDisabled
+    ) {
       return i18n.publishFailedForbidden();
+    } else if (
+      publishFailedStatus === 403 &&
+      publishFailedReason.startsWith(
+        PUBLISH_FAILED_RESPONSE_MESSAGES.userTooNew
+      )
+    ) {
+      return `${i18n.publishFailed()}. ${i18n.publishFailedAccountTooNew()}`;
+    } else if (
+      publishFailedStatus === 403 &&
+      publishFailedReason.startsWith(
+        PUBLISH_FAILED_RESPONSE_MESSAGES.projectTooNew
+      )
+    ) {
+      return `${i18n.publishFailed()}. ${i18n.publishFailedProjectTooNew()}`;
     } else if (publishFailedStatus === 400 || publishFailedStatus === 401) {
       return i18n.publishFailedNotAllowed();
     } else {
@@ -102,7 +132,7 @@ class PublishDialog extends Component {
           <Button
             text={i18n.publish()}
             onClick={this.confirm}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
             className="no-mc"
             isPending={isPublishPending}
             pendingText={i18n.publishPending()}
@@ -119,11 +149,11 @@ const styles = {
   dialog: {
     paddingLeft: 20,
     paddingRight: 20,
-    paddingBottom: 20
+    paddingBottom: 20,
   },
   error: {
-    color: color.red
-  }
+    color: color.red,
+  },
 };
 
 export const UnconnectedPublishDialog = Radium(PublishDialog);
@@ -133,7 +163,7 @@ export default connect(
     isOpen: state.publishDialog.isOpen,
     isPublishPending: state.publishDialog.isPublishPending,
     projectId: state.publishDialog.projectId,
-    projectType: state.publishDialog.projectType
+    projectType: state.publishDialog.projectType,
   }),
   dispatch => ({
     onClose() {
@@ -141,6 +171,6 @@ export default connect(
     },
     onConfirmPublish(projectId, projectType) {
       return dispatch(publishProject(projectId, projectType));
-    }
+    },
   })
 )(Radium(PublishDialog));

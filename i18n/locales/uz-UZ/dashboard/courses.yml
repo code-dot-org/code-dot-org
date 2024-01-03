@@ -48,3 +48,38 @@ uz:
           description_short: O'quvchilarga haqiqiy artefaktlar yaratish imkoniyatini beradigan kirish fanlari kursi.
           description_student: Informatika kashfiyotlari (CS Discoveries) - bu o'quvchilarga haqiqiy artefaktlar yaratish va ijodkorlik, muloqot, muammolarni hal qilish va o'yin-kulgi vositasi sifatida kompyuter fanlari bilan shug'ullanish imkoniyatini beradigan kirish kursidir.
           description_teacher: Informatika kashfiyotlari (CS Discoveries) - bu o'quvchilarga haqiqiy artefaktlar yaratish va ijodkorlik, muloqot, muammolarni hal qilish va o'yin-kulgi vositasi sifatida kompyuter fanlari bilan shug'ullanish imkoniyatini beradigan kirish kursidir.
+        csd-pilot:
+          description_student: Informatika kashfiyotlari (CS Discoveries) - bu o'quvchilarga haqiqiy artefaktlar yaratish va ijodkorlik, muloqot, muammolarni hal qilish va o'yin-kulgi vositasi sifatida kompyuter fanlari bilan shug'ullanish imkoniyatini beradigan kirish kursidir.
+        csp-2020:
+          description_short: Informatikaning asosiy tushunchalarini o‘rganing.
+        csd-2020:
+          description_short: O'quvchilarga haqiqiy artefaktlar yaratish imkoniyatini beradigan kirish fanlari kursi.
+          description_student: Informatika kashfiyotlari (CS Discoveries) - bu o'quvchilarga haqiqiy artefaktlar yaratish va ijodkorlik, muloqot, muammolarni hal qilish va o'yin-kulgi vositasi sifatida kompyuter fanlari bilan shug'ullanish imkoniyatini beradigan kirish kursidir.
+          description_teacher: Informatika kashfiyotlari (CS Discoveries) - bu o'quvchilarga haqiqiy artefaktlar yaratish va ijodkorlik, muloqot, muammolarni hal qilish va o'yin-kulgi vositasi sifatida kompyuter fanlari bilan shug'ullanish imkoniyatini beradigan kirish kursidir.
+        csp-2021:
+          description_short: Informatikaning asosiy tushunchalarini o‘rganing.
+        mike-test:
+          title: Kompyuter fanlari asoslari
+        csp-2022:
+          description_short: Informatikaning asosiy tushunchalarini o‘rganing.
+        csp-2023:
+          description_short: Informatikaning asosiy tushunchalarini o‘rganing.
+        csd-2023:
+          title: Informatika kashfiyotlari
+    resources:
+      curriculum/csd/2017:
+        name: Curriculum
+      teacher_forum_6/csd/2017:
+        name: O‘qituvchilar forumi
+      curriculum/csd/2018:
+        name: Curriculum
+      teacher_forum_6/csd/2018:
+        name: O‘qituvchilar forumi
+      curriculum/csd/2019:
+        name: Curriculum
+      teacher_forum/csd/2019:
+        name: O‘qituvchilar forumi
+      curriculum/csd/2020:
+        name: Curriculum
+      teacher_forum/csd/2020:
+        name: O‘qituvchilar forumi

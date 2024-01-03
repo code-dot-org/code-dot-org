@@ -350,9 +350,6 @@
   volunteer_engineer_submission_subtitle_generic: '2015 жылдың 7-13 желтоқсанында 100000 мұғалім өз сыныптарында Бағдарламалау сағатын өткізбек. Оларға сенің көмегің қажет! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} Мұғалімдерге еріктілер қажет.<br>Осы уақытқа дейін %{num_volunteers} ерікті жазылды. Сенд де қосыл."
   volunteer_engineer_submission_intro_background: "Бағдарламалау сағаты бұл 180 астам елдің ондаған миллион студенттерің тартатын, бір сағат ішінде информатикаға кіріспе болатын жаһандық қозғалыс. Өтінеміз, 7-13 желтоқсан аралығында болатын \"Информатика үйрету апталығына\" қатыс."
-  volunteer_engineer_submission_intro_recruit: 'Бұл оқытушыларға информатика оқып үйренуге көңілі бар <span style="font-family: ''Gotham 7r'', sans-serif;"> біреудің болғандығы дұрыс болар еді,</span>сыныпта көмектесе алатын немесе компьютер ғылымдарын зерттеу арқылы қандай табыстарға қол жеткізуге болатындығын айту арқылы<span style="font-family: ''Gotham 7r'', sans-serif;">оқушыларды ынталандыра алатын</span>біреудің болғаны (бейнечат арқылы жасауға болады).'
-  volunteer_engineer_submission_intro_signup: "Өтінеміз, егерде сіз компьютер ғылымдары факультетінің студенті немесе кәсіби бағдарламалаушы болсаңыз келесі ақпаратты толтыруыңызды сұраймыз. <span class=\"form-required-field\">*</span> белгіленген жолдар міндетті түрде толтырылуы қажет."
-  volunteer_engineer_submission_intro_links: "Сізге еріктілерді табу қажет пе? Жергілікті еріктілердерді <a href=\"%{volunteer_local}\"> еріктілерер базасынан тауып ал</a>."
   volunteer_engineer_submission_update_information: "Сіздің ақпаратыңызды жаңғырту"
   volunteer_engineer_submission_header_shared: "Ақпарат еріктілер картасында мұғалімдерге көрінеді"
   volunteer_engineer_submission_field_name: "Атыңыз"

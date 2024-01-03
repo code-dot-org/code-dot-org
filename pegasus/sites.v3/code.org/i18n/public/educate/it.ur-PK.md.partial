@@ -10,7 +10,8 @@ theme: responsive
 
 - ہم آپ کے سکول کے لیے 15 میگابٹ/سیکنڈ کے انٹرنٹ کنکشن کی سفارش کرتے ہیں.
 - سب سے چھوٹا سکریں سائز جسے ہم سپورٹ کرتے ہیں 1024 × 728 پکسل ہے.
-- آپ کو ہماے مڈل اور ہائی سکول لیول کے کورسوں CS Discoveries, CS Principles, اور Intro to App Lab کے لیے ماؤس (ٹچ پیڈ) اور کیبورڈ کے حامل ایک ڈسک ٹاپ یا لیپ ٹاپ کی ضرورت ہو گی. ان کورسز کے لیے اکثر ٹیبلٹ اور موبائل ڈیوائسز کو سپورٹ نہیں کیا جاتا. ڈیوائس کے لیے مخصوص مستثنیات کے لیے نیچے "موبائل اور ٹیبلٹ سپورٹ کی تفصیلات" دیکھیں۔
+- You will need a desktop or laptop computer (Chromebooks are included) with a mouse (or touchpad) and keyboard for our middle and high school-level courses: CS Discoveries, CS Principles, and Intro to App Lab. “See Minimum Supported Browsers and Platforms” below.
+- Most tablets (such as an iPad) and mobile devices are not supported for these courses. ڈیوائس کے لیے مخصوص مستثنیات کے لیے نیچے "موبائل اور ٹیبلٹ سپورٹ کی تفصیلات" دیکھیں۔
 - دیگر تمام مواد، جیسے K-5 کورسز (کمپیوٹر سائنس کے بنیادی اصول) اور آور آف کوڈ سرگرمیاں دیگر تمام جدید ٹیبلٹس اور لیپ ٹاپ یا ڈیسک ٹاپ کمپیوٹرز کے علاوہ iPads اور Chromebooks کے ساتھ مطابقت رکھتی ہیں۔
 - کیا آپ موبائل ڈیوائس کے سپورٹ کی تفصیلات تلاش کر رہے ہیں؟ درج ذیل پڑھ لیں۔
 
@@ -82,12 +83,12 @@ Code.org کے تمام مواد کے ساتھ بہترین تجربہ کے لی�
 
 ## موبائل اور ٹیبلٹ سپورٹ کی تفصیلات
 
-تمام CS Discoveries, CS Principles, اور Intro to App Lab کورسز ٹیبلیٹ یا موبائل ڈیوائسز کے ساتھ مطابقت نہیں رکھتے- ایک مکمل کیبورڈ اور ماؤس (یا ٹچ پیڈ، جیسا کہ MacBooks پر) درکار ہیں. زیادہ تر ٹیبلٹ تعاون یافتہ نہیں ہیں، درج ذیل مستثنیات کے ساتھ:
+All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. زیادہ تر ٹیبلٹ تعاون یافتہ نہیں ہیں، درج ذیل مستثنیات کے ساتھ:
 
 - Microsoft Surface Pro ایک بیرونی کی بورڈ کے ساتھ
 - ایک بیرونی کیبورڈ اور ایک بیرونی ماؤس یا ٹچ پیڈ کے ساتھ iPadOS 13.4 یا اس کے بعد کے آپریٹنگ سسٹم کے ساتھ چلنے والا iPad
 
-دیگر تمام مواد، جیسے K-5 کورسز (کمپیوٹر سائنس کے بنیادی اصول) اور آور آف کوڈ سرگرمیاں دیگر تمام جدید ٹیبلٹس اور لیپ ٹاپ یا ڈیسک ٹاپ کمپیوٹرز کے علاوہ iPads اور Chromebooks کے ساتھ مطابقت رکھتی ہیں۔
+All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
 
 ### موبائل فونز
 
@@ -101,15 +102,25 @@ Code.org کے تمام مواد کے ساتھ بہترین تجربہ کے لی�
 
 اس سے پہلے کہ آپ Code.org کے آن لائن کورسز شروع کریں، نیچے دی گئی ویڈیو کے لیے پلے بیک کی جانچ کریں تاکہ یہ یقینی بنایا جا سکے کہ آپ شروع کرنے کے لیے تیار ہیں.
 
-<iframe style="margin: 10px;" width="350" height="195" src="https://studio.code.org/videos/embed/artist_intro?width=350&height=195" frameborder="0" allowfullscreen data-ot-ignore></iframe>
 
-پورے نصاب میں یہی پلیئر استعمال ہوتا ہے. یہ YouTube کے ذریعے ویڈیو دکھانے کی کوشش کرے گا اور، اگر یوٹیوب بلاک ہے، تو آپ اس کے بجائے ہمارے "بیک اپ" پلیئر کا استعمال کرتے ہوئے Code.org کے فراہم کردہ ویڈیو دکھا سکتے ہیں.
+<!--
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to 
+.md.erb without breaking i18n sync, this file should include that partial instead.
+-->
+<figure style="width:100%; height: 100%; margin: 0 auto;">
+  <div class="videodiv" style="position:relative;">
+    <img style="display:block; width:100%; height:auto" src="/images/16x9.png">
+    <div class="insert_video_player" data-video-code="ws8rmHcqXeM" data-download-path="//videos.code.org/new/5-artist-intro.mp4"></div>
+  </div>
+</figure>
+
+This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
 
 ### ویڈیو نہیں چل رہی؟
 
-اگر ویڈیو کام نہیں کرتی ہے، تو آپ ہمیں support@code.org پر ای میل کر سکتے ہیں.
+If video does not work, you can email us at support@code.org.
 
-تاہم، آپ ویڈیو کے بغیر بھی ہمارے ٹیوٹوریل استعمال کر سکتے ہیں.
+However, you can still use our tutorials without video.
 
 1. ہمارے تمام ویڈیو [ڈاونلوڈ کرنے کے لیے دستیاب ہیں](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). اگر آپ کے اسکول کی bandwidth کم ہے، تو ہم تجویز کرتے ہیں کہ آپ ویڈیوز ڈاؤن لوڈ کر لیں اور انہیں مشترکہ اسکرین پر طلباء کو دکھائیں.
 2. ہم نے ہمارے ٹیوٹوریلز میں ہر ویڈیو کے لیے ضم شدہ ڈاونلوڈ لنک کا آیکن <img src="/images/green-download.png" width=25 height=25 /> شامل کیا ہے، جس سے طلباء انفرادی طور پر ویڈیو ڈاونلوڈ کرنے کے قابل ہوتے ہیں.
@@ -119,8 +130,8 @@ Code.org کے تمام مواد کے ساتھ بہترین تجربہ کے لی�
 
 ## Google Apps/G-Suite صارفین کے لیے خصوصی ترتیبات
 
-اگر آپ G-suite کے منتظم ہیں، تو YouTube کو محدود رکھنے کے لیے آپ کی ترتیبات ضرور دیکھ لیں. اگر آپ نے "یوٹوب تک رسائی سختی سے محدود کر دی گئی ہے" کی ترتیب سیٹ کی ہے یا اگر آپ کو پیغامات نظر آتے ہیں کہ 'اس ویڈیو پر پابندی لگا دی گئی ہے'، تو آپ ہمارے چینل کو چینلز کی منظور شدہ فہرست میں شامل کر سکتے ہیں. ہمارے چینل کو منظور شدہ فہرست میں شامل کرنے کے لیے Google کا فراہم کردہ [گائیڈ](https://support.google.com/a/answer/6245597) دیکھیں. مختلف ترتیبات کے بارے میں جاننے اور اپنے کلاس روم کے لیے بہترین ترتیبات چننے کے لیے آپ [یہ گائیڈ](https://support.google.com/a/answer/6212415?hl=en) بھی دیکھ سکتے ہیں.
+If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
 
 ## اب بھی دشواری پیش آ رہی ہے؟
 
-ہم آپ کی مدد کریں گے - بس ہمیں support@code.org پر ای میل کریں!
+We'll help you out - just email us at support@code.org!

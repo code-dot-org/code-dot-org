@@ -8,3 +8,5 @@ right 'Two devices must communicate using the same bit-rate to successfully send
 markdown <<MARKDOWN
 Which of the following is true about the way digital data is transmitted on the Internet?
 MARKDOWN
+
+allow_multiple_attempts true

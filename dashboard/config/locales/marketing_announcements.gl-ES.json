@@ -1,0 +1,58 @@
+{
+  "gl-ES": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "ai-2020": {
+            "buttonText": "Aprender máis"
+          },
+          "ai-launch-2023": {
+            "buttonText": "Aprender máis"
+          },
+          "ai-pl-launch-2023": {
+            "buttonText": "Aprender máis"
+          },
+          "back-to-school-2021": {
+            "buttonText": "Aprender máis"
+          },
+          "codebytes-2020": {
+            "buttonText": "Aprender máis"
+          },
+          "coldplay": {
+            "buttonText": "Próbao"
+          },
+          "congrats-certificate-share": {
+            "buttonText": "Comezar"
+          },
+          "csjourneys": {
+            "buttonText": "Aprender máis"
+          },
+          "csjourneys-22": {
+            "buttonText": "Aprender máis"
+          },
+          "csleadersprize": {
+            "buttonText": "Aprender máis"
+          },
+          "hoc-2023": {
+            "buttonText": "Aprender máis"
+          },
+          "hoc-2023-dance-ai": {
+            "buttonText": "Aprender máis"
+          },
+          "superhero": {
+            "buttonText": "Aprende máis"
+          },
+          "teacher-apps-closing-2021": {
+            "buttonText": "Participa"
+          },
+          "teacher-apps-open-2021": {
+            "buttonText": "Participa"
+          },
+          "teacher-apps-stillon-2020": {
+            "buttonText": "Participa"
+          }
+        }
+      }
+    }
+  }
+}

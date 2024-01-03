@@ -538,13 +538,9 @@
   volunteer_engineer_submission_subtitle_generic: '100.000 guru akan menjadi tuan rumah Hour of Code di kelas mereka tahun ini, 7-13 Desember, 2015. Mereka butuh bantuan Anda! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} guru-guru memerlukan bantuan sukarela.<br>%{num_volunteers} bantuan sukarela telah terdaftar. Bergabung."
   volunteer_engineer_submission_intro_background: "The Hour of Code merupakan gerakan bagi siswa di seluruh dunia untuk mencoba 1 jam pengenalan terhadap ilmu komputer. Gerakan ini meliputi puluhan juta siswa di lebih dari 180 negara. Silakan bergabung dalam Pekan Pendidikan Ilmu Komputer, 7--13 Desember."
-  volunteer_engineer_submission_intro_recruit: 'Guru akan senang untuk memiliki seseorang <span style="font-family: ''Gotham 7r'', sans-serif;"> bergairah tentang pendidikan ilmu komputer</span> yang dapat membantu di dalam kelas (melalui video), atau untuk seseorang yang dapat <span style="font-family: ''Gotham 7r'', sans-serif;"> menginspirasi</span> siswa mereka dengan berbicara tentang luasnya kemungkinan dengan ilmu komputer.'
   volunteer_engineer_submission_intro_recruit_markdown: "Guru tentu senang memiliki siswa yang **sangat menyukai pendidikan ilmu komputer** yang dapat membantu di ruang kelas, atau bagi seorang guru yang dapat **menginspirasi** siswanya dengan mengupas luasnya kemungkinan ilmu komputer (yang dapat dilakukan lewat obrolan video)."
-  volunteer_engineer_submission_intro_guide: "kami belajar lebih tentang <a href=\"%{volunteer_guide}\"> secara sukarela program disini </a>."
   volunteer_engineer_submission_intro_guide_markdown: "Pelajari selengkapnya [volunteer program here](%{volunteer_guide})."
-  volunteer_engineer_submission_intro_signup: "Masukkan informasi berikut jika Anda seorang mahasiswa ilmu komputer atau software profesional. Kolom yang ditandai dengan <span class=\"form-required-field\"> *</span> diperlukan."
   volunteer_engineer_submission_intro_signup_markdown: "Masukkan informasi berikut jika Anda seorang siswa ilmu komputer atau profesional perangkat lunak. Anda harus berusia minimal 18 tahun untuk mendaftar sebagai relawan. Catat bahwa semua kolom yang Anda isi di bagian ini akan dapat dilihat secara publik oleh siapa pun yang mencermati [volunteer map](/volunteer/local). Kolom dengan tanda _*_ wajib diisi."
-  volunteer_engineer_submission_intro_links: "Apakah Anda membutuhkan voluntir? Temukan seorang voluntir dari lingkungan anda pada <a href=\"%{volunteer_local}\">volunteer map</a>."
   volunteer_engineer_submission_intro_links_markdown: "Apakah Anda seorang guru yang sedang mencari relawan? Temukan relawan lokal di [volunteer map](%{volunteer_local}) kami."
   volunteer_engineer_submission_update_information: "Perbarui informasi Anda"
   volunteer_engineer_submission_header_shared: "Informasi yang dibagi dengan guru-guru pada peta relawan"
@@ -1535,12 +1531,14 @@
   header_stats: "Statistik"
   header_help_us: "Bantu Kami"
   header_about: "Tentang"
+  header_incubator: "Inkubator"
   header_teacher_community: "Komunitas guru"
   header_help_support: 'Bantuan dan dukungan '
   header_report_bug: "Laporkan masalah"
   header_report_abuse: "Laporkan penyalahgunaan"
   header_legal: "Privasi & Hukum"
   header_legal_privacy: "Kebijakan privasi"
+  header_legal_cookie_notice: "Informasi Cookie"
   header_legal_tos: "Ketentuan Layanan"
   header_tutorials: "Tutorial"
   header_screen_reader_hamburger: "Menu"
@@ -1649,7 +1647,7 @@
   hoc2018_mc_download_adventurer: "Download Petualang Mincraft versi offline."
   hoc2018_mc_educators: "Untuk pendidik"
   hoc2018_mc_educators_box1_title: "Kode besama Minekraft"
-  hoc2018_mc_educators_box1_desc: 'Minekraft, Education Edition menyajikan kurikulum standar-selaras, pelatihan dan koding di Minekraft.'
+  hoc2018_mc_educators_box1_desc: "Minekraft, Education Edition menyajikan kurikulum standar-selaras, pelatihan dan koding di Minekraft."
   hoc2018_mc_educators_box1_button: "Memulai"
   hoc2018_mc_educators_box2_title: "Unduh petunjuk fasilitator"
   hoc2018_mc_educators_box2_desc: "Toolkit ini akan membantu anda menjadi tuan rumah Hour of Code dan mengajak siswa dalam ilmu komputer."
@@ -1757,7 +1755,7 @@
   hoc2018_mc_with_microsoft: "Bermitra dengan"
   hoc2018_mc_thank_microsoft: "Kami berterima kasih kepada Mikrosoft atas dukungan visi dan misi kami untuk memastikan setiap anak memiliki kesempatan untuk belajar ilmu komputer dan keterampilan untuk sukses di abad ke 21."
   hoc2019_mc_mee_title: "AI Minecraft untuk Kebaikan"
-  hoc2019_mc_mee_description1: 'Tutorial Hour of Code Minecraft kini tersedia di Minecraft: Edisi Pendidikan untuk Windows, Mac, dan iPad. Pelajari dasar-dasar koding dan jelajahi AI bersama siswa Anda!'
+  hoc2019_mc_mee_description1: "Tutorial Hour of Code Minecraft kini tersedia di Minecraft: Edisi Pendidikan untuk Windows, Mac, dan iPad. Pelajari dasar-dasar koding dan jelajahi AI bersama siswa Anda!"
   hoc2019_mc_mee_description2: "Akses materi pembelajaran gratis termasuk rencana pelajaran, video, kurikulum ilmu komputer, dan pelatihan guru."
   hoc2019_mc_more_coding_resources: "Sumber daya coding lainnya"
   hoc2019_dance_previous_versions: "Mencari Dance Party versi yang lama?\nKlik di sini untuk memulai [Bagian 1](%{dance_2018_link}) and [Part 2](%{dance_extras_2018_link}) edisi tahun lalu."
@@ -1770,18 +1768,18 @@
   page_not_available_description: "Mohon maaf, halaman yang Anda minta tidak lagi tersedia di alamat ini. Jika Anda masih membutuhkan akses, silakan kirim email ke [support@code.org](%{support_email_link})."
   page_not_available_button: "Pulang ke rumah"
   hoc2020_mc_available_code_org: "Tersedia di Code.org"
-  hoc2020_mc_available_mee: 'Tersedia di Minecraft: Edisi Pendidikan'
+  hoc2020_mc_available_mee: "Tersedia di Minecraft: Edisi Pendidikan"
   hoc2020_mc_mee_title: "Dongeng minecraft dua desa"
-  hoc2020_mc_mee_description: 'Tutorial baru dari Minecraft Hour of Code sekarang tersedia di Minecraft: edisi pendidikan untuk Windows,Mac,Chromebook,dan Ipad.Pelajari dasar koding dan eksplor keragaman dan  penyertaan dengan temanmu! Akses sumber gratis termasuk rencana pembelajaran,video, kurikulum ilmu komputer, ekuitas pelajaran, dan pelatihan guru.'
+  hoc2020_mc_mee_description: "Tutorial baru dari Minecraft Hour of Code sekarang tersedia di Minecraft: edisi pendidikan untuk Windows,Mac,Chromebook,dan Ipad.Pelajari dasar koding dan eksplor keragaman dan  penyertaan dengan temanmu! Akses sumber gratis termasuk rencana pembelajaran,video, kurikulum ilmu komputer, ekuitas pelajaran, dan pelatihan guru."
   hoc2021_mc_mee_title: "Minecraft TimeCraft"
-  hoc2021_mc_mee_description: 'Ayo balik ke masa lalu dan belajar meng-code! Tutorial Minecraft Hour of Code yang baru kini tersedia di Minecraft: Edisi Pendidikan untuk Windows, Mac, Chromebook, dan iPad. Mulai dengan materi pembelajaran, pelatihan, dan video pendidik gratis.'
+  hoc2021_mc_mee_description: "Ayo balik ke masa lalu dan belajar meng-code! Tutorial Minecraft Hour of Code yang baru kini tersedia di Minecraft: Edisi Pendidikan untuk Windows, Mac, Chromebook, dan iPad. Mulai dengan materi pembelajaran, pelatihan, dan video pendidik gratis."
   hoc2021_mc_mee_villages_title: "Kisah Dua Kampung"
-  hoc2021_mc_mee_villages_description: 'Pelajari dasar-dasar coding dan telusuri keragaman dan inklusi bersama murid-murid Anda di Minecraft: Edisi Pendidikan.'
+  hoc2021_mc_mee_villages_description: "Pelajari dasar-dasar coding dan telusuri keragaman dan inklusi bersama murid-murid Anda di Minecraft: Edisi Pendidikan."
   hoc2021_mc_mee_ai_title: "AI Untuk Kebaikan"
-  hoc2021_mc_mee_ai_description: 'Telusuri AI bersama murid-murid Anda dan belajar meng-code di Minecraft: Edisi Pendidikan.'
+  hoc2021_mc_mee_ai_description: "Telusuri AI bersama murid-murid Anda dan belajar meng-code di Minecraft: Edisi Pendidikan."
   hoc2022_mc_mee_title: "Minecraft Escape Estate"
   hoc2022_mc_mee_description: 'Selamatkan diri rumah misterius saat fajar dan dapatkan satu juta zamrud! Tutorial Minecraft Hour of Code yang baru kini tersedia di Minecraft: Edisi Pendidikan untuk Windows, Mac, Chromebook, Ipad, dan Mobile. Mulailah dengan sumber daya, pelatihan, dan video edukator gratis. '
-  hoc2022_mc_mee_timecraft_description: 'Kembali ke masa lalu untuk menyelamatkan masa depan dalam pelajaran coding gratis ini dalam Minecraft: Edisi Pendidikan.'
+  hoc2022_mc_mee_timecraft_description: "Kembali ke masa lalu untuk menyelamatkan masa depan dalam pelajaran coding gratis ini dalam Minecraft: Edisi Pendidikan."
   footer_powered_by_aws: "Didukung oleh Amazon Web Services"
   footer_built_on_github: "Bawaan GitHub dari Microsoft"
   codebytes_skinny_banner_title: "Bergabunglah dengan kami pada Desember 7-11  untuk  pelajaran mini langsung  kode kami!"
@@ -1830,7 +1828,7 @@
   ai_zooniverse: "Zooniverse - Foto Gunung Zebra"
   ai_zooniverse_description: "Membantu melindungi terancam punah Cape Mountain Zebra dengan mengidentifikasi hewan yang berbeda dalam gambar."
   ai_audience: "Audiens"
-  ai_minecraft_description: 'Akses sumber daya gratis termasuk rencana pelajaran, video, kurikulum ilmu komputer, dan pelatihan guru. (Membutuhkan Minecraft: Edisi Pendidikan)'
+  ai_minecraft_description: "Akses sumber daya gratis termasuk rencana pelajaran, video, kurikulum ilmu komputer, dan pelatihan guru. (Membutuhkan Minecraft: Edisi Pendidikan)"
   ai_k_12_audience: "K-12 (Membaca diperlukan)"
   ai_microsoft_workshop: "Lokakarya virtual gratis dari Microsoft"
   ai_microsoft_workshop_description: "Spark rasa ingin tahu dengan STEM gratis dan lokakarya coding."

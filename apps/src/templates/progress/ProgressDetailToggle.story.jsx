@@ -6,7 +6,7 @@ import {Provider} from 'react-redux';
 
 export default {
   title: 'ProgressDetailToggle',
-  component: ProgressDetailToggle
+  component: ProgressDetailToggle,
 };
 
 const Template = args => (
@@ -22,23 +22,23 @@ const Template = args => (
 export const YesSummaryNoGroups = Template.bind({});
 YesSummaryNoGroups.args = {
   isSummaryView: true,
-  hasGroups: false
+  hasGroups: false,
 };
 
 export const NoSummaryNoGroups = Template.bind({});
 NoSummaryNoGroups.args = {
   isSummaryView: false,
-  hasGroups: false
+  hasGroups: false,
 };
 
 export const YesSummaryYesGroups = Template.bind({});
 YesSummaryYesGroups.args = {
   isSummaryView: true,
-  hasGroups: true
+  hasGroups: true,
 };
 
 export const NoSummaryYesGroups = Template.bind({});
 NoSummaryYesGroups.args = {
   isSummaryView: false,
-  hasGroups: true
+  hasGroups: true,
 };

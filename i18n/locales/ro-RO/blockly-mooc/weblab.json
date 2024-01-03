@@ -1,1 +1,21 @@
-{}
+{
+  "addCSSButton": "Adauga CSS",
+  "addImageButton": "Adăugare imagine",
+  "addHTMLButton": "Adauga HTML",
+  "closeFullscreenPreview": "Închide previzualizare fullscreen",
+  "currentProjectCapacity": "{currentMegabytes}MB de {totalMegabytes}MB folosit",
+  "disallowedHtml": "Fișierul \"{filename}\" conține elemente HTML care nu sunt permise: `{disallowedTags}`. Acestea vor fi eliminate atunci când acest dialog este închis.",
+  "errorSavingProject": "Ceva nu a funcționat în timp ce vă salvați automat proiectul. Verificați conexiunea la internet și încercați să salvați manual. Dacă această problemă persistă, încercați să reîncărcați pagina pentru a începe din nou.",
+  "fatalError": "Eroare fatală: {message}. Dacă sunteți în modul Navigare privată, datele nu pot fi scrise.",
+  "loadFailure": "Ne pare rău, Web Lab nu a reușit să se încarce din anumite motive. Eroare: {message}",
+  "openFullscreenPreview": "Deschideți previzualizarea pe tot ecranul",
+  "refreshPreview": "Reîmprospătați și salvați",
+  "reloading": "Reîncărcare...",
+  "reset": "Resetați laboratorul web",
+  "resetComplete": "Resetarea laboratorului web este finalizată",
+  "resetFailure": "Resetarea laboratorului Web a eșuat: {message}.",
+  "toggleInspectorOn": "Inspector: Oprit",
+  "toggleInspectorOff": "Inspector: Pe",
+  "troubleshootingSupport": "Vă rugăm să consultați articolul nostru de asistență [\"Depanarea problemelor Web Lab\"]({url}) pentru mai multe informații.",
+  "uploadError": "Eroare de încărcare"
+}

@@ -1,4 +1,3 @@
-/* global appOptions */
 import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
@@ -6,7 +5,7 @@ import Select from 'react-select';
 import 'react-select/dist/react-select.css';
 import color from '@cdo/apps/util/color';
 import StylizedBaseDialog, {
-  FooterButton
+  FooterButton,
 } from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {setPoem} from '../redux/poetry';
@@ -15,12 +14,13 @@ import {APP_WIDTH} from '../constants';
 import {PoetryStandaloneApp} from './constants';
 import {getPoem, shouldAlphabetizePoems} from './poem';
 import * as utils from '@cdo/apps/utils';
+import fontConstants from '@cdo/apps/fontConstants';
 
 const poemShape = PropTypes.shape({
   key: PropTypes.string,
   title: PropTypes.string,
   author: PropTypes.string,
-  lines: PropTypes.arrayOf(PropTypes.string)
+  lines: PropTypes.arrayOf(PropTypes.string),
 });
 
 export function PoemEditor(props) {
@@ -82,7 +82,7 @@ export function PoemEditor(props) {
         key: msg.enterMyOwn(),
         title,
         author,
-        lines: poem.split('\n')
+        lines: poem.split('\n'),
       });
 
     utils
@@ -96,7 +96,7 @@ export function PoemEditor(props) {
           setError(
             msg.profanityFoundError({
               wordCount: profaneWords.length,
-              words: profaneWords.join(', ')
+              words: profaneWords.join(', '),
             })
           );
         } else {
@@ -113,7 +113,12 @@ export function PoemEditor(props) {
         {error}
       </div>
     ),
-    <FooterButton text={msg.save()} onClick={onSave} type="confirm" key="btn" />
+    <FooterButton
+      text={msg.save()}
+      onClick={onSave}
+      type="confirm"
+      key="btn"
+    />,
   ];
 
   return (
@@ -130,10 +135,10 @@ export function PoemEditor(props) {
 PoemEditor.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   handleClose: PropTypes.func.isRequired,
-  initialPoem: poemShape
+  initialPoem: poemShape,
 };
 PoemEditor.defaultProps = {
-  initialPoem: {}
+  initialPoem: {},
 };
 
 function PoemSelector(props) {
@@ -165,7 +170,7 @@ function PoemSelector(props) {
         key: msg.chooseAPoem(),
         author: '',
         title: '',
-        lines: []
+        lines: [],
       };
     } else {
       poem = getPoem(poemKey);
@@ -230,50 +235,50 @@ PoemSelector.propTypes = {
   selectedPoem: poemShape.isRequired,
   isRunning: PropTypes.bool.isRequired,
   onChangePoem: PropTypes.func.isRequired,
-  poemList: PropTypes.object
+  poemList: PropTypes.object,
 };
 
 const styles = {
   container: {
-    maxWidth: APP_WIDTH
+    maxWidth: APP_WIDTH,
   },
   selector: {
     width: '100%',
-    marginBottom: 10
+    marginBottom: 10,
   },
   label: {
-    flex: 1
+    flex: 1,
   },
   input: {
-    flex: 2
+    flex: 2,
   },
   labelContainer: {
     display: 'flex',
     justifyContent: 'space-between',
-    padding: '10px 10px 0 10px'
+    padding: '10px 10px 0 10px',
   },
   error: {
     color: color.red,
     fontStyle: 'italic',
     textAlign: 'right',
-    marginRight: 5
+    marginRight: 5,
   },
   warning: {
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     textAlign: 'end',
-    padding: '0 10px 10px 0'
-  }
+    padding: '0 10px 10px 0',
+  },
 };
 
 export default connect(
   state => ({
     selectedPoem: state.poetry.selectedPoem,
     isRunning: state.runState.isRunning,
-    poemList: state.poetry.poemList
+    poemList: state.poetry.poemList,
   }),
   dispatch => ({
     onChangePoem(poem) {
       dispatch(setPoem(poem));
-    }
+    },
   })
 )(PoemSelector);

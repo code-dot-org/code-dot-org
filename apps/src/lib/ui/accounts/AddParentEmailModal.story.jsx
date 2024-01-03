@@ -4,18 +4,18 @@ import {action} from '@storybook/addon-actions';
 
 const DEFAULT_PROPS = {
   handleSubmit: action('handleSubmit callback'),
-  handleCancel: action('handleCancel callback')
+  handleCancel: action('handleCancel callback'),
 };
 
 export default {
   title: 'AddParentEmailModal',
-  component: AddParentEmailModal
+  component: AddParentEmailModal,
 };
 
 const container = {
   margin: 'auto',
   width: '50%',
-  padding: '10px'
+  padding: '10px',
 };
 
 const Template = args => (
@@ -28,5 +28,5 @@ export const ViewWithNoCurrentParentEmail = Template.bind({});
 
 export const ViewWithCurrentParentEmail = Template.bind({});
 ViewWithCurrentParentEmail.args = {
-  currentParentEmail: 'minerva@hogwarts.edu'
+  currentParentEmail: 'minerva@hogwarts.edu',
 };

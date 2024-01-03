@@ -48,3 +48,41 @@ pt:
           description_short: Um curso introdutório da ciência de computação que fortalece os estudantes a criarem artefactos autênticos.
           description_student: O Descobertas da Ciência de Computação (Descobertas CS) é um curso introdutório da ciência de computação que fortalece os estudantes a criarem artefactos autênticos e a envolverem-se com a ciência de computação como um meio para a criatividade, comunicação, solucionamento de problema e diversão.
           description_teacher: O Descobertas da Ciência de Computação (Descobertas CS) é um curso introdutório da ciência de computação que fortalece os estudantes a criarem artefactos autênticos e a envolverem-se com a ciência de computação como um meio para a criatividade, comunicação, solucionamento de problema e diversão.
+        csd-pilot:
+          title: CSD Curso Piloto
+          description_student: O Descobertas da Ciência de Computação (Descobertas CS) é um curso introdutório da ciência de computação que fortalece os estudantes a criarem artefactos autênticos e a envolverem-se com a ciência de computação como um meio para a criatividade, comunicação, solucionamento de problema e diversão.
+        csp-2020:
+          description_short: Aprende os conceitos fundamentais da ciência de computação.
+        csd-2020:
+          description_short: Um curso introdutório da ciência de computação que fortalece os estudantes a criarem artefactos autênticos.
+          description_student: O Descobertas da Ciência de Computação (Descobertas CS) é um curso introdutório da ciência de computação que fortalece os estudantes a criarem artefactos autênticos e a envolverem-se com a ciência de computação como um meio para a criatividade, comunicação, solucionamento de problema e diversão.
+          description_teacher: O Descobertas da Ciência de Computação (Descobertas CS) é um curso introdutório da ciência de computação que fortalece os estudantes a criarem artefactos autênticos e a envolverem-se com a ciência de computação como um meio para a criatividade, comunicação, solucionamento de problema e diversão.
+        csp-2021:
+          description_short: Aprende os conceitos fundamentais da ciência de computação.
+        mike-test:
+          title: Fundamentos de Ciência da Computação
+        csp-2022:
+          description_short: Aprende os conceitos fundamentais da ciência de computação.
+        csp-2023:
+          description_short: Aprende os conceitos fundamentais da ciência de computação.
+        csd-2023:
+          title: Descobertas da Ciência de Computação
+        self-paced-pl-csd-unit2-2023:
+          title: Ensinar Programação Web
+    resources:
+      curriculum/csd/2017:
+        name: Currículo
+      teacher_forum_6/csd/2017:
+        name: Fórum do professor
+      curriculum/csd/2018:
+        name: Currículo
+      teacher_forum_6/csd/2018:
+        name: Fórum do professor
+      curriculum/csd/2019:
+        name: Currículo
+      teacher_forum/csd/2019:
+        name: Fórum do professor
+      curriculum/csd/2020:
+        name: Currículo
+      teacher_forum/csd/2020:
+        name: Fórum do professor

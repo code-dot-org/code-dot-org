@@ -9,7 +9,7 @@ import {
   BasicBubble,
   BubbleLink,
   BubbleSize,
-  BubbleShape
+  BubbleShape,
 } from '@cdo/apps/templates/progress/BubbleFactory';
 import BubbleBadge, {BadgeType} from '@cdo/apps/templates/progress/BubbleBadge';
 import * as utils from '@cdo/apps/utils';
@@ -24,9 +24,9 @@ const defaultProps = {
     url: '/foo/bar',
     name: 'level_name',
     progression: 'progression_name',
-    progressionDisplayName: 'progression_display_name'
+    progressionDisplayName: 'progression_display_name',
   },
-  disabled: false
+  disabled: false,
 };
 
 const fakeSectionId = 123456;
@@ -43,7 +43,7 @@ function getBasicBubble(
   const props = {
     ...defaultProps,
     ...propOverrides,
-    level: {...defaultProps.level, ...levelOverrides, status: status}
+    level: {...defaultProps.level, ...levelOverrides, status: status},
   };
   const wrapper = mount(<ProgressBubble {...props} />);
   return wrapper.find(BasicBubble);
@@ -71,7 +71,7 @@ describe('ProgressBubble', () => {
         {...defaultProps}
         level={{
           ...defaultProps.level,
-          url: ''
+          url: '',
         }}
       />
     );
@@ -91,7 +91,7 @@ describe('ProgressBubble', () => {
         {...defaultProps}
         level={{
           ...defaultProps.level,
-          letter: 'a'
+          letter: 'a',
         }}
       />
     );
@@ -188,7 +188,7 @@ describe('ProgressBubble', () => {
         {...defaultProps}
         level={{
           ...defaultProps.level,
-          name: ''
+          name: '',
         }}
       />
     );
@@ -206,7 +206,7 @@ describe('ProgressBubble', () => {
           ...defaultProps.level,
           display_name: 'Display Name',
           name: 'display_name',
-          isSublevel: true
+          isSublevel: true,
         }}
       />
     );
@@ -228,7 +228,7 @@ describe('ProgressBubble', () => {
         smallBubble={false}
         level={{
           ...defaultProps.level,
-          teacherFeedbackReviewState: ReviewStates.keepWorking
+          teacherFeedbackReviewState: ReviewStates.keepWorking,
         }}
       />
     );
@@ -245,7 +245,7 @@ describe('ProgressBubble', () => {
         smallBubble={true}
         level={{
           ...defaultProps.level,
-          teacherFeedbackReviewState: ReviewStates.keepWorking
+          teacherFeedbackReviewState: ReviewStates.keepWorking,
         }}
       />
     );
@@ -260,7 +260,7 @@ describe('ProgressBubble', () => {
         level={{
           ...defaultProps.level,
           kind: LevelKind.assessment,
-          teacherFeedbackReviewState: ReviewStates.keepWorking
+          teacherFeedbackReviewState: ReviewStates.keepWorking,
         }}
       />
     );
@@ -276,7 +276,7 @@ describe('ProgressBubble', () => {
         {...defaultProps}
         level={{
           ...defaultProps.level,
-          kind: LevelKind.assessment
+          kind: LevelKind.assessment,
         }}
       />
     );
@@ -292,7 +292,7 @@ describe('ProgressBubble', () => {
         smallBubble={true}
         level={{
           ...defaultProps.level,
-          kind: LevelKind.assessment
+          kind: LevelKind.assessment,
         }}
       />
     );
@@ -328,7 +328,7 @@ describe('ProgressBubble', () => {
           {...defaultProps}
           level={{
             ...defaultProps.level,
-            url: '/my/test/url'
+            url: '/my/test/url',
           }}
         />
       );

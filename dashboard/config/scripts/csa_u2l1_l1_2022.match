@@ -14,3 +14,4 @@ answer 'a data type that contains a pointer to the memory location of an object'
 
 question 'variable'
 answer 'a container that stores a value in memory'
+allow_multiple_attempts true

@@ -47,12 +47,15 @@ gl:
         gender: 'Xénero'
         edit_header: 'Editar os Detalles da Conta'
         finish_sign_up_header: 'Remata de crear a túa conta'
+        finish_sign_up_header_error: 'Por favor, corrixe os seguintes erros:'
         finish_sign_up_subheader: 'Completa a seguinte información para acabar de crear unha conta de Code.org para <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Completa a seguinte información para acabar de crear unha conta de Code.org para **%{email}**.'
         finish_sign_up_subheader_provider: 'Completa a seguinte información para acabar de crear unha conta de Code.org con <strong>%{provider}</strong> para <strong>%{email}</strong>.'
         finish_sign_up_subheader_provider_markdown: 'Completa a seguinte información para acabar de crear unha conta de Code.org con **%{provider}** para **%{email}**.'
         error:
           future: non pode estar no futuro
+        user_type: 'Tipo de conta'
+        us_state: 'Estado'
   beta: "beta"
   hello: "Ola, mundo"
   welcome_back: "Ola outra vez, %{name}"
@@ -144,7 +147,6 @@ gl:
     invalid_password: "O contrasinal  ten que ter, polo menos, 6 caracteres"
     mismatch_password: "Os dous contrasinais que metiches non se corresponden"
     student_consent: "Confirmo que teño autorización de meus pais ou titores legais para empregrar os servizos de Code.org."
-    additional_information: "Necesitamos máis informacións para continuarmos o proceso de creacción da conta."
     user_type_button: "Actualizar tipo de conta"
     user_type_label: "Tipo de conta"
     user_type_student: "Estudante"
@@ -160,6 +162,7 @@ gl:
     share_teacher_email_reg_partner_preference_yes: "Si"
     share_teacher_email_reg_partner_preference_no: "Non"
     share_teacher_email_reg_partner_preference_required: "Tes que especificar un e-mail de preferencia."
+    us_state: 'Estado'
   school_info:
     title: 'Información da escola (opcional)'
     school_country: 'País da escola'
@@ -708,9 +711,14 @@ gl:
       robotics:
         kodable: 'Kodable'
         other: "Outros"
+      workshop_course:
+        other: 'Outros'
       email_opt_in:
         opt_in_yes: 'Si'
         opt_in_no: 'Non'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
   cookie_banner:
     accept: 'Acepto'
   page_not_found_title: "Páxina non atopada"

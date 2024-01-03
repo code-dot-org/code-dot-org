@@ -1,7 +1,7 @@
 // avatar: A 1029x51 set of 21 avatar images.
 
-exports.load = function(assetUrl, id) {
-  var skinUrl = function(path) {
+exports.load = function (assetUrl, id) {
+  var skinUrl = function (path) {
     if (path !== undefined) {
       return assetUrl('media/skins/' + id + '/' + path);
     } else {
@@ -69,7 +69,7 @@ exports.load = function(assetUrl, id) {
     // Sounds
     startSound: [skinUrl('start.mp3'), skinUrl('start.ogg')],
     winSound: [skinUrl('win.mp3'), skinUrl('win.ogg')],
-    failureSound: [skinUrl('failure.mp3'), skinUrl('failure.ogg')]
+    failureSound: [skinUrl('failure.mp3'), skinUrl('failure.ogg')],
   };
 
   return skin;

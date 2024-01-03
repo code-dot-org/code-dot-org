@@ -9,11 +9,11 @@ describe('LessonProgress', () => {
     levels: [
       {
         id: '123',
-        status: LevelStatus.not_tried
-      }
+        status: LevelStatus.not_tried,
+      },
     ],
     stageId: 1,
-    isLessonExtras: false
+    isLessonExtras: false,
   };
 
   it('uses progress bubbles', () => {

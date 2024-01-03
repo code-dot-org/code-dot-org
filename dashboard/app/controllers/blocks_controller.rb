@@ -31,10 +31,10 @@ class BlocksController < ApplicationController
       edit_block_path(pool: @block.pool, id: @block.name),
       notice: 'Block saved',
     )
-  rescue => e
+  rescue => exception
     redirect_back(
       fallback_location: @block.name ? edit_block_path(id: @block.name) : new_block_path,
-      alert: "Error saving block: #{e}",
+      alert: "Error saving block: #{exception}",
     )
   end
 
@@ -43,13 +43,11 @@ class BlocksController < ApplicationController
     redirect_to(blocks_path, notice: "Block Deleted")
   end
 
-  private
-
-  def create_params
+  private def create_params
     update_params
   end
 
-  def update_params
+  private def update_params
     params['block'].permit(:name, :pool, :category, :config, :helper_code)
   end
 end

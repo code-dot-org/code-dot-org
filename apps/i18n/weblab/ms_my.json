@@ -1,2 +1,20 @@
 {
+  "addCSSButton": "Tambah CSS",
+  "addHTMLButton": "Tambah HTML",
+  "addImageButton": "Tambah Imej",
+  "closeFullscreenPreview": "Tutup pratonton skrin penuh",
+  "currentProjectCapacity": "{currentMegabytes}MB daripada {totalMegabytes}MB digunakan",
+  "errorSavingProject": "Sesuatu tidak berfungsi semasa menyimpan projek anda secara automatik. Semak sambungan internet anda dan cuba simpan secara manual. Jika masalah ini berterusan, cuba muatkan semula halaman untuk memulakan semula.",
+  "fatalError": "Ralat maut: {message}. Jika anda berada dalam mod Pelayaran Peribadi, data tidak boleh ditulis.",
+  "loadFailure": "Kami minta maaf, Makmal Web gagal memuatkan atas sebab tertentu. Ralat: {message}",
+  "openFullscreenPreview": "Buka pratonton skrin penuh",
+  "refreshPreview": "Muat semula dan Simpan",
+  "reloading": "Muat semula...",
+  "reset": "Tetapkan Semula Makmal Web",
+  "resetComplete": "Set Semula Makmal Web Lengkap",
+  "resetFailure": "Gagal mengeset semula Makmal Web: {message}.",
+  "toggleInspectorOff": "Inspektor: Pada",
+  "toggleInspectorOn": "Inspektor: Off",
+  "troubleshootingSupport": "Sila lihat artikel sokongan kami [\"Menyelesaikan masalah Makmal Web\"]({url}) untuk maklumat lanjut.",
+  "uploadError": "Ralat Muat Naik"
 }

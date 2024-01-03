@@ -52,7 +52,9 @@ es-MX:
         age: 'Edad'
         gender: 'Sexo'
         edit_header: 'Editar información de la cuenta'
+        ai_settings_header: 'Configuración de IA'
         finish_sign_up_header: 'Termina de crear tu cuenta'
+        finish_sign_up_header_error: 'Por favor, corrige los siguientes errores:'
         finish_sign_up_subheader: 'Completa la siguiente información para terminar de crear tu cuenta en Code.org para <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Completa la siguiente información para terminar de crear tu cuenta en Code.org para **%{email}**.'
         finish_sign_up_subheader_provider: 'Completa la siguiente información para terminar de crear tu cuenta en Code.org con <strong>%{provider}</strong> para <strong>%{email}</strong>.'
@@ -60,6 +62,9 @@ es-MX:
         reset_password_token: "El enlace para restablecer la contraseña que has seguido"
         error:
           future: no puede ser en el futuro
+        user_type: 'Tipo de cuenta'
+        us_state: 'Estado/provincia'
+        ai_rubrics_disabled: 'Desactivar la función de rúbrica de IA'
   beta: "beta"
   hello: "Hola, mundo"
   welcome_back: "Bienvenido, %{name}"
@@ -69,6 +74,7 @@ es-MX:
   unsubmit: NO enviado
   previous_page: Página anterior
   next_page: Página siguiente
+  next_level: Siguiente nivel
   next_resource: Siguiente recurso
   done_with_module: Hecho con este Módulo de Aprendizaje
   cancel: "Cancelar"
@@ -172,7 +178,6 @@ es-MX:
     data_collection_us: "Entiendo que Code.org es un sitio web sin fines de lucro con sede en los Estados Unidos y que las leyes que rigen la recopilación de datos en los Estados Unidos pueden diferir de las leyes de mi país."
     visit_privacy: 'Consulte la [política de privacidad](%{privacy_url}) de Code.org para obtener más información.'
     student_terms_markdown: "Las direcciones de correo electrónico no se almacenan de forma que nos permitan ponernos en contacto con los estudiantes. Los estudiantes nunca recibirán correos electrónicos de Code.org, excepto en caso de que necesiten recuperar la contraseña. Consulta nuestra [política de privacidad](http://code.org/privacy) para obtener más información."
-    additional_information: "Necesitamos más información para continuar con tu registro."
     user_type_button: "Actualizar el tipo de cuenta"
     user_type_label: "Tipo de cuenta"
     user_type_student: "Estudiante"
@@ -200,6 +205,9 @@ es-MX:
     parent_account_checkbox: "Soy padre o tutor registrándose en lugar de mi hijo"
     parent_account_email_progress_permission: "¿Podemos enviarle emails con para contarle sobre el rendimiento y los proyectos de su hijo? Tambien mandaremos informacion sobre los cursos de ciencias computacionales [(Mira nuestra política de privacidad)](%{privacy_policy_url})"
     parent_account_email_label: "Correo electrónico del padre o tutor"
+    us_state: 'Estado/provincia'
+    us_state_dropdown_options:
+      other: "El lugard donde vivo no está presente en esta lista"
   school_info:
     title: 'Información de la escuela (opcional)'
     school_country: 'País en el que está la escuela'
@@ -262,6 +270,9 @@ es-MX:
   parent_mailer:
     student_associated_subject: 'Información de inicio de sesión para Code.org'
     parent_email_added_subject: '¡Bienvenido a Code.org!'
+    parent_permission_request_subject: "Se requiere consentimiento paterno para que su estudiante obtenga acceso a Code.org"
+    parent_permission_reminder_subject: "Atención, requerimos consentimiento paterno para otorgarle acceso a su estudiante"
+    parent_permission_confirmation_subject: "¡Gracias por aprobar el acceso de su estudiante a Code.org!"
   teacher_mailer:
     new_teacher_subject: '¡Bienvenido a Code.org!'
     delete_teacher_subject: 'Aviso de Code.org: tu cuenta ha sido eliminada'
@@ -350,7 +361,7 @@ es-MX:
       educate_overview: "Descripción del educador"
       educate_elementary: "Escuela primaria"
       educate_middle: "Escuela secundaria"
-      educate_high: "Educación media superior"
+      educate_high: "Preparatoria"
       educate_hoc: "Hora del código"
       educate_partner: "Colabora con nosotros"
       educate_beyond: "Más allá de Code.org"
@@ -373,6 +384,7 @@ es-MX:
       help_us: "Ayúdanos"
       teach: "Enseñar"
       about: "Acerca de"
+      incubator: "Incubadora"
       legal: "Privacidad y Legalidad"
       legal_privacy: "Política de privacidad"
       legal_cookie_notice: "Aviso de Cookies"
@@ -450,7 +462,7 @@ es-MX:
     confirm:
       remove: '¿Estás seguro de que quieres eliminar a este profesor?'
     students:
-      dashboard: 'Ir al panel del maestro'
+      dashboard: 'Ir al panel del profesor'
     user_not_found: 'No se pudo encontrar al docente.'
     student_teacher_disassociated: 'Has abandonado la sección %{section_code} con %{teacher_name}.'
     panel:
@@ -605,6 +617,7 @@ es-MX:
     store: 'Tienda'
     cookie_notice: 'Aviso de Cookies'
     view_code: 'Ve el código'
+    locale_select: "Seleccionar idioma"
   reference_area:
     title: '¿Necesitas ayuda?'
     subtitle: 'Mira estos videos y sugerencias'
@@ -629,6 +642,8 @@ es-MX:
       applab_unsupported_tablet: "El Laboratorio de aplicaciones funciona mejor en una computadora de escritorio o portátil con un ratón o un teclado. Puede que experimentes problemas si usas esta herramienta en tu dispositivo actual."
       gamelab_unsupported_tablet: "El Laboratorio de juegos funciona mejor en una computadora de escritorio o portátil con un ratón o un teclado. Puede que experimentes problemas si usas esta herramienta en tu dispositivo actual."
       weblab_unsupported_locale_storage: "Puedes experimentar problemas con el Laboratorio web en el modo de navegación privada. Por favor, vuelve a cargar el proyecto en modo normal. Disculpa las molestias."
+  deprecation:
+    algebra_lab: "El plan de estudios y los contenidos de Informática en Álgebra están quedando obsoletos.  En los próximos meses, este laboratorio dejará de estar disponible.  En su lugar, consulta [Bootstrap: Algebra](%{bootstrap_algebra_url}). [Más información](%{cs_algebra_url})."
   slow_loading: 'Esto está tardando más de lo habitual...'
   try_reloading: 'Intenta volver a cargar la página'
   next_stage: '¡Listo! Continúa a la siguiente etapa'
@@ -667,8 +682,22 @@ es-MX:
       body_short: "Diseña una aplicación, programa con bloques o JavaScript para que funcione, y luego comparte tu aplicación en cuestión de segundos."
       audience: 'Desde 13 años'
       cta: 'Aprende cómo'
+      image_alt: 'Un conejito morado con una mochila propulsada por cohetes.'
+    applab-intro:
+      image_alt: 'Una mano golpea el centro de la pantalla de un smartphone. De la pantalla salen luces y destellos.'
     aquatic:
       title: "Minecraft"
+      image_alt: 'Steve y Alex de Minecraft te están mirando.'
+    artist:
+      image_alt: 'La caricatura de una persona sosteniendo un enorme lápiz y dibujando un triángulo.'
+    conditionals:
+      image_alt: 'Dos manos barajando un mazo de cartas.'
+    course2:
+      image_alt: 'Un collage de rompecabezas de Code.org  mostrando un mago verde, un artista y un pez naranja.'
+    course3:
+      image_alt: 'Un collage de rompecabezas de Code.org que muestra un juego, un zombi y un ninja.'
+    coursec:
+      image_alt: ''
     dance-2019:
       title: 'Fiesta de baile'
     dance:
@@ -688,7 +717,7 @@ es-MX:
       cta: "Aprende cómo"
     hello-world:
       title: 'Hola Mundo'
-      body: 'Elige entre cuatro temas divertidos para codificar personajes interactivos en un mundo creado por ti.'
+      body: 'Elige entre cuatro temas divertidos para programar personajes interactivos en un mundo creado por ti.'
     hero:
       title: "Minecraft"
       body: "¡Minecraft está de vuelta para la Hora del Código con una actividad nueva! Viaja a través de Minecraft con códigos."
@@ -782,6 +811,8 @@ es-MX:
     submit-incomplete-body: "No has respondido algunas preguntas. No podrás editar tu evaluación luego de enviarla. ¿Estás seguro?"
     submit-complete-title: "Enviar tu evaluación"
     submit-complete-body: "No podrás editar tu evaluación luego de enviarla. ¿Estás seguro?"
+  level_summary:
+    correct_answer: "Respuesta correcta"
   match:
     wrong_title: "Solución incorrecta"
     wrong_body: "La solución ingresada no es la correcta. ¡Intenta nuevamente!"
@@ -907,6 +938,7 @@ es-MX:
           age: 'Especifique una edad'
           abuse_type: 'Describa cómo este contenido viola los términos del servicio'
           abuse_detail: 'Proporcione detalles sobre el contenido que está informando'
+          captcha: 'Por favor, completa el CAPTCHA para reportar este contenido.'
         abusive_url: 'URL de los contenidos que está reportando'
         abuse_type:
           question: '¿Cómo este contenido viola la %{link_start}Term de Servicio%{link_end}?'
@@ -1042,17 +1074,33 @@ es-MX:
         not_listed: 'El término preferido no aparece'
         none: 'Prefiero no contestar'
       school_country:
+        australia: 'Australia'
         barbados: 'Barbados'
         belize: 'Belice'
+        brazil: 'Brasil'
         canada: 'Canadá'
         chile: 'Chile'
         colombia: 'Colombia'
+        dominican_republic: 'República Dominicana'
+        india: 'India'
+        indonesia: 'Indonesia'
         israel: 'Israel'
+        jamaica: 'Jamaica'
+        kenya: 'Kenia'
         malaysia: 'Malasia'
+        maldives: 'Maldivas'
         mexico: 'México'
+        mongolia: 'Mongolia'
+        new_zealand: 'Nueva Zelanda'
         paraguay: 'Paraguay'
+        portugal: 'Portugal'
+        slovakia: 'Eslovaquia'
+        south_korea: 'Corea del Sur'
+        spain: 'España'
         thailand: 'Tailandia'
+        trinidad_and_tobago: 'Trinidad y Tobago'
         uzbekistan: 'Uzbekistán'
+        vietnam: 'Vietnam'
       ages:
         ages_under_6: 'Hasta 6 años'
         ages_7_8: '7-8 años'
@@ -1101,6 +1149,7 @@ es-MX:
         csf_express: 'Fundamentos de Ciencias de la Computación (Pre-Express o Express)'
         csd: 'Descubrimientos de Ciencias de la Computación'
         csp: 'Principios de Ciencias de la Computación'
+        other: 'Otro'
         not_applicable: "No Aplicable"
       email_opt_in:
         opt_in_yes: 'Sí'
@@ -1122,6 +1171,13 @@ es-MX:
     no_teacher_email:
       body_markdown: 'Tu cuenta no tiene una dirección de correo electrónico. [Visita la configuración de tu cuenta](%{user_registration}) para agregar tu dirección de correo electrónico antes de completar este formulario.'
   courses_category: 'Cursos completos'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
+      hello_world: 'Hola Mundo'
+      sports: 'Deportes'
+      csf: 'Fundamentos de Ciencias de la Computación'
+      csc: 'Conexiones a las Ciencias de la Computación'
   cookie_banner:
     message: 'Si continúas navegando nuestro sitio web o haces clic en "Acepto", aceptas que se guarden las cookies en tu computadora o dispositivo.'
     more_information: "Mira la política de privacidad de Code.org."
@@ -1167,4 +1223,6 @@ es-MX:
     image_file_format_width: "Ancho: 1 byte"
     image_file_format_height: "Altura: 1 byte"
     image_file_format_bits_per_pixel: "Bits por Pixel: 1 byte"
+    image_width: "Ancho de imagen"
+    image_height: "Altura de la imagen"
     binary: "Binario"

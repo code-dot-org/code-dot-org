@@ -1,4 +1,5 @@
 import React from 'react';
+import commonMsg from '@cdo/locale';
 import commonStyles from '../../commonStyles';
 import PropTypes from 'prop-types';
 import style from './duplicate-element-button.module.scss';
@@ -8,7 +9,7 @@ import style from './duplicate-element-button.module.scss';
  */
 class DuplicateElementButton extends React.Component {
   static propTypes = {
-    handleDuplicate: PropTypes.func.isRequired
+    handleDuplicate: PropTypes.func.isRequired,
   };
 
   handleDuplicate = event => this.props.handleDuplicate();
@@ -22,7 +23,7 @@ class DuplicateElementButton extends React.Component {
           style={commonStyles.button}
           onClick={this.handleDuplicate}
         >
-          Duplicate
+          {commonMsg.duplicate()}
         </button>
       </div>
     );

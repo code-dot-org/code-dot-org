@@ -2,6 +2,17 @@
 fr:
   data:
     blocks:
+      AmysBlocks_goldilocks:
+        text: |2-
+           si {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"too much"': trop
+            '"just right"': tout juste assez
+            '"too little"': trop peu
+      AmysBlocks_playerBehaviors:
+        text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:
         text: demander à l'utilisateur {QUESTION} pour le variable {VAR} de choisir entre {A}{B}{C}.
       AmysBlocks_spriteSayVar:
@@ -15,7 +26,6 @@ fr:
             '0.75': petit(s)
             '1.00': moyen(s)
             '2.00': grand(s)
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
@@ -23,7 +33,8 @@ fr:
             '0.75': petit(s)
             '1.00': moyen(s)
             '2.00': grand(s)
-            '3.00': extra large
+      Dancelab_ai:
+        text: "{IMAGE}génère effet {VALUE}"
       Dancelab_alternateMoves:
         text: "{GROUP} alterne toutes les {N} mesures entre {MOVE1} et {MOVE2}"
         options:
@@ -73,6 +84,11 @@ fr:
           UNIT:
             '"measures"': mesures
             '"seconds"': secondes
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': mesures
+            '"seconds"': secondes
       Dancelab_changeColorBy:
         text: changer {COLOR} {METHOD} de {AMOUNT}
         options:
@@ -113,6 +129,28 @@ fr:
             MOVES.ThisOrThat: Ceci ou cela
             MOVES.Thriller: Zombie
             MOVES.Rest: Aucun
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} faire {MOVE} {DIR} indéfiniment"
+        options:
+          GROUP:
+            '"CAT"': les chats
+            '"SLOTH"': les paresseux
+          MOVE:
+            MOVES.Roll: Bodyroll (vague)
+            MOVES.ClapHigh: Tape des mains en l'air
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double la mise
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Étoile
+            MOVES.ThisOrThat: Ceci ou cela
+            MOVES.Thriller: Zombie
+            MOVES.Rest: Aucun
+            '"next"': "(Suivant)"
+            '"prev"': "(Précédent)"
+            '"rand"': "(Aléatoire)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} faire {MOVE} {DIR} indéfiniment"
         options:
@@ -591,6 +629,60 @@ fr:
             '"tropical"': Tropical
             '"vintage"': Vintage
             '"warm"': Rouges
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: définir l'effet d'arrière-plan {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Aucun
+            '"rand"': "(Aléatoire)"
+            '"quads"': Angles
+            '"blooming_petals"': Pétales éclos
+            '"circles"': Tunnel
+            '"color_cycle"': Couleurs
+            '"diamonds"': Diamants
+            '"disco_ball"': Boule disco
+            '"fireworks"': Feux d'artifice
+            '"flowers"': Fleurs
+            '"frosted_grid"': Grille givrée
+            '"growing_stars"': Étoiles montantes
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kaléidoscope
+            '"lasers"': Piste de danse laser
+            '"splatter"': Éclaboussures de peinture
+            '"rainbow"': Arc-en-ciel
+            '"ripples_random"': Ondulations aléatoires
+            '"ripples"': Ondulations
+            '"snowflakes"': Neige
+            '"text"': Titres de chanson
+            '"galaxy"': Espace
+            '"sparkles"': Éclats
+            '"spiral"': Spirale
+            '"disco"': Carrés
+            '"squiggles"': Gribouillis
+            '"starburst"': Starburst
+            '"stars"': Étoiles
+            '"music_wave"': Vagues
+          PALETTE:
+            '"autumn"': Automne
+            '"rave"': Noir et blanc
+            '"cool"': Cool
+            '"electronic"': Électronique
+            '"grayscale"': Nuance de gris
+            '"iceCream"': Glace
+            '"default"': Lumière
+            '"neon"': Néon
+            '"rainbow"': Arc-en-ciel
+            '"roses"': Roses
+            '"sky"': Ciel
+            '"spring"': Printemps
+            '"summer"': Été
+            '"sunrise"': Levée du soleil
+            '"sunset"': Coucher du soleil
+            '"tropical"': Tropical
+            '"twinkling"': Scintillant
+            '"vintage"': Vintage
+            '"warm"': Rouges
+            '"winter"': Hiver
       Dancelab_setDanceSpeed:
         text: changer la vitesse de la danse à {SPEED} pour {SPRITE}
         options:
@@ -1004,8 +1096,6 @@ fr:
         options:
           INPUT1:
             '1': Jus de citron
-            '3': baking soda
-            '5': both
       DansBlocks_setForegroundEffect2:
         text: Appliquer {EFFECT} effet
         options:
@@ -1022,12 +1112,10 @@ fr:
         options:
           INPUT1:
             '1': Jus de citron
-            '3': baking soda
-            '5': both
       FunctionBlocks_communicate:
         text: Communiquez [VAR1]et[0] avec {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:
-        text: faire un {NUM} nouveau {ANIMATION_NAME}Sprites {BEHAVIOR}
+        text: faire {NUM} nouveau(x) sprites {ANIMATION_NAME} {BEHAVIOR}
       FunctionBlocks_representManipulative:
         text: représente {NUM} nouveaux {ANIMATION_NAME} sprites [BEHAVIOR][2]
       FunctionBlocks_spriteSayVar:
@@ -1052,6 +1140,8 @@ fr:
         text: éviter les cibles
       gamelab_beginCollectingData:
         text: commencer la collecte des valeurs {VALUE} de données {BREAK} avec l'étiquette {LABEL}.
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE} rebondit sur {TARGET}."
       gamelab_changePropBy:
@@ -1245,6 +1335,19 @@ fr:
             '"z"': z
       gamelab_layoutGrid:
         text: disposer les sprites sous forme de grille
+      gamelab_layoutSprites:
+        text: afficher {GROUP} en tant que {FORMAT}
+        options:
+          FORMAT:
+            '"border"': frontière
+            '"circle"': cercle
+            '"grid"': grille
+            '"top"': rangée du haut
+            '"row"': rangée
+            '"bottom"': rangée du bas
+            '"left"': colonne de gauche
+            '"column"': colonne
+            '"right"': colonne de droite
       gamelab_locationAt:
         text: 'emplacement x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1271,6 +1374,18 @@ fr:
             '"spiral"': spirale
       gamelab_makeNewSpriteAnon:
         text: faire un nouveau sprite {ANIMATION_NAME} à {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': frontière
+            '"circle"': cercle
+            '"grid"': grille
+            '"top"': rangée du haut
+            '"row"': rangée
+            '"bottom"': rangée du bas
+            '"left"': colonne de gauche
+            '"column"': colonne
+            '"right"': colonne de droite
       gamelab_makeNumSprites:
         text: créer {NUM} des nouveaux sprites {ANIMATION_NAME}
       gamelab_makeProjectile:
@@ -1417,7 +1532,7 @@ fr:
       gamelab_resetTimer:
         text: réinitialiser le chronomètre
       gamelab_setAnimation:
-        text: modifier {THIS} costume en {ANIMATION}
+        text: changer le costume de {THIS} en {ANIMATION}
       gamelab_setBackground:
         text: définir la couleur du fond {COLOR}
       gamelab_setBackgroundImage:
@@ -1521,7 +1636,7 @@ fr:
       gamelab_spriteSay:
         text: "{SPRITE} dit {SPEECH}"
       gamelab_spriteSayTime:
-        text: "{SPRITE}dit{TEXT1}pour{NUM}secondes"
+        text: "{SPRITE}dit{TEXT1}pendant{NUM}secondes"
       gamelab_spriteThink:
         text: "{SPRITE} pense {SPEECH}"
       gamelab_spriteThinkTime:
@@ -1654,6 +1769,19 @@ fr:
         text: coordonnées x de {SPRITE}
       gamelab_yLocationOf:
         text: coordonnées y de {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} glisser vers {LOCATION}"
+      KatiesBlocks_goldilocks:
+        text: |2-
+           si {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"solid"': Solide
+            '"liquid"': Liquide
+            '"gas"': gaz
+      KatiesBlocks_tumbling:
+        text: culbute
       Mikelab_addBehaviorSimple:
         text: le sprite {SPRITE} se met à {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -1692,6 +1820,8 @@ fr:
             "{x: 100, y: 300}": en bas à gauche
             "{x: 300, y: 300}": en bas à droite
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
+      Mikelab_destroy:
+        text: retirer {SPRITE}
       Mikelab_eval:
         text: evaluer {CODE}
       Mikelab_getNext:
@@ -2015,14 +2145,10 @@ fr:
         options:
           INPUT1:
             '1': Jus de citron
-            '3': baking soda
-            '5': both
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
             '1': Jus de citron
-            '3': baking soda
-            '5': both
       ParticlesBlocks_statesOfMatter:
         text: "{BEHAVIOR}"
         options:
@@ -2266,8 +2392,6 @@ fr:
         text: tourner à gauche
       RyanLab_turnRight:
         text: tourner à droite
-      SpriteLab2Beta_spriteSay:
-        text: lutin {SPRITE} dire {TEXT} pendant {SECONDS} secondes
       Vector_createSpriteWith:
         text: crée un lutin en train de{STATEMENT}
       Vector_log:
@@ -2371,6 +2495,19 @@ fr:
             '"quarantining"': mise en quarantaine en cas de maladie
             '"avoiding"': distanciation sociale
             '"none"': rester immobile
+      adaptations_adaptationBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): tournoyer à droite
+            new Behavior(spinning_left, []): tournoyer à gauche
+            new Behavior(fluttering, []): voleter
+            new Behavior(jittering, []): gigoter
+            new Behavior(wobbling, []): chanceler
+            new Behavior(wandering, []): se balader
+            new Behavior(patrolling, []): patrouiller
+      adaptations_startFollowing:
+        text: "{SPRITE} commence à suivre {TARGET}"
       binary_drawBin:
         text: dessiner binaire {BIN}
       binary_drawBinScreen:
@@ -2496,6 +2633,53 @@ fr:
           DIR:
             right: droite ↻
             left: gauche ↺
+      ecosystems_catchMe:
+        text: attraper {THIS}
+      ecosystems_eat:
+        text: manger {THIS}
+      ecosystems_goldilocks:
+        text: |2-
+           si {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"too much"': trop
+            '"just right"': tout juste assez
+            '"too little"': trop peu
+      ecosystems_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      ecosystems_makeNewSpriteBetween:
+        text: 'créer {N} un nouveau {GROUP} entre les emplacements x : {X} y: {Y}'
+      ecosystems_makeNumSpritesAtLocation:
+        text: créer {NUM} de nouveaux sprites {ANIMATION_NAME} à {LOCATION_GENERATOR}
+      ecosystems_makeNumSpritesWithinRange:
+        text: créer {NUM} de nouveaux sprites {ANIMATION_NAME} à {RANGE}
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:200, y2:400}": En haut
+            "{x1:0, x2:400, y1:150, y2:250}": Au milieu
+            "{x1:0, x2:400, y1:0, y2:200}": Vers le bas
+      ecosystems_randomLocationWithinRange:
+        text: x min{X1}x max{X2}y min{Y1}y max{Y2}
+      ecosystems_randomLocationWithinSelectedRange:
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:200, y2:400}": En haut
+            "{x1:0, x2:400, y1:0, y2:200}": Vers le bas
+      storylab_printText:
+        text: imprimer {TEXT}
       storylab_setForegroundEffect2:
         text: Appliquer {EFFECT} effet
         options:
@@ -2510,7 +2694,3 @@ fr:
         text: définir le titre{HEADING}
       storylab_setSubheading:
         text: définir le sous-titre {SUBHEADING}
-      validation_validatedBackground:
-        text: établir {IMG} comme arrière-plan
-      validation_validatedSound:
-        text: Jouer le son {SOUND}

@@ -11,7 +11,7 @@ const projectProp = PropTypes.shape({
   studentAgeRange: PropTypes.string,
   studentName: PropTypes.string,
   type: PropTypes.string,
-  updatedAt: PropTypes.date
+  updatedAt: PropTypes.date,
 });
 
 export default class ProjectCardRow extends React.Component {
@@ -19,7 +19,8 @@ export default class ProjectCardRow extends React.Component {
     projects: PropTypes.arrayOf(projectProp).isRequired,
     galleryType: PropTypes.oneOf(['personal', 'public']).isRequired,
     showFullThumbnail: PropTypes.bool,
-    isDetailView: PropTypes.bool
+    isDetailView: PropTypes.bool,
+    showReportAbuseHeader: PropTypes.bool,
   };
 
   render() {
@@ -32,6 +33,7 @@ export default class ProjectCardRow extends React.Component {
               showFullThumbnail={this.props.showFullThumbnail}
               currentGallery={this.props.galleryType}
               isDetailView={this.props.isDetailView}
+              showReportAbuseHeader={this.props.showReportAbuseHeader}
             />
           </div>
         ))}
@@ -44,11 +46,11 @@ const styles = {
   card: {
     display: 'inline-block',
     paddingTop: 10,
-    paddingBottom: 20
+    paddingBottom: 20,
   },
   row: {
     display: 'flex',
     justifyContent: 'space-between',
-    flexWrap: 'wrap'
-  }
+    flexWrap: 'wrap',
+  },
 };

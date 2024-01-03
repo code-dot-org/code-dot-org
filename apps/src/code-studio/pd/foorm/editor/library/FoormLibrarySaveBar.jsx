@@ -4,13 +4,15 @@ import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import ConfirmationDialog from '../../../components/confirmation_dialog';
 import {connect} from 'react-redux';
+/* eslint-disable no-restricted-imports */
 import {
   Modal,
   FormGroup,
   ControlLabel,
   Button,
-  FormControl
+  FormControl,
 } from 'react-bootstrap';
+/* eslint-enable no-restricted-imports */
 import Select from 'react-select/lib/Select';
 import {SelectStyleProps} from '../../../constants';
 import 'react-select/dist/react-select.css';
@@ -22,7 +24,7 @@ import {
   addFetchableSubEntity,
   setLastSaved,
   setSaveError,
-  setLastSavedQuestions
+  setLastSavedQuestions,
 } from '../foormEditorRedux';
 
 const saveConfirmationDialogName = 'save';
@@ -51,7 +53,7 @@ class FoormLibrarySaveBar extends Component {
     addFetchableLibraryQuestion: PropTypes.func,
     setLastSaved: PropTypes.func,
     setSaveError: PropTypes.func,
-    setLastSavedLibraryQuestionQuestions: PropTypes.func
+    setLastSavedLibraryQuestionQuestions: PropTypes.func,
   };
 
   state = {
@@ -61,7 +63,7 @@ class FoormLibrarySaveBar extends Component {
     libraryQuestionName: null,
     libraryShortName: null,
     formsAppearedIn: [],
-    libraryCategory: null
+    libraryCategory: null,
   };
 
   hasCodeMirrorError = () => this.props.hasLintError || this.props.hasJSONError;
@@ -83,15 +85,13 @@ class FoormLibrarySaveBar extends Component {
     }
 
     $.ajax({
-      url: `/foorm/library_questions/${
-        this.props.libraryQuestionId
-      }/published_forms_appeared_in`,
-      type: 'get'
+      url: `/foorm/library_questions/${this.props.libraryQuestionId}/published_forms_appeared_in`,
+      type: 'get',
     }).done(result => {
       if (result.length !== 0) {
         this.setState({
           confirmationDialogBeingShownName: saveConfirmationDialogName,
-          formsAppearedIn: result
+          formsAppearedIn: result,
         });
       } else {
         this.save(this.updateQuestionUrl());
@@ -114,19 +114,19 @@ class FoormLibrarySaveBar extends Component {
       contentType: 'application/json',
       processData: false,
       data: JSON.stringify({
-        question: this.props.questions
-      })
+        question: this.props.questions,
+      }),
     })
       .done(result => {
         this.handleSaveSuccess(result);
         this.setState({
-          confirmationDialogBeingShownName: null
+          confirmationDialogBeingShownName: null,
         });
       })
       .fail(result => {
         this.handleSaveError(result);
         this.setState({
-          confirmationDialogBeingShownName: null
+          confirmationDialogBeingShownName: null,
         });
       });
   };
@@ -139,9 +139,7 @@ class FoormLibrarySaveBar extends Component {
     // Need to include library name if this is a new library (no ID)
     let fullLibraryName = '';
     if (!this.props.libraryId) {
-      fullLibraryName = `${this.state.libraryCategory}/${
-        this.state.libraryShortName
-      }`;
+      fullLibraryName = `${this.state.libraryCategory}/${this.state.libraryShortName}`;
     }
 
     $.ajax({
@@ -153,8 +151,8 @@ class FoormLibrarySaveBar extends Component {
         name: this.state.libraryQuestionName,
         question: this.props.questions,
         library_id: this.props.libraryId,
-        library_name: fullLibraryName
-      })
+        library_name: fullLibraryName,
+      }),
     })
       .done(result => {
         let libraryQuestion = result.library_question;
@@ -162,7 +160,7 @@ class FoormLibrarySaveBar extends Component {
 
         this.handleSaveSuccess(libraryQuestion);
         this.setState({
-          showNewLibraryQuestionSave: false
+          showNewLibraryQuestionSave: false,
         });
 
         // Since library is new, add to list of options
@@ -170,21 +168,21 @@ class FoormLibrarySaveBar extends Component {
         this.props.addFetchableLibrary({
           name: library.name,
           version: library.version,
-          id: library.id
+          id: library.id,
         });
         this.props.setLibraryData(library);
       })
       .fail(result => {
         this.handleSaveError(result);
         this.setState({
-          showNewLibraryQuestionSave: false
+          showNewLibraryQuestionSave: false,
         });
       });
   };
 
   handleSaveSuccess(libraryQuestion) {
     this.setState({
-      isSaving: false
+      isSaving: false,
     });
     this.props.setLastSaved(Date.now());
     const updatedQuestion = JSON.parse(libraryQuestion.question);
@@ -194,19 +192,19 @@ class FoormLibrarySaveBar extends Component {
     this.props.addFetchableLibraryQuestion({
       id: libraryQuestion['id'],
       name: libraryQuestion['question_name'],
-      type: JSON.parse(libraryQuestion.question)['type']
+      type: JSON.parse(libraryQuestion.question)['type'],
     });
     this.props.setLibraryQuestionData({
       name: libraryQuestion.question_name,
       id: libraryQuestion.id,
-      question: updatedQuestion
+      question: updatedQuestion,
     });
     this.props.setLastSavedLibraryQuestionQuestions(updatedQuestion);
   }
 
   handleSaveError(result) {
     this.setState({
-      isSaving: false
+      isSaving: false,
     });
 
     this.props.setSaveError(
@@ -304,7 +302,7 @@ class FoormLibrarySaveBar extends Component {
                   placeholder="-"
                   options={this.props.libraryCategories.map(v => ({
                     value: v,
-                    label: v
+                    label: v,
                   }))}
                   required={true}
                   {...SelectStyleProps}
@@ -439,29 +437,29 @@ const styles = {
     width: '100%',
     zIndex: 900,
     display: 'flex',
-    justifyContent: 'flex-end'
+    justifyContent: 'flex-end',
   },
   button: {
-    margin: '10px'
+    margin: '10px',
   },
   spinner: {
     fontSize: 25,
-    padding: 10
+    padding: 10,
   },
   lastSaved: {
     fontSize: 14,
     color: color.level_perfect,
-    padding: 15
+    padding: 15,
   },
   error: {
     fontSize: 14,
     color: color.red,
-    padding: 15
+    padding: 15,
   },
   warning: {
     color: color.red,
-    fontWeight: 'bold'
-  }
+    fontWeight: 'bold',
+  },
 };
 
 export const UnconnectedFoormLibrarySaveBar = FoormLibrarySaveBar;
@@ -474,7 +472,7 @@ export default connect(
     libraryId: state.foorm.libraryId,
     libraryQuestionId: state.foorm.libraryQuestionId,
     lastSaved: state.foorm.lastSaved,
-    saveError: state.foorm.saveError
+    saveError: state.foorm.saveError,
   }),
   dispatch => ({
     setLibraryQuestionData: libraryQuestionData =>
@@ -487,6 +485,6 @@ export default connect(
     setLastSaved: lastSaved => dispatch(setLastSaved(lastSaved)),
     setSaveError: saveError => dispatch(setSaveError(saveError)),
     setLastSavedLibraryQuestionQuestions: libraryQuestionQuestions =>
-      dispatch(setLastSavedQuestions(libraryQuestionQuestions))
+      dispatch(setLastSavedQuestions(libraryQuestionQuestions)),
   })
 )(FoormLibrarySaveBar);

@@ -30,7 +30,7 @@ ssh_key_name ||= {Ref: 'SSHKeyName'}.to_json
 instance_type ||= {Ref: 'InstanceType'}.to_json
 
 ami_timeout ||= 'PT10M'
-frontend_timeout ||= 'PT10M'
+frontend_timeout ||= 'PT20M'
 lifecycle_timeout ||= 1200 # seconds = 20 minutes
 frontend_volume_size ||= 16
 frontend_device_name ||= '/dev/sda1'

@@ -4,7 +4,7 @@ export const commitShape = PropTypes.shape({
   createdAt: PropTypes.string.isRequired,
   comment: PropTypes.string.isRequired,
   projectVersion: PropTypes.string.isRequired,
-  timelineElementType: PropTypes.string.isRequired
+  timelineElementType: PropTypes.string.isRequired,
 });
 
 export const reviewCommentShape = PropTypes.shape({
@@ -14,7 +14,7 @@ export const reviewCommentShape = PropTypes.shape({
   commenterId: PropTypes.number.isRequired,
   createdAt: PropTypes.string,
   isResolved: PropTypes.bool,
-  isFromTeacher: PropTypes.bool
+  isFromTeacher: PropTypes.bool,
 });
 
 export const reviewShape = PropTypes.shape({
@@ -24,5 +24,5 @@ export const reviewShape = PropTypes.shape({
   version: PropTypes.string,
   timelineElementType: PropTypes.string.isRequired,
   ownerName: PropTypes.string,
-  comments: PropTypes.arrayOf(reviewCommentShape)
+  comments: PropTypes.arrayOf(reviewCommentShape),
 });

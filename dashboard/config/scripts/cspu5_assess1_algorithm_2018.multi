@@ -37,3 +37,5 @@ Strategy: Go through the algorithm and keep track of the changes for each line
 
 The algorithm is incorrect because the last two steps should be switched.
 MARKDOWN
+
+allow_multiple_attempts true

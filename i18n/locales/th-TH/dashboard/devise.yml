@@ -50,9 +50,6 @@ th:
       expired: "หมดอายุ โปรดตรวจสอบใหม่"
       not_found: "ไม่พบ"
       not_locked: "ไม่ได้ล็อค"
-      not_saved:
-        one: "1 ข้อผิดพลาดนี้ %{resource} จากการถูกบันทึกไว้:"
-        other: "%{count} ข้อผิดพลาดที่ต้องห้ามนี้ %{resource} จากการถูกบันทึกไว้:"
     invitations:
       send_instructions: 'จดหมายเชิญได้ส่งไปที่%{email}'
       invitation_token_invalid: 'โทเค็นการเชิญที่ระบุไม่ถูกต้อง'

@@ -1,0 +1,18 @@
+{
+  "blockly_blockPlaySoundTooltip": "grok garsą",
+  "blockly_blockPlaySoundAtMeasureTooltip": "grok garsą",
+  "blockly_blockRepeatTooltip": "kartok",
+  "blockly_blockWhenRun": "paleidus",
+  "blockly_blockWhenRunTooltip": "paleidus",
+  "blockly_functionNamePlaceholder": "Mano funkcija",
+  "blockly_toolboxCategoryEvents": "Įvykiai",
+  "blockly_toolboxCategoryFunctions": "Komandų kūrimas",
+  "blockly_toolboxCategoryLogic": "Logika",
+  "blockly_toolboxCategoryMath": "Matematika",
+  "blockly_toolboxCategoryVariables": "Kintamieji",
+  "share": "Dalintis",
+  "startOver": "Pradėti iš naujo",
+  "panelHeaderInstructions": "Instrukcijos",
+  "panelHeaderWorkspace": "Darbo laukas: ",
+  "continue": "Tęsti"
+}

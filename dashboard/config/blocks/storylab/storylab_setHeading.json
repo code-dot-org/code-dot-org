@@ -13,6 +13,7 @@
         "name": "HEADING",
         "type": "String"
       }
-    ]
+    ],
+    "style": "world_blocks"
   }
 }

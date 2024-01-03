@@ -134,21 +134,19 @@ class PosteRoutesTest < Minitest::Test
       end
     end
 
-    private
-
     # Stubs the user ID for the duration of the test to match the ID of the
     # user hash given (e.g. FakeDashboard::STUDENT or FakeDashboard::TEACHER).
     # The result should be pulled in through the mock database.
     # @param [Hash] role
-    def with_role(role)
+    private def with_role(role)
       Documents.any_instance.stubs(:dashboard_user_id).returns(role.nil? ? nil : role[:id])
     end
 
-    def assert_response(response)
+    private def assert_response(response)
       assert_equal response, @pegasus.last_response.status
     end
 
-    def create_poste_delivery
+    private def create_poste_delivery
       DB[:poste_deliveries].insert(
         {
           created_at: DateTime.now,
@@ -162,7 +160,7 @@ class PosteRoutesTest < Minitest::Test
       )
     end
 
-    def create_contact
+    private def create_contact
       DB[:contacts].insert(
         {
           email: EMAIL,
@@ -176,7 +174,7 @@ class PosteRoutesTest < Minitest::Test
       )
     end
 
-    def create_poste_url
+    private def create_poste_url
       DB[:poste_urls].insert(
         {
           url: 'my url',

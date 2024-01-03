@@ -343,39 +343,39 @@ describe('project.js', () => {
     });
   });
 
-  describe('project.getProjectUrl', function() {
+  describe('project.getProjectUrl', function () {
     let stubUrl;
     let url;
 
-    beforeEach(function() {
+    beforeEach(function () {
       stubUrl = sinon.stub(project, 'getUrl').callsFake(() => url);
     });
 
-    afterEach(function() {
+    afterEach(function () {
       stubUrl.restore();
     });
 
-    it('typical url', function() {
+    it('typical url', function () {
       url = 'http://url';
       expect(project.getProjectUrl('/view')).to.equal('http://url/view');
     });
 
-    it('with ending slashes', function() {
+    it('with ending slashes', function () {
       url = 'http://url//';
       expect(project.getProjectUrl('/view')).to.equal('http://url/view');
     });
 
-    it('with query string', function() {
+    it('with query string', function () {
       url = 'http://url?query';
       expect(project.getProjectUrl('/view')).to.equal('http://url/view?query');
     });
 
-    it('with hash', function() {
+    it('with hash', function () {
       url = 'http://url#hash';
       expect(project.getProjectUrl('/view')).to.equal('http://url/view');
     });
 
-    it('with ending slashes, query, and hash', function() {
+    it('with ending slashes, query, and hash', function () {
       url = 'http://url/?query#hash';
       expect(project.getProjectUrl('/view')).to.equal('http://url/view?query');
     });
@@ -388,20 +388,20 @@ describe('project.js', () => {
     const ORIGINS = [
       {
         studio: 'https://studio.code.org',
-        codeProjects: 'https://codeprojects.org'
+        codeProjects: 'https://codeprojects.org',
       },
       {
         studio: 'https://test-studio.code.org',
-        codeProjects: 'https://test.codeprojects.org'
+        codeProjects: 'https://test.codeprojects.org',
       },
       {
         studio: 'https://staging-studio.code.org',
-        codeProjects: 'https://staging.codeprojects.org'
+        codeProjects: 'https://staging.codeprojects.org',
       },
       {
         studio: 'http://localhost-studio.code.org:3000',
-        codeProjects: 'http://localhost.codeprojects.org:3000'
-      }
+        codeProjects: 'http://localhost.codeprojects.org:3000',
+      },
     ];
 
     const NORMAL_APP_TYPES = ['artist', 'playlab', 'applab', 'gamelab'];
@@ -584,7 +584,7 @@ describe('project.js', () => {
         libraryName: 'my name',
         libraryDescription: 'my description',
         latestLibraryVersion: '123456',
-        libraryPublishedAt: new Date()
+        libraryPublishedAt: new Date(),
       };
       setData(lib);
       let currentProject = project.__TestInterface.getCurrent();
@@ -592,7 +592,7 @@ describe('project.js', () => {
 
       project.setLibraryDetails({
         libraryDescription: 'new description',
-        latestLibraryVersion: undefined
+        latestLibraryVersion: undefined,
       });
 
       currentProject = project.__TestInterface.getCurrent();
@@ -742,7 +742,7 @@ describe('project.js', () => {
       window.appOptions.channel = 'mychannel';
       sinon.stub(utils, 'currentLocation').returns({
         pathname: '/projects/artist/mychannel',
-        search: ''
+        search: '',
       });
       sinon.stub(project, 'getStandaloneApp').returns('artist');
       server = sinon.createFakeServer({autoRespond: true});
@@ -924,7 +924,7 @@ describe('project.js', () => {
 
       const projectData = {
         id: STUB_CHANNEL_ID,
-        isOwner: true
+        isOwner: true,
       };
       project.updateCurrentData_(null, projectData);
     });
@@ -1105,8 +1105,8 @@ describe('project.js', () => {
 function replaceAppOptions() {
   replaceOnWindow('appOptions', {
     level: {
-      isProjectLevel: true
-    }
+      isProjectLevel: true,
+    },
   });
 }
 
@@ -1125,7 +1125,7 @@ function stubGetChannelsWithNotFound(server) {
     xhr.respond(
       404,
       {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
       'channel `channel_id` not found'
     );
@@ -1137,7 +1137,7 @@ function stubGetChannels(server) {
     xhr.respond(
       200,
       {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
       JSON.stringify({
         createdAt: '2018-10-22T21:59:43.000-07:00',
@@ -1148,7 +1148,7 @@ function stubGetChannels(server) {
         migratedToS3: true,
         name: 'artist project',
         id: 'kmz3weHzTpZTbRWrHRzMJA',
-        projectType: 'artist'
+        projectType: 'artist',
       })
     );
   });
@@ -1159,7 +1159,7 @@ function stubPostChannels(server) {
     xhr.respond(
       200,
       {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
       JSON.stringify({
         createdAt: '2018-10-22T21:59:43.000-07:00',
@@ -1170,7 +1170,7 @@ function stubPostChannels(server) {
         migratedToS3: true,
         name: 'Remix: allthethings-artist-project-backed',
         id: 'kmz3weHzTpZTbRWrHRzMJA',
-        projectType: 'artist'
+        projectType: 'artist',
       })
     );
   });
@@ -1181,14 +1181,14 @@ function stubGetMainJson(server) {
     xhr.respond(
       200,
       {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
       JSON.stringify({
         filename: 'main.json',
         category: 'json',
         size: 0,
         versionId: 12345,
-        timestamp: Date.now()
+        timestamp: Date.now(),
       })
     );
   });
@@ -1205,7 +1205,7 @@ function stubGetSourcesWithNotFound(server) {
     xhr.respond(
       404,
       {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
       'source for `channel_id` not found'
     );
@@ -1217,14 +1217,14 @@ function stubPutMainJson(server) {
     xhr.respond(
       200,
       {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
       JSON.stringify({
         filename: 'main.json',
         category: 'json',
         size: 0,
         versionId: 12345,
-        timestamp: Date.now()
+        timestamp: Date.now(),
       })
     );
   });
@@ -1248,6 +1248,8 @@ function createStubSourceHandler() {
     setInitialLibrariesList: sinon.stub(),
     getLibrariesList: sinon.stub(),
     setInRestrictedShareMode: sinon.stub(),
-    inRestrictedShareMode: sinon.stub()
+    inRestrictedShareMode: sinon.stub(),
+    setTeacherHasConfirmedUploadWarning: sinon.stub(),
+    teacherHasConfirmedUploadWarning: sinon.stub(),
   };
 }

@@ -11,8 +11,8 @@ class ApiController < ApplicationController
       auth = {authorization: "Bearer #{tokens[:oauth_token]}"}
       response = RestClient.get("https://api.clever.com/#{endpoint}", auth)
       yield JSON.parse(response)['data']
-    rescue RestClient::ExceptionWithResponse => e
-      render status: e.response.code, json: {error: e.response.body}
+    rescue RestClient::ExceptionWithResponse => exception
+      render status: exception.response.code, json: {error: exception.response.body}
     end
   end
 
@@ -50,9 +50,9 @@ class ApiController < ApplicationController
         subdomain: subdomain,
       }
       render json: response
-    rescue RestClient::Exception => e
+    rescue RestClient::Exception => exception
       Honeybadger.notify(
-        e,
+        exception,
         error_message: "Failed to retrieve OAuth token from Azure for use with the Immersive Reader API.",
         context: {
           client_id: tenant_id,
@@ -61,9 +61,9 @@ class ApiController < ApplicationController
         }
       )
       render status: :failed_dependency, json: {error: 'Unable to get token from Azure.'}
-    rescue JSON::JSONError => e
+    rescue JSON::JSONError => exception
       Honeybadger.notify(
-        e,
+        exception,
         error_message: "Failed to parse response from Azure when trying to get OAuth token for use with the Immersive Reader API.",
         context: {
           client_id: tenant_id,
@@ -128,8 +128,8 @@ class ApiController < ApplicationController
 
     begin
       yield service
-    rescue Google::Apis::ClientError, Google::Apis::AuthorizationError => error
-      render status: :forbidden, json: {error: error}
+    rescue Google::Apis::ClientError, Google::Apis::AuthorizationError => exception
+      render status: :forbidden, json: {error: exception}
     end
   end
 
@@ -178,7 +178,8 @@ class ApiController < ApplicationController
     updates = params.require(:updates)
     updates.to_a.each do |item|
       # Convert string-boolean parameters to boolean
-      %i(locked readonly_answers).each {|val| item[val] = JSONValue.value(item[val])}
+      item[:locked] = JSONValue.value(item[:locked])
+      item[:readonly_answers] = JSONValue.value(item[:readonly_answers])
 
       user_level_data = item[:user_level_data]
       if user_level_data[:user_id].nil? || user_level_data[:level_id].nil? || user_level_data[:script_id].nil?
@@ -216,7 +217,7 @@ class ApiController < ApplicationController
       return
     end
 
-    data = current_user.sections.each_with_object({}) do |section, section_hash|
+    data = current_user.sections_instructed.each_with_object({}) do |section, section_hash|
       next if section.hidden
       script = load_script(section)
 
@@ -269,14 +270,14 @@ class ApiController < ApplicationController
       level_map = student.user_levels_by_level(script)
       paired_user_level_ids = PairedUserLevel.pairs(level_map.values.map(&:id))
       student_levels = script_levels.map do |script_level|
-        user_levels = script_level.level_ids.map do |id|
+        user_levels = script_level.level_ids.filter_map do |id|
           contained_levels = Unit.cache_find_level(id).contained_levels
           if contained_levels.any?
             level_map[contained_levels.first.id]
           else
             level_map[id]
           end
-        end.compact
+        end
         user_levels_ids = user_levels.map(&:id)
         level_class = (best_activity_css_class user_levels).dup
         paired = (paired_user_level_ids & user_levels_ids).any?
@@ -391,7 +392,7 @@ class ApiController < ApplicationController
   # Get /api/teacher_panel_section
   def teacher_panel_section
     prevent_caching
-    teacher_sections = current_user&.sections&.where(hidden: false)
+    teacher_sections = current_user&.sections_instructed&.where(hidden: false)
 
     if teacher_sections.blank?
       head :no_content
@@ -567,7 +568,7 @@ class ApiController < ApplicationController
     data = section.students.map do |student|
       student_hash = {id: student.id, name: student.name}
 
-      text_response_levels.map do |level_hash|
+      text_response_levels.filter_map do |level_hash|
         last_attempt = student.last_attempt_for_any(level_hash[:levels])
         response = last_attempt.try(:level_source).try(:data)
         next unless response
@@ -579,7 +580,7 @@ class ApiController < ApplicationController
           response: response,
           url: build_script_level_url(level_hash[:script_level], section_id: section.id, user_id: student.id)
         }
-      end.compact
+      end
     end.flatten
 
     render json: data
@@ -620,15 +621,13 @@ class ApiController < ApplicationController
     )
   end
 
-  private
-
-  def load_section
+  private def load_section
     section = Section.find(params[:section_id])
     authorize! :read, section
     section
   end
 
-  def load_script(section=nil)
+  private def load_script(section = nil)
     script_id = params[:script_id] if params[:script_id].present?
     script_id ||= section.default_script.try(:id)
     script = Unit.get_from_cache(script_id) if script_id

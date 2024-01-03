@@ -1,71 +1,118 @@
 import GoogleBlockly from 'blockly/core';
 
-const CORNER_RADIUS = 3;
-const INNER_HEIGHT = 16;
-
 export default class CdoFieldButton extends GoogleBlockly.Field {
-  constructor(title, opt_buttonHandler, opt_color, opt_changeHandler) {
-    super('');
-
-    this.title_ = title;
-    this.buttonHandler_ = opt_buttonHandler;
-    this.color_ = opt_color;
-    this.changeHandler_ = opt_changeHandler;
+  /**
+   * This is a customized field which the user clicks to select an option from a customized picker,
+   * for example, the location of a sprite from a grid or a sound file from a customized modal.
+   * @param {Object} options - The options for constructing the class.
+   * @param {*} options.value Optional. The initial value of the field.
+   * @param {Function} [options.validator] Optional. A function that is called to validate changes to the field's value.
+   * Takes in a value & returns a validated value, or null to abort a change
+   * @param {Function} options.onClick Handles the field's editor.
+   * @param {Function} [options.transformText] Handles how the field text is displayed.
+   * @param {SVGElement} options.icon SVG <tspan> element - if the field displays a button, this is the icon that is displayed on the button.
+   * @param {Object} [options.colorOverrides] - An optional set of colors to use instead of the sourceBlock's styles.
+   * @param {string} [options.colorOverrides.button] - An override for the toggle button color.
+   * @param {string} [options.colorOverrides.icon] - An override for the color of the icon.
+   * @param {string} [options.colorOverrides.text] - An override for the color of the text.
+   */
+  constructor({
+    value,
+    validator,
+    onClick,
+    transformText,
+    icon,
+    colorOverrides,
+    allowReadOnlyClick = false,
+  }) {
+    super(value, validator);
+    this.onClick = onClick;
+    this.transformText = transformText;
+    this.icon = icon;
+    this.SERIALIZABLE = true;
+    this.colorOverrides = colorOverrides;
+    this.allowReadOnlyClick = allowReadOnlyClick;
   }
 
-  init() {
-    super.init();
-
-    this.buttonElement_ = Blockly.utils.dom.createSvgElement(
-      'rect',
-      {
-        rx: CORNER_RADIUS,
-        ry: CORNER_RADIUS,
-        x: 1,
-        y: 1,
-        height: INNER_HEIGHT,
-        width: INNER_HEIGHT
-      },
-      this.fieldGroup_
-    );
-    this.buttonElement_.style.fillOpacity = 1;
-    this.buttonElement_.style.fill = this.color_;
-
-    this.textElement_.style.fontSize = '11pt';
-    this.textElement_.style.fill = 'white';
-    this.textElement_.textContent = '';
-    this.textElement_.appendChild(this.title_);
-
-    this.fieldGroup_.insertBefore(this.buttonElement_, this.textElement_);
+  static fromJson(options) {
+    return new CdoFieldButton(options);
   }
 
-  getValue() {
-    return String(this.value_);
-  }
-
-  setValue(value) {
-    if (this.value_ !== value) {
-      if (this.changeHandler_) {
-        const override = this.changeHandler_(value);
-        if (override !== undefined) {
-          value = override;
-        }
-      }
-      this.value_ = value;
+  /**
+   * Create the block UI for this field.
+   * @override
+   */
+  initView() {
+    super.initView();
+    if (this.icon) {
+      this.icon.style.fill =
+        this.colorOverrides?.icon || this.getSourceBlock().style.colourPrimary;
+      // Make the icon centered on Safari.
+      this.icon.setAttribute('dominant-baseline', 'central');
+      this.textElement_.appendChild(this.icon);
     }
   }
 
+  /**
+   *  Get the text from this field to display on the block. May differ from
+   * `getText` with call to `this.transformText` which can change format of text.
+   * @override
+   */
+  getDisplayText_() {
+    let text = this.getText();
+    if (!text) {
+      return GoogleBlockly.Field.NBSP;
+    }
+    // The transformText function customizes the text for display.
+    if (this.transformText) {
+      return this.transformText(text);
+    }
+    return text;
+  }
+
+  /**
+   * Create an editor for the field.
+   * @override
+   */
   showEditor_() {
-    if (!this.buttonHandler_) {
-      return;
-    }
-    this.buttonHandler_(this.setValue.bind(this));
+    this.onClick();
   }
 
-  updateWidth_() {
-    super.updateWidth_();
-    if (this.buttonElement_) {
-      this.buttonElement_.setAttribute('width', this.size_.width + 8);
+  /**
+   * If we always want to allow clicking on a read-only field, we
+   * call onClick here, otherwise we use the default behavior.
+   * @override
+   */
+  onMouseDown_(e) {
+    if (this.allowReadOnlyClick) {
+      this.onClick();
+    } else {
+      super.onMouseDown_(e);
+    }
+  }
+
+  /**
+   * Contrast background for button with source block
+   * @override
+   */
+  applyColour() {
+    const sourceBlock = this.getSourceBlock();
+    const buttonColor = this.colorOverrides?.button;
+    const textColor = this.colorOverrides?.text;
+    const iconColor = this.colorOverrides?.icon;
+
+    if (this.icon) {
+      this.icon.style.fill = iconColor || sourceBlock.style.colourPrimary;
+    }
+
+    const borderRect = this.borderRect_;
+    if (borderRect && buttonColor) {
+      borderRect.setAttribute('style', 'fill: ' + buttonColor);
+    }
+
+    const textElement = this.textElement_;
+    if (textElement && textColor) {
+      textElement.setAttribute('style', 'fill: ' + textColor);
     }
   }
 }

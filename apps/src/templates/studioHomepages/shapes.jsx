@@ -10,14 +10,14 @@ const shapes = {
     PropTypes.shape({
       title: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
-      link: PropTypes.string.isRequired
+      link: PropTypes.string.isRequired,
     })
   ),
   topCourse: PropTypes.shape({
     assignableName: PropTypes.string.isRequired,
     linkToOverview: PropTypes.string.isRequired,
     linkToLesson: PropTypes.string.isRequired,
-    lessonName: PropTypes.string.isRequired
+    lessonName: PropTypes.string.isRequired,
   }),
   sections: PropTypes.arrayOf(
     PropTypes.shape({
@@ -29,7 +29,7 @@ const shapes = {
       numberOfStudents: PropTypes.number.isRequired,
       linkToStudents: PropTypes.string.isRequired,
       login_type: PropTypes.string,
-      code: PropTypes.string.isRequired
+      code: PropTypes.string.isRequired,
     })
   ),
   teacherAnnouncement: PropTypes.shape({
@@ -39,7 +39,7 @@ const shapes = {
     link: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
     type: PropTypes.string,
-    id: PropTypes.string.isRequired
+    id: PropTypes.string.isRequired,
   }),
   specialAnnouncement: PropTypes.shape({
     id: PropTypes.string,
@@ -52,8 +52,8 @@ const shapes = {
     buttonId2: PropTypes.string,
     buttonUrl2: PropTypes.string,
     buttonText2: PropTypes.string,
-    backgroundColor: PropTypes.string
-  })
+    backgroundColor: PropTypes.string,
+  }),
 };
 
 export default shapes;

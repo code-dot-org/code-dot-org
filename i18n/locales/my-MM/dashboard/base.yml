@@ -21,7 +21,9 @@ my:
     attributes:
       user:
         email: 'email လိပ္စာ'
+        parent_email: 'မိဘ/အုပ်ထိန်းသူ အီးမေး'
         username: 'အသုံးပြုမည့်အမည်'
+        current_password: 'စကားဝှက်အဟောင်း'
         locale: 'ဘာသာစကား'
         age: 'အသက်'
         gender: 'က်ား/မ'
@@ -77,6 +79,7 @@ my:
     panel:
       answer_viewer: 'ဆရာအဖွဲ့'
   user:
+    parent_guardian_email_label: "မိဘ/အုပ်ထိန်းသူ အီးမေး"
     none: "ဘာမှမရှိ"
   home:
     trynow: 'ဆက်သင်ယူရန်'

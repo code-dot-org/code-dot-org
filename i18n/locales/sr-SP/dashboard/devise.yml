@@ -50,9 +50,6 @@ sr:
       expired: "истекао је, молимо вас затражите нови"
       not_found: "није пронађено"
       not_locked: "није било(био,била) закључано"
-      not_saved:
-        one: "1 грешка забрањује овом %{resource} да буде снимљен:"
-        other: "%{count} грешака забрањује овом %{resource} да буде снимљен:"
     invitations:
       send_instructions: 'Позивница је послата преко електронске поште на %{email}.'
       no_invitations_remaining: "Нема више позивница"

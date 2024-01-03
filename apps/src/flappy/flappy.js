@@ -35,7 +35,7 @@ Flappy.GameStates = {
   WAITING: 0,
   ACTIVE: 1,
   ENDING: 2,
-  OVER: 3
+  OVER: 3,
 };
 
 Flappy.gameState = Flappy.GameStates.WAITING;
@@ -55,7 +55,7 @@ var infoText;
 //TODO: Make configurable.
 studioApp().setCheckForEmptyBlocks(true);
 
-var randomObstacleHeight = function() {
+var randomObstacleHeight = function () {
   var min = Flappy.MIN_OBSTACLE_HEIGHT;
   var max =
     Flappy.MAZE_HEIGHT -
@@ -70,18 +70,18 @@ var randomObstacleHeight = function() {
 // Default Scalings
 Flappy.scale = {
   snapRadius: 1,
-  stepSpeed: 33
+  stepSpeed: 33,
 };
 
 var twitterOptions = {
   text: flappyMsg.shareFlappyTwitterDonor({donor: getRandomDonorTwitter()}),
-  hashtag: 'FlappyCode'
+  hashtag: 'FlappyCode',
 };
 
 var AVATAR_HEIGHT = constants.AVATAR_HEIGHT;
 var AVATAR_WIDTH = constants.AVATAR_WIDTH;
 
-var loadLevel = function() {
+var loadLevel = function () {
   // Load maps.
   infoText = utils.valueOr(level.infoText, true);
   if (!infoText) {
@@ -118,13 +118,13 @@ var loadLevel = function() {
     numObstacles = 0;
   }
 
-  var resetObstacle = function(x) {
+  var resetObstacle = function (x) {
     this.x = x;
     this.gapStart = randomObstacleHeight();
     this.hitAvatar = false;
   };
 
-  var containsAvatar = function() {
+  var containsAvatar = function () {
     var flappyRight = Flappy.avatarX + AVATAR_WIDTH;
     var flappyBottom = Flappy.avatarY + AVATAR_HEIGHT;
     var obstacleRight = this.x + Flappy.OBSTACLE_WIDTH;
@@ -143,12 +143,12 @@ var loadLevel = function() {
       gapStart: randomObstacleHeight(), // y coordinate of the top of the gap
       hitAvatar: false,
       reset: resetObstacle,
-      containsAvatar: containsAvatar
+      containsAvatar: containsAvatar,
     });
   }
 };
 
-var drawMap = function() {
+var drawMap = function () {
   var svg = document.getElementById('svgFlappy');
   var i, tile;
 
@@ -176,7 +176,7 @@ var drawMap = function() {
   }
 
   // Add obstacles
-  Flappy.obstacles.forEach(function(obstacle, index) {
+  Flappy.obstacles.forEach(function (obstacle, index) {
     var obstacleTopIcon = document.createElementNS(Blockly.SVG_NS, 'image');
     obstacleTopIcon.setAttributeNS(
       'http://www.w3.org/1999/xlink',
@@ -328,17 +328,17 @@ var drawMap = function() {
   clickRect.setAttribute('width', Flappy.MAZE_WIDTH);
   clickRect.setAttribute('height', Flappy.MAZE_HEIGHT);
   clickRect.setAttribute('fill-opacity', 0);
-  clickRect.addEventListener('touchstart', function(e) {
+  clickRect.addEventListener('touchstart', function (e) {
     Flappy.onMouseDown(e);
     e.preventDefault(); // don't want to see mouse down
   });
-  clickRect.addEventListener('mousedown', function(e) {
+  clickRect.addEventListener('mousedown', function (e) {
     Flappy.onMouseDown(e);
   });
   svg.appendChild(clickRect);
 };
 
-Flappy.calcDistance = function(xDist, yDist) {
+Flappy.calcDistance = function (xDist, yDist) {
   return Math.sqrt(xDist * xDist + yDist * yDist);
 };
 
@@ -346,7 +346,7 @@ Flappy.calcDistance = function(xDist, yDist) {
  * Check to see if avatar is in collision with given obstacle
  * @param obstacle Object : The obstacle object we're checking
  */
-var checkForObstacleCollision = function(obstacle) {
+var checkForObstacleCollision = function (obstacle) {
   var insideObstacleColumn =
     Flappy.avatarX + AVATAR_WIDTH >= obstacle.x &&
     Flappy.avatarX <= obstacle.x + Flappy.OBSTACLE_WIDTH;
@@ -360,7 +360,7 @@ var checkForObstacleCollision = function(obstacle) {
   return false;
 };
 
-Flappy.activeTicks = function() {
+Flappy.activeTicks = function () {
   if (Flappy.firstActiveTick < 0) {
     return 0;
   }
@@ -372,7 +372,7 @@ Flappy.activeTicks = function() {
  * We want to swallow exceptions when executing user generated code. This provides
  * a single place to do so.
  */
-Flappy.callUserGeneratedCode = function(fn) {
+Flappy.callUserGeneratedCode = function (fn) {
   try {
     fn.call(Flappy, api);
   } catch (e) {
@@ -383,7 +383,7 @@ Flappy.callUserGeneratedCode = function(fn) {
   }
 };
 
-Flappy.onTick = function() {
+Flappy.onTick = function () {
   var avatarWasAboveGround, avatarIsAboveGround;
 
   if (
@@ -423,7 +423,7 @@ Flappy.onTick = function() {
     Flappy.avatarY = Math.max(Flappy.avatarY, Flappy.MAZE_HEIGHT * -0.5);
 
     // Update obstacles
-    Flappy.obstacles.forEach(function(obstacle, index) {
+    Flappy.obstacles.forEach(function (obstacle, index) {
       var wasRightOfAvatar = obstacle.x > Flappy.avatarX + AVATAR_WIDTH;
 
       obstacle.x -= Flappy.SPEED;
@@ -517,7 +517,7 @@ Flappy.onTick = function() {
   }
 };
 
-Flappy.onMouseDown = function(e) {
+Flappy.onMouseDown = function (e) {
   if (Flappy.intervalId) {
     Flappy.clickPending = true;
     if (Flappy.gameState === Flappy.GameStates.WAITING) {
@@ -543,7 +543,7 @@ Flappy.onMouseDown = function(e) {
 /**
  * Initialize Blockly and the Flappy app.  Called on page load.
  */
-Flappy.init = function(config) {
+Flappy.init = function (config) {
   // replace studioApp() methods with our own
   studioApp().reset = this.reset.bind(this);
   studioApp().runButtonClick = this.runButtonClick.bind(this);
@@ -556,7 +556,7 @@ Flappy.init = function(config) {
 
   loadLevel();
 
-  config.loadAudio = function() {
+  config.loadAudio = function () {
     studioApp().loadAudio(skin.winSound, 'win');
     studioApp().loadAudio(skin.startSound, 'start');
     studioApp().loadAudio(skin.failureSound, 'failure');
@@ -577,7 +577,7 @@ Flappy.init = function(config) {
     studioApp().loadAudio(skin.wall0Sound, 'wall0');
   };
 
-  config.afterInject = function() {
+  config.afterInject = function () {
     /**
      * The richness of block colours, regardless of the hue.
      * MOOC blocks should be brighter (target audience is younger).
@@ -622,7 +622,7 @@ Flappy.init = function(config) {
     when_run: {x: col1, y: row1},
     flappy_whenCollideGround: {x: col2, y: row1},
     flappy_whenCollideObstacle: {x: col2, y: row2},
-    flappy_whenEnterObstacle: {x: col2, y: row3}
+    flappy_whenEnterObstacle: {x: col2, y: row3},
   };
 
   // if we dont have collide events, have enter obstacle in top row
@@ -635,7 +635,7 @@ Flappy.init = function(config) {
     config.blockArrangement.flappy_whenClick.y = row2;
   }
 
-  var onMount = function() {
+  var onMount = function () {
     studioApp().init(config);
 
     var rightButton = document.getElementById('rightButton');
@@ -664,7 +664,7 @@ Flappy.init = function(config) {
 /**
  * Clear the event handlers and stop the onTick timer.
  */
-Flappy.clearEventHandlersKillTickLoop = function() {
+Flappy.clearEventHandlersKillTickLoop = function () {
   Flappy.whenClick = null;
   Flappy.whenCollideGround = null;
   Flappy.whenCollideObstacle = null;
@@ -680,7 +680,7 @@ Flappy.clearEventHandlersKillTickLoop = function() {
  * Reset the app to the start position and kill any pending animation tasks.
  * @param {boolean} first True if an opening animation is to be played.
  */
-Flappy.reset = function(first) {
+Flappy.reset = function (first) {
   Flappy.clearEventHandlersKillTickLoop();
 
   Flappy.gameState = Flappy.GameStates.WAITING;
@@ -691,7 +691,7 @@ Flappy.reset = function(first) {
   Flappy.avatarVelocity = 0;
 
   // Reset obstacles
-  Flappy.obstacles.forEach(function(obstacle, index) {
+  Flappy.obstacles.forEach(function (obstacle, index) {
     obstacle.reset(Flappy.MAZE_WIDTH * 1.5 + index * Flappy.OBSTACLE_SPACING);
   });
 
@@ -731,7 +731,7 @@ Flappy.reset = function(first) {
  * Click the run button.  Start the program.
  */
 // XXX This is the only method used by the templates!
-Flappy.runButtonClick = function() {
+Flappy.runButtonClick = function () {
   if (level.edit_blocks) {
     Flappy.onPuzzleComplete();
   }
@@ -766,7 +766,7 @@ Flappy.runButtonClick = function() {
  * App specific displayFeedback function that calls into
  * studioApp().displayFeedback when appropriate
  */
-var displayFeedback = function() {
+var displayFeedback = function () {
   const isSignedIn =
     getStore().getState().currentUser.signInState === SignInState.SignedIn;
   if (!Flappy.waitingForReport) {
@@ -779,11 +779,11 @@ var displayFeedback = function() {
         twitter: twitterOptions,
         appStrings: {
           reinfFeedbackMsg: flappyMsg.reinfFeedbackMsg(),
-          sharingText: flappyMsg.shareGame()
+          sharingText: flappyMsg.shareGame(),
         },
         saveToProjectGallery: true,
         feedbackImage: feedbackImageUri,
-        disableSaveToGallery: !isSignedIn
+        disableSaveToGallery: !isSignedIn,
       });
     });
   }
@@ -793,7 +793,7 @@ var displayFeedback = function() {
  * Function to be called when the service report call is complete
  * @param {MilestoneResponse} response - JSON response (if available)
  */
-Flappy.onReportComplete = function(response) {
+Flappy.onReportComplete = function (response) {
   Flappy.response = response;
   Flappy.waitingForReport = false;
   studioApp().onReportComplete(response);
@@ -803,7 +803,7 @@ Flappy.onReportComplete = function(response) {
 /**
  * Execute the user's code.  Heaven help us...
  */
-Flappy.execute = function() {
+Flappy.execute = function () {
   Flappy.result = ResultType.UNSET;
   Flappy.testResults = TestResults.NO_TESTS_RUN;
   Flappy.waitingForReport = false;
@@ -819,7 +819,7 @@ Flappy.execute = function() {
     whenCollideGround: {code: generator('flappy_whenCollideGround')},
     whenEnterObstacle: {code: generator('flappy_whenEnterObstacle')},
     whenCollideObstacle: {code: generator('flappy_whenCollideObstacle')},
-    whenRunButton: {code: generator('when_run')}
+    whenRunButton: {code: generator('when_run')},
   };
 
   CustomMarshalingInterpreter.evalWithEvents(
@@ -840,7 +840,7 @@ Flappy.execute = function() {
   Flappy.intervalId = window.setInterval(Flappy.onTick, Flappy.scale.stepSpeed);
 };
 
-Flappy.onPuzzleComplete = function() {
+Flappy.onPuzzleComplete = function () {
   if (level.freePlay) {
     Flappy.result = ResultType.SUCCESS;
   }
@@ -888,8 +888,7 @@ Flappy.onPuzzleComplete = function() {
 };
 
 function sendReport() {
-  const xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
-  const textBlocks = Blockly.Xml.domToText(xml);
+  const textBlocks = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
 
   Flappy.waitingForReport = true;
 
@@ -900,7 +899,7 @@ function sendReport() {
     result: Flappy.result === ResultType.SUCCESS,
     testResult: Flappy.testResults,
     program: encodeURIComponent(textBlocks),
-    onComplete: Flappy.onReportComplete
+    onComplete: Flappy.onReportComplete,
   });
 }
 
@@ -909,7 +908,7 @@ function sendReport() {
  * @param {number} x Horizontal Pixel location.
  * @param {number} y Vertical Pixel location.
  */
-Flappy.displayAvatar = function(x, y) {
+Flappy.displayAvatar = function (x, y) {
   var avatarIcon = document.getElementById('avatar');
   avatarIcon.setAttribute('x', x);
   avatarIcon.setAttribute('y', y);
@@ -918,7 +917,7 @@ Flappy.displayAvatar = function(x, y) {
 /**
  * display moving goal
  */
-Flappy.displayGoal = function() {
+Flappy.displayGoal = function () {
   if (!Flappy.goalX) {
     return;
   }
@@ -930,7 +929,7 @@ Flappy.displayGoal = function() {
 /**
  * Display ground at given tickCount
  */
-Flappy.displayGround = function(tickCount) {
+Flappy.displayGround = function (tickCount) {
   if (!level.ground) {
     return;
   }
@@ -946,7 +945,7 @@ Flappy.displayGround = function(tickCount) {
 /**
  * Display all obstacles
  */
-Flappy.displayObstacles = function() {
+Flappy.displayObstacles = function () {
   for (var i = 0; i < Flappy.obstacles.length; i++) {
     var obstacle = Flappy.obstacles[i];
     var topIcon = document.getElementById('obstacle_top' + i);
@@ -959,17 +958,17 @@ Flappy.displayObstacles = function() {
   }
 };
 
-Flappy.displayScore = function() {
+Flappy.displayScore = function () {
   var score = document.getElementById('score');
   score.textContent = Flappy.playerScore;
 };
 
-Flappy.flap = function(amount) {
+Flappy.flap = function (amount) {
   var defaultFlap = level.defaultFlap || 'NORMAL';
   Flappy.avatarVelocity = amount || api.FlapHeight[defaultFlap];
 };
 
-Flappy.setGapHeight = function(value) {
+Flappy.setGapHeight = function (value) {
   var minGapSize =
     Flappy.MAZE_HEIGHT - Flappy.MIN_OBSTACLE_HEIGHT - Flappy.OBSTACLE_HEIGHT;
   if (value < minGapSize) {
@@ -978,14 +977,14 @@ Flappy.setGapHeight = function(value) {
   Flappy.GAP_SIZE = value;
 };
 
-var skinTheme = function(value) {
+var skinTheme = function (value) {
   if (value === 'flappy') {
     return skin;
   }
   return skin[value];
 };
 
-Flappy.setBackground = function(value) {
+Flappy.setBackground = function (value) {
   var element = document.getElementById('background');
   element.setAttributeNS(
     'http://www.w3.org/1999/xlink',
@@ -994,7 +993,7 @@ Flappy.setBackground = function(value) {
   );
 };
 
-Flappy.setPlayer = function(value) {
+Flappy.setPlayer = function (value) {
   var element = document.getElementById('avatar');
   element.setAttributeNS(
     'http://www.w3.org/1999/xlink',
@@ -1003,9 +1002,9 @@ Flappy.setPlayer = function(value) {
   );
 };
 
-Flappy.setObstacle = function(value) {
+Flappy.setObstacle = function (value) {
   var element;
-  Flappy.obstacles.forEach(function(obstacle, index) {
+  Flappy.obstacles.forEach(function (obstacle, index) {
     element = document.getElementById('obstacle_top' + index);
     element.setAttributeNS(
       'http://www.w3.org/1999/xlink',
@@ -1022,7 +1021,7 @@ Flappy.setObstacle = function(value) {
   });
 };
 
-Flappy.setGround = function(value) {
+Flappy.setGround = function (value) {
   if (!level.ground) {
     return;
   }
@@ -1037,7 +1036,7 @@ Flappy.setGround = function(value) {
   }
 };
 
-var checkFinished = function() {
+var checkFinished = function () {
   // if we have a success condition and have accomplished it, we're done and successful
   if (
     level.goal &&

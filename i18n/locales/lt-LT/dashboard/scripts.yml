@@ -150,6 +150,7 @@ lt:
           description_short: Sukurk istoriją arba žaidimą su Gumball laboratorija!
           student_description: Sukurk istoriją arba žaidimą su Gumball laboratorija!
         starwars:
+          title: 'Žvaigždžių karai: Programuojame galaktiką (JavaScript kalba)'
           description: Išmok programuoti robotus ir sukurk savo Žvaigždžių Karų žaidimą tolimoje galaktikoje.
           description_short: Išmok programuoti robotus ir sukurk savo Žvaigždžių Karų žaidimą tolimoje galaktikoje.
           student_description: Išmok programuoti robotus ir sukurk savo Žvaigždžių Karų žaidimą tolimoje galaktikoje.
@@ -158,7 +159,6 @@ lt:
           description_short: Išmok programuoti robotus ir sukurk savo Žvaigždžių Karų žaidimą tolimoje galaktikoje.
           student_description: Išmok programuoti robotus ir sukurk savo Žvaigždžių Karų žaidimą tolimoje galaktikoje.
         mc:
-          title: Minecraft programavimo valanda
           description: Panaudokite kodo blokelius aprašant Stivo ir Alekso nuotykius šiame Minecraft pasaulyje
           description_short: Tyrinėk Minecraft pasaulį koduodamas.
           student_description: Panaudokite kodo blokelius aprašant Stivo ir Alekso nuotykius šiame Minecraft pasaulyje
@@ -1410,6 +1410,22 @@ lt:
           lesson_groups:
             lessonGroup-2:
               display_name: Turinys
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
+        csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
+        csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
         csp4-2023:
           lesson_groups:
             csp_variables:
@@ -1428,3 +1444,148 @@ lt:
               display_name: Sąrašai
             lessonGroup-3:
               display_name: Kartojimas
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Žinių patikrinimas
+            lesson-6:
+              name: 1 pamoka
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Kartojimas
+            csf_events:
+              display_name: Įvykiai
+        express-2023:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: Įvykiai
+            csf_loops:
+              display_name: Kartojimas
+            csf_conditionals:
+              display_name: Sąlyginiai sakiniai
+            csf_functions:
+              display_name: Komandų kūrimas
+            csf_variables:
+              display_name: Kintamieji
+            csf_for_loops:
+              display_name: Kartojimas
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Virtuali pilietybė
+            csf_loops:
+              display_name: Kartojimas
+            csf_events:
+              display_name: Įvykiai
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Virtuali pilietybė
+            csf_loops:
+              display_name: Kartojimas
+            csf_events:
+              display_name: Įvykiai
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Virtuali pilietybė
+            csf_loops:
+              display_name: Kartojimas
+            csf_events:
+              display_name: Įvykiai
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Virtuali pilietybė
+            csf_events:
+              display_name: Įvykiai
+            csf_loops:
+              display_name: Kartojimas
+            csf_conditionals:
+              display_name: Sąlyginiai sakiniai
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Virtuali pilietybė
+            ramp_up:
+              display_name: Kartojimas kartojime
+            csf_functions:
+              display_name: Komandų kūrimas
+            csf_nested_loops:
+              display_name: Sąlyginiai sakiniai
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Įvadas
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Įvadas
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Virtuali pilietybė
+            lessonGroup-4:
+              display_name: Kintamieji
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Virtuali pilietybė
+            lessonGroup-4:
+              display_name: Kartojimas
+        nevada-standards-aligned-kindergarten-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Virtuali pilietybė
+            lessonGroup-4:
+              display_name: Kartojimas
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Virtuali pilietybė
+            lessonGroup-4:
+              display_name: Kartojimas
+            lessonGroup-6:
+              display_name: Įvykiai
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Virtuali pilietybė
+            lessonGroup-4:
+              display_name: Kartojimas
+            lessonGroup-5:
+              display_name: Įvykiai
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Virtuali pilietybė
+            lessonGroup-6:
+              display_name: Kartojimas
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Kartojimas kartojime
+            lessonGroup-4:
+              display_name: Komandų kūrimas
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Sąlyginiai sakiniai
+            lessonGroup-5:
+              display_name: Kintamieji
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Įvadas
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Įvadas
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Įvadas
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Įvadas

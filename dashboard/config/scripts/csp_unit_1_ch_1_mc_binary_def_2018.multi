@@ -7,3 +7,5 @@ right 'It\'s easier, cheaper, and more reliable to build machines and devices th
 wrong 'It typically takes fewer digits to represent a number in binary when compared to other number systems (for example, the decimal number system) '
 wrong 'It\'s impossible to build a computing machine that uses anything but binary to represent numbers'
 
+
+allow_multiple_attempts true

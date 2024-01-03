@@ -1,0 +1,51 @@
+{
+  "sm-WS": {
+    "data": {
+      "callouts": {
+        "courseA_maze_seq2": {
+          "courseA_maze_seqA_callout1": "Faaaoga le ki o le step ina ia alu lava i sitepu taitasi le polokalame. E fesoasoani atu i le mauaina o le manu faalafua!"
+        },
+        "courseA_maze_seq4": {
+          "made_of_stone": "O poloka nei o loo fai i maa. E mafai ona tuu i se isi itu, ae le mafai ona aveese ma tape!"
+        },
+        "courseB_maze_seq2": {
+          "courseB_maze_seq2_callout1": "Faaaoga le ki o le step ina ia alu lava i sitepu taitasi le polokalame. E fesoasoani atu i le mauaina o le manu faalafua!"
+        },
+        "courseC_maze_debugging5": {
+          "courseC_maze_debugging5_1": "O poloka efuefu e le mafai ona aveese ma tapeina"
+        },
+        "courseC_video_angles": {
+          "courseD_maze_ramp6_1": "O le a le ituaiga faailo e tuu iinei e toe fai i se taimi tele e tusa ma lau faatonuga, ona faaauau lea e faatamoe le isi vaega o totoe o le polokalame"
+        },
+        "courseD_artist_ramp11": {
+          "courseD_artist_ramp11_1": "E mafai ona e sui lenei numera",
+          "courseD_artist_ramp11_2": "Oomi iinei e ta ai i totonu pe faafia ona toe faaalu lau faailo."
+        },
+        "courseD_maze_ramp6": {
+          "courseD_maze_ramp6_1": "O le a le ituaiga faailo e tuu iinei e toe fai i se taimi tele e tusa ma lau faatonuga, ona faaauau lea e faatamoe le isi vaega o totoe o le polokalame"
+        },
+        "courseD_scrat_ramp6": {
+          "courseD_maze_ramp6_1": "O le a le ituaiga faailo e tuu iinei e toe fai i se taimi tele e tusa ma lau faatonuga, ona faaauau lea e faatamoe le isi vaega o totoe o le polokalame"
+        },
+        "courseD_scrat_ramp7": {
+          "courseD_maze_ramp6_1": "O le a le ituaiga faailo e tuu iinei e toe fai i se taimi tele e tusa ma lau faatonuga, ona faaauau lea e faatamoe le isi vaega o totoe o le polokalame"
+        },
+        "courseD_video_nestedLoopsArtist": {
+          "courseE_artist_ramp8_1": "E mafai ona e sui lenei numera",
+          "courseE_artist_ramp8_2": "Oomi iinei e ta ai i totonu pe faafia ona toe faaalu lau faailo."
+        },
+        "courseE_artist_ramp8": {
+          "courseE_artist_ramp8_1": "E mafai ona e sui lenei numera",
+          "courseE_artist_ramp8_2": "Oomi iinei e ta ai i totonu pe faafia ona toe faaalu lau faailo."
+        },
+        "courseE_artist_ramp8_2": {
+          "courseE_artist_ramp8_1": "E mafai ona e sui lenei numera",
+          "courseE_artist_ramp8_2": "Oomi iinei e ta ai i totonu pe faafia ona toe faaalu lau faailo."
+        },
+        "courseF_playlab_variables7c": {
+          "courseF_playlab_variables7c_1": "E maua le poloka 'ask' iinei!"
+        }
+      }
+    }
+  }
+}

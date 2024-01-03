@@ -9,7 +9,7 @@ const defaultIcons = {
   video: 'fa fa-video-camera',
   pdf: 'fa fa-file-pdf-o',
   doc: 'fa fa-file-text-o',
-  unknown: 'fa fa-question'
+  unknown: 'fa fa-question',
 };
 
 const assetThumbnailStyle = {
@@ -20,34 +20,34 @@ const assetThumbnailStyle = {
   marginTop: '50%',
   transform: 'translateY(-50%)',
   msTransform: 'translateY(-50%)',
-  WebkitTransform: 'translateY(-50%)'
+  WebkitTransform: 'translateY(-50%)',
 };
 
 const assetIconStyle = {
   margin: '15px 0',
-  fontSize: '32px'
+  fontSize: '32px',
 };
 
 export const styles = {
   wrapper: {
     width: 60,
     height: 60,
-    margin: '10px auto'
+    margin: '10px auto',
   },
   background: {
     background: '#eee',
     border: '1px solid #ccc',
-    textAlign: 'center'
+    textAlign: 'center',
   },
   audioIcon: {
     color: color.purple,
     marginLeft: 'auto',
     marginRight: 'auto',
-    display: 'block'
+    display: 'block',
   },
   audioWrapper: {
-    display: 'flex'
-  }
+    display: 'flex',
+  },
 };
 
 class AssetThumbnail extends React.Component {
@@ -60,7 +60,7 @@ class AssetThumbnail extends React.Component {
     api: PropTypes.object,
     projectId: PropTypes.string,
     levelName: PropTypes.string,
-    soundPlayer: PropTypes.object
+    soundPlayer: PropTypes.object,
   };
 
   constructor(props) {
@@ -84,7 +84,7 @@ class AssetThumbnail extends React.Component {
       this.props.soundPlayer.register({id: this.srcPath, mp3: this.srcPath});
     }
     this.state = {
-      isPlayingAudio: false
+      isPlayingAudio: false,
     };
   }
 
@@ -97,7 +97,7 @@ class AssetThumbnail extends React.Component {
       this.props.soundPlayer.play(this.srcPath, {
         onEnded: () => {
           this.setState({isPlayingAudio: false});
-        }
+        },
       });
     }
   };
@@ -131,7 +131,7 @@ export default AssetThumbnail;
 const AudioThumbnail = class extends React.Component {
   static propTypes = {
     clickSoundControl: PropTypes.func,
-    isPlaying: PropTypes.bool
+    isPlaying: PropTypes.bool,
   };
 
   render() {
@@ -153,16 +153,21 @@ const AudioThumbnail = class extends React.Component {
 
 const ImageThumbnail = class extends React.Component {
   static propTypes = {
-    src: PropTypes.string
+    src: PropTypes.string,
   };
 
   render() {
     return (
       <a href={this.props.src} target="_blank" rel="noopener noreferrer">
+        {
+          // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+          // Verify or update this alt-text as necessary
+        }
         <img
           src={this.props.src}
           style={assetThumbnailStyle}
           id="ui-image-thumbnail"
+          alt=""
         />
       </a>
     );
@@ -172,7 +177,7 @@ const ImageThumbnail = class extends React.Component {
 const DefaultThumbnail = class extends React.Component {
   static propTypes = {
     type: PropTypes.oneOf(['image', 'audio', 'video', 'pdf', 'doc']).isRequired,
-    iconStyle: PropTypes.object
+    iconStyle: PropTypes.object,
   };
 
   render() {

@@ -41,6 +41,7 @@ Dashboard::Application.routes.draw do
     get "/musiclab", to: redirect("/projectbeats", status: 302)
     get "/projectbeats", to: "musiclab#index"
     get "/musiclab/menu", to: "musiclab#menu"
+    get "/musiclab/gallery", to: "musiclab#gallery"
     get "/musiclab/analytics_key", to: "musiclab#get_analytics_key"
 
     resources :activity_hints, only: [:update]
@@ -53,7 +54,6 @@ Dashboard::Application.routes.draw do
     resources :videos do
       collection do
         get 'test'
-        get 'embed/:key', to: 'videos#embed', as: 'embed'
       end
     end
 
@@ -106,8 +106,10 @@ Dashboard::Application.routes.draw do
     get 'docs/*path', to: 'curriculum_proxy#get_doc'
     get 'curriculum/*path', to: 'curriculum_proxy#get_curriculum'
 
+    get '/catalog', to: 'curriculum_catalog#index'
+
     # User-facing section routes
-    resources :sections, only: [:show, :new] do
+    resources :sections, only: [:show, :new, :edit] do
       member do
         post 'log_in'
       end
@@ -196,8 +198,10 @@ Dashboard::Application.routes.draw do
       get '/users/demigrate_from_multi_auth', to: 'registrations#demigrate_from_multi_auth'
       get '/users/to_destroy', to: 'registrations#users_to_destroy'
       get '/reset_session', to: 'sessions#reset'
+      get '/lockout', to: 'sessions#lockout'
       get '/users/existing_account', to: 'registrations#existing_account'
       post '/users/auth/maker_google_oauth2', to: 'omniauth_callbacks#maker_google_oauth2'
+      get '/users/edit', to: 'registrations#edit'
     end
     devise_for :users, controllers: {
       omniauth_callbacks: 'omniauth_callbacks',
@@ -261,11 +265,16 @@ Dashboard::Application.routes.draw do
           get "/#{key}/:channel_id/remix", to: 'projects#remix', key: key.to_s, as: "#{key}_project_remix"
           get "/#{key}/:channel_id/export_create_channel", to: 'projects#export_create_channel', key: key.to_s, as: "#{key}_project_export_create_channel"
           get "/#{key}/:channel_id/export_config", to: 'projects#export_config', key: key.to_s, as: "#{key}_project_export_config"
+          get "/#{key}/:channel_id/can_publish_age_status", to: 'projects#can_publish_age_status'
         end
 
         get '/:tab_name', to: 'projects#index', constraints: {tab_name: /(public|libraries)/}
       end
     end
+
+    # Get or create a project for the given level_id. Optionally, the request
+    # can include script_id to get or create a project for the level and script.
+    get "projects(/script/:script_id)/level/:level_id", to: 'projects#get_or_create_for_level'
 
     post '/locale', to: 'home#set_locale', as: 'locale'
 
@@ -314,6 +323,7 @@ Dashboard::Application.routes.draw do
         post 'clone'
         post 'update_start_code'
         post 'update_exemplar_code'
+        get 'level_properties'
       end
     end
 
@@ -349,6 +359,9 @@ Dashboard::Application.routes.draw do
 
       resources :reference_guides, param: 'key', path: 'guides'
     end
+
+    resources :potential_teachers, only: [:create]
+    get '/potential_teachers/:id', param: :id, to: 'potential_teachers#show'
 
     # CSP 20-21 lockable lessons with lesson plan redirects
     get '/s/csp1-2020/lockable/2(*all)', to: redirect(path: '/s/csp1-2020/lessons/14%{all}')
@@ -465,7 +478,18 @@ Dashboard::Application.routes.draw do
             get 'page/:puzzle_page', to: 'script_levels#show', as: 'puzzle_page', format: false
             # /s/xxx/lessons/yyy/levels/zzz/sublevel/sss
             get 'sublevel/:sublevel_position', to: 'script_levels#show', as: 'sublevel', format: false
+            # Get the level's properties via JSON.
+            # /s/xxx/lessons/yyy/levels/zzz/level_properties
+            get 'level_properties', to: 'script_levels#level_properties'
           end
+        end
+        resources :script_levels, only: [:show], path: "/levels", format: false do
+          # This route is defined in a separate resources, below the one above,
+          # because of how our assert_routing tests and Rails routing
+          # precedence work with multiple routes that point to the same action,
+          # with only a static path (no dynamic parts like 'path/:id').
+          # /s/xxx/lessons/yyy/levels/zzz/summary
+          get 'summary', on: :member, to: 'script_levels#show', as: 'summary', format: false, defaults: {view: 'summary'}
         end
       end
 
@@ -575,12 +599,21 @@ Dashboard::Application.routes.draw do
     post '/admin/gatekeeper/delete', to: 'dynamic_config#gatekeeper_delete', as: 'gatekeeper_delete'
     post '/admin/gatekeeper/set', to: 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
 
+    # LTI API endpoints
+    match '/lti/v1/login(/:platform_id)', to: 'lti_v1#login', via: [:get, :post]
+    post '/lti/v1/authenticate', to: 'lti_v1#authenticate'
+    match '/lti/v1/sync_course', to: 'lti_v1#sync_course', via: [:get, :post]
+
+    # OAuth endpoints
+    get '/oauth/jwks', to: 'oauth_jwks#jwks'
+
     get '/notes/:key', to: 'notes#index'
 
     resources :zendesk_session, only: [:index]
 
     post '/report_abuse', to: 'report_abuse#report_abuse'
     get '/report_abuse', to: 'report_abuse#report_abuse_form'
+    post '/report_abuse_pop_up', to: 'report_abuse#report_abuse_pop_up'
 
     get '/too_young', to: 'too_young#index'
 
@@ -728,8 +761,7 @@ Dashboard::Application.routes.draw do
       get 'workshop_post_survey', to: 'workshop_daily_survey#new_post_foorm'
       post 'workshop_survey/submit', to: 'workshop_daily_survey#submit_general'
       get 'workshop_survey/post/:enrollment_code', to: 'workshop_daily_survey#new_post', as: 'new_workshop_survey'
-      get 'workshop_survey/facilitators/:session_id(/:facilitator_index)', to: 'workshop_daily_survey#new_facilitator'
-      post 'workshop_survey/facilitators/submit', to: 'workshop_daily_survey#submit_facilitator'
+      get 'workshop_survey/facilitator_post_foorm', to: 'workshop_daily_survey#new_facilitator_post_foorm'
       get 'workshop_survey/csf/post101(/:enrollment_code)', to: 'workshop_daily_survey#new_csf_post101'
       get 'workshop_survey/csf/pre201', to: 'workshop_daily_survey#new_csf_pre201'
       get 'workshop_survey/csf/post201(/:enrollment_code)', to: 'workshop_daily_survey#new_csf_post201'
@@ -761,9 +793,7 @@ Dashboard::Application.routes.draw do
       delete 'fit_weekend_registration/:application_guid', to: 'fit_weekend_registration#destroy'
 
       get 'workshops/:workshop_id/enroll', action: 'new', controller: 'workshop_enrollment'
-      post 'workshops/:workshop_id/enroll', action: 'create', controller: 'workshop_enrollment'
       get 'workshop_enrollment/:code', action: 'show', controller: 'workshop_enrollment'
-      get 'workshop_enrollment/:code/thanks', action: 'thanks', controller: 'workshop_enrollment'
       get 'workshop_enrollment/:code/cancel', action: 'cancel', controller: 'workshop_enrollment'
 
       get 'pre_workshop_survey/:enrollment_code', action: 'new', controller: 'pre_workshop_survey', as: 'new_pre_workshop_survey'
@@ -844,6 +874,7 @@ Dashboard::Application.routes.draw do
             send(method, action, action: action)
           end
         end
+        post 'test/ai_proxy/assessment', to: 'test_ai_proxy#assessment'
       end
     end
 
@@ -854,6 +885,9 @@ Dashboard::Application.routes.draw do
         post 'users/:user_id/using_text_mode', to: 'users#post_using_text_mode'
         post 'users/:user_id/display_theme', to: 'users#update_display_theme'
         post 'users/:user_id/mute_music', to: 'users#post_mute_music'
+
+        post 'users/sort_by_family_name', to: 'users#post_sort_by_family_name'
+
         get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
         get 'users/:user_id/display_theme', to: 'users#get_display_theme'
         get 'users/:user_id/mute_music', to: 'users#get_mute_music'
@@ -896,6 +930,15 @@ Dashboard::Application.routes.draw do
         get 'peer_review_submissions/index', to: 'peer_review_submissions#index'
         get 'peer_review_submissions/report_csv', to: 'peer_review_submissions#report_csv'
 
+        get 'section_instructors/check', to: 'section_instructors#check'
+        resources :section_instructors, only: [:index, :create, :destroy] do
+          member do
+            put 'accept'
+            put 'decline'
+          end
+        end
+        get 'section_instructors/:section_id', to: 'section_instructors#show'
+
         resources :ml_models, only: [:show, :destroy] do
           collection do
             get 'names'
@@ -926,6 +969,8 @@ Dashboard::Application.routes.draw do
     get '/dashboardapi/v1/schools/:id/afe_high_needs', to: 'api/v1/schools#afe_high_needs', defaults: {format: 'json'}
     get '/dashboardapi/v1/schools/:school_district_id/:school_type', to: 'api/v1/schools#index', defaults: {format: 'json'}
     get '/dashboardapi/v1/schools/:id', to: 'api/v1/schools#show', defaults: {format: 'json'}
+
+    post '/dashboardapi/v1/users/:user_id/verify_captcha', to: 'api/v1/users#verify_captcha'
 
     # Routes used by census
     post '/dashboardapi/v1/census/:form_version', to: 'api/v1/census/census#create', defaults: {format: 'json'}
@@ -1013,6 +1058,31 @@ Dashboard::Application.routes.draw do
 
     resources :code_review_comments, only: [:create, :update, :destroy]
 
+    resources :rubrics, only: [:create, :edit, :new, :update] do
+      member do
+        get 'get_ai_evaluations'
+        get 'get_teacher_evaluations'
+        get 'ai_evaluation_status_for_user'
+        get 'ai_evaluation_status_for_all'
+        post 'run_ai_evaluations_for_user'
+        post 'run_ai_evaluations_for_all'
+        post 'submit_evaluations'
+      end
+    end
+
+    resources :learning_goal_teacher_evaluations, only: [:create, :update] do
+      collection do
+        get :get_evaluation
+        post :get_or_create_evaluation
+      end
+    end
+
+    resources :learning_goal_ai_evaluation_feedbacks, only: [:create, :update] do
+      collection do
+        post :get_by_ai_evaluation_id
+      end
+    end
+
     get '/backpacks/channel', to: 'backpacks#get_channel'
 
     resources :project_commits, only: [:create]
@@ -1032,5 +1102,18 @@ Dashboard::Application.routes.draw do
     # Adds the experiment cookie in the User's browser which allows them to experience offline features
     get '/offline/join_pilot', action: :set_offline_cookie, controller: :offline
     get '/offline-files.json', action: :offline_files, controller: :offline
+
+    post '/browser_events/put_logs', to: 'browser_events#put_logs'
+    post '/browser_events/put_metric_data', to: 'browser_events#put_metric_data'
+
+    get '/get_token', to: 'authenticity_token#get_token'
+
+    post '/openai/chat_completion', to: 'openai_chat#chat_completion'
+
+    # Policy Compliance
+    get '/policy_compliance/child_account_consent/', to:
+      'policy_compliance#child_account_consent'
+    post '/policy_compliance/child_account_consent/', to:
+      'policy_compliance#child_account_consent_request'
   end
 end

@@ -1,32 +1,36 @@
-/* global LEVEL_TYPE */
-
 var _ = require('lodash');
+const KARMA_CLI_FLAGS = require('../../util/KARMA_CLI_FLAGS');
 
 /**
  * Given a list of levelSolutions subdirectories, returns only those matching
- * the pattern specified in LEVEL_TYPE. If specified, LEVEL_TYPE must be contain
+ * the pattern specified in levelType. If specified, --levelType must be contain
  * one or more subdirectory names joined with '|' e.g. 'applab' or
  * 'maze|artist|craft'.
  * @param {Array.<String>} files Array of file paths to filter.
- * @returns {Array.<String>} File paths with match the LEVEL_TYPE, or all
- *   file paths if LEVEL_TYPE is not specified.
+ * @returns {Array.<String>} File paths with match the --levelType, or all
+ *   file paths if --levelType is not specified.
  */
 function filterFiles(files) {
-  if (!LEVEL_TYPE) {
+  if (!KARMA_CLI_FLAGS.levelType) {
     return files;
   }
 
   const allowedCharsRegex = /^[a-zA-Z0-9\|]+$/;
-  if (!LEVEL_TYPE.match(allowedCharsRegex)) {
-    throw new Error(`LEVEL_TYPE '${LEVEL_TYPE}' contains illegal characters`);
+  if (!KARMA_CLI_FLAGS.levelType.match(allowedCharsRegex)) {
+    throw new Error(
+      `--levelType '${KARMA_CLI_FLAGS.levelType}' contains illegal characters`
+    );
   }
 
-  const allowSolutionRegex = new RegExp(`^./(${LEVEL_TYPE})/`, 'i');
+  const allowSolutionRegex = new RegExp(
+    `^./(${KARMA_CLI_FLAGS.levelType})/`,
+    'i'
+  );
   files = files.filter(file => allowSolutionRegex.test(file));
 
   if (!files.length) {
     throw new Error(
-      `LEVEL_TYPE '${LEVEL_TYPE}' did not match anything. Try 'craft' or 'applab|gamelab'`
+      `--levelType '${KARMA_CLI_FLAGS.levelType}' did not match anything. Try 'craft' or 'applab|gamelab'`
     );
   }
 
@@ -35,7 +39,7 @@ function filterFiles(files) {
 
 module.exports = {
   // Get all json files under directory path
-  getCollections: function() {
+  getCollections: function () {
     var context = require.context('../levelSolutions/', true, /.*\.js$/);
     var files = context.keys();
     var testCollections = [];
@@ -49,7 +53,7 @@ module.exports = {
   /**
    * Gets a cloned copy of a level given a testCollection/testData
    */
-  getLevelFromCollection: function(testCollection, testData, dataItem) {
+  getLevelFromCollection: function (testCollection, testData, dataItem) {
     var level;
 
     var data = dataItem();
@@ -61,7 +65,7 @@ module.exports = {
       level = _.cloneDeep(levels[testCollection.levelId]);
       level = {
         ...level,
-        ...(testData.levelDefinitionOverrides || {})
+        ...(testData.levelDefinitionOverrides || {}),
       };
     } else {
       if (
@@ -79,7 +83,7 @@ module.exports = {
     }
 
     return level;
-  }
+  },
 };
 
 function logError(msg) {

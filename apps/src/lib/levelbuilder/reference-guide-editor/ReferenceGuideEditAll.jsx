@@ -5,18 +5,18 @@ import {TextLink} from '@dsco_/link';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {
   getGuideChildren,
-  organizeReferenceGuides
+  organizeReferenceGuides,
 } from '@cdo/apps/util/referenceGuideHelpers';
 import Dialog, {
   Title as DialogTitle,
-  Body as DialogBody
+  Body as DialogBody,
 } from '@cdo/apps/templates/Dialog';
 
 const DeleteWarningDialog = ({
   pendingDeleteKey,
   pendingDeleteAffectedKeys,
   setShowDeleteWarningDialog,
-  deleteGuide
+  deleteGuide,
 }) => (
   <Dialog
     body={
@@ -49,7 +49,7 @@ DeleteWarningDialog.propTypes = {
   pendingDeleteKey: PropTypes.string,
   pendingDeleteAffectedKeys: PropTypes.arrayOf(PropTypes.string),
   setShowDeleteWarningDialog: PropTypes.func,
-  deleteGuide: PropTypes.func
+  deleteGuide: PropTypes.func,
 };
 
 const MiniIconButton = ({icon, alt, func, href}) => (
@@ -63,7 +63,7 @@ MiniIconButton.propTypes = {
   icon: FontAwesome.propTypes.icon,
   alt: PropTypes.string,
   func: PropTypes.func,
-  href: PropTypes.string
+  href: PropTypes.string,
 };
 
 export default function ReferenceGuideEditAll(props) {
@@ -97,14 +97,14 @@ export default function ReferenceGuideEditAll(props) {
     setReferenceGuides([
       ...referenceGuides.filter(
         guide => !pendingDeleteAffectedKeys.includes(guide.key)
-      )
+      ),
     ]);
     fetch(`${baseUrl}/${pendingDeleteKey}`, {
       method: 'DELETE',
       headers: {
         'content-type': 'application/json',
-        'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
-      }
+        'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content'),
+      },
     });
     setShowDeleteWarningDialog(false);
     setPendingDeleteKey(null);
@@ -146,21 +146,21 @@ export default function ReferenceGuideEditAll(props) {
         method: 'PUT',
         headers: {
           'content-type': 'application/json',
-          'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+          'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content'),
         },
         body: JSON.stringify({
-          position: targetGuide.position
-        })
+          position: targetGuide.position,
+        }),
       });
       const swapUpdate = fetch(`${baseUrl}/${swapGuide.key}`, {
         method: 'PUT',
         headers: {
           'content-type': 'application/json',
-          'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+          'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content'),
         },
         body: JSON.stringify({
-          position: swapGuide.position
-        })
+          position: swapGuide.position,
+        }),
       });
       return Promise.all([targetUpdate, swapUpdate]);
     },
@@ -222,7 +222,7 @@ export default function ReferenceGuideEditAll(props) {
               style={{paddingLeft: `${guide.level * 20 + 4}px`}}
             >
               {guide.display_name}
-            </div>
+            </div>,
           ];
         })}
       </div>
@@ -234,10 +234,10 @@ const referenceGuideShape = PropTypes.shape({
   key: PropTypes.string,
   parent_reference_guide_key: PropTypes.string,
   display_name: PropTypes.string,
-  position: PropTypes.number
+  position: PropTypes.number,
 });
 
 ReferenceGuideEditAll.propTypes = {
   referenceGuides: PropTypes.arrayOf(referenceGuideShape).isRequired,
-  baseUrl: PropTypes.string.isRequired
+  baseUrl: PropTypes.string.isRequired,
 };

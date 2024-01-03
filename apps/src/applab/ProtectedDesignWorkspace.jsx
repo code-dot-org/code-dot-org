@@ -8,8 +8,8 @@ class ProtectedDesignWorkspace extends React.Component {
     interfaceMode: PropTypes.oneOf([
       ApplabInterfaceMode.CODE,
       ApplabInterfaceMode.DESIGN,
-      ApplabInterfaceMode.DATA
-    ]).isRequired
+      ApplabInterfaceMode.DATA,
+    ]).isRequired,
   };
 
   shouldComponentUpdate(nextProps) {
@@ -18,7 +18,7 @@ class ProtectedDesignWorkspace extends React.Component {
     // update styles. However, we do want to prevent property changes that would
     // change the DOM structure.
     Object.keys(nextProps).forEach(
-      function(key) {
+      function (key) {
         // interfaceMode only affects style, and can be updated
         if (key === 'interfaceMode') {
           return;
@@ -47,5 +47,5 @@ class ProtectedDesignWorkspace extends React.Component {
   }
 }
 export default connect(state => ({
-  interfaceMode: state.interfaceMode
+  interfaceMode: state.interfaceMode,
 }))(ProtectedDesignWorkspace);

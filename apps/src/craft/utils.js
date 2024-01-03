@@ -10,7 +10,7 @@ export const ARROW_KEY_NAMES = [
   'Left',
   'Right',
   'Up',
-  'Down'
+  'Down',
 ];
 
 /**
@@ -70,7 +70,7 @@ export const BLOCK_NAME_TO_DISPLAY_TEXT = {
   wool_orange: i18n.blockTypeWoolOrange(),
   wool_pink: i18n.blockTypeWoolPink(),
   wool_red: i18n.blockTypeWoolRed(),
-  wool_yellow: i18n.blockTypeWoolYellow()
+  wool_yellow: i18n.blockTypeWoolYellow(),
 };
 
 /**
@@ -84,7 +84,7 @@ export const BLOCK_NAME_TO_DISPLAY_TEXT = {
  * @returns {Array.<Array.<String>>} - an array of [displayName, blockType] pairs
  */
 export function blockTypesToDropdownOptions(blockTypes) {
-  return blockTypes.map(function(blockType) {
+  return blockTypes.map(function (blockType) {
     const displayName = BLOCK_NAME_TO_DISPLAY_TEXT[blockType] || blockType;
     return [displayName, blockType];
   });

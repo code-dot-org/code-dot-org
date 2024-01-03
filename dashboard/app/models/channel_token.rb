@@ -23,6 +23,7 @@ class ChannelToken < ApplicationRecord
 
   belongs_to :user, optional: true
   belongs_to :level, optional: true
+  belongs_to :script, class_name: 'Unit', optional: true
 
   # The projects table used to be named storage_apps. This column has not been renamed
   # to reflect the new table name, so an alias is used to clarify which table this ID maps to.
@@ -55,7 +56,7 @@ class ChannelToken < ApplicationRecord
         # but not used in the query for a channel_token yet.
         create!(level: level.host_level, storage_id: user_storage_id, script_id: script_id) do |ct|
           # Get a new channel_id.
-          channel = create_channel ip, project, data: data, standalone: false
+          channel = create_channel ip, project, data: data, standalone: false, level: level
           _, ct.project_id = storage_decrypt_channel_id(channel)
         end
       end
@@ -83,7 +84,7 @@ class ChannelToken < ApplicationRecord
   # @param [Hash] data Data to store in the channel.
   # @param [String] src Optional source channel to copy data from, instead of
   #   using the value from the `data` param.
-  def self.create_channel(ip, project, data: {}, src: nil, type: nil, remix_parent_id: nil, standalone: true)
+  def self.create_channel(ip, project, data: {}, src: nil, type: nil, remix_parent_id: nil, standalone: true, level: nil)
     if src
       data = project.get(src)
       data['name'] = "Remix: #{data['name']}"
@@ -98,6 +99,7 @@ class ChannelToken < ApplicationRecord
       type: type,
       remix_parent_id: remix_parent_id,
       standalone: standalone,
+      level: level,
     )
   end
 end

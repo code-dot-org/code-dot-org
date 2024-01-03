@@ -65,15 +65,13 @@ class Pd::RegionalPartnerMiniContact < ApplicationRecord
     sanitized_form_data_hash[:email]
   end
 
-  private
-
-  def validate_email
+  private def validate_email
     hash = sanitized_form_data_hash
 
     add_key_error(:email) unless Cdo::EmailValidator.email_address?(hash[:email])
   end
 
-  def update_regional_partner
+  private def update_regional_partner
     hash = sanitized_form_data_hash
     zipcode = hash[:zip]
 

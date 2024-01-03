@@ -14,8 +14,8 @@ TOPIC_DTT_FAILED = 'no (robo-DTT failed)'.freeze
 ALWAYS_DTT = ARGV[0] && ARGV[0] == 'always_dtt'
 
 def main
-  unless ALWAYS_DTT
-    return unless DevelopersTopic.dtt?
+  if !ALWAYS_DTT && !DevelopersTopic.dtt?
+    return
   end
   return unless GitHub.behind?(base: 'staging', compare: 'test')
 
@@ -38,10 +38,10 @@ def main
     color: 'green'
   )
   Metrics.write_metric('dtt_start', GitHub.sha('test'), Metrics::AUTOMATIC)
-rescue Exception => e
+rescue Exception => exception
   ChatClient.message(
     'infra-test',
-    "EXCEPTION: #{e.message}\n```\n#{e.class}\n#{e.backtrace}\n```",
+    "EXCEPTION: #{exception.message}\n```\n#{exception.class}\n#{exception.backtrace}\n```",
     color: 'red'
   )
   DevelopersTopic.set_dtt TOPIC_DTT_FAILED

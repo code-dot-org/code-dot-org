@@ -10,3 +10,5 @@ right 'csisfun.com'
 wrong 'thinkersmith.org'
 wrong 'khanacademy.org'
 
+
+allow_multiple_attempts true

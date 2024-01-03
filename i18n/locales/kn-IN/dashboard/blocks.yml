@@ -15,7 +15,6 @@ kn:
             '0.75': ಸಣ್ಣ
             '1.00': ಮಧ್ಯಮ
             '2.00': ದೊಡ್ಡ
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
@@ -23,7 +22,6 @@ kn:
             '0.75': ಸಣ್ಣ
             '1.00': ಮಧ್ಯಮ
             '2.00': ದೊಡ್ಡ
-            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -39,6 +37,10 @@ kn:
         options:
           UNIT:
             '"seconds"': ಸೆಕೆಂಡುಗಳು
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"seconds"': ಸೆಕೆಂಡುಗಳು
       Dancelab_changeMoveEachLR:
         options:
           GROUP:
@@ -46,6 +48,10 @@ kn:
             '"ALIEN"': ಏಲಿಯನ್ಸ್‌
             '"MOOSE"': ಮೂಸ್
             '"ROBOT"': ರೋಬೋಟಗ್‌ಗಳು
+          MOVE:
+            MOVES.Rest: ಯಾವುದೂ ಅಲ್ಲ
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
           MOVE:
             MOVES.Rest: ಯಾವುದೂ ಅಲ್ಲ
       Dancelab_changeMoveLR:
@@ -187,14 +193,17 @@ kn:
         options:
           EFFECT:
             '"none"': ಯಾವುದೂ ಅಲ್ಲ
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"none"': ಯಾವುದೂ ಅಲ್ಲ
+          PALETTE:
+            '"ocean"': ಸಮುದ್ರ
       Dancelab_setDanceSpeed:
         options:
           SPEED:
             '1': ಸಾಮಾನ್ಯ
             '2': ತ್ವರಿತ
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
       Dancelab_setDanceSpeedEach:
         options:
           GROUP:
@@ -205,9 +214,6 @@ kn:
           SPEED:
             '1': ಸಾಮಾನ್ಯ
             '2': ತ್ವರಿತ
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
       Dancelab_setForegroundEffect:
         options:
           EFFECT:
@@ -320,8 +326,6 @@ kn:
         options:
           INPUT1:
             '1': ನಿಂಬೆ ರಸ
-            '3': baking soda
-            '5': both
       DansBlocks_setForegroundEffect2:
         text: "{EFFECT} ಎಫೆಕ್ಟ್ ಮಾಡಿ"
         options:
@@ -335,8 +339,6 @@ kn:
         options:
           INPUT1:
             '1': ನಿಂಬೆ ರಸ
-            '3': baking soda
-            '5': both
       FunctionBlocks_communicate:
         text: "{VAR1} ಅನ್ನು {SPRITE1COSTUME} ಜೊತೆ ಸಂವಹನ ಮಾಡಿ"
       FunctionBlocks_makeManipulative2:
@@ -454,15 +456,6 @@ kn:
         options:
           VALUE:
             '1': '1'
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE} ಕಾಸ್ಟ್ಯೂಮ್‌ {COSTUME}"
       gamelab_isKeyPressed:
@@ -494,6 +487,10 @@ kn:
             '"space"': ಸ್ಪೇಸ್
             '"x"': x
             '"y"': 'y'
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"grid"': ಗ್ರಿಡ್
       gamelab_locationAt:
         text: 'ಸ್ಥಳ x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -520,6 +517,10 @@ kn:
             '"spiral"': ಸ್ಪೈರಲ್
       gamelab_makeNewSpriteAnon:
         text: "{LOCATION} ನಲ್ಲಿ ಹೊಸ {ANIMATION_NAME} ಸ್ಪ್ರೈಟ್‌ಗಳನ್ನು ಮಾಡಿ"
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"grid"': ಗ್ರಿಡ್
       gamelab_makeNumSprites:
         text: "{NUM} ಹೊಸ {ANIMATION_NAME} ಸ್ಪ್ರೈಟ್‌ಗಳನ್ನು ಮಾಡಿ"
       gamelab_makeProjectile:
@@ -742,11 +743,8 @@ kn:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
-            '3': slow
             '5': ಸಾಮಾನ್ಯ
             '7': ತ್ವರಿತ
-            '9': extra fast
       gamelab_setTint:
         text: "{THIS} ಬಣ್ಣವನ್ನು {COLOR} ಗೆ ಬದಲಿಸಿ"
       gamelab_setupScoreboard:
@@ -895,6 +893,16 @@ kn:
         text: x {SPRITE} ನ ಕೋಆರ್ಡಿನೇಟ್
       gamelab_yLocationOf:
         text: y {SPRITE} ನ ಕೋಆರ್ಡಿನೇಟ್
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} ಇದು {LOCATION} ಗ್ಲೈಡ್ ಮಾಡಿ"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': ಸಾಲಿಡ್
+            '"liquid"': ಲಿಕ್ವಿಡ್
+            '"gas"': ಅನಿಲ
+      KatiesBlocks_tumbling:
+        text: ಟಂಬ್ಲಿಂಗ್
       Mikelab_addBehaviorSimple:
         text: ಸ್ಪ್ರೈಟ್ {SPRITE} ಆರಂಭ {BEHAVIOR}
       Mikelab_allSpritesWithAnimation:
@@ -1102,14 +1110,10 @@ kn:
         options:
           INPUT1:
             '1': ನಿಂಬೆ ರಸ
-            '3': baking soda
-            '5': both
       ParticlesBlocks_setMicroscope:
         options:
           INPUT1:
             '1': ನಿಂಬೆ ರಸ
-            '3': baking soda
-            '5': both
       ParticlesBlocks_statesOfMatter:
         options:
           BEHAVIOR:
@@ -1317,22 +1321,7 @@ kn:
         text: ಸಾಲು {N} ತೋರಿಸಿದಾಗ
         options:
           'N':
-            '0': "???"
             '1': '1'
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
       Poetry_whenPromptAnswered:
         text: "{VAR} ಉತ್ತರಿಸಿದಾಗ"
       RyanLab_moveForward:
@@ -1352,18 +1341,24 @@ kn:
         options:
           PORTION:
             '1': ಎಲ್ಲ
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': ಎಲ್ಲ
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE} ಹೇಳಿ {SPEECH}"
+      adaptations_adaptationBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): ಬಲಕ್ಕೆ ತಿರುಗುತ್ತಿದೆ
+            new Behavior(spinning_left, []): ಎಡಕ್ಕೆ ತಿರುಗುತ್ತಿದೆ
+            new Behavior(fluttering, []): ಬೀಸುತ್ತಿದೆ
+            new Behavior(jittering, []): ನಡುಗುತ್ತಿದೆ
+            new Behavior(wobbling, []): ಒದ್ದಾಡುವುದು
+            new Behavior(wandering, []): ಅಲೆದಾಡುವುದು
+            new Behavior(patrolling, []): ಗಸ್ತು ತಿರುಗುತ್ತಿದೆ
+      adaptations_startFollowing:
+        text: "{SPRITE}  {TARGET} ಅನ್ನು ಫಾಲೋ ಮಾಡುವುದನ್ನು ಆರಂಭಿಸಿದೆ"
       binary_move:
         options:
           DIR:
@@ -1429,6 +1424,12 @@ kn:
           DIR:
             right: ಬಲ ↻
             left: ಎಡ ↺
+      ecosystems_int10:
+        options:
+          VALUE:
+            '1': '1'
+      storylab_printText:
+        text: "{TEXT} ಪ್ರಿಂಟ್"
       storylab_setForegroundEffect2:
         text: "{EFFECT} ಎಫೆಕ್ಟ್ ಮಾಡಿ"
         options:
@@ -1440,5 +1441,3 @@ kn:
         text: ಶೀರ್ಷಿಕೆ ನಿಗದಿಸಿ {HEADING}
       storylab_setSubheading:
         text: ಸಬ್‌ಹೆಡಿಂಗ್‌ ಸೆಟ್ ಮಾಡಿ {SUBHEADING}
-      validation_validatedBackground:
-        text: "{IMG} ಗೆ ಹಿನ್ನೆಲೆಯನ್ನು ನಿಗದಿಸಿ"

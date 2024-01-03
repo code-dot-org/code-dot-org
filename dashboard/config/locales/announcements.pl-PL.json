@@ -2,89 +2,29 @@
   "pl-PL": {
     "data": {
       "announcements": {
-        "8f212dd2-169f-4a3d-9880-f76d3372b6c1": {
-          "notice": "Lekcje rozszerzeń z mikro:bitem",
-          "details": "Czy jesteś zainteresowany przybliżeniem swoim uczniom informatytki z urzadzeniami fizycznymi? Sprawdź nasze nowe rozszerzone lekcje z micro:bitem, aby kontynuowali naukę.",
-          "buttonText": "Dowiedz się więcej"
+        "487af7e8-d3dd-46c2-a0fa-936a4e58d977": {
+          "notice": "Czy zapisałeś się na egzamin AP?",
+          "details": "Nadszedł czas, aby się zarejestrować, by przystąpić do egzaminu AP z Zasad Informatyki! Zapytaj swojego nauczyciela o ostateczny termin rejestracji w szkole i zarejestruj się już dziś. Nie jesteś pewien, czy chcesz przystąpić do testu? Mamy SZEŚĆ powodów, dla których powinieneś. Sprawdź je!"
         },
-        "a3109564-513f-47c8-bdf3-d69a19f5149e": {
-          "notice": "Lekcje rozszerzeń z mikro:bitem",
-          "details": "Czy jesteś zainteresowany przybliżeniem swoim uczniom informatytki z urzadzeniami fizycznymi? Sprawdź nasze nowe rozszerzone lekcje z micro:bitem, aby kontynuowali naukę.",
-          "buttonText": "Dowiedz się więcej"
+        "228f5294-78ec-4b7a-b6f6-76d6f92a01b4": {
+          "notice": "Ankieta po kursie dla uczniów już otwarta!",
+          "details": "Nauczyciele, poproś uczniów o wypełnienie tej ważnej ankiety. Zajmuje to mniej niż 10 minut. Sprawdź to: możesz znaleźć link do ankiety na dole strony tej jednostki lub kliknąć przycisk Dowiedz się więcej, aby przejść bezpośrednio do niej. Kliknij przycisk „Wyświetl plan lekcji” obok ankiety, aby uzyskać instrukcje. Dziękujemy!"
         },
-        "9b45f4aa-6b0a-44d7-9813-8e724baca343": {
-          "notice": "Lekcje rozszerzeń z mikro:bitem",
-          "details": "Czy jesteś zainteresowany przybliżeniem swoim uczniom informatytki z urzadzeniami fizycznymi? Sprawdź nasze nowe rozszerzone lekcje z micro:bitem, aby kontynuowali naukę.",
-          "buttonText": "Dowiedz się więcej"
+        "249e1d1d-7ed0-4042-8e57-17f5f2061a9f": {
+          "notice": "Ankieta dla uczniów po kursie Odkrycia Informatyki już otwarta!",
+          "details": "Nauczyciele, poproś uczniów o wypełnienie tej ważnej ankiety. Zajmuje to mniej niż 10 minut. Sprawdź to: możesz znaleźć link do ankiety na dole strony tej jednostki lub kliknąć przycisk Dowiedz się więcej, aby przejść bezpośrednio do niej. Kliknij przycisk „Wyświetl plan lekcji” obok ankiety, aby uzyskać instrukcje. Dziękujemy!"
         },
-        "26f29937-fd4e-4738-8dfe-459f286636f4": {
-          "notice": "Lekcje rozszerzeń z mikro:bitem",
-          "details": "Czy jesteś zainteresowany przybliżeniem swoim uczniom informatytki z urzadzeniami fizycznymi? Sprawdź nasze nowe rozszerzone lekcje z micro:bitem, aby kontynuowali naukę.",
-          "buttonText": "Dowiedz się więcej"
+        "d9b403ff-aa97-487a-a32d-df4da9967249": {
+          "notice": "Ankieta dla uczniów po kursie Odkrycia Informatyki już otwarta!",
+          "details": "Nauczyciele, poproś uczniów o wypełnienie tej ważnej ankiety. Zajmuje to mniej niż 10 minut. Sprawdź to: możesz znaleźć link do ankiety na dole strony tej jednostki lub kliknąć przycisk Dowiedz się więcej, aby przejść bezpośrednio do niej. Kliknij przycisk „Wyświetl plan lekcji” obok ankiety, aby uzyskać instrukcje. Dziękujemy!"
         },
-        "b7bff9e1-22bd-4f95-bb95-68e91fd5b3a3": {
-          "notice": "Wspiera nauczanie kursu Odkrycia Informatyki",
-          "details": "Oprócz naszego programu nauczania, Code.org oferuje kursy profesjonalnego nauczania prowadzone we własnym tempie i prowadzone przez moderatorów dla nauczycieli, którzy chcą wdrożyć kurs Odkrycia Informatyki w swoich klasach."
+        "324c3312-b070-4ac4-8bde-4b97251b6760": {
+          "notice": "Ankieta dla uczniów po kursie Odkrycia Informatyki już otwarta!",
+          "details": "Nauczyciele, poproś uczniów o wypełnienie tej ważnej ankiety. Zajmuje to mniej niż 10 minut. Sprawdź to: możesz znaleźć link do ankiety na dole strony tej jednostki lub kliknąć przycisk Dowiedz się więcej, aby przejść bezpośrednio do niej. Kliknij przycisk „Wyświetl plan lekcji” obok ankiety, aby uzyskać instrukcje. Dziękujemy!"
         },
-        "e86b3b15-d704-41ff-9c63-73a77b7b477d": {
-          "notice": "Więcej możliwości uzyskania opinii",
-          "details": "Każda lekcja zawiera teraz krótką ankietę z 2 pytaniami, aby dać wgląd zespołowi programu nauczania na temat przebiegu lekcji w klasie. Uczniowie mają również możliwość pozostawienia opinii na końcu każdej jednostki, a nauczyciele mogą odpowiedzieć na krótką ankietę, aby poinformować zespół programowy Code.org o przebiegu jednostki.",
-          "buttonText": "Ankieta Nauczyciela"
-        },
-        "79a249d7-fb90-4e9c-bd8b-e7884ad2034b": {
-          "notice": "Wspiera nauczanie kursu Odkrycia Informatyki",
-          "details": "Oprócz naszego programu nauczania, Code.org oferuje kursy profesjonalnego nauczania prowadzone we własnym tempie i prowadzone przez moderatorów dla nauczycieli, którzy chcą wdrożyć kurs Odkrycia Informatyki w swoich klasach."
-        },
-        "be317006-f86b-44a9-9036-34c0508cc0e9": {
-          "notice": "Więcej możliwości uzyskania opinii",
-          "details": "Każda lekcja zawiera teraz krótką ankietę z 2 pytaniami, aby dać wgląd zespołowi programu nauczania na temat przebiegu lekcji w klasie. Uczniowie mają również możliwość pozostawienia opinii na końcu każdej jednostki, a nauczyciele mogą odpowiedzieć na krótką ankietę, aby poinformować zespół programowy Code.org o przebiegu jednostki.",
-          "buttonText": "Ankieta Nauczyciela"
-        },
-        "b5b0c936-3bc6-4e69-8796-e205d103151f": {
-          "notice": "Wspiera nauczanie kursu Odkrycia Informatyki",
-          "details": "Oprócz naszego programu nauczania, Code.org oferuje kursy profesjonalnego nauczania prowadzone we własnym tempie i prowadzone przez moderatorów dla nauczycieli, którzy chcą wdrożyć kurs Odkrycia Informatyki w swoich klasach."
-        },
-        "028e71f9-ebae-48ab-9c69-d616fa7d8165": {
-          "notice": "Więcej możliwości uzyskania opinii",
-          "details": "Każda lekcja zawiera teraz krótką ankietę z 2 pytaniami, aby dać wgląd zespołowi programu nauczania na temat przebiegu lekcji w klasie. Uczniowie mają również możliwość pozostawienia opinii na końcu każdej jednostki, a nauczyciele mogą odpowiedzieć na krótką ankietę, aby poinformować zespół programowy Code.org o przebiegu jednostki.",
-          "buttonText": "Ankieta Nauczyciela"
-        },
-        "f1160bfc-3ae9-41a1-8ac9-1c9e7de4afeb": {
-          "notice": "Wspiera nauczanie kursu Odkrycia Informatyki",
-          "details": "Oprócz naszego programu nauczania, Code.org oferuje kursy profesjonalnego nauczania prowadzone we własnym tempie i prowadzone przez moderatorów dla nauczycieli, którzy chcą wdrożyć kurs Odkrycia Informatyki w swoich klasach."
-        },
-        "340a3627-eb27-42c9-8649-24b9b77e8c48": {
-          "notice": "Więcej możliwości uzyskania opinii",
-          "details": "Każda lekcja zawiera teraz krótką ankietę z 2 pytaniami, aby dać wgląd zespołowi programu nauczania na temat przebiegu lekcji w klasie. Uczniowie mają również możliwość pozostawienia opinii na końcu każdej jednostki, a nauczyciele mogą odpowiedzieć na krótką ankietę, aby poinformować zespół programowy Code.org o przebiegu jednostki.",
-          "buttonText": "Ankieta Nauczyciela"
-        },
-        "2e1b13ae-2ab8-4996-bf23-ca3e0fa1f8be": {
-          "notice": "Wspiera nauczanie kursu Odkrycia Informatyki",
-          "details": "Oprócz naszego programu nauczania, Code.org oferuje kursy profesjonalnego nauczania prowadzone we własnym tempie i prowadzone przez moderatorów dla nauczycieli, którzy chcą wdrożyć kurs Odkrycia Informatyki w swoich klasach.",
-          "buttonText": "Dowiedz się więcej"
-        },
-        "0d48422e-8580-494d-bca8-1cc758561e48": {
-          "notice": "Więcej możliwości uzyskania opinii",
-          "details": "Każda lekcja zawiera teraz krótką ankietę z 2 pytaniami, aby dać wgląd zespołowi programu nauczania na temat przebiegu lekcji w klasie. Uczniowie mają również możliwość pozostawienia opinii na końcu każdej jednostki, a nauczyciele mogą odpowiedzieć na krótką ankietę, aby poinformować zespół programowy Code.org o przebiegu jednostki.",
-          "buttonText": "Ankieta Nauczyciela"
-        },
-        "1aca9aa7-be38-47cb-b58d-9d0df5c15f3b": {
-          "notice": "Wspiera nauczanie kursu Odkrycia Informatyki",
-          "details": "Oprócz naszego programu nauczania, Code.org oferuje kursy profesjonalnego nauczania prowadzone we własnym tempie i prowadzone przez moderatorów dla nauczycieli, którzy chcą wdrożyć kurs Odkrycia Informatyki w swoich klasach."
-        },
-        "89b889db-2e3a-4afa-8df5-b424eb0d62d1": {
-          "notice": "Więcej możliwości uzyskania opinii",
-          "details": "Każda lekcja zawiera teraz krótką ankietę z 2 pytaniami, aby dać wgląd zespołowi programu nauczania na temat przebiegu lekcji w klasie. Uczniowie mają również możliwość pozostawienia opinii na końcu każdej jednostki, a nauczyciele mogą odpowiedzieć na krótką ankietę, aby poinformować zespół programowy Code.org o przebiegu jednostki.",
-          "buttonText": "Ankieta Nauczyciela"
-        },
-        "ed6a61e5-23b1-4249-a182-874156f2d135": {
-          "notice": "Wspiera nauczanie sztucznej inteligencji i uczenia maszynowego",
-          "details": "Jeśli jesteś zainteresowany nauczaniem tego kursu, zalecamy ukończenie we własnym tempie bezpłatnego, profesjonalnego modułu edukacyjnego AI i Uczenie Maszynowe. Moduł ten jest przewidziany na 2 godziny zajęć. Nie zakłada się wcześniejszego doświadczenia z kodowaniem lub sztuczną inteligencją."
-        },
-        "c0ef1240-b469-4ee7-a778-e7d5b30b0332": {
-          "notice": "Więcej możliwości uzyskania opinii",
-          "details": "Każda lekcja zawiera teraz krótką ankietę z 2 pytaniami, aby dać wgląd zespołowi programu nauczania na temat przebiegu lekcji w klasie. Uczniowie mają również możliwość pozostawienia opinii na końcu każdej jednostki, a nauczyciele mogą odpowiedzieć na krótką ankietę, aby poinformować zespół programowy Code.org o przebiegu jednostki.",
-          "buttonText": "Ankieta Nauczyciela"
+        "4a6677f7-ef10-4b41-812a-7bfe1aff7b00": {
+          "notice": "Ankieta dla uczniów po kursie Odkrycia Informatyki już otwarta!",
+          "details": "Nauczyciele, poproś uczniów o wypełnienie tej ważnej ankiety. Zajmuje to mniej niż 10 minut. Sprawdź to: możesz znaleźć link do ankiety na dole strony tej jednostki lub kliknąć przycisk Dowiedz się więcej, aby przejść bezpośrednio do niej. Kliknij przycisk „Wyświetl plan lekcji” obok ankiety, aby uzyskać instrukcje. Dziękujemy!"
         },
         "a5c79bfe-dc53-48e6-b535-cfbfb3eae114": {
           "notice": "Nowość: wybierz, które lekcje chcesz pokazać lub ukryć w swojej sekcji",
@@ -94,57 +34,9 @@
           "notice": "Nowość: wybierz, które lekcje chcesz pokazać lub ukryć w swojej sekcji",
           "details": "Kliknij „Dowiedz się więcej”, aby przeczytać artykuł dotyczący pokazywania i ukrywania lekcji."
         },
-        "249e1d1d-7ed0-4042-8e57-17f5f2061a9f": {
-          "notice": "Ankieta dla uczniów po kursie Odkrycia Informatyki już otwarta!",
-          "details": "Nauczyciele, poproś uczniów o wypełnienie tej ważnej ankiety. Zajmuje to mniej niż 10 minut. Sprawdź to: możesz znaleźć link do ankiety na dole strony tej jednostki lub kliknąć przycisk Dowiedz się więcej, aby przejść bezpośrednio do niej. Kliknij przycisk „Wyświetl plan lekcji” obok ankiety, aby uzyskać instrukcje. Dziękujemy!"
-        },
-        "4a6677f7-ef10-4b41-812a-7bfe1aff7b00": {
-          "notice": "Ankieta dla uczniów po kursie Odkrycia Informatyki już otwarta!",
-          "details": "Nauczyciele, poproś uczniów o wypełnienie tej ważnej ankiety. Zajmuje to mniej niż 10 minut. Sprawdź to: możesz znaleźć link do ankiety na dole strony tej jednostki lub kliknąć przycisk Dowiedz się więcej, aby przejść bezpośrednio do niej. Kliknij przycisk „Wyświetl plan lekcji” obok ankiety, aby uzyskać instrukcje. Dziękujemy!"
-        },
-        "324c3312-b070-4ac4-8bde-4b97251b6760": {
-          "notice": "Ankieta dla uczniów po kursie Odkrycia Informatyki już otwarta!",
-          "details": "Nauczyciele, poproś uczniów o wypełnienie tej ważnej ankiety. Zajmuje to mniej niż 10 minut. Sprawdź to: możesz znaleźć link do ankiety na dole strony tej jednostki lub kliknąć przycisk Dowiedz się więcej, aby przejść bezpośrednio do niej. Kliknij przycisk „Wyświetl plan lekcji” obok ankiety, aby uzyskać instrukcje. Dziękujemy!"
-        },
-        "d9b403ff-aa97-487a-a32d-df4da9967249": {
-          "notice": "Ankieta dla uczniów po kursie Odkrycia Informatyki już otwarta!",
-          "details": "Nauczyciele, poproś uczniów o wypełnienie tej ważnej ankiety. Zajmuje to mniej niż 10 minut. Sprawdź to: możesz znaleźć link do ankiety na dole strony tej jednostki lub kliknąć przycisk Dowiedz się więcej, aby przejść bezpośrednio do niej. Kliknij przycisk „Wyświetl plan lekcji” obok ankiety, aby uzyskać instrukcje. Dziękujemy!"
-        },
-        "228f5294-78ec-4b7a-b6f6-76d6f92a01b4": {
-          "notice": "Ankieta po kursie dla uczniów już otwarta!",
-          "details": "Nauczyciele, poproś uczniów o wypełnienie tej ważnej ankiety. Zajmuje to mniej niż 10 minut. Sprawdź to: możesz znaleźć link do ankiety na dole strony tej jednostki lub kliknąć przycisk Dowiedz się więcej, aby przejść bezpośrednio do niej. Kliknij przycisk „Wyświetl plan lekcji” obok ankiety, aby uzyskać instrukcje. Dziękujemy!"
-        },
         "920785dd-41e4-4d34-a3af-3eadbec1c90e": {
           "notice": "Sprawdź nowe zasoby dla kursu Odkrycie Informatyki na lata 2019-2020!",
           "details": "Przeczytaj więcej o naszych nowych przewodnikach dla nauczycieli, ramach edukacyjnych, OneNote Journal i bibliotece Flipgrid Disco!"
-        },
-        "487af7e8-d3dd-46c2-a0fa-936a4e58d977": {
-          "notice": "Czy zapisałeś się na egzamin AP?",
-          "details": "Nadszedł czas, aby się zarejestrować, by przystąpić do egzaminu AP z Zasad Informatyki! Zapytaj swojego nauczyciela o ostateczny termin rejestracji w szkole i zarejestruj się już dziś. Nie jesteś pewien, czy chcesz przystąpić do testu? Mamy SZEŚĆ powodów, dla których powinieneś. Sprawdź je!"
-        },
-        "c89013b3-d0d5-4faa-842a-718092083fe6": {
-          "notice": "Wsparcie dla nauczania kursu Odkrycia Informatyki",
-          "details": "Oprócz naszego programu nauczania, Code.org oferuje kursy profesjonalnego nauczania prowadzone we własnym tempie i prowadzone przez moderatorów dla nauczycieli, którzy chcą wdrożyć kurs Odkrycia Informatyki w swoich klasach."
-        },
-        "1ff50ed3-0032-4ed0-b28c-376ce0f1c2ce": {
-          "notice": "Wsparcie dla nauczania kursu Odkrycia Informatyki",
-          "details": "Oprócz naszego programu nauczania, Code.org oferuje kursy profesjonalnego nauczania prowadzone we własnym tempie i prowadzone przez moderatorów dla nauczycieli, którzy chcą wdrożyć kurs Odkrycia Informatyki w swoich klasach."
-        },
-        "5972aa0b-1730-4977-82db-23cee2bda683": {
-          "notice": "Wsparcie dla nauczania kursu Odkrycia Informatyki",
-          "details": "Oprócz naszego programu nauczania, Code.org oferuje kursy profesjonalnego nauczania prowadzone we własnym tempie i prowadzone przez moderatorów dla nauczycieli, którzy chcą wdrożyć kurs Odkrycia Informatyki w swoich klasach."
-        },
-        "633d1416-a7fb-44b6-a724-8479fd66f4fa": {
-          "notice": "Wsparcie dla nauczania kursu Odkrycia Informatyki",
-          "details": "Oprócz naszego programu nauczania, Code.org oferuje kursy profesjonalnego nauczania prowadzone we własnym tempie i prowadzone przez moderatorów dla nauczycieli, którzy chcą wdrożyć kurs Odkrycia Informatyki w swoich klasach."
-        },
-        "69e413fa-9081-4fac-8d73-9294b6fa1f11": {
-          "notice": "Wspiera nauczanie kursu Odkrycia Informatyki",
-          "details": "Oprócz naszego programu nauczania, Code.org oferuje kursy profesjonalnego nauczania prowadzone we własnym tempie i prowadzone przez moderatorów dla nauczycieli, którzy chcą wdrożyć kurs Odkrycia Informatyki w swoich klasach."
-        },
-        "4fc301ee-93c8-4d3c-b4f6-8ad16536da1a": {
-          "notice": "Wirtualne modyfikacje",
-          "details": "Jeśli uczysz w środowisku wirtualnym, hybrydowym lub społecznie zdystansowanym, możesz wyświetlić zalecane modyfikacje naszych programów nauczania, które można zastosować w tych warunkach."
         },
         "12f743d3-19be-4f6e-be39-e61a9bfac4d6": {
           "notice": "Wspiera nauczanie kursu Odkrycia Informatyki",
@@ -161,6 +53,145 @@
         "219a6035-ef5e-4474-8dcc-682b3ba030d7": {
           "notice": "Wirtualne modyfikacje",
           "details": "Jeśli uczysz w środowisku wirtualnym, hybrydowym lub społecznie zdystansowanym, możesz wyświetlić zalecane modyfikacje naszych programów nauczania, które można zastosować w tych warunkach."
+        },
+        "69e413fa-9081-4fac-8d73-9294b6fa1f11": {
+          "notice": "Wspiera nauczanie kursu Odkrycia Informatyki",
+          "details": "Oprócz naszego programu nauczania, Code.org oferuje kursy profesjonalnego nauczania prowadzone we własnym tempie i prowadzone przez moderatorów dla nauczycieli, którzy chcą wdrożyć kurs Odkrycia Informatyki w swoich klasach."
+        },
+        "4fc301ee-93c8-4d3c-b4f6-8ad16536da1a": {
+          "notice": "Wirtualne modyfikacje",
+          "details": "Jeśli uczysz w środowisku wirtualnym, hybrydowym lub społecznie zdystansowanym, możesz wyświetlić zalecane modyfikacje naszych programów nauczania, które można zastosować w tych warunkach."
+        },
+        "1ff50ed3-0032-4ed0-b28c-376ce0f1c2ce": {
+          "notice": "Wsparcie dla nauczania kursu Odkrycia Informatyki",
+          "details": "Oprócz naszego programu nauczania, Code.org oferuje kursy profesjonalnego nauczania prowadzone we własnym tempie i prowadzone przez moderatorów dla nauczycieli, którzy chcą wdrożyć kurs Odkrycia Informatyki w swoich klasach."
+        },
+        "633d1416-a7fb-44b6-a724-8479fd66f4fa": {
+          "notice": "Wsparcie dla nauczania kursu Odkrycia Informatyki",
+          "details": "Oprócz naszego programu nauczania, Code.org oferuje kursy profesjonalnego nauczania prowadzone we własnym tempie i prowadzone przez moderatorów dla nauczycieli, którzy chcą wdrożyć kurs Odkrycia Informatyki w swoich klasach."
+        },
+        "5972aa0b-1730-4977-82db-23cee2bda683": {
+          "notice": "Wsparcie dla nauczania kursu Odkrycia Informatyki",
+          "details": "Oprócz naszego programu nauczania, Code.org oferuje kursy profesjonalnego nauczania prowadzone we własnym tempie i prowadzone przez moderatorów dla nauczycieli, którzy chcą wdrożyć kurs Odkrycia Informatyki w swoich klasach."
+        },
+        "c89013b3-d0d5-4faa-842a-718092083fe6": {
+          "notice": "Wsparcie dla nauczania kursu Odkrycia Informatyki",
+          "details": "Oprócz naszego programu nauczania, Code.org oferuje kursy profesjonalnego nauczania prowadzone we własnym tempie i prowadzone przez moderatorów dla nauczycieli, którzy chcą wdrożyć kurs Odkrycia Informatyki w swoich klasach."
+        },
+        "79a249d7-fb90-4e9c-bd8b-e7884ad2034b": {
+          "notice": "Wspiera nauczanie kursu Odkrycia Informatyki",
+          "details": "Oprócz naszego programu nauczania, Code.org oferuje kursy profesjonalnego nauczania prowadzone we własnym tempie i prowadzone przez moderatorów dla nauczycieli, którzy chcą wdrożyć kurs Odkrycia Informatyki w swoich klasach.",
+          "buttonText": "Dowiedz się więcej"
+        },
+        "be317006-f86b-44a9-9036-34c0508cc0e9": {
+          "notice": "Więcej możliwości uzyskania opinii",
+          "details": "Każda lekcja zawiera teraz krótką ankietę z 2 pytaniami, aby dać wgląd zespołowi programu nauczania na temat przebiegu lekcji w klasie. Uczniowie mają również możliwość pozostawienia opinii na końcu każdej jednostki, a nauczyciele mogą odpowiedzieć na krótką ankietę, aby poinformować zespół programowy Code.org o przebiegu jednostki.",
+          "buttonText": "Ankieta Nauczyciela"
+        },
+        "f1160bfc-3ae9-41a1-8ac9-1c9e7de4afeb": {
+          "notice": "Wspiera nauczanie kursu Odkrycia Informatyki",
+          "details": "Oprócz naszego programu nauczania, Code.org oferuje kursy profesjonalnego nauczania prowadzone we własnym tempie i prowadzone przez moderatorów dla nauczycieli, którzy chcą wdrożyć kurs Odkrycia Informatyki w swoich klasach.",
+          "buttonText": "Dowiedz się więcej"
+        },
+        "340a3627-eb27-42c9-8649-24b9b77e8c48": {
+          "notice": "Więcej możliwości uzyskania opinii",
+          "details": "Każda lekcja zawiera teraz krótką ankietę z 2 pytaniami, aby dać wgląd zespołowi programu nauczania na temat przebiegu lekcji w klasie. Uczniowie mają również możliwość pozostawienia opinii na końcu każdej jednostki, a nauczyciele mogą odpowiedzieć na krótką ankietę, aby poinformować zespół programowy Code.org o przebiegu jednostki.",
+          "buttonText": "Ankieta Nauczyciela"
+        },
+        "b5b0c936-3bc6-4e69-8796-e205d103151f": {
+          "notice": "Wspiera nauczanie kursu Odkrycia Informatyki",
+          "details": "Oprócz naszego programu nauczania, Code.org oferuje kursy profesjonalnego nauczania prowadzone we własnym tempie i prowadzone przez moderatorów dla nauczycieli, którzy chcą wdrożyć kurs Odkrycia Informatyki w swoich klasach.",
+          "buttonText": "Dowiedz się więcej"
+        },
+        "028e71f9-ebae-48ab-9c69-d616fa7d8165": {
+          "notice": "Więcej możliwości uzyskania opinii",
+          "details": "Każda lekcja zawiera teraz krótką ankietę z 2 pytaniami, aby dać wgląd zespołowi programu nauczania na temat przebiegu lekcji w klasie. Uczniowie mają również możliwość pozostawienia opinii na końcu każdej jednostki, a nauczyciele mogą odpowiedzieć na krótką ankietę, aby poinformować zespół programowy Code.org o przebiegu jednostki.",
+          "buttonText": "Ankieta Nauczyciela"
+        },
+        "2e1b13ae-2ab8-4996-bf23-ca3e0fa1f8be": {
+          "notice": "Wspiera nauczanie kursu Odkrycia Informatyki",
+          "details": "Oprócz naszego programu nauczania, Code.org oferuje kursy profesjonalnego nauczania prowadzone we własnym tempie i prowadzone przez moderatorów dla nauczycieli, którzy chcą wdrożyć kurs Odkrycia Informatyki w swoich klasach.",
+          "buttonText": "Dowiedz się więcej"
+        },
+        "0d48422e-8580-494d-bca8-1cc758561e48": {
+          "notice": "Więcej możliwości uzyskania opinii",
+          "details": "Każda lekcja zawiera teraz krótką ankietę z 2 pytaniami, aby dać wgląd zespołowi programu nauczania na temat przebiegu lekcji w klasie. Uczniowie mają również możliwość pozostawienia opinii na końcu każdej jednostki, a nauczyciele mogą odpowiedzieć na krótką ankietę, aby poinformować zespół programowy Code.org o przebiegu jednostki.",
+          "buttonText": "Ankieta Nauczyciela"
+        },
+        "b7bff9e1-22bd-4f95-bb95-68e91fd5b3a3": {
+          "notice": "Wspiera nauczanie kursu Odkrycia Informatyki",
+          "details": "Oprócz naszego programu nauczania, Code.org oferuje kursy profesjonalnego nauczania prowadzone we własnym tempie i prowadzone przez moderatorów dla nauczycieli, którzy chcą wdrożyć kurs Odkrycia Informatyki w swoich klasach.",
+          "buttonText": "Dowiedz się więcej"
+        },
+        "e86b3b15-d704-41ff-9c63-73a77b7b477d": {
+          "notice": "Więcej możliwości uzyskania opinii",
+          "details": "Każda lekcja zawiera teraz krótką ankietę z 2 pytaniami, aby dać wgląd zespołowi programu nauczania na temat przebiegu lekcji w klasie. Uczniowie mają również możliwość pozostawienia opinii na końcu każdej jednostki, a nauczyciele mogą odpowiedzieć na krótką ankietę, aby poinformować zespół programowy Code.org o przebiegu jednostki.",
+          "buttonText": "Ankieta Nauczyciela"
+        },
+        "89b889db-2e3a-4afa-8df5-b424eb0d62d1": {
+          "notice": "Więcej możliwości uzyskania opinii",
+          "details": "Każda lekcja zawiera teraz krótką ankietę z 2 pytaniami, aby dać wgląd zespołowi programu nauczania na temat przebiegu lekcji w klasie. Uczniowie mają również możliwość pozostawienia opinii na końcu każdej jednostki, a nauczyciele mogą odpowiedzieć na krótką ankietę, aby poinformować zespół programowy Code.org o przebiegu jednostki.",
+          "buttonText": "Ankieta Nauczyciela"
+        },
+        "cd936bbe-e57c-4568-aad1-832ee483d149": {
+          "notice": "Teraz dostępny z micro:bitem!",
+          "details": "Niedawno uruchomiliśmy wersję tego urządzenia, która wykorzystuje BBC micro:bit zamiast Adafruit Circuit Playground! Kliknij przycisk, aby zobaczyć urządzenie i dowiedzieć się więcej!",
+          "buttonText": "Dowiedz się więcej"
+        },
+        "ed6a61e5-23b1-4249-a182-874156f2d135": {
+          "notice": "Wspiera nauczanie sztucznej inteligencji i uczenia maszynowego",
+          "details": "Jeśli jesteś zainteresowany nauczaniem tego kursu, zalecamy ukończenie we własnym tempie bezpłatnego, profesjonalnego modułu edukacyjnego AI i Uczenie Maszynowe. Moduł ten jest przewidziany na 2 godziny zajęć. Nie zakłada się wcześniejszego doświadczenia z kodowaniem lub sztuczną inteligencją.",
+          "buttonText": "Dowiedz się więcej"
+        },
+        "c0ef1240-b469-4ee7-a778-e7d5b30b0332": {
+          "notice": "Więcej możliwości uzyskania opinii",
+          "details": "Każda lekcja zawiera teraz krótką ankietę z 2 pytaniami, aby dać wgląd zespołowi programu nauczania na temat przebiegu lekcji w klasie. Uczniowie mają również możliwość pozostawienia opinii na końcu każdej jednostki, a nauczyciele mogą odpowiedzieć na krótką ankietę, aby poinformować zespół programowy Code.org o przebiegu jednostki.",
+          "buttonText": "Ankieta Nauczyciela"
+        },
+        "26f29937-fd4e-4738-8dfe-459f286636f4": {
+          "notice": "Lekcje rozszerzeń z mikro:bitem",
+          "details": "Czy jesteś zainteresowany przybliżeniem swoim uczniom informatytki z urzadzeniami fizycznymi? Sprawdź nasze nowe rozszerzone lekcje z micro:bitem, aby kontynuowali naukę.",
+          "buttonText": "Dowiedz się więcej"
+        },
+        "8f212dd2-169f-4a3d-9880-f76d3372b6c1": {
+          "notice": "Lekcje rozszerzeń z mikro:bitem",
+          "details": "Czy jesteś zainteresowany przybliżeniem swoim uczniom informatytki z urzadzeniami fizycznymi? Sprawdź nasze nowe rozszerzone lekcje z micro:bitem, aby kontynuowali naukę.",
+          "buttonText": "Dowiedz się więcej"
+        },
+        "9b45f4aa-6b0a-44d7-9813-8e724baca343": {
+          "notice": "Lekcje rozszerzeń z mikro:bitem",
+          "details": "Czy jesteś zainteresowany przybliżeniem swoim uczniom informatytki z urzadzeniami fizycznymi? Sprawdź nasze nowe rozszerzone lekcje z micro:bitem, aby kontynuowali naukę.",
+          "buttonText": "Dowiedz się więcej"
+        },
+        "a3109564-513f-47c8-bdf3-d69a19f5149e": {
+          "notice": "Lekcje rozszerzeń z mikro:bitem",
+          "details": "Czy jesteś zainteresowany przybliżeniem swoim uczniom informatytki z urzadzeniami fizycznymi? Sprawdź nasze nowe rozszerzone lekcje z micro:bitem, aby kontynuowali naukę.",
+          "buttonText": "Dowiedz się więcej"
+        },
+        "488fc86d-7f7d-48fe-9bc2-0b8869fb6ae1": {
+          "notice": "Lekcje rozszerzeń z mikro:bitem",
+          "details": "Czy jesteś zainteresowany przybliżeniem swoim uczniom informatytki z urzadzeniami fizycznymi? Sprawdź nasze nowe rozszerzone lekcje z micro:bitem, aby kontynuowali naukę.",
+          "buttonText": "Dowiedz się więcej"
+        },
+        "409174a0-d76d-4992-8486-cfd9801c329e": {
+          "buttonText": "Dowiedz się więcej"
+        },
+        "3c4621e3-cd67-459f-a4f7-2199b7ab5bcc": {
+          "buttonText": "Dowiedz się więcej"
+        },
+        "f503efed-1d08-4a36-b7ba-e64f583d5209": {
+          "buttonText": "Dowiedz się więcej"
+        },
+        "d79fdf44-5b59-4229-bca8-f8b4e2786ccb": {
+          "buttonText": "Dowiedz się więcej"
+        },
+        "f8e11610-8bc9-448e-bb7e-25e58ecb193e": {
+          "notice": "Nowy moduł rozwiju zawodowego we własnym tempem!",
+          "details": "Chcesz uczyć Odkryć Informatyki, ale nie wiesz, od czego zacząć? Code.org wydało profesjonalny moduł edukacyjny dotyczący Jednostki 1 CSD: Rozwiązywanie problemów i informatyka. Ten dwugodzinny moduł do przerobienia we własnym tempie nauczy Cię, co musisz wiedzieć, aby uczyć CSD. Sprawdź to pod tym linkiem!",
+          "buttonText": "Jednostka 1 Rozwiju zawodowego we własnym tempem"
+        },
+        "7c0b3b50-62ba-43c3-bd32-37a58e1622fc": {
+          "notice": "Nowy moduł rozwiju zawodowego we własnym tempem!"
         }
       }
     }

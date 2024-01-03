@@ -1,51 +1,49 @@
 ---
-title: Guia d'Ús Hora del Codi
+title: Guia d'ús de l'Hora del Codi
 ---
 
 {{ signup_button }}
 
 # Com planificar l'Hora del Codi
 
-### Uniu-vos al moviment i presenteu les ciències informàtiques als vostres alumnes amb aquests passos.
+### Uniu-vos al moviment i introduïu els vostres alumnes en les ciències informàtiques amb aquests passos.
 
 Els alumnes d'avui haurien d'aprendre a crear tecnologia, no només a utilitzar-la.
 
-Provar una Hora del Codi és una forma senzilla i divertida de presentar les ciències informàtiques al vostre nen, potser per la primera vegada! Trobeu una activitat que encaixi amb el nostre entorn, tant si és a l'aula com després de l'aula, en persona o de forma virtual. Doneu un cop d'ull a la nostra [guia de participació si encara teniu preguntes]({{ localized_files/participation_guide }}) després de comprovar els passos següents:
+Fer una Hora del Codi és una forma senzilla i divertida d'introduir els alumnes en la informàtica, potser per primera vegada. Trobeu una activitat que encaixi amb el nostre entorn, tant si és a l'aula com si és una activitat extraescolar, en persona o de forma virtual. Doneu un cop d'ull a la nostra [guia de participació si us queda algun dubte]({{ localized_files/participation_guide }}) després de llegir els passos següents:
 
-- [Vegeu el vídeo de com fer servir l'Hora del Codi](#how-to-video)
-- [Exploreu activitats i tutorials](#explore-activities)
-- [Creeu el vostre pla del dia](#create-your-plan)
-- [Promocioneu la vostra Hora del Codi](#promote-your-hour)
-- [Com començar fort amb la vostra Hora del Codi](#how-to-start)
-- [Obtenir codificació](#code)
-- [Celebreu l'èxit dels vostres alumnes](#celebrate)
-- [Altres recursos de l'Hora del Codi per a educadors](#other-resources)
+- [Mireu el vídeo sobre com fer una Hora del Codi](#com-video)
+- [Exploreu les activitats i els tutorials](#explorar-activitats)
+- [Dissenyeu el pla per al dia en qüestió](#dissenyar-pla)
+- [Promocioneu la vostra Hora del Codi](#promocionar-hora-del-codi)
+- [Com començar fort amb la vostra Hora del Codi](#com-començar)
+- [Comenceu a programar](#programar)
+- [Celebreu l'èxit dels vostres alumnes](#celebrar)
+- [Altres recursos de l'Hora del Codi per a educadors](#altres-recursos)
 
 * * *
 
 <a id="how-to-video"></a>
 
-## 1. Vegeu el vídeo de com fer servir l'Hora del Codi <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k
-" frameborder="0" allowfullscreen></iframe> 
+## 1. Vegeu el vídeo de com fer l'Hora del Codi <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
 <a id="explore-activities"></a>
 
-## 2. Exploreu activitats i tutorials
+## 2. Exploreu les activitats i els tutorials
 
 Proporcionem una varietat de divertits, [tutorials guiats per a alumnes]({{ urls/learn }}) per a tots els grups d'edat i experiència. És popular per als estudiants provar els tutorials autodirigits a través de diverses activitats, inclosos els plans de lliçons per a professors per guiar debats o ampliar l'activitat.
 
 Exploreu les activitats i decidiu amb temps si voleu escollir un tutorial únic per a tots els vostres alumnes o deixar que el nen esculli el seu.
 
-[![](/images/tutorials.png
-)]({{ urls/learn }})
+[![](/images/tutorials.png)]({{ urls/learn }})
 
 * * *
 
 <a id="create-your-plan"></a>
 
-## 3. Creeu el vostre pla del dia
+## 3. Dissenyeu el pla per al dia en qüestió
 
 ### Penseu sobre les necessitats de tecnologia - els ordinadors són opcionals!
 
@@ -54,18 +52,17 @@ Exploreu les activitats i decidiu amb temps si voleu escollir un tutorial únic 
 - Proporcioneu auriculars a la vostra classe, o demaneu als estudiants que portin els seus, si el tutorial que escolliu funciona millor amb so.
 - No teniu suficients dispositius? Utilitzeu [programació en parelles](https://www.youtube.com/watch?v=vgkahOzFH2Q). Quan els estudiants s'associen, s'ajuden mútuament i depenen menys del professor. També veuen que les ciències informàtiques són socials i col·laboratives.
 
-<img src="/images/fit-600/group_ipad.jpg
-" />
+<img src="/images/fit-600/group_ipad.jpg" />
 
 ### Escolliu un dia i una hora
 
-La gent del voltant del món s'uneix a la celebració de l'Hora del Codi durant la Setmana de l'Educació CI (desembre 5-11) quan els tutorials i les activitats més actuals es publiquen. Però podeu fer una Hora de Codi qualsevol dia de l'any!
+Durant la Setmana de l'Educació en Ciències de la Computació (del 5 a l'11 de desembre), persones d'arreu del món participen en la celebració de l'Hora del Codi, que és quan publiquem tutorials i activitats noves. Però podeu fer una Hora de Codi qualsevol dia de l'any!
 
 * * *
 
 <a id="promote-your-hour"></a>
 
-## 4. Promocioneu la vostra Hora de codi
+## 4. Promocioneu la vostra Hora del Codi
 
 Ara que heu planificat un esdeveniment, és hora de començar a promocionar-lo!
 
@@ -75,11 +72,11 @@ Promocioneu l'Hora de Codi a altres professors que puguin voler unir-se a la div
 
 ### Feu-ho saber als voluntaris registrant-vos al vostre esdeveniment
 
-Quan us [registreu a un Esdeveniment de l'Hora del Codi](/#join), rebreu comunicacions útils per email amb notícies i recomanacions per acollir una Hora de Codi amb èxit. També una forma d'informar els voluntaris de la vostra escola és participar. Els voluntaris són un recurs genial i alguns poden parlar a l'aula sobre les ciències informàtiques o simplement ajudar als alumnes amb les activitats de l'Hora del Codi.
+Quan us [inscriviu a l'esdeveniment Hora del Codi](/events), rebreu comunicacions per correu electrònic útils amb notícies i consells per allotjar una Hora del Codi amb èxit. També una forma d'informar els voluntaris de la vostra escola és participar. Els voluntaris són un recurs genial i alguns poden parlar a l'aula sobre les ciències informàtiques o simplement ajudar als alumnes amb les activitats de l'Hora del Codi.
 
 ### Motiveu als vostres alumnes
 
-Dirigiu l'esdeveniment compartint [vídeos inspiradors](/promote/resources) destacant persones diverses i formes creatives en què les ciències informàtiques poden ser utilitzades. O imprimiu cartells inspiradors per a la vostra aula! Els alumnes estan més motivats en participar en una assignatura quan veuen persones com ells animant.
+Dirigiu l'esdeveniment compartint [vídeos inspiradors](/promote/resources) destacant persones diverses i formes creatives en què les ciències informàtiques poden ser utilitzades. O imprimiu cartells motivacionals per a la vostra aula! Els alumnes estan més motivats en participar en una assignatura quan veuen persones com ells animant.
 
 {{ promote_new_posters }}
 
@@ -100,25 +97,25 @@ Mostra vídeo inspirador.
 - El vídeo de llançament original Code.org, inclou Bill Gates, Mark Zuckerberg i l'estrella de l'NBA Chris Bosh. (Hi ha versions d'[1 minut](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuts](https://www.youtube.com/watch?v=nKIu9yen5nc) i [9 minuts](https://www.youtube.com/watch?v=dU1xS07N-FA) disponibles) 
 - Trobeu més [recursos inspiradors]({{ urls/inspire }}) i [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP). 
 
-Està bé si vosaltres i els vostres alumnes us estreneu en les ciències informàtiques. Aquí teniu algunes idees per presentar l'activitat de l'Hora del Codi:
+No passa res si tant vosaltres com els vostres alumnes tot just us estreneu en les ciències informàtiques. Aquí teniu algunes idees per presentar l'activitat de l'Hora del Codi:
 
 - Expliqueu les formes en què la tecnologia pot tenir un impacte en les nostres vides, amb exemples que importaran als nens i nenes (parleu de salvar vides, ajudar a les persones, connectar amb persones, etc.).
 - Com a classe, feu una llista de coses que utilitzen codi en el dia a dia.
-- Vegeu recomanacions perquè les noies joves s'interessin en les ciències informàtiques [aquí]({{ urls/girls }}). 
+- [Aquí]({{ urls/girls }}) trobareu alguns consells per aconseguir que les noies s'interessin per la informàtica.
 
 * * *
 
 <a id="code"></a>
 
-## 6. Obteniu codis!
+## 6. Poseu-vos a programar!
 
 Dirigiu els estudiants cap a l'activitat
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
+- Escriviu l'enllaç del tutorial a la pissarra. Trobareu l'enllaç a [la informació sobre el tutorial seleccionat]({{ urls/learn }}). 
 
 Quan els vostres alumnes trobin dificultats, podeu respondre:
 
-- "No ho sé. Esbrinem-ho junts."
+- "No ho sé. Esbrinem-ho junts".
 - "La tecnologia no sempre funciona com volem."
 - "Aprendre a programar és com aprendre una nova llengua; no se n'aprèn de seguida."
 
@@ -131,12 +128,11 @@ Què passa si un alumne acaba aviat?
 
 <a id="celebrate"></a>
 
-## 7. Celebreu l'èxit dels vostres alumnes
+## 7. Celebreu l'esforç dels vostres alumnes
 
 [col-33]
 
-![](/images/fit-600/boy-certificate.jpg
-)
+![](/images/fit-600/boy-certificate.jpg)
 
 [/col-33]
 
@@ -148,13 +144,13 @@ Què passa si un alumne acaba aviat?
 
 <a id="other-resources"></a>
 
-## Altres recursos d'Hora de codi per a educadors:
+## Altres recursos de l'Hora del Codi per a educadors:
 
 - Entreu al [Forum de Professors de l'Hora del Codi](http://forum.code.org/c/plc/hour-of-code) per obtenir consell i suport d'altres educadors.
 - Reviseu [les Preguntes Freqüents de l'Hora del Codi](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 ### Què ve després de l'Hora del Codi?
 
-Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
+Que s'hagi acabat l'Hora del Codi no significa que també s'acabi l'oportunitat de fer informàtica! [Descobriu com](/beyond) portar la informàtica a la vostra escola.
 
 {{ signup_button }}

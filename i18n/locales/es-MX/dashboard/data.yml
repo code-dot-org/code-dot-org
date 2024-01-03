@@ -614,11 +614,11 @@ es-MX:
         rough_poemart_events: v1 Arte del Poema Eventos
         rough_poemart_imagery: v1 Arte del Poema Imágenes
         rough_poemart_congrats: v1 Arte del Poema Felicidades
-        poetry_module_variables: Variables - Codificación con Poesía
-        poetry_module_textandvariables: Texto y Variables - Codificación con Poesía
-        poetry_module_planningapp: Planificación de tu Aplicación Generadora de Poemas - Codificación con Poesía
-        poetry_module_multichoiceprompts: Preguntas de Elección Múltiple - Codificación con Poesía
-        poetry_module_conditionals: Condicionales - Codificación con Poesía
+        poetry_module_variables: Variables - Programación con Poesía
+        poetry_module_textandvariables: Texto y Variables - Programación con Poesía
+        poetry_module_planningapp: El plan de tu Generador de Poemas - Programación con Poesía
+        poetry_module_multichoiceprompts: Preguntas de Elección Múltiple - Programación con Poesía
+        poetry_module_conditionals: Condicionales - Programación con Poesía
         poemart_intro: Arte del Poema  Introducción
         poemart_events: Arte del Poema Eventos
         poemart_imagery: Arte del Poema Imágenes
@@ -638,14 +638,14 @@ es-MX:
         PL_CSD_Unit4_AppTesting: Pruebas de Prototipos en Papel
         csd_u6_circuit_playground: Computación física
         csd_u6_input_output: Entrada y salida
-        CSA-PL-for-loops: Bucles For en Java
+        CSA-PL-for-loops: Bucles `For` en Java
         CSA-PL-variables: Creando Variables en Java
-        PL_CS_Journeys_Overview: Jornadas CS
+        PL_CS_Journeys_Overview: Carreras en ciencias de la computación
         CSA-PL-intro-to-java-lab: Fundamentos de Laboratorio Java
         CSA-PL-first-program: Escribiendo un Programa en Java
         CSD_u6_variables_part1: 'CSD: Variables'
-        csd_u6_if_statements: 'CSD:Sentencias If'
-        csc-poem-art-intro: Intro Video
+        csd_u6_if_statements: 'CSD:Sentencias `If`'
+        csc-poem-art-intro: Vídeo de introducción
         csc-poem-art-outro: Outro Video
         csd_u6_call_define_functions: 'CSD: Llamando y Definiendo Funciones'
         csp_applab_parameters: Funciones con parámetros
@@ -666,21 +666,83 @@ es-MX:
         CSA-PL-debugging-22: Depuración en el Laboratorio Java
         CSD_Unit6_InteractiveArtExemplar: Arte Interactivo - Ejemplo
         CS_Changing_Everything: Las Ciencias de la Computación lo están cambiando todo
-        csa-alias-video: Igualdades y Alias
-        csa-equals-video: El método igualdad()
+        csa-alias-video: Iguales y Alias
+        csa-equals-video: El método equals()
         csa-user-stories: Historias de Usuario en Ingeniería de Software
         csa-pl-vpl-m1-unit-3: Ingeniería de Software en la Unidad 3
         csa-pl-intro-to-equality: Introducción a la Igualdad
         csa-pl-intro-to-equals-method: Introducción al método .equals()
         csa-pl-equals-book: Escribir el método equals() para la clase Libro
         csa-multi-select-pl: Sentencias de selección múltiple en Java
-        csc_timecapsule_intro: Introducción a la Cápsula del Tiempo
+        csc_timecapsule_intro: Programa una Cápsula del Tiempo
         PL_Equity_in_CS_Education: Igualdad en la Enseñanza de la Informática
         csc_fm_pilot: Máquinas Funcionales (Piloto)
         csc_fm_pilot_v2: 'Máquinas Funcionales (Introducción)'
         csc-sprite-lab-pixel-editor: Dibuja tu Propio Sprite
         csa-pl-intro-to-strings: Introducción a las Cadenas en Java
         csa-pl-compareTo: El método compareTo()
+        csc-event-short-intro: Breve Introducción a los Eventos
+        PL_CSD_CircuitPlayground_Overview_AppsWithDevices: Descripción general de la unidad Circuit Playground
+        csa-day-in-pm-pl: '¿Qué hace un gestor de proyectos?'
+        csa-pl-intro-to-pm: Introducción a la Gestión de Proyectos
+        PL_CSD_CircuitPlayground_Setup: Circuit Playground - Configuración
+        csa_object_oriented_programming: 'CSA: Programación Orientada a Objetos'
+        csa_creating_objects: 'CSA: Creación de Objetos'
+        csa_calling_methods: 'CSA: Llamada a Métodos'
+        csa_while_loops: 'CSA: Bucles `While`'
+        csa_inheritance: 'CSA: Herencia'
+        csa_writing_a_method: 'CSA: Escribir un Método'
+        csa_software_engineering_code_reviews: 'CSA: Ingeniería de Software - Revisiones de código'
+        csa_conditional_statements: 'CSA: Sentencias Condicionales'
+        csa_printing_in_java: 'CSA: Impresión en Java'
+        csa_two_way_selection_and_not: 'CSA: Selección Bidireccional y NOT'
+        csa-pl-intro-to-oop: Introducción a la Programación Orientada a Objetos
+        csa-pl-welcome-to-Neighborhood: Bienvenido a El Barrio
+        csa-pl-calling-methods: Llamada a Métodos en Java
+        csa-pl-creating-objects: Creación de Objetos
+        csa_accessor_methods: 'CSA: Métodos de Acceso'
+        csa_constructors: 'CSA: Constructores'
+        csa_creating_a_scanner_object: 'CSA: Creación de un Objeto Escáner'
+        csa_creating_variables: 'CSA: Creación de Variables'
+        csa_instance_variables_and_attributes: 'CSA: Variables de Instancia y Atributos'
+        csa_mutator_methods: 'CSA: Métodos Mutador'
+        csa_overloaded_constructors: 'CSA: Constructores Sobrecargados'
+        csa_the_tostring_method: 'CSA: El Método toString()'
+        csa_scanner_class_methods: 'CSA: Métodos de Clase Escáner'
+        csa_for_loops: 'CSA: Bucles `For`'
+        csa_enhanced_for_loops: 'CSA: Bucles `Enhanced For`'
+        csa_modifying_values_in_a_1d_array: 'CSA: Modificación de Valores en un Array 1D'
+        csa_nested_loops: 'CSA: Bucles Anidados'
+        csa_one_dimensional_arrays: 'CSA: Arrays Unidimensionales (1D)'
+        csa_polymorphism: 'CSA: Polimorfismo'
+        csa_casting: 'CSA: Fundición'
+        csa_equals_and_aliases: 'CSA: Iguales y Alias'
+        csa_multi-selection_statements: 'CSA: CSA: Sentencias de Selección Múltiple'
+        csa_random_numbers: 'CSA: Números Aleatorios'
+        csa_static_methods: 'CSA: Métodos Estáticos'
+        csa_static_variables: 'CSA: Variables Estáticas'
+        csa_the_equals_method: 'CSA: El método equals()'
+        csa_welcome_to_the_theater: 'CSA: Bienvenido a El Teatro'
+        enter_your_own_poem: Ingresa Tu Propio Poema
+        csa-example-solution-1: 'Codificación en directo de una Solución de Ejemplo '
+        csd_sprite_properties: Propiedades de Sprite
+        csa-pl-documentation: Documentación en Laboratorio Java
+        csc-starquilts-intro: Codificación de una colcha de estrella geométrica
+        csc-mapmakers-intro: 'CSC: Mapmakers\t'
+        csa-pl-vocab-pm: Vocabulario de Gestión de Proyectos
+        csc-ecosystems-intro: Introducción a los Ecosistemas
+        PL_CSD_MicroBit_Intro: Introducción al Micro:bit
+        csc_animal_adaptations_intro: Introducción a las Adaptaciones Animales
+        upload_sprites_backgrounds: Cargando Sprites y Fondos Personalizados
+        PL_CSD_EquityBlindSpotsvid: Sesgo y responsabilidad
+        how-ai-works-llms-full: Cómo funcionan los chatbots y la modelación de lenguage
+        how-ai-works-creativity-full: '¿La IA tiene creatividad e imaginación?'
+        llms-cobranded: 'Cómo funciona la IA: chatbots y modelos de lenguaje grande'
+        generative-ai-cobranded: 'Cómo funciona la IA: IA generativa'
+        what-is-creativity: '¿Qué es la creatividad?'
+        code-break: '¡Tómate un descanso de código!'
+        csd_ml_how_ai_works: Cómo funciona la Inteligencia Artificial
+        hoc-dance-ai-warmup: 'Fiesta de Baile Edición IA: Calentamiento'
     callout:
       text:
         drag_blocks: Arrastra un bloque "mover" y colócalo debajo del otro bloque

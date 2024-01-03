@@ -47,12 +47,15 @@ ku:
         gender: 'ڕەگەز'
         edit_header: 'دەستکاریکردنی وردەکارییەکانی هەژمار'
         finish_sign_up_header: 'كرداری درووستكردنی هەژمارەكەت تەواوبكە'
+        finish_sign_up_header_error: 'تکایە ئەم هەڵانەی خوارەوە ڕاست بکەوە:'
         finish_sign_up_subheader: 'ئەم زانیاریانەی خوارەوە پڕبكەوە بۆ درووستكردنی هەژماری (Code.org) بۆ <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'ئەم زانیاریانەی خوارەوە پڕبكەوە بۆ درووستكردنی هەژماری (Code.org) بۆ **%{email}**.'
         finish_sign_up_subheader_provider: 'ئەم زانیاریانەی خوارەوە پڕبكەوە بۆ درووستكردنی هەژماری (Code.org) بە <strong>%{provider}</strong> بۆ <strong>%{email}</strong>.'
         finish_sign_up_subheader_provider_markdown: 'ئەم زانیاریانەی خوارەوە پڕبكەوە بۆ درووستكردنی هەژماری (Code.org) بە **%{provider}** بۆ **%{email}**.'
         error:
           future: ناکرێت لە داهاتوو بێت
+        user_type: 'جۆری هەژمار'
+        us_state: 'پارێزگا'
   beta: "تاقیکاری"
   hello: "سڵاو جیهان"
   welcome_back: "بەخێربێیەوە، %{name}"
@@ -148,7 +151,6 @@ ku:
     mismatch_password: "ئەم دوو تێپەڕووشەی كە داخڵت كردوون یەك نین"
     student_consent: "دووپاتی دەكەمەوە كە مۆڵەتم لە باوانم یان لە بەخێوكەری یاساییم وەرگرتووە تا خزمەتگوزارییەكانی (Code.org) بەكاربهێنم."
     student_terms_markdown: "پۆستە ئەلیكترۆنیەكان بە شێوازێك هەڵناگیرێ كە ڕێگەمان پێبدات پەیوەندی بكەین بە قوتابیەكانەوە. قوتابیەكان هەرگیز نامەی پۆستی ئەلیكترۆنی لەلایەن (Code.org) پێناگات تەنها لە حاڵەتی گێڕانەوەی تێپەڕووشەی بیرچوو. سەیری [سیاسەتی تایبەتمەندی بەكارهێنان](http://code.org/privacy) بكە بۆ زانیاری زیاتر."
-    additional_information: "زانیاری زیاترمان پێویستە بۆ بەردەوام بوون لە خۆتۆماركردن."
     user_type_button: "جۆری هەژمارەكە نوێبكەرەوە"
     user_type_label: "جۆری هەژمار"
     user_type_student: "قوتابی"
@@ -159,6 +161,7 @@ ku:
     email_preference_question: "ئایا دەتوانین نامەی پۆستی ئەلیكترۆنیت بۆ بنێرین دەربارەی نوێكاریەكانی خولەكانمان، هەلی خولی دەورووبەرت، یان هەواڵی تری تایبەت بە زانستی کۆمپیوتەر؟ (نزیكەی یەك جار لە مانگێك)"
     email_preference_required: "پێویستە پۆستێكی ئەلیكترۆنی خوازراو دیاریبكەی."
     share_teacher_email_reg_partner_preference_required: "پێویستە پۆستێكی ئەلیكترۆنی خوازراو دیاریبكەی."
+    us_state: 'پارێزگا'
   school_info:
     title: 'زانیاری قوتابخانە (ئارەزومەندانە)'
     school_country: 'وڵاتی قوتابخانە'
@@ -353,5 +356,7 @@ ku:
         other: "هی تر"
       robotics:
         other: "هی تر"
+      workshop_course:
+        other: 'هی تر'
   cookie_banner:
     accept: 'من ڕازیم'

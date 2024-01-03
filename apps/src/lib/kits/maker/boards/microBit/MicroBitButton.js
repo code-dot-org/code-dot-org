@@ -31,15 +31,15 @@ export default function MicroBitButton(board) {
   Object.defineProperties(this, {
     isPressed: {
       // More 'down' events than 'up' indicates we are in a pressed state
-      get: function() {
+      get: function () {
         return this.buttonEvents[1] > this.buttonEvents[2];
-      }
+      },
     },
     holdtime: {
-      get: function() {
+      get: function () {
         return this.holdThreshold;
-      }
-    }
+      },
+    },
   });
 }
 MicroBitButton.inherits(EventEmitter);

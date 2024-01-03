@@ -14,10 +14,10 @@ var levelDef = {
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 1, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 0, 0],
   ],
   firstSpriteIndex: 3,
-  timeoutFailureTick: 200
+  timeoutFailureTick: 200,
 };
 
 module.exports = {
@@ -39,8 +39,8 @@ module.exports = {
         '</xml>',
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
-      }
+        testResult: TestResults.ALL_PASS,
+      },
     },
     {
       description: 'Hit only one goal',
@@ -54,8 +54,8 @@ module.exports = {
         '</xml>',
       expected: {
         result: false,
-        testResult: TestResults.LEVEL_INCOMPLETE_FAIL
-      }
+        testResult: TestResults.LEVEL_INCOMPLETE_FAIL,
+      },
     },
     {
       description: 'Dynamically add a goal and miss it',
@@ -83,8 +83,8 @@ module.exports = {
         '</xml>',
       expected: {
         result: false,
-        testResult: TestResults.LEVEL_INCOMPLETE_FAIL
-      }
+        testResult: TestResults.LEVEL_INCOMPLETE_FAIL,
+      },
     },
     {
       description: 'Dynamically add a goal and hit it',
@@ -118,8 +118,8 @@ module.exports = {
         '</xml>',
       expected: {
         result: true,
-        testResult: TestResults.ALL_PASS
-      }
-    }
-  ]
+        testResult: TestResults.ALL_PASS,
+      },
+    },
+  ],
 };

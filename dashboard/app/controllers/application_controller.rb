@@ -3,6 +3,8 @@ require 'dynamic_config/dcdo'
 require 'dynamic_config/gatekeeper'
 require 'dynamic_config/page_mode'
 require 'cdo/shared_constants'
+require 'cpa'
+require 'policies/child_account'
 
 class ApplicationController < ActionController::Base
   include LocaleHelper
@@ -13,6 +15,8 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
+
+  before_action :assert_child_account_policy
 
   # this is needed to avoid devise breaking on email param
   before_action :configure_permitted_parameters, if: :devise_controller?
@@ -52,7 +56,7 @@ class ApplicationController < ActionController::Base
     # if params['dbg'] is 'off'.
     def configure_web_console
       if params[:dbg]
-        cookies[:dbg] = (params[:dbg] != 'off') ? 'on' : nil
+        cookies[:dbg] = (params[:dbg] == 'off') ? nil : 'on'
       end
       @use_web_console = cookies[:dbg]
     end
@@ -93,12 +97,12 @@ class ApplicationController < ActionController::Base
 
   def prevent_caching
     # Rails has some logic to normalize the cache-control header that varies
-    # from version to version. Ideally, we would include 'no-cache' here but
-    # that causes Rails (starting in 5.2, still true as of 6.0) to remove
-    # 'must-revalidate' which causes issues on older mobile Safari browsers.
+    # from version to version. Ideally, we would include 'no-cache, max-age=0,
+    # must-revalidate' here, but when `no-store` is present it will clear out
+    # all the others.
     # See Rails logic at
-    # https://github.com/rails/rails/blob/v6.0.4.4/actionpack/lib/action_dispatch/http/cache.rb#L184
-    response.headers["Cache-Control"] = "no-store, max-age=0, must-revalidate"
+    # https://github.com/rails/rails/blob/v6.1.4.7/actionpack/lib/action_dispatch/http/cache.rb#L185
+    response.headers["Cache-Control"] = "no-store"
     response.headers["Pragma"] = "no-cache"
     response.headers["Expires"] = "Fri, 01 Jan 1990 00:00:00 GMT"
   end
@@ -136,6 +140,8 @@ class ApplicationController < ActionController::Base
     :password_confirmation,
     :locale,
     :gender,
+    :gender_student_input,
+    :gender_teacher_input,
     :login,
     :remember_me,
     :age,
@@ -151,7 +157,14 @@ class ApplicationController < ActionController::Base
     :parent_email_preference_opt_in_required,
     :parent_email_preference_opt_in,
     :parent_email_preference_email,
-    school_info_attributes: SCHOOL_INFO_ATTRIBUTES,
+    :us_state,
+    :country_code,
+    {school_info_attributes: SCHOOL_INFO_ATTRIBUTES},
+    {
+      authentication_options_attributes: [
+        :email,
+      ],
+    },
   ]
 
   PERMITTED_USER_FIELDS.concat(UI_TEST_ATTRIBUTES) if rack_env?(:test, :development)
@@ -208,11 +221,9 @@ class ApplicationController < ActionController::Base
       response[:share_failure] = response_for_share_failure(options[:share_failure])
     end
 
-    if HintViewRequest.enabled?
-      if script_level && current_user
-        response[:hint_view_requests] = HintViewRequest.milestone_response(script_level.script, level, current_user)
-        response[:hint_view_request_url] = hint_view_requests_path
-      end
+    if HintViewRequest.enabled? && (script_level && current_user)
+      response[:hint_view_requests] = HintViewRequest.milestone_response(script_level.script, level, current_user)
+      response[:hint_view_request_url] = hint_view_requests_path
     end
 
     if PuzzleRating.enabled?
@@ -277,7 +288,7 @@ class ApplicationController < ActionController::Base
     end
 
     # replace pairings
-    session[:pairings] = pairings_from_params[:pairings].map do |pairing_param|
+    session[:pairings] = pairings_from_params[:pairings].filter_map do |pairing_param|
       other_user = User.find(pairing_param[:id])
       if current_user.can_pair_with? other_user
         other_user.id
@@ -285,7 +296,7 @@ class ApplicationController < ActionController::Base
         # TODO: should this cause an error to be returned to the user?
         nil
       end
-    end.compact
+    end
 
     session[:pairing_section_id] = pairings_from_params[:section_id].to_i
   end
@@ -321,9 +332,33 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  private
+  # Check that the user is compliant with the Child Account Policy. If they
+  # are not compliant, then we need to send them to the lockout page.
+  def assert_child_account_policy
+    # Check that the child account policy is currently enabled.
+    return unless ::Cpa.cpa_experience(request)
 
-  def pairing_still_enabled
+    # Anonymous users are NOT affected by our Child Account Policy
+    return unless current_user
+
+    # URLs we should not redirect.
+    return if Set[
+      # Don't block any user from signing out
+      destroy_user_session_path,
+      # Don't block any user from changing the language
+      locale_path,
+      # Avoid an infinite redirect loop to the lockout page
+      lockout_path,
+      # The locked out student needs access to the policy consent API's
+      policy_compliance_child_account_consent_path,
+      # The age interstitial when the age isn't known will block the lockout page
+      users_set_age_path,
+    ].include?(request.path)
+
+    redirect_to lockout_path unless Policies::ChildAccount.compliant?(current_user) || Policies::ChildAccount.user_predates_policy?(current_user)
+  end
+
+  private def pairing_still_enabled
     session[:pairing_section_id] && Section.find(session[:pairing_section_id]).pairing_allowed
   end
 end

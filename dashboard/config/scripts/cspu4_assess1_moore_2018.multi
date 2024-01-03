@@ -18,3 +18,5 @@ true ever since.
 * http://www.mooreslaw.org/ 
 * http://www.intel.com/content/www/us/en/silicon-innovations/moores-law-technology.html 
 MARKDOWN
+
+allow_multiple_attempts true

@@ -6,7 +6,7 @@ var DataConverters = require('@cdo/apps/netsim/DataConverters');
 var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
 var EncodingType = require('@cdo/apps/netsim/NetSimConstants').EncodingType;
 
-describe('NetSimPacketEditor', function() {
+describe('NetSimPacketEditor', function () {
   var editor, rootDiv;
 
   var alignDecimal = DataConverters.alignDecimal;
@@ -17,16 +17,16 @@ describe('NetSimPacketEditor', function() {
   var formatBinary = DataConverters.formatBinary;
   var formatHex = DataConverters.formatHex;
 
-  beforeEach(function() {
+  beforeEach(function () {
     NetSimTestUtils.initializeGlobalsToDefaultValues();
     editor = new NetSimPacketEditor({
       packetSpec: NetSimGlobals.getLevelConfig().clientInitialPacketHeader,
-      contentChangeCallback: function() {}
+      contentChangeCallback: function () {},
     });
     rootDiv = editor.getRoot();
   });
 
-  it('only renders enabled encodings', function() {
+  it('only renders enabled encodings', function () {
     var message = 'test message';
     var binaryMessage = DataConverters.asciiToBinary(message, 8);
     editor.message = binaryMessage;
@@ -52,7 +52,7 @@ describe('NetSimPacketEditor', function() {
       EncodingType.DECIMAL,
       EncodingType.HEXADECIMAL,
       EncodingType.BINARY,
-      EncodingType.A_AND_B
+      EncodingType.A_AND_B,
     ]);
 
     assert.equal(1, rootDiv.find('tr.ascii').length);

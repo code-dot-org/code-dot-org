@@ -1,0 +1,17 @@
+name 'SP-VPL-21-mod3-Task-EIPMlessons-CSP_2023'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Task: Explore an EIPM sequence
+
+#### Use the links below to examine each step of an EIPM sequence we've used to teach variables to students. As you read through, consider how the knowledge about variables builds with each subsequent lesson.
+
+* ##### <a href="https://studio.code.org/s/csp4-2023/lessons/1" target="blank" rel="noopener noreferrer" >Unit 3, Lesson 1: Variables Explore</a>
+* #####<a href="https://studio.code.org/s/csp4-2023/lessons/2">Unit 3, Lesson 2: Variables Investigate</a>
+* ##### <a href="https://studio.code.org/s/csp4-2023/lessons/3" target="blank" rel="noopener noreferrer">Unit 3, Lesson 3: Variables Practice</a> 
+* ##### <a href="https://studio.code.org/s/csp4-2023/lessons/4" target="blank" rel="noopener noreferrer">Unit 3, Lesson 4: Variables Make</a> 
+
+
+
+MARKDOWN

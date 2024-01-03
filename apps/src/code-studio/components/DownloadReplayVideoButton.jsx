@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import color from '../../util/color';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import Button from '../../templates/Button';
 
 // Record events to Firehose to understand how often users:
 //   - see the download button,
@@ -33,11 +33,11 @@ function downloadRemoteUrl(url, downloadName) {
   firehoseClient.putRecord({
     study: FIREHOSE_STUDY,
     study_group: FIREHOSE_STUDY_GROUP,
-    event: FIREHOSE_EVENT_DOWNLOAD_STARTED
+    event: FIREHOSE_EVENT_DOWNLOAD_STARTED,
   });
 
   fetch(url, {
-    method: 'GET'
+    method: 'GET',
   })
     .then(response => response.blob())
     .then(blob => {
@@ -53,7 +53,7 @@ function downloadRemoteUrl(url, downloadName) {
       firehoseClient.putRecord({
         study: FIREHOSE_STUDY,
         study_group: FIREHOSE_STUDY_GROUP,
-        event: FIREHOSE_EVENT_DOWNLOAD_SUCCEEDED
+        event: FIREHOSE_EVENT_DOWNLOAD_SUCCEEDED,
       });
     })
     .catch(error => {
@@ -62,7 +62,7 @@ function downloadRemoteUrl(url, downloadName) {
       firehoseClient.putRecord({
         study: FIREHOSE_STUDY,
         study_group: FIREHOSE_STUDY_GROUP,
-        event: FIREHOSE_EVENT_DOWNLOAD_FAILED
+        event: FIREHOSE_EVENT_DOWNLOAD_FAILED,
       });
     });
 }
@@ -81,13 +81,13 @@ class DownloadReplayVideoButton extends React.Component {
     channelId: PropTypes.string,
     onError: PropTypes.func,
     replayLog: PropTypes.array,
-    style: PropTypes.object
+    style: PropTypes.object,
   };
 
   state = {
     videoExists: false,
     downloadInitiated: false,
-    checkVideoAttempts: 0
+    checkVideoAttempts: 0,
   };
 
   componentDidUpdate(prevProps, prevState, snapshot) {
@@ -110,7 +110,7 @@ class DownloadReplayVideoButton extends React.Component {
       firehoseClient.putRecord({
         study: FIREHOSE_STUDY,
         study_group: FIREHOSE_STUDY_GROUP,
-        event: FIREHOSE_EVENT_DOWNLOAD_BUTTON_SEEN
+        event: FIREHOSE_EVENT_DOWNLOAD_BUTTON_SEEN,
       });
     }
   }
@@ -133,7 +133,7 @@ class DownloadReplayVideoButton extends React.Component {
     if (this.shouldCreateReplayVideo()) {
       fetch(this.getUploadUrl(), {
         method: 'PUT',
-        body: JSON.stringify(this.props.replayLog)
+        body: JSON.stringify(this.props.replayLog),
       });
     }
   };
@@ -149,7 +149,7 @@ class DownloadReplayVideoButton extends React.Component {
     firehoseClient.putRecord({
       study: FIREHOSE_STUDY,
       study_group: FIREHOSE_STUDY_GROUP,
-      event: FIREHOSE_EVENT_DOWNLOAD_CLICKED
+      event: FIREHOSE_EVENT_DOWNLOAD_CLICKED,
     });
 
     this.tryDownloadVideo(event);
@@ -158,14 +158,14 @@ class DownloadReplayVideoButton extends React.Component {
   tryDownloadVideo = event => {
     if (!this.state.downloadInitiated) {
       this.setState({
-        downloadInitiated: true
+        downloadInitiated: true,
       });
     }
 
     if (this.state.videoExists) {
       downloadRemoteUrl(this.getVideoUrl(), DOWNLOAD_NAME);
       this.setState({
-        downloadInitiated: false
+        downloadInitiated: false,
       });
     } else {
       this.checkVideo();
@@ -179,10 +179,10 @@ class DownloadReplayVideoButton extends React.Component {
 
   checkVideo() {
     return fetch(this.getVideoUrl(), {
-      method: 'HEAD'
+      method: 'HEAD',
     }).then(response => {
       this.setState({
-        videoExists: response.ok
+        videoExists: response.ok,
       });
 
       return response;
@@ -204,7 +204,7 @@ class DownloadReplayVideoButton extends React.Component {
 
     if (this.state.checkVideoAttempts >= MAX_ATTEMPTS) {
       this.setState({
-        checkVideoAttempts: 0
+        checkVideoAttempts: 0,
       });
 
       if (this.props.onError) {
@@ -214,7 +214,7 @@ class DownloadReplayVideoButton extends React.Component {
       firehoseClient.putRecord({
         study: FIREHOSE_STUDY,
         study_group: FIREHOSE_STUDY_GROUP,
-        event: FIREHOSE_EVENT_DOWNLOAD_FAILED_TIMEOUT
+        event: FIREHOSE_EVENT_DOWNLOAD_FAILED_TIMEOUT,
       });
 
       return;
@@ -233,13 +233,16 @@ class DownloadReplayVideoButton extends React.Component {
       }
 
       this.setState({
-        checkVideoAttempts: attempts
+        checkVideoAttempts: attempts,
       });
     });
   };
 
   shouldRenderButton() {
-    return this.props.channelId && this.hasReplayVideo();
+    // this is temporarily disabled until we decide for sure that we want to remove
+    // it entirely or re-enable it after making sure it's working properly.
+    return false;
+    // return this.props.channelId && this.hasReplayVideo();
   }
 
   render() {
@@ -253,12 +256,10 @@ class DownloadReplayVideoButton extends React.Component {
     }
 
     const style = Object.assign({}, this.props.style);
-    if (!this.buttonEnabled()) {
-      Object.assign(style, styles.disabledLink);
-    }
 
     return (
-      <button
+      <Button
+        color={Button.ButtonColor.neutralDark}
         type="button"
         className="download-replay-video-button"
         style={style}
@@ -269,29 +270,24 @@ class DownloadReplayVideoButton extends React.Component {
         <span style={styles.span}>
           {i18n.downloadReplayVideoButtonDownload()}
         </span>
-      </button>
+      </Button>
     );
   }
 }
 
 const styles = {
-  disabledLink: {
-    backgroundColor: color.lighter_gray,
-    borderColor: color.lighter_gray,
-    boxShadow: 'none'
-  },
   icon: {
-    fontSize: 17
+    fontSize: 17,
   },
   span: {
-    paddingLeft: 10
-  }
+    paddingLeft: 10,
+  },
 };
 
 export const UnconnectedDownloadReplayVideoButton = DownloadReplayVideoButton;
 
 export default connect(state => ({
-  appType: state.pageConstants.appType,
-  channelId: state.pageConstants.channelId,
-  replayLog: state.shareDialog.replayLog
+  appType: state.pageConstants?.appType,
+  channelId: state.pageConstants?.channelId,
+  replayLog: state.shareDialog.replayLog,
 }))(DownloadReplayVideoButton);

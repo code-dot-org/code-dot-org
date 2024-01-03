@@ -9,3 +9,5 @@ right 'Cleaning your room'
 wrong 'Eating your dessert'
 wrong 'Brushing your hair'
 wrong 'Washing your face'
+
+allow_multiple_attempts true

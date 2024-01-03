@@ -28,14 +28,14 @@ class DesignWorkspace extends React.Component {
     showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
     isRunning: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool.isRequired,
-    showMakerToggle: PropTypes.bool
+    showMakerToggle: PropTypes.bool,
   };
 
   state = {isToolboxVisible: true};
 
   onToggleToolbox = () =>
     this.setState({
-      isToolboxVisible: !this.state.isToolboxVisible
+      isToolboxVisible: !this.state.isToolboxVisible,
     });
 
   render() {
@@ -76,9 +76,9 @@ class DesignWorkspace extends React.Component {
   }
 }
 export default connect(state => ({
-  showProjectTemplateWorkspaceIcon: !!state.pageConstants
-    .showProjectTemplateWorkspaceIcon,
+  showProjectTemplateWorkspaceIcon:
+    !!state.pageConstants.showProjectTemplateWorkspaceIcon,
   isRtl: state.isRtl,
   isRunning: !!state.runState.isRunning,
-  showMakerToggle: !!state.pageConstants.showMakerToggle
+  showMakerToggle: !!state.pageConstants.showMakerToggle,
 }))(DesignWorkspace);

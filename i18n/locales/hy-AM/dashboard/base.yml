@@ -38,6 +38,7 @@ hy:
         age: 'Տարիք'
         gender: 'Սեռ'
         edit_header: 'Խմբագրել Հաշիվը Մանրամասներ'
+        finish_sign_up_header_error: 'Խնդրում ենք ուղղել հետեւյալ սխալներ:'
         error:
           future: հակում է լինի ապագայում
   beta: "բետա"
@@ -112,7 +113,6 @@ hy:
     valid_password: "Valid գաղտնաբառը:"
     invalid_password: "Գաղտնաբառ պետք է լինի առնվազն 6 նիշ"
     mismatch_password: "Այս երկու Ձեր մուտքագրած գաղտնաբառերը չեն համընկնում"
-    additional_information: "Մենք պետք է որոշ լրացուցիչ տեղեկություններ է շարունակել ստորագրման ձեզ."
     user_type_student: "Աշակերտ"
     user_type_teacher: "Teacher"
     field_is_required: "պարտադիր ե"
@@ -634,9 +634,14 @@ hy:
         other: "Այլ"
       workshop_course:
         csp: '''16-''17 CS Principles'
+        other: 'Այլ'
       email_opt_in:
         opt_in_yes: 'այո'
         opt_in_no: 'ոչ'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
+      csf: 'CS Fundamentals'
   cookie_banner:
     accept: 'Ես համաձայն եմ'
   copy: 'պատճեն'

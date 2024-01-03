@@ -1,26 +1,27 @@
 name 'cspu5_assess1_value'
-encrypted 'T+V4pqSXpW+0NV+Il/3RjAGWCF+asjFjy6LmWrRU0xotPmpRkSKbt0TtGM2x
-dDPTtiGFj8/ueFKIr3+80hxyS1oHVRzVSPTalfsFqajtSg3EvWRGdw1sj7go
-zt9ZXJfi2pi+MEj+SB1DAe1kF4tbnytmscH+MVW4KcF3/OYz4Xsf3O0P8uhb
-eC5cncb7Hc4oKZn0fkjCKUqX6ptcQN1M1UKbw6eIi2oqFPfxybt1wcyIizYS
-WzohNXL0bIjtBCBuH7xKoyEown93wrZe5XTwt7OtsmFUAustzlQz5q71Zc6g
-Ce1i6B89MKJxzyjBtvcvERY4SIbacDda6bgIbwcpber5jcij5q6VgKljM6ov
-w2eJh4/X8jhgtlQcQWtStPg4IX45DIV4PGHXW2aCGtBssQN82EkHeUj4K9lM
-WcJ4pArpuYX4QlUKZbzOt5BtJvp1h9duD6gi3UAOhSOSnMJt4AFAZ3hv7pwq
-4fKR8WjBB/nLu6bia33d6UvHuOXoHQ5X0QagyTUDXPGdUlvHXHYrmBVNbhyf
-/LPNsXxaP83CH7UCxq12975feC4qdIykZsgRiFc5b98kzN6Gszf+CaoW8jkz
-6Hs/WpKQX3GChA6hbU7OTnyMxHe2+wzB48wXKT3yhR70248PRgjatTTN3nBt
-TmGMlEaC+FwyO2Qze9ZssxRmixgE/9e4yeJEPEqVzrALlnhAgfkU07uQm7Ne
-cTI5yzmVBJhyFuSxFUiRL4yOnl7KB42qGwIXajlPbk6/PbKheT037KNDeygx
-CFlpVmQu98JRo+BW9LEDLfANyd1FBDHQbmnCgxr5lvmxpzoCZbnCxZQ5OGUe
-0eJFMQ6+COwB5CT2o+R6sQc2MIBYArLP1kkX6IVo0VLTqF/5iexgM4IP0VwS
-jFzRXR327VCbQ7sQ3GuxzxRuexEFgKZ59pr67O7oU2hxlV8aXnQN/Egn3QKo
-ubMwrjb2CWEkzaHD9fWWVTnWw/qTOJ/H8+FzI5eFjlX3zBq9ivRwXv9ukZ7A
-wyzURKVfhwdr4FEJvcuctBQW5/nGNWWSV9UDr0LSf75L+ZEFYYWox5U5BzBQ
-8M/MBgUeAN8y69ETQbCrvS/t1ihYGqGLQvASBbOia/6UShE0YyYcNdKglr+W
-U8+M8S3+jVdaHMQk4URP1noB5KBNgOiYhnybE8Gw+J3lj5Px1mtEsyr5idN8
-wLSYBEGXAzZXHj+GEucYuL4kvovdFECQYBoEL6FAJ5I5E+ZvbW2LJflQDGBI
-eqdmEqCYALhQrL9NHJNAdEoTa9hSeuIHhncnDmrKaFejB6804HJnDrDyZnPg
-uHER4hg7bejNJvlnpHsxrAZ+R6B0miMGah9LWinXx4YB/1kZGdsAPqvLfj0A
-HnCx9kQ=
-'
+wrong 'value is: 2'
+wrong 'value is: 2.3333333'
+wrong 'value is: 3'
+right 'value is: 4'
+wrong 'value is: c'
+markdown <<MARKDOWN
+What is displayed by the _console.log_ statement after the following code segment executes?
+
+![](https://images.code.org/cdd2a13688bb9cebdf36dd315a93b25d-image-1518821289861.47.53 PM.png)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 5 Lesson 4**
+
+Solve this problem by going through the lines of code while keeping track of the value of each variable.
+It is important to note that if a variable is assigned a new value, the lines of code that reference that variable afterwards also references the new value.
+
+* At the very beginning, a = 3, b = 6, c = 10
+* a = b / a which equals  6 / 3 = 2. Thus, variable "a" is changed to the value 2
+* _Now, the value of "a" is set to 2_
+* b = c - a which equals 10 - 2 = 8. Variable "b" now equals 8
+* c = b / a which equals 8 / 2 = 4
+* By the end of the program, value of c = 4
+MARKDOWN
+
+allow_multiple_attempts true

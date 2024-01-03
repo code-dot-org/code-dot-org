@@ -1,0 +1,15 @@
+{
+  "blockly_blockRepeatTooltip": "կրկնել",
+  "blockly_blockWhenRun": "երբ կսկսի",
+  "blockly_blockWhenRunTooltip": "երբ կսկսի",
+  "blockly_toolboxCategoryEvents": "Իրադարձություններ",
+  "blockly_toolboxCategoryFunctions": "գործառույթները",
+  "blockly_toolboxCategoryLogic": "տրամաբանություն",
+  "blockly_toolboxCategoryMath": "Մաթեմատիկա",
+  "blockly_toolboxCategoryVariables": "փոփոխականների",
+  "share": "Տարածել",
+  "startOver": "Վերսկսել",
+  "panelHeaderInstructions": "Հրահանգներ",
+  "panelHeaderWorkspace": "խաղային տարածք",
+  "continue": "Շարունակել"
+}

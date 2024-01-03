@@ -1,7 +1,7 @@
 /** @file Maker commands (invoked by Applab/Gamelab.executeCmd) */
 import {
   apiValidateType,
-  apiValidateTypeAndRange
+  apiValidateTypeAndRange,
 } from '../../util/javascriptMode';
 import {BOARD_EVENT_ALIASES} from './boards/circuitPlayground/PlaygroundConstants';
 import MicroBitBoard from './boards/microBit/MicroBitBoard';
@@ -44,7 +44,7 @@ export function pinMode(opts) {
     output: 1,
     analog: 2,
     pwm: 3,
-    servo: 4
+    servo: 4,
   };
   board.pinMode(opts.pin, modeStringToConstant[opts.mode]);
 }

@@ -52,7 +52,9 @@ hu:
         age: 'Kor'
         gender: 'Nem'
         edit_header: 'Felhasználói adatok szerkesztése'
+        ai_settings_header: 'AI beállítások'
         finish_sign_up_header: 'A profilod létrehozásának befejezése'
+        finish_sign_up_header_error: 'Kérjük, javítsd a következő hibákat:'
         finish_sign_up_subheader: 'Töltsd ki az alábbi adatokat <strong>%{email}</strong> Code.org fiókod létrehozásához.'
         finish_sign_up_subheader_markdown: 'Töltsd ki az alábbi adatokat **%{email}** Code.org fiókod létrehozásához.'
         finish_sign_up_subheader_provider: 'Töltsd ki az alábbi adatokat a Code.org felhasználó fiókod befejezéséhez <strong>%{provider}</strong><strong>%{email}</strong>.'
@@ -60,6 +62,8 @@ hu:
         reset_password_token: "A jelszó megváltoztatásához használt link"
         error:
           future: nem lehet a jövőben
+        user_type: 'Fióktípus'
+        us_state: 'Állam'
   beta: "béta"
   hello: "Helló világ"
   welcome_back: "Üdv újra, %{name}"
@@ -69,6 +73,7 @@ hu:
   unsubmit: Visszavon
   previous_page: Előző oldal
   next_page: Következő oldal
+  next_level: Következő szint
   next_resource: Következő erőforrás
   done_with_module: Végeztem ezzel a tanulási modullal
   cancel: "Mégsem"
@@ -172,7 +177,6 @@ hu:
     data_collection_us: "Tudom, hogy a Code.org egy nonprofit webhely, amelynek székhelye az USA-ban van, és az USA adatgyűjtésre vonatkozó törvényei eltérhetnek az én hazám törvényeitől."
     visit_privacy: 'További információkért keresd fel a Code.org webhelyen az [Adatvédelmi Szabályokat](%{privacy_url}).'
     student_terms_markdown: "Az e-mail címeket olyan módon tároljuk, hogy az nem teszi lehetővé számunkra a kapcsolatfelvételt a tanulókkal. A tanulók a jelszóemlékeztető kivételével soha nem fognak e-mailt kapni a Code.org-tól. További információt az [adatvédelem](http://code.org/privacy) részben találsz."
-    additional_information: "Még szükségünk van néhány adatra  a regisztráció folytatásához."
     user_type_button: "Felhasználói fiók-típus módosítása"
     user_type_label: "Fióktípus"
     user_type_student: "Diák"
@@ -200,6 +204,9 @@ hu:
     parent_account_checkbox: "Szülő/gondviselő vagyok, a gyermekem nevében jelentkezem"
     parent_account_email_progress_permission: "Küldhetünk Önnek esetenként e-mailt a gyermeke fejlődéséről és projektjeiről, valamint frissítéseket a tanfolyamáról és a számítástechnikai ismereteiről? [(Lásd az adatvédelmi irányelveinket)](%{privacy_policy_url})"
     parent_account_email_label: "Szülő/gondviselő e-mail címe"
+    us_state: 'Állam'
+    us_state_dropdown_options:
+      other: "Olyan helyen élek, ami nem szerepel a listában."
   school_info:
     title: 'Iskolai információ (opcionális)'
     school_country: 'Iskola országa'
@@ -332,7 +339,7 @@ hu:
       finished_hoc: "Végeztem!"
       sign_in_to_save: 'Jelentkezz be, hogy később ugyaninnen folytathasd'
       my_dashboard: "Vezérlőpultom"
-      course_catalog: "Tanfolyamaink"
+      course_catalog: "Tanfolyamok"
       project_gallery: "Projektek"
       sections: "Szakaszok"
       help_support: "Súgó és támogatás"
@@ -1100,6 +1107,7 @@ hu:
         csf_express: 'Számítástechnika alapjai (expressz vagy azt megelőző)'
         csd: 'Számítástechnika felfedezése'
         csp: 'Számítástechnika alapjai'
+        other: 'Egyéb'
         not_applicable: "Nem alkalmazható"
       email_opt_in:
         opt_in_yes: 'Igen'
@@ -1121,6 +1129,13 @@ hu:
     no_teacher_email:
       body_markdown: 'A fiókodnak nincs e-mail-címe. Kérjük, [látogass el a fiók beállításokhoz](%{user_registration}), és az űrlap kitöltése előtt add meg az e-mail-címed.'
   courses_category: 'Komplett tanfolyamok'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
+      hello_world: 'Helló világ'
+      sports: 'Sportok'
+      csf: 'A számítógép-tudomány alapjai'
+      csc: 'Kapcsolatok az informatikával'
   cookie_banner:
     message: 'A weboldalunk további böngészésével vagy az Elfogadom gombra kattintással hozzájárulsz a sütik számítógépen vagy más eszközön történő tárolásához.'
     more_information: "Lásd a Code.org adatvédelmi irányelveit."

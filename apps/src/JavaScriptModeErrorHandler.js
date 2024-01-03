@@ -93,7 +93,7 @@ export default class JavaScriptModeErrorHandler {
       logToCloud.addPageAction(
         logToCloud.PageAction.UserJavascriptError,
         {
-          error: message
+          error: message,
         },
         1 / 20
       );

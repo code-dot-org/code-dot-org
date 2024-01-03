@@ -1,22 +1,20 @@
 name 'CB_Question_3'
-encrypted 'yU8U42r+D4bmKFjG79G3gNsmLPYyP9pTarsPwyMO4QY2Cb77yq6k1zN8Ezl4
-4nxq97THSIzhne8OXfJICz/EQuGLhypsW/Ve6WWN5RnCdkivWQU/bCuajcgB
-s3mnhXd/pKOWjsmqDO5kiRHkCD4BRqrqjfc8bwB9Tp6StLecodlcZyHvImUc
-17M15tR6ASv4Sx+E96dZHhAjRC806x5xN9fPcViSiW58Oc11G1ZLHx5kXX5f
-2/Gc9FEJFTbnFHUzbskmHY5G0oKd+FF6CnD6u/wPcH+7xJ5yxqyeKNa7hvVV
-KXNbETXan6UcFTxddUNx+twHeMVyoQ04eG3bwn/v7uXSAZMA5j2Fo25hETSE
-HzFu6CM2Goe6zV2rlUTVapxqPwPyjvc7warRcanSiZSiE5GQtRklLrQq3Zhq
-awdtTZ/x3h0nJMDvgTB9LzMiv8SMfHvTZZfGSpAscPI7fJblf78Ov9RQW5zW
-wgeMFagzNGVkXXhmeFLbkPhUjJCyOn31qt7fjmzaQLV9nmoC+P1U3a6CvQZP
-AdicbezlW5NYwf/5DopbiXSRDNLaPoq+t7hHnVE2XjQCl4ZwzPdiswcq6TuW
-UKvLihurxTK4+b8UWVXlJAPzSvxzN+37SNkVyj+Z8r2T1Z5esXTY3VlFv2Ca
-kQxjSaykdrUWadleRtN6vD/QZ1qxmPFpdiIIS/kkjLMl6u2q4Rnrci9OoO0V
-quagMrOP1BtWFm+wjvjf99knRz9vYCSzY7iBB/H3u2SHgaTprTddOFbks9FU
-qUd3B1iAZ+FNFc4Zoyy0qQIcVSjZI+aG8QQ/CiJnpf8C0SAFgSReg1CzQLat
-bVLZ0DLndTwXh229nRXPTqFk8GGhjTMOxBinvSLonnrADoGhVptMq3/gmUYt
-B9MtR9T88W59RGLMKvZHLzr+8jm1t8FJ8p1i0dy7DYFl6pQNw9r4JPEjZuZO
-q1YjThosX7a/rY6BOXMoni5RUIbwuapWDlbu1eN7xU0aibMSP7BN8djyBtee
-6AhUqOf5SHPXGDSp9GXv6T61jKV+9IxwU2V5tih4l71meAcYqrW8rTGL++Wq
-m4hUD/un4xaZ6eUCyehvVRw0vet2ahJFnC6alt4FJcs1QKdysjtEDE4v1EJ7
-fL869WXSxGyP
-'
+wrong 'A'
+wrong 'L'
+right 'V'
+wrong 'Y'
+
+markdown <<MARKDOWN
+ASCII is a character-encoding scheme that uses a numeric value to represent each character. For example, the uppercase letter "G" is represented by the decimal (base 10) value 71. A partial list of characters and their corresponding ASCII values are shown in the table below. 
+
+<img src="https://images.code.org/b904412c88623430eb43aea06b334af7-image-1461448943197.PNG" width="500">
+
+ASCII characters can also be represented by hexadecimal numbers. According to ASCII character encoding, which of the following letters is represented by the hexadecimal (base 16) number 56?
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+In order to calculate the value of the base-16 number 56, it is  5&#42;16^1 + 6&#42;16^0 = 86, which maps to 'V' in the table
+MARKDOWN
+
+allow_multiple_attempts true

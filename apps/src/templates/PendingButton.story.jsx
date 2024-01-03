@@ -5,7 +5,7 @@ import classNames from 'classnames';
 
 export default {
   title: 'PendingButton',
-  component: PendingButton
+  component: PendingButton,
 };
 
 const Template = args => (
@@ -22,5 +22,5 @@ export const PendingButtonNotPending = Template.bind({});
 
 export const PendingButtonPending = Template.bind({});
 PendingButtonPending.args = {
-  isPending: true
+  isPending: true,
 };

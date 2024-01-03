@@ -50,9 +50,6 @@ nl:
       expired: "is verlopen, vraag een nieuwe aan"
       not_found: "niet gevonden"
       not_locked: "niet geblokkeerd"
-      not_saved:
-        one: "1 fout stopte %{resource} van opgeslagen worden:"
-        other: "Door %{count} fouten kon deze %{resource} niet worden opgeslagen:"
     invitations:
       send_instructions: 'Een uitnodigingsmail is verzonden naar %{email}.'
       invitation_token_invalid: 'Het gegeven uitnodigingstoken is niet geldig!'

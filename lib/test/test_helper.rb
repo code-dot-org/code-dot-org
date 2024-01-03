@@ -78,4 +78,8 @@ class Game
   def self.weblab
     "WebLab"
   end
+
+  def self.music
+    "Music"
+  end
 end

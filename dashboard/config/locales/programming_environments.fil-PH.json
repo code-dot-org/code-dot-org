@@ -2,14 +2,1021 @@
   "fil-PH": {
     "data": {
       "programming_environments": {
-        "weblab": {
-          "name": "Web Lab"
+        "applab": {
+          "categories": {
+            "advanced": {
+              "expressions": {
+                "setStyle": {
+                  "palette_params": {
+                    "css": {
+                      "type": "String"
+                    },
+                    "id": {
+                      "type": "String"
+                    }
+                  }
+                }
+              },
+              "name": "Advanced"
+            },
+            "canvas": {
+              "expressions": {
+                "circle": {
+                  "palette_params": {
+                    "radius": {
+                      "description": "Ang radius ng bilog, sa mga pixel."
+                    }
+                  }
+                },
+                "drawImage": {
+                  "palette_params": {
+                    "id": {
+                      "description": "Ang posisyon ng x sa mga pixel ng kaliwang sulok sa itaas ng imaheng iguguhit."
+                    },
+                    "x": {
+                      "description": "Ang posisyon ng x sa mga pixel ng kaliwang sulok sa itaas ng imaheng iguguhit."
+                    },
+                    "y": {
+                      "description": "Ang posisyon ng y sa mga pixel ng kaliwang sulok sa itaas ng imaheng iguguhit."
+                    }
+                  }
+                },
+                "getAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "bagay"
+                    },
+                    "x": {
+                      "description": "Ang posisyon ng x sa mga pixel na nagsisimula sa kaliwang sulok sa itaas ng larawan."
+                    },
+                    "y": {
+                      "description": "Ang posisyon ng y sa mga pixel na nagsisimula sa kaliwang sulok sa itaas ng larawan."
+                    }
+                  },
+                  "short_description": "Ibinabalik ang dami ng alpha (opacity) (mula 0 hanggang 255) sa kulay ng pixel na matatagpuan sa ibinigay na x at y na posisyon sa ibinigay na data ng imahe."
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "bagay"
+                    },
+                    "x": {
+                      "description": "Ang posisyon ng x sa mga pixel na nagsisimula sa kaliwang sulok sa itaas ng larawan."
+                    },
+                    "y": {
+                      "description": "Ang posisyon ng y sa mga pixel na nagsisimula sa kaliwang sulok sa itaas ng larawan."
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "bagay"
+                    },
+                    "x": {
+                      "description": "Ang posisyon ng x sa mga pixel na nagsisimula sa kaliwang sulok sa itaas ng larawan."
+                    },
+                    "y": {
+                      "description": "Ang posisyon ng y sa mga pixel na nagsisimula sa kaliwang sulok sa itaas ng larawan."
+                    }
+                  }
+                },
+                "getImageData": {
+                  "palette_params": {
+                    "height": {
+                      "description": "Ang taas ng bounding rectangle para makuha ang data ng imahe."
+                    },
+                    "width": {
+                      "description": "Ang lapad ng bounding rectangle para makuha ang data ng imahe."
+                    },
+                    "x": {
+                      "description": "Ang posisyon ng x sa mga pixel upang simulan ang pagkuha."
+                    },
+                    "y": {
+                      "description": "Ang posisyon ng y sa mga pixel upang simulan ang pagkuha."
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "bagay"
+                    },
+                    "x": {
+                      "description": "Ang posisyon ng x sa mga pixel na nagsisimula sa kaliwang sulok sa itaas ng larawan."
+                    },
+                    "y": {
+                      "description": "Ang posisyon ng y sa mga pixel na nagsisimula sa kaliwang sulok sa itaas ng larawan."
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "bagay"
+                    },
+                    "x": {
+                      "description": "Ang posisyon ng x sa mga pixel na nagsisimula sa kaliwang sulok sa itaas ng larawan upang ilagay ang data sa canvas."
+                    },
+                    "y": {
+                      "description": "Ang posisyon ng y sa mga pixel na nagsisimula sa kaliwang sulok sa itaas ng larawan upang ilagay ang data sa canvas."
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "height": {
+                      "description": "Ang patayong taas sa mga pixel ng parihaba."
+                    },
+                    "width": {
+                      "description": "Ang pahalang na lapad sa mga pixel ng parihaba."
+                    },
+                    "x": {
+                      "description": "Ang posisyon ng x sa mga pixel ng kaliwang sulok sa itaas ng parihaba."
+                    },
+                    "y": {
+                      "description": "Ang posisyon ng y sa mga pixel ng kaliwang sulok sa itaas ng parihaba."
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "alphaValue": {
+                      "description": "Ang dami ng alpha (opacity) (mula 0 hanggang 255) na itatakda sa pixel."
+                    },
+                    "imageData": {
+                      "type": "bagay"
+                    },
+                    "x": {
+                      "description": "Ang posisyon ng x sa mga pixel na nagsisimula sa kaliwang sulok sa itaas ng larawan."
+                    },
+                    "y": {
+                      "description": "Ang posisyon ng y sa mga pixel na nagsisimula sa kaliwang sulok sa itaas ng larawan."
+                    }
+                  },
+                  "short_description": "Itinatakda ang dami ng alpha (opacity) (mula 0 hanggang 255) sa kulay ng pixel na matatagpuan sa ibinigay na x at y na posisyon sa ibinigay na data ng imahe."
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "blueValue": {
+                      "description": "Ang dami ng asul (mula 0 hanggang 255) na itinakda sa pixel."
+                    },
+                    "imageData": {
+                      "type": "bagay"
+                    },
+                    "x": {
+                      "description": "Ang posisyon ng x sa mga pixel na nagsisimula sa kaliwang sulok sa itaas ng larawan."
+                    },
+                    "y": {
+                      "description": "Ang posisyon ng y sa mga pixel na nagsisimula sa kaliwang sulok sa itaas ng larawan."
+                    }
+                  },
+                  "short_description": "Itinatakda ang dami ng asul (mula sa 0 hanggang 255) sa kulay ng pixel na matatagpuan sa ibinigay na x at y na posisyon sa ibinigay na data ng imahe sa dami ng input na blueValue."
+                },
+                "setFillColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "String"
+                    }
+                  }
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "greenValue": {
+                      "description": "Ang dami ng berde (mula 0 hanggang 255) na itinakda sa pixel."
+                    },
+                    "imageData": {
+                      "type": "bagay"
+                    },
+                    "x": {
+                      "description": "Ang posisyon ng x sa mga pixel na nagsisimula sa kaliwang sulok sa itaas ng larawan."
+                    },
+                    "y": {
+                      "description": "Ang posisyon ng y sa mga pixel na nagsisimula sa kaliwang sulok sa itaas ng larawan."
+                    }
+                  },
+                  "short_description": "Itinatakda ang dami ng berde (mula 0 hanggang 255) sa kulay ng pixel na matatagpuan sa ibinigay na x at y na posisyon sa ibinigay na data ng imahe sa halaga ng input na greenValue."
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "alpha": {
+                      "description": "Opsyonal. Ang dami ng opacity (mula 0 hanggang 255) na itatakda sa pixel. Default sa 255 (buong opacity)."
+                    },
+                    "blue": {
+                      "description": "Ang dami ng asul (mula 0 hanggang 255) na itinakda sa pixel."
+                    },
+                    "green": {
+                      "description": "Ang dami ng berde (mula 0 hanggang 255) na itinakda sa pixel."
+                    },
+                    "imageData": {
+                      "type": "bagay"
+                    },
+                    "red": {
+                      "description": "Ang dami ng pula (mula 0 hanggang 255) na itinakda sa pixel."
+                    },
+                    "x": {
+                      "description": "Ang posisyon ng x sa mga pixel na nagsisimula sa kaliwang sulok sa itaas ng larawan."
+                    },
+                    "y": {
+                      "description": "Ang posisyon ng y sa mga pixel na nagsisimula sa kaliwang sulok sa itaas ng larawan."
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "bagay"
+                    },
+                    "redValue": {
+                      "description": "Ang dami ng pula (mula 0 hanggang 255) na itinakda sa pixel."
+                    },
+                    "x": {
+                      "description": "Ang posisyon ng x sa mga pixel na nagsisimula sa kaliwang sulok sa itaas ng larawan."
+                    },
+                    "y": {
+                      "description": "Ang posisyon ng y sa mga pixel na nagsisimula sa kaliwang sulok sa itaas ng larawan."
+                    }
+                  },
+                  "short_description": "Itinatakda ang dami ng pula (mula sa 0 hanggang 255) sa kulay ng pixel na matatagpuan sa ibinigay na x at y na posisyon sa ibinigay na data ng imahe sa dami ng input na redValue."
+                },
+                "setStrokeColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "String"
+                    }
+                  }
+                }
+              }
+            },
+            "circuit": {
+              "expressions": {
+                "buzzer.play": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Bilang"
+                    }
+                  }
+                },
+                "buzzer.playNotes": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Bilang"
+                    }
+                  }
+                },
+                "buzzer.playSong": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Bilang"
+                    }
+                  }
+                },
+                "isPressed": {
+                  "return_value": "Boolean"
+                },
+                "toggleSwitch.isOpen": {
+                  "return_value": "Boolean"
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "description": "Ang value na ibinalik ng setTimeout function upang kanselahin."
+                    }
+                  }
+                },
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Ang bilang ng mga millisecond sa pagitan ng bawat pagpapatupad ng function."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Ang bilang ng mga millisecond na maghihintay bago isagawa ang function."
+                    }
+                  }
+                },
+                "stopTimedLoop": {
+                  "palette_params": {
+                    "loop": {
+                      "type": "Bilang"
+                    }
+                  }
+                },
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Function"
+                    },
+                    "ms": {
+                      "type": "Bilang"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "bagay"
+                    }
+                  }
+                },
+                "createRecordSync": {
+                  "palette_params": {
+                    "table": {
+                      "type": "String"
+                    }
+                  }
+                },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "bagay"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "bagay"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "options": {
+                      "type": "bagay"
+                    },
+                    "tableName": {
+                      "description": "Ang pangalan ng talahanayan kung saan kukunin ang mga tala."
+                    }
+                  }
+                },
+                "getColumn": {
+                  "palette_params": {
+                    "column": {
+                      "type": "String"
+                    },
+                    "table": {
+                      "type": "String"
+                    }
+                  }
+                },
+                "getKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "Ang pangalan ng key na kukunin."
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Function"
+                    },
+                    "id": {
+                      "type": "String"
+                    },
+                    "name": {
+                      "type": "String"
+                    }
+                  }
+                },
+                "getUserId": {
+                  "short_description": "Nakakakuha ng natatanging identifier para sa kasalukuyang user ng app na ito."
+                },
+                "onRecordEvent": {
+                  "palette_params": {
+                    "table": {
+                      "description": "Ang pangalan ng talahanayan kung saan ang event handler na ito ay naaangkop."
+                    }
+                  }
+                },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "bagay"
+                    }
+                  }
+                },
+                "readRecordsSync": {
+                  "palette_params": {
+                    "table": {
+                      "type": "String"
+                    }
+                  }
+                },
+                "setKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "Ang pangalan ng key na iimbakin."
+                    },
+                    "value": {
+                      "description": "Ang data na iimbakin."
+                    }
+                  },
+                  "short_description": "Nag-iimbak ng key/value pair sa key/value data storage ng App Lab, at tumatawag sa callback function kapag tapos na ang pagkilos."
+                },
+                "startWebRequest": {
+                  "palette_params": {
+                    "url": {
+                      "description": "Ang web address ng isang serbisyong nagbabalik ng data."
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "bagay"
+                    }
+                  }
+                }
+              },
+              "name": "Data"
+            },
+            "functions": {
+              "name": "Mga function"
+            },
+            "maker": {
+              "expressions": {
+                "pinMode": {
+                  "palette_params": {
+                    "mode": {
+                      "type": "String"
+                    },
+                    "pin": {
+                      "type": "Bilang"
+                    }
+                  }
+                }
+              }
+            },
+            "math": {
+              "expressions": {
+                "mathPow": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Bilang"
+                    },
+                    "y": {
+                      "type": "Bilang"
+                    }
+                  }
+                },
+                "mathSqrt": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Bilang"
+                    }
+                  }
+                },
+                "moduloOperator": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Bilang"
+                    },
+                    "y": {
+                      "type": "Bilang"
+                    }
+                  }
+                },
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Ang maximum na number na ibinalik"
+                    },
+                    "min": {
+                      "description": "Ang minimum na number na ibinalik"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Ang maximum na number na ibinalik"
+                    },
+                    "min": {
+                      "description": "Ang minimum na number na ibinalik"
+                    }
+                  }
+                }
+              },
+              "name": "Math"
+            },
+            "micro_bit": {
+              "expressions": {
+                "ledScreen.off": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Bilang"
+                    },
+                    "y": {
+                      "type": "Bilang"
+                    }
+                  }
+                },
+                "ledScreen.on": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Bilang"
+                    },
+                    "y": {
+                      "type": "Bilang"
+                    }
+                  }
+                },
+                "ledScreen.scrollNumber": {
+                  "palette_params": {
+                    "number": {
+                      "type": "Bilang"
+                    }
+                  }
+                },
+                "ledScreen.scrollString": {
+                  "palette_params": {
+                    "String": {
+                      "type": "String"
+                    }
+                  }
+                },
+                "ledScreen.toggle": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Bilang"
+                    },
+                    "y": {
+                      "type": "Bilang"
+                    }
+                  }
+                }
+              }
+            },
+            "turtle": {
+              "expressions": {
+                "arcLeft": {
+                  "short_description": "Iginagalaw ang pagong pasulong at pakaliwa sa makinis, pabilog na arko."
+                },
+                "getX": {
+                  "short_description": "Nakukuha ang kasalukuyang x coordinate sa mga pixel ng pagong."
+                },
+                "getY": {
+                  "short_description": "Nakukuha ang kasalukuyang y coordinate sa mga pixel ng pagong."
+                },
+                "hide": {
+                  "short_description": "Ginagawang hindi nakikita ang pagong sa kasalukuyang lokasyon nito."
+                },
+                "move": {
+                  "palette_params": {
+                    "x": {
+                      "description": "Ang bilang ng mga pixel upang ilipat ang pagong pakanan."
+                    },
+                    "y": {
+                      "description": "Ang bilang ng mga pixel upang ilipat ang pagong pababa."
+                    }
+                  }
+                },
+                "moveBackward": {
+                  "short_description": "Inilipat ang pagong pabalik sa isang naibigay na bilang ng mga pixel mula sa kasalukuyang direksiyon."
+                },
+                "moveForward": {
+                  "short_description": "Inilipat ang pagong pasulong sa naibigay na bilang ng mga pixel sa kasalukuyang direksiyon."
+                },
+                "moveTo": {
+                  "short_description": "Inilipat ang pagong sa partikular na (x,y) na posisyon sa screen."
+                },
+                "penColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "String"
+                    }
+                  },
+                  "short_description": "Itinakda ang kulay ng panulat na ginagamit ng pagong para sa pagguhit ng mga linya at tuldok."
+                },
+                "penDown": {
+                  "short_description": "Ibinababa ang panulat upang ang pagong ay gumuhit ng linya sa likod nito habang ito ay gumagalaw."
+                },
+                "penRGB": {
+                  "palette_params": {
+                    "r": {
+                      "type": "Bilang"
+                    }
+                  },
+                  "short_description": "Gamit ang mga halaga ng RGBA, itinatakda ang kulay ng panulat na ginagamit ng pagong sa pagguhit ng mga linya at tuldok."
+                },
+                "penUp": {
+                  "short_description": "Pinulot ang panulat upang hindi gumuhit ng linya ang pagong habang ito ay gumagalaw."
+                },
+                "penWidth": {
+                  "short_description": "Itinatakda ang lapad ng linya sa mga pixel na iginuhit ng pagong sa likod nito habang gumagalaw."
+                },
+                "show": {
+                  "short_description": "Ginagawang nakikita ang pagong sa kasalukuyang lokasyon nito."
+                },
+                "speed": {
+                  "short_description": "Itinatakda ang bilis sa pagpapatupad ng app, na kinabibilangan ng bilis ng pagong."
+                },
+                "turnLeft": {
+                  "short_description": "Pinaikot ang pagong na iniwan ng tinukoy na anggulo. Ang posisyon ng pagong ay nananatiling pareho."
+                },
+                "turnRight": {
+                  "short_description": "Pinaikot pakanan ang pagong ayon sa tinukoy na anggulo. Ang posisyon ng pagong ay nananatiling pareho."
+                },
+                "turnTo": {
+                  "short_description": "Binabago ang direksiyon ng pagong sa tiyak na anggulo. 0 ang pataas, 90 ang kanan, 180 ang pababa, at 270 ang kaliwa."
+                }
+              }
+            },
+            "ui_controls": {
+              "expressions": {
+                "button": {
+                  "short_description": "Lumikha ng button sa screen na nagpapakita ng text na ibinigay at tinutukoy ng ibinigay na id sa default na lokasyon (0,0)."
+                },
+                "getProperty": {
+                  "palette_params": {
+                    "id": {
+                      "type": "String"
+                    },
+                    "property": {
+                      "type": "String"
+                    }
+                  }
+                },
+                "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "Lumiit at Lumaki"
+                    }
+                  },
+                  "palette_params": {
+                    "callback": {
+                      "type": "Function"
+                    },
+                    "id": {
+                      "type": "String"
+                    },
+                    "type": {
+                      "type": "String"
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "Paglikha ng Musika"
+                    }
+                  },
+                  "palette_params": {
+                    "loop": {
+                      "type": "Boolean"
+                    }
+                  },
+                  "short_description": "Nagpapatunog ng MP3 na tunog na file mula sa tinutukoy na URL."
+                },
+                "playSpeech": {
+                  "palette_params": {
+                    "gender": {
+                      "type": "String"
+                    },
+                    "language": {
+                      "type": "String"
+                    },
+                    "text": {
+                      "type": "String"
+                    }
+                  }
+                },
+                "rgb": {
+                  "palette_params": {
+                    "a": {
+                      "type": "Bilang"
+                    },
+                    "b": {
+                      "type": "Bilang"
+                    },
+                    "g": {
+                      "type": "Bilang"
+                    },
+                    "r": {
+                      "type": "Bilang"
+                    }
+                  }
+                },
+                "setProperty": {
+                  "palette_params": {
+                    "id": {
+                      "type": "String"
+                    },
+                    "property": {
+                      "description": "Ang katangiang babaguhin.",
+                      "type": "String"
+                    }
+                  },
+                  "short_description": "Nagtatakda ng katangian sa bagong value sa tinukoy na elemento."
+                },
+                "setScreen": {
+                  "short_description": "Itinakda ang screen sa ibinigay na screenId."
+                },
+                "showElement": {
+                  "short_description": "Ipinapakita ang elementong may ibinigay na id."
+                },
+                "textLabel": {
+                  "short_description": "Lumikha ng text label sa screen na nagpapakita ng text na ibinigay at tinutukoy ng ibinigay na id sa default na lokasyon (0,0)."
+                }
+              }
+            },
+            "variables": {
+              "expressions": {
+                "addPair": {
+                  "palette_params": {
+                    "key": {
+                      "type": "String"
+                    }
+                  },
+                  "return_value": "Wala"
+                },
+                "declareAssign_list_123": {
+                  "short_description": "Magdeklara at magtalaga ng array sa isang variable"
+                },
+                "declareAssign_object": {
+                  "examples": {
+                    "Choose Your Own Adventure": {
+                      "name": "Piliin ang Sarili Mong Pakikipagsapalaran"
+                    }
+                  }
+                },
+                "getValue": {
+                  "palette_params": {
+                    "key": {
+                      "type": "String"
+                    }
+                  }
+                },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Ang string na hahanapin."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Ang string na hahanapin."
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "Ang haba ng string"
+                }
+              },
+              "name": "Mga variable"
+            }
+          },
+          "description": "Ang App Lab ay isang programming environment kung saan maari kang gumawa ng mga simpleng apps. Magdesign ng app, mag-code gamit ang blocks o Javascript para mapagana ito, at pagkatapos ibahagi ang iyong app sa ilang segundo lang.",
+          "name": "App na Lab"
         },
         "gamelab": {
-          "name": "Game Lab",
           "categories": {
+            "control": {
+              "expressions": {
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Ang bilang ng mga millisecond sa pagitan ng bawat pagpapatupad ng function."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Ang bilang ng mga millisecond na maghihintay bago isagawa ang function."
+                    }
+                  }
+                }
+              }
+            },
+            "drawing": {
+              "expressions": {
+                "arc": {
+                  "palette_params": {
+                    "h": {
+                      "type": "Bilang"
+                    },
+                    "start": {
+                      "type": "Bilang"
+                    },
+                    "stop": {
+                      "type": "Bilang"
+                    },
+                    "w": {
+                      "type": "Bilang"
+                    },
+                    "x": {
+                      "type": "Bilang"
+                    },
+                    "y": {
+                      "type": "Bilang"
+                    }
+                  }
+                },
+                "background": {
+                  "palette_params": {
+                    "color": {
+                      "type": "String"
+                    }
+                  }
+                },
+                "ellipse": {
+                  "palette_params": {
+                    "h": {
+                      "type": "Bilang"
+                    },
+                    "w": {
+                      "type": "Bilang"
+                    },
+                    "x": {
+                      "type": "Bilang"
+                    },
+                    "y": {
+                      "type": "Bilang"
+                    }
+                  }
+                },
+                "fill": {
+                  "palette_params": {
+                    "color": {
+                      "type": "String"
+                    }
+                  }
+                },
+                "line": {
+                  "palette_params": {
+                    "x1": {
+                      "type": "Bilang"
+                    },
+                    "x2": {
+                      "type": "Bilang"
+                    },
+                    "y1": {
+                      "type": "Bilang"
+                    },
+                    "y2": {
+                      "type": "Bilang"
+                    }
+                  }
+                },
+                "point": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Bilang"
+                    },
+                    "y": {
+                      "type": "Bilang"
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "h": {
+                      "type": "Bilang"
+                    },
+                    "w": {
+                      "type": "Bilang"
+                    },
+                    "x": {
+                      "type": "Bilang"
+                    },
+                    "y": {
+                      "type": "Bilang"
+                    }
+                  }
+                },
+                "regularPolygon": {
+                  "palette_params": {
+                    "sides": {
+                      "type": "Bilang"
+                    },
+                    "size": {
+                      "type": "Bilang"
+                    },
+                    "x": {
+                      "type": "Bilang"
+                    },
+                    "y": {
+                      "type": "Bilang"
+                    }
+                  }
+                },
+                "rgb": {
+                  "palette_params": {
+                    "a": {
+                      "type": "Bilang"
+                    },
+                    "b": {
+                      "type": "Bilang"
+                    },
+                    "g": {
+                      "type": "Bilang"
+                    },
+                    "r": {
+                      "type": "Bilang"
+                    }
+                  }
+                },
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Bituin"
+                    }
+                  },
+                  "palette_params": {
+                    "x1": {
+                      "type": "Bilang"
+                    },
+                    "x2": {
+                      "type": "Bilang"
+                    },
+                    "y1": {
+                      "type": "Bilang"
+                    },
+                    "y2": {
+                      "type": "Bilang"
+                    }
+                  }
+                },
+                "stroke": {
+                  "palette_params": {
+                    "color": {
+                      "type": "String"
+                    }
+                  }
+                },
+                "strokeWeight": {
+                  "palette_params": {
+                    "size": {
+                      "type": "Bilang"
+                    }
+                  }
+                },
+                "text": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Bilang"
+                    },
+                    "str": {
+                      "type": "String"
+                    },
+                    "width": {
+                      "type": "Bilang"
+                    },
+                    "x": {
+                      "type": "Bilang"
+                    },
+                    "y": {
+                      "type": "Bilang"
+                    }
+                  }
+                },
+                "textAlign": {
+                  "palette_params": {
+                    "horiz": {
+                      "type": "String"
+                    },
+                    "vert": {
+                      "type": "String"
+                    }
+                  }
+                },
+                "textFont": {
+                  "palette_params": {
+                    "font": {
+                      "type": "String"
+                    }
+                  }
+                },
+                "textSize": {
+                  "palette_params": {
+                    "pixels": {
+                      "type": "Bilang"
+                    }
+                  }
+                }
+              },
+              "name": "Drowing"
+            },
+            "functions": {
+              "name": "Mga function"
+            },
             "game_lab": {
-              "name": "Game Lab",
               "expressions": {
                 "keyDown": {
                   "palette_params": {
@@ -39,6 +1046,20 @@
                     }
                   }
                 },
+                "mouseIsOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "mousePressedOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
                 "mouseWentDown": {
                   "examples": {
                     "Black and White": {
@@ -65,43 +1086,45 @@
                     }
                   },
                   "palette_params": {
-                    "url": {
-                      "type": "String"
-                    },
                     "loop": {
                       "type": "Boolean"
+                    },
+                    "url": {
+                      "type": "String"
                     }
                   },
                   "short_description": "Nagpapatunog ng MP3 na tunog na file mula sa tinutukoy na URL."
                 },
                 "playSpeech": {
                   "palette_params": {
-                    "text": {
-                      "type": "String"
-                    },
                     "gender": {
                       "type": "String"
                     },
                     "language": {
                       "type": "String"
+                    },
+                    "text": {
+                      "type": "String"
                     }
                   }
                 },
                 "showMobileControls": {
+                  "content": "Binabago ang mga kontrol ng mobile na makikita sa ibaba ng play space.",
                   "palette_params": {
-                    "spaceButtonVisible": {
+                    "dpadFourWay": {
                       "type": "Boolean"
                     },
                     "dpadVisible": {
                       "type": "Boolean"
                     },
-                    "dpadFourWay": {
-                      "type": "Boolean"
-                    },
                     "mobileOnly": {
                       "type": "Boolean"
+                    },
+                    "spaceButtonVisible": {
+                      "type": "Boolean"
                     }
-                  }
+                  },
+                  "short_description": "Binabago ang mga kontrol ng mobile na makikita sa ibaba ng play space."
                 },
                 "stopSound": {
                   "palette_params": {
@@ -110,119 +1133,25 @@
                     }
                   }
                 }
-              }
-            },
-            "sprites": {
-              "name": "Mga Sprites",
-              "expressions": {
-                "getSpeed": {
-                  "examples": {
-                    "Spiral": {
-                      "name": "Spiral"
-                    }
-                  }
-                },
-                "mirrorX": {
-                  "palette_params": {
-                    "dir": {
-                      "type": "Bilang"
-                    }
-                  }
-                },
-                "mirrorY": {
-                  "palette_params": {
-                    "dir": {
-                      "type": "Bilang"
-                    }
-                  }
-                },
-                "pointTo": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Bilang"
-                    },
-                    "y": {
-                      "type": "Bilang"
-                    }
-                  }
-                },
-                "setAnimation": {
-                  "palette_params": {
-                    "label": {
-                      "type": "String"
-                    }
-                  }
-                },
-                "setCollider": {
-                  "palette_params": {
-                    "type": {
-                      "type": "String"
-                    },
-                    "xOffset": {
-                      "type": "Bilang"
-                    },
-                    "yOffset": {
-                      "type": "Bilang"
-                    },
-                    "width/radius": {
-                      "type": "Bilang"
-                    },
-                    "height": {
-                      "type": "Bilang"
-                    },
-                    "rotationOffset": {
-                      "type": "Bilang"
-                    }
-                  }
-                },
-                "setFrame": {
-                  "palette_params": {
-                    "frame": {
-                      "type": "Bilang"
-                    }
-                  }
-                },
-                "setSpeedAndDirection": {
-                  "palette_params": {
-                    "speed": {
-                      "type": "Bilang"
-                    },
-                    "angle": {
-                      "type": "Bilang"
-                    }
-                  }
-                },
-                "setVelocity": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Bilang"
-                    },
-                    "y": {
-                      "type": "Bilang"
-                    }
-                  }
-                },
-                "createSprite": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Bilang"
-                    },
-                    "width": {
-                      "type": "Bilang"
-                    },
-                    "y": {
-                      "type": "Bilang"
-                    },
-                    "height": {
-                      "type": "Bilang"
-                    }
-                  }
-                }
-              }
+              },
+              "name": "Game Lab"
             },
             "groups": {
-              "name": "Grupo",
               "expressions": {
+                "add": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "contains": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
                 "get": {
                   "palette_params": {
                     "i": {
@@ -240,6 +1169,13 @@
                     }
                   }
                 },
+                "remove": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
                 "setAnimationEach": {
                   "palette_params": {
                     "label": {
@@ -249,19 +1185,19 @@
                 },
                 "setColliderEach": {
                   "palette_params": {
-                    "type": {
-                      "type": "String"
-                    },
-                    "yOffset": {
-                      "type": "Bilang"
-                    },
-                    "width/radius": {
-                      "type": "Bilang"
-                    },
                     "height": {
                       "type": "Bilang"
                     },
                     "rotationOffset": {
+                      "type": "Bilang"
+                    },
+                    "type": {
+                      "type": "String"
+                    },
+                    "width/radius": {
+                      "type": "Bilang"
+                    },
+                    "yOffset": {
                       "type": "Bilang"
                     }
                   }
@@ -331,10 +1267,10 @@
                 },
                 "setSpeedAndDirectionEach": {
                   "palette_params": {
-                    "speed": {
+                    "angle": {
                       "type": "Bilang"
                     },
-                    "angle": {
+                    "speed": {
                       "type": "Bilang"
                     }
                   }
@@ -384,219 +1320,10 @@
                     }
                   }
                 }
-              }
-            },
-            "drawing": {
-              "name": "Drowing",
-              "expressions": {
-                "arc": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Bilang"
-                    },
-                    "y": {
-                      "type": "Bilang"
-                    },
-                    "w": {
-                      "type": "Bilang"
-                    },
-                    "h": {
-                      "type": "Bilang"
-                    },
-                    "start": {
-                      "type": "Bilang"
-                    },
-                    "stop": {
-                      "type": "Bilang"
-                    }
-                  }
-                },
-                "background": {
-                  "palette_params": {
-                    "color": {
-                      "type": "String"
-                    }
-                  }
-                },
-                "ellipse": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Bilang"
-                    },
-                    "y": {
-                      "type": "Bilang"
-                    },
-                    "w": {
-                      "type": "Bilang"
-                    },
-                    "h": {
-                      "type": "Bilang"
-                    }
-                  }
-                },
-                "fill": {
-                  "palette_params": {
-                    "color": {
-                      "type": "String"
-                    }
-                  }
-                },
-                "line": {
-                  "palette_params": {
-                    "x1": {
-                      "type": "Bilang"
-                    },
-                    "y1": {
-                      "type": "Bilang"
-                    },
-                    "x2": {
-                      "type": "Bilang"
-                    },
-                    "y2": {
-                      "type": "Bilang"
-                    }
-                  }
-                },
-                "point": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Bilang"
-                    },
-                    "y": {
-                      "type": "Bilang"
-                    }
-                  }
-                },
-                "rect": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Bilang"
-                    },
-                    "y": {
-                      "type": "Bilang"
-                    },
-                    "w": {
-                      "type": "Bilang"
-                    },
-                    "h": {
-                      "type": "Bilang"
-                    }
-                  }
-                },
-                "regularPolygon": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Bilang"
-                    },
-                    "y": {
-                      "type": "Bilang"
-                    },
-                    "sides": {
-                      "type": "Bilang"
-                    },
-                    "size": {
-                      "type": "Bilang"
-                    }
-                  }
-                },
-                "rgb": {
-                  "palette_params": {
-                    "r": {
-                      "type": "Bilang"
-                    },
-                    "g": {
-                      "type": "Bilang"
-                    },
-                    "b": {
-                      "type": "Bilang"
-                    },
-                    "a": {
-                      "type": "Bilang"
-                    }
-                  }
-                },
-                "shape": {
-                  "examples": {
-                    "Star": {
-                      "name": "Bituin"
-                    }
-                  },
-                  "palette_params": {
-                    "x1": {
-                      "type": "Bilang"
-                    },
-                    "y1": {
-                      "type": "Bilang"
-                    },
-                    "x2": {
-                      "type": "Bilang"
-                    },
-                    "y2": {
-                      "type": "Bilang"
-                    }
-                  }
-                },
-                "stroke": {
-                  "palette_params": {
-                    "color": {
-                      "type": "String"
-                    }
-                  }
-                },
-                "strokeWeight": {
-                  "palette_params": {
-                    "size": {
-                      "type": "Bilang"
-                    }
-                  }
-                },
-                "text": {
-                  "palette_params": {
-                    "str": {
-                      "type": "String"
-                    },
-                    "x": {
-                      "type": "Bilang"
-                    },
-                    "y": {
-                      "type": "Bilang"
-                    },
-                    "width": {
-                      "type": "Bilang"
-                    },
-                    "height": {
-                      "type": "Bilang"
-                    }
-                  }
-                },
-                "textAlign": {
-                  "palette_params": {
-                    "horiz": {
-                      "type": "String"
-                    },
-                    "vert": {
-                      "type": "String"
-                    }
-                  }
-                },
-                "textFont": {
-                  "palette_params": {
-                    "font": {
-                      "type": "String"
-                    }
-                  }
-                },
-                "textSize": {
-                  "palette_params": {
-                    "pixels": {
-                      "type": "Bilang"
-                    }
-                  }
-                }
-              }
+              },
+              "name": "Grupo"
             },
             "math": {
-              "name": "Math",
               "expressions": {
                 "mathSqrt": {
                   "palette_params": {
@@ -617,332 +1344,123 @@
                 },
                 "randomNumber": {
                   "palette_params": {
-                    "min": {
-                      "description": "Ang minimum na number na ibinalik"
-                    },
                     "max": {
                       "description": "Ang maximum na number na ibinalik"
+                    },
+                    "min": {
+                      "description": "Ang minimum na number na ibinalik"
                     }
                   }
                 },
                 "randomNumber_min_max": {
                   "palette_params": {
-                    "min": {
-                      "description": "Ang minimum na number na ibinalik"
-                    },
                     "max": {
                       "description": "Ang maximum na number na ibinalik"
+                    },
+                    "min": {
+                      "description": "Ang minimum na number na ibinalik"
                     }
                   }
                 }
-              }
+              },
+              "name": "Math"
             },
-            "variables": {
-              "name": "Mga variable"
-            },
-            "functions": {
-              "name": "Mga function"
-            }
-          }
-        },
-        "applab": {
-          "name": "App na Lab",
-          "description": "Ang App Lab ay isang programming environment kung saan maari kang gumawa ng mga simpleng apps. Magdesign ng app, mag-code gamit ang blocks o Javascript para mapagana ito, at pagkatapos ibahagi ang iyong app sa ilang segundo lang.",
-          "categories": {
-            "ui_controls": {
+            "sprites": {
               "expressions": {
-                "getProperty": {
+                "createSprite": {
                   "palette_params": {
-                    "id": {
-                      "type": "String"
+                    "height": {
+                      "type": "Bilang"
                     },
-                    "property": {
+                    "width": {
+                      "type": "Bilang"
+                    },
+                    "x": {
+                      "type": "Bilang"
+                    },
+                    "y": {
+                      "type": "Bilang"
+                    }
+                  }
+                },
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Spiral"
+                    }
+                  }
+                },
+                "mirrorX": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Bilang"
+                    }
+                  }
+                },
+                "mirrorY": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Bilang"
+                    }
+                  }
+                },
+                "pointTo": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Bilang"
+                    },
+                    "y": {
+                      "type": "Bilang"
+                    }
+                  }
+                },
+                "setAnimation": {
+                  "palette_params": {
+                    "label": {
                       "type": "String"
                     }
                   }
                 },
-                "onEvent": {
+                "setCollider": {
                   "palette_params": {
+                    "height": {
+                      "type": "Bilang"
+                    },
+                    "rotationOffset": {
+                      "type": "Bilang"
+                    },
                     "type": {
                       "type": "String"
                     },
-                    "id": {
-                      "type": "String"
-                    },
-                    "callback": {
-                      "type": "Function"
-                    }
-                  }
-                },
-                "playSound": {
-                  "examples": {
-                    "Making Music": {
-                      "name": "Paglikha ng Musika"
-                    }
-                  },
-                  "palette_params": {
-                    "loop": {
-                      "type": "Boolean"
-                    }
-                  },
-                  "short_description": "Nagpapatunog ng MP3 na tunog na file mula sa tinutukoy na URL."
-                },
-                "playSpeech": {
-                  "palette_params": {
-                    "text": {
-                      "type": "String"
-                    },
-                    "gender": {
-                      "type": "String"
-                    },
-                    "language": {
-                      "type": "String"
-                    }
-                  }
-                },
-                "rgb": {
-                  "palette_params": {
-                    "r": {
+                    "width/radius": {
                       "type": "Bilang"
                     },
-                    "g": {
+                    "xOffset": {
                       "type": "Bilang"
                     },
-                    "b": {
-                      "type": "Bilang"
-                    },
-                    "a": {
+                    "yOffset": {
                       "type": "Bilang"
                     }
                   }
                 },
-                "setProperty": {
+                "setFrame": {
                   "palette_params": {
-                    "id": {
-                      "type": "String"
-                    },
-                    "property": {
-                      "type": "String"
-                    }
-                  }
-                }
-              }
-            },
-            "canvas": {
-              "expressions": {
-                "getAlpha": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "bagay"
-                    }
-                  }
-                },
-                "getBlue": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "bagay"
-                    }
-                  }
-                },
-                "getGreen": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "bagay"
-                    }
-                  }
-                },
-                "getRed": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "bagay"
-                    }
-                  }
-                },
-                "putImageData": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "bagay"
-                    }
-                  }
-                },
-                "setAlpha": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "bagay"
-                    }
-                  }
-                },
-                "setBlue": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "bagay"
-                    }
-                  }
-                },
-                "setFillColor": {
-                  "palette_params": {
-                    "color": {
-                      "type": "String"
-                    }
-                  }
-                },
-                "setGreen": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "bagay"
-                    }
-                  }
-                },
-                "setRGB": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "bagay"
-                    }
-                  }
-                },
-                "setRed": {
-                  "palette_params": {
-                    "imageData": {
-                      "type": "bagay"
-                    }
-                  }
-                },
-                "setStrokeColor": {
-                  "palette_params": {
-                    "color": {
-                      "type": "String"
-                    }
-                  }
-                }
-              }
-            },
-            "data": {
-              "name": "Data",
-              "expressions": {
-                "createRecord": {
-                  "palette_params": {
-                    "record": {
-                      "type": "bagay"
-                    }
-                  }
-                },
-                "createRecordSync": {
-                  "palette_params": {
-                    "table": {
-                      "type": "String"
-                    }
-                  }
-                },
-                "deleteRecord": {
-                  "palette_params": {
-                    "record": {
-                      "type": "bagay"
-                    }
-                  }
-                },
-                "drawChart": {
-                  "palette_params": {
-                    "options": {
-                      "type": "bagay"
-                    }
-                  }
-                },
-                "drawChartFromRecords": {
-                  "palette_params": {
-                    "options": {
-                      "type": "bagay"
-                    }
-                  }
-                },
-                "getColumn": {
-                  "palette_params": {
-                    "table": {
-                      "type": "String"
-                    },
-                    "column": {
-                      "type": "String"
-                    }
-                  }
-                },
-                "getPrediction": {
-                  "palette_params": {
-                    "name": {
-                      "type": "String"
-                    },
-                    "id": {
-                      "type": "String"
-                    },
-                    "callback": {
-                      "type": "Function"
-                    }
-                  }
-                },
-                "readRecords": {
-                  "palette_params": {
-                    "terms": {
-                      "type": "bagay"
-                    }
-                  }
-                },
-                "readRecordsSync": {
-                  "palette_params": {
-                    "table": {
-                      "type": "String"
-                    }
-                  }
-                },
-                "updateRecord": {
-                  "palette_params": {
-                    "record": {
-                      "type": "bagay"
-                    }
-                  }
-                }
-              }
-            },
-            "turtle": {
-              "expressions": {
-                "penColor": {
-                  "palette_params": {
-                    "color": {
-                      "type": "String"
-                    }
-                  }
-                },
-                "penRGB": {
-                  "palette_params": {
-                    "r": {
-                      "type": "Bilang"
-                    }
-                  }
-                }
-              }
-            },
-            "control": {
-              "expressions": {
-                "stopTimedLoop": {
-                  "palette_params": {
-                    "loop": {
+                    "frame": {
                       "type": "Bilang"
                     }
                   }
                 },
-                "timedLoop": {
+                "setSpeedAndDirection": {
                   "palette_params": {
-                    "ms": {
+                    "angle": {
                       "type": "Bilang"
                     },
-                    "callback": {
-                      "type": "Function"
+                    "speed": {
+                      "type": "Bilang"
                     }
                   }
-                }
-              }
-            },
-            "math": {
-              "name": "Math",
-              "expressions": {
-                "mathPow": {
+                },
+                "setVelocity": {
                   "palette_params": {
                     "x": {
                       "type": "Bilang"
@@ -952,183 +1470,89 @@
                     }
                   }
                 },
-                "mathSqrt": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Bilang"
-                    }
-                  }
+                "sprite.height": {
+                  "return_value": "Ang taas ng sprite."
                 },
-                "moduloOperator": {
-                  "palette_params": {
-                    "x": {
-                      "type": "Bilang"
-                    },
-                    "y": {
-                      "type": "Bilang"
-                    }
-                  }
-                },
-                "randomNumber_min_max": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Ang minimum na number na ibinalik"
-                    },
-                    "max": {
-                      "description": "Ang maximum na number na ibinalik"
-                    }
-                  }
-                },
-                "randomNumber": {
-                  "palette_params": {
-                    "min": {
-                      "description": "Ang minimum na number na ibinalik"
-                    },
-                    "max": {
-                      "description": "Ang maximum na number na ibinalik"
-                    }
-                  }
+                "sprite.width": {
+                  "return_value": "Ang lapad ng sprite."
                 }
-              }
-            },
-            "variables": {
-              "name": "Mga variable",
-              "expressions": {
-                "declareAssign_object": {
-                  "examples": {
-                    "Choose Your Own Adventure": {
-                      "name": "Piliin ang Sarili Mong Pakikipagsapalaran"
-                    }
-                  }
-                },
-                "addPair": {
-                  "palette_params": {
-                    "key": {
-                      "type": "String"
-                    }
-                  },
-                  "return_value": "Wala"
-                },
-                "getValue": {
-                  "palette_params": {
-                    "key": {
-                      "type": "String"
-                    }
-                  }
-                }
-              }
-            },
-            "functions": {
-              "name": "Mga function"
-            },
-            "advanced": {
-              "name": "Advanced",
-              "expressions": {
-                "setStyle": {
-                  "palette_params": {
-                    "id": {
-                      "type": "String"
-                    },
-                    "css": {
-                      "type": "String"
-                    }
-                  }
-                }
-              }
-            },
-            "maker": {
-              "expressions": {
-                "pinMode": {
-                  "palette_params": {
-                    "pin": {
-                      "type": "Bilang"
-                    },
-                    "mode": {
-                      "type": "String"
-                    }
-                  }
-                }
-              }
-            },
-            "circuit": {
-              "expressions": {
-                "isPressed": {
-                  "return_value": "Boolean"
-                },
-                "buzzer.play": {
-                  "palette_params": {
-                    "tempo": {
-                      "type": "Bilang"
-                    }
-                  }
-                },
-                "buzzer.playNotes": {
-                  "palette_params": {
-                    "tempo": {
-                      "type": "Bilang"
-                    }
-                  }
-                },
-                "buzzer.playSong": {
-                  "palette_params": {
-                    "tempo": {
-                      "type": "Bilang"
-                    }
-                  }
-                },
-                "toggleSwitch.isOpen": {
-                  "return_value": "Boolean"
-                }
-              }
-            }
-          }
-        },
-        "spritelab": {
-          "name": "Sprite Lab",
-          "categories": {
-            "sprites": {
+              },
               "name": "Mga Sprites"
             },
-            "world": {
-              "name": "Mundo"
-            },
-            "location": {
-              "name": "Lugar"
-            },
+            "variables": {
+              "expressions": {
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Ang string na hahanapin."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Ang string na hahanapin."
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "Ang haba ng string"
+                }
+              },
+              "name": "Mga variable"
+            }
+          },
+          "name": "Game Lab"
+        },
+        "javalab": {
+          "name": "Java Lab"
+        },
+        "spritelab": {
+          "categories": {
             "actions": {
               "name": "Mga aksyon"
-            },
-            "events": {
-              "name": "Mga event"
             },
             "behaviors": {
               "name": "Pag-uugali"
             },
-            "loops": {
-              "name": "Mga loop"
+            "comments": {
+              "name": "Komento"
             },
-            "variables": {
-              "name": "Mga variable"
-            },
-            "math": {
-              "name": "Math"
-            },
-            "logic": {
-              "name": "Lohika"
+            "events": {
+              "name": "Mga event"
             },
             "functions": {
               "name": "Mga function"
             },
+            "location": {
+              "name": "Lugar"
+            },
+            "logic": {
+              "name": "Lohika"
+            },
+            "loops": {
+              "name": "Mga loop"
+            },
+            "math": {
+              "name": "Math"
+            },
+            "sprites": {
+              "name": "Mga Sprites"
+            },
             "text": {
               "name": "Text"
             },
-            "comments": {
-              "name": "Komento"
+            "variables": {
+              "name": "Mga variable"
+            },
+            "world": {
+              "name": "Mundo"
             }
-          }
+          },
+          "name": "Sprite Lab"
         },
-        "javalab": {
-          "name": "Java Lab"
+        "weblab": {
+          "name": "Web Lab"
         }
       }
     }

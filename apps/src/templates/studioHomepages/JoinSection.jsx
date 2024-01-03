@@ -6,9 +6,10 @@ import i18n from '@cdo/locale';
 import styleConstants from '../../styleConstants';
 import Button from '@cdo/apps/templates/Button';
 import {connect} from 'react-redux';
+import fontConstants from '@cdo/apps/fontConstants';
 
 const INITIAL_STATE = {
-  sectionCode: ''
+  sectionCode: '',
 };
 
 class JoinSection extends React.Component {
@@ -19,7 +20,7 @@ class JoinSection extends React.Component {
     isTeacher: PropTypes.bool,
 
     // Provided by Redux
-    isRtl: PropTypes.bool
+    isRtl: PropTypes.bool,
   };
 
   state = {...INITIAL_STATE};
@@ -27,7 +28,7 @@ class JoinSection extends React.Component {
   fetchCaptchaInfo = () => {
     $.get({
       url: '/api/v1/sections/require_captcha',
-      dataType: 'json'
+      dataType: 'json',
     }).done(data => {
       const {key} = data;
       this.setState({key});
@@ -56,7 +57,7 @@ class JoinSection extends React.Component {
 
     $.post({
       url: `/api/v1/sections/${normalizedSectionCode}/join`,
-      dataType: 'json'
+      dataType: 'json',
     })
       .done(data => {
         const sectionName = data.sections.find(
@@ -99,7 +100,7 @@ class JoinSection extends React.Component {
       <div
         style={{
           ...styles.main,
-          ...(enrolledInASection ? styles.main : styles.mainDashed)
+          ...(enrolledInASection ? styles.main : styles.mainDashed),
         }}
       >
         <div style={wordBoxStyle}>
@@ -143,26 +144,25 @@ const styles = {
     borderStyle: 'solid',
     borderColor: color.neutral_dark20,
     width: styleConstants['content-width'],
-    backgroundColor: color.white
+    backgroundColor: color.white,
   },
   mainDashed: {
     borderWidth: 5,
     borderStyle: 'dashed',
     borderColor: color.border_gray,
-    boxSizing: 'border-box'
+    boxSizing: 'border-box',
   },
   heading: {
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     fontSize: 20,
-    fontWeight: 'bold',
     backgroundColor: color.white,
-    color: color.neutral_dark
+    color: color.neutral_dark,
   },
   details: {
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     fontSize: 14,
     marginTop: 5,
-    color: color.neutral_dark
+    color: color.neutral_dark,
   },
   wordBox: {
     width: styleConstants['content-width'] - 475,
@@ -172,15 +172,15 @@ const styles = {
     marginBottom: 25,
     float: 'left',
     borderWidth: 1,
-    borderColor: 'red'
+    borderColor: 'red',
   },
   wordBoxRTL: {
     marginLeft: 0,
-    marginRight: 25
+    marginRight: 25,
   },
   actionBox: {
     float: 'right',
-    display: 'flex'
+    display: 'flex',
   },
   inputBox: {
     float: 'left',
@@ -188,21 +188,21 @@ const styles = {
     borderRadius: 0,
     height: 26,
     paddingLeft: 25,
-    width: 200
+    width: 200,
   },
   button: {
     float: 'right',
     marginTop: 28,
     marginLeft: 20,
-    marginRight: 25
+    marginRight: 25,
   },
   clear: {
-    clear: 'both'
-  }
+    clear: 'both',
+  },
 };
 
 export const UnconnectedJoinSection = JoinSection;
 
 export default connect(state => ({
-  isRtl: state.isRtl
+  isRtl: state.isRtl,
 }))(JoinSection);

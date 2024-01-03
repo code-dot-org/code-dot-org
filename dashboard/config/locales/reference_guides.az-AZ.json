@@ -3,34 +3,80 @@
     "data": {
       "reference_guides": {
         "csd-2022/accelerometer-events": {
-          "display_name": "Akselerometr hadisələri"
+          "display_name": "Akselerometr hadisələri",
+          "content": "izləmək"
+        },
+        "csd-2022/accuracy-in-ai-lab": {
+          "content": "verilənlər, məlumat"
         },
         "csd-2022/ai-lab": {
           "display_name": "Suni İntellekt Labaratoriyası"
         },
         "csd-2022/analog-sensors": {
-          "display_name": "Analoq sensorlar"
+          "display_name": "dövrə",
+          "content": "tədbirlər"
         },
         "csd-2022/app-lab": {
-          "display_name": "Proqram Labı"
+          "display_name": "Proqram Labı",
+          "content": "Sənədlər"
         },
         "csd-2022/applab-overview": {
-          "display_name": "Yekun"
+          "display_name": "Yekun",
+          "content": "Sənədlər"
         },
         "csd-2022/arrays": {
-          "display_name": "Massivlər"
+          "display_name": "Massivlər",
+          "content": "massiv"
         },
         "csd-2022/board-events": {
-          "display_name": "İdarə Heyətinin Tədbirləri"
+          "display_name": "İdarə Heyətinin Tədbirləri",
+          "content": "oyun meydançası"
+        },
+        "csd-2022/body-styling": {
+          "content": "elementlər"
+        },
+        "csd-2022/booleans-and-comparison-operators": {
+          "content": "Riyaziyyat"
         },
         "csd-2022/changing-screens": {
-          "display_name": "Ekranların dəyişdirilməsi"
+          "display_name": "Ekranların dəyişdirilməsi/",
+          "content": "işləyici"
+        },
+        "csd-2022/changing-sensor-scale": {
+          "content": "mikro",
+          "display_name": "miqyas"
+        },
+        "csd-2022/checking-multiple-conditions-with-if-else-if": {
+          "display_name": "Hallar",
+          "content": "qırıq"
+        },
+        "csd-2022/circuit-playground": {
+          "display_name": "Oyun ərazisinə ümumi baxış",
+          "content": "bunlar"
+        },
+        "csd-2022/circuit-playground-parent": {
+          "content": "xüsusiyyət"
+        },
+        "csd-2022/circuits-and-buttons": {
+          "content": "sancaq"
+        },
+        "csd-2022/circuits-and-leds": {
+          "content": "positiv"
         },
         "csd-2022/classes": {
-          "display_name": "Dərslər"
+          "display_name": "Dərslər",
+          "content": "üslubu"
         },
         "csd-2022/collision-detection": {
-          "display_name": "Toqquşmanın Aşkarlanması"
+          "display_name": "Toqquşmanın Aşkarlanması",
+          "content": "toqquşdurucu"
+        },
+        "csd-2022/color-lights": {
+          "content": "lövhə"
+        },
+        "csd-2022/counter-patterns-with-event": {
+          "display_name": "hadisə",
+          "content": "düymə"
         },
         "csd-2022/creating-a-survey": {
           "display_name": "Sorğu yaratmaq"
@@ -45,7 +91,7 @@
           "display_name": "Dizayn Rejimi"
         },
         "csd-2022/design-mode-elements": {
-          "display_name": "Dizayn rejimi elementləri"
+          "display_name": "Dizayn rejimi elementləri,"
         },
         "csd-2022/designing-screens-with-code": {
           "display_name": "Kod ilə ekran dizaynı "
@@ -90,7 +136,7 @@
           "display_name": "HTML-dəki şəkillər"
         },
         "csd-2022/importing-screens": {
-          "display_name": "Ekranlar idxal olunur"
+          "display_name": "Ekranlar idxal olunur,"
         },
         "csd-2022/introduction-to-ai-lab": {
           "display_name": "Süni intellekt laboratoriyasına giriş"
@@ -103,6 +149,9 @@
         },
         "csd-2022/layout-properties": {
           "display_name": "Düzən Xüsusiyyətləri"
+        },
+        "csd-2022/list-scrolling-pattern": {
+          "display_name": "Siyahı"
         },
         "csd-2022/lists": {
           "display_name": "Siyahılar"
@@ -117,7 +166,7 @@
           "display_name": "AI Laboratoriyasında Model Kartlar"
         },
         "csd-2022/multi-screen-apps": {
-          "display_name": "Çox-ekranlı Tətbiqlər"
+          "display_name": "Çox-ekranlı Tətbiqlər,"
         },
         "csd-2022/naming-variables": {
           "display_name": "Dəyişənlərin adlanması"
@@ -134,11 +183,17 @@
         "csd-2022/playing-notes": {
           "display_name": "Notları Çalmaq"
         },
+        "csd-2022/problem-solving-process": {
+          "display_name": "Məsələnin həlli prosesi"
+        },
+        "csd-2022/problem-solving-process-general": {
+          "display_name": "Məsələnin həlli prosesi"
+        },
         "csd-2022/random-numbers": {
           "display_name": "Təsadufi rəqəmlər"
         },
         "csd-2022/responding-to-user-input": {
-          "display_name": "İstifadəçi input-una cavab"
+          "display_name": "İstifadəçi input-una cavab."
         },
         "csd-2022/shapes-and-parameters": {
           "display_name": "Forma və parametrlər"
@@ -155,6 +210,9 @@
         "csd-2022/the-draw-loop": {
           "display_name": "Bərabərlik Döngüsü"
         },
+        "csd-2022/timed-loop": {
+          "display_name": "Fasiləli dövr"
+        },
         "csd-2022/variables": {
           "display_name": "dəyişənlər"
         },
@@ -163,6 +221,18 @@
         },
         "csd-2022/web-lab": {
           "display_name": "Veb Laboratoriyası"
+        },
+        "csd-2022/which-type-of-chart": {
+          "display_name": "diaqram"
+        },
+        "csd-2022/debugging-with-watchers": {
+          "display_name": "İzləyicilərlə sazlama"
+        },
+        "csd-2022/modifying-arrays": {
+          "display_name": "Massivlərin dəyişdirilməsi"
+        },
+        "csd-2022/sprite-interactions": {
+          "display_name": "Sprayt qarşılıqlı təsirləri"
         }
       }
     }

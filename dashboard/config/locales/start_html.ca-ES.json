@@ -3,70 +3,303 @@
     "data": {
       "start_html": {
         "CSD U1 IO Pet Chooser 2_2021": {
+          "No": "No",
           "Yes": "Sí",
-          "No": "No"
+          "cute": "bonic"
         },
         "CSD U1 IO Pet Chooser 2_2022": {
+          "No": "No",
           "Yes": "Sí",
-          "No": "No"
+          "cute": "bonic"
+        },
+        "CSD U1 IO Pet Chooser 2_2023": {
+          "No": "No",
+          "Yes": "Sí",
+          "cute": "bonic"
         },
         "CSD U1 IO Pet Chooser_2021": {
+          "No": "No",
           "Yes": "Sí",
-          "No": "No"
+          "cute": "bonic"
         },
         "CSD U1 IO Pet Chooser_2022": {
+          "No": "No",
           "Yes": "Sí",
-          "No": "No"
+          "cute": "bonic"
+        },
+        "CSD U1 IO Pet Chooser_2023": {
+          "No": "No",
+          "Yes": "Sí",
+          "cute": "bonic"
         },
         "CSD U1 IO Story_2021": {
-          "Name": "Nom",
+          "City": "Ciutat",
           "Color": "Color",
           "Food": "Menjar",
-          "City": "Ciutat",
+          "Name": "Nom",
           "text": "text"
         },
         "CSD U1 IO Story_2022": {
-          "Name": "Nom",
+          "City": "Ciutat",
           "Color": "Color",
           "Food": "Menjar",
-          "City": "Ciutat",
+          "Name": "Nom",
           "text": "text"
         },
-        "CSD U1 processing guess_2021": {
-          "text": "text",
-          "?": "?",
+        "CSD U1 IO Story_2023": {
+          "City": "Ciutat",
+          "Color": "Color",
+          "Food": "Menjar",
+          "Name": "Nom",
+          "text": "text"
+        },
+        "CSD U1 processing bday_2021": {
           "1": "1",
-          "4": "4",
-          "8": "8",
           "10": "10",
+          "11": "11",
           "12": "12",
+          "13": "13",
+          "14": "14",
           "15": "15",
-          "20": "20"
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "CSD U1 processing bday_2022": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "CSD U1 processing bday_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "CSD U1 processing fastest_2021": {
+          "0": "0",
+          "k": "k",
+          "s": "s"
+        },
+        "CSD U1 processing fastest_2022": {
+          "0": "0",
+          "k": "k",
+          "s": "s"
+        },
+        "CSD U1 processing fastest_2023": {
+          "0": "0",
+          "k": "k",
+          "s": "s"
+        },
+        "CSD U1 processing guess_2021": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "?": "?",
+          "text": "text"
         },
         "CSD U1 processing guess_2022": {
-          "text": "text",
-          "?": "?",
           "1": "1",
-          "4": "4",
-          "8": "8",
           "10": "10",
+          "11": "11",
           "12": "12",
+          "13": "13",
+          "14": "14",
           "15": "15",
-          "20": "20"
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "?": "?",
+          "text": "text"
+        },
+        "CSD U1 processing guess_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "?": "?",
+          "text": "text"
         },
         "CSD U1 processing live_2021": {
-          "bear": "Ós"
+          "bear": "Ós",
+          "rat": "rata",
+          "walking": "caminar"
         },
         "CSD U1 processing live_2022": {
-          "bear": "Ós"
+          "bear": "Ós",
+          "rat": "rata",
+          "walking": "caminar"
+        },
+        "CSD U1 processing live_2023": {
+          "cat": "gat",
+          "chicken": "gallina",
+          "dog": "gos",
+          "horse": "cavall",
+          "walking": "caminar"
         },
         "CSD U1 processing npark_2021": {
-          "Sorry!": "Perdó!",
-          "Correct!": "Correcte!"
+          "Correct!": "Correcte!",
+          "Sorry!": "Perdó!"
         },
         "CSD U1 processing npark_2022": {
-          "Sorry!": "Perdó!",
-          "Correct!": "Correcte!"
+          "Correct!": "Correcte!",
+          "Sorry!": "Perdó!"
+        },
+        "CSD U1 processing npark_2023": {
+          "Correct!": "Correcte!",
+          "Sorry!": "Perdó!"
+        },
+        "CSD U1 processing writers_2021": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "CSD U1 processing writers_2022": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "CSD U1 processing writers_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 storage friends_2021": {
           "Back": "Tornar"
@@ -74,62 +307,427 @@
         "CSD U1 storage friends_2022": {
           "Back": "Tornar"
         },
+        "CSD U1 storage friends_2023": {
+          "Back": "Tornar"
+        },
         "CSD U1 storage movies_2021": {
+          "No": "No",
           "Star Wars": "Star Wars",
           "Yes": "Sí",
-          "No": "No",
           "text": "text"
         },
         "CSD U1 storage movies_2022": {
+          "No": "No",
           "Star Wars": "Star Wars",
           "Yes": "Sí",
+          "text": "text"
+        },
+        "CSD U1 storage movies_2023": {
           "No": "No",
+          "Star Wars": "Star Wars",
+          "Yes": "Sí",
           "text": "text"
         },
         "CSD U1 storage outfit_2021": {
+          "Clear": "Esborrar",
+          "black": "negre",
           "green": "verd",
-          "black": "negre"
+          "pink": "rosa",
+          "purple": "lila",
+          "white": "blanc"
         },
         "CSD U1 storage outfit_2022": {
+          "Clear": "Esborrar",
+          "black": "negre",
           "green": "verd",
-          "black": "negre"
+          "pink": "rosa",
+          "purple": "lila",
+          "white": "blanc"
+        },
+        "CSD U1 storage outfit_2023": {
+          "Clear": "Esborrar",
+          "black": "negre",
+          "green": "verd",
+          "pink": "rosa",
+          "purple": "lila",
+          "white": "blanc"
+        },
+        "CSD U2 RGB intro": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "CSD U2 RGB intro_2018": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "CSD U2 RGB intro_2019": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "CSD U2 RGB intro_2021": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "CSD U2 RGB intro_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "CSD U6 - Accelerometer - PB_2023": {
+          "0": "0"
+        },
+        "CSD U6 - Accelerometer - PB_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Accelerometer - PB_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Accelerometer - PD_2023": {
+          "You did it!": "Ho has aconseguit!"
+        },
+        "CSD U6 - Accelerometer - PD_2222": {
+          "You did it!": "Ho has aconseguit!"
+        },
+        "CSD U6 - Accelerometer - PF_2023": {
+          "0": "0"
+        },
+        "CSD U6 - Accelerometer - PF_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Accelerometer - PF_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Accelerometer - SB2_mb2022": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Board Inputs - P_2023": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Board Inputs - PracC_mb2022": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Board Inputs - SB1_2023": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Board Inputs - SB1_2222": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Board Inputs - SB1_mb2022": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Board Inputs - SB2_2023": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Board Inputs - SB2_2222": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Board Inputs - SB2_mb2022": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Board Inputs - SB3_2023": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Board Inputs - SB3_2222": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Board Outputs - A_2023": {
+          "Happy": "Alegre"
+        },
+        "CSD U6 - Board Outputs - A_2222": {
+          "Happy": "Alegre"
+        },
+        "CSD U6 - Board Outputs - A_mb2022": {
+          "Age": "Edat",
+          "Happy": "Alegre",
+          "Name": "Nom"
+        },
+        "CSD U6 - Board Outputs - ChalC_mb2022": {
+          "No": "No",
+          "Yes": "Sí"
+        },
+        "CSD U6 - Board Outputs - P_2023": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Board Outputs - P_2222": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Board Outputs - PracD_mb2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3"
+        },
+        "CSD U6 - Board Outputs - SB1_2023": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Board Outputs - SB1_2222": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Board Outputs - SB2_2023": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Board Outputs - SB2_2222": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Board Outputs - SB4_2023": {
+          "Fish": "Peix"
+        },
+        "CSD U6 - Board Outputs - SB4_2222": {
+          "Fish": "Peix"
+        },
+        "CSD U6 - Board Outputs - Setup_2023": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Board Outputs - Setup_2222": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Board Outputs - Setup_mb2022": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Color LEDs - ChalD_2023": {
+          "East": "est",
+          "North": "nord",
+          "South": "sud",
+          "West": "oest"
+        },
+        "CSD U6 - Color LEDs - ChalD_2222": {
+          "East": "est",
+          "North": "nord",
+          "South": "sud",
+          "West": "oest"
+        },
+        "CSD U6 - Color LEDs - PracA_2023": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Color LEDs - PracA_2222": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Color LEDs - SB2_2023": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Color LEDs - SB2_2222": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Color LEDs - SB3_2023": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Color LEDs - SB3_2222": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Color LEDs - SB4_2023": {
+          "Medium": "Mitjà"
         },
         "CSD U6 - Color LEDs - SB4_2222": {
           "Medium": "Mitjà"
         },
-        "CSD U6 - Combine Inputs - A_2222": {
+        "CSD U6 - Combine Inputs - A_2023": {
+          "green": "verd",
           "left": "esquerra",
-          "right": "dret",
+          "purple": "lila",
           "red": "vermell",
-          "green": "verd"
+          "right": "dret",
+          "yellow": "groc"
+        },
+        "CSD U6 - Combine Inputs - A_2222": {
+          "green": "verd",
+          "left": "esquerra",
+          "purple": "lila",
+          "red": "vermell",
+          "right": "dret",
+          "yellow": "groc"
+        },
+        "CSD U6 - Combine Inputs - A_mb2022": {
+          "left": "esquerra",
+          "right": "dret"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
           "fast": "ràpid",
+          "high": "alta",
+          "long": "llarg",
+          "low": "baixa",
+          "on": "encès",
+          "short": "curt",
           "slow": "lent"
         },
-        "CSD U6 - Combine Inputs - ChalG_2222": {
-          "Red": "Vermell",
+        "CSD U6 - Combine Inputs - CA_2023": {
+          "fast": "ràpid",
+          "high": "alta",
+          "long": "llarg",
+          "low": "baixa",
+          "on": "encès",
+          "short": "curt",
+          "slow": "lent"
+        },
+        "CSD U6 - Combine Inputs - ChalG_2023": {
+          "Blue": "Blau",
           "Green": "Verd",
-          "Blue": "Blau"
+          "Red": "Vermell"
+        },
+        "CSD U6 - Combine Inputs - ChalG_2222": {
+          "Blue": "Blau",
+          "Green": "Verd",
+          "Red": "Vermell"
+        },
+        "CSD U6 - Combine Inputs - PracA_2023": {
+          "left": "esquerra",
+          "right": "dret"
         },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": "esquerra",
           "right": "dret"
         },
-        "CSD U6 - Combine Inputs - PracC_2222": {
+        "CSD U6 - Combine Inputs - PracB_2023": {
+          "bright": "viu"
+        },
+        "CSD U6 - Combine Inputs - PracB_2222": {
+          "bright": "viu"
+        },
+        "CSD U6 - Combine Inputs - PracC_2023": {
+          "blue": "blau",
           "green": "verd",
-          "blue": "blau"
+          "orange": "taronja",
+          "yellow": "groc"
+        },
+        "CSD U6 - Combine Inputs - PracC_2222": {
+          "blue": "blau",
+          "green": "verd",
+          "orange": "taronja",
+          "yellow": "groc"
+        },
+        "CSD U6 - Combine Inputs - PracD_2023": {
+          "quiet": "silenci"
+        },
+        "CSD U6 - Combine Inputs - PracD_2222": {
+          "quiet": "silenci"
+        },
+        "CSD U6 - Combine Inputs - SB1_mb2022": {
+          "bottom row": "fila inferior",
+          "top row": "fila superior"
+        },
+        "CSD U6 - Combine Inputs - SB2_2023": {
+          "long": "llarg",
+          "short": "curt"
+        },
+        "CSD U6 - Combine Inputs - SB2_2222": {
+          "long": "llarg",
+          "short": "curt"
+        },
+        "CSD U6 - Combine Inputs - SB3_2023": {
+          "high": "alta",
+          "long": "llarg",
+          "low": "baixa",
+          "short": "curt"
+        },
+        "CSD U6 - Combine Inputs - SB3_2222": {
+          "high": "alta",
+          "long": "llarg",
+          "low": "baixa",
+          "short": "curt"
+        },
+        "CSD U6 - Combine Inputs - SB4_2023": {
+          "long": "llarg",
+          "short": "curt"
+        },
+        "CSD U6 - Combine Inputs - SB4_2222": {
+          "long": "llarg",
+          "short": "curt"
+        },
+        "CSD U6 - Combine Inputs - SB4v2_mb2022": {
+          "Row": "Fila"
+        },
+        "CSD U6 - Combine Inputs - SB5v2_mb2022": {
+          "Row": "Fila"
+        },
+        "CSD U6 - Functions - P2C_2023": {
+          "Blue": "Blau",
+          "Red": "Vermell"
         },
         "CSD U6 - Functions - P2C_2222": {
-          "Red": "Vermell",
-          "Blue": "Blau"
+          "Blue": "Blau",
+          "Red": "Vermell"
+        },
+        "CSD U6 - Functions - P2C_mb2022": {
+          "Blue": "Blau",
+          "Red": "Vermell"
+        },
+        "CSD U6 - Functions - P_2023": {
+          "0": "0"
+        },
+        "CSD U6 - Functions - P_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Functions - P_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Functions - SB7_2023": {
+          "0": "0"
+        },
+        "CSD U6 - Functions - SB7_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Functions - SB7_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - If Variables - ChalD_2023": {
+          "+": "+",
+          "-": "-",
+          "0": "0"
         },
         "CSD U6 - If Variables - ChalD_2222": {
           "+": "+",
-          "-": "-"
+          "-": "-",
+          "0": "0"
+        },
+        "CSD U6 - If Variables - ChalD_mb2022": {
+          "+": "+",
+          "-": "-",
+          "0": "0"
+        },
+        "CSD U6 - If Variables - SB3_2023": {
+          "Name": "Nom"
         },
         "CSD U6 - If Variables - SB3_2222": {
           "Name": "Nom"
+        },
+        "CSD U6 - If Variables - SB3_mb2022": {
+          "Name": "Nom"
+        },
+        "CSD U6 - If Variables - SB4_2023": {
+          "0": "0"
+        },
+        "CSD U6 - If Variables - SB4_2222": {
+          "0": "0"
+        },
+        "CSD U6 - If Variables - SB4_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Music - A_2023": {
+          "Happy": "Alegre"
+        },
+        "CSD U6 - Music - A_2222": {
+          "Happy": "Alegre"
+        },
+        "CSD U6 - Music - ChalD_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "E",
+          "F": "F",
+          "G": "G"
         },
         "CSD U6 - Music - ChalD_2222": {
           "A": "A",
@@ -140,129 +738,628 @@
           "F": "F",
           "G": "G"
         },
-        "CSD U6 - Music - Piano_2222": {
+        "CSD U6 - Music - Piano_2023": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
           "G": "G",
+          "Note:": "Important:"
+        },
+        "CSD U6 - Music - Piano_2222": {
           "A": "A",
-          "B": "B"
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "E",
+          "F": "F",
+          "G": "G",
+          "Note:": "Important:"
+        },
+        "CSD U6 - Music - SB1_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "E",
+          "F": "F",
+          "G": "G"
         },
         "CSD U6 - Music - SB1_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
+          "G": "G"
+        },
+        "CSD U6 - Music - SB2.5_2023": {
           "A": "A",
-          "B": "B"
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "E",
+          "F": "F",
+          "G": "G"
         },
         "CSD U6 - Music - SB2.5_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
+          "G": "G"
+        },
+        "CSD U6 - Music - SB3_2023": {
           "A": "A",
-          "B": "B"
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "E",
+          "F": "F",
+          "G": "G"
         },
         "CSD U6 - Music - SB3_2222": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
+        },
+        "CSD U6 - Music - SB4_2023": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Music - SB4_2222": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Physical Input - A_2023": {
+          "1": "1",
+          "2": "2"
+        },
+        "CSD U6 - Physical Input - A_2222": {
+          "1": "1",
+          "2": "2"
+        },
+        "CSD U6 - Physical Input - A_mb2022": {
+          "1": "1",
+          "2": "2"
+        },
+        "CSD U6 - Physical Input - ChalA_2023": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Physical Input - ChalA_2222": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Physical Input - ChalA_mb2022": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Physical Input - ChalB_2023": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Physical Input - ChalB_2222": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Physical Input - ChalB_mb2022": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Physical Input - ChalC_2023": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Physical Input - ChalC_2222": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Physical Input - ChalC_mb2022": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Physical Input - PA_2023": {
+          "0": "0",
+          "Score": "Puntuació"
+        },
+        "CSD U6 - Physical Input - PA_2222": {
+          "0": "0",
+          "Score": "Puntuació"
+        },
+        "CSD U6 - Physical Input - PA_mb2022": {
+          "0": "0",
+          "Score": "Puntuació"
+        },
+        "CSD U6 - Physical Input - PC_2023": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Physical Input - PC_2222": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Physical Input - PD_2023": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Physical Input - PD_2222": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Physical Input - PD_mb2022": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Physical Input - SB1_2023": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Physical Input - SB1_2222": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Physical Input - SB1_mb2022": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Physical Output - ChalA_2023": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Physical Output - ChalA_2222": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Physical Output - ChalA_mb2022": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Physical Output - ChalB_2023": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Physical Output - ChalB_2222": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Physical Output - ChalB_mb2022": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Physical Output - ChalC_2023": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Physical Output - ChalC_2222": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Physical Output - ChalC_mb2022": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Physical Output - PB_2023": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Physical Output - PB_2222": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Physical Output - PB_mb2022": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Physical Output - PC_2023": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Physical Output - PC_2222": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Physical Output - PC_mb2022": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Physical Output - P_2023": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Physical Output - P_2222": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Physical Output - P_mb2022": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Physical Output - SB1_2023": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Physical Output - SB1_2222": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Physical Output - SB1_mb2022": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Physical Output - SB2.2_2023": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Physical Output - SB2.2_2222": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Physical Output - SB2.2_mb2022": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Physical Output - SB2_2023": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Physical Output - SB2_2222": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Physical Output - SB2_mb2022": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 - Screen Inputs - A_2023": {
+          "Name:": "Nom:"
+        },
+        "CSD U6 - Screen Inputs - A_2222": {
+          "Name:": "Nom:"
+        },
+        "CSD U6 - Screen Inputs - A_mb2022": {
+          "Name:": "Nom:"
+        },
+        "CSD U6 - Screen Inputs - ChalB_2023": {
+          "Blue": "Blau",
+          "Green": "Verd",
+          "Red": "Vermell"
         },
         "CSD U6 - Screen Inputs - ChalB_2222": {
-          "Red": "Vermell",
-          "Green": "Verd",
-          "Blue": "Blau"
-        },
-        "CSD U6 - Screen Inputs - P_2222": {
-          "Red": "Vermell",
-          "Green": "Verd",
           "Blue": "Blau",
+          "Green": "Verd",
+          "Red": "Vermell"
+        },
+        "CSD U6 - Screen Inputs - ChalB_mb2022": {
+          "Blue": "Blau",
+          "Green": "Verd",
+          "Red": "Vermell"
+        },
+        "CSD U6 - Screen Inputs - P_2023": {
+          "Blue": "Blau",
+          "Green": "Verd",
+          "Name:": "Nom:",
+          "Red": "Vermell",
           "Save": "Desa"
         },
+        "CSD U6 - Screen Inputs - P_2222": {
+          "Blue": "Blau",
+          "Green": "Verd",
+          "Name:": "Nom:",
+          "Red": "Vermell",
+          "Save": "Desa"
+        },
+        "CSD U6 - Screen Inputs - P_mb2022": {
+          "Blue": "Blau",
+          "Green": "Verd",
+          "Name:": "Nom:",
+          "Red": "Vermell",
+          "Save": "Desa"
+        },
+        "CSD U6 - Screen Inputs - PracD_2023": {
+          "0": "0"
+        },
+        "CSD U6 - Screen Inputs - PracD_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Screen Inputs - PracD_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Screen Inputs - SB1_2023": {
+          "Welcome": "Benvingut"
+        },
+        "CSD U6 - Screen Inputs - SB1_2222": {
+          "Welcome": "Benvingut"
+        },
+        "CSD U6 - Screen Inputs - SB1_mb2022": {
+          "Welcome": "Benvingut"
+        },
         "CSD U6 - Screen Inputs - SB2.1_2022": {
-          "black": "negre"
+          "black": "negre",
+          "white": "blanc"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_2023": {
+          "black": "negre",
+          "white": "blanc"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_mb2022": {
+          "black": "negre",
+          "white": "blanc"
         },
         "CSD U6 - Screen Inputs - SB2.2_2022": {
-          "black": "negre"
+          "black": "negre",
+          "white": "blanc"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_2023": {
+          "black": "negre",
+          "white": "blanc"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_mb2022": {
+          "black": "negre",
+          "white": "blanc"
+        },
+        "CSD U6 - Screen Outputs - ChalB_2023": {
+          "?": "?",
+          "Happy": "Alegre"
+        },
+        "CSD U6 - Screen Outputs - ChalB_2222": {
+          "?": "?",
+          "Happy": "Alegre"
+        },
+        "CSD U6 - Screen Outputs - ChalB_mb2022": {
+          "?": "?",
+          "Happy": "Alegre"
+        },
+        "CSD U6 - Screen Outputs - P_2023": {
+          "title": "Títol"
         },
         "CSD U6 - Screen Outputs - P_2222": {
           "title": "Títol"
         },
-        "CSD U6 - Screen Outputs - PracA_2222": {
-          "Red": "Vermell",
-          "Green": "Verd",
-          "Blue": "Blau"
+        "CSD U6 - Screen Outputs - P_mb2022": {
+          "title": "Títol"
         },
-        "CSD U6 - Screen Outputs - PracB_2222": {
-          "up": "cap amunt",
+        "CSD U6 - Screen Outputs - PracA_2023": {
+          "Blue": "Blau",
+          "Green": "Verd",
+          "Red": "Vermell",
+          "White": "Blanc"
+        },
+        "CSD U6 - Screen Outputs - PracA_2222": {
+          "Blue": "Blau",
+          "Green": "Verd",
+          "Red": "Vermell",
+          "White": "Blanc"
+        },
+        "CSD U6 - Screen Outputs - PracA_mb2022": {
+          "Blue": "Blau",
+          "Green": "Verd",
+          "Red": "Vermell",
+          "White": "Blanc"
+        },
+        "CSD U6 - Screen Outputs - PracB_2023": {
           "down": "avall",
           "left": "esquerra",
-          "right": "dret"
+          "right": "dret",
+          "up": "cap amunt"
+        },
+        "CSD U6 - Screen Outputs - PracB_2222": {
+          "down": "avall",
+          "left": "esquerra",
+          "right": "dret",
+          "up": "cap amunt"
+        },
+        "CSD U6 - Screen Outputs - PracB_mb2022": {
+          "down": "avall",
+          "left": "esquerra",
+          "right": "dret",
+          "up": "cap amunt"
+        },
+        "CSD U6 - Screen Outputs - SB1.1_2023": {
+          "name": "nom"
         },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
           "name": "nom"
         },
-        "CSD U6 - Sensors - P_2222": {
+        "CSD U6 - Screen Outputs - SB1.1_mb2022": {
+          "name": "nom"
+        },
+        "CSD U6 - Sensors - A_2023": {
+          "0": "0"
+        },
+        "CSD U6 - Sensors - A_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Sensors - A_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Sensors - PC_2023": {
+          "off": "apagat",
+          "on": "encès"
+        },
+        "CSD U6 - Sensors - PC_2222": {
+          "off": "apagat",
+          "on": "encès"
+        },
+        "CSD U6 - Sensors - P_2023": {
+          "high": "alta",
+          "low": "baixa",
           "text": "text"
         },
+        "CSD U6 - Sensors - P_2222": {
+          "high": "alta",
+          "low": "baixa",
+          "text": "text"
+        },
+        "CSD U6 - Sensors - P_mb2022": {
+          "high": "alta",
+          "low": "baixa",
+          "text": "text"
+        },
+        "CSD U6 - Sensors - SB1_2023": {
+          "value": "valor"
+        },
+        "CSD U6 - Sensors - SB1_2222": {
+          "value": "valor"
+        },
+        "CSD U6 - Sensors - SB2_2023": {
+          "Update": "Actualitza",
+          "value": "valor"
+        },
         "CSD U6 - Sensors - SB2_2222": {
-          "Update": "Actualitza"
+          "Update": "Actualitza",
+          "value": "valor"
+        },
+        "CSD U6 - Sensors - SB2_mb2022": {
+          "Update": "Actualitza",
+          "value": "valor"
+        },
+        "CSD U6 - Sensors - SB3_2023": {
+          "value": "valor"
+        },
+        "CSD U6 - Sensors - SB3_2222": {
+          "value": "valor"
+        },
+        "CSD U6 - Sensors - SB3_mb2022": {
+          "value": "valor"
+        },
+        "CSD U6 - Sensors - SB4.1_2023": {
+          "value": "valor"
+        },
+        "CSD U6 - Sensors - SB4.1_2222": {
+          "value": "valor"
+        },
+        "CSD U6 - Sensors - SB4_2023": {
+          "value": "valor"
+        },
+        "CSD U6 - Sensors - SB4_2222": {
+          "value": "valor"
+        },
+        "CSD U6 - Sensors - SB4_mb2022": {
+          "value": "valor"
+        },
+        "CSD U6 Driver pt 2": {
+          "You did it!": "Ho has aconseguit!"
+        },
+        "CSD U6 Driver pt 2_2018": {
+          "You did it!": "Ho has aconseguit!"
+        },
+        "CSD U6 Driver pt 2_2019": {
+          "You did it!": "Ho has aconseguit!"
+        },
+        "CSD U6 Driver pt 2_2021": {
+          "You did it!": "Ho has aconseguit!"
+        },
+        "CSD U6 Driver pt1": {
+          "You did it!": "Ho has aconseguit!"
+        },
+        "CSD U6 Driver pt1_2018": {
+          "You did it!": "Ho has aconseguit!"
+        },
+        "CSD U6 Driver pt1_2019": {
+          "You did it!": "Ho has aconseguit!"
+        },
+        "CSD U6 Driver pt1_2021": {
+          "You did it!": "Ho has aconseguit!"
+        },
+        "CSD U6 LED all": {
+          "on": "encès"
+        },
+        "CSD U6 LED all_2018": {
+          "on": "encès"
+        },
+        "CSD U6 LED all_2019": {
+          "on": "encès"
+        },
+        "CSD U6 LED all_2021": {
+          "on": "encès"
+        },
+        "CSD U6 LED toggle": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 LED toggle_2018": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 LED toggle_2019": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 LED toggle_2021": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 Pedometer": {
+          "0": "0"
+        },
+        "CSD U6 Pedometer_2018": {
+          "0": "0"
+        },
+        "CSD U6 Pedometer_2019": {
+          "0": "0"
+        },
+        "CSD U6 Pedometer_2021": {
+          "0": "0"
+        },
+        "CSD U6 add LED button": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 add LED button_2018": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 add LED button_2019": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 add LED button_2021": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 analog change": {
+          "value": "valor"
+        },
+        "CSD U6 analog change_2018": {
+          "value": "valor"
+        },
+        "CSD U6 analog change_2019": {
+          "value": "valor"
+        },
+        "CSD U6 analog change_2021": {
+          "value": "valor"
+        },
+        "CSD U6 analog data": {
+          "value": "valor"
+        },
+        "CSD U6 analog data_2018": {
+          "value": "valor"
+        },
+        "CSD U6 analog data_2019": {
+          "value": "valor"
+        },
+        "CSD U6 analog data_2021": {
+          "value": "valor"
         },
         "CSD U6 analog light": {
-          "Update": "Actualitza"
+          "Update": "Actualitza",
+          "value": "valor"
         },
         "CSD U6 analog light_2018": {
-          "Update": "Actualitza"
+          "Update": "Actualitza",
+          "value": "valor"
         },
         "CSD U6 analog light_2019": {
-          "Update": "Actualitza"
+          "Update": "Actualitza",
+          "value": "valor"
         },
         "CSD U6 analog light_2021": {
-          "Update": "Actualitza"
+          "Update": "Actualitza",
+          "value": "valor"
+        },
+        "CSD U6 analog sound": {
+          "value": "valor"
+        },
+        "CSD U6 analog sound_2018": {
+          "value": "valor"
+        },
+        "CSD U6 analog sound_2019": {
+          "value": "valor"
+        },
+        "CSD U6 analog sound_2021": {
+          "value": "valor"
         },
         "CSD U6 array piano": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 arrays select predict": {
           "first": "primer"
@@ -276,6 +1373,22 @@
         "CSD U6 arrays select predict_2021": {
           "first": "primer"
         },
+        "CSD U6 change": {
+          "long": "llarg",
+          "short": "curt"
+        },
+        "CSD U6 change_2018": {
+          "long": "llarg",
+          "short": "curt"
+        },
+        "CSD U6 change_2019": {
+          "long": "llarg",
+          "short": "curt"
+        },
+        "CSD U6 change_2021": {
+          "long": "llarg",
+          "short": "curt"
+        },
         "CSD U6 colorLeds intensity": {
           "Medium": "Mitjà"
         },
@@ -288,28 +1401,96 @@
         "CSD U6 colorLeds intensity_2021": {
           "Medium": "Mitjà"
         },
+        "CSD U6 emotion machine example": {
+          "?": "?",
+          "Happy": "Alegre"
+        },
+        "CSD U6 emotion machine example_2018": {
+          "?": "?",
+          "Happy": "Alegre"
+        },
+        "CSD U6 emotion machine example_2019": {
+          "?": "?",
+          "Happy": "Alegre"
+        },
+        "CSD U6 emotion machine example_2021": {
+          "?": "?",
+          "Happy": "Alegre"
+        },
+        "CSD U6 frequency": {
+          "high": "alta",
+          "long": "llarg",
+          "low": "baixa",
+          "short": "curt"
+        },
+        "CSD U6 frequency_2018": {
+          "high": "alta",
+          "long": "llarg",
+          "low": "baixa",
+          "short": "curt"
+        },
+        "CSD U6 frequency_2019": {
+          "high": "alta",
+          "long": "llarg",
+          "low": "baixa",
+          "short": "curt"
+        },
+        "CSD U6 frequency_2021": {
+          "high": "alta",
+          "long": "llarg",
+          "low": "baixa",
+          "short": "curt"
+        },
+        "CSD U6 get toggle": {
+          "high": "alta",
+          "long": "llarg",
+          "low": "baixa",
+          "short": "curt"
+        },
+        "CSD U6 get toggle_2018": {
+          "high": "alta",
+          "long": "llarg",
+          "low": "baixa",
+          "short": "curt"
+        },
+        "CSD U6 get toggle_2019": {
+          "high": "alta",
+          "long": "llarg",
+          "low": "baixa",
+          "short": "curt"
+        },
+        "CSD U6 get toggle_2021": {
+          "high": "alta",
+          "long": "llarg",
+          "low": "baixa",
+          "short": "curt"
+        },
         "CSD U6 getProperty Demo": {
-          "Red": "Vermell",
-          "Green": "Verd",
           "Blue": "Blau",
+          "Green": "Verd",
+          "Name:": "Nom:",
+          "Red": "Vermell",
           "Save": "Desa"
         },
         "CSD U6 getProperty Demo_2018": {
-          "Red": "Vermell",
-          "Green": "Verd",
           "Blue": "Blau",
+          "Green": "Verd",
+          "Name:": "Nom:",
+          "Red": "Vermell",
           "Save": "Desa"
         },
         "CSD U6 getProperty Demo_2019": {
-          "Red": "Vermell",
-          "Green": "Verd",
           "Blue": "Blau",
+          "Green": "Verd",
+          "Name:": "Nom:",
+          "Red": "Vermell",
           "Save": "Desa"
         },
         "CSD U6 getProperty Demo_2021": {
-          "Red": "Vermell",
-          "Green": "Verd",
           "Blue": "Blau",
+          "Green": "Verd",
+          "Name:": "Nom:",
+          "Red": "Vermell",
           "Save": "Desa"
         },
         "CSD U6 getProperty input": {
@@ -325,47 +1506,127 @@
           "Submit": "Envia"
         },
         "CSD U6 getters debug": {
-          "slow": "lent",
-          "fast": "ràpid"
+          "fast": "ràpid",
+          "high": "alta",
+          "long": "llarg",
+          "low": "baixa",
+          "short": "curt",
+          "slow": "lent"
         },
         "CSD U6 getters debug_2018": {
           "fast": "ràpid",
+          "high": "alta",
+          "long": "llarg",
+          "low": "baixa",
+          "short": "curt",
           "slow": "lent"
         },
         "CSD U6 getters debug_2019": {
           "fast": "ràpid",
+          "high": "alta",
+          "long": "llarg",
+          "low": "baixa",
+          "short": "curt",
           "slow": "lent"
         },
         "CSD U6 getters debug_2021": {
           "fast": "ràpid",
+          "high": "alta",
+          "long": "llarg",
+          "low": "baixa",
+          "short": "curt",
           "slow": "lent"
         },
+        "CSD U6 interval": {
+          "long": "llarg",
+          "short": "curt"
+        },
+        "CSD U6 interval_2018": {
+          "long": "llarg",
+          "short": "curt"
+        },
+        "CSD U6 interval_2019": {
+          "long": "llarg",
+          "short": "curt"
+        },
+        "CSD U6 interval_2021": {
+          "long": "llarg",
+          "short": "curt"
+        },
+        "CSD U6 light show": {
+          "off": "apagat",
+          "on": "encès"
+        },
+        "CSD U6 light show_2018": {
+          "off": "apagat",
+          "on": "encès"
+        },
+        "CSD U6 light show_2019": {
+          "off": "apagat",
+          "on": "encès"
+        },
+        "CSD U6 light show_2021": {
+          "off": "apagat",
+          "on": "encès"
+        },
         "CSD U6 params create colors": {
-          "Red": "Vermell",
-          "Blue": "Blau"
+          "Blue": "Blau",
+          "Red": "Vermell"
         },
         "CSD U6 params create colors_2018": {
-          "Red": "Vermell",
-          "Blue": "Blau"
+          "Blue": "Blau",
+          "Red": "Vermell"
         },
         "CSD U6 params create colors_2019": {
-          "Red": "Vermell",
-          "Blue": "Blau"
+          "Blue": "Blau",
+          "Red": "Vermell"
         },
         "CSD U6 params create colors_2021": {
-          "Red": "Vermell",
-          "Blue": "Blau"
+          "Blue": "Blau",
+          "Red": "Vermell"
+        },
+        "CSD U6 params starchaser intro": {
+          "0": "0"
+        },
+        "CSD U6 params starchaser intro_2018": {
+          "0": "0"
+        },
+        "CSD U6 params starchaser intro_2019": {
+          "0": "0"
+        },
+        "CSD U6 params starchaser intro_2021": {
+          "0": "0"
+        },
+        "CSD U6 predict LED button": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 predict LED button_2018": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 predict LED button_2019": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 predict LED button_2021": {
+          "Success!": "Fet!"
         },
         "CSD U6 sensor experiment embedded": {
+          "high": "alta",
+          "low": "baixa",
           "text": "text"
         },
         "CSD U6 sensor experiment embedded_2018": {
+          "high": "alta",
+          "low": "baixa",
           "text": "text"
         },
         "CSD U6 sensor experiment embedded_2019": {
+          "high": "alta",
+          "low": "baixa",
           "text": "text"
         },
         "CSD U6 sensor experiment embedded_2021": {
+          "high": "alta",
+          "low": "baixa",
           "text": "text"
         },
         "CSD U6 setProperty predict app": {
@@ -380,190 +1641,344 @@
         "CSD U6 setProperty predict app_2021": {
           "title": "Títol"
         },
+        "CSD U6 slider intro": {
+          "long": "llarg",
+          "short": "curt"
+        },
+        "CSD U6 slider intro_2018": {
+          "long": "llarg",
+          "short": "curt"
+        },
+        "CSD U6 slider intro_2019": {
+          "long": "llarg",
+          "short": "curt"
+        },
+        "CSD U6 slider intro_2021": {
+          "long": "llarg",
+          "short": "curt"
+        },
+        "CSD U6 test LED": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 test LED_2018": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 test LED_2019": {
+          "Success!": "Fet!"
+        },
+        "CSD U6 test LED_2021": {
+          "Success!": "Fet!"
+        },
         "CSDU4 Connecting Screens": {
-          "Red": "Vermell",
+          "Blue": "Blau",
           "Green": "Verd",
-          "Blue": "Blau"
+          "Red": "Vermell"
         },
         "CSDU4 Connecting Screens Getting Back": {
-          "Red": "Vermell",
+          "Blue": "Blau",
           "Green": "Verd",
-          "Blue": "Blau"
+          "Red": "Vermell"
         },
         "CSDU4 Crowdsource App Demo": {
           "About": "Qui som",
           "About Us": "Sobre nosaltres",
-          "Cancel": "Cancel·lar",
-          "Red": "Vermell",
-          "Green": "Verd",
           "Blue": "Blau",
-          "Yes": "Sí",
+          "Cancel": "Cancel·lar",
+          "Green": "Verd",
+          "Name:": "Nom:",
           "No": "No",
+          "Red": "Vermell",
           "Save": "Desa",
-          "User": "Usuari"
+          "User": "Usuari",
+          "Yes": "Sí"
         },
         "CSDU4 Crowdsource App Demo_2018": {
           "About": "Qui som",
           "About Us": "Sobre nosaltres",
-          "Cancel": "Cancel·lar",
-          "Red": "Vermell",
-          "Green": "Verd",
           "Blue": "Blau",
-          "Yes": "Sí",
+          "Cancel": "Cancel·lar",
+          "Green": "Verd",
+          "Name:": "Nom:",
           "No": "No",
+          "Red": "Vermell",
           "Save": "Desa",
-          "User": "Usuari"
+          "User": "Usuari",
+          "Yes": "Sí"
         },
         "CSDU4 Crowdsource App Demo_2019": {
           "About": "Qui som",
           "About Us": "Sobre nosaltres",
-          "Cancel": "Cancel·lar",
-          "Red": "Vermell",
-          "Green": "Verd",
           "Blue": "Blau",
-          "Yes": "Sí",
+          "Cancel": "Cancel·lar",
+          "Green": "Verd",
+          "Name:": "Nom:",
           "No": "No",
+          "Red": "Vermell",
           "Save": "Desa",
-          "User": "Usuari"
+          "User": "Usuari",
+          "Yes": "Sí"
         },
         "CSDU4 Decision App Demo": {
           "About": "Qui som",
+          "About Us": "Sobre nosaltres",
+          "I don't know": "No ho sé",
           "When?": "Quan?",
-          "About Us": "Sobre nosaltres"
+          "Why?": "Per què?"
         },
         "CSDU4 Decision App Demo_2018": {
           "About": "Qui som",
+          "About Us": "Sobre nosaltres",
+          "I don't know": "No ho sé",
           "When?": "Quan?",
-          "About Us": "Sobre nosaltres"
+          "Why?": "Per què?"
         },
         "CSDU4 Decision App Demo_2019": {
           "About": "Qui som",
+          "About Us": "Sobre nosaltres",
+          "I don't know": "No ho sé",
           "When?": "Quan?",
-          "About Us": "Sobre nosaltres"
+          "Why?": "Per què?"
         },
         "CSDU4 Functionality visible": {
+          "Hide": "Ocultar",
           "Show": "Mostra"
         },
         "CSDU4 List App Demo": {
           "About": "Qui som",
           "About Us": "Sobre nosaltres",
-          "Done": "Fet",
-          "Cancel": "Cancel·lar"
+          "Cancel": "Cancel·lar",
+          "Done": "Fet"
         },
         "CSDU4 List App Demo_2018": {
           "About": "Qui som",
           "About Us": "Sobre nosaltres",
-          "Done": "Fet",
-          "Cancel": "Cancel·lar"
+          "Cancel": "Cancel·lar",
+          "Done": "Fet"
         },
         "CSDU4 List App Demo_2019": {
           "About": "Qui som",
           "About Us": "Sobre nosaltres",
-          "Done": "Fet",
-          "Cancel": "Cancel·lar"
+          "Cancel": "Cancel·lar",
+          "Done": "Fet"
         },
         "CSDU4 Quiz App Demo": {
           "About": "Qui som",
+          "About Us": "Sobre nosaltres",
+          "Correct!": "Correcte!",
           "Submit": "Envia",
           "When?": "Quan?",
-          "About Us": "Sobre nosaltres",
-          "Correct!": "Correcte!"
+          "Why?": "Per què?"
         },
         "CSDU4 Quiz App Demo_2018": {
           "About": "Qui som",
+          "About Us": "Sobre nosaltres",
+          "Correct!": "Correcte!",
           "Submit": "Envia",
           "When?": "Quan?",
-          "About Us": "Sobre nosaltres",
-          "Correct!": "Correcte!"
+          "Why?": "Per què?"
         },
         "CSDU4 Quiz App Demo_2019": {
           "About": "Qui som",
+          "About Us": "Sobre nosaltres",
+          "Correct!": "Correcte!",
           "Submit": "Envia",
           "When?": "Quan?",
-          "About Us": "Sobre nosaltres",
-          "Correct!": "Correcte!"
+          "Why?": "Per què?"
         },
         "CSDU6 - UI and Inputs - getNumber": {
           "+": "+",
+          "=": "=",
           "???": "???"
         },
         "CSDU6 - UI and Inputs - setScreen": {
           "Back": "Tornar"
         },
+        "CSDU6 Circuit Playground Test": {
+          "Success!": "Fet!"
+        },
+        "CSDU6 Circuit Playground Test_2018": {
+          "Success!": "Fet!"
+        },
+        "CSDU6 Circuit Playground Test_2019": {
+          "Success!": "Fet!"
+        },
+        "CSDU6 Circuit Playground Test_2021": {
+          "Success!": "Fet!"
+        },
+        "CSDU6 Circuit Playground Test_2023": {
+          "Success!": "Fet!"
+        },
+        "CSDU6 Circuit Playground Test_2222": {
+          "Success!": "Fet!"
+        },
+        "CSDU6 Circuit Playground Test_mb2022": {
+          "Success!": "Fet!"
+        },
         "CSDU6 circuit playground piano": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2018": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2019": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2021": {
+          "A": "A",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "E",
           "F": "F",
-          "G": "G",
-          "A": "A",
-          "B": "B"
+          "G": "G"
+        },
+        "GAN Guess Widget_ai23": {
+          "Click on the buttons below to build a guess for what follows the rule": "Feu clic als botons de sota per crear una conjectura per al que segueix la regla",
+          "Computer's Guess FOLLOWS Rule": "Suposo de l'ordinador segueix la regla",
+          "Computer's Guess does NOT follow the Rule": "Endevina de l'ordinador NO segueix la regla",
+          "Computer's Guess:": "Endevina de l'ordinador:",
+          "Current Guess": "Suposo actual",
+          "Previous Guesses": "Anterior conjectures",
+          "Submit Guess": "Enviar Guess"
+        },
+        "LLM - Eliza_ai23": {
+          "Talk to Eliza by entering text in the prompt box. When you are finished, type quit in the prompt.": "Parleu amb Eliza introduint text al quadre d'indicadors. Quan hàgiu acabat, escriviu deixar de fumar a l'indicador."
+        },
+        "LLM - Written Voice Simulator_ai23": {
+          "BTS: \"Dynamite\"": "BTS: “Dinamita”",
+          "Back": "Tornar",
+          "Change Voice": "Canviar la veu",
+          "Choose a voice to model": "Trieu una veu per modelar",
+          "Choose the Save file you want to load from the dropdown below": "Trieu el fitxer Desa el fitxer que voleu carregar al desplegable següent",
+          "Copy / Paste or type the words you want to create a model based on below": "Copiar/ Enganxa o escriu les paraules que vols crear un model basat en sota",
+          "Create my own!": "Crear el meu propi!",
+          "Delete Text": "Suprimeix text",
+          "Dr Seuss: Green Eggs and Ham": "Dr Seuss: Ous verds i pernil",
+          "Generate!": "Generar!",
+          "Give the voice a name": "Dóna-li un nom a la veu",
+          "Give your save file a name": "Dóna un nom al teu arxiu de desa",
+          "Load Save": "Càrrega Desa",
+          "Load this story": "Carregueu aquesta història",
+          "Maya Angelou: \"Caged Bird\"": "Maya Angelou: “Ocell engabiat”",
+          "Model This Voice!": "Modelar aquesta veu!",
+          "Modeling Voice": "Modelatge de veu",
+          "Pharell: \"Happy\"": "Pharell: “Feliç”",
+          "Sandra Cisneros: \"Abuelito Who\"": "Sandra Cisneros: “Abuelito Qui”",
+          "Save Text": "Desa el text",
+          "Save!": "Estalviar!"
+        },
+        "Neural Networks - Perceptron - Beta_ai23": {
+          "Choose one of the content creators below to generate recommendations for you. Clicking their name will show more information about them.Once you've selected someone, click the \"Show Recommendations\" button to see what your video feed!See Recommendations! ➡️Your RecommendationsThese are the videos you've been recommended based on who you selected in the last screen.Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain categories.Example!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Person": "Trieu un dels creadors de contingut a continuació per generar recomanacions per a vosaltres. En fer clic al seu nom es mostrarà més informació sobre ells.Un cop hàgiu seleccionat algú, feu clic al botó “Mostra recomanacions” per veure el que el vostre feed de vídeo! Veure Recomanacions! ➡️ Les vostres recomanacionsAquests són els vídeos que heu recomanat en funció de qui heu seleccionat a l'última screen.Only 3 vídeos es mostren alhora - utilitzeu els botons de desplaçament per veure'n més. Utilitzeu els botons de l'esquerra per filtrar per certes categories.Exemple! Exemple! Exemple! ⬆️ Desplaceu-vos cap amunt ⬆️⬇️ Desplaceu-vos cap avall ⬇️⬅️ Seleccioneu una persona nova",
+          "Example!": "Exemple!",
+          "Let's Get Started! ➡️": "Anem a començar! ➡️",
+          "Once you've selected someone, click the \"Show Recommendations\" button to see what your video feed!": "Un cop hàgiu seleccionat algú, feu clic al botó “Mostra recomanacions” per veure el que el vostre feed de vídeo!",
+          "Only 3 videos are shown at a time - use the Scroll buttons to see more. ": "Només es mostren 3 vídeos alhora: utilitzeu els botons de desplaçament per veure'n més. ",
+          "See Recommendations! ➡️": "Veure Recomanacions! ➡️",
+          "Select at least one person to use for recommendations to continue!": "Seleccioneu almenys una persona a utilitzar per a recomanacions per continuar!",
+          "Simply pick which content creators you want to follow and then see your video recommendations!": "Simplement escolliu quins creadors de contingut voleu seguir i, a continuació, vegeu les vostres recomanacions de vídeo.",
+          "These are the videos you've been recommended based on who you selected in the last screen.Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain categories.Example!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Person": "Aquests són els vídeos que us han recomanat en funció de qui heu seleccionat a l'última pantalla.Només es mostren 3 vídeos alhora: utilitzeu els botons de desplaçament per veure'n més. Utilitzeu els botons de l'esquerra per filtrar per certes categories.Exemple! Exemple! Exemple! ⬆️ Desplaceu-vos cap amunt ⬆️⬇️ Desplaceu-vos cap avall ⬇️⬅️ Seleccioneu una persona nova",
+          "Use the buttons on the left to filter by certain categories.": "Utilitzeu els botons de l'esquerra per filtrar per determinades categories.",
+          "We've gathered all your favorite personalities to make videos that match your interests AND to help curate your video feed.": "Hem reunit totes les vostres personalitats preferides per fer vídeos que coincideixin amb els vostres interessos I per ajudar-vos a curar el vostre feed de vídeo.",
+          "WeTube is a new media website for all your favorite content creators. We've gathered all your favorite personalities to make videos that match your interests AND to help curate your video feed.Simply pick which content creators you want to follow and then see your video recommendations!Let's Get Started! ➡️Select at least one person to use for recommendations to continue!Choose one of the content creators below to generate recommendations for you. Clicking their name will show more information about them.Once you've selected someone, click the \"Show Recommendations\" button to see what your video feed!See Recommendations! ➡️Your RecommendationsThese are the videos you've been recommended based on who you selected in the last screen.Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain categories.Example!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Person": "WeUbe és un nou lloc web de mitjans de comunicació per a tots els vostres creadors de contingut preferits. Hem reunit totes les vostres personalitats preferides per fer vídeos que coincideixin amb els vostres interessos I per ajudar a curar la vostra alimentació de vídeo. Simplement escolliu quins creadors de contingut voleu seguir i, a continuació, vegeu les vostres recomanacions de vídeo. Anem a començar! ➡️ Seleccioneu almenys una persona a utilitzar per a recomanacions per continuar! Trieu un dels creadors de contingut a continuació per generar recomanacions per a vosaltres. En fer clic al seu nom es mostrarà més informació sobre ells.Un cop hàgiu seleccionat algú, feu clic al botó “Mostra recomanacions” per veure el que el vostre feed de vídeo! Veure Recomanacions! ➡️ Les vostres recomanacionsAquests són els vídeos que heu recomanat en funció de qui heu seleccionat a l'última screen.Only 3 vídeos es mostren alhora - utilitzeu els botons de desplaçament per veure'n més. Utilitzeu els botons de l'esquerra per filtrar per certes categories.Exemple! Exemple! Exemple! ⬆️ Desplaceu-vos cap amunt ⬆️⬇️ Desplaceu-vos cap avall ⬇️⬅️ Seleccioneu una persona nova",
+          "Your Recommendations": "Les vostres recomanacions",
+          "⬅️ Select New Person": "⬅️ Seleccioneu una persona nova",
+          "⬆️ Scroll Up ⬆️": "⬆️ Desplaceu-vos cap amunt ⬆️",
+          "⬇️ Scroll Down ⬇️": "⬇️ Desplaceu-vos cap avall ⬇️"
+        },
+        "Neural Networks - Perceptron - Full_ai23": {
+          "0 means their opinion isn't included in your recommendations at all": "0 vol dir que la seva opinió no està inclosa en les vostres recomanacions en absolut",
+          "10 means they have a huge influence on the recommendations you receive": "10 significa que tenen una gran influència en les recomanacions que rebeu",
+          "Choose one of the content creators below, then use the slider to adjust how much you want them to influence your recommendations!0 means their opinion isn't included in your recommendations at all10 means they have a huge influence on the recommendations you receivefeatureLabelSee Recommendations! ➡️featureValueYour RecommendationsThese are the videos you've been recommended based on how you adjusted the weights on the last screen. Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain videosExample!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Weights": "Trieu un dels creadors de contingut a continuació i, a continuació, utilitzeu el control lliscant per ajustar quant voleu que influeixin en les vostres recomanacions! 0 vol dir que la seva opinió no està inclosa en les vostres recomanacions en tot10 vol dir que tenen una gran influència en les recomanacions que rebeu FeatureFeatureLabelSee Recomanacions! ➡️ FeatureValueYour recomendationsThese són els vídeos que has estat recomanat en funció de com has ajustat els pesos a l'última pantalla. Només es mostren 3 vídeos alhora: utilitzeu els botons de desplaçament per veure'n més. Utilitzeu els botons de l'esquerra per filtrar per certs vídeosExample! Exemple! Exemple! ⬆️ Desplaceu-vos cap amunt ⬆️⬇️ Desplaceu-vos cap avall ⬇️⬅️ Seleccioneu nous pesos",
+          "Example!": "Exemple!",
+          "Let's Get Started! ➡️": "Anem a començar! ➡️",
+          "Only 3 videos are shown at a time - use the Scroll buttons to see more. ": "Només es mostren 3 vídeos alhora: utilitzeu els botons de desplaçament per veure'n més. ",
+          "See Recommendations! ➡️": "Veure Recomanacions! ➡️",
+          "Select at least one person to use for recommendations to continue!": "Seleccioneu almenys una persona a utilitzar per a recomanacions per continuar!",
+          "Simply pick which content creators you want to follow to see your recommendations!": "Simplement trieu quins creadors de contingut voleu seguir per veure les vostres recomanacions.",
+          "These are the videos you've been recommended based on how you adjusted the weights on the last screen. Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain videosExample!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Weights": "Aquests són els vídeos que t'han recomanat en funció de com has ajustat els pesos a l'última pantalla. Només es mostren 3 vídeos alhora: utilitzeu els botons de desplaçament per veure'n més. Utilitzeu els botons de l'esquerra per filtrar per certs vídeosExample! Exemple! Exemple! ⬆️ Desplaceu-vos cap amunt ⬆️⬇️ Desplaceu-vos cap avall ⬇️⬅️ Seleccioneu nous pesos",
+          "Use the buttons on the left to filter by certain videos": "Utilitzeu els botons de l'esquerra per filtrar per certs vídeos",
+          "We've gathered all your favorite personalities to make videos that match your interests.": "Hem reunit totes les vostres personalitats preferides per fer vídeos que coincideixin amb els vostres interessos.",
+          "WeTube Video Recommendations": "Recomanacions de vídeo de WeUbe",
+          "WeTube is a new media website for all your favorite content creators. We've gathered all your favorite personalities to make videos that match your interests.Simply pick which content creators you want to follow to see your recommendations!Let's Get Started! ➡️Select at least one person to use for recommendations to continue!Choose one of the content creators below, then use the slider to adjust how much you want them to influence your recommendations!0 means their opinion isn't included in your recommendations at all10 means they have a huge influence on the recommendations you receivefeatureLabelSee Recommendations! ➡️featureValueYour RecommendationsThese are the videos you've been recommended based on how you adjusted the weights on the last screen. Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain videosExample!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Weights": "WeUbe és un nou lloc web de mitjans de comunicació per a tots els vostres creadors de contingut preferits. Hem reunit totes les vostres personalitats preferides per fer vídeos que coincideixin amb els vostres interessos. Simplement escolliu quins creadors de contingut voleu seguir per veure les vostres recomanacions. Anem a començar! ➡️ Seleccioneu almenys una persona a utilitzar per a recomanacions per continuar! Trieu un dels creadors de contingut a continuació i, a continuació, utilitzeu el control lliscant per ajustar quant voleu que influeixin en les vostres recomanacions! 0 vol dir que la seva opinió no està inclosa en les vostres recomanacions en tot10 vol dir que tenen una gran influència en les recomanacions que rebeu FeatureFeatureLabelSee Recomanacions! ➡️ FeatureValueYour recomendationsThese són els vídeos que has estat recomanat en funció de com has ajustat els pesos a l'última pantalla. Només es mostren 3 vídeos alhora: utilitzeu els botons de desplaçament per veure'n més. Utilitzeu els botons de l'esquerra per filtrar per certs vídeosExample! Exemple! Exemple! ⬆️ Desplaceu-vos cap amunt ⬆️⬇️ Desplaceu-vos cap avall ⬇️⬅️ Seleccioneu nous pesos",
+          "Your Recommendations": "Les vostres recomanacions",
+          "featureLabel": "FeatureLabel",
+          "featureValue": "FeatureValue",
+          "⬅️ Select New Weights": "⬅️ Seleccioneu nous pesos",
+          "⬆️ Scroll Up ⬆️": "⬆️ Desplaceu-vos cap amunt ⬆️",
+          "⬇️ Scroll Down ⬇️": "⬇️ Desplaceu-vos cap avall ⬇️"
+        },
+        "Noisy Image Widget_ai23": {
+          "0%": "0%",
+          "Be patient! Noisy image loading!": "Tingueu paciència! Sorollós càrrega d'imatges!",
+          "Move the slider to add more or less generations of noise to the image": "Mou el control lliscant per afegir més o menys generacions de soroll a la imatge",
+          "New Image": "Nova imatge",
+          "Noise Generations:": "Generacions de soroll:",
+          "Noise Generations: ": "Generacions de soroll: "
+        },
+        "U9L5 Cropping Widget_ai2023": {
+          "Crop": "Cultiu",
+          "Image Select": "Seleccionar imatge",
+          "Reset": "Reinicia"
         },
         "allthethings design mode elements": {
           "text": "text"
+        },
+        "csa widget test2": {
+          "8": "8"
         },
         "csd u5 recommender sample": {
           "Start": "Comença"
@@ -577,21 +1992,38 @@
         "csd u5 recommender sample_2022": {
           "Start": "Comença"
         },
+        "csd u5 recommender sample_2023": {
+          "Start": "Comença"
+        },
         "csd-apps for good-2": {
           "Next": "Següent"
         },
         "csd-apps for good-2_2022": {
           "Next": "Següent"
         },
+        "csd-apps for good-2_2023": {
+          "Next": "Següent"
+        },
         "csd-apps for good-3": {
-          "???": "???",
           "1": "1",
-          "4": "4"
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "???": "???"
         },
         "csd-apps for good-3_2022": {
-          "???": "???",
           "1": "1",
-          "4": "4"
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "???": "???"
+        },
+        "csd-apps for good-3_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "???": "???"
         },
         "csd-explore ui-2": {
           "Next": "Següent"
@@ -599,13 +2031,152 @@
         "csd-explore ui-2_2022": {
           "Next": "Següent"
         },
+        "csd-explore ui-2_2023": {
+          "Next": "Següent"
+        },
+        "csd-explore ui-3": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "csd-explore ui-3_2022": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "csd-explore ui-3_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
         "csd-explore ui-4": {
-          "Sorry!": "Perdó!",
-          "Correct!": "Correcte!"
+          "Correct!": "Correcte!",
+          "Sorry!": "Perdó!"
         },
         "csd-explore ui-4_2022": {
-          "Sorry!": "Perdó!",
-          "Correct!": "Correcte!"
+          "Correct!": "Correcte!",
+          "Sorry!": "Perdó!"
+        },
+        "csd-explore ui-4_2023": {
+          "Correct!": "Correcte!",
+          "Sorry!": "Perdó!"
+        },
+        "csd-explore ui-5": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "csd-explore ui-5_2022": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "csd-explore ui-5_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-6": {
           "Next": "Següent"
@@ -613,19 +2184,50 @@
         "csd-explore ui-6_2022": {
           "Next": "Següent"
         },
+        "csd-explore ui-6_2023": {
+          "Next": "Següent"
+        },
+        "ml-L2 supervised - green glass door-2021": {
+          "Accepted": "Acceptat",
+          "Green Glass Door": "Porta de vidre verd",
+          "Rejected": "Rebutjat"
+        },
+        "ml-L2 supervised - green glass door_2022": {
+          "Accepted": "Acceptat",
+          "Green Glass Door": "Porta de vidre verd",
+          "Rejected": "Rebutjat"
+        },
+        "ml-L2 supervised - green glass door_2023": {
+          "Accepted": "Acceptat",
+          "Green Glass Door": "Porta de vidre verd",
+          "Rejected": "Rebutjat"
+        },
         "ml-L2 unsupervised - 1-2021": {
           "Next": "Següent"
         },
         "ml-L2 unsupervised - 1_2022": {
           "Next": "Següent"
         },
+        "ml-L2 unsupervised - 1_2023": {
+          "Next": "Següent"
+        },
         "ml-customize-raspado-2021": {
-          "yes": "sí",
-          "no": "no"
+          "Predict": "Fes una predicció",
+          "Raspado Recommender": "Recomanació de granissats",
+          "no": "no",
+          "yes": "sí"
         },
         "ml-customize-raspado_2022": {
-          "yes": "sí",
-          "no": "no"
+          "Predict": "Fes una predicció",
+          "Raspado Recommender": "Recomanació de granissats",
+          "no": "no",
+          "yes": "sí"
+        },
+        "ml-customize-raspado_2023": {
+          "Predict": "Fes una predicció",
+          "Raspado Recommender": "Recomanació de granissats",
+          "no": "no",
+          "yes": "sí"
         },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "Continuar",
@@ -635,182 +2237,219 @@
           "Continue": "Continuar",
           "Loading...": "Carregant..."
         },
+        "ml-intro ai lab- fruit veggie widget_2023": {
+          "Continue": "Continuar",
+          "Loading...": "Carregant..."
+        },
+        "ml-intro app lab-book recommender demo-2021": {
+          "Predict": "Fes una predicció",
+          "Silly": "Ximple"
+        },
+        "ml-intro app lab-book recommender demo_2022": {
+          "Predict": "Fes una predicció",
+          "Silly": "Ximple"
+        },
+        "ml-intro app lab-book recommender demo_2023": {
+          "Predict": "Fes una predicció",
+          "Silly": "Ximple"
+        },
         "ml-model card-medical app v2 2021-2": {
-          "W": "W",
           "A": "A",
-          "yes": "sí",
-          "no": "no"
+          "W": "W",
+          "head": "cap",
+          "no": "no",
+          "yes": "sí"
         },
         "ml-model card-medical app v2 2021-2_2022": {
-          "W": "W",
           "A": "A",
-          "yes": "sí",
-          "no": "no"
+          "W": "W",
+          "head": "cap",
+          "no": "no",
+          "yes": "sí"
         },
-        "ml-models in applab-choice intended warnings": {
-          "Back": "Tornar",
-          "1": "1"
+        "ml-model card-medical app v2 2021-2_2023": {
+          "A": "A",
+          "W": "W",
+          "head": "cap",
+          "no": "no",
+          "yes": "sí"
         },
-        "ml-models in applab-choice intended warnings_2022": {
-          "Back": "Tornar",
-          "1": "1"
+        "ml-model cards-book recommender model card": {
+          "Predict": "Fes una predicció",
+          "Silly": "Ximple"
         },
-        "ml-models in applab-zoo assessment": {
-          "Yes": "Sí",
-          "No": "No",
-          "B": "B"
+        "ml-model cards-book recommender model card_2022": {
+          "Predict": "Fes una predicció",
+          "Silly": "Ximple"
         },
-        "ml-models in applab-zoo assessment_2022": {
-          "Yes": "Sí",
-          "No": "No",
-          "B": "B"
-        },
-        "ml-models in applab-zoo model embed": {
-          "Yes": "Sí",
-          "No": "No"
-        },
-        "ml-models in applab-zoo model embed_2022": {
-          "Yes": "Sí",
-          "No": "No"
-        },
-        "ml-use model card-example3A-2021": {
-          "cloudy": "ennuvolat",
-          "night": "nit"
-        },
-        "ml-use model card-example3A_2022": {
-          "cloudy": "ennuvolat",
-          "night": "nit"
-        },
-        "CSD U1 processing bday_2021": {
-          "1": "1",
-          "4": "4",
-          "8": "8",
-          "10": "10",
-          "12": "12",
-          "15": "15",
-          "20": "20"
-        },
-        "CSD U1 processing bday_2022": {
-          "1": "1",
-          "4": "4",
-          "8": "8",
-          "10": "10",
-          "12": "12",
-          "15": "15",
-          "20": "20"
-        },
-        "CSD U1 processing writers_2021": {
-          "1": "1",
-          "4": "4",
-          "8": "8",
-          "10": "10",
-          "12": "12",
-          "15": "15",
-          "20": "20"
-        },
-        "CSD U1 processing writers_2022": {
-          "1": "1",
-          "4": "4",
-          "8": "8",
-          "10": "10",
-          "12": "12",
-          "15": "15",
-          "20": "20"
-        },
-        "CSD U2 RGB intro": {
-          "1": "1",
-          "4": "4"
-        },
-        "CSD U2 RGB intro_2018": {
-          "1": "1",
-          "4": "4"
-        },
-        "CSD U2 RGB intro_2019": {
-          "1": "1",
-          "4": "4"
-        },
-        "CSD U2 RGB intro_2021": {
-          "1": "1",
-          "4": "4"
-        },
-        "CSD U2 RGB intro_2022": {
-          "1": "1",
-          "4": "4"
-        },
-        "CSD U6 - Physical Input - A_2222": {
-          "1": "1"
-        },
-        "CSD U6 - Screen Outputs - ChalB_2222": {
-          "?": "?"
-        },
-        "CSD U6 emotion machine example": {
-          "?": "?"
-        },
-        "CSD U6 emotion machine example_2018": {
-          "?": "?"
-        },
-        "CSD U6 emotion machine example_2019": {
-          "?": "?"
-        },
-        "CSD U6 emotion machine example_2021": {
-          "?": "?"
-        },
-        "csa widget test2": {
-          "8": "8"
-        },
-        "csd-explore ui-3": {
-          "1": "1",
-          "4": "4",
-          "8": "8",
-          "10": "10",
-          "12": "12",
-          "15": "15",
-          "20": "20"
-        },
-        "csd-explore ui-3_2022": {
-          "1": "1",
-          "4": "4",
-          "8": "8",
-          "10": "10",
-          "12": "12",
-          "15": "15",
-          "20": "20"
-        },
-        "csd-explore ui-5": {
-          "1": "1",
-          "4": "4",
-          "8": "8",
-          "10": "10",
-          "12": "12",
-          "15": "15",
-          "20": "20"
-        },
-        "csd-explore ui-5_2022": {
-          "1": "1",
-          "4": "4",
-          "8": "8",
-          "10": "10",
-          "12": "12",
-          "15": "15",
-          "20": "20"
+        "ml-model cards-book recommender model card_2023": {
+          "Predict": "Fes una predicció",
+          "Silly": "Ximple"
         },
         "ml-models in applab-choice if quotes": {
-          "1": "1"
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Predict": "Fes una predicció"
         },
         "ml-models in applab-choice if quotes_2022": {
-          "1": "1"
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Predict": "Fes una predicció"
+        },
+        "ml-models in applab-choice if quotes_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Predict": "Fes una predicció"
         },
         "ml-models in applab-choice if wrong place": {
-          "1": "1"
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Predict": "Fes una predicció"
         },
         "ml-models in applab-choice if wrong place_2022": {
-          "1": "1"
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Predict": "Fes una predicció"
+        },
+        "ml-models in applab-choice if wrong place_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Predict": "Fes una predicció"
+        },
+        "ml-models in applab-choice intended warnings": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Back": "Tornar",
+          "Predict": "Fes una predicció"
+        },
+        "ml-models in applab-choice intended warnings_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Back": "Tornar",
+          "Predict": "Fes una predicció"
+        },
+        "ml-models in applab-choice intended warnings_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Back": "Tornar",
+          "Predict": "Fes una predicció"
         },
         "ml-models in applab-choice predict typos": {
-          "1": "1"
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Predict": "Fes una predicció"
         },
         "ml-models in applab-choice predict typos_2022": {
-          "1": "1"
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Predict": "Fes una predicció"
+        },
+        "ml-models in applab-choice predict typos_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Predict": "Fes una predicció"
+        },
+        "ml-models in applab-zoo assessment": {
+          "B": "B",
+          "No": "No",
+          "Predict": "Fes una predicció",
+          "Yes": "Sí"
+        },
+        "ml-models in applab-zoo assessment_2022": {
+          "B": "B",
+          "No": "No",
+          "Predict": "Fes una predicció",
+          "Yes": "Sí"
+        },
+        "ml-models in applab-zoo assessment_2023": {
+          "B": "B",
+          "No": "No",
+          "Predict": "Fes una predicció",
+          "Yes": "Sí"
+        },
+        "ml-models in applab-zoo model embed": {
+          "No": "No",
+          "Predict": "Fes una predicció",
+          "Yes": "Sí"
+        },
+        "ml-models in applab-zoo model embed_2022": {
+          "No": "No",
+          "Predict": "Fes una predicció",
+          "Yes": "Sí"
+        },
+        "ml-models in applab-zoo model embed_2023": {
+          "No": "No",
+          "Predict": "Fes una predicció",
+          "Yes": "Sí"
+        },
+        "ml-models-shoes decision tree-2021": {
+          "Improved Shoe Recommender": "Recomanació de sabates millorada",
+          "Sports": "Esports"
+        },
+        "ml-models-shoes decision tree_2022": {
+          "Improved Shoe Recommender": "Recomanació de sabates millorada",
+          "Sports": "Esports"
+        },
+        "ml-models-shoes decision tree_2023": {
+          "Improved Shoe Recommender": "Recomanació de sabates millorada",
+          "Sports": "Esports"
+        },
+        "ml-models-shoes points-2021": {
+          "Ultimate Shoe Recommender": "Recomanació definitiva de sabates"
+        },
+        "ml-models-shoes points_2022": {
+          "Ultimate Shoe Recommender": "Recomanació definitiva de sabates"
+        },
+        "ml-models-shoes points_2023": {
+          "Ultimate Shoe Recommender": "Recomanació definitiva de sabates"
+        },
+        "ml-models-shoes random-2021": {
+          "Shoe Recommender": "Recomanació de sabates"
+        },
+        "ml-models-shoes random_2022": {
+          "Shoe Recommender": "Recomanació de sabates"
+        },
+        "ml-models-shoes random_2023": {
+          "Shoe Recommender": "Recomanació de sabates"
+        },
+        "ml-use model card-example3A-2021": {
+          "Driver Alert System": "Sistema d'alerta del controlador",
+          "Predict": "Fes una predicció",
+          "cloudy": "ennuvolat",
+          "dusk": "capvespre",
+          "night": "nit",
+          "rain": "pluja",
+          "snow": "neu"
+        },
+        "ml-use model card-example3A_2022": {
+          "Driver Alert System": "Sistema d'alerta del controlador",
+          "Predict": "Fes una predicció",
+          "cloudy": "ennuvolat",
+          "dusk": "capvespre",
+          "night": "nit",
+          "rain": "pluja",
+          "snow": "neu"
+        },
+        "ml-use model card-example3A_2023": {
+          "Driver Alert System": "Sistema d'alerta del controlador",
+          "Predict": "Fes una predicció",
+          "cloudy": "ennuvolat",
+          "dusk": "capvespre",
+          "night": "nit",
+          "rain": "pluja",
+          "snow": "neu"
         }
       }
     }

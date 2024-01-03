@@ -99,17 +99,17 @@ nl:
         turtle_4_9: Hier is de oplossing voor de vorige puzzel. Hoeveel graden moet je draaien om de tekening compleet te maken? (Je moet waarschijnlijk een paar keer gokken)
         turtle_4_10: Hier is de oplossing voor de vorige puzzel. Hoe vaak moet je herhalen om de tekening compleet te maken?
         turtle_4_11: Verander de nummers in de "draai"- en "herhaal"-blokken om verschillende patronen te maken. Of experimenteer met het veranderen van de rest van de code om alles te tekenen wat je maar wilt.
-        maze_karel_1_1: Hoi, ik ben een boer. Ik heb je hulp nodig om mijn veld plat te maken zodat ik erop kan verbouwen. Beweeg me naar de hoop modder en gebruik het "verwijder" blok om hem te verwijderen.
-        maze_karel_1_2: Beweeg me naar het gat en vul hem met TWEE scheppen modder, door het "vul" blok te gebruiken.
-        maze_karel_1_3: Beweeg me naar de hoop modder en vertel me hoeveel scheppen ik moet verwijderen, met zo weinig blokken mogelijk.
-        maze_karel_1_4: 'Kun je me helpen om alle vier modderhopen te verwijderen? Hint: gebruik een herhaal blok als dat nodig is.'
-        maze_karel_1_5: 'Help me om al deze gaten te vullen met 5 scheppen modder. Hint: je kunt een "herhaal" blok in het "terwijl" blok zetten.'
-        maze_karel_1_6: Verwijder alle hopen modder met zo weinig blokken mogelijk. De nieuwe opties in het menu van het "terwijl" blok vertellen met of ik op een hoop of een gat sta.
-        maze_karel_1_7: Wow, ik heb een superdiep gat gevonden! Ik weet niet hoeveel scheppen ervoor nodig zijn. Kun je een programma schrijven die het gat vult totdat hij opgevuld is?
-        maze_karel_1_8: Help me om het gat aan het einde van het veld te vullen, met zo weinig blokken mogelijk.
-        maze_karel_1_9: 'Zorg dat ik alle hopen modder weghaal. Gebruik zo weinig mogelijk blokken te gebruiken. Tip: probeer een "herhaal zolang"-blok te gebruiken.'
-        maze_karel_1_10: Ik moet tot laat werken, dus het is donker buiten, en ik kan zo niet zien hoe hoog de hopen zijn. Ik heb niet alle opties meer die ik had op het "while" blok. Beweeg me over het veld, en als er een heuvel is, verwijder hem.
-        maze_karel_1_11: 'Het is nog steeds donker buiten. Beweeg me over het veld. Als er een heuvel is, haal hem weg, en als ereen gat is, vul hem op. Hint: gebruik het menu van opties bij het "if" blok.'
+        maze_karel_1_1: Hi, ik ben een boer. Ik heb je hulp nodig om mijn veld vlak te maken zodat het klaar is om te beplanten. Beweeg me naar de hoop aarde en gebruik het "verwijder" blok om hem te verwijderen.
+        maze_karel_1_2: Beweeg me naar het gat en vul het met TWEE scheppen aarde. Gebruik hiervoor het "vul" blok.
+        maze_karel_1_3: Beweeg me naar de hoop aarde en vertel me hoeveel scheppen ik moet verwijderen met zo min mogelijk blokken.
+        maze_karel_1_4: 'Kun je me helpen om alle vier de hopen aarde te verwijderen? Hint: gebruik een herhaal blok als dat kan.'
+        maze_karel_1_5: 'Help me al deze gaten met 5 scheppen aarde te vullen. Hint: je kunt een "herhaal" blok in het "zolang" blok plaatsen.'
+        maze_karel_1_6: Verwijder alle hopen aarde met zo min mogelijk blokken. De nieuwe opties in het uitklapmenu van het "zolang" blok vertellen met of ik op een hoop aarde of een gat sta.
+        maze_karel_1_7: Wow, ik heb een superdiep gat gevonden! Ik weet niet hoeveel scheppen aarde nodig zijn. Kun je een programma schrijven wat het gat vult tot de grond vlak is?
+        maze_karel_1_8: Help me om het gat aan het einde van het veld te vullen, met zo min mogelijk blokken.
+        maze_karel_1_9: 'Laat me al deze hopen aarde weghalen. Probeer zo min mogelijk blokken te gebruiken. Hint: probeer een "zolang" blok te gebruiken.'
+        maze_karel_1_10: Ik moet tot laat werken, dus is het donker buiten en kan ik niet zien hoe hoog de hopen zijn. Ik heb niet alle mogelijkheden meer, die ik met het "zolang" blok had. Beweeg me over het veld, en als er een heuvel is, verwijder hem.
+        maze_karel_1_11: 'Het is nog steeds donker buiten. Beweeg me over het veld. Als er een hoop is, haal hem weg, en als er een gat is, vul het op. Hint: gebruik het uitklapmenu van het "als" blok.'
         turtle_2_1: 'Hallo. Ik zombie artist. Ik gek op tekenen! Help me om een vierkant in een speciale kleur te tekenen. Belangrijk: je hebt dezelfde blokken maar ze zijn nu opgedeeld in categorieën.'
         turtle_2_2: Welkom bij het gebruiken van functies, die je nieuwe blokken laten maken! Gebruik het nieuwe "teken een vierkant" blok, die je kunt vinden in de "Functies" categorie, om een klein 50x50 groen vierkant te tekenen.
         turtle_2_3: Gebruik het "herhaal" blok (in de "Lussen" categorie) om 3 vierkanten te tekenen van grootte 100, 120 graden uit elkaar. En doe het met 3 verschillende, willekeurige kleuren.
@@ -138,7 +138,7 @@ nl:
         turtle_3_5: 'Maak nu een "teken een huis" functie en gebruik hem om deze 2 katten een huis te geven. Hint: maak een nieuwe functie met behulp van het "doe iets" blok, en typ je eigen naam om het blok een naam te geven.'
         turtle_3_6: 'Gebruik "teken een vierkant" als een voorbeeld om een invoer genaamd "lengte" toe te voegen om "teken een driehoek" te maken. Maak vervolgens driehoeken in verschillende groottes. (Hint: klik op de ster om een invoer aan een functie toe te voegen)'
         turtle_3_7: Voeg een input met de naam "lengte" toe aan "teken een huis" en teken een groot huis voor de olifant (met randen van 150 pixels lang)
-        turtle_3_8: Pas "teken een huis" aan zodat ik in de hoek linksonder beland na het tekenen van een nieuw huis. Gebruik deze aangepaste functie om drie huizen te tekenen.
+        turtle_3_8: Pas "teken een huis" zo aan, dat ik in de rechteronderhoek eindig na het tekenen van een nieuw huis. Gebruik deze aangepaste functie om drie huizen te tekenen.
         turtle_3_9: Kan je deze "teken een huis" functie namaken zonder hulp? Probeer het, en teken daarna een rijtje huizen.
         turtle_3_10: Je hebt al een heleboel geleerd! Nu kun je het gebruiken om te tekenen wat je maar wilt. Probeer bijvoorbeeld eens om een ster, spiraal of coole sneeuwvlok te tekenen.
         maze_karel_debug_seq_1: Welkom bij foutopsporing! Mijn code doet het niet helemaal goed. Kan jij het probleem vinden en oplossen zodat ik mijn veld vlak kan maken voor het verbouwen?
@@ -354,8 +354,8 @@ nl:
         C4_unplugged_parameters: Liedjes schrijven met Parameters
         C4_unplugged_binary: Binaire
         CSF_create_functions: Maken van functies
-        CSF_debugging_k1_blocks: Foutopsporing
-        CSF_debugging_text_blocks: Foutopsporing
+        CSF_debugging_k1_blocks: Debugging
+        CSF_debugging_text_blocks: Debugging
         CSF_EF_cs_matters: Informatica doet ertoe
         CSF_maze_intro_k1_blocks: Inleiding tot Code Studio
         CSF_maze_intro_text_blocks: Inleiding tot Code Studio
@@ -461,7 +461,7 @@ nl:
         writing_first_program: Schrijf je eerste computerprogramma!
         csd_pair_programming: Programmeren in Tweetallen
         csd_applab_parameters: Functies met Parameters
-        csd_debugging: Foutopsporing
+        csd_debugging: Debugging
         csp-pd-welcome: Welkom bij de Familie!
         hoc_dance_congrats_2019: Dance Party 2019 - Party On!
         hoc_dance_warmup_2019: Dance Party 2019 - Opwarmen
@@ -493,6 +493,9 @@ nl:
         poetry_module_conditionals: Conditionals - Coderen met poëzie
         poemart_intro: Inleiding tot de dichtkunst
         csp_applab_parameters: Functies met Parameters
+        what-is-creativity: Wat is creativiteit?
+        code-break: Neem een codepauze
+        csd_ml_how_ai_works: Hoe AI werkt
     callout:
       text:
         drag_blocks: Sleep een "vooruit" blok en plak het onder het andere blok

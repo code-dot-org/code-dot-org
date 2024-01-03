@@ -6,3 +6,4 @@ right 'The data is transformed to usually make it smaller. It can always be re-c
 wrong 'The data is transformed to always make it smaller. It can always be re-constructed back to the original.'
 wrong 'The data is transformed to usually make it smaller. It cannot always be re-constructed back to the original.'
 wrong 'The data is transformed to always make it smaller. It cannot always be re-constructed back to the original.'
+allow_multiple_attempts true

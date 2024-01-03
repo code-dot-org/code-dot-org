@@ -6,12 +6,13 @@ import {CheckedRadioButton} from '@cdo/apps/lib/ui/CheckedRadioButton';
 import ReactTooltip from 'react-tooltip';
 import _ from 'lodash';
 import i18n from '@cdo/locale';
+import fontConstants from '@cdo/apps/fontConstants';
 
 const rubricPerformanceHeaders = {
   performanceLevel1: i18n.rubricLevelOneHeader(),
   performanceLevel2: i18n.rubricLevelTwoHeader(),
   performanceLevel3: i18n.rubricLevelThreeHeader(),
-  performanceLevel4: i18n.rubricLevelFourHeader()
+  performanceLevel4: i18n.rubricLevelFourHeader(),
 };
 
 class RubricField extends Component {
@@ -23,14 +24,14 @@ class RubricField extends Component {
     disabledMode: PropTypes.bool,
     onChange: PropTypes.func,
     currentlyChecked: PropTypes.bool,
-    expandByDefault: PropTypes.bool
+    expandByDefault: PropTypes.bool,
   };
 
   constructor(props) {
     super(props);
 
     this.state = {
-      detailsOpen: this.props.expandByDefault
+      detailsOpen: this.props.expandByDefault,
     };
   }
 
@@ -66,9 +67,8 @@ class RubricField extends Component {
             id={`rubric-details-${this.props.rubricLevel}`}
             style={styles.detailsArea}
             open={this.state.detailsOpen}
-            onClick={this.updateToggle}
           >
-            <summary style={styles.rubricHeader}>
+            <summary style={styles.rubricHeader} onClick={this.updateToggle}>
               {rubricPerformanceHeaders[this.props.rubricLevel]}
             </summary>
             <p style={styles.rubricDetails}>{this.props.rubricValue}</p>
@@ -90,20 +90,20 @@ class RubricField extends Component {
 
 const styles = {
   rubricLevelHeaders: {
-    width: '100%'
+    width: '100%',
   },
   detailsArea: {
     width: '100%',
-    paddingTop: 2
+    paddingTop: 2,
   },
   rubricHeader: {
     fontSize: 12,
     marginLeft: 10,
     color: color.black,
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     // Don't show default summary tag outline and background on hover or focus
     outline: 'none',
-    background: 'none'
+    background: 'none',
   },
   performanceLevelHeader: {
     display: 'flex',
@@ -114,8 +114,8 @@ const styles = {
     borderRadius: 4,
     border: `solid 1px ${color.white}`,
     ':hover': {
-      border: `solid 1px ${color.light_cyan}`
-    }
+      border: `solid 1px ${color.light_cyan}`,
+    },
   },
   performanceLevelHeaderSelected: {
     display: 'flex',
@@ -127,20 +127,20 @@ const styles = {
     borderRadius: 4,
     border: `solid 1px ${color.white}`,
     ':hover': {
-      border: `solid 1px ${color.light_cyan}`
-    }
+      border: `solid 1px ${color.light_cyan}`,
+    },
   },
   tooltip: {
     maxWidth: 200,
     lineHeight: '20px',
-    whiteSpace: 'normal'
+    whiteSpace: 'normal',
   },
   rubricDetails: {
     paddingLeft: 23,
     paddingTop: 5,
     fontSize: 12,
-    margin: 0
-  }
+    margin: 0,
+  },
 };
 export const UnwrappedRubricField = RubricField;
 export default Radium(RubricField);

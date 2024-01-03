@@ -1,5 +1,5 @@
 ---
-title: Hour of Code How-To for Districts
+title: Ura kode, kako naj za okrožja
 ---
 
 {{ signup_button }}

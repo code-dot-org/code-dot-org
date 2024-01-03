@@ -19,7 +19,7 @@ class ProgressViewHeader extends Component {
     currentView: PropTypes.oneOf(Object.values(ViewType)),
     sectionId: PropTypes.number.isRequired,
     scriptFriendlyName: PropTypes.string.isRequired,
-    scriptData: scriptDataPropType
+    scriptData: scriptDataPropType,
   };
 
   getLinkToOverview() {
@@ -35,15 +35,15 @@ class ProgressViewHeader extends Component {
         event: 'go_to_script',
         data_json: JSON.stringify({
           section_id: this.props.sectionId,
-          script_id: this.props.scriptId
-        })
+          script_id: this.props.scriptId,
+        }),
       },
       {includeUserId: true}
     );
 
     analyticsReporter.sendEvent(EVENTS.PROGRESS_VIEWED, {
       sectionId: this.props.sectionId,
-      unitId: this.props.scriptId
+      unitId: this.props.scriptId,
     });
   };
 
@@ -53,7 +53,7 @@ class ProgressViewHeader extends Component {
     const headingText = {
       [ViewType.SUMMARY]: i18n.lessonsAttempted() + ' ',
       [ViewType.DETAIL]: i18n.levelsAttempted() + ' ',
-      [ViewType.STANDARDS]: i18n.CSTAStandardsIn() + ' '
+      [ViewType.STANDARDS]: i18n.CSTAStandardsIn() + ' ',
     };
     return (
       <div style={{...h3Style, ...styles.heading, ...styles.tableHeader}}>
@@ -77,18 +77,18 @@ class ProgressViewHeader extends Component {
 
 const styles = {
   heading: {
-    marginBottom: 0
+    marginBottom: 0,
   },
   tableHeader: {
     marginBottom: 10,
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'flex-end',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   scriptLink: {
-    color: color.teal
-  }
+    color: color.teal,
+  },
 };
 
 export const UnconnectedProgressViewHeader = ProgressViewHeader;
@@ -97,5 +97,5 @@ export default connect(state => ({
   sectionId: state.teacherSections.selectedSectionId,
   currentView: state.sectionProgress.currentView,
   scriptData: getCurrentUnitData(state),
-  scriptFriendlyName: getSelectedScriptFriendlyName(state)
+  scriptFriendlyName: getSelectedScriptFriendlyName(state),
 }))(ProgressViewHeader);

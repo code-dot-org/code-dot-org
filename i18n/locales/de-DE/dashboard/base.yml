@@ -53,6 +53,7 @@ de:
         gender: 'Geschlecht'
         edit_header: 'Kontodaten bearbeiten'
         finish_sign_up_header: 'Kontoerstellung abschließen'
+        finish_sign_up_header_error: 'Bitte korrigiere die folgenden Fehler:'
         finish_sign_up_subheader: 'Gib folgende Informationen ein um dein Code.org-Konto für <strong>%{email}</strong> fertigzustellen.'
         finish_sign_up_subheader_markdown: 'Gib folgende Informationen ein um dein Code.org-Konto für **%{email}** fertigzustellen.'
         finish_sign_up_subheader_provider: 'Gib folgende Informationen ein um dein Code.org-Konto mit <strong>%{provider}</strong> für <strong>%{email}</strong> fertigzustellen.'
@@ -60,6 +61,8 @@ de:
         reset_password_token: "Den Link zum Zurücksetzen des Passworts hast du befolgt"
         error:
           future: darf nicht in der Zukunft liegen
+        user_type: 'Kontentyp'
+        us_state: 'Bundesland'
   beta: "Beta"
   hello: "Hallo Welt"
   welcome_back: "Willkommen zurück, %{name}"
@@ -69,6 +72,7 @@ de:
   unsubmit: Zurücknehmen
   previous_page: Vorherige Seite
   next_page: Nächste Seite
+  next_level: Nächstes Level
   next_resource: Nächste Ressource
   done_with_module: Mit dieser Lerneinheit abgeschlossen
   cancel: "Abbrechen"
@@ -172,7 +176,6 @@ de:
     data_collection_us: "Mir ist bekannt, dass Code.org eine in den USA ansässige gemeinnützige Website ist und dass die Gesetze zur Datenerfassung in den USA von den Gesetzen in meinem Land abweichen können."
     visit_privacy: 'Lesen Sie die [Datenschutzerklärung](%{privacy_url}) von Code.org, um mehr zu erfahren.'
     student_terms_markdown: "E-Mail-Adressen werden nicht in einer Form gespeichert, die es uns ermöglicht, mit den Studenten in Kontakt zu treten. Schüler werden niemals E-Mails von Code.org erhalten, außer zur Wiederherstellung des Passworts. Weitere Informationen finden Sie in unserer [Datenschutzerklärung] (http://code.org/privacy)."
-    additional_information: "Wir benötigen noch ein paar weitere Informationen, um mit deiner Anmeldung fortzufahren."
     user_type_button: "Kontoart aktualisieren"
     user_type_label: "Kontentyp"
     user_type_student: "Schüler"
@@ -200,6 +203,7 @@ de:
     parent_account_checkbox: "Ich bin ein(e) Elternteil/Erziehungsberechtige(r) und melde mich im Namen meines Kindes an"
     parent_account_email_progress_permission: "Dürfen wir Sie gelegentlich per E-Mail über den Fortschritt und die Projekte Ihres Kindes sowie über den Kurs und den Informatikunterricht Ihres Kindes auf dem Laufenden halten? [(Bitte beachten Sie unsere Datenschutzerklärung)](%{privacy_policy_url})"
     parent_account_email_label: "Eltern/Vormund E-Mail"
+    us_state: 'Bundesland'
   school_info:
     title: 'Schulinformationen (optional)'
     school_country: 'Land der Schule'
@@ -379,6 +383,7 @@ de:
       help_us: "Helfen Sie uns"
       teach: "Unterrichten"
       about: "Über"
+      incubator: "Inkubator"
       legal: "Privatsphäre und Rechtliches"
       legal_privacy: "Datenschutzerklärung"
       legal_cookie_notice: "Cookie-Meldung"
@@ -611,6 +616,7 @@ de:
     store: 'Geschäft'
     cookie_notice: 'Cookie-Meldung'
     view_code: 'Zeige den Code'
+    locale_select: "Sprache auswählen"
   reference_area:
     title: 'Brauchst du Hilfe?'
     subtitle: 'Schau dir diese Videos und Hinweise an'
@@ -635,6 +641,8 @@ de:
       applab_unsupported_tablet: "App Lab funktioniert am Besten auf einem Desktop-PC oder einem Laptop mit Maus und Tastatur. Es könnte Probleme bei der Wiedergabe auf deinem jetzigen Gerät geben."
       gamelab_unsupported_tablet: "Game Lab funktioniert am Besten auf einem Desktop-PC oder einem Laptop mit Maus und Tastatur. Es könnte Probleme bei der Wiedergabe auf deinem jetzigen Gerät geben."
       weblab_unsupported_locale_storage: "Es gibt möglicherweise Probleme beim benutzen von Web Lab im privaten Browser-Modus. Bitte laden sie ihr Projekt nochmal im normalen Modus. Wir entschuldigen uns für die Unannehmlichkeiten."
+  deprecation:
+    algebra_lab: "Der Lehrplan und der Inhalt von CS in Algebra sind veraltet. In den nächsten Monaten wird dieses Labor nicht mehr verfügbar sein. Bitte schaue dir stattdessen [Bootstrap: Algebra] (%{bootstrap_algebra_url}) an. [Mehr erfahren] (%{cs_algebra_url})."
   slow_loading: 'Das benötigt länger als normal...'
   try_reloading: 'Versuche die Seite neu zu laden'
   next_stage: 'Geschafft! Fahre mit dem nächsten Level fort.'
@@ -673,65 +681,139 @@ de:
       body_short: "Entwerfe eine App, Code mit Blöcken oder JavaScript damit es funktioniert, dann teile die App in Sekunden."
       audience: 'Ab 13 Jahren'
       cta: 'Lerne wie'
+      image_alt: 'Ein lila Hase, der einen raketengetriebenen Rucksack trägt.'
+    applab-intro:
+      image_alt: 'Eine Hand tippt auf die Mitte eines Smartphone-Bildschirms. Licht und Funken kommen aus dem Bildschirm.'
     aquatic:
       title: "Minecraft"
+      image_alt: 'Steve und Alex von Minecraft schauen dich an.'
+    artist:
+      image_alt: 'Eine karikaturhafte Person, die einen riesigen Bleistift hält und ein Dreieck zeichnet.'
+    conditionals:
+      image_alt: 'Zwei Hände mischen ein Kartenspiel.'
+    course1:
+      image_alt: 'Die Code.org-Hummel und der Orangenfisch stehen vor einem Code.'
+    course2:
+      image_alt: 'Eine Collage aus Code.org-Rätseln, die einen grünen Zauberer, einen Künstler und einen orangefarbenen Fisch zeigt.'
+    course3:
+      image_alt: 'Eine Collage aus Code.org-Rätseln, die ein Spiel, einen Zombie und einen Ninja zeigen.'
+    course4:
+      image_alt: 'Eine Collage aus Code.org-Rätseln, die Fußball, Haustiere und einen Künstler zeigen.'
+    coursea:
+      image_alt: 'Eine Collage aus Code.org-Rätseln, die einen Elefanten und ein Eichhörnchen zeigen.'
+    courseb:
+      image_alt: 'Eine Collage aus Code.org-Rätseln, die einen Entdecker, Edelsteine und eine Blume zeigt.'
+    coursec:
+      image_alt: 'Eine Collage aus Code.org-Rätseln mit einem Eichhörnchen, Binärzahlen und einem roten Vogel aus dem Spiel Angry Birds.'
+    coursed:
+      image_alt: 'Eine Collage aus Code.org-Rätseln mit einer Biene, Blumen, Honig und einem grünen Schwein aus dem Spiel Angry Birds.'
+    coursee:
+      image_alt: 'Eine Collage aus Code.org-Rätseln, die eine Person zeigt, die eine Schaufel, einen Kürbis, einen Obstgarten und eine Kuh hält.'
+    coursef:
+      image_alt: 'Eine Collage aus Code.org-Rätseln, die farbenfrohe geometrische Formen, einen roten Piraten und einen Künstler zeigt.'
     dance-2019:
       title: 'Tanzparty'
+      image_alt: 'Eine fröhliche Katze, ein Faultier und ein Hai beim Tanzen.'
+    dance-2022:
+      image_alt: 'Ein grünes Alien und ein Roboter tanzen mit Saturn im Hintergrund.'
     dance:
       title: 'Tanzparty'
+      image_alt: 'Eine coole Katze und ein fröhlicher Hai, die auf einer Party tanzen.'
+    donate:
+      image_alt: 'Ein Kind zeigt auf einen Laptop-Bildschirm und zeigt ein Code.org-Rätsel.'
+    elementary:
+      image_alt: 'Eine Hummel und ein Eichhörnchen stehen auf einem Feld vor einem Regenbogen.'
+    express:
+      image_alt: 'Plants vs Zombies Zombie und Pflanze, die neben Flappy Bird stehen.'
     flappy:
       title: 'Flappy Code'
       body: 'Schreibe dein eigenes Spiel in weniger als 10 Minuten! Probiere unsere Flappy-Code-Anleitung!'
+      image_alt: 'Ein gelber Vogel, der zwischen grünen Rohren fliegt.'
     frozen:
       title: "Die Eiskönigin"
+      image_alt: 'Anna und Elsa aus dem Film Die Eiskönigin. Zwischen ihnen befindet sich ein Bild von Anna, die mit ihren Schlittschuhen eine hübsche Form ins Eis zeichnet.'
     gallery:
       title: "Galerie"
       body: "Sieh dir eine Ausstellung von Anwendungen und Künstlerbildern an, die von unseren Nutzern erstellt wurden"
+      image_alt: 'Ein Künstler, der viele Kreise zeichnet, und eine Katze, eine Fledermaus und ein Geist stehen in einem Weihnachtsjahrmarkt.'
     gamelab:
       title: "Spielelabor"
       body: "Spielelabor ist eine Programmierumgebung, in der Sie einfache Animationen und Spiele mit Objekten und Charakteren, die miteinander interagieren, erstellen können."
       audience: "Ab 13 Jahren"
       cta: "Lerne wie"
+      image_alt: 'Viele Cartoon-Menschen und Tiere stehen auf einem Bürgersteig und lächeln.'
+    hello-world-food:
+      image_alt: 'Viele Tiere, Aliens und Emojis umkreisen die Erde.'
     hello-world:
       title: 'Hallo Welt'
       body: 'Wähle aus unseren lustigen Themen aus und programmiere interaktiver Charakter in einer Welt, die du erschaffen hast.'
     hero:
       title: "Minecraft"
       body: "Minecraft präsentiert eine brandneue Aktivität zur Hour of Code! Entdecke die Welt von Minecraft mit Code."
+      image_alt: 'Ein Eisengolem aus Minecraft steht vor einer Ansicht von oben, in der Anna ein Rätsel löst.'
     hoc-encryption:
       title: "Einfache Verschlüsselung"
       body: "Schüler lernen Techniken um verschlüsselte Nachrichten zu erstellen und zu knacken."
+      image_alt: 'Ein Balkendiagramm der Buchstabenfrequenzen in englischer Sprache.'
     hoc:
       title: 'Klassisches Labyrinth'
       body: 'Lerne die Grundlagen der Informatik kennen. Millionen Menschen haben es schon ausprobiert.'
+      image_alt: 'Eine Collage aus Bildern, die Code, Mark Zuckerberg und Angry Birds zeigen.'
+    hourofcode:
+      image_alt: 'Eine Collage aus Bildern, die Code, Mark Zuckerberg und Angry Birds zeigen.'
     hoc2014:
       try_new_tutorial: 'Probiere unsere neue "Hour of Code"-Anleitung im Beta-Modus aus'
       try_frozen: 'Künstler mit Anna und Elsa, aus Frozen -Die Eiskönigin'
     infinity:
       title: "Infinity Spielelabor"
       body: "Verwende das Spielelabor, um eine Geschichte oder ein Spiel mit den Disney Infinity Figuren zu erstellen."
+      image_alt: 'Fünf Charaktere aus Froze, Tangled und Big Hero 6 stehen zusammen.'
+    map:
+      image_alt: 'Ein graues Bild der Vereinigten Staaten mit etwa 20 Staaten, die lila hervorgehoben sind.'
+    mc_escape:
+      image_alt: 'Eine Minecraft-Figur mit Zylinder und Monokel, während sie eine Schatztruhe voller Smaragde öffnet.'
+    mc:
+      image_alt: 'Anna und Steve von Minecraft stehen vor einem Code.org Minecraft-Puzzle.'
     minecraft:
       title: "Minecraft"
       body: "Erkunde eine Minecraft-Welt durch programmieren"
+      image_alt: 'Anna und Steve von Minecraft stehen vor einem Code.org Minecraft-Puzzle.'
     minecraft2016:
       title: "Minecraft"
       body: "Baue ein Minecraft-Spiel. Erschaffe deine eigene Version von Hühnern, Schafen, Creepern, Zombies und mehr."
+    oceans:
+      image_alt: 'Ein Roboter im Meer, der verschiedene Meeresbewohner scannt.'
+    playlab:
+      image_alt: 'Eine Bildcollage, die eine blaue Katze, einen albernen Hund und ein prähistorisches Wiesel zeigt.'
     poem-art:
       title: 'Dichtkunst'
       body: 'Drücke dich aus! Erstelle mit Code animierte Gedichte .'
+      image_alt: 'Ein Hipster-Tintenfisch, der auf einer Bühne auftritt.'
+    pre-express-2017:
+      image_alt: 'Ein Hund und ein Einhorn stehen vor einem Baum, der aus Puzzleteilen besteht.'
+    pre-express-2018:
+      image_alt: 'Ein Hund und ein Einhorn stehen vor einem Baum, der aus Puzzleteilen besteht.'
+    pre-express-2019:
+      image_alt: 'Ein Hund und ein Einhorn stehen vor einem Baum, der aus Puzzleteilen besteht.'
+    pre-express:
+      image_alt: 'Ein Hund und ein Einhorn stehen vor einem Baum, der aus Puzzleteilen besteht.'
     sports:
       title: "Sport"
       body: "Erstelle ein Basketballspiel oder kombiniere mehrere Sportarten."
+      image_alt: 'Die NBA- und WNBA-Logos werden neben einem Fußball, einem Fußball, einem Hockey-Puck und einem Basketball angezeigt.'
     starwars:
       title: "Star Wars"
+      image_alt: 'R2-D2, Leia, Rey und BB-8 stehen in einer Wüste.'
     text-compression:
       title: "Text-Kompression"
       body: "Schüler lernen hier den Text-Kompressions Widget zu benutzen um Texte zu komprimieren indem Muster durch Symbole ersetzt werden."
+      image_alt: 'Text wird komprimiert, indem ganze Wörter durch ein einzelnes Symbol ersetzt werden.'
     weblab:
       title: "Weblabor (Beta)"
       body: "Web Lab ist eine Programmierumgebung, in der Sie einfache Webseiten mit HTML und CSS erstellen können. Entwerfen Sie Ihre Webseiten und teilen Sie die in Sekunden."
       audience: "Ab 13 Jahren"
       cta: "Lerne wie"
+      image_alt: 'Ein Computerbildschirm, auf dem HTML-Code angezeigt wird.'
     widgets:
       title: "Widgets"
       body: "Die Studenten können Konzepte aus unserem Informatikgrundkurs mit diesen digitalen Werkzeugen praktisch erproben. Verwenden Sie die Widgets einzeln oder erstellen Sie eine Lektion mit einem Konzept für Ihre Klasse."
@@ -915,6 +997,7 @@ de:
           age: 'Bitte gib dein Alter an'
           abuse_type: 'Bitte geben Sie an, wie dieser Inhalt die Nutzungsbedingungen verletzt'
           abuse_detail: 'Bitte geben Sie Details zu den gemeldeten Inhalten an'
+          captcha: 'Bitte füllen Sie das CAPTCHA aus, um diesen Inhalt zu melden.'
         abusive_url: 'URL des gemeldeten Inhalts'
         abuse_type:
           question: 'Wie verletzt dieser Inhalt die %{link_start}Nutzungsbedingungen%{link_end}?'
@@ -998,7 +1081,7 @@ de:
     windows: 'Windows (64-bit)'
     mac: 'Mac OS X'
   locked_stage: 'Der Inhalt dieser Stufe ist gegenwärtig nicht sichtbar, weil sie noch gesperrt ist. Dein Lehrer wird diese Stufe entsperren, sobald es Zeit ist daran zu arbeiten oder um deine Antworten zu überprüfen.'
-  hidden_stage: "Dein Lehrer erwartet DIch hier nicht. Bitte frage Deinen Lehrer, bei welcher Lektion Du sein solltest!"
+  hidden_stage: "Dein Lehrer erwartet Dich hier nicht. Bitte frage Deinen Lehrer, bei welcher Lektion Du sein solltest!"
   hidden_script: "Dein Lehrer hat nicht erwartet, dass du hier bist. Bitte frag Deinen Lehrer, in welcher Lerneinheit du sein solltest."
   no_course_access_student: "Du hast keinen Zugang zu diesem Kurs. Bitte frage deine Lehrperson, in welchem Kurs du sein solltest. "
   no_course_access_teacher: "Du hast keinen Zugriff auf diesen Kurs. Falls du der Meinung bist, dass du Zugriff auf diesen Kurs haben solltest, dann schreibe bitte eine E-Mail an support@code.org, sodass wir die Situation überprüfen können"
@@ -1108,6 +1191,7 @@ de:
         csf_express: 'CS Grundlagen (Pre-Express oder Express)'
         csd: 'CS Entdeckungen'
         csp: 'Informatik Grundprinzipien'
+        other: 'Andere'
         not_applicable: "Nicht anwendbar"
       email_opt_in:
         opt_in_yes: 'Ja'
@@ -1129,6 +1213,25 @@ de:
     no_teacher_email:
       body_markdown: 'Dein Konto hat keine E-Mail-Adresse. Bitte besuchen Sie Ihre [Kontoeinstellungen](%{user_registration}), um Ihre E-Mail-Adresse hinzuzufügen, bevor Sie dieses Formular ausfüllen.'
   courses_category: 'Vollständige Kurse'
+  course_offering:
+    headers:
+      favorites: 'Favoriten'
+      labs_and_skills: 'Labore und Fähigkeiten'
+      minecraft: 'Minecraft'
+      hello_world: 'Hallo Welt'
+      popular_media: 'Populäre Medien'
+      sports: 'Sport'
+      express: 'Expres'
+      csf: 'Einführung in Informatik und Programmieren'
+      csc: 'CS Connections'
+      year_long: 'Jahr lang'
+      csa_labs: 'CSA Labs'
+      self_paced: 'Im eigenen Tempo'
+      teacher_led: 'Von Lehrern geleitet'
+      collections: 'Sammlungen'
+      workshops_k5: 'K-5-Workshops'
+      summer_workshops_612: '6-12 Sommerworkshops'
+      virtual_academic_year_workshops_612: '6—12 Workshops für das virtuelle akademische Jahr'
   cookie_banner:
     message: 'Indem Sie unsere Website weiter benutzen oder auf "Ich stimme zu" klicken, stimmen Sie der Speicherung von Cookies auf Ihrem Computer oder Gerät zu.'
     more_information: "Siehe Datenschutzerklärung von Code.org."
@@ -1183,3 +1286,4 @@ de:
     bits_per_pixel_header: "Bit pro Pixel"
     binary: "Binärdatei"
     hexadecimal: "Hexadezimal"
+    pixel_format_header: "Pixelformat"

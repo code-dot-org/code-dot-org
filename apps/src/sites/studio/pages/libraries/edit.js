@@ -8,5 +8,5 @@ initializeCodeMirror('library_content', 'javascript', {
     } else {
       submitButton.removeAttribute('disabled');
     }
-  }
+  },
 });

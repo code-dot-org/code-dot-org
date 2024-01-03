@@ -9,22 +9,22 @@ const REMOVE_VOCABULARY = 'vocabulariesEditor/REMOVE_VOCABULARY';
 
 export const initVocabularies = vocabularies => ({
   type: INIT,
-  vocabularies
+  vocabularies,
 });
 
 export const addVocabulary = newVocabulary => ({
   type: ADD_VOCABULARY,
-  newVocabulary
+  newVocabulary,
 });
 
 export const updateVocabulary = updatedVocabulary => ({
   type: EDIT_VOCABULARY,
-  updatedVocabulary
+  updatedVocabulary,
 });
 
 export const removeVocabulary = key => ({
   type: REMOVE_VOCABULARY,
-  key
+  key,
 });
 
 // Verify that an array of vocabularies all match vocabularyShape

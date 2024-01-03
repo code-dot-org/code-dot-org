@@ -2,23 +2,26 @@
   "my-MM": {
     "data": {
       "lessons": {
-        "hero/Minecraft Hour of Code": {
-          "name": "Minecraft: လူစွမ်းကောင်း၏ ခရီးစဉ်"
+        "csd2-2017/Lists": {
+          "name": "စာရင်းများ"
         },
-        "flappy/Flappy Code": {
-          "name": "ဖလပ်ပီ ကုပ်"
+        "csd3-2017/Variables": {
+          "name": "Variables"
         },
-        "starwars/Hour of Code 2015": {
-          "name": "Star Wars : ကုဒ် (JavaScript) ဖြင့် Galaxy တစ်ခုကို တည်ဆောက်ခြင်း"
+        "csd2-2018/Lists": {
+          "name": "စာရင်းများ"
         },
-        "mc/Hour of Code 2015": {
-          "name": "Minecraft Hour of Code"
+        "csd3-2018/Variables": {
+          "name": "Variables"
         },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "ကွန်ပျူတာသိပ္ပံအခြေခံ။"
+        },
+        "csd2-2019/Lists": {
+          "name": "စာရင်းများ"
+        },
+        "csd3-2019/Variables": {
+          "name": "Variables"
         },
         "k5-onlinepd-2019/Loops": {
           "name": "Loops"
@@ -29,8 +32,11 @@
         "k5-onlinepd-2019/Variables": {
           "name": "Variables"
         },
-        "K5-OnlinePD/Computer Science Fundamentals": {
-          "name": "ကွန်ပျူတာသိပ္ပံအခြေခံ။"
+        "csd3-2021/Variables": {
+          "name": "Variables"
+        },
+        "csd3-2021/Text": {
+          "name": "စာ"
         },
         "kodea-pd-2021/Computer Science Fundamentals": {
           "name": "ကွန်ပျူတာသိပ္ပံအခြေခံ။"
@@ -41,32 +47,26 @@
         "csd3-2022/Text": {
           "name": "စာ"
         },
-        "csd3-2018/Variables": {
+        "csd3-2023/Variables": {
           "name": "Variables"
         },
-        "csd2-2018/Lists": {
-          "name": "စာရင်းများ"
+        "csd3-2023/Text": {
+          "name": "စာ"
         },
-        "csd3-2019/Variables": {
-          "name": "Variables"
+        "flappy/Flappy Code": {
+          "name": "ဖလပ်ပီ ကုပ်"
         },
-        "csd2-2019/Lists": {
-          "name": "စာရင်းများ"
+        "hero/Minecraft Hour of Code": {
+          "name": "Minecraft: လူစွမ်းကောင်း၏ ခရီးစဉ်"
         },
-        "csd3-2017/Variables": {
-          "name": "Variables"
+        "mc/Hour of Code 2015": {
+          "name": "Minecraft Hour of Code"
         },
-        "csd2-2017/Lists": {
-          "name": "စာရင်းများ"
+        "starwars/Hour of Code 2015": {
+          "name": "Star Wars : ကုဒ် (JavaScript) ဖြင့် Galaxy တစ်ခုကို တည်ဆောက်ခြင်း"
         },
         "allthethings/Web Lab": {
           "name": "Web Lab"
-        },
-        "csd3-2021/Variables": {
-          "name": "Variables"
-        },
-        "csd3-2021/Text": {
-          "name": "စာ"
         }
       }
     }

@@ -48,3 +48,47 @@ id:
           description_short: Kursus pengantar ilmu komputer yang memacu murid untuk menciptakan hasil karya yang autentik.
           description_student: Computer Science Discoveries (CS Discoveries) adalah kursus pengantar ilmu komputer yang memacu murid untuk menciptakan hasil karya autentik dan menggeluti ilmu komputer sebagai media kreativitas, komunikasi, pemecahan masalah, dan aktivitas yang menyenangkan.
           description_teacher: Computer Science Discoveries (CS Discoveries) adalah kursus pengantar ilmu komputer yang memacu murid untuk menciptakan hasil karya autentik dan menggeluti ilmu komputer sebagai media kreativitas, komunikasi, pemecahan masalah, dan aktivitas yang menyenangkan.
+        csd-pilot:
+          title: Kursus Percontohan CSD
+          description_student: Computer Science Discoveries (CS Discoveries) adalah kursus pengantar ilmu komputer yang memacu murid untuk menciptakan hasil karya autentik dan menggeluti ilmu komputer sebagai media kreativitas, komunikasi, pemecahan masalah, dan aktivitas yang menyenangkan.
+        csp-2020:
+          description_short: Pelajari konsep-konsep ilmu komputer dasar.
+        csd-2020:
+          description_short: Kursus pengantar ilmu komputer yang memacu murid untuk menciptakan hasil karya yang autentik.
+          description_student: Computer Science Discoveries (CS Discoveries) adalah kursus pengantar ilmu komputer yang memacu murid untuk menciptakan hasil karya autentik dan menggeluti ilmu komputer sebagai media kreativitas, komunikasi, pemecahan masalah, dan aktivitas yang menyenangkan.
+          description_teacher: Computer Science Discoveries (CS Discoveries) adalah kursus pengantar ilmu komputer yang memacu murid untuk menciptakan hasil karya autentik dan menggeluti ilmu komputer sebagai media kreativitas, komunikasi, pemecahan masalah, dan aktivitas yang menyenangkan.
+        csp-2021:
+          description_short: Pelajari konsep-konsep ilmu komputer dasar.
+        mike-test:
+          title: Computer Science Fundamentals
+        csa-pilot-facilitator:
+          title: CSA Pilot Facilitators
+        csp-2022:
+          description_short: Pelajari konsep-konsep ilmu komputer dasar.
+        csp-2023:
+          description_short: Pelajari konsep-konsep ilmu komputer dasar.
+        csd-2023:
+          title: Computer Science Discoveries
+        self-paced-pl-csd-unit2-2023:
+          title: Mengajarkan Pengembangan Web
+    resources:
+      curriculum/csd/2017:
+        name: Kurikulum
+      teacher_forum_6/csd/2017:
+        name: Forum guru
+      curriculum/csd/2018:
+        name: Kurikulum
+      teacher_forum_6/csd/2018:
+        name: Forum guru
+      curriculum/csd/2019:
+        name: Kurikulum
+      teacher_forum/csd/2019:
+        name: Forum guru
+      curriculum/csd/2020:
+        name: Kurikulum
+      teacher_forum/csd/2020:
+        name: Forum guru
+      getting_started_with_csd/csd/2021:
+        name: Memulai CSD
+      csd_guide_to_curriculum_videos/csd/2023:
+        url: https://docs.google.com/document/d/1BHnI8-X3arZcqgNmggNxTMHqpQcVk3MX-t3e_8TVEzw

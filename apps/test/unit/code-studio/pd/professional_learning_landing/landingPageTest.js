@@ -3,7 +3,7 @@ import {shallow, mount} from 'enzyme';
 import i18n from '@cdo/locale';
 import {expect} from '../../../../util/reconfiguredChai';
 import LandingPage, {
-  LastWorkshopSurveyBanner
+  LastWorkshopSurveyBanner,
 } from '@cdo/apps/code-studio/pd/professional_learning_landing/LandingPage';
 import Button from '@cdo/apps/templates/Button';
 
@@ -17,7 +17,7 @@ describe('Tests for Professional Learning Landing Page', () => {
       const landingPage = generateLandingPage({
         lastWorkshopSurveyUrl: 'url',
         lastWorkshopSurveyCourse: 'CS Fundamentals',
-        deeperLearningCourseData: [{data: 'oh yeah'}]
+        deeperLearningCourseData: [{data: 'oh yeah'}],
       });
 
       expect(landingPage.childAt(2).is('LastWorkshopSurveyBanner')).to.be.true;
@@ -33,16 +33,12 @@ describe('Tests for Professional Learning Landing Page', () => {
       const landingPage = generateLandingPage({
         lastWorkshopSurveyUrl: 'url',
         lastWorkshopSurveyCourse: 'CS Discoveries',
-        deeperLearningCourseData: [{data: 'oh yeah'}]
+        deeperLearningCourseData: [{data: 'oh yeah'}],
       });
 
       expect(landingPage.childAt(2).is('LastWorkshopSurveyBanner')).to.be.true;
       expect(
-        landingPage
-          .childAt(2)
-          .shallow()
-          .text()
-          .indexOf('Submit your feedback')
+        landingPage.childAt(2).shallow().text().indexOf('Submit your feedback')
       ).to.equal(-1);
       expect(landingPage.childAt(3).is('EnrolledWorkshops')).to.be.true;
       expect(landingPage.childAt(4).is('ProfessionalLearningCourseProgress')).to
@@ -51,7 +47,7 @@ describe('Tests for Professional Learning Landing Page', () => {
 
     it('page is as expected for a teacher with no pending survey but upcoming workshops and plc enrollments', () => {
       const landingPage = generateLandingPage({
-        deeperLearningCourseData: [{data: 'oh yeah'}]
+        deeperLearningCourseData: [{data: 'oh yeah'}],
       });
 
       expect(landingPage.childAt(2).is('EnrolledWorkshops')).to.be.true;

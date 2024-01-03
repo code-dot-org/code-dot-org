@@ -23,7 +23,6 @@ experiments.REDUX_LOGGING = 'reduxLogging';
 experiments.SCHOOL_AUTOCOMPLETE_DROPDOWN_NEW_SEARCH =
   'schoolAutocompleteDropdownNewSearch';
 experiments.SHOW_UNPUBLISHED_FIREBASE_TABLES = 'showUnpublishedFirebaseTables';
-experiments.MICROBIT = 'microbit';
 experiments.TEACHER_DASHBOARD_SECTION_BUTTONS =
   'teacher-dashboard-section-buttons';
 experiments.TEACHER_DASHBOARD_SECTION_BUTTONS_ALTERNATE_TEXT =
@@ -39,6 +38,20 @@ experiments.OPT_IN_EMAIL_REG_PARTNER = 'optInEmailRegPartner';
 // for Sprite Lab animations
 experiments.BACKGROUNDS_AND_UPLOAD = 'backgroundsTab';
 experiments.SECTION_SETUP_REFRESH = 'sectionSetupRefresh';
+// Experiment for testing Blockly workspace serialization with the JSON system.
+experiments.BLOCKLY_JSON = 'blocklyJson';
+// Experiment for showing the gender field
+experiments.GENDER_FEATURE_ENABLED = 'gender';
+// Experiment for enabling the CPA lockout
+experiments.CPA_EXPERIENCE = 'cpa_experience';
+experiments.AI_RUBRICS = 'ai-rubrics';
+experiments.NON_AI_RUBRICS = 'non-ai-rubrics';
+//Experiment for AI Rubrics redesign
+experiments.AI_RUBRICS_REDESIGN = 'ai-rubrics-redesign';
+// Experiment for showing the toggle a teacher can use to turn on AI Tutor for their section
+experiments.AI_TUTOR_ACCESS = 'ai-tutor';
+// Uses Google Blockly for a given user across labs/levels until the experiment is disabled
+experiments.GOOGLE_BLOCKLY = 'google_blockly';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,
@@ -50,16 +63,16 @@ experiments.BUBBLE_DIALOG = 'bubbleDialog';
 /**
  * Get our query string. Provided as a method so that tests can mock this.
  */
-experiments.getQueryString_ = function() {
+experiments.getQueryString_ = function () {
   return window.location.search;
 };
 
-experiments.getStoredExperiments_ = function() {
+experiments.getStoredExperiments_ = function () {
   // Get experiments on current user from experiments cookie
   const experimentsCookie = Cookie.get('_experiments' + window.cookieEnvSuffix);
   const userExperiments = experimentsCookie
     ? JSON.parse(decodeURIComponent(experimentsCookie)).map(name => ({
-        key: name
+        key: name,
       }))
     : [];
 
@@ -83,11 +96,11 @@ experiments.getStoredExperiments_ = function() {
   }
 };
 
-experiments.getEnabledExperiments = function() {
+experiments.getEnabledExperiments = function () {
   return this.getStoredExperiments_().map(experiment => experiment.key);
 };
 
-experiments.setEnabled = function(key, shouldEnable, expiration = undefined) {
+experiments.setEnabled = function (key, shouldEnable, expiration = undefined) {
   const allEnabled = this.getStoredExperiments_();
   const experimentIndex = allEnabled.findIndex(
     experiment => experiment.key === key
@@ -109,11 +122,32 @@ experiments.setEnabled = function(key, shouldEnable, expiration = undefined) {
 };
 
 /**
- * Checks whether provided experiment is enabled or not
+ * Checks for the experiment while allowing for a simpler query string
+ * parameter to enable the experiment. For instance, if `key` is "foo",
+ * the experiment is allowed by any other means but also if `?foo=1` is
+ * specified in the current URL.
  * @param {string} key - Name of experiment in question
  * @returns {bool}
  */
-experiments.isEnabled = function(key) {
+experiments.isEnabledAllowingQueryString = function (key) {
+  const query = queryString.parse(this.getQueryString_());
+
+  // Look for ?my_experiment=1 style experiment keys
+  if (query[key]) {
+    // We enable when any query string matches, but do not
+    // set it in the session storage.
+    return true;
+  }
+
+  return experiments.isEnabled(key);
+};
+
+/**
+ * Checks whether provided experiment is enabled or not.
+ * @param {string} key - Name of experiment in question
+ * @returns {bool}
+ */
+experiments.isEnabled = function (key) {
   const storedExperiments = this.getStoredExperiments_();
   let enabled =
     storedExperiments.some(experiment => experiment.key === key) ||

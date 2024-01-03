@@ -106,9 +106,7 @@ end
 
 # Returns the YouTube code
 def upload_to_youtube(service, filename, title, upload_files)
-  if !upload_files
-    'youtube_code'
-  else
+  if upload_files
     properties = {
       snippet: {
         category_id: '22',
@@ -122,6 +120,8 @@ def upload_to_youtube(service, filename, title, upload_files)
     part = 'snippet,status'
     response = service.insert_video(part, properties, params)
     response.id
+  else
+    'youtube_code'
   end
 end
 

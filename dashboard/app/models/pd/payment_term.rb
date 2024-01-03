@@ -44,8 +44,8 @@ class Pd::PaymentTerm < ApplicationRecord
     # First - look for the given date range. So all terms with start date <= workshop
     # date, and either nil end_date or end_date in the future
     payment_terms = where(regional_partner: workshop.regional_partner).
-        where('start_date <= ?', workshop.workshop_starting_date).
-        where('end_date > ? or end_date IS NULL', workshop.workshop_starting_date)
+      where('start_date <= ?', workshop.workshop_starting_date).
+      where('end_date > ? or end_date IS NULL', workshop.workshop_starting_date)
 
     # Now, look for ones with the course that matches. If there are none, fall back to nil
     payment_terms_for_course = payment_terms.where(course: workshop.course)
@@ -71,15 +71,13 @@ class Pd::PaymentTerm < ApplicationRecord
     start_date..(end_date || Date::Infinity.new)
   end
 
-  private
-
-  def sufficient_contract_terms
+  private def sufficient_contract_terms
     unless per_attendee_payment? || fixed_payment
       errors.add(:base, 'Must have either per attendee payment or fixed payment')
     end
   end
 
-  def truncate_previous_term
+  private def truncate_previous_term
     extant_payment_terms = Pd::PaymentTerm.where(
       regional_partner: regional_partner,
       course: course,

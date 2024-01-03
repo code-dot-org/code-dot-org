@@ -1,9 +1,14 @@
-import {InsertEffects} from './soundEffects';
+import SoundEffects from './soundEffects';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
 // audio
 var audioContext = null;
 
-// var soundSourceIdUpto = 0;
+var soundEffects = null;
+
+// Time constant used to compute the release rate; at each time constant
+// interval the sound will decay exponentially.
+const RELEASE_TIME_CONSTANT = 0.075;
 
 function createAudioContext(desiredSampleRate) {
   var AudioCtor = window.AudioContext || window.webkitAudioContext;
@@ -33,16 +38,29 @@ function createAudioContext(desiredSampleRate) {
   return context;
 }
 
-function WebAudio() {
+/**
+ * @param {*} options Optional audio system configuration.
+ *   {
+ *     delayTimeSeconds: number, // Delay time used in the delay effect
+ *     releaseTimeSeconds: number // Release time for fading out fixed-duration sounds
+ *   }
+ */
+function WebAudio(options) {
+  const {delayTimeSeconds, releaseTimeSeconds} = options;
   try {
     audioContext = createAudioContext(48000);
   } catch (e) {
-    console.log('Web Audio API is not supported in this browser');
-    audioContext = null;
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .logError('Web Audio API is not supported in this browser', e);
+    throw e;
   }
+
+  soundEffects = new SoundEffects(audioContext, delayTimeSeconds);
+  this.releaseTimeSeconds = releaseTimeSeconds;
 }
 
-WebAudio.prototype.getCurrentTime = function() {
+WebAudio.prototype.getCurrentTime = function () {
   if (audioContext) {
     return audioContext.currentTime;
   } else {
@@ -50,75 +68,100 @@ WebAudio.prototype.getCurrentTime = function() {
   }
 };
 
-WebAudio.prototype.LoadSound = function(url, callback) {
+WebAudio.prototype.LoadSound = function (url, callback, onLoadFinished) {
   var request = new XMLHttpRequest();
   request.open('GET', url, true);
   request.responseType = 'arraybuffer';
 
-  //console.log("loading sound", url);
-
   // Decode asynchronously
-  request.onload = function() {
+  request.onload = function () {
     try {
       audioContext.decodeAudioData(
         request.response,
-        function(buffer) {
+        function (buffer) {
           callback(buffer);
+          onLoadFinished();
         },
-        function(e) {
-          console.log('error ' + e);
+        function (e) {
+          Lab2Registry.getInstance()
+            .getMetricsReporter()
+            .logError('Error decoding audio data', e, {url});
+          onLoadFinished();
         }
       );
     } catch (e) {
-      console.log('failed to decode');
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .logError('Error decoding audio data', e, {url});
+      onLoadFinished();
     }
   };
   request.send();
 };
 
-WebAudio.prototype.LoadSoundFromBuffer = function(buffer, callback) {
+WebAudio.prototype.LoadSoundFromBuffer = function (buffer, callback) {
   try {
     audioContext.decodeAudioData(
       buffer,
-      function(buffer) {
+      function (buffer) {
         callback(buffer);
       },
-      function(e) {
+      function (e) {
         console.log('error ', e);
       }
     );
   } catch (e) {
-    console.log('failed to decode', e);
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .logError('Error loading sound from buffer', e);
   }
 };
 
-WebAudio.prototype.PlaySoundByBuffer = function(
+WebAudio.prototype.StartPlayback = function () {
+  if (['suspended', 'interrupted'].includes(audioContext.state)) {
+    audioContext.resume();
+  }
+};
+
+WebAudio.prototype.PlaySoundByBuffer = function (
   audioBuffer,
   id,
   when,
   loop,
   effects,
-  callback
+  callback,
+  duration
 ) {
-  var source = audioContext.createBufferSource(); // creates a sound source
+  const source = audioContext.createBufferSource(); // creates a sound source
   source.buffer = audioBuffer; // tell the source which sound to play
+  let currentNode = source;
 
-  let lastNode;
-  if (effects) {
-    // Insert effects, attaching them to source.
-    lastNode = InsertEffects(audioContext, effects, source);
-  } else {
-    lastNode = source;
+  if (duration) {
+    // If playing for a specific duration, apply a small fadeout to the sound
+    // to prevent clicks and pops
+    const gainNode = audioContext.createGain();
+    const releaseDuration = this.releaseTimeSeconds;
+    gainNode.gain.setTargetAtTime(
+      0,
+      when + duration - releaseDuration,
+      RELEASE_TIME_CONSTANT
+    );
+    source.connect(gainNode);
+    currentNode = gainNode;
   }
 
-  // Connect the last node to output.
-  lastNode.connect(audioContext.destination);
-
+  if (effects) {
+    // Insert sound effects, which will connect to the output.
+    soundEffects.insertEffects(effects, currentNode);
+  } else {
+    // No sound effects, so we will connect directly to the output.
+    currentNode.connect(audioContext.destination);
+  }
   source.onended = callback.bind(this, id);
 
   source.loop = loop;
 
-  source.start(when); // play the source now
+  source.start(when, 0, duration); // play the source now
 
   if (['suspended', 'interrupted'].includes(source.context.state)) {
     source.context.resume();
@@ -127,7 +170,7 @@ WebAudio.prototype.PlaySoundByBuffer = function(
   return source;
 };
 
-WebAudio.prototype.StopSoundBySource = function(source) {
+WebAudio.prototype.StopSoundBySource = function (source) {
   // todo: investigate whether this condition is needed/useful
   // across browsers.
 

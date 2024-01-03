@@ -14,7 +14,7 @@ describe('RelatedLessons', () => {
           lockable: false,
           relativePosition: 3,
           id: 123,
-          editUrl: '/lessons/123/edit'
+          editUrl: '/lessons/123/edit',
         },
         {
           unitTitle: 'Express (2019)',
@@ -22,16 +22,16 @@ describe('RelatedLessons', () => {
           lockable: null,
           relativePosition: 2,
           id: 456,
-          editUrl: '/lessons/456/edit'
+          editUrl: '/lessons/456/edit',
         },
         {
           unitTitle: 'Course 1',
           lockable: null,
           relativePosition: 4,
           id: 789,
-          editUrl: '/lessons/789/edit'
-        }
-      ]
+          editUrl: '/lessons/789/edit',
+        },
+      ],
     };
   });
 

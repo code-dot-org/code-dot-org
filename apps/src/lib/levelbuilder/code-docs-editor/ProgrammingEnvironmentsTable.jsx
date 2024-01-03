@@ -8,7 +8,7 @@ import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 const destroyEnvironment = (destroyPath, successCallback, failureCallback) => {
   fetch(destroyPath, {
     method: 'DELETE',
-    headers: {'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')}
+    headers: {'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')},
   }).then(response => {
     if (response.ok) {
       successCallback();
@@ -20,7 +20,7 @@ const destroyEnvironment = (destroyPath, successCallback, failureCallback) => {
 
 export default function ProgrammingEnvironmentsTable({
   programmingEnvironments,
-  hidden
+  hidden,
 }) {
   const [itemToDelete, setItemToDelete] = useState(null);
   const [currentEnvironments, setCurrentEnvironments] = useState(
@@ -64,34 +64,34 @@ export default function ProgrammingEnvironmentsTable({
         header: {
           label: 'Actions',
           props: {
-            style: {width: '10%'}
-          }
+            style: {width: '10%'},
+          },
         },
         cell: {
-          formatters: [actionsCellFormatter]
-        }
+          formatters: [actionsCellFormatter],
+        },
       },
       {
         property: 'name',
         header: {
-          label: 'Name'
-        }
+          label: 'Name',
+        },
       },
       {
         property: 'title',
         header: {
-          label: 'Title'
-        }
+          label: 'Title',
+        },
       },
       {
         property: 'published',
         header: {
-          label: 'Published?'
+          label: 'Published?',
         },
         cell: {
-          formatters: [publishedFormatter]
-        }
-      }
+          formatters: [publishedFormatter],
+        },
+      },
     ];
   };
   if (hidden) {
@@ -129,13 +129,13 @@ export default function ProgrammingEnvironmentsTable({
 
 ProgrammingEnvironmentsTable.propTypes = {
   programmingEnvironments: PropTypes.arrayOf(PropTypes.object),
-  hidden: PropTypes.bool
+  hidden: PropTypes.bool,
 };
 
 const styles = {
   actionsColumn: {
     display: 'flex',
     justifyContent: 'flex-start',
-    backgroundColor: 'white'
-  }
+    backgroundColor: 'white',
+  },
 };

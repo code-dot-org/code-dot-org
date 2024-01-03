@@ -8,7 +8,7 @@ describe('MakerLanding', () => {
       assignableName: 'Maker',
       lessonName: 'Maker Lesson',
       linkToOverview: 'fakelink.com',
-      linkToLesson: 'fakelink2.com'
+      linkToLesson: 'fakelink2.com',
     };
 
     shallow(<MakerLanding topCourse={fakeTopCourse} />);

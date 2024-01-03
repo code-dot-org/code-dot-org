@@ -1,54 +1,29 @@
 {
-  "navigateForward": "Continuă",
-  "navigateBack": "Înapoi",
-  "tryAgain": "Încearcă din nou",
-  "navigateDone": "Sfârsit",
-  "saveProgress": "Salvează",
-  "correctAnswer": "Corect",
-  "incorrectAnswer": "Incorect",
-  "modelCardPossibleValuesMinimum": "min",
-  "modelCardPossibleValuesMaximum": "max",
-  "columnInspectorDescription": "Descriere",
-  "columnDetailsMinimumValue": "min",
   "columnDetailsMaximumValue": "max",
+  "columnDetailsMinimumValue": "min",
+  "columnInspectorDescription": "Descriere",
+  "correctAnswer": "Corect",
   "dataCardLastUpdated": "Ultima actualizare",
   "datasets": {
-    "medical_priority": {
+    "abalone": {
+      "card": {
+        "context": {
+          "potentialMisuses": "[șir gol]"
+        }
+      },
       "fields": {
-        "age": {
-          "id": "vârsta"
+        "Height": {
+          "id": "Înălțime"
+        },
+        "Length": {
+          "id": "Durată"
         }
       }
     },
-    "shoe_survey_toy": {
-      "fields": {
-        "weather": {
-          "id": "vreme"
-        },
-        "day": {
-          "id": "zi"
-        },
-        "shoe": {
-          "id": "pantof"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "onion": {
-          "id": "ceapă"
-        },
-        "avocado": {
-          "id": "avocado"
-        },
-        "corn": {
-          "id": "porumb"
-        },
-        "beans": {
-          "id": "fasole"
-        },
-        "lime": {
-          "id": "lime"
+    "basketball_shots": {
+      "card": {
+        "context": {
+          "potentialMisuses": "[șir gol]"
         }
       }
     },
@@ -57,106 +32,10 @@
         "context": {
           "potentialMisuses": "[șir gol]"
         }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "mushrooms": {
-          "id": "ciuperci"
-        },
-        "lobster": {
-          "id": "homar"
-        },
-        "bacon": {
-          "id": "slănină"
-        },
-        "cheese": {
-          "id": "brânză"
-        },
-        "meat": {
-          "id": "carne"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "culoare"
-        },
-        "music": {
-          "id": "muzică"
-        },
-        "food": {
-          "id": "mâncare"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "vârsta"
-        }
       },
-      "card": {
-        "context": {
-          "potentialMisuses": "[șir gol]"
-        }
-      }
-    },
-    "nutrition": {
       "fields": {
-        "Category": {
-          "id": "Categorie"
-        },
-        "Description": {
-          "id": "Descriere"
-        }
-      },
-      "card": {
-        "context": {
-          "potentialMisuses": "[șir gol]"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "strawberry": {
-          "id": "căpșună"
-        },
-        "lime": {
-          "id": "lime"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "sides": {
-          "id": "laturi"
-        },
-        "size": {
-          "id": "dimensiune"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "tomato": {
-          "id": "roșie"
-        },
-        "avocado": {
-          "id": "avocado"
-        },
-        "chicken": {
-          "id": "gaina"
-        },
-        "fruit": {
-          "id": "fruct"
-        },
-        "beans": {
-          "id": "fasole"
-        },
-        "cheese": {
-          "id": "brânză"
+        "Month": {
+          "id": "Lună"
         }
       }
     },
@@ -170,38 +49,10 @@
         }
       }
     },
-    "student_alcohol_consumption": {
+    "boba_toy": {
       "fields": {
-        "school": {
-          "id": "școală"
-        },
-        "age": {
-          "id": "vârsta"
-        },
-        "health": {
-          "id": "sănătate"
-        }
-      },
-      "card": {
-        "context": {
-          "potentialUses": "[șir gol]",
-          "potentialMisuses": "[șir gol]"
-        }
-      }
-    },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "gaina"
-        },
-        "lamb": {
-          "id": "miel"
-        },
-        "onion": {
-          "id": "ceapă"
-        },
-        "cheese": {
-          "id": "brânză"
+        "banana": {
+          "id": "banane"
         }
       }
     },
@@ -209,6 +60,50 @@
       "fields": {
         "age": {
           "id": "vârsta"
+        }
+      }
+    },
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "culoare"
+        },
+        "food": {
+          "id": "mâncare"
+        },
+        "music": {
+          "id": "muzică"
+        }
+      }
+    },
+    "heart": {
+      "card": {
+        "context": {
+          "potentialMisuses": "[șir gol]"
+        }
+      },
+      "fields": {
+        "Age": {
+          "id": "Vârsta"
+        }
+      }
+    },
+    "insurance_cost": {
+      "card": {
+        "context": {
+          "potentialMisuses": "[șir gol]"
+        }
+      },
+      "fields": {
+        "age": {
+          "id": "vârsta"
+        }
+      }
+    },
+    "jeans": {
+      "card": {
+        "context": {
+          "potentialMisuses": "[șir gol]"
         }
       }
     },
@@ -222,78 +117,75 @@
         }
       }
     },
-    "movies": {
+    "loneliness_music": {
       "fields": {
-        "Score": {
-          "id": "Scor"
+        "Country": {
+          "id": "Ţară"
         },
+        "Dance": {
+          "id": "Dans"
+        },
+        "Music": {
+          "id": "Muzică"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "vârsta"
+        }
+      }
+    },
+    "movies": {
+      "card": {
+        "context": {
+          "potentialMisuses": "[șir gol]"
+        }
+      },
+      "fields": {
         "Country": {
           "id": "Ţară"
         },
         "Name": {
           "id": "Nume"
         },
+        "Score": {
+          "id": "Scor"
+        },
         "Star": {
           "id": "Stea"
         }
-      },
-      "card": {
-        "context": {
-          "potentialMisuses": "[șir gol]"
+      }
+    },
+    "naan_toy": {
+      "fields": {
+        "cheese": {
+          "id": "brânză"
+        },
+        "chicken": {
+          "id": "gaina"
+        },
+        "lamb": {
+          "id": "miel"
+        },
+        "onion": {
+          "id": "ceapă"
         }
       }
     },
-    "songs": {
-      "fields": {
-        "Artist": {
-          "id": "Artist"
-        }
-      },
+    "nutrition": {
       "card": {
         "context": {
           "potentialMisuses": "[șir gol]"
         }
-      }
-    },
-    "safari_toy": {
-      "fields": {
-        "people": {
-          "id": "persoane"
-        },
-        "rhino": {
-          "id": "rinocer"
-        },
-        "elephant": {
-          "id": "elefant"
-        },
-        "alligator": {
-          "id": "crocodil"
-        },
-        "trees": {
-          "id": "copaci"
-        }
       },
-      "name": "Safari"
-    },
-    "abalone": {
       "fields": {
-        "Length": {
-          "id": "Durată"
+        "Category": {
+          "id": "Categorie"
         },
-        "Height": {
-          "id": "Înălțime"
-        }
-      },
-      "card": {
-        "context": {
-          "potentialMisuses": "[șir gol]"
-        }
-      }
-    },
-    "basketball_shots": {
-      "card": {
-        "context": {
-          "potentialMisuses": "[șir gol]"
+        "Description": {
+          "id": "Descriere"
         }
       }
     },
@@ -302,64 +194,101 @@
         "avocado": {
           "id": "avocado"
         },
-        "onion": {
-          "id": "ceapă"
-        },
         "ginger": {
           "id": "ghimbir"
+        },
+        "onion": {
+          "id": "ceapă"
         }
       }
     },
-    "student_survey": {
+    "poutine_toy": {
       "fields": {
-        "Music": {
-          "id": "Muzică"
+        "bacon": {
+          "id": "slănină"
         },
-        "Dance": {
-          "id": "Dans"
+        "cheese": {
+          "id": "brânză"
         },
-        "Country": {
-          "id": "Ţară"
+        "lobster": {
+          "id": "homar"
         },
-        "Internet": {
-          "id": "Internet"
+        "meat": {
+          "id": "carne"
         },
-        "Writing": {
-          "id": "Scriere"
-        },
-        "Achievements": {
-          "id": "Realizări"
-        },
-        "Age": {
-          "id": "Vârsta",
-          "description": "Vârsta"
-        },
-        "Height": {
-          "id": "Înălțime",
-          "description": "Înălțime"
-        },
-        "Gender": {
-          "id": "Sex",
-          "description": "Sex"
+        "mushrooms": {
+          "id": "ciuperci"
         }
       }
     },
-    "boba_toy": {
+    "raspado_toy": {
       "fields": {
-        "banana": {
-          "id": "banane"
+        "lime": {
+          "id": "lime"
+        },
+        "strawberry": {
+          "id": "căpșună"
         }
       }
     },
-    "heart": {
+    "safari_toy": {
       "fields": {
-        "Age": {
-          "id": "Vârsta"
+        "alligator": {
+          "id": "crocodil"
+        },
+        "elephant": {
+          "id": "elefant"
+        },
+        "people": {
+          "id": "persoane"
+        },
+        "rhino": {
+          "id": "rinocer"
+        },
+        "trees": {
+          "id": "copaci"
         }
       },
-      "card": {
-        "context": {
-          "potentialMisuses": "[șir gol]"
+      "name": "Safari"
+    },
+    "salad_toy": {
+      "fields": {
+        "avocado": {
+          "id": "avocado"
+        },
+        "beans": {
+          "id": "fasole"
+        },
+        "cheese": {
+          "id": "brânză"
+        },
+        "chicken": {
+          "id": "gaina"
+        },
+        "fruit": {
+          "id": "fruct"
+        },
+        "tomato": {
+          "id": "roșie"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "avocado": {
+          "id": "avocado"
+        },
+        "beans": {
+          "id": "fasole"
+        },
+        "corn": {
+          "id": "porumb"
+        },
+        "lime": {
+          "id": "lime"
+        },
+        "onion": {
+          "id": "ceapă"
         }
       }
     },
@@ -373,25 +302,109 @@
         }
       }
     },
-    "jeans": {
+    "shapes_v2_toy": {
+      "fields": {
+        "sides": {
+          "id": "laturi"
+        },
+        "size": {
+          "id": "dimensiune"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "zi"
+        },
+        "shoe": {
+          "id": "pantof"
+        },
+        "weather": {
+          "id": "vreme"
+        }
+      }
+    },
+    "songs": {
       "card": {
         "context": {
           "potentialMisuses": "[șir gol]"
         }
+      },
+      "fields": {
+        "Artist": {
+          "id": "Artist"
+        }
       }
     },
-    "loneliness_music": {
+    "student_alcohol_consumption": {
+      "card": {
+        "context": {
+          "potentialMisuses": "[șir gol]",
+          "potentialUses": "[șir gol]"
+        }
+      },
       "fields": {
-        "Music": {
-          "id": "Muzică"
+        "age": {
+          "id": "vârsta"
+        },
+        "health": {
+          "id": "sănătate"
+        },
+        "school": {
+          "id": "școală"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "Realizări"
+        },
+        "Age": {
+          "description": "Vârsta",
+          "id": "Vârsta"
+        },
+        "Country": {
+          "id": "Ţară"
         },
         "Dance": {
           "id": "Dans"
         },
-        "Country": {
-          "id": "Ţară"
+        "Gender": {
+          "description": "Sex",
+          "id": "Sex"
+        },
+        "Height": {
+          "description": "Înălțime",
+          "id": "Înălțime"
+        },
+        "Internet": {
+          "id": "Internet"
+        },
+        "Music": {
+          "id": "Muzică"
+        },
+        "Writing": {
+          "id": "Scriere"
+        }
+      }
+    },
+    "zoo": {
+      "fields": {
+        "Aquatic": {
+          "id": "Acvatic"
         }
       }
     }
-  }
+  },
+  "incorrectAnswer": "Incorect",
+  "modelCardPossibleValuesMaximum": "max",
+  "modelCardPossibleValuesMinimum": "min",
+  "navigateBack": "Înapoi",
+  "navigateDone": "Sfârsit",
+  "navigateForward": "Continuă",
+  "saveProgress": "Salvează",
+  "tryAgain": "Încearcă din nou",
+  "uniqueOptionsWarningNotice": "Notă"
 }

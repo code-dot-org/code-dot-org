@@ -37,6 +37,7 @@ uz:
       Challenges: Chaqiriqlar
       Change: O'zgarish
       Changing Sensor Scale: Sensor Shkalasini o'zgartirish
+      Check for Understanding: Tushunishni tekshiring
       Checking for a Winner: G'olibni tekshirish
       Code Your Own Flappy Game: O'z Flappy o'yiningizni yasang
       Collector Game: Kollektor o'yini
@@ -110,10 +111,12 @@ uz:
       Input Examples: Kiritishga misollar
       Input with If-Else: If-Else bilan kiritishlar
       Inspiration!: Ruhlanish!
+      Intro Video: Kirish videosi
       Intro to For Loops: For sikliga kirish
       Intro to Sprites: Spraytlarga kirish
       Intro to Variables: O'zgaruvchilarda kirish
       Introducing Sprite Lab: Sprite laboratoriyasi bilan tanishish
+      Introduction: Kirish
       Introduction to Arrays: Massivlar bilan tanishish
       Introduction to Variables: Oʻzgaruvchilar mavzusiga kirish
       Iteration and Parameters: Iteratsiya va Parametrlar
@@ -143,6 +146,7 @@ uz:
       'Mini-Project: Royal Battle': 'Mini-loyiha: Royal Battle'
       'Mini-Project: Snowflake #1': 'Mini-loyiha: Snowflake #1'
       'Mini-Project: Snowflake #2': 'Mini-loyiha: Snowflake #2'
+      'Mini-Project: Sticker Art': 'Mini-loyiha: Sticker Art'
       'Mini-Project: Swimming Fish': 'Mini-loyiha: Swimming Fish'
       'Mini-Project: Swimming Fish (continued)': 'Mini-loyiha: Swimming Fish (continued)'
       'Mini-Project: User Input Programs': Chat-Bot yaratish
@@ -208,6 +212,7 @@ uz:
       Sensors to Colors: Sensorlar va ranglar
       Setting Properties: Xususiyatlarni sozlash
       Shapes and the Draw Loop: Shakllar va Draw sikli
+      Share Out: Ulashing
       Share Your App: Ilovangizni ulashing
       Side Scroller: Yon skroller
       Simple Circuits: Oddiy zanjirlar
@@ -233,6 +238,7 @@ uz:
       The Collector: Kollektor
       The Harvester: Terimchi (Harvester)
       UI Element Properties: UI element xususiyatlari
+      Unplugged Activity: Kompyutersiz o‘tiladigan mashg‘ulotlar
       User Interface: UI - Foydalanuvchi interfeysi
       Using Getters and Setters: Getters va Setterlardan foydalanish
       Using HTML Tags: HTML teglaridan foydalanish
@@ -251,6 +257,7 @@ uz:
       'Video: Intro to Web Lab - Part 2': 'Video: Web Lab-ga kirish - 2-qism'
       'Video: Introduction to Arrays': 'Video: Massivlar bilan tanishish'
       'Video: Introduction to Play Lab': 'Video: Play Laboratoriyasiga kirish'
+      'Video: Outbreak Simulator: Introduction': 'Video: Epilasyon Simulator: Kirish'
       'Video: Problem Solving Process': 'Video: Muammoni yechish jarayoni'
       'Video: Velocity': 'Video: Tezlik'
       'Video: What Makes a Computer, a Computer?': 'Video: Kompyuter kompyuter boʻlishi

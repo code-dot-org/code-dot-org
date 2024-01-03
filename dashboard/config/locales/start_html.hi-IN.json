@@ -3,49 +3,58 @@
     "data": {
       "start_html": {
         "CSD U1 IO Pet Chooser 2_2021": {
-          "Yes": "हां",
           "No": "नहीं",
+          "Yes": "हां",
           "cute": "प्यारा"
         },
         "CSD U1 IO Pet Chooser 2_2022": {
-          "Yes": "हां",
           "No": "नहीं",
+          "Yes": "हां",
+          "cute": "प्यारा"
+        },
+        "CSD U1 IO Pet Chooser 2_2023": {
+          "No": "नहीं",
+          "Yes": "हां",
           "cute": "प्यारा"
         },
         "CSD U1 IO Pet Chooser_2021": {
-          "Yes": "हां",
           "No": "नहीं",
+          "Yes": "हां",
           "cute": "प्यारा"
         },
         "CSD U1 IO Pet Chooser_2022": {
-          "Yes": "हां",
           "No": "नहीं",
+          "Yes": "हां",
+          "cute": "प्यारा"
+        },
+        "CSD U1 IO Pet Chooser_2023": {
+          "No": "नहीं",
+          "Yes": "हां",
           "cute": "प्यारा"
         },
         "CSD U1 IO Story_2021": {
-          "Name": "नाम",
+          "City": "शहर",
           "Color": "रंग",
           "Food": "भोजन",
-          "City": "शहर",
+          "Name": "नाम",
           "text": "टेक्सट"
         },
         "CSD U1 IO Story_2022": {
-          "Name": "नाम",
+          "City": "शहर",
           "Color": "रंग",
           "Food": "भोजन",
+          "Name": "नाम",
+          "text": "टेक्सट"
+        },
+        "CSD U1 IO Story_2023": {
           "City": "शहर",
+          "Color": "रंग",
+          "Food": "भोजन",
+          "Name": "नाम",
           "text": "टेक्सट"
         },
         "CSD U1 processing bday_2021": {
           "1": "१",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -56,18 +65,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing bday_2022": {
           "1": "१",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -78,29 +87,55 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "CSD U1 processing bday_2023": {
+          "1": "१",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing fastest_2021": {
-          "s": "s",
+          "0": "0",
           "k": "k",
-          "0": "0"
+          "s": "s"
         },
         "CSD U1 processing fastest_2022": {
-          "s": "s",
+          "0": "0",
           "k": "k",
-          "0": "0"
+          "s": "s"
+        },
+        "CSD U1 processing fastest_2023": {
+          "0": "0",
+          "k": "k",
+          "s": "s"
         },
         "CSD U1 processing guess_2021": {
-          "?": "?",
           "1": "१",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -111,20 +146,20 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "?": "?",
           "text": "टेक्सट"
         },
         "CSD U1 processing guess_2022": {
-          "?": "?",
           "1": "१",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -135,18 +170,58 @@
           "17": "17",
           "18": "18",
           "19": "19",
+          "2": "2",
           "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "?": "?",
+          "text": "टेक्सट"
+        },
+        "CSD U1 processing guess_2023": {
+          "1": "१",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "?": "?",
           "text": "टेक्सट"
         },
         "CSD U1 processing live_2021": {
-          "walking": "चलना",
           "bear": "भालू",
-          "rat": "चूहा"
+          "rat": "चूहा",
+          "walking": "चलना"
         },
         "CSD U1 processing live_2022": {
-          "walking": "चलना",
           "bear": "भालू",
-          "rat": "चूहा"
+          "rat": "चूहा",
+          "walking": "चलना"
+        },
+        "CSD U1 processing live_2023": {
+          "cat": "बिल्ली",
+          "chicken": "murghi",
+          "dog": "कुत्ता",
+          "horse": "घोड़ा",
+          "walking": "चलना"
         },
         "CSD U1 processing npark_2021": {
           "Correct!": "सही!",
@@ -156,16 +231,12 @@
           "Correct!": "सही!",
           "Sorry!": "क्षमा करें!"
         },
+        "CSD U1 processing npark_2023": {
+          "Correct!": "सही!",
+          "Sorry!": "क्षमा करें!"
+        },
         "CSD U1 processing writers_2021": {
           "1": "१",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -176,18 +247,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 processing writers_2022": {
           "1": "१",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -198,7 +269,37 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "CSD U1 processing writers_2023": {
+          "1": "१",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "CSD U1 storage friends_2021": {
           "Back": "वापस"
@@ -206,33 +307,50 @@
         "CSD U1 storage friends_2022": {
           "Back": "वापस"
         },
+        "CSD U1 storage friends_2023": {
+          "Back": "वापस"
+        },
         "CSD U1 storage movies_2021": {
+          "No": "नहीं",
           "Star Wars": "स्टार वॉर्स",
           "Yes": "हां",
-          "No": "नहीं",
           "text": "टेक्सट"
         },
         "CSD U1 storage movies_2022": {
+          "No": "नहीं",
           "Star Wars": "स्टार वॉर्स",
           "Yes": "हां",
+          "text": "टेक्सट"
+        },
+        "CSD U1 storage movies_2023": {
           "No": "नहीं",
+          "Star Wars": "स्टार वॉर्स",
+          "Yes": "हां",
           "text": "टेक्सट"
         },
         "CSD U1 storage outfit_2021": {
           "Clear": "साफ़ करें",
-          "white": "सफेद",
-          "pink": "गुलाबी",
-          "green": "हरा ",
           "black": "काला",
-          "purple": "बैंगनी"
+          "green": "हरा ",
+          "pink": "गुलाबी",
+          "purple": "बैंगनी",
+          "white": "सफेद"
         },
         "CSD U1 storage outfit_2022": {
           "Clear": "साफ़ करें",
-          "white": "सफेद",
-          "pink": "गुलाबी",
-          "green": "हरा ",
           "black": "काला",
-          "purple": "बैंगनी"
+          "green": "हरा ",
+          "pink": "गुलाबी",
+          "purple": "बैंगनी",
+          "white": "सफेद"
+        },
+        "CSD U1 storage outfit_2023": {
+          "Clear": "साफ़ करें",
+          "black": "काला",
+          "green": "हरा ",
+          "pink": "गुलाबी",
+          "purple": "बैंगनी",
+          "white": "सफेद"
         },
         "CSD U2 RGB intro": {
           "1": "१",
@@ -269,133 +387,343 @@
           "4": "4",
           "5": "5"
         },
+        "CSD U6 - Accelerometer - PB_2023": {
+          "0": "0"
+        },
         "CSD U6 - Accelerometer - PB_2222": {
           "0": "0"
+        },
+        "CSD U6 - Accelerometer - PB_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Accelerometer - PD_2023": {
+          "You did it!": "आप इसे करने में कामयाब रहे!"
         },
         "CSD U6 - Accelerometer - PD_2222": {
           "You did it!": "आप इसे करने में कामयाब रहे!"
         },
+        "CSD U6 - Accelerometer - PF_2023": {
+          "0": "0"
+        },
         "CSD U6 - Accelerometer - PF_2222": {
           "0": "0"
         },
+        "CSD U6 - Accelerometer - PF_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Accelerometer - SB2_mb2022": {
+          "Success!": "सफल!"
+        },
+        "CSD U6 - Board Inputs - P_2023": {
+          "Success!": "सफल!"
+        },
+        "CSD U6 - Board Inputs - PracC_mb2022": {
+          "Success!": "सफल!"
+        },
+        "CSD U6 - Board Inputs - SB1_2023": {
+          "Success!": "सफल!"
+        },
         "CSD U6 - Board Inputs - SB1_2222": {
+          "Success!": "सफल!"
+        },
+        "CSD U6 - Board Inputs - SB1_mb2022": {
+          "Success!": "सफल!"
+        },
+        "CSD U6 - Board Inputs - SB2_2023": {
           "Success!": "सफल!"
         },
         "CSD U6 - Board Inputs - SB2_2222": {
           "Success!": "सफल!"
         },
+        "CSD U6 - Board Inputs - SB2_mb2022": {
+          "Success!": "सफल!"
+        },
+        "CSD U6 - Board Inputs - SB3_2023": {
+          "Success!": "सफल!"
+        },
         "CSD U6 - Board Inputs - SB3_2222": {
           "Success!": "सफल!"
+        },
+        "CSD U6 - Board Outputs - A_2023": {
+          "Happy": "खुश"
         },
         "CSD U6 - Board Outputs - A_2222": {
           "Happy": "खुश"
         },
+        "CSD U6 - Board Outputs - A_mb2022": {
+          "Age": "उम्र",
+          "Happy": "खुश",
+          "Name": "नाम"
+        },
+        "CSD U6 - Board Outputs - ChalC_mb2022": {
+          "No": "नहीं",
+          "Yes": "हां"
+        },
+        "CSD U6 - Board Outputs - P_2023": {
+          "Success!": "सफल!"
+        },
         "CSD U6 - Board Outputs - P_2222": {
+          "Success!": "सफल!"
+        },
+        "CSD U6 - Board Outputs - PracD_mb2022": {
+          "1": "१",
+          "2": "2",
+          "3": "3"
+        },
+        "CSD U6 - Board Outputs - SB1_2023": {
           "Success!": "सफल!"
         },
         "CSD U6 - Board Outputs - SB1_2222": {
           "Success!": "सफल!"
         },
+        "CSD U6 - Board Outputs - SB2_2023": {
+          "Success!": "सफल!"
+        },
         "CSD U6 - Board Outputs - SB2_2222": {
           "Success!": "सफल!"
+        },
+        "CSD U6 - Board Outputs - SB4_2023": {
+          "Fish": "मछली"
         },
         "CSD U6 - Board Outputs - SB4_2222": {
           "Fish": "मछली"
         },
+        "CSD U6 - Board Outputs - Setup_2023": {
+          "Success!": "सफल!"
+        },
         "CSD U6 - Board Outputs - Setup_2222": {
           "Success!": "सफल!"
         },
-        "CSD U6 - Color LEDs - ChalD_2222": {
+        "CSD U6 - Board Outputs - Setup_mb2022": {
+          "Success!": "सफल!"
+        },
+        "CSD U6 - Color LEDs - ChalD_2023": {
+          "East": "पूर्व",
           "North": "उत्तर",
           "South": "दक्षिण",
-          "East": "पूर्व",
           "West": "पश्चिम"
         },
+        "CSD U6 - Color LEDs - ChalD_2222": {
+          "East": "पूर्व",
+          "North": "उत्तर",
+          "South": "दक्षिण",
+          "West": "पश्चिम"
+        },
+        "CSD U6 - Color LEDs - PracA_2023": {
+          "Success!": "सफल!"
+        },
         "CSD U6 - Color LEDs - PracA_2222": {
+          "Success!": "सफल!"
+        },
+        "CSD U6 - Color LEDs - SB2_2023": {
           "Success!": "सफल!"
         },
         "CSD U6 - Color LEDs - SB2_2222": {
           "Success!": "सफल!"
         },
+        "CSD U6 - Color LEDs - SB3_2023": {
+          "Success!": "सफल!"
+        },
         "CSD U6 - Color LEDs - SB3_2222": {
           "Success!": "सफल!"
+        },
+        "CSD U6 - Color LEDs - SB4_2023": {
+          "Medium": "मध्यम"
         },
         "CSD U6 - Color LEDs - SB4_2222": {
           "Medium": "मध्यम"
         },
-        "CSD U6 - Combine Inputs - A_2222": {
-          "left": "बाएं",
-          "right": "सही",
-          "red": "लाल",
-          "yellow": "पीला",
+        "CSD U6 - Combine Inputs - A_2023": {
           "green": "हरा ",
-          "purple": "बैंगनी"
+          "left": "बाएं",
+          "purple": "बैंगनी",
+          "red": "लाल",
+          "right": "सही",
+          "yellow": "पीला"
+        },
+        "CSD U6 - Combine Inputs - A_2222": {
+          "green": "हरा ",
+          "left": "बाएं",
+          "purple": "बैंगनी",
+          "red": "लाल",
+          "right": "सही",
+          "yellow": "पीला"
+        },
+        "CSD U6 - Combine Inputs - A_mb2022": {
+          "left": "बाएं",
+          "right": "सही"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
-          "on": "ऑन",
           "fast": "तेज़",
-          "slow": "धीमा",
-          "short": "कम",
+          "high": "उच्च",
           "long": "अधिक",
           "low": "निम्न",
-          "high": "उच्च"
+          "on": "ऑन",
+          "short": "कम",
+          "slow": "धीमा"
+        },
+        "CSD U6 - Combine Inputs - CA_2023": {
+          "fast": "तेज़",
+          "high": "उच्च",
+          "long": "अधिक",
+          "low": "निम्न",
+          "on": "ऑन",
+          "short": "कम",
+          "slow": "धीमा"
+        },
+        "CSD U6 - Combine Inputs - ChalG_2023": {
+          "Blue": "नीला",
+          "Green": "हरा",
+          "Red": "लाल"
         },
         "CSD U6 - Combine Inputs - ChalG_2222": {
-          "Red": "लाल",
+          "Blue": "नीला",
           "Green": "हरा",
-          "Blue": "नीला"
+          "Red": "लाल"
+        },
+        "CSD U6 - Combine Inputs - PracA_2023": {
+          "left": "बाएं",
+          "right": "सही"
         },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": "बाएं",
           "right": "सही"
         },
-        "CSD U6 - Combine Inputs - PracC_2222": {
-          "yellow": "पीला",
-          "green": "हरा ",
+        "CSD U6 - Combine Inputs - PracC_2023": {
           "blue": "नीला",
-          "orange": "संतरा"
+          "green": "हरा ",
+          "orange": "संतरा",
+          "yellow": "पीला"
+        },
+        "CSD U6 - Combine Inputs - PracC_2222": {
+          "blue": "नीला",
+          "green": "हरा ",
+          "orange": "संतरा",
+          "yellow": "पीला"
+        },
+        "CSD U6 - Combine Inputs - PracD_2023": {
+          "Test": "परीक्षण",
+          "quiet": "शांत"
         },
         "CSD U6 - Combine Inputs - PracD_2222": {
-          "quiet": "शांत",
-          "Test": "परीक्षण"
+          "Test": "परीक्षण",
+          "quiet": "शांत"
+        },
+        "CSD U6 - Combine Inputs - SB1_mb2022": {
+          "bottom row": "सबसे नीचे की पंक्ति",
+          "top row": "सबसे ऊपर की पंक्ति"
+        },
+        "CSD U6 - Combine Inputs - SB2_2023": {
+          "long": "अधिक",
+          "short": "कम"
         },
         "CSD U6 - Combine Inputs - SB2_2222": {
-          "short": "कम",
-          "long": "अधिक"
+          "long": "अधिक",
+          "short": "कम"
         },
-        "CSD U6 - Combine Inputs - SB3_2222": {
-          "short": "कम",
+        "CSD U6 - Combine Inputs - SB3_2023": {
+          "high": "उच्च",
           "long": "अधिक",
           "low": "निम्न",
-          "high": "उच्च"
+          "short": "कम"
+        },
+        "CSD U6 - Combine Inputs - SB3_2222": {
+          "high": "उच्च",
+          "long": "अधिक",
+          "low": "निम्न",
+          "short": "कम"
+        },
+        "CSD U6 - Combine Inputs - SB4_2023": {
+          "long": "अधिक",
+          "short": "कम"
         },
         "CSD U6 - Combine Inputs - SB4_2222": {
-          "short": "कम",
-          "long": "अधिक"
+          "long": "अधिक",
+          "short": "कम"
+        },
+        "CSD U6 - Combine Inputs - SB4v2_mb2022": {
+          "Row": "पंक्ति"
+        },
+        "CSD U6 - Combine Inputs - SB5v2_mb2022": {
+          "Row": "पंक्ति"
+        },
+        "CSD U6 - Functions - P2C_2023": {
+          "Blue": "नीला",
+          "Red": "लाल"
         },
         "CSD U6 - Functions - P2C_2222": {
-          "Red": "लाल",
-          "Blue": "नीला"
+          "Blue": "नीला",
+          "Red": "लाल"
+        },
+        "CSD U6 - Functions - P2C_mb2022": {
+          "Blue": "नीला",
+          "Red": "लाल"
+        },
+        "CSD U6 - Functions - P_2023": {
+          "0": "0"
         },
         "CSD U6 - Functions - P_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Functions - P_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Functions - SB7_2023": {
           "0": "0"
         },
         "CSD U6 - Functions - SB7_2222": {
           "0": "0"
         },
-        "CSD U6 - If Variables - ChalD_2222": {
-          "0": "0",
+        "CSD U6 - Functions - SB7_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - If Variables - ChalD_2023": {
           "+": "+",
-          "-": "-"
+          "-": "-",
+          "0": "0"
+        },
+        "CSD U6 - If Variables - ChalD_2222": {
+          "+": "+",
+          "-": "-",
+          "0": "0"
+        },
+        "CSD U6 - If Variables - ChalD_mb2022": {
+          "+": "+",
+          "-": "-",
+          "0": "0"
+        },
+        "CSD U6 - If Variables - SB3_2023": {
+          "Name": "नाम"
         },
         "CSD U6 - If Variables - SB3_2222": {
           "Name": "नाम"
         },
+        "CSD U6 - If Variables - SB3_mb2022": {
+          "Name": "नाम"
+        },
+        "CSD U6 - If Variables - SB4_2023": {
+          "0": "0"
+        },
         "CSD U6 - If Variables - SB4_2222": {
           "0": "0"
         },
+        "CSD U6 - If Variables - SB4_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Music - A_2023": {
+          "Happy": "खुश"
+        },
         "CSD U6 - Music - A_2222": {
           "Happy": "खुश"
+        },
+        "CSD U6 - Music - ChalD_2023": {
+          "A": "अ",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "पूर्व",
+          "F": "F",
+          "G": "G"
         },
         "CSD U6 - Music - ChalD_2222": {
           "A": "अ",
@@ -406,121 +734,314 @@
           "F": "F",
           "G": "G"
         },
-        "CSD U6 - Music - Piano_2222": {
-          "C": "C",
-          "D": "D",
-          "E": "पूर्व",
-          "F": "F",
-          "G": "G",
+        "CSD U6 - Music - Piano_2023": {
           "A": "अ",
           "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "पूर्व",
+          "F": "F",
+          "G": "G",
           "Note:": "नोट:"
         },
-        "CSD U6 - Music - SB1_2222": {
+        "CSD U6 - Music - Piano_2222": {
+          "A": "अ",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "पूर्व",
           "F": "F",
           "G": "G",
+          "Note:": "नोट:"
+        },
+        "CSD U6 - Music - SB1_2023": {
           "A": "अ",
-          "B": "B"
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "पूर्व",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - SB1_2222": {
+          "A": "अ",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "पूर्व",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - SB2.5_2023": {
+          "A": "अ",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "पूर्व",
+          "F": "F",
+          "G": "G"
         },
         "CSD U6 - Music - SB2.5_2222": {
+          "A": "अ",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "पूर्व",
           "F": "F",
-          "G": "G",
+          "G": "G"
+        },
+        "CSD U6 - Music - SB3_2023": {
           "A": "अ",
-          "B": "B"
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "पूर्व",
+          "F": "F",
+          "G": "G"
         },
         "CSD U6 - Music - SB3_2222": {
+          "A": "अ",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "पूर्व",
           "F": "F",
-          "G": "G",
-          "A": "अ",
-          "B": "B"
+          "G": "G"
+        },
+        "CSD U6 - Music - SB4_2023": {
+          "Success!": "सफल!"
         },
         "CSD U6 - Music - SB4_2222": {
           "Success!": "सफल!"
+        },
+        "CSD U6 - Physical Input - A_2023": {
+          "1": "१",
+          "2": "2"
         },
         "CSD U6 - Physical Input - A_2222": {
           "1": "१",
           "2": "2"
         },
+        "CSD U6 - Physical Input - A_mb2022": {
+          "1": "१",
+          "2": "2"
+        },
+        "CSD U6 - Physical Input - ChalA_2023": {
+          "Success!": "सफल!"
+        },
         "CSD U6 - Physical Input - ChalA_2222": {
+          "Success!": "सफल!"
+        },
+        "CSD U6 - Physical Input - ChalA_mb2022": {
+          "Success!": "सफल!"
+        },
+        "CSD U6 - Physical Input - ChalB_2023": {
           "Success!": "सफल!"
         },
         "CSD U6 - Physical Input - ChalB_2222": {
           "Success!": "सफल!"
         },
+        "CSD U6 - Physical Input - ChalB_mb2022": {
+          "Success!": "सफल!"
+        },
+        "CSD U6 - Physical Input - ChalC_2023": {
+          "Success!": "सफल!"
+        },
         "CSD U6 - Physical Input - ChalC_2222": {
           "Success!": "सफल!"
         },
+        "CSD U6 - Physical Input - ChalC_mb2022": {
+          "Success!": "सफल!"
+        },
+        "CSD U6 - Physical Input - PA_2023": {
+          "0": "0",
+          "Score": "स्कोर"
+        },
         "CSD U6 - Physical Input - PA_2222": {
-          "Score": "स्कोर",
-          "0": "0"
+          "0": "0",
+          "Score": "स्कोर"
+        },
+        "CSD U6 - Physical Input - PA_mb2022": {
+          "0": "0",
+          "Score": "स्कोर"
+        },
+        "CSD U6 - Physical Input - PC_2023": {
+          "Success!": "सफल!"
         },
         "CSD U6 - Physical Input - PC_2222": {
+          "Success!": "सफल!"
+        },
+        "CSD U6 - Physical Input - PD_2023": {
           "Success!": "सफल!"
         },
         "CSD U6 - Physical Input - PD_2222": {
           "Success!": "सफल!"
         },
+        "CSD U6 - Physical Input - PD_mb2022": {
+          "Success!": "सफल!"
+        },
+        "CSD U6 - Physical Input - SB1_2023": {
+          "Success!": "सफल!"
+        },
         "CSD U6 - Physical Input - SB1_2222": {
+          "Success!": "सफल!"
+        },
+        "CSD U6 - Physical Input - SB1_mb2022": {
+          "Success!": "सफल!"
+        },
+        "CSD U6 - Physical Output - ChalA_2023": {
           "Success!": "सफल!"
         },
         "CSD U6 - Physical Output - ChalA_2222": {
           "Success!": "सफल!"
         },
+        "CSD U6 - Physical Output - ChalA_mb2022": {
+          "Success!": "सफल!"
+        },
+        "CSD U6 - Physical Output - ChalB_2023": {
+          "Success!": "सफल!"
+        },
         "CSD U6 - Physical Output - ChalB_2222": {
+          "Success!": "सफल!"
+        },
+        "CSD U6 - Physical Output - ChalB_mb2022": {
+          "Success!": "सफल!"
+        },
+        "CSD U6 - Physical Output - ChalC_2023": {
           "Success!": "सफल!"
         },
         "CSD U6 - Physical Output - ChalC_2222": {
           "Success!": "सफल!"
         },
+        "CSD U6 - Physical Output - ChalC_mb2022": {
+          "Success!": "सफल!"
+        },
+        "CSD U6 - Physical Output - PB_2023": {
+          "Success!": "सफल!"
+        },
         "CSD U6 - Physical Output - PB_2222": {
+          "Success!": "सफल!"
+        },
+        "CSD U6 - Physical Output - PB_mb2022": {
+          "Success!": "सफल!"
+        },
+        "CSD U6 - Physical Output - PC_2023": {
           "Success!": "सफल!"
         },
         "CSD U6 - Physical Output - PC_2222": {
           "Success!": "सफल!"
         },
+        "CSD U6 - Physical Output - PC_mb2022": {
+          "Success!": "सफल!"
+        },
+        "CSD U6 - Physical Output - P_2023": {
+          "Success!": "सफल!"
+        },
         "CSD U6 - Physical Output - P_2222": {
+          "Success!": "सफल!"
+        },
+        "CSD U6 - Physical Output - P_mb2022": {
+          "Success!": "सफल!"
+        },
+        "CSD U6 - Physical Output - SB1_2023": {
           "Success!": "सफल!"
         },
         "CSD U6 - Physical Output - SB1_2222": {
           "Success!": "सफल!"
         },
+        "CSD U6 - Physical Output - SB1_mb2022": {
+          "Success!": "सफल!"
+        },
+        "CSD U6 - Physical Output - SB2.2_2023": {
+          "Success!": "सफल!"
+        },
         "CSD U6 - Physical Output - SB2.2_2222": {
+          "Success!": "सफल!"
+        },
+        "CSD U6 - Physical Output - SB2.2_mb2022": {
+          "Success!": "सफल!"
+        },
+        "CSD U6 - Physical Output - SB2_2023": {
           "Success!": "सफल!"
         },
         "CSD U6 - Physical Output - SB2_2222": {
           "Success!": "सफल!"
         },
+        "CSD U6 - Physical Output - SB2_mb2022": {
+          "Success!": "सफल!"
+        },
+        "CSD U6 - Screen Inputs - A_2023": {
+          "Name:": "नाम:"
+        },
         "CSD U6 - Screen Inputs - A_2222": {
           "Name:": "नाम:"
         },
-        "CSD U6 - Screen Inputs - ChalB_2222": {
-          "Red": "लाल",
-          "Green": "हरा",
-          "Blue": "नीला"
+        "CSD U6 - Screen Inputs - A_mb2022": {
+          "Name:": "नाम:"
         },
-        "CSD U6 - Screen Inputs - P_2222": {
+        "CSD U6 - Screen Inputs - ChalB_2023": {
+          "Blue": "नीला",
+          "Green": "हरा",
+          "Red": "लाल"
+        },
+        "CSD U6 - Screen Inputs - ChalB_2222": {
+          "Blue": "नीला",
+          "Green": "हरा",
+          "Red": "लाल"
+        },
+        "CSD U6 - Screen Inputs - ChalB_mb2022": {
+          "Blue": "नीला",
+          "Green": "हरा",
+          "Red": "लाल"
+        },
+        "CSD U6 - Screen Inputs - P_2023": {
+          "Blue": "नीला",
+          "Green": "हरा",
           "Name:": "नाम:",
           "Red": "लाल",
-          "Green": "हरा",
-          "Blue": "नीला",
           "Save": "सहेजें"
+        },
+        "CSD U6 - Screen Inputs - P_2222": {
+          "Blue": "नीला",
+          "Green": "हरा",
+          "Name:": "नाम:",
+          "Red": "लाल",
+          "Save": "सहेजें"
+        },
+        "CSD U6 - Screen Inputs - P_mb2022": {
+          "Blue": "नीला",
+          "Green": "हरा",
+          "Name:": "नाम:",
+          "Red": "लाल",
+          "Save": "सहेजें"
+        },
+        "CSD U6 - Screen Inputs - PracD_2023": {
+          "0": "0"
         },
         "CSD U6 - Screen Inputs - PracD_2222": {
           "0": "0"
         },
+        "CSD U6 - Screen Inputs - PracD_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Screen Inputs - SB1_2023": {
+          "Welcome": "स्वागत है"
+        },
         "CSD U6 - Screen Inputs - SB1_2222": {
           "Welcome": "स्वागत है"
         },
+        "CSD U6 - Screen Inputs - SB1_mb2022": {
+          "Welcome": "स्वागत है"
+        },
         "CSD U6 - Screen Inputs - SB2.1_2022": {
+          "black": "काला",
+          "white": "सफेद"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_2023": {
+          "black": "काला",
+          "white": "सफेद"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_mb2022": {
           "black": "काला",
           "white": "सफेद"
         },
@@ -528,42 +1049,153 @@
           "black": "काला",
           "white": "सफेद"
         },
+        "CSD U6 - Screen Inputs - SB2.2_2023": {
+          "black": "काला",
+          "white": "सफेद"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_mb2022": {
+          "black": "काला",
+          "white": "सफेद"
+        },
+        "CSD U6 - Screen Outputs - ChalB_2023": {
+          "?": "?",
+          "Happy": "खुश"
+        },
         "CSD U6 - Screen Outputs - ChalB_2222": {
-          "Happy": "खुश",
-          "?": "?"
+          "?": "?",
+          "Happy": "खुश"
+        },
+        "CSD U6 - Screen Outputs - ChalB_mb2022": {
+          "?": "?",
+          "Happy": "खुश"
+        },
+        "CSD U6 - Screen Outputs - P_2023": {
+          "title": "शीर्षक"
         },
         "CSD U6 - Screen Outputs - P_2222": {
           "title": "शीर्षक"
         },
-        "CSD U6 - Screen Outputs - PracA_2222": {
-          "White": "गोरा",
-          "Red": "लाल",
-          "Green": "हरा",
-          "Blue": "नीला"
+        "CSD U6 - Screen Outputs - P_mb2022": {
+          "title": "शीर्षक"
         },
-        "CSD U6 - Screen Outputs - PracB_2222": {
-          "up": "ऊपर",
+        "CSD U6 - Screen Outputs - PracA_2023": {
+          "Blue": "नीला",
+          "Green": "हरा",
+          "Red": "लाल",
+          "White": "गोरा"
+        },
+        "CSD U6 - Screen Outputs - PracA_2222": {
+          "Blue": "नीला",
+          "Green": "हरा",
+          "Red": "लाल",
+          "White": "गोरा"
+        },
+        "CSD U6 - Screen Outputs - PracA_mb2022": {
+          "Blue": "नीला",
+          "Green": "हरा",
+          "Red": "लाल",
+          "White": "गोरा"
+        },
+        "CSD U6 - Screen Outputs - PracB_2023": {
           "down": "नीचे",
           "left": "बाएं",
-          "right": "सही"
+          "right": "सही",
+          "up": "ऊपर"
+        },
+        "CSD U6 - Screen Outputs - PracB_2222": {
+          "down": "नीचे",
+          "left": "बाएं",
+          "right": "सही",
+          "up": "ऊपर"
+        },
+        "CSD U6 - Screen Outputs - PracB_mb2022": {
+          "down": "नीचे",
+          "left": "बाएं",
+          "right": "सही",
+          "up": "ऊपर"
+        },
+        "CSD U6 - Screen Outputs - SB1.1_2023": {
+          "name": "नाम"
         },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
           "name": "नाम"
         },
+        "CSD U6 - Screen Outputs - SB1.1_mb2022": {
+          "name": "नाम"
+        },
+        "CSD U6 - Sensors - A_2023": {
+          "0": "0"
+        },
         "CSD U6 - Sensors - A_2222": {
           "0": "0"
+        },
+        "CSD U6 - Sensors - A_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Sensors - PC_2023": {
+          "off": "ऑफ",
+          "on": "ऑन"
         },
         "CSD U6 - Sensors - PC_2222": {
           "off": "ऑफ",
           "on": "ऑन"
         },
-        "CSD U6 - Sensors - P_2222": {
-          "text": "टेक्सट",
+        "CSD U6 - Sensors - P_2023": {
           "high": "उच्च",
-          "low": "निम्न"
+          "low": "निम्न",
+          "text": "टेक्सट"
+        },
+        "CSD U6 - Sensors - P_2222": {
+          "high": "उच्च",
+          "low": "निम्न",
+          "text": "टेक्सट"
+        },
+        "CSD U6 - Sensors - P_mb2022": {
+          "high": "उच्च",
+          "low": "निम्न",
+          "text": "टेक्सट"
+        },
+        "CSD U6 - Sensors - SB1_2023": {
+          "value": "मूल्य"
+        },
+        "CSD U6 - Sensors - SB1_2222": {
+          "value": "मूल्य"
+        },
+        "CSD U6 - Sensors - SB2_2023": {
+          "Update": "अद्यतन करें",
+          "value": "मूल्य"
         },
         "CSD U6 - Sensors - SB2_2222": {
-          "Update": "अद्यतन करें"
+          "Update": "अद्यतन करें",
+          "value": "मूल्य"
+        },
+        "CSD U6 - Sensors - SB2_mb2022": {
+          "Update": "अद्यतन करें",
+          "value": "मूल्य"
+        },
+        "CSD U6 - Sensors - SB3_2023": {
+          "value": "मूल्य"
+        },
+        "CSD U6 - Sensors - SB3_2222": {
+          "value": "मूल्य"
+        },
+        "CSD U6 - Sensors - SB3_mb2022": {
+          "value": "मूल्य"
+        },
+        "CSD U6 - Sensors - SB4.1_2023": {
+          "value": "मूल्य"
+        },
+        "CSD U6 - Sensors - SB4.1_2222": {
+          "value": "मूल्य"
+        },
+        "CSD U6 - Sensors - SB4_2023": {
+          "value": "मूल्य"
+        },
+        "CSD U6 - Sensors - SB4_2222": {
+          "value": "मूल्य"
+        },
+        "CSD U6 - Sensors - SB4_mb2022": {
+          "value": "मूल्य"
         },
         "CSD U6 Driver pt 2": {
           "You did it!": "आप इसे करने में कामयाब रहे!"
@@ -637,53 +1269,93 @@
         "CSD U6 add LED button_2021": {
           "Success!": "सफल!"
         },
+        "CSD U6 analog change": {
+          "value": "मूल्य"
+        },
+        "CSD U6 analog change_2018": {
+          "value": "मूल्य"
+        },
+        "CSD U6 analog change_2019": {
+          "value": "मूल्य"
+        },
+        "CSD U6 analog change_2021": {
+          "value": "मूल्य"
+        },
+        "CSD U6 analog data": {
+          "value": "मूल्य"
+        },
+        "CSD U6 analog data_2018": {
+          "value": "मूल्य"
+        },
+        "CSD U6 analog data_2019": {
+          "value": "मूल्य"
+        },
+        "CSD U6 analog data_2021": {
+          "value": "मूल्य"
+        },
         "CSD U6 analog light": {
-          "Update": "अद्यतन करें"
+          "Update": "अद्यतन करें",
+          "value": "मूल्य"
         },
         "CSD U6 analog light_2018": {
-          "Update": "अद्यतन करें"
+          "Update": "अद्यतन करें",
+          "value": "मूल्य"
         },
         "CSD U6 analog light_2019": {
-          "Update": "अद्यतन करें"
+          "Update": "अद्यतन करें",
+          "value": "मूल्य"
         },
         "CSD U6 analog light_2021": {
-          "Update": "अद्यतन करें"
+          "Update": "अद्यतन करें",
+          "value": "मूल्य"
+        },
+        "CSD U6 analog sound": {
+          "value": "मूल्य"
+        },
+        "CSD U6 analog sound_2018": {
+          "value": "मूल्य"
+        },
+        "CSD U6 analog sound_2019": {
+          "value": "मूल्य"
+        },
+        "CSD U6 analog sound_2021": {
+          "value": "मूल्य"
         },
         "CSD U6 array piano": {
+          "A": "अ",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "पूर्व",
           "F": "F",
-          "G": "G",
-          "A": "अ",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2018": {
+          "A": "अ",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "पूर्व",
           "F": "F",
-          "G": "G",
-          "A": "अ",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2019": {
+          "A": "अ",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "पूर्व",
           "F": "F",
-          "G": "G",
-          "A": "अ",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 array piano_2021": {
+          "A": "अ",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "पूर्व",
           "F": "F",
-          "G": "G",
-          "A": "अ",
-          "B": "B"
+          "G": "G"
         },
         "CSD U6 arrays select predict": {
           "first": "पहला"
@@ -698,20 +1370,20 @@
           "first": "पहला"
         },
         "CSD U6 change": {
-          "short": "कम",
-          "long": "अधिक"
+          "long": "अधिक",
+          "short": "कम"
         },
         "CSD U6 change_2018": {
-          "short": "कम",
-          "long": "अधिक"
+          "long": "अधिक",
+          "short": "कम"
         },
         "CSD U6 change_2019": {
-          "short": "कम",
-          "long": "अधिक"
+          "long": "अधिक",
+          "short": "कम"
         },
         "CSD U6 change_2021": {
-          "short": "कम",
-          "long": "अधिक"
+          "long": "अधिक",
+          "short": "कम"
         },
         "CSD U6 colorLeds intensity": {
           "Medium": "मध्यम"
@@ -726,95 +1398,95 @@
           "Medium": "मध्यम"
         },
         "CSD U6 emotion machine example": {
-          "Happy": "खुश",
-          "?": "?"
+          "?": "?",
+          "Happy": "खुश"
         },
         "CSD U6 emotion machine example_2018": {
-          "Happy": "खुश",
-          "?": "?"
+          "?": "?",
+          "Happy": "खुश"
         },
         "CSD U6 emotion machine example_2019": {
-          "Happy": "खुश",
-          "?": "?"
+          "?": "?",
+          "Happy": "खुश"
         },
         "CSD U6 emotion machine example_2021": {
-          "Happy": "खुश",
-          "?": "?"
+          "?": "?",
+          "Happy": "खुश"
         },
         "CSD U6 frequency": {
-          "short": "कम",
+          "high": "उच्च",
           "long": "अधिक",
           "low": "निम्न",
-          "high": "उच्च"
+          "short": "कम"
         },
         "CSD U6 frequency_2018": {
-          "short": "कम",
+          "high": "उच्च",
           "long": "अधिक",
           "low": "निम्न",
-          "high": "उच्च"
+          "short": "कम"
         },
         "CSD U6 frequency_2019": {
-          "short": "कम",
+          "high": "उच्च",
           "long": "अधिक",
           "low": "निम्न",
-          "high": "उच्च"
+          "short": "कम"
         },
         "CSD U6 frequency_2021": {
-          "short": "कम",
+          "high": "उच्च",
           "long": "अधिक",
           "low": "निम्न",
-          "high": "उच्च"
+          "short": "कम"
         },
         "CSD U6 get toggle": {
-          "short": "कम",
+          "high": "उच्च",
           "long": "अधिक",
           "low": "निम्न",
-          "high": "उच्च"
+          "short": "कम"
         },
         "CSD U6 get toggle_2018": {
-          "short": "कम",
+          "high": "उच्च",
           "long": "अधिक",
           "low": "निम्न",
-          "high": "उच्च"
+          "short": "कम"
         },
         "CSD U6 get toggle_2019": {
-          "short": "कम",
+          "high": "उच्च",
           "long": "अधिक",
           "low": "निम्न",
-          "high": "उच्च"
+          "short": "कम"
         },
         "CSD U6 get toggle_2021": {
-          "short": "कम",
+          "high": "उच्च",
           "long": "अधिक",
           "low": "निम्न",
-          "high": "उच्च"
+          "short": "कम"
         },
         "CSD U6 getProperty Demo": {
+          "Blue": "नीला",
+          "Green": "हरा",
           "Name:": "नाम:",
           "Red": "लाल",
-          "Green": "हरा",
-          "Blue": "नीला",
           "Save": "सहेजें"
         },
         "CSD U6 getProperty Demo_2018": {
+          "Blue": "नीला",
+          "Green": "हरा",
           "Name:": "नाम:",
           "Red": "लाल",
-          "Green": "हरा",
-          "Blue": "नीला",
           "Save": "सहेजें"
         },
         "CSD U6 getProperty Demo_2019": {
+          "Blue": "नीला",
+          "Green": "हरा",
           "Name:": "नाम:",
           "Red": "लाल",
-          "Green": "हरा",
-          "Blue": "नीला",
           "Save": "सहेजें"
         },
         "CSD U6 getProperty Demo_2021": {
+          "Blue": "नीला",
+          "Green": "हरा",
           "Name:": "नाम:",
           "Red": "लाल",
-          "Green": "हरा",
-          "Blue": "नीला",
           "Save": "सहेजें"
         },
         "CSD U6 getProperty input": {
@@ -830,84 +1502,84 @@
           "Submit": "सबमिट करें"
         },
         "CSD U6 getters debug": {
-          "slow": "धीमा",
           "fast": "तेज़",
-          "short": "कम",
+          "high": "उच्च",
           "long": "अधिक",
           "low": "निम्न",
-          "high": "उच्च"
+          "short": "कम",
+          "slow": "धीमा"
         },
         "CSD U6 getters debug_2018": {
           "fast": "तेज़",
-          "slow": "धीमा",
-          "short": "कम",
+          "high": "उच्च",
           "long": "अधिक",
           "low": "निम्न",
-          "high": "उच्च"
+          "short": "कम",
+          "slow": "धीमा"
         },
         "CSD U6 getters debug_2019": {
           "fast": "तेज़",
-          "slow": "धीमा",
-          "short": "कम",
+          "high": "उच्च",
           "long": "अधिक",
           "low": "निम्न",
-          "high": "उच्च"
+          "short": "कम",
+          "slow": "धीमा"
         },
         "CSD U6 getters debug_2021": {
           "fast": "तेज़",
-          "slow": "धीमा",
-          "short": "कम",
+          "high": "उच्च",
           "long": "अधिक",
           "low": "निम्न",
-          "high": "उच्च"
+          "short": "कम",
+          "slow": "धीमा"
         },
         "CSD U6 interval": {
-          "short": "कम",
-          "long": "अधिक"
+          "long": "अधिक",
+          "short": "कम"
         },
         "CSD U6 interval_2018": {
-          "short": "कम",
-          "long": "अधिक"
+          "long": "अधिक",
+          "short": "कम"
         },
         "CSD U6 interval_2019": {
-          "short": "कम",
-          "long": "अधिक"
+          "long": "अधिक",
+          "short": "कम"
         },
         "CSD U6 interval_2021": {
-          "short": "कम",
-          "long": "अधिक"
+          "long": "अधिक",
+          "short": "कम"
         },
         "CSD U6 light show": {
-          "on": "ऑन",
-          "off": "ऑफ"
+          "off": "ऑफ",
+          "on": "ऑन"
         },
         "CSD U6 light show_2018": {
-          "on": "ऑन",
-          "off": "ऑफ"
+          "off": "ऑफ",
+          "on": "ऑन"
         },
         "CSD U6 light show_2019": {
-          "on": "ऑन",
-          "off": "ऑफ"
+          "off": "ऑफ",
+          "on": "ऑन"
         },
         "CSD U6 light show_2021": {
-          "on": "ऑन",
-          "off": "ऑफ"
+          "off": "ऑफ",
+          "on": "ऑन"
         },
         "CSD U6 params create colors": {
-          "Red": "लाल",
-          "Blue": "नीला"
+          "Blue": "नीला",
+          "Red": "लाल"
         },
         "CSD U6 params create colors_2018": {
-          "Red": "लाल",
-          "Blue": "नीला"
+          "Blue": "नीला",
+          "Red": "लाल"
         },
         "CSD U6 params create colors_2019": {
-          "Red": "लाल",
-          "Blue": "नीला"
+          "Blue": "नीला",
+          "Red": "लाल"
         },
         "CSD U6 params create colors_2021": {
-          "Red": "लाल",
-          "Blue": "नीला"
+          "Blue": "नीला",
+          "Red": "लाल"
         },
         "CSD U6 params starchaser intro": {
           "0": "0"
@@ -934,24 +1606,24 @@
           "Success!": "सफल!"
         },
         "CSD U6 sensor experiment embedded": {
-          "text": "टेक्सट",
           "high": "उच्च",
-          "low": "निम्न"
+          "low": "निम्न",
+          "text": "टेक्सट"
         },
         "CSD U6 sensor experiment embedded_2018": {
-          "text": "टेक्सट",
           "high": "उच्च",
-          "low": "निम्न"
+          "low": "निम्न",
+          "text": "टेक्सट"
         },
         "CSD U6 sensor experiment embedded_2019": {
-          "text": "टेक्सट",
           "high": "उच्च",
-          "low": "निम्न"
+          "low": "निम्न",
+          "text": "टेक्सट"
         },
         "CSD U6 sensor experiment embedded_2021": {
-          "text": "टेक्सट",
           "high": "उच्च",
-          "low": "निम्न"
+          "low": "निम्न",
+          "text": "टेक्सट"
         },
         "CSD U6 setProperty predict app": {
           "title": "शीर्षक"
@@ -966,20 +1638,20 @@
           "title": "शीर्षक"
         },
         "CSD U6 slider intro": {
-          "short": "कम",
-          "long": "अधिक"
+          "long": "अधिक",
+          "short": "कम"
         },
         "CSD U6 slider intro_2018": {
-          "short": "कम",
-          "long": "अधिक"
+          "long": "अधिक",
+          "short": "कम"
         },
         "CSD U6 slider intro_2019": {
-          "short": "कम",
-          "long": "अधिक"
+          "long": "अधिक",
+          "short": "कम"
         },
         "CSD U6 slider intro_2021": {
-          "short": "कम",
-          "long": "अधिक"
+          "long": "अधिक",
+          "short": "कम"
         },
         "CSD U6 test LED": {
           "Success!": "सफल!"
@@ -994,74 +1666,74 @@
           "Success!": "सफल!"
         },
         "CSDU4 Connecting Screens": {
-          "Red": "लाल",
+          "Blue": "नीला",
           "Green": "हरा",
-          "Blue": "नीला"
+          "Red": "लाल"
         },
         "CSDU4 Connecting Screens Getting Back": {
-          "Red": "लाल",
+          "Blue": "नीला",
           "Green": "हरा",
-          "Blue": "नीला"
+          "Red": "लाल"
         },
         "CSDU4 Crowdsource App Demo": {
           "About": "के बारे में",
           "About Us": "हमारे बारे में",
-          "User": "उपयोगकर्ता",
-          "Cancel": "रद्द करें",
-          "Name:": "नाम:",
-          "Red": "लाल",
-          "Green": "हरा",
           "Blue": "नीला",
-          "Yes": "हां",
+          "Cancel": "रद्द करें",
+          "Green": "हरा",
+          "Name:": "नाम:",
           "No": "नहीं",
-          "Save": "सहेजें"
+          "Red": "लाल",
+          "Save": "सहेजें",
+          "User": "उपयोगकर्ता",
+          "Yes": "हां"
         },
         "CSDU4 Crowdsource App Demo_2018": {
           "About": "के बारे में",
           "About Us": "हमारे बारे में",
-          "User": "उपयोगकर्ता",
-          "Cancel": "रद्द करें",
-          "Name:": "नाम:",
-          "Red": "लाल",
-          "Green": "हरा",
           "Blue": "नीला",
-          "Yes": "हां",
+          "Cancel": "रद्द करें",
+          "Green": "हरा",
+          "Name:": "नाम:",
           "No": "नहीं",
-          "Save": "सहेजें"
+          "Red": "लाल",
+          "Save": "सहेजें",
+          "User": "उपयोगकर्ता",
+          "Yes": "हां"
         },
         "CSDU4 Crowdsource App Demo_2019": {
           "About": "के बारे में",
           "About Us": "हमारे बारे में",
-          "User": "उपयोगकर्ता",
-          "Cancel": "रद्द करें",
-          "Name:": "नाम:",
-          "Red": "लाल",
-          "Green": "हरा",
           "Blue": "नीला",
-          "Yes": "हां",
+          "Cancel": "रद्द करें",
+          "Green": "हरा",
+          "Name:": "नाम:",
           "No": "नहीं",
-          "Save": "सहेजें"
+          "Red": "लाल",
+          "Save": "सहेजें",
+          "User": "उपयोगकर्ता",
+          "Yes": "हां"
         },
         "CSDU4 Decision App Demo": {
           "About": "के बारे में",
-          "Why?": "क्यों?",
+          "About Us": "हमारे बारे में",
           "I don't know": "मुझे पता नहीं",
           "When?": "कब?",
-          "About Us": "हमारे बारे में"
+          "Why?": "क्यों?"
         },
         "CSDU4 Decision App Demo_2018": {
           "About": "के बारे में",
-          "Why?": "क्यों?",
+          "About Us": "हमारे बारे में",
           "I don't know": "मुझे पता नहीं",
           "When?": "कब?",
-          "About Us": "हमारे बारे में"
+          "Why?": "क्यों?"
         },
         "CSDU4 Decision App Demo_2019": {
           "About": "के बारे में",
-          "Why?": "क्यों?",
+          "About Us": "हमारे बारे में",
           "I don't know": "मुझे पता नहीं",
           "When?": "कब?",
-          "About Us": "हमारे बारे में"
+          "Why?": "क्यों?"
         },
         "CSDU4 Functionality visible": {
           "Hide": "छिपाएं",
@@ -1070,49 +1742,49 @@
         "CSDU4 List App Demo": {
           "About": "के बारे में",
           "About Us": "हमारे बारे में",
-          "Done": "हो गया",
-          "Cancel": "रद्द करें"
+          "Cancel": "रद्द करें",
+          "Done": "हो गया"
         },
         "CSDU4 List App Demo_2018": {
           "About": "के बारे में",
           "About Us": "हमारे बारे में",
-          "Done": "हो गया",
-          "Cancel": "रद्द करें"
+          "Cancel": "रद्द करें",
+          "Done": "हो गया"
         },
         "CSDU4 List App Demo_2019": {
           "About": "के बारे में",
           "About Us": "हमारे बारे में",
-          "Done": "हो गया",
-          "Cancel": "रद्द करें"
+          "Cancel": "रद्द करें",
+          "Done": "हो गया"
         },
         "CSDU4 Quiz App Demo": {
           "About": "के बारे में",
-          "Submit": "सबमिट करें",
-          "Why?": "क्यों?",
-          "When?": "कब?",
           "About Us": "हमारे बारे में",
-          "Correct!": "सही!"
+          "Correct!": "सही!",
+          "Submit": "सबमिट करें",
+          "When?": "कब?",
+          "Why?": "क्यों?"
         },
         "CSDU4 Quiz App Demo_2018": {
           "About": "के बारे में",
-          "Submit": "सबमिट करें",
-          "Why?": "क्यों?",
-          "When?": "कब?",
           "About Us": "हमारे बारे में",
-          "Correct!": "सही!"
+          "Correct!": "सही!",
+          "Submit": "सबमिट करें",
+          "When?": "कब?",
+          "Why?": "क्यों?"
         },
         "CSDU4 Quiz App Demo_2019": {
           "About": "के बारे में",
-          "Submit": "सबमिट करें",
-          "Why?": "क्यों?",
-          "When?": "कब?",
           "About Us": "हमारे बारे में",
-          "Correct!": "सही!"
+          "Correct!": "सही!",
+          "Submit": "सबमिट करें",
+          "When?": "कब?",
+          "Why?": "क्यों?"
         },
         "CSDU6 - UI and Inputs - getNumber": {
           "+": "+",
-          "???": "???",
-          "=": "="
+          "=": "=",
+          "???": "???"
         },
         "CSDU6 - UI and Inputs - setScreen": {
           "Back": "वापस"
@@ -1129,80 +1801,177 @@
         "CSDU6 Circuit Playground Test_2021": {
           "Success!": "सफल!"
         },
+        "CSDU6 Circuit Playground Test_2023": {
+          "Success!": "सफल!"
+        },
         "CSDU6 Circuit Playground Test_2222": {
           "Success!": "सफल!"
         },
+        "CSDU6 Circuit Playground Test_mb2022": {
+          "Success!": "सफल!"
+        },
         "CSDU6 circuit playground piano": {
+          "A": "अ",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "पूर्व",
           "F": "F",
-          "G": "G",
-          "A": "अ",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2018": {
+          "A": "अ",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "पूर्व",
           "F": "F",
-          "G": "G",
-          "A": "अ",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2019": {
+          "A": "अ",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "पूर्व",
           "F": "F",
-          "G": "G",
-          "A": "अ",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 circuit playground piano_2021": {
+          "A": "अ",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "पूर्व",
           "F": "F",
-          "G": "G",
-          "A": "अ",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes": {
+          "A": "अ",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "पूर्व",
           "F": "F",
-          "G": "G",
-          "A": "अ",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2018": {
+          "A": "अ",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "पूर्व",
           "F": "F",
-          "G": "G",
-          "A": "अ",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2019": {
+          "A": "अ",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "पूर्व",
           "F": "F",
-          "G": "G",
-          "A": "अ",
-          "B": "B"
+          "G": "G"
         },
         "CSDU6 piano with notes_2021": {
+          "A": "अ",
+          "B": "B",
           "C": "C",
           "D": "D",
           "E": "पूर्व",
           "F": "F",
-          "G": "G",
-          "A": "अ",
-          "B": "B"
+          "G": "G"
+        },
+        "GAN Guess Widget_ai23": {
+          "Click on the buttons below to build a guess for what follows the rule": "क्या नियम का पालन करता है इसके लिए अनुमान लगाने के लिए नीचे दिए गए बटनों पर क्लिक करें",
+          "Computer's Guess FOLLOWS Rule": "कंप्यूटर का अनुमान नियम का पालन करता है",
+          "Computer's Guess does NOT follow the Rule": "कंप्यूटर का अनुमान नियम का पालन नहीं करता है",
+          "Computer's Guess:": "कंप्यूटर का अनुमान:",
+          "Current Guess": "वर्तमान अनुमान",
+          "Previous Guesses": "पिछले अनुमान",
+          "Submit Guess": "अनुमान दर्ज करें"
+        },
+        "LLM - Eliza_ai23": {
+          "Talk to Eliza by entering text in the prompt box. When you are finished, type quit in the prompt.": "प्रॉम्प्ट बॉक्स में टेक्स्ट दाखिल करके एलिज़ा से बात करें। जब आप काम पूरा कर लें, तो प्रॉम्प्ट में quit टाइप करें।"
+        },
+        "LLM - Written Voice Simulator_ai23": {
+          "BTS: \"Dynamite\"": "BTS: “डायनामाइट”",
+          "Back": "वापस",
+          "Change Voice": "आवाज़ बदलें",
+          "Choose a voice to model": "मॉडल के लिए आवाज़ चुनें",
+          "Choose the Save file you want to load from the dropdown below": "वह फ़ाइल सहेजें चुनें जिसे आप नीचे दिए ड्रॉपडाउन से लोड करना चाहते हैं",
+          "Copy / Paste or type the words you want to create a model based on below": "उन शब्दों को कॉपी / पेस्ट करें या टाइप करें जिनका आप नीचे के आधार पर एक मॉडल बनाना चाहते हैं",
+          "Create my own!": "मेरा अपना बनाएं!",
+          "Delete Text": "टेक्स्ट मिटाएं",
+          "Dr Seuss: Green Eggs and Ham": "डॉ सीस: ग्रीन एग्स एंड हैम",
+          "Generate!": "तैयार करें!",
+          "Give the voice a name": "आवाज़ को कोई नाम दें",
+          "Give your save file a name": "अपनी सहेजी फ़ाइल को कोई नाम दें",
+          "Load Save": "लोड सेव",
+          "Load this story": "इस कहानी को लोड करें",
+          "Maya Angelou: \"Caged Bird\"": "माया एंजेलो: “केज्ड बर्ड”",
+          "Model This Voice!": "इस आवाज़ को मॉडल करें!",
+          "Modeling Voice": "मॉडलिंग वॉइस",
+          "Pharell: \"Happy\"": "फेरेल: “हैप्पी”",
+          "Sandra Cisneros: \"Abuelito Who\"": "सैंड्रा सिस्नेरोस: “अबुएलिटो हू”",
+          "Save Text": "टेक्स्ट सहेजें",
+          "Save!": "सहेजें!"
+        },
+        "Neural Networks - Perceptron - Beta_ai23": {
+          "Choose one of the content creators below to generate recommendations for you. Clicking their name will show more information about them.Once you've selected someone, click the \"Show Recommendations\" button to see what your video feed!See Recommendations! ➡️Your RecommendationsThese are the videos you've been recommended based on who you selected in the last screen.Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain categories.Example!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Person": "अपने लिए सिफारिशें पैदा करने के लिए नीचे दिए गए सामग्री निर्माताओं में से किसी एक को चुनें। उनके नाम पर क्लिक करना उनके बारे में और जानकारी दिखाएगा। एक बार किसी को चुनने के बाद, यह देखने के लिए “सिफारिशें दिखाएं” बटन पर क्लिक करें कि आपका वीडियो फ़ीड क्या है! सिफारिशें देखें! ➡️ आपकी सिफारिशें ये वे वीडियो हैं जिनकी आपको पिछली स्क्रीन में आपके द्वारा चुने गए लोगों के आधार पर सिफारिश की गई है। एक समय पर केवल 3 वीडियो दिखाए जाते हैं - अधिक देखने के लिए स्क्रॉल बटनों का उपयोग करें। कुछ श्रेणियों के अनुसार फ़िल्टर करने के लिए बाईं ओर दिए गए बटनों का उपयोग करें। उदाहरण! उदाहरण! उदाहरण! ⬆️ ऊपर स्क्रॉल करें ⬆️⬇️ नीचे स्क्रॉल करें ⬇️⬅️ नया व्यक्ति चुनें",
+          "Example!": "उदाहरण!",
+          "Let's Get Started! ➡️": "आइए शुरू करते हैं! ➡️",
+          "Once you've selected someone, click the \"Show Recommendations\" button to see what your video feed!": "एक बार किसी को चुनने के बाद, यह देखने के लिए “सिफारिशें दिखाएं” बटन पर क्लिक करें कि आपका वीडियो फ़ीड क्या है!",
+          "Only 3 videos are shown at a time - use the Scroll buttons to see more. ": "एक समय पर केवल 3 वीडियो दिखाए जाते हैं - अधिक देखने के लिए स्क्रॉल बटनों का उपयोग करें। ",
+          "See Recommendations! ➡️": "सिफारिशें देखें! ➡️",
+          "Select at least one person to use for recommendations to continue!": "जारी रखने के लिए सिफारिशों के लिए उपयोग करने के लिए कम से कम एक व्यक्ति को चुनें!",
+          "Simply pick which content creators you want to follow and then see your video recommendations!": "बस उस सामग्री निर्माता को चुनें जिसे आप फ़ॉलो करना चाहते हैं और फिर अपनी वीडियो सिफारिशें देखें!",
+          "These are the videos you've been recommended based on who you selected in the last screen.Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain categories.Example!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Person": "ये वे वीडियो हैं जिनकी आपको पिछली स्क्रीन में आपके द्वारा चुने गए व्यक्ति के आधार पर सिफारिश की गई है। एक समय पर केवल 3 वीडियो दिखाए जाते हैं - अधिक देखने के लिए स्क्रॉल बटनों का उपयोग करें। कुछ श्रेणियों के अनुसार फ़िल्टर करने के लिए बाईं ओर दिए गए बटनों का उपयोग करें। उदाहरण! उदाहरण! उदाहरण! ⬆️ ऊपर स्क्रॉल करें ⬆️⬇️ नीचे स्क्रॉल करें ⬇️⬅️ नया व्यक्ति चुनें",
+          "Use the buttons on the left to filter by certain categories.": "कुछ श्रेणियों के अनुसार फ़िल्टर करने के लिए बाईं ओर के बटनों का उपयोग करें।",
+          "We've gathered all your favorite personalities to make videos that match your interests AND to help curate your video feed.": "हम आपकी पसंद से मेल खाते वीडियो बनाने और आपके वीडियो फ़ीड को क्यूरेट करने में मदद करने के लिए आपकी सभी पसंदीदा हस्तियों को एक साथ लाए हैं। ",
+          "WeTube is a new media website for all your favorite content creators. We've gathered all your favorite personalities to make videos that match your interests AND to help curate your video feed.Simply pick which content creators you want to follow and then see your video recommendations!Let's Get Started! ➡️Select at least one person to use for recommendations to continue!Choose one of the content creators below to generate recommendations for you. Clicking their name will show more information about them.Once you've selected someone, click the \"Show Recommendations\" button to see what your video feed!See Recommendations! ➡️Your RecommendationsThese are the videos you've been recommended based on who you selected in the last screen.Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain categories.Example!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Person": "WeTube आपके सभी पसंदीदा सामग्री निर्माताओं के लिए एक नई मीडिया वेबसाइट है। हम आपकी पसंद से मेल खाते वीडियो बनाने और आपके वीडियो फ़ीड को क्यूरेट करने में मदद करने के लिए आपकी सभी पसंदीदा हस्तियों को एक साथ लाए हैं। बस उन सामग्री निर्माता को चुनें जिसे आप फ़ॉलो करना चाहते हैं और फिर अपनी वीडियो सिफारिशों को देखें! आइए शुरू करते हैं! ➡️ जारी रखने के लिए सिफारिशों के लिए उपयोग करने के लिए कम से कम एक व्यक्ति को चुनें! अपने लिए सिफारिशें पैदा करने के लिए नीचे दिए गए सामग्री निर्माताओं में से किसी एक को चुनें। उनके नाम पर क्लिक करना उनके बारे में और जानकारी दिखाएगा। एक बार किसी व्यक्ति को चुनने के बाद, \nयह देखने के लिए “सिफारिशें दिखाएं” बटन पर क्लिक करें कि आपका वीडियो फ़ीड क्या है! सिफारिशें देखें! ➡️ आपकी सिफारिशें ये वे वीडियो हैं जिनकी आपको पिछली स्क्रीन में आपके द्वारा चुने गए लोगों के आधार पर सिफारिश की गई है। एक समय पर केवल 3 वीडियो दिखाए जाते हैं - अधिक देखने के लिए स्क्रॉल बटनों का उपयोग करें। कुछ श्रेणियों के अनुसार फ़िल्टर करने के लिए बाईं ओर दिए गए बटनों का उपयोग करें। उदाहरण! उदाहरण! उदाहरण! ⬆️ ऊपर स्क्रॉल करें ⬆️⬇️ नीचे स्क्रॉल करें ⬇️⬅️ नया व्यक्ति चुनें",
+          "Your Recommendations": "आपकी सिफारिशें",
+          "⬅️ Select New Person": "⬅️ नया व्यक्ति चुनें",
+          "⬆️ Scroll Up ⬆️": "⬆️ ऊपर स्क्रॉल करें ⬆️",
+          "⬇️ Scroll Down ⬇️": "⬇️ नीचे स्क्रॉल करें ⬇️"
+        },
+        "Neural Networks - Perceptron - Full_ai23": {
+          "0 means their opinion isn't included in your recommendations at all": "0 का अर्थ है कि उनकी राय आपकी सिफारिशों में बिल्कुल भी शामिल नहीं है",
+          "10 means they have a huge influence on the recommendations you receive": "10 का अर्थ है कि आपको मिली सिफारिशों पर उनका बहुत बड़ा प्रभाव है",
+          "Choose one of the content creators below, then use the slider to adjust how much you want them to influence your recommendations!0 means their opinion isn't included in your recommendations at all10 means they have a huge influence on the recommendations you receivefeatureLabelSee Recommendations! ➡️featureValueYour RecommendationsThese are the videos you've been recommended based on how you adjusted the weights on the last screen. Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain videosExample!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Weights": "नीचे दिए गए सामग्री निर्माताओं में से किसी एक को चुनें, फिर स्लाइडर का उपयोग करके यह समायोजित करें कि आप उन्हें आपकी सिफारिशों को कितना प्रभावित करना चाहते हैं! 0 का मतलब है कि उनकी राय आपके सुझावों में बिल्कुल भी शामिल नहीं है10 का मतलब है कि आपके द्वारा प्राप्त अनुशंसाओं पर उनका बहुत बड़ा प्रभाव पड़ता है फ़ीचर लेबल अनुशंसाएं देखें! ➡️ FeatureValueआपकी अनुशंसाएंये वे वीडियो हैं जिनकी अनुशंसा आपको इस आधार पर की गई है कि आपने पिछली स्क्रीन पर वज़न कैसे समायोजित किया था। एक बार में केवल 3 वीडियो दिखाए जाते हैं - अधिक देखने के लिए स्क्रॉल बटन का उपयोग करें। कुछ वीडियो उदाहरण के अनुसार फ़िल्टर करने के लिए बाईं ओर दिए गए बटनों का उपयोग करें! उदाहरण! उदाहरण! ⬆️ ऊपर स्क्रॉल करें ⬆️⬇️ नीचे स्क्रॉल करें ⬇️⬅️ नए वज़न चुनें",
+          "Choose one of the content creators below, then use the slider to adjust how much you want them to influence your recommendations!0 means their opinion isn't included in your recommendations at all10 means they have a huge influence on the recommendations you receivefeatureLabelSee Recommendations! ➡️featureValueYour RecommendationsThese are the videos you've been recommended based on how you adjusted the weights on the last screen. Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain videos⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Weights": "नीचे दिए गए सामग्री निर्माताओं में से एक को चुनें, फिर यह समायोजित करने के लिए स्लाइडर का उपयोग करें कि आप उनके द्वारा आपकी सिफारिशों को कितना प्रभावित किया जाना चाहते हैं!0 का अर्थ है कि उनकी राय आपकी सिफारिशों में बिल्कुल भी शामिल नहीं है10 का अर्थ है कि आपको मिली सिफारिशों पर उनका बहुत बड़ा प्रभाव है विशेषता लेबल सिफारिशें देखें! ➡️ विशेषता मूल्य आपकी सिफारिशें ये वे वीडियो हैं जिनकी आपको इस आधार पर सिफारिश की गई है कि आपने पिछली स्क्रीन पर प्रभावों को कैसे समायोजित किया। एक समय पर केवल 3 वीडियो दिखाए जाते हैं - अधिक देखने के लिए स्क्रॉल बटनों का उपयोग करें। कुछ वीडियो के अनुसार फ़िल्टर करने के लिए बाईं ओर दिए गए बटनों का उपयोग करें ⬆️ ऊपर स्क्रॉल करें ⬆️⬇️ नीचे स्क्रॉल करें ⬇️⬅️ नए प्रभाव चुनें",
+          "Example!": "उदाहरण!",
+          "Let's Get Started! ➡️": "आइए शुरू करते हैं! ➡️",
+          "Only 3 videos are shown at a time - use the Scroll buttons to see more. ": "एक समय पर केवल 3 वीडियो दिखाए जाते हैं - अधिक देखने के लिए स्क्रॉल बटनों का उपयोग करें। ",
+          "See Recommendations! ➡️": "सिफारिशें देखें! ➡️",
+          "Select at least one person to use for recommendations to continue!": "जारी रखने के लिए सिफारिशों के लिए उपयोग करने के लिए कम से कम एक व्यक्ति को चुनें!",
+          "Simply pick which content creators you want to follow to see your recommendations!": "बस वह सामग्री निर्माता चुनें जिसे आप अपनी सिफारिशों को देखने के लिए फ़ॉलो करना चाहते हैं!",
+          "These are the videos you've been recommended based on how you adjusted the weights on the last screen. Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain videosExample!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Weights": "पिछली स्क्रीन पर वज़न को समायोजित करने के तरीके के आधार पर आपके द्वारा सुझाए गए ये वीडियो हैं। एक बार में सिर्फ़ 3 वीडियो दिखाए जाते हैं - ज़्यादा देखने के लिए स्क्रॉल बटन का इस्तेमाल करें। कुछ वीडियो उदाहरण के अनुसार फ़िल्टर करने के लिए बाईं ओर दिए गए बटनों का उपयोग करें! उदाहरण! उदाहरण! ⬆️ ऊपर स्क्रॉल करें ⬆️⬇️ नीचे स्क्रॉल करें ⬇️⬅️ नए वज़न चुनें",
+          "These are the videos you've been recommended based on how you adjusted the weights on the last screen. Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain videos⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Weights": "ये वे वीडियो हैं जिनकी आपको इस आधार पर सिफारिश की गई है कि आपने पिछली स्क्रीन पर प्रभावों को कैसे समायोजित किया। एक समय पर केवल 3 वीडियो दिखाए जाते हैं - अधिक देखने के लिए स्क्रॉल बटनों का उपयोग करें। कुछ वीडियो के अनुसार फ़िल्टर करने के लिए बाईं ओर दिए गए बटनों का उपयोग करें ⬆️ ऊपर स्क्रॉल करें ⬆️⬇️ नीचे स्क्रॉल करें ⬇️⬅️ नए प्रभाव चुनें",
+          "Use the buttons on the left to filter by certain videos": "कुछ वीडियो के अनुसार फ़िल्टर करने के लिए बाईं ओर के बटनों का उपयोग करें",
+          "We've gathered all your favorite personalities to make videos that match your interests.": "हम आपकी पसंद से मेल खाते वीडियो बनाने के लिए आपकी सभी पसंदीदा हस्तियों को एक साथ लाए हैं।",
+          "WeTube Video Recommendations": "WeTube वीडियो सिफारिशें",
+          "WeTube is a new media website for all your favorite content creators. We've gathered all your favorite personalities to make videos that match your interests.Simply pick which content creators you want to follow to see your recommendations!Let's Get Started! ➡️Select at least one person to use for recommendations to continue!Choose one of the content creators below, then use the slider to adjust how much you want them to influence your recommendations!0 means their opinion isn't included in your recommendations at all10 means they have a huge influence on the recommendations you receivefeatureLabelSee Recommendations! ➡️featureValueYour RecommendationsThese are the videos you've been recommended based on how you adjusted the weights on the last screen. Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain videosExample!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Weights": "WeTube आपके सभी पसंदीदा कंटेंट क्रिएटर्स के लिए एक नई मीडिया वेबसाइट है। हमने आपकी रुचियों से मेल खाने वाले वीडियो बनाने के लिए आपकी सभी पसंदीदा हस्तियों को इकट्ठा किया है. अपनी अनुशंसाओं को देखने के लिए बस उन कंटेंट क्रिएटर्स को चुनें जिन्हें आप फ़ॉलो करना चाहते हैं! चलिए शुरू करते हैं! ➡️ जारी रखने के लिए अनुशंसाओं के लिए उपयोग करने के लिए कम से कम एक व्यक्ति का चयन करें! नीचे दिए गए सामग्री निर्माताओं में से किसी एक को चुनें, फिर स्लाइडर का उपयोग करके यह समायोजित करें कि आप उन्हें आपकी सिफारिशों को कितना प्रभावित करना चाहते हैं! 0 का मतलब है कि उनकी राय आपके सुझावों में बिल्कुल भी शामिल नहीं है10 का मतलब है कि आपके द्वारा प्राप्त अनुशंसाओं पर उनका बहुत बड़ा प्रभाव पड़ता है फ़ीचर लेबल अनुशंसाएं देखें! ➡️ FeatureValueआपकी अनुशंसाएंये वे वीडियो हैं जिनकी अनुशंसा आपको इस आधार पर की गई है कि आपने पिछली स्क्रीन पर वज़न कैसे समायोजित किया था। एक बार में केवल 3 वीडियो दिखाए जाते हैं - अधिक देखने के लिए स्क्रॉल बटन का उपयोग करें। कुछ वीडियो उदाहरण के अनुसार फ़िल्टर करने के लिए बाईं ओर दिए गए बटनों का उपयोग करें! उदाहरण! उदाहरण! ⬆️ ऊपर स्क्रॉल करें ⬆️⬇️ नीचे स्क्रॉल करें ⬇️⬅️ नए वज़न चुनें",
+          "WeTube is a new media website for all your favorite content creators. We've gathered all your favorite personalities to make videos that match your interests.Simply pick which content creators you want to follow to see your recommendations!Let's Get Started! ➡️Select at least one person to use for recommendations to continue!Choose one of the content creators below, then use the slider to adjust how much you want them to influence your recommendations!0 means their opinion isn't included in your recommendations at all10 means they have a huge influence on the recommendations you receivefeatureLabelSee Recommendations! ➡️featureValueYour RecommendationsThese are the videos you've been recommended based on how you adjusted the weights on the last screen. Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain videos⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Weights": "WeTube आपके सारे पसंदीदा सामग्री निर्माताओं के लिए एक नई मीडिया वेबसाइट है। हम आपकी पसंद से मेल खाती वीडियो बनाने के लिए आपकी सभी पसंदीदा हस्तियों को एक साथ लाए हैं। अपनी सिफारिशों को देखने के लिए बस यह चुनें कि आप किन सामग्री निर्माताओं को फॉलो करना चाहते हैं! आइए शुरू करते हैं! ➡️सिफारिशों को जारी रखने के लिए उपयोग करने के लिए कम से कम एक व्यक्ति को चुनें! नीचे दिए गए सामग्री निर्माताओं में से एक को चुनें, फिर यह समायोजित करने के लिए स्लाइडर का उपयोग करें कि आप उनसे अपनी सिफारिशों को कितना प्रभावित करना चाहते हैं!0 का अर्थ है कि उनकी राय आपकी सिफारिशों में बिल्कुल भी शामिल नहीं है10 का अर्थ है कि आपको मिलने वाली सिफ़ारिशों पर उनका बहुत बड़ा प्रभाव है विशेषता लेबल सिफ़ारिशें देखें! ➡️विशेषता मूल्य आपकी सिफारिशें ये वे वीडियो हैं जिनकी आपको पिछली स्क्रीन पर प्रभाव समायोजित करने के तरीके के आधार पर सिफारिश की गई है। एक समय पर केवल 3 वीडियो दिखाए जाते हैं - अधिक देखने के लिए स्क्रॉल बटन का उपयोग करें। कुछ वीडियो को फ़िल्टर करने के लिए बाईं ओर दिए गए बटनों का उपयोग करें⬆️ ऊपर स्क्रॉल करें ⬆️⬇️ नीचे स्क्रॉल करें ⬇️⬅️ नया प्रभाव चुनें",
+          "Your Recommendations": "आपकी सिफारिशें",
+          "featureLabel": "विशेषता लेबल",
+          "featureValue": "विशेषता मूल्य",
+          "⬅️ Select New Weights": "⬅️ नए प्रभाव चुनें",
+          "⬆️ Scroll Up ⬆️": "⬆️ ऊपर स्क्रॉल करें ⬆️",
+          "⬇️ Scroll Down ⬇️": "⬇️ नीचे स्क्रॉल करें ⬇️"
+        },
+        "Noisy Image Widget_ai23": {
+          "0%": "0%",
+          "Be patient! Noisy image loading!": "धैर्य रखें! शोर वाला चित्र लोड हो रहा है!",
+          "Move the slider to add more or less generations of noise to the image": "चित्र में शोर की अधिक या कम पीढ़ियों को शामिल करने के लिए स्लाइडर को हिलाएं",
+          "New Image": "नया चित्र",
+          "Noise Generations:": "नॉइज़ जनरेशन:",
+          "Noise Generations: ": "नॉइज़ जनरेशन: "
+        },
+        "U9L5 Cropping Widget_ai2023": {
+          "Crop": "क्रॉप करें",
+          "Image Select": "चित्र चुनें",
+          "Reset": "पुनः सेट करें"
         },
         "allthethings design mode elements": {
           "text": "टेक्सट"
@@ -1222,13 +1991,20 @@
         "csd u5 recommender sample_2022": {
           "Start": "शुरू करें"
         },
+        "csd u5 recommender sample_2023": {
+          "Start": "शुरू करें"
+        },
         "csd-apps for good-2": {
-          "Next": "अगला",
-          "Home": "मुख्य पृष्ठ"
+          "Home": "मुख्य पृष्ठ",
+          "Next": "अगला"
         },
         "csd-apps for good-2_2022": {
-          "Next": "अगला",
-          "Home": "मुख्य पृष्ठ"
+          "Home": "मुख्य पृष्ठ",
+          "Next": "अगला"
+        },
+        "csd-apps for good-2_2023": {
+          "Home": "मुख्य पृष्ठ",
+          "Next": "अगला"
         },
         "csd-apps for good-3": {
           "1": "१",
@@ -1244,24 +2020,27 @@
           "4": "4",
           "???": "???"
         },
+        "csd-apps for good-3_2023": {
+          "1": "१",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "???": "???"
+        },
         "csd-explore ui-2": {
-          "Next": "अगला",
-          "Home": "मुख्य पृष्ठ"
+          "Home": "मुख्य पृष्ठ",
+          "Next": "अगला"
         },
         "csd-explore ui-2_2022": {
-          "Next": "अगला",
-          "Home": "मुख्य पृष्ठ"
+          "Home": "मुख्य पृष्ठ",
+          "Next": "अगला"
+        },
+        "csd-explore ui-2_2023": {
+          "Home": "मुख्य पृष्ठ",
+          "Next": "अगला"
         },
         "csd-explore ui-3": {
           "1": "१",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1272,18 +2051,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-3_2022": {
           "1": "१",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1294,7 +2073,37 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "csd-explore ui-3_2023": {
+          "1": "१",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-4": {
           "Correct!": "सही!",
@@ -1304,16 +2113,12 @@
           "Correct!": "सही!",
           "Sorry!": "क्षमा करें!"
         },
+        "csd-explore ui-4_2023": {
+          "Correct!": "सही!",
+          "Sorry!": "क्षमा करें!"
+        },
         "csd-explore ui-5": {
           "1": "१",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1324,18 +2129,18 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-5_2022": {
           "1": "१",
-          "2": "2",
-          "3": "3",
-          "4": "4",
-          "5": "5",
-          "6": "6",
-          "7": "7",
-          "8": "8",
-          "9": "9",
           "10": "10",
           "11": "11",
           "12": "12",
@@ -1346,7 +2151,37 @@
           "17": "17",
           "18": "18",
           "19": "19",
-          "20": "20"
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "csd-explore ui-5_2023": {
+          "1": "१",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
         },
         "csd-explore ui-6": {
           "Next": "अगला"
@@ -1354,14 +2189,22 @@
         "csd-explore ui-6_2022": {
           "Next": "अगला"
         },
+        "csd-explore ui-6_2023": {
+          "Next": "अगला"
+        },
         "ml-L2 supervised - green glass door-2021": {
-          "Green Glass Door": "ग्रीन ग्लास डोर",
           "Accepted": "स्वीकृत",
+          "Green Glass Door": "ग्रीन ग्लास डोर",
           "Rejected": "अस्वीकृत"
         },
         "ml-L2 supervised - green glass door_2022": {
-          "Green Glass Door": "ग्रीन ग्लास डोर",
           "Accepted": "स्वीकृत",
+          "Green Glass Door": "ग्रीन ग्लास डोर",
+          "Rejected": "अस्वीकृत"
+        },
+        "ml-L2 supervised - green glass door_2023": {
+          "Accepted": "स्वीकृत",
+          "Green Glass Door": "ग्रीन ग्लास डोर",
           "Rejected": "अस्वीकृत"
         },
         "ml-L2 unsupervised - 1-2021": {
@@ -1370,17 +2213,26 @@
         "ml-L2 unsupervised - 1_2022": {
           "Next": "अगला"
         },
+        "ml-L2 unsupervised - 1_2023": {
+          "Next": "अगला"
+        },
         "ml-customize-raspado-2021": {
-          "yes": "हां",
-          "no": "नहीं",
+          "Predict": "(Predict) पूर्वानुमान लगाइए",
           "Raspado Recommender": "रास्पाडो सिफारिशकर्ता",
-          "Predict": "(Predict) पूर्वानुमान लगाइए"
+          "no": "नहीं",
+          "yes": "हां"
         },
         "ml-customize-raspado_2022": {
-          "yes": "हां",
-          "no": "नहीं",
+          "Predict": "(Predict) पूर्वानुमान लगाइए",
           "Raspado Recommender": "रास्पाडो सिफारिशकर्ता",
-          "Predict": "(Predict) पूर्वानुमान लगाइए"
+          "no": "नहीं",
+          "yes": "हां"
+        },
+        "ml-customize-raspado_2023": {
+          "Predict": "(Predict) पूर्वानुमान लगाइए",
+          "Raspado Recommender": "रास्पाडो सिफारिशकर्ता",
+          "no": "नहीं",
+          "yes": "हां"
         },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "जारी रखें",
@@ -1390,107 +2242,162 @@
           "Continue": "जारी रखें",
           "Loading...": "लोड हो रहा है..."
         },
+        "ml-intro ai lab- fruit veggie widget_2023": {
+          "Continue": "जारी रखें",
+          "Loading...": "लोड हो रहा है..."
+        },
         "ml-intro app lab-book recommender demo-2021": {
-          "Silly": "मूर्ख",
-          "Predict": "(Predict) पूर्वानुमान लगाइए"
+          "Predict": "(Predict) पूर्वानुमान लगाइए",
+          "Silly": "मूर्ख"
         },
         "ml-intro app lab-book recommender demo_2022": {
-          "Silly": "मूर्ख",
-          "Predict": "(Predict) पूर्वानुमान लगाइए"
+          "Predict": "(Predict) पूर्वानुमान लगाइए",
+          "Silly": "मूर्ख"
+        },
+        "ml-intro app lab-book recommender demo_2023": {
+          "Predict": "(Predict) पूर्वानुमान लगाइए",
+          "Silly": "मूर्ख"
         },
         "ml-model card-medical app v2 2021-2": {
-          "W": "पश्चिम",
           "A": "अ",
-          "yes": "हां",
+          "W": "पश्चिम",
+          "head": "सिर",
           "no": "नहीं",
-          "head": "सिर"
+          "yes": "हां"
         },
         "ml-model card-medical app v2 2021-2_2022": {
-          "W": "पश्चिम",
           "A": "अ",
-          "yes": "हां",
+          "W": "पश्चिम",
+          "head": "सिर",
           "no": "नहीं",
-          "head": "सिर"
+          "yes": "हां"
+        },
+        "ml-model card-medical app v2 2021-2_2023": {
+          "A": "अ",
+          "W": "पश्चिम",
+          "head": "सिर",
+          "no": "नहीं",
+          "yes": "हां"
         },
         "ml-model cards-book recommender model card": {
-          "Silly": "मूर्ख",
-          "Predict": "(Predict) पूर्वानुमान लगाइए"
+          "Predict": "(Predict) पूर्वानुमान लगाइए",
+          "Silly": "मूर्ख"
         },
         "ml-model cards-book recommender model card_2022": {
-          "Silly": "मूर्ख",
-          "Predict": "(Predict) पूर्वानुमान लगाइए"
+          "Predict": "(Predict) पूर्वानुमान लगाइए",
+          "Silly": "मूर्ख"
+        },
+        "ml-model cards-book recommender model card_2023": {
+          "Predict": "(Predict) पूर्वानुमान लगाइए",
+          "Silly": "मूर्ख"
         },
         "ml-models in applab-choice if quotes": {
-          "3": "3",
-          "2": "2",
           "1": "१",
+          "2": "2",
+          "3": "3",
           "Predict": "(Predict) पूर्वानुमान लगाइए"
         },
         "ml-models in applab-choice if quotes_2022": {
-          "3": "3",
-          "2": "2",
           "1": "१",
+          "2": "2",
+          "3": "3",
+          "Predict": "(Predict) पूर्वानुमान लगाइए"
+        },
+        "ml-models in applab-choice if quotes_2023": {
+          "1": "१",
+          "2": "2",
+          "3": "3",
           "Predict": "(Predict) पूर्वानुमान लगाइए"
         },
         "ml-models in applab-choice if wrong place": {
-          "3": "3",
-          "2": "2",
           "1": "१",
+          "2": "2",
+          "3": "3",
           "Predict": "(Predict) पूर्वानुमान लगाइए"
         },
         "ml-models in applab-choice if wrong place_2022": {
-          "3": "3",
-          "2": "2",
           "1": "१",
+          "2": "2",
+          "3": "3",
+          "Predict": "(Predict) पूर्वानुमान लगाइए"
+        },
+        "ml-models in applab-choice if wrong place_2023": {
+          "1": "१",
+          "2": "2",
+          "3": "3",
           "Predict": "(Predict) पूर्वानुमान लगाइए"
         },
         "ml-models in applab-choice intended warnings": {
-          "3": "3",
-          "2": "2",
           "1": "१",
-          "Predict": "(Predict) पूर्वानुमान लगाइए",
-          "Back": "वापस"
+          "2": "2",
+          "3": "3",
+          "Back": "वापस",
+          "Predict": "(Predict) पूर्वानुमान लगाइए"
         },
         "ml-models in applab-choice intended warnings_2022": {
-          "3": "3",
-          "2": "2",
           "1": "१",
-          "Predict": "(Predict) पूर्वानुमान लगाइए",
-          "Back": "वापस"
+          "2": "2",
+          "3": "3",
+          "Back": "वापस",
+          "Predict": "(Predict) पूर्वानुमान लगाइए"
+        },
+        "ml-models in applab-choice intended warnings_2023": {
+          "1": "१",
+          "2": "2",
+          "3": "3",
+          "Back": "वापस",
+          "Predict": "(Predict) पूर्वानुमान लगाइए"
         },
         "ml-models in applab-choice predict typos": {
-          "3": "3",
-          "2": "2",
           "1": "१",
+          "2": "2",
+          "3": "3",
           "Predict": "(Predict) पूर्वानुमान लगाइए"
         },
         "ml-models in applab-choice predict typos_2022": {
-          "3": "3",
-          "2": "2",
           "1": "१",
+          "2": "2",
+          "3": "3",
+          "Predict": "(Predict) पूर्वानुमान लगाइए"
+        },
+        "ml-models in applab-choice predict typos_2023": {
+          "1": "१",
+          "2": "2",
+          "3": "3",
           "Predict": "(Predict) पूर्वानुमान लगाइए"
         },
         "ml-models in applab-zoo assessment": {
-          "Yes": "हां",
-          "No": "नहीं",
           "B": "B",
-          "Predict": "(Predict) पूर्वानुमान लगाइए"
+          "No": "नहीं",
+          "Predict": "(Predict) पूर्वानुमान लगाइए",
+          "Yes": "हां"
         },
         "ml-models in applab-zoo assessment_2022": {
-          "Yes": "हां",
-          "No": "नहीं",
           "B": "B",
-          "Predict": "(Predict) पूर्वानुमान लगाइए"
+          "No": "नहीं",
+          "Predict": "(Predict) पूर्वानुमान लगाइए",
+          "Yes": "हां"
+        },
+        "ml-models in applab-zoo assessment_2023": {
+          "B": "B",
+          "No": "नहीं",
+          "Predict": "(Predict) पूर्वानुमान लगाइए",
+          "Yes": "हां"
         },
         "ml-models in applab-zoo model embed": {
-          "Yes": "हां",
           "No": "नहीं",
-          "Predict": "(Predict) पूर्वानुमान लगाइए"
+          "Predict": "(Predict) पूर्वानुमान लगाइए",
+          "Yes": "हां"
         },
         "ml-models in applab-zoo model embed_2022": {
-          "Yes": "हां",
           "No": "नहीं",
-          "Predict": "(Predict) पूर्वानुमान लगाइए"
+          "Predict": "(Predict) पूर्वानुमान लगाइए",
+          "Yes": "हां"
+        },
+        "ml-models in applab-zoo model embed_2023": {
+          "No": "नहीं",
+          "Predict": "(Predict) पूर्वानुमान लगाइए",
+          "Yes": "हां"
         },
         "ml-models-shoes decision tree-2021": {
           "Improved Shoe Recommender": "बेहतर जूता सिफारिशकर्ता",
@@ -1500,10 +2407,17 @@
           "Improved Shoe Recommender": "बेहतर जूता सिफारिशकर्ता",
           "Sports": "खेल"
         },
+        "ml-models-shoes decision tree_2023": {
+          "Improved Shoe Recommender": "बेहतर जूता सिफारिशकर्ता",
+          "Sports": "खेल"
+        },
         "ml-models-shoes points-2021": {
           "Ultimate Shoe Recommender": "अंतिम जूता सिफारिशकर्ता"
         },
         "ml-models-shoes points_2022": {
+          "Ultimate Shoe Recommender": "अंतिम जूता सिफारिशकर्ता"
+        },
+        "ml-models-shoes points_2023": {
           "Ultimate Shoe Recommender": "अंतिम जूता सिफारिशकर्ता"
         },
         "ml-models-shoes random-2021": {
@@ -1512,21 +2426,32 @@
         "ml-models-shoes random_2022": {
           "Shoe Recommender": "जूता सिफारिशकर्ता"
         },
+        "ml-models-shoes random_2023": {
+          "Shoe Recommender": "जूता सिफारिशकर्ता"
+        },
         "ml-use model card-example3A-2021": {
           "Driver Alert System": "ड्राईवर चेतावनी प्रणाली",
-          "rain": "बारिश",
+          "Predict": "(Predict) पूर्वानुमान लगाइए",
           "cloudy": "धुंधला",
-          "night": "रात",
           "dusk": "शाम",
-          "Predict": "(Predict) पूर्वानुमान लगाइए"
+          "night": "रात",
+          "rain": "बारिश"
         },
         "ml-use model card-example3A_2022": {
           "Driver Alert System": "ड्राईवर चेतावनी प्रणाली",
-          "rain": "बारिश",
+          "Predict": "(Predict) पूर्वानुमान लगाइए",
           "cloudy": "धुंधला",
-          "night": "रात",
           "dusk": "शाम",
-          "Predict": "(Predict) पूर्वानुमान लगाइए"
+          "night": "रात",
+          "rain": "बारिश"
+        },
+        "ml-use model card-example3A_2023": {
+          "Driver Alert System": "ड्राईवर चेतावनी प्रणाली",
+          "Predict": "(Predict) पूर्वानुमान लगाइए",
+          "cloudy": "धुंधला",
+          "dusk": "शाम",
+          "night": "रात",
+          "rain": "बारिश"
         }
       }
     }

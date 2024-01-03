@@ -1,0 +1,14 @@
+{
+  "blockly_blockPlaySoundAtMeasureTooltip": "အသံ ဖွင့်ပါ",
+  "blockly_blockPlaySoundTooltip": "အသံ ဖွင့်ပါ",
+  "blockly_blockRepeatTooltip": "ထပ်မံ ပြုလုပ်ပါ",
+  "blockly_blockWhenRun": "run တဲ့အခါ",
+  "blockly_blockWhenRunTooltip": "run တဲ့အခါ",
+  "blockly_toolboxCategoryEvents": "ဖြစ်စဥ်များ",
+  "blockly_toolboxCategoryLogic": "Logic",
+  "blockly_toolboxCategoryMath": "သင်္ချာ",
+  "blockly_toolboxCategoryVariables": "Variables",
+  "continue": "ဆက်လုပ်ပါ",
+  "panelHeaderWorkspace": "Workspace: ",
+  "startOver": "အစက ပြန်စပါ"
+}

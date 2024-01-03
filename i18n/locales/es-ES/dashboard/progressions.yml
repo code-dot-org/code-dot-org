@@ -2,6 +2,8 @@ es:
   data:
     progressions:
       '"If/Else" with the Bee': '"If/Else" con Abeja'
+      "(Optional) Eliza Widget": "(Opcional) Widget de Eliza"
+      "(Optional) GAN Guess Widget": "Widget GAN Guess (opcional)"
       8-Bit Binary Number Widget: Widget de Números Binarios de 8 Bits
       AI Lab and Isaac's Data: Laboratorio de IA y Datos de Isaac
       AI Lab and Kim's Data: Laboratorio de IA y Datos de Kim
@@ -103,6 +105,7 @@ es:
       Changing Screens: Cambiar pantallas
       Changing Sensor Scale: Cambiar la escala del sensor
       Check Your Work: Comprueba Tu Trabajo
+      Check for Understanding: Compruebe si hay comprensión
       Check-In Survey: Encuesta de Comprobación
       Checking for a Winner: Chequeando un Ganador
       'Choice Levels: Customize Your App': 'Niveles Opcionales: Personaliza tu Aplicación'
@@ -114,6 +117,7 @@ es:
       'Circuit Playground: LEDs': 'Circuit Playground: LED'
       Circuits and Logic: Circuitos y lógica
       Club Datasets: Bases de Datos de Club
+      Code My Poem: Programa Mi Poema
       Code Prediction: Predicción de Código
       Code Your Own Flappy Game: Crea Tu Propio Juego Flappy
       Code Your Page: Programa tu Página
@@ -213,6 +217,7 @@ es:
       Extra Challenge: Desafío Extra
       'Extra Challenge: Sound Board': 'Desafío Extra: Efectos de Sonido'
       Field Collector App: Aplicación de Recolector de Campo
+      Final Dance Party Project: Proyecto Final de Fiesta de Baile
       Final Personal Website: Sitio web personal final
       Final Room Escape App: Aplicación Final Escape Room 
       Find the Wizard: Encuentra el Asistente
@@ -250,7 +255,7 @@ es:
       Headings in HTML: Títulos en HTML
       Hello World: Hola Mundo
       How to Create a Simple Function: Cómo crear una función simple
-      How to Make a Sprite: Cómo crear un sprite
+      How to Make a Sprite: Como hacer un sprite
       Human Device Interaction: Interacción entre Dispositivo y Persona
       Hyperlinks: Hipervínculos
       Ice Age Loops: Bucles con la Edad de Hielo
@@ -272,14 +277,18 @@ es:
       InspirationalArtwork: InspirationalArtwork
       Interactive Art: Arte Interactivo
       Interactive Card: Tarjeta interactiva
-      Intro to Design Mode: Introducción al modo de diseño
+      Interactive Characters: Personajes Interactivos
+      Interactive Maps Intro Video: Video de introducción a los Mapas Interactivos
+      Intro Video: Vídeo de introducción
+      Intro to Design Mode: Introducción al Modo Diseño
       Intro to Flyer Game: Introducción al Juego de Voladores
       Intro to For Loops: Introducción a los bucles "For"
       Intro to Side Scrollers: Introducción a los Desplazamientos Laterales
       Intro to Sprites: Introducción a los Sprites
       Intro to Variables: Introducción a las Variables
-      Introducing Sprite Lab: Presentamos el Laboratorio de sprites
-      Introduction to Arrays: Introducción a los arreglos
+      Introducing Sprite Lab: Presentación de Laboratorio Sprite
+      Introduction: Introducción
+      Introduction to Arrays: Introducción a los Arrays
       Introduction to Game Lab: Introducción al Laboratorio de juegos
       Introduction to Variables: Introducción a las variables
       Investigate: Investigar
@@ -287,6 +296,7 @@ es:
       Iteration and Parameters: Repetición y parámetros
       Keep On Dancing!: Sigue bailando!
       Keeping Data Secret: Mantener los datos en secreto
+      Key Press & At Measure Events: 'Eventos: uso del teclado & el bloque `En x Compases`'
       Keyboard Input: Entrada de teclado
       Kim's Survey: Encuesta de Kim
       Kim's Survey Data: Datos de la Encuesta de Kim
@@ -307,6 +317,7 @@ es:
       Looking for Patterns: Buscando Patrones
       Looping: Haciendo Bucles
       Loops with the Artist: Bucles con el Artista
+      Make Dancer & Dance Move: Cómo crear bailarines & programar la coreografía
       Make Your Sprites: Crea tus Sprites
       Make a Prediction: Haz una predicción
       Make an Interactive Card: Crea una Tarjeta Interactiva
@@ -356,8 +367,9 @@ es:
       Multiframe Animations: Animaciones Multiframe
       Musical Arrays: Matrices musicales
       My Loopy Robotic Friends - Unplugged Activity: Mis Amigos Robóticos Loopy - Actividad Desconectada
-      My Online Neighborhood: Mi barrio en línea
+      My Online Neighborhood: Mi Barrio en línea
       My Robotic Friends - Unplugged Activity: Mis Amigos Robóticos - Actividad Desconectada
+      My Time Capsule: Mi Capsula de Tiempo
       Naming Variables: Nombrar variables
       Nested Loops with the Bee: Bucles anidados con la Abeja
       New Challenge Introduction: Nuevo Desafío Introducción
@@ -465,6 +477,7 @@ es:
       Setup: Configuración
       Shapes and Parameters: Formas y parámetros
       Shapes and the Draw Loop: Figuras y el Bucle de Dibujo
+      Share Out: Compartir
       Share Your App: Comparte tu Aplicación
       Share Your Pages: Comparte tus Páginas
       Share Your Stylesheets: Comparte tus Hojas de Estilo
@@ -498,7 +511,7 @@ es:
       Terminology Recap: Resumen de Terminología
       Text Compression: Compresión de Texto
       The Accelerometer: El acelerómetro
-      The Animation Tab: La pestaña de Animación
+      The Animation Tab: La Pestaña de Animación
       The Artist in Code Studio: El Artista en Studio Code 
       The Big Event - Unplugged Activity: El Gran Evento - Actividad Desconectada
       The Body Element: El elemento del cuerpo
@@ -506,7 +519,7 @@ es:
       The Collector: El Coleccionista
       The Counter Pattern: El patrón del contador
       The Draw Loop: El bucle 'dibujar'
-      The Harvester: La cosechadora
+      The Harvester: La Recolectora
       The Internet - Unplugged Activity: Internet - Actividad Desconectada
       The Power of Words - Unplugged Activity: El Poder de las Palabras - Actividad Desconectada
       The Right App - Unplugged Activity: La Aplicación Correcta - Actividad Desconectada
@@ -518,8 +531,10 @@ es:
       UI Element Properties: Propiedades del Elemento "Pantalla de Usuario"
       Ultimate Shoe Recommender: El Mejor Recomendador de Calzado
       Unit 5 Lesson 1 Overview: Unidad 5 Lección 1 Resumen
+      Unplugged Activity: Actividad sin conexión
       Updating Your Prototype: Actualizando tu Prototipo
       Upload Your Images: Sube tus Imágenes
+      Use AI: Usa la IA
       User Interface: Pantalla de Usuario
       Using Accelerometer Events: Usar eventos del acelerómetro
       Using Arrays: Uso de arreglos
@@ -529,7 +544,7 @@ es:
       Using Training Data: Uso de los Datos de Entrenamiento
       Using the Grid: Usar la cuadrícula
       Using the LED: Usando los LED
-      Using the Repeat Block: Uso del bloque 'repetir'
+      Using the Repeat Block: Usando el bloque de repetición
       Using the Switch: Usando la instrucción "Switch"
       Variables: Variables
       Velocity: Velocidad

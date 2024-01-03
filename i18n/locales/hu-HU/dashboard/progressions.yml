@@ -87,6 +87,7 @@ hu:
       Challenges: Feladatok
       Change: Módosítás
       Check Your Work: Saját munka ellenőrzése
+      Check for Understanding: Ellenőrizze a megértést
       Check-In Survey: Bejelentkezési felmérés
       Checking for a Winner: Győztes keresése
       'Choice Levels: Customize Your App': 'Választható szintek: Alkalmazás testreszabása'
@@ -200,7 +201,7 @@ hu:
       'Free Play: Make a Scene': 'Szabad játék: Jelenet készítése'
       'Free Play: Make an Interactive Scene': 'Szabad játék: Interaktív jelenet készítése'
       Fruit and Veggie Explorer: Gyümölcsök és zöldségek felfedezése
-      Functions: funkciók
+      Functions: Függvények
       Functions Review: Függvények áttekintése
       Functions with Parameters: Paraméteres függvények
       Get In Formation: Alakzatba állás
@@ -231,12 +232,14 @@ hu:
       Input with If-Else: Bevitel if/else feltételekkel
       Inspiration!: Inspiráció!
       InspirationalArtwork: InspirationalArtwork
+      Intro Video: Bevezető videó
       Intro to Design Mode: Bevezető a Tervező módhoz
       Intro to Flyer Game: Bevezetés a Flyer-játékba
       Intro to For Loops: Bevezetés a for ciklusokba
       Intro to Side Scrollers: Bevezetés az oldalsó görgetőkbe
       Intro to Sprites: Bevezetés a sprite-okba
       Intro to Variables: Bevezetés a változókba
+      Introduction: Bevezető
       Introduction to Game Lab: Bevezetés a játéklaborba
       Isaac's Survey Data: Isaac-felmérés adatai
       Iteration and Parameters: Ismétlés és paraméterek
@@ -439,6 +442,7 @@ hu:
       UI Element Properties: A felhasználói felület elemeinek tulajdonságai
       Ultimate Shoe Recommender: A legjobb cipőajánló
       Unit 5 Lesson 1 Overview: '5. egység, 1. lecke: Összefoglalás'
+      Unplugged Activity: Offline tevékenység
       Upload Your Images: Képek feltöltése
       User Interface: Felhasználói felület
       Using Getters and Setters: Lekérdezők és beállítók használata

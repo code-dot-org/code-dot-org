@@ -3,20 +3,20 @@ title: Poradnik dla rodziców
 ---
 
 # Jak przeprowadzić Godzinę Kodowania ze swoim dzieckiem
-Wypróbowanie "Godziny kodowania" jest łatwe i stanowi atrakcyjny sposób wprowadzenia swojego dziecka w dziedzinę informatyki, być może po raz pierwszy. Informatyka nie tylko ma znaczenie fundamentalne dla wszystkich dziedzin nauki, ale<a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">>ostatnie badania pokazują</a>, że dzieci, które uczą się informatyki osiągają lepsze wyniki w innych przedmiotach, przodują w rozwiązywaniu problemów i mają <font color="00adbc"><b> o 17% większe szanse dostać się na studia </b></font>.
+Wypróbowanie Godziny Kodowania jest łatwe i stanowi atrakcyjny sposób wprowadzenia swojego dziecka do informatyki, być może po raz pierwszy. Informatyka nie tylko ma znaczenie fundamentalne dla wszystkich dziedzin, ale <a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">ostatnie badania pokazują</a>, że dzieci, które uczą się informatyki osiągają lepsze wyniki w innych przedmiotach, przodują w rozwiązywaniu problemów i mają <font color="00adbc"><b> o 17% większe szanse dostać się na studia</b></font>.
 
-Możesz dołączyć do dziesiątków milionów uczniów na całym świecie w ramach tego wydarzenia o zasięgu globalnym. Razem możemy zainspirować dzieci do nauki, łamać stereotypy i pomóc dzieciom odkrywać nowo wzbudzone zainteresowanie. Najlepsze jest jednak to, że masz już wszystko, czego potrzebujesz, aby wprowadzić "Godzinę kodowania" do swojego domu!
+Możesz dołączyć do dziesiątków milionów uczniów na całym świecie w ramach tego ruchu o zasięgu globalnym. Razem możemy zainspirować dzieci do nauki, łamać stereotypy i pomóc dzieciom odkrywać nowo wzbudzone zainteresowanie. Najlepsze jest jednak to, że masz już wszystko, czego potrzebujesz, aby wprowadzić Godzinę Kodowania do swojego domu!
 
 [<img src="/images/fit-600/Marketing/mother-helping-her-daughter-use-a-laptop-4260325.jpg" />]({{ urls/learn }})
 
 <h3>Czego potrzebuję, by rozpocząć?</h3>
-Godzina Kodowania jest łatwa do wykonania - nawet dla początkujących! Nie jest potrzebne doświadczenie w dziedzinie informatyki ani dydaktyki, aby prowadzić atrakcyjne zajęcia dla Twoich dzieci, na których będą się one uczyć i śmiać.
+Godzina Kodowania jest łatwa do prowadzenia - nawet dla początkujących! Nie jest potrzebne doświadczenie w dziedzinie informatyki ani dydaktyki, aby prowadzić atrakcyjne zajęcia dla Twoich dzieci, na których będą się one uczyć i uśmiechać.
 
-Możesz wypróbować "Godziny kodowania" korzystając z komputera, tabletu, smartfona lub w trybie całkowicie "unplugged" - bez komputera Pokazujemy jak należy zacząć.
+Możesz wypróbować Godzinę Kodowania korzystając z komputera, tabletu, smartfona lub w trybie całkowicie bez komputera (unplugged)! Pokazujemy tutaj jak zacząć.
 
 ***
 
-## 1) Poznawaj zajęcia i treści samouczków
+## 1) Poznawaj aktywności i samouczki
 
 [<img src="/images/fit-600/tutorials.png" />]({{ urls/learn }})
 

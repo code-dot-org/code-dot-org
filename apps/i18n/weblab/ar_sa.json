@@ -1,2 +1,21 @@
 {
+  "addCSSButton": "إضافة CSS",
+  "addHTMLButton": "إضافة HTML",
+  "addImageButton": "إضافة صورة",
+  "closeFullscreenPreview": "إغلاق معاينة ملء الشاشة",
+  "currentProjectCapacity": "تم استخدام {currentMegabytes}ميغابايت من {totalMegabytes}ميغابايت",
+  "disallowedHtml": "يحتوي الملف \"{filename}\" على عناصر HTML غير المسموح بها: `{disallowedTags}`. ستتم إزالتها عند إغلاق مربع الحوار هذا.",
+  "errorSavingProject": "لم يعمل شيء ما أثناء الحفظ التلقائي لمشروعك. تحقق من اتصال الإنترنت الخاص بك وحاول الحفظ يدويًا. إذا استمرت هذه المشكلة، حاول إعادة تحميل الصفحة للبدء من جديد.",
+  "fatalError": "خطأ فادح: {message}. إذا كنت في وضع التصفح الخاص، فلا يمكن كتابة البيانات.",
+  "loadFailure": "عذرًا، فشل Web Lab في التحميل لسبب ما. خطأ: {message}",
+  "openFullscreenPreview": "افتح معاينة ملء الشاشة",
+  "refreshPreview": "قم بالتحديث والحفظ",
+  "reloading": "جاري إعادة التحميل...",
+  "reset": "إعادة تعيين مختبر الويب",
+  "resetComplete": "تمت إعادة تعيين مختبر الويب",
+  "resetFailure": "فشلت إعادة تعيين Web Lab: {message}.",
+  "toggleInspectorOff": "المفتش: قيد التشغيل",
+  "toggleInspectorOn": "المفتش: إيقاف التشغيل",
+  "troubleshootingSupport": "يرجى الاطلاع على مقالة الدعم الخاصة بنا [\"استكشاف مشكلات مختبر الويب وإصلاحها\"]({url}) لمزيد من المعلومات.",
+  "uploadError": "خطأ في التحميل"
 }

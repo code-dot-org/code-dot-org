@@ -4,3 +4,5 @@ right 'Male'
 right 'Female'
 right 'Other'
 right 'Prefer not to answer'
+
+allow_multiple_attempts true

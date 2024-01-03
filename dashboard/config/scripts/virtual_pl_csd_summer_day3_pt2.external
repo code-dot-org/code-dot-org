@@ -1,0 +1,27 @@
+name 'virtual-pl-csd-summer-day3-Pt2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Day 3, Asynchronous Part 2
+
+##### Welcome! In this asynchronous module, you will build on the synchronous Classroom Culture session by learning more about how to create an inclusive classroom culture. 
+
+<img src="https://images.code.org/5ab7ec8a1cf8eaef189d2c3c70b0193c-image-1684359952309.45.50 PM.png" alt="Image four students with laptops standing in a school hallway" style="border-radius:10px; float: right; height: 200px; clear: both; margin: 0 20px 20px 20px;">
+
+## In this module, you will:
+
+* ##### Create an artifact that represents a positive classroom culture.
+* ##### Reflect on the role of the teacher in creating a positive classroom culture.
+* ##### Get an overview of how teamwork is incorporated into the CS Discoveries curriculum.
+* ##### Complete any remaining challenges from the TLOs.
+
+### **Suggested time:** 60 minutes
+
+
+## Let's get started!
+
+<div style="clear:both"/>
+
+![]()
+MARKDOWN

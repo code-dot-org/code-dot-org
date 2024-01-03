@@ -19,7 +19,7 @@ const initialState = {
   stepSpeed: 1,
   isDebuggingSprites: false,
   // true when waiting for user to provide an answer to a contained level
-  awaitingContainedResponse: false
+  awaitingContainedResponse: false,
 };
 
 /**
@@ -34,13 +34,13 @@ export default function reducer(state, action) {
       isDebuggerPaused:
         action.isRunning === false ? false : state.isDebuggerPaused,
       isDebuggingSprites:
-        action.isRunning === false ? false : state.isDebuggingSprites
+        action.isRunning === false ? false : state.isDebuggingSprites,
     });
   }
 
   if (action.type === SET_IS_EDIT_WHILE_RUN) {
     return _.assign({}, state, {
-      isEditWhileRun: action.isEditWhileRun
+      isEditWhileRun: action.isEditWhileRun,
     });
   }
 
@@ -48,14 +48,14 @@ export default function reducer(state, action) {
     return _.assign({}, state, {
       isRunning: action.isDebuggerPaused ? true : state.isRunning,
       isDebuggerPaused: action.isDebuggerPaused,
-      nextStep: action.nextStep
+      nextStep: action.nextStep,
     });
   }
 
   if (action.type === SET_STEP_SPEED) {
     if (typeof action.stepSpeed === 'number') {
       return _.assign({}, state, {
-        stepSpeed: action.stepSpeed
+        stepSpeed: action.stepSpeed,
       });
     }
   }
@@ -64,7 +64,7 @@ export default function reducer(state, action) {
     if (state.awaitingContainedResponse !== action.awaitingContainedResponse) {
       return {
         ...state,
-        awaitingContainedResponse: action.awaitingContainedResponse
+        awaitingContainedResponse: action.awaitingContainedResponse,
       };
     }
   }
@@ -72,7 +72,7 @@ export default function reducer(state, action) {
   if (action.type === SET_IS_DEBUGGING_SPRITES && state.isRunning) {
     return {
       ...state,
-      isDebuggingSprites: action.isDebuggingSprites
+      isDebuggingSprites: action.isDebuggingSprites,
     };
   }
 
@@ -84,7 +84,7 @@ export default function reducer(state, action) {
  */
 export const setIsRunning = isRunning => ({
   type: SET_IS_RUNNING,
-  isRunning: isRunning
+  isRunning: isRunning,
 });
 
 /**
@@ -92,7 +92,7 @@ export const setIsRunning = isRunning => ({
  */
 export const setIsEditWhileRun = isEditWhileRun => ({
   type: SET_IS_EDIT_WHILE_RUN,
-  isEditWhileRun: isEditWhileRun
+  isEditWhileRun: isEditWhileRun,
 });
 
 /**
@@ -103,7 +103,7 @@ export const setIsEditWhileRun = isEditWhileRun => ({
 export const setIsDebuggerPaused = (isDebuggerPaused, nextStep) => ({
   type: SET_IS_DEBUGGER_PAUSED,
   isDebuggerPaused: isDebuggerPaused,
-  nextStep
+  nextStep,
 });
 
 /**
@@ -112,12 +112,12 @@ export const setIsDebuggerPaused = (isDebuggerPaused, nextStep) => ({
  */
 export const setStepSpeed = stepSpeed => ({
   type: SET_STEP_SPEED,
-  stepSpeed
+  stepSpeed,
 });
 
 export const setAwaitingContainedResponse = awaitingContainedResponse => ({
   type: SET_AWAITING_CONTAINED_RESPONSE,
-  awaitingContainedResponse
+  awaitingContainedResponse,
 });
 
 /**
@@ -126,5 +126,5 @@ export const setAwaitingContainedResponse = awaitingContainedResponse => ({
  */
 export const setIsDebuggingSprites = isDebuggingSprites => ({
   type: SET_IS_DEBUGGING_SPRITES,
-  isDebuggingSprites: isDebuggingSprites
+  isDebuggingSprites: isDebuggingSprites,
 });

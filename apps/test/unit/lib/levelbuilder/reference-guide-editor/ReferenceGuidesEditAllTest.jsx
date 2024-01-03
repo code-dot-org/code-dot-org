@@ -8,7 +8,7 @@ const makeReferenceGuide = (key, parent = null, pos = 0) => ({
   display_name: key,
   key: key,
   parent_reference_guide_key: parent,
-  position: pos
+  position: pos,
 });
 
 describe('ReferenceGuideEditAll', () => {
@@ -65,7 +65,7 @@ describe('ReferenceGuideEditAll', () => {
       makeReferenceGuide('c', 'a', 1),
       makeReferenceGuide('d', 'a', 2),
       makeReferenceGuide('e', 'c', 0),
-      makeReferenceGuide('f', 'c', 1)
+      makeReferenceGuide('f', 'c', 1),
     ];
     let wrapper = isolateComponent(
       <ReferenceGuideEditAll
@@ -86,7 +86,7 @@ describe('ReferenceGuideEditAll', () => {
       makeReferenceGuide('g', 'c', 3),
       makeReferenceGuide('b', 'a', 0),
       makeReferenceGuide('a', null, 0),
-      makeReferenceGuide('h', 'c', 4)
+      makeReferenceGuide('h', 'c', 4),
     ];
     wrapper = isolateComponent(
       <ReferenceGuideEditAll
@@ -106,7 +106,7 @@ describe('ReferenceGuideEditAll', () => {
       makeReferenceGuide('c', 'a', 1),
       makeReferenceGuide('d', 'a', 2),
       makeReferenceGuide('e', 'c', 0),
-      makeReferenceGuide('f', 'c', 1)
+      makeReferenceGuide('f', 'c', 1),
     ];
     const wrapper = isolateComponent(
       <ReferenceGuideEditAll
@@ -122,13 +122,13 @@ describe('ReferenceGuideEditAll', () => {
   it('allows guides to be moved', () => {
     fetchSpy.returns(
       Promise.resolve({
-        ok: true
+        ok: true,
       })
     );
     const referenceGuides = [
       makeReferenceGuide('a', null, 0),
       makeReferenceGuide('b', null, 1),
-      makeReferenceGuide('c', null, 2)
+      makeReferenceGuide('c', null, 2),
     ];
     const wrapper = isolateComponent(
       <ReferenceGuideEditAll
@@ -187,7 +187,7 @@ describe('ReferenceGuideEditAll', () => {
       makeReferenceGuide('b', null, 1),
       makeReferenceGuide('c', null, 2),
       makeReferenceGuide('d', 'b', 0),
-      makeReferenceGuide('e', 'b', 1)
+      makeReferenceGuide('e', 'b', 1),
     ];
     const wrapper = isolateComponent(
       <ReferenceGuideEditAll

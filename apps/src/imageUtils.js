@@ -31,7 +31,7 @@ export function blobToDataURI(blob, onComplete) {
 export function dataURIToSourceSize(dataURI) {
   return toImage(dataURI).then(image => ({
     x: image.width,
-    y: image.height
+    y: image.height,
   }));
 }
 
@@ -121,11 +121,11 @@ export async function toImage(input) {
 
   return new Promise((resolve, reject) => {
     let image = new Image();
-    image.onload = function() {
+    image.onload = function () {
       cleanup();
       resolve(image);
     };
-    image.onerror = function(err) {
+    image.onerror = function (err) {
       cleanup();
       reject(err);
     };

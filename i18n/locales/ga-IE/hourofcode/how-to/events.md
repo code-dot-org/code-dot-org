@@ -1,5 +1,5 @@
 ---
-title: Hour of Code Event How-To
+title: Imeacht Uair an Chóid Conas-Chun
 ---
 
 {{ signup_button }}

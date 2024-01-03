@@ -18,7 +18,7 @@ export const UnconnectedContainedLevelResetButton = ({
   userRoleInCourse,
   codeIsRunning,
   serverScriptId,
-  serverLevelId
+  serverLevelId,
 }) => {
   const [resetFailed, setResetFailed] = useState(false);
 
@@ -26,8 +26,9 @@ export const UnconnectedContainedLevelResetButton = ({
     firehoseClient.putRecord({
       study: 'reset-predict-level',
       event: 'level-reset',
+      user_id: userId,
       script_id: serverScriptId,
-      level_id: serverLevelId
+      level_id: serverLevelId,
     });
   };
 
@@ -71,30 +72,29 @@ UnconnectedContainedLevelResetButton.propTypes = {
   codeIsRunning: PropTypes.bool,
   // used for reporting
   serverScriptId: PropTypes.number,
-  serverLevelId: PropTypes.number
+  serverLevelId: PropTypes.number,
 };
 
 export default connect(
   state => ({
-    hasLevelResults: !!state.progress.levelResults[
-      parseInt(state.progress.currentLevelId)
-    ],
+    hasLevelResults:
+      !!state.progress.levelResults[parseInt(state.progress.currentLevelId)],
     userId: state.pageConstants.userId,
     userRoleInCourse: state.currentUser.userRoleInCourse,
     codeIsRunning: state.runState.isRunning,
     serverScriptId: state.pageConstants.serverScriptId,
-    serverLevelId: state.pageConstants.serverLevelId
+    serverLevelId: state.pageConstants.serverLevelId,
   }),
   dispatch => ({
     queryUserProgress(userId) {
       dispatch(queryUserProgress(userId));
-    }
+    },
   })
 )(UnconnectedContainedLevelResetButton);
 
 const styles = {
   error: {
     color: color.red,
-    fontStyle: 'italic'
-  }
+    fontStyle: 'italic',
+  },
 };

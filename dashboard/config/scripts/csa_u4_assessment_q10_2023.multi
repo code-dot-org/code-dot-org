@@ -105,3 +105,5 @@ If we use values like
 
 the conditions for the `if` and `else if` statements would evaluate to `false`. The value assigned to `z` would be returned, which is the smallest number. The method would work as intended with these values.
 MARKDOWN
+
+allow_multiple_attempts true

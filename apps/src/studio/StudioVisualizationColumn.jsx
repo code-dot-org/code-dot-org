@@ -11,7 +11,7 @@ import CrosshairOverlay from '../templates/CrosshairOverlay';
 import TooltipOverlay, {coordinatesProvider} from '../templates/TooltipOverlay';
 import SwipePrompt from '@cdo/apps/templates/SwipePrompt';
 
-var StudioVisualizationColumn = function(props) {
+var StudioVisualizationColumn = function (props) {
   return (
     <span>
       <ProtectedVisualizationDiv>
@@ -30,7 +30,7 @@ var StudioVisualizationColumn = function(props) {
         {props.finishButton && (
           <div id="share-cell" className="share-cell-none">
             <button type="button" id="finishButton" className="share">
-              <img src="/blockly/media/1x1.gif" />
+              <img src="/blockly/media/1x1.gif" alt="" />
               {msg.finish()}
             </button>
           </div>
@@ -43,7 +43,7 @@ var StudioVisualizationColumn = function(props) {
 
 StudioVisualizationColumn.propTypes = {
   finishButton: PropTypes.bool.isRequired,
-  isRtl: PropTypes.bool
+  isRtl: PropTypes.bool,
 };
 
 module.exports = StudioVisualizationColumn;

@@ -10,3 +10,5 @@ wrong 'engaging lecturer'
 right 'learning coach or guide'
 wrong 'expert in a computer language'
 wrong 'classroom manager'
+
+allow_multiple_attempts true

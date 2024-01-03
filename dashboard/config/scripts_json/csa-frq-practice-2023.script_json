@@ -1,0 +1,536 @@
+{
+  "script": {
+    "name": "csa-frq-practice-2023",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "hideable_lessons": true,
+      "is_course": true,
+      "is_migrated": true,
+      "version_year": "unversioned"
+    },
+    "new_name": null,
+    "family_name": "csa-frq-practice-2023",
+    "serialized_at": "2023-06-22 15:21:53 UTC",
+    "published_state": "in_development",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
+    "seeding_key": {
+      "script.name": "csa-frq-practice-2023"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Methods and Control Structures"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-frq-practice-2023"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Classes"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-frq-practice-2023"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Arrays / ArrayLists"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-frq-practice-2023"
+      }
+    },
+    {
+      "key": "lessonGroup-5",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "2D Arrays"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-frq-practice-2023"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "AppointmentBook",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-frq-practice-2023"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Sign",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-frq-practice-2023"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "WeatherData",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-frq-practice-2023"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "BoxOfCandy",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-frq-practice-2023"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "f970666d-1d60-473b-8d8d-3f22a87119e6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f970666d-1d60-473b-8d8d-3f22a87119e6",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-frq-practice-2023"
+      }
+    },
+    {
+      "key": "ba9b4bd2-f61f-406a-ace9-13519aed463b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ba9b4bd2-f61f-406a-ace9-13519aed463b",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-frq-practice-2023"
+      }
+    },
+    {
+      "key": "facaa68d-4e6b-4743-a132-be6c22f58460",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "facaa68d-4e6b-4743-a132-be6c22f58460",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-frq-practice-2023"
+      }
+    },
+    {
+      "key": "868089fb-05ec-42ab-9910-f383254097a9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "868089fb-05ec-42ab-9910-f383254097a9",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-frq-practice-2023"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "3dc1d118-ec9d-4403-9eaf-28a88d53efc5",
+      "position": 1,
+      "properties": {
+        "progression_name": "Part A"
+      },
+      "seeding_key": {
+        "activity_section.key": "3dc1d118-ec9d-4403-9eaf-28a88d53efc5",
+        "lesson_activity.key": "f970666d-1d60-473b-8d8d-3f22a87119e6"
+      }
+    },
+    {
+      "key": "107c79be-83dd-4ba1-986d-75d6fd8f98fa",
+      "position": 2,
+      "properties": {
+        "progression_name": "Part B"
+      },
+      "seeding_key": {
+        "activity_section.key": "107c79be-83dd-4ba1-986d-75d6fd8f98fa",
+        "lesson_activity.key": "f970666d-1d60-473b-8d8d-3f22a87119e6"
+      }
+    },
+    {
+      "key": "d686c648-31f3-430c-9ca3-2de90e196b4b",
+      "position": 1,
+      "properties": {
+        "progression_name": "Single Part"
+      },
+      "seeding_key": {
+        "activity_section.key": "d686c648-31f3-430c-9ca3-2de90e196b4b",
+        "lesson_activity.key": "ba9b4bd2-f61f-406a-ace9-13519aed463b"
+      }
+    },
+    {
+      "key": "9cf80c64-0042-4adf-bfc0-6ffafb28d062",
+      "position": 1,
+      "properties": {
+        "progression_name": "Part A"
+      },
+      "seeding_key": {
+        "activity_section.key": "9cf80c64-0042-4adf-bfc0-6ffafb28d062",
+        "lesson_activity.key": "facaa68d-4e6b-4743-a132-be6c22f58460"
+      }
+    },
+    {
+      "key": "433623d0-317f-4ac6-8c24-a82f2a0b988e",
+      "position": 2,
+      "properties": {
+        "progression_name": "Part B"
+      },
+      "seeding_key": {
+        "activity_section.key": "433623d0-317f-4ac6-8c24-a82f2a0b988e",
+        "lesson_activity.key": "facaa68d-4e6b-4743-a132-be6c22f58460"
+      }
+    },
+    {
+      "key": "f43d9eb9-8d77-4d8a-8d30-748bcb46ae96",
+      "position": 1,
+      "properties": {
+        "progression_name": "Part A"
+      },
+      "seeding_key": {
+        "activity_section.key": "f43d9eb9-8d77-4d8a-8d30-748bcb46ae96",
+        "lesson_activity.key": "868089fb-05ec-42ab-9910-f383254097a9"
+      }
+    },
+    {
+      "key": "9582e6d2-61c8-4713-91f6-7f82ff8c2c07",
+      "position": 2,
+      "properties": {
+        "progression_name": "Part B"
+      },
+      "seeding_key": {
+        "activity_section.key": "9582e6d2-61c8-4713-91f6-7f82ff8c2c07",
+        "lesson_activity.key": "868089fb-05ec-42ab-9910-f383254097a9"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Part A"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-frq-2023-AppointmentBook-PartA"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-frq-practice-2023",
+        "activity_section.key": "3dc1d118-ec9d-4403-9eaf-28a88d53efc5"
+      },
+      "level_keys": [
+        "CSA-frq-2023-AppointmentBook-PartA"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Part B"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-frq-2023-AppointmentBook-PartB"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-frq-practice-2023",
+        "activity_section.key": "107c79be-83dd-4ba1-986d-75d6fd8f98fa"
+      },
+      "level_keys": [
+        "CSA-frq-2023-AppointmentBook-PartB"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Single Part"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-frq-2023-Sign"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-frq-practice-2023",
+        "activity_section.key": "d686c648-31f3-430c-9ca3-2de90e196b4b"
+      },
+      "level_keys": [
+        "CSA-frq-2023-Sign"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Part A"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-frq-2023-WeatherData-PartA"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-frq-practice-2023",
+        "activity_section.key": "9cf80c64-0042-4adf-bfc0-6ffafb28d062"
+      },
+      "level_keys": [
+        "CSA-frq-2023-WeatherData-PartA"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Part B"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-frq-2023-WeatherData-PartB"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-frq-practice-2023",
+        "activity_section.key": "433623d0-317f-4ac6-8c24-a82f2a0b988e"
+      },
+      "level_keys": [
+        "CSA-frq-2023-WeatherData-PartB"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Part A"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-frq-2023-BoxOfCandy-PartA"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-frq-practice-2023",
+        "activity_section.key": "f43d9eb9-8d77-4d8a-8d30-748bcb46ae96"
+      },
+      "level_keys": [
+        "CSA-frq-2023-BoxOfCandy-PartA"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Part B"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-frq-2023-BoxOfCandy-PartB"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-frq-practice-2023",
+        "activity_section.key": "9582e6d2-61c8-4713-91f6-7f82ff8c2c07"
+      },
+      "level_keys": [
+        "CSA-frq-2023-BoxOfCandy-PartB"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSA-frq-2023-AppointmentBook-PartA",
+        "script_level.level_keys": [
+          "CSA-frq-2023-AppointmentBook-PartA"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-frq-practice-2023",
+        "activity_section.key": "3dc1d118-ec9d-4403-9eaf-28a88d53efc5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-frq-2023-AppointmentBook-PartB",
+        "script_level.level_keys": [
+          "CSA-frq-2023-AppointmentBook-PartB"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-frq-practice-2023",
+        "activity_section.key": "107c79be-83dd-4ba1-986d-75d6fd8f98fa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-frq-2023-Sign",
+        "script_level.level_keys": [
+          "CSA-frq-2023-Sign"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-frq-practice-2023",
+        "activity_section.key": "d686c648-31f3-430c-9ca3-2de90e196b4b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-frq-2023-WeatherData-PartA",
+        "script_level.level_keys": [
+          "CSA-frq-2023-WeatherData-PartA"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-frq-practice-2023",
+        "activity_section.key": "9cf80c64-0042-4adf-bfc0-6ffafb28d062"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-frq-2023-WeatherData-PartB",
+        "script_level.level_keys": [
+          "CSA-frq-2023-WeatherData-PartB"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa-frq-practice-2023",
+        "activity_section.key": "433623d0-317f-4ac6-8c24-a82f2a0b988e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-frq-2023-BoxOfCandy-PartA",
+        "script_level.level_keys": [
+          "CSA-frq-2023-BoxOfCandy-PartA"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-frq-practice-2023",
+        "activity_section.key": "f43d9eb9-8d77-4d8a-8d30-748bcb46ae96"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-frq-2023-BoxOfCandy-PartB",
+        "script_level.level_keys": [
+          "CSA-frq-2023-BoxOfCandy-PartB"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa-frq-practice-2023",
+        "activity_section.key": "9582e6d2-61c8-4713-91f6-7f82ff8c2c07"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

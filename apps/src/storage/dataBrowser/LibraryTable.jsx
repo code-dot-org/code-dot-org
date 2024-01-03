@@ -9,6 +9,7 @@ import {getDatasetInfo} from './dataUtils';
 import experiments from '../../util/experiments';
 import moment from 'moment/moment';
 import TableDescription from './TableDescription';
+import fontConstants from '@cdo/apps/fontConstants';
 
 class LibraryTable extends React.Component {
   static propTypes = {
@@ -18,26 +19,21 @@ class LibraryTable extends React.Component {
     // Provided via redux
     libraryManifest: PropTypes.object.isRequired,
     locale: PropTypes.string,
-    onShowPreview: PropTypes.func.isRequired
+    onShowPreview: PropTypes.func.isRequired,
   };
 
   state = {
-    collapsed: true
+    collapsed: true,
   };
 
   toggleCollapsed = () =>
     this.setState({
-      collapsed: !this.state.collapsed
+      collapsed: !this.state.collapsed,
     });
 
   render() {
-    const {
-      name,
-      libraryManifest,
-      locale,
-      onShowPreview,
-      importTable
-    } = this.props;
+    const {name, libraryManifest, locale, onShowPreview, importTable} =
+      this.props;
     const icon = this.state.collapsed ? 'caret-right' : 'caret-down';
     const datasetInfo = getDatasetInfo(name, libraryManifest.tables);
     const shouldShowTable =
@@ -68,7 +64,7 @@ class LibraryTable extends React.Component {
               {datasetInfo.lastUpdated && (
                 <span style={styles.lastUpdated}>
                   {msg.lastUpdatedWithTime({
-                    time: moment(datasetInfo.lastUpdated).fromNow()
+                    time: moment(datasetInfo.lastUpdated).fromNow(),
                   })}
                 </span>
               )}
@@ -111,57 +107,57 @@ class LibraryTable extends React.Component {
 
 const styles = {
   tableName: {
-    fontFamily: '"Gotham 7r", sans-serif',
+    ...fontConstants['main-font-bold'],
     cursor: 'pointer',
-    color: color.dark_charcoal
+    color: color.dark_charcoal,
   },
   tableDescription: {
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     color: color.dark_charcoal,
-    wordBreak: 'break-word'
+    wordBreak: 'break-word',
   },
   preview: {
     backgroundColor: color.background_gray,
     borderColor: color.lighter_gray,
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     fontSize: '14px',
     padding: '1px 7px 2px',
     height: '30px',
     width: '90px',
     margin: 10,
-    marginLeft: 0
+    marginLeft: 0,
   },
   import: {
     backgroundColor: color.orange,
     border: 'none',
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     fontSize: '14px',
     color: color.white,
     padding: '1px 7px 2px',
     height: '30px',
     width: '90px',
     margin: 10,
-    marginRight: 0
+    marginRight: 0,
   },
   collapsibleContainer: {
-    paddingLeft: '16px'
+    paddingLeft: '16px',
   },
   lastUpdated: {
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     fontSize: '12px',
     color: color.light_gray,
-    display: 'inline-block'
-  }
+    display: 'inline-block',
+  },
 };
 
 export default connect(
   state => ({
     libraryManifest: state.data.libraryManifest || {},
-    locale: state.pageConstants && state.pageConstants.locale
+    locale: state.pageConstants && state.pageConstants.locale,
   }),
   dispatch => ({
     onShowPreview(tableName) {
       dispatch(showPreview(tableName));
-    }
+    },
   })
 )(LibraryTable);

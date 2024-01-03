@@ -1,1 +1,7 @@
---- {}
+---
+mk:
+  data:
+    course:
+      name:
+        mike-test:
+          title: Компјутерски науки Основи

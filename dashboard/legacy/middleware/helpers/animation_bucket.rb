@@ -33,7 +33,7 @@ class AnimationBucket < BucketHelper
     if version == 'latestVersion'
       track_list_operation 'AnimationBucket.s3_get_object(A)'
       versions = s3.list_object_versions(bucket: @bucket, prefix: key).versions
-      requested_version = !versions.empty? ? versions.first.version_id : version
+      requested_version = versions.empty? ? version : versions.first.version_id
     end
 
     super(key, if_modified_since, requested_version)

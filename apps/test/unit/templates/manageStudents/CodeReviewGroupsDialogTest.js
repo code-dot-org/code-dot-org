@@ -19,15 +19,15 @@ describe('CodeReviewGroupsDialog', () => {
           done: callback => {
             callback(fakeGroups);
             return {fail: () => {}};
-          }
+          },
         };
       },
       setCodeReviewGroups: sinon.stub().returns({
         done: callback => {
           callback();
           return {fail: () => {}};
-        }
-      })
+        },
+      }),
     };
 
     wrapper = isolateComponent(<CodeReviewGroupsDialog dataApi={dataApi} />);

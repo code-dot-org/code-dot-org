@@ -376,27 +376,27 @@ es:
         playlab_intro: Introducción al laboratorio de juegos
         playlab_events: Eventos del laboratorio de juegos
         playlab_repeat_forever: 'Laboratorio de juego: repetir para siempre'
-        tutorial_puzzle_challenge: Tutorial Desafío
+        tutorial_puzzle_challenge: 'Tutorial: Desafío de Rompecabezas'
         infinity_playlab_intro: Laboratorio de juegos - introducción
         infinity_playlab_events: Laboratorio de juegos - eventos
         infinity_playlab_repeat_forever: Laboratorio de juegos - repetir para siempre
-        csd_concept_how_computers_work: Introducción a cómo funcionan las computadoras
-        csd_concept_computer: 'Cómo funcionan las computadoras: ¿por qué son así?'
-        csd_concept_binary_data: 'Cómo funcionan las computadoras: código binario y datos'
-        csd_concept_circuits_logic: 'Cómo funcionan las computadoras: circuitos y lógica'
-        csd_concept_memory_cpu_input_output: 'Cómo funcionan las computadoras: memoria, CPU, entrada y salida'
-        csd_concept_hardware_software: 'Cómo funcionan las computadoras: hardware y software'
+        csd_concept_how_computers_work: Introducción al funcionamiento de los ordenadores
+        csd_concept_computer: 'Cómo funcionan los ordenadores: ¿Qué hace que un ordenador sea un ordenador?'
+        csd_concept_binary_data: 'Cómo funcionan los ordenadores: Binario y Datos'
+        csd_concept_circuits_logic: 'Cómo funcionan los ordenadores: Circuitos y Lógica'
+        csd_concept_memory_cpu_input_output: 'Cómo funcionan los ordenadores: Memoria, CPU, Entrada y Salida'
+        csd_concept_hardware_software: 'Cómo funcionan los ordenadores: Hardware y Software'
         csd_concept_search: Cómo funciona la búsqueda
-        csd_external_amazon_data: Cómo se utilizan los grandes datos en los sistemas de recomendación de Amazon para cambiar nuestras vidas
-        csd_external_netflix_data: '¿Cómo hace Netflix para sugerirnos programas de televisión y películas?'
+        csd_external_amazon_data: Cómo se utiliza el Big Data en los sistemas de recomendación de Amazon para cambiar nuestras vidas
+        csd_external_netflix_data: '¿Cómo hace Netflix las sugerencias de series y películas?'
         csd_external_waze_data: '¿Por qué hay tantos usuarios obsesionados con Waze?'
-        csd_gamelab_animation_tab: La pestaña de Animación
+        csd_gamelab_animation_tab: La Pestaña de Animación
         csd_gamelab_velocity: Velocidad
-        csd_weblab_intro_1: Introducción al Laboratorio Web - Parte 1
-        csd_weblab_intro_2: Introducción al Laboratorio Web - Parte 2
+        csd_weblab_intro_1: Introducción a Laboratorio Web - Parte 1
+        csd_weblab_intro_2: Introducción a Laboratorio Web - Part 2
         csd_weblab_css_1: Introducción a CSS - Parte 1
         csd_weblab_css_2: Introducción a CSS - Parte 2
-        csd_weblab_intro_3: Introducción al Laboratorio Web - Parte 3
+        csd_weblab_intro_3: Introducción a Laboratorio Web - Part 3
         csp_applab_functions: Introducción a las Funciones
         csp_applab_functions_parameters: Funciones con parámetros
         csp_applab_loops: Bucles
@@ -449,11 +449,11 @@ es:
         mc_2016_events: Hora del Código de Minecraft - Eventos
         mc_2016_spawn: Hora del Código de Minecraft - Spawn
         mc_2016_congrats: Hora del código de Minecraft - Enhorabuena
-        applab_hoc_welcome: Hora del Código del Laboratorio de aplicaciones - Bienvenidos
-        applab_hoc_setproperty: Hora del Código del Laboratorio de aplicaciones - setProperty
-        applab_hoc_onevent: Hora del Código del Laboratorio de aplicaciones - onEvent
-        applab_hoc_designmode: Hora del Código del Laboratorio de aplicaciones - Modo de diseño
-        applab_hoc_share: Hora del Código del Laboratorio de aplicaciones - Compartir
+        applab_hoc_welcome: Hora del Código del Laboratorio de Aplicaciones - Bienvenidos
+        applab_hoc_setproperty: Hora del Código del Laboratorio de Aplicaciones - setProperty
+        applab_hoc_onevent: Hora del Código del Laboratorio de Aplicaciones - onEvent
+        applab_hoc_designmode: Hora del Código del Laboratorio de Aplicaciones - Modo Diseño
+        applab_hoc_share: Hora del Código del Laboratorio de Aplicaciones - Compartir
         mc_2017_agent_intro: Hora del Código de Minecraft - El Agente
         mc_2017_repeat: Hora del Código de Minecraft - Bucles de repetición
         mc_2017_functions: Hora del Código de Minecraft - Funciones
@@ -476,94 +476,94 @@ es:
         hint_videos_d_11_9_last: 'Videos sugeridos: D.11.9 Último'
         hint_videos_d_11_11_first: 'Videos sugeridos: D.11.11 Primero'
         hint_videos_d_11_11_last: 'Videos sugeridos: D.11.11 Último'
-        applab_intro_welcome: Laboratorio de aplicaciones - Primeros pasos
-        applab_intro_events: Laboratorio de aplicaciones - Haz que sea interactivo
-        applab_intro_sounds: Laboratorio de aplicaciones - Imágenes y sonidos
-        applab_intro_designmode: Laboratorio de aplicaciones - Modo de diseño
-        applab_intro_share: Laboratorio de aplicaciones - Comparte tu aplicación
-        csd_applab_arrays: Introducción a los arreglos
-        CSF_skinOverview_Harvester: La cosechadora
+        applab_intro_welcome: Laboratorio de Aplicaciones - Primeros pasos
+        applab_intro_events: Laboratorio de Aplicaciones - Hazlo Interactivo
+        applab_intro_sounds: Laboratorio de Aplicaciones - Imágenes y Sonidos
+        applab_intro_designmode: Laboratorio de Aplicaciones - Modo Diseño
+        applab_intro_share: Laboratorio de Aplicaciones - Comparte tu Aplicación
+        csd_applab_arrays: Introducción a los Arrays
+        CSF_skinOverview_Harvester: La Recolectora
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
-        CSF_bb8_loops_C-F: Loops con BB-8
-        CSF_harvester_skinOverview_K-1: La cosechadora
-        CSF_harvester_loops_K1: Bucles en la cosechadora
-        CSF_scrat_loops_K1: Bucles de la Era de Hielo
-        CSF_scrat_loops_CF: Bucles de la Era de Hielo
-        CSF_if_allskins: El bloque `si`
-        CSF_ifelse_allskins: Uso de bloques `si/si no`
-        CSF_ifelseifelse_allskins: Uso de bloques `si/sino si/si no`
+        CSF_bb8_loops_C-F: Bucles con BB-8
+        CSF_harvester_skinOverview_K-1: La Recolectora
+        CSF_harvester_loops_K1: Bucles en la Recolectora
+        CSF_scrat_loops_K1: Bucles en la Edad de Hielo
+        CSF_scrat_loops_CF: Bucles en la Edad de Hielo
+        CSF_if_allskins: El Bloque `If`
+        CSF_ifelse_allskins: Usando Bloques `If/Else`
+        CSF_ifelseifelse_allskins: Uso de los bloques `If` `ElseIf` `Else`  
         CSF_loops_AB: Bucles
-        csd_gamelab_booleans: Expresiones booleanas
-        csd_gamelab_conditional_statements: Sentencias condicionales
-        csd_gamelab_if_else: Sentencias `si/si no`
-        CSF_SpriteLabIntro_CDEF: Esto es Laboratorio de sprites
-        CSF_Spritelab_MakeSprite_CDEF: Cómo crear un sprite en el Laboratorio de sprites
-        CDEF_Video_SpritesInAction: Sprites en acción
-        CSF_SpriteLab_SpritesInAction_CDEF: Sprites en acción
+        csd_gamelab_booleans: Expresiones Booleanas
+        csd_gamelab_conditional_statements: Sentencias Condicionales
+        csd_gamelab_if_else: Sentencias `If/Else`
+        CSF_SpriteLabIntro_CDEF: Esto es Laboratorio Sprite
+        CSF_Spritelab_MakeSprite_CDEF: Cómo hacer un sprite en el Laboratorio Sprite
+        CDEF_Video_SpritesInAction: Sprites en Acción
+        CSF_SpriteLab_SpritesInAction_CDEF: Sprites en Acción
         CSF_StarWars_ProjectIntro: Introducción al proyecto La guerra de las galaxias
-        mc_2018_intro: 'Minecraft: introducción al viaje acuático'
-        MC_2018_loops: 'Minecraft: bloque repetir hasta en viaje acuático'
-        mc_2018_conditionals: 'Minecraft: condicionales en viaje acuático'
-        mc_2018_closing: 'Minecraft: felicitaciones en viaje acuático'
+        mc_2018_intro: 'Minecraft: Introducción al Viaje Acuático'
+        MC_2018_loops: 'Minecraft: Viaje Acuático - Repetir Hasta'
+        mc_2018_conditionals: 'Minecraft: Viaje Acuático - Condicionales'
+        mc_2018_closing: 'Minecraft: Viaje Acuático - Enhorabuena'
         hoc_dance_warmup: Fiesta de baile - Calentamiento
         hoc_dance_events: Fiesta de baile - Eventos
         hoc_dance_properties: Fiesta de Baile - Propiedades
         hoc_dance_congrats: Fiesta de baile - ¡Que siga la fiesta!
         c_and_c_great_to_create: Crear y jugar limpio es lo mejor
         c_and_c_digital_sharing: Colaboración digital
-        teaching_csf_how_it_works: 'Enseñanza de Fundamentos de Ciencias de la Computación: cómo funciona el curso'
-        elem_pd_2: Ciencias de la Computación para escuelas primarias - Video PD 2/2
-        what_is_cs: '¿Qué son las Ciencias de la Computación?'
-        repeat_block: Uso del bloque 'repetir'
-        lesson_planning: Planificación de lecciones
-        opd_closing: 'Enseñanza de Fundamentos de Ciencias de la Computación: cierre y próximos pasos'
-        why_unplugged_lessons: A "desconectarse"
-        writing_first_program: Escribir tu primer programa informático
-        conditionals_with_cards: 'Lección sin conexión en acción: condicionales con naipes'
-        songwriting_with_functions: 'Lección sin conexión en acción: componer canciones con funciones'
+        teaching_csf_how_it_works: 'Enseñando Fundamentos de Informática: Cómo funciona el curso'
+        elem_pd_2: Informática en la Escuela Primaria - PD video 2/2
+        what_is_cs: '¿Qué es la informática?'
+        repeat_block: Usando el bloque de repetición
+        lesson_planning: Planificación de Lecciones
+        opd_closing: 'Enseñanza de los Fundamentos de Informática: Clausura y Próximos Pasos'
+        why_unplugged_lessons: Desconectarse
+        writing_first_program: Escribiendo tu primer programa de ordenador
+        conditionals_with_cards: Lección Desconectada en Acción - Condicionales con Cartas
+        songwriting_with_functions: Lección Desconectada en Acción - Componiendo Canciones con Funciones
         what_is_an_event: '¿Qué es un evento?'
-        teaching_cs_pair_programming: 'Enseñanza de Fundamentos de Ciencias de la Computación: programación en pareja'
-        teaching_problem_solving: 'Enseñanza de Fundamentos de Ciencias de la Computación: resolución de problemas'
-        csd_applab_designmode: 'Descubrimientos de Ciencias de la Computación: Laboratorio de aplicaciones - Modo de diseño'
+        teaching_cs_pair_programming: 'Enseñanza de Fundamentos de Informática: Programación en Parejas'
+        teaching_problem_solving: 'Enseñanza de Fundamentos de Informática: Enseñando Resolución de Problemas'
+        csd_applab_designmode: 'Descubrimientos de Informática: Laboratorio de Aplicaciones - Modo Diseño'
         csd_pair_programming: Programación de pares
-        csd_gamelab_functions: Llamar y definir funciones
+        csd_gamelab_functions: Llamando y Definiendo Funciones
         csd_applab_parameters: Funciones con parámetros
-        csd_applab_loops: Bucles en el Laboratorio de aplicaciones
-        csd_problem_solving_process: El proceso de resolución de problemas
-        CSF_Going_Places_Safely: Mi barrio en línea
-        CSF_SpriteLab_Intro_v2: Presentamos el Laboratorio de sprites
-        CSF_Spritelab_MakeSprite_v2: Cómo crear un sprite
-        CSF_SpriteLab_SpritesInAction_v2: Sprites en acción
+        csd_applab_loops: Bucles en Laboratorio de Aplicaciones
+        csd_problem_solving_process: El Proceso de Resolución de Problemas
+        CSF_Going_Places_Safely: Mi Barrio en línea
+        CSF_SpriteLab_Intro_v2: Presentación de Laboratorio Sprite
+        CSF_Spritelab_MakeSprite_v2: Como hacer un sprite
+        CSF_SpriteLab_SpritesInAction_v2: Sprites en Acción
         csd_debugging: Depuración
-        csd_applab_designmode_short: Modo de diseño del Laboratorio de aplicaciones
+        csd_applab_designmode_short: Laboratorio de Aplicaciones - Modo Diseño
         csp-pd-welcome: '¡Bienvenido a la Familia!'
-        CSF-Teaching-Problem-Solving: Resolución de problemas en la enseñanza de CSF
+        CSF-Teaching-Problem-Solving: CSF Enseñando la Resolución de Problemas
         u5-traversals-get-list-explanation: Code.org [levelbuilder] - Video piloto - Bloque de datos
-        u7-libraries-explanation: 'Laboratorio de aplicaciones: crea tus propios bloques - Cómo usar bibliotecas'
-        how-to-k5-workshops: 'Fundamentos de Ciencias de la Computación de Code.org: probado por los niños, aprobado por los docentes'
-        why-should-teach-unplugged-activities: 'Preguntas frecuentes: ¿por qué debo enseñar las actividades "sin conexión"?'
-        cs-principles-intro-to-objects: 'Principios de Ciencias de la Computación: introducción a objetos'
-        oceans_machine_learning: Aprendizaje automático
-        oceans_training_data: Datos de entrenamiento
-        oceans_societal_implications: Implicaciones para la sociedad
+        u7-libraries-explanation: 'Laboratorio de Aplicaciones: Crea tus propios bloques - Cómo usar librerías'
+        how-to-k5-workshops: 'Fundamentos de Informática de Code.org: Probado por niños, aprobado por profesores'
+        why-should-teach-unplugged-activities: 'PREGUNTAS FRECUENTES: ¿Por qué debo enseñar actividades "desconectadas"?'
+        cs-principles-intro-to-objects: 'Principios de Informática: Introducción a objetos'
+        oceans_machine_learning: Aprendizaje Automático
+        oceans_training_data: Datos de Entrenamiento
+        oceans_societal_implications: Implicaciones sociales
         hoc_dance_congrats_2019: Fiesta de baile - ¡Que siga la fiesta!
         hoc_dance_warmup_2019: Fiesta de baile - Calentamiento
         hoc_dance_events_2019: Fiesta de baile - Eventos
         hoc_dance_measures_2019: 'Fiesta de Baile: Compases'
         hoc_dance_properties_2019: Fiesta de Baile - Propiedades
         csd_what_computers_do: '¿Qué hacen los ordenadores?'
-        csf_my_online_neighborhood_2020: Mi barrio en línea
-        csf_follow_the_digital_trail: Sigue el rastro digital
+        csf_my_online_neighborhood_2020: Mi Barrio en línea
+        csf_follow_the_digital_trail: Sigue el Rastro Digital
         csf_private_and_personal_information: 'traducción pendiente: en-US.data.unplugged.courseE_unplugged_privateInformation_2018.title'
-        csd_what_computers_are: '¿Qué es una computadora?'
+        csd_what_computers_are: '¿Qué es un Ordenador?'
         codebreak_e01: 'Code Break 1.0: Algoritmos con Hill Harper'
         codebreak_e02: 'Code Break 2.0: Prototipos con Mark Cuban y Lyndsey Scott'
         codebreak_e03: 'Code Break 3.0: Cifrado con Ashton Kutcher y Mia Gil Epner'
         codebreak_e04: Code Break 4.0 Información digital con Mike Krieger y Alice Keeler
         codebreak_e05: 'Code Break 5.0: Simulaciones y datos con Bill Gates'
         csd_how_teamwork_works: Cómo funciona el trabajo en equipo
-        csd_teamwork_and_disagreement: 'Trabajo en equipo: cómo afrontar la falta de consenso'
+        csd_teamwork_and_disagreement: Trabajo en equipo - Gestión de desacuerdos
         codebreak_e06: 'Code Break 6.0: Internet con Keegan-Michael Scott & Vint Cerf'
         codebreak_e07: 'Code Break 7.0: Condicionales con Sal Khan y Flo Vaughn'
         codebreak_e08: 'Code Break 8.0: Variables con Yara Shahidi y Fuzzy Khosrowshahi '
@@ -571,21 +571,21 @@ es:
         codebreak_e10: 'Code Break 10.0: IA con Kat Graham y Kate Park'
         codebreak_e11: 'Code Break 11.0: Abstracción con Susan Wojcicki y China Anne McClain'
         codebreak_e12: 'Code Break 12.0: Hardware con Aloe Blacc, Bret Taylor y Paula Mejía'
-        csf21pilot_events: 'Laboratorio de Sprites: Sprites en acción (piloto del CSF 2021)'
-        csf21pilot_prompts: 'Laboratorio Sprites: Texto e Indicaciones (proyecto piloto CSF 2021)'
+        csf21pilot_events: 'Laboratorio Sprite: Sprites en Acción'
+        csf21pilot_prompts: 'Laboratorio Sprite: Texto e Indicaciones (proyecto piloto CSF 2021)'
         outbreak_mike: CodeBytes Episodio 3 con Mike - Simulador de brotes
         poembot-pilot-prompts: Haiku Bots - Prompt con Opciones [PILOT]
         poembot-pilot-text: Haiku Bots - Almacenar Texto [PILOT]
         poembot-pilot-haiku: Haiku Bots - Muestra tu Haiku [PILOT]
         csd_ml_intro_to_ai_lab: Introducción al Laboratorio de Inteligencia Artificial
         csd_ml_import_model: Importar un Modelo de Iinteligencia Artificial
-        csf_lots_of_sprites: 'Laboratorio de Sprite: Muchos Sprites'
+        csf_lots_of_sprites: 'Laboratorio Sprite: Muchos Sprites'
         playlab_2021: Introducción al laboratorio de juegos
         playlab_2021_reader: Introducción al laboratorio de juegos
         csp_defining_calling_functions: Definiendo y Llamando a Funciones
         csp_tutorial_datatab: Pestaña de Datos en Laboratorio de Aplicaciones
         csp_tutorial_libraries: Bibliotecas en Laboratorio de Aplicaciones
-        PL-Video-21: Bienvenido al Aprendizaje Profesional Virtual de Code.org
+        PL-Video-21: '¡Bienvenido al Aprendizaje Profesional de Code.org!'
         csp_tutorial_datavis1: Visualizador de Datos en Laboratorio de Aplicaciones - Parte 1
         csp_tutorial_datavis2: Visualizador de Datos en Laboratorio de Aplicaciones - Parte 2
         csd_ml_intro_ai_lab_july2021: Introducción al Laboratorio de Inteligencia Artificial
@@ -608,7 +608,7 @@ es:
         poembot-playtest-events: PoemBot Prueba de Juego Eventos
         hello_world_intro: Hola Mundo - Bienvenido a  Laboratorio Sprite
         hello_world_events: Hola Mundo - Programación con Eventos
-        hello_world_congrats: Hello World - Haz lo que quieras
+        hello_world_congrats: Hola Mundo - Haz lo que quieras
         csp_global_vs_local: Depuración Global vs. Variables Locales
         rough_poemart_intro: v1 Arte del Poema Introducción
         rough_poemart_events: v1 Arte del Poema Eventos
@@ -623,12 +623,12 @@ es:
         poemart_events: Arte del Poema Eventos
         poemart_imagery: Arte del Poema Imágenes
         poemart_celebration: Arte del Poema  Celebración
-        csd_u6_variables_part2: Variables - Parte 2
+        csd_u6_variables_part2: Variables - El Patrón Contador
         csd_ml_ethics_ai: 'La Ética en la Inteligencia Artificial'
-        outbreak_intro: 'Simulación de brote epidémico: Introducción'
-        outbreak_events: 'Simulación de brote epidémico: Eventos'
-        outbreak_scientist: 'Simulación de brote epidémico: Pensando como científicos'
-        outbreak_outro: 'Simulación de brote epidémico: Juego libre'
+        outbreak_intro: 'Simulación de Brote: Introducción'
+        outbreak_events: 'Simulador de Brote: Eventos'
+        outbreak_scientist: 'Simulador de Brote: Pensando como un Científico'
+        outbreak_outro: 'Simulador de Brote: Juego Libre'
         PL_overview_CSP: '¿Qué son los Principios de la Informática?'
         PL_CSP_EIPMOverview: Guía de Lecciones de EIPM
         tesstest: Prueba Tess
@@ -636,16 +636,16 @@ es:
         csd_app_lab_design_mode: CSD Laboratorio de Aplicaciones - Modo Diseño
         csd_app_lab_events: CSD Laboratorio de Aplicaciones - Eventos
         PL_CSD_Unit4_AppTesting: Pruebas de Prototipos en Papel
-        csd_u6_circuit_playground: Computación física
+        csd_u6_circuit_playground: Computación Física
         csd_u6_input_output: Entrada y salida
-        CSA-PL-for-loops: Bucles For en Java
+        CSA-PL-for-loops: Bucles `For` en Java
         CSA-PL-variables: Creando Variables en Java
         PL_CS_Journeys_Overview: Jornadas CS
         CSA-PL-intro-to-java-lab: Fundamentos de Laboratorio Java
         CSA-PL-first-program: Escribiendo un Programa en Java
         CSD_u6_variables_part1: 'CSD: Variables'
-        csd_u6_if_statements: 'CSD:Sentencias If'
-        csc-poem-art-intro: Intro Video
+        csd_u6_if_statements: 'CSD:Sentencias `If`'
+        csc-poem-art-intro: Vídeo de introducción
         csc-poem-art-outro: Outro Video
         csd_u6_call_define_functions: 'CSD: Llamando y Definiendo Funciones'
         csp_applab_parameters: Funciones con parámetros
@@ -666,8 +666,8 @@ es:
         CSA-PL-debugging-22: Depuración en el Laboratorio Java
         CSD_Unit6_InteractiveArtExemplar: Arte Interactivo - Ejemplo
         CS_Changing_Everything: Las Ciencias de la Computación están cambiando todo
-        csa-alias-video: Igualdades y Alias
-        csa-equals-video: El método igualdad()
+        csa-alias-video: Iguales y Alias
+        csa-equals-video: El método equals()
         csa-user-stories: Historias de Usuario en Ingeniería de Software
         csa-pl-vpl-m1-unit-3: Ingeniería de Software en la Unidad 3
         csa-pl-intro-to-equality: Introducción a la Igualdad
@@ -681,6 +681,61 @@ es:
         csc-sprite-lab-pixel-editor: Dibuja tu Propio Sprite
         csa-pl-intro-to-strings: Introducción a las Cadenas en Java
         csa-pl-compareTo: El método compareTo()
+        csc-event-short-intro: Breve Introducción a los Eventos
+        PL_CSD_CircuitPlayground_Overview_AppsWithDevices: Descripción general de la unidad Circuit Playground
+        csa-day-in-pm-pl: '¿Qué hace un gestor de proyectos?'
+        csa-pl-intro-to-pm: Introducción a la Gestión de Proyectos
+        PL_CSD_CircuitPlayground_Setup: Circuit Playground - Configuración
+        csa_object_oriented_programming: 'CSA: Programación Orientada a Objetos'
+        csa_creating_objects: 'CSA: Creación de Objetos'
+        csa_calling_methods: 'CSA: Llamada a Métodos'
+        csa_while_loops: 'CSA: Bucles `While`'
+        csa_inheritance: 'CSA: Herencia'
+        csa_writing_a_method: 'CSA: Escribir un Método'
+        csa_software_engineering_code_reviews: 'CSA: Ingeniería de Software - Revisiones de código'
+        csa_conditional_statements: 'CSA: Sentencias Condicionales'
+        csa_printing_in_java: 'CSA: Impresión en Java'
+        csa_two_way_selection_and_not: 'CSA: Selección Bidireccional y NOT'
+        csa-pl-intro-to-oop: Introducción a la Programación Orientada a Objetos
+        csa-pl-welcome-to-Neighborhood: Bienvenido a El Barrio
+        csa-pl-calling-methods: Llamada a Métodos en Java
+        csa-pl-creating-objects: Creación de Objetos
+        csa_accessor_methods: 'CSA: Métodos de Acceso'
+        csa_constructors: 'CSA: Constructores'
+        csa_creating_a_scanner_object: 'CSA: Creación de un Objeto Escáner'
+        csa_creating_variables: 'CSA: Creación de Variables'
+        csa_instance_variables_and_attributes: 'CSA: Variables de Instancia y Atributos'
+        csa_mutator_methods: 'CSA: Métodos Mutador'
+        csa_overloaded_constructors: 'CSA: Constructores Sobrecargados'
+        csa_the_tostring_method: 'CSA: El Método toString()'
+        csa_scanner_class_methods: 'CSA: Métodos de Clase Escáner'
+        csa_for_loops: 'CSA: Bucles `For`'
+        csa_enhanced_for_loops: 'CSA: Bucles `Enhanced For`'
+        csa_modifying_values_in_a_1d_array: 'CSA: Modificación de Valores en un Array 1D'
+        csa_nested_loops: 'CSA: Bucles Anidados'
+        csa_one_dimensional_arrays: 'CSA: Arrays Unidimensionales (1D)'
+        csa_polymorphism: 'CSA: Polimorfismo'
+        csa_casting: 'CSA: Fundición'
+        csa_equals_and_aliases: 'CSA: Iguales y Alias'
+        csa_multi-selection_statements: 'CSA: CSA: Sentencias de Selección Múltiple'
+        csa_random_numbers: 'CSA: Números Aleatorios'
+        csa_static_methods: 'CSA: Métodos Estáticos'
+        csa_static_variables: 'CSA: Variables Estáticas'
+        csa_the_equals_method: 'CSA: El método equals()'
+        csa_welcome_to_the_theater: 'CSA: Bienvenido a El Teatro'
+        enter_your_own_poem: Introduce tu Propio Poema
+        csa-example-solution-1: 'Codificación en directo de una Solución de Ejemplo '
+        csd_sprite_properties: Propiedades de Sprite
+        csa-pl-documentation: Documentación en Laboratorio Java
+        csc-starquilts-intro: 'CSC: Colchas de Estrellas'
+        csc-mapmakers-intro: 'CSC: Mapmakers\t'
+        csa-pl-vocab-pm: Vocabulario de Gestión de Proyectos
+        csc-ecosystems-intro: Introducción a Ecosistemas
+        PL_CSD_MicroBit_Intro: Introducción al Micro:bit
+        csc_animal_adaptations_intro: Introducción a las Adaptaciones Animales
+        what-is-creativity: '¿Qué es la creatividad?'
+        code-break: Tómate un Descanso con Código
+        csd_ml_how_ai_works: Cómo funciona la Inteligencia Artificial
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque

@@ -2,14 +2,11 @@
   "ms-MY": {
     "data": {
       "frameworks": {
-        "csta": {
-          "name": "Standard Sains Komputer K-12 CSTA (2017)"
+        "ai4k12-2021": {
+          "name": "Garis Panduan Kebangsaan AI4K12 2021"
         },
-        "csp2021": {
-          "name": "Rangka Kerja Konseptual CSP"
-        },
-        "csta2011": {
-          "name": "Standard Sains Komputer K-12 CSTA (2011)"
+        "c3ss": {
+          "name": "Piawaian Pengajian Sosial C3"
         },
         "ccela": {
           "name": "Standard Kesenian Bahasa Inggeris Teras Umum"
@@ -17,8 +14,23 @@
         "ccmath": {
           "name": "Standard Matematik Teras Umum"
         },
+        "csa": {
+          "name": "Rangka Kerja Konseptual CSA"
+        },
+        "csp2021": {
+          "name": "Rangka Kerja Konseptual CSP"
+        },
+        "csta": {
+          "name": "Standard Sains Komputer K-12 CSTA (2017)"
+        },
+        "csta2011": {
+          "name": "Standard Sains Komputer K-12 CSTA (2011)"
+        },
         "iste": {
           "name": "Standard ISTE untuk Pelajar"
+        },
+        "ngss": {
+          "name": "Piawaian Sains Generasi Seterusnya"
         }
       }
     }

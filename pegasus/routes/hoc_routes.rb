@@ -25,8 +25,8 @@ get '/api/hour/begin/:code' do |code|
   # set company to nil if not a valid company
   company = request.GET['company'] || request.cookies['company']
   # Pass through the company param to the congrats page only if an entry exists in the forms.
-  unless company.nil?
-    company = nil unless DB[:forms].where(kind: 'CompanyProfile', name: company).first
+  if !company.nil? && !DB[:forms].where(kind: 'CompanyProfile', name: company).first
+    company = nil
   end
 
   launch_tutorial(tutorial, company: company)

@@ -49,12 +49,13 @@ ko:
       Assessment: 평가
       Attribution: 권한 정보
       Back and Forth: 앞뒤로
+      Balance an Ecosystem: 생태계 균형 조정하기
       Basic Conditionals: 기본 조건
       Bass, Mid, and Treble: 저음, 중간음, 고음
       Be a Super Digital Citizen: 슈퍼 디지털 시민 되기
       Begin planning your project: 프로젝트 계획 시작
       Begin planning your project_2018: 프로젝트 계획 시작_2018
-      Binary Bracelets - Unplugged Activity: 바이너리 팔찌 - 언플러그드 활동
+      Binary Bracelets - Unplugged Activity: 이진 팔찌 - 언플러그드 활동
       Binary Number Widget: 바이너리 수 위젯
       Binary Numbers: 바이너리 수
       Board Events: 보드 이벤트
@@ -82,7 +83,9 @@ ko:
       'Challenge: RGB Colors': '도전: RGB 색상'
       Challenges: 도전
       Change: 변경
+      Check For Understanding: 이해도 확인하기
       Check Your Work: 작업 확인
+      Check for Understanding: 이해도 확인하기
       Check-In Survey: 체크인 설문조사
       Checking for a Winner: 당첨자 확인
       'Choice Levels: Customize Your App': '선택 레벨: 앱 사용자 지정'
@@ -143,6 +146,8 @@ ko:
       Draw a Background: 배경 그리기
       Drawing: 그리기
       Driver Alert System: 드라이버 경보 시스템
+      Ecosystems Simulation: 생태계 시뮬레이션
+      Ecosystems Video: 생태계 동영상
       End of Course Projects: 과정말 프로젝트
       Escape Room Example: 방 탈출 예시
       Events: 이벤트
@@ -165,13 +170,14 @@ ko:
       'Exploration: Rikki''s Poster': '탐구: 리키의 포스터'
       'Exploration: Sample Apps': '탐구: 샘플 앱'
       'Exploration: Sample Programs': '탐구: 샘플 프로그램'
-      'Exploration: Sample Project': '탐구: 샘플 프로젝트'
+      'Exploration: Sample Project': '탐구: 예제 프로젝트'
       Explore HTML: HTML 배우자
       Exploring CS in Entertainment: 엔터테인먼트에서 CS 탐구
       Exploring more CSS: CSS 추가 탐색
       Extra: 기타
       Extra Challenge: 추가 도전
       'Extra Challenge: Sound Board': '추가 도전: 사운드 보드'
+      Final Dance Party Project: 파이널 댄스 파티 프로젝트
       Final Room Escape App: 최종 방 탈출 앱
       Find the Wizard: 마법사 찾기
       Finish a Screen: 화면 완료하라
@@ -182,6 +188,7 @@ ko:
       Follow the Algorithm - Unplugged Activity: 알고리즘 따라가기 - 언플러그드 활동
       Follow the Mouse: 쥐를 따르라
       Fonts and Style: 글꼴 및 스타일
+      Food Chain Setup: 먹이 사슬 설정하기
       FoodFight: 푸드파이터
       For Loop Fun - Unplugged Activity: For 루프 펀 - 언플러그드 활동
       For Loops: 반복을 위한
@@ -206,6 +213,7 @@ ko:
       How to Create a Simple Function: 단순 함수를 만드는 방법
       How to Make a Sprite: 스프라이트 만드는 방법
       Ice Age Loops: 아이스 에이지 루프
+      If... then... Conditional Statements: If-then 조건문
       Images and Sounds: 이미지와 소리
       Import Your Model: 모델 불러오기
       Import a Model: 모델 불러오기
@@ -217,24 +225,27 @@ ko:
       Input with If-Else: 만약-다른 사용하여 입력 
       Inspiration!: 영감!
       InspirationalArtwork: InspirationalArtwork
+      Intro Video: 소개 영상
       Intro to Flyer Game: 플라이어 게임 소개
       Intro to For Loops: 루프 소개
       Intro to Side Scrollers: 사이드 스크롤러 소개
       Intro to Sprites: 스프라이트 소개
       Intro to Variables: 변수에 대한 소개
       Introducing Sprite Lab: 스프라이트 랩 소개
+      Introduction: 소개
       Introduction to Arrays: 배열 소개
       Isaac's Survey Data: 아이작의 설문조사 데이터
       Iteration and Parameters: 반복 및 매개변수
       Keep On Dancing!: 계속 춤추기!
       Keeping Data Secret: 데이터 기밀 유지
+      Key Press & At Measure Events: 주요 프레스 및 측정 시 이벤트
       Keyboard Input: 키보드 인풋
       Kim's Survey: 김의 설문조사
       Kim's Survey Data: 김의 설문조사 데이터
       LED Apps: LED 어플
       Layout with CSS: CSS 레이아웃
       Learning from Simulations: 시뮬레이션으로 학습
-      Lesson Extras: Lesson Extras
+      Lesson Extras: 추가 활동
       Level Overview: 레벨 개요
       Levels: 레벨
       Light Show: 라이트 쇼
@@ -244,6 +255,7 @@ ko:
       Looking for Patterns: 패턴 찾기
       Looping: 루핑
       Loops with the Artist: 아티스트와의 루프
+      Make Dancer & Dance Move: 댄서와 댄스 동작 만들기
       Make Your Sprites: 스프라이트 만들기
       Make a Prediction: 예측하기
       Make an Interactive Card: 인터랙티브 카드 만들기
@@ -272,10 +284,10 @@ ko:
       'Mini-Project: Swimming Fish (continued)': '미니 프로젝트: 수영하는 물고기 (계속하기)'
       'Mini-Project: User Input Programs': '챗봇 만들기'
       'Mini-Project: Virtual Pet': '미니 프로젝트: 가상 애완동물'
-      'Mini-project: Chase Game': '미니 프로젝트: 따라잡기 게임'
+      'Mini-project: Chase Game': '미니 프로젝트: 체이스 게임'
       'Mini-project: Flappy Game': '미니 프로젝트: 플래피 게임'
       'Mini-project: Interactive Poster': '미니 프로젝트: 인터랙티브 포스터'
-      'Mini-project: Jorge the Dog': '미니 프로젝트: 강아지 호르헤 '
+      'Mini-project: Jorge the Dog': '미니 프로젝트: 강아지 코코'
       'Mini-project: Sticker Art': '미니 프로젝트: 스티커 아트'
       'Mini-project: Sticker Design': '미니 프로젝트: 스티커 디자인'
       Modify simulation variables: 시뮬레이션 변수 수정
@@ -379,18 +391,23 @@ ko:
       Set Up Sprites: 스프라이트 설정
       Setting Properties: 속성 설정
       Shapes and the Draw Loop: 도형 및 그리기 루프
+      Share Out: 공유하기
       Share Your App: 앱 공유하기
       Share Your Pages: 페이지 공유
+      Share Your Simulation: 시뮬레이션 공유하기
       Share Your Stylesheets: 스타일시트 공유
       Shoe Recommendation Survey: 구두 추천 설문조사
       Shoe Recommender: 구두 추천
       Side Scroller: 사이드 스크롤러
       Simple Circuits: 단순 회로
-      Skill Building: 실력 향상
+      Skill Building: 실력 쌓기
       Skill-Building: 실력 향상
       Sliders: 슬라이더
       Smart Bike - Blinkers: 스마트 자전거 - 블링커
       Social Sleuth: 소셜 탐정
+      Solution 1 - Fishing Zone: '해결책 1: 어획 구역'
+      Solution 2 - Fishing Season: '해결책 2: 어획 시기'
+      Solution 3 - Fishing Limits: '해결책 3: 어획 한도'
       Songwriting - Functions Unplugged Activity: 작사 - 함수 언플러그드 활동
       Speed it Up, Slow it Down: 속도를 높여요, 속도는 낮춰요
       Sprite Lab Example Project: 스프라이트 랩 예 프로젝트
@@ -412,6 +429,7 @@ ko:
       The Big Event - Unplugged Activity: 빅 이벤트 - 언플러그드 활동
       The Buzzer: 버저 
       The Collector: 컬렉터
+      The Food Chain: 먹이 사슬
       The Harvester: 수확인
       The Internet - Unplugged Activity: 인터넷 - 언플러그드 활동
       The Power of Words - Unplugged Activity: 말의 힘 - 언플러그드 활동
@@ -423,6 +441,7 @@ ko:
       UI Element Properties: UI 요소 속성
       Ultimate Shoe Recommender: 최종적인 구두 추천
       Unit 5 Lesson 1 Overview: 단원 5 레슨 1 개관
+      Unplugged Activity: 언플러그드 활동
       Updating Your Prototype: 프로토타입 업데이트
       Upload Your Images: 이미지 업로드
       User Interface: 사용자 인터페이스
@@ -436,20 +455,20 @@ ko:
       Variables: 변수
       Velocity: 속도
       Velocity and the Counter Pattern: 속도 및 카운터 패턴
-      Video: 비디오
+      Video: 동영상
       Video - Encryption and Public Keys: 동영상 - 암호화 및 공개 키
       'Video - Maze Intro: Programming with Blocks': '동영상 - 미로 소개: 블록으로 프로그래밍'
-      'Video:  Debugging with the Step Button': '동영상: 스텝버튼으로 디버깅'
+      'Video:  Debugging with the Step Button': '동영상: 단계별 디버깅'
       'Video:  Minecraft - The Agent': '동영상: 마인크래프트 - 에이전트'
       'Video:  Text  and Prompts': '동영상: 텍스트 및 프롬프트'
-      'Video: "If/Else"': '동영상: "If/Else"'
+      'Video: "If/Else"': '동영상: 만약, 아니면'
       'Video: AI: What is Machine Learning?': '동영상: AI: 머신 러닝이란?'
       'Video: Amazon and Data': '동영상: 아마존과 데이터'
-      'Video: Artist Intro with JR Hildebrand': '동영상: 아티스트 인트로 JR 힐데브랜드'
+      'Video: Artist Intro with JR Hildebrand': '동영상: JR 힐데브란트와 함께하는 아티스트 소개'
       'Video: Artist Intro with JR Hildebrande': '동영상: 아티스트 인트로 JR 힐데브랜드'
       'Video: CS Matters': '동영상: CS 문제'
       'Video: Circuits and Logic': '동영상: 회로 및 로직'
-      'Video: Code Your Own Flappy Game': '동영상: 자신만의 플래피 게임을 만들어보세요.'
+      'Video: Code Your Own Flappy Game': '동영상: 나만의 플래피 게임 코드'
       'Video: Conditionals: If Statements': '동영상: 조건: If 문'
       'Video: Conditionals: If and If/Else Statements': '동영상: 조건: If 문 및 If/Else 문'
       'Video: Dance Party Events': '동영상: 댄스 파티 이벤트'
@@ -489,17 +508,17 @@ ko:
       'Video: Lots of Sprites': '동영상: 많은 스프라이트'
       'Video: Managing Disagreement': '동영상: 의견 충돌 관리'
       'Video: Maze Intro - Programming with Blocks': '동영상: 미로 소개  - 블록으로 프로그래밍'
-      'Video: Maze Intro - Programming with Blocks ': '동영상: 미로 소개 - 블록으로 프로그래밍 '
+      'Video: Maze Intro - Programming with Blocks ': '동영상: 미로 소개 - 블록 프로그래밍 '
       'Video: Maze Intro: Programming with Blocks': '동영상: 미로 소개: 블록으로 프로그래밍'
       'Video: Measures': '동영상: 마디'
       'Video: Minecraft - Congratulations': '동영상: 마인크래프트 - 축하'
       'Video: Minecraft - Functions': '동영상: 마인크래프트 - 함수'
       'Video: Minecraft - Repeat Loops': '동영상: 마인크래프트 - 루프 반복'
       'Video: Minecraft - The Agent': '동영상: 마인크래프트 - 에이전트'
-      'Video: Minecraft: Voyage Aquatic Conditionals': '동영상: 마인크래프트: 보야지 아쿠아틱 조건문'
-      'Video: Minecraft: Voyage Aquatic Congratulations': '동영상: 마인크래프트: 보야지 아쿠아틱 축하'
-      'Video: Minecraft: Voyage Aquatic Introduction': '동영상: 마인크래프트: 보야지 아쿠아틱 소개'
-      'Video: Minecraft: Voyage Aquatic Repeat Until': '동영상: 마인크래프트: 보야지 아쿠아틱 까지 반복'
+      'Video: Minecraft: Voyage Aquatic Conditionals': '동영상: 마인크래프트: 수중 항해 조건문'
+      'Video: Minecraft: Voyage Aquatic Congratulations': '동영상: 마인크래프트: 수중 항해 - 축하 인사'
+      'Video: Minecraft: Voyage Aquatic Introduction': '동영상: 마인크래프트: 수중 항해 소개'
+      'Video: Minecraft: Voyage Aquatic Repeat Until': '동영상: 마인크래프트: 수중 항해 - ~까지 반복'
       'Video: Nested Loops': '동영상: 중첩 루프'
       'Video: Nested Loops with the Bee': '동영상: 벌과 함께 중첩 루프'
       'Video: Netflix and Data': '동영상:넷플릭스와 데이터'
@@ -511,13 +530,13 @@ ko:
       'Video: Pair Programming ': '동영상: 페어 프로그래밍 '
       'Video: Problem Solving Process': '영상: 문제 해결 과정'
       'Video: Programming with Blocks': '동영상: 블록으로 프로그래밍'
-      'Video: Programming with Rey and BB-8': '동영상: 레이와 BB-8로 프로그래밍'
+      'Video: Programming with Rey and BB-8': '동영상: 레이와 BB-8이 함께하는 프로그래밍'
       'Video: Properties': '동영상: 속성'
       'Video: Publishing Your Website': '동영상: 웹사이트 출판'
       'Video: Repeat Blocks': '동영상: 반복 블록'
-      'Video: Repeat Blocks with BB-8': '동영상: 반복 블록과 BB-8'
+      'Video: Repeat Blocks with BB-8': '동영상: BB-8과 함께하는 반복 블록'
       'Video: Repeat Blocks with the Artist': '동영상: 반복 블록과 아티스트'
-      'Video: Repeat Until Blocks': '동영상: Until 블록 반복'
+      'Video: Repeat Until Blocks': '동영상: ~할 때까지 반복 블록'
       'Video: Repeat Until Statements': '동영상: Until 문 반복'
       'Video: Sprites in Action': '동영상: 스프라이트 인 액션'
       'Video: Star Wars Project': '동영상: 스타워즈 프로젝트'
@@ -526,7 +545,7 @@ ko:
       'Video: The Artist in Code Studio': '동영상: 코드 스튜디오 아티스트'
       'Video: The Big Event - Unplugged Activity': '동영상: 빅 이벤트 - 언플러그드 활동'
       'Video: The Collector': '동영상: 수집가'
-      'Video: The Harvester': '동영상: 수확인'
+      'Video: The Harvester': '동영상: 수확하는 사람'
       'Video: Training Data & Bias': '동영상: 교육 데이터 및 편견'
       'Video: Training Data and Bias': '동영상: 교육 데이터 및 편견'
       'Video: Unplugged Variables in Envelopes': '동영상: 언플러그드 봉투 변수'
@@ -536,7 +555,7 @@ ko:
       'Video: Waze and Data': '동영상: 웨이즈와 데이터'
       'Video: What Makes a Computer, a Computer?': '비디오: 컴퓨터는 무엇으로 구성되나?'
       'Video: What is Machine Learning?': '동영상: AI: 머신 러닝이란?'
-      'Video: While Loops with the Farmer': '동영상: While 루프와 농부'
+      'Video: While Loops with the Farmer': '동영상: 농부와 ~ 하는동안 반복'
       'Video: Wrap-up': '동영상: 마무리'
       Warm Up: 워밍업 
       Website Project: 웹사이트 프로젝트 

@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import applabMsg from '@cdo/applab/locale';
 import color from '../../util/color';
 import * as elementUtils from './elementUtils';
 
 export default class DefaultScreenButtonPropertyRow extends React.Component {
   static propTypes = {
     handleChange: PropTypes.func.isRequired,
-    screenId: PropTypes.string
+    screenId: PropTypes.string,
   };
 
   handleMakeDefault = event => this.props.handleChange(true);
@@ -21,12 +22,12 @@ export default class DefaultScreenButtonPropertyRow extends React.Component {
     const buttonStyle = {
       paddingTop: '5px',
       paddingBottom: '5px',
-      fontSize: '14px'
+      fontSize: '14px',
     };
 
     const defaultButtonStyle = Object.assign({}, buttonStyle, {
       backgroundColor: '#0aa',
-      color: color.white
+      color: color.white,
     });
 
     return (
@@ -36,7 +37,7 @@ export default class DefaultScreenButtonPropertyRow extends React.Component {
           style={defaultButtonStyle}
           onClick={this.handleMakeDefault}
         >
-          Make Default
+          {applabMsg.designWorkspace_makeDefaultButton()}
         </button>
       </div>
     );

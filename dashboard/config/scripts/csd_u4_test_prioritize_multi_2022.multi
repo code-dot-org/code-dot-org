@@ -7,3 +7,5 @@ wrong 'Difficult, because usually difficult things are more important.'
 wrong 'Difficult, because once you get them done, the easy ones will not bother you.'
 wrong 'You should do them in the order you found them, regardless of whether they are easy or difficult.'
 
+
+allow_multiple_attempts true

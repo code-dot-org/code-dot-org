@@ -4,6 +4,8 @@ ps:
     blocks:
       Dancelab_randomColor:
         text: نا ټاکلۍ رنګ
+      Mikelab_randomColor:
+        text: نا ټاکلۍ رنګ
       gamelab_checkTouching:
         options:
           CONDITION:
@@ -20,5 +22,3 @@ ps:
         options:
           CONDITION:
             '"while"': کله چي
-      Mikelab_randomColor:
-        text: نا ټاکلۍ رنګ

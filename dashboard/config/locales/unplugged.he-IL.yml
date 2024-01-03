@@ -2,15 +2,157 @@
 he:
   data:
     unplugged:
+      BigEvent:
+        title: האירוע הגדול
+      BigEvent_2018:
+        title: האירוע הגדול
+      BigEvent_2019:
+        title: האירוע הגדול
+      BinaryBracelets:
+        desc: התלמידים מייצרים צמידים בצורה האות הראשונה בשם שלהם בייצוג בינארי. התלמידים
+          ילמדו שנתונים יכולים להיות מיוצגים ושמורים ביותר מדרך אחת.
+        title: צמידים בינארים
+      BinaryBracelets_2018:
+        desc: התלמידים מייצרים צמידים בצורה האות הראשונה בשם שלהם בייצוג בינארי. התלמידים
+          ילמדו שנתונים יכולים להיות מיוצגים ושמורים ביותר מדרך אחת.
+        title: צמידים בינארים
+      BinaryBracelets_2019:
+        desc: התלמידים מייצרים צמידים בצורה האות הראשונה בשם שלהם בייצוג בינארי. התלמידים
+          ילמדו שנתונים יכולים להיות מיוצגים ושמורים ביותר מדרך אחת.
+        title: צמידים בינארים
+      BinaryImages:
+        title: תמונות בינאריות
+      BinaryImages_2018:
+        title: תמונות בינאריות
+      BinaryImages_2019:
+        title: תמונות בינאריות
+      Booleans:
+        title: בוליאנים ולוגיקה
+      BuildingAFoundation_2018:
+        desc: " "
+        title: " "
+      CollisionDetection:
+        desc: קביעת כאשר אובייקטים על המסך מגע היא היבט חשוב של רוב המשחקים. בשיעור
+          זה אנו נראה איך את משפט פיתגורס ואת הנוסחה מרחק יכול לשמש כדי למדוד את המרחק
+          בין שתי נקודות על המטוס, ולאחר מכן החלט אם אלה שתי נקודות (או הדמויות במשחק)
+          נוגעות.
+      ComputationalThinking:
+        title: חשיבה חישובית
+      Conditionals:
+        title: תנאים
+      Conditionals_2018:
+        title: תנאים
+      Conditionals_2019:
+        title: תנאים
+      Crowdsourcing_2018:
+        desc: " "
+        title: " "
+      DesignRecipe:
+        title: עיצוב המתכון
+      DiceRace_2018:
+        desc: " "
+        title: " "
+      EnvelopeVariables_2018:
+        desc: " "
+        title: " "
+      ForLoopFun:
+        desc: אנחנו יודעים שלולאות מאפשרות לנו לעשות דברים ולחזור עליהם שוב ושוב,
+          אבל עכשיו אנחנו הולכים ללמוד כיצד להשתמש בלולאות בעלות מבנה מתוחכם יותר.
+        title: כיף עם לולאת "עבור"
+      ForLoopFun_2018:
+        desc: " "
+        title: " "
+      GettingLoopy:
+        title: עוברים ללולאות
+      GettingLoopy_2018:
+        title: עוברים ללולאות
+      GettingLoopy_2019:
+        title: עוברים ללולאות
+      GraphPaperProgramming:
+        title: תכנות לנייר משבצות
+      GraphPaperProgramming_2018:
+        title: תכנות לנייר משבצות
+      GraphPaperProgramming_2019:
+        title: תכנות לנייר משבצות
+      Internet:
+        title: אינטרנט
+      Internet_2018:
+        desc: " "
+        title: " "
+      MoveIt:
+        title: זוזו, זוזו
+      MoveItMoveIt_2018:
+        desc: " "
+        title: זוזו, זוזו
+      MoveItMoveIt_2019:
+        desc: " "
+        title: זוזו, זוזו
+      PaperPlanes:
+        title: 'אלגוריתמים מהחיים: מטוסי נייר'
+      PaperPlanes_2018:
+        title: 'אלגוריתמים מהחיים: מטוסי נייר'
+      PaperPlanes_2019:
+        title: 'אלגוריתמים מהחיים: מטוסי נייר'
+      PlantASeed:
+        desc: שיעור זה מציג כיצד אנחנו משתמשים באלגוריתמים בחיי היום יום שלנו, תוך
+          כדי הצגה של שתילת זרעון כדוגמה. השיעור גם מציג את התמונה הגדולה של מדעי
+          המחשב וכיצד אלגוריתמים הם חלק חשוב ונצרך כחלק מהעולם הזה.
+        title: 'אלגוריתמים מהחיים: שתול זרעון'
+      PlantASeed_2018:
+        desc: שיעור זה מציג כיצד אנחנו משתמשים באלגוריתמים בחיי היום יום שלנו, תוך
+          כדי הצגה של שתילת זרעון כדוגמה. השיעור גם מציג את התמונה הגדולה של מדעי
+          המחשב וכיצד אלגוריתמים הם חלק חשוב ונצרך כחלק מהעולם הזה.
+        title: 'אלגוריתמים מהחיים: שתול זרעון'
+      PlantASeed_2019:
+        desc: שיעור זה מציג כיצד אנחנו משתמשים באלגוריתמים בחיי היום יום שלנו, תוך
+          כדי הצגה של שתילת זרעון כדוגמה. השיעור גם מציג את התמונה הגדולה של מדעי
+          המחשב וכיצד אלגוריתמים הם חלק חשוב ונצרך כחלק מהעולם הזה.
+        title: 'אלגוריתמים מהחיים: שתול זרעון'
+      RelayProgramming:
+        title: הרץ פעולה בשנית
+      RelayProgramming_2018:
+        desc: פעילות זו תחל עם שיעור קצר על איתור באגים ועקביות, אח"כ נעבור בזריזות
+          למירוץ אחר השעון כשהתלמידים יתחלקו לקבוצות ויעבדו יחד כדי לתכנת הוראה אחת
+          בכל פעם.
+        title: הרץ פעולה בשנית
+      RelayProgramming_2018_2019:
+        desc: פעילות זו תחל עם שיעור קצר על איתור באגים ועקביות, אח"כ נעבור בזריזות
+          למירוץ אחר השעון כשהתלמידים יתחלקו לקבוצות ויעבדו יחד כדי לתכנת הוראה אחת
+          בכל פעם.
+        title: הרץ פעולה בשנית
+      SP-VPL-CSA-21-mod3-1-1:
+        desc: " "
+        title: " "
+      SP-VPL-CSD-21-CourseNavigation:
+        desc: " "
+        title: " "
+      SongwritingParameters:
+        title: כתיבת שירים
+      SongwritingParameters_2018:
+        desc: " "
+        title: " "
+      SongwritingWithParameters:
+        title: כתיבת שירים
+      SongwritingWithParameters_2018:
+        desc: " "
+        title: " "
+      TangramAlgorithms:
+        title: טנגרם אלגוריתמים
+      TangramAlgorithms_2018:
+        desc: " "
+        title: " "
       Unplug1:
-        title: היכרות למדעי המחשב
         desc: בשיעור זה נציג את הרעיון של מדעי המחשב, ונראה מה מהנדס תכנה עושה. התלמידים
           יקבלו הזדמנות להתנסות בתפקיד של מהנדס תכנה. בסוף הפעילות, כל תמיד יחזור
           עם רשימת התוכן הנלמד בשיעור. אין צורך להבהל מללמד את הילדים את אוצר המילים
           הנדרש לשיעורים הבאים, פעילות זו יכולה להיות מהנה וקלילה, ותתרום הרבה יותר
           מלחכות להזדמנויות אחרות.
+        title: היכרות למדעי המחשב
+      Unplug10:
+        title: האינטרנט
+      Unplug11:
+        title: אריזה
       Unplug2:
-        title: חשיבה חישובית
         desc: ללא שום דבר מלבד נייר וטושים, התלמידים ילמדו ארבעת השלבים של חשיבה חישובית.
           לאחר הקדמה קצרה, התלמידים צריכים להתחלק לקבוצות היכן הם יהיו חייבים ליצור
           הנחיות לתלמידים אחרים לצייר מפלצת מסוים (מתוך קטלוג של מפלצות שנבחרו מראש).
@@ -19,11 +161,12 @@ he:
           ליצור אלגוריתם (הכוונה) עבור קבוצה אחרת לצייר מפלצת מסוימים. צוותי יהיה
           ואז מתג עם עוד קבוצה והאלגוריתמים לצייר את המפלצת בהתבסס על מה מצביע על
           אלגוריתם זה. ? האם הציור מיועד לצוות המקורי?
+        title: חשיבה חישובית
       Unplug3:
-        title: תכנות לנייר משבצות
         desc: כאשר מתכנתים לצייר תמונות, תלמידים יתחילו להבין מה זה באמת תכנות. הכיתה
           תתחיל ע"י כך שתלמידים יחלו לצייר ריבועים או נייר גרף במטרה לצייר תמונה קיימת.
           אם יהיה זמן, השיעור יכול להכיל עם תמונות שהתלמידים ייצרו בעצמם.
+        title: תכנות לנייר משבצות
       Unplug4:
         title: אלגוריתמים
       Unplug5:
@@ -36,228 +179,85 @@ he:
         title: הפשטה
       Unplug9:
         title: הרץ פעולה בשנית
-      Unplug10:
-        title: האינטרנט
-      Unplug11:
-        title: אריזה
       UnplugHappyMaps:
         title: מפות שמחות
-      MoveIt:
-        title: זוזו, זוזו
-      PlantASeed:
-        title: 'אלגוריתמים מהחיים: שתול זרעון'
-        desc: שיעור זה מציג כיצד אנחנו משתמשים באלגוריתמים בחיי היום יום שלנו, תוך
-          כדי הצגה של שתילת זרעון כדוגמה. השיעור גם מציג את התמונה הגדולה של מדעי
-          המחשב וכיצד אלגוריתמים הם חלק חשוב ונצרך כחלק מהעולם הזה.
-      GettingLoopy:
-        title: עוברים ללולאות
-      RelayProgramming:
-        title: הרץ פעולה בשנית
-      Conditionals:
-        title: תנאים
-      BigEvent:
-        title: האירוע הגדול
-      GraphPaperProgramming:
-        title: תכנות לנייר משבצות
-      PaperPlanes:
-        title: 'אלגוריתמים מהחיים: מטוסי נייר'
-      BinaryBracelets:
-        title: צמידים בינארים
-        desc: התלמידים מייצרים צמידים בצורה האות הראשונה בשם שלהם בייצוג בינארי. התלמידים
-          ילמדו שנתונים יכולים להיות מיוצגים ושמורים ביותר מדרך אחת.
-      ComputationalThinking:
-        title: חשיבה חישובית
-      SongwritingParameters:
-        title: כתיבת שירים
-      Internet:
-        title: אינטרנט
-      TangramAlgorithms:
-        title: טנגרם אלגוריתמים
-      ForLoopFun:
-        title: כיף עם לולאת "עבור"
-        desc: אנחנו יודעים שלולאות מאפשרות לנו לעשות דברים ולחזור עליהם שוב ושוב,
-          אבל עכשיו אנחנו הולכים ללמוד כיצד להשתמש בלולאות בעלות מבנה מתוחכם יותר.
-      SongwritingWithParameters:
-        title: כתיבת שירים
-      BinaryImages:
-        title: תמונות בינאריות
-      DesignRecipe:
-        title: עיצוב המתכון
-      Booleans:
-        title: בוליאנים ולוגיקה
-      CollisionDetection:
-        desc: קביעת כאשר אובייקטים על המסך מגע היא היבט חשוב של רוב המשחקים. בשיעור
-          זה אנו נראה איך את משפט פיתגורס ואת הנוסחה מרחק יכול לשמש כדי למדוד את המרחק
-          בין שתי נקודות על המטוס, ולאחר מכן החלט אם אלה שתי נקודות (או הדמויות במשחק)
-          נוגעות.
-      courseB_unplugged_MRF:
-        title: פעילות ללא עבודה במחשב
-      courseB_unplugged_loopyMRF:
-        title: פעילות ללא עבודה במחשב
-      courseC_Unplugged_ScreenOutTheMean:
-        title: פעילות ללא עבודה במחשב
-      courseD_unplugged_digitalCitizenship:
-        title: פעילות ללא עבודה במחשב
-      courseF_unplugged_powerOfWords:
-        title: פעילות ללא עבודה במחשב
-      deeper learning description:
-        title: " "
-      courseAB_unplugged_plantASeed:
-        title: 'אלגוריתמים מהחיים: שתול זרעון'
-        desc: שיעור זה מציג כיצד אנחנו משתמשים באלגוריתמים בחיי היום יום שלנו, תוך
-          כדי הצגה של שתילת זרעון כדוגמה. השיעור גם מציג את התמונה הגדולה של מדעי
-          המחשב וכיצד אלגוריתמים הם חלק חשוב ונצרך כחלק מהעולם הזה.
-      courseA_unplugged_happyMaps:
+      UnplugHappyMaps_2018:
+        title: מפות שמחות
+      UnplugHappyMaps_2019:
         title: מפות שמחות
       courseABC_unplugged_bigEvent:
         title: האירוע הגדול
-      courseC_unplugged_paperPlanes:
-        title: 'אלגוריתמים מהחיים: מטוסי נייר'
-      courseC_unplugged_gettingLoopy:
-        title: עוברים ללולאות
+      courseAB_unplugged_plantASeed:
+        desc: שיעור זה מציג כיצד אנחנו משתמשים באלגוריתמים בחיי היום יום שלנו, תוך
+          כדי הצגה של שתילת זרעון כדוגמה. השיעור גם מציג את התמונה הגדולה של מדעי
+          המחשב וכיצד אלגוריתמים הם חלק חשוב ונצרך כחלק מהעולם הזה.
+        title: 'אלגוריתמים מהחיים: שתול זרעון'
+      courseA_unplugged_happyMaps:
+        title: מפות שמחות
+      courseB_unplugged_MRF:
+        title: פעילות ללא עבודה במחשב
+      courseB_unplugged_MRF_2018:
+        title: חברי הרובוטיים
+      courseB_unplugged_MRF_2019:
+        title: חברי הרובוטיים
+      courseB_unplugged_loopyMRF:
+        title: פעילות ללא עבודה במחשב
+      courseB_unplugged_loopyMRF_2018:
+        desc: " "
+        title: " "
+      courseB_unplugged_loopyMRF_2019:
+        desc: " "
+      courseC_Unplugged_ScreenOutTheMean:
+        title: פעילות ללא עבודה במחשב
+      courseC_Unplugged_ScreenOutTheMean_2018:
+        title: פעילות ללא עבודה במחשב
+      courseC_Unplugged_ScreenOutTheMean_2019:
+        title: פעילות ללא עבודה במחשב
       courseC_unplugged_binaryBracelets:
-        title: צמידים בינארים
         desc: התלמידים מייצרים צמידים בצורה האות הראשונה בשם שלהם בייצוג בינארי. התלמידים
           ילמדו שנתונים יכולים להיות מיוצגים ושמורים ביותר מדרך אחת.
+        title: צמידים בינארים
+      courseC_unplugged_gettingLoopy:
+        title: עוברים ללולאות
+      courseC_unplugged_paperPlanes:
+        title: 'אלגוריתמים מהחיים: מטוסי נייר'
+      courseD_unplugged_binaryImages:
+        title: תמונות בינאריות
+      courseD_unplugged_conditionalsCards:
+        title: התניות עם כרטיסים
+      courseD_unplugged_digitalCitizenship:
+        title: פעילות ללא עבודה במחשב
+      courseD_unplugged_digitalCitizenship_2018:
+        title: פעילות ללא עבודה במחשב
+      courseD_unplugged_digitalCitizenship_2019:
+        title: פעילות ללא עבודה במחשב
       courseD_unplugged_graphPaperProgramming:
         title: תכנות לנייר משבצות
       courseD_unplugged_relayProgramming:
         title: הרץ פעולה בשנית
-      courseD_unplugged_conditionalsCards:
-        title: התניות עם כרטיסים
-      courseD_unplugged_binaryImages:
-        title: תמונות בינאריות
-      courseE_unplugged_songwritingParameters:
-        title: כתיבת שירים
       courseE_unplugged_internet:
         title: אינטרנט
+      courseE_unplugged_privateInformation_2018:
+        desc: " "
+        title: " "
       courseE_unplugged_songwriting:
+        title: כתיבת שירים
+      courseE_unplugged_songwritingParameters:
+        title: כתיבת שירים
+      courseF_unplugged_forLoopFun:
+        desc: אנחנו יודעים שלולאות מאפשרות לנו לעשות דברים ולחזור עליהם שוב ושוב,
+          אבל עכשיו אנחנו הולכים ללמוד כיצד להשתמש בלולאות בעלות מבנה מתוחכם יותר.
+        title: כיף עם לולאת "עבור"
+      courseF_unplugged_powerOfWords:
+        title: פעילות ללא עבודה במחשב
+      courseF_unplugged_powerOfWords_2018:
+        desc: " "
+        title: " "
+      courseF_unplugged_songwritingParameters:
         title: כתיבת שירים
       courseF_unplugged_tangrams:
         title: טנגרם אלגוריתמים
-      courseF_unplugged_forLoopFun:
-        title: כיף עם לולאת "עבור"
-        desc: אנחנו יודעים שלולאות מאפשרות לנו לעשות דברים ולחזור עליהם שוב ושוב,
-          אבל עכשיו אנחנו הולכים ללמוד כיצד להשתמש בלולאות בעלות מבנה מתוחכם יותר.
-      courseF_unplugged_songwritingParameters:
-        title: כתיבת שירים
-      courseB_unplugged_MRF_2018:
-        title: חברי הרובוטיים
-      BuildingAFoundation_2018:
+      deeper learning description:
         title: " "
-        desc: " "
-      courseB_unplugged_loopyMRF_2018:
-        title: " "
-        desc: " "
-      DiceRace_2018:
-        title: " "
-        desc: " "
-      courseE_unplugged_privateInformation_2018:
-        title: " "
-        desc: " "
-      SongwritingParameters_2018:
-        title: " "
-        desc: " "
-      Internet_2018:
-        title: " "
-        desc: " "
-      Crowdsourcing_2018:
-        title: " "
-        desc: " "
-      TangramAlgorithms_2018:
-        title: " "
-        desc: " "
-      courseF_unplugged_powerOfWords_2018:
-        title: " "
-        desc: " "
-      EnvelopeVariables_2018:
-        title: " "
-        desc: " "
-      ForLoopFun_2018:
-        title: " "
-        desc: " "
-      SongwritingWithParameters_2018:
-        title: " "
-        desc: " "
-      PlantASeed_2018:
-        title: 'אלגוריתמים מהחיים: שתול זרעון'
-        desc: שיעור זה מציג כיצד אנחנו משתמשים באלגוריתמים בחיי היום יום שלנו, תוך
-          כדי הצגה של שתילת זרעון כדוגמה. השיעור גם מציג את התמונה הגדולה של מדעי
-          המחשב וכיצד אלגוריתמים הם חלק חשוב ונצרך כחלק מהעולם הזה.
-      UnplugHappyMaps_2018:
-        title: מפות שמחות
-      BigEvent_2018:
-        title: האירוע הגדול
-      GraphPaperProgramming_2018:
-        title: תכנות לנייר משבצות
-      courseD_unplugged_digitalCitizenship_2018:
-        title: פעילות ללא עבודה במחשב
-      courseC_Unplugged_ScreenOutTheMean_2018:
-        title: פעילות ללא עבודה במחשב
-      Conditionals_2018:
-        title: תנאים
-      BinaryImages_2018:
-        title: תמונות בינאריות
-      PaperPlanes_2018:
-        title: 'אלגוריתמים מהחיים: מטוסי נייר'
-      GettingLoopy_2018:
-        title: עוברים ללולאות
-      BinaryBracelets_2018:
-        title: צמידים בינארים
-        desc: התלמידים מייצרים צמידים בצורה האות הראשונה בשם שלהם בייצוג בינארי. התלמידים
-          ילמדו שנתונים יכולים להיות מיוצגים ושמורים ביותר מדרך אחת.
-      MoveItMoveIt_2018:
-        title: זוזו, זוזו
-        desc: " "
-      RelayProgramming_2018:
-        title: הרץ פעולה בשנית
-        desc: פעילות זו תחל עם שיעור קצר על איתור באגים ועקביות, אח"כ נעבור בזריזות
-          למירוץ אחר השעון כשהתלמידים יתחלקו לקבוצות ויעבדו יחד כדי לתכנת הוראה אחת
-          בכל פעם.
-      courseB_unplugged_MRF_2019:
-        title: חברי הרובוטיים
-      courseB_unplugged_loopyMRF_2019:
-        desc: " "
-      Conditionals_2019:
-        title: תנאים
-      GraphPaperProgramming_2019:
-        title: תכנות לנייר משבצות
-      RelayProgramming_2018_2019:
-        title: הרץ פעולה בשנית
-        desc: פעילות זו תחל עם שיעור קצר על איתור באגים ועקביות, אח"כ נעבור בזריזות
-          למירוץ אחר השעון כשהתלמידים יתחלקו לקבוצות ויעבדו יחד כדי לתכנת הוראה אחת
-          בכל פעם.
-      courseD_unplugged_digitalCitizenship_2019:
-        title: פעילות ללא עבודה במחשב
-      BinaryImages_2019:
-        title: תמונות בינאריות
-      GettingLoopy_2019:
-        title: עוברים ללולאות
-      courseC_Unplugged_ScreenOutTheMean_2019:
-        title: פעילות ללא עבודה במחשב
-      BigEvent_2019:
-        title: האירוע הגדול
-      BinaryBracelets_2019:
-        title: צמידים בינארים
-        desc: התלמידים מייצרים צמידים בצורה האות הראשונה בשם שלהם בייצוג בינארי. התלמידים
-          ילמדו שנתונים יכולים להיות מיוצגים ושמורים ביותר מדרך אחת.
-      PaperPlanes_2019:
-        title: 'אלגוריתמים מהחיים: מטוסי נייר'
-      PlantASeed_2019:
-        title: 'אלגוריתמים מהחיים: שתול זרעון'
-        desc: שיעור זה מציג כיצד אנחנו משתמשים באלגוריתמים בחיי היום יום שלנו, תוך
-          כדי הצגה של שתילת זרעון כדוגמה. השיעור גם מציג את התמונה הגדולה של מדעי
-          המחשב וכיצד אלגוריתמים הם חלק חשוב ונצרך כחלק מהעולם הזה.
-      UnplugHappyMaps_2019:
-        title: מפות שמחות
-      MoveItMoveIt_2019:
-        title: זוזו, זוזו
-        desc: " "
       timeforcs_demo_conditionals:
         title: תנאים
-      SP-VPL-CSD-21-CourseNavigation:
-        title: " "
-        desc: " "
-      SP-VPL-CSA-21-mod3-1-1:
-        title: " "
-        desc: " "

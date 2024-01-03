@@ -1,0 +1,28 @@
+name 'virtual-pl-csd-summer-day5-Community5'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Connect with your local community
+
+##### Another way to make CS come alive for your students is to involve your local community. Not only does involving your community in your classroom enhance the student learning experience by adding relevance to the curriculum, it also raises awareness about CS education in the broader community.
+
+
+## Ideas for connecting with your local community
+
+* #### Invite a former student or guardian of a current student to come to class as a guest speaker. 
+* #### Have students design a website or app prototype for a local business.
+* #### Invite the person who runs the school website to class to provide feedback on student websites.
+* #### Design an interactive card for a service member, residents of an elderly community, etc.
+* #### Partner with a younger grade level to create games that younger students might use to practice skills they are learning.
+
+## Make a plan
+
+<img src="https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png" alt="A clipboard with the words TO DO on it. This icon is used to signal an action item for participants." width="30px" style="border-radius:10px; float:left; margin: 0px 10px 5px 0px;">
+
+
+#### What is one concrete step you will take to engage your local community in your CS class? 
+
+
+
+MARKDOWN

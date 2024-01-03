@@ -2,14 +2,11 @@
   "id-ID": {
     "data": {
       "frameworks": {
-        "csta": {
-          "name": "Standar Ilmu Komputer CSTA K-12 (2017)"
+        "ai4k12-2021": {
+          "name": "Pedoman Nasional AI4K12 2021"
         },
-        "csp2021": {
-          "name": "Kerangka Konseptual CSP"
-        },
-        "csta2011": {
-          "name": "CSTA Standar Ilmu Komputer K-12 (2011)"
+        "c3ss": {
+          "name": "Standar Studi Sosial C3"
         },
         "ccela": {
           "name": "Standar Seni Bahasa Inggris Common Core"
@@ -17,8 +14,23 @@
         "ccmath": {
           "name": "Standar Matematika Inti Umum"
         },
+        "csa": {
+          "name": "Kerangka Konseptual CSA"
+        },
+        "csp2021": {
+          "name": "Kerangka Konseptual CSP"
+        },
+        "csta": {
+          "name": "Standar Ilmu Komputer CSTA K-12 (2017)"
+        },
+        "csta2011": {
+          "name": "CSTA Standar Ilmu Komputer K-12 (2011)"
+        },
         "iste": {
           "name": "Standar ISTE untuk Murid"
+        },
+        "ngss": {
+          "name": "Standar Sains Generasi Berikutnya"
         }
       }
     }

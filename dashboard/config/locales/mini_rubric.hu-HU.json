@@ -2,9 +2,6 @@
   "hu-HU": {
     "data": {
       "mini_rubric": {
-        "allthethings-mini-rubric-gamelab": {
-          "rubric_key_concept": "Kulcs koncepció"
-        },
         "CSD U2 Image assessment_2021": {
           "rubric_key_concept": "Szerkezd a weboldal tartalmát HTML használásával (Adj egy képet a weboldalhoz). Jelöld pontosan, ha mások munkáját használod!",
           "rubric_performance_level_1": "A kép megfelelően megjelenik, és egy 'alt' tulajdonság ad egy pontos leírást a képről. Nincs felesleges kód az 'img' címkében. Van pontos tulajdonság és a kép megfelelően lett megnevezve.",
@@ -12,6 +9,12 @@
           "rubric_performance_level_3": "Az 'img' címke fel van használva, és a kép forráscíme is biztosított, de előfordulhatnak kisebb szintaxis hibák vagy félrebetűzések, amik meggátolják a kép megfelelő megjelenítését. Előfordulhat, hogy a kép nem érhető el legális használatra a weboldalon."
         },
         "CSD U2 Image assessment_2022": {
+          "rubric_key_concept": "Szerkezd a weboldal tartalmát HTML használásával (Adj egy képet a weboldalhoz). Jelöld pontosan, ha mások munkáját használod!",
+          "rubric_performance_level_1": "A kép megfelelően megjelenik, és egy 'alt' tulajdonság ad egy pontos leírást a képről. Nincs felesleges kód az 'img' címkében. Van pontos tulajdonság és a kép megfelelően lett megnevezve.",
+          "rubric_performance_level_2": "A kép megfelelően jelenik meg, és a szerzői jogi licenc leírása szerint kerül felhasználásra.",
+          "rubric_performance_level_3": "Az 'img' címke fel van használva, és a kép forráscíme is biztosított, de előfordulhatnak kisebb szintaxis hibák vagy félrebetűzések, amik meggátolják a kép megfelelő megjelenítését. Előfordulhat, hogy a kép nem érhető el legális használatra a weboldalon."
+        },
+        "CSD U2 Image assessment_2023": {
           "rubric_key_concept": "Szerkezd a weboldal tartalmát HTML használásával (Adj egy képet a weboldalhoz). Jelöld pontosan, ha mások munkáját használod!",
           "rubric_performance_level_1": "A kép megfelelően megjelenik, és egy 'alt' tulajdonság ad egy pontos leírást a képről. Nincs felesleges kód az 'img' címkében. Van pontos tulajdonság és a kép megfelelően lett megnevezve.",
           "rubric_performance_level_2": "A kép megfelelően jelenik meg, és a szerzői jogi licenc leírása szerint kerül felhasználásra.",
@@ -31,17 +34,29 @@
           "rubric_performance_level_3": "Van egy `<a>` címke, de a szintaxis hibák, vagy az oldal nevével kapcsolatos problémák megakadályozhatják a működést",
           "rubric_performance_level_4": "Nem lett új odal létrehozva, és nincs semmilyen link"
         },
+        "CSD U2 adding pages_2023": {
+          "rubric_key_concept": "Digitális műalkotás létrehozása, linkelés többoldalas webhelyen belül",
+          "rubric_performance_level_1": "Egy új oldal létre lett hozva, és egy egyedi és leíró nevet kapott, ami \".html\"-el végződik. Van egy link az index.html oldalról az új oldalra, és az új oldalról vissza az index.html-re.",
+          "rubric_performance_level_2": "Van legalább egy működő link egy HTML oldalról a másikra",
+          "rubric_performance_level_3": "Van egy `<a>` címke, de a szintaxis hibák, vagy az oldal nevével kapcsolatos problémák megakadályozhatják a működést",
+          "rubric_performance_level_4": "Nem lett új odal létrehozva, és nincs semmilyen link"
+        },
         "CSD U2 classes haikus_2021": {
           "rubric_performance_level_1": "Az osztály és a szabály készlet helyesen lett létrehozva, a kiválasztott haiku összes eleme benne van, és van legalább 3 szabály a szabálykészletben.",
+          "rubric_performance_level_2": "Egy osztály és egy szabálykészlet létrejött és a weboldal választott haiku részletének legtöbb eleme érintett az osztályban, de apróbb hibák előfordulhatnak a szöveg egyes részleteinél, vagy háromnál kevesebb szabály van a szabálykészletben. ",
           "rubric_performance_level_3": "Az osztály és a szabály készlet létre lett hozva, és legalább egy pár weboldalban lévő elem benne van az osztályban, de előfurdulhat, hogy vannak nagyobb hibák, ami megakadályozza a szöveg formázását.",
-          "rubric_performance_level_4": "Nincs osztály vagy szabály készlet létrehozva, vagy nincs egy weboldal elem se az osztályba téve.",
-          "rubric_performance_level_2": "Egy osztály és egy szabálykészlet létrejött és a weboldal választott haiku részletének legtöbb eleme érintett az osztályban, de apróbb hibák előfordulhatnak a szöveg egyes részleteinél, vagy háromnál kevesebb szabály van a szabálykészletben. "
+          "rubric_performance_level_4": "Nincs osztály vagy szabály készlet létrehozva, vagy nincs egy weboldal elem se az osztályba téve."
         },
         "CSD U2 classes haikus_2022": {
           "rubric_performance_level_1": "Az osztály és a szabály készlet helyesen lett létrehozva, a kiválasztott haiku összes eleme benne van, és van legalább 3 szabály a szabálykészletben.",
+          "rubric_performance_level_2": "Egy osztály és egy szabálykészlet létrejött és a weboldal választott haiku részletének legtöbb eleme érintett az osztályban, de apróbb hibák előfordulhatnak a szöveg egyes részleteinél, vagy háromnál kevesebb szabály van a szabálykészletben. ",
           "rubric_performance_level_3": "Az osztály és a szabály készlet létre lett hozva, és legalább egy pár weboldalban lévő elem benne van az osztályban, de előfurdulhat, hogy vannak nagyobb hibák, ami megakadályozza a szöveg formázását.",
-          "rubric_performance_level_4": "Nincs osztály vagy szabály készlet létrehozva, vagy nincs egy weboldal elem se az osztályba téve.",
-          "rubric_performance_level_2": "Egy osztály és egy szabálykészlet létrejött és a weboldal választott haiku részletének legtöbb eleme érintett az osztályban, de apróbb hibák előfordulhatnak a szöveg egyes részleteinél, vagy háromnál kevesebb szabály van a szabálykészletben. "
+          "rubric_performance_level_4": "Nincs osztály vagy szabály készlet létrehozva, vagy nincs egy weboldal elem se az osztályba téve."
+        },
+        "CSD U2 classes haikus_2023": {
+          "rubric_performance_level_2": "Egy osztály és egy szabálykészlet létrejött és a weboldal választott haiku részletének legtöbb eleme érintett az osztályban, de apróbb hibák előfordulhatnak a szöveg egyes részleteinél, vagy háromnál kevesebb szabály van a szabálykészletben. ",
+          "rubric_performance_level_3": "Az osztály és a szabály készlet létre lett hozva, és legalább egy pár weboldalban lévő elem benne van az osztályban, de előfurdulhat, hogy vannak nagyobb hibák, ami megakadályozza a szöveg formázását.",
+          "rubric_performance_level_4": "Nincs osztály vagy szabály készlet létrehozva, vagy nincs egy weboldal elem se az osztályba téve."
         },
         "CSD Web CSS Assessment_2021": {
           "rubric_key_concept": "Hozz létre egy stíluslapot, és ágyazd be a lapra a HTML-ben. A stíluslap tartalmaz egy szabályt, ami megváltoztatja a a weboldal bekezdéselemét.",
@@ -56,6 +71,16 @@
           "rubric_performance_level_2": "A bekezdések új színűek vagy méretűek.\n",
           "rubric_performance_level_3": "A bekezdéseknek van egy speciális szabálykészletük a stíluslapon, és a szín vagy a méret tulajdonságok is fel vannak használva, de elég hiba van ahhoz, hogy a szöveg ne változtasson színt vagy méretet. Van egy HTML kód, ami megpróbálkozik a stíluslap weboldalhoz ágyazásával.",
           "rubric_performance_level_4": "Nincs speciális szabály készlet a bekezdéshez, vagy a szín vagy méret tulajdonságai nincsenek felhasználva a szabály készlétben. Nincs kód a stílus lap web-re való beültetéséhez."
+        },
+        "CSD Web CSS Assessment_2023": {
+          "rubric_key_concept": "Hozz létre egy stíluslapot, és ágyazd be a lapra a HTML-ben. A stíluslap tartalmaz egy szabályt, ami megváltoztatja a a weboldal bekezdéselemét.",
+          "rubric_performance_level_1": "Egy-egy bekezdés új szín és méret, és nincsenek hibák a HTML és a CSS kód változékonyságában.",
+          "rubric_performance_level_2": "A bekezdések új színűek vagy méretűek.\n",
+          "rubric_performance_level_3": "A bekezdéseknek van egy speciális szabálykészletük a stíluslapon, és a szín vagy a méret tulajdonságok is fel vannak használva, de elég hiba van ahhoz, hogy a szöveg ne változtasson színt vagy méretet. Van egy HTML kód, ami megpróbálkozik a stíluslap weboldalhoz ágyazásával.",
+          "rubric_performance_level_4": "Nincs speciális szabály készlet a bekezdéshez, vagy a szín vagy méret tulajdonságai nincsenek felhasználva a szabály készlétben. Nincs kód a stílus lap web-re való beültetéséhez."
+        },
+        "allthethings-mini-rubric-gamelab": {
+          "rubric_key_concept": "Kulcs koncepció"
         }
       }
     }

@@ -11,9 +11,7 @@ class Api::V1::UserScriptsController < ApplicationController
     end
   end
 
-  private
-
-  def set_user_script
+  private def set_user_script
     @user_script = UserScript.find_or_create_by!(user: current_user, script_id: params[:script_id])
   end
 end

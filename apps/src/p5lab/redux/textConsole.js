@@ -12,8 +12,8 @@ export default function textConsole(state, action) {
         ...state.slice(-(MAX_NUM_TEXTS - 1)),
         {
           name: action.name,
-          text: action.text
-        }
+          text: action.text,
+        },
       ];
     default:
       return state;
@@ -22,7 +22,7 @@ export default function textConsole(state, action) {
 
 export function clearConsole() {
   return {
-    type: CLEAR_CONSOLE
+    type: CLEAR_CONSOLE,
   };
 }
 
@@ -30,6 +30,6 @@ export function addConsoleMessage(message) {
   return {
     type: ADD_MESSAGE,
     name: message.name,
-    text: message.text
+    text: message.text,
   };
 }

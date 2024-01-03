@@ -39,8 +39,10 @@ mi:
         age: 'Pakeke'
         gender: 'Ira'
         edit_header: 'Whakatika Taipitopito Pūkete'
+        finish_sign_up_header_error: 'Tēnā whakatikaina ngā hapa e haere ake nei:'
         error:
           future: tē āhei haere ake nei
+        user_type: 'Momo Pūkete'
   beta: "beta"
   hello: "Tēnā koe e te ao"
   welcome_back: "Hoki mai rā, %{name}"
@@ -118,7 +120,6 @@ mi:
     valid_password: "Kupuhipa whai mana!"
     invalid_password: "Me kaua tō kupuhipa e iti ake i te 6 pūāhua"
     mismatch_password: "He rerekē ngā kupuhipa e rua kua whakaurua e koe"
-    additional_information: "Me whiwhi mātou ki ētahi mōhiohio anō kia āhei tonu tō waitohu mai."
     user_type_label: "Momo Pūkete"
     user_type_student: "Waitohu Ākonga"
     field_is_required: "me mātua"
@@ -719,6 +720,10 @@ mi:
       email_opt_in:
         opt_in_yes: 'Āe'
         opt_in_no: 'Kāore'
+  course_offering:
+    headers:
+      minecraft: 'Mahimaina'
+      sports: 'Ngā Hākinakina'
   copy: 'Tārua'
   pixelation:
     binary: "Tāhūrua"

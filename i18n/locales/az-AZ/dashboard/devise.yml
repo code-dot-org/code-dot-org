@@ -50,9 +50,6 @@ az:
       expired: "istifadə müddəti bitmişdir, xahiş edirik yeni sorğu göndərəsiniz"
       not_found: "tapılmadı"
       not_locked: "Kilidlənməmişdi"
-      not_saved:
-        one: "1 səhv bu %{resource} -in yadda saxlanılmasına qadağa qoymuşdur:"
-        other: "%{count} səhv bu %{resource} -in yadda saxlanılmasına qadağan qoymuşdur:"
     invitations:
       send_instructions: '%{email} ünvanına dəvət mesajı göndərildi.'
       invitation_token_invalid: 'Göstərilən dəvət işarəsi etibarlı deyil!'

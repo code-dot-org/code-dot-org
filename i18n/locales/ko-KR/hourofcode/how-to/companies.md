@@ -16,8 +16,8 @@ title: 기업을 위한 아워오브코드 How-To 가이드
 
 시작하려면 아래의 단계를 확인하고 기업에게 아워오브코드에 관심과 흥미를 갖게 하는 방법에 관한 더 자세한 내용은 [기업 파트너를 위한 가이드](/files/hoc-corporate-toolkit.pdf)를 참조하세요.
 
-- [Connect with a local school](#connect-with-a-school)
-- [Encourage employees to volunteer with a classroom](#encourage-employees)
+- [지역 학교와 연결](#connect-with-a-school)
+- [직원의 자원봉사를 장려해 주세요](#encourage-employees)
 - [아워오브코드 이벤트를 주최해보세요.](#host-hour-of-code)
 - [아워오브코드를 홍보해 주세요.](#promote-hour-of-code)
 - [아워오브코드를 지원하는 더 많은 방법](#support-hour-of-code)
@@ -26,31 +26,31 @@ title: 기업을 위한 아워오브코드 How-To 가이드
 
 <a id="connect-with-a-school"></a>
 
-## Connect with a local school
+## 지역 학교와 연결
 
-It's always best to start locally, with schools that you or your employees have a strong connection to, like an alma mater, a child’s school, or a local organization or school that is focused on serving a population that has been historically underrepresented in computer science.
+모교, 어린이 학교, 역사적으로 컴퓨터 과학 분야에서 소외된 사람들을 지원하는 데 중점을 둔 지역 조직이나 학교 등 귀하 또는 직원이 긴밀한 관계를 맺고 있는 학교부터 시작하는 것이 항상 가장 좋습니다.
 
 [![](/images/fit-600/Marketing/2018_HoC-392.jpg)]({{ urls/learn }})
 
-From there, you can visit the school’s website to find appropriate contacts to reach out to, like a principal, vice principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations like the Boys & Girls Clubs of America, a YMCA branch, and more to co-host an event.
+여기에서 학교 웹사이트를 방문하여 교장, 부교장, 기술 또는 컴퓨터 과학 강사, 학교의 PTSA 등 연락할 수 있는 적절한 연락처를 찾을 수 있습니다. 미국 보이즈 & 걸스 클럽, YMCA 지부 등과 같은 단체와 협력하여 행사를 공동 주최할 수도 있습니다.
 
-If you are unable to connect with a school, please [contact us](https://support.code.org/hc/en-us/requests/new) and we’ll connect you with one of our local partners if possible.
+학교와 직접 연락할 수 없으시면 [저희에게 문의](https://support.code.org/hc/en-us/requests/new)하여 주십시오. 저희가 가능한 지역 파트너와 자원봉사 신청자를 연결해 드리겠습니다. 
 
 * * *
 
 <a id="encourage-employees"></a>
 
-## Encourage employees to volunteer with a classroom
+## 직원의 자원봉사를 장려해 주세요
 
 [![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
 
-One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology has impacted your role.
+가장 큰 성취감을 맛볼 수 있는 아워오브코드 참여 방법 중 하나는 지역 학급에서 직접 또는 가상적으로 자원봉사를 하는 것입니다 무엇보다도, 자원봉사자가 되기 위해 엔지니어이어야 할 필요는 없습니다. 자신의 커리어 경험과 CS 또는 기술이 여러분의 역할에 어떤 영향을 미쳤는지 공유함으로써 여전히 학생들에게 의미 있는 경험을 제공할 수 있습니다.
 
 [<button>자원봉사자로 등록하세요.</button>]({{ urls/volunteer }})
 
-Once a volunteer registers, a teacher can review their profile on our [volunteer map](https://code.org/volunteer/local) - so profiles should be submitted as complete as possible. If you’re a good fit for their classroom, a teacher will contact you through the platform (we will never share your email address with the teacher). You can then coordinate details directly with the teacher around [how to best volunteer with their classroom](https://hourofcode.com/us/how-to/volunteers).
+일단 자원봉사자가 등록을 하면 교사가 [자원봉사 맵](https://code.org/volunteer/local)에서 프로필을 검토하기 때문에 신청인은 프로필을 가능한 자세하게 기재하여 제출해야 합니다. 교사는 학급에 맞는 신청인에게 플랫폼을 통해 연락할 것입니다 (저희는 교사와 신청인의 이메일 주소를 공유하지 않습니다). 그 다음 주변의 교사와 직접 연락하여 [교실 자원봉사를 가장 잘 하는 방법](https://hourofcode.com/us/how-to/volunteers)에 대한 세부사항을 조율할 수 있습니다.
 
-For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
+자원봉사에 관한 더 자세한 안내와 회사에게 아워오브코드 관심과 흥미를 갖게 할 샘플 메시지는 [기업 파트너를 위한 가이드]({{ localized_files/hoc_corporate_toolkit }})에서 확인하세요.
 
 * * *
 
@@ -134,7 +134,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 
 ### 1. 이벤트 등록
 
-[아워오브코드 이벤트에 가입](/#join)하면, 뉴스 및 아워오브코드를 성공적으로 주최하기 위한 팁이 담긴 이메일을 받게 됩니다. 또한 등록을 하면, 지역 학교 또는 학부모에게 이벤트 주최 소식을 알리는 효과가 있습니다. 
+[아워오브코드 이벤트](/events)에 가입하시면, 성공적인 아워오브코드 개최를 위한 뉴스와 팁이 담긴 유용한 이메일을 보내 드립니다. 또한 등록을 하면, 지역 학교 또는 학부모에게 이벤트 주최 소식을 알리는 효과가 있습니다. 
 
 ### 2. 소셜 미디어에 게시
 
@@ -161,7 +161,7 @@ The best Hour of Code experience includes Internet-connected computers. But you 
 - 맨 처음 작성한 코드 라인이 여러분의 인생을 바꿨다면, 주위의 학생들도 첫 번째 #HourOfCode를 작성할 수 있도록 도와주세요. https://code.org/volunteer
 - 코딩을 배웠다면, 어떤 사연을 갖고 계십니까? 주변의 학생들에게 그들의 첫 번째 #HourOfCode를 통해 영감을 주세요. https://code.org/volunteer
 
-<a href="https://hourofcode.com/promote/resources#posters">Find more</a> posters, videos, stickers and other ways to promote your event to your community.
+<a href="https://hourofcode.com/promote/resources#posters">더 많은</a> 포스터, 동영상, 스티커 및 기타 방법을 찾아 커뮤니티에 이벤트를 홍보하세요.
 
 * * *
 

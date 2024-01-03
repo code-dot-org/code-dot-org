@@ -1,2 +1,11 @@
 {
+  "ca-ES": {
+    "data": {
+      "mini_rubric": {
+        "allthethings-mini-rubric-gamelab": {
+          "rubric_key_concept": "Concepte clau"
+        }
+      }
+    }
+  }
 }

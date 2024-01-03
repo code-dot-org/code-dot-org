@@ -1,143 +1,143 @@
 ---
-title: Computer Science Fundamentals Transition Guide
+title: Guia de transició per a Fonaments de la Informàtica
 theme: responsive
 style_min: true
 ---
 
-# Teaching Courses A-F
+# Com impartir els Cursos A-F
 
-## Table of Contents
+## Taula de continguts
 
-* [Overview](#overview)
-* [Teaching the new courses](#newcourses)
-* [Circle-Time Stories (Courses A and B)](#circletime)
-* [Lesson Scaffolding & Challenge Puzzles (All Ages)](#scaffolding)
-* [Bridging Activities For Unplugged Lessons (All Ages)](#unplugged)
-* [End of Course Projects (Courses E & F)](#endofcourse)
-* [Conclusion](#conclusion)
-* [FAQs](#faq)
+* [Resum](#overview)
+* [Impartir els cursos nous](#newcourses)
+* [Històries de rotllana (Cursos A i B)](#circletime)
+* [Estructura de les lliçons i trencaclosques de repte (totes les edats)](#scaffolding)
+* [Activitats pont per a lliçons sense connexió (totes les edats)](#unplugged)
+* [Projectes de final de curs (Cursos E i F)](#endofcourse)
+* [Conclusió](#conclusion)
+* [Preguntes freqüents](#faq)
 
 <a id="overview"></a>
 
-## Overview
-The landscape of computer science education has changed immensely since the creation of the original Computer Science Fundamentals courses. Originally, Courses 1-4 were designed as a starting point to acquire the basics, no matter what the age of the student who was coming to the discipline.  Now that far more districts, cities, and states have implemented computer science courses beginning at Kindergarten, teachers are asking for more content to see students through until middle school/junior high.
+## Resum
+El panorama de l'educació en informàtica ha canviat dràsticament des de la creació dels cursos originals de Fonaments de la Informàtica. Inicialment, els Cursos 1-4 es van dissenyar com a punt de partida per assimilar els conceptes bàsics sense importar l'edat de l'alumne que començava a aprendre la disciplina.  Ara que hi ha moltes més ciutats i regions que han implementat cursos d'informàtica a partir dels cursos d'infantil, els professors demanen més contingut per acompanyar els alumnes durant els cursos de primària i secundària.
 
-Computer Science Fundamentals [Courses A-F](https://code.org/educate/curriculum/csf), are our answer to that issue.  The creation of a grade-by-grade curriculum allowed us to step back and rethink the way we were presenting material.  It also allowed us the chance to wholeheartedly incorporate feedback from the dedicated teacher community that has supported us on this mission. Designed with the help of some of the best elementary school CS education specialists across the country, Courses A-F should feel familiar enough to run with no extra professional development, but fresh enough to present to students who have done our lessons in the past.
+Els [Cursos A-F](https://code.org/educate/curriculum/csf) de Fonaments de la Informàtica són la nostra manera de reaccionar a aquesta situació.  La creació d'un pla d'estudis curs per curs ens ha permès fer un pas enrere i replantejar la manera de presentar els materials.  També ens ha permès incoporar els comentaris de la comunitat de docents que ens ha ajudat en aquesta tasca. Els Cursos A-F, dissenyats amb l'ajuda d'alguns dels especialistes més brillants del camp de l'educació en informàtica per escoles primàries, haurien de resultar senzills d'impartir sense cap desenvolupament professional afegit, alhora que aporten continguts nous per als alumnes que ja hagin fet algunes de les nostres lliçons.
 
-* Course A: Kindergarten
-* Course B: 1st Grade
-* Course C: 2nd Grade
-* Course D: 3rd Grade
-* Course E: 4th Grade
-* Course F: 5th Grade
-* Pre-reader Express Course: Kindergarten - 1st Grade
-* Express Course: 2nd Grade - 5th Grade
+* Curs A: Educació infantil
+* Curs B: 1r de primària
+* Curs C: 2n de primària
+* Curs D: 3r de primària
+* Curs E: 4t de primària
+* Curs F: 5è de primària
+* Curs Exprés per a prelectors: Llar d'infnats - 1r de primària
+* Curs Exprés: 2n - 5è de primària
 
-The biggest update to CS Fundamentals is that content will move from four courses (Courses 1-4) to six courses aligned to each K-5 grade level (Courses A-F).  In doing so, the lessons have become more tailored to the appropriate levels for reading, math, and overall cognitive development.  Note the addition of two different “Express” courses, one for pre-readers and one for all other grades.  These are similar to the previous suite’s “accelerated” version.
+La novetat més important dels cursos de Fonaments de la Informàtica és que el contingut passa de ser de quatre cursos (Cursos 1-4) a ser de sis cursos alineats amb cada nivell, desde l'educació infantil fins a 5è de primària (Cursos A-F).  Així, les lliçons estan més adaptades als nivells adequats de lectura, matemàtiques i desenvolupament cognitiu general.  També destaca l'addició de dos cursos "Exprés", un per a prelectors i un altre per tots els altres cursos.  Són similars a la versió "accelerada" de la sèrie anterior.
 
 <a id="newcourses"></a>
 
-## Teaching the new courses
-As mentioned earlier, the courses should feel familiar, but different.  If you’ve been to a Code.org professional development workshop, then you’re ready to teach the new courses. There are a small number of changes, but the overall platform, curriculum and pedagogical philosophy is unchanged. If you haven’t yet been, Code.org offers 1 day workshops at no cost to help you learn how to understand the curricula, navigate the Code.org platform, and teach the unplugged lessons.
+## Impartir els cursos nous
+Com ja hem dit, els cursos haurien de resultar coneguts i nous a la vegada.  Si heu fet un taller de formació professional de Code.org, ja esteu preparats per fer els cursos nous. Hi ha alguns canvis, però en general, la plataforma, el pla d'estudis i la filosofia pedagògica es mantenen iguals. Si encara no heu fet cap taller, Code.org ofereix tallers gratuïts d'un dia per ajudar-vos a entendre els plans d'estudis, aprendre a fer servir la plataforma de Code.org i impartir les lliçons sense connexió.
 
-The main updates to the courses are:
+Les actualtizacions principals dels cursos són:
 
-* Circle-time stories for the younger learners
-* A new approach to scaffolding and practicing/applying concepts
-* Bridging activities to enhance the transition from unplugged lessons to plugged lessons
-* End of course projects for older students
+* Històries en rotllana per als més petits
+* Un enfocament nou de l'estructuració i la pràctica/aplicació dels conceptes
+* Activitats pont per millorar la transició entre les lliçons amb i sense connexió
+* Projectes de final de curs per als alumnes més grans
 
-The rest of this guide will present each idea in more detail, offering tips and tricks for implementing the changes in your classroom.
+En aquesta guia, presentem cada idea d'una manera més detallada, amb consells i trucs per implementar els canvis a l'aula.
 
 <a id="circletime"></a>
 
-## Circle-Time Stories (Courses A and B)
-Some concepts are difficult to teach through activities and puzzles alone, especially for young students.  This is why we’ve introduced a small number of circle-time stories in the Kindergarten and First Grade curricula. These stories are intended to be read by the teacher to the entire class, with stops along the way to discuss critical ideas like debugging, persistence, and frustration.  Our hope is that allowing students to experience these tough concepts via story characters will help them to recognize the same notions when they arise in future lessons.
+## Històries de rotllana (Cursos A i B)
+Alguns conceptes són difícils d'ensenyar únicament a través d'activitats i trencaclosques, especialment en el cas dels alumnes més petits.  Per això hem introduït algunes històries de rotllana en el pla d'estudis d'infantil i 1r de primària. Aquestes històries estan pensades per a que el professor les llegeixi a la calsse, aturant-se pel camí per comentar les idees més importants, com ara le depuració, la persistència i la frustració.  La nostra intenció és que els alumnes es familiaritzin amb aquests conceptes més complicats a través dels personatges de les històries, de tal manera que siguin capaços de reconèixer-los quan apareguin en lliçons posteriors.
 
-Here is how the circle-time stories are intended to be used:
+Aquestes històries estan pensades per fer-les de la manera següent:
 
-### Read the appropriate story to your class
-  - Make sure to check for understanding along the way with questions and comments at useful moments during the action.
-  - Discuss the stories afterward. What did your students hear? Are there any ideas that stuck with them?
-  - Try to get students to identify with the characters.  Is there anything that they do in their lives that remind them of one of the characters in the story?
+### Llegiu la història corresponent per tota la classe
+  - Aneu comprovant que us segueixen fent preguntes i comentaris en els moments clau de la narració.
+  - Després, comenteu les històries tots junts. De què parlava la història? Hi ha cap idea que els hagi cridat l'atenció especialment?
+  - Intenteu que els alumnes s'identifiquin amb els personatges.  Hi ha alguna cosa de les seves vides quotidianes que els recordin a algun dels personatges de la història?
 
-### Remind students about the story before they begin the next activity.
-  - Do you remember the main ideas we discussed?
-  - How will you know if you see that idea today?
-  - What did the character do to handle that idea? What would you do?
+### Repasseu la història amb el grup abans de passar a fer l'activitat següent.
+  - Recordeu les idees més importants que hem vist?
+  - Com podreu reconèixer la mateixa idea si surt a la classe d'avui?
+  - Què feia el personatge per lidiar amb aquesta idea? Què faríeu vosaltres?
 
-### Point out similarities between the story and the student’s situations when they intersect during an activity.
-  - Describe for a student how the position that they are in resembles a situation from the book.
-  - Ask a student to think about the characters and figure out what they might do.  Does that help the student figure out a next step?
+### Ressalteu els punts en comú entre la història i les situacions dels alumnes quan es creuin durant una activitat.
+  - Expliqueu en quin sentit la posició d'un alumne s'assembla a la situació de la narració.
+  - Demaneu a un alumne que pensi sobre els personatge i que s'imagini què farien.  L'ajuda a decidir quin és el següent pas?
 
-If you are unable to gather your entire class together, Code.org has provided a video option at the beginning of the appropriate lesson that presents the stories with limited animations. While these videos don’t offer quite the same experience, they will allow students to get exposure to the concepts and characters before continuing on with the rest of the course.
+Si no podeu reunir a la classe sencera, Code.org també facilita una opció en vídeo al principi de la lliçó corresponent que presenta les històries amb una sèrie d'animacions. Tot i que aquests vídeos no ofereixen la mateixa experiència, sí que els aproparan als conceptes i als personatges abans de seguir fent la resta del curs.
 
 <a id="scaffolding"></a>
 
-## Lesson Scaffolding & Challenge Puzzles (All Ages)
-Courses A-F are less scaffolded overall than our previous courses.  That means that we try to have students create their code from the beginning as often as possible, unless they are specifically learning to debug.  As part of this design, most of our online lessons follow a trend where we present a simple puzzle to begin the lesson, then slowly drill forward with a new concept until the point where students have had a chance to understand the idea underneath.  Next, we present them with a challenge puzzle, which is intended to get students thinking about the concept in a new and complicated way.
+## Estructura de les lliçons i trencaclosques de repte (totes les edats)
+En general, els Cursos A-F estan menys estructurats que les versions anteriors dels cursos.  D'aquesta manera, sempre que podem fem que els alumnes creïn el seu propi codi des de zero, a menys que l'objectiu concret sigui aprendre a depurar.  Aquest disseny fa que la majoria de les lliçons en línia segueixin una estructura en què es presenta un trencaclosques senzill per començar la lliçó i després s'avança a poc a poc amb un concepte nou fins que els alumnes hagin tingut l'oportunitat d'entendre la idea subjacent.  Després els donem un trencaclosques de repte per tal que reflexionin sobre el concepte d'una manera nova i més complexa.
 
-Challenge puzzles are new in Courses A-F.  The intention of challenge puzzles is to expose students to a high bar where they can practice persistence and independent thought.  Challenge puzzles are intentionally hard and designed so that only students who truly understand the concept will pass within a reasonable timeframe.  This means that a good number of students will not be successful on challenges their first time through. This requires a particular attitude from both student and teacher to pull off.
+Els trencaclosques de repte són una novetat dels Cursos A-F.  La intenció d'aquests reptes és portar els alumnes a un nivell més alt on han de posar en pràctica la persistència i el pensament independent.  Aquests tipus de trencaclosques estan pensats per ser difícils i dissenyats de manera que només els alumnes que de veritat entenguin el concepte els puguin resoldre en un temps raonable.  Això vol dir que un bon nombre d'alumnes no superaran els reptes a la primera. Això requereix una actitud concreta, tant per part de l'alumne com del professor.
 
-1. Students should give these challenges a hearty try, then put them aside and carry on.  That practice allows for two very important things to happen:
-2. Students gain a better understanding of when and why to use the concept being studied. The following puzzles feel easier after the challenge, even though they are serious puzzles in their own right.
+1. Els alumnes han d'intentar resoldre els reptes amb ganes, deixar-los a un costat i seguir avançant.  Aquest exercici facilita dues coses molt importants:
+2. Els alumnes entenen millor quan i per què han de fer servir el concepte en qüestió. Els trencaclosques següents semblen més fàcils després d'haver fet els reptes, tot i que són trencaclosques seriosos per si mateixos.
 
-Keep in mind that students can go through lessons and reattempt incomplete puzzles at any time.  Sometimes it can be quite helpful to get a good night’s sleep before revisiting a tough problem.
+Recordeu que els alumnes poden tornar enrere en qualsevol moment i tornar a provar de fer els trencaclosques que han quedat sense resoldre.  De vegades va molt bé deixar un problema difícil i tornar-hi l'endemà, amb una mirada fresca.
 
-Once students make it past the challenge, they will find a handful of exercises waiting for them that are similar to what they may have experienced in the first half of the stage. These puzzles were placed intentionally to test a student’s clarity on the subject being studied.  They might seem far too easy, given the puzzles that were experienced beforehand, but they were created to demonstrate the exact level of competence desired from the corresponding stage.
+Un cop resolt el repte, trobaran una sèrie d'exercicis similars a les situacions que ja es poden haver trobat a la primera meitat de l'etapa. Aquests trencaclosques s'han afegit de manera intencionada per posar a prova la comprensió de l'alumne del tema que s'està estudiant.  Podrien semblar massa fàcils, sobretot si es tenen en compte els trencaclosques presentats anteriorment, però cal tenir present que s'han dissenyat per il·lustrar el nivell de competència desitjat per a cada etapa.
 
-In some instances, we end our lessons with free-play style levels.  These levels might either have no “wrong” answer, or they might allow several different ways to solve their core problem.  Please encourage students to give them their best shot and not just click “Continue” even though they can.
+En alguns casos, les lliçons acaben amb nivells de joc lliure.  Aquests nivells o bé no tenen respostes "incorrectes", o bé admeten diverses maneres de resoldre el problema principal.  És important que animeu els alumnes a intentar resoldre'ls en comptes de fer clic a "Continuar", encara que tinguin l'opció.
 
-Some final notes for this area:
+Alguns comentaris finals sobre aquest tema:
 
-* Remind students to be persistent and use their debugging skills on problems that feel tough.
-* Videos are often helpful.  When students get stuck, have them rewatch the video a second, third, or even fourth time.
-* Require students to read the instructions.  If they are having a hard time, let them read the instructions out loud to a classmate.
-* It’s okay to use hints!  Students should use as many hints as they need, but be sure to attempt re-solving the puzzle at least one between each new offering.
+* Recordeu als alumnes que han de ser persistents i aplicar els seus coneixements sobre depuració en els problemes que se'ls fan difícils.
+* Els vídeos solen ser útils.  Quan els alumnes es quedin atrapats, feu que mirin el vídeo una segona, tercera o fins i tot quarta vegada.
+* Feu que llegeixin les instruccions.  Si tenen dificultats, deixeu que llegeixin les instruccions en veu alta a un company.
+* No passa res per fer servir les pistes!  En poden fer servir tantes com els calgui, però és important que intentin resoldre el trencaclosques almenys una vegada entre pista i pista.
 
 <a id="unplugged"></a>
 
-## Bridging Activities For Unplugged Lessons (All Ages)
-Unplugged activities meet students where they are in terms of pointing out how they already use important CS concepts in their everyday life.  Once students can identify fundamental ideas like loops and conditionals, they get over the mental blocks that can happen when trying to use them for the first time programming online.
+## Activitats pont per a lliçons sense connexió (totes les edats)
+Les activitats sense connexió permeten als alumnes relacionar els conceptes importants de la informàtica amb situacions de la vida diària.  Un cop els alumnes són capaços d'identificar idees com ara bucles i condicionals, deixen enrere les barreres mentals que poden aparèixer quan els fan servir per primera vegada en la programació en línia.
 
-Unplugged experiences are so important that we chose to take them one step further and bake in activities that bridge the unplugged lessons to their online counterparts.  In Courses A-F, you will now find that lesson plans provide examples of how to take the offline exercises and translate the lessons to the following set of online puzzles.  Appropriately, we call these "Bridging Activities."
+Les experiències sense connexió són tan importants que hem decidit fer un pas més i preparar activitats que facin de pont entre les activitats sense connexió i les seves versions en línia.  Ara veureu que els plans de les lliçons dels Cursos A-F proporcionen exemples sobre com fer els exercicis sense connexió i relacionar-los amb les trencaclosques en línies que vindran després.  És per això que les hem anomenat "Activitats pont".
 
-For the most part, bridging activities can be created either by taking the subject of the unplugged exercise and executing it with paper Blockly blocks, or by taking an online puzzle and solving it using the language from the unplugged exercise.  In some cases, a different relationship is introduced, but all of the examples are meant to keep the offline experiences from feeling too abstract or unrelated.
+En general, les activitats pont es poden fer o bé agafant el tema de l'exercici sense connexió i fent l'activitat amb blocs Blockly de paper, o bé fent el trencaclosques en línia amb el vocabulari de l'exercici sense connexió.   En alguns casos, es presenta una relació diferent, però tots els exemples estan pensats perquè les experiències sense connexió no resultin massa abstractes o llunyanes del tema en qüestió.
 
 <a id="endofcourse"></a>
 
-## End of Course Projects (Courses E & F)
-For older students, we have introduced substantial end of course projects in Courses E & F.  Though Code.org has provided the ability to build “projects” for quite a while, we felt that it would add some much needed perspective for students to be able to plan and execute their projects in a formal context.
+## Projectes de final de curs (Cursos E i F)
+Per als alumnes més grans, hem introduït projectes de final de curs als Cursos E i F. Tot i que ja fa temps que Code.org ofereix la possibilitat de crear "projectes", hem cregut que aquests exercicis donarien als alumnes un punt de vista molt necessari quant a la planificació i execució dels projectes en un context més formal.
 
-The end of course projects are relatively straightforward.  Over the period of four to five weeks students will review project ideas, plan their application, code their program, revise based on feedback (5th grade), then present their completed work.  Each of these steps is guided by a helpful handout, as well as a teacher lesson plan that highlights the big picture.
+Els projectes de final de curs són força senzills.  En el transcurs d'entre quatre i cinc setmanes, els alumnes revisaran les idees del projecte, en planificaran l'execució, crearan el codi del programa, el revisaran a partir dels comentaris rebuts (5è de primària), i presentaran la feina feta.  Tots els passos estan guiats amb una fitxa molt útil, i també van acompanyats d'un pla de lliçó per al professor que posa en relleu el context general de l'exercici.
 
-**Review:** Students will take a look at a handful of aspirational projects, built to showcase the amazing things that can be done with the skills that they have learned up to this point.  These projects have been built either in Play Lab or Artist, but students are free to review projects from Tynker, Scratch, or even text-based languages if the teacher sees fit.
+**Anàlisi:** els alumnes es fixaran en un conjunt de projectes d'exemple que s'han dissenyat per mostrar les meravelles que poden crear amb els coneixements que han adquirit fins ara.  Aquests projectes s'han creat o bé al Laboratori de Jocs o bé a l'Artista, però també poden veure projectes de Tynker, Scratch o fins i tot en llenguatges de text si el professor ho considera apropiat.
 
-**Plan:** The intention here is for students to sit back and think about what is really possible.  They will need to think about the games that they saw, and the limitations that they faced when editing them.  Afterward, they will sketch out a plan to create something unique.  Students might need to be reminded to stay realistic, as they will have limited time and resources when bringing their visions to life.  The materials here assume the use of Artist or Play Lab, but projects can be moved to whatever platform works for each particular classroom.
+**Planificació:** en aquest punt, la intenció és que els alumnes dediquin un temps a reflexionar en allò que poden fer.  Hauran de pensar en els jocs que han vist i en les limitacions que han trobat mentre els modificaven.  Després, esbossaran un pla per crear un projecte únic.  De vegades cal recordar-los que cal ser realistes, ja que el temps i els recursos dels quals disposaran per fer realitat les seves idees seran limitats.  Els materials proporcionats donen per fet que es farà servir l'Artista o el Laboratori de Jocs, però els projectes es poden traslladar a qualsevol plataforma que funcioni bé amb cada grup concret.
 
-**Build:** One day is not a whole lot of time to execute a plan that has been laid out on paper.  Students will face tough choices when it comes to trying to make things work as they run into one barrier after another.  They will learn to edit and adapt as bugs and program limitations change their perceptions of what can comfortably be accomplished in a restricted timeframe.
+**Creació:** un dia no és gaire temps per executar un pla que s'ha dissenyat sobre el paper.  Els alumnes hauran de prendre decisions difícils per tal de fer que les coses funcionin mentre s'enfronten a un obstacle rere l'altre.  Aprendran a modificar i adaptar-se a mesura que els errors de codi i les limitacions del programa canviïn la seva percepció d'allò que es pot assolir còmodament en un període de temps limitat.
 
-**Revise:** For older students, a day of revising their programs based on the feedback of classmates can help them improve their final product, and lets them inspire others with the things that they have achieved.  Students will practice constructive critique, as well as group brainstorming and persistence.
+**Revisió:** en el cas dels alumnes més grans, comptar amb una sessió per revisar els programes a partir dels comentaris dels companys els ajudarà a millorar el producte final, alhora que els permet inspirar els altres amb tot allò que han aconseguit.  Els alumnes practicaran la crítica constructiva, la pluja d'idees en grup i la persistència.
 
-**Present:** Nearly a month in the making, this is the chance for students to stand-up and be proud of how far they have come.  Our lesson plan assumes an oral presentation, but teachers have the option of suggesting written or multimedia presentations instead.
+**Presentació:** després de gairebé un mes de feina, arriba el moment de presentar la feina i sentir-se orgullosos de tot el que han aconseguit.  El pla de la lliçó que hem dissenyat dona per fet que es faran presentacions orals, però si ho preferiu, els professors teniu l'opció de proposar presentacions escrites o multimèdia.
 
-No matter how thoroughly students embed themselves in their projects, they are sure to learn something useful about the processes of creativity and problem solving in computer science.
+Independentment de quant s'impliquin en els seus projectes, els alumnes segur que extrauran alguna cosa útil sobre els processos de la creativitat i de la resolució de problemes en informàtica.
 
 <a id="conclusion"></a>
 
-## Conclusion
-As you can see, Courses A-F in Computer Science Fundamentals contain exciting enhancements, influenced by feedback from the massive CS Fundamentals teacher & facilitator communities.
+## Conclusió
+Com veieu, els Cursos A-F de Fonaments de la Informàtica contenen millores emocionants que han estat possibles gràcies als comentaris rebuts de les grans comunitats de professors i facilitadors dels cursos de Fonaments de la Informàtica.
 
-We hope this overview has been insightful.  If you have any questions or comments about this change, please visit http://forum.code.org/c/csf and post them on our forum.  We will be sure to get your questions answered as quickly as possible.  Until then, here are some of frequently asked questions about Courses A-F.
+Esperem que aquest resum us hagi resultat d'utilitat.  Si teniu qualsevol pregunta o comentari sobre aquest canvi, visiteu http://forum.code.org/c/csf i publiqueu les vostres reflexions al nostre fòrum.  Ens assegurarem de respondre les vostres preguntes tan aviat com puguem.  Mentrestant, aquí teniu algunes preguntes freqüents sobre els Cursos A-F.
 
 <a id="faq"></a>
 
-## FAQs
+## Preguntes freqüents
 
-| Question                                                                                                                                                    | Answer                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **You are launching a new set of courses-- does that mean that Courses 1-4 are going away?**                                                                | Yes. Courses 1-4 no longer meet modern standards. CS Fundamentals courses A-F better teach these computer science concepts. We will be removing Courses 1-4 gradually. Starting at the end of the 2022-2023 school year, we will remove references to these courses, but the links you already have will remain. Starting in July 2023, the courses will no longer be accessible on our site.                                                                                  |
-| **When can we start using Courses A-F?**                                                                                                                    | Courses A-F are available now!                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| **These puzzles seem much harder.  I’m worried that they’re too difficult for my little ones.**                                                             | The backbone of these new courses is the desire to get students to think, problem solve, and practice persistence.  None of these things are required when puzzles are too easy to complete.  For this reason, we’ve had to make puzzles more difficult.  Please refer to the teacher guide for help with leading your class in building these skills.  As always, don’t underestimate the importance of using unplugged lessons before jumping in with the online puzzles.    |
-| **Some puzzles only allow a certain number of specific blocks.  What if my students want to code something out the long way before they figure out loops?** | There are a few puzzles that restrict specific blocks. This is one of our new manners of scaffolding.  It is a way of giving direction, without over scaffolding the pieces in the workspace itself.  For students who like to code puzzles the long way before they pare down (and, in fact for all students, all the time) it is useful to have a journal or scratch paper beside the keyboard where they can figure out the algorithm in whatever way comes most naturally. |
+| Pregunta                                                                                                                                                                 | Resposta                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Heu tret una sèrie nova de cursos: això vol dir que els Cursos 1-4 desapareixeran?**                                                                                   | Sí. Els cursos 1-4 ja no compleixen els estàndards moderns. Els Cursos A-F de Fonaments de la Informàtica ensenyen millor els conceptes informàtics corresponents. Anirem eliminant Cursos 1-4 gradualment. A partir del final del curs escolar 2022-2023, eliminarem les referències a aquests cursos, però els enllaços que ja teniu seguiran actius. A partir del juliol de 2023, aquests cursos deixaran d'estar disponibles a la nostra pàgina.                                                                        |
+| **Quan podem començar a fer els Cursos A-F?**                                                                                                                            | Els Cursos A-F ja estan disponibles!                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| **Aquests trencaclosques semblen molt més difícils.  Em preocupa que siguin massa complicats per als meus petits.**                                                      | La pedra angular d'aquests cursos nous és l'aspiració de fer que els alumnes pensin, resolguin problemes i aprenguin a ser persistents.  Cap d'aquestes coses és necessària quan els trencaclosques són massa fàcils de fer.  Per això hem hagut de complicar-los una mica més.  A la guia del professor trobareu consells per ajudar la vostra classe a desenvolupar aquestes habilitats.  Com sempre, no subestimeu la importància de fer les lliçons sense connexions abans de passar a fer els trencaclosques en línia. |
+| **Alguns trencaclosques només admeten un cert nombre de blocs.  I si els meus alumnes volen escriure codi de la manera llarga abans de passar a fer servir els bucles?** | Hi ha alguns trencaclosques que limiten certs blocs. Aquesta és una de les maneres noves en què estructurem els exercicis.  És una manera d'orientar-los sense donar massa peces al propi espai de treball.  Als alumnes a qui els agrada escriure el codi de la manera llarga abans de reduir-lo al màxim (tot i que, en realitat, això aplica a tots els alumnes, en tots els casos), els serà útil tenir una llibreta o fulls en brut a mà on poder resoldre l'algorisme de la manera que els resulti més fàcil.         |
 

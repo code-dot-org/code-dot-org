@@ -57,9 +57,7 @@ class DatasetsController < ApplicationController
     render json: {msg: 'Invalid JSON'}
   end
 
-  private
-
-  def initialize_firebase
+  private def initialize_firebase
     @firebase = FirebaseHelper.new('shared')
   end
 end

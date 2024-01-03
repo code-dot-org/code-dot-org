@@ -1,23 +1,16 @@
 require 'test_helper'
 
-class Api::V1::Pd::InternationalOptInsControllerTest < ::ActionController::TestCase
+class Api::V1::Pd::InternationalOptInsControllerTest < ActionController::TestCase
   SAMPLE_FORM_DATA = {
     first_name: 'First',
     first_name_preferred: 'Preferred',
     last_name: 'Last',
     email: 'foo@bar.com',
-    email_alternate: 'footoo@bar.com',
-    gender: 'Prefer not to answer',
     school_name: 'School Name',
     school_city: 'School City',
     school_country: 'School Country',
-    ages: ['19+ years old'],
-    subjects: ['ICT'],
-    resources: ['Kodable'],
-    robotics: ['LEGO Education'],
     date: '2019-02-18',
     workshop_organizer: 'Workshop Organizer',
-    workshop_facilitator: 'Workshop Facilitator',
     workshop_course: 'Workshop Course',
     email_opt_in: 'Yes',
     legal_opt_in: true

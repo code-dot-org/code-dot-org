@@ -48,16 +48,16 @@ S3_LOGS_PREFIX = CDO.name.freeze
 # @return [String] Hyperlink to uploaded log, or empty string
 def upload_log_and_get_link(key, body, metadata)
   log_url = AWS::S3::LogUploader.
-      new(S3_LOGS_BUCKET, S3_LOGS_PREFIX).
-      upload_log(
-        key,
-        body,
-        {metadata: metadata}
-      )
+    new(S3_LOGS_BUCKET, S3_LOGS_PREFIX).
+    upload_log(
+      key,
+      body,
+      {metadata: metadata}
+    )
   permalink = AWS::S3.get_console_link_from_presigned(log_url)
   " <a href='#{log_url}'>☁ Log on S3</a> (<a href='#{permalink}'>permalink</a>)"
-rescue Exception => msg
-  ChatClient.log "Uploading log to S3 failed: #{msg}"
+rescue Exception => exception
+  ChatClient.log "Uploading log to S3 failed: #{exception}"
   return ''
 end
 
@@ -94,8 +94,8 @@ def build
       end
 
       result
-    rescue => e
-      CDO.backtrace e
+    rescue => exception
+      CDO.backtrace exception
     end
 
     FileUtils.rm STARTED if File.file?(STARTED)
@@ -110,8 +110,8 @@ def main
   status = 0
   log = RakeUtils.capture do
     status = build
-  rescue => e
-    status = "Error: #{e.message}\n#{CDO.backtrace e}"
+  rescue => exception
+    status = "Error: #{exception.message}\n#{CDO.backtrace exception}"
   end
   return status if status == 0 && log.empty?
 
@@ -186,7 +186,7 @@ def main
 
       if CDO.test_system?
         DevelopersTopic.set_dtt 'no (robo-DTT failed)'
-        ChatClient.log "*** Before you manually re-run a test, please ensure that the cabal who owns that test is actively tracking de-flaking. ***", color: 'yellow'
+        ChatClient.log "*** Before you manually re-run a test, please ensure that the team who owns that test is actively tracking de-flaking. ***", color: 'yellow'
       end
     end
 
@@ -216,9 +216,9 @@ def check_hoc_mode
   if hoc_mode != CDO.default_hoc_mode
     # The test machine cannot remember DCDO params, so its hoc_mode is controlled by
     # CDO.default_hoc_mode.
-    msg = "<!here> #{rack_env} hoc_mode (#{hoc_mode.inspect}) and default_hoc_mode "\
-      "(#{CDO.default_hoc_mode.inspect}) are out of sync. Please update CDO.default_hoc_mode in "\
-      "github, DCDO hoc_mode in staging, and DCDO hoc_mode in production to the same values, so "\
+    msg = "<!here> #{rack_env} hoc_mode (#{hoc_mode.inspect}) and default_hoc_mode " \
+      "(#{CDO.default_hoc_mode.inspect}) are out of sync. Please update CDO.default_hoc_mode in " \
+      "github, DCDO hoc_mode in staging, and DCDO hoc_mode in production to the same values, so " \
       "that our staging, test and production environments all show the same version of our site."
     ChatClient.log msg
   end
@@ -229,9 +229,9 @@ def check_hoc_launch
   if hoc_launch != CDO.default_hoc_launch
     # The test machine cannot remember DCDO params, so its hoc_launch is controlled by
     # CDO.default_hoc_launch.
-    msg = "<!here> #{rack_env} hoc_launch (#{hoc_launch.inspect}) and default_hoc_launch "\
-      "(#{CDO.default_hoc_launch.inspect}) are out of sync. Please update CDO.default_hoc_launch in "\
-      "github, DCDO hoc_launch in staging, and DCDO hoc_launch in production to the same values, so "\
+    msg = "<!here> #{rack_env} hoc_launch (#{hoc_launch.inspect}) and default_hoc_launch " \
+      "(#{CDO.default_hoc_launch.inspect}) are out of sync. Please update CDO.default_hoc_launch in " \
+      "github, DCDO hoc_launch in staging, and DCDO hoc_launch in production to the same values, so " \
       "that our staging, test and production environments all show the same version of our site."
     ChatClient.log msg
   end
@@ -273,9 +273,9 @@ def emit_deploy_metric(deployment_stage, successful)
       }]
     }
   )
-rescue => error
+rescue => exception
   ChatClient.log 'Unable to emit metrics', color: 'red'
-  ChatClient.log "/quote #{error}", color: 'gray', message_format: 'text'
+  ChatClient.log "/quote #{exception}", color: 'gray', message_format: 'text'
 end
 
 main

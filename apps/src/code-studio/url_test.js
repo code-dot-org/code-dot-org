@@ -15,7 +15,7 @@ function testImageAccess(
   }
   var called = false;
   function finish(callback) {
-    return function() {
+    return function () {
       if (called) {
         return;
       }

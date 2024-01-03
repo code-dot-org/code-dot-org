@@ -1,1 +1,15 @@
-{}
+{
+  "selectDataset": "使用したいデータセットを選択します。",
+  "uploadedDataset": "データセットをアップロードしました。",
+  "selectedDataset": "データセットを選択しました。",
+  "dataDisplayLabel": "予測する列を 1 つ選択してください。",
+  "dataDisplayFeatures": "予測に役立つ入力として 1 つまたは複数の列を選択します。",
+  "selectedFeatureNumerical": "数値フィーチャーを選択しました。",
+  "selectedFeatureCategorical": "カテゴリ別フィーチャーを選択しました。",
+  "trainModel": "モデルはトレーニング中です。",
+  "generateResults": "モデルはテスト中です。",
+  "results": "結果を確認してください。",
+  "resultsDetails": "結果の詳細が表示されています。",
+  "saveModel": "トレーニング済みモデルを保存して App Lab で使用します。",
+  "modelSummary": "モデルのトレーニングと保存に成功しました。モデルの詳細を確認し、「完了」をクリックしてトレーニング済みのモデルを App Lab で使用します。"
+}

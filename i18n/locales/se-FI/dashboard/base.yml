@@ -52,6 +52,7 @@ se:
         gender: 'Sohkabealli'
         edit_header: 'Divo kontodieđuid'
         finish_sign_up_header: 'Válbme du kontoásaheami'
+        finish_sign_up_header_error: 'Divo dáid boasttuvuođaid:'
         finish_sign_up_subheader: 'Deavdde dáid dieđuid válbmet ásahit Code.org-konto <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Deavdde dáid dieđuid válbmet ásahit Code.org-konto **%{email}**.'
         finish_sign_up_subheader_provider: 'Deavdde dáid dieđuid válbmet ásahit Code.org-konto <strong>%{provider}</strong>:in <strong>%{email}</strong>.'
@@ -59,6 +60,8 @@ se:
         reset_password_token: "Dat ruovttoluotta bidjat čoavddasáni liŋka maid leat čuvvon"
         error:
           future: ii sáhte nie boahtteáiggis
+        user_type: 'KontoMálle'
+        us_state: 'Fylka'
   hello: "Bures máilbmi"
   welcome_back: "Bures boahtin ruovttoluotta, %{name}"
   your_professional_learning_plan: "Du oahppanplána"
@@ -158,7 +161,6 @@ se:
     mismatch_password: "Dát guokte čoavddasáni maid čállet eaba leat ovttaláganat"
     student_consent: "Mun duođaštan ahte mun lean ožžon lobi váhnemis dahje oapmehasas geavahit Code.org bálvalusaid."
     student_terms_markdown: "Epoastačujuhusat eai vurkejuvvo nu ahte mii sáhttit váldit oktavuođa ohppiiguin. Oahppit eai oaččo goassege epoastaid Code.org:s earet go čoavddasáni máhcaheamis. Geahča min [persovdnasuodjalus njuolggadusat](http://code.org/privacy) main gávnnat eanet dieđuid."
-    additional_information: "Mii dárbbahit lassi dieđuid ovdal go sáhttit joatkit ráhkadit dutnje konto."
     user_type_button: "Ođasmahte KontoMálle"
     user_type_label: "KontoMálle"
     field_is_required: "lea dárbbašlaš"
@@ -170,6 +172,7 @@ se:
     parent_account_checkbox: "Mun lean váhnen/oapmehaš ráhkadeamen konto mu máná ovddas"
     parent_account_email_progress_permission: "Sáhttit go epoastta sáddet dutnje mas leat bieđggus ođasmahttimat du máná ovdáneami ja prošeavttaid ektui, ja ođasmahttimat sin kurssa ja dihtordiehtaga birra. [(Geahča min persovdnasuodjalus njuolggadusaid)](%{privacy_policy_url})"
     parent_account_email_label: "Váhnema/Oapmehačča Epoasta"
+    us_state: 'Fylka'
   school_info:
     title: 'Skuvlla Dieđut (válljenfriddjavuohta)'
     school_country: 'Skuvlla Riika'
@@ -944,6 +947,7 @@ se:
         csf_express: 'CS Vuođut (Pre-Ekspreassa or Ekspreassa)'
         csd: 'CS Fuomášumit'
         csp: 'CS Prinsihpat'
+        other: 'Eará'
         not_applicable: "Ii leat guoskevaš"
     international_opt_in:
       title: 'Bargobaji Oassalasttit'
@@ -962,6 +966,9 @@ se:
     no_teacher_email:
       body_markdown: 'Du kontos ii leat epoastačujuhus. Mana [fina iežat kontohuksehusas](%{user_registration}) bidjan dihte iežat epoastačujuhusa ovdal go gárvet dán skovi.'
   courses_category: 'Ollislaš Kurssat'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
   cookie_banner:
     message: 'Jus joatkát geavahit min neahttasiiddu dahje deaddilat "Mun dohkkehan," don dohkkehat ahte diehtočoahkut vurkejuvvojit du dihtorii dahje reidui.'
     more_information: "Geahča Code.org Persovdnasuodjaleami."

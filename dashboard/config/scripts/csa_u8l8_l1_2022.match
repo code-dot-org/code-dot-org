@@ -14,3 +14,4 @@ answer 'the average number of executions an algorithm can take to complete its g
 
 question 'worst case'
 answer 'the most number of executions an algorithm can take to complete its goal'
+allow_multiple_attempts true

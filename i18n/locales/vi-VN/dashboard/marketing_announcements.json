@@ -1,0 +1,114 @@
+{
+  "banners": {
+    "csleadersprize": {
+      "title": "",
+      "body": "",
+      "buttonText": "Tìm hiểu thêm"
+    },
+    "csjourneys-22": {
+      "title": "",
+      "body": "",
+      "buttonText": "Tìm hiểu thêm"
+    },
+    "hoc-more": {
+      "title": "",
+      "body": "Trang web The Hour of Code có hơn 100 hoạt động khoa học máy tính cho tất cả các lứa tuổi và các mức độ kinh nghiệm, phát triển bởi Code.org và các đối tác.",
+      "buttonText": ""
+    },
+    "superhero": {
+      "title": "",
+      "body": "",
+      "buttonText": "Tìm hiểu thêm"
+    },
+    "csjourneys": {
+      "title": "",
+      "body": "",
+      "buttonText": "Tìm hiểu thêm"
+    },
+    "class-schedule-survey": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "back-to-school-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "Tìm hiểu thêm"
+    },
+    "teacher-apps-open-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "Hãy tham gia với chúng tôi"
+    },
+    "teacher-apps-closing-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "Hãy tham gia với chúng tôi"
+    },
+    "teacher-apps-nominate-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Đề cử một giáo viên"
+    },
+    "teacher-apps-stillon-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Hãy tham gia với chúng tôi"
+    },
+    "home-learning-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Xem ý tưởng dự án"
+    },
+    "soonhoc-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "codebytes-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Tìm hiểu thêm"
+    },
+    "ai-2020": {
+      "title": "Khám phá Trí tuệ nhân tạo và Học máy",
+      "body": "",
+      "buttonText": "Tìm hiểu thêm"
+    },
+    "congrats-certificate-share": {
+      "title": "",
+      "body": "",
+      "buttonText": "Bắt đầu"
+    },
+    "coldplay": {
+      "title": "",
+      "body": "",
+      "buttonText": "Hãy thử nó"
+    },
+    "ai-launch-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": "Tìm hiểu thêm"
+    },
+    "ai-pl-launch-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": "Tìm hiểu thêm"
+    },
+    "state-of-cs-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "hoc-2023": {
+      "title": "Giờ lập trình: Sáng tạo với AI",
+      "body": "Hãy tham gia cùng hàng triệu người trên toàn cầu để tổ chức một giờ lập trình, có hoặc không sử dụng công nghệ AI và tìm hiểu cách hoạt động của AI. Bất cứ ai, ở bất cứ đâu đều có thể làm điều đó. Không cần kinh nghiệm.",
+      "buttonText": "Tìm hiểu thêm"
+    },
+    "hoc-2023-dance-ai": {
+      "title": "",
+      "body": "",
+      "buttonText": "Tìm hiểu thêm"
+    }
+  }
+}

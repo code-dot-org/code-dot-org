@@ -11,7 +11,7 @@ import {
   sectionName,
   removeSection,
   toggleSectionHidden,
-  importOrUpdateRoster
+  importOrUpdateRoster,
 } from './teacherSectionsRedux';
 import {connect} from 'react-redux';
 import PrintCertificates from './PrintCertificates';
@@ -35,11 +35,11 @@ class SectionActionDropdown extends Component {
     sectionCode: PropTypes.string,
     sectionName: PropTypes.string,
     updateRoster: PropTypes.func.isRequired,
-    setRosterProvider: PropTypes.func
+    setRosterProvider: PropTypes.func,
   };
 
   state = {
-    deleting: false
+    deleting: false,
   };
 
   componentDidMount() {
@@ -58,7 +58,7 @@ class SectionActionDropdown extends Component {
     const section = this.props.sectionData;
     $.ajax({
       url: `/dashboardapi/sections/${section.id}`,
-      method: 'DELETE'
+      method: 'DELETE',
     })
       .done(() => {
         removeSection(section.id);
@@ -71,8 +71,19 @@ class SectionActionDropdown extends Component {
       });
   };
 
-  onClickEdit = () => {
-    this.props.handleEdit(this.props.sectionData.id);
+  /**
+   * Returns the URL to the correct section to be edited
+   */
+  editRedirectUrl = sectionId => {
+    const editSectionUrl = '/sections/' + sectionId + '/edit';
+    return editSectionUrl;
+  };
+
+  /**
+   * Creates the pop-up for the section to be edited
+   */
+  onClickEditPopUp = () => {
+    return this.props.handleEdit(this.props.sectionData.id);
   };
 
   onClickHideShow = () => {
@@ -100,7 +111,7 @@ class SectionActionDropdown extends Component {
       <span>
         <QuickActionsCell type={'header'}>
           <PopUpMenu.Item
-            onClick={this.onClickEdit}
+            href={this.editRedirectUrl(sectionData.id)}
             className="edit-section-details-link"
           >
             {i18n.editSectionDetails()}
@@ -188,7 +199,7 @@ class SectionActionDropdown extends Component {
 
 const styles = {
   xIcon: {
-    paddingRight: 5
+    paddingRight: 5,
   },
   heading: {
     borderTopWidth: 0,
@@ -198,8 +209,8 @@ const styles = {
     borderStyle: 'solid',
     borderColor: color.default_text,
     paddingBottom: 20,
-    marginBottom: 30
-  }
+    marginBottom: 30,
+  },
 };
 
 export const UnconnectedSectionActionDropdown = SectionActionDropdown;
@@ -207,12 +218,12 @@ export const UnconnectedSectionActionDropdown = SectionActionDropdown;
 export default connect(
   (state, props) => ({
     sectionCode: sectionCode(state, props.sectionData.id),
-    sectionName: sectionName(state, props.sectionData.id)
+    sectionName: sectionName(state, props.sectionData.id),
   }),
   {
     removeSection,
     toggleSectionHidden,
     updateRoster: importOrUpdateRoster,
-    setRosterProvider
+    setRosterProvider,
   }
 )(SectionActionDropdown);

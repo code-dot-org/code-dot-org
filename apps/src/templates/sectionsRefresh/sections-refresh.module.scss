@@ -1,17 +1,75 @@
 @import "color.scss";
+@import "font.scss";
+@import "@cdo/apps/componentLibrary/common/styles/mixins";
 
-.classNameTextField {
+// In order to make typography work correctly with em units. (Design system is build for 16px default font size)
+body {
+  font-size: 16px;
+}
+
+.containerWithMarginTop {
+  margin-top: 40px;
+}
+
+.withBorderTop {
+  border-top: 1px solid $neutral_dark20;
+}
+
+.withBorderBottom {
+  border-bottom: 1px solid $neutral_dark20;
+}
+
+p.noMarginBottomParagraph {
+  margin-bottom: 0;
+}
+
+input.classNameTextField {
   width: 100%;
+  box-sizing: border-box;
+  height: unset;
+  border: 1px solid $neutral_dark;
+
+  @include main-font-regular;
+  line-height: 1.5;
+  font-size: 1em;
+
+  &:invalid:focus {
+    border-color: $neutral_dark;
+    box-shadow: unset;
+    color: $neutral_dark;
+  }
+}
+
+label.typographyLabelTwo {
+  @include label-two;
 }
 
 .buttonsContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
+
+  button {
+    font-size: 16px;
+  }
+}
+
+.splitButtonsContainer {
+  justify-content: flex-end;
+
+  button {
+    font-size: 16px;
+  }
+}
+
+.buttonLeft {
+  float: left;
+}
+
+.buttonRight {
+  float: right;
 }
 
 .buttonRow {
-  // ensure we have height when we only have our toggle (which is floated)
-  min-height: 50px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -28,6 +86,17 @@
   color: inherit;
   border: none;
   font-size: 14px;
+
+  &:active {
+    // !important to overwrite button:active styles in app/assets/stylesheets/application.scss
+    border: none !important;
+  }
+}
+
+.buttonsInRow .buttonStyle.activeMarketingAudienceButton {
+  color: $brand_primary_default;
+  border-bottom: 2px solid $brand_primary_default;
+  border-radius: 0;
 }
 
 .buttonsInRow .buttonStyle:hover {
@@ -43,10 +112,13 @@
   margin-top: 15px;
 }
 
+.withBrandAccentColor {
+  accent-color: $brand_primary_default;
+}
+
 .decideLater {
   float: right;
   margin: 10px 5px 0 5px;
-  font-weight: 350;
   font-size: 16px;
 }
 
@@ -59,13 +131,17 @@
 .headerRow {
   background-color: $brand_primary_default;
   color: $white;
-  height: 42px;
+  height: 47px;
 }
 
 .headerCell {
-  font-weight: 500;
-  font-size: 24px;
   padding: 12px;
+
+  h4 {
+    color: $neutral_white;
+    margin-bottom: 0;
+    margin-left: 10px;
+  }
 }
 
 .tableBody {
@@ -73,19 +149,84 @@
   display: grid;
 }
 
+.courseTableRow {
+  &:not(:first-child) {
+    margin-top: 40px;
+  }
+}
+
 .courseHeaders {
-  font-weight: 350;
-  font-size: 20px;
-  line-height: 24px;
   position: relative;
   left: 10px;
 }
 
+.courseOption {
+  margin-top: 20px;
+  align-items: baseline;
+}
+
 .flexDisplay .radio {
-  min-height: 40px;
   margin: 0 0 0 0;
 }
 
-.label {
-  margin: 10px 10px 0 5px;
+.courseOptionLabel {
+  margin: 0 10px 0 5px;
+}
+
+.unitDropdown {
+  @include main-font-semi-bold;
+  margin: 4px 0 0 10px;
+  padding: 0.3em;
+}
+
+.toolTipContainer {
+  display: flex;
+  align-items: center;
+
+  button {
+    .toggle-display {
+      margin-left: 5px;
+    }
+  }
+}
+
+button.advancedSettingsButton {
+  margin: 5px;
+  font-size: unset;
+
+  i {
+    color: $neutral_dark;
+    margin-right: 10px;
+  }
+
+  h3 {
+    display: inline-block;
+    margin-top: 0.5em;
+  }
+}
+
+.celebrationDialogBody {
+  padding: 36px;
+  font: $barlowSemiCondensed-medium;
+
+  h1 {
+    margin-bottom: 0;
+  }
+}
+
+.celebrationDialogBody .celebrationGif {
+  margin: 14px;
+}
+
+.celebrationDialogFooter {
+  padding-right: 36px;
+  padding-bottom: 36px;
+  padding-left: 0;
+  padding-top: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.textPopUp {
+  cursor: pointer;
 }

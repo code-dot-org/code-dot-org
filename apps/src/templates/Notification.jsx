@@ -1,11 +1,14 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
+import ReactTooltip from 'react-tooltip';
+import _ from 'lodash';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from './Button';
 import trackEvent from '../util/trackEvent';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import fontConstants from '@cdo/apps/fontConstants';
 
 export const NotificationType = {
   information: 'information',
@@ -15,13 +18,15 @@ export const NotificationType = {
   course: 'course',
   bullhorn: 'bullhorn',
   feedback: 'feedback',
-  bullhorn_yellow: 'bullhorn_yellow'
+  bullhorn_yellow: 'bullhorn_yellow',
+  collaborate: 'collaborate',
 };
 
 const Notification = ({
   buttonClassName,
   buttonLink,
   buttons,
+  buttonsStyles,
   buttonText,
   children,
   details,
@@ -31,6 +36,7 @@ const Notification = ({
   dismissible,
   firehoseAnalyticsData,
   googleAnalyticsId,
+  iconStyles,
   isRtl,
   newWindow,
   notice,
@@ -38,7 +44,8 @@ const Notification = ({
   onButtonClick,
   responsiveSize,
   type,
-  width
+  tooltipText,
+  width,
 }) => {
   const [open, setOpen] = useState(true);
 
@@ -70,8 +77,8 @@ const Notification = ({
         ...firehoseAnalyticsData,
         notice: notice,
         details: details,
-        buttonLink: buttonLink
-      })
+        buttonLink: buttonLink,
+      }),
     };
 
     firehoseClient.putRecord(record, {includeUserId: true});
@@ -102,13 +109,14 @@ const Notification = ({
     warning: 'exclamation-triangle',
     bullhorn: 'bullhorn',
     bullhorn_yellow: 'bullhorn',
-    feedback: 'envelope'
+    feedback: 'envelope',
+    collaborate: 'users',
   };
 
   const mainStyle = {
     ...styles.main,
     direction: isRtl ? 'rtl' : 'ltr',
-    width: width || styles.main.width
+    width: width || styles.main.width,
   };
 
   if (!open) {
@@ -117,17 +125,31 @@ const Notification = ({
 
   const colorStyles = styles.colors[type];
 
+  const tooltipId = _.uniqueId();
+
   return (
     <div className="announcement-notification">
       <div style={{...colorStyles, ...mainStyle}}>
         {type !== NotificationType.course && (
-          <div style={{...styles.iconBox, ...colorStyles}}>
+          <div style={{...styles.iconBox, ...colorStyles, ...iconStyles}}>
             <FontAwesome icon={icons[type]} style={styles.icon} />
           </div>
         )}
         <div style={styles.contentBox}>
           <div style={styles.wordBox}>
-            <div style={{...colorStyles, ...styles.notice}}>{notice}</div>
+            <div style={{...colorStyles, ...styles.notice}}>
+              {notice}
+              {tooltipText ? (
+                <span>
+                  <span data-tip data-for={tooltipId} style={styles.tooltip}>
+                    <FontAwesome icon="info-circle" />
+                  </span>
+                  <ReactTooltip id={tooltipId} effect="solid">
+                    <p style={styles.tooltipText}>{tooltipText}</p>
+                  </ReactTooltip>
+                </span>
+              ) : null}
+            </div>
             <div style={styles.details}>
               {details}
               {detailsLinkText && detailsLink && (
@@ -137,6 +159,7 @@ const Notification = ({
                     href={detailsLink}
                     style={styles.detailsLink}
                     target={detailsLinkNewWindow ? '_blank' : null}
+                    rel={detailsLinkNewWindow ? 'noreferrer' : undefined}
                   >
                     {detailsLinkText}
                   </a>
@@ -144,7 +167,11 @@ const Notification = ({
               )}
             </div>
           </div>
-          <div style={desktop ? null : styles.buttonsMobile}>
+          <div
+            style={
+              desktop ? buttonsStyles : {...styles.buttonsMobile, buttonsStyles}
+            }
+          >
             {buttonText && buttonLink && (
               <Button
                 __useDeprecatedTag
@@ -160,13 +187,11 @@ const Notification = ({
             {buttons &&
               buttons.map((button, index) => (
                 <Button
-                  __useDeprecatedTag
                   key={index}
                   href={button.link}
-                  color={Button.ButtonColor.gray}
+                  color={button.color || Button.ButtonColor.gray}
                   text={button.text}
-                  style={styles.button}
-                  target={button.newWindow ? '_blank' : null}
+                  style={{...styles.button, ...button.style}}
                   onClick={button.onClick}
                   className={button.className}
                 />
@@ -195,6 +220,7 @@ Notification.propTypes = {
   buttonText: PropTypes.string,
   buttonLink: PropTypes.string,
   dismissible: PropTypes.bool.isRequired,
+  iconStyles: PropTypes.object,
   onDismiss: PropTypes.func,
   newWindow: PropTypes.bool,
   // googleAnalyticsId and firehoseAnalyticsData are only used when a primary button is provided.
@@ -206,14 +232,19 @@ Notification.propTypes = {
   onButtonClick: PropTypes.func,
   buttonClassName: PropTypes.string,
 
+  // Optionally can provide a tooltip after the title with text on hover.
+  tooltipText: PropTypes.string,
+
   // Optionally can provide an array of buttons.
+  buttonsStyles: PropTypes.object,
   buttons: PropTypes.arrayOf(
     PropTypes.shape({
       text: PropTypes.string,
       link: PropTypes.string,
-      newWindow: PropTypes.bool,
       onClick: PropTypes.func,
-      className: PropTypes.string
+      className: PropTypes.string,
+      color: PropTypes.oneOf(Object.keys(Button.ButtonColor)),
+      style: PropTypes.object,
     })
   ),
 
@@ -221,7 +252,7 @@ Notification.propTypes = {
   children: PropTypes.node,
 
   // Can be specified to override default width
-  width: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+  width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 };
 
 const styles = {
@@ -234,121 +265,137 @@ const styles = {
     marginBottom: 20,
     display: 'flex',
     flexFlow: 'wrap',
-    boxSizing: 'border-box'
+    boxSizing: 'border-box',
   },
   notice: {
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     fontSize: 18,
-    fontWeight: 'bold',
     letterSpacing: -0.2,
     lineHeight: 1.5,
     marginTop: 16,
-    backgroundColor: color.white
+    backgroundColor: color.white,
   },
   details: {
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     fontSize: 14,
     lineHeight: 1.5,
     paddingTop: 6,
     paddingBottom: 16,
-    color: color.charcoal
+    color: color.charcoal,
   },
   detailsLink: {
-    fontFamily: '"Gotham 5r", sans-serif',
-    color: color.teal
+    ...fontConstants['main-font-semi-bold'],
+    color: color.teal,
   },
   wordBox: {
     // flex priority
     flex: 1,
     marginLeft: 25,
-    marginRight: 25
+    marginRight: 25,
   },
   dismiss: {
     color: color.lighter_gray,
     marginTop: 5,
     marginRight: 0,
     marginLeft: 10,
-    cursor: 'pointer'
+    cursor: 'pointer',
   },
   iconBox: {
     width: 72,
     backgroundColor: color.lightest_gray,
     textAlign: 'center',
-    float: 'left'
+    float: 'left',
   },
   contentBox: {
     // The subtracted 100px leaves room for both the icon column on the left and
     // the dismiss X icon column on the right.
     width: 'calc(100% - 100px)',
     display: 'flex',
-    flexFlow: 'wrap'
+    flexFlow: 'wrap',
   },
   icon: {
     color: 'rgba(255,255,255, .8)',
     fontSize: 38,
-    lineHeight: 2
+    lineHeight: 2,
   },
   buttonsMobile: {
-    width: '100%'
+    width: '100%',
   },
   button: {
     marginLeft: 25,
     marginRight: 25,
     marginTop: 18,
-    marginBottom: 18
+    marginBottom: 18,
   },
   colors: {
     [NotificationType.information]: {
       borderColor: color.teal,
       color: color.teal,
-      backgroundColor: color.teal
+      backgroundColor: color.teal,
     },
     [NotificationType.success]: {
       borderColor: color.level_perfect,
       color: color.level_perfect,
-      backgroundColor: color.level_perfect
+      backgroundColor: color.level_perfect,
     },
     [NotificationType.failure]: {
       borderColor: color.red,
       color: color.red,
-      backgroundColor: color.red
+      backgroundColor: color.red,
     },
     [NotificationType.warning]: {
       borderColor: color.mustardyellow,
       color: color.charcoal,
-      backgroundColor: color.mustardyellow
+      backgroundColor: color.mustardyellow,
     },
     [NotificationType.course]: {
       borderColor: color.border_gray,
       color: color.teal,
-      backgroundColor: color.teal
+      backgroundColor: color.teal,
     },
     [NotificationType.bullhorn]: {
       borderColor: color.teal,
       color: color.teal,
-      backgroundColor: color.teal
+      backgroundColor: color.teal,
     },
     [NotificationType.bullhorn_yellow]: {
       borderColor: color.yellow,
       color: color.yellow,
-      backgroundColor: color.yellow
+      backgroundColor: color.yellow,
     },
     [NotificationType.feedback]: {
       borderColor: color.purple,
       color: color.purple,
-      backgroundColor: color.purple
-    }
+      backgroundColor: color.purple,
+    },
+    [NotificationType.collaborate]: {
+      borderColor: color.light_secondary_500,
+      color: color.light_secondary_500,
+      backgroundColor: color.light_secondary_500,
+    },
   },
   clear: {
-    clear: 'both'
-  }
+    clear: 'both',
+  },
+  tooltip: {
+    cursor: 'pointer',
+    marginLeft: '5px',
+    marginRight: '5px',
+    fontSize: '14px',
+    verticalAlign: 'middle',
+    color: color.light_gray_500,
+  },
+  tooltipText: {
+    color: color.white,
+    margin: 0,
+  },
 };
 
 export default connect(state => ({
-  isRtl: state.isRtl
+  isRtl: state.isRtl,
 }))(Notification);
 
 export const NotificationResponsive = connect(state => ({
   isRtl: state.isRtl,
-  responsiveSize: state.responsive.responsiveSize
+  responsiveSize: state.responsive.responsiveSize,
 }))(Notification);

@@ -48,3 +48,42 @@ vi:
           description_short: Một giới thiệu khóa học khoa học máy tính rằng trao quyền cho các sinh viên để tạo ra các đồ tạo tác xác thực.
           description_student: Khám phá Khoa học Máy tính (Khám phá CS) là một khóa học giới thiệu khoa học máy tính cho phép học sinh để tạo ra thực hiện vật và tham gia với khoa học máy tính như một phương tiện cho sự sáng tạo, giao tiếp, giải quyết vấn đề và vui vẻ.
           description_teacher: Khám phá Khoa học Máy tính (Khám phá CS) là một khóa học giới thiệu khoa học máy tính cho phép học sinh để tạo ra thực hiện vật và tham gia với khoa học máy tính như một phương tiện cho sự sáng tạo, giao tiếp, giải quyết vấn đề và vui vẻ.
+        csd-pilot:
+          description_student: Khám phá Khoa học Máy tính (Khám phá CS) là một khóa học giới thiệu khoa học máy tính cho phép học sinh để tạo ra thực hiện vật và tham gia với khoa học máy tính như một phương tiện cho sự sáng tạo, giao tiếp, giải quyết vấn đề và vui vẻ.
+        csp-2020:
+          description_short: Tìm hiểu khái niệm nền tảng khoa học máy tính.
+        csd-2020:
+          description_short: Một giới thiệu khóa học khoa học máy tính rằng trao quyền cho các sinh viên để tạo ra các đồ tạo tác xác thực.
+          description_student: Khám phá Khoa học Máy tính (Khám phá CS) là một khóa học giới thiệu khoa học máy tính cho phép học sinh để tạo ra thực hiện vật và tham gia với khoa học máy tính như một phương tiện cho sự sáng tạo, giao tiếp, giải quyết vấn đề và vui vẻ.
+          description_teacher: Khám phá Khoa học Máy tính (Khám phá CS) là một khóa học giới thiệu khoa học máy tính cho phép học sinh để tạo ra thực hiện vật và tham gia với khoa học máy tính như một phương tiện cho sự sáng tạo, giao tiếp, giải quyết vấn đề và vui vẻ.
+        csp-2021:
+          description_short: Tìm hiểu khái niệm nền tảng khoa học máy tính.
+        mike-test:
+          title: Máy tính khoa học cơ bản
+        csp-2022:
+          description_short: Tìm hiểu khái niệm nền tảng khoa học máy tính.
+        csp-2023:
+          description_short: Tìm hiểu khái niệm nền tảng khoa học máy tính.
+        csd-2023:
+          title: Những khám phá Khoa học Máy tính
+        self-paced-pl-csd-unit2-2023:
+          title: Giảng dạy về Phát triển web
+    resources:
+      curriculum/csd/2017:
+        name: Chương trình
+      teacher_forum_6/csd/2017:
+        name: Diễn đàn giáo viên
+      curriculum/csd/2018:
+        name: Chương trình
+      teacher_forum_6/csd/2018:
+        name: Diễn đàn giáo viên
+      curriculum/csd/2019:
+        name: Chương trình
+      teacher_forum/csd/2019:
+        name: Diễn đàn giáo viên
+      curriculum/csd/2020:
+        name: Chương trình
+      teacher_forum/csd/2020:
+        name: Diễn đàn giáo viên
+      getting_started_with_csd/csd/2021:
+        name: Bắt đầu Khám phá KHMT

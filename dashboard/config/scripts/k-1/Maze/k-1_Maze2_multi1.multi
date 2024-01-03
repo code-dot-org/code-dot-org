@@ -8,3 +8,4 @@ question 'Which repeat block is the same?'
 right '/script_assets/k_1_images/move_blocks/r3_N.png'
 wrong '/script_assets/k_1_images/move_blocks/r3_NN.png'
 wrong '/script_assets/k_1_images/move_blocks/r4_N.png'
+allow_multiple_attempts true

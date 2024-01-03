@@ -9,3 +9,5 @@ right 'The constructor is used to create objects of a class.'
 markdown <<MARKDOWN
 Which of the following is a TRUE statement about constructors in Java?
 MARKDOWN
+
+allow_multiple_attempts true

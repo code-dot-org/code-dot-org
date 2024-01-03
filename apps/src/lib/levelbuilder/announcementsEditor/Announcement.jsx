@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {
   announcementShape,
-  VisibilityType
+  VisibilityType,
 } from '@cdo/apps/code-studio/announcementsRedux';
 import {NotificationType} from '@cdo/apps/templates/Notification';
 
@@ -12,7 +12,7 @@ export default class Announcement extends Component {
     inputStyle: PropTypes.object.isRequired,
     index: PropTypes.number.isRequired,
     onRemove: PropTypes.func.isRequired,
-    onChange: PropTypes.func.isRequired
+    onChange: PropTypes.func.isRequired,
   };
 
   render() {
@@ -125,9 +125,9 @@ const styles = {
   announcement: {
     border: '1px solid #ccc',
     padding: 5,
-    marginBottom: 10
+    marginBottom: 10,
   },
   checkbox: {
-    margin: '0 0 0 7px'
-  }
+    margin: '0 0 0 7px',
+  },
 };

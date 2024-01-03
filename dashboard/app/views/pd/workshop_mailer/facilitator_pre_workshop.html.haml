@@ -1,6 +1,6 @@
 :css
   body {
-    font-family: Gotham, sans-serif;
+    font-family: Metropolis, sans-serif;
   }
 
 %p
@@ -18,9 +18,14 @@
       =link_to('facilitator landing page', 'https://code.org/educate/facilitator-landing/CSD') + '.'
     - elsif @workshop.course == 'Computer Science A'
       =link_to('facilitator landing page', 'https://code.org/educate/facilitator-landing/CSA') + '.'
+    - elsif @workshop.course == 'CS Fundamentals'
+      =link_to('facilitator landing page', 'https://code.org/educate/facilitator-landing/CSF') + '.'
   %li
     Have quick questions about resources, agendas, or participant requests? Post them in the facilitator
-    =link_to('Slack', 'https://codefacilitators6-12.slack.com/messages')
+    - if @workshop.course == 'CS Fundamentals'
+      =link_to('Slack', 'https://csffacilitators.slack.com/messages')
+    - else
+      =link_to('Slack', 'https://codefacilitators6-12.slack.com/messages')
     channel!
   %li
     Want to share useful resources or engage in longer discussions with the facilitator community? Use the
@@ -29,13 +34,10 @@
     Would you like 1:1 support? Schedule a quick check-in with Andrea via this
     = link_to('scheduling tool', 'https://calendly.com/andrea-fac-supp/30min') + '.'
   %li
-    Still need assistance with things like travel, scheduling, or Regional Partners? Contact us at
-    = mail_to('facilitators@code.org') + '.'
-  %li
     For multi-day workshops, you will need to share daily survey links with your workshop participants on all
     but the final day of the workshop. These links are already in your slide deck, but can also be found in the
     workshop agenda and in the
-    = link_to('Facilitator Tools Guide', 'https://docs.google.com/document/d/1Xhl4SnjVYycLOxE_BiVrZnhX-bwfL4Cik_PZkuWBn2s') + '.'
+    = link_to('Facilitator Tools Guide', 'https://docs.google.com/document/d/1JS2HDBPTWJ_TNqrTVemmwNtUB3XL-vmLaQLP23YUyEo/edit?usp=sharing') + '.'
     %ul
       %li
         If more daily survey links are needed, simply increase the last number
@@ -44,6 +46,9 @@
         The post-workshop survey link is sent to teachers via email after the workshop is closed.
         Teachers will also be able to access the survey from the
         = link_to('My Professional Learning Page', 'https://studio.code.org/my-professional-learning') + '.'
+  %li
+    Still need assistance? Contact us at
+    = mail_to('facilitators@code.org') + '.'
 
 
 %p

@@ -5,24 +5,20 @@ si:
       BadGuys_setSizeAll_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': මධ්‍යස්ත
-            '2.00': large
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': මධ්‍යස්ත
-            '2.00': large
-            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
             '"ALIEN"': පිටසක්වල ජීවින්
       Dancelab_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': තත්පර
+      Dancelab_atTimestampNotAfter:
         options:
           UNIT:
             '"seconds"': තත්පර
@@ -264,9 +260,7 @@ si:
       gamelab_makeSpritesWithSize:
         options:
           SIZE:
-            '30': small
             '50': මධ්‍යස්ත
-            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -298,10 +292,7 @@ si:
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
-            '25': extra small
-            '50': small
             '75': මධ්‍යස්ත
-            '100': large
       gamelab_setProp:
         options:
           PROPERTY:
@@ -312,10 +303,7 @@ si:
           PROPERTY:
             '"scale"': විශාලත්වය
           SIZE:
-            '25': extra small
-            '50': small
             '75': මධ්‍යස්ත
-            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:

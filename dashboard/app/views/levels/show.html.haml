@@ -15,9 +15,9 @@
       %a{href: '#notes-outer'}= I18n.t('video.notes')
 
 - if @script_level
-  - level_data = { redirect_script_url: @redirect_unit_url, script_name: @script_level.script&.name, course_name: @script_level.script&.unit_group&.name, tts_autoplay_enabled: @tts_autoplay_enabled, code_review_enabled: @code_review_enabled_for_level, show_unversioned_redirect_warning: @show_unversioned_redirect_warning}
+  - level_data = { redirect_script_url: @redirect_unit_url, script_name: @script_level.script&.name, course_name: @script_level.script&.unit_group&.name, level_name: @level.name, tts_autoplay_enabled: @tts_autoplay_enabled, code_review_enabled: @code_review_enabled_for_level, show_unversioned_redirect_warning: @show_unversioned_redirect_warning}
   %link{href: asset_path('css/levels.css'), rel: 'stylesheet', type: 'text/css'}
-  %script{ src: webpack_asset_path('js/levels/show.js'), data: { level: level_data.to_json } }
+  %script{ src: webpack_asset_path('js/levels/show.js'), data: { level: level_data.to_json, rubricData: @rubric_data&.to_json} }
   -# Mount point for RedirectDialog React component.
   %div#redirect-dialog
   %div#unversioned-redirect-dialog
@@ -49,10 +49,14 @@
     -# If we're a instructor, render the locked_lesson UI, which the client will conditionally hide based on Student/Teacher toggle
     - if @script_level && @script_level.lesson.lockable? && @script_level.script.can_be_instructor?(current_user)
       = render 'levels/locked_lesson', hidden: true
-    - if @game.unplugged?
+    - if params[:view] == 'summary'
+      = render partial: 'levels/summary'
+    - elsif @game.unplugged?
       :javascript
         var appOptions = #{app_options.to_json};
       = render partial: 'levels/unplug', locals: {app: @game.app}
+    - elsif @level.uses_lab2?
+      = render partial: 'levels/lab2'
     - elsif @level.is_a?(DSLDefined) || @level.is_a?(Widget) || @level.is_a?(FreeResponse) || @level.is_a?(StandaloneVideo) || @level.is_a?(ExternalLink) || @level.is_a?(CurriculumReference)
       :javascript
         var appOptions = #{app_options.to_json};
@@ -77,3 +81,10 @@
 
 - if @script && !@script.old_professional_learning_course? && !@level.is_a?(NetSim)
   = render partial: 'levels/teacher_panel'
+
+- if @rubric.present? && current_user&.teacher?
+  %div#rubric-fab-mount-point
+
+- if current_user&.has_ai_tutor_access? && @script&.csa?
+  = render partial: 'levels/ai_tutor_panel'
+

@@ -14,11 +14,13 @@
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">ඔබ පරිගණක විද්‍යා ගුරුවරයෙක් ද? අනෙකුත් CSEdWeek සම්පත් මෙතනින් ලබා ගන්න.</a>'
   csedweek_banner_teachers_text: "ඔබ පරිගණක විද්‍යා ගුරුවරයෙක් ද? අනෙකුත් CSEdWeek සම්පත් මෙතනින් ලබා ගන්න."
   n_have_learned_an_hoc: "<h1>Hour of Code වැඩසටහන </h1><h2>උත්සාහ කරන්න </h2><h3>එය # දෙනෙකුට උපකාරී වී ඇත</h3>"
+  try_hoc_num_served: "<h1>Hour of Code වැඩසටහන </h1><h2>උත්සාහ කරන්න </h2><h3>එය %{num} දෙනෙකුට උපකාරී වී ඇත</h3>"
   anybody_can_learn: "ඕනෑම අයකුට ඉගෙනගන්න පුලුවන්."
   learn_now: "දැන් ඉගෙනගන්න"
   petition_message: "සෑම පාසලකම සිටින සෑම සිසුවෙකුටම පරිගණක විද්‍යාව ඉගෙනීමට අවස්ථාවක් තිබිය යුතුය"
   petition_sign_message: 'මීට එකඟ වේ නම්, ඔබගේ නම ඇතුලත් කරන්න. තවත් # දෙනෙකු සමග එකතුවෙන්න.'
   petition_join_others: 'තවත් # ක් සමග එක්වන්න'
+  petition_join_others_num: "අනෙකුත් %{num} හා එකතු වෙන්න"
   name: "නම"
   email: "විද්‍යුත් තැපැල"
   zipcode: "ZIP කේතය හෝ රට"
@@ -419,9 +421,6 @@
   volunteer_engineer_submission_subtitle_generic: '2015 දෙසැම්බර් 7 සිට 13 දක්වා, මෙම වසරේ දී ගුරුවරුන් 100,000ක් Hour of Code වැඩසටහන් ඔවුන්ගේ පන්ති කාමර තුළ පවත්වනවා. ඔවුන්ට ඔබගේ සහය අවශ්‍යයි! '
   volunteer_engineer_submission_subtitle_specific: "ගුරුවරුන් %{num_teachers} කට ස්වෙච්ඡාවෙන් ඉදිරිපත් වන්නන් අවශ්‍යයි.<br>ස්වෙච්ඡාවෙන් ඉදිරිපත් වන්නන් %{num_volunteers} ලියාපදිංචි වී ඇත. ඔවුන් සමඟ එක් වන්න."
   volunteer_engineer_submission_intro_background: "Hour of Code කියන්නෙ පරිඝණක විද්‍යාව හදුන්වාදීම සඳහා පැයක් හදුන්වාදීපු, රටවල් 180කට වඩා මිලියන ගනනාවක් සම්බන්දවුනු එක්තරා ගෝලීය ව්‍යාපරයක්.දෙසැම්බර් 7 සිට13 දක්වා ඇති පරිඝණක විද්‍යාව අධ්‍යණය සතියේ අප හා එක්වන්න."
-  volunteer_engineer_submission_intro_recruit: 'ගුරුවරුන් සමග  කවුරුන්හෝ සම්බන්දවනවානම් කැමත්තක් දක්වාවි.<span style="font-family: ''Gotham 7r'', sans-serif;">පරිඝණක විද්‍යාව පිළිබඳව අධ්‍යනයට මහත් කැමත්ත</span>පන්තිකාමරය තුලදී උපකාර කල හැකි කවුරුන් හෝ උපකාර කිරීමට හැකි<span style="font-family: ''Gotham 7r'', sans-serif;">ආස්වාදයක්</span>පරිඝණක විද්‍යාව පිලිබඳව ඇති පුළුල් හැකියාවන්  කතා කරන ඔවුන්ගේ ශිෂ්‍යයයින්(වීඩියො චැට්  මගින් හෝ සම්බන්දවීමෙන්). '
-  volunteer_engineer_submission_intro_signup: "ඔබ පරිගණක විද්‍යාව හදාරණ ශිෂ්‍යයෙක් හෝ මෘදුකාංග ක්ෂේත්‍රයේ වෘත්තිකයෙක් නම්, කරුණාකර පහත තොරතුරු සඳහන් කරන්න. <span class=\"form-required-field\">*</span> ලකුණු ඇති තොරතුරු සැපයීම අනිවාර්ය වේ."
-  volunteer_engineer_submission_intro_links: "ඔබ ස්වේච්ඡාවෙන් ඉදිරිපත් වන අය සොයන ගුරුවරයෙක්ද? ඔබ ආසන්නයේ ස්වෙච්ඡාවෙන් ඉදිරිපත් වෙන්නන් <a href=\"%{volunteer_local}\">ස්වේච්ඡා සිතියම්</a>."
   volunteer_engineer_submission_update_information: "ඔබගේ තොරතුරු යාවත්කාලීන කරන්න"
   volunteer_engineer_submission_header_shared: "ස්වේච්ඡා සිතියම් හරහා ගුරුවරුන් වෙත බෙදාහැරෙන තොරතුරු"
   volunteer_engineer_submission_field_name: "නම"
@@ -1272,6 +1271,7 @@
   user_header_minecraft: "Minecraft"
   user_header_flappy: "ෆ්ලැපි"
   applab_tile_start_tutorial: "ආරම්භ කරන්න"
+  hoc_overview_subtitle: "<a href=\"https://hourofcode.com\">Hour of Code</a> යනු රටවල් 180+ ක මිලියන ගණනක් සිසුන් වෙත ළඟා වන ගෝලීය වැඩසටහනකි. ඕනෑම කෙනෙකුට, ඕනෑම තැනකදී Hour of Code උත්සවයක් සංවිධානය කිරීමට හෝ භාෂා 45කට වඩා වැඩි ගණනකින් ලබා ගත හැකි, පැය 500+ නිබන්ධනවලින් ඕනෑම එකක් උත්සාහ කළ හැකිය."
   hoc_overview_start_tutorial: "ආරම්භ කරන්න"
   hoc2018_creativity_create: "තනන්න"
   hoc2018_creativity_hoc_coming: "Hour of Code ළඟදීම…"

@@ -2,8 +2,1456 @@
   "pt-BR": {
     "data": {
       "mini_rubric": {
+        "CDU U6 Playground Sound Board_2019": {
+          "rubric_key_concept": "Crie e modifique matrizes, desenvolva um software para controlar uma variedade de dispositivos físicos.",
+          "rubric_performance_level_1": "O programa funciona conforme descrito, com pelo menos quatro eventos de placa, cada um acionando uma série diferente de notas. ",
+          "rubric_performance_level_2": "O programa toca uma série de notas quando acionado por um determinado evento de placa, mas pode haver erros no código que o impeçam de funcionar exatamente como descrito.",
+          "rubric_performance_level_3": "Há um código no programa que pode produzir uma série de notas no buzzer, mas o código não pode ser acionado por um evento de placa, ou erros significativos no código impedem que as notas sejam tocadas.",
+          "rubric_performance_level_4": "Não há sequências de notas no programa ou não há código para produzir uma saída no buzzer."
+        },
+        "CDU U6 Playground Sound Board_2021": {
+          "rubric_key_concept": "Crie e modifique matrizes, desenvolva um software para controlar uma variedade de dispositivos físicos.",
+          "rubric_performance_level_1": "O programa funciona conforme descrito, com pelo menos quatro eventos de placa, cada um acionando uma série diferente de notas. ",
+          "rubric_performance_level_2": "O programa toca uma série de notas quando acionado por um determinado evento de placa, mas pode haver erros no código que o impeçam de funcionar exatamente como descrito.",
+          "rubric_performance_level_3": "Há um código no programa que pode produzir uma série de notas no buzzer, mas o código não pode ser acionado por um evento de placa, ou erros significativos no código impedem que as notas sejam tocadas.",
+          "rubric_performance_level_4": "Não há sequências de notas no programa ou não há código para produzir uma saída no buzzer."
+        },
+        "CSD Games properties assessment_2021": {
+          "rubric_key_concept": "Use a notação de pontos para atualizar as propriedades de um sprite.",
+          "rubric_performance_level_1": "A organização dos sprites é idêntica ao exemplo fornecido nas instruções.",
+          "rubric_performance_level_2": "Os sprites foram redimensionados para caber dentro do círculo. Pode haver algumas pequenas diferenças entre o trabalho do aluno e o exemplo fornecido.",
+          "rubric_performance_level_3": "Os sprites foram redimensionados, mas ainda são grandes demais para caber dentro do círculo.",
+          "rubric_performance_level_4": "O código é o mesmo ou foi alterado de forma não relacionada à atividade."
+        },
+        "CSD Games properties assessment_2022": {
+          "rubric_key_concept": "Use a notação de pontos para atualizar as propriedades de um sprite.",
+          "rubric_performance_level_1": "A organização dos sprites é idêntica ao exemplo fornecido nas instruções.",
+          "rubric_performance_level_2": "Os sprites foram redimensionados para caber dentro do círculo. Pode haver algumas pequenas diferenças entre o trabalho do aluno e o exemplo fornecido.",
+          "rubric_performance_level_3": "Os sprites foram redimensionados, mas ainda são grandes demais para caber dentro do círculo.",
+          "rubric_performance_level_4": "O código é o mesmo ou foi alterado de forma não relacionada à atividade."
+        },
+        "CSD Games properties assessment_2023": {
+          "rubric_key_concept": "Use a notação de pontos para atualizar as propriedades de um sprite.",
+          "rubric_performance_level_1": "A organização dos sprites é idêntica ao exemplo fornecido nas instruções.",
+          "rubric_performance_level_2": "Os sprites foram redimensionados para caber dentro do círculo. Pode haver algumas pequenas diferenças entre o trabalho do aluno e o exemplo fornecido.",
+          "rubric_performance_level_3": "Os sprites foram redimensionados, mas ainda são grandes demais para caber dentro do círculo.",
+          "rubric_performance_level_4": "O código é o mesmo ou foi alterado de forma não relacionada à atividade."
+        },
+        "CSD U2 HTML Adding Paragraphs pt 2_2019": {
+          "rubric_key_concept": "Use HTML para criar uma página da web que inclua cabeçalhos hierárquicos, parágrafos, listas e imagens; entenda a necessidade por precisão ao usar linguagens de computação e use a sintaxe apropriada.\n",
+          "rubric_performance_level_1": "Todos os textos estão contidos em tags de parágrafo. Há pelo menos dois parágrafos criados com o uso adequado das tags de parágrafo.",
+          "rubric_performance_level_2": "Pelo menos algum texto foi separado em um parágrafo por meio do uso adequado de tags de parágrafo.",
+          "rubric_performance_level_3": "Há pelo menos uma tag de parágrafo no texto, mas ela pode não ser ter sido corretamente (por exemplo, falta de tag de fechamento, parágrafos criados fora do elemento do corpo).",
+          "rubric_performance_level_4": "Não há tags de parágrafo no texto."
+        },
+        "CSD U2 HTML Adding Paragraphs pt 2_2021": {
+          "rubric_key_concept": "Use HTML para criar uma página da web que inclua cabeçalhos hierárquicos, parágrafos, listas e imagens; entenda a necessidade por precisão ao usar linguagens de computação e use a sintaxe apropriada.\n",
+          "rubric_performance_level_1": "Todos os textos estão contidos em tags de parágrafo. Há pelo menos dois parágrafos criados com o uso adequado das tags de parágrafo.",
+          "rubric_performance_level_2": "Pelo menos algum texto foi separado em um parágrafo por meio do uso adequado de tags de parágrafo.",
+          "rubric_performance_level_3": "Há pelo menos uma tag de parágrafo no texto, mas ela pode não ser ter sido corretamente (por exemplo, falta de tag de fechamento, parágrafos criados fora do elemento do corpo).",
+          "rubric_performance_level_4": "Não há tags de parágrafo no texto."
+        },
+        "CSD U2 HTML Adding Paragraphs pt 2_2022": {
+          "rubric_key_concept": "Use HTML para criar uma página da web que inclua cabeçalhos hierárquicos, parágrafos, listas e imagens; entenda a necessidade por precisão ao usar linguagens de computação e use a sintaxe apropriada.\n",
+          "rubric_performance_level_1": "Todos os textos estão contidos em tags de parágrafo. Há pelo menos dois parágrafos criados com o uso adequado das tags de parágrafo.",
+          "rubric_performance_level_2": "Pelo menos algum texto foi separado em um parágrafo por meio do uso adequado de tags de parágrafo.",
+          "rubric_performance_level_3": "Há pelo menos uma tag de parágrafo no texto, mas ela pode não ser ter sido corretamente (por exemplo, falta de tag de fechamento, parágrafos criados fora do elemento do corpo).",
+          "rubric_performance_level_4": "Não há tags de parágrafo no texto."
+        },
+        "CSD U2 Heading Test_2018": {
+          "rubric_key_concept": "Use HTML para criar uma página da web que inclua cabeçalhos hierárquicos, parágrafos, listas e imagens.\n\nEntenda a necessidade por precisão ao usar linguagens de computação e use a sintaxe apropriada.\n",
+          "rubric_performance_level_1": "Todo o conteúdo está contido em tags, usa tags de parágrafos e cabeçalhos de vários tamanhos de forma logicamente consistente.",
+          "rubric_performance_level_3": "A maior parte do conteúdo está contida em tags. Pelo menos uma tag de cabeçalho é usada.",
+          "rubric_performance_level_4": "Pouco ou nenhum conteúdo está contido nas tags."
+        },
+        "CSD U2 Heading Test_2019": {
+          "rubric_key_concept": "Use HTML para criar uma página da web que inclua cabeçalhos hierárquicos, parágrafos, listas e imagens.\n\nEntenda a necessidade por precisão ao usar linguagens de computação e use a sintaxe apropriada.\n",
+          "rubric_performance_level_1": "Todo o conteúdo está contido em tags, usa tags de parágrafos e cabeçalhos de vários tamanhos de forma logicamente consistente.",
+          "rubric_performance_level_2": "Todo o conteúdo está contido em tags, usa tags de parágrafo e de cabeçalho de forma razoável.",
+          "rubric_performance_level_3": "A maior parte do conteúdo está contida em tags. Pelo menos uma tag de cabeçalho é usada.",
+          "rubric_performance_level_4": "Pouco ou nenhum conteúdo está contido nas tags."
+        },
+        "CSD U2 Heading Test_2021": {
+          "rubric_key_concept": "Use HTML para criar uma página da web que inclua cabeçalhos hierárquicos, parágrafos, listas e imagens.\n\nEntenda a necessidade por precisão ao usar linguagens de computação e use a sintaxe apropriada.\n",
+          "rubric_performance_level_1": "Todo o conteúdo está contido em tags, usa tags de parágrafos e cabeçalhos de vários tamanhos de forma logicamente consistente.",
+          "rubric_performance_level_2": "Todo o conteúdo está contido em tags, usa tags de parágrafo e de cabeçalho de forma razoável.",
+          "rubric_performance_level_3": "A maior parte do conteúdo está contida em tags. Pelo menos uma tag de cabeçalho é usada.",
+          "rubric_performance_level_4": "Pouco ou nenhum conteúdo está contido nas tags."
+        },
+        "CSD U2 Heading Test_2022": {
+          "rubric_key_concept": "Use HTML para criar uma página da web que inclua cabeçalhos hierárquicos, parágrafos, listas e imagens.\n\nEntenda a necessidade por precisão ao usar linguagens de computação e use a sintaxe apropriada.\n",
+          "rubric_performance_level_1": "Todo o conteúdo está contido em tags, usa tags de parágrafos e cabeçalhos de vários tamanhos de forma logicamente consistente.",
+          "rubric_performance_level_2": "Todo o conteúdo está contido em tags, usa tags de parágrafo e de cabeçalho de forma razoável.",
+          "rubric_performance_level_3": "A maior parte do conteúdo está contida em tags. Pelo menos uma tag de cabeçalho é usada.",
+          "rubric_performance_level_4": "Pouco ou nenhum conteúdo está contido nas tags."
+        },
+        "CSD U2 Heading Test_2023": {
+          "rubric_key_concept": "Use HTML para criar uma página da web que inclua cabeçalhos hierárquicos, parágrafos, listas e imagens.\n\nEntenda a necessidade por precisão ao usar linguagens de computação e use a sintaxe apropriada.\n",
+          "rubric_performance_level_3": "A maior parte do conteúdo está contida em tags. Pelo menos uma tag de cabeçalho é usada.",
+          "rubric_performance_level_4": "Pouco ou nenhum conteúdo está contido nas tags."
+        },
+        "CSD U2 Image Tag 2_2019": {
+          "rubric_key_concept": "Estruture o conteúdo em uma página da Web usando HTML. (Adicione uma imagem a uma página da web.)",
+          "rubric_performance_level_1": "A imagem é exibida corretamente e um atributo `alt` fornece uma descrição de teste razoável da imagem. Nenhum código desnecessário está incluído na tag `img`.",
+          "rubric_performance_level_2": "A imagem é exibida corretamente.",
+          "rubric_performance_level_3": "A tag `img` é usada e um endereço de origem para a imagem é fornecido, mas pode haver pequenos erros de sintaxe ou erros ortográficos que impedem que a imagem seja exibida corretamente.",
+          "rubric_performance_level_4": "A tag `img` não é usada ou não é um endereço de origem fornecido para a imagem."
+        },
+        "CSD U2 Image assessment_2021": {
+          "rubric_key_concept": "Estruture o conteúdo em uma página da web usando HTML (Adicionar uma imagem a uma página da Web). Atribua devidamente o crédito a outras pessoas ao usar seu trabalho.",
+          "rubric_performance_level_1": "A imagem é exibida corretamente e um atributo `alt` fornece uma descrição de teste razoável da imagem. Nenhum código desnecessário está incluído na tag `img`. Há uma atribuição precisa e a imagem é nomeada adequadamente.",
+          "rubric_performance_level_2": "A imagem é exibida corretamente e está sendo usada de acordo com a descrição da licença de direitos autorais.",
+          "rubric_performance_level_3": "A tag `img` é usada e um endereço de origem para a imagem é fornecido, mas pode haver pequenos erros de sintaxe ou erros ortográficos que impedem que a imagem seja exibida corretamente. A imagem pode não estar disponível para uso legal na página da web.",
+          "rubric_performance_level_4": "A tag `img` não é usada ou não é um endereço de origem fornecido para a imagem."
+        },
+        "CSD U2 Image assessment_2022": {
+          "rubric_key_concept": "Estruture o conteúdo em uma página da web usando HTML (Adicionar uma imagem a uma página da Web). Atribua devidamente o crédito a outras pessoas ao usar seu trabalho.",
+          "rubric_performance_level_1": "A imagem é exibida corretamente e um atributo `alt` fornece uma descrição textual razoável da imagem. Nenhum código desnecessário está incluído na tag `img`. Há uma atribuição correta e a imagem é nomeada adequadamente.",
+          "rubric_performance_level_2": "A imagem é exibida corretamente e está sendo usada de acordo com a descrição da licença de direitos autorais.",
+          "rubric_performance_level_3": "A tag `img` é usada e um endereço de origem para a imagem é fornecido, mas pode haver pequenos erros de sintaxe ou erros ortográficos que impedem que a imagem seja exibida corretamente. A imagem pode não estar disponível para uso legal na página da web.",
+          "rubric_performance_level_4": "A tag `img` não é usada ou nenhum endereço de origem é fornecido para a imagem."
+        },
+        "CSD U2 Image assessment_2023": {
+          "rubric_key_concept": "Estruture o conteúdo em uma página da web usando HTML (Adicionar uma imagem a uma página da Web). Atribua devidamente o crédito a outras pessoas ao usar seu trabalho.",
+          "rubric_performance_level_1": "A imagem é exibida corretamente e um atributo `alt` fornece uma descrição textual razoável da imagem. Nenhum código desnecessário está incluído na tag `img`. Há uma atribuição correta e a imagem é nomeada adequadamente.",
+          "rubric_performance_level_2": "A imagem é exibida corretamente e está sendo usada de acordo com a descrição da licença de direitos autorais.",
+          "rubric_performance_level_3": "A tag `img` é usada e um endereço de origem para a imagem é fornecido, mas pode haver pequenos erros de sintaxe ou erros ortográficos que impedem que a imagem seja exibida corretamente. A imagem pode não estar disponível para uso legal na página da web.",
+          "rubric_performance_level_4": "A tag `img` não é usada ou nenhum endereço de origem é fornecido para a imagem."
+        },
+        "CSD U2 add style_2019": {
+          "rubric_key_concept": "Crie regras que afetem grupos inteiros de elementos; aplique formatação em uma página da web usando CSS.",
+          "rubric_performance_level_1": "O plano de fundo, as imagens e o texto foram todos estilizados conforme descrito nas instruções. Não há erros de sintaxe ou código extra (que não funciona) na folha de estilo.",
+          "rubric_performance_level_2": "O plano de fundo, as imagens e o texto foram todos estilizados conforme descrito nas instruções, mas pode haver erros mínimos ou códigos não funcionais na folha de estilo.",
+          "rubric_performance_level_3": "Conjuntos de regras foram criados na folha de estilo para estilizar o plano de fundo, as imagens e o texto, mas há erros graves que impedem que o código funcione corretamente.",
+          "rubric_performance_level_4": "Não há conjuntos de regras na folha de estilo, ou os conjuntos de regras não têm os seletores necessários para estilizar o plano de fundo ou as imagens nas páginas."
+        },
+        "CSD U2 add style_2021": {
+          "rubric_key_concept": "Crie regras que afetem grupos inteiros de elementos; aplique formatação em uma página da web usando CSS.",
+          "rubric_performance_level_1": "O plano de fundo, as imagens e o texto foram todos estilizados conforme descrito nas instruções. Não há erros de sintaxe ou código extra (que não funciona) na folha de estilo.",
+          "rubric_performance_level_2": "O plano de fundo, as imagens e o texto foram todos estilizados conforme descrito nas instruções, mas pode haver erros mínimos ou códigos não funcionais na folha de estilo.",
+          "rubric_performance_level_3": "Conjuntos de regras foram criados na folha de estilo para estilizar o plano de fundo, as imagens e o texto, mas há erros graves que impedem que o código funcione corretamente.",
+          "rubric_performance_level_4": "Não há conjuntos de regras na folha de estilo, ou os conjuntos de regras não têm os seletores necessários para estilizar o plano de fundo ou as imagens nas páginas."
+        },
+        "CSD U2 add style_2022": {
+          "rubric_key_concept": "Crie regras que afetem grupos inteiros de elementos; aplique formatação em uma página da web usando CSS.",
+          "rubric_performance_level_1": "O plano de fundo, as imagens e o texto foram todos estilizados conforme descrito nas instruções. Não há erros de sintaxe ou código extra (que não funciona) na folha de estilo.",
+          "rubric_performance_level_2": "O plano de fundo, as imagens e o texto foram todos estilizados conforme descrito nas instruções, mas pode haver erros mínimos ou códigos não funcionais na folha de estilo.",
+          "rubric_performance_level_3": "Conjuntos de regras foram criados na folha de estilo para estilizar o plano de fundo, as imagens e o texto, mas há erros graves que impedem que o código funcione corretamente.",
+          "rubric_performance_level_4": "Não há conjuntos de regras na folha de estilo, ou os conjuntos de regras não têm os seletores necessários para estilizar o plano de fundo ou as imagens nas páginas."
+        },
+        "CSD U2 add style_2023": {
+          "rubric_key_concept": "Crie regras que afetem grupos inteiros de elementos; aplique formatação em uma página da web usando CSS.",
+          "rubric_performance_level_1": "O plano de fundo, as imagens e o texto foram todos estilizados conforme descrito nas instruções. Não há erros de sintaxe ou código extra (que não funciona) na folha de estilo.",
+          "rubric_performance_level_2": "O plano de fundo, as imagens e o texto foram todos estilizados conforme descrito nas instruções, mas pode haver erros mínimos ou códigos não funcionais na folha de estilo.",
+          "rubric_performance_level_3": "Conjuntos de regras foram criados na folha de estilo para estilizar o plano de fundo, as imagens e o texto, mas há erros graves que impedem que o código funcione corretamente.",
+          "rubric_performance_level_4": "Não há conjuntos de regras na folha de estilo, ou os conjuntos de regras não têm os seletores necessários para estilizar o plano de fundo ou as imagens nas páginas."
+        },
+        "CSD U2 adding pages_2021": {
+          "rubric_key_concept": "Criando um artefato digital, vinculando a um site de múltiplas páginas\n",
+          "rubric_performance_level_1": "Uma nova página foi criada e recebeu um nome exclusivo e descritivo que termina em “.html”. Há um link da página index.html para a nova página e, da nova página, de volta para index.html",
+          "rubric_performance_level_2": "Há pelo menos um link ativo de uma página HTML para outra\n",
+          "rubric_performance_level_3": "Há uma tag `<a>`, mas erros de sintaxe ou problemas com o nome da página podem impedir que ela funcione\n",
+          "rubric_performance_level_4": "Nenhuma nova página foi criada e não há links\n"
+        },
+        "CSD U2 adding pages_2022": {
+          "rubric_key_concept": "Criando um artefato digital, vinculando a um site de múltiplas páginas\n",
+          "rubric_performance_level_1": "Uma nova página foi criada e recebeu um nome exclusivo e descritivo que termina em “.html”. Há um link da página index.html para a nova página e, da nova página, de volta para index.html",
+          "rubric_performance_level_2": "Há pelo menos um link ativo de uma página HTML para outra\n",
+          "rubric_performance_level_3": "Há uma tag `<a>`, mas erros de sintaxe ou problemas com o nome da página podem impedir que ela funcione\n",
+          "rubric_performance_level_4": "Nenhuma nova página foi criada e não há links\n"
+        },
+        "CSD U2 adding pages_2023": {
+          "rubric_key_concept": "Criando um artefato digital, vinculando a um site de múltiplas páginas\n",
+          "rubric_performance_level_1": "Uma nova página foi criada e recebeu um nome exclusivo e descritivo que termina em “.html”. Há um link da página index.html para a nova página e, da nova página, de volta para index.html",
+          "rubric_performance_level_2": "Há pelo menos um link ativo de uma página HTML para outra\n",
+          "rubric_performance_level_3": "Há uma tag `<a>`, mas erros de sintaxe ou problemas com o nome da página podem impedir que ela funcione\n",
+          "rubric_performance_level_4": "Nenhuma nova página foi criada e não há links\n"
+        },
+        "CSD U2 classes haikus_2021": {
+          "rubric_key_concept": "Crie classes que possam ser referenciadas e afetadas como um grupo.",
+          "rubric_performance_level_1": "A classe e o conjunto de regras são criados corretamente, todos os elementos do haicai escolhido estão incluídos e há pelo menos três regras no conjunto de regras.",
+          "rubric_performance_level_2": "Uma classe e um conjunto de regras são criados e a maioria dos elementos na seção de haicai escolhida do site é afetada por essa classe, mas pode haver alguns pequenos erros em algumas partes do texto ou pode haver menos de três regras no conjunto de regras.",
+          "rubric_performance_level_3": "E a classe e o conjunto de regras são criados, e pelo menos alguns elementos do site estão nessa classe, mas pode haver erros graves que impedem que o texto seja estilizado.",
+          "rubric_performance_level_4": "Nenhuma classe ou conjunto de regras é criado, nem nenhum elemento do site é colocado na classe."
+        },
+        "CSD U2 classes haikus_2022": {
+          "rubric_key_concept": "Crie classes que possam ser referenciadas e afetadas como um grupo.",
+          "rubric_performance_level_1": "A classe e o conjunto de regras são criados corretamente, todos os elementos do haicai escolhido estão incluídos e há pelo menos três regras no conjunto de regras.",
+          "rubric_performance_level_2": "Uma classe e um conjunto de regras são criados e a maioria dos elementos na seção de haicai escolhida do site é afetada por essa classe, mas pode haver alguns pequenos erros em algumas partes do texto ou pode haver menos de três regras no conjunto de regras.",
+          "rubric_performance_level_3": "Uma classe e um conjunto de regras são criados, e pelo menos alguns elementos do site estão nessa classe, mas pode haver erros graves que impeçam o texto de ser estilizado. ",
+          "rubric_performance_level_4": "Nenhuma classe ou conjunto de regras é criado, nem nenhum elemento do site é colocado na classe."
+        },
+        "CSD U2 classes haikus_2023": {
+          "rubric_key_concept": "Crie classes que possam ser referenciadas e afetadas como um grupo.",
+          "rubric_performance_level_2": "Uma classe e um conjunto de regras são criados e a maioria dos elementos na seção de haicai escolhida do site é afetada por essa classe, mas pode haver alguns pequenos erros em algumas partes do texto ou pode haver menos de três regras no conjunto de regras.",
+          "rubric_performance_level_3": "Uma classe e um conjunto de regras são criados, e pelo menos alguns elementos do site estão nessa classe, mas pode haver erros graves que impeçam o texto de ser estilizado. ",
+          "rubric_performance_level_4": "Nenhuma classe ou conjunto de regras é criado, nem nenhum elemento do site é colocado na classe."
+        },
+        "CSD U2 classes summer_2019": {
+          "rubric_key_concept": "Crie classes que possam ser referenciadas e afetadas como um grupo.",
+          "rubric_performance_level_1": "A aula de verão e o conjunto de regras foram criados corretamente e todo o texto na seção de verão do site tem a cor escolhida, conforme indicado pelo código RGB.",
+          "rubric_performance_level_2": "A aula de verão e o conjunto de regras são criados e a maior parte do texto na seção de verão do site é afetada por essa classe, mas pode haver alguns pequenos erros em algumas partes do texto.",
+          "rubric_performance_level_3": "A aula de verão e o conjunto de regras são criados, e pelo menos alguns elementos do site estão nessa classe, mas pode haver erros graves que impeçam o estilo do texto.",
+          "rubric_performance_level_4": "A aula de verão ou o conjunto de regras não são criados, ou nenhum elemento do site é colocado na aula."
+        },
+        "CSD U2 text style h3_2019": {
+          "rubric_key_concept": "Aplique formatação em uma página da web usando CSS",
+          "rubric_performance_level_1": "Os cabeçalhos `h3` são de uma nova cor (não preto). Não há código extra na folha de estilo e não há erros de sintaxe no código.",
+          "rubric_performance_level_2": "Os cabeçalhos `h3` são de uma nova cor (não preto).",
+          "rubric_performance_level_3": "Os cabeçalhos `h3` têm um conjunto de regras especial na folha de estilo e a propriedade color é usada, mas há erros suficientes para que o texto não mude de cor.",
+          "rubric_performance_level_4": "Não há um conjunto de regras especial para cabeçalhos `h3` ou a propriedade de cor não é usada no conjunto de regras."
+        },
+        "CSD U2 text style h3_2021": {
+          "rubric_key_concept": "Aplique formatação em uma página da web usando CSS",
+          "rubric_performance_level_1": "Os cabeçalhos `h3` são de uma nova cor (não preto). Não há código extra na folha de estilo e não há erros de sintaxe no código.",
+          "rubric_performance_level_2": "Os cabeçalhos `h3` são de uma nova cor (não preto).",
+          "rubric_performance_level_3": "Os cabeçalhos `h3` têm um conjunto de regras especial na folha de estilo e a propriedade color é usada, mas há erros suficientes para que o texto não mude de cor.",
+          "rubric_performance_level_4": "Não há um conjunto de regras especial para cabeçalhos `h3` ou a propriedade de cor não é usada no conjunto de regras."
+        },
+        "CSD U2 text style h3_2022": {
+          "rubric_key_concept": "Aplique formatação em uma página da web usando CSS",
+          "rubric_performance_level_1": "Os cabeçalhos `h3` são de uma nova cor (não preto). Não há código extra na folha de estilo e não há erros de sintaxe no código.",
+          "rubric_performance_level_2": "Os cabeçalhos `h3` são de uma nova cor (não preto).",
+          "rubric_performance_level_3": "Os cabeçalhos `h3` têm um conjunto de regras especial na folha de estilo e a propriedade color é usada, mas há erros suficientes para que o texto não mude de cor.",
+          "rubric_performance_level_4": "Não há um conjunto de regras especial para cabeçalhos `h3` ou a propriedade de cor não é usada no conjunto de regras."
+        },
+        "CSD U2 text style h3_2023": {
+          "rubric_key_concept": "Aplique formatação em uma página da web usando CSS",
+          "rubric_performance_level_1": "Os cabeçalhos `h3` são de uma nova cor (não preto). Não há código extra na folha de estilo e não há erros de sintaxe no código.",
+          "rubric_performance_level_2": "Os cabeçalhos `h3` são de uma nova cor (não preto).",
+          "rubric_performance_level_3": "Os cabeçalhos `h3` têm um conjunto de regras especial na folha de estilo e a propriedade color é usada, mas há erros suficientes para que o texto não mude de cor.",
+          "rubric_performance_level_4": "Não há um conjunto de regras especial para cabeçalhos `h3` ou a propriedade de cor não é usada no conjunto de regras."
+        },
+        "CSD U2 un_ordered lists": {
+          "rubric_key_concept": "Estruture o conteúdo em uma página da Web usando HTML. (Use as tags<ol>``, `<ul>` e `<li>` para criar listas ordenadas e não ordenadas em uma página HTML.)",
+          "rubric_performance_level_1": "Todo o conteúdo da lista está contido nas tags apropriadas para que as listas sejam exibidas como na imagem de exemplo. As tags<li>'' estão todas aninhadas nas tags '' ou<ol>'', e nenhum número é usado no código para simular o comportamento de uma lista ordenada.<ul>",
+          "rubric_performance_level_2": "As tags<ul>``,<ol>`` e `<li>` são todas usadas de forma que alguns itens apareçam em uma lista não ordenada e alguns itens apareçam em uma lista ordenada.",
+          "rubric_performance_level_3": "Pelo menos duas tags `<li>` estão aninhadas dentro de uma tag `<ul>`ou`<ol>`para que o conteúdo apareça em uma lista.",
+          "rubric_performance_level_4": "As tags de lista não são usadas ou são mal utilizadas, de forma que nenhum conteúdo apareça em uma lista."
+        },
+        "CSD U2L2 - PracC_2023": {
+          "rubric_key_concept": "Use a sintaxe HTML correta para criar parágrafos de texto",
+          "rubric_performance_level_3": "Há pelo menos uma tag de parágrafo no texto, mas ela pode não ser ter sido corretamente (por exemplo, falta de tag de fechamento, parágrafos criados fora do elemento do corpo).",
+          "rubric_performance_level_4": "Não há tags de parágrafo no texto."
+        },
+        "CSD U3 Conditionals Apple 2_2018_2019": {
+          "rubric_key_concept": "Use condicionais para controlar o fluxo de um programa.",
+          "rubric_performance_level_1": "A imagem do sprite muda de uma maçã para uma pêra quando a escala do sprite atinge 2.",
+          "rubric_performance_level_2": "Há uma condicional no draw loop que verifica se a escala do sprite atingiu 2.",
+          "rubric_performance_level_3": "Há uma condicional no draw loop que verifica o valor de uma instrução booleana.",
+          "rubric_performance_level_4": "Não há condicionais no draw loop."
+        },
+        "CSD U3 Conditionals Apple 2_2021": {
+          "rubric_key_concept": "Use condicionais para controlar o fluxo de um programa.",
+          "rubric_performance_level_1": "A imagem do sprite muda de uma maçã para uma pêra quando a escala do sprite atinge 2.",
+          "rubric_performance_level_2": "Há uma condicional no draw loop que verifica se a escala do sprite atingiu 2.",
+          "rubric_performance_level_3": "Há uma condicional no draw loop que verifica o valor de uma instrução booleana.",
+          "rubric_performance_level_4": "Não há condicionais no draw loop."
+        },
+        "CSD U3 Conditionals Apple 2_2022": {
+          "rubric_key_concept": "Use condicionais para controlar o fluxo de um programa.",
+          "rubric_performance_level_1": "A imagem do sprite muda de uma maçã para uma pêra quando a escala do sprite atinge 2.",
+          "rubric_performance_level_2": "Há uma condicional no draw loop que verifica se a escala do sprite atingiu 2.",
+          "rubric_performance_level_3": "Há uma condicional no draw loop que verifica o valor de uma instrução booleana.",
+          "rubric_performance_level_4": "Não há condicionais no draw loop."
+        },
+        "CSD U3 Conditionals Apple 2_2023": {
+          "rubric_key_concept": "Use condicionais para controlar o fluxo de um programa.",
+          "rubric_performance_level_1": "A imagem do sprite muda de uma maçã para uma pêra quando a escala do sprite atinge 2.",
+          "rubric_performance_level_2": "Há uma condicional no draw loop que verifica se a escala do sprite atingiu 2.",
+          "rubric_performance_level_3": "Há uma condicional no draw loop que verifica o valor de uma instrução booleana.",
+          "rubric_performance_level_4": "Não há condicionais no draw loop."
+        },
+        "CSD U3 Direction Arrows_2018_2019": {
+          "rubric_key_concept": "Detecte e responda à entrada do usuário pelo teclado.",
+          "rubric_performance_level_1": "O sprite se move corretamente em resposta às quatro teclas de seta. Não há declarações `if` extras.",
+          "rubric_performance_level_2": "O sprite se move em resposta a várias teclas de seta, mas pode ter alguns erros.",
+          "rubric_performance_level_3": "O programa usa uma declaração `if` para detectar a entrada do usuário.",
+          "rubric_performance_level_4": "O programa não detecta a entrada do usuário."
+        },
+        "CSD U3 Direction Arrows_2021": {
+          "rubric_key_concept": "Detecte e responda à entrada do usuário pelo teclado.",
+          "rubric_performance_level_1": "O sprite se move corretamente em resposta às quatro teclas de seta. Não há declarações `if` extras.",
+          "rubric_performance_level_2": "O sprite se move em resposta a várias teclas de seta, mas pode ter alguns erros.",
+          "rubric_performance_level_3": "O programa usa uma declaração `if` para detectar a entrada do usuário.",
+          "rubric_performance_level_4": "O programa não detecta a entrada do usuário."
+        },
+        "CSD U3 Direction Arrows_2022": {
+          "rubric_key_concept": "Detecte e responda à entrada do usuário pelo teclado.",
+          "rubric_performance_level_1": "O sprite se move corretamente em resposta às quatro teclas de seta. Não há declarações `if` extras.",
+          "rubric_performance_level_2": "O sprite se move em resposta a várias teclas de seta, mas pode ter alguns erros.",
+          "rubric_performance_level_3": "O programa usa uma declaração `if` para detectar a entrada do usuário.",
+          "rubric_performance_level_4": "O programa não detecta a entrada do usuário."
+        },
+        "CSD U3 Direction Arrows_2023": {
+          "rubric_key_concept": "Detecte e responda à entrada do usuário pelo teclado.",
+          "rubric_performance_level_1": "O sprite se move corretamente em resposta às quatro teclas de seta. Não há declarações `if` extras.",
+          "rubric_performance_level_2": "O sprite se move em resposta a várias teclas de seta, mas pode ter alguns erros.",
+          "rubric_performance_level_3": "O programa usa uma declaração `if` para detectar a entrada do usuário.",
+          "rubric_performance_level_4": "O programa não detecta a entrada do usuário."
+        },
+        "CSD U3 Draw Loop Plugged update your scene_2019": {
+          "rubric_key_concept": "Use loops para repetir um comportamento em um programa.",
+          "rubric_performance_level_1": "O sprite é animado conforme descrito nas instruções. Outras configurações, como a criação do sprite, acontecem fora do draw loop e não há blocos extras.",
+          "rubric_performance_level_2": "O sprite é animado, mas pode haver pequenos problemas com a cena, como o sprite ou texto errado estando na frente. Pode haver outros erros, como criar sprites dentro do draw loop ou fazer chamadas extras para `drawSprites` ou outro código extra.",
+          "rubric_performance_level_3": "O sprite é animado, mas há grandes problemas, como deixar um “rastro” de locais anteriores atrás ou texto ou outras partes da cena desaparecerem.",
+          "rubric_performance_level_4": "O sprite não é animado."
+        },
+        "CSD U3 Draw Loop Plugged update your scene_2021": {
+          "rubric_key_concept": "Use loops para repetir um comportamento em um programa.",
+          "rubric_performance_level_1": "O sprite é animado conforme descrito nas instruções. Outras configurações, como a criação do sprite, acontecem fora do draw loop e não há blocos extras.",
+          "rubric_performance_level_2": "O sprite é animado, mas pode haver pequenos problemas com a cena, como o sprite ou texto errado estando na frente. Pode haver outros erros, como criar sprites dentro do draw loop ou fazer chamadas extras para `drawSprites` ou outro código extra.",
+          "rubric_performance_level_3": "O sprite é animado, mas há grandes problemas, como deixar um “rastro” de locais anteriores atrás ou texto ou outras partes da cena desaparecerem.",
+          "rubric_performance_level_4": "O sprite não é animado."
+        },
+        "CSD U3 Draw Loop Plugged update your scene_2022": {
+          "rubric_key_concept": "Use loops para repetir um comportamento em um programa.",
+          "rubric_performance_level_1": "O sprite é animado conforme descrito nas instruções. Outras configurações, como a criação do sprite, acontecem fora do draw loop e não há blocos extras.",
+          "rubric_performance_level_2": "O sprite é animado, mas pode haver pequenos problemas com a cena, como o sprite ou texto errado estando na frente. Pode haver outros erros, como criar sprites dentro do draw loop ou fazer chamadas extras para `drawSprites` ou outro código extra.",
+          "rubric_performance_level_3": "O sprite é animado, mas há grandes problemas, como deixar um “rastro” de locais anteriores atrás ou texto ou outras partes da cena desaparecerem.",
+          "rubric_performance_level_4": "O sprite não é animado."
+        },
+        "CSD U3 Draw Loop Plugged update your scene_2023": {
+          "rubric_key_concept": "Use loops para repetir um comportamento em um programa.",
+          "rubric_performance_level_1": "O sprite é animado conforme descrito nas instruções. Outras configurações, como a criação do sprite, acontecem fora do draw loop e não há blocos extras.",
+          "rubric_performance_level_2": "O sprite é animado, mas pode haver pequenos problemas com a cena, como o sprite ou texto errado estando na frente. Pode haver outros erros, como criar sprites dentro do draw loop ou fazer chamadas extras para `drawSprites` ou outro código extra.",
+          "rubric_performance_level_3": "O sprite é animado, mas há grandes problemas, como deixar um “rastro” de locais anteriores atrás ou texto ou outras partes da cena desaparecerem.",
+          "rubric_performance_level_4": "O sprite não é animado."
+        },
+        "CSD U3 Draw Loop Plugged wiggle sprite y_2021": {
+          "rubric_key_concept": "Use loops para repetir um comportamento em um programa.",
+          "rubric_performance_level_1": "O sprite é animado conforme descrito nas instruções. Outras configurações, como a criação do sprite, acontecem fora do draw loop e não há blocos extras.",
+          "rubric_performance_level_2": "O sprite é animado, mas pode haver pequenos problemas com a cena, como criar sprites dentro do draw loop ou fazer chamadas extras para `drawSprites` ou outro código extra.",
+          "rubric_performance_level_3": "O sprite é animado, mas há grandes problemas, como deixar um “rastro” de locais anteriores atrás ou outras partes da cena desaparecerem.",
+          "rubric_performance_level_4": "O sprite não é animado."
+        },
+        "CSD U3 Draw Loop Plugged wiggle sprite y_2022": {
+          "rubric_key_concept": "Use loops para repetir um comportamento em um programa.",
+          "rubric_performance_level_1": "O sprite é animado conforme descrito nas instruções. Outras configurações, como a criação do sprite, acontecem fora do draw loop e não há blocos extras.",
+          "rubric_performance_level_2": "O sprite é animado, mas pode haver pequenos problemas com a cena, como criar sprites dentro do draw loop ou fazer chamadas extras para `drawSprites` ou outro código extra.",
+          "rubric_performance_level_3": "O sprite é animado, mas há grandes problemas, como deixar um “rastro” de locais anteriores atrás ou outras partes da cena desaparecerem.",
+          "rubric_performance_level_4": "O sprite não é animado."
+        },
+        "CSD U3 Draw Loop Plugged wiggle sprite y_2023": {
+          "rubric_key_concept": "Use loops para repetir um comportamento em um programa.",
+          "rubric_performance_level_1": "O sprite é animado conforme descrito nas instruções. Outras configurações, como a criação do sprite, acontecem fora do draw loop e não há blocos extras.",
+          "rubric_performance_level_2": "O sprite é animado, mas pode haver pequenos problemas com a cena, como criar sprites dentro do draw loop ou fazer chamadas extras para `drawSprites` ou outro código extra.",
+          "rubric_performance_level_3": "O sprite é animado, mas há grandes problemas, como deixar um “rastro” de locais anteriores atrás ou outras partes da cena desaparecerem.",
+          "rubric_performance_level_4": "O sprite não é animado."
+        },
+        "CSD U3 Else_2019": {
+          "rubric_key_concept": "Use condicionais para controlar o fluxo de um programa; detectar e responder às entradas do usuário.",
+          "rubric_performance_level_1": "As engrenagens giram na direção oposta quando a barra de espaço não está sendo pressionada e os dentes das engrenagens se alinham corretamente.",
+          "rubric_performance_level_2": "Pelo menos uma engrenagem gira na direção oposta quando a barra de espaço não está sendo pressionada, mas pode haver pequenos erros no programa que impedem que todas as engrenagens girem.",
+          "rubric_performance_level_3": "Há uma cláusula else usada, mas há grandes erros no programa que impedem que as engrenagens girem.",
+          "rubric_performance_level_4": "Não há uma cláusula else."
+        },
+        "CSD U3 Else_2021": {
+          "rubric_key_concept": "Use condicionais para controlar o fluxo de um programa; detectar e responder às entradas do usuário.",
+          "rubric_performance_level_1": "As engrenagens giram na direção oposta quando a barra de espaço não está sendo pressionada e os dentes das engrenagens se alinham corretamente.",
+          "rubric_performance_level_2": "Pelo menos uma engrenagem gira na direção oposta quando a barra de espaço não está sendo pressionada, mas pode haver pequenos erros no programa que impedem que todas as engrenagens girem.",
+          "rubric_performance_level_3": "Há uma cláusula else usada, mas há grandes erros no programa que impedem que as engrenagens girem.",
+          "rubric_performance_level_4": "Não há uma cláusula else."
+        },
+        "CSD U3 Else_2022": {
+          "rubric_key_concept": "Use condicionais para controlar o fluxo de um programa; detectar e responder às entradas do usuário.",
+          "rubric_performance_level_1": "As engrenagens giram na direção oposta quando a barra de espaço não está sendo pressionada e os dentes das engrenagens se alinham corretamente.",
+          "rubric_performance_level_2": "Pelo menos uma engrenagem gira na direção oposta quando a barra de espaço não está sendo pressionada, mas pode haver pequenos erros no programa que impedem que todas as engrenagens girem.",
+          "rubric_performance_level_3": "Há uma cláusula else usada, mas há grandes erros no programa que impedem que as engrenagens girem.",
+          "rubric_performance_level_4": "Não há uma cláusula else."
+        },
+        "CSD U3 Else_2023": {
+          "rubric_key_concept": "Use condicionais para controlar o fluxo de um programa; detectar e responder às entradas do usuário.",
+          "rubric_performance_level_1": "As engrenagens giram na direção oposta quando a barra de espaço não está sendo pressionada e os dentes das engrenagens se alinham corretamente.",
+          "rubric_performance_level_2": "Pelo menos uma engrenagem gira na direção oposta quando a barra de espaço não está sendo pressionada, mas pode haver pequenos erros no programa que impedem que todas as engrenagens girem.",
+          "rubric_performance_level_3": "Há uma cláusula else usada, mas há grandes erros no programa que impedem que as engrenagens girem.",
+          "rubric_performance_level_4": "Não há uma cláusula else."
+        },
+        "CSD U3 Functions Add Change Background_2019": {
+          "rubric_key_concept": "Defina e chame funções para organizar o código e facilitar sua reutilização.",
+          "rubric_performance_level_1": "As duas funções são definidas e chamadas na declaração if conforme instruído, para que planos de fundo diferentes sejam exibidos de acordo com a pontuação atual. O código está organizado corretamente dentro e fora do draw loop e não há blocos extras.",
+          "rubric_performance_level_2": "Pelo menos uma nova função em segundo plano foi definida e chamada com sucesso dentro do programa, mas pode não funcionar exatamente conforme as instruções. O código está organizado corretamente dentro e fora do draw loop.",
+          "rubric_performance_level_3": "Uma função é definida e chamada dentro do programa, mas pode haver erros graves que impeçam sua execução bem-sucedida ou o código tenha sido colocado incorretamente no draw loop.",
+          "rubric_performance_level_4": "Não há novas funções no programa."
+        },
+        "CSD U3 Functions Add Change Background_2021": {
+          "rubric_key_concept": "Defina e chame funções para organizar o código e facilitar sua reutilização.",
+          "rubric_performance_level_1": "As duas funções são definidas e chamadas na declaração if conforme instruído, para que planos de fundo diferentes sejam exibidos de acordo com a pontuação atual. O código está organizado corretamente dentro e fora do draw loop e não há blocos extras.",
+          "rubric_performance_level_2": "Pelo menos uma nova função em segundo plano foi definida e chamada com sucesso dentro do programa, mas pode não funcionar exatamente conforme as instruções. O código está organizado corretamente dentro e fora do draw loop.",
+          "rubric_performance_level_3": "Uma função é definida e chamada dentro do programa, mas pode haver erros graves que impeçam sua execução bem-sucedida ou o código tenha sido colocado incorretamente no draw loop.",
+          "rubric_performance_level_4": "Não há novas funções no programa."
+        },
+        "CSD U3 Functions Add Change Background_2022": {
+          "rubric_key_concept": "Defina e chame funções para organizar o código e facilitar sua reutilização.",
+          "rubric_performance_level_1": "As duas funções são definidas e chamadas na declaração if conforme instruído, para que planos de fundo diferentes sejam exibidos de acordo com a pontuação atual. O código está organizado corretamente dentro e fora do draw loop e não há blocos extras.",
+          "rubric_performance_level_2": "Pelo menos uma nova função em segundo plano foi definida e chamada com sucesso dentro do programa, mas pode não funcionar exatamente conforme as instruções. O código está organizado corretamente dentro e fora do draw loop.",
+          "rubric_performance_level_3": "Uma função é definida e chamada dentro do programa, mas pode haver erros graves que impeçam sua execução bem-sucedida ou o código tenha sido colocado incorretamente no draw loop.",
+          "rubric_performance_level_4": "Não há novas funções no programa."
+        },
+        "CSD U3 Functions Add Change Background_2023": {
+          "rubric_key_concept": "Defina e chame funções para organizar o código e facilitar sua reutilização.",
+          "rubric_performance_level_1": "As duas funções são definidas e chamadas na declaração if conforme instruído, para que planos de fundo diferentes sejam exibidos de acordo com a pontuação atual. O código está organizado corretamente dentro e fora do draw loop e não há blocos extras.",
+          "rubric_performance_level_2": "Pelo menos uma nova função em segundo plano foi definida e chamada com sucesso dentro do programa, mas pode não funcionar exatamente conforme as instruções. O código está organizado corretamente dentro e fora do draw loop.",
+          "rubric_performance_level_3": "Uma função é definida e chamada dentro do programa, mas pode haver erros graves que impeçam sua execução bem-sucedida ou o código tenha sido colocado incorretamente no draw loop.",
+          "rubric_performance_level_4": "Não há novas funções no programa."
+        },
+        "CSD U3 Movement Fish_2021": {
+          "rubric_key_concept": "Use o counter pattern para incrementar ou diminuir as propriedades do sprite.",
+          "rubric_performance_level_1": "A animação do aluno é idêntica ao exemplo fornecido nas instruções.",
+          "rubric_performance_level_2": "Todos os peixes se movem pela tela na ordem indicada nas instruções.",
+          "rubric_performance_level_3": "O counter pattern é usado dentro do draw loop para decrescer a posição x do peixe azul e verde. Todos os peixes se movem para a esquerda na tela, mas não necessariamente nas velocidades indicadas.",
+          "rubric_performance_level_4": "O counter pattern foi usado fora do draw loop, ou não foi usado."
+        },
+        "CSD U3 Movement Fish_2022": {
+          "rubric_key_concept": "Use o counter pattern para incrementar ou diminuir as propriedades do sprite.",
+          "rubric_performance_level_1": "A animação do aluno é idêntica ao exemplo fornecido nas instruções.",
+          "rubric_performance_level_2": "Todos os peixes se movem pela tela na ordem indicada nas instruções.",
+          "rubric_performance_level_3": "O counter pattern é usado dentro do draw loop para decrescer a posição x do peixe azul e verde. Todos os peixes se movem para a esquerda na tela, mas não necessariamente nas velocidades indicadas.",
+          "rubric_performance_level_4": "O counter pattern foi usado fora do draw loop, ou não foi usado."
+        },
+        "CSD U3 Movement Fish_2023": {
+          "rubric_key_concept": "Use o counter pattern para incrementar ou diminuir as propriedades do sprite.",
+          "rubric_performance_level_1": "A animação do aluno é idêntica ao exemplo fornecido nas instruções.",
+          "rubric_performance_level_2": "Todos os peixes se movem pela tela na ordem indicada nas instruções.",
+          "rubric_performance_level_3": "O counter pattern é usado dentro do draw loop para decrescer a posição x do peixe azul e verde. Todos os peixes se movem para a esquerda na tela, mas não necessariamente nas velocidades indicadas.",
+          "rubric_performance_level_4": "O counter pattern foi usado fora do draw loop, ou não foi usado."
+        },
+        "CSD U3 Random Debug Cloud_2018_2019": {
+          "rubric_key_concept": "Use argumentos para alterar a forma como um método ou comando é executado. ",
+          "rubric_performance_level_1": "O desenho programático aparece exatamente como no exemplo.",
+          "rubric_performance_level_2": "O desenho programático é aproximadamente o mesmo como na imagem, e a largura e a altura da nuvem foram alteradas.",
+          "rubric_performance_level_3": "A altura, a largura ou a posição da nuvem foram alteradas, mas ela pode não ser mais larga do que sua altura, ou pode ter sido movida para outro lugar na tela.",
+          "rubric_performance_level_4": "Nenhuma alteração foi feita no código ou as alterações não estão relacionadas às instruções."
+        },
+        "CSD U3 Random Debug Cloud_2021": {
+          "rubric_key_concept": "Use parâmetros para alterar a forma como um método ou comando é executado. ",
+          "rubric_performance_level_1": "O desenho programático aparece exatamente como no exemplo.",
+          "rubric_performance_level_2": "O desenho programático é aproximadamente o mesmo como na imagem, e a largura e a altura da nuvem foram alteradas.",
+          "rubric_performance_level_3": "A altura, a largura ou a posição da nuvem foram alteradas, mas ela pode não ser mais larga do que sua altura, ou pode ter sido movida para outro lugar na tela.",
+          "rubric_performance_level_4": "Nenhuma alteração foi feita no código ou as alterações não estão relacionadas às instruções."
+        },
+        "CSD U3 Random Debug Cloud_2022": {
+          "rubric_key_concept": "Use parâmetros para alterar a forma como um método ou comando é executado. ",
+          "rubric_performance_level_1": "O desenho programático aparece exatamente como no exemplo.",
+          "rubric_performance_level_2": "O desenho programático é aproximadamente o mesmo como na imagem, e a largura e a altura da nuvem foram alteradas.",
+          "rubric_performance_level_3": "A altura, a largura ou a posição da nuvem foram alteradas, mas ela pode não ser mais larga do que sua altura, ou pode ter sido movida para outro lugar na tela.",
+          "rubric_performance_level_4": "Nenhuma alteração foi feita no código ou as alterações não estão relacionadas às instruções."
+        },
+        "CSD U3 Random Debug Cloud_2023": {
+          "rubric_key_concept": "Use parâmetros para alterar a forma como um método ou comando é executado. ",
+          "rubric_performance_level_1": "O desenho programático aparece exatamente como no exemplo.",
+          "rubric_performance_level_2": "O desenho programático é aproximadamente o mesmo como na imagem, e a largura e a altura da nuvem foram alteradas.",
+          "rubric_performance_level_3": "A altura, a largura ou a posição da nuvem foram alteradas, mas ela pode não ser mais larga do que sua altura, ou pode ter sido movida para outro lugar na tela.",
+          "rubric_performance_level_4": "Nenhuma alteração foi feita no código ou as alterações não estão relacionadas às instruções."
+        },
+        "CSD U3 Random rainbow snake_2018_2019": {
+          "rubric_key_concept": "Gere e use números aleatórios em um programa, use argumentos para alterar a forma como um método ou comando é executado.",
+          "rubric_performance_level_1": "Todos os círculos têm posições horizontais apropriadas, cores diferentes e aparecem em posições verticais aleatórias, e alguns círculos têm um tamanho aleatório.",
+          "rubric_performance_level_2": "Todos os círculos têm posições horizontais apropriadas, cores diferentes e aparecem em posições verticais aleatórias",
+          "rubric_performance_level_3": "Pelo menos um círculo criado por um aluno tem uma nova cor, aparece em uma posição vertical aleatória e tem uma posição horizontal diferente de qualquer outro.",
+          "rubric_performance_level_4": "Nenhum aluno produziu círculos, ou quaisquer novos círculos compartilham uma cor ou posição horizontal com os círculos produzidos pelo código original."
+        },
+        "CSD U3 Random rainbow snake_2021": {
+          "rubric_key_concept": "Gere e use números aleatórios em um programa, use argumentos para alterar a forma como um método ou comando é executado.",
+          "rubric_performance_level_1": "Todos os círculos têm posições horizontais apropriadas, cores diferentes e aparecem em posições verticais aleatórias, e alguns círculos têm um tamanho aleatório.",
+          "rubric_performance_level_2": "Todos os círculos têm posições horizontais apropriadas, cores diferentes e aparecem em posições verticais aleatórias",
+          "rubric_performance_level_3": "Pelo menos um círculo criado por um aluno tem uma nova cor, aparece em uma posição vertical aleatória e tem uma posição horizontal diferente de qualquer outro.",
+          "rubric_performance_level_4": "Nenhum aluno produziu círculos, ou quaisquer novos círculos compartilham uma cor ou posição horizontal com os círculos produzidos pelo código original."
+        },
+        "CSD U3 Random rainbow snake_2022": {
+          "rubric_key_concept": "Gere e use números aleatórios em um programa, use argumentos para alterar a forma como um método ou comando é executado.",
+          "rubric_performance_level_1": "Todos os círculos têm posições horizontais apropriadas, cores diferentes e aparecem em posições verticais aleatórias, e alguns círculos têm um tamanho aleatório.",
+          "rubric_performance_level_2": "Todos os círculos têm posições horizontais apropriadas, cores diferentes e aparecem em posições verticais aleatórias",
+          "rubric_performance_level_3": "Pelo menos um círculo criado por um aluno tem uma nova cor, aparece em uma posição vertical aleatória e tem uma posição horizontal diferente de qualquer outro.",
+          "rubric_performance_level_4": "Nenhum aluno produziu círculos, ou quaisquer novos círculos compartilham uma cor ou posição horizontal com os círculos produzidos pelo código original."
+        },
+        "CSD U3 Random rainbow snake_2023": {
+          "rubric_key_concept": "Gere e use números aleatórios em um programa, use argumentos para alterar a forma como um método ou comando é executado.",
+          "rubric_performance_level_2": "Pelo menos um círculo criado por um aluno tem uma nova cor, aparece em uma posição vertical aleatória e tem uma posição horizontal diferente de qualquer outro.",
+          "rubric_performance_level_4": "Nenhum aluno produziu círculos, ou quaisquer novos círculos compartilham uma cor ou posição horizontal com os círculos produzidos pelo código original."
+        },
+        "CSD U3 Sprites assessment_2021": {
+          "rubric_key_concept": "Crie e use sprites.",
+          "rubric_performance_level_1": "Mais de dois sprites foram criados com animações diferentes as quais são desenhadas na tela em locais diferentes. Cada sprite tem um rótulo único e apropriado.",
+          "rubric_performance_level_2": "Pelo menos dois sprites foram criados com animações diferentes as quais são desenhadas na tela em locais diferentes.",
+          "rubric_performance_level_3": "Pelo menos um sprite foi criado com uma animação a qual é desenhada na tela.",
+          "rubric_performance_level_4": "Nenhum sprite foi criado ou foi criado sem uma animação - mostrada por um quadrado cinza."
+        },
+        "CSD U3 Sprites assessment_2022": {
+          "rubric_key_concept": "Crie e use sprites.",
+          "rubric_performance_level_1": "Mais de dois sprites foram criados com animações diferentes as quais são desenhadas na tela em locais diferentes. Cada sprite tem um rótulo único e apropriado.",
+          "rubric_performance_level_2": "Pelo menos dois sprites foram criados com animações diferentes as quais são desenhadas na tela em locais diferentes.",
+          "rubric_performance_level_3": "Pelo menos um sprite foi criado com uma animação a qual é desenhada na tela.",
+          "rubric_performance_level_4": "Nenhum sprite foi criado ou foi criado sem uma animação - mostrada por um quadrado cinza."
+        },
+        "CSD U3 Sprites assessment_2023": {
+          "rubric_key_concept": "Crie e use sprites.",
+          "rubric_performance_level_1": "Mais de dois sprites foram criados com animações diferentes as quais são desenhadas na tela em locais diferentes. Cada sprite tem um rótulo único e apropriado.",
+          "rubric_performance_level_2": "Pelo menos dois sprites foram criados com animações diferentes as quais são desenhadas na tela em locais diferentes.",
+          "rubric_performance_level_3": "Pelo menos um sprite foi criado com uma animação a qual é desenhada na tela.",
+          "rubric_performance_level_4": "Nenhum sprite foi criado ou foi criado sem uma animação - mostrada por um quadrado cinza."
+        },
+        "CSD U3 Sprites scene sprites_2019": {
+          "rubric_performance_level_1": "Pelo menos um sprite é criado, recebe uma animação, é dimensionado para um bom tamanho e desenhado na tela. A variável sprite tem um nome razoável. `DrawSprites` é chamado após todas as propriedades do sprite terem sido atualizadas.",
+          "rubric_performance_level_2": "Pelo menos um sprite é criado, recebe uma animação e é desenhado na tela. A variável sprite foi renomeada.",
+          "rubric_performance_level_3": "Pelo menos um sprite foi criado e desenhado na tela. Pode haver problemas com a animação ou conflitos ao usar o mesmo nome de variável para vários sprites.",
+          "rubric_performance_level_4": "Nenhum sprite é criado."
+        },
+        "CSD U3 Variables assessment_2021": {
+          "rubric_key_concept": "Use variáveis para armazenar e atualizar informações",
+          "rubric_performance_level_1": "A variável eyeSize é usada de forma que os dois olhos tenham o mesmo tamanho definido pelo eyeSize, sem outras alterações inesperadas. O programa está livre de erros de sintaxe.",
+          "rubric_performance_level_2": "A variável eyeSize é usada de forma que os dois olhos tenham o mesmo tamanho definido pelo eyeSize. Outras alterações no código podem ter introduzido outros comportamentos inesperados ou pode haver pequenos erros de sintaxe que não impedem a execução do código.",
+          "rubric_performance_level_3": "A variável eyeSize foi usada em algum lugar do programa, mas não de forma que seja executada conforme as instruções.",
+          "rubric_performance_level_4": "Não há alterações no código, ou as alterações parecem não relacionadas às variáveis, ou as variáveis são usadas de forma que impedem a execução do programa."
+        },
+        "CSD U3 Variables assessment_2022": {
+          "rubric_key_concept": "Use variáveis para armazenar e atualizar informações",
+          "rubric_performance_level_1": "A variável eyeSize é usada de forma que os dois olhos tenham o mesmo tamanho definido pelo eyeSize, sem outras alterações inesperadas. O programa está livre de erros de sintaxe.",
+          "rubric_performance_level_2": "A variável eyeSize é usada de forma que os dois olhos tenham o mesmo tamanho definido pelo eyeSize. Outras alterações no código podem ter introduzido outros comportamentos inesperados ou pode haver pequenos erros de sintaxe que não impedem a execução do código.",
+          "rubric_performance_level_3": "A variável eyeSize foi usada em algum lugar do programa, mas não de forma que seja executada conforme as instruções.",
+          "rubric_performance_level_4": "Não há alterações no código, ou as alterações parecem não relacionadas às variáveis, ou as variáveis são usadas de forma que impedem a execução do programa."
+        },
+        "CSD U3 Variables assessment_2023": {
+          "rubric_key_concept": "Use variáveis para armazenar e atualizar informações",
+          "rubric_performance_level_1": "A variável eyeSize é usada de forma que os dois olhos tenham o mesmo tamanho definido pelo eyeSize, sem outras alterações inesperadas. O programa está livre de erros de sintaxe.",
+          "rubric_performance_level_2": "A variável eyeSize é usada de forma que os dois olhos tenham o mesmo tamanho definido pelo eyeSize. Outras alterações no código podem ter introduzido outros comportamentos inesperados ou pode haver pequenos erros de sintaxe que não impedem a execução do código.",
+          "rubric_performance_level_3": "A variável eyeSize foi usada em algum lugar do programa, mas não de forma que seja executada conforme as instruções.",
+          "rubric_performance_level_4": "Não há alterações no código, ou as alterações parecem não relacionadas às variáveis, ou as variáveis são usadas de forma que impedem a execução do programa."
+        },
+        "CSD U3 Variables random with assignment_2019": {
+          "rubric_key_concept": "Use variáveis para armazenar e atualizar informações",
+          "rubric_performance_level_1": "A variável eyeSize é usada de forma que os dois olhos tenham o mesmo tamanho aleatório conforme as instruções, sem outras alterações inesperadas.",
+          "rubric_performance_level_2": "A variável eyeSize é usada de forma que os dois olhos tenham o mesmo tamanho aleatório, mas outras alterações no código podem ter introduzido outros comportamentos inesperados.",
+          "rubric_performance_level_3": "A variável eyeSize foi usada em algum lugar do programa, mas não de forma que seja executada conforme as instruções.",
+          "rubric_performance_level_4": "Não há alterações no código, ou as alterações parecem não relacionadas à variável eyeSize, ou a variável é usada de uma forma que impede a execução do programa."
+        },
+        "CSD U3 abstraction decelerateY_2019": {
+          "rubric_key_concept": "Modele movimentos complexos em um plano cartesiano",
+          "rubric_performance_level_1": "O sprite de pedra desacelera à medida que sobe na tela, então começa a cair de volta, acelerando ao cair. A pedra atinge uma altura razoável e não há blocos  de código extras.",
+          "rubric_performance_level_2": "O sprite de pedra desacelera à medida que sobe na tela, então começa a cair de volta, acelerando ao cair.",
+          "rubric_performance_level_3": "A pedra começa a subir a tela e sua velocidade muda continuamente à medida que o programa está sendo executado.",
+          "rubric_performance_level_4": "Não há alteração na velocidade da pedra à medida que o programa é executado."
+        },
+        "CSD U3 abstraction decelerateY_2021": {
+          "rubric_key_concept": "Modele movimentos complexos em um plano cartesiano",
+          "rubric_performance_level_1": "O sprite de pedra desacelera à medida que sobe na tela, então começa a cair de volta, acelerando ao cair. A pedra atinge uma altura razoável e não há blocos  de código extras.",
+          "rubric_performance_level_2": "O sprite de pedra desacelera à medida que sobe na tela, então começa a cair de volta, acelerando ao cair.",
+          "rubric_performance_level_3": "A pedra começa a subir a tela e sua velocidade muda continuamente à medida que o programa está sendo executado.",
+          "rubric_performance_level_4": "Não há alteração na velocidade da pedra à medida que o programa é executado."
+        },
+        "CSD U3 abstraction decelerateY_2022": {
+          "rubric_key_concept": "Modele movimentos complexos em um plano cartesiano",
+          "rubric_performance_level_1": "O sprite de pedra desacelera à medida que sobe na tela, então começa a cair de volta, acelerando ao cair. A pedra atinge uma altura razoável e não há blocos  de código extras.",
+          "rubric_performance_level_2": "O sprite de pedra desacelera à medida que sobe na tela, então começa a cair de volta, acelerando ao cair.",
+          "rubric_performance_level_3": "A pedra começa a subir a tela e sua velocidade muda continuamente à medida que o programa está sendo executado.",
+          "rubric_performance_level_4": "Não há alteração na velocidade da pedra à medida que o programa é executado."
+        },
+        "CSD U3 abstraction decelerateY_2023": {
+          "rubric_key_concept": "Modele movimentos complexos em um plano cartesiano",
+          "rubric_performance_level_1": "O sprite de pedra desacelera à medida que sobe na tela, então começa a cair de volta, acelerando ao cair. A pedra atinge uma altura razoável e não há blocos  de código extras.",
+          "rubric_performance_level_2": "O sprite de pedra desacelera à medida que sobe na tela, então começa a cair de volta, acelerando ao cair.",
+          "rubric_performance_level_3": "A pedra começa a subir a tela e sua velocidade muda continuamente à medida que o programa está sendo executado.",
+          "rubric_performance_level_4": "Não há alteração na velocidade da pedra à medida que o programa é executado."
+        },
+        "CSD U3 abstraction velocityX control_2019": {
+          "rubric_key_concept": "Use condicionais para controlar o fluxo de um programa; modele o movimento bidimensional em um plano cartesiano.",
+          "rubric_performance_level_1": "Pressionar a tecla de seta direita uma vez faz com que o peixe nade para o lado direito da tela, vire e nade para o lado esquerdo da tela e depois pare. Não há blocos extras no programa e o padrão do contador não é usado.",
+          "rubric_performance_level_2": "Pressionar a tecla de seta direita uma vez faz com que o sprite dos peixes nade diretamente pela tela. O padrão do contador não é usado.",
+          "rubric_performance_level_3": "Pressionar a tecla de seta direita uma vez faz com que o sprite do peixe se mova pela tela de alguma forma.",
+          "rubric_performance_level_4": "Pressionar a tecla de seta não causa movimento, ou o movimento é interrompido assim que a tecla é solta."
+        },
+        "CSD U3 abstraction velocityX control_2021": {
+          "rubric_key_concept": "Use condicionais para controlar o fluxo de um programa; modele o movimento bidimensional em um plano cartesiano.",
+          "rubric_performance_level_1": "O peixe nada para o lado direito da tela, gira e nada para o lado esquerdo da tela, então repete. O sprite parece estar sempre voltado para a direção apropriada. Não há blocos extras no programa e o contrapadrão não é usado.",
+          "rubric_performance_level_2": "O peixe nada para o lado direito da tela, gira e nada para o lado esquerdo da tela, mas talvez não esteja voltado para a direção certa enquanto se move. O contrapadrão não é usado.",
+          "rubric_performance_level_3": "O peixe nada para o lado direito da tela, gira e nada para o lado esquerdo da tela, mas não repete o movimento. O aluno só mudou sua velocidade usando a primeira declaração condicional fornecida. ",
+          "rubric_performance_level_4": "O peixe simplesmente se move para através da tela e depois desaparece."
+        },
+        "CSD U3 abstraction velocityX control_2022": {
+          "rubric_key_concept": "Use condicionais para controlar o fluxo de um programa; modele o movimento bidimensional em um plano cartesiano.",
+          "rubric_performance_level_1": "O peixe nada para o lado direito da tela, gira e nada para o lado esquerdo da tela, então repete. O sprite parece estar sempre voltado para a direção apropriada. Não há blocos extras no programa e o contrapadrão não é usado.",
+          "rubric_performance_level_2": "O peixe nada para o lado direito da tela, gira e nada para o lado esquerdo da tela, mas talvez não esteja voltado para a direção certa enquanto se move. O contrapadrão não é usado.",
+          "rubric_performance_level_3": "O peixe nada para o lado direito da tela, gira e nada para o lado esquerdo da tela, mas não repete o movimento. O aluno só mudou sua velocidade usando a primeira declaração condicional fornecida. ",
+          "rubric_performance_level_4": "O peixe simplesmente se move para através da tela e depois desaparece."
+        },
+        "CSD U3 abstraction velocityX control_2023": {
+          "rubric_key_concept": "Use condicionais para controlar o fluxo de um programa; modele o movimento bidimensional em um plano cartesiano.",
+          "rubric_performance_level_1": "O peixe nada para o lado direito da tela, gira e nada para o lado esquerdo da tela, então repete. O sprite parece estar sempre voltado para a direção apropriada. Não há blocos extras no programa e o contrapadrão não é usado.",
+          "rubric_performance_level_2": "O peixe nada para o lado direito da tela, gira e nada para o lado esquerdo da tela, mas talvez não esteja voltado para a direção certa enquanto se move. O contrapadrão não é usado.",
+          "rubric_performance_level_3": "O peixe nada para o lado direito da tela, gira e nada para o lado esquerdo da tela, mas não repete o movimento. O aluno só mudou sua velocidade usando a primeira declaração condicional fornecida. ",
+          "rubric_performance_level_4": "O peixe simplesmente se move para através da tela e depois desaparece."
+        },
+        "CSD U3 collisions flyman make it your own_2019": {
+          "rubric_key_concept": "Modele movimentos complexos em um plano cartesiano.",
+          "rubric_performance_level_1": "O personagem do jogador não consegue se mover pelo obstáculo, a moeda nunca aparece atrás do obstáculo e o tamanho e a forma do colisor acionam as colisões em momentos razoáveis. Há pelo menos uma nova interação com sprites da escolha do aluno.",
+          "rubric_performance_level_2": "O personagem do jogador não consegue passar pelo obstáculo e a moeda nunca aparece atrás do obstáculo.",
+          "rubric_performance_level_3": "O personagem do jogador interage com o obstáculo de alguma forma, mas pode haver problemas, como o jogador mover o obstáculo ou, às vezes, a moeda aparecer atrás do obstáculo.",
+          "rubric_performance_level_4": "Não há interações entre o personagem do jogador e o obstáculo."
+        },
+        "CSD U3 collisions horse_2019": {
+          "rubric_key_concept": "Crie e modifique objetos (sprites) para gerenciar a complexidade dos elementos em tela. ",
+          "rubric_performance_level_1": "O cavalo se transforma em unicórnio quando o arco-íris o toca. Não há blocos extras no programa.",
+          "rubric_performance_level_2": "O programa reage de alguma forma quando o arco-íris toca o cavalo.",
+          "rubric_performance_level_3": "O programa usa uma condicional e detecta quando o arco-íris toca o cavalo, mas há erros suficientes para que ele não reaja de forma alguma.",
+          "rubric_performance_level_4": "O programa não detecta quando o arco-íris toca o cavalo ou não há nenhuma condicional no programa."
+        },
+        "CSD U3 collisions horse_2021": {
+          "rubric_key_concept": "Crie e modifique objetos (sprites) para gerenciar a complexidade dos elementos em tela. ",
+          "rubric_performance_level_1": "O cavalo se transforma em unicórnio quando o arco-íris o toca. Não há blocos extras no programa.",
+          "rubric_performance_level_2": "O programa reage de alguma forma quando o arco-íris toca o cavalo.",
+          "rubric_performance_level_3": "O programa usa uma condicional e detecta quando o arco-íris toca o cavalo, mas há erros suficientes para que ele não reaja de forma alguma.",
+          "rubric_performance_level_4": "O programa não detecta quando o arco-íris toca o cavalo ou não há nenhuma condicional no programa."
+        },
+        "CSD U3 collisions horse_2022": {
+          "rubric_key_concept": "Crie e modifique objetos (sprites) para gerenciar a complexidade dos elementos em tela. ",
+          "rubric_performance_level_1": "O cavalo se transforma em unicórnio quando o arco-íris o toca. Não há blocos extras no programa.",
+          "rubric_performance_level_2": "O programa reage de alguma forma quando o arco-íris toca o cavalo.",
+          "rubric_performance_level_3": "O programa usa uma condicional e detecta quando o arco-íris toca o cavalo, mas há erros suficientes para que ele não reaja de forma alguma.",
+          "rubric_performance_level_4": "O programa não detecta quando o arco-íris toca o cavalo ou não há nenhuma condicional no programa."
+        },
+        "CSD U3 collisions horse_2023": {
+          "rubric_key_concept": "Crie e modifique objetos (sprites) para gerenciar a complexidade dos elementos em tela. ",
+          "rubric_performance_level_1": "O cavalo se transforma em unicórnio quando o arco-íris o toca. Não há blocos extras no programa.",
+          "rubric_performance_level_2": "O programa reage de alguma forma quando o arco-íris toca o cavalo.",
+          "rubric_performance_level_3": "O programa usa uma condicional e detecta quando o arco-íris toca o cavalo, mas há erros suficientes para que ele não reaja de forma alguma.",
+          "rubric_performance_level_4": "O programa não detecta quando o arco-íris toca o cavalo ou não há nenhuma condicional no programa."
+        },
+        "CSD U3 debug_2019": {
+          "rubric_key_concept": "Use um sistema de coordenadas para colocar elementos em uma tela, levando em conta o tamanho e a sobreposição do objeto.",
+          "rubric_performance_level_1": "O desenho programático é idêntico ao exemplo e está contido nas sete linhas de código.",
+          "rubric_performance_level_2": "O desenho programático é basicamente o mesmo que o desenho, mas pode haver alguns pequenos erros de posicionamento e pode haver linhas extras de código.",
+          "rubric_performance_level_3": "O quadrado foi movido, é roxo e aparece na frente dos círculos.",
+          "rubric_performance_level_4": "A imagem é a mesma ou as alterações parecem não estar relacionadas à tarefa."
+        },
+        "CSD U3 debug_2021": {
+          "rubric_key_concept": "Use um sistema de coordenadas para colocar elementos em uma tela, levando em conta o tamanho e a sobreposição do objeto.",
+          "rubric_performance_level_1": "O desenho programático é idêntico ao exemplo e está contido nas sete linhas de código.",
+          "rubric_performance_level_2": "O desenho programático é basicamente o mesmo que o desenho, mas pode haver alguns pequenos erros de posicionamento e pode haver linhas extras de código.",
+          "rubric_performance_level_3": "O quadrado foi movido, é roxo e aparece na frente dos círculos.",
+          "rubric_performance_level_4": "A imagem é a mesma ou as alterações parecem não estar relacionadas à tarefa."
+        },
+        "CSD U3 debug_2022": {
+          "rubric_key_concept": "Use um sistema de coordenadas para colocar elementos em uma tela, levando em conta o tamanho e a sobreposição do objeto.",
+          "rubric_performance_level_1": "O desenho programático é idêntico ao exemplo e está contido nas sete linhas de código.",
+          "rubric_performance_level_2": "O desenho programático é basicamente o mesmo que o desenho, mas pode haver alguns pequenos erros de posicionamento e pode haver linhas extras de código.",
+          "rubric_performance_level_3": "O quadrado foi movido, é roxo e aparece na frente dos círculos.",
+          "rubric_performance_level_4": "A imagem é a mesma ou as alterações parecem não estar relacionadas à tarefa."
+        },
+        "CSD U3 debug_2023": {
+          "rubric_key_concept": "Use um sistema de coordenadas para colocar elementos em uma tela, levando em conta o tamanho e a sobreposição do objeto.",
+          "rubric_performance_level_2": "O desenho programático é basicamente o mesmo que o desenho, mas pode haver alguns pequenos erros de posicionamento e pode haver linhas extras de código.",
+          "rubric_performance_level_3": "O quadrado foi movido, é roxo e aparece na frente dos círculos.",
+          "rubric_performance_level_4": "A imagem é a mesma ou as alterações parecem não estar relacionadas à tarefa."
+        },
+        "CSD U3 platform challenge_2019": {
+          "rubric_key_concept": "Usando um processo estruturado para planejar e desenvolver um programa",
+          "rubric_performance_level_1": "O guia do projeto reflete com precisão o programa, conforme mostrado no exemplo e conforme codificado pelo aluno. Funções, variáveis e sprites relevantes são consistentes entre o guia do projeto e o projeto real, com poucas exceções.",
+          "rubric_performance_level_2": "O guia do projeto é de maneira geral consistente com o projeto de amostra e o projeto do aluno, com funções principais e sprites incluídos. Pode haver algumas inconsistências.",
+          "rubric_performance_level_3": "O guia do projeto menciona alguns recursos do programa, funções e sprites associados, mas há partes importantes do programa ausentes do guia.",
+          "rubric_performance_level_4": "O guia do projeto está incompleto ou parece não descrever o programa."
+        },
+        "CSD U3 platform review_2021": {
+          "rubric_key_concept": "Usando um processo estruturado para planejar e desenvolver um programa",
+          "rubric_performance_level_1": "O guia do projeto reflete com precisão o programa, conforme mostrado no exemplo e conforme codificado pelo aluno. Funções, variáveis e sprites relevantes são consistentes entre o guia do projeto e o projeto real, com poucas exceções.",
+          "rubric_performance_level_2": "O guia do projeto é de maneira geral consistente com o projeto de amostra e o projeto do aluno, com funções principais e sprites incluídos. Pode haver algumas inconsistências.",
+          "rubric_performance_level_3": "O guia do projeto menciona alguns recursos do programa, funções e sprites associados, mas há partes importantes do programa ausentes do guia.",
+          "rubric_performance_level_4": "O guia do projeto está incompleto ou parece não descrever o programa."
+        },
+        "CSD U3 platform review_2022": {
+          "rubric_key_concept": "Usando um processo estruturado para planejar e desenvolver um programa",
+          "rubric_performance_level_1": "O guia do projeto reflete com precisão o programa, conforme mostrado no exemplo e conforme codificado pelo aluno. Funções, variáveis e sprites relevantes são consistentes entre o guia do projeto e o projeto real, com poucas exceções.",
+          "rubric_performance_level_2": "O guia do projeto é de maneira geral consistente com o projeto de amostra e o projeto do aluno, com funções principais e sprites incluídos. Pode haver algumas inconsistências.",
+          "rubric_performance_level_3": "O guia do projeto menciona alguns recursos do programa, funções e sprites associados, mas há partes importantes do programa ausentes do guia.",
+          "rubric_performance_level_4": "O guia do projeto está incompleto ou parece não descrever o programa."
+        },
+        "CSD U3 platform review_2023": {
+          "rubric_key_concept": "Usando um processo estruturado para planejar e desenvolver um programa",
+          "rubric_performance_level_1": "O guia do projeto reflete com precisão o programa, conforme mostrado no exemplo e conforme codificado pelo aluno. Funções, variáveis e sprites relevantes são consistentes entre o guia do projeto e o projeto real, com poucas exceções.",
+          "rubric_performance_level_2": "O guia do projeto é de maneira geral consistente com o projeto de amostra e o projeto do aluno, com funções principais e sprites incluídos. Pode haver algumas inconsistências.",
+          "rubric_performance_level_3": "O guia do projeto menciona alguns recursos do programa, funções e sprites associados, mas há partes importantes do programa ausentes do guia.",
+          "rubric_performance_level_4": "O guia do projeto está incompleto ou parece não descrever o programa."
+        },
+        "CSD U4 - Design Mode Project_2019": {
+          "rubric_key_concept": "Crie um protótipo digital para um aplicativo de tela.",
+          "rubric_performance_level_1": "O protótipo digital é uma boa recriação do protótipo em papel, com apenas pequenas inconsistências.",
+          "rubric_performance_level_2": "A maioria dos elementos do protótipo em papel foram recriado no protótipo digital, mas pode haver algumas inconsistências com o layout, o tamanho ou alguns pequenos elementos ausentes. As inconsistências não afetariam a funcionalidade do protótipo.",
+          "rubric_performance_level_3": "Alguns elementos do protótipo em papel foram recriados no protótipo digital, mas há inconsistências suficientes para afetar a funcionalidade do protótipo.",
+          "rubric_performance_level_4": "Não há elementos no protótipo digital ou os elementos não são consistentes com o protótipo em papel."
+        },
+        "CSD U4 - Design Mode Project_2021": {
+          "rubric_key_concept": "Crie um protótipo digital para um aplicativo de tela.",
+          "rubric_performance_level_1": "O protótipo digital é uma boa recriação do protótipo em papel, com apenas pequenas inconsistências.",
+          "rubric_performance_level_2": "A maioria dos elementos do protótipo em papel foram recriado no protótipo digital, mas pode haver algumas inconsistências com o layout, o tamanho ou alguns pequenos elementos ausentes. As inconsistências não afetariam a funcionalidade do protótipo.",
+          "rubric_performance_level_3": "Alguns elementos do protótipo em papel foram recriados no protótipo digital, mas há inconsistências suficientes para afetar a funcionalidade do protótipo.",
+          "rubric_performance_level_4": "Não há elementos no protótipo digital ou os elementos não são consistentes com o protótipo em papel."
+        },
+        "CSD U4 - Design Mode Project_2022": {
+          "rubric_key_concept": "Crie um protótipo digital para um aplicativo de tela.",
+          "rubric_performance_level_1": "O protótipo digital é uma boa recriação do protótipo em papel, com apenas pequenas inconsistências.",
+          "rubric_performance_level_2": "A maioria dos elementos do protótipo em papel foram recriado no protótipo digital, mas pode haver algumas inconsistências com o layout, o tamanho ou alguns pequenos elementos ausentes. As inconsistências não afetariam a funcionalidade do protótipo.",
+          "rubric_performance_level_3": "Alguns elementos do protótipo em papel foram recriados no protótipo digital, mas há inconsistências suficientes para afetar a funcionalidade do protótipo.",
+          "rubric_performance_level_4": "Não há elementos no protótipo digital ou os elementos não são consistentes com o protótipo em papel."
+        },
+        "CSD U4 - Design Mode Project_2023": {
+          "rubric_key_concept": "Crie um protótipo digital para um aplicativo de tela.",
+          "rubric_performance_level_1": "O protótipo digital é uma boa recriação do protótipo em papel, com apenas pequenas inconsistências.",
+          "rubric_performance_level_2": "A maioria dos elementos do protótipo em papel foram recriado no protótipo digital, mas pode haver algumas inconsistências com o layout, o tamanho ou alguns pequenos elementos ausentes. As inconsistências não afetariam a funcionalidade do protótipo.",
+          "rubric_performance_level_3": "Alguns elementos do protótipo em papel foram recriados no protótipo digital, mas há inconsistências suficientes para afetar a funcionalidade do protótipo.",
+          "rubric_performance_level_4": "Não há elementos no protótipo digital ou os elementos não são consistentes com o protótipo em papel."
+        },
+        "CSD U6 - Accelerometer - A_2023": {
+          "rubric_key_concept": "Use o acelerômetro em um evento e com dados para criar um aplicativo",
+          "rubric_performance_level_1": "O aplicativo corresponde à descrição, usando um onBoardEvent para detectar o movimento do acelerômetro e usa variáveis e blocos getOrientation para fazer alterações nas posições x e y.",
+          "rubric_performance_level_2": "O aplicativo usa um onBoardEvent, mas não faz alterações nas posições x e y do ponteiro",
+          "rubric_performance_level_3": "O aplicativo não usa o bloco de eventos correto e não faz alterações na posição do ponteiro",
+          "rubric_performance_level_4": "O aplicativo não foi iniciado"
+        },
+        "CSD U6 - Accelerometer - A_2222": {
+          "rubric_key_concept": "Use o acelerômetro em um evento e com dados para criar um aplicativo",
+          "rubric_performance_level_1": "O aplicativo corresponde à descrição, usando um onBoardEvent para detectar o movimento do acelerômetro e usa variáveis e blocos getOrientation para fazer alterações nas posições x e y.",
+          "rubric_performance_level_2": "O aplicativo usa um onBoardEvent, mas não faz alterações nas posições x e y do ponteiro",
+          "rubric_performance_level_3": "O aplicativo não usa o bloco de eventos correto e não faz alterações na posição do ponteiro",
+          "rubric_performance_level_4": "O aplicativo não foi iniciado"
+        },
+        "CSD U6 - Accelerometer - A_mb2022": {
+          "rubric_key_concept": "Use o acelerômetro em um evento e com dados para criar um aplicativo",
+          "rubric_performance_level_1": "O aplicativo corresponde à descrição, usando um onBoardEvent para detectar o movimento do acelerômetro e usa variáveis e blocos getOrientation para fazer alterações nas posições x e y.",
+          "rubric_performance_level_2": "O aplicativo usa um onBoardEvent, mas não faz alterações nas posições x e y do ponteiro",
+          "rubric_performance_level_3": "O aplicativo não usa o bloco de eventos correto e não faz alterações na posição do ponteiro",
+          "rubric_performance_level_4": "O aplicativo não foi iniciado"
+        },
+        "CSD U6 - Board Inputs - A_2023": {
+          "rubric_key_concept": "Use os botões e o interruptor no circuit playground  para criar um aplicativo",
+          "rubric_performance_level_1": "O aplicativo funciona conforme descrito, com os emojis mudando para corresponder às entradas do usuário\n",
+          "rubric_performance_level_2": "A maior parte do aplicativo funciona conforme descrito, mas algumas das ações não correspondem à descrição, como alterar o tamanho ou alterar os emojis",
+          "rubric_performance_level_3": "O aplicativo altera elementos na tela, mas não corresponde à descrição do programa",
+          "rubric_performance_level_4": "O aplicativo não foi atualizado para corresponder à descrição"
+        },
+        "CSD U6 - Board Inputs - A_2222": {
+          "rubric_key_concept": "Use os botões e o interruptor no circuit playground  para criar um aplicativo",
+          "rubric_performance_level_1": "O aplicativo funciona conforme descrito, com os emojis mudando para corresponder às entradas do usuário\n",
+          "rubric_performance_level_2": "A maior parte do aplicativo funciona conforme descrito, mas algumas das ações não correspondem à descrição, como alterar o tamanho ou alterar os emojis",
+          "rubric_performance_level_3": "O aplicativo altera elementos na tela, mas não corresponde à descrição do programa",
+          "rubric_performance_level_4": "O aplicativo não foi atualizado para corresponder à descrição"
+        },
+        "CSD U6 - Board Inputs - PracB_mb2022": {
+          "rubric_performance_level_1": "O aplicativo funciona conforme descrito, com os emojis mudando para corresponder às entradas do usuário\n",
+          "rubric_performance_level_3": "O aplicativo altera elementos na tela, mas não corresponde à descrição do programa",
+          "rubric_performance_level_4": "O aplicativo não foi atualizado para corresponder à descrição"
+        },
+        "CSD U6 - Board Outputs - A_2023": {
+          "rubric_key_concept": "Responda à entrada do usuário usando o LED e o buzzer no circuit playground",
+          "rubric_performance_level_1": "Cada botão corresponde corretamente à descrição de sua emoção, usando blocos de LED e de buzzer em cada botão.\n",
+          "rubric_performance_level_2": "Cada botão usa blocos de LED e buzzer, mas os parâmetros podem não corresponder à descrição correta (por exemplo: todos tendo a mesma duração)",
+          "rubric_performance_level_3": "Alguns botões não possuem blocos inteiros de LED ou buzzer",
+          "rubric_performance_level_4": "Nenhum bloco adicional de LED ou de buzzer foi adicionado ao programa"
+        },
+        "CSD U6 - Board Outputs - A_2222": {
+          "rubric_key_concept": "Responda à entrada do usuário usando o LED e o buzzer no circuit playground",
+          "rubric_performance_level_1": "Cada botão corresponde corretamente à descrição de sua emoção, usando blocos de LED e de buzzer em cada botão.\n",
+          "rubric_performance_level_2": "Cada botão usa blocos de LED e buzzer, mas os parâmetros podem não corresponder à descrição correta (por exemplo: todos tendo a mesma duração)",
+          "rubric_performance_level_3": "Alguns botões não possuem blocos inteiros de LED ou buzzer",
+          "rubric_performance_level_4": "Nenhum bloco adicional de LED ou de buzzer foi adicionado ao programa"
+        },
+        "CSD U6 - Color LEDs - A_2023": {
+          "rubric_key_concept": "Use os LEDs coloridos para criar um padrão no circuit playground",
+          "rubric_performance_level_1": "O padrão de luz usa pelo menos 3 cores diferentes e altera a intensidade de alguns dos LEDs",
+          "rubric_performance_level_2": "O padrão de luz usa apenas 2 cores ou usa 3 cores, mas não altera a intensidade dos LEDs",
+          "rubric_performance_level_3": "O padrão de luz usa apenas 1 cor, ou usa 2 cores, mas não altera a intensidade dos LEDs",
+          "rubric_performance_level_4": "Nenhum padrão é usado"
+        },
+        "CSD U6 - Color LEDs - A_2222": {
+          "rubric_key_concept": "Use os LEDs coloridos para criar um padrão no circuit playground",
+          "rubric_performance_level_1": "O padrão de luz usa pelo menos 3 cores diferentes e altera a intensidade de alguns dos LEDs",
+          "rubric_performance_level_2": "O padrão de luz usa apenas 2 cores ou usa 3 cores, mas não altera a intensidade dos LEDs",
+          "rubric_performance_level_3": "O padrão de luz usa apenas 1 cor, ou usa 2 cores, mas não altera a intensidade dos LEDs",
+          "rubric_performance_level_4": "Nenhum padrão é usado"
+        },
+        "CSD U6 - Combine Inputs - A_2023": {
+          "rubric_key_concept": "Combinando elementos de entrada e saída do circuit playground e da tela para criar um aplicativo",
+          "rubric_performance_level_1": "O aplicativo funciona conforme descrito, com variáveis usadas para obter os valores da tela e acender os LEDs do circuit playground do lado correto.",
+          "rubric_performance_level_2": "O aplicativo liga os LEDs, mas uma das entradas (direção, cor ou brilho) não está funcionando corretamente",
+          "rubric_performance_level_3": "Os LEDs acendem, mas não reagem aos valores que o usuário insere. As variáveis não são usadas corretamente no programa.",
+          "rubric_performance_level_4": "O aplicativo não foi alterado."
+        },
+        "CSD U6 - Combine Inputs - A_2222": {
+          "rubric_key_concept": "Combinando elementos de entrada e saída do circuit playground e da tela para criar um aplicativo",
+          "rubric_performance_level_1": "O aplicativo funciona conforme descrito, com variáveis usadas para obter os valores da tela e acender os LEDs do circuit playground do lado correto.",
+          "rubric_performance_level_2": "O aplicativo liga os LEDs, mas uma das entradas (direção, cor ou brilho) não está funcionando corretamente",
+          "rubric_performance_level_3": "Os LEDs acendem, mas não reagem aos valores que o usuário insere. As variáveis não são usadas corretamente no programa.",
+          "rubric_performance_level_4": "O aplicativo não foi alterado."
+        },
+        "CSD U6 - Combine Inputs - A_mb2022": {
+          "rubric_performance_level_4": "O aplicativo não foi alterado."
+        },
+        "CSD U6 - Functions - A_2023": {
+          "rubric_key_concept": "Use funções com parâmetros para organizar aplicativos",
+          "rubric_performance_level_1": "O aplicativo usa uma função com dois parâmetros que correspondem ao nome e à quantidade a ser movida. Os parâmetros substituem corretamente cada nome original da neve e o valor da quantidade. Todos os 10 elementos da neve se movem quando o circuit playground é movido.",
+          "rubric_performance_level_2": "O aplicativo usa uma função com apenas um parâmetro ou usa uma função com dois parâmetros, mas nem todos os valores são atualizados usando parâmetros. Todos os 10 elementos da neve se movem quando o circuit playground é movido.",
+          "rubric_performance_level_3": "O aplicativo usa uma função, mas não usa parâmetros, ou nem todos os elementos da neve se movem na tela",
+          "rubric_performance_level_4": "O código não foi alterado em relação ao aplicativo original"
+        },
+        "CSD U6 - Functions - A_2222": {
+          "rubric_key_concept": "Use funções com parâmetros para organizar aplicativos",
+          "rubric_performance_level_1": "O aplicativo usa uma função com dois parâmetros que correspondem ao nome e à quantidade a ser movida. Os parâmetros substituem corretamente cada nome original da neve e o valor da quantidade. Todos os 10 elementos da neve se movem quando o circuit playground é movido.",
+          "rubric_performance_level_2": "O aplicativo usa uma função com apenas um parâmetro ou usa uma função com dois parâmetros, mas nem todos os valores são atualizados usando parâmetros. Todos os 10 elementos da neve se movem quando o circuit playground é movido.",
+          "rubric_performance_level_3": "O aplicativo usa uma função, mas não usa parâmetros, ou nem todos os elementos da neve se movem na tela",
+          "rubric_performance_level_4": "O código não foi alterado em relação ao aplicativo original"
+        },
+        "CSD U6 - Functions - A_mb2022": {
+          "rubric_key_concept": "Use funções com parâmetros para organizar aplicativos",
+          "rubric_performance_level_3": "O aplicativo usa uma função, mas não usa parâmetros, ou nem todos os elementos da neve se movem na tela",
+          "rubric_performance_level_4": "O código não foi alterado em relação ao aplicativo original"
+        },
+        "CSD U6 - If Variables - A_2023": {
+          "rubric_key_concept": "Use variáveis e declarações Se para criar um aplicativo que usa o circuit playground",
+          "rubric_performance_level_1": "O programa funciona conforme descrito, usando variáveis para controlar o tamanho e uma declaração Se para soar o buzzer na hora correta",
+          "rubric_performance_level_2": "As variáveis são usadas para acompanhar o tamanho do elemento, mas o buzzer não soa quando ele atinge o tamanho correto",
+          "rubric_performance_level_3": "As variáveis são usadas para o tamanho, mas não o aumentam quando o botão é pressionado",
+          "rubric_performance_level_4": "O código não foi mudado"
+        },
+        "CSD U6 - If Variables - A_2222": {
+          "rubric_key_concept": "Use variáveis e declarações Se para criar um aplicativo que usa o circuit playground",
+          "rubric_performance_level_1": "O programa funciona conforme descrito, usando variáveis para controlar o tamanho e uma declaração Se para soar o buzzer na hora correta",
+          "rubric_performance_level_2": "As variáveis são usadas para acompanhar o tamanho do elemento, mas o buzzer não soa quando ele atinge o tamanho correto",
+          "rubric_performance_level_3": "As variáveis são usadas para o tamanho, mas não o aumentam quando o botão é pressionado",
+          "rubric_performance_level_4": "O código não foi mudado"
+        },
+        "CSD U6 - If Variables - A_mb2022": {
+          "rubric_performance_level_3": "As variáveis são usadas para o tamanho, mas não o aumentam quando o botão é pressionado",
+          "rubric_performance_level_4": "O código não foi mudado"
+        },
+        "CSD U6 - Music - A_2023": {
+          "rubric_key_concept": "Crie aplicativos que tocam músicas com o circuit playground",
+          "rubric_performance_level_1": "O aplicativo tem dois blocos playSong() que tocam músicas diferentes. Cada música tem pelo menos quatro notas e inclui pelo menos uma pausa",
+          "rubric_performance_level_2": "O aplicativo tem dois blocos playSong() que tocam músicas diferentes, mas pelo menos uma das músicas tem menos de quatro notas ou não inclui pausa",
+          "rubric_performance_level_3": "O aplicativo tem um bloco playSong() para um dos emojis, mas não para os dois emojis",
+          "rubric_performance_level_4": "O aplicativo não tem blocos playSong()"
+        },
+        "CSD U6 - Music - A_2222": {
+          "rubric_key_concept": "Crie aplicativos que tocam músicas com o circuit playground",
+          "rubric_performance_level_1": "O aplicativo tem dois blocos playSong() que tocam músicas diferentes. Cada música tem pelo menos quatro notas e inclui pelo menos uma pausa",
+          "rubric_performance_level_2": "O aplicativo tem dois blocos playSong() que tocam músicas diferentes, mas pelo menos uma das músicas tem menos de quatro notas ou não inclui pausa",
+          "rubric_performance_level_3": "O aplicativo tem um bloco playSong() para um dos emojis, mas não para os dois emojis",
+          "rubric_performance_level_4": "O aplicativo não tem blocos playSong()"
+        },
+        "CSD U6 - Physical Input - A_2023": {
+          "rubric_key_concept": "Conecte botões externos ao circuit playground e crie aplicativos que usam botões externos",
+          "rubric_performance_level_1": "O programa corresponde com a descrição com 3 eventos que escondem os quadrados azuis no aplicativo. Os botões estão conectados corretamente usando um fio de aterramento para sinalizar cada botão",
+          "rubric_performance_level_2": "Alguns botões escondem os quadrados azuis, mas nem todos funcionam corretamente. Ou, os botões estão conectados corretamente, mas usam vários fios terra em vez de apenas um.",
+          "rubric_performance_level_3": "Os botões estão conectados, mas os quadrados azuis não ficam ocultos quando os botões são pressionados",
+          "rubric_performance_level_4": "O aplicativo não foi iniciado ou não há botões conectados ao circuit playground"
+        },
+        "CSD U6 - Physical Input - A_2222": {
+          "rubric_key_concept": "Conecte botões externos ao circuit playground e crie aplicativos que usam botões externos",
+          "rubric_performance_level_1": "O programa corresponde com a descrição com 3 eventos que escondem os quadrados azuis no aplicativo. Os botões estão conectados corretamente usando um fio de aterramento para sinalizar cada botão",
+          "rubric_performance_level_2": "Alguns botões escondem os quadrados azuis, mas nem todos funcionam corretamente. Ou, os botões estão conectados corretamente, mas usam vários fios terra em vez de apenas um.",
+          "rubric_performance_level_3": "Os botões estão conectados, mas os quadrados azuis não ficam ocultos quando os botões são pressionados",
+          "rubric_performance_level_4": "O aplicativo não foi iniciado ou não há botões conectados ao circuit playground"
+        },
+        "CSD U6 - Physical Input - A_mb2022": {
+          "rubric_performance_level_1": "O programa corresponde com a descrição com 3 eventos que escondem os quadrados azuis no aplicativo. Os botões estão conectados corretamente usando um fio de aterramento para sinalizar cada botão",
+          "rubric_performance_level_2": "Alguns botões escondem os quadrados azuis, mas nem todos funcionam corretamente. Ou, os botões estão conectados corretamente, mas usam vários fios terra em vez de apenas um.",
+          "rubric_performance_level_3": "Os botões estão conectados, mas os quadrados azuis não ficam ocultos quando os botões são pressionados",
+          "rubric_performance_level_4": "O aplicativo não foi iniciado ou não há botões conectados ao circuit playground"
+        },
+        "CSD U6 - Physical Output - A_2023": {
+          "rubric_key_concept": "Conecte LEDs externos ao circuit playground e crie aplicativos que usam LEDs externos",
+          "rubric_performance_level_1": "O programa corresponde à descrição do aplicativo usando os blocos on(), blink() e off() no local correto. Os LEDs estão conectados corretamente",
+          "rubric_performance_level_2": "O programa quase corresponde à descrição do aplicativo, mas um dos blocos pode corresponder ao evento errado. Os LEDs estão conectados corretamente.\n",
+          "rubric_performance_level_3": "Alguns dos blocos necessários estão faltando no programa ou os LEDs não estão conectados corretamente.",
+          "rubric_performance_level_4": "O programa não foi iniciado ou não há LEDs"
+        },
+        "CSD U6 - Physical Output - A_2222": {
+          "rubric_key_concept": "Conecte LEDs externos ao circuit playground e crie aplicativos que usam LEDs externos",
+          "rubric_performance_level_1": "O programa corresponde à descrição do aplicativo usando os blocos on(), blink() e off() no local correto. Os LEDs estão conectados corretamente",
+          "rubric_performance_level_2": "O programa quase corresponde à descrição do aplicativo, mas um dos blocos pode corresponder ao evento errado. Os LEDs estão conectados corretamente.\n",
+          "rubric_performance_level_3": "Alguns dos blocos necessários estão faltando no programa ou os LEDs não estão conectados corretamente.",
+          "rubric_performance_level_4": "O programa não foi iniciado ou não há LEDs"
+        },
+        "CSD U6 - Physical Output - A_mb2022": {
+          "rubric_performance_level_1": "O programa corresponde à descrição do aplicativo usando os blocos on(), blink() e off() no local correto. Os LEDs estão conectados corretamente",
+          "rubric_performance_level_2": "O programa quase corresponde à descrição do aplicativo, mas um dos blocos pode corresponder ao evento errado. Os LEDs estão conectados corretamente.\n",
+          "rubric_performance_level_3": "Alguns dos blocos necessários estão faltando no programa ou os LEDs não estão conectados corretamente.",
+          "rubric_performance_level_4": "O programa não foi iniciado ou não há LEDs"
+        },
+        "CSD U6 - Screen Inputs - A_2023": {
+          "rubric_key_concept": "Obter informações do usuário na tela e usá-las para atualizar um aplicativo",
+          "rubric_performance_level_1": "Cada elemento de design foi personalizado corretamente de acordo com a descrição do aplicativo, e o código recebe a entrada do usuário e a usa para atualizar o aplicativo",
+          "rubric_performance_level_2": "O código obtém a entrada do usuário e a usa para atualizar o aplicativo, mas os elementos de design podem não ter sido personalizados corretamente de acordo com a descrição do aplicativo",
+          "rubric_performance_level_3": "Há erros ao tentar obter valores da entrada de texto, do menu suspenso ou do controle deslizante; ou o aplicativo está incompleto e não obtém todos os elementos de entrada.",
+          "rubric_performance_level_4": "O aplicativo não recebe entrada de nenhum dos elementos na tela."
+        },
+        "CSD U6 - Screen Inputs - A_2222": {
+          "rubric_key_concept": "Obter informações do usuário na tela e usá-las para atualizar um aplicativo",
+          "rubric_performance_level_1": "Cada elemento de design foi personalizado corretamente de acordo com a descrição do aplicativo, e o código recebe a entrada do usuário e a usa para atualizar o aplicativo",
+          "rubric_performance_level_2": "O código obtém a entrada do usuário e a usa para atualizar o aplicativo, mas os elementos de design podem não ter sido personalizados corretamente de acordo com a descrição do aplicativo",
+          "rubric_performance_level_3": "Há erros ao tentar obter valores da entrada de texto, do menu suspenso ou do controle deslizante; ou o aplicativo está incompleto e não obtém todos os elementos de entrada.",
+          "rubric_performance_level_4": "O aplicativo não recebe entrada de nenhum dos elementos na tela."
+        },
+        "CSD U6 - Screen Inputs - A_mb2022": {
+          "rubric_key_concept": "Obter informações do usuário na tela e usá-las para atualizar um aplicativo",
+          "rubric_performance_level_1": "Cada elemento de design foi personalizado corretamente de acordo com a descrição do aplicativo, e o código recebe a entrada do usuário e a usa para atualizar o aplicativo",
+          "rubric_performance_level_2": "O código obtém a entrada do usuário e a usa para atualizar o aplicativo, mas os elementos de design podem não ter sido personalizados corretamente de acordo com a descrição do aplicativo",
+          "rubric_performance_level_3": "Há erros ao tentar obter valores da entrada de texto, do menu suspenso ou do controle deslizante; ou o aplicativo está incompleto e não obtém todos os elementos de entrada.",
+          "rubric_performance_level_4": "O aplicativo não recebe entrada de nenhum dos elementos na tela."
+        },
+        "CSD U6 - Screen Outputs - ChalB_2023": {
+          "rubric_key_concept": "Atualize as propriedades e o texto dos elementos de design usando código",
+          "rubric_performance_level_1": "O aplicativo finalizado corresponde à descrição, com cada botão atualizando corretamente o ícone e o texto",
+          "rubric_performance_level_2": "O aplicativo finalizado é semelhante à descrição, mas tem no máximo um elemento incompleto (por exemplo, não atualizar o texto ou não atualizar a cor do ícone)",
+          "rubric_performance_level_3": "O aplicativo finalizado pode ter alguns elementos que parecem corretos, mas a maioria dos elementos não são atualizados corretamente ou o aplicativo está apenas parcialmente concluído.\n",
+          "rubric_performance_level_4": "O aplicativo não foi atualizado para corresponder à descrição"
+        },
+        "CSD U6 - Screen Outputs - ChalB_2222": {
+          "rubric_key_concept": "Atualize as propriedades e o texto dos elementos de design usando código",
+          "rubric_performance_level_1": "O aplicativo finalizado corresponde à descrição, com cada botão atualizando corretamente o ícone e o texto",
+          "rubric_performance_level_2": "O aplicativo finalizado é semelhante à descrição, mas tem no máximo um elemento incompleto (por exemplo, não atualizar o texto ou não atualizar a cor do ícone)",
+          "rubric_performance_level_3": "O aplicativo finalizado pode ter alguns elementos que parecem corretos, mas a maioria dos elementos não são atualizados corretamente ou o aplicativo está apenas parcialmente concluído.\n",
+          "rubric_performance_level_4": "O aplicativo não foi atualizado para corresponder à descrição"
+        },
+        "CSD U6 - Screen Outputs - ChalB_mb2022": {
+          "rubric_key_concept": "Atualize as propriedades e o texto dos elementos de design usando código",
+          "rubric_performance_level_1": "O aplicativo finalizado corresponde à descrição, com cada botão atualizando corretamente o ícone e o texto",
+          "rubric_performance_level_2": "O aplicativo finalizado é semelhante à descrição, mas tem no máximo um elemento incompleto (por exemplo, não atualizar o texto ou não atualizar a cor do ícone)",
+          "rubric_performance_level_3": "O aplicativo finalizado pode ter alguns elementos que parecem corretos, mas a maioria dos elementos não são atualizados corretamente ou o aplicativo está apenas parcialmente concluído.\n",
+          "rubric_performance_level_4": "O aplicativo não foi atualizado para corresponder à descrição"
+        },
+        "CSD U6 - Sensors - A_2023": {
+          "rubric_key_concept": "Use os sensores no circuit playground para criar um aplicativo",
+          "rubric_performance_level_1": "O aplicativo exibe cada valor do sensor em tempo real, e os sensores de luz e som são dimensionados de 0 a 10",
+          "rubric_performance_level_2": "O aplicativo exibe cada valor do sensor, mas pode não estar em tempo real ou os sensores estão de 0 a 1023 em vez de 0 a 10",
+          "rubric_performance_level_3": "Pelo menos um dos valores do sensor estão ausentes no aplicativo",
+          "rubric_performance_level_4": "O aplicativo não foi iniciado"
+        },
+        "CSD U6 - Sensors - A_2222": {
+          "rubric_key_concept": "Use os sensores no circuit playground para criar um aplicativo",
+          "rubric_performance_level_1": "O aplicativo exibe cada valor do sensor em tempo real, e os sensores de luz e som são dimensionados de 0 a 10",
+          "rubric_performance_level_2": "O aplicativo exibe cada valor do sensor, mas pode não estar em tempo real ou os sensores estão de 0 a 1023 em vez de 0 a 10",
+          "rubric_performance_level_3": "Pelo menos um dos valores do sensor estão ausentes no aplicativo",
+          "rubric_performance_level_4": "O aplicativo não foi iniciado"
+        },
+        "CSD U6 - Sensors - A_mb2022": {
+          "rubric_performance_level_3": "Pelo menos um dos valores do sensor estão ausentes no aplicativo",
+          "rubric_performance_level_4": "O aplicativo não foi iniciado"
+        },
+        "CSD U6 LED all_2019": {
+          "rubric_key_concept": "Desenvolva um software para controlar uma variedade de dispositivos físicos.",
+          "rubric_performance_level_1": "O programa funciona conforme descrito nas instruções, com os botões acionando o LED para acender, piscar, pulsar ou desligar. Não há código desnecessário.",
+          "rubric_performance_level_2": "Os botões liga/desliga do programa funcionam, mas pode haver um código desnecessário que não afete a funcionalidade desses dois botões.",
+          "rubric_performance_level_3": "Pelo menos um dos botões, exceto o botão “ligar”, funciona, ou os blocos corretos para controlar o LED estão incluídos no programa, mas não são acionados corretamente por um evento.",
+          "rubric_performance_level_4": "Nenhum botão além do botão “ligar” funciona e não há código que possa ser usado para controlar o LED."
+        },
+        "CSD U6 LED all_2021": {
+          "rubric_key_concept": "Desenvolva um software para controlar uma variedade de dispositivos físicos.",
+          "rubric_performance_level_1": "O programa funciona conforme descrito nas instruções, com os botões acionando o LED para acender, piscar, pulsar ou desligar. Não há código desnecessário.",
+          "rubric_performance_level_2": "Os botões liga/desliga do programa funcionam, mas pode haver um código desnecessário que não afete a funcionalidade desses dois botões.",
+          "rubric_performance_level_3": "Pelo menos um dos botões, exceto o botão “ligar”, funciona, ou os blocos corretos para controlar o LED estão incluídos no programa, mas não são acionados corretamente por um evento.",
+          "rubric_performance_level_4": "Nenhum botão além do botão “ligar” funciona e não há código que possa ser usado para controlar o LED."
+        },
+        "CSD U6 analog rgb 3_2019": {
+          "rubric_key_concept": "Desenvolva um programa que responda a uma variedade de entradas de hardware, incluindo aquelas que o usuário controla e não controla ativamente. Reconheça a necessidade de vários tipos de entrada, analógica e digital, e represente os valores dessas entradas de várias maneiras.",
+          "rubric_performance_level_1": "O programa exibe uma ampla variedade de cores em resposta às mudanças de luz, temperatura e som. Não há códigos desnecessários no programa.",
+          "rubric_performance_level_2": "O programa detecta mudanças na luz, temperatura e sons e muda de cor visivelmente em resposta a pelo menos um desses sensores.",
+          "rubric_performance_level_3": "O programa muda de cor e usa pelo menos um dos três sensores analógicos para detectar mudanças no ambiente.",
+          "rubric_performance_level_4": "O programa usa sensores analógicos ou não muda de cor de jeito nenhum."
+        },
+        "CSD U6 analog rgb 3_2021": {
+          "rubric_key_concept": "Desenvolva um programa que responda a uma variedade de entradas de hardware, incluindo aquelas que o usuário controla e não controla ativamente. Reconheça a necessidade de vários tipos de entrada, analógica e digital, e represente os valores dessas entradas de várias maneiras.",
+          "rubric_performance_level_1": "O programa exibe uma ampla variedade de cores em resposta às mudanças de luz, temperatura e som. Não há códigos desnecessários no programa.",
+          "rubric_performance_level_2": "O programa detecta mudanças na luz, temperatura e sons e muda de cor visivelmente em resposta a pelo menos um desses sensores.",
+          "rubric_performance_level_3": "O programa muda de cor e usa pelo menos um dos três sensores analógicos para detectar mudanças no ambiente.",
+          "rubric_performance_level_4": "O programa usa sensores analógicos ou não muda de cor de jeito nenhum."
+        },
+        "CSD U6 circuit smart bike blinker buttons_2019": {
+          "rubric_key_concept": "Conecte, teste e depure dispositivos externos e sistemas de computação integrados.",
+          "rubric_performance_level_1": "O programa funciona conforme descrito, com o LED externo esquerdo piscando quando o botão esquerdo é pressionado e o LED externo direito piscando quando o botão direito é pressionado.",
+          "rubric_performance_level_2": "Um LED externo responde quando um botão é pressionado no circuit playground, mas pode não funcionar exatamente como descrito.",
+          "rubric_performance_level_3": "O LED externo está fisicamente conectado ao circuit playground e existe um código para controlar o LED a partir do programa, mas erros impedem que ele responda adequadamente à placa.",
+          "rubric_performance_level_4": "Não há LED externo conectado à placa ou não há códigos que permitam ao programa controlar o LED."
+        },
+        "CSD U6 circuit smart bike blinker buttons_2021": {
+          "rubric_key_concept": "Conecte, teste e depure dispositivos externos e sistemas de computação integrados.",
+          "rubric_performance_level_1": "O programa funciona conforme descrito, com o LED externo esquerdo piscando quando o botão esquerdo é pressionado e o LED externo direito piscando quando o botão direito é pressionado.",
+          "rubric_performance_level_2": "Um LED externo responde quando um botão é pressionado no circuit playground, mas pode não funcionar exatamente como descrito.",
+          "rubric_performance_level_3": "O LED externo está fisicamente conectado ao circuit playground e existe um código para controlar o LED a partir do programa, mas erros impedem que ele responda adequadamente à placa.",
+          "rubric_performance_level_4": "Não há LED externo conectado à placa ou não há códigos que permitam ao programa controlar o LED."
+        },
+        "CSD U6 circuit smart bike final_2019": {
+          "rubric_key_concept": "Desenvolva um protótipo físico interativo que integre hardware e software, incluindo circuitos simples.  ",
+          "rubric_performance_level_1": "O programa funciona conforme descrito, com um botão externo que controla o buzzer e dois LEDs externos controlados pelos botões esquerdo e direito. Os LEDs coloridos acendem no escuro.",
+          "rubric_performance_level_2": "O programa funciona de forma geral conforme descrito, com um botão externo acionando a resposta da placa e LEDs externos controlados pela interação na placa.",
+          "rubric_performance_level_3": "O programa incorpora alguns elementos do design, incluindo pelo menos um elemento externo conectado à placa com um circuito e que responde ou aciona uma resposta da placa.",
+          "rubric_performance_level_4": "O programa não incorpora elementos externos ou os elementos externos não podem interagir com a placa."
+        },
+        "CSD U6 circuit smart bike final_2021": {
+          "rubric_key_concept": "Desenvolva um protótipo físico interativo que integre hardware e software, incluindo circuitos simples.  ",
+          "rubric_performance_level_1": "O programa funciona conforme descrito, com um botão externo que controla o buzzer e dois LEDs externos controlados pelos botões esquerdo e direito. Os LEDs coloridos acendem no escuro.",
+          "rubric_performance_level_2": "O programa funciona de forma geral conforme descrito, com um botão externo acionando a resposta da placa e LEDs externos controlados pela interação na placa.",
+          "rubric_performance_level_3": "O programa incorpora alguns elementos do design, incluindo pelo menos um elemento externo conectado à placa com um circuito e que responde ou aciona uma resposta da placa.",
+          "rubric_performance_level_4": "O programa não incorpora elementos externos ou os elementos externos não podem interagir com a placa."
+        },
+        "CSD U6 create LED app 2_2019": {
+          "rubric_key_concept": "Desenvolva um software para controlar uma variedade de dispositivos físicos.",
+          "rubric_performance_level_1": "O programa permite que o usuário controle o LED de várias maneiras, e todos os elementos interativos parecem funcionar conforme o esperado.",
+          "rubric_performance_level_2": "O programa permite que o usuário controle o LED, mas pode haver pequenos erros nos elementos interativos do aplicativo.",
+          "rubric_performance_level_3": "O programa tem um código relacionado ao LED, mas há erros significativos que impedem o usuário de controlar o LED conforme o esperado.",
+          "rubric_performance_level_4": "Não há código relacionado ao controle do LED no aplicativo."
+        },
+        "CSD U6 create LED app 2_2021": {
+          "rubric_key_concept": "Desenvolva um software para controlar uma variedade de dispositivos físicos.",
+          "rubric_performance_level_1": "O programa permite que o usuário controle o LED de várias maneiras, e todos os elementos interativos parecem funcionar conforme o esperado.",
+          "rubric_performance_level_2": "O programa permite que o usuário controle o LED, mas pode haver pequenos erros nos elementos interativos do aplicativo.",
+          "rubric_performance_level_3": "O programa tem um código relacionado ao LED, mas há erros significativos que impedem o usuário de controlar o LED conforme o esperado.",
+          "rubric_performance_level_4": "Não há código relacionado ao controle do LED no aplicativo."
+        },
+        "CSD U6 emotion machine 4_2019": {
+          "rubric_key_concept": "Use manipuladores de eventos para responder às interações do usuário e use configurações para manipular as propriedades dos elementos em um sistema.",
+          "rubric_performance_level_1": "O programa tem três botões com rótulos corretos e, quando um botão é clicado, o ícone correto e a descrição da emoção são exibidos. ",
+          "rubric_performance_level_2": "O programa tem três botões e responde de alguma forma a cada clique no botão, mas a resposta pode não ser exatamente como descrita nas instruções.",
+          "rubric_performance_level_3": "Pelo menos um botão diferente do botão “Feliz” responde ao ser clicado de alguma forma.",
+          "rubric_performance_level_4": "Nenhum botão além do botão “Feliz” responde ao ser clicado."
+        },
+        "CSD U6 emotion machine 4_2021": {
+          "rubric_key_concept": "Use manipuladores de eventos para responder às interações do usuário e use configurações para manipular as propriedades dos elementos em um sistema.",
+          "rubric_performance_level_1": "O programa tem três botões com rótulos corretos e, quando um botão é clicado, o ícone correto e a descrição da emoção são exibidos. ",
+          "rubric_performance_level_2": "O programa tem três botões e responde de alguma forma a cada clique no botão, mas a resposta pode não ser exatamente como descrita nas instruções.",
+          "rubric_performance_level_3": "Pelo menos um botão diferente do botão “Feliz” responde ao ser clicado de alguma forma.",
+          "rubric_performance_level_4": "Nenhum botão além do botão “Feliz” responde ao ser clicado."
+        },
+        "CSD U6 for loop led color_2019": {
+          "rubric_key_concept": "Use um for loop para iterar sobre uma matriz"
+        },
+        "CSD U6 for loop led color_2021": {
+          "rubric_key_concept": "Use um for loop para iterar sobre uma matriz"
+        },
+        "CSD U6 for loop led personalize_2019": {
+          "rubric_key_concept": "Use um for loop para iterar sobre uma matriz",
+          "rubric_performance_level_1": "Todos os cinco botões funcionam conforme descrito usando for loops, e os loops usam o comprimento da matriz como condição de saída, sem erros ou códigos desnecessários.",
+          "rubric_performance_level_2": "Os botões liga/desliga funcionam conforme descrito usando for loops, e não há erros no código.",
+          "rubric_performance_level_3": "Os for loops são usados para ligar e desligar os LEDs, mas podem haver erros que impeçam os botões de funcionarem conforme descrito.",
+          "rubric_performance_level_4": "Não há for loops no código."
+        },
+        "CSD U6 for loop led personalize_2021": {
+          "rubric_key_concept": "Use um for loop para iterar sobre uma matriz",
+          "rubric_performance_level_1": "Todos os cinco botões funcionam conforme descrito usando for loops, e os loops usam o comprimento da matriz como condição de saída, sem erros ou códigos desnecessários.",
+          "rubric_performance_level_2": "Os botões liga/desliga funcionam conforme descrito usando for loops, e não há erros no código.",
+          "rubric_performance_level_3": "Os for loops são usados para ligar e desligar os LEDs, mas podem haver erros que impeçam os botões de funcionarem conforme descrito.",
+          "rubric_performance_level_4": "Não há for loops no código."
+        },
+        "CSD U6 getProperty buzzer_2019": {
+          "rubric_key_concept": "Use getters para acessar as propriedades dos elementos em um sistema.",
+          "rubric_performance_level_1": "O programa funciona conforme descrito, usando o valor do menu suspenso para alterar a duração do buzzer.",
+          "rubric_performance_level_2": "O programa usa o valor do menu suspenso, mas pode haver pequenos erros que impedem que o programa seja executado exatamente como descrito.",
+          "rubric_performance_level_3": "O programa inclui códigos para obter o valor do menu suspenso, mas erros graves no código impedem que ele funcione corretamente.",
+          "rubric_performance_level_4": "O programa não acessa o valor do menu suspenso."
+        },
+        "CSD U6 getProperty buzzer_2021": {
+          "rubric_key_concept": "Use getters para acessar as propriedades dos elementos em um sistema.",
+          "rubric_performance_level_1": "O programa funciona conforme descrito, usando o valor do menu suspenso para alterar a duração do buzzer.",
+          "rubric_performance_level_2": "O programa usa o valor do menu suspenso, mas pode haver pequenos erros que impedem que o programa seja executado exatamente como descrito.",
+          "rubric_performance_level_3": "O programa inclui códigos para obter o valor do menu suspenso, mas erros graves no código impedem que ele funcione corretamente.",
+          "rubric_performance_level_4": "O programa não acessa o valor do menu suspenso."
+        },
+        "CSD U6 goalie_2019": {
+          "rubric_key_concept": "Use getters e setters para manipular propriedades.",
+          "rubric_performance_level_1": "Quando o programa é executado, a bola se move suavemente para a esquerda da tela a uma velocidade razoável.",
+          "rubric_performance_level_2": "Quando o programa é executado, a bola se move pela tela.",
+          "rubric_performance_level_3": "O programa acessou a posição atual da bola e a usou para atualizar a propriedade “x” da bola, mas erros no programa impedem que a bola se mova pela tela.",
+          "rubric_performance_level_4": "A posição atual da bola não é usada para atualizar sua propriedade “x”."
+        },
+        "CSD U6 goalie_2021": {
+          "rubric_key_concept": "Use getters e setters para manipular propriedades.",
+          "rubric_performance_level_1": "Quando o programa é executado, a bola se move suavemente para a esquerda da tela a uma velocidade razoável.",
+          "rubric_performance_level_2": "Quando o programa é executado, a bola se move pela tela.",
+          "rubric_performance_level_3": "O programa acessou a posição atual da bola e a usou para atualizar a propriedade “x” da bola, mas erros no programa impedem que a bola se mova pela tela.",
+          "rubric_performance_level_4": "A posição atual da bola não é usada para atualizar sua propriedade “x”."
+        },
+        "CSD U6 light pattern off_2019": {
+          "rubric_key_concept": "Acesse elementos em matrizes e desenvolva um software para controlar uma variedade de dispositivos físicos. ",
+          "rubric_performance_level_1": "O programa funciona conforme descrito, tem três botões, dois dos quais ligam os LEDs coloridos em um padrão distinto e um dos quais desliga os LEDs coloridos. Não há códigos desnecessários no programa.",
+          "rubric_performance_level_2": "O programa geralmente funciona conforme descrito, tem três botões, dois dos quais acendem as luzes em um padrão distinto, e uma função que desliga os LEDs coloridos. Pode haver pequenos erros no programa.",
+          "rubric_performance_level_3": "Há um código no programa que liga e desliga os LEDs, mas pode haver erros graves que impeçam o programa de funcionar corretamente.",
+          "rubric_performance_level_4": "Não há um novo código que ligue e desligue os LEDs."
+        },
+        "CSD U6 light pattern off_2021": {
+          "rubric_key_concept": "Acesse elementos em matrizes e desenvolva um software para controlar uma variedade de dispositivos físicos. ",
+          "rubric_performance_level_1": "O programa funciona conforme descrito, tem três botões, dois dos quais ligam os LEDs coloridos em um padrão distinto e um dos quais desliga os LEDs coloridos. Não há códigos desnecessários no programa.",
+          "rubric_performance_level_2": "O programa geralmente funciona conforme descrito, tem três botões, dois dos quais acendem as luzes em um padrão distinto, e uma função que desliga os LEDs coloridos. Pode haver pequenos erros no programa.",
+          "rubric_performance_level_3": "Há um código no programa que liga e desliga os LEDs, mas pode haver erros graves que impeçam o programa de funcionar corretamente.",
+          "rubric_performance_level_4": "Não há um novo código que ligue e desligue os LEDs."
+        },
+        "CSD U6 params starchaser 5_2019": {
+          "rubric_performance_level_1": "O programa funciona conforme descrito e inclui todas as funções com parâmetros conforme descrito nas instruções. (moveStar, loopStar e checkStar)",
+          "rubric_performance_level_2": "O programa inclui várias funções com parâmetros e geralmente funciona conforme descrito, mas pode incluir pequenos erros que afetam a jogabilidade.",
+          "rubric_performance_level_3": "O programa inclui pelo menos uma função com parâmetros, mas pode haver erros graves no código que impeçam o jogo de funcionar.",
+          "rubric_performance_level_4": "O programa não inclui nenhuma função com parâmetros."
+        },
+        "CSD U6 params starchaser 5_2021": {
+          "rubric_performance_level_1": "O programa funciona conforme descrito e inclui todas as funções com parâmetros conforme descrito nas instruções. (moveStar, loopStar e checkStar)",
+          "rubric_performance_level_2": "O programa inclui várias funções com parâmetros e geralmente funciona conforme descrito, mas pode incluir pequenos erros que afetam a jogabilidade.",
+          "rubric_performance_level_3": "O programa inclui pelo menos uma função com parâmetros, mas pode haver erros graves no código que impeçam o jogo de funcionar.",
+          "rubric_performance_level_4": "O programa não inclui nenhuma função com parâmetros."
+        },
+        "CSD U6 setProperty hidden 2_2019": {
+          "rubric_key_concept": "Use manipuladores de eventos para responder às interações do usuário",
+          "rubric_performance_level_1": "Quando o botão “stopAlarmButton” é pressionado, o texto de status muda para “OFF” e o botão desaparece. Não há códigos extras no programa.",
+          "rubric_performance_level_2": "Quando o “stopAlarmButton” é pressionado, o programa responde de alguma forma, mas não necessariamente conforme descrito nas instruções, ou pode haver um código desnecessário acionado pelo evento.",
+          "rubric_performance_level_3": "Um segundo evento foi criado, mas ele pode não ser acionado nos momentos apropriados, ou o programa pode ter criado eventos desnecessários.",
+          "rubric_performance_level_4": "Nenhum evento novo foi criado."
+        },
+        "CSD U6 setProperty hidden 2_2021": {
+          "rubric_key_concept": "Use manipuladores de eventos para responder às interações do usuário",
+          "rubric_performance_level_1": "Quando o botão “stopAlarmButton” é pressionado, o texto de status muda para “OFF” e o botão desaparece. Não há códigos extras no programa.",
+          "rubric_performance_level_2": "Quando o “stopAlarmButton” é pressionado, o programa responde de alguma forma, mas não necessariamente conforme descrito nas instruções, ou pode haver um código desnecessário acionado pelo evento.",
+          "rubric_performance_level_3": "Um segundo evento foi criado, mas ele pode não ser acionado nos momentos apropriados, ou o programa pode ter criado eventos desnecessários.",
+          "rubric_performance_level_4": "Nenhum evento novo foi criado."
+        },
+        "CSD U6 setProperty xy_2019": {
+          "rubric_key_concept": "Use setters para acessar e manipular as propriedades dos elementos em um sistema.",
+          "rubric_performance_level_1": "O retângulo vermelho está na posição correta e nenhum outro retângulo foi movido. O programa usa apenas dois blocos.",
+          "rubric_performance_level_2": "O retângulo vermelho foi movido, mas pode não estar na posição correta ou pode haver blocos extras de código. Os outros retângulos estão em suas posições originais.",
+          "rubric_performance_level_3": "Alguns retângulos foram movidos, mas a imagem não parece semelhante ao exemplo.",
+          "rubric_performance_level_4": "Os retângulos não foram movidos."
+        },
+        "CSD U6 setProperty xy_2021": {
+          "rubric_key_concept": "Use setters para acessar e manipular as propriedades dos elementos em um sistema.",
+          "rubric_performance_level_1": "O retângulo vermelho está na posição correta e nenhum outro retângulo foi movido. O programa usa apenas dois blocos.",
+          "rubric_performance_level_2": "O retângulo vermelho foi movido, mas pode não estar na posição correta ou pode haver blocos extras de código. Os outros retângulos estão em suas posições originais.",
+          "rubric_performance_level_3": "Alguns retângulos foram movidos, mas a imagem não parece semelhante ao exemplo.",
+          "rubric_performance_level_4": "Os retângulos não foram movidos."
+        },
+        "CSD U6 tugowar buzzer_2019": {
+          "rubric_key_concept": "Desenvolva um programa que responda a uma variedade de entradas de hardware, crie e use uma função que usa parâmetros para generalizar o comportamento. ",
+          "rubric_performance_level_1": "O programa responde aos botões esquerdo e direito e usa várias funções com parâmetros, conforme descrito no guia do projeto.",
+          "rubric_performance_level_2": "O programa responde a pelo menos uma entrada de hardware e usa pelo menos uma função com o parâmetro como descrito no guia do projeto.",
+          "rubric_performance_level_3": "O programa responde à entrada do hardware e usa uma função com um parâmetro, mas pode haver erros que impeçam que eles funcionem conforme descrito.",
+          "rubric_performance_level_4": "O programa não usa entrada de hardware ou não inclui uma função com parâmetros."
+        },
+        "CSD U6 tugowar buzzer_2021": {
+          "rubric_key_concept": "Desenvolva um programa que responda a uma variedade de entradas de hardware, crie e use uma função que usa parâmetros para generalizar o comportamento. ",
+          "rubric_performance_level_1": "O programa responde aos botões esquerdo e direito e usa várias funções com parâmetros, conforme descrito no guia do projeto.",
+          "rubric_performance_level_2": "O programa responde a pelo menos uma entrada de hardware e usa pelo menos uma função com o parâmetro como descrito no guia do projeto.",
+          "rubric_performance_level_3": "O programa responde à entrada do hardware e usa uma função com um parâmetro, mas pode haver erros que impeçam que eles funcionem conforme descrito.",
+          "rubric_performance_level_4": "O programa não usa entrada de hardware ou não inclui uma função com parâmetros."
+        },
+        "CSD Web CSS Assessment_2021": {
+          "rubric_key_concept": "Crie uma folha de estilo e adicione seu link no HTML. A folha de estilo inclui uma regra que altera o elemento de parágrafo de uma página web",
+          "rubric_performance_level_1": "Os parágrafos têm uma nova cor e tamanho, e não há erros ou inconsistências no código HTML ou CSS.",
+          "rubric_performance_level_2": "Os parágrafos têm uma nova cor ou tamanho.",
+          "rubric_performance_level_3": "Os parágrafos possuem um conjunto de regras especial na folha de estilo e a propriedade cor ou tamanho está sendo usada, mas há erros suficientes para que o texto não mude de cor ou tamanho. Há um código HTML que tenta vincular a folha de estilo à página web.",
+          "rubric_performance_level_4": "Não há um conjunto de regras especial para parágrafos ou as propriedades de cor ou tamanho não são usadas no conjunto de regras. Não há código para vincular a folha de estilo à página da web."
+        },
+        "CSD Web CSS Assessment_2022": {
+          "rubric_key_concept": "Crie uma folha de estilo e adicione seu link no HTML. A folha de estilo inclui uma regra que altera o elemento de parágrafo de uma página web",
+          "rubric_performance_level_1": "Os parágrafos têm uma nova cor e tamanho, e não há erros ou inconsistências no código HTML ou CSS.",
+          "rubric_performance_level_2": "Os parágrafos têm uma nova cor ou tamanho.",
+          "rubric_performance_level_3": "Os parágrafos possuem um conjunto de regras especial na folha de estilo e a propriedade cor ou tamanho está sendo usada, mas há erros suficientes para que o texto não mude de cor ou tamanho. Há um código HTML que tenta vincular a folha de estilo à página web.",
+          "rubric_performance_level_4": "Não há um conjunto de regras especial para parágrafos ou as propriedades de cor ou tamanho não são usadas no conjunto de regras. Não há código para vincular a folha de estilo à página da web."
+        },
+        "CSD Web CSS Assessment_2023": {
+          "rubric_key_concept": "Crie uma folha de estilo e adicione seu link no HTML. A folha de estilo inclui uma regra que altera o elemento de parágrafo de uma página web",
+          "rubric_performance_level_1": "Os parágrafos têm uma nova cor e tamanho, e não há erros ou inconsistências no código HTML ou CSS.",
+          "rubric_performance_level_2": "Os parágrafos têm uma nova cor ou tamanho.",
+          "rubric_performance_level_3": "Os parágrafos possuem um conjunto de regras especial na folha de estilo e a propriedade cor ou tamanho está sendo usada, mas há erros suficientes para que o texto não mude de cor ou tamanho. Há um código HTML que tenta vincular a folha de estilo à página web.",
+          "rubric_performance_level_4": "Não há um conjunto de regras especial para parágrafos ou as propriedades de cor ou tamanho não são usadas no conjunto de regras. Não há código para vincular a folha de estilo à página da web."
+        },
+        "CSD games collisions assessment_2021": {
+          "rubric_key_concept": "Modele movimentos complexos em um plano cartesiano.",
+          "rubric_performance_level_1": "O programa é executado exatamente como na imagem alvo, com todas as interações entre sprites mostradas e não há erros no código.",
+          "rubric_performance_level_2": "Várias interações entre sprites estão incluídas no programa, e pelo menos duas são mostradas na imagem alvo.",
+          "rubric_performance_level_3": "Há pelo menos uma interação entre sprites, mas ela pode não ser como mostrada na imagem alvo.",
+          "rubric_performance_level_4": "Não há interações entre sprites no programa."
+        },
+        "CSD games collisions assessment_2022": {
+          "rubric_key_concept": "Modele movimentos complexos em um plano cartesiano.",
+          "rubric_performance_level_1": "O programa é executado exatamente como na imagem alvo, com todas as interações entre sprites mostradas e não há erros no código.",
+          "rubric_performance_level_2": "Várias interações entre sprites estão incluídas no programa, e pelo menos duas são mostradas na imagem alvo.",
+          "rubric_performance_level_3": "Há pelo menos uma interação entre sprites, mas ela pode não ser como mostrada na imagem alvo.",
+          "rubric_performance_level_4": "Não há interações entre sprites no programa."
+        },
+        "CSD games collisions assessment_2023": {
+          "rubric_key_concept": "Modele movimentos complexos em um plano cartesiano.",
+          "rubric_performance_level_1": "O programa é executado exatamente como na imagem alvo, com todas as interações entre sprites mostradas e não há erros no código.",
+          "rubric_performance_level_2": "Várias interações entre sprites estão incluídas no programa, e pelo menos duas são mostradas na imagem alvo.",
+          "rubric_performance_level_3": "Há pelo menos uma interação entre sprites, mas ela pode não ser como mostrada na imagem alvo.",
+          "rubric_performance_level_4": "Não há interações entre sprites no programa."
+        },
+        "CSD games mousedown intro_2021": {
+          "rubric_key_concept": "Use condicionais para controlar o fluxo de um programa; detectar e responder às entradas do usuário.",
+          "rubric_performance_level_1": "As engrenagens giram na direção oposta quando a barra de espaço não está sendo pressionada e os dentes das engrenagens se alinham corretamente.",
+          "rubric_performance_level_2": "Pelo menos uma engrenagem gira na direção oposta quando a barra de espaço não está sendo pressionada, mas pode haver pequenos erros no programa que impedem que todas as engrenagens girem.",
+          "rubric_performance_level_3": "Há uma cláusula else usada, mas há grandes erros no programa que impedem que as engrenagens girem.",
+          "rubric_performance_level_4": "Não há uma cláusula else."
+        },
+        "CSD games mousedown intro_2022": {
+          "rubric_key_concept": "Use condicionais para controlar o fluxo de um programa; detectar e responder às entradas do usuário.",
+          "rubric_performance_level_1": "As engrenagens giram na direção oposta quando a barra de espaço não está sendo pressionada e os dentes das engrenagens se alinham corretamente.",
+          "rubric_performance_level_2": "Pelo menos uma engrenagem gira na direção oposta quando a barra de espaço não está sendo pressionada, mas pode haver pequenos erros no programa que impedem que todas as engrenagens girem.",
+          "rubric_performance_level_3": "Há uma cláusula else usada, mas há grandes erros no programa que impedem que as engrenagens girem.",
+          "rubric_performance_level_4": "Não há uma cláusula else."
+        },
+        "CSD games mousedown intro_2023": {
+          "rubric_key_concept": "Use condicionais para controlar o fluxo de um programa; detectar e responder às entradas do usuário.",
+          "rubric_performance_level_1": "As engrenagens giram na direção oposta quando a barra de espaço não está sendo pressionada e os dentes das engrenagens se alinham corretamente.",
+          "rubric_performance_level_2": "Pelo menos uma engrenagem gira na direção oposta quando a barra de espaço não está sendo pressionada, mas pode haver pequenos erros no programa que impedem que todas as engrenagens girem.",
+          "rubric_performance_level_3": "Há uma cláusula else usada, mas há grandes erros no programa que impedem que as engrenagens girem.",
+          "rubric_performance_level_4": "Não há uma cláusula else."
+        },
+        "CSD web conditionals assessment_2021": {
+          "rubric_key_concept": "Use condicionais para controlar o fluxo de um programa.",
+          "rubric_performance_level_1": "A imagem do sprite muda de um T-rex para um pterodáctilo quando o sprite chega ao céu.",
+          "rubric_performance_level_2": "Há uma condicional no draw loop que verifica se o sprite alcançou o céu.",
+          "rubric_performance_level_3": "Há uma condicional no draw loop que verifica o valor de uma expressão booleana.",
+          "rubric_performance_level_4": "Não há condicionais no draw loop."
+        },
+        "CSD web conditionals assessment_2022": {
+          "rubric_key_concept": "Use condicionais para controlar o fluxo de um programa.",
+          "rubric_performance_level_1": "A imagem do sprite muda de um T-rex para um pterodáctilo quando o sprite chega ao céu.",
+          "rubric_performance_level_2": "Há uma condicional no draw loop que verifica se o sprite alcançou o céu.",
+          "rubric_performance_level_3": "Há uma condicional no draw loop que verifica o valor de uma expressão booleana.",
+          "rubric_performance_level_4": "Não há condicionais no draw loop."
+        },
+        "CSD web conditionals assessment_2023": {
+          "rubric_key_concept": "Use condicionais para controlar o fluxo de um programa.",
+          "rubric_performance_level_1": "A imagem do sprite muda de um T-rex para um pterodáctilo quando o sprite chega ao céu.",
+          "rubric_performance_level_2": "Há uma condicional no draw loop que verifica se o sprite alcançou o céu.",
+          "rubric_performance_level_3": "Há uma condicional no draw loop que verifica o valor de uma expressão booleana.",
+          "rubric_performance_level_4": "Não há condicionais no draw loop."
+        },
+        "CSD web mouse assessment_2021": {
+          "rubric_key_concept": "Use condicionais para controlar o fluxo de um programa; detectar e responder às entradas do usuário.",
+          "rubric_performance_level_1": "A criatura só treme quando o usuário pressiona o mouse, e o texto só aparece quando o usuário não está pressionando o mouse. Somente um bloco condicional é usado e o programa está livre de erros.",
+          "rubric_performance_level_2": "A criatura só treme quando o usuário pressiona o mouse, e o texto só aparece quando o usuário não está pressionando o mouse, mas pode haver pequenos erros, como problemas com o tamanho do texto ou posicionamento da criatura.",
+          "rubric_performance_level_3": "Há uma cláusula else usada, mas há erros graves no programa que impedem o programa de funcionar corretamente.",
+          "rubric_performance_level_4": "Não há uma cláusula else."
+        },
+        "CSD web mouse assessment_2022": {
+          "rubric_key_concept": "Use condicionais para controlar o fluxo de um programa; detectar e responder às entradas do usuário.",
+          "rubric_performance_level_1": "A criatura só treme quando o usuário pressiona o mouse, e o texto só aparece quando o usuário não está pressionando o mouse. Somente um bloco condicional é usado e o programa está livre de erros.",
+          "rubric_performance_level_2": "A criatura só treme quando o usuário pressiona o mouse, e o texto só aparece quando o usuário não está pressionando o mouse, mas pode haver pequenos erros, como problemas com o tamanho do texto ou posicionamento da criatura.",
+          "rubric_performance_level_3": "Há uma cláusula else usada, mas há erros graves no programa que impedem o programa de funcionar corretamente.",
+          "rubric_performance_level_4": "Não há uma cláusula else."
+        },
+        "CSD web mouse assessment_2023": {
+          "rubric_key_concept": "Use condicionais para controlar o fluxo de um programa; detectar e responder às entradas do usuário.",
+          "rubric_performance_level_1": "A criatura só treme quando o usuário pressiona o mouse, e o texto só aparece quando o usuário não está pressionando o mouse. Somente um bloco condicional é usado e o programa está livre de erros.",
+          "rubric_performance_level_2": "A criatura só treme quando o usuário pressiona o mouse, e o texto só aparece quando o usuário não está pressionando o mouse, mas pode haver pequenos erros, como problemas com o tamanho do texto ou posicionamento da criatura.",
+          "rubric_performance_level_3": "Há uma cláusula else usada, mas há erros graves no programa que impedem o programa de funcionar corretamente.",
+          "rubric_performance_level_4": "Não há uma cláusula else."
+        },
+        "CSD web text assessment_2021": {
+          "rubric_key_concept": "Coloque o texto na tela usando um plano de coordenadas, use argumentos para alterar a aparência do texto.",
+          "rubric_performance_level_1": "Duas partes do texto aparecem na tela em locais apropriados, e as partes do texto têm tamanhos diferentes.",
+          "rubric_performance_level_2": "O bloco de texto é usado e aparece na tela em um local apropriado.",
+          "rubric_performance_level_3": "O bloco de texto é usado, mas o texto não aparece completamente na tela.",
+          "rubric_performance_level_4": "Nenhum bloco de texto é usado ou ele contém tantos erros que o programa não pode ser executado."
+        },
+        "CSD web text assessment_2022": {
+          "rubric_key_concept": "Coloque o texto na tela usando um plano de coordenadas, use argumentos para alterar a aparência do texto.",
+          "rubric_performance_level_1": "Duas partes do texto aparecem na tela em locais apropriados, e as partes do texto têm tamanhos diferentes.",
+          "rubric_performance_level_2": "O bloco de texto é usado e aparece na tela em um local apropriado.",
+          "rubric_performance_level_3": "O bloco de texto é usado, mas o texto não aparece completamente na tela.",
+          "rubric_performance_level_4": "Nenhum bloco de texto é usado ou ele contém tantos erros que o programa não pode ser executado."
+        },
+        "CSD web text assessment_2023": {
+          "rubric_key_concept": "Coloque o texto na tela usando um plano de coordenadas, use argumentos para alterar a aparência do texto.",
+          "rubric_performance_level_1": "Duas partes do texto aparecem na tela em locais apropriados, e as partes do texto têm tamanhos diferentes.",
+          "rubric_performance_level_2": "O bloco de texto é usado e aparece na tela em um local apropriado.",
+          "rubric_performance_level_3": "O bloco de texto é usado, mas o texto não aparece completamente na tela.",
+          "rubric_performance_level_4": "Nenhum bloco de texto é usado ou ele contém tantos erros que o programa não pode ser executado."
+        },
+        "CSDU4 Project Events_2019": {
+          "rubric_key_concept": "Integre todos os componentes do trabalho colaborativo em um artefato computacional final.",
+          "rubric_performance_level_1": "Todas as telas de cada membro da equipe estão incluídas no projeto, e cada botão é vinculado à tela apropriada.",
+          "rubric_performance_level_2": "Todas as telas de cada membro da equipe estão incluídas no projeto, e a maioria dos botões está vinculada à tela apropriada, mas pode haver pequenos erros que impedem que todos os botões funcionem.",
+          "rubric_performance_level_3": "Telas de vários membros da equipe foram incorporadas ao projeto e pelo menos um botão está vinculado a outra tela.",
+          "rubric_performance_level_4": "Nenhum botão vincula a outras telas do projeto."
+        },
+        "CSDU4 Project Events_2021": {
+          "rubric_key_concept": "Integre todos os componentes do trabalho colaborativo em um artefato computacional final.",
+          "rubric_performance_level_1": "Todas as telas de cada membro da equipe estão incluídas no projeto, e cada botão é vinculado à tela apropriada.",
+          "rubric_performance_level_2": "Todas as telas de cada membro da equipe estão incluídas no projeto, e a maioria dos botões está vinculada à tela apropriada, mas pode haver pequenos erros que impedem que todos os botões funcionem.",
+          "rubric_performance_level_3": "Telas de vários membros da equipe foram incorporadas ao projeto e pelo menos um botão está vinculado a outra tela.",
+          "rubric_performance_level_4": "Nenhum botão vincula a outras telas do projeto."
+        },
+        "CSDU4 Project Events_2022": {
+          "rubric_key_concept": "Integre todos os componentes do trabalho colaborativo em um artefato computacional final.",
+          "rubric_performance_level_1": "Todas as telas de cada membro da equipe estão incluídas no projeto, e cada botão é vinculado à tela apropriada.",
+          "rubric_performance_level_2": "Todas as telas de cada membro da equipe estão incluídas no projeto, e a maioria dos botões está vinculada à tela apropriada, mas pode haver pequenos erros que impedem que todos os botões funcionem.",
+          "rubric_performance_level_3": "Telas de vários membros da equipe foram incorporadas ao projeto e pelo menos um botão está vinculado a outra tela.",
+          "rubric_performance_level_4": "Nenhum botão vincula a outras telas do projeto."
+        },
+        "CSDU4 Project Events_2023": {
+          "rubric_key_concept": "Integre todos os componentes do trabalho colaborativo em um artefato computacional final.",
+          "rubric_performance_level_1": "Todas as telas de cada membro da equipe estão incluídas no projeto, e cada botão é vinculado à tela apropriada.",
+          "rubric_performance_level_2": "Todas as telas de cada membro da equipe estão incluídas no projeto, e a maioria dos botões está vinculada à tela apropriada, mas pode haver pequenos erros que impedem que todos os botões funcionem.",
+          "rubric_performance_level_3": "Telas de vários membros da equipe foram incorporadas ao projeto e pelo menos um botão está vinculado a outra tela.",
+          "rubric_performance_level_4": "Nenhum botão vincula a outras telas do projeto."
+        },
+        "CSDU6 - LED toggle buttonL up_2019": {
+          "rubric_key_concept": "Desenvolva um programa que responda a uma variedade de entradas de hardware.",
+          "rubric_performance_level_1": "O programa funciona conforme descrito, com o LED acendendo quando o usuário pressiona o botão e se apaga novamente quando o usuário solta o botão. Não há códigos desnecessários.",
+          "rubric_performance_level_2": "O programa usa um manipulador de eventos para detectar a liberação do botão, mas ele pode não responder conforme descrito ou pode haver códigos desnecessários incluídos no programa.",
+          "rubric_performance_level_3": "O programa usa uma manipulador de eventos de placa, mas há erros significativos o suficiente para que o programa não consiga detectar a liberação do botão.",
+          "rubric_performance_level_4": "O programa não usa um manipulador de eventos de placa."
+        },
+        "CSDU6 - LED toggle buttonL up_2021": {
+          "rubric_key_concept": "Desenvolva um programa que responda a uma variedade de entradas de hardware.",
+          "rubric_performance_level_1": "O programa funciona conforme descrito, com o LED acendendo quando o usuário pressiona o botão e se apaga novamente quando o usuário solta o botão. Não há códigos desnecessários.",
+          "rubric_performance_level_2": "O programa usa um manipulador de eventos para detectar a liberação do botão, mas ele pode não responder conforme descrito ou pode haver códigos desnecessários incluídos no programa.",
+          "rubric_performance_level_3": "O programa usa uma manipulador de eventos de placa, mas há erros significativos o suficiente para que o programa não consiga detectar a liberação do botão.",
+          "rubric_performance_level_4": "O programa não usa um manipulador de eventos de placa."
+        },
+        "CSDU6 arrays select variable_2019": {
+          "rubric_key_concept": "Acesse um elemento em uma matriz.",
+          "rubric_performance_level_1": "O programa exibe aleatoriamente uma combinação de cores e ícones correspondentes, conforme descrito nas instruções. Os elementos na matriz são acessados usando a variável “myIndex” e não há códigos desnecessários no programa.",
+          "rubric_performance_level_2": "O programa exibe aleatoriamente uma combinação de cores e ícones. Os elementos na matriz são acessados usando a variável “myIndex”, embora possa haver pequenos erros que impeçam que o programa seja executado exatamente como descrito.",
+          "rubric_performance_level_3": "A notação de índice é usada para acessar um elemento de uma matriz, embora possa haver grandes erros no programa que impeçam que ele seja executado corretamente.",
+          "rubric_performance_level_4": "A notação de índice não é usada."
+        },
+        "CSDU6 arrays select variable_2021": {
+          "rubric_key_concept": "Acesse um elemento em uma matriz.",
+          "rubric_performance_level_1": "O programa exibe aleatoriamente uma combinação de cores e ícones correspondentes, conforme descrito nas instruções. Os elementos na matriz são acessados usando a variável “myIndex” e não há códigos desnecessários no programa.",
+          "rubric_performance_level_2": "O programa exibe aleatoriamente uma combinação de cores e ícones. Os elementos na matriz são acessados usando a variável “myIndex”, embora possa haver pequenos erros que impeçam que o programa seja executado exatamente como descrito.",
+          "rubric_performance_level_3": "A notação de índice é usada para acessar um elemento de uma matriz, embora possa haver grandes erros no programa que impeçam que ele seja executado corretamente.",
+          "rubric_performance_level_4": "A notação de índice não é usada."
+        },
+        "CSDU6 making new arrays_2019": {
+          "rubric_key_concept": "Crie e modifique as matrizes.",
+          "rubric_performance_level_1": "Uma nova matriz é criada e armazenada em uma variável, e os elementos da matriz são acessados aleatoriamente para serem reproduzidos quando o botão direito é pressionado.",
+          "rubric_performance_level_2": "Uma nova matriz é criada e armazenada em uma variável, mas pode haver erros não relacionados que impeçam que uma nota seja tocada quando o botão direito é pressionado.",
+          "rubric_performance_level_3": "Uma nova matriz é criada, mas não é armazenada em um elemento ou está vazia, portanto, o programa não pode funcionar conforme descrito.",
+          "rubric_performance_level_4": "Não há matrizes no programa."
+        },
+        "CSDU6 making new arrays_2021": {
+          "rubric_key_concept": "Crie e modifique as matrizes.",
+          "rubric_performance_level_1": "Uma nova matriz é criada e armazenada em uma variável, e os elementos da matriz são acessados aleatoriamente para serem reproduzidos quando o botão direito é pressionado.",
+          "rubric_performance_level_2": "Uma nova matriz é criada e armazenada em uma variável, mas pode haver erros não relacionados que impeçam que uma nota seja tocada quando o botão direito é pressionado.",
+          "rubric_performance_level_3": "Uma nova matriz é criada, mas não é armazenada em um elemento ou está vazia, portanto, o programa não pode funcionar conforme descrito.",
+          "rubric_performance_level_4": "Não há matrizes no programa."
+        },
+        "U4 Model Design 7_2019": {
+          "rubric_key_concept": "Selecione o elemento de entrada apropriado para um determinado tipo de informação.",
+          "rubric_performance_level_1": "Todos os elementos fornecidos estão incluídos na tela e suas propriedades foram definidas de forma que a tela pareça muito semelhante à imagem exemplo.",
+          "rubric_performance_level_2": "Quase todos os elementos fornecidos estão incluídos na tela, incluindo pelo menos um elemento de texto, botão, entrada de texto, imagem e caixa de seleção que não estavam no projeto inicial.",
+          "rubric_performance_level_3": "Alguns dos elementos fornecidos estão incluídos na tela, incluindo pelo menos um elemento de texto e um botão que não estavam no projeto inicial.",
+          "rubric_performance_level_4": "Muito poucos dos elementos fornecidos estão incluídos na tela."
+        },
+        "U4 Model Design 7_2021": {
+          "rubric_key_concept": "Selecione o elemento de entrada apropriado para um determinado tipo de informação.",
+          "rubric_performance_level_1": "Todos os elementos fornecidos estão incluídos na tela e suas propriedades foram definidas de forma que a tela pareça muito semelhante à imagem exemplo.",
+          "rubric_performance_level_2": "Quase todos os elementos fornecidos estão incluídos na tela, incluindo pelo menos um elemento de texto, botão, entrada de texto, imagem e caixa de seleção que não estavam no projeto inicial.",
+          "rubric_performance_level_3": "Alguns dos elementos fornecidos estão incluídos na tela, incluindo pelo menos um elemento de texto e um botão que não estavam no projeto inicial.",
+          "rubric_performance_level_4": "Muito poucos dos elementos fornecidos estão incluídos na tela."
+        },
+        "U4 Model Design 7_2022": {
+          "rubric_key_concept": "Selecione o elemento de entrada apropriado para um determinado tipo de informação.",
+          "rubric_performance_level_1": "Todos os elementos fornecidos estão incluídos na tela e suas propriedades foram definidas de forma que a tela pareça muito semelhante à imagem exemplo.",
+          "rubric_performance_level_2": "Quase todos os elementos fornecidos estão incluídos na tela, incluindo pelo menos um elemento de texto, botão, entrada de texto, imagem e caixa de seleção que não estavam no projeto inicial.",
+          "rubric_performance_level_3": "Alguns dos elementos fornecidos estão incluídos na tela, incluindo pelo menos um elemento de texto e um botão que não estavam no projeto inicial.",
+          "rubric_performance_level_4": "Muito poucos dos elementos fornecidos estão incluídos na tela."
+        },
+        "U4 Model Design 7_2023": {
+          "rubric_key_concept": "Selecione o elemento de entrada apropriado para um determinado tipo de informação.",
+          "rubric_performance_level_1": "Todos os elementos fornecidos estão incluídos na tela e suas propriedades foram definidas de forma que a tela pareça muito semelhante à imagem exemplo.",
+          "rubric_performance_level_2": "Quase todos os elementos fornecidos estão incluídos na tela, incluindo pelo menos um elemento de texto, botão, entrada de texto, imagem e caixa de seleção que não estavam no projeto inicial.",
+          "rubric_performance_level_3": "Alguns dos elementos fornecidos estão incluídos na tela, incluindo pelo menos um elemento de texto e um botão que não estavam no projeto inicial.",
+          "rubric_performance_level_4": "Muito poucos dos elementos fornecidos estão incluídos na tela."
+        },
+        "U4 Model Program 5_2019": {
+          "rubric_key_concept": "Crie um evento que detecte e responda à entrada do usuário",
+          "rubric_performance_level_1": "Cada botão é vinculado à tela correta no protótipo.",
+          "rubric_performance_level_2": "Vários botões no protótipo são vinculados à tela apropriada.",
+          "rubric_performance_level_3": "Há pelo menos um evento no protótipo que pode ser acionado para produzir algum tipo de resposta.",
+          "rubric_performance_level_4": "Não há eventos no protótipo."
+        },
+        "U4 Model Program 5_2021": {
+          "rubric_key_concept": "Crie um evento que detecte e responda à entrada do usuário",
+          "rubric_performance_level_1": "Cada botão é vinculado à tela correta no protótipo.",
+          "rubric_performance_level_2": "Vários botões no protótipo são vinculados à tela apropriada.",
+          "rubric_performance_level_3": "Há pelo menos um evento no protótipo que pode ser acionado para produzir algum tipo de resposta.",
+          "rubric_performance_level_4": "Não há eventos no protótipo."
+        },
+        "U4 Model Program 5_2022": {
+          "rubric_key_concept": "Crie um evento que detecte e responda à entrada do usuário",
+          "rubric_performance_level_1": "Cada botão é vinculado à tela correta no protótipo.",
+          "rubric_performance_level_2": "Vários botões no protótipo são vinculados à tela apropriada.",
+          "rubric_performance_level_3": "Há pelo menos um evento no protótipo que pode ser acionado para produzir algum tipo de resposta.",
+          "rubric_performance_level_4": "Não há eventos no protótipo."
+        },
+        "U4 Model Program 5_2023": {
+          "rubric_key_concept": "Crie um evento que detecte e responda à entrada do usuário",
+          "rubric_performance_level_1": "Cada botão é vinculado à tela correta no protótipo.",
+          "rubric_performance_level_2": "Vários botões no protótipo são vinculados à tela apropriada.",
+          "rubric_performance_level_3": "Há pelo menos um evento no protótipo que pode ser acionado para produzir algum tipo de resposta.",
+          "rubric_performance_level_4": "Não há eventos no protótipo."
+        },
         "allthethings-mini-rubric-gamelab": {
           "rubric_key_concept": "Conceito-chave"
+        },
+        "ml-club app-review submit": {
+          "rubric_key_concept": "Criação de um aplicativo fácil de usar que use machine learning",
+          "rubric_performance_level_1": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt de cada menu suspenso foi editado para ser uma pergunta. O aplicativo tem uma tela de boas-vindas e um botão que altera as telas corretamente.",
+          "rubric_performance_level_2": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt do menu suspenso foi editado para ser uma pergunta. No entanto, a tela de boas-vindas está incompleta ou não funciona corretamente.",
+          "rubric_performance_level_3": "O modelo foi importado e o aplicativo funciona corretamente, mas não houve alterações no design ou no texto na tela. Não há tela de boas-vindas.",
+          "rubric_performance_level_4": "O aplicativo não foi iniciado"
+        },
+        "ml-club app-review submit_2022": {
+          "rubric_key_concept": "Criação de um aplicativo fácil de usar que use machine learning",
+          "rubric_performance_level_1": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt de cada menu suspenso foi editado para ser uma pergunta. O aplicativo tem uma tela de boas-vindas e um botão que altera as telas corretamente.",
+          "rubric_performance_level_2": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt do menu suspenso foi editado para ser uma pergunta. No entanto, a tela de boas-vindas está incompleta ou não funciona corretamente.",
+          "rubric_performance_level_3": "O modelo foi importado e o aplicativo funciona corretamente, mas não houve alterações no design ou no texto na tela. Não há tela de boas-vindas.",
+          "rubric_performance_level_4": "O aplicativo não foi iniciado"
+        },
+        "ml-club app-review submit_2023": {
+          "rubric_key_concept": "Criação de um aplicativo fácil de usar que use machine learning",
+          "rubric_performance_level_1": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt de cada menu suspenso foi editado para ser uma pergunta. O aplicativo tem uma tela de boas-vindas e um botão que altera as telas corretamente.",
+          "rubric_performance_level_2": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt do menu suspenso foi editado para ser uma pergunta. No entanto, a tela de boas-vindas está incompleta ou não funciona corretamente.",
+          "rubric_performance_level_3": "O modelo foi importado e o aplicativo funciona corretamente, mas não houve alterações no design ou no texto na tela. Não há tela de boas-vindas.",
+          "rubric_performance_level_4": "O aplicativo não foi iniciado"
+        },
+        "ml-intro app lab-book recommender 4-2021": {
+          "rubric_key_concept": "Criação de um aplicativo fácil de usar que use machine learning",
+          "rubric_performance_level_1": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt de cada menu suspenso foi editado para ser uma pergunta. O aplicativo tem uma tela de boas-vindas e um botão que altera as telas corretamente.",
+          "rubric_performance_level_2": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt do menu suspenso foi editado para ser uma pergunta. No entanto, a tela de boas-vindas está incompleta ou não funciona corretamente.",
+          "rubric_performance_level_3": "O modelo foi importado e o aplicativo funciona corretamente, mas não houve alterações no design ou no texto na tela. Não há tela de boas-vindas.",
+          "rubric_performance_level_4": "O aplicativo não foi iniciado"
+        },
+        "ml-intro app lab-book recommender 4_2022": {
+          "rubric_key_concept": "Criação de um aplicativo fácil de usar que use machine learning",
+          "rubric_performance_level_1": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt de cada menu suspenso foi editado para ser uma pergunta. O aplicativo tem uma tela de boas-vindas e um botão que altera as telas corretamente.",
+          "rubric_performance_level_2": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt do menu suspenso foi editado para ser uma pergunta. No entanto, a tela de boas-vindas está incompleta ou não funciona corretamente.",
+          "rubric_performance_level_3": "O modelo foi importado e o aplicativo funciona corretamente, mas não houve alterações no design ou no texto na tela. Não há tela de boas-vindas.",
+          "rubric_performance_level_4": "O aplicativo não foi iniciado"
+        },
+        "ml-intro app lab-book recommender 4_2023": {
+          "rubric_key_concept": "Criação de um aplicativo fácil de usar que use machine learning",
+          "rubric_performance_level_1": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt de cada menu suspenso foi editado para ser uma pergunta. O aplicativo tem uma tela de boas-vindas e um botão que altera as telas corretamente.",
+          "rubric_performance_level_2": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt do menu suspenso foi editado para ser uma pergunta. No entanto, a tela de boas-vindas está incompleta ou não funciona corretamente.",
+          "rubric_performance_level_3": "O modelo foi importado e o aplicativo funciona corretamente, mas não houve alterações no design ou no texto na tela. Não há tela de boas-vindas.",
+          "rubric_performance_level_4": "O aplicativo não foi iniciado"
+        },
+        "ml-models in applab-zoo assessment": {
+          "rubric_key_concept": "Use o Cartão Modelo para atualizar um aplicativo e use declarações Se para mudar as telas em um aplicativo",
+          "rubric_performance_level_1": "A tela de predição tem frases completas para cada recurso, e as declarações Se são usadas para mudar a tela com base no valor previsto.",
+          "rubric_performance_level_2": "A tela de predição tem algumas frases completas e algumas declarações Se são usadas para mudar a tela com base no valor previsto. No entanto, o aplicativo está incompleto.",
+          "rubric_performance_level_3": "A tela de predição não tem frases completas ou há erros nas declarações Se para mudar a tela.",
+          "rubric_performance_level_4": "O aplicativo não foi atualizado."
+        },
+        "ml-models in applab-zoo assessment_2022": {
+          "rubric_key_concept": "Use o Cartão Modelo para atualizar um aplicativo e use declarações Se para mudar as telas em um aplicativo",
+          "rubric_performance_level_1": "A tela de predição tem frases completas para cada recurso, e as declarações Se são usadas para mudar a tela com base no valor previsto.",
+          "rubric_performance_level_2": "A tela de predição tem algumas frases completas e algumas declarações Se são usadas para mudar a tela com base no valor previsto. No entanto, o aplicativo está incompleto.",
+          "rubric_performance_level_3": "A tela de predição não tem frases completas ou há erros nas declarações Se para mudar a tela.",
+          "rubric_performance_level_4": "O aplicativo não foi atualizado."
+        },
+        "ml-models in applab-zoo assessment_2023": {
+          "rubric_key_concept": "Use o Cartão Modelo para atualizar um aplicativo e use declarações Se para mudar as telas em um aplicativo",
+          "rubric_performance_level_1": "A tela de predição tem frases completas para cada recurso, e as declarações Se são usadas para mudar a tela com base no valor previsto.",
+          "rubric_performance_level_2": "A tela de predição tem algumas frases completas e algumas declarações Se são usadas para mudar a tela com base no valor previsto. No entanto, o aplicativo está incompleto.",
+          "rubric_performance_level_3": "A tela de predição não tem frases completas ou há erros nas declarações Se para mudar a tela.",
+          "rubric_performance_level_4": "O aplicativo não foi atualizado."
         }
       }
     }

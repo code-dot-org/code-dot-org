@@ -50,11 +50,11 @@ hu:
         sequence: Sorozat
         if: Ha blokk
         if_else: Ha-különben blokk
-        loop_times: Ismételje szor blokk
-        loop_until: Ismételd amíg, blokk
-        loop_while: Amig blokk
+        loop_times: Ismétlés valahányszor blokk
+        loop_until: Ismételd amíg blokk
+        loop_while: Amíg blokk
         loop_for: Számláló blokk
-        function: funkciók
+        function: Függvények
         parameters: Paraméterezett függvények
     level:
       instructions:
@@ -186,7 +186,7 @@ hu:
         studio_c2_5: Tudsz írni egy olyan programot, hogy azt mondja a polip, hogy "hello", amikor rákattintasz?
         studio_c2_6: Tudsz írni egy olyan programot, amelyben a pingvint a fel / le / balra / jobbra gombokkal tudod mozgatni, hogy elérje az összes célpontot?
         studio_c2_7: A "végtelen ismétlés" blokk lehetővé teszi, hogy folyamatosan fusson a programkód. Csatolnál blokkokat ahhoz, hogy a dinoszaurusz ismétlődően fel és le mozogjon?
-        studio_c2_8: Meg tudod csinálni, hogy a pingvin azt mondja, "Au!" és legyen egy "ütődés" hang, ha nekiszalad egy dinoszaurusznak? Aztán mozgasd őt a nyilakkal, hogy ez megtörténjen.
+        studio_c2_8: Meg tudod csinálni, hogy a pingvin azt mondja, "Jaj!" és legyen egy "ütődés" hang, ha nekiszalad egy dinoszaurusznak? Aztán mozgasd őt a nyilakkal, hogy ez megtörténjen.
         studio_c2_9: Ki tudnád egészíteni egy blokkal, ami pontot ad, ha a pingvin nekifut a polipnak? Aztán mozgasd a pingvint a nyilakkal, amíg pontot nem szerzel.
         studio_c2_10: Ki tudnád egészíteni, hogy megváltoztasd a hátteret és a pingvin sebességét? Aztán mozgasd a pingvint a nyilakkal, amíg pontot nem szerzel.
         studio_c2_11: Hozz létre egy saját történetet! Ha elkészült, kattints a Kész gombra, hogy a barátaid is kipróbálhassák a történetedet a telefonjaikon.
@@ -199,7 +199,7 @@ hu:
         studio_c3_game_1: Tudsz írni egy olyan programot, hogy azt mondja a polip, hogy "hello", amikor rákattintasz?
         studio_c3_game_2: Tudsz írni egy olyan programot, amelyben a pingvint a fel / le / balra / jobbra gombokkal tudod mozgatni, hogy elérje az összes célpontot?
         studio_c3_game_3: A "végtelen ismétlés" blokk lehetővé teszi, hogy folyamatosan fusson a programkód. Csatolnál blokkokat ahhoz, hogy a dinoszaurusz ismétlődően fel és le mozogjon?
-        studio_c3_game_4: Meg tudod csinálni, hogy a pingvin azt mondja, "Au!" és legyen egy "ütődés" hang, ha nekiszalad egy dinoszaurusznak? Aztán mozgasd őt a nyilakkal, hogy ez megtörténjen.
+        studio_c3_game_4: Meg tudod csinálni, hogy a pingvin azt mondja, "Jaj!" és legyen egy "ütődés" hang, ha nekiszalad egy dinoszaurusznak? Aztán mozgasd őt a nyilakkal, hogy ez megtörténjen.
         studio_c3_game_5: Ki tudnád egészíteni egy blokkal, ami pontot ad, ha a pingvin nekifut a polipnak? Aztán mozgasd a pingvint a nyilakkal, amíg pontot nem szerzel.
         studio_c3_game_6: Ki tudnád egészíteni, hogy megváltoztasd a hátteret és a pingvin sebességét? Aztán mozgasd a pingvint a nyilakkal, amíg pontot nem szerzel.
         studio_c3_game_7: Hozz létre saját játékot! Ha elkészültél, kattints a Kész gombra, hogy barátaid is kipróbálhassák a játékodat a telefonjaikon.
@@ -210,7 +210,7 @@ hu:
         studio_playlab_5: Tudsz segíteni az Űrrobotnak azt mondani, hogy "Üdvözlet Földlakók", amikor rákattintasz? Ne felejtsd el a kattintást a Futtatás gombra történő kattintás után!
         studio_playlab_6: Tudsz segíteni a Boszorkánynak odajutni minden egyes tűzgolyóhoz a fel/le/jobbra/balra nyilakkal?
         studio_playlab_7: A "végtelen ismétlés" blokkal a kód folyamatosan futtatható. Be tudnál illeszteni blokkokat, hogy segíts a varázslónak folyamatosan jobbra-balra mozogni?
-        studio_playlab_8: Ki tudnád egészíteni egy blokkal, ami a pontokat számolja, és egy másik blokkal, ami hangot ad, ha az egyszarvú nekifut egy varázslónak? Aztán mozgasd az egyszarvút a nyilakkal, amíg pontot nem szerzel.
+        studio_playlab_8: Ki tudnád egészíteni egy blokkal, ami a pontokat számolja, és egy másikkal, ami hangot ad, ha az egyszarvú találkozik egy varázslóval? Aztán mozgasd az egyszarvút a nyilakkal, amíg pontot nem szerzel.
         studio_playlab_9: Állítsd be ennek a földönkívüli inváziónak a hátterét, és segíts az Űrrobotnak gyorsabban eljutni a földönkívülihez. Utána használd a nyíl billentyűket, hogy elérjen a földönkívülihez, és figyelmeztetni tudjon másokat
         studio_playlab_10: Hozz létre saját játékot! Ha elkészültél, kattints a Kész gombra, hogy barátaid is kipróbálhassák a játékodat a telefonjaikon.
         studio_iceage_hello1: Sid összeakar mindenkit gyűjteni egy új kalandra. Tudsz neki segíteni hogy azt mondja "helló" azzal hogy odahúzod a "mond" blokkot a a munkaterületre és beleirod "hello"?
@@ -335,7 +335,7 @@ hu:
         C3_functional_suncatchers: Hasznos díszek
         C3_songwriting_with_parameters: Dalszerzés paraméterekkel
         C4_intro: Bevezető
-        C4_loops_zombie: hurkok
+        C4_loops_zombie: Ciklusok
         C4_bee_conditional: Méh Feltételes mód
         C4_variables_artist: Változók - művész
         C4_variables_playlab: Változók - Játéklabor
@@ -374,7 +374,7 @@ hu:
         csd_weblab_intro_2: Bevezetés a Web Labba - 2. Rész
         csp_applab_functions: Bevezetés a függvényekbe
         csp_applab_functions_parameters: Paraméteres függvények
-        csp_applab_loops: hurkok
+        csp_applab_loops: Ciklusok
         alg_1_intro: Számítógép-tudomány az algebrában - bevezetés
         alg_2_eval_block: Számítógép-tudomány az algebrában - kiértékelő blokkok
         alg_3_pemdas: Számítógép-tudomány az algebrában - a műveletek sorrendje
@@ -412,7 +412,7 @@ hu:
         CSF_bb8_skinOverview_K-1: BB-8
         CSF_bb8_loops_C-F: Ciklusok BB-8-tel
         CSF_harvester_skinOverview_K-1: Az arató
-        CSF_loops_AB: hurkok
+        CSF_loops_AB: Ciklusok
         csd_gamelab_booleans: Logikai kifejezések
         CSF_SpriteLabIntro_CDEF: Íme a Sprite labor
         CSF_Spritelab_MakeSprite_CDEF: Hogyan készíts sprite-ot a Sprite laborban
@@ -476,6 +476,10 @@ hu:
         CSA-PL-two-way-selection: Kétirányú kiválasztás
         CSA-PL-Printing-in-Java: Nyomtatás Javaban
         CSA-PL-multi-selection-statements: Többszörös kiválasztású utasítások
+        csd_sprite_properties: Sprite tulajdonságok
+        what-is-creativity: Mi a Kreativitás?
+        code-break: Vegyen egy kódszünetet
+        csd_ml_how_ai_works: Hogyan működik az MI?
     callout:
       text:
         drag_blocks: Húzz egy „előrelépni” blokkot, és csatold a másik blokk alá

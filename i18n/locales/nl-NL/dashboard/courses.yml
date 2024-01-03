@@ -48,3 +48,38 @@ nl:
           description_short: Een inleidende informaticacursus die studenten in staat stelt authentieke artefacten te maken.
           description_student: Ontdekkingen in de informatica (CS Discoveries) is een inleidende informaticacursus die studenten in staat stelt authentieke artefacten te maken en informatica te gebruiken als een medium voor creativiteit, communicatie, probleemoplossing, en plezier.
           description_teacher: Ontdekkingen in de informatica (CS Discoveries) is een inleidende informaticacursus die studenten in staat stelt authentieke artefacten te maken en informatica te gebruiken als een medium voor creativiteit, communicatie, probleemoplossing, en plezier.
+        csd-pilot:
+          description_student: Ontdekkingen in de informatica (CS Discoveries) is een inleidende informaticacursus die studenten in staat stelt authentieke artefacten te maken en informatica te gebruiken als een medium voor creativiteit, communicatie, probleemoplossing, en plezier.
+        csp-2020:
+          description_short: Leer basis computerwetenschappelijke principes.
+        csd-2020:
+          description_short: Een inleidende informaticacursus die studenten in staat stelt authentieke artefacten te maken.
+          description_student: Ontdekkingen in de informatica (CS Discoveries) is een inleidende informaticacursus die studenten in staat stelt authentieke artefacten te maken en informatica te gebruiken als een medium voor creativiteit, communicatie, probleemoplossing, en plezier.
+          description_teacher: Ontdekkingen in de informatica (CS Discoveries) is een inleidende informaticacursus die studenten in staat stelt authentieke artefacten te maken en informatica te gebruiken als een medium voor creativiteit, communicatie, probleemoplossing, en plezier.
+        csp-2021:
+          description_short: Leer basis computerwetenschappelijke principes.
+        mike-test:
+          title: Basisbegrippen Informatica
+        csp-2022:
+          description_short: Leer basis computerwetenschappelijke principes.
+        csp-2023:
+          description_short: Leer basis computerwetenschappelijke principes.
+        csd-2023:
+          title: Ontdekkingen in de informatica
+    resources:
+      curriculum/csd/2017:
+        name: Lesprogramma
+      teacher_forum_6/csd/2017:
+        name: Lerarenforum
+      curriculum/csd/2018:
+        name: Lesprogramma
+      teacher_forum_6/csd/2018:
+        name: Lerarenforum
+      curriculum/csd/2019:
+        name: Lesprogramma
+      teacher_forum/csd/2019:
+        name: Lerarenforum
+      curriculum/csd/2020:
+        name: Lesprogramma
+      teacher_forum/csd/2020:
+        name: Lerarenforum

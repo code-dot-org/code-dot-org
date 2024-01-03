@@ -2,7 +2,7 @@ import {expect} from '../../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import UnitCalendarDialog, {
-  WEEK_WIDTH
+  WEEK_WIDTH,
 } from '@cdo/apps/code-studio/components/progress/UnitCalendarDialog';
 import UnitCalendar from '@cdo/apps/code-studio/components/progress/UnitCalendar';
 import {testLessons} from './unitCalendarTestData';

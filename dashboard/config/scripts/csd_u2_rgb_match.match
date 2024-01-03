@@ -22,3 +22,5 @@ Click "Run" to start the widget on the left, and use the sliders to adjust the l
 
 Match the colors with the amount of red, green, and blue needed to make them.
 MARKDOWN
+
+allow_multiple_attempts true

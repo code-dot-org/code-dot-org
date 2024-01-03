@@ -37,6 +37,7 @@ mt:
         age: 'Età'
         gender: 'Sess'
         edit_header: 'Editja id-dettalji tal-Account'
+        finish_sign_up_header_error: 'Jekk jogħġbok ikkoreġu dawn l-iżbalji:'
         error:
           future: ma tistax tkun fil-futur
   beta: "verzjoni beta"
@@ -101,7 +102,6 @@ mt:
     valid_password: "Il-password valida!"
     invalid_password: "Il-password irid ikun mill-inqas 6 karattri"
     mismatch_password: "-Żewġ passwords li daħħalt ma jaqblux"
-    additional_information: "Hemm bżonn xi informazzjoni addizzjonali biex tkompli tirregistra."
     user_type_student: "Registrazzjoni ta' lis-Studenti"
     field_is_required: "hija meħtieġa"
   signin_form:

@@ -48,3 +48,45 @@ ja:
           description_short: 生徒が本格的なアーティファクトを作成できるようにする、コンピューター サイエンスの入門コース。
           description_student: コンピューター サイエンス発見 (CS発展) は、コンピューター サイエンスの入門コースで、生徒が本物のアーティファクトを作成し、創造性、コミュニケーション、問題解決、および楽しむための手段としてコンピューター サイエンスを学んでいきます。
           description_teacher: コンピューター サイエンス発見 (CS発展) は、コンピューター サイエンスの入門コースで、生徒が本物のアーティファクトを作成し、創造性、コミュニケーション、問題解決、および楽しむための手段としてコンピューター サイエンスを学んでいきます。
+        csd-pilot:
+          title: CSDパイロットコース
+          description_student: コンピューター サイエンス発見 (CS発展) は、コンピューター サイエンスの入門コースで、生徒が本物のアーティファクトを作成し、創造性、コミュニケーション、問題解決、および楽しむための手段としてコンピューター サイエンスを学んでいきます。
+        csp-2020:
+          description_short: 基礎的なコンピューター サイエンスのコンセプトを学びます。
+        csd-2020:
+          description_short: 生徒が本格的なアーティファクトを作成できるようにする、コンピューター サイエンスの入門コース。
+          description_student: コンピューター サイエンス発見 (CS発展) は、コンピューター サイエンスの入門コースで、生徒が本物のアーティファクトを作成し、創造性、コミュニケーション、問題解決、および楽しむための手段としてコンピューター サイエンスを学んでいきます。
+          description_teacher: コンピューター サイエンス発見 (CS発展) は、コンピューター サイエンスの入門コースで、生徒が本物のアーティファクトを作成し、創造性、コミュニケーション、問題解決、および楽しむための手段としてコンピューター サイエンスを学んでいきます。
+        csp-2021:
+          description_short: 基礎的なコンピューター サイエンスのコンセプトを学びます。
+        mike-test:
+          title: コンピュータ サイエンス入門
+        csp-2022:
+          description_short: 基礎的なコンピューター サイエンスのコンセプトを学びます。
+        csp-2023:
+          description_short: 基礎的なコンピューター サイエンスのコンセプトを学びます。
+        csd-2023:
+          title: コンピューター サイエンス発見
+        self-paced-pl-csd-unit2-2023:
+          title: ウェブ開発を教える
+    resources:
+      curriculum/csd/2017:
+        name: カリキュラム
+      teacher_forum_6/csd/2017:
+        name: 先生用フォーラム
+      curriculum/csd/2018:
+        name: カリキュラム
+      teacher_forum_6/csd/2018:
+        name: 先生用フォーラム
+      curriculum/csd/2019:
+        name: カリキュラム
+      teacher_forum/csd/2019:
+        name: 先生用フォーラム
+      curriculum/csd/2020:
+        name: カリキュラム
+      teacher_forum/csd/2020:
+        name: 先生用フォーラム
+      getting_started_with_csd/csd/2021:
+        name: CSDを始めるにあたって
+      csd_guide_to_curriculum_videos/csd/2023:
+        url: https://docs.google.com/document/d/1AOgwzEwfAa_1OLHPkL8d9jr6WsPnGr7LJ8wosllUUyo/

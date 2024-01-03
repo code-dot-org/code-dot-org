@@ -14,3 +14,4 @@ answer 'to access elements in a data structure one by one'
 
 question 'data structure'
 answer 'a structure for organizing, processing, retrieving, and storing data'
+allow_multiple_attempts true

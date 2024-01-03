@@ -9,13 +9,17 @@ import i18n from '@cdo/locale';
 import StudentTable from '@cdo/apps/code-studio/components/progress/teacherPanel/StudentTable';
 import SelectedStudentInfo from '@cdo/apps/code-studio/components/progress/teacherPanel/SelectedStudentInfo';
 import {pageTypes} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import currentUser from '@cdo/apps/templates/currentUserRedux';
 import sinon from 'sinon';
 import * as utils from '@cdo/apps/code-studio/utils';
 import {Provider} from 'react-redux';
 import {createStore, combineReducers} from 'redux';
 import * as teacherPanelData from '@cdo/apps/code-studio/components/progress/teacherPanel/teacherPanelData';
 
-const students = [{id: 1, name: 'Student 1'}, {id: 2, name: 'Student 2'}];
+const students = [
+  {id: 1, name: 'Student 1'},
+  {id: 2, name: 'Student 2'},
+];
 
 const DEFAULT_PROPS = {
   unitName: 'A unit',
@@ -36,7 +40,7 @@ const DEFAULT_PROPS = {
   setSections: () => {},
   setSectionLockStatus: () => {},
   selectSection: () => {},
-  setViewType: () => {}
+  setViewType: () => {},
 };
 
 const setUp = overrideProps => {
@@ -45,8 +49,8 @@ const setUp = overrideProps => {
 };
 
 const setUpWithMount = async overrideProps => {
-  const store = createStore(combineReducers({viewAs}), {
-    viewAs: ViewType.Instructor
+  const store = createStore(combineReducers({viewAs, currentUser}), {
+    viewAs: ViewType.Instructor,
   });
 
   const props = {...DEFAULT_PROPS, ...overrideProps};
@@ -101,7 +105,7 @@ describe('TeacherPanel', () => {
     const wrapper = setUp({
       selectedSection: {id: 1, name: 'CSD'},
       sectionsAreLoaded: true,
-      hasSections: true
+      hasSections: true,
     });
 
     expect(wrapper.contains(i18n.teacherDashboard())).to.be.true;
@@ -111,7 +115,7 @@ describe('TeacherPanel', () => {
     const wrapper = setUp({
       viewAs: ViewType.Instructor,
       unitHasLockableLessons: true,
-      hasSections: true
+      hasSections: true,
     });
     expect(wrapper.contains(i18n.selectSectionInstructions())).to.be.true;
   });
@@ -121,7 +125,7 @@ describe('TeacherPanel', () => {
       viewAs: ViewType.Instructor,
       unitHasLockableLessons: true,
       hasSections: true,
-      unlockedLessonNames: ['lesson1', 'lesson2']
+      unlockedLessonNames: ['lesson1', 'lesson2'],
     });
 
     expect(wrapper.contains(i18n.selectSectionInstructions())).to.be.true;
@@ -134,7 +138,7 @@ describe('TeacherPanel', () => {
     sinon.stub(teacherPanelData, 'getStudentsForSection').returns(
       Promise.resolve({
         id: 55,
-        students: []
+        students: [],
       })
     );
 
@@ -142,7 +146,7 @@ describe('TeacherPanel', () => {
     const overrideProps = {
       viewAs: ViewType.Instructor,
       pageType: pageTypes.scriptOverview,
-      setStudentsForCurrentSection: setStudentsForCurrentSectionStub
+      setStudentsForCurrentSection: setStudentsForCurrentSectionStub,
     };
 
     await setUpWithMount(overrideProps);
@@ -156,7 +160,7 @@ describe('TeacherPanel', () => {
     const setViewTypeStub = sinon.stub();
     const overrideProps = {
       pageType: pageTypes.scriptOverview,
-      setViewType: setViewTypeStub
+      setViewType: setViewTypeStub,
     };
 
     await setUpWithMount(overrideProps);
@@ -167,17 +171,17 @@ describe('TeacherPanel', () => {
   it('loads initial data and calls get/set lock status', async () => {
     const teacherSections = [{id: 1, name: 'CSF section'}];
     const sectionLockStatus = {
-      '1': {
+      1: {
         section_id: 1,
         section_name: 'CSF section',
-        lessons: []
-      }
+        lessons: [],
+      },
     };
 
     sinon.stub(teacherPanelData, 'queryLockStatus').returns(
       Promise.resolve({
         teacherSections,
-        sectionLockStatus
+        sectionLockStatus,
       })
     );
 
@@ -187,7 +191,7 @@ describe('TeacherPanel', () => {
       viewAs: ViewType.Instructor,
       pageType: pageTypes.level,
       setSections: setSectionsStub,
-      setSectionLockStatus: setSectionLockStatusStub
+      setSectionLockStatus: setSectionLockStatusStub,
     };
     await setUpWithMount(overrideProps);
 
@@ -201,7 +205,7 @@ describe('TeacherPanel', () => {
     it('displays StudentTable for instructor with students', () => {
       const wrapper = setUp({
         viewAs: ViewType.Instructor,
-        students: students
+        students: students,
       });
       expect(wrapper.find(StudentTable)).to.have.length(1);
     });
@@ -209,7 +213,7 @@ describe('TeacherPanel', () => {
     it('does not display StudentTable for instructor with no students', () => {
       const wrapper = setUp({
         viewAs: ViewType.Instructor,
-        students: []
+        students: [],
       });
       expect(wrapper.find(StudentTable)).to.have.length(0);
     });
@@ -217,14 +221,14 @@ describe('TeacherPanel', () => {
     it('does not display StudentTable for view page as participant', () => {
       const wrapper = setUp({
         viewAs: ViewType.Participant,
-        students: students
+        students: students,
       });
       expect(wrapper.find(StudentTable)).to.have.length(0);
     });
 
     it('calls selectUser when user is clicked with isAsync true when on overview page', () => {
-      const store = createStore(combineReducers({viewAs}), {
-        viewAs: ViewType.Instructor
+      const store = createStore(combineReducers({viewAs, currentUser}), {
+        viewAs: ViewType.Instructor,
       });
 
       const selectUserStub = sinon.stub();
@@ -232,7 +236,7 @@ describe('TeacherPanel', () => {
         selectUser: selectUserStub,
         viewAs: ViewType.Instructor,
         students: students,
-        pageType: pageTypes.scriptOverview
+        pageType: pageTypes.scriptOverview,
       };
       const props = {...DEFAULT_PROPS, ...overrideProps};
 
@@ -249,8 +253,8 @@ describe('TeacherPanel', () => {
     });
 
     it('calls selectUser when user is clicked with isAsync false when on level page', () => {
-      const store = createStore(combineReducers({viewAs}), {
-        viewAs: ViewType.Instructor
+      const store = createStore(combineReducers({viewAs, currentUser}), {
+        viewAs: ViewType.Instructor,
       });
 
       const selectUserStub = sinon.stub();
@@ -258,7 +262,7 @@ describe('TeacherPanel', () => {
         selectUser: selectUserStub,
         viewAs: ViewType.Instructor,
         students: students,
-        pageType: pageTypes.level
+        pageType: pageTypes.level,
       };
       const props = {...DEFAULT_PROPS, ...overrideProps};
       const wrapper = mount(
@@ -279,22 +283,19 @@ describe('TeacherPanel', () => {
       const wrapper = setUp({
         viewAs: ViewType.Instructor,
         students: students,
-        pageType: pageTypes.scriptOverview
+        pageType: pageTypes.scriptOverview,
       });
 
       expect(wrapper.find(SelectedStudentInfo)).to.have.length(0);
     });
 
     it('on level displays SelectedStudentInfo when students have loaded, passes expected props', () => {
-      sinon
-        .stub(utils, 'queryParams')
-        .withArgs('user_id')
-        .returns('1');
+      sinon.stub(utils, 'queryParams').withArgs('user_id').returns('1');
 
       const wrapper = setUp({
         viewAs: ViewType.Instructor,
         students: students,
-        teacherId: 5
+        teacherId: 5,
       });
 
       const selectedStudentComponent = wrapper.find(SelectedStudentInfo);
@@ -311,8 +312,8 @@ describe('TeacherPanel', () => {
       const wrapper = setUp({
         viewAs: ViewType.Participant,
         exampleSolutions: [
-          'https://studio.code.org/projects/applab/8cik_q8RCK57-Zv4Xeot_Q/view'
-        ]
+          'https://studio.code.org/projects/applab/8cik_q8RCK57-Zv4Xeot_Q/view',
+        ],
       });
       expect(wrapper.find('Button')).to.have.length(0);
     });
@@ -322,8 +323,8 @@ describe('TeacherPanel', () => {
         viewAs: ViewType.Instructor,
         students: students,
         exampleSolutions: [
-          'https://studio.code.org/projects/applab/8cik_q8RCK57-Zv4Xeot_Q/view'
-        ]
+          'https://studio.code.org/projects/applab/8cik_q8RCK57-Zv4Xeot_Q/view',
+        ],
       });
 
       expect(wrapper.find('Button')).to.have.length(1);
@@ -333,7 +334,7 @@ describe('TeacherPanel', () => {
       const wrapper = setUp({
         viewAs: ViewType.Instructor,
         students: students,
-        exampleSolutions: null
+        exampleSolutions: null,
       });
 
       expect(wrapper.find('Button')).to.have.length(0);

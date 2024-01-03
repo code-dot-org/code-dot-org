@@ -1,34 +1,30 @@
 ---
-title: Teacher Resources - Star Wars
-nav: hoc_teacher_resources_nav
-theme: responsive
-style_min: true
-video_player: true
+title: Ресурси для вчителя - Зоряні війни
 ---
 
-# Star Wars: Building a Galaxy with Code
+# Зоряні війни: Будуємо галактику за допомогою коду
 
 {{ hoc_starwars_video }}
 
 [col-50]
 
-## Teacher Resources
+## Ресурси для вчителів
 
-### Lesson Plans:
+### Плани уроків:
 
-- [Star Wars: Building a Galaxy with Code]({{ hoc_starwars_cb_url }})
-- [Answer Sheet and Teacher Tips](https://docs.google.com/document/d/1BzdwxHsmFMt7ib1HLW7dL24W3sSCLhTklkj4wZ9I26c/edit?usp=sharing)
+- [Зоряні війни: Будуємо галактику за допомогою коду]({{ hoc_starwars_cb_url }})
+- [Лист відповідей та поради для вчителя](https://docs.google.com/document/d/1BzdwxHsmFMt7ib1HLW7dL24W3sSCLhTklkj4wZ9I26c/edit?usp=sharing)
 
-### Extension Activities:
+### Завдання для поглиблення знань:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [Поза Годиною коду](http://code.org/learn/beyond)
+- [Computer Science Fundamentals: Курс 2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### Інші ресурси для вчителів:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Година коду: Посібник для викладачів](https://hourofcode.com/how-to)
+- [Найкращі практики від успішних викладачів](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Live Event: [Посібник для викладача до Години коду](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
@@ -36,12 +32,12 @@ video_player: true
 
 ## Огляд
 
-Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+Навчіться програмувати дроїдів і створи власну гру "Зоряні війни" в далекій-далекій галактиці.
 
-**Recommended Age Range:** 6+
+**Рекомендована вікова категорія:** 6+
 
-**Technology Requirements:** Modern browsers + tablets
+**Технологічні вимоги:** Сучасні браузери + планшети
 
-<a href="/starwars"><button>Try the tutorial</button></a>
+<a href="/starwars"><button>Спробуйте цей підручник</button></a>
 
 [/col-50]

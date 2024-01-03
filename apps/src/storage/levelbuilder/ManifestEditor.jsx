@@ -9,13 +9,13 @@ import LibraryCategory from '../dataBrowser/LibraryCategory';
 class ManifestEditor extends React.Component {
   static propTypes = {
     // Provided via Redux
-    libraryManifest: PropTypes.object.isRequired
+    libraryManifest: PropTypes.object.isRequired,
   };
 
   state = {
     showUnpublishedTables: false,
     notice: null,
-    isError: false
+    isError: false,
   };
 
   displayNotice = (notice, isError) => {
@@ -30,7 +30,7 @@ class ManifestEditor extends React.Component {
       url: '/datasets/manifest/update',
       method: 'POST',
       contentType: 'application/json',
-      data: JSON.stringify({manifest: this.refs.content.value})
+      data: JSON.stringify({manifest: this.refs.content.value}),
     })
       .done(() => this.displayNotice('Manifest Saved', false))
       .fail(err => this.displayNotice(`Error: ${err.statusText}`, true));
@@ -40,7 +40,7 @@ class ManifestEditor extends React.Component {
     this.setState({
       showUnpublishedTables: experiments.isEnabled(
         experiments.SHOW_UNPUBLISHED_FIREBASE_TABLES
-      )
+      ),
     });
   }
 
@@ -97,6 +97,7 @@ class ManifestEditor extends React.Component {
           value={JSON.stringify(this.props.libraryManifest, null, 2)}
           // Change handler is required for this element, but changes will be handled by the code mirror.
           onChange={() => {}}
+          aria-label="Manifest JSON"
         />
         <Button
           __useDeprecatedTag
@@ -117,23 +118,23 @@ const styles = {
     color: color.red,
     backgroundColor: color.lightest_red,
     padding: 10,
-    fontSize: 14
+    fontSize: 14,
   },
   submit: {
-    marginTop: 15
+    marginTop: 15,
   },
   success: {
     color: color.realgreen,
     backgroundColor: color.lighter_green,
     padding: 10,
-    fontSize: 14
+    fontSize: 14,
   },
   warning: {
     color: '#9F6000',
     backgroundColor: color.lighter_yellow,
     padding: 10,
-    fontSize: 14
-  }
+    fontSize: 14,
+  },
 };
 
 export default connect(

@@ -39,8 +39,10 @@ ne:
         age: 'उमेर'
         gender: 'लिङ्ग'
         edit_header: 'खाता जानकारी सम्पादन गर्नुहोस्'
+        finish_sign_up_header_error: 'Please correct the following errors:'
         error:
           future: can't be in the future
+        user_type: 'Account Type'
   beta: "बिटा"
   hello: "के छ विश्व"
   welcome_back: "Welcome back, %{name}"
@@ -118,7 +120,6 @@ ne:
     valid_password: "Valid password!"
     invalid_password: "Password must be at least 6 characters"
     mismatch_password: "The two passwords you entered do not match"
-    additional_information: "We need some additional information to continue signing you up."
     user_type_label: "Account Type"
     user_type_student: "Student"
     user_type_teacher: "Teacher"
@@ -733,9 +734,14 @@ ne:
         other: "अन्य"
       workshop_course:
         csp: '''16-''17 CS Principles'
+        other: 'अन्य'
       email_opt_in:
         opt_in_yes: 'हो'
         opt_in_no: 'होइन'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
+      csf: 'CS आधारभूत'
   cookie_banner:
     accept: 'I agree'
   copy: 'प्रतिलिपि गर्नुहोस्'

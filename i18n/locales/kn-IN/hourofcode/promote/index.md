@@ -1,5 +1,5 @@
 ---
-title: Spread the word
+title: ಪದವನ್ನು ಹರಡಿ
 ---
 
 {{ signup_button }}

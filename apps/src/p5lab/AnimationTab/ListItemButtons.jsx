@@ -1,6 +1,6 @@
 /** @file controls below an animation thumbnail */
 import React from 'react';
-import {OverlayTrigger, Tooltip} from 'react-bootstrap';
+import {OverlayTrigger, Tooltip} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import color from '@cdo/apps/util/color';
 import PropTypes from 'prop-types';
 import SpeedSlider from '@cdo/apps/templates/SpeedSlider';
@@ -9,7 +9,7 @@ import DeleteAnimationDialog from './DeleteAnimationDialog';
 
 const sliderStyle = {
   float: 'none',
-  display: 'block'
+  display: 'block',
 };
 
 /**
@@ -24,7 +24,7 @@ class ListItemButtons extends React.Component {
     onFrameDelayChanged: PropTypes.func.isRequired,
     frameDelay: PropTypes.number.isRequired,
     singleFrameAnimation: PropTypes.bool.isRequired,
-    labType: PropTypes.string.isRequired
+    labType: PropTypes.string.isRequired,
   };
 
   state = {isDeleteDialogOpen: false};
@@ -107,7 +107,7 @@ const styles = {
     marginTop: 6,
     textAlign: 'center',
     color: color.white,
-    fontSize: 24
+    fontSize: 24,
   },
   icon: {
     cursor: 'pointer',
@@ -116,19 +116,19 @@ const styles = {
     borderWidth: 1,
     borderRadius: 4,
     borderStyle: 'solid',
-    borderColor: 'transparent'
+    borderColor: 'transparent',
   },
   trash: {
-    marginRight: 12
+    marginRight: 12,
   },
   looping: {
     marginRight: 10,
-    marginTop: 6
+    marginTop: 6,
   },
   previewControls: {
     height: 32,
-    display: 'inline-block'
-  }
+    display: 'inline-block',
+  },
 };
 
 export default ListItemButtons;

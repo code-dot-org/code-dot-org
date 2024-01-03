@@ -5,6 +5,10 @@ import {P5LabType} from '../constants';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {showLevelBuilderSaveButton} from '../../code-studio/header';
 import color from '@cdo/apps/util/color';
+import experiments from '@cdo/apps/util/experiments';
+import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 export default class GameLab extends P5Lab {
   getAvatarUrl(levelInstructor) {
@@ -27,7 +31,7 @@ export default class GameLab extends P5Lab {
       config.level.lastAttempt = '';
       showLevelBuilderSaveButton(() => ({
         start_blocks: this.studioApp_.getCode(),
-        start_libraries: JSON.stringify(project.getProjectLibraries())
+        start_libraries: JSON.stringify(project.getProjectLibraries()),
       }));
     }
 
@@ -55,7 +59,7 @@ export default class GameLab extends P5Lab {
 
   preloadLabAssets() {
     return Promise.all([
-      this.preloadAnimations_(this.level.pauseAnimationsByDefault)
+      this.preloadAnimations_(this.level.pauseAnimationsByDefault),
     ]);
   }
 
@@ -69,6 +73,23 @@ export default class GameLab extends P5Lab {
   }
 
   runButtonClick() {
+    // For AI Rubrics Pilot
+    const inRubricsPilot =
+      experiments.isEnabled('ai-rubrics') ||
+      experiments.isEnabled('non-ai-rubrics');
+    if (inRubricsPilot && hasScriptData('script[data-rubricdata]')) {
+      const rubricData = getScriptData('rubricdata');
+      const teacherId = getStore().getState().currentUser.userId;
+      const {rubric, studentLevelInfo} = rubricData;
+      if (studentLevelInfo && rubric.level.name === this.level.name) {
+        analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_RUN_BUTTON_CLICKED, {
+          lessonName: rubric.lesson.name,
+          levelName: this.level.name,
+          studentUserId: studentLevelInfo.user_id,
+          teacherUserId: teacherId,
+        });
+      }
+    }
     if (!this.studioApp_.config.readonlyWorkspace) {
       $('.droplet-main-canvas').css(
         'background-color',

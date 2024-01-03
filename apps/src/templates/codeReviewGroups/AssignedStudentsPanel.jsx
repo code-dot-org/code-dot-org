@@ -8,14 +8,14 @@ import {
   HEADER_STYLE,
   BUTTON_STYLE,
   GROUPS_CONTAINER_STYLE,
-  HEADER_TITLE_STYLE
+  HEADER_TITLE_STYLE,
 } from './UnassignedStudentsPanel';
 
 export default function AssignedStudentsPanel({
   groups,
   onCreateGroupClick,
   onGroupNameUpdate,
-  onGroupDelete
+  onGroupDelete,
 }) {
   // TO DO: style and add small pop-up to get group name from teacher when creating a group.
   // https://codedotorg.atlassian.net/browse/CSA-1033
@@ -54,15 +54,15 @@ AssignedStudentsPanel.propTypes = {
   groups: PropTypes.array.isRequired,
   onCreateGroupClick: PropTypes.func.isRequired,
   onGroupNameUpdate: PropTypes.func.isRequired,
-  onGroupDelete: PropTypes.func.isRequired
+  onGroupDelete: PropTypes.func.isRequired,
 };
 
 const styles = {
   groupsPanel: {
-    width: 500
+    width: 500,
   },
   header: HEADER_STYLE,
   headerTitle: HEADER_TITLE_STYLE,
   button: BUTTON_STYLE,
-  groupsContainer: GROUPS_CONTAINER_STYLE
+  groupsContainer: GROUPS_CONTAINER_STYLE,
 };

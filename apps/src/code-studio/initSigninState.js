@@ -7,7 +7,7 @@ import SignInOrAgeDialog from '@cdo/apps/templates/SignInOrAgeDialog';
 import {getStore} from './redux';
 import {
   setUserSignedIn,
-  setUserType
+  setUserType,
 } from '@cdo/apps/templates/currentUserRedux';
 import {environmentSpecificCookieName} from '@cdo/apps/code-studio/utils';
 

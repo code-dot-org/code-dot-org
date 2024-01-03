@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::TestCase
+class Api::V1::Pd::WorkshopSummaryReportControllerTest < ActionController::TestCase
   freeze_time
 
   EXPECTED_COMMON_FIELDS = %w(
@@ -82,7 +82,6 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::Tes
     assert_payment_fields response.first
   end
 
-  # TODO: remove this test when workshop_organizer is deprecated
   test 'organizers do not get payment info' do
     sign_in @organizer
 
@@ -116,7 +115,6 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::Tes
     assert_equal 3, response.count
   end
 
-  # TODO: remove this test when workshop_organizer is deprecated
   test 'organizers only see their own workshops' do
     sign_in @organizer
 
@@ -150,7 +148,7 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::Tes
   end
 
   test 'filter by schedule' do
-    start_date = Date.today - 6.months
+    start_date = Time.zone.today - 6.months
     end_date = start_date + 1.month
 
     workshop_in_range = create :workshop, :ended, sessions_from: start_date + 2.weeks
@@ -169,7 +167,7 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::Tes
   end
 
   test 'filter by end date' do
-    start_date = Date.today - 6.months
+    start_date = Time.zone.today - 6.months
     end_date = start_date + 1.month
 
     workshop_in_range = create :workshop, :ended, ended_at: start_date + 2.weeks
@@ -223,7 +221,7 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::Tes
     response = JSON.parse(@response.body)
     assert_equal 4, response.count
     unpaid_report = response.find {|row| row['workshop_id'] == unpaid_workshop.id}
-    assert_not_nil unpaid_report
+    refute_nil unpaid_report
     refute unpaid_report['qualified']
     assert_nil unpaid_report['payment_total']
   end

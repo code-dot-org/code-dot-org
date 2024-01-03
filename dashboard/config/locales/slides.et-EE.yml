@@ -1,434 +1,9 @@
 ---
 et:
   slides:
-    maze_intro:
-      1:
-        text: Tere tulemast oma esimesse programmeerimise tundi! Sukeldume otse sinu
-          esimesse programmeerimise kogemusse.
-      2:
-        text: Me hakkame kasutama Blocklyt, visuaalse programmeerimise keelt, kus
-          koodi kirjutamiseks lohistatakse koodiplokid sobivasse järjestusse.
-      3:
-        text: Enamik koodi on eelnevalt sisestatud, kuid Blockly on rohkem visuaalne.
-          Igale plokile vastab rida "päris" koodi.
-      4:
-        text: Te hakkate õppima arvutiteaduse põhialuseid, mõisteid mida kasutatakse
-          igal pool, äppide tegemisest kuni Marsi kulguri kontrollimiseni.
-      5:
-        text: Programm on lihtsalt üks komplekt juhiseid sinu arvuti jaoks.
-      6:
-        text: Sinu esimese programmi eesmärk on aidata Angry Bird´i lind läbi labürindi
-          et ta saaks lüüa Rohelist Siga.
-      7:
-        text: Vasakul pool on labürint, kus teie programm töötab. Igale puslele on
-          labürindi all juhised.
-      8:
-        text: Keskmises tööriista kastis (programmi ja tööruumi vahel) on käsud Angry
-          Bird´i linnule. Sa hakkad neid kasutama et ehitada oma koodi.
-      9:
-        text: Paremal pool on tööruum, koht kus saad ehitada koodi. Ploki lisamiseks
-          tööruumi lohista mõni element tööriistakastist tööruumi sobivasse kohta.
-          Elemendi kustutamiseks lohista see nurgas olevasse prügikasti.
-      10:
-        text: Iga plokk on üks juhis. Kui sa lohistad "liigu edasi" ploki oma tööruumi
-          ja vajutad "Käivita Programm", liigub lind ühe koha labürindis.
-      11:
-        text: Et teha rohkem kui ühte asja, saad sa lohistada mitu plokki oma tööruumi
-          ja ühendada nad omavahel kokku. Lind täidab käske ülevalt alla.
-      12:
-        text: Kui oled käivitanud programmi, aga tahad seda parandada ja uuesti proovida,
-          vajuta nuppu Lähtesta.
-      13:
-        text: Järele neile põrsastele!
-    artist_intro:
-      1:
-        text: Tere, mina olen JR! iga võidusõiduauto tiim vajab arvutiteadlast et
-          võita. Nad analüüsivad autost pärinevaid andmeid ja panevad selle kiiremini
-          liikuma.
-      2:
-        text: Nendes mõistatustes oled sa kunstnik, kes tõmbab joone igale poole kuhu
-          ta läheb.
-      3:
-        text: See plokk ütleb "liigu edasi 100 pikslit." Pikslid on lihtsalt ühed
-          väikesed punktikesed mis moodustavad pildi sinu ekraanil.
-      4:
-        text: See plokk ütleb "pööra 90 kraadi paremale." See pöörab sinu kunstnikku
-          sama palju kui "pööra" plokid labürindi pusledes.
-      5:
-        text: Vajuta noolele kummaski plokis, et muuta seda, kui palju kunstnik edasi
-          liigub või pöörab. Katseta nooli, et seda tundma õppida.
-    farmer_intro:
-      1:
-        text: Tere, ma olen Paola! Nendes pusledes oled talunik, kes peab oma põllu
-          täielikult siledaks saama, et midagi külvata.
-      2:
-        text: Sa pead aitama tal eemaldada kõik mullahunnikud ja aitama tal auke täita.
-      3:
-        text: Uued plokid eemaldavad 1 labidatäie mulda hunnikust ja panevad 1 kühvlitäie
-          mulda auku.
-      4:
-        text: Mullahunnikud ja augud on erineva suurusega, seega pead ütlema mitut
-          labidatäit kasutada.
-    flappy_intro:
-      1:
-        text: Tere, mina olen Katie! Üks kõige põnevamaid asju arvutiteaduses on see,
-          et arvutid saavad olla interaktiivsed.
-      2:
-        text: Ükskõik millal, kui keegi klõpsab, vajutab ekraanile või kirjutab arvutis
-          või telefonis luuakse SÜNDMUS ja siin on jupp koodi mis otsustab mida teha
-          kui SÜNDMUS aset leiab.
-      3:
-        text: 'Näiteks sul võib olla mõni SÜNDMUSE- KÄSITSEJA mis ütleb "kui klikitakse,
-          mängitakse heli" '
-      4:
-        text: Kas sa oled kuulnud midagi FlappyBird´i mängust? Kasutades Sündmuse
-          käsitsejaid hakkame õppima seda, kuidas teha oma FlappyBird!
-      5:
-        text: Koodi mida sa plokkide lohistamisega "kirjutad" on arvuti jaoks käsud.
-          Iga plokk on esindatud päris koodiga.
-      6:
-        text: 'Kui vaatad oma tööruumi siis võid märgata, et seal on juba mõned rohelised
-          plokid, need on "sündmuste käsitsejad" '
-      7:
-        text: Kui sa tahad, et lind sinu hiireklõpsu peale tiibu lehvitaks, saad lisada
-          "FLAP" ploki asjakohase sündmusetöötleja juurde ja nüüd sinu mängus millal
-          iganes sa teed hiireklõpsu, siis lind lehvitab tiibu.
-      8:
-        text: igas pusles tutvustame uusi sündmusi roheliste plokkidena tööruumis,
-          sina saad otsustada selle üle, millise ploki sa sinna paned vastavalt nendele
-          sündmustele.
-      9:
-        text: Kui sa näed mõne ploki küljes alla suunatud nooli nagu see, siis tähendab
-          see seda et sa saad ,uuta selle ploki seadeid- nagu näiteks mis heli mängitakse
-          kui FlappyBird´i lind kukub vastu maad.
-      10:
-        text: Viimases pusles saad luua oma enda mängu ja seda jagada oma sõpradega.
-          Kasuta oma loovust!
-    loop_times:
-      1:
-        text: Tere, olen Mark! Õpime kordusi. Korduste kasutamine ütleb arvutile,
-          et ta kordaks valitud tegevuste gruppi uuesti ja uuesti, tuhandeid või isegi
-          miljardeid kordi.
-      2:
-        text: Selles pusles tahame, et lind liiguks viis kohta edasi, et püüda siga.
-      3:
-        text: Saame kasutada uut "korda" plokki, et meid välja aidata.
-      4:
-        text: Selle asemel, et lohistada viis "liigu edasi" plokki ritta, kasuta...
-      5:
-        text: Pane "liigu edasi" plokk "korda" ploki sisse ja kirjuta plokki number,
-          et määrata, mitu korda tegevust korrata tuleb.
-      6:
-        text: 'Oluline on see et: sa saad "korda" ploki sisse rohkem kui ühe ploki.'
-      7:
-        text: Naudi oma uue "korda" ploki kasutamist!
-    loop_until:
-      1:
-        text: Tere, olen Chris. Enne Miami Heatiga läksin Georgiasse et õppida arvutiteaduse
-          õpetajaks. Proovime uut plokki, "korda kuni" plokki.
-      2:
-        text: Mis oleks, kui me ei teaks, kui kaugele peaks lind liikuma, et siga
-          kätte saada?
-      3:
-        text: Kui me paneme "liigu edasi" ploki "korda kuni" ploki sisse siis lind
-          liigub nii kaua edasi KUNI ta jõuab seani (või põrkab seinaga kokku).
-      4:
-        text: 'Oluline: nagu ennegi saame me nüüd panna mitu plokki "korda kuni" ploki
-          sisse ja neid kõiki korratakse.'
-    if:
-      1:
-        text: Tere! Olen Bill! Õpime uue põhimõiste, "kui" avalduse. Arvuti teeb selle
-          abil otsuseid.
-      2:
-        text: Sa kasutad "kui" avaldust iga päev. Näiteks kui lähed hommikul õue,
-          sa mõtled, et KUI õues sajab, pean kandma jopet.
-      3:
-        text: Me saame zombil lasta kontrollida KAS vasakul pool on rada ja kui ta
-          leiab raja vasakule siis me saame panna ta pöörama sinna suunas.
-      4:
-        text: Et kirjutada selleks koodi, lohista tööruumi "kui" plokk ja pane sinna
-          sisse "pööra vasakule" plokk.
-      5:
-        text: Nüüd kui me paneme "liigu edasi" ploki selle kohale ja nad omakorda
-          veel "korda" ploki sisse, siis iga kord kui zombi liigub siis ta kontrollib
-          kas vasakule poole on rada ja sinna saab pöörata. Käsk "korda" on siin kriitilise
-          tähtsusega, kuna zombi peab kontrollima rada iga astumise järel.
-      6:
-        text: 'Kui avaldused on arvutiteaduses väga tähtsad. Üks esimestest programmidest,
-          mille kirjutasin, oli trips-traps-trulli mäng. Selle mängu koodis oli "kui"
-          avaldis mis ütles: KUI teine inimene hakkab võitma, siis tuleb blokeerida
-          koht mis laseks tal võita.'
-      7:
-        text: Lõbutse "kui" plokki kasutades!
-    if_else:
-      1:
-        text: Tere, minu nimi on Saloni. Ma kasutan arvutiteadust aitamaks lahendada
-          probleeme tervise ja meditsiini valdkonnas. Õppigem "kui muidu" ploki kohta.
-          See näeb välja nagu tavaline "kui" plokk, aga sellel on lõpus lisaosa, mis
-          ütleb "muidu".
-      2:
-        text: Kui ma asetan "liigu edasi" ploki kohale kus on kirjas "tee" ja ploki
-          "pööra vasakule" sinna kus on kirjas "muidu", siis see tähendab, et zombi
-          valib kahe valiku vahel. Kui ees on rada, siis zombi liigub edasi, kuid
-          vastasel korral (ees ei ole rada) zombi pöörab vasakule.
-      3:
-        text: Just nagu "kui" plokki, saame me ka "kui muidu" plokki lisada "korda"
-          ploki sisse, selliselt et zombi liigub järjest edasi ja "kui muidu" plokk
-          kontrollib jooksvalt kas on võimalik kuhugi pöörata.
-      4:
-        text: Nüüd vii need zombid sinna kuhu nad kuuluvad!
-    if_else_scrat:
-      1:
-        text: Kui-muidu lause on otsus kahe valiku vahel. Vaatame kuidas me saame
-          kasutada kui-muidu lauset oma sõbra orav Scrat abil.
-      2:
-        text: See plokk näeb välja samasugune nagu "kui" plokk, aga seal on allosas
-          täiendav osa mis ütleb "muidu". Kui ma panen "liigu edasi" ploki sinna kus
-          on kirjas "tee" ja ploki "pööra vasakule" sinna kus on kirjas "muidu", siis
-          orav Scrat liigub edasi kui ees on rada. Kui rada ees ei ole, siis Scrat
-          pöörab vasakule.
-      3:
-        text: See teeb otsuse ja vastavalt sellele otsusele teeb ühte kahest tegevusest.
-          Ja just nagu "kui" plokke, saad sa ka "kui muidu" plokke lisada "korda"
-          plokkide sisse.
-      4:
-        text: Aitame Scratil, oraval jõuda tammetõruni!
-    function:
-      1:
-        text: Tere, olen Brina, Instagrami insener. Funktsioon on kindel rida koodi,
-          mida sa tahad korduvalt kasutada, selle asemel et kirjutada seda koodi iga
-          kord välja, saad sa kasutada ühte plokki.
-      2:
-        text: Me hakkame õppima kuidas defineerida funktsiooni. Funktsiooni definitsioonidel
-          on nurgas täht. Funktsiooni nimetus on kirjutatud ülemisele joonele.
-      3:
-        text: Plokid, mis lähevad definitsiooni sisse, ütlevad meile, mida see teeb.
-          Selle funktsiooni definitsioon on "täida 5" ja see on tehtud "korda" ja
-          "täida" plokist.
-      4:
-        text: Definitsioon paikneb tööruumis, aga meie talunik ei käivita funktsiooni,
-          kuni lohistame funktsioonide kategooriast välja oma "täida 5" funktsiooni
-          ploki.
-      5:
-        text: 'Paneme "fun"i tagasi "FUNction"isse! (tõlkimatu nali) '
-    loop_while:
-      1:
-        text: 'Tere, mina olen Makinde! Õpime "kuni" ploki kohta. '
-      2:
-        text: '"Tingimusel plokk" teeb mida iganes sa selle sisse paned NIIKAUA KUNI
-          väide üleval on TÕENE.'
-      3:
-        text: Näiteks, kui talunik on hunniku otsas, jätkab ta 1 kühvlitäie eemaldamist
-          tingimusel, et tema all on veel hunnik.
-    loop_for:
-      1:
-        text: tere, olen Trina, töötan Pixaris. Ma olen töötanud paljude filmide kallal,
-          kaasa arvatud Shreki.
-      2:
-        text: See on meie uus "loendur" tsükkel. See sooritab korduvalt toiminguid,
-          aga sa saad tegevusi igal korra jaoks natuke muuta.
-      3:
-        text: Siin näites meie "loendaja" silmus ütleb "loenda loendajaga alates 50st
-          kuni 90ni, 10ne kaupa" ja selle sees meil on meie "joonista ruut" plokk.
-          Lohista "loendaja" plokk sektsioonist "muutujad" kohale "pikkus".
-      4:
-        text: See tähendab, et meie kunstnik joonistab ruudu mille külgede pikkus
-          on 50 pikslit, siis lisab sellele 10 ja joonistab ruutu mille külgede pikkus
-          on 60 pikslit. Siis see lisab järjest juurde 10 ja joonistab ruute kuni
-          saavutab küljepikkuse 90. Seega meil saavad olema ruudud küljepikkustega
-          50, 60, 70, 80 ja 90 pikslit.
-    parameters:
-      1:
-        text: Tere, mina olen Janete ja ma olen Zynga insener.
-      2:
-        text: Mis siis kui me tahame joonistada hunniku kolmnurki ja tahame et nende
-          pikkused oleksid erinevas suuruses?
-      3:
-        text: Me saaksime kogu selle koodi kirjutada käsitsi välja või me saame kasutada
-          parameetritega funktsiooni.
-      4:
-        text: Selle tegemiseks klõpsa sinisel tähekesel mis asub "joonista kolmnurk"
-          funktsiooni definitsioonil. Siis lohista "sisendi nimi" plokki "sisend".
-      5:
-        text: Kui sa siis kirjutad "pikkus" kohale kus on kirjas "x" ja vajutad "Enter",
-          lood sa pikkuse sisendi oma funktsiooni jaoks.
-      6:
-        text: Siis klõpsa tähekesel. Nüüd sa tahad klõpsata muutujate kategoorial
-          ja lohistada "pikkuse" ploki oma funktsioonide definitsiooni sisse "liigu
-          edasi" plokki. Ja lohista vana numbri plokk ära.
-      7:
-        text: Et kasutada oma parameetritega funktsiooni, klõpsa funktsioonide kategoorial
-          ja lohista välja oma "joonista kolmnurk koos pikkusega" funktsioon.
-      8:
-        text: Nüüd sa saad kasutada matemaatika plokki, sisestamaks erinevaid numbreid,
-          et joonistada erineva suurusega kolmnurki.
-    hoc_wrapup:
-      1:
-        text: Õnnitlused! Koos viimase lahendatud puslega kirjutasid sa just koodi,
-          mis saab öelda igale robotile, kuidas leida tee läbi iga pikkusega mitte-hargneva
-          labürindi või tunneli, olgu see siis zombi, lind, marsi kulgur või isegi
-          isesõitev auto.
-      2:
-        text: Põhimõisted, mida sa kasutasid, on iga programmi või rakenduse südames,
-          mida sa eales proovid. Me õppisime silmuste, "korda kuni" lausete, "kui"
-          lausete ja "kui muidu" lausete kohta.
-      3:
-        text: Kui sulle meeldis su esimene kooditund, külasta code.org veebilehte,
-          et jätkata oma haridust arvutiteaduses. Kui sa läbid meie 20 tunnise kursuse,
-          oled õppinud selgeks programmeerimise põhialused ja saad hakata õppima kuidas
-          kirjutada telefonirakendusi, robotite juhiseid, mänge ja palju muud.
-      4:
-        text: 'Tehnoloogia muudab kõike, mida teeme ja pole oluline, kas oled noor
-          või vana: programmeerimine on lõbus, see on loov ja igaüks saab seda õppida!'
     20_wrapup:
       1:
         text: Märkused lisanduvad peagi!
-    frozen_intro:
-      1:
-        text: Tere, olen Lyndsey. Ma modelleerin, näitlen ja kirjutan oma äppe. Kasutame
-          koodi et panna Anna ja Elsa seltsima kui nad jää maagiat ja ilu avastavad.
-      2:
-        text: Sa saad teha lumehelbeid ja teisi mustreid kui sa uisutad. Nii saad
-          teha oma talve võlumaa, mida saad ka oma sõpradega jagada.
-      3:
-        text: Järgmises tunnis hakkame õppima koodi kirjutamise põhialuseid. Traditsiooniline
-          programmeerimine on tavaliselt teksti kirjutamine aga meie kasutame Blocklyt,
-          see kasutab visuaalseid plokke, mida saad lohistada, et programme kirjutada.
-          Sel meetodil õpitakse põhitõdesid isegi ülikoolides. Tegelikult loote ikkagi
-          koodi, hoolimata sellest, et te ise näete ainult plokke.
-      4:
-        text: Programm on juhiste kogum, mis ütleb arvutile mida teha. Ehitame koodi
-          või programmi, mis aitab Elsal luua lihtsa sirgjoone. Hakkame seda edaspidi
-          kasutama et luua raskemaid mustreid.
-      5:
-        text: Sinu ekraan on jaotatud kolmeks põhiosaks. Vasakul on jääväljak, koht
-          kus sinu programm käib. Iga taseme juhised on selle alla kirjutatud.
-      6:
-        text: Keskmine ala on tööriistakast ja iga plokk seal on tegevus mida Elsa
-          ja Anna teha saavad.
-      7:
-        text: Valget ala vasakul nimetatakse tööruumiks, see on koht kus sa oma programmi
-          ehitama hakkad. Jääl liikumiseks kasuta "Liigu Edasi" plokki.
-      8:
-        text: Plokk "Liigu Edasi" plokk tähendab "liigu edasi 100 piksli võrra." Kui
-          vajutad "Käivita", mis juhtub? Elsa liigub ekraanil edasi 100 pikslit.
-      9:
-        text: Teine plokk mis meil siin pusles on ütleb "pööra paremale 90 kraadi
-          võrra." "pööra paremale" plokk paneb Elsa pöörama teatud nurga. Saad katsetada
-          kui kaugele tahad Elsat pöörama panna. Nurka mõõdetakse Elsa ette jäävast
-          rajast. Niisiis see pöörab 90 kraadi. Ja see pöörab 120 kraadi.
-      10:
-        text: Pea meeles, sa saad ploki peal olevale noolele vajutades muuta seda,
-          kui palju tegelane pöörab või edasi liigub.
-    frozen_loops:
-      1:
-        text: Tere, mina olen Paola! Arvutid on väga head tegevuste kordamisel. Sa
-          saad loendada kümneni, kahekümneni või sajani. Aga arvuti saab loendada
-          miljardini või triljonini. Ta ei tüdine ära ja see võtab ainult mõned sekundid.
-          Olgu siis loendamine või joonistamine või ükskõik mis muu - arvutid saavad
-          korrata tegevusi sadu või isegi miljardeid kordi.
-      2:
-        text: Programmeerimises kutsume seda silmuseks. Silmus on vahend oma koodi
-          üha uuesti ja uuesti kordamiseks. Järgmise pusle jaoks on sinu eesmärk aidata
-          Annal luua ruut kasutades "korda" plokki.
-      3:
-        text: Kõik plokid, mille lisad "Kordus" ploki sisse korratakse järjekorras
-          ja just nii mitu korda nagu sa tahad.
-      4:
-        text: Ruudu joonistamiseks võid kasutada plokki "liigu edasi" ja "pööra paremale"
-          4 korda. Aga lihtsam viis on öelda arvutile üks kord "liigu edasi" ja "pööra
-          90 kraadi paremale" ning siis käskida korrata neid kahte tegevust 4 korda.
-          Selleks pead panema plokid "liigu edasi" ja "pööra paremale" ploki "korda"
-          sisse.
-      5:
-        text: Pea meeles, sa saad "korda" ploki väärtuse muuta ükskõik milleks ja
-          see kordabki plokki sisestatud tegevusi niipalju kordi.
-    frozen_functions:
-      1:
-        text: Tere, olen Chris Bosh. Olen professionaalne korvpallur, kirjutasin koodi
-          kolledžis.
-      2:
-        text: Üks kõige tähtsamaid küsimusi arvutiteaduses on see, kuidas määratleda
-          uusi käske. Enamikus arvutikeeltes on kõigest umbes 100 sõna või käsku.
-          Ja võlu peitubki selles, kuidas nendest ehitusplokkidest kokku panna omaenda
-          uusi sõnu.
-      3:
-        text: Kui oled arvutile õpetanud, kuidas käsujada abil mõnd tegevust sooritada,
-          saad sellele tegevusele ise nime välja mõelda, et seda oleks hiljem lihtne
-          korrata. Kui määratled oma käsu ja annad sellele nime, kutsutakse seda funktsiooniks.
-      4:
-        text: Tere, olen Jess! Plokkidega programmeerides kasutad funktsioone, kui
-          on sari tegevusi, mida tahad korrata palju kordi. Näiteks oled kirjutanud
-          koodi ruudu loomiseks.
-      5:
-        text: 'Sa saad seda kutsuda funktsiooniks "loo ruut" '
-      6:
-        text: Nüüd on sul uus plokk, mida saad kasutada mitu korda, et luua mitu ruutu.
-      7:
-        text: Paljude lihtsate kujunditega saab luua palju keerulisemaid mustreid.
-          Järgmises pusles saad kasutada varem kirjutatud koodi ringi tegemiseks uue
-          funktsioonina, millega saab teha eri suuruses ringe. Kas oskad kasutada
-          seda, et aidata Elsal luua keerulisi ja ilusaid mustreid lumes?
-    playlab_intro:
-      1:
-        text: "Loome mängu Play Labiga. Headel mängudel on lugu ja igas loos on tegelased.
-          Õpime, kuidas panna tegelased, nagu nõiad, tulnukad ja loomad kõnelema,
-          liikuma ja \tomavahel suhtlema. Selle tunni lõpus oskad teha mängu algusest
-          lõpuni ja jagada seda oma sõpradega."
-      2:
-        text: Sinu ekraan on jagatud kolmeks põhiosaks. Vasakul pool on see kus sinu
-          programm käib. Iga taseme juhend on selle alla kirjutatud.
-      3:
-        text: Keskmine ala on tööriistakast, milles on plokid mida sinu pusles vaja
-          läheb. Iga plokk on jupike koodi. Valget ala vasakul kutsutakse tööruumiks,
-          see on koht kus sa oma programmi ehitad.
-      4:
-        text: Alustuseks pead ühendama oma plokid oranži "pärast käivitamist" ploki
-          külge. Saad ühendada mitu plokki üksteise külge lohistades neid tööruumi,
-          teiste plokkide lähedusse kuni näed kollast joont, seejärel nad kinnituvad
-          üksteise külge.
-      5:
-        text: Selles esimeses pusles on meie tegelaseks pingviin ja me paneme ta ütlema
-          "Tere!" Selleks lohista "ütle" plokk tööruumi ja ühenda see "pärast käivitamist"
-          plokiga, seejärel kirjuta tekstikasti "Tere." Kui tahame siis saame pingviini
-          liikuma ka panna. Pingviini liikumapanemiseks kasuta "liigu vasakule" ja
-          "liigu paremale" plokke. Kui oled koodi kokku saanud vajuta "käivita" nuppu
-          ja vaata mis sa programmeerisid.
-      6:
-        text: Alusta, ja lõpuks oskad luua oma mängu igasuguste mängijatega, kes omavahel
-          suhtlevad, on rõõmsad või kurvad, koguvad punkte, loobivad tulepalle või
-          panevad üksteist lausa kaduma. Ise otsustad, milline on su mäng ja mida
-          tahad selles teha.
-    playlab_events:
-      1:
-        text: Nüüd hakkame õppima midagi sellist, mida programmeerijad iga päev kasutavad.
-          Neid kutsutakse sündmusteks. Sündmus ütleb programmile et tuleb jälgida
-          kui midagi juhtub. Kui mingi kindel asi juhtub siis rakendab programm eelnevalt
-          valitud käsu.
-      2:
-        text: Sündmusteks on näiteks hiireklõpsu, noolenupu või ekraani puudutamise
-          jälgimine.
-      3:
-        text: Nüüd paneme kosmoseroboti tervitama maalasi, kui mängija temal klõpsab.
-          Kasutame plokki "kui tegelast puudutatakse" ja ühendame selle plokiga "ütle".
-          Kui mängija klõpsab kosmoserobotil, käivitatakse kõik tegevused, mis on
-          ühendatud sündmuseplokiga "kui tegelast puudutatakse". Mida ütleb sinu tulnukas?
-      4:
-        text: Lisaks on olemas "kui nool" plokid. Kui sa ühendad "liigu" plokid nendega
-          saad tegelasi liigutada üles, alla, vasakule või paremale. Samm sammult
-          muutub mäng niimoodi interaktiivsemaks.
-    playlab_repeat_forever:
-      1:
-        text: See on "korda igavesti" plokk. Kõik mis selle ploki sees on korratakse
-          mängu jooksul igavesti.
-      2:
-        text: Kui me tahame, et mõni tegelane midagi korduvalt teeks, ilma et mängija
-          midagi peaks tegema, paneme me need plokid "korda igavesti" ploki sisse.
-      3:
-        text: Järgmises pusles pead aitama võluril oma kuningriigi piire valvata.
-          Selleks pead pidevalt liikuma vasakule ja paremale. Kui õpid selgeks, kuidas
-          töötavad käskluste kordused, hoiad hiljem palju aega kokku ning see on kasulik
-          ka siis, kui ise oma mängu ehitad.
     C1_artist_intro:
       1:
         text: Need on joonistamise plokid. Kasuta õiget plokki, et kunstnik liiguks
@@ -539,6 +114,41 @@ et:
           selles tsüklis tahan suurendada valguse kiirust. Ja see kõik luuakse tsüklitega.
           Tsüklid on arvutiteaduses olulised, sest need teevad meie töö lühemaks ja
           lihtsamaks.
+    C1_going_places_safely:
+      1:
+        text: Tere, minu nimi on Jeremiah. Ma olen seitse aastat vana. Mulle meeldib
+          oma ema arvutis mängida, kuid ma küsin alati enne luba. "Ema, kas ma võin
+          arvutisse minna? Olgu, kallis!"
+      2:
+        text: Ma armastan oma ema arvutit, kuna saan seal internetti kasutada. Internett
+          on umbes nagu meie naabruskond. Sa saad külastada lahedaid kohtasid, rääkida
+          pereliikmete ja sõpradega ning õppida palju uusi asju.
+      3:
+        text: Eile käisin ma oma kodu lähedal loomaaias. Ma nägin beebi-sebrat. Ma
+          tegin temast pildi ning muutsin ka triipude värve ning lisasin ta seejärel
+          oma lahedate loomade kogusse. Lahe! Hiljem käisin ma ühes kauges paigas.
+          Ma käisin Keenias. See on riik Aafrikas ja seal elab hästi palju sebrasid.
+      4:
+        text: Mõnikord internetis ma räägin inimestega, keda ma tunnen, kuid kes elavad
+          kaugemalt. Näiteks oma vanaemaga. Tere, vanaema! Ta küpsetab mulle küpsiseid
+          ja saadab need mulle sünnipäevaks. "Nämma, oleks internetti võimalik nuusutada!"
+          Ma saan internetis erinevate inimestega rääkida. Näiteks oma nõbuga, kuid
+          ma räägin alati ainult nendega, keda ma päriselt tunnen.
+      5:
+        text: Mulle meeldib interneti juures kõige rohkem see, et seal saab toredaid
+          mänge mängida. Mulle meeldib ka joonistada ning uusi asju luua ning neid
+          oma sõpradega jagada. See on lahe! Mõnikord ma käin veebilehtedel, kus ma
+          õpin uusi asju, kuid ma käin ainult nendel lehekülgedel, mis on minu jaoks
+          mõeldud. Vaata, dinosaurus!
+      6:
+        text: Internet on tore. Aga just nagu pead olema tänavat ületades tähelepanelik,
+          pead ka internetis ettevaatlik olema. Siin on 3 asja, mida peaksid meeles
+          pidama. 1. reegel - küsi esmalt luba oma vanematelt. 2. reegel - räägi ainult
+          inimestega, keda ta päriselt tunned. 3. reegel - käi vaid lehekülgedel,
+          mis on sinuvanustele mõeldud.
+      7:
+        text: Oli tore, kuid nüüd on õhtusöögi aeg! Ma login nüüd välja. Ei jõua ära
+          oodata, et saaksin uuesti sisse logida.
     C1_happy_maps_unplugged:
       1:
         text: Selle tunni nimi on Happy Maps. Täna aitame oma väikesel karvasel sõbral
@@ -609,41 +219,6 @@ et:
           käivitada. Enamus meist kujutab programme ette kui midagi, mis kirjutatakse
           arvuti jaoks. Programmid sobivad selleks väga hästi, aga neist on abi ka
           mujal. Saad programmeerida oma enda mänge või panna roboti asju tegema.
-    C1_going_places_safely:
-      1:
-        text: Tere, minu nimi on Jeremiah. Ma olen seitse aastat vana. Mulle meeldib
-          oma ema arvutis mängida, kuid ma küsin alati enne luba. "Ema, kas ma võin
-          arvutisse minna? Olgu, kallis!"
-      2:
-        text: Ma armastan oma ema arvutit, kuna saan seal internetti kasutada. Internett
-          on umbes nagu meie naabruskond. Sa saad külastada lahedaid kohtasid, rääkida
-          pereliikmete ja sõpradega ning õppida palju uusi asju.
-      3:
-        text: Eile käisin ma oma kodu lähedal loomaaias. Ma nägin beebi-sebrat. Ma
-          tegin temast pildi ning muutsin ka triipude värve ning lisasin ta seejärel
-          oma lahedate loomade kogusse. Lahe! Hiljem käisin ma ühes kauges paigas.
-          Ma käisin Keenias. See on riik Aafrikas ja seal elab hästi palju sebrasid.
-      4:
-        text: Mõnikord internetis ma räägin inimestega, keda ma tunnen, kuid kes elavad
-          kaugemalt. Näiteks oma vanaemaga. Tere, vanaema! Ta küpsetab mulle küpsiseid
-          ja saadab need mulle sünnipäevaks. "Nämma, oleks internetti võimalik nuusutada!"
-          Ma saan internetis erinevate inimestega rääkida. Näiteks oma nõbuga, kuid
-          ma räägin alati ainult nendega, keda ma päriselt tunnen.
-      5:
-        text: Mulle meeldib interneti juures kõige rohkem see, et seal saab toredaid
-          mänge mängida. Mulle meeldib ka joonistada ning uusi asju luua ning neid
-          oma sõpradega jagada. See on lahe! Mõnikord ma käin veebilehtedel, kus ma
-          õpin uusi asju, kuid ma käin ainult nendel lehekülgedel, mis on minu jaoks
-          mõeldud. Vaata, dinosaurus!
-      6:
-        text: Internet on tore. Aga just nagu pead olema tänavat ületades tähelepanelik,
-          pead ka internetis ettevaatlik olema. Siin on 3 asja, mida peaksid meeles
-          pidama. 1. reegel - küsi esmalt luba oma vanematelt. 2. reegel - räägi ainult
-          inimestega, keda ta päriselt tunned. 3. reegel - käi vaid lehekülgedel,
-          mis on sinuvanustele mõeldud.
-      7:
-        text: Oli tore, kuid nüüd on õhtusöögi aeg! Ma login nüüd välja. Ei jõua ära
-          oodata, et saaksin uuesti sisse logida.
     C1_pair_programming:
       1:
         text: Täna õpime paarisprogrammeerimist. Paarisprogrammeerimises teete meeskonnatööd.
@@ -740,6 +315,14 @@ et:
       5:
         text: Kordusplokki võib panna nii palju käske, kui soovid. Selles näites annad
           linnule käsu edasi liikuda ja vasakule pöörata, mida tehakse viis korda.
+    C2_artist_debugging:
+      1:
+        text: Nüüd on meil tööekraanil juba mitu plokki. Aga midagi on valesti.
+      2:
+        text: Proovime seda koodi siluda, vähendades kiirust ja jälgides samm-sammult,
+          kuidas see plokke läbib.
+      3:
+        text: Siin on midagi valesti! Kassi vurrud on 75 pikslit pikad, mitte 25.
     C2_artist_intro:
       1:
         text: Sa ei pääseks isegi võistlema, kui sul ei ole meeskonnas inimesi, kes
@@ -760,6 +343,16 @@ et:
       5:
         text: 'Ja see on 120-kraadine pööre. Pea meeles, neid väärtusi saad muuta,
           klõpsates piksleid ja kraade näitavate arvude kõrval nooltel. Head joonistamist! '
+    C2_artist_loops:
+      1:
+        text: Siin kasutame kordusplokki selleks, et saaksime oma kunstniku programmeerida
+          vähemate sammudega. Meil on juba tööekraanil mõned plokid, kuid need on
+          alles algus.
+      2:
+        text: Ruudu kõikide külgede joonistamiseks on neid plokke vaja neli korda
+          korrata. Selleks lohistame lihtsalt tööekraanile kordusploki ja asetame
+          edasiliikumise ja paremalepööramise plokid selle sisse. Kui klõpsame nupul
+          „Käivita“, kordab kunstnik neid samme neli korda ja joonistab terve ruudu.
     C2_bee_conditionals:
       1:
         text: 'See on tingimuslause plokk. Selles öeldakse, et KUI nektarit või mett
@@ -772,6 +365,30 @@ et:
         text: Selles näites ütleme, et KUI sinisel lillel on nektarit rohkem kui 0,
           korja nektarit. Seepeale kogub meie mesilane nektarit nii kaua, kuniks ta
           lille juurde jääb.
+    C2_bee_debugging:
+      1:
+        text: Kas oled kunagi kuulnud terminit "debugging" ehk silumine? See on viis,
+          kuidas leida asju, mis ei tööta. Kui parandad koodi, siis sa tuvastad ja
+          parandad vigasid.
+      2:
+        text: 'Meil on tööekraanil juba mitu plokki. Kasutame sammunuppu, et kõik
+          need plokid samm-sammult läbi käia ja teha kindlaks, kas lahendus on õige
+          ja kus on vaja seda parandada. '
+      3:
+        text: Tundub , et siin meie probleem ongi! Meil on vaja veel ühte edasiliikumise
+          plokki. Sammunupp aitab meil leida vea, et saaksime selle parandada ja probleemi
+          lahendada.
+    C2_bee_loops:
+      1:
+        text: 'Tsükkel on tegevuse kordamine. Kui ma lähen taru kontrollima, vaatan
+          ma raami ja panen selle siis tagasi. Ma kordan sama tegevust mitu korda.
+          Tegevuste kordumine ongi tsükkel. '
+      2:
+        text: See on kordusplokk. Võid panna kordusplokki sisse ükskõik mis tegevuse
+          ja seda korratakse nii mitu korda, kui soovid. Näiteks sellel tasemel ei
+          pea me välja lohistama edasiliikumise ja nektari hankimise plokke kolm korda,
+          vaid lohistame nad välja üks kord ja siis kordame tegevust kolm korda. Nii
+          on lihtsam!
     C2_binary_bracelets:
       1:
         text: See on binaarsete käevõrude tund. Me kirjutame oma nimetähtede koodi
@@ -819,27 +436,6 @@ et:
           Nii saab arvuti teha otsuseid. Näiteks kui saad sihtmärgile pihta, teenid
           kümme punkti. Kui ei saa, kaotad kolm punkti. Kui tead, kuidas tingimuslaused
           toimivad, saad luua igasuguseid põnevaid mänge.
-    C2_artist_debugging:
-      1:
-        text: Nüüd on meil tööekraanil juba mitu plokki. Aga midagi on valesti.
-      2:
-        text: Proovime seda koodi siluda, vähendades kiirust ja jälgides samm-sammult,
-          kuidas see plokke läbib.
-      3:
-        text: Siin on midagi valesti! Kassi vurrud on 75 pikslit pikad, mitte 25.
-    C2_bee_debugging:
-      1:
-        text: Kas oled kunagi kuulnud terminit "debugging" ehk silumine? See on viis,
-          kuidas leida asju, mis ei tööta. Kui parandad koodi, siis sa tuvastad ja
-          parandad vigasid.
-      2:
-        text: 'Meil on tööekraanil juba mitu plokki. Kasutame sammunuppu, et kõik
-          need plokid samm-sammult läbi käia ja teha kindlaks, kas lahendus on õige
-          ja kus on vaja seda parandada. '
-      3:
-        text: Tundub , et siin meie probleem ongi! Meil on vaja veel ühte edasiliikumise
-          plokki. Sammunupp aitab meil leida vea, et saaksime selle parandada ja probleemi
-          lahendada.
     C2_digital_footprint:
       1:
         text: Pead on vaja selleks, et mütsi kanda ja et su nupp ütleks, mida teha,
@@ -902,27 +498,6 @@ et:
           uuesti teha või kellelegi teisele õpetada, kuidas seda teha. Aseta klaas
           sulatusahju, sulata see kokku, järgi kõiki juhiseid ja vaagen saabki valmis.
           Algoritmid on tegevuskava, mille abil saad midagi tehtud.
-    C2_artist_loops:
-      1:
-        text: Siin kasutame kordusplokki selleks, et saaksime oma kunstniku programmeerida
-          vähemate sammudega. Meil on juba tööekraanil mõned plokid, kuid need on
-          alles algus.
-      2:
-        text: Ruudu kõikide külgede joonistamiseks on neid plokke vaja neli korda
-          korrata. Selleks lohistame lihtsalt tööekraanile kordusploki ja asetame
-          edasiliikumise ja paremalepööramise plokid selle sisse. Kui klõpsame nupul
-          „Käivita“, kordab kunstnik neid samme neli korda ja joonistab terve ruudu.
-    C2_bee_loops:
-      1:
-        text: 'Tsükkel on tegevuse kordamine. Kui ma lähen taru kontrollima, vaatan
-          ma raami ja panen selle siis tagasi. Ma kordan sama tegevust mitu korda.
-          Tegevuste kordumine ongi tsükkel. '
-      2:
-        text: See on kordusplokk. Võid panna kordusplokki sisse ükskõik mis tegevuse
-          ja seda korratakse nii mitu korda, kui soovid. Näiteks sellel tasemel ei
-          pea me välja lohistama edasiliikumise ja nektari hankimise plokke kolm korda,
-          vaid lohistame nad välja üks kord ja siis kordame tegevust kolm korda. Nii
-          on lihtsam!
     C2_maze_intro:
       1:
         text: Harilikult programmeeritakse tekstiga, kuid meie kasutame programmeerimiskeskkonda
@@ -1705,6 +1280,388 @@ et:
           on salvestada raamatu leheküljenumbrid. Kasutaja saab lehel fonti suurendada
           ja vähendada. Fondi suuruse alusel võib muutuda raamatu lehekülgede arv.
           Saame seda reguleerida, kui salvestame lehekülgede arvu muutujasse.
+    artist_intro:
+      1:
+        text: Tere, mina olen JR! iga võidusõiduauto tiim vajab arvutiteadlast et
+          võita. Nad analüüsivad autost pärinevaid andmeid ja panevad selle kiiremini
+          liikuma.
+      2:
+        text: Nendes mõistatustes oled sa kunstnik, kes tõmbab joone igale poole kuhu
+          ta läheb.
+      3:
+        text: See plokk ütleb "liigu edasi 100 pikslit." Pikslid on lihtsalt ühed
+          väikesed punktikesed mis moodustavad pildi sinu ekraanil.
+      4:
+        text: See plokk ütleb "pööra 90 kraadi paremale." See pöörab sinu kunstnikku
+          sama palju kui "pööra" plokid labürindi pusledes.
+      5:
+        text: Vajuta noolele kummaski plokis, et muuta seda, kui palju kunstnik edasi
+          liigub või pöörab. Katseta nooli, et seda tundma õppida.
+    farmer_intro:
+      1:
+        text: Tere, ma olen Paola! Nendes pusledes oled talunik, kes peab oma põllu
+          täielikult siledaks saama, et midagi külvata.
+      2:
+        text: Sa pead aitama tal eemaldada kõik mullahunnikud ja aitama tal auke täita.
+      3:
+        text: Uued plokid eemaldavad 1 labidatäie mulda hunnikust ja panevad 1 kühvlitäie
+          mulda auku.
+      4:
+        text: Mullahunnikud ja augud on erineva suurusega, seega pead ütlema mitut
+          labidatäit kasutada.
+    flappy_intro:
+      1:
+        text: Tere, mina olen Katie! Üks kõige põnevamaid asju arvutiteaduses on see,
+          et arvutid saavad olla interaktiivsed.
+      2:
+        text: Ükskõik millal, kui keegi klõpsab, vajutab ekraanile või kirjutab arvutis
+          või telefonis luuakse SÜNDMUS ja siin on jupp koodi mis otsustab mida teha
+          kui SÜNDMUS aset leiab.
+      3:
+        text: 'Näiteks sul võib olla mõni SÜNDMUSE- KÄSITSEJA mis ütleb "kui klikitakse,
+          mängitakse heli" '
+      4:
+        text: Kas sa oled kuulnud midagi FlappyBird´i mängust? Kasutades Sündmuse
+          käsitsejaid hakkame õppima seda, kuidas teha oma FlappyBird!
+      5:
+        text: Koodi mida sa plokkide lohistamisega "kirjutad" on arvuti jaoks käsud.
+          Iga plokk on esindatud päris koodiga.
+      6:
+        text: 'Kui vaatad oma tööruumi siis võid märgata, et seal on juba mõned rohelised
+          plokid, need on "sündmuste käsitsejad" '
+      7:
+        text: Kui sa tahad, et lind sinu hiireklõpsu peale tiibu lehvitaks, saad lisada
+          "FLAP" ploki asjakohase sündmusetöötleja juurde ja nüüd sinu mängus millal
+          iganes sa teed hiireklõpsu, siis lind lehvitab tiibu.
+      8:
+        text: igas pusles tutvustame uusi sündmusi roheliste plokkidena tööruumis,
+          sina saad otsustada selle üle, millise ploki sa sinna paned vastavalt nendele
+          sündmustele.
+      9:
+        text: Kui sa näed mõne ploki küljes alla suunatud nooli nagu see, siis tähendab
+          see seda et sa saad ,uuta selle ploki seadeid- nagu näiteks mis heli mängitakse
+          kui FlappyBird´i lind kukub vastu maad.
+      10:
+        text: Viimases pusles saad luua oma enda mängu ja seda jagada oma sõpradega.
+          Kasuta oma loovust!
+    frozen_functions:
+      1:
+        text: Tere, olen Chris Bosh. Olen professionaalne korvpallur, kirjutasin koodi
+          kolledžis.
+      2:
+        text: Üks kõige tähtsamaid küsimusi arvutiteaduses on see, kuidas määratleda
+          uusi käske. Enamikus arvutikeeltes on kõigest umbes 100 sõna või käsku.
+          Ja võlu peitubki selles, kuidas nendest ehitusplokkidest kokku panna omaenda
+          uusi sõnu.
+      3:
+        text: Kui oled arvutile õpetanud, kuidas käsujada abil mõnd tegevust sooritada,
+          saad sellele tegevusele ise nime välja mõelda, et seda oleks hiljem lihtne
+          korrata. Kui määratled oma käsu ja annad sellele nime, kutsutakse seda funktsiooniks.
+      4:
+        text: Tere, olen Jess! Plokkidega programmeerides kasutad funktsioone, kui
+          on sari tegevusi, mida tahad korrata palju kordi. Näiteks oled kirjutanud
+          koodi ruudu loomiseks.
+      5:
+        text: 'Sa saad seda kutsuda funktsiooniks "loo ruut" '
+      6:
+        text: Nüüd on sul uus plokk, mida saad kasutada mitu korda, et luua mitu ruutu.
+      7:
+        text: Paljude lihtsate kujunditega saab luua palju keerulisemaid mustreid.
+          Järgmises pusles saad kasutada varem kirjutatud koodi ringi tegemiseks uue
+          funktsioonina, millega saab teha eri suuruses ringe. Kas oskad kasutada
+          seda, et aidata Elsal luua keerulisi ja ilusaid mustreid lumes?
+    frozen_intro:
+      1:
+        text: Tere, olen Lyndsey. Ma modelleerin, näitlen ja kirjutan oma äppe. Kasutame
+          koodi et panna Anna ja Elsa seltsima kui nad jää maagiat ja ilu avastavad.
+      2:
+        text: Sa saad teha lumehelbeid ja teisi mustreid kui sa uisutad. Nii saad
+          teha oma talve võlumaa, mida saad ka oma sõpradega jagada.
+      3:
+        text: Järgmises tunnis hakkame õppima koodi kirjutamise põhialuseid. Traditsiooniline
+          programmeerimine on tavaliselt teksti kirjutamine aga meie kasutame Blocklyt,
+          see kasutab visuaalseid plokke, mida saad lohistada, et programme kirjutada.
+          Sel meetodil õpitakse põhitõdesid isegi ülikoolides. Tegelikult loote ikkagi
+          koodi, hoolimata sellest, et te ise näete ainult plokke.
+      4:
+        text: Programm on juhiste kogum, mis ütleb arvutile mida teha. Ehitame koodi
+          või programmi, mis aitab Elsal luua lihtsa sirgjoone. Hakkame seda edaspidi
+          kasutama et luua raskemaid mustreid.
+      5:
+        text: Sinu ekraan on jaotatud kolmeks põhiosaks. Vasakul on jääväljak, koht
+          kus sinu programm käib. Iga taseme juhised on selle alla kirjutatud.
+      6:
+        text: Keskmine ala on tööriistakast ja iga plokk seal on tegevus mida Elsa
+          ja Anna teha saavad.
+      7:
+        text: Valget ala vasakul nimetatakse tööruumiks, see on koht kus sa oma programmi
+          ehitama hakkad. Jääl liikumiseks kasuta "Liigu Edasi" plokki.
+      8:
+        text: Plokk "Liigu Edasi" plokk tähendab "liigu edasi 100 piksli võrra." Kui
+          vajutad "Käivita", mis juhtub? Elsa liigub ekraanil edasi 100 pikslit.
+      9:
+        text: Teine plokk mis meil siin pusles on ütleb "pööra paremale 90 kraadi
+          võrra." "pööra paremale" plokk paneb Elsa pöörama teatud nurga. Saad katsetada
+          kui kaugele tahad Elsat pöörama panna. Nurka mõõdetakse Elsa ette jäävast
+          rajast. Niisiis see pöörab 90 kraadi. Ja see pöörab 120 kraadi.
+      10:
+        text: Pea meeles, sa saad ploki peal olevale noolele vajutades muuta seda,
+          kui palju tegelane pöörab või edasi liigub.
+    frozen_loops:
+      1:
+        text: Tere, mina olen Paola! Arvutid on väga head tegevuste kordamisel. Sa
+          saad loendada kümneni, kahekümneni või sajani. Aga arvuti saab loendada
+          miljardini või triljonini. Ta ei tüdine ära ja see võtab ainult mõned sekundid.
+          Olgu siis loendamine või joonistamine või ükskõik mis muu - arvutid saavad
+          korrata tegevusi sadu või isegi miljardeid kordi.
+      2:
+        text: Programmeerimises kutsume seda silmuseks. Silmus on vahend oma koodi
+          üha uuesti ja uuesti kordamiseks. Järgmise pusle jaoks on sinu eesmärk aidata
+          Annal luua ruut kasutades "korda" plokki.
+      3:
+        text: Kõik plokid, mille lisad "Kordus" ploki sisse korratakse järjekorras
+          ja just nii mitu korda nagu sa tahad.
+      4:
+        text: Ruudu joonistamiseks võid kasutada plokki "liigu edasi" ja "pööra paremale"
+          4 korda. Aga lihtsam viis on öelda arvutile üks kord "liigu edasi" ja "pööra
+          90 kraadi paremale" ning siis käskida korrata neid kahte tegevust 4 korda.
+          Selleks pead panema plokid "liigu edasi" ja "pööra paremale" ploki "korda"
+          sisse.
+      5:
+        text: Pea meeles, sa saad "korda" ploki väärtuse muuta ükskõik milleks ja
+          see kordabki plokki sisestatud tegevusi niipalju kordi.
+    function:
+      1:
+        text: Tere, olen Brina, Instagrami insener. Funktsioon on kindel rida koodi,
+          mida sa tahad korduvalt kasutada, selle asemel et kirjutada seda koodi iga
+          kord välja, saad sa kasutada ühte plokki.
+      2:
+        text: Me hakkame õppima kuidas defineerida funktsiooni. Funktsiooni definitsioonidel
+          on nurgas täht. Funktsiooni nimetus on kirjutatud ülemisele joonele.
+      3:
+        text: Plokid, mis lähevad definitsiooni sisse, ütlevad meile, mida see teeb.
+          Selle funktsiooni definitsioon on "täida 5" ja see on tehtud "korda" ja
+          "täida" plokist.
+      4:
+        text: Definitsioon paikneb tööruumis, aga meie talunik ei käivita funktsiooni,
+          kuni lohistame funktsioonide kategooriast välja oma "täida 5" funktsiooni
+          ploki.
+      5:
+        text: 'Paneme "fun"i tagasi "FUNction"isse! (tõlkimatu nali) '
+    gumball_events:
+      1:
+        text: Nüüd õpime midagi asja kohta, mida kõik programmeerijaid iga päev kasutavad.
+          Neid asju kutsutakse sündmusteks. Sündmus ütleb sinu programmile, et ta
+          kuulaks, kui midagi juhtub. Kui mingi asi juhtub, siis rakendab mäng eelnevalt
+          valitud käsu.
+      2:
+        text: Sündmusteks on näiteks hiireklõpsu, üles- või allanoolenupu või ekraani
+          puudutamise jälgimine.
+      3:
+        text: Nüüd paneme tegelase midagi ütlema, kui mängija temal klõpsab. Kasutame
+          plokki "kui tegelast puudutatakse" ja ühendame selle plokiga "ütle". Kui
+          mängija klõpsab tegelasel, käivitatakse kõik tegevused, mis on ühendatud
+          selle plokiga.
+      4:
+        text: Lisaks on olemas "kui nool" plokid. Kui sa ühendad "liigu" plokid nendega
+          saad tegelasi liigutada nooleklahvidega üles, alla, vasakule või paremale.
+          Samm sammult muutub mäng niimoodi interaktiivsemaks.
+    gumball_intro:
+      1:
+        text: Kui sa soovid luua enda mängu, siis see on väga lihtne. Kõik, mida sa
+          vajad, on natuke teadmisi programmeerimisest ja sa saad hakata mängima mängu,
+          mille sa ise lõid.
+      2:
+        text: Kas sul on lemmik videomäng? Astume sammu lähemale selliste mängude
+          loomisele PlayLabi kasutades. Head mängud jutustavad loo ning lugudes on
+          tegelased. Tegelased kõnelevad, liiguvad ringi ning suhtlevad teineteisega.
+          Võib-olla nad isegi koguvad punkte vastavalt mängu reeglitele. Täna õpime
+          kõiki neid asju järgemööda ühe toreda tegelase abil. Seejärel ehitame mängu
+          päris nullist, mida saad hiljem teistega jagada ja telefonis mängida.
+      3:
+        text: Täna õpime, kuidas kõiki neid asju teha ühe toreda tegelase abil. Seejärel
+          ehitame mängu päris nullist ning pärast saad seda mängu jagada ning telefonis
+          mängida.
+      4:
+        text: Ekraan on jaotatud kolme ossa. Vasakul on mängu ala, kus mäng jookseb.
+          Iga taseme juhtnöörid on toodud allpool.
+      5:
+        text: Keskmine osa on tööriistakast ning kõik need plokid on osake koodi.
+      6:
+        text: Valge ala paremal on tööala ning see on see koht, kus sa oma mängu ehitad.
+      7:
+        text: Alustuseks pead ühendama plokid oranži "käivita" plokiga. Sa võid erinevaid
+          plokke kokku panna neid kokku lohistades. Kui tekib kollane joon, siis ühenduvad
+          plokid omavahel.
+      8:
+        text: See on sinu esimene mäng. Me paneme tegelased midagi ütlema. Selleks
+          ühendame "ütle" plokk "käivita" plokiga ning sisestame oma sõnumi, mida
+          tahame, et tegelane ütleks. Kui plokid on olemas, siis vajuta "käivita"
+          nuppu ning vaata, mida sa programmeerisid.
+      9:
+        text: Tee algust! Lõpuks saad luua oma mängu koos erinevate tegelastega, kes
+          saavad omavahel suhelda, punkte koguda, asju visata ning koguni haihtuda.
+          Kõik sõltub Sinust!
+    gumball_repeat:
+      1:
+        text: Kujuta ette, kui sa peaksid midagi igavesti kordama. Loodetavasti ei
+          pea sa seda tegema, sest arvutitel õnnestub kordamine paremini.
+      2:
+        text: See on "korda igavesti" plokk. Kõik mis selle ploki sees on korratakse
+          mängu jooksul igavesti. Kui me tahame, et mõni tegelane midagi korduvalt
+          teeks, ilma et mängija midagi peaks tegema, paneme me need plokid "korda
+          igavesti" ploki sisse.
+      3:
+        text: Järgmises mängus pead aitama tegelasel teha ühte tööd korduvalt. Kui
+          õpid selgeks, kuidas töötavad käskluste kordused, hoiad hiljem palju aega
+          kokku ning see on kasulik ka siis, kui ise oma mängu ehitad.
+    hoc_dance_events_2019:
+      4:
+        text: Sündmusteks on näiteks hiireklõpsu, noolenupu või ekraani puudutamise
+          jälgimine.
+    hoc_wrapup:
+      1:
+        text: Õnnitlused! Koos viimase lahendatud puslega kirjutasid sa just koodi,
+          mis saab öelda igale robotile, kuidas leida tee läbi iga pikkusega mitte-hargneva
+          labürindi või tunneli, olgu see siis zombi, lind, marsi kulgur või isegi
+          isesõitev auto.
+      2:
+        text: Põhimõisted, mida sa kasutasid, on iga programmi või rakenduse südames,
+          mida sa eales proovid. Me õppisime silmuste, "korda kuni" lausete, "kui"
+          lausete ja "kui muidu" lausete kohta.
+      3:
+        text: Kui sulle meeldis su esimene kooditund, külasta code.org veebilehte,
+          et jätkata oma haridust arvutiteaduses. Kui sa läbid meie 20 tunnise kursuse,
+          oled õppinud selgeks programmeerimise põhialused ja saad hakata õppima kuidas
+          kirjutada telefonirakendusi, robotite juhiseid, mänge ja palju muud.
+      4:
+        text: 'Tehnoloogia muudab kõike, mida teeme ja pole oluline, kas oled noor
+          või vana: programmeerimine on lõbus, see on loov ja igaüks saab seda õppida!'
+    iceage_events:
+      1:
+        text: Nüüd õpime midagi asja kohta, mida kõik programmeerijaid iga päev kasutavad.
+          Neid asju kutsutakse sündmusteks. Sündmus ütleb sinu programmile, et ta
+          kuulaks, kui midagi juhtub. Kui mingi asi juhtub, siis rakendab mäng eelnevalt
+          valitud käsu.
+      2:
+        text: Sündmusteks on näiteks hiireklõpsu, üles- või allanoolenupu või ekraani
+          puudutamise jälgimine.
+      3:
+        text: Nüüd paneme tegelase midagi ütlema, kui mängija temal klõpsab. Kasutame
+          plokki "kui tegelast puudutatakse" ja ühendame selle plokiga "ütle". Kui
+          mängija klõpsab tegelasel, käivitatakse kõik tegevused, mis on ühendatud
+          selle plokiga.
+      4:
+        text: Lisaks on olemas "kui nool" plokid. Kui sa ühendad "liigu" plokid nendega
+          saad tegelasi liigutada nooleklahvidega üles, alla, vasakule või paremale.
+          Samm sammult muutub mäng niimoodi interaktiivsemaks.
+    iceage_intro:
+      1:
+        text: Kui sa soovid luua enda mängu, siis see on väga lihtne. Kõik, mida sa
+          vajad, on natuke teadmisi programmeerimisest ja sa saad hakata mängima mängu,
+          mille sa ise lõid.
+      2:
+        text: Kas sul on lemmik videomäng? Astume sammu lähemale selliste mängude
+          loomisele PlayLabi kasutades. Head mängud jutustavad loo ning lugudes on
+          tegelased. Tegelased kõnelevad, liiguvad ringi ning suhtlevad teineteisega.
+          Võib-olla nad isegi koguvad punkte vastavalt mängu reeglitele. Täna õpime
+          kõiki neid asju järgemööda ühe toreda tegelase abil. Seejärel ehitame mängu
+          päris nullist, mida saad hiljem teistega jagada ja telefonis mängida.
+      3:
+        text: Täna õpime, kuidas kõiki neid asju teha ühe toreda tegelase abil. Seejärel
+          ehitame mängu päris nullist ning pärast saad seda mängu jagada ning telefonis
+          mängida.
+      4:
+        text: Ekraan on jaotatud kolme ossa. Vasakul on mängu ala, kus mäng jookseb.
+          Iga taseme juhtnöörid on toodud allpool.
+      5:
+        text: Keskmine osa on tööriistakast ning kõik need plokid on osake koodi.
+      6:
+        text: Valge ala paremal on tööala ning see on see koht, kus sa oma mängu ehitad.
+      7:
+        text: Alustuseks pead ühendama plokid oranži "käivita" plokiga. Sa võid erinevaid
+          plokke kokku panna neid kokku lohistades. Kui tekib kollane joon, siis ühenduvad
+          plokid omavahel.
+      8:
+        text: See on sinu esimene mäng. Me paneme tegelased midagi ütlema. Selleks
+          ühendame "ütle" plokk "käivita" plokiga ning sisestame oma sõnumi, mida
+          tahame, et tegelane ütleks. Kui plokid on olemas, siis vajuta "käivita"
+          nuppu ning vaata, mida sa programmeerisid.
+      9:
+        text: Tee algust! Lõpuks saad luua oma mängu koos erinevate tegelastega, kes
+          saavad omavahel suhelda, punkte koguda, asju visata ning koguni haihtuda.
+          Kõik sõltub Sinust!
+    iceage_repeat:
+      1:
+        text: Kujuta ette, kui sa peaksid midagi igavesti kordama. Loodetavasti ei
+          pea sa seda tegema, sest arvutitel õnnestub kordamine paremini.
+      2:
+        text: See on "korda igavesti" plokk. Kõik mis selle ploki sees on korratakse
+          mängu jooksul igavesti. Kui me tahame, et mõni tegelane midagi korduvalt
+          teeks, ilma et mängija midagi peaks tegema, paneme me need plokid "korda
+          igavesti" ploki sisse.
+      3:
+        text: Järgmises mängus pead aitama tegelasel teha ühte tööd korduvalt. Kui
+          õpid selgeks, kuidas töötavad käskluste kordused, hoiad hiljem palju aega
+          kokku ning see on kasulik ka siis, kui ise oma mängu ehitad.
+    if:
+      1:
+        text: Tere! Olen Bill! Õpime uue põhimõiste, "kui" avalduse. Arvuti teeb selle
+          abil otsuseid.
+      2:
+        text: Sa kasutad "kui" avaldust iga päev. Näiteks kui lähed hommikul õue,
+          sa mõtled, et KUI õues sajab, pean kandma jopet.
+      3:
+        text: Me saame zombil lasta kontrollida KAS vasakul pool on rada ja kui ta
+          leiab raja vasakule siis me saame panna ta pöörama sinna suunas.
+      4:
+        text: Et kirjutada selleks koodi, lohista tööruumi "kui" plokk ja pane sinna
+          sisse "pööra vasakule" plokk.
+      5:
+        text: Nüüd kui me paneme "liigu edasi" ploki selle kohale ja nad omakorda
+          veel "korda" ploki sisse, siis iga kord kui zombi liigub siis ta kontrollib
+          kas vasakule poole on rada ja sinna saab pöörata. Käsk "korda" on siin kriitilise
+          tähtsusega, kuna zombi peab kontrollima rada iga astumise järel.
+      6:
+        text: 'Kui avaldused on arvutiteaduses väga tähtsad. Üks esimestest programmidest,
+          mille kirjutasin, oli trips-traps-trulli mäng. Selle mängu koodis oli "kui"
+          avaldis mis ütles: KUI teine inimene hakkab võitma, siis tuleb blokeerida
+          koht mis laseks tal võita.'
+      7:
+        text: Lõbutse "kui" plokki kasutades!
+    if_else:
+      1:
+        text: Tere, minu nimi on Saloni. Ma kasutan arvutiteadust aitamaks lahendada
+          probleeme tervise ja meditsiini valdkonnas. Õppigem "kui muidu" ploki kohta.
+          See näeb välja nagu tavaline "kui" plokk, aga sellel on lõpus lisaosa, mis
+          ütleb "muidu".
+      2:
+        text: Kui ma asetan "liigu edasi" ploki kohale kus on kirjas "tee" ja ploki
+          "pööra vasakule" sinna kus on kirjas "muidu", siis see tähendab, et zombi
+          valib kahe valiku vahel. Kui ees on rada, siis zombi liigub edasi, kuid
+          vastasel korral (ees ei ole rada) zombi pöörab vasakule.
+      3:
+        text: Just nagu "kui" plokki, saame me ka "kui muidu" plokki lisada "korda"
+          ploki sisse, selliselt et zombi liigub järjest edasi ja "kui muidu" plokk
+          kontrollib jooksvalt kas on võimalik kuhugi pöörata.
+      4:
+        text: Nüüd vii need zombid sinna kuhu nad kuuluvad!
+    if_else_scrat:
+      1:
+        text: Kui-muidu lause on otsus kahe valiku vahel. Vaatame kuidas me saame
+          kasutada kui-muidu lauset oma sõbra orav Scrat abil.
+      2:
+        text: See plokk näeb välja samasugune nagu "kui" plokk, aga seal on allosas
+          täiendav osa mis ütleb "muidu". Kui ma panen "liigu edasi" ploki sinna kus
+          on kirjas "tee" ja ploki "pööra vasakule" sinna kus on kirjas "muidu", siis
+          orav Scrat liigub edasi kui ees on rada. Kui rada ees ei ole, siis Scrat
+          pöörab vasakule.
+      3:
+        text: See teeb otsuse ja vastavalt sellele otsusele teeb ühte kahest tegevusest.
+          Ja just nagu "kui" plokke, saad sa ka "kui muidu" plokke lisada "korda"
+          plokkide sisse.
+      4:
+        text: Aitame Scratil, oraval jõuda tammetõruni!
     infinity_playlab_events:
       1:
         text: Nüüd me õpime midagi sellist, mida kõik mängude programmeerijad iga
@@ -1772,6 +1729,630 @@ et:
           midagi teeks, paneme need plokid „igavesti kordamise“ ploki sisse. Järgmises
           pusles on meie eesmärgiks panna Anna pidevalt üles-alla kõndima. Kordamiskäske
           kasutama õppides säästad hiljem oma mängu luues palju aega.
+    loop_for:
+      1:
+        text: tere, olen Trina, töötan Pixaris. Ma olen töötanud paljude filmide kallal,
+          kaasa arvatud Shreki.
+      2:
+        text: See on meie uus "loendur" tsükkel. See sooritab korduvalt toiminguid,
+          aga sa saad tegevusi igal korra jaoks natuke muuta.
+      3:
+        text: Siin näites meie "loendaja" silmus ütleb "loenda loendajaga alates 50st
+          kuni 90ni, 10ne kaupa" ja selle sees meil on meie "joonista ruut" plokk.
+          Lohista "loendaja" plokk sektsioonist "muutujad" kohale "pikkus".
+      4:
+        text: See tähendab, et meie kunstnik joonistab ruudu mille külgede pikkus
+          on 50 pikslit, siis lisab sellele 10 ja joonistab ruutu mille külgede pikkus
+          on 60 pikslit. Siis see lisab järjest juurde 10 ja joonistab ruute kuni
+          saavutab küljepikkuse 90. Seega meil saavad olema ruudud küljepikkustega
+          50, 60, 70, 80 ja 90 pikslit.
+    loop_times:
+      1:
+        text: Tere, olen Mark! Õpime kordusi. Korduste kasutamine ütleb arvutile,
+          et ta kordaks valitud tegevuste gruppi uuesti ja uuesti, tuhandeid või isegi
+          miljardeid kordi.
+      2:
+        text: Selles pusles tahame, et lind liiguks viis kohta edasi, et püüda siga.
+      3:
+        text: Saame kasutada uut "korda" plokki, et meid välja aidata.
+      4:
+        text: Selle asemel, et lohistada viis "liigu edasi" plokki ritta, kasuta...
+      5:
+        text: Pane "liigu edasi" plokk "korda" ploki sisse ja kirjuta plokki number,
+          et määrata, mitu korda tegevust korrata tuleb.
+      6:
+        text: 'Oluline on see et: sa saad "korda" ploki sisse rohkem kui ühe ploki.'
+      7:
+        text: Naudi oma uue "korda" ploki kasutamist!
+    loop_until:
+      1:
+        text: Tere, olen Chris. Enne Miami Heatiga läksin Georgiasse et õppida arvutiteaduse
+          õpetajaks. Proovime uut plokki, "korda kuni" plokki.
+      2:
+        text: Mis oleks, kui me ei teaks, kui kaugele peaks lind liikuma, et siga
+          kätte saada?
+      3:
+        text: Kui me paneme "liigu edasi" ploki "korda kuni" ploki sisse siis lind
+          liigub nii kaua edasi KUNI ta jõuab seani (või põrkab seinaga kokku).
+      4:
+        text: 'Oluline: nagu ennegi saame me nüüd panna mitu plokki "korda kuni" ploki
+          sisse ja neid kõiki korratakse.'
+    loop_while:
+      1:
+        text: 'Tere, mina olen Makinde! Õpime "kuni" ploki kohta. '
+      2:
+        text: '"Tingimusel plokk" teeb mida iganes sa selle sisse paned NIIKAUA KUNI
+          väide üleval on TÕENE.'
+      3:
+        text: Näiteks, kui talunik on hunniku otsas, jätkab ta 1 kühvlitäie eemaldamist
+          tingimusel, et tema all on veel hunnik.
+    maze_intro:
+      1:
+        text: Tere tulemast oma esimesse programmeerimise tundi! Sukeldume otse sinu
+          esimesse programmeerimise kogemusse.
+      2:
+        text: Me hakkame kasutama Blocklyt, visuaalse programmeerimise keelt, kus
+          koodi kirjutamiseks lohistatakse koodiplokid sobivasse järjestusse.
+      3:
+        text: Enamik koodi on eelnevalt sisestatud, kuid Blockly on rohkem visuaalne.
+          Igale plokile vastab rida "päris" koodi.
+      4:
+        text: Te hakkate õppima arvutiteaduse põhialuseid, mõisteid mida kasutatakse
+          igal pool, äppide tegemisest kuni Marsi kulguri kontrollimiseni.
+      5:
+        text: Programm on lihtsalt üks komplekt juhiseid sinu arvuti jaoks.
+      6:
+        text: Sinu esimese programmi eesmärk on aidata Angry Bird´i lind läbi labürindi
+          et ta saaks lüüa Rohelist Siga.
+      7:
+        text: Vasakul pool on labürint, kus teie programm töötab. Igale puslele on
+          labürindi all juhised.
+      8:
+        text: Keskmises tööriista kastis (programmi ja tööruumi vahel) on käsud Angry
+          Bird´i linnule. Sa hakkad neid kasutama et ehitada oma koodi.
+      9:
+        text: Paremal pool on tööruum, koht kus saad ehitada koodi. Ploki lisamiseks
+          tööruumi lohista mõni element tööriistakastist tööruumi sobivasse kohta.
+          Elemendi kustutamiseks lohista see nurgas olevasse prügikasti.
+      10:
+        text: Iga plokk on üks juhis. Kui sa lohistad "liigu edasi" ploki oma tööruumi
+          ja vajutad "Käivita Programm", liigub lind ühe koha labürindis.
+      11:
+        text: Et teha rohkem kui ühte asja, saad sa lohistada mitu plokki oma tööruumi
+          ja ühendada nad omavahel kokku. Lind täidab käske ülevalt alla.
+      12:
+        text: Kui oled käivitanud programmi, aga tahad seda parandada ja uuesti proovida,
+          vajuta nuppu Lähtesta.
+      13:
+        text: Järele neile põrsastele!
+    mc_2016_congrats:
+      1:
+        text: Palju õnne! Olete õppinud arvutikäskude abil Minecraft maailmas tegutsema.
+          Oled programmeerija. Oled lukust lahti teinud kõik käsud ja kõik olendid.
+          Sa valida, mis juhtub.
+      2:
+        text: Kui oled mängu valmis teinud vali "jaga" ning saad lingi, mida oma sõpradega
+          jagada. Mängu saad ka oma telefonis mängida. Lõbutse! Mina tahaksin samuti
+          sinu Minecrafti mängida.
+    mc_2016_events:
+      1:
+        text: Järgmisel tasemel võid sa valida, kas olla Steve või Alex. Vajuta nooleklahve
+          oma klaviatuuril, et liikuda ülesse, alla, vasakule ja paremale. Nüüd saad
+          sa tasandil ringi liikuda seal, kus soovid.
+      2:
+        text: Kui sa kasutad puuteekraani liigu näpuga ülesse, alla, vasakule ja paremale.
+          Siis puuduta mängu, et enda ees olevaid esemeid kasutada.
+      3:
+        text: Aga mis seda kasutades juhtub? Minecraftis kukub lammastelt vill kui
+          sa neid pügad, lehmad jooksevad ära kui sa neid lööd ja kreeperid plahvatavad
+          kui sa neile lähened. Sellised reaktsioonid leiavad aset "sündmuste" tõttu.
+          Sündmused paluvad sinu programmil oodata, et midagi juhtuks. Ja viia läbi
+          mingi tegevus kui see juhtub.
+      4:
+        text: Siiani oled kasutanud ühte sündmust. Kood, mille sa sisestad "kui loodud"
+          pessa, käivitub siis kui oled oma olendi loonud või kui mäng algab. Järgmisel
+          paaril tasemel on sul uued pesad selliste sündmuste jaoks nagu "kui puudutatakse",
+          mis käivitub kui olendit puudutatakse, või "kui kasutatakse" olendi kasutamise
+          jaoks. Või kui sa soovid, et zombi kaoks ära kui päev tuleb, siis tueb see
+          panna "kui on päev" pesasse
+    mc_2016_intro:
+      1:
+        text: Tere, minu nimi on Jens ja ma olen Minecrafti loominguline juht. Järgmise
+          tunni jooksul saate teha oma Minecrafti mängu. See siin näeb välja nagu
+          Minecraft, kuid maailm on siin peatunud. Lambad ei liigu, kanad ei mune,
+          ja zombid seisavad lihtsalt paigal. Sinu ülesanne on lisada kood, et Minecrafti
+          maailm tööle hakkaks.
+      2:
+        text: 'Minu nimi on Melissa ja ma teen Minecrafti kasutajauuringuid. Mind
+          huvitab tegelikult, kuidas inimesed mõtlevad ja tehnoloogiaga suhestuvad,
+          ja seega on see töö minu jaoks ideaalne, sest saan ühendada arvutiteaduse
+          ja psühholoogia: kuidas inimesed mõtlevad ja käituvad.'
+      3:
+        text: Sa näed oma ekraani kolmes põhiosas. 1) Vasakul on Minecrafti mäng.
+          Praegu seisab see maailm paigal, kuid me teeme selle koodi abil korda.
+      4:
+        text: 2) See keskmine osa on tööristakast. Iga sellinne plokk on käsklus,
+          mida kanad, lambad ja teised Minecrafti olendid mõistavad.
+      5:
+        text: 3) Paremal olev ala on tööala ja siin hakkame me programmi ehitama.
+      6:
+        text: Kui sa unustad, mida teha, siis juhised iga taseme jaoks on üleval.
+      7:
+        text: Alustuseks programmeerime ühe kana. Tirime "liigu edasi" käskluse tööalale.
+          Kui ma vajutan "Käivita" liigub kana ühe sammu võrra edasi. Et edasi minna,
+          tirin ma veel ühe "liigu edasi" ploki esimese "liigu edasi" ploki alla kuni
+          see aktiivseks muutub. Siis lasen ma sellest lahti ja kaks plokki haakuvad
+          üksteisega. Kui ma vajutan uuesti "Käivita", siis astub kana kaks sammu.
+      8:
+        text: Kui sa tahad mõnda plokki kustutada, eemalda see lihtsalt käskluste
+          hulgast ja tiri tagasi tööriista kasti.
+      9:
+        text: Peale nupu "Käivita" vajutamist on sul alati võimalik vajutada nuppu
+          "Taasta", et mängu uuesti käivitada ja otsast alata. Nüüd on sinu kord teha
+          täitsa oma Minecrafti versioon. Lõbutse hästi!
+    mc_2016_loops:
+      1:
+        text: Tere, mina olen Lisa. Ma olen Minecrafti tarkvaraarendaja ja ma töötan
+          mängus mõnede loomade ja nende vaenlastega. Üks loom, kellega ma töötasin
+          on otselot. Töötasin selle osaga, kus sa saad otselotile kala sööta, et
+          teda endale kassiks taltsutada.
+      2:
+        text: Inimestena hakkab meil igav kui me peame ühte ja sama asja ikka uuesti
+          ja uuesti tegema. Arvutite puhul on lahe see, et nad võivad teha ühte asja
+          miljoneid või isegi trilioneid kordi järjest ja neil ei hakka igav. Seda
+          nimetatakse tsükliks ja iga olend Minecraftis kasutab tsükleid.
+      3:
+        text: Varem panime me kana üle ekraani liikuma, kuid siis jäi ta seisma. Minecraftis
+          liiguvad kanad kogu aeg ringi. Kasutame "Korda lõpmatuseni" tsüklit meie
+          tööriistakastist, et panna kanad kogu aeg ringi liikuma. Tsüklid säästavad
+          palju aega ja avavad sulle palju võimalusi kui sa enda Minecrafti versiooni
+          ehitad.
+    mc_2016_spawn:
+      1:
+        text: Mängudes tähendab 'spawn' midagi looma või tegema. Sellel tasemel teeme
+          zombisid siis kui päike loojub. Selleks kasutame "kui öö" plokki.
+      2:
+        text: Kuna soovime zombisid teha öösel lisame "loo zombie" plokk "kui on öö"
+          plokki. Kui nad on tekkinud, kasutab iga zombi koodi, mis sa paned tema
+          "kui loodud" sündmuse pessa. Lõbutsege zombisid luues!
+    mc_2017_agent_intro:
+      11:
+        text: Kui sa unustad, mida teha, siis juhised iga taseme jaoks on üleval.
+    mc_congrats_no_share:
+      1:
+        text: Palju õnne! Õppisid kasutama arvutiteaduse peamisi ehitusplokke.
+      2:
+        text: Nüüd saad neid plokke kasutada oma loomingu valmis ehitamiseks. Rohkem
+          juhtnööre ega puslesid pole. Võid ehitada kõike, mida ise soovid. See on
+          sinu valik.
+      3:
+        text: "[õpilased räägivad] Asi läheb tõsiseks. Pügamine. Ma tegin taskulampidest
+          L-tähe. Ma tegin kaseplankudest A-tähe. See töötas! Me ehitasime villast
+          maja!"
+      4:
+        text: Nüüd sa saad ehitada just seda, mida ise soovid. Lõbutse!
+    mc_congrats_share:
+      1:
+        text: Palju õnne! Õppisid kasutama arvutiteaduse peamisi ehitusplokke.
+      2:
+        text: Nüüd saad neid plokke kasutada oma loomingu valmis ehitamiseks. Rohkem
+          juhtnööre ega puslesid pole. Võid ehitada kõike, mida ise soovid. See on
+          sinu valik.
+      3:
+        text: "[õpilased räägivad] Asi läheb tõsiseks. Pügamine. Ma tegin taskulampidest
+          L-tähe. Ma tegin kaseplankudest A-tähe. See töötas! Me ehitasime villast
+          maja!"
+      4:
+        text: Kui sinu looming on valmis, vajuta nuppu „jaga,“ et saada link selle
+          sõpradega jagamiseks. Lõbutse!
+    mc_if_statements:
+      1:
+        text: Nüüd õpime if-lausete kohta. If-lausetel on programmeerima õppimisel
+          väga oluline osa. Need aitavad arvutil otsuseid teha.
+      2:
+        text: Kõik arvutid kasutavad if-lauseid, isegi minu telefon. Näiteks kui ma
+          oma telefoni lukustusest avan, käivitab see koodi, mis käsib telefoni avada
+          juhul, kui ma sisestan õige parooli. Muul juhul kuvatakse tõrketeade.
+      3:
+        text: Saad oma koodis kasutada if-lauseid ja panna Steve’i ja Alice’i kõigele
+          ümbritsevale reageerima. Näiteks, kui nende ees on kivi, pööravad nad vasakule.
+          Või pööravad paremale, kui nende ees on puu.
+      4:
+        text: Siin me ei taha laavasse kukkuda. Laava jaoks on lihtne plaani teha.
+          Me näeme seda ekraanil. Aga see laava, mida me kivi all ei näe?
+      5:
+        text: Pärast kivi kaevandamist tuleb enne edasiliikumist kontrollida, kas
+          kivi all on laavat. Kui seal on laavat, asetame enne edasiliikumist oma
+          tegelase ette kivi. Siis saame ohutult edasi liikuda. Kaevandame veel! Pea
+          meeles kasutada ohutuse tagamiseks if-lauseid.
+    mc_intro:
+      1:
+        text: Minu nimi on Jens Bergensten, aga mind tuntakse kui Jebi. Ma olen Minecrafti
+          peaarendaja siin Stochkholmis asuvas Mojangis. Hakkasin programmeerima 11-12aastaselt,
+          sest ma tahtsin mänge luua. Üks mu isa sõber ütles, et mängude loomiseks
+          peab programmeerimist õppima. Nii ma alustasingi. Mulle meeldib mänge projekteerida
+          ja konstrueerida. Just see mulle Minecrafti juures meeldibki.
+      2:
+        text: Järgmise tunni jooksul õpid arvutiteaduse põhialuseid, programmeerides
+          Alexi või Steve’i liikuma läbi simuleeritud Minecrafti maailma.
+      3:
+        text: Traditsiooniline programmeeimine toimub tavaliselt tekstivormis, aga
+          täna kasutame Blocklyt, süsteemi, kus kasutatakse visuaalseid plokke, mida
+          pukseerides on võimalik programme kirjutada. Pealispinna all lood sa JavaScripti
+          koodi.
+      4:
+        text: Sa õpid põhimõtteid, mida arvutiprogrammeerijad igapäevaselt kaustavad
+          ja mis on arvutiteaduse aluseks. Meie siin Mojangis kasutame Minecrafti
+          töölepanemiseks neid samu põhimõtteid.
+      5:
+        text: Enne, kui sa alustad, vali oma tegelane. Mina valin Alexi. Kirjutame
+          koodi programmile, mis aitab tal mööda ekraani ringi liikuda.
+      6:
+        text: Sinu ekraan on jagatud kolmeks põhiosaks. Vasakul on Minecrafti mänguala,
+          kus sinu programm jookseb. Juhised iga taseme jaoks on mänguala all.
+      7:
+        text: Keskmine ala on tööriistakast ja iga plokk seal on käsk, mis Alexi tegevust
+          juhib.
+      8:
+        text: Valge ala paremal on tööala ning see on see koht, kus sa oma mängu ehitad.
+      9:
+        text: Kui lohistame edasiliikumise ploki tööalale ja seejärel klõpsame nuppu
+          „käivita,“ mis siis juhtub? Alex liigub ruudustikul ühe ruudu võrra edasi.
+      10:
+        text: Mis siis, kui tahan, et ta pärast ühe ruudu võrra edasi liikumist veel
+          midagi teeks? Saame lisada programmile veel ühe ploki. Ma valin selleks
+          paremale pööramise ploki ja lohistan selle edasiliikumise ploki alla, kuni
+          ilmub nähtavale oranž joon. Siis lasen selle lahti ja kaks plokki kinnituvad
+          üksteise külge. Kui uuesti käivitusnuppu vajutame, täidab Alex tööalal ülalt
+          alla reastatud käsud.
+      11:
+        text: Kui soovid plokki kustutada, lihtsalt lohista see tagasi tööriistakasti.
+      12:
+        text: Muutuste tagasivõtmiseks ja taseme algusse tagasi saamiseks kasuta nuppu
+          „alusta uuesti,“ mis asub tööala paremas ülanurgas. Veel üks asi. Näed seda
+          väikest kolmnurka pööramisplokkidel? Need kolmnurgad tähendavad, et sul
+          on erinevad valikud. Hakkame kodeerima!
+    mc_repeat:
+      1:
+        text: Mina olen Lydia Winters, Mojangi brändijuht, ja me tegime sellise mängu
+          nagu Minecraft.
+      2:
+        text: Minu lemmiktegevuseks on Minecraftis ringivaatamine. Mulle meeldib seigelda
+          koobastes ja põnevaid avastusi teha. Minu kui mitte programmeerija jaoks
+          on väga huvitav Minecrafti õppetund läbi teha ja veidi kodeerimist õppida.
+      3:
+        text: Viimases tasemes läks vaja palju edasiliikumisplokke. Oleks palju lihtsam,
+          kui saaksime arvutile öelda, et ta täidaks edasiliikumise käsku 4-5 korda.
+          Õnneks suudavad arvutid käske kordustsüklite abil korrata.
+      4:
+        text: Minecrafti luues kaustame kordustsükleid, millega asendame uue maailma
+          loomise alusmaterjali. Selleks on tuhanded plokid. Kasutame kordustsükleid
+          ka väikestes asjades, näiteks Alexi jalgade kõndimise ajal edasi-tagasi
+          liigutamiseks. Kordustsüklid on programmeerimises väga võimsad.
+      5:
+        text: Öö saabub ja paaril järgmisel tasemel ehitame maja, et meil oleks turvaline.
+          Kordusploki kasutamine muudab selle meile lihtsaks.
+      6:
+        text: Majaseina ehitamiseks võime käskida Alexil edasi liikuda ja neli planku
+          asetada. Võime aga käskida tal edasi liikuida ja asetada vaid ühe plangu
+          ning kasutada siis kordusplokki, et ta teeks seda tegevust mitu korda. Nüüd
+          klõpsame kordusplokki ja ütleme, mitu korda ta oma tegevust peab kordama.
+          Nüüd ehitame maja valmis enne, kui öö saabub. Lõbutsege!
+    parameters:
+      1:
+        text: Tere, mina olen Janete ja ma olen Zynga insener.
+      2:
+        text: Mis siis kui me tahame joonistada hunniku kolmnurki ja tahame et nende
+          pikkused oleksid erinevas suuruses?
+      3:
+        text: Me saaksime kogu selle koodi kirjutada käsitsi välja või me saame kasutada
+          parameetritega funktsiooni.
+      4:
+        text: Selle tegemiseks klõpsa sinisel tähekesel mis asub "joonista kolmnurk"
+          funktsiooni definitsioonil. Siis lohista "sisendi nimi" plokki "sisend".
+      5:
+        text: Kui sa siis kirjutad "pikkus" kohale kus on kirjas "x" ja vajutad "Enter",
+          lood sa pikkuse sisendi oma funktsiooni jaoks.
+      6:
+        text: Siis klõpsa tähekesel. Nüüd sa tahad klõpsata muutujate kategoorial
+          ja lohistada "pikkuse" ploki oma funktsioonide definitsiooni sisse "liigu
+          edasi" plokki. Ja lohista vana numbri plokk ära.
+      7:
+        text: Et kasutada oma parameetritega funktsiooni, klõpsa funktsioonide kategoorial
+          ja lohista välja oma "joonista kolmnurk koos pikkusega" funktsioon.
+      8:
+        text: Nüüd sa saad kasutada matemaatika plokki, sisestamaks erinevaid numbreid,
+          et joonistada erineva suurusega kolmnurki.
+    playlab_events:
+      1:
+        text: Nüüd hakkame õppima midagi sellist, mida programmeerijad iga päev kasutavad.
+          Neid kutsutakse sündmusteks. Sündmus ütleb programmile et tuleb jälgida
+          kui midagi juhtub. Kui mingi kindel asi juhtub siis rakendab programm eelnevalt
+          valitud käsu.
+      2:
+        text: Sündmusteks on näiteks hiireklõpsu, noolenupu või ekraani puudutamise
+          jälgimine.
+      3:
+        text: Nüüd paneme kosmoseroboti tervitama maalasi, kui mängija temal klõpsab.
+          Kasutame plokki "kui tegelast puudutatakse" ja ühendame selle plokiga "ütle".
+          Kui mängija klõpsab kosmoserobotil, käivitatakse kõik tegevused, mis on
+          ühendatud sündmuseplokiga "kui tegelast puudutatakse". Mida ütleb sinu tulnukas?
+      4:
+        text: Lisaks on olemas "kui nool" plokid. Kui sa ühendad "liigu" plokid nendega
+          saad tegelasi liigutada üles, alla, vasakule või paremale. Samm sammult
+          muutub mäng niimoodi interaktiivsemaks.
+    playlab_intro:
+      1:
+        text: "Loome mängu Play Labiga. Headel mängudel on lugu ja igas loos on tegelased.
+          Õpime, kuidas panna tegelased, nagu nõiad, tulnukad ja loomad kõnelema,
+          liikuma ja \tomavahel suhtlema. Selle tunni lõpus oskad teha mängu algusest
+          lõpuni ja jagada seda oma sõpradega."
+      2:
+        text: Sinu ekraan on jagatud kolmeks põhiosaks. Vasakul pool on see kus sinu
+          programm käib. Iga taseme juhend on selle alla kirjutatud.
+      3:
+        text: Keskmine ala on tööriistakast, milles on plokid mida sinu pusles vaja
+          läheb. Iga plokk on jupike koodi. Valget ala vasakul kutsutakse tööruumiks,
+          see on koht kus sa oma programmi ehitad.
+      4:
+        text: Alustuseks pead ühendama oma plokid oranži "pärast käivitamist" ploki
+          külge. Saad ühendada mitu plokki üksteise külge lohistades neid tööruumi,
+          teiste plokkide lähedusse kuni näed kollast joont, seejärel nad kinnituvad
+          üksteise külge.
+      5:
+        text: Selles esimeses pusles on meie tegelaseks pingviin ja me paneme ta ütlema
+          "Tere!" Selleks lohista "ütle" plokk tööruumi ja ühenda see "pärast käivitamist"
+          plokiga, seejärel kirjuta tekstikasti "Tere." Kui tahame siis saame pingviini
+          liikuma ka panna. Pingviini liikumapanemiseks kasuta "liigu vasakule" ja
+          "liigu paremale" plokke. Kui oled koodi kokku saanud vajuta "käivita" nuppu
+          ja vaata mis sa programmeerisid.
+      6:
+        text: Alusta, ja lõpuks oskad luua oma mängu igasuguste mängijatega, kes omavahel
+          suhtlevad, on rõõmsad või kurvad, koguvad punkte, loobivad tulepalle või
+          panevad üksteist lausa kaduma. Ise otsustad, milline on su mäng ja mida
+          tahad selles teha.
+    playlab_repeat_forever:
+      1:
+        text: See on "korda igavesti" plokk. Kõik mis selle ploki sees on korratakse
+          mängu jooksul igavesti.
+      2:
+        text: Kui me tahame, et mõni tegelane midagi korduvalt teeks, ilma et mängija
+          midagi peaks tegema, paneme me need plokid "korda igavesti" ploki sisse.
+      3:
+        text: Järgmises pusles pead aitama võluril oma kuningriigi piire valvata.
+          Selleks pead pidevalt liikuma vasakule ja paremale. Kui õpid selgeks, kuidas
+          töötavad käskluste kordused, hoiad hiljem palju aega kokku ning see on kasulik
+          ka siis, kui ise oma mängu ehitad.
+    starwars_blocks_congrats:
+      1:
+        text: Tere! Minu nimi on Alice ja mina juhin Code.org-i projekteerimis- ja
+          ehitusmeeskondi. Ma töötasin ka selle õpikuga, mida sa praegu läbi mängid.
+      2:
+        text: Jõudsid viimasele tasemele. Soovin õnne! Sa omandasid kõik vajalikud
+          teadmised, et luua ise päris oma Tähtede sõja mäng. Rohkem juhiseid ega
+          puslesid pole. Nüüd saad luua oma mängu ja valida, kuidas see töötab. Veel
+          üks asi. Sa avasid uued helid ja käsud, mis võimaldavad veelgi enamat.
+      3:
+        text: "[õpilased räägivad] Me tegime mängu, kus saab nuuskursigade eest punkte.
+          Konks on sellest, et iga kord, kui sa saad nuuskursea, ilmub tormisõdur.
+          Kogu ekraan on nuuskursigu täis ja kui sa kogud neid 10000 tükki, võidad
+          mängu."
+      4:
+        text: "[õpilased räägivad] Me tegime mängu, kus ei saa kaotada ja kõik, mille
+          sa tapad, annab punkte. Vahetasin klahvid ära nii, et ülesnoolt vajutades
+          liigub tegelane alla ja paremnoolt vajutades liigub tegelane vasakule. See
+          on väga raske! Mängu arendajana on sul ebaõiglane eelis. Kas mul õnnestus?
+          Jee!"
+      5:
+        text: Kui mängu loomine on valmis, siis vali „jagamine,“ et saada link, mida
+          sõpradele jagada või mängu telefonis mängida. Lõbutse!
+    starwars_blocks_events:
+      1:
+        text: Tere! Minu nimi on Charita Carter. Olen Walt Disney Imagineeringu loovprodutsent.
+          Ma juhin meeskondi, mis toodavad külastajate poolt kasutatavaid atraktsioone.
+          Otsime alati võimalusi täiustamiseks ja külastajatele parema elamuse pakkumiseks.
+          Ja tehnoloogia ongi selle võtmeks.
+      2:
+        text: Õnnitleme, sa said hakkama! Sa programmeerisid BB-8. Nüüd oleme valmis
+          proovima midagi raskemat. Hakkame pihta. Nüüd on programmeerimise põhialused
+          selged ja läheme ajas tagasi, et luua sinu oma mäng, mille peategelasteks
+          on R2-D2 ja C3PO.
+      3:
+        text: Mängu loomiseks peame õppima midagi sellist, mida mänguprogrammeerijad
+          iga päev kasutavad. Neid nimetatakse sündmusteks. Sündmus ütleb programmile,
+          et tuleb jälgida või oodata, kui midagi juhtub. Ja kui see juhtub, rakendab
+          programm käsu.
+      4:
+        text: Sündmusteks on näiteks hiireklõpsu, noolenupu või ekraani puudutamise
+          jälgimine.
+      5:
+        text: Me liigutame R2-D2 üles mässuliste piloodile sõnumit viima ja seejärel
+          liigutame teda alla teise mässuliste piloodi juurde. Tema liigutamiseks
+          kasutame sündmusi. Kui mängija kasutab üles-/allanoolt või üles/alla nuppe.
+      6:
+        text: Me kasutame „kui üles“ sündmuseplokki, mille külge ühendame „mine üles“
+          ploki. Kui mängija vajutab ülesnoolt, käivitatakse „kui üles“ plokiga seotud
+          kood. R2-D2 alla liigutamiseks teeme seda sama. Selle asemel, et droidi
+          kontrolliv kood eelnevalt valmis kirjutada, saame lasta R2-D2-l reageerida
+          nupuvajutuse sündmustele, mis teda ekraanil ringi liigutavad.
+      7:
+        text: Sinu mäng muutub samm-sammult järjest interaktiivsemaks.
+    starwars_blocks_intro:
+      1:
+        text: 'Tere! Mina olen Kathleen Kennedy, filmi „Tähtede sõda: Jõud tärkab“
+          produtsent. Täna töötan koos ühe meie staari BB-8-ga. BB-8 on kerakujuline
+          droid. Kõiki tema tegusid ja liigutusi kontrollib arvutitarkvara. Arvutiteadus
+          puudutab iga tööstusharu turundusest kuni tervishoiu ja filmini. Filmi „Jõud
+          tärkab“ kallal töötasid sajad arvutiinsenerid.'
+      2:
+        text: Tere! Mina olen Rachel Rose. Olen ILMi uurimis- ja arendustegevuse vaneminsener
+          ning juhin animatsiooni ja olendite arendamise meeskonda. Ma aitan kunstnikel
+          filmi „Jõud tärkab“ jaoks tegelaskujude struktuure arendada. Need on liikuvad
+          osad, mis muudavad tegelaskuju kaugel galaktikas väga usutavaks.
+      3:
+        text: Järgmise tunni jooksul ehitame ise oma Tähtede sõja mängu. Õpetame programmeerimise
+          põhitõdesid. Tavaliselt koosneb programmeerimine vaid tekstist, kuid meie
+          kaustame siin plokke, mida pukseerides saamegi programme kirjutada. Alustuseks
+          programmeerime koos Reyga BB-8 kõndima ja varuosi kokku korjama.
+      4:
+        text: Sinu ekraan on jagatud kolmeks põhiosaks. Vasakul pool on Tähtede sõja
+          mänguala. Juhised iga taseme jaoks on mänguala all.
+      5:
+        text: Keskmine ala on tööriistakast ja iga plokk seal on käsk, millest BB-8
+          aru saab.
+      6:
+        text: Paremal asuv valge ala on tööala ja seal me oma programmi loomegi.
+      7:
+        text: Mis juhtub, kui lohistan vasakule liikumise ploki tööalale? BB-8 liigub
+          ruudustikul ühe ruudu võrraa vasakule.
+      8:
+        text: Mis siis, kui tahan, et BB-8 pärast vasakule liikumise plokki veel midagi
+          teeks? Saan lisada programmile veel ühe ploki. Ma valin selleks ülesliikumise
+          ploki ja lohistan selle vasakule liikumise ploki alla, kuni need tõusevad
+          esile. Siis lasen selle lahti ja kaks plokki kinnituvad üksteise külge.
+          Kui ma uuesti käivitusnuppu vajutan, täidab BB-8 tööalal ülalt alla reastatud
+          käsud.
+      9:
+        text: Kui soovid plokki kustutada, eemalda see lihtsalt loendist ja lohista
+          tagasi tööriistakasti.
+      10:
+        text: Pärast käivitusnupu vajutamist saad igal ajal vajutada lähtestamisnuppu,
+          et BB-8 liiguks lähtekohale tagasi. Hakkame nüüd pihta!
+    starwars_congrats:
+      1:
+        text: Tere! Minu nimi on Alice ja mina juhin Code.org-i projekteerimis- ja
+          ehitusmeeskondi. Ma töötasin ka selle õpikuga, mida sa praegu läbi mängid.
+      2:
+        text: Jõudsid viimasele tasemele. Soovin õnne! Sa omandasid kõik vajalikud
+          teadmised, et luua ise päris oma Tähtede sõja mäng. Rohkem juhiseid ega
+          puslesid pole. Nüüd saad luua oma mängu ja valida, kuidas see töötab. Veel
+          üks asi. Sa avasid uued helid ja käsud, mis võimaldavad veelgi enamat.
+      3:
+        text: "[õpilased räägivad] Me tegime mängu, kus saab nuuskursigade eest punkte.
+          Konks on sellest, et iga kord, kui sa saad nuuskursea, ilmub tormisõdur.
+          Kogu ekraan on nuuskursigu täis ja kui sa kogud neid 10000 tükki, võidad
+          mängu."
+      4:
+        text: "[õpilased räägivad] Me tegime mängu, kus ei saa kaotada ja kõik, mille
+          sa tapad, annab punkte. Vahetasin klahvid ära nii, et ülesnoolt vajutades
+          liigub tegelane alla ja paremnoolt vajutades liigub tegelane vasakule. See
+          on väga raske! Mängu arendajana on sul ebaõiglane eelis. Kas mul õnnestus?
+          Jee!"
+      5:
+        text: Kui mängu loomine on valmis, siis vali „jagamine,“ et saada link, mida
+          sõpradele jagada või mängu telefonis mängida. Lõbutse!
+    starwars_events:
+      1:
+        text: Tere! Minu nimi on Charita Carter. Olen Walt Disney Imagineeringu loovprodutsent.
+          Ma juhin meeskondi, mis toodavad külastajate poolt kasutatavaid atraktsioone.
+          Otsime alati võimalusi täiustamiseks ja külastajatele parema elamuse pakkumiseks.
+          Ja tehnoloogia ongi selle võtmeks.
+      2:
+        text: Õnnitleme, sa said hakkama! Sa programmeerisid BB-8. Nüüd oleme valmis
+          proovima midagi raskemat. Hakkame pihta. Nüüd on programmeerimise põhialused
+          selged ja läheme ajas tagasi, et luua sinu oma mäng, mille peategelasteks
+          on R2-D2 ja C3PO.
+      3:
+        text: Mängu loomiseks peame õppima midagi sellist, mida mänguprogrammeerijad
+          iga päev kasutavad. Neid nimetatakse sündmusteks. Sündmus ütleb programmile,
+          et tuleb jälgida või oodata, kui midagi juhtub. Ja kui see juhtub, rakendab
+          programm käsu.
+      4:
+        text: Sündmusteks on näiteks hiireklõpsu, noolenupu või ekraani puudutamise
+          jälgimine.
+      5:
+        text: Me liigutame R2-D2 üles mässuliste piloodile sõnumit viima ja seejärel
+          liigutame teda alla teise mässuliste piloodi juurde. Tema liigutamiseks
+          kasutame sündmusi. Kui mängija kasutab üles-/allanoolt või üles/alla nuppe.
+      6:
+        text: Me kasutame „kui üles“ sündmuseplokki, mille külge ühendame „mine üles“
+          ploki. Kui mängija vajutab ülesnoolt, käivitatakse „kui üles“ plokiga seotud
+          kood. R2-D2 alla liigutamiseks teeme seda sama.
+      7:
+        text: Selleks kaustame käsku „kui üles“. Kui sa käsu tööriistakastist välja
+          lohistad, siis näed, et see ei alga mitte semikooloniga, vaid hoopis looksuluga.
+          See tekitab meile ruumi, kuhu sisestada teised käsud. Iga käsk, mille me
+          looksulgudesse paneme, käivitatakse, kui mängija vajutab ülesnoolt.
+      8:
+        text: Tahame R2-D2 üles liigutada, seega paneme käsu sisse „mine üles“ ploki.
+          R2-D2 alla liigutamiseks teeme seda sama.
+      9:
+        text: Selle asemel, et droidi kontrolliv kood eelnevalt valmis kirjutada,
+          saame lasta R2-D2-l reageerida nupuvajutuse sündmustele, mis teda ekraanil
+          ringi liigutavad. Sinu mäng muutub samm-sammult järjest interaktiivsemaks.
+    starwars_intro:
+      1:
+        text: 'Tere! Mina olen Kathleen Kennedy, filmi „Tähtede sõda: Jõud tärkab“
+          produtsent. Täna töötan koos ühe meie staari BB-8-ga. BB-8 on kerakujuline
+          droid. Kõiki tema tegusid ja liigutusi kontrollib arvuti tarkvara. Arvutiteadus
+          puudutab iga tööstusharu turundusest kuni tervishoiu ja filmini. Filmi „Jõud
+          tärkab“ kallal töötasid sajad arvutiinsenerid.'
+      2:
+        text: Tere! Mina olen Rachel Rose. Olen ILMi uurimis- ja arendustegevuse vaneminsener
+          ning juhin animatsiooni ja olendite arendamise meeskonda. Ma aitan kunstnikel
+          filmi „Jõud tärkab“ jaoks tegelaskujude struktuure arendada. Need on liikuvad
+          osad, mis muudavad tegelaskuju kaugel galaktikas väga usutavaks.
+      3:
+        text: Järgmise tunni jooksul loome ise oma Tähtede sõja mängu. Õpetame programmeerimise
+          põhitõdesid. Tavaliselt koosneb programmeerimine vaid tekstist, kuid meie
+          kaustame siin plokke, mida pukseerides saamegi programme kirjutada. Pealispinna
+          all loome ikkagi koodi. Pärast plokkidega põhiasjade proovimist viime su
+          üle JavaScriptile, mis on üks levinumaid programmeerimiskeeli.
+      4:
+        text: Alustuseks programmeerime koos Reyga BB-8 kõndima ja varuosi kokku korjama.
+          Ekraan on jagatud kolmeks osaks. Vasakul on Tähtede sõja mänguala, kus jookseb
+          kood. Juhendid iga taseme jaoks on mänguala all.
+      5:
+        text: Keskmine ala on tööriistakast ja iga plokk seal on käsk, millest BB-8
+          aru saab.
+      6:
+        text: Paremal asuv valge ala on tööala ja seal me oma programmi loomegi.
+      7:
+        text: Mis juhtub, kui lohistan vasakule liikumise ploki tööalale ja vajutan
+          käivitusnuppu? BB-8 liigub ruudustikul ühe ruudu võrra vasakule.
+      8:
+        text: Mis siis, kui tahan, et BB-8 pärast vasakule pööramise plokki veel midagi
+          teeks? Saan lisada veel ühe ploki. Ma valin selleks ülesliikumise ploki
+          ja lohistan selle vasakule liikumise ploki alla, kuni need tõusevad esile.
+          Siis lasen selle lahti ja kaks plokki kinnituvad üksteise külge.
+      9:
+        text: Kui vajutan uuesti käivitusnuppu, täidab BB-8 käske, mis on tööalal
+          ülevalt alla reastatud. Kui tahad plokki kustutada, eemalda see loendist
+          ja lohista see tööriistakasti tagasi.
+      10:
+        text: Pärast käsunupu vajutamist saate igal ajal vajutada lähtestamisnuppu,
+          et BB-8 liiguks lähtekohale tagasi. Hakkame nüüd pihta!
+    starwars_typing:
+      1:
+        text: Plokkide sees on JavaScripti käsud. JavaScript on populaarseim programeerimiskeel
+          professionaalsetele programmeerijatele. Plokkidega on hea programmeerimise
+          õppimist alustada. Isegi tippülikoolid nagu Harvard ja Berkeley alustavad
+          õpetamist sel moel. Kui põhiasjad on selged, kirjutavad insenerid koodi
+          tippides, sest nii on kiirem.
+      2:
+        text: Võime tippida sadu käske ilma, et peaksime neid tööriistakastist otsima
+          ja välja lohistama. Õppimise ajal võib tippimine aeglasemalt edeneda, aga
+          tahame, et sa seda prooviksid.
+      3:
+        text: Iga pusle juures saate vajutada tööala paremas ülanurgas olevat nuppu
+          „näita teksti,“ et vahetada plokid koodi tekstina tippimise vastu.
+      4:
+        text: Järgmises õppetükis harjutame tippimisrežiimi. Siin saate endiselt plokki
+          tööriistakastist välja lohistada või käsunime tippida.Tippima hakates kuvatakse
+          tippimiskoha all võimalikud käsunimed. Selle asemel, et tippida terve käsunimi,
+          võite kiiremaks edasiliikumiseks selle valida. Mina kasutan koodi kirjutamisel
+          alati automaatse lõpetamise funktsiooni.
+      5:
+        text: Arvuti tahab, et oleksid koodi tippimisel eriti täpne. Käsunimi ja selles
+          olevad suurtähed peavad olema täpselt õiged, k.a jutumärgid ja semikoolon.
+          Isegi väikese trükivea korral ei saa BB-8 koodist aru ja ei saa liikuda.
+      6:
+        text: Kui reas on viga, toob redaktor selle esile, et saaksid selle parandada.
+      7:
+        text: Kui jääd toppama, võid alati otsast alustada, kaustades nuppu „alusta
+          uuesti,“ ja saad igal ajal tagasi plokirežiimi minna, klõpsates paremat
+          ülanurka. Hästi, proovime nüüd tippida. Ja ära heida meelt, kui sa vigu
+          teed. Kõik peavad paar korda proovima enne, kui asi õnnestub.
     tutorial_puzzle_challenge:
       1:
         text: Olivia, kelleks ka suurena saada tahad? Kosmonaudiks. Kas sa juhtumisi
@@ -1833,6 +2414,39 @@ et:
           saad teha päris oma koodi, kasutades enda nimetähti. See on tore tegevus
           ja väga kasulik, sest kahendsüsteem tundub küll väga tehniline, aga kui
           sa selle ära õpid, siis oskad justkui salakeelt.
+    unplug10:
+      1:
+        text: See tegevus selgitab arusaadaval viisil Interneti toimimist. Selgitame
+          kogu vajalikku terminoloogiat lihtsate sõnadega, et õpilased saaksid simuleerida
+          sõnumi (nt meili) saatmist.
+      2:
+        text: 'Õpilased edastavad sõnumeid, mängides üht kolmest edastusmeetodist:
+          traadita Internet, DSL või kiudoptiline kaabel. WiFit mängivad õpilased
+          peavad sõnumit peas kandma, sest WiFi kaudu on suurim tõenäosus osa teavet
+          kaotada.'
+      3:
+        text: DSL-i või kaablit mängivad õpilased kannavad sõnumit käeseljal, kus
+          teabe kadu on veidi väiksem. Kiudoptilist kaablit mängivad õpilased kannavad
+          sõnumit mõlema käega. See on hea viis selgitamaks asja, mida paljud meist
+          iga päev kaustavad.
+    unplug11:
+      1:
+        text: Nüüd on aeg vaadata üle kõik, mis te viimase 19 õppetunni jooksul tegite.
+          Nüüd on õige aeg õpilastele öelda, et nad on suure saavutusega hakkama saanud.
+          Nende õppetundide jooksul õppisid nad rohkem, kui enamik täiskasvanuid arvutiteadustest
+          teab.
+      2:
+        text: Arutlege klassi või väikeste rühmadega lemmikõppetundisest. Kui heidate
+          pilgu tagasi õpitule, saab õpilaste loovus särada. Jagage nad rühmadesse
+          ja laske neil koostada ise oma arvutivaba õppetund. Andke igale rühmale
+          põhikontseptsioon (nt funktsioonid või algoritmid) ja andke nende käsutusse
+          hulgaliselt käsitöömaterjale. Laske igal rühmal oma tööd esitleda või varuge
+          veel üks päev õpilaste loodud õppetundide läbiviimiseks.
+      3:
+        text: Code.org-i meeskond loodab, et sul oli kursuse jooksul väga tore. Kas
+          sinu unistuseks on luua parim uus rakendus, kasutada programmeerimist haiguste
+          ravimiseks või saada hiilgavaks probleemide lahendajaks, oli see kursus
+          esimeseks sammuks nende unistuste täitumisel.
     unplug2:
       1:
         text: Arvutusliku mõtlemise õppetund näitab, kuidas lammutada üks suur ja
@@ -1951,617 +2565,3 @@ et:
         text: See on hea vahend selgitamaks vigade avastamist, oma tööle korrektuuri
           tegemise ja teiste varem tehtud töö kontrollimise vajadust. Mõistad kiiresti,
           kui tähtis on olla kodeerimisel ettevaatlik, kui sinust sõltub terve meeskond.
-    unplug10:
-      1:
-        text: See tegevus selgitab arusaadaval viisil Interneti toimimist. Selgitame
-          kogu vajalikku terminoloogiat lihtsate sõnadega, et õpilased saaksid simuleerida
-          sõnumi (nt meili) saatmist.
-      2:
-        text: 'Õpilased edastavad sõnumeid, mängides üht kolmest edastusmeetodist:
-          traadita Internet, DSL või kiudoptiline kaabel. WiFit mängivad õpilased
-          peavad sõnumit peas kandma, sest WiFi kaudu on suurim tõenäosus osa teavet
-          kaotada.'
-      3:
-        text: DSL-i või kaablit mängivad õpilased kannavad sõnumit käeseljal, kus
-          teabe kadu on veidi väiksem. Kiudoptilist kaablit mängivad õpilased kannavad
-          sõnumit mõlema käega. See on hea viis selgitamaks asja, mida paljud meist
-          iga päev kaustavad.
-    unplug11:
-      1:
-        text: Nüüd on aeg vaadata üle kõik, mis te viimase 19 õppetunni jooksul tegite.
-          Nüüd on õige aeg õpilastele öelda, et nad on suure saavutusega hakkama saanud.
-          Nende õppetundide jooksul õppisid nad rohkem, kui enamik täiskasvanuid arvutiteadustest
-          teab.
-      2:
-        text: Arutlege klassi või väikeste rühmadega lemmikõppetundisest. Kui heidate
-          pilgu tagasi õpitule, saab õpilaste loovus särada. Jagage nad rühmadesse
-          ja laske neil koostada ise oma arvutivaba õppetund. Andke igale rühmale
-          põhikontseptsioon (nt funktsioonid või algoritmid) ja andke nende käsutusse
-          hulgaliselt käsitöömaterjale. Laske igal rühmal oma tööd esitleda või varuge
-          veel üks päev õpilaste loodud õppetundide läbiviimiseks.
-      3:
-        text: Code.org-i meeskond loodab, et sul oli kursuse jooksul väga tore. Kas
-          sinu unistuseks on luua parim uus rakendus, kasutada programmeerimist haiguste
-          ravimiseks või saada hiilgavaks probleemide lahendajaks, oli see kursus
-          esimeseks sammuks nende unistuste täitumisel.
-    starwars_intro:
-      1:
-        text: 'Tere! Mina olen Kathleen Kennedy, filmi „Tähtede sõda: Jõud tärkab“
-          produtsent. Täna töötan koos ühe meie staari BB-8-ga. BB-8 on kerakujuline
-          droid. Kõiki tema tegusid ja liigutusi kontrollib arvuti tarkvara. Arvutiteadus
-          puudutab iga tööstusharu turundusest kuni tervishoiu ja filmini. Filmi „Jõud
-          tärkab“ kallal töötasid sajad arvutiinsenerid.'
-      2:
-        text: Tere! Mina olen Rachel Rose. Olen ILMi uurimis- ja arendustegevuse vaneminsener
-          ning juhin animatsiooni ja olendite arendamise meeskonda. Ma aitan kunstnikel
-          filmi „Jõud tärkab“ jaoks tegelaskujude struktuure arendada. Need on liikuvad
-          osad, mis muudavad tegelaskuju kaugel galaktikas väga usutavaks.
-      3:
-        text: Järgmise tunni jooksul loome ise oma Tähtede sõja mängu. Õpetame programmeerimise
-          põhitõdesid. Tavaliselt koosneb programmeerimine vaid tekstist, kuid meie
-          kaustame siin plokke, mida pukseerides saamegi programme kirjutada. Pealispinna
-          all loome ikkagi koodi. Pärast plokkidega põhiasjade proovimist viime su
-          üle JavaScriptile, mis on üks levinumaid programmeerimiskeeli.
-      4:
-        text: Alustuseks programmeerime koos Reyga BB-8 kõndima ja varuosi kokku korjama.
-          Ekraan on jagatud kolmeks osaks. Vasakul on Tähtede sõja mänguala, kus jookseb
-          kood. Juhendid iga taseme jaoks on mänguala all.
-      5:
-        text: Keskmine ala on tööriistakast ja iga plokk seal on käsk, millest BB-8
-          aru saab.
-      6:
-        text: Paremal asuv valge ala on tööala ja seal me oma programmi loomegi.
-      7:
-        text: Mis juhtub, kui lohistan vasakule liikumise ploki tööalale ja vajutan
-          käivitusnuppu? BB-8 liigub ruudustikul ühe ruudu võrra vasakule.
-      8:
-        text: Mis siis, kui tahan, et BB-8 pärast vasakule pööramise plokki veel midagi
-          teeks? Saan lisada veel ühe ploki. Ma valin selleks ülesliikumise ploki
-          ja lohistan selle vasakule liikumise ploki alla, kuni need tõusevad esile.
-          Siis lasen selle lahti ja kaks plokki kinnituvad üksteise külge.
-      9:
-        text: Kui vajutan uuesti käivitusnuppu, täidab BB-8 käske, mis on tööalal
-          ülevalt alla reastatud. Kui tahad plokki kustutada, eemalda see loendist
-          ja lohista see tööriistakasti tagasi.
-      10:
-        text: Pärast käsunupu vajutamist saate igal ajal vajutada lähtestamisnuppu,
-          et BB-8 liiguks lähtekohale tagasi. Hakkame nüüd pihta!
-    starwars_typing:
-      1:
-        text: Plokkide sees on JavaScripti käsud. JavaScript on populaarseim programeerimiskeel
-          professionaalsetele programmeerijatele. Plokkidega on hea programmeerimise
-          õppimist alustada. Isegi tippülikoolid nagu Harvard ja Berkeley alustavad
-          õpetamist sel moel. Kui põhiasjad on selged, kirjutavad insenerid koodi
-          tippides, sest nii on kiirem.
-      2:
-        text: Võime tippida sadu käske ilma, et peaksime neid tööriistakastist otsima
-          ja välja lohistama. Õppimise ajal võib tippimine aeglasemalt edeneda, aga
-          tahame, et sa seda prooviksid.
-      3:
-        text: Iga pusle juures saate vajutada tööala paremas ülanurgas olevat nuppu
-          „näita teksti,“ et vahetada plokid koodi tekstina tippimise vastu.
-      4:
-        text: Järgmises õppetükis harjutame tippimisrežiimi. Siin saate endiselt plokki
-          tööriistakastist välja lohistada või käsunime tippida.Tippima hakates kuvatakse
-          tippimiskoha all võimalikud käsunimed. Selle asemel, et tippida terve käsunimi,
-          võite kiiremaks edasiliikumiseks selle valida. Mina kasutan koodi kirjutamisel
-          alati automaatse lõpetamise funktsiooni.
-      5:
-        text: Arvuti tahab, et oleksid koodi tippimisel eriti täpne. Käsunimi ja selles
-          olevad suurtähed peavad olema täpselt õiged, k.a jutumärgid ja semikoolon.
-          Isegi väikese trükivea korral ei saa BB-8 koodist aru ja ei saa liikuda.
-      6:
-        text: Kui reas on viga, toob redaktor selle esile, et saaksid selle parandada.
-      7:
-        text: Kui jääd toppama, võid alati otsast alustada, kaustades nuppu „alusta
-          uuesti,“ ja saad igal ajal tagasi plokirežiimi minna, klõpsates paremat
-          ülanurka. Hästi, proovime nüüd tippida. Ja ära heida meelt, kui sa vigu
-          teed. Kõik peavad paar korda proovima enne, kui asi õnnestub.
-    starwars_events:
-      1:
-        text: Tere! Minu nimi on Charita Carter. Olen Walt Disney Imagineeringu loovprodutsent.
-          Ma juhin meeskondi, mis toodavad külastajate poolt kasutatavaid atraktsioone.
-          Otsime alati võimalusi täiustamiseks ja külastajatele parema elamuse pakkumiseks.
-          Ja tehnoloogia ongi selle võtmeks.
-      2:
-        text: Õnnitleme, sa said hakkama! Sa programmeerisid BB-8. Nüüd oleme valmis
-          proovima midagi raskemat. Hakkame pihta. Nüüd on programmeerimise põhialused
-          selged ja läheme ajas tagasi, et luua sinu oma mäng, mille peategelasteks
-          on R2-D2 ja C3PO.
-      3:
-        text: Mängu loomiseks peame õppima midagi sellist, mida mänguprogrammeerijad
-          iga päev kasutavad. Neid nimetatakse sündmusteks. Sündmus ütleb programmile,
-          et tuleb jälgida või oodata, kui midagi juhtub. Ja kui see juhtub, rakendab
-          programm käsu.
-      4:
-        text: Sündmusteks on näiteks hiireklõpsu, noolenupu või ekraani puudutamise
-          jälgimine.
-      5:
-        text: Me liigutame R2-D2 üles mässuliste piloodile sõnumit viima ja seejärel
-          liigutame teda alla teise mässuliste piloodi juurde. Tema liigutamiseks
-          kasutame sündmusi. Kui mängija kasutab üles-/allanoolt või üles/alla nuppe.
-      6:
-        text: Me kasutame „kui üles“ sündmuseplokki, mille külge ühendame „mine üles“
-          ploki. Kui mängija vajutab ülesnoolt, käivitatakse „kui üles“ plokiga seotud
-          kood. R2-D2 alla liigutamiseks teeme seda sama.
-      7:
-        text: Selleks kaustame käsku „kui üles“. Kui sa käsu tööriistakastist välja
-          lohistad, siis näed, et see ei alga mitte semikooloniga, vaid hoopis looksuluga.
-          See tekitab meile ruumi, kuhu sisestada teised käsud. Iga käsk, mille me
-          looksulgudesse paneme, käivitatakse, kui mängija vajutab ülesnoolt.
-      8:
-        text: Tahame R2-D2 üles liigutada, seega paneme käsu sisse „mine üles“ ploki.
-          R2-D2 alla liigutamiseks teeme seda sama.
-      9:
-        text: Selle asemel, et droidi kontrolliv kood eelnevalt valmis kirjutada,
-          saame lasta R2-D2-l reageerida nupuvajutuse sündmustele, mis teda ekraanil
-          ringi liigutavad. Sinu mäng muutub samm-sammult järjest interaktiivsemaks.
-    starwars_congrats:
-      1:
-        text: Tere! Minu nimi on Alice ja mina juhin Code.org-i projekteerimis- ja
-          ehitusmeeskondi. Ma töötasin ka selle õpikuga, mida sa praegu läbi mängid.
-      2:
-        text: Jõudsid viimasele tasemele. Soovin õnne! Sa omandasid kõik vajalikud
-          teadmised, et luua ise päris oma Tähtede sõja mäng. Rohkem juhiseid ega
-          puslesid pole. Nüüd saad luua oma mängu ja valida, kuidas see töötab. Veel
-          üks asi. Sa avasid uued helid ja käsud, mis võimaldavad veelgi enamat.
-      3:
-        text: "[õpilased räägivad] Me tegime mängu, kus saab nuuskursigade eest punkte.
-          Konks on sellest, et iga kord, kui sa saad nuuskursea, ilmub tormisõdur.
-          Kogu ekraan on nuuskursigu täis ja kui sa kogud neid 10000 tükki, võidad
-          mängu."
-      4:
-        text: "[õpilased räägivad] Me tegime mängu, kus ei saa kaotada ja kõik, mille
-          sa tapad, annab punkte. Vahetasin klahvid ära nii, et ülesnoolt vajutades
-          liigub tegelane alla ja paremnoolt vajutades liigub tegelane vasakule. See
-          on väga raske! Mängu arendajana on sul ebaõiglane eelis. Kas mul õnnestus?
-          Jee!"
-      5:
-        text: Kui mängu loomine on valmis, siis vali „jagamine,“ et saada link, mida
-          sõpradele jagada või mängu telefonis mängida. Lõbutse!
-    starwars_blocks_intro:
-      1:
-        text: 'Tere! Mina olen Kathleen Kennedy, filmi „Tähtede sõda: Jõud tärkab“
-          produtsent. Täna töötan koos ühe meie staari BB-8-ga. BB-8 on kerakujuline
-          droid. Kõiki tema tegusid ja liigutusi kontrollib arvutitarkvara. Arvutiteadus
-          puudutab iga tööstusharu turundusest kuni tervishoiu ja filmini. Filmi „Jõud
-          tärkab“ kallal töötasid sajad arvutiinsenerid.'
-      2:
-        text: Tere! Mina olen Rachel Rose. Olen ILMi uurimis- ja arendustegevuse vaneminsener
-          ning juhin animatsiooni ja olendite arendamise meeskonda. Ma aitan kunstnikel
-          filmi „Jõud tärkab“ jaoks tegelaskujude struktuure arendada. Need on liikuvad
-          osad, mis muudavad tegelaskuju kaugel galaktikas väga usutavaks.
-      3:
-        text: Järgmise tunni jooksul ehitame ise oma Tähtede sõja mängu. Õpetame programmeerimise
-          põhitõdesid. Tavaliselt koosneb programmeerimine vaid tekstist, kuid meie
-          kaustame siin plokke, mida pukseerides saamegi programme kirjutada. Alustuseks
-          programmeerime koos Reyga BB-8 kõndima ja varuosi kokku korjama.
-      4:
-        text: Sinu ekraan on jagatud kolmeks põhiosaks. Vasakul pool on Tähtede sõja
-          mänguala. Juhised iga taseme jaoks on mänguala all.
-      5:
-        text: Keskmine ala on tööriistakast ja iga plokk seal on käsk, millest BB-8
-          aru saab.
-      6:
-        text: Paremal asuv valge ala on tööala ja seal me oma programmi loomegi.
-      7:
-        text: Mis juhtub, kui lohistan vasakule liikumise ploki tööalale? BB-8 liigub
-          ruudustikul ühe ruudu võrraa vasakule.
-      8:
-        text: Mis siis, kui tahan, et BB-8 pärast vasakule liikumise plokki veel midagi
-          teeks? Saan lisada programmile veel ühe ploki. Ma valin selleks ülesliikumise
-          ploki ja lohistan selle vasakule liikumise ploki alla, kuni need tõusevad
-          esile. Siis lasen selle lahti ja kaks plokki kinnituvad üksteise külge.
-          Kui ma uuesti käivitusnuppu vajutan, täidab BB-8 tööalal ülalt alla reastatud
-          käsud.
-      9:
-        text: Kui soovid plokki kustutada, eemalda see lihtsalt loendist ja lohista
-          tagasi tööriistakasti.
-      10:
-        text: Pärast käivitusnupu vajutamist saad igal ajal vajutada lähtestamisnuppu,
-          et BB-8 liiguks lähtekohale tagasi. Hakkame nüüd pihta!
-    starwars_blocks_events:
-      1:
-        text: Tere! Minu nimi on Charita Carter. Olen Walt Disney Imagineeringu loovprodutsent.
-          Ma juhin meeskondi, mis toodavad külastajate poolt kasutatavaid atraktsioone.
-          Otsime alati võimalusi täiustamiseks ja külastajatele parema elamuse pakkumiseks.
-          Ja tehnoloogia ongi selle võtmeks.
-      2:
-        text: Õnnitleme, sa said hakkama! Sa programmeerisid BB-8. Nüüd oleme valmis
-          proovima midagi raskemat. Hakkame pihta. Nüüd on programmeerimise põhialused
-          selged ja läheme ajas tagasi, et luua sinu oma mäng, mille peategelasteks
-          on R2-D2 ja C3PO.
-      3:
-        text: Mängu loomiseks peame õppima midagi sellist, mida mänguprogrammeerijad
-          iga päev kasutavad. Neid nimetatakse sündmusteks. Sündmus ütleb programmile,
-          et tuleb jälgida või oodata, kui midagi juhtub. Ja kui see juhtub, rakendab
-          programm käsu.
-      4:
-        text: Sündmusteks on näiteks hiireklõpsu, noolenupu või ekraani puudutamise
-          jälgimine.
-      5:
-        text: Me liigutame R2-D2 üles mässuliste piloodile sõnumit viima ja seejärel
-          liigutame teda alla teise mässuliste piloodi juurde. Tema liigutamiseks
-          kasutame sündmusi. Kui mängija kasutab üles-/allanoolt või üles/alla nuppe.
-      6:
-        text: Me kasutame „kui üles“ sündmuseplokki, mille külge ühendame „mine üles“
-          ploki. Kui mängija vajutab ülesnoolt, käivitatakse „kui üles“ plokiga seotud
-          kood. R2-D2 alla liigutamiseks teeme seda sama. Selle asemel, et droidi
-          kontrolliv kood eelnevalt valmis kirjutada, saame lasta R2-D2-l reageerida
-          nupuvajutuse sündmustele, mis teda ekraanil ringi liigutavad.
-      7:
-        text: Sinu mäng muutub samm-sammult järjest interaktiivsemaks.
-    starwars_blocks_congrats:
-      1:
-        text: Tere! Minu nimi on Alice ja mina juhin Code.org-i projekteerimis- ja
-          ehitusmeeskondi. Ma töötasin ka selle õpikuga, mida sa praegu läbi mängid.
-      2:
-        text: Jõudsid viimasele tasemele. Soovin õnne! Sa omandasid kõik vajalikud
-          teadmised, et luua ise päris oma Tähtede sõja mäng. Rohkem juhiseid ega
-          puslesid pole. Nüüd saad luua oma mängu ja valida, kuidas see töötab. Veel
-          üks asi. Sa avasid uued helid ja käsud, mis võimaldavad veelgi enamat.
-      3:
-        text: "[õpilased räägivad] Me tegime mängu, kus saab nuuskursigade eest punkte.
-          Konks on sellest, et iga kord, kui sa saad nuuskursea, ilmub tormisõdur.
-          Kogu ekraan on nuuskursigu täis ja kui sa kogud neid 10000 tükki, võidad
-          mängu."
-      4:
-        text: "[õpilased räägivad] Me tegime mängu, kus ei saa kaotada ja kõik, mille
-          sa tapad, annab punkte. Vahetasin klahvid ära nii, et ülesnoolt vajutades
-          liigub tegelane alla ja paremnoolt vajutades liigub tegelane vasakule. See
-          on väga raske! Mängu arendajana on sul ebaõiglane eelis. Kas mul õnnestus?
-          Jee!"
-      5:
-        text: Kui mängu loomine on valmis, siis vali „jagamine,“ et saada link, mida
-          sõpradele jagada või mängu telefonis mängida. Lõbutse!
-    mc_intro:
-      1:
-        text: Minu nimi on Jens Bergensten, aga mind tuntakse kui Jebi. Ma olen Minecrafti
-          peaarendaja siin Stochkholmis asuvas Mojangis. Hakkasin programmeerima 11-12aastaselt,
-          sest ma tahtsin mänge luua. Üks mu isa sõber ütles, et mängude loomiseks
-          peab programmeerimist õppima. Nii ma alustasingi. Mulle meeldib mänge projekteerida
-          ja konstrueerida. Just see mulle Minecrafti juures meeldibki.
-      2:
-        text: Järgmise tunni jooksul õpid arvutiteaduse põhialuseid, programmeerides
-          Alexi või Steve’i liikuma läbi simuleeritud Minecrafti maailma.
-      3:
-        text: Traditsiooniline programmeeimine toimub tavaliselt tekstivormis, aga
-          täna kasutame Blocklyt, süsteemi, kus kasutatakse visuaalseid plokke, mida
-          pukseerides on võimalik programme kirjutada. Pealispinna all lood sa JavaScripti
-          koodi.
-      4:
-        text: Sa õpid põhimõtteid, mida arvutiprogrammeerijad igapäevaselt kaustavad
-          ja mis on arvutiteaduse aluseks. Meie siin Mojangis kasutame Minecrafti
-          töölepanemiseks neid samu põhimõtteid.
-      5:
-        text: Enne, kui sa alustad, vali oma tegelane. Mina valin Alexi. Kirjutame
-          koodi programmile, mis aitab tal mööda ekraani ringi liikuda.
-      6:
-        text: Sinu ekraan on jagatud kolmeks põhiosaks. Vasakul on Minecrafti mänguala,
-          kus sinu programm jookseb. Juhised iga taseme jaoks on mänguala all.
-      7:
-        text: Keskmine ala on tööriistakast ja iga plokk seal on käsk, mis Alexi tegevust
-          juhib.
-      8:
-        text: Valge ala paremal on tööala ning see on see koht, kus sa oma mängu ehitad.
-      9:
-        text: Kui lohistame edasiliikumise ploki tööalale ja seejärel klõpsame nuppu
-          „käivita,“ mis siis juhtub? Alex liigub ruudustikul ühe ruudu võrra edasi.
-      10:
-        text: Mis siis, kui tahan, et ta pärast ühe ruudu võrra edasi liikumist veel
-          midagi teeks? Saame lisada programmile veel ühe ploki. Ma valin selleks
-          paremale pööramise ploki ja lohistan selle edasiliikumise ploki alla, kuni
-          ilmub nähtavale oranž joon. Siis lasen selle lahti ja kaks plokki kinnituvad
-          üksteise külge. Kui uuesti käivitusnuppu vajutame, täidab Alex tööalal ülalt
-          alla reastatud käsud.
-      11:
-        text: Kui soovid plokki kustutada, lihtsalt lohista see tagasi tööriistakasti.
-      12:
-        text: Muutuste tagasivõtmiseks ja taseme algusse tagasi saamiseks kasuta nuppu
-          „alusta uuesti,“ mis asub tööala paremas ülanurgas. Veel üks asi. Näed seda
-          väikest kolmnurka pööramisplokkidel? Need kolmnurgad tähendavad, et sul
-          on erinevad valikud. Hakkame kodeerima!
-    mc_repeat:
-      1:
-        text: Mina olen Lydia Winters, Mojangi brändijuht, ja me tegime sellise mängu
-          nagu Minecraft.
-      2:
-        text: Minu lemmiktegevuseks on Minecraftis ringivaatamine. Mulle meeldib seigelda
-          koobastes ja põnevaid avastusi teha. Minu kui mitte programmeerija jaoks
-          on väga huvitav Minecrafti õppetund läbi teha ja veidi kodeerimist õppida.
-      3:
-        text: Viimases tasemes läks vaja palju edasiliikumisplokke. Oleks palju lihtsam,
-          kui saaksime arvutile öelda, et ta täidaks edasiliikumise käsku 4-5 korda.
-          Õnneks suudavad arvutid käske kordustsüklite abil korrata.
-      4:
-        text: Minecrafti luues kaustame kordustsükleid, millega asendame uue maailma
-          loomise alusmaterjali. Selleks on tuhanded plokid. Kasutame kordustsükleid
-          ka väikestes asjades, näiteks Alexi jalgade kõndimise ajal edasi-tagasi
-          liigutamiseks. Kordustsüklid on programmeerimises väga võimsad.
-      5:
-        text: Öö saabub ja paaril järgmisel tasemel ehitame maja, et meil oleks turvaline.
-          Kordusploki kasutamine muudab selle meile lihtsaks.
-      6:
-        text: Majaseina ehitamiseks võime käskida Alexil edasi liikuda ja neli planku
-          asetada. Võime aga käskida tal edasi liikuida ja asetada vaid ühe plangu
-          ning kasutada siis kordusplokki, et ta teeks seda tegevust mitu korda. Nüüd
-          klõpsame kordusplokki ja ütleme, mitu korda ta oma tegevust peab kordama.
-          Nüüd ehitame maja valmis enne, kui öö saabub. Lõbutsege!
-    mc_if_statements:
-      1:
-        text: Nüüd õpime if-lausete kohta. If-lausetel on programmeerima õppimisel
-          väga oluline osa. Need aitavad arvutil otsuseid teha.
-      2:
-        text: Kõik arvutid kasutavad if-lauseid, isegi minu telefon. Näiteks kui ma
-          oma telefoni lukustusest avan, käivitab see koodi, mis käsib telefoni avada
-          juhul, kui ma sisestan õige parooli. Muul juhul kuvatakse tõrketeade.
-      3:
-        text: Saad oma koodis kasutada if-lauseid ja panna Steve’i ja Alice’i kõigele
-          ümbritsevale reageerima. Näiteks, kui nende ees on kivi, pööravad nad vasakule.
-          Või pööravad paremale, kui nende ees on puu.
-      4:
-        text: Siin me ei taha laavasse kukkuda. Laava jaoks on lihtne plaani teha.
-          Me näeme seda ekraanil. Aga see laava, mida me kivi all ei näe?
-      5:
-        text: Pärast kivi kaevandamist tuleb enne edasiliikumist kontrollida, kas
-          kivi all on laavat. Kui seal on laavat, asetame enne edasiliikumist oma
-          tegelase ette kivi. Siis saame ohutult edasi liikuda. Kaevandame veel! Pea
-          meeles kasutada ohutuse tagamiseks if-lauseid.
-    mc_congrats_share:
-      1:
-        text: Palju õnne! Õppisid kasutama arvutiteaduse peamisi ehitusplokke.
-      2:
-        text: Nüüd saad neid plokke kasutada oma loomingu valmis ehitamiseks. Rohkem
-          juhtnööre ega puslesid pole. Võid ehitada kõike, mida ise soovid. See on
-          sinu valik.
-      3:
-        text: "[õpilased räägivad] Asi läheb tõsiseks. Pügamine. Ma tegin taskulampidest
-          L-tähe. Ma tegin kaseplankudest A-tähe. See töötas! Me ehitasime villast
-          maja!"
-      4:
-        text: Kui sinu looming on valmis, vajuta nuppu „jaga,“ et saada link selle
-          sõpradega jagamiseks. Lõbutse!
-    mc_congrats_no_share:
-      1:
-        text: Palju õnne! Õppisid kasutama arvutiteaduse peamisi ehitusplokke.
-      2:
-        text: Nüüd saad neid plokke kasutada oma loomingu valmis ehitamiseks. Rohkem
-          juhtnööre ega puslesid pole. Võid ehitada kõike, mida ise soovid. See on
-          sinu valik.
-      3:
-        text: "[õpilased räägivad] Asi läheb tõsiseks. Pügamine. Ma tegin taskulampidest
-          L-tähe. Ma tegin kaseplankudest A-tähe. See töötas! Me ehitasime villast
-          maja!"
-      4:
-        text: Nüüd sa saad ehitada just seda, mida ise soovid. Lõbutse!
-    gumball_intro:
-      1:
-        text: Kui sa soovid luua enda mängu, siis see on väga lihtne. Kõik, mida sa
-          vajad, on natuke teadmisi programmeerimisest ja sa saad hakata mängima mängu,
-          mille sa ise lõid.
-      2:
-        text: Kas sul on lemmik videomäng? Astume sammu lähemale selliste mängude
-          loomisele PlayLabi kasutades. Head mängud jutustavad loo ning lugudes on
-          tegelased. Tegelased kõnelevad, liiguvad ringi ning suhtlevad teineteisega.
-          Võib-olla nad isegi koguvad punkte vastavalt mängu reeglitele. Täna õpime
-          kõiki neid asju järgemööda ühe toreda tegelase abil. Seejärel ehitame mängu
-          päris nullist, mida saad hiljem teistega jagada ja telefonis mängida.
-      3:
-        text: Täna õpime, kuidas kõiki neid asju teha ühe toreda tegelase abil. Seejärel
-          ehitame mängu päris nullist ning pärast saad seda mängu jagada ning telefonis
-          mängida.
-      4:
-        text: Ekraan on jaotatud kolme ossa. Vasakul on mängu ala, kus mäng jookseb.
-          Iga taseme juhtnöörid on toodud allpool.
-      5:
-        text: Keskmine osa on tööriistakast ning kõik need plokid on osake koodi.
-      6:
-        text: Valge ala paremal on tööala ning see on see koht, kus sa oma mängu ehitad.
-      7:
-        text: Alustuseks pead ühendama plokid oranži "käivita" plokiga. Sa võid erinevaid
-          plokke kokku panna neid kokku lohistades. Kui tekib kollane joon, siis ühenduvad
-          plokid omavahel.
-      8:
-        text: See on sinu esimene mäng. Me paneme tegelased midagi ütlema. Selleks
-          ühendame "ütle" plokk "käivita" plokiga ning sisestame oma sõnumi, mida
-          tahame, et tegelane ütleks. Kui plokid on olemas, siis vajuta "käivita"
-          nuppu ning vaata, mida sa programmeerisid.
-      9:
-        text: Tee algust! Lõpuks saad luua oma mängu koos erinevate tegelastega, kes
-          saavad omavahel suhelda, punkte koguda, asju visata ning koguni haihtuda.
-          Kõik sõltub Sinust!
-    gumball_events:
-      1:
-        text: Nüüd õpime midagi asja kohta, mida kõik programmeerijaid iga päev kasutavad.
-          Neid asju kutsutakse sündmusteks. Sündmus ütleb sinu programmile, et ta
-          kuulaks, kui midagi juhtub. Kui mingi asi juhtub, siis rakendab mäng eelnevalt
-          valitud käsu.
-      2:
-        text: Sündmusteks on näiteks hiireklõpsu, üles- või allanoolenupu või ekraani
-          puudutamise jälgimine.
-      3:
-        text: Nüüd paneme tegelase midagi ütlema, kui mängija temal klõpsab. Kasutame
-          plokki "kui tegelast puudutatakse" ja ühendame selle plokiga "ütle". Kui
-          mängija klõpsab tegelasel, käivitatakse kõik tegevused, mis on ühendatud
-          selle plokiga.
-      4:
-        text: Lisaks on olemas "kui nool" plokid. Kui sa ühendad "liigu" plokid nendega
-          saad tegelasi liigutada nooleklahvidega üles, alla, vasakule või paremale.
-          Samm sammult muutub mäng niimoodi interaktiivsemaks.
-    gumball_repeat:
-      1:
-        text: Kujuta ette, kui sa peaksid midagi igavesti kordama. Loodetavasti ei
-          pea sa seda tegema, sest arvutitel õnnestub kordamine paremini.
-      2:
-        text: See on "korda igavesti" plokk. Kõik mis selle ploki sees on korratakse
-          mängu jooksul igavesti. Kui me tahame, et mõni tegelane midagi korduvalt
-          teeks, ilma et mängija midagi peaks tegema, paneme me need plokid "korda
-          igavesti" ploki sisse.
-      3:
-        text: Järgmises mängus pead aitama tegelasel teha ühte tööd korduvalt. Kui
-          õpid selgeks, kuidas töötavad käskluste kordused, hoiad hiljem palju aega
-          kokku ning see on kasulik ka siis, kui ise oma mängu ehitad.
-    iceage_intro:
-      1:
-        text: Kui sa soovid luua enda mängu, siis see on väga lihtne. Kõik, mida sa
-          vajad, on natuke teadmisi programmeerimisest ja sa saad hakata mängima mängu,
-          mille sa ise lõid.
-      2:
-        text: Kas sul on lemmik videomäng? Astume sammu lähemale selliste mängude
-          loomisele PlayLabi kasutades. Head mängud jutustavad loo ning lugudes on
-          tegelased. Tegelased kõnelevad, liiguvad ringi ning suhtlevad teineteisega.
-          Võib-olla nad isegi koguvad punkte vastavalt mängu reeglitele. Täna õpime
-          kõiki neid asju järgemööda ühe toreda tegelase abil. Seejärel ehitame mängu
-          päris nullist, mida saad hiljem teistega jagada ja telefonis mängida.
-      3:
-        text: Täna õpime, kuidas kõiki neid asju teha ühe toreda tegelase abil. Seejärel
-          ehitame mängu päris nullist ning pärast saad seda mängu jagada ning telefonis
-          mängida.
-      4:
-        text: Ekraan on jaotatud kolme ossa. Vasakul on mängu ala, kus mäng jookseb.
-          Iga taseme juhtnöörid on toodud allpool.
-      5:
-        text: Keskmine osa on tööriistakast ning kõik need plokid on osake koodi.
-      6:
-        text: Valge ala paremal on tööala ning see on see koht, kus sa oma mängu ehitad.
-      7:
-        text: Alustuseks pead ühendama plokid oranži "käivita" plokiga. Sa võid erinevaid
-          plokke kokku panna neid kokku lohistades. Kui tekib kollane joon, siis ühenduvad
-          plokid omavahel.
-      8:
-        text: See on sinu esimene mäng. Me paneme tegelased midagi ütlema. Selleks
-          ühendame "ütle" plokk "käivita" plokiga ning sisestame oma sõnumi, mida
-          tahame, et tegelane ütleks. Kui plokid on olemas, siis vajuta "käivita"
-          nuppu ning vaata, mida sa programmeerisid.
-      9:
-        text: Tee algust! Lõpuks saad luua oma mängu koos erinevate tegelastega, kes
-          saavad omavahel suhelda, punkte koguda, asju visata ning koguni haihtuda.
-          Kõik sõltub Sinust!
-    iceage_events:
-      1:
-        text: Nüüd õpime midagi asja kohta, mida kõik programmeerijaid iga päev kasutavad.
-          Neid asju kutsutakse sündmusteks. Sündmus ütleb sinu programmile, et ta
-          kuulaks, kui midagi juhtub. Kui mingi asi juhtub, siis rakendab mäng eelnevalt
-          valitud käsu.
-      2:
-        text: Sündmusteks on näiteks hiireklõpsu, üles- või allanoolenupu või ekraani
-          puudutamise jälgimine.
-      3:
-        text: Nüüd paneme tegelase midagi ütlema, kui mängija temal klõpsab. Kasutame
-          plokki "kui tegelast puudutatakse" ja ühendame selle plokiga "ütle". Kui
-          mängija klõpsab tegelasel, käivitatakse kõik tegevused, mis on ühendatud
-          selle plokiga.
-      4:
-        text: Lisaks on olemas "kui nool" plokid. Kui sa ühendad "liigu" plokid nendega
-          saad tegelasi liigutada nooleklahvidega üles, alla, vasakule või paremale.
-          Samm sammult muutub mäng niimoodi interaktiivsemaks.
-    iceage_repeat:
-      1:
-        text: Kujuta ette, kui sa peaksid midagi igavesti kordama. Loodetavasti ei
-          pea sa seda tegema, sest arvutitel õnnestub kordamine paremini.
-      2:
-        text: See on "korda igavesti" plokk. Kõik mis selle ploki sees on korratakse
-          mängu jooksul igavesti. Kui me tahame, et mõni tegelane midagi korduvalt
-          teeks, ilma et mängija midagi peaks tegema, paneme me need plokid "korda
-          igavesti" ploki sisse.
-      3:
-        text: Järgmises mängus pead aitama tegelasel teha ühte tööd korduvalt. Kui
-          õpid selgeks, kuidas töötavad käskluste kordused, hoiad hiljem palju aega
-          kokku ning see on kasulik ka siis, kui ise oma mängu ehitad.
-    mc_2016_intro:
-      1:
-        text: Tere, minu nimi on Jens ja ma olen Minecrafti loominguline juht. Järgmise
-          tunni jooksul saate teha oma Minecrafti mängu. See siin näeb välja nagu
-          Minecraft, kuid maailm on siin peatunud. Lambad ei liigu, kanad ei mune,
-          ja zombid seisavad lihtsalt paigal. Sinu ülesanne on lisada kood, et Minecrafti
-          maailm tööle hakkaks.
-      2:
-        text: 'Minu nimi on Melissa ja ma teen Minecrafti kasutajauuringuid. Mind
-          huvitab tegelikult, kuidas inimesed mõtlevad ja tehnoloogiaga suhestuvad,
-          ja seega on see töö minu jaoks ideaalne, sest saan ühendada arvutiteaduse
-          ja psühholoogia: kuidas inimesed mõtlevad ja käituvad.'
-      3:
-        text: Sa näed oma ekraani kolmes põhiosas. 1) Vasakul on Minecrafti mäng.
-          Praegu seisab see maailm paigal, kuid me teeme selle koodi abil korda.
-      4:
-        text: 2) See keskmine osa on tööristakast. Iga sellinne plokk on käsklus,
-          mida kanad, lambad ja teised Minecrafti olendid mõistavad.
-      5:
-        text: 3) Paremal olev ala on tööala ja siin hakkame me programmi ehitama.
-      6:
-        text: Kui sa unustad, mida teha, siis juhised iga taseme jaoks on üleval.
-      7:
-        text: Alustuseks programmeerime ühe kana. Tirime "liigu edasi" käskluse tööalale.
-          Kui ma vajutan "Käivita" liigub kana ühe sammu võrra edasi. Et edasi minna,
-          tirin ma veel ühe "liigu edasi" ploki esimese "liigu edasi" ploki alla kuni
-          see aktiivseks muutub. Siis lasen ma sellest lahti ja kaks plokki haakuvad
-          üksteisega. Kui ma vajutan uuesti "Käivita", siis astub kana kaks sammu.
-      8:
-        text: Kui sa tahad mõnda plokki kustutada, eemalda see lihtsalt käskluste
-          hulgast ja tiri tagasi tööriista kasti.
-      9:
-        text: Peale nupu "Käivita" vajutamist on sul alati võimalik vajutada nuppu
-          "Taasta", et mängu uuesti käivitada ja otsast alata. Nüüd on sinu kord teha
-          täitsa oma Minecrafti versioon. Lõbutse hästi!
-    mc_2016_loops:
-      1:
-        text: Tere, mina olen Lisa. Ma olen Minecrafti tarkvaraarendaja ja ma töötan
-          mängus mõnede loomade ja nende vaenlastega. Üks loom, kellega ma töötasin
-          on otselot. Töötasin selle osaga, kus sa saad otselotile kala sööta, et
-          teda endale kassiks taltsutada.
-      2:
-        text: Inimestena hakkab meil igav kui me peame ühte ja sama asja ikka uuesti
-          ja uuesti tegema. Arvutite puhul on lahe see, et nad võivad teha ühte asja
-          miljoneid või isegi trilioneid kordi järjest ja neil ei hakka igav. Seda
-          nimetatakse tsükliks ja iga olend Minecraftis kasutab tsükleid.
-      3:
-        text: Varem panime me kana üle ekraani liikuma, kuid siis jäi ta seisma. Minecraftis
-          liiguvad kanad kogu aeg ringi. Kasutame "Korda lõpmatuseni" tsüklit meie
-          tööriistakastist, et panna kanad kogu aeg ringi liikuma. Tsüklid säästavad
-          palju aega ja avavad sulle palju võimalusi kui sa enda Minecrafti versiooni
-          ehitad.
-    mc_2016_events:
-      1:
-        text: Järgmisel tasemel võid sa valida, kas olla Steve või Alex. Vajuta nooleklahve
-          oma klaviatuuril, et liikuda ülesse, alla, vasakule ja paremale. Nüüd saad
-          sa tasandil ringi liikuda seal, kus soovid.
-      2:
-        text: Kui sa kasutad puuteekraani liigu näpuga ülesse, alla, vasakule ja paremale.
-          Siis puuduta mängu, et enda ees olevaid esemeid kasutada.
-      3:
-        text: Aga mis seda kasutades juhtub? Minecraftis kukub lammastelt vill kui
-          sa neid pügad, lehmad jooksevad ära kui sa neid lööd ja kreeperid plahvatavad
-          kui sa neile lähened. Sellised reaktsioonid leiavad aset "sündmuste" tõttu.
-          Sündmused paluvad sinu programmil oodata, et midagi juhtuks. Ja viia läbi
-          mingi tegevus kui see juhtub.
-      4:
-        text: Siiani oled kasutanud ühte sündmust. Kood, mille sa sisestad "kui loodud"
-          pessa, käivitub siis kui oled oma olendi loonud või kui mäng algab. Järgmisel
-          paaril tasemel on sul uued pesad selliste sündmuste jaoks nagu "kui puudutatakse",
-          mis käivitub kui olendit puudutatakse, või "kui kasutatakse" olendi kasutamise
-          jaoks. Või kui sa soovid, et zombi kaoks ära kui päev tuleb, siis tueb see
-          panna "kui on päev" pesasse
-    mc_2016_spawn:
-      1:
-        text: Mängudes tähendab 'spawn' midagi looma või tegema. Sellel tasemel teeme
-          zombisid siis kui päike loojub. Selleks kasutame "kui öö" plokki.
-      2:
-        text: Kuna soovime zombisid teha öösel lisame "loo zombie" plokk "kui on öö"
-          plokki. Kui nad on tekkinud, kasutab iga zombi koodi, mis sa paned tema
-          "kui loodud" sündmuse pessa. Lõbutsege zombisid luues!
-    mc_2016_congrats:
-      1:
-        text: Palju õnne! Olete õppinud arvutikäskude abil Minecraft maailmas tegutsema.
-          Oled programmeerija. Oled lukust lahti teinud kõik käsud ja kõik olendid.
-          Sa valida, mis juhtub.
-      2:
-        text: Kui oled mängu valmis teinud vali "jaga" ning saad lingi, mida oma sõpradega
-          jagada. Mängu saad ka oma telefonis mängida. Lõbutse! Mina tahaksin samuti
-          sinu Minecrafti mängida.
-    mc_2017_agent_intro:
-      11:
-        text: Kui sa unustad, mida teha, siis juhised iga taseme jaoks on üleval.
-    hoc_dance_events_2019:
-      4:
-        text: Sündmusteks on näiteks hiireklõpsu, noolenupu või ekraani puudutamise
-          jälgimine.

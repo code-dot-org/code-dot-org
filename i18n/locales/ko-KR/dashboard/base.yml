@@ -52,7 +52,9 @@ ko:
         age: '나이'
         gender: '성별'
         edit_header: '계정 정보 수정'
+        ai_settings_header: 'AI 설정'
         finish_sign_up_header: '계정 만들기를 마칩니다.'
+        finish_sign_up_header_error: '다음 오류를 수정해주세요:'
         finish_sign_up_subheader: '<strong>%{email}</strong>을 위해 Code.org 계정을 만들려면 밑에 있는 빈 곳에 정보를 입력 하세요.'
         finish_sign_up_subheader_markdown: '**%{email}**을 위해 Code.org 계정을 만들려면 밑에 있는 빈 곳에 정보를 입력 하세요.'
         finish_sign_up_subheader_provider: ' <strong>%{provider}</strong> 으로 <strong>%{email}</strong>을 위한 Code.org 계정 만들기를 마치려면 다음 정보를 작성하세요.'
@@ -60,6 +62,8 @@ ko:
         reset_password_token: "팔로우했던 재설정 비밀번호 링크"
         error:
           future: 오늘 이전 날짜만 가능합니다.
+        user_type: '계정 유형'
+        us_state: '주'
   beta: "베타"
   hello: "Hello world"
   welcome_back: "%{name} 님, 어서오세요. "
@@ -69,6 +73,7 @@ ko:
   unsubmit: 제출 취소
   previous_page: 이전 페이지
   next_page: 다음 페이지
+  next_level: 다음 레벨
   next_resource: 다음 자료
   done_with_module: 이 학습 모듈로 완료
   cancel: "취소"
@@ -172,7 +177,6 @@ ko:
     data_collection_us: "본인은 Code.org는 미국에 있는 비영리 웹사이트로 미국에서 데이터 수집에 적용되는 법과 본인의 국가에서 적용하는 법이 서로 다를 수 있음을 알고 있습니다."
     visit_privacy: 'Code.org의 [개인정보 보호정책](%{privacy_url})을 방문하여 더 자세히 알아보세요.'
     student_terms_markdown: "학생과의 연락을 허용하는 양식에 이메일 주소가 저장되어 있지 않습니다. 학생은 비밀번호 복구를 위한 경우를 제외하고 Code.org로부터 이메일을 받지 않을 것입니다. 자세한 내용은 [개인정보 보호정책](http://code.org/privacy)을 참조하세요."
-    additional_information: "가입하기 위해서는 추가적인 정보가 필요합니다."
     user_type_button: "계정 유형 업데이트"
     user_type_label: "계정 유형"
     user_type_student: "student"
@@ -200,6 +204,9 @@ ko:
     parent_account_checkbox: "본인은 자녀를 대신하여 가입하는 학부모/보호자입니다."
     parent_account_email_progress_permission: "귀 자녀의 진도와 프로젝트 및 과정과 컴퓨터 과학에 대한 업데이트를 종종 이메일로 알려드려도 되겠습니까? [(당사 개인정보 보호정책 참조)](%{privacy_policy_url})"
     parent_account_email_label: "학부모/보호자 이메일"
+    us_state: '주'
+    us_state_dropdown_options:
+      other: "이 목록에 없는 곳에 살고 있습니다"
   school_info:
     title: '학교 정보(선택사항)'
     school_country: '학교 국가'
@@ -229,7 +236,7 @@ ko:
     remember: '아이디 기억하기'
     submit: '로그인'
   signin:
-    try_heading: '가입하지 않고 코딩을 해보시겠습니까?'
+    try_heading: '로그인 없이 코딩을 시도해보고 싶나요?'
     try_hoc: '1시간짜리 Hour of Code 해보기'
     try_20hours: '20시간짜리 컴퓨터과학(CS, 정보과학) 소개 과정 해보기'
   signinsection:
@@ -268,6 +275,7 @@ ko:
   parent_mailer:
     student_associated_subject: 'Code.org 로그인 정보'
     parent_email_added_subject: 'Code.org에 오신 것을 환영합니다!'
+    parent_permission_request_subject: "아이가 Code.org에 접속하기 위해선 보호자의 동의가 필요합니다."
   teacher_mailer:
     new_teacher_subject: 'Code.org에 오신 것을 환영합니다!'
     delete_teacher_subject: 'Code.org 알림: 계정이 삭제되었습니다'
@@ -420,10 +428,10 @@ ko:
       minecraft_codebuilder: '마인크래프트: 코드 연결'
       minecraft_designer: '마인크래프트'
       minecraft_hero: '마인크래프트 히어로'
-      playlab: 'Play Lab'
+      playlab: '플레이 랩'
       playlab_k1: '플레이 랩 (프리 리더)'
       poetry: '시'
-      poetry_hoc: '시학'
+      poetry_hoc: '나만의 시'
       scratch: '스크래치'
       sports: '스포츠'
       spritelab: '스프라이트 연구소'
@@ -583,12 +591,12 @@ ko:
   footer:
     thank_you: '우리는 Code Studio를 만드는데 도움을 주신 <a href="https://code.org/about/donors"> 기증자</a>, <a href="https://code.org/about/partners"> 파트너</a>, <a href="https://code.org/about/team"> 확장된 팀</a>, 비디오 캐스트 및 <a href="https://code.org/about/advisors"> 교육 고문</a> 들의 지원에 감사 드립니다.'
     help_from_html: '특히 이 자료를 만드는 데 도움을 준 구글, 마이크로 소프트, 페이스북, 트위터의 엔지니어들을 칭찬하고 싶습니다.'
-    help_from_html_old: '구글, 마이크로 소프트, 페이스북, 트위터의 엔지니어들이 이 자료들을 만드는데 도움을 주었습니다.'
+    help_from_html_old: '아마존, 구글, 마이크로소프트의 엔지니어들이 이 자료 제작에 도움을 주었습니다.'
     art_from_html: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     code_from_html: 'Code.org p5.play, <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html"> GNU LGPL 2.1</a> 아래에 라이센스를 사용 합니다.'
     powered_by_aws: 'Amazon Web Services 및 “Powered by AWS” 로고는 Amazon.com, Inc. 또는 미국 및/또는 다른 국가 내 그 계열회사의 상표입니다.'
-    built_on_github: '마이크로소프트의 GitHub 위에 구축'
+    built_on_github: '마이크로소프트의 GitHub에 구축'
     google_copyright: '&copy; Google Inc. 허가에 의해 사용. 구글 클래스룸은 Google Inc.의 상표입니다.'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
     copyright: '저작권'
@@ -620,13 +628,13 @@ ko:
     direction: '시작 안내(학년 기준)'
   video:
     tab: '소개 동영상.'
-    notes: '소개 프레젠테이션.'
+    notes: '영상이 없다면? 대본 보기'
     notes_coming_soon: '참고 동영상 준비중'
     autoplay_option: '비디오 자동 실행'
     download: '동영상 다운로드'
-    show_notes: '참고 보기'
+    show_notes: '노트 보기'
     show_video: '동영상 보기'
-    label: '비디오'
+    label: '동영상'
   compatibility:
     upgrade:
       unsupported_message: "브라우저가 지원되지 않습니다. [지원 되는 브라우저 중 하나](%{supported_browsers_url})로 업그레이드하시기 바랍니다. 페이지 보기를 시도할 수는 있지만 제대로 기능하지 않을 수도 있습니다."
@@ -716,7 +724,7 @@ ko:
       title: "마인크래프트"
       body: "Minecraft 게임을 만들어보세요. 자신만의 닭, 양, 크리퍼, 좀비 등을 만들어보세요."
     poem-art:
-      title: '시학'
+      title: '나만의 시'
       body: '자신을 표현해보세요! 코드를 사용해 움직이는 시를 만드세요.'
     sports:
       title: "스포츠"
@@ -816,7 +824,7 @@ ko:
     ok: "확인"
     startover_title: "정말 다시 시작하겠습니까?"
     startover_body: "퍼즐을 시작 상태로 되돌리고, 당신이 추가하거나 변경한 데이터를 모두 초기화 합니다."
-    startover_ok: "다시 시작하기"
+    startover_ok: "다시 시작"
     startover_cancel: "취소"
   time:
     hour: '1 시간'
@@ -999,7 +1007,7 @@ ko:
     windows: '윈도우즈 (64비트)'
     mac: '맥 OS X'
   locked_stage: '이 단계가 현재 잠겨있기 때문에 이 단계의 해당 컨텐츠가 보이지 않습니다. 교사는 작업이 필요하거나 학생의 답을 검토해야 할 때 잠금을 해제할 수 있습니다.'
-  hidden_stage: "여러분의 선생님은 여러분이 여기에 있는 걸 예상하지 못했습니다. 선생님에게 어느 레슨을 들어야 하는지 교사에게 물어보세요."
+  hidden_stage: "이 수업을 수강하는 것을 담당교사는 모릅니다. 어떤 수업을 수강해야 하는지 담당교사에게 문의하세요"
   hidden_script: "여러분의 선생님은 여러분이 여기에 있는 걸 예상하지 못했습니다. 선생님에게 어느 단원을 들어야 하는지 물어 보세요."
   no_course_access_student: "이 과정에 들어 올 수 없습니다. 선생님에게 어느 과정을 들어야 하는지 물어 보세요."
   no_course_access_teacher: "이 과정에 들어 올 수 없습니다. 이 과정에 들어 올 수 있다고 믿으면, support@code.org에 편지를 써서 이 상황을 해결할 수 있게 해주세요. "
@@ -1108,6 +1116,7 @@ ko:
         csf_express: 'CS 기초 (프리 익스프레스 또는 익스프레스)'
         csd: 'CS 발견'
         csp: 'CS 원리'
+        other: '기타'
         not_applicable: "해당사항 없음"
       email_opt_in:
         opt_in_yes: '예'
@@ -1129,6 +1138,13 @@ ko:
     no_teacher_email:
       body_markdown: '계정에 이메일 주소가 없습니다. 이 양식을 작성하기 전 [계정 설정에 방문](%{user_registration})하여 이메일 주소를 추가하세요.'
   courses_category: '전 과정'
+  course_offering:
+    headers:
+      minecraft: '마인크래프트'
+      hello_world: '헬로우 월드'
+      sports: '스포츠'
+      csf: 'CS 기초'
+      csc: 'CS 커넥션'
   cookie_banner:
     message: '사이트를 계속 들러 보거나 또는 "동의함"에 클릭하여, 컴퓨터 또는 기기 상에 쿠키 저장을 동의하세요.'
     more_information: "Code.org의 개인정보 보호정책 참조."

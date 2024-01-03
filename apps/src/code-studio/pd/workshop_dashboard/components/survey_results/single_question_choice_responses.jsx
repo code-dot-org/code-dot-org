@@ -12,7 +12,7 @@ export default class SingleQuestionChoiceResponses extends React.Component {
     question: PropTypes.object.isRequired,
     section: PropTypes.string.isRequired,
     questionId: PropTypes.string.isRequired,
-    facilitators: PropTypes.object
+    facilitators: PropTypes.object,
   };
 
   render() {
@@ -23,7 +23,7 @@ export default class SingleQuestionChoiceResponses extends React.Component {
     // Make a copy of the answers without the num_respondents and other_answers fields.
     const filteredAnswers = _.omit(answer, [
       'num_respondents',
-      'other_answers'
+      'other_answers',
     ]);
     let possibleAnswersMap = question['choices'];
 

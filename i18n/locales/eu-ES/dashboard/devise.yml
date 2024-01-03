@@ -50,9 +50,6 @@ eu:
       expired: "iraungi da; mesedez, eskatu berri bat"
       not_found: "ez da aurkitu"
       not_locked: "ez zegoen blokeatuta"
-      not_saved:
-        one: "Errore batek %{resource} hau gordetzea ekidin du:"
-        other: "%{count} errorek %{resource} hau gordetzea ekidin dute:\n:"
     invitations:
       send_instructions: 'Gonbidapen emaila bidali zaio %{email}-ri.'
       invitation_token_invalid: 'Emandako gonbidapen ikurra ez da baliagarria!'

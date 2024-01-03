@@ -28,20 +28,20 @@ const PrincipalApprovalApplication = props => {
     americanIndian:
       props.teacherApplicationSchoolStats
         .american_indian_alaskan_native_percent,
-    other: props.teacherApplicationSchoolStats.two_or_more_races_percent
+    other: props.teacherApplicationSchoolStats.two_or_more_races_percent,
   });
 
   const pageComponents = [PrincipalApprovalComponent];
 
   const getPageProps = () => {
     return {
-      teacherApplication: props.teacherApplication
+      teacherApplication: props.teacherApplication,
     };
   };
 
   const serializeApplicationId = () => {
     return {
-      application_guid: props.teacherApplication.application_guid
+      application_guid: props.teacherApplication.application_guid,
     };
   };
 
@@ -49,7 +49,7 @@ const PrincipalApprovalApplication = props => {
     analyticsReporter.sendEvent(EVENTS.ADMIN_APPROVAL_RECEIVED_EVENT);
     analyticsReporter.sendEvent(EVENTS.APP_STATUS_CHANGE_EVENT, {
       'application id': props.teacherApplication.id,
-      'application status': 'unreviewed'
+      'application status': 'unreviewed',
     });
     window.location.reload(true);
   };
@@ -82,7 +82,7 @@ PrincipalApprovalApplication.propTypes = {
     principal_role: PropTypes.string,
     principal_email: PropTypes.string.isRequired,
     school_id: PropTypes.string,
-    school_zip_code: PropTypes.string
+    school_zip_code: PropTypes.string,
   }).isRequired,
   teacherApplicationSchoolStats: PropTypes.shape({
     students_total: PropTypes.string,
@@ -93,7 +93,7 @@ PrincipalApprovalApplication.propTypes = {
     asian_percent: PropTypes.string,
     native_hawaiian_or_pacific_islander_percent: PropTypes.string,
     american_indian_alaskan_native_percent: PropTypes.string,
-    two_or_more_races_percent: PropTypes.string
-  }).isRequired
+    two_or_more_races_percent: PropTypes.string,
+  }).isRequired,
 };
 export default PrincipalApprovalApplication;

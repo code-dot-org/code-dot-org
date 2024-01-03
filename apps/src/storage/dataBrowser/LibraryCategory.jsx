@@ -11,11 +11,11 @@ class LibraryCategory extends React.Component {
     datasets: PropTypes.arrayOf(PropTypes.string).isRequired,
     description: PropTypes.string,
     importTable: PropTypes.func.isRequired,
-    forceExpanded: PropTypes.bool
+    forceExpanded: PropTypes.bool,
   };
 
   state = {
-    collapsed: true
+    collapsed: true,
   };
 
   UNSAFE_componentWillReceiveProps(newProps) {
@@ -29,7 +29,7 @@ class LibraryCategory extends React.Component {
 
   toggleCollapsed = () =>
     this.setState({
-      collapsed: !this.state.collapsed
+      collapsed: !this.state.collapsed,
     });
 
   render() {

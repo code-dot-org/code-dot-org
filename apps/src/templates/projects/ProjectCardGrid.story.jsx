@@ -14,9 +14,9 @@ const defaultProject = {
     name: 'Puppy Playdate',
     type: 'applab',
     publishedAt: '2016-10-31T23:59:59.999-08:00',
-    publishedToPublic: true
+    publishedToPublic: true,
   },
-  currentGallery: 'public'
+  currentGallery: 'public',
 };
 
 let nextChannelId = 0;
@@ -27,8 +27,8 @@ function generateFakeProject(overrideData) {
     projectData: {
       ...defaultProject.projectData,
       channel: `${defaultProject.projectData.channel}_${nextChannelId++}`,
-      ...overrideData
-    }
+      ...overrideData,
+    },
   };
 }
 
@@ -42,7 +42,7 @@ function generateFakePublicProjectsWithStudentInfo() {
         name: type,
         publishedAt: new Date(date.getTime() - i * 60 * 1000).toISOString(),
         studentName: 'Penelope',
-        studentAgeRange: '13+'
+        studentAgeRange: '13+',
       })
     );
   });
@@ -57,7 +57,7 @@ function generateFakePublicProjectsWithoutStudentInfo() {
       generateFakeProject({
         type: type,
         name: type,
-        publishedAt: new Date(date.getTime() - i * 60 * 1000).toISOString()
+        publishedAt: new Date(date.getTime() - i * 60 * 1000).toISOString(),
       })
     );
   });
@@ -72,19 +72,19 @@ function generateFakePersonalProjects() {
       name: 'Personal ' + i,
       updatedAt: new Date(date.getTime() - i * 60 * 1000).toISOString(),
       studentName: 'Penelope',
-      studentAgeRange: '8+'
+      studentAgeRange: '8+',
     })
   );
   return personalProjects;
 }
 
-const createProjectsStore = function(galleryType) {
+const createProjectsStore = function (galleryType) {
   return reduxStore({projects}, {projects: {selectedGallery: galleryType}});
 };
 
 export default {
   title: 'ProjectCardGrid',
-  component: ProjectCardGrid
+  component: ProjectCardGrid,
 };
 
 const Template = args => (
@@ -100,19 +100,19 @@ export const PublicGalleryWithStudentInfo = Template.bind({});
 PublicGalleryWithStudentInfo.args = {
   selectedGallery: Galleries.PUBLIC,
   projectLists: generateFakePublicProjectsWithStudentInfo(),
-  galleryType: 'public'
+  galleryType: 'public',
 };
 
 export const PublicGalleryWithoutStudentInfo = Template.bind({});
 PublicGalleryWithoutStudentInfo.args = {
   selectedGallery: Galleries.PUBLIC,
   projectLists: generateFakePublicProjectsWithoutStudentInfo(),
-  galleryType: 'public'
+  galleryType: 'public',
 };
 
 export const PersonalGallery = Template.bind({});
 PersonalGallery.args = {
   selectedGallery: Galleries.PUBLIC,
   projectLists: generateFakePersonalProjects(),
-  galleryType: 'personal'
+  galleryType: 'personal',
 };

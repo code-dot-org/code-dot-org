@@ -4,40 +4,40 @@ title: Press Kit
 
 {{ signup_button }}
 
-# How to attract media to your Hour of Code event
+# Dasturlash soati tadbiriga ommaviy axborot vositalarini qanday jalb qilish mumkin
 
-### Make a splash with your Hour of Code event and invite local media to see why computer science is important at your school.
+### “Dasturlash soati” tadbiringiz bilan diqqatni jalb qiling va maktabingizda kompyuter fanlari nima uchun muhimligini ko'rsatish uchun mahalliy ommaviy axborot vositalarini taklif qiling.
 
-*For all press and media inquiries, contact <press@code.org>*
+*Matbuot va ommaviy axborot vositalariga oid barcha savollar uchun <press@code.org> bilan bog‘laning.*
 
 * * *
 
-## Key Tips
+## Asosiy maslahatlar
 
-- Reach out to media two weeks before your event via email. Follow up by email and phone if you don't receive an initial response.
-- Ask a school staff member or volunteer to take photos to share online or send to press.
-- Write about the Hour of Code on your website’s homepage and in your school newspaper. Post your event details, and pictures of student activities.
-- On Facebook and Twitter, share updates on your plans, announce your events, and post pictures during {{ campaign_date/year }}. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
+- Tadbiringizdan ikki hafta oldin elektron pochta orqali ommaviy axborot vositalari bilan bog'laning. Agar dastlabki javobni olmasangiz, elektron pochta va telefon orqali murojaat qiling.
+- Maktab xodimi yoki ko'ngillidan Internetda baham ko'rish yoki matbuotga yuborish uchun suratga olishini so'rang.
+- Dasturlash soati haqida veb-saytingizning bosh sahifasida va maktab gazetangizda maqola yozing. Tadbir tafsilotlarini va o'quvchilar faoliyatining rasmlarini joylashtiring.
+- Facebook va Twitter’da rejalaringiz haqidagi yangiliklarni baham ko‘ring, tadbirlaringizni e’lon qiling va {{ campaign_date/year }} davomidagi rasmlarni joylang. Code.org tadbirlaringizni koʻrishi va targʻib qila olishi uchun **#HourOfCode** xeshtegidan foydalaning.
 
-## Step-by-step guide
+## Bosqichma-bosqich yo'riqnoma
 
-### 1. Plan your event
+### 1. Tadbiringizni rejalashtiring
 
-- Plan an assembly to kick off the Hour of Code.
-- Send [a letter]({{ promote/sample_emails }}) to parents and ask them to spread the word.
-- Send [a letter]({{ promote/sample_emails }}) to invite your local mayor, member of Congress, governor, or influential businessperson to attend and speak to your students.
-- Organize group activities (like a demonstration of an ‘unplugged’ programming activity), or show off student-created and led activities.
-- Show Code.org’s [Hour of Code video]({{ urls/home }}) or one of [these videos]({{ promote/videos }}) to inspire students. <br />
+- Dasturlash soatini boshlash uchun yig'ilishni rejalashtiring.
+- Ota-onalarga [maktub]({{ promote/sample_emails }}) yuboring va ulardan ushbu xabarni tarqatishlarini so‘rang.
+- Mahalliy hokim, Kongress aʼzosi, gubernator yoki nufuzli tadbirkorni o'quvchilaringiz bilan suhbatlashishga taklif qilish uchun [xat]({{ promote/sample_emails }}) yuboring.
+- Guruh faoliyatlarini tashkil qiling (masalan, “kompyutersiz (oflayn) dasturlash faoliyatini namoyish qilish) yoki o'quvchilar tomonidan yaratilgan va boshqariladigan faoliyatni namoyish qiling.
+- Code.org-ning [Dasturlash soati videosini]({{ urls/home }}) yoki [ushbu videolardan]({{ promote/videos }}) birini o'quvchilarni ilhomlantirish uchun ko‘rsating. <br />
 
-### 2. Identify specific reporters that cover education or local events
+### 2. Ta'lim yoki mahalliy voqealarni yorituvchi maxsus muxbirlarni aniqlang
 
-Like local newspapers, TV station or radio stations, or blogs. <br />
+Mahalliy gazetalar, telekanallar yoki radiostansiyalar yoki bloglar kabi.<br />
 
-### 3. Contact local media
+### 3. Mahalliy ommaviy axborot vositalari bilan bog'laning
 
-The best way to reach out is by email. It should be short and should communicate "why should other people care about this event"? Include contact information (including a cellphone number) for who will be on site at the event. **[See a sample pitch to media]({{ promote/press-kit-emails }})**.
+Elektron pochta orqali bog'lanish eng yaxshi usul. U qisqa bo'lishi kerakmi va "nega boshqa odamlar bu tadbirga ahamiyat ko'rsatishi kerak" degan savolni qo'yichi kerak? Tadbirda kimlar bo'lishi haqida aloqa ma'lumotlarini (shu jumladan mobil telefon raqamini) ham qo'shing. **[OAV uchun taklif namunasini ko‘rish]({{promoting/press-kit-emails }})**.
 
-Look online to find reporter contact information. If you can't find it, call the publication to ask, or email the organization's general email address and ask for your message to be directed to the correct reporter. <br />
+Muxbirning aloqa uchun ma'lumotlarini topish uchun veb -saytdan qidiring. If you can't find it, call the publication to ask, or email the organization's general email address and ask for your message to be directed to the correct reporter. <br />
 
 ### 4. Prepare to field questions about your school event. Here are some examples:
 

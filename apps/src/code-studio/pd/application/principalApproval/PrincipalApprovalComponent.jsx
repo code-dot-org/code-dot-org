@@ -1,15 +1,15 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import {FormGroup, Row, Col, ControlLabel} from 'react-bootstrap';
+import {FormGroup, Row, Col, ControlLabel} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {
   PageLabels,
-  TextFields
+  TextFields,
 } from '@cdo/apps/generated/pd/principalApprovalApplicationConstants';
 import {TextLink} from '@dsco_/link';
 import {Year} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import {
   FormContext,
-  getValidationState
+  getValidationState,
 } from '../../form_components_func/FormComponent';
 import PrivacyDialog from '../PrivacyDialog';
 import {PrivacyDialogMode} from '../../constants';
@@ -18,13 +18,13 @@ import {isInt, isPercent, isZipCode} from '@cdo/apps/util/formatValidation';
 import {styles} from '../teacher/TeacherApplicationConstants';
 import {
   LabeledInput,
-  LabeledNumberInput
+  LabeledNumberInput,
 } from '../../form_components_func/labeled/LabeledInput';
 import {LabeledSelect} from '../../form_components_func/labeled/LabeledSelect';
 import {LabeledSingleCheckbox} from '../../form_components_func/labeled/LabeledSingleCheckbox';
 import {
   LabeledRadioButtons,
-  LabeledRadioButtonsWithAdditionalTextFields
+  LabeledRadioButtonsWithAdditionalTextFields,
 } from '../../form_components_func/labeled/LabeledRadioButtons';
 import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
 import {useRegionalPartner} from '../../components/useRegionalPartner';
@@ -37,7 +37,7 @@ const MANUAL_SCHOOL_FIELDS = [
   'schoolCity',
   'schoolState',
   'schoolZipCode',
-  'schoolType'
+  'schoolType',
 ];
 const RACE_LIST = [
   'white',
@@ -46,17 +46,13 @@ const RACE_LIST = [
   'asian',
   'pacificIslander',
   'americanIndian',
-  'other'
+  'other',
 ];
 const REQUIRED_SCHOOL_INFO_FIELDS = [
   'school',
   'totalStudentEnrollment',
   'freeLunchPercent',
   ...RACE_LIST,
-  'committedToMasterSchedule',
-  'replaceCourse',
-  'understandFee',
-  'payFee'
 ];
 // Since the rails model allows empty principal approvals as placeholders, we require these fields here
 const ALWAYS_REQUIRED_FIELDS = [
@@ -65,12 +61,12 @@ const ALWAYS_REQUIRED_FIELDS = [
   'lastName',
   'email',
   'canEmailYou',
-  'confirmPrincipal'
+  'confirmPrincipal',
 ];
 const COURSE_SUFFIXES = {
   'Computer Science Discoveries': 'csd',
   'Computer Science Principles': 'csp',
-  'Computer Science A': 'csa'
+  'Computer Science A': 'csa',
 };
 
 const PrincipalApprovalComponent = props => {
@@ -80,7 +76,7 @@ const PrincipalApprovalComponent = props => {
     program: teacherApplication.course,
     school: teacherApplication.school_id,
     schoolZipCode: teacherApplication.school_zip_code,
-    schoolState: teacherApplication.school_state
+    schoolState: teacherApplication.school_state,
   });
 
   const handleSchoolChange = selectedSchool => {
@@ -146,14 +142,6 @@ const PrincipalApprovalComponent = props => {
   };
 
   const renderSchoolInfoSection = () => {
-    let showPayFeeNote =
-      data.committedToMasterSchedule &&
-      !data.committedToMasterSchedule.includes(
-        `Yes, I plan to include this course in the ${Year} master schedule`
-      ) &&
-      data.payFee &&
-      data.payFee.includes('No, ');
-
     return (
       <div>
         {renderSchoolSection()}
@@ -181,60 +169,6 @@ const PrincipalApprovalComponent = props => {
             />
           );
         })}
-        <LabeledRadioButtonsWithAdditionalTextFields
-          name="committedToMasterSchedule"
-          textFieldMap={{
-            [TextFields.otherWithText]: 'other'
-          }}
-          label={`Are you committed to including ${
-            teacherApplication.course
-          } on the master schedule in ${Year} if ${
-            teacherApplication.name
-          } is accepted into the program? Note: the program may be listed under a different course name as determined by your district.`}
-        />
-        <LabeledRadioButtonsWithAdditionalTextFields
-          name="replaceCourse"
-          textFieldMap={{
-            [TextFields.dontKnowExplain]: 'other'
-          }}
-        />
-
-        <p style={styles.questionText}>
-          {regionalPartner ? regionalPartner.name : 'Your regional partner'} may
-          have scholarships available to cover some or all costs associated with
-          the program.{' '}
-          <a
-            href={
-              'https://code.org/educate/professional-learning/program-information' +
-              (!!data.schoolZipCode ? '?zip=' + data.schoolZipCode : '')
-            }
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Click here to check the fees and discounts for your program
-          </a>
-          . Let us know if your school would be able to pay the fee or if you
-          need to be considered for a scholarship.
-        </p>
-        <div>
-          <LabeledSingleCheckbox name="understandFee" />
-          <LabeledRadioButtons name="payFee" />
-          {showPayFeeNote && (
-            <div>
-              <p style={styles.red}>
-                Note: To be eligible for scholarship support, your school must
-                commit to including this course in the {Year} master schedule.
-                If you are able to commit to offering this course in {Year} ,
-                please update your answer above before submitting in order to
-                retain scholarship eligibility.
-              </p>
-              <br />
-            </div>
-          )}
-
-          <LabeledInput name="contactInvoicing" required={false} />
-          <LabeledInput name="contactInvoicingDetail" required={false} />
-        </div>
         {teacherApplication.course === 'Computer Science Principles' && (
           <div>
             <p style={styles.questionText}>
@@ -295,7 +229,7 @@ const PrincipalApprovalComponent = props => {
             {regionalPartner ? `, ${regionalPartner.name}` : ''}. Participating
             teachers are asked to commit to Code.org’s year long Professional
             Learning Program starting in the summer and concluding the following
-            spring/summer. Workshops can either be held in-person, virtually, or
+            spring/summer. Workshops can be held in-person, virtually, or
             combination of both throughout the Year.
           </p>
           <p>
@@ -307,7 +241,7 @@ const PrincipalApprovalComponent = props => {
           <p>
             Please note that we are not able to consider the teacher for
             acceptance into the Professional Learning Program until you have
-            submitted this approval form.
+            submitted this form.
           </p>
           <LabeledSelect
             name="title"
@@ -334,7 +268,7 @@ const PrincipalApprovalComponent = props => {
           <LabeledRadioButtonsWithAdditionalTextFields
             name="doYouApprove"
             textFieldMap={{
-              [TextFields.otherWithText]: 'other'
+              [TextFields.otherWithText]: 'other',
             }}
             label={`Do you approve of ${teacherApplication.name} participating
                   in Code.org's ${Year} Professional Learning Program${
@@ -373,15 +307,12 @@ PrincipalApprovalComponent.propTypes = {
   errorMessages: PropTypes.object.isRequired,
   data: PropTypes.object.isRequired,
   onChange: PropTypes.func.isRequired,
-  teacherApplication: PropTypes.object.isRequired
+  teacherApplication: PropTypes.object.isRequired,
 };
 
 PrincipalApprovalComponent.associatedFields = [
   ...Object.keys(PageLabels),
   'doYouApprove',
-  'committedToMasterSchedule',
-  'contactInvoicing',
-  'contactInvoicingDetail'
 ];
 
 PrincipalApprovalComponent.getDynamicallyRequiredFields = data => {
@@ -427,7 +358,7 @@ PrincipalApprovalComponent.getErrorMessages = data => {
 
   if (Object.keys(formatErrors).length > 0) {
     analyticsReporter.sendEvent(EVENTS.ADMIN_APPROVAL_RECEIVED_EVENT, {
-      'error messages': JSON.stringify(formatErrors)
+      'error messages': JSON.stringify(formatErrors),
     });
   }
 
@@ -469,7 +400,7 @@ export {
   ALWAYS_REQUIRED_FIELDS,
   MANUAL_SCHOOL_FIELDS,
   REQUIRED_SCHOOL_INFO_FIELDS,
-  RACE_LIST
+  RACE_LIST,
 };
 
 export default PrincipalApprovalComponent;

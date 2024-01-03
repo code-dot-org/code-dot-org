@@ -72,7 +72,7 @@ class PardotV2Test < Minitest::Test
 
     # Eagerly send a batch-create request
     pardot_writer = PardotV2.new
-    submitted, errors = pardot_writer.batch_create_prospects contact[:email], contact[:data], true
+    submitted, errors = pardot_writer.batch_create_prospects(contact[:email], contact[:data], eager_submit: true)
 
     expected_submissions = [{email: contact[:email], db_Opt_In: 'Yes'}]
     assert_equal expected_submissions, submitted
@@ -136,7 +136,7 @@ class PardotV2Test < Minitest::Test
     # Eagerly submit an update request
     submissions, errors = pardot_writer.batch_update_prospects(
       *contact.values_at(:email, :pardot_id, :old_prospect_data, :new_contact_data),
-      true
+      eager_submit: true
     )
 
     expected_submissions = [
@@ -487,11 +487,9 @@ class PardotV2Test < Minitest::Test
     assert PardotV2.delete_prospects_by_email(email)
   end
 
-  private
-
   # @param str a heredoc string
   # @return Nokogiri::XML::Document
-  def create_xml_from_heredoc(str)
+  private def create_xml_from_heredoc(str)
     # Trims whitespaces at the beginning and end of each line, and delete newline characters
     # in the input before parsing. Otherwise they will pollute XML document result.
     cleaned_str = str.strip.gsub(/\s*\n\s*/, '')

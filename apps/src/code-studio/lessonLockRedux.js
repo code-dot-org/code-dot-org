@@ -9,7 +9,7 @@ import {makeEnum} from '@cdo/apps/utils';
 
 import {
   NO_SECTION,
-  SELECT_SECTION
+  SELECT_SECTION,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 export const LockStatus = makeEnum('Locked', 'Editable', 'ReadonlyAnswers');
@@ -32,7 +32,7 @@ const initialState = {
   saving: false,
   // whether user is allowed to see lockable lessons
   lockableAuthorized: null,
-  lockableAuthorizedLoaded: false
+  lockableAuthorizedLoaded: false,
 };
 
 /**
@@ -42,7 +42,7 @@ export default function reducer(state = initialState, action) {
   if (action.type === AUTHORIZE_LOCKABLE) {
     return Object.assign({}, state, {
       lockableAuthorized: action.isAuthorized,
-      lockableAuthorizedLoaded: true
+      lockableAuthorizedLoaded: true,
     });
   }
 
@@ -53,7 +53,7 @@ export default function reducer(state = initialState, action) {
         action.sections,
         section => section.lessons
       ),
-      lessonsBySectionIdLoaded: true
+      lessonsBySectionIdLoaded: true,
     };
   }
 
@@ -73,13 +73,13 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         lessonsBySectionId,
-        lockStatus
+        lockStatus,
       };
     }
 
     return {
       ...state,
-      lessonsBySectionId
+      lessonsBySectionId,
     };
   }
 
@@ -95,7 +95,7 @@ export default function reducer(state = initialState, action) {
     if (sectionId === NO_SECTION) {
       return {
         ...state,
-        lockStatus: initialState.lockStatus
+        lockStatus: initialState.lockStatus,
       };
     }
     if (!state.lessonsBySectionId[sectionId]) {
@@ -110,7 +110,7 @@ export default function reducer(state = initialState, action) {
         lockStatus: lockStatusForLesson(
           state.lessonsBySectionId[sectionId],
           lockDialogLessonId
-        )
+        ),
       };
     }
   }
@@ -122,20 +122,20 @@ export default function reducer(state = initialState, action) {
       lockStatus: lockStatusForLesson(
         state.lessonsBySectionId[sectionId],
         lessonId
-      )
+      ),
     });
   }
 
   if (action.type === CLOSE_LOCK_DIALOG) {
     return Object.assign({}, state, {
       lockDialogLessonId: null,
-      lockStatus: initialState.lockStatus
+      lockStatus: initialState.lockStatus,
     });
   }
 
   if (action.type === BEGIN_SAVE) {
     return Object.assign({}, state, {
-      saving: true
+      saving: true,
     });
   }
 
@@ -161,7 +161,7 @@ export default function reducer(state = initialState, action) {
     nextState.lessonsBySectionId[sectionId][lessonId] = nextLesson;
     return Object.assign(nextState, {
       lockStatus: nextLockStatus,
-      saving: false
+      saving: false,
     });
   }
 
@@ -175,13 +175,13 @@ export default function reducer(state = initialState, action) {
  */
 export const authorizeLockable = isAuthorized => ({
   type: AUTHORIZE_LOCKABLE,
-  isAuthorized
+  isAuthorized,
 });
 
 export const openLockDialog = (sectionId, lessonId) => ({
   type: OPEN_LOCK_DIALOG,
   sectionId,
-  lessonId
+  lessonId,
 });
 
 export const beginSave = () => ({type: BEGIN_SAVE});
@@ -189,7 +189,7 @@ export const finishSave = (sectionId, lessonId, newLockStatus) => ({
   type: FINISH_SAVE,
   sectionId,
   lessonId,
-  lockStatus: newLockStatus
+  lockStatus: newLockStatus,
 });
 
 /**
@@ -208,7 +208,7 @@ const performSave = (sectionId, lessonId, newLockStatus, onComplete) => {
       .map(item => ({
         user_level_data: item.userLevelData,
         locked: item.lockStatus === LockStatus.Locked,
-        readonly_answers: item.lockStatus === LockStatus.ReadonlyAnswers
+        readonly_answers: item.lockStatus === LockStatus.ReadonlyAnswers,
       }));
 
     if (saveData.length === 0) {
@@ -222,7 +222,7 @@ const performSave = (sectionId, lessonId, newLockStatus, onComplete) => {
       url: '/api/lock_status',
       dataType: 'json',
       contentType: 'application/json',
-      data: JSON.stringify({updates: saveData})
+      data: JSON.stringify({updates: saveData}),
     })
       .done(() => {
         dispatch(finishSave(sectionId, lessonId, newLockStatus));
@@ -253,14 +253,14 @@ export const lockLesson = (sectionId, lessonId) => {
     const oldLockStatus = lockStatusForLesson(section, lessonId);
     const newLockStatus = oldLockStatus.map(student => ({
       ...student,
-      lockStatus: LockStatus.Locked
+      lockStatus: LockStatus.Locked,
     }));
     dispatch(performSave(sectionId, lessonId, newLockStatus, () => {}));
   };
 };
 
 export const closeLockDialog = () => ({
-  type: CLOSE_LOCK_DIALOG
+  type: CLOSE_LOCK_DIALOG,
 });
 
 // Helpers
@@ -283,7 +283,7 @@ const lockStatusForLesson = (section, lessonId) => {
       ? LockStatus.Locked
       : student.readonly_answers
       ? LockStatus.ReadonlyAnswers
-      : LockStatus.Editable
+      : LockStatus.Editable,
   }));
 };
 
@@ -302,7 +302,7 @@ export const fullyLockedLessonMapping = section => {
     const fullyLocked = !students.some(student => !student.locked);
     return {
       ...obj,
-      [lessonId]: fullyLocked
+      [lessonId]: fullyLocked,
     };
   }, {});
 };
@@ -312,7 +312,7 @@ export const fullyLockedLessonMapping = section => {
  */
 export const setSectionLockStatus = sections => ({
   type: SET_SECTION_LOCK_STATUS,
-  sections
+  sections,
 });
 
 /**
@@ -321,13 +321,13 @@ export const setSectionLockStatus = sections => ({
 const refreshSectionLockStatus = (sections, sectionId) => ({
   type: REFRESH_SECTION_LOCK_STATUS,
   sections,
-  sectionId
+  sectionId,
 });
 
 export const refetchSectionLockStatus = (sectionId, scriptId) => {
   return dispatch => {
     $.ajax('/api/lock_status', {
-      data: {script_id: scriptId}
+      data: {script_id: scriptId},
     })
       .done(data => {
         dispatch(refreshSectionLockStatus(data, sectionId));

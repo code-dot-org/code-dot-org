@@ -1,2 +1,21 @@
 {
+  "addCSSButton": "CSS qo'shish",
+  "addHTMLButton": "HTML qo'shish",
+  "addImageButton": "Rasm qo'shish",
+  "closeFullscreenPreview": "To'liq ekranni oldindan ko'rishni yoping",
+  "currentProjectCapacity": "{currentMegabytes}MB dan {totalMegabytes}MB ishlatilgan",
+  "disallowedHtml": "“{filename}\" faylida ruxsat berilmagan HTML elementlari mavjud: `{disallowedTags}`. Ushbu dialog yopilganda ular o'chiriladi.",
+  "errorSavingProject": "Loyihangizni avtomatik saqlashda biror narsa ishlamadi. Internetga ulanishni tekshiring va qo'lda saqlashga harakat qiling. Agar ushbu muammo davom etsa, qayta boshlash uchun sahifani qayta yuklashga harakat qiling.",
+  "fatalError": "Halokatli xato: {message}. Agar siz shaxsiy ko'rish rejimida bo'lsangiz, ma'lumotlarni yozib bo'lmaydi.",
+  "loadFailure": "Kechirasiz, Web Lab negadir yuklay olmadi. Xato: {message}",
+  "openFullscreenPreview": "To'liq ekranni oldindan ko'rishni oching",
+  "refreshPreview": "Yangilang va saqlang",
+  "reloading": "Qayta yuklash...",
+  "reset": "Veb laboratoriyasini tiklash",
+  "resetComplete": "Veb laboratoriyasini tiklash tugallandi",
+  "resetFailure": "Web Laboratoriyani qayta tiklab bo'lmadi: {message}.",
+  "toggleInspectorOff": "Inspektor: yoqilgan",
+  "toggleInspectorOn": "Inspektor: O'chirilgan",
+  "troubleshootingSupport": "Qo'shimcha ma'lumot olish uchun bizning qo'llab -quvvatlash maqolamizga qarang [\"Veb -laboratoriya muammolarini bartaraf etish\"]({url}) .",
+  "uploadError": "Yuklash xatosi"
 }

@@ -1,6 +1,5 @@
 import tickWrapper from '../../util/tickWrapper';
 import {TestResults} from '@cdo/apps/constants';
-/* global Applab */
 
 /**
  * @param {!string} testName
@@ -17,20 +16,20 @@ function testAsyncProgram(testName, program, doneCondition, validator) {
     description: testName,
     editCode: true,
     xml: program,
-    runBeforeClick: function(assert) {
+    runBeforeClick: function (assert) {
       // add a completion on timeout since this is a freeplay level
       tickWrapper
         .tickAppUntil(Applab, doneCondition.bind(null, assert))
         .then(() => Applab.onPuzzleComplete());
     },
-    customValidator: function(assert) {
+    customValidator: function (assert) {
       validator(assert);
       return true;
     },
     expected: {
       result: true,
-      testResult: TestResults.FREE_PLAY
-    }
+      testResult: TestResults.FREE_PLAY,
+    },
   };
 }
 
@@ -115,6 +114,6 @@ module.exports = {
         assert.include(debugOutput, 'timedLoop 2');
         assert.notInclude(debugOutput, 'do not expect this');
       }
-    )
-  ]
+    ),
+  ],
 };

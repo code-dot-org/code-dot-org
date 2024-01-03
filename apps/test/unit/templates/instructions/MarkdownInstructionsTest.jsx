@@ -4,10 +4,10 @@ import {expect} from '../../../util/reconfiguredChai';
 import {setExternalGlobals} from '../../../util/testUtils';
 import MarkdownInstructions from '@cdo/apps/templates/instructions/MarkdownInstructions';
 
-describe('MarkdownInstructions', function() {
+describe('MarkdownInstructions', function () {
   before(setExternalGlobals);
 
-  it('standard case had top padding and no left margin', function() {
+  it('standard case had top padding and no left margin', function () {
     const wrapper = shallow(
       <MarkdownInstructions
         markdown="md"
@@ -26,7 +26,7 @@ describe('MarkdownInstructions', function() {
     expect(markdownElement.props().markdown).to.equal('md');
   });
 
-  it('inTopPane has no top padding', function() {
+  it('inTopPane has no top padding', function () {
     const wrapper = shallow(
       <MarkdownInstructions
         markdown="md"

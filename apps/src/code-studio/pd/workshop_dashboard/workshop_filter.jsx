@@ -16,6 +16,7 @@ import DatePicker from './components/date_picker';
 import {DATE_FORMAT} from './workshopConstants';
 import {PermissionPropType, WorkshopAdmin} from './permission';
 import moment from 'moment';
+/* eslint-disable no-restricted-imports */
 import {
   Grid,
   Row,
@@ -27,22 +28,23 @@ import {
   DropdownButton,
   Button,
   MenuItem,
-  Clearfix
+  Clearfix,
 } from 'react-bootstrap';
+/* eslint-enable no-restricted-imports */
 import {
   Courses,
   Subjects,
   LegacySubjects,
-  States
+  States,
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import RegionalPartnerDropdown, {
-  RegionalPartnerPropType
+  RegionalPartnerPropType,
 } from '../components/regional_partner_dropdown';
 
 const limitOptions = [
   {value: 25, text: 'first 25'},
   {value: 50, text: 'first 50'},
-  {value: null, text: 'all'}
+  {value: null, text: 'all'},
 ];
 
 const QUERY_API_URL = '/api/v1/pd/workshops/filter';
@@ -61,14 +63,16 @@ export class WorkshopFilter extends React.Component {
         subject: PropTypes.string,
         organizer_id: PropTypes.string,
         teacher_email: PropTypes.string,
-        only_attended: PropTypes.string
-      })
+        only_attended: PropTypes.string,
+        virtual: PropTypes.bool,
+        facilitator_id: PropTypes.number,
+      }),
     }),
-    showRegionalPartnerDropdown: PropTypes.bool
+    showRegionalPartnerDropdown: PropTypes.bool,
   };
 
   static contextTypes = {
-    router: PropTypes.object.isRequired
+    router: PropTypes.object.isRequired,
   };
 
   state = {
@@ -76,7 +80,7 @@ export class WorkshopFilter extends React.Component {
     facilitators: undefined,
     organizersLoading: true,
     organizers: undefined,
-    limit: limitOptions[0]
+    limit: limitOptions[0],
   };
 
   componentDidMount() {
@@ -90,12 +94,12 @@ export class WorkshopFilter extends React.Component {
     this.organizersLoadRequest = $.ajax({
       method: 'GET',
       url: '/api/v1/pd/workshop_organizers',
-      dataType: 'json'
+      dataType: 'json',
     })
       .done(data => {
         this.setState({
           organizersLoading: false,
-          organizers: data
+          organizers: data,
         });
       })
       .fail(data => {
@@ -114,12 +118,12 @@ export class WorkshopFilter extends React.Component {
     this.facilitatorsLoadRequest = $.ajax({
       method: 'GET',
       url: '/api/v1/pd/course_facilitators',
-      dataType: 'json'
+      dataType: 'json',
     })
       .done(data => {
         this.setState({
           facilitatorsLoading: false,
-          facilitators: data
+          facilitators: data,
         });
       })
       .fail(data => {
@@ -273,14 +277,14 @@ export class WorkshopFilter extends React.Component {
       organizer_id: urlParams.organizer_id,
       teacher_email: urlParams.teacher_email,
       only_attended: urlParams.only_attended,
-      regional_partner_id: this.props.regionalPartnerFilter.value
+      regional_partner_id: this.props.regionalPartnerFilter.value,
     });
   }
 
   getUrlParamsHash(newFilters = {}) {
     return this.omitEmptyValues({
       ...this.getFiltersFromUrlParams(),
-      ...newFilters
+      ...newFilters,
     });
   }
 
@@ -305,7 +309,7 @@ export class WorkshopFilter extends React.Component {
 
     return this.state.facilitators.map(facilitator => ({
       value: facilitator.id,
-      label: `${facilitator.name} (${facilitator.email})`
+      label: `${facilitator.name} (${facilitator.email})`,
     }));
   }
 
@@ -315,7 +319,7 @@ export class WorkshopFilter extends React.Component {
     }
     return this.state.organizers.map(organizer => ({
       value: organizer.id,
-      label: `${organizer.name} (${organizer.email})`
+      label: `${organizer.name} (${organizer.email})`,
     }));
   }
 
@@ -326,7 +330,7 @@ export class WorkshopFilter extends React.Component {
       course =>
         (result[course] = subjects[course].map(subject => ({
           value: subject,
-          label: prefix + subject
+          label: prefix + subject,
         })))
     );
 
@@ -353,7 +357,7 @@ export class WorkshopFilter extends React.Component {
     // limit is intentionally stored in state and not reflected in the URL
     const filters = {
       ...this.getFiltersFromUrlParams(),
-      limit: this.state.limit.value
+      limit: this.state.limit.value,
     };
 
     const startDate = this.parseDate(filters.start);
@@ -442,7 +446,7 @@ export class WorkshopFilter extends React.Component {
                   value={filters.virtual}
                   options={[
                     {value: 'no', label: 'No'},
-                    {value: 'yes', label: 'Yes'}
+                    {value: 'yes', label: 'Yes'},
                   ]}
                   onChange={this.handleVirtualChange}
                   placeholder={null}
@@ -536,5 +540,5 @@ export default connect(state => ({
   permission: state.workshopDashboard.permission,
   regionalPartnerFilter: state.regionalPartners.regionalPartnerFilter,
   showRegionalPartnerDropdown:
-    state.regionalPartners.regionalPartners.length > 1
+    state.regionalPartners.regionalPartners.length > 1,
 }))(WorkshopFilter);

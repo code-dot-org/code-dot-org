@@ -14,7 +14,7 @@ describe('EditableFeedbackStatus', () => {
     const today = new Date();
 
     const latestFeedback = {
-      student_seen_feedback: today
+      student_seen_feedback: today,
     };
 
     const wrapper = setUp(latestFeedback);
@@ -27,7 +27,7 @@ describe('EditableFeedbackStatus', () => {
     yesterday.setDate(yesterday.getDate() - 1);
 
     const latestFeedback = {
-      student_seen_feedback: yesterday
+      student_seen_feedback: yesterday,
     };
 
     const wrapper = setUp(latestFeedback);
@@ -40,7 +40,7 @@ describe('EditableFeedbackStatus', () => {
     twoDaysAgo.setDate(twoDaysAgo.getDate() - 2);
 
     const latestFeedback = {
-      student_seen_feedback: twoDaysAgo
+      student_seen_feedback: twoDaysAgo,
     };
 
     const wrapper = setUp(latestFeedback);
@@ -57,7 +57,7 @@ describe('EditableFeedbackStatus', () => {
 
     const latestFeedback = {
       created_at: yesterday,
-      student_last_updated: new Date()
+      student_last_updated: new Date(),
     };
 
     const wrapper = setUp(latestFeedback);

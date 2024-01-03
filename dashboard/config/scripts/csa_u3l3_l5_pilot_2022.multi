@@ -16,3 +16,5 @@ for (int i = 6; i > 0; i = i - 2) {
 }
 ```
 MARKDOWN
+
+allow_multiple_attempts true

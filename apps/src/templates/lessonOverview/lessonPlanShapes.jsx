@@ -15,7 +15,7 @@ export const levelShape = PropTypes.shape({
   conceptDifficulty: PropTypes.string,
   concepts: PropTypes.string,
   skin: PropTypes.string,
-  videoKey: PropTypes.string
+  videoKey: PropTypes.string,
 });
 
 export const scriptLevelShape = PropTypes.shape({
@@ -38,13 +38,13 @@ export const scriptLevelShape = PropTypes.shape({
   bonus: PropTypes.bool,
   assessment: PropTypes.bool,
   challenge: PropTypes.bool,
-  isViewingAsInstructorInTraining: PropTypes.bool
+  isViewingAsInstructorInTraining: PropTypes.bool,
 });
 
 export const tipShape = PropTypes.shape({
   key: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
-  markdown: PropTypes.string.isRequired
+  markdown: PropTypes.string.isRequired,
 });
 
 export const activitySectionShape = PropTypes.shape({
@@ -56,7 +56,7 @@ export const activitySectionShape = PropTypes.shape({
   progressionName: PropTypes.string,
   scriptLevels: PropTypes.arrayOf(scriptLevelShape).isRequired,
   text: PropTypes.string.isRequired,
-  tips: PropTypes.arrayOf(tipShape).isRequired
+  tips: PropTypes.arrayOf(tipShape).isRequired,
 });
 
 export const activityShape = PropTypes.shape({
@@ -65,7 +65,7 @@ export const activityShape = PropTypes.shape({
   position: PropTypes.number.isRequired,
   duration: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf([''])])
     .isRequired,
-  activitySections: PropTypes.arrayOf(activitySectionShape)
+  activitySections: PropTypes.arrayOf(activitySectionShape),
 });
 
 export const lessonShape = PropTypes.shape({
@@ -80,11 +80,11 @@ export const lessonShape = PropTypes.shape({
             key: PropTypes.string.isRequired,
             position: PropTypes.number.isRequired,
             displayName: PropTypes.string.isRequired,
-            link: PropTypes.string.isRequired
+            link: PropTypes.string.isRequired,
           })
-        ).isRequired
+        ).isRequired,
       })
-    ).isRequired
+    ).isRequired,
   }).isRequired,
   id: PropTypes.number.isRequired,
   position: PropTypes.number.isRequired,
@@ -100,7 +100,7 @@ export const lessonShape = PropTypes.shape({
   objectives: PropTypes.arrayOf(PropTypes.object).isRequired,
   assessmentOpportunities: PropTypes.string,
   lessonPlanPdfUrl: PropTypes.string,
-  courseVersionStandardsUrl: PropTypes.string
+  courseVersionStandardsUrl: PropTypes.string,
 });
 
 export const studentLessonShape = PropTypes.shape({
@@ -115,11 +115,11 @@ export const studentLessonShape = PropTypes.shape({
             key: PropTypes.string.isRequired,
             position: PropTypes.number.isRequired,
             displayName: PropTypes.string.isRequired,
-            link: PropTypes.string.isRequired
+            link: PropTypes.string.isRequired,
           })
-        ).isRequired
+        ).isRequired,
       })
-    ).isRequired
+    ).isRequired,
   }).isRequired,
   id: PropTypes.number.isRequired,
   position: PropTypes.number.isRequired,
@@ -129,7 +129,7 @@ export const studentLessonShape = PropTypes.shape({
   resources: PropTypes.arrayOf(PropTypes.object),
   vocabularies: PropTypes.arrayOf(PropTypes.object).isRequired,
   programmingExpressions: PropTypes.arrayOf(PropTypes.object).isRequired,
-  studentLessonPlanPdfUrl: PropTypes.string
+  studentLessonPlanPdfUrl: PropTypes.string,
 });
 
 export const navigationLessonShape = PropTypes.shape({
@@ -146,12 +146,12 @@ export const navigationLessonShape = PropTypes.shape({
             key: PropTypes.string.isRequired,
             position: PropTypes.number.isRequired,
             displayName: PropTypes.string.isRequired,
-            link: PropTypes.string.isRequired
+            link: PropTypes.string.isRequired,
           })
-        ).isRequired
+        ).isRequired,
       })
-    ).isRequired
-  }).isRequired
+    ).isRequired,
+  }).isRequired,
 });
 
 export const standardShape = PropTypes.shape({
@@ -161,5 +161,5 @@ export const standardShape = PropTypes.shape({
   categoryShortcode: PropTypes.string.isRequired,
   categoryDescription: PropTypes.string.isRequired,
   shortcode: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired
+  description: PropTypes.string.isRequired,
 });

@@ -52,7 +52,9 @@ tr:
         age: 'Yaş'
         gender: 'Cinsiyet'
         edit_header: 'Hesap Bilgilerini Düzenle'
+        ai_settings_header: 'Yapay Zeka Ayarları'
         finish_sign_up_header: 'Hesabınızı oluşturmayı bitirin'
+        finish_sign_up_header_error: 'Lütfen aşağıdaki hataları düzeltiniz:'
         finish_sign_up_subheader: ' <strong>%{email}</strong> için bir Code.org hesabı oluşturmayı tamamlamak için sıradaki bilgileri doldurunuz.'
         finish_sign_up_subheader_markdown: '**%{email}** için bir Code.org hesabı oluşturmayı tamamlamak için sıradaki bilgileri doldurunuz.'
         finish_sign_up_subheader_provider: '<strong>%{email}</strong> için <strong>%{provider}</strong> ile bir Code.org hesabı oluşturmayı tamamlamak üzere aşağıdaki bilgileri doldurun.'
@@ -60,6 +62,8 @@ tr:
         reset_password_token: "Takip ettiğiniz şifre sıfırlama bağlantısı"
         error:
           future: gelecekte olması mümkün değil
+        user_type: 'Hesap Türü'
+        us_state: 'Eyalet'
   beta: "beta"
   hello: "Merhaba dünya"
   welcome_back: "Hoş geldiniz %{name}"
@@ -69,6 +73,7 @@ tr:
   unsubmit: Gönderini gerial
   previous_page: Önceki Sayfa
   next_page: Sonraki Sayfa
+  next_level: Sonraki Seviye
   next_resource: Sonraki Kaynak
   done_with_module: Bu Öğrenme Modülü tamamlandı
   cancel: "İptal"
@@ -172,7 +177,6 @@ tr:
     data_collection_us: "Code.org, kâr amacı gütmeyen, ABD merkezli bir web sitesi olup ABD'nin veri toplama için geçerli kanunlarının, ülkemdeki kanunlardan farklı olabileceğini anlıyorum."
     visit_privacy: 'Daha fazla bilgi için Code.org''un [Gizlilik Politikasını](%{privacy_url}) ziyaret edin.'
     student_terms_markdown: "Öğrenci elektronik postaları öğrencilerle iletişim kurmamıza izin verecek bir formda saklanmıyor. Öğrenciler şifrelerini tekrar almak dışında asla Code.org'dan elektronik posta almazlar. Daha fazla bilgi için [Güvenlik politikamıza](http://code.org/privacy) bakınız."
-    additional_information: "Giriş işleminize devam edebilmek için ek bilgilere ihtiyaç duymaktayız."
     user_type_button: "Hesap Türünü Güncelle"
     user_type_label: "Hesap Türü"
     user_type_student: "öğrenci"
@@ -200,6 +204,7 @@ tr:
     parent_account_checkbox: "Çocuğum adına kayıt olan bir ebeveyn/veliyim"
     parent_account_email_progress_permission: "Size ara sıra çocuğunuzun gelişimi ve projeleriyle ilgili güncellemeler ve kursu ve bilgisayar bilimi hakkında güncellemeler gönderebilir miyiz? [(Gizlilik politikamıza bakın)](%{privacy_policy_url})"
     parent_account_email_label: "Ebeveyn/Veli E-postası"
+    us_state: 'Eyalet'
   school_info:
     title: 'Okul bilgileri (isteğe bağlı)'
     school_country: 'Okulun bulunduğu ülke'
@@ -347,7 +352,7 @@ tr:
       app_lab_tutorials: "Uygulama Laboratuvar Eğitimleri"
       game_lab_documentation: "Oyun Laboratuvar Belgelendirmesi"
       game_lab_tutorials: "Oyun Laboratuvar Eğitimi"
-      sprite_lab_documentation: "Peri Laboratuvar Belgelendirmesi"
+      sprite_lab_documentation: "Sprite Lab Dökümanları"
       sprite_lab_tutorials: "Peri Laboratuvar Eğitimi"
       web_lab_documentation: "Web Lab Belgelendirmesi"
       educate_overview: "Eğitimci genel bakış"
@@ -376,6 +381,7 @@ tr:
       help_us: "Bize yardım edin"
       teach: "Öğret"
       about: "Hakkında"
+      incubator: "İnkübatör"
       legal: "Gizlilik & Hukuk"
       legal_privacy: "Gizlilik Politikası"
       legal_cookie_notice: "Çerez Bildirimi"
@@ -592,7 +598,7 @@ tr:
     copyright: 'Telif Hakkı'
     more: 'Daha Fazla'
     feedback: 'Geri bildirim sağlayın'
-    translate: 'Kendi dilinize çevirmemiz için bize yardım edin'
+    translate: 'Kendi dilinize çevirmemiz için gönüllü olun'
     support: 'Destek'
     support_url: 'http://support.code.org'
     tos_short: 'Koşullar'
@@ -608,6 +614,7 @@ tr:
     store: 'Mağaza'
     cookie_notice: 'Çerez Bildirimi'
     view_code: 'Kodu Görüntüle'
+    locale_select: "Dil Seçin"
   reference_area:
     title: 'Yardım lazım mı?'
     subtitle: 'Bu videolara ve ipuçlarına bakın'
@@ -632,6 +639,8 @@ tr:
       applab_unsupported_tablet: "App Lab bir fare ve klavye ile bir masaüstü veya dizüstü bilgisayarda en iyi çalışır. Geçerli cihazınızda bu aracı kullanarak sorunlarla karşılaşabilirsiniz."
       gamelab_unsupported_tablet: "Game Lab bir fare ve klavye ile bir masaüstü veya dizüstü bilgisayarda en iyi çalışır. Geçerli cihazınızda bu aracı kullanarak sorunlarla karşılaşabilirsiniz."
       weblab_unsupported_locale_storage: "Web Lab Özel tarama modunu kullanırken sorunlarla karşılaşabilirsiniz. Lütfen projenizi normal modda yeniden yükleyin. Rahatsızlık verdiğim için özür dilerim."
+  deprecation:
+    algebra_lab: "Cebir müfredatında ve içeriğinde BB kullanımdan kaldırılıyor. Önümüzdeki birkaç ay içinde, bu laboratuvar artık kullanılamayacak. Lütfen bunun yerine [Bootstrap: Cebir](%{bootstrap_algebra_url})'ye göz atın. [Daha Fazla Bilgi Edinin](%{cs_algebra_url})."
   slow_loading: 'Bu normalden uzun sürüyor...'
   try_reloading: 'Sayfayı yeniden yüklemeyi deneyin'
   next_stage: 'Bitti! Bir sonraki derse geç'
@@ -670,65 +679,139 @@ tr:
       body_short: "Bir uygulama tasarlayın, çalışmasını sağlamak için bloklar veya JavaScript ile kodlayın, ardından uygulamanızı saniyeler içinde paylaşın."
       audience: '13 + Yaşlar'
       cta: 'Nasıl olduğunu öğren'
+      image_alt: 'Roketle çalışan bir sırt çantası giyen mor bir tavşan.'
+    applab-intro:
+      image_alt: 'Bir el akıllı telefon ekranının ortasına dokunuyor. Ekrandan ışık ve parıltılar çıkıyor.'
     aquatic:
       title: "Minecraft"
+      image_alt: 'Minecraft''tan Steve ve Alex sana bakıyor.'
+    artist:
+      image_alt: 'Büyük bir kalem tutan ve bir üçgen çizen karikatürize bir kişi.'
+    conditionals:
+      image_alt: 'Bir iskambil destesini karıştıran iki el.'
+    course1:
+      image_alt: 'Code.org yaban arısı ve bazı kodların önünde duran turuncu balık.'
+    course2:
+      image_alt: 'Yeşil bir sihirbazı, sanatçıyı ve turuncu balığı gösteren Code.org bulmacalarından oluşan bir kolaj.'
+    course3:
+      image_alt: 'Bir oyunu, zombiyi ve ninjayı gösteren Code.org bulmacalarından oluşan bir kolaj.'
+    course4:
+      image_alt: 'Futbolu, evcil hayvanları ve bir sanatçıyı gösteren Code.org bulmacalarından oluşan bir kolaj.'
+    coursea:
+      image_alt: 'Bir fil ve bir sincabı gösteren Code.org bulmaca kolajı.'
+    courseb:
+      image_alt: 'Bir kâşifi, değerli taşları ve bir çiçeği gösteren Code.org bulmacalarından oluşan bir kolaj.'
+    coursec:
+      image_alt: 'Angry Birds oyunundan bir sincabı, ikili sayıları ve kırmızı bir kuşu gösteren Code.org bulmacalarından oluşan bir kolaj.'
+    coursed:
+      image_alt: 'Angry Birds oyunundan bir arı, çiçekler, bal ve yeşil bir domuzu gösteren Code.org bulmacalarından oluşan bir kolaj.'
+    coursee:
+      image_alt: 'Kürek, balkabağı, meyve bahçesi ve inek tutan bir kişiyi gösteren Code.org bulmacalarından oluşan bir kolaj.'
+    coursef:
+      image_alt: 'Renkli geometrik şekiller, kırmızı bir korsan ve bir sanatçıyı gösteren Code.org bulmacalarından oluşan bir kolaj.'
     dance-2019:
       title: 'Dans Partisi'
+      image_alt: 'Mutlu bir kedi, tembel hayvan ve köpekbalığı dansı.'
+    dance-2022:
+      image_alt: 'Arka planda Satürn ile dans eden yeşil bir uzaylı ve robot.'
     dance:
       title: 'Dans Partisi'
+      image_alt: 'Bir partide dans eden havalı bir kedi ve mutlu köpekbalığı.'
+    donate:
+      image_alt: 'Bir Code.org bulmacasını gösteren bir dizüstü bilgisayar ekranını işaret eden bir çocuk.'
+    elementary:
+      image_alt: 'Gökkuşağının önündeki tarlada duran bir yaban arısı ve sincap.'
+    express:
+      image_alt: 'Plants vs Zombies zombi ve Flappy Bird''ün yanında duran bitki.'
     flappy:
       title: 'Flappy Kod'
       body: '10 dakikadan az bir süre içinde kendi oyununu yazmak ister misin? Flappy Kod eğitimimizi deneyin!'
+      image_alt: 'Yeşil borular arasında uçan sarı bir kuş.'
     frozen:
       title: "Karlar Ülkesi"
+      image_alt: 'Frozen filminden Anna ve Elsa. Aralarında, Anna''nın buz patenlerini kullanarak buzda güzel bir şekil çizdiği bir resim var.'
     gallery:
       title: "Galeri"
       body: "Kullanıcılarımız tarafından oluşturulan uygulama ve sanatçı resimleri galerisini görüntüleyin"
+      image_alt: 'Bir sürü daire çizen bir sanatçı ve bir kış tatili diyarında duran bir kedi, yarasa ve hayalet.'
     gamelab:
       title: "Oyun Laboratuvarı"
       body: "Oyun labaratuarı basit animasyonları ve oyunları nesnelerle ve etkileşimli karakterlerle beraber programlayabileceğin bir uygulama geliştirme ortamıdır."
       audience: "13 + Yaşlar"
       cta: "Nasıl olduğunu öğren"
+      image_alt: 'Kaldırımda duran ve gülümseyen birçok çizgi film insanı ve hayvan.'
+    hello-world-food:
+      image_alt: 'Dünyanın yörüngesinde dönen birçok hayvan, uzaylı ve emoji.'
     hello-world:
       title: 'Merhaba Dünya'
       body: 'Yarattığınız bir dünyada etkileşimli karakterleri kodlamak için dört eğlenceli tema arasından seçim yapın.'
     hero:
       title: "Minecraft"
       body: "Minecraft Kodlama Saati için yepyeni bir faaliyetle geri döndü. Kodlamayla Minecraft’ta bir gezintiye çıkın"
+      image_alt: 'Minecraft''tan bir Demir Golem, Anna''nın bir yapbozu çözerken yukarıdan çekilmiş görüntüsünün önünde duruyor.'
     hoc-encryption:
       title: "Basit şifreleme"
       body: "Öğrenciler şifreli mesaj yaratma ve şifre kırma tekniklerini öğrenecek."
+      image_alt: 'İngiliz dilinde harf sıklıklarının çubuk grafiği.'
     hoc:
       title: 'Klasik Labirent'
       body: 'Temel bilgisayar bilimlerine milyonlar bir şans verdi, sen de dene.'
+      image_alt: 'Kodu, Mark Zuckerberg''i ve Angry Birds''ü gösteren resimlerden oluşan bir kolaj.'
+    hourofcode:
+      image_alt: 'Kodu, Mark Zuckerberg''i ve Angry Birds''ü gösteren resimlerden oluşan bir kolaj.'
     hoc2014:
       try_new_tutorial: 'Yeni Kod Saati eğitimimizi beta halinde deneyin'
       try_frozen: 'Frozen''dan Anna ve Elsa ile birlikte bir sanatçı'
     infinity:
       title: "Infinity Play Lab"
       body: "Disney Infinity karakteriyle bir hikaye ya da  bir oyun yaratmak için Play Lab'i kullanın."
+      image_alt: 'Frozen, Tangled ve Big Hero 6''dan beş karakter bir arada duruyor.'
+    map:
+      image_alt: 'Yaklaşık 20 eyaletin mor renkle vurgulandığı Amerika Birleşik Devletleri''nin gri bir görüntüsü.'
+    mc_escape:
+      image_alt: 'Zümrütlerle dolu bir hazine sandığını açarken silindir şapka ve tek gözlük takan bir Minecraft karakteri.'
+    mc:
+      image_alt: 'Minecraft''tan Anna ve Steve bir Code.org Minecraft yapbozunun önünde duruyor.'
     minecraft:
       title: "Minecraft"
       body: "Minecraft dünyasını kodlamayla keşfet"
+      image_alt: 'Minecraft''tan Anna ve Steve bir Code.org Minecraft yapbozunun önünde duruyor.'
     minecraft2016:
       title: "Minecraft"
       body: "Hayvanları ve diğer Minecraft yaratıklarını Minecraft'ın sana ait sürümünde programla."
+    oceans:
+      image_alt: 'Okyanusta çeşitli deniz canlılarını tarayan bir robot.'
+    playlab:
+      image_alt: 'Mavi bir kediyi, şapşal köpeği ve tarih öncesi gelinciği gösteren bir resim kolajı.'
     poem-art:
       title: 'Şiir Sanatı'
       body: 'Kendinizi ifade edin! Animasyonlu şiirler oluşturmak için kod kullanın.'
+      image_alt: 'Bir sahnede performans gösteren bir hipster kalamar.'
+    pre-express-2017:
+      image_alt: 'Yapboz parçalarından yapılmış bir ağacın önünde duran bir köpek ve tek boynuzlu at.'
+    pre-express-2018:
+      image_alt: 'Yapboz parçalarından yapılmış bir ağacın önünde duran bir köpek ve tek boynuzlu at.'
+    pre-express-2019:
+      image_alt: 'Yapboz parçalarından yapılmış bir ağacın önünde duran bir köpek ve tek boynuzlu at.'
+    pre-express:
+      image_alt: 'Yapboz parçalarından yapılmış bir ağacın önünde duran bir köpek ve tek boynuzlu at.'
     sports:
       title: "Spor"
       body: "Bir basketbol oyunu yapın veya sporları karıştırın ve eşleştirin."
+      image_alt: 'Bir futbol, futbol topu, hokey diski ve basket topunun yanında görüntülenen NBA ve WNBA logoları.'
     starwars:
       title: "Star Wars"
+      image_alt: 'R2-D2, Leia, Rey ve BB-8 bir çölde duruyor.'
     text-compression:
       title: "Metin Sıkıştırma"
       body: "Bu derste öğrenciler, desenleri sembollerle değiştirerek metni sıkıştırmak için Metin Sıkıştırma Widget'ını kullanacaklardır."
+      image_alt: 'Tüm sözcükleri tek bir sembolle değiştirerek sıkıştırılan metin.'
     weblab:
       title: "Web Lab (beta)"
       body: "Web Lab, HTML ve CSS kullanarak basit web sayfaları hazırlayabileceğin bir programlama ortamıdır. Web sayfanı tasarla ve saniyeler içinde paylaş."
       audience: "13 + Yaşlar"
       cta: "Nasıl olduğunu öğren"
+      image_alt: 'HTML kodunu gösteren bir bilgisayar ekranı.'
     widgets:
       title: "Araçlar"
       body: "Öğrenciler, bu dijital araçları kullanarak Bilgisayar Bilimi İlkeleri kursumuzdaki kavramları uygulamalı olarak keşfedebilirler. Widget'ları kendi başlarına kullanın veya sınıfınız için tek konseptli bir ders oluşturun."
@@ -914,6 +997,7 @@ tr:
           age: 'Lütfen yaşınızı belirtiniz'
           abuse_type: 'Lütfen bu içeriğin Hizmet Şartlarını nasıl ihlal ettiğini açıklayın'
           abuse_detail: 'Lütfen bildirdiğiniz içerikle ilgili ayrıntıları belirtin'
+          captcha: 'Bu içeriği bildirmek için lütfen CAPTCHA''yı doldurun.'
         abusive_url: 'Raporlamış olduğunuz içeriğin URL''si'
         abuse_type:
           question: 'Bu içerik %{link_start}Hizmet Şartlarını%{link_end} nasıl ihlal ediyor?'
@@ -1108,6 +1192,7 @@ tr:
         csf_express: 'Bilgisayar Bilimleri Temelleri (Hızlandırma Öncesi veya Hızlandırılmış)'
         csd: 'Bilgisayar Bilimi Keşifleri'
         csp: 'BB (Bilgisayar Bilimleri) İlkeleri'
+        other: 'Diğer'
         not_applicable: "Uygulanamaz"
       email_opt_in:
         opt_in_yes: 'Evet'
@@ -1129,6 +1214,25 @@ tr:
     no_teacher_email:
       body_markdown: 'Hesabınızı e-posta adresi bulunmamaktadır. Bu formu tamamlamadan önce e-posta adresinizi eklemek için lütfen [hesap ayarlarınızı ziyaret edin](%{user_registration}).'
   courses_category: 'Tüm Kurslar'
+  course_offering:
+    headers:
+      favorites: 'Sık Kullanılanlar'
+      labs_and_skills: 'Laboratuvarlar ve Beceriler'
+      minecraft: 'Minecraft'
+      hello_world: 'Merhaba Dünya'
+      popular_media: 'Popüler Medya'
+      sports: 'Spor'
+      express: 'Hızlı'
+      csf: 'Bilgisayar bilimleri temelleri'
+      csc: 'Bilgisayar Bilimi Bağlantıları'
+      year_long: 'Yıl boyu'
+      csa_labs: 'CSA Labs'
+      self_paced: 'Kendi kendine tempolu'
+      teacher_led: 'Öğretmen liderliğinde'
+      collections: 'Koleksiyonlar'
+      workshops_k5: 'K-5 Atölyeleri'
+      summer_workshops_612: '6-12 Yaz Atölyeleri'
+      virtual_academic_year_workshops_612: '6-12 Sanal Akademik Yıl Atölyeleri'
   cookie_banner:
     message: 'Sitemize göz atmaya devam ederek veya "Kabul Ediyorum"a tıklayarak, bilgisayarınızdaki veya cihazınızdaki çerezlerin depolanmasını kabul etmiş olursunuz.'
     more_information: "Code.org'un Gizlilik Politikasına bakın."

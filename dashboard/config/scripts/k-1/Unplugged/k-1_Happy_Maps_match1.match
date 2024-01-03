@@ -11,3 +11,4 @@ answer '/script_assets/k_1_images/unplugged_images/right.png'
 
 question '/script_assets/k_1_images/unplugged_images/happy_maps_2_q3.png'
 answer '/script_assets/k_1_images/unplugged_images/left.png'
+allow_multiple_attempts true

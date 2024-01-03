@@ -72,10 +72,8 @@ class Foorm::Form < ApplicationRecord
   def validate_published
     parsed_questions = JSON.parse(questions)
 
-    unless parsed_questions['published'].nil?
-      if published != parsed_questions['published']
-        errors.add(:questions, 'Mismatch between published state in questions and published state in model')
-      end
+    if !parsed_questions['published'].nil? && (published != parsed_questions['published'])
+      errors.add(:questions, 'Mismatch between published state in questions and published state in model')
     end
   end
 
@@ -83,9 +81,9 @@ class Foorm::Form < ApplicationRecord
     if write_to_file? && saved_changes?
       file_path = Rails.root.join("config/foorm/forms/#{name}.#{version}.json")
       file_directory = File.dirname(file_path)
-      unless Dir.exist?(file_directory)
-        FileUtils.mkdir_p(file_directory)
-      end
+
+      FileUtils.mkdir_p(file_directory)
+
       File.write(file_path, questions)
     end
   end
@@ -119,8 +117,8 @@ class Foorm::Form < ApplicationRecord
             question_name: element["name"]
           ).first
           unless library_question
-            raise InvalidFoormConfigurationError, "cannot find library item with library name #{element['library_name']},"\
-                                        " version: #{element['library_version']} and question name #{element['name']}."
+            raise InvalidFoormConfigurationError, "cannot find library item with library name #{element['library_name']}, " \
+                                        "version: #{element['library_version']} and question name #{element['name']}."
           end
           JSON.parse(library_question.question)
         else
@@ -137,8 +135,8 @@ class Foorm::Form < ApplicationRecord
     errors = []
     begin
       filled_questions = Foorm::Form.fill_in_library_items(questions)
-    rescue StandardError => e
-      errors.append(e.message)
+    rescue StandardError => exception
+      errors.append(exception.message)
       return errors
     end
     filled_questions.deep_symbolize_keys!
@@ -147,8 +145,8 @@ class Foorm::Form < ApplicationRecord
       page[:elements]&.each do |element_data|
         # validate_element will throw an exception if the element is invalid
         Foorm::Form.validate_element(element_data, element_names)
-      rescue StandardError => e
-        errors.append(e.message)
+      rescue StandardError => exception
+        errors.append(exception.message)
       end
     end
     errors
@@ -192,17 +190,17 @@ class Foorm::Form < ApplicationRecord
   def self.validate_choices(choices, question_name)
     choice_values = Set.new
     choices.each do |choice|
-      if choice.class == Hash && choice.key?(:value) && choice.key?(:text)
+      if choice.instance_of?(Hash) && choice.key?(:value) && choice.key?(:text)
         if choice_values.include?(choice[:value])
           raise InvalidFoormConfigurationError, "Duplicate choice value #{choice[:value]} in question #{question_name}."
         end
         choice_values.add(choice[:value])
-      elsif choice.class == Hash
+      elsif choice.instance_of?(Hash)
         unless choice.key?(:value)
           error_msg = "Foorm configuration contains question '#{question_name}' without a  value for a choice. Choice text is '#{choice[:text]}'."
           raise InvalidFoormConfigurationError, error_msg
         end
-      elsif choice.class == String
+      elsif choice.instance_of?(String)
         error_msg = "Foorm configuration contains question '#{question_name}' without key-value choice. Choice is '#{choice}'."
         raise InvalidFoormConfigurationError,  error_msg
       end
@@ -221,7 +219,7 @@ class Foorm::Form < ApplicationRecord
   # If any submissions in the array do not belong to this form they will not be written
   # to the csv.
   # @return csv text
-  def submissions_to_csv(submissions_to_report=nil)
+  def submissions_to_csv(submissions_to_report = nil)
     calculated_readable_questions = readable_questions
     headers = calculated_readable_questions[:general]
     has_facilitator_questions = !(calculated_readable_questions[:facilitator].nil_or_empty?)
@@ -244,15 +242,13 @@ class Foorm::Form < ApplicationRecord
       # but are in the submission (eg, survey config and workshop metadata).
       # Put new headers first, as they generally contain important general
       # information (eg, user_id, pd_workshop_id, etc.)
-      potential_new_headers = Hash[
-        answers.keys.map do |question_id|
-          if headers.key?(question_id)
-            [nil, nil]
-          else
-            [question_id, question_id]
-          end
+      potential_new_headers = answers.keys.map do |question_id|
+        if headers.key?(question_id)
+          [nil, nil]
+        else
+          [question_id, question_id]
         end
-      ].compact
+      end.to_h.compact
 
       headers = potential_new_headers.merge headers
 
@@ -285,9 +281,7 @@ class Foorm::Form < ApplicationRecord
 
           # Add any facilitator-specific questions as headers
           # that are in the submission but not already in the list of headers.
-          potential_new_headers = Hash[
-            facilitator_response_with_facilitator_number.keys.map {|question_id| [question_id, question_id]}
-          ]
+          potential_new_headers = facilitator_response_with_facilitator_number.keys.map {|question_id| [question_id, question_id]}.to_h
           facilitator_headers = potential_new_headers.merge facilitator_headers
 
           headers.merge! facilitator_headers
@@ -318,13 +312,13 @@ class Foorm::Form < ApplicationRecord
   # @param [String] question_id
   # @return [Hash]
   def get_question_details(question_id)
-    parsed_questions(true)[question_id]
+    parsed_questions(should_flatten: true)[question_id]
   end
 
   # Returns a readable version of the questions asked in a Form.
   # @param [Boolean] should_flatten
   # @return [Hash] Hash with two keys (:general and :facilitator), or those two hashes merged if the should_flatten parameter is true.
-  def parsed_questions(should_flatten = false)
+  def parsed_questions(should_flatten: false)
     @parsed_questions ||= Pd::Foorm::FoormParser.parse_form_questions(questions)
 
     should_flatten ?
@@ -360,11 +354,9 @@ class Foorm::Form < ApplicationRecord
   end
 
   def readable_questions_with_facilitator_number(questions, number)
-    Hash[
-      questions[:facilitator].map do |question_id, question_text|
-        [question_id + "_#{number}", "Facilitator #{number}: " + question_text]
-      end
-    ]
+    questions[:facilitator].map do |question_id, question_text|
+      [question_id + "_#{number}", "Facilitator #{number}: " + question_text]
+    end.to_h
   end
 
   def write_to_file?

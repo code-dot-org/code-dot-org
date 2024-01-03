@@ -1,0 +1,58 @@
+{
+  "sr-SP": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "ai-2020": {
+            "buttonText": "Сазнајте више"
+          },
+          "ai-launch-2023": {
+            "buttonText": "Сазнајте више"
+          },
+          "ai-pl-launch-2023": {
+            "buttonText": "Сазнајте више"
+          },
+          "back-to-school-2021": {
+            "buttonText": "Сазнајте више"
+          },
+          "codebytes-2020": {
+            "buttonText": "Сазнајте више"
+          },
+          "coldplay": {
+            "buttonText": "Пробајте"
+          },
+          "congrats-certificate-share": {
+            "buttonText": "Покрени"
+          },
+          "csjourneys": {
+            "buttonText": "Сазнајте више"
+          },
+          "csjourneys-22": {
+            "buttonText": "Сазнајте више"
+          },
+          "csleadersprize": {
+            "buttonText": "Сазнајте више"
+          },
+          "hoc-2023": {
+            "buttonText": "Сазнајте више"
+          },
+          "hoc-2023-dance-ai": {
+            "buttonText": "Сазнајте више"
+          },
+          "superhero": {
+            "buttonText": "Сазнајте више"
+          },
+          "teacher-apps-closing-2021": {
+            "buttonText": "Pridruži nam se"
+          },
+          "teacher-apps-open-2021": {
+            "buttonText": "Pridruži nam se"
+          },
+          "teacher-apps-stillon-2020": {
+            "buttonText": "Pridruži nam se"
+          }
+        }
+      }
+    }
+  }
+}

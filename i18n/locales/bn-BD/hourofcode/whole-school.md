@@ -1,5 +1,5 @@
 ---
-title: Whole School Participation
+title: সমগ্র বিদ্যালয়ের অংশগ্রহন
 ---
 
 {{ signup_button }}

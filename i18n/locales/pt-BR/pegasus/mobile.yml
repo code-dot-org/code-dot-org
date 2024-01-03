@@ -399,6 +399,7 @@
   homepage_below_hero_announcement_link_text: "Saiba mais"
   homepage_higher_power_body: "Cria com Festa dançante, ganha a oportunidade de ver a banda ao vivo."
   homepage_csa_subhead: "Uma nova abordagem para"
+  homepage_csa_title: "AP® Ciência da Computação A"
   homepage_csa_body: "Capacite os alunos com projetos criativos conectados ao mundo real em nosso currículo orientado pela equidade."
   contact_form_topic_student: "Sou um estudante"
   contact_form_topic_parent: "Sou um pai"
@@ -532,6 +533,7 @@
   video_title_chris_bosh: "Chris Bosh fala sobre Ciência da Computação"
   video_title_my_name_is_aracely: "Meu Nome é Aracely"
   video_title_change_face_of_cs: "Mude a face da ciência da computação"
+  video_title_latam_hoc: "O que falta em nossas escolas"
   video_1min: "1 min"
   video_2min: "2 min"
   video_3min: "3 min"
@@ -546,13 +548,9 @@
   volunteer_engineer_submission_subtitle_generic: 'Um total de 100.000 professores vão sediar uma Hora do Código em suas salas de aula este ano, de 7 a 13 dezembro de 2015. Eles querem a sua ajuda! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} professores estão em busca de voluntários. <br>%{num_volunteers} voluntários se inscreveram. Junte-se a eles."
   volunteer_engineer_submission_intro_background: "A Hora do Código é um movimento global que oferece uma introdução de uma hora à ciência da computação e que atinge dezenas de milhões de estudantes em mais de 180 países. Participe você também durante a Semana da Educação em Ciência da Computação, de 7 a 13 de dezembro."
-  volunteer_engineer_submission_intro_recruit: 'Os professores adorariam ter alguém<span style="font-family: ''Gotham 7r'', sans-serif;">apaixonado pelo ensino da ciência da computação</span> que pudesse ajudá-los em suas aulas, ou alguém que pudesse<span style="font-family: ''Gotham 7r'', sans-serif;">inspirar</span> seus alunos falando sobre a gama de possibilidades da ciência da computação (o que pode ser feito por meio de de vídeo conferência).'
   volunteer_engineer_submission_intro_recruit_markdown: "Os professores adorariam ter alguém**apaixonado pelo ensino da ciência da computação** que pudesse ajudá-los em suas aulas, ou alguém que pudesse**inspirar** seus alunos falando sobre a gama de possibilidades da ciência da computação (o que pode ser feito por meio de de vídeo conferência)."
-  volunteer_engineer_submission_intro_guide: "Saiba mais sobre o nosso <a href=\"%{volunteer_guide}\">programa de voluntariado aqui</a>."
   volunteer_engineer_submission_intro_guide_markdown: "Saiba mais sobre o nosso [programa de voluntariado aqui](%{volunteer_guide})."
-  volunteer_engineer_submission_intro_signup: "Por favor, insira as seguintes informações se você é um estudante de ciência da computação ou profissional de software. Você deve ter pelo menos 18 anos de idade para se inscrever como voluntário. Observe que todos os campos que você preencher nesta seção estarão publicamente disponíveis para qualquer um olhando para o <a href=\"/volunteer/local\">mapa de voluntário</a>. Campos marcados com um <span class=\"form-required-field\">*</span> são obrigatórios."
   volunteer_engineer_submission_intro_signup_markdown: "Insira as seguintes informações se você for um estudante de ciência da computação ou profissional de software. Você deve ter pelo menos 18 anos de idade para se inscrever como voluntário. Observe que todos os campos que você preencher nesta seção estarão publicamente disponíveis para qualquer um olhando para o [mapa de voluntários](/volunteer/local). Campos marcados com um _*_ são obrigatórios."
-  volunteer_engineer_submission_intro_links: "É professor(a) e está procurando voluntários? Encontre um voluntário na sua região em nosso <a href=\"%{volunteer_local}\">mapa de voluntários</a>."
   volunteer_engineer_submission_intro_links_markdown: "É professor(a) e está procurando voluntários? Encontre um voluntário na sua região em nosso [mapa de voluntários](%{volunteer_local})."
   volunteer_engineer_submission_update_information: "Atualize suas informações"
   volunteer_engineer_submission_header_shared: "Informações compartilhadas com professores no mapa de voluntários"
@@ -1025,6 +1023,7 @@
   minecraft_name: "Minecraft"
   starwarsblocks_name: "Star Wars (Blocos)"
   hoc-impact-study_name: "\nLabirinto clássico com pesquisa"
+  flappy-impact-study_name: Flappy Code com pesquisa
   hoc-encryption_name: Criptografia simples
   text-compression_name: Compressão de texto
   applab_name: "Laboratório de Aplicativo"
@@ -1536,12 +1535,14 @@
   header_stats: "Estatísticas"
   header_help_us: "Ajude-nos"
   header_about: "Sobre"
+  header_incubator: "Incubadora"
   header_teacher_community: "Comunidade de professores"
   header_help_support: 'Ajuda e suporte '
   header_report_bug: "Reportar um erro"
   header_report_abuse: "Reportar abuso"
   header_legal: "Termos & Privacidade"
   header_legal_privacy: "Política de Privacidade"
+  header_legal_cookie_notice: "Aviso sobre Cookies"
   header_legal_tos: "Termos de Serviço"
   header_tutorials: "Tutoriais"
   header_screen_reader_hamburger: "Menu"
@@ -1650,7 +1651,7 @@
   hoc2018_mc_download_adventurer: "Baixe a versão offline do Aventureiro de Minecraft."
   hoc2018_mc_educators: "Para Educadores"
   hoc2018_mc_educators_box1_title: "Programe com Minecraft"
-  hoc2018_mc_educators_box1_desc: 'Minecraft: Education Edition fornece currículo alinhado com padrões, treinamento e programação no Minecraft.'
+  hoc2018_mc_educators_box1_desc: "Minecraft: Education Edition fornece currículo alinhado com padrões, treinamento e programação no Minecraft."
   hoc2018_mc_educators_box1_button: "Comece agora"
   hoc2018_mc_educators_box2_title: "Baixe o Guia de Facilitador"
   hoc2018_mc_educators_box2_desc: "Este kit de ferramentas ajudará você a hospedar uma Hora do Código e envolver seus alunos na ciência da computação."
@@ -1757,7 +1758,7 @@
   hoc2018_mc_with_microsoft: "Em parceria com"
   hoc2018_mc_thank_microsoft: "Nós agradecemos à Microsoft por apoiar nossa visão e missão para que toda criança tenha a oportunidade de aprender ciência da computação e as habilidades necessárias para ter sucesso no século XXI."
   hoc2019_mc_mee_title: "Minecraft AI pra Valer"
-  hoc2019_mc_mee_description1: 'O novo tutorial Hora de Código Minecraft está agora disponível em Minecraft: Edição Educacional para Windows, Mac e iPad. Aprenda os fundamentos de codificação e explore IA com seus alunos!'
+  hoc2019_mc_mee_description1: "O novo tutorial Hora de Código Minecraft está agora disponível em Minecraft: Edição Educacional para Windows, Mac e iPad. Aprenda os fundamentos de codificação e explore IA com seus alunos!"
   hoc2019_mc_mee_description2: "Acesse recursos grátis incluindo um plano de aula, vídeos, currículo de ciência da computação e treinamentos para professores."
   hoc2019_mc_more_coding_resources: "Mais Recursos de Codificação"
   hoc2019_dance_previous_versions: "Procurando uma versão anterior de Festa Dançante?\nClique aqui para começar [Parte 1](%{dance_2018_link}) e [Parte 2](%{dance_extras_2018_link}) de 2018."
@@ -1770,18 +1771,18 @@
   page_not_available_description: "Desculpe, a página que você solicitou não está mais disponível neste endereço. Se você ainda precisar de acesso, envie um e-mail para [support@code.org](%{support_email_link})."
   page_not_available_button: "Volte para a página inicial"
   hoc2020_mc_available_code_org: "Disponível em Code.org"
-  hoc2020_mc_available_mee: 'Disponível em Minecraft: Education Edition'
+  hoc2020_mc_available_mee: "Disponível em Minecraft: Education Edition"
   hoc2020_mc_mee_title: "O conto de duas aldeias do Minecraft"
-  hoc2020_mc_mee_description: 'O novo tutorial da Hora do Código do Minecraft já está disponível no Minecraft: Education Edition para Windows, Mac, Chromebook e iPad. Aprenda as noções básicas de programação e explore a diversidade e a inclusão com seus alunos! Acesse recursos gratuitos, incluindo um plano de aula, vídeos, currículo de ciência da computação, aulas de equidade e treinamentos de professores.'
+  hoc2020_mc_mee_description: "O novo tutorial da Hora do Código do Minecraft já está disponível no Minecraft: Education Edition para Windows, Mac, Chromebook e iPad. Aprenda as noções básicas de programação e explore a diversidade e a inclusão com seus alunos! Acesse recursos gratuitos, incluindo um plano de aula, vídeos, currículo de ciência da computação, aulas de equidade e treinamentos de professores."
   hoc2021_mc_mee_title: "Minecraft TimeCraft"
-  hoc2021_mc_mee_description: 'Volte no tempo e aprenda a codificar! O novo tutorial de Hora do Código Minecraft já está disponível em Minecraft: Edição Educacional para Windows, Mac, Chromebook e iPad. Dê os primeiros passos para os recursos gratuitos para educadores, treinamentos e vídeos.'
+  hoc2021_mc_mee_description: "Volte no tempo e aprenda a codificar! O novo tutorial de Hora do Código Minecraft já está disponível em Minecraft: Edição Educacional para Windows, Mac, Chromebook e iPad. Dê os primeiros passos para os recursos gratuitos para educadores, treinamentos e vídeos."
   hoc2021_mc_mee_villages_title: "Fábula das Duas Aldeias"
-  hoc2021_mc_mee_villages_description: 'Aprenda a codificação básica e explore a diversidade e a inclusão com os seus alunos em Minecraft: Edição Educacional.'
+  hoc2021_mc_mee_villages_description: "Aprenda a codificação básica e explore a diversidade e a inclusão com os seus alunos em Minecraft: Edição Educacional."
   hoc2021_mc_mee_ai_title: "IA para sempre"
-  hoc2021_mc_mee_ai_description: 'Explore a IA com os seus alunos e aprenda a codificar em Minecraft: Edição Educacional.'
+  hoc2021_mc_mee_ai_description: "Explore a IA com os seus alunos e aprenda a codificar em Minecraft: Edição Educacional."
   hoc2022_mc_mee_title: "Status de escape do Minecraft"
   hoc2022_mc_mee_description: 'Escape da mansão misteriosa até o por do sol, e ganhe um milhão de esmeraldas! O novo tutorial do Hour of Code para Minecraft está disponível agora no Minecraft:Edição Educativa para Windows, Mac, Chromebook, Ipad e dispositivos móveis. Comece já, com recursos, treinamento e vídeos educativos gratuitos. '
-  hoc2022_mc_mee_timecraft_description: 'Viaje no tempo para salvar o futuro nesta aula de programação gratuita no Minecraft: Edição Edicativa.'
+  hoc2022_mc_mee_timecraft_description: "Viaje no tempo para salvar o futuro nesta aula de programação gratuita no Minecraft: Edição Edicativa."
   footer_powered_by_aws: "Powered by Amazon Web Services"
   footer_built_on_github: "Construído no GitHub da Microsoft"
   codebytes_skinny_banner_english_only: "Somente inglês"
@@ -1790,7 +1791,9 @@
   footer_privacy_policy_updated: "Política de Privacidade Atualizada"
   footer_about: "Sobre"
   footer_partners: "Parceiros"
+  footer_blog: "Blog"
   footer_donate: "Faça uma doação"
+  footer_store: "Armazenar"
   footer_support: "Suporte"
   footer_terms: "Termos"
   ai_for_oceans: "IA para oceanos"
@@ -1818,22 +1821,35 @@
   ai_seeing_ai_description: "Um aplicativo gratuito que narra o mundo ao seu redor em vários idiomas."
   ai_quick_draw: "Rápido, desenhe!"
   ai_quick_draw_description: "Uma rede neural pode aprender a reconhecer rabiscos?"
+  ai_teachable_machine: "Máquina ensinável"
   ai_teachable_machine_description: "Treine um computador para reconhecer suas próprias imagens, sons e poses."
+  ai_google: "Experimentos de IA com o Google"
   ai_google_description: "Comece a explorar o aprendizado de máquina por meio de imagens, desenhos, linguagem, música e muito mais."
+  ai_zooniverse: "Zooniverse - Snapshot Mountain Zebra"
   ai_zooniverse_description: "Ajude a proteger a ameaçada Zebra da Montanha do Cabo identificando os diferentes animais nas imagens."
-  ai_minecraft_description: 'Acesse recursos grátis incluindo um plano de aula, vídeos, currículo de ciência da computação e treinamentos para professores.'
+  ai_audience: "Audiência"
+  ai_minecraft_description: "Acesse recursos grátis incluindo um plano de aula, vídeos, currículo de ciência da computação e treinamentos para professores."
+  ai_k_12_audience: "K-12 (Leitura obrigatória)"
+  ai_microsoft_workshop: "Workshops virtuais gratuitos da Microsoft"
+  ai_microsoft_workshop_description: "Desperte a curiosidade com workshops gratuitos de STEM e codificação."
+  ai_machine_learning_for_kids: "Aprendizado de máquina para crianças"
   ai_machine_learning_for_kids_description: "Treine um modelo de aprendizado de máquina com texto, números ou imagens e use-o para criar jogos no Scratch."
   ai_ibm_machine_learning_for_kids: 'IBM: Aprendizado de Máquinas para crianças'
+  ai_ecs: 'ECS: Inteligência Artificial (IA)'
   ai_ecs_description: "Uma nova unidade curricular alternativa para o currículo Exploring Computer Science (ECS)."
+  ai_aiedu_intro: 'AiEdu: Introdução à Inteligência Artificial'
   ai_aiedu_intro_description: "A introdução à IA é um currículo gratuito, inovador e culturalmente relevante, no qual os alunos desenvolvem conhecimento conceitual sobre o que é a IA e como ela é usada no mundo real."
   ai_elements: "Elementos de IA"
   ai_elements_description: "Uma série de cursos on-line gratuitos criados pela Reaktor e pela Universidade de Helsinque."
+  ai_cognimates: "Cognimados"
   ai_cognimates_description: "Uma plataforma educacional de IA para criar jogos, programar robôs e treinar."
   ai_try_activity: "Experimentar uma atividade"
   outbreak_tile_title: "Epidemia"
   outbreak_tile_subtitle: "Um vírus infectou a Cidade dos Monstros! Codifique um simulador de surtos e faça previsões sobre o que acontecerá com os vizinhos da Cidade dos Monstros."
   outbreak_tile_alt: "Uma simulação de como um vírus se espalha por um grupo de monstros roxos."
   footer_cookie_notice: "Aviso sobre Cookies"
+  top_hoc_tutorial_applab_alt_text: "Uma mão marrom com o dedo indicador tocando um tablet com tela sensível ao toque emitindo estrelas e raios de luz contra um fundo azul"
+  minecraft_tile_alt: "Dois personagens do Minecraft, Steve e Alex, em um plano de fundo mostrando uma cena aquática do Minecraft com corais, golfinhos e algas"
   hoc2022_banner_title: "Explore, jogue, crie!"
   hoc2022_banner_description: "Explore o universo, marque um gol, elabore um movimento – há tantas maneiras de experimentar a ciência da computação!"
   hoc2022_cta_primary: "Veja o que há de novo\n"
@@ -1849,5 +1865,8 @@
   try_it_yourself: "Tente você mesmo!"
   try_an_activity: "Experimentar uma atividade"
   see_more_activities: "Ver todas as atividades"
+  hoc2022_nasa_webb_alt_text: "Ilustração do telescópio James Webb da NASA"
   hoc2022_nasa_banner_heading: "Junte-se à NASA para uma Hora de Código especial sobre a ciência da computação no espaço!"
   hoc2022_nasa_banner_description: "Premiering 10AM ET, 5 de dezembro no canal da NASA STEM no YouTube."
+  hoc2022_nasa_banner_heading_posthoc: "Confira o artigo especial da Hora do Código da NASA sobre ciência da computação no espaço!"
+  microsoft_logo_alt: "Logotipo da Microsoft"

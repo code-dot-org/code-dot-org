@@ -4,23 +4,37 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "3ca02f91-9da1-492c-aa4f-ead62723da82",
+          "notice": "Free Teacher Resources from Amazon Future Engineer",
+          "details": "Code.org has partnered with Amazon Future Engineer to offer teachers at underserved schools a growing number of resources and benefits at no cost! ",
+          "link": "https://code.org/afe",
+          "type": "bullhorn",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Get free resources"
+        }
+      ],
+      "curriculum_umbrella": "CSD",
+      "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
-      "is_course": true,
       "is_migrated": true,
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2023",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
-    "family_name": "csd5",
-    "serialized_at": "2023-03-10 02:00:28 UTC",
-    "published_state": "in_development",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "family_name": null,
+    "serialized_at": "2023-12-12 03:16:40 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csd5-2023"
     }
@@ -1389,6 +1403,19 @@
       }
     },
     {
+      "key": "8af2da4c-4ffd-45af-a037-b33f23c1b346",
+      "position": 2,
+      "properties": {
+        "description": "**Code Studio:** Have students answer 5 quick survey questions at the beginning of this unit. Once at least 5 students have completed the survey you will be able to view the anonymized results in the Teacher Dashboard. Some of these questions will be asked again at the end of the first project, which can be helpful in seeing student growth and shifts in attitudes throughout the unit.",
+        "name": "Reflection",
+        "progression_name": "Check-In Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "8af2da4c-4ffd-45af-a037-b33f23c1b346",
+        "lesson_activity.key": "c252df07-d2cd-40e5-b4e7-c5817178ea81"
+      }
+    },
+    {
       "key": "dbb7c7dd-fe3f-47f0-9141-8e985244c12d",
       "position": 1,
       "properties": {
@@ -2155,7 +2182,13 @@
       "key": "f203bf80-a5b0-4f3a-a127-21388aebf211",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r binary_and_data/csd5/2023] video in the slides.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r binary_and_data/csd/2023] video in the slides.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "f203bf80-a5b0-4f3a-a127-21388aebf211",
@@ -2885,7 +2918,7 @@
       "key": "5730857e-7a0a-48df-a302-1fe8bb5e5b9e",
       "position": 4,
       "properties": {
-        "description": "**Group:** Put students into groups of 3-4\n\n**Distribute:** Distribute copies of [r problem_solving_with_data_1/csd5/2023], one per student.\n\n\n\n#### Solving a Data Problem"
+        "description": "**Group:** Put students into groups of 3-4\n\n**Distribute:** Distribute copies of [r problem_solving_with_data_1/csd/2023], one per student.\n\n\n\n#### Solving a Data Problem"
       },
       "seeding_key": {
         "activity_section.key": "5730857e-7a0a-48df-a302-1fe8bb5e5b9e",
@@ -3096,7 +3129,7 @@
       "key": "b9095172-593b-4dcc-ad3b-f06a872d3be2",
       "position": 1,
       "properties": {
-        "description": "**Group:** Put students into pairs and give each pair a copy of [r structuring_data_2021/csd5/2023].\n\n\n\n#### ***Structuring Data Activity Guide***\n\nRead the instructions together as a class, ensuring that students understand the problem that they are trying to solve (choosing a pizza topping for the pizza party).\n\n"
+        "description": "**Group:** Put students into pairs and give each pair a copy of [r structuring_data_2021/csd/2023].\n\n\n\n#### ***Structuring Data Activity Guide***\n\nRead the instructions together as a class, ensuring that students understand the problem that they are trying to solve (choosing a pizza topping for the pizza party).\n\n"
       },
       "seeding_key": {
         "activity_section.key": "b9095172-593b-4dcc-ad3b-f06a872d3be2",
@@ -3726,7 +3759,7 @@
       "key": "bd7c80b3-b9d6-491b-ac42-b2e8c3217d16",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Copies of [r automating_data_decisions_1/csd5/2023] and [r automating_data_decisions_2/csd5/2023] to each student.\n\n\n\n#### ***Automating Data Decisions Activity Guide***\n\n"
+        "description": "**Distribute:** Copies of [r automating_data_decisions_1/csd/2023] and [r automating_data_decisions_2/csd/2023] to each student.\n\n\n\n#### ***Automating Data Decisions Activity Guide***\n\n"
       },
       "seeding_key": {
         "activity_section.key": "bd7c80b3-b9d6-491b-ac42-b2e8c3217d16",
@@ -3920,12 +3953,12 @@
       "key": "91cbbd3d-4b95-4f21-a652-00c8ef3e52ec",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r netflix_and_data/csd5/2023] video in the slides.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r netflix_and_data/csd/2023] video in the slides.\n",
         "progression_name": "Video: Netflix and Data",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Accessing Videos:** These videos are embedded in the slides for this lesson and can also be downloaded from within this lesson plan. They can also be found in their own levels on Code Studio so students have access to these videos if they wish to them on their own or if they are absent for this lesson.\r\n"
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
           }
         ]
       },
@@ -3949,7 +3982,7 @@
       "key": "37ca2725-b3b0-49a9-a860-83f4d2d3bc29",
       "position": 6,
       "properties": {
-        "description": "**Routz:** Ask students to move on to the Routz problem.  Again, they should take a few minutes to work individually or in pairs on the first two problems.  \n\n**Share Out:** Allow students to quickly share out some ideas, then introduce the Waze video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r waze_and_data/csd5/2023] video in the slides.\n",
+        "description": "**Routz:** Ask students to move on to the Routz problem.  Again, they should take a few minutes to work individually or in pairs on the first two problems.  \n\n**Share Out:** Allow students to quickly share out some ideas, then introduce the Waze video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r waze_and_data/csd/2023] video in the slides.\n",
         "name": "Routz\r",
         "progression_name": "Video: Waze and Data"
       },
@@ -3973,7 +4006,7 @@
       "key": "d2b336e0-89eb-40ca-acb7-b31758c7794b",
       "position": 8,
       "properties": {
-        "description": "**Nyle:** Ask students to move on to the Nyle problem.  Again, they should take a few minutes to work individually or in pairs on the first two problems.  \n\n**Share Out:** Allow students to quickly share out some ideas, then introduce the Amazon video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r amazon_and_data/csd5/2023] video in the slides.\n",
+        "description": "**Nyle:** Ask students to move on to the Nyle problem.  Again, they should take a few minutes to work individually or in pairs on the first two problems.  \n\n**Share Out:** Allow students to quickly share out some ideas, then introduce the Amazon video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r amazon_and_data/csd/2023] video in the slides.\n",
         "name": "Nyle\r",
         "progression_name": "Video: Amazon and Data"
       },
@@ -4108,12 +4141,12 @@
       "key": "5f34a7ba-cca4-44ac-a233-5445f00c8d37",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_machine_learning/csd5/2023] video in the slides.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_machine_learning/csd/2023] video in the slides.\n",
         "progression_name": "Video: What is Machine Learning?",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Alternatives to AI For Ocenas:** AI for Oceans was orginally developed as an Hour of Code activity that can be completed by students with any device available. We have modified it for its usage here. Depending on your classroom situation, you might opt to replace the activity with:\r\n\r\n* [Teachable Machines](https://teachablemachine.withgoogle.com/) - *Teachable Machine is a web-based tool that makes creating machine learning models fast, easy, and accessible to everyone. Teachable Machine is flexible – use files or capture examples live. It’s respectful of the way you work. You can even choose to use it entirely on-device, without any webcam or microphone data leaving your computer.* \r\n\t* If your classrooms devices have cameras, Teachable Machines offers an engaging way to create training sets. Encourage students to teach the machine to represent rock, paper, or scissors with hand gestures. What are some possible ways for bias to enter in?\r\n\r\n\r\n* [Machine Learning for Kids](https://machinelearningforkids.co.uk/#!/about) - *This free tool introduces machine learning by providing hands-on experiences for training machine learning systems and building things with them. It provides an easy-to-use guided environment for training machine learning models to recognise text, numbers, images, or sounds.*\r\n\t* Machine Learning for Kids is a great option if your students want to work with text samples. Teach the machine to recognize words or passages that are happy or sad. Lots to play around with here! \r\n"
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
           }
         ]
       },
@@ -4127,7 +4160,13 @@
       "position": 2,
       "properties": {
         "description": "Machine learning refers to a computer that can recognize patterns and make decisions without being explicitly programmed. In this activity you’re going to supply the data to train your own machine learning model. Imagine an ocean that contains creatures like fish, but also contains trash dumped by humans. What if we could train a computer to tell the difference and then use that technology to help clean the ocean?",
-        "remarks": true
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Alternatives to AI For Ocenas:** AI for Oceans was orginally developed as an Hour of Code activity that can be completed by students with any device available. We have modified it for its usage here. Depending on your classroom situation, you might opt to replace the activity with:\n\n* [Teachable Machines](https://teachablemachine.withgoogle.com/) - *Teachable Machine is a web-based tool that makes creating machine learning models fast, easy, and accessible to everyone. Teachable Machine is flexible – use files or capture examples live. It’s respectful of the way you work. You can even choose to use it entirely on-device, without any webcam or microphone data leaving your computer.* \n\t* If your classrooms devices have cameras, Teachable Machines offers an engaging way to create training sets. Encourage students to teach the machine to represent rock, paper, or scissors with hand gestures. What are some possible ways for bias to enter in?\n\n\n* [Machine Learning for Kids](https://machinelearningforkids.co.uk/#!/about) - *This free tool introduces machine learning by providing hands-on experiences for training machine learning systems and building things with them. It provides an easy-to-use guided environment for training machine learning models to recognise text, numbers, images, or sounds.*\n\t* Machine Learning for Kids is a great option if your students want to work with text samples. Teach the machine to recognize words or passages that are happy or sad. Lots to play around with here! \n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "f22b4e3e-3fcd-495f-94ba-10ae93f4c1d9",
@@ -4156,7 +4195,7 @@
       "key": "442bf598-494c-417c-a21d-c9191886f481",
       "position": 4,
       "properties": {
-        "description": "**Discuss:** How well did A.I. do? How do you think it decided what to include in the ocean?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_training_data_and_bias/csd5/2023] video in the slides.\n",
+        "description": "**Discuss:** How well did A.I. do? How do you think it decided what to include in the ocean?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_training_data_and_bias/csd/2023] video in the slides.\n",
         "progression_name": "Video: Training Data and Bias"
       },
       "seeding_key": {
@@ -4243,7 +4282,7 @@
       "key": "418a851d-7b88-4a3b-ac45-a981407461b9",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_impact_on_society/csd5/2023] video in the slides which recaps the concepts discussed today.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_impact_on_society/csd/2023] video in the slides which recaps the concepts discussed today.\n",
         "progression_name": "Video: Impact on Society"
       },
       "seeding_key": {
@@ -4636,6 +4675,31 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "intro-pulse-survey_csd5_2023"
+        ],
+        "progression": "Check-In Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "intro-pulse-survey_csd5_2023"
+        ],
+        "lesson.key": "Representation Matters",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd5-2023",
+        "activity_section.key": "8af2da4c-4ffd-45af-a037-b33f23c1b346"
+      },
+      "level_keys": [
+        "intro-pulse-survey_csd5_2023"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -4658,7 +4722,7 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 3,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4683,7 +4747,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 4,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4708,7 +4772,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 5,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -4733,7 +4797,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -4758,7 +4822,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4783,7 +4847,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4808,7 +4872,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4833,7 +4897,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4858,7 +4922,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4883,7 +4947,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4908,7 +4972,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4933,7 +4997,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4958,7 +5022,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -4983,7 +5047,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5008,7 +5072,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5033,7 +5097,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5058,6 +5122,18 @@
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "intro-pulse-survey_csd5_2023",
+        "script_level.level_keys": [
+          "intro-pulse-survey_csd5_2023"
+        ],
+        "lesson.key": "Representation Matters",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd5-2023",
+        "activity_section.key": "8af2da4c-4ffd-45af-a037-b33f23c1b346"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "CSD U5 black white images pixelation_2023",
@@ -5280,34 +5356,34 @@
     {
       "name": "All Resources",
       "url": "/s/csd5-2023/resources",
-      "key": "all_resources",
+      "key": "all_resources_3",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_resources"
+        "resource.key": "all_resources_3"
       }
     },
     {
       "name": "All Standards",
       "url": "/s/csd5-2023/standards",
-      "key": "all_standards",
+      "key": "all_standards_3",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_standards"
+        "resource.key": "all_standards_3"
       }
     },
     {
       "name": "All Vocabulary",
       "url": "/s/csd5-2023/vocab",
-      "key": "all_vocabulary",
+      "key": "all_vocabulary_3",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_vocabulary"
+        "resource.key": "all_vocabulary_3"
       }
     },
     {
@@ -5500,7 +5576,7 @@
     },
     {
       "name": "Create a Representation",
-      "url": "https://docs.google.com/document/d/1xkRLn_iCefnbohgrlForYsg4vXzEYYdBuD0Q2dK3E1I/edit",
+      "url": "https://docs.google.com/document/d/1uk54ffts0mvoMoo1aM_9WQxhB_i9dVbperk3V5NZgv4/edit?usp=sharing",
       "key": "create_a_representation",
       "properties": {
         "audience": "Verified Teacher",
@@ -5572,13 +5648,47 @@
       }
     },
     {
-      "name": "CSD Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1lTLydMBm2M5a5tq_35m-qj8Gat79WUYBWfpB3ikQyuY/view",
-      "key": "csd_curriculum_guide",
+      "name": "CSD Guide to Assessment",
+      "url": "https://docs.google.com/document/d/1IO5XgPW_Apil_Uziq5hAMCBgilm8txZ3sp8atxiKiLU/view",
+      "key": "csd_guide_to_assessment_5",
       "properties": {
+        "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "csd_curriculum_guide"
+        "resource.key": "csd_guide_to_assessment_5"
+      }
+    },
+    {
+      "name": "CSD Guide to Curriculum Videos",
+      "url": "https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view",
+      "key": "csd_guide_to_curriculum_videos_5",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_curriculum_videos_5"
+      }
+    },
+    {
+      "name": "CSD Guide to Differentiation",
+      "url": "https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view",
+      "key": "csd_guide_to_differentiation_4",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_differentiation_4"
+      }
+    },
+    {
+      "name": "CSD Guide to Teaching and Learning Strategies",
+      "url": "https://docs.google.com/document/d/1Cg5iTwERoX25Y2DdLNmrPCbVB2d9FPGfUMUvcnVoN8Q/view",
+      "key": "csd_guide_to_teaching_and_learning_strategies_5",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_teaching_and_learning_strategies_5"
       }
     },
     {
@@ -5586,29 +5696,10 @@
       "url": "https://docs.google.com/document/d/1NYJMHZYnAZYNctehlQOImSstsu48sRGOMbi4It4ZjkI/view",
       "key": "csd_guide_to_using_resources",
       "properties": {
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "csd_guide_to_using_resources"
-      }
-    },
-    {
-      "name": "CSD Implementation Guide",
-      "url": "https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view",
-      "key": "csd_implementation_guide",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csd_implementation_guide"
-      }
-    },
-    {
-      "name": "CSD Learning Frameworks",
-      "url": "https://docs.google.com/document/d/1WlmAr6CeU4NAQhPAa0YAO-ujVTls_12fOP3lbc2SLxo/view",
-      "key": "csd_learning_frameworks",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csd_learning_frameworks"
       }
     },
     {
@@ -5849,12 +5940,11 @@
       }
     },
     {
-      "name": "Number Cards",
-      "url": "https://docs.google.com/presentation/u/2/d/1pZVjuP_Mwz4nOIxc6Hxz-SFIMzn3oS-zy3klSIgrEAc/copy",
+      "name": "Number Cards - Digital Manipulative",
+      "url": "https://docs.google.com/presentation/d/1cBJrrEm4P5zyz4to07ol1l_AtPcS5QamNXAlS06gObk/edit?usp=sharing",
       "key": "number_cards",
       "properties": {
-        "audience": "Teacher",
-        "type": "Digital Manipulative"
+        "audience": "Teacher"
       },
       "seeding_key": {
         "resource.key": "number_cards"
@@ -5997,7 +6087,7 @@
     },
     {
       "name": "Project Guide Exemplar",
-      "url": "https://docs.google.com/document/d/1D-Wr_Q9st_DsT1MF92Ixm8RFnWwI9tYmQN2rUXpd8I8/edit",
+      "url": "https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/edit?usp=sharing",
       "key": "project_guide_exemplar",
       "properties": {
         "audience": "Verified Teacher",
@@ -6132,7 +6222,7 @@
     },
     {
       "name": "Sample Marked Rubrics",
-      "url": "https://docs.google.com/document/d/1fbImuYWBio4mkmFMWWGBolyEWihxFPlvtxgxGhRokIc/edit",
+      "url": "https://docs.google.com/document/d/17C1pGuIk1FL84FjMvUIisYa6x_U8aKREcljfqnEm21c/edit?usp=sharing",
       "key": "sample_marked_rubrics",
       "properties": {
         "audience": "Verified Teacher",
@@ -6144,8 +6234,8 @@
       }
     },
     {
-      "name": "Secret Messages 2021",
-      "url": "https://docs.google.com/document/d/1McCQtY7xWPnKvemkAf0bLxxxyJVJzQomWv4wcjInjXc/view",
+      "name": "Secret Messages",
+      "url": "https://docs.google.com/document/d/1j1IKIzIf3R3sck0hgW740SGbQmWTFdNKMrwPK0dBqSA/edit?usp=sharing",
       "key": "secret_messages_2021",
       "properties": {
         "audience": "Student",
@@ -6201,6 +6291,17 @@
       },
       "seeding_key": {
         "resource.key": "teacher_forum"
+      }
+    },
+    {
+      "name": "The Problem Solving Process with Data",
+      "url": "https://docs.google.com/document/d/19pdlJOjWqA5s7f5sr9mTL-v7x_ZMjQP36SlwqzJ-Ipo/view",
+      "key": "the_problem_solving_process_with_data",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "the_problem_solving_process_with_data"
       }
     },
     {
@@ -6705,25 +6806,43 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "all_resources",
+        "resource.key": "all_resources_3",
         "script.name": "csd5-2023"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_standards",
+        "resource.key": "all_standards_3",
         "script.name": "csd5-2023"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_vocabulary",
+        "resource.key": "all_vocabulary_3",
         "script.name": "csd5-2023"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "csd_curriculum_guide",
+        "resource.key": "csd_guide_to_assessment_5",
+        "script.name": "csd5-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_curriculum_videos_5",
+        "script.name": "csd5-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_differentiation_4",
+        "script.name": "csd5-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_teaching_and_learning_strategies_5",
         "script.name": "csd5-2023"
       }
     },
@@ -6735,19 +6854,13 @@
     },
     {
       "seeding_key": {
-        "resource.key": "csd_implementation_guide",
-        "script.name": "csd5-2023"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_learning_frameworks",
-        "script.name": "csd5-2023"
-      }
-    },
-    {
-      "seeding_key": {
         "resource.key": "teacher_forum",
+        "script.name": "csd5-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "the_problem_solving_process_with_data",
         "script.name": "csd5-2023"
       }
     }
@@ -7433,6 +7546,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

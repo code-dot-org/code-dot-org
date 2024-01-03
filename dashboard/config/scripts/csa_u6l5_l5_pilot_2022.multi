@@ -24,3 +24,5 @@ public boolean mystery(ArrayList<Dessert> desserts) {
 }
 ```
 MARKDOWN
+
+allow_multiple_attempts true

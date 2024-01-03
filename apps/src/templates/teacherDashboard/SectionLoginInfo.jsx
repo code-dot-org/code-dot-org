@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
+import fontConstants from '@cdo/apps/fontConstants';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import {PrintLoginCardsButtonMetricsCategory} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import PrintLoginCards from '@cdo/apps/templates/manageStudents/PrintLoginCards';
@@ -30,9 +31,10 @@ class SectionLoginInfo extends React.Component {
     // Provided by redux.
     section: PropTypes.shape({
       id: PropTypes.number.isRequired,
-      loginType: PropTypes.string.isRequired
+      loginType: PropTypes.string.isRequired,
+      code: PropTypes.string,
     }).isRequired,
-    students: PropTypes.array.isRequired
+    students: PropTypes.array.isRequired,
   };
 
   render() {
@@ -80,7 +82,7 @@ export const UnconnectedSectionLoginInfo = SectionLoginInfo;
 export default connect(state => ({
   section:
     state.teacherSections.sections[state.teacherSections.selectedSectionId],
-  students: state.teacherSections.selectedStudents
+  students: state.teacherSections.selectedStudents,
 }))(SectionLoginInfo);
 
 class OAuthLogins extends React.Component {
@@ -88,8 +90,8 @@ class OAuthLogins extends React.Component {
     sectionId: PropTypes.number.isRequired,
     loginType: PropTypes.oneOf([
       SectionLoginType.google_classroom,
-      SectionLoginType.clever
-    ]).isRequired
+      SectionLoginType.clever,
+    ]).isRequired,
   };
 
   render() {
@@ -113,7 +115,7 @@ class OAuthLogins extends React.Component {
           <SafeMarkdown
             markdown={i18n.syncingYourStudentsDescription({
               loginType: loginTypeLabel,
-              url: getManageStudentsUrl(sectionId)
+              url: getManageStudentsUrl(sectionId),
             })}
           />
           <br />
@@ -132,7 +134,7 @@ class EmailLogins extends React.Component {
   static propTypes = {
     studioUrlPrefix: PropTypes.string.isRequired,
     sectionCode: PropTypes.string.isRequired,
-    sectionId: PropTypes.number.isRequired
+    sectionId: PropTypes.number.isRequired,
   };
 
   render() {
@@ -145,7 +147,7 @@ class EmailLogins extends React.Component {
         <ol>
           <li>
             {i18n.loginInfo_joinStep1({
-              url: `${studioUrlPrefix}/users/sign_up`
+              url: `${studioUrlPrefix}/users/sign_up`,
             })}
             <br />
             <img
@@ -157,7 +159,7 @@ class EmailLogins extends React.Component {
           <li>
             {i18n.loginInfo_joinStep3({
               url: `${studioUrlPrefix}/join`,
-              code: sectionCode
+              code: sectionCode,
             })}
           </li>
           <li>{i18n.loginInfo_joinStep4()}</li>
@@ -168,7 +170,7 @@ class EmailLogins extends React.Component {
         <h2 style={styles.heading}>{i18n.loginInfo_resetTitle()}</h2>
         <SafeMarkdown
           markdown={i18n.loginInfo_resetPasswordBody({
-            url: getManageStudentsUrl(sectionId)
+            url: getManageStudentsUrl(sectionId),
           })}
         />
       </div>
@@ -181,7 +183,7 @@ class WordOrPictureLogins extends React.Component {
     studioUrlPrefix: PropTypes.string.isRequired,
     section: PropTypes.object.isRequired,
     students: PropTypes.array.isRequired,
-    autoPrint: PropTypes.bool
+    autoPrint: PropTypes.bool,
   };
 
   componentDidMount() {
@@ -214,7 +216,7 @@ class WordOrPictureLogins extends React.Component {
     printIframe.contentDocument.open();
     printIframe.contentDocument.write(
       `<html><head><title>${i18n.printLoginCards_windowTitle({
-        sectionName: section.name
+        sectionName: section.name,
       })}</title></head>
         <body>${printArea}</body></html>`
     );
@@ -224,6 +226,11 @@ class WordOrPictureLogins extends React.Component {
 
   render() {
     const {studioUrlPrefix, section, students} = this.props;
+    // Filter out any users who are teachers, used below to generate picture
+    // login cards.
+    const studentsOnly = students.filter(
+      student => student.userType !== 'teacher'
+    );
     const manageStudentsUrl = getManageStudentsUrl(section.id);
 
     return (
@@ -241,14 +248,14 @@ class WordOrPictureLogins extends React.Component {
         {section.loginType === SectionLoginType.picture && (
           <SafeMarkdown
             markdown={i18n.loginInfoResetSecretPicDesc({
-              url: manageStudentsUrl
+              url: manageStudentsUrl,
             })}
           />
         )}
         {section.loginType === SectionLoginType.word && (
           <SafeMarkdown
             markdown={i18n.loginInfoResetSecretWordDesc({
-              url: manageStudentsUrl
+              url: manageStudentsUrl,
             })}
           />
         )}
@@ -270,7 +277,7 @@ class WordOrPictureLogins extends React.Component {
             />
             <br />
             <div id="printArea" style={styles.container}>
-              {students.map(student => (
+              {studentsOnly.map(student => (
                 <LoginCard
                   key={student.id}
                   section={section}
@@ -293,7 +300,7 @@ class LoginCard extends React.Component {
   static propTypes = {
     section: PropTypes.object.isRequired,
     student: PropTypes.object.isRequired,
-    studioUrlPrefix: PropTypes.string.isRequired
+    studioUrlPrefix: PropTypes.string.isRequired,
   };
 
   render() {
@@ -304,7 +311,7 @@ class LoginCard extends React.Component {
         <SafeMarkdown
           style={styles.text}
           markdown={i18n.loginCardSectionName({
-            sectionName: section.name
+            sectionName: section.name,
           })}
         />
         <SafeMarkdown
@@ -312,20 +319,20 @@ class LoginCard extends React.Component {
           markdown={i18n.loginCardForPrint1({
             directLink: `${studioUrlPrefix}/sections/${section.code}`,
             joinLink: `${studioUrlPrefix}/join`,
-            sectionCode: section.code
+            sectionCode: section.code,
           })}
         />
         <SafeMarkdown
           style={styles.text}
           markdown={i18n.loginCardForPrint2({
-            studentName: student.name.trim()
+            studentName: student.name.trim(),
           })}
         />
         {section.loginType === SectionLoginType.word && (
           <SafeMarkdown
             style={styles.text}
             markdown={i18n.loginCardForPrint3Word({
-              secretWords: student.secretWords
+              secretWords: student.secretWords,
             })}
           />
         )}
@@ -350,7 +357,7 @@ class LoginCard extends React.Component {
 
 const styles = {
   container: {
-    width: 840
+    width: 840,
   },
   card: {
     border: '1px dashed black',
@@ -358,22 +365,22 @@ const styles = {
     padding: 10,
     margin: 8,
     float: 'left',
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     color: 'dimgray',
-    pageBreakInside: 'avoid'
+    pageBreakInside: 'avoid',
   },
   text: {
-    fontSize: 14
+    fontSize: 14,
   },
   bold: {
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   },
   img: {
     width: 150,
-    marginTop: 10
+    marginTop: 10,
   },
   heading: {
     color: color.purple,
-    marginTop: 0
-  }
+    marginTop: 0,
+  },
 };

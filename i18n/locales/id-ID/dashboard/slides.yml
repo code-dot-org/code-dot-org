@@ -1862,7 +1862,7 @@ id:
       1:
         text: "Hour of Code | Pesta Dansa: Pemanasan"
       2:
-        text: "Hai! Nama saya Miral Kotb dan saya seorang pedansa, developer perangkat lunak, dan pembuat iLuminate."
+        text: "Hai! Nama saya Miral Kotb dan saya seorang penari, pengembang perangkat lunak, dan pencipta iLuminate."
       3:
         text: "Ilmu komputer berkaitan dengan kreativitas dalam beragam cara. Bahkan tak terhitung. Maksud saya, setelah memiliki kemampuan menulis perangkat lunak, Anda dapat menyulap segala macam ide menjadi apa pun. Saya melakukannya dengan kostum bercahaya. Ada begitu banyak hal yang bisa dilakukan setelah Anda punya tool untuk menulis software, dan kemungkinan itu benar-benar tak terhingga."
       4:
@@ -2146,3 +2146,10 @@ id:
       10:
         image: 'notes/hoc_hello_world_2021_freeplay_10.jpg'
         text: "Jadi apa yang akan kamu buat? Kamu bisa menceritakan kisah tentang dirimu... atau mengarangnya dengan karakter spesialmu sendiri. Bahkan mungkin menggunakan keterampilan ilmu komputer barumu untuk proyek sekolahmu berikutnya! Bentangkan imajinasimu dan bersenang-senanglah!"
+    hoc-dance-ai-warmup:
+      2:
+        text: "Hai! Nama saya Miral Kotb dan saya seorang pedansa, developer perangkat lunak, dan pembuat iLuminate."
+      3:
+        text: "Ilmu komputer berkaitan dengan kreativitas dalam beragam cara. Bahkan tak terhitung. Maksud saya, setelah memiliki kemampuan menulis perangkat lunak, Anda dapat menyulap segala macam ide menjadi apa pun. Saya melakukannya dengan kostum bercahaya. Ada begitu banyak hal yang bisa dilakukan setelah Anda punya tool untuk menulis software, dan kemungkinan itu benar-benar tak terhingga."
+      5:
+        text: "Anda akan menggunakan blok code untuk memilih pedansa yang berbeda-beda, mengubah gerakan mereka, dan membuat mereka menanggapi musik, dan menjadikan mereka interaktif."

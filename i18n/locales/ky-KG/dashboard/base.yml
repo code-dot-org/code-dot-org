@@ -38,6 +38,7 @@ ky:
         current_password: 'Учурдагы сырсөз'
         locale: 'Тили'
         age: 'Жашы'
+        finish_sign_up_header_error: 'Кийинки каталарды оңдогула:'
   submit: Кошуу
   cancel: "Жок кыл"
   okay: "Окай"
@@ -52,7 +53,6 @@ ky:
     hoc_already_signed_up_heading: 'Кирбей баштоо'
     age: 'Жашы'
     submit: 'Катталуу'
-    additional_information: "Каттооңорду улантуу үчүн кошумча маалымат керек."
     field_is_required: "милдеттүү"
     email_preference_privacy: "(Купуялуулук саясатыбызды карагыла)"
     email_preference_yes: "Ооба"
@@ -211,6 +211,8 @@ ky:
       robotics:
         grok: 'Grok үйрөнүү'
         other: "Башка"
+      workshop_course:
+        other: 'Башка'
       email_opt_in:
         opt_in_yes: 'Ооба'
         opt_in_no: 'Жок'

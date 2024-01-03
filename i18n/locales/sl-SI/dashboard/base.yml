@@ -43,6 +43,7 @@ sl:
         gender: 'Spol'
         edit_header: 'Uredi podrobnosti računa'
         finish_sign_up_header: 'Dokončaj registracijo'
+        finish_sign_up_header_error: 'Prosim popravite sledeče napake:'
         error:
           future: ne more biti v prihodnosti
   beta: "beta"
@@ -126,7 +127,6 @@ sl:
     agree_us_data_transfer_teacher: '**Strinjam se, da lahko Code.org prenese podatke (vključno z osebnimi podatki) iz moje uporabe (in uporabe mojih študentov) tega spletnega mesta v Združene države Amerike** za namen gostovanja in obdelovanja teh podatkov.'
     data_collection_us: "Razumem, da je Code.org neprofitno spletno mesto iz ZDA in da se lahko zakoni glede zbiranja podatkov v ZDA razlikujejo od zakonov v moji državi."
     visit_privacy: 'Obiščite [Privacy Policy](%{privacy_url}) Code.org za več informacij.'
-    additional_information: "Potrebujemo nekaj dodatnih informacij za uspešno prijavo."
     user_type_student: "Učenec"
     user_type_teacher: "Učitelj/ica"
     field_is_required: "se zahtevan(o)"
@@ -648,9 +648,14 @@ sl:
       robotics:
         kodable: 'Kodable'
         other: "Drugi"
+      workshop_course:
+        other: 'Drugi'
       email_opt_in:
         opt_in_yes: 'Da'
         opt_in_no: 'Ne'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
   cookie_banner:
     accept: 'Strinjam se'
   copy: 'Kopiraj'

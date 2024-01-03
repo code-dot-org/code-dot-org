@@ -48,3 +48,51 @@ zh-TW:
           description_short: 電腦科學入門課程，學生能夠透過學習製作出真實的人工產物。
           description_student: 電腦科學探索（CS Discoveries）是一堂電腦科學的入門課程，學生能夠藉由這堂課來製作真實的人工產物，並透過電腦科學作為媒介用以發揮創意、溝通、解決問題及娛樂。
           description_teacher: 電腦科學探索（CS Discoveries）是一堂電腦科學的入門課程，學生能夠藉由這堂課來製作真實的人工產物，並透過電腦科學作為媒介用以發揮創意、溝通、解決問題及娛樂。
+        csd-pilot:
+          title: CSD 試行課程
+          description_student: 電腦科學探索（CS Discoveries）是一堂電腦科學的入門課程，學生能夠藉由這堂課來製作真實的人工產物，並透過電腦科學作為媒介用以發揮創意、溝通、解決問題及娛樂。
+        csp-2020:
+          description_short: 學習計算機科學的基礎概念。
+        csd-2020:
+          description_short: 電腦科學入門課程，學生能夠透過學習製作出真實的人工產物。
+          description_student: 電腦科學探索（CS Discoveries）是一堂電腦科學的入門課程，學生能夠藉由這堂課來製作真實的人工產物，並透過電腦科學作為媒介用以發揮創意、溝通、解決問題及娛樂。
+          description_teacher: 電腦科學探索（CS Discoveries）是一堂電腦科學的入門課程，學生能夠藉由這堂課來製作真實的人工產物，並透過電腦科學作為媒介用以發揮創意、溝通、解決問題及娛樂。
+        csp-2021:
+          description_short: 學習計算機科學的基礎概念。
+        mike-test:
+          title: 計算機科學基礎
+        csp-2022:
+          description_short: 學習計算機科學的基礎概念。
+        csp-2023:
+          description_short: 學習計算機科學的基礎概念。
+        csd-2023:
+          title: 計算機科學探索
+        vpl-csa-2023:
+          title: CSA 虛擬專業學習
+        self-paced-pl-csd-unit1-2023:
+          title: 問題解決與計算教學
+        self-paced-pl-csd-unit2-2023:
+          title: Web開發教學
+        self-paced-pl-csd-unit5-2023:
+          title: 數據教學與社會
+    resources:
+      curriculum/csd/2017:
+        name: 課程
+      teacher_forum_6/csd/2017:
+        name: 教師論壇
+      curriculum/csd/2018:
+        name: 課程
+      teacher_forum_6/csd/2018:
+        name: 教師論壇
+      curriculum/csd/2019:
+        name: 課程
+      teacher_forum/csd/2019:
+        name: 教師論壇
+      curriculum/csd/2020:
+        name: 課程
+      teacher_forum/csd/2020:
+        name: 教師論壇
+      getting_started_with_csd/csd/2021:
+        name: 計算機科學發現入門
+      csd_guide_to_curriculum_videos/csd/2023:
+        url: https://docs.google.com/document/d/1IAUdYWbayicz2LVqoK4miPsIoG79rlXFHxaJiKwk-wE

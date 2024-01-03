@@ -13,7 +13,7 @@ const DEFAULT_PROPS = {
   onDelete: () => {},
   viewingAsOwner: false,
   currentUserId: 111,
-  viewAsTeacher: false
+  viewAsTeacher: false,
 };
 
 describe('Code Review Comment', () => {
@@ -25,7 +25,7 @@ describe('Code Review Comment', () => {
     const combinedProps = {
       ...DEFAULT_PROPS,
       ...overrideProps,
-      ...{comment: combinedComment}
+      ...{comment: combinedComment},
     };
     return shallow(<Comment {...combinedProps} />);
   };
@@ -53,7 +53,7 @@ describe('Code Review Comment', () => {
 
   it('body has a blue background when from teacher', () => {
     renderAndCheckBackgroundColor(color.lightest_cyan, {
-      isFromTeacher: true
+      isFromTeacher: true,
     });
   });
 
@@ -69,10 +69,7 @@ describe('Code Review Comment', () => {
 
   it('displays hide option for visible resolved comment', () => {
     const wrapper = renderWrapper({isResolved: true});
-    const onClickPromise = wrapper
-      .find('a')
-      .first()
-      .invoke('onClick')();
+    const onClickPromise = wrapper.find('a').first().invoke('onClick')();
     onClickPromise.then(() =>
       expect(wrapper.find('.fa-eye-slash')).to.have.lengthOf(1)
     );

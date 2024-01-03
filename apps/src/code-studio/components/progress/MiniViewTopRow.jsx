@@ -11,7 +11,7 @@ import {getStore} from '@cdo/apps/redux';
 export default class MiniViewTopRow extends React.Component {
   static propTypes = {
     scriptName: PropTypes.string.isRequired,
-    selectedSectionId: PropTypes.number
+    selectedSectionId: PropTypes.number,
   };
 
   render() {
@@ -61,26 +61,26 @@ const styles = {
     marginBottom: 0,
     // matches the lineHeight of Button,
     height: 34,
-    lineHeight: '34px'
+    lineHeight: '34px',
   },
   // absolutely position children so that they're located correctly in RTL as well
   button: {
     position: 'absolute',
-    left: 15
+    left: 15,
   },
   buttonRtl: {
     position: 'absolute',
-    right: 15
+    right: 15,
   },
   toggle: {
     position: 'absolute',
     top: 10,
-    right: 15
+    right: 15,
   },
   toggleRtl: {
     position: 'absolute',
     top: 10,
     left: 15,
-    direction: 'ltr'
-  }
+    direction: 'ltr',
+  },
 };

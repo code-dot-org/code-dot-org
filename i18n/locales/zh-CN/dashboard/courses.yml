@@ -48,3 +48,49 @@ zh-CN:
           description_short: 一门计算机科学的入门课程，它能够赋予学生们能力来创造真正的作品。
           description_student: 计算机科学探索（CS 探索） 是一门计算机科学的入门课程，它能够赋予学生们能力来创造真正的作品，而且能够激励他们将计算机科学作为一种工具来进行创新、沟通、解决问题并获得乐趣。
           description_teacher: 计算机科学探索（CS 探索） 是一门计算机科学的入门课程，它能够赋予学生们能力来创造真正的作品，而且能够激励他们将计算机科学作为一种工具来进行创新、沟通、解决问题并获得乐趣。
+        csd-pilot:
+          title: 计算机科学发现试验课程
+          description_student: 计算机科学探索（CS 探索） 是一门计算机科学的入门课程，它能够赋予学生们能力来创造真正的作品，而且能够激励他们将计算机科学作为一种工具来进行创新、沟通、解决问题并获得乐趣。
+        csp-2020:
+          description_short: 学习基本的计算机科学概念。
+        csd-2020:
+          description_short: 一门计算机科学的入门课程，它能够赋予学生们能力来创造真正的作品。
+          description_student: 计算机科学探索（CS 探索） 是一门计算机科学的入门课程，它能够赋予学生们能力来创造真正的作品，而且能够激励他们将计算机科学作为一种工具来进行创新、沟通、解决问题并获得乐趣。
+          description_teacher: 计算机科学探索（CS 探索） 是一门计算机科学的入门课程，它能够赋予学生们能力来创造真正的作品，而且能够激励他们将计算机科学作为一种工具来进行创新、沟通、解决问题并获得乐趣。
+        csp-2021:
+          description_short: 学习基本的计算机科学概念。
+        mike-test:
+          title: 计算机科学基础
+        csp-2022:
+          description_short: 学习基本的计算机科学概念。
+        csp-2023:
+          description_short: 学习基本的计算机科学概念。
+        csd-2023:
+          title: 计算机科学探索
+        vpl-csa-2023:
+          title: CSA 虚拟专业学习
+        self-paced-pl-csd-unit1-2023:
+          title: 教授问题解决和计算
+        self-paced-pl-csd-unit2-2023:
+          title: Web开发教学
+        self-paced-pl-csd-unit5-2023:
+          title: 教学数据与社会
+    resources:
+      curriculum/csd/2017:
+        name: 课程
+      teacher_forum_6/csd/2017:
+        name: 教师论坛
+      curriculum/csd/2018:
+        name: 课程
+      teacher_forum_6/csd/2018:
+        name: 教师论坛
+      curriculum/csd/2019:
+        name: 课程
+      teacher_forum/csd/2019:
+        name: 教师论坛
+      curriculum/csd/2020:
+        name: 课程
+      teacher_forum/csd/2020:
+        name: 教师论坛
+      getting_started_with_csd/csd/2021:
+        name: 计算机科学发现入门

@@ -16,7 +16,7 @@ const FlappyVisualizationColumn = ({showFinishButton}) => {
         {showFinishButton && (
           <div id="right-button-cell">
             <button type="button" id="rightButton" className="share">
-              <img src="/blockly/media/1x1.gif" />
+              <img src="/blockly/media/1x1.gif" alt="" />
               {msg.finish()}
             </button>
           </div>
@@ -27,7 +27,7 @@ const FlappyVisualizationColumn = ({showFinishButton}) => {
   );
 };
 FlappyVisualizationColumn.propTypes = {
-  showFinishButton: PropTypes.bool.isRequired
+  showFinishButton: PropTypes.bool.isRequired,
 };
 
 module.exports = FlappyVisualizationColumn;

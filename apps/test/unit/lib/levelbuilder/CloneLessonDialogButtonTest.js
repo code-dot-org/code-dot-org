@@ -10,7 +10,7 @@ describe('CloneLessonDialogButton', () => {
     defaultProps = {
       lessonId: 123,
       lessonName: 'Lesson One',
-      buttonText: 'Make a Copy'
+      buttonText: 'Make a Copy',
     };
   });
 

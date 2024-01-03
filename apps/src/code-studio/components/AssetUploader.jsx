@@ -16,7 +16,7 @@ export default class AssetUploader extends React.Component {
     onUploadError: PropTypes.func,
     allowedExtensions: PropTypes.string,
     uploadsEnabled: PropTypes.bool.isRequired,
-    api: PropTypes.object.isRequired
+    api: PropTypes.object.isRequired,
   };
 
   /**

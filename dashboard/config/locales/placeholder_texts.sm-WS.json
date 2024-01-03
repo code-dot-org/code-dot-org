@@ -1,0 +1,324 @@
+{
+  "sm-WS": {
+    "data": {
+      "placeholder_texts": {
+        "Alien Defender": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "Choose Your Own Adventure": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "Course 4 Playlab For Loop Freeplay": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "Course E: Play Lab Project": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "Find the Wizard": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "0b895ef4c917e50663bc2a7327cbee3d": "Ua e maua au",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "FoodFight": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "Guess The Number": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "NEW Course 4 Play Lab Params 11": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "New Play Lab Project": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "OPD-K5-projects-2": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "OPD-K5-projects-3": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "OPD-K5-projects-4": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "OPD-K5-projects-5": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "course4_playlab_variables_challenge1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "courseC19_playLab_EOC1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "courseC19_playLab_EOC12022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "courseC19_playLab_EOC1_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "courseC19_playLab_EOC1_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "courseC19_playLab_EOC1_2023": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "courseC19_playLab_EOC2": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "courseC19_playLab_EOC22022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "courseC19_playLab_EOC2_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "courseC19_playLab_EOC2_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "courseC19_playLab_EOC2_2023": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "courseC19_playLab_EOC3": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "courseC19_playLab_EOC32022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "courseC19_playLab_EOC3_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "courseC19_playLab_EOC3_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "courseC19_playLab_EOC3_2023": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "courseC19_playLab_EOC4": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "courseC19_playLab_EOC42022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "courseC19_playLab_EOC4_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "courseC19_playLab_EOC4_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "courseC19_playLab_EOC4_2023": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "courseC_PlayLab_eventsFP": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "courseC_PlayLab_eventsFP2022": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "courseC_PlayLab_eventsFP_2018": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "courseC_PlayLab_eventsFP_2019": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "courseC_PlayLab_eventsFP_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "courseC_PlayLab_eventsFP_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "courseC_PlayLab_eventsFP_2023": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "courseD_playLab_condFP": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "courseE_Dogger_2": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "Ua e manumalo"
+        },
+        "courseE_aboutme_3": {
+          "ed076287532e86365e841e92bfc50d8c": "Talofa le lalolagi!"
+        },
+        "courseE_aboutme_32022": {
+          "ed076287532e86365e841e92bfc50d8c": "Talofa le lalolagi!"
+        },
+        "courseE_aboutme_3_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "Talofa le lalolagi!"
+        },
+        "courseE_aboutme_3_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Talofa le lalolagi!"
+        },
+        "courseE_aboutme_3_2023": {
+          "ed076287532e86365e841e92bfc50d8c": "Talofa le lalolagi!"
+        },
+        "courseE_aboutme_4": {
+          "ed076287532e86365e841e92bfc50d8c": "Talofa le lalolagi!"
+        },
+        "courseE_aboutme_42022": {
+          "ed076287532e86365e841e92bfc50d8c": "Talofa le lalolagi!"
+        },
+        "courseE_aboutme_4_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "Talofa le lalolagi!"
+        },
+        "courseE_aboutme_4_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Talofa le lalolagi!"
+        },
+        "courseE_aboutme_4_2023": {
+          "ed076287532e86365e841e92bfc50d8c": "Talofa le lalolagi!"
+        },
+        "courseE_aboutme_5": {
+          "ed076287532e86365e841e92bfc50d8c": "Talofa le lalolagi!"
+        },
+        "courseE_aboutme_52022": {
+          "ed076287532e86365e841e92bfc50d8c": "Talofa le lalolagi!"
+        },
+        "courseE_aboutme_5_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "Talofa le lalolagi!"
+        },
+        "courseE_aboutme_5_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Talofa le lalolagi!"
+        },
+        "courseE_aboutme_5_2023": {
+          "ed076287532e86365e841e92bfc50d8c": "Talofa le lalolagi!"
+        },
+        "courseE_playLab_scaffold1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "courseE_playLab_scaffold2": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "courseE_playLab_scaffold3": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "courseE_playLab_scaffold4": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "courseF_apps_aquarium": {
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "manu "
+        },
+        "courseF_apps_aquarium2022": {
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "manu "
+        },
+        "courseF_apps_aquarium_-2022-2": {
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "manu "
+        },
+        "courseF_apps_aquarium_2023": {
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "manu "
+        },
+        "courseF_apps_collector": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "Ua e manumalo"
+        },
+        "courseF_apps_collector2022": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "Ua e manumalo"
+        },
+        "courseF_apps_collector_-2022-2": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "Ua e manumalo"
+        },
+        "courseF_apps_collector_2023": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "Ua e manumalo"
+        },
+        "courseF_playlab_variables1a": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "courseF_playlab_variables2b": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei",
+          "48d6215903dff56238e52e8891380c8f": "lanumoana"
+        },
+        "courseF_playlab_variables3b_josh": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "courseF_playlab_variables4b": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "courseF_playlab_variables4c_predictive1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "courseF_playlab_variables5c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei",
+          "bda9643ac6601722a28f238714274da4": "lanu mumu"
+        },
+        "courseF_playlab_variables6c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "courseF_playlab_variables7b": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "courseF_playlab_variables7c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei",
+          "c216de13cd615c884ff2cc5894324e17": "Filifili se lanu. "
+        },
+        "courseF_playlab_variables8c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei",
+          "8460ae10541cf8ded22a4e899ddfc0bb": "Faamalie atu",
+          "8622f69e8cf70458a82fc22d8e46372f": "Na ou le mafaufauina se lanu",
+          "bec312aa7dbfb0c284d221d2aa8e9ffd": "Malo",
+          "c216de13cd615c884ff2cc5894324e17": "Filifili se lanu. ",
+          "cd0d7bbbbb604e524bfc25effa78095d": "Na ou mafaufau i le lanu"
+        },
+        "courseF_playlab_variables_challenge1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        },
+        "courseF_project_1": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "Ua e manumalo"
+        },
+        "iceage_free_play": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "tusi upu iinei",
+          "30fcc1693fa8402931d13ac3a5f396fd": "tusi le ulutala iinei"
+        }
+      }
+    }
+  }
+}

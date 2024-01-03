@@ -13,7 +13,10 @@ module Crowdin
       'codeorg-markdown' => 314545,
       'codeorg-restricted' => 464582,
       'codeorg-testing' => 346087,
-      'codeorg-markdown-testing' => 547997
+      'codeorg-markdown-testing' => 547997,
+      'hour-of-code-test' => 634038,
+      'codeorg-restricted-test' => 634320
+
     }
 
     CDO_PROJECT_SOURCE_LANGUAGES = {
@@ -21,7 +24,10 @@ module Crowdin
       'hour-of-code' => 'en',
       'codeorg-markdown' => 'en',
       'codeorg-restricted' => 'en',
-      'codeorg-testing' => 'en'
+      'codeorg-testing' => 'en',
+      'codeorg-markdown-testing' => 'en',
+      'hour-of-code-test' => 'en',
+      'codeorg-restricted-test' => 'en'
     }
 
     # Maximum number of items to retrieve from Crowdin in an API call
@@ -159,19 +165,19 @@ module Crowdin
   end
 
   class CrowdinRateLimitError < StandardError
-    def initialize(msg="Rate Limit Error")
+    def initialize(msg = "Rate Limit Error")
       super
     end
   end
 
   class CrowdinInternalServerError < StandardError
-    def initialize(msg="Internal Server Error")
+    def initialize(msg = "Internal Server Error")
       super
     end
   end
 
   class CrowdinServiceUnavailableError < StandardError
-    def initialize(msg="Service Unavailable")
+    def initialize(msg = "Service Unavailable")
       super
     end
   end

@@ -4,18 +4,32 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "00a51a2d-352d-4fe2-9653-e08591fc9b38",
+          "notice": "Free Teacher Resources from Amazon Future Engineer",
+          "details": "Code.org has partnered with Amazon Future Engineer to offer teachers at underserved schools a growing number of resources and benefits at no cost! ",
+          "link": "https://code.org/afe",
+          "type": "bullhorn",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Get free resources"
+        }
+      ],
       "curriculum_umbrella": "CSA",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
+      "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-03-10 18:49:16 UTC",
+    "serialized_at": "2023-12-14 04:03:58 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -50,15 +64,39 @@
       }
     },
     {
-      "key": "lessonGroup-4",
+      "key": "lessonGroup-5",
       "user_facing": true,
       "position": 3,
+      "properties": {
+        "display_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa3-2023"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 4,
       "properties": {
         "display_name": "Alternate Lessons",
         "description": "This section contains the one-day version of the Data for Social Good Project."
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa3-2023"
+      }
+    },
+    {
+      "key": "lessonGroup-6",
+      "user_facing": true,
+      "position": 5,
+      "properties": {
+        "display_name": "Sandboxes"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "csa3-2023"
       }
     }
@@ -72,8 +110,9 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/1) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I store multiple related values without creating multiple variables?**\n\nStudents have used variables to store literal values and references to objects. In this lesson, students discover the need for one-dimensional (1D) arrays to store multiple related values. Students explore the syntax and functionality of 1D arrays and learn how to declare and initialize a 1D array using the `new` keyword. They learn how to determine the length of a 1D array, then practice creating 1D arrays using the `new` keyword and accessing and returning their length.",
-        "preparation": "* Print copies of the Unit 3 Guide (one for each student)\n* Preview the *One-Dimensional (1D) Arrays* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-3-lesson-1-one-dimensional-1d-arrays/36384/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U3L1 Guided Notes (one for each student)\n* Print copies of the Unit 3 Guide (one for each student)\n* Preview the *One-Dimensional (1D) Arrays* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-1-one-dimensional-1d-arrays/37885) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I store multiple related values without creating multiple variables?**\n\nYou have used variables to store literal values and references to objects. In this lesson, you discover the need for one-dimensional (1D) arrays to store multiple related values. You explore the syntax and functionality of 1D arrays and learn how to declare and initialize a 1D array using the `new` keyword. You learn how to determine the length of a 1D array then practice creating 1D arrays using the `new` keyword and assigning and accessing values at specific positions."
       },
       "seeding_key": {
@@ -90,8 +129,9 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/2) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I easily assign multiple elements to a one-dimensional (1D) array?**\n\nIn this lesson, students explore using initializer lists to create one-dimensional (1D) arrays and learn how to access and modify elements. They discover that the size of a 1D array cannot be changed after it is created and identify similarities and differences between assigning values to a 1D array and to a variable. Students then practice creating a 1D array using initializer lists and modifying the values stored in a 1D array.",
-        "preparation": "* Preview the *Modifying Values in a 1D Array* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-3-lesson-2-array-elements/36383/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U3L2 Guided Notes (one for each student)\n* Preview the *Modifying Values in a 1D Array* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-2-modifying-elements/37886) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I easily assign multiple elements to a one-dimensional (1D) array?**\n\nIn this lesson, you explore using initializer lists to create one-dimensional (1D) arrays and learn how to access and modify elements. You discover that the size of a 1D array cannot be changed after it is created and identify similarities and differences between assigning values to a 1D array and to a variable. You then practice creating a 1D array using initializer lists and modifying the values stored in a 1D array."
       },
       "seeding_key": {
@@ -108,8 +148,9 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 4.2\n* Topic Questions 6.1\n* Topic Questions 6.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/3) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I easily access all elements in a one-dimensional (1D) array?**\n\nStudents have learned how to declare and initialize one-dimensional (1D) arrays and access and modify elements one at a time. In this lesson, students discover the need for loops to repeatedly access multiple elements and revisit `while` loops. Students learn how to traverse 1D arrays using a `while` loop and discover the cause of the `ArrayIndexOutOfBoundsException` and strategies for debugging this error. Students then practice using `while` loops to traverse one and multiple 1D arrays.",
-        "preparation": "* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-3-lesson-2-array-elements/36383/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U3L3 Guided Notes (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-3-traversing-1d-arrays/37887) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I easily access all elements in a one-dimensional (1D) array?**\n\nYou have learned how to declare and initialize one-dimensional (1D) arrays and access and modify elements one at a time. In this lesson, you discover the need for loops to repeatedly access multiple elements and revisit `while` loops. You learn how to traverse 1D arrays using a `while` loop and discover the cause of the `ArrayIndexOutOfBoundsException` and strategies for debugging this error. You then practice using `while` loops to traverse one and multiple 1D arrays."
       },
       "seeding_key": {
@@ -126,8 +167,9 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.4\n* Topic Questions 6.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/4) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I write more efficient code to traverse a 1D array?**\n\nStudents learn about the structure and functionality of a `for` loop and explore how it can be used to traverse a one-dimensional (1D) array. They identify similarities and differences between `while` loops and `for` loops and practice tracing code segments involving a `for` loop to determine the output. Students then practice converting `while` loops to `for` loops and using `for` loops to traverse 1D arrays to access and modify elements and identify ideal scenarios for using each type of loop.",
-        "preparation": "* Preview the *For Loops* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-3-lesson-3-for-loops/36382/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U3L4 Guided Notes (one for each student)\n* Preview the *For Loops* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-4-for-loops/37888) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I write more efficient code to traverse a 1D array?**\n\nYou learn about the structure and functionality of a `for` loop and explore how it can be used to traverse a one-dimensional (1D) array. You identify similarities and differences between `while` loops and `for` loops and practice tracing code segments involving a `for` loop to determine the output. You then practice converting `while` loops to `for` loops and using `for` loops to traverse 1D arrays to access and modify elements and identify ideal scenarios for using each type of loop."
       },
       "seeding_key": {
@@ -144,8 +186,9 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.3\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/5) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I perform calculations on the values stored in a 1D array?**\n\nStudents have learned how to create one-dimensional (1D) arrays using the `new` keyword and initializer lists and access and modify one or multiple elements. In this lesson, students explore how values from a text file can be read and stored in a 1D array and consider the preconditions and postconditions an algorithm should satisfy. Students then apply their knowledge of 1D arrays, loops, and returning values from methods to plan and implement algorithms to calculate the sum and average of the values in a 1D array. ",
-        "preparation": "* Print copies of the CS Bingo Cards (one card for each student)\n* Print the CS Bingo Definitions resource and mix them up\n* Print copies of the Writing Algorithms with Arrays (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-3-lesson-4-array-algorithms/36381/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U3L5 Guided Notes (one for each student)\n* Print copies of the CS Bingo Cards (one card for each student)\n* Print the CS Bingo Definitions resource and mix them up OR use [**this web-based version**](https://csabingo.up.railway.app/) to show the terms and definitions\n* Print copies of the Writing Algorithms with Arrays (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-5-preconditions-and-postconditions/37889) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I perform calculations on the values stored in a 1D array?**\n\nYou have learned how to create one-dimensional (1D) arrays using the `new` keyword and initializer lists and access and modify one or multiple elements. In this lesson, you explore how values from a text file can be read and stored in a 1D array and consider the preconditions and postconditions an algorithm should satisfy. You then apply your knowledge of 1D arrays, loops, and returning values from methods to plan and implement algorithms to calculate the sum and average of the values in a 1D array."
       },
       "seeding_key": {
@@ -162,8 +205,9 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 6.1\n* Topic Questions 9.5\n* Topic Questions 9.6\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/6) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can polymorphism improve the efficiency and flexibility of my program code?**\n\nIn this lesson, students expand on what they know about inheritance to explore how they can create arrays of objects. They learn about polymorphism and discover how it can be implemented to make program code more efficient and flexible. Students recall overriding the `toString()` method and how this approach can be applied to override a superclass method in a subclass. Students then practice using superclass references to create and work with 1D arrays.",
-        "preparation": "* Preview the *Polymorphism* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-3-lesson-7-polymorphism/36378/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U3L6 Guided Notes (one for each student)\n* Preview the *Polymorphism* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-6-polymorphism/37890) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can polymorphism improve the efficiency and flexibility of my program code?**\n\nIn this lesson, you expand on what you know about inheritance to explore how you can create arrays of objects. You learn about polymorphism and discover how it can be implemented to make program code more efficient and flexible. You recall overriding the `toString()` method and how this approach can be applied to override a superclass method in a subclass. You then practice using superclass references to create and work with 1D arrays."
       },
       "seeding_key": {
@@ -180,8 +224,9 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 6.3\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/7) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**When would I want to traverse an array with an enhanced `for` loop?**\n\nStudents have learned to use `while` and `for` loops to traverse a 1D array. In this lesson, students explore the syntax and functionality of an enhanced `for` loop and identify scenarios where this type of loop would be useful. Students practice converting `while` and `for` loops to enhanced `for` loops and implementing algorithms to find the sum and average of the values in a 1D array using an enhanced `for` loop.",
-        "preparation": "* Preview the *Careers in Tech: My Name is Polina* and *Enhanced For Loops* videos\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-3-lesson-5-enhanced-for-loops/36380/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U3L7 Guided Notes (one for each student)\n* Preview the *Careers in Tech: My Name is Polina* and *Enhanced For Loops* videos\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-7-enhanced-for-loops/37891) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**When would I want to traverse an array with an enhanced `for` loop?**\n\nYou have learned to use `while` and `for` loops to traverse a 1D array. In this lesson, you explore the syntax and functionality of an enhanced `for` loop and identify scenarios where this type of loop would be useful. You practice converting `while` and `for` loops to enhanced `for` loops and implementing algorithms to find the sum and average of the values in a 1D array using an enhanced `for` loop."
       },
       "seeding_key": {
@@ -198,8 +243,9 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 9.7\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/8) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I use what I know about object-oriented programming and 1D arrays to plan and implement algorithms?**\n\nIn this lesson, students apply what they have learned so far to plan and implement standard algorithms to search or modify a one-dimensional (1D) array. Students discover the need for the `equals()` method when comparing `String` objects for equality and explore the difference between executing a return statement inside of a loop and at the end of a method. Students then work with a partner and use manipulatives to plan and implement an algorithm to determine the minimum or maximum value in a 1D array, determine if at least one element in a 1D array has a particular property, determine if all elements in a 1D array have a particular property, or determine the number of elements in a 1D array meet specific criteria. After implementing their algorithm, students conduct a code review to refine and improve their code.",
-        "preparation": "* Create code review groups if you are not reusing the same groups\n* Print copies of the Writing Algorithms with Arrays handout (one for each pair of students)\n* Print copies of the Planning Algorithms Manipulatives (one set for each pair of students)\n* (Optional) Cut out the Planning Algorithms Manipulatives and place in baggies\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-3-lesson-8-more-array-algorithms/36377/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U3L8 Guided Notes (one for each student)\n* Print copies of the Writing Algorithms with Arrays handout (one for each pair of students)\n* Print copies of the Planning Algorithms Manipulatives (one set for each pair of students)\n* (Optional) Cut out the Planning Algorithms Manipulatives and place in baggies\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-8-array-algorithms/37892) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I use what I know about object-oriented programming and 1D arrays to plan and implement algorithms?**\n\nIn this lesson, you apply what you have learned so far to plan and implement standard algorithms to search or modify a one-dimensional (1D) array. You discover the need for the `equals()` method when comparing `String` objects for equality and explore the difference between executing a return statement inside of a loop and at the end of a method. You then work with a partner and use manipulatives to plan and implement an algorithm to determine the minimum or maximum value in a 1D array, determine if at least one element in a 1D array has a particular property, determine if all elements in a 1D array have a particular property, or determine the number of elements in a 1D array meet specific criteria. After implementing your algorithm, you conduct a code review to refine and improve your code."
       },
       "seeding_key": {
@@ -216,8 +262,9 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 4.4\n* Topic Questions 6.4\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/9) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I check if a 1D array contains duplicate elements?**\n\nStudents have learned how to traverse one-dimensional (1D) arrays and implement algorithms to search and modify elements. They expand on their knowledge of loops to explore using nested loops with 1D arrays and practice tracing these to determine the output of code segments using nested loops. Students then work with a partner and use manipulatives to plan and implement an algorithm to find duplicate values in a 1D array.",
-        "preparation": "* Print copies of the Finding Duplicates handout (one for each pair of students)\n* Print copies of the Planning Algorithms Manipulatives (one set for each pair of students)\n* (Optional) Cut out the Planning Algorithms Manipulatives and place in baggies\n* Preview the *Nested Loops* video\n* Print copies of the Unit 3 Study Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-3-lesson-10-finding-duplicates/36375/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U3L9 Guided Notes (one for each student)\n* Print copies of the Finding Duplicates handout (one for each pair of students)\n* Print copies of the Planning Algorithms Manipulatives (one set for each pair of students)\n* (Optional) Cut out the Planning Algorithms Manipulatives and place in baggies\n* Preview the *Nested Loops* video\n* Print copies of the Unit 3 Study Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-9-finding-duplicates/37893) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I check if a 1D array contains duplicate elements?**\n\nYou have learned how to traverse one-dimensional (1D) arrays and implement algorithms to search and modify elements. You expand on your knowledge of loops to explore using nested loops with 1D arrays and practice tracing these to determine the output of code segments using nested loops. You then work with a partner and use manipulatives to plan and implement an algorithm to find duplicate values in a 1D array."
       },
       "seeding_key": {
@@ -236,7 +283,7 @@
       "properties": {
         "assessment": true,
         "overview": "**What questions do I want to answer using data?**\n\nFor this project, students use the skills they have developed throughout this unit to store and analyze data from text file for a topic that they are interested in or that is meaningful to them. Students choose a user scenario and data they want to analyze to identify a solution to address a user's needs. After brainstorming and planning, students develop their programs.",
-        "preparation": "* Review project setup, requirements, and rubric\n* Print copies of the Data for Social Good Project Planning Guide (one for each student)\n* Create code review groups if you are not reusing the same groups\n* Gather several sticky notes for each student\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-3-data-for-social-good-project/36374/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Review project setup, requirements, and rubric\n* Print copies of the Data for Social Good Project Planning Guide (one for each student)\n* Create code review groups if you are not reusing the same groups\n* Gather several sticky notes for each student\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-10-data-for-social-good-project/37894) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What questions do I want to answer using data?**\n\nFor this project, you use the skills you have developed throughout this unit to store and analyze data from text files for a topic that you are interested in or that is meaningful to you. You choose a user scenario and data you want to analyze to identify a solution to address a user's needs. After brainstorming and planning, you develop your program."
       },
       "seeding_key": {
@@ -254,7 +301,7 @@
       "relative_position": 11,
       "properties": {
         "overview": "**How will I use what I know about 1D arrays to answer a Free Response Question?**\n\nStudents practice developing solutions to AP CSA FRQs on a mock Arrays FRQ. Students apply decomposition and annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
-        "preparation": "* Print copies of the TicketTracker FRQ Graphic Organizer (one for each student)\n* Print copies of the TicketTracker FRQ handout (one for each student)\n* Print copies of the TicketTracker FRQ Scoring Guidelines (one for each student)\n* (Optional) Gather blue, orange, and pink colored pencils or markers for each student\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-3-frq-practice/36373/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Print copies of the TicketTracker FRQ Graphic Organizer (one for each student)\n* Print copies of the TicketTracker FRQ handout (one for each student)\n* Print copies of the TicketTracker FRQ Scoring Guidelines (one for each student)\n* (Optional) Gather blue, orange, and pink colored pencils or markers for each student\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-11-tickettracker-frq/37895) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How will I use what I know about 1D arrays to answer a Free Response Question?**\n\nIn this lesson, you practice developing solutions to AP CSA FRQs on a mock Arrays FRQ. You apply decomposition and annotation strategies to identify the key components of the problem and validate your solution using Scoring Guidelines."
       },
       "seeding_key": {
@@ -273,7 +320,7 @@
       "properties": {
         "assessment": true,
         "overview": "Students complete a multiple-choice assessment that covers the unit topics.",
-        "preparation": "* Preview the assessment questions\n* Unlock the assessment questions as indicated on the Unlocking Assessments resource\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-unit-1-assessment/36398/2) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Preview the assessment questions\n* Unlock the assessment questions as indicated on the Unlocking Assessments resource\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-12-unit-3-assessment/37896) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Congratulations, you completed Unit 3! Assess your progress through the Unit 3 Assessment."
       },
       "seeding_key": {
@@ -283,21 +330,81 @@
       }
     },
     {
-      "key": "lesson-13",
-      "name": "Data for Social Good Project [1-Day Version]",
+      "key": "lesson-14",
+      "name": "Unit 3 Survey",
       "absolute_position": 13,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa3-2023"
+      }
+    },
+    {
+      "key": "lesson-13",
+      "name": "Data for Social Good Project [1-Day Version]",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 14,
       "properties": {
         "assessment": true,
         "overview": "**What questions do I want to answer using data?**\n\nFor this project, students use the skills they have developed throughout this unit to store and analyze data from text file for a topic that they are interested in or that is meaningful to them. Students choose a user scenario and data they want to analyze to identify a solution to address a user's needs. After brainstorming and planning, students develop their programs.",
-        "preparation": "* Review project requirements and rubric\n* Print copies of the Data for Social Good Project Planning Guide (one for each student)",
+        "preparation": "* Review project requirements and rubric\n* Print copies of the Data for Social Good Project Planning Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-10-data-for-social-good-project/37894) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What questions do I want to answer using data?**\n\nFor this project, you use the skills you have developed throughout this unit to store and analyze data from text files for a topic that you are interested in or that is meaningful to you. You choose a user scenario and data you want to analyze to identify a solution to address a user's needs. After brainstorming and planning, you develop your program."
       },
       "seeding_key": {
         "lesson.key": "lesson-13",
         "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa3-2023"
+      }
+    },
+    {
+      "key": "lesson-15",
+      "name": "Sandbox: Console",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa3-2023"
+      }
+    },
+    {
+      "key": "lesson-16",
+      "name": "Sandbox: The Neighborhood",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa3-2023"
+      }
+    },
+    {
+      "key": "lesson-17",
+      "name": "Sandbox: The Theater",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "csa3-2023"
       }
     }
@@ -806,6 +913,18 @@
       }
     },
     {
+      "key": "6b684363-5bad-498f-a96a-a73e7f6991d8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6b684363-5bad-498f-a96a-a73e7f6991d8",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa3-2023"
+      }
+    },
+    {
       "key": "b1203ebb-a4df-421f-baf1-9bb43d5aad3a",
       "position": 1,
       "properties": {
@@ -846,6 +965,42 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa3-2023"
       }
+    },
+    {
+      "key": "b329af63-87ba-40e1-bff4-73a3bf0c035a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b329af63-87ba-40e1-bff4-73a3bf0c035a",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa3-2023"
+      }
+    },
+    {
+      "key": "257aba58-6bb4-4a2a-8dd6-b6c4a8b396ba",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "257aba58-6bb4-4a2a-8dd6-b6c4a8b396ba",
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa3-2023"
+      }
+    },
+    {
+      "key": "df134981-3faa-49cd-bca7-601db0dc0e67",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "df134981-3faa-49cd-bca7-601db0dc0e67",
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa3-2023"
+      }
     }
   ],
   "activity_sections": [
@@ -866,7 +1021,7 @@
       "key": "a0e68ba9-201e-496f-8e5a-1c9c151611ab",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 3 Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How could we store these values in a program based on what we know about Java?*\n\n**Discussion Goal:** Students suggest creating a variable for each value. Students might realize the need for creating a list to store the values and may recall creating lists in programs in previous computer science courses.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How could we store these values in a program based on what we know about Java?*\n\n**Discussion Goal:** Students suggest creating a variable for each value. Students might realize the need for creating a list to store the values and may recall creating lists in programs in previous computer science courses.",
         "tips": [
           {
             "type": "teachingTip",
@@ -962,7 +1117,7 @@
       "key": "41aeac3f-df09-4fff-a736-046d7877cd2f",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define **data structure** and **one-dimensional array**.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that data structures contain zero or more elements and define ***element***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define **data structure** and **one-dimensional array**.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that data structures contain zero or more elements and define ***element***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
         "progression_name": "Investigate and Modify: 1D Arrays"
       },
       "seeding_key": {
@@ -999,7 +1154,7 @@
       "key": "59ae0fd3-806a-487b-add8-aa1d5c2ec1df",
       "position": 10,
       "properties": {
-        "description": "**Do This:** Explain how 1D arrays are declared and initialized:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Declaring a 1D array\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Initializing a 1D array\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Declaring and initializing a 1D array in one line\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that a 1D array is an object and is accessed using a reference variable.",
+        "description": "**Do This:** Explain how 1D arrays are declared and initialized:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Declaring a 1D array\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Initializing a 1D array\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Declaring and initializing a 1D array in one line\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that a 1D array is an object and is accessed using a reference variable.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1156,18 +1311,6 @@
       },
       "seeding_key": {
         "activity_section.key": "4dba8e79-c0da-491b-a49f-e8dd4c797284",
-        "lesson_activity.key": "d05a6ffd-d670-4a5f-bcca-57b23d497c43"
-      }
-    },
-    {
-      "key": "33327f1a-4ff9-48a5-8137-0fa428c98e76",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "33327f1a-4ff9-48a5-8137-0fa428c98e76",
         "lesson_activity.key": "d05a6ffd-d670-4a5f-bcca-57b23d497c43"
       }
     },
@@ -1471,18 +1614,6 @@
       }
     },
     {
-      "key": "d636842b-9cd5-4a5a-bc0c-a882b08e31e2",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 6.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "d636842b-9cd5-4a5a-bc0c-a882b08e31e2",
-        "lesson_activity.key": "f736c7dd-453f-42ad-a91a-66d7429b8982"
-      }
-    },
-    {
       "key": "2d32c1d6-e348-4448-becf-65b1bb0f6be4",
       "position": 1,
       "properties": {
@@ -1564,7 +1695,7 @@
       "key": "cdf08cfa-fc4f-43aa-8377-3d9090f703e6",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Discuss: Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that a `while` loop is used to print each element in the 1D array. Students may wonder how the use of the `while` loop is similar to how it was used in The Neighborhood."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Discuss: Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that a `while` loop is used to print each element in the 1D array. Students may wonder how the use of the `while` loop is similar to how it was used in The Neighborhood in Unit 1."
       },
       "seeding_key": {
         "activity_section.key": "cdf08cfa-fc4f-43aa-8377-3d9090f703e6",
@@ -1767,18 +1898,6 @@
       },
       "seeding_key": {
         "activity_section.key": "de2d3d9f-dd48-45c3-a369-7400df7f4810",
-        "lesson_activity.key": "4eafe6ef-0997-4d1d-8953-ec0ff693f958"
-      }
-    },
-    {
-      "key": "54197dd0-eecf-4f1b-8bb1-825796f5e379",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "54197dd0-eecf-4f1b-8bb1-825796f5e379",
         "lesson_activity.key": "4eafe6ef-0997-4d1d-8953-ec0ff693f958"
       }
     },
@@ -2111,18 +2230,6 @@
       }
     },
     {
-      "key": "c3e68f8c-1ab1-49a9-9345-7a86c0d5bb5c",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 4.2\n* Topic Questions 6.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "c3e68f8c-1ab1-49a9-9345-7a86c0d5bb5c",
-        "lesson_activity.key": "b4d010a4-d25c-4d2b-8f5b-4372853fbdfb"
-      }
-    },
-    {
       "key": "7bb6dfc5-e014-4fd0-a5ff-ff4233e7c457",
       "position": 1,
       "properties": {
@@ -2403,18 +2510,6 @@
       }
     },
     {
-      "key": "be81990c-8cae-4f74-93af-d2f733ab3793",
-      "position": 7,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 4.1\n* Topic Questions 5.3\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "be81990c-8cae-4f74-93af-d2f733ab3793",
-        "lesson_activity.key": "be24be6c-d594-43e1-a15c-488b34334c0c"
-      }
-    },
-    {
       "key": "6b3ef944-66ab-427f-b635-d3765be96e1d",
       "position": 1,
       "properties": {
@@ -2684,18 +2779,6 @@
       }
     },
     {
-      "key": "7b21fcda-7d77-4e8f-97bc-eb73070b80fa",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 9.3\n* Topic Questions 9.5\n* Topic Questions 9.6\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "7b21fcda-7d77-4e8f-97bc-eb73070b80fa",
-        "lesson_activity.key": "6e18e8f5-e225-4d6d-aec2-b1022d7394ad"
-      }
-    },
-    {
       "key": "ae6026cc-6c14-4545-9924-0d0a466db1f8",
       "position": 1,
       "properties": {
@@ -2943,18 +3026,6 @@
       },
       "seeding_key": {
         "activity_section.key": "c42c564c-18a8-4cf2-9b1e-c1f78fd36234",
-        "lesson_activity.key": "0dcf1d6c-66af-4144-9047-68e4a28e5494"
-      }
-    },
-    {
-      "key": "8255d09b-6b08-40b7-a154-d56227cdeb23",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 6.3\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "8255d09b-6b08-40b7-a154-d56227cdeb23",
         "lesson_activity.key": "0dcf1d6c-66af-4144-9047-68e4a28e5494"
       }
     },
@@ -3276,18 +3347,6 @@
       }
     },
     {
-      "key": "92fb37dc-e132-48cc-932c-2012e6a38d3e",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 6.4\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "92fb37dc-e132-48cc-932c-2012e6a38d3e",
-        "lesson_activity.key": "34a422c2-f415-4973-80cc-ec7645e0e355"
-      }
-    },
-    {
       "key": "ade42d13-e74a-4283-b13a-2ed2b1861e88",
       "position": 1,
       "properties": {
@@ -3539,22 +3598,10 @@
       }
     },
     {
-      "key": "db419a42-6817-4da4-9940-81cd190fc38f",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 4.4\n* Topic Questions 5.8\n* Topic Questions 5.9\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "db419a42-6817-4da4-9940-81cd190fc38f",
-        "lesson_activity.key": "72c2eaca-f2a6-4f3e-b8df-6bf1fb693952"
-      }
-    },
-    {
       "key": "bb0e45db-05f8-4f19-97f3-70bffb9a9c09",
       "position": 1,
       "properties": {
-        "description": "The unit assessment project assesses proficiency in the knowledge and skills developed in this unit. It is completed in three class periods to plan and create the program, including reading and analyzing data. Students participate in planning and feedback activities to solve problems, reinforce software development practices and self-image as software engineers, and improve their programs.\n\nIf there is not enough time for the three-day project, a one-day option achieves the targeted learning objectives and goals. If using this option, refer to the [**Data for Social Good Project 1-Day Lesson Plan**](https://studio.code.org/s/csa3-2023/lessons/13). While the one-day option covers the learning objectives and goals, it shortens planning and reflection time. Consider this tradeoff when deciding which version to use."
+        "description": "The unit assessment project assesses proficiency in the knowledge and skills developed in this unit. It is completed in three class periods to plan and create the program, including reading and analyzing data. Students participate in planning and feedback activities to solve problems, reinforce software development practices and self-image as software engineers, and improve their programs.\n\nIf there is not enough time for the three-day project, a one-day option achieves the targeted learning objectives and goals. If using this option, refer to the [**Data for Social Good Project 1-Day Lesson Plan**](https://studio.code.org/s/csa3-2023/lessons/14). While the one-day option covers the learning objectives and goals, it shortens planning and reflection time. Consider this tradeoff when deciding which version to use."
       },
       "seeding_key": {
         "activity_section.key": "bb0e45db-05f8-4f19-97f3-70bffb9a9c09",
@@ -4266,6 +4313,17 @@
       }
     },
     {
+      "key": "c2337131-b53f-4a77-a8ad-d34950ef9bad",
+      "position": 1,
+      "properties": {
+        "progression_name": "Unit 3 Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "c2337131-b53f-4a77-a8ad-d34950ef9bad",
+        "lesson_activity.key": "6b684363-5bad-498f-a96a-a73e7f6991d8"
+      }
+    },
+    {
       "key": "093a33a5-7ace-47d3-b424-30763e19bd07",
       "position": 1,
       "properties": {
@@ -4424,6 +4482,48 @@
       "seeding_key": {
         "activity_section.key": "d6c62ab2-6273-47d4-ae3b-cfeb23d30c3d",
         "lesson_activity.key": "44abe49a-6308-4e19-8890-6c5f9a962c0c"
+      }
+    },
+    {
+      "key": "8fc66f1b-0e48-4f8d-8ce9-593c899d39fa",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8fc66f1b-0e48-4f8d-8ce9-593c899d39fa",
+        "lesson_activity.key": "b329af63-87ba-40e1-bff4-73a3bf0c035a"
+      }
+    },
+    {
+      "key": "8ebc25de-59b5-4840-b862-c86374ad1291",
+      "position": 1,
+      "properties": {
+        "progression_name": "With Paint Bucket"
+      },
+      "seeding_key": {
+        "activity_section.key": "8ebc25de-59b5-4840-b862-c86374ad1291",
+        "lesson_activity.key": "257aba58-6bb4-4a2a-8dd6-b6c4a8b396ba"
+      }
+    },
+    {
+      "key": "607703be-061d-45ce-85c1-b51b2528dd24",
+      "position": 2,
+      "properties": {
+        "progression_name": "No Paint Bucket"
+      },
+      "seeding_key": {
+        "activity_section.key": "607703be-061d-45ce-85c1-b51b2528dd24",
+        "lesson_activity.key": "257aba58-6bb4-4a2a-8dd6-b6c4a8b396ba"
+      }
+    },
+    {
+      "key": "29ed0501-bf54-4a73-a1ab-1dc4e6cae811",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "29ed0501-bf54-4a73-a1ab-1dc4e6cae811",
+        "lesson_activity.key": "df134981-3faa-49cd-bca7-601db0dc0e67"
       }
     }
   ],
@@ -6160,6 +6260,31 @@
       "assessment": true,
       "properties": {
         "level_keys": [
+          "Student End of Unit Survey_csa3-2023"
+        ],
+        "progression": "Unit 3 Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csa3-2023"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa3-2023",
+        "activity_section.key": "c2337131-b53f-4a77-a8ad-d34950ef9bad"
+      },
+      "level_keys": [
+        "Student End of Unit Survey_csa3-2023"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
           "CSA U3 Data for Social Good Project 1-Day_2023"
         ],
         "progression": "Data for Social Good Project"
@@ -6176,6 +6301,104 @@
       },
       "level_keys": [
         "CSA U3 Data for Social Good Project 1-Day_2023"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2023 Console Sandbox"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2023 Console Sandbox"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa3-2023",
+        "activity_section.key": "8fc66f1b-0e48-4f8d-8ce9-593c899d39fa"
+      },
+      "level_keys": [
+        "CSA 2023 Console Sandbox"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood Sandbox"
+        ],
+        "progression": "With Paint Bucket"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood Sandbox"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa3-2023",
+        "activity_section.key": "8ebc25de-59b5-4840-b862-c86374ad1291"
+      },
+      "level_keys": [
+        "CSA 2023 Neighborhood Sandbox"
+      ]
+    },
+    {
+      "chapter": 74,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox"
+        ],
+        "progression": "No Paint Bucket"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa3-2023",
+        "activity_section.key": "607703be-061d-45ce-85c1-b51b2528dd24"
+      },
+      "level_keys": [
+        "CSA 2023 Neighborhood - No Bucket Sandbox"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2023 Theater Sandbox"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2023 Theater Sandbox"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa3-2023",
+        "activity_section.key": "29ed0501-bf54-4a73-a1ab-1dc4e6cae811"
+      },
+      "level_keys": [
+        "CSA 2023 Theater Sandbox"
       ]
     }
   ],
@@ -7010,6 +7233,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "Student End of Unit Survey_csa3-2023",
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csa3-2023"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa3-2023",
+        "activity_section.key": "c2337131-b53f-4a77-a8ad-d34950ef9bad"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA U3 Data for Social Good Project 1-Day_2023",
         "script_level.level_keys": [
           "CSA U3 Data for Social Good Project 1-Day_2023"
@@ -7018,6 +7253,54 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa3-2023",
         "activity_section.key": "3f7ce8b2-e76b-43ea-9cd5-ea534d58b81c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2023 Console Sandbox",
+        "script_level.level_keys": [
+          "CSA 2023 Console Sandbox"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa3-2023",
+        "activity_section.key": "8fc66f1b-0e48-4f8d-8ce9-593c899d39fa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2023 Neighborhood Sandbox",
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood Sandbox"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa3-2023",
+        "activity_section.key": "8ebc25de-59b5-4840-b862-c86374ad1291"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2023 Neighborhood - No Bucket Sandbox",
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa3-2023",
+        "activity_section.key": "607703be-061d-45ce-85c1-b51b2528dd24"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2023 Theater Sandbox",
+        "script_level.level_keys": [
+          "CSA 2023 Theater Sandbox"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa3-2023",
+        "activity_section.key": "29ed0501-bf54-4a73-a1ab-1dc4e6cae811"
       }
     }
   ],
@@ -7044,6 +7327,126 @@
       },
       "seeding_key": {
         "resource.key": "_exemplar_data_for_social_good_project_planning_guide_1"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U3L1 Guided Notes",
+      "url": "https://docs.google.com/document/d/1EOWOaumzU1ZjlEsEuD6lMHCgGcJwuMQS4l3wcNLr9XY/edit?usp=sharing",
+      "key": "_exemplar_u3l1_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u3l1_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U3L2 Guided Notes",
+      "url": "https://docs.google.com/document/d/1UFVyEN0mK9Cpvsy_xiySYu2FWERP8sr_97haQgcRVQI/edit?usp=sharing",
+      "key": "_exemplar_u3l2_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u3l2_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U3L3 Guided Notes",
+      "url": "https://docs.google.com/document/d/1HT1VJz1be9euEAXzV2aMb3eCjfsy9K7Nx-B_yJ9-r2A/edit?usp=sharing",
+      "key": "_exemplar_u3l3_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u3l3_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U3L4 Guided Notes",
+      "url": "https://docs.google.com/document/d/1AcYc1o7JjXrkd8HuVzSEw2tA7r-EIcZPseOj2LXaIIk/edit?usp=sharing",
+      "key": "_exemplar_u3l4_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u3l4_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U3L5 Guided Notes",
+      "url": "https://docs.google.com/document/d/1iLTD_kaEY5Lz2mKWKMA7Tr9c0fntUVxICyYem6q1cV0/edit?usp=sharing",
+      "key": "_exemplar_u3l5_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u3l5_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U3L6 Guided Notes",
+      "url": "https://docs.google.com/document/d/1Y3Q7liMQxgxq4buJPbXsy3c-ZsEKd57IRGqeT1LJFpg/edit?usp=sharing",
+      "key": "_exemplar_u3l6_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u3l6_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U3L7 Guided Notes",
+      "url": "https://docs.google.com/document/d/1n-Bf3j2614tFcpXj9W-dASu_MLYJsn5q3YNmx6nvLkg/edit?usp=sharing",
+      "key": "_exemplar_u3l7_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u3l7_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U3L8 Guided Notes",
+      "url": "https://docs.google.com/document/d/14XtcOdzftiYFcInQ4Pl2lST9F1lEJzLhglDAdxWCXXI/edit?usp=sharing",
+      "key": "_exemplar_u3l8_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u3l8_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] U3L9 Guided Notes",
+      "url": "https://docs.google.com/document/d/1TzPam0fdPRGe2M7Ep2QKAO5LXYxhXF0lxMf0B_v2nF0/edit?usp=sharing",
+      "key": "_exemplar_u3l9_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u3l9_guided_notes"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] Unit 3 Guide",
+      "url": "https://docs.google.com/document/d/1KJesb8rg_e5Mf0VAEHNYcaksJH86GVDeMnM-lIXHQNs/edit?usp=share_link",
+      "key": "_exemplar_unit_3_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_unit_3_guide"
       }
     },
     {
@@ -7167,6 +7570,39 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/csa3-2023/resources",
+      "key": "all_resources_3",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_3"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csa3-2023/standards",
+      "key": "all_standards_3",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_3"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csa3-2023/vocab",
+      "key": "all_vocabulary_3",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_3"
+      }
+    },
+    {
       "name": "Array Algorithms",
       "url": "https://docs.google.com/presentation/d/1Ks7hI6Ig7WPUhQN0Pp2WIbxqAYD4PvsuzHvfPcVDXOA/edit?usp=sharing",
       "key": "array_algorithms",
@@ -7213,6 +7649,43 @@
       },
       "seeding_key": {
         "resource.key": "cs_bingo_definitions_1"
+      }
+    },
+    {
+      "name": "U3L1 Guided Notes",
+      "url": "https://docs.google.com/document/d/1fJSW9V_UohWVEA-v7qgbA1veUXli1rrOiZu2LoVpOQo/edit?usp=sharing",
+      "key": "csa_u3l1_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "csa_u3l1_guided_notes"
+      }
+    },
+    {
+      "name": "CSA Unit 3 Slides",
+      "url": "https://docs.google.com/presentation/d/1qqv3Hc7KndBVGlT0HVH2oaLzftqFhUvxSwMOlhJ1mlU/edit?usp=sharing",
+      "key": "csa_unit_3_slides",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csa_unit_3_slides"
+      }
+    },
+    {
+      "name": "CSA Unit 3 Word Wall Cards",
+      "url": "https://docs.google.com/document/d/1TDxCS0o4Ee21-8NL-lYmYPPhqtZwvPYQQPq6oZ2NY-w/edit?usp=sharing",
+      "key": "csa_unit_3_word_wall_cards",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csa_unit_3_word_wall_cards"
       }
     },
     {
@@ -7336,6 +7809,30 @@
       },
       "seeding_key": {
         "resource.key": "for_loops_1"
+      }
+    },
+    {
+      "name": "Guide to Creating and Using Word Walls",
+      "url": "https://docs.google.com/document/d/17-EK3Qz4KtOnN0_5n039nwhxHGSiKtB5ZwUVaQ51OdM/edit?usp=sharing",
+      "key": "guide_to_creating_and_using_word_walls",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_creating_and_using_word_walls"
+      }
+    },
+    {
+      "name": "Guide to Programming Levels in CSA",
+      "url": "https://docs.google.com/document/d/1RJxTkc2WiaE2kcl1wB2Jpn7GkFfNm2DcYqJ8DRtJZD8/edit?usp=sharing",
+      "key": "guide_to_programming_levels_in_csa",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_programming_levels_in_csa"
       }
     },
     {
@@ -7574,6 +8071,19 @@
       }
     },
     {
+      "name": "U3L2 Guided Notes",
+      "url": "https://docs.google.com/document/d/1KEAhcOwSHY7dmJ403gYKLUGmid1Ydgrbl6TL6eVDIlc/edit?usp=sharing",
+      "key": "u3l2_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u3l2_guided_notes"
+      }
+    },
+    {
       "name": "[KEY] U3L3 Extra Practice",
       "url": "https://docs.google.com/document/d/1ZuBq9nH0822Y9odQrZuo9QtlfSlna3aMNBQv1FfvDyw/edit?usp=sharing",
       "key": "u3l3_extra_practice",
@@ -7596,6 +8106,19 @@
       },
       "seeding_key": {
         "resource.key": "u3l3_extra_practice_1"
+      }
+    },
+    {
+      "name": "U3L3 Guided Notes",
+      "url": "https://docs.google.com/document/d/1zjKgQIjVyPVeh14KBhqDqi9uB_ldglG3Htz-i7jDuTI/edit?usp=sharing",
+      "key": "u3l3_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u3l3_guided_notes"
       }
     },
     {
@@ -7637,6 +8160,32 @@
       }
     },
     {
+      "name": "U3L4 Guided Notes",
+      "url": "https://docs.google.com/document/d/1C8AYNAz9k1hfeBmrPkUsda65aJp7UnACNK60BbN5Uqs/edit?usp=sharing",
+      "key": "u3l4_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u3l4_guided_notes"
+      }
+    },
+    {
+      "name": "U3L5 Guided Notes",
+      "url": "https://docs.google.com/document/d/1W6EtbRZBdtGYeq4kmpJkQvqV6YGDDlupJ058fJQxrG4/edit?usp=sharing",
+      "key": "u3l5_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u3l5_guided_notes"
+      }
+    },
+    {
       "name": "U3L6 Extra Practice",
       "url": "https://docs.google.com/document/d/1499hS_rHogZgajYhhaou5uhdX3eXfUzab7N6CDtzeQo/edit?usp=sharing",
       "key": "u3l6_extra_practice",
@@ -7647,6 +8196,19 @@
       },
       "seeding_key": {
         "resource.key": "u3l6_extra_practice"
+      }
+    },
+    {
+      "name": "U3L6 Guided Notes",
+      "url": "https://docs.google.com/document/d/1bIkfvoudpoFn6bdnXfGwg3Hop5lT7If55a86WTVE7kA/edit?usp=sharing",
+      "key": "u3l6_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u3l6_guided_notes"
       }
     },
     {
@@ -7663,6 +8225,19 @@
       }
     },
     {
+      "name": "U3L7 Guided Notes",
+      "url": "https://docs.google.com/document/d/1IXRg1XdvQJ_TUQ0tmdN866CxHxvzIw5Q-Gpzq68UgLQ/edit?usp=sharing",
+      "key": "u3l7_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u3l7_guided_notes"
+      }
+    },
+    {
       "name": "U3L8 Extra Practice",
       "url": "https://docs.google.com/document/d/1oBySNR7eETbzZML00nmI-KexneZc86RC9Jhxo0Hn3Nw/edit?usp=sharing",
       "key": "u3l8_extra_practice",
@@ -7676,6 +8251,19 @@
       }
     },
     {
+      "name": "U3L8 Guided Notes",
+      "url": "https://docs.google.com/document/d/1yUMYx6iYUcedxfPIIxXwR0ll2-bxqALE9sUdBFLY1Dc/edit?usp=sharing",
+      "key": "u3l8_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u3l8_guided_notes"
+      }
+    },
+    {
       "name": "U3L9 Extra Practice",
       "url": "https://docs.google.com/document/d/13kU6VOCKvNy7cVvkeA5ZuhOo7jDa41rt9cxjGoP3mfs/edit?usp=sharing",
       "key": "u3l9_extra_practice",
@@ -7686,6 +8274,19 @@
       },
       "seeding_key": {
         "resource.key": "u3l9_extra_practice"
+      }
+    },
+    {
+      "name": "U3L9 Guided Notes",
+      "url": "https://docs.google.com/document/d/1kcuU6WUqb5vVNdcqN-Zfmi1o1bV5ZWRfMSXdBouUYMI/edit?usp=sharing",
+      "key": "u3l9_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u3l9_guided_notes"
       }
     },
     {
@@ -7711,6 +8312,18 @@
       },
       "seeding_key": {
         "resource.key": "unit_3_guide"
+      }
+    },
+    {
+      "name": "Unit 3 Overview",
+      "url": "https://docs.google.com/document/d/1FDbyYrJh73QqNqIJBL3yXx9lgNr02DeGv0-wiMs3P-4/edit?usp=share_link",
+      "key": "unit_3_overview",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_3_overview"
       }
     },
     {
@@ -7769,6 +8382,24 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
+        "resource.key": "_exemplar_u3l1_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "csa_u3l1_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
         "resource.key": "one-dimensional_1d_arrays"
       }
     },
@@ -7788,12 +8419,6 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "u3l1_extra_practice_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "unit_3_guide"
       }
     },
     {
@@ -7883,6 +8508,18 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-2",
+        "resource.key": "_exemplar_u3l2_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
         "resource.key": "modifying_elements"
       }
     },
@@ -7907,7 +8544,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-2",
-        "resource.key": "unit_3_guide"
+        "resource.key": "u3l2_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "_exemplar_u3l3_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "guide_to_programming_levels_in_csa"
       }
     },
     {
@@ -7931,7 +8580,13 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-3",
-        "resource.key": "unit_3_guide"
+        "resource.key": "u3l3_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "_exemplar_u3l4_guided_notes"
       }
     },
     {
@@ -7949,6 +8604,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-4",
+        "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
         "resource.key": "u3l4_extra_practice"
       }
     },
@@ -7956,6 +8617,18 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "resource.key": "u3l4_extra_practice_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "u3l4_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "_exemplar_u3l5_guided_notes"
       }
     },
     {
@@ -7985,6 +8658,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-5",
+        "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
         "resource.key": "preconditions_and_postconditions"
       }
     },
@@ -7997,7 +8676,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-5",
-        "resource.key": "unit_3_guide"
+        "resource.key": "u3l5_guided_notes"
       }
     },
     {
@@ -8009,7 +8688,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-6",
+        "resource.key": "_exemplar_u3l6_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
         "resource.key": "_key_u3l6_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "guide_to_programming_levels_in_csa"
       }
     },
     {
@@ -8033,7 +8724,13 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-6",
-        "resource.key": "unit_3_guide"
+        "resource.key": "u3l6_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "_exemplar_u3l7_guided_notes"
       }
     },
     {
@@ -8063,13 +8760,25 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
+        "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
         "resource.key": "u3l7_extra_practice"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
-        "resource.key": "unit_3_guide"
+        "resource.key": "u3l7_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "_exemplar_u3l8_guided_notes"
       }
     },
     {
@@ -8093,6 +8802,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-8",
+        "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
         "resource.key": "planning_algorithms_manipulatives"
       }
     },
@@ -8105,13 +8820,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-8",
-        "resource.key": "unit_3_guide"
+        "resource.key": "u3l8_guided_notes"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-8",
         "resource.key": "writing_algorithms_with_arrays_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "_exemplar_u3l9_guided_notes"
       }
     },
     {
@@ -8141,6 +8862,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-9",
+        "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
         "resource.key": "nested_loops"
       }
     },
@@ -8159,7 +8886,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-9",
-        "resource.key": "unit_3_guide"
+        "resource.key": "u3l9_guided_notes"
       }
     },
     {
@@ -8170,7 +8897,72 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "_exemplar_unit_3_guide",
+        "script.name": "csa3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_3",
+        "script.name": "csa3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_3",
+        "script.name": "csa3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_3",
+        "script.name": "csa3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csa_unit_3_slides",
+        "script.name": "csa3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csa_unit_3_word_wall_cards",
+        "script.name": "csa3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_creating_and_using_word_walls",
+        "script.name": "csa3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_programming_levels_in_csa",
+        "script.name": "csa3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_3_guide",
+        "script.name": "csa3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_3_overview",
+        "script.name": "csa3-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_3_study_guide",
+        "script.name": "csa3-2023"
+      }
+    }
   ],
   "scripts_student_resources": [
 
@@ -8771,6 +9563,69 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-2",
         "framework.shortcode": "csa",
         "standard.shortcode": "VAR-2.A.2"
@@ -8788,6 +9643,20 @@
         "lesson.key": "lesson-2",
         "framework.shortcode": "csa",
         "standard.shortcode": "VAR-2.A.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
       }
     },
     {
@@ -8816,6 +9685,20 @@
         "lesson.key": "lesson-3",
         "framework.shortcode": "csa",
         "standard.shortcode": "VAR-2.B.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
       }
     },
     {
@@ -8869,6 +9752,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-5",
         "framework.shortcode": "csa",
         "standard.shortcode": "CON-2.I.1"
@@ -8900,6 +9797,34 @@
         "lesson.key": "lesson-5",
         "framework.shortcode": "csa",
         "standard.shortcode": "MOD-2.F.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
       }
     },
     {
@@ -8946,6 +9871,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-7",
         "framework.shortcode": "csa",
         "standard.shortcode": "VAR-2.C.1"
@@ -8974,9 +9913,65 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-8",
         "framework.shortcode": "csa",
         "standard.shortcode": "CON-2.I.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-23"
       }
     },
     {
@@ -8999,9 +9994,46 @@
         "framework.shortcode": "csa",
         "standard.shortcode": "CON-2.I.1"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
+      }
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

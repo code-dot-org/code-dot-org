@@ -50,9 +50,6 @@ ar:
       expired: "قد انتهت صلاحيته، الرجاء إرسال طلب جديد"
       not_found: "غير موجود"
       not_locked: "لم يكن مؤمناً"
-      not_saved:
-        one: "خطأ واحد لم يسمح بحفظ %{resource}:"
-        other: "%{count} أخطاء تمنع هذا %{resource} من الحفظ:"
     invitations:
       send_instructions: 'تم إرسال دعوى بالبريد الإلكتروني إلى %{email}.'
       invitation_token_invalid: 'رمز الدعوة المقدمة غير صالح!'

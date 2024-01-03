@@ -18,3 +18,5 @@ teacher_markdown <<MARKDOWN
 
 The answer is 24 because the ASCII text "150" is just 3 ASCII characters - same as any other 3-character text, "ABC", "DOG", whatever.  And in ASCII every character is encoded as one byte which is 8 bits, and `8 * 3 = 24`.
 MARKDOWN
+
+allow_multiple_attempts true

@@ -1,0 +1,27 @@
+name 'SP-VPL-physical-computing-22-Overview-TeachingLearning_aiml'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Teaching AI and Machine Learning
+
+##### In this lesson, you will be introduced to authentic CS practices that students will engage with throughout the AI and Machine Learning unit. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a computer science classroom and make a plan for how you will support student learning while teaching this unit.
+
+
+<img src="https://images.code.org/1573cbac6d34320400fe59ec45012fc2-image-1628884672983.jpg" alt="Three students programming a circuit playground." style="border-radius:10px; float: right; height: 175px; clear: both; margin: 0 20px 20px 0;">
+
+## You will:
+
+* ##### Consider the role of the teacher in a computer science classroom.
+* ##### Learn about authentic CS practices that students will develop throughout the AI and Machine Learning unit.
+* ##### Reflect on how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion.
+
+
+### **Suggested time:** 20 minutes
+
+<div style="clear:both"/>
+
+## Let's get started!
+
+
+MARKDOWN

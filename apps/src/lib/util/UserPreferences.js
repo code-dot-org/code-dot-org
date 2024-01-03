@@ -13,7 +13,7 @@ export default class UserPreferences extends Record({userId: 'me'}) {
   setUsingTextMode(usingTextMode, context = {}) {
     return $.post(`/api/v1/users/${this.userId}/using_text_mode`, {
       ...context,
-      using_text_mode: usingTextMode
+      using_text_mode: usingTextMode,
     });
   }
 
@@ -29,7 +29,7 @@ export default class UserPreferences extends Record({userId: 'me'}) {
    */
   setDisplayTheme(displayTheme) {
     return $.post(`/api/v1/users/${this.userId}/display_theme`, {
-      display_theme: displayTheme
+      display_theme: displayTheme,
     });
   }
 
@@ -40,12 +40,22 @@ export default class UserPreferences extends Record({userId: 'me'}) {
   }
 
   /**
+   * Save the student list sorting preference
+   * @param {boolean} sortByFamilyName: True if sorting by family name, false otherwise.
+   */
+  setSortByFamilyName(sortByFamilyName) {
+    return $.post(`/api/v1/users/sort_by_family_name`, {
+      sort_by_family_name: sortByFamilyName,
+    });
+  }
+
+  /**
    * Save the background music user preference
    * @param {boolean} muteMusic: True if background music muted
    */
   setMuteMusic(muteMusic) {
     return $.post(`/api/v1/users/${this.userId}/mute_music`, {
-      mute_music: muteMusic
+      mute_music: muteMusic,
     });
   }
 

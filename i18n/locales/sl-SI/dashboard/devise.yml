@@ -50,9 +50,6 @@ sl:
       expired: "je potekel čas za potrditev, zato vas prosimo, da zahtevate novega"
       not_found: "ni mogoče najti"
       not_locked: "ni bil zaklenjen"
-      not_saved:
-        one: "1 napaka je onemogočila shranjevanje %{resource}:"
-        other: "%{count} napak je onemogočilo shranjevanje %{resource}:"
     invitations:
       send_instructions: 'Na naslov %{email} je bilo poslano vabilo.'
       invitation_token_invalid: 'Vabilo ni veljavno!'

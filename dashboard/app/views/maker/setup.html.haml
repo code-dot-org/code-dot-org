@@ -3,6 +3,10 @@
 %script{src: webpack_asset_path("js/#{js_locale}/applab_locale.js")}
 %script{src: webpack_asset_path('js/maker/setup.js')}
 
+- @page_title = I18n.t('maker.setup_page_title')
+- content_for :head do
+  %meta{:name => "description", :content => I18n.t('maker.setup_page_title')}
+
 :css
   .main {
     width: 80%;

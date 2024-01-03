@@ -49,9 +49,10 @@ ja:
       'Artist: Variables': アーティスト：変数（へんすう）
       Assessment: '評価
 
-'
+        '
       Attribution: 属性
       Back and Forth: バック&フォース（行ったり来たり）
+      Balance an Ecosystem: 生態系のバランスをとる
       Basic Conditionals: 基本条件文
       Bass, Mid, and Treble: ベース、ミドル、トレブル
       Be a Super Digital Citizen: スーパーデジタルシティズンになる
@@ -84,7 +85,9 @@ ja:
       'Challenge: RGB Colors': '課題: RGBカラー'
       Challenges: チャレンジ
       Change: 変更
+      Check For Understanding: 理解度チェック
       Check Your Work: あなたの作品をチェック
+      Check for Understanding: 理解度チェック
       Check-In Survey: チェックインアンケート
       Checking for a Winner: 勝者のチェック
       'Choice Levels: Customize Your App': '選択レベル: あなたのアプリをカスタマイズ'
@@ -121,7 +124,7 @@ ja:
       Create a Google Form: Googleフォームを作成
       Create a Story: 'ストーリーを作成
 
-'
+        '
       Create an App in App Lab: アプリラボでアプリを作成
       Create your project: プロジェクトを作成
       Customize: カスタマイズ
@@ -146,9 +149,12 @@ ja:
       Draw a Background: 背景を描画
       Drawing: 'グラフィック
 
-'
+        '
       Driver Alert System: ドライバー警告システム
+      Ecosystems Simulation: 生態系シミュレーション
+      Ecosystems Video: エコシステムの動画
       End of Course Projects: 付録
+      End-Of-Unit Survey: 調査終了
       Escape Room Example: "「部屋から抜け出そう」の例"
       Events: イベント
       Events and Linking Screens: イベントおよびリンク画面
@@ -175,6 +181,7 @@ ja:
       Extra: 追加
       Extra Challenge: 追加の課題
       'Extra Challenge: Sound Board': '追加の課題: Sound Board'
+      Final Dance Party Project: ダンス・パーティー最終プロジェクト
       Final Room Escape App: 最終的な「部屋から抜け出そう」のアプリ
       Find the Wizard: ウィザードを見つけましょう
       Finish a Screen: 画面を閉じる
@@ -185,6 +192,7 @@ ja:
       Follow the Algorithm - Unplugged Activity: "「アルゴリズムに従う」 - アンプラグドアクティビティ"
       Follow the Mouse: ネズミを追跡
       Fonts and Style: フォントとスタイル
+      Food Chain Setup: 食物連鎖の設定
       FoodFight: フードファイト（FoodFight）
       For Loop Fun - Unplugged Activity: "「Forループを楽しむ」- アンプラグドアクティビティ"
       For Loops: ループ用
@@ -208,6 +216,7 @@ ja:
       How to Create a Simple Function: 簡単な関数の作り方
       How to Make a Sprite: スプライトの作り方
       Ice Age Loops: アイスエイジのループ
+      If... then... Conditional Statements: もし... なら... 条件文
       Images and Sounds: 画像と音
       Import Your Model: モデルをインポート
       Import a Model: モデルをインポート
@@ -219,17 +228,20 @@ ja:
       Input with If-Else: "「If/Else」を入力する"
       Inspiration!: インスピレーション！
       InspirationalArtwork: インスピレーションあふれるアートワーク
+      Intro Video: イントロビデオ
       Intro to Flyer Game: フライヤーゲーム入門
       Intro to For Loops: Forループ入門
       Intro to Side Scrollers: サイドスクローラ入門
       Intro to Sprites: スプライト入門
       Intro to Variables: 変数入門
       Introducing Sprite Lab: スプライトラボの紹介
+      Introduction: はじめに
       Introduction to Arrays: Introduction to Arrays
       Isaac's Survey Data: Isaacの調査データ
       Iteration and Parameters: イテレーションとパラメータ
       Keep On Dancing!: ダンスを続けましょう！
       Keeping Data Secret: データの秘密を守る
+      Key Press & At Measure Events: キープレス＆メジャー・イベントで
       Keyboard Input: キーボード入力
       Kim's Survey: Kimの調査
       Kim's Survey Data: Kimの調査データ
@@ -238,11 +250,11 @@ ja:
       Learning from Simulations: シミュレーションから学習する
       Lesson Extras: '追加レッスン
 
-'
+        '
       Level Overview: レベル概要
       Levels: 'レベル
 
-'
+        '
       Light Show: ライトショー
       Linking Pages: ページのリンク
       Linking Screens: 画面のリンク
@@ -250,6 +262,7 @@ ja:
       Looking for Patterns: パターンを探す
       Looping: ループ中
       Loops with the Artist: アーティストで学ぶループ
+      Make Dancer & Dance Move: ダンサー＆ダンス・ムーヴを作ろう
       Make Your Sprites: あなたのSpritesを作成
       Make a Prediction: 予測する
       Make an Interactive Card: インタラクティブなカードを作る
@@ -271,6 +284,7 @@ ja:
       'Mini-Project: Royal Battle': ミニプロジェクト：ロイヤルバトル
       'Mini-Project: Snowflake #1': 'ミニプロジェクト：雪のもよう #1'
       'Mini-Project: Snowflake #2': 'ミニプロジェクト：雪のもよう #2 '
+      'Mini-Project: Sticker Art': ミニプロジェクト:ステッカーアート
       'Mini-Project: Swimming Fish': ミニプロジェクト：泳ぐ魚
       'Mini-Project: Swimming Fish (continued)': ミニプロジェクト：泳ぐ魚（つづき）
       'Mini-Project: User Input Programs': ミニプロジェクト：ユーザーインプットプログラム
@@ -384,8 +398,10 @@ ja:
       Set Up Sprites: Spritesを設定
       Setting Properties: プロパティの設定
       Shapes and the Draw Loop: 形状と描画ループ
+      Share Out: 共有
       Share Your App: アプリをシェアする
       Share Your Pages: あなたのページを共有
+      Share Your Simulation: シミュレーションを共有しよう
       Share Your Stylesheets: あなたのスタイルシートを共有
       Shoe Recommendation Survey: 靴のおすすめアンケート
       Shoe Recommender: 靴リコメンダー
@@ -396,6 +412,8 @@ ja:
       Sliders: スライダー
       Smart Bike - Blinkers: スマートバイク - ブリンカー
       Social Sleuth: 社会的な警告
+      Solution 2 - Fishing Season: 解決策2 - 漁期
+      Solution 3 - Fishing Limits: 解決策3 - 漁獲制限
       Songwriting - Functions Unplugged Activity: "「ソングライティング」 - 関数アンプラグドアクティビティ"
       Speed it Up, Slow it Down: スピードアップ、スローダウン
       Sprite Lab Example Project: スプライト ラボのサンプル
@@ -417,6 +435,7 @@ ja:
       The Big Event - Unplugged Activity: "「ビッグイベント」 - アンプラグドアクティビティ"
       The Buzzer: ブザー
       The Collector: コレクタ
+      The Food Chain: 食物連鎖
       The Harvester: 収穫機
       The Internet - Unplugged Activity: インターネット - アンプラグドアクティビティ
       The Power of Words - Unplugged Activity: "「言葉の力」 - アンプラグドアクティビティ"
@@ -428,6 +447,7 @@ ja:
       UI Element Properties: UI要素のプロパティ
       Ultimate Shoe Recommender: 究極の靴リコメンダー
       Unit 5 Lesson 1 Overview: ユニット5レッスン1の概要
+      Unplugged Activity: アンプラグド　アクティビティ
       Upload Your Images: あなたの画像をアップロード
       User Interface: ユーザーインタフェース
       Using Getters and Setters: ゲッターとセッターの使用
@@ -449,7 +469,7 @@ ja:
       'Video: "If/Else"': ビデオ：「If/Else」
       'Video: AI: What is Machine Learning?': 'ビデオ：人工知能（AI）：機械学習とは？
 
-'
+        '
       'Video: Amazon and Data': 'ビデオ: Amazonとデータ'
       'Video: Artist Intro with JR Hildebrand': ビデオ：JRヒルデブランドと学ぶアーティスト
       'Video: Artist Intro with JR Hildebrande': ビデオ：JRヒルデブランドと学ぶアーティストイントロダクション
@@ -534,7 +554,7 @@ ja:
       'Video: Waze and Data': 'ビデオ: Wazeとデータ'
       'Video: What is Machine Learning?': 'ビデオ: 機械学習とは？
 
-'
+        '
       'Video: While Loops with the Farmer': " 農夫と学ぶWhileループ"
       'Video: Wrap-up': ビデオ：まとめ
       Warm Up: ウォームアップ

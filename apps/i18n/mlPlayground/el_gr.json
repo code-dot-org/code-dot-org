@@ -1,49 +1,14 @@
 {
-  "navigateForward": "Συνέχεια",
-  "navigateBack": "Πίσω",
-  "tryAgain": "Δοκίμασε ξανά",
-  "navigateDone": "Τερματισμός",
-  "saveProgress": "Αποθήκευση",
-  "correctAnswer": "Σωστό",
-  "incorrectAnswer": "Εσφαλμένο",
-  "modelCardPossibleValuesMinimum": "ελάχιστο",
-  "modelCardPossibleValuesMaximum": "μέγιστο",
-  "columnInspectorDescription": "Περιγραφή",
-  "columnDetailsMinimumValue": "ελάχιστο",
   "columnDetailsMaximumValue": "μέγιστο",
+  "columnDetailsMinimumValue": "ελάχιστο",
+  "columnInspectorDescription": "Περιγραφή",
+  "correctAnswer": "Σωστό",
   "dataCardLastUpdated": "Τελευταία ενημέρωση",
-  "predictButton": "Προβλέψτε",
   "datasets": {
-    "medical_priority": {
+    "abalone": {
       "fields": {
-        "age": {
-          "id": "ηλικία"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "weather": {
-          "id": "καιρός"
-        },
-        "day": {
-          "id": "ημέρα"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "onion": {
-          "id": "κρεμμύδι"
-        },
-        "avocado": {
-          "id": "αβοκάντο"
-        },
-        "corn": {
-          "id": "καλαμπόκι"
-        },
-        "beans": {
-          "id": "φασόλια"
+        "Length": {
+          "id": "Μήκος"
         }
       }
     },
@@ -51,79 +16,6 @@
       "fields": {
         "index": {
           "id": "Δείκτης"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "bacon": {
-          "id": "μπέικον"
-        },
-        "cheese": {
-          "id": "κασέρι"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "χρώμα"
-        },
-        "food": {
-          "id": "φαγητό"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "ηλικία"
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Category": {
-          "id": "Κατηγορία"
-        },
-        "Description": {
-          "id": "Περιγραφή"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "strawberry": {
-          "id": "φράουλα"
-        }
-      }
-    },
-    "shapes_v2_toy": {
-      "fields": {
-        "sides": {
-          "id": "πλευρές"
-        },
-        "size": {
-          "id": "μέγεθος"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "avocado": {
-          "id": "αβοκάντο"
-        },
-        "chicken": {
-          "id": "κοτόπουλο"
-        },
-        "fruit": {
-          "id": "φρούτο"
-        },
-        "beans": {
-          "id": "φασόλια"
-        },
-        "cheese": {
-          "id": "κασέρι"
         }
       }
     },
@@ -137,23 +29,10 @@
         }
       }
     },
-    "student_alcohol_consumption": {
+    "boba_toy": {
       "fields": {
-        "age": {
-          "id": "ηλικία"
-        }
-      }
-    },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "κοτόπουλο"
-        },
-        "onion": {
-          "id": "κρεμμύδι"
-        },
-        "cheese": {
-          "id": "κασέρι"
+        "banana": {
+          "id": "μπανάνα"
         }
       }
     },
@@ -164,61 +43,102 @@
         }
       }
     },
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "χρώμα"
+        },
+        "food": {
+          "id": "φαγητό"
+        },
+        "music": {
+          "id": "μουσική"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Ηλικία"
+        }
+      }
+    },
+    "insurance_cost": {
+      "fields": {
+        "age": {
+          "id": "ηλικία"
+        }
+      }
+    },
     "loneliness_interests": {
       "fields": {
         "Internet": {
           "id": "Διαδίκτυο"
+        },
+        "Writing": {
+          "id": "Γραφή"
+        }
+      }
+    },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "Χώρα"
+        },
+        "Dance": {
+          "id": "Χορός"
+        },
+        "Music": {
+          "id": "Μουσική"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "ηλικία"
         }
       }
     },
     "movies": {
       "fields": {
-        "Score": {
-          "id": "Βαθμολογία"
-        },
         "Country": {
           "id": "Χώρα"
         },
         "Name": {
           "id": "Όνομα"
         },
+        "Score": {
+          "id": "Βαθμολογία"
+        },
         "Star": {
           "id": "Αστέρι"
         }
       }
     },
-    "songs": {
+    "naan_toy": {
       "fields": {
-        "Artist": {
-          "id": "Καλλιτέχνης"
+        "cheese": {
+          "id": "κασέρι"
+        },
+        "chicken": {
+          "id": "κοτόπουλο"
+        },
+        "lamb": {
+          "id": "αρνί"
+        },
+        "onion": {
+          "id": "κρεμμύδι"
         }
       }
     },
-    "safari_toy": {
+    "nutrition": {
       "fields": {
-        "elephant": {
-          "id": "ελέφαντας"
+        "Category": {
+          "id": "Κατηγορία"
         },
-        "alligator": {
-          "id": "αλιγάτορας"
-        },
-        "trees": {
-          "id": "δέντρα"
-        }
-      },
-      "name": "Σαφάρι"
-    },
-    "abalone": {
-      "fields": {
-        "Length": {
-          "id": "Μήκος"
-        }
-      }
-    },
-    "zoo": {
-      "fields": {
-        "Aquatic": {
-          "id": "Υδάτινο"
+        "Description": {
+          "id": "Περιγραφή"
         }
       }
     },
@@ -227,49 +147,101 @@
         "avocado": {
           "id": "αβοκάντο"
         },
+        "ginger": {
+          "id": "τζίντζερ"
+        },
         "onion": {
           "id": "κρεμμύδι"
         }
       }
     },
-    "student_survey": {
+    "poutine_toy": {
       "fields": {
-        "Music": {
-          "id": "Μουσική"
+        "bacon": {
+          "id": "μπέικον"
         },
-        "Dance": {
-          "id": "Χορός"
+        "cheese": {
+          "id": "κασέρι"
         },
-        "Country": {
-          "id": "Χώρα"
+        "lobster": {
+          "id": "αστακός"
         },
-        "Internet": {
-          "id": "Διαδίκτυο"
+        "meat": {
+          "id": "κρέας"
         },
-        "Achievements": {
-          "id": "Επιτεύγματα"
-        },
-        "Age": {
-          "id": "Ηλικία",
-          "description": "Ηλικία"
-        },
-        "Gender": {
-          "id": "Φύλο",
-          "description": "Φύλο"
+        "mushrooms": {
+          "id": "μανιτάρια"
         }
       }
     },
-    "boba_toy": {
+    "raspado_toy": {
       "fields": {
-        "banana": {
-          "id": "μπανάνα"
+        "lime": {
+          "id": "λάιμ"
+        },
+        "strawberry": {
+          "id": "φράουλα"
         }
       }
     },
-    "heart": {
+    "safari_toy": {
       "fields": {
-        "Age": {
-          "id": "Ηλικία"
+        "alligator": {
+          "id": "αλιγάτορας"
+        },
+        "elephant": {
+          "id": "ελέφαντας"
+        },
+        "people": {
+          "id": "λαός"
+        },
+        "rhino": {
+          "id": "ρινόκερος"
+        },
+        "trees": {
+          "id": "δέντρα"
+        }
+      },
+      "name": "Σαφάρι"
+    },
+    "salad_toy": {
+      "fields": {
+        "avocado": {
+          "id": "αβοκάντο"
+        },
+        "beans": {
+          "id": "φασόλια"
+        },
+        "cheese": {
+          "id": "κασέρι"
+        },
+        "chicken": {
+          "id": "κοτόπουλο"
+        },
+        "fruit": {
+          "id": "φρούτο"
+        },
+        "tomato": {
+          "id": "ντομάτα"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "avocado": {
+          "id": "αβοκάντο"
+        },
+        "beans": {
+          "id": "φασόλια"
+        },
+        "corn": {
+          "id": "καλαμπόκι"
+        },
+        "lime": {
+          "id": "λάιμ"
+        },
+        "onion": {
+          "id": "κρεμμύδι"
         }
       }
     },
@@ -283,18 +255,95 @@
         }
       }
     },
-    "loneliness_music": {
+    "shapes_v2_toy": {
       "fields": {
-        "Music": {
-          "id": "Μουσική"
+        "sides": {
+          "id": "πλευρές"
+        },
+        "size": {
+          "id": "μέγεθος"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "ημέρα"
+        },
+        "shoe": {
+          "id": "παπούτσι"
+        },
+        "weather": {
+          "id": "καιρός"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Καλλιτέχνης"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "ηλικία"
+        },
+        "health": {
+          "id": "υγεία"
+        },
+        "school": {
+          "id": "σχολείο"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "Επιτεύγματα"
+        },
+        "Age": {
+          "description": "Ηλικία",
+          "id": "Ηλικία"
+        },
+        "Country": {
+          "id": "Χώρα"
         },
         "Dance": {
           "id": "Χορός"
         },
-        "Country": {
-          "id": "Χώρα"
+        "Gender": {
+          "description": "Φύλο",
+          "id": "Φύλο"
+        },
+        "Internet": {
+          "id": "Διαδίκτυο"
+        },
+        "Music": {
+          "id": "Μουσική"
+        },
+        "Writing": {
+          "id": "Γραφή"
+        }
+      }
+    },
+    "zoo": {
+      "fields": {
+        "Aquatic": {
+          "id": "Υδάτινο"
         }
       }
     }
-  }
+  },
+  "incorrectAnswer": "Εσφαλμένο",
+  "modelCardPossibleValuesMaximum": "μέγιστο",
+  "modelCardPossibleValuesMinimum": "ελάχιστο",
+  "navigateBack": "Πίσω",
+  "navigateDone": "Τερματισμός",
+  "navigateForward": "Συνέχεια",
+  "predictButton": "Προβλέψτε",
+  "saveProgress": "Αποθήκευση",
+  "tryAgain": "Δοκίμασε ξανά",
+  "uniqueOptionsWarningNotice": "Σημείωση"
 }

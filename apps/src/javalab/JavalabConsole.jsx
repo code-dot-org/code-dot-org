@@ -7,13 +7,13 @@ import {KeyCodes} from '@cdo/apps/constants';
 import {
   appendInputLog,
   clearConsoleLogs,
-  closePhotoPrompter
-} from './javalabRedux';
+  closePhotoPrompter,
+} from './redux/consoleRedux';
 import {DisplayTheme} from './DisplayTheme';
 import CommandHistory from '@cdo/apps/lib/tools/jsdebugger/CommandHistory';
 import PaneHeader, {
   PaneSection,
-  PaneButton
+  PaneButton,
 } from '@cdo/apps/templates/PaneHeader';
 import PhotoSelectionView from './components/PhotoSelectionView';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -54,11 +54,11 @@ class JavalabConsole extends React.Component {
     closePhotoPrompter: PropTypes.func,
     photoPrompterPromptText: PropTypes.string,
     shouldJumpToInput: PropTypes.bool,
-    editorFontSize: PropTypes.number.isRequired
+    editorFontSize: PropTypes.number.isRequired,
   };
 
   state = {
-    commandHistory: new CommandHistory()
+    commandHistory: new CommandHistory(),
   };
 
   componentDidUpdate(prevProps) {
@@ -73,6 +73,7 @@ class JavalabConsole extends React.Component {
 
   jumpToBottom = () => {
     this._consoleLogs.scrollTop = this._consoleLogs.scrollHeight;
+    this.focusInput();
   };
 
   // Transform this.props.consoleLogs into an array of strings, with each string
@@ -129,12 +130,11 @@ class JavalabConsole extends React.Component {
                 // font size may need to remain an inline style as it is
                 // programmatically assigned, or editor font size logic
                 // should be moved into SCSS.
-                fontSize: this.props.editorFontSize
+                fontSize: this.props.editorFontSize,
               }}
               onKeyDown={this.onInputKeyDown}
               aria-label="console input"
               ref={ref => (this.inputRef = ref)}
-              autoFocus
             />
           </div>
         );
@@ -150,7 +150,7 @@ class JavalabConsole extends React.Component {
       photoPrompterPromptText,
       onPhotoPrompterFileSelected,
       closePhotoPrompter,
-      displayTheme
+      displayTheme,
     } = this.props;
 
     if (isPhotoPrompterOpen) {
@@ -161,7 +161,7 @@ class JavalabConsole extends React.Component {
             ...styles.photoPrompter,
             ...(displayTheme === DisplayTheme.DARK
               ? styles.darkMode
-              : styles.lightMode)
+              : styles.lightMode),
           }}
           onPhotoSelected={file => {
             onPhotoPrompterFileSelected(file);
@@ -171,7 +171,7 @@ class JavalabConsole extends React.Component {
       );
     } else {
       return (
-        <div onClick={this.onLogsClick} style={styles.logs}>
+        <div onClick={this.focusInput} style={styles.logs}>
           {this.renderConsoleLogs(displayTheme)}
         </div>
       );
@@ -199,7 +199,7 @@ class JavalabConsole extends React.Component {
     }
   };
 
-  onLogsClick = () => {
+  focusInput = () => {
     // only jump to input if the program is currently in run or test mode.
     if (this.props.shouldJumpToInput) {
       this.inputRef.focus();
@@ -207,17 +207,17 @@ class JavalabConsole extends React.Component {
   };
 
   render() {
-    const {
-      displayTheme,
-      style,
-      bottomRow,
-      clearConsoleLogs,
-      editorFontSize
-    } = this.props;
+    const {displayTheme, style, bottomRow, clearConsoleLogs, editorFontSize} =
+      this.props;
 
     return (
       <div style={style}>
-        <PaneHeader id="pane-header" style={styles.header} hasFocus>
+        <PaneHeader
+          id="pane-header"
+          style={styles.header}
+          hasFocus
+          isOldPurpleColor
+        >
           <PaneSection
             className={'pane-header-section pane-header-section-left'}
           />
@@ -232,6 +232,7 @@ class JavalabConsole extends React.Component {
             <PaneButton
               id="javalab-console-clear"
               headerHasFocus
+              isLegacyStyles
               isRtl={false}
               onClick={() => {
                 clearConsoleLogs();
@@ -252,7 +253,7 @@ class JavalabConsole extends React.Component {
               // font size may need to remain an inline style as it is
               // programmatically assigned, or editor font size logic
               // should be moved into SCSS.
-              fontSize: editorFontSize
+              fontSize: editorFontSize,
             }}
             ref={el => (this._consoleLogs = el)}
             className="javalab-console"
@@ -261,7 +262,7 @@ class JavalabConsole extends React.Component {
           </div>
           {bottomRow && [
             {...bottomRow, key: 'bottom-row'},
-            <div style={styles.spacer} key="spacer" />
+            <div style={styles.spacer} key="spacer" />,
           ]}
         </div>
       </div>
@@ -271,60 +272,60 @@ class JavalabConsole extends React.Component {
 
 export default connect(
   state => ({
-    consoleLogs: state.javalab.consoleLogs,
-    displayTheme: state.javalab.displayTheme,
-    isPhotoPrompterOpen: state.javalab.isPhotoPrompterOpen,
-    photoPrompterPromptText: state.javalab.photoPrompterPromptText,
+    consoleLogs: state.javalabConsole.consoleLogs,
+    displayTheme: state.javalabView.displayTheme,
+    isPhotoPrompterOpen: state.javalabConsole.isPhotoPrompterOpen,
+    photoPrompterPromptText: state.javalabConsole.photoPrompterPromptText,
     shouldJumpToInput: state.javalab.isRunning || state.javalab.isTesting,
-    editorFontSize: state.javalab.editorFontSize
+    editorFontSize: state.javalabView.editorFontSize,
   }),
   dispatch => ({
     appendInputLog: log => dispatch(appendInputLog(log)),
     clearConsoleLogs: () => dispatch(clearConsoleLogs()),
-    closePhotoPrompter: () => dispatch(closePhotoPrompter())
+    closePhotoPrompter: () => dispatch(closePhotoPrompter()),
   })
 )(JavalabConsole);
 
 const styles = {
   darkMode: {
     backgroundColor: color.black,
-    color: color.white
+    color: color.white,
   },
   lightMode: {
     backgroundColor: color.white,
-    color: color.black
+    color: color.black,
   },
   darkModeInput: {
     backgroundColor: 'rgba(0,0,0,0)',
     color: color.white,
-    float: 'left'
+    float: 'left',
   },
   lightModeInput: {
     backgroundColor: 'rgba(0,0,0,0)',
-    color: color.black
+    color: color.black,
   },
   container: {
     marginTop: 30,
     display: 'flex',
     flexGrow: 1,
     overflowY: 'hidden',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   console: {
     flexGrow: 2,
     overflowY: 'auto',
     padding: 5,
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   logs: {
     lineHeight: 'normal',
     cursor: 'text',
     whiteSpace: 'pre-wrap',
-    fontFamily: 'monospace'
+    fontFamily: 'monospace',
   },
   logLine: {
-    display: 'flex'
+    display: 'flex',
   },
   input: {
     marginBottom: 0,
@@ -335,23 +336,23 @@ const styles = {
     flexGrow: 1,
     marginTop: -2,
     fontSize: 13,
-    height: '100%'
+    height: '100%',
   },
   spacer: {
-    width: 8
+    width: 8,
   },
   header: {
     position: 'absolute',
     textAlign: 'center',
     lineHeight: '30px',
     width: '100%',
-    display: 'flex'
+    display: 'flex',
   },
   log: {
     padding: 0,
-    margin: 0
+    margin: 0,
   },
   photoPrompter: {
-    flexGrow: 1
-  }
+    flexGrow: 1,
+  },
 };

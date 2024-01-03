@@ -13,7 +13,7 @@ const DEFAULT_PROPS = {
   bonusLevels: bonusLevels,
   sectionId: 3,
   userId: 5,
-  showLessonExtrasWarning: true
+  showLessonExtrasWarning: true,
 };
 
 describe('LessonExtras', () => {

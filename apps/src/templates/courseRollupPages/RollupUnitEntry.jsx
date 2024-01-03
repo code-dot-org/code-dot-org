@@ -6,7 +6,7 @@ import {unitShape} from './rollupShapes';
 export default class RollupUnitEntry extends Component {
   static propTypes = {
     objectToRollUp: PropTypes.string,
-    unit: unitShape
+    unit: unitShape,
   };
 
   render() {

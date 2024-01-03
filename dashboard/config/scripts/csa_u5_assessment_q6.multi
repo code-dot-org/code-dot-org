@@ -28,3 +28,5 @@ String[][] letters = {{"A", "B", "C"},
 What is contained in `letters[1]`?
 
 MARKDOWN
+
+allow_multiple_attempts true

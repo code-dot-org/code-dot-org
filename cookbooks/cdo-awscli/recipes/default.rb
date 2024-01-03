@@ -10,6 +10,7 @@ apt_package 'python2.7'
 
 remote_file '/tmp/awscli-bundle.zip' do
   source "https://s3.amazonaws.com/aws-cli/awscli-bundle-#{node['cdo-awscli']['version']}.zip"
+  action :create_if_missing
 end
 
 archive_file '/tmp/awscli-bundle.zip' do
@@ -22,7 +23,7 @@ end
 execute 'install AWS CLI' do
   cwd '/tmp/awscli/awscli-bundle'
   command '/usr/bin/python2.7 install -i /usr/local/aws -b /usr/local/bin/aws'
-  not_if {::File.exist?('/usr/local/bin/aws')}
+  not_if {File.exist?('/usr/local/bin/aws')}
 end
 
 # Configure AWS CLI after installation

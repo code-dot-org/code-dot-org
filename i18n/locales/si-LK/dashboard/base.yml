@@ -45,8 +45,10 @@ si:
         age: 'වයස'
         gender: 'ස්ත්‍රී/පුරුෂ භාවය'
         edit_header: 'ගිනුමේ තොරතුරු 	සංස්කරණය කරන්න'
+        finish_sign_up_header_error: 'කරුණාකර පහත දෝෂ නිවැරදි කරන්න:'
         error:
           future: අනාගතයේදී විය නොහැකිය
+        user_type: 'ගිණුම් වර්ගය'
   beta: "beta"
   hello: "Hello world"
   welcome_back: "%{name}, ඔබව නැවතත් පිළිගන්නවා"
@@ -126,7 +128,6 @@ si:
     valid_password: "මුර පදය වලංගුයි!"
     invalid_password: "Password එක අකුරු 6ට වැඩිවිය යුතුයි"
     mismatch_password: "යෙදු මුර පද දෙක සමාන වී නැත"
-    additional_information: "ඔබට ඇතුලු වීමට තව තොරතුරු කිහිපයක් අවශ්‍යව ඇත."
     user_type_label: "ගිණුම් වර්ගය"
     user_type_student: "ශිෂ්‍යයා"
     user_type_teacher: "ගුරු වරයා"
@@ -707,9 +708,14 @@ si:
         other: "වෙනත්"
       workshop_course:
         csp: '''16-''17 පරිගණක විද්‍යාවේ මූලිකාංග'
+        other: 'වෙනත්'
       email_opt_in:
         opt_in_yes: 'ඔව්'
         opt_in_no: 'නැහැ'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
+      csf: 'පරිගණක විද්‍යාවේ මූලිකාංග'
   cookie_banner:
     accept: 'මම එකඟයි'
   page_not_found_title: "පිටුව සොයාගත නොහැක"

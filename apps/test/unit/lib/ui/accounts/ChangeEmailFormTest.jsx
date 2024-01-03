@@ -16,7 +16,7 @@ describe('ChangeEmailForm', () => {
     userType: 'student',
     isPasswordRequired: true,
     onChange: () => {},
-    onSubmit: () => {}
+    onSubmit: () => {},
   };
 
   describe('the emailOptIn field', () => {
@@ -93,7 +93,7 @@ describe('ChangeEmailForm', () => {
     const initialValues = {
       newEmail: 'initialEmail@example.com',
       currentPassword: 'initialPassword',
-      emailOptIn: 'yes'
+      emailOptIn: 'yes',
     };
 
     beforeEach(() => {
@@ -118,7 +118,7 @@ describe('ChangeEmailForm', () => {
       expect(onChange).to.have.been.calledOnce;
       expect(onChange.firstCall.args[0]).to.deep.equal({
         ...initialValues,
-        newEmail: changedEmail
+        newEmail: changedEmail,
       });
     });
 
@@ -133,7 +133,7 @@ describe('ChangeEmailForm', () => {
       expect(onChange).to.have.been.calledOnce;
       expect(onChange.firstCall.args[0]).to.deep.equal({
         ...initialValues,
-        currentPassword: changedPassword
+        currentPassword: changedPassword,
       });
     });
 
@@ -147,7 +147,7 @@ describe('ChangeEmailForm', () => {
       expect(onChange).to.have.been.calledOnce;
       expect(onChange.firstCall.args[0]).to.deep.equal({
         ...initialValues,
-        emailOptIn: changedOptIn
+        emailOptIn: changedOptIn,
       });
     });
   });
@@ -256,7 +256,7 @@ describe('ChangeEmailForm', () => {
 
     it('does nothing if there are no validation errors', () => {
       wrapper.setProps({
-        validationErrors: {}
+        validationErrors: {},
       });
 
       wrapper.instance().focusOnAnError();
@@ -267,8 +267,8 @@ describe('ChangeEmailForm', () => {
     it('focuses on the email field if there is an email validation error', () => {
       wrapper.setProps({
         validationErrors: {
-          newEmail: 'Something is wrong with the email'
-        }
+          newEmail: 'Something is wrong with the email',
+        },
       });
 
       wrapper.instance().focusOnAnError();
@@ -279,8 +279,8 @@ describe('ChangeEmailForm', () => {
     it('focuses on the password field if there is a password validation error', () => {
       wrapper.setProps({
         validationErrors: {
-          currentPassword: 'Something is wrong with the password'
-        }
+          currentPassword: 'Something is wrong with the password',
+        },
       });
 
       wrapper.instance().focusOnAnError();
@@ -292,8 +292,8 @@ describe('ChangeEmailForm', () => {
       wrapper.setProps({
         validationErrors: {
           newEmail: 'Something is wrong with the email',
-          currentPassword: 'Something is wrong with the password'
-        }
+          currentPassword: 'Something is wrong with the password',
+        },
       });
 
       wrapper.instance().focusOnAnError();

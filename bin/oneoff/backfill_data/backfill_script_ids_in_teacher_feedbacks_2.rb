@@ -43,8 +43,8 @@ def update_script_ids
             script = stable_scripts.first
             teacher_feedback.update!(script_id: script.id)
           end
-        rescue => e
-          puts "Error updating teacher feedback id #{teacher_feedback.id}: #{e}"
+        rescue => exception
+          puts "Error updating teacher feedback id #{teacher_feedback.id}: #{exception}"
         end
         raise ActiveRecord::Rollback unless $options[:actually_update]
       end

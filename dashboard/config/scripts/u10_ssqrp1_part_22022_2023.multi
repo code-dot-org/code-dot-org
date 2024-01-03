@@ -12,3 +12,5 @@ wrong 'the shelf location of the groceries'
 markdown <<MARKDOWN
 
 MARKDOWN
+
+allow_multiple_attempts true

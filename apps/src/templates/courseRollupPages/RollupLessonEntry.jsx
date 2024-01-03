@@ -8,7 +8,7 @@ import {lessonShape} from './rollupShapes';
 export default class RollupLessonEntry extends Component {
   static propTypes = {
     objectToRollUp: PropTypes.string,
-    lesson: lessonShape
+    lesson: lessonShape,
   };
 
   render() {
@@ -19,7 +19,7 @@ export default class RollupLessonEntry extends Component {
             <h3>
               {i18n.lessonNumbered({
                 lessonNumber: this.props.lesson.position,
-                lessonName: this.props.lesson.displayName
+                lessonName: this.props.lesson.displayName,
               })}
             </h3>
           </a>
@@ -43,27 +43,27 @@ export default class RollupLessonEntry extends Component {
 
 const styles = {
   main: {
-    width: '100%'
+    width: '100%',
   },
   header: {
     backgroundColor: color.purple,
     color: color.white,
     border: 'solid 1px' + color.charcoal,
-    padding: '0px 10px'
+    padding: '0px 10px',
   },
   object: {
     backgroundColor: color.lightest_gray,
     color: color.charcoal,
     border: 'solid 1px' + color.charcoal,
-    padding: '0px 10px'
+    padding: '0px 10px',
   },
   entries: {
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'stretch',
-    alignContent: 'stretch'
+    alignContent: 'stretch',
   },
   link: {
-    color: color.white
-  }
+    color: color.white,
+  },
 };

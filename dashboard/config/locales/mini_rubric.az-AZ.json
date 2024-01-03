@@ -2,17 +2,51 @@
   "az-AZ": {
     "data": {
       "mini_rubric": {
-        "allthethings-mini-rubric-gamelab": {
-          "rubric_key_concept": "Əsas anlayış"
+        "CSD Games properties assessment_2021": {
+          "rubric_key_concept": "xassələr",
+          "rubric_performance_level_1": "nümunə",
+          "rubric_performance_level_2": "(-ın/-in/-un/-ün) içində",
+          "rubric_performance_level_3": "qrafik obyekt",
+          "rubric_performance_level_4": "kod"
+        },
+        "CSD Games properties assessment_2022": {
+          "rubric_key_concept": "xassələr",
+          "rubric_performance_level_1": "nümunə",
+          "rubric_performance_level_2": "(-ın/-in/-un/-ün) içində",
+          "rubric_performance_level_3": "qrafik obyekt",
+          "rubric_performance_level_4": "kod"
+        },
+        "CSD Games properties assessment_2023": {
+          "rubric_key_concept": "xassələr",
+          "rubric_performance_level_1": "nümunə",
+          "rubric_performance_level_2": "(-ın/-in/-un/-ün) içində",
+          "rubric_performance_level_3": "qrafik obyekt",
+          "rubric_performance_level_4": "kod"
+        },
+        "CSD U2 HTML Adding Paragraphs pt 2_2019": {
+          "rubric_performance_level_4": "Mətndə heç bir paraqraf etiketi yoxdur."
+        },
+        "CSD U2 HTML Adding Paragraphs pt 2_2021": {
+          "rubric_performance_level_4": "Mətndə heç bir paraqraf etiketi yoxdur."
+        },
+        "CSD U2 HTML Adding Paragraphs pt 2_2022": {
+          "rubric_performance_level_4": "Mətndə heç bir paraqraf etiketi yoxdur."
         },
         "CSD U2 Heading Test_2018": {
           "rubric_performance_level_2": "Bütün məzmun teqlərdə olur, paraqraf və başlıq teqlərindən məntiqi şəkildə istifadə edir."
+        },
+        "CSD U2 Image Tag 2_2019": {
+          "rubric_performance_level_2": "Şəkil düzgün şəkildə göstərilir."
         },
         "CSD U2 Image assessment_2021": {
           "rubric_performance_level_2": "Şəkil düzgün göstərilir və müəllif hüququ lisenziyasının təsvirinə uyğun olaraq işlədilir.",
           "rubric_performance_level_3": "`img` teqi istifadə edilir və şəkil üçün mənbə ünvanı təmin edilib, lakin şəklin düzgün göstərilməsinə mane olan kiçik sintaksis xətaları və ya yazı səhvləri ola bilər. Şəkil internet səhifəsində qanuni istifadə üçün mövcud olmaya bilər."
         },
         "CSD U2 Image assessment_2022": {
+          "rubric_performance_level_2": "Şəkil düzgün göstərilir və müəllif hüququ lisenziyasının təsvirinə uyğun olaraq işlədilir.",
+          "rubric_performance_level_3": "`img` teqi istifadə edilir və şəkil üçün mənbə ünvanı təmin edilib, lakin şəklin düzgün göstərilməsinə mane olan kiçik sintaksis xətaları və ya yazı səhvləri ola bilər. Şəkil internet səhifəsində qanuni istifadə üçün mövcud olmaya bilər."
+        },
+        "CSD U2 Image assessment_2023": {
           "rubric_performance_level_2": "Şəkil düzgün göstərilir və müəllif hüququ lisenziyasının təsvirinə uyğun olaraq işlədilir.",
           "rubric_performance_level_3": "`img` teqi istifadə edilir və şəkil üçün mənbə ünvanı təmin edilib, lakin şəklin düzgün göstərilməsinə mane olan kiçik sintaksis xətaları və ya yazı səhvləri ola bilər. Şəkil internet səhifəsində qanuni istifadə üçün mövcud olmaya bilər."
         },
@@ -28,70 +62,10 @@
           "rubric_performance_level_3": "Və sinif və qayda dəsti yaradılıb, və veb səhifədən heç olmasa bir neçə element o sinifdədir, ancaq mətnə üslub verməyin qarşısını alan böyük xətalar ola bilər.",
           "rubric_performance_level_4": "Heç bir sinif ya da qaydalar dəsti yaradılmayıb ya da sinfə heç bir veb səhifə elementi qoyulmayıb."
         },
-        "CSD U3 Movement Your Own 2_2018": {
-          "rubric_performance_level_4": "Sayğac nümunəsi yoxdur."
-        },
-        "CSD U3 Random Debug Cloud_2021": {
-          "rubric_key_concept": "Metodları və ya əmr icralarını dəyişmək üçün parametrlərdən istifadə et."
-        },
-        "CSD U3 Random Debug Cloud_2022": {
-          "rubric_key_concept": "Metodları və ya əmr icralarını dəyişmək üçün parametrlərdən istifadə et."
-        },
-        "CSD U3 Sprites assessment_2021": {
-          "rubric_key_concept": "Spraytları yarat və istifadə et."
-        },
-        "CSD U3 Sprites assessment_2022": {
-          "rubric_key_concept": "Spraytları yarat və istifadə et."
-        },
-        "CSD U3 Variables assessment_2021": {
-          "rubric_key_concept": "İnformasiyaları saxlamaq və yeniləmək üçün dəyişənlərdən istifadə et."
-        },
-        "CSD U3 Variables assessment_2022": {
-          "rubric_key_concept": "İnformasiyaları saxlamaq və yeniləmək üçün dəyişənlərdən istifadə et."
-        },
-        "CSD U3 Variables random with assignment_2019": {
-          "rubric_key_concept": "İnformasiyaları saxlamaq və yeniləmək üçün dəyişənlərdən istifadə et."
-        },
-        "CSD U3 debug_2019": {
-          "rubric_performance_level_3": "Hərəkət etdirilən kvadrat bənövşəyidir və çevrənin qarşısında yaranır.",
-          "rubric_key_concept": "Obyektin ölçüsünü və üst-üstə düşməsini nəzərə alaraq elementləri ekranda yerləşdirmək üçün koordinat sistemindən istifadə edin.",
-          "rubric_performance_level_1": "Proqram rəsm nümunədəki ilə eynidir və yeddi kod sətirində yer alır.",
-          "rubric_performance_level_2": "Proqram rəsm əsasən rəsmlə eynidır, lakin bəzi kiçik yerləşdirmə səhvləri ola bilər və əlavə kod xətləri ola bilər.",
-          "rubric_performance_level_4": "Şəkil ya eynidir, ya da hər hansı bir dəyişiklik tapşırıqla əlaqəli görünmür."
-        },
-        "CSD U3 debug_2021": {
-          "rubric_performance_level_3": "Hərəkət etdirilən kvadrat bənövşəyidir və çevrənin qarşısında yaranır.",
-          "rubric_key_concept": "Obyektin ölçüsünü və üst-üstə düşməsini nəzərə alaraq elementləri ekranda yerləşdirmək üçün koordinat sistemindən istifadə edin.",
-          "rubric_performance_level_1": "Proqram rəsm nümunədəki ilə eynidir və yeddi kod sətirində yer alır.",
-          "rubric_performance_level_2": "Proqram rəsm əsasən rəsmlə eynidır, lakin bəzi kiçik yerləşdirmə səhvləri ola bilər və əlavə kod xətləri ola bilər.",
-          "rubric_performance_level_4": "Şəkil ya eynidir, ya da hər hansı bir dəyişiklik tapşırıqla əlaqəli görünmür."
-        },
-        "CSD U3 debug_2022": {
-          "rubric_performance_level_3": "Hərəkət etdirilən kvadrat bənövşəyidir və çevrənin qarşısında yaranır.",
-          "rubric_key_concept": "Obyektin ölçüsünü və üst-üstə düşməsini nəzərə alaraq elementləri ekranda yerləşdirmək üçün koordinat sistemindən istifadə edin.",
-          "rubric_performance_level_1": "Proqram rəsm nümunədəki ilə eynidir və yeddi kod sətirində yer alır.",
-          "rubric_performance_level_2": "Proqram rəsm əsasən rəsmlə eynidır, lakin bəzi kiçik yerləşdirmə səhvləri ola bilər və əlavə kod xətləri ola bilər.",
-          "rubric_performance_level_4": "Şəkil ya eynidir, ya da hər hansı bir dəyişiklik tapşırıqla əlaqəli görünmür."
-        },
-        "CSD Web CSS Assessment_2021": {
-          "rubric_performance_level_2": "Paraqraflar yeni rəng və ya ölçüdür.",
-          "rubric_performance_level_3": "Paraqrafların üslub cədvəlində xüsusi qaydaları var və rəng və ya ölçü xassəsindən istifadə edilir, lakin mətnin rəng və ya ölçüsünü dəyişməyən kifayət qədər səhvlər var. Üslub cədvəlini veb səhifə ilə əlaqələndirməyə çalışan HTML kodu var."
-        },
-        "CSD Web CSS Assessment_2022": {
-          "rubric_performance_level_2": "Paraqraflar yeni rəng və ya ölçüdür.",
-          "rubric_performance_level_3": "Paraqrafların üslub cədvəlində xüsusi qaydaları var və rəng və ya ölçü xassəsindən istifadə edilir, lakin mətnin rəng və ya ölçüsünü dəyişməyən kifayət qədər səhvlər var. Üslub cədvəlini veb səhifə ilə əlaqələndirməyə çalışan HTML kodu var."
-        },
-        "CSD U2 HTML Adding Paragraphs pt 2_2019": {
-          "rubric_performance_level_4": "Mətndə heç bir paraqraf etiketi yoxdur."
-        },
-        "CSD U2 HTML Adding Paragraphs pt 2_2021": {
-          "rubric_performance_level_4": "Mətndə heç bir paraqraf etiketi yoxdur."
-        },
-        "CSD U2 HTML Adding Paragraphs pt 2_2022": {
-          "rubric_performance_level_4": "Mətndə heç bir paraqraf etiketi yoxdur."
-        },
-        "CSD U2 Image Tag 2_2019": {
-          "rubric_performance_level_2": "Şəkil düzgün şəkildə göstərilir."
+        "CSD U2 classes haikus_2023": {
+          "rubric_performance_level_2": "Sinif və qayda dəsti yaradılıb və veb-saytın seçilmiş haiku bölməsindəki elementlərin əksəriyyəti bu sinifdən təsirlənib, lakin mətnin bəzi hissələridə bir neçə kiçik xəta ola bilər və ya qayda dəstində üçdən daha az qayda ola bilər.",
+          "rubric_performance_level_3": "Və sinif və qayda dəsti yaradılıb, və veb səhifədən heç olmasa bir neçə element o sinifdədir, ancaq mətnə üslub verməyin qarşısını alan böyük xətalar ola bilər.",
+          "rubric_performance_level_4": "Heç bir sinif ya da qaydalar dəsti yaradılmayıb ya da sinfə heç bir veb səhifə elementi qoyulmayıb."
         },
         "CSD U2 text style h3_2019": {
           "rubric_key_concept": "CSS istifadə edərək veb səhifədə formatlaşdırma tətbiq edin"
@@ -101,6 +75,527 @@
         },
         "CSD U2 text style h3_2022": {
           "rubric_key_concept": "CSS istifadə edərək veb səhifədə formatlaşdırma tətbiq edin"
+        },
+        "CSD U2 text style h3_2023": {
+          "rubric_key_concept": "CSS istifadə edərək veb səhifədə formatlaşdırma tətbiq edin"
+        },
+        "CSD U2L2 - PracC_2023": {
+          "rubric_performance_level_4": "Mətndə heç bir paraqraf etiketi yoxdur."
+        },
+        "CSD U3 Conditionals Apple 2_2018_2019": {
+          "rubric_key_concept": "şərtlər",
+          "rubric_performance_level_1": "miqyas",
+          "rubric_performance_level_2": "yoxlamaq",
+          "rubric_performance_level_3": "bəyanatlar"
+        },
+        "CSD U3 Conditionals Apple 2_2021": {
+          "rubric_key_concept": "şərtlər",
+          "rubric_performance_level_1": "miqyas",
+          "rubric_performance_level_2": "yoxlamaq",
+          "rubric_performance_level_3": "bəyanatlar"
+        },
+        "CSD U3 Conditionals Apple 2_2022": {
+          "rubric_key_concept": "şərtlər",
+          "rubric_performance_level_1": "miqyas",
+          "rubric_performance_level_2": "yoxlamaq",
+          "rubric_performance_level_3": "bəyanatlar"
+        },
+        "CSD U3 Conditionals Apple 2_2023": {
+          "rubric_key_concept": "şərtlər",
+          "rubric_performance_level_1": "miqyas",
+          "rubric_performance_level_2": "yoxlamaq",
+          "rubric_performance_level_3": "bəyanatlar"
+        },
+        "CSD U3 Direction Arrows_2018_2019": {
+          "rubric_key_concept": "giriş",
+          "rubric_performance_level_1": "cavab",
+          "rubric_performance_level_2": "səhv",
+          "rubric_performance_level_3": "tapmaq",
+          "rubric_performance_level_4": "giriş"
+        },
+        "CSD U3 Direction Arrows_2021": {
+          "rubric_key_concept": "giriş",
+          "rubric_performance_level_1": "cavab",
+          "rubric_performance_level_2": "səhv",
+          "rubric_performance_level_3": "tapmaq",
+          "rubric_performance_level_4": "giriş"
+        },
+        "CSD U3 Direction Arrows_2022": {
+          "rubric_key_concept": "giriş",
+          "rubric_performance_level_1": "cavab",
+          "rubric_performance_level_2": "səhv",
+          "rubric_performance_level_3": "tapmaq",
+          "rubric_performance_level_4": "giriş"
+        },
+        "CSD U3 Direction Arrows_2023": {
+          "rubric_key_concept": "giriş",
+          "rubric_performance_level_1": "cavab",
+          "rubric_performance_level_2": "səhv",
+          "rubric_performance_level_3": "tapmaq",
+          "rubric_performance_level_4": "giriş"
+        },
+        "CSD U3 Draw Loop Plugged update your scene_2019": {
+          "rubric_key_concept": "dövrlər",
+          "rubric_performance_level_1": "təlimatlar",
+          "rubric_performance_level_2": "əlavə",
+          "rubric_performance_level_3": "səhnə"
+        },
+        "CSD U3 Draw Loop Plugged update your scene_2021": {
+          "rubric_key_concept": "dövrlər",
+          "rubric_performance_level_1": "təlimatlar",
+          "rubric_performance_level_2": "əlavə",
+          "rubric_performance_level_3": "səhnə"
+        },
+        "CSD U3 Draw Loop Plugged update your scene_2022": {
+          "rubric_key_concept": "dövrlər",
+          "rubric_performance_level_1": "təlimatlar",
+          "rubric_performance_level_2": "əlavə",
+          "rubric_performance_level_3": "səhnə"
+        },
+        "CSD U3 Draw Loop Plugged update your scene_2023": {
+          "rubric_key_concept": "dövrlər",
+          "rubric_performance_level_1": "təlimatlar",
+          "rubric_performance_level_2": "əlavə",
+          "rubric_performance_level_3": "səhnə"
+        },
+        "CSD U3 Draw Loop Plugged wiggle sprite y_2021": {
+          "rubric_key_concept": "dövrlər",
+          "rubric_performance_level_1": "təlimatlar",
+          "rubric_performance_level_2": "dövr",
+          "rubric_performance_level_3": "hissələr"
+        },
+        "CSD U3 Draw Loop Plugged wiggle sprite y_2022": {
+          "rubric_key_concept": "dövrlər",
+          "rubric_performance_level_1": "təlimatlar",
+          "rubric_performance_level_2": "dövr",
+          "rubric_performance_level_3": "hissələr"
+        },
+        "CSD U3 Draw Loop Plugged wiggle sprite y_2023": {
+          "rubric_key_concept": "dövrlər",
+          "rubric_performance_level_1": "təlimatlar",
+          "rubric_performance_level_2": "dövr",
+          "rubric_performance_level_3": "hissələr"
+        },
+        "CSD U3 Else_2019": {
+          "rubric_key_concept": "şərtlər",
+          "rubric_performance_level_1": "nə zaman ki",
+          "rubric_performance_level_2": "bütün",
+          "rubric_performance_level_3": "əks halda"
+        },
+        "CSD U3 Else_2021": {
+          "rubric_key_concept": "şərtlər",
+          "rubric_performance_level_1": "nə zaman ki",
+          "rubric_performance_level_2": "bütün",
+          "rubric_performance_level_3": "əks halda"
+        },
+        "CSD U3 Else_2022": {
+          "rubric_key_concept": "şərtlər",
+          "rubric_performance_level_1": "nə zaman ki",
+          "rubric_performance_level_2": "bütün",
+          "rubric_performance_level_3": "əks halda"
+        },
+        "CSD U3 Else_2023": {
+          "rubric_key_concept": "şərtlər",
+          "rubric_performance_level_1": "nə zaman ki",
+          "rubric_performance_level_2": "bütün",
+          "rubric_performance_level_3": "əks halda"
+        },
+        "CSD U3 Functions Add Change Background_2019": {
+          "rubric_performance_level_1": "Funksiyalar"
+        },
+        "CSD U3 Functions Add Change Background_2021": {
+          "rubric_performance_level_1": "Funksiyalar"
+        },
+        "CSD U3 Functions Add Change Background_2022": {
+          "rubric_performance_level_1": "Funksiyalar"
+        },
+        "CSD U3 Functions Add Change Background_2023": {
+          "rubric_performance_level_1": "Funksiyalar"
+        },
+        "CSD U3 Movement Fish_2021": {
+          "rubric_key_concept": "artım",
+          "rubric_performance_level_1": "Animasiya",
+          "rubric_performance_level_2": "təlimatlar",
+          "rubric_performance_level_3": "sayğac",
+          "rubric_performance_level_4": "çəkmək"
+        },
+        "CSD U3 Movement Fish_2022": {
+          "rubric_key_concept": "artım",
+          "rubric_performance_level_1": "Animasiya",
+          "rubric_performance_level_2": "təlimatlar",
+          "rubric_performance_level_3": "sayğac",
+          "rubric_performance_level_4": "çəkmək"
+        },
+        "CSD U3 Movement Fish_2023": {
+          "rubric_key_concept": "artım",
+          "rubric_performance_level_1": "Animasiya",
+          "rubric_performance_level_2": "təlimatlar",
+          "rubric_performance_level_3": "sayğac",
+          "rubric_performance_level_4": "çəkmək"
+        },
+        "CSD U3 Movement Your Own 2_2018": {
+          "rubric_performance_level_4": "Sayğac nümunəsi yoxdur."
+        },
+        "CSD U3 Random Debug Cloud_2018_2019": {
+          "rubric_performance_level_1": "Proqram təsviri nümunədə olduğu kimi görünür.",
+          "rubric_performance_level_2": "o",
+          "rubric_performance_level_3": "Dəyişdi\n",
+          "rubric_performance_level_4": "təlimatlar"
+        },
+        "CSD U3 Random Debug Cloud_2021": {
+          "rubric_key_concept": "Metodları və ya əmr icralarını dəyişmək üçün parametrlərdən istifadə et.",
+          "rubric_performance_level_1": "Proqram təsviri nümunədə olduğu kimi görünür.",
+          "rubric_performance_level_2": "o",
+          "rubric_performance_level_3": "Dəyişdi\n",
+          "rubric_performance_level_4": "təlimatlar"
+        },
+        "CSD U3 Random Debug Cloud_2022": {
+          "rubric_key_concept": "Metodları və ya əmr icralarını dəyişmək üçün parametrlərdən istifadə et.",
+          "rubric_performance_level_1": "Proqram təsviri nümunədə olduğu kimi görünür.",
+          "rubric_performance_level_2": "o",
+          "rubric_performance_level_3": "Dəyişdi\n",
+          "rubric_performance_level_4": "təlimatlar"
+        },
+        "CSD U3 Random Debug Cloud_2023": {
+          "rubric_key_concept": "Metodları və ya əmr icralarını dəyişmək üçün parametrlərdən istifadə et.",
+          "rubric_performance_level_1": "Proqram təsviri nümunədə olduğu kimi görünür.",
+          "rubric_performance_level_2": "o",
+          "rubric_performance_level_3": "Dəyişdi\n",
+          "rubric_performance_level_4": "təlimatlar"
+        },
+        "CSD U3 Random rainbow snake_2018_2019": {
+          "rubric_key_concept": "əmr",
+          "rubric_performance_level_1": "üfüqi",
+          "rubric_performance_level_2": "dairə",
+          "rubric_performance_level_3": "şaquli",
+          "rubric_performance_level_4": "dairə"
+        },
+        "CSD U3 Random rainbow snake_2021": {
+          "rubric_key_concept": "əmr",
+          "rubric_performance_level_1": "üfüqi",
+          "rubric_performance_level_2": "dairə",
+          "rubric_performance_level_3": "şaquli",
+          "rubric_performance_level_4": "dairə"
+        },
+        "CSD U3 Random rainbow snake_2022": {
+          "rubric_key_concept": "əmr",
+          "rubric_performance_level_1": "üfüqi",
+          "rubric_performance_level_2": "dairə",
+          "rubric_performance_level_3": "şaquli",
+          "rubric_performance_level_4": "dairə"
+        },
+        "CSD U3 Random rainbow snake_2023": {
+          "rubric_key_concept": "əmr",
+          "rubric_performance_level_2": "şaquli",
+          "rubric_performance_level_4": "dairə"
+        },
+        "CSD U3 Sprites assessment_2021": {
+          "rubric_key_concept": "Spraytları yarat və istifadə et.",
+          "rubric_performance_level_1": "animasiya",
+          "rubric_performance_level_2": "kətan",
+          "rubric_performance_level_3": "çəkmək",
+          "rubric_performance_level_4": "Animasiya"
+        },
+        "CSD U3 Sprites assessment_2022": {
+          "rubric_key_concept": "Spraytları yarat və istifadə et.",
+          "rubric_performance_level_1": "animasiya",
+          "rubric_performance_level_2": "kətan",
+          "rubric_performance_level_3": "çəkmək",
+          "rubric_performance_level_4": "Animasiya"
+        },
+        "CSD U3 Sprites assessment_2023": {
+          "rubric_key_concept": "Spraytları yarat və istifadə et.",
+          "rubric_performance_level_1": "animasiya",
+          "rubric_performance_level_2": "kətan",
+          "rubric_performance_level_3": "çəkmək",
+          "rubric_performance_level_4": "Animasiya"
+        },
+        "CSD U3 Sprites scene sprites_2019": {
+          "rubric_performance_level_4": "Heç bir sprit yaradılmır."
+        },
+        "CSD U3 Variables assessment_2021": {
+          "rubric_key_concept": "İnformasiyaları saxlamaq və yeniləmək üçün dəyişənlərdən istifadə et.",
+          "rubric_performance_level_1": "dəyişən",
+          "rubric_performance_level_2": "dəyişən",
+          "rubric_performance_level_3": "dəyişən",
+          "rubric_performance_level_4": "Proqram"
+        },
+        "CSD U3 Variables assessment_2022": {
+          "rubric_key_concept": "İnformasiyaları saxlamaq və yeniləmək üçün dəyişənlərdən istifadə et.",
+          "rubric_performance_level_1": "dəyişən",
+          "rubric_performance_level_2": "dəyişən",
+          "rubric_performance_level_3": "dəyişən",
+          "rubric_performance_level_4": "Proqram"
+        },
+        "CSD U3 Variables assessment_2023": {
+          "rubric_key_concept": "İnformasiyaları saxlamaq və yeniləmək üçün dəyişənlərdən istifadə et.",
+          "rubric_performance_level_1": "dəyişən",
+          "rubric_performance_level_2": "dəyişən",
+          "rubric_performance_level_3": "dəyişən",
+          "rubric_performance_level_4": "Proqram"
+        },
+        "CSD U3 Variables random with assignment_2019": {
+          "rubric_key_concept": "İnformasiyaları saxlamaq və yeniləmək üçün dəyişənlərdən istifadə et.",
+          "rubric_performance_level_3": "dəyişən"
+        },
+        "CSD U3 abstraction decelerateY_2019": {
+          "rubric_key_concept": "qarışıq"
+        },
+        "CSD U3 abstraction decelerateY_2021": {
+          "rubric_key_concept": "qarışıq"
+        },
+        "CSD U3 abstraction decelerateY_2022": {
+          "rubric_key_concept": "qarışıq"
+        },
+        "CSD U3 abstraction decelerateY_2023": {
+          "rubric_key_concept": "qarışıq"
+        },
+        "CSD U3 abstraction velocityX control_2019": {
+          "rubric_key_concept": "model"
+        },
+        "CSD U3 abstraction velocityX control_2021": {
+          "rubric_key_concept": "model",
+          "rubric_performance_level_2": "çevirmək",
+          "rubric_performance_level_3": "təkrarlamaq",
+          "rubric_performance_level_4": "ekran"
+        },
+        "CSD U3 abstraction velocityX control_2022": {
+          "rubric_key_concept": "model",
+          "rubric_performance_level_2": "çevirmək",
+          "rubric_performance_level_3": "təkrarlamaq",
+          "rubric_performance_level_4": "ekran"
+        },
+        "CSD U3 abstraction velocityX control_2023": {
+          "rubric_key_concept": "model",
+          "rubric_performance_level_2": "çevirmək",
+          "rubric_performance_level_3": "təkrarlamaq",
+          "rubric_performance_level_4": "ekran"
+        },
+        "CSD U3 collisions horse_2019": {
+          "rubric_key_concept": "idarə etmək",
+          "rubric_performance_level_2": "bir-neçə/hansısa, hər hansı"
+        },
+        "CSD U3 collisions horse_2021": {
+          "rubric_key_concept": "idarə etmək",
+          "rubric_performance_level_2": "bir-neçə/hansısa, hər hansı"
+        },
+        "CSD U3 collisions horse_2022": {
+          "rubric_key_concept": "idarə etmək",
+          "rubric_performance_level_2": "bir-neçə/hansısa, hər hansı"
+        },
+        "CSD U3 collisions horse_2023": {
+          "rubric_key_concept": "idarə etmək",
+          "rubric_performance_level_2": "bir-neçə/hansısa, hər hansı"
+        },
+        "CSD U3 debug_2019": {
+          "rubric_key_concept": "Obyektin ölçüsünü və üst-üstə düşməsini nəzərə alaraq elementləri ekranda yerləşdirmək üçün koordinat sistemindən istifadə edin.",
+          "rubric_performance_level_1": "Proqram rəsm nümunədəki ilə eynidir və yeddi kod sətirində yer alır.",
+          "rubric_performance_level_2": "Proqram rəsm əsasən rəsmlə eynidır, lakin bəzi kiçik yerləşdirmə səhvləri ola bilər və əlavə kod xətləri ola bilər.",
+          "rubric_performance_level_3": "Hərəkət etdirilən kvadrat bənövşəyidir və çevrənin qarşısında yaranır.",
+          "rubric_performance_level_4": "Şəkil ya eynidir, ya da hər hansı bir dəyişiklik tapşırıqla əlaqəli görünmür."
+        },
+        "CSD U3 debug_2021": {
+          "rubric_key_concept": "Obyektin ölçüsünü və üst-üstə düşməsini nəzərə alaraq elementləri ekranda yerləşdirmək üçün koordinat sistemindən istifadə edin.",
+          "rubric_performance_level_1": "Proqram rəsm nümunədəki ilə eynidir və yeddi kod sətirində yer alır.",
+          "rubric_performance_level_2": "Proqram rəsm əsasən rəsmlə eynidır, lakin bəzi kiçik yerləşdirmə səhvləri ola bilər və əlavə kod xətləri ola bilər.",
+          "rubric_performance_level_3": "Hərəkət etdirilən kvadrat bənövşəyidir və çevrənin qarşısında yaranır.",
+          "rubric_performance_level_4": "Şəkil ya eynidir, ya da hər hansı bir dəyişiklik tapşırıqla əlaqəli görünmür."
+        },
+        "CSD U3 debug_2022": {
+          "rubric_key_concept": "Obyektin ölçüsünü və üst-üstə düşməsini nəzərə alaraq elementləri ekranda yerləşdirmək üçün koordinat sistemindən istifadə edin.",
+          "rubric_performance_level_1": "Proqram rəsm nümunədəki ilə eynidir və yeddi kod sətirində yer alır.",
+          "rubric_performance_level_2": "Proqram rəsm əsasən rəsmlə eynidır, lakin bəzi kiçik yerləşdirmə səhvləri ola bilər və əlavə kod xətləri ola bilər.",
+          "rubric_performance_level_3": "Hərəkət etdirilən kvadrat bənövşəyidir və çevrənin qarşısında yaranır.",
+          "rubric_performance_level_4": "Şəkil ya eynidir, ya da hər hansı bir dəyişiklik tapşırıqla əlaqəli görünmür."
+        },
+        "CSD U3 debug_2023": {
+          "rubric_key_concept": "Obyektin ölçüsünü və üst-üstə düşməsini nəzərə alaraq elementləri ekranda yerləşdirmək üçün koordinat sistemindən istifadə edin.",
+          "rubric_performance_level_2": "Proqram rəsm əsasən rəsmlə eynidır, lakin bəzi kiçik yerləşdirmə səhvləri ola bilər və əlavə kod xətləri ola bilər.",
+          "rubric_performance_level_3": "Hərəkət etdirilən kvadrat bənövşəyidir və çevrənin qarşısında yaranır.",
+          "rubric_performance_level_4": "Şəkil ya eynidir, ya da hər hansı bir dəyişiklik tapşırıqla əlaqəli görünmür."
+        },
+        "CSD U6 emotion machine 4_2019": {
+          "rubric_key_concept": "xassələr",
+          "rubric_performance_level_1": "Proqram",
+          "rubric_performance_level_2": "Proqramın üç düyməsi var və proqram hər düyməyə klikləməyə müəyyən şəkildə cavab verir, lakin cavab təlimatlarda göstərildiyi kimi olmaya bilər.",
+          "rubric_performance_level_3": "\"Xoşbəxt\" düyməsindən başqa ən azı bir düymə klikləməyə müəyyən şəkildə cavab verir.",
+          "rubric_performance_level_4": "\"Xoşbəxt\" düyməsindən başqa heç bir düymə klikləməyə cavab vermir."
+        },
+        "CSD U6 emotion machine 4_2021": {
+          "rubric_key_concept": "xassələr",
+          "rubric_performance_level_1": "Proqram",
+          "rubric_performance_level_2": "Proqramın üç düyməsi var və proqram hər düyməyə klikləməyə müəyyən şəkildə cavab verir, lakin cavab təlimatlarda göstərildiyi kimi olmaya bilər.",
+          "rubric_performance_level_3": "\"Xoşbəxt\" düyməsindən başqa ən azı bir düymə klikləməyə müəyyən şəkildə cavab verir.",
+          "rubric_performance_level_4": "\"Xoşbəxt\" düyməsindən başqa heç bir düymə klikləməyə cavab vermir."
+        },
+        "CSD U6 setProperty hidden 2_2019": {
+          "rubric_key_concept": "tədbirlər istidafəçi",
+          "rubric_performance_level_3": "ikinci",
+          "rubric_performance_level_4": "tədbirlər"
+        },
+        "CSD U6 setProperty hidden 2_2021": {
+          "rubric_key_concept": "tədbirlər istidafəçi",
+          "rubric_performance_level_3": "ikinci",
+          "rubric_performance_level_4": "tədbirlər"
+        },
+        "CSD U6 setProperty xy_2019": {
+          "rubric_key_concept": "xassələr",
+          "rubric_performance_level_1": "hərəkət etmək",
+          "rubric_performance_level_2": "blok",
+          "rubric_performance_level_3": "hərəkət etmək"
+        },
+        "CSD U6 setProperty xy_2021": {
+          "rubric_key_concept": "xassələr",
+          "rubric_performance_level_1": "hərəkət etmək",
+          "rubric_performance_level_2": "blok",
+          "rubric_performance_level_3": "hərəkət etmək"
+        },
+        "CSD Web CSS Assessment_2021": {
+          "rubric_key_concept": "Bir üslub vərəqi yaradın və HTML-ə birləşdirin.  Üslub cədvəlinə veb-səhifənin paraqraf elementini dəyişdirən bir qayda daxildir. ",
+          "rubric_performance_level_2": "Paraqraflar yeni rəng və ya ölçüdür.",
+          "rubric_performance_level_3": "Paraqrafların üslub cədvəlində xüsusi qaydaları var və rəng və ya ölçü xassəsindən istifadə edilir, lakin mətnin rəng və ya ölçüsünü dəyişməyən kifayət qədər səhvlər var. Üslub cədvəlini veb səhifə ilə əlaqələndirməyə çalışan HTML kodu var."
+        },
+        "CSD Web CSS Assessment_2022": {
+          "rubric_key_concept": "Bir üslub vərəqi yaradın və HTML-ə birləşdirin.  Üslub cədvəlinə veb-səhifənin paraqraf elementini dəyişdirən bir qayda daxildir. ",
+          "rubric_performance_level_2": "Paraqraflar yeni rəng və ya ölçüdür.",
+          "rubric_performance_level_3": "Paraqrafların üslub cədvəlində xüsusi qaydaları var və rəng və ya ölçü xassəsindən istifadə edilir, lakin mətnin rəng və ya ölçüsünü dəyişməyən kifayət qədər səhvlər var. Üslub cədvəlini veb səhifə ilə əlaqələndirməyə çalışan HTML kodu var."
+        },
+        "CSD Web CSS Assessment_2023": {
+          "rubric_key_concept": "Bir üslub vərəqi yaradın və HTML-ə birləşdirin.  Üslub cədvəlinə veb-səhifənin paraqraf elementini dəyişdirən bir qayda daxildir. ",
+          "rubric_performance_level_2": "Paraqraflar yeni rəng və ya ölçüdür.",
+          "rubric_performance_level_3": "Paraqrafların üslub cədvəlində xüsusi qaydaları var və rəng və ya ölçü xassəsindən istifadə edilir, lakin mətnin rəng və ya ölçüsünü dəyişməyən kifayət qədər səhvlər var. Üslub cədvəlini veb səhifə ilə əlaqələndirməyə çalışan HTML kodu var."
+        },
+        "CSD games mousedown intro_2021": {
+          "rubric_key_concept": "şərtlər",
+          "rubric_performance_level_1": "nə zaman ki",
+          "rubric_performance_level_2": "bütün",
+          "rubric_performance_level_3": "əks halda"
+        },
+        "CSD games mousedown intro_2022": {
+          "rubric_key_concept": "şərtlər",
+          "rubric_performance_level_1": "nə zaman ki",
+          "rubric_performance_level_2": "bütün",
+          "rubric_performance_level_3": "əks halda"
+        },
+        "CSD games mousedown intro_2023": {
+          "rubric_key_concept": "şərtlər",
+          "rubric_performance_level_1": "nə zaman ki",
+          "rubric_performance_level_2": "bütün",
+          "rubric_performance_level_3": "əks halda"
+        },
+        "CSD web conditionals assessment_2021": {
+          "rubric_key_concept": "şərtlər",
+          "rubric_performance_level_1": "Dəyişmək",
+          "rubric_performance_level_3": "İfadə"
+        },
+        "CSD web conditionals assessment_2022": {
+          "rubric_key_concept": "şərtlər",
+          "rubric_performance_level_1": "Dəyişmək",
+          "rubric_performance_level_3": "İfadə"
+        },
+        "CSD web conditionals assessment_2023": {
+          "rubric_key_concept": "şərtlər",
+          "rubric_performance_level_1": "Dəyişmək",
+          "rubric_performance_level_3": "İfadə"
+        },
+        "CSD web mouse assessment_2021": {
+          "rubric_key_concept": "şərtlər",
+          "rubric_performance_level_1": "yaratıq",
+          "rubric_performance_level_2": "istidafəçi",
+          "rubric_performance_level_3": "icra etmək"
+        },
+        "CSD web mouse assessment_2022": {
+          "rubric_key_concept": "şərtlər",
+          "rubric_performance_level_1": "yaratıq",
+          "rubric_performance_level_2": "istidafəçi",
+          "rubric_performance_level_3": "icra etmək"
+        },
+        "CSD web mouse assessment_2023": {
+          "rubric_key_concept": "şərtlər",
+          "rubric_performance_level_1": "yaratıq",
+          "rubric_performance_level_2": "istidafəçi",
+          "rubric_performance_level_3": "icra etmək"
+        },
+        "CSD web text assessment_2021": {
+          "rubric_key_concept": "Dəyiş",
+          "rubric_performance_level_1": "fərqli",
+          "rubric_performance_level_2": "yer, məkan",
+          "rubric_performance_level_3": "ekran",
+          "rubric_performance_level_4": "Proqram"
+        },
+        "CSD web text assessment_2022": {
+          "rubric_key_concept": "Dəyiş",
+          "rubric_performance_level_1": "fərqli",
+          "rubric_performance_level_2": "yer, məkan",
+          "rubric_performance_level_3": "ekran",
+          "rubric_performance_level_4": "Proqram"
+        },
+        "CSD web text assessment_2023": {
+          "rubric_key_concept": "Dəyiş",
+          "rubric_performance_level_1": "fərqli",
+          "rubric_performance_level_2": "yer, məkan",
+          "rubric_performance_level_3": "ekran",
+          "rubric_performance_level_4": "Proqram"
+        },
+        "allthethings-mini-rubric-gamelab": {
+          "rubric_key_concept": "Əsas anlayış"
+        },
+        "ml-club app-review submit": {
+          "rubric_key_concept": "Maşın öyrənməsindən istifadə edən istifadəçi dostu proqramının yaradılması",
+          "rubric_performance_level_1": "Model idxal edildi və tətbiq düzgün işləyir. Tətbiqdə bir mövzu var və hər açılan menyunun göstərişi sual olaraq redaktə edilmişdir. Tətbiqdə xoş gəlmisiniz ekranı və ekranları düzgün dəyişdirən bir düymə var.",
+          "rubric_performance_level_2": "Model idxal edilib və proqram düzgün işləyir. Tətbiqin mövzusu var və açılan menyu sual olaraq redaktə edilib. Lakin, salamlama ekranı natamamdır və ya düzgün işləmir.",
+          "rubric_performance_level_3": "Model idxal edilib və proqram düzgün işləyir, lakin ekranda dizayn və ya mətndə heç bir dəyişiklik olmayıb. Xoşlama ekranı yoxdur."
+        },
+        "ml-club app-review submit_2022": {
+          "rubric_key_concept": "Maşın öyrənməsindən istifadə edən istifadəçi dostu proqramının yaradılması",
+          "rubric_performance_level_1": "Model idxal edildi və tətbiq düzgün işləyir. Tətbiqdə bir mövzu var və hər açılan menyunun göstərişi sual olaraq redaktə edilmişdir. Tətbiqdə xoş gəlmisiniz ekranı və ekranları düzgün dəyişdirən bir düymə var.",
+          "rubric_performance_level_2": "Model idxal edilib və proqram düzgün işləyir. Tətbiqin mövzusu var və açılan menyu sual olaraq redaktə edilib. Lakin, salamlama ekranı natamamdır və ya düzgün işləmir.",
+          "rubric_performance_level_3": "Model idxal edilib və proqram düzgün işləyir, lakin ekranda dizayn və ya mətndə heç bir dəyişiklik olmayıb. Xoşlama ekranı yoxdur."
+        },
+        "ml-club app-review submit_2023": {
+          "rubric_key_concept": "Maşın öyrənməsindən istifadə edən istifadəçi dostu proqramının yaradılması",
+          "rubric_performance_level_1": "Model idxal edildi və tətbiq düzgün işləyir. Tətbiqdə bir mövzu var və hər açılan menyunun göstərişi sual olaraq redaktə edilmişdir. Tətbiqdə xoş gəlmisiniz ekranı və ekranları düzgün dəyişdirən bir düymə var.",
+          "rubric_performance_level_2": "Model idxal edilib və proqram düzgün işləyir. Tətbiqin mövzusu var və açılan menyu sual olaraq redaktə edilib. Lakin, salamlama ekranı natamamdır və ya düzgün işləmir.",
+          "rubric_performance_level_3": "Model idxal edilib və proqram düzgün işləyir, lakin ekranda dizayn və ya mətndə heç bir dəyişiklik olmayıb. Xoşlama ekranı yoxdur."
+        },
+        "ml-intro app lab-book recommender 4-2021": {
+          "rubric_key_concept": "Maşın öyrənməsindən istifadə edən istifadəçi dostu proqramının yaradılması",
+          "rubric_performance_level_1": "Model idxal edildi və tətbiq düzgün işləyir. Tətbiqdə bir mövzu var və hər açılan menyunun göstərişi sual olaraq redaktə edilmişdir. Tətbiqdə xoş gəlmisiniz ekranı və ekranları düzgün dəyişdirən bir düymə var.",
+          "rubric_performance_level_2": "Model idxal edilib və proqram düzgün işləyir. Tətbiqin mövzusu var və açılan menyu sual olaraq redaktə edilib. Lakin, salamlama ekranı natamamdır və ya düzgün işləmir.",
+          "rubric_performance_level_3": "Model idxal edilib və proqram düzgün işləyir, lakin ekranda dizayn və ya mətndə heç bir dəyişiklik olmayıb. Xoşlama ekranı yoxdur."
+        },
+        "ml-intro app lab-book recommender 4_2022": {
+          "rubric_key_concept": "Maşın öyrənməsindən istifadə edən istifadəçi dostu proqramının yaradılması",
+          "rubric_performance_level_1": "Model idxal edildi və tətbiq düzgün işləyir. Tətbiqdə bir mövzu var və hər açılan menyunun göstərişi sual olaraq redaktə edilmişdir. Tətbiqdə xoş gəlmisiniz ekranı və ekranları düzgün dəyişdirən bir düymə var.",
+          "rubric_performance_level_2": "Model idxal edilib və proqram düzgün işləyir. Tətbiqin mövzusu var və açılan menyu sual olaraq redaktə edilib. Lakin, salamlama ekranı natamamdır və ya düzgün işləmir.",
+          "rubric_performance_level_3": "Model idxal edilib və proqram düzgün işləyir, lakin ekranda dizayn və ya mətndə heç bir dəyişiklik olmayıb. Xoşlama ekranı yoxdur."
+        },
+        "ml-intro app lab-book recommender 4_2023": {
+          "rubric_key_concept": "Maşın öyrənməsindən istifadə edən istifadəçi dostu proqramının yaradılması",
+          "rubric_performance_level_1": "Model idxal edildi və tətbiq düzgün işləyir. Tətbiqdə bir mövzu var və hər açılan menyunun göstərişi sual olaraq redaktə edilmişdir. Tətbiqdə xoş gəlmisiniz ekranı və ekranları düzgün dəyişdirən bir düymə var.",
+          "rubric_performance_level_2": "Model idxal edilib və proqram düzgün işləyir. Tətbiqin mövzusu var və açılan menyu sual olaraq redaktə edilib. Lakin, salamlama ekranı natamamdır və ya düzgün işləmir.",
+          "rubric_performance_level_3": "Model idxal edilib və proqram düzgün işləyir, lakin ekranda dizayn və ya mətndə heç bir dəyişiklik olmayıb. Xoşlama ekranı yoxdur."
+        },
+        "ml-models in applab-zoo assessment": {
+          "rubric_key_concept": "Tətbiqi yeniləmək üçün Model Kartından və tətbiqdə ekranları dəyişmək üçün if-ifadələrindən istifadə edin",
+          "rubric_performance_level_1": "Proqnoz ekranında hər bir xüsusiyyət üçün tam cümlələr var və proqnozlaşdırılan dəyər əsasında ekranı dəyişdirmək üçün if-ifadələri istifadə olunur.",
+          "rubric_performance_level_2": "Proqnoz ekranında bəzi tam cümlələr var, bəziləri isə proqnozlaşdırılan dəyər əsasında ekranı dəyişdirmək üçün if ifadələri istifadə olunur - lakin proqram natamamdır.",
+          "rubric_performance_level_3": "Proqnoz ekranında tam cümlələr yoxdur və ya ekranı dəyişdirmək üçün if-ifadələrində səhvlər var.",
+          "rubric_performance_level_4": "Tətbiq yenilənməyib."
+        },
+        "ml-models in applab-zoo assessment_2022": {
+          "rubric_key_concept": "Tətbiqi yeniləmək üçün Model Kartından və tətbiqdə ekranları dəyişmək üçün if-ifadələrindən istifadə edin",
+          "rubric_performance_level_1": "Proqnoz ekranında hər bir xüsusiyyət üçün tam cümlələr var və proqnozlaşdırılan dəyər əsasında ekranı dəyişdirmək üçün if-ifadələri istifadə olunur.",
+          "rubric_performance_level_2": "Proqnoz ekranında bəzi tam cümlələr var, bəziləri isə proqnozlaşdırılan dəyər əsasında ekranı dəyişdirmək üçün if ifadələri istifadə olunur - lakin proqram natamamdır.",
+          "rubric_performance_level_3": "Proqnoz ekranında tam cümlələr yoxdur və ya ekranı dəyişdirmək üçün if-ifadələrində səhvlər var.",
+          "rubric_performance_level_4": "Tətbiq yenilənməyib."
+        },
+        "ml-models in applab-zoo assessment_2023": {
+          "rubric_key_concept": "Tətbiqi yeniləmək üçün Model Kartından və tətbiqdə ekranları dəyişmək üçün if-ifadələrindən istifadə edin",
+          "rubric_performance_level_1": "Proqnoz ekranında hər bir xüsusiyyət üçün tam cümlələr var və proqnozlaşdırılan dəyər əsasında ekranı dəyişdirmək üçün if-ifadələri istifadə olunur.",
+          "rubric_performance_level_2": "Proqnoz ekranında bəzi tam cümlələr var, bəziləri isə proqnozlaşdırılan dəyər əsasında ekranı dəyişdirmək üçün if ifadələri istifadə olunur - lakin proqram natamamdır.",
+          "rubric_performance_level_3": "Proqnoz ekranında tam cümlələr yoxdur və ya ekranı dəyişdirmək üçün if-ifadələrində səhvlər var.",
+          "rubric_performance_level_4": "Tətbiq yenilənməyib."
         }
       }
     }

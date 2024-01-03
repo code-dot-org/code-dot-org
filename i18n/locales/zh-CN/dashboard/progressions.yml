@@ -2,7 +2,7 @@ zh-CN:
   data:
     progressions:
       '"If/Else" with the Bee': '“如果/否则”与蜜蜂'
-      8-Bit Binary Number Widget: 8比特二进制数组件
+      8-Bit Binary Number Widget: 8 位二进制数控件
       AI Lab and Isaac's Data: AI实验室和Issac的数据
       AI Lab and Kim's Data: AI实验室和Kim的数据
       AI Machine Learning - Video: 人工智能机器学习 - 视频
@@ -19,7 +19,7 @@ zh-CN:
       Add Style to Your Page: 给你的页面添加样式
       Add Text: 添加文本
       Add a Welcome Screen: 添加欢迎页面
-      Adding Images: 添加图画
+      Adding Images: 添加图片
       Adding New Screens: 添加新的屏幕
       Adding Pages: 添加页面
       Adding Screens: 添加屏幕
@@ -55,6 +55,7 @@ zh-CN:
       Assessment: 测验
       Attribution: 属性
       Back and Forth: 不断重复
+      Balance an Ecosystem: 平衡生态系统
       Basic Conditionals: 基础条件
       Bass, Mid, and Treble: 低音、中音和高音
       Be a Super Digital Citizen: 做一个超级数字公民
@@ -90,6 +91,7 @@ zh-CN:
       Cake Survey: 蛋糕问卷
       Challenge: 挑战
       Challenge Levels: 挑战关卡
+      Challenge/Practice: 挑战/练习
       'Challenge: Add More Inputs': '挑战: 添加更多输入'
       'Challenge: Checking for Multiple Conditions': '挑战：检查多重条件'
       'Challenge: Draw an Image': '挑战：绘制图像'
@@ -102,7 +104,9 @@ zh-CN:
       Change: 更改
       Changing Screens: 更改屏幕
       Changing Sensor Scale: 改变传感器的级别
+      Check For Understanding: 理解检查
       Check Your Work: 检查你的工作
+      Check for Understanding: 理解检查
       Check-In Survey: 签入调查
       Checking for a Winner: 检查赢家
       'Choice Levels: Customize Your App': '选择级别：自定义你的App'
@@ -151,6 +155,7 @@ zh-CN:
       Creative Commons Search: 知识共享检索
       Customize: 自定义
       Customize Your App: 自定义你的应用
+      Customizing Your App: 自定义您的应用程序
       Dance Crews: 舞蹈团队
       Data Visualization: 数据可视化
       De-bugging with the Step Button: 使用步进按钮调试
@@ -176,9 +181,13 @@ zh-CN:
       Drawing: 绘画
       Drawing Shapes: 绘制形状
       Driver Alert System: 司机报警系统
+      Ecosystems Simulation: 生态系统模拟
+      Ecosystems Video: 生态系统视频
       Editing Images: 编辑图像
       Emotion Machine Example: 情绪机器示例
       End of Course Projects: 结课项目
+      End-Of-Unit Survey: 单元末问卷调查
+      End-of-Unit Survey: 单元末问卷调查
       Escape Room Example: 密室逃脱示例
       Event Types: 事件类型
       Events: 事件
@@ -197,6 +206,7 @@ zh-CN:
       Experiment with Web Lab: 使用网络实验室做实验
       Exploration: 探索
       'Exploration: Adding Style': '探索: 添加样式'
+      'Exploration: Clicker Game': '探索：点击游戏'
       'Exploration: For Loops': '发现：For循环'
       'Exploration: Rikki''s Poster': '探索：Rikki的海报'
       'Exploration: Sample Apps': '发现：示例应用'
@@ -219,6 +229,7 @@ zh-CN:
       Follow the Algorithm - Unplugged Activity: 遵循算法 - 离线活动
       Follow the Mouse: 跟随老鼠
       Fonts and Style: 字体和风格
+      Food Chain Setup: 食物链设置
       FoodFight: FoodFight
       For Loop Fun - Unplugged Activity: 快乐For循环 - 离线活动
       For Loops: 计数循环
@@ -246,10 +257,12 @@ zh-CN:
       Hello World: 你好世界
       How to Create a Simple Function: 如何创建一个简单的函数
       How to Make a Sprite: 如何制作精灵图
+      Human Device Interaction: 人机互动
       Hyperlinks: 超链接
       Ice Age Loops: 冰河世纪循环
       If Statements: If 语句
       If-Else Statements: If-else 语句
+      If... then... Conditional Statements: 如果……那么……条件语句
       Images and Sounds: 图像和声音
       Images in HTML: HTML 中的图像
       Import Your Model: 导入你的模型
@@ -264,7 +277,9 @@ zh-CN:
       Input with If-Else: 使用If-Else的输入
       Inspiration!: 激励！
       InspirationalArtwork: InspirationalArtwork
+      Interactive Art: 互动艺术
       Interactive Card: 互动卡
+      Intro Video: 简介视频
       Intro to Design Mode: 设计模式简介
       Intro to Flyer Game: 飞行者游戏简介
       Intro to For Loops: For循环介绍
@@ -272,9 +287,11 @@ zh-CN:
       Intro to Sprites: 精灵介绍
       Intro to Variables: 变量简介
       Introducing Sprite Lab: 向你介绍精灵图实验室
+      Introduction: 介绍
       Introduction to Arrays: 数组的简介
       Introduction to Game Lab: 游戏实验室简介
       Introduction to Variables: 变量简介
+      Investigate: 调查
       Isaac's Survey Data: Isaac的调查数据
       Iteration and Parameters: 迭代和参数
       Keep On Dancing!: 继续跳舞！
@@ -286,6 +303,7 @@ zh-CN:
       Layout Properties: 布局属性
       Layout with CSS: CSS布局
       Learning from Simulations: 从模拟中学习
+      Lesson Extra: 附加课程
       Lesson Extras: 附加课程
       Lesson Overview: 课程概述
       Level Overview: 课程概览
@@ -316,11 +334,14 @@ zh-CN:
       'Mini-Project: About Me': '关于我'
       'Mini-Project: Alien Dance Moves': '小项目：外星人舞步'
       'Mini-Project: Alien Dance Party': '小项目：外星人舞蹈派对'
+      'Mini-Project: Clicker Game': '小项目：点击游戏'
+      'Mini-Project: Collector Game': '小项目：收集游戏'
       'Mini-Project: Create a Virtual Pet': '小项目：创建虚拟宠物'
       'Mini-Project: Outbreak Simulator': '小项目：疫情爆发模拟器'
       'Mini-Project: Royal Battle': '小项目：皇室战争'
       "Mini-Project: Snowflake #1": "小项目：雪花#1"
       "Mini-Project: Snowflake #2": "小项目：雪花#2"
+      'Mini-Project: Sticker Art': '迷你项目：贴纸艺术'
       'Mini-Project: Swimming Fish': '小项目：游泳的鱼'
       'Mini-Project: Swimming Fish (continued)': '小项目：游泳的鱼（续集）'
       'Mini-Project: User Input Programs': '小项目：用户输入程序'
@@ -449,10 +470,13 @@ zh-CN:
       Sensors to Colors: 颜色感应器
       Set Up Sprites: 设置精灵
       Setting Properties: 设置属性
+      Setup: 设置
       Shapes and Parameters: 形状和参数
       Shapes and the Draw Loop: 图形和绘画循环
+      Share Out: 分发
       Share Your App: 分享你的应用
       Share Your Pages: 分享你的页面
+      Share Your Simulation: 分享你的模拟
       Share Your Stylesheets: 分享你的样式表
       Shoe Recommendation Survey: 鞋推荐调查
       Shoe Recommender: 鞋推荐器
@@ -463,6 +487,8 @@ zh-CN:
       Sliders: 滑块
       Smart Bike - Blinkers: 智能单车 - 闪光警戒灯
       Social Sleuth: 社交侦探
+      Solution 2 - Fishing Season: 解决方案2 - 捕鱼季节
+      Solution 3 - Fishing Limits: 解决方案3 - 捕鱼限制
       Songwriting - Functions Unplugged Activity: 词曲创作 - 离线活动
       Speed it Up, Slow it Down: 加速、减速
       Sprite Interactions: 精灵图互动
@@ -492,6 +518,7 @@ zh-CN:
       The Collector: 数据采集器
       The Counter Pattern: 计数器模式
       The Draw Loop: 绘制循环
+      The Food Chain: 食物链
       The Harvester: 收获者
       The Internet - Unplugged Activity: 互联网 - 离线活动
       The Power of Words - Unplugged Activity: 语言的力量 - 离线活动
@@ -504,6 +531,8 @@ zh-CN:
       UI Element Properties: 交互界面元素属性
       Ultimate Shoe Recommender: 终极鞋推荐器
       Unit 5 Lesson 1 Overview: 第五单元第一课概览
+      Unplugged Activity: 线下的活动
+      Updating Your Prototype: 更新您的原型
       Upload Your Images: 上传你的图像
       User Interface: 用户界面
       Using Accelerometer Events: 使用加速传感器事件
@@ -522,7 +551,12 @@ zh-CN:
       Velocity and the Counter Pattern Review: 速度和计数模式回顾
       Video: 视频
       Video - Encryption and Public Keys: 视频 - 加密和公钥
+      Video - Functions: 视频 - 功能
+      Video - Introduction to Arrays: 视频 - 数组的简介
       'Video - Maze Intro: Programming with Blocks': '视频 - 迷宫简介：使用模块编程'
+      Video - Parameters: 视频 - 参数
+      Video - The Counter Pattern: 视频 - 计数器模式
+      Video - Variables: 视频 - 变量
       'Video:  Debugging with the Step Button': '视频：使用步进按钮调试'
       'Video:  Minecraft - The Agent': '视频：我的世界 - 吉祥物'
       'Video:  Text  and Prompts': '视频：文本和提示符'
@@ -552,12 +586,16 @@ zh-CN:
       'Video: Drawing in Game Lab - Part 1': '视频: 在游戏实验室中绘图-第1部分'
       'Video: Drawing in Game Lab - Part 2': '视频: 在游戏实验室中绘图-第2部分'
       'Video: Events': '视频：事件'
+      'Video: Events in App Lab': '视频 - 程式实验室中的活动'
       'Video: Follow The Digital Trail': '视频：遵循数字足迹'
       'Video: For Loops': '视频：计数循环'
       'Video: Functions': '视频: 功能'
       'Video: Getting Loopy': '视频：学习循环'
       'Video: Happy Maps - Unplugged Activity': '视频：快乐地图 - 离线活动'
       'Video: Harvesting with Conditionals': '视频：使用条件表达式收获'
+      'Video: Hello World: Do What You Want': '视频：你好世界：随心所欲'
+      'Video: Hello World: Programming with Events': '视频：你好世界：在活动中编程'
+      'Video: Hello World: Welcome to Sprite Lab': '视频：你好世界：欢迎来到精灵图实验室'
       'Video: How Search Works': '视频：研究如何运行'
       'Video: How to Create a Simple Function': '视频：如何创建一个简单的函数'
       'Video: How to Make a Sprite': '视频：如何制作精灵'
@@ -581,6 +619,7 @@ zh-CN:
       'Video: Introduction to the Draw Loop': '视频: 绘制循环简介'
       'Video: Loops in Artist': '视频：艺术家中的循环'
       'Video: Loops with the Artist': '视频：艺术家中的循环'
+      'Video: Lots of Sprites': '视频：大量精灵图'
       'Video: Managing Disagreement': '视频：管理分歧'
       'Video: Maze Intro - Programming with Blocks': '视频：迷宫简介 - 使用模块编程'
       'Video: Maze Intro - Programming with Blocks ': '视频：迷宫简介 - 使用模块编程 '
@@ -597,7 +636,10 @@ zh-CN:
       'Video: Nested Loops': '视频：嵌套循环'
       'Video: Nested Loops with the Bee': '视频：使用蜜蜂的嵌套循环'
       'Video: Netflix and Data': '视频：奈飞和数据'
+      'Video: Outbreak Simulator: Events': '视频：疫情模拟器：活动'
+      'Video: Outbreak Simulator: Free Play': '视频：疫情模拟器：自由模式'
       'Video: Outbreak Simulator: Introduction': '视频：爆发模拟：简介'
+      'Video: Outbreak Simulator: Thinking Like a Scientist': '视频：疫情模拟器：像科学家一样思考'
       'Video: Pair Programming': '视频：结对编程'
       'Video: Pair Programming ': '视频：结对编程 '
       'Video: Problem Solving Process': '视频：问题解决的方法'

@@ -113,3 +113,35 @@ dv:
           lesson_groups:
             csf_events:
               display_name: އިވެންޓުތައް
+        pre-express-2023:
+          lesson_groups:
+            csf_events:
+              display_name: އިވެންޓުތައް
+        express-2023:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: އިވެންޓުތައް
+        coursea-2023:
+          lesson_groups:
+            csf_events:
+              display_name: އިވެންޓުތައް
+        courseb-2023:
+          lesson_groups:
+            csf_events:
+              display_name: އިވެންޓުތައް
+        coursec-2023:
+          lesson_groups:
+            csf_events:
+              display_name: އިވެންޓުތައް
+        coursed-2023:
+          lesson_groups:
+            csf_events:
+              display_name: އިވެންޓުތައް
+        nevada-standards-aligned-first-grade-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: އިވެންޓުތައް
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: އިވެންޓުތައް

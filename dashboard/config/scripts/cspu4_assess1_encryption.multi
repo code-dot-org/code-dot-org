@@ -1,29 +1,24 @@
 name 'cspu4_assess1_encryption'
-encrypted 'Mjoiw22nGFk2gN2lrz/D/aNkdWfr+dN6JwmwhRkEi3HuPme81icT5ZQhQ2bF
-RFw0pqmod7cy2cv0Yury/kWmZcuwSaa2FnhgzCsGL9rc6StjQs4jFQoQptWN
-CtLwjld63kJncqnzzPE37kpdM+y3ebtIRZhT2rkHS+nMKucNbLHDbnnoG/vF
-YOd1uv0MmyR8ZHlDahNHD97DC8bNkO4W1Ok2lOa68moJAv7WLSTqlBsQJdJq
-rwus8Fq8BSVfg7ybZ9pZEXPjyFDv0QJGwXMOv8MBxE4/xVbtAFA6uvCOoSuc
-JQ4Wlu/33XtKUiWijS2iGE6c4zvoQu4vFHWQrr/fa6WabYoMqp2eFeAr6QTv
-gvuNPdTFSYIpttHqujownTSCxAIZyTZ6RAg3MFfnte8/SOwKSqGTaI23bR2u
-suN3qgBg7AhQB23zsc9mR5NQCR2lKa2zGO4+8VE7lk7y5oD5ahxcJrtTop5V
-bMVFE2kGUhLtKAcDAMKCmjgxQX6DXctHbatHpkn80mMUYFA5xG/3ixC541kt
-tztBTve8DfoKGPTXFuvpha27g5KVksvTZSG29aeVi4x+byNUOq4ikxcsM0PA
-xNpi0nCtmOyyssVFsVyXCCG0m8vjIs9UPQOtOsjrQ4HsYlTOEHoYXhKxmd7a
-WCYNRwIoUK4l6b7My/H+zOGDwqhPCK8XQPRzmqSI4ufdr3x1lzggYZ3Fb8Ze
-Py+YlZPamVKrEMh0uFh5AQalANf4bJ0cUr4EGrvJT1WHhPbqOhX9+9EN7AvP
-oEhzT5mH2Fr0fiDSfS3zVe3UPQbAGtJgVn11u7WS8mpQIow4gwzxPg5Fexdf
-7qYiVi0Whnlv1HzK4+LH6HaSjnJeDGj/RHNRwH8+aN0/H3V9N2QeUbCwRsi8
-b/RKrvP405jdXkunbYUH7SydbvS0ymX1QISuUvvE0FU0Aej2Q/cfCTChj7xa
-cJ2FU28NDqtQlpH+w+YwaBXMoIwh/pyKm0ZhaUcU2bpRQRwlVLu1KAN2t+oC
-qA9jS9dhWJ+nmdnLKLX0QYSNZaAKLLNhNbkIDfiWcC7K+95gp/2LEuaCQ3vA
-QtKulzsDDf65LIpNW4r2nbhVNuE20e5V/h2URpGGUI+K/N7Rt9p4CAG9pE6t
-PaG1soi0vwAm1WZQKTkBku5t+JjgNoPcUUzAqzTWs9LEiwAHwWgPMJdvk0TY
-UkViK6BwGYakJSeEZpGw2ZSAZ4XUHh0R4JeqCf/jM2WVwKOyFl5x5C14Nhza
-jj+vyl1WQBYsuDSZdvRLI8++lzotNiocYBZjnTIfD62rOpkTSM4c9h85JE5t
-FVXoO/OWMCfRW9RwMMoC9N0aeIlNfVV/5kv4sycYfyyQ2IJRB6MQhXgTBC/a
-+XQa12dkiuyp3h2e8olH1cpOqUGeuPDTQMgOWFR9fCymTRgVbaf/vo7EQx/i
-YzWk/FbAdWTRge5DoFtIJnAm0xIDWVjnNtIqdv3BLmDlG+L8g59o3Y8XEeIc
-O2kAMkzcmpV5CCSSqfZZRfD2VwUhSqVTRanofiNEvNeydzfduBxsppxnI2rc
-oF65X0CSfbeyBmkzuIy2JW3RkRin9aKeDU7L5NHo
-'
+right 'Symmetric'
+wrong 'Asymmetric'
+wrong 'Public key'
+wrong 'SSL'
+
+markdown <<MARKDOWN
+ Fill in the blank of the following statement:
+ "______ encryption is a method of encryption involving one key for both encryption and decryption."
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Symmetric Encryption:** A scheme in which the key to encrypt data is the same as the key to decrypt.
+
+**Asymmetric Encryption:** Used in public key encryption, it is a scheme in which the key to encrypt data is _different_ from the key to decrypt.
+
+**Public Key:** This is used prevalently on the web, it allows for secure messages to be sent between parties without having to agree on, or share, a secret key. It uses an asymmetric encryption scheme in which the encryption key is made public, but the decryption key is kept private.
+
+**SSL:** (Secure Sockets Layer) is the standard security technology for establishing an encrypted link between a web server and a browser. This link ensures that all data passed between the web server and browsers remain private and integral.
+
+_SSL Definition From: http://info.ssl.com/article.aspx?id=10241_ 
+MARKDOWN
+
+allow_multiple_attempts true

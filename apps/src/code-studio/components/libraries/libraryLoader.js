@@ -1,4 +1,3 @@
-/*global dashboard*/
 import libraryParser from './libraryParser';
 import annotationList from '@cdo/apps/acemode/annotationList';
 import i18n from '@cdo/locale';
@@ -98,7 +97,7 @@ export default async function load(libraryClientApi, onError, onSuccess) {
         librarySource: librarySource,
         sourceFunctionList: functionsList,
         selectedFunctions: selectedFunctions,
-        alreadyPublished: alreadyPublished
+        alreadyPublished: alreadyPublished,
       });
     })
     .catch(() => onError(i18n.libraryLoadError()));

@@ -1,14 +1,10 @@
+- learn_url = resolve_url('/learn')
+
 %h1= hoc_s(:hoc_faq_title)
 
 %details
   %summary#about= hoc_s(:hoc_faq_what_is_hoc_q)
-  %p!= hoc_s(:hoc_faq_what_is_hoc_a_markdown, markdown: :inline, locals: {tutorials: resolve_url('/learn'), partners: resolve_url('/partners')})
-
--# Hide signup buttons during Hour of Code
-  %br/
-  %a{onclick: "adjustScroll('join');"}
-    %button
-    =hoc_s(:signup_host_an_hour)
+  %p!= hoc_s(:hoc_faq_what_is_hoc_a_markdown, markdown: :inline, locals: {tutorials: learn_url, partners: resolve_url('/partners')})
 
 %details
   %summary= hoc_s(:hoc_faq_when_is_hoc_q)
@@ -28,15 +24,15 @@
 
 %details
   %summary= hoc_s(:hoc_faq_host_q)
-  %p!= hoc_s(:hoc_faq_host_a_markdown, markdown: :inline, locals: {howto: resolve_url('/how-to'), codeorg_url: codeorg_url('/')})
+  %p!= hoc_s(:hoc_faq_host_a_markdown, markdown: :inline, locals: {learn_url: learn_url, howto_url: resolve_url('/how-to')})
 
 %details
   %summary= hoc_s(:hoc_faq_devices_q)
-  %p!= hoc_s(:hoc_faq_devices_a_markdown, markdown: :inline, locals: {codeorg_url: codeorg_url('/'), partner_url: 'code.org', unplugged_url: codeorg_url('/curriculum/unplugged')})
+  %p!= hoc_s(:hoc_faq_devices_a_markdown, markdown: :inline, locals: {it_url: codeorg_url('/educate/it'), learn_url: learn_url, unplugged_url: resolve_url('/learn?platform=no-computers')})
 
 %details
   %summary= hoc_s(:hoc_faq_need_computers_q)
-  %p!= hoc_s(:hoc_faq_need_computers_a_markdown, markdown: true, locals: {codeorg_url: codeorg_url('/'), pair_programming_research: 'http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning', pair_programming_video: 'https://www.youtube.com/watch?v=vgkahOzFsummaryQ', unplugged_url: codeorg_url('/curriculum/unplugged')})
+  %p!= hoc_s(:hoc_faq_need_computers_a_markdown, markdown: true, locals: {pair_programming_research: 'http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning', pair_programming_video: 'https://www.youtube.com/watch?v=vgkahOzFsummaryQ', unplugged_url: resolve_url('/learn?platform=no-computers')})
 
 -if @country == 'us'
   %details
@@ -54,19 +50,19 @@
 
 %details
   %summary= hoc_s(:hoc_faq_account_q)
-  %p!= hoc_s(:hoc_faq_account_a_markdown, markdown: :inline, locals: {codeorg_url: codeorg_url('/'), section_instructions_url: "https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section"})
+  %p!= hoc_s(:hoc_faq_account_a_markdown, markdown: :inline, locals: {beyond_url: resolve_url('/beyond'), section_instructions_url: "https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section"})
 
 %details
   %summary= hoc_s(:hoc_faq_certificates_q)
-  %p!= hoc_s(:hoc_faq_certificates_a_markdown, markdown: :inline, locals: {codeorg_url: codeorg_url('/')})
+  %p!= hoc_s(:hoc_faq_certificates_answer_markdown, markdown: :inline, locals: {certificates_url: codeorg_url('/certificates')})
 
 %details
   %summary= hoc_s(:hoc_faq_high_school_q)
-  %p!= hoc_s(:hoc_faq_high_school_a_markdown, markdown: :inline, locals: {codeorg_url: codeorg_url('/'), partner_url: 'code.org'})
+  %p!= hoc_s(:hoc_faq_high_school_a_markdown, markdown: :inline, locals: {learn_url: learn_url})
 
 %details
   %summary= hoc_s(:hoc_faq_count_hoc_q)
-  %p!= hoc_s(:hoc_faq_count_hoc_a_markdown, markdown: :inline, locals: {codeorg_url: codeorg_url('/')})
+  %p!= hoc_s(:hoc_faq_count_hoc_a_markdown, markdown: :true)
 
 %details
   %summary= hoc_s(:hoc_faq_map_q)
@@ -79,3 +75,7 @@
 %details
   %summary= hoc_s(:hoc_faq_keep_learning_q)
   %p!= hoc_s(:hoc_faq_keep_learning_a_markdown, markdown: :inline, locals: {promote: resolve_url('/promote')})
+
+%details
+  %summary= hoc_s(:hoc_faq_bug_q)
+  %p!= hoc_s(:hoc_faq_bug_a_markdown, markdown: :true)

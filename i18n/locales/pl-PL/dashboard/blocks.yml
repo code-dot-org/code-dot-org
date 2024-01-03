@@ -2,8 +2,34 @@
 pl:
   data:
     blocks:
-      AmysBlocks_moving_with_arrow_keys:
-        text: przesuwanie NESW za pomocą klawiszy strzałek
+      AmysBlocks_addTarget:
+        text: "{TARGET} {OPT} {SPRITE} "
+        options:
+          OPT:
+            '"follows"': następuje
+            '"avoids"': unika
+      AmysBlocks_goldilocks:
+        text: |2-
+           jeśli {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"too much"': za dużo
+            '"just right"': w sam raz
+            '"too little"': za mało
+      AmysBlocks_goldilocksElse:
+        text: |2-
+           jeśli za dużo{SPRITE}
+          {STATEMENT}w przeciwnym razie jeśli w sam raz
+          {STATEMENT3}w przeciwnym razie za mało
+          {STATEMENT2}
+      AmysBlocks_makeNumSprites:
+        text: utwórz {NUM} nowe {ANIMATION_NAME} duszki {LOCATION}
+      AmysBlocks_playerBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): przenoszenie NSEW za pomocą klawiszy strzałek
       AmysBlocks_setPromptWithChoices:
         text: poproś użytkownika {QUESTION} o zmienne {VAR} z wyborami {A}{B}{C}
       AmysBlocks_spriteSayVar:
@@ -28,6 +54,8 @@ pl:
             '1.00': średni
             '2.00': duży
             '3.00': bardzo duży
+      Dancelab_ai:
+        text: "{IMAGE}generuj {VALUE} efekt"
       Dancelab_alternateMoves:
         text: "{GROUP} zmienia się co {N} takty \nmiędzy {MOVE1} i {MOVE2}"
         options:
@@ -77,6 +105,12 @@ pl:
           UNIT:
             '"measures"': takty
             '"seconds"': sekundy
+      Dancelab_atTimestampNotAfter:
+        text: w {TIMESTAMP} {UNIT}
+        options:
+          UNIT:
+            '"measures"': takty
+            '"seconds"': sekundy
       Dancelab_changeColorBy:
         text: zmień {COLOR} {METHOD} o {AMOUNT}
         options:
@@ -119,7 +153,30 @@ pl:
             MOVES.Rest: Żaden
           DIR:
             '1': "→"
-            "-1": "←"
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} wykonuje {MOVE} {DIR} bez końca"
+        options:
+          GROUP:
+            '"CAT"': koty
+            '"SLOTH"': leniuchy
+          MOVE:
+            MOVES.Roll: Body Roll
+            MOVES.ClapHigh: Clap high
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double Down
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Star
+            MOVES.ThisOrThat: This or That
+            MOVES.Thriller: Zombie
+            MOVES.Rest: Żaden
+            '"next"': "(Następny)"
+            '"prev"': "(Poprzedni)"
+            '"rand"': "(Losowy)"
+          DIR:
+            '1': "→"
       Dancelab_changeMoveLR:
         text: "{SPRITE} rób {MOVE} {DIR} bez końca"
         options:
@@ -141,7 +198,6 @@ pl:
             MOVES.Rest: Żaden
           DIR:
             '1': "→"
-            "-1": "←"
       Dancelab_changePropBy:
         text: zamień {SPRITE} {PROPERTY} przez {VAL}
         options:
@@ -616,6 +672,62 @@ pl:
             '"tropical"': Tropikalne
             '"vintage"': Starocie
             '"warm"': Ciepły
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: ustaw efekt tła {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Żaden
+            '"rand"': "(Losowy)"
+            '"quads"': Kąty
+            '"blooming_petals"': Kwitnące płatki
+            '"circles"': Kółka
+            '"color_cycle"': Kolory
+            '"diamonds"': Diamenty
+            '"disco_ball"': Kula dyskotekowa
+            '"fireworks"': Fajerwerki
+            '"flowers"': Kwiaty
+            '"frosted_grid"': Matowa siatka
+            '"growing_stars"': Powiększające się gwiazdy
+            '"higher_power"': Higher Power
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kalejdoskop
+            '"lasers"': Laserowy parkiet
+            '"splatter"': Rozpryski farby
+            '"rainbow"': Tęcza
+            '"ripples_random"': Losowe fale
+            '"ripples"': Fale
+            '"snowflakes"': Śnieg
+            '"text"': Tytuły piosenek
+            '"galaxy"': Przestrzeń
+            '"sparkles"': Migotanie
+            '"spiral"': Spirala
+            '"disco"': Kwadraty
+            '"squiggles"': Pokręcone linie
+            '"starburst"': Rozprysk
+            '"stars"': Gwiazdy
+            '"music_wave"': Fale
+          PALETTE:
+            '"autumn"': Jesień
+            '"rave"': Czarno-białe
+            '"cool"': Chłodny
+            '"electronic"': Elektroniczny
+            '"grayscale"': Skala szarości
+            '"iceCream"': Lody
+            '"default"': Jasne
+            '"neon"': Neon
+            '"ocean"': Ocean
+            '"rainbow"': Tęcza
+            '"roses"': Róże
+            '"sky"': Niebo
+            '"spring"': Wiosna
+            '"summer"': Lato
+            '"sunrise"': Wschód słońca
+            '"sunset"': Zachód słońca
+            '"tropical"': Tropikalne
+            '"twinkling"': Migotanie
+            '"vintage"': Starocie
+            '"warm"': Ciepły
+            '"winter"': Zima
       Dancelab_setDanceSpeed:
         text: ustaw prędkość tańca {SPRITE} na {SPEED}
         options:
@@ -1024,6 +1136,8 @@ pl:
             '"macklemore90"': Macklemore - Nie może nas zatrzymać
             '"hammer"': MC Hammer - Nie możesz tego dotknąć
             '"peas"': The Black Eyed Peas - Mam przeczucie
+      DansBlocks_borderGPT:
+        text: Generuj obramowanie {DESCRIPTION}
       DansBlocks_getMicroscope:
         text: Mikroskop ma {INPUT1}
         options:
@@ -1100,6 +1214,8 @@ pl:
         text: unikając celów
       gamelab_beginCollectingData:
         text: rozpocznij zbierać dane {BREAK} wartości {VALUE} z etykietami {LABEL}
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE} odbija się od {TARGET}"
       gamelab_changePropBy:
@@ -1165,6 +1281,8 @@ pl:
         text: idąc za celami
       gamelab_getAllSprites:
         text: wszystkie duszki
+      gamelab_getCostume:
+        text: duszki z kostiumem {SPRITE}
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -1293,6 +1411,19 @@ pl:
             '"z"': z
       gamelab_layoutGrid:
         text: układ duszków jako siatka
+      gamelab_layoutSprites:
+        text: formacja {GROUP} jako {FORMAT}
+        options:
+          FORMAT:
+            '"border"': brzeg
+            '"circle"': koło
+            '"grid"': siatka
+            '"top"': górny wiersz
+            '"row"': wiersz
+            '"bottom"': dolny wiersz
+            '"left"': lewa kolumna
+            '"column"': kolumna
+            '"right"': prawa kolumna
       gamelab_locationAt:
         text: 'pozycja x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1319,8 +1450,23 @@ pl:
             '"spiral"': spirala
       gamelab_makeNewSpriteAnon:
         text: utwórz nowego {ANIMATION_NAME} duszka w {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        text: zrób {N} nową {GROUP} w {FORMAT}
+        options:
+          FORMAT:
+            '"border"': brzeg
+            '"circle"': koło
+            '"grid"': siatka
+            '"top"': górny wiersz
+            '"row"': wiersz
+            '"bottom"': dolny wiersz
+            '"left"': lewa kolumna
+            '"column"': kolumna
+            '"right"': prawa kolumna
       gamelab_makeNumSprites:
         text: utwórz {NUM} nowymi {ANIMATION_NAME} duszkami
+      gamelab_makeNumSpritesNear:
+        text: utwórz {NUM} nowe {ANIMATION_NAME} duszki blisko {LOCATION}
       gamelab_makeProjectile:
         text: |-
           utworzyć pocisk
@@ -1712,6 +1858,27 @@ pl:
         text: x współrzędna {SPRITE}
       gamelab_yLocationOf:
         text: współrzędna y {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} skocz do {LOCATION}"
+      KatiesBlocks_goldilocks:
+        text: |2-
+           jeśli {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"solid"': trwały
+            '"liquid"': ciecz
+            '"gas"': gaz
+      KatiesBlocks_makeNumSpritesNear:
+        text: utwórz {NUM} nowe {ANIMATION_NAME} duszki blisko {LOCATION}
+      KatiesBlocks_spriteBirdSay:
+        text: "{SPRITE} mówi {SPEECH}"
+        options:
+          SPEECH:
+            '"My beak is pointy and strong to find insects in tree bark."': Mój dziób jest spiczasty i silny, aby znaleźć owady w korze drzewa.
+            '"I have a beak like a scoop to catch fish."': Mam dziób jak czerpak do łowienia ryb.
+      KatiesBlocks_tumbling:
+        text: gimnastykowanie się
       Mikelab_addBehaviorSimple:
         text: duszek {SPRITE} rozpoczyna {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -2357,8 +2524,6 @@ pl:
         text: skręć w lewo
       RyanLab_turnRight:
         text: skręć w prawo
-      SpriteLab2Beta_spriteSay:
-        text: duszek {SPRITE} mówi {TEXT} przez {SECONDS} sekund
       Vector_createSpriteWith:
         text: |-
           utwórz duszka
@@ -2464,6 +2629,35 @@ pl:
             '"quarantining"': poddaje się kwarantannie, gdy jest chory
             '"avoiding"': dystans społeczny
             '"none"': nie ruszać się
+      adaptations_adaptationBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): obracanie się w prawo
+            new Behavior(spinning_left, []): obracanie się w lewo
+            new Behavior(fluttering, []): trzepotanie
+            new Behavior(jittering, []): trzęsienie się
+            new Behavior(wobbling, []): chybotanie
+            new Behavior(wandering, []): wędrowanie
+            new Behavior(patrolling, []): patrolowanie
+      adaptations_location_picker:
+        text: w:{LOCATION}
+      adaptations_makeNumSpritesNear:
+        text: utwórz {NUM} nowe {ANIMATION_NAME} duszki blisko {LOCATION}
+      adaptations_spriteBirdSay:
+        text: "{SPRITE} mówi {SPEECH}"
+        options:
+          SPEECH:
+            '"My beak is pointy and strong to find insects in tree bark."': Mój dziób jest spiczasty i silny, aby znaleźć owady w korze drzewa.
+            '"I have a beak like a scoop to catch fish."': Mam dziób jak czerpak do łowienia ryb.
+      adaptations_startFollowing:
+        text: "{SPRITE} zaczyna podążać {TARGET}"
+      adaptations_toggleBehaviorSimple:
+        text: duszek {SPRITE} {TOGGLE} {BEHAVIOR}
+        options:
+          TOGGLE:
+            '"begins"': zaczyna się
+            '"stops"': zatrzymuje się
       binary_drawBin:
         text: narysuj binarny {BIN}
       binary_drawBinScreen:
@@ -2606,8 +2800,58 @@ pl:
           DIR:
             right: w prawo ↻
             left: w lewo ↺
+      ecosystems_catchMe:
+        text: złap {THIS}
+      ecosystems_eat:
+        text: jedz {THIS}
+      ecosystems_goldilocks:
+        text: |2-
+           jeśli {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"too much"': za dużo
+            '"just right"': w sam raz
+            '"too little"': za mało
+      ecosystems_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      ecosystems_location_picker:
+        text: w:{LOCATION}
+      ecosystems_makeNewSpriteBetween:
+        text: 'utwórz {N} nowe {GROUP} między lokalizacją x: {X} y: {Y}'
+      ecosystems_makeNumSpritesAtLocation:
+        text: utwórz {NUM} nowe {ANIMATION_NAME} duszki w {LOCATION_GENERATOR}
+      ecosystems_makeNumSpritesWithinRange:
+        text: utwórz {NUM} nowe {ANIMATION_NAME} duszki w {RANGE}
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:200, y2:400}": Góra
+            "{x1:0, x2:400, y1:150, y2:250}": Środek
+            "{x1:0, x2:400, y1:0, y2:200}": Dół
+      ecosystems_randomLocationWithinRange:
+        text: x min{X1}x max{X2}y min{Y1}y max{Y2}
+      ecosystems_randomLocationWithinSelectedRange:
+        text: "{RANGE}"
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:200, y2:400}": Góra
+            "{x1:0, x2:400, y1:0, y2:200}": Dół
       storylab_clearHeadings:
         text: wyczyść nagłówki
+      storylab_printText:
+        text: drukuj {TEXT}
       storylab_setForegroundEffect2:
         text: wykonaj efekt {EFFECT}
         options:
@@ -2624,7 +2868,3 @@ pl:
         text: monit użytkownika {QUESTION} o zmienną {VAR} z wyborem {A}
       storylab_setSubheading:
         text: ustaw podtytuł {SUBHEADING}
-      validation_validatedBackground:
-        text: ustaw tło na {IMG}
-      validation_validatedSound:
-        text: PLAYSound {SOUND}

@@ -591,6 +591,7 @@ pl:
         csd_ml_intro_ai_lab_july2021: Wprowadzenie do AI Lab
         csd_ml_training_testing_ai_lan: Szkolenie i testowanie w AI Lab 
         csd_ml_model_cards_july2021: Karty modeli w AI Lab
+        csd_ml_numerical_ai_lab: Dane numeryczne w laboratorium AI
         Gettting_Started_Progress: Postęp, informacje zwrotne i ocena
         Gettting_Started_ClassSection: Tworzenie sekcji klasy
         Gettting_Started_StudentExperience: Doświadczenie uczniowskie
@@ -634,7 +635,8 @@ pl:
         CSA-PL-debugging-temp: Wprowadzenie do debugowania w Java Lab — temp
         csd_app_lab_design_mode: CSD Tryb projektowania w App Lab
         csd_app_lab_events: CSD Zdarzenia w App Lab
-        csd_u6_circuit_playground: Oiczenia fizyczne
+        PL_CSD_Unit4_AppTesting: Testowanie prototypów papieru
+        csd_u6_circuit_playground: Informatyka z urządzeniami fizycznymi
         csd_u6_input_output: Wejście i Wyjście
         CSA-PL-for-loops: Pętla "dla" w Javie
         CSA-PL-variables: Tworzenie znmiennych  w Javie
@@ -648,6 +650,7 @@ pl:
         csd_u6_call_define_functions: 'CSD: Wywoływanie i definiowanie funkcji'
         csp_applab_parameters: Funkcje z parametrami
         starquilts_intro_artist: Wprowadzenie do kołder w gwiazdki
+        CSA-PL-intro-to-arrays: Tablice jednowymiarowe (1D)
         CSA-PL-1d-arrays-new-values: Wprowadzanie wartości w tablicach 1D
         CSA-PL-conditionals: Instrukcje warunkowe w Javie
         CSA-PL-two-way-selection: Dwustronny wybór
@@ -669,6 +672,8 @@ pl:
         csa-pl-vpl-m1-unit-3: Inżynieria oprogramowania w Jednostce 3
         csa-pl-intro-to-equality: Wprowadzenie do równości
         csa-pl-intro-to-equals-method: Wprowadzenie do metody equals()
+        csa-pl-equals-book: Zapisanie metody equals () dla klasy Book
+        csa-multi-select-pl: Instrukcje wielokrotnego wyboru w Javie
         csc_timecapsule_intro: Wprowadzenie do Kapsuły czasu
         PL_Equity_in_CS_Education: Równość w edukacji informatycznej
         csc_fm_pilot: Maszyny funkcyjne (Pilotaż)
@@ -710,6 +715,67 @@ pl:
         csa_nested_loops: 'CSA: Zagnieżdżone pętle'
         csa_one_dimensional_arrays: 'CSA: Tablice jednowymiarowe (1D)'
         csa_polymorphism: 'CSA: Polimorfizm'
+        csa_casting: 'CSA: Casting'
+        csa_equals_and_aliases: 'CSA: Równe i aliasy'
+        csa_multi-selection_statements: 'CSA: Instrukcje wielokrotnego wyboru'
+        csa_random_numbers: 'CSA: Liczby losowe'
+        csa_static_methods: 'CSA: Metody statyczne'
+        csa_static_variables: 'CSA: Zmienne statyczne'
+        csa_the_equals_method: 'CSA: Metoda equals() '
+        csa_welcome_to_the_theater: 'CSA: Witamy w Teatrze'
+        enter_your_own_poem: Wpisz swój własny wiersz
+        csa-example-solution-1: 'Programowanie na żywo Przykładowe rozwiązanie '
+        csd_sprite_properties: Właściwości duszka
+        csa-pl-documentation: Dokumentacja w Java Lab
+        csc-starquilts-intro: 'CSC: Gwiezdne Kołdry'
+        csc-mapmakers-intro: 'CSC: Twórcy map\t'
+        csa-pl-vocab-pm: Słownictwo zarządzania projektami
+        csc-ecosystems-intro: Wprowadzenie do ekosystemów
+        PL_CSD_MicroBit_Intro: Wprowadzenie do micro:bita
+        csc_animal_adaptations_intro: Wprowadzenie do adaptacji zwierząt
+        csa_two_dimensional_arrays: 'CSA: Tablice dwuwymiarowe (2D)'
+        csa_working_with_2d_array_elements: 'CSA: Praca z elementami tablicy 2D'
+        csa_row_major_traversal: 'CSA: Przemierzanie Row-Major'
+        csa_column_major_traversal: 'CSA: Przemierzanie Column-Major'
+        csa_enhanced_for_loops_and_2d_arrays: 'CSA: Ulepszone pętle For i tablice 2D'
+        csa_images_and_pixels: 'CSA: Obrazy i piksele'
+        csa_wrapper_classes_part_1: 'CSA: Klasy pakowaczy Część 1'
+        csa_wrapper_classes_part_2: 'CSA: Klasy pakowaczy Część 2'
+        csa_the_arraylist_class: 'CSA: Klasa ArrayList'
+        csa_working_with_arraylist_data: 'CSA: Praca z danymi ArrayList'
+        csa_remving_data_from_an_arraylist: 'CSA: Usuwanie danych z ArrayList'
+        csa_private_methods: 'CSA: Metody prywatne'
+        csa_recursion: 'CSA: Rekurencja'
+        csa_searching_algorithms: 'CSA: Algorytmy wyszukiwania'
+        csa_sorting_algorithms: 'CSA: Algorytmy sortowania'
+        star_quilts_intro_to_artist: 'Star Quilts: Wprowadzenie do Artysty'
+        upload_sprites_backgrounds: Przesyłanie niestandardowych duszków i teł
+        PL_CSD_EquityBlindSpotsvid: Uprzedzenia i odpowiedzialność
+        how-ai-works-llms-full: Jak działają chatboty i duże modele językowe
+        how-ai-works-creativity-full: Czy sztuczna inteligencja jest kreatywna i z wyobraźnią?
+        how-ai-works-llms-part1: Chatboty i duże modele językowe Część 1
+        how-ai-works-llms-part2: Chatboty i duże modele językowe Część 2
+        csc_bookcovers_intro: csc-bookcovers
+        llms-cobranded: 'Jak działa sztuczna inteligencja: Chatboty i duże modele językowe (LLM)'
+        generative-ai-cobranded: 'Jak działa sztuczna inteligencja: Generatywna sztuczna inteligencja'
+        csa-overview: Nowe podejście do Informatyki AP, A
+        what-is-creativity: Czym jest kreatywność?
+        poetry-programming: Poezja i programowanie
+        push-yourself: Zmuś się. Każdy może się nauczyć.
+        classic-maze-intro: Klasyczny labirynt - Wprowadzenie
+        code-break: Przejdź do Code Brake
+        blockchain-introd: 'Jak działa Blockchain: Wprowadzenie'
+        ai-ethis: Etyka i sztuczna inteligencja
+        how-ai-works-lessons: 'Jak działa sztuczna inteligencja: Przegląd lekcji'
+        se-cv-intro-to-lessons: 'Inżynieria oprogramowania i wizja komputerowa: wprowadzenie do lekcji'
+        PL_CSP_SummerAsync_U1ConnectionsConclusions: "\nJednostka 1 Powiązania i wnioski"
+        PL_CSP_SummerAsync_U3L7Debugging: Jednostka 3 Lekcja 7 - Debugowanie
+        PL_CSP_SummerAsync_U3ConnectionsConclusions: 'Jednostka 2: Wnioski i powiązania'
+        PL_CSP_SummerAsync_U3L1Computers: Poprzednio, w... Jednostka  3
+        PL_CSP_SummerAsync_Unit2Internet: Poprzednio, w... Jednostka  2
+        PL_CSP_SummerAsync_U2ConnectionsConclusions: 'Jednostka 3: Wnioski i powiązania'
+        ai_dance_editblocks_draft: Potańcówka AI Edytuj szkic bloków
+        csd_ml_how_ai_works: Jak działa AI
     callout:
       text:
         drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku

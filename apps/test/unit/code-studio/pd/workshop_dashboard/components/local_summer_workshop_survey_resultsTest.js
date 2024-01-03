@@ -13,26 +13,26 @@ describe('Local Summer Workshop Management', () => {
         num_enrollments: '10',
         num_surveys: '8',
         received_clear_communication: '5.5',
-        how_much_learned: '4.5'
+        how_much_learned: '4.5',
       },
       all_my_local_workshops: {
         venue_feedback: [
           'Feedback 1',
           'Feedback 2',
           'Feedback 3',
-          'Feedback 4'
+          'Feedback 4',
         ],
         num_enrollments: '200',
         num_surveys: '180',
         received_clear_communication: '5.5',
-        how_much_learned: '4.5'
+        how_much_learned: '4.5',
       },
       all_workshops_for_course: {
         num_enrollments: '20000',
         num_surveys: '18000',
         received_clear_communication: '5',
-        how_much_learned: '3'
-      }
+        how_much_learned: '3',
+      },
     };
   };
 
@@ -49,29 +49,29 @@ describe('Local Summer Workshop Management', () => {
         how_clearly_presented: {Han: 5, Chewbacca: 1},
         things_facilitator_did_well: {
           Han: ['Shot first'],
-          Chewbacca: ['Roared a lot']
+          Chewbacca: ['Roared a lot'],
         },
-        facilitator_names: ['Han', 'Chewbacca']
+        facilitator_names: ['Han', 'Chewbacca'],
       },
       all_my_local_workshops: {
         venue_feedback: [
           'Feedback 1',
           'Feedback 2',
           'Feedback 3',
-          'Feedback 4'
+          'Feedback 4',
         ],
         num_enrollments: '10',
         num_surveys: '8',
         received_clear_communication: '5.5',
         how_much_learned: '4.5',
-        how_clearly_presented: 5
+        how_clearly_presented: 5,
       },
       all_workshops_for_course: {
         num_enrollments: '20000',
         num_surveys: '18000',
         received_clear_communication: '5',
-        how_much_learned: '3'
-      }
+        how_much_learned: '3',
+      },
     };
   };
 
@@ -97,7 +97,7 @@ describe('Local Summer Workshop Management', () => {
         [
           200,
           {'Content-Type': 'application/json'},
-          JSON.stringify(getFakeSurveyDataForFacilitator())
+          JSON.stringify(getFakeSurveyDataForFacilitator()),
         ]
       );
 
@@ -131,7 +131,7 @@ describe('Local Summer Workshop Management', () => {
         [
           200,
           {'Content-Type': 'application/json'},
-          JSON.stringify(getFakeSurveyDataForWorkshopOrganizer())
+          JSON.stringify(getFakeSurveyDataForWorkshopOrganizer()),
         ]
       );
 

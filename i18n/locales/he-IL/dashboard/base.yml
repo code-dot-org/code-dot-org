@@ -25,6 +25,11 @@ he:
       pair_programmer: 'אתה כרגע נמצא במצב תכנות משותף עם תלמיד אחר אשר אין לו הרשאות לתוכן זה. כדי לגשת לתוכן זה, הפסק את מצב התכנות המשותף ונסה שוב.'
   activerecord:
     errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: "אינו חוקי. שים לב כי כל קישור יכול לשמש רק פעם אחת כדי לאפס את הסיסמה שלך, ורק הקישור שנשלח לאחרונה יעבוד."
       messages:
         blank: "נדרש"
         blank_plural: "הנם נדרשים"
@@ -40,6 +45,7 @@ he:
         personal_email_markdown: "כתובת דוא\"ל אישי [(לחץ כאן אם אין לך כתובת דואר אלקטרוני)](%{url})"
         username: 'שם משתמש'
         password: 'סיסמה'
+        verified_teacher: 'מורה מאומת'
         password_confirmation: 'וידוא סיסמא'
         current_password: 'הסיסמה הנוכחית'
         locale: 'שפה'
@@ -47,10 +53,16 @@ he:
         gender: 'מין'
         edit_header: 'שינוי פרטי החשבון'
         finish_sign_up_header: 'סיים ליצור את החשבון שלך'
+        finish_sign_up_header_error: 'אנא תקן את השגיאות הבאות:'
         finish_sign_up_subheader: 'מלא את הפרטים הבאים על מנת לסיים ליצור חשבון Code.org עבור <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'מלא את הפרטים הבאים על מנת לסיים ליצור חשבון Code.org עבור **%{email}**.'
+        finish_sign_up_subheader_provider: 'מלא את הפרטים הבאים על מנת לסיים ליצור חשבון Code.org עם <strong>%{provider}<strong> עבור <strong>%{email}</strong>.'
+        finish_sign_up_subheader_provider_markdown: 'מלא את הפרטים הבאים על מנת לסיים ליצור חשבון Code.org עם **%{provider}** עבור **%{email}**.'
+        reset_password_token: "הקישור לאיפוס הסיסמה שעקבת אחריו"
         error:
           future: לא יכול להיות בעתיד
+        user_type: 'סוג חשבון'
+        us_state: 'איזורי'
   beta: "בטא"
   hello: "הי עולם"
   welcome_back: "ברוך שובך, %{name}"
@@ -60,6 +72,7 @@ he:
   unsubmit: בטל הגשה
   previous_page: דף קודם
   next_page: הדף הבא
+  next_level: לשלב הבא
   next_resource: המשאב הבא
   cancel: "בטל"
   okay: "בסדר"
@@ -98,6 +111,7 @@ he:
     continue_with: 'המשך באמצעות %{provider}'
     sign_in_with: 'היכנס באמצעות %{provider}'
     signed_in: 'נכנסת!'
+    signed_out_markdown: 'אתה התנתקת מ-[Code.org](%{url})'
     already_signedup: 'כבר נרשמת?'
     notyet_signedup: "לא הצטרפת עדיין?"
     google_oauth2: 'חשבון גוגל'
@@ -144,7 +158,6 @@ he:
     invalid_password: "הסיסמא חייבת להכיל לפחות 6 תווים"
     mismatch_password: "שתי הסיסמאות שהזנת אינן תואמות"
     student_consent: "אני מאשר שיש לי אישור הורה או אפוטרופוס להשתמש בשירותי Code.org."
-    additional_information: "יש צורך במידע נוסף כדי להמשיך ביצירת החשבון שלך."
     user_type_button: "עדכן סוג חשבון"
     user_type_label: "סוג חשבון"
     user_type_student: "תלמיד"
@@ -160,6 +173,7 @@ he:
     share_teacher_email_reg_partner_preference_yes: "כן"
     share_teacher_email_reg_partner_preference_no: "לא"
     share_teacher_email_reg_partner_preference_required: "עליך לציין העדפה של דואר אלקטרוני."
+    us_state: 'איזורי'
   school_info:
     title: 'מידע על בית הספר (רשות)'
     school_country: 'ארץ בית הספר'
@@ -349,7 +363,9 @@ he:
       artist_k1: 'האמן (טרום-קריאה)'
       basketball: 'כדורסל'
       bounce: 'להקפיץ'
+      calc: 'Calc'
       dance: 'מסיבת ריקודים'
+      eval: 'הערכה'
       flappy: 'פלאפי'
       frozen: 'לשבור את הקרח'
       gamelab: 'מעבדת המשחקים'
@@ -364,7 +380,10 @@ he:
       minecraft_hero: 'גיבור מיינקראפט'
       playlab: 'מעבדת הצעצועים'
       playlab_k1: 'מעבדת הצעצועים (טרום-קריאה)'
+      poetry: 'שירה'
       poetry_hoc: 'אומנות השירה'
+      scratch: 'סקראצ'''
+      sports: 'ספורט'
       starwars: 'מלחמת הכוכבים'
       loading: 'טוען...'
       weblab: 'מעבדת האתרים'
@@ -499,6 +518,7 @@ he:
   gender:
     male: 'גבר'
     female: 'אישה'
+    non_binary: 'לא-בינארי'
     not_listed: 'המונח המועדף אינו מופיע ברשימה'
     none: 'מעדיף לא לענות'
   user_type:
@@ -523,6 +543,8 @@ he:
     make_my_own_app: 'פיתוח האפליקציה שלי'
     how_it_works: 'איך זה עובד'
     try_hour_of_code: 'נסה את שעת קוד!'
+    view_code: 'הצג קוד'
+    locale_select: "בחר שפה"
   reference_area:
     title: 'צריכים עזרה?'
     subtitle: 'לצפייה בסרטונים וברמזים'
@@ -625,6 +647,8 @@ he:
       body: "תכנת חיות ויצורי מיינקראפט נוספים בגרסת מיינקראפט משלך."
     poem-art:
       title: 'אומנות השירה'
+    sports:
+      title: "ספורט"
     starwars:
       title: "מלחמת הכוכבים"
     text-compression:
@@ -902,6 +926,7 @@ he:
       school_country: 'ארץ בית הספר'
       colombian_school_city: 'יישוב בית הספר'
       colombian_chilean_school_name: 'שם בית הספר'
+      chilean_school_id: 'מזהה בית ספר'
       ages: 'איזה גיל(אים) אתה מלמד השנה?'
       subjects: 'איזה נושא(אים) אתה מלמד השנה?'
       resources: 'באיזה מהמשאבים הבאים ללימוד מדעי המחשב אתה משתמש?'
@@ -915,15 +940,21 @@ he:
       gender:
         male: 'גבר'
         female: 'אישה'
+        non_binary: 'לא-בינארי'
         not_listed: 'המונח המועדף אינו מופיע ברשימה'
         none: 'מעדיף לא לענות'
       school_country:
+        barbados: 'ברבדוס'
+        belize: 'בליז'
         canada: 'קנדה'
         chile: 'צ''ילה'
+        colombia: 'קולומביה'
         israel: 'ישראל'
         malaysia: 'מלזיה'
         mexico: 'מקסיקו'
+        paraguay: 'פרגוואי'
         thailand: 'תאילנד'
+        uzbekistan: 'אוזבקיסטן'
       ages:
         ages_under_6: '< גילאי 6'
         ages_7_8: 'גילאי 7-8'
@@ -945,18 +976,34 @@ he:
         other: "אחר:"
       resources:
         kodable: 'Kodable'
+        scratch: 'סקראצ'''
+        tynker: 'טינקר'
         other: "אחר"
       robotics:
         kodable: 'Kodable'
+        lego: 'LEGO Education'
+        microbit: 'מיקרוביט'
+        raspberry: 'Raspberry Pi'
         other: "אחר"
+      workshop_course:
+        other: 'אחר'
       email_opt_in:
         opt_in_yes: 'כן'
         opt_in_no: 'לא'
+  courses_category: 'קורסים מלאים'
+  course_offering:
+    headers:
+      minecraft: 'מיינקראפט'
+      sports: 'ספורט'
+      csf: 'יסודות מדעי המחשב'
+      csc: 'חיבורי CS'
   cookie_banner:
     more_information: "הצג את מדיניות הפרטיות של Code.org."
     accept: 'מסכים'
   copy: 'העתק'
   confirm: 'אשר'
+  parent_email_banner:
+    not_now: "לא כרגע"
   teacher_feedback: "משוב מורה"
   lesson_lock:
     error:
@@ -966,4 +1013,11 @@ he:
       forbidden: "המשתמש אינו יכול לעדכן מצב נעילה של התלמיד"
   reset_predict_progress_button: "מחק תשובה"
   pixelation:
+    actual_size: "גודל אמיתי"
+    image_file_format_width: "רוחב: 1 בייט"
+    image_file_format_height: "גובה: 1 בייט"
+    image_file_format_bits_per_pixel: "ביטים לפיקסל: 1 בייט"
+    image_width: "רוחב תמונה"
+    image_height: "גובה תמונה"
     binary: "בינארי"
+    hexadecimal: "בסיס 16"

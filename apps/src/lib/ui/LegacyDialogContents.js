@@ -26,7 +26,7 @@ export const LegacySingleLevelGroupDialog = ({id, title, body}) => (
 LegacySingleLevelGroupDialog.propTypes = {
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  body: PropTypes.string.isRequired
+  body: PropTypes.string.isRequired,
 };
 
 export const LegacyUnsubmitDialog = (
@@ -43,7 +43,11 @@ export const LegacyMatchAngiGifDialog = () => (
       <p className="dialog-title">{i18n.instructions()}</p>
       <p>{i18n.dragBlocksToMatch()}</p>
       <div className="aniGif example-image" style={{overflow: 'hidden'}}>
-        <img src="/script_assets/images/matching_ani.gif" />
+        {
+          // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+          // Verify or update this alt-text as necessary
+        }
+        <img src="/script_assets/images/matching_ani.gif" alt="" />
       </div>
       <div className="farSide">
         <button type="button" id="ok-button">
@@ -68,6 +72,20 @@ export const LegacyTooFewDialog = () => (
   </ProtectedStatefulDiv>
 );
 
+export const LegacyIncorrectDialog = () => (
+  <ProtectedStatefulDiv>
+    <div className="modal-content no-modal-icon scrollable-element">
+      <p className="dialog-title">{i18n.incorrectAnswer()}</p>
+      <p>{i18n.incorrectAnswerUnmutableBody()}</p>
+      <div className="farSide">
+        <button type="button" id="ok-button">
+          {i18n.review()}
+        </button>
+      </div>
+    </div>
+  </ProtectedStatefulDiv>
+);
+
 export const LegacyContractMatchErrorDialog = ({text}) => (
   <ProtectedStatefulDiv>
     <div className="modal-content no-modal-icon">
@@ -82,7 +100,7 @@ export const LegacyContractMatchErrorDialog = ({text}) => (
   </ProtectedStatefulDiv>
 );
 LegacyContractMatchErrorDialog.propTypes = {
-  text: PropTypes.string
+  text: PropTypes.string,
 };
 
 export const LegacyMatchErrorDialog = () => (
@@ -153,7 +171,7 @@ export const LegacyInstructionsDialog = ({title, markdown}) => (
 );
 LegacyInstructionsDialog.propTypes = {
   title: PropTypes.string.isRequired,
-  markdown: PropTypes.string.isRequired
+  markdown: PropTypes.string.isRequired,
 };
 
 export const LegacySuccessDialog = ({title, body}) => (
@@ -171,5 +189,5 @@ export const LegacySuccessDialog = ({title, body}) => (
 );
 LegacySuccessDialog.propTypes = {
   title: PropTypes.string.isRequired,
-  body: PropTypes.string.isRequired
+  body: PropTypes.string.isRequired,
 };

@@ -1,0 +1,22 @@
+<Javalab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 68,
+  "created_at": "2023-06-21T19:37:30.000Z",
+  "level_num": "custom",
+  "user_id": 19026,
+  "properties": {
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "project_template_level_name": "CSA-frq-2019-LightBoard",
+    "long_instructions": "##LightBoard FRQ (Part B)\r\n\r\nWrite the method `evaluateLight`, which computes and returns the status of a light at a given row and\r\ncolumn based on the following rules.\r\n1. If the light is on, return `false` if the number of lights in its column that are on is even, including\r\nthe current light.\r\n2. If the light is off, return `true` if the number of lights in its column that are on is divisible by three.\r\n3. Otherwise, return the light’s current status.\r\nFor example, suppose that `LightBoard sim = new LightBoard(7, 5)` creates a light board\r\nwith the initial state shown below, where `true` represents a light that is on and `false` represents a light\r\nthat is off. Lights that are off are shaded. \r\n\r\n![](https://images.code.org/0f8aaa3c45ead7259239c2203c9706eb-image-1687370726563.05.15 PM.png)\r\n\r\nComplete the evaluateLight method.",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console"
+  },
+  "audit_log": "[{\"changed_at\":\"2023-06-21 19:37:35 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":19026,\"changed_by_email\":\"brandon.spellman@code.org\"}]"
+}]]></config>
+</Javalab>

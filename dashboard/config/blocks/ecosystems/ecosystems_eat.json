@@ -1,0 +1,20 @@
+{
+  "category": "CSC",
+  "config": {
+    "color": [
+      184,
+      1,
+      0.74
+    ],
+    "func": "eat",
+    "docFunc": "gamelab_destroy",
+    "blockText": "eat {THIS}",
+    "args": [
+      {
+        "name": "THIS",
+        "type": "Sprite"
+      }
+    ],
+    "style": "default"
+  }
+}

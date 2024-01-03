@@ -1,5 +1,5 @@
 require 'test_helper'
-class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
+class Pd::WorkshopEnrollmentControllerTest < ActionController::TestCase
   freeze_time
 
   self.use_transactional_test_case = true
@@ -73,6 +73,105 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
     get :new, params: {workshop_id: workshop.id}
     assert_response :success
     assert_template :new
+  end
+
+  test 'teacher with missing application gets missing application view' do
+    teacher = create :teacher
+
+    # see Pd::Workshop#require_application? for the logic that determines whether a workshop requires an application
+    rp = create :regional_partner
+    workshop = create :summer_workshop, regional_partner: rp
+    assert workshop.require_application?
+
+    sign_in teacher
+    get :new, params: {workshop_id: workshop.id}
+    assert_response :success
+    assert_template :missing_application
+  end
+
+  test 'teacher with old application gets new view' do
+    teacher = create :teacher
+    old_year = Pd::SharedApplicationConstants::YEAR_18_19
+    create :pd_teacher_application, user: teacher, application_year: old_year
+
+    rp = create :regional_partner
+    workshop = create :summer_workshop, regional_partner: rp
+    assert workshop.require_application?
+
+    sign_in teacher
+    get :new, params: {workshop_id: workshop.id}
+    assert_response :success
+    assert_template :missing_application
+  end
+
+  test 'teacher with incomplete application gets missing application view' do
+    teacher = create :teacher
+    create :pd_teacher_application, user: teacher, status: 'incomplete'
+
+    rp = create :regional_partner
+    workshop = create :summer_workshop, regional_partner: rp
+    assert workshop.require_application?
+
+    sign_in teacher
+    get :new, params: {workshop_id: workshop.id}
+    assert_response :success
+    assert_template :missing_application
+  end
+
+  test 'teacher with required application gets new view' do
+    teacher = create :teacher
+    create :pd_teacher_application, user: teacher, status: 'accepted'
+
+    rp = create :regional_partner
+    workshop = create :summer_workshop, regional_partner: rp
+    assert workshop.require_application?
+
+    sign_in teacher
+    get :new, params: {workshop_id: workshop.id}
+    assert_response :success
+    assert_template :new
+  end
+
+  test 'teacher enrollment email defaults to user email if no alternate email in application' do
+    teacher = create :teacher
+    sign_in teacher
+
+    workshop = create :workshop, organizer: @organizer, num_sessions: 1
+
+    application = create :pd_teacher_application, user: teacher, status: 'accepted'
+    new_form_data_hash = application.form_data_hash
+    new_form_data_hash['alternateEmail'] = ''
+    application.update(form_data_hash: new_form_data_hash)
+    app_alt_email = application.form_data_hash['alternateEmail']
+
+    assert app_alt_email.empty?
+
+    get :new, params: {workshop_id: workshop.id}
+    assert_response :success
+    assert_template :new
+
+    enrollment_email = JSON.parse(assigns(:script_data)[:props])["enrollment"]["email"]
+
+    refute_equal enrollment_email, app_alt_email
+    assert_equal enrollment_email, teacher.email
+  end
+
+  test 'teacher enrollment email uses application alternate email if available' do
+    teacher = create :teacher
+    sign_in teacher
+
+    workshop = create :workshop, organizer: @organizer, num_sessions: 1
+    application = create :pd_teacher_application, user: teacher, status: 'accepted'
+    app_alt_email = application.form_data_hash['alternateEmail']
+
+    get :new, params: {workshop_id: workshop.id}
+    assert_response :success
+    assert_template :new
+
+    enrollment_email = JSON.parse(assigns(:script_data)[:props])["enrollment"]["email"]
+
+    refute_equal enrollment_email, teacher.email
+    assert_equal enrollment_email, app_alt_email
   end
 
   # TODO: remove this test when workshop_organizer is deprecated

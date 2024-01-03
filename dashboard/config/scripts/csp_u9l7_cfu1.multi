@@ -12,3 +12,4 @@ right 'The algorithm favored cropping out black faces compared with white faces'
 markdown <<MARKDOWN
 
 MARKDOWN
+allow_multiple_attempts true

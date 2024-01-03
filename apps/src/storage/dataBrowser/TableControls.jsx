@@ -19,7 +19,7 @@ class TableControls extends React.Component {
     exportCsv: PropTypes.func.isRequired,
     importCsv: PropTypes.func.isRequired,
     tableName: PropTypes.string.isRequired,
-    readOnly: PropTypes.bool.isRequired
+    readOnly: PropTypes.bool.isRequired,
   };
 
   render() {

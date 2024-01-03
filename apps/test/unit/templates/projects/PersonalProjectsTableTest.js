@@ -6,7 +6,7 @@ import {
   stubRedux,
   restoreRedux,
   registerReducers,
-  getStore
+  getStore,
 } from '@cdo/apps/redux';
 import publishDialog from '@cdo/apps/templates/projects/publishDialog/publishDialogRedux';
 import deleteDialog from '@cdo/apps/templates/projects/deleteDialog/deleteProjectDialogRedux';
@@ -97,7 +97,7 @@ describe('PersonalProjectsTable', () => {
       );
       expect(wrapper.find('SafeMarkdown').props().markdown).to.equal(
         i18n.noSavedProjects({
-          signInUrl: '/users/sign_in?user_return_to=/projects'
+          signInUrl: '/users/sign_in?user_return_to=/projects',
         })
       );
     });

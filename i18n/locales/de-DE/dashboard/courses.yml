@@ -48,3 +48,79 @@ de:
           description_short: Ein Einführungs-Informatik-Kurs, der Schülern ermöglicht, echte Produkte zu erzeugen.
           description_student: Computer Science Discoveries (CS Discoveries) ist ein einführender Informatikkurs, der die Studenten befähigt, authentische Artefakte zu schaffen und sich mit der Informatik als Medium für Kreativität, Kommunikation, Problemlösung und Spaß zu beschäftigen.
           description_teacher: Computer Science Discoveries (CS Discoveries) ist ein einführender Informatikkurs, der die Studenten befähigt, authentische Artefakte zu schaffen und sich mit der Informatik als Medium für Kreativität, Kommunikation, Problemlösung und Spaß zu beschäftigen.
+        csd-pilot:
+          title: Erkenntnisse aus der Informatik - Pilotkurs
+          description_student: Computer Science Discoveries (CS Discoveries) ist ein einführender Informatikkurs, der die Studenten befähigt, authentische Artefakte zu schaffen und sich mit der Informatik als Medium für Kreativität, Kommunikation, Problemlösung und Spaß zu beschäftigen.
+        time4cs-control: {}
+        time4cs-experiment: {}
+        csp-2020:
+          description_short: Lerne grundlegende Konzepte der Informatik!
+        csd-2020:
+          description_short: Ein Einführungs-Informatik-Kurs, der Schülern ermöglicht, echte Produkte zu erzeugen.
+          description_student: Computer Science Discoveries (CS Discoveries) ist ein einführender Informatikkurs, der die Studenten befähigt, authentische Artefakte zu schaffen und sich mit der Informatik als Medium für Kreativität, Kommunikation, Problemlösung und Spaß zu beschäftigen.
+          description_teacher: Computer Science Discoveries (CS Discoveries) ist ein einführender Informatikkurs, der die Studenten befähigt, authentische Artefakte zu schaffen und sich mit der Informatik als Medium für Kreativität, Kommunikation, Problemlösung und Spaß zu beschäftigen.
+        csp-2021:
+          description_short: Lerne grundlegende Konzepte der Informatik!
+        csa-pilot: {}
+        mike-test:
+          title: Informatik Grundlagen
+        self-paced-pl-csd-2021: {}
+        self-paced-pl-csp-2021: {}
+        csa-pilot-facilitator: {}
+        csp-2022:
+          description_short: Lerne grundlegende Konzepte der Informatik!
+        csa-pilot-extra: {}
+        vpl-csd-summer-pilot-2022: {}
+        csa-async-2022: {}
+        vpl-csd-summer-pilot-ci-2022: {}
+        self-paced-pl-csa-2022: {}
+        self-paced-pl-csd-2022: {}
+        self-paced-pl-csp-2022: {}
+        vpl-csd-ayw-pilot-2022: {}
+        self-paced-pl-physical-computing-2022: {}
+        csp-2023:
+          description_short: Lerne grundlegende Konzepte der Informatik!
+        self-paced-pl-csa-2023: {}
+        tess-testing-focus-on-creativity-2023: {}
+        csd-2023:
+          title: Informatik Entdeckungen
+        vpl-csd-summer-ci-2023: {}
+        self-paced-pl-physical-computing-2023: {}
+        self-paced-pl-csd-2023: {}
+        self-paced-pl-microbit-2023: {}
+        pl-csd-summer-2023: {}
+        virtual-pl-csd-summer-2023: {}
+        self-paced-pl-csp-2023: {}
+        self-paced-pl-aiml-2023: {}
+        vpl-csp-2023: {}
+        vpl-csa-2023: {}
+        vpl-csd-2023: {}
+        virtual-pl-csa-summer-2024: {}
+        virtual-pl-csp-summer-2024: {}
+        self-paced-pl-csd-unit1-2023: {}
+        self-paced-pl-csd-unit2-2023:
+          title: Webentwicklung unterrichten
+        self-paced-pl-csd-unit3-2023: {}
+        self-paced-pl-csd-unit4-2023: {}
+        self-paced-pl-csd-unit5-2023: {}
+        web-dev-2024: {}
+        csd-2024: {}
+    resources:
+      curriculum/csd/2017:
+        name: Lehrplan
+      teacher_forum_6/csd/2017:
+        name: Lehrer Forum
+      curriculum/csd/2018:
+        name: Lehrplan
+      teacher_forum_6/csd/2018:
+        name: Lehrer Forum
+      curriculum/csd/2019:
+        name: Lehrplan
+      teacher_forum/csd/2019:
+        name: Lehrer Forum
+      curriculum/csd/2020:
+        name: Lehrplan
+      teacher_forum/csd/2020:
+        name: Lehrer Forum
+      getting_started_with_csd/csd/2021:
+        name: Erste Schritte der Informatik

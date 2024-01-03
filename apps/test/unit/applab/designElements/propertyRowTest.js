@@ -3,7 +3,7 @@ import {expect} from '../../../util/reconfiguredChai';
 import PropertyRow from '@cdo/apps/applab/designElements/PropertyRow';
 import {shallow} from 'enzyme';
 
-describe('applab property row', function() {
+describe('applab property row', function () {
   it('does not change an id row when a space is added', () => {
     var initialValue = 'HelloWorld';
     const wrapper = shallow(

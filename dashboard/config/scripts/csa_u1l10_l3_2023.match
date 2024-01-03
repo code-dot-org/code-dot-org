@@ -14,3 +14,4 @@ answer 'giving a name and data type to a variable'
 
 question 'return'
 answer 'to exit a method and go back to the point in the program that called it with the requested value or information'
+allow_multiple_attempts true

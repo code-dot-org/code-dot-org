@@ -20,6 +20,7 @@ bn:
   errors:
     messages:
       not_saved: 'অনুগ্রহ করে নিম্নের ত্রুটিগুলো সংশোধন করুন:'
+      too_young: 'এই বিষয়বস্তুতে বয়স সীমাবদ্ধতা রয়েছে এবং তরুণ শিক্ষার্থীদের জন্য উপলব্ধ নয়।'
   activerecord:
     errors:
       messages:
@@ -37,8 +38,10 @@ bn:
         age: 'বয়স'
         gender: 'লিঙ্গ'
         edit_header: 'একাউন্ট বিস্তারিত সম্পাদনা করুন'
+        finish_sign_up_header_error: 'অনুগ্রহ করে নিম্নের ত্রুটিগুলো সংশোধন করুন:'
         error:
           future: ভবিষ্যতের হতে পারবে না
+        user_type: 'অ্যাকাউন্ট-এর ধরন'
   beta: "বেটা"
   hello: "হ্যালো ওয়ার্ল্ড"
   welcome_back: "স্বাগতম %{name}"
@@ -107,7 +110,6 @@ bn:
     invalid_password: "পাসওয়ার্ডের অন্তত 6 অক্ষর হতে হবে"
     mismatch_password: "আপনার প্রবেশ করানো পাসওয়ার্ড দুটি মিলছে না"
     student_consent: "আমি নিশ্চিত করছি যে Code.org এর সেবা ব্যবহার করার ক্ষেত্রে আমার বাবা-মা অথবা বৈধ অভিভাবকের অনুমতি আছে।"
-    additional_information: "সাইন আপ প্রক্রিয়া চালিয়ে নিতে আমাদের আরো কিছু অতিরিক্ত তথ্যের প্রয়োজন।"
     user_type_button: "অ্যাকাউন্ট-এর ধরন আপডেট করুন"
     user_type_label: "অ্যাকাউন্ট-এর ধরন"
     user_type_student: "ছাত্র"
@@ -414,9 +416,14 @@ bn:
       robotics:
         kodable: 'কোডাবল'
         other: "অন্যান্য"
+      workshop_course:
+        other: 'অন্যান্য'
       email_opt_in:
         opt_in_yes: '"হ্যাঁ"'
         opt_in_no: 'না'
+  course_offering:
+    headers:
+      minecraft: 'মাইনক্র্যাফট'
   cookie_banner:
     accept: 'আমি একমত'
   copy: 'অনুলিপি'

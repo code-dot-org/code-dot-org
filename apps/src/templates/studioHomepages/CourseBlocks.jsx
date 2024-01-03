@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import ContentContainer from '../ContentContainer';
-import SpecialAnnouncement from './SpecialAnnouncement';
 import CourseBlocksWrapper from './CourseBlocksWrapper';
 import {NotificationResponsive} from '@cdo/apps/templates/Notification';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
@@ -12,20 +11,18 @@ import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {
   InternationalGradeBandCards,
   ToolsCards,
-  ToolsWidgetsCard
+  ToolsWidgetsCard,
 } from '@cdo/apps/util/courseBlockCardsConstants';
+import MarketingAnnouncementBanner from './MarketingAnnouncementBanner';
+import shapes from './shapes';
 
 class ModernCsfCourses extends Component {
   componentDidMount() {
     $('#pre-express')
       .appendTo(ReactDOM.findDOMNode(this.refs.pre_express))
       .show();
-    $('#express')
-      .appendTo(ReactDOM.findDOMNode(this.refs.express))
-      .show();
-    $('#unplugged')
-      .appendTo(ReactDOM.findDOMNode(this.refs.unplugged))
-      .show();
+    $('#express').appendTo(ReactDOM.findDOMNode(this.refs.express)).show();
+    $('#unplugged').appendTo(ReactDOM.findDOMNode(this.refs.unplugged)).show();
   }
 
   render() {
@@ -89,13 +86,13 @@ const LegacyCSFNotification = () => (
       {
         text: i18n.courseBlocksLegacyNotificationButtonCourses14(),
         link: pegasus('/educate/curriculum/elementary-school'),
-        newWindow: true
+        newWindow: true,
       },
       {
         text: i18n.courseBlocksLegacyNotificationButtonCoursesAccelerated(),
         link: '/s/20-hour',
-        newWindow: true
-      }
+        newWindow: true,
+      },
     ]}
   />
 );
@@ -119,12 +116,8 @@ class Courses1To4 extends Component {
 
 class AcceleratedAndUnplugged extends Component {
   componentDidMount() {
-    $('#20-hour')
-      .appendTo(ReactDOM.findDOMNode(this.refs.twenty_hour))
-      .show();
-    $('#unplugged')
-      .appendTo(ReactDOM.findDOMNode(this.refs.unplugged))
-      .show();
+    $('#20-hour').appendTo(ReactDOM.findDOMNode(this.refs.twenty_hour)).show();
+    $('#unplugged').appendTo(ReactDOM.findDOMNode(this.refs.unplugged)).show();
   }
 
   render() {
@@ -165,7 +158,7 @@ export class CourseBlocks extends Component {
   static propTypes = {
     // Array of jQuery selectors to course blocks.
     tiles: PropTypes.arrayOf(PropTypes.string).isRequired,
-    showViewMoreTile: PropTypes.bool
+    showViewMoreTile: PropTypes.bool,
   };
 
   render() {
@@ -191,7 +184,7 @@ export class CourseBlocks extends Component {
 
 export class CourseBlocksHoc extends Component {
   static propTypes = {
-    isInternational: PropTypes.bool
+    isInternational: PropTypes.bool,
   };
 
   tiles() {
@@ -216,8 +209,9 @@ export class CourseBlocksHoc extends Component {
 
 export class CourseBlocksIntl extends Component {
   static propTypes = {
-    isTeacher: PropTypes.bool.isRequired,
-    showModernElementaryCourses: PropTypes.bool.isRequired
+    isTeacher: PropTypes.bool,
+    showModernElementaryCourses: PropTypes.bool.isRequired,
+    specialAnnouncement: shapes.specialAnnouncement,
   };
 
   componentDidMount() {
@@ -227,7 +221,8 @@ export class CourseBlocksIntl extends Component {
   }
 
   render() {
-    const {isTeacher, showModernElementaryCourses: modernCsf} = this.props;
+    const {showModernElementaryCourses: modernCsf, specialAnnouncement} =
+      this.props;
     const AcceleratedCourses = () => (
       <ContentContainer>
         <AcceleratedAndUnplugged />
@@ -239,7 +234,12 @@ export class CourseBlocksIntl extends Component {
 
         <CourseBlocksHoc isInternational />
 
-        <SpecialAnnouncement isEnglish={false} isTeacher={isTeacher} />
+        {specialAnnouncement && (
+          <MarketingAnnouncementBanner
+            announcement={specialAnnouncement}
+            marginBottom="30px"
+          />
+        )}
 
         {modernCsf ? <CoursesAToF /> : <Courses1To4 />}
 

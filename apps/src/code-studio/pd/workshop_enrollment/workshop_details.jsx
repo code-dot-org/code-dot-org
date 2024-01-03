@@ -8,7 +8,7 @@ import {WorkshopPropType} from './enrollmentConstants';
 export default class WorkshopDetails extends React.Component {
   static propTypes = {
     workshop: WorkshopPropType,
-    session_dates: PropTypes.arrayOf(PropTypes.string)
+    session_dates: PropTypes.arrayOf(PropTypes.string),
   };
 
   workshopCourse() {
@@ -75,6 +75,8 @@ export default class WorkshopDetails extends React.Component {
           {this.workshopCourse()}
           <br />
           {this.props.workshop.subject}
+          <br />
+          {this.props.workshop.module}
         </div>
       </div>
     );
@@ -153,9 +155,9 @@ export default class WorkshopDetails extends React.Component {
 
 const styles = {
   label: {
-    textAlign: 'right'
+    textAlign: 'right',
   },
   notes: {
-    whiteSpace: 'pre-wrap'
-  }
+    whiteSpace: 'pre-wrap',
+  },
 };

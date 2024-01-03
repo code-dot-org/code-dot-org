@@ -23,7 +23,7 @@ const CONTINUOUS_SCROLL_BY = 2;
 
 const DIRECTIONS = {
   UP: 0,
-  DOWN: 1
+  DOWN: 1,
 };
 
 const MARGIN = 5;
@@ -38,7 +38,7 @@ class ScrollButtons extends React.Component {
     visible: PropTypes.bool.isRequired,
     height: PropTypes.number.isRequired,
     getScrollTarget: PropTypes.func.isRequired,
-    isMinecraft: PropTypes.bool.isRequired
+    isMinecraft: PropTypes.bool.isRequired,
   };
 
   getMargin() {
@@ -72,9 +72,9 @@ class ScrollButtons extends React.Component {
     // If mouse is held down for half a second, begin gradual continuous
     // scroll
     this.scrollTimeout = setTimeout(
-      function() {
+      function () {
         this.scrollInterval = setInterval(
-          function() {
+          function () {
             let dist = CONTINUOUS_SCROLL_BY;
             if (dir === DIRECTIONS.UP) {
               dist *= -1;
@@ -109,25 +109,25 @@ class ScrollButtons extends React.Component {
 
     let upStyle = {
       opacity: this.props.visible ? 1 : 0,
-      top: 0,
+      top: '10px',
       margin: '0 0 3px 0',
       left: centerItems ? '50%' : 25,
-      transform: 'translateX(-50%)'
+      transform: 'translateX(-50%)',
     };
 
     const downStyle = {
       opacity: this.props.visible ? 1 : 0,
-      bottom: MARGIN,
+      bottom: '10px',
       right: centerItems ? '50%' : 25,
-      transform: 'translateX(50%)'
+      transform: 'translateX(50%)',
     };
 
     const minecraftButton = {
-      width: 40
+      width: 40,
     };
 
     const containerStyle = {
-      height: this.props.height
+      height: this.props.height,
     };
 
     // for most tutorials, we have minimalist arrow elements. For
@@ -145,7 +145,7 @@ class ScrollButtons extends React.Component {
         onMouseDown={this.scrollStartUp}
         style={[styles.all, upStyle, minecraftButton]}
       >
-        <img src="/blockly/media/1x1.gif" className="scroll-up-btn" />
+        <img src="/blockly/media/1x1.gif" className="scroll-up-btn" alt="" />
       </button>
     ) : (
       <div
@@ -174,7 +174,7 @@ class ScrollButtons extends React.Component {
         onMouseDown={this.scrollStartDown}
         style={[styles.all, downStyle, minecraftButton]}
       >
-        <img src="/blockly/media/1x1.gif" className="scroll-down-btn" />
+        <img src="/blockly/media/1x1.gif" className="scroll-down-btn" alt="" />
       </button>
     ) : (
       <div
@@ -208,13 +208,13 @@ const styles = {
   all: {
     position: 'absolute',
     transition: 'opacity 200ms',
-    margin: 0
+    margin: 0,
   },
   arrowGlyph: {
     fontSize: 50,
-    color: color.purple,
-    cursor: 'pointer'
-  }
+    color: color.neutral_dark,
+    cursor: 'pointer',
+  },
 };
 
 export default Radium(ScrollButtons);

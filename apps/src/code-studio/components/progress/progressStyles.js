@@ -18,23 +18,23 @@ const baseButtonStyle = {
   paddingBottom: 5,
   paddingLeft: 10,
   paddingRight: 10,
-  whiteSpace: 'nowrap'
+  whiteSpace: 'nowrap',
 };
 
 const progressStyles = {
   baseButton: baseButtonStyle,
   blueButton: Object.assign({}, baseButtonStyle, {
     backgroundColor: color.cyan,
-    color: color.white
+    color: color.white,
   }),
   orangeButton: Object.assign({}, baseButtonStyle, {
     backgroundColor: color.orange,
-    color: color.white
+    color: color.white,
   }),
   whiteButton: Object.assign({}, baseButtonStyle, {
     backgroundColor: color.white,
     color: color.dark_charcoal,
-    borderColor: color.lighter_gray
-  })
+    borderColor: color.lighter_gray,
+  }),
 };
 export default progressStyles;

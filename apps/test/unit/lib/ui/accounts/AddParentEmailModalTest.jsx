@@ -16,7 +16,7 @@ describe('AddParentEmailModal', () => {
     handleSubmit: () => {},
     handleCancel: () => {},
     userType: 'student',
-    isPasswordRequired: true
+    isPasswordRequired: true,
   };
 
   // Helpers for selecting particular elements/components
@@ -74,8 +74,8 @@ describe('AddParentEmailModal', () => {
           values: {
             parentEmail: '',
             confirmedParentEmail: '',
-            parentEmailOptIn: 'yes'
-          }
+            parentEmailOptIn: 'yes',
+          },
         });
 
         expect(wrapper.text()).to.include(
@@ -88,8 +88,8 @@ describe('AddParentEmailModal', () => {
           values: {
             parentEmail: 'invalidEmail@nowhere',
             confirmedParentEmail: '',
-            parentEmailOptIn: 'yes'
-          }
+            parentEmailOptIn: 'yes',
+          },
         });
 
         expect(wrapper.text()).to.include(
@@ -103,8 +103,8 @@ describe('AddParentEmailModal', () => {
           values: {
             parentEmail: 'old@example.com',
             confirmedParentEmail: 'old@example.com',
-            parentEmailOptIn: 'yes'
-          }
+            parentEmailOptIn: 'yes',
+          },
         });
 
         expect(wrapper.text()).to.include(
@@ -117,8 +117,8 @@ describe('AddParentEmailModal', () => {
           values: {
             parentEmail: 'email@example.com',
             confirmedParentEmail: 'different@example.com',
-            parentEmailOptIn: 'yes'
-          }
+            parentEmailOptIn: 'yes',
+          },
         });
 
         expect(wrapper.text()).to.include(
@@ -132,11 +132,11 @@ describe('AddParentEmailModal', () => {
           values: {
             parentEmail: 'new@example.com',
             confirmedParentEmail: 'new@example.com',
-            parentEmailOptIn: 'yes'
+            parentEmailOptIn: 'yes',
           },
           errors: {
-            parentEmail: serverError
-          }
+            parentEmail: serverError,
+          },
         });
 
         expect(wrapper.text()).to.include(serverError);
@@ -146,8 +146,8 @@ describe('AddParentEmailModal', () => {
         wrapper.setState({
           values: {
             parentEmail: '',
-            confirmedParentEmail: ''
-          }
+            confirmedParentEmail: '',
+          },
         });
 
         expect(submitButton(wrapper)).to.have.prop('disabled', true);
@@ -158,8 +158,8 @@ describe('AddParentEmailModal', () => {
           values: {
             parentEmail: 'me@example.com',
             confirmedParentEmail: 'me@example.com',
-            parentEmailOptIn: ''
-          }
+            parentEmailOptIn: '',
+          },
         });
 
         expect(submitButton(wrapper)).to.have.prop('disabled', false);
@@ -170,17 +170,17 @@ describe('AddParentEmailModal', () => {
       it('on email', () => {
         wrapper.setState({
           errors: {
-            parentEmail: 'test-server-error'
-          }
+            parentEmail: 'test-server-error',
+          },
         });
         expect(wrapper.state().errors.parentEmail).to.equal(
           'test-server-error'
         );
         emailInput(wrapper).simulate('change', {
-          target: {value: 'me@example.com'}
+          target: {value: 'me@example.com'},
         });
         emailConfirmationInput(wrapper).simulate('change', {
-          target: {value: 'me@example.com'}
+          target: {value: 'me@example.com'},
         });
 
         expect(wrapper.state().errors.parentEmail).to.equal('');
@@ -198,16 +198,16 @@ describe('AddParentEmailModal', () => {
         expect(wrapper.state().saveState).to.equal('initial');
         expect(wrapper.state().errors).to.deep.equal({
           parentEmail: '',
-          confirmedParentEmail: ''
+          confirmedParentEmail: '',
         });
         wrapper.instance().onSubmitFailure({
           serverErrors: {
-            parentEmail: 'test-email-server-error'
-          }
+            parentEmail: 'test-email-server-error',
+          },
         });
         expect(wrapper.state().saveState).to.equal('initial');
         expect(wrapper.state().errors).to.deep.equal({
-          parentEmail: 'test-email-server-error'
+          parentEmail: 'test-email-server-error',
         });
       });
     });

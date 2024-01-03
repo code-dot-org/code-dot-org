@@ -17,7 +17,7 @@ const workshops = [
     capacity: 15,
     facilitators: [],
     organizer: {name: 'organizer_name', email: 'organizer_email'},
-    enrollment_code: 'code1'
+    enrollment_code: 'code1',
   },
   // Non required data is null
   {
@@ -33,8 +33,8 @@ const workshops = [
     capacity: 15,
     facilitators: [],
     organizer: {name: null, email: null},
-    enrollment_code: null
-  }
+    enrollment_code: null,
+  },
 ];
 
 export default storybook => {
@@ -44,7 +44,7 @@ export default storybook => {
     .addStoryTable([
       {
         name: 'EnrolledWorkshopsTable',
-        story: () => <EnrolledWorkshopsTable workshops={workshops} />
-      }
+        story: () => <EnrolledWorkshopsTable workshops={workshops} />,
+      },
     ]);
 };

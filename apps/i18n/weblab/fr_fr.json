@@ -1,2 +1,21 @@
 {
+  "addCSSButton": "Ajouter du CSS",
+  "addHTMLButton": "Ajouter du code HTML",
+  "addImageButton": "Ajouter une image",
+  "closeFullscreenPreview": "Fermer l'aperçu en plein écran",
+  "currentProjectCapacity": "{currentMegabytes}Mo sur {totalMegabytes}Mo utilisés",
+  "disallowedHtml": "Le fichier « {filename} » contient des éléments HTML qui ne sont pas autorisés : `{disallowedTags}`. Ils seront supprimés lorsque cette boîte de dialogue sera fermée.",
+  "errorSavingProject": "Quelque chose n'a pas fonctionné lors de l'enregistrement automatique de votre projet. Vérifiez votre connexion Internet et essayez de l'enregistrer manuellement. Si le problème persiste, essayez de recharger la page pour recommencer.",
+  "fatalError": "Erreur fatale : {message}. Si vous êtes en mode de navigation privée, les données ne peuvent pas être écrites.",
+  "loadFailure": "Nous sommes désolés, Web Lab n'a pas pu se charger pour une raison quelconque. Erreur : {message}",
+  "openFullscreenPreview": "Ouvrir l'aperçu en plein écran",
+  "refreshPreview": "Rafraîchir et enregistrer",
+  "reloading": "Rechargement en cours...",
+  "reset": "Réinitialiser Web Lab",
+  "resetComplete": "Réinitialisation du Web Lab terminée",
+  "resetFailure": "Impossible de réinitialiser Web Lab : {message}.",
+  "toggleInspectorOff": "Inspecteur : activé",
+  "toggleInspectorOn": "Inspecteur : Désactivé",
+  "troubleshootingSupport": "Consultez notre article de support [\"Résolution des problèmes du Web Lab\"]({url}) pour plus d'informations.",
+  "uploadError": "Erreur lors du chargement"
 }
