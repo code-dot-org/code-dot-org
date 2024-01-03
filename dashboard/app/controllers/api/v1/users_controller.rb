@@ -145,6 +145,12 @@ class Api::V1::UsersController < Api::V1::JSONApiController
     head :no_content
   end
 
+  def post_show_progress_ui_refresh
+    return head :unauthorized unless current_user
+
+    head :no_content
+  end
+
   # POST /api/v1/users/<user_id>/display_theme
   def update_display_theme
     @user.display_theme = params[:display_theme]

@@ -145,6 +145,7 @@ class User < ApplicationRecord
     family_name
     ai_rubrics_disabled
     sort_by_family_name
+    show_progress_ui_refresh
   )
 
   attr_accessor(
@@ -1565,6 +1566,12 @@ class User < ApplicationRecord
 
   def sort_by_family_name?
     !!sort_by_family_name
+  end
+
+  def show_progress_ui_refresh?
+    return show_progress_ui_refresh unless show_progress_ui_refresh.nil?
+
+    DCDO.get('progress-ui-refresh-default-new', false)
   end
 
   def generate_username
