@@ -1705,6 +1705,7 @@ class ApiControllerTest < ActionController::TestCase
     get :import_google_classroom
     assert_response :forbidden
   end
+
   #
   # Given two arrays, checks that they represent equivalent bags (or multisets)
   # of elements.
