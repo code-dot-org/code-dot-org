@@ -43,7 +43,7 @@ class DCDOBase < DynamicConfigBase
       'show-coteacher-ui': DCDO.get('show-coteacher-ui', true),
       'amplitude-event-sample-rates': DCDO.get('amplitude-event-sample-rates', {}),
       # Whether to allow the user to toggle between the new and old progress UI.
-      'show-progress-ui-refresh': DCDO.get('progress-ui-refresh', false),
+      'progress-ui-refresh-enabled': DCDO.get('progress-ui-refresh', false),
       # Whether to show the new progress UI or the old one by default.
       'progress-ui-refresh-default-new': DCDO.get('progress-ui-refresh-default-new', false),
     }
