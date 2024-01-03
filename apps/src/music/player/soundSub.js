@@ -46,10 +46,9 @@ class AudioSystem {
     try {
       audioContext = createAudioContext(48000);
     } catch (e) {
-      Lab2MetricsReporter.logError(
-        'Web Audio API is not supported in this browser',
-        e
-      );
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .logError('Web Audio API is not supported in this browser', e);
       throw e;
     }
 

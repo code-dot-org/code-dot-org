@@ -85,7 +85,7 @@ export default class SamplePlayer {
       .loadSound(sampleId)
       .then(audioBuffer => {
         if (!audioBuffer) {
-          Lab2MetricsReporter.logError('Error loading sound', undefined, {
+          this.metricsReporter.logError('Error loading sound', undefined, {
             sound: sampleId,
           });
           return;
@@ -93,7 +93,7 @@ export default class SamplePlayer {
         this.soundPlayer.playSound(audioBuffer, PREVIEW_GROUP, 0, onStop);
       })
       .catch(error => {
-        Lab2MetricsReporter.logError('Error loading sound', error as Error, {
+        this.metricsReporter.logError('Error loading sound', error as Error, {
           sound: sampleId,
         });
       });
@@ -117,7 +117,7 @@ export default class SamplePlayer {
     events.forEach(event => {
       const audioBuffer = this.soundCache.getSound(event.sampleId);
       if (!audioBuffer) {
-        Lab2MetricsReporter.logWarning(
+        this.metricsReporter.logWarning(
           'Could not load sound which should have been in cache: ' +
             event.sampleId
         );
@@ -170,7 +170,7 @@ export default class SamplePlayer {
       if (eventStart >= currentAudioTime - delayCompensation) {
         const buffer = this.soundCache.getSound(sampleEvent.sampleId);
         if (!buffer) {
-          Lab2MetricsReporter.logWarning(
+          this.metricsReporter.logWarning(
             'Could not load sound which should have been in cache: ' +
               sampleEvent.sampleId
           );
