@@ -157,6 +157,7 @@ export default function RubricContent({
           <div className={style.selectors}>
             <SectionSelector reloadOnChange={true} requireSelection={false} />
             <StudentSelector
+              styleName={style.studentSelector}
               selectedUserId={
                 studentLevelInfo ? studentLevelInfo.user_id : null
               }

@@ -8,13 +8,8 @@ import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
 
 const NO_SELECTED_SECTION_VALUE = '';
 
-const styles = {
-  select: {
-    width: 180,
-  },
-};
-
 function StudentSelector({
+  styleName,
   style,
   selectedUserId,
   reloadOnChange,
@@ -41,14 +36,15 @@ function StudentSelector({
     return null;
   }
 
+  console.log(styleName);
+
   return (
     <select
-      className="uitest-studentselect"
+      className={styleName ? styleName : 'uitest-studentselect'}
       name="students"
       aria-label={i18n.selectStudentOption()}
       value={selectedUserId || NO_SELECTED_SECTION_VALUE}
       style={{
-        ...styles.select,
         ...style,
       }}
       onChange={handleSelectStudentChange}
@@ -67,9 +63,10 @@ function StudentSelector({
 }
 
 StudentSelector.propTypes = {
-  style: PropTypes.object,
+  styleName: PropTypes.string,
   selectedUserId: PropTypes.number,
   reloadOnChange: PropTypes.bool,
+  style: PropTypes.object,
 
   //from redux
   students: PropTypes.arrayOf(
