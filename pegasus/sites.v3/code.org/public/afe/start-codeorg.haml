@@ -1,0 +1,53 @@
+---
+title: Your school is not eligible for the Amazon Future Engineer program. But you can still use Code.org
+theme: responsive_full_width
+---
+
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
+
+%section
+  .wrapper
+    %h1=hoc_s(:afe_page_eligibility_check_heading)
+    %p=hoc_s(:afe_page_eligibility_check_fail_desc, markdown: :inline, locals:{req_url: "#disclaimer"})
+    %a.link-button{href: "/teach", style: "margin-bottom: 2rem"}
+      =hoc_s(:call_to_action_view_teach_with_cdo)
+    %p.body-three.no-margin-bottom
+      =hoc_s(:afe_page_eligibility_check_fail_error, markdown: :inline, locals:{email_url: "mailto:support@code.org"})
+
+= view :section_divider_line
+
+%section
+  .wrapper
+    %h2=hoc_s(:heading_resources_for_educators)
+    .action-block__wrapper.action-block__wrapper--three-col
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %h3=hoc_s(:call_to_action_explore_curriculum_catalog)
+          %img{src: "/images/tile-curriculum-catalog.png", alt: ""}
+          %p=hoc_s(:curriculum_desc_catalog)
+        .content-footer
+          %a.link-button{href: CDO.studio_url("/catalog")}
+            =hoc_s(:call_to_action_learn_more)
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %h3=hoc_s(:facilitator_led_pl_heading)
+          %img{src: "/images/tile-facilitator-led-pl.png", alt: ""}
+          %p=hoc_s(:facilitator_led_pl_desc)
+        .content-footer
+          %a.link-button{href: "/educate/professional-learning/middle-high"}
+            =hoc_s(:call_to_action_learn_more)
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %h3=hoc_s(:self_paced_pl_heading)
+          %img{src: "/images/tile-self-paced-pl.png", alt: ""}
+          %p=hoc_s(:self_paced_pl_desc)
+        .content-footer
+          %a.link-button{href: "/educate/professional-development-online"}
+            =hoc_s(:call_to_action_learn_more)
+
+= view :section_divider_line
+
+%section#disclaimer
+  .wrapper
+    %p.body-three
+      =hoc_s(:afe_page_eligibility_check_disclaimer)
