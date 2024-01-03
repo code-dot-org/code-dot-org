@@ -42,10 +42,10 @@ class DCDOBase < DynamicConfigBase
       gender: DCDO.get('gender', false),
       'show-coteacher-ui': DCDO.get('show-coteacher-ui', true),
       'amplitude-event-sample-rates': DCDO.get('amplitude-event-sample-rates', {}),
-      # Whether to allow the user to toggle between the new and old progress UI.
-      'progress-ui-refresh-enabled': DCDO.get('progress-ui-refresh', false),
-      # Whether to show the new progress UI or the old one by default.
-      'progress-ui-refresh-default-new': DCDO.get('progress-ui-refresh-default-new', false),
+      # Whether to allow the user to toggle between the v1 and v2 progress tables.
+      'progress-table-v2-enabled': DCDO.get('progress-table-v2-enabled', false),
+      # Whether to show the v1 or v2 progress table by default.
+      'progress-table-v2-default-v2': DCDO.get('progress-table-v2-default-v2', false),
     }
   end
 end
