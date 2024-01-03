@@ -145,7 +145,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
     head :no_content
   end
 
-  def post_show_progress_ui_refresh
+  def post_show_progress_table_v2
     return head :unauthorized unless current_user
 
     head :no_content

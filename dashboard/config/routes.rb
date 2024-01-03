@@ -888,7 +888,7 @@ Dashboard::Application.routes.draw do
 
         post 'users/sort_by_family_name', to: 'users#post_sort_by_family_name'
 
-        post 'users/show_progress_ui_refresh', to: 'users#post_show_progress_ui_refresh'
+        post 'users/show_progress_table_v2', to: 'users#post_show_progress_table_v2'
 
         get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
         get 'users/:user_id/display_theme', to: 'users#get_display_theme'
