@@ -1729,14 +1729,11 @@ class ApiControllerTest < ActionController::TestCase
     mocked_response = Google::Apis::ClassroomV1::ListStudentsResponse.new(students: nil)
     mock_service.stubs(:list_course_students).with('101', page_token: nil).returns(mocked_response)
 
-    puts "HEllO 1"
-
     ApiController.any_instance.expects(:query_google_classroom_service).yields(mock_service)
     post :import_google_classroom, params: {courseId: '101', courseName: course_name}
 
     response_json = JSON.parse(response.body)
     assert_equal GoogleClassroomSection.column_for_attribute(:name).limit, response_json['name'].length
-    puts response_json['name']
     assert response_json['name'].end_with?('...')
   end
 
