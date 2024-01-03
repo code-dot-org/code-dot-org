@@ -1,5 +1,10 @@
 {
+  "danceAiModalCodeButton": "Cód",
+  "danceAiModalExplanationButton": "Tuilleadh eolais",
+  "danceAiModalBack": "Ar ais",
+  "danceAiModalClose": "Dún",
   "danceFeedbackDidntPress": "Brúigh na saigheadeochracha nuair a bheidh an damhsa ar siúl.",
+  "danceFeedbackKeepCoding": "Lean ort ag códú! Níl gach rud i gceart fós.",
   "danceFeedbackKeyEvent": "Ná déan dearmad cód a cheangal leis an mbloc <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"suas\"</title></block></xml> agus brúigh an eochair nuair a bheidh an damhsa ar siúl.",
   "danceFeedbackNeedBackup": "Caithfidh tú grúpa damhsóirí tionlacain a chruthú leis an mbloc <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"AONBHEANNACH\"</title><title name=\"LAYOUT\">\"ciorcal\"</title></block></xml>.",
   "danceFeedbackNeedDifferentDance": "Caithfidh tú damhsa difriúil a úsáid.",
@@ -18,6 +23,5 @@
   "danceFeedbackUseSetSize": "Úsáid an bloc `socraigh méid damhsóir_tionlacain2` chun an damhsóir sin a chrapadh.",
   "danceFeedbackUseSetTint": "Úsáid an bloc `socraigh imir` chun imir an damhsóra a athrú.",
   "danceFeedbackUseStartMapping": "Bain triail as an mbloc <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">aonbheannach_ar_dheis</title><title name=\"PROPERTY\">\"scála\"</title><title name=\"RANGE\">\"dord\"</title></block></xml>.",
-  "danceFeedbackKeepCoding": "Lean ort ag códú! Níl gach rud i gceart fós.",
   "measure": "Tomhas:"
 }

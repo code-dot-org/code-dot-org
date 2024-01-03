@@ -5,6 +5,7 @@ import AppView from '../templates/AppView';
 import {getStore} from '../redux';
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {commands as audioCommands} from '../lib/util/audioApi';
+
 var dom = require('../dom');
 import DanceVisualizationColumn from './DanceVisualizationColumn';
 import Sounds from '../Sounds';
@@ -22,6 +23,8 @@ import {
   setAiOutput,
 } from './danceRedux';
 import trackEvent from '../util/trackEvent';
+import analyticsReporter from '../lib/util/AnalyticsReporter';
+import {EVENTS} from '../lib/util/AnalyticsConstants';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import logToCloud from '../logToCloud';
 import {saveReplayLog} from '../code-studio/components/shareDialogRedux';
@@ -36,6 +39,10 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {showArrowButtons} from '@cdo/apps/templates/arrowDisplayRedux';
 import danceCode from '@code-dot-org/dance-party/src/p5.dance.interpreted.js';
 import utils from './utils';
+import ErrorBoundary from '@cdo/apps/lab2/ErrorBoundary';
+import danceMetricsReporter from './danceMetricsReporter';
+import {ErrorFallbackPage} from '@cdo/apps/lab2/views/ErrorFallbackPage';
+import {DANCE_AI_SOUNDS} from './ai/constants';
 
 const ButtonState = {
   UP: 0,
@@ -173,18 +180,37 @@ Dance.prototype.init = function (config) {
 
   this.awaitTimingMetrics();
 
+  const state = getStore().getState();
+  danceMetricsReporter.updateProperties({
+    channelId: state.pageConstants.channelId,
+    currentLevelId: state.progress.currentLevelId,
+    scriptId: state.progress.scriptId,
+    userId: state.currentUser.userId,
+  });
+
   ReactDOM.render(
     <Provider store={getStore()}>
-      <AppView
-        visualizationColumn={
-          <DanceVisualizationColumn
-            showFinishButton={showFinishButton}
-            setSong={this.setSongCallback.bind(this)}
-            resetProgram={this.reset.bind(this)}
-          />
-        }
-        onMount={onMount}
-      />
+      <ErrorBoundary
+        // this is actually the Lab2 Error Fallback page. We may want to refactor this after Hour of Code.
+        fallback={<ErrorFallbackPage />}
+        onError={(error, componentStack) => {
+          danceMetricsReporter.logError('Uncaught React Error', error, {
+            componentStack,
+          });
+        }}
+      >
+        <AppView
+          visualizationColumn={
+            <DanceVisualizationColumn
+              showFinishButton={showFinishButton}
+              setSong={this.setSongCallback.bind(this)}
+              resetProgram={this.reset.bind(this)}
+              playSound={this.playSound.bind(this)}
+            />
+          }
+          onMount={onMount}
+        />
+      </ErrorBoundary>
     </Provider>,
     document.getElementById(config.containerId)
   );
@@ -235,6 +261,20 @@ Dance.prototype.initSongs = async function (config) {
           config.level.selectedSong = songId;
         }
       },
+      onSongUnavailable: songId => {
+        this.songUnavailableAlert = this.studioApp_.displayPlayspaceAlert(
+          'warning',
+          React.createElement('div', {}, danceMsg.danceSongNoLongerSupported())
+        );
+
+        const {isReadOnlyWorkspace, channelId} =
+          getStore().getState().pageConstants;
+        analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_SONG_UNAVAILABLE, {
+          songId,
+          viewerOwnsProject: !isReadOnlyWorkspace,
+          channelId,
+        });
+      },
     })
   );
 };
@@ -258,6 +298,10 @@ Dance.prototype.setSongCallback = function (songId) {
       },
       onSongSelected: songId => {
         this.updateSongMetadata(songId);
+        if (this.songUnavailableAlert) {
+          this.studioApp_.closeAlert(this.songUnavailableAlert);
+          this.songUnavailableAlert = undefined;
+        }
 
         const hasChannel = !!getStore().getState().pageConstants.channelId;
         if (hasChannel) {
@@ -272,6 +316,13 @@ Dance.prototype.loadAudio_ = function () {
   this.studioApp_.loadAudio(this.skin.winSound, 'win');
   this.studioApp_.loadAudio(this.skin.startSound, 'start');
   this.studioApp_.loadAudio(this.skin.failureSound, 'failure');
+
+  DANCE_AI_SOUNDS.forEach(soundId => {
+    const soundPath = this.studioApp_.assetUrl(
+      `media/skins/dance/${soundId}.mp3`
+    );
+    this.studioApp_.loadAudio([soundPath], soundId);
+  });
 };
 
 const KeyCodes = {
@@ -402,6 +453,7 @@ Dance.prototype.afterInject_ = function () {
     container: 'divDance',
     i18n: danceMsg,
     resourceLoader: new ResourceLoader(ASSET_BASE),
+    logger: danceMetricsReporter,
   });
 
   // Expose an interface for testing
@@ -421,6 +473,11 @@ Dance.prototype.afterInject_ = function () {
 };
 
 Dance.prototype.playSong = function (url, callback, onEnded) {
+  if (Sounds.getSingleton().isPlaying(url)) {
+    // Prevent playing the same song twice simultaneously.
+    audioCommands.stopSound({url: url});
+  }
+
   audioCommands.playSound({
     url: url,
     callback: callback,
@@ -429,6 +486,12 @@ Dance.prototype.playSong = function (url, callback, onEnded) {
       this.studioApp_.toggleRunReset('run');
     },
   });
+};
+
+Dance.prototype.playSound = function (soundName, options) {
+  var defaultOptions = {volume: 0.5};
+  var newOptions = {...defaultOptions, ...options};
+  Sounds.getSingleton().play(soundName, newOptions);
 };
 
 /**
@@ -535,6 +598,12 @@ Dance.prototype.onPuzzleComplete = function (result, message) {
     this.studioApp_.playAudio('failure');
   }
 
+  analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_VALIDATION, {
+    result,
+    message,
+    testResults: this.testResults,
+  });
+
   const sendReport = () => {
     this.studioApp_.report({
       app: 'dance',
@@ -569,6 +638,11 @@ Dance.prototype.runButtonClick = async function () {
   var clickToRunImage = document.getElementById('danceClickToRun');
   if (clickToRunImage) {
     clickToRunImage.style.display = 'none';
+  }
+
+  if (this.songUnavailableAlert) {
+    this.studioApp_.closeAlert(this.songUnavailableAlert);
+    this.songUnavailableAlert = undefined;
   }
 
   // Block re-entrancy since starting a run is async

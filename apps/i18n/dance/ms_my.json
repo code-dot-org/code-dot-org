@@ -1,4 +1,9 @@
 {
+  "danceAiModalBack": "Belakang",
+  "danceAiModalClose": "Tutup",
+  "danceAiModalCodeButton": "Kod",
+  "danceAiModalExplanationButton": "Ketahui lebih lanjut",
+  "danceAiModalStartOverButton": "Mula semula",
   "danceFeedbackDidntPress": "Pastikan untuk menekan kekunci anak panah semasa tarian anda sedang berjalan.",
   "danceFeedbackKeepCoding": "Anda menggunakan kesemua jenis blok yang diperlukan tetapi dengan cara yang tidak betul.",
   "danceFeedbackKeyEvent": "Pastikan anda melampirkan beberapa kod kepada blok <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"up\"</title></block></xml> dan tekan kekunci semasa tarian anda sedang berjalan.",

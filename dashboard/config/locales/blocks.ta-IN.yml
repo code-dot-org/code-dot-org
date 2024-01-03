@@ -110,6 +110,26 @@ ta:
             MOVES.Roll: பாடி ரோல்
             MOVES.ThisOrThat: இது அல்லது அது
         text: "{GROUP} செய்க {MOVE} {DIR} எப்போதும்"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': பூனைகள்
+          MOVE:
+            '"next"': "(அடுத்த)"
+            '"prev"': "(முந்தைய)"
+            '"rand"': "(ரான்டம்)"
+            MOVES.ClapHigh: உயரே கைதட்டுக
+            MOVES.Clown: கங்கனம்
+            MOVES.Dab: டாப்
+            MOVES.DoubleJam: டபுள் டவுன்
+            MOVES.Drop: ட்ராப்
+            MOVES.Floss: ஃப்ளாஸ்
+            MOVES.Fresh: ஃப்ரெஷ்
+            MOVES.Kick: ஸ்டார்
+            MOVES.Rest: எதுவுமில்லை
+            MOVES.Roll: பாடி ரோல்
+            MOVES.ThisOrThat: இது அல்லது அது
+        text: "{GROUP} செய்க {MOVE} {DIR} எப்போதும்"
       Dancelab_changeMoveLR:
         options:
           MOVE:
@@ -1000,6 +1020,12 @@ ta:
         text: "{SPRITE} சொல் {TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE} சறுக்கி {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': கேஸ்
+            '"liquid"': திரவம்
+            '"solid"': திடமான
       KatiesBlocks_tumbling:
         text: உருளும்
       Mikelab_addBehaviorSimple:

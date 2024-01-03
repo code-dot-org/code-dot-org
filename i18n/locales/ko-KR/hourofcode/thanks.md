@@ -2,32 +2,32 @@
 title: 아워오브코드를 주최하기 위해 가입해 주셔서 감사힙니다.
 ---
 
-# 아워오브코드를 주최하기 위해 가입해 주셔서 감사힙니다.
+# Thanks for signing up for Hour of Code!
 
-<br /> **아워오브코드는 {{ campaign_date/full }} 동안 진행되며 새로운 튜토리얼과 기타 흥미로운 업데이트는 나오는 대로 관련 내용을 전달해 드리겠습니다. 그 동안 여러분은 무슨 일을 하실 수 있습니까?**
+<br /> **Your event is now registered. By volunteering to host an Hour of Code event, you're making it possible for more students to learn computer science. While Hour of Code events are held all over the world during the celebration of Computer Science Education Week, you can choose to organize an Hour of Code event or events at any time! Here are some steps to get started.**
 
-## 1. 학교와 커뮤니티에 입소문 내기
+## 1. 이벤트 계획
 
-You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
+Begin by exploring our library of [Hour of Code activities](/learn) and review this [how-to guide](/how-to) for helpful tips on how to find an activity, inspire students, and determine your technology needs. Try [diving into the world of artificial intelligence](/ai) - an exciting area of technology that’s shaping our future. There are various approaches to AI: empower your students to learn how AI works and your teachers to learn with AI 101 for teachers.
 
-{{ social_media_hoc }} <br /> Encourage others to participate [with our sample emails.]({{ promote/sample_emails }}) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. 새로운 기술들을 배우기 위해서 학교에서만 있을 필요는 없습니다. Invite a local politician or policy maker to visit your school for the Hour of Code. 그렇게 하면 여러분 지역에서 한 시간의 Hour of Code 이후의 컴퓨터과학(정보과학) 수업이 이루어지는데 큰 도움이 될 수 있습니다.
+## 2. Spread the word
 
-Use these [posters, banners, stickers, videos and more]({{ promote/resources }}) for your own event.
+We need your help to inspire volunteers and organizers from across the globe. Tell your friends about your #HourOfCode and [use these helpful resources](/resources) to promote your event. <br />
 
-## 2. 이벤트 행사를 도와줄 수 있는 지역 자원 봉사자 찾기
+You can also help engage more people from your school and community by [sending our sample emails](/promote/resources#sample-emails) to your principal, a local group, or even some friends.
 
-[Search our volunteer map]({{ urls/volunteer_local }}) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+{{ social_media_hoc }}
 
-## 3. 아워오브코드 계획
+## 3. Find a local volunteer to help you with your event.
 
-Choose an [Hour of Code activity](https://hourofcode.com/learn) for your classroom and [review this how-to guide]({{ urls/how_to_guide }}).
+[Search our volunteer map](https://code.org/volunteer/local) to find volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
-### 4. 스웨그 준비
+## 4. Check out Hour of Code swag
 
-Order materials to help get students excited about your event by heading to the Code.org [Amazon store](https://www.amazon.com/stores/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220). Order posters, Hour of Code kits, stickers, and more! But hurry, supplies are limited.
+Swag is a great way to get students excited about the Hour of Code and reward them for completing their activity. If you are hosting an event for your entire school, consider [sharing your Hour of Code plan](https://docs.google.com/forms/d/e/1FAIpQLSdD90kD2nkNZqTUMcAb2cQdOhUv99Q5XDQmkLDec25yZJHYhw/viewform) to receive a special engagement kit with t-shirts, posters, laptop stickers, and more. [At the Code.org store](https://store.code.org/), you can order Hour of Code swag kits, fun stickers, buttons, temporary tattoos, and more. But hurry, supplies are limited.
 
-# 아워오브코드를 너머 그 이상으로 가기
+## 5. Encourage kids to continue learning
 
-{{ go_beyond_hoc }}
+An Hour of Code is just the beginning! We hear over and over again how much students love the Hour of Code and discover a newfound interest in computer science. Encourage them to continue learning. Whether you're an administrator, teacher, or advocate, we have professional learning, free classroom curriculum and lesson plans, and resources to help you [bring computer science classes to your school](https://code.org/teach) or expand your offerings.
 
-{{ popup_window.js }}
+Many of the organizations offering activities on HourofCode.com also have curriculum and professional learning available as well. We've highlighted curriculum providers that can help you or your students [go beyond an hour](/beyond).

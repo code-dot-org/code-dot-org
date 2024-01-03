@@ -29,6 +29,8 @@ fa:
             '2.00': بزرگ
             '3.00': بسیار بزرگ
         text: تنظیم اندازه {SPRITE} به {SIZE}
+      Dancelab_ai:
+        text: "{IMAGE} جلوه {VALUE} ایجاد کنید"
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -100,6 +102,26 @@ fa:
             '"SLOTH"': خرس تنبلها
             '"UNICORN"': تک‌شاخها
             sprites: همه
+          MOVE:
+            '"next"': "(بعدی)"
+            '"prev"': "(قبلی)"
+            '"rand"': "(تصادفی)"
+            MOVES.ClapHigh: کلپ های (رقص)
+            MOVES.Clown: گنگام (رقص)
+            MOVES.Dab: داب (رقص)
+            MOVES.DoubleJam: پریدن با دو پا روی زمین - دابل داون (رقص)
+            MOVES.Drop: انداختن
+            MOVES.Floss: فلاس - قر دادن (رقص)
+            MOVES.Fresh: فِرِش (رقص)
+            MOVES.Kick: ستاره
+            MOVES.Rest: هیچکدام
+            MOVES.Roll: بادی رول - خم شدن (رقص)
+            MOVES.ThisOrThat: دیس اور دت (رقص)
+        text: "{GROUP} برای همیشه {MOVE}{DIR} را انجام می‌دهد"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"SLOTH"': خرس تنبلها
           MOVE:
             '"next"': "(بعدی)"
             '"prev"': "(قبلی)"
@@ -303,7 +325,7 @@ fa:
             "{x: 200, y: 300}": پایین
             "{x: 300, y: 100}": بالا راست
             "{x: 300, y: 200}": سمت راست
-            "{x: 300, y: 300}": پایین راست
+            "{x: 300, y: 300}": سمت راست پایین
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": در هم
         text: "{SPRITE} به {LOCATION} پرش می‌کند"
       Dancelab_jumpToEach:
@@ -329,7 +351,7 @@ fa:
             "{x: 200, y: 300}": پایین
             "{x: 300, y: 100}": بالا راست
             "{x: 300, y: 200}": سمت راست
-            "{x: 300, y: 300}": پایین راست
+            "{x: 300, y: 300}": سمت راست پایین
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": در هم
         text: "{GROUP} به {LOCATION} پرش می‌کند"
       Dancelab_layoutSprites:
@@ -388,7 +410,7 @@ fa:
             "{x: 200, y: 300}": پایین
             "{x: 300, y: 100}": بالا راست
             "{x: 300, y: 200}": سمت راست
-            "{x: 300, y: 300}": پایین راست
+            "{x: 300, y: 300}": سمت راست پایین
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": در هم
         text: یک {COSTUME} در {LOCATION} بساز
       Dancelab_makeNewDanceSprite:
@@ -415,7 +437,7 @@ fa:
             "{x: 200, y: 300}": پایین
             "{x: 300, y: 100}": بالا راست
             "{x: 300, y: 200}": سمت راست
-            "{x: 300, y: 300}": پایین راست
+            "{x: 300, y: 300}": سمت راست پایین
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": در هم
         text: یک {COSTUME} جدید بساز به نام {NAME} در محل {LOCATION}
       Dancelab_makeNewDanceSpriteGroup:
@@ -514,7 +536,7 @@ fa:
             '"disco"': مربع (افکت)
             '"disco_ball"': دسکو بال
             '"fireworks"': آتش‌بازی
-            '"galaxy"': فضا  (افکت)
+            '"galaxy"': فضا
             '"kaleidoscope"': هزار رنگ (افکت)
             '"lasers"': نور لیزر سالن رقص (افکت)
             '"none"': هیچکدام
@@ -547,7 +569,7 @@ fa:
             '"disco_ball"': دسکو بال
             '"fireworks"': آتش‌بازی
             '"flowers"': گلها (افکت)
-            '"galaxy"': فضا  (افکت)
+            '"galaxy"': فضا
             '"growing_stars"': ستاره‌های بزرگ شونده (افکت)
             '"kaleidoscope"': هزار رنگ (افکت)
             '"lasers"': نور لیزر سالن رقص (افکت)
@@ -580,6 +602,7 @@ fa:
       Dancelab_setBackgroundEffectWithPaletteAI:
         options:
           EFFECT:
+            '"blooming_petals"': گلبرگ‌های شکوفا
             '"circles"': دایره‌ها
             '"color_cycle"': رنگ‌ها
             '"diamonds"': لوزی‌ها
@@ -587,7 +610,8 @@ fa:
             '"disco_ball"': دسکو بال
             '"fireworks"': آتش‌بازی
             '"flowers"': گلها (افکت)
-            '"galaxy"': فضا  (افکت)
+            '"frosted_grid"': شبکه مات
+            '"galaxy"': فضا
             '"growing_stars"': ستاره‌های بزرگ شونده (افکت)
             '"kaleidoscope"': هزار رنگ (افکت)
             '"lasers"': نور لیزر سالن رقص (افکت)
@@ -608,17 +632,27 @@ fa:
             '"swirl"': هیپنو (افکت)
             '"text"': اسم آواز (افکت)
           PALETTE:
+            '"autumn"': پاییز (پالت)
             '"cool"': جالب (پالت رنگ)
             '"default"': روشن (پالت)
             '"electronic"': الکترونیکی (پالت)
+            '"grayscale"': سایه‌خاکستری (پالت)
             '"iceCream"': بستنی (پالت)
             '"neon"': نئون (پالت)
             '"ocean"': اقیانوس
             '"rainbow"': رنگین‌کمان (افکت)
             '"rave"': سیاه و سفید (افکت)
+            '"roses"': سرخ (پالت)
+            '"sky"': آسمان
+            '"spring"': بهار
+            '"summer"': تابستانی (پالت)
+            '"sunrise"': طلوع آفتاب
+            '"sunset"': غروب آفتاب
             '"tropical"': استوایی (پالت)
+            '"twinkling"': چشمک‌زن (افکت)
             '"vintage"': آنتیک (پالت)
             '"warm"': گرم (پالت)
+            '"winter"': زمستان
         text: تنظیم افکت پس‌زمینه روی {PALETTE}{EFFECT}
       Dancelab_setDanceSpeed:
         options:
@@ -1060,6 +1094,12 @@ fa:
         text: "{SPRITE} میگوید: {TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE} آرام به {LOCATION} می‌رود"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': گاز
+            '"liquid"': مایع
+            '"solid"': جامد
       KatiesBlocks_tumbling:
         text: جست و خیز کردن
       Mikelab_addBehaviorSimple:
@@ -1099,7 +1139,7 @@ fa:
             "{x: 200, y: 300}": پایین
             "{x: 300, y: 100}": بالا راست
             "{x: 300, y: 200}": سمت راست
-            "{x: 300, y: 300}": پایین راست
+            "{x: 300, y: 300}": سمت راست پایین
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": تصادفی
       Mikelab_getNext:
         text: دریافت شیء بعدی
@@ -1140,7 +1180,7 @@ fa:
             "{x: 200, y: 300}": پایین
             "{x: 300, y: 100}": بالا راست
             "{x: 300, y: 200}": سمت راست
-            "{x: 300, y: 300}": پایین راست
+            "{x: 300, y: 300}": سمت راست پایین
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": تصادفی
         text: یک {COSTUME} در {LOCATION} بساز
       Mikelab_groupDestroy:
@@ -1364,7 +1404,7 @@ fa:
             "{x: 200, y: 300}": پایین
             "{x: 300, y: 100}": بالا راست
             "{x: 300, y: 200}": سمت راست
-            "{x: 300, y: 300}": پایین راست
+            "{x: 300, y: 300}": سمت راست پایین
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": تصادفی
         text: یک اسپرایت جدید {COSTUME} در محل {LOCATION}
       Mikelab_whenClickedOn:

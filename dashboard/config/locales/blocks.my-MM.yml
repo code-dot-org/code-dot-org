@@ -32,6 +32,10 @@ my:
             sprites: အားလုံး
           MOVE:
             MOVES.Rest: ဘာမှမရှိ
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          MOVE:
+            MOVES.Rest: ဘာမှမရှိ
       Dancelab_changeMoveLR:
         options:
           MOVE:

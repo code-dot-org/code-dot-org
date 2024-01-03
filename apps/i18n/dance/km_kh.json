@@ -1,4 +1,9 @@
 {
+  "danceAiModalBack": "ត្រលប់ក្រោយ",
+  "danceAiModalClose": "បិទ",
+  "danceAiModalCodeButton": "កូដ",
+  "danceAiModalExplanationButton": "ស្វែងយល់បន្ថែម",
+  "danceAiModalStartOverButton": "ចាប់ផ្តើមសារ​ឡើងវិញ",
   "danceFeedbackDidntPress": "ចូរប្រាកដថាអ្នកបានចុចលើគ្រាប់ក្តារចុចសញ្ញាព្រួញ ខណះពេលការរាំរបស់អ្នកកំពុងមានចលនា។",
   "danceFeedbackKeepCoding": "ព្យាយាមសរសេរកូដម្ដងទៀត! នៅមានអ្វីមួយដែលនៅមិនទាន់ត្រឹមត្រូវនៅឡើយ។",
   "danceFeedbackKeyEvent": "ត្រូវប្រាកដថាអ្នកភ្ជាប់កូដខ្លះទៅនឹង 'when key' block និងធ្វើការចុច key នៅពេលដែលអ្នករាំរបស់អ្នកកំពុងតែរាំ",

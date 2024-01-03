@@ -53,7 +53,7 @@ describe('SectionsSetUpContainer', () => {
   it('renders coteacher settings', () => {
     const wrapper = shallow(<SectionsSetUpContainer />);
 
-    expect(wrapper.find('ReactTooltip').length).to.equal(1);
+    expect(wrapper.find('InfoHelpTip').length).to.equal(1);
   });
 
   it('updates caret direction when Add Coteachers is clicked', () => {

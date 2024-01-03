@@ -1219,6 +1219,7 @@
   header_help_support: 'การช่วยเหลือและสนับสนุน '
   header_report_bug: "รายงานปัญหา"
   header_legal_privacy: "นโยบายความเป็นส่วนตัว"
+  header_legal_cookie_notice: "ประกาศเกี่ยวกับคุกกี้"
   header_legal_tos: "เงื่อนไขการให้บริการ"
   header_tutorials: "บทช่วยสอน"
   header_documentation: "เอกสารประกอบ"

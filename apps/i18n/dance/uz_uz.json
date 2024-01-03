@@ -1,4 +1,9 @@
 {
+  "danceAiModalBack": "Orqaga",
+  "danceAiModalClose": "Yopish",
+  "danceAiModalCodeButton": "Kod",
+  "danceAiModalExplanationButton": "Ko‘proq bilish",
+  "danceAiModalStartOverButton": "Boshlamoq",
   "danceFeedbackDidntPress": "Raqsingiz paytida o'q tugmachalarini bosganingizga ishonch hosil qiling.",
   "danceFeedbackKeepCoding": "Kodlashni davom eting! Hozircha biron narsa to‘g‘ri kelmagan.",
   "danceFeedbackKeyEvent": "Bu <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"up\"</title></block></xml> blokiga biron bir kod qo'shganingizga ishonch hosil qiling va raqsingiz ko'rish uchun 'RUN' tugmachasini bosing. ",

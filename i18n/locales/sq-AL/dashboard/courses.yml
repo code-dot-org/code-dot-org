@@ -79,6 +79,12 @@ sq:
         virtual-pl-csa-summer-2024: {}
         virtual-pl-csp-summer-2024: {}
         self-paced-pl-csd-unit1-2023: {}
+        self-paced-pl-csd-unit2-2023: {}
+        self-paced-pl-csd-unit3-2023: {}
+        self-paced-pl-csd-unit4-2023: {}
+        self-paced-pl-csd-unit5-2023: {}
+        web-dev-2024: {}
+        csd-2024: {}
     resources:
       curriculum/csd/2017:
         name: Plani mësimor

@@ -1,4 +1,8 @@
 {
+  "danceAiModalBack": "Takaisin",
+  "danceAiModalClose": "Sulje",
+  "danceAiModalCodeButton": "Koodi",
+  "danceAiModalExplanationButton": "Lue lisää",
   "danceFeedbackDidntPress": "Varmista, että painat nuolinäppäimiä, kun tanssisi on käynnissä.",
   "danceFeedbackKeepCoding": "Käytät kaikkia oikeanlaisia lohkoja, mutta et oikealla tavalla.",
   "danceFeedbackKeyEvent": "Varmista, että liität jonkun koodin <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"up\"</title></block></xml> blokkiin ja paina näppäintä, kun tanssisi on käynnissä.",

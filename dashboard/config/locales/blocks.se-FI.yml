@@ -88,6 +88,26 @@ se:
             MOVES.Roll: Gorut Jorran
             MOVES.ThisOrThat: Dát vai Duot
         text: "{GROUP} daga {MOVE} {DIR} vaikko man galle geardde"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': bussát
+            '"SLOTH"': láikkeseallit
+          MOVE:
+            '"next"': "(Boahtte)"
+            '"prev"': "(Ovddit)"
+            '"rand"': "(Sahtedohko)"
+            MOVES.ClapHigh: Spežže Bajas
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Duppalit Vulos
+            MOVES.Drop: Gahčá
+            MOVES.Floss: Flossa
+            MOVES.Fresh: Ođas
+            MOVES.Kick: Násti
+            MOVES.Roll: Gorut Jorran
+            MOVES.ThisOrThat: Dát vai Duot
+        text: "{GROUP} daga {MOVE} {DIR} vaikko man galle geardde"
       Dancelab_changeMoveLR:
         options:
           MOVE:

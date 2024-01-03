@@ -4,6 +4,7 @@ import {mount, shallow} from 'enzyme';
 import sinon from 'sinon';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import RubricContent from '@cdo/apps/templates/rubrics/RubricContent';
+import experiments from '@cdo/apps/util/experiments';
 
 describe('RubricContent', () => {
   const defaultRubric = {
@@ -251,7 +252,7 @@ describe('RubricContent', () => {
 
   it('passes down aiUnderstanding and aiConfidence to the LearningGoal', async () => {
     const aiEvaluations = [
-      {learning_goal_id: 2, understanding: 2, ai_confidence: 2},
+      {id: 2, learning_goal_id: 2, understanding: 2, ai_confidence: 2},
     ];
     const wrapper = mount(
       <RubricContent
@@ -314,5 +315,52 @@ describe('RubricContent', () => {
     expect(wrapper.find('InfoAlert').props().text).to.equal(
       'Select a student from the Teacher Panel to view and evaluate their work.'
     );
+  });
+
+  it('displays new LearningGoals prop when ai-rubrics-redesign experiment is enabled', () => {
+    experiments.setEnabled('ai-rubrics-redesign', true);
+    const wrapper = mount(
+      <RubricContent
+        {...defaultProps}
+        studentLevelInfo={{
+          name: 'Grace Hopper',
+          timeSpent: 305,
+          lastAttempt: '1980-07-31T00:00:00.000Z',
+          attempts: 6,
+        }}
+      />
+    );
+    expect(wrapper.find('LearningGoals').length).to.equal(1);
+    experiments.setEnabled('ai-rubrics-redesign', false);
+  });
+
+  it('passes correct props to LearningGoals component', () => {
+    experiments.setEnabled('ai-rubrics-redesign', true);
+    const aiEvaluations = [
+      {id: 2, learning_goal_id: 2, understanding: 2, ai_confidence: 2},
+    ];
+    const studentLevelInfo = {
+      name: 'Grace Hopper',
+      timeSpent: 305,
+      lastAttempt: '1980-07-31T00:00:00.000Z',
+      attempts: 6,
+    };
+    const wrapper = mount(
+      <RubricContent
+        {...defaultProps}
+        studentLevelInfo={studentLevelInfo}
+        aiEvaluations={aiEvaluations}
+      />
+    );
+    expect(wrapper.find('LearningGoals').prop('studentLevelInfo')).to.equal(
+      studentLevelInfo
+    );
+    expect(wrapper.find('LearningGoals').prop('learningGoals')).to.equal(
+      defaultRubric.learningGoals
+    );
+    expect(wrapper.find('LearningGoals').prop('aiEvaluations')).to.equal(
+      aiEvaluations
+    );
+    experiments.setEnabled('ai-rubrics-redesign', false);
   });
 });

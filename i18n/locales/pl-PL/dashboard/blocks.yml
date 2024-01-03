@@ -55,7 +55,7 @@ pl:
             '2.00': duży
             '3.00': bardzo duży
       Dancelab_ai:
-        text: użyj AI do {IMAGE}
+        text: "{IMAGE}generuj {VALUE} efekt"
       Dancelab_alternateMoves:
         text: "{GROUP} zmienia się co {N} takty \nmiędzy {MOVE1} i {MOVE2}"
         options:
@@ -151,6 +151,30 @@ pl:
             MOVES.ThisOrThat: This or That
             MOVES.Thriller: Zombie
             MOVES.Rest: Żaden
+          DIR:
+            '1': "→"
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} wykonuje {MOVE} {DIR} bez końca"
+        options:
+          GROUP:
+            '"CAT"': koty
+            '"SLOTH"': leniuchy
+          MOVE:
+            MOVES.Roll: Body Roll
+            MOVES.ClapHigh: Clap high
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double Down
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Star
+            MOVES.ThisOrThat: This or That
+            MOVES.Thriller: Zombie
+            MOVES.Rest: Żaden
+            '"next"': "(Następny)"
+            '"prev"': "(Poprzedni)"
+            '"rand"': "(Losowy)"
           DIR:
             '1': "→"
       Dancelab_changeMoveLR:
@@ -654,9 +678,9 @@ pl:
           EFFECT:
             '"none"': Żaden
             '"rand"': "(Losowy)"
-            '"circles"': Kółka
             '"quads"': Kąty
             '"blooming_petals"': Kwitnące płatki
+            '"circles"': Kółka
             '"color_cycle"': Kolory
             '"diamonds"': Diamenty
             '"disco_ball"': Kula dyskotekowa
@@ -674,11 +698,11 @@ pl:
             '"ripples"': Fale
             '"snowflakes"': Śnieg
             '"text"': Tytuły piosenek
-            '"squiggles"': Pokręcone linie
             '"galaxy"': Przestrzeń
             '"sparkles"': Migotanie
             '"spiral"': Spirala
             '"disco"': Kwadraty
+            '"squiggles"': Pokręcone linie
             '"starburst"': Rozprysk
             '"stars"': Gwiazdy
             '"music_wave"': Fale
@@ -1836,6 +1860,15 @@ pl:
         text: współrzędna y {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} skocz do {LOCATION}"
+      KatiesBlocks_goldilocks:
+        text: |2-
+           jeśli {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"solid"': trwały
+            '"liquid"': ciecz
+            '"gas"': gaz
       KatiesBlocks_makeNumSpritesNear:
         text: utwórz {NUM} nowe {ANIMATION_NAME} duszki blisko {LOCATION}
       KatiesBlocks_spriteBirdSay:

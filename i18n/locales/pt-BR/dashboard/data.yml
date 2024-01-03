@@ -485,7 +485,7 @@ pt:
         applab_intro_sounds: Laboratório de Aplicativo - Imagens e Sons
         applab_intro_designmode: Laboratório de Aplicativo - Modo de Design
         applab_intro_share: Laboratório de Aplicativo - Compartilhe seu Aplicativo
-        csd_applab_arrays: Introdução a Arrays
+        csd_applab_arrays: Introdução a Vetores
         CSF_skinOverview_Harvester: A Colheitadeira
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
@@ -565,7 +565,7 @@ pt:
         csd_teamwork_and_disagreement: Trabalho em equipe - Lidar com discordâncias
         csf21pilot_events: 'Sprite Lab: Sprites em ação'
         csf21pilot_prompts: 'Sprite Lab: texto e instruções'
-        csd_ml_intro_to_ai_lab: Introdução ao AI Lab
+        csd_ml_intro_to_ai_lab: "Introdução ao I.A. Lab\n"
         csd_ml_import_model: Importando um modelo de IA
         csf_lots_of_sprites: 'Sprite Lab: Muitos Sprites'
         playlab_2021: Introdução ao Laboratório
@@ -576,10 +576,10 @@ pt:
         PL-Video-21: Bem-vindo ao aprendizado profissional da Code.org!
         csp_tutorial_datavis1: Visualizador de dados no App Lab - Parte 1
         csp_tutorial_datavis2: Visualizador de dados no App Lab - Parte 2
-        csd_ml_intro_ai_lab_july2021: Introdução ao AI Lab
-        csd_ml_training_testing_ai_lan: Treinamento e testes no AI Lab
-        csd_ml_model_cards_july2021: Cartões modelo no AI Lab
-        csd_ml_numerical_ai_lab: Dados numéricos no AI Lab
+        csd_ml_intro_ai_lab_july2021: "Introdução ao I.A. Lab\n"
+        csd_ml_training_testing_ai_lan: Treinamento e Testes no I.A. Lab
+        csd_ml_model_cards_july2021: Cartões Modelo no I.A. Lab
+        csd_ml_numerical_ai_lab: Dados Numéricos no I.A. Lab
         Gettting_Started_Progress: Progresso, feedback e avaliação
         Gettting_Started_ClassSection: Criando uma seção de classe
         Gettting_Started_StudentExperience: A experiência do aluno
@@ -668,7 +668,7 @@ pt:
         csc-sprite-lab-pixel-editor: Desenhe seu próprio Sprite
         csa-pl-intro-to-strings: Introdução às cadeias de caracteres em Java
         csa-pl-compareTo: O método compareTo ()
-        csc-event-short-intro: Breve introdução aos eventos
+        csc-event-short-intro: Breve Introdução aos Eventos
         PL_CSD_CircuitPlayground_Overview_AppsWithDevices: Visão geral da unidade Circuit Playground
         csa-day-in-pm-pl: O que um gerente de projeto faz?
         csa-pl-intro-to-pm: Introdução ao gerenciamento de projetos
@@ -737,10 +737,38 @@ pt:
         csa_sorting_algorithms: 'CSA: Algoritmos de classificação'
         star_quilts_intro_to_artist: 'Star Quilts: Introdução ao artista'
         upload_sprites_backgrounds: Fazendo upload de sprites e planos de fundo personalizados
+        PL_CSD_EquityBlindSpotsvid: Viés & Responsabilidade
+        how-ai-works-llms-full: Como os Chatbots e os Grandes Modelos de Linguagem Funcionam
+        how-ai-works-creativity-full: A IA Possui Criatividade e Imaginação?
+        how-ai-works-llms-part1: Chatbots e Grandes Modelos de Linguagem (LLMs) Parte 1
+        how-ai-works-llms-part2: Chatbots e Grandes Modelos de Linguagem (LLMs) Parte 2
         csc_bookcovers_intro: Codificando Capas de Livros
+        llms-cobranded: 'Como a IA Funciona: Chatbots e Grandes Modelos de Linguagem (LLMs)'
+        generative-ai-cobranded: 'Como a IA funciona: IA Generativa'
+        csa-overview: Uma Nova Abordagem para a Ciência da Computação AP A
         what-is-creativity: O que é criatividade?
+        poetry-programming: Poesia & Programação
+        push-yourself: Esforce-se. Todos podem aprender.
+        classic-maze-intro: Labirinto Clássico - Introdução
         code-break: Faça uma quebra de código
+        blockchain-introd: 'Como funciona o Blockchain: Introdução'
+        ai-ethis: Ética & IA
+        how-ai-works-lessons: 'Como a IA funciona: Visão Geral das Lições'
         se-cv-intro-to-lessons: 'Engenharia de Software e Visão Computacional: Introdução às Lições'
+        PL_CSP_SummerAsync_U1ConnectionsConclusions: Unidade 1 Conexões e Conclusões
+        PL_CSP_SummerAsync_U3L7Debugging: Unidade 3 Lição 7 - Depuração
+        PL_CSP_SummerAsync_U3ConnectionsConclusions: 'Unidade 2: Conclusões e Conexões'
+        PL_CSP_SummerAsync_U3L1Computers: Anteriormente, Em relação a... Unidade 3
+        PL_CSP_SummerAsync_Unit2Internet: Anteriormente, Em relação a... Unidade 2
+        PL_CSP_SummerAsync_U2ConnectionsConclusions: 'Unidade 3: Conclusões e Conexões'
+        csd_ml_how_ai_works: Como funciona a IA
+        hoc-dance-ai-warmup: 'Festa Dançante, Edição para IA: Aquecimento'
+        dance_ai_events_intro: Festa Dançante - Edição IA - Introdução a Eventos
+        dance_ai_intro_to_ai: Festa Dançante - Edição IA - Introdução à IA
+        dance_ai_how_ai_works: Festa Dançante - Edição IA - Como a IA Funciona
+        dance_ai_event_at_measure: Festa Dançante - Edição IA - Evento Sob Medida
+        dance_ai_events_measure_noST: Festa Dançante - Edição IA - Eventos Sob Medida Sem Sub
+        dance_ai_intro_to_ai_v3: 'Festa Dançante - Edição IA - Uma Introdução à IA'
     callout:
       text:
         drag_blocks: Arraste um bloco "avance" e o encaixe embaixo do outro bloco

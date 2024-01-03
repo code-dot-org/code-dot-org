@@ -737,12 +737,12 @@
         "csd_curriculum_guide/csd/2021": {
           "name": "CSD Guía Curricular",
           "url": "https://docs.google.com/document/d/1j5039CGHVj6L6FSh7Rr1jFwCea0NrGTw/edit?usp=sharing&ouid=115004829691861815221&rtpof=true&sd=true",
-          "type": "Recurso"
+          "type": "Recursos"
         },
         "csd_implementation_guide/csd/2021": {
           "name": "CSD Guía de Implementación",
           "url": "https://docs.google.com/document/d/1lMwXY9_LzWBPNYca_hBS8TQwYtgBR9JODcoWPgkc9JQ/edit?usp=sharing",
-          "type": "Recurso"
+          "type": "Recursos"
         },
         "aluminum-boats-exemplar-2020/csd/2021": {
           "name": "Barcos de aluminio",
@@ -863,8 +863,8 @@
           "type": "Revisión de compañeros"
         },
         "computer-science-practices/csd/2021": {
-          "name": "Prácticas de las Ciencias de la Computación ",
-          "url": "https://docs.google.com/document/d/1sxOayek2GIyQ0FRx7ZYHgMjS9CmkTZKrBLOOQ9Nh6-k/edit?usp=sharing",
+          "name": "Prácticas de las ciencias de la computación",
+          "url": "https://docs.google.com/document/d/1HT-0RUWPC_d4CZwjdHEfWG8V7b4eKV7J/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
           "type": "Reflexión"
         },
         "apps-and-problem-solving-marked-rubrics/csd/2021": {
@@ -9019,10 +9019,12 @@
           "type": "Guía de Actividades"
         },
         "ethics_and_ai_privacy_the_future_of_work/ai-ethics/2023": {
-          "type": "Vídeo"
+          "type": "Vídeo",
+          "name": "Ética e inteligencia artificial: privacidad y el futuro del trabajo"
         },
         "imagine_your_world/ai-ethics/2023": {
-          "type": "Guía de Actividades"
+          "type": "Guía de Actividades",
+          "name": "Imagina tu mundo"
         },
         "research_reflection_guide/ai-ethics/2023": {
           "type": "Guía de Actividades"
@@ -9049,12 +9051,12 @@
           "type": "Diapositivas"
         },
         "cs_connections_landing_page/csc-adaptations/2023": {
-          "name": "Página de inicio de CS Connections",
+          "name": "Página de Inicio de Conexiones CC",
           "url": "https://code.org/educate/csc",
           "type": "Recurso"
         },
         "csc_extended_connections_book_list/csc-adaptations/2023": {
-          "name": "Lista de libros de conexiones extendidas de CSC",
+          "name": "Lista de Libros de Conexiones Extendidas de CSC",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "Recurso"
         },
@@ -9063,7 +9065,7 @@
           "url": "https://docs.google.com/presentation/d/1HDw4VMDIBEfzmSlWM73BffOnnZvSjp4_tTVs3_xwvm0/"
         },
         "resource_list_for_all_lessons/csc-adaptations/2023": {
-          "name": "Lista de recursos para todas las lecciones",
+          "name": "Lista de Recursos para Todas las Lecciones",
           "url": "/s/adaptaciones-csc-2023/recursos",
           "type": "Recurso"
         },
@@ -9097,7 +9099,7 @@
           "type": "Diapositivas"
         },
         "cs_connections_landing_page/csc-bookcovers/2023": {
-          "name": "Página de inicio de CS Connections",
+          "name": "Página de Inicio de Conexiones CC",
           "url": "https://code.org/educate/csc",
           "type": "Recurso"
         },
@@ -9107,7 +9109,7 @@
           "type": "Recurso"
         },
         "resource_list_for_all_lessons/csc-bookcovers/2023": {
-          "name": "Lista de recursos para todas las lecciones",
+          "name": "Lista de Recursos para Todas las Lecciones",
           "url": "/s/csc-coberturas-de-libros-2023/recursos",
           "type": "Recurso"
         },
@@ -9187,29 +9189,29 @@
           "type": "Diapositivas"
         },
         "cs_connections_landing_page/csc-ecosystems/2023": {
-          "name": "Página de inicio de CS Connections",
+          "name": "Página de Inicio de Conexiones CC",
           "url": "https://code.org/educate/csc",
           "type": "Recurso"
         },
         "csc_extended_connections_book_list/csc-ecosystems/2023": {
-          "name": "Lista de libros de conexiones extendidas de CSC",
+          "name": "Lista de Libros de Conexiones Extendidas de CSC",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "Recurso"
         },
         "helpful_hints_for_teachers_and_learners/csc-ecosystems/2023": {
-          "name": "Consejos útiles para profesores y alumnos\t",
+          "name": "Consejos Utiles para Profesores y Alumnos\t",
           "url": "https://docs.google.com/presentation/d/1HDw4VMDIBEfzmSlWM73BffOnnZvSjp4_tTVs3_xwvm0/",
           "type": "Recurso"
         },
         "resource_list_for_all_lessons/csc-ecosystems/2023": {
-          "name": "Lista de recursos para todas las lecciones"
+          "name": "Lista de Recursos para Todas las Lecciones"
         },
         "standards_in_simulating_a_marine_ecosystem/csc-ecosystems/2023": {
-          "name": "Estándares en la simulación de un ecosistema marino ",
+          "name": "Estándares en la Simulación de un Ecosistema Marino ",
           "type": "Recurso"
         },
         "vocabulary_in_simulating_a_marine_ecosystem/csc-ecosystems/2023": {
-          "name": "Vocabulario en la simulación de un ecosistema marino",
+          "name": "Vocabulario en la Simulación de un Ecosistema Marino",
           "type": "Recurso"
         },
         "ecosystems/csc-ecosystems/2023": {
@@ -9218,7 +9220,7 @@
           "type": "Diapositivas"
         },
         "understanding_overfishing_article/csc-ecosystems/2023": {
-          "name": "Comprender el artículo sobre pesca",
+          "name": "Artículo \"Comprender la Sobrepesca\"",
           "url": "https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing",
           "type": "Recurso"
         },
@@ -9228,22 +9230,22 @@
           "type": "Guía de Actividades"
         },
         "cs_connections_landing_page/csc-mappinglandmarks/2023": {
-          "name": "Página de inicio de CS Connections",
+          "name": "Página de Inicio de Conexiones CC",
           "url": "https://code.org/educate/csc",
           "type": "Recurso"
         },
         "csc_extended_connections_book_list/csc-mappinglandmarks/2023": {
-          "name": "Lista de libros de conexiones extendidas de CSC",
+          "name": "Lista de Libros de Conexiones Extendidas de CSC",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "Recurso"
         },
         "helpful_hints_for_teachers_and_learners/csc-mappinglandmarks/2023": {
-          "name": "Consejos útiles para profesores y alumnos\t",
+          "name": "Consejos Utiles para Profesores y Alumnos\t",
           "url": "https://docs.google.com/presentation/d/1HDw4VMDIBEfzmSlWM73BffOnnZvSjp4_tTVs3_xwvm0/",
           "type": "Recurso"
         },
         "resource_list_for_all_lessons/csc-mappinglandmarks/2023": {
-          "name": "Lista de recursos para todas las lecciones",
+          "name": "Lista de Recursos para Todas las Lecciones",
           "url": "/s/csc-mappinglandmarks-2023/recursos"
         },
         "standards_in_mapping_landmarks/csc-mappinglandmarks/2023": {
@@ -9295,12 +9297,12 @@
           "type": "Recurso"
         },
         "cs_connections_landing_page/csc-starquilts/2023": {
-          "name": "Página de inicio de CS Connections",
+          "name": "Página de Inicio de Conexiones CC",
           "url": "https://code.org/educate/csc",
           "type": "Recurso"
         },
         "csc_extended_connections_book_list/csc-starquilts/2023": {
-          "name": "Lista de libros de conexiones extendidas de CSC",
+          "name": "Lista de Libros de Conexiones Extendidas de CSC",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "Recurso"
         },
@@ -9370,7 +9372,7 @@
           "type": "Diapositivas"
         },
         "all_resources/csc-timecapsule/2023": {
-          "name": "Lista de recursos para todas las lecciones",
+          "name": "Lista de Recursos para Todas las Lecciones",
           "url": "/s/csc-timecapsule-2023/recursos",
           "type": "Recurso"
         },
@@ -9383,12 +9385,12 @@
           "url": "/s/csc-timecapsule-2023/vocab"
         },
         "cs_connections_landing_page/csc-timecapsule/2023": {
-          "name": "Página de inicio de CS Connections",
+          "name": "Página de Inicio de Conexiones CC",
           "url": "https://code.org/educate/csc",
           "type": "Recurso"
         },
         "csc_extended_connections_book_list/csc-timecapsule/2023": {
-          "name": "Lista de libros de conexiones extendidas de CSC",
+          "name": "Lista de Libros de Conexiones Extendidas de CSC",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "Recurso"
         },
@@ -9486,12 +9488,12 @@
           "url": "https://studio.code.org/s/poetry-2023/vocab"
         },
         "cs_connections_landing_page/poetry/2023": {
-          "name": "Página de inicio de CS Connections",
+          "name": "Página de Inicio de Conexiones CC",
           "url": "https://code.org/educate/csc",
           "type": "Recurso"
         },
         "csc_extended_connections_book_list/poetry/2023": {
-          "name": "Lista de libros de conexiones extendidas de CSC",
+          "name": "Lista de Libros de Conexiones Extendidas de CSC",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "Recurso"
         },

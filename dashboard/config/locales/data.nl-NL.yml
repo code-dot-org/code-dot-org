@@ -583,7 +583,7 @@ nl:
           aan een functie toe te voegen)'
         turtle_3_7: Voeg een input met de naam "lengte" toe aan "teken een huis" en
           teken een groot huis voor de olifant (met randen van 150 pixels lang)
-        turtle_3_8: Pas "teken een huis" aan zodat ik in de hoek linksonder beland
+        turtle_3_8: Pas "teken een huis" zo aan, dat ik in de rechteronderhoek eindig
           na het tekenen van een nieuw huis. Gebruik deze aangepaste functie om drie
           huizen te tekenen.
         turtle_3_9: Kan je deze "teken een huis" functie namaken zonder hulp? Probeer
@@ -783,6 +783,7 @@ nl:
         csd_external_waze_data: Waarom Zijn Zoveel Gebruikers Geobsedeerd Door Waze?
         csd_gamelab_animation_tab: Het tabblad Animatie
         csd_gamelab_velocity: Snelheid
+        csd_ml_how_ai_works: Hoe AI werkt
         csd_pair_programming: Programmeren in Tweetallen
         csd_weblab_css_1: Introductie tot CSS - Deel 1
         csd_weblab_css_2: Introductie tot CSS - Deel 2

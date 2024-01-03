@@ -187,7 +187,8 @@ describe I18n::Resources::Dashboard::CurriculumContent::SyncOut do
 
       RedactRestoreUtils.expects(:restore).with(
         original_file_path, crowdin_file_path, crowdin_file_path, %w[resourceLink vocabularyDefinition]
-      ).once.returns(expected_i18n_data)
+      ).once
+      I18nScriptUtils.expects(:parse_file).with(crowdin_file_path).once.returns(expected_i18n_data)
 
       assert_equal expected_i18n_data, restore_file_content
     end

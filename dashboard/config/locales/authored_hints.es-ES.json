@@ -14637,6 +14637,36 @@
         "csc_timecapsule_textstyle_2023": {
           "hint1": "Usa el menú desplegable para elegir entre diferentes colores y efectos.\n\n![](<https://images.code.org/b3cd57bafe3e5eb487d61ef846a4715c-image-1660769880438.57.55 PM.png>)"
         },
+        "dance_ai_code_at_measure": {
+          "hint1": "Conecta el bloque `A.I. genera efecto` al bloque de evento `en 2 compases` en tu area de trabajo:\n\n[blockly block][0]",
+          "hint2": "Dale clic al bloque [blockly block][0] para crear un efecto nuevo. "
+        },
+        "dance_ai_code_key_press": {
+          "hint1": "💡 **¿Atascado?** Vuelva a ver el video sobre los eventos para saber cómo funcionan. ",
+          "hint2": "💡 Este es un ejemplo de cómo podría verse tu código. <xml>\n<xml xmlns=\"https://developers.google.com/blockly/xml\">\n\n  <block type=\"Dancelab_whenKey\" id=\"*R3Us3z5;rM#sBE?1zjX\" deletable=\"false\" x=\"19\" y=\"221\">\n    <field name=\"KEY\">“arriba”</field>\n    <next>\n      <block type=\"Dancelab_doMoveEachLR\" id=\"*hCDocpHXqlku@f[[rK=\">\n        <field name=\"GROUP\">“OSO”</field>\n        <field name=\"MOVE\">MOVES.Dab</field>\n        <field name=\"DIR\"></field>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "dance_ai_customize_effect": {
+          "Hint1": "💡 Personaliza el efecto dandole clic a los emojis en el bloque <xml> <block xmlns=\"https://developers.google.com/blockly/xml\" type=\"Dancelab_ai\" id=\"*6NOt^DsApsRC-pPZKBQ\">\n  <field name=\"VALUE\">{\"inputs\":[\"cool\",\"cold\",\"wavy\"],\"backgroundEffect\":\"sparkles\",\"backgroundColor\":\"cool\",\"foregroundEffect\":\"bubbles\"}</field>\n\n</block> </xml> en el espacio de trabajo. ",
+          "Hint2": "💡 **¿Atascado?** Mira el video explicativo para aprender a personalizar tu efecto. ",
+          "HintEdit": "💡 Si quieres usar el código que A.I. escribe, dale clic a 'código' y luego a 'Usar Código.' Los bloques reemplazarán el bloque `A.I. genera efecto` en tu espacio de trabajo. "
+        },
+        "dance_ai_dancer_and_dance_move": {
+          "HInt2": "Selecciona al mismo bailarín en cada bloque, ten en cuenta la secuencia (osea, el orden) de tus bloques.",
+          "validation": "💡 Agrega estos bloques bajo el bloque <code style=\"color:white; background-color:#FFBD46\">establecer</code> para crear tu primer bailarín: \n<xml xmlns=\"https://developers.google.com/blockly/xml\">\n      <block type=\"Dancelab_makeAnonymousDanceSprite\" id=\"1\">\n        <field name=\"COSTUME\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">“GATO”</field>\n        <field name=\"LOCATION\">{x: 200, y: 200}</field>\n        <next>\n          <block type=\"Dancelab_changeMoveEachLR\" id=\"|y+CWEBlleENO5MU(?yL\">\n            <field name=\"GROUP\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">“GATO”</field>\n            <field name=\"MOVE\">“siguiente”</field>\n            <field name=\"DIR\">-1</field>\n          </block>\n        </next>\n      </block>\n    </statement>\n\n</xml>"
+        },
+        "dance_ai_generate_effect": {
+          "Hint2": "💡 Conecta este bloque [blockly block][0] al bloque <code style=\"color:white; background-color:#FFBD46\">establecer</code>. Luego dale clic para comenzar.",
+          "Hint3": "💡 Si quieres regenerar el efecto o cambiar los emojis, hazle clic al bloque `I.A. genera efecto` una vez más. "
+        },
+        "dance_ai_generate_effect_again": {
+          "Hint1": "💡 Escucha la canción y ponte a pensar sobre sobre las emociones que evoca esta música. ",
+          "Hint2": "💡 Conecta este bloque [blockly block][0] al bloque <code style=\"color:white; background-color:#FFBD46\">establecer</code>. Luego dale clic para comenzar.",
+          "Hint3": "💡 Si quieres regenerar el efecto o cambiar los emojis, hazle clic al bloque `A.I. genera efecto` una vez más."
+        },
+        "dance_ai_try_key_press": {
+          "hint1": "💡 Si el baile no se está ejecutando, tus bailarines no reaccionarán cuando uses las flechas. ",
+          "hint2": "💡 Después de hacer clic en  <code style=\"color:white; background-color:#FFBD46\">Ejecutar</code>, usa las flechas  <code style=\"color:white; background-color:#FFBD46\">◀</code> <code style=\"color:white; background-color:#FFBD46\">▶</code> derecha o izquierda para hacer que tus bailarines reaccionen. "
+        },
         "ecosystems_helloworld_say_2023": {
           "add_sprite": "Pulsa y arrastra un bloque `hacer nuevo sprite` y conéctalo en `al ejecutar`. \n\n<xml><block type=\"when_run\" deletable=\"false\"><next><block type=\"gamelab_makeNewSpriteAnon\"><field name=\"ANIMATION_NAME\">\"bunny1_ready\"</field><value name=\"LOCATION\"><block type=\"gamelab_location_picker\" can_disconnect_from_parent=\"false\"><field name=\"LOCATION\">{\"x\":200,\"y\":200}</field></block></value></block></next></block></xml>",
           "change_location": "Para cambiar la ubicación de un sprite, haz clic en la marca del bloque de ubicación y, a continuación, haz clic en el lugar donde quieres que vaya.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"

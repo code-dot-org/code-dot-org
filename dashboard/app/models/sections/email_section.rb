@@ -24,6 +24,7 @@
 #  properties           :text(65535)
 #  participant_type     :string(255)      default("student"), not null
 #  lti_integration_id   :bigint
+#  ai_tutor_enabled     :boolean          default(FALSE)
 #
 # Indexes
 #

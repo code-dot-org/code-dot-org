@@ -1,4 +1,8 @@
 {
+  "danceAiModalBack": "पछाडि",
+  "danceAiModalClose": "बन्द गर्नुहोस्",
+  "danceAiModalCodeButton": "Code",
+  "danceAiModalExplanationButton": "थप जान्नुहोस्",
   "danceFeedbackDidntPress": "तपाईंको नृत्य चलिरहेको बेलामा वाण कि थिच्न निश्चित हुनुहोस् ।",
   "danceFeedbackKeepCoding": "Keep coding! Something's not quite right yet.",
   "danceFeedbackNeedDifferentDance": "तपाईंले फरक नृत्य प्रयोग गर्नु आवश्यक छ ।",

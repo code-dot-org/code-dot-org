@@ -52,7 +52,7 @@ pt:
         age: 'Idade'
         gender: 'Gênero'
         edit_header: 'Editar Detalhes da Conta'
-        ai_settings_header: 'Configurações de I.A.'
+        ai_settings_header: 'Configurações da I.A.'
         finish_sign_up_header: 'Finalize a criação da sua conta'
         finish_sign_up_header_error: 'Corrija os seguintes erros:'
         finish_sign_up_subheader: 'Preencha as informações a seguir para concluir a criação da sua conta Code.org <strong>%{email}</strong>.'
@@ -64,6 +64,7 @@ pt:
           future: não pode estar no futuro
         user_type: 'Tipo de conta'
         us_state: 'Estado'
+        ai_rubrics_disabled: 'Desativar o Recurso IA Rubric'
   beta: "beta"
   hello: "Olá, mundo!"
   welcome_back: "Bem-vindo de volta, %{name}"
@@ -205,6 +206,8 @@ pt:
     parent_account_email_progress_permission: "Podemos enviar e-mails com atualizações ocasionais sobre o progresso e os projetos do(a) seu(sua) filho(a), bem como atualizações sobre seu curso e seus conhecimentos em informática? [(consulte nossa política de privacidade)]%{privacy_policy_url})"
     parent_account_email_label: "E-mail do Pai/Responsável"
     us_state: 'Estado'
+    us_state_dropdown_options:
+      other: "Eu moro num lugar não listado aqui"
   school_info:
     title: 'Informações da escola (opcional)'
     school_country: 'País da Escola'
@@ -273,6 +276,9 @@ pt:
   parent_mailer:
     student_associated_subject: 'Informações de login para Code.org'
     parent_email_added_subject: 'Bem-vindo ao Code.org!'
+    parent_permission_request_subject: "É necessário o consentimento dos pais ou responsáveis para o acesso de seu filho ao Code.org"
+    parent_permission_reminder_subject: "Lembrete: É necessário o consentimento dos pais ou responsáveis para o acesso de seu filho ao Code.org"
+    parent_permission_confirmation_subject: "Obrigado por aprovar o acesso de seu filho ao Code.org!"
   teacher_mailer:
     new_teacher_subject: 'Bem-vindo ao Code.org!'
     delete_teacher_subject: 'Notificação Code.org: Sua conta foi deletada'
@@ -358,6 +364,7 @@ pt:
       sprite_lab_documentation: "Documentação do Sprite Lab"
       sprite_lab_tutorials: "Tutoriais do Sprite Lab"
       web_lab_documentation: "Documentação do Web Lab"
+      project_beats_documentation: "Documentação do Project Beats"
       educate_overview: "Visão Geral do Educador"
       educate_elementary: "Ensino Fundamental"
       educate_middle: "Ensino Fundamental II"
@@ -404,7 +411,7 @@ pt:
       team: 'Equipe'
       driver: 'Conectado'
       navigator: 'Parceiro'
-      create: 'Criar'
+      create: ''
       algebra_game: 'Álgebra'
       applab: 'Laboratório de Aplicativo'
       artist: 'Artista'
@@ -430,7 +437,7 @@ pt:
       playlab: 'Laboratório'
       playlab_k1: 'Laboratório de Jogos (Pré-leitor)'
       poetry: 'Poesia'
-      poetry_hoc: 'Arte poética'
+      poetry_hoc: 'Arte Poética'
       scratch: 'Scratch'
       sports: 'Esportes'
       spritelab: 'Laboratório de Sprite'
@@ -595,7 +602,7 @@ pt:
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Todos os direitos reservados. Star Wars&#8482; &copy; %{current_year} Disney e Lucasfilm. Todos os direitos reservados. Frozen&#8482; &copy; %{current_year} Disney. Todos os direitos reservados. Era do Gelo&#8482; &copy; %{current_year} 20th Century Fox. Todos os direitos reservados. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Todos os direitos reservados. Plants vs Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Todos os direitos reservados. DreamWorks Os Bandidos &copy; %{current_year} DreamWorks Animation LLC. Todos os direitos reservados.'
     code_from_html: 'A Code.org usa o p5.play, que tem a licensa <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html"> GNU LGPL 2.1</a>.'
     powered_by_aws: 'Powered by Amazon Web Services'
-    built_on_github: 'Desenvolvido no GitHub da Microsoft'
+    built_on_github: 'Construído no GitHub da Microsoft'
     google_copyright: '© Google Inc. usado com permissão. Google Classroom é uma marca registrada de Google Inc.'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, o logotipo da CODE e Hora do Código&reg; são marcas registradas da Code.org.'
     copyright: 'Direitos Autorais'
@@ -787,7 +794,7 @@ pt:
     playlab:
       image_alt: 'Uma colagem de imagens mostrando um gato azul, um cachorro pateta e uma doninha pré-histórica.'
     poem-art:
-      title: 'Arte poética'
+      title: 'Arte Poética'
       body: 'Expresse-se! Use código para criar poemas animados.'
       image_alt: 'Uma lula hipster se apresentando em um palco.'
     pre-express-2017:
@@ -873,6 +880,8 @@ pt:
     submit-incomplete-body: "Você deixou algumas perguntas incompletas.  Não é possível editar sua avaliação depois de enviá-la.  Tem certeza disso?"
     submit-complete-title: "Envie sua avaliação"
     submit-complete-body: "Não é possível editar sua avaliação depois de enviá-la.  Tem certeza disso?"
+  level_summary:
+    correct_answer: "Resposta Correta"
   match:
     wrong_title: "Solução incorreta"
     wrong_body: "Sua solução não está correta. Tente novamente!"
@@ -1134,17 +1143,37 @@ pt:
         not_listed: 'Termo preferido não listado'
         none: 'Prefiro não responder'
       school_country:
+        australia: 'Austrália'
         barbados: 'Barbados'
         belize: 'Belize'
+        brazil: 'Brasil'
         canada: 'Canadá'
         chile: 'Chile'
         colombia: 'Colômbia'
+        dominican_republic: 'República Dominicana'
+        india: 'Índia'
+        indonesia: 'Indonésia'
         israel: 'Israel'
+        italy: 'Itália'
+        jamaica: 'Jamaica'
+        kenya: 'Quênia'
+        kosovo: 'Kosovo'
         malaysia: 'Malásia'
+        maldives: 'República das Maldivas'
         mexico: 'México'
+        mongolia: 'Mongólia'
+        new_zealand: 'Nova Zelândia'
         paraguay: 'Paraguai'
+        philippines: 'Filipinas'
+        portugal: 'Portugal'
+        puerto_rico: 'Porto Rico'
+        slovakia: 'Eslováquia'
+        south_korea: 'República de Corea'
+        spain: 'Espanha'
         thailand: 'Tailândia'
+        trinidad_and_tobago: 'Trinidad e Tobago'
         uzbekistan: 'Uzbequistão'
+        vietnam: 'Vietnã'
       ages:
         ages_under_6: '< 6 anos de idade'
         ages_7_8: '7-8 anos de idade'
@@ -1234,6 +1263,7 @@ pt:
       workshops_k5: 'Workshops K-5'
       summer_workshops_612: '6-12 workshops de verão'
       virtual_academic_year_workshops_612: 'Workshops virtuais de 6 a 12 anos acadêmicos'
+      unsupported: 'Incompatível'
   cookie_banner:
     message: 'Ao continuar a navegar em nosso site ou ao clicar em "Eu concordo", você concorda com o armazenamento de cookies em seu computador ou dispositivo.'
     more_information: "Consulte a Política de Privacidade do Code.org."
@@ -1254,6 +1284,7 @@ pt:
       error_invalid_user: 'Identificação de usuário inválida. Tente fazer login novamente.'
       error_no_code: 'Digite seu código de login.'
       confirm_login: 'Selecione “Confirmar” para fazer login com sua conta do Google.'
+    setup_page_title: 'Configuração do Maker'
   parent_email_banner:
     text: "**Você é pai ou responsável?** Associe seu e-mail a esta conta para se manter atualizado em relação ao progresso e aos projetos do(a) seu(sua) filho(a)!"
     link_your_email: "Associe seu e-mail"
@@ -1289,4 +1320,22 @@ pt:
     binary: "Binário"
     hexadecimal: "Hexadecimal"
     pixel_format_header: "Formato de pixel"
-
+  course_deprecated:
+    title: "Atenção! Esse currículo não está mais disponível, mas a Code.org tem opções mais recentes disponíveis para você."
+    button: "Visualize o novo currículo"
+  hoc_tutorial_email_subject: "Arrase na Hora do Código com os tutoriais da Code.org!"
+  hoc_tutorial_email_content:
+    dear_teacher: "Caro %{teacher_name},"
+    intro_step_by_step_guide: "Estamos muito animador por você estar realizando um evento da Hora do Código usando as atividades e tutoriais gratuitos da Code.org! Temos a honra de ter educadores como você apresentando aos alunos o incrível mundo da programação. Aqui está um guia com um passo a passo para garantir um evento bem-sucedido da Hora do Código:"
+    sign_up_step: "**Inscreva-se** (Opcional…, mas incrível!): Crie uma conta gratuita na Code.org para obter acesso um painel pessoal que vai lhe auxiliar a gerenciar a Hora do Código da sua sala de aula! [Inscreva-se aqui] (%{url})."
+    create_classroom_section: "**Crie uma seção de sala de aula** (Também é opcional…, mas muito útil!): Criar uma seção para a sua sala de aula permite que você acompanhe o progresso de seus alunos, visualize seus trabalhos e até registre um feedback! [Configure sua seção aqui] (%{section_setup_url}). E para todos os nossos novatos, aqui está um [guia prático] (%{guide_url}) muito útil a vocês!"
+    pick_perfect_activity: "**Escolha a Atividade Perfeita**: [Selecione o melhor tutorial da Hora do Código] (%{url}) para o seu evento. Explore as opções e atribua o tutorial escolhido à sua seção, para que seus alunos saibam exatamente por onde começar."
+    plan_like_pro: "**Planeje como um profissional: muitos de nossos tutoriais vêm com um [plano de aula] (%{lesson_plan_url}). É como uma receita secreta para o sucesso! Confira seu plano de aula antes do grande evento."
+    let_fun_begin: "**Que a diversão comece!**: Guiado pelo plano de aula, comece sua jornada no mundo da codificação. Lembre-se: você não precisa ter todas as respostas! Seu entusiasmo e a curiosidade compartilhada com seus alunos ajudarão todos a aprenderem juntos."
+    hip_hip_hooray: "**Hip, Hip, Hooray!**: Quando chegarmos ao final, vamos celebrar esses jovens e brilhantes programadores. Certificados, adesivos e até mesmo uma salva de palmas — tudo conta. Encontre nossos [certificados imprimíveis aqui] (%{url})."
+    more_adventures_await: "**Mais aventuras aguardam**: Você viu algum novo programador ávido por mais? Apresente-os a mais currículos na área da Ciência da Computação no Code.org!"
+    explore_course: "Explore nosso tesouro de cursos gratuitos"
+    learn_about_ai: "Aprenda sobre Inteligência Artificial (IA)"
+    thank_you: "OBRIGADO por defender o ensino da Ciência da Computação. Nossa equipe deseja a você e a seus alunos uma Hora do Código inesquecível!"
+    founder: "Fundador, Code.org"
+    your_friends: "Seus Amigos na Code.org"

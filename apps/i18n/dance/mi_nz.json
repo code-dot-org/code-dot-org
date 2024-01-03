@@ -1,4 +1,8 @@
 {
+  "danceAiModalBack": "Ki Muri",
+  "danceAiModalClose": "Kati",
+  "danceAiModalCodeButton": "Waehere",
+  "danceAiModalExplanationButton": "Me ako tonu",
   "danceFeedbackDidntPress": "Me pēhi i ngā pātuhi pere i te wā e haere ana tō kanikani.",
   "danceFeedbackKeepCoding": "Kia kaha te waehere mai! Kāore anō kia tino tika.",
   "danceFeedbackKeyEvent": "Me hono e koe he waehere ki te paraka <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"ki runga\"</title></block></xml> ā, pana i te pātene i a te kanikani i te haere.",

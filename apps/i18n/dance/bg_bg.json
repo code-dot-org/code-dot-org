@@ -1,4 +1,9 @@
 {
+  "danceAiModalBack": "Назад",
+  "danceAiModalClose": "Затваряне",
+  "danceAiModalCodeButton": "Код",
+  "danceAiModalExplanationButton": "Научете повече",
+  "danceAiModalStartOverButton": "Започни отначало",
   "danceFeedbackDidntPress": "Уверете се, че натискате стрелките по време на танца",
   "danceFeedbackKeepCoding": "Продължи да опитваш. Нещо все още не е по правилния начин.",
   "danceFeedbackKeyEvent": "Увери се, че си прикачил някакъв код към блока <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"up\"</title></block></xml> и натисни бутона ключ, докато танцът ви тече.",

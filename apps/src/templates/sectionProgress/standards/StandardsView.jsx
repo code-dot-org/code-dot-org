@@ -49,7 +49,7 @@ class StandardsView extends Component {
             markdown={i18n.standardsGetInvolvedDetails({
               adminLink: pegasus('/administrators'),
               parentLink: pegasus('/help'),
-              teacherLink: '/courses',
+              teacherLink: pegasus('/teach'),
             })}
           />
         </div>

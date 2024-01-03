@@ -120,6 +120,27 @@ ru:
             MOVES.Roll: Массажер
             MOVES.ThisOrThat: То или это
         text: "{GROUP} делать {MOVE} {DIR} всегда"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': кошки
+            '"SLOTH"': ленивцы
+          MOVE:
+            '"next"': "(Следующий)"
+            '"prev"': "(Предыдущий)"
+            '"rand"': "(Случайный)"
+            MOVES.ClapHigh: Высокий хлопок
+            MOVES.Clown: Гангнам
+            MOVES.Dab: Дэб
+            MOVES.DoubleJam: Удвоить усилия
+            MOVES.Drop: Опустить
+            MOVES.Floss: Флосс
+            MOVES.Fresh: Свежий
+            MOVES.Kick: Звезда
+            MOVES.Rest: Нет
+            MOVES.Roll: Массажер
+            MOVES.ThisOrThat: То или это
+        text: "{GROUP} делать {MOVE} {DIR} всегда"
       Dancelab_changeMoveLR:
         options:
           MOVE:
@@ -1092,6 +1113,12 @@ ru:
         text: "{SPRITE}сказать{TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE} плавно перейти к {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': газ
+            '"liquid"': жидкий
+            '"solid"': твердый
       KatiesBlocks_tumbling:
         text: акробатика
       Mikelab_addBehaviorSimple:

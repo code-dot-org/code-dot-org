@@ -1,5 +1,11 @@
 {
+  "danceAiModalCodeButton": "Codi",
+  "danceAiModalStartOverButton": "Tornar a començar",
+  "danceAiModalExplanationButton": "Més informació",
+  "danceAiModalBack": "Tornar",
+  "danceAiModalClose": "Tanca",
   "danceFeedbackDidntPress": "Assegura't de prémer les tecles de fletxa mentre s'executa el ball.",
+  "danceFeedbackKeepCoding": "Estàs utilitzant tots els tipus de blocs necessaris, però no de la manera correcta.",
   "danceFeedbackKeyEvent": "Assegura't d'enganxar codi al bloc <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"amunt\"</title></block></xml> i de prémer la tecla mentre s'executa el ball.",
   "danceFeedbackNeedBackup": "Has de crear un grup de ballarins de suport amb el bloc <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"cercle\"</title></block></xml> ",
   "danceFeedbackNeedDifferentDance": "Has de fer servir una dansa diferent.",
@@ -18,6 +24,5 @@
   "danceFeedbackUseSetSize": "Fes servir el bloc \"establir mida del ballarí_suport2\" per fer el ballarí més petit.",
   "danceFeedbackUseSetTint": "Fés servir el bloc de `configura tint` per canviar el tint del ballarí.",
   "danceFeedbackUseStartMapping": "Prova a afegir el bloc de <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">pinya_dreta</title><title name=\"PROPERTY\">\"balança\"</title><title name=\"RANGE\">\"baix\"</title></block></xml> al teu programa.",
-  "danceFeedbackKeepCoding": "Estàs utilitzant tots els tipus de blocs necessaris, però no de la manera correcta.",
   "measure": "Mesure:"
 }

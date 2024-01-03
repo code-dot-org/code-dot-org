@@ -114,6 +114,27 @@ ro:
             MOVES.Roll: Corpul ca un val
             MOVES.ThisOrThat: Asta sau aia
         text: "{GROUP} fă {MOVE} {DIR} tot mereu"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': pisicile
+            '"SLOTH"': leneși
+          MOVE:
+            '"next"': "(Următorul)"
+            '"prev"': "(Precedentul)"
+            '"rand"': Aleatoriu
+            MOVES.ClapHigh: Bate din palme sus
+            MOVES.Clown: Stil Gangnam
+            MOVES.Dab: Mişcare dab
+            MOVES.DoubleJam: Dublă jos
+            MOVES.Drop: Cădere
+            MOVES.Floss: Flutură
+            MOVES.Fresh: Vioi
+            MOVES.Kick: Stea
+            MOVES.Rest: Nici unul
+            MOVES.Roll: Corpul ca un val
+            MOVES.ThisOrThat: Asta sau aia
+        text: "{GROUP} fă {MOVE} {DIR} tot mereu"
       Dancelab_changeMoveLR:
         options:
           MOVE:
@@ -1053,6 +1074,12 @@ ro:
         text: "{SPRITE}spune{TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE} culisează către {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': gaz
+            '"liquid"': lichid
+            '"solid"': solid
       KatiesBlocks_tumbling:
         text: acrobatică
       Mikelab_addBehaviorSimple:

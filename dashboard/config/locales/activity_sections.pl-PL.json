@@ -35609,7 +35609,7 @@
           "description": "**Pierwsze kroki z Code.org:** Rozważ obejrzenie naszej serii[0] filmów [Pierwsze kroki z Code.org], aby dowiedzieć się, jak poruszać się po planach lekcji, skonfigurować sekcję klasy i inne ważne funkcje platformy Code.org. Każdy film zawiera również artykuł pomocniczy, jeśli wolisz przeczytać lub wydrukować instrukcje - [kliknij tutaj, aby dowiedzieć się więcej](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Skonfiguruj sekcję klasy:** Możesz użyć sekcji klasy w Code.org, aby zarządzać uczniami, przeglądać ich postępy i przypisywać określony program nauczania - [kliknij tutaj, aby dowiedzieć się więcej].[2]\n\nJeśli korzystasz z systemu zarządzania nauką, mogą pojawić się dodatkowe kroki, aby zsynchronizować zajęcia z Code.org:\n\n-   [Kliknij tutaj](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync), aby uzyskać kroki w konfiguracji zajęć w Google Classroom\n-   [Kliknij tutaj](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync), aby uzyskać kroki w konfiguracji zajęć z Clever\n\n**Zostań zweryfikowanym nauczycielem:** Plany lekcji i poziomy mają dodatkowe zasoby i klucze odpowiedzi dla zweryfikowanych nauczycieli, co jest szybkim procesem weryfikującym Twoją pozycję w instytucji edukacyjnej. [Kliknij tutaj, aby wypełnić formularz](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) i powinieneś mieć dostęp do zweryfikowanych zasobów nauczycieli w ciągu ~1 dnia roboczego.\n\n**Wsparcie dla nauczycieli:** Możesz dowiedzieć się więcej o wprowadzaniu lekcji sztucznej inteligencji do swojej klasy poprzez naszą [serię AI 101 dla nauczycieli](https://code.org/ai/pl/101). AI 101 for Teachers to darmowa, podstawowa seria profesjonalnego doskonalenia online dla każdego nauczyciela i nauczyciela zainteresowanego przełomowym światem sztucznej inteligencji (AI) i jej potencjałem transformacyjnym w edukacji."
         },
         "75b90ab5-9e92-4a28-ad51-4e89e824651e": {
-          "name": "Wymagania wstępne Umiejętności",
+          "name": "Wstępnie wymagane umiejętności",
           "description": "Ta lekcja nie ma na celu zapoznania uczniów z rzetelnymi praktykami badawczymi ani sprawdzaniem wiarygodnych źródeł. Uczniowie powinni przyjść na tę lekcję z wcześniejszą wiedzą i umiejętnościami, aby móc:\n\n-   rozpoznawać wiarygodne źródła w Internecie\n-   podsumowywać informacje ze źródeł cyfrowych na poparcie argumentu\n-   poruszać się po zasobach internetowych i odpowiednio cytować źródła"
         },
         "baa4a80d-7b25-46a4-b655-5ca5c2c89a90": {
@@ -37522,6 +37522,121 @@
         },
         "b6f5ed76-d406-4126-bc05-997d00cf8233": {
           "description": "| Film                                                                                                                                                                                                                                                           | Nauczyciel                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |\n| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| _Wstrzymaj wideo w 1:10, gdy jest napisane „A nawet twórz kompletne sekwencje filmu, używając zaledwie kilku słów instrukcji”._![](<https://images.code.org/02f1611a48d68c83a24d0e30f8793837-Screenshot 2023-06-05 170329.png>)                                | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Jakie są przykłady tego, co może wygenerować sztuczna inteligencja?<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Cel dyskusji:** Poszukaj szybkiej odpowiedzi, aby sprawdzić, czy rozumiesz dotychczasowy film.</p><p >Uczniowie mogą wymienić przykłady z filmu, takie jak budowanie sekwencji wideo, ale każde miejsce, w którym ludzie podpowiadają sztucznej inteligencji, a ona coś tworzy, będzie działać. Jako klasa zastanówcie się nad wymyśleniem 1–2 przykładów, które nie zostały jeszcze wymienione w filmie.</p>              |\n| _Zatrzymaj wideo w 2:11, gdzie jest napisane: „W tym momencie generatywna sztuczna inteligencja nauczyła się generować realistycznie wyglądające obrazy”._<br>![](<https://images.code.org/64cacb59d2d1f46aa46de311c02607d4-Screenshot 2023-06-05 170943.png>) | <p><strong><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** </strong> W jaki sposób generatywne sieci kontradyktoryjne utworzyły realistyczne obrazy?\\< br><br><strong><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Cel dyskusji:** </strong> To jest szybkie sprawdzenie zrozumienia. Uczniowie powinni wiedzieć, że generatywna sieć kontradyktoryjna składa się z dwóch sieci — jednej, która generuje obrazy, i drugiej, która określa, czy uważa, że obraz jest prawdziwy, czy wygenerowany. Ostatecznie generator jest w stanie oszukać dyskryminator i obraz wydaje się realny.<br><br>         |\n| _Wstrzymaj wideo w 2:53, gdy jest napisane „...obraz traci wszystkie szczegóły i staje się czystym szumem.”_![](<https://images.code.org/a41cbaa32fe7bf02b41b5309fcef2568-Screenshot 2023-06-05 175605.png>)</p>                                               | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Co dzieje się w każdej wersji obrazu?<br><br><i class =\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Cel dyskusji:** To krótka pauza, która pozwala uczniom na syntezę tego, co widzą. Uczniowie powinni pamiętać, że szczegóły na obrazach stają się nieco niewyraźne, ale nadal można je zobaczyć. W końcu ludzkie oko w ogóle nie widzi szczegółów.</p>                                                                                                                                                                                                   |\n| _Wstrzymaj wideo w 3:45, gdy pojawi się komunikat „lub zmień istniejące obrazy”._<br>![](<https://images.code.org/8bd8ee70bb8a8d6f530531153423d960-Screenshot 2023-06-05 180020.png>)                                                                          | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** W jaki sposób proces ldyfuzji uczy komputery tworzenia nowych obrazów z określonymi szczegółami?<br>\\< br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Cel dyskusji:** To jest szybkie sprawdzenie zrozumienia. Uczniowie powinni wiedzieć, że modele dyfuzyjne uczą się poprzez powolne dodawanie szumu, a następnie powolne odejmowanie szumu z obrazów, aż generator będzie wiedział, jak znaleźć szczegóły w szumie.</p>                                                                                                                       |\n| _Wstrzymaj wideo w 4:36, gdy jest napisane: „...więc pytania prawne nie są tutaj proste.”_![](<https://images.code.org/9b232f9f5240c8437f851f83d11ab96b-Screenshot 2023-06-05 180333.png>)                                                                     | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Przedyskutuj:** Osobista opinia: kto Twoim zdaniem powinien „posiadać” obrazy tworzone przez sztuczną inteligencję? <br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Cel dyskusji:** Nie ma jednej odpowiedzi na to pytanie; Chodzi o to, aby uczniowie naprawdę zastanowili się nad konsekwencjami generowania obrazów w sztucznej inteligencji. W zależności od Twoich preferencji i czasu zajęć może to być zaangażowana dyskusja, która zajmie kilka minut. Dodatkowe pomysły na ułatwienie tej dyskusji można znaleźć we wskazówce dla nauczyciela. |\n\n\\| _Kontynuuj oglądanie filmu, aż się skończy_ ![](https://images.code.org/73a09be0fbbae1200fa174efcb3b842f-screenshot1.png)"
+        },
+        "3125ec73-4d68-45a9-a6f8-b2921c55d4a3": {
+          "name": "Filtrowanie muzyki",
+          "description": "Ten samouczek zawiera piosenki popularnych artystów. Aby uzyskać podgląd listy utworów w tym samouczku, sprawdź tę playlistę Spotify (w każdym wieku). Używamy radiowo bezpiecznych wersji wszystkich piosenek i dla uczniów poniżej 13 roku życia."
+        },
+        "524efe4b-796a-48eb-b1c6-f4e138699443": {
+          "name": "Ogólne wsparcie",
+          "description": "Jako nauczyciel, Twoją rolą jest przede wszystkim wspieranie uczniów podczas przechodzenia przez samouczek. Oto kilka wskazówek, które powinny pomóc uczniom niezależnie od poziomu, nad którym pracują.\n\n-   **Współpraca z sąsiadami:** Zachęcaj uczniów, aby kontaktowali się z sąsiadem, gdy utkną. Ponieważ ten samouczek zawiera filmy, a uczniowie mogą nosić słuchawki, łatwo mog się izolować. Pomóż przełamać te bariery, aktywnie łącząc uczniów w pary, jeśli wydaje się, że potrzebują pomocy. W zależności od wieku i umiejętności uczniów, możesz rozważyć formalne podzielenie klasy na pary, aby ukończyli samouczek programując w parach.\n-   **Przeczytaj instrukcje:** Instrukcje zawierają kroki, aby ukończyć poziom.\n-   **Utknąłeś? Poszukaj wskazówek:** Każdy poziom zawiera podpowiedź z dalszymi szczegółami, jak przejść poziom. Jeśli uczniowie próbują przejść poziom tak szybko, jak to możliwe, może się okazać, że muszą poczekać pewien czas, aż cały kod się zostanie zagrany, zanim przejdą dalej. \n    \\-\\*\\*Idź do przodu i wracaj:\\*\\* Czasami uczniowie czerpią więcej korzyści z powrotu do trudnego poziomu. Wszystkie poziomy są od siebie niezależne, choć czasami opierają się na wcześniej wprowadzonych pomysłach.\n-   **Nie spiesz się i eksperymentuj.** Istnieją wyraźne instrukcje i wskazówki, które pomogą uczniom przejść każdy poziom. Poza przechodzeniem, uczniowie powinni także mieć swobodę wypróbowywania własnych pomysłów, eksperymentując z różnymi tancerzami, ruchami tanecznymi, efektami i piosenkami."
+        },
+        "b9bacf54-bd37-42b8-85fc-bc9d07a50537": {
+          "tips": [
+            "Aby zbudować podstawową wiedzę na temat sztucznej inteligencji i/lub poszerzyć naukę, zapoznaj się z filmami, lekcjami i możliwościami doskonalenia zawodowego na naszej stronie [Kreatywność z A.I.](https://hourofcode.com/ca). \n\nJeśli masz czas i chcesz przygotować swoich uczniów do aktywności bez komputera, rozważ zorganizowanie [Potańcówka:  bez komputera](https://studio.code.org/s/dance-unplugged/lessons/1) przed swoim wydarzeniem Godziny Kodowania. Ta krótka lekcja wprowadza uczniów w ideę zdarzeń wywołujących różne ruchy taneczne."
+          ]
+        },
+        "58bdb8b5-159d-4b7a-aae7-d250213c1379": {
+          "progression_name": "Film wprowadzający",
+          "name": "Wprowadzenie do Potańcówki",
+          "description": "W tym filmie uczniowie zobaczą przykład kreatywnego kodowania w prawdziwym świecie, aby zainspirować ich do kodowania własnej interaktywnej potańcówki. Ten film wyjaśnia również różne elementy platformy kodowania, takie jak panel instrukcji, obszar roboczy, przybornik (zestaw narzędzi) i przestrzeń odtwarzania. "
+        },
+        "b8daa26e-57e7-4bc5-8a6e-1e541a407c8e": {
+          "tips": [
+            "Osadzone filmy będą nakładać się na poziom, gdy użytkownik otworzy poziom po raz pierwszy. Uczniowie mogą go zamknąć, gdy skończą oglądać. Jeśli chcieliby ponownie obejrzeć film, będzie on dostępny pod przyciskiem Uruchom."
+          ]
+        },
+        "7c95f7a1-478d-45fc-ba2d-5807bd2b828f": {
+          "name": "Zdać sprawozdanie",
+          "description": "Opieraj się na ich pozytywnych doświadczeniach z kodowaniem. \n\n**Omów:** \n\n\\_Jeśli to ich kodowanie po raz pierwszy, zapytaj: \\_\n\n-   Co podobało Ci się na dzisiejszych zajęciach? \n    lub \n-   „Jak wykorzystałeś dzisiaj kreatywność i informatykę?\n\n_Jeśli Twoi uczniowie kodowali wcześniej, zapytaj:_\n\n-   Co nowego dzisiaj zakodowałeś, czego wcześniej nie kodowałeś?\n\nNastępnie **odnieś się do procesu korzystania z A.I.**, towarzyszącego im w kodowaniu:\n\n-   Czy uważasz, że lepiej jest tworzyć rzeczy samodzielnie, czy też fajniej jest pracować razem z komputerem lub robotem? Dlaczego?\n-   Jakie są fajne sposoby wykorzystania A.I. w szkołach, aby pomóc uczniom być bardziej kreatywnym?\n-   Czy możesz wymyślić zabawną opowieść lub rysunek, które chciałbyś, aby komputer pomógł Ci stworzyć? Jak może ci pomóc?"
+        },
+        "c624ab39-fa08-4b83-b1e9-bf97fb42667f": {
+          "name": "Świętuj",
+          "description": "Wyjaśnij, że dziś spędzacie godzinę na kodowaniu, ponieważ ten tydzień to Tydzień Edukacji Informatycznej i miliony uczniów na całym świecie również uczyły informatyki w ramach Godziny Kodowania w tym tygodniu. Pogratuluj uczniom uczestnictwa w tym ogólnoświatowym ruchu.\n\nDaj każdemu uczniowi [certificate](http://code.org/certificates) z jej/jego imieniem i nazwiskiem.."
+        },
+        "07a73ab9-8996-453a-a87f-63628f2387db": {
+          "name": "Następne Kroki",
+          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć ich do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są plany na dalsze zajęcia w Twojej klasie."
+        },
+        "fb665f5b-457e-484e-924a-7aa4f2e097be": {
+          "name": "Rozpowszechniaj",
+          "description": "Godzina Kodowania jest o kreatywności i nie możemy się doczekać, aby zobaczyć, co tworzysz! Udostępniaj wytwory uczniów, zdjęcia i filmy w mediach społecznościowych! Nauczyciele, nagrajcie swoją klasę, kodującą taniec lub tańcząc ten taniec.\n\nPamiętaj, aby dołączyć #HourOfCode i oznaczyć nas na Facebooku, Twitterze i Instagramie. Punkty bonusowe za oznaczanie artysty, którego muzyki używali Twoi uczniowie. Code.org ponownie udostępni nasze ulubione posty milionom obserwujących.\n\n\\_Oczywiście, upewnij się, że szanujesz politykę swojej szkoły w mediach społecznościowych. \\_"
+        },
+        "596336ba-e584-4453-a2cd-2268dc3c59bc": {
+          "description": "Dzisiaj zrobimy coś naprawdę kreatywnego z kodem! „Kod” to zestaw wskazówek, które komputer może zrozumieć. Zanim zaczniemy, jakie są Twoje sposoby bycia kreatywnym lub wyrażać siebie?"
+        },
+        "84a173a8-19dd-407d-88cb-6747bdc1122d": {
+          "description": "\\_Zachęcaj uczniów do dzielenia się sposobami wyrażania kreatywności w sztuce, tańcu, muzyce i pisaniu. \\_"
+        },
+        "66891774-46dc-4488-a30b-5d231e4145ff": {
+          "description": "Podobnie jak wybór kolorów farby lub słów, które piszesz, są sposoby wyrażania kreatywności. Wybór kodu, który piszesz i jak ludzie z nim wchodzą w interakcje, może być również okazją do wyrażenia swojej kreatywności!\nPodczas tego kreatywnego kodowania zapoznasz się z nowym, pomocnym narzędziem: sztuczną inteligencją, znaną również jako A.I.! A.I. to program komputerowy, który działa jak ludzki mózg. Bot A.I. w tej aktywności może Ci pomóc, dokonując bardzo szybkiego wyboru efektów specjalnych. "
+        },
+        "b98db6e3-3139-4e85-bd62-60603e22af96": {
+          "description": "**Dyskutuj:** Jak myślisz, jak komputery i roboty mogą pomóc nam być bardziej kreatywnym?\n\n**Cel dyskusji:** Uczniowie powinni zacząć myśleć o sposobach, w jakich sztuczna inteligencja może być pomocna w procesie twórczym. Niektóre pomysły mogą obejmować: \n\n-   **Generowanie pomysłów:** Sztuczna inteligencja może pomóc wymyślić nowe i ekscytujące pomysły na opowieści, rysunki i inne kreatywne projekty, gdy czujesz, że utknąłeś. \n-   **Inspiracja artystyczna:** Sztuczna inteligencja może sugerować kolory, style i motywy dla Twojej grafiki, dając Ci inspirację do następnego arcydzieła.\n-   **Współpraca:** Sztuczna inteligencja może być kreatywnym partnerem, pomagając w burzy mózgów i współpracy z innymi przy projektach."
+        },
+        "e6f1d97d-4c0c-42e1-8bde-dc89400d0baf": {
+          "name": "Zatańczmy",
+          "description": "Ten poziom wymaga od uczniów utworzenia nowego tancerza za pomocą jednego bloku kodu i nakłonienia tego tancerza do wykonania ruchu tanecznego za pomocą drugiego bloku kodu. Zachęcaj uczniów do korzystania z menu rozwijanego do odkrywania różnych tancerzy, ruchów tanecznych i piosenek.  ",
+          "progression_name": "Utwórz tancerza i Taneczny ruch"
+        },
+        "e150925b-003d-4acd-a87c-5aca4d8b1a89": {
+          "name": "Użyj A.I. do generowania efektów specjalnych",
+          "description": "Na tych trzech poziomach uczniowie są wprowadzani do nowego bloku A.I. Dostępne są dwa filmy, które towarzyszą tym poziomom. Zachęcaj uczniów do ponownego oglądania tych filmów, jeśli czują, że utknęli. Aby przejść te poziomy, uczniowie zachęcają A.I. do wygenerowania kodu dla kolorowych efektów, które pasują do ich potańcówki. Zachęć uczniów do wybrania trzech emotikonów opisujących nastrój, który chcą przekazać na ich potańcówkę."
+        },
+        "3ae03e0b-0a31-42b7-bee8-98aa457a9542": {
+          "name": "Koduj zdarzenia, aby dodać interakcję",
+          "description": "Teraz uczniowie są zapoznawani ze zdarzeniami. To najtrudniejsza koncepcja kodowania w tym samouczku. Zdarzenia są wyjątkowe. Nie łączą się z blokiem konfiguracyjnym, ale zamiast tego same są mini programami. Pomyśl o zdarzeniu jako  słuchającym uchu, które wykona dowolny kod znajdujący się pod nim, gdy zostanie uruchomione. Pierwszym zdarzeniem używanym przez uczniów są zdarzenia „gdy naciśnięto strzałkę”, które pozwolą uczniom wyzwalać nowe fragmenty kodu poprzez naciskanie klawiszy na klawiaturze. Drugim zdarzeniem jest zdarzenie „po taktach”, które działa bardziej jak timer na zegarze. Gdy piosenka zostanie odegrana przez określoną liczbę taktów, nowy kod zostanie uruchomiony. \n\nZachęć uczniów do ponownego obejrzenia filmów o zdarzeniach towarzyszących dwóm z tych poziomów. ",
+          "progression_name": "Naciśnięcie klawisza i W zdarzeniach taktu"
+        },
+        "7f2f14df-e85e-4dea-bf5a-5d9537baca14": {
+          "name": "Bądź kreatywny! ",
+          "description": "Ten ostatni poziom ma być przestrzenią do swobodnej gry i eksploracji. Zachęcaj uczniów do kreatywności i ćwiczenia nowych umiejętności kodowania, aby stworzyć własną potańcówkę!  ",
+          "progression_name": "Projekt finałowej Potańcówki"
+        },
+        "c03cf1cb-2946-48c9-aede-76ccf4b787a9": {
+          "tips": [
+            "**Okazja do rozwoju zawodowego**\n\nCzy chcesz kontynuować zabawę, ale nie wiesz, jak? Rozważ zaangażowanie się w nasz samodzielny profesjonalny moduł rozwoju zawodowego, [Przygotowanie do nauczania interaktywnych animacji i gier]![0] Ta jednostka uczy uczniów budowania ekscytujących kreacji z użyciem duszków. Ten moduł zapewni Ci wszystkie niezbędne narzędzia, umiejętności i wiedzę."
+          ]
+        },
+        "3c17e9fd-b06b-478e-bb56-5734d9344b68": {
+          "tips": [
+            "**Okazja do rozwoju zawodowego**\n\nCzy chcesz kontynuować zabawę, ale nie wiesz, jak? Rozważ zaangażowanie się w nasz samodzielny profesjonalny moduł rozwoju zawodowego, [Przygotowanie do nauczania interaktywnych animacji i gier]![0] Ta jednostka uczy uczniów budowania ekscytujących kreacji z użyciem duszków. Ten moduł zapewni Ci wszystkie niezbędne narzędzia, umiejętności i wiedzę."
+          ]
+        },
+        "913cf29b-f688-4c8b-9834-96c9b75274f5": {
+          "tips": [
+            "**Okazja do rozwoju zawodowego**\n\nCzy chcesz kontynuować zabawę, ale nie wiesz, jak? Rozważ zaangażowanie się w nasz samodzielny profesjonalny moduł rozwoju zawodowego, [Przygotowanie do nauczania interaktywnych animacji i gier]![0] Ta jednostka uczy uczniów budowania ekscytujących kreacji z użyciem duszków. Ten moduł zapewni Ci wszystkie niezbędne narzędzia, umiejętności i wiedzę."
+          ]
+        },
+        "f39d7745-dd63-424d-baa1-de4e4fd0f0c0": {
+          "tips": [
+            "**Okazja do rozwoju zawodowego**\n\nCzy chcesz kontynuować zabawę, ale nie wiesz, jak? Rozważ zaangażowanie się w nasz samodzielny profesjonalny moduł rozwoju zawodowego, [Przygotowanie do nauczania interaktywnych animacji i gier]![0] Ta jednostka uczy uczniów budowania ekscytujących kreacji z użyciem duszków. Ten moduł zapewni Ci wszystkie niezbędne narzędzia, umiejętności i wiedzę."
+          ]
+        },
+        "a7f20e25-3940-4615-b90f-8664e1661b3a": {
+          "tips": [
+            "**Okazja do rozwoju zawodowego**\n\nCzy chcesz kontynuować zabawę, ale nie wiesz, jak? Rozważ zaangażowanie się w nasz samodzielny profesjonalny moduł rozwoju zawodowego, [Przygotowanie do nauczania interaktywnych animacji i gier]![0] Ta jednostka uczy uczniów budowania ekscytujących kreacji z użyciem duszków. Ten moduł zapewni Ci wszystkie niezbędne narzędzia, umiejętności i wiedzę."
+          ]
+        },
+        "2a1748fb-e49f-4ae0-be55-0c603dbe3335": {
+          "tips": [
+            "**Okazja do rozwoju zawodowego**\n\nCzy chcesz kontynuować zabawę, ale nie wiesz, jak? Rozważ zaangażowanie się w nasz samodzielny profesjonalny moduł rozwoju zawodowego, [Przygotowanie do nauczania interaktywnych animacji i gier]![0] Ta jednostka uczy uczniów budowania ekscytujących kreacji z użyciem duszków. Ten moduł zapewni Ci wszystkie niezbędne narzędzia, umiejętności i wiedzę."
+          ]
+        },
+        "e72dd2c9-59cc-4063-9dcc-d270e7fed0fe": {
+          "tips": [
+            "**Okazja do rozwoju zawodowego**\n\nCzy chcesz kontynuować zabawę, ale nie wiesz, jak? Rozważ zaangażowanie się w nasz samodzielny profesjonalny moduł rozwoju zawodowego, [Przygotowanie do nauczania interaktywnych animacji i gier]![0] Ta jednostka uczy uczniów budowania ekscytujących kreacji z użyciem duszków. Ten moduł zapewni Ci wszystkie niezbędne narzędzia, umiejętności i wiedzę."
+          ]
+        },
+        "5ff66bb0-517f-486e-b70f-cad0319c23df": {
+          "tips": [
+            "**Okazja do rozwoju zawodowego** \n\nCzy jesteś zainteresowany nauczeniem swoich uczniów więcej o sztucznej inteligencji? Rozważ zaangażowanie się w nasz samodzielny profesjonalny moduł rozwoju zawodowego, [Przygotowanie do nauczania sztucznej inteligencji i uczenia maszynowego]![0] Ten moduł zapewni Ci wszystkie narzędzia, umiejętności i wiedzę potrzebną do realizaji naszej jednostki AI i uczenie maszynowe."
+          ]
+        },
+        "31d4feb6-1e0c-4342-988b-6730a0d0155e": {
+          "tips": [
+            "**Okazja do rozwoju zawodowego**\n\nCzy chcesz kontynuować zabawę, ale nie wiesz, jak? Rozważ zaangażowanie się w nasz samodzielny profesjonalny moduł rozwoju zawodowego, [Przygotowanie do nauczania interaktywnych animacji i gier]![0] Ta jednostka uczy uczniów budowania ekscytujących kreacji z użyciem duszków. Ten moduł zapewni Ci wszystkie niezbędne narzędzia, umiejętności i wiedzę."
+          ]
         }
       }
     }

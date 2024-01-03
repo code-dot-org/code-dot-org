@@ -1,5 +1,11 @@
 {
-  "danceFeedbackDidntPress": "Assegura-te de que primes as teclas direcionais enquanto a tua dança estiver em execução.",
+  "danceAiModalCodeButton": "Código",
+  "danceAiModalStartOverButton": "Recomeçar",
+  "danceAiModalExplanationButton": "Saber mais",
+  "danceAiModalBack": "Anterior",
+  "danceAiModalClose": "Fechar",
+  "danceFeedbackDidntPress": "Certifique-se de pressionar as teclas de seta enquanto sua dança está em execução.",
+  "danceFeedbackKeepCoding": "Continua a tentar! Ainda falta alguma coisa.",
   "danceFeedbackKeyEvent": "Assegura-te de que anexas algum código ao bloco <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"cima\"</title></block></xml> e de que primes a tecla enquanto o teu dançarino estiver em execução.",
   "danceFeedbackNeedBackup": "Precisas de criar um grupo de dançarinos secundários com o bloco <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICÓRNIO\"</title><title name=\"LAYOUT\">\"círculo\"</title></block></xml>.",
   "danceFeedbackNeedDifferentDance": "Precisas de usar uma dança diferente.",
@@ -18,6 +24,5 @@
   "danceFeedbackUseSetSize": "Usa o bloco `definir o tamanho do dançarino_secundário2` para tornar esse dançarino mais pequeno.",
   "danceFeedbackUseSetTint": "Usa o bloco `definir matiz` para mudar o tom da cor do dançarino.",
   "danceFeedbackUseStartMapping": "Tenta adicionar o bloco <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">unicórnio_direito</title><title name=\"PROPERTY\">\"escala\"</title><title name=\"RANGE\">\"baixo\"</title></block></xml> ao teu programa.",
-  "danceFeedbackKeepCoding": "Continua a tentar! Ainda falta alguma coisa.",
   "measure": "Compasso:"
 }

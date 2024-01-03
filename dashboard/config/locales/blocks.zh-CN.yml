@@ -125,6 +125,27 @@ zh-CN:
             MOVES.Roll: 身体转动
             MOVES.ThisOrThat: 交替摆臂
         text: 在 {GROUP} 中，进行 循环查找 {MOVE} {DIR}
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': 猫
+            '"SLOTH"': 树懒
+          MOVE:
+            '"next"': "(下一步)"
+            '"prev"': "(前一步)"
+            '"rand"': 随机
+            MOVES.ClapHigh: 用力鼓掌
+            MOVES.Clown: 江南
+            MOVES.Dab: 轻拍
+            MOVES.DoubleJam: 两倍下降
+            MOVES.Drop: 丢掉
+            MOVES.Floss: 丝线
+            MOVES.Fresh: 双手画圈
+            MOVES.Kick: 踢腿
+            MOVES.Rest: 没有
+            MOVES.Roll: 身体转动
+            MOVES.ThisOrThat: 交替摆臂
+        text: 在 {GROUP} 中，进行 循环查找 {MOVE} {DIR}
       Dancelab_changeMoveLR:
         options:
           MOVE:
@@ -1091,6 +1112,15 @@ zh-CN:
         text: "{SPRITE}说{TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE}滑到{LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': 气体
+            '"liquid"': 液体
+            '"solid"': 固体
+        text: |2-
+           如果{CONDITION}{SPRITE}
+          {STATEMENT}
       KatiesBlocks_tumbling:
         text: 翻滚
       Mikelab_addBehaviorSimple:

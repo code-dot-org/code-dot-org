@@ -1,4 +1,9 @@
 {
+  "danceAiModalBack": "Буцах",
+  "danceAiModalClose": "Хаах",
+  "danceAiModalCodeButton": "Код",
+  "danceAiModalExplanationButton": "Илүү мэдээлэл авах",
+  "danceAiModalStartOverButton": "Эхлэх",
   "danceFeedbackDidntPress": "Таны бүжиг явагдааж байхад сум товчлуур дээр дарахаа мартуузай.",
   "danceFeedbackKeepCoding": "Кодчилохоо үргэлжлүүлээрэй! Ямар нэг зүйл хараахан болоогүй байна.",
   "danceFeedbackKeyEvent": "<xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"дээш\"</title></block></xml> блок руу код хавсаргасан эсэхээ шалгаж, таны бүжиг явагдаж байхад товчлуур дээр дараарай.",

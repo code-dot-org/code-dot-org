@@ -1,129 +1,129 @@
 {
   "items": [
     {
-      "emoji": "💩", 
-      "id": "poopy",
-      "modelDescriptiveName": "poopy"
+      "emoji": "🌀",
+      "id": "cyclone",
+      "modelDescriptiveName": "cyclone swirl icy blue"
     },
     {
       "emoji": "🥰",
-      "id": "romantic",
-      "modelDescriptiveName": "romantic"
+      "id": "smiling-face-with-hearts",
+      "modelDescriptiveName": "romantic hearts cozy warm"
     },
     {
       "emoji": "🎉",
-      "id": "party",
-      "modelDescriptiveName": "party"
+      "id": "party-popper",
+      "modelDescriptiveName": "party celebrate"
     },
     {
-      "emoji": "🤪",
-      "id": "silly",
-      "modelDescriptiveName": "silly"
+      "emoji": "💎",
+      "id": "gem-stone",
+      "modelDescriptiveName": "diamond gem stone geometric shapes"
+    },
+    {
+      "emoji": "🌱",
+      "id": "seedling",
+      "modelDescriptiveName": "green plant springtime"
     },
     {
       "emoji": "✨",
-      "id": "sparkle",
-      "modelDescriptiveName": "sparkle"
+      "id": "sparkles",
+      "modelDescriptiveName": "sparkly star"
     },
     {
-      "emoji": "😀",
-      "id": "happy",
-      "modelDescriptiveName": "happy"
+      "emoji": "🌹",
+      "id": "rose",
+      "modelDescriptiveName": "flower springtime"
     },
     {
-      "emoji": "🪄",
-      "id": "magic",
-      "modelDescriptiveName": "magic"
+      "emoji": "👑",
+      "id": "crown",
+      "modelDescriptiveName": "crown geometric grid round gems"
     },
     {
       "emoji": "👻",
-      "id": "spooky",
-      "modelDescriptiveName": "spooky"
+      "id": "ghost",
+      "modelDescriptiveName": "ghost autumn spooky"
     },
     {
-      "emoji": "😚",
-      "id": "cute",
-      "modelDescriptiveName": "cute"
+      "emoji": "🍦",
+      "id": "soft-ice-cream",
+      "modelDescriptiveName": "ice cream sweet summer fruit"
     },
     {
-      "emoji": "😎",
-      "id": "funky",
-      "modelDescriptiveName": "funky"
+      "emoji": "🏁",
+      "id": "chequered-flag",
+      "modelDescriptiveName": "checkered flag black-and-white geometric fast"
     },
     {
       "emoji": "🌊",
-      "id": "wavy",
-      "modelDescriptiveName": "wavy"
-    },
-    {
-      "emoji": "💡",
-      "id": "lights",
-      "modelDescriptiveName": "lights"
+      "id": "water-wave",
+      "modelDescriptiveName": "waves water ocean"
     },
     {
       "emoji": "🌈",
       "id": "rainbow",
-      "modelDescriptiveName": "rainbow"
+      "modelDescriptiveName": "prism"
+    },
+    {
+      "emoji": "💡",
+      "id": "light-bulb",
+      "modelDescriptiveName": "stars light"
     },
     {
       "emoji": "🤖",
       "id": "robot",
-      "modelDescriptiveName": "robot"
+      "modelDescriptiveName": "electronic"
     },
     {
       "emoji": "😵‍💫",
-      "id": "chaotic",
-      "modelDescriptiveName": "chaotic"
-    },
-    {
-      "emoji": "🪩",
-      "id": "disco",
-      "modelDescriptiveName": "disco"
-    },
-    {
-      "emoji": "😌",
-      "id": "zen",
-      "modelDescriptiveName": "zen"
-    },
-    {
-      "emoji": "💨",
-      "id": "fast",
-      "modelDescriptiveName": "fast"
-    },
-    {
-      "emoji": "👿",
-      "id": "evil",
-      "modelDescriptiveName": "evil"
+      "id": "face-with-spiral-eyes",
+      "modelDescriptiveName": "wavy ripple hypnotic turbulent spiral"
     },
     {
       "emoji": "🥶",
-      "id": "cold",
-      "modelDescriptiveName": "cold"
+      "id": "cold-face",
+      "modelDescriptiveName": "icy winter cold"
+    },
+    {
+      "emoji": "🎨",
+      "id": "artist-palette",
+      "modelDescriptiveName": "art paint palette"
+    },
+    {
+      "emoji": "🪩",
+      "id": "mirror-ball",
+      "modelDescriptiveName": "disco ball party grid"
+    },
+    {
+      "emoji": "🎵",
+      "id": "musical-note",
+      "modelDescriptiveName": "music notes sound"
+    },
+    {
+      "emoji": "💩", 
+      "id": "pile-of-poo",
+      "modelDescriptiveName": "poopy funny stinky"
     },
     {
       "emoji": "🚀",
-      "id": "cosmic",
-      "modelDescriptiveName": "cosmic"
+      "id": "rocket",
+      "modelDescriptiveName": "rocket space cosmic galaxy"
     },
     {
-      "emoji": "😭",
-      "id": "sad",
-      "modelDescriptiveName": "sad"
-    },
-    {
-      "emoji": "📰",
-      "id": "black-and-white",
-      "modelDescriptiveName": "black-and-white"
+      "emoji": "😋",
+      "id": "face-savoring-food",
+      "modelDescriptiveName": "savory hungry food"
     },
     {
       "emoji": "🔥",
-      "id": "warm",
-      "modelDescriptiveName": "warm"
+      "id": "fire",
+      "modelDescriptiveName": "hot fire sun"
     },
     {
-      "emoji": "❄️",
-      "id": "cool",
-      "modelDescriptiveName": "cool"
+      "emoji": "😃",
+      "id": "grinning-face-with-big-eyes",
+      "modelDescriptiveName": "happy grin"
     }
   ]
 }

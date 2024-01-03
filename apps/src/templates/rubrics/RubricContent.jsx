@@ -16,11 +16,13 @@ import {
   studentLevelInfoShape,
 } from './rubricShapes';
 import LearningGoal from './LearningGoal';
+import LearningGoals from './LearningGoals';
 import Button from '@cdo/apps/templates/Button';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import classnames from 'classnames';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import experiments from '@cdo/apps/util/experiments';
 
 const formatTimeSpent = timeSpent => {
   const minutes = Math.floor(timeSpent / 60);
@@ -112,6 +114,17 @@ export default function RubricContent({
     }
   };
 
+  const getAiInfo = learningGoalId => {
+    if (!!aiEvaluations) {
+      const aiInfo = aiEvaluations.find(
+        item => item.learning_goal_id === learningGoalId
+      );
+      return aiInfo;
+    } else {
+      return null;
+    }
+  };
+
   let infoText = null;
   if (!onLevelForEvaluation) {
     infoText = i18n.rubricCanOnlyBeEvaluatedOnProjectLevelAlert();
@@ -176,23 +189,39 @@ export default function RubricContent({
           </div>
         )}
       </div>
-      <div className={style.learningGoalContainer}>
-        {rubric.learningGoals.map(lg => (
-          <LearningGoal
-            key={lg.key}
-            learningGoal={lg}
-            teacherHasEnabledAi={teacherHasEnabledAi}
-            canProvideFeedback={canProvideFeedback}
-            reportingData={reportingData}
-            studentLevelInfo={studentLevelInfo}
-            aiUnderstanding={getAiUnderstanding(lg.id)}
-            aiConfidence={getAiConfidence(lg.id)}
-            isStudent={false}
-            feedbackAdded={feedbackAdded}
-            setFeedbackAdded={setFeedbackAdded}
-          />
-        ))}
-      </div>
+      {experiments.isEnabled('ai-rubrics-redesign') ? (
+        <LearningGoals
+          learningGoals={rubric.learningGoals}
+          teacherHasEnabledAi={teacherHasEnabledAi}
+          canProvideFeedback={canProvideFeedback}
+          reportingData={reportingData}
+          studentLevelInfo={studentLevelInfo}
+          isStudent={false}
+          feedbackAdded={feedbackAdded}
+          setFeedbackAdded={setFeedbackAdded}
+          aiEvaluations={aiEvaluations}
+        />
+      ) : (
+        <div className={style.learningGoalContainer}>
+          {rubric.learningGoals.map(lg => (
+            <LearningGoal
+              key={lg.key}
+              learningGoal={lg}
+              teacherHasEnabledAi={teacherHasEnabledAi}
+              canProvideFeedback={canProvideFeedback}
+              reportingData={reportingData}
+              studentLevelInfo={studentLevelInfo}
+              aiUnderstanding={getAiUnderstanding(lg.id)}
+              aiConfidence={getAiConfidence(lg.id)}
+              isStudent={false}
+              feedbackAdded={feedbackAdded}
+              setFeedbackAdded={setFeedbackAdded}
+              aiEvalInfo={getAiInfo(lg.id)}
+            />
+          ))}
+        </div>
+      )}
+
       {canProvideFeedback && (
         <div className={style.rubricContainerFooter}>
           <div className={style.submitToStudentButtonAndError}>
@@ -210,11 +239,13 @@ export default function RubricContent({
               </BodyThreeText>
             )}
             {!errorSubmitting && !!lastSubmittedTimestamp && (
-              <BodyThreeText>
-                {i18n.feedbackSubmittedAt({
-                  timestamp: lastSubmittedTimestamp,
-                })}
-              </BodyThreeText>
+              <div id="ui-feedback-submitted-timestamp">
+                <BodyThreeText>
+                  {i18n.feedbackSubmittedAt({
+                    timestamp: lastSubmittedTimestamp,
+                  })}
+                </BodyThreeText>
+              </div>
             )}
           </div>
         </div>

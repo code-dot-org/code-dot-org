@@ -72,7 +72,7 @@ Eğlenceye katılmak isteyebilecek diğer öğretmenlere Hour of Code'u tanıtı
 
 ### Etkinliğini Kaydederek Gönüllülere Haber Verin
 
-[Hour of Code etkinliğinize kaydolduğunuzda](/events) başarılı bir Hour of Code ev sahipliği yapmak için haberler ve ipuçları içeren yararlı e-postalar alacaksınız. Aynı zamanda, bölgenizdeki gönüllülere, okulunuzun katıldığını da bu şekilde bildirirsiniz. Harika bir kaynak olan gönüllüler sınıfınıza gelerek bilgisayar bilimi hakkında konuşabilir veya öğrencilerinize Hour of Code aktivitelerinde yardımcı olabilirler.
+[Hour of Code etkinliğinize kaydolduğunuzda](/events) başarılı bir Hour of Code'a ev sahipliği yapmak için haberler ve ipuçları içeren yararlı e-postalar alacaksınız. Aynı zamanda, bölgenizdeki gönüllülere, okulunuzun katıldığını da bu şekilde bildirirsiniz. Harika bir kaynak olan gönüllüler sınıfınıza gelerek bilgisayar bilimi hakkında konuşabilir veya öğrencilerinize Hour of Code aktivitelerinde yardımcı olabilirler.
 
 ### Öğrencilerinizi Heyecanlandırın
 

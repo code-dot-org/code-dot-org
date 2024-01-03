@@ -1,4 +1,9 @@
 {
+  "danceAiModalCodeButton": "Kods",
+  "danceAiModalExplanationButton": "Uzzini vairāk",
+  "danceAiModalBack": "Atpakaļ",
+  "danceAiModalClose": "Aizvērt",
+  "danceFeedbackKeepCoding": "Jūs izmantojat visus nepieciešamos bloka veidus, bet ne pareizā veidā.",
   "danceFeedbackNeedDifferentDance": "Izmanto citu deju.",
   "danceFeedbackNeedEveryTwoMeasures": "Pārliecinies, vai izmanto bloku 'katras 2 ritma kustības' (every 2 measures)",
   "danceFeedbackNeedMakeANewDancer": "Izmanto 'izveidot jaunu' bloku lai izveidotu otru dejotāju.",
@@ -9,6 +14,5 @@
   "danceFeedbackTooManyDancers": "Uzmanies! Ja ievietosi 'izveidot jaunu' bloku iekš 'katras 2 ritma kustības', tu izveidosi ļoti daudz dejotāju.",
   "danceFeedbackUseSetSize": "Lai izveidotu šo dejotāju mazāku, lieto bloku 'set backup_dancer2 size'.",
   "danceFeedbackUseSetTint": "Izmantojiet \"set tint\" bloku, lai mainītu dejotāja toni.",
-  "danceFeedbackUseStartMapping": "Mēģini pievienot <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> bloku savā programmā.",
-  "danceFeedbackKeepCoding": "Jūs izmantojat visus nepieciešamos bloka veidus, bet ne pareizā veidā."
+  "danceFeedbackUseStartMapping": "Mēģini pievienot <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> bloku savā programmā."
 }

@@ -92,7 +92,6 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ActionController::Tes
     assert_payment_fields response.first
   end
 
-  # TODO: remove this test when workshop_organizer is deprecated
   test 'organizers do not get payment info' do
     skip 'test is flaky for 6 hours per day due to time zone differences'
     sign_in @organizer
@@ -129,7 +128,6 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ActionController::Tes
     assert_equal [@pm_workshop.id, @workshop.id, @other_workshop.id].sort, response.map {|r| r['workshop_id']}.uniq.sort
   end
 
-  # TODO: remove this test when workshop_organizer is deprecated
   test 'organizers only see their own workshops' do
     skip 'test is flaky for 6 hours per day due to time zone differences'
     sign_in @organizer

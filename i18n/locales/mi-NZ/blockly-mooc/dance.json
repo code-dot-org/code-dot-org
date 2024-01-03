@@ -1,5 +1,10 @@
 {
+  "danceAiModalCodeButton": "Waehere",
+  "danceAiModalExplanationButton": "Me ako tonu",
+  "danceAiModalBack": "Ki Muri",
+  "danceAiModalClose": "Kati",
   "danceFeedbackDidntPress": "Me pēhi i ngā pātuhi pere i te wā e haere ana tō kanikani.",
+  "danceFeedbackKeepCoding": "Kia kaha te waehere mai! Kāore anō kia tino tika.",
   "danceFeedbackKeyEvent": "Me hono e koe he waehere ki te paraka <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"ki runga\"</title></block></xml> ā, pana i te pātene i a te kanikani i te haere.",
   "danceFeedbackNeedBackup": "Me hanga e koe tētahi rōpū kaitautoko kanikani mā te paraka <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml>.",
   "danceFeedbackNeedDifferentDance": "Me whakamahi koe i tētahi kanikani kē.",
@@ -18,6 +23,5 @@
   "danceFeedbackUseSetSize": "Whakamahia i te paraka `set backup_dancer2 size` kia whakaiti i te rahi o to kaikanikani.",
   "danceFeedbackUseSetTint": "Whakamahia i te paraka `kowhiri te tae` ki te tini i te tae o te kaikanikani.",
   "danceFeedbackUseStartMapping": "Tapirihia te paraka<xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">mairetahi_matau</title><title name=\"PROPERTY\">\"āwhata\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> ki o mahi.",
-  "danceFeedbackKeepCoding": "Kia kaha te waehere mai! Kāore anō kia tino tika.",
   "measure": "Wāhanga:"
 }

@@ -34,6 +34,15 @@
           "csleadersprize": {
             "buttonText": "Mehr erfahren"
           },
+          "hoc-2023": {
+            "body": "Schließen Sie sich Millionen Menschen auf der ganzen Welt an und veranstalten Sie eine Hour of Code mit oder ohne KI und lernen Sie, wie KI funktioniert. Jeder kann überall mitmachen, auch ohne Informatikkenntnisse oder Erfahrung.",
+            "buttonText": "Mehr erfahren",
+            "title": "Hour of Code – Kreativität mit KI"
+          },
+          "hoc-2023-dance-ai": {
+            "body": "Lernen Sie etwas über Konzepte der künstlichen Intelligenz (KI) und gestalten Sie Ihre eigene virtuelle Tanzparty mit den besten Künstlern von heute. Wählen Sie aus dutzenden Song aus, um alle SchülerInnen zu erreichen, egal welchen Musikgeschmack sie haben. Zeigen Sie, was Sie können!",
+            "buttonText": "Mehr erfahren"
+          },
           "hoc-more": {
             "body": "Die Hour of Code-Website hat mehr als 100 Informatik-Aktivitäten für alle Altersgruppen- und Erfahrungsstufen, die von Code.org und Partnern entwickelt wurden."
           },

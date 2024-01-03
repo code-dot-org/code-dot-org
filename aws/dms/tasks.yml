@@ -73,6 +73,7 @@ cron:
     - tell_us_more
     - inaccuracy_comment
 - dashboard.census_submissions_school_infos
+- dashboard.census_summaries
 - dashboard.standards
 - dashboard.stages_standards
 - dashboard.standard_categories

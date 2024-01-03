@@ -1,5 +1,11 @@
 {
+  "danceAiModalCodeButton": "Kod",
+  "danceAiModalStartOverButton": "Mula semula",
+  "danceAiModalExplanationButton": "Ketahui lebih lanjut",
+  "danceAiModalBack": "Belakang",
+  "danceAiModalClose": "Tutup",
   "danceFeedbackDidntPress": "Pastikan untuk menekan kekunci anak panah semasa tarian anda sedang berjalan.",
+  "danceFeedbackKeepCoding": "Anda menggunakan kesemua jenis blok yang diperlukan tetapi dengan cara yang tidak betul.",
   "danceFeedbackKeyEvent": "Pastikan anda melampirkan beberapa kod kepada blok <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"up\"</title></block></xml> dan tekan kekunci semasa tarian anda sedang berjalan.",
   "danceFeedbackNeedBackup": "Anda perlu mencipta kumpulan penari sandaran dengan <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml> blok.",
   "danceFeedbackNeedDifferentDance": "Anda perlu menggunakan tarian berbeza.",
@@ -18,6 +24,5 @@
   "danceFeedbackUseSetSize": "Gunakan blok `tetapkan saiz penari2_sandaran` untuk menjadikan bilangan penari lebih kecil.",
   "danceFeedbackUseSetTint": "Gunakan blok `tetapkan warna` untuk menukar warna penari.",
   "danceFeedbackUseStartMapping": "Cuba menambah <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> blok kepada atur cara anda.",
-  "danceFeedbackKeepCoding": "Anda menggunakan kesemua jenis blok yang diperlukan tetapi dengan cara yang tidak betul.",
   "measure": "Corak Berirama:"
 }

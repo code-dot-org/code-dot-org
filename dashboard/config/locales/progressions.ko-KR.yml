@@ -178,6 +178,7 @@ ko:
       Extra: 기타
       Extra Challenge: 추가 도전
       'Extra Challenge: Sound Board': '추가 도전: 사운드 보드'
+      Final Dance Party Project: 파이널 댄스 파티 프로젝트
       Final Room Escape App: 최종 방 탈출 앱
       Find the Wizard: 마법사 찾기
       Finish a Screen: 화면 완료하라
@@ -225,6 +226,7 @@ ko:
       Input with If-Else: 만약-다른 사용하여 입력
       Inspiration!: 영감!
       InspirationalArtwork: InspirationalArtwork
+      Intro Video: 소개 영상
       Intro to Flyer Game: 플라이어 게임 소개
       Intro to For Loops: 루프 소개
       Intro to Side Scrollers: 사이드 스크롤러 소개
@@ -237,6 +239,7 @@ ko:
       Iteration and Parameters: 반복 및 매개변수
       Keep On Dancing!: 계속 춤추기!
       Keeping Data Secret: 데이터 기밀 유지
+      Key Press & At Measure Events: 주요 프레스 및 측정 시 이벤트
       Keyboard Input: 키보드 인풋
       Kim's Survey: 김의 설문조사
       Kim's Survey Data: 김의 설문조사 데이터
@@ -253,6 +256,7 @@ ko:
       Looking for Patterns: 패턴 찾기
       Looping: 루핑
       Loops with the Artist: 아티스트와의 루프
+      Make Dancer & Dance Move: 댄서와 댄스 동작 만들기
       Make Your Sprites: 스프라이트 만들기
       Make a Prediction: 예측하기
       Make an Interactive Card: 인터랙티브 카드 만들기
@@ -397,7 +401,7 @@ ko:
       Shoe Recommender: 구두 추천
       Side Scroller: 사이드 스크롤러
       Simple Circuits: 단순 회로
-      Skill Building: 실력 향상
+      Skill Building: 실력 쌓기
       Skill-Building: 실력 향상
       Sliders: 슬라이더
       Smart Bike - Blinkers: 스마트 자전거 - 블링커
@@ -458,7 +462,7 @@ ko:
       'Video:  Debugging with the Step Button': '동영상: 단계별 디버깅'
       'Video:  Minecraft - The Agent': '동영상: 마인크래프트 - 에이전트'
       'Video:  Text  and Prompts': '동영상: 텍스트 및 프롬프트'
-      'Video: "If/Else"': '동영상: "If/Else"'
+      'Video: "If/Else"': '동영상: 만약, 아니면'
       'Video: AI: What is Machine Learning?': '동영상: AI: 머신 러닝이란?'
       'Video: Amazon and Data': '동영상: 아마존과 데이터'
       'Video: Artist Intro with JR Hildebrand': '동영상: JR 힐데브란트와 함께하는 아티스트 소개'
@@ -512,10 +516,11 @@ ko:
       'Video: Minecraft - Functions': '동영상: 마인크래프트 - 함수'
       'Video: Minecraft - Repeat Loops': '동영상: 마인크래프트 - 루프 반복'
       'Video: Minecraft - The Agent': '동영상: 마인크래프트 - 에이전트'
-      'Video: Minecraft: Voyage Aquatic Conditionals': '동영상: 마인크래프트: 보야지 아쿠아틱 조건문'
-      'Video: Minecraft: Voyage Aquatic Congratulations': '동영상: 마인크래프트: 보야지 아쿠아틱 축하'
-      'Video: Minecraft: Voyage Aquatic Introduction': '동영상: 마인크래프트: 보야지 아쿠아틱 소개'
-      'Video: Minecraft: Voyage Aquatic Repeat Until': '동영상: 마인크래프트: 보야지 아쿠아틱 까지 반복'
+      'Video: Minecraft: Voyage Aquatic Conditionals': '동영상: 마인크래프트: 수중 항해 조건문'
+      'Video: Minecraft: Voyage Aquatic Congratulations': '동영상: 마인크래프트: 수중 항해 - 축하
+        인사'
+      'Video: Minecraft: Voyage Aquatic Introduction': '동영상: 마인크래프트: 수중 항해 소개'
+      'Video: Minecraft: Voyage Aquatic Repeat Until': '동영상: 마인크래프트: 수중 항해 - ~까지 반복'
       'Video: Nested Loops': '동영상: 중첩 루프'
       'Video: Nested Loops with the Bee': '동영상: 벌과 함께 중첩 루프'
       'Video: Netflix and Data': 동영상:넷플릭스와 데이터
@@ -534,7 +539,7 @@ ko:
       'Video: Repeat Blocks': '동영상: 반복 블록'
       'Video: Repeat Blocks with BB-8': '동영상: BB-8과 함께하는 반복 블록'
       'Video: Repeat Blocks with the Artist': '동영상: 반복 블록과 아티스트'
-      'Video: Repeat Until Blocks': '동영상: Until 블록 반복'
+      'Video: Repeat Until Blocks': '동영상: ~할 때까지 반복 블록'
       'Video: Repeat Until Statements': '동영상: Until 문 반복'
       'Video: Sprites in Action': '동영상: 스프라이트 인 액션'
       'Video: Star Wars Project': '동영상: 스타워즈 프로젝트'
@@ -553,7 +558,7 @@ ko:
       'Video: Waze and Data': '동영상: 웨이즈와 데이터'
       'Video: What Makes a Computer, a Computer?': '비디오: 컴퓨터는 무엇으로 구성되나?'
       'Video: What is Machine Learning?': '동영상: AI: 머신 러닝이란?'
-      'Video: While Loops with the Farmer': '동영상: While 루프와 농부'
+      'Video: While Loops with the Farmer': '동영상: 농부와 ~ 하는동안 반복'
       'Video: Wrap-up': '동영상: 마무리'
       Warm Up: 워밍업
       Website Project: 웹사이트 프로젝트

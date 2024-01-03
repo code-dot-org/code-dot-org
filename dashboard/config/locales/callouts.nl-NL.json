@@ -378,6 +378,9 @@
         "Course 4 Artist For Loops 4": {
           "place_counter_variable": "Sleep je teller-variabele in dit blok"
         },
+        "Course 4 Artist Functions challenge": {
+          "Course_4_Artist_Functions_challenge_1": "Merk op dat we alle blokken in categorieën hebben gesorteerd om het overzichtelijk te houden. Klik hier om alle blokken die je nodig hebt te vinden."
+        },
         "Course 4 Artist Vars 1": {
           "repeat_blocks": "Gebruik het \"Herhaal\" blok en plaats dit rond de blokken in de werkruimte"
         },
@@ -1087,6 +1090,9 @@
         "courseC_maze_debugging5_2023": {
           "courseC_maze_debugging5_1": "Deze blokken zijn vastgezet en kunnen niet worden verwijderd!"
         },
+        "courseC_maze_debugging9_2021": {
+          "courseC_maze_debugging9_2019_1": "Sleep blokken naar je werkruimte."
+        },
         "courseC_maze_programming1": {
           "grade2_CaringForNewPet_0_1": "Druk na het verbinden van alle blokken op \"Start\" om je programma uit te voeren."
         },
@@ -1709,6 +1715,9 @@
         },
         "courseE_playLab_scaffold3": {
           "courseE_playLab_scaffold3_1": "Breng de speler naar deze vlag om naar het volgende level te gaan/"
+        },
+        "courseF_bee_for4_2021": {
+          "courseF_bee_for4_1": "Je vindt de voorwaardelijke lus hier!"
         },
         "coursee_helloworld_events": {
           "hello_world_click_hint": "Voeg dit eventblok toe aan uw werkruimte."

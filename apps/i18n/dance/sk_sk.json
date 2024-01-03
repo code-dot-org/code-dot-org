@@ -1,4 +1,9 @@
 {
+  "danceAiModalBack": "Naspäť",
+  "danceAiModalClose": "Zatvoriť",
+  "danceAiModalCodeButton": "Kód",
+  "danceAiModalExplanationButton": "Zistiť viac",
+  "danceAiModalStartOverButton": "Začať odznova",
   "danceFeedbackDidntPress": "Nezabudni počas tanca stláčať šípky.",
   "danceFeedbackKeepCoding": "Niečo ešte treba doladiť. Smelo pokračuj!",
   "danceFeedbackKeyEvent": "Nezabudni ku bloku <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"hore\"</title></block></xml> pridať nejaký príkaz a v priebehu tanca túto klávesu aj stlačiť.",

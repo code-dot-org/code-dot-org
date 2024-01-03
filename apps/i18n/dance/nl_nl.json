@@ -1,4 +1,8 @@
 {
+  "danceAiModalBack": "Terug",
+  "danceAiModalClose": "Afsluiten",
+  "danceAiModalCodeButton": "Code",
+  "danceAiModalExplanationButton": "Leer meer",
   "danceFeedbackDidntPress": "Zorg ervoor dat je op de pijltjestoetsen drukt terwijl je dans wordt uitgevoerd.",
   "danceFeedbackKeepCoding": "Je gebruikt alle soorten blokken die nodig zijn, maar niet op de juiste manier.",
   "danceFeedbackKeyEvent": "Zorg dat je wat code toevoegt aan het blok <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"omhoog\"</title></block></xml> en druk op de toets terwijl je dans afspeelt.",

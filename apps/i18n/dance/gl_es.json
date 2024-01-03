@@ -1,4 +1,8 @@
 {
+  "danceAiModalBack": "Voltar",
+  "danceAiModalClose": "Pechar",
+  "danceAiModalCodeButton": "Código",
+  "danceAiModalExplanationButton": "Aprender máis",
   "danceFeedbackKeepCoding": "Estás a empregar todos os tipos de bloques necesarios pero non do xeito correcto.",
   "danceFeedbackKeyEvent": "Asegúrate de xuntar algún código ao bloque «cando a tecla» e pulsa a tecla mentres se executa o baile.",
   "danceFeedbackNeedDifferentDance": "Tes que usar un baile diferente.",

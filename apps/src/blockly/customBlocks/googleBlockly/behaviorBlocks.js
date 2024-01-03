@@ -33,7 +33,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       {
         type: 'field_label',
         name: 'THIS_SPRITE',
-        text: `with: ${msg.thisSprite()}`,
+        text: msg.withThisSprite(),
       },
       {
         type: 'field_label',
@@ -65,6 +65,8 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'behaviors_block_frame',
       'procedure_def_mini_toolbox',
       'modal_procedures_no_destroy',
+      'behaviors_name_validator',
+      'updated_behavior_picker_blocks',
     ],
     mutator: 'behavior_def_mutator',
   },
@@ -141,6 +143,34 @@ GoogleBlockly.Extensions.register('behaviors_block_frame', function () {
   }
 });
 
+// This extension is used to update the block's behaviorId when a user-created behavior is renamed.
+// TODO: Add logic to update the dropdown options on behaviorPicker blocks too.
+GoogleBlockly.Extensions.register('behaviors_name_validator', function () {
+  const nameField = this.getField('NAME');
+  nameField.setValidator(function (newValue) {
+    // The default validator provided by mainline Blockly. Strips whitespace.
+    const rename = Blockly.Procedures.rename.bind(this);
+    const legalName = rename(newValue);
+    if (
+      legalName &&
+      this.sourceBlock_.userCreated &&
+      this.sourceBlock_.behaviorId !== legalName
+    ) {
+      this.sourceBlock_.behaviorId = legalName;
+    }
+    return legalName;
+  });
+});
+
+GoogleBlockly.Extensions.register(
+  'updated_behavior_picker_blocks',
+  function () {
+    this.workspace.addChangeListener(event => {
+      onBehaviorDefChange(event, this);
+    });
+  }
+);
+
 GoogleBlockly.Extensions.registerMutator(
   'behavior_get_mutator',
   behaviorGetMutator
@@ -166,7 +196,7 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   };
 
   // If the modal function editor is enabled, we render a button to open the editor
-  // Otherwise, we render a "blank" behavior definition block
+  // Behaviors are not editable without the modal editor open
   if (functionEditorOpen) {
     // No-op - cannot create new behaviors while the modal editor is open
   } else if (Blockly.useModalFunctionEditor) {
@@ -205,17 +235,19 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
       allBehaviors.push({
         name: block.getFieldValue('NAME'),
         id: block.id,
+        behaviorId: block.behaviorId,
       })
     );
   });
 
-  allBehaviors.sort(nameComparator).forEach(({name, id}) => {
+  allBehaviors.sort(nameComparator).forEach(({name, id, behaviorId}) => {
     blockList.push({
       kind: 'block',
       type: BLOCK_TYPES.behaviorGet,
       extraState: {
         name,
         id,
+        behaviorId,
       },
       fields: {
         NAME: name,
@@ -240,4 +272,42 @@ const getNewBehaviorButtonWithCallback = (
     text: msg.createBlocklyBehavior(),
     callbackKey,
   };
+};
+
+// Added as a change listener. If a behavior name changes, we need to update any
+// behavior picker blocks that have the old name currently selected.
+function onBehaviorDefChange(event, block) {
+  if (
+    event.type === Blockly.Events.CHANGE &&
+    block.id === event.blockId &&
+    // Excludes changes to the description field.
+    event.name === 'NAME'
+  ) {
+    const {oldValue, newValue} = event;
+    updateBehaviorPickerBlocks(oldValue, newValue);
+  }
+}
+
+function updateBehaviorPickerBlocks(oldValue, newValue) {
+  const behaviorPickerBlocks = findAllBehaviorPickerBlocks();
+  if (behaviorPickerBlocks.length) {
+    const blocksToUpdate = behaviorPickerBlocks.filter(
+      block => block.getFieldValue('BEHAVIOR') === oldValue
+    );
+    blocksToUpdate.forEach(block => {
+      block.setFieldValue(newValue, 'BEHAVIOR');
+    });
+  }
+}
+
+const findAllBehaviorPickerBlocks = () => {
+  const blocks = [];
+  Blockly.Workspace.getAll().forEach(workspace =>
+    blocks.push(
+      ...workspace
+        .getAllBlocks()
+        .filter(block => block.type === 'gamelab_behaviorPicker')
+    )
+  );
+  return blocks;
 };

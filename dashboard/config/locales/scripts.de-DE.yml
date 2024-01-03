@@ -2129,6 +2129,8 @@ de:
           title: CS Discoveries Nachbefragung
         csd-post-survey-2023:
           title: "(Post-Course Survey) Überprüfung nach dem Kurs"
+        csd-post-survey-2024:
+          title: "(Post-Course Survey) Überprüfung nach dem Kurs"
         csd-sample-online:
           title: Beispiele von Online-Aktivitäten für Erkenntnisse aus der Informatik
         csd-test-saving-state:
@@ -2243,6 +2245,14 @@ de:
             cspSurvey:
               display_name: Umfrage
         csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Der Problemlösungsprozess'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Computer und Problemlösung'
+            lessonGroup-5:
+              display_name: Umfrage
+        csd1-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitel 1: Der Problemlösungsprozess'
@@ -2440,6 +2450,14 @@ de:
             üben Sie wertvolle Programmierkenntnisse, wie z. B. Fehlerbehebung/Debugging,
             Verwendung von Ressourcen und Teamarbeit.
         csd2-2023:
+          student_description: In Lerneinheit 2 lernen Sie, wie Sie Inhalte auf Ihren
+            eigenen Webseiten erstellen und veröffentlichen können. Nachdem Sie entschieden
+            haben, welche Inhalte Sie mit der Welt teilen möchten, lernen Sie, wie
+            Sie Ihre Seiten mit HTML und CSS strukturieren und gestalten können. Außerdem
+            üben Sie wertvolle Programmierkenntnisse, wie z. B. Fehlerbehebung/Debugging,
+            Verwendung von Ressourcen und Teamarbeit.
+          title: Webentwicklung
+        csd2-2024:
           student_description: In Lerneinheit 2 lernen Sie, wie Sie Inhalte auf Ihren
             eigenen Webseiten erstellen und veröffentlichen können. Nachdem Sie entschieden
             haben, welche Inhalte Sie mit der Welt teilen möchten, lernen Sie, wie
@@ -2701,6 +2719,19 @@ de:
             Beim dem abschließenden Projekt entwickeln Sie ein personalisiertes, interaktives
             Programm.
         csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Bilder und Animationen'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Erstellen von Spielen'
+          student_description: In Lerneinheit 3 arbeiten Sie bei der Programmierung
+            von Animationen, interaktiver Kunst und Spielen im Game Lab mit Ihrer
+            Programmiererfahrung. Die Lerneinheit beginnt mit einfachen Formen und
+            baut auf anspruchsvollere spritebasierte Spiele auf, wobei dieselben Programmierkonzepte
+            und der Designprozess eingesetzt werden, die Informatiker täglich verwenden.
+            Beim dem abschließenden Projekt entwickeln Sie ein personalisiertes, interaktives
+            Programm.
+        csd3-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitel 1: Bilder und Animationen'
@@ -2989,6 +3020,21 @@ de:
             sowohl auf Papier als auch im App-Lab prototypisch zu entwickeln und Lösungen
             mit realen Benutzern zu testen, um Feedback zu erhalten und die Iteration
             weiter voranzutreiben.
+        csd4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Benutzerzentriertes Design'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: App Prototyping'
+          student_description: Die Lerneinheit 4 stellt die breiteren sozialen Auswirkungen
+            der Informatik vor. Anhand einer Reihe von Design-Aufgaben lernen Sie,
+            wie Sie die Bedürfnisse anderer besser verstehen und gleichzeitig eine
+            Lösung für ein Problem entwickeln können. Die zweite Hälfte der Lerneinheit
+            besteht aus einem iterativen Teamprojekt, bei dem die Teams die Möglichkeit
+            haben, einen Bedarf zu identifizieren, der ihnen am Herzen liegt, Lösungen
+            sowohl auf Papier als auch im App-Lab prototypisch zu entwickeln und Lösungen
+            mit realen Benutzern zu testen, um Feedback zu erhalten und die Iteration
+            weiter voranzutreiben.
         csd4-dlp:
           description: Dies ist Lerneinheit 4 des Plans für Vertieftes Lernen von
             Code.org - Erkenntnisse aus der Informatik für Moderatoren in der Ausbildung.
@@ -3250,6 +3296,23 @@ de:
             Das Kapitel schließt mit der Überlegung, wie ein Problemlösungsprozess
             für Daten in einem Bereich Ihrer Wahl eingesetzt werden kann.
         csd5-2023:
+          description_short: Erfahren Sie, wie Menschen Computer verwenden, um Datenprobleme
+            zu lösen.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Darstellung von Informationen'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Datenprobleme lösen'
+          student_description: Lerneinheit 5 befasst sich mit der Bedeutung von Daten
+            bei der Lösung von Problemen und erklärt, wie Computer dabei helfen können.
+            Das erste Kapitel befasst sich mit verschiedenen Systemen, die zur Darstellung
+            von Informationen in einem Computer verwendet werden, sowie mit den Aufgaben
+            und Kompromissen, die mit ihrer Verwendung einhergehen. Im zweiten Kapitel
+            erfahren Sie, wie Datensammlungen zur Lösung von Problemen verwendet werden
+            und wie Computer dabei helfen, die Schritte dieses Prozesses zu automatisieren.
+            Das Kapitel schließt mit der Überlegung, wie ein Problemlösungsprozess
+            für Daten in einem Bereich Ihrer Wahl eingesetzt werden kann.
+        csd5-2024:
           description_short: Erfahren Sie, wie Menschen Computer verwenden, um Datenprobleme
             zu lösen.
           lesson_groups:
@@ -3605,7 +3668,16 @@ de:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Chapter 2: Aufbau von physischen Prototypen'
+        csd6a-2024:
+          description_short: Programmieren mit Geräten lernen.
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Chapter 2: Aufbau von physischen Prototypen'
         csd6b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Ein- und Ausgaben
+        csd6b-2024:
           lesson_groups:
             lessonGroup-3:
               display_name: Ein- und Ausgaben
@@ -3619,6 +3691,14 @@ de:
             lessonGroup-4:
               display_name: Umfrage
         csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitel 1
+            lessonGroup-3:
+              display_name: Kapitel 2
+            lessonGroup-4:
+              display_name: Einführung in AppLab
+        csd7-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Kapitel 1
@@ -7205,6 +7285,27 @@ de:
             üben die wichtigsten Konzepte der Unterrichtseinheit.\n– Sie erkunden
             die Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 30 Minuten"
           title: 'Modul 1: Vorbereitung auf den Unterricht Problemlösung und Informatik'
+        self-paced-pl-csd-unit2-2-2023:
+          title: 'Modul 2: Vorbereitung auf das Unterrichten der Webentwicklung'
+        self-paced-pl-csd-unit3-2-2023:
+          description: "In diesem professionellen Lernmodul bereiten Sie sich auf
+            den Unterricht der Code.org-Stunde Interaktive Animationen und Spiele
+            vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung
+            in interaktive Animationen und Spiele.\n– Üben der wichtigsten Konzepte
+            der Unterrichtseinheit.\n– Beschäftigung mit Game Lab.\n– Erkunden der
+            Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 120 Minuten"
+          student_description: "In diesem professionellen Lernmodul bereiten Sie sich
+            auf den Unterricht der Code.org-Stunde Interaktive Animationen und Spiele
+            vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung
+            in interaktive Animationen und Spiele.\n– Üben der wichtigsten Konzepte
+            der Unterrichtseinheit.\n– Beschäftigung mit Game Lab.\n– Erkunden der
+            Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 120 Minuten"
+          title: Vorbereitung auf das Unterrichten von interaktiven Animationen und
+            Spielen
+        self-paced-pl-csd-unit4-2-2023:
+          title: " Modul 4: Vorbereitung auf das Unterrichten des Design-Prozesses"
+        self-paced-pl-csd-unit5-2-2023:
+          title: 'Modul 5: Vorbereitung auf den Unterricht Fakten und Gesellschaft'
         self-paced-pl-csd1-2021:
           description: "Dieses Modul ist eine kurze Einführung sowohl in Code.org
             als auch in diesen professionellen Lernkurs. \n\n\\*\\*Aktivitäten des
@@ -8129,6 +8230,14 @@ de:
           title: Modul 7
         vpl-csp-2023-m8:
           title: Modul 8
+        web-dev-2024:
+          student_description: In Lerneinheit 2 lernen Sie, wie Sie Inhalte auf Ihren
+            eigenen Webseiten erstellen und veröffentlichen können. Nachdem Sie entschieden
+            haben, welche Inhalte Sie mit der Welt teilen möchten, lernen Sie, wie
+            Sie Ihre Seiten mit HTML und CSS strukturieren und gestalten können. Außerdem
+            üben Sie wertvolle Programmierkenntnisse, wie z. B. Fehlerbehebung/Debugging,
+            Verwendung von Ressourcen und Teamarbeit.
+          title: Webentwicklung
         web-development-2023:
           lesson_groups:
             lessonGroup-4:

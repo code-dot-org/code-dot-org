@@ -3,11 +3,13 @@ pt:
   data:
     blocks:
       AmysBlocks_goldilocks:
-        text: if {CONDITION}{SPRITE} {STATEMENT}
+        text: |-
+          if {CONDITION}{SPRITE}
+          {STATEMENT}
         options:
           CONDITION:
             '"too much"': em excesso
-            '"just right"': exato
+            '"just right"': na medida certa
             '"too little"': muito pouco
       AmysBlocks_playerBehaviors:
         text: "{BEHAVIOR}"
@@ -31,6 +33,8 @@ pt:
             '0.75': pequeno
             '1.00': médio
             '2.00': grande
+      Dancelab_ai:
+        text: "{IMAGE}gerar {VALUE} efeito"
       Dancelab_alternateMoves:
         text: "{GROUP} alterna a cada {N} medida entre {MOVE1} e {MOVE2}"
         options:
@@ -122,6 +126,27 @@ pt:
             MOVES.Kick: Estrela
             MOVES.ThisOrThat: Isso ou Aquilo
             MOVES.Rest: Nenhum
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} executa {MOVE} {DIR} para sempre"
+        options:
+          GROUP:
+            '"CAT"': gatos
+            '"SLOTH"': preguiças
+          MOVE:
+            MOVES.Roll: Rolar
+            MOVES.ClapHigh: Bater palmas
+            MOVES.Dab: Dança dab
+            MOVES.DoubleJam: Double Jam
+            MOVES.Drop: Dança drop
+            MOVES.Floss: Dança do fio dental
+            MOVES.Fresh: Novo
+            MOVES.Clown: Palhaço
+            MOVES.Kick: Estrela
+            MOVES.ThisOrThat: Isso ou Aquilo
+            MOVES.Rest: Nenhum
+            '"next"': "(Próximo)"
+            '"prev"': "(Anterior)"
+            '"rand"': "(Aleatório)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} executa {MOVE} {DIR} para sempre"
         options:
@@ -608,13 +633,16 @@ pt:
           EFFECT:
             '"none"': Nenhum
             '"rand"': "(Aleatório)"
-            '"circles"': Túnel
             '"quads"': Ângulos
+            '"blooming_petals"': Pétalas florescentes
+            '"circles"': Túnel
+            '"clouds"': Nuvens
             '"color_cycle"': Cores
             '"diamonds"': Diamantes
             '"disco_ball"': Bola de discoteca
             '"fireworks"': Fogos de artifício
             '"flowers"': Flores
+            '"frosted_grid"': Malha congelada
             '"growing_stars"': Estrelas em crescimento
             '"swirl"': Hipno
             '"kaleidoscope"': Caleidoscópio
@@ -625,26 +653,36 @@ pt:
             '"ripples"': Ondulação
             '"snowflakes"': Neve
             '"text"': Título da música
-            '"squiggles"': Rabiscos
             '"galaxy"': Espaço
             '"sparkles"': Brilhos
             '"spiral"': Espiral
             '"disco"': Quadrados
+            '"squiggles"': Rabiscos
             '"starburst"': Starburst
             '"stars"': Estrelas
             '"music_wave"': Ondas
           PALETTE:
+            '"autumn"': Outono
             '"rave"': Preto e branco
             '"cool"': Tons de azul
             '"electronic"': Electrônica
+            '"grayscale"': Escala cinza
             '"iceCream"': Sorvete
             '"default"': Claro
             '"neon"': Néon
             '"ocean"': Oceano
             '"rainbow"': Arco-íris
+            '"roses"': Rosas
+            '"sky"': Céu
+            '"spring"': Primavera
+            '"summer"': Verão
+            '"sunrise"': Nascer do sol
+            '"sunset"': Pôr do sol
             '"tropical"': Tropical
+            '"twinkling"': Cintilante
             '"vintage"': Vintage
             '"warm"': Tons de vermelho
+            '"winter"': Inverno
       Dancelab_setDanceSpeed:
         text: alterar a velocidade da dança de {SPRITE} para {SPEED}
         options:
@@ -1598,6 +1636,12 @@ pt:
         text: "{SPRITE} diga {SPEECH}"
       gamelab_spriteSayTime:
         text: "{SPRITE}dizer{TEXT1}por{NUM}segundos"
+      gamelab_spriteThink_fables2:
+        text: "{SPRITE} pense {THOUGHT}"
+      gamelab_spriteThink_fables3:
+        text: "{SPRITE} pense {THOUGHT}"
+      gamelab_spriteThink_fables4:
+        text: "{SPRITE} pense {THOUGHT}"
       gamelab_startAvoiding:
         text: "{SPRITE} começa a evitar {TARGET}"
       gamelab_startFollowing:
@@ -1701,6 +1745,15 @@ pt:
         text: coordenada y do {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} deslizar para {LOCATION}"
+      KatiesBlocks_goldilocks:
+        text: |-
+          if {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"solid"': sólido
+            '"liquid"': líquido
+            '"gas"': gás
       KatiesBlocks_tumbling:
         text: em queda
       Mikelab_addBehaviorSimple:
@@ -2518,7 +2571,7 @@ pt:
             right: à direita ↻
             left: à esquerda ↺
       ecosystems_catchMe:
-        text: capture {THIS}
+        text: pegue {THIS}
       ecosystems_eat:
         text: coma {THIS}
       ecosystems_goldilocks:
@@ -2526,7 +2579,7 @@ pt:
         options:
           CONDITION:
             '"too much"': em excesso
-            '"just right"': exato
+            '"just right"': na medida certa
             '"too little"': muito pouco
       ecosystems_int10:
         text: "{VALUE}"
@@ -2543,11 +2596,11 @@ pt:
             '9': '9'
             '10': '10'
       ecosystems_makeNewSpriteBetween:
-        text: 'criar {N} novo {GROUP} entre o local x: {X} y: {Y}'
+        text: 'crie {N} novo {GROUP} entre o local x: {X} y: {Y}'
       ecosystems_makeNumSpritesAtLocation:
-        text: criar {NUM} novas {ANIMATION_NAME} fadas em {LOCATION_GENERATOR}
+        text: crie {NUM} novas {ANIMATION_NAME} sprites em {LOCATION_GENERATOR}
       ecosystems_makeNumSpritesWithinRange:
-        text: criar {NUM} novas {ANIMATION_NAME} fadas em {RANGE}
+        text: crie {NUM} novas {ANIMATION_NAME} sprites em {RANGE}
         options:
           RANGE:
             "{x1:0, x2:400, y1:200, y2:400}": Superior

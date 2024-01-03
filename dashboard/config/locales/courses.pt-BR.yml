@@ -168,7 +168,29 @@ pt:
           title: Foco no Impacto na Sociedade (Descobertas da CC)
         mike-test:
           title: Fundamentos de Ciência da Computação
+        self-paced-pl-csd-unit2-2023:
+          title: Ensino de desenvolvimento via internet
     resources:
+      all_resources_1/csd/2021:
+        name: Todos os Recursos
+      all_resources_2/csd/2023:
+        name: Todos os Recursos
+      all_resources_7/csd/2022:
+        name: Todos os Recursos
+      all_standards_1/csd/2021:
+        name: Todos os Padrões
+      all_standards_2/csd/2023:
+        name: Todos os Padrões
+      all_standards_7/csd/2022:
+        name: Todos os Padrões
+      all_vocabulary_1/csd/2021:
+        name: Todo o Vocabulário
+      all_vocabulary_2/csd/2023:
+        name: Todo o Vocabulário
+      all_vocabulary_7/csd/2022:
+        name: Todo o Vocabulário
+      csd_guide_to_curriculum_videos/csd/2023:
+        url: https://docs.google.com/document/d/1SIpzFmX7RqxwkEy4AyFe19-8hoWAS0A0D6C8Yzr-BHM/edit
       csd_implementation_guide/csd/2022:
         url: https://docs.google.com/document/d/1ybEuPafLkexT1MYjGmkdFCx3hO18iyg98e9ldLTUq3I/preview
       curriculum/csd/2017:

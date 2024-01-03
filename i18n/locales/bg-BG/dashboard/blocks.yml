@@ -139,6 +139,29 @@ bg:
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} направи {MOVE} {DIR} завинаги"
+        options:
+          GROUP:
+            '"CAT"': котки
+            '"SLOTH"': ленивци
+          MOVE:
+            MOVES.ClapHigh: Пляскай високо
+            MOVES.Dab: Бучица
+            MOVES.DoubleJam: Двойно почукване
+            MOVES.Drop: Капка
+            MOVES.Floss: Памук
+            MOVES.Fresh: Пресен
+            MOVES.Clown: Клоун
+            MOVES.Kick: Ритник
+            MOVES.ThisOrThat: Това или онова
+            MOVES.Rest: Без
+            '"next"': "(Следващ)"
+            '"prev"': "(Предишен)"
+            '"rand"': "(Случаен)"
+          DIR:
+            '1': "→"
+            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} направи {MOVE} {DIR} завинаги"
         options:
@@ -631,8 +654,8 @@ bg:
           EFFECT:
             '"none"': Без
             '"rand"': "(Случаен)"
-            '"circles"': Кръгове
             '"quads"': Ъгли
+            '"circles"': Кръгове
             '"color_cycle"': Цветове
             '"diamonds"': Диаманти
             '"disco_ball"': Диско Топка
@@ -647,11 +670,11 @@ bg:
             '"ripples"': Вълни
             '"snowflakes"': Сняг
             '"text"': Имена на Песни
-            '"squiggles"': Драскулки
             '"galaxy"': Космос
             '"sparkles"': Искри
             '"spiral"': Спирала
             '"disco"': Квадрати
+            '"squiggles"': Драскулки
             '"stars"': Звезди
             '"music_wave"': Вълни
           PALETTE:
@@ -1702,6 +1725,15 @@ bg:
         text: y координат на {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} се плъзга до {LOCATION}"
+      KatiesBlocks_goldilocks:
+        text: |2-
+           ако{CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"solid"': твърдо
+            '"liquid"': течно
+            '"gas"': газообразно
       Mikelab_addBehaviorSimple:
         text: спрайт {SPRITE} започва да {BEHAVIOR}
       Mikelab_addTrainingData:

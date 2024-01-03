@@ -2391,6 +2391,19 @@ pl:
         text: Gdy naciśniesz Uruchom, duszek powie tekst, który mu powiesz. Teraz
           nadszedł czas, aby zacząć korzystać ze Sprite Lab i zobaczyć, dokąd zaprowadzi
           Cię Twoja wyobraźnia!
+    hoc-dance-ai-warmup:
+      2:
+        text: Cześć! Nazywam się Miral Kotb i jestem tancerzem, programistą i twórcą
+          iLuminate.
+      3:
+        text: Informatyka jest związana z kreatywnością na wiele sposobów. Naprawdę
+          niezmierzone. Mam na myśli, że kiedy już będziesz umieć programować, możesz
+          wprowadzać pomysły do czegokolwiek. Robię to z niewielkim wyposażeniem.
+          Gdy masz odpowiednie narzędzia do pisania oprogramowania, możesz wiele zrobić,
+          a możliwości są naprawdę nieograniczone.
+      5:
+        text: Będziesz używać bloków kodu, aby wybierać różnych tancerzy, zmieniać
+          ich ruchy taneczne, zmuszać ich do reagowania na muzykę i uczynić ich interaktywnymi.
     hoc_dance_congrats:
       1:
         text: 'Godzina Kodowania | Potańcówka: Rozgrzewka!'

@@ -1,7 +1,8 @@
-// This is copied from
+// This is copied and modified from
 // https://github.com/google/blockly-samples/blob/82f1c35be007a99b7446e199448d083ac68a9f84/plugins/block-shareable-procedures/src/blocks.ts#L1184-L1285
-// Once we upgrade to Blockly v10 we can go back to using the original mixin.
-// We needed a bug fix not present in our current version of the plugin.
+// We need a bug fix not present in our current (v9) version of the mixin, and
+// we need to not run the on change handler if the block is an embedded workspace.
+// We may be able to extend the mixin once we upgrade to v10.
 const procedureCallerOnChangeMixin = {
   /**
    * Procedure calls cannot exist without the corresponding procedure
@@ -10,7 +11,15 @@ const procedureCallerOnChangeMixin = {
    * @this {Blockly.Block}
    */
   onchange: function (event) {
-    if (this.disposed || this.workspace.isFlyout) return;
+    // If the block is in an embedded workspace, we don't create a procedure definition.
+    // An embedded workspace does not need any procedure definitions, and trying to add them
+    // will cause confusing UI (for example, an empty procedure definition in a hint).
+    if (
+      this.disposed ||
+      this.workspace.isFlyout ||
+      Blockly.isEmbeddedWorkspace(this.workspace)
+    )
+      return;
     if (event.type === Blockly.Events.BLOCK_MOVE) this.updateArgsMap_(true);
     if (
       event.type !== Blockly.Events.FINISHED_LOADING &&
@@ -30,16 +39,13 @@ const procedureCallerOnChangeMixin = {
     if (!def) {
       // We have no def nor procedure model.
       Blockly.Events.setGroup(event.group);
-      this.model_ = this.createDef_(
-        this.getFieldValue('NAME'),
-        this.paramsFromSerializedState_
-      );
+      this.model_ = this.createDef_(name, this.paramsFromSerializedState_);
       Blockly.Events.setGroup(false);
     }
     if (!this.getProcedureModel()) {
       // We have a def, but no reference to its model.
       this.model_ = this.findProcedureModel_(
-        this.getFieldValue('NAME'),
+        name,
         this.paramsFromSerializedState_
       );
     }

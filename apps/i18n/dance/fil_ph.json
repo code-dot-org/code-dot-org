@@ -1,4 +1,9 @@
 {
+  "danceAiModalBack": "Bumalik",
+  "danceAiModalClose": "Isara",
+  "danceAiModalCodeButton": "Code",
+  "danceAiModalExplanationButton": "Matuto nang higit pa",
+  "danceAiModalStartOverButton": "Magsimula sa umpisa",
   "danceFeedbackDidntPress": "Tiyakin na pinindot mo ang mga arrow key habang tumatakbo ang iyong sayaw.",
   "danceFeedbackKeepCoding": "Ginagamit mo ang lahat ng kinakailangang mga uri ng mga bloke ngunit hindi sa tamang paraan.",
   "danceFeedbackKeyEvent": "Tiyakin na nag-attach ka ng ilang code sa <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"up\"</title></block></xml> block at pindutin ang key habang tumatakbo ang iyong sayaw.",

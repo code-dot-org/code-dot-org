@@ -88,6 +88,26 @@ se:
             MOVES.Clown: Gangnam
             MOVES.Kick: Násti
             MOVES.ThisOrThat: Dát vai Duot
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} daga {MOVE} {DIR} vaikko man galle geardde"
+        options:
+          GROUP:
+            '"CAT"': bussát
+            '"SLOTH"': láikkeseallit
+          MOVE:
+            MOVES.Roll: Gorut Jorran
+            MOVES.ClapHigh: Spežže Bajas
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Duppalit Vulos
+            MOVES.Drop: Gahčá
+            MOVES.Floss: Flossa
+            MOVES.Fresh: Ođas
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Násti
+            MOVES.ThisOrThat: Dát vai Duot
+            '"next"': "(Boahtte)"
+            '"prev"': "(Ovddit)"
+            '"rand"': "(Sahtedohko)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} daga {MOVE} {DIR} vaikko man galle geardde"
         options:
@@ -506,8 +526,8 @@ se:
         options:
           EFFECT:
             '"rand"': "(Sahtedohko)"
-            '"circles"': Jorbbát
             '"quads"': Čiegat
+            '"circles"': Jorbbát
             '"color_cycle"': Ivnnit
             '"diamonds"': Diamánttat
             '"disco_ball"': Diskospábba
@@ -523,11 +543,11 @@ se:
             '"ripples"': Bárožat
             '"snowflakes"': Muohta
             '"text"': Lávlagiid namat
-            '"squiggles"': Squiggles
             '"galaxy"': Gomuvuohta
             '"sparkles"': Šelggonat
             '"spiral"': Spirála
             '"disco"': Njealječiegagat
+            '"squiggles"': Squiggles
             '"starburst"': Starburst
             '"stars"': Násttit
             '"music_wave"': Bárut

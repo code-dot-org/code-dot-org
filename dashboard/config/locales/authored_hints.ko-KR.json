@@ -14393,6 +14393,36 @@
         "csc_timecapsule_textstyle_2023": {
           "hint1": "드롭다운을 사용하여 다양한 색상과 효과를 선택할 수 있습니다.\n\n![](<https://images.code.org/b3cd57bafe3e5eb487d61ef846a4715c-image-1660769880438.57.55 PM.png>)"
         },
+        "dance_ai_code_at_measure": {
+          "hint1": "'AI 생성 효과' 블록을 다음과 같이 작업 공간의 '2 마디에' 이벤트에 연결합니다: \n\n[블러클리 블록][0]",
+          "hint2": "[블러클리 블록][0]  블록을 클릭하면 새로운 효과를 만드세요. "
+        },
+        "dance_ai_code_key_press": {
+          "hint1": "💡 **여전히 잘 안되나요?** 이벤트 동영상을 다시 시청하여 이벤트 작동 방식을 알아보세요. ",
+          "hint2": "💡 다음은 코드가 어떤 모습일지 보여주는 예시입니다. <xml>\n<xml xmlns=\"https://developers.google.com/blockly/xml\">\n\n  <block type=\"Dancelab_whenKey\" id=\"*R3Us3z5;rM#sBE?1zjX\" deletable=\"false\" x=\"19\" y=\"221\">\n    <field name=\"KEY\">“위로”</field>\n    <next>\n      <block type=\"Dancelab_doMoveEachLR\" id=\"*hCDocpHXqlku@f[[rK=\">\n        <field name=\"GROUP\">“곰”이</field>\n        <field name=\"MOVE\">움직입니다. DAB -1</field>\n        <field name=\"DIR\"></field>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "dance_ai_customize_effect": {
+          "Hint1": "💡 작업 공간의 <xml> <block xmlns=\"https://developers.google.com/blockly/xml\" type=\"Dancelab_ai\" id=\"*6NOt^DsApsRC-pPZKBQ\">\n  <field name=\"VALUE\">{\"inputs\":[\"cool\",\"cold\",\"wavy\"],\"backgroundEffect\":\"sparkles\",\"backgroundColor\":\"cool\",\"foregroundEffect\":\"bubbles\"}</field>\n\n</block> </xml> 블록에서 이모티콘을 클릭하여 효과를 사용자 지정합니다.",
+          "Hint2": "💡 **여전히 잘 안되나요?** 동영상을 보고 효과를 사용자 지정하는 방법을 알아보세요. ",
+          "HintEdit": "💡 A.I.가 작성한 코드를 사용하려면 코드를 표시하도록 전환한 다음 '코드 사용'을 클릭합니다. 블록이 작업 공간의 'AI 생성 효과' 블록을 대체할 것입니다. "
+        },
+        "dance_ai_dancer_and_dance_move": {
+          "HInt2": "댄서는 두 블록 모두에서 동일해야 하며 시퀸스(순서)가 중요합니다.  ",
+          "validation": "💡 다음 블록을 추가하여 첫 번째 댄서를 만들도록 <code style=\"color:white; background-color:#FFBD46\">설정</code> 합니다: \n<xml xmlns=\"https://developers.google.com/blockly/xml\">\n      <block type=\"Dancelab_makeAnonymousDanceSprite\" id=\"1\">\n        <field name=\"COSTUME\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">“CAT”\\</0></field>\n        <field name=\"LOCATION\">{x: 200, y: 200}</field>\n        <next>\n          <block type=\"Dancelab_changeMoveEachLR\" id=\"|y+CWEBlleENO5MU(?yL\">\n            <field name=\"GROUP\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">“CAT”</field>\n            <field name=\"MOVE\">“다음</field>\n            <field name=\"DIR\">”-1</field>\n          </block>\n        </next>\n      </block>\n    </statement>\n\n</xml>"
+        },
+        "dance_ai_generate_effect": {
+          "Hint2": "💡 [블러클리 블록][0]<code style=\"color:white; background-color:#FFBD46\">을 설정</code>에 연결합니다. 그런 다음 클릭하여 시작하세요.",
+          "Hint3": "💡 효과를 다시 생성하거나 이모티콘을 변경하려면 'A.I. 효과 생성' 블록을 다시 클릭하면 됩니다. "
+        },
+        "dance_ai_generate_effect_again": {
+          "Hint1": "💡 노래를 듣고 음악의 분위기에 대해 생각해 보세요. ",
+          "Hint2": "💡 [블러클리 블록][0]<code style=\"color:white; background-color:#FFBD46\">을 설정</code>에 연결합니다. 그런 다음 클릭하여 시작하세요.",
+          "Hint3": "💡 효과를 다시 생성하거나 이모티콘을 변경하려면 'A.I. 효과 생성' 블록을 다시 클릭하면 됩니다."
+        },
+        "dance_ai_try_key_press": {
+          "hint1": "💡 춤이 실행 중이지 않으면, 댄서들은 여러분의 신호에 반응하지 않을 것입니다. ",
+          "hint2": "💡 <code style=\"color:white; background-color:#FFBD46\">실행</code>을 누른 후,  <code style=\"color:white; background-color:#FFBD46\">◀</code> <code style=\"color:white; background-color:#FFBD46\">▶</code> 오른쪽 또는 왼쪽 화살표를 눌러 댄서들에게 신호를 보내세요. "
+        },
         "ecosystems_helloworld_say_2023": {
           "add_sprite": "'새 스프라이트 만들기' 블록을 클릭하고 드래그하여 'when run' 아래에 연결합니다. \n\n<xml><block type=\"when_run\" deletable=\"false\"><next><block type=\"gamelab_makeNewSpriteAnon\"><field name=\"ANIMATION_NAME\">\"bunny1_ready\"</field><value name=\"LOCATION\"><block type=\"gamelab_location_picker\" can_disconnect_from_parent=\"false\"><field name=\"LOCATION\">{\"x\":200,\"y\":200}</field></block></value></block></next></block></xml>",
           "change_location": "스프라이트 위치를 변경하기 위해, 위치 블록 상의 핀을 클릭하고 그 다음 그것을 보내고 싶은 위치를 클릭하세요.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"

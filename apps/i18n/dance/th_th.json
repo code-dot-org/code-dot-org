@@ -1,4 +1,9 @@
 {
+  "danceAiModalBack": "กลับ",
+  "danceAiModalClose": "ปิด",
+  "danceAiModalCodeButton": "โค้ด",
+  "danceAiModalExplanationButton": "สิ่งที่น่าเรียนรู้ยังมีอีก",
+  "danceAiModalStartOverButton": "เริ่มต้นใหม่",
   "danceFeedbackDidntPress": "อย่าลืมกดปุ่มลูกศรขณะที่การเต้นของคุณกำลังทำงาน",
   "danceFeedbackKeepCoding": "อย่าเพิ่งหมดกำลังใจ แล้วเลิกเขียนโค้ดเสียก่อน! มีบางอย่างยังไม่ค่อยถูกต้องนัก พยายามต่อไปนะ",
   "danceFeedbackKeyEvent": "อย่าลืมแนบโค้ดไปกับบล็อก <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"up\"</title></block></xml> แล้วกดปุ่มขณะที่การเต้นของคุณกำลังทำงาน",

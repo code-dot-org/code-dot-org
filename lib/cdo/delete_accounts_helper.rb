@@ -2,6 +2,8 @@ require_relative '../../shared/middleware/helpers/storage_id'
 require 'cdo/aws/s3'
 require 'cdo/db'
 
+# rubocop:disable CustomCops/PegasusDbUsage
+# rubocop:disable CustomCops/DashboardDbUsage
 class DeleteAccountsHelper
   class SafetyConstraintViolation < RuntimeError; end
 
@@ -374,6 +376,12 @@ class DeleteAccountsHelper
     user.authentication_options.with_deleted.order(deleted_at: :desc).each(&:really_destroy!)
   end
 
+  def purge_lti_user_identities(user)
+    @log.puts "Deleting lti user identities"
+    # Delete most recently destroyed (soft-deleted) record first
+    user.lti_user_identities.with_deleted.order(deleted_at: :desc).each(&:really_destroy!)
+  end
+
   def purge_contact_rollups(email)
     @log.puts "Deleting ContactRollups records for email #{email}"
     return unless email
@@ -422,6 +430,7 @@ class DeleteAccountsHelper
 
     user.destroy
 
+    purge_lti_user_identities(user)
     purge_teacher_feedbacks(user.id)
     clean_and_destroy_code_reviews(user.id)
     remove_census_submissions(user_email) if user_email&.present?
@@ -498,3 +507,5 @@ class DeleteAccountsHelper
       )
   end
 end
+# rubocop:enable CustomCops/PegasusDbUsage
+# rubocop:enable CustomCops/DashboardDbUsage

@@ -374,6 +374,9 @@
         "D2.Eco": {
           "description": "اقتصاد"
         },
+        "D2.His": {
+          "description": "تاریخچه"
+        },
         "D3.Claims": {
           "description": "توسعه ادعاها و استفاده از شواهد"
         },

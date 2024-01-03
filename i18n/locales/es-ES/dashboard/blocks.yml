@@ -32,6 +32,8 @@ es:
             '1.00': medio
             '2.00': grande
             '3.00': extra grande
+      Dancelab_ai:
+        text: "{IMAGE} genera efecto {VALUE} "
       Dancelab_alternateMoves:
         text: "{GROUP} alternar cada {N} compases \nentre {MOVE1} y {MOVE2}"
         options:
@@ -123,6 +125,27 @@ es:
             MOVES.Kick: Estrella
             MOVES.ThisOrThat: Esto o aquello
             MOVES.Rest: Ninguna
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} hace {MOVE} {DIR} para siempre"
+        options:
+          GROUP:
+            '"CAT"': gatos
+            '"SLOTH"': perezas
+          MOVE:
+            MOVES.Roll: Vuelta completa
+            MOVES.ClapHigh: Palmas hacia arriba
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Doble abajo
+            MOVES.Drop: Caída
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresco
+            MOVES.Clown: Clown
+            MOVES.Kick: Estrella
+            MOVES.ThisOrThat: Esto o aquello
+            MOVES.Rest: Ninguna
+            '"next"': "(Siguiente)"
+            '"prev"': "(Anterior)"
+            '"rand"': "(Al azar)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} hacer {MOVE} {DIR} para siempre"
         options:
@@ -609,14 +632,16 @@ es:
           EFFECT:
             '"none"': Ninguna
             '"rand"': "(Al azar)"
-            '"circles"': Túnel
             '"quads"': Ángulos
+            '"blooming_petals"': Florecimiento
+            '"circles"': Túnel
             '"clouds"': Nubes
             '"color_cycle"': Colores
             '"diamonds"': Diamantes
             '"disco_ball"': Bola de discoteca
             '"fireworks"': Fuegos artificiales
             '"flowers"': Flores
+            '"frosted_grid"': Marco de hielo
             '"growing_stars"': Estrellas crecientes
             '"swirl"': Hipnótico
             '"kaleidoscope"': Caleidoscopio
@@ -627,26 +652,36 @@ es:
             '"ripples"': Ondas
             '"snowflakes"': Nieve
             '"text"': Título de la canción
-            '"squiggles"': Garabatos
             '"galaxy"': Espacio
             '"sparkles"': Brillos
             '"spiral"': Espiral
             '"disco"': Cuadrados
+            '"squiggles"': Garabatos
             '"starburst"': Explosión de estrellas
             '"stars"': Estrellas
             '"music_wave"': Olas
           PALETTE:
+            '"autumn"': Otoño
             '"rave"': Blanco y negro
             '"cool"': Azules
             '"electronic"': Música electrónica
+            '"grayscale"': Escala de grises
             '"iceCream"': Helado
             '"default"': Luz
             '"neon"': Neón
             '"ocean"': Océano
             '"rainbow"': Arcoíris
+            '"roses"': Rosas
+            '"sky"': Cielo
+            '"spring"': Primavera
+            '"summer"': Verano
+            '"sunrise"': Salida del sol
+            '"sunset"': Puesta del sol
             '"tropical"': Tropical
+            '"twinkling"': Parpadeante
             '"vintage"': Vintage
             '"warm"': Rojos
+            '"winter"': Invierno
       Dancelab_setDanceSpeed:
         text: cambiar {SPRITE} velocidad de baile a {SPEED}
         options:
@@ -1748,6 +1783,15 @@ es:
         text: coordenada y de {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} vuela a {LOCATION}"
+      KatiesBlocks_goldilocks:
+        text: |2-
+           si {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"solid"': sólido
+            '"liquid"': líquido
+            '"gas"': gas
       KatiesBlocks_tumbling:
         text: cayendo
       Mikelab_addBehaviorSimple:

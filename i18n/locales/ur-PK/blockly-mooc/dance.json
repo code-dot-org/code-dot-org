@@ -1,5 +1,11 @@
 {
+  "danceAiModalCodeButton": "ضابطہ کار(کوڈ)",
+  "danceAiModalStartOverButton": "دوبارہ شروع کریں",
+  "danceAiModalExplanationButton": "مزید سیکھے",
+  "danceAiModalBack": "واپس",
+  "danceAiModalClose": "بند",
   "danceFeedbackDidntPress": "یقینی بنائیں کہ آپ کا ڈانس چلنے کے دوران، ایرو کلیدوں کو دبایا گیا ہے۔.",
+  "danceFeedbackKeepCoding": "آپ ہر اقسام کے تمام ضروری بلاکس استعمال کر رہے ہیں لیکن درست طریقہ سے نہیں۔",
   "danceFeedbackKeyEvent": "یقینی بنائیں کہ آپ نے کوئی کوڈ <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"up\"</title></block></xml> بلاک سے منسلک کیا ہے اور آپ کا ڈانس چلنے کے دوران بٹن دبائیں۔.",
   "danceFeedbackNeedBackup": "آپ کو <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml> بلاک کے ساتھ بیک اپ ڈانسرز کا ایک گروپ بنانے کی ضرورت ہے۔.",
   "danceFeedbackNeedDifferentDance": "آپ کو کوئی مختلف ڈانس استعمال کرنے کی ضرورت ہے۔.",
@@ -18,6 +24,5 @@
   "danceFeedbackUseSetSize": "اس ڈانسر کو چھوٹا کرنے کے لئے 'بیک اپ_ڈانسر2 سائز سیٹ کریں' بلاک کا استعمال کریں۔.",
   "danceFeedbackUseSetTint": "ڈانسر کی رنگت کو تبدیل کرنے کے لئے 'رنگت سیٹ کریں' بلاک استعمال کریں۔.",
   "danceFeedbackUseStartMapping": "اپنے پروگرام میں<xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> بلاک شامل کرنے کی کوشش کریں۔.",
-  "danceFeedbackKeepCoding": "آپ ہر اقسام کے تمام ضروری بلاکس استعمال کر رہے ہیں لیکن درست طریقہ سے نہیں۔",
   "measure": "پیمائش:"
 }

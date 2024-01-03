@@ -37,8 +37,6 @@ sl:
             '1.00': srednje
             '3.00': Zelo veliko
         text: nastavite {SPRITE} velikost na {SIZE}
-      Dancelab_ai:
-        text: uporabite AI {IMAGE}
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -91,6 +89,16 @@ sl:
             '"SHARK"': morski psi
             '"UNICORN"': samorogi
             sprites: vse
+          MOVE:
+            '"next"': "(Naslednja)"
+            '"prev"': "(Prejšnja)"
+            MOVES.ClapHigh: Visoko ploskajte
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': muce
           MOVE:
             '"next"': "(Naslednja)"
             '"prev"': "(Prejšnja)"
@@ -471,6 +479,8 @@ sl:
             '"rain"': dež
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}reci{TEXT1}"
+      KatiesBlocks_goldilocks:
+        text: Če
       Mikelab_changePropBy:
         options:
           PROPERTY:

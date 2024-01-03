@@ -111,6 +111,27 @@ pt:
             MOVES.Kick: Estrela
             MOVES.ThisOrThat: Isso ou Aquilo
             MOVES.Rest: Nenhum
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} executa {MOVE} {DIR} para sempre"
+        options:
+          GROUP:
+            '"CAT"': gatos
+            '"SLOTH"': preguiças
+          MOVE:
+            MOVES.Roll: Rolar
+            MOVES.ClapHigh: Bater palmas
+            MOVES.Dab: Dança dab
+            MOVES.DoubleJam: Double Jam
+            MOVES.Drop: Dança drop
+            MOVES.Floss: Dança do fio dental
+            MOVES.Fresh: Novo
+            MOVES.Clown: Palhaço
+            MOVES.Kick: Estrela
+            MOVES.ThisOrThat: Isso ou Aquilo
+            MOVES.Rest: Nenhum
+            '"next"': "(Próximo)"
+            '"prev"': "(Anterior)"
+            '"rand"': "(Aleatório)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} executa {MOVE} {DIR} para sempre"
         options:
@@ -575,8 +596,8 @@ pt:
           EFFECT:
             '"none"': Nenhum
             '"rand"': "(Aleatório)"
-            '"circles"': Túnel
             '"quads"': Ângulos
+            '"circles"': Túnel
             '"color_cycle"': Cores
             '"diamonds"': Diamantes
             '"disco_ball"': Bola de discoteca
@@ -592,11 +613,11 @@ pt:
             '"ripples"': Ondulação
             '"snowflakes"': Neve
             '"text"': Título da música
-            '"squiggles"': Rabiscos
             '"galaxy"': Espaço
             '"sparkles"': Brilhos
             '"spiral"': Espiral
             '"disco"': Quadrados
+            '"squiggles"': Rabiscos
             '"starburst"': Starburst
             '"stars"': Estrelas
             '"music_wave"': Ondas

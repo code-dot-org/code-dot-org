@@ -1,5 +1,11 @@
 {
+  "danceAiModalCodeButton": "Kode",
+  "danceAiModalStartOverButton": "Start forfra",
+  "danceAiModalExplanationButton": "Lær mere",
+  "danceAiModalBack": "Tilbage",
+  "danceAiModalClose": "Luk",
   "danceFeedbackDidntPress": "Husk at trykke på piletasterne mens din dans er i gang.",
+  "danceFeedbackKeepCoding": "Du bruger alle de nødvendige typer af blokke, men ikke på den rigtige måde.",
   "danceFeedbackKeyEvent": "Husk at tilføje en kode til <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"op\"</title></block></xml> block og tryk på knappen mens din dans kører.",
   "danceFeedbackNeedBackup": "Du skal oprette en gruppe af baggrundsdansere med <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml> blokken.",
   "danceFeedbackNeedDifferentDance": "Du skal bruge en anden dans.",
@@ -17,6 +23,5 @@
   "danceFeedbackTooManyDancers": "Vær forsigtig! Hvis du sætter ’skab en ny’ blok inde i ”hver 2 foranstaltninger”, vil du oprette en masse dansere.",
   "danceFeedbackUseSetSize": "Bruge 'sæt backup_dancer2 størrelse' blokken til at gøre denne danser mindre.",
   "danceFeedbackUseSetTint": "Brug blokken ’indstil farvetone' til at ændre en danser farvetone.",
-  "danceFeedbackUseStartMapping": "Prøv at tilføje <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"skala\"</title><title name=\"RANGE\">\"bas\"</title></block></xml> blok til dit program.",
-  "danceFeedbackKeepCoding": "Du bruger alle de nødvendige typer af blokke, men ikke på den rigtige måde."
+  "danceFeedbackUseStartMapping": "Prøv at tilføje <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"skala\"</title><title name=\"RANGE\">\"bas\"</title></block></xml> blok til dit program."
 }

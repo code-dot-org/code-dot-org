@@ -4,7 +4,7 @@ title: 编程一小时指南
 
 {{ signup_button }}
 
-# How to plan your Hour of Code
+# 如何计划你的“编程一小时”
 
 ### 参与活动，并用下面的步骤向学生介绍计算机科学。
 
@@ -33,7 +33,7 @@ title: 编程一小时指南
 
 ## 2. 探索活动和教程
 
-We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for all age groups and experience levels. It’s popular for students to try self-led tutorials, though many activities include lesson plans for teachers to guide discussion or extend the activity as well.
+我们为所有年龄段和经验水平的人们提供各种有趣的[学生指导教程]({{ urls/learn }}) 。 尽管许多活动都包括供教师指导讨论或扩展活动范围的教学计划，但学生还是很喜欢尝试自主教程。
 
 Explore the activities and decide ahead of time if you want to choose a single tutorial for all of your students, or let each child pick their own.
 

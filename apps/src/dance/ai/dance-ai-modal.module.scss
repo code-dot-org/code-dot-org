@@ -1,5 +1,6 @@
 @import 'color.scss';
 @import '../../mixins.scss';
+@import './common.scss';
 
 $ai-block-color: rgb(86 96 101);
 $ai-block-border-color: rgb(121 124 128);
@@ -7,46 +8,6 @@ $ai-block-inputs-color: rgb(63 68 75);
 $ai-block-inputs-border-color: rgba(255 255 255 / 0.6);
 $ai-modal-header-height: 50px;
 $ai-modal-border-width: 8px;
-$result-green: rgb(86 197 104);
-$result-red: rgb(235 87 87);
-
-@keyframes preview-right-to-normal {
-  0% {
-    left: 52%;
-  }
-  100% {
-    left: 50%;
-  }
-}
-
-@keyframes appear {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-// Bot head opens for 1 second after a 1 second delay.
-@keyframes bot-head-open {
-  0%, 50% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(-60deg);
-  }
-}
-
-// Bot head closes for 1 second after a 1 second delay.
-@keyframes bot-head-close {
-  0%, 50% {
-    transform: rotate(-60deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
 
 // Emoji moves across linearly but downwards with acceleration.
 @keyframes flying-emoji-x {
@@ -55,6 +16,15 @@ $result-red: rgb(235 87 87);
   }
   100% {
     left: 100px;
+  }
+}
+
+@keyframes flying-emoji-x-rtl {
+  0% {
+    left: 65px;
+  }
+  100% {
+    left: 115px;
   }
 }
 
@@ -79,9 +49,15 @@ $result-red: rgb(235 87 87);
 }
 
 .dialog {
+  @media (max-height: 580px) {
+    top: 10px;
+    transform-origin: top center;
+    transform: translateX(-50%) scale(0.85);
+  }
+
   max-width: initial !important;
   width: 824px !important;
-  height: 494px;
+  height: 508px;
   padding: 0 !important;
   background-color: $ai-block-color !important;
   border: solid 1px $ai-block-border-color;
@@ -93,6 +69,7 @@ $result-red: rgb(235 87 87);
     color: white;
     font-size: 16px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding: 0 $ai-modal-border-width;
     margin-top: $ai-modal-border-width;
@@ -125,9 +102,12 @@ $result-red: rgb(235 87 87);
       }
     }
 
-    &Right {
-      margin-left: auto;
+    &Left {
+      display: flex;
+      align-items: center;
+    }
 
+    &Right {
       .closeButton {
         background-color: initial;
         color: white;
@@ -149,33 +129,54 @@ $result-red: rgb(235 87 87);
     height: calc(100% - $ai-modal-header-height - 3 * $ai-modal-border-width);
     position: relative;
     user-select: none;
-    padding: 10px;
     box-sizing: border-box;
     border-radius: 4px;
     background-color: white;
+    overflow: hidden;
 
-    .toggleArea  {
+    .toggleArea {
       position: absolute;
       width: 40%;
-      height: 100px;
-      top: 10px;
+      top: 5px;
       left: 50%;
       text-align: center;
       transform: translateX(-50%);
+      display: flex;
+      justify-content: space-around;
+      animation: appear 0.3s;
+      margin-top: 3px;
+
+      span {
+        button {
+          &:focus-visible {
+            // Used !important since ToggleGroup uses inline styles and there's no other way to overwrite them.
+            // Didn't want to change ToggleGroup component since that might cause unexpected regressions.
+            // We agreed that once DSCO SegmentedButton will be implemented and we'll have the time/ability -
+            // we'll simply use SegmentedButton here.
+            outline: 2px solid $light_primary_500 !important;
+          }
+        }
+      }
     }
 
     .textArea {
       position: absolute;
-      width: 70%;
-      height: 50px;
-      bottom: 14px;
+      width: calc(100% - 16px);
+      top: 345px;
       text-align: center;
-      font-size: 18px;
+      font-size: 16px;
       transform: translateX(-50%);
       left: 50%;
       line-height: 25px;
-      border-top: solid 1px $neutral_light;
-      padding-top: 4px;
+      padding: 4px 0;
+      border-top: solid 1px $neutral_dark10;
+      border-bottom: solid 1px $neutral_dark10;
+      white-space: pre-wrap;
+      animation: appear 0.3s;
+
+      .text {
+        animation: appear 0.2s;
+      }
     }
 
     .inputsArea {
@@ -183,7 +184,8 @@ $result-red: rgb(235 87 87);
       width: 305px;
       height: 305px;
       top: 22px;
-      left: 320px;
+      transform: translate(-50%);
+      left: 50%;
 
       .inputsContainer {
         animation: appear 0.5s;
@@ -204,41 +206,70 @@ $result-red: rgb(235 87 87);
       width: 260px;
       height: 280px;
       top: 50px;
-      left: 0;
       pointer-events: none;
       z-index: 1;
+
+      html[dir='ltr'] & {
+        left: 0;
+      }
+
+      html[dir='rtl'] & {
+        right: 0;
+      }
 
       .flyingEmoji {
         position: absolute;
         left: 110px;
         top: 100px;
 
-        animation: flying-emoji-x 0.4s linear, flying-emoji-y 0.4s ease-in;
+        html[dir='ltr'] & {
+          animation: flying-emoji-x 0.4s linear, flying-emoji-y 0.4s ease-in;
+        }
+
+        html[dir='rtl'] & {
+          animation: flying-emoji-x-rtl 0.4s linear, flying-emoji-y 0.4s ease-in;
+        }
       }
 
       .botContainer {
         height: 260px;
 
         .botHead {
-          width: 115px;
-          left: 72px;
           position: absolute;
-          top: 23px;
-          transform-origin: bottom left;
+          width: 97px;
+          top: 34px;
           transition: transform 0.5s 0.25s;
           transform: rotate(0deg);
+          pointer-events: none;
+
+          html[dir='ltr'] & {
+            left: 81.5px;
+            transform-origin: bottom left;
+          }
+
+          html[dir='rtl'] & {
+            left: 82px;
+            transform-origin: bottom right;
+          }
 
           &Open {
-            transform: rotate(-60deg);
+            html[dir='ltr'] & {
+              transform: rotate(-60deg);
+            }
+
+            html[dir='rtl'] & {
+              transform: rotate(60deg);
+            }
           }
         }
 
         .botBody {
-          width: 130px;
+          width: 110px;
           transform: translateX(-50%);
           left: 50%;
           position: absolute;
           top: 100px;
+          pointer-events: none;
         }
 
         animation: appear 0.5s;
@@ -249,46 +280,31 @@ $result-red: rgb(235 87 87);
           transition: 0.1s ease-in-out;
         }
       }
-
-      .score {
-        position: absolute;
-        left: 40px;
-        top: 200px;
-
-        .barContainer {
-          background-color: rgb(56 55 55);
-          width: 80px;
-          height: 20px;
-          position: relative;
-
-          .barFill {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 20px;
-            background-color: rgb(16 189 233);
-            transition: width 0.4s;
-          }
-        }
-
-        .text {
-          font-size: 24px;
-          margin-top: 10px;
-        }
-      }
     }
 
     .previewArea {
       position: absolute;
-      width: 500px;
+      width: 280px;
       height: 280px;
       top: 40px;
-      left: 50%;
       transform: translateX(-50%);
       display: flex;
       align-items: center;
       margin-top: 10px;
-      animation: appear 0.7s, preview-right-to-normal 0.7s;
+      transition: left 1.5s, box-shadow 0.05s;
+      left: 50%;
+
+      &Yes {
+        box-shadow: 0 0 0 4px $yes-color;
+        border-radius: 4px;
+      }
+
+      .previewContainer {
+        animation: appear 0.3s;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
 
       .flipCard {
         position: absolute;
@@ -309,64 +325,146 @@ $result-red: rgb(235 87 87);
           }
         }
 
-        &Front, &Back {
+        &Front,
+        &Back {
           position: absolute;
           backface-visibility: hidden;
-          left: 50%;
+          top: 0;
         }
 
         &Front {
-          transform: translateX(-50%);
+          left: 0;
+          transform: translateZ(0);
         }
 
         &Back {
-          transform: rotateY(180deg) translateX(50%);
+          html[dir='ltr'] & {
+            right: 0;
+          }
+
+          html[dir='rtl'] & {
+            left: 0;
+          }
+
+          transform: rotateY(180deg);
 
           .blockPreview {
-            margin-top: 50px
+            margin-top: 50px;
           }
         }
       }
     }
 
+    .checkArea {
+      position: absolute;
+      top: 120px;
+
+      font-size: 100px;
+      color: $yes-color;
+      animation: appear 0.05s;
+
+      html[dir='ltr'] & {
+        left: 630px;
+      }
+
+      html[dir='rtl'] & {
+        left: 80px;
+      }
+    }
+
     .explanationArea {
       position: absolute;
-      display: flex;
       justify-content: center;
       width: 100%;
       height: 280px;
-      top: 5px;
+      top: 70px;
       left: 0;
+
+      .key {
+        position: absolute;
+        padding-inline-start: 15px;
+        box-sizing: border-box;
+        width: 110px;
+        border-radius: 4px;
+        border: solid $neutral_dark10 1px;
+        animation: appear 1s;
+
+        html[dir='ltr'] & {
+          right: 20px;
+        }
+
+        html[dir='rtl'] & {
+          left: 20px;
+        }
+
+        .emojiSlot {
+          display: flex;
+          align-items: center;
+          gap: 7px;
+
+          .dot {
+            height: 25px;
+            width: 25px;
+            border-radius: 4px;
+            display: inline-block;
+
+            &First {
+              background-color: $chart-first;
+            }
+
+            &Second {
+              background-color: $chart-second;
+            }
+
+            &Third {
+              background-color: $chart-third;
+            }
+          }
+        }
+      }
+
+      .visualizationContainer {
+        display: flex;
+        gap: 30px;
+        width: calc(100% - 180px);
+        margin-inline-start: 40px;
+
+        .visualizationColumn {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 20px;
+          animation: appear 1s;
+        }
+      }
     }
 
     .buttonsArea {
-      height: 44px;
       margin-top: auto;
       display: flex;
-      justify-content: flex-end;
-      flex-direction: row;
+      justify-content: space-between;
       position: absolute;
       bottom: 0;
-      left: 0;
       width: 100%;
-
-      &Left {
-        margin-right: auto;
-      }
+      padding: 3px;
+      box-sizing: border-box;
     }
 
     .buttonsAreaTop {
       position: absolute;
-      top: 0;
-      right: 0;
-      width: 30%;
       display: flex;
-      justify-content: flex-end;
+      justify-content: space-between;
+      width: 100%;
+      top: 0;
+      left: 0;
+      padding: 3px;
+      box-sizing: border-box;
     }
   }
 
   .button {
     font-size: 16px;
+    animation: appear 0.3s;
 
     &:disabled {
       pointer-events: none;
@@ -381,7 +479,25 @@ $result-red: rgb(235 87 87);
     }
 
     &Icon {
-      margin-right: 10px;
+      margin: 0;
+
+      &WithText {
+        margin: 0;
+
+        html[dir='ltr'] & {
+          margin-right: 10px;
+        }
+
+        html[dir='rtl'] & {
+          margin-left: 10px;
+        }
+      }
+    }
+
+    &WithoutText {
+      span {
+        margin: 0;
+      }
     }
   }
 }

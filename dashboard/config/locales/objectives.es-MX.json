@@ -3588,10 +3588,10 @@
           "description": "Utilice sentencias condicionales para mostrar un escenario de causa y efecto en la naturaleza."
         },
         "fc9e660e-7b37-4a84-b2a8-837fa31efbab": {
-          "description": "Analizar los efectos de demasiadas, muy pocas o apenas la cantidad correcta de algas en un ecosistema marino. "
+          "description": "Analizar los efectos de demasiadas, muy pocas o justo en la cantidad adecuada de algas en un ecosistema marino. "
         },
         "2523ed88-7219-4356-a342-5077931e97df": {
-          "description": "Referirse al artículo científico incluido para orientar sus soluciones a la simulación de sobrepesca."
+          "description": "Consulta el artículo científico incluido para orientar sus soluciones a la simulación de sobrepesca."
         },
         "8123b6d5-695d-49e4-8880-0d1f532656df": {
           "description": "Crear y utilizar una variable para realizar un seguimiento de un valor cambiante en un programa."
@@ -5905,6 +5905,15 @@
         },
         "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
           "description": "Utiliza la terminología adecuada cuando te refieras a un ratón de ordenador, un trackpad o una pantalla táctil."
+        },
+        "120d0539-1db0-452c-ab3c-e15980fbef26": {
+          "description": "Reflexionen sobre el uso de las computadoras en el proceso creativo"
+        },
+        "3d8bf8f0-1aa6-4758-9acb-f2fc35e3af5a": {
+          "description": "Utiliza la IA para seleccionar y generar efectos especiales basados en emojis para mejorar la experiencia visual de su fiesta de baile."
+        },
+        "eaa9f1b1-c83f-4cc7-aff7-c1da143706a1": {
+          "description": "Utiliza conceptos básicos de las ciencias de la computación para programar elementos interactivos que respondan a la entrada del usuario, como pulsaciones de teclas y eventos cronometrados."
         }
       }
     }

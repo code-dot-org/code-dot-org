@@ -1,4 +1,8 @@
 {
+  "danceAiModalBack": "Nazad",
+  "danceAiModalClose": "Zatvori",
+  "danceAiModalCodeButton": "Kôd",
+  "danceAiModalExplanationButton": "Doznaj više",
   "danceFeedbackDidntPress": "Pazi da pritiskaš tipke sa strelicama dok traje ples.",
   "danceFeedbackKeepCoding": "Koristiš sve potrebne vrste blokova, ali na pogrešan način.",
   "danceFeedbackKeyEvent": "Provjeri jesi li dodao neki kod u blok <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"up\"</title></block></xml> i pritisni tipku dok traje ples.",

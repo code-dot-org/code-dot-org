@@ -36,6 +36,10 @@ sq:
             '"ROBOT"': robotët
           MOVE:
             MOVES.Rest: Asnjë
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          MOVE:
+            MOVES.Rest: Asnjë
       Dancelab_changeMoveLR:
         options:
           MOVE:

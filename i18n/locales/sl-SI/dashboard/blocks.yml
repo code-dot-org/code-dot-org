@@ -36,8 +36,6 @@ sl:
           SIZE:
             '1.00': srednje
             '3.00': Zelo veliko
-      Dancelab_ai:
-        text: uporabite AI {IMAGE}
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -96,6 +94,16 @@ sl:
             MOVES.ClapHigh: Visoko ploskajte
             MOVES.Dab: Dab
             MOVES.Clown: Gangnam
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': muce
+          MOVE:
+            MOVES.ClapHigh: Visoko ploskajte
+            MOVES.Dab: Dab
+            MOVES.Clown: Gangnam
+            '"next"': "(Naslednja)"
+            '"prev"': "(Prejšnja)"
       Dancelab_changeMoveLR:
         options:
           MOVE:
@@ -637,6 +645,8 @@ sl:
             '"left"': levo
             '"right"': desno
             '"space"': vesolje
+      KatiesBlocks_goldilocks:
+        text: Če
       Mikelab_changePropBy:
         options:
           PROPERTY:

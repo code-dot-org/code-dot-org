@@ -60,6 +60,15 @@ sr:
             '"prev"': "(Претходни)"
             '"rand"': "(Насумичан)"
             MOVES.Kick: Звезда
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': мачке
+          MOVE:
+            '"next"': "(Наредни)"
+            '"prev"': "(Претходни)"
+            '"rand"': "(Насумичан)"
+            MOVES.Kick: Звезда
       Dancelab_changeMoveLR:
         options:
           MOVE:

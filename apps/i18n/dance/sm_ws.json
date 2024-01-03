@@ -1,4 +1,7 @@
 {
+  "danceAiModalClose": "tapuni",
+  "danceAiModalCodeButton": "Faailo",
+  "danceAiModalStartOverButton": "Toe Amata",
   "danceFeedbackDidntPress": "Tautuana e oomi ki au a o alu le siva",
   "danceFeedbackKeepCoding": "Faaauau pea ona faailo! O loo iai se faaletonu",
   "danceFeedbackKeyEvent": "Tautuana e faapipii se faailo i le <block type=\"Dancelab_whenKey\">\"up\"</block>polka ma oomi le ki ao faaalu le siva",

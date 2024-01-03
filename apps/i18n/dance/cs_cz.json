@@ -1,4 +1,9 @@
 {
+  "danceAiModalBack": "Zpět",
+  "danceAiModalClose": "Zavřít",
+  "danceAiModalCodeButton": "Kód",
+  "danceAiModalExplanationButton": "Zjisti více",
+  "danceAiModalStartOverButton": "Začít znovu",
   "danceFeedbackDidntPress": "Nezapomeň mačkat klávesy se šipkami, když je tanec spuštěný.",
   "danceFeedbackKeepCoding": "Používáš všechny potřebné typy bloků, ale nesprávným způsobem.",
   "danceFeedbackKeyEvent": "Ujisti se, že máš připojený nějaký kód k bloku <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"nahoru\"</title></block></xml> a stiskni klávesu, když je tanec spuštěný.",

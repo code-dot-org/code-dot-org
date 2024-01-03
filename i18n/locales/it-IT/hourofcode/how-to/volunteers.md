@@ -12,7 +12,7 @@ title: Guida pratica all'Ora del Codice per i volontari
 
 Il pensiero computazionale aiuta a coltivare capacità di risoluzione dei problemi, logica e creatività. La tecnologia sta trasformando ogni azienda del pianeta. Gli studenti oggi dovrebbero imparare a creare tecnologia, non solo a usarla.
 
-L'ora del codice è un'ora di lezione introduttiva all'informatica progettata per demistificare il "codice", mostrare che chiunque può apprenderne le basi e ampliare la partecipazione nel campo dell'informatica. Puoi contribuire ad aumentare la consapevolezza del movimento dell'informatica e fare volontariato per invogliare più studenti a provare l'informatica, in particolare le giovani donne e gli studenti provenienti da gruppi etnici e razziali storicamente emarginati.
+L'ora del codice è un'ora di lezione introduttiva all'informatica progettata per fare chiarezza sul "codice", mostrare che chiunque può apprenderne le basi e ampliare la partecipazione nel campo dell'informatica. Puoi contribuire ad aumentare la consapevolezza del movimento dell'informatica e fare volontariato per invogliare più studenti a provare l'informatica, in particolare le giovani donne e gli studenti provenienti da gruppi etnici e razziali storicamente emarginati.
 
 - [Chi può fare volontariato?](#who-can-volunteer)
 - [Perché fare volontariato?](#why-volunteer)
@@ -172,7 +172,7 @@ Dopo che gli studenti o gli ospiti hanno completato l'Ora del Codice, è il mome
 
 - [Condividi i certificati]({{ urls/certificates }}) per partecipanti e studenti.
 - [Stampa gli adesivi "Ho fatto un'Ora di Codice!""]({{ promote/resources_stickers }}) o trova altri premi e gadget sul [negozio Amazon di Code.org](https://code.org/shop).
-- Condividi le foto e i video del tuo evento dell'Ora del Codice sui social network. Usa #OradelCodice, #HourOfCode, @codeorg e @programmafuturo così anche noi possiamo condividere il tuo successo!
+- Condividi le foto e i video del tuo evento dell'Ora del Codice sui social network. Usa #HourOfCode, @codeorg, #OradelCodice e @programmafuturo così anche noi possiamo condividere il tuo successo!
 
 * * *
 

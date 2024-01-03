@@ -1,5 +1,11 @@
 {
+  "danceAiModalCodeButton": "Kóði",
+  "danceAiModalStartOverButton": "Byrja aftur",
+  "danceAiModalExplanationButton": "Nánar",
+  "danceAiModalBack": "Til baka",
+  "danceAiModalClose": "Loka",
   "danceFeedbackDidntPress": "Gættu þess að ýta á örvarlyklana á meðan dansinn er í gangi.",
+  "danceFeedbackKeepCoding": "Haltu áfram að kóða! Það er eitthvað sem þarf að laga.",
   "danceFeedbackKeyEvent": "Gættu þess að tengja einhvern kóða við `þegar keyrt` kubbinn og ýta á lykilinn á meðan dansinn er í gangi.",
   "danceFeedbackNeedBackup": "Þú þarft að búa til hóp aukadansara með <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml> kubbnum.",
   "danceFeedbackNeedDifferentDance": "Þú þarft að nota annan dans.",
@@ -18,6 +24,5 @@
   "danceFeedbackUseSetSize": "Notaðu kubbinn `stilla stærð backup_dancer2` til að minnka þann dansara.",
   "danceFeedbackUseSetTint": "Notaðu `stilla lit` kubbinn til að breyta lit dansara.",
   "danceFeedbackUseStartMapping": "Prófaðu að bæta <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> kubbnum við forritið þitt.",
-  "danceFeedbackKeepCoding": "Haltu áfram að kóða! Það er eitthvað sem þarf að laga.",
   "measure": "Taktur:"
 }

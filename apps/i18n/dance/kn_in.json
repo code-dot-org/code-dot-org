@@ -1,4 +1,9 @@
 {
+  "danceAiModalBack": "ಹಿಂದೆ",
+  "danceAiModalClose": "ಮುಚ್ಚಿ",
+  "danceAiModalCodeButton": "ಕೋಡ್",
+  "danceAiModalExplanationButton": "ಹೆಚ್ಚಿನ ಮಾಹಿತಿ",
+  "danceAiModalStartOverButton": "ಪ್ರಾರಂಭಿಸಿ",
   "danceFeedbackDidntPress": "உங்கள் நடனம் இயங்கும் போது அம்பு விசைகளை அழுத்தவும்.",
   "danceFeedbackKeepCoding": "ಕೋಡಿಂಗ್ ಮಾಡುತ್ತಿರಿ! ಏನೋ ಇನ್ನೂ ಸರಿಯಾಗಿಲ್ಲ.",
   "danceFeedbackKeyEvent": "xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\"> \"up\" </title> </block> </xml> இல் சில குறியீட்டை இணைத்துள்ளீர்கள் என்பதை உறுதிசெய்து அழுத்தவும் உங்கள் நடனம் இயங்கும் போது விசை.",

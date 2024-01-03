@@ -71,6 +71,10 @@ fr:
           title: Formation professionnelle virtuelle CSA
         self-paced-pl-csd-unit1-2023:
           title: Enseignement de la résolution de problèmes et de l'informatique
+        self-paced-pl-csd-unit2-2023:
+          title: Formation au développement Web
+        self-paced-pl-csd-unit5-2023:
+          title: Enseigner, données et société
     resources:
       curriculum/csd/2017:
         name: Programme

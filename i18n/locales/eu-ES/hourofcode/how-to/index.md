@@ -4,7 +4,7 @@ title: Hour of Code How-to Guide
 
 {{ signup_button }}
 
-# How to plan your Hour of Code
+# Nola egin zure Hour of Code
 
 ### Join the movement and introduce your students to computer science with these steps.
 
@@ -15,7 +15,7 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 - [Watch the Hour of Code how-to video](#how-to-video)
 - [Explore activities and tutorials](#explore-activities)
 - [Create your plan for the day](#create-your-plan)
-- [Promote your Hour of Code](#promote-your-hour)
+- [Sustatu zure Hour of Code](#promote-your-hour)
 - [How to start your Hour of Code strong](#how-to-start)
 - [Get coding](#code)
 - [Celebrate your students' success](#celebrate)
@@ -33,7 +33,7 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 
 ## 2. Explore activities and tutorials
 
-We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for all age groups and experience levels. It’s popular for students to try self-led tutorials, though many activities include lesson plans for teachers to guide discussion or extend the activity as well.
+Gu eskaintzen ditugu dibertsio barietate bat, [gidatutako tutorialak ikasleentzako]({{ urls/learn }}) adin guztietarako eta esperientzia mailentzako. Herrikoia da ikasleentzako, tutorialak saiatzeko haiek bakarrik, ariketa asko ariketa-plana dauzkate irakasleentzako gida-azterketa edo ariketa luzeago egiteko hala ere.
 
 Explore the activities and decide ahead of time if you want to choose a single tutorial for all of your students, or let each child pick their own.
 
@@ -54,9 +54,9 @@ Explore the activities and decide ahead of time if you want to choose a single t
 
 <img src="/images/fit-600/group_ipad.jpg" />
 
-### Pick a day and time
+### Aukeratu eguna eta denbora
 
-People around the world join in the Hour of Code celebration during CS Education Week (December 5-11) when the latest tutorials and activities are released. But you can do an Hour of Code any day of the year!
+People around the world join in the Hour of Code celebration during CS Education Week (December 5-11) when the latest tutorials and activities are released. Baina zuk egin ahal duzu Hour of Code edozein urteko egunean!
 
 * * *
 
@@ -64,11 +64,11 @@ People around the world join in the Hour of Code celebration during CS Education
 
 ## 4. Promote your Hour of Code
 
-Now that you've planned your event, it's time to start promoting it!
 
-### Tell your School and Community
 
-Promote the Hour of Code to other teachers who may want to join in on the fun! This is also a great opportunity to reach out to your school’s PTSA or share in parent newsletters, letting them know their children may come home wanting to try more activities and tutorials!
+### Esan zure Eskola eta Komunitateari
+
+Sustatu Hour of Code beste irakasleei nor agian jokatu nahi du dibertsioan! This is also a great opportunity to reach out to your school’s PTSA or share in parent newsletters, letting them know their children may come home wanting to try more activities and tutorials!
 
 ### Let Volunteers Know by Registering Your Event
 
@@ -92,10 +92,10 @@ Once your Hour of Code celebration has arrived, make sure you start your event s
 
 Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students by talking about the breadth of possibilities in computer science. There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
 
-Show an inspirational video:
+Aurkeztu bideo inspirazio bat:
 
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh. (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available)
-- Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Code.org abiarazteko bideo originala, Bill Gates, Mark Zuckerberg, eta NBA izarra Chris Boshrekin. (Daude [minutu bat](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minutu](https://www.youtube.com/watch?v=nKIu9yen5nc), eta [9 minutuko](https://www.youtube.com/watch?v=dU1xS07N-FA) bertsioak)
+- Aurkitu inspirazio [baliabide]({{ urls/inspire }}) eta [bideo](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) gehiago.
 
 It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
 
@@ -137,7 +137,7 @@ What if a student finishes early?
 [/col-33]
 
 - [Print certificates]({{ urls/certificates }}) for your students.
-- [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
+- [Inprimatu "Hour of Code egin dut!]({{ urls/promote_stickers }}) stickerrak zure ikasleentzako.
 - Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 * * *

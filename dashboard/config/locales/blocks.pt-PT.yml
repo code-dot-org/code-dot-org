@@ -112,6 +112,27 @@ pt:
             MOVES.Roll: Rolar
             MOVES.ThisOrThat: Isso ou Aquilo
         text: "{GROUP} executa {MOVE} {DIR} para sempre"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': gatos
+            '"SLOTH"': preguiças
+          MOVE:
+            '"next"': "(Próximo)"
+            '"prev"': "(Anterior)"
+            '"rand"': "(Aleatório)"
+            MOVES.ClapHigh: Bater palmas
+            MOVES.Clown: Palhaço
+            MOVES.Dab: Dança dab
+            MOVES.DoubleJam: Double Jam
+            MOVES.Drop: Dança drop
+            MOVES.Floss: Dança do fio dental
+            MOVES.Fresh: Novo
+            MOVES.Kick: Estrela
+            MOVES.Rest: Nenhum
+            MOVES.Roll: Rolar
+            MOVES.ThisOrThat: Isso ou Aquilo
+        text: "{GROUP} executa {MOVE} {DIR} para sempre"
       Dancelab_changeMoveLR:
         options:
           MOVE:

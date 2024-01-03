@@ -46,6 +46,10 @@ ka:
             '"ROBOT"': რობოტები
           MOVE:
             MOVES.Rest: არცერთი
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          MOVE:
+            MOVES.Rest: არცერთი
       Dancelab_changeMoveLR:
         options:
           MOVE:
@@ -840,6 +844,12 @@ ka:
           NUM:
             '25': დაბალი
             '75': მაღალი
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': მყარი
+            '"liquid"': სითხე
+            '"gas"': გაზი
       Mikelab_addBehaviorSimple:
         text: სპრაიტი {SPRITE} იწყება {BEHAVIOR}
       Mikelab_changePropBy:

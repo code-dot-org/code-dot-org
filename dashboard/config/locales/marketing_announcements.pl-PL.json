@@ -58,6 +58,15 @@
             "buttonText": "Dowiedz się więcej",
             "title": "Dodaj nowy kurs informatyki, wygraj $10,000!"
           },
+          "hoc-2023": {
+            "body": "Dołącz do milionów ludzi na całym świecie organizując Godzinę Kodowania ze sztuczną inteligencją lub bez niej i ucząc się, jak działa sztuczna inteligencja. Każdy, gdziekolwiek może to zrobić. Nie potrzeba doświadczenia.",
+            "buttonText": "Dowiedz się więcej",
+            "title": "Godzina Kodowania: Kreatywność dzięki sztucznej inteligencji"
+          },
+          "hoc-2023-dance-ai": {
+            "buttonText": "Dowiedz się więcej",
+            "title": "Potańcówka: edycja AI"
+          },
           "hoc-more": {
             "body": "Strona Godziny Kodowania zawiera ponad 500 aktywności informatycznych opracowanych przez Code.org i naszych partnerów dla osób w każdym wieku i na każdym poziomie.",
             "buttonText": "Zobacz aktywności",
@@ -72,6 +81,11 @@
             "body": "Zapisz swoją klasę, aby wypróbować jedno z ponad 115 nowych aktywności w Godzinie Kodowania (7-13 grudnia). W tym roku będziemy badać, w jaki sposób możemy wykorzystać informatykę i technologie, takie jak sztuczna inteligencja, aby pomóc w budowaniu społeczeństwa, w którym chcemy żyć. Zarejestruj się już dziś!",
             "buttonText": "Dołącz do nas",
             "title": "Nadchodzi Godzina Kodowania"
+          },
+          "state-of-cs-2023": {
+            "body": "Sprawdź najnowsze dane dotyczące krajowej i stanowej polityki w zakresie edukacji informatycznej, w tym trendy polityczne, mapy, podsumowania stanów i dane dotyczące wdrażania.",
+            "buttonText": "Przeczytaj raport",
+            "title": "2023 Stan edukacji informatycznej"
           },
           "superhero": {
             "body": "Dołącz do naszego wysoce wspierającego programu rozwoju zawodowego dla nauczycieli.",

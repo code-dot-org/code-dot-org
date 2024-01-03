@@ -1,4 +1,8 @@
 {
+  "danceAiModalBack": "Tilbake",
+  "danceAiModalClose": "Lukk",
+  "danceAiModalCodeButton": "Kode",
+  "danceAiModalExplanationButton": "Lær mer",
   "danceFeedbackDidntPress": "Hold piltasten imens dansen kjører.",
   "danceFeedbackKeepCoding": "Fortsett kodingen! Men det er noe som fortsatt ikke stemmer.",
   "danceFeedbackKeyEvent": "Pass på at du fester kode til <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"opp\"</title></block></xml>-blokken og trykk på \"pil opp\"-knappen mens dansen din kjører.",
