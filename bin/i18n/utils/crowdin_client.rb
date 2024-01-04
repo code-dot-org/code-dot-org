@@ -131,6 +131,7 @@ module I18n
             storageId: crowdin_storage_id,
           )['data']
         else
+          # `mutex` prevents simultaneous creation of the same directory in multi-threaded processing
           crowdin_directory = mutex.synchronize {source_directory File.dirname(file_path)}
 
           request(
@@ -165,6 +166,8 @@ module I18n
         File.basename(source_path).remove(File::SEPARATOR)
       end
 
+      # Retrieves an existing Crowdin source directory or creates a new one if not found
+      # Stores the directory data in an instance variable to avoid unnecessary API calls
       def source_directory(dir_path)
         @source_directories ||= {}
 
