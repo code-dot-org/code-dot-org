@@ -68,7 +68,9 @@ module I18n
 
           crowdin_directory = crowdin_dirs.find {|crowdin_dir| crowdin_dir.dig('data', 'path') == crowdin_dir_path}
 
-          crowdin_directory || crowdin_dirs.size < MAX_ITEMS_COUNT ? break : request_offset += MAX_ITEMS_COUNT
+          break if crowdin_directory || crowdin_dirs.size < MAX_ITEMS_COUNT
+
+          request_offset += MAX_ITEMS_COUNT
         end
 
         crowdin_directory&.dig('data')
