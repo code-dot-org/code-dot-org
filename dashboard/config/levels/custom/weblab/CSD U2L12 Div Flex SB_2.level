@@ -1,0 +1,21 @@
+<Weblab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 58,
+  "created_at": "2024-01-04T01:06:15.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "validation_enabled": "true",
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "mini_rubric": "false",
+    "submittable": "false",
+    "start_sources": "              {\r\n  \"files\": [\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\n<html>\\n  <head>\\n    <link rel=\\\"stylesheet\\\" href=\\\"style.css\\\">\\n  </head>\\n  <body>\\n    \\n    <!-- Add a div container with a class attribute around the 3 paragraph tags -->\\n\\n      <p>1</p>\\n      <p>2</p>\\n      <p>3</p>\\n    \\n    \\n  </body>\\n</html>\"\r\n    },\r\n    {\r\n      \"name\": \"style.css\",\r\n      \"data\": \".container {\\n  /* We gave the div container a background color so you can see how the items are positioned within it */\\n  background: #b691d6;\\n  \\n  /* We first create a flex layout context */\\n\\n\\n  /* Then we define the flow direction \\n  and if we allow the items to wrap */\\n\\n}\\n\\n/* We styled the paragraphs to look like boxes so that you can learn what each Flex property does */\\np{\\n  background: #ffb447;\\n  width: 200px;\\n  height:200px;\\n  border-style: solid;\\n  text-align: center;\\n  font-size: 36px;\\n}\"\r\n    }\r\n  ]\r\n}\r\n            ",
+    "hide_share_and_remix": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-01-04 01:09:57 +0000\",\"changed\":[\"published\",\"validation_enabled\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab>

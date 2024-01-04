@@ -1,10 +1,9 @@
-name 'CSC-SelfPaced-debugging2_2023_K5CSConcepts'
+name 'pl-k5-2debugging2_2023_K5CSConcepts'
 title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Great job! You just debugged a program! 
-## What is debugging?
+# Debugging
 
 
 In computer science, when we talk about **debugging**, we mean finding and fixing problems in computer programs. It's like being a detective for computers. We look at the code, we figure out what's going wrong so we can make the program work just the way we want it to. Bugs, or **problems in our code**, are common and expected. Don't feel bad if your code doesn't work correctly the first time. Coding and degugging help build **persistance**. Persistence works best when you try things many different ways, many different times. 
@@ -24,7 +23,7 @@ In computer science, when we talk about **debugging**, we mean finding and fixin
 
 For more on debugging, watch <a href= "https://www.youtube.com/watch?v=auv10y-dN4s" target="blank" rel="noopener noreferrer"> this</a> video. 
 
-## Let’s try debugging again. 
+##Let’s try debugging. 
 
 
 
