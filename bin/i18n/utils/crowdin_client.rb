@@ -93,7 +93,9 @@ module I18n
 
           crowdin_file = crowdin_files.find {|file| file.dig('data', 'path') == crowdin_file_path}
 
-          crowdin_file || crowdin_files.size < MAX_ITEMS_COUNT ? break : request_offset += MAX_ITEMS_COUNT
+          break if crowdin_file || crowdin_files.size < MAX_ITEMS_COUNT
+
+          request_offset += MAX_ITEMS_COUNT
         end
 
         crowdin_file&.dig('data')
