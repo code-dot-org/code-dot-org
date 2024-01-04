@@ -138,6 +138,7 @@ class UnconnectedMusicView extends React.Component {
       showingVideo: !!this.props.inIncubator,
       loadedLibrary: false,
       currentLibraryName: null,
+      hasLoadedInitialSounds: false,
     };
 
     // If in incubator, we need to manually setup Blockly for Music Lab.
@@ -183,9 +184,13 @@ class UnconnectedMusicView extends React.Component {
       );
     }
 
-    // Stop playback when changing levels
+    // When changing levels, stop playback and reset the initial sounds loaded flag
+    // since a new set of sounds will be loaded on the next level.
     if (prevProps.currentLevelIndex !== this.props.currentLevelIndex) {
       this.stopSong();
+      this.setState({
+        hasLoadedInitialSounds: false,
+      });
     }
 
     if (
@@ -442,7 +447,34 @@ class UnconnectedMusicView extends React.Component {
     this.props.addOrderedFunctions({
       orderedFunctions: this.sequencer.getOrderedFunctions(),
     });
-    this.player.preloadSounds(this.sequencer.getPlaybackEvents());
+
+    this.player.preloadSounds(
+      this.sequencer.getPlaybackEvents(),
+      (loadTimeMs, soundsLoaded) => {
+        // Report load time metrics
+        Lab2Registry.getInstance()
+          .getMetricsReporter()
+          .reportLoadTime('PreloadSoundLoadTime', loadTimeMs, [
+            {
+              name: 'LoadType',
+              value: this.state.hasLoadedInitialSounds
+                ? 'Subsequent'
+                : 'Initial',
+            },
+          ]);
+
+        if (!this.state.hasLoadedInitialSounds) {
+          Lab2Registry.getInstance().getMetricsReporter().logInfo({
+            event: 'InitialSoundsLoaded',
+            soundsLoaded,
+            loadTimeMs,
+          });
+          this.setState({
+            hasLoadedInitialSounds: true,
+          });
+        }
+      }
+    );
   };
 
   saveCode = (forceSave = false) => {

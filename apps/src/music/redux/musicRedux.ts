@@ -168,7 +168,7 @@ const musicSlice = createSlice({
       state.orderedFunctions.push(...action.payload.orderedFunctions);
     },
     setSoundLoadingProgress: (state, action: PayloadAction<number>) => {
-      state.soundLoadingProgress = action.payload;
+      state.soundLoadingProgress = Math.round(action.payload * 100) / 100;
     },
     setStartPlayheadPosition: (state, action: PayloadAction<number>) => {
       state.startingPlayheadPosition = action.payload;

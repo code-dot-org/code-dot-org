@@ -9,6 +9,7 @@ import {getTranposedNote, Key} from '../utils/Notes';
 import {Effects} from './interfaces/Effects';
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {LoadFinishedCallback} from '../types';
 
 // Using require() to import JS in TS files
 const constants = require('../constants');
@@ -24,21 +25,20 @@ const DEFAULT_KEY = Key.C;
  */
 export default class MusicPlayer {
   private readonly metricsReporter: LabMetricsReporter;
-  private bpm: number;
-  private key: Key;
-  private samplePlayer: SamplePlayer;
+  private readonly samplePlayer: SamplePlayer;
+
+  private bpm: number = DEFAULT_BPM;
+  private key: Key = DEFAULT_KEY;
 
   constructor(
     bpm: number = DEFAULT_BPM,
     key: Key = DEFAULT_KEY,
+    samplePlayer: SamplePlayer = new SamplePlayer(),
     metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
   ) {
-    this.samplePlayer = new SamplePlayer();
-    this.updateConfiguration(bpm, key);
-    this.bpm = this.validateBpm(bpm);
-    this.key = this.validateKey(key);
-    this.samplePlayer = new SamplePlayer();
+    this.samplePlayer = samplePlayer;
     this.metricsReporter = metricsReporter;
+    this.updateConfiguration(bpm, key);
   }
 
   updateConfiguration(bpm?: number, key?: Key) {
@@ -75,13 +75,20 @@ export default class MusicPlayer {
    * Pre-load sounds for playback
    */
   // TODO: Metrics?
-  preloadSounds(events: PlaybackEvent[]) {
-    const sampleIds = events
-      .map(event => this.convertEventToSamples(event))
-      .flat()
-      .map(sampleEvent => sampleEvent.sampleId);
+  preloadSounds(
+    events: PlaybackEvent[],
+    onLoadFinished?: LoadFinishedCallback
+  ) {
+    const sampleIds = Array.from(
+      new Set(
+        events
+          .map(event => this.convertEventToSamples(event))
+          .flat()
+          .map(sampleEvent => sampleEvent.sampleId)
+      )
+    );
 
-    this.samplePlayer.loadSounds(sampleIds);
+    this.samplePlayer.loadSounds(sampleIds, onLoadFinished);
   }
 
   /**

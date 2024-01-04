@@ -1,4 +1,4 @@
-import React, {useCallback} from 'react';
+import React, {memo, useCallback} from 'react';
 import moduleStyles from './timeline.module.scss';
 import classNames from 'classnames';
 import TimelineSampleEvents from './TimelineSampleEvents';
@@ -172,4 +172,4 @@ const Timeline = () => {
 
 Timeline.propTypes = {};
 
-export default Timeline;
+export default memo(Timeline);
