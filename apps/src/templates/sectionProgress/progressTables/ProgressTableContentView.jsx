@@ -173,7 +173,7 @@ export default class ProgressTableContentView extends React.Component {
         style={{width: 'fit-content'}}
       >
         <Sticky.Header
-          style={{overflow: 'hidden'}}
+          style={{overflow: 'unset'}}
           ref={r => (this.header = r && r.getRef())}
           tableBody={this.body}
           headerRows={headerRows}
@@ -184,8 +184,7 @@ export default class ProgressTableContentView extends React.Component {
           rowKey={'id'}
           onScroll={this.props.onScroll}
           style={{
-            overflowX: 'scroll',
-            overflowY: 'auto',
+            overflow: 'unset',
             maxHeight: parseInt(styleConstants.MAX_BODY_HEIGHT),
           }}
           ref={r => {

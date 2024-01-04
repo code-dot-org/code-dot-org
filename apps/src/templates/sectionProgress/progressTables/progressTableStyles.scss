@@ -5,9 +5,6 @@
 .progress-table {
   table {
     table-layout: fixed;
-    border: 1px solid;
-    border-color: $border-gray;
-    border-collapse: separate;
   }
   th {
     background-color: $table-header;
@@ -54,6 +51,9 @@
     }
   }
   .student-list {
+    background: white;
+    border: 1px solid $border-gray;
+    z-index: 1;
     table,
     th,
     td {
@@ -95,6 +95,7 @@
     background-color: $background_gray;
   }
   .content-view {
+    border: 1px solid $border-gray;
     thead,
     tbody {
       td {

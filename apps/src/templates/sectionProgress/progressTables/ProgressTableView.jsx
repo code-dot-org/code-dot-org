@@ -406,6 +406,7 @@ const styles = {
     paddingInlineStart: parseInt(
       progressTableStyleConstants.STUDENT_LIST_WIDTH
     ),
+    overflow: 'auto',
   },
 };
 
