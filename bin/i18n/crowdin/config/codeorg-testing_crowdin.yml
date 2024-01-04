@@ -1,9 +1,8 @@
 #
 # Your crowdin's credentials
 #
-"project_identifier" : "codeorg-testing"
 "project_id" : "346087"
-"base_path" : "i18n/locales/source"
+"base_path_env": "I18N_SOURCE_DIR"
 "preserve_hierarchy": true
 
 # API Credentials must be loaded from a separate identity file. See
