@@ -1037,11 +1037,15 @@ exports.createJsWrapperBlockCreator = function (
     const blockName = `${pool}_${name || func}`;
     if (eventLoopBlock && args.filter(arg => arg.statement).length === 0) {
       // If the eventloop block doesn't explicitly list its statement inputs,
-      // just tack one onto the end
-      args.push({
+      // just tack one onto the end.
+      let argsCopy = [...args];
+      // argsCopy is used to avoid a 'TypeError: Cannot add property 2, object is not extensible'
+      // that occurs for lab2 labs since `levelProperties` for lab2 is stored in Redux.
+      argsCopy.push({
         name: 'DO',
         statement: true,
       });
+      args = argsCopy;
     }
     const inputs = [...args];
     if (methodCall && !thisObject) {
