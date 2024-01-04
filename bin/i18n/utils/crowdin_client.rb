@@ -11,7 +11,7 @@ module I18n
       PROJECT_IDS = CDO.crowdin_project_ids.freeze
       MAX_ITEMS_COUNT = Crowdin::Web::FetchAllExtensions::MAX_ITEMS_COUNT_PER_REQUEST.freeze
       REQUEST_RETRY_ATTEMPTS = 2 # Number of retries for a failed request
-      REQUEST_RETRY_DELAY = 2 # Number of seconds to retry a failed request
+      REQUEST_RETRY_DELAY = 2 # Number of seconds to wait before retrying a failed request
       RETRIABLE_ERRORS = [
         '408 Request Timeout',
         '429 Too Many Requests',
