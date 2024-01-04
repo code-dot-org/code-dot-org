@@ -2,6 +2,7 @@ import GoogleBlockly from 'blockly/core';
 import msg from '@cdo/locale';
 import {Themes, MenuOptionStates, BLOCKLY_THEME} from '../constants.js';
 import LegacyDialog from '../../code-studio/LegacyDialog';
+import experiments from '@cdo/apps/util/experiments';
 
 const dark = 'dark';
 
@@ -249,9 +250,13 @@ function registerThemes(themes) {
 export function registerHelp() {
   const helpOption = {
     displayText() {
-      return 'Get help with this block';
+      return msg.getBlockDocs();
     },
     preconditionFn(scope) {
+      // This option is limited to an experiment until SL documentation is updated.
+      if (!experiments.isEnabled(experiments.SPRITE_LAB_DOCS)) {
+        return 'hidden';
+      }
       const block = scope.block;
       const url =
         typeof block.helpUrl === 'function' ? block.helpUrl() : block.helpUrl;
