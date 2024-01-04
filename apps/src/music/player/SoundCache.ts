@@ -1,17 +1,24 @@
-import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import {fetchSignedCookies} from '@cdo/apps/utils';
 import {baseAssetUrl} from '../constants';
 import MusicLibrary from './MusicLibrary';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
+import {LoadFinishedCallback} from '../types';
 
 const restrictedSoundUrlPath = '/restricted/musiclab/';
 
 class SoundCache {
   private readonly audioContext: AudioContext;
+  private readonly metricsReporter: LabMetricsReporter;
   private audioBuffers: {[id: string]: AudioBuffer};
   private hasLoadedSignedCookies: boolean;
 
-  constructor(audioContext: AudioContext = new AudioContext()) {
+  constructor(
+    audioContext: AudioContext = new AudioContext(),
+    metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
+  ) {
     this.audioContext = audioContext;
+    this.metricsReporter = metricsReporter;
     this.audioBuffers = {};
     this.hasLoadedSignedCookies = false;
   }
@@ -30,7 +37,7 @@ class SoundCache {
   async loadSounds(
     paths: string[],
     callbacks: {
-      onLoadFinished?: (loadTimeMs: number) => void;
+      onLoadFinished?: LoadFinishedCallback;
       updateLoadProgress?: (progress: number) => void;
     } = {}
   ): Promise<void> {
@@ -54,11 +61,14 @@ class SoundCache {
     }
 
     if (onLoadFinished) {
-      onLoadFinished(Date.now() - startTime);
+      onLoadFinished(
+        Date.now() - startTime,
+        paths.length - failedSounds.length
+      );
     }
 
     if (failedSounds.length > 0) {
-      Lab2MetricsReporter.logError('Error loading sounds', undefined, {
+      this.metricsReporter.logError('Error loading sounds', undefined, {
         count: failedSounds.length,
         failedSounds: failedSounds.join(','),
       });
@@ -73,6 +83,7 @@ class SoundCache {
     if (this.audioBuffers[path]) {
       return this.audioBuffers[path];
     }
+    const startTime = Date.now();
 
     const url = await this.getUrl(path);
     if (!url) {
@@ -84,6 +95,11 @@ class SoundCache {
     const arrayBuffer = await response.arrayBuffer();
     const audioBuffer = await this.audioContext.decodeAudioData(arrayBuffer);
     this.audioBuffers[path] = audioBuffer;
+    // Report load time for a single sound
+    this.metricsReporter.reportLoadTime(
+      'SoundCache.SingleSoundLoadTime',
+      Date.now() - startTime
+    );
     return audioBuffer;
   }
 
@@ -94,7 +110,7 @@ class SoundCache {
   private async getUrl(path: string): Promise<string | null> {
     const library = MusicLibrary.getInstance();
     if (!library) {
-      Lab2MetricsReporter.logWarning('Library not loaded. Cannot get URL.');
+      this.metricsReporter.logWarning('Library not loaded. Cannot get URL.');
       return null;
     }
 
@@ -112,7 +128,7 @@ class SoundCache {
           this.hasLoadedSignedCookies = true;
         }
       } catch (error) {
-        Lab2MetricsReporter.logError(
+        this.metricsReporter.logError(
           'Error loading signed cookies',
           error as Error
         );

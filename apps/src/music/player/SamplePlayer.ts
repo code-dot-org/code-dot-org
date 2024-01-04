@@ -3,6 +3,7 @@ import {Effects} from './interfaces/Effects';
 import SoundCache from './SoundCache';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import SoundPlayer from './SoundPlayer';
+import {LoadFinishedCallback} from '../types';
 
 // Multiplied by the duration of a single beat to determine the length of
 // time to fade out a sound, if trimming to a specific duration. This results
@@ -40,14 +41,16 @@ export default class SamplePlayer {
   private updateLoadProgress: ((value: number) => void) | undefined;
 
   constructor(
-    metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
+    metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter(),
+    soundCache: SoundCache = new SoundCache(),
+    soundPlayer: SoundPlayer = new SoundPlayer()
   ) {
+    this.metricsReporter = metricsReporter;
+    this.soundCache = soundCache;
+    this.soundPlayer = soundPlayer;
     this.playingSamples = [];
     this.isPlaying = false;
     this.startPlayingAudioTime = -1;
-    this.metricsReporter = metricsReporter;
-    this.soundCache = new SoundCache();
-    this.soundPlayer = new SoundPlayer();
   }
 
   setUpdateLoadProgress(updateLoadProgress: (value: number) => void) {
@@ -69,37 +72,34 @@ export default class SamplePlayer {
    * @param sampleEventList samples to play
    * @param playTimeOffsetSeconds the number of seconds to offset playback by.
    */
-  startPlayback(
+  async startPlayback(
     sampleEventList: SampleEvent[],
     playTimeOffsetSeconds?: number
   ) {
-    this.loadSounds(sampleEventList.map(event => event.sampleId)).then(() =>
-      this.startInternal(sampleEventList, playTimeOffsetSeconds)
-    );
+    await this.loadSounds(sampleEventList.map(event => event.sampleId));
+    this.startInternal(sampleEventList, playTimeOffsetSeconds);
   }
 
-  previewSample(sampleId: string, onStop?: () => void) {
+  async previewSample(sampleId: string, onStop?: () => void) {
     this.cancelPreviews();
 
-    this.soundCache
-      .loadSound(sampleId)
-      .then(audioBuffer => {
-        if (!audioBuffer) {
-          this.metricsReporter.logError('Error loading sound', undefined, {
-            sound: sampleId,
-          });
-          return;
-        }
+    try {
+      const audioBuffer = await this.soundCache.loadSound(sampleId);
+      if (audioBuffer) {
         this.soundPlayer.playSound(audioBuffer, PREVIEW_GROUP, 0, onStop);
-      })
-      .catch(error => {
-        this.metricsReporter.logError('Error loading sound', error as Error, {
+      } else {
+        this.metricsReporter.logError('Error loading sound', undefined, {
           sound: sampleId,
         });
+      }
+    } catch (error) {
+      this.metricsReporter.logError('Error loading sound', error as Error, {
+        sound: sampleId,
       });
+    }
   }
 
-  previewSamples(events: SampleEvent[], onStop?: () => void) {
+  async previewSamples(events: SampleEvent[], onStop?: () => void) {
     this.cancelPreviews();
 
     let counter = 0;
@@ -112,7 +112,7 @@ export default class SamplePlayer {
         }
       : undefined;
 
-    this.loadSounds(events.map(event => event.sampleId));
+    await this.loadSounds(events.map(event => event.sampleId));
 
     events.forEach(event => {
       const audioBuffer = this.soundCache.getSound(event.sampleId);
@@ -223,7 +223,7 @@ export default class SamplePlayer {
     }
   }
 
-  async loadSounds(sampleIds: string[], onLoadFinished?: () => void) {
+  async loadSounds(sampleIds: string[], onLoadFinished?: LoadFinishedCallback) {
     await this.soundCache.loadSounds(sampleIds, {
       updateLoadProgress: this.updateLoadProgress,
       onLoadFinished,
