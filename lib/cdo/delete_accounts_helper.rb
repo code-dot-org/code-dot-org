@@ -288,16 +288,6 @@ class DeleteAccountsHelper
     @log.puts "Removed #{record_count} EmailPreference" if record_count > 0
   end
 
-  # Removes signature and school_id from applications for this user
-  # @param [User] user
-  def anonymize_circuit_playground_discount_application(user)
-    @log.puts "Anonymizing CircuitPlaygroundDiscountApplication"
-    if user.circuit_playground_discount_application
-      user.circuit_playground_discount_application.anonymize
-      @log.puts "Anonymized 1 CircuitPlaygroundDiscountApplication"
-    end
-  end
-
   def purge_teacher_feedbacks(user_id)
     @log.puts "Removing TeacherFeedback"
 
@@ -434,7 +424,6 @@ class DeleteAccountsHelper
     clean_and_destroy_code_reviews(user.id)
     remove_census_submissions(user_email) if user_email&.present?
     remove_email_preferences(user_email) if user_email&.present?
-    anonymize_circuit_playground_discount_application(user)
     clean_level_source_backed_progress(user.id)
     clean_pegasus_forms_for_user(user)
     delete_project_backed_progress(user)

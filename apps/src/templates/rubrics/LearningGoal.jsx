@@ -42,10 +42,14 @@ export default function LearningGoal({
   setFeedbackAdded,
   aiEvalInfo,
 }) {
+  const STATUS = Object.freeze({
+    NOT_STARTED: 0,
+    IN_PROGRESS: 1,
+    FINISHED: 2,
+    ERROR: 3,
+  });
   const [isOpen, setIsOpen] = useState(false);
-  const [isAutosaving, setIsAutosaving] = useState(false);
-  const [autosaved, setAutosaved] = useState(false);
-  const [errorAutosaving, setErrorAutosaving] = useState(false);
+  const [autosaveStatus, setAutosaveStatus] = useState(STATUS.NOT_STARTED);
   const [learningGoalEval, setLearningGoalEval] = useState(null);
   const [displayFeedback, setDisplayFeedback] = useState('');
   const [displayUnderstanding, setDisplayUnderstanding] =
@@ -88,9 +92,7 @@ export default function LearningGoal({
   };
 
   const autosave = () => {
-    setAutosaved(false);
-    setIsAutosaving(true);
-    setErrorAutosaving(false);
+    setAutosaveStatus(STATUS.IN_PROGRESS);
     const bodyData = JSON.stringify({
       studentId: studentLevelInfo.user_id,
       learningGoalId: learningGoal.id,
@@ -106,16 +108,14 @@ export default function LearningGoal({
       }
     )
       .then(() => {
-        setIsAutosaving(false);
-        setAutosaved(true);
+        setAutosaveStatus(STATUS.FINISHED);
         if (!feedbackAdded) {
           setFeedbackAdded(true);
         }
       })
       .catch(error => {
-        console.log(error);
-        setIsAutosaving(false);
-        setErrorAutosaving(true);
+        console.error(error);
+        setAutosaveStatus(STATUS.ERROR);
       });
     clearTimeout(autosaveTimer.current);
   };
@@ -161,9 +161,7 @@ export default function LearningGoal({
     });
     setDisplayUnderstanding(radioButtonData);
     understandingLevel.current = radioButtonData;
-    if (!isAutosaving) {
-      autosave();
-    }
+    autosave();
   };
 
   const renderAutoSaveTextbox = () => {
@@ -180,16 +178,16 @@ export default function LearningGoal({
             disabled={!canProvideFeedback}
           />
         </label>
-        {isAutosaving ? (
+        {autosaveStatus === STATUS.IN_PROGRESS ? (
           <span className={style.autosaveMessage}>{i18n.saving()}</span>
         ) : (
-          autosaved && (
+          autosaveStatus === STATUS.FINISHED && (
             <span id="ui-autosaveConfirm" className={style.autosaveMessage}>
               <FontAwesome icon="circle-check" /> {i18n.savedToGallery()}
             </span>
           )
         )}
-        {errorAutosaving && (
+        {autosaveStatus === STATUS.ERROR && (
           <span className={style.autosaveMessage}>
             {i18n.feedbackSaveError()}
           </span>
@@ -290,6 +288,7 @@ export default function LearningGoal({
             radioButtonCallback={radioButtonCallback}
             submittedEvaluation={submittedEvaluation}
             isStudent={isStudent}
+            isAutosaving={autosaveStatus === STATUS.IN_PROGRESS}
           />
           {learningGoal.tips && !isStudent && (
             <div>

@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-12-15 16:54:51 UTC",
+    "serialized_at": "2024-01-03 18:45:06 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -641,6 +641,27 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-k5-2debugging2_2023_K5CSConcepts"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-2",
+        "activity_section.key": "94ba6b14-ba59-4213-8f3f-03e4737f36ac"
+      },
+      "level_keys": [
+        "pl-k5-2debugging2_2023_K5CSConcepts"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "pl-k5-2_bugs_events-debug_2024"
         ]
@@ -660,8 +681,8 @@
       ]
     },
     {
-      "chapter": 17,
-      "position": 7,
+      "chapter": 18,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -684,11 +705,14 @@
       ]
     },
     {
-      "chapter": 18,
-      "position": 8,
+      "chapter": 19,
+      "position": 9,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-k5-2_reflect_events_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -705,7 +729,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -729,7 +753,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -753,7 +777,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -777,7 +801,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -801,7 +825,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -825,19 +849,43 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 6,
-      "activity_section_position": 1,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "pl-k5-2_matching_vocab_2024"
+          "k5_CS_PL_ event_behavior_2024"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "pl-k5-2_matching_vocab_2024"
+          "k5_CS_PL_ event_behavior_2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-2",
+        "activity_section.key": "4caa3d8c-dc93-4434-944e-3af657f2bda7"
+      },
+      "level_keys": [
+        "k5_CS_PL_ event_behavior_2024"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-k5-2-terminology_matching_2024"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-k5-2-terminology_matching_2024"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
@@ -845,12 +893,12 @@
         "activity_section.key": "56177a5f-9d2a-40d8-be32-83910b7b0c5f"
       },
       "level_keys": [
-        "pl-k5-2_matching_vocab_2024"
+        "pl-k5-2-terminology_matching_2024"
       ]
     },
     {
-      "chapter": 25,
-      "position": 7,
+      "chapter": 27,
+      "position": 8,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -873,8 +921,8 @@
       ]
     },
     {
-      "chapter": 26,
-      "position": 8,
+      "chapter": 28,
+      "position": 9,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -897,7 +945,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -921,7 +969,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 30,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1128,6 +1176,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "pl-k5-2debugging2_2023_K5CSConcepts",
+        "script_level.level_keys": [
+          "pl-k5-2debugging2_2023_K5CSConcepts"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-2",
+        "activity_section.key": "94ba6b14-ba59-4213-8f3f-03e4737f36ac"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "pl-k5-2_bugs_events-debug_2024",
         "script_level.level_keys": [
           "pl-k5-2_bugs_events-debug_2024"
@@ -1224,9 +1284,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-k5-2_matching_vocab_2024",
+        "level.key": "k5_CS_PL_ event_behavior_2024",
         "script_level.level_keys": [
-          "pl-k5-2_matching_vocab_2024"
+          "k5_CS_PL_ event_behavior_2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-2",
+        "activity_section.key": "4caa3d8c-dc93-4434-944e-3af657f2bda7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-k5-2-terminology_matching_2024",
+        "script_level.level_keys": [
+          "pl-k5-2-terminology_matching_2024"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
