@@ -1,0 +1,77 @@
+.legend {
+    align-items: flex-start;
+    background-color: var(--lightwhite);
+    border: 1px solid;
+    border-color: var(--lightgray-200);
+    border-radius: 4px;
+    display: inline-flex;
+    flex-direction: column;
+    min-width: 200px;
+    position: relative;
+  }
+
+  .legend .headerContainer {
+    width: 100%;
+    padding: 8px 16px;
+    border-bottom: 1px solid;
+    box-sizing: border-box;
+  }
+  
+  .legend .header {
+    padding: 8px 16px;
+    border-bottom: 1px solid;
+    width: 100%;
+  }
+  
+  .legend .div {
+    color: var(--lightgray-900);
+    margin-top: -1px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+
+  .legend .legend-column-2 {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .legend .icons {
+    align-items: flex-start;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 40px;
+    padding: 16px;
+    position: relative;
+  }
+
+  .legend .icons-2 {
+    padding: 16px;
+    position: relative;
+  }
+
+  .legend .legend-item {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 8px;
+    position: relative;
+  }
+
+  .legend .legend-item-2 {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 8px;
+    position: relative;
+    width: 49%;
+
+  }
+  
+  .legend .v-icon {
+    display: flex !important;
+    width: 16px !important;
+  }
+  
+
+  
