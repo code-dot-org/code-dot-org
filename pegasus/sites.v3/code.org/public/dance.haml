@@ -62,8 +62,10 @@ theme: responsive_full_width
 
 %section#behind-the-scenes
   .wrapper
-    %h2= hoc_s(:dance_ai_behind_the_scenes)
-    %p!= hoc_s(:dance_ai_behind_the_scenes_markdown, markdown: true)
+    %h2=hoc_s(:heading_faq)
+    %details
+      %summary=hoc_s(:dance_ai_behind_the_scenes)
+      %p=hoc_s(:dance_ai_behind_the_scenes_markdown, markdown: true)
 
 %section.bg-neutral-light
   .wrapper
