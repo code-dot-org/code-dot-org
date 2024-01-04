@@ -213,7 +213,8 @@ module I18n
         attempt = (attempt || 0) + 1
 
         if attempt <= REQUEST_RETRY_ATTEMPTS && RETRIABLE_ERRORS.any? {|error| exception.message.include?(error)}
-          sleep(REQUEST_RETRY_DELAY) && retry
+          sleep(REQUEST_RETRY_DELAY)
+          retry
         else
           exception.message << "\nProject:  #{project}"
           exception.message << "\nEndpoint: #{endpoint}"
