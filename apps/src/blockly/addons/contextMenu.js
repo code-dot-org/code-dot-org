@@ -1,6 +1,7 @@
 import GoogleBlockly from 'blockly/core';
 import msg from '@cdo/locale';
 import {Themes, MenuOptionStates, BLOCKLY_THEME} from '../constants.js';
+import LegacyDialog from '../../code-studio/LegacyDialog';
 
 const dark = 'dark';
 
@@ -242,6 +243,46 @@ function registerThemes(themes) {
   });
 }
 
+/**
+ * Option to open help for a block.
+ */
+export function registerHelp() {
+  const helpOption = {
+    displayText() {
+      return 'Get help with this block';
+    },
+    preconditionFn(scope) {
+      const block = scope.block;
+      const url =
+        typeof block.helpUrl === 'function' ? block.helpUrl() : block.helpUrl;
+      if (url) {
+        return 'enabled';
+      }
+      return 'hidden';
+    },
+    callback(scope) {
+      // scope.block.showHelp();
+      const block = scope.block;
+      const url =
+        typeof block.helpUrl === 'function' ? block.helpUrl() : block.helpUrl;
+      const dialog = new LegacyDialog({
+        body: $('<iframe>')
+          .addClass('markdown-instructions-container')
+          .width('100%')
+          .attr('src', url),
+        autoResizeScrollableElement: '.markdown-instructions-container',
+        id: 'block-documentation-lightbox',
+        link: 'url',
+      });
+      dialog.show();
+    },
+    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.BLOCK,
+    id: 'blockHelp',
+    weight: 11,
+  };
+  GoogleBlockly.ContextMenuRegistry.registry.register(helpOption);
+}
+
 const registerAllContextMenuItems = function () {
   unregisterDefaultOptions();
   registerDeletable();
@@ -252,6 +293,7 @@ const registerAllContextMenuItems = function () {
   registerKeyboardNavigation();
   registerDarkMode();
   registerThemes(themes);
+  registerHelp();
 };
 
 function canBeShadow(block) {
@@ -303,6 +345,7 @@ function unregisterDefaultOptions() {
     GoogleBlockly.ContextMenuRegistry.registry.unregister(
       'blockCollapseExpand'
     );
+    GoogleBlockly.ContextMenuRegistry.registry.unregister('blockHelp');
     GoogleBlockly.ContextMenuRegistry.registry.unregister('blockInline');
     // cleanUp() doesn't currently account for immovable blocks.
     GoogleBlockly.ContextMenuRegistry.registry.unregister('cleanWorkspace');
