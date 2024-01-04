@@ -150,9 +150,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
   def post_show_progress_table_v2
     return head :unauthorized unless current_user
 
-    return head :bad_request unless params[:show_progress_table_v2] == "v1" || params[:show_progress_table_v2] == "v2"
-
-    current_user.show_progress_table_v2 = params[:show_progress_table_v2]
+    current_user.show_progress_table_v2 = !!params[:show_progress_table_v2].try(:to_bool)
     current_user.save
 
     head :no_content
