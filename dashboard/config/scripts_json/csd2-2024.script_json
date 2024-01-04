@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-12-19 17:54:18 UTC",
+    "serialized_at": "2024-01-04 01:09:25 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -263,16 +263,16 @@
     },
     {
       "key": "Websites for Expression",
-      "name": "Websites for Expression",
+      "name": "Organizing My Content",
       "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "This lesson emphasizes that web development, and by extension computer science, is an avenue for self-expression. In the lesson, students investigate ways to use websites as a means of personal expression and develop a list of topics and interests that they would want to include on a personal website. Students begin by brainstorming different ways that people express and share their interests and ideas. Students then look at a few exemplar websites to identify ways they express ideas. Finally, students brainstorm and share a list of topics and interests they might want to include on a personal website; they will reference this list as they progress through the unit.\n\n**Question of the Day:** How can we use websites to express ourselves?\n",
-        "preparation": "* Prepare journals or optionally print copies of the activity guide\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
-        "student_overview": "**Question of the Day:** How can we use websites to express ourselves?\n\nIn this lesson, you will explore and brainstorm different interests and ideas that people can express and share using websites. "
+        "overview": "This lesson introduces students to two new web development tools: div tags and Flexbox styling. This lesson introduces students to div tags to organize their HTML code into sections. They then learn about Flexbox and how it can be used with their div containers to style and position items. Students practice using Flexbox properties to control the layout of web pages.\n\n**Question of the Day:** What are div tags and Flexbox and why are they important in web design?\n",
+        "preparation": "* Prepare journals or optionally print copies of the activity guide\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**Question of the Day:** What are div tags and Flexbox and why are they important in web design?\n\nIn this lesson, you will explore two new concepts that will help you solve design and layout issues: `div` tags and Flexbox. "
       },
       "seeding_key": {
         "lesson.key": "Websites for Expression",
@@ -4144,8 +4144,9 @@
       "key": "4ec74313-6555-42bb-8b15-735c65075d7c",
       "position": 1,
       "properties": {
-        "description": "**Prompt:** What are the ways that you or your friends express yourselves? Think about different ways of communicating, activities, or spaces that you consider a form of self-expression.",
-        "name": "Express Yourself\r"
+        "description": "Let’s warm up our design skills today with a pencil and paper. I want you to imagine and sketch how you would design a webpage about something you love. You have complete creative freedom!",
+        "name": "Quick Sketch",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "4ec74313-6555-42bb-8b15-735c65075d7c",
@@ -4156,7 +4157,7 @@
       "key": "791e0571-e484-41c7-a2fd-c5f936d5c56c",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Students should brainstorm ideas independently, then share with a neighbor, and finally share with the whole class.\n\n**Discussion Goal:** This warm-up should generate a list of ways students express their ideas. If they need help getting started, offer them a couple of examples from the list below. The goal of this warm-up is to frame web development as another form of self-expression."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** Imagine you are designing a webpage for your favorite hobby, club, pet, animal, food, or something else you love. How would you arrange the following elements:\n* Title\n* Paragraph of information\n* 6-8 images of the topic\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Give students 2 minutes to sketch how they would like to arrange these elements quickly. Encourage creativity and personal expression. After 2 minutes, allow students to quickly share their sketches with a partner before inviting a few volunteers to share their sketches. "
       },
       "seeding_key": {
         "activity_section.key": "791e0571-e484-41c7-a2fd-c5f936d5c56c",
@@ -4167,7 +4168,7 @@
       "key": "d4fa63dd-f799-4a6b-bc11-b5e3300bf3ed",
       "position": 3,
       "properties": {
-        "description": "We share our thoughts, feelings, and ideas in many different ways. Some people might express their thoughts online, others might do so through the way they dress, by making a song,  or by drawing a picture. Self-expression is an important part of our lives, and as we're going to see, making websites is another way we can express our ideas, interests, and feelings.",
+        "description": "Now that we’ve seen some different ways to organize the title, text, and images, let’s talk about them real quick.",
         "remarks": true
       },
       "seeding_key": {
@@ -4179,7 +4180,13 @@
       "key": "5de91bc9-e584-4c2d-a1c3-33ef9eafd8b8",
       "position": 4,
       "properties": {
-        "description": "**Question of the Day: How can we use websites to express ourselves?**"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt**: Display the following discussion prompts and quickly discuss one at a time:\n* Did you notice any common themes in how we arranged our content? What were they?\n* What made you decide to place your title/images/text in that particular spot on the page?\n\n**Discussion Goal**: The discussion should reveal that organizing webpage content is a crucial part of web design. The tools they will learn today are essential for creating effective layouts, so use examples from the students’ sketches to segue into the concepts of div tags and Flexbox. Mention how these tools will help them achieve the layouts they’ve envisioned. Students should also recognize that there is no “right” way to design a webpage and that different layouts ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "When discussing the sketches, steer the conversation towards the functionality and layout choices rather than artistic quality. This keeps the focus on web design principles. \n\nKeep the discussion concise and focused. While it is important to hear from several students, be mindful of the time to ensure ample opportunity for the main activity.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "5de91bc9-e584-4c2d-a1c3-33ef9eafd8b8",
@@ -4187,11 +4194,35 @@
       }
     },
     {
+      "key": "952e2df6-2773-4f6a-bd4f-d96cd197ec35",
+      "position": 5,
+      "properties": {
+        "description": "Great sketches, everyone! Some great ideas for how to organize webpage content! This is a crucial part of a web developer’s job which means you need the right tools to help you do this job. Today, we’re going to start learning how we can bring your organization and layout ideas to life using div tags in our HTML and Flexbox in our CSS.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "952e2df6-2773-4f6a-bd4f-d96cd197ec35",
+        "lesson_activity.key": "3b8a2f02-5aa3-4b1a-b1c2-202aa49647f1"
+      }
+    },
+    {
+      "key": "ac764413-e67a-47ac-8111-adebb46db56c",
+      "position": 6,
+      "properties": {
+        "description": "**Question of the day: What are div tags and Flexbox and why are they important in web design?**"
+      },
+      "seeding_key": {
+        "activity_section.key": "ac764413-e67a-47ac-8111-adebb46db56c",
+        "lesson_activity.key": "3b8a2f02-5aa3-4b1a-b1c2-202aa49647f1"
+      }
+    },
+    {
       "key": "3d0f4ef3-9037-4827-8cce-1a2bc51132c7",
       "position": 1,
       "properties": {
-        "description": "**Review:** Review the problem-solving process framework: Define, Prepare, Try, Reflect",
-        "name": "Problem-Solving Process Review\r"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Use the activity slides for this lesson to introduce students to the the `div` tag.  Use the Speak Notes below as a guide to explaining what a `div` tag is, what it does, and why use it. \n\nLook for this symbol on the slides to show when animation plays when presenting the slides: ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png). Make sure to preview the slides before class. \n\n| Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\n|---|---|\n| ![](https://images.code.org/917a555a78245dc37a92bb15a3827e33-div1.png) |  **Say:** <br> A `div` tag defines a division or a section in an html document. <br><br>It allows developers like you to split their webpage into distinct sections, each capable of taking on unique styles through CSS. <br><br>Think of a `div` tag as a **container** for different sections of your html code on your page.  |\n| ![](https://images.code.org/aff0fd5a04813e2c800108687009fd0c-div2.png) | **Say:** <br>Divs go in the body section of an html file. <br><br> ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation**<br><br> **Say:** <br>To create a `div`, you need to use an open and close tag, just as you would for a heading or paragraph tag.   |\n| ![](https://images.code.org/cede58278f8dfe028bed3e21b406c786-div3.png) |  **Say:** <br>Now, the `div` tag doesn’t technically do anything. <br><br>It can help organize an HTML file into sections, but that won’t affect how those sections display on our screen.<br><br> ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation**<br><br>It ***does***, however, allow these sections to be easily styled with CSS by adding a class attribute to the `div`. | \n| ![](https://images.code.org/d618e67574d2ce3684873591dfbc9c03-div4.png)|**Say:** <br>Now that you know a `div` element doesn’t do anything on its own, you might wonder why you’d even use one! |\n| ![](https://images.code.org/c89a6f91b1371049db175ebcb032410d-div5.png) | **Say:** <br>You’ll use the div container to group sections of code that you want to target with CSS |\n| ![](https://images.code.org/69dfcc006777e6ad01be720a56a8f2b1-div6.png) | **Say:** <br>You can style items in a div to look different from other sections on the page …. |\n| ![](https://images.code.org/86a4becfc05ca526a47a0b2f81011567-div7.png) | **Say:** <br>… or to position them in a specific way.<br><br>Here we have the same HTML code in a div being displayed in two different layouts.<br><br> ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation to show the same HTML code with two different positioning results** |  ",
+        "duration": "10",
+        "name": "Introduction to Div and Flex"
       },
       "seeding_key": {
         "activity_section.key": "3d0f4ef3-9037-4827-8cce-1a2bc51132c7",
@@ -4202,8 +4233,13 @@
       "key": "e0d442d0-b570-44bf-81cf-a7dfee960ee4",
       "position": 2,
       "properties": {
-        "description": "Although we don't usually think about self-expression as a \"problem\" that we need to solve, we can use the problem-solving process to help us express ourselves with our web pages.  Today, we are going to \"Define\" the problem that our web pages will solve.",
-        "remarks": true
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Use the two “Self Check” slides to gauge student understanding. Answer any questions the students may have.\n\n \n\n\n\n\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You can choose to either have students raise their hands to indicate which option they think is correct or simply have them jot their letter choice down for their own reference.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "e0d442d0-b570-44bf-81cf-a7dfee960ee4",
@@ -4214,7 +4250,7 @@
       "key": "17f6fd84-b55c-4be7-b768-a940b9246f93",
       "position": 3,
       "properties": {
-        "description": "#### Personal Website Planning Guide\n\n**Distribute:** Have students open a journal or optionally distribute copies of the activity guide."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Continue to use the activity slides for this lesson to introduce students to Flexbox. Use the Speaker Notes below as a guide to explaining what Flexbox is.\n\nLook for this symbol on the slides to show when animation plays when presenting the slides: ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png). Make sure to preview the slides before class. \n\n| Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\n|---|---|\n| ![](https://images.code.org/4ea4e068ec8a04ddfc8d4fd8002aac82-flex1.png) |  **Say:** <br>Now that we know we can use `div` tags to position the code inside of it in different ways, you are probably wondering how do we do that??  |\n| ![](https://images.code.org/b8e4d8cc7a0f4124de2462f9ee26b94a-flex2.png) | **Say:** <br>Flexbox, or Flex for short, is how! <br><br>Flex provides a more efficient way to lay out, align, and distribute space among items in a container.   |\n| ![](https://images.code.org/a299fa66bd2cea7abbcfa4eb9fd7c5e3-flex3.png) |**Say:** <br>The main idea behind flex is to allow the container to alter its items’ width or height and even order to fill the available space best. |\n| ![](https://images.code.org/328b15babfd06e1a24bef19ab4e32c21-flex4.png) | **Say:** <br>As you can see in this animation, a flex container expands the items in it to fill available free space or shrinks them to prevent overflow.<br><br>Pretty handy right? |\n| ![](https://images.code.org/16d174b8ce6e3984b29b9feb555e1c85-flex5.png) | **Say:**<br> So, how do we use Flex?<br><br>Flex is the term used to refer to a whole set of CSS properties.<br><br>Some are applied to the container and some are applied to the items in a container.<br><br> ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation**<br><br>Today, we'll start with the flex properties for the `div` container.<br><br>Who's ready to jump in and get started?! |\n"
       },
       "seeding_key": {
         "activity_section.key": "17f6fd84-b55c-4be7-b768-a940b9246f93",
@@ -4225,11 +4261,13 @@
       "key": "62715073-b80b-4ab6-846c-f645fe325a9a",
       "position": 4,
       "properties": {
-        "description": "**Brainstorm Content:** Read through this section of the activity guide. Then give students several minutes to silently brainstorm content they might want to include on a personal website.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: Pass out the [r flexbox_cheat_sheet/csd/2024] handout to the students. \n",
+        "duration": "25",
+        "name": "Div and Flex Practice",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Use Journals:** The activity for today's lesson can easily be completed in student journals. Project or otherwise share the prompts and let students complete their work in their journals.\r\n"
+            "markdown": "This handout has a section on the first page for students to write down any notes to themselves. Please encourage students to use this space as they go through the skill-building, practice, and challenge levels to remind themselves of anything they notice and wish to remember or refer back to later.\n\n"
           }
         ]
       },
@@ -4242,7 +4280,8 @@
       "key": "16e728b0-d0e5-4fae-bba2-f5a8e6d99e46",
       "position": 5,
       "properties": {
-        "description": "**Share:** Have students share their content ideas with a neighbor."
+        "description": "**Transition**: Send students to Code Studio, Lesson 12, Level 1, and have students explore the code. Bring students' attention back to you after a few minutes of exploration.",
+        "progression_name": "Div & Flex Exploration"
       },
       "seeding_key": {
         "activity_section.key": "16e728b0-d0e5-4fae-bba2-f5a8e6d99e46",
@@ -4253,8 +4292,7 @@
       "key": "be2e5c52-a952-4e3e-a0f9-3a4cac3d7994",
       "position": 6,
       "properties": {
-        "description": "When sharing ideas with other people it’s important to consider not just what you want to say, but how you want to say it. You just created a list of ideas you might want to share on your personal websites. Let's go look at some personal websites other students have made and think about the content they're sharing as well as how they are presenting that message.",
-        "remarks": true
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt**: What did you discover about the flex properties in the CSS file?\n\n**Discussion Goal**: The goal of this quick discussion is to allow students to share what they figured out or what they noticed about the properties. It is okay if they didn’t figure out exactly what each property does as they will learn in the next skill-building levels. Some possible discoveries might include:\n* Without `display: flex;` the images change position\n* Without `flex-direction: row-reverse;` the order of the images change\n* Without `flex-wrap: wrap;` the images try to fit in a single row\n* Without `justify-content: center;` the alignment of items within the container will change\n"
       },
       "seeding_key": {
         "activity_section.key": "be2e5c52-a952-4e3e-a0f9-3a4cac3d7994",
@@ -4265,7 +4303,8 @@
       "key": "4774b14c-e2e9-4527-bdf8-b85a363038d4",
       "position": 7,
       "properties": {
-        "description": "**View Personal Web Pages:** Send students to Code.org and have them look through the exemplar web pages in pairs. They can use these web pages as inspiration for their own personal web pages. You may want to review the purposes of the various websites and why they are personally significant to their creators."
+        "description": "These 4 flex properties you just played with are the ones that you will use the most. When applying Flex properties to containers, you will typically follow three steps … ",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "4774b14c-e2e9-4527-bdf8-b85a363038d4",
@@ -4276,7 +4315,14 @@
       "key": "412afcc9-8a6d-4d19-8b18-d5f47e316af7",
       "position": 8,
       "properties": {
-        "progression_name": "Sample Personal Websites"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Use the “4 Basic Flex Properties” slide to explain the 3 steps they will typically follow when applying flex properties to their containers.",
+        "progression_name": "Sample Personal Websites",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This information is already in the Flexbox Cheat Sheet handout for students, but you might want to direct students to highlight, circle or star these steps for quick reference later.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "412afcc9-8a6d-4d19-8b18-d5f47e316af7",
@@ -4287,11 +4333,12 @@
       "key": "33e54e31-2d49-4cdb-826f-316012e5b5d4",
       "position": 9,
       "properties": {
-        "description": "**Web Page Purpose:** Give students some time to think about what purposes their own web pages will serve. Try to steer the conversation away from the exact content of the site, which they will have time to plan in a later lesson.",
+        "description": "**Group**: Group students into pairs for Pair Programming.\n\n**Transition**: Send students back to Code Studio and have students connect with their partner using the “Pair Programming” feature to complete the Skill Building and Practice levels. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Remind students to switch driver and navigator every 3 minutes. You may want to project a digital timer at the front of the room.",
+        "progression_name": "Skill Building",
         "tips": [
           {
-            "type": "assessmentOpportunity",
-            "markdown": "Students should identify their websites as an opportunity to express themselves and their own goals. Check that each student has an explanation of why their site is personally significant.\r\n"
+            "type": "teachingTip",
+            "markdown": "A slide with a timer has been provided for you. Delete this slide if you prefer a different method of keeping track of time for students so that they switch drivers and navigators often."
           }
         ]
       },
@@ -4304,7 +4351,12 @@
       "key": "4dd2b959-109f-485b-a725-4a003491692c",
       "position": 10,
       "properties": {
-        "description": "**Share:** Give students a chance to share their website purposes with a neighbor."
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "This level can be used to assess students' understanding of `div` tags and flexbox to organize elements on a web page.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "4dd2b959-109f-485b-a725-4a003491692c",
@@ -4315,8 +4367,8 @@
       "key": "ff41f9f2-9d86-4fc4-8702-efb2cf16ed86",
       "position": 1,
       "properties": {
-        "description": "**Question of the Day: How can we use websites to express ourselves?**",
-        "name": "Journal 3-2-1\r"
+        "description": "**Question of the Day: What are div tags and Flexbox and why are they important in web design?**",
+        "name": "Solving Layout and Design Issues"
       },
       "seeding_key": {
         "activity_section.key": "ff41f9f2-9d86-4fc4-8702-efb2cf16ed86",
@@ -4327,50 +4379,10 @@
       "key": "176e19e9-979e-49d5-998e-92989b765160",
       "position": 2,
       "properties": {
-        "description": "**Prompt:**  Now that you've had a chance to share your website ideas, write down...",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "As students share different aspects of the websites, make sure that the discussion highlights the creative aspects of making websites, and that websites can be a form of personal expression unique to each individual.\r\n"
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Have students include the Flexbox Reference handout in their notebooks if they haven’t done so already. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal Prompt**: In your own words, how do div tags and Flexbox help solve page design and layout issues?\n\n**Discussion Goal**: The goal of this quick reflection is to ensure students grasp the fundamental roles of div tags (structuring and grouping HTML content in a container) and Flexbox (styling and positioning elements within containers). Student responses may vary but might include design and layout issues like alignment, spacing, and organization. \n"
       },
       "seeding_key": {
         "activity_section.key": "176e19e9-979e-49d5-998e-92989b765160",
-        "lesson_activity.key": "9b83ada9-a7c1-4a4f-9f9a-9bdeb5fa15cb"
-      }
-    },
-    {
-      "key": "ba61befa-94e9-47d8-84f4-6e68517e70f7",
-      "position": 3,
-      "properties": {
-        "description": "* 3 reasons your site will be special to you\r\n* 2 reasons your neighbor's site will be special to them\r\n* 1 thing you'd still like to learn how to do in HTML or CSS"
-      },
-      "seeding_key": {
-        "activity_section.key": "ba61befa-94e9-47d8-84f4-6e68517e70f7",
-        "lesson_activity.key": "9b83ada9-a7c1-4a4f-9f9a-9bdeb5fa15cb"
-      }
-    },
-    {
-      "key": "76efa4c2-b68a-4901-8047-cdf03e9e2692",
-      "position": 4,
-      "properties": {
-        "description": "In the next few lessons, we'll be working to bring many of your ideas to reality. Some of the content you want to share might change as we go through the unit, but this goal of using websites for self-expression will be there throughout.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "76efa4c2-b68a-4901-8047-cdf03e9e2692",
-        "lesson_activity.key": "9b83ada9-a7c1-4a4f-9f9a-9bdeb5fa15cb"
-      }
-    },
-    {
-      "key": "64bb33d6-8ebf-49d3-90b7-3ea25b4e7dce",
-      "position": 5,
-      "properties": {
-        "description": "**Collect:** If students did not put their web page ideas in a journal, collect them. They will explicitly be referenced again when they begin their project."
-      },
-      "seeding_key": {
-        "activity_section.key": "64bb33d6-8ebf-49d3-90b7-3ea25b4e7dce",
         "lesson_activity.key": "9b83ada9-a7c1-4a4f-9f9a-9bdeb5fa15cb"
       }
     },
@@ -6533,6 +6545,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Web Dev SB comments_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7505,6 +7520,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web CSS project CSS_2024"
+        ],
         "progression": "Add Style to Your User's Page"
       },
       "bonus": false,
@@ -7527,6 +7545,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web CSS project check_2024"
+        ],
         "progression": "Review Your Page"
       },
       "bonus": false,
@@ -7724,31 +7745,251 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U2 Expression Exemplars_2018_2019_pilot_2024"
-        ],
-        "progression": "Sample Personal Websites"
+        "progression": "Div & Flex Exploration"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U2 Expression Exemplars_2018_2019_pilot_2024"
+          "csd_U2L12 Exploration-div_flex"
         ],
         "lesson.key": "Websites for Expression",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd2-2024",
-        "activity_section.key": "412afcc9-8a6d-4d19-8b18-d5f47e316af7"
+        "activity_section.key": "16e728b0-d0e5-4fae-bba2-f5a8e6d99e46"
       },
       "level_keys": [
-        "CSD U2 Expression Exemplars_2018_2019_pilot_2024"
+        "csd_U2L12 Exploration-div_flex"
       ]
     },
     {
       "chapter": 66,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L12 Div Flex SB_1"
+        ],
+        "lesson.key": "Websites for Expression",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "33e54e31-2d49-4cdb-826f-316012e5b5d4"
+      },
+      "level_keys": [
+        "CSD U2L12 Div Flex SB_1"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L12 Div Flex SB_2"
+        ],
+        "lesson.key": "Websites for Expression",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "33e54e31-2d49-4cdb-826f-316012e5b5d4"
+      },
+      "level_keys": [
+        "CSD U2L12 Div Flex SB_2"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L12 Div Flex SB_3"
+        ],
+        "lesson.key": "Websites for Expression",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "33e54e31-2d49-4cdb-826f-316012e5b5d4"
+      },
+      "level_keys": [
+        "CSD U2L12 Div Flex SB_3"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L12 Div Flex SB_4"
+        ],
+        "lesson.key": "Websites for Expression",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "33e54e31-2d49-4cdb-826f-316012e5b5d4"
+      },
+      "level_keys": [
+        "CSD U2L12 Div Flex SB_4"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L12 Div Flex SB_5"
+        ],
+        "lesson.key": "Websites for Expression",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "33e54e31-2d49-4cdb-826f-316012e5b5d4"
+      },
+      "level_keys": [
+        "CSD U2L12 Div Flex SB_5"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 7,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L12 Div Flex SB_6"
+        ],
+        "lesson.key": "Websites for Expression",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "33e54e31-2d49-4cdb-826f-316012e5b5d4"
+      },
+      "level_keys": [
+        "CSD U2L12 Div Flex SB_6"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 8,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L12 Div Flex SB_7"
+        ],
+        "lesson.key": "Websites for Expression",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "33e54e31-2d49-4cdb-826f-316012e5b5d4"
+      },
+      "level_keys": [
+        "CSD U2L12 Div Flex SB_7"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 9,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L12 Div Flex SB_8"
+        ],
+        "lesson.key": "Websites for Expression",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "33e54e31-2d49-4cdb-826f-316012e5b5d4"
+      },
+      "level_keys": [
+        "CSD U2L12 Div Flex SB_8"
+      ]
+    },
+    {
+      "chapter": 74,
+      "position": 10,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L12 Div Flex SB_9"
+        ],
+        "lesson.key": "Websites for Expression",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "33e54e31-2d49-4cdb-826f-316012e5b5d4"
+      },
+      "level_keys": [
+        "CSD U2L12 Div Flex SB_9"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 11,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2L12 Div Flex SB_10"
+        ],
+        "lesson.key": "Websites for Expression",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "33e54e31-2d49-4cdb-826f-316012e5b5d4"
+      },
+      "level_keys": [
+        "CSD U2L12 Div Flex SB_10"
+      ]
+    },
+    {
+      "chapter": 76,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 project guide_2018_2019_pilot_2024"
+        ],
         "progression": "Chapter 1 Project"
       },
       "bonus": false,
@@ -7766,7 +8007,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 77,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7791,7 +8032,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 78,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -7816,7 +8057,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 79,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -7841,11 +8082,14 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 80,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 project review_2024"
+        ],
         "progression": "Review Your Page"
       },
       "bonus": false,
@@ -7863,7 +8107,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 81,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -7888,7 +8132,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 82,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -7913,7 +8157,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 83,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7938,7 +8182,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 84,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7963,7 +8207,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 85,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7988,7 +8232,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 86,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8013,7 +8257,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 87,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -8038,7 +8282,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 88,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -8063,7 +8307,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 89,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -8088,7 +8332,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 90,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -8113,7 +8357,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 91,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -8138,7 +8382,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 92,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8163,7 +8407,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 93,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8188,7 +8432,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 94,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8213,7 +8457,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 95,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8238,7 +8482,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 96,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -8263,7 +8507,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 97,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -8288,7 +8532,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 98,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8313,7 +8557,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 99,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -8338,7 +8582,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 100,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -9133,14 +9377,134 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U2 Expression Exemplars_2018_2019_pilot_2024",
+        "level.key": "csd_U2L12 Exploration-div_flex",
         "script_level.level_keys": [
-          "CSD U2 Expression Exemplars_2018_2019_pilot_2024"
+          "csd_U2L12 Exploration-div_flex"
         ],
         "lesson.key": "Websites for Expression",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd2-2024",
-        "activity_section.key": "412afcc9-8a6d-4d19-8b18-d5f47e316af7"
+        "activity_section.key": "16e728b0-d0e5-4fae-bba2-f5a8e6d99e46"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L12 Div Flex SB_1",
+        "script_level.level_keys": [
+          "CSD U2L12 Div Flex SB_1"
+        ],
+        "lesson.key": "Websites for Expression",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "33e54e31-2d49-4cdb-826f-316012e5b5d4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L12 Div Flex SB_2",
+        "script_level.level_keys": [
+          "CSD U2L12 Div Flex SB_2"
+        ],
+        "lesson.key": "Websites for Expression",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "33e54e31-2d49-4cdb-826f-316012e5b5d4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L12 Div Flex SB_3",
+        "script_level.level_keys": [
+          "CSD U2L12 Div Flex SB_3"
+        ],
+        "lesson.key": "Websites for Expression",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "33e54e31-2d49-4cdb-826f-316012e5b5d4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L12 Div Flex SB_4",
+        "script_level.level_keys": [
+          "CSD U2L12 Div Flex SB_4"
+        ],
+        "lesson.key": "Websites for Expression",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "33e54e31-2d49-4cdb-826f-316012e5b5d4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L12 Div Flex SB_5",
+        "script_level.level_keys": [
+          "CSD U2L12 Div Flex SB_5"
+        ],
+        "lesson.key": "Websites for Expression",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "33e54e31-2d49-4cdb-826f-316012e5b5d4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L12 Div Flex SB_6",
+        "script_level.level_keys": [
+          "CSD U2L12 Div Flex SB_6"
+        ],
+        "lesson.key": "Websites for Expression",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "33e54e31-2d49-4cdb-826f-316012e5b5d4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L12 Div Flex SB_7",
+        "script_level.level_keys": [
+          "CSD U2L12 Div Flex SB_7"
+        ],
+        "lesson.key": "Websites for Expression",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "33e54e31-2d49-4cdb-826f-316012e5b5d4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L12 Div Flex SB_8",
+        "script_level.level_keys": [
+          "CSD U2L12 Div Flex SB_8"
+        ],
+        "lesson.key": "Websites for Expression",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "33e54e31-2d49-4cdb-826f-316012e5b5d4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L12 Div Flex SB_9",
+        "script_level.level_keys": [
+          "CSD U2L12 Div Flex SB_9"
+        ],
+        "lesson.key": "Websites for Expression",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "33e54e31-2d49-4cdb-826f-316012e5b5d4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2L12 Div Flex SB_10",
+        "script_level.level_keys": [
+          "CSD U2L12 Div Flex SB_10"
+        ],
+        "lesson.key": "Websites for Expression",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd2-2024",
+        "activity_section.key": "33e54e31-2d49-4cdb-826f-316012e5b5d4"
       }
     },
     {
@@ -9688,31 +10052,6 @@
       }
     },
     {
-      "name": "Define Your Web Page",
-      "url": "https://docs.google.com/document/d/1T410ZSCp3WuuapICLcZYq3tMcONumEMi6HSkpOx4iq4/",
-      "key": "define_your_web_page",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "define_your_web_page"
-      }
-    },
-    {
-      "name": "Define Your Webpage",
-      "url": "https://docs.google.com/document/d/1jn2gZEwppoUfNQYyV-zdBp4phvA4rJZJENt5nsyzMCk/edit?usp=sharing",
-      "key": "define_your_webpage",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "define_your_webpage"
-      }
-    },
-    {
       "name": "Digital Footprint",
       "url": "https://docs.google.com/presentation/d/1erPjRFCS7_RvMafbmIqv2_NWV0Fd6ndmMZloqoj_njg/template/preview",
       "key": "digital_footprint",
@@ -9746,6 +10085,19 @@
       },
       "seeding_key": {
         "resource.key": "exploring_web_pages"
+      }
+    },
+    {
+      "name": "Flexbox Cheat Sheet",
+      "url": "https://docs.google.com/document/d/1f5t7oUfV-5PRtcKrJVskrb_Mt_r8941VT-Qa-07mP9o/edit?usp=sharing",
+      "key": "flexbox_cheat_sheet",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "flexbox_cheat_sheet"
       }
     },
     {
@@ -10069,6 +10421,18 @@
       },
       "seeding_key": {
         "resource.key": "option_2_-_html_web_page"
+      }
+    },
+    {
+      "name": "Organizing My Content",
+      "url": "https://docs.google.com/presentation/d/1Lbh1y_cxo3tfd_iuiueLi7W0v6VO-9PqZTBuFvNtkfI/template/preview",
+      "key": "organizing_my_content",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "organizing_my_content"
       }
     },
     {
@@ -10775,18 +11139,6 @@
       }
     },
     {
-      "name": "Websites for Expression",
-      "url": "https://docs.google.com/presentation/d/1xjZUrVbCtKZXx3jZfHIaYdL0Cda9D_S2DTwvDXWJjs8/template/preview",
-      "key": "websites_for_expression",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "websites_for_expression"
-      }
-    },
-    {
       "name": "Adding Style to a Webpage",
       "url": "https://docs.google.com/document/d/1vSTT-HSyqbZgIUhtBsZoYPDnDPdkfffX6Qy4X6wv_oA/edit?usp=drive_link",
       "key": "your_personal_style",
@@ -11424,19 +11776,13 @@
     {
       "seeding_key": {
         "lesson.key": "Websites for Expression",
-        "resource.key": "define_your_web_page"
+        "resource.key": "flexbox_cheat_sheet"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Websites for Expression",
-        "resource.key": "define_your_webpage"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Websites for Expression",
-        "resource.key": "websites_for_expression"
+        "resource.key": "organizing_my_content"
       }
     },
     {
@@ -11620,6 +11966,26 @@
       },
       "seeding_key": {
         "vocabulary.key": "digital_footprint"
+      }
+    },
+    {
+      "key": "div",
+      "word": "div",
+      "definition": "the HTML division tag, called “div” for short, is an element that lets you group sets of content together in a container",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "div"
+      }
+    },
+    {
+      "key": "flexbox",
+      "word": "Flexbox",
+      "definition": "a layout model in CSS for displaying items",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "flexbox"
       }
     },
     {
@@ -11813,6 +12179,18 @@
         "lesson.key": "Styling Text with CSS",
         "vocabulary.key": "css_selector"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Websites for Expression",
+        "vocabulary.key": "div"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Websites for Expression",
+        "vocabulary.key": "flexbox"
+      }
     }
   ],
   "lessons_programming_expressions": [
@@ -11990,6 +12368,13 @@
         "programming_environment.name": "weblab",
         "programming_expression.key": "img"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Websites for Expression",
+        "programming_environment.name": "weblab",
+        "programming_expression.key": "div"
+      }
     }
   ],
   "objectives": [
@@ -12101,6 +12486,16 @@
       "seeding_key": {
         "lesson.key": "Exploring Web Pages",
         "objective.key": "443a207e-e60d-4007-95d1-5a2febfafbf0"
+      }
+    },
+    {
+      "key": "45e6e834-b1f7-4ee3-8b9f-b5d6952f7347",
+      "properties": {
+        "description": "Apply Flexbox properties in CSS"
+      },
+      "seeding_key": {
+        "lesson.key": "Websites for Expression",
+        "objective.key": "45e6e834-b1f7-4ee3-8b9f-b5d6952f7347"
       }
     },
     {
@@ -12234,6 +12629,26 @@
       }
     },
     {
+      "key": "69cf2c6b-e8ac-47ab-8ffd-aa80d419f492",
+      "properties": {
+        "description": "Analyze and solve common web design layout challenges using div tags and Flexbox"
+      },
+      "seeding_key": {
+        "lesson.key": "Websites for Expression",
+        "objective.key": "69cf2c6b-e8ac-47ab-8ffd-aa80d419f492"
+      }
+    },
+    {
+      "key": "71cf9da7-f188-4b32-bf5c-968a82caecfe",
+      "properties": {
+        "description": "Identify and explain the purpose and use of div tags in HTML"
+      },
+      "seeding_key": {
+        "lesson.key": "Websites for Expression",
+        "objective.key": "71cf9da7-f188-4b32-bf5c-968a82caecfe"
+      }
+    },
+    {
       "key": "82a64c45-e824-4cf9-8a1c-bb25a8eb693d",
       "properties": {
         "description": "Create a digital artifact"
@@ -12331,16 +12746,6 @@
       "seeding_key": {
         "lesson.key": "Styling Elements with CSS",
         "objective.key": "acb776f3-a2a5-49d8-9e96-df958d3ef98e"
-      }
-    },
-    {
-      "key": "b45d19f6-cc0c-495a-8934-9a640f2359a1",
-      "properties": {
-        "description": "Identify websites as a form of personal expression."
-      },
-      "seeding_key": {
-        "lesson.key": "Websites for Expression",
-        "objective.key": "b45d19f6-cc0c-495a-8934-9a640f2359a1"
       }
     },
     {
@@ -12887,7 +13292,7 @@
       "seeding_key": {
         "lesson.key": "Websites for Expression",
         "framework.shortcode": "csta",
-        "standard.shortcode": "1B-IC-18"
+        "standard.shortcode": "1B-AP-15"
       }
     },
     {
@@ -12895,6 +13300,13 @@
         "lesson.key": "Websites for Expression",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Websites for Expression",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
       }
     },
     {
