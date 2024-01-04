@@ -8,8 +8,8 @@ tr:
             '"follows"': takip eder
             '"avoids"': kaçınır
       AmysBlocks_goldilocks:
-        text: |-
-          Eğer {CONDITION}{SPRITE}
+        text: |2-
+           eğer {CONDITION}{SPRITE}
           {STATEMENT}
         options:
           CONDITION:
@@ -1836,8 +1836,8 @@ tr:
       KatiesBlocks_glideTo:
         text: "{SPRITE}, {LOCATION} konumuna süzülür"
       KatiesBlocks_goldilocks:
-        text: |-
-          Eğer {CONDITION}{SPRITE}
+        text: |2-
+           eğer {CONDITION}{SPRITE}
           {STATEMENT}
         options:
           CONDITION:

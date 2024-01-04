@@ -2047,3 +2047,10 @@ vi:
       10:
         image: 'notes/hoc_hello_world_2021_freeplay_10.jpg'
         text: "Vậy bạn sẽ tạo ra điều gì? Bạn có thể kể một câu chuyện về bản thân... hoặc sáng tác một câu chuyện với các ký tự đặc biệt của riêng mình. Thậm chí bạn có thể sử dụng các kỹ năng khoa học máy tính mới của mình cho dự án trường học tiếp theo nữa đấy! Hãy để trí tưởng tượng bay xa và tận hưởng niềm vui nhé!"
+    hoc-dance-ai-warmup:
+      2:
+        text: "Xin chào! Tên tôi là Miral Kotb và tôi là một vũ công, nhà phát triển phần mềm và nhà sáng lập iLuminate."
+      3:
+        text: "Khoa học máy tính có mối tương quan với sự sáng tạo theo nhiều cách khác nhau. Thực sự là không thể đo lường được. Ý tôi là, một khi bạn có khả năng viết phần mềm, bạn có thể đưa ý tưởng vào bất cứ thứ gì. Tôi làm điều đó với những bộ quần áo phát sáng. Có rất nhiều điều bạn có thể làm khi bạn có công cụ để viết phần mềm và khả năng thực sự là vô tận."
+      5:
+        text: "Bạn sẽ sử dụng các khối mã lệnh để chọn các vũ công khác nhau, thay đổi các bước nhảy của họ, khiến họ phản hồi theo âm nhạc và khiến họ tương tác."

@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-12-13 22:31:01 UTC",
+    "serialized_at": "2024-01-03 18:45:06 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -144,6 +144,30 @@
         "lesson_group.key": "",
         "script.name": "self-paced-pl-k5-2024-2"
       }
+    },
+    {
+      "key": "3868b052-3481-4402-9a95-c1a09f1ec35d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3868b052-3481-4402-9a95-c1a09f1ec35d",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-2"
+      }
+    },
+    {
+      "key": "7a5e0481-9a06-4a4b-93c7-68f659728a1f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7a5e0481-9a06-4a4b-93c7-68f659728a1f",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-2"
+      }
     }
   ],
   "activity_sections": [
@@ -211,6 +235,39 @@
       "seeding_key": {
         "activity_section.key": "f86ec33a-b3c7-44be-994a-02bc876d8456",
         "lesson_activity.key": "54842971-48a3-4e25-a3fb-80b953c89550"
+      }
+    },
+    {
+      "key": "4caa3d8c-dc93-4434-944e-3af657f2bda7",
+      "position": 1,
+      "properties": {
+        "name": "Behaviors"
+      },
+      "seeding_key": {
+        "activity_section.key": "4caa3d8c-dc93-4434-944e-3af657f2bda7",
+        "lesson_activity.key": "3868b052-3481-4402-9a95-c1a09f1ec35d"
+      }
+    },
+    {
+      "key": "56177a5f-9d2a-40d8-be32-83910b7b0c5f",
+      "position": 2,
+      "properties": {
+        "name": "Putting it all together"
+      },
+      "seeding_key": {
+        "activity_section.key": "56177a5f-9d2a-40d8-be32-83910b7b0c5f",
+        "lesson_activity.key": "3868b052-3481-4402-9a95-c1a09f1ec35d"
+      }
+    },
+    {
+      "key": "c5d1a72a-4cc1-452b-a8c4-b337fb11754e",
+      "position": 1,
+      "properties": {
+        "name": "Next Steps"
+      },
+      "seeding_key": {
+        "activity_section.key": "c5d1a72a-4cc1-452b-a8c4-b337fb11754e",
+        "lesson_activity.key": "7a5e0481-9a06-4a4b-93c7-68f659728a1f"
       }
     }
   ],
@@ -416,6 +473,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-k5-2-SelfPaced-customizegifs_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -437,6 +497,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-k5-2-SelfPaced-customization1_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -454,31 +517,13 @@
     },
     {
       "chapter": 11,
-      "position": 8,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "pl-k5-2-SelfPaced-customization2_2024"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-k5-2024-2",
-        "activity_section.key": "ed80c65f-32cd-4d1a-90d4-4464f7f6f186"
-      },
-      "level_keys": [
-        "pl-k5-2-SelfPaced-customization2_2024"
-      ]
-    },
-    {
-      "chapter": 12,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-k5-2-intro_events_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -495,11 +540,14 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 12,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-k5-2-eventsvideo_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -516,11 +564,14 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 13,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-k5-2_animal_adaptations_events_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -537,11 +588,14 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 14,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-k5-2_ecosystems_giraffe_events_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -558,11 +612,14 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 15,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-k5-2_bugs_behaviors_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -579,11 +636,35 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 16,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-k5-2debugging2_2023_K5CSConcepts"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-2",
+        "activity_section.key": "94ba6b14-ba59-4213-8f3f-03e4737f36ac"
+      },
+      "level_keys": [
+        "pl-k5-2debugging2_2023_K5CSConcepts"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-k5-2_bugs_events-debug_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -601,10 +682,13 @@
     },
     {
       "chapter": 18,
-      "position": 7,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-k5-2_ecosystems_firefly_events_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -618,6 +702,294 @@
       },
       "level_keys": [
         "pl-k5-2_ecosystems_firefly_events_2024"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-k5-2_reflect_events_2024"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-k5-2_reflect_events_2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-2",
+        "activity_section.key": "f86ec33a-b3c7-44be-994a-02bc876d8456"
+      },
+      "level_keys": [
+        "pl-k5-2_reflect_events_2024"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-k5-2-behaviors -intro_2024"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-k5-2-behaviors -intro_2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-2",
+        "activity_section.key": "4caa3d8c-dc93-4434-944e-3af657f2bda7"
+      },
+      "level_keys": [
+        "pl-k5-2-behaviors -intro_2024"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-k5-2_events_behaviors-2024"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-k5-2_events_behaviors-2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-2",
+        "activity_section.key": "4caa3d8c-dc93-4434-944e-3af657f2bda7"
+      },
+      "level_keys": [
+        "pl-k5-2_events_behaviors-2024"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-k5-2_animal_adaptations_behavior_bugs_2024"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-k5-2_animal_adaptations_behavior_bugs_2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-2",
+        "activity_section.key": "4caa3d8c-dc93-4434-944e-3af657f2bda7"
+      },
+      "level_keys": [
+        "pl-k5-2_animal_adaptations_behavior_bugs_2024"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-k5-2_behaviors_custom_2023"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-k5-2_behaviors_custom_2023"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-2",
+        "activity_section.key": "4caa3d8c-dc93-4434-944e-3af657f2bda7"
+      },
+      "level_keys": [
+        "pl-k5-2_behaviors_custom_2023"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-k5-2_animal_adaptations_behaviors2_2024"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-k5-2_animal_adaptations_behaviors2_2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-2",
+        "activity_section.key": "4caa3d8c-dc93-4434-944e-3af657f2bda7"
+      },
+      "level_keys": [
+        "pl-k5-2_animal_adaptations_behaviors2_2024"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "k5_CS_PL_ event_behavior_2024"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "k5_CS_PL_ event_behavior_2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-2",
+        "activity_section.key": "4caa3d8c-dc93-4434-944e-3af657f2bda7"
+      },
+      "level_keys": [
+        "k5_CS_PL_ event_behavior_2024"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-k5-2-terminology_matching_2024"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-k5-2-terminology_matching_2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-2",
+        "activity_section.key": "56177a5f-9d2a-40d8-be32-83910b7b0c5f"
+      },
+      "level_keys": [
+        "pl-k5-2-terminology_matching_2024"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-k5-2_freeplayvideo_2024"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-k5-2_freeplayvideo_2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-2",
+        "activity_section.key": "56177a5f-9d2a-40d8-be32-83910b7b0c5f"
+      },
+      "level_keys": [
+        "pl-k5-2_freeplayvideo_2024"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 9,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-k5-2_helloworld_freeplay_2024"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-k5-2_helloworld_freeplay_2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-2",
+        "activity_section.key": "56177a5f-9d2a-40d8-be32-83910b7b0c5f"
+      },
+      "level_keys": [
+        "pl-k5-2_helloworld_freeplay_2024"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-k5-2_PLexperiences_2024"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-k5-2_PLexperiences_2024"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-2",
+        "activity_section.key": "c5d1a72a-4cc1-452b-a8c4-b337fb11754e"
+      },
+      "level_keys": [
+        "pl-k5-2_PLexperiences_2024"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "pl-k5-2-nextSteps_2024"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-k5-2-nextSteps_2024"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-2",
+        "activity_section.key": "c5d1a72a-4cc1-452b-a8c4-b337fb11754e"
+      },
+      "level_keys": [
+        "pl-k5-2-nextSteps_2024"
       ]
     }
   ],
@@ -744,18 +1116,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-k5-2-SelfPaced-customization2_2024",
-        "script_level.level_keys": [
-          "pl-k5-2-SelfPaced-customization2_2024"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-k5-2024-2",
-        "activity_section.key": "ed80c65f-32cd-4d1a-90d4-4464f7f6f186"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "pl-k5-2-intro_events_2024",
         "script_level.level_keys": [
           "pl-k5-2-intro_events_2024"
@@ -816,6 +1176,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "pl-k5-2debugging2_2023_K5CSConcepts",
+        "script_level.level_keys": [
+          "pl-k5-2debugging2_2023_K5CSConcepts"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-2",
+        "activity_section.key": "94ba6b14-ba59-4213-8f3f-03e4737f36ac"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "pl-k5-2_bugs_events-debug_2024",
         "script_level.level_keys": [
           "pl-k5-2_bugs_events-debug_2024"
@@ -836,6 +1208,150 @@
         "lesson_group.key": "",
         "script.name": "self-paced-pl-k5-2024-2",
         "activity_section.key": "f86ec33a-b3c7-44be-994a-02bc876d8456"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-k5-2_reflect_events_2024",
+        "script_level.level_keys": [
+          "pl-k5-2_reflect_events_2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-2",
+        "activity_section.key": "f86ec33a-b3c7-44be-994a-02bc876d8456"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-k5-2-behaviors -intro_2024",
+        "script_level.level_keys": [
+          "pl-k5-2-behaviors -intro_2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-2",
+        "activity_section.key": "4caa3d8c-dc93-4434-944e-3af657f2bda7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-k5-2_events_behaviors-2024",
+        "script_level.level_keys": [
+          "pl-k5-2_events_behaviors-2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-2",
+        "activity_section.key": "4caa3d8c-dc93-4434-944e-3af657f2bda7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-k5-2_animal_adaptations_behavior_bugs_2024",
+        "script_level.level_keys": [
+          "pl-k5-2_animal_adaptations_behavior_bugs_2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-2",
+        "activity_section.key": "4caa3d8c-dc93-4434-944e-3af657f2bda7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-k5-2_behaviors_custom_2023",
+        "script_level.level_keys": [
+          "pl-k5-2_behaviors_custom_2023"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-2",
+        "activity_section.key": "4caa3d8c-dc93-4434-944e-3af657f2bda7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-k5-2_animal_adaptations_behaviors2_2024",
+        "script_level.level_keys": [
+          "pl-k5-2_animal_adaptations_behaviors2_2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-2",
+        "activity_section.key": "4caa3d8c-dc93-4434-944e-3af657f2bda7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "k5_CS_PL_ event_behavior_2024",
+        "script_level.level_keys": [
+          "k5_CS_PL_ event_behavior_2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-2",
+        "activity_section.key": "4caa3d8c-dc93-4434-944e-3af657f2bda7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-k5-2-terminology_matching_2024",
+        "script_level.level_keys": [
+          "pl-k5-2-terminology_matching_2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-2",
+        "activity_section.key": "56177a5f-9d2a-40d8-be32-83910b7b0c5f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-k5-2_freeplayvideo_2024",
+        "script_level.level_keys": [
+          "pl-k5-2_freeplayvideo_2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-2",
+        "activity_section.key": "56177a5f-9d2a-40d8-be32-83910b7b0c5f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-k5-2_helloworld_freeplay_2024",
+        "script_level.level_keys": [
+          "pl-k5-2_helloworld_freeplay_2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-2",
+        "activity_section.key": "56177a5f-9d2a-40d8-be32-83910b7b0c5f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-k5-2_PLexperiences_2024",
+        "script_level.level_keys": [
+          "pl-k5-2_PLexperiences_2024"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-2",
+        "activity_section.key": "c5d1a72a-4cc1-452b-a8c4-b337fb11754e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-k5-2-nextSteps_2024",
+        "script_level.level_keys": [
+          "pl-k5-2-nextSteps_2024"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-k5-2024-2",
+        "activity_section.key": "c5d1a72a-4cc1-452b-a8c4-b337fb11754e"
       }
     }
   ],

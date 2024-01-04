@@ -2370,6 +2370,19 @@ hu:
         text: Amikor megnyomod a Futtatás gombot, a sprite azt a szöveget fogja mondani,
           amit megadtál neki. Itt az ideje, hogy elkezd használni a Sprite labort,
           és meglátod, mire képes a fantáziád!
+    hoc-dance-ai-warmup:
+      2:
+        text: Szia! Az én nevem Miral Kotb, táncos, szoftverfejlesztő, és az iLuminate
+          megalkotója vagyok.
+      3:
+        text: A számítógép-tudomány a kreativitáshoz sokféleképpen kapcsolódik. Ezernyi
+          módon, tényleg. Úgy értem, ha képes vagy szoftvert írni, az ötleteidet bárhogy
+          megvalósíthatod. Én világító ruhákkal dolgozom. Rengeteg dolgot megtehetsz,
+          ha megvannak az eszközeid a szoftveríráshoz, és a lehetőségek végtelenek.
+      5:
+        text: Kód-blokkokat fogsz használni a különböző táncosok kiválasztásához,
+          a mozdulatok megváltoztatásához, hogy reagáljanak a zenére és hogy interaktív
+          legyen a tánc.
     hoc_dance_congrats:
       1:
         text: 'Kódolás Órája | Táncos buli: Induljon a party!'

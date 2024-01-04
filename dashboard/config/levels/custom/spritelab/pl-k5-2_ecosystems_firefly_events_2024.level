@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2023-12-13T22:27:17.000Z",
   "level_num": "custom",
@@ -44,7 +45,7 @@
     "pause_animations_by_default": "false",
     "start_animations": "{\"orderedKeys\":[\"138ee880-17bc-47f5-b7a0-ef1c9e7aca30\",\"64a8169b-e905-4ca0-9ea1-ce750b51a828\",\"e57caa8e-1acb-4457-aba1-6c2a714f10e5\",\"291f0a1b-464c-4caa-b818-252e0303b467\"],\"propsByKey\":{\"291f0a1b-464c-4caa-b818-252e0303b467\":{\"name\":\"firefily_dark\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":331},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2023-03-01T16:13:21.000Z\",\"pngLastModified\":\"2023-03-01T16:13:21.000Z\",\"version\":\"rh7Cp8ij4d4.PmTeeSQj0puEDgLeESgC\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/rh7Cp8ij4d4.PmTeeSQj0puEDgLeESgC/firefily_dark.png\",\"sourceSize\":{\"x\":400,\"y\":331}},\"e57caa8e-1acb-4457-aba1-6c2a714f10e5\":{\"name\":\"firefily\",\"frameCount\":1,\"frameSize\":{\"x\":313,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2023-03-01T16:13:32.000Z\",\"pngLastModified\":\"2023-03-01T16:13:32.000Z\",\"version\":\"MOJHGcuQlfvvbQJAapXnaKf8pN7lcQkU\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/MOJHGcuQlfvvbQJAapXnaKf8pN7lcQkU/firefily.png\",\"sourceSize\":{\"x\":313,\"y\":400}},\"64a8169b-e905-4ca0-9ea1-ce750b51a828\":{\"name\":\"day_sun\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2023-03-01T16:05:56.000Z\",\"pngLastModified\":\"2023-03-01T16:05:56.000Z\",\"version\":\"79gNMnZW4JOInc__ZVSzgLxaxhw4E.gF\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/79gNMnZW4JOInc__ZVSzgLxaxhw4E.gF/day_sun.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"138ee880-17bc-47f5-b7a0-ef1c9e7aca30\":{\"name\":\"night_moon\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2023-03-01T16:05:40.000Z\",\"pngLastModified\":\"2023-03-01T16:05:39.000Z\",\"version\":\"Fou4wijwxmmpK_x8JPn03YnUnH3bAG5f\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/Fou4wijwxmmpK_x8JPn03YnUnH3bAG5f/night_moon.png\",\"sourceSize\":{\"x\":400,\"y\":400}}}}\r\n\r\n",
     "hide_custom_blocks": "true",
-    "long_instructions": "**Fireflies have developed a special chemical inside their bodies that creates a glow called *bioluminescence*.**\r\n\r\nCreate a model of the glowing fireflies at night.\r\n- Add a new <code style=\"color:black; background-color:#6AF36C\">when down pressed</code> event.\r\n- Add <code style=\"color:black; background-color:#B3B2FB\">set background</code> and <code style=\"color:black; background-color:#5ED5DD\">change sprite costume</code>.\r\n- Click <code style=\"color:black; background-color:#FFBD46\">Run</code> then the **down arrow**.\r\n\r\n***\r\n\r\n**Bonus:** \r\nAdd another event that changes the background back to daytime and the fireflies stop glowing. \r\n\r\n",
+    "long_instructions": "\r\n<div style=\"background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\r\n\r\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 14px; \"> <div style=\"background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\r\n\r\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 14px; \"> When planning for code, it’s important to think about how we want our users to interact with the code. Practice using the different event blocks to complete this coding challenge.    \r\n</p>\r\n</div>\r\n\r\n</p>\r\n</div>\r\n<br>\r\n\r\n\r\n**Fireflies have developed a special chemical inside their bodies that creates a glow called *bioluminescence*.**\r\n\r\nCreate a model of the glowing fireflies at night.\r\n- Add a new <code style=\"color:black; background-color:#6AF36C\">when down pressed</code> event.\r\n- Add <code style=\"color:black; background-color:#B3B2FB\">set background</code> and <code style=\"color:black; background-color:#5ED5DD\">change sprite costume</code>.\r\n- Click <code style=\"color:black; background-color:#FFBD46\">Run</code> then the **down arrow**.\r\n\r\n***\r\n\r\n**Bonus:** \r\nAdd another event that changes the background back to daytime and the fireflies stop glowing. \r\n\r\n",
     "parent_level_id": 28525,
     "auto_run_setup": "DRAW_LOOP",
     "show_type_hints": "true",
@@ -78,9 +79,10 @@
     "encrypted_examples": "hIPgvyp01NSahNoSgcNiTme2rc3mdZ38DuUzdTkx8shnHr6oYMgc67JJZ7I0\nOEDKb2WsngkEl76GHKezdshtaw==\n",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-12-13T22:27:17.883+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_whale_explain_2023\\\"\"],\"cloned_from\":\"csc_ecosystems_whale_explain_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-12-13T22:27:17.883+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_whale_explain_2023\\\"\"],\"cloned_from\":\"csc_ecosystems_whale_explain_2023\"},{\"changed_at\":\"2023-12-15 17:22:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>

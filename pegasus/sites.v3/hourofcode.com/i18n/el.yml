@@ -952,6 +952,9 @@ el:
   cs_ambassador_application_date: Οι αιτήσεις είναι ανοιχτές έως τις 8 Νοεμβρίου 2023
   cs_ambassador_application_subhead: Συνεργαστείτε με έναν δάσκαλο για να υποβάλετε
     την αίτησή σας σήμερα
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: Ερωτήσεις; Παρακαλούμε επικοινωνήστε με [youngwomen@code.org]
     (%{email_url})
   cs_ambassador_do_heading: Τι κάνουν οι πρεσβευτές CS;

@@ -889,6 +889,9 @@ bn:
   cs_ambassador_application_date: আবেদনগুলি 8 নভেম্বর, 2023 পর্যন্ত খোলা
   cs_ambassador_application_subhead: আজ আপনার আবেদন জমা দিতে একজন শিক্ষকের সাথে কাজ
     করুন
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: প্রশ্ন? যোগাযোগ করুন [youngwomen@code.org]
     (%{email_url})
   cs_ambassador_do_heading: সিএস রাষ্ট্রদূতরা কী করেন?

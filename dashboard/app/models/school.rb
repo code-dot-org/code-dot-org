@@ -51,19 +51,6 @@ class School < ApplicationRecord
     school_stats_by_year.order(school_year: :desc).first
   end
 
-  # Determines if this is a high-needs school for the purpose of distributing Maker Toolkit
-  # discount codes - this is not a definition we apply broadly.
-  # @return [Boolean] True if high-needs, false otherwise.
-  def maker_high_needs?
-    # As of January 2020, "high-needs" is defined as having >= 50% of the student population
-    # eligible for free-and-reduced lunch programs.
-    stats = most_recent_school_stats
-    if stats.nil? || stats.frl_eligible_total.nil? || stats.students_total.nil?
-      return false
-    end
-    (stats.frl_eligible_total.to_f / stats.students_total) >= 0.5
-  end
-
   # Determines if school meets Amazon Future Engineer criteria.
   # Eligible if the school is any of the following:
   # a) title I school,
@@ -73,8 +60,7 @@ class School < ApplicationRecord
     stats = most_recent_school_stats
     return false if stats.nil?
 
-    # To align with maker_high_needs? definition above,
-    # returning false if we don't have all data for a given school.
+    # Return false if we don't have all data for a given school.
     stats.title_i_eligible? || (stats.urm_percent || 0) >= 40 || (stats.frl_eligible_percent || 0) >= 40
   end
 

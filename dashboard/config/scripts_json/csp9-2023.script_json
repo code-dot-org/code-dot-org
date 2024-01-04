@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-12-11 22:55:39 UTC",
+    "serialized_at": "2024-01-03 21:00:34 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -75,7 +75,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "This lesson contains a series of activities you can use to help students familiarize themselves with Create Performance Task and how it is scored. This lesson is also designed to introduce the nuances of the Create PT, and begin to provide some answers to the questions that will inevitably arise. The Create PT is in many ways straightforward: you complete a self-directed programming project and respond to prompts about your program and process. As you dig into the details of the task, however, you quickly come across some of the nuances of individual components of the task and how they're scored. ",
-        "preparation": "* Print or prepare to distribute digital copies of the Create PT - Survival Guide\n* Review pages 1-5 of the Create PT - Survival Guide\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-create-pt-lessons-1-3/36488) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1zH__f0Hx7zZVdIJWBsWwbrkpR6LtyAAOmtqF7gCdUFI/edit?usp=sharing)\n",
+        "preparation": "* Print or prepare to distribute digital copies of the Create PT - Survival Guide\n* Review pages 1-5 of the Create PT - Survival Guide\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-create-pt-lessons-1-3-new/38851) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1zH__f0Hx7zZVdIJWBsWwbrkpR6LtyAAOmtqF7gCdUFI/edit?usp=sharing)\n",
         "student_overview": "This lesson uses the Create PT Survival Guide as the backbone for a series of activities to ramp up to doing the actual Create PT."
       },
       "seeding_key": {
@@ -94,7 +94,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson uses the Create PT Survival Guide to help students narrow down and brainstorm ideas for their actual project. The lesson concludes by providing students with resources to make a plan to complete the task starting in the next lesson.",
-        "preparation": "* Review pages 6-15 of the Create PT - Survival Guide\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-create-pt-lessons-1-3/36488) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1zvt_xQIAL6_achJHWu-hkQ2QsdtFEnLEJs5-6xn11es/edit?usp=sharing)",
+        "preparation": "* Review pages 6-15 of the Create PT - Survival Guide\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-create-pt-lessons-1-3-new/38851) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1zvt_xQIAL6_achJHWu-hkQ2QsdtFEnLEJs5-6xn11es/edit?usp=sharing)",
         "student_overview": "This lesson uses the Create PT Survival Guide to help narrow down and brainstorm ideas for the actual project."
       },
       "seeding_key": {
@@ -114,7 +114,7 @@
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "It is finally time for students to take on the Create Performance Task. For a total of 9 class hours, students should work on their projects with only types of teacher support allowed (essentially: Advise on process, don’t influence or evaluate ideas).  Students may also work with a collaborative partner in *in development of their program* - written responses must be done on their own.\n\nThe lesson includes reminders about how you can interact with students while they are working on their projects, and suggestions about time line. The Create PT requires a minimum of 9 hours of class time.  At the end, students will submit their program code, program video, and personalized project reference through their AP digital portfolio.",
-        "preparation": "* Review pages 169-171 in the [Course and Exam Description](https://apcentral.collegeboard.org/pdf/ap-computer-science-principles-course-and-exam-description.pdf?course=ap-computer-science-principles)  to understand the teacher's role on the Create PT\n* Review how to create a stand-alone App Lab project to assist students\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1oA6gTYeeHtlUhwvE4wN2C9l_JfrDVYfHbL-8sE18ahI/edit?usp=sharing)",
+        "preparation": "* Review pages 169-171 in the [Course and Exam Description](https://apcentral.collegeboard.org/pdf/ap-computer-science-principles-course-and-exam-description.pdf?course=ap-computer-science-principles)  to understand the teacher's role on the Create PT\n* Review how to create a stand-alone App Lab project to assist students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-create-pt-lessons-1-3-new/38851) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1oA6gTYeeHtlUhwvE4wN2C9l_JfrDVYfHbL-8sE18ahI/edit?usp=sharing)",
         "purpose": ".",
         "student_overview": "The lesson includes some final reminders and guidelines for completing the Create PT before officially starting. For a total of 9 class hours, you will work on your project with only types of teacher support allowed (essentially: Advise on process, not ideas).  You may also work with a collaborative partner in *in development of you program* - personalized project references must be done on your own."
       },
@@ -133,7 +133,7 @@
       "relative_position": 4,
       "properties": {
         "overview": "How can I employ effective strategies to excel in the AP Computer Science Principles written exam?\n\nOn Day 1 of the lesson, students explore the exam format, learn test-taking and annotation strategies, and finally craft responses to two sample Performance Task prompts, specifically addressing #1 \"Program Design, Function, and Purpose\" and #2(a) \"Algorithm Development.\" Students should be prepared with completed Personalized Project Reference (PPR) sheets. The lesson emphasizes discussions, annotations, and writing exercises to build confidence and strategic skills for the upcoming exam.\n\nOn Day 2 of this lesson, the teacher models the day 1 strategies by annotating a sample performance task question. Then, students begin the second half of the mock exam while the teacher facilitates, encourages, and helps clarify any confusion. Finally, students participate in quick partner and whole class review to reinforce collaboration, acknowledge challenges, and make suggestions for future sessions.",
-        "preparation": "* Print Personalized Project References\n* Choose one, or both\n  * Print copies of Activity Guide (Version A) - Create PT Mock Exam (one for each student)\n  * Print copies of Activity Guide (Version B) - Create PT Mock Exam (one for each student)\n* Print and cut Create PT Mock Exam Description\n* Set up a space for the \"Want to Know\" area that students can contribute to\n* Gather sticky notes for each student to use",
+        "preparation": "* Print Personalized Project References\n* Choose one, or both\n  * Print copies of Activity Guide (Version A) - Create PT Mock Exam (one for each student)\n  * Print copies of Activity Guide (Version B) - Create PT Mock Exam (one for each student)\n* Print and cut Create PT Mock Exam Description\n* Set up a space for the \"Want to Know\" area that students can contribute to\n* Gather sticky notes for each student to use\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-create-pt-lessons-4-new/38852) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "How can I employ effective strategies to excel in the AP Computer Science Principles written exam?\n\n\nOn Day 1 of the lesson, you will explore the exam format, learn test-taking and annotation strategies, and finally craft responses to two sample Performance Task prompts.\n\nOn Day 2 of this lesson, you will begin the second half of the mock exam, writing the second set of responses. Additionally, you will review the strategies, acknowledging challenges and making suggestions to help you master your response writing capabilities."
       },
       "seeding_key": {
@@ -349,8 +349,8 @@
       "key": "dcecca1e-e0a1-4374-9b50-a098d7cb298f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Students should each get printed or digital copies of the Scoring Guidelines and Task Instructions.",
-        "name": "Review Create PT Submission Requirements and Scoring Guidelines"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Students should each get printed or digital copies of the Task Instructions.",
+        "name": "Review Create PT Submission Requirements"
       },
       "seeding_key": {
         "activity_section.key": "dcecca1e-e0a1-4374-9b50-a098d7cb298f",
@@ -361,7 +361,7 @@
       "key": "14ce85d6-5045-4130-9e96-8cf665244c7f",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Read and then discuss with a partner the Scoring Guidelines and Task Instructions.*\n\n**Discussion Goal: Aim to keep this discussion relatively short.** Assure students you're intending to log their questions and they will be addressed through the lesson.\n\nStudents should leave this discussion knowing they will submit:\n\n* video of their code running\n* PDF of program code\n* Personalized Program Reference including code snippets from their programs\n\nStudents are not, however, expected to fully understand the nuances of the task or scoring.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Read and then discuss with a partner the Task Instructions.*\n\n**Discussion Goal: Aim to keep this discussion relatively short.** Assure students you're intending to log their questions and they will be addressed through the lesson.\n\nStudents should leave this discussion knowing they will submit:\n\n* Video of their code running\n* PDF of program code\n* Personalized Program Reference including code snippets from their programs\n\nStudents are not, however, expected to fully understand the nuances of the task or scoring.\n"
       },
       "seeding_key": {
         "activity_section.key": "14ce85d6-5045-4130-9e96-8cf665244c7f",
@@ -1575,7 +1575,7 @@
       }
     },
     {
-      "name": "Unit 9 Lesson 5 - Create PT Mock Exam - Slides",
+      "name": "Unit 9 Lesson 4 - Create PT Mock Exam - Slides",
       "url": "https://docs.google.com/presentation/d/1ndJrvTZB2rcUnV502a1KIuCoH21_b0IAPZtIpgnUInE/edit?usp=drive_link",
       "key": "unit_9_lesson_5_-_create_pt_mock_exam_-_slides",
       "properties": {

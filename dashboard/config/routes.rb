@@ -59,12 +59,6 @@ Dashboard::Application.routes.draw do
 
     get 'maker/home', to: 'maker#home'
     get 'maker/setup', to: 'maker#setup'
-    get 'maker/discountcode', to: 'maker#discountcode'
-    post 'maker/apply', to: 'maker#apply'
-    post 'maker/schoolchoice', to: 'maker#schoolchoice'
-    post 'maker/complete', to: 'maker#complete'
-    get 'maker/application_status', to: 'maker#application_status'
-    post 'maker/override', to: 'maker#override'
     get 'maker/google_oauth_login_code', to: 'maker#login_code'
     get 'maker/display_google_oauth_code', to: 'maker#display_code'
     get 'maker/google_oauth_confirm_login', to: 'maker#confirm_login'
@@ -1063,7 +1057,9 @@ Dashboard::Application.routes.draw do
         get 'get_ai_evaluations'
         get 'get_teacher_evaluations'
         get 'ai_evaluation_status_for_user'
+        get 'ai_evaluation_status_for_all'
         post 'run_ai_evaluations_for_user'
+        post 'run_ai_evaluations_for_all'
         post 'submit_evaluations'
       end
     end
