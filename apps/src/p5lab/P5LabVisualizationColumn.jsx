@@ -22,6 +22,7 @@ import {toggleGridOverlay} from './actions';
 import GridOverlay from './gamelab/GridOverlay';
 import TextConsole from './spritelab/TextConsole';
 import SpritelabInput from './spritelab/SpritelabInput';
+import VariableWatcher from './spritelab/VariableWatcher';
 import {
   cancelLocationSelection,
   selectLocation,
@@ -187,6 +188,7 @@ class P5LabVisualizationColumn extends React.Component {
               <TooltipOverlay
                 providers={[coordinatesProvider(isSpritelab, isRtl)]}
               />
+              <VariableWatcher showWhileRunning={true} />
             </VisualizationOverlay>
           </ProtectedVisualizationDiv>
           <TextConsole consoleMessages={this.props.consoleMessages} />
@@ -194,7 +196,6 @@ class P5LabVisualizationColumn extends React.Component {
             <SpritelabInput onPromptAnswer={this.props.onPromptAnswer} />
           )}
         </div>
-
         <GameButtons>
           {showPauseButton && (
             <PauseButton
