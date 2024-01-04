@@ -230,9 +230,10 @@ button.rubricHeaderTab {
     line-height: 1.1875;
   }
 }
+
 .learningGoalContainer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
   align-self: stretch;
@@ -244,8 +245,7 @@ button.rubricHeaderTab {
 .learningGoalRow {
   display: flex;
   align-self: stretch;
-  justify-content: space-between;
-  width: 100%;
+  border-bottom: 1px solid $neutral_dark40;
   min-height: 40px;
 
   // Directly target the <summary> child with the class
