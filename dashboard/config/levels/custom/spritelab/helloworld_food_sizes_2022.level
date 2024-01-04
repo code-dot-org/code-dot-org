@@ -67,7 +67,7 @@
     "display_name": "Size",
     "bubble_choice_description": "Learn to change the size of sprites.",
     "thumbnail_url": "https://studio.code.org/api/v1/animation-library/gamelab/2O84JtbnWjil7f2R0oUqvFTRHnFaGCIw/category_food/face_strawberry.png",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"hello_world_new\",\r\n  \"callout_text\": \"New block!\",\r\n  \"element_id\": \".svgFlyoutGroup [block-id=\\\"8\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"hello_world_new_block\",\r\n  \"callout_text\": \"New block!\",\r\n  \"element_id\": \".svgFlyoutGroup [block-id=\\\"11\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[{\"localization_key\":\"hello_world_new\",\"callout_text\":\"New block!\",\"element_id\":\".svgFlyoutGroup [block-id=\\\"8\\\"]\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"localization_key\":\"hello_world_new_block\",\"callout_text\":\"New block!\",\"element_id\":\".svgFlyoutGroup [block-id=\\\"11\\\"]\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"element_id\":\".blocklyFlyout [data-id=\\\"8\\\"]\",\"localization_key\":\"hello_world_new\",\"callout_text\":\"New block!\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"},{\"element_id\":\".blocklyFlyout [data-id=\\\"11\\\"]\",\"localization_key\":\"hello_world_new_block\",\"callout_text\":\"New block!\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"}]",
     "hide_pause_button": "true",
     "hint_prompt_attempts_threshold": "1",
     "short_instructions": "Let's learn to change the size of sprites.",
@@ -143,7 +143,7 @@
             </block>
           </value>
         </block>
-        <block type="gamelab_setProp">
+        <block type="gamelab_setProp" id="8">
           <title name="PROPERTY">"scale"</title>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
@@ -156,7 +156,7 @@
             </block>
           </value>
         </block>
-        <block type="gamelab_changePropBy">
+        <block type="gamelab_changePropBy" id="11">
           <title name="PROPERTY">"scale"</title>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
