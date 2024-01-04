@@ -842,6 +842,8 @@
   minecraft_resources_desc_01: "Utilize this on demand [free course](%{course_url}) or register your entire class to attend a live Hour of Code workshop with a guest teacher. Offered at multiple times during CSEdWeek, %{campaign_date}."
   minecraft_resources_desc_02: "Inspire STEM passion in K-12 learners with 200 hours of computer science curriculum, from block to python, supported by professional development."
 
+  afe_page_success_heading: "Congratulations! You successfully signed up for the Amazon Future Engineer Program."
+  afe_page_success_desc: "You should receive an email shortly from Amazon Future Engineer to claim your benefits. In the meantime, check out some of the amazing resources around our site."
   afe_page_eligibility_check_heading: "We've checked your eligibility"
   afe_page_eligibility_check_fail_desc: "Your school does not meet the eligibility [requirements*](%{req_url}) for the Amazon Future Engineer benefits, but you can still take advantage of all Code.org has to offer, including our robust curriculum and professional learning opportunities."
   afe_page_eligibility_check_fail_error: "If you think you received this message in error, contact us at [support@code.org](%{email_url})."
