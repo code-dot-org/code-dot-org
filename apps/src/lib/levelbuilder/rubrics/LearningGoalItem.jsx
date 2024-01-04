@@ -33,7 +33,7 @@ export default function LearningGoalItem({
     if (exisitingLearningGoalData.aiEnabled && !canEditLearningGoalName) {
       if (
         confirm(
-          'Please contact the teacher tools team before changing the name of any learning goal that uses AI assessment.'
+          'Please contact the teacher tools team before changing the name of any key concept that uses AI assessment.'
         )
       ) {
         setCanEditLearningGoalName(true);
