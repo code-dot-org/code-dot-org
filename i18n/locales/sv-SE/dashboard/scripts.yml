@@ -187,7 +187,6 @@ sv:
           description_short: Lär dig att programmera droider och skapa ditt eget Star Wars-spel i en galax långt, långt borta.
           student_description: Lär dig att programmera droider och skapa ditt eget Star Wars-spel i en galax långt, långt borta.
         mc:
-          title: Minecraft Hour of Code
           description: Använd block av kod för att ta Steve eller Alex på ett äventyr genom denna Minecraft-värld.
           description_short: Utforska en Minecraft-värld genom kod
           student_description: Använd block av kod för att ta Steve eller Alex på ett äventyr genom denna Minecraft-värld.
@@ -1602,6 +1601,8 @@ sv:
               display_name: Innehåll
             lessonGroup-2:
               display_name: Innehåll
+        dance-unplugged:
+          title: Dansparty akustiskt
         poetry:
           name: poesi
         spelling-bee:
@@ -1976,6 +1977,8 @@ sv:
           lessons:
             lesson-5:
               name: Bedömningar
+            lesson-6:
+              name: Lektion 1
         tess-testing-problem-solving-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2305,3 +2308,53 @@ sv:
           title: Modul 7
         vpl-csd-2023-m8:
           title: Modul 8
+        virtual-pl-csa-summer-2024-day1:
+          title: Dag 1
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Introduktion
+          title: Dag 2
+        virtual-pl-csp-summer-day3:
+          title: Dag 3
+        virtual-pl-csp-summer-day4:
+          title: Dag 4
+        virtual-pl-csp-summer-day5:
+          title: Dag 5
+        virtual-pl-csa-summer-day2:
+          title: Dag 2
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Introduktion
+          title: Dag 3
+        virtual-pl-csa-summer-day4:
+          title: Dag 4
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Introduktion
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Introduktion
+          title: Dag 1
+        virtual-pl-csp-summer-day1:
+          title: Dag 1
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Problemlösnings-processen'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Datorer och Problemlösning'
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitel 1: Bilder och Animationer'
+            lessonGroup-3:
+              display_name: 'Kapitel 2: Bygga Spel'
+        csd7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitel 1
+            lessonGroup-3:
+              display_name: Kapitel 2

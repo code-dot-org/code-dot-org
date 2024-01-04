@@ -3434,6 +3434,9 @@
         "4426fb52-6448-4467-8602-49daf6b12bf1": {
           "name": "Yekun"
         },
+        "687f8be1-c863-4391-971d-5ffa5360ed71": {
+          "name": "isinmək"
+        },
         "0f9b927e-0931-463c-85dd-f92b58eea3dd": {
           "name": "Fəaliyyət"
         },
@@ -3652,6 +3655,9 @@
         },
         "f589d41f-0064-4e89-bc57-b6815763792f": {
           "name": "Yekun"
+        },
+        "5ec2cf3c-e372-4dc6-9b3e-4aaca8be2740": {
+          "name": "isinmək"
         },
         "9e4b93ba-099d-4c47-b962-d47f961599bb": {
           "name": "Əsas Aktivlik"
@@ -4679,15 +4685,6 @@
         "403fc603-5eea-490f-943f-0f0e1d4d99f9": {
           "name": "Əlavə təlim"
         },
-        "f0e43cbc-520d-42b7-8de2-0572d569695e": {
-          "name": ""
-        },
-        "726b38ad-28ae-43e1-b7d8-08d13ccda1d3": {
-          "name": "Əsas Aktivlik"
-        },
-        "26cbfc03-2134-4097-b9c9-a2b7d4227d8f": {
-          "name": "Yekun"
-        },
         "b47403db-764c-41c2-9c65-eea089621c6f": {
           "name": "Səviyyələr"
         },
@@ -5426,6 +5423,9 @@
         "fb244265-6cd6-459d-bc88-e056d9902b8d": {
           "name": "Fəaliyyət"
         },
+        "b6364f64-7652-413c-b216-00e84f75dc46": {
+          "name": "isinmək"
+        },
         "cdebc121-9bb7-4512-a38f-ec2adaabed91": {
           "name": "Fəaliyyət"
         },
@@ -5659,6 +5659,9 @@
         },
         "3752f66b-8440-41f6-bb77-df9a8a3c7fd8": {
           "name": "Yekun"
+        },
+        "b66f054d-7a1a-4d77-b19c-6b012d2b87a1": {
+          "name": "isinmək"
         },
         "3cab4fd7-471c-4ad2-bdd8-e65a69c74898": {
           "name": "Əsas Aktivlik"
@@ -6653,6 +6656,15 @@
         "fe088a05-31b9-4a26-991c-1a12e71d6648": {
           "name": "Fəaliyyət"
         },
+        "00f9385c-daa7-4590-a138-13a063e6f8c8": {
+          "name": "Seçim 1: Süni İntellekt Etika Məcəlləsi"
+        },
+        "dcf77a0c-cc1a-49b0-92f2-96369e9773fa": {
+          "name": "Seçim 2: Manifest yaradın"
+        },
+        "87ba21ee-32c8-441d-8291-ddf718afade6": {
+          "name": "Seçim 3: Dünya Sənət Ekranınızı Təsəvvür edin"
+        },
         "03abf019-c78b-429f-a48b-e2d493d16e76": {
           "name": "Yekun"
         },
@@ -6662,8 +6674,17 @@
         "960da364-67c4-471d-8ece-3a5b3c621448": {
           "name": "Yekun"
         },
+        "46a069d2-b327-475f-8c2a-949cf06d6ccb": {
+          "name": "Tövsiyə olunan hazırlıq"
+        },
         "5bd537e7-45bb-4968-a883-d8ba598753fb": {
           "name": "Əsas Aktivlik"
+        },
+        "a418e7ac-0146-460d-89e6-0acc14aefbb6": {
+          "name": "Genişləndirmə imkanları"
+        },
+        "6f886134-c10b-497a-880f-f54e2888cf1d": {
+          "name": "isinmək"
         },
         "a150d330-1079-408b-b305-dbc4244d41af": {
           "name": "Əsas Aktivlik"
@@ -6671,11 +6692,23 @@
         "5b88d4ce-a149-47bd-81fa-1faeab11b7d7": {
           "name": "Yekun"
         },
+        "59dd1048-c18b-43fb-a14c-4feb2887a274": {
+          "name": "Genişləndirmə imkanları"
+        },
+        "e280ae49-7bb9-4bc9-8dd6-a8c5de968600": {
+          "name": "isinmək"
+        },
         "ee447ec6-c7d6-478c-9cac-4d7e620ecb46": {
           "name": "Əsas Aktivlik"
         },
         "ba46bcef-cf00-4785-950a-63f6922f70b7": {
           "name": "Yekun"
+        },
+        "40033029-9a13-473d-9a2a-e6f090865876": {
+          "name": "Genişləndirmə imkanları"
+        },
+        "3a69a53a-6bb6-40f5-a3cc-ff9b3057085f": {
+          "name": "Tövsiyə olunan hazırlıq"
         },
         "01dbfabc-80fe-4424-b320-e79f15aaaa04": {
           "name": "Əsas Aktivlik"
@@ -6683,11 +6716,17 @@
         "ea566846-efb2-47d6-84a1-3be0b30a467f": {
           "name": "Yekun"
         },
+        "7f71c16a-2df0-4157-a1ce-3f6d33a0fbb1": {
+          "name": "Uzatma imkanları"
+        },
         "bb8f7f59-9ed7-41c5-a60e-da88ff2134c0": {
           "name": "Əsas Aktivlik"
         },
         "48209c38-b039-4722-a0c7-39ab5eb66551": {
           "name": "Yekun"
+        },
+        "5e8f830b-1775-4f99-96df-b273d625a45d": {
+          "name": "Uzatma imkanları"
         },
         "ecba58f8-a011-438e-b900-35c2b5dce108": {
           "name": "Əsas Aktivlik"
@@ -6695,11 +6734,20 @@
         "758a3a9c-9ded-4c16-9c35-7927bfccd305": {
           "name": "Yekun"
         },
+        "00de9a2c-76a5-4fa6-9828-09a42d3dd5d6": {
+          "name": "Uzatma imkanları"
+        },
         "5d85d0b3-cc1e-424f-b408-bd6c9e837484": {
           "name": "Fəaliyyət"
         },
         "59ddd755-3854-4bc1-bf00-33642e56cab7": {
           "name": "Yekun"
+        },
+        "71e24608-ba87-4f88-bde3-b17c15f78401": {
+          "name": "Uzatma imkanları"
+        },
+        "0e531225-f2d3-42ba-a1db-0154920ce6df": {
+          "name": "Tövsiyə olunan hazırlıq"
         },
         "07bc7741-d32d-4f29-bce6-6144894b39ab": {
           "name": "Fəaliyyət"
@@ -6707,11 +6755,20 @@
         "80aa4973-223d-44c0-9c93-ee86788f2702": {
           "name": "Yekun"
         },
+        "08357969-2113-4ff3-a041-0889105ffc89": {
+          "name": "Genişləndirmə imkanları"
+        },
+        "ed5b5a6d-063d-493f-a4f3-bbd78d100172": {
+          "name": "Tövsiyə olunan hazırlıq"
+        },
         "24a464e9-d4f3-4de3-b800-2e7dcc06890e": {
           "name": "Fəaliyyət"
         },
         "76c6e35a-e629-4ae2-bf0e-e26e8e0a9750": {
           "name": "Yekun"
+        },
+        "98fd68a6-ea5e-47f5-93d1-5f6b9aabbe39": {
+          "name": "Uzatma Seçimləri"
         },
         "55193ffa-151e-4247-b12f-fd7251cf4a99": {
           "name": "Fəaliyyət"
@@ -6719,11 +6776,20 @@
         "cca52abd-7e79-46d4-a573-ca815122dee3": {
           "name": "Yekun"
         },
+        "1684b440-4813-446c-a62d-201cf832b0fd": {
+          "name": "Genişləndirmə imkanları "
+        },
+        "2acd0565-f462-437c-9be3-66bd44962646": {
+          "name": "Tövsiyə olunan hazırlıq"
+        },
         "821193be-e0aa-4907-b138-b2869eb91048": {
           "name": "Fəaliyyət"
         },
         "4e31f9f7-1b9a-487f-8f1b-6c157ea84771": {
           "name": "Yekun"
+        },
+        "6524d6fb-6d11-46b4-b1d6-0ae8c76f2a2f": {
+          "name": "Uzatma imkanları"
         },
         "0e929a5b-1c50-4402-a10d-949d8e8d91ee": {
           "name": "Fəaliyyət"
@@ -6737,6 +6803,9 @@
         "fad0a6c3-f811-47f8-820c-a7bd4a653ec3": {
           "name": "Yekun"
         },
+        "7e075c0a-a90f-4777-8608-896d8ead5846": {
+          "name": "Uzatma imkanları"
+        },
         "72c1bd07-a758-4634-833a-13761feaccf8": {
           "name": "Fəaliyyət"
         },
@@ -6749,11 +6818,20 @@
         "628ca983-6d8e-4145-9aa0-5e6df9d25b28": {
           "name": "Yekun"
         },
+        "6d049733-d8a6-4426-b642-76a2604a7496": {
+          "name": "Uzatma imkanları"
+        },
+        "eb3bde62-9ff7-4b66-b7d4-c55467aa91a8": {
+          "name": "Tövsiyə olunan hazırlıq"
+        },
         "df49e5ca-d5fc-4a4d-8516-28d6d724518a": {
           "name": "Fəaliyyət"
         },
         "70723c73-15c5-4d69-bcf8-7268daa9d114": {
           "name": "Yekun"
+        },
+        "7dd26f40-44df-4d56-ac15-d061bd3e106c": {
+          "name": "Uzatma imkanları "
         },
         "ee5913a5-d018-4699-9e1f-56472ee207c4": {
           "name": "Əsas Aktivlik"
@@ -6761,11 +6839,20 @@
         "65dafa6f-639b-4180-adea-3aa8ac1faa8f": {
           "name": "Yekun"
         },
+        "7655956b-c78c-44a0-b76f-db4498c3a26d": {
+          "name": "Uzatma imkanları"
+        },
+        "9e38b776-8b6b-4c75-8742-3776c454a8b7": {
+          "name": "Tövsiyə olunan hazırlıq"
+        },
         "f9f1326b-d1e4-4304-9c20-597037c86ffe": {
           "name": "Əsas Aktivlik"
         },
         "695703b8-0d00-47a2-bf43-3c522d641b8a": {
           "name": "Yekun"
+        },
+        "9e1bcfef-a26f-469b-9d89-2c7dd7c7dff9": {
+          "name": "Uzatma imkanları"
         },
         "15eaf8a7-b87e-4855-a66f-f762fe1796b0": {
           "name": "Fəaliyyət"
@@ -6773,8 +6860,14 @@
         "d05acea5-2af0-4c85-9db8-389a968c4174": {
           "name": "Yekun"
         },
+        "62312fb1-df70-417f-8173-c2e6969a705a": {
+          "name": "Uzatma imkanları"
+        },
         "d7b1d196-06b9-49c7-8ef3-f1644b41f499": {
           "name": "Yekun"
+        },
+        "4d283725-bc40-45e0-a2ba-0c722a357729": {
+          "name": "Uzatma imkanları"
         },
         "d8d40c16-83f4-469b-b667-ce834388c700": {
           "name": "Fəaliyyət"
@@ -6782,11 +6875,23 @@
         "1c83e587-e10c-4f6b-9183-8e269511015c": {
           "name": "Yekun"
         },
+        "0e7086c2-52d3-419a-b55c-9881ed7a8335": {
+          "name": "Genişləndirmə imkanları"
+        },
+        "281ef28f-2969-4c60-80a4-8bdad8662658": {
+          "name": "Tövsiyə olunan hazırlıq"
+        },
+        "7387ce3c-05c0-477a-a59c-d72b1e06f2a2": {
+          "name": "isinmək"
+        },
         "c54ef9e6-6b5a-481e-b77d-7e446171e8b0": {
           "name": "Əsas Aktivlik"
         },
         "ce713f16-6392-4922-b661-50dbf0853e80": {
           "name": "Yekun"
+        },
+        "aad4dda1-507b-42a5-a62c-1aac5671cb91": {
+          "name": "Genişləndirmə imkanları"
         },
         "e9cbffab-836c-44c6-91e3-fe51eb49cd13": {
           "name": "Fəaliyyət"
@@ -6794,14 +6899,26 @@
         "48e777fe-4e61-4b4e-bfdd-d69fb9869eaa": {
           "name": "Yekun"
         },
+        "9484e482-4713-4747-84d0-fba065c7e4a1": {
+          "name": "Genişləndirmə imkanları"
+        },
         "8dd85242-85ec-4172-8516-b3124c3ec790": {
           "name": "Yekun"
+        },
+        "7934c32a-f4ba-48b1-8c92-903075552224": {
+          "name": "Genişləndirmə imkanları"
+        },
+        "62058ba3-874c-4aae-9d67-8bed1cf236ae": {
+          "name": "isinmək"
         },
         "6974a2ee-1e66-4ea4-8a37-6e1f5eebdc42": {
           "name": "Əsas Aktivlik"
         },
         "bc06844e-05f4-4090-94f2-c46dece69e6f": {
           "name": "Yekun"
+        },
+        "e57a4ee9-956b-410e-8d3e-b321b0abe71c": {
+          "name": "Genişləndirmə imkanları"
         },
         "360c949e-7bb0-4183-8580-6f9cf3d3a2e1": {
           "name": "Texniki Quraşdırma"
@@ -7523,6 +7640,9 @@
         "6bae919e-c881-4470-990e-9d0fbb100c49": {
           "name": "Fəaliyyət"
         },
+        "ffddef55-14cd-4e97-a3bf-7ceb8fdeaa1d": {
+          "name": "isinmək"
+        },
         "46e60858-5380-4cf5-be59-c9d53d2c0c1a": {
           "name": "Fəaliyyət"
         },
@@ -7876,6 +7996,9 @@
         },
         "ff58f895-6a89-4451-adba-7a128e402574": {
           "name": "Yekun"
+        },
+        "74d6f1a0-c861-4cc6-9662-c02682b1f65c": {
+          "name": "isinmək"
         },
         "2f12f985-1819-4cc4-8f12-08ef05f8cbf5": {
           "name": "Əsas Aktivlik"
@@ -8643,7 +8766,7 @@
           "name": "Yekun"
         },
         "ca6b9610-b612-418d-87bf-bc1776fbd110": {
-          "name": "Fəaliyyət (30-45 dəqiqə)"
+          "name": "Fəaliyyət"
         },
         "a5fa2c8b-163e-4cc1-a54b-0ad5d98bb92f": {
           "name": "Yekun"
@@ -8951,11 +9074,11 @@
         "c1b1504b-ab2d-4c58-8b42-46f2d1e1f225": {
           "name": "Süni İntelekt (Sİ) necə işləyir? "
         },
+        "93d41a54-5e26-42f6-8d4a-81bd5649efa8": {
+          "name": "Chat (çət) botları və böyük dil modelləri necə işləyir?"
+        },
         "e611ee32-23d2-4d19-995e-d23124fb63ff": {
           "name": "Dərsdən sonra"
-        },
-        "ee8cbd12-265d-4681-b6c9-05a0a062916d": {
-          "name": "Səviyyələr"
         },
         "5ff12dbb-3603-4bc6-9a8a-3fa7dc917685": {
           "name": "Fəaliyyət"
@@ -9266,9 +9389,6 @@
         "422a9a0d-186b-4332-93a8-8ccc5c407ec6": {
           "name": "Məlumat Görünüşünə qazma"
         },
-        "2f9ea489-720e-4dab-ae4b-4036a6385f4d": {
-          "name": ""
-        },
         "a4b68e1c-d78c-455c-922f-2fd57f697f58": {
           "name": "Əsas Aktivlik"
         },
@@ -9346,69 +9466,6 @@
         },
         "ddc8f987-c000-409d-aaf7-8546464a70d9": {
           "name": "Əlavə təlim"
-        },
-        "289bbaea-ab5e-48a1-80c3-8299af5a0965": {
-          "name": "Səviyyələr"
-        },
-        "c2cd2e0e-1e75-44ea-9e26-74c4e81117ce": {
-          "name": "Səviyyələr"
-        },
-        "b482746d-0030-459f-8657-a2775cf1f2a3": {
-          "name": "Səviyyələr"
-        },
-        "0f2c3670-022b-44ce-b519-13cb72ccd0fd": {
-          "name": "Səviyyələr"
-        },
-        "acd32520-21e7-4c29-8e51-5e9caf6a378d": {
-          "name": "Səviyyələr"
-        },
-        "a83c07a8-61ea-4017-b41d-725d1bd7b425": {
-          "name": "Səviyyələr"
-        },
-        "0deb9da8-356e-4547-951f-445a58491a24": {
-          "name": "Səviyyələr"
-        },
-        "941b1202-9ae6-4fbf-b806-c3e4ae8293cc": {
-          "name": "Səviyyələr"
-        },
-        "bad195ab-b5b0-41e3-9c40-610a35ff0e4f": {
-          "name": "Səviyyələr"
-        },
-        "41518965-e0d9-4c64-acaa-75abff9eeb52": {
-          "name": "Səviyyələr"
-        },
-        "f6fdf744-0a0e-4efb-b70e-a4a6f272487d": {
-          "name": "Səviyyələr"
-        },
-        "f488bd5e-8717-4f17-89de-67eed7656f10": {
-          "name": "Səviyyələr"
-        },
-        "469ead3b-ff2b-47a4-a58b-bb268370fae4": {
-          "name": "Səviyyələr"
-        },
-        "b4e1628d-775d-442e-9363-1e4d5d05a9f3": {
-          "name": "Səviyyələr"
-        },
-        "5c6427ce-49af-4fef-857c-44a01f1583bf": {
-          "name": "Səviyyələr"
-        },
-        "fb448d2f-35c0-4c79-bf75-b8eb5ee11017": {
-          "name": "Səviyyələr"
-        },
-        "f64730d7-ba60-489d-a6b5-e33c8768879b": {
-          "name": "Səviyyələr"
-        },
-        "1e703264-9e5f-4ddb-bfe5-8cbefbb646e4": {
-          "name": "Səviyyələr"
-        },
-        "1910c7c0-fe86-4867-accd-c9b9c78853b1": {
-          "name": "Səviyyələr"
-        },
-        "72871561-f49b-4ae5-a5c5-ec0dbfd6f14f": {
-          "name": "Səviyyələr"
-        },
-        "c728edf8-b7ed-465b-99f4-78f27e751d2b": {
-          "name": "Səviyyələr"
         },
         "adf2e1d7-848e-4b2e-9f60-a190c85c82ba": {
           "name": "Səviyyələr"
@@ -9540,6 +9597,21 @@
           "name": "Səviyyələr"
         },
         "5f5dea02-fd61-4c99-8095-a0e2e5de2471": {
+          "name": "Səviyyələr"
+        },
+        "289bbaea-ab5e-48a1-80c3-8299af5a0965": {
+          "name": "Səviyyələr"
+        },
+        "c2cd2e0e-1e75-44ea-9e26-74c4e81117ce": {
+          "name": "Səviyyələr"
+        },
+        "b482746d-0030-459f-8657-a2775cf1f2a3": {
+          "name": "Səviyyələr"
+        },
+        "0f2c3670-022b-44ce-b519-13cb72ccd0fd": {
+          "name": "Səviyyələr"
+        },
+        "acd32520-21e7-4c29-8e51-5e9caf6a378d": {
           "name": "Səviyyələr"
         },
         "10e6addd-5989-4d95-9384-cb1a33903e99": {
@@ -9851,6 +9923,18 @@
         "2b3a241f-5ee5-4579-9883-832cdd116c43": {
           "name": "Səviyyələr"
         },
+        "a83c07a8-61ea-4017-b41d-725d1bd7b425": {
+          "name": "Səviyyələr"
+        },
+        "0deb9da8-356e-4547-951f-445a58491a24": {
+          "name": "Səviyyələr"
+        },
+        "941b1202-9ae6-4fbf-b806-c3e4ae8293cc": {
+          "name": "Səviyyələr"
+        },
+        "ee8cbd12-265d-4681-b6c9-05a0a062916d": {
+          "name": "Səviyyələr"
+        },
         "7c7e6e02-5a61-4723-92c1-7dd5b8c304a2": {
           "name": "Əsas Aktivlik"
         },
@@ -9862,6 +9946,42 @@
         },
         "7e48fd52-decd-48b3-97bf-a71e8dd0f44e": {
           "name": "Əlavə təlim"
+        },
+        "bad195ab-b5b0-41e3-9c40-610a35ff0e4f": {
+          "name": "Səviyyələr"
+        },
+        "41518965-e0d9-4c64-acaa-75abff9eeb52": {
+          "name": "Səviyyələr"
+        },
+        "f6fdf744-0a0e-4efb-b70e-a4a6f272487d": {
+          "name": "Səviyyələr"
+        },
+        "f488bd5e-8717-4f17-89de-67eed7656f10": {
+          "name": "Səviyyələr"
+        },
+        "469ead3b-ff2b-47a4-a58b-bb268370fae4": {
+          "name": "Səviyyələr"
+        },
+        "b4e1628d-775d-442e-9363-1e4d5d05a9f3": {
+          "name": "Səviyyələr"
+        },
+        "5c6427ce-49af-4fef-857c-44a01f1583bf": {
+          "name": "Səviyyələr"
+        },
+        "fb448d2f-35c0-4c79-bf75-b8eb5ee11017": {
+          "name": "Səviyyələr"
+        },
+        "f64730d7-ba60-489d-a6b5-e33c8768879b": {
+          "name": "Səviyyələr"
+        },
+        "1e703264-9e5f-4ddb-bfe5-8cbefbb646e4": {
+          "name": "Səviyyələr"
+        },
+        "1910c7c0-fe86-4867-accd-c9b9c78853b1": {
+          "name": "Səviyyələr"
+        },
+        "72871561-f49b-4ae5-a5c5-ec0dbfd6f14f": {
+          "name": "Səviyyələr"
         },
         "35e76968-3525-446c-9256-472e8ecba118": {
           "name": "Səviyyələr"
@@ -9878,13 +9998,13 @@
         "0145bc8d-b026-434a-9713-9b43c6e34842": {
           "name": "Səviyyələr"
         },
-        "901e8625-9092-42fc-9fcc-9c665720b1f4": {
-          "name": ""
+        "c728edf8-b7ed-465b-99f4-78f27e751d2b": {
+          "name": "Səviyyələr"
         },
-        "b20b4bbb-2eb1-4c77-b938-e60cd435ce93": {
-          "name": "Əsas Aktivlik"
+        "99f155a9-1d50-44df-a647-c8dbaddea32c": {
+          "name": "Başlanğıc"
         },
-        "18913d21-3c6f-4dd8-864e-09b70f80e640": {
+        "02b4486f-d09d-4031-8235-0cf728733456": {
           "name": "Yekun"
         }
       }

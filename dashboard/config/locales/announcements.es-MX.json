@@ -172,16 +172,22 @@
           "buttonText": "Aprende más"
         },
         "409174a0-d76d-4992-8486-cfd9801c329e": {
-          "buttonText": "Aprende más"
+          "buttonText": "Aprende más",
+          "notice": "Advertencia del curso",
+          "details": "Estamos en proceso de eliminar completamente el contenido del Curso 1 y el curso de Code.org dentro de los siguientes 6 a 8 meses, ya que ya no apoyamos esta vieja oferta. Cualquier bug existente o contenido faltante dentro del contenido del Curso 1 será desafortunadamente no arreglado, mientras trabajamos en removerlo del todo y dedicar nuestros recursos en nuevas ofertas de contenido."
         },
         "3c4621e3-cd67-459f-a4f7-2199b7ab5bcc": {
-          "buttonText": "Aprenda más"
+          "buttonText": "Aprenda más",
+          "notice": "Advertencia del curso"
         },
         "f503efed-1d08-4a36-b7ba-e64f583d5209": {
-          "buttonText": "Aprenda más"
+          "buttonText": "Aprenda más",
+          "notice": "Advertencia del curso"
         },
         "d79fdf44-5b59-4229-bca8-f8b4e2786ccb": {
-          "buttonText": "Aprenda más"
+          "details": "Estamos en proceso de eliminar por completo el contenido y el curso del Curso 4 de Code.org en los próximos 6 a 8 meses, ya que ya no apoyamos activamente esta oferta anterior. Lamentablemente, no se solucionarán ni corregirán los errores existentes o el contenido que aparentemente falte en el contenido de Course 4, ya que estamos trabajando para eliminarlos por completo y dedicar nuestros recursos de personal a nuevas ofertas de contenido.",
+          "buttonText": "Aprenda más",
+          "notice": "Advertencia del curso"
         }
       }
     }

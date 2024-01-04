@@ -80,8 +80,8 @@ sq:
           description_short: Krijo imazhe me bite dhe bajte.
           student_description: Krijo imazhe me bite dhe bajte.
         20-hour:
-          title: Hyrje e pershpejtuar ne kurset e shkencave kompjuterike
-          description: Ky kurs që zgjat 20 orë, na njeh me bazën e shkencës kompjuterike dhe konceptet e programimit. Kursi është dizenjuar të përdoret nga klasat e nivelit K-8, por është argetuese të mësohet nga të gjitha moshat.
+          title: Hyrje në kurset e shkencave kompjuterike
+          description: Ky kurs që zgjat 20 orë, na njeh me bazën e shkencës kompjuterike dhe konceptet e programimit. Kursi është dizenjuar të përdoret nga klasat e nivelit K-8, por është argëtuese të mësohet nga të gjitha moshat.
           description_short: Ky kurs 20 oresh mbulon te gjithe berthamen e shkencave kompjuterike dhe konceptet e programimit ne kurset 2-4.
           description_audience: Moshat 10-18
           student_description: Ky kurs që zgjat 20 orë, na njeh me bazën e shkencës kompjuterike dhe konceptet e programimit. Kursi është dizenjuar të përdoret nga klasat e nivelit K-8, por është argetuese të mësohet nga të gjitha moshat.
@@ -216,7 +216,7 @@ sq:
           description_short: Mësoni të programoni robotë, dhe krijoni lojën tuaj Star Wars në një galaksi shumë, shumë larg.
           student_description: Mësoni të programoni robotë, dhe krijoni lojën tuaj Star Wars në një galaksi shumë, shumë larg.
         mc:
-          title: Ora e Kodimit Minecraft
+          title: Aventurieri Minecraft
           description: Përdor blloqe të kodimit t'i dërgosh Steve ose Alex në një aventurë nëpër këtë botë Minecraft.
           description_short: Eksploro  një botë Minecraft nëpërmjet kodit.
           student_description: Përdor blloqe të kodimit t'i dërgosh Steve ose Alex në një aventurë nëpër këtë botë Minecraft.
@@ -473,6 +473,9 @@ sq:
         courseb-2017:
           description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
           student_description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
+        coursec-2017:
+          title: Kursi C
+          assignment_family_title: Kursi C
         coursee-2017:
           lesson_groups:
             end_of_course_project:
@@ -648,6 +651,8 @@ sq:
         jr-test: {}
         petgame: {}
         csp-exam: {}
+        coursec-2018:
+          assignment_family_title: Kursi C
         csd6-2018: {}
         coursee-2018:
           lesson_groups:
@@ -1510,6 +1515,8 @@ sq:
           student_description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
         coursec-2021:
           title: Kursi C (2021)
+          description: Kemi zhvilluar kursin C për nxënësit në klasën e dytë. Nxënësit do të krijojnë programe me sekuencë, loops dhe evente. Ata do të hetojnë teknikat e zgjidhjes së problemeve dhe do të zhvillojnë strategji për ndërtimin e komuniteteve pozitive si online ashtu edhe offline. Deri në fund të kursit, nxënësit do të krijojnë lojëra interaktive që mund t'i ndajnë me të tjerët.
+          description_short: Mësoni bazat e shkencave kompjuterike dhe krijoni artin, historitë dhe lojërat tuaja.
           lesson_groups:
             csf_digcit:
               display_name: Shtetësia digjitale
@@ -1979,6 +1986,7 @@ sq:
             end_of_course_project:
               display_name: Përfundimi i projektit të kursit
           title: Kursi C (2022)
+          description: Kemi zhvilluar kursin C për nxënësit në klasën e dytë. Nxënësit do të krijojnë programe me sekuencë, loops dhe evente. Ata do të hetojnë teknikat e zgjidhjes së problemeve dhe do të zhvillojnë strategji për ndërtimin e komuniteteve pozitive si online ashtu edhe offline. Deri në fund të kursit, nxënësit do të krijojnë lojëra interaktive që mund t'i ndajnë me të tjerët.
         csp6-2022: {}
         csp7-2022: {}
         csp8-2022: {}
@@ -2462,6 +2470,7 @@ sq:
               display_name: të dhëna
             end_of_course_project:
               display_name: Përfundimi i projektit të kursit
+          description: Kemi zhvilluar kursin C për nxënësit në klasën e dytë. Nxënësit do të krijojnë programe me sekuencë, loops dhe evente. Ata do të hetojnë teknikat e zgjidhjes së problemeve dhe do të zhvillojnë strategji për ndërtimin e komuniteteve pozitive si online ashtu edhe offline. Deri në fund të kursit, nxënësit do të krijojnë lojëra interaktive që mund t'i ndajnë me të tjerët.
         coursed-2023:
           lesson_groups:
             lessonGroup-6:
@@ -2834,3 +2843,75 @@ sq:
         vpl-csd-2023-m8: {}
         ai-ethics-2023: {}
         draft-hoc-dp: {}
+        genai-temp: {}
+        virtual-pl-csp-summer-day1-2024: {}
+        virtual-pl-csa-summer-2024-day1: {}
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Hyrje
+        virtual-pl-csp-summer-day3:
+          title: Dita 3
+        virtual-pl-csp-summer-day4:
+          title: Dita 4
+        virtual-pl-csp-summer-day5:
+          title: Dita 5
+        virtual-pl-csa-summer-day2: {}
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Hyrje
+          title: Dita 3
+        virtual-pl-csa-summer-day4:
+          title: Dita 4
+        virtual-pl-csa-summer-day5: {}
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Hyrje
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Hyrje
+        virtual-pl-csp-summer-day1: {}
+        csa-postap-se-and-computer-vision-2023: {}
+        draft-hoc-dp-2: {}
+        self-paced-pl-problem-solving-and-computing-1-2023: {}
+        self-paced-pl-problem-solving-and-computing-2-2023: {}
+        draft-hoc-dp-2-a: {}
+        draft-hoc-dp-2-: {}
+        draft-hoc-dp-2-b: {}
+        hoc-dp-oct-beta: {}
+        hoc-dp-oct-beta-b: {}
+        self-paced-pl-csd-unit1-1-2023: {}
+        self-paced-pl-csd-unit1-2-2023: {}
+        dance-ai-2023: {}
+        self-paced-pl-csd-unit2-1-2023: {}
+        self-paced-pl-csd-unit2-2-2023: {}
+        self-paced-pl-csd-unit3-1-2023: {}
+        self-paced-pl-csd-unit3-2-2023: {}
+        self-paced-pl-csd-unit4-1-2023: {}
+        self-paced-pl-csd-unit4-2-2023: {}
+        self-paced-pl-csd-unit5-1-2023: {}
+        self-paced-pl-csd-unit5-2-2023: {}
+        ai-tutor-test: {}
+        web-dev-2024: {}
+        csd1-2024: {}
+        csd2-2024: {}
+        csd3-2024: {}
+        csd4-2024: {}
+        csd5-2024: {}
+        csd6a-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitulli 1: Hyrjet dhe daljet'
+          student_description: Kjo njësi eksploron rolin e platformave hardware në informatikë dhe se si sensorë të ndryshëm mund të sigurojnë hyrje dhe dalje më efektive sesa tastiera tradicionale, miu dhe monitori. Duke përdorur App Lab dhe Adafruit's Circuit Playground, ju do të zhvilloni programe që përdorin të njëjtat hyrje dhe dalje harduerike që shihni në pajisjet inteligjente, duke parë se si një prototip i thjeshtë i përafërt mund të çojë në një produkt të përfunduar. Njësia përfundon me një sfidë të projektimit për të përdorur Circuit Playground si bazë për një risi të dizajnit tuaj.
+        csd6b-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Inputet dhe Outputet
+        csd7-2024:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Hyrje në App Lab
+          student_description: Kjo njësi është një hyrje praktike për zhvillimin e një modeli të mësimit të makinave me të dhëna tabelare. Ju do të eksploroni se si kompjuterët mësojnë nga të dhënat për të marrë vendime, më pas do të zhvilloni projektet tuaja të mësimit të makinave rreth të dhënave të botës reale. Njësia arrin kulmin me dizajnimin e aplikacionit tuaj të mësimit të makinave për të zgjidhur një problem të rëndësishëm personalisht.
+        csd-post-survey-2024: {}

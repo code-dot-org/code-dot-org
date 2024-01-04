@@ -1,0 +1,58 @@
+{
+  "sl-SI": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "ai-2020": {
+            "buttonText": "Več o tem"
+          },
+          "ai-launch-2023": {
+            "buttonText": "Več o tem"
+          },
+          "ai-pl-launch-2023": {
+            "buttonText": "Več o tem"
+          },
+          "back-to-school-2021": {
+            "buttonText": "Več o tem"
+          },
+          "codebytes-2020": {
+            "buttonText": "Več o tem"
+          },
+          "coldplay": {
+            "buttonText": "Preizkusite"
+          },
+          "congrats-certificate-share": {
+            "buttonText": "Začni"
+          },
+          "csjourneys": {
+            "buttonText": "Več o tem"
+          },
+          "csjourneys-22": {
+            "buttonText": "Več o tem"
+          },
+          "csleadersprize": {
+            "buttonText": "Več o tem"
+          },
+          "hoc-2023": {
+            "buttonText": "Več o tem"
+          },
+          "hoc-2023-dance-ai": {
+            "buttonText": "Več o tem"
+          },
+          "superhero": {
+            "buttonText": "Več o tem"
+          },
+          "teacher-apps-closing-2021": {
+            "buttonText": "Pridruži se nam"
+          },
+          "teacher-apps-open-2021": {
+            "buttonText": "Pridruži se nam"
+          },
+          "teacher-apps-stillon-2020": {
+            "buttonText": "Pridruži se nam"
+          }
+        }
+      }
+    }
+  }
+}

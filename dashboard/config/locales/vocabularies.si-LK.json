@@ -320,14 +320,6 @@
         "code/minecraft/unversioned": {
           "word": "කේතය"
         },
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "code/playlab/unversioned": {
           "word": "කේතය"
         },
@@ -343,25 +335,8 @@
         "code/starwarsblocks/unversioned": {
           "word": "කේතය"
         },
-        "code/poem-art/unversioned": {
-          "word": "කේතය",
-          "definition": ""
-        },
-        "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+        "code/dance-ai/2023": {
+          "word": "කේතය"
         }
       }
     }

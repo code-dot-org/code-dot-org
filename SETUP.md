@@ -3,17 +3,21 @@
 
 This document describes how to set up your workstation to develop for Code.org.
 
-You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in a VM). Setup for Windows is more complicated and relatively few developers use it. Make sure you follow the instructions for your platform in the subsections below.
+You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in a VM/WSL). Setup for Windows is more complicated and relatively few developers use it. Make sure you follow the instructions for your platform in the subsections below.
 
 ## Overview
 
-1. Request and Configure AWS access (code.org staff) or configure local secrets (open source contributors). See [Configure AWS Access or Secrets](#configure-aws-access-or-secrets) below. This step is not required until rake is first run below, but staff may wish to submit the request first so its ready when rake is.
-
 1. Clone the repo, which also may take a while.
-  - The simplest option is to clone via SSH with: `git clone git@github.com:code-dot-org/code-dot-org.git`
-  - The fastest option is to clone via HTTP with: `git clone https://github.com/code-dot-org/code-dot-org.git`. Although faster than SSH, this option requires you to reauthenticate every time you want to update. You will therefore probably want to switch to SSH after the initial clone with `git remote set-url origin git@github.com:code-dot-org/code-dot-org.git`
+    - The simplest option is to clone via SSH with: `git clone git@github.com:code-dot-org/code-dot-org.git`
+    - The fastest option is to clone via HTTP with: `git clone https://github.com/code-dot-org/code-dot-org.git`. Although faster than SSH, this option requires you to reauthenticate every time you want to update. You will therefore probably want to switch to SSH after the initial clone with `git remote set-url origin git@github.com:code-dot-org/code-dot-org.git`
 
 1. `cd code-dot-org`
+
+1. Request and Configure AWS access (code.org staff) or configure local secrets (open source contributors). See [Configure AWS Access or Secrets](#configure-aws-access-or-secrets) below. This step is not required until rake is first run below, but staff may wish to submit the request first so its ready when rake is.
+    <details> 
+      <summary>Troubleshoot: wrong version of ruby</summary>
+      If you run into issues with your ruby version during this step, you may need to complete the OS-specific  prerequisites below before proceeding. 
+      </details>
 
 1. Install OS-specific prerequisites
    - See the appropriate section below: [macOS](#macos), [Ubuntu](#ubuntu-1804), [Windows](#windows)
@@ -22,7 +26,6 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
      ```sh
      ruby --version  # --> ruby 3.0.5
      node --version  # --> v18.16.0
-     yarn --version  # --> 1.22.5
      ```
 
 1. `gem install bundler -v 2.3.22`
@@ -183,7 +186,7 @@ Setup steps for macOS:
 
     3. Running `nvm alias default $(cat ./.nvmrc)` will set your default node version for future shells.
 
-1. Install **yarn** via `npm install -g yarn@1.22.19`
+1. Enable **corepack** to install **yarn**: `corepack enable`
 
 1. Install **OpenSSL**
     1. Run `brew install openssl`
@@ -191,7 +194,7 @@ Setup steps for macOS:
 
 1. Install [Google Chrome](https://www.google.com/chrome/), needed for some local app tests.
 
-1. Return to the [Overview](#overview) to continue installation and clone the code-dot-org repo. Note that there are additional steps for Apple Silicon (M1) when it comes to `bundle install` and `bundle exec rake ...` commands, which are noted in their respective steps.
+1. Return to the [Overview](#overview) to continue installation and clone the code-dot-org repo. Note that there are additional steps for Apple Silicon (M1) / Intel Mac when it comes to `bundle install` and `bundle exec rake ...` commands, which are noted in their respective steps.
 
 ### Ubuntu 18.04
 [Ubuntu 18.04 iso download][ubuntu-iso-url]
@@ -234,9 +237,7 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
     1. If your PATH is missing `~/.rbenv/shims`, the next two commands might not work. Edit your .bashrc to include the following line:
        `export PATH="$HOME/.rbenv/bin:~/.rbenv/shims:$PATH"`, then run `source .bashrc` for the change to take effect (as seen in [this github issue](https://github.com/rbenv/rbenv/issues/877)).
     1. `rbenv rehash`
-1. Install yarn
-    1. `npm install -g yarn@1.22.5`.
-    1. `yarn --version` Double check the version of yarn is correct.
+1. Enable **corepack** to install **yarn**: `corepack enable`
 1. Make it so that you can run apps tests locally
     1. Add the following to `~/.bashrc` or your desired shell configuration file:
         1. `export CHROME_BIN=$(which chromium-browser)`
@@ -391,11 +392,27 @@ Wondering where to start?  See our [contribution guidelines](CONTRIBUTING.md) fo
 ---
 ### Bundle Install Tips
 
-#### Apple Silicon (M1) bundle install steps
+#### Apple Silicon (M1) or Intel Mac bundle install steps
 
-On Apple Silicon, additional steps are required to get `bundle install` to work.
+On Apple Silicon/Intel Mac, additional steps are required to get `bundle install` to work.
 
-In Gemfile.lock, replace the two occurrences of libv8 (8.4.255.0) with libv8-node (15.14.0.0). Also update mini_racer to 0.4.0 (from 0.3.1):
+If you're having issues with installing ```libv8``` and/or ```mini_racer``` gems - 
+make you sure you've already run ```bundle config --local without staging test production levelbuilder``` command
+and run it if you haven't.
+
+<details>
+<summary>If that didn't help - do following:</summary>
+
+Simply run (if you're having issues only with part of gems in the command - you can run it with just needed gems)
+```
+bundle update libv8 mini_racer
+```
+To fix issues in one line. It will update the Gemfile.lock file for you in the same way as described below.
+
+OR
+
+In Gemfile.lock, replace the two occurrences of libv8 (8.4.255.0) with libv8-node (15.14.0.0).
+Also update mini_racer to 0.4.0 (from 0.3.1):
 
 ```
 libv8-node (15.14.0.0)
@@ -403,6 +420,18 @@ libv8-node (15.14.0.0)
 mini_racer (0.4.0)
   libv8-node (~> 15.14.0.0)
 ```
+
+FINALLY
+
+To prevent Gemfile.lock changes from constantly appearing in your commits - run following commands:
+```
+git update-index --assume-unchanged Gemfile.lock
+git update-index --no-assume-unchanged Gemfile.lock
+git ls-files -v | grep '^[[:lower:]]'
+```
+</details>
+
+
 
 Then run the following commands to successfully complete a bundle install:
 

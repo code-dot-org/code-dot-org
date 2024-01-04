@@ -1,127 +1,127 @@
 ---
-title: Hour of Code How-To Guide for Companies
+title: Leiðbeiningar um klukkustund kóða fyrir fyrirtæki
 ---
 
 {{ signup_button }}
 
-# How your company can engage with the Hour of Code
+# Hvernig fyrirtæki þitt getur tekið þátt í Hour of Code
 
-### Find out how you and your employees can inspire students to try computer science!
+### Finndu út hvernig þú og starfsmenn þínir geta hvatt nemendur til að prófa tölvunarfræði!
 
 * * *
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+Tölvuhugsun hjálpar til við að hlúa að færni til að leysa vandamál, rökfræði og sköpunargáfu. Og tæknin er að umbreyta öllum atvinnugreinum á jörðinni. Nemendur í dag ættu að læra að búa til tækni, ekki bara nota hana. Með því að byrja snemma munu þeir hafa grunn að velgengni á hvaða starfsbraut sem er á 21. öld.
 
-During the Hour of Code campaign, your company can help raise awareness of the computer science movement. Whether you volunteer as an individual or plan an event for your company, all of your efforts can make a huge impact on the way young women and students from marginalized racial and ethnic groups view computer science and their own potential.
+Meðan á Hour of Code herferðinni stendur getur fyrirtækið þitt hjálpað til við að vekja athygli á tölvunarfræðihreyfingunni. Hvort sem þú býðst í sjálfboðavinnu sem einstaklingur eða skipuleggur viðburð fyrir fyrirtækið þitt getur öll viðleitni þín haft mikil áhrif á hvernig ungar konur og nemendur úr jaðarsettum kynþátta- og þjóðernishópum líta á tölvunarfræði og eigin möguleika.
 
-Check out the steps below to get started, and see our [guide for corporate partners](/files/hoc-corporate-toolkit.pdf) for more on how to get your company excited about the Hour of Code.
+Skoðaðu skrefin hér að neðan til að byrja og sjáðu [leiðbeiningar okkar fyrir samstarfsaðila fyrirtækja til að fá meira um hvernig á að fá fyrirtækið þitt spennt](/files/hoc-corporate-toolkit.pdf) fyrir Hour of Code.
 
-- [Connect with a local school](#connect-with-a-school)
-- [Encourage employees to volunteer with a classroom](#encourage-employees)
-- [Host your own Hour of Code event](#host-hour-of-code)
+- [Tengdu við staðbundinn skóla](#connect-with-a-school)
+- [Hvetja starfsmenn til að bjóða sig fram í kennslustofu](#encourage-employees)
+- [Gefðu þinn eigin Hour of Code viðburð](#host-hour-of-code)
 - [Promote the Hour of Code](#promote-hour-of-code)
-- [More ways to support the Hour of Code](#support-hour-of-code)
+- [Fleiri leiðir til að styðja við Hour of Code](#support-hour-of-code)
 
 * * *
 
 <a id="connect-with-a-school"></a>
 
-## Connect with a local school
+## Tengdu við staðbundinn skóla
 
-It's always best to start locally, with schools that you or your employees have a strong connection to, like an alma mater, a child’s school, or a local organization or school that is focused on serving a population that has been historically underrepresented in computer science.
+Það er alltaf best að byrja á staðnum, með skólum sem þú eða starfsmenn þínir hafa sterka tengingu við, eins og alma mater, skóla barnsins eða sveitarfélaga stofnun eða skóla sem er lögð áhersla á að þjóna íbúa sem hefur verið sögulega undirfulltrúi í tölvunarfræði.
 
 [![](/images/fit-600/Marketing/2018_HoC-392.jpg)]({{ urls/learn }})
 
-From there, you can visit the school’s website to find appropriate contacts to reach out to, like a principal, vice principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations like the Boys & Girls Clubs of America, a YMCA branch, and more to co-host an event.
+Þaðan er hægt að fara á heimasíðu skólans til að finna viðeigandi tengiliði til að ná til, eins og skólastjóra, varastjóra, tækni- eða tölvunarfræðikennara, eða jafnvel PTSA skólans. Þú gætir einnig átt samstarf við samtök eins og Boys & Girls Clubs of America, útibú YMCA og fleira til að hýsa viðburð.
 
-If you are unable to connect with a school, please [contact us](https://support.code.org/hc/en-us/requests/new) and we’ll connect you with one of our local partners if possible.
+Ef þú getur ekki tengst skóla skaltu hafa [samband við okkur](https://support.code.org/hc/en-us/requests/new) og við munum tengja þig við einn af samstarfsaðilum okkar á staðnum ef mögulegt er.
 
 * * *
 
 <a id="encourage-employees"></a>
 
-## Encourage employees to volunteer with a classroom
+## Hvetja starfsmenn til að bjóða sig fram í kennslustofu
 
 [![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
 
-One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology has impacted your role.
+Ein fullnægjandi leiðin til að taka þátt í Hour of Code er að bjóða sig fram með kennslustofu á staðnum, annaðhvort í eigin persónu eða nánast. Það besta af öllu er að þú þarft ekki að vera verkfræðingur til að bjóða sig fram. Þú getur samt veitt nemendum þýðingarmikla reynslu með því að deila eigin starfsreynslu þinni og hvernig CS eða tækni hefur haft áhrif á hlutverk þitt.
 
-[<button>Sign up to volunteer</button>]({{ urls/volunteer }})
+[<button>Skráðu þig í sjálfboðaliða</button>]({{ urls/volunteer }})
 
-Once a volunteer registers, a teacher can review their profile on our [volunteer map](https://code.org/volunteer/local) - so profiles should be submitted as complete as possible. If you’re a good fit for their classroom, a teacher will contact you through the platform (we will never share your email address with the teacher). You can then coordinate details directly with the teacher around [how to best volunteer with their classroom](https://hourofcode.com/us/how-to/volunteers).
+Þegar sjálfboðaliði skráir sig getur kennari skoðað prófílinn sinn á [sjálfboðaliðakortinu okkar](https://code.org/volunteer/local) - svo skal senda inn snið eins heill og mögulegt er. Ef þú passar vel fyrir kennslustofuna þeirra mun kennari hafa samband við þig í gegnum vettvang (við munum aldrei deila netfangið þitt með kennaranum). Þú getur síðan samræmt upplýsingar beint við kennarann um [hvernig best er að sjálfboðaliða með kennslustofunni sinni](https://hourofcode.com/us/how-to/volunteers).
 
-For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
+Fyrir frekari leiðbeiningar um sjálfboðaliðastarf og sýnishorn skilaboð til að fá fyrirtæki þitt spennt fyrir Hour of Code, skoðaðu hand [bók okkar fyrir samstarfsaðila fyrirtækja]({{ localized_files/hoc_corporate_toolkit }}).
 
 * * *
 
-<h4><font color="00adbc"><i>“I LOVED seeing how excited the kids were. One amazing thing was the teachers noticed some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others - giving them a place to feel confident.”</i></font></h4>
+<h4><font color="00adbc"><i>“Mér fannst gaman að sjá hversu spennt börnin voru. Eitt ótrúlegt var að kennararnir tóku eftir því að sumir nemendanna sem stóðu sig ekki eins vel í fræðilegum hætti voru að skara fram úr í að hugsa eins og verktaki og hjálpa öðrum - gefa þeim stað til að finna sjálfstraust.”</i></font></h4>
 
--Hour of Code volunteer
+-Hour of Code sjálfboðaliði
 
 * * *
 
 <a id="host-hour-of-code"></a>
 
-## Host your own Hour of Code event
+## Gefðu þinn eigin Hour of Code viðburð
 
-If you want to go the extra mile, your company can also host an Hour of Code event. There is no specific formula for hosting an event so we encourage you to be creative! Given that our staff size is small (but mighty!), Code.org does not have a team dedicated to coordinating Hour of Code events. However, here are some tips to get started.
+Ef þú vilt fara auka míluna getur fyrirtækið þitt einnig staðið fyrir Hour of Code viðburði. Það er engin sérstök formúla til að hýsa viðburð svo við hvetjum þig til að vera skapandi! Í ljósi þess að starfsmannastærð okkar er lítil (en voldug!) , Code.org hefur ekki teymi sem er tileinkað því að samræma Hour of Code viðburði. Hins vegar eru hér nokkur ráð til að byrja.
 
-### 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+### 1. Horfðu á þetta hvernig á að gera myndband <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
-### 2. Determine a date, format, and location for your event
+### 2. Ákveðið dagsetningu, snið og staðsetningu fyrir viðburðinn þinn
 
-We’ve seen events that are [virtual](https://hourofcode.com/us/how-to/virtual) or in-person, at the company office or held in the community, and for students of all ages! You can also take a look at what other [corporate partners](https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code-to-students-worldwide-4641325542cf) and [donors](https://medium.com/@codeorg/how-code-orgs-corporate-supporters-helped-spread-the-love-for-2019-s-hour-of-code-73a3c088f10f) have done in the past for some inspiring ideas.
+Við höfum séð viðburði sem eru raunver [ulegur](https://hourofcode.com/us/how-to/virtual) eða í eigin persónu, á skrifstofu fyrirtækisins eða haldnir í samfélaginu og fyrir nemendur á öllum aldri! Þú getur líka kíkt á hvað aðrir samstarfsaðilar [fyrirtækja](https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code-to-students-worldwide-4641325542cf) og gjafar [](https://medium.com/@codeorg/how-code-orgs-corporate-supporters-helped-spread-the-love-for-2019-s-hour-of-code-73a3c088f10f) hafa gert í fortíðinni fyrir nokkrar hvetjandi hugmyndir.
 
 <br />
 
-#### Sample Agenda:
+#### Dæmi dagskrár:
 
-|Time | Agenda Item | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minutes | Show an [inspirational video](https://hourofcode.com/us/promote/resources#videos)| |5-10 minutes | Introduce yourself and learn more about the students: Where do you work, what do you do, and what do you love most about your job? What or who inspired you? How did you get interested in computer science? Did you have a mentor? Ask the students questions and leave time for Q&A. | |30-60 minutes | Code! If your event is in-person, this is the time to answer questions and guide students through tough puzzles. Try not to give them the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. If you are volunteering virtually, work with the teacher on what the best approach might be. It may make more sense to return at the end of the session to see what progress students have made. | | |1-3 minutes | Thank everyone and share inspirational parting words. Hand out any of your company swag ([stickers](#celebrate) are awesome)! | | <br />
+|Tíminn | Dagskráliður | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 mínútur | Sýna innblástur myndband | |5-10 mínútur</a>| Kynntu þig og lærðu meira um nemendurna: Hvar vinnur þú, hvað gerir þú og hvað elskar þú mest við starfið þitt?  Hvað eða hver veitti þér innblástur? Hvernig fékkstu áhuga á tölvunarfræði? Hafið þið leiðbeinanda? Spyrðu nemendurna spurninga og gefðu tíma fyrir Q&A. | | 30-60 mínútur | Kóði! Ef viðburðurinn þinn er í eigin persónu er þetta tíminn til að svara spurningum og leiðbeina nemendum í gegnum erfiðar þrautir. Reyndu að gefa þeim ekki lausnina beinlínis, reyndu þess í stað að spyrja þá spurninga svo þeir geti svarað sjálfum sér hvað fór úrskeiðis, og hvetja nemendur til að spyrja hvort annað ef þeir hafa spurningar. Ef þú ert í sjálfboðavinnu nánast skaltu vinna með kennaranum að því hver besta nálgunin gæti verið. Það kann að vera skynsamlegra að snúa aftur í lok lotunnar til að sjá hvaða framförum nemendur hafa náð. | | |1-3 mínútur | Þakka öllum og deildu innblásturslegum skilnaðarorðum. Afhenda eitthvað af fyrirtækinu þínu (límmiðar[](#celebrate) eru æðislegir)! | | <br /></p> 
 
-#### Other ideas to add to your event
+#### Aðrar hugmyndir til að bæta við viðburðinn þinn
 
-- Explain ways technology impacts our lives, with examples that students of all backgrounds will care about - talk about technology that’s saving lives, helping people, connecting people.
-- If you are a tech company, demo fun, innovative products your company is working on. If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
+- Útskýrðu hvernig tæknin hefur áhrif á líf okkar, með dæmum sem nemendum af öllum bakgrunni mun þykja vænt um - tala um tækni sem er að bjarga mannslífum, hjálpa fólki, tengja fólk.
+- Ef þú ert tæknifyrirtæki, kynningarskemmtilegar, nýstárlegar vörur fyrirtækið þitt er að vinna á. Ef þú ert ekki tæknifyrirtæki skaltu ræða hvernig fyrirtæki þitt notar tækni til að leysa vandamál og ná markmiðum.
 - Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
 
-### 3. Plan your technology needs
+### 3. Skipuleggðu tækniþarfir þínar
 
 [![](/images/fit-600/Marketing/Excel-Charter-SchoolHoC-2015-stills-9.jpg)]({{ urls/learn }})
 
-#### Devices:
+#### Tæki:
 
-The best Hour of Code experience includes Internet-connected computers. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! For unplugged activities, simply filter the Classroom Technology section to show options for “No computers or devices”.
+The best Hour of Code experience includes Internet-connected computers. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! Fyrir aftengda starfsemi skaltu einfaldlega sía hlutann Tækni í kennslustofunni til að sýna valkosti fyrir “Engar tölvur eða tæki”.
 
-- **Test activities** on computers or devices. Make sure they work properly on browsers with sound and video.
-- **Don't have enough devices?** Use pair programming. When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
-- **Provide headphones** for your participants or ask them to bring their own if they’ll be trying tutorials that work best with sounds.
-- **Have low bandwidth**? Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
+- **Prófastarfsemi** á tölvum eða tækjum. Gakktu úr skugga um að þeir virki rétt á vöfrum með hljóði og vídeó.
+- **Ertu ekki með nóg tæki?** Notaðu parforritun. When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
+- **Gefðu heyr** nartól fyrir þátttakendur þína eða biðja þá um að koma með eigin ef þeir vilja vera að reyna námskeið sem virka best með hljóðum.
+- **Ertu með litla bandbreidd**? Skipuleggðu að sýna myndbönd fremst á viðburðinum, svo hver þátttakandi sé ekki að hlaða niður eigin myndböndum. Eða prófaðu aðgerðirnar sem eru aftengdar /án nettengingar.
 
-#### Virtual Events:
+#### Sýndarviðburðir:
 
-If your event is going to be virtual, you’ll want to decide on your conference platform (and test it) prior to your event. This may impact the number of students you feel comfortable engaging, so it’s best to determine this prior to inviting a classroom or promoting your event. For ideas on how to run a remote Hour of Code, read our [tips for a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+Ef viðburðurinn þinn ætlar að vera sýndarlegur viltu ákveða ráðstefnuvettvanginn þinn (og prófa hann) fyrir viðburðinn þinn. Þetta getur haft áhrif á fjölda nemenda sem þér líður vel að taka þátt, svo það er best að ákvarða þetta áður en þú býður í kennslustofu eða kynna viðburðinn þinn. Fyrir hugmyndir um hvernig á að keyra ytri Hour of Code, lestu ábend [ingar okkar fyrir raunverulegur Hour of Code atburð](https://hourofcode.com/us/how-to/virtual).
 
-### 4. Choose an activity
+### 4. Veldu starfsemi
 
-We provide a variety of fun, student-guided tutorials for all age groups and experience levels. It’s popular for students to try self-led tutorials, though you may want to begin the event with an [inspirational video](https://hourofcode.com/us/promote/resources#videos) for everyone to view together.
+Við bjóðum upp á margs konar skemmtilegar kennsluleiðbeiningar með nemendum fyrir alla aldurshópa og reynslustig. Það er vinsælt fyrir nemendur að prófa sjálfstýrt námskeið, þó þú gætir viljað hefja viðburðinn með andríkur [myndbandi](https://hourofcode.com/us/promote/resources#videos) fyrir alla til að skoða saman.
 
-<a href="https://hourofcode.com/us/learn">Explore the activities</a> and decide ahead of time if you want to choose a single tutorial for all of your guests, or let each child pick their own. **All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
+<a href="https://hourofcode.com/us/learn">Kannaðu athafnirnar</a> og ákveða fyrirfram hvort þú vilt velja eina kennslu fyrir alla gesti þína, eða láta hvert barn velja sitt. **Öll starfsemi Hour of Code kre** fst lágmarks undirbúningstíma og eru sjálfstýrð - leyfa þátttakendum að vinna á eigin hraða og færnistigi.
 
 [![](/images/tutorials.png)]({{ urls/learn }})
 
-Once you have a solid roadmap for your event, you can then start inviting students, a school, or the larger community. We recommend starting with a local school you have a relationship with or [browsing our map](https://hourofcode.com/us/map) of Hour of Code events.
+Þegar þú hefur traustan vegvísi fyrir viðburðinn þinn geturðu þá byrjað að bjóða nemendum, skóla eða stærra samfélaginu. Við mælum með að byrja með staðbundnum skóla sem þú hefur samband við eða skoða [kortið okkar af](https://hourofcode.com/us/map) Hour of Code viðburðum.
 
 <a id="celebrate"></a>
 
-### 5. Celebrate
+### 5. Fagnaðu
 
 [![](/images/fit-600/Marketing/2018_HoC-391.jpg)]({{ urls/learn }})
 
-After students or guests have completed their Hour of Code, it’s time to celebrate their success. Here are some ideas for making your event even more fun:
+Eftir að nemendur eða gestir hafa lokið sinni Hour of Code er kominn tími til að fagna velgengni þeirra. Hér eru nokkrar hugmyndir til að gera viðburðinn þinn enn skemmtilegri:
 
 - [Print certificates]({{ urls/certificates }}) for participants and students.
-- [Print "I did an Hour of Code! stickers"]({{ promote/resources_stickers }}) or find other prizes and swag on the [Code.org Amazon Store](https://code.org/shop).
-- Share photos and videos of your Hour of Code event on social media. Use [#HourOfCode](https://twitter.com/hashtag/hourofcode) and [@codeorg](https://twitter.com/codeorg) so we can highlight your success, too!
+- [Prenta “Ég gerði klukkutíma kóða! límmi]({{ promote/resources_stickers }}) ðar” eða finndu önnur verðlaun og swag á [Code.org Amazon Store.](https://code.org/shop)
+- Share photos and videos of your Hour of Code event on social media. Nota [ðu #HourOfCode](https://twitter.com/hashtag/hourofcode) og [@codeorg](https://twitter.com/codeorg) svo við getum varpað ljósi á árangur þinn líka!
 
 * * *
 
@@ -129,56 +129,56 @@ After students or guests have completed their Hour of Code, it’s time to celeb
 
 ## Promote the Hour of Code
 
-One of the best ways to help is to spread the word and promote the Hour of Code.
+Ein besta leiðin til að hjálpa er að dreifa orðinu og efla Hour of Code.
 
 [![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
 
-### 1. Register Your Event
+### 1. Skráðu viðburðinn þinn
 
-Þegar þú [skráir þig í Hour of Code viðburðinn](/#join)þinn færðu gagnleg tölvupóstsamskipti með fréttum og ábendingum um að hýsa vel heppnaða Hour of Code. It’s also how you can let local schools or parents know that you’re hosting an event near them.
+Þegar þú [skráir þig á Hour of Code viðbur](/events)ðinn þinn færðu gagnleg tölvupóstsamskipti með fréttum og ráðum til að hýsa vel heppnaða Hour of Code. Það er líka hvernig þú getur látið staðbundna skóla eða foreldra vita að þú ert að hýsa viðburð nálægt þeim.
 
-### 2. Post on Social Media
+### 2. Senda á samfélagsmiðlum
 
-Help raise awareness of the computer science movement with this sample content to post on social media and share with your employees.
+Hjálpaðu til að vekja athygli á tölvunarfræðihreyfingunni með þessu sýnishorni efni til að birta á samfélagsmiðlum og deila með starfsmönnum þínum.
 
-#### Hour of Code general announcement
+#### Almenn tilkynning um Hour of Code
 
-- Computer science is changing our world. Help students be part of this change starting with one #HourOfCode. https://hourofcode.com/
-- Don’t just use technology—learn how to build it. Help someone start with an #HourOfCode. https://hourofcode.com/
+- Tölvunarfræði er að breyta heiminum okkar. Hjálpaðu nemendum að vera hluti af þessari breytingu sem byrjar á einum #HourOfCode. https://hourofcode.com/
+- Ekki bara nota tæknina — lærðu hvernig á að byggja hana upp. Hjálpaðu einhverjum að byrja með #HourOfCode. https://hourofcode.com/
 
-#### Stats
+#### Tölfræði
 
-- Did you know only 53% of U.S. schools teach computer science? Give every student the chance to learn one #HourOfCode https://hourofcode.com/
-- In the U.S., only 26% of software professionals are women. Introduce more young women to computer science with #HourOfCode https://hourofcode.com/
-- 67% of computing jobs in the U.S. are not in the tech sector. Help put computer science in the standard curriculum with #HourOfCode https://hourofcode.com/
+- Vissir þú að aðeins 53% bandarískra skóla kenna tölvunarfræði? Gefðu hverjum nemanda tækifæri til að læra einn #HourOfCode https://hourofcode.com/
+- Í Bandaríkjunum eru aðeins 26% sérfræðinga í hugbúnaði konur. Kynntu fleiri ungar konur fyrir tölvunarfræði með #HourOfCode https://hourofcode.com/
+- 67% tölvustarfa í Bandaríkjunum eru ekki í tæknigeiranum. Hjálpaðu að setja tölvunarfræði í staðlaða námskrá með #HourOfCode https://hourofcode.com/
 
-#### Create your own
+#### Búðu til þína eigin
 
-- One #HourOfCode can lead to [fill in your story]. https://hourofcode.com/
-- I’m supporting #HourOfCode because [fill in your thoughts]. Join us https://hourofcode.com
+- Einn #HourOfCode getur leitt til [fylltu inn söguna þína]. https://hourofcode.com/
+- Ég styð #HourOfCode vegna þess að [fylltu inn hugsanir þínar]. Vertu með okkur https://hourofcode.com
 
-#### Engineer-specific
+#### Sérstakur verkfræðingur
 
-- If your very first line of code changed your life, help students near you write their first #HourOfCode https://code.org/volunteer
-- If you learned to code—what’s your story? Inspire a student near you through their first #HourOfCode https://code.org/volunteer
+- Ef fyrsta kóðalína þín breytti lífi þínu skaltu hjálpa nemendum nálægt þér að skrifa fyrsta #HourOfCode þeirra https://code.org/volunteer
+- Ef þú lærðir að kóða - hver er sagan þín? Hvetja nemanda nálægt þér í gegnum fyrsta #HourOfCode þeirra https://code.org/volunteer
 
-<a href="https://hourofcode.com/promote/resources#posters">Find more</a> posters, videos, stickers and other ways to promote your event to your community.
+<a href="https://hourofcode.com/promote/resources#posters">Finndu fleiri ve</a> ggspjöld, myndbönd, límmiða og aðrar leiðir til að kynna viðburðinn þinn fyrir samfélaginu þínu.
 
 * * *
 
 <a id="support-hour-of-code"></a>
 
-## More ways to support the Hour of Code
+## Fleiri leiðir til að styðja við Hour of Code
 
 [![](/images/fit-600/Marketing/girl-strong-coding.png)]({{ urls/learn }})
 
-- Spread awareness by wearing [Code.org swag](https://store.code.org/) (all proceeds go to supporting more students gain access to computer science education).
-- Choose to benefit Code.org when you shop on [AmazonSmile](https://code.org/donate/amazonsmile).
-- Ask your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word.
-- Have some fun with co-workers in a [giving campaign](https://medium.com/@codeorg/how-a-haircut-happy-hour-turned-into-a-fundraiser-for-code-org-1952b197faa2).
-- [Sign this petition](https://code.org/promote) to make sure that every student has the opportunity to learn computer science.
-- [Donate](https://code.org/donate) to Code.org so that we can keep our educational resources free and accessible to all.
+- Dreifðu vitund með því að [klæðast Code.org swag](https://store.code.org/) (allur ágóði fer til að styðja fleiri nemendur öðlast aðgang að tölvunarfræðikennslu).
+- Veldu að njóta góðs af Code.org þegar þú verslar á [Amazon](https://code.org/donate/amazonsmile)Smile.
+- Biddu forstjóra þinn um að senda tölvupóst um allt fyrirtæki þar sem lögð er áhersla á mikilvægi tölvunarfræðinnar og hvetja starfsmenn til að dreifa orðinu.
+- Skemmtu þér með vinnufélögum í gjafah [erferð](https://medium.com/@codeorg/how-a-haircut-happy-hour-turned-into-a-fundraiser-for-code-org-1952b197faa2).
+- [Skrifaðu undir þessa undirskrif](https://code.org/promote) tasöfnun til að ganga úr skugga um að sérhver nemandi fái tækifæri til að læra tölvunarfræði.
+- [Gef](https://code.org/donate) ðu til Code.org svo að við getum haldið fræðsluúrræðum okkar ókeypis og öllum aðgengilegum.
 
-For more suggestions on how to support Code.org and the Hour of Code, visit [Code.org/Help](https://code.org/help)
+Fyrir frekari tillögur um hvernig á að styðja Code.org og Hour of Code, heimsækja [Code.org/Help](https://code.org/help)
 
 {{ signup_button }}

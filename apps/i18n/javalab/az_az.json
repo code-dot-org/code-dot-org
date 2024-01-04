@@ -156,6 +156,10 @@
   "unsupportedMiniAppMessage": "Səviyyə növü uyğunsuzluğu: {miniAppType} layihələri qeyri-{miniAppType} səviyyədə dəstəklənmir.",
   "userBlocked": "Siz kodunuzu çox dəfə işlətmisiniz və hesabınız kilidlənib. Hesabınızı açmaq üçün support@code.org ilə əlaqə saxlayın.",
   "userBlockedTemporary": "Java kodunu 24 saat ərzində işlədə biləcəyiniz neçə dəfə həddinə çatdınız. Özünüz və tələbələriniz üçün daha yüksək bir kvota əldə etmək üçün təsdiqlənmiş müəllim olun.\n[Doğrulanmış müəllim olmaq üçün necə] haqqında daha çox məlumat əldə edin (https://support.code.org/hc/en-us/articles/115001550131-How-to-Become-a-Verified-Teacher).\n[Müəllim yoxlanmasına niyə ehtiyac olduğunu] öyrənin (https://support.code.org/hc/en-us/articles/6104078305549-Teacher-Verification-and-CSA).\nBu mesajın səhv olduğuna inanırsınızsa, support@code.org ilə əlaqə saxlayın.",
+  "verificationHeaderMessage": "Zəhmət olmasa insan olduğunuzu təsdiqləyin",
+  "verificationIncomplete": "Doğrulama tamamlanmadı. Yenidən cəhd etmək üçün zəhmət olmasa proqramı işə salın.",
+  "verificationRequiredMessage": "Doğrulama tələb olunur: zəhmət olmasa insan olduğunuzu təsdiqləyin.",
+  "verificationSuccessful": "Doğrulama uğurlu oldu!",
   "waitingForServer": "Cavab gözləyirəm...",
   "youHaveProjectsToReview": "You have projects to review...",
   "yourPeer": "Sənin yaşıdın"

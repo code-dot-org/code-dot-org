@@ -20,7 +20,7 @@ nav: promote_nav
 
 ## Accrochez ces affiches dans votre école
 
-Une nouvelle collection de posters est disponibles, avec notamment Malala, Stephen Curry, Shakira et d'autres ! Cette année, chaque collection sera aussi accompagnée de 6 posters et 126 autocollants « J'ai fait une Heure de Code ». Nous en avons une quantité limitée disponible, donc [commandez vos posters](https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH) vite. Pour les imprimer vous-même, cliquez tout simplement sur l'une des images ci-dessous pour en voir et enregistrer une version imprimable. 
+Une nouvelle collection de posters est disponibles, avec notamment Malala, Stephen Curry, Shakira et d'autres ! Cette année, chaque collection sera aussi accompagnée de 6 posters et 126 autocollants « J'ai fait une Heure de Code ». Pour les imprimer vous-même, cliquez tout simplement sur l'une des images ci-dessous pour en voir et enregistrer une version imprimable. 
 
 {{ promote_new_posters }}
 
@@ -86,7 +86,7 @@ Une nouvelle collection de posters est disponibles, avec notamment Malala, Steph
 
 **Objet :** Rejoignez-moi et plus de 100 millions d'élèves pour une Heure de Code <br />
 
-Les ordinateurs sont partout, ils sont en train de changer tous les secteur de la planète. But only 51% of all high schools offer computer science. La bonne nouvelle, c'est que nous sommes en train de changer cela! Si vous avez déjà entendu parler de l'Heure de Code, vous savez peut-être que cela a été un phénomène historique. Plus de 100 millions d'élèves se sont prêtés à une Heure de Code.
+Les ordinateurs sont partout, ils sont en train de changer tous les secteur de la planète. Mais seuls 51 % des établissements d'enseignement secondaire et lycées proposent des cours d'informatique. La bonne nouvelle, c'est que nous sommes en train de changer cela! Si vous avez déjà entendu parler de l'Heure de Code, vous savez peut-être que cela a été un phénomène historique. Plus de 100 millions d'élèves se sont prêtés à une Heure de Code.
 
 Avec l'événement Une Heure de Code, l'informatique fait la une de Google, MSN, Yahoo!, et Disney. Plus de 100 partenaires se sont réunis pour soutenir ce mouvement. Tous les Apple Store du monde ont proposé une Heure de Code, et des dirigeants comme le président Obama et le premier ministre Justin Trudeau ont écrit leurs premières lignes de code pendant cette campagne.
 
@@ -112,7 +112,7 @@ Du {{ campaign_date/short }}, 10% des élèves dans le monde entier fêteront la
 
 Les élèves créeront leurs propres applications ou jeux qu'ils pourront montrer à leur parents, et nous imprimerons aussi des certificats Une Heure de Code qu'ils pourront ramener à la maison. En plus, c'est amusant! Au travers d'activités interactives et pratiques, les élèves développeront des compétences et apprendront à appréhender l'informatique de manière accessible.
 
-Les ordinateurs sont partout, ils sont en train de changer tous les secteur de la planète. But only 51% of all high schools offer computer science. La bonne nouvelle, c'est que nous sommes en train de changer cela ! Si vous avez déjà entendu parler de l’Heure de Code, vous savez peut-être qu'elle a marqué l’histoire - plus de 100 millions d’élèves du monde entier ont fait une Heure de Code. Même des chefs d'état comme le président américain Barack Obama et le premier ministre canadien Justin Trudeau ont écrit leurs premières lignes de code dans le cadre de la campagne. 
+Les ordinateurs sont partout, ils sont en train de changer tous les secteur de la planète. Mais seuls 51 % des établissements d'enseignement secondaire et lycées proposent des cours d'informatique. La bonne nouvelle, c'est que nous sommes en train de changer cela ! Si vous avez déjà entendu parler de l’Heure de Code, vous savez peut-être qu'elle a marqué l’histoire - plus de 100 millions d’élèves du monde entier ont fait une Heure de Code. Même des chefs d'état comme le président américain Barack Obama et le premier ministre canadien Justin Trudeau ont écrit leurs premières lignes de code dans le cadre de la campagne. 
 
 Vous pouvez en savoir plus au sujet de l'événement en vous rendant sur http://hourofcode.com. Ou alors dites-nous si vous aimeriez prendre rendez-vous pour voir comment [nom de l'école] peut participer. <br />
 
@@ -128,7 +128,7 @@ Chers parents,
 
 Nous vivons dans un monde où la technologie est omniprésente. Nous savons que quel que soit le domaine dans lequel nos élèves choisiront d'évoluer, leur aptitude à réussir dépendra de plus en plus de leur compréhension de la technologie.
 
-But only a fraction of us are learning **how** technology works. Only 51% of all high schools offer computer science.
+Mais seule une fraction d'entre nous sait **comment** fonctionne la technologie. Seuls 51 % des établissements d'enseignement secondaire proposent des cours d'informatique.
 
 C'est pourquoi toute notre école va prendre part au plus grand événement d'enseignement de toute l'histoire : l'Heure de Code, pendant la Semaine de l'enseignement de l'informatique ({{ campaign_date/full }}). Plus de 100 millions d'élèves du monde entier ont déjà effectué Une Heure de Code. Notre Heure de Code, c'est aussi une déclaration : [NOM DE L'ÉCOLE] est prête à enseigner ces compétences clés du XXIe siècle. Pour continuer à proposer des activités de programmation à nos élèves, nous voulons faire de notre Heure de Code un événement mémorable. Nous vous encourageons à vous engager, contacter la presse régionale, partager les infos sur les réseaux sociaux voir même organiser votre propre événement Une Heure de Code au sein de votre communauté.
 
@@ -144,9 +144,9 @@ Rendez-vous sur http://hourofcode.com/{{ country_language }} pour plus de détai
 
 #### [Jetez un oeil à notre kit de presse pour en apprendre plus sur comment inviter les médias à votre événement. ]({{ promote/press_kit_url }})
 
-**Subject line**: Local school joins mission to introduce students to computer science
+**Objet du message** : Une école locale souhaite initier les élèves à l'informatique
 
-Computers are everywhere, changing every industry on the planet, but only 51% of all high schools offer computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. La bonne nouvelle, c'est que nous sommes en train de changer cela.
+Les ordinateurs sont omniprésents et influencent tous les secteurs d'activité de la planète, mais seuls 51 % des établissements d'enseignement secondaire dispensent des cours d'informatique. Les jeunes femmes et les étudiants issus de groupes ethniques et raciaux minoritaires sont nettement très peu à suivre des cours d'informatique et à travailler dans l'industrie technologique. La bonne nouvelle, c'est que nous sommes en train de changer cela.
 
 Avec l'événement Une Heure de Code, l'informatique fait la une de Google, MSN, Yahoo!, et Disney. Plus de 100 partenaires se sont réunis pour soutenir ce mouvement. Chaque Apple Store dans le monde a accueilli une heure de Code. Même le président Obama a écrit sa première ligne de code dans le cadre de la campagne.
 
@@ -156,9 +156,9 @@ Je vous écris pour vous inviter à assister au coup d'envoi de notre campagne e
 
 Une Heure de Code, événement organisé par l'association à but non lucratif Code.org et plus de 100 autres, a pour objectif que la génération d'élèves actuelle soit prête à acquérir les compétences essentielles au succès du XXIe siècle. Rejoignez-nous.
 
-Contact: [YOUR NAME], [TITLE], cell: (212) 555-5555 When: [DATE and TIME of your event] Where: [ADDRESS and DIRECTIONS]
+Contact : [VOTRE NOM], [TITLE], portable : (212) 555-5555 Quand : [DATE et HEURE de l'événement] Où : [ADRESSE et DIRECTION]
 
-I look forward to being in touch. <br />
+N'hésitez pas à me contacter à l'avenir.<br />
 
 * * *
 
@@ -174,7 +174,7 @@ I look forward to being in touch. <br />
 
 Saviez-vous que l'informatique est la source de revenus principale aux États-Unis ? Il y a plus de 500.000 postes en informatique ouvert dans tout le pays, mais seuls 42.969 étudiants ont obtenu un diplôme en informatique l'année dernière.
 
-Computer science is foundational for every industry today, yet most schools don’t offer it. At [SCHOOL NAME], we are trying to change that.
+L'informatique est aujourd'hui une discipline fondamentale pour tous les secteurs d'activité, mais la plupart des écoles ne la dispensent pas. À [NOM DE L'ÉCOLE], nous essayons de changer les choses.
 
 C'est pourquoi toute notre école va prendre part au plus grand événement d'enseignement de toute l'histoire : l'Heure de Code, pendant la Semaine de l'enseignement de l'informatique ({{ campaign_date/full }}). Plus de 100 millions d'élèves du monde entier ont déjà effectué Une Heure de Code.
 

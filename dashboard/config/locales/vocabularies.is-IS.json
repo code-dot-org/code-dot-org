@@ -587,14 +587,6 @@
         "machine_learning/oceans/unversioned": {
           "word": "Vélarnám"
         },
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/playlab/unversioned": {
           "word": "Villuleit"
         },
@@ -613,25 +605,8 @@
         "debugging/starwarsblocks/unversioned": {
           "word": "Villuleit"
         },
-        "code/poem-art/unversioned": {
-          "word": "Kóði",
-          "definition": ""
-        },
-        "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+        "code/dance-ai/2023": {
+          "word": "Kóði"
         }
       }
     }

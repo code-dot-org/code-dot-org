@@ -26,7 +26,8 @@ sq:
       'Artist: Variables': 'Artist: Variablat'
       Assessment: Vlerësim
       Back and Forth: Prapa dhe perpara
-      Bass, Mid, and Treble: Bass, Mes, dhe Treble
+      Bass, Mid, and Treble: Bass, Mesi, Trefishtë
+      Binary Bracelets - Unplugged Activity: Zinxhirët binarë - Aktiviteti i shkëputur
       Challenge: Sfidë
       'Challenge: Lists': 'Sfida: Listat'
       'Challenge: RGB Colors': 'Sfida: Ngjyrat RGB'
@@ -36,7 +37,7 @@ sq:
       Code Your Page: Kodoni faqen tuaj
       Create your project: Krijoni projektin tuaj
       Customize: Personalizo
-      Dance Crews: Ekipet e Vallezimit
+      Dance Crews: Ekipet e Vallëzimit
       Data Visualization: Vizualizimi i të dhënave
       Debugging: Debugging
       Design Mode: dan is a masive dick-
@@ -57,7 +58,7 @@ sq:
       'Free Play: Make an Interactive Scene': 'Lojë e lirë: Krijo një skenë interaktive'
       Functions: funksione
       Functions with Parameters: Funksionet me parametra
-      Get In Formation: Hyni ne rradhe
+      Get In Formation: Merrni informacion
       How to Make a Sprite: Si të krijoni një Sprite
       Incorporate Feedback: Përfshini Feedback
       Introducing Sprite Lab: Prezantimi i Sprite Lab
@@ -76,11 +77,15 @@ sq:
       'Mini-Project: User Input Programs': 'Mini-projekt: Programet e hyrjes (input)
         së përdoruesit'
       'Mini-Project: Virtual Pet': 'Mini-projekt: Kafshë shtëpiake virtuale'
+      'Mini-project: Chase Game': 'Mini-projekt: Loja e ndjekjes'
+      'Mini-project: Flappy Game': 'Mini-projekt: Flappy Game'
       'Mini-project: Jorge the Dog': 'Mini-projekt: Qeni Jorge'
       Modify simulation variables: Modifikoni variablat e simulimit
       More Buttons: Më shumë butona
       Move It Move it Video  - Unplugged Activity: 'Video: Move it Move it- Aktivitet
         i shkëputur'
+      My Loopy Robotic Friends - Unplugged Activity: Shokët e mi robotik Loopy - Aktivitet
+        i shkëputur
       My Online Neighborhood: Lagja ime në Internet
       My Robotic Friends - Unplugged Activity: Shokët e mi robotik - Aktivitet i shkëputur
       Overview: Përmbledhja
@@ -96,7 +101,7 @@ sq:
       Properties: Parametrat
       Prototype an Innovation: Prototipi dhe inovacioni
       Publishing Your Website: Publikimi i webfaqes tuaj
-      Quarter Notes: Quarter Notes
+      Quarter Notes: Shënimet tremujore
       Quick Check: Kontroll i shpejtë
       Reflection: Reflektim
       Review Your Page: Rishikoni faqen tuaj
@@ -113,7 +118,7 @@ sq:
       Skill Building: Zhvillimi i shkathtësive
       Skill-Building: Zhvillimi i shkathtësive
       Social Sleuth: Detektiv Social
-      Speed it Up, Slow it Down: Shpejtoje, Ngadalesoje
+      Speed it Up, Slow it Down: Shpejtojeni, Ngadalësoni
       The Big Event - Unplugged Activity: Eventi i madh - Aktivitet i shkëputur
       The Internet - Unplugged Activity: Interneti - Aktivitet i shkëputur
       The Power of Words - Unplugged Activity: Fuqia e fjalëve - Aktiviteti i shkëputur
@@ -127,7 +132,7 @@ sq:
       Video: Video
       'Video - Maze Intro: Programming with Blocks': 'Video - Hyrje në labirint: Programimi
         me blloqe'
-      'Video:  Debugging with the Step Button': 'Video: Korigjimi me butonin Hapi'
+      'Video:  Debugging with the Step Button': 'Video: Debugging me butonin Hapi'
       'Video: AI: What is Machine Learning?': 'Video: IA: Çfarë është Mësimi i Makinave?'
       'Video: Artist Intro with JR Hildebrand': 'Video: Hyrja e Artistit me JR Hildebrand'
       'Video: Code Your Own Flappy Game': 'Video: Kodoni lojën tuaj Flappy'
@@ -178,7 +183,7 @@ sq:
       'Video: The Big Event - Unplugged Activity': 'Video: Eventi i madh - Aktivitet
         i Shkëputur'
       'Video: The Collector': 'Video: Mbledhësi'
-      'Video: The Harvester': 'Video: Korrësi'
+      'Video: The Harvester': 'Video: Korrësja'
       'Video: Training Data & Bias': 'Video: Të dhënat e trajnimit dhe paragjykimet'
       'Video: Unplugged Variables in Envelopes': 'Video: Variablat e shkëputura në
         zarf'

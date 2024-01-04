@@ -94,7 +94,11 @@ ja:
           description_short: 基礎的なコンピューター サイエンスのコンセプトを学びます。
         mike-test:
           title: コンピュータ サイエンス入門
+        self-paced-pl-csd-unit2-2023:
+          title: ウェブ開発を教える
     resources:
+      csd_guide_to_curriculum_videos/csd/2023:
+        url: https://docs.google.com/document/d/1AOgwzEwfAa_1OLHPkL8d9jr6WsPnGr7LJ8wosllUUyo/
       curriculum/csd/2017:
         name: カリキュラム
       curriculum/csd/2018:

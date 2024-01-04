@@ -57,13 +57,13 @@
           "display_name": "Налагодження з спостерігачами"
         },
         "csd-2022/design-mode": {
-          "display_name": "Режим конструктора"
+          "display_name": "режим дизайну"
         },
         "csd-2022/design-mode-elements": {
-          "display_name": "Елементи режиму конструктора"
+          "display_name": "Елементи режиму дизайну"
         },
         "csd-2022/designing-screens-with-code": {
-          "display_name": "Проектування екранів за допомогою коду"
+          "display_name": "Проєктування екранів за допомогою коду"
         },
         "csd-2022/drawing-shapes": {
           "display_name": "Малювання фігур"
@@ -204,10 +204,10 @@
           "display_name": "Акселерометр"
         },
         "csd-2022/the-counter-pattern": {
-          "display_name": "Шаблон лічильника"
+          "display_name": "Зміна лічильника"
         },
         "csd-2022/the-counter-pattern-2": {
-          "display_name": "Шаблон лічильника"
+          "display_name": "Зміна лічильника"
         },
         "csd-2022/the-draw-loop": {
           "display_name": "Цикл малювання"

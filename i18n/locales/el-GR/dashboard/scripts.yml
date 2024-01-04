@@ -169,7 +169,7 @@ el:
           description_short: Μάθε να προγραμματίζεις ανδροειδή και δημιούργησε το δικό σου Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.
           student_description: Μάθε να προγραμματίζεις ανδροειδή και δημιούργησε το δικό σου Πόλεμο των Άστρων σε έναν γαλαξία πολύ, πολύ μακρυά.
         mc:
-          title: Η Ώρα του Κώδικα με το Minecraft
+          title: Ζήστε μια περιπέτεια στο Minecraft
           description: Χρησιμοποίησε μπλοκ κώδικα για να οδηγήσεις τον Steve ή την Alex σε μία περιπέτεια μέσα από αυτόν τον κόσμο του Minecraft
           description_short: Εξερεύνησε έναν κόσμο του Minecraft μέσω κώδικα
           student_description: Χρησιμοποίησε μπλοκ κώδικα για να οδηγήσεις τον Steve ή την Alex σε μία περιπέτεια μέσα από αυτόν τον κόσμο του Minecraft
@@ -297,6 +297,7 @@ el:
             content:
               display_name: Περιεχόμενο
         minecraft:
+          title: Σχεδιαστής Minecraft
           description_short: Προγραμμάτισε ζώα και άλλα πλάσματα του Minecraft στην δικιά σου έκδοση του Minecraft.
           description: Προγραμμάτισε ζώα και άλλα πλάσματα του Minecraft στην δικιά σου έκδοση του Minecraft.
           student_description: Προγραμμάτισε ζώα και άλλα πλάσματα του Minecraft στην δικιά σου έκδοση του Minecraft.
@@ -1883,6 +1884,8 @@ el:
         ai-ethics:
           title: Ο Κώδικας Δεοντολογίας Τεχνητής Νοημοσύνης μας
           description_audience: επίπεδα 6-12
+        dance-unplugged:
+          title: Πάρτι Χορού χωρίς υπολογιστή
         poem-art:
           title: Τέχνη της Ποίησης
         spelling-bee:
@@ -2712,3 +2715,26 @@ el:
           lessons:
             lesson-1:
               name: Ο Κώδικας Δεοντολογίας Τεχνητής Νοημοσύνης μας
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Εισαγωγή
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Εισαγωγή
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Εισαγωγή
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Εισαγωγή
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Έρευνα
+        csd7-2024:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Εισαγωγή στο App Lab

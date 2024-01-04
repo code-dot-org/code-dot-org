@@ -2284,25 +2284,16 @@
           "word": "Compresie fără pierderi",
           "definition": "un algoritm de comprimare a datelor care permite ca datele originale să fie reconstruite perfect din datele comprimate. Cel mai frecvent utilizat pentru compresia textului (de exemplu, compresia .zip)"
         },
-        "code/poem-art/unversioned": {
+        "code/dance-ai/2023": {
           "word": "Cod",
-          "definition": "(v) a scrie instrucțiuni pentru un calculator."
+          "definition": "(v) pentru a scrie cod sau pentru a scrie instrucțiuni pentru un computer."
         },
-        "event/poem-art/unversioned": {
+        "event/dance-ai/2023": {
           "word": "Eveniment",
           "definition": "O acțiune care face ca ceva să se întâmple."
         },
-        "program/poem-art/unversioned": {
-          "word": "Program",
-          "definition": "O serie de pași care au fost programați și formează ceva ce poate fi executat de un computer."
-        },
-        "mood/poem-art/unversioned": {
-          "word": "Atmosferă",
-          "definition": "exprimarea unui sentiment sau a unei emoții în artă sau în opere scrise."
-        },
-        "line/poem-art/unversioned": {
-          "word": "Vers",
-          "definition": "(poezie) - o subdiviziune a unui poem, care ocupă un rând, care se termină la marginea din dreapta a paginii."
+        "program/dance-ai/2023": {
+          "word": "Program"
         }
       }
     }

@@ -983,12 +983,6 @@
         "9ea5d8fd-1b7d-4655-b4b1-75fd09545838": {
           "description": "Berkongsi artifak kreatif dengan pelajar lain."
         },
-        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
-          "description": "Cipta sprite baharu dan berikan mereka kostum dan lokasi."
-        },
-        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
-          "description": "Cipta animasi interaktif menggunakan sprite dan acara."
-        },
         "214e78cd-feb0-4235-a076-0fe81d14d95a": {
           "description": "Latih dan uji model pembelajaran mesin."
         },
@@ -3439,15 +3433,6 @@
         },
         "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
           "description": "Gunakan terminologi yang sesuai apabila merujuk kepada tetikus komputer, pad jejak, atau skrin sentuh."
-        },
-        "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
-          "description": "Membangunkan atur cara yang bertindak balas terhadap peristiwa yang ditetapkan masanya."
-        },
-        "1e1c0724-7d86-4304-a73b-6f083be036fc": {
-          "description": "Menggambarkan peralihan dalam mood sajak."
-        },
-        "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
-          "description": "Mewakili bahasa kiasan dan literal dalam teks."
         }
       }
     }

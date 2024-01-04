@@ -3220,7 +3220,7 @@ zh-CN:
         - {}
         - {}
         questions:
-        - {}
+        - text: 第 5 行
         - {}
         - {}
         - {}
@@ -3233,7 +3233,7 @@ zh-CN:
         - {}
         - {}
         questions:
-        - {}
+        - text: 第 5 行
         - {}
         - {}
         - {}
@@ -3246,7 +3246,7 @@ zh-CN:
         - {}
         - {}
         questions:
-        - {}
+        - text: 第 5 行
         - {}
         - {}
         - {}
@@ -5699,9 +5699,11 @@ zh-CN:
       Choose 2 Test:
         answers:
         - correct: true
+          text: 第 2 行
         - correct: true
-        - {}
-        - {}
+          text: 第 3 行
+        - text: 第 4 行
+        - text: 第 5 行
         questions:
         - {}
       Choosing Good IDs:
@@ -10019,17 +10021,21 @@ zh-CN:
       contained_Choose_2_Test:
         answers:
         - correct: true
+          text: 第 2 行
         - correct: true
-        - {}
-        - {}
+          text: 第 3 行
+        - text: 第 4 行
+        - text: 第 5 行
         questions:
         - {}
       contained_Choose_2_Test_2:
         answers:
         - correct: true
+          text: 第 2 行
         - correct: true
-        - {}
-        - {}
+          text: 第 3 行
+        - text: 第 4 行
+        - text: 第 5 行
         questions:
         - {}
       contained_Happy_Maps_Multi 1:

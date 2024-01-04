@@ -14,6 +14,7 @@ import {currentLocation} from '@cdo/apps/utils';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import $ from 'jquery';
+import fontConstants from '@cdo/apps/fontConstants';
 
 const WorkshopCard = props => {
   return (
@@ -179,8 +180,11 @@ class RegionalPartnerSearch extends Component {
       <div>
         {this.state.showZip && (
           <form onSubmit={this.handleZipSubmit}>
-            <label style={styles.schoolZipLabel}>School ZIP Code:</label>
+            <label style={styles.schoolZipLabel} htmlFor="zipCode">
+              School ZIP Code:
+            </label>
             <input
+              id="zipCode"
               type="text"
               value={this.state.zipValue}
               onChange={this.handleZipChange}
@@ -340,9 +344,9 @@ class RegionalPartnerSearch extends Component {
                                   This Regional Partner is not offering{' '}
                                   {currCourse.name} workshops at this time.
                                   Code.org will review your application and
-                                  contact you with options for joining the
-                                  program hosted by a Regional Partner from a
-                                  different region.
+                                  contact you with options for joining a virtual
+                                  cohort of {currCourse.name} teachers from
+                                  another region.
                                 </div>
                               </>
                             }
@@ -522,10 +526,10 @@ const styles = {
     marginTop: 20,
   },
   bold: {
-    fontFamily: '"Gotham 7r", sans-serif',
+    ...fontConstants['main-font-bold'],
   },
   linkLike: {
-    fontFamily: '"Gotham 7r", sans-serif',
+    ...fontConstants['main-font-bold'],
     cursor: 'pointer',
     color: color.purple,
   },

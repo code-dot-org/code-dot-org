@@ -347,6 +347,9 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Čebelica črkuje besede"
         },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Osnove Računalništva"
+        },
         "csd2-2019/Lists": {
           "name": "Seznami"
         },
@@ -448,6 +451,21 @@
         },
         "pre-express-2019/Spelling Bee": {
           "name": "Čebelica črkuje besede"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Zanke"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Dogodki"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Pogoji"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funkcije"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Spremenljivke"
         },
         "coursea-2020/Programming: Happy Maps": {
           "name": "Veseli zemljevidi"
@@ -607,6 +625,9 @@
         "express-2021/Loops with Rey and BB-8": {
           "name": "Zanke z Rey in BB-8",
           "student_overview": "Pomagaj BB-8 skozi labirinte z uporabo zank! "
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Osnove Računalništva"
         },
         "csd3-2022/Variables": {
           "name": "Spremenljivke"
@@ -795,9 +816,6 @@
         "express-2023/Snowflakes with Anna and Elsa": {
           "purpose": "V tej seriji bodo učenci vadili gnezdene zanke, medtem ko bodo ustvarjali slike, ki jih bodo navdušeno delili.\n\nZačenši s peščico navodil se bodo učenci sami odločali, ko bodo ustvarjali modele za ponavljanje. Obračali jih bodo na različne načine in končali z umetnino, ki bo zares edinstvena. "
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Hour of Code 2013"
-        },
         "artist/Artist": {
           "name": "Umetnik"
         },
@@ -815,12 +833,6 @@
         },
         "minecraft/Minecraft Hour of Code Designer": {
           "name": "Minecraft Ura za kodo Oblikovalec"
-        },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
         },
         "playlab/Play Lab": {
           "name": "Play Lab"
@@ -1112,6 +1124,9 @@
         },
         "course4/Artist Binary": {
           "name": "Umetnik Binarno"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Hour of Code 2013"
         },
         "jigsaw/Jigsaw": {
           "name": "Sestavljanka"

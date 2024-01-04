@@ -7771,19 +7771,18 @@
           "type": "Zdroj"
         },
         "how_ai_works_large_language_models/ai-ethics/2023": {
-          "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
           "type": "Video"
         },
         "societal_impact_of_generative_ai/ai-ethics/2023": {
           "type": "Prezentácia"
         },
         "cs_connections_landing_page/csc-adaptations/2023": {
-          "name": "Vstupná stránka CS Connections",
+          "name": "Úvodná stránka CS Connections",
           "url": "https://code.org/educate/csc",
           "type": "Zdroj"
         },
         "csc_extended_connections_book_list/csc-adaptations/2023": {
-          "name": "Zoznam kníh rozšírených pripojení CSC",
+          "name": "Zoznam kníh s doplňujúcim obsahom pre CS Connections",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "Zdroj"
         },
@@ -7792,7 +7791,7 @@
           "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview"
         },
         "resource_list_for_all_lessons/csc-adaptations/2023": {
-          "name": "Zoznam zdrojov pre všetky lekcie",
+          "name": "Zoznam materiálov pre všetky lekcie",
           "url": "/s/csc-adaptácie-2023/zdroje",
           "type": "Zdroj"
         },
@@ -7826,7 +7825,7 @@
           "type": "Prezentácia"
         },
         "cs_connections_landing_page/csc-bookcovers/2023": {
-          "name": "Vstupná stránka CS Connections",
+          "name": "Úvodná stránka CS Connections",
           "url": "https://code.org/educate/csc",
           "type": "Zdroj"
         },
@@ -7836,7 +7835,7 @@
           "type": "Zdroj"
         },
         "resource_list_for_all_lessons/csc-bookcovers/2023": {
-          "name": "Zoznam zdrojov pre všetky lekcie",
+          "name": "Zoznam materiálov pre všetky lekcie",
           "url": "/s/csc-bookcovers-2023/zdroje",
           "type": "Zdroj"
         },
@@ -7916,12 +7915,12 @@
           "type": "Prezentácia"
         },
         "cs_connections_landing_page/csc-ecosystems/2023": {
-          "name": "Vstupná stránka CS Connections",
+          "name": "Úvodná stránka CS Connections",
           "url": "https://code.org/educate/csc",
           "type": "Zdroj"
         },
         "csc_extended_connections_book_list/csc-ecosystems/2023": {
-          "name": "Zoznam kníh rozšírených pripojení CSC",
+          "name": "Zoznam kníh s doplňujúcim obsahom pre CS Connections",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "Zdroj"
         },
@@ -7931,14 +7930,14 @@
           "type": "Zdroj"
         },
         "resource_list_for_all_lessons/csc-ecosystems/2023": {
-          "name": "Zoznam zdrojov pre všetky lekcie"
+          "name": "Zoznam materiálov pre všetky lekcie"
         },
         "standards_in_simulating_a_marine_ecosystem/csc-ecosystems/2023": {
-          "name": "Normy v simulácii morského ekosystému ",
+          "name": "Vzdelávacie štandardy pre Simuláciu morského ekosystému ",
           "type": "Zdroj"
         },
         "vocabulary_in_simulating_a_marine_ecosystem/csc-ecosystems/2023": {
-          "name": "Slovník v simulácii morského ekosystému",
+          "name": "Slovná zásoba pre Simuláciu morského ekosystému",
           "type": "Zdroj"
         },
         "ecosystems/csc-ecosystems/2023": {
@@ -7957,12 +7956,12 @@
           "type": "Sprievodca aktivitou"
         },
         "cs_connections_landing_page/csc-mappinglandmarks/2023": {
-          "name": "Vstupná stránka CS Connections",
+          "name": "Úvodná stránka CS Connections",
           "url": "https://code.org/educate/csc",
           "type": "Zdroj"
         },
         "csc_extended_connections_book_list/csc-mappinglandmarks/2023": {
-          "name": "Zoznam kníh rozšírených pripojení CSC",
+          "name": "Zoznam kníh s doplňujúcim obsahom pre CS Connections",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "Zdroj"
         },
@@ -7972,7 +7971,7 @@
           "type": "Zdroj"
         },
         "resource_list_for_all_lessons/csc-mappinglandmarks/2023": {
-          "name": "Zoznam zdrojov pre všetky lekcie",
+          "name": "Zoznam materiálov pre všetky lekcie",
           "url": "/s/csc-mappinglandmarks-2023/zdroje"
         },
         "standards_in_mapping_landmarks/csc-mappinglandmarks/2023": {
@@ -8024,12 +8023,12 @@
           "type": "Zdroj"
         },
         "cs_connections_landing_page/csc-starquilts/2023": {
-          "name": "Vstupná stránka CS Connections",
+          "name": "Úvodná stránka CS Connections",
           "url": "https://code.org/educate/csc",
           "type": "Zdroj"
         },
         "csc_extended_connections_book_list/csc-starquilts/2023": {
-          "name": "Zoznam kníh rozšírených pripojení CSC",
+          "name": "Zoznam kníh s doplňujúcim obsahom pre CS Connections",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "Zdroj"
         },
@@ -8099,7 +8098,7 @@
           "type": "Prezentácia"
         },
         "all_resources/csc-timecapsule/2023": {
-          "name": "Zoznam zdrojov pre všetky lekcie",
+          "name": "Zoznam materiálov pre všetky lekcie",
           "url": "/s/csc-timekapsule-2023/zdroje",
           "type": "Zdroj"
         },
@@ -8112,12 +8111,12 @@
           "url": "/s/csc-timekapsule-2023/vocab"
         },
         "cs_connections_landing_page/csc-timecapsule/2023": {
-          "name": "Vstupná stránka CS Connections",
+          "name": "Úvodná stránka CS Connections",
           "url": "https://code.org/educate/csc",
           "type": "Zdroj"
         },
         "csc_extended_connections_book_list/csc-timecapsule/2023": {
-          "name": "Zoznam kníh rozšírených pripojení CSC",
+          "name": "Zoznam kníh s doplňujúcim obsahom pre CS Connections",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "Zdroj"
         },
@@ -8215,12 +8214,12 @@
           "url": "https://studio.code.org/s/poetry-2023/vocab"
         },
         "cs_connections_landing_page/poetry/2023": {
-          "name": "Vstupná stránka CS Connections",
+          "name": "Úvodná stránka CS Connections",
           "url": "https://code.org/educate/csc",
           "type": "Zdroj"
         },
         "csc_extended_connections_book_list/poetry/2023": {
-          "name": "Zoznam kníh rozšírených pripojení CSC",
+          "name": "Zoznam kníh s doplňujúcim obsahom pre CS Connections",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "Zdroj"
         },
@@ -10110,6 +10109,10 @@
         "functions_with_parameters/csd/2023": {
           "name": "Funkcie s parametrami",
           "type": "Video"
+        },
+        "fucntions_devices/csd/2023": {
+          "name": "Funkcie",
+          "type": "Prezentácia"
         },
         "exemplar_1_-_city_silhouette/csd/2023": {
           "type": "Príklad"
@@ -12474,10 +12477,8 @@
           "url": "https://www.youtube.com/watch?v=LCGkcn1f-ms&feature=youtu.be",
           "type": "Video"
         },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "Zoznam básní ",
-          "url": "[https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O\\_ZNaX5RqHyuvBso/edit?usp=sharing][0]",
-          "type": "Prezentácia"
+        "web_development_-_extra_code_in_challenge_levels/csd/2023": {
+          "type": "Zdroj"
         }
       }
     }

@@ -110,7 +110,7 @@ describe I18n::Resources::Dashboard::Courses::SyncIn do
     end
 
     it 'prepares the i18n source file' do
-      expected_i18n_source_file_content = <<-YAML.gsub(/^ {8}/, '')
+      expected_i18n_source_file_content = <<~YAML
         ---
         en:
           data:
@@ -139,7 +139,7 @@ describe I18n::Resources::Dashboard::Courses::SyncIn do
       end
 
       it 'prepares the i18n source file with combined i18n resources data' do
-        expected_i18n_source_file_content = <<-YAML.gsub(/^ {10}/, '')
+        expected_i18n_source_file_content = <<~YAML
           ---
           en:
             data:
@@ -211,7 +211,7 @@ describe I18n::Resources::Dashboard::Courses::SyncIn do
     end
 
     it 'redacts the i18n source data' do
-      expected_i18n_source_file_content = <<-YAML.gsub(/^ {8}/, '')
+      expected_i18n_source_file_content = <<~YAML
         ---
         en:
           data:

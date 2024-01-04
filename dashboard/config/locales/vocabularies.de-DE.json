@@ -2291,25 +2291,16 @@
           "word": "Verlustlose Kompression",
           "definition": "Ein Algorithmus für die Datenkompression, der eine perfekte Rekonstruktion der originellen Daten aus komprimierten Daten möglich macht. Meistens für die Komprimierung von Text benutzt  (z.B. ZIP-Komprimierung)"
         },
-        "code/poem-art/unversioned": {
+        "code/dance-ai/2023": {
           "word": "Code",
-          "definition": "(v) Anweisungen für einen Computer schreiben."
+          "definition": "(v) um Code zu schreiben, oder um Befehle für einen Computer zu schreiben."
         },
-        "event/poem-art/unversioned": {
+        "event/dance-ai/2023": {
           "word": "Ereignis",
           "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
         },
-        "program/poem-art/unversioned": {
-          "word": "Programm",
-          "definition": "Eine Schrittabfolge, die so kodiert wurde, das sie von einer Maschine ausgeführt werden kann."
-        },
-        "mood/poem-art/unversioned": {
-          "word": "Stimmung",
-          "definition": "der Ausdruck eines Gefühls, einer Atmosphäre oder einer Emotion, dargestellt in Kunst oder Text."
-        },
-        "line/poem-art/unversioned": {
-          "word": "Zeile",
-          "definition": "(Poesie) - ein Teil eines Gedichtes, das in einer Reihe angeordnet ist und am rechten Rand endet."
+        "program/dance-ai/2023": {
+          "word": "Programm"
         }
       }
     }

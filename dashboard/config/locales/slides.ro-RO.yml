@@ -2399,6 +2399,20 @@ ro:
         image: notes/hoc_hello_world_2021_introduction_10.jpg
         text: Când apăsați „Alerga”, Sprite va spune orice text ai spune. Acum este
           timpul să începeți cu Sprite Lab și să vedeți unde vă conduce imaginația!
+    hoc-dance-ai-warmup:
+      2:
+        text: |-
+          Bună! Numele meu este Miral Kotb şi sunt dansator, dezvoltator de software
+          şi creator al iLuminate.
+      3:
+        text: Aşadar, ştiinţa calculatoarelor se relaţionează cu creativitatea în
+          foarte multe moduri. Vreau să spun, că odată ce poţi scrie software poţi
+          pune idei în orice. Eu o fac prin costume cu lumini. Sunt atâtea lucruri
+          pe care le poţi face odată ce ai uneltele de scris software, iar posibilităţile
+          sunt fără sfârşit.
+      5:
+        text: Vei folosi blocuri de cod pentru a alege diferiţi dansatori, a schimba
+          mişcările lor de dans, a-i face să reacţioneze la muzică şi a-i face interactivi.
     hoc_dance_congrats:
       1:
         text: 'Ora de cod | Petrecere cu dans: Petrecerea continuă!'

@@ -8188,30 +8188,6 @@
         "2b5cb5b7-6a5e-4727-b8b5-128a3c546781": {
           "description": "Folosiți aceste activități pentru a îmbunătăți procesul de învățare al elevilor. Acestea pot fi utilizate ca activități în afara orelor de curs sau ca alte activități de dezvoltare.**Uită-te sub capotă!**Atunci când partajați un link către povestea dvs., partajați și tot codul care se află în spatele acesteia. Aceasta este o modalitate excelentă ca elevii să învețe unii de la alții.-   Postați online linkuri către poveștile finalizate.    -   Creați propria poveste pe care să o partajați!-   Când elevii încarcă un link, cereți-le să facă clic pe butonul „Cum funcționează” pentru a vedea codul din spatele poveștii.-   Discutați în grup despre diferitele moduri în care colegii voștri și-au programat poveștile.    -   Ce v-a surprins?    -   Ce ați încerca?-   Alegeți povestea altcuiva și faceți clic pe `Remix` pentru a construi pe baza ei. (Nu vă faceți griji, povestea originală va fi în siguranță.)"
         },
-        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
-          "name": "Pregătirea ",
-          "description": "Urați-le Bun venit elevilor în clasă și prezentați-le pe scurt activitatea propusă pentru ziua respectivă."
-        },
-        "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
-          "description": "_În această activitate, te vei distra creând o lume interactivă cu personaje distractive numite Sprites. Veți putea să-i faceți carecterele să spună lucruri cu bule de vorbire așa cum ați vedea într-o revistă de benzi desenate sau într-un roman grafic și veți învăța să-i faceți să răspundă automat atunci când dvs. sau altcineva face click pe ele._\n\n_Astăzi vei scrie „cod”, ceea ce înseamnă doar un set de instrucțiuni pe care un computer le poate înțelege. Când scrii o poveste, trebuie să te gândești cu atenție la cuvintele pe care le folosești. Când scrieți cod, va trebui să vă gândiți cu atenție la instrucțiunile pe care le dați computerului._",
-          "tips": [
-            "Veți dori să petreceți foarte puțin timp pentru încărcarea paginii sau introducerea Orei de codare. Mai ales în cazul elevilor mici, cel mai bine este să sari cât mai repede posibil peste această etapă."
-          ]
-        },
-        "7acfc985-03d8-4d14-b244-203f8cbf4843": {
-          "name": "Suport general",
-          "description": "Iată câteva sfaturi care ar trebui să-i ajute pe elevi, indiferent de nivelul la care lucrează\n\n- **Colaborați cu colegii:** Încurajați elevii să se consulte cu un coleg de bancă atunci când se blochează. În funcție de vârsta și abilitățile elevilor dvs., ați putea lua în considerare împărțirea oficială a clasei în perechi pentru a finaliza tutorialul folosind [programarea perechi][0].\n\n- **Citiți instrucțiunile:** De obicei, instrucțiunile oferă sfaturi utile despre cum să finalizați nivelul. Înainte de a oferi elevilor răspunsul, asigurați-vă că au analizat cu atenție instrucțiunile, sugestiile, videoclipurile și orice cod de pornire.\n\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **V-ați blocat? Căutați indicii:** Fiecare nivel include un indiciu cu sfaturi despre cum să treceți un nivel, inclusiv ce blocuri de cod să încercați.\n\n- **Fă-ți timp și experimentează.** În general, instrucțiunile le spun elevilor ce să facă, dar ar trebui să se simtă liberi să-și încerce propriile idei."
-        },
-        "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
-          "name": "Bună Lume"
-        },
-        "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
-          "description": "Dacă un grup de elevi sau un elev termină devreme, încurajați-l să continue construirea unui proiect la ultimul nivel. Dacă elevii nu sunt siguri ce altceva să facă, le puteți pune întrebări:\n\n- Ce alte sprite-uri (caractere) ai putea adăuga la proiectul tău?\n- Te-ai uitat prin biblioteca de costume sau ai încercat să-ți desenezi propriul costum?\n- Ce altceva le-ai putea spune caracterelor tale să spună?\n- Ce ar trebui să facă aceste personaje când sunt apăsate?\n- Invitați elevii să împărtășească idei și să învețe unii de la alții. De asemenea, pot încerca un alt tutorial vizitând [code.org/learn][0]."
-        },
-        "b68a11cc-930a-4803-beca-1d4f49ede378": {
-          "name": "Reflecţie",
-          "description": "#### Chestionar\n\nCereți elevilor să se gândească la ce au făcut astăzi. Ce au învățat despre cod? Caractere? Evenimente?\n\nCe părere au despre informatică și codare după ce au petrecut o oră explorând?\n\n#### Pașii următori\n\nSpuneți elevilor că, dacă le-a plăcut activitatea de astăzi, au multe opțiuni pentru a continua să codeze. Vizitați [CS Connections][0] pentru idei despre cum să integrați informatica în alte materii sau citiți mai multe despre [ofertele noastre de cursuri pentru școlile primare][1]."
-        },
         "9a692bd5-9de8-4718-9518-f14949953885": {
           "tips": [
             null
@@ -15485,7 +15461,22 @@
             null
           ]
         },
+        "8beb2941-dd64-44f4-9e99-6149c445067a": {
+          "tips": [
+            null
+          ]
+        },
         "500131a4-a22b-4a63-bc0a-d5d4a19c7169": {
+          "tips": [
+            null
+          ]
+        },
+        "a45155ff-19af-43ac-bf11-6ca4001816f4": {
+          "tips": [
+            null
+          ]
+        },
+        "a7d5069b-aa1c-4efa-a8d8-b58bd43a6c7b": {
           "tips": [
             null
           ]
@@ -15500,7 +15491,17 @@
             null
           ]
         },
-        "b2b4b9e6-fe3f-4d2d-a828-1402cc1572e8": {
+        "4ff33db6-6668-4423-8f1d-ad0b25f6da40": {
+          "tips": [
+            null
+          ]
+        },
+        "169c3eed-52d7-4a4b-b7c6-161cf287ed33": {
+          "tips": [
+            null
+          ]
+        },
+        "f1632666-ffc1-457a-832a-c2d3b2d1fc20": {
           "tips": [
             null
           ]
@@ -15515,7 +15516,22 @@
             null
           ]
         },
+        "b2777295-b74f-4240-bb3d-c76b79dde6a9": {
+          "tips": [
+            null
+          ]
+        },
         "9bcab929-d773-4dab-bfb0-d09892056944": {
+          "tips": [
+            null
+          ]
+        },
+        "bedaca2d-4f48-45b4-b6e9-431f6a38cc13": {
+          "tips": [
+            null
+          ]
+        },
+        "221b5029-fcfd-4791-b951-852609cb0198": {
           "tips": [
             null
           ]
@@ -26569,7 +26585,11 @@
         },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
           "name": "Introducere",
-          "description": "**Discutați:**\n\n- _Ce știm despre cum se răspândește un virus?_\n- _Ce poate face ca un virus să se răspândească mai repede printr-un oraș?_\n- _Ce poate ajuta la încetinirea răspândirii unui virus?_\n\nScopul acestei discuții este ca elevii să aibă ocazia să activeze cunoștințele anterioare și să-și vadă ideile pe tablă. Aceasta este, de asemenea, o oportunitate de a investiga unele concepții greșite despre modul în care virușii se răspândesc."
+          "description": "**Discutați:**\n\n-   _Ce știm despre cum se răspândește un virus?_\n-   _Ce poate face ca un virus să se răspândească mai repede printr-un oraș?_\n-   _Ce poate ajuta la încetinirea răspândirii unui virus?_\n\nScopul acestei discuții este ca elevii să aibă ocazia să activeze cunoștințele anterioare și să-și vadă ideile pe tablă. Aceasta este, de asemenea, o oportunitate de a investiga unele concepții greșite despre modul în care virușii se răspândesc."
+        },
+        "9abff5bb-3f76-4f3c-b3d2-f0a873876cf8": {
+          "name": "Suport general",
+          "description": "**Suport general:** În calitate de profesor, rolul dvs. constă în primul rând în a acorda sprijin elevilor dvs. pe măsură ce avanseză cu tutorialele. Iată câteva sfaturi care ar trebui să-i ajute pe elevi, indiferent de nivelul la care lucrează:\n\n-   Încurajați elevii să treacă prin diferitele nivele „extra” în orice ordine le place. Ei pot oricând să se întoarcă la nivelul 1 pentru a revedea meniul.\n\n-   **Colaborați cu colegii:** Încurajați elevii să se consulte cu un coleg vecin atunci când se blochează. Deoarece acest tutorial include videoclipuri și elevii pot purta căști, poate deveni ușor să „se blocheze”. Încurajându-i să lucreze în echipe de câte 2, ajutăm la eliminarea blocajelor care pot apărea sau dacă au nevoie de ajutor. În funcție de vârsta și abilitățile elevilor dvs., puteți lua în considerare împărțirea oficială a clasei în perechi pentru a finaliza tutorialul folosind [programarea perechi](https://youtu.be/vgkahOzFH2Q).\n\n-   **Citiți instrucțiunile:** De obicei, instrucțiunile oferă sfaturi utile despre cum să finalizați nivelul. Înainte de a finaliza un nivel pentru un student, asigurați-vă că s-a uitat cu atenție la Imaginea-Rezultat și a citit tot textul de acolo.\n\n-   ![](https://curriculum.code.org/media/uploads/hint.png)\\*\\* Blocat? Căutați indicii:\\*\\* Fiecare nivel include un indiciu cu detalii suplimentare despre cum să completați nivelul. Dacă elevii încearcă să treacă peste puzzle-uri cât mai repede posibil, s-ar putea să constate că trebuie doar să aștepte o anumită perioadă de timp pentru ca întregul cod să ruleze înainte de a trece mai departe. Multe niveluri conțin un al doilea indiciu cu sugestii de modalități de a deveni și mai creativ prin extinderea sarcinii.\n\n-   **Mergeți mai departe și reveniți:** Uneori, studenții vor beneficia mai mult de revenirea la un nivel dificil. Toate nivelurile sunt independente unele de altele, deși se bazează într-o oarecare măsură pe conceptele introduse anterior.\n\n-   **Fă-ți timp și experimentează.** Citiți codul cu atenție. Chiar dacă primele niveluri le spun elevilor exact ce trebuie să facă pentru a trece la nivelul următor, ei ar trebui să se simtă liberi să-și încerce propriile idei. Nu există răspunsuri corecte sau greșite la aceste niveluri. (Toți au liber la joacă!)"
         },
         "d63c77c1-4167-4360-ab98-25610934beda": {
           "name": "Epidemie",
@@ -26577,7 +26597,7 @@
           "progression_name": "Epidemie"
         },
         "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
-          "description": "** Citiți _Bine ați venit în Monster Town_ la nivel de clasă.",
+          "description": "\\*\\* Citiți _Bine ați venit în Monster Town_ la nivel de clasă.",
           "progression_name": "Bine ai venit în Orașul Monștrilor"
         },
         "60837b14-7f66-4848-9c51-1c6aa9a21ad9": {
@@ -26587,12 +26607,10 @@
           "description": "_Astăzi, vom face ca un loc precum Orașul Monștrilor să prindă viață scriind un cod. În această simulare, vei folosi sprite-uri (personaje) pentru a reprezenta diferiții monștri. Aceste personaje vor avea costume diferite pentru a ne spune lucruri precum dacă sunt bolnavi sau sănătoși. De asemenea, vei folosi comportamente pentru a-i face pe monștri să se miște. În cele din urmă, vei folosi evenimente pentru a schimba costumul unui personaj atunci când două personaje ating ecranul. Aceasta va reprezenta un monstru care transmite virusul altuia. Vei face predicții despre ceea ce se va întâmpla cu vecinii din Orașul Monștrilor și îi vei ajuta să se însănătoșească din nou!_"
         },
         "df13fa93-37df-4188-837d-462c48179625": {
-          "description": "**Faceți acest lucru:** Așezați elevii la computerele lor și rugați-i să înceapă să urmeze instrucțiunile pentru fiecare nivel din secțiunea de dezvoltare a abilităților. Dacă elevii termină această secțiune mai devreme, ei pot continua să experimenteze cu codul lor la nivelul 6 până când clasa este gata să meargă mai departe.",
-          "progression_name": "Dezvoltarea aptitudinilor"
+          "description": "**Faceți acest lucru:** Așezați elevii la computerele lor și rugați-i să înceapă să urmeze instrucțiunile pentru fiecare nivel din secțiunea de dezvoltare a abilităților. Dacă elevii termină această secțiune mai devreme, ei pot continua să experimenteze cu codul lor la nivelul 6 până când clasa este gata să meargă mai departe."
         },
         "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
-          "description": "**Faceți acest lucru:** Lăsați elevii la computerele lor și rugații să treacă prin nivelurile rămase. Unele dintre aceste niveluri oferă provocări opționale. Încurajați elevii să citească cu atenție instrucțiunile și să experimenteze cu simulările lor.",
-          "progression_name": "Mini-proiect: Simulator de focar de epidemie"
+          "description": "**Faceți acest lucru:** Lăsați elevii la computerele lor și rugații să treacă prin nivelurile rămase. Unele dintre aceste niveluri oferă provocări opționale. Încurajați elevii să citească cu atenție instrucțiunile și să experimenteze cu simulările lor."
         },
         "0620e645-f84e-47ca-809b-3dcbe803d83e": {
           "progression_name": "Joc la liber"
@@ -26601,11 +26619,15 @@
           "description": "_Simulările sunt o modalitate excelentă de a învăța lucruri care pot fi greu de observat în lumea reală. Ele ajută oamenii de știință să rezolve probleme, să prezică cum să rezolve problema și să testeze idei noi în siguranță și în mod eficient. Simularea ta este o modalitate de a arăta cum ar putea arăta un focar de virus în Orașul Monștrilor._"
         },
         "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
-          "description": "**Discutați:**\n\n- Cum pot fi de ajutor simulările în lumea reală?\n- Cum ne pot ajuta simulările să înțelegem lumea din jurul nostru?\n- Cum pot simulările să îmbunătățească modul în care testăm ideile?\n\nScopul discuției este ca elevii să înțeleagă că simulările sunt o modalitate de a modela sisteme complexe într-un mod interactiv. De asemenea, ar trebui să vadă cum simulările le permit oamenilor să testeze idei rapid, ieftin și în siguranță."
+          "description": "**Discutați:**\n\n-   Cum pot fi de ajutor simulările în lumea reală?\n-   Cum ne pot ajuta simulările să înțelegem lumea din jurul nostru?\n-   Cum pot simulările să îmbunătățească modul în care testăm ideile?\n\nScopul discuției este ca elevii să înțeleagă că simulările sunt o modalitate de a modela sisteme complexe într-un mod interactiv. De asemenea, ar trebui să vadă cum simulările le permit oamenilor să testeze idei rapid, ieftin și în siguranță."
         },
         "b8e884f1-eae0-4138-8778-0972f90e34d9": {
           "name": "Reflecţie",
-          "description": "**Concluzii:**\n\n- Prin ce se aseamănă această simulare cu lumea reală? Prin ce diferă?\n- Ce ați dori să schimbați/adăugați la simulare?"
+          "description": "**Concluzii:**\n\n-   Prin ce se aseamănă această simulare cu lumea reală? Prin ce diferă?\n-   Ce ați dori să schimbați/adăugați la simulare?"
+        },
+        "c1c5b270-2aae-4f8c-aded-0d92811d532f": {
+          "name": "Sărbătoriți",
+          "description": "Explicați faptul că astăzi veți petrece o oră codând, deoarece săptămâna aceasta este Săptămâna Educației în Informatică și milioane de alți elevi de pe tot globul au participat la o oră de codare săptămâna aceasta. Felicită elevii pentru că fac parte din această mișcare mondială.\n\nOferiți fiecărui elev [un certificat](http://code.org/certificates) sau o diplomă cu numele său."
         },
         "366afa8a-feff-4dd4-a415-03a04e01e897": {
           "name": "Pregătirea ",
@@ -26887,15 +26909,6 @@
         "17878891-5c24-412b-b385-35b54fdaeb11": {
           "description": "**Lumea reală: compresia Zip**\n\n-   Experimentați cu zip folosind fișiere text cu conținut diferit. Sunt rezultatele pentru fișierele mici la fel de bune ca și pentru fișierele mari? (Pe Mac, în Finder, alegeți „obține informații” pentru un fișier pentru a vedea numărul real de biți din fișier, deoarece afișajul Finder va afișa 4KB pentru orice fișier care este mai mic decât atât.)\n    -   Atenție: rezultatele pot varia. Zip funcționează foarte bine pentru text, dar s-ar putea să nu comprime foarte bine alte fișiere, deoarece acestea sunt deja comprimate sau nu au aceleași tipuri de modele încorporate pe care le au documentele text.\n\n**Provocare: cercetați algoritmul LZW**\n\n-   Compresia .zip se bazează pe [Schema de compresie LZW](https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch)\n\n-   În timp ce ideea din spatele instrumentului de compresie a textului este similară cu algoritmul LZW (zip), urmărirea căii de compresie și decompresie este oarecum provocatoare. A afla mai multe despre LZW și ce se întâmplă în cursul acestui algoritm ar fi un proiect de extplorare excelent pentru unele persoane."
         },
-        "59df14b7-1344-480b-8b6b-3fc94684b8bc": {
-          "name": "Activitate Principală (Vechi)"
-        },
-        "3d1e45e9-9dd0-476b-b864-f0d86d0827b6": {
-          "name": "Activitate Principală (Nou)"
-        },
-        "50216925-6742-400e-b45a-2de4cd3b63f2": {
-          "name": "Încheiere"
-        },
         "2da3fffb-160f-44a4-a9d1-3744407a6bf1": {
           "description": "#### Pregătirea\n\nUrați Bun venit elevilor în clasă și prezentați pe scurt activitatea zilei.\n\nSpuneți-le: _Astăzi vom petrece o oră rezolvând niște puzzle-uri online și învățând abilități specifice laboratorului de informatică._\nScopul acestei discuții este de a-i învăța pe elevi la ce să se aștepte și cum să se comporte atunci când intră în laboratorul de informatică."
         },
@@ -26939,39 +26952,91 @@
         "6ddc599f-da51-4adc-9dcc-f13b8b53e760": {
           "description": "#### După Ora de Codare\n\nDupă ce se termină Ora de codare, există multe modalități de a continua să predați informatică în sala de clasă. Iată câteva idei:\n\n-   Predați cursurile [Code Studio Computer Science Fundamentals](http://code.org/educate/k5). Aceste șase cursuri sunt concepute pentru tinerii cursanți. Elevii parcurg singuri o serie de puzzle-uri care îi învață să codeze, iar profesorii au acces la planuri de lecții captivante care ajută ca învățarea să prindă viață. \n    Code.org oferă dezvoltare profesională gratuită pentru aceste cursuri, online sau în persoană.\n\n-   Invitați un expert în informatică să discute cu clasa dvs. despre munca sa. Nu cunoașteți niciun expert în domeniu? Adresați-vă unui voluntar pe [harta voluntarului][2]."
         },
-        "b16d189d-d990-44c4-be49-8f81ac81a96e": {
-          "description": "#### Organizare preliminară\n\nUrați-bun venit elevilor la oră și prezentați-le activitatea zilei.",
+        "59df14b7-1344-480b-8b6b-3fc94684b8bc": {
+          "name": "Activitate Principală (Vechi)"
+        },
+        "3d1e45e9-9dd0-476b-b864-f0d86d0827b6": {
+          "name": "Activitate Principală (Nou)"
+        },
+        "50216925-6742-400e-b45a-2de4cd3b63f2": {
+          "name": "Încheiere"
+        },
+        "3125ec73-4d68-45a9-a6f8-b2921c55d4a3": {
+          "name": "Filtrarea muzicii"
+        },
+        "524efe4b-796a-48eb-b1c6-f4e138699443": {
+          "name": "Suport general"
+        },
+        "b9bacf54-bd37-42b8-85fc-bc9d07a50537": {
           "tips": [
-            "Una dintre modalitățile folosite pentru a prezenta Hour of Code, dacă nu sunteți foarte familiarizat(ă) cu programarea, este să le arătați elevilor unul dintre [videoclipurile noastre inspiraționale][0]. Alegeți-l pe cel care, în opinia dvs., va avea cel mai puternic impact pentru elevi și distribuiți-l acum. Pentru elevii de gimnaziu vă sugerăm [Hour of Code a sosit][1]."
+            null
           ]
         },
-        "d99fc09e-a586-41df-84b2-e552cc4735e3": {
-          "description": "Astăzi ne vom folosi creativitatea în timp ce învățăm să programăm. Există multe moduri în care putem fi creativi. Puteți să dați câteva exemple de moduri în care vă place să fiți creativi?"
+        "58bdb8b5-159d-4b7a-aae7-d250213c1379": {
+          "progression_name": "Intro Video"
         },
-        "b6c8c6a3-fe85-4d42-999e-a2ba13f6739a": {
-          "description": "Încurajați-i pe elevi să le spună și celorlalți cum își exprimă creativitatea - artă, dans, muzică sau scris. Întrebați-i pe elevi care sunt sursele lor de inspirație pentru activitățile creative."
+        "b8daa26e-57e7-4bc5-8a6e-1e541a407c8e": {
+          "tips": [
+            null
+          ]
         },
-        "6fba9dd0-6069-402c-a641-53899ae667e2": {
-          "description": "Știați că știința calculatoarelor poate fi foarte creativă? Puteți crea artă cu ajutorul codului. Un cod este un set de instrucțiuni pe care un computer le poate înțelege. Așa cum alegeți culorile vopselurilor pe care le folosiți, atunci când alegeți codul pe care vreți să îl scrieți puteți să vă exprimați creativitatea! \n\nAstăzi vom folosi poezia pentru a ne inspira atunci când scriem cod într-un mod creativ. Știe cineva ce este poezia? Aveți o poezie care vă place sau un poet preferat? "
+        "7c95f7a1-478d-45fc-ba2d-5807bd2b828f": {
+          "name": "Informare"
         },
-        "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102": {
-          "description": "**Citiți poezii împreună:** Citiți împreună [câteva poezii][0] în clasă și faceți câteva exerciții de numire a atmosferei fiecărei poezii. Încurajați elevii să le spună și celorlalți care este interpretarea lor, chiar dacă este diferită de a celorlalți. "
+        "c624ab39-fa08-4b83-b1e9-bf97fb42667f": {
+          "name": "Sărbătoriți"
         },
-        "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
-          "name": "Arta Poeziei",
-          "description": "#### Asistență generală\n\nLa sfârșitul acestei activități, elevii vor fi creat un poem animat care reprezintă interpretarea lor vizuală a poeziei pe care au ales-o. Această lecție le oferă elevilor posibilitatea de se familiariza cu codul și de a găsi efectele vizuale care le plac cel mai mult. \n\nÎn timp ce vă plimbați prin sala de clasă, încurajați-i pe elevi să facă următoarele:\n\n-   **Să nu se grăbească:** În majoritatea nivelurilor li se cere elevilor să găsească efectele potrivite pentru interpretarea atmosferei poeziei. Încurajați-i să rămână la acest nivel și să se familiarizeze cu codul. \n\n-   **Să găsească o poezie care le place:** Poezia afișată pentru elevi la intrarea pe un nou nivel este doar o sugestie. În partea de sus a spațiului de joc există un meniu derulant cu mai multe poezii preîncărcate. Rugați elevii să citească câteva și să găsească una care le place. Apoi pot începe să facă animații cu ajutorul codului pentru poezia pe care au ales-o. \n\n-   **Să le arate și celorlalți când termină un nivel:** Orice bulină de nivel care este complet verde înseamnă că elevul a îndeplinit toate cerințele pentru acel nivel. Cereți-i unui elev să facă click pe o bulină verde pentru a le arăta și celorlalți ce a creat. \n\nAtunci când un elev se blochează: \n\n-   **Citiți instrucțiunile:** Instrucțiunile sunt organizate sub forma unei liste, pe puncte, în care se descrie modul în care trebuie să fie finalizat nivelul. Dacă un elev se blochează, rugați-l să vă citească instrucțiunile cu voce tare și cereți-i să repete instrucțiunile cu cuvintele sale. \n    -   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> De asemenea, elevii pot face click pe această pictogramă prin care textul va fi redat sub forma unui fișier audio, pentru a auzi instrucțiunile citite cu voce tare..\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Căutați indicii**: Cele mai multe niveluri includ cel puțin un indiciu, care conține detalii cu privire la cum trebuie să procedeze pentru a trece de nivelul respectiv. \n-   **Nu vă speriați de erori:** Erorile din cod sunt ceva obișnuit atunci când se scrie un program. Dacă programul nu face ceea ce trebuie, rugați-l pe elev să vă spună mai întâi ce dorește să facă programul, să dea click pe rulare pentru a observa ce se întâmplă de fapt, iar apoi să găsească locul din codul creat care a cauzat eroarea. Nu uitați să sărbătoriți atunci când găsiți și rezolvați erori. Atunci când găsiți erori, aceasta înseamnă că elevii se descurcă foarte bine la realizarea unui program mai complex. "
+        "07a73ab9-8996-453a-a87f-63628f2387db": {
+          "name": "Pașii următori",
+          "description": "Spuneți elevilor că, dacă le-a plăcut activitatea de astăzi, au multe opțiuni pentru a continua să programeze. Încurajați elevii să acceseze [code.org/learn] pentru o listă de opțiuni sau, dacă planificați oricare dintre activitățile de extindere care urmează, spuneți elevilor ce urmează să se întâmple la clasa dvs. "
         },
-        "065eda67-268c-4f91-9caf-efb2c34493fe": {
-          "description": "#### Asistență pentru fiecare nivel în parte\n\n**Nivelul 1:** Încurajați-i pe elevi să citească poezia. Apoi cereți-le să găsească o culoare sau un efect de fundal care să se potrivească cu atmosfera poeziei pe care au ales-o. \n\n**Nivelul 2:** În acest exemplu, elevii trebuie să citească mai întâi poezia singuri, apoi să apese Run (Rulează). Îi puteți întreba pe elevi dacă banda audio și efectele pe care le-a ales programatorul se potrivesc cu atmosfera poeziei. Cereți-le elevilor să dezvolte răspunsul. \n\n**Nivelul 3:** În acest nivel se introduce sonorul, dacă au căști, elevii le pot folosi acum. \n\n**Nivelul 4:** Rugați elevii să citească poezia și să găsească versul în care se schimbă atmosfera poeziei sau dacă există o nouă imagine pe care o introduce poetul. Folosiți blocul de evenimente pentru a adăuga efectele adecvate la versurile identificate din poem. \n\n**Nivelul 5:** În acest exemplu, elevii trebuie să citească mai întâi poezia singuri, apoi să apese Run (Rulează). Întrebați-i pe elevi dacă imaginile se potrivesc cu cuvintele din poezie. Rugați-i să detalieze răspunsul. \n\n**Nivelurile 6, 7, 8:** Consultați secțiunea „Nu vă speriați de erori” din secțiunea Asistență generală. Încurajați-i pe elevi să creeze programe care să includă mai multe tranziții cu ajutorul blocurilor de evenimente. \n\n**Nivelul 9:** Încurajați-i pe elevi să citească toate poeziile din meniul derulant pentru a găsi o poezie care să le placă. Spuneți-le elevilor că pot spune prietenilor și familiei ce au făcut în acest nivel final. Acum este momentul să combinați toate abilitățile de scriere de cod și de literatură/scriere creativă! "
+        "fb665f5b-457e-484e-924a-7aa4f2e097be": {
+          "name": "Devino viral"
         },
-        "51a89a3e-a8c7-41d6-bbbf-2ce16fc7e033": {
-          "description": "Dacă v-a plăcut lecția de astăzi în care am învățat să scriem cod, puteți să învățați mai multe vizitând code.org/learn. Dacă vreți să le spuneți prietenilor sau membrilor familiei ce ați făcut astăzi, dați click pe butonul „Share (Distribuie)” și trimiteți-le linkul!"
+        "c03cf1cb-2946-48c9-aede-76ccf4b787a9": {
+          "tips": [
+            null
+          ]
         },
-        "8630a813-1b6c-49c5-a58b-d2dc5dcccd0a": {
-          "description": "#### (Opțional) evaluare: Verificarea înțelegerii (4 minute)\n\nÎnmânați fiecărui elev câte două bilete post-it. "
+        "3c17e9fd-b06b-478e-bb56-5734d9344b68": {
+          "tips": [
+            null
+          ]
         },
-        "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
-          "description": "Aveți două bilete post-it. Pe unul dintre acestea scrieți un lucru pe care l-ați învățat astăzi despre programare. \nPe al doilea, scrieți un lucru pe care l-ați învățat astăzi despre poezie. \n\nSă le spunem și colegilor - ridicați mâna pentru a răspunde la această întrebare: Ce altceva doriți să mai învățați în continuare despre programare și știința calculatoarelor? "
+        "913cf29b-f688-4c8b-9834-96c9b75274f5": {
+          "tips": [
+            null
+          ]
+        },
+        "f39d7745-dd63-424d-baa1-de4e4fd0f0c0": {
+          "tips": [
+            null
+          ]
+        },
+        "a7f20e25-3940-4615-b90f-8664e1661b3a": {
+          "tips": [
+            null
+          ]
+        },
+        "2a1748fb-e49f-4ae0-be55-0c603dbe3335": {
+          "tips": [
+            null
+          ]
+        },
+        "e72dd2c9-59cc-4063-9dcc-d270e7fed0fe": {
+          "tips": [
+            null
+          ]
+        },
+        "5ff66bb0-517f-486e-b70f-cad0319c23df": {
+          "tips": [
+            null
+          ]
+        },
+        "31d4feb6-1e0c-4342-988b-6730a0d0155e": {
+          "tips": [
+            null
+          ]
         }
       }
     }

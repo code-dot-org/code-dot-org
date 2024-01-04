@@ -10160,7 +10160,8 @@
           "description": "Gamit ang kanilang mga kumpletong gabay sa pagpaplano, handa na ang mga mag-aaral na isabuhay ang kanilang mga proyekto. Ang mga antas na ito ay tumutugma sa istraktura ng gabay sa pagpaplano, at tumutulong sa pag-navigate sa mga mag-aaral sa proseso ng pagbabago ng kanilang mga ideya sa code.",
           "tips": [
             "Ang mga mag-aaral ay makakaranas ng maraming pagsubok at error habang nagko-coding. Ang kanilang mga proyekto ay malamang na maging mga pinutol na bersiyon ng kanilang orihinal na saklaw. Paalalahanan ang mga mag-aaral na ang ganitong uri ng kompromiso ay karaniwan sa disenyo ng software. Okay lang kung hindi sila makapag-build sa bawat feature na pinlano nila!"
-          ]
+          ],
+          "name": "Proyekto sa Katapusan ng Kurso"
         },
         "44ff9770-a1eb-4ec3-922d-013bcadaef08": {
           "progression_name": "Mga halimbawa ng proyekto"
@@ -12952,30 +12953,6 @@
         },
         "2b5cb5b7-6a5e-4727-b8b5-128a3c546781": {
           "description": "Gamitin ang mga aktibidad na ito upang mapahusay ang pagkatuto ng mag-aaral. Maaaring gamitin ang mga ito bilang mga aktibidad sa labas ng klase o iba pang pagpapabuti.\n\n**Tumingin sa ilalim ng Hood**\n\nKapag nagbahagi ka ng link sa kwento mo, ibinabahagi mo rin ang lahat ng code na nasa likod nito. Ito ay mahusay na paraan sa mga mag-aaral na matuto sa bawat isa.\n\n-   Mag-post ng mga link sa mga nakumpletong kwento online o sa board.\n    -   Gumawa ng sarili mong kwento para ibahagi din!\n-   Kapag nag-load ang mga mag-aaral ng link, ipa-click sa kanila ang \"Paano Ito Gumagana\" na button upang makita ang code sa likod ng kwento.\n-   Talakayin bilang grupo ang iba't ibang paraan ng pag-code ng iyong mga kaklase sa kanilang mga kwento.\n    -   Ano ang ikinagulat mo?\n    -   Ano ang gusto mong subukan?\n-   Pumili ng kwento ng ibang tao at i-click ang `Remix` para buuin ito. (Huwag mag-alala; ang orihinal na kwento ay magiging ligtas.)"
-        },
-        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
-          "name": "Paghahanda",
-          "description": "Batiin ang mga mag-aaral sa klase at ipakilala ang aktibidad sa araw na iyon."
-        },
-        "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
-          "description": "_Sa aktibidad na ito, magiging masaya ka sa paggawa ng interactive na mundo na may mga nakakatuwang character na tinatawag na tiyanak. Magagawa mong pagsalitain ang mga tiyanak ng anuman gamit ang mga speech bubble gaya ng makikita mo sa isang komiks o graphic na nobela, at matututuhan mong gawin silang awtomatikong tumugon kapag nag-click ka o ang ibang tao sa kanila._\n\n_Magsusulat ka ngayon ng \"code\" na nangangahulugan lamang ng isang hanay ng mga tagubilin na mauunawaan ng isang computer. Kapag nagsusulat ka ng isang kuwento, kailangan mong pag-isipang mabuti ang mga salitang ginagamit mo. Kapag sumulat ka ng code, kakailanganin mong pag-isipang mabuti ang mga tagubiling ibinibigay mo sa computer._",
-          "tips": [
-            "Gumugol ng napakakaunting oras sa front-loading o pagpapakilala ng Hour of Code mo. Lalo na sa mga batang nag-aaral, pinakamahusay na sumali sa lalong madaling panahon."
-          ]
-        },
-        "7acfc985-03d8-4d14-b244-203f8cbf4843": {
-          "name": "Pangkalahatang Suporta",
-          "description": "Narito ang ilang tip na makakatulong sa mga mag-aaral anuman ang level na ginagawa nila\n\n- **Makipagtulungan sa mga Kasama:** Hikayatin ang mga mag-aaral na magtanong sa isang kasama kapag nahirapan sila. Depende sa edad at kakayahan ng mga mag-aaral mo, maaari mong pormal na paghahati-hatiin ang klase sa mga pares para makumpleto ang tutorial gamit ang [pair programming][0].\n\n- **Basahin ang Mga Tagubilin:** Karaniwang nagbibigay ng mga kapaki-pakinabang na tip ang mga tagubilin sa kung paano kumpletuhin ang antas. Bago ibigay sa mga mag-aaral ang sagot, tiyaking maingat nilang tiningnan ang mga tagubilin, pahiwatig, video, at anumang starter code.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\">\n**Nahirapan? Maghanap ng mga hint:** May kasamang hint ang bawat antas na may payo sa kung paano makapasa sa isang antas, kasama kung aling mga block ng code ang susubukan.\n\n- **Maglaan ng oras at mag-eksperimento.** Nagsasabi sa pangkalahatan sa mga mag-aaral ang mga tagubilin kung ano ang gagawin, ngunit dapat malaya din silang subukan ang kanilang sariling mga ideya."
-        },
-        "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
-          "name": "Hello World"
-        },
-        "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
-          "description": "Kung maagang natapos ang isang grupo o indibidwal, hikayatin silang ipagpatuloy ang pagbuo ng proyekto sa huling antas. Kung hindi sigurado ang mga mag-aaral kung ano pa ang gagawin, maaari mo silang i-prompt ng mga tanong: \n\n- Anong iba pang mga tiyanak ang maaari mong idagdag sa proyekto mo?\n- Tumingin ka na ba sa library ng kasuotan o sinubukan mong gumuhit ng sarili mong kasuotan ng tiyanak?\n- Ano pa ang maaaring sabihin ng mga tiyanak mo?\n- Ano ang dapat gawin ng mga tiyanak mo kapag na-click sila?\n- Anyayahan ang mga estudyante na magbahagi ng mga ideya at matuto sa isa't isa. Maaari din nilang subukan ang isa pang tutorial sa pamamagitan ng pagbisita sa [code.org/learn][0]."
-        },
-        "b68a11cc-930a-4803-beca-1d4f49ede378": {
-          "name": "Pagmumuni-muni",
-          "description": "#### Usisain\n\nSabihin sa mga mag-aaral na bulayin-bulayin ang mga aktibidad sa araw na iyon. Ano ang natutunan nila tungkol sa coding? Mga tiyanak? Mga Event?\n\nAno ang pakiramdam nila tungkol sa computer science at coding pagkatapos gumugol ng isang oras sa pagsusuri?\n\n#### Mga Susunod na Hakbang\n\nIpaalam sa mga mag-aaral na kung nasiyahan sila sa aktibidad ngayon, marami silang opsyon upang ipagpatuloy ang pag-code. Bisitahin ang [CS Connections][0] para sa mga ideya tungkol sa kung paano isama ang computer science sa ibang mga paksa o magbasa pa tungkol sa aming [mga alok ng kurso sa elementarya][1]."
         },
         "9a692bd5-9de8-4718-9518-f14949953885": {
           "tips": [
@@ -20228,7 +20205,8 @@
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Tuklasin” na slide\n\nGamit ang kanilang mga kumpletong gabay sa pagpaplano, handa na ang mga mag-aaral na isabuhay ang kanilang mga proyekto. Ang mga antas na ito ay tumutugma sa istraktura ng gabay sa pagpaplano, at tumutulong sa pag-navigate sa mga mag-aaral sa proseso ng pagbabago ng kanilang mga ideya sa code.",
           "tips": [
             "Ang mga mag-aaral ay makakaranas ng maraming pagsubok at error habang nagko-coding. Ang kanilang mga proyekto ay malamang na maging mga pinutol na bersiyon ng kanilang orihinal na saklaw. Paalalahanan ang mga mag-aaral na ang ganitong uri ng kompromiso ay karaniwan sa disenyo ng software. Okay lang kung hindi sila makapag-build sa bawat feature na pinlano nila!"
-          ]
+          ],
+          "name": "Proyekto sa Katapusan ng Kurso"
         },
         "a0ef70ba-32d7-450e-85a2-d2415d14209c": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Antas 1 - Mga Halimbawang Proyekto” na slide",
@@ -23263,7 +23241,22 @@
             null
           ]
         },
+        "8beb2941-dd64-44f4-9e99-6149c445067a": {
+          "tips": [
+            null
+          ]
+        },
         "500131a4-a22b-4a63-bc0a-d5d4a19c7169": {
+          "tips": [
+            null
+          ]
+        },
+        "a45155ff-19af-43ac-bf11-6ca4001816f4": {
+          "tips": [
+            null
+          ]
+        },
+        "a7d5069b-aa1c-4efa-a8d8-b58bd43a6c7b": {
           "tips": [
             null
           ]
@@ -23278,7 +23271,17 @@
             null
           ]
         },
-        "b2b4b9e6-fe3f-4d2d-a828-1402cc1572e8": {
+        "4ff33db6-6668-4423-8f1d-ad0b25f6da40": {
+          "tips": [
+            null
+          ]
+        },
+        "169c3eed-52d7-4a4b-b7c6-161cf287ed33": {
+          "tips": [
+            null
+          ]
+        },
+        "f1632666-ffc1-457a-832a-c2d3b2d1fc20": {
           "tips": [
             null
           ]
@@ -23293,7 +23296,22 @@
             null
           ]
         },
+        "b2777295-b74f-4240-bb3d-c76b79dde6a9": {
+          "tips": [
+            null
+          ]
+        },
         "9bcab929-d773-4dab-bfb0-d09892056944": {
+          "tips": [
+            null
+          ]
+        },
+        "bedaca2d-4f48-45b4-b6e9-431f6a38cc13": {
+          "tips": [
+            null
+          ]
+        },
+        "221b5029-fcfd-4791-b951-852609cb0198": {
           "tips": [
             null
           ]
@@ -31618,7 +31636,8 @@
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Tuklasin” na slide\n\nGamit ang kanilang mga kumpletong gabay sa pagpaplano, handa na ang mga mag-aaral na isabuhay ang kanilang mga proyekto. Ang mga antas na ito ay tumutugma sa istraktura ng gabay sa pagpaplano, at tumutulong sa pag-navigate sa mga mag-aaral sa proseso ng pagbabago ng kanilang mga ideya sa code.",
           "tips": [
             "Ang mga mag-aaral ay makakaranas ng maraming pagsubok at error habang nagko-coding. Ang kanilang mga proyekto ay malamang na maging mga pinutol na bersiyon ng kanilang orihinal na saklaw. Paalalahanan ang mga mag-aaral na ang ganitong uri ng kompromiso ay karaniwan sa disenyo ng software. Okay lang kung hindi sila makapag-build sa bawat feature na pinlano nila!"
-          ]
+          ],
+          "name": "Proyekto sa Katapusan ng Kurso"
         },
         "ee8e3fb5-e938-4c42-b636-bbfb442572f8": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Ipakita**: Ipakita ang “Antas 1 - Mga Halimbawang Proyekto” na slide",
@@ -36078,7 +36097,11 @@
         },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
           "name": "Panimula",
-          "description": "**Talakayin:**\n\n- _Ano ang alam natin tungkol sa kung paano kumakalat ang isang virus?_\n- _Ano ang maaaring maging sanhi ng pagkalat ng virus sa isang bayan nang mas mabilis?_\n- _Ano ang makakatulong na mapabagal ang pagkalat ng virus?_\n\nAng layunin ng talakayang ito ay magkaroon ng pagkakataon ang mga mag-aaral na maisaaktibo ang dating kaalaman at makita ang kanilang mga ideya sa pisara. Isa rin itong pagkakataon upang siyasatin ang ilang maling kuru-kuro tungkol sa kung paano kumalat ang mga virus."
+          "description": "**Talakayin:**\n\n-   _Ano ang alam natin tungkol sa kung paano kumakalat ang isang virus?_\n-   _Ano ang maaaring maging sanhi ng pagkalat ng virus sa isang bayan nang mas mabilis?_\n-   _Ano ang makakatulong na mapabagal ang pagkalat ng virus?_\n\nAng layunin ng talakayang ito ay magkaroon ng pagkakataon ang mga mag-aaral na maisaaktibo ang dating kaalaman at makita ang kanilang mga ideya sa pisara. Isa rin itong pagkakataon upang siyasatin ang ilang maling kuru-kuro tungkol sa kung paano kumalat ang mga virus."
+        },
+        "9abff5bb-3f76-4f3c-b3d2-f0a873876cf8": {
+          "name": "Pangkalahatang Suporta",
+          "description": "**Pangkalahatang Suporta:** Bilang guro ang pangunahing tungkulin mo ay upang suportahan ang mga mag-aaral habang sila ay nagsisikap sa tutorial. Narito ang ilang mga tip na dapat makatulong sa mga mag-aaral anuman ang antas na kanilang pinagtatrabahuhan: \n\n-   Hikayatin ang mga mag-aaral na lumipat sa iba't ibang mga \"extra\" sa anumang pagkakasunud-sunod na gusto nila. Maaari silang bumalik sa Level 1 upang muling tingnan ang menu. \n\n-   \\*\\* Makipagtulungan sa mga katabi:\\*\\* Hinihikayat ang mga mag-aaral na magtanong sa katabi kapag sila ay natigil. Dahil ang tutorial na ito ay naglalaman ng mga video at ang mga mag-aaral ay maaaring magsuot ng mga headphone maaari itong maging madali upang \"magsarili\". Tulungan ang mga barrier na iyon sa pamamagitan ng aktibong pag-pares sa mga mag-aaral kung tila kailangan nila ng tulong. Depende sa edad at kakayahan ng mga mag-aaral mo, maaari mong isaalang-alang ang pormal na paghahati ng iyong klase sa mga pares upang makumpleto ang tutorial gamit ang [pair programming](https://youtu.be/vgkahOzFH2Q). \n\n-   **Basahin ang Mga Instruksiyon:** Ang mga tagubilin ay karaniwang nagbibigay ng mga kapaki-pakinabang na tip sa kung paano makumpleto ang antas. Bago makumpleto ang antas sa mag-aaral tiyakin na sila ay talagang tumingin ng malapit sa target na imahe at basahin ang lahat ng text doon. \n\n-   ![](https://curriculum.code.org/media/uploads/hint.png)**Natigil? Maghanap ng mga hint:** Ang bawat antas ay may kasamang isang hint na may karagdagang mga detalye tungkol sa kung paano pumasa sa antas. Kung sinusubukan ng mga mag-aaral na ipasa ang mga palaisipan nang mabilis hangga't maaari, baka malaman nila na kailangan lamang nilang maghintay ng tiyak na halaga ng panahon sa lahat ng code upang maglaro bago magpatuloy. Maraming antas ang naglalaman ng pangalawang hint na may mga mungkahi sa mga paraan upang maging mas malikhain sa pamamagitan ng pagpapalawak ng gawain. \n\n-   **Magpatuloy at Bumalik:** Minsan mas makikinabang ang mga mag-aaral na bumalik sa mahirap na antas. Ang lahat ng antas ay independyente sa isa't isa, kahit na umaasa sila sa ilang antas sa mga naunang ipinakilalang konsepto. \n\n-   **Maglaan ng oras at mag-eksperimento.** Basahin nang mabuti ang code. Kahit na ang unang pares na antas ay nagsasabi sa mga mag-aaral kung ano ang kailangan nilang gawin upang makapasa, dapat din na huwag silang mag-atubiling subukan ang kanilang sariling mga ideya. Walang tama o maling sagot sa Mga Antas na ito. (Lahat sila ay libreng laro!)"
         },
         "d63c77c1-4167-4360-ab98-25610934beda": {
           "name": "Pagsiklab",
@@ -36110,11 +36133,15 @@
           "description": "_Ang mga simulation ay isang mahusay na paraan upang matutunan ang mga bagay na maaaring mahirap obserbahan sa totoong mundo. Tinutulungan nila ang mga siyentipiko na malutas ang mga problema, mahulaan kung paano lutasin ang problema, at subukan ang mga bagong ideya nang ligtas at mahusay. Ang iyong simulation ay isang paraan upang ipakita kung ano ang hitsura ng isang virus outbreak sa Monster Town._"
         },
         "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
-          "description": "**Talakayin:**\n\n- Paano makakatulong ang mga simulation sa totoong mundo?\n- Paano tayo matutulungan ng mga simulation na maunawaan ang mundo natin?\n- Paano mapapabuti ng mga simulation ang paraan ng pagsubok ng mga ideya?\n\nAng layunin ng talakayan ay para sa mga mag-aaral na maunawaan na ang mga simulation ay isang paraan upang magmodelo ng mga kumplikadong sistema sa isang interactive na paraan. Dapat din nilang makita kung paano hinahayaan ng mga simulation ang mga tao na subukan ang mga ideya nang mabilis, mura at ligtas.\n"
+          "description": "**Talakayin:**\n\n-   Paano makakatulong ang mga simulation sa totoong mundo?\n-   Paano tayo matutulungan ng mga simulation na maunawaan ang mundo natin?\n-   Paano mapapabuti ng mga simulation ang paraan ng pagsubok ng mga ideya?\n\nAng layunin ng talakayan ay para sa mga mag-aaral na maunawaan na ang mga simulation ay isang paraan upang magmodelo ng mga kumplikadong sistema sa isang interactive na paraan. Dapat din nilang makita kung paano hinahayaan ng mga simulation ang mga tao na subukan ang mga ideya nang mabilis, mura at ligtas."
         },
         "b8e884f1-eae0-4138-8778-0972f90e34d9": {
           "name": "Pagmumuni-muni",
-          "description": "**Mga Prompt:**\n\n- Paano ang simulation na ito ay katulad ng totoong mundo? Paano ito naiiba?\n- Ano ang gusto mong baguhin/idagdag sa iyong simulation?"
+          "description": "**Mga Prompt:**\n\n-   Paano ang simulation na ito ay katulad ng totoong mundo? Paano ito naiiba?\n-   Ano ang gusto mong baguhin/idagdag sa iyong simulation?"
+        },
+        "c1c5b270-2aae-4f8c-aded-0d92811d532f": {
+          "name": "Magdiwang",
+          "description": "Ipaliwanag na gumugugol ka ng isang oras sa pag-coding ngayon, dahil Linggo ng Edukasyon sa CS ang linggong ito, at milyun-milyong iba pang mga mag-aaral sa buong mundo ang nag-aaral din ng Hour of Code. Purihin ang mga mag-aaral sa pagiging bahagi ng pandaigdigang kilusang ito.\n\nBigyan ang bawat mag-aaral ng [isang sertipiko](http://code.org/certificates) na may pangalan niya."
         },
         "366afa8a-feff-4dd4-a415-03a04e01e897": {
           "name": "Paghahanda",
@@ -36440,18 +36467,6 @@
           "name": "Mga Katangian ng UI Elemento",
           "progression_name": "Mga Katangian ng UI Elemento"
         },
-        "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
-          "name": "Warm Up"
-        },
-        "59df14b7-1344-480b-8b6b-3fc94684b8bc": {
-          "name": "Pangunahing Aktibidad (Luma)"
-        },
-        "3d1e45e9-9dd0-476b-b864-f0d86d0827b6": {
-          "name": "Pangunahing Aktibidad (Bago)"
-        },
-        "50216925-6742-400e-b45a-2de4cd3b63f2": {
-          "name": "Tapusin Na"
-        },
         "f108ae93-f672-4062-b6d6-522901659990": {
           "name": "Survey ng CS Discoveries Post-course",
           "progression_name": "Survey ng CS Discoveries Post-course"
@@ -36499,39 +36514,94 @@
         "6ddc599f-da51-4adc-9dcc-f13b8b53e760": {
           "description": "#### Higit pa sa Hour of Code\n\nPagkatapos ng iyong Hour of Code, maraming paraan upang magpatuloy sa pagtuturo ng computer science sa iyong K-5 na silid-aralan. Narito ang ilang ideya:\n\n-   Ituro ang mga kursong [Code Studio Computer Science Fundamentals](http://code.org/educate/k5). Ang anim na kursong ito ay idinisenyo sa mga batang mag-aaral. Ang mga mag-aaral ay gumagawa ng kanilang paraan sa pamamagitan ng isang serye ng mga puzzle na nagtuturo sa kanila na mag-code, at ang mga tagapagturo ay may access sa nakakaengganyo na mga lesson plan na makakatulong na gawing buhay ang pag-aaral. Nag-aalok ang Code.org ng libreng propesyonal na pag-unlad sa mga kursong ito, online o nang personal.\n\n-   Mag-imbita ng eksperto sa computer science na makipag-usap sa iyong klase tungkol sa kanyang trabaho. Wala kang alam na lokal na computer scientist? Makipag-ugnayan sa isang boluntaryo sa aming [mapa ng volunteer](https://code.org/volunteer/local)"
         },
-        "b16d189d-d990-44c4-be49-8f81ac81a96e": {
-          "description": "#### Paghahanda\n\nSalubungin ang mga mag-aaral sa klase at ipakilala ang aktibidad sa araw na iyon.",
+        "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
+          "name": "Warm Up"
+        },
+        "59df14b7-1344-480b-8b6b-3fc94684b8bc": {
+          "name": "Pangunahing Aktibidad (Luma)"
+        },
+        "3d1e45e9-9dd0-476b-b864-f0d86d0827b6": {
+          "name": "Pangunahing Aktibidad (Bago)"
+        },
+        "50216925-6742-400e-b45a-2de4cd3b63f2": {
+          "name": "Tapusin Na"
+        },
+        "3125ec73-4d68-45a9-a6f8-b2921c55d4a3": {
+          "name": "Pag-filter ng Musika"
+        },
+        "524efe4b-796a-48eb-b1c6-f4e138699443": {
+          "name": "Pangkalahatang Suporta"
+        },
+        "b9bacf54-bd37-42b8-85fc-bc9d07a50537": {
           "tips": [
-            "Ang isang paraan upang ipakilala ang Hour of Code kung hindi ka masyadong pamilyar sa pag-code ay ipakita ang isa sa [aming nagbibigay-inspirasyong mga video][0]. Piliin ang sa tingin mo ay magiging inspirasyon ng mga mag-aaral mo at ibahagi ito ngayon. Para sa mga mag-aaral sa gitnang baitang, iminumungkahi namin [Ang Hour of Code na Narito][1]."
+            null
           ]
         },
-        "d99fc09e-a586-41df-84b2-e552cc4735e3": {
-          "description": "Ngayon gagamitin natin ang ating pagkamalikhain habang natututong mag-code. Maraming mga paraan upang maging malikhain. Ano ang ilang paraan para maging malikhain ka? "
+        "58bdb8b5-159d-4b7a-aae7-d250213c1379": {
+          "progression_name": "Intro Video"
         },
-        "b6c8c6a3-fe85-4d42-999e-a2ba13f6739a": {
-          "description": "Hikayatin ang mga mag-aaral na magbahagi ng mga paraan ng pagpapahayag nila ng pagkamalikhain, gaya ng sining, sayaw, musika, o pagsulat. Bilang susunod na tanong, tanungin ang mga mag-aaral kung ano ang ginagamit nila upang pukawin ang kanilang pagkamalikhain. "
+        "b8daa26e-57e7-4bc5-8a6e-1e541a407c8e": {
+          "tips": [
+            null
+          ]
         },
-        "6fba9dd0-6069-402c-a641-53899ae667e2": {
-          "description": "Alam mo ba na maaaring maging napakamalikhain ng computer science? Sa katunayan, maaari kang gumawa ng sining gamit ang code. Bilang paalala, ang code ay set ng mga tagubilin na maiintindihan ng computer. Tulad ng pagpili kung aling mga kulay ng pintura ang gagamitin, ang pagpili ng kung anong code ang isusulat mo ay maaaring maging pagkakataon upang ipahayag ang pagkamalikhain mo! \n\nGagamitin natin ang tula upang magbigay-inspirasyon sa ating creative coding ngayon. May nakakaalam ba kung ano ang tula? Mayroon ka bang paboritong tula o makata? "
+        "7c95f7a1-478d-45fc-ba2d-5807bd2b828f": {
+          "name": "Panayam"
         },
-        "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102": {
-          "description": "**Magbasa ng tula nang sama-sama:** Magbasa ng [ilang mga tula][0] na magkasama at magsanay sa pagbibigay ng pangalan sa mood ng bawat tula. Hikayatin ang mga mag-aaral na ibahagi ang kanilang interpretasyon, kahit na naiiba ito sa iba. "
+        "c624ab39-fa08-4b83-b1e9-bf97fb42667f": {
+          "name": "Magdiwang"
         },
-        "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
-          "name": "Sining ng Tula",
-          "description": "#### Pangkalahatang Suporta\n\nSa pagtatapos ng aktibidad na ito, magkakaroon ang mga mag-aaral ng animated na tula na kumakatawan sa kanilang visual interpretation ng tulang pinili nila. Idinisenyo ang araling ito upang bigyan ang mga mag-aaral ng pagkakataon na mag-usisa at hanapin ang mga visual effects na gusto nila. \n\nHabang umiikot sa silid, hikayatin ang mga mag-aaral na:\n\n- **Huwag kang mag-madali:** Karamihan sa mga antas ay nangangailangan sa mga mag-aaral na mahanap ang perpektong mga epekto na tutugma sa kanilang interpretasyon sa mood ng tula. Ang pananatili sa isang antas at pag-usisa sa kanilang code ay lubos na hinihikayat. \n\n- **Maghanap ng tula na gusto mo:** Ang tula na ipinapakita sa mag-aaral sa bagong antas ay mungkahi lamang. Mayroong dropdown menu ng tula na may mga paunang na-load na tula sa tuktok ng playspace. Hilingin sa mga mag-aaral na basahin ang ilan at hanapin ang isa na may dating sa kanila. Pagkatapos ay maaari nilang simulan ang pag-animate ng tula na napili gamit ang code. \n\n- **Ipakita ang nakumpletong antas:** Anumang level bubble na ganap na berde ay nangangahulugang matagumpay na nakumpleto ng mag-aaral ang lahat ng mga kinakailangan sa antas na iyon. Hilingin sa mag-aaral na mag-click sa berdeng bula upang ipakita ang kanilang nilikha. \n\nPara sa mga pagkakataon na ang mag-aaral ay di makausad: \n\n- **Basahin ang mga tagubilin:** Ang mga tagubilin ay mga puntong may bullet tungkol sa kung paano kumpletuhin ang antas. Kung ang mag-aaral ay di makausad, hilingin sa kaniya na basahin sa iyo nang malakas ang mga tagubilin at hilingin sa kaniya na ulitin ang sinasabi ng mga tagubilin sa kaniyang sariling mga salita. \n    -   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Maaari ring i-click ng mga mag-aaral ang icon na text-to-speech upang marinig ang mga tagubilin.\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Maghanap ng mga mungkahi**: Karamihan sa mga antas ay naglalaman ng hindi bababa sa isang pahiwatig na may mas malinaw na mga detalye tungkol sa kung paano pumasa sa antas. \n- **Ipagdiwang ang mga bug:** Ang pagkakaroon ng bug sa code mo ay likas na bahagi ng proseso ng pag-coding. Kung hindi ginagawa ng program ang inaasahan, hilingin sa mag-aaral na sabihin muna sa iyo kung ano ang gusto nilang mangyari, i-click ang run para obserbahan kung ano ang aktwal na nangyayari, pagkatapos ay hanapin ang lugar sa kanilang code na naging sanhi ng pagkakaiba. Tandaan na ipagdiwang ang pagkakaroon ng mga bug at pag-aayos ng mga bug. Ang pagkakaroon ng bug ay nangangahulugang ang mga mag-aaral ay gumagawa ng mahusay na trabaho sa pagbuo ng mas kumplikadong programa. "
+        "07a73ab9-8996-453a-a87f-63628f2387db": {
+          "name": "Mga susunod na Hakbang",
+          "description": "Ipaalam sa mga mag-aaral na kung nasiyahan sila sa aktibidad ngayon, marami silang opsyon sa pagpapatuloy ng pag-code. Hikayatin ang mga mag-aaral na bisitahin ang code.org/learn para sa listahan ng mga opsyon, o, kung nagpaplano ka ng alinman sa mga kasunod na aktibidad sa extension, sabihin sa mga mag-aaral kung ano na ang susunod sa silid-aralan mo."
         },
-        "065eda67-268c-4f91-9caf-efb2c34493fe": {
-          "description": "#### Antas-sa-Antas na Suporta\n\n**Antas 1:** Hikayatin ang mga mag-aaral na basahin ang tula. Pagkatapos ay hilingin sa mga mag-aaral na hanapin ang kulay ng background o effect na tumutugma sa tono ng tula na pinili nila. \n\n**Antas 2:** Sa halimbawang ito, dapat basahin muna ng mga mag-aaral ang tula nang mag-isa, pagkatapos ay pindutin ang Run. Maaari mong tanungin ang mag-aaral kung ang tunog at mga epekto na pinili ng programmer ay kahawig ng mood ng tula. Hilingin sa mga mag-aaral na ipaliwanag ang sagot nila. \n\n**Antas 3:** Nagpapakilala ng tunog ang antas na ito, ang mga mag-aaral ay maaaring gumamit ng mga headphone kung mayroon sila. \n\n**Antas 4:** Hilingin sa mga mag-aaral na basahin ang tula at hanapin ang linya kung saan nagbabago ang mood ng tula o kung may bagong imaheng ipinakilala ang makata. Gamitin ang block ng kaganapan upang magdagdag ng katumbas na mga epekto sa nakikitang mga linya ng tula. \n\n**Antas 5:** Sa halimbawang ito, dapat basahin muna ng mga mag-aaral ang tula nang mag-isa, pagkatapos ay pindutin ang Run. Tanungin ang mag-aaral kung ang mga larawan ay kahawig ng mga salita ng tula. Hilingin sa kanila na ipaliwanag ang kanilang sagot. \n\n**Antas 6, 7, 8:** Tingnan ang “Ipagdiwang ang mga bug” sa ilalim ng seksiyong Pangkalahatang Suporta. Hikayatin ang mga mag-aaral na bumuo ng mga programa na may higit sa isang transisyon sa kanilang mga block ng kaganapan. \n\n**Antas 9:** Hikayatin ang mga mag-aaral na basahin ang lahat ng tula sa dropdown menu upang makahanap ng gusto nila. Sabihin sa mga mag-aaral na maaari nilang ibahagi ang kanilang nagawa sa huling antas na ito sa kanilang mga kaibigan at pamilya. Ngayon ang oras upang pagsamahin ang lahat ng mga kasanayan sa pag-coding at ELA! "
+        "fb665f5b-457e-484e-924a-7aa4f2e097be": {
+          "name": "Mag-viral"
         },
-        "51a89a3e-a8c7-41d6-bbbf-2ce16fc7e033": {
-          "description": "Kung nagustuhan mo ang pag-aaral ng pag-code ngayon, maaari kang magpatuloy sa pag-aaral sa pamamagitan ng pagbisita sa code.org/learn. Kung nais mong ibahagi ang ginawa mo sa iyong mga kaibigan at pamilya, i-click ang button na \"Ibahagi\" at ipadala ang link sa sinumang gusto mo!"
+        "c03cf1cb-2946-48c9-aede-76ccf4b787a9": {
+          "tips": [
+            null
+          ]
         },
-        "8630a813-1b6c-49c5-a58b-d2dc5dcccd0a": {
-          "description": "#### (Opsyonal) Pagsusuri: Suriin Kung Naiintindihan (4 min.) \n\nMagbigay ng dalawang sticky note sa bawat mag-aaral. "
+        "3c17e9fd-b06b-478e-bb56-5734d9344b68": {
+          "tips": [
+            null
+          ]
         },
-        "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
-          "description": "Mayroon kang dalawang sticky note. Sa isa, isulat ang bagay na natutunan mo tungkol sa coding ngayon. Sa pangalawa, isulat ang bagay na natutunan mo tungkol sa tula ngayon. \n\nIbahagi natin ito sa buong klase sa pamamagitan ng pagtataas ng kamay upang sagutin ang tanong na ito: Ano pa ang inaasahan mong matutunan tungkol sa coding at computer science sa susunod? "
+        "913cf29b-f688-4c8b-9834-96c9b75274f5": {
+          "tips": [
+            null
+          ]
+        },
+        "f39d7745-dd63-424d-baa1-de4e4fd0f0c0": {
+          "tips": [
+            null
+          ]
+        },
+        "a7f20e25-3940-4615-b90f-8664e1661b3a": {
+          "tips": [
+            null
+          ]
+        },
+        "2a1748fb-e49f-4ae0-be55-0c603dbe3335": {
+          "tips": [
+            null
+          ]
+        },
+        "e72dd2c9-59cc-4063-9dcc-d270e7fed0fe": {
+          "tips": [
+            null
+          ]
+        },
+        "5ff66bb0-517f-486e-b70f-cad0319c23df": {
+          "tips": [
+            null
+          ]
+        },
+        "31d4feb6-1e0c-4342-988b-6730a0d0155e": {
+          "tips": [
+            null
+          ]
         }
       }
     }

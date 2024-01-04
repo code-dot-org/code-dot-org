@@ -1568,6 +1568,39 @@
         "pre-express-2018/Spelling Bee": {
           "name": "말하는 꿀벌"
         },
+        "K5-OnlinePD/Getting Started": {
+          "name": "시작하기"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "컴퓨터 과학 기초"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "미리 준비"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "기초 마스터링: 시퀸싱"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "기초 마스터링: 루프"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "기초 마스터링: 조건"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "기초 마스터링: 함수"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "기초 마스터링: 이벤트"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "컴퓨터 과학 교습을 위한 우수 관행"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "계획"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "다음 단계"
+        },
         "csd1-2019/Intro to Problem Solving": {
           "name": "문제해결 소개"
         },
@@ -2242,6 +2275,45 @@
         },
         "pre-express-2019/Make a Game in Play Lab": {
           "name": "이벤트가 있는 왕가의 전투"
+        },
+        "k5-onlinepd-2019/Welcome to \"Teaching Computer Science Fundamentals\"": {
+          "name": "\"컴퓨터 과학 기초\"에 오신 걸 환영합니다"
+        },
+        "k5-onlinepd-2019/Understanding the Computer Science Fundamentals Courses": {
+          "name": "컴퓨터 과학의 기초 과정 이해"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "시퀸싱"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "반복"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "이벤트"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "조건"
+        },
+        "k5-onlinepd-2019/End of Course projects": {
+          "name": "과정말 프로젝트"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "함수"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "변수"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "반복을 위한"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "스프라이트 연구소"
+        },
+        "k5-onlinepd-2019/Reviewing your reflections": {
+          "name": "성찰 검토"
+        },
+        "k5-onlinepd-2019/Next steps": {
+          "name": "다음 단계"
         },
         "coursea-2020/Safety in My Online Neighborhood": {
           "name": "내 온라인 이웃에서 안전"
@@ -4069,6 +4141,39 @@
           "purpose": "이 온라인 활동에서, 학생들은 플레이 랩에서 이벤트 사용법을 배울 것입니다. 화살표를 눌러 기사를 움직이게 교육시키는 것으로 시작하여, 최종 프리 플레이 퍼즐의 일부로서 시퀸스와 루핑을 포함하여 이 과정 동안 배운 나머지 스킬을 발표하는 기회를 가지며 마칠 것입니다.",
           "student_overview": "이벤트를 사용하여 스토리를 만들거나 인터랙티브 게임을 만드세요."
         },
+        "kodea-pd-2021/Getting Started": {
+          "name": "시작하기"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "컴퓨터 과학 기초"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "미리 준비"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "기초 마스터링: 시퀸싱"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "기초 마스터링: 루프"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "기초 마스터링: 조건"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "기초 마스터링: 함수"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "기초 마스터링: 이벤트"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "컴퓨터 과학 교습을 위한 우수 관행"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "계획"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "다음 단계"
+        },
         "csd1-2022/Intro to Problem Solving": {
           "name": "문제해결 소개"
         },
@@ -4500,17 +4605,17 @@
           "name": "CS 발견 과정 후 설문 조사"
         },
         "coursea-2022/Safety in My Online Neighborhood": {
-          "name": "내 온라인 이웃에서의 안전",
+          "name": "온라인 세상에서의 안전",
           "overview": "[![커몬 센스 에듀케이션](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\n이 레슨은 원래 [커몬 센스 에듀케이션](https://www.commonsense.org/education/digital-citizenship/curriculum)에서 제작했습니다. [더 알아보기.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\n인터넷의 힘은 학생들이 직접 가볼 수 없는 장소를 경험하고 방문할 수 있게 해줍니다. 하지만, 실제 세상을 여행하는 것과 마찬가지로 온라인 상에서 여행할 때도 안전에 유의하는 것이 중요합니다. 이 가상 여행에서, 아동은 온라인 모험에서 안전하게 지내는 방법을 연습할 수 있습니다.",
           "preparation": "-   교육 자료를 검토합니다.\n-   각 학생을 위해 유인물을 인쇄합니다.\n-   (선택사항) 교실 전시용 포스터를 인쇄합니다.",
-          "purpose": "Common Sense Education은 학생들에게 온라인 상에서 안전한 사용 방법을 가르치기 위해 이 수업을 만들었습니다.",
+          "purpose": "Common Sense’s Digital Citizenship 커리큘럼은 어린이, 미디어 및 기술에 대한 최신 연구를 바탕으로 6가지 핵심 주제를 다루고 있습니다. 이 수업은 개인 정보 보호와 보안에 초점을 맞추고 있습니다. 학생들은 개인 정보를 보호하는 방법을 배우고 자신과 다른 사람들을 옹호할 수 있도록 데이터 개인 정보 보호 권리에 대해 더 깊이 이해합니다.",
           "student_overview": "온라인에서 안전하게 장소로 가는법을 배우세요."
         },
         "coursea-2022/Learn to Drag and Drop": {
-          "name": "드래그와 드롭 방법 배우기",
-          "overview": "이 **실력 향상** 레슨은 학생들에게 컴퓨터 랩으로 갈 때 무엇을 기대할지에 관한 아이디어를 줄 것입니다. 컴퓨터 랩에서의 매너를 소개하는 짧은 토론으로 시작하며, 컴퓨터를 사용해 온라인 퍼즐을 완성하는 활동까지 진행합니다.",
-          "preparation": "-   Code.org 상의 **\\*학급 섹션 만드는 방법**-교사용 동영상을 시청합니다. Code.org에서 학급 섹션 만들고 모든 학생이 패스코드가 기재되어 있는 카드를 갖게 합니다.\n-   학생들이 그들 기기로 레슨 2에 접속할 수 있는지 확인합니다. 학생들이 너무 빠르게 미리 앞으로 가지 않도록 방지하기 위해 미래 레슨을 숨길지 여부를 고려합니다.  \n-   학교 IT 직원에게 학급 섹션을 위한 빠른 링크를 컴퓨터 데스크톱에 추가하게 합니다.\n-   더 많은 온라인 안전 콘텐츠를 위해 커몬 센스 에듀케이션 웹사이트를 봅니다.",
-          "purpose": "이 레슨의 주요 목표는 학생들에게 컴퓨터를 경험하게 하는 것입니다. 클릭과 드래그 앤 드롭 등과 같은 가장 기본적인 컴퓨터 기능을 다룸으로써, 미래 퍼즐에 대해 학급에 더 공평한 경쟁의 장을 마련하고 있습니다. 이 레슨은 또한 기기에 따라 \"마우스\" 또는 \"트랙패드\", \"터치 스크린\" 등을 포함하여 기본 컴퓨터 하드웨어 용어를 소개할 기회를 줍니다.",
+          "name": "드래그와 드롭 배우기",
+          "overview": "이 **실력 쌓기** 수업은 학생들이 컴퓨터실에 갈 때 무엇을 기대해야 하는지에 관한 아이디어를 제공할 것입니다. 컴퓨터실 매너를 소개하는 간단한 토론으로 시작하여 컴퓨터를 사용하여 온라인 퍼즐을 완성하는 과정으로 진행됩니다.",
+          "preparation": "-   Code.org에서 **\\*학급 섹션을 만드는 방법** - 교사 비디오를 시청하세요. Code.org에서 나만의 수업 섹션을 만들고 모든 학생이 암호가 적힌 카드를 가지고 있는지 확인하세요.\n-   학생들이 각자의 기기에서 레슨 2에 액세스할 수 있는지 확인하세요. 학생들이 너무 빨리 진도를 나가는 것을 방지하기 위해 향후 레슨을 숨길지 여부를 고려하세요.\n-   학교 IT 담당자에게 컴퓨터 바탕화면에 수업 섹션에 대한 빠른 링크를 추가하도록 요청합니다.\n-   더 많은 온라인 안전 콘텐츠를 위해 Common Sense Education 웹사이트를 봅니다.",
+          "purpose": "이 레슨의 주요 목표는 학생들의 컴퓨터 사용 경험을 쌓게 하는 것입니다. 클릭, 드래그, 드롭과 같은 가장 기본적인 컴퓨터 기능을 다루면서, 우리는 향후의 퍼즐을 위해 수업에서 보다 공평한 경쟁의 장을 만들고자 합니다. 이 레슨에서는 기기에 따라 \"마우스\", \"트랙패드\" 또는 \"터치스크린\"을 포함한 기본적인 컴퓨터 하드웨어 용어를 소개할 수 있는 좋은 기회도 제공합니다.",
           "student_overview": "클릭 및 드래그하여 퍼즐을 완성하세요."
         },
         "coursea-2022/Happy Maps": {
@@ -4585,7 +4690,7 @@
         },
         "coursea-2022/End of Course Project": {
           "name": "종합 프로젝트",
-          "overview": "이 **프로젝트** 수업에서 학생들은 시퀀싱 및 루프에 대해 배운 내용을 아티스트와 함께 적용합니다.",
+          "overview": "이 **프로젝트** 수업에서 학생들은 순차 및 반복에 대해 배운 내용을 아티스트와 함께 적용합니다.",
           "preparation": "-   학생들에게 영감을 주기 위해 미리 아티스트를 위한 이야기를 직접 쓰고 코딩하세요!",
           "purpose": "이 레슨은 학생들에게 그들의 새로운 컴퓨터 과학 기량을 창의적으로 사용할 한 가지 마지막 기회를 줍니다.",
           "student_overview": "아티스트와 함께 이야기를 들려주세요!"
@@ -4594,7 +4699,7 @@
           "name": "디지털 흔적",
           "overview": " [![기본적인 소양교육(common sense education)](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\n이 수업 기본적인 소양교육입니다. [더 알아보기.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\n여러분이 온라인에서 한 일이 항상 온라인에 남아 있나요? 학생들은 온라인 상에서 공유한 정보가 디지털 발자국 또는 \"흔적\"으로 남는다는 점을 배웁니다. 어떻게 관리하는냐에 따라, 이 흔적은 크거나 또는 작고 또한 유해하거나 유용할 수 있습니다. 학생은 여러 흔적들을 비교하고 어떤 종류의 정보를 남겨야하는지 비판적으로 사고합니다.",
           "preparation": "-   교육 자료 검토\n-   학생을 위한 유인물 인쇄",
-          "purpose": "기본적인 소양교육으로 디지털 시민의식 교육과정은 아동과 매체, 기술에 관한 최신 연구를 기초하여 여섯 가지 주요 주제를 다룹니다. 이 레슨은 디지털 발자국과 신원에 중점을 둡니다. 학생들은 온라인 상의 공유의 이점과 리스크를 고려하고 디지털 인물이 자의식과 명성, 관계에 어떤 영향을 미칠 수 있는지 탐구합니다. ",
+          "purpose": "Common Sense’s Digital Citizenship 커리큘럼은 어린이, 미디어 및 기술에 대한 최신 연구를 바탕으로 6가지 핵심 주제를 다루고 있습니다. 이 레슨은 디지털 발자국과 신원에 중점을 둡니다. 학생들은 온라인 상의 공유의 이점과 위험성을 고려하고 디지털 인물이 자의식과 평판, 관계에 어떤 영향을 미칠 수 있는지 탐구합니다. ",
           "student_overview": "디지털 발자국과 웹사이트 방문 시 안전을 유지하는 방법에 관해 배웁니다. "
         },
         "courseb-2022/Move It, Move It": {
@@ -4640,7 +4745,7 @@
           "student_overview": "루프를 사용하여 수확인이 더 많이 모을 수 있게 도와 주세요!"
         },
         "courseb-2022/Loops with Laurel": {
-          "name": "\b라우렐과 반복문",
+          "name": "라우렐과 반복문",
           "overview": "이 레슨에서 학생들은 반복문 개념을 계속해서 배웁니다. 여기서 모험가 라우렐은 반복문을 사용해 열린 동굴 공간에서 보물을 모읍니다. 새 '보물 얻기' 블록이 그녀의 여정에서 그녀를 돕기 위해 소개됩니다.",
           "preparation": "-   퍼즐을 진행하며 학급의 잠재적 문제 영역을 찾습니다.\n-   (선택사항) 두 서너개의 퍼즐을 선택하여 학급과 하나의 그룹으로서 퍼즐을 풉니다.\n-   **\\*CS 기본 메인 활동 팁 - 레슨 추천사항**을 검토합니다.\n-   모든 학생들이 각자 성찰 저널을 가지고 있어야 합니다.",
           "purpose": "이 레슨은 학생들에게 더 많은 반복문 연습을 제공하고 가능한 많은 보물을 모으려 할 때   `반복` 안에 복수의 블록을 넣도록 권장합니다. ",
@@ -4654,7 +4759,7 @@
           "student_overview": "패턴과 루프를 사용하여 이미지를 완성하세요."
         },
         "courseb-2022/The Right App": {
-          "name": "바른 앱",
+          "name": "알맞은 앱",
           "overview": "이 레슨은 학생들에게 컴퓨터 과학이 실생활에서 사람들에게 도움을 줄 수 있음을 인식하게 만듭니다. 먼저, 학생들은 서너 명의 허구의 스마트폰 사용자에게 그들의 필요에 \"맞는 앱\"을 찾아 주기 위해 그들의 입장이 되어 그들과 공감합니다. 그 다음, 공감력과 창의성을 발휘하여 한 명의 추가적인 사용자의 필요를 만족하는 스마트폰 앱을 스케치합니다.  ",
           "preparation": "-   스피커를 통해 **\\*슬라이드 데크**에 있는 노트를 읽으세요.\n-   모든 학생을 위해 충분한 스케치/그리기 용품을 준비합니다.\n-   각 학생이 학습장을 가지고 있어야 합니다.",
           "purpose": "오늘날 컴퓨팅은 그 어느 때보다 더 쉽게 접근할 수 있습니다. 모든 계층의 사람들이 정보, 커뮤니케이션, 엔터테인먼트를 위해 다양한 기기, 특히 스마트폰에서 소프트웨어를 사용합니다. 사람들은 다양한 경험과 필요를 가지고 있기 때문에 신진 컴퓨터 과학자는 사람들과 공감하고 그들을 염두에 두고 솔루션을 찾는 것이 중요합니다.",
@@ -4675,17 +4780,17 @@
           "student_overview": "이벤트를 사용하여 스토리를 만들거나 인터랙티브 게임을 만드세요."
         },
         "courseb-2022/End of Course Project": {
-          "name": "과정말 프로젝트",
+          "name": "종합 프로젝트",
           "overview": "이 **프로젝트** 수업에서 학생들은 시퀀싱 및 이벤트에 대해 배운 내용을 Play Lab의 개방형 프로젝트에 적용합니다.",
           "preparation": "-   학생들에게 영감을 주기 위해 미리 플래이 랩 프로젝트를 직접 코딩하세요!",
           "purpose": "이 레슨은 학생들에게 그들의 새로운 컴퓨터 과학 역량을 창의적으로 사용할 한 가지 마지막 기회를 줍니다.",
           "student_overview": "나만의 스토리나 게임을 만들어 보세요."
         },
         "coursec-2022/Putting a STOP to Online Meanness": {
-          "name": "온라인에서의 비열한 행동 멈추게 하기",
-          "overview": " [![커먼센스에듀케이션](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\n이 레슨은 '커먼센스에듀케이션'에서 제작했습니다. [더 알아보기.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\n인터넷에는 온갖 종류의 흥미로운 사람들로 가득 차 있지만, 때때로 그들 중 일부는 서로간에 비열하게 굴 수 있습니다. 이 역할극을 통해 학생들은 왜 직접 대면할 때보다 온라인에서 비열하게 구는 것이 더 쉬운지, 그리고  온라인에서 비열한 행동을 발견했을 때는 어떻게 대처해야 하는지 이해하도록 도와줍니다.",
+          "name": "온라인에서의 나쁜 행동 멈추게 하기",
+          "overview": " [![커먼센스에듀케이션](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\n이 레슨은 커먼센스에듀케이션에서 제작했습니다. [더 알아보기.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\n인터넷에는 온갖 종류의 흥미로운 사람들로 가득 차 있지만, 때때로 그들 중 일부는 서로간에 비열하게 굴 수 있습니다. 이 역할극을 통해 학생들은 왜 직접 대면할 때보다 온라인에서 비열하게 구는 것이 더 쉬운지, 그리고  온라인에서 비열한 행동을 발견했을 때는 어떻게 대처해야 하는지 이해하도록 도와줍니다.",
           "preparation": "-   교육 자료를 검토하세요.\n-   각 학생들 위한 유인물을 출력하세요. \n-   수업에 동물 인형이나 장난감을 가져오세요.",
-          "purpose": "커먼센스의 디지털 시민성 커리큘럼은 어린이, 미디어, 기술에 대한 최신 연구를 바탕으로 6가지 핵심 주제를 다룹니다. 이 레슨은 사이버 괴롭힘, 디지털 드라마 및 혐오 발언에 중점을 둡니다. 학생들은 이러한 주제를 다루며 긍정적이고 지원적인 온라인 커뮤니티를 구축하고 온라인에서의 비열한 행동에 맞서기 위해 적극적인 역할을 수행해야 합니다.",
+          "purpose": "Common Sense’s Digital Citizenship 커리큘럼은 어린이, 미디어 및 기술에 대한 최신 연구를 바탕으로 6가지 핵심 주제를 다루고 있습니다. 이 레슨은 사이버 괴롭힘, 디지털 드라마 및 혐오 발언에 중점을 둡니다. 학생들은 이러한 주제를 다루며 긍정적이고 지원적인 온라인 커뮤니티를 구축하고 온라인에서의 나쁜 행동에 맞서기 위해 적극적인 역할을 수행해야 합니다.",
           "student_overview": "이 레슨에서는 비열한 짓이 무엇인지 그리고 온라인 상에서 이런 일에 닥쳤을 때 할 일에 대해 배웁니다."
         },
         "coursec-2022/My Robotic Friends Jr": {
@@ -4710,7 +4815,7 @@
           "student_overview": "퍼즐 안에서 문제를 찾아내고 디버깅 스킬을 연습하세요."
         },
         "coursec-2022/Collecting Treasure with Laurel": {
-          "name": "라울렐과 보물찾기 ",
+          "name": "로렐과 보물찾기 ",
           "overview": "이 **실력 쌓기** 수업에서 학생들은 알고리즘과 디버깅에 대한 이해를 계속 발전시켜 나갈 것입니다. 새로운 캐릭터인 '모험가 로렐'과 함께 학생들은 '로렐'이 길을 따라 걸으며 보물을 주울 수 있도록 순차적인 알고리즘을 만들어봅니다.",
           "preparation": "-   퍼즐을 풀면서 학급에서 잠재적인 문제 영역을 찾아보세요.",
           "purpose": "이 수업에서 학생들은 새로운 캐릭터인 모험가 로렐을 사용하여 프로그래밍 기술을 연습하게 됩니다. 프로그래밍을 시작하면 기계가 읽을 수 있는 것을 사용하여 특정 순서로 명령을 조합합니다. 프로그래밍을 통해 학생들은 컴퓨터가 명령어와 순서를 탐색하는 방법을 이해하게 됩니다. 퍼즐 목표가 다른 새로운 캐릭터를 사용하면 학생들이 프로그래밍의 순서와 알고리즘에 대한 경험의 범위를 넓힐 수 있습니다.",
@@ -4777,13 +4882,13 @@
           "student_overview": "데이터는 학생들이 그들의 세계를 이해하고 흥미로운 질문에 답을 하는데 도움을 주기 위해 사용할 수 있습니다. 이 레슨에서 학생들은 플레이 랩 프로젝트에서 데이터를 모아 여러 종류의 그래프를 사용해 이를 시각화할 것입니다."
         },
         "coursec-2022/Binary Bracelets": {
-          "name": "2진 팔찌",
-          "overview": "바이너리는 컴퓨터 세계에서 매우 중요합니다. 오늘날 대부분의 컴퓨터는 모든 종류의 정보를 바이너리 형태로 저장합니다. 이 레슨은 실생활에서 어떤 한 가지를 가져와 그것을 일련의 on과 off로 바꿀 수 있음을 보여주는데 도움을 줍니다. ",
+          "name": "이진 팔찌",
+          "overview": "이진수는 컴퓨터 세계에서 매우 중요합니다. 오늘날 대부분의 컴퓨터는 모든 종류의 정보를 이진수 형태로 저장합니다. 이 레슨은 실생활에서 어떤 한 가지를 가져와 그것을 일련의 on과 off로 바꿀 수 있음을 보여주는데 도움을 줍니다. ",
           "purpose": "이 레슨에서 학생은 컴퓨터가 해석하고 저장할 수 있는 방식으로 정보를 나타내는 방식을 배울 것입니다. 바이너리를 배울 때 학생들은 코드를 작성하여 친구와 비밀 메시지로서 공유할 기회를 가질 것입니다. 이것은 컴퓨터가 프로그램을 읽고 그것을 바이너리로 번역하여 일정 방식으로 정보를 사용하고 그 다음, 인간이 이해할 수 있는 방식으로 다시 답하는 것과 연결할 수 있습니다. 예를 들어, 문장을 문서로 타이핑한 후 저장을 누르면, 컴퓨터는 그 문장을 바이너리로 번역하여 정보를 저장하며 그 다음, 문서가 저장되었다는 메시지를 나타냅니다.  ",
           "student_overview": "바이너리 팔찌를 만들고 컴퓨터의 정보 기억 방법을 배우세요"
         },
         "coursec-2022/End of Course Project": {
-          "name": "과정 프로젝트 종료",
+          "name": "종합  프로젝트",
           "overview": "이 최고 기준이 되는 레슨은 학생들을 플레이 랩 프로젝트를 설계 및 개발, 발표하는 프로세스로 데려다 줍니다! 이 프로세스를 원활하게 진행하기 위해, 학생들이 따를 종이 위 계획 수립부터 웹 사이트 상의 코딩까지 스텝 바이 스텝 구조를 제공합니다. 또한, 우리는 교사들이 쇼케이스 파이널을 수월하게 준비할 수 있도록 유용한 아이디어를 제공합니다.",
           "preparation": "-   퍼즐을 진행하며 학급의 잠재적 문제 영역을 찾습니다. \n-   학생 (짝) 당 **\\*프로젝트 계획 가이드** 한 장을 인쇄합니다. \n-   **\\*프로젝트 계획 가이드(예시)** 문서를 다시 살펴봅니다.\n-   (선택사항) 계획 가이드를 직접 작성하고 프로젝트를 코딩하여 학생들에게 보여줍니다! ",
           "purpose": "이 레슨은 학생들에게 계획을 세워야 하지만 또한 광범위한 창의성을 허용하는 단계별 과정으로, 자신만의 디자인으로 된 프로젝트를 만들 공간을 제공합니다. ",
@@ -4791,9 +4896,9 @@
         },
         "coursed-2022/Password Power-Up": {
           "name": "비밀번호 보안 강화",
-          "overview": " [![커몬 센스 에듀케이션](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\n이 레슨은 원래 [커몬 센스 에듀케이션](https://www.commonsense.org/education/digital-citizenship/curriculum)에서 제작했습니다.\n\n더 강하고 더 안전한 온라인 비밀번호는 누구에게나 필요합니다. 하지만, 아동들이 더 나은 비밀번호를 만들고 실제로 그것을 기억하도록 어떻게 도와줄 수 있을까요? 이 레슨에서의 팁을 사용하여 아동이 안전하면서 기억할 수 있는 비밀번호를 만들도록 도와주세요.",
+          "overview": " [![커먼 센스 에듀케이션](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\n이 레슨은 [커먼 센스 에듀케이션]에서 제작했습니다[2].\n\n더 강력하고 안전한 온라인 비밀번호는 모두를 위한 좋은 생각입니다. 하지만 어떻게 하면 아이들이 더 나은 비밀번호를 만들고 실제로 기억하도록 할 수 있을까요? 이 레슨의 팁을 활용하여 아이들이 안전하고 기억하기 쉬운 비밀번호를 만들 수 있도록 도와주세요.",
           "preparation": "-   교육 자료를 검토합니다.\n-   각 학생을 위해 유인물을 인쇄합니다.\n-   학생들을 위해 종이 또는 공책을 준비합니다.",
-          "purpose": "Common Sense Education은 학생들에게 온라인 상에서 안전한 사용 방법을 가르치기 위해 이 수업을 만들었습니다.",
+          "purpose": "Common Sense’s Digital Citizenship 커리큘럼은 어린이, 미디어 및 기술에 대한 최신 연구를 바탕으로 6가지 핵심 주제를 다루고 있습니다. 이 레슨은 개인정보 보호와 보안에 중점을 둡니다. 학생들은 개인 정보를 보호하는 방법을 배우고 데이터 개인 정보 보호 권리에 대해 더 깊이 이해하여 자신과 타인을 옹호할 수 있습니다.",
           "student_overview": "이 레슨에서는 비밀번호가 개인 정보를 보호하는 방식과 좋은 비밀번호를 만드는 법에 관해 배울 것입니다."
         },
         "coursed-2022/Graph Paper Programming": {
@@ -4887,8 +4992,8 @@
           "student_overview": "`Until` 루프를 사용할 때 멋진 놀라운 일을 할 수 있습니다!"
         },
         "coursed-2022/End of Course Project": {
-          "name": "과정말 프로젝트",
-          "overview": "이 머릿돌 레슨은 학생들에게 그들 자신의 프로젝트를 설계 및 개발, 쇼케이스하는 프로세스를 익히게 합니다. ",
+          "name": "종합 프로젝트",
+          "overview": "이 프로젝트 수업은 학생들에게 그들 자신의 프로젝트를 설계 및 개발, 발표하는 과정을 익히게 합니다. ",
           "preparation": "-   퍼즐을 진행하며 학급의 잠재적 문제 영역을 찾습니다. \n-   학생 (짝) 당 **\\*프로젝트 계획 가이드** 한 장을 인쇄합니다. \n-   (선택사항) 계획 가이드를 직접 작성하고 프로젝트를 코딩하여 학생들에게 보여줍니다! ",
           "purpose": "이 레슨은 학생들에게 계획을 세워야 하지만 또한 광범위한 창의성을 허용하는 단계별 과정으로, 자신만의 디자인으로 된 프로젝트를 만들 공간을 제공합니다. ",
           "student_overview": "수 많은 코딩을 할 준비를 하세요! 자신의 프로젝트를 만들기 시작할 시간입니다. "
@@ -5103,10 +5208,10 @@
           "student_overview": "정보가 인터넷 상에 어떻게 이동하는지 궁금해 해본적이 있어요? 이 레슨은 인터넷 작동방식의 기초를 가르쳐 줄 것입니다. "
         },
         "coursef-2022/End of Course Project": {
-          "name": "과정말 프로젝트",
-          "overview": "이 머릿돌 레슨은 학생들에게 그들 자신의 프로젝트를 설계 및 개발, 쇼케이스하는 프로세스를 익히게 합니다. ",
+          "name": "종합 프로젝트",
+          "overview": "이 프로젝트 수업은 학생들에게 그들 자신의 프로젝트를 설계 및 개발, 발표하는 과정을 익히게 합니다. ",
           "preparation": "-   아티스트와 스프라이트 랩 두 가지 모두로 직접 프로젝트를 만드는 시간을 가지세요. 각 툴의 장점과 단점, 제약을 숙지합니다.\n-   학급의 목표에 맞게 채점판을 수정하고 각 학생을 위해 한 부씩 인쇄합니다.\n-   학급에 맞게 프로젝트 설계 워크시트를 수정하여 각 학생을 위해 한 패킷씩 인쇄합니다.",
-          "purpose": "학생들은 바로 자신의 프로젝트를 만들 준비가 되어 있을 수 있지만 이 레슨은 그들의 아이디어를 계획으로 형상화하는 데 도움을 줄 것입니다. 이 구조는 꿈 꾸는 이들에게 현실감을 유지하고 어둠 속에 남겨져 있다고 느끼는 이들에게 길을 밝혀 줄 것입니다. 학생들에게 프로젝트를 만들고 수정할 충분한 시간을 주세요. 이 레슨에서 어쩔 수 없이 겪어야 하는 시행착오는 문제해결과 끈기를 가르쳐 줄 것입니다.",
+          "purpose": "학생들은 아마도 바로 자신의 프로젝트를 시작하고 싶어할 것입니다. 그러나 이 수업은 그들의 생각을 실제 계획으로 전환하는 데 중요한 역할을 할 것입니다. 이러한 접근 방식은 상상력이 풍부한 학생들에게 현실적인 기준을 제공하고, 방향을 잃은 학생들에게 명확한 방향을 제시할 것입니다. 프로젝트를 만들고 개선하는 데 필요한 충분한 시간을 학생들에게 할당하세요. 이 과정에서 발생하는 여러 시도와 오류는 학생들에게 문제 해결 능력과 지속적인 노력의 중요성을 가르쳐 줄 것입니다.",
           "student_overview": "이 정도의 큰 프로젝트는 시간과 많은 계획을 들여야 합니다. 영감을 찾고, 계획을 발전시키며, 창의성을 맘껏 발휘해야 합니다!"
         },
         "express-2022/Programming with Angry Birds": {
@@ -5405,7 +5510,7 @@
         "csc-bookcovers-2023/Learn to Code a Book Cover ": {
           "name": "책 표지 코딩 배우기 ",
           "overview": "초보 코더를 위한 이 CS 및 ELA 통합 수업에서 학생들은 디지털 책 표지를 코딩하는 방법을 배웁니다.먼저 기존 책 표지를 살펴보고 어떤 그래픽 디자인을 선택했는지 논의합니다.다음으로, 학생들은 직접 여러 권의 책을 만들기 전에 디지털 책 표지 예제를 살펴봅니다.학생들은 책의 등장인물을 표현할 스프라이트를 선택하고 이벤트를 사용하여 등장인물이 말하게 하는 방법을 배웁니다. ",
-          "preparation": "-   레벨을 플레이하고 강의<a href=\"https://docs.google.com/presentation/d/1GTaZX9z0b-dwk6Z48TSwqwhjZ9pO9Onk7w8n9xNt_Zk/template/preview\" target=\"_blank\">슬라이드를 검토하세요.</a>\n-   학생의 수업 시간과 전체 그룹 수업 사이의 간격을 결정하세요.\n-   시작하기 전에 권장되는 준비 활동을 살펴보세요 ([link](https://studio.code.org/s/csc-bookcovers-2023/lessons/1#activity-4350298)).\n\n##### 선택 사항:\n\n-   이 <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">유용한 힌트 슬라이드쇼를 검토하세요.</a> \n-   이 <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">교사용 디버깅 가이드를 검토하여 학생들이 코드에서 오류를 찾아</a>  수정하는 데 도움이 될 수 있도록 준비하세요. \n-   페어 프로그래밍 - 학생들이 페어 프로그래밍에 참여하게 할지 결정하세요.페어 프로그래밍에 대한 자세한 내용은 이 <a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">비디오를</a> 시청하고 이 <a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">지원</a> 페이지를 방문하십시오.\n-   커스텀 스프라이트 업로드 - 이 내용은 이후 수업에서 소개될 예정이지만, 이 비디오를 통해 학생들에게 자신만의 스프라이트 코스튬과 배경을 업로드하는 방법을 가르칠 수 있습니다. <a href=\"https://youtu.be/CHipUGfL_0M\" target=\"_blank\"></a>",
+          "preparation": "-   레벨을 플레이하고 <a href=\"https://docs.google.com/presentation/d/1GTaZX9z0b-dwk6Z48TSwqwhjZ9pO9Onk7w8n9xNt_Zk/template/preview\" target=\"_blank\">수업 슬라이드</a>를 검토하세요.\n-   학생 개별 활동 시간과 전체 그룹 수업의 비중을 결정하세요.\n-   시작하기 전에 권장 예습 활동을 살펴보세요 ([link](https://studio.code.org/s/csc-bookcovers-2023/lessons/1#activity-4350298)).\n\n##### 선택 사항:\n\n-   <a href=\"https://docs.google.com/presentation/d/1h4Frow3pA7jBBbSDkNUZloPNRBCUNU478DweaM75ETU/template/preview\" target=\"_blank\">유용한 팁</a> 슬라이드쇼를 살펴보세요.\n-   수업 전 이 <a href=\"https://drive.google.com/drive/folders/1DTeI1P2o8aX59mdcHkuvmNCMe3DXFGHT/view\" target=\"_blank\">교사용 디버깅 가이드</a>를 검토해 학생들이 코드에서 오류를 찾아 수정할 수 있도록 지도해 주세요.\n-   페어 프로그래밍 - 짝을 지어 진행하는 페어 프로그래밍을 진행할지 결정하세요. 페어 프로그래밍에 대한 자세한 내용은 이 <a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">동영상</a> 과 <a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">지원</a> 페이지에서 확인해 주세요.\n-   커스텀 스프라이트 업로드 - 이 내용은 이후 수업에서 소개될 예정이지만, 이 <a href=\"https://youtu.be/CHipUGfL_0M\" target=\"_blank\">동영상</a>으로 학생들에게 자신만의 스프라이트 코스튬과 배경을 업로드하는 방법을 지도해 주세요.",
           "student_overview": "이 단원에서는 디지털 책 표지를 코딩하는 방법을 배웁니다.먼저 배경과 캐릭터를 선택합니다.그런 다음 클릭했을 때 캐릭터 대화를 프로그래밍하는 방법을 배우게 됩니다.수업이 끝나면 대화형 책 표지의 몇 가지 예를 코딩할 수 있을 것입니다."
         },
         "csc-bookcovers-2023/lesson-4": {
@@ -5427,25 +5532,25 @@
         },
         "csc-ecosystems-2023/Overfishing Simulation (pilot)": {
           "name": "남획 시뮬레이션",
-          "overview": "이 **기술 습득** 수업에서 학생들은 수중 생태계 모델을 프로그래밍한 다음 남획 상황을 시뮬레이션합니다.학생들은 조건문을 프로그래밍하여 물 속의 조류 양을 확인하는 방법을 배웁니다.해조류가 너무 많으면 산호가 병에 걸립니다.해조류가 너무 적으면 물고기는 먹이가 없어 그 지역을 떠납니다.해조류가 적당히 서식하면 병든 산호가 낫고 물고기는 그 지역에 머물게 됩니다. ",
-          "preparation": "-   레벨을 플레이하고 <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">강의 슬라이드를 검토하세요.</a> \n-   학생의 수업 시간과 전체 그룹 수업 사이의 간격을 결정하세요.\n-   학생들에게 권장 준비 과정을 배정해 보세요 \n    ([link](https://studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4911962))\n-   지난 수업 이후에 살펴볼 수 있도록 다음과 같은 관련 확장 옵션 ([link](https://studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4911963)) 을 고려해 보세요.\n\n##### 선택 사항:\n\n-   이 유용한 힌트 슬라이드쇼를   [Optional] 살펴보세요. <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\"></a> \n-   이 <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">교사용 디버깅 가이드를   \\[Optional] 검토하여 학생들이 코드에서 오류를 찾아</a>  수정하는 데 도움이 될 수 있도록 준비하세요. ",
-          "purpose": "학생들은 해양 생태계에는 상호 작용하고 균형을 유지하는 많은 유기체가 있다는 것을 배웁니다.이 수업에서는 컴퓨터 과학과 생명 과학을 결합하여 학생들이 컴퓨터 과학의 조건문을 사용하여 남획의 영향을 시뮬레이션하여 실생활에서의 원인과 결과를 보여주는 모델을 만들어 봅니다. "
+          "overview": "이 **실력 향상** 수업에서 학생들은 해양생태계 모델을 프로그래밍한 다음 남획 상황을 시뮬레이션합니다. 학생들은 바닷속 해조류의 양을 확인하는 조건문 프로그래밍 방법을 배웁니다. 해조류가 너무 많으면 산호가 병에 걸립니다. 해조류가 너무 적으면 물고기는 먹이가 없어 그 지역을 떠납니다. 해조류의 양이 적당하다면 병든 산호는 치유되고 물고기는 그 지역에 머물게 됩니다.",
+          "preparation": "-   레벨을 플레이하고 <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">수업 슬라이드</a>를 검토하세요.\n-   학생 개별 활동 시간과 전체 그룹 수업의 비중을 결정하세요.\n-   학생들에게 권장 예습 내용을 미리 숙제로 내주세요([link](https://studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4911962)).\n-   마지막 수업 후에 살펴볼 관련 확장 내용([link](https://studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4911963))을 확인해 보세요.\n\n##### 선택 사항:\n\n-   [Optional] <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">유용한 힌트</a> 슬라이드쇼를 살펴보세요.\n-   [Optional] 수업 전 이 <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">교사용 디버깅 가이드</a>를 검토해 학생들이 코드에서 오류를 찾아 수정할 수 있도록 지도해 주세요.",
+          "purpose": "학생들은 해양생태계에선 수많은 생물이 상호작용하며 균형을 유지한다는 사실을 배웁니다. 컴퓨터 과학과 생명과학을 결합한 이 수업에서 학생들은 컴퓨터 과학의 조건문을 사용해 남획의 영향을 시뮬레이션하는 모델을 만들고 실제 남획의 원인과 결과를 보게 됩니다."
         },
         "csc-ecosystems-2023/Balancing the Ecosystem (pilot)": {
-          "name": "생태계 균형 조정",
-          "overview": "이 **기술 습득** 수업에서 학생들은 남획 문제에 대한 세 가지 해결책을 읽고 프로그래밍합니다.\n\n이 수업은 이전 강의에서 중단한 부분부터 시작하여 불균형한 수중 생태계 모델을 살펴봅니다.먼저 학생들은 지정된 “낚시 구역” 내에서만 움직일 수 있도록 보트의 동작을 수정합니다.둘째, 학생들은 “낚시 시즌”과 “낚시 금지 시즌”을 지정하는 새로운 이벤트를 계획합니다.셋째, 학생들은 변수를 사용하여 보트가 제거한 물고기의 수를 추적하는 방법을 배웁니다.이 수업은 학생들이 남획에 대한 세 가지 해결책을 확실히 익혔는지 확인하기 레벨로 마무리됩니다.",
-          "preparation": "-   제공된</a>남획의 <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\" target=\"_blank\">이해에 관한 기사를 읽어보세요.필요에 따라 비계를 설치하여 학생들의 요구를 충족시키십시오. \n-   레벨을 플레이하고 <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">강의 슬라이드를 검토하세요.</a> \n-   학생의 학습 시간과 전체 그룹 수업 사이의 간격을 결정하세요.\n-   학생들에게 권장 준비 [(링크)] 를 배정해 보세요.[0]\n-   다음과 같은 관련 확장 옵션을 고려해 보세요 [(링크)](https://studio.code.org/s/csc-ecosystems-2023/lessons/2#activity-4986904).\n\n##### 선택 사항:\n\n-   이 <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">유용한 힌트 슬라이드쇼를   \\[Optional] 검토하세요.</a> \n-   이 <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">교사용 디버깅 가이드를   \\[Optional] 검토하여 학생들이 코드에서 오류를 찾아</a>  수정하는 데 도움이 될 수 있도록 준비하세요. ",
-          "purpose": "학생들은 균형 잡힌 생태계와 불균형 생태계에 대해 계속 배울 것입니다.남획에 관한 과학 논문을 기초로 삼아 학생들은 생태계 내 유기체 간의 관계에 대한 풍부한 이해를 발전시킬 것입니다.궁극적으로 학생들은 지역 생태계를 모델링하여 배운 내용을 적용할 기회를 갖게 됩니다. "
+          "name": "생태계 균형 유지",
+          "overview": "이 **실력 향상** 수업에서 학생들은 남획 문제에 관해 읽어보고 세 가지 해결책을 프로그래밍합니다.\n\n이전 수업과 연결되는 이 수업은 불균형한 해양생태계 모델을 살펴봅니다. 먼저 학생들은 지정된 '어업 구역' 내에서만 움직이도록 어선의 행동을 수정합니다. 그다음 '어업 허용 기간'과 '어업 금지 기간'을 지정하는 새로운 이벤트를 프로그래밍합니다. 마지막으로 변수를 사용해 어선이 잡은 물고기 수를 추적하는 방법을 배웁니다. 학생들이 남획의 세 가지 해결책을 확실히 배웠는지 확인하기 위한 이해도 확인 레벨로 수업을 마무리합니다.",
+          "preparation": "-   <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\" target=\"_blank\">남획의 이해</a>를 다룬 자료를 읽어보세요. 학생들의 수준에 따라 단계적으로 설명해 주세요.\n-   레벨을 플레이하고 <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">수업 슬라이드</a>를 검토하세요. \n-   학생 개별 활동 시간과 전체 그룹 수업의 비중을 결정하세요.\n-   학생들에게 권장 예습 내용을 미리 숙제로 내주세요([(link)](https://studio.code.org/s/csc-ecosystems-2023/lessons/2#activity-4986903)).\n-   관련 확장 내용(선택 사항, [link](https://studio.code.org/s/csc-ecosystems-2023/lessons/2#activity-4986904))을 확인해 보세요.\n\n##### 선택 사항:\n\n-   \\[[Optional]] <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">유용한 팁</a> 슬라이드쇼를 살펴보세요.\n-   \\[[Optional]] 수업 전 이 <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">교사용 디버깅 가이드</a>를 검토해 학생들이 코드에서 오류를 찾아 수정할 수 있도록 지도해 주세요.",
+          "purpose": "학생들은 계속해서 균형 잡힌 생태계와 불균형한 생태계에 관해 배웁니다. 남획에 관한 과학 자료를 바탕으로, 학생들은 생태계 내 생물 간의 관계에 대한 이해를 키우게 됩니다. 궁극적으로 학생들은 지역 생태계를 모델링함으로써 학습 내용을 적용할 것입니다."
         },
         "csc-ecosystems-2023/lesson-3": {
-          "name": "내 생태계 코딩하기",
-          "overview": "이 **기술 구축** 수업에서 학생들은 여러 가지 다양한 생태계 시뮬레이션을 살펴봅니다.학생들은 열대 우림, 사막, 북극 또는 습지 생태계를 선택하여 탐험할 수 있습니다.학생들은 생태학자의 역할을 맡아 각 생태계의 먹이 사슬에 있는 식물과 동물 간의 상호 작용을 조사하게 됩니다.학생들은 지침을 읽고 각 생태계가 직면한 문제를 이해하게 됩니다.그런 다음 생태계를 재조정하기 위해 해당 코드를 수정합니다. ",
-          "preparation": "-   레벨을 플레이하고 <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">강의 슬라이드를 검토하세요.</a> \n-   학생의 수업 시간과 전체 그룹 수업 사이의 간격을 결정하세요.\n-   각 학생을 위한 생태학자 노트를 인쇄해 주세요.\n-   이 수업을[0] 마친 후 다음과 같은 [확장 기회] 를 고려해 보세요."
+          "name": "나만의 생태계 코딩하기",
+          "overview": "이 **실력 향상** 수업에서 학생들은 여러 가지 생태계 시뮬레이션을 탐구합니다. 열대우림이나 사막, 북극, 습지 생태계 중 하나를 선택해 탐구할 수 있습니다. 학생들은 생태학자가 되어 생태계 각각의 먹이사슬에 있는 식물과 동물 간의 상호작용을 조사합니다. 안내문을 읽고 각 생태계가 직면한 문제를 이해하게 될 겁니다. 그 후 생태계의 균형을 다시 맞추기 위해 해당 코드를 수정합니다.",
+          "preparation": "-   레벨을 플레이하고 <a href=\"https://docs.google.com/presentation/d/1WH6aO0wuOPZhp46FX8hOQipTAn64_vPziptWQFVWv_Q/template/preview\" target=\"_blank\">수업 슬라이드</a>를 검토하세요.\n-   학생 개별 활동 시간과 전체 그룹 수업의 비중을 결정하세요.\n-   학생들 각자에게 나눠줄 생태학자의 노트를 인쇄하세요.\n-   수업 후에 살펴볼 관련 [확장 내용](https://studio.code.org/s/csc-ecosystems-2023/lessons/3#activity-4852074)을 확인하세요."
         },
         "csc-mappinglandmarks-2023/US Landmarks": {
           "name": "맵 메이킹 소개",
           "overview": "이 **스킬 구축** 수업에서 학생들은 맵에서 스프라이트를 만들고 애니메이션화하는 방법을 배웁니다. \n\n이 단원의 두 가지 주요 목적은 다음과 같습니다. (1) 대화형 맵을 코딩하는 예를 제공하고 (2) 학생들에게 Sprite Lab에서의 코딩을 소개하는 것입니다.Sprite Lab은 블록 기반 코드를 사용하는 개방형 코딩 환경입니다.수강생은 이 강의를 통해 스프라이트 랩의 기본을 배우고 다음 강의에서 인터랙티브 맵을 계획하고 제작합니다. \n\n이 통합 수업에서 학생들은 코드로 맵을 만들어 사회 연구 개념을 배웁니다.먼저 학생들은 지도의 몇 가지 예를 살펴보고 지도를 구성하는 특징에 대해 토론할 것입니다.마무리에서 학생들은 지도 제작자의 역할에 대해 논의할 것입니다. \n\n_참고: 지도와 이미지가 모든 경우에 완벽하게 맞지는 않을 것입니다.다행히도 스프라이트 업로드 도구가 있으며 학생들은 프리플레이 레벨에서 커스터마이징이 가능한 애니메이션 라이브러리에 액세스할 수 있습니다._",
-          "preparation": "-   온라인 자습서를 직접 검토하고 완료하십시오.\n-   슬라이드를 검토하고 학생의 작업 시간과 전체 그룹 수업 사이의 간격을 결정하세요.\n-   마무리 토론에서 각 학생을 위해 스티커 메모나 스크래치 페이퍼를 준비하세요.\n-   기술을 확인하고 사전에 문제 해결이 필요한지 결정하세요.\n\n##### 선택 사항:\n\n-   이 유용한 힌트 슬라이드쇼를 검토하세요. <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\"></a> \n-   이 <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">교사용 디버깅 가이드를 검토하여 학생들이 코드에서 오류를 찾아</a>  수정하는 데 도움이 될 수 있도록 준비하세요. \n-   페어 프로그래밍 - 학생들이 페어 프로그래밍에 참여하게 할지 결정하세요.페어 프로그래밍에 대한 자세한 내용은 이 <a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">비디오를</a> 시청하고 이 <a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">지원</a> 페이지를 방문하십시오.\n-   커스텀 스프라이트 업로드 - 이 내용은 이후 수업에서 소개될 예정이지만, 이 비디오를 통해 학생들에게 자신만의 스프라이트 코스튬과 배경을 업로드하는 방법을 가르칠 수 있습니다. <a href=\"https://youtu.be/CHipUGfL_0M\" target=\"_blank\"></a>",
+          "preparation": "-   온라인 튜토리얼를 검토하고 완료해 보세요.\n-   슬라이드를 검토하고 학생 개별 활동 시간과 전체 그룹 수업의 비중을 결정하세요.\n-   마무리 토론에서 학생들이 사용할 스티커 메모나 이면지를 준비하세요.\n-   기술적인 부분을 미리 확인하고 수업 전에 문제를 해결하세요.\n\n##### 선택 사항:\n\n-   <a href=\"https://docs.google.com/presentation/d/1h4Frow3pA7jBBbSDkNUZloPNRBCUNU478DweaM75ETU/template/preview\" target=\"_blank\">유용한 팁</a> 슬라이드쇼를 살펴보세요.\n-   수업 전 이 <a href=\"https://drive.google.com/drive/folders/1DTeI1P2o8aX59mdcHkuvmNCMe3DXFGHT/view\" target=\"_blank\">교사용 디버깅 가이드</a>를 검토해 학생들이 코드에서 오류를 찾아 수정할 수 있도록 지도해 주세요. \n-   페어 프로그래밍 - 짝을 지어 진행하는 페어 프로그래밍을 진행할지 결정하세요. 페어 프로그래밍에 대한 자세한 내용은 이 <a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">동영상</a> 과 <a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">지원</a> 페이지에서 확인해 주세요.\n-   커스텀 스프라이트 업로드 - 이 내용은 이후 수업에서 소개될 예정이지만, 이 <a href=\"https://youtu.be/CHipUGfL_0M\" target=\"_blank\">동영상</a>으로 학생들에게 자신만의 스프라이트 코스튬과 배경을 업로드하는 방법을 지도해 주세요.",
           "purpose": "학생들은 여러 주제 영역을 통합하는 대화형 학습 환경에서 투어 가이드 앱을 만듭니다.컴퓨터 과학 개념과 지리 콘텐츠를 결합하여 학생들이 두 과목을 더 깊이 이해하고 그 연관성을 파악할 수 있도록 돕는 것을 목표로 합니다.이 수업은 학생들이 특정 지리적 위치의 중요한 명소, 문화 행사 및 유적지를 강조하는 여행 가이드 앱을 만들어 실제 상황에서 코딩 기술을 적용할 수 있도록 하기 위한 것입니다.",
           "student_overview": "이 단원에서는 지도를 살펴보겠습니다!지도를 사용하면 어디로 가야 할지 알 수 있습니다.또한 장소를 구성하는 사람들에 대한 이야기도 들려줍니다. \n\n코드를 사용하면 배경의 스프라이트에 애니메이션을 적용하여 대화형 맵을 만들 수 있습니다."
         },
@@ -5459,7 +5564,7 @@
         "csc-mappinglandmarks-2023/Local Landmarks - Coding Your Project": {
           "name": "내 맵 코딩하기",
           "overview": "이 단원에서 학생들은 이전 수업의 프로젝트 계획을 사용하여 대화형 맵을 만듭니다.학생들은 계획의 다양한 단계에 있을 수 있습니다.\n\n일단 컴퓨터로 옮겨 다니다 보면, 배경을 설정하고, 여행 가이드를 만들고, “환영합니다”라고 말하고, 움직이게 하고, 가이드가 만지면 말을 하게 하는 랜드마크를 2개 이상 추가하는 과정을 단계별로 진행하게 됩니다. \n\n참고로 이것은 프로젝트 진행 과정이므로 학생 코드가 각 레벨에서 다음 단계로 진행된다는 뜻입니다.학생들이 다음 레벨로 진행하기 전에 각 레벨에서 “실행”을 눌러 코드를 저장하도록 권장하세요.\n\n수업은 다음 수업을 준비하기 위한 간단한 갤러리 워크로 끝납니다. 학생들은 자신의 프로젝트를 학급과 공유할 수 있습니다. ",
-          "preparation": "-   온라인 자습서를 직접 검토하고 완료하십시오.\n-   이전 강의의 계획 가이드를 다시 읽을 준비를 하세요. \n-   자신감이 없거나 창의적인 프로젝트를 시작할 준비가 되지 않은 학생들을 위한 지원 전략을 생각해 보세요. \n-   다음과 같은 관련 확장 옵션을 고려해 보세요. ([link](https://studio.code.org/s/csc-mappinglandmarks-2023/lessons/3#activity-5197066))\n\n##### 선택 사항:\n\n-   학생들에게\n    모범이 되도록 지도를 만들어 보세요. - 이 유용한 힌트 슬라이드쇼를 살펴보세요. <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\"></a> \n-   이 <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">교사용 디버깅 가이드를 검토하여 학생들이 코드에서 오류를 찾아 수정하는 데 도움이 될 수</a>  있도록 준비하세요. ",
+          "preparation": "-   온라인 튜토리얼를 검토하고 완료해 보세요.\n-   지난 수업의 수업 계획 가이드를 미리 열어두세요.\n-   자신감이 부족하거나 창의적인 프로젝트를 학습할 준비가 되지 않은 학생들을 도울 수 있는 아이디어를 생각해 보세요. \n-   다음과 같은 관련 확장 학습을 고려해 보세요. ([link](https://studio.code.org/s/csc-mappinglandmarks-2023/lessons/3#activity-5197066))\n\n##### 선택 사항:\n\n-   학생들에게 예시로 보여줄 지도를 만들어 보세요. \n-   <a href=\"https://docs.google.com/presentation/d/1h4Frow3pA7jBBbSDkNUZloPNRBCUNU478DweaM75ETU/template/preview\" target=\"_blank\">유용한 팁</a> 슬라이드쇼를 살펴보세요.\n-   수업 전 이 <a href=\"https://drive.google.com/drive/folders/1DTeI1P2o8aX59mdcHkuvmNCMe3DXFGHT/view\" target=\"_blank\">교사용 디버깅 가이드</a>를 검토해 학생들이 코드에서 오류를 찾아 수정할 수 있도록 지도해 주세요.",
           "purpose": "이 수업은 컴퓨터 과학과 지리를 결합한 풍부하고 매력적인 학습 경험을 제공하고 학생들이 오늘날 세계와 관련된 다양한 기술과 역량을 개발하도록 돕는 것을 목표로 합니다.학생들은 자신만의 여행 가이드 앱을 코딩하여 특정 지역의 지리적 특징, 문화 행사 및 유적지를 탐색할 수 있습니다.학생들은 코드와 기술을 통해 이 위치에 대한 이해와 감사를 표현할 수 있습니다.이 수업에서는 또한 코딩에서 계획, 문제 해결, 자기 표현의 중요성을 강조합니다.",
           "student_overview": "이제 각 랜드마크를 방문하는 투어 가이드와 함께 지도를 만들 차례입니다.지난 수업에서 설계한 계획을 따르게 됩니다.각 레벨의 지침을 주의 깊게 따르십시오.이 프로젝트에서는 코드가 레벨마다 여러분을 따라갈 것입니다. "
         },
@@ -5473,7 +5578,7 @@
         "csc-starquilts-2023/Native American Star Quilts (beta)": {
           "name": "아메리카 원주민 스타 퀼트",
           "overview": "이 Unplugged 수업에서 학생들은 아메리카 원주민 스타 퀼트와 그 중요성을 소개합니다.그런 다음 학생들은 종이에 6각형 별 모양을 만들 것입니다.주요 목표 중 하나는 모양 내의 패턴에 대해 토론하는 것입니다.이러한 아이디어는 추후 활동의 온라인 코딩 부분에서 핵심이 될 것입니다. ",
-          "preparation": "-   레벨을 플레이하고 강의 슬라이드를 검토하세요.\n-   학생의 수업 시간과 전체 그룹 수업 사이의 간격을 결정하세요.\n-   지난 수업이 끝난 후 다음과 같은 관련 확장 옵션 (링크) 을 살펴보세요.\n\n##### 선택 사항:\n\n-   이 <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">유용한 힌트 슬라이드쇼를 검토하세요.</a> \n-   이 <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">교사용 디버깅 가이드를 검토하여 학생들이 코드에서 오류를 찾아</a>  수정하는 데 도움이 될 수 있도록 준비하세요. \n-   페어 프로그래밍 - 학생들이 페어 프로그래밍에 참여하게 할지 결정하세요.페어 프로그래밍에 대한 자세한 내용은 이 <a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">비디오를</a> 시청하고 이 <a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">지원</a> 페이지를 방문하십시오.",
+          "preparation": "-   레벨을 플레이하고 수업 슬라이드를 검토하세요.\n-   학생 개별 활동 시간과 전체 그룹 수업의 비중을 결정하세요.\n-   마지막 수업 후에 살펴볼 관련 확장 내용(링크)을 확인해 보세요.\n\n##### 선택 사항:\n\n-   <a href=\"https://docs.google.com/presentation/d/1h4Frow3pA7jBBbSDkNUZloPNRBCUNU478DweaM75ETU/template/preview\" target=\"_blank\">유용한 팁</a> 슬라이드쇼를 살펴보세요.\n-   수업 전 이 <a href=\"https://drive.google.com/drive/folders/1DTeI1P2o8aX59mdcHkuvmNCMe3DXFGHT/view\" target=\"_blank\">교사용 디버깅 가이드</a>를 검토해 학생들이 코드에서 오류를 찾아 수정할 수 있도록 지도해 주세요.\n-   페어 프로그래밍 - 짝을 지어 진행하는 페어 프로그래밍을 진행할지 결정하세요. 페어 프로그래밍에 대한 자세한 내용은 이 <a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">동영상</a> 과 <a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">지원</a> 페이지에서 확인해 주세요.",
           "purpose": "오늘은 스타 퀼트에 대한 모든 것을 배울 것입니다.그런 다음 연필, 종이, 색을 사용하여 자신만의 6점 별 모양을 디자인하기 시작하게 됩니다.패턴을 찾아보세요!"
         },
         "csc-starquilts-2023/Getting Started with The Artist (beta)": {
@@ -5485,7 +5590,7 @@
         "csc-starquilts-2023/Code Your Star Quilt (beta)": {
           "name": "코딩 마이 스타 퀼트",
           "overview": "이 활동의 마지막 수업에서 학생들은 자신만의 스타 퀼트를 만들 준비가 됩니다.학생들은 별의 한 점을 만든 다음 코드를 반복하여 8포인트 전통 별 퀼트를 완성합니다.스타 퀼트는 학생들이 소중한 사람과 프로젝트를 공유할 수 있도록 선물하기 위한 것입니다.",
-          "preparation": "-   레벨을 플레이하고 강의 슬라이드를 검토하세요.\n-   학생의 수업 시간과 전체 그룹 수업 사이의 간격을 결정하세요.\n-   지난 수업이 끝난 후 다음과 같은 관련 확장 옵션 ([link](https://studio.code.org/s/csc-starquilts-2023/lessons/3#activity-4365328)) 을 고려해 보세요.\n\n##### 선택 사항:\n\n-   이 <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">교사용 디버깅</a>  가이드를 검토하여 학생들이 코드에서 오류를 찾아 수정하는 데 도움이 될 수 있도록 준비하세요. \n-   페어 프로그래밍 - 학생들이 페어 프로그래밍에 참여하게 할지 결정하세요.페어 프로그래밍에 대한 자세한 내용은 이 <a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">비디오를</a> 시청하고 이 <a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">지원</a> 페이지를 방문하십시오.",
+          "preparation": "-   레벨을 플레이하고 강의 슬라이드를 검토하세요.\n-   학생의 수업 시간과 전체 그룹 수업 사이의 간격을 결정하세요.\n-   지난 수업이 끝난 후 다음과 같은 관련 확장 옵션 ([link](https://studio.code.org/s/csc-starquilts-2023/lessons/3#activity-4365328)) 을 고려해 보세요.\n\n##### 선택 사항:\n\n-   이 <a href=\"https://drive.google.com/drive/folders/1DTeI1P2o8aX59mdcHkuvmNCMe3DXFGHT/view\" target=\"_blank\">교사용 디버깅</a>  가이드를 검토하여 학생들이 코드에서 오류를 찾아 수정하는 데 도움이 될 수 있도록 준비하세요. \n-   페어 프로그래밍 - 학생들이 페어 프로그래밍에 참여하게 할지 결정하세요.페어 프로그래밍에 대한 자세한 내용은 이 <a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">비디오를</a> 시청하고 이 <a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">지원</a> 페이지를 방문하십시오.",
           "purpose": "오늘은 우리만의 스타 퀼트를 만들기 위한 코드를 만들어 보겠습니다.아메리카 원주민의 전통에서는 특별한 날에 스타 퀼트를 선물하는 것이 타인에 대한 사랑, 명예, 존중을 표현한다는 것을 기억하세요.디지털 스타 퀼트는 새롭고 창의적인 방식으로 다른 사람들과 사랑과 감사를 나눌 수 있는 이 전통을 현대적으로 재해석한 것입니다.작업이 끝나면 사랑하고 고마워하는 사람과 스타 퀼트를 공유하세요.",
           "student_overview": "오늘은 우리만의 스타 퀼트를 만들기 위한 코드를 만들어 보겠습니다.아메리카 원주민의 전통에서는 특별한 날에 스타 퀼트를 선물하는 것이 타인에 대한 사랑, 명예, 존중을 표현한다는 것을 기억하세요.디지털 스타 퀼트는 새롭고 창의적인 방식으로 다른 사람들과 사랑과 감사를 나눌 수 있는 이 전통을 현대적으로 재해석한 것입니다.작업이 끝나면 사랑하고 고마워하는 사람과 스타 퀼트를 공유하세요."
         },
@@ -6848,52 +6953,49 @@
         },
         "how-ai-works-2023/Introduction to Machine Learning": {
           "name": "머신 러닝 소개",
-          "overview": "이 강의는 [AI 작동 방식: 기계 학습이란 무엇인가?] 를 중심으로 합니다.[0] [AI 작동 방식 비디오 시리즈] 의 동영상[1].강의 계획을 살펴보기 전에 먼저 이 비디오를 시청하십시오.\n\n이 수업에서는 학생들에게 머신 러닝이라는 인공 지능의 한 형태와 문제 해결 프로세스를 사용하여 로봇이 문제를 해결하도록 훈련시키는 방법을 소개합니다.학생들은 로봇인 AI 봇이 물고기의 패턴을 감지하는 방법을 학습하는 세 가지 기계 학습 활동에 참여합니다.\n\n이 수업은 단독으로 또는 AI 작동 방식에 대한 7개 강의 시퀀스의 일부로 학습할 수 있습니다. [이 순서의 모든 강의를 보려면 여기를 클릭하십시오.](https://code.org/ai/how-ai-works)",
+          "overview": "이 수업은 [AI 작동 방식 비디오 시리즈](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)의 [AI 작동 방식: 머신 러닝이란 무엇인가?](https://youtu.be/KHbwOetbmbs?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) 동영상을 중심으로 합니다. 수업 계획을 살펴보기 전에 먼저 이 비디오를 시청하십시오.\n\n이 수업에서는 학생들에게 머신 러닝이라는 부르는 인공 지능의 한 형태와 로봇에게 문제를 해결하도록 훈련시키기 위해  문제 해결 프로세스를 사용하는 방법을 소개합니다. 학생들은 로봇인 AI 봇이 물고기의 패턴을 감지하는 방법을 학습하는 세 가지 머신 러닝 활동에 참여합니다.\n\n이 수업은 단독으로 또는 AI 작동 방식에 대한 7개 수업 시퀀스- [이 시퀸스 내 모든 수업을 보려면 여기를 클릭합니다](https://code.org/ai/how-ai-works)의 일부로 가르칠 수 있습니다. ",
           "preparation": "-   수업 전에 코드 스튜디오 레벨을 복습하세요. \n-   학생들을 위한 활동 가이드 사본을 인쇄하세요.",
           "student_overview": "인공지능 봇이 물고기를 인식하여 바다를 청소하도록 도와줌으로써 머신 러닝의 기초를 배우세요."
         },
         "how-ai-works-2023/Computer Vision": {
           "name": "컴퓨터 비전",
-          "overview": "이 강의는 \\[AI 작동 원리[0] 비디오 시리즈] 의 [AI 작동 방식: 컴퓨터 비전] 비디오를 중심으로[1]합니다.강의 계획을 살펴보기 전에 먼저 이 비디오를 시청하십시오.\n\n학생들은 컴퓨터 비전의 작동 방식을 배웁니다.학생들은 먼저 착시 현상을 관찰하여 눈으로 알아차린 그림의 특징을 파악합니다.학생들은 컴퓨터 비전과 컴퓨터가 “보는” 방식을 설명하는 비디오를 시청합니다.그들은 네트워크를 사용하여 7개의 세그먼트 디스플레이에 표시되는 숫자를 결정하는 알고리즘을 설계합니다.마지막으로 학생들은 알고리즘을 테스트합니다.\n\n이 수업은 단독으로 진행하거나 AI 작동 방식에 대한 7개 강의 시퀀스의 일부로 학습할 수 있습니다. [이 순서의 모든 강의를 보려면 여기를 클릭하십시오](https://code.org/ai/how-ai-works).",
-          "preparation": "-   각 그룹의 컴퓨터 비전 네트워크 활동 안내서 사본 인쇄\n-   (선택 사항) 세븐 세그먼트 디스플레이 매니퓰레이티브 사본 인쇄",
+          "overview": "이 수업은 [AI 작동 방식 비디오 시리즈](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)의 [AI 작동 방식: 컴퓨터 비전](https://youtu.be/2hXG8v8p0KM?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) 동영상을 중심으로 합니다. 수업 계획을 살펴보기 전에 먼저 이 비디오를 시청하십시오.\n\n학생들은 컴퓨터 비전의 작동 방식을 배웁니다. 학생들은 먼저 착시 현상을 관찰하여 눈으로 알아차린 그림의 특징을 파악합니다. 학생들은 컴퓨터 비전과 컴퓨터가 “보는” 방식을 설명하는 비디오를 시청합니다. 그들은 네트워크를 사용하여 7개의 세그먼트 디스플레이에 표시되는 숫자를 결정하는 알고리즘을 설계합니다. 마지막으로 학생들은 알고리즘을 테스트합니다.\n\n이 수업은 단독으로 또는 AI 작동 방식에 대한 7개 수업 시퀀스- [이 시퀸스 내 모든 수업을 보려면 여기를 클릭합니다](https://code.org/ai/how-ai-works)의 일부로 가르칠 수 있습니다.  ",
+          "preparation": "-   각 그룹 별 컴퓨터 비전 네트워크 활동 안내서의 사본 인쇄\n-   (선택 사항) 7개 세그먼트 디스플레이 학습 교구 사본 인쇄",
           "student_overview": "숫자를 감지하는 알고리즘을 설계하여 컴퓨터 비전이 어떻게 작동하는지 알아보십시오."
         },
         "how-ai-works-2023/Neural Networks": {
-          "name": "뉴럴 네트워크",
-          "overview": "이 강의는 \\[AI 작동 원리[0] 비디오 시리즈] 의 [AI 작동 원리: 신경망] 비디오를 중심으로[1]합니다.강의 계획을 살펴보기 전에 먼저 이 비디오를 시청하십시오.\n\n학생들은 신경망이 어떻게 작동하는지 배웁니다.먼저 학습자에게 물건을 추천해 주는 경험의 예를 들어 설명해 줍니다.그런 다음 한 사람을 기준으로 동영상을 추천하는 위젯을 사용합니다.학생들은 신경망을 설명하는 비디오를 시청합니다.학생들은 업데이트된 위젯을 사용하여 각 사람의 체중을 조정합니다.마지막으로 학생들은 추천 시스템을 만들 때 다양한 관점이 필요하다는 점에 대해 논의합니다.\n\n이 강의는 단독으로 진행하거나 AI 작동 방식에 대한 7개의 강의 시퀀스의 일부로 수강할 수 있습니다. [이 순서로 구성된 모든 강의를 보려면 여기를 클릭하십시오.](https://code.org/ai/how-ai-works)",
-          "preparation": "-   각 학생의 WeTube 콘텐츠 제작자 리소스 사본 인쇄\n-   각 학생의 신경망 활동 가이드 사본 인쇄",
+          "name": "신경망",
+          "overview": "이 수업은 [AI 작동 방식 비디오 시리즈](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)의 [AI 작동 방식: 신경망](https://youtu.be/JrXazCEACVo?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) 동영상을 중심으로 합니다. 수업 계획을 살펴보기 전에 먼저 이 비디오를 시청하십시오.\n\n학생들은 신경망이 어떻게 작동하는지 배웁니다. 먼저 무엇인가를 추천받았을 때의 경험을 한 가지 예를 들어 토론합니다. 그런 다음 한 사람을 기준으로 동영상을 추천하는 위젯을 사용합니다. 학생들은 신경망을 설명하는 비디오를 시청합니다. 학생들은 업데이트된 위젯을 사용하여 각 사람의 가중치를 조정합니다. 마지막으로 학생들은 추천 시스템을 만들 때 다양한 관점이 필요하다는 점을 토론합니다.\n\n이 수업은 단독으로 또는 AI 작동 방식에 대한 7개의 수업 시퀀스- [이 시퀸스 내 모든 수업을 보려면 여기를 클릭합니다](https://code.org/ai/how-ai-works)의 일부로 가르칠 수 있습니다.",
+          "preparation": "-   각 학생별 WeTube 콘텐츠 크리에이터 리소스 사본 인쇄\n-   각 학생별 신경망 활동 안내서 사본 인쇄",
           "student_overview": "추천 시스템의 가중치를 조정하여 출력을 조정함으로써 신경망이 어떻게 작동하는지 알아보십시오."
         },
         "how-ai-works-2023/Chatbots and Large Language Models (LLMs)": {
-          "name": "챗봇 및 대형 언어 모델 (LLM)",
-          "overview": "이 강의는 \\[AI 작동 원리[0] 비디오 시리즈] 의 [AI 작동 방식: 챗봇 및 대형 언어 모델] 비디오를 중심으로 합니다.[1]강의 계획을 살펴보기 전에 먼저 이 비디오를 시청하십시오.\n\n대형 언어 모델 (LLM) 은 새 텍스트를 생성합니다.LLM이 생성하는 텍스트는 사람이 작성한 것처럼 보입니다. 대형 언어 모델은 Wikipedia와 같은 대규모 텍스트를 기반으로 구축되기 때문입니다.이 단원에서 학생들은 LLM이 무엇이고 어떻게 작동하는지 학습한 다음 LLM을 사용하여 AI와 함께 텍스트를 작성합니다.마지막으로 LLM이 지능적인지 창의적인지 아닌지에 대한 토론으로 수업을 마무리합니다.\n\n이 강의는 단독으로 또는 AI 작동 방식에 대한 7개 강의 시퀀스의 일부로 수강할 수 있습니다. [이 시퀀스의 모든 강의를 보려면 여기를 클릭하십시오].[2]",
+          "name": "챗봇 및 대규모 언어 모델 (LLM)",
+          "overview": "이 수업은 [AI 작동 방식 비디오 시리즈](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)의 [AI 작동 방식: 챗봇 및 대규모 언어 모델 (LLM)](https://youtu.be/X-AWdfSFCHQ) 동영상을 중심으로 합니다. 수업 계획을 살펴보기 전에 먼저 이 비디오를 시청하십시오.\n\n대규모 언어 모델 (LLM) 은 새 텍스트를 생성합니다. LLM이 생성하는 텍스트는 사람이 작성한 것처럼 보입니다. 대규모 언어 모델은 위키피디아와 같은 대규모 텍스트를 기반으로 구축되기 때문입니다. 이 단원에서 학생들은 LLM이 무엇이고 어떻게 작동하는지 학습한 다음 LLM을 사용하여 AI와 함께 텍스트를 작성합니다. 마지막으로 LLM이 지능적인지 아니면 창의적인지에 관한 토론으로 수업을 마무리합니다.\n\n이 수업은 단독으로 또는 AI 작동 방식에 대한 7개 수업 시퀀스- [이 시퀸스 내 모든 수업을 보려면 여기를 클릭합니다](https://code.org/ai/how-ai-works)의 일부로 가르칠 수 있습니다.",
           "preparation": "-   학생별 활동 안내서 사본 인쇄",
-          "student_overview": "대형 언어 모델 (LLM) 은 지능적인가요 아니면 창의적인가요?그들과 함께 무언가를 만들 때 스스로 결정하고 어떻게 작동하는지 자세히 알아보세요!"
+          "student_overview": "대규모 언어 모델(LLM)은 지능적인가요 아니면 창의적인가요? 이 모델을 사용해 무언가를 만들며 직접 결정하고 그 작동방식에 관해 자세히 알아보세요!"
         },
         "how-ai-works-2023/Generative Images": {
-          "name": "제너레이티브 이미지",
-          "overview": "이 수업은 [AI 작동 원리: 창의성과 상상력?] 을 중심으로 합니다.[0] [AI 작동 방식 비디오 시리즈] 의 동영상[1].강의 계획을 살펴보기 전에 먼저 이 비디오를 시청하십시오.\n\n확산 모델은 이미지를 생성합니다.Diffusion AI는 이미지를 노이즈로 변환하고 프로세스를 역전시키도록 AI를 훈련시킵니다.이 수업에서 학생들은 AI가 이미지를 생성하는 방법을 학습한 다음 확산 AI 위젯을 살펴봅니다.마지막으로, 수업은 이러한 모델이 창의적인지 아닌지에 대한 토론으로 마무리됩니다.\n\n이 강의는 단독으로 또는 AI 작동 방식에 대한 7개 강의 시퀀스의 일부로 학습할 수 있습니다. [이 시퀀스의 모든 강의를 보려면 여기를 클릭하십시오.](https://code.org/ai/how-ai-works)",
+          "name": "생성형 이미지",
+          "overview": "이 수업은 [AI 작동 방식 비디오 시리즈](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)의 [AI 작동 방식: 창의성과 상상력?](https://www.youtube.com/watch?v=X994dDnmRmY) 동영상을 중심으로 합니다. 수업 계획을 살펴보기 전에 먼저 이 비디오를 시청하십시오. \n\n디퓨전 모델은 이미지를 생성합니다.디퓨전 AI는 이미지를 노이즈로 변환하고 프로세스를 뒤바꾸도록 AI를 훈련시킵니다. 이 수업에서 학생들은 AI가 이미지를 생성하는 방법을 학습한 다음 디퓨전 AI 위젯을 살펴봅니다.마지막으로, 이러한 모델이 창의적인지 아닌지 토론하며 마무리됩니다.\n\n이 수업은 단독으로 또는 AI 작동 방식에 대한 7개 수업 시퀀스- [이 시퀸스 내 모든 수업을 보려면 여기를 클릭합니다](https://code.org/ai/how-ai-works)의 일부로 가르칠 수 있습니다.",
           "preparation": "-   학생별 활동 안내서 사본 인쇄",
-          "student_overview": "확산 AI 위젯을 탐색하여 AI가 이미지를 생성하는 방법을 알아봅니다."
+          "student_overview": "디퓨전 AI 위젯을 탐구하여 AI가 이미지를 어떻게 생성하는지 알아봅니다."
         },
         "how-ai-works-2023/Algorithmic Bias": {
           "name": "알고리즘 편향",
-          "overview": "이 강의는 \\[AI 작동 방식[0] 비디오 시리즈] 의 [AI 작동 방식: 동등한 접근과 알고리즘 편향](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)비디오를 중심으로 합니다.강의 계획을 살펴보기 전에 먼저 이 비디오를 시청하십시오.\n\n이 수업에서 학생들은 트위터 자르기 알고리즘의 기저에 깔린 편향을 알아내기 위해 이미지 자르기를 연습할 것입니다.그런 다음 학생들은 이 편향된 알고리즘의 발견에 관한 동영상을 읽고 시청하게 됩니다.마지막으로, 학생들은 자르기 알고리즘의 편향 주장에 대한 트위터의 대응을 분석하는 것과 함께 편향을 인식하고 줄이는 방법에 대해 토론할 것입니다.\n\n이 강의는 단독으로 진행하거나 AI 작동 방식에 대한 7강 시퀀스의 일부로 수강할 수 있습니다. [이 순서의 모든 강의를 보려면 여기를 클릭하십시오].[2]",
-          "preparation": "-   자르기 위젯 활동을 직접 완료하여 학생들이 위젯을 통해 어떤 경험을 하게 될지, 어떤 질문이나 문제를 제기할 수 있는지 확인하세요.\n-   동영상 일부 보기 [“우리는 인종차별을 자동화하고 있나요?”](https://youtu.be/Ok5sKLXqynQ) 수업 계획에서 참조했습니다.\n-   아래 링크 섹션에서 두 기사를 읽어보세요.",
-          "student_overview": "이 단원에서는 이미지를 자르는 방법을 배우고 기계에 이미지 자르기 방법을 가르치는 것과 관련된 문제와 편견에 대해 설명합니다."
+          "overview": "이 수업은 [AI 작동 방식 비디오 시리즈](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)의 [AI 작동 방식: 동등한 액세스와 알고리즘 편향](https://youtu.be/tJQSyzBUAew?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) 동영상을 중심으로 합니다. 수업 계획을 살펴보기 전에 먼저 이 비디오를 시청하십시오. \n\n이 수업에서 학생들은 트위터 자르기 알고리즘의 기저에 있는 편향을 알아내기 위해 이미지 자르기를 연습할 것입니다. 그 다음 학생들은 이 편향된 알고리즘의 발견에 관해 읽고 동영상을 시청하게 됩니다. 마지막으로, 학생들은 자르기 알고리즘의 편향 주장에 대한 트위터의 반응을 분석하고 그와 함께 편향을 인식하고 줄이는 방법에 대해 토론할 것입니다.\n\n이 수업은 단독으로 또는 AI 작동 방식에 대한 7개 수업 시퀀스- [이 시퀸스 내 모든 수업을 보려면 여기를 클릭합니다](https://code.org/ai/how-ai-works)의 일부로 가르칠 수 있습니다.",
+          "preparation": "-   자르기 위젯 활동을 완료하여 학생들이 위젯을 통해 어떤 경험을 하게 될지, 어떤 질문이나 문제를 제기할지 확인하세요.\n-   수업 계획에서 언급된 동영상 [“우리는 인종차별을 자동화하고 있나요?”](https://youtu.be/Ok5sKLXqynQ)의 일부를 시청합니다.\n-   아래 링크 섹션에서 두 기사를 읽어보세요.",
+          "student_overview": "이 수업에서는 이미지를 자르는 방법을 배우고 머신에게 이미지 자르기 방법을 가르치는 것과 관련된 문제와 편향에 대해 설명합니다."
         },
         "how-ai-works-2023/Our AI Code of Ethics": {
-          "overview": "이 강의는 \\[AI 작동 방식[0] 비디오 시리즈] 의 [AI 작동 방식: 개인 정보 보호 및 업무의 미래] 비디오를 중심으로[1]합니다.강의 계획을 살펴보기 전에 먼저 이 비디오를 시청하십시오.\n\n학생들은 소그룹으로 나누어 자신이 선택한 인공 지능 분야의 윤리적 함정을 폭로하는 기사와 비디오를 사용하여 연구를 진행합니다.그런 다음 각 그룹은 자신이 선택한 영역을 다루는 솔루션 지향 원칙을 하나 이상 개발합니다.그런 다음 이러한 원칙은 전 세계 AI 제작자와 입법자를 위해 학급 전체의 “우리의 AI 윤리 강령” 리소스 (예: 슬라이드 프레젠테이션, 문서 또는 웹페이지) 에 통합됩니다.\n\n이 수업은 단독으로 또는 AI 작동 방식에 대한 7개 강의 시퀀스의 일부로 학습할 수 있습니다. [이 순서의 모든 강의를 보려면 여기를 클릭하십시오.](https://code.org/ai/how-ai-works)",
+          "overview": "이 수업은 [AI 작동 방식: 비디오 시리즈](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)의 [AI 작동 방식: 개인 정보 보호 및 업무의 미래](https://youtu.be/zNxw5gJtHLc?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) 비디오를 중심으로 합니다. 수업 계획을 살펴보기 전에 먼저 이 비디오를 시청하십시오.\n\n학생들을 소그룹으로 나누어 자신이 선택한 인공 지능 분야의 윤리적 함정을 폭로하는 기사와 비디오를 사용하여 연구를 진행합니다. 그런 다음 각 그룹은 자신이 선택한 영역을 다루는 솔루션 지향 원칙을 하나 이상 개발합니다. 이러한 원칙은 전 세계 AI 크리에이터와 입법자를 위해 학급 전체의 “우리의 AI 윤리 강령” 리소스(예: 슬라이드 프레젠테이션, 문서 또는 웹페이지)에 통합됩니다.\n\n이 수업은 단독으로 또는 AI 작동 방식에 대한 7개 수업 시퀀스의 일부로 학습할 수 있습니다. [이 시퀀스의 모든 강의를 보려면 여기를 클릭하십시오.](https://code.org/ai/how-ai-works)",
           "preparation": "-   그룹 당 **AI 윤리 연구 영역** 유인물을 온라인으로 공유할 준비를 하세요.\n-   그룹 당 **AI 윤리 연구 점검** 유인물을 인쇄하거나 온라인으로 공유할 준비를 하세요.\n-   수업의 “AI 윤리 강령” 자료를 구성하는 데 사용할 공유 가능한 웹 문서, 슬라이드 프레젠테이션, 비디오 템플릿 또는 기타 형태의 미디어를 준비하세요.",
           "student_overview": "AI 윤리에 대해 공동으로 연구하고 공유 가능한 행동 강령을 만드세요."
         },
         "how-ai-works-2023/How AI Works In a Day": {
           "name": "하루에 AI가 작동하는 방식",
-          "overview": "⚠️ 이 강의는 **하루** 동안 [How AI Works 비디오 시리즈](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) 전체를 보여주고자 하는 교실을 대상으로 합니다.이 강의는 각 비디오를 하루에 하나씩 소개하는 이 단원의 다른 강의와 순서대로 진행하기 위한 것이 아닙니다.\n\n학생들은 비디오의 어휘를 일치시킨 다음 각 비디오에 대한 반성 질문에 답하면서 각 비디오를 따라 학습합니다.수업 계획과 슬라이드는 매우 희박하고 개방형이므로 교실에 맞게 즉흥적으로 만들고 사용자 지정할 수 있습니다.",
+          "overview": "⚠️ 이 수업은 **하루** 동안 [AI 작동 방법 비디오 시리즈](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) 전체를 보여주고자 하는 교실을 대상으로 합니다. 이 수업은 비디오를 하루에 하나씩 소개하는 이 단원의 다른 수업과 함께 순서대로 진행하기 위한 것이 아닙니다.\n\n학생들은 비디오의 어휘를 일치시킴으로써 각 비디오를 따라 학습한 다음, 각 비디오에 대한 성찰 질문에 답합니다. 수업 계획과 슬라이드는 매우 듬성듬성하고 개방형이므로 교실에 맞게 즉흥적으로 만들고 사용자 지정할 수 있습니다.",
           "preparation": "-   활동 가이드 인쇄\n-   비디오 프로젝터에 슬라이드를 투사하십시오."
-        },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Hour of Code 2013"
         },
         "applab-intro/Intro to App Lab": {
           "name": "앱 랩 소개",
@@ -7062,9 +7164,10 @@
           "student_overview": "튜토리얼 요약: 첫 번째 학생이 바다에서 쓰레기를 제거하기 위해 대상을 \"물고기\" 또는 \"물고기가 아님\"으로 분류합니다. 그 다음, 학생들은 물 속에 사는 다른 바다 생명체를 포함시키기 위해 그들의 교육 데이터 세트를 확장하여야 합니다. 활동의 두 번째 부분에서, 학생들은 무작위로 생성된 물고기 이미지에 붙일 라벨을 선택합니다. 이 교육 데이터는 머신 학습 모델을 위해 사용되며 그 결과 머신 학습 모델은 새 이미지에 라벨을 붙일 수 있어야 합니다."
         },
         "outbreak/Outbreak": {
-          "overview": "이 레슨은 이벤트와 관련된 **기량**을 **미니 프로젝트**와 결합시켜 학생들이 스프라이트 랩에서 직접 컴퓨터 시뮬레이션을 만들 수 있도록 합니다. 학생들은 바이러스가 얼마나 빠르게 확산되고 바이러스 확산을 늦추기 위해 무엇을 해야 하는지 이해하기 위한 시뮬레이션을 공부할 것입니다.",
-          "preparation": "-   퍼즐을 진행하며 학급의 잠재적 문제 영역을 찾습니다.\n-   모든 학생들이 각자 점검 저널을 가지고 있어야 합니다.",
-          "purpose": "이전 레슨에서 학생들은 간단한 시뮬레이션에서 데이터를 수집하여 해석했습니다. 이 레슨에서는 설명에 따라 시뮬레이션 모델을 직접 코딩할 것입니다. 실제 세상에서 바이러스 발생에 관한 학생들의 이전 지식이 허구의 시나리오에 적용될 것입니다. ",
+          "name": "시뮬레이션 코딩",
+          "overview": "이 레슨에서, 모든 연령의 학습자는 안전하고 서로 지지하는 환경에서 코딩과 컴퓨터 과학에 관한 입문적 경험을 하게 됩니다. 이 레슨은 이벤트를 둘러 싼 **실력 향상**과 학생들이 스프라이트 랩에서 컴퓨터 시뮬레이션을 직접 만드는 **미니 프로젝트**를 결합시킵니다. 학생들은 바이러스가 얼마나 빨리 확산되는지 또한 확산 속도를 늦추기 위해 어떤 일을 할 수 있는지 이해하기 위한 시뮬레이션을 공부할 것입니다.  ",
+          "preparation": "#### 아워오브코드 (Hour of Code) 일주일 전\n\n-   아워오브코드 이벤트를 계획하려면 [아워오브코드 교사 가이드](https://hourofcode.com/us/how-to) 및 [성공적인 교사들의 모범 사례](https://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)를 검토해 보세요.  \n\n-   교실 지원 및 할인 포스터를 받거나 로봇 기념품을(미국에만 해당)을 받고 싶다면 [아워오브코드 이벤트를 등록하세요](https://hourofcode.com/us). \n\n-   온라인 튜토리얼을 검토하고 직접 완료하세요: [Outbreak](https://studio.code.org/s/outbreak/)\n\n-   학생들에게 완료해 보라고 하기 전에 먼저 시험 삼아 해보세요. 본인의 기술을 확인하고 아워오브코드를 진행하기 전에 미리 문제해결해야 할 부분이 있는지 결정하세요.\n\n#### 아워오브코드 하루 전\n\n-   활동을 완료한 학생은 [certificate](https://studio.code.org/certificates/batch)을 받아야 합니다. 아워오브코드 끝 부분에서 원활한 수여를 위해 미리 학생 당 한 부씩 인쇄하세요\n\n-   (선택사항) 학생들이 수업에 사용할 헤드폰을 가져오도록 권하세요. ",
+          "purpose": "이 레슨에서 학생들은 지시사항에 따라 시뮬레이션 모델을 직접 코딩합니다. 실제 세상에서의 바이러스 발생에 관한 학생들의 이전 지식이 가상의 시나리오에 적용됩니다. ",
           "student_overview": "몬스터 타운에 바이러스가 발생했어요! 바이러스 시뮬레이터를 만드는 방법을 배워 몬스터들이 다시 건강을 되찾을 수 있도록 도와주세요."
         },
         "playlab/Play Lab": {
@@ -7106,72 +7209,6 @@
           "preparation": "-   텍스트 압축 위젯을 테스트합니다.\n-   어느 옵션을 사용하고 싶은지 결정하기 위해 교육 팁을 검토하세요.",
           "purpose": "압축 뒤의 기본 원칙은 더 적은 비트를 사용하여 원래 정보를 나타내는 방법 또는 프로토콜의 개발입니다. 이 레슨에서 압축된 데이터를 나타내는 방법인 반복된 패턴으로 구성된 \"사전\"의 사용은 [LZW 압축계획](http://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch)과 유사하지만 LZW은 학생들이 이 레슨에서 할 일과 약간 다르다는 점을 명심해야 합니다. 학생들은 여기서 그들 만의 방식을 발명합니다. LZW는 텍스트 (zip 파일) 만이 아니라 GIF 이미지를 위해서도 사용됩니다.",
           "student_overview": "일정 지점에 이르면 비트 전송 속도의 물리적 한계에 도달하기 때문에, 많은 양의 정보를 더 빨리 보내고 싶다면, 동일한 정보를 더 적은 비트로 나타내는 방법을 찾아야 합니다. 즉, 데이터를 압축해야 합니다. "
-        },
-        "applab-1hour/Room Escape": {
-          "name": "방 탈출"
-        },
-        "applab-2hour/Digital Design": {
-          "name": "디지털 설계"
-        },
-        "applab-2hour/Event Driven Programming": {
-          "name": "이벤트 중심 프로그래밍"
-        },
-        "applab-2hour/Basic App Functionality": {
-          "name": "기초 앱 기능 "
-        },
-        "applab-2hour/Getters and Setters": {
-          "name": "게터 및 세터"
-        },
-        "frequency_analysis/Frequency Analysis": {
-          "name": "빈도 분석"
-        },
-        "gamelab/Start and End Screens": {
-          "name": "시작 및 종료 화면"
-        },
-        "gamelab/Start and End Screens2": {
-          "name": "시작 및 종료 화면2"
-        },
-        "k1hoc2017/Collector Hour of Code 2017": {
-          "name": "수집가 아워오브코드 2017"
-        },
-        "netsim/Overview and Setup Instructions": {
-          "name": "개관 및 설정 설명"
-        },
-        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
-          "name": "피어 투 피어 - 공유 와이어에서 비트 전송"
-        },
-        "netsim/Peer to Peer - Sending Numbers": {
-          "name": "피어 투 피어 - 숫자 전송"
-        },
-        "netsim/Peer to Peer - Sending Ascii": {
-          "name": "피어 투 피어 -아스키 전송"
-        },
-        "netsim/Broadcasting messages": {
-          "name": "메시지 방송"
-        },
-        "netsim/Routers and addresses": {
-          "name": "라우터 및 주소"
-        },
-        "netsim/Packets and Reliability": {
-          "name": "패킷 및 신뢰성"
-        },
-        "netsim/Manual DNS": {
-          "name": "수동 DNS"
-        },
-        "netsim/Automatic DNS node": {
-          "name": "자동 DNS 노드"
-        },
-        "netsim/Internet Simulator Freeplay": {
-          "name": "인터넷 시뮬레이터 프리플레이"
-        },
-        "odometer/Odometer Widget": {
-          "name": "주행 거리계 위젯"
-        },
-        "poetry-hoc3/lesson-1": {
-          "name": "분위기 연구"
-        },
-        "vigenere/Vigenere": {
-          "name": "비즈네르"
         },
         "allthethings/Jigsaw": {
           "name": "직소 퍼즐"
@@ -7310,6 +7347,21 @@
         },
         "allthethings/lesson-49": {
           "name": "음악"
+        },
+        "applab-1hour/Room Escape": {
+          "name": "방 탈출"
+        },
+        "applab-2hour/Digital Design": {
+          "name": "디지털 설계"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "이벤트 중심 프로그래밍"
+        },
+        "applab-2hour/Basic App Functionality": {
+          "name": "기초 앱 기능 "
+        },
+        "applab-2hour/Getters and Setters": {
+          "name": "게터 및 세터"
         },
         "csd-post-survey/CSD post-course survey": {
           "name": "CSD 학생 과정 후 설문조사 ('18-'19)"
@@ -7620,12 +7672,60 @@
         "deepdive-debugging/Debugging for CDEF Educators": {
           "name": "CDEF 교육자를 위한 디버깅"
         },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "빈도 분석"
+        },
+        "gamelab/Start and End Screens": {
+          "name": "시작 및 종료 화면"
+        },
+        "gamelab/Start and End Screens2": {
+          "name": "시작 및 종료 화면2"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Hour of Code 2013"
+        },
         "jigsaw/Jigsaw": {
           "name": "직소 퍼즐",
           "overview": "이 레슨은 학생들에게 컴퓨터 랩으로 갈 때 무엇을 기대할지에 관한 아이디어를 줄 것입니다. 컴퓨터 랩에서의 매너를 소개하는 짧은 토론으로 시작하며, 컴퓨터를 사용해 온라인 퍼즐을 완성하는 활동까지 진행합니다.",
           "preparation": "-   온라인 안전 콘텐츠에 관한 더 자세한 내용은 [커몬 센스 에듀케이션](https://www.commonsense.org/education/digital-citizenship) 웹사이트를 검토하세요.",
           "purpose": "이 레슨의 주요 목표는 학생들에게 컴퓨터를 경험하게 하는 것입니다. 클릭과 드래그 앤 드롭 등과 같은 가장 기본적인 컴퓨터 기능을 다룸으로써, 우리는 미래 퍼즐을 위해 학급에 더 공평한 경쟁의 장을 마련하고 있습니다. 이 레슨은 또한 기기에 따라 \"마우스\" 또는 \"트랙패드\", \"터치 스크린\" 등을 포함하여 기본 컴퓨터 하드웨어 용어를 소개할 기회를 줍니다.",
           "student_overview": "클릭 및 드래그하여 퍼즐을 완성하세요."
+        },
+        "k1hoc2017/Collector Hour of Code 2017": {
+          "name": "수집가 아워오브코드 2017"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "개관 및 설정 설명"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "피어 투 피어 - 공유 와이어에서 비트 전송"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "피어 투 피어 - 숫자 전송"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "피어 투 피어 -아스키 전송"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "메시지 방송"
+        },
+        "netsim/Routers and addresses": {
+          "name": "라우터 및 주소"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "패킷 및 신뢰성"
+        },
+        "netsim/Manual DNS": {
+          "name": "수동 DNS"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "자동 DNS 노드"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "인터넷 시뮬레이터 프리플레이"
+        },
+        "odometer/Odometer Widget": {
+          "name": "주행 거리계 위젯"
         },
         "pixelation/Black & White Pixelation Tutorial": {
           "name": "흑백 픽셀화 튜토리얼"
@@ -7641,6 +7741,18 @@
         },
         "pixelation/Color Pixelation Freeplay": {
           "name": "컬러 픽셀화 프리플레이"
+        },
+        "poetry-hoc3/lesson-1": {
+          "name": "분위기 연구"
+        },
+        "vigenere/Vigenere": {
+          "name": "비즈네르"
+        },
+        "dance-ai-2023/lesson-1": {
+          "name": "댄스 파티: A.I. 에디션",
+          "overview": "이 액티비티에서는 모든 연령대의 학습자가 안전하고 창의적인 환경에서 코딩과 인공 지능에 대한 입문 경험을 하게 됩니다. 이 수업은 모든 연령대의 학습자를 위해 설계되었지만 읽을 수 있어야 합니다. 이 튜토리얼은 음악에 반응하도록 만들어졌기 때문에 이 액티비티에서 학생들은 소리를 플레이해야 합니다.",
+          "preparation": "### 아워오브코드를 계획하는 방법\n\n학교에서 아워오브코드를 계획하고, 실행하고, 기념하는 데 필요한 자료를 [here](https://hourofcode.com/us/how-to)에서 찾아보세요!",
+          "purpose": "코딩을 흥미롭고 즐거운 경험으로 만드는 것은 컴퓨터 과학에 대한 관심을 키우는 데 필수적입니다. 이 수업은 즐거운 순간으로 가득합니다. 학생들은 코드를 사용하여 간단한 드래그 앤 드롭 코딩 블록으로 색과 움직임이 돋보이는 댄스 안무를 만듭니다. 학생들은 A.I. 봇을 알게 되며, 이를 통해 자신의 댄스 분위기에 맞는 완벽한 효과를 찾을 수 있도록 지시하게 됩니다."
         }
       }
     }

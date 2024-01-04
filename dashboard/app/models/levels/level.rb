@@ -92,7 +92,7 @@ class Level < ApplicationRecord
     teacher_markdown
     bubble_choice_description
     thumbnail_url
-    start_html
+    start_libraries
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
@@ -333,6 +333,7 @@ class Level < ApplicationRecord
     'Pixelation', # widget
     'Poetry', # no ideal solution
     'PublicKeyCryptography', # widget
+    'Pythonlab', # no ideal solution
     'ScriptCompletion', # unknown
     'StandaloneVideo', # no user submitted content
     'TextCompression', # widget
@@ -785,7 +786,7 @@ class Level < ApplicationRecord
   # These properties are usually just the serialized properties for
   # the level, which usually include levelData.  If this level is a
   # StandaloneVideo then we put its properties into levelData.
-  def summarize_for_lab2_properties
+  def summarize_for_lab2_properties(script)
     video = specified_autoplay_video&.summarize(false)&.camelize_keys
     properties_camelized = properties.camelize_keys
     properties_camelized[:levelData] = video if video

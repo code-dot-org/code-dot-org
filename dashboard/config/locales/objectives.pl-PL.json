@@ -989,12 +989,6 @@
         "9ea5d8fd-1b7d-4655-b4b1-75fd09545838": {
           "description": "Dzielić się kreatywnym rekwizytem z innymi uczniami."
         },
-        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
-          "description": "Twórz nowe duszki i przypisuj im kostiumy i lokalizacje"
-        },
-        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
-          "description": "Stwórz interaktywną animację za pomocą duszków i zdarzeń."
-        },
         "f94d8eca-cf05-40a8-acf0-8c5b1ed3868f": {
           "description": "Utwórz i użyj duszka"
         },
@@ -3458,14 +3452,14 @@
         "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
           "description": "Stosować właściwą terminologię mówiąc o myszce, panelu dotykowego lub ekranu dotykowego."
         },
-        "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
-          "description": "Opracowuj programy reagujące na określone czasowo zdarzenia."
+        "120d0539-1db0-452c-ab3c-e15980fbef26": {
+          "description": "Zastanów się, w jaki sposób komputery mogą wnosić wkład do procesów twórczych."
         },
-        "1e1c0724-7d86-4304-a73b-6f083be036fc": {
-          "description": "Zilustruj zmiany nastroju w wierszu."
+        "3d8bf8f0-1aa6-4758-9acb-f2fc35e3af5a": {
+          "description": "Wykorzystaj A.I., aby wybrać i wygenerować odpowiednie efekty specjalne na podstawie wybranych emotikonów, aby poprawić wrażenia wizualne potańcówki."
         },
-        "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
-          "description": "Reprezentuj w tekście język figuratywny i dosłowny."
+        "eaa9f1b1-c83f-4cc7-aff7-c1da143706a1": {
+          "description": "Użyj podstawowych koncepcji kodowania, aby programować elementy interaktywne, które odpowiadają na dane wejściowe użytkownika, takie jak naciśnięcia klawiszy i zdarzenia czasowe."
         }
       }
     }

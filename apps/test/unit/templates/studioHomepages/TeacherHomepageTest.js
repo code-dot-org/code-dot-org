@@ -15,7 +15,6 @@ const DEFAULT_PROPS = {
   topCourse,
   plCourses,
   topPlCourse,
-  isEnglish: true,
   joinedStudentSections: [],
   joinedPlSections: [],
   ncesSchoolId: 'school-id',
@@ -139,19 +138,23 @@ describe('TeacherHomepage', () => {
     assert(!wrapper.find('Notification').exists());
   });
 
-  it('renders CensusTeacherBanner if showCensusBanner is true', () => {
-    const wrapper = setUp({showCensusBanner: true});
-    assert(wrapper.find('CensusTeacherBanner').exists());
-  });
-
   /*
-    We have disabled the AFE Banner on the Teacher Homepage (September 2023) to conserve
+    We have disabled the Census Teacher Banner on the Teacher Homepage (November 2023) to conserve
     space. If we decide to show the banner again this test will need to be updated. See
     TeacherHomepage.jsx to make the banner show.
    */
-  it('does not render a DonorTeacherBanner even if isEnglish and afeEligible are true', () => {
-    const wrapper = setUp({isEnglish: true, afeEligible: true});
-    assert(!wrapper.find('DonorTeacherBanner').exists());
+  it('does not render CensusTeacherBanner even if showCensusBanner is true', () => {
+    const wrapper = setUp({showCensusBanner: true});
+    assert(!wrapper.find('CensusTeacherBanner').exists());
+  });
+
+  /*
+    This test will need to be updated according to whether the banner is showing,
+    as determined by shouldShowAFEBanner in TeacherHomepage.jsx.
+   */
+  it('renders a DonorTeacherBanner if afeEligible is true', () => {
+    const wrapper = setUp({afeEligible: true});
+    assert(wrapper.find('DonorTeacherBanner').exists());
   });
 
   it('renders a TeacherSections component', () => {

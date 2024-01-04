@@ -52,6 +52,7 @@ hu:
         age: 'Kor'
         gender: 'Nem'
         edit_header: 'Felhasználói adatok szerkesztése'
+        ai_settings_header: 'AI beállítások'
         finish_sign_up_header: 'A profilod létrehozásának befejezése'
         finish_sign_up_header_error: 'Kérjük, javítsd a következő hibákat:'
         finish_sign_up_subheader: 'Töltsd ki az alábbi adatokat <strong>%{email}</strong> Code.org fiókod létrehozásához.'
@@ -1173,4 +1174,3 @@ hu:
   reset_predict_progress_button: "Válasz törlése"
   pixelation:
     binary: "Bináris"
-

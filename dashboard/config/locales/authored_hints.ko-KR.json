@@ -14276,73 +14276,73 @@
           "hint1": "'실행 시' 아래에 적어도 하나의 '인쇄' 블록을 연결해야 합니다."
         },
         "csc_ecosystems_algae_freeplay_2023": {
-          "YouCan": "다음을 수행할 수 있습니다. \n\n-   물고기 수 변경\n-   조류 수 변경\n-   물고기와 해조류가 다시 자랄 \n    때까지 걸리는 시간 (초) 변경\n-   기타 수정",
-          "change": "시뮬레이션을 몇 가지 변경하십시오!"
+          "YouCan": "이렇게 해보세요:\n\n-   물고기 수를 바꿔보세요\n-   해조류 양을 바꿔보세요\n-   물고기와 해조류가 다시 자라기까지 걸리는 시간(초)을 바꿔보세요\n-   그 외 다른 부분도 바꿔보세요",
+          "change": "시뮬레이션을 조금씩 바꿔보세요!"
         },
         "csc_ecosystems_arctic_2023": {
-          "hint1": "북극곰은 더 커야 해요!크기를 30 이상으로 변경하세요.",
-          "hint2": "북극곰이 사냥할 얼음이 더 많이 생기도록 배경을 바꿔보세요. "
+          "hint1": "북극곰이 더 커져야 합니다! 북극곰의 크기를 30 이상으로 바꿔보세요.",
+          "hint2": "북극곰의 사냥 장소인 얼음이 더 많아지도록 배경을 바꿔보세요."
         },
         "csc_ecosystems_desert_2023": {
-          "hint1": "토끼는 더 빨리 움직여야 해요!토끼의 \n속도를 0 이상으로 변경하세요."
+          "hint1": "토끼가 더 빨리 움직여야 해요! 토끼의 속도가 0을 넘게 바꿔보세요."
         },
         "csc_ecosystems_giraffe_evo_2023": {
           "first_event_hint": "'이벤트' (#6AF36C) 에서 목부분이 짧은 기린을 사용하나요? \n\n의상이 **짧은 목에서 긴 목**으로 바뀌나요?\n\n체인지 코스튬 블록은 다음과 같아야 합니다.\n<xml>\n<block type=\"gamelab_setAnimation\">\n  <field name=\"ANIMATION\">\"giraffe_longer_neck\"</field>\n  <value name=\"THIS\">\n    <block type=\"gamelab_allSpritesWithAnimation\" movable=\"false\">\n      <field name=\"ANIMATION\">\"giraffe_shorter_neck\"</field>\n    </block>\n  </value>\n</block></xml>"
         },
         "csc_ecosystems_marsh_2023": {
-          "Hint1": "개구리가 더 필요해!개구리 수를 0마리 이상으로 변경하세요."
+          "Hint1": "개구리가 더 있어야 해요! 개구리 수가 0마리를 넘게 바꿔보세요."
         },
         "csc_ecosystems_ocean_algae_2023": {
-          "Connect": "eat 블록이 이벤트 블록에 연결되어 있는지 확인하십시오. \n\n퍼즐 조각처럼 서로 맞물리셔야 해요!"
+          "Connect": "'먹는다' 블록이 이벤트 블록에 연결됐는지 확인하세요.\n\n퍼즐 조각처럼 서로 딱 맞아야 합니다!"
         },
         "csc_ecosystems_ocean_boat_2023": {
-          "Catch": "보트가 물고기를 잡을 수 있도록 캐치 오브젝트 블록을 사용하십시오.",
-          "CatchUnder": "어획물 블록은 보트가 \n물고기에 닿는 이벤트 아래에\n연결되어야 합니다."
+          "Catch": "어선이 물고기를 잡을 수 있게 '대상을 잡는다' 블록을 사용하세요.",
+          "CatchUnder": "'대상을 잡는다' 블록을 '어선이 물고기에 닿을 때' 이벤트 아래에 연결해야 합니다."
         },
         "csc_ecosystems_ocean_coral_2023": {
-          "BlockInside": "갈아입을 코스튬 블록을 조류 블록 안에 넣으세요.",
-          "Costume": "해조류가 너무 많으면 산호가 손상됩니다. \n\n다음은 코스튬 체인지 블록을 사용하세요.",
-          "TooMuch": "조류 블록이 너무 많으면 물고기가 해조류에 닿을 때 발생하는 이벤트와 연결하십시오."
+          "BlockInside": "'모습 바꾸기' 블록을 '해조류가 너무 많으면' 블록 안에 넣으세요.",
+          "Costume": "해조류가 너무 많으면 산호가 해를 입습니다.\n\n이제 '모습 바꾸기' 블록을 사용해 보세요.",
+          "TooMuch": "'해조류가 너무 많으면' 블록을 '물고기가 해조류에 닿을 때' 이벤트와 연결하세요."
         },
         "csc_ecosystems_ocean_coral_health_2023": {
-          "Below": "마지막 레벨을 끝낸 작업 공간의 맨 아래에 연결 블록을 두십시오!",
-          "BlocksInside": "해조류가 너무 적으면 물고기는 떠납니다. \n\n조류 블록 크기가 너무 적으면 나머지 블록은 안에 넣으세요.",
-          "TooLittle": "너무 적은 경우 조류 블록을 물고기가 해조류에 닿을 때 이벤트에 연결하십시오."
+          "Below": "연결 블록을 지난 레벨에서 끝낸 작업 공간 맨 밑으로 옮겨보세요!",
+          "BlocksInside": "해조류가 너무 적으면 물고기는 떠납니다.\n\n'해조류가 너무 적으면' 블록 안에 다른 블록을 넣어주세요.",
+          "TooLittle": "'해조류가 너무 적으면' 블록을 '물고기가 해조류에 닿을 때' 이벤트와 연결하세요."
         },
         "csc_ecosystems_ocean_fish_2023": {
-          "No Code": "아직 코딩할 내용이 없습니다.이 시스템이 작동하는 모습을 지켜보세요. "
+          "No Code": "아직 코딩할 내용이 없습니다. 이 시스템이 작동하는 모습을 관찰하세요."
         },
         "csc_ecosystems_ocean_justright_algae": {
-          "Bellow": "마지막 레벨을 끝낸 작업 공간의 맨 아래에 연결 블록을 두십시오!",
-          "JustRight": "딱 맞는 해조류 블록을 물고기가 해조류에 닿았을 때 발생하는 이벤트와 연결하세요.",
-          "costume": "해조류가 잘 잡히면 산호는\n건강해질 것입니다. \n\n딱 맞다면 조류 블록 안에 있는 갈아입을 코스튬 블록을 사용하세요."
+          "Bellow": "연결 블록을 지난 레벨에서 끝낸 작업 공간 맨 밑으로 옮겨보세요!",
+          "JustRight": "'해조류가 적당하면' 블록을 '물고기가 해조류에 닿을 때' 이벤트와 연결하세요.",
+          "costume": "해조류의 양이 적당하면 산호는 건강해질 겁니다.\n\n'모습 바꾸기' 블록을 '해조류가 적당하면' 블록 안에 넣으세요."
         },
         "csc_ecosystems_rainforest_freeplay_2023": {
-          "hint1": "앵무새가 너무 많아요!앵무새\n수를 8마리 미만으로 변경하세요."
+          "hint1": "아직도 앵무새가 너무 많아요! 앵무새 수를 8마리 미만으로 바꿔보세요."
         },
         "csc_ecosystems_solution1_2023": {
-          "hint1": "프로그램이 시작되기 전에 물고기 0마리가 \n잡혔습니다.작업 공간 맨 위에 있는 'FishCaucted를 0으로 설정'을 사용하세요. ",
-          "hint2": "캐치 피쉬 블록\n아래에 있는 'FishCatch by 1' 변경을 사용하여 보트가 잡은\n각 물고기의 수를 세세요.",
-          "hint3": "'보트 스테이즈'\n블록을 **아래**, '체인지 피쉬 캐치 바이 1' 블록 아래에 연결하세요. "
+          "hint1": "프로그램 시작 전에 물고기 0마리를 잡았습니다. 작업 공간 맨 위에 있는 '잡은 물고기 다음으로 설정: 0'을 사용해 보세요.",
+          "hint2": "'물고기를 잡는다' 블록 아래에 '잡은 물고기 다음 배수로 변경: 1'을 사용해 어선이 잡은 물고기를 세보세요.",
+          "hint3": "'어선이 말한다' 블록을 '잡은 물고기 다음 배수로 변경: 1' **아래**에 연결하세요."
         },
         "csc_ecosystems_solution1b_2023": {
-          "hint1": "마지막 레벨에서 \n종료한 '보트가 물고기에 닿을 때' 이벤트에서 블록을 \n계속 연결하세요!",
-          "hint2": "보트가 물고기 5마리에서 낚시를 멈추게 하려면, '배가 물고기에 닿았을 때' 이벤트 끝에 있는 'if FishCaught = 5' 블록을 연결하세요.",
-          "hint3": "그런 다음 'if FishCaught = 5'\n블록의**내부**에 '보트 제거' 블록을 추가합니다."
+          "hint1": "마지막 레벨에서 만들었던 '어선이 물고기에 닿을 때' 이벤트 아래로 블록을 계속 연결하세요!",
+          "hint2": "어선이 물고기 다섯 마리를 잡았을 때 고기잡이를 멈추게 하려면, '어선이 물고기에 닿을 때' 이벤트 끝에 '만약 잡은 물고기= 5' 블록을 연결하세요.",
+          "hint3": "그런 다음 '만약 잡힌 물고기= 5' 블록 **안**에 '어선을 제거한다' 블록을 추가하세요."
         },
         "csc_ecosystems_solution2_2023": {
-          "Hint1": "**참고**: 새 블록에 맞추려면  <code style=\"color:black; background-color:#6AF36C\">When touches</code> 코드 중 일부를 화면 아래쪽으로 드래그해야 할 수도 있습니다.",
-          "hint2": "작업 영역 상단에서 백그라운드 블록을 실행할 때 해당 블록과 연결합니다.",
-          "hint3": "배경 아래에서는\n낚시\n구역에서만\n낚시를 시작합니다."
+          "Hint1": "**참고**: 새로 추가하는 블록이 들어갈 수 있게 <code style=\"color:black; background-color:#6AF36C\">닿을 때</code> 코드 일부를 화면 아래로 내려야 할 수도 있습니다.",
+          "hint2": "작업 공간 맨 위로 가서 '배경' 블록을 '실행 시'와 연결하세요.",
+          "hint3": "'배경' 아래에 '어업 구역에서만 물고기를 잡는다' 블록을 연결하세요."
         },
         "csc_ecosystems_solution3A_2023": {
-          "hint1": "'4초마다 반복' 블록\n아래에 새 블록을 추가합니다.",
-          "hint2": "작업 공간 상단의 '낚시 금지 배경'을 '\n4초마다' 블록 아래에 \n연결합니다.",
-          "hint3": "'낚시 금지 배경'에서 '낚시\n시작'을 연결하세요. "
+          "hint1": "'4초마다 반복' 블록 아래에 새로운 블록을 추가하세요.",
+          "hint2": "작업 공간 위쪽에 있는 '어업 금지 배경'을 '4초마다 반복' 블록 아래에 연결하세요.",
+          "hint3": "'어업 금지 배경' 아래에 '어업 중단하기'를 연결하세요."
         },
         "csc_ecosystems_solution3B_2023": {
-          "hint1": "'9초마다' 반복 블록 아래에\n새 블록을 추가합니다.",
-          "hint2": "'낚시 금지 배경'\n및 '낚시 금지 시즌 시작' 동작 사용"
+          "hint1": "'9초마다 반복' 블록 아래에 새로운 블록을 추가하세요.",
+          "hint2": "'어업 금지' 배경과 '어업 금지 기간 시작' 행동을 사용해 보세요."
         },
         "csc_ecosystems_whale_explain_2023": {
           "event_hint": "이벤트 아래에 '배경 설정' 블록과 '의상 변경' 블록을 추가하세요. \n\n이벤트를 시작하려면 아래쪽 화살표를 누르는 것을 잊지 마세요! \n\n<xml><block type=\"gamelab_keyPressed\"><field name=\"CONDITION\">\"when\"</field><field name=\"KEY\">\"down\"</field><next><block type=\"gamelab_setBackgroundImageAs\"><field name=\"IMG\">\"night_moon\"</field><next><block type=\"gamelab_setAnimation\"><field name=\"ANIMATION\">\"firefily\"</field><value name=\"THIS\"><block type=\"gamelab_allSpritesWithAnimation\"><field name=\"ANIMATION\">\"firefily_dark\"</field></block></value></block></next></block></next></block></xml>"
@@ -14392,6 +14392,36 @@
         },
         "csc_timecapsule_textstyle_2023": {
           "hint1": "드롭다운을 사용하여 다양한 색상과 효과를 선택할 수 있습니다.\n\n![](<https://images.code.org/b3cd57bafe3e5eb487d61ef846a4715c-image-1660769880438.57.55 PM.png>)"
+        },
+        "dance_ai_code_at_measure": {
+          "hint1": "'AI 생성 효과' 블록을 다음과 같이 작업 공간의 '2 마디에' 이벤트에 연결합니다: \n\n[블러클리 블록][0]",
+          "hint2": "[블러클리 블록][0]  블록을 클릭하면 새로운 효과를 만드세요. "
+        },
+        "dance_ai_code_key_press": {
+          "hint1": "💡 **여전히 잘 안되나요?** 이벤트 동영상을 다시 시청하여 이벤트 작동 방식을 알아보세요. ",
+          "hint2": "💡 다음은 코드가 어떤 모습일지 보여주는 예시입니다. <xml>\n<xml xmlns=\"https://developers.google.com/blockly/xml\">\n\n  <block type=\"Dancelab_whenKey\" id=\"*R3Us3z5;rM#sBE?1zjX\" deletable=\"false\" x=\"19\" y=\"221\">\n    <field name=\"KEY\">“위로”</field>\n    <next>\n      <block type=\"Dancelab_doMoveEachLR\" id=\"*hCDocpHXqlku@f[[rK=\">\n        <field name=\"GROUP\">“곰”이</field>\n        <field name=\"MOVE\">움직입니다. DAB -1</field>\n        <field name=\"DIR\"></field>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "dance_ai_customize_effect": {
+          "Hint1": "💡 작업 공간의 <xml> <block xmlns=\"https://developers.google.com/blockly/xml\" type=\"Dancelab_ai\" id=\"*6NOt^DsApsRC-pPZKBQ\">\n  <field name=\"VALUE\">{\"inputs\":[\"cool\",\"cold\",\"wavy\"],\"backgroundEffect\":\"sparkles\",\"backgroundColor\":\"cool\",\"foregroundEffect\":\"bubbles\"}</field>\n\n</block> </xml> 블록에서 이모티콘을 클릭하여 효과를 사용자 지정합니다.",
+          "Hint2": "💡 **여전히 잘 안되나요?** 동영상을 보고 효과를 사용자 지정하는 방법을 알아보세요. ",
+          "HintEdit": "💡 A.I.가 작성한 코드를 사용하려면 코드를 표시하도록 전환한 다음 '코드 사용'을 클릭합니다. 블록이 작업 공간의 'AI 생성 효과' 블록을 대체할 것입니다. "
+        },
+        "dance_ai_dancer_and_dance_move": {
+          "HInt2": "댄서는 두 블록 모두에서 동일해야 하며 시퀸스(순서)가 중요합니다.  ",
+          "validation": "💡 다음 블록을 추가하여 첫 번째 댄서를 만들도록 <code style=\"color:white; background-color:#FFBD46\">설정</code> 합니다: \n<xml xmlns=\"https://developers.google.com/blockly/xml\">\n      <block type=\"Dancelab_makeAnonymousDanceSprite\" id=\"1\">\n        <field name=\"COSTUME\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">“CAT”\\</0></field>\n        <field name=\"LOCATION\">{x: 200, y: 200}</field>\n        <next>\n          <block type=\"Dancelab_changeMoveEachLR\" id=\"|y+CWEBlleENO5MU(?yL\">\n            <field name=\"GROUP\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">“CAT”</field>\n            <field name=\"MOVE\">“다음</field>\n            <field name=\"DIR\">”-1</field>\n          </block>\n        </next>\n      </block>\n    </statement>\n\n</xml>"
+        },
+        "dance_ai_generate_effect": {
+          "Hint2": "💡 [블러클리 블록][0]<code style=\"color:white; background-color:#FFBD46\">을 설정</code>에 연결합니다. 그런 다음 클릭하여 시작하세요.",
+          "Hint3": "💡 효과를 다시 생성하거나 이모티콘을 변경하려면 'A.I. 효과 생성' 블록을 다시 클릭하면 됩니다. "
+        },
+        "dance_ai_generate_effect_again": {
+          "Hint1": "💡 노래를 듣고 음악의 분위기에 대해 생각해 보세요. ",
+          "Hint2": "💡 [블러클리 블록][0]<code style=\"color:white; background-color:#FFBD46\">을 설정</code>에 연결합니다. 그런 다음 클릭하여 시작하세요.",
+          "Hint3": "💡 효과를 다시 생성하거나 이모티콘을 변경하려면 'A.I. 효과 생성' 블록을 다시 클릭하면 됩니다."
+        },
+        "dance_ai_try_key_press": {
+          "hint1": "💡 춤이 실행 중이지 않으면, 댄서들은 여러분의 신호에 반응하지 않을 것입니다. ",
+          "hint2": "💡 <code style=\"color:white; background-color:#FFBD46\">실행</code>을 누른 후,  <code style=\"color:white; background-color:#FFBD46\">◀</code> <code style=\"color:white; background-color:#FFBD46\">▶</code> 오른쪽 또는 왼쪽 화살표를 눌러 댄서들에게 신호를 보내세요. "
         },
         "ecosystems_helloworld_say_2023": {
           "add_sprite": "'새 스프라이트 만들기' 블록을 클릭하고 드래그하여 'when run' 아래에 연결합니다. \n\n<xml><block type=\"when_run\" deletable=\"false\"><next><block type=\"gamelab_makeNewSpriteAnon\"><field name=\"ANIMATION_NAME\">\"bunny1_ready\"</field><value name=\"LOCATION\"><block type=\"gamelab_location_picker\" can_disconnect_from_parent=\"false\"><field name=\"LOCATION\">{\"x\":200,\"y\":200}</field></block></value></block></next></block></xml>",

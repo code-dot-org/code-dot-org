@@ -2452,11 +2452,11 @@ ko-KR:
         - {}
       CSD U4 MC Q4_2023:
         answers:
-        - {}
+        - text: 버튼
         - correct: true
+        - text: 드롭다운
         - {}
-        - {}
-        - {}
+        - text: 체크박스
         questions:
         - {}
       CSD U4 MC Q5_2023:
@@ -2980,7 +2980,7 @@ ko-KR:
       CSD U6 MC Q2_2023:
         answers:
         - {}
-        - {}
+        - text: 버튼
         - {}
         - correct: true
           text: 가속도 센서
@@ -2990,7 +2990,7 @@ ko-KR:
       CSD U6 MC Q2_6b2023:
         answers:
         - {}
-        - {}
+        - text: 버튼
         - {}
         - correct: true
           text: 가속도 센서
@@ -6434,7 +6434,7 @@ ko-KR:
         display_name: 과정말 프로젝트
       courseB_EOC2022:
         description: 마지막 레슨에 도달했습니다! 만들 프로젝트를 선택하세요.
-        display_name: 과정말 프로젝트
+        display_name: 종합  프로젝트
       courseB_EOC2022_2023:
         description: 마지막 레슨에 도달했습니다! 만들 프로젝트를 선택하세요.
         display_name: 과정말 프로젝트
@@ -7005,7 +7005,7 @@ ko-KR:
         - text: 아래 코드를 주의 깊게 보세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
       courseD_EOC2022:
         description: 과정 D의 마지막에 도달했습니다! 만들 프로젝트를 선택하세요.
-        display_name: 과정말 프로젝트
+        display_name: 종합 프로젝트
       courseD_EOC2022_2023:
         description: 과정 D의 마지막에 도달했습니다! 만들 프로젝트를 선택하세요.
         display_name: 과정말 프로젝트
@@ -8619,15 +8619,17 @@ ko-KR:
         description: 과정 F의 마지막에 도달했습니다! 만들 프로젝트를 선택하세요.
         display_name: 과정말 프로젝트
       courseF_EOC_examples2022_2022_pilot_-2022-2:
-        display_name: 과정말 프로젝트
+        description: 과정 F의 마지막에 도달했습니다! 체험할 프로젝트를 선택하세요.
+        display_name: 종합 프로젝트
       courseF_EOC_examples2022_2022_pilot_-2022-2_2023:
+        description: 과정 F의 마지막에 도달했습니다! 체험할 프로젝트를 선택하세요.
         display_name: 과정말 프로젝트
       courseF_EOC_examples_2021:
         description: 과정 F의 마지막에 도달했습니다! 만들 프로젝트를 선택하세요.
         display_name: 과정말 프로젝트
       courseF_EOC_samples2022:
         description: 최종 프로젝트를 시작하려고 합니다. 시작하기 전에, 잠시 시간을 내어 예시 프로젝트를 살펴보십시오.
-        display_name: 과정말 프로젝트
+        display_name: 종합  프로젝트
       courseF_EOC_samples2022_2023:
         description: 최종 프로젝트를 시작하려고 합니다. 시작하기 전에, 잠시 시간을 내어 예시 프로젝트를 살펴보십시오.
         display_name: 과정말 프로젝트
@@ -9839,117 +9841,178 @@ ko-KR:
           “질문”은 여러분이 더 알고 싶은 것입니다.\n</div>\n\n**시작할 준비가 되셨나요?** <a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\"
           target=\"_blank\">이 리소스를</a> 사용하여 파트너와 피드백을 공유하세요.\n\n"
       csc_ecosystemes_foodchain_info:
-        markdown: "\n##**모든 생태계는 _정교하게 균형잡힌_ 먹이 사슬을 가지고 있습니다** ## #The 해양 생태계 먹이 사슬\n:
-          >## #1.\n\n\n\n<img src=\"https://images.code.org/2270cbb4656875db210e9871883a7d45-image-1683677265473.jpg\"
-          style= \"width:80%\">\n<div style= \"width: 80%\"> \n\n태양은 조류에서 광합성이 일어나도록
-          에너지를 공급합니다.\n>## #2.해조류는 물고기가 잡아먹습니다.\n>## #3.물고기는 그물이 달린 어선을 이용하는 사람이 잡아서
-          먹습니다. \n\n</div>\n\n\n##**먹이 사슬에 한 가지 생물이 너무 많거나 너무 적으면 생태계 전체에 영향을 미치게
-          됩니다.**\n"
+        markdown: "\n##**모든 생태계에는 _섬세하게 균형 잡힌_ 먹이사슬이 존재합니다** \n###해양생태계 먹이사슬에서는:\n\n\n\n<img
+          src=\"https://images.code.org/2270cbb4656875db210e9871883a7d45-image-1683677265473.jpg\"
+          style= \"width:80%\">\n<div style= \"width: 80%\"> \n\n>###1. 해조류가 광합성을
+          할 수 있도록 태양이 에너지를 공급합니다.\n>###2. 물고기가 해조류를 먹습니다.\n>###3. 그물 달린 어선을 이용하는 인간이
+          물고기를 잡아서 먹습니다.\n\n</div>\n\n\n##**먹이사슬에 생물 하나가 너무 많거나 적으면 생태계 전체에 영향을 미칩니다.**\n"
       csc_ecosystems_choice_freeplay_2023:
-        description: 이러한 생태계 시뮬레이션을 각각 조정해야 합니다.생태계를 선택하고 시뮬레이션을 실행하여 문제를 관찰하고 코드를
-          조정하여 문제를 해결하십시오.
+        description: 다음 생태계 시뮬레이션은 제각기 변화가 필요합니다. 원하는 생태계를 선택하고 시뮬레이션을 실행해 문제점을 관찰한
+          다음 코드를 조정해 문제를 해결해 보세요.
         display_name: 생태계를 선택하세요!
       csc_ecosystems_conditionals_overview:
-        markdown: "#Cause 및 효과 \n\n</div>\n\n조건문 ## 다음으로 물 속에 얼마나 많은 조류가 있는지 확인하는
-          코드를 추가합니다. <br>\n<img src=\"https://images.code.org/8be316d4e408466b4300c614712fd652-image-1684798211348.jpg\"
-          \ width=50% style=\"margin-right: 10px; float: right\">\n<br> <br>\n\n-
-          먼저 컴퓨터가 조건이 참인지 거짓인지 확인합니다.\n\n- 사실이면 내부 블록을 실행합니다.\n- 거짓이면 아무 일도 하지 않습니다.\n\n<br>\n<br>\n<br>\n\n##
-          해조류가 너무 많으면 산호가 아프게 됩니다.\n\n<br>\n\n<img src=\"https://images.code.org/4d8aaa9c6562e0ca0b3d92ff7aed1d03-image-1681847951794.png\"
-          \ width=20% style=\"margin-right: 10px; float: left\">\n<img src=\"https://images.code.org/941774921f367566bef36cb712cf2bfb-image-1681840836607.png\"
-          \ width=30% style=\" margin-right: 10px; float: left\">\n\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n***\n\n\n\n##
-          해조류가 너무 적으면 물고기가 떠납니다\n<img src=\"https://images.code.org/6869f418200edfb88190c0a1e4e5cd10-image-1681838202310.png\"
-          \ width=20% style=\"margin-right: 10px; float: left\">\n\n\n<img src=\"https://images.code.org/233178645539bc7966f55af47865096d-image-1681840833690.png\"
-          \ width=20% style=\" margin-right: 10px; float: left\">\n\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n\n***\n\n\n\n##
-          해조류가 충분하다면생태계는 건강하다\n\n<img src=\"https://images.code.org/8bb9247c35d7d167611b02764beaeff3-image-1681838011797.png\"
-          \ width=20% style=\"margin-right: 30px; float: left\">\n<img src=\"https://images.code.org/b1ed2f5c135f9637fd7a9c5778db2b0c-image-1681840830929.png\"
-          \ width=30% style=\"margin-left: 10px;float: left\">\n<br>\n<br>\n<br>\n<br>\n\n"
+        markdown: |-
+          #원인과 결과 조건문
+
+          </div>
+
+          ##이제 바닷속 해조류의 양을 확인하는 코드를 추가합니다<br>
+          <img src="https://images.code.org/8be316d4e408466b4300c614712fd652-image-1684798211348.jpg"  width=50% style="margin-right: 10px; float: right">
+          <br> <br>
+
+          - 먼저 컴퓨터가 조건이 참인지 거짓인지 확인합니다.
+          - 조건이 참이면 안에 있는 블록을 실행합니다.
+          - 조건이 거짓이면 아무 일도 일어나지 않습니다.
+
+          <br>
+          <br>
+          <br>
+
+          ## 해조류가 너무 많으면 산호가 병에 걸립니다
+
+          <br>
+
+          <img src="https://images.code.org/4d8aaa9c6562e0ca0b3d92ff7aed1d03-image-1681847951794.png"  width=20% style="margin-right: 10px; float: left">
+          <img src="https://images.code.org/941774921f367566bef36cb712cf2bfb-image-1681840836607.png"  width=30% style=" margin-right: 10px; float: left">
+
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+
+          ***
+
+
+
+          ## 해조류가 너무 적으면 물고기가 떠납니다
+          <img src="https://images.code.org/6869f418200edfb88190c0a1e4e5cd10-image-1681838202310.png"  width=20% style="margin-right: 10px; float: left">
+
+
+          <img src="https://images.code.org/233178645539bc7966f55af47865096d-image-1681840833690.png"  width=20% style=" margin-right: 10px; float: left">
+
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+
+
+          ***
+
+
+
+          ## 해조류가 충분하면 생태계가 건강합니다
+
+          <img src="https://images.code.org/8bb9247c35d7d167611b02764beaeff3-image-1681838011797.png"  width=20% style="margin-right: 30px; float: left">
+          <img src="https://images.code.org/b1ed2f5c135f9637fd7a9c5778db2b0c-image-1681840830929.png"  width=30% style="margin-left: 10px;float: left">
+          <br>
+          <br>
+          <br>
+          <br>
       csc_ecosystems_matching_cfu:
         answers:
-        - text: "![] (https://images.code.org/284e3b6e09f5d58052a8840e756644c5-image-1683752491112.png)"
-        - text: "![] (https://images.code.org/d466f0912cd0cadb3d655263c71c072f-image-1683752857648.jpg)"
-        - text: "![] (https://images.code.org/de2ab3c63bc2cf7cb319be86d5dcdec0-image-1683752570051.png)"
-        markdown: |+
-          ## 세 가지 지속 가능한 어업 관행 살펴보기 코드를 일치하는 이미지로
+        - text: "![](https://images.code.org/284e3b6e09f5d58052a8840e756644c5-image-1683752491112.png)"
+        - text: "![](https://images.code.org/d466f0912cd0cadb3d655263c71c072f-image-1683752857648.jpg)"
+        - text: "![](https://images.code.org/de2ab3c63bc2cf7cb319be86d5dcdec0-image-1683752570051.png)"
+        markdown: |
+          ## 세 가지 지속 가능한 어업 방식을 살펴보세요
 
-          드래그하세요.
-
+          이미지에 맞는 코드 그림을 드래그해 옮겨보세요.
         questions:
-        - text: 보트 낚시 구역을 만드세요![] (https://images.code.org/5f5e0640a82242d632db10b872280e18-image-1683753001613.gif)
-        - text: |-
-            낚시 시즌과 낚시 금지 시즌을
-            시작하세요![] (https://images.code.org/becad47fd19a4d0e938a0cd10c404e41-image-1683838684289.gif)
-        - text: 낚시 제한을 설정하세요![] (https://images.code.org/f8bbd98ff6199af5d3ad23d64f39629d-image-1683753402925.gif)
-        title: 코드를 이미지와 일치시키세요
+        - text: 어선의 어업 구역을 만들어 보세요![](https://images.code.org/5f5e0640a82242d632db10b872280e18-image-1683753001613.gif)
+        - text: 어업 허용 기간과 어업 금지 기간을 설정해 보세요![](https://images.code.org/becad47fd19a4d0e938a0cd10c404e41-image-1683838684289.gif)
+        - text: 어업 제한을 설정해 보세요![](https://images.code.org/f8bbd98ff6199af5d3ad23d64f39629d-image-1683753402925.gif)
+        title: 이미지에 맞는 코드 찾기
       csc_ecosystems_matching_conditionals:
         answers:
-        - text: "![] (https://images.code.org/db1db479bec9b40c6e0574ade394d32b-image-1680118613718.36.41
+        - text: "![](https://images.code.org/db1db479bec9b40c6e0574ade394d32b-image-1680118613718.36.41
             PM.png)"
-        - text: "![] (https://images.code.org/7c9171ab2ee2e833e5ff60d5519d8728-image-1680118617438.31.00
+        - text: "![](https://images.code.org/7c9171ab2ee2e833e5ff60d5519d8728-image-1680118617438.31.00
             PM.png)"
-        - text: "![] (https://images.code.org/412968ba617ef19d2049e0e63d271937-image-1680118620636.30.50
+        - text: "![](https://images.code.org/412968ba617ef19d2049e0e63d271937-image-1680118620636.30.50
             PM.png)"
-        markdown: |
-          ## 세 가지 생태계를 살펴보세요.
+        markdown: |-
+          ## 세 가지 생태계를 관찰하세요
 
-          한 생태계는 균형을 이루고 다른 두 생태계는 서로 다른 방식으로 불균형을 이루고 있습니다.코드를 일치하는 이미지로 드래그하세요.
+          한 생태계는 균형이 잡혀 있고 다른 두 생태계는 서로 다른 방식으로 불균형합니다. 이미지에 맞는 코드 그림을 드래그해 옮겨보세요.
         questions:
-        - text: 조류가 너무 적으면 물고기가 떠납니다.![] (https://images.code.org/c0a28473307b7e9b0e827532d2a6ddda-image-1680212227032.png)
+        - text: 해조류가 너무 적으면 물고기가 떠납니다. ![](https://images.code.org/c0a28473307b7e9b0e827532d2a6ddda-image-1680212227032.png)
         - text: |-
-            해조류가 너무 많으면 산호가 아플 수 있습니다. <br>
-            ![] (https://images.code.org/1230fd96832b692b0c8ab88e77957f33-image-1680212254888.png)
-        - text: 적절한 양의 해조류는 병든 산호를 치유하고 물고기도 건강하게 유지합니다.![] (https://images.code.org/3dd061538a7a73285aa0916fdde34e77-image-1680212284869.png)
-        title: 코드를 이미지와 일치시키세요
+            해조류가 너무 많으면 산호가 병에 걸립니다. <br>
+            ![](https://images.code.org/1230fd96832b692b0c8ab88e77957f33-image-1680212254888.png)
+        - text: 해조류가 적당하면 병든 산호가 치유되고 물고기도 건강해집니다. ![] (https://images.code.org/3dd061538a7a73285aa0916fdde34e77-image-1680212284869.png)
+        title: 이미지에 맞는 코드 찾기
       csc_ecosystems_matching_events:
         answers:
         - text: "![] (https://images.code.org/bf70d0664e68690f2359a48365e50ccc-image-1680556679495.16.33
             PM.png)"
         - text: "![] (https://images.code.org/fe4d2803162186a8e53ec0027f27a206-image-1680556683660.36.04
             PM.png)"
-        markdown: |+
-          스프라이트가 두 애니메이션에 닿았을 때 어떤 일이 일어나는지 보세요.그런 다음 각 코드 그림을 일치하는 이미지로 드래그하십시오.
-
-
+        markdown: 아래 두 가지 애니메이션에서 스프라이트가 닿으면 무슨 일이 일어나는지 살펴보세요. 그런 다음 이미지에 맞는 코드 그림을
+          드래그해 옮겨보세요.
         questions:
-        - text: 보트가 물고기를 잡습니다.![] (https://images.code.org/bcdefefdd1787330e3ad72558b5b492d-image-1680556053866.gif)
-        - text: 물고기는 해조류를 먹습니다.![] (https://images.code.org/73febc58a3d23fbf4c66e693abec9e3d-image-1680556608027.gif)
-        title: 코드를 애니메이션과 일치시키세요
+        - text: 어선이 물고기를 잡습니다. ![] (https://images.code.org/bcdefefdd1787330e3ad72558b5b492d-image-1680556053866.gif)
+        - text: 물고기가 해조류를 먹습니다. ![](https://images.code.org/73febc58a3d23fbf4c66e693abec9e3d-image-1680556608027.gif)
+        title: 애니메이션에 맞는 코드 찾기
       csc_ecosystems_overfishing_solution2_overview:
-        markdown: "> #Sustainable 낚시 연습 #2:\n>># #Create 낚시 <img src=\"https://images.code.org/123dd5c82e4c03dcbc32b775fd16ec60-image-1681937158113.png\"
-          \ width=400 style=\"margin-right: 30px; float: left\">\n시즌**사람들이 물고기를 잡을
-          수 있는 시간을 제한하세요.낚시 시즌이 아닐 때는 생태계가 \n<br>\n\n회복될 시간이 있습니다.** #Save 우리 바다!
-          \n<img src=\"https://images.code.org/f3f55eddff9891464c8fb5a5405c31c3-image-1681781301257.png\"
+        markdown: ">#지속 가능한 어업 방식 #2:\n>>##어업 허용 기간 설정하기 <img src=\"https://images.code.org/123dd5c82e4c03dcbc32b775fd16ec60-image-1681937158113.png\"
+          \ width=400 style=\"margin-right: 30px; float: left\">\n**물고기를 잡을 수 있는 시기에
+          제한을 둡니다. 어업 금지 기간에 생태계는 회복할 시간이 생깁니다.**\n<br>\n\n#바다를 구해주세요! \n<img src=\"https://images.code.org/f3f55eddff9891464c8fb5a5405c31c3-image-1681781301257.png\"
           width=250 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n<img
           src=\"https://images.code.org/cbccfc42b7e1fe329ac7c9c37dfcb6b5-image-1681781296669.png\"
           width=250 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n\n</div>\n\n###
-          남획은 해양 생물 생태계와 이를 이용하는 사람들에게 해를 끼칠 수 있는 문제입니다.이러한 생태계를 보호하고 어류 개체수가 건강하게
-          유지되도록 하려면 지속 가능한 어업을 실천하는 것이 중요합니다.\n\n\n\n<br>\n<br>\n<br>\n"
+          남획은 해양생태계와 그에 의존하는 인간에게 심각한 해가 될 수 있습니다. 생태계를 보호하고 물고기 수가 충분히 유지되도록 지속 가능한
+          어업을 실천해야 합니다.\n\n\n\n<br>\n<br>\n<br>\n"
       csc_ecosystems_overfishing_solution3_overview:
-        markdown: "> #Sustainable 낚시 관행 #3:\n>># #Set 낚시 제한 <img src=\"https://images.code.org/58d4ca52deba39a990c3165ba16e284b-image-1681747630352.png\"
-          \ width=300 style=\"margin-right: 30px; float: left\">\n**과학자들은 바다에 해를 끼치지
-          않고 얼마나 많은 물고기를 잡을 수 있는지 알아내는 데 도움을 줄 수 있습니다.그러면 어부들은 그 많은 물고기만 잡을 수 있다는
-          것을 알게 될 것입니다.** #Save 우리 바다! \n<br>\n<br>\n<br>\n\n \n<img src=\"https://images.code.org/35e557d27c4bdb5f546da560716dc10b-image-1681756387784.jpg\"
-          width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n###
-          우리는 힘을 합쳐 다음 세대를 위해 바다에 생명이 넘칠 수 있도록 도울 수 있습니다!\n\n\n\n<br>\n<br>\n<br>\n\n"
+        markdown: |+
+          >#지속가능한 어업 방식 #3:
+          >>##어업 제한 설정하기<img src="https://images.code.org/58d4ca52deba39a990c3165ba16e284b-image-1681747630352.png"  width=300 style="margin-right: 30px; float: left">
+          **과학자들은 바다에 해를 끼치지 않으면서 얼마나 많은 물고기를 잡아도 되는지 알아낼 수 있습니다. 그러면 어부는 물고기를 그만큼만 잡아야 한다는 것을 알게 됩니다.**
+          <br>
+          <br>
+          <br>
+
+          #바다를 구해주세요!
+          <img src="https://images.code.org/35e557d27c4bdb5f546da560716dc10b-image-1681756387784.jpg" width=400 style="margin-left: 30px; margin-bottom: 30px; float: right">
+          </div>
+
+          ### 모두 힘을 합치면 다음 세대를 위해 생명력 넘치는 바다를 지킬 수 있습니다!
+
+
+
+          <br>
+          <br>
+          <br>
+
       csc_ecosystems_overfishing_solutions_overview:
-        markdown: "#Save 우리의 바다! \n<img src=\"https://images.code.org/d4267a1de975b8ea46468f74187eb95c-image-1681756621010.jpg\"
+        markdown: "#바다를 구해주세요!\n<img src=\"https://images.code.org/d4267a1de975b8ea46468f74187eb95c-image-1681756621010.jpg\"
           width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n###
-          바다에는 물고기가 많지만 때로는 사람들이 너무 많은 물고기를 잡아서 생태계에 해로울 수 있습니다.다음 레벨에서는 해양 생태계를 보호하는
-          데 도움이 되는 **세 가지 지속 가능한 어업 관행**을 코딩하게 됩니다.\n\n<br>\n\n## #To 해양을 위한 지속 가능한
-          솔루션에 대해 자세히 알아보기: 여기를 클릭하십시오 > #Sustainable 낚시 <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\"
-          target=\"_blank\"></a>\n<br>\n<br>\n\n연습 #1:\n>> # #Fishing <img src=\"https://images.code.org/c33e46309c5335dc557c67c34310e723-image-1681511054034.png\"
-          \ width=300 style=\"margin-right: 30px; float: left\">\n구역**어선은 지정된 구역에서만
-          낚시를 할 수 있습니다.생태계가 회복될 수 있도록 일부 지역에서는 어선의 출입이 금지됩니다.** \n<br>\n<br>\n\n\n"
+          바다에는 물고기가 매우 많지만, 사람들이 물고기를 너무 많이 잡으면 생태계에 해롭습니다. 이 레벨에서는 해양생태계 보호에 도움이
+          되는 **지속 가능한 어업 방식 세 가지**를 코딩해 봅니다.\n\n<br>\n\n###바다를 보호하는 지속 가능한 해결책에 관해
+          자세히 알아보려면 <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\"
+          target=\"_blank\">여기를 클릭하세요</a>\n<br>\n<br>\n\n>#지속 가능한 어업 방식 #1:\n>> ##어업
+          구역 <img src=\"https://images.code.org/c33e46309c5335dc557c67c34310e723-image-1681511054034.png\"
+          \ width=300 style=\"margin-right: 30px; float: left\">\n**어선은 지정된 수역에서만
+          물고기를 잡을 수 있습니다. 생태계 회복을 위해 일부 구역은 어선 출입이 금지됩니다.** \n<br>\n<br>\n\n\n"
       csc_ecosystems_planning:
-        markdown: "# #Share 나만의 생태계 시뮬레이션!\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
-          PM.png\" style= \"width:50%\">\n<div style= \"width: 60%\"> \n\n###**생태학자!이제
-          여러분의 연구를 공유할 시간입니다!**\n\n## #Explain 당신이 관찰한 내용은 다음과 같습니다:\n\n>1.생태계의 먹이
-          사슬을 설명하고 어떻게 코딩했는지 설명해 주세요.\n>2.유기체가 너무 많거나 너무 적었나요?\n>3.시뮬레이션에 적용한 수정 사항을
-          설명하십시오. \n>4.값을 변경한 후 어떤 점을 발견하셨나요?\n</div>\n\n<div style=\"background-color:
+        markdown: "##나만의 생태계 시뮬레이션을 공유하세요!\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:50%\">\n<div style= \"width: 60%\"> \n\n###**생태학자
+          여러분! 여러분의 연구 결과를 공유할 시간입니다!**\n\n###관찰한 내용을 설명하세요.\n\n>1. 관찰한 생태계의 먹이사슬을
+          설명하고 어떻게 코딩했는지 설명해 주세요.\n>2. 생물 하나가 너무 많거나 너무 적었나요?\n>3. 시뮬레이션을 어떻게 수정했는지
+          설명해 주세요.\n>4. 값을 변경한 다음 어떤 점을 발견했나요?\n</div>\n\n<div style=\"background-color:
           #a6e3e8; border-radius: 10px; color: #000000; width: 95%; padding: 0.5px
           20px 1px 20px;\">\n\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right:
           10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px; \">\n\n###**코딩을
-          더 할 준비가 되셨나요?** code.org의 [익스프레스 코스] (https://studio.code.org/s/express-2022)
-          를 통해 자신의 속도에 맞춰 더 많은 컴퓨터 과학을 \n배워보세요.   \n<br>\n</p></div>\n"
+          더 해보고 싶다고요?** \nCode.org의 [속성 과정](https://studio.code.org/s/express-2022)으로
+          원하는 속도에 맞춰 컴퓨터 과학을 계속 배워보세요.   \n<br>\n</p></div>\n"
       csc_mappinglandmarks_markdown_lesson_2:
         markdown: |+
           # #Plan 나만의 랜드마크 지도 이제 나만의 랜드마크 지도를 계획할
@@ -16249,11 +16312,6 @@ ko-KR:
 
           ## 신발 추천 설문조사에 참여하려면 [여기를 클릭하세요] (https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform)
       ml-models-shoe survey_2022:
-        markdown: |
-          ![] (https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
-
-          ## 신발 추천 설문조사에 참여하려면 [여기를 클릭하세요] (https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform)
-      ml-models-shoe survey_2023:
         markdown: |
           ![] (https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
 

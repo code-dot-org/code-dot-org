@@ -5591,15 +5591,6 @@
         "403fc603-5eea-490f-943f-0f0e1d4d99f9": {
           "name": "Aller plus loin"
         },
-        "f0e43cbc-520d-42b7-8de2-0572d569695e": {
-          "name": "Séance d’échauffement"
-        },
-        "726b38ad-28ae-43e1-b7d8-08d13ccda1d3": {
-          "name": "Activité principale"
-        },
-        "26cbfc03-2134-4097-b9c9-a2b7d4227d8f": {
-          "name": "Conclusion"
-        },
         "b47403db-764c-41c2-9c65-eea089621c6f": {
           "name": "Niveaux"
         },
@@ -8457,7 +8448,7 @@
           "name": "Activité principale"
         },
         "a418e7ac-0146-460d-89e6-0acc14aefbb6": {
-          "name": "Opportunités d'extension"
+          "name": "Aller plus loin"
         },
         "6f886134-c10b-497a-880f-f54e2888cf1d": {
           "name": "Échauffement"
@@ -8469,7 +8460,7 @@
           "name": "Conclusion"
         },
         "59dd1048-c18b-43fb-a14c-4feb2887a274": {
-          "name": "Opportunités d'extension"
+          "name": "Aller plus loin"
         },
         "e280ae49-7bb9-4bc9-8dd6-a8c5de968600": {
           "name": "Échauffement"
@@ -8481,7 +8472,7 @@
           "name": "Conclusion"
         },
         "40033029-9a13-473d-9a2a-e6f090865876": {
-          "name": "Opportunités d'extension"
+          "name": "Aller plus loin"
         },
         "3a69a53a-6bb6-40f5-a3cc-ff9b3057085f": {
           "name": "Préparation recommandée"
@@ -8547,7 +8538,7 @@
           "name": "Conclusion"
         },
         "08357969-2113-4ff3-a041-0889105ffc89": {
-          "name": "Opportunités d'extension"
+          "name": "Aller plus loin"
         },
         "ed5b5a6d-063d-493f-a4f3-bbd78d100172": {
           "name": "Préparation recommandée"
@@ -8562,7 +8553,7 @@
           "name": "Conclusion"
         },
         "98fd68a6-ea5e-47f5-93d1-5f6b9aabbe39": {
-          "name": "Options d'extension"
+          "name": "Aller plus loin"
         },
         "29950b6f-42c7-4fae-8b5b-14520331e3f2": {
           "name": "Séance d’échauffement"
@@ -8574,7 +8565,7 @@
           "name": "Conclusion"
         },
         "1684b440-4813-446c-a62d-201cf832b0fd": {
-          "name": "Opportunités d'extension "
+          "name": "Aller plus loin"
         },
         "2acd0565-f462-437c-9be3-66bd44962646": {
           "name": "Préparation recommandée"
@@ -8712,7 +8703,7 @@
           "name": "Conclusion"
         },
         "0e7086c2-52d3-419a-b55c-9881ed7a8335": {
-          "name": "Opportunités d'extension"
+          "name": "Aller plus loin"
         },
         "281ef28f-2969-4c60-80a4-8bdad8662658": {
           "name": "Préparation recommandée"
@@ -8727,7 +8718,7 @@
           "name": "Conclusion"
         },
         "aad4dda1-507b-42a5-a62c-1aac5671cb91": {
-          "name": "Opportunités d'extension"
+          "name": "Aller plus loin"
         },
         "f3ff3f84-baa4-4480-9970-252a7478e738": {
           "name": "Séance d’échauffement"
@@ -8739,7 +8730,7 @@
           "name": "Conclusion"
         },
         "9484e482-4713-4747-84d0-fba065c7e4a1": {
-          "name": "Opportunités d'extension"
+          "name": "Aller plus loin"
         },
         "1bf99ed8-87aa-4bc1-b29e-77d8836cbff5": {
           "name": "Séance d’échauffement"
@@ -8751,7 +8742,7 @@
           "name": "Conclusion"
         },
         "7934c32a-f4ba-48b1-8c92-903075552224": {
-          "name": "Opportunités d'extension"
+          "name": "Aller plus loin"
         },
         "62058ba3-874c-4aae-9d67-8bed1cf236ae": {
           "name": "Échauffement"
@@ -8763,7 +8754,7 @@
           "name": "Conclusion"
         },
         "e57a4ee9-956b-410e-8d3e-b321b0abe71c": {
-          "name": "Opportunités d'extension"
+          "name": "Aller plus loin"
         },
         "291b58e3-fed2-4c56-a443-2ec37239a680": {
           "name": "Séance d’échauffement"
@@ -11403,7 +11394,7 @@
           "name": "Séance d’échauffement"
         },
         "ca6b9610-b612-418d-87bf-bc1776fbd110": {
-          "name": "Activité (30-45 minutes)"
+          "name": "Activité"
         },
         "a5fa2c8b-163e-4cc1-a54b-0ad5d98bb92f": {
           "name": "Conclusion"
@@ -11819,9 +11810,6 @@
         "23ca8a8d-ae20-47f7-bd51-0d69816ff174": {
           "name": "Éthique et IA : confidentialité et avenir du travail"
         },
-        "ee8cbd12-265d-4681-b6c9-05a0a062916d": {
-          "name": "Niveaux"
-        },
         "f4670c8c-98ec-47d0-b458-02a96f130b76": {
           "name": "Séance d’échauffement"
         },
@@ -12144,7 +12132,7 @@
           "name": "Aller plus loin"
         },
         "2f9ea489-720e-4dab-ae4b-4036a6385f4d": {
-          "name": "Séance d'échauffement"
+          "name": "Séance d’échauffement"
         },
         "a4b68e1c-d78c-455c-922f-2fd57f697f58": {
           "name": "Activité principale"
@@ -12226,69 +12214,6 @@
         },
         "ddc8f987-c000-409d-aaf7-8546464a70d9": {
           "name": "Aller plus loin"
-        },
-        "289bbaea-ab5e-48a1-80c3-8299af5a0965": {
-          "name": "Niveaux"
-        },
-        "c2cd2e0e-1e75-44ea-9e26-74c4e81117ce": {
-          "name": "Niveaux"
-        },
-        "b482746d-0030-459f-8657-a2775cf1f2a3": {
-          "name": "Niveaux"
-        },
-        "0f2c3670-022b-44ce-b519-13cb72ccd0fd": {
-          "name": "Niveaux"
-        },
-        "acd32520-21e7-4c29-8e51-5e9caf6a378d": {
-          "name": "Niveaux"
-        },
-        "a83c07a8-61ea-4017-b41d-725d1bd7b425": {
-          "name": "Niveaux"
-        },
-        "0deb9da8-356e-4547-951f-445a58491a24": {
-          "name": "Niveaux"
-        },
-        "941b1202-9ae6-4fbf-b806-c3e4ae8293cc": {
-          "name": "Niveaux"
-        },
-        "bad195ab-b5b0-41e3-9c40-610a35ff0e4f": {
-          "name": "Niveaux"
-        },
-        "41518965-e0d9-4c64-acaa-75abff9eeb52": {
-          "name": "Niveaux"
-        },
-        "f6fdf744-0a0e-4efb-b70e-a4a6f272487d": {
-          "name": "Niveaux"
-        },
-        "f488bd5e-8717-4f17-89de-67eed7656f10": {
-          "name": "Niveaux"
-        },
-        "469ead3b-ff2b-47a4-a58b-bb268370fae4": {
-          "name": "Niveaux"
-        },
-        "b4e1628d-775d-442e-9363-1e4d5d05a9f3": {
-          "name": "Niveaux"
-        },
-        "5c6427ce-49af-4fef-857c-44a01f1583bf": {
-          "name": "Niveaux"
-        },
-        "fb448d2f-35c0-4c79-bf75-b8eb5ee11017": {
-          "name": "Niveaux"
-        },
-        "f64730d7-ba60-489d-a6b5-e33c8768879b": {
-          "name": "Niveaux"
-        },
-        "1e703264-9e5f-4ddb-bfe5-8cbefbb646e4": {
-          "name": "Niveaux"
-        },
-        "1910c7c0-fe86-4867-accd-c9b9c78853b1": {
-          "name": "Niveaux"
-        },
-        "72871561-f49b-4ae5-a5c5-ec0dbfd6f14f": {
-          "name": "Niveaux"
-        },
-        "c728edf8-b7ed-465b-99f4-78f27e751d2b": {
-          "name": "Niveaux"
         },
         "adf2e1d7-848e-4b2e-9f60-a190c85c82ba": {
           "name": "Niveaux"
@@ -12420,6 +12345,21 @@
           "name": "Niveaux"
         },
         "5f5dea02-fd61-4c99-8095-a0e2e5de2471": {
+          "name": "Niveaux"
+        },
+        "289bbaea-ab5e-48a1-80c3-8299af5a0965": {
+          "name": "Niveaux"
+        },
+        "c2cd2e0e-1e75-44ea-9e26-74c4e81117ce": {
+          "name": "Niveaux"
+        },
+        "b482746d-0030-459f-8657-a2775cf1f2a3": {
+          "name": "Niveaux"
+        },
+        "0f2c3670-022b-44ce-b519-13cb72ccd0fd": {
+          "name": "Niveaux"
+        },
+        "acd32520-21e7-4c29-8e51-5e9caf6a378d": {
           "name": "Niveaux"
         },
         "10e6addd-5989-4d95-9384-cb1a33903e99": {
@@ -12731,6 +12671,18 @@
         "2b3a241f-5ee5-4579-9883-832cdd116c43": {
           "name": "Niveaux"
         },
+        "a83c07a8-61ea-4017-b41d-725d1bd7b425": {
+          "name": "Niveaux"
+        },
+        "0deb9da8-356e-4547-951f-445a58491a24": {
+          "name": "Niveaux"
+        },
+        "941b1202-9ae6-4fbf-b806-c3e4ae8293cc": {
+          "name": "Niveaux"
+        },
+        "ee8cbd12-265d-4681-b6c9-05a0a062916d": {
+          "name": "Niveaux"
+        },
         "f652e4d2-c712-4cff-a011-f1dcea192263": {
           "name": "Séance d’échauffement"
         },
@@ -12745,6 +12697,42 @@
         },
         "7e48fd52-decd-48b3-97bf-a71e8dd0f44e": {
           "name": "Aller plus loin"
+        },
+        "bad195ab-b5b0-41e3-9c40-610a35ff0e4f": {
+          "name": "Niveaux"
+        },
+        "41518965-e0d9-4c64-acaa-75abff9eeb52": {
+          "name": "Niveaux"
+        },
+        "f6fdf744-0a0e-4efb-b70e-a4a6f272487d": {
+          "name": "Niveaux"
+        },
+        "f488bd5e-8717-4f17-89de-67eed7656f10": {
+          "name": "Niveaux"
+        },
+        "469ead3b-ff2b-47a4-a58b-bb268370fae4": {
+          "name": "Niveaux"
+        },
+        "b4e1628d-775d-442e-9363-1e4d5d05a9f3": {
+          "name": "Niveaux"
+        },
+        "5c6427ce-49af-4fef-857c-44a01f1583bf": {
+          "name": "Niveaux"
+        },
+        "fb448d2f-35c0-4c79-bf75-b8eb5ee11017": {
+          "name": "Niveaux"
+        },
+        "f64730d7-ba60-489d-a6b5-e33c8768879b": {
+          "name": "Niveaux"
+        },
+        "1e703264-9e5f-4ddb-bfe5-8cbefbb646e4": {
+          "name": "Niveaux"
+        },
+        "1910c7c0-fe86-4867-accd-c9b9c78853b1": {
+          "name": "Niveaux"
+        },
+        "72871561-f49b-4ae5-a5c5-ec0dbfd6f14f": {
+          "name": "Niveaux"
         },
         "35e76968-3525-446c-9256-472e8ecba118": {
           "name": "Niveaux"
@@ -12761,14 +12749,20 @@
         "0145bc8d-b026-434a-9713-9b43c6e34842": {
           "name": "Niveaux"
         },
-        "901e8625-9092-42fc-9fcc-9c665720b1f4": {
+        "c728edf8-b7ed-465b-99f4-78f27e751d2b": {
+          "name": "Niveaux"
+        },
+        "99f155a9-1d50-44df-a647-c8dbaddea32c": {
+          "name": "La Mise en Route"
+        },
+        "d12dc50d-c901-43db-a188-eb1b273239c3": {
           "name": "Séance d’échauffement"
         },
-        "b20b4bbb-2eb1-4c77-b938-e60cd435ce93": {
-          "name": "Activité principale"
-        },
-        "18913d21-3c6f-4dd8-864e-09b70f80e640": {
+        "02b4486f-d09d-4031-8235-0cf728733456": {
           "name": "Conclusion"
+        },
+        "62475558-6554-4337-b3fb-9fb6ba9a886c": {
+          "name": "Après l'activité"
         }
       }
     }

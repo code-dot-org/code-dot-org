@@ -378,6 +378,9 @@
         "Course 4 Artist For Loops 4": {
           "place_counter_variable": "Sleep je teller-variabele in dit blok"
         },
+        "Course 4 Artist Functions challenge": {
+          "Course_4_Artist_Functions_challenge_1": "Merk op dat we alle blokken in categorieën hebben gesorteerd om het overzichtelijk te houden. Klik hier om alle blokken die je nodig hebt te vinden."
+        },
         "Course 4 Artist Vars 1": {
           "repeat_blocks": "Gebruik het \"Herhaal\" blok en plaats dit rond de blokken in de werkruimte"
         },
@@ -898,6 +901,24 @@
         "courseA_collector_preLoops6": {
           "courseA_collector_loops1_1": "Zie je wat nieuwe blokken in de gereedschapskist?  Maak je geen zorgen, we zullen je zo meteen laten zien hoe je ze kunt gebruiken."
         },
+        "courseA_maze_ramp22022": {
+          "courseC_maze_programming2_1": "Dit is de gereedschapskist. Hier vind je extra blokken om je puzzels mee af te maken."
+        },
+        "courseA_maze_ramp2_2019": {
+          "courseC_maze_programming2_1": "Dit is de gereedschapskist. Hier vind je extra blokken om je puzzels mee af te maken."
+        },
+        "courseA_maze_ramp2_2020": {
+          "courseC_maze_programming2_1": "Dit is de gereedschapskist. Hier vind je extra blokken om je puzzels mee af te maken."
+        },
+        "courseA_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "Dit is de gereedschapskist. Hier vind je extra blokken om je puzzels mee af te maken."
+        },
+        "courseA_maze_ramp2_2023": {
+          "courseC_maze_programming2_1": "Dit is de gereedschapskist. Hier vind je extra blokken om je puzzels mee af te maken."
+        },
+        "courseA_maze_ramp3a_2018": {
+          "courseC_maze_programming2_1": "Dit is de gereedschapskist. Hier vind je extra blokken om je puzzels mee af te maken."
+        },
         "courseA_maze_seq4": {
           "made_of_stone": "Deze blokken zijn gemaakt van steen. Je kunt ze verplaatsen, maar je kunt ze niet verwijderen!"
         },
@@ -942,6 +963,39 @@
         },
         "courseA_playLab_events5_2021": {
           "courseA_playLab_events5_1": "Klik hier om de richting van de gebeurtenis pijl te veranderen."
+        },
+        "courseB_Scrat_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "Druk na het verbinden van alle blokken op \"Start\" om je programma uit te voeren."
+        },
+        "courseB_Scrat_ramp12022_2023": {
+          "grade2_CaringForNewPet_0_1": "Druk na het verbinden van alle blokken op \"Start\" om je programma uit te voeren."
+        },
+        "courseB_Scrat_ramp1_2018": {
+          "grade2_CaringForNewPet_0_1": "Druk na het verbinden van alle blokken op \"Start\" om je programma uit te voeren."
+        },
+        "courseB_Scrat_ramp1_2019": {
+          "grade2_CaringForNewPet_0_1": "Druk na het verbinden van alle blokken op \"Start\" om je programma uit te voeren."
+        },
+        "courseB_Scrat_ramp1_2020": {
+          "grade2_CaringForNewPet_0_1": "Druk na het verbinden van alle blokken op \"Start\" om je programma uit te voeren."
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Druk na het verbinden van alle blokken op \"Start\" om je programma uit te voeren."
+        },
+        "courseB_Scrat_ramp3a2022": {
+          "courseC_maze_programming2_1": "Dit is de gereedschapskist. Hier vind je extra blokken om je puzzels mee af te maken."
+        },
+        "courseB_Scrat_ramp3a2022_2023": {
+          "courseC_maze_programming2_1": "Dit is de gereedschapskist. Hier vind je extra blokken om je puzzels mee af te maken."
+        },
+        "courseB_Scrat_ramp3a_2019": {
+          "courseC_maze_programming2_1": "Dit is de gereedschapskist. Hier vind je extra blokken om je puzzels mee af te maken."
+        },
+        "courseB_Scrat_ramp3a_2020": {
+          "courseC_maze_programming2_1": "Dit is de gereedschapskist. Hier vind je extra blokken om je puzzels mee af te maken."
+        },
+        "courseB_Scrat_ramp3a_2021": {
+          "courseC_maze_programming2_1": "Dit is de gereedschapskist. Hier vind je extra blokken om je puzzels mee af te maken."
         },
         "courseB_collector_loops1": {
           "courseB_collector_loops1_1": "Zie je wat nieuwe blokken in de gereedschapskist?  Maak je geen zorgen, we zullen je zo meteen laten zien hoe je ze kunt gebruiken."
@@ -1021,26 +1075,135 @@
         "courseC_harvester_loops1_2023": {
           "courseC_harvester_loops1_callout1": "Het getal 4 bij de pompoen vertelt je dat er 4 pompoenen zijn die je kunt plukken."
         },
+        "courseC_maze_debugging52022": {
+          "courseC_maze_debugging5_1": "Deze blokken zijn vastgezet en kunnen niet worden verwijderd!"
+        },
+        "courseC_maze_debugging5_2019": {
+          "courseC_maze_debugging5_1": "Deze blokken zijn vastgezet en kunnen niet worden verwijderd!"
+        },
+        "courseC_maze_debugging5_2020": {
+          "courseC_maze_debugging5_1": "Deze blokken zijn vastgezet en kunnen niet worden verwijderd!"
+        },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_1": "Deze blokken zijn vastgezet en kunnen niet worden verwijderd!"
+        },
+        "courseC_maze_debugging5_2023": {
+          "courseC_maze_debugging5_1": "Deze blokken zijn vastgezet en kunnen niet worden verwijderd!"
+        },
+        "courseC_maze_debugging9_2021": {
+          "courseC_maze_debugging9_2019_1": "Sleep blokken naar je werkruimte."
+        },
+        "courseC_maze_programming1": {
+          "grade2_CaringForNewPet_0_1": "Druk na het verbinden van alle blokken op \"Start\" om je programma uit te voeren."
+        },
+        "courseC_maze_programming12022": {
+          "grade2_CaringForNewPet_0_1": "Druk na het verbinden van alle blokken op \"Start\" om je programma uit te voeren."
+        },
+        "courseC_maze_programming1_2018": {
+          "grade2_CaringForNewPet_0_1": "Druk na het verbinden van alle blokken op \"Start\" om je programma uit te voeren."
+        },
+        "courseC_maze_programming1_2019": {
+          "grade2_CaringForNewPet_0_1": "Druk na het verbinden van alle blokken op \"Start\" om je programma uit te voeren."
+        },
+        "courseC_maze_programming1_2020": {
+          "grade2_CaringForNewPet_0_1": "Druk na het verbinden van alle blokken op \"Start\" om je programma uit te voeren."
+        },
+        "courseC_maze_programming1_2021": {
+          "grade2_CaringForNewPet_0_1": "Druk na het verbinden van alle blokken op \"Start\" om je programma uit te voeren."
+        },
+        "courseC_maze_programming1_2023": {
+          "grade2_CaringForNewPet_0_1": "Druk na het verbinden van alle blokken op \"Start\" om je programma uit te voeren."
+        },
+        "courseC_maze_programming2": {
+          "courseC_maze_programming2_1": "Dit is de gereedschapskist. Hier vind je extra blokken om je puzzels mee af te maken."
+        },
+        "courseC_maze_programming22022": {
+          "courseC_maze_programming2_1": "Dit is de gereedschapskist. Hier vind je extra blokken om je puzzels mee af te maken."
+        },
+        "courseC_maze_programming2_2018": {
+          "courseC_maze_programming2_1": "Dit is de gereedschapskist. Hier vind je extra blokken om je puzzels mee af te maken."
+        },
+        "courseC_maze_programming2_2019": {
+          "courseC_maze_programming2_1": "Dit is de gereedschapskist. Hier vind je extra blokken om je puzzels mee af te maken."
+        },
+        "courseC_maze_programming2_2020": {
+          "courseC_maze_programming2_1": "Dit is de gereedschapskist. Hier vind je extra blokken om je puzzels mee af te maken."
+        },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_1": "Dit is de gereedschapskist. Hier vind je extra blokken om je puzzels mee af te maken."
+        },
+        "courseC_maze_programming2_2023": {
+          "courseC_maze_programming2_1": "Dit is de gereedschapskist. Hier vind je extra blokken om je puzzels mee af te maken."
+        },
         "courseC_maze_programming3": {
+          "courseC_maze_programming3_2": "Sleep overbodige blokken naar de gereedschapskist om ze weg te gooien.",
           "courseC_maze_programming3_3": "Deze grijze blokken zijn gemaakt van steen en kunnen niet weggegooid worden."
         },
         "courseC_maze_programming32022": {
+          "courseC_maze_programming3_2": "Sleep overbodige blokken naar de gereedschapskist om ze weg te gooien.",
           "courseC_maze_programming3_3": "Deze grijze blokken zijn gemaakt van steen en kunnen niet weggegooid worden."
         },
         "courseC_maze_programming3_2018": {
+          "courseC_maze_programming3_2": "Sleep overbodige blokken naar de gereedschapskist om ze weg te gooien.",
           "courseC_maze_programming3_3": "Deze grijze blokken zijn gemaakt van steen en kunnen niet weggegooid worden."
         },
         "courseC_maze_programming3_2019": {
+          "courseC_maze_programming3_2": "Sleep overbodige blokken naar de gereedschapskist om ze weg te gooien.",
           "courseC_maze_programming3_3": "Deze grijze blokken zijn gemaakt van steen en kunnen niet weggegooid worden."
         },
         "courseC_maze_programming3_2020": {
+          "courseC_maze_programming3_2": "Sleep overbodige blokken naar de gereedschapskist om ze weg te gooien.",
           "courseC_maze_programming3_3": "Deze grijze blokken zijn gemaakt van steen en kunnen niet weggegooid worden."
         },
         "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_2": "Sleep overbodige blokken naar de gereedschapskist om ze weg te gooien.",
           "courseC_maze_programming3_3": "Deze grijze blokken zijn gemaakt van steen en kunnen niet weggegooid worden."
         },
         "courseC_maze_programming3_2023": {
+          "courseC_maze_programming3_2": "Sleep overbodige blokken naar de gereedschapskist om ze weg te gooien.",
           "courseC_maze_programming3_3": "Deze grijze blokken zijn gemaakt van steen en kunnen niet weggegooid worden."
+        },
+        "courseC_maze_programming4": {
+          "courseC_maze_programming4_1": "Dit is je blokkenlimiet. Dit getal laat zien hoeveel van deze blokken je nog mag gebruiken."
+        },
+        "courseC_maze_programming42022": {
+          "courseC_maze_programming4_1": "Dit is je blokkenlimiet. Dit getal laat zien hoeveel van deze blokken je nog mag gebruiken."
+        },
+        "courseC_maze_programming4_2018": {
+          "courseC_maze_programming4_1": "Dit is je blokkenlimiet. Dit getal laat zien hoeveel van deze blokken je nog mag gebruiken."
+        },
+        "courseC_maze_programming4_2019": {
+          "courseC_maze_programming4_1": "Dit is je blokkenlimiet. Dit getal laat zien hoeveel van deze blokken je nog mag gebruiken."
+        },
+        "courseC_maze_programming4_2020": {
+          "courseC_maze_programming4_1": "Dit is je blokkenlimiet. Dit getal laat zien hoeveel van deze blokken je nog mag gebruiken."
+        },
+        "courseC_maze_programming4_2021": {
+          "courseC_maze_programming4_1": "Dit is je blokkenlimiet. Dit getal laat zien hoeveel van deze blokken je nog mag gebruiken."
+        },
+        "courseC_maze_programming4_2023": {
+          "courseC_maze_programming4_1": "Dit is je blokkenlimiet. Dit getal laat zien hoeveel van deze blokken je nog mag gebruiken."
+        },
+        "courseC_maze_programming5": {
+          "": "Op deze blokken staat geen aantal. Je mag er zo veel gebruiken als je wilt!"
+        },
+        "courseC_maze_programming52022": {
+          "": "Op deze blokken staat geen aantal. Je mag er zo veel gebruiken als je wilt!"
+        },
+        "courseC_maze_programming5_2018": {
+          "": "Op deze blokken staat geen aantal. Je mag er zo veel gebruiken als je wilt!"
+        },
+        "courseC_maze_programming5_2019": {
+          "": "Op deze blokken staat geen aantal. Je mag er zo veel gebruiken als je wilt!"
+        },
+        "courseC_maze_programming5_2020": {
+          "": "Op deze blokken staat geen aantal. Je mag er zo veel gebruiken als je wilt!"
+        },
+        "courseC_maze_programming5_2021": {
+          "": "Op deze blokken staat geen aantal. Je mag er zo veel gebruiken als je wilt!"
+        },
+        "courseC_maze_programming5_2023": {
+          "": "Op deze blokken staat geen aantal. Je mag er zo veel gebruiken als je wilt!"
         },
         "courseC_maze_programming7": {
           "courseC_maze_programming7_1": "Dit is je eerste Uitdaging!  Het is de bedoeling dat dit moeilijke puzzles zijn, en je hebt waarschijnlijk meerdere pogingen nodig om ze op te lossen.",
@@ -1176,11 +1339,164 @@
         "courseD_collector_ramp8": {
           "courseD_collector_ramp8_1": "Gebruik dit blok om een enkele schat op te rapen."
         },
+        "courseD_maze_intro42022": {
+          "courseC_maze_programming4_1": "Dit is je blokkenlimiet. Dit getal laat zien hoeveel van deze blokken je nog mag gebruiken."
+        },
+        "courseD_maze_intro4_2019": {
+          "courseC_maze_programming4_1": "Dit is je blokkenlimiet. Dit getal laat zien hoeveel van deze blokken je nog mag gebruiken."
+        },
+        "courseD_maze_intro4_2020": {
+          "courseC_maze_programming4_1": "Dit is je blokkenlimiet. Dit getal laat zien hoeveel van deze blokken je nog mag gebruiken."
+        },
+        "courseD_maze_intro4_2021": {
+          "courseC_maze_programming4_1": "Dit is je blokkenlimiet. Dit getal laat zien hoeveel van deze blokken je nog mag gebruiken."
+        },
+        "courseD_maze_intro4_2023": {
+          "courseC_maze_programming4_1": "Dit is je blokkenlimiet. Dit getal laat zien hoeveel van deze blokken je nog mag gebruiken."
+        },
+        "courseD_maze_intro5a2022": {
+          "": "Op deze blokken staat geen aantal. Je mag er zo veel gebruiken als je wilt!"
+        },
+        "courseD_maze_intro5a_2019": {
+          "": "Op deze blokken staat geen aantal. Je mag er zo veel gebruiken als je wilt!"
+        },
+        "courseD_maze_intro5a_2020": {
+          "": "Op deze blokken staat geen aantal. Je mag er zo veel gebruiken als je wilt!"
+        },
+        "courseD_maze_intro5a_2021": {
+          "": "Op deze blokken staat geen aantal. Je mag er zo veel gebruiken als je wilt!"
+        },
+        "courseD_maze_intro5a_2023": {
+          "": "Op deze blokken staat geen aantal. Je mag er zo veel gebruiken als je wilt!"
+        },
+        "courseD_maze_ramp1": {
+          "grade2_CaringForNewPet_0_1": "Druk na het verbinden van alle blokken op \"Start\" om je programma uit te voeren."
+        },
+        "courseD_maze_ramp12022": {
+          "grade2_CaringForNewPet_0_1": "Druk na het verbinden van alle blokken op \"Start\" om je programma uit te voeren."
+        },
+        "courseD_maze_ramp1_2018": {
+          "grade2_CaringForNewPet_0_1": "Druk na het verbinden van alle blokken op \"Start\" om je programma uit te voeren."
+        },
+        "courseD_maze_ramp1_2019": {
+          "grade2_CaringForNewPet_0_1": "Druk na het verbinden van alle blokken op \"Start\" om je programma uit te voeren."
+        },
+        "courseD_maze_ramp1_2020": {
+          "grade2_CaringForNewPet_0_1": "Druk na het verbinden van alle blokken op \"Start\" om je programma uit te voeren."
+        },
+        "courseD_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Druk na het verbinden van alle blokken op \"Start\" om je programma uit te voeren."
+        },
+        "courseD_maze_ramp1_2023": {
+          "grade2_CaringForNewPet_0_1": "Druk na het verbinden van alle blokken op \"Start\" om je programma uit te voeren."
+        },
+        "courseD_maze_ramp2": {
+          "courseC_maze_programming2_1": "Dit is de gereedschapskist. Hier vind je extra blokken om je puzzels mee af te maken."
+        },
+        "courseD_maze_ramp22022": {
+          "courseC_maze_programming2_1": "Dit is de gereedschapskist. Hier vind je extra blokken om je puzzels mee af te maken."
+        },
+        "courseD_maze_ramp2_2018": {
+          "courseC_maze_programming2_1": "Dit is de gereedschapskist. Hier vind je extra blokken om je puzzels mee af te maken."
+        },
+        "courseD_maze_ramp2_2019": {
+          "courseC_maze_programming2_1": "Dit is de gereedschapskist. Hier vind je extra blokken om je puzzels mee af te maken."
+        },
+        "courseD_maze_ramp2_2020": {
+          "courseC_maze_programming2_1": "Dit is de gereedschapskist. Hier vind je extra blokken om je puzzels mee af te maken."
+        },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "Dit is de gereedschapskist. Hier vind je extra blokken om je puzzels mee af te maken."
+        },
+        "courseD_maze_ramp2_2023": {
+          "courseC_maze_programming2_1": "Dit is de gereedschapskist. Hier vind je extra blokken om je puzzels mee af te maken."
+        },
+        "courseD_maze_ramp3": {
+          "courseC_maze_programming3_2": "Sleep overbodige blokken naar de gereedschapskist om ze weg te gooien."
+        },
+        "courseD_maze_ramp32022": {
+          "courseC_maze_programming3_2": "Sleep overbodige blokken naar de gereedschapskist om ze weg te gooien."
+        },
+        "courseD_maze_ramp3_2018": {
+          "courseC_maze_programming3_2": "Sleep overbodige blokken naar de gereedschapskist om ze weg te gooien."
+        },
+        "courseD_maze_ramp3_2019": {
+          "courseC_maze_programming3_2": "Sleep overbodige blokken naar de gereedschapskist om ze weg te gooien."
+        },
+        "courseD_maze_ramp3_2020": {
+          "courseC_maze_programming3_2": "Sleep overbodige blokken naar de gereedschapskist om ze weg te gooien."
+        },
+        "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_2": "Sleep overbodige blokken naar de gereedschapskist om ze weg te gooien."
+        },
+        "courseD_maze_ramp3_2023": {
+          "courseC_maze_programming3_2": "Sleep overbodige blokken naar de gereedschapskist om ze weg te gooien."
+        },
+        "courseD_maze_ramp4": {
+          "courseC_maze_programming4_1": "Dit is je blokkenlimiet. Dit getal laat zien hoeveel van deze blokken je nog mag gebruiken."
+        },
+        "courseD_maze_ramp4_2018": {
+          "courseC_maze_programming4_1": "Dit is je blokkenlimiet. Dit getal laat zien hoeveel van deze blokken je nog mag gebruiken."
+        },
+        "courseD_maze_ramp4_2019": {
+          "courseC_maze_programming4_1": "Dit is je blokkenlimiet. Dit getal laat zien hoeveel van deze blokken je nog mag gebruiken."
+        },
+        "courseD_maze_ramp4_2020": {
+          "courseC_maze_programming4_1": "Dit is je blokkenlimiet. Dit getal laat zien hoeveel van deze blokken je nog mag gebruiken."
+        },
+        "courseD_maze_ramp5": {
+          "": "Op deze blokken staat geen aantal. Je mag er zo veel gebruiken als je wilt!"
+        },
+        "courseD_maze_ramp52022": {
+          "": "Op deze blokken staat geen aantal. Je mag er zo veel gebruiken als je wilt!"
+        },
+        "courseD_maze_ramp5_2018": {
+          "": "Op deze blokken staat geen aantal. Je mag er zo veel gebruiken als je wilt!"
+        },
+        "courseD_maze_ramp5_2019": {
+          "": "Op deze blokken staat geen aantal. Je mag er zo veel gebruiken als je wilt!"
+        },
+        "courseD_maze_ramp5_2020": {
+          "": "Op deze blokken staat geen aantal. Je mag er zo veel gebruiken als je wilt!"
+        },
+        "courseD_maze_ramp5_2021": {
+          "": "Op deze blokken staat geen aantal. Je mag er zo veel gebruiken als je wilt!"
+        },
+        "courseD_maze_ramp5_2023": {
+          "": "Op deze blokken staat geen aantal. Je mag er zo veel gebruiken als je wilt!"
+        },
+        "courseD_maze_ramp5a": {
+          "": "Op deze blokken staat geen aantal. Je mag er zo veel gebruiken als je wilt!"
+        },
+        "courseD_maze_ramp5a_2018": {
+          "": "Op deze blokken staat geen aantal. Je mag er zo veel gebruiken als je wilt!"
+        },
+        "courseD_maze_ramp5a_2019": {
+          "": "Op deze blokken staat geen aantal. Je mag er zo veel gebruiken als je wilt!"
+        },
+        "courseD_maze_ramp5a_2020": {
+          "": "Op deze blokken staat geen aantal. Je mag er zo veel gebruiken als je wilt!"
+        },
         "courseD_playLab_condFP": {
           "courseD_playLab_condFP_1": "We hebben de blokken in categorieën verdeeld, zodat we je meer instructies kunnen geven om mee te spelen.  Klik hier om te zien waar alle blokken gebleven zijn."
         },
         "courseD_playLab_condFP_2018": {
           "courseD_playLab_condFP_1": "We hebben de blokken in categorieën verdeeld, zodat we je meer instructies kunnen geven om mee te spelen.  Klik hier om te zien waar alle blokken gebleven zijn."
+        },
+        "courseD_scrat_ramp1": {
+          "grade2_CaringForNewPet_0_1": "Druk na het verbinden van alle blokken op \"Start\" om je programma uit te voeren."
+        },
+        "courseD_scrat_ramp2": {
+          "courseC_maze_programming2_1": "Dit is de gereedschapskist. Hier vind je extra blokken om je puzzels mee af te maken."
+        },
+        "courseD_scrat_ramp3": {
+          "courseC_maze_programming3_2": "Sleep overbodige blokken naar de gereedschapskist om ze weg te gooien."
+        },
+        "courseD_scrat_ramp4": {
+          "courseC_maze_programming4_1": "Dit is je blokkenlimiet. Dit getal laat zien hoeveel van deze blokken je nog mag gebruiken."
+        },
+        "courseD_scrat_ramp5": {
+          "": "Op deze blokken staat geen aantal. Je mag er zo veel gebruiken als je wilt!"
         },
         "courseD_scrat_ramp8": {
           "courseD_maze_ramp7_1": "Dit is je eerste Uitdaging!  Het is de bedoeling dat dit moeilijke puzzles zijn, en je hebt waarschijnlijk meerdere pogingen nodig om ze op te lossen."
@@ -1399,6 +1715,9 @@
         },
         "courseE_playLab_scaffold3": {
           "courseE_playLab_scaffold3_1": "Breng de speler naar deze vlag om naar het volgende level te gaan/"
+        },
+        "courseF_bee_for4_2021": {
+          "courseF_bee_for4_1": "Je vindt de voorwaardelijke lus hier!"
         },
         "coursee_helloworld_events": {
           "hello_world_click_hint": "Voeg dit eventblok toe aan uw werkruimte."

@@ -8831,6 +8831,7 @@
           "courseD_artist_nestedLoops5_b": "Para fazer um círculo você precisará definir um laço de repetição para repetir 360 vezes. Dentro do laço, mova para frente um pixel e gire um grau."
         },
         "courseD_artist_nestedLoops52022": {
+          "courseD_artist_nestedLoops5_a": "Para fazer isso facilmente:\n\n- repita 4 vezes\n  - faça um círculo\n  - avance 50 pixels\n  - vire à direita 90 graus",
           "courseD_artist_nestedLoops5_b": "Para fazer um círculo você precisará definir um laço de repetição para repetir 360 vezes. Dentro do laço, mova para frente um pixel e gire um grau."
         },
         "courseD_artist_nestedLoops5_2018": {
@@ -8850,6 +8851,7 @@
           "courseD_artist_nestedLoops5_b": "Para fazer um círculo você precisará definir um laço de repetição para repetir 360 vezes. Dentro do laço, mova para frente um pixel e gire um grau."
         },
         "courseD_artist_nestedLoops5_2023": {
+          "courseD_artist_nestedLoops5_a": "Para fazer isso facilmente:\n\n- repita 4 vezes\n  - faça um círculo\n  - avance 50 pixels\n  - vire à direita 90 graus",
           "courseD_artist_nestedLoops5_b": "Para fazer um círculo você precisará definir um laço de repetição para repetir 360 vezes. Dentro do laço, mova para frente um pixel e gire um grau."
         },
         "courseD_artist_nestedLoops7": {
@@ -8857,7 +8859,8 @@
           "courseD_artist_nestedLoops7_b": "Use um loop aninhado, em que o loop interno é o código de um quadrado.\n\n-   repita 6 vezes \n-   faça o quadrado \n-   pule para a frente por \\*\\* 50 pixels \\*\\* \n-   vire \\*\\* 60 graus \\*\\*"
         },
         "courseD_artist_nestedLoops72022": {
-          "courseD_artist_nestedLoops7_a": "Aqui você precisará usar laços aninhados. Primeiro use um laço para desenhar um quadrado. O que o laço externo fará se o laço interno desenha um quadrado?"
+          "courseD_artist_nestedLoops7_a": "Aqui você precisará usar laços aninhados. Primeiro use um laço para desenhar um quadrado. O que o laço externo fará se o laço interno desenha um quadrado?",
+          "courseD_artist_nestedLoops7_b": "Use um loop aninhado, em que o loop interno é o código de um quadrado.\n\n- repita 6 vezes\n  - faça um quadrado\n  - avance em **50 pixels** - gire-**60 graus**\n"
         },
         "courseD_artist_nestedLoops7_2018": {
           "courseD_artist_nestedLoops7_a": "Aqui você precisará usar laços aninhados. Primeiro use um laço para desenhar um quadrado. O que o laço externo fará se o laço interno desenha um quadrado?",
@@ -8876,7 +8879,8 @@
           "courseD_artist_nestedLoops7_b": "Use um loop aninhado, em que o loop interno é o código de um quadrado.\n\n-   repita 6 vezes \n-   faça o quadrado \n-   pule para a frente por \\*\\* 50 pixels \\*\\* \n-   vire \\*\\* 60 graus \\*\\*"
         },
         "courseD_artist_nestedLoops7_2023": {
-          "courseD_artist_nestedLoops7_a": "Aqui você precisará usar laços aninhados. Primeiro use um laço para desenhar um quadrado. O que o laço externo fará se o laço interno desenha um quadrado?"
+          "courseD_artist_nestedLoops7_a": "Aqui você precisará usar laços aninhados. Primeiro use um laço para desenhar um quadrado. O que o laço externo fará se o laço interno desenha um quadrado?",
+          "courseD_artist_nestedLoops7_b": "Use um loop aninhado, em que o loop interno é o código de um quadrado.\n\n- repita 6 vezes\n  - faça um quadrado\n  - avance em **50 pixels** - gire-**60 graus**\n"
         },
         "courseD_artist_nestedLoops8": {
           "courseD_artist_nestedLoops8_a": "Para ter 8 hexágonos em seu desenho, você precisará girar \\*\\* 45 graus \\*\\* entre cada um deles. Por quê? Porque 360 graus (uma volta completa) dividida por 8 (o número de hexágonos) é 45 graus.",
@@ -8885,7 +8889,8 @@
         },
         "courseD_artist_nestedLoops82022": {
           "courseD_artist_nestedLoops8_a": "Para ter 8 hexágonos em seu desenho, você precisará girar ** 45 graus ** entre cada um deles. Por quê? Porque 360 graus (uma volta completa) dividida por 8 (o número de hexágonos) é 45 graus.",
-          "courseD_artist_nestedLoops8_b": "Se você estiver travado, comece dando uma olhada no último enigma, e então mude as coisas que são diferentes."
+          "courseD_artist_nestedLoops8_b": "Se você estiver travado, comece dando uma olhada no último enigma, e então mude as coisas que são diferentes.",
+          "courseD_artist_nestedLoops8_c": "Use um loop aninhado:\n\n  - Repita 8 vezes\n    - desenhe um hexágono - avance 50 pixels\n\n    - vire à direita 45 graus"
         },
         "courseD_artist_nestedLoops8_2018": {
           "courseD_artist_nestedLoops8_a": "Para ter 8 hexágonos em seu desenho, você precisará girar \\*\\* 45 graus \\*\\* entre cada um deles. Por quê? Porque 360 graus (uma volta completa) dividida por 8 (o número de hexágonos) é 45 graus.",
@@ -8909,7 +8914,8 @@
         },
         "courseD_artist_nestedLoops8_2023": {
           "courseD_artist_nestedLoops8_a": "Para ter 8 hexágonos em seu desenho, você precisará girar ** 45 graus ** entre cada um deles. Por quê? Porque 360 graus (uma volta completa) dividida por 8 (o número de hexágonos) é 45 graus.",
-          "courseD_artist_nestedLoops8_b": "Se você estiver travado, comece dando uma olhada no último enigma, e então mude as coisas que são diferentes."
+          "courseD_artist_nestedLoops8_b": "Se você estiver travado, comece dando uma olhada no último enigma, e então mude as coisas que são diferentes.",
+          "courseD_artist_nestedLoops8_c": "Use um loop aninhado:\n\n  - Repita 8 vezes\n    - desenhe um hexágono - avance 50 pixels\n\n    - vire à direita 45 graus"
         },
         "courseD_artist_nestedLoops9": {
           "courseD_artist_nestedLoops9_a": "Comece usando um laço aninhado como você tinha antes, mas desta vez, faça com quadrados.",
@@ -8918,7 +8924,8 @@
         },
         "courseD_artist_nestedLoops92022": {
           "courseD_artist_nestedLoops9_a": "Comece usando um laço aninhado como você tinha antes, mas desta vez, faça com quadrados.",
-          "courseD_artist_nestedLoops9_b": "Adicione um segundo conjunto de laços aninhados para finalizar o primeiro conjunto, mas dessa vez use os triângulos."
+          "courseD_artist_nestedLoops9_b": "Adicione um segundo conjunto de laços aninhados para finalizar o primeiro conjunto, mas dessa vez use os triângulos.",
+          "courseD_artist_nestedLoops9_c": "Use dois loops aninhados:\n  - Repita 8 vezes\n    - desenhe um quadrado\n    - avance 50 pixels\n    - vire à direita 45 graus - Repita 8 vezes\n  - desenhe um triângulo\n\n    - pule 50 pixels para frente\n    - vire à direita em 45 graus"
         },
         "courseD_artist_nestedLoops9_2018": {
           "courseD_artist_nestedLoops9_a": "Comece usando um laço aninhado como você tinha antes, mas desta vez, faça com quadrados.",
@@ -8942,7 +8949,8 @@
         },
         "courseD_artist_nestedLoops9_2023": {
           "courseD_artist_nestedLoops9_a": "Comece usando um laço aninhado como você tinha antes, mas desta vez, faça com quadrados.",
-          "courseD_artist_nestedLoops9_b": "Adicione um segundo conjunto de laços aninhados para finalizar o primeiro conjunto, mas dessa vez use os triângulos."
+          "courseD_artist_nestedLoops9_b": "Adicione um segundo conjunto de laços aninhados para finalizar o primeiro conjunto, mas dessa vez use os triângulos.",
+          "courseD_artist_nestedLoops9_c": "Use dois loops aninhados:\n  - Repita 8 vezes\n    - desenhe um quadrado\n    - avance 50 pixels\n    - vire à direita 45 graus - Repita 8 vezes\n  - desenhe um triângulo\n\n    - pule 50 pixels para frente\n    - vire à direita em 45 graus"
         },
         "courseD_artist_nestedLoopsFP": {
           "courseD_artist_nestedLoopsFP_a": "<img src=\"https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png\" width=\"200px\"/>\n\nEssa imagem foi feita usando um único laço aninhado que repete um hexágono (com lados de 50 pixels) 15 vezes usando um giro de 48 pixels.",
@@ -13481,6 +13489,9 @@
         "courseF_artist_variablesFP": {
           "courseF_artist_variablesFP_a": "Experimente um destes três desenhos.\n![](<https://images.code.org/f0bac32182162bd26a8031f5aa4364ef-image-1493738360437.3.15 dicas.png>)"
         },
+        "courseF_artist_variablesFP2022": {
+          "polygon_table": "Quer experimentar outros polígonos? \n\nUse o número de lados em sua “repetição” e o ângulo em seu bloco de “virada”.\nExperimente estes:\n\n| Forma | Lados | Ângulo\n\\| :------: \\| \\| :---: \\| :---: \\|\n| triângulo | 3 | 120° | | quadrado\n| 4 | 90° | | pentágono\n| 5 | 72° |\n| hexágono | 6 | 60° | | octógono\n| 8 | 45° | | nonágono | 9 | 40°\n| | decágono | 10 | 36° |"
+        },
         "courseF_artist_variablesFP_2018": {
           "courseF_artist_variablesFP_a": "Experimente um destes três desenhos.\n![](<https://images.code.org/f0bac32182162bd26a8031f5aa4364ef-image-1493738360437.3.15 dicas.png>)"
         },
@@ -13489,6 +13500,12 @@
         },
         "courseF_artist_variablesFP_2020": {
           "courseF_artist_variablesFP_a": "Experimente um destes três desenhos.\n![](<https://images.code.org/f0bac32182162bd26a8031f5aa4364ef-image-1493738360437.3.15 dicas.png>)"
+        },
+        "courseF_artist_variablesFP_2021": {
+          "polygon_table": "Quer experimentar outros polígonos? \n\nUse o número de lados em sua “repetição” e o ângulo em seu bloco de “virada”.\nExperimente estes:\n\n| Forma | Lados | Ângulo\n\\| :------: \\| \\| :---: \\| :---: \\|\n| triângulo | 3 | 120° | | quadrado\n| 4 | 90° | | pentágono\n| 5 | 72° |\n| hexágono | 6 | 60° | | octógono\n| 8 | 45° | | nonágono | 9 | 40°\n| | decágono | 10 | 36° |"
+        },
+        "courseF_artist_variablesFP_2023": {
+          "polygon_table": "Quer experimentar outros polígonos? \n\nUse o número de lados em sua “repetição” e o ângulo em seu bloco de “virada”.\nExperimente estes:\n\n| Forma | Lados | Ângulo\n\\| :------: \\| \\| :---: \\| :---: \\|\n| triângulo | 3 | 120° | | quadrado\n| 4 | 90° | | pentágono\n| 5 | 72° |\n| hexágono | 6 | 60° | | octógono\n| 8 | 45° | | nonágono | 9 | 40°\n| | decágono | 10 | 36° |"
         },
         "courseF_artist_variables_challenge1": {
           "courseF_artist_variables_challenge1_a": "Cada linha vertical tem um comprimento de `10`. Cada linha horizontal deve ter um comprimento de `comprimento`.",
@@ -14041,6 +14058,24 @@
         "courseF_bee_variables_3_2020": {
           "courseF_bee_variables_3_2019_1": "Para subtrair um da variável, você pode usar esse código no seu programa:\n<xml><block type=\"variables_set\" inline=\"false\">\n\n<title name=\"VAR\">coletar</title>\n<value name=\"VALUE\">\n<block type=\"math_arithmetic\" inline=\"true\">\n<title name=\"OP\">MENOS</title>\n<value name=\"A\">\n<block type=\"variables_get\">\n<title name=\"VAR\">coletar</title>\n</block>\n</value>\n<value name=\"B\">\n<block type=\"math_number\">\n<title name=\"NUM\">1</title>\n</block>\n</value>\n</block>\n</value>\n</block></xml>"
         },
+        "courseF_bee_variables_3a2022": {
+          "courseF_bee_variables_3_2021_1": "Para continuar o padrão, aumente o número de repetições:\n<xml><block type=\"controls_repeat_ext\">\n      <value name=\"TIMES\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">4</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "courseF_bee_variables_3a_2021": {
+          "courseF_bee_variables_3_2021_1": "Para continuar o padrão, aumente o número de repetições:\n<xml><block type=\"controls_repeat_ext\">\n      <value name=\"TIMES\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">4</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "courseF_bee_variables_3a_2023": {
+          "courseF_bee_variables_3_2021_1": "Para continuar o padrão, aumente o número de repetições:\n<xml><block type=\"controls_repeat_ext\">\n      <value name=\"TIMES\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">4</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "courseF_bee_variables_3aa2022": {
+          "courseF_bee_variables_3_2021_1": "Para adicionar um à variável, você pode usar este código em seu programa:\n<xml><block type=\"math_change\">\n      <title name=\"VAR\">counter</title>\n      <value name=\"DELTA\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "courseF_bee_variables_3aa_2021": {
+          "courseF_bee_variables_3_2021_1": "Para adicionar um à variável, você pode usar este código em seu programa:\n<xml><block type=\"math_change\">\n      <title name=\"VAR\">counter</title>\n      <value name=\"DELTA\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "courseF_bee_variables_3aa_2023": {
+          "courseF_bee_variables_3_2021_1": "Para adicionar um à variável, você pode usar este código em seu programa:\n<xml><block type=\"math_change\">\n      <title name=\"VAR\">counter</title>\n      <value name=\"DELTA\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
         "courseF_bee_variables_4_2019": {
           "courseF_bee_variables_4_2019_1": "Ao invés de subtrair 1 de `obter`, adicione 1 a cada vez. Qual deve ser o valor que a variável terá primeiro?"
         },
@@ -14055,6 +14090,60 @@
         },
         "courseF_bee_variables_4a_2023": {
           "courseF_bee_variables_4_2021_1": "Em vez de adicionar 1 à variável, adicione 2 a cada vez."
+        },
+        "courseF_events_choice_pufferfish": {
+          "changeProp": "Você também precisará deste bloco:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "courseF_events_choice_pufferfish_-2022-2": {
+          "changeProp": "Você também precisará deste bloco:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "courseF_events_choice_pufferfish_2023": {
+          "changeProp": "Você também precisará deste bloco:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "courseF_events_key": {
+          "changePropBlock": "Você também precisará deste bloco:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_10_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">???</title>\n        </block>\n      </value>\n    </block>\n    </xml>"
+        },
+        "courseF_events_key_-2022-2": {
+          "changePropBlock": "Você também precisará deste bloco:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_10_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">???</title>\n        </block>\n      </value>\n    </block>\n    </xml>"
+        },
+        "courseF_events_key_2023": {
+          "changePropBlock": "Você também precisará deste bloco:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_10_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">???</title>\n        </block>\n      </value>\n    </block>\n    </xml>"
+        },
+        "courseF_groups_behaviors_-2022-2": {
+          "groups_behavior_hint": "Adicione um bloco `clicado` a um bloco `sprite begins`. Não se esqueça de adicionar um comportamento!\n\n<xml>\n\n</xml>",
+          "groups_click_hint": "Você precisará de um bloco de eventos. Certifique-se de clicar nos seus sprites depois de pressionar “Executar!”\n\n<xml>\n  <block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_croissant_1\"</title>\n      </block>\n    </value>\n  </block>\n</xml>"
+        },
+        "courseF_groups_behaviors_2023": {
+          "groups_behavior_hint": "Adicione um bloco `clicado` a um bloco `sprite begins`. Não se esqueça de adicionar um comportamento!\n\n<xml>\n\n</xml>",
+          "groups_click_hint": "Você precisará de um bloco de eventos. Certifique-se de clicar nos seus sprites depois de pressionar “Executar!”\n\n<xml>\n  <block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_croissant_1\"</title>\n      </block>\n    </value>\n  </block>\n</xml>"
+        },
+        "courseF_groups_costume_-2022-2": {
+          "groups_click_hint": "Você precisará de um bloco de eventos. Certifique-se de clicar nos seus sprites depois de pressionar “Executar!”\n\n<xml>\n  <block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_cupcake_1\"</title>\n      </block>\n    </value>\n  </block>\n</xml>",
+          "groups_costume_hint": "Adicione um bloco “clicado” a um bloco “figurino”. Você pode encontrá-lo dentro do bloco de eventos!\n\n<xml>\n  <block type=\"gamelab_setAnimation\">\n      <title name=\"ANIMATION\">\"face_birthdaycake_1\"</title>\n    </block>\n</xml>"
+        },
+        "courseF_groups_costume_2023": {
+          "groups_click_hint": "Você precisará de um bloco de eventos. Certifique-se de clicar nos seus sprites depois de pressionar “Executar!”\n\n<xml>\n  <block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_cupcake_1\"</title>\n      </block>\n    </value>\n  </block>\n</xml>",
+          "groups_costume_hint": "Adicione um bloco “clicado” a um bloco “figurino”. Você pode encontrá-lo dentro do bloco de eventos!\n\n<xml>\n  <block type=\"gamelab_setAnimation\">\n      <title name=\"ANIMATION\">\"face_birthdaycake_1\"</title>\n    </block>\n</xml>"
+        },
+        "courseF_groups_say_-2022-2": {
+          "groups_click_hint": "Você precisará de um bloco de eventos. Certifique-se de clicar nos seus sprites depois de pressionar “Executar!”\n\n<xml>\n  <block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n  </block>\n</xml>",
+          "groups_say_hint": "Adicione um bloco `clicado` a um bloco `say`. Você pode encontrá-lo dentro do bloco de eventos!\n\n<xml>\n  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Wow!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_clickedSpritePointer\"></block>\n    </value>\n  </block>\n</xml>"
+        },
+        "courseF_groups_say_2023": {
+          "groups_click_hint": "Você precisará de um bloco de eventos. Certifique-se de clicar nos seus sprites depois de pressionar “Executar!”\n\n<xml>\n  <block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n  </block>\n</xml>",
+          "groups_say_hint": "Adicione um bloco `clicado` a um bloco `say`. Você pode encontrá-lo dentro do bloco de eventos!\n\n<xml>\n  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Wow!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_clickedSpritePointer\"></block>\n    </value>\n  </block>\n</xml>"
+        },
+        "courseF_groups_size_-2022-2": {
+          "expand_click_event": "Clique no botão `+` no bloco de eventos. Use o bloco interno para finalizar o programa.\n\n<xml>\n  <block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">\"scale\"</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_clickedSpritePointer\"></block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseF_groups_size_2023": {
+          "expand_click_event": "Clique no botão `+` no bloco de eventos. Use o bloco interno para finalizar o programa.\n\n<xml>\n  <block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">\"scale\"</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_clickedSpritePointer\"></block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseF_groups_touch_-2022-2": {
+          "groups_touch_hint": "Você precisará de um bloco de eventos. Certifique-se de clicar nos seus sprites depois de pressionar “Executar!”\n\n<xml><block type=\"gamelab_checkTouching\" miniflyout=\"open\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_salad_1\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_ramen_1\"</title>\n      </block>\n    </value>\n  </block></xml>"
+        },
+        "courseF_groups_touch_2023": {
+          "groups_touch_hint": "Você precisará de um bloco de eventos. Certifique-se de clicar nos seus sprites depois de pressionar “Executar!”\n\n<xml><block type=\"gamelab_checkTouching\" miniflyout=\"open\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_salad_1\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_ramen_1\"</title>\n      </block>\n    </value>\n  </block></xml>"
         },
         "courseF_playlab_variables1a": {
           "courseF_playlab_variables1a_a": "Você vai querer substituir as palavras “O que devo gritar?” no bloco verde com \"Objetivo!”"
@@ -14103,6 +14192,15 @@
         "courseF_sprites_clouds_2023": {
           "behavior_list": "Tente usar comportamentos como “mover-se para o leste e dar voltas”, “girar para a direita” e “vagar”."
         },
+        "courseF_text_choice_multiprompt": {
+          "when_answered_var": "Tente alterar o rótulo da variável no bloco `quando respondida`. Como há várias solicitações, use o rótulo da _last_ prompt que será respondida.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "courseF_text_choice_multiprompt_-2022-2": {
+          "when_answered_var": "Tente alterar o rótulo da variável no bloco `quando respondida`. Como há várias solicitações, use o rótulo da _last_ prompt que será respondida.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "courseF_text_choice_multiprompt_2023": {
+          "when_answered_var": "Tente alterar o rótulo da variável no bloco `quando respondida`. Como há várias solicitações, use o rótulo da _last_ prompt que será respondida.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
         "courseF_text_concat": {
           "prompt_example": "<xml>\n  <block type=\"when_run\" deletable=\"false\">\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\">\n            <title name=\"TEXT\">What is your name?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">name</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_printText\">\n        <value name=\"TEXT\">\n          <block type=\"gamelab_textJoin\">\n            <title name=\"TEXT1\">Hello, </title>\n            <value name=\"TEXT2\">\n              <block type=\"gamelab_textVariableJoin\">\n                <title name=\"VAR\">name</title>\n                <value name=\"TEXT2\">\n                  <block type=\"gamelab_textJoin\">\n                    <title name=\"TEXT1\">!</title>\n                  </block>\n                </value>\n              </block>\n            </value>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
@@ -14121,22 +14219,52 @@
           "set_block_hint": "Você pode atribuir para uma variável assim:"
         },
         "courseF_variables_card_finish": {
-          "card_idea1": "Você pode adicionar um segundo (ou terceiro ou quarto) prompt conectando um novo bloco de prompt com uma variável diferente ao seu primeiro evento `quando respondido`.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">nome</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">o que você quer para o seu aniversário?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">presente</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+          "card_idea1": "Você pode adicionar um segundo (ou terceiro ou quarto) prompt conectando um novo bloco de prompt com uma variável diferente ao seu primeiro evento `quando respondido`.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">nome</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">o que você quer para o seu aniversário?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">presente</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
+          "card_idea2": "Você pode mudar de um comportamento para outro usando um bloco `sprite stops` com um bloco `sprite begins` sob um evento.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">nome</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">“robô _02_1\"</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"spinning left\">girando para a esquerda</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">“robô_02_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">girando para a direita</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "card_idea3": "Você pode tornar seu programa interativo fazendo com que outras coisas aconteçam quando o usuário pressiona uma tecla ou após um determinado período de tempo.\n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">“quando”</title>\n    <title name=\"KEY\">“levantado”</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">“escala”</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">“robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseF_variables_card_finish_-2022-2": {
-          "card_idea1": "Você pode adicionar um segundo (ou terceiro ou quarto) prompt conectando um novo bloco de prompt com uma variável diferente ao seu primeiro evento `quando respondido`.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">nome</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">o que você quer para o seu aniversário?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">presente</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+          "card_idea1": "Você pode adicionar um segundo (ou terceiro ou quarto) prompt conectando um novo bloco de prompt com uma variável diferente ao seu primeiro evento `quando respondido`.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">nome</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">o que você quer para o seu aniversário?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">presente</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
+          "card_idea2": "Você pode mudar de um comportamento para outro usando um bloco `sprite stops` com um bloco `sprite begins` sob um evento.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">nome</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">“robô _02_1\"</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"spinning left\">girando para a esquerda</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">“robô_02_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">girando para a direita</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "card_idea3": "Você pode tornar seu programa interativo fazendo com que outras coisas aconteçam quando o usuário pressiona uma tecla ou após um determinado período de tempo.\n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">“quando”</title>\n    <title name=\"KEY\">“levantado”</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">“escala”</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">“robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseF_variables_card_finish_2023": {
-          "card_idea1": "Você pode adicionar um segundo (ou terceiro ou quarto) prompt conectando um novo bloco de prompt com uma variável diferente ao seu primeiro evento `quando respondido`.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">nome</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">o que você quer para o seu aniversário?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">presente</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+          "card_idea1": "Você pode adicionar um segundo (ou terceiro ou quarto) prompt conectando um novo bloco de prompt com uma variável diferente ao seu primeiro evento `quando respondido`.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">nome</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">o que você quer para o seu aniversário?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">presente</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
+          "card_idea2": "Você pode mudar de um comportamento para outro usando um bloco `sprite stops` com um bloco `sprite begins` sob um evento.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">nome</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">“robô _02_1\"</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"spinning left\">girando para a esquerda</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">“robô_02_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">girando para a direita</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "card_idea3": "Você pode tornar seu programa interativo fazendo com que outras coisas aconteçam quando o usuário pressiona uma tecla ou após um determinado período de tempo.\n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">“quando”</title>\n    <title name=\"KEY\">“levantado”</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">“escala”</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">“robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseF_variables_chatbot_finish": {
+          "chatbot_idea1": "Você pode adicionar um segundo (ou terceiro ou quarto) prompt conectando um novo bloco de prompt com uma variável diferente ao seu primeiro evento `quando respondido`.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">nome</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">Como Você é velho?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">idade</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
+          "chatbot_idea2": "Você pode mudar de um comportamento para outro usando um bloco `sprite stops` com um bloco `sprite begins` sob um evento.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">nome</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">“robô _02_1\"</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"spinning left\">girando para a esquerda</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">“robô_02_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">girando para a direita</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "chatbot_idea3": "Você pode tornar seu programa interativo fazendo com que outras coisas aconteçam quando o usuário pressiona uma tecla ou após um determinado período de tempo.\n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">“quando”</title>\n    <title name=\"KEY\">“levantado”</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">“escala”</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">“robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
           "chatbot_idea4": "Você pode sinalizar o final do seu programa com um bloco de tela de título.\n\n<xml><block type=\"gamelab_showTitleScreen\">\n      <value name=\"TITLE\">\n        <block type=\"text\">\n        <title name=\"TEXT\">O fim</title>\n        </block>\n      </value>\n      <value name=\"SUBTITLE\">\n        <block type=\"text\">\n        <title name=\"TEXT\">Obrigado por conversar!</title>\n        </block>\n      </value>\n      </block></xml>"
         },
         "courseF_variables_chatbot_finish_-2022-2": {
+          "chatbot_idea1": "Você pode adicionar um segundo (ou terceiro ou quarto) prompt conectando um novo bloco de prompt com uma variável diferente ao seu primeiro evento `quando respondido`.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">nome</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">Como Você é velho?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">idade</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
+          "chatbot_idea2": "Você pode mudar de um comportamento para outro usando um bloco `sprite stops` com um bloco `sprite begins` sob um evento.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">nome</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">“robô _02_1\"</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"spinning left\">girando para a esquerda</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">“robô_02_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">girando para a direita</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "chatbot_idea3": "Você pode tornar seu programa interativo fazendo com que outras coisas aconteçam quando o usuário pressiona uma tecla ou após um determinado período de tempo.\n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">“quando”</title>\n    <title name=\"KEY\">“levantado”</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">“escala”</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">“robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
           "chatbot_idea4": "Você pode sinalizar o final do seu programa com um bloco de tela de título.\n\n<xml><block type=\"gamelab_showTitleScreen\">\n      <value name=\"TITLE\">\n        <block type=\"text\">\n        <title name=\"TEXT\">O fim</title>\n        </block>\n      </value>\n      <value name=\"SUBTITLE\">\n        <block type=\"text\">\n        <title name=\"TEXT\">Obrigado por conversar!</title>\n        </block>\n      </value>\n      </block></xml>"
         },
         "courseF_variables_chatbot_finish_2023": {
+          "chatbot_idea1": "Você pode adicionar um segundo (ou terceiro ou quarto) prompt conectando um novo bloco de prompt com uma variável diferente ao seu primeiro evento `quando respondido`.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">nome</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">Como Você é velho?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">idade</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
+          "chatbot_idea2": "Você pode mudar de um comportamento para outro usando um bloco `sprite stops` com um bloco `sprite begins` sob um evento.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">nome</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">“robô _02_1\"</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"spinning left\">girando para a esquerda</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">“robô_02_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">girando para a direita</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "chatbot_idea3": "Você pode tornar seu programa interativo fazendo com que outras coisas aconteçam quando o usuário pressiona uma tecla ou após um determinado período de tempo.\n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">“quando”</title>\n    <title name=\"KEY\">“levantado”</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">“escala”</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">“robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
           "chatbot_idea4": "Você pode sinalizar o final do seu programa com um bloco de tela de título.\n\n<xml><block type=\"gamelab_showTitleScreen\">\n      <value name=\"TITLE\">\n        <block type=\"text\">\n        <title name=\"TEXT\">O fim</title>\n        </block>\n      </value>\n      <value name=\"SUBTITLE\">\n        <block type=\"text\">\n        <title name=\"TEXT\">Obrigado por conversar!</title>\n        </block>\n      </value>\n      </block></xml>"
+        },
+        "courseF_variables_madlib_finish": {
+          "card_idea1": "Você pode adicionar um segundo (ou terceiro ou quarto) prompt usando um novo bloco de prompt com uma variável diferente.\n\n<xml>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">Insira uma palavra de ação:</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">verbo</title>\n          </block>\n        </value>\n      </block>\n    </xml>",
+          "card_idea2": "Você pode mudar de um comportamento para outro usando um bloco `sprite stops` com um bloco `sprite begins` sob um evento.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">nome</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">“robô _02_1\"</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"spinning left\">girando para a esquerda</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">“robô_02_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">girando para a direita</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "card_idea3": "Você pode tornar seu programa interativo fazendo com que outras coisas aconteçam quando o usuário pressiona uma tecla ou após um determinado período de tempo.\n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">“quando”</title>\n    <title name=\"KEY\">“levantado”</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">“escala”</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">“robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseF_variables_madlib_finish_-2022-2": {
+          "card_idea1": "Você pode adicionar um segundo (ou terceiro ou quarto) prompt usando um novo bloco de prompt com uma variável diferente.\n\n<xml>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">Insira uma palavra de ação:</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">verbo</title>\n          </block>\n        </value>\n      </block>\n    </xml>",
+          "card_idea2": "Você pode mudar de um comportamento para outro usando um bloco `sprite stops` com um bloco `sprite begins` sob um evento.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">nome</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">“robô _02_1\"</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"spinning left\">girando para a esquerda</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">“robô_02_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">girando para a direita</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "card_idea3": "Você pode tornar seu programa interativo fazendo com que outras coisas aconteçam quando o usuário pressiona uma tecla ou após um determinado período de tempo.\n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">“quando”</title>\n    <title name=\"KEY\">“levantado”</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">“escala”</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">“robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseF_variables_madlib_finish_2023": {
+          "card_idea1": "Você pode adicionar um segundo (ou terceiro ou quarto) prompt usando um novo bloco de prompt com uma variável diferente.\n\n<xml>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">Insira uma palavra de ação:</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">verbo</title>\n          </block>\n        </value>\n      </block>\n    </xml>",
+          "card_idea2": "Você pode mudar de um comportamento para outro usando um bloco `sprite stops` com um bloco `sprite begins` sob um evento.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">nome</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">“robô _02_1\"</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"spinning left\">girando para a esquerda</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">“robô_02_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">girando para a direita</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "card_idea3": "Você pode tornar seu programa interativo fazendo com que outras coisas aconteçam quando o usuário pressiona uma tecla ou após um determinado período de tempo.\n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">“quando”</title>\n    <title name=\"KEY\">“levantado”</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">“escala”</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">“robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "coursea_maze_ramp12022": {
           "courseC_maze_programming1_a": "Se o pássaro não estiver chegando ao porco, certifique-se de que ambos os blocos foram completamente conectados, e então clique em \"Executar\" de novo.",
@@ -14331,11 +14459,11 @@
           "change": "Faça algumas alterações na simulação!"
         },
         "csc_ecosystems_arctic_2023": {
-          "hint1": "O urso polar precisa ser maior! Altere seu tamanho para mais de 30.",
-          "hint2": "Mude o fundo para que haja mais gelo para o urso polar caçar. "
+          "hint1": "O urso polar precisa ser maior! Altere seu tamanho para ser maior que 30.",
+          "hint2": "Mude o plano de fundo para que haja mais gelo para o urso polar caçar. "
         },
         "csc_ecosystems_desert_2023": {
-          "hint1": "Os coelhos precisam se mover mais rápido! Altere a \nvelocidade dos coelhos para ser maior que 0."
+          "hint1": "Os coelhos precisam se mover mais rápido! Altere a velocidade \ndos coelhos para ser maior que 0."
         },
         "csc_ecosystems_giraffe_evo_2023": {
           "first_event_hint": "Seu `event` (#6AF36C) usa a girafa de pescoço curto? \n\nO traje muda de**pescoço curto para comprido**?\n\nO bloco de troca de roupa deve ter a seguinte aparência:\n<xml>\n<block type=\"gamelab_setAnimation\">\n  <field name=\"ANIMATION\">\"giraffe_longer_neck\"</field>\n  <value name=\"THIS\">\n    <block type=\"gamelab_allSpritesWithAnimation\" movable=\"false\">\n      <field name=\"ANIMATION\">\"giraffe_shorter_neck\"</field>\n    </block>\n  </value>\n</block></xml>"
@@ -14344,56 +14472,56 @@
           "Hint1": "Precisamos de mais sapos! Altere o número de sapos para ser maior que 0."
         },
         "csc_ecosystems_ocean_algae_2023": {
-          "Connect": "Verifique se o bloco de alimentação está conectado ao bloco de eventos. \n\nEles deveriam se encaixar como peças de um quebra-cabeça!"
+          "Connect": "Certifique-se de que o bloco comer esteja conectado ao bloco de eventos. \n\nEles devem se encaixar como peças de um quebra-cabeça!"
         },
         "csc_ecosystems_ocean_boat_2023": {
-          "Catch": "Use o bloco de objetos de captura para que o barco pegue o peixe",
-          "CatchUnder": "O bloco de objetos de captura deve ser\nconectado sob o evento de pesca de toques \ndo barco."
+          "Catch": "Use o bloco pegar objetos para que o barco pegue o peixe",
+          "CatchUnder": "O bloco pegar objetos deve ser\nconectado sob o evento barco \ntoca peixe."
         },
         "csc_ecosystems_ocean_coral_2023": {
-          "BlockInside": "Coloque o bloco de troca de roupa dentro do bloco, se houver excesso de algas.",
-          "Costume": "Se houver muitas algas, o coral será danificado. \n\nUse o bloco de troca de roupa em seguida.",
-          "TooMuch": "Conecte o bloco de algas se houver excesso de algas ao evento quando o peixe toca as algas."
+          "BlockInside": "Coloque o bloco mudar visual dentro do bloco se houver muitas algas.",
+          "Costume": "Se houver muitas algas, o coral será danificado. \n\nUse o bloco mudar visual em seguida.",
+          "TooMuch": "Conecte o bloco se houver muitas algas ao evento quando o peixe toca as algas."
         },
         "csc_ecosystems_ocean_coral_health_2023": {
-          "Below": "Continue conectando blocos na parte inferior da área de trabalho onde você terminou no último nível!",
-          "BlocksInside": "Se houver pouca alga, o peixe sairá. \n\nColoque os outros blocos dentro do bloco de algas, se for pequeno.",
-          "TooLittle": "Conecte o bloco de algas, se for muito pequeno, ao evento quando o peixe toca as algas."
+          "Below": "Continue conectando blocos na parte inferior da área de trabalho onde você terminou o último nível!",
+          "BlocksInside": "Se houver poucas algas, os peixes irão embora. \n\nColoque os outros blocos dentro do bloco se houver poucas algas.",
+          "TooLittle": "Conecte o bloco se houver poucas algas, ao evento quando o peixe toca as algas."
         },
         "csc_ecosystems_ocean_fish_2023": {
-          "No Code": "Ainda não há nada para codificar. Basta observar esse sistema em ação. "
+          "No Code": "Ainda não há nada para codificar. Apenas observe esse sistema em ação. "
         },
         "csc_ecosystems_ocean_justright_algae": {
-          "Bellow": "Continue conectando blocos na parte inferior da área de trabalho onde você terminou no último nível!",
-          "JustRight": "Conecte o bloco de algas, se for o correto, ao evento quando o peixe toca as algas.",
-          "costume": "Se as algas estiverem corretas, o coral\nestará saudável. \n\nUse o bloco de troca de roupa dentro do bloco de algas, se for o correto."
+          "Bellow": "Continue conectando blocos na parte inferior da área de trabalho onde você terminou o último nível!",
+          "JustRight": "Conecte o bloco se a quantidade de algas estiver equilibrada, ao evento quando o peixe toca as algas.",
+          "costume": "Se a quantidade de algas estiver equilibrada, o coral\nficará saudável. \n\nUse o bloco mudar visual dentro do bloco se a quantidade de algas estiver equilibrada"
         },
         "csc_ecosystems_rainforest_freeplay_2023": {
-          "hint1": "Há muitos papagaios! Altere o número\nde papagaios para menos de 8."
+          "hint1": "Há muitos papagaios! Mude o número\nde papagaios para ser menor que 8."
         },
         "csc_ecosystems_solution1_2023": {
-          "hint1": "Antes do início do programa, 0 peixes \nforam capturados. Use o `set FishCaught como 0` na parte superior \nda área de trabalho.",
-          "hint2": "Use a alteração `FishCaught by 1`\nabaixo do bloco de captura de peixes para contar\ncada peixe que o barco captura.",
-          "hint3": "Conecte o bloco `boat says` **abaixo** ao\nbloco `change FishCaught by 1` "
+          "hint1": "Antes do programa iniciar, 0 peixes \nforam capturados. Use o `defina fishCaught para 0` na parte superior \nda área de trabalho.",
+          "hint2": "Use a alteração `fishCaught em 1`\nabaixo do bloco pegar peixe para contar\ncada peixe que o barco pesca.",
+          "hint3": "Conecte o bloco `barco diz`\n**abaixo** do bloco \n`altere fishCaught em 1` "
         },
         "csc_ecosystems_solution1b_2023": {
-          "hint1": "Continue conectando blocos \nno evento `quando o barco toca o peixe`, onde você \nterminou o último nível!",
-          "hint2": "Para fazer o barco parar de pescar com 5 peixes, conecte o bloco `if fishCaught = 5` no final do evento `quando o barco toca no peixe`.",
-          "hint3": "Em seguida, adicione o bloco `remove boat`\na**dentro** do bloco `if FishCaught = 5`"
+          "hint1": "Continue conectando os blocos \nabaixo do evento `quando o barco toca o peixe`, onde você \nparou no último nível!",
+          "hint2": "Para fazer o barco parar de pescar quando chegar a 5 peixes, conecte o bloco `if fishCaught = 5` no final do evento `quando o barco toca o peixe`.",
+          "hint3": "Em seguida, adicione o bloco `remova o barco` \n**dentro** do bloco `if fishCaught = 5`"
         },
         "csc_ecosystems_solution2_2023": {
-          "Hint1": "**Nota**: Talvez seja necessário arrastar parte do</code> código  <code style=\"color:black; background-color:#6AF36C\">ao tocar para baixo na tela para caber nos novos blocos.",
-          "hint2": "Na parte superior do espaço de trabalho, conecte o bloco de fundo ao quando executado.",
-          "hint3": "Sob o fundo,\nconecte o início da\npesca somente na\nzona de pesca."
+          "Hint1": "**Note**: Talvez seja necessário arrastar parte do código <code style=\"color:black; background-color:#6AF36C\">quando tocar</code> na parte inferior da tela para caber nos novos blocos.",
+          "hint2": "Na parte superior da área de trabalho, conecte o bloco plano de fundo ao quando executar.",
+          "hint3": "Sob o plano de fundo,\nconecte o começar\na pescar somente na\nzona de pesca."
         },
         "csc_ecosystems_solution3A_2023": {
-          "hint1": "Adicione os novos blocos abaixo do bloco `repita\na cada 4 segundos`.",
-          "hint2": "Conecte o `No Fishing background`\npróximo ao topo da área de trabalho, sob o bloco \n`a cada 4 segundos`.",
-          "hint3": "Conecte `comece a pescar`\nsob o comando `sem histórico de pesca`. "
+          "hint1": "Adicione os novos blocos abaixo \ndo bloco `repita a cada 4 segundos`.",
+          "hint2": "Conecte o `Plano de fundo Proibido Pescar`\npróximo à parte superior da área de trabalho sob o bloco \n`a cada 4 segundos`.",
+          "hint3": "Conecte `comece proibido pescar`\nsob o `plano de fundo proibido pescar`. "
         },
         "csc_ecosystems_solution3B_2023": {
-          "hint1": "Adicione os novos blocos abaixo do bloco de repetição\n`a cada 9 segundos`",
-          "hint2": "Use o comportamento `sem histórico de pesca`\ne o comportamento `começar sem temporada de pesca`"
+          "hint1": "Adicione os novos blocos abaixo \ndo bloco de repetição `a cada 9 segundos`",
+          "hint2": "Use o comportamento `plano de fundo proibido pescar`\ne o comportamento `comece a temporada de pesca proibida`"
         },
         "csc_ecosystems_whale_explain_2023": {
           "event_hint": "Certifique-se de adicionar um bloco “definir plano de fundo” e um bloco “mudar de roupa” abaixo do seu evento. \n\nNão se esqueça de pressionar a seta para baixo para acionar seu evento! \n\n<xml><block type=\"gamelab_keyPressed\"><field name=\"CONDITION\">\"when\"</field><field name=\"KEY\">\"down\"</field><next><block type=\"gamelab_setBackgroundImageAs\"><field name=\"IMG\">\"night_moon\"</field><next><block type=\"gamelab_setAnimation\"><field name=\"ANIMATION\">\"firefily\"</field><value name=\"THIS\"><block type=\"gamelab_allSpritesWithAnimation\"><field name=\"ANIMATION\">\"firefily_dark\"</field></block></value></block></next></block></next></block></xml>"
@@ -14443,6 +14571,36 @@
         },
         "csc_timecapsule_textstyle_2023": {
           "hint1": "Use o menu suspenso para escolher entre diferentes cores e efeitos.\n\n![](<https://images.code.org/b3cd57bafe3e5eb487d61ef846a4715c-image-1660769880438.57.55 PM.png>)"
+        },
+        "dance_ai_code_at_measure": {
+          "hint1": "Conecte um bloco 'I.A. gera efeito' ao evento 'a 2 medições' na sua área de trabalho, assim: \n\n[bloco blockly][0]",
+          "hint2": "Clique no bloco [bloco blockly][0] para criar um novo efeito. "
+        },
+        "dance_ai_code_key_press": {
+          "hint1": "💡 **Ainda está com problemas?** Assista ao vídeo de eventos novamente para aprender como eles funcionam. ",
+          "hint2": "💡 Veja aqui um exemplo de como seria o seu código   . <xml> <xml xmlns=\"https://developers.google.com/blockly/xml\"> \n\n  <block type=\"Dancelab_whenKey\" id=\"*R3Us3z5;rM#sBE?1zjX\" deletable=\"false\" x=\"19\" y=\"221\"> \n    <field name=\"KEY\">\"para cima\"</field> \n    <next> \n      <block type=\"Dancelab_doMoveEachLR\" id=\"*hCDocpHXqlku@f[[rK=\"> \n        <field name=\"GROUP\">\"URSO\"</field> \n        <field name=\"MOVE\">MOVES.Dab</field> \n        <field name=\"DIR\">-1</field> \n      </block> \n    </next> \n  </block> \n</xml>"
+        },
+        "dance_ai_customize_effect": {
+          "Hint1": "💡 Personalize o efeito  clicando nos emojis no bloco <xml> <block xmlns=\"https://developers.google.com/blockly/xml\" type=\"Dancelab_ai\" id=\"*6NOt^DsApsRC-pPZKBQ\"> <field name=\"VALUE\">{\"inputs\":[\"legal\",\"frio\",\"ondulado\"],\"backgroundEffect\":\"sparkles\",\"backgroundColor\":\"cool\",\"foregroundEffect\":\"bubbles\"}</field> \n\n</block> </xml>  no espaço de trabalho. ",
+          "Hint2": "💡 **Ainda está com problemas?** Assista ao vídeo para ver como  personalizar o efeito. ",
+          "HintEdit": "💡 Se quiser  utilizar o código escrito pela I.A. , alterne para exibir o código e em seguida, clique em 'Utilizar o código'. Os blocos  substituirão o bloco 'I.A. gera o efeito'  na sua área de trabalho. "
+        },
+        "dance_ai_dancer_and_dance_move": {
+          "HInt2": "A dançarina deve ser a mesma em ambos os blocos e a sequência (ordem) é importante. ",
+          "validation": "💡 Adicione esses blocos para <code style=\"color:white; background-color:#FFBD46\">configurar</code> para criar sua primeira dançarina: \n<xml xmlns=\"https://developers.google.com/blockly/xml\"> \n    <block type=\"Dancelab_makeAnonymousDanceSprite\" id=\"1\"> \n      <field name=\"COSTUME\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">\"CAT\"</field> \n      <field name=\"LOCATION\">{x: 200, y: 200}</field> \n      <next> \n        <block type=\"Dancelab_changeMoveEachLR\" id=\"|y+CWEBlleENO5MU(?yL\"> \n           <field name=\"GROUP\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">\"CAT\"</field> \n           <field name=\"MOVE\">\"próximo\"</field> \n           <field name=\"DIR\">-1</field>\n        </block> \n      </next> \n    </block> \n  </statement> \n\n</xml>"
+        },
+        "dance_ai_generate_effect": {
+          "Hint2": "💡 Conecte o [bloco blockly][0] à <code style=\"color:white; background-color:#FFBD46\">configuração</code>. Em seguida, clique em no bloco para iniciar.",
+          "Hint3": "💡 Se quiser regenerar o efeito ou mudar o emoji, você pode clicar no bloco 'I.A. gera efeito'  novamente. "
+        },
+        "dance_ai_generate_effect_again": {
+          "Hint1": "💡 Ouça a música e pense sobre o astral da música. ",
+          "Hint2": "💡 Conecte o [bloco blockly][0] à <code style=\"color:white; background-color:#FFBD46\">configuração</code>. Em seguida, clique em no bloco para iniciar.",
+          "Hint3": "💡 Se quiser regenerar o efeito ou mudar o emoji, você pode clicar no bloco 'I.A. gera efeito'  novamente."
+        },
+        "dance_ai_try_key_press": {
+          "hint1": "💡 Seus dançarinos só responderão aos  comandos se a dança estiver sendo executada. ",
+          "hint2": "💡 Depois que você pressionar <code style=\"color:white; background-color:#FFBD46\">Executar</code>, movimento os dançarinos  pressionando a seta para a<code style=\"color:white; background-color:#FFBD46\">◀</code> <code style=\"color:white; background-color:#FFBD46\">▶</code> direita ou para a esquerda. "
         },
         "ecosystems_helloworld_say_2023": {
           "add_sprite": "Clique e arraste um bloco `make new sprite` e conecte-o em `when run`. \n\n<xml><block type=\"when_run\" deletable=\"false\"><next><block type=\"gamelab_makeNewSpriteAnon\"><field name=\"ANIMATION_NAME\">\"bunny1_ready\"</field><value name=\"LOCATION\"><block type=\"gamelab_location_picker\" can_disconnect_from_parent=\"false\"><field name=\"LOCATION\">{\"x\":200,\"y\":200}</field></block></value></block></next></block></xml>",

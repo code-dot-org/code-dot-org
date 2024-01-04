@@ -59,6 +59,11 @@ ga:
             '"measures"': tomhas
             '"seconds"': soicind
         text: tar éis {TIMESTAMP} {UNIT}
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': tomhas
+            '"seconds"': soicind
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -82,6 +87,27 @@ ga:
             '"SLOTH"': spadán
             '"UNICORN"': aonbheannach
             sprites: uile
+          MOVE:
+            '"next"': "(Ar Aghaidh)"
+            '"prev"': "(Siar)"
+            '"rand"': "(Randamach)"
+            MOVES.ClapHigh: Bualadh Bos Ard
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Daba
+            MOVES.DoubleJam: Dúbailt Síos
+            MOVES.Drop: Titim
+            MOVES.Floss: Flas
+            MOVES.Fresh: Úr
+            MOVES.Kick: Réalta
+            MOVES.Rest: Dada
+            MOVES.Roll: Tonn Choirp
+            MOVES.ThisOrThat: Seo nó Siúd
+        text: déanadh gach {GROUP} {MOVE} {DIR} go brách
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': cat
+            '"SLOTH"': spadán
           MOVE:
             '"next"': "(Ar Aghaidh)"
             '"prev"': "(Siar)"
@@ -543,6 +569,50 @@ ga:
             '"electronic"': Leictreonach
             '"iceCream"': Uachtair Reoite
             '"neon"': Gléineach
+            '"rave"': Dubh is Bán
+            '"tropical"': Trópaiceach
+            '"vintage"': Sean-Nóis
+            '"warm"': Teolaí
+        text: |-
+          socraigh éifeacht an chúlra:
+          {EFFECT} {PALETTE}
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': Ciorcail
+            '"color_cycle"': Dathanna
+            '"diamonds"': Diamaint
+            '"disco"': Cearnóga
+            '"disco_ball"': Liathróid Dioscó
+            '"fireworks"': Tinte ealaíne
+            '"flowers"': Bláthanna
+            '"galaxy"': An Spás
+            '"growing_stars"': Réaltaí ag fás
+            '"kaleidoscope"': Cailéideascóp
+            '"lasers"': Urlár Damhsa Léasair
+            '"music_wave"': Tonnta
+            '"none"': Dada
+            '"quads"': Uillinneacha
+            '"rainbow"': Tuar ceatha
+            '"rand"': "(Randamach)"
+            '"ripples"': Tonnáin
+            '"ripples_random"': Tonnáin Randamacha
+            '"snowflakes"': Sneachta
+            '"sparkles"': Drithlí
+            '"spiral"': Bís
+            '"splatter"': Steall Péinte
+            '"squiggles"': Caisirníní
+            '"starburst"': Pléascadh Réaltaí
+            '"stars"': Réaltaí
+            '"swirl"': Hiopnó
+            '"text"': Ainmneacha Amhráin
+          PALETTE:
+            '"cool"': Fionnuar
+            '"default"': Sorcha
+            '"electronic"': Leictreonach
+            '"iceCream"': Uachtair Reoite
+            '"neon"': Gléineach
+            '"rainbow"': Tuar ceatha
             '"rave"': Dubh is Bán
             '"tropical"': Trópaiceach
             '"vintage"': Sean-Nóis

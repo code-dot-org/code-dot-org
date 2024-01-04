@@ -1547,6 +1547,39 @@
         "pre-express-2018/Spelling Bee": {
           "name": "拼字比赛"
         },
+        "K5-OnlinePD/Getting Started": {
+          "name": "开始"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "计算机科学基础"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "展望未来"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "掌握基本知识: 序列"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "掌握基本知识： 循环"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "掌握基本知识： 条件语句"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "掌握基本知识： 函数"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "掌握基本知识： 事件"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "计算机科学教学的最佳实践"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "规划"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "下一步"
+        },
         "csd1-2019/Intro to Problem Solving": {
           "name": "解决问题入门"
         },
@@ -2215,6 +2248,45 @@
         },
         "pre-express-2019/Make a Game in Play Lab": {
           "name": "游戏实验室中的事件"
+        },
+        "k5-onlinepd-2019/Welcome to \"Teaching Computer Science Fundamentals\"": {
+          "name": "欢迎来到 \"教师的计算机科学基础\""
+        },
+        "k5-onlinepd-2019/Understanding the Computer Science Fundamentals Courses": {
+          "name": "理解计算机科学基础课程"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "序列"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "循环"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "事件"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "条件语句"
+        },
+        "k5-onlinepd-2019/End of Course projects": {
+          "name": "结课项目"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "函数"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "变量"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "计数循环"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "精灵图实验室"
+        },
+        "k5-onlinepd-2019/Reviewing your reflections": {
+          "name": "评审反思"
+        },
+        "k5-onlinepd-2019/Next steps": {
+          "name": "下一步"
         },
         "coursea-2020/Safety in My Online Neighborhood": {
           "name": "我的在线社区的安全"
@@ -3867,6 +3939,39 @@
           "purpose": "在本线上活动中，学生们将学习如何使用《游戏实验室》中的事件。他们将首先在按下箭头键时训练骑士移动，然后最后展示他们在本课程中学习的其它技能，包括序列和循环（作为最终自由游戏习题的一部分）。",
           "student_overview": "用事件来创作故事或交互的游戏。"
         },
+        "kodea-pd-2021/Getting Started": {
+          "name": "开始"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "计算机科学基础"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "展望未来"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "掌握基本知识: 序列"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "掌握基本知识： 循环"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "掌握基本知识： 条件语句"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "掌握基本知识： 函数"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "掌握基本知识： 事件"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "计算机科学教学的最佳实践"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "规划"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "下一步"
+        },
         "csd1-2022/Intro to Problem Solving": {
           "name": "解决问题入门",
           "overview": "**今日问题：什么让我们像一个团队一样工作和解决问题**\n\n这节课，学生们以小组为单位设计一个铝箔船来承载尽可能多的便士。每个小组有两机会来制作自己的船，目标是承载比第一轮中更多的便士。该活动的结构预示着解决问题的不同步骤，也就是我们将在后续课程中向学生们介绍的内容。在这堂课的末尾，学生反思他们在活动中的经历并联系将在剩余的课程中实践的解决问题的种类。\n\n**这堂课的其它版本均可用**\n\n-   [报纸板](/s/csd1-2022/lessons/9/)\n-   [意大利面桥](/s/csd1-2022/lessons/10/)\n-   [纸塔](/s/csd1-2022/lessons/11/)"
@@ -5029,7 +5134,7 @@
         "csc-bookcovers-2023/Learn to Code a Book Cover ": {
           "name": "学会编写书籍封面代码 ",
           "overview": "在这门面向新手编码人员的 CS 和 ELA 综合课程中，学生将学习编写数字书籍封面。首先，他们将查看现有的书籍封面，并讨论做出了哪些平面设计选择。接下来，学生将先看一个数字书籍封面示例，然后再自己创作几本书的封面示例。学生将学习选择精灵来代表书中的角色，以及使用事件让角色说话。 ",
-          "preparation": "-   玩关卡并查看课程<a href=\"https://docs.google.com/presentation/d/1GTaZX9z0b-dwk6Z48TSwqwhjZ9pO9Onk7w8n9xNt_Zk/template/preview\" target=\"_blank\">幻灯片</a>\n-   决定学生工作时间和整个小组教学之间的节奏。\n-   考虑在开始之前探索推荐的准备活动 ([link](https://studio.code.org/s/csc-bookcovers-2023/lessons/1#activity-4350298))。\n\n##### 可选：\n\n-   查看这个<a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">实用提示</a>幻灯片。 \n-   查看本 <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">教师调试指南</a>  ，准备好帮助学生发现和修复代码中的错误。 \n-   结对编程 - 决定是否希望学生参与结对编程。观看此<a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">视频</a>并访问此<a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">支持</a>页面，了解有关结对编程的更多信息。\n-   自定义精灵图上传 - 尽管这将在以后的课程中介绍，但你可以选择通过这段<a href=\"https://youtu.be/CHipUGfL_0M\" target=\"_blank\">视频</a>教学生如何上传自己的精灵图服装和背景。",
+          "preparation": "-   玩关卡并查看课程<a href=\"https://docs.google.com/presentation/d/1GTaZX9z0b-dwk6Z48TSwqwhjZ9pO9Onk7w8n9xNt_Zk/template/preview\" target=\"_blank\">幻灯片</a>\n-   决定学生工作时间和整个小组教学之间的节奏。\n-   考虑在开始之前探索推荐的准备活动 ([link](https://studio.code.org/s/csc-bookcovers-2023/lessons/1#activity-4350298))。\n\n##### 可选：\n\n-   查看这个<a href=\"https://docs.google.com/presentation/d/1k1bpCeQdh8PPHmh1ztDLyW2_jyuBhWqqRDhy1AKQ3U8/\" target=\"_blank\">实用提示</a>幻灯片。 \n-   查看本 <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">教师调试指南</a>  ，准备好帮助学生发现和修复代码中的错误。 \n-   结对编程 - 决定是否希望学生参与结对编程。观看此<a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">视频</a>并访问此<a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">支持</a>页面，了解有关结对编程的更多信息。\n-   自定义精灵图上传 - 尽管这将在以后的课程中介绍，但你可以选择通过这段<a href=\"https://youtu.be/CHipUGfL_0M\" target=\"_blank\">视频</a>教学生如何上传自己的精灵图服装和背景。",
           "student_overview": "在本课中，您将学习如何对电子书的封面进行编码。首先，您将选择背景和角色。然后，你将学习如何编程角色在点击时说话。在课程结束时，您将编写几个互动书籍封面的示例。"
         },
         "csc-bookcovers-2023/lesson-4": {
@@ -5052,13 +5157,13 @@
         "csc-ecosystems-2023/Overfishing Simulation (pilot)": {
           "name": "过度捕捞模拟",
           "overview": "在这节**技能培养**课程中，学生将对水生生态系统的模型进行编程，然后模拟过度捕捞的情况。学生将学习如何编程条件语句以检查水中的藻类含量。如果藻类过多，珊瑚就会生病。如果藻类太少，鱼就没有食物来源，就会离开该区域。如果藻类数量恰到好处，生病的珊瑚就会愈合，鱼会留在该区域。 ",
-          "preparation": "-   玩关卡并查看<a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">课程幻灯片</a> \n-   决定学生工作时间和整个小组教学之间的节奏。\n-   考虑为学生分配推荐的准备工作 \n    ([link](https://studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4911962))\n-   考虑这些相关的扩展选项 ([link](https://studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4911963))，以便在上一节课之后进行探索。\n\n##### 可选：\n\n-   [Optional] 查看这个<a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">实用提示</a>幻灯片。 \n-   [Optional] 查看这个<a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">教师调试指南</a>，准备好帮助学生发现和修复代码中的错误。 ",
+          "preparation": "-   玩关卡并查看<a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">课程幻灯片</a> \n-   决定学生工作时间和整个小组教学之间的节奏。\n-   考虑为学生分配推荐的准备工作 \n    ([link](https://studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4911962))\n-   考虑这些相关的扩展选项 ([link](https://studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4911963))，以便在上一节课之后进行探索。\n\n##### 可选：\n\n-   [Optional] 查看这个<a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">实用提示</a>幻灯片。 \n-   [Optional] 查看这个<a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">教师调试指南</a>  ，准备好帮助学生发现和修复代码中的错误。 \\<0>",
           "purpose": "学生将了解到海洋生态系统中有许多生物相互作用并保持彼此平衡。本课将计算机科学与生命科学相结合，学生创建一个模型，使用计算机科学中的条件语句来模拟过度捕捞的影响，以显示现实生活中的因果关系。 "
         },
         "csc-ecosystems-2023/Balancing the Ecosystem (pilot)": {
           "name": "平衡生态系统",
           "overview": "在这节**技能培养**课程中，学生将阅读并编程三种不同的解决方案来解决过度捕捞问题。\n\n本课从上一课中断的地方开始，不平衡的水生生态系统模型。首先，学生将修改船的行为，使其只能在指定的“捕鱼区域”内移动。其次，学生将编程一个新事件，指定“捕鱼季节”和“禁止捕鱼季节”。第三，学生将学习如何使用变量来跟踪船移走的鱼数量。本课程以“检查理解”关卡结束，以确保学生学会了解决过度捕捞的三种解决方案。",
-          "preparation": "-   阅读提供的关于<a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\" target=\"_blank\">了解过度捕捞</a>的文章。根据需要搭建脚手架，以满足学生的需求。 \n-   玩关卡并查看<a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">课程幻灯片</a> \n-   决定学生工作时间和整个小组教学之间的节奏。\n-   考虑为学生分配推荐的准备工作 [(link)](https://studio.code.org/s/csc-ecosystems-2023/lessons/2#activity-4986903)。\n-   考虑这些相关的扩展选项 [(link)](https://studio.code.org/s/csc-ecosystems-2023/lessons/2#activity-4986904)。\n\n##### 可选：\n\n-   [Optional] 查看这个<a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">实用提示</a>幻灯片。\n-   [Optional] 查看这个<a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">教师调试指南</a>，准备好帮助学生发现和修复代码中的错误。 ",
+          "preparation": "-   阅读提供的关于<a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\" target=\"_blank\">了解过度捕捞</a>的文章。根据需要提供脚手架，以满足学生的需求。 \n-   玩关卡并查看<a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">课程幻灯片</a> \n-   决定学生工作时间和整个小组教学之间的节奏。\n-   考虑为学生分配推荐的准备工作 [(link)](https://studio.code.org/s/csc-ecosystems-2023/lessons/2#activity-4986903)。\n-   考虑这些相关的扩展选项 [(link)](https://studio.code.org/s/csc-ecosystems-2023/lessons/2#activity-4986904)。\n\n##### 可选：\n\n-   [Optional] 查看这个<a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">实用提示</a>幻灯片。\n-   [Optional] 查看这个<a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">教师调试指南</a>，准备好帮助学生发现和修复代码中的错误。 ",
           "purpose": "学生将继续学习平衡和不平衡的生态系统。学生将以一篇关于过度捕捞的科学文章为基础，深入了解生态系统中生物之间的联系。最终，学生将有机会通过对当地生态系统进行建模来应用他们所学到的知识。 "
         },
         "csc-ecosystems-2023/lesson-3": {
@@ -5069,7 +5174,7 @@
         "csc-mappinglandmarks-2023/US Landmarks": {
           "name": "地图制作简介",
           "overview": "在这节**技能培养**课程中，学生将学习在地图上创建精灵并制作动画。 \n\n本课有两个主要目的：（1）提供交互式地图编码的示例，以及（2）向学生介绍在 Sprite Lab 中进行编程。Sprite Lab 是一个使用基于块的代码的开放式编码环境。在本课中，学生将学习 Sprite Lab 的基础知识，以便在接下来的课程中规划和构建交互式地图。 \n\n在这节综合课程中，学生通过使用代码创建地图来学习社会研究的概念。首先，学生将研究几个地图示例，并讨论构成地图的要素。在总结中，学生们将讨论地图制作者的角色。 \n\n_注意：地图和图像并非在所有情况下都非常合适。幸运的是，学生可以在允许自定义的免费游戏关卡中使用精灵上传工具和对动画库的访问权限。_",
-          "preparation": "-   自己查看并完成线上教程。\n-   查看幻灯片，决定学生工作时间和整个小组教学之间的节奏。\n-   在总结讨论中为每位学生准备便条或草稿纸。\n-   检查您的技术，并决定是否需要提前进行故障排除。\n\n##### 可选：\n\n-   查看这个<a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">实用提示</a>幻灯片。 \n-   查看这个<a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">教师调试指南</a>  ，准备好帮助学生发现和修复代码中的错误。 \n-   结对编程 - 决定是否希望学生参与结对编程。观看此<a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">视频</a>并访问此<a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">支持</a>页面，了解有关结对编程的更多信息。\n-   自定义精灵图上传 - 尽管这将在以后的课程中介绍，但你可以选择通过这段<a href=\"https://youtu.be/CHipUGfL_0M\" target=\"_blank\">视频</a>教学生如何上传自己的精灵图服装和背景。",
+          "preparation": "-   自己查看并完成线上教程。\n-   查看幻灯片，决定学生工作时间和整个小组教学之间的节奏。\n-   在总结讨论中为每位学生准备便条或草稿纸。\n-   检查您的技术，并决定是否需要提前进行故障排除。\n\n##### 可选：\n\n-   查看这个<a href=\"https://docs.google.com/presentation/d/1k1bpCeQdh8PPHmh1ztDLyW2_jyuBhWqqRDhy1AKQ3U8/\" target=\"_blank\">实用提示</a>幻灯片。 \n-   查看这个<a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">教师调试指南</a>  ，准备好帮助学生发现和修复代码中的错误。 \n-   结对编程 - 决定是否希望学生参与结对编程。观看此<a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">视频</a>并访问此<a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">支持</a>页面，了解有关结对编程的更多信息。\n-   自定义精灵图上传 - 尽管这将在以后的课程中介绍，但你可以选择通过这段<a href=\"https://youtu.be/CHipUGfL_0M\" target=\"_blank\">视频</a>教学生如何上传自己的精灵图服装和背景。",
           "purpose": "学生在交互式学习体验中创建导游应用程序，该应用程序集成了多个学科领域。通过将计算机科学概念与地理内容相结合，本课旨在帮助学生更深入地了解这两个科目并了解它们之间的联系。本课旨在让学生通过创建一个导游应用程序，突出显示特定地理位置的重要地标、文化事件和历史遗迹，从而在现实世界中应用他们的编程技能。",
           "student_overview": "在本课中，您将探索地图！地图可以帮助你弄清楚要去哪里。他们还讲述构成一个地方的人的故事。 \n\n使用代码，你将在背景上为精灵制作动画以创建交互式地图。"
         },
@@ -5083,7 +5188,7 @@
         "csc-mappinglandmarks-2023/Local Landmarks - Coding Your Project": {
           "name": "对我的地图进行编码",
           "overview": "在本课中，学生使用上一堂课的项目计划来创建交互式地图。学生可能处于计划中的不同阶段。\n\n学生使用计算机后，他们将遵循一个关卡进度，引导他们完成设置背景、创建导游、让导游说 “欢迎”、移动以及添加至少 2 个地标的过程，这些地标会触发导游在触摸时说些什么。 \n\n请注意，这是一个项目进度，这意味着学生代码将跟随他们从一个级别到另一个级别。鼓励学生在进入下一个级别之前在每个关卡上按 “运行” 保存代码。\n\n课程以快速的画廊漫步结束，为下一节课做准备，学生将与全班分享他们的项目。 ",
-          "preparation": "-   自己查看并完成线上教程。\n-   准备返回上一课的计划指南。 \n-   考虑为可能没有信心或没有准备好开始创意项目的学生提供支持的策略。 \n-   考虑这些相关的扩展选项 ([link](https://studio.code.org/s/csc-mappinglandmarks-2023/lessons/3#activity-5197066))\n\n##### 可选：\n\n-   自己编写地图，作为学生的示例\n-   查看这个<a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">实用提示</a>幻灯片。\n-   查看这个<a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">教师调试指南</a>，准备好帮助学生发现和修复代码中的错误。 ",
+          "preparation": "-   自己查看并完成线上教程。\n-   准备返回上一课的计划指南。 \n-   考虑为可能没有信心或没有准备好开始创意项目的学生提供支持的策略。 \n-   考虑这些相关的扩展选项 ([link](https://studio.code.org/s/csc-mappinglandmarks-2023/lessons/3#activity-5197066))\n\n##### 可选：\n\n-   自己编写地图，作为学生的示例\n-   查看这个<a href=\"https://docs.google.com/presentation/d/1k1bpCeQdh8PPHmh1ztDLyW2_jyuBhWqqRDhy1AKQ3U8/\" target=\"_blank\">实用提示</a>幻灯片。\n-   查看这个<a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">教师调试指南</a>，准备好帮助学生发现和修复代码中的错误。 ",
           "purpose": "本课旨在提供丰富而引人入胜的学习体验，将计算机科学和地理相结合，帮助学生培养与当今世界相关的一系列技能和能力。通过编写自己的导游应用程序，学生可以探索特定地点的地理特征、文化活动和历史遗迹。他们可以通过代码和技术来表达他们对这个地点的理解和欣赏。本课还强调了规划、解决问题和自我表达在编程中的重要性。",
           "student_overview": "现在是时候与参观每个地标的导游一起创建地图了。您将遵循上节课时设计的计划。仔细遵循每个关卡的指示。在这个项目中，你的代码将从一个关卡到另一个关卡跟随你。 "
         },
@@ -5097,7 +5202,7 @@
         "csc-starquilts-2023/Native American Star Quilts (beta)": {
           "name": "美洲原住民星星被子",
           "overview": "在这节 Unplugged 课程中，将向学生介绍美洲原住民星星被及其意义。然后，学生将在纸上画一个六角星形。主要目标之一是讨论形状内的图案。这些想法将成为日后活动的在线编码部分的关键。 ",
-          "preparation": "-   玩关卡并查看课程幻灯片\n-   决定学生工作时间和整个小组教学之间的节奏。\n-   请考虑这些相关的扩展选项（链接），以便在上一课之后进行探索。\n\n##### 可选：\n\n-   查看这个<a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">实用提示</a>幻灯片。 \n-   查看这个<a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">教师调试指南</a>  ，准备好帮助学生发现和修复代码中的错误。 \n-   结对编程-决定是否希望学生参与结对编程。观看此<a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">视频</a>并访问此<a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">支持</a>页面，了解有关结对编程的更多信息。",
+          "preparation": "-   玩关卡并查看课程幻灯片\n-   决定学生工作时间和整个小组教学之间的节奏。\n-   请考虑这些相关的扩展选项（链接），以便在上一课之后进行探索。\n\n##### 可选：\n\n-   查看这个<a href=\"https://docs.google.com/presentation/d/1k1bpCeQdh8PPHmh1ztDLyW2_jyuBhWqqRDhy1AKQ3U8/\" target=\"_blank\">实用提示</a>幻灯片。 \n-   查看这个<a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">教师调试指南</a>  ，准备好帮助学生发现和修复代码中的错误。 \n-   结对编程-决定是否希望学生参与结对编程。观看此<a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">视频</a>并访问此<a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">支持</a>页面，了解有关结对编程的更多信息。",
           "purpose": "今天，您将了解有关Star Quilts的所有知识。然后，您将使用铅笔、纸和颜色开始设计自己的 6 点星形状。留意图案！"
         },
         "csc-starquilts-2023/Getting Started with The Artist (beta)": {
@@ -6336,9 +6441,6 @@
           "overview": "⚠️ 本课适用于想要在**单天**内展示整个 [人工智能工作原理视频系列](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) 的教室。它不打算与本单元中的其他课程顺序进行教学，本单元逐一介绍每个视频。\n\n学生通过匹配视频中的词汇来关注每个视频，然后回答有关每个视频的反思问题。课程计划和幻灯片非常稀疏且开放式，允许即兴创作和自定义，以适应您的课堂。",
           "preparation": "\\-打印出活动指南\n\\-将幻灯片投影到视频投影仪上"
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "《编程一小时 2013》"
-        },
         "applab-intro/Intro to App Lab": {
           "name": "应用程序实验室简介",
           "overview": "本教程旨在快速介绍应用实验室编程环境，作为构建和共享应用程序的强大工具。教程本身教学生在JavaScript中使用模块或文本创建和控制按钮、文本、图像、声音和屏幕。在教程结束时，学生有时间将他们开始构建的项目扩展为“选择自己的冒险”、“贺卡”或“性格测试”应用程序。他们也可以继续构建code.org/applab页面上显示的更多项目。  \n\n祝你在应用实验室愉快地完成编程一小时！\n\n**年龄适宜性：**本教程为13岁以上的学生设计。因为它允许学生上传自定义的声音和图像，年轻的学生不应该在没有监督的情况下使用它。为了保护学生的隐私，如果你的学生年龄在13岁以下，他们将不能使用本教程，除非你首先在你管理的区域为他们设置账户。",
@@ -6509,9 +6611,10 @@
           "student_overview": "教程摘要：第一批学生将物体分类为“鱼”或“非鱼”，试图清除海洋中的垃圾。然后，学生们将需要扩展他们的训练数据集，以覆盖水中的其它海洋生物。在活动的第二部分，学生们将选择他们自己的标签应用于随机生成的鱼的图像。该训练数据用于能够自行标记新图像的机器学习模型。"
         },
         "outbreak/Outbreak": {
-          "overview": "本课程将围绕事件的**技能培养**与一个**小项目**结合，学生可以在精灵图实验室中构建自己的计算机模拟。学生将通过模拟来了解病毒传播的速度以及如何减缓病毒传播。",
-          "preparation": "-   解决难题，找出学生可能存在的问题。\n-   确保每个学生都有反思日志。",
-          "purpose": "在前一课中，学生从一个简单的模拟中收集和解释数据。在本课中，学生将按照说明编写自己的模拟模型。学生之前掌握的关于现实世界病毒疫情爆发的知识将应用于一个虚构的场景。 ",
+          "name": "编码一个模拟",
+          "overview": "在本课中，所有年龄段的学习者将在一个支持性的安全环境中获得编程和计算机科学的入门体验。本课将一个**小项目**与围绕事件的**技能培养**结合，学生可以在精灵图实验室中构建自己的计算机模拟。学生将通过模拟来了解病毒传播的速度，以及如何减缓病毒传播。",
+          "preparation": "#### 编程一小时前一周\n\n-   阅读[Hour of Code Educator Guide](https://hourofcode.com/us/how-to)和[Best Practices from Successful Educators](https://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)，以便开始规划你的“编程一小时”活动。\n\n-   如果你想获得课堂支持、打折海报或参加机器人赠品活动（仅限美国），请[Register your Hour of Code event](https://hourofcode.com/us)。\n\n-   自行观看并完成在线教程： [Outbreak](https://studio.code.org/s/outbreak/)\n\n-   在让学生完成教程之前，请务必先进行测试。\n\n-   检查你的技术设备，并确定是否需要在“编程一小时”之前对所有问题进行排查。\n\n#### 编程一小时前一天\n\n-   每个完成活动的学生都应获得[certificate](https://studio.code.org/certificates/batch)。提前为每个学生打印一张，这样在“编程一小时”结束时就更加方便。\n\n-   （可选）鼓励学生携带耳机以便在活动中使用。",
+          "purpose": "在本课中，学生将按照指示编写他们自己的模拟模型。学生之前关于真实世界病毒爆发的知识将应用于一个虚构场景。",
           "student_overview": "一种病毒来到怪物城镇！学习创建一个病毒模拟器，帮助怪物恢复健康。"
         },
         "playlab/Play Lab": {
@@ -6553,72 +6656,6 @@
           "preparation": "-   测试《文本压缩工具》\n-   查看教师提示，决定采用哪一种选项。",
           "purpose": "压缩背后的基本原理是开发一种方法或协议，用较少的比特量来表示原始信息。在本课中，我们使用重复模式的“字典”表示压缩数据的方式与[LZW压缩方案](http://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch)相似，但需要注意的是，LZW与学生们在本课中所做的略有不同。学生们在这里发明他们自己的方法。LZW不仅用于文本数据（zip文件），还可以用于GIF图片文件格式。",
           "student_overview": "在某种程度上，我们达到了发送比特的物理速度极限，如果我们想更快地发送大量信息，我们必须找到一种用更少的比特量表示相同信息的方法 - 我们必须压缩数据。 "
-        },
-        "applab-1hour/Room Escape": {
-          "name": "逃出房间"
-        },
-        "applab-2hour/Digital Design": {
-          "name": "数字设计"
-        },
-        "applab-2hour/Event Driven Programming": {
-          "name": "事件驱动编程"
-        },
-        "applab-2hour/Basic App Functionality": {
-          "name": "基本应用程序功能"
-        },
-        "applab-2hour/Getters and Setters": {
-          "name": "取值器和设置器"
-        },
-        "frequency_analysis/Frequency Analysis": {
-          "name": "频率分析"
-        },
-        "gamelab/Start and End Screens": {
-          "name": "开始和结束屏幕"
-        },
-        "gamelab/Start and End Screens2": {
-          "name": "开始和结束屏幕2"
-        },
-        "k1hoc2017/Collector Hour of Code 2017": {
-          "name": "编程一小时2017 收集器"
-        },
-        "netsim/Overview and Setup Instructions": {
-          "name": "概述和安装说明"
-        },
-        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
-          "name": "点对点 - 在共享的线路上发送比特位"
-        },
-        "netsim/Peer to Peer - Sending Numbers": {
-          "name": "点对点 - 发送数字"
-        },
-        "netsim/Peer to Peer - Sending Ascii": {
-          "name": "点对点 - 发送Ascii码"
-        },
-        "netsim/Broadcasting messages": {
-          "name": "广播消息"
-        },
-        "netsim/Routers and addresses": {
-          "name": "路由和地址"
-        },
-        "netsim/Packets and Reliability": {
-          "name": "数据包和可靠性"
-        },
-        "netsim/Manual DNS": {
-          "name": "手动域名解析服务器"
-        },
-        "netsim/Automatic DNS node": {
-          "name": "自动域名解析服务器节点"
-        },
-        "netsim/Internet Simulator Freeplay": {
-          "name": "网络模拟器自由游戏"
-        },
-        "odometer/Odometer Widget": {
-          "name": "里程表小工具"
-        },
-        "poetry-hoc3/lesson-1": {
-          "name": "情绪学习"
-        },
-        "vigenere/Vigenere": {
-          "name": "维吉尼亚"
         },
         "allthethings/Jigsaw": {
           "name": "拼图"
@@ -6757,6 +6794,21 @@
         },
         "allthethings/lesson-49": {
           "name": "音乐"
+        },
+        "applab-1hour/Room Escape": {
+          "name": "逃出房间"
+        },
+        "applab-2hour/Digital Design": {
+          "name": "数字设计"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "事件驱动编程"
+        },
+        "applab-2hour/Basic App Functionality": {
+          "name": "基本应用程序功能"
+        },
+        "applab-2hour/Getters and Setters": {
+          "name": "取值器和设置器"
         },
         "csd-post-survey/CSD post-course survey": {
           "name": "计算机科学发现学生课程后调查"
@@ -7067,12 +7119,60 @@
         "deepdive-debugging/Debugging for CDEF Educators": {
           "name": "为 CDEF 教育者的调试"
         },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "频率分析"
+        },
+        "gamelab/Start and End Screens": {
+          "name": "开始和结束屏幕"
+        },
+        "gamelab/Start and End Screens2": {
+          "name": "开始和结束屏幕2"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "《编程一小时 2013》"
+        },
         "jigsaw/Jigsaw": {
           "name": "拼图",
           "overview": "这一课会给学生们一个想法，让他们在到计算机实验室的时候有些什么期望。从简单讨论来给他们讲一些计算机实验室的举止，然后会让他们进一步用计算机来完成在线的难题。",
           "preparation": "-   回顾[常识教育](https://www.commonsense.org/education/digital-citizenship)网站，了解更多网上安全方面的内容。",
           "purpose": "本课的主要目标是让学生积累计算机的使用经验。课程涵盖最基本的计算机功能，如点击、拖动和拖放，我们正在为将来的习题创造一个更加平等的竞争环境。本课程还提供了一个介绍基本计算机硬件术语（可能包括“鼠标”、“触控板”或“触摸屏”，取决于你的设备）的好机会。",
           "student_overview": "点击并拖拽来完成难题。"
+        },
+        "k1hoc2017/Collector Hour of Code 2017": {
+          "name": "编程一小时2017 收集器"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "概述和安装说明"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "点对点 - 在共享的线路上发送比特位"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "点对点 - 发送数字"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "点对点 - 发送Ascii码"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "广播消息"
+        },
+        "netsim/Routers and addresses": {
+          "name": "路由和地址"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "数据包和可靠性"
+        },
+        "netsim/Manual DNS": {
+          "name": "手动域名解析服务器"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "自动域名解析服务器节点"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "网络模拟器自由游戏"
+        },
+        "odometer/Odometer Widget": {
+          "name": "里程表小工具"
         },
         "pixelation/Black & White Pixelation Tutorial": {
           "name": "黑白像素教程"
@@ -7088,6 +7188,12 @@
         },
         "pixelation/Color Pixelation Freeplay": {
           "name": "彩色像素自由游戏"
+        },
+        "poetry-hoc3/lesson-1": {
+          "name": "情绪学习"
+        },
+        "vigenere/Vigenere": {
+          "name": "维吉尼亚"
         }
       }
     }

@@ -599,6 +599,9 @@
         "functions_with_parameters/csd/2023": {
           "name": "Параметрлі Функциялар"
         },
+        "fucntions_devices/csd/2023": {
+          "name": "Функциялар"
+        },
         "functions_3/csd/2023": {
           "name": "Функциялар"
         },
@@ -784,11 +787,6 @@
         },
         "pair_programming/pre-express/2023": {
           "name": "Жұптасып Бағдарламалау"
-        },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": "",
-          "type": ""
         }
       }
     }

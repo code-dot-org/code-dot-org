@@ -983,12 +983,6 @@
         "9ea5d8fd-1b7d-4655-b4b1-75fd09545838": {
           "description": "Chia sẻ tác phẩm sáng tạo với học sinh khác."
         },
-        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
-          "description": "Tạo các nhân vật mới và chỉ định trang phục, vị trí cho họ."
-        },
-        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
-          "description": "Tạo hình chuyển động tương tác bằng cách sử dụng nhân vật và sự kiện."
-        },
         "214e78cd-feb0-4235-a076-0fe81d14d95a": {
           "description": "Đào tạo và thử nghiệm mô hình máy học."
         },
@@ -3439,15 +3433,6 @@
         },
         "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
           "description": "Sử dụng thuật ngữ thích hợp khi đề cập đến chuột máy tính, bàn di chuột hoặc màn hình cảm ứng."
-        },
-        "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
-          "description": "Phát triển các chương trình phản ứng với các sự kiện theo thời gian."
-        },
-        "1e1c0724-7d86-4304-a73b-6f083be036fc": {
-          "description": "Minh họa sự chuyển biến trong tâm trạng của bài thơ."
-        },
-        "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
-          "description": "Biểu diễn ngôn ngữ nghĩa bóng và nghĩa đen trong một văn bản."
         }
       }
     }

@@ -12865,30 +12865,6 @@
         "2b5cb5b7-6a5e-4727-b8b5-128a3c546781": {
           "description": "Feu servir aquestes activitats per millorar l'aprenentatge dels alumnes. Es poden fer servir com activitats fora de l'aula o per aprofundir.\n\n**Mirem dins el maleter**\n\nQuan compartim un enllaç a la nostra història, també compartim el codi que hi ha al darrere. És una bona manera de fer que els alumnes aprenguin els uns dels altres.\n\n-   Publiqueu els enllaços a les històries acabades a internet.\n    -   Feu la vostra pròpia història i compartiu-la!\n-   Quan els alumnes carreguin un enllaç, demaneu-los que facin clic al botó de \"Com funciona\" per veure el codi que hi ha al darrere.\n-   Parleu en grup sobre les diferents maneres en què els companys han programat les seves històries.\n    -   Què us ha sorprès?\n    -   Què us agradaria provar?\n-   Escolliu la història d'un company i feu clic a \"Versionar\" per afegir-hi més coses (no us preocupeu, la història original queda guardada)."
         },
-        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
-          "name": "Prepareu el terreny",
-          "description": "Doneu la benvinguda als alumnes a classe i introduïu breument l'activitat d'avui."
-        },
-        "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
-          "description": "",
-          "tips": [
-            "Convé dedicar molt poc temps a explicar o presentar l'Hora del Codi. Especialment amb els alumnes més petits, val més la pena començar com més aviat millor."
-          ]
-        },
-        "7acfc985-03d8-4d14-b244-203f8cbf4843": {
-          "name": "Acompanyament general",
-          "description": "Aquí teniu alguns consells que ajudaran els alumnes, independentment del nivell que estiguin fent:\n\n-   **Col·laboreu amb els companys:** Animeu els alumnes a preguntar al veí quan es quedin encallats. Segons l’edat i les habilitats dels vostres alumnes, potser us anirà bé dividir la classe en parelles per tal que facin el tutorial amb el mètode de la [programació per parelles][0].\n\n-   **Llegiu les instruccions:** Les instruccions solen proporcionar informació útil per fer el nivell. Abans de donar la resposta, assegureu-vos que hagin consultat atentament les instruccions, les pistes, els vídeos i el codi d’inici.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Estàs encallat? Busca les pistes:** Cada nivell inclou una pista amb consells sobre com passar de nivell, inclosos els blocs o el codi que poden provar. \n\n-   **Preneu-vos el temps que necessiteu i experimenteu.** Les instruccions expliquen què fer en línies generals, però també haurien de provar les seves pròpies idees."
-        },
-        "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
-          "name": "Hola, món"
-        },
-        "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
-          "description": "Si un grup o un alumne acaba abans de temps, animeu-los a seguir desenvolupant un projecte a l’últim nivell. Si no saben què fer, podeu ajudar-los amb aquestes preguntes:\n\n-   Quins altres sprites podríeu afegir al projecte?\n-   Heu mirat tots els vestits que hi ha a la galeria o provat de dibuixar un vestit nou pels sprites?\n-   Què més podríeu fer que diguin els vostres sprites?\n-   Què podrien fer els sprites quan hi fem clic?\n-   Animeu els alumnes a compartir les seves idees amb els companys i a aprendre els uns dels altres. També poden provar de fer un altre tutorial dels que trobaran a [code.org/learn][0].\n"
-        },
-        "b68a11cc-930a-4803-beca-1d4f49ede378": {
-          "name": "Reflexió",
-          "description": "#### Comentaris\n\nDemaneu als alumnes que reflexionin sobre les activitats que heu fet avui. Què han après sobre programació? I sobre els sprites? I els esdeveniments?\n\nDesprés d’haver passat una hora descobrint la informàtica i la programació, els agrada?\n\n#### Propers passos\n\nDigueu als alumnes que, si els ha agradat l'activitat d'avui, tenen moltes opcions per seguir programant. Visiteu [Connexions Informàtiques][0] per trobar idees per integrar la informàtica en altres assignatures o llegir més sobre els [cursos que oferim per escoles de primària][1]."
-        },
         "9a692bd5-9de8-4718-9518-f14949953885": {
           "tips": [
             null
@@ -22136,7 +22112,22 @@
             null
           ]
         },
+        "8beb2941-dd64-44f4-9e99-6149c445067a": {
+          "tips": [
+            null
+          ]
+        },
         "500131a4-a22b-4a63-bc0a-d5d4a19c7169": {
+          "tips": [
+            null
+          ]
+        },
+        "a45155ff-19af-43ac-bf11-6ca4001816f4": {
+          "tips": [
+            null
+          ]
+        },
+        "a7d5069b-aa1c-4efa-a8d8-b58bd43a6c7b": {
           "tips": [
             null
           ]
@@ -22151,7 +22142,17 @@
             null
           ]
         },
-        "b2b4b9e6-fe3f-4d2d-a828-1402cc1572e8": {
+        "4ff33db6-6668-4423-8f1d-ad0b25f6da40": {
+          "tips": [
+            null
+          ]
+        },
+        "169c3eed-52d7-4a4b-b7c6-161cf287ed33": {
+          "tips": [
+            null
+          ]
+        },
+        "f1632666-ffc1-457a-832a-c2d3b2d1fc20": {
           "tips": [
             null
           ]
@@ -22166,7 +22167,22 @@
             null
           ]
         },
+        "b2777295-b74f-4240-bb3d-c76b79dde6a9": {
+          "tips": [
+            null
+          ]
+        },
         "9bcab929-d773-4dab-bfb0-d09892056944": {
+          "tips": [
+            null
+          ]
+        },
+        "bedaca2d-4f48-45b4-b6e9-431f6a38cc13": {
+          "tips": [
+            null
+          ]
+        },
+        "221b5029-fcfd-4791-b951-852609cb0198": {
           "tips": [
             null
           ]
@@ -35301,6 +35317,10 @@
           "name": "Introducció",
           "description": "**Debat:**\n\n-   _Què sabem sobre com s’escampa un virus?_\n-   _Què pot fer que un virus s’escampi per una ciutat més ràpidament?_\n-   _Què pot ajudar a frenar un virus?_\n\nL’objectiu d’aquesta conversa és que els alumnes tinguin l’oportunitat d’activar coneixements previs i vegin les seves idees a la pissarra. També és un bon moment per comentar qualsevol idea errònia sobre com s’escampen els virus."
         },
+        "9abff5bb-3f76-4f3c-b3d2-f0a873876cf8": {
+          "name": "Acompanyament general",
+          "description": "**Suport general:** Com a professors, el vostre paper principal és donar suport als alumnes mentre fan el tutorial. Aquí teniu alguns consells per ajudar els alumnes, independentment del nivell que estiguin fent: \n\n-   Animeu els alumnes a fer les diferents lliçons addicionals en l'ordre que vulguin. Sempre poden tornar al Nivell 1 per repassar el menú.\n\n-   **Col·labora amb el veí:** Animeu els alumnes a preguntar al veí quan comencin a encallar-se. Com que aquest tutorial inclou vídeo i és possible que els alumnes portin auriculars, és fàcil que aparegui “l’efecte bombolla”. Ajudeu a obrir-se formant parelles amb els alumnes si sembla que necessiten ajuda. Segons l’edat i l’habilitat dels alumnes, potser us serà útil dividir-los a tots en parelles perquè facin el tutorial amb la [programació per parelles](https://youtu.be/vgkahOzFH2Q). \n\n-   **Llegeix les instruccions:** Hi trobaran informació útil que els ajudarà a completar el nivell. Abans d’ajudar-los a completar el nivell, assegureu-vos que hagin observat amb atenció la imatge final i llegit tot el text que hi ha. \n\n-   ![](https://curriculum.code.org/media/uploads/hint.png)**No te’n surts? Busca pistes:** Cada nivell inclou una pista amb informació addicional sobre com passar de nivell. Si els alumnes estan intentant passar-se els trencaclosques el més ràpid possible, és possible que hagin d’esperar un cert temps perquè tot el codi s’executi abans de passar al següent. Molts nivells inclouen una segona pista amb propostes per ser encara més creatiu i allargar l’exercici. \n\n-   **Segueix avançant i ja hi tornaràs:** De vegades, als alumnes els ajudarà més tornar a un nivell més difícil més endavant. Tots els nivells són independents entre ells, tot i que de vegades sí que requereixen un cert coneixement dels conceptes explicats. \n\n-   **Pren-te el temps que necessitis i experimenta:** Tot i que els primers nivells expliquen clarament què s’ha de fer per passar de nivell, els alumnes també han de poder provar les seves pròpies idees lliurement. En aquests nivells no hi ha respostes correctes ni equivocades (tots són de joc lliure!)."
+        },
         "d63c77c1-4167-4360-ab98-25610934beda": {
           "name": "Brots",
           "description": "_A la lliçó d’avui, anirem a la Ciutat dels Monstres, on de seguida hi haurà un brot d’un virus. El Dr. Monstre necessita que l’ajudeu a frenar el virus._\n\n_Creareu una simulació d’un brot al Laboratori d’Sprites, i després la fareu servir per entendre com s’escampen els virus. També ajudareu els monstres a recuperar la salut!_",
@@ -35336,6 +35356,10 @@
         "b8e884f1-eae0-4138-8778-0972f90e34d9": {
           "name": "Reflexió",
           "description": "**Preguntes:**\n\n-   En què s'assembla aquesta simulació al món real? I en què es diferencia?\n-   Què us agradaria canviar/afegir a la vostra simulació?"
+        },
+        "c1c5b270-2aae-4f8c-aded-0d92811d532f": {
+          "name": "Celebració",
+          "description": "Expliqueu que avui passareu una hora programant, perquè som a la Setmana de l'Educació en Informàtica, i milions d'alumnes d'arreu del món també han estat fent una Hora del Codi. Feliciteu-los per formar part d'aquest moviment mundial.\n\nDoneu [un certificat](http://code.org/certificates) a cada alumne i alumna en què hi posi el seu nom."
         },
         "366afa8a-feff-4dd4-a415-03a04e01e897": {
           "name": "Prepareu el terreny"
@@ -35620,12 +35644,6 @@
           "name": "Propietats dels elements de la interfície de l'usuari",
           "progression_name": "Propietats dels elements de la interfície de l'usuari"
         },
-        "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
-          "name": "Escalfament"
-        },
-        "50216925-6742-400e-b45a-2de4cd3b63f2": {
-          "name": "Recapitulació"
-        },
         "f108ae93-f672-4062-b6d6-522901659990": {
           "name": "Enquesta post-curs Descobriments Informàtics",
           "progression_name": "Enquesta post-curs Descobriments Informàtics"
@@ -35650,39 +35668,88 @@
         "319eb690-ba34-4d34-9158-d30d777c4b05": {
           "name": "Reflexió"
         },
-        "b16d189d-d990-44c4-be49-8f81ac81a96e": {
-          "description": "#### Prepareu el terreny\n\nDoneu la benvinguda als alumnes i introduïu molt breument l’activitat d’avui. ",
+        "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
+          "name": "Escalfament"
+        },
+        "50216925-6742-400e-b45a-2de4cd3b63f2": {
+          "name": "Recapitulació"
+        },
+        "3125ec73-4d68-45a9-a6f8-b2921c55d4a3": {
+          "name": "Filtrar la música"
+        },
+        "524efe4b-796a-48eb-b1c6-f4e138699443": {
+          "name": "Acompanyament general"
+        },
+        "b9bacf54-bd37-42b8-85fc-bc9d07a50537": {
           "tips": [
-            "Una manera de presentar l'Hora del Codi, si vosaltres mateixos tampoc no esteu gaire familiaritzats amb la programació, és posar un dels nostres [vídeos d'inspiració][0]. Trieu el que creieu que agradarà més als vostres alumnes i poseu-lo. Per als alumnes més petits, us recomanem [Ja és aquí l'Hora del Codi][1]."
+            null
           ]
         },
-        "d99fc09e-a586-41df-84b2-e552cc4735e3": {
-          "description": "Avui farem servir la nostra creativitat mentre aprenem a programar. Hi ha moltes maneres de ser creatiu. De quines maneres us agrada expressar la vostra creativitat?"
+        "58bdb8b5-159d-4b7a-aae7-d250213c1379": {
+          "progression_name": "Introducció de vídeo"
         },
-        "b6c8c6a3-fe85-4d42-999e-a2ba13f6739a": {
-          "description": "Animeu-los a explicar de quines formes els agrada expressar-se, ja sigui pintant o dibuixant, ballant, fent música o escrivint. Després, pregunteu-los quines fonts d'inspiració fan servir."
+        "b8daa26e-57e7-4bc5-8a6e-1e541a407c8e": {
+          "tips": [
+            null
+          ]
         },
-        "6fba9dd0-6069-402c-a641-53899ae667e2": {
-          "description": "Sabíeu que la informàtica pot ser molt creativa? De fet, es pot fer art amb codi. Recordeu que el codi és un conjunt d'instruccions que un ordinador és capaç d'entendre. Igual que triem els colors de pintura que volem fer servir, escollir quin codi escrivim també pot ser una oportunitat d'expressar la nostra creativitat!\n\nAvui farem servir la poesia per inspirar la nostra creativitat en programació. Algú sap què és la poesia? Teniu algun poema o poeta preferit?"
+        "7c95f7a1-478d-45fc-ba2d-5807bd2b828f": {
+          "name": "Comentaris"
         },
-        "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102": {
-          "description": "**Llegiu poesia tots junts:** Llegiu [alguns poemes][0] amb tota la classe i practiqueu assignant l'estat d'ànim que transmet cada poema. Animeu-los a explicar les seves interpretacions, encara que siguin diferents de les de la resta. "
+        "c624ab39-fa08-4b83-b1e9-bf97fb42667f": {
+          "name": "Celebració"
         },
-        "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
-          "name": "L'art del poema",
-          "description": "#### Acompanyament general\n\nAl final d’aquesta activitat, els alumnes tindran un poema animat que representarà la interpretació visual del poema que han triat. Aquesta lliçó està dissenyada per donar als alumnes l’oportunitat de retocar el seu codi i trobar els efectes visuals que més els agradin.\n\nMentre us passegeu per la classe, animeu-los a:\n\n-   **Pren-te tot el temps que necessitis:** La majoria dels nivells exigeixen que els alumnes trobin els efectes perfectes per transmetre la seva interpretació de l’estat d’ànim del poema. Precisament el que es busca és que es quedin en un mateix nivell i toquin i retoquin el codi.\n\n-   **Troba un poema que t’agradi:** El poema que apareix en cada nivell nou només és una proposta. Hi ha un menú desplegable amb els poemes predefinits a la part superior de l’àrea de joc. Demaneu-los que en llegeixin uns quants i en trobin un que els digui alguna cosa. Llavors podran començar a animar el poema que han triat amb el seu codi.\n\n-   **Ensenyeu un nivell acabat:** Les bombolles de nivell que apareixen en verd indiquen que l’alumne ha completat tots els requisits del nivell. Demaneu a un alumne que faci clic a la bombolla verda per ensenyar a la resta la seva creació.\n\nQuan algú se senti encallat:\n\n-   **Llegeix les instruccions:** Les instruccions són llistes que expliquen com fer el nivell. Si un alumne se sent encallat, demaneu-li que us llegeixi les instruccions en veu alta i, quan acabi, que us les expliqui en les seves pròpies paraules.\n    -   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> També poden fer clic en aquesta icona per sentir les instruccions en àudio.\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Demana pistes**: La majoria dels nivells inclouen almenys una pista amb detalls més explícits sobre com passar de nivell. \n-   **Celebreu els errors o bugs:** Tenir errors al codi és una part natural del procés de programació. Si el programa no fa el que s’espera, demaneu a l’alumne què vol que passi, que faci clic a executar per veure què passa, i que trobi el punt del codi que provoca el problema. Recordeu celebrar-ho quan trobin un error i l’arreglin. La presència d’errors és positiva perquè vol dir que està creant un programa més complex."
+        "07a73ab9-8996-453a-a87f-63628f2387db": {
+          "name": "Propers passos",
+          "description": "Digueu als alumnes que, si els ha agradat l'activitat d'avui, tenen moltes opcions per seguir programant. Animeu-los a visitar code.org/learn per trobar-les totes, o si teniu pensat fer alguna de les activitats d'ampliació, expliqueu-los què fareu el pròxim dia."
         },
-        "065eda67-268c-4f91-9caf-efb2c34493fe": {
-          "description": "#### Acompanyament nivell per nivell\n\n**Nivell 1:** Animeu els alumnes a llegir el poema. Llavors demaneu-los que busquin un color de fons o un efecte que encaixi amb el to del poema que han triat.\n\n**Nivell 2:** En aquest exemple, els alumnes han de llegir el poema tots sols primer i després fer clic a Executar. Podeu demanar-los si els sons i els efectes que ha triat el programador encaixen amb l’estat d’ànim que transmet el poema. Demaneu-los que elaborin les respostes.\n\n**Nivell 3:** Aquest nivell introdueix sons: si en tenen, poden posar-se els auriculars. \n\n**Nivell 4:** Demaneu als alumnes que llegeixin el poema i hi trobin la línia en què el to canvia o en què hi aparegui una imatge introduïda pel poeta, i facin servir el bloc d’esdeveniments per afegir els efectes corresponents a les línies que han identificat al poema.\n\n**Nivell 5:** En aquest exemple, els alumnes han de llegir el poema tots sols primer i després fer clic a Executar. Podeu demanar-los si les imatges encaixen amb l’estat d’ànim que transmet el poema. Demaneu-los que elaborin les respostes.\n\n**Nivell 6, 7, 8:** Veieu “Celebreu els errors” a l’apartat d’Acompanyament general. Animeu els alumnes a fer programes que incorporin més d’una transició amb els blocs d’esdeveniments. \n\n**Nivell 9:** Animeu els alumnes a llegir tots els poemes del menú desplegable per trobar-ne un que els agradi. Digueu-los que podran compartir el que creïn en aquest nivell final amb els amics i la família. Ha arribat el moment de combinar els seus coneixements de programació, llengua i arts!"
+        "fb665f5b-457e-484e-924a-7aa4f2e097be": {
+          "name": "Fem-ho viral!"
         },
-        "51a89a3e-a8c7-41d6-bbbf-2ce16fc7e033": {
-          "description": "Si us ha agradat aprendre a programar avui, podeu seguir fent-ho a code.org/learn. Si voleu compartir la vostra feina amb els amics i la família, feu clic al botó \"Compartir\" i envieu l'enllaç a qui vulgueu!"
+        "c03cf1cb-2946-48c9-aede-76ccf4b787a9": {
+          "tips": [
+            null
+          ]
         },
-        "8630a813-1b6c-49c5-a58b-d2dc5dcccd0a": {
-          "description": "#### (Opcional) Avaluació: Comprovar la comprensió (4 minuts)\n\nRepartiu dues notes adhesives per alumne."
+        "3c17e9fd-b06b-478e-bb56-5734d9344b68": {
+          "tips": [
+            null
+          ]
         },
-        "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
-          "description": "Teniu dues notes adhesives. En una, escriviu-hi una cosa que heu après avui sobre la programació. \nA l'altra, escriviu-hi una cosa que heu après avui sobre poesia.\n\nAra, posem-ho tot en comú. Us faré una pregunta i haureu d'aixecar la mà per contestar. Què més us agradaria aprendre sobre programació i informàtica?"
+        "913cf29b-f688-4c8b-9834-96c9b75274f5": {
+          "tips": [
+            null
+          ]
+        },
+        "f39d7745-dd63-424d-baa1-de4e4fd0f0c0": {
+          "tips": [
+            null
+          ]
+        },
+        "a7f20e25-3940-4615-b90f-8664e1661b3a": {
+          "tips": [
+            null
+          ]
+        },
+        "2a1748fb-e49f-4ae0-be55-0c603dbe3335": {
+          "tips": [
+            null
+          ]
+        },
+        "e72dd2c9-59cc-4063-9dcc-d270e7fed0fe": {
+          "tips": [
+            null
+          ]
+        },
+        "5ff66bb0-517f-486e-b70f-cad0319c23df": {
+          "tips": [
+            null
+          ]
+        },
+        "31d4feb6-1e0c-4342-988b-6730a0d0155e": {
+          "tips": [
+            null
+          ]
         }
       }
     }

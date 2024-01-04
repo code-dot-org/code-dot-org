@@ -72,7 +72,7 @@ Promocioneu l'Hora de Codi a altres professors que puguin voler unir-se a la div
 
 ### Feu-ho saber als voluntaris registrant-vos al vostre esdeveniment
 
-Quan us [registreu a un esdeveniment de l'Hora del Codi](/#join), rebreu comunicacions per correu electrònic amb notícies i recomanacions per organitzar una Hora del Codi. També una forma d'informar els voluntaris de la vostra escola és participar. Els voluntaris són un recurs genial i alguns poden parlar a l'aula sobre les ciències informàtiques o simplement ajudar als alumnes amb les activitats de l'Hora del Codi.
+Quan us [inscriviu a l'esdeveniment Hora del Codi](/events), rebreu comunicacions per correu electrònic útils amb notícies i consells per allotjar una Hora del Codi amb èxit. També una forma d'informar els voluntaris de la vostra escola és participar. Els voluntaris són un recurs genial i alguns poden parlar a l'aula sobre les ciències informàtiques o simplement ajudar als alumnes amb les activitats de l'Hora del Codi.
 
 ### Motiveu als vostres alumnes
 

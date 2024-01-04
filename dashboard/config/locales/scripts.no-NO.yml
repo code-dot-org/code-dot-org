@@ -908,6 +908,14 @@
               display_name: 'Kapittel 2: Datamaskiner og problemløsning'
             lessonGroup-5:
               display_name: Undersøkelse
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapittel 1: Problemløsingsprosessen'
+            lessonGroup-3:
+              display_name: 'Kapittel 2: Datamaskiner og problemløsning'
+            lessonGroup-5:
+              display_name: Undersøkelse
         csd1-dlp:
           lesson_groups:
             content:
@@ -1054,6 +1062,12 @@
               display_name: 'Kapittel 1: Bilder og animasjoner'
             lessonGroup-3:
               display_name: 'Kapittel 2: Bygge spill'
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapittel 1: Bilder og animasjoner'
+            lessonGroup-3:
+              display_name: 'Kapittel 2: Bygge spill'
         csd3-dlp:
           lesson_groups:
             content:
@@ -1135,6 +1149,12 @@
             cspSurvey:
               display_name: Undersøkelse
         csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapittel 1: Bruke sentrert design'
+            lessonGroup-3:
+              display_name: 'Kapittel 2: Prototyping av app'
+        csd4-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapittel 1: Bruke sentrert design'
@@ -1227,6 +1247,12 @@
             cspSurvey:
               display_name: Undersøkelse
         csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapittel 1: Representerer informasjon'
+            lessonGroup-3:
+              display_name: 'Kapittel 2: Problemløsing med data'
+        csd5-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapittel 1: Representerer informasjon'
@@ -1337,6 +1363,10 @@
             csd6_2:
               display_name: 'Kapittel 2: Bygge fysiske prototyper'
         csd6a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapittel 2: Bygge fysiske prototyper'
+        csd6a-2024:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Kapittel 2: Bygge fysiske prototyper'
@@ -2420,7 +2450,7 @@
           description_short: Utforsk en Minecraft-verden gjennom kode.
           student_description: Bruk blokker med kode for å ta Steve eller Alex ut
             på et eventyr i Minecraft.
-          title: Kodetimen med Minecraft
+          title: Minecraft-eventyrer
         microbit-2022:
           lesson_groups:
             lessonGroup-4:
@@ -2670,9 +2700,24 @@
               display_name: Innhold
             csd3_2:
               display_name: 'Kapittel 2: Bygge spill'
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Introduksjon
+          lessons:
+            lesson-7:
+              name: Introduksjon
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Introduksjon
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
+              name: Introduksjon
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
               name: Introduksjon
         web-development-2023:
           lesson_groups:

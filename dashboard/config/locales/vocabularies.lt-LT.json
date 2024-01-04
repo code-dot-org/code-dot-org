@@ -197,39 +197,14 @@
         "function/hero/unversioned": {
           "word": "Komanda"
         },
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "code/poem-art/2021": {
           "word": "Kodavimas"
         },
         "code/sports/unversioned": {
           "word": "Kodavimas"
         },
-        "code/poem-art/unversioned": {
-          "word": "Kodavimas",
-          "definition": ""
-        },
-        "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+        "code/dance-ai/2023": {
+          "word": "Kodavimas"
         }
       }
     }

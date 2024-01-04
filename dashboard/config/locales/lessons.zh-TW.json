@@ -1595,6 +1595,39 @@
         "pre-express-2018/Spelling Bee": {
           "name": "拼字蜜蜂"
         },
+        "K5-OnlinePD/Getting Started": {
+          "name": "新手上路"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "計算機科學基礎"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "展望未來"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "掌握基本知識：序列（Sequencing）"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "掌握基本知識：迴圈（Loops）"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "掌握基本知識：條件判斷（Conditionals）"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "掌握基本知識：函式（Functions）"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "掌握基本知識：事件（Evnets）"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "教授計算機科學的最佳實踐"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "計畫"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "下一步"
+        },
         "csd1-2019/Intro to Problem Solving": {
           "name": "問題解決能力的介紹"
         },
@@ -2278,6 +2311,45 @@
         },
         "pre-express-2019/Make a Game in Play Lab": {
           "name": "以事件（Event）展開皇家大戰"
+        },
+        "k5-onlinepd-2019/Welcome to \"Teaching Computer Science Fundamentals\"": {
+          "name": "歡迎來到「教授計算機科學基礎」"
+        },
+        "k5-onlinepd-2019/Understanding the Computer Science Fundamentals Courses": {
+          "name": "瞭解計算機科學基礎課程"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "序列"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "迴圈"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "事件"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "條件判斷（Conditionals）"
+        },
+        "k5-onlinepd-2019/End of Course projects": {
+          "name": "課程結束專案"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "函式"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "變數"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "計次迴圈（For Loops）"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Sprite Lab"
+        },
+        "k5-onlinepd-2019/Reviewing your reflections": {
+          "name": "檢閱你的反思"
+        },
+        "k5-onlinepd-2019/Next steps": {
+          "name": "下一步"
         },
         "coursea-2020/Safety in My Online Neighborhood": {
           "name": "我的網上社區的安全"
@@ -3991,6 +4063,39 @@
           "purpose": "在這項線上活動中，學生會學習怎樣在 Play Lab 中使用事件。他們首先會訓練武士，在他們按下箭頭鍵時讓武士移動。活動結束時，他們將有機會展示本課程中所學到的其餘技巧（包括序列與迴圈）做為最後的自由探索謎題。",
           "student_overview": "使用事件製作故事或互動遊戲。"
         },
+        "kodea-pd-2021/Getting Started": {
+          "name": "新手上路"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "計算機科學基礎"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "展望未來"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "掌握基本知識：序列（Sequencing）"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "掌握基本知識：迴圈（Loops）"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "掌握基本知識：條件判斷（Conditionals）"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "掌握基本知識：函式（Functions）"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "掌握基本知識：事件（Evnets）"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "教授計算機科學的最佳實踐"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "計畫"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "下一步"
+        },
         "csd1-2022/Intro to Problem Solving": {
           "name": "問題解決能力的介紹"
         },
@@ -5162,7 +5267,7 @@
         },
         "ai-ethics-2023/lesson-1": {
           "name": "我們的 AI 道德守則",
-          "student_overview": "協同研究人工智慧道德規範，並建立可共用的行為準則。"
+          "student_overview": "協同研究人工智慧道德，並建立可共用的行為準則。"
         },
         "csc-adaptations-2023/Modeling Animal Adaptations (pilot)": {
           "name": "動物適應簡介",
@@ -6488,50 +6593,47 @@
           "student_overview": "使用事件製作故事或互動遊戲。"
         },
         "how-ai-works-2023/Introduction to Machine Learning": {
-          "overview": "本課以 [AI 如何運作：什麼是機器學習？](https://youtu.be/KHbwOetbmbs?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) 來自 [AI 如何運作視頻系列] 的視頻[1]。在探索教案之前，請先觀看此視頻。\n\n在本課中，學生將介紹一種稱為機器學習的人工智能形式，以及他們如何使用問題解決過程來幫助訓練機器人解決問題。他們參與了三種機器學習活動，其中一個機器人-AI Bot 正在學習如何檢測魚類中的模式。\n\n本課程可以單獨授課，也可以作為有關 AI 如何工作的 7 課程序列的一部分-[單擊此處查看此序列中的所有課程](https://code.org/ai/how-ai-works)。"
+          "overview": "本課圍繞來自[人工智慧如何運行視訊系列](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)的[人工智慧如何運行：什麼是機器學習？](https://youtu.be/KHbwOetbmbs?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)視訊展開。在探索課程計劃之前，請先觀看此視訊。\n\n在本課中，將向學生介紹一種稱為機器學習的人工智能形式以及他們如何使用問題解決過程來幫助訓練機器人解決問題。他們參與三種機器學習活動，在其中，一個人工智慧機器人正在學習如何檢測魚中的模式。\n\n本課程可以單獨授課，也可以作為有關人工智慧如何運行的7課序列的一部分 - [點擊此處查看此序列中的所有課程](https://code.org/ai/how-ai-works)。"
         },
         "how-ai-works-2023/Computer Vision": {
-          "name": "電腦視覺",
-          "overview": "本課以 \\[AI 如何運作[0] 影片系列] 中的 [AI 如何運作：電腦視覺] 影片為主題[1]。在探索教案之前，請先觀看此視頻。\n\n學生學習電腦視覺的運作方式。他們首先看到光學幻想，以確定他們眼睛注意到的繪圖的特徵。學生觀看視頻，解釋計算機視覺以及計算機如何「看到」。他們設計的演算法使用網路來決定顯示七個區段顯示的數字。最後，學生測試他們的算法。\n\n本課程可以單獨授課，也可以作為有關 AI 如何工作的 7 課程序列的一部分-[單擊此處查看此序列中的所有課程](https://code.org/ai/how-ai-works)。",
-          "preparation": "\\-列印每個群組的電腦視覺網路活動指南的副本\n\\-(選擇性) 可操控七段顯示器的列印副本",
-          "student_overview": "透過設計偵測數字的演算法，瞭解電腦視覺如何運作。"
+          "name": "計算機視覺",
+          "overview": "本課圍繞[人工智慧如何運行視訊系列](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)中的[人工智慧如何運行：計算機視覺](https://youtu.be/2hXG8v8p0KM?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)視訊展開。在探索課程計劃之前，請先觀看此視訊。\n\n學生學習計算機視覺的運行方式。他們首先看到光學錯覺，以確定他們眼睛注意到的繪圖的特徵。學生觀看解釋計算機視覺和計算機如何「看到」的視訊。他們設計使用網路來決定七段顯示器顯示什麽數字的演算法。最後，學生測試他們的演算法。\n\n本課程可以單獨授課，也可以作為有關人工智慧如何運行的7課序列的一部分 - [點擊此處查看此序列中的所有課程](https://code.org/ai/how-ai-works)。",
+          "preparation": "-   為每個小組列印計算機視覺網絡活動指南\n-   （可選）列印七段顯示器操控",
+          "student_overview": "透過設計偵測數字的演算法，瞭解計算機視覺如何運行。"
         },
         "how-ai-works-2023/Neural Networks": {
           "name": "神經網絡",
-          "overview": "本課圍繞 [AI 如何工作原理：神經網絡](https://youtu.be/JrXazCEACVo?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) 視頻的 [AI 如何工作] 視頻[1]。在探索教案之前，請先觀看此視頻。\n\n學生學習神經網絡的運作方式。他們首先討論一個向您推薦事物的經驗的例子。然後，他們使用一個小部件，根據一個人推薦視頻。學生觀看解釋神經網絡的視頻。他們使用更新的小部件來調整每個人的權重。最後，學生討論創建推薦系統時對不同觀點的需求。\n\n本課程可以單獨授課，也可以作為有關 AI 如何工作的 7 課程序列的一部分-[單擊此處查看此序列中的所有課程](https://code.org/ai/how-ai-works)。",
-          "preparation": "\\-為每個學生打印 WeTube 內容創建者資源的副本\n\\-為每個學生打印神經網絡活動指南的副本",
-          "student_overview": "透過調整推薦系統的權重來調整輸出，瞭解神經網路如何運作。"
+          "overview": "本課圍繞來自[人工智慧如何運行視訊系列](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)的[人工智慧如何運行：神經網絡](https://youtu.be/JrXazCEACVo?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)視訊展開。在探索課程計劃之前，請先觀看此視訊。\n\n學生學習神經網絡的運行方式。他們首先討論一個向你推薦東西的經驗的例子。然後，他們使用一個小部件，根據一個人推薦視訊。學生觀看解釋神經網絡的視訊。他們使用更新的小部件來調整每個人的權重。最後，學生討論創建推薦系統時對多樣化觀點的需求。\n\n本課程可以單獨授課，也可以作為有關人工智慧如何運行的7課序列的一部分 - [點擊此處查看此序列中的所有課程](https://code.org/ai/how-ai-works)。",
+          "preparation": "-   為每個學生列印WeTube內容創作者資源\n-   為每個學生列印神經網絡活動指南",
+          "student_overview": "透過調整推薦系統的權重來調整輸出，瞭解神經網絡如何運行。"
         },
         "how-ai-works-2023/Chatbots and Large Language Models (LLMs)": {
-          "name": "聊天機器人和大語言模型（LLM）",
-          "overview": "本課圍繞 [AI 如何工作原理：聊天機器人和大語言模型](https://youtu.be/X-AWdfSFCHQ) 視頻 [AI 如何工作](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)視頻。在探索教案之前，請先觀看此視頻。\n\n大型語言模型 (LLM) 會產生新的文字。LMS 生成的文本看起來像一個人可能已經寫了它，因為大型語言模型是基於大型文本構建的，例如維基百科。在本課程中，學生將了解什麼是法學碩士以及其工作原理，然後使用 LLM 與 AI 共同創建文本。最後，這個類結束了有關 LMS 是否智能或創造性的討論。\n\n本課程可以單獨授課，也可以作為有關 AI 如何工作的 7 課程序列的一部分-[單擊此處查看此序列中的所有課程](https://code.org/ai/how-ai-works)。",
-          "preparation": "\\-為每個學生打印活動指南的副本",
-          "student_overview": "大型語言模型（LLM）是智能還是創造性？當您與他們合作創造某些東西時，請自己決定，並了解更多有關它們如何工作的信息！"
+          "name": "聊天機器人和大型語言模型（LLM）",
+          "overview": "本課圍繞來自[人工智慧如何運行視訊系列](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)的[人工智慧如何運行：聊天機器人和大型語言模型](https://youtu.be/X-AWdfSFCHQ)視訊展開。在探索課程計劃之前，請先觀看此視訊。\n\n大型語言模型（LLM）會產生新文本。大型語言模型生成的文本看起來像人類寫的，因為大型語言模型是基於大型文本構建的，例如維基百科。在本課程中，學生將瞭解大型語言模型是什麽及其工作原理，然後使用大型語言模型與人工智慧共同創建文本。最後，本課以關於大型語言模型是否智能或有創造性的討論結束。\n\n本課程可以單獨授課，也可以作為有關人工智慧如何運行的7課序列的一部分 - [點擊此處查看此序列中的所有課程](https://code.org/ai/how-ai-works)。",
+          "preparation": "-   為每個學生列印活動指南",
+          "student_overview": "大型語言模型（LLM）具有智能或創造性嗎？當你使用它們來創造某些東西時，請自己決定，並瞭解有關它們如何運行的更多内容！"
         },
         "how-ai-works-2023/Generative Images": {
-          "name": "生成圖像",
-          "overview": "本課以 [AI 如何運作：創造力與想像力？](https://www.youtube.com/watch?v=X994dDnmRmY) 來自 [AI 如何運作視頻系列] 的視頻[1]。在探索教案之前，請先觀看此視頻。\n\n擴散模型會產生影像。擴散 AI 將圖像轉換為噪點，並訓練 AI 以逆轉過程。在本課程中，學生將學習 AI 如何生成圖像，然後探索擴散 AI 小工具。最後，班級結束了關於這些模型是否有創意的討論。\n\n本課程可以單獨授課，也可以作為有關 AI 如何工作的 7 課程序列的一部分-[單擊此處查看此序列中的所有課程](https://code.org/ai/how-ai-works)。",
-          "preparation": "\\-為每個學生打印活動指南的副本",
-          "student_overview": "了解 AI 如何通過探索擴散 AI 小部件生成圖像。"
+          "name": "生成式圖像",
+          "overview": "本課圍繞來自[人工智慧如何運行視訊系列](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)的[人工智慧如何運行：創造力和想像力？](https://www.youtube.com/watch?v=X994dDnmRmY)視訊展開。在探索課程計劃之前，請先觀看此視訊。\n\n擴散模型生成圖像。擴散人工智慧將圖像轉換為噪聲，並訓練人工智慧來逆轉過程。在本課程中，學生將學習人工智慧如何生成圖像，然後探索擴散人工智慧小部件。最後，本課以關於這些模型是否有創造性的討論結束。\n\n本課程可以單獨授課，也可以作為有關人工智慧如何運行的7課序列的一部分 - [點擊此處查看此序列中的所有課程](https://code.org/ai/how-ai-works)。",
+          "preparation": "-   為每個學生列印活動指南",
+          "student_overview": "瞭解人工智慧如何通過探索擴散人工智慧小部件生成圖像。"
         },
         "how-ai-works-2023/Algorithmic Bias": {
-          "name": "算法偏差",
-          "overview": "本課圍繞 [AI 如何工作原理：平等訪問和算法偏差](https://youtu.be/tJQSyzBUAew?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) 視頻 [AI 如何工作](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)視頻。在探索教案之前，請先觀看此視頻。\n\n在本課程中，學生將練習裁剪圖像，以發現 Twitter 裁剪算法基礎的偏差。然後，學生將閱讀並觀看有關發現這種偏見算法的視頻。最後，學生將討論識別和減少偏見的方法，並分析 Twitter 對裁剪算法中偏見指控的回應。\n\n本課程可以單獨授課，也可以作為有關 AI 如何工作的 7 課程序列的一部分-[單擊此處查看此序列中的所有課程](https://code.org/ai/how-ai-works)。",
-          "preparation": "\\-自己完成裁剪小部件活動，以便您可以查看學生對小部件的體驗以及他們可能會提出哪些問題或問題。\n\\-觀看視頻的部分 [「我們是否自動化種族主義？」](https://youtu.be/Ok5sKLXqynQ) 在課程計劃中參考。\n\\-從下面的鏈接部分閱讀兩篇文章。",
-          "student_overview": "在本課程中，您將研究裁切影像，並討論教導機器如何裁切影像時所面臨的挑戰和偏見。"
+          "name": "演算法偏見",
+          "overview": "本課圍繞來自[人工智慧如何運行視訊系列](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)的[人工智慧如何運行：平等訪問和演算法偏差](https://youtu.be/tJQSyzBUAew?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)視訊展開。在探索課程計劃之前，請先觀看此視訊。\n\n在本課程中，學生將練習裁剪圖像，以揭示Twitter裁剪演算法底層的偏見。然後，學生將閱讀並觀看關於揭示這種偏見演算法的視訊。最後，學生將討論識別和減少偏見的方法，並分析Twitter對裁剪演算法中存在偏見的指責的回應。\n\n本課程可以單獨授課，也可以作為有關人工智慧如何運行的7課序列的一部分 - [點擊此處查看此序列中的所有課程](https://code.org/ai/how-ai-works)。",
+          "preparation": "-   自己完成裁剪小部件活動，以便你可以查看學生對小部件的體驗以及他們可能會提出哪些問題。\n-   觀看課程計劃中引用的[「我們是否自動化種族主義？」](https://youtu.be/Ok5sKLXqynQ)視訊片段。\n-   閱讀來自下面連結部分的兩篇文章。",
+          "student_overview": "在本課中，你將研究裁剪圖像，並討論教導機器如何裁剪圖像時所面臨的挑戰和偏見。"
         },
         "how-ai-works-2023/Our AI Code of Ethics": {
           "name": "我們的 AI 道德守則",
-          "overview": "本課圍繞 [AI 如何工作原理：隱私和工作的未來](https://youtu.be/zNxw5gJtHLc?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) 視頻 [AI 如何工作] 視頻[1]。在探索教案之前，請先觀看此視頻。\n\n在小組中，學生使用文章和視頻進行研究，這些文章和視頻在他們選擇的人工智能領域暴露道德陷阱。之後，每個小組至少開發了一種面向解決方案的原則，以解決他們所選擇的區域。然後，這些原則被組合成一個全班級的「我們的 AI 道德守則」資源（例如幻燈片演示文稿，文檔或網頁），供各地的 AI 創作者和立法者使用。\n\n本課程可以單獨授課，也可以作為有關 AI 如何工作的 7 課程序列的一部分-[單擊此處查看此序列中的所有課程](https://code.org/ai/how-ai-works)。",
-          "student_overview": "協同研究人工智慧道德規範，並建立可共用的行為準則。"
+          "overview": "本課圍繞來自[人工智慧如何運行視訊系列](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)的[人工智慧如何運行：隱私和工作的未來](https://youtu.be/zNxw5gJtHLc?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)視訊展開。在探索課程計劃之前，請先觀看此視訊。\n\n在小組中，學生使用揭示他們所選人工智慧領域的道德陷阱的文章和視訊進行研究。之後，每個小組至少制定一種面向解決方案的原則，以解決他們所選擇的區域。然後，這些原則被組合成一個全班級的「我們的人工智慧道德準則」資源（例如幻燈片演示文稿、文檔或網頁），供各地的人工智慧創作者和立法者使用。\n\n本課程可以單獨授課，也可以作為有關人工智慧如何運行的7課序列的一部分 - [點擊此處查看此序列中的所有課程](https://code.org/ai/how-ai-works)。",
+          "student_overview": "協同研究人工智慧道德，並建立可共用的行為準則。"
         },
         "how-ai-works-2023/How AI Works In a Day": {
-          "name": "AI 如何在一天中運作",
-          "overview": "⚠️ 本課程適用於希望在 \\*\\* 一天內展示整個 [AI 如何工作視頻系列](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) 的教室 \\*\\*。它不打算與本單元中的其他課程按順序進行教學，該課程一次介紹每個視頻一天。\n\n學生可以配對影片中的詞彙，然後回答有關每部影片的反思問題，並跟進每部影片。課程計劃和幻燈片非常稀疏且開放式，可以進行即興創作和定制以適合您的課堂。",
-          "preparation": "\\-打印出活動指南\n\\-在視頻投影機上投影幻燈片"
-        },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "一小時玩程式 2013"
+          "name": "人工智慧如何運行-一天",
+          "overview": "⚠️本課程適用於希望在**一天**內展示整個[人工智慧如何運行視訊系列](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)的課堂\\*\\*。無意於將其與本單元（一天一個視訊）中的其他課程按順序進行教學。\n\n學生跟進每個視訊，可以配對視訊中的詞彙，然後回答有關每個視訊的反思問題。課程計劃和幻燈片非常稀疏且開放式，可以進行即興創作和定制以適合你的課堂。",
+          "preparation": "-   列印活動指南\n-   在視訊投影機上投影幻燈片"
         },
         "applab-intro/Intro to App Lab": {
           "name": "App Lab 入門",
@@ -6703,9 +6805,10 @@
           "student_overview": "教程摘要：學生首先會把物件分類為「fish」（魚）或「not fish」（不是魚），從而嘗試清除海洋中的垃圾。然後，學生將需要擴充訓練資料集，加入屬於海洋的其他海洋生物。在活動的第 2 部分，學生會自行選擇標籤套用於隨機產生的魚中。這些訓練資料會在機器學習模型中使用，然後學習模型便應能夠自行標籤新的圖像。"
         },
         "outbreak/Outbreak": {
-          "overview": "本課程將圍繞事件的**技能培養**與一個**小項目**結合，學生可以在精靈圖實驗室中構建自己的電腦類比。學生將通過類比來瞭解病毒傳播的速度以及如何減緩病毒傳播。",
-          "preparation": "-   解決難題，找出學生可能存在的問題。\n-   確保每個學生都有反思日誌。",
-          "purpose": "在前一課中，學生從一個簡單的模擬中收集和解釋數據。在本課中，學生將按照說明編寫自己的模擬模型。學生之前掌握的關於現實世界病毒疫情爆發的知識將應用於一個虛構的場景。",
+          "name": "編碼一個模擬",
+          "overview": "在本課中，所有年齡段的學習者將在一個支持性的安全環境中獲得程式設計和電腦科學的入門體驗。本課將一個**小項目**與圍繞事件的**技能培養**結合，學生可以在精靈圖實驗室中構建自己的電腦類比。學生將通過類比來瞭解病毒傳播的速度，以及如何減緩病毒傳播。",
+          "preparation": "#### 一小時玩程式前一週\n\n-   閱讀[Hour of Code Educator Guide](https://hourofcode.com/us/how-to)和[Best Practices from Successful Educators](https://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)，以便開始規劃你的“一小時玩程式”活動。\n\n-   如果你想獲得課堂支持、打折海報或參加機器人贈品活動（僅限美國），請[Register your Hour of Code event](https://hourofcode.com/us)。\n\n-   自行觀看並完成線上教程： [Outbreak](https://studio.code.org/s/outbreak/)\n\n-   在讓學生完成教程之前，請務必先進行測試。\n\n-   檢查你的技術設備，並確定是否需要在“一小時玩程式”之前對所有問題進行排查。\n\n#### 一小時玩程式前一天\n\n-   每個完成活動的學生都應獲得[certificate](https://studio.code.org/certificates/batch)。提前為每個學生列印一張，這樣在“一小時玩程式”結束時就更加方便。\n\n-   （可選）鼓勵學生攜帶耳機以便在活動中使用。",
+          "purpose": "在本課中，學生將按照指示編寫他們自己的類比模型。學生之前關於真實世界病毒爆發的知識將應用於一個虛構場景。",
           "student_overview": "一種病毒來到怪物城鎮！學習創建一個病毒模擬器，幫助怪物恢復健康。"
         },
         "playlab/Play Lab": {
@@ -6747,72 +6850,6 @@
           "preparation": "-   測試文字壓縮小工具\n-   檢閱教學要訣，以決定想選擇哪個選項",
           "purpose": "壓縮背後的基本原理是：開發出一種方法或協定，從而使用更少的位元來表示原始資訊。在本課堂中我們表示壓縮資料的方式（包含重複模式「詞典」），與 [LZW 壓縮方法](http://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch) 相似；但是應該注意，LZW 和學生在本課堂中執行的方法有少許不同。學生會在這時候發明自己的方法。LZW 不僅用於壓縮文字（zip 檔案），還可壓縮 GIF 圖像檔案格式。",
           "student_overview": "在將來的某個時候，我們會達到傳送位元的物理速度上限。若我們想更快傳送大量資訊，就必須找出方法，以更少位元表示相同的資訊。因此，我們必須壓縮資料。"
-        },
-        "applab-1hour/Room Escape": {
-          "name": "逃出房間"
-        },
-        "applab-2hour/Digital Design": {
-          "name": "數位設計"
-        },
-        "applab-2hour/Event Driven Programming": {
-          "name": "事件驅動的程式設計"
-        },
-        "applab-2hour/Basic App Functionality": {
-          "name": "基本的 App 函式"
-        },
-        "applab-2hour/Getters and Setters": {
-          "name": "Getter 與 Setter"
-        },
-        "frequency_analysis/Frequency Analysis": {
-          "name": "頻率分析"
-        },
-        "gamelab/Start and End Screens": {
-          "name": "開始與結束畫面"
-        },
-        "gamelab/Start and End Screens2": {
-          "name": "開始與結束畫面2"
-        },
-        "k1hoc2017/Collector Hour of Code 2017": {
-          "name": "一小時玩程式 收藏家 2017"
-        },
-        "netsim/Overview and Setup Instructions": {
-          "name": "概覽與操作說明"
-        },
-        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
-          "name": "點對點傳輸 - 在共用線路發送位元值"
-        },
-        "netsim/Peer to Peer - Sending Numbers": {
-          "name": "點對點傳輸 - 發送數字"
-        },
-        "netsim/Peer to Peer - Sending Ascii": {
-          "name": "點對點傳輸 - 發送 Ascii"
-        },
-        "netsim/Broadcasting messages": {
-          "name": "廣播訊息"
-        },
-        "netsim/Routers and addresses": {
-          "name": "路由器和網路位址"
-        },
-        "netsim/Packets and Reliability": {
-          "name": "封包和可靠度"
-        },
-        "netsim/Manual DNS": {
-          "name": "手動設定 DNS"
-        },
-        "netsim/Automatic DNS node": {
-          "name": "自動 DNS 節點"
-        },
-        "netsim/Internet Simulator Freeplay": {
-          "name": "網路模擬器自由探索"
-        },
-        "odometer/Odometer Widget": {
-          "name": "里程錶小工具"
-        },
-        "poetry-hoc3/lesson-1": {
-          "name": "情緒學習"
-        },
-        "vigenere/Vigenere": {
-          "name": "維吉尼亞密碼"
         },
         "allthethings/Jigsaw": {
           "name": "拼圖"
@@ -6951,6 +6988,21 @@
         },
         "allthethings/lesson-49": {
           "name": "音樂"
+        },
+        "applab-1hour/Room Escape": {
+          "name": "逃出房間"
+        },
+        "applab-2hour/Digital Design": {
+          "name": "數位設計"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "事件驅動的程式設計"
+        },
+        "applab-2hour/Basic App Functionality": {
+          "name": "基本的 App 函式"
+        },
+        "applab-2hour/Getters and Setters": {
+          "name": "Getter 與 Setter"
         },
         "csd-post-survey/CSD post-course survey": {
           "name": "CSD 學生課後問卷調查 ('18-'19)"
@@ -7261,12 +7313,60 @@
         "deepdive-debugging/Debugging for CDEF Educators": {
           "name": "除錯（課程 CDEF 教師專用）"
         },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "頻率分析"
+        },
+        "gamelab/Start and End Screens": {
+          "name": "開始與結束畫面"
+        },
+        "gamelab/Start and End Screens2": {
+          "name": "開始與結束畫面2"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "一小時玩程式 2013"
+        },
         "jigsaw/Jigsaw": {
           "name": "拼圖",
           "overview": "本課堂會讓學生瞭解在前往電腦室時預期會做甚麼。課堂首先會進行簡短討論，向學生介紹電腦室操守，然後開始使用電腦完成線上謎題。",
           "preparation": "-   回顧[常識教育](https://www.commonsense.org/education/digital-citizenship)網站，瞭解更多網上安全方面的內容。",
           "purpose": "本課的主要目標是建立學生的電腦經驗。通過涵蓋最基本的電腦功能，如點擊、拖動和下拉，我們在課堂上為未來的難題創造一個更平等的環境。本課還提供了一個很好的機會來介紹基本的電腦硬體術語，取決於你的設備，可能包括 \"游標\"、\"觸控板 \"或 \"觸控螢幕\"。",
           "student_overview": "以點擊與拖放的方式完成謎題。"
+        },
+        "k1hoc2017/Collector Hour of Code 2017": {
+          "name": "一小時玩程式 收藏家 2017"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "概覽與操作說明"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "點對點傳輸 - 在共用線路發送位元值"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "點對點傳輸 - 發送數字"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "點對點傳輸 - 發送 Ascii"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "廣播訊息"
+        },
+        "netsim/Routers and addresses": {
+          "name": "路由器和網路位址"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "封包和可靠度"
+        },
+        "netsim/Manual DNS": {
+          "name": "手動設定 DNS"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "自動 DNS 節點"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "網路模擬器自由探索"
+        },
+        "odometer/Odometer Widget": {
+          "name": "里程錶小工具"
         },
         "pixelation/Black & White Pixelation Tutorial": {
           "name": "黑白像素化教程"
@@ -7282,6 +7382,18 @@
         },
         "pixelation/Color Pixelation Freeplay": {
           "name": "色彩像素化自由探索"
+        },
+        "poetry-hoc3/lesson-1": {
+          "name": "情緒學習"
+        },
+        "vigenere/Vigenere": {
+          "name": "維吉尼亞密碼"
+        },
+        "dance-ai-2023/lesson-1": {
+          "name": "舞蹈派對：AI版",
+          "overview": "在本活動中，所有年齡段的學習者都將在一個安全、創造性的環境中獲得編碼和人工智慧的入門體驗。本課為所有年齡段學習者設計，但是需要閱讀。本活動需要學生播放音樂，因為這個教程是為響應音樂而構建的。",
+          "preparation": "### 如何規劃你的一小時玩程式\n\n在[here](https://hourofcode.com/us/how-to)找到您在學校計劃、實施和慶祝一小時玩程式所需的資源！",
+          "purpose": "使編碼成為令人興奮和愉快的體驗，對於培養對計算機科學的興趣至關重要。這個課程充滿了歡樂的時刻，學生通過簡單的拖放編碼模塊，使用代碼來編排包含色彩和動作的舞蹈場景。將向學生介紹AI機器人，他們將引導它找到符合他們的舞蹈情緒的完美效果。  "
         }
       }
     }

@@ -2279,25 +2279,16 @@
           "word": "Nén dữ liệu không giảm chất lượng",
           "definition": "thuật toán nén dữ liệu cho phép dữ liệu gốc được tái tạo hoàn hảo từ dữ liệu đã nén. Thường được sử dụng nhiều nhất để nén văn bản (ví dụ: nén .zip)"
         },
-        "code/poem-art/unversioned": {
+        "code/dance-ai/2023": {
           "word": "Mã",
-          "definition": "(v) để viết hướng dẫn cho máy tính."
+          "definition": "(động từ) viết code (mã lệnh) hoặc viết chỉ dẫn cho máy tính."
         },
-        "event/poem-art/unversioned": {
+        "event/dance-ai/2023": {
           "word": "Sự kiện",
           "definition": "Hành động khiến hiện tượng nào đó xảy ra"
         },
-        "program/poem-art/unversioned": {
-          "word": "Chương trình",
-          "definition": "Một loạt các bước đã được mã hóa thành một thứ gì đó có thể chạy bằng máy."
-        },
-        "mood/poem-art/unversioned": {
-          "word": "Tâm trạng",
-          "definition": "sự thể hiện một cảm giác, bầu không khí hoặc cảm xúc trong nghệ thuật hoặc văn bản."
-        },
-        "line/poem-art/unversioned": {
-          "word": "Dòng",
-          "definition": "(thơ) - một phần của bài thơ được sắp xếp thành một hàng, kết thúc ở lề bên phải."
+        "program/dance-ai/2023": {
+          "word": "Chương trình"
         }
       }
     }

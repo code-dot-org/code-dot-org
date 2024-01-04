@@ -65,7 +65,7 @@ sq:
       në Code.org account.
     already_signedup: Jeni regjistruar?
     clever: Të zgjuar
-    continue_with: Hyr me %{provider}
+    continue_with: Vazhdoni me %{provider}
     demigration_success: Përvoja e llogarisë së re tani është çaktivizuar në llogarinë
       tuaj.
     disconnect_successful: Suksese! Ne kemi shkëputur llogarinë e jashtme nga llogaria
@@ -82,7 +82,7 @@ sq:
         llogari të re.
     facebook: Facebook
     forgot_password: Keni harruar fjalëkalimin?
-    google_oauth2: Llogaria e Google
+    google_oauth2: Google
     invalid_provider: Na vjen keq, %{provider} llogaria nuk mund të lidhet me llogarinë
       e Code.org.
     microsoft_v2_auth: Microsoft
@@ -137,7 +137,7 @@ sq:
         nga shfletuesit që suportohen</a>. Ju mund të provoni ta shikoni faqen, por
         mundet që të mos funksionojë.
       weblab_unsupported_locale_storage: Ju mund të hasni probleme duke përdorur Web
-        Lab në modalitetin e Shfletimit Privat. Ju lutemi ringarkoni projektin tuaj
+        Lab në modalitetin e shfletimit privat. Ju lutemi ringarkoni projektin tuaj
         në gjendje normal. Na vjen keq për shqetësimin.
   confirm: Konfirmo
   continue: Vazhdo
@@ -405,7 +405,7 @@ sq:
     code:
       instructions: 'Ju lutemi shkruani kodin me 6 shkronja që mësimdhënësi juaj ndau
         me ju (shembull: “ABCDEF”) për t''u bashkuar me sesionin e tyre.'
-      instructions_short: Fut kodin e seksionit me 6 shkronja
+      instructions_short: Vendosni kodin tuaj të seksionit me 6 shkronja
       placeholder: Kodi i Sesionit (ABCDEF)
       submit: Bashkohu
       title: Bashkohu në sesion në Code.org
@@ -527,8 +527,8 @@ sq:
       report_bug: Raporto një problem
       sections: Seksionet
       sign_in_to_save: Logohu për të ruajtur ecurinë tënde
-      stats: statistikat
-      teach: Mësoj
+      stats: Statistikat
+      teach: Mësoni
       teacher_community: Forumi i mësimdhënësve
       tutorials: Tutoriale
       web_lab_documentation: Dokumentacioni i Sprite Lab
@@ -573,7 +573,7 @@ sq:
       playlab: Play Lab
       poetry_hoc: Arti i poezisë
       settings: Llogaria ime
-      signin: Futu
+      signin: Kyçu
       signup: Krijo një llogari
       spritelab: Sprite Lab
       starwars: Lufta e Yjeve
@@ -673,12 +673,38 @@ sq:
       colombian_chilean_school_name: Emri i shkollës
       email: Email
       email_opt_in: A mund t'ju dërgojmë email në lidhje me programin ndërkombëtar
-        të Code.org, azhurnimet në kurset tona ose lajme të tjera të shkencave kompjuterike?
+        të Code.org, përditësimet në kurset tona ose lajme të tjera të shkencave kompjuterike?
+      first_name: Emri
+      first_name_preferred: Emri i preferuar
+      last_name: Mbiemri
+      legal_opt_in: 'Duke dorëzuar këtë formular, ju pranoni të lejoni Code.org të
+        ndajë informacione se si e përdorni Code.org dhe burimet e të mësuarit profesional
+        me Partnerët ndërkombëtarë të Code.org në vendin tuaj. Ne do të ndajmë me
+        këta partnerë informacionin tuaj të kontaktit (si emri dhe adresa e emailit),
+        informacionin që jepni për shkollën tuaj, cilat kurse/njësi po përdorni dhe
+        të dhëna të përmbledhura rreth këtyre kurseve (si p.sh. numri i studentëve
+        që përdorin çdo kurs ). Ne nuk do të ndajmë asnjë informacion për nxënësit
+        me partnerët tanë: të gjitha informacionet e nxënësve do të çidentifikohen
+        dhe grumbullohen. Partnerët dhe fasilitorët tanë ndërkombëtarë janë të detyruar
+        kontraktualisht ta trajtojnë këtë informacion me të njëjtin nivel konfidencialiteti
+        si Code.org.'
       school: Shkolla
-      school_country: Qyteti i shkollës
+      school_city: Qyteti
+      school_country: Shteti
       school_name: Emri i shkollës
-      workshop_course: Kursi i punëtorisë
-      workshop_organizer: Organizuesi i punëtorisë
+      workshop_course: Kursi i trajnimit
+      workshop_organizer: Organizatori i trajnimit
+    international_opt_in:
+      instructions: Ju lutemi plotësoni formularin më poshtë për të treguar se 1)
+        keni marrë pjesë në një trajnimi të drejtuar nga një nga partnerët ndërkombëtarë
+        të Code.org dhe 2) pranoni të ndani informacionin tuaj me partnerin tonë ndërkombëtar
+        në vendin tuaj në mënyrë që ata të mund të ndihmojnë për të mbështetur udhëtimin
+        tuaj si mësimdhënës i shkencave kompjuterike.
+      intro: Faleminderit që keni gjetë kohë për të marrë pjesë në trajnimin për kurrikulën
+        e Code.org. Misioni ynë për të sjellë mundësinë e edukimit në Shkencat Kompjuterike
+        për të gjithë fëmijët në të gjitha shkollat në mbarë botën nuk do të ishte
+        i mundur pa ju.
+      title: Pjesëmarrja në trajnim
   pdf_download: Shkarko PDF
   peer_review:
     accepted:
@@ -865,11 +891,11 @@ sq:
     try_hoc: Provo një Orë Kodimi si fillim
   signin_form:
     login: Email
-    login_username: Email-i ose emri i përdoruesit
+    login_username: Email ose Emri i përdoruesit
     password: Fjalëkalimi
     remember: Më mbaj mend
     submit: Kyçu
-    title: Ke një llogari ekzistuese? Logohu
+    title: Ke një llogari ekzistuese? Kyçu
   signinsection:
     invalid_login: Login i pavlefshme, ju lutem provoni përsëri
     login: Futu

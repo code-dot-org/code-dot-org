@@ -27,7 +27,7 @@ theme: responsive
 
 <a id="hoc"></a>
 <h2>Prova Hour of Code con questi divertenti tutorial introduttivi</h2>
-<p>Prova un <a class="linktag" id="hoc-overview" href="/hourofcode/overview" target="_blank”>tutorial di un’ora</a> con giochi e film popolari come Minecraft, Frozen e Star Wars. Molti tutorial sono strutturati come giochi, progettati per insegnare concetti informatici di base in modo divertente e coinvolgente.</p>
+<p>Prova <a class="linktag" id="hoc-overview" href="/hourofcode" target="_blank">un tutorial di un'ora</a> con giochi e film popolari come Minecraft, Frozen e Star Wars. Molti tutorial sono strutturati come giochi, progettati per insegnare concetti informatici di base in modo divertente e coinvolgente.</p>
 
 <br>
 

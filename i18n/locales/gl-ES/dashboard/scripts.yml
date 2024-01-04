@@ -152,7 +152,6 @@ gl:
           description_short: Aprende a programar androides e crea o teu propio xogo Star Wars nunha galaxia moi, moi afastada.
           student_description: Aprende a programar androides e crea o teu propio xogo Star Wars nunha galaxia moi, moi afastada.
         mc:
-          title: Hora do Código Minecraft
           description: Usa bloques de código para acompañar a Steve ou a Alex nunha aventura polo mundo de Minecraft
           description_short: Explora o mundo de Minecraft a través do código
           student_description: Usa bloques de código para acompañar a Steve ou a Alex nunha aventura polo mundo de Minecraft
@@ -1106,3 +1105,18 @@ gl:
               display_name: Condicionais
             lessonGroup-5:
               display_name: Variables
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Introdución
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Introdución
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Introdución
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Introdución

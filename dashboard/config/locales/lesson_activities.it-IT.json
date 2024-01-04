@@ -5918,15 +5918,6 @@
         "403fc603-5eea-490f-943f-0f0e1d4d99f9": {
           "name": "Approfondimenti"
         },
-        "f0e43cbc-520d-42b7-8de2-0572d569695e": {
-          "name": "Preparazione"
-        },
-        "726b38ad-28ae-43e1-b7d8-08d13ccda1d3": {
-          "name": "Attività principale"
-        },
-        "26cbfc03-2134-4097-b9c9-a2b7d4227d8f": {
-          "name": "Conclusione"
-        },
         "b47403db-764c-41c2-9c65-eea089621c6f": {
           "name": "Esercizi"
         },
@@ -8916,7 +8907,7 @@
           "name": "Conclusione "
         },
         "a418e7ac-0146-460d-89e6-0acc14aefbb6": {
-          "name": "Opportunità di estensione"
+          "name": "Opportunità di approfondimento"
         },
         "6f886134-c10b-497a-880f-f54e2888cf1d": {
           "name": "Preparazione"
@@ -8928,7 +8919,7 @@
           "name": "Conclusione"
         },
         "59dd1048-c18b-43fb-a14c-4feb2887a274": {
-          "name": "Opportunità di estensione"
+          "name": "Opportunità di approfondimento"
         },
         "e280ae49-7bb9-4bc9-8dd6-a8c5de968600": {
           "name": "Preparazione"
@@ -8940,7 +8931,7 @@
           "name": "Conclusione"
         },
         "40033029-9a13-473d-9a2a-e6f090865876": {
-          "name": "Opportunità di estensione"
+          "name": "Opportunità di approfondimento"
         },
         "3a69a53a-6bb6-40f5-a3cc-ff9b3057085f": {
           "name": "Preparazione consigliata"
@@ -9006,7 +8997,7 @@
           "name": "Conclusione"
         },
         "08357969-2113-4ff3-a041-0889105ffc89": {
-          "name": "Opportunità di estensione"
+          "name": "Opportunità di approfondimento"
         },
         "ed5b5a6d-063d-493f-a4f3-bbd78d100172": {
           "name": "Preparazione consigliata"
@@ -9021,7 +9012,7 @@
           "name": "Conclusione"
         },
         "98fd68a6-ea5e-47f5-93d1-5f6b9aabbe39": {
-          "name": "Opzioni di estensione"
+          "name": "Approfondimenti opzionali"
         },
         "29950b6f-42c7-4fae-8b5b-14520331e3f2": {
           "name": "Preparazione"
@@ -9033,7 +9024,7 @@
           "name": "Conclusione"
         },
         "1684b440-4813-446c-a62d-201cf832b0fd": {
-          "name": "Opportunità di estensione "
+          "name": "Opportunità di approfondimento "
         },
         "2acd0565-f462-437c-9be3-66bd44962646": {
           "name": "Preparazione consigliata"
@@ -9171,7 +9162,7 @@
           "name": "Conclusione"
         },
         "0e7086c2-52d3-419a-b55c-9881ed7a8335": {
-          "name": "Opportunità di estensione"
+          "name": "Opportunità di approfondimento"
         },
         "281ef28f-2969-4c60-80a4-8bdad8662658": {
           "name": "Preparazione consigliata"
@@ -9186,7 +9177,7 @@
           "name": "Conclusione"
         },
         "aad4dda1-507b-42a5-a62c-1aac5671cb91": {
-          "name": "Opportunità di estensione"
+          "name": "Opportunità di approfondimento"
         },
         "f3ff3f84-baa4-4480-9970-252a7478e738": {
           "name": "Preparazione"
@@ -9198,7 +9189,7 @@
           "name": "Conclusione"
         },
         "9484e482-4713-4747-84d0-fba065c7e4a1": {
-          "name": "Opportunità di estensione"
+          "name": "Opportunità di approfondimento"
         },
         "1bf99ed8-87aa-4bc1-b29e-77d8836cbff5": {
           "name": "Preparazione"
@@ -9210,7 +9201,7 @@
           "name": "Conclusione"
         },
         "7934c32a-f4ba-48b1-8c92-903075552224": {
-          "name": "Opportunità di estensione"
+          "name": "Opportunità di approfondimento"
         },
         "62058ba3-874c-4aae-9d67-8bed1cf236ae": {
           "name": "Preparazione"
@@ -9222,7 +9213,7 @@
           "name": "Conclusione"
         },
         "e57a4ee9-956b-410e-8d3e-b321b0abe71c": {
-          "name": "Opportunità di estensione"
+          "name": "Opportunità di approfondimento"
         },
         "360c949e-7bb0-4183-8580-6f9cf3d3a2e1": {
           "name": "Configurazione dell'ambiente di classe"
@@ -12009,7 +12000,7 @@
           "name": "Preparazione"
         },
         "ca6b9610-b612-418d-87bf-bc1776fbd110": {
-          "name": "Attività (30-45 minuti)"
+          "name": "Attività"
         },
         "a5fa2c8b-163e-4cc1-a54b-0ad5d98bb92f": {
           "name": "Conclusione"
@@ -12396,7 +12387,7 @@
           "name": "Dopo la lezione"
         },
         "9ed44af4-506a-4faf-94b6-fd4e7b8bcd8c": {
-          "name": "(Facoltativo) Attività di estensione"
+          "name": "(Facoltativo) Attività di approfondimento"
         },
         "4d668e14-f593-43b6-84e7-c6f6e8b1baa1": {
           "name": "Prima della lezione"
@@ -12414,7 +12405,7 @@
           "name": "Dopo la lezione"
         },
         "8e09a958-4202-48e1-bd2e-7d0afa3a0c6d": {
-          "name": "(Facoltativo) Attività GAN"
+          "name": "(Facoltativo) Attività sulle \"GAN\""
         },
         "3d692c8b-130c-4a16-94e5-1ea6276228e1": {
           "name": "Prima della lezione"
@@ -12453,7 +12444,7 @@
           "name": "Che cos'è l'apprendimento automatico?"
         },
         "15ce8356-ae91-4918-9c0b-2c9e456efa4c": {
-          "name": "Dati di formazione e distorsioni"
+          "name": "Dati di apprendimento e distorsioni (bias)"
         },
         "792cc1d7-8c32-478d-ab2f-49ef09d3e832": {
           "name": "Come funzionano le reti neurali"
@@ -12462,10 +12453,10 @@
           "name": "Come funziona la visione artificiale"
         },
         "93d41a54-5e26-42f6-8d4a-81bd5649efa8": {
-          "name": "Come funzionano i Chatbot e i Modelli Linguistici"
+          "name": "Come funzionano i Chatbot e i Modelli linguistici di grandi dimensioni"
         },
         "fbfdf89d-c6bb-464e-9a2a-246c34f33b55": {
-          "name": "L'intelligenza artificiale ha creatività e immaginazione?"
+          "name": "L'intelligenza artificiale dispone di creatività e immaginazione?"
         },
         "3c37c274-5b3f-4542-8363-59de96bef286": {
           "name": "Etica e intelligenza artificiale: parità di accesso e pregiudizi algoritmici"
@@ -12475,9 +12466,6 @@
         },
         "e611ee32-23d2-4d19-995e-d23124fb63ff": {
           "name": "Dopo la lezione"
-        },
-        "ee8cbd12-265d-4681-b6c9-05a0a062916d": {
-          "name": "Esercizi"
         },
         "f4670c8c-98ec-47d0-b458-02a96f130b76": {
           "name": "Preparazione"
@@ -12896,69 +12884,6 @@
         "ddc8f987-c000-409d-aaf7-8546464a70d9": {
           "name": "Approfondimenti"
         },
-        "289bbaea-ab5e-48a1-80c3-8299af5a0965": {
-          "name": "Esercizi"
-        },
-        "c2cd2e0e-1e75-44ea-9e26-74c4e81117ce": {
-          "name": "Esercizi"
-        },
-        "b482746d-0030-459f-8657-a2775cf1f2a3": {
-          "name": "Esercizi"
-        },
-        "0f2c3670-022b-44ce-b519-13cb72ccd0fd": {
-          "name": "Esercizi"
-        },
-        "acd32520-21e7-4c29-8e51-5e9caf6a378d": {
-          "name": "Esercizi"
-        },
-        "a83c07a8-61ea-4017-b41d-725d1bd7b425": {
-          "name": "Esercizi"
-        },
-        "0deb9da8-356e-4547-951f-445a58491a24": {
-          "name": "Esercizi"
-        },
-        "941b1202-9ae6-4fbf-b806-c3e4ae8293cc": {
-          "name": "Esercizi"
-        },
-        "bad195ab-b5b0-41e3-9c40-610a35ff0e4f": {
-          "name": "Esercizi"
-        },
-        "41518965-e0d9-4c64-acaa-75abff9eeb52": {
-          "name": "Esercizi"
-        },
-        "f6fdf744-0a0e-4efb-b70e-a4a6f272487d": {
-          "name": "Esercizi"
-        },
-        "f488bd5e-8717-4f17-89de-67eed7656f10": {
-          "name": "Esercizi"
-        },
-        "469ead3b-ff2b-47a4-a58b-bb268370fae4": {
-          "name": "Esercizi"
-        },
-        "b4e1628d-775d-442e-9363-1e4d5d05a9f3": {
-          "name": "Esercizi"
-        },
-        "5c6427ce-49af-4fef-857c-44a01f1583bf": {
-          "name": "Esercizi"
-        },
-        "fb448d2f-35c0-4c79-bf75-b8eb5ee11017": {
-          "name": "Esercizi"
-        },
-        "f64730d7-ba60-489d-a6b5-e33c8768879b": {
-          "name": "Esercizi"
-        },
-        "1e703264-9e5f-4ddb-bfe5-8cbefbb646e4": {
-          "name": "Esercizi"
-        },
-        "1910c7c0-fe86-4867-accd-c9b9c78853b1": {
-          "name": "Esercizi"
-        },
-        "72871561-f49b-4ae5-a5c5-ec0dbfd6f14f": {
-          "name": "Esercizi"
-        },
-        "c728edf8-b7ed-465b-99f4-78f27e751d2b": {
-          "name": "Esercizi"
-        },
         "adf2e1d7-848e-4b2e-9f60-a190c85c82ba": {
           "name": "Esercizi"
         },
@@ -13089,6 +13014,21 @@
           "name": "Esercizi"
         },
         "5f5dea02-fd61-4c99-8095-a0e2e5de2471": {
+          "name": "Esercizi"
+        },
+        "289bbaea-ab5e-48a1-80c3-8299af5a0965": {
+          "name": "Esercizi"
+        },
+        "c2cd2e0e-1e75-44ea-9e26-74c4e81117ce": {
+          "name": "Esercizi"
+        },
+        "b482746d-0030-459f-8657-a2775cf1f2a3": {
+          "name": "Esercizi"
+        },
+        "0f2c3670-022b-44ce-b519-13cb72ccd0fd": {
+          "name": "Esercizi"
+        },
+        "acd32520-21e7-4c29-8e51-5e9caf6a378d": {
           "name": "Esercizi"
         },
         "10e6addd-5989-4d95-9384-cb1a33903e99": {
@@ -13400,6 +13340,18 @@
         "2b3a241f-5ee5-4579-9883-832cdd116c43": {
           "name": "Esercizi"
         },
+        "a83c07a8-61ea-4017-b41d-725d1bd7b425": {
+          "name": "Esercizi"
+        },
+        "0deb9da8-356e-4547-951f-445a58491a24": {
+          "name": "Esercizi"
+        },
+        "941b1202-9ae6-4fbf-b806-c3e4ae8293cc": {
+          "name": "Esercizi"
+        },
+        "ee8cbd12-265d-4681-b6c9-05a0a062916d": {
+          "name": "Esercizi"
+        },
         "f652e4d2-c712-4cff-a011-f1dcea192263": {
           "name": "Preparazione"
         },
@@ -13414,6 +13366,42 @@
         },
         "7e48fd52-decd-48b3-97bf-a71e8dd0f44e": {
           "name": "Approfondimenti"
+        },
+        "bad195ab-b5b0-41e3-9c40-610a35ff0e4f": {
+          "name": "Esercizi"
+        },
+        "41518965-e0d9-4c64-acaa-75abff9eeb52": {
+          "name": "Esercizi"
+        },
+        "f6fdf744-0a0e-4efb-b70e-a4a6f272487d": {
+          "name": "Esercizi"
+        },
+        "f488bd5e-8717-4f17-89de-67eed7656f10": {
+          "name": "Esercizi"
+        },
+        "469ead3b-ff2b-47a4-a58b-bb268370fae4": {
+          "name": "Esercizi"
+        },
+        "b4e1628d-775d-442e-9363-1e4d5d05a9f3": {
+          "name": "Esercizi"
+        },
+        "5c6427ce-49af-4fef-857c-44a01f1583bf": {
+          "name": "Esercizi"
+        },
+        "fb448d2f-35c0-4c79-bf75-b8eb5ee11017": {
+          "name": "Esercizi"
+        },
+        "f64730d7-ba60-489d-a6b5-e33c8768879b": {
+          "name": "Esercizi"
+        },
+        "1e703264-9e5f-4ddb-bfe5-8cbefbb646e4": {
+          "name": "Esercizi"
+        },
+        "1910c7c0-fe86-4867-accd-c9b9c78853b1": {
+          "name": "Esercizi"
+        },
+        "72871561-f49b-4ae5-a5c5-ec0dbfd6f14f": {
+          "name": "Esercizi"
         },
         "35e76968-3525-446c-9256-472e8ecba118": {
           "name": "Esercizi"
@@ -13430,14 +13418,23 @@
         "0145bc8d-b026-434a-9713-9b43c6e34842": {
           "name": "Esercizi"
         },
-        "901e8625-9092-42fc-9fcc-9c665720b1f4": {
+        "c728edf8-b7ed-465b-99f4-78f27e751d2b": {
+          "name": "Esercizi"
+        },
+        "99f155a9-1d50-44df-a647-c8dbaddea32c": {
+          "name": "Introduzione"
+        },
+        "d12dc50d-c901-43db-a188-eb1b273239c3": {
           "name": "Preparazione"
         },
-        "b20b4bbb-2eb1-4c77-b938-e60cd435ce93": {
-          "name": "Attività principale"
+        "81f0f5ed-90c2-4cb4-8f2e-8f017df18dc6": {
+          "name": "Attività "
         },
-        "18913d21-3c6f-4dd8-864e-09b70f80e640": {
+        "02b4486f-d09d-4031-8235-0cf728733456": {
           "name": "Conclusione"
+        },
+        "62475558-6554-4337-b3fb-9fb6ba9a886c": {
+          "name": "Dopo l'attività"
         }
       }
     }

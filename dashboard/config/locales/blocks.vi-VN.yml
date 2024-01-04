@@ -71,6 +71,11 @@ vi:
             '"measures"': nhịp
             '"seconds"': giây
         text: sau {TIMESTAMP} {UNIT}
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': nhịp
+            '"seconds"': giây
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -94,6 +99,27 @@ vi:
             '"SLOTH"': con lười
             '"UNICORN"': kỳ lân
             sprites: tất cả
+          MOVE:
+            '"next"': "(Tiếp theo)"
+            '"prev"': "(Trước)"
+            '"rand"': "(Ngẫu nhiên)"
+            MOVES.ClapHigh: Vỗ tay cao
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Đáp
+            MOVES.DoubleJam: Giảm gấp đôi
+            MOVES.Drop: Thả
+            MOVES.Floss: Chỉ tơ nha khoa
+            MOVES.Fresh: Tươi
+            MOVES.Kick: Ngôi sao
+            MOVES.Rest: Không có
+            MOVES.Roll: Cuộn người
+            MOVES.ThisOrThat: Đây hoặc đó
+        text: "{GROUP} {MOVE} {DIR} mãi mãi"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': mèo
+            '"SLOTH"': con lười
           MOVE:
             '"next"': "(Tiếp theo)"
             '"prev"': "(Trước)"
@@ -572,6 +598,51 @@ vi:
         text: |-
           đặt hiệu ứng nền
           {PALETTE} {EFFECT}
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': Đường hầm
+            '"color_cycle"': Màu sắc
+            '"diamonds"': Kim cương
+            '"disco"': Hình vuông
+            '"disco_ball"': Bóng Disco
+            '"fireworks"': พลุ
+            '"flowers"': Bông hoa
+            '"galaxy"': Không gian
+            '"growing_stars"': Ngôi sao lớn dần
+            '"higher_power"': Higher Power
+            '"kaleidoscope"': Kính vạn hoa
+            '"lasers"': Sàn nhảy laze
+            '"none"': Không có
+            '"quads"': Góc
+            '"rainbow"': Cầu vồng
+            '"rand"': "(Ngẫu nhiên)"
+            '"ripples"': Gợn sóng
+            '"ripples_random"': Gợn sóng ngẫu nhiên
+            '"snowflakes"': Tuyết
+            '"sparkles"': Lấp lánh
+            '"spiral"': Xoắn ốc
+            '"splatter"': Tiếng lộp độp của sơn
+            '"squiggles"': Nét nguệch ngoạc
+            '"starburst"': Lóe sáng
+            '"stars"': Sao
+            '"swirl"': Thôi miên
+            '"text"': Tiêu đề bài hát
+          PALETTE:
+            '"cool"': Xanh
+            '"default"': Sáng
+            '"electronic"': ไฟฟ้า
+            '"iceCream"': Kem
+            '"neon"': Đèn Neon
+            '"ocean"': Đại dương
+            '"rainbow"': Cầu vồng
+            '"rave"': Đen và trắng
+            '"tropical"': Nhiệt đới
+            '"vintage"': Cổ điển
+            '"warm"': Đỏ
+        text: |-
+          đặt hiệu ứng nền
+          {PALETTE} {EFFECT}
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -1003,6 +1074,12 @@ vi:
         text: "{SPRITE}nói{TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE} trượt tới {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': khí
+            '"liquid"': lỏng
+            '"solid"': rắn
       KatiesBlocks_tumbling:
         text: lộn nhào
       Mikelab_addBehaviorSimple:

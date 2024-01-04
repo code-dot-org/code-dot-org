@@ -24,14 +24,16 @@
       "lesson_extras_available": true,
       "supported_locales": [
         "fa-AF",
-        "fa-IR"
+        "fa-IR",
+        "ko-KR",
+        "sq-AL"
       ],
       "tts": true,
       "version_year": "2022"
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2023-09-19 18:40:00 UTC",
+    "serialized_at": "2023-12-15 22:11:42 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

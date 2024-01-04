@@ -227,6 +227,24 @@
         "pre-express-2019/Spelling Bee": {
           "name": "Пчелица словарица"
         },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Петље"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Догађаји"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Кондиционали"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Функције"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Променљиве"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Бројачке петље"
+        },
         "coursea-2020/Programming: Happy Maps": {
           "name": "Веселе мапе"
         },
@@ -395,9 +413,6 @@
         "coursef-2023/The Internet": {
           "name": "Интернет"
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Час кода 2013"
-        },
         "artist/Artist": {
           "name": "Уметник"
         },
@@ -421,12 +436,6 @@
         },
         "minecraft/Minecraft Hour of Code Designer": {
           "name": "Мајнкрафт дизајнер - час програмирања"
-        },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
         },
         "playlab/Play Lab": {
           "name": "Играоница"
@@ -745,6 +754,9 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Екстремни изазов - Comprehensive"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Час кода 2013"
         },
         "jigsaw/Jigsaw": {
           "name": "Слагалица"

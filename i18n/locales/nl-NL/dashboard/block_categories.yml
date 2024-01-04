@@ -4,7 +4,8 @@ nl:
       Actions: Acties
       Advanced: Geavanceerd
       Behaviors: Gedrag
-      Brushes: Borstels
+      Boolean: Boolean
+      Brushes: Kwasten
       Category: Categorie
       Color: Kleur
       Comment: Opmerking
@@ -12,6 +13,7 @@ nl:
       Conditionals: Voorwaardelijke instructies
       Dancers: Dansers
       Default: Standaard
+      Effects: Effecten
       Events: Gebeurtenissen
       Functions: Functies
       'Functions ': 'Functies '
@@ -23,9 +25,11 @@ nl:
       Locations: Plaatsen
       Logic: Logica
       Loops: Lussen
-      Math: wiskundige
+      Math: Wiskunde
+      Number: Getal
       Numbers: Getallen
       Properties: Eigenschappen
+      Shapes: Vormen
       Sprites: Sprites
       Text: Tekst
       Variables: Variabelen

@@ -91,3 +91,5 @@ style_min: true
   <p>All of the micro:bit lessons and projects for the CS Fundamentals courses are created to use with the Microsoft MakeCode blocks-based editor.</p>
   <p>The BBC micro:bit can be programmed using 2 code editors: Microsoft MakeCode a blocks-based code editor and the micro:bit Python, which offers text-based code.</p>
 </details>
+
+{{ visit_partial_event_logger }}

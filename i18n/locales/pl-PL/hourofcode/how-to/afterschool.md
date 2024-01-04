@@ -73,7 +73,7 @@ Rozpocznij Godzinę Kodowania inspirując uczestników i dyskutując, jaki jest 
 
 - [Wydrukuj certyfikaty]({{ urls/certificates }}) dla swoich uczniów.
 - [Wydrukuj naklejki "I did an Hour of Code!"]({{ promote/resources_stickers }}) dla swoich uczniów.
-- [Zamów t-shirts ](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) dla swoich uczniów.
+- [Zamów odpowiednie koszulki](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) dla uczestników.
 - Udostępnij w mediach społecznościowych zdjęcia i wideo ze swojej Godziny Kodowania. Użyj #HourOfCode i @codeorg, byśmy również mogli wyróżnić Twój sukces!
 
 ## Inne zasoby Godziny Kodowania dla nauczycieli

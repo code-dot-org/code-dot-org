@@ -2154,10 +2154,6 @@
           "word": "ایونٹ",
           "definition": "ایک کاروائی جو کچھ ہونے کا سبب بنتی ہے۔."
         },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "code/playlab/unversioned": {
           "definition": "(v) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
         },
@@ -2231,25 +2227,16 @@
           "word": "بے ضیاع (Lossless) کمپریشن",
           "definition": "ایک ڈیٹا کمپریشن الگورتھم جو اصل ڈیٹا کو کمپریسڈ ڈیٹا سے مکمل طور پر دوبارہ تشکیل دینے کی اجازت دیتا ہے۔ عام طور پر ٹیکسٹ کمپریشن کے لیے استعمال کیا جاتا ہے (مثلاً زپ کمپریشن)"
         },
-        "code/poem-art/unversioned": {
+        "code/dance-ai/2023": {
           "word": "ضابطہ کار(کوڈ)",
-          "definition": "(v) کمپیوٹر کے لیے ہدایات لکھنا۔"
+          "definition": "(v) کوڈ لکھنا، یا کمپیوٹر کے لئے ہدایات لکھنا۔."
         },
-        "event/poem-art/unversioned": {
+        "event/dance-ai/2023": {
           "word": "ایونٹ",
           "definition": "ایک کاروائی جو کچھ ہونے کا سبب بنتی ہے۔."
         },
-        "program/poem-art/unversioned": {
-          "word": "پروگرام",
-          "definition": "اقدامات کا ایک سلسلہ جو کسی ایسی چیز میں کوڈ کیا گیا ہے جسے مشین چلا سکتی ہے۔"
-        },
-        "mood/poem-art/unversioned": {
-          "word": "موڈ",
-          "definition": "آرٹ یا تحریر میں احساس، ماحول، یا جذبات کا اظہار۔"
-        },
-        "line/poem-art/unversioned": {
-          "word": "لائن",
-          "definition": "(شاعری) - نظم کی ایک ذیلی تقسیم جو ایک قطار میں ترتیب دی گئی ہے جو دائیں ہاتھ کے حاشیے پر ختم ہوتی ہے۔"
+        "program/dance-ai/2023": {
+          "word": "پروگرام"
         }
       }
     }

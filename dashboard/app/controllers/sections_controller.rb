@@ -7,7 +7,7 @@ class SectionsController < ApplicationController
   def new
     redirect_to '/home' unless params[:loginType] && params[:participantType]
 
-    @is_users_first_section = current_user.sections.empty?
+    @is_users_first_section = current_user.sections_instructed.empty?
   end
 
   def edit
@@ -21,6 +21,13 @@ class SectionsController < ApplicationController
       course_offering_id: existing_section.unit_group ? existing_section.unit_group&.course_version&.course_offering&.id : existing_section.script&.course_version&.course_offering&.id,
       version_id: existing_section.unit_group ? existing_section.unit_group&.course_version&.id : existing_section.script&.course_version&.id,
       unit_id: existing_section.unit_group ? existing_section.script_id : nil
+    }
+
+    @section['sectionInstructors'] = ActiveModelSerializers::SerializableResource.new(existing_section.section_instructors, each_serializer: Api::V1::SectionInstructorInfoSerializer).as_json
+
+    @section['primaryInstructor'] = {
+      email: existing_section.teacher.email,
+      name: existing_section.teacher.name,
     }
 
     @section = @section.to_json.camelize

@@ -9,6 +9,7 @@ describe('AgeDialog', () => {
   const defaultProps = {
     signedIn: false,
     turnOffFilter: () => {},
+    setOver21: () => {},
     storage: new FakeStorage(),
     unitName: 'csd-2023',
   };

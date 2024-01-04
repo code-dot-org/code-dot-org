@@ -353,14 +353,6 @@
         "debugging/minecraft/unversioned": {
           "word": "Debugging"
         },
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/playlab/unversioned": {
           "word": "Debugging"
         },
@@ -379,25 +371,8 @@
         "debugging/starwarsblocks/unversioned": {
           "word": "Debugging"
         },
-        "code/poem-art/unversioned": {
-          "word": "Code",
-          "definition": ""
-        },
-        "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+        "code/dance-ai/2023": {
+          "word": "Code"
         }
       }
     }

@@ -1595,6 +1595,39 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Зөв бичих дүрэм заах зөгий"
         },
+        "K5-OnlinePD/Getting Started": {
+          "name": "Эхлүүлэх"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Компьютерийн шинжлэх ухааны үндэс"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "Урагш харах"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "Үндэс эзэмших: Дараалуулах"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "Үндэс эзэмших: Гогцоонууд"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "Үндэс эзэмших: Нөхцлүүд"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "Үндэс эзэмших: Функцүүд"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "Үндэс эзэмших: Үйл явдлууд"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "Компьютерийн шинжлэх ухаан заах шилдэг туршлагууд"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Төлөвлөлт"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Дараагийн Алхамууд"
+        },
         "csd1-2019/Intro to Problem Solving": {
           "name": "Асуудлыг шийдвэрлэх талаар танилцуулга"
         },
@@ -2266,6 +2299,45 @@
         },
         "pre-express-2019/Make a Game in Play Lab": {
           "name": "Үйл явдлуудтай хааны тулаан"
+        },
+        "k5-onlinepd-2019/Welcome to \"Teaching Computer Science Fundamentals\"": {
+          "name": "\"Компьютерийн шинжлэх ухааны суурийг заах арга зүй\" -д тавтай морилно уу"
+        },
+        "k5-onlinepd-2019/Understanding the Computer Science Fundamentals Courses": {
+          "name": "Компьютерийн шинжлэх ухааны хичээлийн талаарх ойлголт"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Дараалуулах"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Гогцоонууд"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Үйл явдлууд"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Нөхцлүүд"
+        },
+        "k5-onlinepd-2019/End of Course projects": {
+          "name": "Хичээлийн төслийн төгсгөл"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Функцүүд"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Хувьсагчууд"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Гогцоонд зориулав"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Шидтэний лаборатори"
+        },
+        "k5-onlinepd-2019/Reviewing your reflections": {
+          "name": "Таны ойлголтыг шалгах"
+        },
+        "k5-onlinepd-2019/Next steps": {
+          "name": "Дараагийн алхамууд"
         },
         "coursea-2020/Learn to Drag and Drop": {
           "name": "Чирж буулгаж сурах"
@@ -3481,6 +3553,39 @@
           "name": "Үйл явдлуудтай хааны тулаан",
           "overview": "Энэхүү онлайн үйл ажиллагаанд сурагчид Тоглоомын лаборатори дээр үйл явдлыг хэрхэн ашиглаж сурах, хүүхэлдэйн тоглоом үүсгэхэд сурсан кодчлолын бүх чадвараа ашиглах боломжтой болно. Тоглоомын лаборатори дээр бүтээлчээр тоглох цаг боллоо!",
           "student_overview": "Арга хэмжээ зохиох эсвэл интерактив тоглоом хийхийн тулд үйл явдлыг ашиглаарай."
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "Эхлүүлэх"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Компьютерийн шинжлэх ухааны үндэс"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "Урагш харах"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "Үндэс эзэмших: Дараалуулах"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "Үндэс эзэмших: Гогцоонууд"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "Үндэс эзэмших: Нөхцлүүд"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "Үндэс эзэмших: Функцүүд"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "Үндэс эзэмших: Үйл явдлууд"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "Компьютерийн шинжлэх ухаан заах шилдэг туршлагууд"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Төлөвлөлт"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Дараагийн Алхамууд"
         },
         "csd1-2022/Intro to Problem Solving": {
           "name": "Асуудлыг шийдвэрлэх талаар танилцуулга"
@@ -5198,9 +5303,6 @@
           "overview": "⚠️ Энэ хичээл нь [AI хэрхэн ажилладаг вэ видео цуврал](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) -ийг бүхэлд нь харуулахыг хүсдэг анги танхимд зориулагдсан\\*\\* нэг өдөр\\*\\*. Видео бүрийг нэг өдөр нэг дор танилцуулдаг энэ нэгжийн бусад хичээлүүдтэй дарааллаар заахаар төлөвлөөгүй болно.\n\nОюутнууд видео бичлэг бүрийн хамт дагаж, видео бичлэгээс үгсийн санг тааруулж, дараа нь видео бүрийн талаар эргэцүүлэн бодох асуултанд хариулах болно. Хичээлийн төлөвлөгөө, слайд нь маш сийрэг бөгөөд нээлттэй бөгөөд таны ангид тохирох сайжруулалт, тохируулга хийх боломжийг олгодог.",
           "preparation": "-   Үйл ажиллагааны гарын авлагыг хэвлэ\n-   Видео проектор дээр слайдыг төсөллөнө"
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Кодын цаг 2013"
-        },
         "applab-intro/Intro to App Lab": {
           "name": "Апп Лаб-н танилцуулга"
         },
@@ -5261,12 +5363,6 @@
         "oceans/Oceans": {
           "name": "Далайд зориулсан ХОУ"
         },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
         "playlab/Play Lab": {
           "name": "Тоглоомын лаборатори"
         },
@@ -5279,66 +5375,6 @@
         },
         "text-compression/Text Compression": {
           "name": "Текстийн шахалт"
-        },
-        "applab-1hour/Room Escape": {
-          "name": "Өрөөнөөс зугтах"
-        },
-        "applab-2hour/Digital Design": {
-          "name": "Дижитал дизайн"
-        },
-        "applab-2hour/Event Driven Programming": {
-          "name": "Үйл явдалд суурилсан програм"
-        },
-        "applab-2hour/Basic App Functionality": {
-          "name": "Апп-ын үндсэн функц"
-        },
-        "applab-2hour/Getters and Setters": {
-          "name": "Авагчид ба тохируулагчид"
-        },
-        "frequency_analysis/Frequency Analysis": {
-          "name": "Давтамжийн шинжилгээ"
-        },
-        "gamelab/Start and End Screens": {
-          "name": "Эхлэх ба дуусах дэлгэцүүд"
-        },
-        "gamelab/Start and End Screens2": {
-          "name": "Эхлэх ба дуусах дэлгэцүүд2"
-        },
-        "k1hoc2017/Collector Hour of Code 2017": {
-          "name": "Цуглуулагчийн кодын цаг 2017"
-        },
-        "netsim/Overview and Setup Instructions": {
-          "name": "Тойм ба тохируулах заавар"
-        },
-        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
-          "name": "Найзаас найз руу - Хуваалцсан утас дээр битүүдийг илгээх"
-        },
-        "netsim/Peer to Peer - Sending Numbers": {
-          "name": "Найзаас найз руу - Тоог илгээж байна"
-        },
-        "netsim/Peer to Peer - Sending Ascii": {
-          "name": "Найзаас найз руу - Ascii-г илгээж байна"
-        },
-        "netsim/Broadcasting messages": {
-          "name": "Зурвас цацаж байна"
-        },
-        "netsim/Routers and addresses": {
-          "name": "Чиглүүлэгчид болон хаягууд"
-        },
-        "netsim/Packets and Reliability": {
-          "name": "Багц ба найдвартай байдал"
-        },
-        "netsim/Manual DNS": {
-          "name": "Гар ажиллагааны DNS"
-        },
-        "netsim/Automatic DNS node": {
-          "name": "Автомат DNS зангилаа"
-        },
-        "netsim/Internet Simulator Freeplay": {
-          "name": "Интернет симулятор чөлөөтэй тоглох"
-        },
-        "vigenere/Vigenere": {
-          "name": "Vigenere"
         },
         "allthethings/Jigsaw": {
           "name": "Хөрөө"
@@ -5471,6 +5507,21 @@
         },
         "allthethings/lesson-49": {
           "name": "Хөгжим"
+        },
+        "applab-1hour/Room Escape": {
+          "name": "Өрөөнөөс зугтах"
+        },
+        "applab-2hour/Digital Design": {
+          "name": "Дижитал дизайн"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "Үйл явдалд суурилсан програм"
+        },
+        "applab-2hour/Basic App Functionality": {
+          "name": "Апп-ын үндсэн функц"
+        },
+        "applab-2hour/Getters and Setters": {
+          "name": "Авагчид ба тохируулагчид"
         },
         "csd-post-survey/CSD post-course survey": {
           "name": "CSD Сурагчийн хичээлийн дараах судалгаа ('18-'19)"
@@ -5781,10 +5832,55 @@
         "deepdive-debugging/Debugging for CDEF Educators": {
           "name": "CDEF сурган хүмүүжүүлэгчдийн алдааг засах"
         },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "Давтамжийн шинжилгээ"
+        },
+        "gamelab/Start and End Screens": {
+          "name": "Эхлэх ба дуусах дэлгэцүүд"
+        },
+        "gamelab/Start and End Screens2": {
+          "name": "Эхлэх ба дуусах дэлгэцүүд2"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Кодын цаг 2013"
+        },
         "jigsaw/Jigsaw": {
           "name": "Хөрөө",
           "overview": "Энэ хичээл нь сурагчдад компьютерын лабораторид очиход юу хүлээж болох талаархи ойлголтыг өгөх болно. Энэ нь тэднийг компьютерын лабораторийн ажлын талаар танилцуулах товч хэлэлцүүлгээс эхэлж, дараа нь онлайнаар таавраа бөглөхөд компьютер ашиглана.",
           "student_overview": "Тааваруудыг дуусгахын тулд товшоод чирнэ үү."
+        },
+        "k1hoc2017/Collector Hour of Code 2017": {
+          "name": "Цуглуулагчийн кодын цаг 2017"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "Тойм ба тохируулах заавар"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "Найзаас найз руу - Хуваалцсан утас дээр битүүдийг илгээх"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "Найзаас найз руу - Тоог илгээж байна"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "Найзаас найз руу - Ascii-г илгээж байна"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "Зурвас цацаж байна"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Чиглүүлэгчид болон хаягууд"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "Багц ба найдвартай байдал"
+        },
+        "netsim/Manual DNS": {
+          "name": "Гар ажиллагааны DNS"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "Автомат DNS зангилаа"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "Интернет симулятор чөлөөтэй тоглох"
         },
         "pixelation/Black & White Pixelation Tutorial": {
           "name": "Хар ба цагаан өнгийн пикселийн заавар"
@@ -5800,6 +5896,9 @@
         },
         "pixelation/Color Pixelation Freeplay": {
           "name": "Өнгийн пикселээр чөлөөтэй тоглох"
+        },
+        "vigenere/Vigenere": {
+          "name": "Vigenere"
         }
       }
     }

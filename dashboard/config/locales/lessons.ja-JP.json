@@ -1562,6 +1562,39 @@
         "pre-express-2018/Spelling Bee": {
           "name": "つづりみつばち"
         },
+        "K5-OnlinePD/Getting Started": {
+          "name": "使用開始"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "コンピュータ サイエンス入門"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "先を見る"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "基本をマスターする: シーケンス"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "基本をマスターする: ループ"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "基本をマスターする: 条件文"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "基本をマスターする: 関数"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "基本をマスターする: イベント"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "コンピューター サイエンスを教えるためのベストプラクティス"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "計画"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "次の手順"
+        },
         "csd1-2019/Intro to Problem Solving": {
           "name": "問題解決入門"
         },
@@ -2230,6 +2263,45 @@
         },
         "pre-express-2019/Make a Game in Play Lab": {
           "name": "プレイ ラボのイベント"
+        },
+        "k5-onlinepd-2019/Welcome to \"Teaching Computer Science Fundamentals\"": {
+          "name": "「コンピュータ サイエンスを教える」へようこそ"
+        },
+        "k5-onlinepd-2019/Understanding the Computer Science Fundamentals Courses": {
+          "name": "コンピューター サイエンス入門コースを理解する"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "シークエンス"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "くりかえし"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "イベント"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "条件"
+        },
+        "k5-onlinepd-2019/End of Course projects": {
+          "name": "コース最後のプロジェクト"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "関数(かんすう) "
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "変数（へんすう）"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "ループ用"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "スプライト ラボ"
+        },
+        "k5-onlinepd-2019/Reviewing your reflections": {
+          "name": "復習内容をレビューする"
+        },
+        "k5-onlinepd-2019/Next steps": {
+          "name": "次の手順"
         },
         "coursea-2020/Safety in My Online Neighborhood": {
           "name": "オンラインネイバーフッドの安全"
@@ -3894,6 +3966,39 @@
           "purpose": "このオンライン アクティビティでは、生徒は「プレイ ラボ」でイベントを使用する方法を学びます。矢印キーが押されたら騎士が動くように訓練することから始め、最終的にはじゆうあそびパズルの一部として、シーケンスやループなど、このコースを通して学んだ残りのスキルを紹介する機会を設けています。",
           "student_overview": "イベントを使って、ストーリーを作成したり、インタラクティブゲームを作成したりしましょう。"
         },
+        "kodea-pd-2021/Getting Started": {
+          "name": "使用開始"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "コンピュータ サイエンス入門"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "先を見る"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "基本をマスターする: シーケンス"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "基本をマスターする: ループ"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "基本をマスターする: 条件文"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "基本をマスターする: 関数"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "基本をマスターする: イベント"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "コンピューター サイエンスを教えるためのベストプラクティス"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "計画"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "次の手順"
+        },
         "csd1-2022/Intro to Problem Solving": {
           "name": "問題解決入門"
         },
@@ -5034,7 +5139,7 @@
         },
         "ai-ethics-2023/lesson-1": {
           "name": "当社のAI倫理規定",
-          "student_overview": "AI の倫理について共同研究し、共有可能な行動規範を作成します。"
+          "student_overview": "AIの倫理について共同で研究し、共有可能な行動規範を作成しよう"
         },
         "csc-adaptations-2023/Modeling Animal Adaptations (pilot)": {
           "name": "動物適応入門",
@@ -5057,7 +5162,7 @@
         "csc-bookcovers-2023/Learn to Code a Book Cover ": {
           "name": "本の表紙のコーディングを学ぼう ",
           "overview": "初心者向けのこのCSとELAの統合レッスンでは、学生はデジタルブックカバーのコーディングを学びます。まず、既存のブックカバーを見て、どのようなグラフィックデザインが選ばれたかについて話し合います。次に、学生は自分でいくつか作成する前に、電子書籍の表紙の例を見ます。生徒は、本の登場人物を表すスプライトを選択する方法と、イベントを使って登場人物に話させる方法を学びます。 ",
-          "preparation": "-   レベルをいろいろ試して、レッスン<a href=\"https://docs.google.com/presentation/d/1GTaZX9z0b-dwk6Z48TSwqwhjZ9pO9Onk7w8n9xNt_Zk/template/preview\" target=\"_blank\">スライド</a>を確認します。\n-   生徒の作業時間と全体グループ指導の間のペースを決めます。\n-   始める前に、推奨される準備活動を検討します ([リンク](https://studio.code.org/s/csc-bookcovers-2023/lessons/1#activity-4350298))。\n\n##### 任意：\n\n-   この<a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">役立つヒント</a>スライドショーを確認します。\n-   この<a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">デバッグのための教師用ガイド</a>を確認して、生徒がコードのエラーを見つけ、修正するのを助ける準備をします。\n-   ペアプログラミング - 生徒にペアプログラミングをさせるかどうかを決めます。この<a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">ビデオ</a>を見たり、この<a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">サポート</a>ページでペアプログラミングについての詳細を確認してください。\n-   カスタムスプライトのアップロード - これは後のレッスンで紹介しますが、この<a href=\"https://youtu.be/CHipUGfL_0M\" target=\"_blank\">ビデオ</a>を使って、生徒が自分のスプライトのコスチュームや 背景をアップロードする方法を教えることもできます。",
+          "preparation": "-   レベルをいろいろ試して、レッスン<a href=\"https://docs.google.com/presentation/d/1GTaZX9z0b-dwk6Z48TSwqwhjZ9pO9Onk7w8n9xNt_Zk/template/preview\" target=\"_blank\">スライド</a>を確認します。\n-   生徒の作業時間と全体グループ指導の間のペースを決めます。\n-   始める前に、推奨される準備活動を検討します ([リンク](https://studio.code.org/s/csc-bookcovers-2023/lessons/1#activity-4350298))。\n\n##### 任意：\n\n-   この<a href=\"https://docs.google.com/presentation/d/11H5SKj3B0xMp-yeEOE4XRsNvuAmxmWo4bnAk0QArmW8\" target=\"_blank\">役立つヒント</a>スライドショーを確認します。\n-   この<a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">デバッグのための教師用ガイド</a>を確認して、生徒がコードのエラーを見つけ、修正するのを助ける準備をします。\n-   ペアプログラミング - 生徒にペアプログラミングをさせるかどうかを決めます。この<a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">ビデオ</a>を見たり、この<a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">サポート</a>ページでペアプログラミングについての詳細を確認してください。\n-   カスタムスプライトのアップロード - これは後のレッスンで紹介しますが、この<a href=\"https://youtu.be/CHipUGfL_0M\" target=\"_blank\">ビデオ</a>を使って、生徒が自分のスプライトのコスチュームや 背景をアップロードする方法を教えることもできます。",
           "student_overview": "このレッスンでは、電子書籍の表紙をコーディングする方法を学習します。まず、背景と文字を選択します。次に、クリックしたときにキャラクターが話すようにプログラムする方法を学習します。レッスンを終える頃には、インタラクティブなブックカバーの例をいくつかコーディングできたはずです。"
         },
         "csc-bookcovers-2023/lesson-4": {
@@ -5092,12 +5197,12 @@
         "csc-ecosystems-2023/lesson-3": {
           "name": "生態系のコーディング",
           "overview": "この**スキル構築**レッスンでは、学生はいくつかの異なる生態系シミュレーションを探ります。学生は熱帯雨林、砂漠、北極、湿地のどの生態系を探索するかを選択できます。彼らは生態学者の役割を引き受け、各生態系の食物連鎖における植物と動物の相互作用を調査します。学生は説明書を読んで、それぞれの生態系が直面している課題を理解します。次に、生態系のバランスを取り戻すために、対応するコードを修正します。 ",
-          "preparation": "-   レベルをいろいろ試して<a href=\"https://docs.google.com/presentation/d/1ayQIGpQG49ED1S3f-URp97DibYgpFH8YCx9SPmYSxhA\" target=\"_blank\">レッスンのスライド</a> を確認しよう\n    \\-生徒の作業時間とグループ全体の指導のペースを決めよう。\n    \\-生徒一人ひとりに生態学者のノートを印刷\n    \\-このレッスンの後に、これらの [拡張の機会] [0] を考えてみましょう。"
+          "preparation": "-   レベルをいろいろ試して<a href=\"https://docs.google.com/presentation/d/1ayQIGpQG49ED1S3f-URp97DibYgpFH8YCx9SPmYSxhA\" target=\"_blank\">レッスンのスライド</a> を確認しよう\n    \\-生徒の作業時間とグループ全体の指導のペースを決めよう。\n    \\-生徒一人ひとりに生態学者のノートを印刷\n    \\-このレッスンの後に、これらの [拡張の機会](https://studio.code.org/s/csc-ecosystems-2023/lessons/3#activity-4852074) を考えてみましょう。"
         },
         "csc-mappinglandmarks-2023/US Landmarks": {
           "name": "マップ作成入門",
           "overview": "この**スキル構築**レッスンでは、学生はマップ上にスプライトを作成してアニメーション化する方法を学びます。 \n\nこのレッスンは主に 2 つの目的を果たします。(1) インタラクティブマップのコーディング例を提供し、(2) 学生に Sprite Lab でのコーディングを紹介することです。Sprite Lab は、ブロックベースのコードを使用するオープンエンドのコーディング環境です。受講者はこのレッスンを通してSprite Labの基本を学び、次のレッスンでインタラクティブマップを計画して構築します。 \n\nこの統合レッスンでは、学生はコードを使ってマップを作成することで社会科の概念を学びます。最初に、学生はいくつかのマップの例を調べ、そのマップを構成するフィーチャについて話し合います。まとめとして、学生はマップ作成者の役割について説明します。 \n\n_注:マップと画像は、すべてのケースで完璧にフィットするわけではありません。幸い、学生がフリープレイレベルで利用できるSprite Uploadツールとアニメーションライブラリへのアクセスが可能で、カスタマイズも可能です。_",
-          "preparation": "-   オンラインチュートリアルを自分で復習し、完了します。\n-   スライドを見直し、生徒の作業時間と全体指導の間のペースを決めます。\n-   まとめのディスカッションで各生徒が使う付箋紙やスクラッチ紙を用意します。\n-   技術をチェックし、事前にトラブルシューティングが必要かどうかを決めます。\n\n##### 任意：\n\n-   この<a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">役に立つヒント</a>スライドショーを確認します。\n-   この<a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">デバッグのための教師用ガイド</a>を確認して、生徒がコードのエラーを見つけて修正するのを助ける準備をします。\n-   ペアプログラミング - 生徒にペアプログラミングをさせるかどうかを決めます。この<a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">ビデオ</a>を見たり、この<a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">サポート</a>ページでペア プログラミングについての詳細を確認してください。\n-   カスタムスプライトのアップロード - これは後のレッスンで紹介しますが、この<a href=\"https://youtu.be/CHipUGfL_0M\" target=\"_blank\">ビデオ</a>を使って、生徒が自分のスプライトのコスチュームや 背景をアップロードする方法を教えることもできます。",
+          "preparation": "-   オンラインチュートリアルを自分で復習し、完了します。\n-   スライドを見直し、生徒の作業時間と全体指導の間のペースを決めます。\n-   まとめのディスカッションで各生徒が使う付箋紙やスクラッチ紙を用意します。\n-   技術をチェックし、事前にトラブルシューティングが必要かどうかを決めます。\n\n##### 任意：\n\n-   この<a href=\"https://docs.google.com/presentation/d/11H5SKj3B0xMp-yeEOE4XRsNvuAmxmWo4bnAk0QArmW8\" target=\"_blank\">役に立つヒント</a>スライドショーを確認します。\n-   この<a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">デバッグのための教師用ガイド</a>を確認して、生徒がコードのエラーを見つけて修正するのを助ける準備をします。\n-   ペアプログラミング - 生徒にペアプログラミングをさせるかどうかを決めます。この<a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">ビデオ</a>を見たり、この<a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">サポート</a>ページでペア プログラミングについての詳細を確認してください。\n-   カスタムスプライトのアップロード - これは後のレッスンで紹介しますが、この<a href=\"https://youtu.be/CHipUGfL_0M\" target=\"_blank\">ビデオ</a>を使って、生徒が自分のスプライトのコスチュームや 背景をアップロードする方法を教えることもできます。",
           "purpose": "学生は、複数の分野を統合したインタラクティブな学習体験でツアーガイドアプリを作成します。このレッスンの目的は、コンピュータサイエンスの概念と地理学の内容を組み合わせることで、学生が両方の科目についてより深く理解し、それぞれの関連性を理解できるようになることです。このレッスンの目的は、特定の地理的位置にある重要なランドマーク、文化的イベント、史跡を紹介するツアーガイドアプリを作成することで、学生がコーディングスキルを実際の状況に応用できるようにすることです。",
           "student_overview": "このレッスンでは、マップを探索します！マップは、どこに行けばよいかを判断するのに役立ちます。また、場所を構成する人々についてのストーリーも伝えてくれます。 \n\nコードを使うと、背景のスプライトをアニメーション化してインタラクティブマップを作成できます。"
         },
@@ -5111,7 +5216,7 @@
         "csc-mappinglandmarks-2023/Local Landmarks - Coding Your Project": {
           "name": "マイマップのコーディング",
           "overview": "このレッスンでは、学生は前のクラスのプロジェクト計画を使用してインタラクティブマップを作成します。学生は計画のさまざまな段階にいる可能性があります。\n\n生徒はコンピューターを使うようになると、背景の設定、ツアーガイドの作成、「ようこそ」と表示する手順、移動する手順、そしてタッチするとツアーガイドが何かを言うきっかけとなるランドマークを2つ以上追加するプロセスを順を追って進めていきます。 \n\nこれはプロジェクトの進行であることに注意してください。つまり、受講者のコードが、あるレベルから次のレベルへと学習者を追跡することになります。次のレベルに進む前に、各レベルで「実行」を押してコードを保存するように学生に勧めます。\n\nレッスンは次のレッスンの準備のための簡単なギャラリーウォークで終わります。生徒たちは自分のプロジェクトをクラスと共有します。 ",
-          "preparation": "-   オンラインチュートリアルを自分で確認し、完了します。\n-   前のレッスンから計画ガイドを返す準備をします。\n-   創造的なプロジェクトを開始する自信がない、または準備ができていないと感じている生徒に対する支援策を検討します。\n-   以下の関連する拡張オプションを検討します ([link](https://studio.code.org/s/csc-mappinglandmarks-2023/lessons/3#activity-5197066))\n\n##### 任意：\n\n-   生徒のための模範として、独自のマップをコーディングします。\n-   この<a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">役に立つヒント</a>スライドショーを見てください。\n-   この<a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">デバッグのための教師用ガイド</a>を見て、生徒がコードのエラーを見つけ、修正するのを助ける準備をしてください。",
+          "preparation": "-   オンラインチュートリアルを自分で確認し、完了します。\n-   前のレッスンから計画ガイドを返す準備をします。\n-   創造的なプロジェクトを開始する自信がない、または準備ができていないと感じている生徒に対する支援策を検討します。\n-   以下の関連する拡張オプションを検討します ([link](https://studio.code.org/s/csc-mappinglandmarks-2023/lessons/3#activity-5197066))\n\n##### 任意：\n\n-   生徒のための模範として、独自のマップをコーディングします。\n-   この<a href=\"https://docs.google.com/presentation/d/11H5SKj3B0xMp-yeEOE4XRsNvuAmxmWo4bnAk0QArmW8\" target=\"_blank\">役に立つヒント</a>スライドショーを見てください。\n-   この<a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">デバッグのための教師用ガイド</a>を見て、生徒がコードのエラーを見つけ、修正するのを助ける準備をしてください。",
           "purpose": "このレッスンの目的は、コンピュータサイエンスと地理を組み合わせた豊かで魅力的な学習体験を提供し、学生が今日の世界に関連するさまざまなスキルと能力を身につけるのに役立つことです。生徒は独自のツアーガイドアプリをコーディングすることで、特定の場所の地理的特徴、文化的イベント、史跡を探索できます。生徒は、コードとテクノロジーを通じて、この場所に対する理解と感謝の気持ちを表現できます。また、このレッスンでは、コーディングにおける計画、問題解決、自己表現の重要性も強調されています。",
           "student_overview": "次に、各ランドマークを訪れるツアーガイドと一緒にマップを作成します。前回のクラスで設計した計画に従います。各レベルの指示に注意深く従ってください。このプロジェクトでは、コードはレベルごとにあなたに従います。 "
         },
@@ -5125,7 +5230,7 @@
         "csc-starquilts-2023/Native American Star Quilts (beta)": {
           "name": "ネイティブアメリカンスターキルト",
           "overview": "このUnpluggedレッスンでは、ネイティブアメリカンのスターキルトとその重要性を生徒に紹介します。次に、生徒たちは紙に六芒星の形を作ります。主な目標の1つは、その形の中のパターンについて話し合うことです。これらのアイデアは、今後のアクティビティのオンラインコーディング部分の鍵となります。 ",
-          "preparation": "-   レベルをいろいろ試して、レッスンスライドを確認します。\n-   生徒の作業時間と全体グループ指導の間のペースを決めます。\n-   最後のレッスンの後に、関連する拡張オプション（リンク）を検討します。\n\n##### 任意：\n\n-   この<a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">役立つヒント</a>スライドショーを確認します。\n-   この<a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">デバッグのための教師用ガイド</a>を確認して、生徒がコードのエラーを見つけて修正するのを助ける準備をします。\n-   ペアプログラミング - 生徒にペアプログラミングをさせるかどうかを決めます。この<a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">ビデオ</a>を見たり、<a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">サポート</a>ページでペアプログラミングについての詳細を見たりしてください。。",
+          "preparation": "-   レベルをいろいろ試して、レッスンスライドを確認します。\n-   生徒の作業時間と全体グループ指導の間のペースを決めます。\n-   最後のレッスンの後に、関連する拡張オプション（リンク）を検討します。\n\n##### 任意：\n\n-   この<a href=\"https://docs.google.com/presentation/d/11H5SKj3B0xMp-yeEOE4XRsNvuAmxmWo4bnAk0QArmW8\" target=\"_blank\">役立つヒント</a>スライドショーを確認します。\n-   この<a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">デバッグのための教師用ガイド</a>を確認して、生徒がコードのエラーを見つけて修正するのを助ける準備をします。\n-   ペアプログラミング - 生徒にペアプログラミングをさせるかどうかを決めます。この<a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">ビデオ</a>を見たり、<a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">サポート</a>ページでペアプログラミングについての詳細を見たりしてください。。",
           "purpose": "今日はスターキルトについてすべて学びます。次に、鉛筆、紙、色を使って、自分だけの6点星の形をデザインし始めます。パターンに気をつけてください！"
         },
         "csc-starquilts-2023/Getting Started with The Artist (beta)": {
@@ -6323,50 +6428,47 @@
           "student_overview": "イベントを使って、ストーリーを作成したり、インタラクティブゲームを作成したりしましょう。"
         },
         "how-ai-works-2023/Introduction to Machine Learning": {
-          "overview": "このレッスンは、［AIの仕組み動画シリーズ］［1］の［AIの仕組み：機械学習とは？］［0］動画を中心に構成されています。レッスンプランを検討する前に、まずこのビデオをご覧ください。\n\nこのレッスンでは、機械学習と呼ばれる人工知能の一形態と、問題解決プロセスを使用してロボットを訓練して問題を解決する方法を紹介します。生徒たちは、ロボット（AIボット）が魚のパターンを検出する方法を学習する3つの機械学習活動に参加します。\n\nこのレッスンは、単独で教えることもできますし、「AIの仕組み」についての7つの連続レッスンの一部として教えることもできます[この連続レッスンのすべてを見るにはこちらをクリックしてください](https://code.org/ai/how-ai-works)。"
+          "overview": "このレッスンは、［AIの仕組み動画シリーズ］［1］の［AIの仕組み：機械学習とは？］［0］動画を中心に構成されています。レッスンプランを検討する前に、まずこのビデオをご覧ください。\n\nこのレッスンでは、機械学習と呼ばれる人工知能の一形態と、問題解決プロセスを使用してロボットを訓練して問題を解決する方法を紹介します。生徒たちは、ロボット（AIボット）が魚のパターンを検出する方法を学習する3つの機械学習活動に参加します。\n\nこのレッスンは、単独で教えることもできますし、「AIの仕組み」についての7つの連続レッスンの一部として教えることもできます[この連続レッスンのすべてを見るにはこちらをクリック](https://code.org/ai/how-ai-works)。"
         },
         "how-ai-works-2023/Computer Vision": {
-          "name": "コンピュータビジョン",
-          "overview": "このレッスンは、\\[[0] AIのしくみビデオシリーズ] の [AIの仕組み:コンピュータービジョン] ビデオを中心にしています[1]。授業計画を検討する前に、まずこのビデオをご覧ください。\n\n学生はコンピュータービジョンの仕組みを学びます。生徒はまず、目の錯覚を見て、自分の目で気づいた絵の特徴を特定します。学生は、コンピュータービジョンとコンピューターがどのように「見る」かを説明するビデオを見ます。彼らは、7 セグメントディスプレイに表示されている数字をネットワークを使って決定するアルゴリズムを設計します。最後に、学生はアルゴリズムをテストします。\n\nこのレッスンは単独で教えることも、How AI のしくみに関する7回のレッスンの一部として教えることもできます。[このシーケンスのレッスンをすべて表示するには、ここをクリックしてください](https://code.org/ai/how-ai-works)。",
-          "preparation": "\\-各グループのコンピュータ・ビジョン・ネットワーク・アクティビティ・ガイドのコピーを印刷\n\\-(オプション) セブン・セグメント・ディスプレイ・マニピュラティブのコピーを印刷",
-          "student_overview": "数字を検出するアルゴリズムを設計して、コンピュータービジョンの仕組みを学びましょう。"
+          "name": "コンピュータービジョン",
+          "overview": "このレッスンは、[ AI の仕組み動画シリーズ ](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)の中の[ AIの仕組み：コンピュータービジョン ](https://youtu.be/2hXG8v8p0KM?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)動画を中心に構成されています。レッスンプランを検討する前に、まずこの動画を見てください。\n\n生徒はコンピュータ・ビジョンの仕組みを学びます。まず目の錯覚を見て、自分の目が気づいた絵の特徴を特定します。生徒は、コンピュータービジョンとコンピュータが「見る」仕組みを説明する動画を見ます。ネットワークを使用して、7セグメント・ディスプレイに表示されている数字を決定するアルゴリズムを設計します。最後に、生徒は自分のアルゴリズムをテストします。\n\nこのレッスンは、単独で教えることもできますし、AIの仕組みに関する7つの連続レッスンの一部として教えることもできます。",
+          "preparation": "-   コンピュータービジョン・ネットワークのアクティビティ・ガイドをグループごとに印刷する。\n-   ( 任意) 7セグメント・ディスプレイ・マニピュラティブを印刷する。",
+          "student_overview": "数字を検出するアルゴリズムを設計することで、コンピュータービジョンの仕組みを学びます。"
         },
         "how-ai-works-2023/Neural Networks": {
           "name": "ニューラルネットワーク",
-          "overview": "このレッスンは、\\[[0] AIのしくみビデオシリーズ] の [AIの仕組み:ニューラルネットワーク](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)のビデオを中心にしています。授業計画を検討する前に、まずこのビデオをご覧ください。\n\n学生はニューラルネットワークの仕組みを学びます。まず、あなたに何かを勧めてくれる体験の例を話し合います。次に、特定のユーザーに基づいて動画をおすすめするウィジェットを使用します。学生はニューラルネットワークを説明するビデオを見ます。生徒は最新のウィジェットを使って各人の体重を調整します。最後に、学生はレコメンデーションシステムを作成する際に多様な視点が必要であることについて話し合います。\n\nこのレッスンは単独で教えることも、「How AI のしくみ」（このシーケンスの全レッスンを表示するには、ここをクリックしてください）に関する7回のレッスンの一部として教えることもできます。[2]",
-          "preparation": "\\-各学生用の WeTube Content Creators リソースのコピーを印刷\n\\-各学生用のニューラルネットワークアクティビティガイドのコピーを印刷",
-          "student_overview": "レコメンデーションシステムの重みを調整して出力を調整することで、ニューラルネットワークがどのように機能するかを学びます。"
+          "overview": "このレッスンは、[ AIの仕組み動画シリーズ ](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)の中の[AIの仕組み：ニューラルネットワーク](https://youtu.be/JrXazCEACVo?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)動画を中心に構成されています。授業計画を検討する前に、まずこの動画を見てください。\n\n生徒はニューラルネットワークの仕組みを学びます。まず、あなたにものを勧める経験の例について話し合います。次に、ある人物に基づいて動画を推薦するウィジェットを使用します。生徒はニューラル・ネットワークの説明動画を見ます。更新されたウィジェットを使って、各人のウェイトを調整します。最後に、生徒はおすすめシステムを作成する際の多様な視点の必要性について話し合います。\n\nこのレッスンは、単独で教えることもできますし、「AIの仕組み」に関する7つの連続レッスンの一部として教えることもできます - [この連続レッスンのすべてを見るにはここをクリック](https://code.org/ai/how-ai-works)。",
+          "preparation": "-   各生徒にWeTubeコンテンツクリエーターの教材を印刷します。\n-   各生徒にニューラルネットワークのアクティビティガイドを印刷します。",
+          "student_overview": "おすすめシステムのウェイトを調整して出力を調整することで、ニューラルネットワークがどのように機能するかを学びます。"
         },
         "how-ai-works-2023/Chatbots and Large Language Models (LLMs)": {
           "name": "チャットボットと大規模言語モデル (LLM)",
-          "overview": "このレッスンは、「How AI Works[0] ビデオシリーズ」の「AI の仕組み:チャットボットと大規模言語モデル」のビデオを中心にしています。[1]授業計画を検討する前に、まずこのビデオをご覧ください。\n\n大規模言語モデル (LLM) は新しいテキストを生成します。大規模な言語モデルはウィキペディアのような大量のテキストに基づいて構築されているため、LLM が生成するテキストは人間が書いたように見えます。このレッスンでは、学生はLLMとは何か、どのように機能するのかを学び、LLMを使ってAIと共同でテキストを作成します。最後に、LLM がインテリジェントかクリエイティブかについてのディスカッションで授業は終わります。\n\nこのレッスンは単独で教えることも、「How AI のしくみ」（このシーケンスの全レッスンを表示するには、ここをクリックしてください）に関する7回のレッスンの一部として教えることもできます。[2]",
-          "preparation": "\\-各生徒のアクティビティガイドのコピーを印刷",
-          "student_overview": "大規模言語モデル（LLM）はインテリジェントかクリエイティブか？彼らと一緒に何かを作り上げながら自分で決め、その仕組みについてもっと学びましょう！"
+          "overview": "このレッスンは、［AIの仕組みビデオシリーズ］[1]の［AIの仕組み：チャットボットと大規模言語モデル］[0]動画を中心に構成されています。レッスンプランを検討する前に、まずこの動画を見てください。\n\n大規模言語モデル（LLM）は新しいテキストを生成します。LLMが生成するテキストは、ウィキペディアのような大量のテキストに基づいて構築されるため、人間が書いたように見えます。この授業では、LLMとは何か、どのように機能するのかを学び、LLMを使ってAIとテキストを共同作成します。最後に、LLMは知的なのか、創造的なのかについて話し合って、授業は終わります。\n\nこのレッスンは、単独で教えることもできますし、AIの仕組みに関する7つの連続レッスンの一部として教えることもできます - [この連続レッスンのすべてを見るにはここをクリック](https://code.org/ai/how-ai-works)。",
+          "preparation": "-   各生徒ににアクティビティガイドを印刷する",
+          "student_overview": "大規模言語モデル（LLM）は知的か創造的か？LLMと一緒に何かを作り、LLMがどのように機能するのかを学びながら、ご自身で判断してください！"
         },
         "how-ai-works-2023/Generative Images": {
-          "name": "ジェネレーティブ・イメージ",
-          "overview": "このレッスンの中心となるのは「AIのしくみ：創造性と想像力？」[0] [「AI のしくみ」ビデオシリーズ](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)の動画です。授業計画を検討する前に、まずこのビデオをご覧ください。\n\n拡散モデルは画像を生成します。拡散 AI は画像をノイズに変換し、その処理を逆にするように AI に学習させます。このレッスンでは、受講者は AI がどのように画像を生成できるかを学び、その後、拡散 AI ウィジェットについて学びます。最後に、これらのモデルが創造的かどうかについてのディスカッションで授業を締めくくります。\n\nこのレッスンは単独で教えることも、「How AI のしくみ」（このシーケンスの全レッスンを表示するには、ここをクリックしてください）に関する7回のレッスンの一部として教えることもできます。[2]",
-          "preparation": "\\-各生徒のアクティビティガイドのコピーを印刷",
+          "name": "生成画像",
+          "overview": "このレッスンは、[ AI の仕組み: 創造性と想像力?](https://www.youtube.com/watch?v=X994dDnmRmY) の動画を中心に構成されています。レッスンプランを検討する前に、まずこの動画を見てください。\n\n拡散モデリングは画像を生成します。拡散AIは画像をノイズに変換し、AIにそのプロセスを逆転させる訓練をします。このレッスンでは、生徒はAIがどのように画像を生成するかを学び、それから拡散AIウィジェットを探索します。最後に、これらのモデリングが創造的かどうかについての議論で授業を締めくくります。\n\nこのレッスンは、単独で教えることもできますし、「AIの仕組み」に関する7つの連続レッスンの一部として教えることもできます - [この連続レッスンのすべてを見るにはここをクリック](https://code.org/ai/how-ai-works)。",
+          "preparation": "-   各生徒ににアクティビティガイドを印刷する",
           "student_overview": "拡散 AI ウィジェットを調べて、AI がどのように画像を生成するかを学びましょう。"
         },
         "how-ai-works-2023/Algorithmic Bias": {
           "name": "アルゴリズムバイアス",
-          "overview": "このレッスンは、\\[How AI Works[0] ビデオシリーズ] の [AI の仕組み:平等アクセスとアルゴリズムバイアス](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)ビデオを中心にしています。授業計画を検討する前に、まずこのビデオをご覧ください。\n\nこのレッスンでは、Twitter のクロッピングアルゴリズムの根底にあるバイアスを明らかにするために、画像のトリミングを練習します。次に、このバイアスされたアルゴリズムの発見に関するビデオを読んで視聴します。最後に、学生はバイアスを認識して減らす方法と、クロッピングアルゴリズムにおけるバイアスの疑いに対するTwitterの対応を分析することについて議論します。\n\nこのレッスンは単独で教えることも、「AIのしくみ」に関する7回のレッスンの一部として教えることもできます [このシーケンスのすべてのレッスンを表示するには、ここをクリックしてください]。[2]",
-          "preparation": "\\-クロッピングウィジェットのアクティビティを自分で完成させてください。そうすれば、学生がウィジェットでどのような経験をするのか、どのような質問や問題を提起するのかがわかります。\n\\-ビデオ [「私たちは人種差別を自動化しているのか？」] の一部をご覧ください。[0] 授業計画で言及されている。\n\\-以下のリンクセクションにある2つの記事を読んでください。",
-          "student_overview": "このレッスンでは、画像の切り抜きに取り組み、画像を切り抜く方法を機械に教える際の課題と先入観について説明します。"
+          "overview": "このレッスンは、[AI の仕組み動画シリーズ：平等なアクセスとアルゴリズム・バイアス](https://youtu.be/tJQSyzBUAew?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)の動画を中心に構成されています[1]。レッスンプランを検討する前に、まずこの動画を見てください。\n\nこのレッスンでは、Twitterの切り抜きアルゴリズムの根底にあるバイアスを明らかにするために、画像をトリミングする練習をします。次に、この偏ったアルゴリズムの発見に関する動画を読み、見ます。最後に、切り抜きアルゴリズムに偏りがあるという疑惑に対するツイッター社の対応を分析しながら、偏りを認識し減らす方法について話し合います。\n\nこのレッスンは、単独で教えることもできますし、「AIの仕組み」に関する7連続レッスンの一部としても教えることができます[この連続レッスンのすべてを見るにはここをクリック](https://code.org/ai/how-ai-works)。",
+          "preparation": "-   生徒がウィジェットを使ってどのような経験をするか、またどのような質問や問題が出てくるかを知ることができるように、自分でウィジェットを切り抜くアクティビティを完成させます。\n-   レッスンプランで言及されている動画 [「私たちは人種差別を自動化しているのか」](https://youtu.be/Ok5sKLXqynQ) の部分を見ます。\n-   以下のリンクセクションから2つの記事を読みます。",
+          "student_overview": "このレッスンでは、画像のトリミングに取り組み、機械に画像のトリミング方法を教える際の課題やバイアスについて話し合います。"
         },
         "how-ai-works-2023/Our AI Code of Ethics": {
           "name": "当社のAI倫理規定",
-          "overview": "このレッスンは、\\[How AI Works[0] ビデオシリーズ] の [AI の仕組み:プライバシーと仕事の未来] ビデオを中心にしています[1]。授業計画を検討する前に、まずこのビデオをご覧ください。\n\n学生は少人数のグループで、自分が選んだ人工知能分野の倫理的な落とし穴を明らかにする記事やビデオを使って研究を行います。その後、各グループは、選択した分野に対応するソリューション指向の原則を少なくとも1つ策定します。これらの原則は、世界中の AI クリエイターや立法者が利用できる、クラス全体の「Our AI 倫理規定」リソース (スライドプレゼンテーション、ドキュメント、Web ページなど) にまとめられます。\n\nこのレッスンは単独で教えることも、「AI のしくみ」に関する7回のレッスンの一部として教えることもできます。[このシーケンスのレッスンをすべて表示するには、ここをクリックしてください]。[2]",
-          "student_overview": "AI の倫理について共同研究し、共有可能な行動規範を作成します。"
+          "overview": "このレッスンは、[ AI の仕組み：プライバシーと仕事の未来](https://youtu.be/zNxw5gJtHLc?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) の動画を中心に構成されています。授業計画を検討する前に、まずこの動画を見てください。\n\n少人数のグループに分かれ、生徒が選択した人工知能分野の倫理的落とし穴を暴く記事や動画を使って調査を行います。その後、各グループは、選択した分野に対処する解決志向の原則を少なくとも1つ考案します。そして、これらの原則を、世界中のAIクリエイターや立法者に向けたクラス全体の「私たちのAI倫理綱領」というリソース（スライド・プレゼンテーション、文書、ウェブページなど）にまとめます。\n\nこの授業は、単独で教えることもできますし、「AIの仕組み」に関する7つの連続授業の一部として教えることもできます [この連続授業のすべてのレッスンを見るにはここをクリック](https://code.org/ai/how-ai-works)。",
+          "student_overview": "AIの倫理について共同で研究し、共有可能な行動規範を作成しよう"
         },
         "how-ai-works-2023/How AI Works In a Day": {
-          "name": "1 日で AI が機能する仕組み",
-          "overview": "⚠️ このレッスンは、[How AI Works ビデオシリーズ](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) 全体を**1日**で見せたい教室を対象としています。この単元の他のレッスン (各ビデオを 1 日ずつ紹介します) と順番に教えることを意図したものではありません。\n\n学生は動画の語彙をマッチさせ、各動画についての振り返りの質問に答えることで、各動画の流れに沿って進めます。授業計画とスライドは非常にまばらで、自由回答形式になっているため、即興で作ったり、教室に合わせてカスタマイズしたりできます。",
-          "preparation": "\\-アクティビティガイドを印刷\n\\-スライドをビデオプロジェクターに投影"
-        },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Hour of Code 2013"
+          "name": "１日で分かるAIの仕組み",
+          "overview": "⚠️このレッスンは、[ AIの仕組み動画シリーズ ](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) のすべてを **1日** で見せたい教室を対象としています。各動画を1日に1本ずつ紹介するこのユニットの他のレッスンと順番に教えることは意図されていません。\n\n生徒は、動画に登場するボキャブラリーをマッチングさせ、各動画に関する復習の質問に答えることで、各動画に沿って学習します。レッスンプランとスライドは、あなたの教室に合うように即興でカスタマイズできるように、非常に簡潔で自由形式になっています。",
+          "preparation": "-   アクティビティガイドを印刷する\n-   ビデオプロジェクターでスライドを投影する。"
         },
         "applab-intro/Intro to App Lab": {
           "name": "アプリラボの紹介",
@@ -6542,9 +6644,10 @@
           "student_overview": "チュートリアルの概要：まず、生徒は、オブジェクトを「魚」または「魚ではない」に分類して、海からゴミを取り除く試みを行います。次に、トレーニング データセットを拡張して、水中に属するその他の海洋生物を含めなくてはなりません。アクティビティの後半では、生徒はランダムに生成された魚のイメージに適用する独自のラベルを選択します。このトレーニング データは、新しいイメージに自動的にラベルを付けることができる機械学習モデルに使用されます。"
         },
         "outbreak/Outbreak": {
+          "name": "シミュレーションをコーディング",
           "overview": "このレッスンでは、イベントに関する**スキル構築**と**ミニプロジェクト**を組み合わせて、スプライトラボで独自のコンピュータシミュレーションを作成します。生徒にシミュレーションをじっくり調べてもらい、ウイルスがどれだけ早く広がるか、スピードを弱めるには何ができるかを理解してもらいます。",
-          "preparation": "- パズル全体をやってみて、クラスで問題となる可能性のある領域を見つけます。\n- 生徒全員に必ず「リフレクションジャーナル」を用意してください。",
-          "purpose": "前のレッスンでは、生徒は簡単なシミュレーションからデータを収集して解釈しました。 このレッスンでは、指示に従って独自のシミュレーションモデルをコーディングします。実世界でのウイルスの大流行について生徒に予備知識があれば、架空のシナリオにそれを適用できます。",
+          "preparation": "#### Hour of Codeの1週間前\n\n-   [Hour of Code教育者へのガイド](https://hourofcode.com/us/how-to)と[成功を収めた教師が伝えるベストプラクティス](https://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)を見直して、Hour of Codeイベント計画を開始します。\n\n-   授業のサポート、割引料金のポスター、ロボットのギブアウェイ (米国のみ) に参加したい場合は、[Hour of Codeイベントを登録](https://hourofcode.com/us)します。\n\n-   [Outbreak](https://studio.code.org/s/outbreak/)のオンラインチュートリアルを自習、完了します\n\n-   生徒に完成させるよう言う前に、必ず最初に試してみてください。\n\n-   技術的な面を確認し、Hour of Codeを始める前に、トラブルシューティングを行う必要があるかどうか判断してください。\n\n#### Hour of Code前日\n\n-   アクティビティを完了した各生徒には[certificate](https://studio.code.org/certificates/batch)を渡します。Hour of Codeの終了時に配りやすいよう人数分を事前に印刷しておきましょう。\n\n-   (オプション) 生徒にアクティビティ中に使うヘッドホンを持参するよう伝えておきます。",
+          "purpose": "このレッスンでは、指示に従って独自のシミュレーションモデルをコーディングします。実世界でのウイルスの大流行について生徒に予備知識があれば、架空のシナリオにそれを適用できます。",
           "student_overview": "モンスタータウンにウイルスが広がっています！ ウイルスシミュレーターを作成し、モンスターが健康を取り戻す手助けをする方法を学びます。"
         },
         "playlab/Play Lab": {
@@ -6586,66 +6689,6 @@
           "preparation": "-   テキスト圧縮ウィジェットをテストします\n    \\-　指導のヒントを確認して、使用するオプションを決定します",
           "purpose": "圧縮とは基本的に、元の情報を表すために使用するビット数を減らすための方法またはプロトコルを開発することです。このレッスンで、圧縮データを繰り返しパターンの「辞書」を使って表す方法は、[LZW圧縮スキーム](http://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch)と似ていますが、LZWは、このレッスンで生徒が行う方法とは少し異なるので注意してください。生徒はここで独自の方法を発明します。 LZWは、テキスト（zipファイル）だけでなく、GIF画像ファイル形式でも使用されます。",
           "student_overview": "ある時点で、私たちはビットを送信できる速度で物理的な限界に達します。大量の情報をより高速に送信したい場合は、同じ情報をより少ないビットで表す方法を見つけなくてはなりません。つまり、データを圧縮する必要があります。  "
-        },
-        "applab-1hour/Room Escape": {
-          "name": "部屋から脱出"
-        },
-        "applab-2hour/Digital Design": {
-          "name": "デジタルデザイン"
-        },
-        "applab-2hour/Event Driven Programming": {
-          "name": "イベント駆動型プログラミング"
-        },
-        "applab-2hour/Basic App Functionality": {
-          "name": "基本的なアプリの機能"
-        },
-        "applab-2hour/Getters and Setters": {
-          "name": "ゲッターとセッター"
-        },
-        "frequency_analysis/Frequency Analysis": {
-          "name": "周波数分析"
-        },
-        "gamelab/Start and End Screens": {
-          "name": "開始画面と終了画面"
-        },
-        "gamelab/Start and End Screens2": {
-          "name": "開始画面と終了画面2"
-        },
-        "netsim/Overview and Setup Instructions": {
-          "name": "概要とセットアップ手順"
-        },
-        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
-          "name": "ピアツーピア - 共有ワイヤーでビットを送信する"
-        },
-        "netsim/Peer to Peer - Sending Numbers": {
-          "name": "ピアツーピア - 番号の送信"
-        },
-        "netsim/Peer to Peer - Sending Ascii": {
-          "name": "ピアツーピア - Asciiの送信"
-        },
-        "netsim/Broadcasting messages": {
-          "name": "メッセージのブロードキャスト"
-        },
-        "netsim/Routers and addresses": {
-          "name": "ルーターとアドレス"
-        },
-        "netsim/Packets and Reliability": {
-          "name": "パケットと信頼性"
-        },
-        "netsim/Manual DNS": {
-          "name": "手動DNS"
-        },
-        "netsim/Automatic DNS node": {
-          "name": "自動DNSノード"
-        },
-        "netsim/Internet Simulator Freeplay": {
-          "name": "インターネット シミュレーター フリープレイ"
-        },
-        "poetry-hoc3/lesson-1": {
-          "name": "ムード研究"
-        },
-        "vigenere/Vigenere": {
-          "name": "ヴィジュネル暗号"
         },
         "allthethings/Jigsaw": {
           "name": "ジグソーパズル"
@@ -6772,6 +6815,21 @@
         },
         "allthethings/lesson-49": {
           "name": "音楽"
+        },
+        "applab-1hour/Room Escape": {
+          "name": "部屋から脱出"
+        },
+        "applab-2hour/Digital Design": {
+          "name": "デジタルデザイン"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "イベント駆動型プログラミング"
+        },
+        "applab-2hour/Basic App Functionality": {
+          "name": "基本的なアプリの機能"
+        },
+        "applab-2hour/Getters and Setters": {
+          "name": "ゲッターとセッター"
         },
         "csd-post-survey/CSD post-course survey": {
           "name": "CSD生徒 コース後アンケート ('18～'19) "
@@ -7082,12 +7140,54 @@
         "deepdive-debugging/Debugging for CDEF Educators": {
           "name": "CDEF教育者向けのデバッグ"
         },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "周波数分析"
+        },
+        "gamelab/Start and End Screens": {
+          "name": "開始画面と終了画面"
+        },
+        "gamelab/Start and End Screens2": {
+          "name": "開始画面と終了画面2"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Hour of Code 2013"
+        },
         "jigsaw/Jigsaw": {
           "name": "ジグソーパズル",
           "overview": "このレッスンでは、生徒がコンピューターラボに進むときに何が起こるかを理解します。まずはコンピューターラボのマナーを紹介する簡単なディスカッションから始まり、次にコンピューターを使ってオンラインパズルを完成させます。",
           "preparation": "-   オンラインセーフティーコンテンツのため[良識教育](https://www.commonsense.org/education/digital-citizenship)のウェブサイトをおさらいしましょう。",
           "purpose": "このレッスンの主な目標は、生徒のコンピュータ体験を構築することです。クリック、ドラッグ、ドロップなどの最も基本的なコンピュータ機能を網羅することで、今後、パズルに取り組むために、教室でより公平な遊びの場を生み出します。このレッスンは、また、デバイスに応じて、「マウス」、「トラックパッド」、「タッチスクリーン」など、基本的なコンピュータハードウェア用語を紹介する絶好の機会にもなっています。",
           "student_overview": "クリックしてドラッグし、パズルを完成させましょう。"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "概要とセットアップ手順"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "ピアツーピア - 共有ワイヤーでビットを送信する"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "ピアツーピア - 番号の送信"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "ピアツーピア - Asciiの送信"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "メッセージのブロードキャスト"
+        },
+        "netsim/Routers and addresses": {
+          "name": "ルーターとアドレス"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "パケットと信頼性"
+        },
+        "netsim/Manual DNS": {
+          "name": "手動DNS"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "自動DNSノード"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "インターネット シミュレーター フリープレイ"
         },
         "pixelation/Black & White Pixelation Tutorial": {
           "name": "白黒ピクセレーション チュートリアル"
@@ -7103,6 +7203,18 @@
         },
         "pixelation/Color Pixelation Freeplay": {
           "name": "カラーピクセレーション フリープレイ"
+        },
+        "poetry-hoc3/lesson-1": {
+          "name": "ムード研究"
+        },
+        "vigenere/Vigenere": {
+          "name": "ヴィジュネル暗号"
+        },
+        "dance-ai-2023/lesson-1": {
+          "name": "ダンスパーティー：AI版",
+          "overview": "このアクティビティでは、あらゆる年齢の学習者が安全で創造的な環境でコーディングと人工知能の 入門体験をします。このレッスンはすべての年齢の学習者のためにデザインされていますが、読む必要があります。チュートリアルは音楽に反応するように作られているため、このアクティビティでは生徒が音を再生する必要があります。",
+          "preparation": "### アワー・オブ・コードの計画の立て方\n\nあなたの学校でアワー・オブ・コードを計画し、実施し、祝うために必要なリソースを[here](https://hourofcode.com/us/how-to)から見つけてください！",
+          "purpose": "コンピューター・サイエンスへの興味を育むには、コーディングをエキサイティングで楽しい体験にすることが不可欠です。このレッスンでは、簡単なドラッグ＆ドロップのコーディングブロックを使って、生徒がコードを使って色と動きのあるダンスのスペクタクルを振り付けます。生徒たちはA.I.ロボットを導入し、ダンスの雰囲気にぴったりのエフェクトを見つける手助けをします。"
         }
       }
     }

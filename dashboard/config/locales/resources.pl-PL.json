@@ -7279,48 +7279,69 @@
           "type": "Wideo"
         },
         "_template_ai_code_of_ethics/ai-ethics/2023": {
+          "name": "[Template] Kodeks etyczny AI",
+          "url": "https://docs.google.com/presentation/d/1SJEXpTCKwf5fbDy5GuDjDGAsuUrkI9QfxKF-1pMSndg/edit",
           "type": "Slajdy"
         },
         "ai_code_of_ethics/ai-ethics/2023": {
           "name": "Kodeks etyczny AI ",
+          "url": "https://docs.google.com/presentation/d/1sjTMJf2g1eJvvTjaIzk5aFkTi-_UNWybRq48pfH2PVo/template/preview",
           "type": "Slajdy"
         },
         "ai_research_areas/ai-ethics/2023": {
+          "name": "Obszary badawcze AI",
+          "url": "https://docs.google.com/document/d/1F7jlc3lw9UQ2ZLO6NDLO5wj543IntOT0fC1fpQwDo3s/edit",
           "type": "Przewodnik po zajęciach"
         },
         "create_a_manifesto/ai-ethics/2023": {
+          "name": "Utwórz manifest",
+          "url": "https://docs.google.com/document/d/1HCY1VWUCT3mgXAdQ3KD7C29r8yfNxbz3b3lvu8jibI4/edit",
           "type": "Przewodnik po zajęciach"
         },
         "ethics_and_ai_privacy_the_future_of_work/ai-ethics/2023": {
+          "name": "Etyka i sztuczna inteligencja: prywatność i przyszłość pracy",
+          "url": "https://www.youtube.com/watch?v=zNxw5gJtHLc",
           "type": "Wideo"
         },
         "imagine_your_world/ai-ethics/2023": {
+          "name": "Wyobraź sobie swój świat",
+          "url": "https://docs.google.com/document/d/1KfPa5xnZN0pOJtQGm0KU69TAsX37xJgdnnfyU1RPtRI/edit",
           "type": "Przewodnik po zajęciach"
         },
         "research_reflection_guide/ai-ethics/2023": {
+          "url": "https://docs.google.com/document/d/1YYw8n8HPq3WDx7l7ZfyDeAoMkUCSEIFZb1670RzwKZE/edit",
           "type": "Przewodnik po zajęciach"
         },
         "character_card_individual_docs_/ai-ethics/2023": {
+          "url": "https://drive.google.com/drive/folders/1IFYT6VWTQQ2-rMZ_AqExzOQNsmONdhih?usp=drive_link",
           "type": "Zasoby"
         },
         "character_cards/ai-ethics/2023": {
+          "url": "https://docs.google.com/document/d/1dliLfkCYxPTfdo7kirgSBODCn94C092z_tTwE_C2SbA/edit",
           "type": "Zasoby"
         },
         "generative_ai_activity_instructions/ai-ethics/2023": {
+          "name": "Instrukcje aktywności związane z generatywną AI",
+          "url": "https://docs.google.com/document/d/1rqtfMZyn-UekUoVFgYCHyVqOa7StNY9-wl-FlLOaZqk/edit",
           "type": "Zasoby"
         },
         "generative_ai_news_articles/ai-ethics/2023": {
+          "name": "Artykuły z wiadomościami dotyczącymi generatywnej AI",
+          "url": "https://docs.google.com/document/d/1fFsIddVKKTvl067o0GpW0PsjampUbdNAGeptVbtDl6I/edit",
           "type": "Zasoby"
         },
         "group_scenarios/ai-ethics/2023": {
+          "name": "Scenariusze grupy",
+          "url": "https://docs.google.com/document/d/1-bJpL4tXOgg6jpGhiXTCxowVh_ogsNmd-K-S64Nb4lo/edit",
           "type": "Zasoby"
         },
         "how_ai_works_large_language_models/ai-ethics/2023": {
-          "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
+          "name": "Jak działa sztuczna inteligencja: duże modele językowe",
           "type": "Wideo"
         },
         "societal_impact_of_generative_ai/ai-ethics/2023": {
           "name": "Społeczne oddziaływanie generatywnej sztucznej inteligencji",
+          "url": "https://docs.google.com/presentation/d/1oCFLWSBDQgcVI-SiX9RHEQ4CW6MJT7iWk_wXeY4m1mE/template/preview",
           "type": "Slajdy"
         },
         "cs_connections_landing_page/csc-adaptations/2023": {
@@ -7489,7 +7510,7 @@
           "type": "Zasoby"
         },
         "ecosystems/csc-ecosystems/2023": {
-          "name": "Moduł ekosystemy",
+          "name": "Symulacja ekosystemu morskiego",
           "url": "https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview",
           "type": "Slajdy"
         },
@@ -7607,7 +7628,7 @@
           "type": "Zasoby"
         },
         "star_quilts/csc-starquilts/2023": {
-          "name": "csc-starquilts",
+          "name": "Kodowanie kołdry z geometrycznymi gwiazdami",
           "url": "https://docs.google.com/presentation/d/10F-FnjuE2fM9g1MEmBm5MXJAvhKWCNjX5tAeH9YbggM/template/preview",
           "type": "Slajdy"
         },
@@ -7695,7 +7716,7 @@
           "type": "Wideo"
         },
         "time_capsule/csc-timecapsule/2023": {
-          "name": "csc-timecapsule",
+          "name": "Kodowanie kapsuły czasu",
           "url": "https://docs.google.com/presentation/d/1jgZ_PS7uDb2KuvUNPNpW_PqSxsvfVKap4f8RscZPwVY/template/preview",
           "type": "Slajdy"
         },
@@ -9597,6 +9618,11 @@
         "functions_with_parameters/csd/2023": {
           "name": "Funkcje z parametrami",
           "type": "Wideo"
+        },
+        "fucntions_devices/csd/2023": {
+          "name": "Funkcje",
+          "url": "https://docs.google.com/presentation/d/1GaKD2JihCwsreJPzSTpSrl3MltFWpdwvFgej0QqFQ_s/template/preview",
+          "type": "Slajdy"
         },
         "exemplar_1_-_city_silhouette/csd/2023": {
           "type": "Wzór"
@@ -11906,10 +11932,9 @@
           "url": "https://www.youtube.com/watch?v=LCGkcn1f-ms&feature=youtu.be",
           "type": "Wideo"
         },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "Lista wierszy",
-          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing",
-          "type": "Slajdy"
+        "web_development_-_extra_code_in_challenge_levels/csd/2023": {
+          "url": "https://docs.google.com/document/d/1tRTtnwBfqYn1-UWoS6Ca2e-mzQN2F0mSzsnzCn8IXrk/edit?usp=sharing",
+          "type": "Zasoby"
         }
       }
     }

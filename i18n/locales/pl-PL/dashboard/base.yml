@@ -52,6 +52,7 @@ pl:
         age: 'Wiek'
         gender: 'Płeć'
         edit_header: 'Edytuj dane konta'
+        ai_settings_header: 'Ustawienia AI'
         finish_sign_up_header: 'Zakończ tworzenie swojego konta'
         finish_sign_up_header_error: 'Proszę poprawić następujące błędy:'
         finish_sign_up_subheader: 'Wypełnij poniższe informacje, aby zakończyć tworzenie konta Code.org dla <strong>%{email}</strong>.'
@@ -63,6 +64,7 @@ pl:
           future: nie może być w przyszłości
         user_type: 'Typ konta'
         us_state: 'Stan'
+        ai_rubrics_disabled: 'Wyłącz funkcję rubryki AI'
   beta: "beta"
   hello: "Witaj świecie"
   welcome_back: "Witaj z powrotem, %{name}"
@@ -1319,4 +1321,19 @@ pl:
   course_deprecated:
     title: "Głowy do góry! Ten program nauczania nie jest już dostępny, ale Code.org ma dla Ciebie nowsze opcje."
     button: "Zobacz nowy program nauczania"
-
+  hoc_tutorial_email_subject: "Przeżyj Godzinę Kodowania dzięki samouczkom Code.org!"
+  hoc_tutorial_email_content:
+    dear_teacher: "Szanowna/y %{teacher_name},"
+    intro_step_by_step_guide: "Jesteśmy bardzo podekscytowani, że organizujesz wydarzenie Godziny Kodowania, korzystając z bezpłatnych zajęć i samouczków Code.org! Jesteśmy zaszczyceni, że nauczyciele tacy jak Ty wprowadzają uczniów w ekscytujący świat kodowania. Oto przewodnik krok po kroku, aby zapewnić udane wydarzenie Godziny Kodowania:"
+    sign_up_step: "**Zarejestruj się** (Opcjonalnie…, ale niesamowite!): Utwórz bezpłatne konto Code.org, aby uzyskać dostęp do osobistego pulpitu, z którego możesz zarządzać Godziną Kodowania w swojej klasie! [Zarejestruj się tutaj] (%{url})."
+    create_classroom_section: "**Utwórz sekcję klasy** (chociaż opcjonalnie… , ale bardzo przydatne!): Tworzenie sekcji z klasy umożliwi Ci śledzenie postępów uczniów, przeglądanie ich prac, a takze zostawianie im uwag! [Skonfiguruj swoją sekcję tutaj] (%{section_setup_url}). A dla wszystkich naszych początkujących, oto [przydatny przewodnik] (%{guide_url}), który Ci pomoże!"
+    pick_perfect_activity: "**Wybierz idealną aktywność**: [Wybierz najlepszy samouczek Godziny Kodowania] (%{url}) na swoje wydarzenie. Zapoznaj się z opcjami i przypisz wybrany samouczek do swojej sekcji, aby Twoi uczniowie dokładnie wiedzieli, od czego zacząć."
+    plan_like_pro: "**Planuj jak profesjonalista**: Wiele naszych samouczków zawiera [plan lekcji] ()%{lesson_plan_url}. To jak sekretny przepis na sukces! Sprawdź swój plan lekcji przed wielkim wydarzeniem."
+    let_fun_begin: "** Niech zabawa się zacznie!**: Kierując się planem lekcji, rozpocznij swoją podróż do świata kodowania. Pamiętaj: nie musisz znać wszystkich odpowiedzi! Twój entuzjazm i wspólna ciekawość z uczniami pomogą wszystkim uczyć się razem."
+    hip_hip_hooray: "**Hip, Hip, Hur!**: Gdy godzina się skończy, świętujmy tych genialnych młodych programistów. Certyfikaty, naklejki, a nawet oklaski — wszystko się liczy. Znajdź nasze [certyfikaty do druku tutaj] (%{url})."
+    more_adventures_await: "**Czeka więcej przygód**: Czy zauważyłeś nowych programistów spragnionych więcej? Przedstaw im więcej programów nauczania informatyki na Code.org!"
+    explore_course: "Poznaj naszą skarbnicę bezpłatnych kursów"
+    learn_about_ai: "Poznaj sztuczną inteligencję (AI)"
+    thank_you: "DZIĘKUJEMY za wspieranie edukacji informatycznej. Nasz zespół życzy Tobie i Twoim uczniom niezapomnianych Godzin Kodowania!"
+    founder: "Założyciel, Code.org"
+    your_friends: "Twoi znajomi na Code.org"

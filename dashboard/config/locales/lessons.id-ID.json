@@ -1595,6 +1595,39 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Spelling Bee"
         },
+        "K5-OnlinePD/Getting Started": {
+          "name": "Dapat Dimulai"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Computer Science Fundamentals"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "Melihat ke depan"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "Menguasai Dasar-dasar: Pengurutan"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "Menguasai Dasar-dasar: Loop "
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "Menguasai Dasar-dasar: Kondisional"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "Menguasai Dasar-dasar: Fungsi"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "Menguasai Dasar-dasar: Peristiwa"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "Praktek-praktek Terbaik untuk Pengajaran Ilmu Komputer"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Perencanaan"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Langkah berikutnya"
+        },
         "csd1-2019/Intro to Problem Solving": {
           "name": "Pengenalan Pemecahan Masalah"
         },
@@ -2281,6 +2314,45 @@
         },
         "pre-express-2019/Make a Game in Play Lab": {
           "name": "Pertempuran Besar dengan Event"
+        },
+        "k5-onlinepd-2019/Welcome to \"Teaching Computer Science Fundamentals\"": {
+          "name": "Selamat Datang di \"Mengajarkan Dasar-Dasar Ilmu Komputer\""
+        },
+        "k5-onlinepd-2019/Understanding the Computer Science Fundamentals Courses": {
+          "name": "Memahami Kursus Dasar Ilmu Komputer"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Urutan"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Loop"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "kegiatan"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Kondisi"
+        },
+        "k5-onlinepd-2019/End of Course projects": {
+          "name": "Proyek Akhir-Kursus"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "fungsi"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "variabel"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "For Loop"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Sprite Lab"
+        },
+        "k5-onlinepd-2019/Reviewing your reflections": {
+          "name": "Meninjau kembali renungan Anda"
+        },
+        "k5-onlinepd-2019/Next steps": {
+          "name": "Langkah berikutnya"
         },
         "coursea-2020/Safety in My Online Neighborhood": {
           "name": "Keamanan di Lingkungan Sekitar Online Saya"
@@ -3950,6 +4022,39 @@
           "purpose": "Dalam aktivitas online ini, murid akan belajar cara menggunakan event dalam Play Lab dengan melatih sang kesatria untuk bergerak saat tombol panah ditekan, lalu diakhiri dengan kesempatan untuk menunjukkan keterampilan lain yang mereka pelajari sepanjang kursus ini, termasuk urutan dan loop, sebagai bagian dari puzzle terakhir bermain bebas.",
           "student_overview": "Gunakan event untuk membuat cerita atau permainan interaktif."
         },
+        "kodea-pd-2021/Getting Started": {
+          "name": "Dapat Dimulai"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Computer Science Fundamentals"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "Melihat ke depan"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "Menguasai Dasar-dasar: Pengurutan"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "Menguasai Dasar-dasar: Loop "
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "Menguasai Dasar-dasar: Kondisional"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "Menguasai Dasar-dasar: Fungsi"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "Menguasai Dasar-dasar: Peristiwa"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "Praktek-praktek Terbaik untuk Pengajaran Ilmu Komputer"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Perencanaan"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Langkah berikutnya"
+        },
         "csd1-2022/Intro to Problem Solving": {
           "name": "Pengenalan Pemecahan Masalah"
         },
@@ -5089,7 +5194,7 @@
         },
         "ai-ethics-2023/lesson-1": {
           "name": "Kode Etik AI Kami",
-          "student_overview": "Penelitian kolaboratif tentang etika AI dan buat kode etik yang dapat dibagikan."
+          "student_overview": "Secara bersama-sama, lakukan penelitian tentang etika AI dan buat kode etik yang dapat dibagikan."
         },
         "csc-adaptations-2023/Modeling Animal Adaptations (pilot)": {
           "name": "Pendahuluan Adaptasi Hewan",
@@ -6378,11 +6483,11 @@
           "student_overview": "Gunakan event untuk membuat cerita atau permainan interaktif."
         },
         "how-ai-works-2023/Introduction to Machine Learning": {
-          "overview": "Pelajaran ini berkisar pada video [Cara Kerja AI: Apa itu Machine Learning?](https://youtu.be/KHbwOetbmbs?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) dari [Seri video Cara Kerja AI](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Tonton video ini terlebih dahulu sebelum menelusuri rencana pembelajaran.\n\nDalam pelajaran ini, siswa diperkenalkan dengan bentuk kecerdasan buatan yang disebut machine learning dan bagaimana mereka dapat menggunakan Proses Pemecahan Masalah untuk membantu melatih robot dalam memecahkan masalah. Mereka berpartisipasi dalam tiga kegiatan machine learning mesin di mana robot – yakni AI Bot – mempelajari cara mendeteksi pola pada ikan.\n\nPelajaran ini dapat diajarkan secara terpisah, atau sebagai bagian dari urutan 7 pelajaran tentang Cara Kerja AI - [klik di sini untuk melihat semua pelajaran dalam urutan ini](https://code.org/ai/how-ai-works)."
+          "overview": "Pelajaran ini terkait dengan video [Cara Kerja AI: Apa itu Machine Learning?](https://youtu.be/KHbwOetbmbs?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) dari [Seri video Cara Kerja AI](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Tonton video ini terlebih dahulu sebelum menelusuri rencana pembelajaran.\n\nDalam pelajaran ini, siswa diperkenalkan dengan bentuk kecerdasan buatan yang disebut machine learning dan bagaimana mereka dapat menggunakan Proses Pemecahan Masalah untuk membantu melatih robot dalam memecahkan masalah. Mereka berpartisipasi dalam tiga kegiatan machine learning mesin di mana robot – yakni AI Bot – mempelajari cara mendeteksi pola pada ikan.\n\nPelajaran ini dapat diajarkan secara terpisah, atau sebagai bagian dari urutan 7 pelajaran tentang Cara Kerja AI - [klik di sini untuk melihat semua pelajaran dalam urutan ini](https://code.org/ai/how-ai-works)."
         },
         "how-ai-works-2023/Computer Vision": {
           "name": "Computer Vision",
-          "overview": "Pelajaran ini berpusat pada video [Cara Kerja AI: Computer Vision](https://youtu.be/2hXG8v8p0KM?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) dari [seri video Cara Kerja AI](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Tonton video ini terlebih dahulu sebelum menelusuri rencana pembelajaran.\n\nSiswa mempelajari cara kerja computer vision. Mereka lebih dulu melihat ilusi optik untuk mengidentifikasi ciri-ciri gambar yang diperhatikan oleh mata mereka. Siswa menonton video yang menjelaskan computer vision dan bagaimana komputer \"melihat\". Mereka merancang algoritma yang menggunakan jaringan untuk memutuskan angka apa yang ditampilkan pada layar seven-segment . Dan pada akhirnya, siswa menguji algoritmanya.\n\nPelajaran ini dapat diajarkan secara terpisah, atau sebagai bagian dari rangkaian 7 pelajaran tentang Cara Kerja AI - [klik di sini untuk melihat semua pelajaran dalam rangkaian ini](https://code.org/ai/how-ai-works).",
+          "overview": "Pelajaran ini terkait dengan video [Cara Kerja AI: Computer Vision](https://youtu.be/2hXG8v8p0KM?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) dari [seri video Cara Kerja AI](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Tonton video ini terlebih dahulu sebelum menelusuri rencana pembelajaran.\n\nSiswa mempelajari cara kerja computer vision. Mereka lebih dulu melihat ilusi optik untuk mengidentifikasi ciri-ciri gambar yang diperhatikan oleh mata mereka. Siswa menonton video yang menjelaskan computer vision dan bagaimana komputer \"melihat\". Mereka merancang algoritma yang menggunakan jaringan untuk memutuskan angka apa yang ditampilkan pada layar seven-segment . Dan pada akhirnya, siswa menguji algoritmanya.\n\nPelajaran ini dapat diajarkan secara terpisah, atau sebagai bagian dari rangkaian 7 pelajaran tentang Cara Kerja AI - [klik di sini untuk melihat semua pelajaran dalam rangkaian ini](https://code.org/ai/how-ai-works).",
           "preparation": "-   Cetak salinan panduan aktivitas Jaringan Computer Vision untuk setiap grup\n-   (Opsional) Cetak salinan Manipulatif dari Layar Seven-Segment",
           "student_overview": "Pelajari cara kerja computer vision dengan merancang algoritma untuk mendeteksi angka."
         },
@@ -6394,34 +6499,31 @@
         },
         "how-ai-works-2023/Chatbots and Large Language Models (LLMs)": {
           "name": "Chatbot dan Large Language Model (LLM)",
-          "overview": "Pelajaran ini berkisar pada video [Cara Kerja AI: Chatbot dan Large Language Model?](https://youtu.be/X-AWdfSFCHQ) dari [Seri video Cara Kerja AI](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Tonton video ini terlebih dahulu sebelum menelusuri rencana pembelajaran.\n\nLarge Language Model (LLM) menghasilkan teks baru. Teks yang dihasilkan oleh LLM tampak seperti ditulis oleh manusia karena large language model dikembangkan berdasarkan kumpulan teks yang sangat besar, seperti Wikipedia. Dalam pelajaran ini, siswa mempelajari apa itu LLM dan cara kerjanya, lalu menggunakan LLM untuk membuat teks bersama dengan AI. Terakhir, kelas ditutup dengan diskusi tentang apakah LLM itu cerdas atau kreatif.\n\nPelajaran ini dapat diajarkan secara terpisah, atau sebagai bagian dari rangkaian 7 pelajaran tentang Cara Kerja AI - [klik di sini untuk melihat semua pelajaran dalam rangkaian ini](https://code.org/ai/how-ai-works).",
+          "overview": "Pelajaran ini terkait dengan video [Cara Kerja AI: Chatbot dan Large Language Model?](https://youtu.be/X-AWdfSFCHQ) dari [Seri video Cara Kerja AI](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Tonton video ini terlebih dahulu sebelum menelusuri rencana pembelajaran.\n\nLarge Language Model (LLM) menghasilkan teks baru. Teks yang dihasilkan oleh LLM tampak seperti ditulis oleh manusia karena large language model dikembangkan berdasarkan kumpulan teks yang sangat besar, seperti Wikipedia. Dalam pelajaran ini, siswa mempelajari apa itu LLM dan cara kerjanya, lalu menggunakan LLM untuk membuat teks bersama dengan AI. Terakhir, kelas ditutup dengan diskusi tentang apakah LLM itu cerdas atau kreatif.\n\nPelajaran ini dapat diajarkan secara terpisah, atau sebagai bagian dari rangkaian 7 pelajaran tentang Cara Kerja AI - [klik di sini untuk melihat semua pelajaran dalam rangkaian ini](https://code.org/ai/how-ai-works).",
           "preparation": "-   Cetak salinan panduan kegiatan untuk setiap siswa",
           "student_overview": "Apakah Large Language Model (LLM) cerdas atau kreatif? Putuskan sendiri saat Anda mencobanya untuk membuat sesuatu, dan pelajari lebih jauh tentang cara kerjanya!"
         },
         "how-ai-works-2023/Generative Images": {
           "name": "Gambar Generatif",
-          "overview": "Pelajaran ini berpusat di sekitar [Bagaimana AI Bekerja: Kreativitas dan Imajinasi?](https://www.youtube.com/watch?v=X994dDnmRmY) video dari seri video [How AI Works](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Tonton video ini terlebih dahulu sebelum menjelajahi rencana pelajaran.\n\nModel difusi menghasilkan gambar. Difusi AI mengubah gambar menjadi noise, dan melatih AI untuk membalikkan proses. Dalam pelajaran ini, siswa mempelajari bagaimana AI dapat menghasilkan gambar, lalu menjelajahi widget AI difusi. Akhirnya, kelas berakhir dengan diskusi tentang apakah model-model ini kreatif atau tidak.\n\nPelajaran ini dapat diajarkan sendiri, atau sebagai bagian dari urutan 7 pelajaran tentang Cara Kerja AI - [klik di sini untuk melihat semua pelajaran dalam urutan ini](https://code.org/ai/how-ai-works).",
+          "overview": "Pelajaran ini terkait dengan video [Cara Kerja AI: Kreativitas dan Imajinasi?](https://www.youtube.com/watch?v=X994dDnmRmY) dari [seri video Cara Kerja AI](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Tonton video ini terlebih dahulu sebelum menelusuri rencana pembelajaran.\n\nModel diffusion menghasilkan gambar. Diffusion AI mengubah gambar menjadi noise, dan melatih AI untuk membalikkan prosesnya. Dalam pelajaran kali ini, siswa mempelajari cara AI dalam menghasilkan gambar, kemudian menelusuri diffusion AI. Dan akhirnya, kelas ditutup dengan diskusi tentang apakah model ini kreatif atau tidak.\n\nPelajaran ini dapat diajarkan secara terpisah, atau sebagai bagian dari rangkaian 7 pelajaran tentang Cara Kerja AI - [klik di sini untuk melihat semua pelajaran dalam rangkaian ini](https://code.org/ai/how-ai-works).",
           "preparation": "-   Cetak salinan panduan kegiatan untuk setiap siswa",
-          "student_overview": "Pelajari bagaimana AI dapat menghasilkan gambar dengan menjelajahi widget AI difusi."
+          "student_overview": "Pelajari cara AI dalam menghasilkan gambar dengan menelusuri widget diffusion AI."
         },
         "how-ai-works-2023/Algorithmic Bias": {
-          "name": "Bias Algoritmik",
-          "overview": "Pelajaran ini berpusat di sekitar[0] video [How AI Works: Equal Access and Algorithmic Bias] dari seri video [How AI Works](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Tonton video ini terlebih dahulu sebelum menjelajahi rencana pelajaran.\n\nDalam pelajaran ini, siswa akan berlatih memotong gambar untuk mengungkap bias yang mendasari algoritme pemotongan Twitter. Kemudian, siswa akan membaca dan menonton video tentang penemuan algoritma bias ini. Akhirnya, siswa akan membahas cara-cara untuk mengenali dan mengurangi bias bersama dengan menganalisis tanggapan Twitter terhadap tuduhan bias dalam algoritma pemotongan mereka.\n\nPelajaran ini dapat diajarkan sendiri, atau sebagai bagian dari urutan 7 pelajaran tentang Cara Kerja AI - [klik di sini untuk melihat semua pelajaran dalam urutan ini](https://code.org/ai/how-ai-works).",
-          "preparation": "-   Selesaikan aktivitas widget pemotongan sendiri sehingga Anda dapat melihat apa yang akan dialami siswa Anda dengan widget tersebut dan pertanyaan atau masalah apa yang mungkin mereka ajukan.\n-   Tonton bagian-bagian video [“Apakah Kita Mengotomatisasi Rasisme?”](https://youtu.be/Ok5sKLXqynQ) direferensikan dalam rencana pelajaran.\n-   Baca dua artikel dari bagian tautan di bawah ini.",
-          "student_overview": "Dalam pelajaran ini, Anda akan bekerja untuk memotong gambar dan mendiskusikan tantangan dan bias yang terlibat dalam mengajarkan mesin cara memotong gambar."
+          "name": "Bias Algoritma",
+          "overview": "Pelajaran ini terkait dengan video [Cara Kerja AI: Akses yang Setara dan Bias Algoritma](https://youtu.be/tJQSyzBUAew?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) dari [seri video Cara Kerja AI](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Tonton video ini terlebih dahulu sebelum menelusuri rencana pembelajaran. \n\nDalam pelajaran ini, siswa akan berlatih memotong gambar untuk mengungkap bias pada algoritma pemotongan gambar Twitter. Lalu, siswa akan membaca dan menonton video tentang penemuan algoritma bias tersebut. Dan terakhir, siswa akan mendiskusikan cara mengenali dan mengurangi bias serta menganalisis respons Twitter terhadap dugaan bias dalam algoritma mereka.\n\nPelajaran ini dapat diajarkan secara terpisah, atau sebagai bagian dari rangkaian 7 pelajaran tentang Cara Kerja AI - [klik di sini untuk melihat semua pelajaran dalam rangkaian ini](https://code.org/ai/how-ai-works).",
+          "preparation": "-   Selesaikan sendiri kegiatan widget pemotongan gambar agar Anda dapat melihat pengalaman siswa Anda dengan widget tersebut dan pertanyaan atau masalah apa yang mungkin akan mereka ajukan.\n-   Tonton bagian video [“Apakah Kita Mengotomatiskan Rasisme?”](https://youtu.be/Ok5sKLXqynQ) yang disebutkan dalam rencana pembelajaran.\n-   Baca dua artikel dari bagian tautan di bawah.",
+          "student_overview": "Dalam pelajaran ini, Anda akan mempelajari cara memotong gambar dan mendiskusikan tantangan serta bias yang ada dalam mengajari mesin cara memotong gambar."
         },
         "how-ai-works-2023/Our AI Code of Ethics": {
           "name": "Kode Etik AI Kami",
-          "overview": "Pelajaran ini berpusat di sekitar[0] video [How AI Works: Privacy and the Future of Work] dari seri video [How AI Works](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Tonton video ini terlebih dahulu sebelum menjelajahi rencana pelajaran.\n\nDalam kelompok kecil, siswa melakukan penelitian menggunakan artikel dan video yang mengekspos perangkap etika di bidang kecerdasan buatan pilihan mereka. Setelah itu, setiap kelompok mengembangkan setidaknya satu prinsip berorientasi solusi yang membahas area pilihan mereka. Prinsip-prinsip ini kemudian dikumpulkan menjadi sumber daya “Kode Etik AI Kami” di seluruh kelas (misalnya presentasi slide, dokumen, atau halaman web) untuk pembuat dan legislator AI di mana pun.\n\nPelajaran ini dapat diajarkan sendiri, atau sebagai bagian dari urutan 7 pelajaran tentang Cara Kerja AI - [klik di sini untuk melihat semua pelajaran dalam urutan ini](https://code.org/ai/how-ai-works).",
-          "student_overview": "Penelitian kolaboratif tentang etika AI dan buat kode etik yang dapat dibagikan."
+          "overview": "Pelajaran ini terkait dengan video [Cara Kerja AI: Privasi dan Masa Depan Pekerjaan] [0] dari [seri video Cara Kerja AI](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Tonton video ini terlebih dahulu sebelum menelusuri rencana pembelajaran.\n\nDalam kelompok kecil, siswa melakukan penelitian menggunakan artikel dan video yang mengungkap tantangan etika di bidang kecerdasan buatan yang mereka pilih. Setelah itu, tiap kelompok merumuskan setidaknya satu prinsip yangg berorientasi solusi yang mengatasi bidang yang mereka pilih. Prinsip-prinsip ini kemudian dirangkai menjadi sumber daya “Kode Etik AI Kita” untuk seluruh kelas (misalnya presentasi slide, dokumen, atau halaman web) untuk pembuat AI dan legislator di mana pun mereka berada.\n\nPelajaran ini dapat diajarkan secara terpisah, atau sebagai bagian dari rangkaian 7 pelajaran tentang Cara Kerja AI - [klik di sini untuk melihat semua pelajaran dalam rangkaian ini](https://code.org/ai/how-ai-works).",
+          "student_overview": "Secara bersama-sama, lakukan penelitian tentang etika AI dan buat kode etik yang dapat dibagikan."
         },
         "how-ai-works-2023/How AI Works In a Day": {
-          "name": "Bagaimana AI Bekerja Dalam Sehari",
-          "overview": "⚠️ Pelajaran ini ditujukan untuk ruang kelas yang ingin menampilkan seluruh [How AI Works video series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) dalam satu hari\\*\\*. Ini tidak dimaksudkan untuk diajarkan secara berurutan dengan pelajaran lain di unit ini, yang memperkenalkan setiap video satu hari pada satu waktu.\n\nSiswa mengikuti setiap video dengan mencocokkan kosakata dari video, kemudian menjawab pertanyaan refleksi tentang setiap video. Rencana pelajaran dan slide sangat jarang dan terbuka untuk memungkinkan improvisasi dan penyesuaian agar sesuai dengan kelas Anda.",
-          "preparation": "-   Cetak panduan aktivitas\n-   Proyeksikan slide pada proyektor video"
-        },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Koding satu jam 2013"
+          "name": "Memahami Cara Kerja AI dalam Kehidupan Sehari-hari",
+          "overview": "⚠️Pelajaran ini ditujukan bagi kelas yang ingin menayangkan seluruh [seri video Cara Kerja AI](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) dalam **satu hari**. Pelajaran ini tidak dimaksudkan untuk diajarkan secara berurutan dengan pelajaran lain dalam unit ini yang memperkenalkan masing-masing video setiap hari.\n\nSiswa mengikuti tiap video dengan mencocokkan kosakata dari video tersebut, kemudian menjawab pertanyaan refleksi tentang setiap video. Rencana pembelajaran dan slidenya hanya sedikit dan bersifat agar Anda dapat melakukan improvisasi dan penyesuaian dengan kelas Anda.",
+          "preparation": "-   Cetak panduan kegiatan\n-   Proyeksikan slide pada proyektor video"
         },
         "applab-intro/Intro to App Lab": {
           "name": "Pengenalan App Lab",
@@ -6569,9 +6671,10 @@
           "student_overview": "Ringkasan Tutorial: Pertama murid menggolongkan objek sebagai “ikan” atau “bukan ikan” sebagai upaya untuk membuang sampah dari lautan. Lalu, murid perlu memperluas himpunan data latihan agar mencakup makhluk laut lainnya yang tergolong hewan air. Di bagian kedua aktivitas, murid akan memilih label sendiri untuk diterapkan pada gambar ikan yang dibuat secara acak. Data latihan ini digunakan untuk sebuah model mesin pembelajaran yang lantas dapat melabeli sendiri gambar baru."
         },
         "outbreak/Outbreak": {
-          "overview": "Pelajaran ini memadukan **pengembangan keterampilan** seputar acara dengan **proyek mini** di mana siswa membuat simulasi komputernya sendiri di Sprite Lab. Siswa akan mempelajari simulasi untuk memahami seberapa cepat penyebaran virus dan apa yang dapat dilakukan untuk memperlambatnya.",
-          "preparation": "-   Kerjakan puzzle untuk menemukan area potensi masalah untuk kelas Anda.\n-   Pastikan setiap siswa memiliki buku catatan pengalaman belajar.",
-          "purpose": "Pada pelajaran sebelumnya, siswa mengumpulkan dan menafsirkan data dari simulasi sederhana. Dalam pelajaran kali ini, siswa akan mengikuti instruksi untuk membuat kode model simulasinya sendiri. Pengetahuan awal siswa tentang wabah virus di dunia nyata akan diterapkan dalam skenario fiktif.",
+          "name": "Membuat Kode Simulasi",
+          "overview": "Dalam pelajaran kali ini, siswa dari segala usia mendapatkan pengenalan tentng coding dan ilmu komputer di lingkungan yang aman dan mendukung. Pelajaran ini memadukan **pengembangan keterampilan** seputar event dengan **proyek mini** di mana siswa dapat membuat simulasi komputernya sendiri di Sprite Lab. Siswa akan mempelajari simulasi untuk memahami seberapa cepat penyebaran virus dan apa yang dapat dilakukan untuk memperlambatnya.",
+          "preparation": "### Satu Minggu Sebelum Hour of Code Anda:\n\n-   Lihat [Panduan Pendidik Hour of Code](https://hourofcode.com/us/how-to) dan [Praktik Terbaik dari Pendidik yang Sukses](https://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) untuk memulai rencana acara Hour of Code Anda. \n\n-   [Daftarkan acara Hour of Code Anda](https://hourofcode.com/us) jika Anda ingin menerima dukungan kelas, diskon poster, atau berpartisipasi dalam pembagian hadiah robotika (khusus AS) .\n\n-   Lihat dan selesaikan tutorial online-nya sendiri: [Outbreak](https://studio.code.org/s/outbreak/) \n\n-   Pastikan mencobanya lebih dahulu sebelum meminta murid Anda untuk menyelesaikannya. \n\n-   Periksa semua perangkat pendukung dan tuntaskan masalah yang ada sebelum memulai Hour of Code.\n\n### Satu Hari Sebelum Hour of Code Anda\n\n-   Tiap siswa yang menyelesaikan kegiatan harus mendapatkan [certificate](https://studio.code.org/certificates/batch). Cetak satu untuk semua siswa lebih awal agar lebih mudah pada akhir Hour of Code Anda.\n\n-   (opsional) Anjurkan siswa untuk membawa headphone untuk digunakan selama kegiatan berlangsung.",
+          "purpose": "Dalam pelajaran kali ini, siswa akan mengikuti instruksi untuk membuat code model simulasinya sendiri. Pengetahuan awal siswa tentang wabah virus di dunia nyata akan diterapkan dalam skenario fiktif.",
           "student_overview": "Sebuah virus telah menyerang Monster Town! Belajarlah membuat simulator virus dan bantu para monster agar kembali sehat."
         },
         "playlab/Play Lab": {
@@ -6613,69 +6716,6 @@
           "preparation": "-   Uji Widget Kompresi Teks\n-   Tinjau kembali tips mengajar untuk menentukan opsi yang ingin digunakan",
           "purpose": "Prinsip dasar kompresi adalah mengembangkan sebuah metode atau protokol untuk menggunakan bit lebih sedikit untuk mewakili informasi asli. Cara kita mewakili data yang dikompresi dalam pelajaran ini, dengan “kamus” pola-pola yang diulang, mirip dengan [LZW compression scheme](http://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch), tetapi harus diingat bahwa LZW sedikit berbeda dengan materi yang digeluti murid alam pelajaran ini. Murid menemukan caranya sendiri di sini. LZW digunakan bukan hanya untuk teks (zip files), tapi juga dengan format file gambar GIF.",
           "student_overview": "Suatu saat, kita akan mencapai batasan fisik dalam kecepatan pengiriman bit, dan jika kita ingin mengirim informasi besar dengan lebih cepat, kita harus mencari cara untuk menampilkan informasi yang sama dengan jumlah bit yang lebih kecil - kita harus memadatkan data tersebut."
-        },
-        "applab-1hour/Room Escape": {
-          "name": "Room Escape"
-        },
-        "applab-2hour/Digital Design": {
-          "name": "Desain Digital"
-        },
-        "applab-2hour/Event Driven Programming": {
-          "name": "Pemrograman Berdasarkan Event"
-        },
-        "applab-2hour/Basic App Functionality": {
-          "name": "Fungsionalitas Aplikasi Dasar"
-        },
-        "applab-2hour/Getters and Setters": {
-          "name": "Penghasil dan Pengatur"
-        },
-        "frequency_analysis/Frequency Analysis": {
-          "name": "Analisis frekuensi"
-        },
-        "gamelab/Start and End Screens": {
-          "name": "Layar Mulai dan Akhir"
-        },
-        "gamelab/Start and End Screens2": {
-          "name": "Layar2 Mulai dan Akhir"
-        },
-        "k1hoc2017/Collector Hour of Code 2017": {
-          "name": "Kolektor Hour of Code 2017"
-        },
-        "netsim/Overview and Setup Instructions": {
-          "name": "Peninjauan dan petunjuk pemasangan"
-        },
-        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
-          "name": "Peer to Peer - Pengiriman Bit pada Ruang Kawat"
-        },
-        "netsim/Peer to Peer - Sending Numbers": {
-          "name": "Peer to Peer - Mengirim Nomor"
-        },
-        "netsim/Peer to Peer - Sending Ascii": {
-          "name": "Peer to Peer - Mengirim Ascii"
-        },
-        "netsim/Broadcasting messages": {
-          "name": "Pesan siaran"
-        },
-        "netsim/Routers and addresses": {
-          "name": "Router dan alamat"
-        },
-        "netsim/Packets and Reliability": {
-          "name": "Paket dan dapat dipercaya"
-        },
-        "netsim/Manual DNS": {
-          "name": "Manual DNS"
-        },
-        "netsim/Automatic DNS node": {
-          "name": "Node DNS otomatis"
-        },
-        "netsim/Internet Simulator Freeplay": {
-          "name": "Simulator Internet Freeplay"
-        },
-        "poetry-hoc3/lesson-1": {
-          "name": "Studi Mood"
-        },
-        "vigenere/Vigenere": {
-          "name": "Vigenere"
         },
         "allthethings/Jigsaw": {
           "name": "Teka-teki"
@@ -6811,6 +6851,21 @@
         },
         "allthethings/lesson-49": {
           "name": "Musik"
+        },
+        "applab-1hour/Room Escape": {
+          "name": "Room Escape"
+        },
+        "applab-2hour/Digital Design": {
+          "name": "Desain Digital"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "Pemrograman Berdasarkan Event"
+        },
+        "applab-2hour/Basic App Functionality": {
+          "name": "Fungsionalitas Aplikasi Dasar"
+        },
+        "applab-2hour/Getters and Setters": {
+          "name": "Penghasil dan Pengatur"
         },
         "csd-post-survey/CSD post-course survey": {
           "name": "Survei Pascakursus Murid CSD  ('18-'19)"
@@ -7121,12 +7176,57 @@
         "deepdive-debugging/Debugging for CDEF Educators": {
           "name": "Debugging untuk Pendidik CDEF"
         },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "Analisis frekuensi"
+        },
+        "gamelab/Start and End Screens": {
+          "name": "Layar Mulai dan Akhir"
+        },
+        "gamelab/Start and End Screens2": {
+          "name": "Layar2 Mulai dan Akhir"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Koding satu jam 2013"
+        },
         "jigsaw/Jigsaw": {
           "name": "Teka-teki",
           "overview": "Pelajaran ini akan mencetuskan suatu gagasan tentang apa yang diharapkan oleh murid ketika mereka berjalan menuju lab komputer. Pelajaran diawali dengan diskusi singkat yang memperkenalkan mereka dengan tata cara lab komputer, lalu berlanjut dengan penggunaan komputer untuk menyelesaikan puzzle online.",
           "preparation": "-   Lihat situs web [Common Sense Education](https://www.commonsense.org/education/digital-citizenship) untuk konten keamanan online lainnya.",
           "purpose": "Tujuan utama pelajaran ini adalah memupuk pengalaman siswa dengan komputer. Dengan membahas fungsi-fungsi komputer paling dasar, seperti mengklik, men-drag, dan men-drop, kita membuat tempat bermain yang lebih setara di kelas untuk puzzle-puzzle ke depan. Pelajaran ini juga memberi kesempatan yang bagus untuk memperkenalkan terminologi dasar perangkat keras komputer, seperti \"mouse\", \"trackpad\", atau \"layar sentuh\", sesuai perangkat Anda.",
           "student_overview": "Klik dan drag untuk menyelesaikan puzzle."
+        },
+        "k1hoc2017/Collector Hour of Code 2017": {
+          "name": "Kolektor Hour of Code 2017"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "Peninjauan dan petunjuk pemasangan"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "Peer to Peer - Pengiriman Bit pada Ruang Kawat"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "Peer to Peer - Mengirim Nomor"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "Peer to Peer - Mengirim Ascii"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "Pesan siaran"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Router dan alamat"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "Paket dan dapat dipercaya"
+        },
+        "netsim/Manual DNS": {
+          "name": "Manual DNS"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "Node DNS otomatis"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "Simulator Internet Freeplay"
         },
         "pixelation/Black & White Pixelation Tutorial": {
           "name": "Tutorial Pixelation Hitam & Putih"
@@ -7142,6 +7242,18 @@
         },
         "pixelation/Color Pixelation Freeplay": {
           "name": "Warna Pixelation Freeplay"
+        },
+        "poetry-hoc3/lesson-1": {
+          "name": "Studi Mood"
+        },
+        "vigenere/Vigenere": {
+          "name": "Vigenere"
+        },
+        "dance-ai-2023/lesson-1": {
+          "name": "Pesta Dansa: Edisi AI",
+          "overview": "Dalam kegiatan ini, siswa dari semua jenjang usia mendapatkan pengenalan awal tentang coding dan kecerdasan buatan (artificial intelligence) di lingkungan yang aman dan kreatif. Pelajaran ini telah dirancang untuk siswa dari semua jenjang usia namun mengharuskan kemampuan membaca. Kegiatan ini mengharuskan siswa untuk memutar suara karena tutorialnya dibuat untuk merespon musik.",
+          "preparation": "### Cara Merencanakan Hour of Code Anda\n\nTemukan sumber daya yang Anda butuhkan untuk merencanakan, menerapkan, dan merayakan Hour of Code di sekolah Anda! [di sini](https://hourofcode.com/us/how-to)!",
+          "purpose": "Menjadikan coding sebagai pengalaman yang menarik dan menyenangkan sangat penting dalam menumbuhkan minat terhadap ilmu komputer. Pelajaran ini diisi dengan momen penuh kegembiraan, di mana siswa menggunakan kode untuk membuat koreografi penampilan tari penuh warna dan gerakan menggunakan blok coding drag-and-drop yang sederhana. Siswa akan diperkenalkan dengan A.I. Bot yang akan mereka gunakan untuk membantu menemukan efek sempurna yang sesuai dengan mood tarian mereka."
         }
       }
     }

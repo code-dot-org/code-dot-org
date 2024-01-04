@@ -1971,19 +1971,19 @@
         },
         "network/how-ai-works/2023": {
           "word": "網路",
-          "definition": "連接在一起的項目的集合。遵循這些連接可以代表算法中的步驟，如流程圖。"
+          "definition": "連接在一起的物品集合。遵循這些連接可以代表演算法中的步驟，就像流程圖。"
         },
         "large_language_model_llm_/how-ai-works/2023": {
-          "word": "大語言模型 (法學碩士)",
-          "definition": "一種通用的 AI 形式，在非常非常大的知識體系上進行培訓"
+          "word": "大型語言模型（LLM）",
+          "definition": "一種通用的人工智慧形式，在非常非常龐大的知識體系上進行訓練"
         },
         "diffusion_ai/how-ai-works/2023": {
           "word": "擴散人工智慧",
-          "definition": "將圖像轉換為噪點，並訓練 AI 以逆轉過程"
+          "definition": "將圖像轉換為噪聲，並訓練人工智慧以逆轉過程"
         },
         "gan_generative_adversarial_network_/how-ai-works/2023": {
           "word": "GAN（生成對抗網絡）",
-          "definition": "一種使用兩種競爭性 AI 模型生成某些東西的方法"
+          "definition": "一種使用兩個競爭性人工智慧模型來生成某種東西的方法"
         },
         "artificial_intelligence/how-ai-works/2023": {
           "word": "人工智能",
@@ -2324,25 +2324,21 @@
           "word": "無損壓縮",
           "definition": "一種資料壓縮演算法，可讓壓縮資料完美重建成原始資料。最常用於文字壓縮（例如 .zip 壓縮）"
         },
-        "code/poem-art/unversioned": {
+        "code/dance-ai/2023": {
           "word": "代碼",
-          "definition": "（動詞）為電腦編寫指令。"
+          "definition": "(v) 編寫程式碼或電腦指令。"
         },
-        "event/poem-art/unversioned": {
+        "event/dance-ai/2023": {
           "word": "事件（Event）",
           "definition": "導致某些事情發生的操作。"
         },
-        "program/poem-art/unversioned": {
+        "program/dance-ai/2023": {
           "word": "程式",
-          "definition": "一系列已編碼的步驟，可在設備上運行。"
+          "definition": "一種演算法，編碼為可以由電腦運行的東西。"
         },
-        "mood/poem-art/unversioned": {
-          "word": "意境",
-          "definition": "藝術作品或文學作品所表達出某種感覺、氛圍或情感。"
-        },
-        "line/poem-art/unversioned": {
-          "word": "詩歌行",
-          "definition": "（詩歌）- 一篇詩歌的組成部分，採用單行格式，在右側結束。 "
+        "artificial_intelligence_a_i_/dance-ai/2023": {
+          "word": "人工智慧（AI）",
+          "definition": " 一種計算機程序，可以接收數據並從數據中學習模式，然後根據它所學到的內容做出決策。"
         }
       }
     }

@@ -5561,15 +5561,6 @@
         "403fc603-5eea-490f-943f-0f0e1d4d99f9": {
           "name": "Học thêm"
         },
-        "f0e43cbc-520d-42b7-8de2-0572d569695e": {
-          "name": "Khởi động"
-        },
-        "726b38ad-28ae-43e1-b7d8-08d13ccda1d3": {
-          "name": "Hoạt động chính"
-        },
-        "26cbfc03-2134-4097-b9c9-a2b7d4227d8f": {
-          "name": "Tổng kết"
-        },
         "b47403db-764c-41c2-9c65-eea089621c6f": {
           "name": "Cấp độ"
         },
@@ -11277,7 +11268,7 @@
           "name": "Khởi động"
         },
         "ca6b9610-b612-418d-87bf-bc1776fbd110": {
-          "name": "Hoạt động (30-45 phút)"
+          "name": "Hoạt động"
         },
         "a5fa2c8b-163e-4cc1-a54b-0ad5d98bb92f": {
           "name": "Tổng kết"
@@ -11689,9 +11680,6 @@
         },
         "23ca8a8d-ae20-47f7-bd51-0d69816ff174": {
           "name": "Đạo đức & AI: Quyền riêng tư và tương lai của công việc"
-        },
-        "ee8cbd12-265d-4681-b6c9-05a0a062916d": {
-          "name": "Cấp độ"
         },
         "f4670c8c-98ec-47d0-b458-02a96f130b76": {
           "name": "Khởi động"
@@ -12119,69 +12107,6 @@
         "ddc8f987-c000-409d-aaf7-8546464a70d9": {
           "name": "Học thêm"
         },
-        "289bbaea-ab5e-48a1-80c3-8299af5a0965": {
-          "name": "Cấp độ"
-        },
-        "c2cd2e0e-1e75-44ea-9e26-74c4e81117ce": {
-          "name": "Cấp độ"
-        },
-        "b482746d-0030-459f-8657-a2775cf1f2a3": {
-          "name": "Cấp độ"
-        },
-        "0f2c3670-022b-44ce-b519-13cb72ccd0fd": {
-          "name": "Cấp độ"
-        },
-        "acd32520-21e7-4c29-8e51-5e9caf6a378d": {
-          "name": "Cấp độ"
-        },
-        "a83c07a8-61ea-4017-b41d-725d1bd7b425": {
-          "name": "Cấp độ"
-        },
-        "0deb9da8-356e-4547-951f-445a58491a24": {
-          "name": "Cấp độ"
-        },
-        "941b1202-9ae6-4fbf-b806-c3e4ae8293cc": {
-          "name": "Cấp độ"
-        },
-        "bad195ab-b5b0-41e3-9c40-610a35ff0e4f": {
-          "name": "Cấp độ"
-        },
-        "41518965-e0d9-4c64-acaa-75abff9eeb52": {
-          "name": "Cấp độ"
-        },
-        "f6fdf744-0a0e-4efb-b70e-a4a6f272487d": {
-          "name": "Cấp độ"
-        },
-        "f488bd5e-8717-4f17-89de-67eed7656f10": {
-          "name": "Cấp độ"
-        },
-        "469ead3b-ff2b-47a4-a58b-bb268370fae4": {
-          "name": "Cấp độ"
-        },
-        "b4e1628d-775d-442e-9363-1e4d5d05a9f3": {
-          "name": "Cấp độ"
-        },
-        "5c6427ce-49af-4fef-857c-44a01f1583bf": {
-          "name": "Cấp độ"
-        },
-        "fb448d2f-35c0-4c79-bf75-b8eb5ee11017": {
-          "name": "Cấp độ"
-        },
-        "f64730d7-ba60-489d-a6b5-e33c8768879b": {
-          "name": "Cấp độ"
-        },
-        "1e703264-9e5f-4ddb-bfe5-8cbefbb646e4": {
-          "name": "Cấp độ"
-        },
-        "1910c7c0-fe86-4867-accd-c9b9c78853b1": {
-          "name": "Cấp độ"
-        },
-        "72871561-f49b-4ae5-a5c5-ec0dbfd6f14f": {
-          "name": "Cấp độ"
-        },
-        "c728edf8-b7ed-465b-99f4-78f27e751d2b": {
-          "name": "Cấp độ"
-        },
         "adf2e1d7-848e-4b2e-9f60-a190c85c82ba": {
           "name": "Cấp độ"
         },
@@ -12312,6 +12237,21 @@
           "name": "Cấp độ"
         },
         "5f5dea02-fd61-4c99-8095-a0e2e5de2471": {
+          "name": "Cấp độ"
+        },
+        "289bbaea-ab5e-48a1-80c3-8299af5a0965": {
+          "name": "Cấp độ"
+        },
+        "c2cd2e0e-1e75-44ea-9e26-74c4e81117ce": {
+          "name": "Cấp độ"
+        },
+        "b482746d-0030-459f-8657-a2775cf1f2a3": {
+          "name": "Cấp độ"
+        },
+        "0f2c3670-022b-44ce-b519-13cb72ccd0fd": {
+          "name": "Cấp độ"
+        },
+        "acd32520-21e7-4c29-8e51-5e9caf6a378d": {
           "name": "Cấp độ"
         },
         "10e6addd-5989-4d95-9384-cb1a33903e99": {
@@ -12623,6 +12563,18 @@
         "2b3a241f-5ee5-4579-9883-832cdd116c43": {
           "name": "Cấp độ"
         },
+        "a83c07a8-61ea-4017-b41d-725d1bd7b425": {
+          "name": "Cấp độ"
+        },
+        "0deb9da8-356e-4547-951f-445a58491a24": {
+          "name": "Cấp độ"
+        },
+        "941b1202-9ae6-4fbf-b806-c3e4ae8293cc": {
+          "name": "Cấp độ"
+        },
+        "ee8cbd12-265d-4681-b6c9-05a0a062916d": {
+          "name": "Cấp độ"
+        },
         "f652e4d2-c712-4cff-a011-f1dcea192263": {
           "name": "Khởi động"
         },
@@ -12637,6 +12589,42 @@
         },
         "7e48fd52-decd-48b3-97bf-a71e8dd0f44e": {
           "name": "Học thêm"
+        },
+        "bad195ab-b5b0-41e3-9c40-610a35ff0e4f": {
+          "name": "Cấp độ"
+        },
+        "41518965-e0d9-4c64-acaa-75abff9eeb52": {
+          "name": "Cấp độ"
+        },
+        "f6fdf744-0a0e-4efb-b70e-a4a6f272487d": {
+          "name": "Cấp độ"
+        },
+        "f488bd5e-8717-4f17-89de-67eed7656f10": {
+          "name": "Cấp độ"
+        },
+        "469ead3b-ff2b-47a4-a58b-bb268370fae4": {
+          "name": "Cấp độ"
+        },
+        "b4e1628d-775d-442e-9363-1e4d5d05a9f3": {
+          "name": "Cấp độ"
+        },
+        "5c6427ce-49af-4fef-857c-44a01f1583bf": {
+          "name": "Cấp độ"
+        },
+        "fb448d2f-35c0-4c79-bf75-b8eb5ee11017": {
+          "name": "Cấp độ"
+        },
+        "f64730d7-ba60-489d-a6b5-e33c8768879b": {
+          "name": "Cấp độ"
+        },
+        "1e703264-9e5f-4ddb-bfe5-8cbefbb646e4": {
+          "name": "Cấp độ"
+        },
+        "1910c7c0-fe86-4867-accd-c9b9c78853b1": {
+          "name": "Cấp độ"
+        },
+        "72871561-f49b-4ae5-a5c5-ec0dbfd6f14f": {
+          "name": "Cấp độ"
         },
         "35e76968-3525-446c-9256-472e8ecba118": {
           "name": "Cấp độ"
@@ -12653,13 +12641,46 @@
         "0145bc8d-b026-434a-9713-9b43c6e34842": {
           "name": "Cấp độ"
         },
-        "901e8625-9092-42fc-9fcc-9c665720b1f4": {
+        "c728edf8-b7ed-465b-99f4-78f27e751d2b": {
+          "name": "Cấp độ"
+        },
+        "687f8be1-c863-4391-971d-5ffa5360ed71": {
           "name": "Khởi động"
         },
-        "b20b4bbb-2eb1-4c77-b938-e60cd435ce93": {
-          "name": "Hoạt động chính"
+        "5ec2cf3c-e372-4dc6-9b3e-4aaca8be2740": {
+          "name": "Khởi động"
         },
-        "18913d21-3c6f-4dd8-864e-09b70f80e640": {
+        "b6364f64-7652-413c-b216-00e84f75dc46": {
+          "name": "Khởi động"
+        },
+        "b66f054d-7a1a-4d77-b19c-6b012d2b87a1": {
+          "name": "Khởi động"
+        },
+        "6f886134-c10b-497a-880f-f54e2888cf1d": {
+          "name": "Khởi động"
+        },
+        "e280ae49-7bb9-4bc9-8dd6-a8c5de968600": {
+          "name": "Khởi động"
+        },
+        "7387ce3c-05c0-477a-a59c-d72b1e06f2a2": {
+          "name": "Khởi động"
+        },
+        "62058ba3-874c-4aae-9d67-8bed1cf236ae": {
+          "name": "Khởi động"
+        },
+        "ffddef55-14cd-4e97-a3bf-7ceb8fdeaa1d": {
+          "name": "Khởi động"
+        },
+        "74d6f1a0-c861-4cc6-9662-c02682b1f65c": {
+          "name": "Khởi động"
+        },
+        "99f155a9-1d50-44df-a647-c8dbaddea32c": {
+          "name": "Bắt đầu"
+        },
+        "d12dc50d-c901-43db-a188-eb1b273239c3": {
+          "name": "Khởi động"
+        },
+        "02b4486f-d09d-4031-8235-0cf728733456": {
           "name": "Tổng kết"
         }
       }

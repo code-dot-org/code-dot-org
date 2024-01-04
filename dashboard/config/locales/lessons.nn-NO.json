@@ -281,6 +281,12 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Stavekonkurranse"
         },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Grunnleggande datavitskap"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Neste steg"
+        },
         "csd2-2019/Lists": {
           "name": "Lister"
         },
@@ -394,6 +400,27 @@
         },
         "pre-express-2019/Make a Game in Play Lab": {
           "name": "Hendingar i Spellab"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Sekvensiering"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Løkker"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Hendingar"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Betingelser"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funksjonar"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Variablar"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "For-løkker"
         },
         "coursea-2020/Programming: Happy Maps": {
           "name": "Glade Kart"
@@ -548,6 +575,12 @@
         "pre-express-2021/A Royal Battle with Events": {
           "name": "Hendingar i Spellab"
         },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Grunnleggande datavitskap"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Neste steg"
+        },
         "csd3-2022/Variables": {
           "name": "Variablar"
         },
@@ -701,9 +734,6 @@
         "pre-express-2023/A Royal Battle with Events": {
           "name": "Hendingar i Spellab"
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Kodetimen 2013"
-        },
         "artist/Artist": {
           "name": "Kunstnar"
         },
@@ -740,47 +770,11 @@
         "minecraft/Minecraft Hour of Code Designer": {
           "name": "Kodetimens Minecraft-designer"
         },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
         "playlab/Play Lab": {
           "name": "Spel-lab"
         },
         "starwars/Hour of Code 2015": {
           "name": "Star Wars: Bygg ein galakse med kode(JavaScript)"
-        },
-        "netsim/Overview and Setup Instructions": {
-          "name": "Oversikt og installasjonsinstruksjon"
-        },
-        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
-          "name": "Peer to Peer - sender biter på en delt Wire"
-        },
-        "netsim/Peer to Peer - Sending Numbers": {
-          "name": "Peer to Peer - sende tall"
-        },
-        "netsim/Peer to Peer - Sending Ascii": {
-          "name": "Peer to Peer - sende Ascii"
-        },
-        "netsim/Broadcasting messages": {
-          "name": "Kringkasting av meldingar"
-        },
-        "netsim/Routers and addresses": {
-          "name": "Rutere og adresser"
-        },
-        "netsim/Packets and Reliability": {
-          "name": "Pakker og pålitelegheit"
-        },
-        "netsim/Manual DNS": {
-          "name": "Manuell DNS"
-        },
-        "netsim/Automatic DNS node": {
-          "name": "Automatisk DNS-node"
-        },
-        "netsim/Internet Simulator Freeplay": {
-          "name": "Frileik med internettsimulator"
         },
         "allthethings/Jigsaw": {
           "name": "Puslespill"
@@ -1130,8 +1124,41 @@
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Superutfordring - Omfattande"
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Kodetimen 2013"
+        },
         "jigsaw/Jigsaw": {
           "name": "Puslespill"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "Oversikt og installasjonsinstruksjon"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "Peer to Peer - sender biter på en delt Wire"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "Peer to Peer - sende tall"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "Peer to Peer - sende Ascii"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "Kringkasting av meldingar"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Rutere og adresser"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "Pakker og pålitelegheit"
+        },
+        "netsim/Manual DNS": {
+          "name": "Manuell DNS"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "Automatisk DNS-node"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "Frileik med internettsimulator"
         },
         "pixelation/Black & White Pixelation Tutorial": {
           "name": "Rettleiingar svart og hvit pikselering"

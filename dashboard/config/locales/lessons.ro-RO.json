@@ -998,6 +998,33 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Albina de Ortografie"
         },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Fundamentele informaticii"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "Cum să stăpâniți elementele de bază: Secvențiere"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "Cum să stăpâniți elementele de bază: Bucle"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "Cum să stăpâniți elementele de bază: Condiționale"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "Cum să stăpâniți elementele de bază: Funcții"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "Cum să stăpâniți elementele de bază: Evenimente"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "Cele mai bune practici în predarea informaticii"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Planificare"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Pașii următori"
+        },
         "csd1-2019/The Problem Solving Process": {
           "name": "Procesul de Rezolvare a Problemei"
         },
@@ -1405,6 +1432,30 @@
         },
         "pre-express-2019/Make a Game in Play Lab": {
           "name": "O bătălie regală cu Evenimente"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Secvențiere"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Bucle"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Evenimente"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Condiţionale"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funcţii"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Variabile"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Bucle Pentru"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Laborator Sprite"
         },
         "coursea-2020/Safety in My Online Neighborhood": {
           "name": "Siguranța comunității mele online"
@@ -2755,6 +2806,33 @@
           "preparation": "-   Rezolvați puzzle-urile pentru a găsi orice potențiale zone cu probleme pentru elevi.-   (Opțional) Alegeți câteva puzzle-uri pe care să le rezolvați în grupuri, cu toată clasa.-   Asigurați-vă că fiecare elev are un jurnal de reflecție.",
           "purpose": "În această activitate online, elevii vor învăța cum să folosească evenimentele în Laboratorul de joacă. Aceștia vor începe prin a-l învăța pe cavaler să se deplaseze atunci când este apăsată o tastă cu săgeată, apoi vor încheia cu oportunitatea de a prezenta restul abilităților pe care le-au deprins pe parcursul acestui curs, inclusiv secvențele și buclele, în cadrul puzzle-ului final din secțiunea de joc liber.",
           "student_overview": "Folosește evenimentele pentru a crea o poveste sau un joc interactiv."
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Fundamentele informaticii"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "Cum să stăpâniți elementele de bază: Secvențiere"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "Cum să stăpâniți elementele de bază: Bucle"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "Cum să stăpâniți elementele de bază: Condiționale"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "Cum să stăpâniți elementele de bază: Funcții"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "Cum să stăpâniți elementele de bază: Evenimente"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "Cele mai bune practici în predarea informaticii"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Planificare"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Pașii următori"
         },
         "csd1-2022/The Problem Solving Process": {
           "name": "Procesul de Rezolvare a Problemei"
@@ -4759,9 +4837,6 @@
           "overview": "⚠️ Această lecție este destinată sălilor de clasă care doresc să arate întreaga serie video [Cum funcționează AI](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) într-o singură zi\\*\\*. Nu este destinat să fie predat în succesiune cu celelalte lecții din această unitate, care introduce fiecare videoclip o zi la rând.\n\nElevii urmăresc împreună cu fiecare videoclip potrivind vocabularul din videoclip, apoi răspunzând la o întrebare de reflecție despre fiecare videoclip. Planul de lecție și diapozitivele sunt foarte rare și deschise pentru a permite improvizația și personalizarea pentru a se potrivi clasei tale.",
           "preparation": "-   Imprimați ghidul de activitate\n-   Proiectați diapozitivele pe un videoproiector"
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Ora de Programare 2013"
-        },
         "applab-intro/Intro to App Lab": {
           "name": "Introducere în App Lab",
           "overview": "Acest tutorial este conceput pentru a introduce rapid mediul de programare App Lab ca un instrument puternic pentru construirea și partajarea aplicațiilor. Tutorialul însuși îi învață pe elevi să creeze și să controleze butoane, text, imagini, sunete și ecrane în JavaScript folosind fie blocuri, fie text. La sfârșitul tutorialului, elevilor li se oferă timp să extindă un proiect pe care au început să îl construiască într-o aplicație „Alege-ți propria aventură”, „Felicitare” sau „Quiz de personalitate”. De asemenea, pot continua să construiască mai multe proiecte prezentate pe pagina code.org/applab.\n\nDistrează-te completând Ora de cod cu App Lab!\n\n**Adecvarea vârstei:** Tutorialul este conceput pentru elevii cu vârsta peste 13 ani. Deoarece le permite elevilor să încarce sunete și imagini personalizate, elevii tineri nu ar trebui să îl folosească fără supraveghere. Pentru a proteja confidențialitatea elevilor, dacă elevii dvs. au sub 13 ani, ei nu vor putea folosi acest tutorial decât dacă mai întâi configurați conturi pentru ei într-o secțiune pe care o gestionați. ",
@@ -4936,9 +5011,10 @@
           "student_overview": "În primul rând, elevii clasifică obiectele în 2 categorii, fie „pește” fie „nu pește” pentru a încerca să scoată gunoiul din ocean. Apoi, elevii vor trebui să-și extindă setul de date de antrenament pentru a include alte creaturi marine care aparțin apei. În a doua parte a activității, elevii își vor alege propriile etichete pentru a le aplica imaginilor cu pești generați aleatoriu. Aceste date de antrenament sunt folosite pentru un model de învățare automată care ar trebui apoi să poată eticheta noi imagini într-un mod cât mai exact."
         },
         "outbreak/Outbreak": {
-          "overview": "Această lecție combină **consolidarea abilităților** în jurul evenimentelor cu un **mini-proiect** în care elevii își construiesc propria simulare pe computer în Sprite Lab. Elevii vor studia simularea pentru a înțelege cât de repede se poate răspândi un virus și ce se poate face pentru a-l încetini.",
-          "preparation": "- Joacă puzzle-urile pentru a găsi eventualele zone cu probleme pentru clasa dvs.\n- Asigurați-vă că fiecare elev are un jurnal de notițe.",
-          "purpose": "În lecția anterioară, elevii au colectat și interpretat date dintr-o simulare simplă. În această lecție, elevii vor urma instrucțiunile pentru a-și codifica propriul model de simulare. Cunoștințele anterioare ale elevilor despre focarele de virus în lumea reală vor fi aplicate unui scenariu fictiv.",
+          "name": "Codificarea unei Simulări",
+          "overview": "În această lecție, cursanții de toate vârstele au parte de o experiență introductivă în domeniul codificării și al informaticii într-un mediu sigur și încurajator. Această lecție combină **formarea-aptitudinilor** în jurul evenimentelor cu un **mini-proiect**, unde elevii învață să își construiască propria simulare pe computer în Sprite Lab. Ei vor studia simularea pentru a înțelege cât de repede se poate împrăștia un virus și ce se poate face pentru a-l încetini.",
+          "preparation": "#### Cu o săptămână înainte de Hour of Code\n\n-   Consultați [Ghidul educatorului Hour of Code](https://hourofcode.com/us/how-to) și [Cele mai bune practici ale educatorilor de succes](https://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) pentru a începe să vă planificați evenimentul Hour of Code.\n\n-   [Înscrieți-vă evenimentul Hour of Code](https://hourofcode.com/us) dacă doriți să obțineți sprijin pentru clasă, postere la preț redus sau să participați la tombola de robotică (numai în SUA).\n\n-   Examinați și completați singur tutorialul online: [Outbreak](https://studio.code.org/s/outbreak/)\n\n-   Asigurați-vă mai întâi să îl testați dv. înainte de a le cere elevilor dvs. să îl completeze. \n\n-   Verificați tehnologia dvs. și decideți dacă trebuie să rezolvați ceva înainte de Hour of Code.\n\n#### Cu o zi înainte de clasa dv. Hour of Code\n\n-   Fiecare elev care finalizează activitatea ar trebui să primească un [certificate](https://studio.code.org/certificates/batch). Tipăriți unul pentru fiecare în avans pentru a facilita acest lucru la sfârșitul clasei Hour of Code.\n\n-   (opțional) Încurajați elevii să aducă căști pe care să le folosească în timpul activității.",
+          "purpose": "În această lecție, elevii vor urma instrucțiunile de codificare a propriilor lor modele de simulare. Cunoștințele anterioare ale elevilor despre focarele de viruși în lumea reală vor fi aplicate pe un scenariu fictiv.",
           "student_overview": "Un virus a pătruns în Orașul Monștrilor! Învață să creezi un simulator de viruși și ajută-i pe monștri să se însănătoșească."
         },
         "playlab/Play Lab": {
@@ -4981,63 +5057,6 @@
           "preparation": "-   Testați Dispozitivul de comprimare a textului\n-   Consultați sfaturile de predare pentru a decide ce opțiuni doriți să utilizați",
           "purpose": "Principiul de bază din spatele compresiei este de a dezvolta o metodă sau un protocol pentru a utiliza mai puțini biți pentru a reprezenta informațiile originale. Modul în care reprezentăm datele comprimate în această lecție, cu un „dicționar” de modele repetate este similar cu [schema de compresie LZW](http://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch), dar trebuie remarcat că LZW este ușor diferit de ceea ce fac elevii în această lecție. Elevii își inventează propriul drum aici. LZW este folosit nu numai pentru text (fișiere zip), ci și cu formatul de fișier imagine GIF.",
           "student_overview": "La un moment dat, ajungem la o limită fizică a cât de repede putem trimite biți și dacă dorim să trimitem o cantitate mare de informații mai rapid, trebuie să găsim o modalitate de a reprezenta aceeași informație cu mai puțini biți - trebuie să comprimăm datele."
-        },
-        "applab-1hour/Room Escape": {
-          "name": "Evadare din Cameră"
-        },
-        "applab-2hour/Event Driven Programming": {
-          "name": "Programare Acționată de Evenimente"
-        },
-        "applab-2hour/Basic App Functionality": {
-          "name": "Funcționalitatea de Bază a Aplicației"
-        },
-        "frequency_analysis/Frequency Analysis": {
-          "name": "Analiza Frecvenței"
-        },
-        "gamelab/Start and End Screens": {
-          "name": "Ecrane de Început și Sfârșit"
-        },
-        "gamelab/Start and End Screens2": {
-          "name": "Ecrane de Început și Sfârșit2"
-        },
-        "k1hoc2017/Collector Hour of Code 2017": {
-          "name": "Hour of Code 2017 Colector"
-        },
-        "netsim/Overview and Setup Instructions": {
-          "name": "Privire de ansamblu şi instrucţiuni de configurare"
-        },
-        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
-          "name": "Peer to Peer - Transmiterea de biţi pe un cablu comun"
-        },
-        "netsim/Peer to Peer - Sending Numbers": {
-          "name": "Peer to Peer - Transmiterea de numere"
-        },
-        "netsim/Peer to Peer - Sending Ascii": {
-          "name": "Peer to Peer - Trimitere Ascii"
-        },
-        "netsim/Broadcasting messages": {
-          "name": "Difuzarea mesajelor"
-        },
-        "netsim/Routers and addresses": {
-          "name": "Routere și adrese"
-        },
-        "netsim/Packets and Reliability": {
-          "name": "Pachete şi fiabilitate"
-        },
-        "netsim/Manual DNS": {
-          "name": "Manual DNS"
-        },
-        "netsim/Automatic DNS node": {
-          "name": "Nod automat DNS"
-        },
-        "netsim/Internet Simulator Freeplay": {
-          "name": "Joc liber cu simulator de internet"
-        },
-        "poetry-hoc3/lesson-1": {
-          "name": "Studiu de Stare"
-        },
-        "vigenere/Vigenere": {
-          "name": "Vigenere"
         },
         "allthethings/Jigsaw": {
           "name": "Puzzle"
@@ -5173,6 +5192,15 @@
         },
         "allthethings/lesson-49": {
           "name": "Muzică"
+        },
+        "applab-1hour/Room Escape": {
+          "name": "Evadare din Cameră"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "Programare Acționată de Evenimente"
+        },
+        "applab-2hour/Basic App Functionality": {
+          "name": "Funcționalitatea de Bază a Aplicației"
         },
         "20-hour/Introduction to Computer Science": {
           "name": "Introducere în Informatică"
@@ -5480,12 +5508,57 @@
         "deepdive-debugging/Debugging for CDEF Educators": {
           "name": "Depanare pentru Pedagogii CDEF"
         },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "Analiza Frecvenței"
+        },
+        "gamelab/Start and End Screens": {
+          "name": "Ecrane de Început și Sfârșit"
+        },
+        "gamelab/Start and End Screens2": {
+          "name": "Ecrane de Început și Sfârșit2"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Ora de Programare 2013"
+        },
         "jigsaw/Jigsaw": {
           "name": "Puzzle",
           "overview": "În această lecție, elevii își vor face o idee cu privire la ce se poate întâmpla în timpul activităților desfășurate în laboratorul de informatică. Această lecție începe cu o scurtă discuție în care se prezintă regulile de conduită în laboratorul de informatică, apoi elevii vor trece la utilizarea unui computer pentru a rezolva puzzle-uri online.",
           "preparation": "-   Consultați site-ul web [Common Sense Education](https://www.commonsense.org/education/digital-citizenship) pentru mai mult conținut legat de siguranța online.",
           "purpose": "Scopul principal al acestei lecții este de a construi experiența elevilor cu computerele. Prin acoperirea celor mai de bază funcții ale computerului, cum ar fi click, glisare și plasare, creăm un teren de joc propice la clasă pentru puzzle-urile viitoare. Această lecție oferă, de asemenea, o oportunitate excelentă de a introduce terminologia de bază a hardware-ului computerului, inclusiv „mouse”, „trackpad” sau „touchscreen”, în funcție de dispozitivele dvs.",
           "student_overview": "Dă click și glisează  pentru a rezolva puzzle-urile."
+        },
+        "k1hoc2017/Collector Hour of Code 2017": {
+          "name": "Hour of Code 2017 Colector"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "Privire de ansamblu şi instrucţiuni de configurare"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "Peer to Peer - Transmiterea de biţi pe un cablu comun"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "Peer to Peer - Transmiterea de numere"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "Peer to Peer - Trimitere Ascii"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "Difuzarea mesajelor"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Routere și adrese"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "Pachete şi fiabilitate"
+        },
+        "netsim/Manual DNS": {
+          "name": "Manual DNS"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "Nod automat DNS"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "Joc liber cu simulator de internet"
         },
         "pixelation/Black & White Pixelation Tutorial": {
           "name": "Tutorial de pixelare în alb și negru"
@@ -5501,6 +5574,12 @@
         },
         "pixelation/Color Pixelation Freeplay": {
           "name": "Joc liber cu pixelare color"
+        },
+        "poetry-hoc3/lesson-1": {
+          "name": "Studiu de Stare"
+        },
+        "vigenere/Vigenere": {
+          "name": "Vigenere"
         }
       }
     }

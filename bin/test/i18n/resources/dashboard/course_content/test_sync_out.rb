@@ -61,7 +61,7 @@ describe I18n::Resources::Dashboard::CourseContent::SyncOut do
       RedactRestoreUtils.
         expects(:restore_file).
         with(original_file_path, crowdin_file_path, %w[blockly]).
-        returns({'en' => {'i18n_key' => 'restored_i18n_data'}})
+        returns(JSON.generate({'en' => {'i18n_key' => 'restored_i18n_data'}}))
     end
 
     before do
@@ -75,7 +75,7 @@ describe I18n::Resources::Dashboard::CourseContent::SyncOut do
     it 'restores the Crowdin file level content and returns true' do
       expect_level_content_restoration.once
 
-      expected_restored_crowdin_file_content = <<-JSON.strip.gsub(/^ {8}/, '')
+      expected_restored_crowdin_file_content = <<~JSON.strip
         {
           "en": {
             "i18n_key": "restored_i18n_data",

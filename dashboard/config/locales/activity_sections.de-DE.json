@@ -14396,30 +14396,6 @@
         "2b5cb5b7-6a5e-4727-b8b5-128a3c546781": {
           "description": "Nutzen Sie diese Aktivitäten, um das Lernen der SchülerInnen zu verbessern. Sie können als Aktivitäten außerhalb des Unterrichts oder als Bereicherung eingesetzt werden.\n\n**Schauen Sie unter die Haube**\n\nWenn Sie einen Link zu Ihrer Geschichte teilen, teilen Sie auch den gesamten Code, der dahinter steckt. Auf diese Weise können die SchülerInnen viel voneinander lernen.\n\n-   Stellen Sie Links zu fertigen Geschichten online - Erstellen Sie eine eigene Geschichte, die Sie ebenfalls teilen können!\n    -   Wenn die SchülerInnen einen Link aufrufen, lassen Sie sie auf die Schaltfläche \"So funktioniert es\" klicken, um den Code hinter der Geschichte zu sehen.\n-   Diskutieren Sie in der Gruppe über die verschiedenen Arten, wie Ihre Klassenkameraden ihre Geschichten codiert haben.\n    -   Was hat euch überrascht?\n    -   Was würdet ihr gerne ausprobieren?\n-   Wähle die Geschichte einer anderen Person und klicke auf \"Remix\", um sie weiterzuentwickeln. (Keine Sorge, die ursprüngliche Geschichte bleibt erhalten.)"
         },
-        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
-          "name": "Vorbereitung",
-          "description": "Begrüßen Sie die SchülerInnen zum Unterricht und stellen die kurz die Tagesaktivität vor."
-        },
-        "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
-          "description": "_In dieser Aktivität gestaltest du mit viel Spaß eine interaktive Welt mit lustigen Figuren, den Sprites. Du kannst die Sprites mit Sprechblasen wie in einem Comic oder einer Graphic Novel sprechen lassen und siehst, wie sie automatisch reagieren, wenn sie von dir oder anderen angeklickt werden.\n\nHeute wirst du einen \"Code\" schreiben, d. h. eine Reihe von Anweisungen, die ein Computer versteht. Wenn du eine Geschichte schreibst, musst du dir genau überlegen, welche Wörter du verwendest. Wenn du einen Code schreibst, musst du sorgfältig über die Anweisungen nachdenken, die du deinem Computer gibst.",
-          "tips": [
-            "Sie sollten wenig Zeit damit verbringen, Code of Hour vorzustellen. Vor allem bei jungen Schülern ist es am besten, so schnell wie möglich zu beginnen."
-          ]
-        },
-        "7acfc985-03d8-4d14-b244-203f8cbf4843": {
-          "name": "Allgemeine Unterstützung",
-          "description": "Diese Tipps helfen den Schülern, egal auf welchem Niveau sie sich befinden\n\n- **Mit Nachbarn zusammenarbeiten:** Ermutigen Sie die Schüler, sich mit dem Nachbarn auszutauschen, wenn sie nicht weiterkommen. Je nach Alter und Fähigkeiten Ihrer Schüler können Sie die Klasse in Paare aufteilen, um das Lernprogramm mit Hilfe von [Paarprogrammierung][0] zu bearbeiten.  \n\n- **Anleitungen lesen:** Die Anleitungen enthalten in der Regel hilfreiche Tipps, wie die Aufgabe zu lösen ist. Bevor Sie die Fragen beantworten, sollten Sie darauf achten, dass sie sich die Anleitungen, Hinweise, Videos und den Startcode genau angesehen haben.\n\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Du kommst nicht weiter? Lies die Hinweise:** In jedem Level gibt es einen Tipp mit Ratschlägen zum Abschließen eines Levels, einschließlich der Code-Bausteine, die sie ausprobieren sollten. \n\n- **Zeit nehmen und experimentieren.** Die Anleitungen erklären den Schülern im Allgemeinen, was sie tun sollen, die Schüler sollten jedoch auch Freiraum haben, ihre eigenen Ideen auszuprobieren."
-        },
-        "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
-          "name": "Hallo Welt"
-        },
-        "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
-          "description": "Wenn eine Gruppe oder ein Schüler vorzeitig fertig ist, sollten Sie sie ermutigen, das Projekt in der letzten Stufe weiterzuentwickeln. Wenn die Schüler nicht wissen, was sie noch tun sollen, können Sie ihnen Fragen stellen:\n\n- Welche anderen Sprites könntet ihr zu eurem Projekt hinzufügen?\n- Habt ihr euch die Kostümbibliothek angesehen oder versucht, euer eigenes Sprite-Kostüm zu zeichnen?\n- Was könnten deine Sprites noch sagen?\n- Was sollten deine Sprites tun, wenn sie angeklickt werden?\n- Fordern Sie die Schüler auf, Ideen auszutauschen und voneinander zu lernen. Sie können auch ein anderes Lernprogramm ausprobieren, indem sie [code.org/learn][0] besuchen."
-        },
-        "b68a11cc-930a-4803-beca-1d4f49ede378": {
-          "name": "Reflexion",
-          "description": "#### Nachbesprechung\n\nBitten Sie die Schüler über ihre Aktivitäten am Tag nachzudenken. Was haben sie gelernt zu programmieren? Sprites? Ereignisse?\n\nWie finden sie die Informatik und das Programmieren, nachdem sie sich eine Stunde damit befasst haben?\n\n#### Nächste Schritte\n\nWenn den Schülern die heutige Aktivität Spaß gemacht hat, sagen Sie ihnen, dass es viele weitere Möglichkeiten gibt zu programmieren. Unter [CS Connections][0] finden Sie Ideen, wie Sie Informatik in andere Fächer integrieren können, oder lesen Sie mehr über unser [Kursangebot für Grundschulen][1]."
-        },
         "9a692bd5-9de8-4718-9518-f14949953885": {
           "tips": [
             null
@@ -23640,7 +23616,22 @@
             null
           ]
         },
+        "8beb2941-dd64-44f4-9e99-6149c445067a": {
+          "tips": [
+            null
+          ]
+        },
         "500131a4-a22b-4a63-bc0a-d5d4a19c7169": {
+          "tips": [
+            null
+          ]
+        },
+        "a45155ff-19af-43ac-bf11-6ca4001816f4": {
+          "tips": [
+            null
+          ]
+        },
+        "a7d5069b-aa1c-4efa-a8d8-b58bd43a6c7b": {
           "tips": [
             null
           ]
@@ -23655,7 +23646,17 @@
             null
           ]
         },
-        "b2b4b9e6-fe3f-4d2d-a828-1402cc1572e8": {
+        "4ff33db6-6668-4423-8f1d-ad0b25f6da40": {
+          "tips": [
+            null
+          ]
+        },
+        "169c3eed-52d7-4a4b-b7c6-161cf287ed33": {
+          "tips": [
+            null
+          ]
+        },
+        "f1632666-ffc1-457a-832a-c2d3b2d1fc20": {
           "tips": [
             null
           ]
@@ -23670,7 +23671,22 @@
             null
           ]
         },
+        "b2777295-b74f-4240-bb3d-c76b79dde6a9": {
+          "tips": [
+            null
+          ]
+        },
         "9bcab929-d773-4dab-bfb0-d09892056944": {
+          "tips": [
+            null
+          ]
+        },
+        "bedaca2d-4f48-45b4-b6e9-431f6a38cc13": {
+          "tips": [
+            null
+          ]
+        },
+        "221b5029-fcfd-4791-b951-852609cb0198": {
           "tips": [
             null
           ]
@@ -36891,7 +36907,11 @@
         },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
           "name": "Einführung",
-          "description": "**Diskutieren:**\n\n- Was wissen wir darüber, wie sich ein Virus ausbreitet?\n- Was kann dazu führen, dass sich ein Virus schneller in einer Stadt ausbreitet?\n- Was kann helfen, die Ausbreitung eines Virus zu verlangsamen?\n\nZiel dieser Diskussion ist es, dass die SchülerInnen die Möglichkeit haben, ihr Vorwissen zu aktivieren und ihre Ideen an der Tafel zu sehen. Das ist auch eine Gelegenheit, falsche Vorstellungen über die Ausbreitung von Viren zu untersuchen."
+          "description": "**Diskutieren:**\n\n-   Was wissen wir darüber, wie sich ein Virus ausbreitet?\n-   Was kann dazu führen, dass sich ein Virus schneller in einer Stadt ausbreitet?\n-   Was kann helfen, die Ausbreitung eines Virus zu verlangsamen?\n\nZiel dieser Diskussion ist es, dass die SchülerInnen die Möglichkeit haben, ihr Vorwissen zu aktivieren und ihre Ideen an der Tafel zu sehen. Das ist auch eine Gelegenheit, falsche Vorstellungen über die Ausbreitung von Viren zu untersuchen."
+        },
+        "9abff5bb-3f76-4f3c-b3d2-f0a873876cf8": {
+          "name": "Allgemeine Unterstützung",
+          "description": "**Allgemeine Unterstützung:** Als Lehrkraft ist es in erster Linie Ihre Aufgabe, die SchülerInnen auf ihrem Weg durch das Lernprogramm zu unterstützen. Hier sind ein paar Tipps, die den SchülerInnen sollen, unabhängig davon, an welchem Level sie gerade arbeiten.\n\n-   Bitten Sie die SchülerInnen, die verschiedenen \"Extras\" in beliebiger Reihenfolge zu bearbeiten. Sie können jederzeit zu Level 1 zurückkehren, um das Menü erneut zu bearbeiten.\n\n-   **Mit dem Nachbarn zusammenarbeiten:** Bitten Sie die SchülerInnen, sich bei einem Nachbarn zu melden, wenn sie nicht weiterkommen. Bei dieses Lernprogramm mit Videos tragen die SchülerInnen meistens Kopfhörer und es kann es leicht passieren, dass sie sich in eine \"Blase\" zurückziehen. Durchbrechen Sie diese Barriere , wenn sie Hilfe zu brauchen scheinen. Je nach Alter und Fähigkeiten können Sie Ihre Klasse auch offiziell in Paare aufzuteilen, damit sie das Tutorial im [pair programming](https://youtu.be/vgkahOzFH2Q) zu zweit bearbeiten können.  \n\n-   **Lesen Sie die Anleitungen:** Die Anleitungen enthalten in der Regel hilfreiche Tipps, wie Sie den Level abschließen können. Achten Sie darauf, dass die Schüler sich das Zielbild genau ansehen und den gesamten Text gelesen haben, bevor sie ein Level abschließen. \n\n-   ![](https://curriculum.code.org/media/uploads/hint.png)**Hängengeblieben? Achten Sie auf Hinweise:** Jedes Level enthält einen Hinweis mit weiteren Details, wie Sie das Level schaffen können. Wenn die SchülerInnen versuchen, die Aufgabe so schnell wie möglich zu lösen, kann es sein, dass sie eine bestimmte Zeit warten müssen, bis der gesamte Code ausgeführt wurde, bevor sie weitermachen. In vielen Levels gibt es einen zweiten Hinweis mit Vorschlägen, wie man die Aufgabe noch kreativer gestalten kann, indem man sie erweitert. \n\n-   **Weitermachen und zurückkommen:** Manchmal profitieren die Schüler mehr davon, wenn sie zu einem kniffligen Level zurückkehren. Alle Stufen sind unabhängig voneinander, auch wenn sie sich bis zu einem gewissen Grad auf zuvor eingeführte Konzepte stützen.\n\n-   **Nehmen Sie sich Zeit und experimentieren Sie:** Auch wenn die ersten Levels den SchülerInnen genau sagen, was sie tun müssen, sollten sie sich frei genug fühlen, ihre eigenen Ideen auszuprobieren."
         },
         "d63c77c1-4167-4360-ab98-25610934beda": {
           "name": "Ausbruch",
@@ -36923,11 +36943,15 @@
           "description": "_Mit Simulationen ist eine tolle Möglichkeit, Dinge zu erfahren, die man in der realen Welt nicht beobachten kann. Sie helfen den Wissenschaftlern Problem zu lösen und vorherzusagen, wie das Problem gelöst werden kann. Sie können Ideen sicher und effektiv testen. Deine Simulation ist eine Möglichkeit zu simulieren, wie ein Virenausbruch in Monster Town aussehen könnte._"
         },
         "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
-          "description": "**Diskutieren:**\n\n- Wie können Simulationen in der realen Welt hilfreich sein? \n- Wie können Simulationen uns helfen, die Welt um uns herum zu verstehen? \n- Wie können Simulationen die Art und Weise verbessern, wie wir Ideen ausprobieren? \n\nZiel der Diskussion ist es, dass die SchülerInnen verstehen, dass Simulationen eine Möglichkeit sind, komplexe Systeme auf interaktive Weise zu modellieren. Sie sollen auch erkennen, wie man mit Simulationen Ideen schnell, kostengünstig und sicher testen kann. "
+          "description": "**Diskutieren:**\n\n-   Wie können Simulationen in der realen Welt hilfreich sein? \n-   Wie können Simulationen uns helfen, die Welt um uns herum zu verstehen? \n-   Wie können Simulationen die Art und Weise verbessern, wie wir Ideen ausprobieren? \n\nZiel der Diskussion ist es, dass die SchülerInnen verstehen, dass Simulationen eine Möglichkeit sind, komplexe Systeme auf interaktive Weise zu modellieren. Sie sollen auch erkennen, wie man mit Simulationen Ideen schnell, kostengünstig und sicher testen kann. "
         },
         "b8e884f1-eae0-4138-8778-0972f90e34d9": {
           "name": "Reflexion",
-          "description": "**Anregung:**\n\n- Inwiefern ähnelt diese Simulation der realen Welt? Inwiefern ist sie anders?\n- Was würden Sie an Ihrer Simulation ändern/hinzufügen wollen?"
+          "description": "**Anregung:**\n\n-   Inwiefern ähnelt diese Simulation der realen Welt? Inwiefern ist sie anders?\n-   Was würden Sie an Ihrer Simulation ändern/hinzufügen wollen?"
+        },
+        "c1c5b270-2aae-4f8c-aded-0d92811d532f": {
+          "name": "Feiern",
+          "description": "Erklären Sie, dass Sie heute aus Anlass der CS Education Week eine Stunde programmieren werden und dass auch Millionen anderer SchülerInnen auf der ganzen Welt in dieser Woche eine Hour of Code lernen. Gratulieren Sie ihnen, dass sie Teil dieser weltweiten Bewegung sind.\n\nÜberreichen Sie allen SchülerInnen eine [Zertifikat](http://code.org/certificates) mit ihrem Namen."
         },
         "366afa8a-feff-4dd4-a415-03a04e01e897": {
           "name": "Vorbereitung",
@@ -37259,18 +37283,6 @@
           "name": "Eigenschaften von UI-Elementen",
           "progression_name": "Eigenschaften von UI-Elementen"
         },
-        "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
-          "name": "Aufwärmen"
-        },
-        "59df14b7-1344-480b-8b6b-3fc94684b8bc": {
-          "name": "Hauptaktivität (alt)"
-        },
-        "3d1e45e9-9dd0-476b-b864-f0d86d0827b6": {
-          "name": "Hauptaktivität (neu)"
-        },
-        "50216925-6742-400e-b45a-2de4cd3b63f2": {
-          "name": "Zusammenfassung"
-        },
         "f108ae93-f672-4062-b6d6-522901659990": {
           "name": "CS Discoveries Nachbefragung",
           "progression_name": "CS Discoveries Nachbefragung"
@@ -37318,39 +37330,94 @@
         "6ddc599f-da51-4adc-9dcc-f13b8b53e760": {
           "description": "### Über die Hour of Code hinaus\n\nNachdem Ihre \"Hour of Code\" beendet ist, gibt es viele Möglichkeiten, wie Sie den Informatikunterricht in Ihrer 5. Klasse fortsetzen können.Hier einige Ideen:\n\n-   Unterrichten Sie die [Code Studio Computer Science Fundamentals](http://code.org/educate/k5) courses. Diese vier Kurse sind für junge Lernende konzipiert. Die SchülerInnen arbeiten sich durch eine Reihe von Aufgaben, die ihnen das Codieren beibringen. Die Lehrkräfte haben Zugang zu motivierenden Unterrichtsplänen, die das Lernen mit Leben erfüllen.Code.org bietet kostenlose berufliche Weiterbildungen für diese Kurse an, sowohl online oder persönlich.\n\n-   Laden Sie einen Informatik-Experten oder eine Informatik-Expertin ein, die Ihrer Klasse etwas über seine oder ihre Arbeit erzäheln. Kennen Sie keine Informatiker in der Nähe Sprechen Sie einen Freiwilligen auf unserer [volunteer map](https://code.org/volunteer/local) an"
         },
-        "b16d189d-d990-44c4-be49-8f81ac81a96e": {
-          "description": "### Vorbereitung\n\nBegrüßen Sie die SchülerInnen im Unterricht und stellen Sie die für den Tag geplanten Aktivitäten kurz vor.",
+        "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
+          "name": "Aufwärmen"
+        },
+        "59df14b7-1344-480b-8b6b-3fc94684b8bc": {
+          "name": "Hauptaktivität (alt)"
+        },
+        "3d1e45e9-9dd0-476b-b864-f0d86d0827b6": {
+          "name": "Hauptaktivität (neu)"
+        },
+        "50216925-6742-400e-b45a-2de4cd3b63f2": {
+          "name": "Zusammenfassung"
+        },
+        "3125ec73-4d68-45a9-a6f8-b2921c55d4a3": {
+          "name": "Musikfilter"
+        },
+        "524efe4b-796a-48eb-b1c6-f4e138699443": {
+          "name": "Allgemeine Unterstützung"
+        },
+        "b9bacf54-bd37-42b8-85fc-bc9d07a50537": {
           "tips": [
-            "Eine Möglichkeit, die Hour of Code einzuführen, wenn Sie selbst nicht sehr vertraut mit dem Programmieren sind, das Vorführen eines unserer [inspirierenden Videos][0]. Wählen Sie das Video aus, von dem Sie glauben, dass es Ihre SchülerInnen inspirieren wird, und zeigen Sie es ihnen jetzt. Für SchülerInnen der Mittelstufe empfehlen wir [Die Hour of Code ist hier][1]."
+            null
           ]
         },
-        "d99fc09e-a586-41df-84b2-e552cc4735e3": {
-          "description": "Heute werden wir unsere Kreativität nutzen, während wir programmieren lernen. Es gibt viele Möglichkeiten, kreativ zu sein. Welche Möglichkeiten nutzt du gerne, um kreativ zu sein?"
+        "58bdb8b5-159d-4b7a-aae7-d250213c1379": {
+          "progression_name": "Einführungsvideo"
         },
-        "b6c8c6a3-fe85-4d42-999e-a2ba13f6739a": {
-          "description": "Ermutigen Sie die SchülerInnen, zu erzählen, wie sie ihre Kreativität ausdrücken, z. B. durch Kunst, Tanz, Musik oder Schreiben. Fragen Sie die SchülerInnen, wie sie sich für ihre Kreativität inspirieren."
+        "b8daa26e-57e7-4bc5-8a6e-1e541a407c8e": {
+          "tips": [
+            null
+          ]
         },
-        "6fba9dd0-6069-402c-a641-53899ae667e2": {
-          "description": "Wusstet ihr dass Informatik sehr kreativ sein kann? Tatsächlich kann man mit Code Kunst machen. Zur Erinnerung: Code ist ein Satz von Anweisungen, die ein Computer verstehen kann. Genau wie die Wahl der Farben, die man verwendet, kann auch die Wahl des Codes, den man schreibt, eine Gelegenheit sein, kreativ zu werden! \n\nWir werden heute Poesie verwenden, damit sie unser kreatives Programmieren inspiriert. Weiß jemand, was Poesie ist? Habt ihr ein Lieblingsgedicht oder einen Lieblingsdichter?"
+        "7c95f7a1-478d-45fc-ba2d-5807bd2b828f": {
+          "name": "Besprechung"
         },
-        "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102": {
-          "description": "**Gemeinsam Gedichte lesen:** Lesen Sie gemeinsam in der Klasse ein paar Gedichte[0] und üben Sie, die Stimmung des jeweiligen Gedichts zu bestimmen. Ermutigen Sie die SchülerInnen, ihre Interpretation mit den anderen zu teilen, auch wenn sie sich von der der anderen unterscheidet."
+        "c624ab39-fa08-4b83-b1e9-bf97fb42667f": {
+          "name": "Feiern"
         },
-        "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
-          "name": "Dichtkunst",
-          "description": "#### Allgemeine Unterstützung\n\nAm Ende dieser Aktivität werden die SchülerInnen ein animiertes Gedicht geschrieben haben, das ihre visuelle Interpretation des von ihnen gewählten Gedichts beinhaltet. Diese Lektion soll den SchülerInnen die Möglichkeit geben, mit ihrem Code zu basteln und die visuellen Effekte zu finden, die ihnen am besten gefallen. \n\nErmutigen Sie die SchülerInnen, während sie durch den Raum gehen:\n\n- **Nehmt euch Zeit:** In den meisten Levels müssen die SchülerInnen die perfekten Effekte finden, die zu ihrer Interpretation der Stimmung des Gedichts passen. Es ist sehr empfehlenswert, in einem Level zu bleiben und am Code zu basteln. \n\n- **Finde ein Gedicht, das dir gefällt:** Das Gedicht, das einem SchülerInnen in einem neuen Level angezeigt wird, ist nur ein Vorschlag. Oben im Spielbereich gibt es ein Dropdown-Menü mit vorbereiteten Gedichten. Fordern Sie die SchülerInnen auf, sich ein Gedicht auszusuchen, das ihnen gefällt. Sie können dann beginnen, das ausgewählte Gedicht mit Code zu animieren. \n\n- **Zeigen Sie ein abgeschlossenes Level:** Wenn die Blase zu einem Levels ganz grün ist, bedeutet das, dass die SchülerInnen alle Anforderungen für dieses Level erfolgreich erfüllt haben. Bitten Sie sie SchülerInnen, auf eine grüne Blase zu klicken, um zu zeigen, was sie geschaffen haben. \n\nFür den Fall, dass SchülerInnen nicht weiterkommen: \n\n- **Lesen Sie die Anleitungen vor:** Die Anleitungen sind Aufzählungspunkte, die zeigen, wie man das Level abschließt. Wenn ein/e SchülerIn nicht weiterkommt, bitten Sie sie/ihn, die Anleitungen laut vorzulesen, und bitten Sie sie/ihn, den Inhalt mit eigenen Worten zu wiederholen. \n  - Die SchülerInnen können auch auf dieses Text-zu- Sprache-Symbol klicken, um sich die Anleitungen laut vorlesen zu lassen.\n- **Sucht nach Hinweisen**: In den meisten Levels gibt es mindestens einen Hinweis mit genaueren Angaben dazu, wie man das Level bestehen kann. \n- **Feiert eure Fehler**: Dass sich im Code ein Fehler einschleicht, ist ein natürlicher Teil des Programmiervorgangs. Wenn das Programm nicht das tut, was Ihre SchülerInnen erwartet haben, bitten Sie sie, Ihnen zunächst zu sagen, was passieren soll, dann auf „Ausführen“ zu klicken, um zu sehen, was tatsächlich passiert, und dann die Stelle in ihrem Code zu finden, die die Unstimmigkeit verursacht hat. Denken Sie daran, das Finden und das Beheben von Fehlern zu feiern. Wenn ein Fehler gefunden wird, bedeutet das, dass die SchülerInnen eine großartige Arbeit beim Erstellen eines komplexeren Programms geleistet haben. "
+        "07a73ab9-8996-453a-a87f-63628f2387db": {
+          "name": "Nächste Schritte",
+          "description": "Sagen Sie den SchülerInnen, dass sie, über die heutige Aktivität hinaus viele Möglichkeiten haben zu programmieren. Weisen Sie die SchülerInnen darauf hin, dass sie unter code.org/learn eine Liste dieser Möglichkeiten finden. Wenn Sie eine der folgenden Erweiterungsaktivitäten planen, sagen Sie den SchülerInnen, was sie im Unterricht als nächstes erwartet."
         },
-        "065eda67-268c-4f91-9caf-efb2c34493fe": {
-          "description": "\n**Level 1:** Ermutigen Sie die SchülerInnen, das Gedicht zu lesen. Fordern Sie die SchülerInnen dann auf, eine Hintergrundfarbe oder einen Effekt zu finden, der zur Stimmung des von ihnen gewählten Gedichts passt. \n\n**Level 2:** In diesem Beispiel sollten die SchülerInnen das Gedicht zuerst alleine lesen und dann auf „Ausführen“ drücken. Sie können die SchülerInnen fragen, ob der Ton und die Effekte, die der Programmierer ausgewählt hat, zur Stimmung des Gedichts passen. Fragen Sie ** die SchülerInnen, ob sie ihre Antwort weiter ausführen können. \n\n**Level 3:** In diesem Level wird der Ton eingeführt, die SchülerInnen können Kopfhörer benutzen, wenn sie welche haben. \n\n**Level 4:** Bitten Sie die SchülerInnen, das Gedicht zu lesen und die Zeile zu finden, in der die Stimmung des Gedichts umschlägt oder in der der Dichter ein neues Bild einführt. Verwenden Sie den Ereignisblock, um die entsprechenden Effekte zu den identifizierten Zeilen des Gedichts hinzuzufügen. \n\n**Level 5:** Bei diesem Beispiel sollten die SchülerInnen das Gedicht zuerst alleine lesen und dann auf „Ausführen“ drücken. Fragen Sie die SchülerInnen, ob die Bilder mit den Worten des Gedichts übereinstimmen. Fordern Sie sie auf, ihre Antwort zu erläutern. \n\n**Level 6, 7, 8:** Siehe „Fehler feiern“ im Abschnitt „Allgemeine Unterstützung“. Ermutigen Sie die SchülerInnen, mit ihren Ereignisblöcken Programme mit mehr als einem Übergang zu erstellen. \n\n**Level 9:** Ermutigen Sie die SchülerInnen, alle Gedichte im Dropdown-Menü durchzulesen, um eines zu finden, das ihnen gefällt. Sagen Sie den SchülerInnen, dass sie das, was sie in diesem letzten Level tun, mit ihren Freunden und ihrer Familie teilen können. Jetzt ist es an der Zeit, alle Programmier- und ELA-Fähigkeiten zu kombinieren!\n "
+        "fb665f5b-457e-484e-924a-7aa4f2e097be": {
+          "name": "Machen Sie es viral"
         },
-        "51a89a3e-a8c7-41d6-bbbf-2ce16fc7e033": {
-          "description": "Wenn es euch heute Spaß gemacht hat, Code zu lernen, könnt ihr auf code.org/learn weiterlernen. Wenn ihr mit euren Freunden und eurer Familie teilen möchtet, was ihr heute gemacht habt, klickt auf die Schaltfläche „Teilen“ und schickt den Link an alle, die ihr mögt!"
+        "c03cf1cb-2946-48c9-aede-76ccf4b787a9": {
+          "tips": [
+            null
+          ]
         },
-        "8630a813-1b6c-49c5-a58b-d2dc5dcccd0a": {
-          "description": "#### (optional) Überprüfung: Überprüfung des Verständnisses (4 Minuten) \n\nVerteilen Sie zwei Haftnotizen pro SchülerIn."
+        "3c17e9fd-b06b-478e-bb56-5734d9344b68": {
+          "tips": [
+            null
+          ]
         },
-        "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
-          "description": "Du hast zwei Notizzettel. Auf einen schreibst du etwas, was du heute über das Programmieren gelernt hast. \nAuf den zweiten schreibe etwas, was du heute über Gedichte gelernt habt. \n\nTeile deine heutige Erfahrung mit der ganzen Klasse, indem du die Hand hebst, um diese Frage zu beantworten: Was möchtest du als Nächstes über das Programmieren und die Informatik lernen? "
+        "913cf29b-f688-4c8b-9834-96c9b75274f5": {
+          "tips": [
+            null
+          ]
+        },
+        "f39d7745-dd63-424d-baa1-de4e4fd0f0c0": {
+          "tips": [
+            null
+          ]
+        },
+        "a7f20e25-3940-4615-b90f-8664e1661b3a": {
+          "tips": [
+            null
+          ]
+        },
+        "2a1748fb-e49f-4ae0-be55-0c603dbe3335": {
+          "tips": [
+            null
+          ]
+        },
+        "e72dd2c9-59cc-4063-9dcc-d270e7fed0fe": {
+          "tips": [
+            null
+          ]
+        },
+        "5ff66bb0-517f-486e-b70f-cad0319c23df": {
+          "tips": [
+            null
+          ]
+        },
+        "31d4feb6-1e0c-4342-988b-6730a0d0155e": {
+          "tips": [
+            null
+          ]
         }
       }
     }

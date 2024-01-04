@@ -1212,6 +1212,10 @@
         "artificial_intelligence/ai-ethics/2023": {
           "word": "Sztuczna inteligencja"
         },
+        "generative_ai/ai-ethics/2023": {
+          "word": "Generatywna AI",
+          "definition": "Rodzaj sztucznej inteligencji (AI), która wykorzystuje wzorce z istniejących treści do tworzenia nowych treści, takich jak nowy tekst lub nowe obrazy."
+        },
         "adaptation/csc-adaptations/2023": {
           "word": "adaptacja",
           "definition": "Zmiana w organizmie, aby lepiej przetrwać jego środowisko"
@@ -2031,7 +2035,7 @@
         },
         "algorithm/how-ai-works/2023": {
           "word": "Algorytm",
-          "definition": "szereg kroków w celu rozwiązania problemu lub podjęcia decyzji"
+          "definition": "ciąg kroków w celu rozwiązania problemu lub podjęcia decyzji"
         },
         "network/how-ai-works/2023": {
           "word": "Sieć",
@@ -2388,25 +2392,21 @@
           "word": "Kompresja bezstratna",
           "definition": "algorytm kompresji danych, który pozwala na perfekcyjne odtworzenie oryginalnych danych ze skompresowanych danych. Najczęściej używany na potrzeby kompresji tekstu (np. kompresja zip)"
         },
-        "code/poem-art/unversioned": {
+        "code/dance-ai/2023": {
           "word": "Kod",
-          "definition": "(v) pisać instrukcje dla komputera."
+          "definition": "(v) napisać kod lub napisać instrukcje dla komputera."
         },
-        "event/poem-art/unversioned": {
+        "event/dance-ai/2023": {
           "word": "Zdarzenie",
           "definition": "Działanie, które powoduje, że coś się dzieje."
         },
-        "program/poem-art/unversioned": {
+        "program/dance-ai/2023": {
           "word": "Program",
-          "definition": "Seria kroków, które zostały zakodowane w coś, co może być uruchamiane przez maszynę."
+          "definition": " Algorytm, który został zakodowany w coś, co może być uruchamiane przez maszynę."
         },
-        "mood/poem-art/unversioned": {
-          "word": "Nastrój",
-          "definition": "wyrażanie uczucia, atmosfery lub emocji w sztuce lub piśmie."
-        },
-        "line/poem-art/unversioned": {
-          "word": "Wiersz",
-          "definition": "(poezja) - podział wiersza ułożonego w wierszu, który kończy się na prawym marginesie."
+        "artificial_intelligence_a_i_/dance-ai/2023": {
+          "word": "Sztuczna Inteligencja (A.I.) ",
+          "definition": " Program komputerowy, który pobiera dane, uczy się wzorców z tych danych, a następnie podejmuje decyzje na podstawie tego, czego się nauczył."
         }
       }
     }

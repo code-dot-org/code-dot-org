@@ -1259,6 +1259,18 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Včela Hláskovanie"
         },
+        "K5-OnlinePD/Getting Started": {
+          "name": "Začíname"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Základy informatiky"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Plánovanie"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Ďalšie kroky"
+        },
         "csd1-2019/Intro to Problem Solving": {
           "name": "Úvod do riešenia problémov"
         },
@@ -1792,6 +1804,33 @@
         },
         "pre-express-2019/Make a Game in Play Lab": {
           "name": "Kráľovská bitka s udalosťami"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Postupnosť"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Cykly"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Udalosti"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Podmienené príkazy"
+        },
+        "k5-onlinepd-2019/End of Course projects": {
+          "name": "Záverečné projekty"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funkcie"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Premenné"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Cykly \"Pre\""
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Sprite Lab"
         },
         "coursea-2020/Safety in My Online Neighborhood": {
           "name": "Bezpečnosť v mojej online štvrti"
@@ -3758,6 +3797,18 @@
           "purpose": "V tejto on‑line aktivite sa žiaci naučia, ako sa v Play Labe používajú udalosti. Najprv naprogramujú rytiera tak, aby sa hýbal pri stlačení šípky na klávesnici hýbal, a nakoniec budú mať v rámci záverečnej voľnej úlohy príležitosť ukázať zvyšné zručnosti, ktoré počas kurzu nadobudli, vrátane postupností a cyklov.",
           "student_overview": "Vytvor pomocou udalostí príbeh alebo interaktívnu hru."
         },
+        "kodea-pd-2021/Getting Started": {
+          "name": "Začíname"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Základy informatiky"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Plánovanie"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Ďalšie kroky"
+        },
         "csd1-2022/Intro to Problem Solving": {
           "name": "Úvod do riešenia problémov",
           "overview": "**Otázka dňa: Čo nám môže pomôcť spolupracovať a riešiť problémy ako tím?**\n\nV tejto lekcii žiaci pracujú v skupinách na navrhovaní lodiek z hliníkovej fólie. Cieľom je navrhnúť loďku, ktorá udrží čo najviac jednocentových mincí. Skupiny pracujú na svojich loďkách počas dvoch kôl, pričom ich cieľom je dosiahnuť, aby v druhom kole ich loďka udržala viac mincí než v prvom. Štruktúra aktivity odkazuje na rôzne kroky, z ktorých pozostáva proces riešenia problémov a žiaci sa s nimi podrobnejšie oboznámia v nasledujúcej lekcii. Na konci hodiny žiaci zreflektujú túto aktivitu a spoja si ju s prístupmi k riešeniu problémov, ktoré budú využívať po zvyšok kurzu.\n\n**K dispozícii sú aj alternatívne verzie tejto lekcie** \n\n-   [Novinový stôl](/s/csd1-2022/lessons/9/)\n-   [Špagetový most](/s/csd1-2022/lessons/10/)\n-   [Papierová veža](/s/csd1-2022/lessons/11/)",
@@ -5222,19 +5273,19 @@
         },
         "csc-ecosystems-2023/Overfishing Simulation (pilot)": {
           "name": "Simulácia nadmerného rybolovu",
-          "overview": "V tejto lekcii **budovania zručnosti** študenti naprogramujú model vodného ekosystému a potom simulujú situáciu nadmerného rybolovu. Študenti sa naučia, ako naprogramovať podmienené vyhlásenia na kontrolu množstva rias vo vode. Ak je príliš veľa rias, koral ochorie. Ak je rias príliš málo, ryby nemajú zdroj potravy a opúšťajú oblasť. Ak existuje správne množstvo rias, chorý koral sa uzdraví a ryby zostanú v oblasti. ",
+          "overview": "V tejto lekcii si študenti naprogramujú model vodného ekosystému a simuláciu nadmerného rybolovu. Naučia sa programovať podmienky, ktorými overia množstvo rias vo vode. Ak je vo vode príliš veľa rias, koral ochorie. Ak je rias príliš málo, ryby stratia zdroj potravy a opustia našu oblasť. Ak je vo vode rias tak akurát, chorý koral sa uzdraví a ryby v našej oblasti zostanú. ",
           "preparation": "-   Zahrajte si úrovne a prečítajte si snímky <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">lekcií</a> \n-   Rozhodnite sa o stimulovaní medzi pracovným časom študenta a celou skupinovou výučbou.\n-   Zvážte priradenie odporúčanej prípravy študentom \n    ([link](https://studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4911962))\n-   Zvážte tieto súvisiace možnosti rozšírení ([link](https://studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4911963)), ktoré chcete preskúmať po poslednej lekcii.\n\n##### Voliteľné:\n\n-   [Optional] Prečítajte si túto <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">prezentáciu Užitočné rady.</a> \n-   [Optional] Prečítajte si túto príručku pre <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">učiteľov k ladeniu,</a>  aby ste boli pripravení pomôcť študentom nájsť a opraviť chyby v ich kóde. ",
-          "purpose": "Študenti sa naučia, že morské ekosystémy majú veľa organizmov, ktoré interagujú a udržiavajú sa v rovnováhe. Táto lekcia kombinuje informatiku s biologickými vedami, pretože študenti vytvárajú model, ktorý simuluje účinky nadmerného rybolovu pomocou podmienených výrokov v informatike, aby ukázali príčinu a následok v reálnom živote. "
+          "purpose": "Študenti sa naučia, že do morského ekosystému sa zapája veľa organizmov, ktoré na seba reagujú a udržiavajú rovnováhu. Kombinujúc biológiu s informatikou, v tejto lekcii študenti vytvoria simuláciu následkov nadmerného rybolovu pomocou podmienok imitujúcich príčiny a následky z reálneho života. "
         },
         "csc-ecosystems-2023/Balancing the Ecosystem (pilot)": {
           "name": "Vyváženie ekosystému",
-          "overview": "V tejto lekcii **budovania zručnosti** si študenti prečítajú a potom naprogramujú tri rôzne riešenia problému nadmerného rybolovu.\n\nTáto lekcia začína tam, kde predchádzajúca lekcia skončila, modelom nevyváženého vodného ekosystému. Po prvé, študenti upravia správanie lode tak, aby sa mohla pohybovať iba v určenej „rybolovnej zóne“. Po druhé, študenti naprogramujú novú udalosť, aby špecifikovali „rybársku sezónu“ a „sezónu bez rybolovu“. Po tretie, študenti sa naučia používať premennú na sledovanie počtu rýb, ktoré loď odstránila. Lekcia končí úrovňou Kontrola porozumenia, aby sa uistili, že sa študenti naučili tri riešenia nadmerného rybolovu.",
+          "overview": "V tejto lekcii si študenti naštudujú a následne naprogramujú tri rôzne riešenia problému nadmerného rybolovu.\n\nTáto lekcia začína tam, kde skončila tá predchádzajúca a to modelom nevyváženého vodného ekosystému. Ako prvé študenti upravia správanie lode tak, aby sa mohla pohybovať iba v určenej „zóne s povoleným rybolovom“. Potom študenti využijú novú udalosť na rozlíšenie „rybárskej sezóny“ a „sezóny so zakázaným rybolovom“. Následne sa študenti naučia používať premenné na sledovanie počtu ulovených rýb. Lekcia končí kontrolným cvičením, v ktorom študenti preukážu, že si osvojili všetky tri riešenia problému nadmerného rybolovu.",
           "preparation": "-   Prečítajte si uvedený článok o <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\" target=\"_blank\">porozumení nadmernému rybolovu</a>. Lešenie podľa potreby, aby vyhovovalo potrebám vašich študentov. \n-   Zahrajte si úrovne a prečítajte si snímky <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">lekcií</a> \n-   Rozhodnite sa o stimulovaní medzi pracovným časom študenta a celou skupinovou výučbou.\n-   Zvážte priradenie odporúčanej prípravy študentom [(odkaz)](https://studio.code.org/s/csc-ecosystems-2023/lessons/2#activity-4986903).\n-   Zvážte tieto súvisiace možnosti rozšírení [(odkaz)](https://studio.code.org/s/csc-ecosystems-2023/lessons/2#activity-4986904).\n\n##### Voliteľné:\n\n-   [Optional] Prečítajte si túto <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">prezentáciu Užitočné rady.</a> \n-   [Optional] Prečítajte si túto príručku pre <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">učiteľov k ladeniu,</a>  aby ste boli pripravení pomôcť študentom nájsť a opraviť chyby v ich kóde. ",
           "purpose": "Študenti sa budú naďalej učiť o vyvážených a nevyvážených ekosystémoch. Pomocou vedeckého článku o nadmernom rybolove ako základu si študenti rozvinú bohaté pochopenie súvislostí medzi organizmami v ekosystéme. Študenti budú mať nakoniec príležitosť uplatniť to, čo sa naučili, modelovaním miestneho ekosystému. "
         },
         "csc-ecosystems-2023/lesson-3": {
-          "name": "Kódovanie môjho ekosystému",
-          "overview": "V tejto lekcii **budovania zručnosti** študenti preskúmajú niekoľko rôznych simulácií ekosystémov. Študenti sa môžu rozhodnúť preskúmať ekosystém dažďového pralesa, púšte, arktického alebo mokradového ekosystému. Prevezmú úlohu ekológa a skúmajú interakcie medzi rastlinami a zvieratami v potravinovom reťazci každého ekosystému. Študenti si prečítajú pokyny, aby pochopili výzvu, ktorej čelí každý ekosystém. Potom upravia príslušný kód, aby obnovili rovnováhu ekosystému. ",
+          "name": "Simulácia vlastného ekosystému",
+          "overview": "V tejto lekcii študenti preskúmajú simulácie rôznych druhov ekosystémov. Môžu si vybrať medzi ekosystémom dažďového pralesa, púšťou, arktickým ekosystémom, alebo ekosystémom mokradí. Študenti sa vžijú do role ekológa a preskúmajú interakcie medzi rastlinami a zvieratami v potravinovom reťazci každého ekosystému. Každé cvičenie obsahuje inštrukcie s vysvetlením vyzvy, ktorej daný ekosystém čelí. Na ich základe študenti upravia príslušný kód tak, aby bola rovnováha ekosystému obnovená. ",
           "preparation": "-   Zahrajte si úrovne a prečítajte si snímky <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">lekcií</a> \n-   Rozhodnite sa o stimulovaní medzi pracovným časom študenta a celou skupinovou výučbou.\n-   Vytlačte si zápisník ekológa pre každého študenta\n-   Zvážte tieto [možnosti rozšírenia](https://studio.code.org/s/csc-ecosystems-2023/lessons/3#activity-4852074) po tejto lekcii"
         },
         "csc-mappinglandmarks-2023/US Landmarks": {
@@ -6533,9 +6584,6 @@
           "overview": "⚠️ Táto lekcia je určená pre učebne, ktoré chcú ukázať celú sériu videí [Ako AI funguje](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) za **jeden deň**. Nie je určený na to, aby sa vyučoval postupne s ostatnými lekciami v tejto jednotke, ktorá predstavuje každé video jeden deň po druhom.\n\nŠtudenti sledujú každé video porovnaním slovnej zásoby z videa a potom odpovedajú na reflexnú otázku o každom videu. Plán lekcií a snímky sú veľmi riedke a otvorené, aby umožnili improvizáciu a prispôsobenie tak, aby vyhovovali vašej triede.",
           "preparation": "-   Vytlačte sprievodcu aktivitami\n-   Premietajte snímky na videoprojektor"
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Hodina Kódu 2013"
-        },
         "applab-intro/Intro to App Lab": {
           "name": "Úvod do App Labu",
           "overview": "Tento výukový kurz je navrhnutý ako rýchly úvod do programovania v programovacom prostredí App Lab, čo je výkonný nástroj na vytváranie a zdieľanie aplikácií. Vo výukovom kurze ako takom sa žiaci naučia vytvárať a ovládať tlačidlá, text, obrázky, zvuky a obrazovky v jazyku JavaScript pomocou blokov alebo textu. Na konci kurzu dostanú čas na to, aby rozpracovaný projekt rozšírili na niektorú z týchto aplikácií: „Interaktívny príbeh“, „Pohľadnica“ alebo „Osobnostný kvíz“. Môžu tiež pokračovať vo vytváraní ďalších projektov dostupných na stránke code.org/applab.\n\nHlavné je, aby sa pri Hodine kódu s App Labom dobre zabavili!\n\n**Vhodnosť pre vekovú kategóriu:** Tento výukový kurz je navrhnutý pre žiakov nad 13 rokov. Keďže im umožňuje používať vlastné zvuky a obrázky, mladší žiaci by ho nemali používať bez dohľadu dospelých. Kvôli ochrane súkromia žiakov nebudú môcť žiaci mladší ako 13 rokov tento kurz používať, pokiaľ im najprv nevytvoríte účty vo vami spravovanej sekcii.",
@@ -6711,9 +6759,9 @@
           "purpose": "Cieľom tohto kurzu je poskytnúť žiakom rýchly úvod do **strojového učenia**, čo je typ **umelej inteligencie**. Žiaci preskúmajú, ako sa používajú **trénovacie údaje** na to, aby model strojového učenia dokázal klasifikovať nové údaje. Žiaci by mali získať pozitívne skúsenosti počas tohto kurzu a, čo je ešte dôležitejšie, mali by byť motivovaní ďalej sa učiť informatiku. "
         },
         "outbreak/Outbreak": {
-          "overview": "Táto hodina kombinuje **budovanie zručností** v súvislosti s udalosťami s **miniprojektom**, v rámci ktorého si žiaci vytvoria vlastnú počítačovú simuláciu v Sprite Labe. Žiaci budú skúmať simuláciu, aby pochopili, ako rýchlo sa môže vírus šíriť a čo sa dá urobiť na jeho spomalenie. ",
-          "preparation": "-   Prejdite cez hlavolamy a nájdite potenciálne problémové oblasti pre vašu triedu.\n-   Uistite sa, že každý žiak má zápisník na poznámky.",
-          "purpose": "V predchádzajúcej lekcii žiaci zozbierali a vyhodnotili údaje z jednoduchej simulácie.  V tejto lekcii budú žiaci postupovať podľa pokynov a naprogramujú si vlastný simulačný model. Predchádzajúce vedomosti žiakov o vypuknutí vírusov v reálnom svete budú aplikované na fiktívny scenár. ",
+          "name": "Kódovanie nákazy",
+          "preparation": "#### Jeden týždeň pred vašou Hodinou kódu\n\n-   Pred plánovaním svojho podujatia Hodiny kódu si prezrite [Učiteľskú príručku k Hodine kódu](https://hourofcode.com/us/how-to) a [Príklady dobrej praxe pre úspešných pedagógov](https://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466). \n\n-   [Zaregistrujte svoje podujatie Hodiny kódu](https://hourofcode.com/us), aby sme vám mohli poslať reklamné materiály a poskytnúť vašej triede podporu.\n\n-   Vopred skontrolujte a prejdite si on‑line kurz, ktorý budú robiť žiaci: [Nákaza](https://studio.code.org/s/outbreak/) \n\n-   Predtým, než dáte kurz na vypracovanie svojim žiakom, vyskúšajte si ho najprv vy. \n\n-   Zistite si, aké technické vybavenie máte k dispozícii, a skúste vyhodnotiť, či budete musieť pred Hodinou kódu vyriešiť nejaké problémy.\n\n#### Jeden deň pred vašou Hodinou kódu\n\n-   Každý žiak, ktorý aktivitu absolvuje, by mal dostať [certifikát](https://studio.code.org/certificates/batch). Vopred vytlačte po jednom certifikáte pre každého žiaka, aby ste si zjednodušili záverečnú fázu Hodiny kódu.\n\n-   (Nepovinné) Požiadajte žiakov, aby si na aktivitu priniesli slúchadlá.",
+          "purpose": "V tejto lekcii budú žiaci postupovať podľa pokynov a naprogramujú si vlastný simulačný model. Predchádzajúce vedomosti žiakov o vypuknutí vírusov v reálnom svete budú aplikované na fiktívny scenár. ",
           "student_overview": "Do Monster Townu prenikol vírus! Naučte sa vytvoriť simulátor vírusu a pomôžte príšerkám, aby boli opäť zdravé."
         },
         "playlab/Play Lab": {
@@ -6756,48 +6804,6 @@
           "preparation": "-   Vyskúšajte widget na kompresiu textu\n-   Preštudujte si tipy pre učiteľov a rozhodnite sa, ktoré možnosti chcete použiť",
           "purpose": "Podstatou kompresie je vyvinúť metódu alebo protokol na použitie menšieho počtu bitov na vyjadrenie pôvodnej informácie. Spôsob, akým v tejto lekcii znázorníme komprimované údaje pomocou \"slovníka\" opakujúcich sa vzorov, je podobný kompresnej schéme [LZW](http://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch), ale treba poznamenať, že LZW sa mierne líši od toho, čo žiaci robia v tejto lekcii.  Žiaci si tu vymyslia vlastný spôsob.  LZW sa nepoužíva len pri texte (súbory zip), ale aj pri formáte obrázkových súborov GIF.",
           "student_overview": "V určitom bode narazíme na hranicu fyzických možností ohľadom rýchlosti posielania bitov. Ak chceme posielať väčšie množstvo informácií rýchlejšie, musíme nájsť spôsob, ako reprezentovať rovnakú informáciu pomocou menšieho množstva bitov – musíme komprimovať dáta."
-        },
-        "applab-1hour/Room Escape": {
-          "name": "Útek z miestnosti"
-        },
-        "applab-2hour/Digital Design": {
-          "name": "Digitálny dizajn"
-        },
-        "k1hoc2017/Collector Hour of Code 2017": {
-          "name": "Zberateľská hodina kódu 2017"
-        },
-        "netsim/Overview and Setup Instructions": {
-          "name": "Prehľad a inštrukcie k nastaveniu"
-        },
-        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
-          "name": "Rovný s rovným - posielanie bitov na zdieľanej sieti"
-        },
-        "netsim/Peer to Peer - Sending Numbers": {
-          "name": "Rovný s rovným - posielanie čísel"
-        },
-        "netsim/Peer to Peer - Sending Ascii": {
-          "name": "Rovný s rovným - posielanie Ascii (americký štandardný kód)"
-        },
-        "netsim/Broadcasting messages": {
-          "name": "Vysielanie správ"
-        },
-        "netsim/Routers and addresses": {
-          "name": "Smerovače a adresy"
-        },
-        "netsim/Packets and Reliability": {
-          "name": "Pakety a spoľahlivosť"
-        },
-        "netsim/Manual DNS": {
-          "name": "Manuálne DNS"
-        },
-        "netsim/Automatic DNS node": {
-          "name": "Automatický DNS uzol"
-        },
-        "netsim/Internet Simulator Freeplay": {
-          "name": "Bezplatný internetový simulátor - Freeplay"
-        },
-        "poetry-hoc3/lesson-1": {
-          "name": "Štúdia nálady"
         },
         "allthethings/Jigsaw": {
           "name": "Skladačka"
@@ -6864,6 +6870,12 @@
         },
         "allthethings/lesson-49": {
           "name": "Hudba"
+        },
+        "applab-1hour/Room Escape": {
+          "name": "Útek z miestnosti"
+        },
+        "applab-2hour/Digital Design": {
+          "name": "Digitálny dizajn"
         },
         "20-hour/Introduction to Computer Science": {
           "name": "Úvod do informatiky"
@@ -7165,12 +7177,48 @@
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Extrémna výzva - súhrnná"
         },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Hodina Kódu 2013"
+        },
         "jigsaw/Jigsaw": {
           "name": "Skladačka",
           "overview": "V rámci tejto lekcie si žiaci vytvoria predstavu o tom, čo môžu očakávať, keď zamieria do počítačovej učebne. Začne sa krátkou diskusiou, v ktorej sa oboznámia so správaním v počítačovej učebni, a potom prejdú k používaniu počítača na riešenie online úloh.",
           "preparation": "-   Viac obsahu o online bezpečnosti nájdete na webovej stránke [Common Sense Education](https://www.commonsense.org/education/digital-citizenship).",
           "purpose": "Hlavným cieľom tejto lekcie je umožniť žiakom, aby sa zlepšovali v práci s počítačom. Pokrytím najzákladnejších funkcií počítača, ako je klikanie, presúvanie a púšťanie, stierame rozdiely medzi žiakmi a dávame všetkým možnosť zvládnuť budúce úlohy rovnako dobre. Táto lekcia tiež poskytuje skvelú príležitosť predstaviť žiakom základné termíny týkajúce sa počítačového hardvéru, napríklad „myš“, „touchpad“ či „dotyková obrazovka“ (v závislosti od toho, aké zariadenia používate).",
           "student_overview": "Dokonči úlohy presúvaním objektov."
+        },
+        "k1hoc2017/Collector Hour of Code 2017": {
+          "name": "Zberateľská hodina kódu 2017"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "Prehľad a inštrukcie k nastaveniu"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "Rovný s rovným - posielanie bitov na zdieľanej sieti"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "Rovný s rovným - posielanie čísel"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "Rovný s rovným - posielanie Ascii (americký štandardný kód)"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "Vysielanie správ"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Smerovače a adresy"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "Pakety a spoľahlivosť"
+        },
+        "netsim/Manual DNS": {
+          "name": "Manuálne DNS"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "Automatický DNS uzol"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "Bezplatný internetový simulátor - Freeplay"
         },
         "pixelation/Black & White Pixelation Tutorial": {
           "name": "Návod na čiernobiele rozpixelovanie"
@@ -7186,6 +7234,9 @@
         },
         "pixelation/Color Pixelation Freeplay": {
           "name": "Farebné rozpixelovanie - voľná hra"
+        },
+        "poetry-hoc3/lesson-1": {
+          "name": "Štúdia nálady"
         }
       }
     }

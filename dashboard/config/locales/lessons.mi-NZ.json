@@ -239,6 +239,24 @@
         "pre-express-2019/Spelling Bee": {
           "name": "Ohu Takikupu"
         },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Ngā Koromeke"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Ngā Takunetanga"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Ngā Here"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Ngā Taumahi"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Ngā Taurangi"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Mō Ngā Koromeke"
+        },
         "coursea-2020/Programming: Happy Maps": {
           "name": "Ngā Mahere Harikoa"
         },
@@ -431,9 +449,6 @@
         "express-2023/Dance Party": {
           "name": "Te Pāti Kanikani"
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Hour of Code 2013"
-        },
         "aquatic/Aquatic": {
           "name": "Toihuke: Rerenga Moana"
         },
@@ -466,12 +481,6 @@
         },
         "minecraft/Minecraft Hour of Code Designer": {
           "name": "Pūhoahoa Hour of Code Mahimaina"
-        },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
         },
         "playlab/Play Lab": {
           "name": "Taiwhanga Tākaro"
@@ -799,6 +808,9 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Wero Nui Rawa Atu - Matawhānui"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Hour of Code 2013"
         },
         "jigsaw/Jigsaw": {
           "name": "Pangahono"

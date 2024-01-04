@@ -1697,21 +1697,21 @@ it-IT:
         markdown: |
           # Sito web di esempio
 
-          Fai clic sul sito web in basso per scoprire alcuni nuovi tipi di stile per le tue pagine.
+          Clicca sul sito web in basso per scoprire alcuni nuovi tipi di stile per le tue pagine.
 
           [![](https://images.code.org/4343b7c16ca18f6d2c003bf95d756f42-image-1585189253769.png)](https://codeprojects.org/g4ZEsGYTllMm_2Ien3QDtJ4wya6onDyRVzRjWiKNdLo/)
       CSD U2 Sample CSS text_2022:
         markdown: |
           # Sito web di esempio
 
-          Fai clic sul sito web in basso per scoprire alcuni nuovi tipi di stile per le tue pagine.
+          Clicca sul sito web in basso per scoprire alcuni nuovi tipi di stile per le tue pagine.
 
           [![](https://images.code.org/4343b7c16ca18f6d2c003bf95d756f42-image-1585189253769.png)](https://codeprojects.org/g4ZEsGYTllMm_2Ien3QDtJ4wya6onDyRVzRjWiKNdLo/)
       CSD U2 Sample CSS text_2023:
         markdown: |
           # Sito web di esempio
 
-          Fai clic sul sito web in basso per scoprire alcuni nuovi tipi di stile per le tue pagine.
+          Clicca sul sito web in basso per scoprire alcuni nuovi tipi di stile per le tue pagine.
 
           [![](https://images.code.org/4343b7c16ca18f6d2c003bf95d756f42-image-1585189253769.png)](https://codeprojects.org/g4ZEsGYTllMm_2Ien3QDtJ4wya6onDyRVzRjWiKNdLo/)
       CSD U2 Sample classes_2021:
@@ -2044,19 +2044,6 @@ it-IT:
 
           [<img src="https://images.code.org/7331e5d4b1dda825360217270212ed46-image-1566240324800.png" style="float: left; margin: 10px">](https://codeprojects.org/5FQC3-_R1-LCbwW5oRUVt2h7BKe-N5OBaBr_OfTlxpk/)
       CSD U2 Top Websites_2018_2019_pilot_2022:
-        markdown: |
-          # Risoluzione dei problemi sui siti web
-
-          Ecco alcuni siti Web che sono stati creati per risolvere un problema. Scegli due siti e usali per completare la guida alle attività.
-
-          [<img src="https://images.code.org/752da9829923228ba71fd32499c2a5bf-image-1566856199999.png" style="float: left; margin: 10px">](https://codeprojects.org/3zq0Xy-f0olOr1uy1wzTzdFqvq4bGQx0zi_PrWM5p8Y)
-
-          [<img src="https://images.code.org/3dbd54718965bf83f0695422d5600b0c-image-1566240318585.png" style="float: left; margin: 10px">](https://codeprojects.org/0YXSEeSdj7HHu8NqZndJKlRz7dO1Vxj8o70HhBSfTHU/)
-
-          [<img src="https://images.code.org/37b9660399cb69d5c0bbc2603e2c43da-image-1566240321606.png" style="float: left; margin: 10px">](https://codeprojects.org/kMDTPWRtSww05TgT-ZnhnNjpStohzsZGRmBxRTtV6cA/)
-
-          [<img src="https://images.code.org/7331e5d4b1dda825360217270212ed46-image-1566240324800.png" style="float: left; margin: 10px">](https://codeprojects.org/5FQC3-_R1-LCbwW5oRUVt2h7BKe-N5OBaBr_OfTlxpk/)
-      CSD U2 Top Websites_2018_2019_pilot_2023:
         markdown: |
           # Risoluzione dei problemi sui siti web
 
@@ -16692,29 +16679,29 @@ it-IT:
           target=\"_blank\">questa risorsa</a> per condividere il feedback con il
           tuo partner.\n\n"
       csc_ecosystemes_foodchain_info:
-        markdown: "\n##**Tutti gli ecosistemi hanno una catena alimentare _delicatamente
-          equilibrata_ ## #The catena\nalimentare dell'ecosistema marino: >## #1.\n\n\n\n<img
+        markdown: "\n##**In tutti gli ecosistemi la catena alimentare è soggetta a
+          _un delicato equilibrio_**\n###La catena alimentare dell'ecosistema marino:\n\n\n\n<img
           src=\"https://images.code.org/2270cbb4656875db210e9871883a7d45-image-1683677265473.jpg\"
-          style= \"width:80%\">\n<div style= \"width: 80%\"> \n\nIl sole fornisce
-          energia per la fotosintesi delle alghe.\n>## #2. Le alghe vengono mangiate
-          dai pesci.\n>## #3. I pesci vengono catturati e mangiati dagli esseri umani,
-          che usano barche da pesca con reti. \n\n</div>\n\n\n##**Se c'è troppo o
-          troppo poco di un organismo nella catena alimentare, ci sono effetti sull'intero
-          ecosistema.**\n"
+          style= \"width:80%\">\n<div style= \"width: 80%\"> \n\n>###1. Il sole fornisce
+          l'energia necessaria per la fotosintesi delle alghe.\n>###2. Le alghe vengono
+          mangiate dai pesci.\n>###3. I pesci vengono catturati e mangiati dagli esseri
+          umani, che usano barche da pesca con reti. \n\n</div>\n\n\n##**Se un organismo
+          è troppo o troppo poco presente nella catena alimentare, questo comporta
+          effetti sull'intero ecosistema.**\n"
       csc_ecosystems_choice_freeplay_2023:
-        description: Ciascuna di queste simulazioni ecosistemiche deve essere modificata.
+        description: Ciascuna di queste simulazioni di ecosistemi deve essere modificata.
           Scegli un ecosistema, esegui la simulazione per osservare il problema e
-          modifica il codice per risolverlo.
+          modifica il programma per risolverlo.
         display_name: Scegli un ecosistema!
       csc_ecosystems_conditionals_overview:
-        markdown: "#Cause & Effect Conditionals \n\n</div>\n\n## Successivamente aggiungerai
-          il codice per verificare la quantità di alghe presenti nell'acqua <br>\n<img
-          src=\"https://images.code.org/8be316d4e408466b4300c614712fd652-image-1684798211348.jpg\"
+        markdown: "#Causa e effetto - Istruzioni condizionali \n\n</div>\n\n## Successivamente
+          aggiungerai il codice per verificare la quantità di alghe presenti nell'acqua
+          <br>\n<img src=\"https://images.code.org/8be316d4e408466b4300c614712fd652-image-1684798211348.jpg\"
           \ width=50% style=\"margin-right: 10px; float: right\">\n<br> <br>\n\n-
-          Innanzitutto, il computer verifica se una condizione è vera o falsa.\n\n-
-          Se è vera, allora eseguirà i blocchi all'interno.\n- Se è falso, non farà
-          nulla.\n\n<br>\n<br>\n<br>\n\n## Se ci sono troppe alghe, il corallo si
-          ammala\n\n<br>\n\n<img src=\"https://images.code.org/4d8aaa9c6562e0ca0b3d92ff7aed1d03-image-1681847951794.png\"
+          \  Innanzitutto, il computer verifica se una condizione è vera o falsa.\n\n-
+          \  Se è vera, allora eseguirà i blocchi all'interno.\n-   Se è falsa, non
+          farà nulla.\n\n<br>\n<br>\n<br>\n\n## Se ci sono troppe alghe, il corallo
+          si ammala\n\n<br>\n\n<img src=\"https://images.code.org/4d8aaa9c6562e0ca0b3d92ff7aed1d03-image-1681847951794.png\"
           \ width=20% style=\"margin-right: 10px; float: left\">\n<img src=\"https://images.code.org/941774921f367566bef36cb712cf2bfb-image-1681840836607.png\"
           \ width=30% style=\" margin-right: 10px; float: left\">\n\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n***\n\n\n\n##
           Se ci sono troppo poche alghe, i pesci se ne andranno\n<img src=\"https://images.code.org/6869f418200edfb88190c0a1e4e5cd10-image-1681838202310.png\"
@@ -16725,106 +16712,105 @@ it-IT:
           \ width=30% style=\"margin-left: 10px;float: left\">\n<br>\n<br>\n<br>\n<br>\n\n"
       csc_ecosystems_matching_cfu:
         answers:
-        - text: "! [] (https://images.code.org/284e3b6e09f5d58052a8840e756644c5-image-1683752491112.png)"
-        - text: "! [] (https://images.code.org/d466f0912cd0cadb3d655263c71c072f-image-1683752857648.jpg)"
-        - text: "! [] (https://images.code.org/de2ab3c63bc2cf7cb319be86d5dcdec0-image-1683752570051.png)"
+        - text: "![](https://images.code.org/284e3b6e09f5d58052a8840e756644c5-image-1683752491112.png)"
+        - text: "![](https://images.code.org/d466f0912cd0cadb3d655263c71c072f-image-1683752857648.jpg)"
+        - text: "![](https://images.code.org/de2ab3c63bc2cf7cb319be86d5dcdec0-image-1683752570051.png)"
         markdown: |+
           ## Guarda le tre pratiche di pesca sostenibili
 
-          Trascina il codice sull'immagine corrispondente.
+          Trascina il codice in corrispondenza dell'immagine corretta.
 
         questions:
-        - text: Crea una zona di pesca per le barche! [] (https://images.code.org/5f5e0640a82242d632db10b872280e18-image-1683753001613.gif)
+        - text: Crea una zona di pesca per le barche ![](https://images.code.org/5f5e0640a82242d632db10b872280e18-image-1683753001613.gif)
         - text: |-
-            Inizia una stagione di pesca e una stagione senza pesca
-            ! [] (https://images.code.org/becad47fd19a4d0e938a0cd10c404e41-image-1683838684289.gif)
-        - text: Stabilisci dei limiti di pesca! [] (https://images.code.org/f8bbd98ff6199af5d3ad23d64f39629d-image-1683753402925.gif)
-        title: Abbina il codice all'immagine
+            Inizia una stagione di pesca consentita e una di pesca vietata
+            ![](https://images.code.org/becad47fd19a4d0e938a0cd10c404e41-image-1683838684289.gif)
+        - text: Stabilisci dei limiti per la pesca ![](https://images.code.org/f8bbd98ff6199af5d3ad23d64f39629d-image-1683753402925.gif)
+        title: Associa il codice all'immagine
       csc_ecosystems_matching_conditionals:
         answers:
-        - text: "! [] (https://images.code.org/db1db479bec9b40c6e0574ade394d32b-image-1680118613718.36.41
+        - text: "![](https://images.code.org/db1db479bec9b40c6e0574ade394d32b-image-1680118613718.36.41
             PM.png)"
-        - text: "! [] (https://images.code.org/7c9171ab2ee2e833e5ff60d5519d8728-image-1680118617438.31.00
+        - text: "![](https://images.code.org/7c9171ab2ee2e833e5ff60d5519d8728-image-1680118617438.31.00
             PM.png)"
-        - text: "! [] (https://images.code.org/412968ba617ef19d2049e0e63d271937-image-1680118620636.30.50
+        - text: "![](https://images.code.org/412968ba617ef19d2049e0e63d271937-image-1680118620636.30.50
             PM.png)"
         markdown: |
-          ## Guardate i tre ecosistemi
+          ## Guarda i tre ecosistemi
 
-          Un ecosistema è equilibrato e gli altri due sono squilibrati in modi diversi. Trascina il codice sull'immagine corrispondente.
+          Uno degli ecosistemi è equilibrato mentre gli altri due sono squilibrati in modi diversi. Trascina il codice in corrispondenza dell'immagine corretta.
         questions:
-        - text: Troppa poca alga fa uscire il pesce.! [] (https://images.code.org/c0a28473307b7e9b0e827532d2a6ddda-image-1680212227032.png)
+        - text: Troppo poche alghe fanno andar via il pesce. ![] (https://images.code.org/c0a28473307b7e9b0e827532d2a6ddda-image-1680212227032.png)
         - text: |-
             Troppe alghe fanno ammalare il corallo. <br>
-            ! [] (https://images.code.org/1230fd96832b692b0c8ab88e77957f33-image-1680212254888.png)
+            ![](https://images.code.org/1230fd96832b692b0c8ab88e77957f33-image-1680212254888.png)
         - text: La giusta quantità di alghe permette al corallo malato di guarire
-            e mantiene sani anche i pesci.! [] (https://images.code.org/3dd061538a7a73285aa0916fdde34e77-image-1680212284869.png)
-        title: Abbina il codice all'immagine
+            e mantiene sani anche i pesci. ![](https://images.code.org/3dd061538a7a73285aa0916fdde34e77-image-1680212284869.png)
+        title: Associa il codice all'immagine
       csc_ecosystems_matching_events:
         answers:
-        - text: "! [] (https://images.code.org/bf70d0664e68690f2359a48365e50ccc-image-1680556679495.16.33
+        - text: "![](https://images.code.org/bf70d0664e68690f2359a48365e50ccc-image-1680556679495.16.33
             PM.png)"
-        - text: "! [] (https://images.code.org/fe4d2803162186a8e53ec0027f27a206-image-1680556683660.36.04
+        - text: "![](https://images.code.org/fe4d2803162186a8e53ec0027f27a206-image-1680556683660.36.04
             PM.png)"
         markdown: |+
-          Guarda cosa succede quando gli sprite si toccano in entrambe le animazioni. Quindi trascina ogni immagine del codice sull'immagine corrispondente.
+          Guarda cosa succede quando i personaggi si toccano in entrambe le animazioni. Quindi trascina ogni immagine del codice sull'immagine corrispondente.
 
 
         questions:
-        - text: La barca pesca il pesce.! [] (https://images.code.org/bcdefefdd1787330e3ad72558b5b492d-image-1680556053866.gif)
-        - text: I pesci mangiano le alghe.! [] (https://images.code.org/73febc58a3d23fbf4c66e693abec9e3d-image-1680556608027.gif)
-        title: Abbina il codice all'animazione
+        - text: La barca cattura il pesce. ![](https://images.code.org/bcdefefdd1787330e3ad72558b5b492d-image-1680556053866.gif)
+        - text: I pesci mangiano l'alga. ![](https://images.code.org/73febc58a3d23fbf4c66e693abec9e3d-image-1680556608027.gif)
+        title: Associa il codice all'animazione
       csc_ecosystems_overfishing_solution2_overview:
-        markdown: "> #Sustainable Fishing Practice #2:\n>># #Create a stagione di
-          <img src=\"https://images.code.org/123dd5c82e4c03dcbc32b775fd16ec60-image-1681937158113.png\"
-          \ width=400 style=\"margin-right: 30px; float: left\">\npesca**Stabilisci
-          dei limiti a quando le persone possono pescare. Quando non è stagione di
-          pesca, l'ecosistema ha il tempo di riprendersi \n<br>\n\n. ** #Save our
-          Seas! \n<img src=\"https://images.code.org/f3f55eddff9891464c8fb5a5405c31c3-image-1681781301257.png\"
+        markdown: "> #Pratica di pesca sostenibile #2:\n>>##Crea una stagione di pesca<img
+          src=\"https://images.code.org/123dd5c82e4c03dcbc32b775fd16ec60-image-1681937158113.png\"
+          \ width=400 style=\"margin-right: 30px; float: left\">\n**Stabilisci dei
+          limiti su quando le persone possono pescare. Quando non è stagione di pesca
+          l'ecosistema ha il tempo di riprendersi** \n<br>\n\n#Salva i nostri mari!
+          \n<img src=\"https://images.code.org/f3f55eddff9891464c8fb5a5405c31c3-image-1681781301257.png\"
           width=250 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n<img
           src=\"https://images.code.org/cbccfc42b7e1fe329ac7c9c37dfcb6b5-image-1681781296669.png\"
           width=250 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n\n</div>\n\n###
-          La pesca eccessiva è un problema che può danneggiare gli ecosistemi marini
-          e le persone che dipendono da essi. È importante praticare una pesca sostenibile
-          per aiutare a proteggere questi ecosistemi e garantire che le popolazioni
-          ittiche rimangano in salute.\n\n\n\n<br>\n<br>\n<br>\n"
+          La pesca eccessiva è un problema che può danneggiare gli ecosistemi della
+          vita marina e le persone che dipendono da essi. È importante praticare una
+          pesca sostenibile per contribuire a proteggere questi ecosistemi e garantire
+          che le popolazioni ittiche rimangano sane.\n\n\n\n<br>\n<br>\n<br>\n"
       csc_ecosystems_overfishing_solution3_overview:
-        markdown: "> #Sustainable Fishing Practice #3:\n>># #Set Fishing Limits <img
-          src=\"https://images.code.org/58d4ca52deba39a990c3165ba16e284b-image-1681747630352.png\"
+        markdown: ">#Pratica di pesca sostenibile #3:\n>>##Imposta i limiti di pesca
+          <img src=\"https://images.code.org/58d4ca52deba39a990c3165ba16e284b-image-1681747630352.png\"
           \ width=300 style=\"margin-right: 30px; float: left\">\n**Gli scienziati
           possono aiutare a capire quanti pesci possono essere catturati senza danneggiare
-          l'oceano. Allora i pescatori sapranno come pescare solo quei pesci.** #Save
-          our Seas! \n<br>\n<br>\n<br>\n\n \n<img src=\"https://images.code.org/35e557d27c4bdb5f546da560716dc10b-image-1681756387784.jpg\"
+          l'oceano. In tal modo i pescatori sapranno quali pesci catturare.** #Salva
+          i nostri mari.** \n<br>\n<br>\n<br>\n\n#Salva i nostri mari! \n<img src=\"https://images.code.org/35e557d27c4bdb5f546da560716dc10b-image-1681756387784.jpg\"
           width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n###
           Lavorando insieme, possiamo contribuire a mantenere i nostri oceani pieni
-          di vita per le generazioni a venire!\n\n\n\n<br>\n<br>\n<br>\n\n"
+          di vita per le prossime generazioni!\n\n\n\n<br>\n<br>\n<br>\n\n"
       csc_ecosystems_overfishing_solutions_overview:
-        markdown: "#Save I nostri mari! \n<img src=\"https://images.code.org/d4267a1de975b8ea46468f74187eb95c-image-1681756621010.jpg\"
+        markdown: "#Salva i nostri mari! \n<img src=\"https://images.code.org/d4267a1de975b8ea46468f74187eb95c-image-1681756621010.jpg\"
           width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n###
           L'oceano contiene molti pesci, ma a volte le persone ne catturano troppi
-          e ciò può essere dannoso per l'ecosistema. Nei livelli seguenti codificherai
-          **tre diverse pratiche di pesca sostenibili** per aiutare a proteggere i
-          nostri ecosistemi oceanici.\n\n<br>\n\n## #To scopri di più sulle soluzioni
-          sostenibili per i nostri oceani: Clicca qui > #Sustainable Fishing <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\"
-          target=\"_blank\"></a>\n<br>\n<br>\n\nPratica #1:\n>> # #Fishing Zones <img
-          src=\"https://images.code.org/c33e46309c5335dc557c67c34310e723-image-1681511054034.png\"
+          e ciò può essere dannoso per l'ecosistema. Negli esercizi seguenti programmerai
+          **tre diverse pratiche di pesca sostenibile** per aiutare a proteggere i
+          nostri ecosistemi oceanici.\n\n<br>\n\n###Scopri di più sulle soluzioni
+          sostenibili per i nostri oceani: <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\"
+          target=\"_blank\">Clicca qui</a>\n<br>\n<br>\n\n>#Buone pratiche di pesca
+          sostenibile #1:\n>> ##Aree di pesca <img src=\"https://images.code.org/c33e46309c5335dc557c67c34310e723-image-1681511054034.png\"
           \ width=300 style=\"margin-right: 30px; float: left\">\n**I pescherecci
           possono pescare solo in aree designate. Alcune aree sono vietate ai pescherecci,
-          in modo che l'ecosistema possa riprendersi. \n<br>\n<br>\n\n\n"
+          in modo che l'ecosistema possa riprendersi.** \n<br>\n<br>\n\n\n"
       csc_ecosystems_planning:
-        markdown: "# #Share La simulazione del tuo ecosistema!\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
-          PM.png\" style= \"width:50%\">\n<div style= \"width: 60%\"> \n\n###**Ecologisti!
-          È tempo di condividere la tua ricerca! **\n\n## #Explain le seguenti osservazioni
-          che hai fatto:\n\n>1. Spiegate la catena alimentare del vostro ecosistema
-          e come l'avete codificata.\n>2. C'era troppo o troppo poco di un organismo?\n>3.
-          Spiega le modifiche che hai apportato alla simulazione. \n>4. Cosa hai notato
-          dopo aver modificato i valori?\n</div>\n\n<div style=\"background-color:
+        markdown: "##Condividi la simulazione del tuo ecosistema!\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:50%\">\n<div style= \"width: 60%\"> \n\n###**Ecologi!
+          È tempo di condividere la vostra ricerca!**\n\n###Spiega le seguenti osservazioni
+          che hai fatto:\n\n>1. Spiega la catena alimentare del vostro ecosistema
+          e come l'avete programmata.\n>2. C'era una quantità eccessiva o troppo esigua
+          di un certo organismo?\n>3. Spiega le modifiche che hai apportato alla simulazione.
+          \n>4. Cosa hai notato dopo aver modificato i valori?\n</div>\n\n<div style=\"background-color:
           #a6e3e8; border-radius: 10px; color: #000000; width: 95%; padding: 0.5px
           20px 1px 20px;\">\n\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right:
-          10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px; \">\n\n###**Pronti
-          per altre attività di programmazione? ** \nProva il [Express Course] di
-          code.org (https://studio.code.org/s/express-2022) per imparare di più sull'informatica
-          secondo i tuoi ritmi.   \n<br>\n</p></div>\n"
+          10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px; \">\n\n###**Pronto
+          per altre attività di programmazione?** \nProva il [Corso rapido](https://studio.code.org/s/express-2022)
+          di code.org per imparare di più sull'informatica sguendo i tuoi ritmi.   \n<br>\n</p></div>\n"
       csc_mappinglandmarks_markdown_lesson_2:
         markdown: |+
           # #Plan La tua mappa dei punti di riferimento
@@ -17687,7 +17673,7 @@ it-IT:
 
           Grazie per aver dedicato del tempo per contribuire a rendere Alla scoperta dell'informatica ancora migliore!
 
-          <a class="btn btn-large btn-success" href="/s/csd-post-survey-2021/lockable/1/levels/1/page/1" target="top">Fai clic qui per completare il sondaggio post-corso di Alla scoperta dell'informatica</a>
+          <a class="btn btn-large btn-success" href="/s/csd-post-survey-2021/lockable/1/levels/1/page/1" target="top">Clicca qui per completare il sondaggio post-corso di Alla scoperta dell'informatica</a>
 
           (si apre in una nuova scheda)
 
@@ -26877,11 +26863,6 @@ it-IT:
 
           ## [Clicca qui](https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform) per partecipare al sondaggio sul Suggeritore di scarpe
       ml-models-shoe survey_2022:
-        markdown: |
-          ![](https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
-
-          ## [Clicca qui](https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform) per partecipare al sondaggio sul Suggeritore di scarpe
-      ml-models-shoe survey_2023:
         markdown: |
           ![](https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
 

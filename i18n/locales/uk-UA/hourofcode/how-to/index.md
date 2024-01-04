@@ -4,7 +4,7 @@ title: Керівництво з проведення «Години коду»
 
 {{ signup_button }}
 
-# How to plan your Hour of Code
+# Як спланувати Годину коду
 
 ### Приєднуйтесь до ініціативи та познайомте ваших учнів з інформатикою, виконавши наведені нижче кроки.
 
@@ -12,7 +12,7 @@ title: Керівництво з проведення «Години коду»
 
 Участь у «Годині коду» – простий та цікавий спосіб познайомити вашу дитину з інформатикою, можливо, вперше! Виберіть заняття відповідно до ваших обставин: це можуть заняття під час або після уроків, очні або онлайн. Якщо після виконання наведених нижче кроків у вас залишилися питання, ознайомтесь з нашим [керівництвом з участі]({{ localized_files/participation_guide }}).
 
-- [Перегляньте наше відеокерівництво щодо проведення «Години коду»](#how-to-video)
+- [Перегляньте наше відео щодо проведення «Години коду»](#how-to-video)
 - [Ознайомтеся з заняттями й навчальними посібниками](#explore-activities)
 - [Сторіть власний план заходу](#create-your-plan)
 - [Promote your Hour of Code](#promote-your-hour)
@@ -25,7 +25,7 @@ title: Керівництво з проведення «Години коду»
 
 <a id="how-to-video"></a>
 
-## 1. Перегляньте наше відеокерівництво щодо проведення «Години коду» <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. Перегляньте наше відео щодо проведення «Години коду» <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -72,7 +72,7 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-Після реєстрації [вашого заходу «Години коду»](/#join) ви отримаєте електронні повідомлення з новинами та корисними порадами щодо успішного проведення «Години коду». It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+Підписа [вшись на подію «Година коду](/events)», ви отримаєте корисні повідомлення електронною поштою з новинами та порадами щодо проведення успішної Години коду. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
@@ -136,7 +136,7 @@ What if a student finishes early?
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [Роздрукуйте сертифікати]({{ urls/certificates }}) для своїх учнів.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
 - Поділіться фотографіями та відео вашого заходу Години коду в соціальних мережах. Використайте #HourOfCode та @codeorg, щоби ми також могли висвітити ваш успіх!
 

@@ -8,7 +8,7 @@ class EnvironmentAwareDynamicConfigHelperTest < Minitest::Test
 
     # If tests detect that they are running in a web application context,
     # they'll instead use DynamoDB to mirror production
-    EnvironmentAwareDynamicConfigHelper.stubs(:running_web_application?).returns(true)
+    CDO.stubs(:running_web_application?).returns(true)
     assert created_datastore_for_current_environment.is_a? DynamoDBAdapter
   end
 
@@ -17,7 +17,7 @@ class EnvironmentAwareDynamicConfigHelperTest < Minitest::Test
     Rails.stubs(:env).returns(:production)
     assert created_datastore_for_current_environment.is_a? DynamoDBAdapter
 
-    EnvironmentAwareDynamicConfigHelper.stubs(:running_web_application?).returns(true)
+    CDO.stubs(:running_web_application?).returns(true)
     assert created_datastore_for_current_environment.is_a? DynamoDBAdapter
   end
 

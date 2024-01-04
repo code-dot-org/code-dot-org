@@ -5413,30 +5413,6 @@
         "00695f27-0eaf-43ef-bbd4-bd7879fbaa1c": {
           "name": "Reflektion"
         },
-        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
-          "name": "",
-          "description": ""
-        },
-        "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
-          "description": "",
-          "tips": [
-            ""
-          ]
-        },
-        "7acfc985-03d8-4d14-b244-203f8cbf4843": {
-          "name": "",
-          "description": ""
-        },
-        "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
-          "name": ""
-        },
-        "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
-          "description": ""
-        },
-        "b68a11cc-930a-4803-beca-1d4f49ede378": {
-          "name": "Reflektion",
-          "description": ""
-        },
         "9a692bd5-9de8-4718-9518-f14949953885": {
           "tips": [
             null
@@ -10652,7 +10628,22 @@
             null
           ]
         },
+        "8beb2941-dd64-44f4-9e99-6149c445067a": {
+          "tips": [
+            null
+          ]
+        },
         "500131a4-a22b-4a63-bc0a-d5d4a19c7169": {
+          "tips": [
+            null
+          ]
+        },
+        "a45155ff-19af-43ac-bf11-6ca4001816f4": {
+          "tips": [
+            null
+          ]
+        },
+        "a7d5069b-aa1c-4efa-a8d8-b58bd43a6c7b": {
           "tips": [
             null
           ]
@@ -10667,7 +10658,17 @@
             null
           ]
         },
-        "b2b4b9e6-fe3f-4d2d-a828-1402cc1572e8": {
+        "4ff33db6-6668-4423-8f1d-ad0b25f6da40": {
+          "tips": [
+            null
+          ]
+        },
+        "169c3eed-52d7-4a4b-b7c6-161cf287ed33": {
+          "tips": [
+            null
+          ]
+        },
+        "f1632666-ffc1-457a-832a-c2d3b2d1fc20": {
           "tips": [
             null
           ]
@@ -10682,7 +10683,22 @@
             null
           ]
         },
+        "b2777295-b74f-4240-bb3d-c76b79dde6a9": {
+          "tips": [
+            null
+          ]
+        },
         "9bcab929-d773-4dab-bfb0-d09892056944": {
+          "tips": [
+            null
+          ]
+        },
+        "bedaca2d-4f48-45b4-b6e9-431f6a38cc13": {
+          "tips": [
+            null
+          ]
+        },
+        "221b5029-fcfd-4791-b951-852609cb0198": {
           "tips": [
             null
           ]
@@ -17342,44 +17358,20 @@
           ]
         },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
-          "name": "Introduktion",
-          "description": ""
+          "name": "Introduktion"
         },
         "d63c77c1-4167-4360-ab98-25610934beda": {
           "name": "Utbrott",
-          "description": "",
           "progression_name": "Utbrott"
-        },
-        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
-          "description": "",
-          "progression_name": ""
-        },
-        "60837b14-7f66-4848-9c51-1c6aa9a21ad9": {
-          "description": ""
-        },
-        "13a06294-2f2a-4661-9947-46ed5843913f": {
-          "description": ""
-        },
-        "df13fa93-37df-4188-837d-462c48179625": {
-          "description": "",
-          "progression_name": ""
-        },
-        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
-          "description": "",
-          "progression_name": ""
         },
         "0620e645-f84e-47ca-809b-3dcbe803d83e": {
           "progression_name": "Fri lek"
         },
-        "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
-          "description": ""
-        },
-        "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
-          "description": ""
-        },
         "b8e884f1-eae0-4138-8778-0972f90e34d9": {
-          "name": "Reflektion",
-          "description": ""
+          "name": "Reflektion"
+        },
+        "c1c5b270-2aae-4f8c-aded-0d92811d532f": {
+          "name": "Fira"
         },
         "2c9a4cbc-51ba-45a3-80f6-cb27e681f4ba": {
           "tips": [
@@ -17539,39 +17531,69 @@
         "319eb690-ba34-4d34-9158-d30d777c4b05": {
           "name": "Reflektion"
         },
-        "b16d189d-d990-44c4-be49-8f81ac81a96e": {
-          "description": "#### Introduktion\n\nVälkomna eleverna till lektionen och presentera dagens aktivitet.",
+        "b9bacf54-bd37-42b8-85fc-bc9d07a50537": {
           "tips": [
-            "Ett sätt att presentera kodningstimmen om du inte är så bekant med kodning själv är att visa en av [våra inspirationsvideor][0]. Välj den som du tror att dina elever kommer att tycka är inspirerande och dela den nu. För elever i åldern 11 till 14 år föreslår vi [Kodningstimmen är här][1]."
+            null
           ]
         },
-        "d99fc09e-a586-41df-84b2-e552cc4735e3": {
-          "description": "Idag ska vi använda vår kreativitet samtidigt som vi lär oss att koda. Det finns många sätt att vara kreativ. Vilka sätt gillar ni att vara kreativa på?"
+        "b8daa26e-57e7-4bc5-8a6e-1e541a407c8e": {
+          "tips": [
+            null
+          ]
         },
-        "b6c8c6a3-fe85-4d42-999e-a2ba13f6739a": {
-          "description": "Uppmuntra eleverna att dela med sig av hur de uttrycker sin kreativitet, till exempel med konst, dans, musik eller skrivande. Som en följdfråga, fråga eleverna vad de använder för att bli inspirerade att skapa."
+        "c624ab39-fa08-4b83-b1e9-bf97fb42667f": {
+          "name": "Fira"
         },
-        "6fba9dd0-6069-402c-a641-53899ae667e2": {
-          "description": "Visste ni att datavetenskap kan vara väldigt kreativt? Faktum är att ni kan skapa konst med kod. Som en påminnelse är kod en uppsättning instruktioner som en dator kan förstå. Precis som att välja vilka färger som ska användas, kan valet av kod du skriver också vara en möjlighet att uttrycka er kreativitet!\n\nIdag kommer vi att använda poesi för att inspirera vår kreativa kodning. Är det någon som vet vad poesi är? Har ni någon favoritdikt eller favoritpoet?"
+        "07a73ab9-8996-453a-a87f-63628f2387db": {
+          "name": "Nästa steg"
         },
-        "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102": {
-          "description": "**Läs poesi tillsammans:** Läs några [några dikter][0] tillsammans i klassen och öva på att identifiera stämningen i varje dikt. Uppmuntra eleverna att dela med sig av sin tolkning, även om den skiljer sig från någon annans."
+        "fb665f5b-457e-484e-924a-7aa4f2e097be": {
+          "name": "Bli viral"
         },
-        "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
-          "name": "",
-          "description": "#### Allmänt stöd\n\nI slutet av den här aktiviteten kommer eleverna att ha en animerad dikt som representerar deras visuella tolkning av den dikt de valde. Den här lektionen är utformad för att ge eleverna en möjlighet att knåpa med sin kod och hitta de visuella effekter som de gillar bäst. \n\nNär du går runt i klassrummet ska du uppmuntra eleverna att:\n\n-   **Ta den tid som behövs:** De flesta nivåerna kräver att eleverna hittar de perfekta effekterna som matchar deras tolkning av stämningen i dikten. Att stanna kvar på en nivå och knåpa med sin kod ska uppmuntras. \n\n-   **Hitta en dikt som du gillar:** Dikten som visas för en elev på en ny nivå är bara ett förslag. Det finns en rullgardinsmeny för dikter med förinlästa dikter högst upp på skärmen. Be eleverna läsa igenom några och hitta en som de gillar. De kan sedan börja animera dikten de valt med kod. \n\n-   **Visa upp en slutförd nivå:** En nivåbubbla som är helt grön betyder att eleven har klarat alla kraven för den nivån. Be en elev klicka på en grön bubbla för att visa upp vad han eller hon har skapat. \n\nNär en elev har kört fast: \n\n-   **Läs instruktionerna:** Instruktionerna är en punktlista med information om hur man slutför nivån. Om en elev inte kommer vidare kan du be eleven läsa instruktionerna högt för dig och återberätta vad som står i instruktionerna med sina egna ord.\n    -   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Students can also click on this text-to-speech icon to hear the instructions read aloud.\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Håll utkik efter tips**: De flesta av nivåerna innehåller minst ett tips med mer ingående beskrivning om hur man klarar nivån. \n-   **Ta vara på buggar:** Att få en bugg i din kod är en naturlig del av kodningsprocessen. Om programmet inte gör vad eleven förväntade sig ber du denne att först berätta vad han eller hon vill ska hända, och sedan klicka på Kör för att observera vad som faktiskt händer och sedan hitta vad i koden som orsakade diskrepansen. Kom ihåg att poängtera att det är positivt att hitta och fixa buggar. Att få en bugg innebär att eleverna gör ett bra jobb med att bygga ett mer komplext program."
+        "c03cf1cb-2946-48c9-aede-76ccf4b787a9": {
+          "tips": [
+            null
+          ]
         },
-        "065eda67-268c-4f91-9caf-efb2c34493fe": {
-          "description": "#### Stöd på respektive nivå\n\n**Nivå 1:** Uppmuntra eleverna att läsa igenom dikten. Be sedan eleverna hitta en bakgrundsfärg eller effekt som matchar tonen i dikten de valt. \n\n**Nivå 2:** I det här exemplet ska eleverna läsa dikten på egen hand först och sedan trycka på Kör. Du kan fråga eleven om ljudet och effekterna som programmeraren valde matchade stämningen i dikten. Be eleverna att utveckla sina svar.\n\n**Nivå 3:** På den här nivån läggs ljud till. Eleverna kan använda hörlurar om de har.\n\n**Nivå 4:** Be eleverna läsa dikten och hitta raden där diktens stämning ändras eller om det finns en ny bild som poeten introducerar. Använd händelseblocket för att lägga till motsvarande effekter i de identifierade raderna i dikten. \n\n**Nivå 5:** I det här exemplet ska eleverna läsa dikten på egen hand först och sedan trycka på Kör. Fråga eleverna om bilderna stämmer överens med orden i dikten. Be dem att utveckla sina svar. \n\n**Nivå 6, 7, 8:** Se “Ta vara på buggar” under punkten Allmänt stöd. Uppmuntra eleverna att bygga program med mer än en övergång med sina händelseblock.\n\n**Nivå 9:** Uppmuntra eleverna att läsa igenom alla dikterna i rullgardinsmenyn för att hitta en de gillar. Berätta för eleverna att de kan dela med sig av vad de gör på den här avslutande nivån med sina vänner och familj. Nu är det dags att binda ihop alla kodnings- och datavetenskapsfärdigheterna!"
+        "3c17e9fd-b06b-478e-bb56-5734d9344b68": {
+          "tips": [
+            null
+          ]
         },
-        "51a89a3e-a8c7-41d6-bbbf-2ce16fc7e033": {
-          "description": "Om du gillade att lära dig koda idag kan du fortsätta lära dig genom att på till code.org/learn. Om du vill dela det du gjort med dina vänner och familj klickar du på ”Dela”-knappen och skickar länken till dem du vill!"
+        "913cf29b-f688-4c8b-9834-96c9b75274f5": {
+          "tips": [
+            null
+          ]
         },
-        "8630a813-1b6c-49c5-a58b-d2dc5dcccd0a": {
-          "description": "#### (Valfritt) Utvärdering: Kontrollera förståelsen (4 minuter)\n\nDela ut två fästisar per elev."
+        "f39d7745-dd63-424d-baa1-de4e4fd0f0c0": {
+          "tips": [
+            null
+          ]
         },
-        "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
-          "description": "Du har två fästisar. Skriv något du har lärt dig om kodning idag på den ena. \nSkriv något du har lärt dig om kodning idag på den andra.\n\nLåt oss dela med hela klassen genom att räcka upp handen och svara på den här frågan: Vad mer hoppas du att du kan lära dig om kodning och datavetenskap härnäst? "
+        "a7f20e25-3940-4615-b90f-8664e1661b3a": {
+          "tips": [
+            null
+          ]
+        },
+        "2a1748fb-e49f-4ae0-be55-0c603dbe3335": {
+          "tips": [
+            null
+          ]
+        },
+        "e72dd2c9-59cc-4063-9dcc-d270e7fed0fe": {
+          "tips": [
+            null
+          ]
+        },
+        "5ff66bb0-517f-486e-b70f-cad0319c23df": {
+          "tips": [
+            null
+          ]
+        },
+        "31d4feb6-1e0c-4342-988b-6730a0d0155e": {
+          "tips": [
+            null
+          ]
         }
       }
     }

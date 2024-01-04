@@ -2237,3 +2237,10 @@ es-MX:
       10:
         image: 'notes/hoc_hello_world_2021_freeplay_10.jpg'
         text: "¿Qué vas a crear? Podrías contar una historia sobre ti mismo... o inventar una con tus propios personajes especiales. Tal vez incluso utilices tus nuevos conocimientos informáticos para tu próximo proyecto escolar. ¡Despliega tu imaginación y diviértete!"
+    hoc-dance-ai-warmup:
+      2:
+        text: "¡Hola! Mi nombre es Miral Kotb y soy bailarina, desarrolladora de software y creadora de iLuminate."
+      3:
+        text: "Las ciencias de la computación se relacionan con la creatividad de muchas maneras. Muchísimas, de hecho. Me refiero a que, una vez que tienes la capacidad de escribir software, puedes innovar en lo que sea. Yo lo hago en los trajes de luces. Hay tantas cosas que puedes hacer una vez que tienes las herramientas para escribir software, y las posibilidades son realmente infinitas."
+      5:
+        text: "Usarás bloques de código para elegir diferentes bailarines, cambiar sus movimientos de baile, hacerlos responder a la música y que puedan interactuar."

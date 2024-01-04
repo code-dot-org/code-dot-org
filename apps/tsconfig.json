@@ -10,7 +10,7 @@
   "compilerOptions": {
     "jsx": "react",
     "target": "es5",
-    "lib": ["ES2019", "DOM"],
+    "lib": ["ES2022", "DOM"],
     "module": "es6",
     "rootDir": "./",
     "moduleResolution": "node",
@@ -24,7 +24,9 @@
     "allowJs": true,
     "baseUrl": "./",
     "paths": {
-      "@cdo/apps/*": ["./src/*"]
-    }
+      "@cdo/apps/*": ["./src/*"],
+      "@cdo/static/*": ["./static/*"],
+    },
+    "resolveJsonModule": true,
   }
 }

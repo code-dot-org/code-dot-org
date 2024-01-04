@@ -19,7 +19,7 @@ title: అవర్ ఆఫ్ కోడ్ మార్గదర్శనం చ
 - [మీ అవర్ ఆఫ్ కోడ్ బలంగా మొదలుపెట్టడమెలా](#how-to-start)
 - [కోడింగ్ పొందండి](#code)
 - [మీ విద్యార్థుల విజయ సంబరాలను జరుపుకోండి](#celebrate)
-- [Other Hour of Code resources for educators](#other-resources)
+- [అధ్యాపకుల కోసం ఇతర అవర్ ఆఫ్ కోడ్ వనరులు](#other-resources)
 
 * * *
 
@@ -72,7 +72,7 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-మీరు [మీ అవర్ ఆఫ్ కోడ్ ఈవెంటుకు సైనప్ చేసినప్పుడు](/#join), విజయవంతమయ్యే అవర్ ఆఫ్ కోడ్ కు ఆతిథ్యమివ్వడానికి వార్తలు మరియు చిట్కాలతో మీరు సహాయకరమైన ఇమెయిల్ కమ్యూనికేషన్లు అందుకుంటారు. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+మీరు మీ అవర్ ఆఫ్ కోడ్ ఈవెంట్ను [సైన్ అప్ చేసినప్పుడు](/events), మీరు విజయవంతమైన అవర్ ఆఫ్ కోడ్ హోస్టింగ్ కోసం వార్తలు మరియు చిట్కాలతో సహాయకారిగా ఇమెయిల్ కమ్యూనికేషన్లను అందుకుంటారు. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
@@ -136,9 +136,9 @@ What if a student finishes early?
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [మీ విద్యార్థుల]({{ urls/certificates }}) కోసం సర్టిఫికెట్లను ముద్రించండి.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-- Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- మీ అవర్ ఆఫ్ కోడ్ ఈవెంట్ యొక్క ఫోటోలు మరియు వీడియోలను సోషల్ మీడియాలో షేర్ చేయండి. #HourOfCode మరియు @codeorg ను ఉపయోగించండి కాబట్టి మేము మీ విజయాన్ని కూడా హైలైట్ చేయవచ్చు!
 
 * * *
 
@@ -147,7 +147,7 @@ What if a student finishes early?
 ## విద్యాబోధకుల కొరకు ఇతర అవర్ ఆఫ్ కోడ్ వనరులు:
 
 - Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators.
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- అవర్ ఆఫ్ కోడ్ [తరచుగా అడిగే ప్రశ్నలు సమీక్ష](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)ించండి.
 
 ### What comes after the Hour of Code?
 

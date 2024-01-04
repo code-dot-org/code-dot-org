@@ -1,4 +1,4 @@
-@import 'color.scss', 'font.scss', 'breakpoints.scss', 'barlow-semi-condensed-font';
+@import 'color.scss', 'font.scss', 'breakpoints.scss';
 
 // Homepage hero banner
 
@@ -45,7 +45,7 @@
       }
 
       h1 {
-        font-family: $barlowSemiCondensed-semibold;
+        font-family: var(--barlowSemiCondensed-semibold);
         font-size: 3.5em;
         margin: 0;
 
@@ -75,7 +75,8 @@
         padding: 0.625em 1em;
         margin: 0.5em 0;
         font-size: 1.15em;
-        font-family: 'Gotham 5r', sans-serif;
+        font-family: var(--main-font);
+        font-weight: var(--semi-bold-font-weight);
         line-height: 1.2;
         text-decoration: none;
         text-align: center;
@@ -161,7 +162,7 @@
 
     h1 {
       font-size: 1.75em;
-      font-family: $barlowSemiCondensed-semibold;
+      font-family: var(--barlowSemiCondensed-semibold);
       line-height: 1.2;
       color: $neutral-white;
       margin: 0 auto 6px;
@@ -176,7 +177,8 @@
     }
 
     p {
-      font-family: $gotham-regular;
+      font-family: var(--main-font);
+      font-weight: var(--regular-font-weight);
       font-size: 1.15em;
       line-height: 1.3;
       margin-bottom: 0;
@@ -192,7 +194,8 @@
     background: $neutral-white;
     border-color: $neutral-white;
     color: $neutral_dark;
-    font-family: $gotham-bold;
+    font-family: var(--main-font);
+    font-weight: var(--semi-bold-font-weight);
     height: unset;
     padding: 0.625em 1.5em;
     margin: 0;

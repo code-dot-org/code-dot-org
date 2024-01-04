@@ -1981,6 +1981,9 @@
           "name": "Funksjoner med parametre",
           "type": "Video"
         },
+        "fucntions_devices/csd/2023": {
+          "name": "Funksjoner"
+        },
         "teacher_forum_1/csd/2023": {
           "name": "Lærer-Forum"
         },
@@ -2406,11 +2409,6 @@
         },
         "video-text-compression/text-compression/unversioned": {
           "type": "Video"
-        },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": "",
-          "type": ""
         }
       }
     }

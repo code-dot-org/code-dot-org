@@ -159,7 +159,6 @@ lt:
           description_short: Išmok programuoti robotus ir sukurk savo Žvaigždžių Karų žaidimą tolimoje galaktikoje.
           student_description: Išmok programuoti robotus ir sukurk savo Žvaigždžių Karų žaidimą tolimoje galaktikoje.
         mc:
-          title: Minecraft programavimo valanda
           description: Panaudokite kodo blokelius aprašant Stivo ir Alekso nuotykius šiame Minecraft pasaulyje
           description_short: Tyrinėk Minecraft pasaulį koduodamas.
           student_description: Panaudokite kodo blokelius aprašant Stivo ir Alekso nuotykius šiame Minecraft pasaulyje
@@ -1449,6 +1448,8 @@ lt:
           lessons:
             lesson-5:
               name: Žinių patikrinimas
+            lesson-6:
+              name: 1 pamoka
         pre-express-2023:
           lesson_groups:
             csf_loops:
@@ -1573,3 +1574,18 @@ lt:
               display_name: Sąlyginiai sakiniai
             lessonGroup-5:
               display_name: Kintamieji
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Įvadas
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Įvadas
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Įvadas
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Įvadas

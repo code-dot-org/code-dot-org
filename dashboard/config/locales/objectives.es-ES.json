@@ -1445,12 +1445,6 @@
         "9ea5d8fd-1b7d-4655-b4b1-75fd09545838": {
           "description": "Compartir un artefacto creativo con otros estudiantes."
         },
-        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
-          "description": "Crea nuevos sprites y asígnales disfraces y ubicaciones."
-        },
-        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
-          "description": "Crea una animación interactiva utilizando sprites y eventos."
-        },
         "0476cbe2-4b38-4943-8a29-10e8f9307666": {
           "description": " Comunicarse y colaborar con los compañeros para resolver un problema "
         },
@@ -4937,14 +4931,14 @@
         "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
           "description": "Utiliza la terminología adecuada cuando te refieras a un ratón de ordenador, un trackpad o una pantalla táctil."
         },
-        "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
-          "description": "Desarrollar programas que respondan a eventos cronometrados."
+        "120d0539-1db0-452c-ab3c-e15980fbef26": {
+          "description": "Reflexionen sobre el uso de las computadoras en el proceso creativo"
         },
-        "1e1c0724-7d86-4304-a73b-6f083be036fc": {
-          "description": "Ilustrar los cambios de humor de un poema."
+        "3d8bf8f0-1aa6-4758-9acb-f2fc35e3af5a": {
+          "description": "Utiliza la IA para seleccionar y generar efectos especiales basados en emojis para mejorar la experiencia visual de su fiesta de baile."
         },
-        "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
-          "description": "Representar el lenguaje figurado y literal en un texto."
+        "eaa9f1b1-c83f-4cc7-aff7-c1da143706a1": {
+          "description": "Utiliza conceptos básicos de las ciencias de la computación para programar elementos interactivos que respondan a la entrada del usuario, como pulsaciones de teclas y eventos cronometrados."
         }
       }
     }

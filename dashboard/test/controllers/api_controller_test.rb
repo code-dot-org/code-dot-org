@@ -10,7 +10,9 @@ class ApiControllerTest < ActionController::TestCase
 
     @teacher_other = create(:teacher)
 
-    @section = create(:section, user: @teacher, login_type: 'word')
+    @section_owner = create(:teacher)
+    @section = create(:section, user: @section_owner, login_type: 'word')
+    create(:section_instructor, instructor: @teacher, section: @section, status: :active)
 
     @script = create(:script, :with_levels, levels_count: 1)
     @script_level = @script.script_levels[0]
@@ -282,10 +284,7 @@ class ApiControllerTest < ActionController::TestCase
   test "should get lock state when no user_level" do
     script, level, lesson = create_script_with_lockable_lesson
 
-    get :lockable_state, params: {
-      section_id: @section.id,
-      script_id: script.id
-    }
+    get :lockable_state, params: {script_id: script.id}
     assert_response :success
     assert_match "no-store", response.headers["Cache-Control"]
     body = JSON.parse(response.body)
@@ -328,7 +327,7 @@ class ApiControllerTest < ActionController::TestCase
 
   # Helper for setting up student lock tests
   def get_student_response(script, level, lesson, student_number)
-    get :lockable_state, params: {section_id: @section.id, script_id: script.id}
+    get :lockable_state, params: {script_id: script.id}
     assert_response :success
     body = JSON.parse(response.body)
 
@@ -1150,7 +1149,7 @@ class ApiControllerTest < ActionController::TestCase
   test "should get progress for section with section script" do
     Unit.stubs(:should_cache?).returns true
 
-    assert_queries 5 do
+    assert_queries 7 do
       get :section_progress, params: {section_id: @flappy_section.id}
     end
     assert_response :success
@@ -1466,7 +1465,8 @@ class ApiControllerTest < ActionController::TestCase
 
     response = JSON.parse(@response.body)
     assert_equal @section.id, response["id"]
-    assert_equal @teacher.name, response["teacherName"]
+    assert_equal @section_owner.name, response["teacherName"]
+    assert_equal @teacher.name, response['sectionInstructors'].last['instructor_name']
     assert_equal 7, response["students"].length
   end
 

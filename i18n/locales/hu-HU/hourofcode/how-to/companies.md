@@ -135,7 +135,7 @@ A támogatás egyik legjobb módja a szájpropaganda és a Kódolás órájának
 
 ### 1. Regisztrálja a saját eseményét
 
-Miután [regisztrálsz egy Kódolás órájára](/#csatlakozás), e-mail üzeneteket fogsz kapni, amelyben híreket küldünk és hasznos ötleteket adunk ahhoz, hogy Kódolás óráját eredményesen meg tudjátok tartani. Így a helyi iskolákat és szülőket is lehet értesíteni a közelben rendezendő eseményről.
+Amikor felir [atkozik a Hour of Code eseményre](/events), hasznos e-mailes üzeneteket fog kapni hírekkel és tippekkel a sikeres kódolási óra megszervezéséhez. Így a helyi iskolákat és szülőket is lehet értesíteni a közelben rendezendő eseményről.
 
 ### 2. Posztoljon a közösségi médiában
 

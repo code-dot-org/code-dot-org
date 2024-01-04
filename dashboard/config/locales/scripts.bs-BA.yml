@@ -118,6 +118,8 @@ bs:
           lessons:
             lesson-5:
               name: Procjene
+            lesson-6:
+              name: Lekcija 1
         artist:
           description: Crtanje cool slike i dizajn s Umjetnikom!
           description_short: Crtanje cool slike i dizajn s Umjetnikom!
@@ -661,6 +663,12 @@ bs:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Poglavlje 2: Rješavanje problema podataka'
+        csd5-2024:
+          description_short: Naučite kako ljudi koriste računala za rješavanje problema
+            podataka.
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Poglavlje 2: Rješavanje problema podataka'
         csd5-dlp:
           lesson_groups:
             required:
@@ -1014,6 +1022,8 @@ bs:
           student_description: Izađite iz okvira prvog sata sa proširenim idejama
             o projektu.
           title: Nastavite plesati
+        dance-unplugged:
+          title: Plesna zabava bez granica
         data-society-2023:
           description_short: Naučite kako ljudi koriste računala za rješavanje problema
             podataka.
@@ -1286,7 +1296,6 @@ bs:
           description_short: Istražite svijet Minecraft-a putem koda
           student_description: Koristi blokove koda da bi poveo Steve ili Alex u avanturu
             kroz Minecraft svijet
-          title: Sata Kodiranja Minecraft-a
         netsim:
           title: Internet Simulator
         nevada-standards-aligned-fifth-grade-2023:
@@ -1451,7 +1460,22 @@ bs:
           description: Izbor nivoa iz Kursa 4 za testiranje upotrebljivosti.
           student_description: Izbor nivoa iz Kursa 4 za testiranje upotrebljivosti.
           title: Testiranje Upotrebljivosti
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Uvod
+          lessons:
+            lesson-7:
+              name: Uvod
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Uvod
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
+              name: Uvod
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
               name: Uvod

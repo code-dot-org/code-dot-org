@@ -54,7 +54,6 @@ class Ability
       Pd::Application::ApplicationBase,
       Pd::Application::TeacherApplication,
       Pd::InternationalOptIn,
-      :maker_discount,
       :edit_manifest,
       :update_manifest,
       :foorm_editor,
@@ -64,7 +63,6 @@ class Ability
       Foorm::LibraryQuestion,
       :javabuilder_session,
       CodeReview,
-      LearningGoalEvaluation,
       LearningGoalTeacherEvaluation
     ]
     cannot :index, Level
@@ -193,7 +191,13 @@ class Ability
       end
 
       if user.teacher?
-        can :manage, Section, user_id: user.id
+        can :manage, Section do |s|
+          s.instructors.include?(user)
+        end
+        can :destroy, SectionInstructor do |si|
+          can?(:manage, si.section) && si.instructor_id != si.section.user_id
+        end
+        can [:accept, :decline], SectionInstructor, instructor_id: user.id
         can :manage, :teacher
         can :manage, User do |u|
           user.students.include?(u)
@@ -210,11 +214,10 @@ class Ability
         can [:read, :find], :regional_partner_workshops
         can [:new, :create, :show, :update], TEACHER_APPLICATION_CLASS, user_id: user.id
         can :create, Pd::InternationalOptIn, user_id: user.id
-        can :manage, :maker_discount
         can :update_last_confirmation_date, UserSchoolInfo, user_id: user.id
         can [:score_lessons_for_section, :get_teacher_scores_for_script], TeacherScore, user_id: user.id
-        can :manage, LearningGoalEvaluation, teacher_id: user.id
         can :manage, LearningGoalTeacherEvaluation, teacher_id: user.id
+        can :manage, LearningGoalAiEvaluationFeedback, teacher_id: user.id
       end
 
       if user.facilitator?
@@ -287,7 +290,7 @@ class Ability
         can :report_csv, :peer_review_submissions
       end
 
-      if user.permission?(UserPermission::AI_CHAT_ACCESS)
+      if user.has_ai_tutor_access?
         can :chat_completion, :openai_chat
       end
     end

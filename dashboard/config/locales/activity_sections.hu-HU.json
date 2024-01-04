@@ -12242,30 +12242,6 @@
         "00695f27-0eaf-43ef-bbd4-bd7879fbaa1c": {
           "name": "Tükrözés"
         },
-        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
-          "name": "",
-          "description": ""
-        },
-        "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
-          "description": "_Ezzel a tevékenységgel egy interaktív világot fogtok létrehozni vicces karakterekkel, úgynevezett sprite-okkal. A sprite-ok szövege beszédbuborékokban jelenik meg, ahogyan azt egy képregényben vagy grafikus regényben lehet látni, és megtanuljátok azt is, hogy amikor ti vagy más rákattint egy figurára, akkor ők automatikusan reagáljanak._\n\n_ Ma „kódot” fogtok írni, ami nem jelent mást, mint olyan utasításokat, amelyeket a számítógép megért. Amikor történetet írtok, alaposan át kell gondolni, milyen szavakat használtok. Amikor kódot írtok, alaposan át kell gondolni, milyen utasításokat adtok a számítógépnek.",
-          "tips": [
-            "A Kódolás órájára nem érdemes sokat készülni, vagy hosszú bevezést mondani. Különösen a fiatal tanulók esetében a legjobb gyorsan belevágni."
-          ]
-        },
-        "7acfc985-03d8-4d14-b244-203f8cbf4843": {
-          "name": "",
-          "description": "Íme néhány tipp, amely segíthet a tanulóknak, függetlenül attól, hogy milyen szinten vannak\n\n- **Együttműködés a szomszédokkal:** Bátorítsa a diákokat, hogy ha elakadnak, beszéljenek a szomszédjukkal. Azt is meg lehet fontolni, hogy a diákok korától és képességeitől függően az osztályt párokba rendezi, és az órát a [páros programozás][0] segítségével tartja meg.  \n\n- **Instrukciók elolvasása:** Az instrukciók általában hasznos tippeket adnak a szintek teljesítéséhez. Mielőtt válaszolna a diákok kérdéseire, ellenőrizze, hogy figyelmesen elolvasták az instrukciókat, a tippeket, megnézték a videókat és a kezdő kódot.\n\n<img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\">**Elakadtak? Nézzék meg a tippeket:** Minden szint tartalmaz egy-egy tippet, tanácsot a szint teljesítéséhez, beleértve azt is, hogy milyen kódblokkokat kell kipróbálni. \n\n- **Nem kell sietni, nyugodtan lehet kísérletezni:** Az instrukciókban általában közlik a diákokkal, hogy mit kell tenniük, de ők bátran kipróbálhatják a saját ötleteiket is."
-        },
-        "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
-          "name": "Helló világ"
-        },
-        "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
-          "description": "Ha egy csoport vagy egy diák hamarabb végez, bátorítsa őket, hogy folytassák a projekt építését az utolsó szinten. Ha a diákok nem tudják, hogy mit kell még tenniük, kérdésekkel segítheti őket:\n\n- Milyen más sprite-okat tudnátok még hozzáadni a projekthez?\n- Átnéztétek már a jelmeztárat, vagy kipróbáltátok, hogy saját sprite-jelmezt rajzoljatok?\n- Mit mondhatnának még a sprite-jaitok?\n- Mit csináljanak a sprite-ok, amikor rákattintotok?\n- Kérje meg a diákokat, hogy osszák meg ötleteiket, tanuljanak egymástól. A [code.org/learn][0] oldalon kipróbálhatnak egy másik leckét is."
-        },
-        "b68a11cc-930a-4803-beca-1d4f49ede378": {
-          "name": "Tükrözés",
-          "description": "#### Összefoglaló értékelés\n\nKérje meg a tanulókat, hogy gondolják végig, mi is történt azon a napon. Mit tanultak a kódolásról? A sprite-okról? Az eseményekről?\n\nMit gondolnak a számítástechnikáról és a kódolásról egy órányi foglalkozás után?\n\n#### Következő lépések\n\nMondja el a diákoknak, hogy ha tetszett nekik a mai tevékenység, számos lehetőségük van a kódolás folytatására. Látogasson el a [CS Connections][0] oldalra, ahol ötleteket talál arra vonatkozóan, hogyan lehet az informatikát más tantárgyakba integrálni, vagy nézze meg a [Képzések általános iskolák számára][1] kiadványunkat."
-        },
         "9a692bd5-9de8-4718-9518-f14949953885": {
           "tips": [
             null
@@ -19983,7 +19959,22 @@
             null
           ]
         },
+        "8beb2941-dd64-44f4-9e99-6149c445067a": {
+          "tips": [
+            null
+          ]
+        },
         "500131a4-a22b-4a63-bc0a-d5d4a19c7169": {
+          "tips": [
+            null
+          ]
+        },
+        "a45155ff-19af-43ac-bf11-6ca4001816f4": {
+          "tips": [
+            null
+          ]
+        },
+        "a7d5069b-aa1c-4efa-a8d8-b58bd43a6c7b": {
           "tips": [
             null
           ]
@@ -19998,7 +19989,17 @@
             null
           ]
         },
-        "b2b4b9e6-fe3f-4d2d-a828-1402cc1572e8": {
+        "4ff33db6-6668-4423-8f1d-ad0b25f6da40": {
+          "tips": [
+            null
+          ]
+        },
+        "169c3eed-52d7-4a4b-b7c6-161cf287ed33": {
+          "tips": [
+            null
+          ]
+        },
+        "f1632666-ffc1-457a-832a-c2d3b2d1fc20": {
           "tips": [
             null
           ]
@@ -20013,7 +20014,22 @@
             null
           ]
         },
+        "b2777295-b74f-4240-bb3d-c76b79dde6a9": {
+          "tips": [
+            null
+          ]
+        },
         "9bcab929-d773-4dab-bfb0-d09892056944": {
+          "tips": [
+            null
+          ]
+        },
+        "bedaca2d-4f48-45b4-b6e9-431f6a38cc13": {
+          "tips": [
+            null
+          ]
+        },
+        "221b5029-fcfd-4791-b951-852609cb0198": {
           "tips": [
             null
           ]
@@ -31056,12 +31072,10 @@
         },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
           "name": "Bevezető",
-          "description": "**Beszéljétek meg:**\n\n- _Mit tudunk a vírus terjedéséről?_\n- _Miért terjedhet a vírus gyorsabban egy városban?_\n- _Mi segíthet lassítani a vírus terjedését?_\n\nEnnek a megbeszélésnek az a célja, hogy a tanulók felfrissítsék előzetes tudásukat és felírják ötleteik a táblára. Ez egyben lehetőség arra is, hogy megvizsgáljunk néhány tévhitet a vírusok terjedésével kapcsolatban."
+          "description": "**Beszéljétek meg:**\n\n-   _Mit tudunk a vírus terjedéséről?_\n-   _Miért terjedhet a vírus gyorsabban egy városban?_\n-   _Mi segíthet lassítani a vírus terjedését?_\n\nEnnek a megbeszélésnek az a célja, hogy a tanulók felfrissítsék előzetes tudásukat és felírják ötleteik a táblára. Ez egyben lehetőség arra is, hogy megvizsgáljunk néhány tévhitet a vírusok terjedésével kapcsolatban."
         },
         "d63c77c1-4167-4360-ab98-25610934beda": {
-          "name": "",
-          "description": "_A mai leckében a Szörnyvárosba látogattok, ahol egy vírusjárvány készül kitörni. Dr. Szörnynek szüksége van a segítségetekre a vírus terjedésének lassításához.\n\n_Egy járványszimulátort készítetek a Sprite laboratóriumban, és ezt felhasználva megértitek a vírus terjedését. Majd abban is segítetek, hogy a szörnyek újra egészségesek legyenek!_",
-          "progression_name": ""
+          "description": "\\_A mai leckében a Szörnyvárosba látogattok, ahol egy vírusjárvány készül kitörni. Dr. Szörnynek szüksége van a segítségetekre a vírus terjedésének lassításához.\n\n_Egy járványszimulátort készítetek a Sprite laboratóriumban, és ezt felhasználva megértitek a vírus terjedését. Majd abban is segítetek, hogy a szörnyek újra egészségesek legyenek!_"
         },
         "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
           "description": "**Mit kell tenni:** Olvassátok el az osztállyal a _Üdvözlünk a Szörnyvárosban_ című könyvet.",
@@ -31071,7 +31085,7 @@
           "description": "**Mit kell tenni:** Az előző leckére építve ismételjétek át a diákokkal a szókincset, a **modelleket és szimulációkat**. A szimuláció egy folyamat vagy egy rendszer számítógépes modellje."
         },
         "13a06294-2f2a-4661-9947-46ed5843913f": {
-          "description": "Ma egy olyan helyet fogunk életre kelteni kódolással, mint a Szörnyváros. Ebben a szimulációban sprite-okat használtok a szörnyek ábrázolására. A sprite-ok különböző jelmezeket viselnek, ezekkel közlik velünk, hogy betegek-e vagy egészségesek. A szörnyek mozgatásához viselkedéseket is használtok. Végül pedig eseményeket, amikkel a sprite-ok jelmezét tudjátok megváltoztatni, amikor két sprite összeér a képernyőn. Ez mutatja azt, amikor az egyik szörny átadja a vírust egy másiknak. Meg tudjátok jósolni, hogy mi fog történni a Szörnyváros szomszédaival, és segítetek nekik visszanyerni az egészségüket!_ "
+          "description": "Ma egy olyan helyet fogunk életre kelteni kódolással, mint a Szörnyváros. Ebben a szimulációban sprite-okat használtok a szörnyek ábrázolására. A sprite-ok különböző jelmezeket viselnek, ezekkel közlik velünk, hogy betegek-e vagy egészségesek. A szörnyek mozgatásához viselkedéseket is használtok. Végül pedig eseményeket, amikkel a sprite-ok jelmezét tudjátok megváltoztatni, amikor két sprite összeér a képernyőn. Ez mutatja azt, amikor az egyik szörny átadja a vírust egy másiknak. Meg tudjátok jósolni, hogy mi fog történni a Szörnyváros szomszédaival, és segítetek nekik visszanyerni az egészségüket!\\_ "
         },
         "df13fa93-37df-4188-837d-462c48179625": {
           "description": "**Mit kell tenni:** Ültesd a diákokat a számítógépükhöz, és vegyék a készségfejlesztő részt, és kövessék az egyes szintekhez tartozó utasításokat. Ha a tanulók hamarabb végeznek ezzel a résszel, akkor a kódolással való kísérletezést folytathatják a 6. szinten, amíg az egész osztály készen nem áll a következő szintre.",
@@ -31088,11 +31102,11 @@
           "description": "_Szimulációk segítségével könnyen meg lehet ismerni olyan dolgokat, amelyek a való világban nehezen megfigyelhetőek. Segítenek a tudósoknak problémákat megoldani, a problémamegoldás módját megtalálni, és új ötleteket biztonságosan és hatékonyan letesztelni. A szimulációtok segítségével megmutathatjátok, hogyan néz ki egy víruskitörés a Szörnyvárosban._"
         },
         "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
-          "description": "**Beszéljétek meg:**\n\n- Miért hasznosak a szimulációk a való világban? \n- Hogyan segítenek a szimulációk megérteni a körülöttünk lévő világot? \n- Hogyan lehet ötletek tesztelését szimulációk segítségével javítani? \n\nA megbeszélés célja a diákokkal megértetni, hogy szimulációk segítségével komplex rendszereket lehet modellezni interaktív módon. Azt is látniuk kell, hogy szimulációk segítségével az emberek gyorsan, olcsón és biztonságosan tesztelhetik ötleteiket. "
+          "description": "**Beszéljétek meg:**\n\n-   Miért hasznosak a szimulációk a való világban? \n-   Hogyan segítenek a szimulációk megérteni a körülöttünk lévő világot? \n-   Hogyan lehet ötletek tesztelését szimulációk segítségével javítani? \n\nA megbeszélés célja a diákokkal megértetni, hogy szimulációk segítségével komplex rendszereket lehet modellezni interaktív módon. Azt is látniuk kell, hogy szimulációk segítségével az emberek gyorsan, olcsón és biztonságosan tesztelhetik ötleteiket. "
         },
         "b8e884f1-eae0-4138-8778-0972f90e34d9": {
           "name": "Tükrözés",
-          "description": "**Segítség:**\n\n- Miben hasonlít ez a szimuláció a való világhoz? Miben különbözik?\n- Mit változtatnál meg a szimulációdban, mit adnál hozzá a szimulációdhoz?"
+          "description": "**Segítség:**\n\n-   Miben hasonlít ez a szimuláció a való világhoz? Miben különbözik?\n-   Mit változtatnál meg a szimulációdban, mit adnál hozzá a szimulációdhoz?"
         },
         "2c9a4cbc-51ba-45a3-80f6-cb27e681f4ba": {
           "tips": [
@@ -31273,15 +31287,6 @@
           "name": "A felhasználói felület elemeinek tulajdonságai",
           "progression_name": "A felhasználói felület elemeinek tulajdonságai"
         },
-        "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
-          "name": "Bemelegítés"
-        },
-        "59df14b7-1344-480b-8b6b-3fc94684b8bc": {
-          "name": "Fő tevékenység (régi)"
-        },
-        "3d1e45e9-9dd0-476b-b864-f0d86d0827b6": {
-          "name": "Fő tevékenység (új)"
-        },
         "f108ae93-f672-4062-b6d6-522901659990": {
           "name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés",
           "progression_name": "Számítástechnika felfedezése c. tanfolyam utáni felmérés"
@@ -31329,39 +31334,75 @@
         "6ddc599f-da51-4adc-9dcc-f13b8b53e760": {
           "description": "#### A Kódolás órája után\n\nA Kódolás órája után még számos módon lehet a számítástechnika oktatását folytatni az 5. osztályban. Íme néhány ötlet:\n\n-   Végezzék el a diákok a [Code Studio A számítástechnika alapjai](http://code.org/educate/k5) tanfolyamokat. Ez a hat tanfolyam fiatal diákoknak készült. A diákok egy sor feladvánnyal dolgoznak, amelyek során megtanulnak kódolni, a pedagógusok pedig hozzáférnek hasznos óravázlatokhoz, amelyek segítségével a tanulást izgalmassá tudják tenni. A Code.org ingyenes szakmai továbbképzést kínál ezekhez a tanfolyamokhoz, akár online, akár személyes fromában.\n\n-   Hívj meg egy informatikust, hogy beszéljen az osztálynak a munkájáról. Nem ismersz helyi informatikusokat? Keress egy önkéntest az [önkéntes térképünkön](https://code.org/volunteer/local)."
         },
-        "b16d189d-d990-44c4-be49-8f81ac81a96e": {
-          "description": "#### Színpadra állítás\n\nÜdvözöld a tanulókat az osztályban, és ismertesd a napi tevékenységet.",
+        "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
+          "name": "Bemelegítés"
+        },
+        "59df14b7-1344-480b-8b6b-3fc94684b8bc": {
+          "name": "Fő tevékenység (régi)"
+        },
+        "3d1e45e9-9dd0-476b-b864-f0d86d0827b6": {
+          "name": "Fő tevékenység (új)"
+        },
+        "b9bacf54-bd37-42b8-85fc-bc9d07a50537": {
           "tips": [
-            "A Kódolás órája bevezetésének egyik módja, ha nem nagyon ismered a kódolást, hogy bemutatod az egyik [ösztönző videónkat][0]. Válaszd ki azt, amelyikről úgy gondolod, hogy diákjaid inspirálónak találják, és oszd meg most. A középiskolások számára a [Itt a kódolás órája][1] című videót javasoljuk."
+            null
           ]
         },
-        "d99fc09e-a586-41df-84b2-e552cc4735e3": {
-          "description": "Ma a kreativitásunkat fogjuk használni, miközben kódolni tanulunk. Sokféleképpen lehetünk kreatívak. Ti milyen módon szerettek kreatívak lenni? "
+        "58bdb8b5-159d-4b7a-aae7-d250213c1379": {
+          "progression_name": "Bevezető videó"
         },
-        "b6c8c6a3-fe85-4d42-999e-a2ba13f6739a": {
-          "description": "Bátorítsd a tanulókat, hogy mondják el, hogyan fejezik ki kreativitásukat, például művészettel, tánccal, zenével vagy írással. Következő kérdésként kérdezd meg a tanulókat, hogy mi inspirálja őket kreativitásukban. "
+        "b8daa26e-57e7-4bc5-8a6e-1e541a407c8e": {
+          "tips": [
+            null
+          ]
         },
-        "6fba9dd0-6069-402c-a641-53899ae667e2": {
-          "description": "Tudtad, hogy az informatika nagyon kreatív tud lenni? Valójában kóddal művészetet is létre lehet hozni. Emlékeztetőül: a kód olyan utasítások összessége, amelyeket a számítógép képes megérteni. Ahogyan a festék színeinek kiválasztása, úgy a kód megírása is lehetőséget adhat a kreativitásod kifejezésére! \n\nMa a költészetet fogjuk használni a kreatív kódolás ösztönzésére. Tudja valaki, mi az a költészet? Van kedvenc verse vagy költője? "
+        "fb665f5b-457e-484e-924a-7aa4f2e097be": {
+          "name": "Megosztás"
         },
-        "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102": {
-          "description": "** Olvassatok együtt verset:** Olvassatok el együtt [néhány verset][0], és gyakoroljátok az egyes versek hangulatának szavakba foglalását. Bátorítsd a tanulókat, hogy osszák meg értelmezésüket, még akkor is, ha az eltér valaki másétól."
+        "c03cf1cb-2946-48c9-aede-76ccf4b787a9": {
+          "tips": [
+            null
+          ]
         },
-        "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
-          "name": "Versművészet",
-          "description": "#### Általános támogatás\n\nA tevékenység végére a tanulóknak lesz egy animált versük, amely az általuk választott vers vizuális értelmezését mutatja be. Ez a lecke arra szolgál, hogy a tanulóknak lehetőséget adjon arra, hogy játszadozzanak a kódjukkal, és megtalálják a nekik legjobban tetsző vizuális hatásokat. \n\nA terem körbejárása közben bátorítsa a tanulókat:\n\n- **Ne siessetek:** A legtöbb szinten a tanulóknak meg kell találniuk a vers hangulatának értelmezéséhez illő, tökéletes effekteket. A szinten maradás és a kódjukkal való játszadozás kifejezetten javasolt.\n\n- **Keress egy verset, ami tetszik neked:** A diák számára megjelenő vers az új szinten csak egy javaslat. A játékterület tetején található egy legördülő menü előre betöltött versekkel. Kérd meg a tanulókat, hogy olvassanak el néhányat, és találjanak egyet, amelyik megszólítja őket. Ezután elkezdhetik a kiválasztott verset kóddal animálni. \n\n- **Mutass meg egy teljesített szintet:** Minden olyan szintbuborék, amely teljesen zöld, azt jelenti, hogy a tanuló sikeresen teljesítette az adott szint összes követelményét. Kérd meg a tanulót, hogy kattintson egy zöld buborékra, hogy megmutassa, mit alkotott. \n\nAzokra az esetekre, amikor a tanuló úgy érzi, elakadt: \n\n- **Olvasd el az instrukciókat:** Az instrukciók felsorolásszerűen tartalmazzák a szint teljesítésének módját. Ha egy tanuló úgy érzi, hogy elakadt, kérd meg, hogy olvassa fel hangosan az instrukciókat, és kérd meg, hogy saját szavaival ismételje el, amit az instrukciók tartalmaznak. \n    - <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> A tanulók a szövegről-beszédre ikonra is kattinthatnak, hogy meghallgassák az instrukciókat hangosan felolvasva.\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Nézd meg a tippeket**: A legtöbb szint legalább egy tippet tartalmaz, amely több részleteket tartalmaz a szint teljesítésének módjáról. \n- **Dicsérd a hibákat:** A kódolás természetes része, hogy a kódodban hiba keletkezik. Ha a program nem azt csinálja, amit vártak, kérje meg a tanulót, hogy először mondja el, mit szeretne, hogy történjen, kattintson a futtatás gombra, hogy megfigyelje, mi történik valójában, majd keresse meg a kódjában azt a helyet, amely az eltérést okozta. Ne feledd megdicsérni a hibák megtalálásáért és kijavításáért. A hiba megtalálása azt jelenti, hogy a tanulók nagyszerű munkát végeznek egy összetettebb program megalkotásában. "
+        "3c17e9fd-b06b-478e-bb56-5734d9344b68": {
+          "tips": [
+            null
+          ]
         },
-        "065eda67-268c-4f91-9caf-efb2c34493fe": {
-          "description": "#### Szintenkénti támogatás\n\n**1. szint:** Bátorítsd a tanulókat, hogy olvassák végig a verset. Ezután kérd meg a tanulókat, hogy találjanak olyan háttérszínt vagy hatást, amely megfelel az általuk választott vers hangulatának.\n\n**2. szint:** Ebben a példában a tanulók először olvassák el a verset egyedül, majd nyomják meg a Futtatás gombot. Megkérdezheted a tanulót, hogy a programozó által választott hang és effektek illeszkednek-e a vers hangulatához. Kérd meg a tanulókat, hogy fejtsék ki véleményüket.\n\n**3. szint:** Ez a szint a hangokat mutatja be, a tanulók használhatnak fejhallgatót, ha van. \n\n**4. szint:** Kérd meg a tanulókat, hogy olvassák el a verset, és keressék meg azt a sort, ahol a vers hangulata megváltozik, vagy ahol a költő új képet vezet be. Az eseményblokk segítségével adjanak megfelelő effekteket a vers azonosított soraihoz.\n\n**5. szint:** Ebben a példában a tanulók először olvassák el a verset egyedül, majd nyomják meg a Futtatás gombot. Kérdezd meg a tanulót, hogy a képek illeszkednek-e a vers szavaihoz. Kérd meg őket, hogy fejtsék ki véleményüket.\n\n**6., 7., 8. szint:** Lásd az \"Dicsérd a hibákat\" című részt az Általános támogatás szakaszban. Bátorítsd a tanulókat, hogy az eseményblokkokkal egynél több átmenetet tartalmazó programokat építsenek.\n\n**9. szint:** Bátorítsd a tanulókat, hogy olvassák végig a legördülő menüben található összes verset, hogy találjanak egyet, amelyik tetszik nekik. Mondd el a tanulóknak, hogy ezen az utolsó szinten elkészített verseiket megoszthatják barátaikkal és családtagjaikkal. Itt az ideje, hogy összerakjuk a kódolási és az ELA készségeket! "
+        "913cf29b-f688-4c8b-9834-96c9b75274f5": {
+          "tips": [
+            null
+          ]
         },
-        "51a89a3e-a8c7-41d6-bbbf-2ce16fc7e033": {
-          "description": "Ha élvezted a mai kódolás tanulást, a code.org/learn oldalon folytathatod a tanulást. Ha szeretnéd megosztani barátaiddal és a családoddal, amit készítettél, kattints a \"Megosztás\" gombra, és küldd el a linket annak, akinek szeretnéd!"
+        "f39d7745-dd63-424d-baa1-de4e4fd0f0c0": {
+          "tips": [
+            null
+          ]
         },
-        "8630a813-1b6c-49c5-a58b-d2dc5dcccd0a": {
-          "description": "#### (választható) Értékelés: A megértés ellenőrzése (4 perc)\n\nOssz ki diákonként két öntapadós jegyzetlapot."
+        "a7f20e25-3940-4615-b90f-8664e1661b3a": {
+          "tips": [
+            null
+          ]
         },
-        "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
-          "description": "Két öntapadós jegyzetlapotok van. Az egyikre írjatok egy dolgot, amit ma tanultatok a kódolásról. \nA másikra írjatok egy dolgot, amit ma a költészetről tanultatok. \n\nKézfelemeléssel, osszátok meg az egész osztállyal: Mit szeretnétek a legközelebb tanulni a kódolásról és az informatikáról?"
+        "2a1748fb-e49f-4ae0-be55-0c603dbe3335": {
+          "tips": [
+            null
+          ]
+        },
+        "e72dd2c9-59cc-4063-9dcc-d270e7fed0fe": {
+          "tips": [
+            null
+          ]
+        },
+        "5ff66bb0-517f-486e-b70f-cad0319c23df": {
+          "tips": [
+            null
+          ]
+        },
+        "31d4feb6-1e0c-4342-988b-6730a0d0155e": {
+          "tips": [
+            null
+          ]
         }
       }
     }

@@ -21,25 +21,27 @@ Počítačové technológie sú neoddeliteľnou súčasťou modernej kultúry a�
 
 Informatika transformuje celé odvetvia, vytvára nové podnikateľské možnosti, poháňa inovácie vo všetkých vedných oblastiach a zvyšuje produktivitu v už zavedených sektoroch ekonomiky.
 
-Informatika je základom nášho technologického sektora a výrazne prispieva do slovenskej ekonomiky.
+keďže oblasť informatiky je základným predmetom, ktorý podporuje sektor informačných technológií nášho hospodárstva, ktorý významne prispieva k hospodárskej produkcii Spojených štátov;
 
-Informatika je pre dnešný digitálny vek nevyhnutným odborom.
+keďže gramotnosť umelej inteligencie sa týka vedomostí, zručností a postojov spojených s fungovaním umelej inteligencie vrátane základných pojmov v informatike a ako používať umelú inteligenciu bezpečne, zodpovedne a eticky;
 
-Sektor informačných technológií má jedinečnú možnosť prispieť k obnove ekonomiky výskumom a vývojom nových inovácií.
+keďže oblasť informatiky vrátane umelej inteligencie sú technológie, ktoré sú schopné zásadne transformovať takmer všetky odvetvia hospodárstva Spojených štátov;
 
-Po celej krajine budú v blízkej budúcnosti tisícky voľných pozícií v sektore informačných technológií.
+keďže technologické vedúce postavenie vo všetkých oblastiach informatiky vrátane umelej inteligencie je nevyhnutnosťou hospodárskej a národnej bezpečnosti;
 
-Ak žiakom poskytneme možnosť zúčastniť sa kvalitných aktivít zameraných na informatiku, otvoríme im bohaté možnosti uplatnenia sa v danom odvetví a poskytneme im dôležité zručnosti, ktoré budú môcť využívať počas celého života.
+Nakoľko su výhľadovo otvorené tisícky pozícií v IT sektore v celej krajine;
 
-Všetci žiaci základných a stredných škôl si zaslúžia kvalitné informatické vzdelanie, čo si, okrem iného, vyžaduje aj kvalifikovaných učiteľov, prístup k technológiam a vhodné osnovy prispôsobené veku žiakov.
+Nakoľko poskytnutie možnosti študentom zúčastniť sa kvalitných aktivít na hodine informatiky im otvára bohaté možnosti uplatnenia sa v odvetví a poskytuje im kritické zručnosti, ktoré budú môcť využívať počas celého ich života;
 
-Informatika má pred sebou viaceré výzvy vrátane nízkej hodinovej dotácie na školách či nedostatočného profesijného rozvoja pre učiteľov informatiky.
+Nakoľko si každý študent zaslúži dôkladnú prípravu a IT vzdelanie vrátane prístupu ku kvalifikovaným učiteľom, technológiam a osnovám pre príslušný vek, aby sa mohol naučiť IT schopnosti na základnej i strednej škole;
 
-Učasť na Hodine kódu počas Týždňa informatiky môže pomôcť demystifikovať informačné technológie a motivovať žiakov k tomu, aby sa v informatike vzdelávali aj ďalej.
+keďže vzdelávanie v oblasti informatiky musí riešiť výzvy, vrátane zlepšenia prístupu k kurzom informatiky pre všetkých študentov a poskytovania profesionálneho rozvoja pre učiteľov informatiky;
 
-Vo svete informačných technológií existuje množstvo bariér, ktoré majú za následok nedostatočného zastúpenie žien a predstaviteľov menšín na všetkých úrovniach a vo všetkých oblastiach.
+Nakoľko účasť na Hodine Kódu počas Týždňa výuky informatiky môže pomôcť demystifikovať IT a motivovať študentov k ďaľšiemu vzdelávaniu v informatike;
 
-Grace Murray Hopper, jedna z prvých informatičiek, vyvinula nové programovacie jazyky a vytvorila štandardy pre počítačové systémy, ktoré položili základy pre mnohé pokroky v oblasti informačných technológií.
+keďže oblasť informatiky má značné prekážky spravodlivosti, ktoré treba riešiť, vrátane prilákania a udržania oblasti kandidátov rôznorodých z hľadiska rasy, etnického pôvodu a pohlavia na všetkých úrovniach a odvetviach;
+
+Nakoľko Grace Murray Hopper, jedna z prvých žien v IT vyvinula nové programovacie jazyky a vytvorila štandardy pre počítačové systémy, ktoré položili základy pre veľa pokrokov v IT; a
 
 Týždeň {{ campaign_date/start_long }} je na počesť narodenín Grace Hopper vyhlásený za Týždeň informatiky.<br />
 
@@ -47,12 +49,10 @@ Preto sa uznášame, že (PARLAMENT, VLÁDA, KRAJSKÉ/MESTSKÉ/OBECNÉ ZASTUPITE
 
 (1) podporuje zavedenie Týždňa informatiky ({{ campaign_date/full }});
 
-(2) podporuje školy, pedagógov, rodičov a zákonodarcov v tom, aby sa zapojili do Týždňa informatiky tým, že žiakom umožnia zúčastniť sa Hodiny kódu;
+(2) podporujeme školy, učiteľov, rodičov a zákonodarcov v účasti na Týždni výučby informatiky umožnením študentom zúčastniť sa Hodiny Kódu;
 
 (3) podporuje školy, učiteľov, výskumníkov, vysoké školy, podnikateľov a zákonodarcov v hľadaní mechanizmov, ktoré by učiteľom zabezpečili špičkový profesijný rozvoj, aby dokázali poskytovať udržateľné informatické vzdelanie na všetkých stupňoch vzdelávania a motivovali žiakov k spoznávaniu informatiky a jej konceptov;
 
-(4) podporuje zákonodarcov pri odstraňovaní bariér zvýhodňujúcich iné predmety na úkor informatiky, ktorá v dôsledku toho nebýva ťažiskovým predmetom;
-
-(5) podporuje všetky (aj už existujúce) programy, ktoré pomáhajú ženám a predstaviteľom menšín nájsť si uplatnenie v oblasti informatiky.
+(4) podporuje príležitosti, a to aj prostredníctvom existujúcich programov, pre študentky a študentky z rasových a etnických skupín nedostatočne zastúpených v informatike.
 
 {{ signup_button }}

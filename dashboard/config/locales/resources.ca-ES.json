@@ -5353,7 +5353,6 @@
           "type": "Recurs"
         },
         "how_ai_works_large_language_models/ai-ethics/2023": {
-          "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
           "type": "Vídeo"
         },
         "societal_impact_of_generative_ai/ai-ethics/2023": {
@@ -6801,6 +6800,10 @@
         "functions_with_parameters/csd/2023": {
           "name": "Funcions amb Paràmetres",
           "type": "Vídeo"
+        },
+        "fucntions_devices/csd/2023": {
+          "name": "Funcions",
+          "type": "Diapositives"
         },
         "mini-project_interactive_art/csd/2023": {
           "type": "Diapositives"
@@ -8845,10 +8848,8 @@
         "video-text-compression/text-compression/unversioned": {
           "type": "Vídeo"
         },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "Llista de poemes",
-          "url": "[https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O\\_ZNaX5RqHyuvBso/edit?usp=sharing][0]",
-          "type": "Diapositives"
+        "web_development_-_extra_code_in_challenge_levels/csd/2023": {
+          "type": "Recurs"
         }
       }
     }

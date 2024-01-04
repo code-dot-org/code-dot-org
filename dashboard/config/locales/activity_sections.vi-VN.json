@@ -12900,30 +12900,6 @@
         "2b5cb5b7-6a5e-4727-b8b5-128a3c546781": {
           "description": "Hãy dùng các hoạt động này để nâng cao khả năng học tập của học sinh. Bạn có thể dùng bên ngoài các hoạt động trên lớp hoặc các hoạt động bổ sung khác.\n\n**Nhìn vào bản chất**\n\nKhi chia sẻ liên kết đến câu chuyện của mình, bạn cũng chia sẻ toàn bộ mã lệnh đằng sau. Đây là cách tuyệt vời để học sinh học hỏi lẫn nhau.\n\n-   Đăng liên kết đến các câu chuyện đã hoàn thành lên mạng\n    -   Tạo câu chuyện của riêng bạn để chia sẻ!\n-   Khi học sinh tải lên liên kết, hãy yêu cầu học sinh nhấp vào nút “Cách hoạt động” để xem mã lệnh đằng sau câu chuyện.\n-   Thảo luận theo nhóm về các cách khác nhau mà bạn cùng lớp đã lập trình câu chuyện của mình.\n    -   Điều gì khiến bạn ngạc nhiên?\n    -   Bạn muốn thử điều gì?\n-   Chọn câu chuyện của người khác và nhấp vào `Remix` (chỉnh sửa) để phát triển trên nền tảng câu chuyện đó. (Đừng lo, câu chuyện gốc sẽ không bị ảnh hưởng.)"
         },
-        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
-          "name": "Bố trí sân khấu",
-          "description": "Chào mừng học sinh đến lớp và giới thiệu thật ngắn gọn về hoạt động trong ngày."
-        },
-        "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
-          "description": "_Trong hoạt động này, bạn sẽ vừa giải trí vừa tạo ra một thế giới tương tác với các nhân vật vui nhộn được gọi là nhân vật. Bạn sẽ có thể khiến nhân vật nói chuyện bằng bong bóng thoại như trong truyện tranh hoặc sách ảnh và bạn sẽ học cách làm cho họ tự động phản hồi khi bạn hoặc ai đó nhấp chuột vào._\n\n_Hôm nay bạn sẽ viết “mã lệnh”, nghĩa là một tập hợp các chỉ dẫn mà máy tính có thể hiểu được. Khi bạn viết một câu chuyện, bạn cần phải suy nghĩ cẩn thận về từ ngữ bạn sẽ sử dụng. Khi bạn viết mã lệnh, bạn cần phải suy nghĩ cẩn thận về các chỉ dẫn bạn đang cung cấp cho máy tính của mình._",
-          "tips": [
-            "Bạn sẽ muốn dành một chút thời gian để tải trước hoặc giới thiệu Giờ lập trình của mình. Đặc biệt là với những học viên nhỏ tuổi, tốt nhất bạn nên vào bài học càng nhanh càng tốt."
-          ]
-        },
-        "7acfc985-03d8-4d14-b244-203f8cbf4843": {
-          "name": "Hỗ trợ chung",
-          "description": "Dưới đây là một số mẹo có thể giúp ích cho học sinh bất kể họ đang học ở cấp độ nào\n\n-   **Hợp tác với bạn kế bên:** Khuyến khích học sinh thảo luận với bạn kế bên khi gặp khó khăn. Tùy thuộc vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc chính thức chia lớp học của mình thành từng cặp để hoàn thành bài hướng dẫn bằng phương pháp [lập trình theo cặp][0].\n\n-   **Đọc hướng dẫn:** Hướng dẫn thường cung cấp các mẹo hữu ích về cách hoàn thành cấp độ. Trước khi cho học sinh câu trả lời, hãy đảm bảo họ đã xem kỹ hướng dẫn, gợi ý, video và bất kỳ mã lệnh ban đầu nào.\n\n-  <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Bạn bị bí à? Hãy xem gợi ý:** Mỗi cấp độ có một gợi ý khuyên bạn cách vượt qua một cấp độ, bao gồm cả khối mã lệnh cần thử.\n\n-   **Hãy dành thời gian thử nghiệm.** Nhìn chung, hướng dẫn cho học sinh biết phải làm gì, nhưng họ cũng nên thoải mái thử nghiệm các ý tưởng của riêng mình."
-        },
-        "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
-          "name": "Xin chào cả thế giới"
-        },
-        "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
-          "description": "Nếu một nhóm hoặc cá nhân hoàn thành sớm, hãy khuyến khích họ tiếp tục xây dựng một dự án ở cấp độ cuối cùng. Nếu học sinh không chắc chắn phải làm gì thêm, bạn có thể nhắc họ bằng các câu hỏi:\n\n-   Bạn có thể thêm nhân vật nào khác vào dự án của mình?\n-   Bạn đã xem qua thư viện trang phục hoặc thử vẽ trang phục nhân vật của riêng mình chưa?\n-   Bạn có thể cho nhân vật của mình nói gì khác không?\n-   Nhân vật của bạn nên làm gì khi nhấp chuột?\n-   Mời học sinh chia sẻ ý kiến và học hỏi lẫn nhau. Họ cũng có thể thử hướng dẫn khác bằng cách truy cập [code.org/learn][0]."
-        },
-        "b68a11cc-930a-4803-beca-1d4f49ede378": {
-          "name": "Suy nghĩ",
-          "description": "#### Thảo luận\n\nYêu cầu học sinh suy nghĩ về các hoạt động trong ngày. Họ đã học gì về lập trình? Nhân vật? Sự kiện?\n\nHọ cảm thấy thế nào về khoa học máy tính và lập trình sau khi dành một giờ khám phá?\n\n#### Các bước tiếp theo\n\nCho học sinh biết rằng nếu họ thích hoạt động hôm nay, họ có nhiều lựa chọn để tiếp tục lập trình. Hãy truy cập [Kết nối KHMT][0] để xem ý tưởng tích hợp khoa học máy tính vào các môn học khác hoặc đọc thêm về [các khóa học có sẵn dành cho trường tiểu học][1] của chúng tôi."
-        },
         "9a692bd5-9de8-4718-9518-f14949953885": {
           "tips": [
             null
@@ -22101,7 +22077,22 @@
             null
           ]
         },
+        "8beb2941-dd64-44f4-9e99-6149c445067a": {
+          "tips": [
+            null
+          ]
+        },
         "500131a4-a22b-4a63-bc0a-d5d4a19c7169": {
+          "tips": [
+            null
+          ]
+        },
+        "a45155ff-19af-43ac-bf11-6ca4001816f4": {
+          "tips": [
+            null
+          ]
+        },
+        "a7d5069b-aa1c-4efa-a8d8-b58bd43a6c7b": {
           "tips": [
             null
           ]
@@ -22116,7 +22107,17 @@
             null
           ]
         },
-        "b2b4b9e6-fe3f-4d2d-a828-1402cc1572e8": {
+        "4ff33db6-6668-4423-8f1d-ad0b25f6da40": {
+          "tips": [
+            null
+          ]
+        },
+        "169c3eed-52d7-4a4b-b7c6-161cf287ed33": {
+          "tips": [
+            null
+          ]
+        },
+        "f1632666-ffc1-457a-832a-c2d3b2d1fc20": {
           "tips": [
             null
           ]
@@ -22131,7 +22132,22 @@
             null
           ]
         },
+        "b2777295-b74f-4240-bb3d-c76b79dde6a9": {
+          "tips": [
+            null
+          ]
+        },
         "9bcab929-d773-4dab-bfb0-d09892056944": {
+          "tips": [
+            null
+          ]
+        },
+        "bedaca2d-4f48-45b4-b6e9-431f6a38cc13": {
+          "tips": [
+            null
+          ]
+        },
+        "221b5029-fcfd-4791-b951-852609cb0198": {
           "tips": [
             null
           ]
@@ -35294,7 +35310,11 @@
         },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
           "name": "Giới thiệu",
-          "description": "**Thảo luận:**\n\n-   _Chúng ta biết điều gì về cách thức lây lan của vi rút?_\n-   _Điều gì có thể khiến vi rút lây lan trong thị trấn nhanh hơn?_\n-   _Điều gì có thể giúp làm chậm quá trình lây lan của vi rút?\n\n_Mục tiêu của hoạt động thảo luận này là để học sinh có cơ hội ôn lại kiến thức cũ và quan sát ý tưởng của mình trên bảng. Đây cũng là cơ hội để tìm hiểu một số quan niệm sai lầm về cách thức lây lan của vi rút.\n"
+          "description": "**Thảo luận:**\n\n-   _Chúng ta biết điều gì về cách thức lây lan của vi rút?_\n-   _Điều gì có thể khiến vi rút lây lan trong thị trấn nhanh hơn?_\n-   \\_Điều gì có thể giúp làm chậm quá trình lây lan của vi rút?\n\n\\_Mục tiêu của hoạt động thảo luận này là để học sinh có cơ hội ôn lại kiến thức cũ và quan sát ý tưởng của mình trên bảng. Đây cũng là cơ hội để tìm hiểu một số quan niệm sai lầm về cách thức lây lan của vi rút."
+        },
+        "9abff5bb-3f76-4f3c-b3d2-f0a873876cf8": {
+          "name": "Hỗ trợ chung",
+          "description": "**Hỗ trợ chung:** Với tư cách là giáo viên, vai trò chủ yếu là hỗ trợ học sinh thực hiện bài hướng dẫn. Dưới đây là một số mẹo sẽ giúp ích cho học sinh mà không phụ thuộc vào trình độ:\n\n-   Khuyến khích học sinh xem các bài “đọc thêm” khác nhau theo thứ tự tùy thích. Họ luôn có thể quay lại Cấp độ 1 để truy cập lại menu.\n\n-   **Phối hợp với bạn kế bên:** Khuyến khích học sinh giúp đỡ bạn kế bên khi bạn đó gặp khó khăn. Vì bài hướng dẫn này có chứa video và học sinh có thể đang đeo tai nghe nên rất dễ bị “cô lập”. Hãy giúp phá vỡ những rào cản đó bằng cách chủ động ghép đôi học sinh nếu các em có vẻ cần sự giúp đỡ. Tùy thuộc vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc chia lớp học của mình thành từng cặp để hoàn thành bài hướng dẫn bằng cách sử dụng phương pháp [lập trình theo cặp](https://youtu.be/vgkahOzFH2Q).\n\n-   **Đọc bài hướng dẫn:** Bài hướng dẫn thường có các lời khuyên hữu ích về cách hoàn thành cấp độ. Trước khi hoàn thành cấp độ cho học sinh, hãy đảm bảo rằng họ đã thực sự xem kỹ hình ảnh mục tiêu và đọc toàn bộ chữ trong đó.\n\n-   ![](https://curriculum.code.org/media/uploads/hint.png)**Bạn đang gặp khó khăn? Hãy tìm gợi ý:** Mỗi cấp độ có một gợi ý chứa thêm thông tin về cách vượt qua cấp độ. Nếu học sinh đang cố gắng vượt qua các bài tập càng nhanh càng tốt, họ có thể nhận ra rằng chỉ cần đợi một khoảng thời gian nhất định để tất cả các mã lệnh hoạt động trước khi tiếp tục. Nhiều cấp độ chứa gợi ý thứ hai đề xuất cách sáng tạo hơn nữa bằng cách mở rộng nhiệm vụ.\n\n-   **Tiến lên và quay lại:** Đôi khi, việc học sinh quay lại mức độ khó sẽ có ích hơn. Tất cả các cấp độ đều độc lập với nhau, mặc dù chúng phụ thuộc ở một mức độ nhất định vào các khái niệm đã được giới thiệu trước đó. \n\n-   **Hãy dành thời gian và thử nghiệm.** Hãy đọc thật kỹ mã lệnh. Mặc dù các cấp độ đầu tiên cho học sinh biết chính xác những gì họ cần làm để vượt qua, nhưng họ cũng nên thử đưa ra ý tưởng của riêng mình. Không có câu trả lời đúng hoặc sai trong các Cấp độ này. (Tất cả đều là chơi tự do!)"
         },
         "d63c77c1-4167-4360-ab98-25610934beda": {
           "name": "Dịch bệnh bùng phát",
@@ -35326,11 +35346,15 @@
           "description": "_Bản mô phỏng là phương pháp tuyệt vời để học những điều khó có thể quan sát được trong thế giới thực. Chúng giúp các nhà khoa học giải quyết vấn đề, dự đoán cách giải quyết vấn đề và thử nghiệm các ý tưởng mới một cách an toàn và hiệu quả. Bản mô phỏng của bạn là cách thể hiện diễn biến của một đợt lây lan vi rút ở Thị Trấn Quái Vật._"
         },
         "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
-          "description": "**Thảo luận:**\n\n-   Bản mô phỏng có ích như thế nào trong thế giới thực?\n-   Bản mô phỏng có thể giúp chúng ta hiểu thế giới xung quanh mình như thế nào?\n-   Bản mô phỏng có thể cải thiện cách chúng ta thử nghiệm các ý tưởng như thế nào? Mục tiêu của cuộc thảo luận là để học sinh hiểu rằng mô phỏng là một cách mô hình hóa các hệ thống phức tạp bằng phương pháp tương tác. Họ cũng cần hiểu được cách các bản mô phỏng giúp mọi người thử nghiệm các ý tưởng một cách nhanh chóng, an toàn và chi phí thấp.\n"
+          "description": "**Thảo luận:**\n\n-   Bản mô phỏng có ích như thế nào trong thế giới thực?\n-   Bản mô phỏng có thể giúp chúng ta hiểu thế giới xung quanh mình như thế nào?\n-   Bản mô phỏng có thể cải thiện cách chúng ta thử nghiệm các ý tưởng như thế nào? Mục tiêu của cuộc thảo luận là để học sinh hiểu rằng mô phỏng là một cách mô hình hóa các hệ thống phức tạp bằng phương pháp tương tác. Họ cũng cần hiểu được cách các bản mô phỏng giúp mọi người thử nghiệm các ý tưởng một cách nhanh chóng, an toàn và chi phí thấp."
         },
         "b8e884f1-eae0-4138-8778-0972f90e34d9": {
           "name": "Suy nghĩ",
           "description": "**Lời nhắc:**\n\n-   Bản mô phỏng này giống như thế giới thực như thế nào? Khác biệt như thế nào?\n-   Bạn muốn thay đổi/thêm gì vào bản mô phỏng của mình không?"
+        },
+        "c1c5b270-2aae-4f8c-aded-0d92811d532f": {
+          "name": "Ăn mừng",
+          "description": "Giải thích rằng hôm nay bạn đang dành một giờ để lập trình, bởi vì tuần này là Tuần lễ Giáo dục KHMT và hàng triệu học sinh khác trên toàn cầu cũng đã học Giờ lập trình trong tuần này. Hãy chúc mừng các em học sinh đã hòa mình vào phong trào toàn cầu này.\n\nHãy phát cho mỗi học sinh một [chứng chỉ](http://code.org/certificates) có tên của học sinh trên đó."
         },
         "366afa8a-feff-4dd4-a415-03a04e01e897": {
           "name": "Bố trí sân khấu",
@@ -35656,18 +35680,6 @@
           "name": "Thuộc tính phần tử giao diện người dùng",
           "progression_name": "Thuộc tính phần tử giao diện người dùng"
         },
-        "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
-          "name": "Khởi động"
-        },
-        "59df14b7-1344-480b-8b6b-3fc94684b8bc": {
-          "name": "Hoạt động chính (Cũ)"
-        },
-        "3d1e45e9-9dd0-476b-b864-f0d86d0827b6": {
-          "name": "Hoạt động chính (Mới)"
-        },
-        "50216925-6742-400e-b45a-2de4cd3b63f2": {
-          "name": "Tổng kết"
-        },
         "f108ae93-f672-4062-b6d6-522901659990": {
           "name": "Khám phá KHMT Khảo sát sau khóa học",
           "progression_name": "Khám phá KHMT Khảo sát sau khóa học"
@@ -35715,39 +35727,94 @@
         "6ddc599f-da51-4adc-9dcc-f13b8b53e760": {
           "description": "#### Sau Giờ lập trình\n\nSau khi Giờ lập trình kết thúc, có nhiều cách để tiếp tục giảng dạy môn khoa học máy tính trong lớp học K-5 của bạn. Sau đây là một số ý tưởng: \n\n-   Dạy các khóa học [Nguyên tắc cơ bản về khoa học máy tính của Code Studio](http://code.org/educate/k5). Sáu khóa học này được thiết kế cho những học sinh nhỏ tuổi. Học sinh sẽ làm việc theo cách của họ thông qua một loạt bài tập hướng dẫn lập trình và giáo viên có quyền truy cập vào các giáo án hấp dẫn giúp làm cho việc học trở nên sôi động. Code.org cung cấp chương trình phát triển chuyên môn miễn phí cho các khóa học này theo hình thức trực tuyến hoặc trực tiếp.\n\n-   Mời chuyên gia khoa học máy tính nói chuyện với lớp về công việc của họ. Bạn không biết bất kỳ chuyên gia khoa học máy tính nào tại địa phương? Hãy liên hệ với một tình nguyện viên trên [bản đồ tình nguyện viên](https://code.org/volunteer/local) của chúng tôi"
         },
-        "b16d189d-d990-44c4-be49-8f81ac81a96e": {
-          "description": "#### Tạo không khíChào mừng học viên đến lớp và giới thiệu hoạt động trong ngày.",
+        "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
+          "name": "Khởi động"
+        },
+        "59df14b7-1344-480b-8b6b-3fc94684b8bc": {
+          "name": "Hoạt động chính (Cũ)"
+        },
+        "3d1e45e9-9dd0-476b-b864-f0d86d0827b6": {
+          "name": "Hoạt động chính (Mới)"
+        },
+        "50216925-6742-400e-b45a-2de4cd3b63f2": {
+          "name": "Tổng kết"
+        },
+        "3125ec73-4d68-45a9-a6f8-b2921c55d4a3": {
+          "name": "Lọc nhạc"
+        },
+        "524efe4b-796a-48eb-b1c6-f4e138699443": {
+          "name": "Hỗ trợ chung"
+        },
+        "b9bacf54-bd37-42b8-85fc-bc9d07a50537": {
           "tips": [
-            "Một cách để giới thiệu Giờ Lập Trình nếu bản thân bạn không rành về viết code là xem một trong những [video truyền cảm hứng của chúng tôi][0]. Chọn một trong những video mà bạn nghĩ rằng sẽ giúp truyền cảm hứng cho học viên của mình và chia sẻ nó ngay. Đối với học viên ở lớp trung cấp, chúng tôi đề xuất [Giờ Lập Trình Đã Tới][1]."
+            null
           ]
         },
-        "d99fc09e-a586-41df-84b2-e552cc4735e3": {
-          "description": "Hôm nay chúng ta sẽ sử dụng khả năng sáng tạo của mình trong khi học viết code. Có rất nhiều cách để sáng tạo. Bạn muốn sáng tạo theo cách nào?"
+        "58bdb8b5-159d-4b7a-aae7-d250213c1379": {
+          "progression_name": "Video giới thiệu"
         },
-        "b6c8c6a3-fe85-4d42-999e-a2ba13f6739a": {
-          "description": "Khuyến khích học viên chia sẻ những cách họ thể hiện sự sáng tạo, chẳng hạn như nghệ thuật, khiêu vũ, âm nhạc hoặc viết lách. Với câu hỏi tiếp theo, hãy hỏi học viên xem điều gì truyền cảm hứng cho sự sáng tạo của họ."
+        "b8daa26e-57e7-4bc5-8a6e-1e541a407c8e": {
+          "tips": [
+            null
+          ]
         },
-        "6fba9dd0-6069-402c-a641-53899ae667e2": {
-          "description": "Bạn có biết rằng khoa học máy tính có thể rất sáng tạo? Trên thực tế, bạn có thể làm nghệ thuật với code. Xin nhắc lại, code là một tập hợp các hướng dẫn mà máy tính có thể hiểu được. Cũng giống như việc chọn màu sơn để sử dụng, việc chọn code để viết có thể là cơ hội để thể hiện sự sáng tạo của bạn! Chúng tôi sẽ sử dụng thơ ca để truyền cảm hứng cho việc viết code sáng tạo ngày hôm nay. Có ai biết thơ là gì không? Bạn có một bài thơ hoặc nhà thơ yêu thích không?"
+        "7c95f7a1-478d-45fc-ba2d-5807bd2b828f": {
+          "name": "Hỏi đáp"
         },
-        "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102": {
-          "description": "**Cùng đọc thơ:** Cả lớp cùng đọc [một vài bài thơ][0] và tập xác định tâm trạng của mỗi bài thơ. Khuyến khích học viên chia sẻ cách diễn giải của họ, ngay cả khi cách diễn giải này khác với cách diễn giải của người khác."
+        "c624ab39-fa08-4b83-b1e9-bf97fb42667f": {
+          "name": "Ăn mừng"
         },
-        "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
-          "name": "Tranh thơ ca",
-          "description": "#### Hỗ trợ chungKhi kết thúc hoạt động này, học viên sẽ có một bài thơ hoạt họa thể hiện cách diễn giải bằng hình ảnh của họ về bài thơ mà họ đã chọn. Bài học này được thiết kế để tạo cơ hội cho học viên mày mò code và tìm ra những hiệu ứng hình ảnh mà họ thích nhất. Trong khi đi vòng quanh lớp, hãy khuyến khích học viên: - **Từ tốn:** Hầu hết các cấp độ đều yêu cầu học viên tìm ra những hiệu ứng hoàn hảo để phù hợp với diễn giải tâm trạng của bài thơ. Duy trì cấp độ và mày mò code một cách cặn kẽ là việc làm được khuyến khích. - **Tìm một bài thơ mà bạn thích:** Bài thơ được hiển thị cho học viên ở trình độ mới chỉ là một gợi ý. Sẽ có một menu thả xuống với danh sách các bài thơ được tải sẵn ở đầu không gian phát. Yêu cầu học viên đọc qua một vài bài thơ và tìm bài thơ phù hợp với họ. Sau đó, họ có thể bắt đầu tạo hoạt ảnh cho bài thơ mà họ đã chọn bằng code. - **Cho mọi người thấy cấp độ đã được hoàn thành:** Bất kỳ bong bóng cấp độ nào có màu xanh lá hoàn toàn có nghĩa là học viên đã hoàn thành xuất sắc tất cả các yêu cầu cho cấp độ đó. Yêu cầu một học viên nhấp vào bong bóng màu xanh lá để giới thiệu những gì họ đã tạo ra. Nếu học viên cảm thấy bế tắc: - **Đọc Hướng dẫn:** Hướng dẫn là những  gạch đầu dòng về cách để hoàn thành cấp độ. Nếu học viên cảm thấy bế tắc, hãy yêu cầu họ đọc to hướng dẫn cho bạn và yêu cầu họ lặp lại những gì hướng dẫn nói.  - <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Học viên cũng có thể nhấp vào biểu tượng chuyển văn bản thành giọng nói này để nghe hướng dẫn.- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Tìm kiếm gợi ý**: Hầu hết các cấp độ đều bao gồm ít nhất một gợi ý với các chi tiết rõ ràng hơn về cách vượt qua cấp độ. - **Ăn mừng khi có lỗi:** Có lỗi trong code là một phần tự nhiên của quá trình viết code. Nếu chương trình không thực hiện những gì được mong đợi, trước tiên, hãy yêu cầu học viên cho bạn biết những gì họ kỳ vọng xảy ra, nhấp vào khởi chạy để quan sát những gì  thực sự xảy ra, sau đó tìm vị trí trong code đã gây ra sự khác biệt. Hãy nhớ ăn mừng việc tìm ra lỗi và sửa lỗi. Việc có lỗi đồng nghĩa là học viên đang làm rất tốt việc xây dựng một chương trình phức tạp hơn."
+        "07a73ab9-8996-453a-a87f-63628f2387db": {
+          "name": "Bước tiếp theo",
+          "description": "Hãy cho học sinh biết rằng nếu họ thích hoạt động hôm nay, họ có nhiều lựa chọn để tiếp tục lập trình. Hãy khuyến khích học sinh truy cập code.org/learn để xem danh sách các lựa chọn hoặc nếu bạn đang lên kế hoạch cho hoạt động mở rộng nào tiếp theo, hãy cho học sinh biết kế hoạch sắp tới trong lớp học."
         },
-        "065eda67-268c-4f91-9caf-efb2c34493fe": {
-          "description": "#### Hỗ trợ theo cấp độ**Cấp độ 1:** Khuyến khích học viên đọc hết bài thơ. Sau đó, yêu cầu học viên tìm màu nền hoặc hiệu ứng phù hợp với tâm trạng của bài thơ mà họ đã chọn. **Cấp độ 2:** Trong phần ví dụ này, học viên nên tự đọc bài thơ trước, sau đó nhấn Khởi chạy. Bạn có thể hỏi học viên xem âm thanh và hiệu ứng mà người lập trình chọn có phù hợp với tâm trạng của bài thơ hay không. Yêu cầu học viên giải thích câu trả lời của họ. **Cấp độ 3:** Cấp độ này đưa vào âm thanh, học viên có thể sử dụng tai nghe nếu có. **Cấp độ 4:** Yêu cầu học viên đọc bài thơ và tìm dòng nơi tâm trạng của bài thơ thay đổi hoặc dòng mà mà nhà thơ giới thiệu một hình ảnh mới vào. Sử dụng khối sự kiện để thêm các hiệu ứng tương ứng cho các dòng đã được xác định của bài thơ. **Cấp độ 5:** Trong phần ví dụ này, học viên phải tự đọc bài thơ trước, sau đó nhấn Khởi chạy. Hỏi học viên xem các hình ảnh có khớp với các từ của bài thơ không. Yêu cầu họ giải thích rõ hơn về câu trả lời của họ. **Cấp độ 6, 7, 8:** Xem “Ăn mừng khi có lỗi” trong phần Hỗ trợ chung. Khuyến khích học viên xây dựng các chương trình có nhiều hơn một lần chuyển tiếp với các khối sự kiện của họ. **Cấp độ 9:** Khuyến khích học viên đọc qua tất cả các bài thơ trong menu thả xuống để tìm một bài thơ mà họ thích. Nói với học viên rằng họ có thể chia sẻ những gì mình đạt được trong cấp độ cuối cùng này với bạn bè và gia đình của mình. Giờ là lúc để kết hợp tất cả các kỹ năng lập trình và ELA lại với nhau!"
+        "fb665f5b-457e-484e-924a-7aa4f2e097be": {
+          "name": "Lan tỏa"
         },
-        "51a89a3e-a8c7-41d6-bbbf-2ce16fc7e033": {
-          "description": "Nếu bạn thấy thích buổi học viết code hôm nay, bạn có thể tiếp tục học bằng cách truy cập code.org/learn. Nếu bạn muốn chia sẻ những gì bạn đã làm với bạn bè và gia đình của mình, hãy nhấp vào nút “Chia sẻ” và gửi liên kết đến bất kỳ ai bạn muốn!"
+        "c03cf1cb-2946-48c9-aede-76ccf4b787a9": {
+          "tips": [
+            null
+          ]
         },
-        "8630a813-1b6c-49c5-a58b-d2dc5dcccd0a": {
-          "description": "#### (Không bắt buộc) Bài đánh giá: Kiểm tra mức độ hiểu (4 phút)Phát hai tờ giấy nhớ cho mỗi học viên."
+        "3c17e9fd-b06b-478e-bb56-5734d9344b68": {
+          "tips": [
+            null
+          ]
         },
-        "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
-          "description": "Bạn có hai tờ giấy nhớ. Trên một tờ, hãy viết một điều bạn đã học được về lập trình ngày hôm nay. Trên tờ thứ hai, viết một điều bạn đã học được về thơ hôm nay. Hãy chia sẻ với cả lớp bằng cách giơ tay để trả lời câu hỏi này: Bạn hy vọng mình có thể học thêm điều gì về lập trình và khoa học máy tính?"
+        "913cf29b-f688-4c8b-9834-96c9b75274f5": {
+          "tips": [
+            null
+          ]
+        },
+        "f39d7745-dd63-424d-baa1-de4e4fd0f0c0": {
+          "tips": [
+            null
+          ]
+        },
+        "a7f20e25-3940-4615-b90f-8664e1661b3a": {
+          "tips": [
+            null
+          ]
+        },
+        "2a1748fb-e49f-4ae0-be55-0c603dbe3335": {
+          "tips": [
+            null
+          ]
+        },
+        "e72dd2c9-59cc-4063-9dcc-d270e7fed0fe": {
+          "tips": [
+            null
+          ]
+        },
+        "5ff66bb0-517f-486e-b70f-cad0319c23df": {
+          "tips": [
+            null
+          ]
+        },
+        "31d4feb6-1e0c-4342-988b-6730a0d0155e": {
+          "tips": [
+            null
+          ]
         }
       }
     }

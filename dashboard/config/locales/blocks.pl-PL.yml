@@ -56,7 +56,7 @@ pl:
             '3.00': bardzo duży
         text: ustaw {SPRITE} woelkość na {SIZE}
       Dancelab_ai:
-        text: użyj AI do {VALUE}
+        text: "{IMAGE}generuj {VALUE} efekt"
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -106,6 +106,12 @@ pl:
             '"measures"': takty
             '"seconds"': sekundy
         text: po {TIMESTAMP} taktach {UNIT}
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': takty
+            '"seconds"': sekundy
+        text: w {TIMESTAMP} {UNIT}
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -131,6 +137,30 @@ pl:
             '"SLOTH"': leniuchy
             '"UNICORN"': jednorożce
             sprites: wszystkie
+          MOVE:
+            '"next"': "(Następny)"
+            '"prev"': "(Poprzedni)"
+            '"rand"': "(Losowy)"
+            MOVES.ClapHigh: Clap high
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double Down
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Kick: Star
+            MOVES.Rest: Żaden
+            MOVES.Roll: Body Roll
+            MOVES.ThisOrThat: This or That
+            MOVES.Thriller: Zombie
+        text: "{GROUP} wykonuje {MOVE} {DIR} bez końca"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          DIR:
+            '1': "→"
+          GROUP:
+            '"CAT"': koty
+            '"SLOTH"': leniuchy
           MOVE:
             '"next"': "(Następny)"
             '"prev"': "(Poprzedni)"
@@ -643,6 +673,62 @@ pl:
             '"vintage"': Starocie
             '"warm"': Ciepły
         text: ustaw efekt tła {PALETTE} {EFFECT}
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"blooming_petals"': Kwitnące płatki
+            '"circles"': Kółka
+            '"color_cycle"': Kolory
+            '"diamonds"': Diamenty
+            '"disco"': Kwadraty
+            '"disco_ball"': Kula dyskotekowa
+            '"fireworks"': Fajerwerki
+            '"flowers"': Kwiaty
+            '"frosted_grid"': Matowa siatka
+            '"galaxy"': Przestrzeń
+            '"growing_stars"': Powiększające się gwiazdy
+            '"higher_power"': Higher Power
+            '"kaleidoscope"': Kalejdoskop
+            '"lasers"': Laserowy parkiet
+            '"music_wave"': Fale
+            '"none"': Żaden
+            '"quads"': Kąty
+            '"rainbow"': Tęcza
+            '"rand"': "(Losowy)"
+            '"ripples"': Fale
+            '"ripples_random"': Losowe fale
+            '"snowflakes"': Śnieg
+            '"sparkles"': Migotanie
+            '"spiral"': Spirala
+            '"splatter"': Rozpryski farby
+            '"squiggles"': Pokręcone linie
+            '"starburst"': Rozprysk
+            '"stars"': Gwiazdy
+            '"swirl"': Hypno
+            '"text"': Tytuły piosenek
+          PALETTE:
+            '"autumn"': Jesień
+            '"cool"': Chłodny
+            '"default"': Jasne
+            '"electronic"': Elektroniczny
+            '"grayscale"': Skala szarości
+            '"iceCream"': Lody
+            '"neon"': Neon
+            '"ocean"': Ocean
+            '"rainbow"': Tęcza
+            '"rave"': Czarno-białe
+            '"roses"': Róże
+            '"sky"': Niebo
+            '"spring"': Wiosna
+            '"summer"': Lato
+            '"sunrise"': Wschód słońca
+            '"sunset"': Zachód słońca
+            '"tropical"': Tropikalne
+            '"twinkling"': Migotanie
+            '"vintage"': Starocie
+            '"warm"': Ciepły
+            '"winter"': Zima
+        text: ustaw efekt tła {PALETTE} {EFFECT}
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -1111,6 +1197,15 @@ pl:
         text: "{SPRITE}powiedz {TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE} skocz do {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': gaz
+            '"liquid"': ciecz
+            '"solid"': trwały
+        text: |2-
+           jeśli {CONDITION}{SPRITE}
+          {STATEMENT}
       KatiesBlocks_makeNumSpritesNear:
         text: utwórz {NUM} nowe {ANIMATION_NAME} duszki blisko {LOCATION}
       KatiesBlocks_spriteBirdSay:

@@ -1192,7 +1192,8 @@
           "type": "วิดีโอ"
         },
         "our_ai_code_of_ethics_template_/csd/2021": {
-          "type": "สไลด์"
+          "type": "สไลด์",
+          "url": "https://docs.google.com/presentation/d/1nCoJhTyN9rDbbMsUH6APZL3qaWtEGFCngtxicsWGj5w"
         },
         "make_a_machine_learning_app/csd/2021": {
           "type": "สไลด์"
@@ -3783,7 +3784,8 @@
           "type": "วิดีโอ"
         },
         "our_ai_code_of_ethics_template_/csd/2022": {
-          "type": "สไลด์"
+          "type": "สไลด์",
+          "url": "https://docs.google.com/presentation/d/1nCoJhTyN9rDbbMsUH6APZL3qaWtEGFCngtxicsWGj5w"
         },
         "create_an_ml_app/csd/2022": {
           "type": "เกณฑ์"
@@ -6334,6 +6336,10 @@
           "name": "ฟังก์ชันกับพารามิเตอร์",
           "type": "วิดีโอ"
         },
+        "fucntions_devices/csd/2023": {
+          "name": "ฟังก์ชัน",
+          "type": "สไลด์"
+        },
         "mini-project_interactive_art/csd/2023": {
           "type": "สไลด์"
         },
@@ -6610,7 +6616,8 @@
           "type": "วิดีโอ"
         },
         "our_ai_code_of_ethics_template_/csd/2023": {
-          "type": "สไลด์"
+          "type": "สไลด์",
+          "url": "https://docs.google.com/presentation/d/1nCoJhTyN9rDbbMsUH6APZL3qaWtEGFCngtxicsWGj5w"
         },
         "create_an_ml_app/csd/2023": {
           "type": "เกณฑ์"
@@ -7953,110 +7960,264 @@
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "วิดีโอ"
         },
+        "all_resources/how-ai-works/2023": {
+          "name": "ทรัพยากรทั้งหมด",
+          "url": "//ai ทำงานอย่างไร-2023/ทรัพยากร"
+        },
+        "all_standards/how-ai-works/2023": {
+          "name": "มาตรฐานทั้งหมด",
+          "url": "//ai ทำงานอย่างไร-2023/มาตรฐาน"
+        },
+        "all_vocabulary/how-ai-works/2023": {
+          "name": "คำศัพท์ทั้งหมด",
+          "url": "//ai ทำงานอย่างไร-2023/คำศัพท์"
+        },
+        "classifying_fish/how-ai-works/2023": {
+          "name": "การจำแนกปลา",
+          "url": "https://docs.google.com/document/d/1-jk6nypSNHxokQP3DJRgITQdvjkNGFzNsP2wYM9vfeg/",
+          "type": "คู่มือกิจกรรม"
+        },
         "how_ai_works_-_training_data_and_bias/how-ai-works/2023": {
+          "name": "AI ทำงานอย่างไร - ข้อมูลการฝึกและอคติ",
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "วิดีโอ"
         },
         "how_ai_works_-_what_is_machine_learning_/how-ai-works/2023": {
+          "name": "AI ทำงานอย่างไร - แมชชีนเลิร์นนิ่งคืออะไร?",
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "วิดีโอ"
         },
         "introduction_to_machine_learning/how-ai-works/2023": {
+          "name": "ข้อมูลเบื้องต้นเกี่ยวกับแมชชีนเลิร์นนิ่ง",
+          "url": "https://docs.google.com/presentation/d/1_rPGMLmDe-c8zJbnLF8be0fwsYBs0AXSCu0lkc2VJuU/",
           "type": "สไลด์"
+        },
+        "_example_computer_vision_network/how-ai-works/2023": {
+          "name": "[Example] เครือข่ายคอมพิวเตอร์วิทัศน์",
+          "url": "https://docs.google.com/presentation/d/1mckQkwXlwL_7w2XEMPMATVZamYiade5G4eAxotYEE60/",
+          "type": "ตัวอย่าง"
         },
         "computer_vision/how-ai-works/2023": {
+          "name": "วิสัยทัศน์คอมพิวเตอร์",
+          "url": "https://docs.google.com/presentation/d/1Q0gDQIxrfexmxkSgQN3v8OBBQw5bXMK5xBrvP1TmsAA/",
           "type": "สไลด์"
         },
+        "computer_vision_network/how-ai-works/2023": {
+          "name": "เครือข่ายคอมพิวเตอร์วิทัศน์",
+          "url": "https://docs.google.com/document/d/1Hmlnz8TwBAgs_73hWBsH3HA5oe-plBAAYA-iS-f4yf8/",
+          "type": "คู่มือกิจกรรม"
+        },
         "how_ai_works_how_computer_vision_works/how-ai-works/2023": {
+          "name": "AI ทำงานอย่างไร: คอมพิวเตอร์วิทัศน์ทำงานอย่างไร",
+          "url": "https://youtu.be/2hXG8v8p0KM",
           "type": "วิดีโอ"
         },
+        "seven_segment_display_manipulative/how-ai-works/2023": {
+          "name": "การบิดเบือนการแสดงผลเจ็ดส่วน",
+          "url": "https://docs.google.com/document/d/1diitbRTwy-UrS2GUeMgiVG6Lo249UUSFwc0KgmT-IpU/",
+          "type": "คู่มือกิจกรรม"
+        },
         "what_a_neural_network_sees/how-ai-works/2023": {
+          "name": "สิ่งที่โครงข่ายประสาทเทียมมองเห็น",
+          "url": "https://www.youtube.com/watch?v=Gu0MkmynWkw",
           "type": "วิดีโอ"
         },
         "how_ai_works_how_neural_networks_work/how-ai-works/2023": {
+          "name": "AI ทำงานอย่างไร: โครงข่ายประสาทเทียมทำงานอย่างไร",
+          "url": "https://youtu.be/JrXazCEACVo",
           "type": "วิดีโอ"
         },
+        "neural_networks/how-ai-works/2023": {
+          "name": "โครงข่ายประสาทเทียม",
+          "url": "https://docs.google.com/document/d/1MYECpheW9Vo2hxgkKNyIYzsk0yQI3x-kCNpldHPBfjI/",
+          "type": "คู่มือกิจกรรม"
+        },
         "neural_networks_1/how-ai-works/2023": {
+          "name": "โครงข่ายประสาทเทียม",
+          "url": "https://docs.google.com/presentation/d/1XfaXfaIBCNEwrdLmLRg0S3ATdjnS0zsIzTeG97_C9Oc/",
           "type": "สไลด์"
         },
         "wetube_content_creators/how-ai-works/2023": {
+          "name": "ผู้สร้างเนื้อหา WeTube",
+          "url": "https://docs.google.com/document/d/1Xj2EMhqgBsx7lAOPNSuo4C8X9C5QGDfvSLUOrvogAeE/",
           "type": "ทรัพยากร"
         },
+        "eliza_activity_guide/how-ai-works/2023": {
+          "name": "(โดยทางเลือก) คู่มือกิจกรรมอลิซ่า",
+          "url": "https://docs.google.com/document/d/1WuYZAQYbnaDyJXFmDVa33t5Ltln4SfpZ4IUsSoywbuc/",
+          "type": "คู่มือกิจกรรม"
+        },
         "generative_llm/how-ai-works/2023": {
+          "name": "เครื่องกำเนิด LLM",
+          "url": "https://docs.google.com/presentation/d/1kZ4-KuMA5qfKlVMOCGdj5PPHSOVeFer3KIIxKK0LJGw/",
           "type": "สไลด์"
         },
         "how_ai_works_chatbots_and_large_language_models_part_1_/how-ai-works/2023": {
+          "name": "AI ทำงานอย่างไร: แชทบอทและโมเดลภาษาขนาดใหญ่ (ตอนที่ 1)",
+          "url": "https://www.youtube.com/watch?v=kWougDgtE3E",
           "type": "วิดีโอ"
         },
         "how_ai_works_chatbots_and_large_language_models_part_2_/how-ai-works/2023": {
+          "name": "AI ทำงานอย่างไร: แชทบอทและโมเดลภาษาขนาดใหญ่ (ตอนที่ 2)",
+          "url": "https://www.youtube.com/watch?v=7Jn9UrnMWK8",
           "type": "วิดีโอ"
         },
         "llm_vocab_and_video_guide_answer_key/how-ai-works/2023": {
+          "name": "[คีย์] คู่มือคำศัพท์และวิดีโอ",
+          "url": "https://docs.google.com/document/d/1IiHJCBPpAdET2rHx7XaJLAegAP8tG4LyR3fJLeBh9CQ/",
           "type": "ปุ่มคำตอบ"
         },
+        "video_and_vocabulary_guide/how-ai-works/2023": {
+          "name": "คู่มือวิดีโอและคำศัพท์",
+          "url": "https://docs.google.com/document/d/13Sx67iDWHt71lFF7z9meZirsL09zLuQZU6aAagnw27A/",
+          "type": "คู่มือกิจกรรม"
+        },
+        "written_voice_simulator_activity_guide_exemplar/how-ai-works/2023": {
+          "name": "[Exemplar] คู่มือกิจกรรมจำลองเสียงที่เขียน",
+          "url": "https://docs.google.com/document/d/1XiUUPOdJ19g-cHm_iVqRF7h-gMNN2qUMf2iQQiLeJzo/",
+          "type": "ตัวอย่าง"
+        },
+        "written_voice_simulator_guide/how-ai-works/2023": {
+          "name": "คู่มือจำลองเสียงที่เขียน",
+          "url": "https://docs.google.com/document/d/1yPU08by6eoJEqiM3rdK-227wB16KiQPO3C8-AV-zbSk/",
+          "type": "คู่มือกิจกรรม"
+        },
         "written_voice_simulator_user_guide/how-ai-works/2023": {
+          "name": "คู่มือผู้ใช้การจำลองเสียงที่เขียน",
+          "url": "https://docs.google.com/presentation/d/1sLiRYBF3c2be0mqunxXA56PtRMmEFK15PcUnSHzaYHw/",
           "type": "ทรัพยากร"
         },
+        "_optional_gan_game_activity_guide/how-ai-works/2023": {
+          "name": "(โดยทางเลือก) คู่มือกิจกรรมเกม GAN",
+          "url": "https://docs.google.com/document/d/1WSkHfVfs6ZRaPAYmrpG6QDvG6r__O9L-dmLdzkOi02E/",
+          "type": "คู่มือกิจกรรม"
+        },
         "generative_images/how-ai-works/2023": {
+          "name": "ภาพกำเนิด",
+          "url": "https://docs.google.com/presentation/d/1SsfWjTuTLAAnD0u0DbZEl8bXSyKeB_TGCgv6RkbSOEY/",
           "type": "สไลด์"
         },
         "generative_images_activity_guide/how-ai-works/2023": {
+          "name": "[Key] คู่มือกิจกรรมการสร้างภาพ",
+          "url": "https://docs.google.com/document/d/1QqEJpgXHhtpyN_h2RVlnBP-sXK6mbXmxfJRXwE0taKo/",
           "type": "ปุ่มคำตอบ"
         },
         "how_ai_works_creativity_and_imagination/how-ai-works/2023": {
+          "name": "AI ทำงานอย่างไร: ความคิดสร้างสรรค์และจินตนาการ",
+          "url": "https://www.youtube.com/watch?v=X994dDnmRmY",
           "type": "วิดีโอ"
         },
+        "noisy_image_activity_exemplar/how-ai-works/2023": {
+          "name": "[Exemplar] กิจกรรมภาพที่มีสิ่งรบกวน",
+          "url": "https://docs.google.com/document/d/1CF7pmfuPHARObtSkLlCQxAgIUd0g14aBgBI_R1iDnKc/",
+          "type": "ตัวอย่าง"
+        },
+        "noisy_image_widget_activity_guide/how-ai-works/2023": {
+          "name": "คู่มือกิจกรรมวิดเจ็ตภาพที่มีสิ่งรบกวน",
+          "url": "https://docs.google.com/document/d/1e8xz91bgNoQcs7X9XZNDXd91FEBukqwEqNWhKstdDz8/",
+          "type": "คู่มือกิจกรรม"
+        },
         "user_guide_noise_image_widget/how-ai-works/2023": {
+          "name": "คู่มือผู้ใช้: วิดเจ็ตภาพที่มีสิ่งรบกวน",
+          "url": "https://docs.google.com/presentation/d/1bIGulMiFmo3yhlQQ-yaG-0oup6EyT492Mox7BVmUceQ/",
           "type": "ทรัพยากร"
         },
+        "video_and_vocabulary_guide_1/how-ai-works/2023": {
+          "name": "คู่มือวิดีโอและคำศัพท์",
+          "url": "https://docs.google.com/document/d/12wegdOPJNN7isRrfnerg-PMPvixH1rg_QASYFlU3n3U/",
+          "type": "คู่มือกิจกรรม"
+        },
         "algorithmic_bias/how-ai-works/2023": {
+          "name": "อัลกอริทึมที่มีอคติ",
+          "url": "https://docs.google.com/presentation/d/15b9i85aR1xUiLqyL3hc0Vv0pQH_M8ozaHWcx8T6YZhE",
           "type": "สไลด์"
         },
         "how_ai_works_-_societal_impact/how-ai-works/2023": {
+          "name": "AI ทำงานอย่างไร - ผลกระทบต่อสังคม",
+          "url": "https://youtu.be/tJQSyzBUAew",
           "type": "วิดีโอ"
         },
         "sharing_learnings_about_our_image_cropping_algorithm_twitter_/how-ai-works/2023": {
+          "name": "แบ่งปันการเรียนรู้เกี่ยวกับอัลกอริทึมการครอบตัดภาพของเรา (Twitter)",
+          "url": "https://blog.twitter.com/engineering/en_us/topics/insights/2021/sharing-learnings-about-our-image-cropping-algorithm",
           "type": "ทรัพยากร"
         },
         "twitter_says_its_image-cropping_algorithm_was_biased_so_it_s_ditching_it_cnn_/how-ai-works/2023": {
+          "name": "Twitter กล่าวว่าอัลกอริธึมการครอบตัดรูปภาพมีอคติ ดังนั้นจึงละทิ้งมันไป (CNN)",
+          "url": "https://www.cnn.com/2021/05/19/tech/twitter-image-cropping-algorithm-bias/index.html",
           "type": "ทรัพยากร"
         },
         "ai_code_of_ethics/how-ai-works/2023": {
+          "name": "หลักจริยธรรมของ AI",
+          "url": "https://docs.google.com/presentation/d/1ZV5k017lEV-51UMyEP3AuEHfv9Uc8N8iZHxg-pIPg5c/",
           "type": "สไลด์"
         },
+        "ai_ethics_research_areas/how-ai-works/2023": {
+          "name": "พื้นที่วิจัยจริยธรรม AI",
+          "url": "https://docs.google.com/document/d/1at_m5-XNsWlOyJ17UZAf2pODEto5tk99Rc3Frj1l8KU/"
+        },
+        "ai_ethics_research_reflection/how-ai-works/2023": {
+          "name": "การสะท้อนการวิจัยจริยธรรม AI",
+          "url": "https://docs.google.com/document/d/1SpwOy4SSeDH8W4ivVVTohiXlCOXZ_nBw6Rc51-32BnU"
+        },
         "how_ai_works_-_privacy_and_future_of_work/how-ai-works/2023": {
+          "name": "AI ทำงานอย่างไร - ความเป็นส่วนตัวและอนาคตของการทำงาน",
+          "url": "https://youtu.be/zNxw5gJtHLc",
           "type": "วิดีโอ"
         },
         "our_ai_code_of_ethics_template_/how-ai-works/2023": {
+          "name": "หลักจริยธรรม AI ของเรา [Template]",
+          "url": "https://docs.google.com/presentation/d/1SJEXpTCKwf5fbDy5GuDjDGAsuUrkI9QfxKF-1pMSndg/edit?usp=sharing",
           "type": "สไลด์"
         },
         "does_ai_have_creativity_and_imagination_/how-ai-works/2023": {
+          "name": "AI มีความคิดสร้างสรรค์และจินตนาการหรือไม่",
+          "url": "https://www.youtube.com/watch?v=X994dDnmRmY",
           "type": "วิดีโอ"
         },
         "how_ai_works/how-ai-works/2023": {
           "name": "AI ทำงานอย่างไร",
+          "url": "https://docs.google.com/presentation/d/1JjCyqnPjOB2oe_ZgXl5XqHNoC6FbkyOChHUls1cIZxo/",
           "type": "สไลด์"
         },
         "how_ai_works_ethics_ai_equal_access_and_algorithmic_bias/how-ai-works/2023": {
+          "name": "AI ทำงานอย่างไร: จริยธรรมและ AI: การเข้าถึงที่เท่าเทียมกันและอคติอัลกอริทึม",
+          "url": "https://youtu.be/tJQSyzBUAew",
           "type": "วิดีโอ"
         },
         "how_ai_works_ethics_ai_privacy_the_future_of_work/how-ai-works/2023": {
+          "name": "AI ทำงานอย่างไร: จริยธรรมและ AI: ความเป็นส่วนตัวและอนาคตของการทำงาน",
+          "url": "https://youtu.be/zNxw5gJtHLc",
           "type": "วิดีโอ"
         },
         "how_ai_works_introduction/how-ai-works/2023": {
+          "name": "AI ทำงานอย่างไร: บทนำ",
+          "url": "https://youtu.be/Ok-xpKjKp2g",
           "type": "วิดีโอ"
         },
         "how_ai_works_training_data_and_bias/how-ai-works/2023": {
+          "name": "AI ทำงานอย่างไร: ข้อมูลการฝึกอบรมและอคติ",
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "วิดีโอ"
         },
         "how_ai_works_what_is_machine_learning_/how-ai-works/2023": {
+          "name": "AI ทำงานอย่างไร: แมชชีนเลิร์นนิ่งคืออะไร?",
+          "url": "https://youtu.be/KHbwOetbmbs",
           "type": "วิดีโอ"
         },
         "how_chatbots_and_large_language_models_work/how-ai-works/2023": {
+          "name": "แชทบอทและโมเดลภาษาขนาดใหญ่ทำงานอย่างไร",
+          "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
           "type": "วิดีโอ"
         },
+        "vocabulary_matching/how-ai-works/2023": {
+          "name": "การจับคู่คำศัพท์",
+          "url": "https://docs.google.com/document/d/1S08fJzPJu8JXNFK76cYnLPpFONtFColCGvW3jqHXc9s/",
+          "type": "คู่มือกิจกรรม"
+        },
         "_key_vocabulary_matching/how-ai-works/2023": {
+          "name": "[Key] การจับคู่คำศัพท์",
+          "url": "https://drive.google.com/file/d/1cF8MsKO_lCLziA5FisbcQc2-529j1HXZ/view",
           "type": "ปุ่มคำตอบ"
         },
         "csf-artist-intro-video/artist/unversioned": {
@@ -8174,10 +8335,32 @@
           "url": "https://www.youtube.com/watch?v=LCGkcn1f-ms&feature=youtu.be",
           "type": "วิดีโอ"
         },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "รายชื่อบทกวี",
-          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing",
-          "type": "สไลด์"
+        "web_development_-_extra_code_in_challenge_levels/csd/2023": {
+          "type": "ทรัพยากร"
+        },
+        "csd_guide_to_curriculum_videos_1/csd/2023": {
+          "url": "https://docs.google.com/document/d/1HdH_km1t2ulPbaXqwDalvZQLMCaDvA4uSuQGTy6aLSI/"
+        },
+        "csd_guide_to_curriculum_videos_2/csd/2023": {
+          "url": "https://docs.google.com/document/d/1HdH_km1t2ulPbaXqwDalvZQLMCaDvA4uSuQGTy6aLSI/"
+        },
+        "csd_guide_to_curriculum_videos_3/csd/2023": {
+          "url": "https://docs.google.com/document/d/1HdH_km1t2ulPbaXqwDalvZQLMCaDvA4uSuQGTy6aLSI/"
+        },
+        "csd_guide_to_curriculum_videos_4/csd/2023": {
+          "url": "https://docs.google.com/document/d/1HdH_km1t2ulPbaXqwDalvZQLMCaDvA4uSuQGTy6aLSI/"
+        },
+        "csd_guide_to_curriculum_videos_5/csd/2023": {
+          "url": "https://docs.google.com/document/d/1HdH_km1t2ulPbaXqwDalvZQLMCaDvA4uSuQGTy6aLSI/"
+        },
+        "csd_guide_to_curriculum_videos_6/csd/2023": {
+          "url": "https://docs.google.com/document/d/1HdH_km1t2ulPbaXqwDalvZQLMCaDvA4uSuQGTy6aLSI/"
+        },
+        "csd_guide_to_curriculum_videos_7/csd/2023": {
+          "url": "https://docs.google.com/document/d/1HdH_km1t2ulPbaXqwDalvZQLMCaDvA4uSuQGTy6aLSI/"
+        },
+        "csd_guide_to_curriculum_videos_8/csd/2023": {
+          "url": "https://docs.google.com/document/d/1HdH_km1t2ulPbaXqwDalvZQLMCaDvA4uSuQGTy6aLSI/"
         }
       }
     }

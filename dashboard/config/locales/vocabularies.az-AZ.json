@@ -28,7 +28,7 @@
           "word": "Sprayt"
         },
         "condition/csd/2021": {
-          "word": "şərt"
+          "word": "vəziyyət"
         },
         "conditionals/csd/2021": {
           "word": "Şərti ifadələr"
@@ -233,13 +233,19 @@
           "word": "Təkrar et",
           "definition": "Bir şeyi yenə etmək."
         },
+        "command/coursed/2021": {
+          "word": "Əmr"
+        },
         "conditionals/coursed/2021": {
           "word": "Şərti ifadələr",
           "definition": "Yalnız müəyyən şərtlər altında işləyən ifadələr."
         },
         "condition/coursed/2021": {
-          "word": "şərt",
+          "word": "vəziyyət",
           "definition": "Proqram bir hərəkətə icazə verməzdən əvvəl onun doğru olub olmadığını yoxlayır."
+        },
+        "until/coursed/2021": {
+          "word": "Qədər"
         },
         "algorithm/coursee/2021": {
           "word": "Alqroritm",
@@ -272,7 +278,7 @@
           "definition": "Dəfələrlə asanlıqla zəng edə biləcəyiniz kod parçası."
         },
         "condition/coursee/2021": {
-          "word": "şərt",
+          "word": "vəziyyət",
           "definition": "Proqram bir hərəkətə icazə verməzdən əvvəl onun doğru olub olmadığını yoxlayır."
         },
         "conditionals/coursee/2021": {
@@ -281,6 +287,15 @@
         },
         "define/coursee/2021": {
           "word": "Təyin et"
+        },
+        "prepare/coursee/2021": {
+          "word": "Hazırlamaq"
+        },
+        "reflect/coursee/2021": {
+          "word": "Əks etdirmək"
+        },
+        "try/coursee/2021": {
+          "word": "Çalış"
         },
         "sprite/coursef/2021": {
           "word": "Sprayt",
@@ -310,6 +325,7 @@
           "definition": "Proqramda istifadə olunan məlumat üçün etiket."
         },
         "prompt/coursef/2021": {
+          "word": "cəld",
           "definition": "Kompüter ekranında istifadəçinin daxil olmasını gözləyən mesaj."
         },
         "input/coursef/2021": {
@@ -334,11 +350,26 @@
         "internet/coursef/2021": {
           "word": "İnternet"
         },
+        "packets/coursef/2021": {
+          "word": "Paketlər"
+        },
+        "servers/coursef/2021": {
+          "word": "Serverlər"
+        },
         "url/coursef/2021": {
           "word": "URL ünvan"
         },
         "define/coursef/2021": {
           "word": "Təyin et"
+        },
+        "prepare/coursef/2021": {
+          "word": "Hazırlamaq"
+        },
+        "reflect/coursef/2021": {
+          "word": "Əks etdirmək"
+        },
+        "try/coursef/2021": {
+          "word": "Çalış"
         },
         "algorithm/express/2021": {
           "word": "Alqoritm",
@@ -385,13 +416,19 @@
           "word": "Təkrar et",
           "definition": "Bir şeyi yenə etmək."
         },
+        "command/express/2021": {
+          "word": "Əmr"
+        },
         "condition/express/2021": {
-          "word": "şərt",
+          "word": "vəziyyət",
           "definition": "Proqram bir hərəkətə icazə verməzdən əvvəl onun doğru olub olmadığını yoxlayır."
         },
         "conditionals/express/2021": {
           "word": "Şərti ifadələr",
           "definition": "Yalnız müəyyən şərtlər altında işləyən ifadələr."
+        },
+        "until/express/2021": {
+          "word": "Qədər"
         },
         "function/express/2021": {
           "word": "Funksiya",
@@ -406,6 +443,15 @@
         },
         "define/express/2021": {
           "word": "Təyin et"
+        },
+        "prepare/express/2021": {
+          "word": "Hazırlamaq"
+        },
+        "reflect/express/2021": {
+          "word": "Əks etdirmək"
+        },
+        "try/express/2021": {
+          "word": "Çalış"
         },
         "click/pre-express/2021": {
           "word": "Bas",
@@ -485,7 +531,7 @@
           "word": "Sprayt"
         },
         "condition/csd/2022": {
-          "word": "şərt"
+          "word": "vəziyyət"
         },
         "conditionals/csd/2022": {
           "word": "Şərti ifadələr"
@@ -696,13 +742,19 @@
           "word": "Təkrar et",
           "definition": "Bir şeyi yenə etmək."
         },
+        "command/coursed/2022": {
+          "word": "Əmr"
+        },
         "conditionals/coursed/2022": {
           "word": "Şərti ifadələr",
           "definition": "Yalnız müəyyən şərtlər altında işləyən ifadələr."
         },
         "condition/coursed/2022": {
-          "word": "şərt",
+          "word": "vəziyyət",
           "definition": "Proqram bir hərəkətə icazə verməzdən əvvəl onun doğru olub olmadığını yoxlayır."
+        },
+        "until/coursed/2022": {
+          "word": "Qədər"
         },
         "behavior/coursee/2022": {
           "word": "Davranış "
@@ -723,7 +775,7 @@
           "word": "Funksiya"
         },
         "condition/coursee/2022": {
-          "word": "şərt"
+          "word": "vəziyyət"
         },
         "conditionals/coursee/2022": {
           "word": "Şərti ifadələr",
@@ -734,6 +786,15 @@
         },
         "define/coursee/2022": {
           "word": "Təyin et"
+        },
+        "prepare/coursee/2022": {
+          "word": "Hazırlamaq"
+        },
+        "reflect/coursee/2022": {
+          "word": "Əks etdirmək"
+        },
+        "try/coursee/2022": {
+          "word": "Çalış"
         },
         "sprite/coursef/2022": {
           "word": "Sprayt",
@@ -748,7 +809,8 @@
           "definition": "Tapşırığı tamamlamaq üçün addımların siyahısı."
         },
         "behavior/coursef/2022": {
-          "word": "Davranış "
+          "word": "Davranış ",
+          "definition": "diyandırmaq"
         },
         "program/coursef/2022": {
           "word": "Proqram",
@@ -763,6 +825,7 @@
           "definition": "Proqramda istifadə olunan məlumat üçün etiket."
         },
         "prompt/coursef/2022": {
+          "word": "cəld",
           "definition": "Kompüter ekranında istifadəçinin daxil olmasını gözləyən mesaj."
         },
         "input/coursef/2022": {
@@ -779,11 +842,26 @@
         "internet/coursef/2022": {
           "word": "İnternet"
         },
+        "packets/coursef/2022": {
+          "word": "Paketlər"
+        },
+        "servers/coursef/2022": {
+          "word": "Serverlər"
+        },
         "url/coursef/2022": {
           "word": "URL ünvan"
         },
         "define/coursef/2022": {
           "word": "Təyin et"
+        },
+        "prepare/coursef/2022": {
+          "word": "Hazırlamaq"
+        },
+        "reflect/coursef/2022": {
+          "word": "Əks etdirmək"
+        },
+        "try/coursef/2022": {
+          "word": "Çalış"
         },
         "algorithm/express/2022": {
           "word": "Alqoritm",
@@ -830,13 +908,19 @@
           "word": "Təkrar et",
           "definition": "Bir şeyi yenə etmək."
         },
+        "command/express/2022": {
+          "word": "Əmr"
+        },
         "condition/express/2022": {
-          "word": "şərt",
+          "word": "vəziyyət",
           "definition": "Proqram bir hərəkətə icazə verməzdən əvvəl onun doğru olub olmadığını yoxlayır."
         },
         "conditionals/express/2022": {
           "word": "Şərti ifadələr",
           "definition": "Yalnız müəyyən şərtlər altında işləyən ifadələr."
+        },
+        "until/express/2022": {
+          "word": "Qədər"
         },
         "function/express/2022": {
           "word": "Funksiya",
@@ -851,6 +935,15 @@
         },
         "define/express/2022": {
           "word": "Təyin et"
+        },
+        "prepare/express/2022": {
+          "word": "Hazırlamaq"
+        },
+        "reflect/express/2022": {
+          "word": "Əks etdirmək"
+        },
+        "try/express/2022": {
+          "word": "Çalış"
         },
         "click/pre-express/2022": {
           "word": "Bas",
@@ -904,14 +997,45 @@
           "word": "Hadisə",
           "definition": "Bir şeyin baş verməsinə səbəb olan hərəkət."
         },
+        "artificial_intelligence/ai-ethics/2023": {
+          "word": "Süni İntellekt",
+          "definition": "İnsan zəkasını təqlid edən, dili başa düşmək, nümunələri tanımaq və qərar qəbul etmək kimi tapşırıqları yerinə yetirən bir texnologiya."
+        },
+        "generative_ai/ai-ethics/2023": {
+          "word": "Generativ Suni İntellekt",
+          "definition": "Yeni mətn və ya yeni şəkillər kimi yeni məzmun yaratmaq üçün mövcud məzmundan nümunələrdən istifadə edən süni intellekt növü (AI)."
+        },
+        "adaptation/csc-adaptations/2023": {
+          "word": "Uyğunlaşma",
+          "definition": "Bir orqanizmdə ətraf mühitdən daha yaxşı sağ qalmaq üçün dəyişiklik"
+        },
         "code/csc-adaptations/2023": {
-          "word": "Kod"
+          "word": "Kod",
+          "definition": "(v) Kompüter üçün təlimatlar yazmaq"
         },
         "event/csc-adaptations/2023": {
-          "word": "Hadisə"
+          "word": "Hadisə",
+          "definition": "Bir şeyin baş verməsinə səbəb olan bir hərəkət"
+        },
+        "evolution/csc-adaptations/2023": {
+          "word": "Təkamül",
+          "definition": "Bir növün xüsusiyyətlərinin bir neçə nəsil ərzində dəyişməsi"
+        },
+        "migration/csc-adaptations/2023": {
+          "word": "Miqrasiya",
+          "definition": "Bir heyvanın uzun məsafəli hərəkəti daha yaxşı bir mühit axtarmağı təmin edir"
+        },
+        "camouflage/csc-adaptations/2023": {
+          "word": "Kamuflyaj",
+          "definition": "Orqanizmlər görünüşlərini gizlətmək və ətraf mühitlə qarışmaq üçün istifadə etdiyi müdafiə mexanizmi"
         },
         "behavior/csc-adaptations/2023": {
-          "word": "Davranış "
+          "word": "Davranış ",
+          "definition": "Obrazın dəfələrlə yerinə yetirməsini istədiyiniz hərəkətlər toplusu. "
+        },
+        "code_v_/csc-bookcovers/2023": {
+          "word": "Kod (v)",
+          "definition": "kompüter üçün təlimatlar yazmaq."
         },
         "event/csc-bookcovers/2023": {
           "word": "Hadisə",
@@ -922,26 +1046,76 @@
           "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir sıra addımlar."
         },
         "prompt/csc-bookcovers/2023": {
+          "word": "cəld",
           "definition": "Kompüter ekranında istifadəçinin daxil olmasını gözləyən mesaj."
         },
         "sprite/csc-bookcovers/2023": {
           "word": "Sprayt",
           "definition": "Yeri, ölçüsü və görünüşü ilə ekranda qrafik."
         },
+        "background/csc-bookcovers/2023": {
+          "word": "Arxa plan",
+          "definition": "Ekrandakı əsas şeylərin və ya insanların arxasındakı vizual görünüş."
+        },
+        "character/csc-bookcovers/2023": {
+          "word": "Simvol",
+          "definition": "Bir hekayədə insan, heyvan, varlıq, bir şey varlığı."
+        },
+        "setting/csc-bookcovers/2023": {
+          "word": "Tənzimləmə",
+          "definition": "Bir hekayənin vaxtı və yeri (və ya nə vaxt və harada)."
+        },
+        "summary/csc-bookcovers/2023": {
+          "word": "İcmal",
+          "definition": "Bir mətnin ən vacib hissələrini öz sözlərinizlə daha qısa bir şəkildə izah edin"
+        },
         "code/csc-ecosystems/2023": {
-          "word": "Kod"
+          "word": "Kod",
+          "definition": "(v) Kompüter üçün təlimatlar yazmaq"
         },
         "condition/csc-ecosystems/2023": {
-          "word": "şərt"
+          "word": "vəziyyət",
+          "definition": "Proqramın bir hərəkətə icazə verməzdən əvvəl doğru olub olmadığını yoxlamaq üçün bir şey yoxlayır"
         },
         "conditionals/csc-ecosystems/2023": {
-          "word": "Şərti ifadələr"
+          "word": "Şərti ifadələr",
+          "definition": "Yalnız müəyyən şərtlər altında işləyən bəyanatlar"
+        },
+        "ecosystem/csc-ecosystems/2023": {
+          "word": "Ekosistem",
+          "definition": "Qarşılıqlı orqanizmlərin və onların ətraf mühitin bioloji birliyi"
         },
         "event/csc-ecosystems/2023": {
-          "word": "Hadisə"
+          "word": "Hadisə",
+          "definition": "Bir şeyin baş verməsinə səbəb olan bir hərəkət"
+        },
+        "overfishing/csc-ecosystems/2023": {
+          "word": "Həddindən artıq balıq ovu",
+          "definition": "Balıqların çoxala biləcəklərindən daha sürətli çıxarılması"
+        },
+        "simulation/csc-ecosystems/2023": {
+          "word": "Simulyasiya",
+          "definition": "Tədqiqat məqsədi üçün kompüter modeli."
+        },
+        "debug/csc-ecosystems/2023": {
+          "word": "sazlama",
+          "definition": "Koddakı səhvlərin və ya problemlərin tapılması və düzəldilməsi."
         },
         "variable/csc-ecosystems/2023": {
-          "word": "Dəyişən"
+          "word": "Dəyişən",
+          "definition": "Bir dəyəri saxlaya bilən bir konteyner. "
+        },
+        "ecologist/csc-ecosystems/2023": {
+          "word": "Ekoloq",
+          "definition": "Heyvanların və bitkilərin ətraf mühitlə necə qarşılıqlı əlaqəsini araşdıran bir alim."
+        },
+        "energy/csc-ecosystems/2023": {
+          "definition": "Qida şəbəkələrindəki orqanizmlər arasında istehsalçılardan istehlakçılara ötürülür. Enerji orqanizmlər tərəfindən mürəkkəb tapşırıqları yerinə yetirmək üçün istifadə olunur.",
+          "word": "Enerji"
+        },
+        "food_chain/csc-ecosystems/2023": {
+          "word": "Qida zənciri ",
+          "definition": "İstehsalçılardan istehlakçılara, yırtıcılardan yırtıcılara və yırtıcılara qədər yedikləri qida sırasına görə əlaqəli bir qrup orqanizm."
         },
         "code/csc-mappinglandmarks/2023": {
           "word": "Kod",
@@ -951,17 +1125,49 @@
           "word": "Hadisə",
           "definition": "Bir şeyin baş verməsinə səbəb olan hərəkət."
         },
+        "landmark/csc-mappinglandmarks/2023": {
+          "word": "Əlamət",
+          "definition": "Əlamət əhəmiyyəti olan və ya bir yeri asanlıqla tanınan bir obyektdir (təbii və ya süni)."
+        },
         "sprite/csc-mappinglandmarks/2023": {
-          "word": "Sprayt"
+          "word": "Sprayt",
+          "definition": "Proqramınızdakı bir şəkil və ya xarakter."
         },
         "map/csc-mappinglandmarks/2023": {
-          "word": "Xəritə"
+          "word": "Xəritə",
+          "definition": "Fiziki xüsusiyyətləri, şəhərləri, yolları və s. göstərən quru və ya dəniz sahəsinin təsviri."
+        },
+        "pattern/csc-starquilts/2023": {
+          "word": "Naxış",
+          "definition": "Müntəzəm və təkrarlanan bir şəkildə baş verən və ya görünən bir şey"
+        },
+        "rhombus/csc-starquilts/2023": {
+          "word": "Romb",
+          "definition": "Dörd bərabər tərəfi olan çoxbucaqlı, əks tərəfləri paralel, əks açıları bərabərdir"
+        },
+        "star_quilt/csc-starquilts/2023": {
+          "word": "Ulduz yorğanı",
+          "definition": "Böyük Düzənliklərdən olan yerli amerikalılar arasında ənənəvi və qiymətli bir hədiyyə"
         },
         "artist/csc-starquilts/2023": {
-          "word": "Rəssam"
+          "word": "Rəssam",
+          "definition": "Demək olar ki, hər şeyi çəkdirmək üçün kod yaza bilərsiniz"
         },
         "loop/csc-starquilts/2023": {
-          "word": "Dövr"
+          "word": "Dövr",
+          "definition": "Təkrarlanan kod ardıcıllığı"
+        },
+        "point/csc-starquilts/2023": {
+          "word": "Nöqtə",
+          "definition": "Ulduz şəklinin bir hissəsi"
+        },
+        "row/csc-starquilts/2023": {
+          "word": "Sətir",
+          "definition": "Bu vəziyyətdə, müntəzəm bir romb xətti"
+        },
+        "concentric/csc-starquilts/2023": {
+          "word": "Konsentrik",
+          "definition": "Eyni mərkəzi paylaşan obyektlər və ya formalar"
         },
         "comments/csc-starquilts/2023": {
           "word": "Rəylər"
@@ -1023,7 +1229,7 @@
           "word": "Sprayt"
         },
         "condition/csd/2023": {
-          "word": "şərt"
+          "word": "vəziyyət"
         },
         "conditionals/csd/2023": {
           "word": "Şərti ifadələr"
@@ -1234,13 +1440,19 @@
           "word": "Təkrar et",
           "definition": "Bir şeyi yenə etmək."
         },
+        "command/coursed/2023": {
+          "word": "Əmr"
+        },
         "conditionals/coursed/2023": {
           "word": "Şərti ifadələr",
           "definition": "Yalnız müəyyən şərtlər altında işləyən ifadələr."
         },
         "condition/coursed/2023": {
-          "word": "şərt",
+          "word": "vəziyyət",
           "definition": "Proqram bir hərəkətə icazə verməzdən əvvəl onun doğru olub olmadığını yoxlayır."
+        },
+        "until/coursed/2023": {
+          "word": "Qədər"
         },
         "behavior/coursee/2023": {
           "word": "Davranış "
@@ -1261,7 +1473,7 @@
           "word": "Funksiya"
         },
         "condition/coursee/2023": {
-          "word": "şərt"
+          "word": "vəziyyət"
         },
         "conditionals/coursee/2023": {
           "word": "Şərti ifadələr",
@@ -1272,6 +1484,15 @@
         },
         "define/coursee/2023": {
           "word": "Təyin et"
+        },
+        "prepare/coursee/2023": {
+          "word": "Hazırlamaq"
+        },
+        "reflect/coursee/2023": {
+          "word": "Əks etdirmək"
+        },
+        "try/coursee/2023": {
+          "word": "Çalış"
         },
         "sprite/coursef/2023": {
           "word": "Sprayt",
@@ -1286,7 +1507,8 @@
           "definition": "Tapşırığı tamamlamaq üçün addımların siyahısı."
         },
         "behavior/coursef/2023": {
-          "word": "Davranış "
+          "word": "Davranış ",
+          "definition": "diyandırmaq"
         },
         "program/coursef/2023": {
           "word": "Proqram",
@@ -1301,6 +1523,7 @@
           "definition": "Proqramda istifadə olunan məlumat üçün etiket."
         },
         "prompt/coursef/2023": {
+          "word": "cəld",
           "definition": "Kompüter ekranında istifadəçinin daxil olmasını gözləyən mesaj."
         },
         "input/coursef/2023": {
@@ -1317,11 +1540,26 @@
         "internet/coursef/2023": {
           "word": "İnternet"
         },
+        "packets/coursef/2023": {
+          "word": "Paketlər"
+        },
+        "servers/coursef/2023": {
+          "word": "Serverlər"
+        },
         "url/coursef/2023": {
           "word": "URL ünvan"
         },
         "define/coursef/2023": {
           "word": "Təyin et"
+        },
+        "prepare/coursef/2023": {
+          "word": "Hazırlamaq"
+        },
+        "reflect/coursef/2023": {
+          "word": "Əks etdirmək"
+        },
+        "try/coursef/2023": {
+          "word": "Çalış"
         },
         "algorithm/express/2023": {
           "word": "Alqoritm",
@@ -1368,13 +1606,19 @@
           "word": "Təkrar et",
           "definition": "Bir şeyi yenə etmək."
         },
+        "command/express/2023": {
+          "word": "Əmr"
+        },
         "condition/express/2023": {
-          "word": "şərt",
+          "word": "vəziyyət",
           "definition": "Proqram bir hərəkətə icazə verməzdən əvvəl onun doğru olub olmadığını yoxlayır."
         },
         "conditionals/express/2023": {
           "word": "Şərti ifadələr",
           "definition": "Yalnız müəyyən şərtlər altında işləyən ifadələr."
+        },
+        "until/express/2023": {
+          "word": "Qədər"
         },
         "function/express/2023": {
           "word": "Funksiya",
@@ -1389,6 +1633,15 @@
         },
         "define/express/2023": {
           "word": "Təyin et"
+        },
+        "prepare/express/2023": {
+          "word": "Hazırlamaq"
+        },
+        "reflect/express/2023": {
+          "word": "Əks etdirmək"
+        },
+        "try/express/2023": {
+          "word": "Çalış"
         },
         "click/pre-express/2023": {
           "word": "Bas",
@@ -1452,6 +1705,9 @@
         "network/how-ai-works/2023": {
           "word": "şəbəkə"
         },
+        "artificial_intelligence/how-ai-works/2023": {
+          "word": "Süni İntellekt"
+        },
         "ethics/how-ai-works/2023": {
           "word": "Etika"
         },
@@ -1459,7 +1715,7 @@
           "definition": "kod yazmaq və ya kompüter üçün təlimatlar yazmaq."
         },
         "condition/aquatic/unversioned": {
-          "word": "şərt",
+          "word": "vəziyyət",
           "definition": "Proqram bir hərəkətə icazə verməzdən əvvəl onun doğru olub olmadığını yoxlayır."
         },
         "conditionals/aquatic/unversioned": {
@@ -1766,25 +2022,19 @@
           "word": "Proqram",
           "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir alqoritm."
         },
-        "code/poem-art/unversioned": {
-          "word": "Kod",
-          "definition": "(v) kompüter üçün təlimatlar yazmaq.\n\n"
+        "poetry_circle/poetry/2023": {
+          "word": "Şeir dairəsi"
         },
-        "event/poem-art/unversioned": {
+        "code/dance-ai/2023": {
+          "word": "Kod",
+          "definition": "kod yazmaq və ya kompüter üçün təlimatlar yazmaq."
+        },
+        "event/dance-ai/2023": {
           "word": "Hadisə",
           "definition": "Bir şeyin baş verməsinə səbəb olan hərəkət."
         },
-        "program/poem-art/unversioned": {
-          "word": "Proqram",
-          "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir sıra addımlar.\n"
-        },
-        "mood/poem-art/unversioned": {
-          "word": "əhval",
-          "definition": "bir hissin, atmosferin və ya duyğunun sənətdə və ya yazıda ifadəsi.\n"
-        },
-        "line/poem-art/unversioned": {
-          "word": "Xətt",
-          "definition": "(şeir yaradıcılığı) - cərgədə düzülmüş şeirin sağ kənarında bitən bölməsi.\n"
+        "program/dance-ai/2023": {
+          "word": "Proqram"
         }
       }
     }

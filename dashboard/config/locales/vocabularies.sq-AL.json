@@ -2539,8 +2539,7 @@
           "definition": "Një veprim që shkakton diçka të ndodhë."
         },
         "models_and_simulations/outbreak/unversioned": {
-          "word": "Modelet dhe Simulimet",
-          "definition": ""
+          "word": "Modelet dhe Simulimet"
         },
         "code/playlab/unversioned": {
           "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
@@ -2601,25 +2600,16 @@
           "word": "Programi",
           "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
         },
-        "code/poem-art/unversioned": {
-          "word": "Kod\n",
-          "definition": ""
+        "code/dance-ai/2023": {
+          "word": "Kod",
+          "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
         },
-        "event/poem-art/unversioned": {
+        "event/dance-ai/2023": {
           "word": "Event",
           "definition": "Një veprim që shkakton diçka të ndodhë."
         },
-        "program/poem-art/unversioned": {
-          "word": "Programi",
-          "definition": ""
-        },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+        "program/dance-ai/2023": {
+          "word": "Programi"
         }
       }
     }

@@ -24,6 +24,8 @@ zh-TW:
             '0.75': 小
             '1.00': 中
             '2.00': 大
+      Dancelab_ai:
+        text: "{IMAGE}生成{VALUE}效果"
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -75,6 +77,11 @@ zh-TW:
             '"measures"': 小節
             '"seconds"': 秒
         text: 當時間過了第 {TIMESTAMP} {UNIT}
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': 小節
+            '"seconds"': 秒
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -101,6 +108,31 @@ zh-TW:
             '"SLOTH"': 樹懶
             '"UNICORN"': 全部獨角獸
             sprites: 全部
+          MOVE:
+            '"next"': 下一個
+            '"prev"': 上一個
+            '"rand"': 隨機
+            MOVES.ClapHigh: Clap High
+            MOVES.Clown: Gangnam
+            MOVES.Dab: DAB
+            MOVES.DoubleJam: Double Down
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Kick: Star
+            MOVES.Rest: 無
+            MOVES.Roll: Body Roll
+            MOVES.ThisOrThat: This or That
+            MOVES.Thriller: Zombie
+        text: 群組 {GROUP} 重複執行 {MOVE} {DIR} 無限次
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          DIR:
+            "-1": "←"
+            '1': "→"
+          GROUP:
+            '"CAT"': 全部小貓
+            '"SLOTH"': 樹懶
           MOVE:
             '"next"': 下一個
             '"prev"': 上一個
@@ -588,6 +620,64 @@ zh-TW:
         text: |-
           "設置背景效果
           {PALETTE} {EFFECT}"
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"blooming_petals"': 盛開的花瓣
+            '"circles"': 隧道
+            '"color_cycle"': 色塊
+            '"diamonds"': 菱形
+            '"disco"': 正方形
+            '"disco_ball"': 迪斯科球
+            '"fireworks"': 煙火
+            '"flowers"': 花朵
+            '"frosted_grid"': 磨砂網格
+            '"galaxy"': 太空
+            '"growing_stars"': 星星
+            '"higher_power"': Higher Power
+            '"kaleidoscope"': 萬花筒
+            '"lasers"': 鐳射舞池
+            '"music_wave"': 音浪
+            '"none"': 無
+            '"quads"': 角
+            '"rainbow"': 彩虹
+            '"rand"': 隨機
+            '"ripples"': 漣漪
+            '"ripples_random"': 隨機漣漪
+            '"snowflakes"': 雪球
+            '"sparkles"': 火花
+            '"spiral"': 螺旋
+            '"splatter"': 飛濺油漆
+            '"squiggles"': 蜿曲線段
+            '"starburst"': 星爆
+            '"stars"': 星星
+            '"swirl"': 催眠
+            '"text"': 歌曲標題
+          PALETTE:
+            '"autumn"': 秋天
+            '"cool"': 藍調
+            '"default"': 光亮
+            '"electronic"': 電子
+            '"grayscale"': 灰度
+            '"iceCream"': 冰淇淋
+            '"neon"': 霓虹
+            '"ocean"': 海洋
+            '"rainbow"': 彩虹
+            '"rave"': 黑白
+            '"roses"': 玫瑰
+            '"sky"': 天空
+            '"spring"': 春天
+            '"summer"': 夏天
+            '"sunrise"': 日出
+            '"sunset"': 日落
+            '"tropical"': 熱帶
+            '"twinkling"': 閃爍
+            '"vintage"': 復古
+            '"warm"': 紅色
+            '"winter"': 冬天
+        text: |-
+          "設置背景效果
+          {PALETTE} {EFFECT}"
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -1020,6 +1110,12 @@ zh-TW:
         text: "{SPRITE}說{TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE}滑動到{LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': 氣體
+            '"liquid"': 液體
+            '"solid"': 固體
       KatiesBlocks_tumbling:
         text: 翻滾
       Mikelab_addBehaviorSimple:

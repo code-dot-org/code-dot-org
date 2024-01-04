@@ -5,6 +5,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {getResponsiveValue} from './responsive';
+import fontConstants from '@cdo/apps/fontConstants';
 
 export default class FilterGroupContainer extends React.Component {
   static propTypes = {
@@ -35,7 +36,7 @@ const styles = {
     paddingLeft: 10,
   },
   filterGroupText: {
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     borderBottom: 'solid grey 1px',
   },
 };

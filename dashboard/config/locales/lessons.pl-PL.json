@@ -1583,6 +1583,39 @@
         "pre-express-2018/Spelling Bee": {
           "name": "CSC - Literująca pszczółka"
         },
+        "K5-OnlinePD/Getting Started": {
+          "name": "Pierwsze kroki"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Podstawy Informatyki"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "Patrząc w przyszłość"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "Doskonalenie podstaw: Sekwencje"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "Doskonalenie podstaw: Pętle"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "Doskonalenie podstaw: Warunki"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "Doskonalenie podstaw: Funkcje"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "Doskonalenie podstaw: Zdarzenia"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "Najlepsze praktyki w nauczaniu informatyki"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Planowanie"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Następne Kroki"
+        },
         "csd1-2019/Intro to Problem Solving": {
           "name": "Wprowadzenie do rozwiązywania problemów"
         },
@@ -2263,6 +2296,45 @@
         },
         "pre-express-2019/Make a Game in Play Lab": {
           "name": "Królewska bitwa ze zdarzeniami"
+        },
+        "k5-onlinepd-2019/Welcome to \"Teaching Computer Science Fundamentals\"": {
+          "name": "Witamy na \"Podstawach Nauczania Informatyki\""
+        },
+        "k5-onlinepd-2019/Understanding the Computer Science Fundamentals Courses": {
+          "name": "Rozumienie kursów Podstaw Informatyki"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Sekwencjonowanie"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Pętle"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Zdarzenia"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Zdania z warunkami"
+        },
+        "k5-onlinepd-2019/End of Course projects": {
+          "name": "Projekty na koniec kursu"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funkcje"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Zmienne"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Pętle dla (for)"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Sprite Lab"
+        },
+        "k5-onlinepd-2019/Reviewing your reflections": {
+          "name": "Przeglądanie Twoich refleksji"
+        },
+        "k5-onlinepd-2019/Next steps": {
+          "name": "Następne kroki"
         },
         "coursea-2020/Safety in My Online Neighborhood": {
           "name": "Bezpieczeństwo w moim otoczeniu online"
@@ -4001,6 +4073,39 @@
           "preparation": "-   Graj przez zagadki, aby znaleźć potencjalne obszary problemowe dla swojej klasy.\n-   (Opcjonalnie) Wybierz kilka zagadek do zrobienia jako grupa z klasą.\n-   Upewnij się, że każdy uczeń ma dziennik refleksji.",
           "purpose": " W ramach tych zajęć online, uczniowie będą się uczyć, jak korzystać ze zdarzeń w Play Lab. Rozpoczną oni od uczenia rycerza poruszać się, gdy zostanie wciśnięty klawisz ze strzałką, a zakończ umożliwieniem pochwalenia się pozostałymi umiejętnościami, które nabyli w ramach tego kursu, z użyciem sekwencji i pętli, w ramach łamigłówki w czasie zabawy.",
           "student_overview": "Użyj zdarzeń, aby stworzyć historyjkę lub interaktywną grę."
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "Pierwsze kroki"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Podstawy Informatyki"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "Patrząc w przyszłość"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "Doskonalenie podstaw: Sekwencje"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "Doskonalenie podstaw: Pętle"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "Doskonalenie podstaw: Warunki"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "Doskonalenie podstaw: Funkcje"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "Doskonalenie podstaw: Zdarzenia"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "Najlepsze praktyki w nauczaniu informatyki"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Planowanie"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Następne Kroki"
         },
         "csd1-2022/Intro to Problem Solving": {
           "name": "Wprowadzenie do rozwiązywania problemów"
@@ -6613,9 +6718,6 @@
           "overview": "⚠️ Ta lekcja jest przeznaczona dla sal lekcyjnych, które chcą pokazać całą [Seria filmów How AI Works](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) w ciągu jednego dnia\\*\\*. Nie jest przeznaczony do nauczania w kolejności z innymi lekcjami w tej jednostce, która wprowadza każdy film jeden dzień na raz.\n\nUczniowie śledzą każdy film, dopasowując słownictwo z filmu, następnie odpowiadając na pytanie refleksyjne dotyczące każdego filmu. Plan lekcji i slajdy są bardzo rzadkie i otwarte, aby umożliwić improwizację i dostosowanie do Twojej klasy.",
           "preparation": "-   Wydrukuj przewodnik po\n    ćwiczeniach - Wyświetlaj slajdy na projektorze wideo"
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Godzina Kodowania 2013"
-        },
         "applab-intro/Intro to App Lab": {
           "name": "Wprowadzenie do App Lab",
           "overview": "Ten samouczek ma na celu wprowadzenie Was do środowiska programistycznego App Lab - skutecznego narzędzia do budowania i udostępniania aplikacji. Samouczek uczy tworzenia i kontrolowania przycisków, tekstu, obrazów, dźwięków i ekranów w JavaScript przy użyciu bloków lub tekstu. Pod koniec samouczka użytkownicy mają czas na rozszerzenie projektu, który zaczęli budować, do aplikacji typu \"Wybierz swoją własną przygodę\", \"Kartka z życzeniami\" lub \"Quiz osobowościowy\". Mogą również kontynuować budowanie kolejnych projektów, które znajdują się na stronie code.org/applab. \n\nMiłego programowania w \"Godzinie kodowania\" z App Lab!\n\n\\*\\*Samouczek jest przeznaczony dla uczniów powyżej 13 roku życia. Ponieważ pozwala on uczniom na wgrywanie własnych dźwięków i obrazów, młodzi użytkownicy nie powinni korzystać z niego bez nadzoru. Aby chronić prywatność Twoich uczniów, jeśli mają mniej niż 13 lat, nie będą mogli korzystać z tego samouczka, chyba że wcześniej założysz im konta w sekcji, którą zarządzasz.",
@@ -6792,9 +6894,10 @@
           "student_overview": "Podsumowanie samouczka: Najpierw uczniowie klasyfikują przedmioty jako \"ryba\" lub \"nie ryba\" próbując zebrać śmieci z oceanu. Następnie będą musieli poszerzyć zakres swoich danych treningowych tak, aby uwzględnić stworzenia morskie, które należą do środowiska wodnego. W drugiej części ćwiczenia uczniowie będą wybierać swoje własne etykiety do zastosowania w obrazkach losowo wygenerowanych ryb. Z tych danych treningowych korzysta się na potrzeby modelu uczenia maszynowego, który powinien potem być w stanie oznaczać nowe obrazy we własnym zakresie."
         },
         "outbreak/Outbreak": {
+          "name": "Symulowanie symulacji",
           "overview": "Na tej lekcji uczniowie utworzą symulator epidemii przy użyciu zdarzeń. Zapoznają się z symulacją, aby zrozumieć, jak szybko wirus może się rozprzestrzeniać i co można zrobić, aby spowolnić zarażanie. ",
-          "preparation": "-   Przeglądaj łamigłówki, aby znaleźć potencjalne obszary problemów dla swojej klasy. \n-   Upewnij się, że każdy uczeń ma dzienniczek refleksji.",
-          "purpose": "Na poprzedniej lekcji uczniowie zebrali i zinterpretowali dane z prostej symulacji. Podczas tej lekcji uczniowie będą postępować zgodnie z instrukcjami, aby zakodować własny model symulacyjny. Wcześniejsza wiedza uczniów na temat epidemii wirusów w rzeczywistej sytuacji zostanie zastosowana do fikcyjnego scenariusza.",
+          "preparation": "#### Tydzień przed Godziną Kodowania\n\n-   Zapoznaj się z [Poradnikiem edukatora Godziny Kodowania](https://hourofcode.com/us/how-to) i [Najlepszymi praktykami od skutecznych nauczycieli](https://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466), aby zacząć planować przebieg swojej Godziny Kodowania. \n-   [Zarejestruj swoje zdarzenie Godziny Kodowania](https://hourofcode.com/us), jeśli chcesz uzyskać wsparcie w klasie, zniżkę na plakaty lub wziąć udział w rozdawaniu robotów (tylko w USA). \n-   Przejrzyj samouczek online i ukończ go samodzielnie: [Epidemia](https://studio.code.org/s/outbreak/) \n-   Pamiętaj, abyś najpierw przetestował go, zanim poprosisz uczniów o jego ukończenie. \n-   Sprawdź swoje wyposażenie i zdecyduj, czy musisz rozwiązać jakiekolwiek problemy przed Godziną Kodowania. \n\n#### Jeden dzień przed Godziną Kodowania\n\n-   Każdy uczeń, który ukończył zajęcia, powinien otrzymać [certyfikat] [4]. Wydrukuj egzemplarz dla każdego ucznia z wyprzedzeniem, aby ułatwić sobie zakończenie Godziny Kodowania. \n-   (opcjonalnie) Zachęć uczniów, aby przynieśli własne słuchawki i użyli ich podczas tych zajęć.",
+          "purpose": "Podczas tej lekcji uczniowie będą postępować zgodnie z instrukcjami, aby zakodować własny model symulacyjny. Wcześniejsza wiedza uczniów na temat epidemii wirusów w rzeczywistej sytuacji zostanie zastosowana do fikcyjnego scenariusza.",
           "student_overview": "W Mieście Potworów pojawił się wirus! Naucz się tworzyć symulator wirusów i pomóż potworom wrócić do zdrowia. "
         },
         "playlab/Play Lab": {
@@ -6837,69 +6940,6 @@
           "preparation": "-   Przetestuj widget kompresji tekstu\n-   Przejrzyj wskazówki dydaktyczne, aby zdecydować, z których opcji chcesz skorzystać",
           "purpose": "Podstawową zasadą przyświecającą kompresji jest opracowanie metody lub protokołu używania mniejszej ilości bitów do przedstawienia oryginalnej informacji. Sposób, w jaki przedstawiamy skompresowane dane w ramach tej lekcji, przy pomocy \"słownika\" powtórzonych wzorców, jest podobny do [schematu kompresji LZW](http://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch), należy natomiast zauważyć, że LZW jest nieco inny od tego, co robią na tej lekcji uczniowie. Uczniowie wynajdują tutaj swój własny sposób.  LZW wykorzystuje się nie tylko do tekstu (pliki zip), ale również do formatu plików obrazkowych GIF.",
           "student_overview": "W pewnym momencie osiągamy fizyczną granicę szybkości przesyłania bitów i jeśli chcemy szybciej przesłać dużą ilość informacji, musimy znaleźć sposób na przedstawienie tej samej informacji za pomocą mniejszej liczby bitów – musimy skompresować dane."
-        },
-        "applab-1hour/Room Escape": {
-          "name": "Ucieczka z sali"
-        },
-        "applab-2hour/Digital Design": {
-          "name": "Projekt cyfrowy"
-        },
-        "applab-2hour/Event Driven Programming": {
-          "name": "Programowanie sterowane zdarzeniami"
-        },
-        "applab-2hour/Basic App Functionality": {
-          "name": "Podstawowa funkcjonalność aplikacji"
-        },
-        "applab-2hour/Getters and Setters": {
-          "name": "Gettery I settery"
-        },
-        "frequency_analysis/Frequency Analysis": {
-          "name": "Analiza częstotliwości"
-        },
-        "gamelab/Start and End Screens": {
-          "name": "Ekran początkowy i ekran końcowy"
-        },
-        "gamelab/Start and End Screens2": {
-          "name": "Ekran początkowy i ekran końcowy2"
-        },
-        "k1hoc2017/Collector Hour of Code 2017": {
-          "name": "Godzina Kodowania Kolekcjonera 2017"
-        },
-        "netsim/Overview and Setup Instructions": {
-          "name": "Omówienie i instrukcje instalacji"
-        },
-        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
-          "name": "Peer to Peer - Przesłanie bitów na współdzielonym połączeniu"
-        },
-        "netsim/Peer to Peer - Sending Numbers": {
-          "name": "Peer to Peer - Wysyłanie liczb"
-        },
-        "netsim/Peer to Peer - Sending Ascii": {
-          "name": "Peer to Peer - Wysyłanie ASCII"
-        },
-        "netsim/Broadcasting messages": {
-          "name": "Nadawanie komunikatów"
-        },
-        "netsim/Routers and addresses": {
-          "name": "Routery i adresy"
-        },
-        "netsim/Packets and Reliability": {
-          "name": "Pakiety i niezawodność"
-        },
-        "netsim/Manual DNS": {
-          "name": "Ręczny DNS"
-        },
-        "netsim/Automatic DNS node": {
-          "name": "Automatyczny węzeł DNS"
-        },
-        "netsim/Internet Simulator Freeplay": {
-          "name": "Czas na zabawę z symulatorem internetowym"
-        },
-        "poetry-hoc3/lesson-1": {
-          "name": "Badanie nastroju"
-        },
-        "vigenere/Vigenere": {
-          "name": "Vigenere"
         },
         "allthethings/Jigsaw": {
           "name": "Układanka"
@@ -7047,6 +7087,21 @@
         },
         "allthethings/lesson-52": {
           "name": "Dance Lab2"
+        },
+        "applab-1hour/Room Escape": {
+          "name": "Ucieczka z sali"
+        },
+        "applab-2hour/Digital Design": {
+          "name": "Projekt cyfrowy"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "Programowanie sterowane zdarzeniami"
+        },
+        "applab-2hour/Basic App Functionality": {
+          "name": "Podstawowa funkcjonalność aplikacji"
+        },
+        "applab-2hour/Getters and Setters": {
+          "name": "Gettery I settery"
         },
         "csd-post-survey/CSD post-course survey": {
           "name": "Ankieta dla uczniów po odbyciu kursu CSD ('18-'19)"
@@ -7357,10 +7412,55 @@
         "deepdive-debugging/Debugging for CDEF Educators": {
           "name": "Debubowanie dla edukatorów CDEF"
         },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "Analiza częstotliwości"
+        },
+        "gamelab/Start and End Screens": {
+          "name": "Ekran początkowy i ekran końcowy"
+        },
+        "gamelab/Start and End Screens2": {
+          "name": "Ekran początkowy i ekran końcowy2"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Godzina Kodowania 2013"
+        },
         "jigsaw/Jigsaw": {
           "name": "Układanka",
           "overview": "Ta lekcja da uczniom wyobrażenie, czego się spodziewać po wejściu do laboratorium komputerowego. Zaczyna się od krótkiej dyskusji wprowadzającej ich do zachowania się w laboratorium komputerowym, a następnie przechodzą oni do korzystania z komputera, aby ukończyć łamigłówki online.",
           "student_overview": "Kliknij i przeciągnij, by ukończyć łamigłówki."
+        },
+        "k1hoc2017/Collector Hour of Code 2017": {
+          "name": "Godzina Kodowania Kolekcjonera 2017"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "Omówienie i instrukcje instalacji"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "Peer to Peer - Przesłanie bitów na współdzielonym połączeniu"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "Peer to Peer - Wysyłanie liczb"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "Peer to Peer - Wysyłanie ASCII"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "Nadawanie komunikatów"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Routery i adresy"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "Pakiety i niezawodność"
+        },
+        "netsim/Manual DNS": {
+          "name": "Ręczny DNS"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "Automatyczny węzeł DNS"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "Czas na zabawę z symulatorem internetowym"
         },
         "pixelation/Black & White Pixelation Tutorial": {
           "name": "Samouczek czarno-białej pikselizacji"
@@ -7376,6 +7476,18 @@
         },
         "pixelation/Color Pixelation Freeplay": {
           "name": "Czas na zabawę z pikselizacją kolorową"
+        },
+        "poetry-hoc3/lesson-1": {
+          "name": "Badanie nastroju"
+        },
+        "vigenere/Vigenere": {
+          "name": "Vigenere"
+        },
+        "dance-ai-2023/lesson-1": {
+          "name": "Potańcówka: edycja A.I.",
+          "overview": "W tym ćwiczeniu uczniowie w każdym wieku otrzymują wstępne doświadczenie z kodowaniem i sztuczną inteligencją w bezpiecznym i kreatywnym środowisku. Ta lekcja została zaprojektowana dla uczniów w każdym wieku, ale wymaga czytania. Ta aktywność wymaga od uczniów odtwarzania dźwięku, ponieważ samouczek został stworzony, aby reagować na muzykę.",
+          "preparation": "### Jak zaplanować swoj Godzinę Kodowania\n\nZnajdź zasoby potrzebne do zaplanowania, realizacji i świętowania Godziny Kodowania w swojej szkole! [here](https://hourofcode.com/us/how-to)",
+          "purpose": "Sprawienie, by kodowanie było ekscytującym i przyjemnym doświadczeniem, jest niezbędne do rozwijania zainteresowania informatyką. Ta lekcja jest pełna chwil radości, w których uczniowie używają kodu do choreografii spektaklu tanecznego koloru i ruchu przeciągając i upuszczając proste bloki kodujące. Uczniowie zostaną zapoznani z Botem A.I., którym pokierują, aby pomógł im znaleźć idealne efekty pasujące do nastroju ich tańca.  "
         }
       }
     }

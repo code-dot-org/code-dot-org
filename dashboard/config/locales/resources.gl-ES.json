@@ -1433,6 +1433,9 @@
           "name": "Funcións con parámetros",
           "type": "Vídeo"
         },
+        "fucntions_devices/csd/2023": {
+          "name": "Funcións"
+        },
         "the_counter_pattern_2/csd/2023": {
           "type": "Vídeo"
         },
@@ -1815,11 +1818,6 @@
         },
         "video-text-compression/text-compression/unversioned": {
           "type": "Vídeo"
-        },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": "",
-          "type": ""
         }
       }
     }

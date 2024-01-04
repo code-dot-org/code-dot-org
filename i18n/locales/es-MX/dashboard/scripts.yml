@@ -483,7 +483,7 @@ es-MX:
           student_description: Aprende a programar droides y crea tu propio juego Star Wars en una galaxia muy, muy lejana.
           name: starwarsblocks
         mc:
-          title: Hora de Código de Minecraft
+          title: Aventurero de Minecraft
           description: Utiliza bloques de código para llevar a Steve o Alex en una aventura a través del mundo de Minecraft.
           description_short: Explora un mundo de Minecraft, a través de código.
           student_description: Utiliza bloques de código para llevar a Steve o Alex en una aventura a través del mundo de Minecraft.
@@ -6888,10 +6888,17 @@ es-MX:
           lessons:
             lesson-1:
               name: Partículas
+            lesson-4:
+              name: ecosistemas
         angelina-playground:
           lessons:
             lesson-5:
               name: Evaluaciones
+            lesson-6:
+              name: Lección 1
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Aleatorio
         csp-playground:
           title: CSP Playground
           description_audience: Autores del Curriculum
@@ -6980,6 +6987,12 @@ es-MX:
           title: 'Preparación para Enseñar la Unidad 1 '
           description: "Este módulo está diseñado para ayudarte a preparar la enseñanza de unidades específicas dentro del curso Descubrimientos de la Informática.  Empieza seleccionando la unidad que planeas enseñar primero. Puedes volver a esta sección de la formación a lo largo del curso escolar mientras te preparas para enseñar nuevas unidades del curso. No es necesario completar este contenido en orden. Para obtener orientación sobre la mejor manera de implementar Descubrimientos de la Informática con los estudiantes, consulta la [Guía de Implementación de Descubrimientos de la Informática][0].\n\n**Para cada unidad en Descubrimientos de la Informática, tendrás la oportunidad de:**\n\n-   Prepararte para enseñar la primera semana del contenido de la unidad \n-   Practicar los conceptos clave incluidos en la unidad \n-   Participar en el trabajo de ejemplo de los estudiantes \n-   Explorar los proyectos de fin de capítulo \n\n**Tiempo sugerido:** 2 horas"
           student_description: "Este módulo está diseñado para ayudarte a preparar la enseñanza de unidades específicas dentro del curso Descubrimientos de la Informática.  Empieza seleccionando la unidad que planeas enseñar primero. Puedes volver a esta sección de la formación a lo largo del curso escolar mientras te preparas para enseñar nuevas unidades del curso. No es necesario completar este contenido en orden. Para obtener orientación sobre la mejor manera de implementar Descubrimientos de la Informática con los estudiantes, consulta la [Guía de Implementación de Descubrimientos de la Informática][0].\n\n**Para cada unidad en Descubrimientos de la Informática, tendrás la oportunidad de:**\n\n-   Prepararte para enseñar la primera semana del contenido de la unidad \n-   Practicar los conceptos clave incluidos en la unidad \n-   Participar en el trabajo de ejemplo de los estudiantes \n-   Explorar los proyectos de fin de capítulo \n\n**Tiempo sugerido:** 2 horas"
+        csc-ecosystems-2023:
+          lessons:
+            lesson-3:
+              name: Programa tu Propio Ecosistema (2023)
+          title: Cómo Simular un Ecosistema Marino (2023)
+          description: "## Pretrabajo sugerido para este módulo\n\n**Ciencia:** Los estudiantes simularán un ecosistema de vida marina en las Lecciones 1 y 2. Para familiarizarte con este ecosistema, te recomendamos este [Video de Animales Marinos](https://www.youtube.com/watch?v=8adtdg0N2-g) (9:42 minutos). \n\nEn la Lección 2, los estudiantes codificarán varias prácticas de pesca sostenibles. Estas son algunas lecturas para promover el conocimientos y profundizar las conexiones con el mundo real: [Entendiendo la sobrepesca](https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing) (artículo del Acuario de la Bahía de Monterey), o [Mw, kwa Talks to the Loon](https://books.google.com/books/about/Mw_kwa_Talks_to_the_Loon.html?id=ZtJfkFFPTzIC) (Libro infantil).\n\n**Ciencias de la Computación:** En este módulo, los estudiantes aprenderán nuevos conceptos de codificación que podrían ser difíciles para los estudiantes de ciencias de la computación nuevos. Si los estudiantes no están familiarizados con el Sprite Lab de Code.org recomendamos probar [Peces en Sprite Lab](https://studio.code.org/s/coursee-2022/lessons/3) (55 minutos) para una introducción básica a la herramienta. \n\nEste módulo también utiliza un concepto avanzado de CS llamado sentencias condicionales. Los estudiantes aprenden este concepto de manera andamiada, pero algunos estudiantes pueden beneficiarse de participar primero en esta introducción a condicionales actividad desenchufada: [Tarjetas Condicionales](https://studio.code.org/s/coursed-2022/lessons/12) (50 minutos)."
         drafting:
           name: borrador
         tess-testing-problem-solving-2023:
@@ -7942,3 +7955,261 @@ es-MX:
           lessons:
             lesson-1:
               name: Nuestro Código Ético de la Inteligencia Artificial
+        virtual-pl-csa-summer-2024-day1:
+          title: Día 1
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Introducción
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-3:
+              display_name: Asíncronos Parte 1
+            lessonGroup-4:
+              display_name: Síncronos Parte 2
+            lessonGroup-5:
+              display_name: Asíncronos Parte 2
+          title: Día 2
+        virtual-pl-csp-summer-day3:
+          lessons:
+            lesson-2:
+              name: Asíncronos Parte 1
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-3:
+              display_name: Asíncronos Parte 1
+            lessonGroup-4:
+              display_name: Síncronos Parte 2
+            lessonGroup-5:
+              display_name: Asíncronos Parte 2
+          title: Día 3
+        virtual-pl-csp-summer-day4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-3:
+              display_name: Asíncronos Parte 1
+            lessonGroup-4:
+              display_name: Síncronos Parte 2
+            lessonGroup-5:
+              display_name: Asíncronos Parte 2
+          title: Día 4
+        virtual-pl-csp-summer-day5:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-3:
+              display_name: Asíncronos Parte 1
+            lessonGroup-4:
+              display_name: Síncronos Parte 2
+          title: Día 5
+        virtual-pl-csa-summer-day2:
+          lessons:
+            lesson-2:
+              name: Asíncronos Parte 1
+            lesson-3:
+              name: Síncronos Parte 2
+            lesson-4:
+              name: Asíncronos Parte 2
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-3:
+              display_name: Asíncronos Parte 1
+            lessonGroup-4:
+              display_name: Síncronos Parte 2
+            lessonGroup-5:
+              display_name: Asíncronos Parte 2
+          title: Día 2
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Introducción
+            lesson-2:
+              name: Asíncronos Parte 1
+            lesson-4:
+              name: Asíncronos Parte 2
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-3:
+              display_name: Asíncronos Parte 1
+            lessonGroup-4:
+              display_name: Síncronos Parte 2
+            lessonGroup-5:
+              display_name: Asíncronos Parte 2
+          title: Día 3
+        virtual-pl-csa-summer-day4:
+          lessons:
+            lesson-2:
+              name: Asíncronos Parte 1
+            lesson-4:
+              name: Asíncronos Parte 2
+            lesson-5:
+              name: Apertura del Taller
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-3:
+              display_name: Asíncronos Parte 1
+            lessonGroup-4:
+              display_name: Síncronos Parte 2
+            lessonGroup-5:
+              display_name: Asíncronos Parte 2
+          title: Día 4
+        virtual-pl-csa-summer-day5:
+          lessons:
+            lesson-1:
+              name: Apertura del Taller
+            lesson-2:
+              name: Asíncronos Parte 1
+            lesson-3:
+              name: Síncronos Parte 2
+            lesson-4:
+              name: Asíncronos Parte 2
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-4:
+              display_name: Síncronos Parte 2
+            lessonGroup-5:
+              display_name: Asíncronos Parte 2
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-2:
+              name: Asíncronos Parte 1
+            lesson-3:
+              name: Síncronos Parte 2
+            lesson-4:
+              name: Asíncronos Parte 2
+            lesson-7:
+              name: Introducción
+            lesson-8:
+              name: Apertura del Taller
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-3:
+              display_name: Asíncronos Parte 1
+            lessonGroup-4:
+              display_name: Síncronos Parte 2
+            lessonGroup-5:
+              display_name: Asíncronos Parte 2
+            lessonGroup-7:
+              display_name: Introducción
+          title: Día 1
+        virtual-pl-csp-summer-day1:
+          lessons:
+            lesson-5:
+              name: Introducción a las actividades asincrónicas
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Síncronos Parte 1
+            lessonGroup-3:
+              display_name: Síncronos Parte 2
+            lessonGroup-4:
+              display_name: Asíncronos Parte 1
+            lessonGroup-5:
+              display_name: Asíncronos Parte 2
+          title: Día 1
+        draft-hoc-dp-2:
+          lessons:
+            lesson-2:
+              name: plantilla de plan de lecciones de la hora del código
+        self-paced-pl-csd-unit1-2-2023:
+          title: 'Módulo 1: Preparación para la Enseñanza de la Resolución de Problemas y la Computación'
+          description: "Este módulo de aprendizaje profesional está diseñado para ayudarte en la enseñanza de la unidad de Resolución de Problemas y Computación de Code.org. \n\n**En este módulo de aprendizaje profesional, podrás:**\n\n-   Obtener una introducción a la Resolución de Problemas y Computación.\n-   Practicar los conceptos clave incluidos en la unidad.\n-   Explorar los proyectos de fin de capítulo.\n\n**Tiempo sugerido:** 30 minutos"
+          student_description: "Este módulo de aprendizaje profesional está diseñado para ayudarte en la enseñanza de la unidad de Resolución de Problemas y Computación de Code.org. \n\n**En este módulo de aprendizaje profesional, podrás:**\n\n-   Obtener una introducción a la Resolución de Problemas y Computación.\n-   Practicar los conceptos clave incluidos en la unidad.\n-   Explorar los proyectos de fin de capítulo.\n\n**Tiempo sugerido:** 30 minutos"
+        dance-ai-2023:
+          lessons:
+            lesson-1:
+              name: 'Fiesta de Baile: Edición IA'
+          title: 'Fiesta de Baile: Edición IA'
+        self-paced-pl-csd-unit2-2-2023:
+          title: 'Módulo 2: Preparación para la Enseñanza del Desarrollo Web'
+        self-paced-pl-csd-unit3-2-2023:
+          title: Preparación para la Enseñanza de Animaciones y Juegos Interactivos
+          description: "Este módulo de aprendizaje profesional está diseñado para ayudarte en la enseñanza de la unidad de Animaciones y Juegos Interactivos de Code.org. \n\n**En este módulo de aprendizaje profesional, podrás:**\n\n-   Obtener una introducción a las Animaciones y Juegos Interactivos.\n-   Practicar los conceptos clave incluidos en la unidad.\n-   Interactuar con el Laboratorio Web.\n-   Explorar los proyectos de fin de capítulo.\n\n**Tiempo sugerido:** 120 minutos"
+          student_description: "Este módulo de aprendizaje profesional está diseñado para ayudarte en la enseñanza de la unidad de Animaciones y Juegos Interactivos de Code.org. \n\n**En este módulo de aprendizaje profesional, podrás:**\n\n-   Obtener una introducción a las Animaciones y Juegos Interactivos.\n-   Practicar los conceptos clave incluidos en la unidad.\n-   Interactuar con el Laboratorio Web.\n-   Explorar los proyectos de fin de capítulo.\n\n**Tiempo sugerido:** 120 minutos"
+        self-paced-pl-csd-unit4-2-2023:
+          title: 'Módulo 4:  Preparación para la Enseñanza del Proceso de Diseño'
+        self-paced-pl-csd-unit5-2-2023:
+          title: 'Módulo 5: Preparación para la Enseñanza de los Datos y la Sociedad'
+        web-dev-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Creación de páginas Web'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Sitios Web Multipágina'
+          title: Desarrollo Web
+          student_description: En la Unidad 2, aprenderás cómo crear y compartir el contenido en tus propias páginas web. Después de decidir qué contenido deseas compartir con los demás, aprenderás a estructurar y diseñar tus páginas mediante HTML y CSS. También practicarás valiosas habilidades de programación, como depurar y comentar. Al final de la unidad, tendrás un sitio web personal que podrás publicar en Internet.
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Encuesta
+            lessonGroup-2:
+              display_name: 'Capítulo 1: El proceso de resolución de problemas'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Computadoras y resolución de problemas'
+            lessonGroup-4:
+              display_name: Lecciones Alternativas
+          student_description: Resolución de Problemas y Computación es una iniciación altamente interactiva y colaborativa al campo de la informática, enmarcada dentro de la búsqueda más amplia de la resolución de problemas. Practicarás el uso de un proceso de resolución de problemas para abordar una serie de rompecabezas, desafíos y escenarios del mundo real. A continuación, aprenderás cómo los ordenadores introducen, emiten, almacenan y procesan información para ayudar a los humanos a resolver problemas.  La unidad concluye con un proyecto en el que diseñarás una aplicación que ayude a resolver un problema de tu elección.
+        csd2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Creación de páginas Web'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Sitios Web Multipágina'
+          title: Desarrollo Web
+          student_description: En la Unidad 2, aprenderás cómo crear y compartir el contenido en tus propias páginas web. Después de decidir qué contenido deseas compartir con los demás, aprenderás a estructurar y diseñar tus páginas mediante HTML y CSS. También practicarás valiosas habilidades de programación, como depurar y comentar. Al final de la unidad, tendrás un sitio web personal que podrás publicar en Internet.
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Imágenes y animaciones'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Desarrollo de juegos'
+          title: Animaciones Interactivas y Juegos
+          student_description: " En la Unidad 3, desarrollarás tu experiencia de programación a medida que programes animaciones, arte interactivo y juegos en el Laboratorio de juegos. La unidad comienza con formas simples y, a partir de los mismos conceptos de programación y el proceso de diseño que usan los científicos informáticos a diario, añade juegos más sofisticados basados en sprites. En el proyecto final, desarrollarás un programa personalizado e interactivo."
+        csd4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Diseño orientado al usuario'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Prototipos de aplicaciones'
+          student_description: La Unidad 4 introduce los impactos sociales más amplios que tiene la computación. A través de una serie de desafíos de diseño, aprenderás a comprender mejor las necesidades de los demás mientras desarrollas una solución a un problema. La segunda mitad de la unidad consiste en un proyecto de equipo iterativo, durante el cual los equipos tienen la oportunidad de identificar una necesidad que les importa, crear prototipos de soluciones tanto en papel como en el Laboratorio de aplicaciones, y probar soluciones con usuarios reales para obtener comentarios y seguir adelante.
+        csd5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Representación de la información'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Resolución de problemas en los datos'
+          title: Datos y Sociedad
+          student_description: La Unidad 5 trata sobre la importancia de los datos a la hora de resolver problemas y resalta cómo las computadoras pueden ayudar en este proceso. El primer capítulo explora los diferentes sistemas utilizados para representar información en una computadora, y los desafíos y concesiones planteados al usarlos. En el segundo capítulo, aprenderá cómo se utilizan las colecciones de datos para resolver problemas y cómo las computadoras ayudan a automatizar los pasos de este proceso. Al final del capítulo, se considera cómo se puede aplicar el proceso de resolución de problemas de datos a un área de tu elección.
+          description_short: Aprende cómo las personas usan las computadoras para resolver problemas de datos.
+        csd6a-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capítulo 1: Entradas y Salidas'
+            lessonGroup-3:
+              display_name: 'Capítulo 2: Desarrollo de prototipos físicos'
+          student_description: Esta unidad explora el papel de las plataformas de hardware en la informática y cómo los diferentes sensores pueden proporcionar una entrada y salida más eficaz que el tradicional teclado, ratón y monitor. Utilizando el Laboratorio de Aplicaciones y el Circuit Playground de Adafruit, desarrollarás programas que utilizan las mismas entradas y salidas de hardware que se ven en los dispositivos inteligentes, observando cómo un simple prototipo aproximado puede conducir a un producto terminado. La unidad concluye con un reto de diseño para utilizar el Circuit Playground como base para una innovación de su propio diseño.
+          description_short: Aprende a programar con dispositivos físicos.
+        csd6b-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Entradas y salidas
+        csd7-2024:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Introducción al Laboratorio de aplicaciones
+            lessonGroup-2:
+              display_name: Capítulo 1
+            lessonGroup-3:
+              display_name: Capítulo 2
+          title: Inteligencia Artificial y Aprendizaje Automático
+          student_description: La Unidad 7 es una introducción práctica al desarrollo de un modelo de aprendizaje automático con datos tabulares. Explorarás cómo los ordenadores aprenden de los datos para tomar decisiones, y luego desarrollarás tus propios proyectos de aprendizaje automático en torno a datos del mundo real. La unidad culmina con el diseño de tu propia aplicación de aprendizaje automático para resolver un problema de relevancia personal.
+        csd-post-survey-2024:
+          title: Encuesta de final de curso
+          description: Esta unidad contiene la encuesta fin de curso de Descubrimientos CS. Esta unidad puede ser asignada después de que los estudiantes completen su unidad final en Descubrimientos CS.

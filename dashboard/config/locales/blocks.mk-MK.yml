@@ -28,6 +28,10 @@ mk:
             '"MOOSE"': лос
             '"ROBOT"': роботи
             sprites: сите
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': мачки
       Dancelab_changePropEachBy:
         options:
           GROUP:

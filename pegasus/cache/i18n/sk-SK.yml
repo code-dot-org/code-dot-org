@@ -701,7 +701,7 @@ sk-SK:
   dashboard_landing_progress_title: Pokrok hlavnej triedy
   dashboard_landing_report_bug: Žiadosť o pridanie funkcie, alebo ohlásenie chyby.
   dashboard_landing_students_manage: Zobrazte a spravujte vašich študentov
-  dashboard_landing_students_title: Vaši študenti
+  dashboard_landing_students_title: Vaši žiaci
   dashboard_landing_teacher_forum: Pridajte sa ku komunite profesijného vzdelávania.
   dashboard_landing_title: Domovská stránka učiteľa
   dashboard_landing_useful_links: Ďalšie užitočné odkazy
@@ -724,11 +724,11 @@ sk-SK:
   dashboard_multi_correct: "# správych odpovedí"
   dashboard_multi_correct_percent: "% správnych odpovedí"
   dashboard_multi_count: "# otázok s výberom odpovede"
-  dashboard_navigation_add_students: Pridať študentov
+  dashboard_navigation_add_students: Pridať žiakov
   dashboard_navigation_all_sections: Študentské účty a pokrok
   dashboard_navigation_home_page: Domovská stránka učiteľa
   dashboard_navigation_lesson_plans_resources: Plány hodín
-  dashboard_navigation_manage_students: Spravovať žiakov
+  dashboard_navigation_manage_students: Správa žiakov
   dashboard_navigation_section: 'Trieda: %{section_name}'
   dashboard_navigation_section_community: Podpora
   dashboard_navigation_section_lesson_plans: Plány hodín a Materiály
@@ -791,7 +791,7 @@ sk-SK:
   dashboard_sections_login_type_explanation: Táto tabuľka pomáha vysvetliť, ktoré
     z týchto typov prihlásenia <b>obrázok, slovo alebo e-mail</b> budete chcieť vybrať
     pre vašu skupinu.
-  dashboard_sections_move_students: Presunúť študentov
+  dashboard_sections_move_students: Presunúť žiakov
   dashboard_sections_move_students_desc: Vyberte študentov, ktorých chcete presunúť
     do novej triedy. Presun študentov nevymaže ich pokrok v jednotlivých kurzoch.
   dashboard_sections_move_to_section: 'Presunúť do triedy:'
@@ -826,7 +826,7 @@ sk-SK:
   dashboard_sections_table_secret: Spôsob prihlásenia
   dashboard_sections_table_section: Trieda
   dashboard_sections_table_stage_extras: Extra úlohy
-  dashboard_sections_table_students: Študenti
+  dashboard_sections_table_students: Žiaci
   dashboard_sections_word_account_creation: Dvojica jednoduchých slov pridelená Code.org
   dashboard_sections_yes_both: Áno, chcem skopírovať študenta/študentov tak, aby bol(i)
     aj v pôvodnej AJ v novej triede.
@@ -1010,10 +1010,11 @@ sk-SK:
   header_incubator: Inkubátor
   header_learn: Naučte sa
   header_legal: Ochrana osobných údajov a právne predpisy
+  header_legal_cookie_notice: Oznámenie o súboroch cookie
   header_legal_privacy: Zásady ochrany súkromia
   header_legal_tos: Podmienky používania služby
   header_my_dashboard: Môj hlavný panel
-  header_professional_learning: Vzdelávanie pre profesionálov
+  header_professional_learning: Profesijný rozvoj
   header_project_gallery: Projekty
   header_report_abuse: Nahlásiť zneužitie
   header_report_bug: Nahlásiť chybu
@@ -1035,7 +1036,7 @@ sk-SK:
   hoc2014_heading: Pridajte sa k <a href="http://hourofcode.com">Hodine kódu</a> <br/>
     8. až 14. Decembra 2014 <br/>
   hoc2014_host: Zorganizujte ju
-  hoc2014_students: Študenti
+  hoc2014_students: Žiaci
   hoc2014_support: Podporte nás &#x25BE;
   hoc2014_teachers: Učitelia
   hoc2014_try: Skús to
@@ -1353,7 +1354,7 @@ sk-SK:
   homepage_signpetition_dropdown_text: Súhlasím
   homepage_slot_text_blurb_advocates: Podpor diverziu v IT
   homepage_slot_text_blurb_at_home: Tieto zdroje to uľahčujú
-  homepage_slot_text_blurb_educators: Naučte vašich študentov
+  homepage_slot_text_blurb_educators: Naučte svojich žiakov
   homepage_slot_text_blurb_hoc: Učiť sa môže každý. Začni už dnes!
   homepage_slot_text_blurb_hoc_2022: Skúmajte, hrajte sa, tvorte!
   homepage_slot_text_blurb_students: Preskúmaj všetky naše kurzy
@@ -1390,7 +1391,7 @@ sk-SK:
   homepage_slot_text_title_at_home: Učenie na doma
   homepage_slot_text_title_educators: Učitelia
   homepage_slot_text_title_hoc: Hodina Kódu
-  homepage_slot_text_title_students: Študenti
+  homepage_slot_text_title_students: Žiaci
   homepage_solot_text_link_volunteer: Dobrovoľník pre Hodinu kódu
   homepage_stats_female: našich študenov sú dievčatá
   homepage_stats_hourofcodde: študentov z celého sveta vyskúšalo Hodinu Kódu
@@ -2303,20 +2304,6 @@ sk-SK:
     cieľom priniesť hodinu informatiky do každej školy dosahujúce desiatky miliónov
     študentov v 180+ zemiach. Zapojte sa prosím, počas týždňa výučby informatiky 7.-13.
     decembra.
-  volunteer_engineer_submission_intro_guide: Ďalšie informácie o našom <a href="%{volunteer_guide}">dobrovoľníckom
-    programe nájdeš tu</a>.
-  volunteer_engineer_submission_intro_links: Hľadáte dobrovoľníka? Vyhľadajte miestnych
-    dobrovoľníkov na našej <a href="%{volunteer_local}">mape dobrovoľníkov</a>.
-  volunteer_engineer_submission_intro_recruit: 'Títo učitelia by radi našli niekoho
-    <span style="font-family: ''Gotham 7r'', sans-serif;">nadšeného do výuky informatiky</span>,
-    kto im môže pomôcť v učebni, alebo niekoho kto môže <span style="font-family:
-    ''Gotham 7r'', sans-serif;">inšpirovať</span> ich študentov prednáškou o šírke
-    možností v informatike (to je možné vykonať pomocou videokonferencie).'
-  volunteer_engineer_submission_intro_signup: Ak ste študent informatiky alebo IT
-    profesionál, zadajte, prosím, nasledovné informácie. Pre prihlásenie za dobrovoľníka
-    musíte mať aspoň 18 rokov. Všetky údaje, ktoré vyplníte v tejto sekcii budú verejne
-    prístupné komukoľvek, kto sa pozrie na <a href="/volunteer/local">mapu dobrovoľníkov</a>.
-    Polia označené <span class="form-required-field">*</span> sú povinné.
   volunteer_engineer_submission_location_flexibility_curriculum: Ochotný pomôcť prispievať
     do projektov open source osnov
   volunteer_engineer_submission_location_flexibility_onsite: Na mieste (on-site) v

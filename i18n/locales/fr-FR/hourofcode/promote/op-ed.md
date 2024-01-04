@@ -4,11 +4,11 @@ title: Exemple de papier d'opinion favorable à la semaine d'éducation sur l'in
 
 {{ signup_button }}
 
-# Write an op-ed in support of Computer Science Education Week
+# Rédiger un article pour soutenir la Semaine de l'enseignement de l'informatique.
 
-### Below is a sample op-ed supportive of Computer Science Education Week–and its goals–that can be used by state and local legislators, business leaders, and more.
+### Ci-dessous figure un exemple d'article soutenant la Semaine de l'enseignement de l'informatique et ses objectifs. Cet article peut être utilisé par les législateurs nationaux et locaux, les chefs d'entreprise, etc.
 
-### Visit [advocacy.code.org]({{ urls/advocacy }}) to find state specific information about computer science.
+### Consultez [advocacy.code.org]({{ urls/advocacy }}) pour trouver des informations sur l'informatique selon votre pays ou État.
 
 * * *
 
@@ -22,7 +22,7 @@ Mais qui au juste saura programmer ces logiciels?
 
 En vue de la vitesse avec lequel notre monde se transforme grâce à la technologie, on pensera peut-être que la quantité d'élèves étudiant l'informatique au secondaire en ce moment sera plus haute que jamais. Pourtant, ce n'est pas le cas. En effet. peu d'élèves sont enroulés en informatique, et moins d'écoles l'offrent, qu'il y a une décennie.
 
-À un moment où la demande pour des programmeur(e)s qualifié(e)s est plus haut que jamais, on voit de moins en moins d'informaticiens. Even in this time of high unemployment, thousands of jobs, many of them right here in **[INSERT STATE/CITY]**, are going unfilled for lack of enough individuals with the right skill sets.
+À un moment où la demande pour des programmeur(e)s qualifié(e)s est plus haut que jamais, on voit de moins en moins d'informaticiens. Même en cette période de chômagr accru, de milliers de d'emplois, plusieurs se déroulant ici en **[ÉTAT/VILLE ICI**, restent vacants par manque d'assez individuels avec les propres compétence.
 
 Mais pourquoi? Et comment l'addresser?
 
@@ -42,6 +42,6 @@ Nous devons recruter plus d'enseignant(e)s d'informatique et encourager le déve
 
 Selon l'organizarion Amèricain Bureau of Labor Statistics (Bureau de Statistiques du travail), en 2020, il y aura 9.2 millions d'emplois en domaines STEM (Science, technologie, ingénierie et mathématiques). La moitié de ces emplois-4.6 millions- sera en informatique ou techonologies d'information. Et l'informatique est de l'information de plus en plus essentiek pour l'XXIe siècle. Qui remplira ces emplois, si nos enfants ne sont pas donnés la chance d'obtenir les compétence nécessaires?
 
-This week, {{ campaign_date/full }}, is Computer Science Education Week. Dans les écoles partout en **[STATE]**, nos étudiants participeront à l'Heure du Code au niveau national, en démystifiant l'informatique et en aiguisant leur appétit d’apprendre encore plus. Je me joindrai à eux et je vous invite à en faire de même. Tout le monde devrait apprendre à programmer. Visit https://hourofcode.com/{{ country }} to learn more and get started. Et supportez nos efforts à introduire l'informatique à plus d'écoles en **[STATE]**.
+Cette semaine, {{ campaign_date/full }}, est la Semaine d'Éducation Informatique. Dans les écoles partout en **[STATE]**, nos étudiants participeront à l'Heure du Code au niveau national, en démystifiant l'informatique et en aiguisant leur appétit d’apprendre encore plus. Je me joindrai à eux et je vous invite à en faire de même. Tout le monde devrait apprendre à programmer. Consultez le site https://hourofcode.com/{{ pays }} pour en savoir plus et commencer à travailler. Et supportez nos efforts à introduire l'informatique à plus d'écoles en **[STATE]**.
 
 {{ signup_button }}

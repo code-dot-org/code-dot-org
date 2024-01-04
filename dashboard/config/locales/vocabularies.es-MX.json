@@ -1555,7 +1555,8 @@
           "definition": "una acción que hace que algo suceda."
         },
         "artificial_intelligence/ai-ethics/2023": {
-          "word": "Inteligencia Artificial"
+          "word": "Inteligencia Artificial",
+          "definition": "Una tecnología que imita la inteligencia humana y realiza tareas como comprender el lenguaje, reconocer patrones y tomar decisiones."
         },
         "adaptation/csc-adaptations/2023": {
           "word": "Adaptación",
@@ -1631,7 +1632,7 @@
         },
         "conditionals/csc-ecosystems/2023": {
           "word": "Condicionales",
-          "definition": "Declaraciones que solo se ejecutan bajo ciertas condiciones"
+          "definition": "Sentencias que sólo se ejecutan bajo ciertas condiciones"
         },
         "ecosystem/csc-ecosystems/2023": {
           "word": "Ecosistema",
@@ -1643,7 +1644,7 @@
         },
         "overfishing/csc-ecosystems/2023": {
           "word": "Sobrepesca",
-          "definition": "Remoción de peces más rápido de lo que pueden reproducirse"
+          "definition": "Eliminación de peces más rápido de lo que pueden reproducirse"
         },
         "simulation/csc-ecosystems/2023": {
           "word": "Simulación",
@@ -2548,7 +2549,7 @@
         },
         "algorithm/how-ai-works/2023": {
           "word": "Algoritmo",
-          "definition": "una serie de pasos para resolver un problema o tomar una decisión"
+          "definition": "una serie de pasos para resolver un problema o tomar una decisión."
         },
         "network/how-ai-works/2023": {
           "word": "Red",
@@ -2556,7 +2557,7 @@
         },
         "large_language_model_llm_/how-ai-works/2023": {
           "word": "Modelo de Lenguaje Grande (LLM)",
-          "definition": "una forma de propósito general de IA que se entrena en un cuerpo de conocimiento muy, muy grande"
+          "definition": "una forma de IA de propósito general que se entrena con un corpus de conocimientos muy, muy amplio."
         },
         "model/how-ai-works/2023": {
           "word": "Modelo",
@@ -2572,7 +2573,7 @@
         },
         "artificial_intelligence/how-ai-works/2023": {
           "word": "Inteligencia Artificial",
-          "definition": "la capacidad de las máquinas para aprender y resolver problemas."
+          "definition": "la capacidad que tienen las máquinas para aprender y resolver problemas."
         },
         "ethics/how-ai-works/2023": {
           "word": "Ética",
@@ -2673,7 +2674,7 @@
           "definition": "un algoritmo que se ha programado como algo que puede ser ejecutado por una máquina."
         },
         "code/flappy/unversioned": {
-          "word": "programar",
+          "word": "código",
           "definition": "(v) escribir código, o escribir instrucciones para una computadora."
         },
         "debugging/flappy/unversioned": {
@@ -2893,25 +2894,21 @@
           "word": "Compresión sin pérdidas",
           "definition": "un algoritmo de compresión de datos que permite reconstruir perfectamente los datos originales a partir de los datos comprimidos.  Se utiliza sobre todo para la compresión de texto (por ejemplo, la compresión .zip)"
         },
-        "code/poem-art/unversioned": {
+        "code/dance-ai/2023": {
           "word": "Código",
-          "definition": "(v) escribir instrucciones para un ordenador."
+          "definition": "(v) escribir código, o escribir instrucciones para una computadora."
         },
-        "event/poem-art/unversioned": {
+        "event/dance-ai/2023": {
           "word": "Evento",
           "definition": "una acción que hace que algo suceda."
         },
-        "program/poem-art/unversioned": {
+        "program/dance-ai/2023": {
           "word": "Programa",
-          "definition": "Una serie de pasos que han sido codificados de manera que puedan ser ejecutados por una máquina."
+          "definition": " una lista de instrucciones que le dice a la computadora qué hacer, como un conjunto de pasos para jugar un juego o hacer una tarea en la computadora. "
         },
-        "mood/poem-art/unversioned": {
-          "word": "Estado de ánimo",
-          "definition": "la expresión de un sentimiento, una atmósfera o una emoción en el arte o la escritura."
-        },
-        "line/poem-art/unversioned": {
-          "word": "Línea",
-          "definition": "(poesía) - la subdivisión de un poema dispuesta en una fila que termina en el margen derecho. "
+        "artificial_intelligence_a_i_/dance-ai/2023": {
+          "word": "Inteligencia Artificial (A.I.) ",
+          "definition": " un programa de computadora que se entrena a base de datos, aprende a reconocer los patrones en los datos, y toma decisiones en base a la información con la cual se entrenó. "
         }
       }
     }

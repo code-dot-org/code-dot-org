@@ -5609,15 +5609,6 @@
         "403fc603-5eea-490f-943f-0f0e1d4d99f9": {
           "name": "Genişletilmiş Öğrenim"
         },
-        "f0e43cbc-520d-42b7-8de2-0572d569695e": {
-          "name": "Isınmak"
-        },
-        "726b38ad-28ae-43e1-b7d8-08d13ccda1d3": {
-          "name": "Asıl Faaliyet"
-        },
-        "26cbfc03-2134-4097-b9c9-a2b7d4227d8f": {
-          "name": "Özet"
-        },
         "b47403db-764c-41c2-9c65-eea089621c6f": {
           "name": "Seviyeler"
         },
@@ -11463,7 +11454,7 @@
           "name": "Isınmak"
         },
         "ca6b9610-b612-418d-87bf-bc1776fbd110": {
-          "name": "Etkinlik (30-45 dakika)"
+          "name": "Etkinlik"
         },
         "a5fa2c8b-163e-4cc1-a54b-0ad5d98bb92f": {
           "name": "Özet"
@@ -11826,7 +11817,7 @@
           "name": "Özet"
         },
         "9ed44af4-506a-4faf-94b6-fd4e7b8bcd8c": {
-          "name": "(İsteğe bağlı) Uzatma Etkinliği"
+          "name": "(İsteğe bağlı) İlave Aktivite"
         },
         "5cd25d57-e922-4ed0-893d-516bcae6c4d2": {
           "name": "Isınmak"
@@ -11838,7 +11829,7 @@
           "name": "Özet"
         },
         "8e09a958-4202-48e1-bd2e-7d0afa3a0c6d": {
-          "name": "(İsteğe bağlı) GAN Etkinliği"
+          "name": "(İsteğe bağlı) GAN(Çekişmeli Üretici Ağ) Aktivitesi"
         },
         "f9582c25-a034-4e8d-b042-69dba2874ab3": {
           "name": "Isınmak"
@@ -11871,16 +11862,13 @@
           "name": "Sinir Ağları Nasıl Çalışır?"
         },
         "7ce479b3-0fe8-4697-8f6f-9ae87a524b37": {
-          "name": "Bilgisayarla Görme Nasıl Çalışır"
+          "name": "Bilgisayar Görüşü Nasıl Çalışır"
         },
         "fbfdf89d-c6bb-464e-9a2a-246c34f33b55": {
           "name": "Yapay Zekanın Yaratıcılığı ve Hayal Gücü Var mı"
         },
         "23ca8a8d-ae20-47f7-bd51-0d69816ff174": {
           "name": "Etik ve Yapay Zeka: Gizlilik ve İşin Geleceği"
-        },
-        "ee8cbd12-265d-4681-b6c9-05a0a062916d": {
-          "name": "Seviyeler"
         },
         "f4670c8c-98ec-47d0-b458-02a96f130b76": {
           "name": "Isınmak"
@@ -12308,69 +12296,6 @@
         "ddc8f987-c000-409d-aaf7-8546464a70d9": {
           "name": "Genişletilmiş Öğrenim"
         },
-        "289bbaea-ab5e-48a1-80c3-8299af5a0965": {
-          "name": "Seviyeler"
-        },
-        "c2cd2e0e-1e75-44ea-9e26-74c4e81117ce": {
-          "name": "Seviyeler"
-        },
-        "b482746d-0030-459f-8657-a2775cf1f2a3": {
-          "name": "Seviyeler"
-        },
-        "0f2c3670-022b-44ce-b519-13cb72ccd0fd": {
-          "name": "Seviyeler"
-        },
-        "acd32520-21e7-4c29-8e51-5e9caf6a378d": {
-          "name": "Seviyeler"
-        },
-        "a83c07a8-61ea-4017-b41d-725d1bd7b425": {
-          "name": "Seviyeler"
-        },
-        "0deb9da8-356e-4547-951f-445a58491a24": {
-          "name": "Seviyeler"
-        },
-        "941b1202-9ae6-4fbf-b806-c3e4ae8293cc": {
-          "name": "Seviyeler"
-        },
-        "bad195ab-b5b0-41e3-9c40-610a35ff0e4f": {
-          "name": "Seviyeler"
-        },
-        "41518965-e0d9-4c64-acaa-75abff9eeb52": {
-          "name": "Seviyeler"
-        },
-        "f6fdf744-0a0e-4efb-b70e-a4a6f272487d": {
-          "name": "Seviyeler"
-        },
-        "f488bd5e-8717-4f17-89de-67eed7656f10": {
-          "name": "Seviyeler"
-        },
-        "469ead3b-ff2b-47a4-a58b-bb268370fae4": {
-          "name": "Seviyeler"
-        },
-        "b4e1628d-775d-442e-9363-1e4d5d05a9f3": {
-          "name": "Seviyeler"
-        },
-        "5c6427ce-49af-4fef-857c-44a01f1583bf": {
-          "name": "Seviyeler"
-        },
-        "fb448d2f-35c0-4c79-bf75-b8eb5ee11017": {
-          "name": "Seviyeler"
-        },
-        "f64730d7-ba60-489d-a6b5-e33c8768879b": {
-          "name": "Seviyeler"
-        },
-        "1e703264-9e5f-4ddb-bfe5-8cbefbb646e4": {
-          "name": "Seviyeler"
-        },
-        "1910c7c0-fe86-4867-accd-c9b9c78853b1": {
-          "name": "Seviyeler"
-        },
-        "72871561-f49b-4ae5-a5c5-ec0dbfd6f14f": {
-          "name": "Seviyeler"
-        },
-        "c728edf8-b7ed-465b-99f4-78f27e751d2b": {
-          "name": "Seviyeler"
-        },
         "adf2e1d7-848e-4b2e-9f60-a190c85c82ba": {
           "name": "Seviyeler"
         },
@@ -12501,6 +12426,21 @@
           "name": "Seviyeler"
         },
         "5f5dea02-fd61-4c99-8095-a0e2e5de2471": {
+          "name": "Seviyeler"
+        },
+        "289bbaea-ab5e-48a1-80c3-8299af5a0965": {
+          "name": "Seviyeler"
+        },
+        "c2cd2e0e-1e75-44ea-9e26-74c4e81117ce": {
+          "name": "Seviyeler"
+        },
+        "b482746d-0030-459f-8657-a2775cf1f2a3": {
+          "name": "Seviyeler"
+        },
+        "0f2c3670-022b-44ce-b519-13cb72ccd0fd": {
+          "name": "Seviyeler"
+        },
+        "acd32520-21e7-4c29-8e51-5e9caf6a378d": {
           "name": "Seviyeler"
         },
         "10e6addd-5989-4d95-9384-cb1a33903e99": {
@@ -12812,6 +12752,18 @@
         "2b3a241f-5ee5-4579-9883-832cdd116c43": {
           "name": "Seviyeler"
         },
+        "a83c07a8-61ea-4017-b41d-725d1bd7b425": {
+          "name": "Seviyeler"
+        },
+        "0deb9da8-356e-4547-951f-445a58491a24": {
+          "name": "Seviyeler"
+        },
+        "941b1202-9ae6-4fbf-b806-c3e4ae8293cc": {
+          "name": "Seviyeler"
+        },
+        "ee8cbd12-265d-4681-b6c9-05a0a062916d": {
+          "name": "Seviyeler"
+        },
         "f652e4d2-c712-4cff-a011-f1dcea192263": {
           "name": "Isınmak"
         },
@@ -12826,6 +12778,42 @@
         },
         "7e48fd52-decd-48b3-97bf-a71e8dd0f44e": {
           "name": "Genişletilmiş Öğrenim"
+        },
+        "bad195ab-b5b0-41e3-9c40-610a35ff0e4f": {
+          "name": "Seviyeler"
+        },
+        "41518965-e0d9-4c64-acaa-75abff9eeb52": {
+          "name": "Seviyeler"
+        },
+        "f6fdf744-0a0e-4efb-b70e-a4a6f272487d": {
+          "name": "Seviyeler"
+        },
+        "f488bd5e-8717-4f17-89de-67eed7656f10": {
+          "name": "Seviyeler"
+        },
+        "469ead3b-ff2b-47a4-a58b-bb268370fae4": {
+          "name": "Seviyeler"
+        },
+        "b4e1628d-775d-442e-9363-1e4d5d05a9f3": {
+          "name": "Seviyeler"
+        },
+        "5c6427ce-49af-4fef-857c-44a01f1583bf": {
+          "name": "Seviyeler"
+        },
+        "fb448d2f-35c0-4c79-bf75-b8eb5ee11017": {
+          "name": "Seviyeler"
+        },
+        "f64730d7-ba60-489d-a6b5-e33c8768879b": {
+          "name": "Seviyeler"
+        },
+        "1e703264-9e5f-4ddb-bfe5-8cbefbb646e4": {
+          "name": "Seviyeler"
+        },
+        "1910c7c0-fe86-4867-accd-c9b9c78853b1": {
+          "name": "Seviyeler"
+        },
+        "72871561-f49b-4ae5-a5c5-ec0dbfd6f14f": {
+          "name": "Seviyeler"
         },
         "35e76968-3525-446c-9256-472e8ecba118": {
           "name": "Seviyeler"
@@ -12842,14 +12830,20 @@
         "0145bc8d-b026-434a-9713-9b43c6e34842": {
           "name": "Seviyeler"
         },
-        "901e8625-9092-42fc-9fcc-9c665720b1f4": {
+        "c728edf8-b7ed-465b-99f4-78f27e751d2b": {
+          "name": "Seviyeler"
+        },
+        "99f155a9-1d50-44df-a647-c8dbaddea32c": {
+          "name": "Başlarken"
+        },
+        "d12dc50d-c901-43db-a188-eb1b273239c3": {
           "name": "Isınmak"
         },
-        "b20b4bbb-2eb1-4c77-b938-e60cd435ce93": {
-          "name": "Asıl Faaliyet"
-        },
-        "18913d21-3c6f-4dd8-864e-09b70f80e640": {
+        "02b4486f-d09d-4031-8235-0cf728733456": {
           "name": "Özet"
+        },
+        "62475558-6554-4337-b3fb-9fb6ba9a886c": {
+          "name": "Aktivite Sonrası"
         }
       }
     }

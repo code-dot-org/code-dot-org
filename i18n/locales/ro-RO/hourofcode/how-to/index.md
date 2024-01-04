@@ -10,22 +10,22 @@ title: Ghidul de organizare a unui eveniment Hour of Code
 
 Elevii din ziua de astăzi trebuie să învețe cum să creeze tehnologie, nu doar să o folosească.
 
-Încercarea unei Hour of Code este un mod simplu și distractiv de a face elevilor o introducere în informatică, poate de la bun început! Găsiți o activitate care se potrivește mediului în care vă desfășurați, fie că este vorba de o activitate în clasă sau după școală, în persoană sau virtuală. Examinați ghidul nostru [de participare dacă încă aveți întrebări]({{ localized_files/participation_guide }}) după ce ați verificat pașii de mai jos:
+Încercarea unui eveniment Hour of Code este o modalitate simplă și distractivă de a introduce elevii în universul științei tehnologiei, poate chiar pentru prima dată! Găsește o activitate care se potrivește mediului în care vă desfășurați, fie că este vorba de o activitate în clasă sau după școală, în persoană sau virtuală. Consultă ghidul nostru [de participare dacă încă ai întrebări]({{ localized_files/participation_guide }}) după ce ai verificat pașii de mai jos:
 
 - [Urmărește videoclipul instructiv pentru evenimentul Hour of Code](#how-to-video)
 - [Explorează activitățile și tutorialele](#explore-activities)
 - [Creează planul pentru ziua respectivă](#create-your-plan)
 - [Promovează evenimentul Hour of Code](#promote-your-hour)
 - [Cum să începi evenimentul Hour of Code cu dreptul](#how-to-start)
-- [Începe să programezi](#code)
+- [Programați!](#code)
 - [Sărbătorește succesul elevilor](#celebrate)
-- [Alte resurse de o oră de cod pentru educatori](#other-resources)
+- [Alte resurse Hour of Code pentru cadrele didactice:](#other-resources)
 
 * * *
 
 <a id="how-to-video"></a>
 
-## 1. Urmărește videoclipul instructiv pentru Hour of Code <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. Urmărește videoclipul instructiv pentru evenimentul Hour of Code <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
@@ -43,7 +43,7 @@ Explorează activitățile și decide din timp dacă dorești să alegi un singu
 
 <a id="create-your-plan"></a>
 
-## 3. Creează-ți planul pentru ziua respectivă
+## 3. Creează planul pentru ziua respectivă
 
 ### Gândește-te la necesarul de echipamente - calculatoarele sunt opționale!
 
@@ -56,7 +56,7 @@ Explorează activitățile și decide din timp dacă dorești să alegi un singu
 
 ### Alege o zi și o oră
 
-Oameni din întreaga lume se alătură celebrării Hour of Code pe durata Săptămânii Educației în domeniul Informaticii (5-11 decembrie) atunci cînd sunt lansate cele mai recente tutoriale și activități. Dar poți organiza un eveniment Hour of Code în orice zi a anului!
+Oameni din întreaga lume se alătură celebrării Hour of Code pe durata Săptămânii Educației în domeniul Informaticii (9-13 decembrie), când sunt lansate cele mai recente tutoriale și activități. Dar poți organiza un eveniment Hour of Code în orice zi a anului!
 
 * * *
 
@@ -68,11 +68,11 @@ Acum că ai planificat evenimentul, este timpul să începi să-l promovezi!
 
 ### Informează școala și comunitatea din care faci parte
 
-Spune-le și altor profesori despre evenimentul Hour of Code, este posibil ca aceștia să își exprime dorința de a participa! Aceasta este și o ocazie excelentă de a contacta PTSA (asociația părinților, profesorilor și elevilor) din cadrul școlii sau de a transmite informații despre eveniment în buletinele de știri destinate părinților, prin care îi poți anunța că este posibil ca, la întoarcerea acasă, copiii lor să fie dornici să încerce mai multe activități și tutoriale!
+Spune-le și altor profesori despre evenimentul Hour of Code, este posibil ca aceștia să își exprime dorința de a participa! Aceasta este, de asemenea, o oportunitate minunată de a lua legătura cu Asociația Părinților și a Profesorilor a școlii sau de a transmite informații despre eveniment în buletinele informative pentru părinți, prin care îi poți anunța că este posibil ca, la întoarcerea acasă, copiii lor să fie dornici să încerce mai multe activități și tutoriale!
 
 ### Anunță voluntarii prin înregistrarea evenimentului tău.
 
-Atunci când vă înscrieți la [evenimentul Hour of Code](/#join), veți primi comunicări folositoare prin email cu știri și sfaturi pentru găzduirea unei Hour of Code reușite. Tot acesta este modul în care îi poți anunța pe voluntarii locali că școala ta participă la eveniment. Voluntarii sunt o resursă extraordinară și aceștia se pot adresa clasei, discutând despre tehnologie sau pur și simplu îi pot ajuta pe elevi în cadrul activităților evenimentului Hour of Code.
+Când vă [înscrieți la evenimentul Ora de programare](/events), veți primi comunicări utile prin e-mail cu știri și sfaturi pentru găzduirea cu succes a unei Ore de programare. Tot acesta este modul în care îi poți anunța pe voluntarii locali că școala ta participă la eveniment. Voluntarii sunt o resursă extraordinară și aceștia se pot adresa clasei, discutând despre tehnologie sau pur și simplu îi pot ajuta pe elevi în cadrul activităților evenimentului Hour of Code.
 
 ### Entuziasmează-ți elevii!
 
@@ -97,21 +97,21 @@ Arată-le un filmulet inspirational:
 - Clipul video original de lansare al Code.org, cu Bill Gates, Mark Zuckerberg și starul NBA Chris Bosh. (Sunt disponibile versiuni de [1minut](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc) și [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA))
 - Găsește mai multe clipuri video inspiraționale [aici](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-Nu este nicio problemă dacă și tu și elevii tăi sunteți începători în domeniul științei calculatoarelor. Iată câteva idei pentru o primă prezentare a activității Hour of Code:
+Nu este nicio problemă dacă sunteți începători în domeniul științei calculatoarelor. Iată câteva idei pentru o primă prezentare a activității Hour of Code:
 
 - Explicați modurile în care tehnologia are impact asupra vieților noastre, cu exemple pe care atât băieții cât și fetele le vor înțelege(vorbiți despre salvarea vieților, ajutarea oamenilor, conectarea acestora etc.).
 - Faceti o lista cu lucrurile la care folositi programarea in fiecare zi.
-- Consultă sfaturile cu privire la modul în care le poți convinge pe tinerele femei să fie interesate de știința calculatoarelor [aici]({{ urls/girls }}).
+- Consultă sfaturile cu privire la modul în care le poți motiva și convinge pe fete să fie interesate de programare. [aici]({{ urls/girls }}).
 
 * * *
 
 <a id="code"></a>
 
-## 6. Începeți să programați!
+## Programați!
 
 Îndrumă elevii către activitate
 
-- Scrieți linkul tutorialului pe o tablă albă. Găsiți linkul listat pe [informațiile pentru tutorialul selectat]({{ urls/learn }}).
+- Scrieți link-ul tutorialului pe tablă. Găsiți link-ul listat pe [pagina cu informații despre tutorialul selectat]({{ urls/learn }}).
 
 Atunci când elevii tăi întâmpină dificultăți, este normal să răspunzi:
 

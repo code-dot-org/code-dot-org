@@ -453,8 +453,6 @@
   volunteer_engineer_submission_title: "Frymëzo nxënësit dhe vullnetarizo"
   volunteer_engineer_submission_subtitle_generic: '100,000 mësues do të organizojnë një Orë të Kodimit në klasën e tyre këtë vit. më 7-13 dhjetor 2015. Ata duan ndihmën tënde! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} e mësuesve kanë nevojë për vullnetarë.<br>%{num_volunteers} vullnetarë janë regjistruar. Bashkoju atyre."
-  volunteer_engineer_submission_intro_signup: "Ju lutemi shkruani të dhënat e mëposhtme në qoftë se jeni student i shkencës kompjuterike ose profesionist i software. Fushat e shënuara me një<span class=\"form-required-field\">*</span>janë të domosdoshme."
-  volunteer_engineer_submission_intro_links: "Keni nevojë të gjeni vullnetarë? Gjej një vullnetar vendor në hartën tonë<a href=\"%{volunteer_local}\">të vullnetarëve</a>."
   volunteer_engineer_submission_field_name: "Emri"
   volunteer_engineer_submission_field_name_placeholder: "Emri i plotë"
   volunteer_engineer_submission_field_company: "Firma (ose Universiteti)"
@@ -568,7 +566,7 @@
   dashboard_navigation_view_progress: "Ecuri"
   dashboard_navigation_view_assessments: "Vlerësimet"
   dashboard_navigation_add_students: "Shto Studentë"
-  dashboard_navigation_manage_students: "Menaxho Studentët"
+  dashboard_navigation_manage_students: "Menaxho nxënësit"
   dashboard_navigation_lesson_plans_resources: "Planet Mësimore dhe Burimet"
   dashboard_navigation_view_stats: "statistikat"
   dashboard_navigation_section: 'Seksioni: %{section_name}'
@@ -760,6 +758,8 @@
   course4_name: "Kursi 4"
   coursea-draft_name: Kursi A
   coursea_name: "Kursi A"
+  coursec-draft_name: Kursi C
+  coursec_name: "Kursi C"
   coursea-2018_name: Kursi A (2018)
   courseb-2018_name: Kursi B (2018)
   coursea-2019_name: Kursi A (2019)
@@ -1237,7 +1237,7 @@
   header_about_contact: "Na kontaktoni"
   header_about_faqs: "(FAQ) Pyetjet e shpeshta"
   header_learn: "Mëso"
-  header_teach: "Mësoj"
+  header_teach: "Mësoni"
   header_stats: "statistikat"
   header_help_us: "Na ndihmoni"
   header_about: "Rreth"
@@ -1246,6 +1246,7 @@
   header_report_abuse: "Raporto abuzim"
   header_legal: "Privatësia & Ligjore"
   header_legal_privacy: "Rregullat e Privatësisë"
+  header_legal_cookie_notice: "Njoftim për Cookie"
   header_legal_tos: "Kushtet e shërbimit"
   header_tutorials: "Tutoriale"
   user_header_label: "Përshëndetje %{username}"
@@ -1253,7 +1254,7 @@
   user_header_my_projects: "Projektet e mia"
   user_header_settings: "Llogaria ime"
   user_header_logout: "Dil"
-  user_header_signin: "Futu"
+  user_header_signin: "Kyçu"
   user_header_create: 'Krijo '
   user_header_applab: 'Laboratori i Aplikacioneve '
   user_header_artist: 'Artisti '
@@ -1264,6 +1265,7 @@
   user_header_minecraft: "Minecraft"
   user_header_flappy: "Flappy"
   user_header_view_all: "Shiko të gjitha projektet..."
+  view_all_sections: "Shiko të gjitha sesionet"
   applab_tile_start_tutorial: "Fillo"
   aquatic_name: 'Minecraft: Udhëtimi ujor'
   account_sign_up_email_opt_in: "A mund t'ju dërgojmë email-e mbi përditësimin e kurseve tona, mundësitë lokale apo të rejat e shkencave kompjuterike? (afërsisht një herë në muaj)"

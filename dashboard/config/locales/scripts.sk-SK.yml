@@ -1579,6 +1579,8 @@ sk:
           title: 'Objavujeme informatiku: Záverečný dotazník'
         csd-post-survey-2023:
           title: Hodnotenie kurzu
+        csd-post-survey-2024:
+          title: Hodnotenie kurzu
         csd1-2017:
           lesson_groups:
             csd1_1:
@@ -1693,6 +1695,22 @@ sk:
             uzatvára projekt, v ktorom navrhneš aplikáciu na vyriešenie problému podľa
             svojho výberu.
         csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Postup riešenia problémov'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Počítače a riešenie problémov'
+            lessonGroup-5:
+              display_name: Dotazník
+          student_description: Tematický celok „Riešenie problémov a výpočtová technika“
+            je vysoko interaktívny a kooperatívny úvod do informatiky, uvedený v širšom
+            kontexte riešenia problémov. Pomocou postupu riešenia problémov vyriešiš
+            viacero úloh, výziev a situácií z každodennej praxe. Ďalej sa naučíš,
+            ako počítače pracujú so vstupmi i výstupmi či ako ukladajú a spracúvajú
+            informácie, aby ľuďom pomáhali riešiť problémy. Tento tematický celok
+            uzatvára projekt, v ktorom navrhneš aplikáciu na vyriešenie problému podľa
+            svojho výberu.
+        csd1-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitola 1: Postup riešenia problémov'
@@ -1828,6 +1846,12 @@ sk:
             cspSurvey:
               display_name: Dotazník
         csd2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Tvorba webových stránok'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Viacstránkové weby'
+        csd2-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitola 1: Tvorba webových stránok'
@@ -2031,6 +2055,12 @@ sk:
               display_name: 'Kapitola 1: Obrázky a animácie'
             lessonGroup-3:
               display_name: 'Kapitola 2: Tvorba hier'
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Obrázky a animácie'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Tvorba hier'
         csd3-dlp:
           lesson_groups:
             content:
@@ -2134,6 +2164,12 @@ sk:
               display_name: 'Kapitola 1: Užívateľsky orientovaný dizajn'
             lessonGroup-3:
               display_name: 'Kapitola 2: Prototypovanie aplikácií'
+        csd4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Užívateľsky orientovaný dizajn'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Prototypovanie aplikácií'
         csd4-dlp:
           lesson_groups:
             content:
@@ -2223,6 +2259,12 @@ sk:
             cspSurvey:
               display_name: Dotazník
         csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Prezentácia informácií'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Riešenie problémov s dátami'
+        csd5-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitola 1: Prezentácia informácií'
@@ -2347,7 +2389,18 @@ sk:
               display_name: 'Kapitola 2: Vytváranie fyzických prototypov'
           title: Kapitola 6A - (Možnosť A) Aplikácie a hardvér - Circuit Playground
             ('23-'24)
+        csd6a-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Vytváranie fyzických prototypov'
+          title: Kapitola 6A - (Možnosť A) Aplikácie a hardvér - Circuit Playground
+            ('23-'24)
         csd6b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Vstupy a výstupy
+          title: Kapitola 6B - (Možnosť B) Aplikácie a hardvér (micro:bit)
+        csd6b-2024:
           lesson_groups:
             lessonGroup-3:
               display_name: Vstupy a výstupy
@@ -2399,6 +2452,15 @@ sk:
             lessonGroup-4:
               display_name: Dotazník
         csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitola 1
+            lessonGroup-3:
+              display_name: Kapitola 2
+            lessonGroup-4:
+              display_name: Úvod do App Labu
+          title: Umelá inteligencia a strojové učenie
+        csd7-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Kapitola 1
@@ -4032,7 +4094,7 @@ sk:
           description_short: Preskúmaj Minecraft svet prostredníctvom kódu.
           student_description: Použi bloky kódov, aby si vzal Steva alebo Alex na
             dobrodružstvo po svete Minecraftu.
-          title: Minecraft Hodina Kódu
+          title: 'Minecraft: Dobrodruh'
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
@@ -4365,6 +4427,58 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: Vyučujeme CS Connections
+        self-paced-pl-csd-unit1-2-2023:
+          description: |-
+            Tento odborný vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu učebného celku Riešenie problémov a výpočtová technika Code.org.
+
+            **V tomto odbornom vzdelávacom module:**
+
+            -   získate základy riešenia problémov a výpočtovej techniky.
+            -   precvičíte si kľúčové pojmy zahrnuté v učebnom celku.
+            -   dozviete sa viac o projektoch na konci kapitoly.
+
+            **Odporúčaný čas:** 30 minút
+          student_description: |-
+            Tento odborný vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu učebného celku Riešenie problémov a výpočtová technika Code.org.
+
+            **V tomto odbornom vzdelávacom module:**
+
+            -   získate základy riešenia problémov a výpočtovej techniky.
+            -   precvičíte si kľúčové pojmy zahrnuté v učebnom celku.
+            -   dozviete sa viac o projektoch na konci kapitoly.
+
+            **Odporúčaný čas:** 30 minút
+          title: 'Modul 1: Príprava na výučbu riešenia problémov a výpočtovej techniky'
+        self-paced-pl-csd-unit2-2-2023:
+          title: 'Modul 2: Príprava na výučbu vývoja webových stránok'
+        self-paced-pl-csd-unit3-2-2023:
+          description: |-
+            Tento odborný vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu učebného celku Interaktívne animácie a hry Code.org.
+
+            **V tomto odbornom vzdelávacom module:**
+
+            -   získate základy interaktívnych animácií a hier.
+            -   precvičíte si kľúčové pojmy zahrnuté v učebnom celku.
+            -   zapojíte sa do Game Lab.
+            -   dozviete sa viac o projektoch na konci kapitoly.
+
+            **Odporúčaný čas:** 120 minút
+          student_description: |-
+            Tento odborný vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu učebného celku Interaktívne animácie a hry Code.org.
+
+            **V tomto odbornom vzdelávacom module:**
+
+            -   získate základy interaktívnych animácií a hier.
+            -   precvičíte si kľúčové pojmy zahrnuté v učebnom celku.
+            -   zapojíte sa do Game Lab.
+            -   dozviete sa viac o projektoch na konci kapitoly.
+
+            **Odporúčaný čas:** 120 minút
+          title: Príprava na výučbu interaktívnych animácií a hier
+        self-paced-pl-csd-unit4-2-2023:
+          title: 'Modul 4: Príprava na výučbu procesu dizajnu'
+        self-paced-pl-csd-unit5-2-2023:
+          title: 'Modul 5: Príprava na výučbu údajov a spoločnosti'
         self-paced-pl-csd5-2023:
           title: 'Modul 7: Príprava na výučbu umelej inteligencie a strojového učenia'
         soccer:
@@ -4382,14 +4496,14 @@ sk:
           student_description: Pomiešaj športy
           title: Naprogramuj si vlastný zápas
         spritelab:
-          description_audience: Kurz E/F študenti
+          description_audience: Kurz E/F žiaci
         spritelab-effects-challenge:
           description_audience: Stredne pokročilí / pokročilí užívatelia Sprite Lab
           description_short: Prijmi výzvu a vytvor v Sprite Lab vlastný efekt postavičiek!
           name: spritelab-effects-challenge
           title: Výzva Efekty postavičiek
         spritelab-simple:
-          description_audience: Kurz E/F študenti
+          description_audience: Kurz E/F žiaci
         starwars:
           description: Nauč sa programovať droidy a vytvor si vlastnú hru Star Wars
             v ďalekej galaxii.
@@ -4535,6 +4649,20 @@ sk:
               display_name: Obsah
             csd3_2:
               display_name: 'Kapitola 2: Tvorba hier'
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Úvod
+          lessons:
+            lesson-7:
+              name: Úvod
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Úvod
+          title: Deň 3
+        virtual-pl-csa-summer-day4:
+          title: Deň 4
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -4559,6 +4687,16 @@ sk:
           lessons:
             lesson-3:
               name: Hodnotenie
+          title: Deň 5
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Úvod
+        virtual-pl-csp-summer-day3:
+          title: Deň 3
+        virtual-pl-csp-summer-day4:
+          title: Deň 4
+        virtual-pl-csp-summer-day5:
           title: Deň 5
         virustest:
           description_short: Pomocou programu Sprite Lab vytvorte simuláciu nákazy
@@ -4892,6 +5030,12 @@ sk:
 
             **Odporúčaný čas:** 120 minút
           title: 'Modul 7: Príprava na výučbu umelej inteligencie a strojového učenia'
+        web-dev-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Tvorba webových stránok'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Viacstránkové weby'
         web-development-2023:
           lesson_groups:
             lessonGroup-2:

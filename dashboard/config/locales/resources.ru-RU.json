@@ -5452,7 +5452,6 @@
           "type": "Ресурс"
         },
         "how_ai_works_large_language_models/ai-ethics/2023": {
-          "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
           "type": "Видео"
         },
         "societal_impact_of_generative_ai/ai-ethics/2023": {
@@ -6929,6 +6928,10 @@
         "functions_with_parameters/csd/2023": {
           "name": "Процедуры с параметрами",
           "type": "Видео"
+        },
+        "fucntions_devices/csd/2023": {
+          "name": "функции",
+          "type": "Слайды"
         },
         "mini-project_interactive_art/csd/2023": {
           "type": "Слайды"
@@ -9014,10 +9017,8 @@
           "url": "https://www.youtube.com/watch?v=LCGkcn1f-ms&feature=youtu.be",
           "type": "Видео"
         },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "Список стихотворений",
-          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing",
-          "type": "Слайды"
+        "web_development_-_extra_code_in_challenge_levels/csd/2023": {
+          "type": "Ресурс"
         }
       }
     }

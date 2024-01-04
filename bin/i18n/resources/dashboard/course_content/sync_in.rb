@@ -154,14 +154,25 @@ module I18n
                 i18n_strings['placeholder_texts'].merge! get_all_placeholder_text_types(processed_doc)
               end
 
-              # start_html
-              if level.start_html
-                start_html = Nokogiri::XML(level.start_html, &:noblanks)
-                i18n_strings['start_html'] = Hash.new unless level.start_html.empty?
+              # start_libraries
+              # These start libraries are used as short term solution to make Sample Apps translatable.
+              # Student Libraries are required to have a name, a description and at least one function.
+              # Student libraries are stringify when used in a level and stored as start_libraries.
+              # libraries that do not follow those rules will fail to load,and the level wont work.
+              if level.start_libraries.present?
+                level_libraries = JSON.parse(level.start_libraries)
+                level_libraries.each do |library|
+                  library_name = library["name"]
+                  next unless /^i18n_/i.match?(library_name)
+                  library_source = library["source"]
+                  translation_json = library_source[/var TRANSLATIONTEXT = (\{[^}]*});/m, 1]
+                  next if translation_json.blank?
+                  i18n_strings['start_libraries'] ||= {}
+                  i18n_strings['start_libraries'][library_name] = {}
 
-                # match any element that contains text
-                start_html.xpath('//*[text()[normalize-space()]]').each do |element|
-                  i18n_strings['start_html'][element.text] = element.text
+                  JSON.parse(translation_json).each do |key, value|
+                    i18n_strings['start_libraries'][library_name][key] = value
+                  end
                 end
               end
 

@@ -72,7 +72,7 @@ Propaguje Hodinu programování k jiným učitelům, kteří se možná budou ch
 
 ### Zaregistrováním své akce o ní dejte vědět svým dobrovolníkům
 
-Když se [zaregistrujete na svou akci Hodina programování](/#join), budete dostávat užitečné e-maily se zprávami a radami, jak pořádat úspěšnou Hodinu programování. Jde také o způsob, jak můžete sdělit svým místním dobrovolníkům, že jejich škola se zapojí. Vynikajícím prostředkem jsou dobrovolníci, kteří mohou přijít promluvit k Vaší třídě o počítačové vědě nebo prostě jen pomoci Vašim studentům s aktivitami Hodiny programování.
+Když se zaregi [strujete k události Hodina kódu](/events), obdržíte užitečnou e-mailovou komunikaci se zprávami a tipy, jak uspořádat úspěšnou Hodinu kódu. Jde také o způsob, jak můžete sdělit svým místním dobrovolníkům, že jejich škola se zapojí. Vynikajícím prostředkem jsou dobrovolníci, kteří mohou přijít promluvit k Vaší třídě o počítačové vědě nebo prostě jen pomoci Vašim studentům s aktivitami Hodiny programování.
 
 ### Vzrušte své studenty
 

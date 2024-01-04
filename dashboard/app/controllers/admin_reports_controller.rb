@@ -97,7 +97,7 @@ class AdminReportsController < ApplicationController
       output_data[key]['Perceived Dropout'] = output_data[key]['UniqueAttempt'].to_f - output_data[key]['UniqueSuccess'].to_f
     end
 
-    page_data = Hash[GAClient.query_ga(@start_date, @end_date, 'ga:pagePath', 'ga:avgTimeOnPage', 'ga:pagePath=~^/s/|^/flappy/|^/hoc/').rows]
+    page_data = GAClient.query_ga(@start_date, @end_date, 'ga:pagePath', 'ga:avgTimeOnPage', 'ga:pagePath=~^/s/|^/flappy/|^/hoc/').rows.to_h
 
     data_array = output_data.map do |key, value|
       {'Puzzle' => key}.merge(value).merge('timeOnSite' => page_data[key]&.to_i)

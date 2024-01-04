@@ -2221,10 +2221,6 @@
           "word": "Hodisa",
           "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
         },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "code/playlab/unversioned": {
           "definition": "(fe'l) kod yozish, kompyuter uchun buyruqlar yozish."
         },
@@ -2287,25 +2283,16 @@
           "word": "Lossless Compression",
           "definition": "dastlabki ma'lumotlarni siqilgan ma'lumotlardan mukammal qayta tiklashga imkon beradigan ma'lumotlarni siqish algoritmi. Matnni siqish uchun eng ko'p ishlatiladi (masalan .zip siqish)"
         },
-        "code/poem-art/unversioned": {
+        "code/dance-ai/2023": {
           "word": "Kod",
-          "definition": ""
+          "definition": "(fe'l) kod yozish, kompyuter uchun buyruqlar yozish."
         },
-        "event/poem-art/unversioned": {
+        "event/dance-ai/2023": {
           "word": "Hodisa",
           "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
         },
-        "program/poem-art/unversioned": {
-          "word": "Dastur",
-          "definition": ""
-        },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+        "program/dance-ai/2023": {
+          "word": "Dastur"
         }
       }
     }

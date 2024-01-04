@@ -3963,6 +3963,9 @@
           "name": "Funktioner med parametrar",
           "type": "Video"
         },
+        "fucntions_devices/csd/2023": {
+          "name": "funktioner"
+        },
         "student_example_projects/csd/2023": {
           "type": "Resurs"
         },
@@ -4871,10 +4874,8 @@
           "url": "https://www.youtube.com/watch?v=LCGkcn1f-ms&feature=youtu.be",
           "type": "Video"
         },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "Lista över dikter",
-          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing",
-          "type": ""
+        "web_development_-_extra_code_in_challenge_levels/csd/2023": {
+          "type": "Resurs"
         }
       }
     }

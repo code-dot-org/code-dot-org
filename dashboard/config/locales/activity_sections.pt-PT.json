@@ -13600,30 +13600,6 @@
         "2b5cb5b7-6a5e-4727-b8b5-128a3c546781": {
           "description": "Use estas atividades para reforçar o aprendizado dos alunos. Elas podem ser usadas como atividades extraclasse ou outro tipo de enriquecimento.\n\n**Observe o que há por trás**\n\nAo compartilhar um link para sua história, você também compartilha todo o código que está por trás dela. É uma ótima maneira de os alunos aprenderem uns com os outros.\n\n-   Publique links para histórias completas on-line.\n    -   Crie sua própria história para compartilhar também!\n-   Quando os alunos carregarem um link, peça-lhes que cliquem no botão “Como funciona”, para que vejam o código por trás da história.\n-   Discuta em grupo as diferentes maneiras como os colegas de classe programaram suas histórias.\n    -   O que surpreendeu você?\n    -   O que gostaria de tentar?\n-   Escolha a história de outra pessoa e clique em “Remix” para aproveitá-la (não se preocupe, a história original continuará segura)."
         },
-        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
-          "name": "",
-          "description": ""
-        },
-        "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
-          "description": "_Nesta atividade, você vai se divertir criando um mundo interativo, com personagens divertidos chamados de fadas. Você poderá fazer com que as fadas digam coisas com balões de texto semelhantes aos das histórias em quadrinho, e vai aprender a fazê-las responder automaticamente quando alguém clicar nelas._\n\n_Hoje, vocês vão escrever um “código”, que nada mais é do que uma série de instruções que o computador pode entender. Quando você escreve uma história, é preciso pensar cuidadosamente sobre as palavras que vai utilizar. Quando você escreve um código, você precisa pensar cuidadosamente sobre as instruções que vai dar ao seu computador._",
-          "tips": [
-            "O ideal é não gastar muito tempo nas etapas iniciais ou na introdução ao Hour of Code. Particularmente no caso de alunos jovens, é melhor ir direto ao assunto o mais rápido possível."
-          ]
-        },
-        "7acfc985-03d8-4d14-b244-203f8cbf4843": {
-          "name": "",
-          "description": "Veja aqui algumas dicas que podem ajudar os alunos de qualquer nível com os quais você esteja trabalhando \n\n- **Colabore com os colegas:* Incentive os alunos a verificar com um colega os pontos em que tiverem problemas. Conforme a idade e a capacidade dos alunos, você pode considerar a formação de duplas formalmente na classe, para assistirem ao tutorial utilizando o [pair programmin][0].\n\n- **Leia as Instruções:*As instruções geralmente fornecem dicas úteis sobre como concluir o nível. Antes de dar a resposta aos alunos, certifique-se de que eles leram as instruções cuidadosamente, viram as dicas, os vídeos e outros códigos iniciais com atenção.\n\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Problemas? Procure as dicas:*Cada nível inclui uma dica com orientações sobre como concluir o nível, incluindo blocos de código para o aluno experimentar. \n\n- **Não tenha pressa e experimente.*As instruções geralmente dizem aos alunos o que fazer, mas eles também devem ter a opção de experimentar suas próprias ideias."
-        },
-        "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
-          "name": "Olá Mundo"
-        },
-        "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
-          "description": "Se um grupo ou um aluno terminar mais cedo, estimule-os a continuar desenvolvendo o projeto no último nível. Se os alunos não tiverem entendido bem o que fazer, você pode fazer perguntas a eles: \n\n- Que outras fadas você poderia adicionar ao seu projeto? \n- Você já deu uma olhada na biblioteca de trajes ou experimentou seu próprio traje personalizado para fadas? \n- O que mais sua fada poderia dizer? \n- O que sua fada deve fazer quando alguém clicar nela? \n- Convide os alunos a compartilharem ideias e aprenderem uns com os outros. Eles também podem assistir a outros tutoriais visitando a página [code.org/learn][0]."
-        },
-        "b68a11cc-930a-4803-beca-1d4f49ede378": {
-          "name": "Reflexão",
-          "description": "#### Painel de discussão \n\nPeça aos alunos para refletirem sobre as atividades do dia. O que eles aprenderam sobre codificação? Fadas? Eventos? \n\nComo eles se sentem a respeito da ciência da computação e da codificação depois de uma hora de exploração? \n\n#### Próximos passos \n\nInforme aos alunos que, se eles tiverem gostado das atividades do dia, eles terão muitas opções para continuar gerando o código. Visite [CS Connections][0] para ver ideias sobre como integrar a ciência da computação a outros temas ou leia mais sobre as nossas [ofertas de curso para o nível fundamental][1]."
-        },
         "9a692bd5-9de8-4718-9518-f14949953885": {
           "tips": [
             null
@@ -21956,7 +21932,22 @@
             null
           ]
         },
+        "8beb2941-dd64-44f4-9e99-6149c445067a": {
+          "tips": [
+            null
+          ]
+        },
         "500131a4-a22b-4a63-bc0a-d5d4a19c7169": {
+          "tips": [
+            null
+          ]
+        },
+        "a45155ff-19af-43ac-bf11-6ca4001816f4": {
+          "tips": [
+            null
+          ]
+        },
+        "a7d5069b-aa1c-4efa-a8d8-b58bd43a6c7b": {
           "tips": [
             null
           ]
@@ -21971,7 +21962,17 @@
             null
           ]
         },
-        "b2b4b9e6-fe3f-4d2d-a828-1402cc1572e8": {
+        "4ff33db6-6668-4423-8f1d-ad0b25f6da40": {
+          "tips": [
+            null
+          ]
+        },
+        "169c3eed-52d7-4a4b-b7c6-161cf287ed33": {
+          "tips": [
+            null
+          ]
+        },
+        "f1632666-ffc1-457a-832a-c2d3b2d1fc20": {
           "tips": [
             null
           ]
@@ -21986,7 +21987,22 @@
             null
           ]
         },
+        "b2777295-b74f-4240-bb3d-c76b79dde6a9": {
+          "tips": [
+            null
+          ]
+        },
         "9bcab929-d773-4dab-bfb0-d09892056944": {
+          "tips": [
+            null
+          ]
+        },
+        "bedaca2d-4f48-45b4-b6e9-431f6a38cc13": {
+          "tips": [
+            null
+          ]
+        },
+        "221b5029-fcfd-4791-b951-852609cb0198": {
           "tips": [
             null
           ]
@@ -33702,44 +33718,23 @@
           "progression_name": "Ensine à IA uma Nova Palavra"
         },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
-          "name": "Introdução",
-          "description": ""
+          "name": "Introdução"
         },
         "d63c77c1-4167-4360-ab98-25610934beda": {
           "name": "Epidemia",
-          "description": "",
           "progression_name": "Epidemia"
         },
         "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
-          "description": "",
           "progression_name": "Seja bem-vindo à Monster Town"
         },
-        "60837b14-7f66-4848-9c51-1c6aa9a21ad9": {
-          "description": ""
-        },
-        "13a06294-2f2a-4661-9947-46ed5843913f": {
-          "description": ""
-        },
         "df13fa93-37df-4188-837d-462c48179625": {
-          "description": "",
           "progression_name": "Desenvolvimento de Habilidades"
-        },
-        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
-          "description": "",
-          "progression_name": ""
         },
         "0620e645-f84e-47ca-809b-3dcbe803d83e": {
           "progression_name": "Atividade livre"
         },
-        "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
-          "description": ""
-        },
-        "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
-          "description": ""
-        },
         "b8e884f1-eae0-4138-8778-0972f90e34d9": {
-          "name": "Reflexão",
-          "description": ""
+          "name": "Reflexão"
         },
         "2c9a4cbc-51ba-45a3-80f6-cb27e681f4ba": {
           "tips": [
@@ -33917,18 +33912,6 @@
           "name": "Propriedades do Elemento de UI",
           "progression_name": "Propriedades do Elemento de UI"
         },
-        "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
-          "name": "Aquecimento"
-        },
-        "59df14b7-1344-480b-8b6b-3fc94684b8bc": {
-          "name": "Atividade Principal (Anterior)"
-        },
-        "3d1e45e9-9dd0-476b-b864-f0d86d0827b6": {
-          "name": "Atividade Principal (Nova)"
-        },
-        "50216925-6742-400e-b45a-2de4cd3b63f2": {
-          "name": "Resumo"
-        },
         "f108ae93-f672-4062-b6d6-522901659990": {
           "name": "Pesquisa Pós-curso do CS Discoveries",
           "progression_name": "Pesquisa Pós-curso do CS Discoveries"
@@ -33952,39 +33935,78 @@
         "319eb690-ba34-4d34-9158-d30d777c4b05": {
           "name": "Reflexão"
         },
-        "b16d189d-d990-44c4-be49-8f81ac81a96e": {
-          "description": "#### Preparação do Terreno   Dê as boas vindas aos alunos para a aula e introduza a atividade do dia.",
+        "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
+          "name": "Aquecimento"
+        },
+        "59df14b7-1344-480b-8b6b-3fc94684b8bc": {
+          "name": "Atividade Principal (Anterior)"
+        },
+        "3d1e45e9-9dd0-476b-b864-f0d86d0827b6": {
+          "name": "Atividade Principal (Nova)"
+        },
+        "50216925-6742-400e-b45a-2de4cd3b63f2": {
+          "name": "Resumo"
+        },
+        "b9bacf54-bd37-42b8-85fc-bc9d07a50537": {
           "tips": [
-            "Uma maneira de introduzir a Hora do Código se você não está muito familiarizado com a codificação é mostrar um dos [nossos vídeos inspiradores][0]. Escolha aquele que você acha que os seus alunos acharão inspirador e compartilhe com eles. Para os alunos das séries do ensino médio, sugerimos [A Hora do Código é Aqui][1]."
+            null
           ]
         },
-        "d99fc09e-a586-41df-84b2-e552cc4735e3": {
-          "description": "Hoje vamos usar a nossa criatividade enquanto aprendermos a codificar. Há muitas maneiras de ser criativo. De que forma você é criativo?"
+        "58bdb8b5-159d-4b7a-aae7-d250213c1379": {
+          "progression_name": "Vídeo de introdução"
         },
-        "b6c8c6a3-fe85-4d42-999e-a2ba13f6739a": {
-          "description": "Incentive os alunos a compartilhar as suas formas de expressar a criatividade em relação à arte, dança, música ou escrita. Como pergunta complementar, pergunte aos alunos o que eles usam para inspirar a sua criatividade."
+        "b8daa26e-57e7-4bc5-8a6e-1e541a407c8e": {
+          "tips": [
+            null
+          ]
         },
-        "6fba9dd0-6069-402c-a641-53899ae667e2": {
-          "description": "Sabia que a ciência da computação pode ser muito criativa? Na verdade, você pode fazer arte com códigos. Como lembrete, o código é um conjunto de instruções que um computador pode entender. Assim como escolher quais cores de tinta usar, escolher qual código você usa para escrever também pode ser uma oportunidade para expressar a sua criatividade!   Vamos usar a poesia para inspirar a nossa codificação criativa hoje. Alguém sabe o que é poesia? Você tem um poema ou poeta favorito?"
+        "07a73ab9-8996-453a-a87f-63628f2387db": {
+          "name": "Próximas etapas"
         },
-        "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102": {
-          "description": "**Leia a poesia junto com os alunos:** Leia alguns [poucos poemas][0] junto com eles como em uma aula e pratique dar um nome para o humor de cada poema. Incentive os alunos a compartilhar a sua interpretação, mesmo que elas sejam diferentes das dos outros."
+        "c03cf1cb-2946-48c9-aede-76ccf4b787a9": {
+          "tips": [
+            null
+          ]
         },
-        "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
-          "name": "Arte poética",
-          "description": "#### Suporte Geral  No final desta atividade, os alunos terão um poema animado que representa a sua interpretação visual do poema que escolheram. Esta aula visa dar aos alunos a oportunidade de trabalhar com o seu código e encontrar os efeitos visuais que eles mais gostam.   Ao circular pela sala, incentive os alunos a: - **Não terem pressa:** A maioria dos níveis exige que os alunos encontrem os efeitos ideais para combinar com a sua interpretação do humor do poema. Manter-se em um nível e trabalhar com o seu código é muito  estimulante.   - **Encontre um poema que você gosta:** O poema que é apresentado para um aluno de um novo nível é apenas uma sugestão. Há um menu de poemas com poemas que foram previamente carregados na parte superior  do espaço lúdico. Peça aos alunos para lerem alguns deles e encontrarem um que tenha a ver com ele eles. Agora eles podem começar a animar o poema que escolheram com o código.   * **Mostre um nível completo:** Qualquer bolha de nível totalmente verde significa que o aluno completou com sucesso todos os requisitos para esse nível. Peça aos alunos para clicarem em uma bolha verde para mostrar o que eles criaram.   Para os momentos em que um aluno se sente empacado:  -  **Leia as Instruções:** As instruções são pontos com marcadores  sobre como completar o nível. Se um aluno se sentir empacado, peça-lhe para ler as instruções em voz alta para você e peça-lhe para repetir o que as instruções dizem com as suas próprias palavras.      -   <imgsrc=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Students can also click on this text-to-speech icon to hear the instructions read aloud. -   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Look for hints**: Most levels include at least one hint with more explicit details about how to pass the level.  -   **Celebrate bugs:** Getting a bug in your code is a natural part of the coding process. If the program isn’t doing what they expected, ask the student to first tell you what they want to happen, click run to observe what is actually happening, then find the place in their code that caused the discrepancy. Remember to celebrate finding bugs and fixing bugs. Getting a bug means students are doing a great job building a more complex program.  "
+        "3c17e9fd-b06b-478e-bb56-5734d9344b68": {
+          "tips": [
+            null
+          ]
         },
-        "065eda67-268c-4f91-9caf-efb2c34493fe": {
-          "description": "#### Suporte Para Cada Nível **Nível 1:** Incentive os alunos a lerem o poema. Em seguida, peça-lhes para encontrarem uma cor de fundo ou um efeito que corresponda ao tom do poema que escolheram.   **Nível 2:** Neste exemplo, os alunos devem ler o poema por conta própria e, depois pressionar Executar. Você pode perguntar aos alunos se o som e os efeitos que o programador escolheu combinam com o humor do poema. Peça aos alunos para elaborarem a sua resposta.   **Nível 3:** Este nível introduz o som e os alunos podem usar fones de ouvido se os tiverem.   **Nível 4:** Peça-lhes para lerem o poema e encontrarem a linha onde o humor do poema muda ou se há uma nova imagem que o poeta introduz. Use o bloco de eventos para adicionar os efeitos correspondentes às linhas identificadas do poema.   **Nível 5:** Neste exemplo, os alunos devem ler o poema por conta própria e depois pressionar Executar. Pergunte a eles  se as imagens combinam com as palavras do poema. Peça-lhes para elaborarem a sua resposta.   **Nível 6, 7, 8:** Ver \"Comemore os bugs\" na seção de Suporte Geral. Incentive os alunos a construírem programas com mais de uma transição com os seus blocos de eventos.   **Nível 9:** Incentive os alunos a lerem todos os poemas do menu suspenso para encontrarem um que eles gostam. Diga-lhes que eles podem compartilhar o que fazem neste nível final com os seus amigos e familiares. Chegou o momento de juntar todas as habilidades de codificação e ELA!"
+        "913cf29b-f688-4c8b-9834-96c9b75274f5": {
+          "tips": [
+            null
+          ]
         },
-        "51a89a3e-a8c7-41d6-bbbf-2ce16fc7e033": {
-          "description": "Se você gostou de aprender a codificar hoje, para continuar aprendendo, visite code.org/learn. Se você quiser compartilhar o que fez com os seus amigos e familiares, clique no botão \"Compartilhar\" e envie o link para quem você quiser!"
+        "f39d7745-dd63-424d-baa1-de4e4fd0f0c0": {
+          "tips": [
+            null
+          ]
         },
-        "8630a813-1b6c-49c5-a58b-d2dc5dcccd0a": {
-          "description": "####(Opcional) Avaliação: Verifique se há Compreensão (4 minutos) Distribua duas notas adesivas para cada aluno."
+        "a7f20e25-3940-4615-b90f-8664e1661b3a": {
+          "tips": [
+            null
+          ]
         },
-        "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
-          "description": "Você tem duas notas adesivas. Em uma delas, escreva algo que você aprendeu sobre codificação hoje.  Na outra, escreva algo que aprendeu sobre poesia hoje.   Vamos compartilhar com toda a classe levantando a mão para responder a esta pergunta: Agora, o que mais você espera que pode aprender sobre codificação e ciência da computação?"
+        "2a1748fb-e49f-4ae0-be55-0c603dbe3335": {
+          "tips": [
+            null
+          ]
+        },
+        "e72dd2c9-59cc-4063-9dcc-d270e7fed0fe": {
+          "tips": [
+            null
+          ]
+        },
+        "5ff66bb0-517f-486e-b70f-cad0319c23df": {
+          "tips": [
+            null
+          ]
+        },
+        "31d4feb6-1e0c-4342-988b-6730a0d0155e": {
+          "tips": [
+            null
+          ]
         }
       }
     }

@@ -352,7 +352,7 @@ sk:
       report_bug: "Nahlásiť chybu"
       report_abuse: "Nahlásiť zneužitie"
       teacher_community: "Komunita učiteľov"
-      professional_learning: "Vzdelávanie pre profesionálov"
+      professional_learning: "Profesijný rozvoj"
       documentation: "Dokumentácia"
       tutorials: "Návody"
       app_lab_documentation: "Dokumentácia aplikácie Lab"
@@ -1155,7 +1155,9 @@ sk:
         mongolia: 'Mongolsko'
         new_zealand: 'Nový Zéland'
         paraguay: 'Paraguaj'
+        philippines: 'Filipíny'
         portugal: 'Portugalsko'
+        puerto_rico: 'Portoriko'
         slovakia: 'Slovensko'
         south_korea: 'Južná Kórea'
         spain: 'Španielsko'
@@ -1310,4 +1312,3 @@ sk:
   course_deprecated:
     title: "Hlavy hore! Tento učebný plán už nie je k dispozícii, ale Code.org má pre vás k dispozícii novšie možnosti."
     button: "Zobraziť nové učebné osnovy"
-

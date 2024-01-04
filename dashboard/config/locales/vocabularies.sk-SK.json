@@ -2690,25 +2690,16 @@
         "lossless_compression/text-compression/unversioned": {
           "definition": "algoritmus kompresie údajov, ktorý umožňuje dokonalú rekonštrukciu pôvodných údajov z komprimovaných údajov.  Najčastejšie sa používa na kompresiu textu (napr. kompresia ZIP)"
         },
-        "code/poem-art/unversioned": {
+        "code/dance-ai/2023": {
           "word": "Kód",
-          "definition": "(sloveso) zapísať pokyny pre počítač."
+          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
         },
-        "event/poem-art/unversioned": {
+        "event/dance-ai/2023": {
           "word": "Udalosť",
           "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
         },
-        "program/poem-art/unversioned": {
-          "word": "Program",
-          "definition": "Postupnosť krokov, ktoré boli zakódované do niečoho, čo sa môže spustiť v počítači."
-        },
-        "mood/poem-art/unversioned": {
-          "word": "Nálada",
-          "definition": "vyjadrenie pocitu, atmosféry alebo emócie v umení alebo písanom diele."
-        },
-        "line/poem-art/unversioned": {
-          "word": "Verš",
-          "definition": "(poézia) - členenie básne usporiadané v riadku, ktorý končí na pravom okraji. "
+        "program/dance-ai/2023": {
+          "word": "Program"
         }
       }
     }

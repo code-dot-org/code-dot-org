@@ -90,7 +90,7 @@
           "name": "Sprite"
         },
         "csd3-2017/The Draw Loop": {
-          "name": "O laço de desenho"
+          "name": "O Desenho do Laço"
         },
         "csd3-2017/The Counter Pattern Unplugged": {
           "name": "O padrão do contador desconectado"
@@ -159,7 +159,7 @@
           "name": "Projeto - Protótipo de Papel"
         },
         "csd4-2017/Designing Apps for Good": {
-          "name": "Criando Apps for Good"
+          "name": "Criando Aplicativos do Bem"
         },
         "csd4-2017/Market Research": {
           "name": "Pesquisa de mercado"
@@ -186,7 +186,7 @@
           "name": "Projeto - Apresentação do App"
         },
         "csd5-2017/Representation Matters": {
-          "name": "Representação Importa"
+          "name": "Questões Relativas à Representação"
         },
         "csd5-2017/Patterns and Representation": {
           "name": "Padrões e Representações"
@@ -852,7 +852,7 @@
           "name": "Sprite"
         },
         "csd3-2018/The Draw Loop": {
-          "name": "O laço de desenho"
+          "name": "O Desenho do Laço"
         },
         "csd3-2018/The Counter Pattern Unplugged": {
           "name": "O padrão do contador desconectado"
@@ -924,7 +924,7 @@
           "name": "Projeto - Protótipo de Papel"
         },
         "csd4-2018/Designing Apps for Good": {
-          "name": "Criando Apps for Good"
+          "name": "Criando Aplicativos do Bem"
         },
         "csd4-2018/Market Research": {
           "name": "Pesquisa de mercado"
@@ -954,7 +954,7 @@
           "name": "Pesquisa Pós-curso do Descobertas da CC"
         },
         "csd5-2018/Representation Matters": {
-          "name": "Representação Importa"
+          "name": "Questões Relativas à Representação"
         },
         "csd5-2018/Patterns and Representation": {
           "name": "Padrões e Representações"
@@ -1595,6 +1595,39 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Soletrando"
         },
+        "K5-OnlinePD/Getting Started": {
+          "name": "Iniciando"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Fundamentos de Ciência da Computação"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "Olhando para o futuro"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "Dominando o básico: Sequenciamento"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "Dominando o básico: Ciclos"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "Dominando o básico: Condicionais"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "Dominando o básico: Funções"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "Dominando o básico: Eventos"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "Melhores Práticas para o Ensino de Ciência da Computação"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Planejamento"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Próximas etapas"
+        },
         "csd1-2019/Intro to Problem Solving": {
           "name": "Introdução à Resolução de Problemas"
         },
@@ -1680,7 +1713,7 @@
           "name": "Sprite"
         },
         "csd3-2019/The Draw Loop": {
-          "name": "O laço de desenho"
+          "name": "O Desenho do Laço"
         },
         "csd3-2019/The Counter Pattern Unplugged": {
           "name": "O padrão do contador desconectado"
@@ -1749,7 +1782,7 @@
           "name": "Projeto - Protótipo de Papel"
         },
         "csd4-2019/Designing Apps for Good": {
-          "name": "Criando Apps for Good"
+          "name": "Criando Aplicativos do Bem"
         },
         "csd4-2019/Market Research": {
           "name": "Pesquisa de mercado"
@@ -1776,7 +1809,7 @@
           "name": "Projeto - Apresentação do App"
         },
         "csd5-2019/Representation Matters": {
-          "name": "Representação Importa"
+          "name": "Questões Relativas à Representação"
         },
         "csd5-2019/Patterns and Representation": {
           "name": "Padrões e Representações"
@@ -2281,6 +2314,45 @@
         },
         "pre-express-2019/Make a Game in Play Lab": {
           "name": "Um Battle Royal com eventos"
+        },
+        "k5-onlinepd-2019/Welcome to \"Teaching Computer Science Fundamentals\"": {
+          "name": "Bem-vindo ao \"Ensinando os Fundamentos da Ciência da Computação\""
+        },
+        "k5-onlinepd-2019/Understanding the Computer Science Fundamentals Courses": {
+          "name": "Compreendendo os cursos de Fundamentos de Ciência da Computação"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Sequenciamento"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "laços"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Eventos"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Condições"
+        },
+        "k5-onlinepd-2019/End of Course projects": {
+          "name": "Projetos de fim de curso"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "funções"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Variáveis"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Laços para"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Laboratório de Sprite"
+        },
+        "k5-onlinepd-2019/Reviewing your reflections": {
+          "name": "Revendo suas reflexões"
+        },
+        "k5-onlinepd-2019/Next steps": {
+          "name": "Próximos passos"
         },
         "coursea-2020/Safety in My Online Neighborhood": {
           "name": "Segurança em minha vizinhança on-line"
@@ -2869,8 +2941,8 @@
           "student_overview": "**Pergunta do dia: Como podemos usar o Laboratório de Jogos para expressar nossa criatividade?**\n\nNesta lição, você terá a oportunidade de ser criativo usando o processo de solução de problemas para projetar e programar uma cena de sua escolha. "
         },
         "csd3-2021/The Draw Loop": {
-          "name": "O laço de desenho",
-          "student_overview": "**Pergunta do dia: Como podemos animar nossas imagens no laboratório de Games?**\n\nNesta lição, você aprenderá a usar o laço de desenho com números aleatórios para criar suas primeiras animações simples. "
+          "name": "O Desenho do Laço",
+          "student_overview": "**Pergunta do Dia: Como podemos animar nossas imagens no Game Lab?**\n\nNesta lição, você aprenderá a usar o draw loop com números aleatórios para criar suas primeiras animações. "
         },
         "csd3-2021/Sprite Movement": {
           "name": "Movimento de Sprite",
@@ -2890,7 +2962,7 @@
         },
         "csd3-2021/Mouse Input": {
           "name": "Entrada de Mouse",
-          "student_overview": "**Pergunta do dia: Quais são as outras maneiras pelas quais o computador pode reagir à entrada do usuário?**\n\nNesta lição, você expandirá o que aprendeu sobre as declarações if e explorará as declarações if-else, bem como aprenderá como usar o mouse para obter informações do usuário que podem ser usadas em suas declarações condicionais. "
+          "student_overview": "**Pergunta do Dia: Quais são as outras maneiras pelas quais o computador pode reagir aos dados de input do usuário?**\n\nNesta lição, você expandirá o que aprendeu sobre as declarações if e explorará as declarações if-else, bem como aprenderá a usar o mouse para obter informações a partir do usuário que podem ser usadas em suas declarações condicionais."
         },
         "csd3-2021/Project - Interactive Card": {
           "name": "Projeto - Cartão Interativo",
@@ -2957,15 +3029,21 @@
           "student_overview": "**Pergunta do Dia: Como podemos projetar para outras pessoas além de nós mesmos?**\n\nNesta lição, você usará o processo de design para o desenvolvimento de ideias para a criação de roupas inteligentes. "
         },
         "csd4-2021/User-Centered Design 2": {
-          "student_overview": "**Pergunta do Dia: Como podemos projetar um produto para atender às necessidades do usuário?**\n\nNesta lição, você continuará trabalhando no design de uma peça de roupa inteligente, usando as necessidades e as preocupações específicas que você discutiu com sua equipe."
+          "student_overview": "**Pergunta do Dia: Como podemos projetar um produto para atender às necessidades do usuário?**\n\nNesta lição, você continuará trabalhando no design de uma peça de roupa inteligente, usando as necessidades e as preocupações específicas que você discutiu com sua equipe.",
+          "overview": "**Pergunta do Dia: Como podemos projetar um produto para atender às necessidades do usuário?**\n\nEsta é a segunda parte de uma aula planejada para ser realizada ao longo de dois encontros, nos quais os alunos são guiados por uma versão abreviada do processo de design ao qual serão apresentados ao longo desta unidade. Na primeira parte, os alunos concluíram as etapas de definição e preparação do processo de design. Hoje, eles devem completar as partes Tente e Reflita. Os alunos continuam seu trabalho iniciado na primeira parte da aula, em que desenharam uma peça de roupa inteligente, usando as necessidades e as preocupações específicas que eles discutiram para orientar sua tomada de decisão. Os alunos podem compartilhar seu processo de tomada de decisão e obter feedback sobre como seu produto atende às necessidades do usuário que eles selecionaram.",
+          "purpose": "Esta microatividade é o primeiro de três projetos de design apresentados nesta unidade. É uma introdução rápida ao processo de design centrado no usuário, com o objetivo de oferecer aos alunos uma experiência com design centrado no usuário, que eles poderão desenvolver em projetos posteriores. Nesta lição, o objetivo principal é alinhar o design de um produto às necessidades do usuário,  deixando de lado as crenças ou preferências pessoais. O ato de basear as decisões em um usuário e não em si mesmo é uma forma de pensar fundamental que aparecerá em toda a unidade.\n\nA atividade desta lição é uma adaptação da [Design Charrette da Universidade de Washington].[0]"
         },
         "csd4-2021/User Interfaces": {
           "name": "Interfaces de Usuário",
-          "student_overview": "**Pergunta do Dia: Como podemos testar um aplicativo para garantir que ele atenda às necessidades do usuário?**\n\nNesta lição, você examinará um protótipo em papel para um aplicativo de bate-papo e começará a identificar formas de aprimorá-lo."
+          "student_overview": "**Pergunta do Dia: Como podemos testar um aplicativo para garantir que ele atenda às necessidades do usuário?**\n\nNesta lição, você examinará um protótipo em papel para um aplicativo de bate-papo e começará a identificar formas de aprimorá-lo.",
+          "overview": "**Pergunta do Dia:** Como podemos testar um aplicativo para garantir que ele atenda às necessidades do usuário?\n\nApós o projeto de mini design, os alunos olham para a próxima fase do design - prototipagem de um produto para atender às necessidades do usuário. Em equipes, os alunos examinam um protótipo em papel para um aplicativo de bate-papo chamado “Txt Ur Grndkdz”. Ao usar esse protótipo de papel, os alunos têm a chance de ver como um simples protótipo de papel pode ser usado para testar rapidamente ideias e suposições antes mesmo de chegarmos ao computador. Depois de “usar” o protótipo fornecido, os alunos começam a identificar maneiras de melhorar a próxima iteração.",
+          "purpose": "Esta lição apresenta aos alunos o conceito de um protótipo em papel como uma ferramenta rápida e não sincronizada para iniciar o desenvolvimento de um aplicativo. Os protótipos em papel retornarão nas próximas aulas e também no projeto do capítulo dois. Esse protótipo também servirá como contexto em torno do qual os alunos começarão a analisar e a organizar o feedback de uma ampla variedade de usuários. Embora esta lição peça aos alunos que trabalhem com um protótipo existente, em breve eles desenvolverão protótipos a partir de seus próprios designs."
         },
         "csd4-2021/Feedback and Testing": {
           "name": "Teste e Feedback",
-          "student_overview": "**Pergunta do Dia: Como podemos usar o feedback para melhorar um aplicativo?**\n\nNesta lição, você começará a revisar o protótipo em papel usando o feedback e as solicitações dos usuários."
+          "student_overview": "**Pergunta do Dia: Como podemos usar o feedback para melhorar um aplicativo?**\n\nNesta lição, você começará a revisar o protótipo em papel usando o feedback e as solicitações dos usuários.",
+          "overview": "**Pergunta do Dia: Como podemos usar o feedback para melhorar um aplicativo?**\n\nNesta lição, os alunos usam o feedback dos “usuários” do aplicativo prototipado em papel da lição anterior para desenvolver melhorias na interface do usuário desse protótipo em papel. A lição começa com uma reflexão sobre o fato de que os designers precisam traduzir as necessidades humanas com a tecnologia em mudanças na interface ou na experiência do usuário. Em seguida, os alunos recebem uma coleção de comentários e solicitações dos usuários do aplicativo da lição anterior. Em grupos, os alunos categorizam o feedback e identificam maneiras pelas quais as necessidades expressas no feedback podem ser atendidas por meio de mudanças na interface do aplicativo. Em seguida, em grupos, os alunos implementarão algumas dessas mudanças para atender a uma das necessidades identificadas.",
+          "purpose": "Esta lição apresenta várias habilidades que os alunos precisarão usar posteriormente na unidade. Eles aprenderão a categorizar o feedback para organizar e priorizar sua resposta. Eles aprendem a interpretar as necessidades humanas com um elemento de tecnologia em termos de mudanças na interface do usuário. Eles têm a primeira oportunidade de criar seu próprio protótipo em papel ao projetarem uma nova tela de um aplicativo. À medida que os alunos começam a criar seus próprios aplicativos do zero, essas serão habilidades importantes que os alunos colocarão em prática repetidamente."
         },
         "csd4-2021/Identifying User Needs": {
           "name": "Identificando Necessidades do Usuário",
@@ -2976,7 +3054,7 @@
           "student_overview": "**Pergunta do Dia: Como posso desenvolver um protótipo de aplicativo para um usuário?**\n\nNesta lição, você usará a entrevista com um colega de classe da lição anterior para criar ideias de aplicativos que atendam às necessidades de seus usuários."
         },
         "csd4-2021/Designing Apps for Good": {
-          "name": "Criando Apps for Good",
+          "name": "Criando Aplicativos do Bem",
           "student_overview": "**Pergunta do Dia: O que é um App for Good que queremos criar?**\n\nNesta lição, você iniciará o processo de criação de um aplicativo que durará até o final desta unidade e começará com um plano de como sua equipe funcionará em conjunto durante a criação desse aplicativo, um tópico para seu aplicativo e usuários em potencial."
         },
         "csd4-2021/Market Research": {
@@ -2984,7 +3062,7 @@
           "student_overview": "**Pergunta do Dia: Como podemos usar os aplicativos existentes como inspiração para nossos próprios aplicativos?**\n\nNesta lição, você mergulhará no desenvolvimento de aplicativos explorando os aplicativos existentes que podem atender usuários semelhantes aos do aplicativo em que você está trabalhando."
         },
         "csd4-2021/Exploring UI Elements": {
-          "name": "Explorando Elementos de Interface UI",
+          "name": "Explorando Elementos da Interface do Usuário",
           "student_overview": "**Pergunta do Dia: Quais elementos da interface do usuário serão úteis para nosso aplicativo?**\n\nNesta lição, você explorará alguns exemplos de aplicativos criados no App Lab e usará esses exemplos para ajudar a criar seu primeiro protótipo em papel do seu aplicativo."
         },
         "csd4-2021/Paper Prototypes": {
@@ -3032,47 +3110,61 @@
           "name": "Pesquisa Pós-curso do Descobertas da CC"
         },
         "csd5-2021/Representation Matters": {
-          "name": "Representação Importa"
+          "name": "Questões Relativas à Representação",
+          "overview": "**Pergunta do Dia: Como os dados afetam as decisões que tomamos cotidianamente?**\n\nNa primeira aula da unidade de dados, os alunos têm uma visão geral do que são dados e como esses dados são usados para resolver problemas. Os alunos começam com uma breve discussão para chegar a um entendimento comum do que são dados. Em seguida, eles se dividem em grupos e usam um conjunto de dados para fazer uma série de sugestões de refeições para pessoas a partir de vários critérios. Cada grupo tem as opções de refeições representadas de uma forma diferente (fotos, receitas, cardápio, aspectos nutricionais), o que dá uma vantagem para uma das recomendações. Depois, os grupos comparam suas respostas e discutem como as diferentes representações dos dados das refeições afetaram a forma como os alunos conseguiram resolver os diferentes problemas.",
+          "purpose": "Esta lição apresenta várias noções importantes que os alunos explorarão neste capítulo. Eles verão que os mesmos objetos podem ser representados de várias maneiras. No Capítulo 1, eles aprenderão os diferentes sistemas de representação que os computadores utilizam para representar informações. Eles também verão nesta lição que a representação é importante quando usamos dados para tomar decisões. No Capítulo 2 desta unidade, os alunos explorarão mais profundamente como os dados podem ser usados por humanos e por computadores para tomar decisões."
         },
         "csd5-2021/Patterns and Representation": {
-          "name": "Padrões e Representações"
+          "name": "Padrões e Representações",
+          "overview": "**Pergunta do Dia: Como podemos criar um sistema para representar informações?**\n\nNesta lição, os alunos criam seu próprio sistema para representar informações. Eles começam discutindo todos os diferentes sistemas que já usam para representar respostas de sim e não. Em seguida, eles trabalham em pequenos grupos para criar um sistema que possa representar qualquer letra do alfabeto usando apenas uma única pilha de cartas. Os cartões usados têm um dos 6 desenhos possíveis (6 animais, 6 cores, etc.) e, portanto, para representar todo o alfabeto, os alunos precisarão usar padrões de vários cartões para representar cada letra. Os alunos criam mensagens com seus sistemas e trocam mensagens com outros grupos para garantir que o sistema funcione conforme o esperado. Na discussão final, a turma analisa todos os prós e contras dos diferentes sistemas. Eles discutem as semelhanças entre os sistemas que funcionaram e reconhecem que há muitas soluções possíveis para eventuais problemas. O importante é que todos usem o mesmo sistema arbitrário para se comunicar.",
+          "purpose": "Nesta lição, os alunos podem explorar por si mesmos as qualidades de um bom sistema para representar informações. Eles devem descobrir, ao criar e testar seus sistemas, que\n\n1.  normalmente existem muitos sistemas possíveis para representar informações\n2.  as pessoas devem concordar com um conjunto comum de regras para que um sistema funcione.\n\nOs recursos dos sistemas que os alunos criam nesta lição servem como ponto de referência para as próximas aulas, quando os alunos explorarão os sistemas de representação realmente usados em computadores.\n\nNa próxima lição, os alunos conhecerão o conceito de binário e como os computadores usam sinais liga-desliga ou “0 e 1” para representar informações. Embora esse conceito seja sugerido na atividade introdutória de sim e não, ele não deve ser introduzido até a próxima lição."
         },
         "csd5-2021/ASCII and Binary Representation": {
           "name": "ASCII e Representações Binárias"
         },
         "csd5-2021/Representing Images": {
-          "name": "Representando Imagens"
+          "name": "Representando Imagens",
+          "overview": "**Pergunta do dia: Qual sistema os computadores usam para representar imagens?**\n\nNesta lição, os alunos aprendem como os computadores representam imagens. Para começar a lição, eles consideram o desafio de transformar toda a complexidade da visão em um padrão binário. Por meio de uma série de imagens que mostram como essa transformação é feita, os alunos são apresentados ao conceito de dividir imagens em quadrados ou “pixels”, que podem ser ativados ou desativados individualmente para criar a imagem inteira. Em seguida, os alunos fazem um pequeno conjunto de desafios usando o Pixelation Widget para desenhar imagens em preto e branco. Os quebra-cabeças foram criados para destacar alguns dos desafios de representar imagens dessa forma. No final, os alunos fazem conexões entre o sistema de representação de imagens e o sistema de representação de texto que aprenderam na lição anterior."
         },
         "csd5-2021/Representing Numbers": {
           "name": "Representando Números"
         },
         "csd5-2021/Combining Representations": {
-          "name": "Combinando Representações"
+          "name": "Combinando Representações",
+          "student_overview": "**Pergunta do Dia: Como os computadores diferenciam códigos binários de letras, números ou imagens?**\n\nNesta lição, você combinará ASCII, binário e imagens para explorar maneiras de codificar tipos mais complexos de informações."
         },
         "csd5-2021/Keeping Data Secret": {
-          "name": "Mantendo o segredo dos dados"
+          "name": "Mantendo o segredo dos dados",
+          "student_overview": "**Pergunta do Dia: Como podemos manter os dados em segredo e protegê-los contra o uso indevido?**\n\nNesta lição, você explorará diferentes níveis de segurança, analisará a importância da privacidade e aprenderá a criptografar informações!"
         },
         "csd5-2021/Problem Solving and Data": {
-          "name": "Resolução de Problemas e Dados"
+          "name": "Resolução de Problemas e Dados",
+          "student_overview": "**Pergunta do Dia: Como podemos usar os dados para resolver problemas em nossa comunidade?**\n\nNesta lição, você decidirá em que uma cidade mais precisa investir para perceber como usar os dados para resolver problemas."
         },
         "csd5-2021/Structuring Data": {
-          "name": "Estruturação de dados"
+          "name": "Estruturação de dados",
+          "student_overview": "**Pergunta do Dia: como podemos facilitar o processamento de dados pelos computadores?**\n\nNesta lição, você aprenderá como apresentar dados de maneiras diferentes que podem ajudar as pessoas a entenderem melhor os dados, bem como quais partes do processo podem ser feitas por um computador e quais partes exigem um ser humano."
         },
         "csd5-2021/Interpreting Data": {
-          "name": "Interpretando Dados"
+          "name": "Interpretando Dados",
+          "student_overview": "**Pergunta do Dia: Como os padrões nos dados podem nos ajudar a tomar decisões?**\n\nNesta lição, você aprenderá sobre tabulação cruzada, que permitirá representar graficamente as relações entre vários dados."
         },
         "csd5-2021/Making Decisions with Data": {
-          "name": "Tomando Decisões com Dados"
+          "name": "Tomando Decisões com Dados",
+          "student_overview": "\\*\\*Pergunta do Dia: como os padrões nos dados podem ajudar a tomar uma decisão? \\*\\*\n\nNesta lição, você terá a chance de praticar o processo de solução de problemas de dados que aprendeu na lição anterior. "
         },
         "csd5-2021/Automating Data Decisions": {
-          "name": "Automatizando decisões de dados"
+          "name": "Automatizando decisões de dados",
+          "student_overview": "**Pergunta do Dia: Como os computadores podem nos ajudar a tomar decisões sobre dados?**\n\nNesta lição, você examinará como um computador pode ser usado para concluir a etapa de tomada de decisão do processo de solução de problemas de dados."
         },
         "csd5-2021/Problem Solving with Big Data": {
-          "name": "Solução de Problemas com Big Data"
+          "name": "Solução de Problemas com Big Data",
+          "student_overview": "**Pergunta do Dia: Como nossos dados são coletados e por que saber disso é útil?**\n\nNesta lição, você verá como os dados são coletados e usados pelas organizações para resolver problemas reais no mundo real."
         },
         "csd5-2021/Project - Make a Recommendation": {
           "name": "Projeto - Faça uma Recomendação",
-          "assessment_opportunities": "Use a rubrica do projeto anexada a esta lição para avaliar o domínio dos alunos sobre as metas de aprendizagem desta unidade. Você também pode optar por atribuir o teste pós-projeto por meio do Code Studio."
+          "assessment_opportunities": "Use a rubrica do projeto anexada a esta lição para avaliar o domínio dos alunos sobre as metas de aprendizagem desta unidade. Você também pode optar por atribuir o teste pós-projeto por meio do Code Studio.",
+          "student_overview": "**Pergunta do Dia: Como posso usar os dados para fazer minhas próprias recomendações?**\n\nNesta lição, você criará um mecanismo de recomendação com base nos dados coletados e analisados a partir das contribuições dos seus colegas."
         },
         "csd5-2021/CS Discoveries Post-Course Survey": {
           "name": "Pesquisa Pós-curso do Descobertas da CC"
@@ -3137,7 +3229,8 @@
         },
         "csd7-2021/Introduction to Machine Learning": {
           "name": "Introdução ao Machine Learning",
-          "student_overview": "Aprenda os conceitos básicos de machine learning ajudando o AI Bot a reconhecer peixes para limpar o oceano"
+          "student_overview": "Aprenda os conceitos básicos de machine learning ajudando o AI Bot a reconhecer peixes para limpar o oceano",
+          "preparation": "-   Revise os níveis do Code Studio antes da aula\n-   Imprima cópias do guia de atividade para cada aluno"
         },
         "csd7-2021/Types of Machine Learning": {
           "name": "Tipos de Machine Learning"
@@ -3792,7 +3885,7 @@
         },
         "coursef-2021/AI for Oceans": {
           "name": "IA para oceanos",
-          "overview": "Nesta aula **exploratória**, os alunos treinarão um modelo de aprendizado de máquina classificando peixes e outros objetos.",
+          "overview": "Nesta lição **exploratória**, os alunos treinarão um modelo de machine learning classificando peixes e outros objetos.",
           "purpose": "Esta lição foi projetada para apresentar rapidamente aos alunos o aprendizado de máquina, um tipo de inteligência artificial. Os alunos explorarão como os dados de treinamento são usados para permitir que um modelo de aprendizado de máquina classifique novos dados. Os alunos devem ter uma experiência positiva durante o tutorial e, mais importante, devem estar motivados a continuar aprendendo ciência da computação. ",
           "student_overview": "Classifique objetos como “peixes” ou “não peixes” para tentar remover o lixo do oceano. Em seguida, expanda seu conjunto de dados de treinamento para incluir outras criaturas marinhas que pertencem à água. Na segunda parte da atividade, escolha seus próprios rótulos para aplicar às imagens de peixes gerados aleatoriamente. Esses dados de treinamento são usados para um modelo de aprendizado de máquina que deve, então, ser capaz de rotular novas imagens sozinho."
         },
@@ -4080,13 +4173,46 @@
           "purpose": "Nesta atividade on-line, os estudantes irão aprender a usar eventos no Play Lab. Eles começarão treinando o cavaleiro para se mover quando uma tecla de direção for pressionada, depois concluir com a oportunidade de demonstrar as outras habilidades aprendidas durante este curso, inclusive sequências e laços, como parte de seu quebra-cabeça livre.",
           "student_overview": "Use eventos para criar uma história ou criar um jogo interativo."
         },
+        "kodea-pd-2021/Getting Started": {
+          "name": "Iniciando"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Fundamentos de Ciência da Computação"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "Olhando para o futuro"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "Dominando o básico: Sequenciamento"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "Dominando o básico: Ciclos"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "Dominando o básico: Condicionais"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "Dominando o básico: Funções"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "Dominando o básico: Eventos"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "Melhores Práticas para o Ensino de Ciência da Computação"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Planejamento"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Próximas etapas"
+        },
         "csd1-2022/Intro to Problem Solving": {
           "name": "Introdução à Resolução de Problemas",
           "assessment_opportunities": "1.  **Comunique-se e colabore com os colegas para resolver um problema**\n\n    Na pergunta de encerramento da discussão sobre colaboração, verifique as vantagens da colaboração na resolução de problemas e liste as estratégias apropriadas para superar desafios. Essa prática será reforçada ao longo de toda a unidade e curso.\n\n2.  **Melhore iterativamente a solução de um problema**\n\n    No Guia de Atividades, verifique os pontos fortes e fracos no design original proposto pelos alunos e a conexão com as mudanças apropriadas para a próxima fase do projeto.\n\n3.  **Identifique as diferentes estratégias usadas para resolver um problema**\n\n    No Guia de Atividades, verifique as estratégias para superar os desafios da atividade. Você também pode verificar os “pontos fortes” dos projetos que os alunos listam como parte do desenvolvimento do plano na segunda página do Guia.",
           "overview": "**Pergunta do Dia: O que pode nos ajudar a trabalhar e a resolver problemas em equipe?**\n\nNesta lição, os alunos trabalham em grupos para criar barcos de papel alumínio, que devem sustentar o maior número possível de moedas. Os grupos terão duas rodadas para desenvolver seus barcos, com o objetivo de tentar acondicionar mais moedas do que na primeira rodada. A estrutura da atividade prevê os diferentes passos envolvidos no processo de resolução de problemas, que serão mais profundamente explorados pelos alunos na lição seguinte. Ao final da lição, os alunos refletem sobre as experiências a partir da atividade e as relacionam aos tipos de resolução de problemas que enfrentarão ao longo do curso.\n\n**Versões alternativas dessa lição também estão disponíveis.** \n\n-   [Mesa de Jornal](/s/csd1-2022/lessons/9/)\n-   [Ponte de Espaguete](/s/csd1-2022/lessons/10/)\n-   [Torre de Papel](/s/csd1-2022/lessons/11/)",
-          "preparation": "**Para cada equipe**\n\n-   2 folhas de papel alumínio, tamanho 12,5 x 12,5 cm\n-   1 pote plástico (tipo sorvete)\n-   Várias toalhas de papel ou pedaços de pano para serem colocados debaixo do pote\n-   15 moedas pequenas\n-   Uma cópia do guia de atividades\n\n**Para o professor**\n\n-   1 pote de plástico (tipo sorvete)\n-   50 moedas pequenas\n-   Toalhas de papel ou pedaços de pano extra\n-   Verificar o fórum da [\"Sala dos Professores\"] para que os professores  autorizados encontrem estratégias ou recursos adicionais compartilhados por outros professores\n-   Caso você esteja dando aulas online, sugerimos verificar o nosso [\"Modificações da Aula Virtual\"]",
+          "preparation": "**Para cada equipe**\n\n-   2 folhas de papel alumínio, tamanho 12,5 x 12,5 cm\n-   1 pote plástico (tipo sorvete)\n-   Várias toalhas de papel ou pedaços de pano para serem colocados debaixo do pote\n-   15 moedas pequenas\n-   Uma cópia do guia de atividades\n\n**Para o professor**\n\n-   1 pote de plástico (tipo sorvete)\n-   50 moedas pequenas\n-   Toalhas de papel ou pedaços de pano extra\n-   Verificar o fórum [\"Sala dos Professores\"] para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Caso você esteja dando aulas online, sugerimos verificar o nosso [\"Modificações da Aula Virtual\"]",
           "purpose": "Esta lição é uma introdução divertida para a resolução aberta, colaborativa e criativa de problemas, que os alunos utilizarão ao longo de toda a unidade e do curso. O problema dos barcos de papel alumínio poderia ser facilmente substituído por quaisquer outros problemas que exijam que os alunos definam metas, criem um plano, testem uma solução, avaliem seus resultados e, a partir deles continuem iterativamente melhorando. O fato de o problema escolhido ser \"não-computacional\" é intencional. A Ciência da Computação é fundamentalmente uma disciplina de resolução de problemas, e afastar-se dos problemas tradicionais da Ciência da Computação, neste momento, ajuda a definir o caráter desta aula como sendo de resolução de problemas de forma mais genérica, à qual a Ciência da Computação se alia como uma nova \"ferramenta\" que ajuda a atacar determinados tipos de problemas.",
-          "student_overview": "**Pergunta do Dia: O que pode nos ajudar a trabalhar juntos e a resolver problemas em equipe?**\n\nVocê vai trabalhar em equipes para desenvolver e testar um barco de papel alumínio que carregue o maior número possível de moedinhas."
+          "student_overview": "**Pergunta do Dia: O que pode nos ajudar a trabalhar juntos e a resolver problemas em equipe?**\n\nVocê vai trabalhar em equipes para desenvolver e testar um barco de papel alumínio que carregue o maior número possível de moedas."
         },
         "csd1-2022/The Problem Solving Process": {
           "name": "O Processo de Resolução de Problemas",
@@ -4118,7 +4244,7 @@
           "overview": "\\*\\*Pergunta do Dia: Como os computadores usam a entrada e a saída de dados para obter e fornecer as informações de que precisam para resolver problemas? \\*\\*\n\nNesta lição, os alunos consideram como os computadores obtêm e fornecem informações ao usuário por meio de entradas e saídas. Os alunos primeiro consideram quais informações precisariam para resolver um “problema de pensamento” e, em seguida, usam essas informações para produzir uma sugestão. Em seguida, eles identificam as entradas e saídas desse processo. Depois, os alunos consideram um aplicativo que se envolve no mesmo processo e determinam como esse aplicativo insere e envia informações. Por fim, eles consideram outros tipos de entradas e saídas que os computadores podem usar para ajudar a resolver problemas.",
           "preparation": "-   Faça cópias do guia de atividades\n-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-2-lessons-4-8/36189) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Adaptações para Aulas Virtuais](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)",
           "purpose": "Na lição anterior, os alunos começaram a pensar em recursos que podem ajudar a classificar dispositivos como computadores. Esta lição apresenta a entrada e a saída como um desses recursos e faz com que os alunos identifiquem diferentes métodos de entrada ou saída em aplicativos comuns. ",
-          "student_overview": "**Pergunta do Dia: Como os computadores utilizam os dados de entrada e de saída e oferecem as informações de que precisam para resolver problemas?**\n\nNesta lição, você vai aprender sobre como os computadores recebem e dão informações ao usuário por meio de várias entradas e saídas."
+          "student_overview": "**Pergunta do Dia: Como os computadores utilizam os dados de entrada e de saída para receber e oferecer as informações de que precisam para resolver problemas?**\n\nNesta lição, você vai aprender sobre como os computadores recebem e dão informações ao usuário por meio de várias entradas e saídas."
         },
         "csd1-2022/Processing": {
           "name": "Processamento",
@@ -4170,7 +4296,7 @@
         "csd1-2022/Exploring Problem Solving - Animals Theme (Alternate Lesson 3)": {
           "name": "Explorando a Resolução de Problemas - Temática de Animais (Lição Extra 3)",
           "assessment_opportunities": "1.  **Aplique o processo de resolução de problemas para abordar uma variedade de problemas**\n\n    Na página 5 do Guia de Atividades, verifique o gráfico para garantir que os alunos estejam adotando medidas razoáveis para cada um dos problemas.\n\n2.  **Avalie se um problema está bem definido e aplique estratégias para definir o problema com mais precisão**\n\n    Para a última pergunta da página 5 do Guia de Atividades, certifique-se de que os alunos tenham pelo menos uma pergunta ou estratégia que seja uma forma eficaz de definir melhor um problema.",
-          "overview": "\\*\\*Pergunta do dia: Como podemos aplicar o processo de solução de problemas a muitos tipos diferentes de problemas? \\*\\*\n\nNesta lição, os alunos aplicam o processo de resolução de problemas a três problemas diferentes para entender melhor o valor de cada etapa. Eles resolverão tangrams, escolherão pets para várias pessoas e planejarão um evento de adoção de pets. Os problemas se tornam cada vez mais complexos e mal definidos para destacar como o processo de resolução de problemas é particularmente útil ao lidar com esses tipos de problemas. A aula termina com os alunos refletindo sobre sua experiência com o processo de resolução de problemas. Eles justificarão a inclusão de cada etapa e discutirão questões ou estratégias que possam ajudá-los a definir melhor os problemas não-resolvidos, pois essa geralmente é a etapa mais crítica.\n\nEsta lição provavelmente levará dois períodos de aula ou mais para ser concluída. Os dois primeiros problemas podem ser abordados em um único período de aula, mas o terceiro precisará ser transferido para o segundo dia.\n\n**Esta é uma atividade alternativa para a [Exploração da resolução de problemas](/s/csd1-2022/lessons/3/)**",
+          "overview": "**Pergunta do Dia: Como podemos aplicar o processo de solução de problemas a muitos tipos diferentes de problemas?**\n\nNesta lição, os alunos aplicam o processo de resolução de problemas a três problemas diferentes para entender melhor o valor de cada etapa. Eles resolverão tangrams, escolherão pets para várias pessoas e planejarão um evento de adoção de pets. Os problemas se tornam cada vez mais complexos e mal definidos para destacar como o processo de resolução de problemas é particularmente útil ao lidar com esses tipos de problemas. A aula termina com os alunos refletindo sobre sua experiência com o processo de resolução de problemas. Eles justificarão a inclusão de cada etapa e discutirão questões ou estratégias que possam ajudá-los a definir melhor os problemas não-resolvidos, pois essa geralmente é a etapa mais crítica.\n\nEsta lição provavelmente levará dois períodos de aula ou mais para ser concluída. Os dois primeiros problemas podem ser abordados em um único período de aula, mas o terceiro precisará ser transferido para o segundo dia.\n\n**Esta é uma atividade alternativa para a [Exploração da resolução de problemas](/s/csd1-2022/lessons/3/)**",
           "preparation": "-   Imprima uma cópia do guia de atividades para cada aluno\n-   Prepare tangrams para os alunos, ou imprima uma tabela tangram e dê uma tesoura a cada grupo.\n-   Cartaz para registrar as estratégias para a definição de problemas na discussão do fechamento \n-   Visite o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) para os professores autorizados para acessar estratégias e recursos adicionais compartilhados por outros professores\n-   Se você estiver dando aulas online, consulte nossas [Adaptações para Aulas Virtuais](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)",
           "purpose": "Esta lição oferece aos alunos mais prática no processo de resolução de problemas em diversos contextos. Ela destaca o fato de que o processo de resolução de problemas é particularmente útil para abordar problemas mal definidos. O brainstorming final da lição fornece aos alunos algumas estratégias e perguntas que eles podem se fazer para definir melhor os problemas, já que essa geralmente é a etapa mais crítica. Os problemas apresentados nesta lição também ajudam a conduzir uma discussão na lição a seguir sobre os tipos de problemas que os computadores são preparados para resolver.",
           "student_overview": "**Pergunta do Dia: Como podemos aplicar o processo de resolução de problemas a diferentes tipos de problemas?**\n\nNesta lição, você vai aplicar o processo de resolução de problemas a diferentes problemas, sendo que cada um ficará cada vez mais complexo!"
@@ -4184,39 +4310,39 @@
           "student_overview": "**Pergunta do Dia: Como podemos aplicar o processo de resolução de problemas a diferentes tipos de problemas?**\n\nNesta lição, você vai aplicar o processo de resolução de problemas a diferentes problemas, sendo que cada um ficará cada vez mais complexo!"
         },
         "csd2-2022/Exploring Web Pages": {
-          "name": "Explorando páginas da Web",
+          "name": "Explorando Páginas Web",
           "assessment_opportunities": "1.  **Identifique os motivos pelos quais alguém pode visitar um determinado site**\n\n    No guia de atividades, verifique se os alunos têm motivos pelos quais um usuário pode visitar cada site, tais como aprender mais sobre um tópico ou se divertir.\n2.  **Identifique os motivos pelos quais alguém pode criar um determinado site**\n\n    No guia de atividades, confira os motivos pelos quais os alunos criaram seus respectivos sites. As explicações dos alunos podem incluir motivos pragmáticos, como obter feedback e conselhos de outras pessoas, ou motivos de caráter mais social, como expressão pessoal.",
           "overview": "\\*\\*Pergunta do dia: Por que as pessoas criam páginas da web? \\*\\*  \n\nTodos os sites têm um propósito, uma razão pela qual alguém o criou e outros o usam. Nesta lição, os alunos começarão a avaliar os propósitos a que um site pode servir, tanto para os usuários quanto para os seus criadores. Os alunos explorarão alguns exemplos de sites e discutirão o propósito a que eles servem para seus criadores. Em seguida, eles são convidados a refletir sobre os motivos pelos quais alguém pode querer criar sites.",
           "preparation": "-   Imprima uma cópia do guia de atividades para cada aluno.\n-   Consulte o fórum [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) para professores verificados a fim de encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para aulas virtuais](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
           "purpose": "Esta unidade trata da World Wide Web, com foco na criação de sites para autoexpressão. Para que os alunos pensem por que eles podem querer criar um site, eles devem começar a compreender como e por que os sites são ferramentas úteis para usuários e criadores. A aula começa com sites populares, porque os alunos estão familiarizados com eles, mas aos poucos eles deverão focar em sites mais simples e que estejam dentro do escopo do que eles terão condições de criar neste curso.",
-          "student_overview": "\\*\\*Pergunta do dia: Por que as pessoas criam páginas da web? \\*\\*\n\nNesta lição, você explorará os vários propósitos a que se prestam as páginas da web aos seus usuários e criadores. "
+          "student_overview": "\\*\\*Pergunta do dia: Por que as pessoas criam páginas web? \\*\\*\n\nNesta lição, você explorará os vários propósitos a que se prestam as páginas web para seus usuários e criadores. "
         },
         "csd2-2022/Intro to HTML": {
           "name": "Introdução a HTML",
           "overview": "**Pergunta do Dia:Como podemos dizer ao computador _o que_ colocar na página da web e _como_ organizar esse conteúdo?**\n\nNesta lição, os alunos são apresentados ao HTML como uma solução para o desafio de como comunicar o conteúdo e a estrutura de um site a um computador. A lição começa com uma breve atividade offline que demonstra os desafios de comunicar com eficácia a estrutura de uma página da web. Em seguida, os alunos examinam uma página HTML modelo no Web Lab e discutem com seus colegas como as tags HTML ajudam a resolver esse problema. Em seguida, os alunos escrevem seu primeiro HTML. Uma discussão de encerramento ajuda a solidificar a compreensão do conteúdo em oposição à estrutura que foi desenvolvida ao longo da aula.",
           "preparation": "-   Revise os níveis do Code Studio\n-   Consulte o[0] fórum na [\"Sala dos Professores\"] para que os professores autorizados encontrem estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando online, considere conferir nossas [Adaptações para aulas virtuais](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
           "purpose": "Esta lição apresenta muitos conceitos e ferramentas novas aos alunos. Eles são apresentados ao HTML, a ferramenta do Web Lab, e também passam a saber como navegar pelos recursos das aulas no Code.org. Embora a compreensão do HTML como forma de comunicar a estrutura de uma página da web seja um objetivo principal de aprendizagem, esta lição faz com que os alunos façam uma programação mínima, pois há muitas outras novas ideias e ferramentas para apreender. Na próxima lição, os alunos terão mais tempo para programar em HTML.",
-          "student_overview": "\\*\\*Pergunta do Dia: Como podemos dizer ao computador _o que_ colocar na página da web e _como_ organizá-la? \\*\\*\n\nVocê verá uma página HTML no Web Lab e usará HTML para escrever sua primeira página da unidade."
+          "student_overview": "\\*\\*Pergunta do Dia: Como podemos dizer ao computador _o que_ colocar na página web e _como_ organizá-la? \\*\\*\n\nVocê verá uma página HTML no Web Lab e usará HTML para escrever sua primeira página da unidade."
         },
         "csd2-2022/Headings": {
           "name": "Cabeçalhos",
           "student_overview": "\\*\\*Pergunta do Dia: Como podemos trabalhar juntos para resolver problemas nos nossos sites? \\*\\*\n\nNesta lição, você aprenderá sobre cabeçalhos HTML e sobre como usá-los para criar títulos de páginas e seções para páginas da web. "
         },
         "csd2-2022/Mini-Project: HTML Web Page": {
-          "name": "Miniprojeto: página da Web em HTML",
+          "name": "Miniprojeto: Página Web em HTML",
           "student_overview": "\\*\\*Pergunta do Dia: Como posso usar HTML para expressar um valor pessoal? \\*\\*\n\nNesta lição, você criará uma página pessoal simples sobre um tópico de sua escolha. "
         },
         "csd2-2022/Digital Footprint": {
           "name": "Pegada Digital",
-          "student_overview": "\\*\\*Pergunta do dia: Como você pode garantir que suas informações privadas permanecerão privadas? \\*\\*\n\nNesta lição, você pensará nas informações pessoais que optou por compartilhar digitalmente em vários sites, aplicativos e mídias sociais. "
+          "student_overview": "\\*\\*Pergunta do dia: Como você pode garantir que suas informações privadas permanecerão privadas? \\*\\*\n\nNesta lição, você pensará nas informações pessoais que optou por compartilhar digitalmente através de vários sites, aplicativos e mídias sociais. "
         },
         "csd2-2022/Styling Text with CSS": {
           "name": "Estilo de texto com CSS",
-          "student_overview": "\\*\\*Pergunta do Dia: Como podemos mudar o estilo do texto em uma página da web? \\*\\*\n\nNesta lição, você aprenderá a usar CSS para estilizar os elementos HTML em sua página da web. "
+          "student_overview": "\\*\\*Pergunta do Dia: Como podemos mudar o estilo do texto em uma página web? \\*\\*\n\nNesta lição, você aprenderá como usar CSS para estilizar os elementos HTML em sua página web. "
         },
         "csd2-2022/Mini-Project: Your Personal Style": {
           "name": "Miniprojeto: Seu Estilo Pessoal",
-          "student_overview": "\\*\\*Pergunta do Dia: Como você pode expressar seu estilo pessoal em uma página da web? \\*\\*\n\nNesta lição, você criará sua própria página web estilizada!"
+          "student_overview": "\\*\\*Pergunta do Dia: Como você pode expressar seu estilo pessoal em uma página web? \\*\\*\n\nNesta lição, você criará sua própria página web estilizada!"
         },
         "csd2-2022/Intellectual Property": {
           "name": "Propriedade intelectual",
@@ -4359,8 +4485,8 @@
           "student_overview": "**Pergunta do Dia: Como podemos usar o Laboratório de Jogos para expressar nossa criatividade?**\n\nNesta lição, você terá a oportunidade de ser criativo usando o processo de solução de problemas para projetar e programar uma cena de sua escolha. "
         },
         "csd3-2022/The Draw Loop": {
-          "name": "O laço de desenho",
-          "student_overview": "**Pergunta do Dia: Como podemos animar nossas imagens no Game Lab?**\n\nNesta lição, você aprenderá a usar o laço de desenho com números aleatórios para criar suas primeiras animações simples. "
+          "name": "O Desenho do Laço",
+          "student_overview": "**Pergunta do Dia: Como podemos animar nossas imagens no Game Lab?**\n\nNesta lição, você aprenderá a usar o draw loop com números aleatórios para criar suas primeiras animações. "
         },
         "csd3-2022/Sprite Movement": {
           "name": "Movimento de Sprite",
@@ -4385,7 +4511,7 @@
         "csd3-2022/Mouse Input": {
           "name": "Entrada de Mouse",
           "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
-          "student_overview": "**Pergunta do dia: Quais são as outras maneiras pelas quais o computador pode reagir à entrada do usuário?**\n\nNesta lição, você expandirá o que aprendeu sobre as declarações Se e explorará as declarações Senão, bem como aprenderá como usar o mouse para obter informações do usuário que podem ser usadas em suas declarações condicionais."
+          "student_overview": "**Pergunta do Dia: Quais são as outras maneiras pelas quais o computador pode reagir aos dados de input do usuário?**\n\nNesta lição, você expandirá o que aprendeu sobre as declarações if e explorará as declarações if-else, bem como aprenderá a usar o mouse para obter informações a partir do usuário que podem ser usadas em suas declarações condicionais."
         },
         "csd3-2022/Project - Interactive Card": {
           "name": "Projeto - Cartão Interativo",
@@ -4421,7 +4547,7 @@
           "student_overview": "**Pergunta do Dia: Como as novas categorias de colisões e movimentos de modelagem podem ser usados para criar um jogo?**\n\nNesta lição, você usará o que aprendeu sobre simular a gravidade e as diferentes categorias de colisões para criar um jogo de folhetos simples!"
         },
         "csd3-2022/Functions": {
-          "name": "funções",
+          "name": "Funções",
           "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-2-lessons-18-27/36193) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
           "student_overview": "**Pergunta do Dia: Como os programadores podem usar funções para criar suas próprias abstrações?**\n\nNesta lição, você aprenderá como organizar melhor seu código usando funções para tornar o programa legível e remover blocos de código repetidos. "
         },
@@ -4464,15 +4590,24 @@
         },
         "csd4-2022/User Centered Design   Try and Reflect": {
           "name": "Design Centrado no Usuário - Experimente e Reflita",
-          "student_overview": "**Pergunta do Dia: Como podemos projetar um produto para atender às necessidades do usuário?**\n\nNesta lição, você continuará trabalhando no design de uma peça de roupa inteligente, usando as necessidades e as preocupações específicas que você discutiu com sua equipe."
+          "student_overview": "**Pergunta do Dia: Como podemos projetar um produto para atender às necessidades do usuário?**\n\nNesta lição, você continuará trabalhando no design de uma peça de roupa inteligente, usando as necessidades e as preocupações específicas que você discutiu com sua equipe.",
+          "overview": "**Pergunta do Dia: Como podemos projetar um produto para atender às necessidades do usuário?**\n\nEsta é a segunda parte de uma aula planejada para ser realizada ao longo de dois encontros, nos quais os alunos são guiados por uma versão abreviada do processo de design ao qual serão apresentados ao longo desta unidade. Na primeira parte, os alunos concluíram as etapas de definição e preparação do processo de design. Hoje, eles devem completar as partes Tente e Reflita. Os alunos continuam seu trabalho iniciado na primeira parte da aula, em que desenharam uma peça de roupa inteligente, usando as necessidades e as preocupações específicas que eles discutiram para orientar sua tomada de decisão. Os alunos podem compartilhar seu processo de tomada de decisão e obter feedback sobre como seu produto atende às necessidades do usuário que eles selecionaram.",
+          "preparation": "-   Devolva o guia de atividades utilizado na aula anterior aos alunos\n-   Faça cópias da parte Tente & Reflita do guia de atividades - uma cópia por grupo\n-   Verifique o forum da [\"Sala dos Professores\"] [0] para os professores autorizados para encontrar estratégias ou recursos extras oferecidos pelos colegas professores\n-   Se você estiver dando aulas de forma remota, verifique nossas [Adaptações para Aulas Remotas](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)",
+          "purpose": "Esta microatividade é a primeira parte de três projetos de design apresentados nesta unidade. É uma introdução rápida ao processo de design centrado no usuário, com o objetivo de oferecer aos alunos uma experiência com design centrado no usuário, que eles poderão desenvolver em projetos posteriores. Nesta lição, o objetivo principal é alinhar o design de um produto às necessidades do usuário,  deixando de lado as crenças ou preferências pessoais. O ato de basear as decisões em um usuário e não em si mesmo é uma forma de pensar fundamental que aparecerá em toda a unidade.\n\nA atividade desta lição é uma adaptação da [Design Charrette da Universidade de Washington].[0]"
         },
         "csd4-2022/User Interfaces": {
           "name": "Interfaces de Usuário",
-          "student_overview": "**Pergunta do Dia: Como podemos testar um aplicativo para garantir que ele atenda às necessidades do usuário?**\n\nNesta lição, você examinará um protótipo em papel para um aplicativo de bate-papo e começará a identificar formas de aprimorá-lo."
+          "student_overview": "**Pergunta do Dia: Como podemos testar um aplicativo para garantir que ele atenda às necessidades do usuário?**\n\nNesta lição, você examinará um protótipo em papel para um aplicativo de bate-papo e começará a identificar formas de aprimorá-lo.",
+          "overview": "**Pergunta do Dia:** Como podemos testar um aplicativo para garantir que ele atenda às necessidades do usuário?\n\nApós o projeto de mini design, os alunos olham para a próxima fase do design - prototipagem de um produto para atender às necessidades do usuário. Em equipes, os alunos examinam um protótipo em papel para um aplicativo de bate-papo chamado “Txt Ur Grndkdz”. Ao usar esse protótipo de papel, os alunos têm a chance de ver como um simples protótipo de papel pode ser usado para testar rapidamente ideias e suposições antes mesmo de chegarmos ao computador. Depois de “usar” o protótipo fornecido, os alunos começam a identificar maneiras de melhorar a próxima iteração.",
+          "preparation": "-   Imprima uma cópia do guia de atividades de Telas de Interface do Usuário para cada dupla de alunos\n-   Imprima uma cópia do guia de atividades de Experiência do Usuário (computador) para cada dupla de alunos\n-   Imprima uma cópia do guia de atividades de Experiência do Usuário (usuário) para cada dupla de alunos\n-   Recorte as telas da interface do usuário ou forneça tesouras para que os alunos façam isso\n-   Verifique o forum da [\"Sala dos Professores\"] [0] para os professores autorizados para encontrar estratégias ou recursos extras oferecidos pelos colegas professores\n-   Se você estiver dando aulas de forma remota, verifique nossas [Adaptações para Aulas Remotas](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)",
+          "purpose": "Esta lição apresenta aos alunos o conceito de um protótipo em papel como uma ferramenta rápida e não sincronizada para iniciar o desenvolvimento de um aplicativo. Os protótipos em papel retornarão nas próximas aulas e também no projeto do capítulo dois. Esse protótipo também servirá como contexto em torno do qual os alunos começarão a analisar e a organizar o feedback de uma ampla variedade de usuários. Embora esta lição peça aos alunos que trabalhem com um protótipo existente, em breve eles desenvolverão protótipos a partir de seus próprios designs."
         },
         "csd4-2022/Feedback and Testing": {
           "name": "Teste e Feedback",
-          "student_overview": "**Pergunta do Dia: Como podemos usar o feedback para melhorar um aplicativo?**\n\nNesta lição, você começará a revisar o protótipo em papel usando o feedback e as solicitações dos usuários."
+          "student_overview": "**Pergunta do Dia: Como podemos usar o feedback para melhorar um aplicativo?**\n\nNesta lição, você começará a revisar o protótipo em papel usando o feedback e as solicitações dos usuários.",
+          "overview": "**Pergunta do Dia: Como podemos usar o feedback para melhorar um aplicativo?**\n\nNesta lição, os alunos usam o feedback dos “usuários” do aplicativo prototipado em papel da lição anterior para desenvolver melhorias na interface do usuário desse protótipo em papel. A lição começa com uma reflexão sobre o fato de que os designers precisam traduzir as necessidades humanas com a tecnologia em mudanças na interface ou na experiência do usuário. Em seguida, os alunos recebem uma coleção de comentários e solicitações dos usuários do aplicativo da lição anterior. Em grupos, os alunos categorizam o feedback e identificam maneiras pelas quais as necessidades expressas no feedback podem ser atendidas por meio de mudanças na interface do aplicativo. Em seguida, em grupos, os alunos implementarão algumas dessas mudanças para atender a uma das necessidades identificadas.",
+          "preparation": "-   Imprima uma cópia do recurso Telas da Interface do Usuário para cada grupo ou exiba as telas aos aluno na sala de aula\n-   Imprima uma cópia do recurso de feedback do protótipo para cada grupo. Se possível, corte-o em tiras com antecedência\n-   Imprima uma cópia do material Melhorando uma Tela para cada grupo. Se possível, imprima em um único lado para que os alunos possam dividir o guia de atividades.\n-   Lápis coloridos ou marcadores para os protótipos de papel\n-   Verifique o forum da [\"Sala dos Professores\"] [0] para os professores autorizados para encontrar estratégias ou recursos extras oferecidos pelos colegas professores\n-   Se você estiver dando aulas de forma remota, verifique nossas [Adaptações para Aulas Remotas](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)",
+          "purpose": "Esta lição apresenta várias habilidades que os alunos precisarão usar posteriormente na unidade. Eles aprenderão a categorizar o feedback para organizar e priorizar sua resposta. Eles aprendem a interpretar as necessidades humanas com um elemento de tecnologia em termos de mudanças na interface do usuário. Eles têm a primeira oportunidade de criar seu próprio protótipo em papel ao projetarem uma nova tela de um aplicativo. À medida que os alunos começam a criar seus próprios aplicativos do zero, essas serão habilidades importantes que os alunos colocarão em prática repetidamente."
         },
         "csd4-2022/Identifying User Needs": {
           "name": "Identificando Necessidades do Usuário",
@@ -4483,15 +4618,15 @@
           "student_overview": "**Pergunta do Dia: Como posso desenvolver um protótipo de aplicativo para um usuário?**\n\nNesta lição, você usará a entrevista com um colega de classe da lição anterior para criar ideias de aplicativos que atendam às necessidades de seus usuários."
         },
         "csd4-2022/Designing Apps for Good": {
-          "name": "Criando Apps for Good",
-          "student_overview": "**Pergunta do Dia: O que é um App for Good que queremos criar?**\n\nNesta lição, você iniciará o processo de criação de um aplicativo que durará até o final desta unidade e começará com um plano de como sua equipe funcionará em conjunto durante a criação desse aplicativo, um tópico para seu aplicativo e usuários em potencial."
+          "name": "Criando Aplicativos do Bem",
+          "student_overview": "**Pergunta do Dia: Que Aplicativo do Bem queremos criar?**\n\nNesta lição, você iniciará o processo de criação de um aplicativo que durará até o final desta unidade e começará com um plano de como sua equipe funcionará em conjunto durante a criação desse aplicativo, um tópico para seu aplicativo e usuários em potencial."
         },
         "csd4-2022/Market Research": {
           "name": "Pesquisa de mercado",
           "student_overview": "**Pergunta do Dia: Como podemos usar os aplicativos existentes como inspiração para nossos próprios aplicativos?**\n\nNesta lição, você mergulhará no desenvolvimento de aplicativos explorando os aplicativos existentes que podem atender usuários semelhantes aos do aplicativo em que você está trabalhando."
         },
         "csd4-2022/Exploring UI Elements": {
-          "name": "Explorando Elementos de Interface UI",
+          "name": "Explorando Elementos da Interface do Usuário",
           "student_overview": "**Pergunta do Dia: Quais elementos da interface do usuário serão úteis para nosso aplicativo?**\n\nNesta lição, você explorará alguns exemplos de aplicativos criados no App Lab e usará esses exemplos para ajudar a criar seu primeiro protótipo em papel do seu aplicativo."
         },
         "csd4-2022/Build a Paper Prototype": {
@@ -4504,7 +4639,7 @@
         },
         "csd4-2022/Design Mode in App Lab": {
           "name": "Modo de Design no App Lab",
-          "student_overview": "\\*\\*Pergunta do Dia: Como podemos usar o App Lab e o Design Mode para criar aplicativos? \\*\\*\n\nNesta lição, você trabalhará com sua equipe para começar a criar a próxima iteração do seu aplicativo no App Lab."
+          "student_overview": "**Pergunta do Dia: Como podemos usar o App Lab e o Design Mode para criar aplicativos?**\n\nNesta lição, você trabalhará com sua equipe para começar a criar a próxima iteração do seu aplicativo no App Lab."
         },
         "csd4-2022/Build a Digital Prototype": {
           "name": "Crie um Protótipo Digital",
@@ -4543,12 +4678,18 @@
           "name": "Pesquisa Pós-curso do Descobertas da CC"
         },
         "csd5-2022/Representation Matters": {
-          "name": "Representação Importa",
-          "student_overview": "**Pergunta do Dia: Como os dados afetam as decisões que tomamos diariamente?**\n\nNesta lição, você explorará o que são os dados e como eles são usados para solucionar problemas."
+          "name": "Questões Relativas à Representação",
+          "student_overview": "**Pergunta do Dia: Como os dados afetam as decisões que tomamos diariamente?**\n\nNesta lição, você explorará o que são os dados e como eles são usados para solucionar problemas.",
+          "overview": "**Pergunta do Dia: Como os dados afetam as decisões que tomamos cotidianamente?**\n\nNa primeira aula da unidade de dados, os alunos têm uma visão geral do que são dados e como esses dados são usados para resolver problemas. Os alunos começam com uma breve discussão para chegar a um entendimento comum do que são dados. Em seguida, eles se dividem em grupos e usam um conjunto de dados para fazer uma série de sugestões de refeições para pessoas a partir de vários critérios. Cada grupo tem as opções de refeições representadas de uma forma diferente (fotos, receitas, cardápio, aspectos nutricionais), o que dá uma vantagem para uma das recomendações. Depois, os grupos comparam suas respostas e discutem como as diferentes representações dos dados das refeições afetaram a forma como os alunos conseguiram resolver os diferentes problemas.",
+          "purpose": "Esta lição introduz várias noções importantes que os alunos explorarão neste capítulo. Eles verão que os mesmos objetos podem ser representados de várias maneiras diferentes. No Capítulo 1, eles aprenderão os diferentes sistemas de representação que os computadores usam para representar informações. Eles também verão nesta lição que a representação é importante quando usamos dados para tomar decisões. No Capítulo 2 desta unidade, os alunos explorarão mais profundamente como os dados podem ser usados por humanos e computadores para tomar decisões.",
+          "preparation": "-   Imprima cópias do recurso Informações sobre Refeições de forma que cada grupo receba uma das quatro páginas\n-   Imprima uma cópia do guia de atividades para cada grupo\n-   Verifique o forum da [\"Sala dos Professores\"] [0] para os professores autorizados para encontrar estratégias ou recursos extras oferecidos pelos colegas professores\n-   Se você estiver dando aulas de forma remota, verifique nossas [Adaptações para Aulas Remotas](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
         },
         "csd5-2022/Patterns and Representation": {
           "name": "Padrões e Representações",
-          "student_overview": "**Pergunta do Dia: Como podemos criar um sistema para representar informações?**\n\nNesta lição, você irá criar um sistema para representar informações trabalhando em grupo. O objetivo é criar um sistema que possa representar qualquer letra do alfabeto usando apenas um único conjunto de cartas."
+          "student_overview": "**Pergunta do Dia: Como podemos criar um sistema para representar informações?**\n\nNesta lição, você irá criar um sistema para representar informações trabalhando em grupo. O objetivo é criar um sistema que possa representar qualquer letra do alfabeto usando apenas um único conjunto de cartas.",
+          "overview": "**Pergunta do Dia: Como podemos criar um sistema para representar informações?**\n\nNesta lição, os alunos criam seu próprio sistema para representar informações. Eles começam discutindo todos os diferentes sistemas que já usam para representar respostas de sim e não. Em seguida, eles trabalham em pequenos grupos para criar um sistema que possa representar qualquer letra do alfabeto usando apenas uma única pilha de cartas. Os cartões usados têm um dos 6 desenhos possíveis (6 animais, 6 cores, etc.) e, portanto, para representar todo o alfabeto, os alunos precisarão usar padrões de vários cartões para representar cada letra. Os alunos criam mensagens com seus sistemas e trocam mensagens com outros grupos para garantir que o sistema funcione conforme o esperado. Na discussão final, a turma analisa todos os prós e contras dos diferentes sistemas. Eles discutem as semelhanças entre os sistemas que funcionaram e reconhecem que há muitas soluções possíveis para eventuais problemas. O importante é que todos usem o mesmo sistema arbitrário para se comunicar.",
+          "preparation": "-   Imprima uma cópia do guia de atividades para cada dupla ou trio\n-   Imprima e recorte uma cópia do recurso manipulativo para cada grupo de 2 a 3\n-   Verifique o forum da [\"Sala dos Professores\"] [0] para os professores autorizados para encontrar estratégias ou recursos extras oferecidos pelos colegas professores\n-   Se você estiver dando aulas de forma remota, verifique nossas [Adaptações para Aulas Remotas](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)",
+          "purpose": "Nesta lição, os alunos podem explorar por si mesmos as qualidades de um bom sistema para representar informações. Eles devem descobrir, ao criar e testar seus sistemas, que\n\n1.  normalmente existem muitos sistemas possíveis para representar informações\n2.  as pessoas devem concordar com um conjunto comum de regras para que um sistema funcione.\n\nOs recursos dos sistemas que os alunos criam nesta lição servem como ponto de referência para as próximas aulas, quando os alunos explorarão os sistemas de representação realmente usados em computadores.\n\nNa próxima lição, os alunos conhecerão o conceito de binário e como os computadores usam sinais liga-desliga ou “0 e 1” para representar informações. Embora esse conceito seja sugerido na atividade introdutória de sim e não, ele não deve ser introduzido até a próxima lição."
         },
         "csd5-2022/ASCII and Binary Representation": {
           "name": "ASCII e Representações Binárias",
@@ -4556,6 +4697,7 @@
         },
         "csd5-2022/Representing Images": {
           "name": "Representando Imagens",
+          "overview": "**Pergunta do dia: Qual sistema os computadores usam para representar imagens?**\n\nNesta lição, os alunos aprendem como os computadores representam imagens. Para começar a lição, eles consideram o desafio de transformar toda a complexidade da visão em um padrão binário. Por meio de uma série de imagens que mostram como essa transformação é feita, os alunos são apresentados ao conceito de dividir imagens em quadrados ou “pixels”, que podem ser ativados ou desativados individualmente para criar a imagem inteira. Em seguida, os alunos fazem um pequeno conjunto de desafios usando o Pixelation Widget para desenhar imagens em preto e branco. Os quebra-cabeças foram criados para destacar alguns dos desafios de representar imagens dessa forma. No final, os alunos fazem conexões entre o sistema de representação de imagens e o sistema de representação de texto que aprenderam na lição anterior.",
           "student_overview": "**Pergunta do Dia: Que sistema os computadores usam para representar imagens?**\n\nNesta lição, você continuará explorando como é possível criar sistemas para representar informações usando o sistema binário, desta vez focando em imagens!"
         },
         "csd5-2022/Representing Numbers": {
@@ -4564,47 +4706,59 @@
           "student_overview": "**Pergunta do Dia: Que sistema os computadores usam para representar números?**\n\nNesta lição, você aprenderá sobre o sistema de números binário utilizado pelos computadores!"
         },
         "csd5-2022/Combining Representations": {
-          "name": "Combinando Representações"
+          "name": "Combinando Representações",
+          "student_overview": "**Pergunta do Dia: Como os computadores diferenciam códigos binários de letras, números ou imagens?**\n\nNesta lição, você combinará ASCII, binário e imagens para explorar maneiras de codificar tipos mais complexos de informações."
         },
         "csd5-2022/Keeping Data Secret": {
           "name": "Mantendo o segredo dos dados",
-          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-1-lessons-1-8/36196) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-1-lessons-1-8/36196) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)",
+          "student_overview": "**Pergunta do Dia: Como podemos manter os dados em segredo e protegê-los contra o uso indevido?**\n\nNesta lição, você explorará diferentes níveis de segurança, analisará a importância da privacidade e aprenderá a criptografar informações!"
         },
         "csd5-2022/Create a Representation": {
           "name": "Projeto - Criando uma Representação",
-          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/project-hub-create-a-representation-data-and-society-lesson-8/36214) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/project-hub-create-a-representation-data-and-society-lesson-8/36214) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)",
+          "student_overview": "**Pergunta do Dia: Como posso representar informações complexas usando sistemas binários?**\n\nNesta lição, você explorará como usar os formatos ASCII, binário e de imagem para representar seu dia perfeito!"
         },
         "csd5-2022/Problem Solving and Data": {
           "name": "Resolução de Problemas com Dados",
-          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-2-lessons-9-16/36197) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-2-lessons-9-16/36197) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)",
+          "student_overview": "**Pergunta do Dia: Como podemos usar os dados para resolver problemas em nossa comunidade?**\n\nNesta lição, você decidirá em que uma cidade mais precisa investir para perceber como usar os dados para resolver problemas."
         },
         "csd5-2022/Structuring Data": {
           "name": "Estruturação de dados",
-          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-2-lessons-9-16/36197) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-2-lessons-9-16/36197) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)",
+          "student_overview": "**Pergunta do Dia: como podemos facilitar o processamento de dados pelos computadores?**\n\nNesta lição, você aprenderá como apresentar dados de maneiras diferentes que podem ajudar as pessoas a entenderem melhor os dados, bem como quais partes do processo podem ser feitas por um computador e quais partes exigem um ser humano."
         },
         "csd5-2022/Interpreting Data": {
           "name": "Interpretando Dados",
-          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-2-lessons-9-16/36197) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-2-lessons-9-16/36197) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)",
+          "student_overview": "**Pergunta do Dia: Como os padrões nos dados podem nos ajudar a tomar decisões?**\n\nNesta lição, você aprenderá sobre tabulação cruzada, que permitirá representar graficamente as relações entre vários dados."
         },
         "csd5-2022/Making Decisions with Data": {
-          "name": "Tomando Decisões com Dados"
+          "name": "Tomando Decisões com Dados",
+          "student_overview": "\\*\\*Pergunta do Dia: como os padrões nos dados podem ajudar a tomar uma decisão? \\*\\*\n\nNesta lição, você terá a chance de praticar o processo de solução de problemas de dados que aprendeu na lição anterior. "
         },
         "csd5-2022/Automating Data Decisions": {
           "name": "Automatizando decisões de dados",
-          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-2-lessons-9-16/36197) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-2-lessons-9-16/36197) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)",
+          "student_overview": "**Pergunta do Dia: Como os computadores podem nos ajudar a tomar decisões sobre dados?**\n\nNesta lição, você examinará como um computador pode ser usado para concluir a etapa de tomada de decisão do processo de solução de problemas de dados."
         },
         "csd5-2022/Problem Solving with Big Data": {
-          "name": "Solução de Problemas com Big Data"
+          "name": "Solução de Problemas com Big Data",
+          "student_overview": "**Pergunta do Dia: Como nossos dados são coletados e por que saber disso é útil?**\n\nNesta lição, você verá como os dados são coletados e usados pelas organizações para resolver problemas reais no mundo real."
         },
         "csd5-2022/Project - Make a Recommendation": {
           "name": "Projeto - Faça uma Recomendação",
-          "assessment_opportunities": "Use a rubrica do projeto anexada a esta lição para avaliar o domínio dos alunos sobre as metas de aprendizagem desta unidade. Você também pode optar por atribuir o teste pós-projeto por meio do Code Studio."
+          "assessment_opportunities": "Use a rubrica do projeto anexada a esta lição para avaliar o domínio dos alunos sobre as metas de aprendizagem desta unidade. Você também pode optar por atribuir o teste pós-projeto por meio do Code Studio.",
+          "student_overview": "**Pergunta do Dia: Como posso usar os dados para fazer minhas próprias recomendações?**\n\nNesta lição, você criará um mecanismo de recomendação com base nos dados coletados e analisados a partir das contribuições dos seus colegas."
         },
         "csd5-2022/CS Discoveries Post-Course Survey": {
           "name": "Pesquisa Pós-curso do Descobertas da CC"
         },
         "csd6-2022/Innovations in Computing": {
-          "name": "Inovações em Computação"
+          "name": "Inovações em Computação",
+          "overview": "Nesta lição, os alunos farão algumas pesquisas sobre inovações interessantes na área da computação. Esta lição colocará os alunos em contato com uma variedade maior de formatos de computação (a aparência de um computador) e campos que são afetados pela computação. Posteriormente nesta unidade, os alunos analisarão os dispositivos que encontraram nesta lição ao desenvolverem seus próprios dispositivos de computação física.\n\n**Pergunta do Dia:** O que é inovação em computação?",
+          "preparation": "-   Use o vídeo [A Internet das Coisas](https://www.youtube.com/watch?v=xQGsubJNbQw&feature=youtu.be) ou [A Ciência da Computação está Mudando Tudo](https://www.youtube.com/watch?v=QvyTEx1wyOY)\t\n-   Imprima uma cópia do guia de atividades para cada aluno\n-   Decida como você gostaria de distribuir as Áreas de Pesquisa em Inovação na Computação e se gostaria de fazer alguma edição no documento para adicionar ou remover sites.\n-   Visite o[2] fórum da [\"Sala dos Professores\"] para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores"
         },
         "csd6-2022/The Circuit Playground": {
           "name": "O parque de diversões do circuito"
@@ -5272,7 +5426,7 @@
         },
         "coursef-2022/AI For Oceans": {
           "name": "IA para oceanos",
-          "overview": "Nesta aula **exploratória**, os alunos treinarão um modelo de aprendizado de máquina classificando peixes e outros objetos.",
+          "overview": "Nesta lição **exploratória**, os alunos treinarão um modelo de machine learning classificando peixes e outros objetos.",
           "purpose": "Esta lição foi projetada para apresentar rapidamente aos alunos o aprendizado de máquina, um tipo de inteligência artificial. Os alunos explorarão como os dados de treinamento são usados para permitir que um modelo de aprendizado de máquina classifique novos dados. Os alunos devem ter uma experiência positiva durante o tutorial e, mais importante, devem estar motivados a continuar aprendendo ciência da computação. ",
           "student_overview": "Classifique objetos como “peixes” ou “não peixes” para tentar remover o lixo do oceano. Em seguida, expanda seu conjunto de dados de treinamento para incluir outras criaturas marinhas que pertencem à água. Na segunda parte da atividade, escolha seus próprios rótulos para aplicar às imagens de peixes gerados aleatoriamente. Esses dados de treinamento são usados para um modelo de aprendizado de máquina que deve, então, ser capaz de rotular novas imagens sozinho."
         },
@@ -5561,7 +5715,8 @@
         },
         "ai-ethics-2023/lesson-1": {
           "name": "Nosso Código de Ética em I.A.",
-          "student_overview": "Pesquise de forma colaborativa sobre a ética da IA e crie um código de conduta compartilhável."
+          "overview": "Esta lição se baseia em atividades anteriores envolvendo pesquisas e busca de fontes para justificar uma discussão. Em pequenos grupos, os alunos conduzem pesquisas usando artigos e vídeos que expõem armadilhas éticas em uma área de Inteligência Artificial (IA) de sua escolha. Logo após, haverá opções de como os alunos sintetizam o que aprenderam para fazer recomendações sobre como a IA pode ser usada na sociedade: criar um Código de Ética de IA, criar um Manifesto de IA ou criar uma representação artística “Imagine seu mundo”.",
+          "student_overview": "Pesquise de forma colaborativa sobre ética na IA e crie um código de conduta compartilhável."
         },
         "csc-adaptations-2023/Modeling Animal Adaptations (pilot)": {
           "name": "Introdução às adaptações animais",
@@ -5605,21 +5760,21 @@
           "student_overview": "Nesta lição final, você compartilhará a capa do livro com seus colegas de classe. Você terá a chance de mostrar seu trabalho e testar os projetos de seus colegas. No final da aula, você discutirá quais escolhas seus colegas fizeram nas capas dos livros."
         },
         "csc-ecosystems-2023/Overfishing Simulation (pilot)": {
-          "name": "Simulação de sobrepesca",
-          "overview": "Nesta aula de **desenvolvimento de habilidades**, os alunos programarão um modelo de ecossistema aquático e, em seguida, simularão uma situação de sobrepesca. Os alunos aprenderão como programar declarações condicionais para verificar a quantidade de algas na água. Se houver muitas algas, o coral fica doente. Se houver pouca alga, os peixes não têm fonte de alimento e saem da área. Se houver a quantidade certa de algas, o coral doente se curará e os peixes permanecerão na área. ",
-          "preparation": "-   Percorra os níveis e revise os slides da <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">aula</a> \n-   Decida o ritmo entre o tempo de trabalho do aluno e as instruções para todo o grupo.\n-   Considere atribuir aos alunos a preparação recomendada \n    ([link](https://studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4911962))\n-   Considere essas opções de extensões relacionadas ([link](https://studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4911963)) para explorar após a última aula.\n\n##### Opcional:\n\n-   [Optional] Revise esta <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">apresentação de slides de dicas úteis.</a> \n-   [Optional] Leia este guia de depuração do <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">professor para se preparar</a>  para ajudar os alunos a encontrar e corrigir erros no código. ",
-          "purpose": "Os alunos aprenderão que os ecossistemas marinhos têm muitos organismos que interagem e se mantêm em equilíbrio. Esta lição combina ciência da computação com ciências biológicas à medida que os alunos criam um modelo que simula os efeitos da sobrepesca usando declarações condicionais em ciência da computação para mostrar causa e efeito na vida real. "
+          "name": "Simulação de Pesca Predatória",
+          "overview": "Nesta lição para **desenvolvimento de habilidades**, os alunos programarão um modelo de ecossistema aquático e, em seguida, simularão uma situação de pesca predatória. Os alunos aprenderão como programar declarações condicionais para verificar a quantidade de algas na água. Se houver muitas algas, o coral fica doente. Se houver poucas algas, os peixes não têm fonte de alimento e saem da área. Se houver a quantidade certa de algas, o coral doente se curará e os peixes permanecerão na área. ",
+          "preparation": "-   Jogue os níveis e revise os <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">slides da lição</a> \n-   Decida o ritmo entre o tempo de trabalho dos alunos e as instruções em grupo.\n-   Considere atribuir aos alunos a preparação recomendada \n    ([link](https://studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4911962))\n-   Considere essas opções de extensões relacionadas ([link](https://studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4911963)) para explorar após a última lição.\n\n##### Opcional:\n\n-   [Optional] Revise este <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\"> slideshow</a> de Dicas Úteis.\n-   [Optional] Leia este guia do <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">professor sobre depuração para se preparar</a>  a ajudar os alunos a encontrar e corrigir erros em seus códigos. ",
+          "purpose": "Os alunos aprenderão que os ecossistemas marinhos possuem muitos organismos que interagem e se mantêm em equilíbrio. Esta lição combina ciência da computação com ciências da vida à medida que os alunos criam um modelo que simula os efeitos da pesca predatória usando declarações condicionais na ciência da computação para mostrar causa e efeito na vida real. "
         },
         "csc-ecosystems-2023/Balancing the Ecosystem (pilot)": {
-          "name": "Equilibrando o ecossistema",
-          "overview": "Nesta lição**desenvolvimento de habilidades**, os alunos lerão e programarão três soluções diferentes para o problema da sobrepesca.\n\nEsta lição começa de onde a lição anterior parou, com o modelo de um ecossistema aquático desequilibrado. Primeiro, os alunos modificarão o comportamento do barco para que ele só possa se mover dentro de uma “zona de pesca” especificada. Em segundo lugar, os alunos programarão um novo evento para especificar uma “temporada de pesca” e uma “temporada sem pesca”. Terceiro, os alunos aprenderão como usar uma variável para acompanhar o número de peixes que o barco removeu. A lição termina com um nível de verificação de compreensão para garantir que os alunos aprendam as três soluções para a sobrepesca.",
-          "preparation": "-   Leia o artigo fornecido sobre <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\" target=\"_blank\">Entendendo a sobrepesca</a>. Andaime conforme necessário para atender às necessidades de seus alunos. \n-   Percorra os níveis e revise os slides da <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">aula</a> \n-   Decida o ritmo entre o tempo de trabalho do aluno e as instruções para todo o grupo.\n-   Considere atribuir aos alunos a preparação recomendada [(link)](https://studio.code.org/s/csc-ecosystems-2023/lessons/2#activity-4986903).\n-   Considere essas opções de extensões relacionadas [(link)](https://studio.code.org/s/csc-ecosystems-2023/lessons/2#activity-4986904).\n\n##### Opcional:\n\n-   [Optional] Revise esta <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">apresentação de slides de dicas úteis.</a> \n-   [Optional] Leia este guia de depuração do <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">professor para se preparar</a>  para ajudar os alunos a encontrar e corrigir erros no código. ",
-          "purpose": "Os alunos continuarão aprendendo sobre ecossistemas equilibrados e desequilibrados. Usando um artigo científico sobre pesca predatória como base, os alunos desenvolverão uma rica compreensão das conexões entre organismos em um ecossistema. Em última análise, os alunos terão a oportunidade de aplicar o que aprenderam modelando um ecossistema local. "
+          "name": "Equilibrando o Ecossistema",
+          "overview": "Nesta lição sobre **desenvolvimento de habilidades**, os alunos lerão e programarão três soluções diferentes para o problema da pesca predatória.\n\nEsta lição começa de onde a lição anterior parou, com o modelo de um ecossistema aquático desequilibrado. Primeiro, os alunos modificarão o comportamento do barco para que ele só possa se mover dentro de uma “zona de pesca” especificada. Em segundo lugar, os alunos programarão um novo evento para especificar uma “temporada de pesca” e uma “temporada sem pesca”. Terceiro, os alunos aprenderão a como usar uma variável para acompanhar o número de peixes que o barco removeu. A lição termina com um nível de verificação de entendimento para garantir que os alunos aprendam as três soluções para a pesca predatória.",
+          "preparation": "-   Leia o artigo fornecido <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\" target=\"_blank\">Entenda A Pesca Predatória</a>. Siga a progressão gradual conforme as necessidades dos seus alunos.   \n-   Jogue todos os níveis e revise os slides da <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">lição</a>  \n-   Decida o ritmo entre o tempo de trabalho dos alunos e as instruções para a turma  \n-   Considere a possibilidade de designar aos alunos a preparação recomendada [(link)](https://studio.code.org/s/csc-ecosystems-2023/lessons/2#activity-4986903).  \n-   Considere essas opções de extensões relacionadas [(link)](https://studio.code.org/s/csc-ecosystems-2023/lessons/2#activity-4986904).    \n\n##### Opcional:\n\n-   [Optional] Revise este <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">slideshow</a>Dicas Úteis.   \n-   [Optional] Leia este <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">guia de depuração do professor</a> para estar preparado a ajudar os alunos a identifica e corrigir erros nos códigos. ",
+          "purpose": "Os alunos continuarão aprendendo sobre ecossistemas equilibrados e desequilibrados. Usando um artigo científico sobre pesca predatória como base, os alunos desenvolverão uma rica compreensão das conexões entre os organismos em um ecossistema. Em última análise, os alunos terão a oportunidade de aplicar o que aprenderam modelando um ecossistema local. "
         },
         "csc-ecosystems-2023/lesson-3": {
-          "name": "Codificando meu ecossistema",
-          "overview": "Nesta aula de **desenvolvimento de habilidades**, os alunos explorarão várias simulações de ecossistemas diferentes. Os estudantes podem optar por explorar um ecossistema de floresta tropical, deserto, ártico ou zonas úmidas. Eles assumirão o papel de ecologistas e investigarão as interações entre as plantas e os animais na cadeia alimentar de cada ecossistema. Os alunos lerão as instruções para entender o desafio que cada ecossistema está enfrentando. Em seguida, eles modificarão o código correspondente para reequilibrar o ecossistema. ",
-          "preparation": "-   Percorra os níveis e revise os slides da <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">aula</a> \n-   Decida o ritmo entre o tempo de trabalho do aluno e as instruções para todo o grupo.\n-   Imprima um caderno de ecologista para cada aluno\n-   Considere estas [oportunidades de extensão](https://studio.code.org/s/csc-ecosystems-2023/lessons/3#activity-4852074) após esta lição"
+          "name": "Codificando Meu Ecossistema",
+          "overview": "Nesta lição sobre **desenvolvimento de habilidades**, os alunos explorarão várias simulações de ecossistemas diferentes. Os alunos podem optar por explorar um ecossistema de floresta tropical, deserto, ártico ou pântano. Eles assumirão o papel de ecologistas e investigarão as interações entre plantas e animais na cadeia alimentar de cada ecossistema. Os alunos lerão as instruções para entender o desafio que cada ecossistema está enfrentando. Em seguida, eles modificarão o código correspondente para reequilibrar o ecossistema. ",
+          "preparation": "-   Joue todos os níveis e revise os <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\"> slides da lição</a> \n-   Decida o ritmo entre o tempo de trabalho dos alunos e as instruções em turma.\n-   Imprima um caderno de ecologista para cada aluno\n-   Considere estas [oportunidades de extensão](https://studio.code.org/s/csc-ecosystems-2023/lessons/3#activity-4852074) após esta lição"
         },
         "csc-mappinglandmarks-2023/US Landmarks": {
           "name": "Introdução à criação de mapas",
@@ -5723,7 +5878,7 @@
         },
         "csd1-2023/Intro to Problem Solving": {
           "name": "Introdução à Resolução de Problemas",
-          "preparation": "**Para cada equipe**\n\n-   2 folhas de papel alumínio, tamanho 12,5 x 12,5 cm\n-   1 pote plástico (tipo sorvete)\n-   Várias toalhas de papel ou pedaços de pano para serem colocados debaixo do pote\n-   15 moedas pequenas\n-   Uma cópia do guia de atividades\n\n**Para o professor**\n\n-   1 pote de plástico (tipo sorvete)\n-   50 moedas pequenas\n-   Toalhas de papel ou pedaços de pano extra\n-   Verificar o fórum da [\"Sala dos Professores\"] para que os professores  autorizados encontrem estratégias ou recursos adicionais compartilhados por outros professores\n-   Caso você esteja dando aulas online, sugerimos verificar o nosso [\"Modificações da Aula Virtual\"]"
+          "preparation": "**Para cada equipe**\n\n-   2 folhas de papel alumínio, tamanho 12,5 x 12,5 cm\n-   1 pote plástico (tipo sorvete)\n-   Várias toalhas de papel ou pedaços de pano para serem colocados debaixo do pote\n-   15 moedas pequenas\n-   Uma cópia do guia de atividades\n\n**Para o professor**\n\n-   1 pote de plástico (tipo sorvete)\n-   50 moedas pequenas\n-   Toalhas de papel ou pedaços de pano extra\n-   Verificar o fórum [\"Sala dos Professores\"] para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Caso você esteja dando aulas online, sugerimos verificar o nosso [\"Modificações da Aula Virtual\"]"
         },
         "csd1-2023/The Problem Solving Process": {
           "name": "O Processo de Resolução de Problemas",
@@ -5864,7 +6019,7 @@
           "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/project-hub-captioned-scenes-interactive-animations-and-games-lesson-10/36206) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)"
         },
         "csd3-2023/The Draw Loop": {
-          "name": "O laço de desenho"
+          "name": "O Desenho do Laço"
         },
         "csd3-2023/Sprite Movement": {
           "name": "Movimento de Sprite",
@@ -5938,13 +6093,16 @@
           "preparation": "-   Certifique-se de que você tenha muitas notas adesivas, canetas e cartolinas para cartazes para os alunos trabalharem\n-   Monte grupos com, de preferência, 3 alunos cada\n-   Verifique o fórum na [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) para professores autorizados para encontrar estratégias adicionais ou recursos compartilhados por outros professores\n-   Se estiver ensinando virtualmente, considere verificar nossas [Adaptações para aulas virtuais](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)"
         },
         "csd4-2023/User Centered Design - Try and Reflect": {
-          "name": "Design Centrado no Usuário - Experimente e Reflita"
+          "name": "Design Centrado no Usuário - Experimente e Reflita",
+          "preparation": "-   Devolva o guia de atividades utilizado na aula anterior aos alunos\n-   Faça cópias da parte Tente & Reflita do guia de atividades - uma cópia por grupo\n-   Verifique o forum da [\"Sala dos Professores\"] [0] para os professores autorizados para encontrar estratégias ou recursos extras oferecidos pelos colegas professores\n-   Se você estiver dando aulas de forma remota, verifique nossas [Adaptações para Aulas Remotas](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)"
         },
         "csd4-2023/User Interfaces": {
-          "name": "Interfaces de Usuário"
+          "name": "Interfaces de Usuário",
+          "preparation": "-   Imprima uma cópia do guia de atividades de Telas de Interface do Usuário para cada dupla de alunos\n-   Imprima uma cópia do guia de atividades de Experiência do Usuário (computador) para cada dupla de alunos\n-   Imprima uma cópia do guia de atividades de Experiência do Usuário (usuário) para cada dupla de alunos\n-   Recorte as telas da interface do usuário ou forneça tesouras para que os alunos façam isso\n-   Verifique o forum da [\"Sala dos Professores\"] [0] para os professores autorizados para encontrar estratégias ou recursos extras oferecidos pelos colegas professores\n-   Se você estiver dando aulas de forma remota, verifique nossas [Adaptações para Aulas Remotas](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)"
         },
         "csd4-2023/Feedback and Testing": {
-          "name": "Teste e Feedback"
+          "name": "Teste e Feedback",
+          "preparation": "-   Imprima uma cópia do recurso Telas da Interface do Usuário para cada grupo ou exiba as telas aos aluno na sala de aula\n-   Imprima uma cópia do recurso de feedback do protótipo para cada grupo. Se possível, corte-o em tiras com antecedência\n-   Imprima uma cópia do material Melhorando uma Tela para cada grupo. Se possível, imprima em um único lado para que os alunos possam dividir o guia de atividades.\n-   Lápis coloridos ou marcadores para os protótipos de papel\n-   Verifique o forum da [\"Sala dos Professores\"] [0] para os professores autorizados para encontrar estratégias ou recursos extras oferecidos pelos colegas professores\n-   Se você estiver dando aulas de forma remota, verifique nossas [Adaptações para Aulas Remotas](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)"
         },
         "csd4-2023/Identifying User Needs": {
           "name": "Identificando Necessidades do Usuário"
@@ -5953,13 +6111,13 @@
           "name": "Projeto - Protótipo de Papel"
         },
         "csd4-2023/Designing Apps for Good": {
-          "name": "Criando Apps for Good"
+          "name": "Criando Aplicativos do Bem"
         },
         "csd4-2023/Market Research": {
           "name": "Pesquisa de mercado"
         },
         "csd4-2023/Exploring UI Elements": {
-          "name": "Explorando Elementos de Interface UI"
+          "name": "Explorando Elementos da Interface do Usuário"
         },
         "csd4-2023/Build a Paper Prototype": {
           "name": "Crie um Protótipo de Papel"
@@ -5995,16 +6153,19 @@
           "preparation": "-   Determine quanto tempo cada grupo tem para apresentar. Normalmente, esse tempo é de 8 a 10 minutos por equipe, mas lembre-se de reservar algum tempo para acompanhar as equipes\n-   Crie uma cópia do conjunto de slides do modelo de apresentação para cada equipe\n-   Imprima uma cópia da rubrica para cada equipe.\n-   Verifique o fórum na [\"Sala dos Professores\"](https://forum.code.org/t/project-hub-app-presentation-the-design-process-lesson-21/36213) para professores verificados para estratégias adicionais ou recursos compartilhados por outros professores\n-   Se estiver ensinando virtualmente, considere verificar nossas [Adaptações para Aulas Virtuais](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)"
         },
         "csd5-2023/Representation Matters": {
-          "name": "Representação Importa"
+          "name": "Questões Relativas à Representação",
+          "preparation": "-   Imprima cópias do recurso Informações sobre Refeições de forma que cada grupo receba uma das quatro páginas\n-   Imprima uma cópia do guia de atividades para cada grupo\n-   Verifique o forum da [\"Sala dos Professores\"] [0] para os professores autorizados para encontrar estratégias ou recursos extras oferecidos pelos colegas professores\n-   Se você estiver dando aulas de forma remota, verifique nossas [Adaptações para Aulas Remotas](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
         },
         "csd5-2023/Patterns and Representation": {
-          "name": "Padrões e Representações"
+          "name": "Padrões e Representações",
+          "preparation": "-   Imprima uma cópia do guia de atividades para cada dupla ou trio\n-   Imprima e recorte uma cópia do recurso manipulativo para cada grupo de 2 a 3\n-   Verifique o forum da [\"Sala dos Professores\"] [0] para os professores autorizados para encontrar estratégias ou recursos extras oferecidos pelos colegas professores\n-   Se você estiver dando aulas de forma remota, verifique nossas [Adaptações para Aulas Remotas](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
         },
         "csd5-2023/ASCII and Binary Representation": {
           "name": "ASCII e Representações Binárias"
         },
         "csd5-2023/Representing Images": {
-          "name": "Representando Imagens"
+          "name": "Representando Imagens",
+          "overview": "Nesta lição, os alunos aprendem como os computadores representam imagens. Para começar a lição, eles consideram o desafio de transformar toda a complexidade da visão em um padrão binário. Por meio de uma série de imagens que mostram como essa transformação é feita, os alunos são apresentados ao conceito de dividir imagens em quadrados ou “pixels”, que podem ser ativados ou desativados individualmente para criar a imagem inteira. Em seguida, os alunos fazem um pequeno conjunto de desafios usando o Pixelation Widget para desenhar imagens em preto e branco. Os quebra-cabeças foram criados para destacar alguns dos desafios de representar imagens dessa forma. No resumo, os alunos fazem conexões entre o sistema para representar imagens e o sistema para representar o texto que aprenderam na lição anterior.\n\n\\*\\*Pergunta do dia: \\*\\* Qual sistema os computadores usam para representar imagens?"
         },
         "csd5-2023/Representing Numbers": {
           "name": "Representando Números",
@@ -6679,7 +6840,7 @@
         },
         "coursef-2023/AI For Oceans": {
           "name": "IA para oceanos",
-          "overview": "Nesta aula **exploratória**, os alunos treinarão um modelo de aprendizado de máquina classificando peixes e outros objetos.",
+          "overview": "Nesta lição **exploratória**, os alunos treinarão um modelo de machine learning classificando peixes e outros objetos.",
           "purpose": "Esta lição foi projetada para apresentar rapidamente aos alunos o aprendizado de máquina, um tipo de inteligência artificial. Os alunos explorarão como os dados de treinamento são usados para permitir que um modelo de aprendizado de máquina classifique novos dados. Os alunos devem ter uma experiência positiva durante o tutorial e, mais importante, devem estar motivados a continuar aprendendo ciência da computação. ",
           "student_overview": "Classifique objetos como “peixes” ou “não peixes” para tentar remover o lixo do oceano. Em seguida, expanda seu conjunto de dados de treinamento para incluir outras criaturas marinhas que pertencem à água. Na segunda parte da atividade, escolha seus próprios rótulos para aplicar às imagens de peixes gerados aleatoriamente. Esses dados de treinamento são usados para um modelo de aprendizado de máquina que deve, então, ser capaz de rotular novas imagens sozinho."
         },
@@ -6968,51 +7129,50 @@
         },
         "how-ai-works-2023/Introduction to Machine Learning": {
           "name": "Introdução ao Machine Learning",
-          "overview": "Esta lição gira em torno de [Como a IA funciona: o que é aprendizado de máquina?](https://youtu.be/KHbwOetbmbs?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) vídeo da [série de vídeos Como a IA funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Assista a este vídeo antes de explorar o plano de aula.\n\nNesta lição, os alunos são apresentados a uma forma de inteligência artificial chamada aprendizado de máquina e como eles podem usar o Processo de Solução de Problemas para ajudar a treinar um robô para resolver problemas. Eles participam de três atividades de aprendizado de máquina em que um robô - AI Bot - está aprendendo a detectar padrões em peixes.\n\nEsta lição pode ser ministrada sozinha ou como parte de uma sequência de 7 aulas sobre Como a IA funciona - [clique aqui para ver todas as lições desta sequência](https://code.org/ai/how-ai-works).",
-          "student_overview": "Aprenda os conceitos básicos de machine learning ajudando o AI Bot a reconhecer peixes para limpar o oceano"
+          "overview": "Esta lição é centrada no vídeo [Como a IA Funciona: O que é Machine Learning?](https://youtu.be/KHbwOetbmbs?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) da [Série de vídeos Como a IA Funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Assista a este vídeo antes de explorar o plano de aula.\n\nNesta lição, os alunos são apresentados a uma forma de inteligência artificial chamada machine learning e a como eles podem usar o Processo de Resolução de Problemas para ajudar a treinar um robô para resolver problemas. Eles participam de três atividades de machine learning em que um robô - Robô I.A. - está aprendendo a detectar padrões em peixes.\n\nEsta lição pode ser lecionada sozinha ou como parte de uma sequência de 7 lições sobre Como a IA Funciona - [clique aqui para ver todas as lições nesta sequência](https://code.org/ai/how-ai-works).",
+          "student_overview": "Aprenda os conceitos básicos de machine learning ajudando o AI Bot a reconhecer peixes para limpar o oceano",
+          "preparation": "-   Revise os níveis do Code Studio antes da aula\n-   Imprima cópias do guia de atividade para cada aluno"
         },
         "how-ai-works-2023/Computer Vision": {
-          "name": "Visão computacional",
-          "overview": "Esta lição gira em torno do[0] vídeo [Como a IA funciona: visão computacional] da série de vídeos [Como a IA funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Assista a este vídeo antes de explorar o plano de aula.\n\nOs alunos aprendem como a visão computacional funciona. Eles primeiro examinam as ilusões de ótica para identificar as características do desenho que seus olhos notaram. Os alunos assistem a um vídeo explicando a visão computacional e como um computador “vê”. Eles projetam um algoritmo que usa uma rede para decidir qual número a tela de sete segmentos está exibindo. Finalmente, os alunos testam seu algoritmo.\n\nEsta lição pode ser ministrada sozinha ou como parte de uma sequência de 7 aulas sobre Como a IA funciona - [clique aqui para ver todas as lições desta sequência](https://code.org/ai/how-ai-works).",
-          "preparation": "-   Imprima cópias do guia de atividades da Computer Vision Network para cada grupo\n-   (Opcional) Imprima cópias do Seven Segment Display Manipulative",
-          "student_overview": "Saiba como a visão computacional funciona projetando um algoritmo para detectar números."
+          "name": "Visão Computacional",
+          "overview": "Esta lição é centrada no vídeo [Como a IA Funciona: Visão Computacional](https://youtu.be/2hXG8v8p0KM?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) da série de vídeos [Como a IA Funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Assista a este vídeo antes de explorar o plano de aula.\n\nOs alunos aprendem como a visão computacional funciona. Eles primeiro examinam as ilusões de ótica para identificar as características do desenho que seus olhos notaram. Os alunos assistem a um vídeo explicando a visão computacional e como um computador “vê”. Eles projetam um algoritmo que usa uma rede para decidir qual número a tela de sete segmentos está exibindo. Finalmente, os alunos testam seu algoritmo.\n\nEsta lição pode ser lecionada sozinha ou como parte de uma sequência de 7 lições sobre Como a IA Funciona - [clique aqui para ver todas as lições desta sequência](https://code.org/ai/how-ai-works).",
+          "preparation": "-   Imprima cópias do guia de atividade da Rede de VIsão Computacional para cada grupo\n-   (Opcional) Imprima cópias do Display Manipulativo de Sete Segmentos ",
+          "student_overview": "Aprenda como a visão computacional funciona projetando um algoritmo para detectar números."
         },
         "how-ai-works-2023/Neural Networks": {
-          "name": "Redes neurais",
-          "overview": "Esta lição gira em torno do[0] vídeo [Como a IA funciona: redes neurais] da [série de vídeos Como a IA funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Assista a este vídeo antes de explorar o plano de aula.\n\nOs alunos aprendem como as redes neurais funcionam. Primeiro, eles discutem um exemplo de experiência que recomenda coisas para você. Em seguida, eles usam um widget que recomenda vídeos com base em uma pessoa. Os alunos assistem a um vídeo explicando as redes neurais. Eles usam um widget atualizado para ajustar os pesos de cada pessoa. Por fim, os alunos discutem a necessidade de perspectivas diversas ao criar sistemas de recomendação.\n\nEsta lição pode ser ministrada sozinha ou como parte de uma sequência de 7 aulas sobre Como a IA funciona - [clique aqui para ver todas as lições desta sequência](https://code.org/ai/how-ai-works).",
-          "preparation": "-   Imprima cópias do recurso WeTube Content Creators para cada aluno\n-   Imprima cópias do guia de atividades da Rede Neural para cada aluno",
-          "student_overview": "Saiba como as redes neurais funcionam ajustando os pesos de um sistema de recomendação para ajustar as saídas."
+          "name": "Redes Neurais",
+          "overview": "Esta lição é centrada no vídeo [Como a IA Funciona: Redes Neurais](https://youtu.be/JrXazCEACVo?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) da série [Como a IA Funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Assista a este vídeo antes de explorar o plano de aula.\n\nOs alunos aprendem como as redes neurais funcionam. Primeiro, eles discutem um exemplo de uma experiência que recomenda coisas para você. Em seguida, eles usam um widget que recomenda vídeos com base em uma pessoa. Os alunos assistem a um vídeo explicando as redes neurais. Eles usam um widget atualizado para ajustar a influência de cada pessoa. Finalmente, os alunos discutem a necessidade de perspectivas diversas ao criar sistemas de recomendação.\n\nEsta lição pode ser lecionada sozinha ou como parte de uma sequência de 7 lições sobre Como a IA Funciona - [clique aqui para ver todas as lições nesta sequência](https://code.org/ai/how-ai-works).",
+          "preparation": "-   Imprima cópias do recurso Criadores de Conteúdo do WeTube para cada aluno\n-   Imprima cópias do guia de atividade da Rede Neural para cada aluno",
+          "student_overview": "Aprenda como as redes neurais funcionam ajustando os pesos de um sistema de recomendação para ajustar as saídas."
         },
         "how-ai-works-2023/Chatbots and Large Language Models (LLMs)": {
-          "name": "Chatbots e modelos de linguagem grande (LLMs)",
-          "overview": "Esta lição gira em torno do[0] vídeo [Como a IA funciona: chatbots e grandes modelos de linguagem] da [série de vídeos Como a IA funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Assista a este vídeo antes de explorar o plano de aula.\n\nModelos de linguagem grande (LLMs) geram novo texto. O texto que os LLMs geram parece que um humano pode tê-lo escrito porque grandes modelos de linguagem são construídos com base em grandes corpos de texto, como a Wikipedia. Nesta lição, os alunos aprendem o que é um LLM e como ele funciona e, em seguida, usam um LLM para cocriar um texto com IA. Finalmente, a aula termina com uma discussão sobre se os LLMs são inteligentes ou criativos.\n\nEsta lição pode ser ministrada sozinha ou como parte de uma sequência de 7 aulas sobre Como a IA funciona - [clique aqui para ver todas as lições desta sequência](https://code.org/ai/how-ai-works).",
-          "preparation": "-   Imprima cópias do guia de atividades para cada aluno",
-          "student_overview": "Os Large Language Models (LLMs) são inteligentes ou criativos? Decida você mesmo, ao trabalhar com eles, criar algo e saiba mais sobre como eles funcionam!"
+          "name": "Chatbots e Grandes Modelos de Linguagem (LLMs)",
+          "overview": "Esta lição é centrada no vídeo [Como a IA Funciona: Chatbots e Grandes Modelos de Linguagem](https://youtu.be/X-AWdfSFCHQ) da série de vídeos [Como a IA Funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Assista a este vídeo antes de explorar o plano de aula.\n\nGrandes Modelos de Linguagem (LLMs) geram um novo texto. O texto gerado pelos LLMs parece serem escritos por um ser humano porque modelos de linguagem grandes são construídos com base em grandes corpos de texto, como a Wikipedia. Nesta lição, os alunos aprendem o que é um LLM e como ele funciona e, em seguida, usam um LLM para co-criar um texto com a IA. Finalmente, a lição termina com uma discussão sobre se os LLMs são ou não inteligentes ou criativos.\n\nEsta lição pode ser lecionada sozinha ou como parte de uma sequência de 7 lições sobre Como a IA Funciona - [clique aqui para ver todas as lições nesta sequência](https://code.org/ai/how-ai-works).",
+          "preparation": "-   Imprima cópias do guia de atividade para cada aluno",
+          "student_overview": "Os Grandes Modelos de Linguagem (LLMs) são inteligentes ou criativos? Decida você mesmo ao passo em que trabalha com eles para criar algo e aprende mais sobre como eles funcionam!"
         },
         "how-ai-works-2023/Generative Images": {
-          "name": "Imagens generativas",
-          "overview": "Esta lição gira em torno de [Como a IA funciona: criatividade e imaginação?](https://www.youtube.com/watch?v=X994dDnmRmY) vídeo da [série de vídeos Como a IA funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Assista a este vídeo antes de explorar o plano de aula.\n\nModelos de difusão geram imagens. A IA de difusão converte uma imagem em ruído e treina uma IA para reverter o processo. Nesta lição, os alunos aprendem como a IA pode gerar imagens e, em seguida, exploram um widget de IA de difusão. Por fim, a aula termina com uma discussão sobre se esses modelos são criativos ou não.\n\nEsta lição pode ser ministrada sozinha ou como parte de uma sequência de 7 aulas sobre Como a IA funciona - [clique aqui para ver todas as lições desta sequência](https://code.org/ai/how-ai-works).",
-          "preparation": "-   Imprima cópias do guia de atividades para cada aluno",
-          "student_overview": "Saiba como a IA pode gerar imagens explorando um widget de IA de difusão."
+          "name": "Imagens Generativas",
+          "overview": "Esta lição é centrada no vídeo [Como a IA Funciona: Criatividade e Imaginação?](https://www.youtube.com/watch?v=X994dDnmRmY) da série de vídeos [Como a IA Funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Assista a este vídeo antes de explorar o plano de aula.\n\nModelos de difusão geram imagens. A IA de difusão converte uma imagem em ruído e treina outra IA para reverter o processo. Nesta lição, os alunos aprendem como a IA pode gerar imagens e, em seguida, exploram um widget de difusão de IA. Finalmente, a aula termina com uma discussão sobre se esses modelos são criativos ou não.\n\nEsta lição pode ser lecionada sozinha ou como parte de uma sequência de 7 lições sobre Como a IA Funciona - [clique aqui para ver todas as lições nesta sequência].[2]",
+          "preparation": "-   Imprima cópias do guia de atividade para cada aluno",
+          "student_overview": "Saiba como a IA pode gerar imagens explorando um widget de difusão de IA."
         },
         "how-ai-works-2023/Algorithmic Bias": {
-          "name": "Viés algorítmico",
-          "overview": "Esta lição gira em torno do[0] vídeo [Como a IA funciona: acesso igual e viés algorítmico] da [série de vídeos Como a IA funciona].[1]Assista a este vídeo antes de explorar o plano de aula.\n\nNesta lição, os alunos praticarão o recorte de imagens para descobrir o viés subjacente ao algoritmo de recorte do Twitter. Em seguida, os alunos lerão e assistirão a um vídeo sobre a descoberta desse algoritmo tendencioso. Por fim, os alunos discutirão maneiras de reconhecer e reduzir o preconceito, além de analisar a resposta do Twitter às alegações de preconceito em seu algoritmo de recorte.\n\nEsta lição pode ser ministrada sozinha ou como parte de uma sequência de 7 aulas sobre Como a IA funciona - [clique aqui para ver todas as lições desta sequência](https://code.org/ai/how-ai-works).",
-          "preparation": "-   Conclua você mesmo a atividade do widget de recorte para ver o que seus alunos vivenciarão com o widget e quais perguntas ou problemas eles poderão abordar.\n-   Assista às partes do vídeo [“Estamos automatizando o racismo?”](https://youtu.be/Ok5sKLXqynQ) referenciado no plano de aula.\n-   Leia os dois artigos na seção de links abaixo.",
-          "student_overview": "Nesta lição, você trabalhará no recorte de imagens e discutirá os desafios e preconceitos envolvidos em ensinar uma máquina a cortar uma imagem."
+          "name": "Viés Algorítmico",
+          "overview": "Esta lição é centrada no vídeo [Como a IA Funciona: Acesso Igualitário e Viés Algorítmico](https://youtu.be/tJQSyzBUAew?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) da série [Como a IA Funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Assista a este vídeo antes de explorar o plano de aula.\n\nNesta lição, os alunos praticarão o recorte de imagens para descobrir o viés subjacente do algoritmo de corte do Twitter. Em seguida, os alunos lerão e assistirão a um vídeo sobre a descoberta desse algoritmo tendencioso. Por fim, os alunos discutirão maneiras de reconhecer e reduzir o viés, além de analisar a resposta do Twitter às alegações de viés em seu algoritmo de recorte.\n\nEsta lição pode ser lecionada sozinha ou como parte de uma sequência de 7 lições sobre Como a IA Funciona - [clique aqui para ver todas as lições nesta sequência](https://code.org/ai/how-ai-works).",
+          "preparation": "-   Conclua você mesmo a atividade sobre o Widget Recorte para ver o que seus alunos vivenciarão com o widget e quais perguntas ou problemas eles poderão abordar.\n-   Assista às partes do vídeo [“Estamos Automatizando o Racismo?”](https://youtu.be/Ok5sKLXqynQ) citado no plano de aula.\n-   Leia os dois artigos na seção de links abaixo.",
+          "student_overview": "Nesta lição, você trabalhará no recorte de imagens e discutirá os desafios e os viéses envolvidos em ensinar uma máquina a recortar uma imagem."
         },
         "how-ai-works-2023/Our AI Code of Ethics": {
           "name": "Nosso Código de Ética em I.A.",
-          "overview": "Esta lição gira em torno do[0] vídeo [Como a IA funciona: privacidade e o futuro do trabalho] da série de vídeos [Como a IA funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Assista a este vídeo antes de explorar o plano de aula.\n\nEm pequenos grupos, os alunos conduzem pesquisas usando artigos e vídeos que expõem armadilhas éticas em uma área de inteligência artificial de sua escolha. Posteriormente, cada grupo desenvolve pelo menos um princípio orientado a soluções que aborda a área escolhida. Esses princípios são então reunidos em um recurso “Nosso Código de Ética de IA” para toda a classe (por exemplo, uma apresentação de slides, documento ou página da web) para criadores e legisladores de IA em todos os lugares.\n\nEsta lição pode ser ministrada sozinha ou como parte de uma sequência de 7 aulas sobre Como a IA funciona - [clique aqui para ver todas as lições desta sequência](https://code.org/ai/how-ai-works).",
-          "student_overview": "Pesquise de forma colaborativa sobre a ética da IA e crie um código de conduta compartilhável."
+          "overview": "Esta lição é centrada no vídeo [Como a IA Funciona: Privacidade e o Futuro do Trabalho](https://youtu.be/zNxw5gJtHLc?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) da série [Como a IA Funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Assista a este vídeo antes de explorar o plano de aula.\n\nEm pequenos grupos, os alunos conduzem pesquisas usando artigos e vídeos que expõem as armadilhas éticas em uma área da inteligência artificial de sua escolha. Posteriormente, cada grupo desenvolve pelo menos um princípio orientado a soluções que aborda a área escolhida. Esses princípios são então reunidos em um material “Nosso Código de Ética da IA” para toda a turma (por exemplo, uma apresentação de slides, um documento ou uma página web) para criadores e legisladores de IAs em todos os lugares.\n\nEsta lição pode ser lecionada sozinha ou como parte de uma sequência de 7 lições sobre Como a IA Funciona - [clique aqui para ver todas as lições nesta sequência](https://code.org/ai/how-ai-works).",
+          "student_overview": "Pesquise de forma colaborativa sobre ética na IA e crie um código de conduta compartilhável.",
+          "preparation": "-   Prepare-se para compartilhar on-line uma apostila sobre **Áreas de Pesquisa em Ética da IA** por grupo.\n-   Imprima ou prepare-se para compartilhar on-line uma apostila **Reflexões sobre Pesquisa em Ética da IA** por grupo.\n-   Prepare um documento web compartilhável, apresentação de slides, modelo de vídeo ou qualquer outra forma de mídia para ser usada para compor o recurso “Nosso Código de Ética da IA” da sua turma."
         },
         "how-ai-works-2023/How AI Works In a Day": {
-          "name": "Como a IA funciona em um dia",
-          "overview": "⚠️ Esta lição é destinada a salas de aula que desejam mostrar toda a [série de vídeos Como a IA funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) em um único dia\\*\\*. Não se destina a ser ensinado em sequência com as outras lições desta unidade, que apresenta cada vídeo um dia de cada vez.\n\nOs alunos acompanham cada vídeo combinando o vocabulário do vídeo e respondendo a uma pergunta de reflexão sobre cada vídeo. O plano de aula e os slides são muito esparsos e abertos para permitir a improvisação e a personalização de acordo com sua sala de aula.",
-          "preparation": "-   Imprima o guia de atividades\n-   Projete os slides em um projetor de vídeo"
-        },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Hora do Código 2013"
+          "name": "Como a IA Funciona Em um Dia",
+          "overview": "⚠️ Esta lição é destinada às salas de aula que desejam exibir toda a série de vídeos [Como a IA Funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) em um único dia\\*\\*. Não se foi projetada para ser lecionada em sequência com as outras lições desta unidade, as quais apresentam um vídeo a cada dia.\n\nOs alunos acompanham cada vídeo combinando o vocabulário do vídeo e, em seguida, respondendo a uma pergunta de reflexão sobre cada vídeo. O plano de aula e os slides são muito esparsos e abertos para permitir a improvisação e a personalização de acordo com a sua sala de aula.",
+          "preparation": "-   Imprima o guia de atividade\n-   Projete os slides em um projetor de vídeo"
         },
         "applab-intro/Intro to App Lab": {
           "name": "Introdução Laboratório de Aplicativos",
@@ -7085,7 +7245,7 @@
           "student_overview": "Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição foi projetada para alunos do nível fundamental, de 10 a 13 anos de idade, mas pode ser adaptada para alunos mais jovens ou mais velhos, utilizando as sugestões de diferenciação fornecidas. Os alunos deverão ter uma compreensão básica de geometria simples e saber traçar ângulos."
         },
         "gumball/Gumball Play Lab": {
-          "name": "Laboratório do Gumball",
+          "name": "Gumball Play Lab",
           "overview": "Nesta lição, os alunos recebem uma experiência de introdução à ciência da computação e criam um jogo usando códigos básicos em blocos. Esta lição foi desenvolvida para alunos de séries intermediárias, de 10 a 16 anos, mas pode ser adaptada para alunos mais jovens ou antigos usando as sugestões de diferenciação fornecidas.",
           "preparation": "### Uma semana antes do seu Hour of Code\n\n– Analise o [Guia do professor do Hour of Code](http://hourofcode.com/resources/how-to/) e as [Melhores práticas para professores de sucesso](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) para começar a planejar seu evento Hour of Code. \n– [Registre seu evento no Hour of Code](http://hourofcode.com) se você quiser receber assistência o suporte em sala de aula. - Analise e preencha o tutorial on-line: [Laboratório do jogo Gumball](https://studio.code.org/s/gumball/lessons/1/levels/1) \n– Não deixe de testar antes de pedir aos alunos para fazerem a tarefa. Verifique a tecnologia e decida se é preciso solucionar qualquer problema antes do seu Hour of Code. \n\n### Um dia antes do seu Hour of Code\n\n– Escreva as palavras \"codificação\", \"programação\" e \"depuração\" no quadro ou acrescente-as ao mural, se você tiver um. \n– Cada aluno que concluir a atividade deverá receber um [certificado](http://code.org/certificates). Imprima um para cada aluno antecipadamente, para facilitar a finalização do seu Hour of Code.",
           "purpose": "Esta lição apresenta os conceitos fundamentais do CS sobre codificação e programação (usando blocos), além de técnicas simples de depuração.",
@@ -7155,7 +7315,7 @@
           "student_overview": "Nesta lição, os alunos terão uma experiência introdutória com a ciência da computação e criarão um jogo utilizando código em blocos básico."
         },
         "infinity/Infinity": {
-          "name": "Laboratório Infinito Disney",
+          "name": "Disney Infinity Play Lab",
           "overview": "Nesta lição, os alunos recebem uma experiência de introdução à ciência da computação e criam um jogo usando códigos básicos em blocos. Esta lição foi desenvolvida para alunos de séries intermediárias, de 10 a 16 anos, mas pode ser adaptada para alunos mais jovens ou antigos usando as sugestões de diferenciação fornecidas.",
           "preparation": "### Uma semana antes do seu Hour of Code\n\n– Analise o [Guia do professor do Hour of Code](http://hourofcode.com/resources/how-to/) e as [Melhores práticas para professores de sucesso](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) para começar a planejar seu evento Hour of Code. \n– [Registre seu evento no Hour of Code](http://hourofcode.com) se você quiser receber assistência o suporte em sala de aula. - Analise e preencha o tutorial on-line: [Disney Infinity Play Lab](https://studio.code.org/s/playlab/stage/1/puzzle/1) \n– Não deixe de testar antes de pedir aos alunos para fazerem a tarefa. Verifique a tecnologia e decida se é preciso solucionar qualquer problema antes do seu Hour of Code. \n\n### Um dia antes do seu Hour of Code\n\n– Escreva as palavras \"codificação\", \"programação\" e \"depuração\" no quadro ou acrescente-as ao mural, se você tiver um. \n– Cada aluno que concluir a atividade deverá receber um [certificado](http://code.org/certificates). Imprima um para cada aluno antecipadamente, para facilitar a finalização do seu Hour of Code.",
           "purpose": "Esta lição apresenta os conceitos fundamentais do CS sobre codificação e programação (usando blocos), além de técnicas simples de depuração.",
@@ -7183,10 +7343,10 @@
           "student_overview": "Resumo do Tutorial: primeiro os estudantes classificam objetos como \"peixe\" ou \"não peixe\" para tentar remover o lixo do oceano. Em seguida, eles precisarão expandir seu conjunto de dados para incluir outras criaturas marinhas que pertencem à água. Na segunda parte da atividade, irão escolher suas próprias marcações para aplicar às imagens de peixes gerados aleatoriamente. Esses dados de treinamento são usados para um modelo de aprendizado de máquina que depois deve ser capaz de marcar novas imagens sozinho."
         },
         "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
+          "name": "Codificação da simulação",
+          "overview": "Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição combina o \\*_desenvolvimento de habilidades_ com base em eventos e com um \\*\\*miniprojeto em que os alunos desenvolvem sua própria simulação computadorizada no Sprite Lab. Os alunos vão estudar a simulação para compreender com que velocidade um vírus pode se espalhar e o que pode ser feito para desacelerar o processo. ",
+          "preparation": "### Uma semana antes do seu Hour of Code\n\n– Analise o [Guia do professor do Hour of Code](https://hourofcode.com/us/how-to) e as [Melhores práticas para professores de sucesso](https://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) para começar a planejar seu evento Hour of Code. \n\n– [Registre seu evento no Hour of Code](https://hourofcode.com/us) se você quiser receber assistência em sala de aula, pôsteres com descontos, ou participar da oferta de robótica (somente nos EUA). \n\n-   Analise e preencha o tutorial on-line: [Surto](https://studio.code.org/s/outbreak/) \n\n– Não deixe de testar antes de pedir aos alunos para fazerem a tarefa. \n\n– Verifique a tecnologia e decida se é preciso solucionar qualquer problema antes do seu Hour of Code. \n\n#### Um dia antes do seu Hour of Code\n\n– Cada aluno que concluir a atividade deverá receber um [certificado](https://studio.code.org/certificates/batch). Imprima um para cada aluno antecipadamente, para facilitar a finalização do seu Hour of Code. \n\n– (opcional) Incentive os alunos a trazerem seus fones de ouvido para utilizar durante a atividade.",
+          "purpose": "Nesta lição, os alunos vão seguir as instruções para codificar seu próprio modelo de simulação. Os conhecimentos anteriores dos alunos sobre surtos de vírus no mundo real serão aplicáveis a um cenário fictício. "
         },
         "playlab/Play Lab": {
           "name": "Laboratório",
@@ -7196,7 +7356,7 @@
           "student_overview": "Nesta lição, os alunos terão uma experiência introdutória com a ciência da computação e criarão um jogo utilizando código em blocos básico."
         },
         "poem-art-2021/Poem Art": {
-          "name": "Arte poética",
+          "name": "Arte Poética",
           "overview": "Nesta lição integrada de Ciência da Computação e ELA, os alunos vão criar uma animação sobre um poema utilizando código para ilustrar a emoção que o poema passa. Os alunos vão ler e compreender a emoção de um poema. Em seguida, eles vão encontrar efeitos e imagens adequados para ilustrar a emoção. Enfim, os alunos vão utilizar eventos (código) para ilustrar uma mudança de atmosfera na emoção do poema ou para animar a introdução de novas imagens no poema. \n\nEsta lição pode ser concluída como uma lição única de uma hora. Também há a opção de utilizar esta lição como a primeira lição do módulo multilições conhecido como [Codificando com Poesia](http://studio.code.org/s/poetry-2021).",
           "preparation": "-   Leia e complete o tutorial online você mesmo: [Arte de Poema](http://studio.code.org/s/poem-art).  - Certifique-se de testar as atividades antes de pedir aos seus alunos para completá-las.   - Verifique a sua tecnologia e decida se você precisa solucionar algo com antecedência.  - Alguns níveis exigem som para ser tocado. Distribua fones de ouvido com antecedência.   - [Opcional] 2 notas autoadesivas por aluno para a Avaliação."
         },
@@ -7215,7 +7375,7 @@
           "student_overview": "Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição tem duas versões. "
         },
         "starwarsblocks/Hour of Code 2015": {
-          "name": "Star Wars: Construa uma galáxia com programação (Blocos)",
+          "name": "Star Wars: Construindo uma Galáxia com Código (Blockly)",
           "overview": "Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição tem duas versões. Esta versão usa blocos de arrastar e soltar e funciona melhor para os alunos que tiverem dispositivos móveis sem teclado, alunos mais jovens e estudantes internacionais. Recomendado para crianças a partir de 6 anos. \n\nUma versão em [Javascript](s/starwars) também está disponível. Para alunos mais experientes com computação, aprender Javascript pode ser divertido e representar um desafio adicional. Observe que a sintaxe em Javascript não está traduzida e para o primeiro Hour of Code, os blocos traduzidos encontrados aqui oferecem uma introdução melhor. Esta versão do tutorial também é ótima se voc~e tiver alguns alunos na sua turma que já aprenderam alguma coisa sobre codificação. Recomensdado para alunos a partir de 11 anos.",
           "preparation": "### Uma semana antes da Hora do Código\n\n-   Leia o [Guia do Educador da Hora do Código](http://hourofcode.com/resources/how-to/) e [Melhores práticas de educadores bem-sucedidos](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) para começar a planejar seu evento da Hora do Código. \n-   Revise e conclua você mesmo o tutorial on-line: [Star Wars: Construindo uma galáxia com código](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1) \n-   Certifique-se de testá-lo primeiro antes de pedir que seus alunos o concluam. Verifique sua tecnologia e decida se você precisa solucionar alguma coisa antes da Hora do Código.\n\n### Um dia antes da hora do código\n\n-   Escreva as palavras “codificação”, “programação” e “depuração” no quadro ou adicione-as ao seu mural de palavras, se tiver uma.\n-   Escreva as palavras “Ciência da Computação” no meio do quadro ou em um pedaço de papel no centro de um quadro de avisos. Isso servirá como seu [\"mapa mental\"](https://en.wikipedia.org/wiki/Mind_map) para as atividades de preparação e avaliação.\n-   Cada aluno que concluir a atividade deve receber um [certificate](http://code.org/certificates). Imprima um para cada aluno com antecedência para facilitar isso no final da Hora do Código.",
           "purpose": "Esta lição apresenta os conceitos fundamentais do CS sobre codificação e programação, inclusive sequenciamento e eventos. A versão do JavaScript usada no tutorial também possibilita aos estudantes experimentar digitar códigos.",
@@ -7227,72 +7387,6 @@
           "preparation": "— Teste o Widget Compactação de Texto\n— Revise as dicas de aprendizado para decidir quais opções você querer usar",
           "purpose": "O princípio básico por trás da compactação é desenvolver um método ou protocolo para usar poucos bits a fim de representar a informação original. O modo como representamos os dados compactados nesta lição, com um \"dicionário\" de padrões repetidos, é parecido com o [LZW compression scheme](http://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch)esquema de compactação LZQ, mas é preciso observar que o LZQ é ligeiramente diferente do que os estudantes fazem nesta lição. Aqui eles criam sua própria maneira. O LZW não é usado apenas para texto (arquivos .zip), mas também com o formato de imagem GIF.",
           "student_overview": "Em algum ponto, atingiremos o limite físico da velocidade com que podemos enviar bits, e se quisermos enviar um grande volume de informações mais rapidamente, teremos de encontrar um meio de representar essas informações com menos bits – teremos de compactar os dados. "
-        },
-        "applab-1hour/Room Escape": {
-          "name": "Fuga do quarto"
-        },
-        "applab-2hour/Digital Design": {
-          "name": "Design digital"
-        },
-        "applab-2hour/Event Driven Programming": {
-          "name": "Programação Orientada a Eventos"
-        },
-        "applab-2hour/Basic App Functionality": {
-          "name": "Funcionalidade básica do aplicativo"
-        },
-        "applab-2hour/Getters and Setters": {
-          "name": "Getters e Setters"
-        },
-        "frequency_analysis/Frequency Analysis": {
-          "name": "Análise de Freqüência"
-        },
-        "gamelab/Start and End Screens": {
-          "name": "Telas de início e fim"
-        },
-        "gamelab/Start and End Screens2": {
-          "name": "Telas de início e fim 2"
-        },
-        "k1hoc2017/Collector Hour of Code 2017": {
-          "name": "Hora do Código do Coletor 2017"
-        },
-        "netsim/Overview and Setup Instructions": {
-          "name": "Visão Geral e Instruções de Configuração"
-        },
-        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
-          "name": "Ponto a Ponto - Enviando Bits em um cabo compartilhado"
-        },
-        "netsim/Peer to Peer - Sending Numbers": {
-          "name": "Ponto a Ponto - Enviando Números"
-        },
-        "netsim/Peer to Peer - Sending Ascii": {
-          "name": "Ponto a Ponto - Enviando Ascii"
-        },
-        "netsim/Broadcasting messages": {
-          "name": "Transmitindo mensagens"
-        },
-        "netsim/Routers and addresses": {
-          "name": "Rotas e endereços"
-        },
-        "netsim/Packets and Reliability": {
-          "name": "Pacotes e Confiabilidade"
-        },
-        "netsim/Manual DNS": {
-          "name": "DNS Manual"
-        },
-        "netsim/Automatic DNS node": {
-          "name": "Nó DNS Automático"
-        },
-        "netsim/Internet Simulator Freeplay": {
-          "name": "Simulador de Internet Gratuito"
-        },
-        "odometer/Odometer Widget": {
-          "name": "Widget de hodômetro"
-        },
-        "poetry-hoc3/lesson-1": {
-          "name": "Estudo de ambiência"
-        },
-        "vigenere/Vigenere": {
-          "name": "Vigenère"
         },
         "allthethings/Jigsaw": {
           "name": "Quebra-cabeça"
@@ -7428,6 +7522,21 @@
         },
         "allthethings/lesson-49": {
           "name": "Música"
+        },
+        "applab-1hour/Room Escape": {
+          "name": "Fuga do quarto"
+        },
+        "applab-2hour/Digital Design": {
+          "name": "Design digital"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "Programação Orientada a Eventos"
+        },
+        "applab-2hour/Basic App Functionality": {
+          "name": "Funcionalidade básica do aplicativo"
+        },
+        "applab-2hour/Getters and Setters": {
+          "name": "Getters e Setters"
         },
         "csd-post-survey/CSD post-course survey": {
           "name": "CSD pesquisa pós-curso de estudantes ('18'19)"
@@ -7738,12 +7847,60 @@
         "deepdive-debugging/Debugging for CDEF Educators": {
           "name": "Depuração para educadores da CDEF"
         },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "Análise de Freqüência"
+        },
+        "gamelab/Start and End Screens": {
+          "name": "Telas de início e fim"
+        },
+        "gamelab/Start and End Screens2": {
+          "name": "Telas de início e fim 2"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Hora do Código 2013"
+        },
         "jigsaw/Jigsaw": {
           "name": "Quebra-cabeça",
           "overview": "Esta lição dará aos alunos uma ideia sobre o que esperar quando eles vão para o laboratório de informática. A lição começa com uma breve discussão introduzindo à eles as condutas do laboratório de informática, então eles irão progredir usando um computador para completar quebra-cabeças online.",
           "preparation": "-   Consulte o site [Common Sense Education](https://www.commonsense.org/education/digital-citizenship) para obter mais conteúdo de segurança on-line.",
           "purpose": "O principal objetivo desta lição é construir a experiência dos alunos com computadores. Ao cobrir as funções mais básicas do computador, como clicar, arrastar e soltar, estamos criando um ambiente mais igualitário na classe para futuros quebra-cabeças. Esta lição também oferece uma ótima oportunidade para introduzir o comportamento apropriado no laboratório de informática.",
           "student_overview": "Clique e arraste para finalizar os quebra-cabeças."
+        },
+        "k1hoc2017/Collector Hour of Code 2017": {
+          "name": "Hora do Código do Coletor 2017"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "Visão Geral e Instruções de Configuração"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "Ponto a Ponto - Enviando Bits em um cabo compartilhado"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "Ponto a Ponto - Enviando Números"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "Ponto a Ponto - Enviando Ascii"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "Transmitindo mensagens"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Rotas e endereços"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "Pacotes e Confiabilidade"
+        },
+        "netsim/Manual DNS": {
+          "name": "DNS Manual"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "Nó DNS Automático"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "Simulador de Internet Gratuito"
+        },
+        "odometer/Odometer Widget": {
+          "name": "Widget de hodômetro"
         },
         "pixelation/Black & White Pixelation Tutorial": {
           "name": "Tutorial de pixelização em preto e branco"
@@ -7759,6 +7916,45 @@
         },
         "pixelation/Color Pixelation Freeplay": {
           "name": "Pixelização colorida gratuita"
+        },
+        "poetry-hoc3/lesson-1": {
+          "name": "Estudo de ambiência"
+        },
+        "vigenere/Vigenere": {
+          "name": "Vigenère"
+        },
+        "ai-ethics-2023/lesson-2": {
+          "overview": "Os alunos podem entender melhor o impacto da IA generativa participando de um jogo colaborativo. Eles começam assistindo um vídeo que explica como modelos grandes de linguagens funcionam como chatbots ou imagens geradas. Depois, os alunos simulam uma situação onde uma pessoa teve a vida impactada por uma IA generativa para ler alguns artigos e reagir de acordo com os sentimentos do personagem. Os alunos formarão grupos e receberão um cenário envolvendo o seu personagem e a IA generativa. Trabalhando juntos, eles criam diretrizes para como a IA generativa deve ser implementada nesse cenário, priorizando a voz e a perspectivas de todas as partes interessadas. Por último, os alunos compartilham seus resultados com a turma e refletem sobre esse processo.",
+          "student_overview": "Aprenda sobre a IA generativa criando um personagem e produzindo diretrizes apropriadas para a IA generativa."
+        },
+        "csd5-2021/Project - Create a Representation": {
+          "name": "Crie uma Representação",
+          "student_overview": "**Pergunta do Dia: Como posso representar informações complexas usando sistemas binários?**\n\nNesta lição, você explorará como usar os formatos ASCII, binário e de imagem para representar seu dia perfeito!"
+        },
+        "csd5-2021/Data and Machine Learning": {
+          "student_overview": "\\*\\*Pergunta do Dia: Como as máquinas “aprendem”? \\*\\*\n\nNesta lição, você começa a trabalhar com Inteligência Artificial e a aprender sobre Aprendizado de Máquina."
+        },
+        "csd7-2021/Patterns in Data": {
+          "preparation": "-   Revise os níveis do Code Studio antes da aula\n-   Imprima cópias do guia de atividade para cada aluno"
+        },
+        "csd7-2021/AI Code of Ethics": {
+          "name": "Código de Ética da IA",
+          "preparation": "-   Prepare-se para compartilhar on-line uma apostila sobre **Áreas de Pesquisa em Ética da IA** por grupo.\n-   Imprima ou prepare-se para compartilhar on-line uma apostila **Reflexões sobre Pesquisa em Ética da IA** por grupo.\n-   Prepare um documento web compartilhável, apresentação de slides, modelo de vídeo ou qualquer outra forma de mídia para ser usada para compor o recurso “Nosso Código de Ética da IA” da sua turma."
+        },
+        "csd7-2021/Mini-Project: Make a Machine Learning App": {
+          "preparation": "-   Revise os níveis do Code Studio antes da aula\n-   Imprima cópias do guia de atividade para cada aluno"
+        },
+        "csd5-2022/Data and Machine Learning": {
+          "student_overview": "\\*\\*Pergunta do Dia: Como as máquinas “aprendem”? \\*\\*\n\nNesta lição, você começa a trabalhar com Inteligência Artificial e a aprender sobre Aprendizado de Máquina."
+        },
+        "csd7-2023/AI Code of Ethics": {
+          "name": "Código de Ética da IA"
+        },
+        "dance-ai-2023/lesson-1": {
+          "name": "Festa dançante: Edição de I.A.",
+          "overview": "Nesta atividade, alunos de todas as idades terão uma experiência introdutória em codificação e inteligência artificial, em um ambiente seguro e criativo. Esta lição foi projetada para alunos de todas as idades, mas requer leitura. Nesta atividade, os alunos deverão tocar um som, pois o tutorial foi programado para responder a uma música.",
+          "preparation": "### Como planejar seu Hour of Code.\n\nLocalize os recursos necessários para planeja, implementar e iniciar o Hour of Code na sua escola [here](https://hourofcode.com/us/how-to)!",
+          "purpose": "Tornar a codificação uma experiência empolgante e agradável é essencial para estimular o interesse pela ciência da computação. Esta lição tem diversos momentos de alegria em que os alunos utilizam códigos para coreografar um espetáculo de dança, cores e movimentos, utilizando blocos simples de arrastar e soltar na codificação. Os alunos terão uma introdução a um Robô de I.A. que eles mesmos vão controlar para definir os efeitos perfeitos que correspondam ao astral da sua dança. "
         }
       }
     }

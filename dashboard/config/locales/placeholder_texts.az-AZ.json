@@ -66,6 +66,11 @@
           "7fec9998c3e5a11f435dc6f2f8e399db": "seçim 2",
           "c3787b1ed128fdeec3ad638c8ba547d3": "seçim 3"
         },
+        "CourseF_Project_SpriteLab_examples_2021": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "seçim 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "seçim 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "seçim 3"
+        },
         "Find the Wizard": {
           "0464d226582401370945003bc8850990": "Mwahahahaha!",
           "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
@@ -842,6 +847,7 @@
         "courseF_project_1": {
           "498cd895eb5a102c5aeb977e2b928dee": "Sağ olun!",
           "6b90c9823ff75e6a78aa63b392e7315a": "Xal: ",
+          "cbada13e4c1e0a4ce8a6778941fb48de": "Sikkələr alın. Qəza etməyin!",
           "e8a10c04d72b2f135dabe360c4bdd534": "Qazandın!"
         },
         "courseF_text_answer": {

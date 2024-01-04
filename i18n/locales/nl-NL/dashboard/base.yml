@@ -45,6 +45,7 @@ nl:
         personal_email_markdown: "Persoonlijk e-mailadres [(Klik hier als je geen e-mailadres hebt)](%{url})"
         username: 'gebruikersnaam'
         password: 'Wachtwoord'
+        verified_teacher: 'Geverifieerde Leraar'
         password_confirmation: 'Wachtwoord bevestiging'
         current_password: 'Huidig wachtwoord'
         locale: 'Taal'
@@ -581,6 +582,7 @@ nl:
     try_hour_of_code: 'Probeer een Hour of Code!'
     store: 'Winkel'
     cookie_notice: 'Cookiebeleid'
+    view_code: 'Bekijk Code'
   reference_area:
     title: 'Hulp nodig?'
     subtitle: 'Bekijk deze video''s en hints'
@@ -602,6 +604,8 @@ nl:
     upgrade:
       unsupported_message: "Uw browser wordt niet ondersteund. Probeer uw browser te upgraden naar <a href='%{supported_browsers_url}', target='_blank'> een van onze ondersteunde browsers</a>. U kunt proberen de pagina te bekijken, maar verwacht problemen met de functionaliteit."
       link: "Leer meer"
+      applab_unsupported_tablet: "App Lab werkt het beste op een PC of laptop met muis en toetsenbord. Op je huidige apparaat zou het minder goed kunnen werken."
+      gamelab_unsupported_tablet: "Game Lab functioneert het beste op een laptop of desktop-computer met een muis en toetsenbord. Je zou op je huidige apparaat problemen kunnen ervaren met deze tool."
   slow_loading: 'Dit duurt langer dan normaal...'
   try_reloading: 'Probeer de pagina opnieuw te laden'
   next_stage: 'Klaar! Verder naar het volgende niveau'
@@ -642,6 +646,7 @@ nl:
       cta: 'Leer hoe'
     aquatic:
       title: "Minecraft"
+      image_alt: 'Steve en Alex uit Minecraft kijken naar je.'
     dance-2019:
       title: 'Dansfeest'
     dance:
@@ -885,6 +890,7 @@ nl:
     download_in_Greek: 'Download in het Grieks:'
     windows: 'Windows (64-bit)'
     mac: 'Mac OS X'
+  hidden_stage: "Jouw leraar had jou hier niet verwacht. Vraag je leraar welke les je zou moeten doen."
   view_teacher_guide: 'Lerarenhandleiding bekijken'
   pd:
     form_labels:
@@ -914,7 +920,7 @@ nl:
       subjects:
         cs: 'informaticawetenschappen'
         ict: 'ICT'
-        math: 'wiskundige'
+        math: 'Wiskunde'
         science: 'Wetenschap'
         la: 'Taalvaardigheden'
         music: 'Muziek'
@@ -965,4 +971,3 @@ nl:
   teacher_feedback: "Docenten feedback"
   pixelation:
     binary: "Binaire"
-

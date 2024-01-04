@@ -1,0 +1,19 @@
+{
+  "banners": {
+    "superhero": {
+      "title": "Help your students become superheroes!",
+      "body": "Join our highly supportive Professional Learning Program for middle and high school educators.",
+      "buttonText": "Learn More"
+    },
+    "hoc-2023": {
+      "title": "Hour of Code: Creativity with AI",
+      "body": "Join millions across the globe in organizing an hour of coding, with or without AI and learning how AI works. Anyone, anywhere can do it. No experience needed.",
+      "buttonText": "Learn more"
+    },
+    "hoc-2023-dance-ai": {
+      "title": "Dance Party: AI Edition",
+      "body": "Learn about artificial intelligence (AI) concepts to create your own virtual dance party showcasing today's top artists. With dozens of songs to choose from, reach every student no matter their music taste. It's time to strut your stuff!",
+      "buttonText": "Learn more"
+    }
+  }
+}

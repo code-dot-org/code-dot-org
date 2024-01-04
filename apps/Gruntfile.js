@@ -615,7 +615,7 @@ module.exports = function (grunt) {
     }
     child_process.execSync('mkdir -p ./build/package/firebase');
     child_process.execSync(
-      'npx firebase-bolt < ./firebase/rules.bolt > ./build/package/firebase/rules.json'
+      'yarn run firebase-bolt < ./firebase/rules.bolt > ./build/package/firebase/rules.json'
     );
   });
 

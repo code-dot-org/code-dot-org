@@ -2004,23 +2004,23 @@
         },
         "network/how-ai-works/2023": {
           "word": "Bağlantılar",
-          "definition": "Birbirine bağlı öğelerden oluşan bir koleksiyon. Bu bağlantıları takip etmek, akış şeması gibi bir algoritmadaki adımları temsil edebilir."
+          "definition": "Birbirine bağlı öğelerden oluşan bir koleksiyon. Bu bağlantıları takip etmek, akış şeması gibi, bir algoritmadaki adımları temsil edebilir."
         },
         "large_language_model_llm_/how-ai-works/2023": {
           "word": "Büyük Dil Modeli (LLM)",
           "definition": "çok, çok büyük bir bilgi birikimi üzerinde eğitilmiş genel amaçlı bir AI formu"
         },
         "diffusion_ai/how-ai-works/2023": {
-          "word": "Difüzyon AI",
+          "word": "Difüzyon Yapay Zeka",
           "definition": "bir görüntüyü gürültüye dönüştürmek ve süreci tersine çevirmek için bir yapay zekayı eğitmek"
         },
         "gan_generative_adversarial_network_/how-ai-works/2023": {
-          "word": "GAN (Üretken Düşmanlar Ağı)",
-          "definition": "bir şey üretmek için iki rakip AI modelini kullanmanın bir yolu"
+          "word": "GAN (Çekişmeli Üretici Ağ)",
+          "definition": "bir şey üretmek için iki rakip Yapay Zeka modelini kullanmanın bir yolu"
         },
         "artificial_intelligence/how-ai-works/2023": {
           "word": "Yapay Zeka",
-          "definition": "Makinelerin öğrenme ve problem çözme becerisi."
+          "definition": "makinelerin öğrenme ve problem çözme becerisi."
         },
         "code/aquatic/unversioned": {
           "word": "kod",
@@ -2123,7 +2123,7 @@
           "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
         },
         "code/flappy/unversioned": {
-          "word": "kod",
+          "word": "kodlama",
           "definition": "(v) kod yazmak veya bir bilgisayara talimat yazmak için."
         },
         "debugging/flappy/unversioned": {
@@ -2354,25 +2354,21 @@
           "word": "Kayıpsız Sıkıştırma",
           "definition": "orijinal verilerin sıkıştırılmış verilerden mükemmel bir şekilde yeniden yapılandırılmasına izin veren bir veri sıkıştırma algoritması. Genelde metin sıkıştırma için kullanılır (örneğin zip sıkıştırma)"
         },
-        "code/poem-art/unversioned": {
+        "code/dance-ai/2023": {
           "word": "Kod",
-          "definition": "(v) bir bilgisayar için talimat yazma amacıyla."
+          "definition": "(v) kod yazmak veya bir bilgisayara talimat yazmak için."
         },
-        "event/poem-art/unversioned": {
+        "event/dance-ai/2023": {
           "word": "Etkinlik",
           "definition": "Bir şeylerin olmasına neden olan bir eylem."
         },
-        "program/poem-art/unversioned": {
+        "program/dance-ai/2023": {
           "word": "Program",
-          "definition": "Bir makine tarafından çalıştırılabilen bir şeye kodlanmış bir dizi adım."
+          "definition": "Bir makine tarafından, çalıştırılabilecek bir şeye kodlanmış bir algoritma.\n​"
         },
-        "mood/poem-art/unversioned": {
-          "word": "Ruh hali",
-          "definition": "sanatta veya yazıda bir duygu, atmosfer veya hissin ifadesi."
-        },
-        "line/poem-art/unversioned": {
-          "word": "Satır",
-          "definition": "(şiir) - sağ kenarda biten bir satırda düzenlenmiş bir şiirin alt bölümü. "
+        "artificial_intelligence_a_i_/dance-ai/2023": {
+          "word": "Yapay Zeka (A.I.)",
+          "definition": "Verileri alan, bu verilerden kalıplar öğrenen ve daha sonra öğrendiklerine göre, kararlar veren bir bilgisayar programı."
         }
       }
     }

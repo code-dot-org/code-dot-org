@@ -1595,6 +1595,39 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Concours d'orthographe"
         },
+        "K5-OnlinePD/Getting Started": {
+          "name": "La Mise en Route"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Les bases de l'Informatique"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "Regarder en avant"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "Maîtriser les bases: Les séquences"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "Maîtriser les bases: Les boucles"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "Maîtriser les bases: Les conditions"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "Maîtriser les bases: Les fonctions"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "Maîtriser les bases: Les événements"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "Les Meilleures Pratiques pour l'Enseignement de l'Informatique"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Planning"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Prochaines étapes"
+        },
         "csd1-2019/Intro to Problem Solving": {
           "name": "Introduction à la Résolution de Problèmes"
         },
@@ -2281,6 +2314,45 @@
         },
         "pre-express-2019/Make a Game in Play Lab": {
           "name": "Une Bataille Royale en utilisant les Événements"
+        },
+        "k5-onlinepd-2019/Welcome to \"Teaching Computer Science Fundamentals\"": {
+          "name": "Bienvenue à « Enseigner les Principes Fondamentaux de l'Informatique »"
+        },
+        "k5-onlinepd-2019/Understanding the Computer Science Fundamentals Courses": {
+          "name": "Comprendre les Cours sur les Principes Fondamentaux de l'Informatique"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Séquencement"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Boucles"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Événements"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Instructions conditionnelles"
+        },
+        "k5-onlinepd-2019/End of Course projects": {
+          "name": "Projets de Fin de Cours"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Fonctions"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Variables"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Les Boucles « Pour »"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Le Labo des Sprites"
+        },
+        "k5-onlinepd-2019/Reviewing your reflections": {
+          "name": "Examiner vos réflexions"
+        },
+        "k5-onlinepd-2019/Next steps": {
+          "name": "Prochaines étapes"
         },
         "coursea-2020/Safety in My Online Neighborhood": {
           "name": "La Sécurité dans Mon Quarter en Ligne "
@@ -3999,6 +4071,39 @@
           "purpose": "Dans cette activité en ligne, les élèves apprendront à utiliser les événements dans le Labo Jeux. Ils commenceront par apprendre au chevalier à se déplacer lorsqu'une touche fléchée est enfoncée, et termineront avec la possibilité de mettre en valeur le reste des compétences qu'ils ont acquises, tout au long de ce cours, y compris le séquencement et les boucles, dans le cadre du casse-tête en jeu libre de la fin. ",
           "student_overview": "Utilise des événements pour créer une histoire ou un jeu interactif."
         },
+        "kodea-pd-2021/Getting Started": {
+          "name": "La Mise en Route"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Les bases de l'Informatique"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "Regarder en avant"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "Maîtriser les bases: Les séquences"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "Maîtriser les bases: Les boucles"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "Maîtriser les bases: Les conditions"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "Maîtriser les bases: Les fonctions"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "Maîtriser les bases: Les événements"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "Les Meilleures Pratiques pour l'Enseignement de l'Informatique"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Planning"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Prochaines étapes"
+        },
         "csd1-2022/Intro to Problem Solving": {
           "name": "Introduction à la Résolution de Problèmes",
           "overview": "**Question du jour : Qu'est-ce qui peut nous aider à travailler ensemble et à résoudre des problèmes en équipe?**\n\nDans cette leçon, les élèves travaillent en groupes pour concevoir des bateaux en papier d'aluminium qui supporteront autant de pièces de monnaie que possible. Les groupes ont deux tours pour travailler sur leurs bateaux, avec pour objectif d'essayer de contenir plus de pièces qu'au premier tour. La structure de l'activité préfigure différentes étapes du processus de résolution de problèmes que les élèves découvriront plus en détail dans la leçon suivante. À la fin de la leçon, les élèves réfléchissent à leur expérience de l'activité et établissent des liens avec les types de résolution de problèmes qu'ils feront pendant le reste du cours.\n\n\\*\\*D'autres versions de cette leçon sont également disponibles. \n\n-   [Table de journaux](/s/csd1-2022/lessons/9/)\n-   [Pont en spaghetti](/s/csd1-2022/lessons/10/)\n-   [Tour de papier](/s/csd1-2022/lessons/11/)",
@@ -5290,7 +5395,7 @@
         "csc-bookcovers-2023/Learn to Code a Book Cover ": {
           "name": "Apprenez à coder la couverture d'un livre ",
           "overview": "Dans cette leçon intégrée CS et ELA destinée aux nouveaux codeurs, les élèves apprendront à coder une couverture de livre numérique. Ils examineront d'abord les couvertures de livres existantes et discuteront des choix de conception graphique qui ont été faits. Ensuite, les élèves examineront un exemple de couverture de livre numérique avant d'en créer plusieurs. Les élèves apprendront à sélectionner des sprites pour représenter les personnages d'un livre et à utiliser les événements pour faire parler les personnages. ",
-          "preparation": "-   Parcourez les niveaux et examinez les<a href=\"https://docs.google.com/presentation/d/1GTaZX9z0b-dwk6Z48TSwqwhjZ9pO9Onk7w8n9xNt_Zk/template/preview\" target=\"_blank\">diapositives des leçons</a>\n-   Décidez du rythme entre le temps de travail des élèves et l'enseignement en groupe complet.\n-   Pensez à explorer les activités de préparation recommandées avant de commencer ([link](https://studio.code.org/s/csc-bookcovers-2023/lessons/1#activity-4350298)).\n\n##### Facultatif :\n\n-   Consultez ce <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">diaporama de conseils utiles.</a> \n-   Consultez ce guide de débogage destiné aux <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">enseignants</a>  pour être prêt à aider les élèves à détecter et à corriger les erreurs dans leur code. \n-   Programmation en binôme - Décidez si vous voulez que les élèves s'adonnent à la programmation en binôme. Regardez cette <a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">vidéo</a> et consultez cette</a> page d' <a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">assistance pour plus d'informations sur la programmation par paires.\n-   Téléchargement personnalisé de sprites - Bien que cela soit présenté dans les leçons ultérieures, vous pouvez choisir d'apprendre aux élèves à télécharger leurs propres costumes et arrière-plans de sprites avec cette vidéo. <a href=\"https://youtu.be/CHipUGfL_0M\" target=\"_blank\"></a>",
+          "preparation": "-   Parcourir les niveaux et étudier les <a href=\"https://docs.google.com/presentation/d/1GTaZX9z0b-dwk6Z48TSwqwhjZ9pO9Onk7w8n9xNt_Zk/template/preview\" target=\"_blank\">diapositives des leçons</a>.\n-   Déterminer les périodes à impartir au temps de travail indivduel des élèves et à l'enseignement en groupe.\n-   Pensez à explorer les activités de préparation recommandées avant de commencer ([lien](https://studio.code.org/s/csc-bookcovers-2023/lessons/1#activity-4350298)).\n\n##### Facultatif :\n\n-   Consultez ce <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">diaporama de conseils utiles.</a> \n-   Consultez ce guide de débogage destiné aux <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">enseignants</a> pour être prêt à aider les élèves à détecter et à corriger les erreurs dans leur code. \n-   Programmation en binôme - Décidez si vous souhaitez que les élèves fassent de la programmation en binôme. Regarder cette <a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">vidéo</a> et consulter cette</a> page d'assistance<a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\"> pour plus d'informations sur la programmation en binômes.\n-   Téléchargement personnalisé des sprites - Bien que cela n'aparaisse que plus tard dans les leçons, vous pouvez quand même décider d'enseigner aux élèves à télécharger leurs propres costumes et arrière-plans pour sprites à l'aide de cette <a href=\"https://youtu.be/CHipUGfL_0M\" target=\"_blank\">vidéo</a>.",
           "student_overview": "Dans cette leçon, vous allez apprendre à coder la couverture d'un livre numérique. Vous allez d'abord sélectionner l'arrière-plan et les personnages. Ensuite, vous apprendrez à programmer la conversation des personnages lorsque vous cliquez dessus. À la fin de la leçon, vous aurez codé plusieurs exemples de couvertures de livres interactives."
         },
         "csc-bookcovers-2023/lesson-4": {
@@ -5312,25 +5417,25 @@
         },
         "csc-ecosystems-2023/Overfishing Simulation (pilot)": {
           "name": "Simulation de surpêche",
-          "overview": "Dans cette leçon de **renforcement des compétences**, les élèves programmeront un modèle d'écosystème aquatique, puis simuleront une situation de surpêche. Les élèves apprendront à programmer des énoncés conditionnels pour vérifier la quantité d'algues dans l'eau. S'il y a trop d'algues, le corail tombe malade. S'il y a trop peu d'algues, les poissons n'ont aucune source de nourriture et quittent la zone. S'il y a juste la bonne quantité d'algues, le corail malade guérira et les poissons resteront dans la zone. ",
-          "preparation": "-   Parcourez les niveaux et examinez les diapositives des <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">leçons</a> \n-   Décidez du rythme entre le temps de travail des élèves et l'enseignement en groupe complet.\n-   Envisagez d'attribuer aux élèves la préparation recommandée \n    ([link](https://studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4911962))\n-   Envisagez ces options d'extensions connexes ([link](https://studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4911963)) à explorer après la dernière leçon.\n\n##### Facultatif :\n\n-   [Optional] Consultez ce <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">diaporama de conseils utiles.</a> \n-   [Optional] Consultez ce guide de débogage destiné aux <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">enseignants</a>  pour être prêt à aider les élèves à détecter et à corriger les erreurs dans leur code. ",
-          "purpose": "Les élèves apprendront que les écosystèmes marins contiennent de nombreux organismes qui interagissent et se maintiennent en équilibre. Cette leçon combine l'informatique et les sciences de la vie pour permettre aux élèves de créer un modèle qui simule les effets de la surpêche en utilisant des énoncés conditionnels en informatique pour montrer les causes et les effets dans la vie réelle. "
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves programmeront un modèle d'écosystème aquatique, puis simuleront une situation de surpêche. Les élèves apprendront à programmer des énoncés conditionnels pour vérifier la quantité d'algues dans l'eau. S'il y a trop d'algues, le corail tombera malade. S'il y a trop peu d'algues, les poissons n'auront aucune source de nourriture et quitteront la zone. S'il y a la quantité d'algues tout juste, le corail malade guérira et les poissons resteront dans la zone. ",
+          "preparation": "-   Parcourir les niveaux et étudier les <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">diapositives de leçons</a> \n-   Déterminer les périodes à impartir au temps de travail indivduel des élèves et à l'enseignement en groupe.\n-   Envisager de donner à faire aux élèves le travail de préparation conseillé\n    ([lien](https://studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4911962))\n-   Envisager d'explorer ces options pour aller plus loin connexes ([lien](https://studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4911963)) après la dernière leçon.\n\n##### Facultatif :\n\n-   [Facultatif] Consulter cette <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">présentation de conseils utiles.</a> \n-   [Facultatif] Consulter ce guide de débogage destiné aux <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">enseignants</a> pour être prêt à aider les élèves à détecter et à corriger les erreurs dans leur code. ",
+          "purpose": "Les élèves apprendront que les écosystèmes marins contiennent de nombreux organismes qui interagissent entre eux et se maintiennent en équilibre. Cette leçon conjugue informatique et sciences de la vie pour permettre aux élèves de créer un modèle qui simule les effets de la surpêche en utilisant des énoncés conditionnels en informatique pour montrer la relation de cause à effet dans la vie réelle."
         },
         "csc-ecosystems-2023/Balancing the Ecosystem (pilot)": {
           "name": "Équilibrer l'écosystème",
-          "overview": "Dans cette leçon de **renforcement des compétences**, les élèves découvriront puis programmeront trois solutions différentes au problème de la surpêche.\n\nCette leçon commence là où la leçon précédente s'est arrêtée, avec le modèle d'un écosystème aquatique déséquilibré. Tout d'abord, les élèves modifieront le comportement du bateau afin qu'il ne puisse se déplacer que dans une « zone de pêche » spécifiée. Ensuite, les élèves programmeront un nouvel événement pour définir une « saison de pêche » et une « saison sans pêche ». Troisièmement, les élèves apprendront à utiliser une variable pour suivre le nombre de poissons que le bateau a retirés. La leçon se termine par un niveau de vérification de la compréhension pour s'assurer que les élèves ont appris les trois solutions à la surpêche.",
-          "preparation": "-   Lisez l'article fourni sur <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\" target=\"_blank\">Comprendre la surpêche</a>. Échafaudez au besoin pour répondre aux besoins de vos élèves. \n-   Parcourez les niveaux et examinez les diapositives des <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">leçons</a> \n-   Décidez du rythme entre le temps de travail des élèves et l'enseignement en groupe complet.\n-   Envisagez d'attribuer aux étudiants la préparation recommandée [(link)](https://studio.code.org/s/csc-ecosystems-2023/lessons/2#activity-4986903).\n-   Tenez compte de ces options d'extensions connexes [(link)](https://studio.code.org/s/csc-ecosystems-2023/lessons/2#activity-4986904).\n\n##### Facultatif :\n\n-   [Optional] Consultez ce <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">diaporama de conseils utiles.</a> \n-   [Optional] Consultez ce guide de débogage destiné aux <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">enseignants</a>  pour être prêt à aider les élèves à détecter et à corriger les erreurs dans leur code. ",
-          "purpose": "Les élèves continueront à se renseigner sur les écosystèmes équilibrés et déséquilibrés. En s'appuyant sur un article scientifique sur la surpêche, les élèves acquerront une riche compréhension des liens entre les organismes d'un écosystème. En fin de compte, les étudiants auront l'occasion d'appliquer ce qu'ils ont appris en modélisant un écosystème local. "
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves découvriront puis programmeront trois solutions différentes au problème de la surpêche.\n\nCette leçon commence là où la leçon précédente s'est arrêtée, avec un modèle d'écosystème marin déséquilibré. Premièrement, les élèves modifieront le comportement du bateau afin qu'il ne puisse se déplacer que dans une « zone de pêche » précise. Deuxièmement, les élèves programmeront un nouvel événement pour définir une « saison de pêche » et une « saison de non-pêche ». Troisièmement, les élèves apprendront à utiliser une variable pour leur permettre faire un suivi du nombre de poissons que le bateau a soutirés à l'eau. La leçon se terminera par un niveau de vérification de la compréhension pour s'assurer que les élèves ont bien assimilé ces trois solutions à la surpêche.",
+          "preparation": "-   Lire l'article fourni sur comment <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\" target=\"_blank\">Comprendre la surpêche</a>. Échafauder pédagogiquement au besoin pour répondre aux besoins de vos élèves. \n-   Parcourir les niveaux et examiner les diapositives des <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">leçons</a>.\n-   Déterminer les périodes à impartir au temps de travail indivduel des élèves et à l'enseignement en groupe.\n-   Envisager de donner à faire aux élèves le travail de préparation conseillé [(lien)](https://studio.code.org/s/csc-ecosystems-2023/lessons/2#activity-4986903).\n-   Prendre en considération ces options pour aller plus loin connexes [(lien)](https://studio.code.org/s/csc-ecosystems-2023/lessons/2#activity-4986904).\n\n##### Facultatif :\n\n-   [Facultatif] Consulter cette <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">présentation de conseils utiles</a>.\n-   [Facultatif] Consulter ce guide de débogage destiné aux <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">enseignants</a> afin d'être prêt à aider les élèves à détecter et à corriger les erreurs dans leur code.",
+          "purpose": "Les élèves continueront à en apprendre sur les écosystèmes équilibrés et déséquilibrés. En s'appuyant sur un article scientifique sur la surpêche, les élèves acquerront une riche compréhension des liens entre les divers organismes d'un écosystème. À terme, les élèves auront l'occasion de mettre en pratique ce qu'ils ont appris en modélisant un écosystème local. "
         },
         "csc-ecosystems-2023/lesson-3": {
-          "name": "Codage de mon écosystème",
-          "overview": "Dans cette leçon de **renforcement des compétences**, les élèves exploreront plusieurs simulations d'écosystèmes différentes. Les élèves peuvent choisir d'explorer un écosystème de forêt tropicale, désertique, arctique ou humide. Ils joueront le rôle d'écologistes et étudieront les interactions entre les plantes et les animaux dans la chaîne alimentaire de chaque écosystème. Les élèves liront les instructions pour comprendre le défi auquel chaque écosystème est confronté. Ils modifieront ensuite le code correspondant afin de rééquilibrer l'écosystème. ",
-          "preparation": "-   Parcourez les niveaux et examinez les diapositives des <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">leçons</a> \n-   Décidez du rythme entre le temps de travail des élèves et l'enseignement en groupe complet.\n-   Imprimez un carnet d'écologiste pour chaque élève\n-   Considérez ces [opportunités d'extension](https://studio.code.org/s/csc-ecosystems-2023/lessons/3#activity-4852074) après cette leçon"
+          "name": "Coder mon écosystème",
+          "overview": "Dans cette leçon de **développement des compétences**, les élèves exploreront plusieurs simulations d'écosystèmes différentes. Les élèves pourront choisir d'explorer un écosystème de forêt tropicale, désertique, arctique ou humide. Ils joueront le rôle d'écologistes et étudieront les interactions entre les plantes et les animaux au sein de la chaîne alimentaire de chaque écosystème. Les élèves liront les instructions pour comprendre le défi auquel chaque écosystème est confronté. Ils modifieront ensuite le code correspondant afin de rééquilibrer l'écosystème. ",
+          "preparation": "-   Parcourir les niveaux et étudier les <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">diapositives de leçons</a> \n-   Déterminer les périodes à impartir au temps de travail indivduel des élèves et à l'enseignement en groupe.\n-   Imprimer un carnet d'écologiste pour chaque élève\n-   Envisager d'explorer [ces options pour aller plus loin](https://studio.code.org/s/csc-ecosystems-2023/lessons/3#activity-4852074) connexes une fois la leçon terminée"
         },
         "csc-mappinglandmarks-2023/US Landmarks": {
           "name": "Présentation de la cartographie",
           "overview": "Dans cette leçon de **renforcement des compétences**, les élèves apprendront à créer et à animer des sprites sur une carte. \n\nCette leçon a deux objectifs principaux : (1) offrir un exemple de codage d'une carte interactive et (2) initier les élèves au codage dans Sprite Lab. Sprite Lab est un environnement de codage ouvert qui utilise du code basé sur des blocs. Les élèves apprendront les bases de Sprite Lab tout au long de cette leçon pour planifier et créer leur carte interactive dans les leçons suivantes. \n\nDans cette leçon intégrée, les élèves apprennent les concepts des sciences sociales en créant une carte à l'aide d'un code. Pour commencer, les élèves examineront plusieurs exemples de cartes et discuteront des éléments qui les composent. En guise de conclusion, les élèves discuteront du rôle d'un cartographe. \n\n\\_Remarque : Les cartes et les images ne seront pas parfaitement adaptées dans tous les cas. Heureusement, il existe un outil de téléchargement de sprites et l'accès à la bibliothèque d'animations que les étudiants peuvent utiliser dans les niveaux gratuits qui permettent la personnalisation. \\_",
-          "preparation": "-   Passez en revue et complétez vous-même le didacticiel en ligne.\n-   Passez en revue les diapositives et déterminez le rythme entre le temps de travail des étudiants et l'enseignement en groupe.\n-   Préparez des notes autocollantes ou du papier à gratter pour chaque élève lors de la discussion de clôture.\n-   Vérifiez votre technologie et décidez si vous devez résoudre un problème à l'avance.\n\n##### Facultatif :\n\n-   Consultez ce <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">diaporama de conseils utiles.</a> \n-   Consultez ce guide de débogage destiné aux <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">enseignants</a>  pour être prêt à aider les élèves à détecter et à corriger les erreurs dans leur code. \n-   Programmation en binôme - Décidez si vous voulez que les élèves s'adonnent à la programmation en binôme. Regardez cette <a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">vidéo</a> et consultez cette</a> page d' <a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">assistance pour plus d'informations sur la programmation par paires.\n-   Téléchargement personnalisé de sprites - Bien que cela soit présenté dans les leçons ultérieures, vous pouvez choisir d'apprendre aux élèves à télécharger leurs propres costumes et arrière-plans de sprites avec cette vidéo. <a href=\"https://youtu.be/CHipUGfL_0M\" target=\"_blank\"></a>",
+          "preparation": "-   Étudier et complétez vous-même le tutoriel en ligne.\n-   Étudier les diapositives et déterminer les périodes à impartir au temps de travail indivduel des élèves et à l'enseignement en groupe.\n-   Préparer des pense-bêtes ou du papier brouillon pour chaque élève lors de la discussion de clôture.\n-   Vérifier la technologie à votre disposition et voir s'il y a des problèmes à résoudre au préalable. \n\n##### Facultatif :\n\n-   Consulter cette <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">présentation de conseils utiles.</a> \n-   Consulter ce guide de déboggage destiné aux <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">enseignants</a>  pour être prêt à aider les élèves à détecter et à corriger les erreurs dans leur code. \n-   Programmation en binôme - Décidez si vous souhaitez que les élèves fassent de la programmation en binôme. Regarder cette <a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">vidéo</a> et consulter cette</a> page d'assistance<a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\"> pour plus d'informations sur la programmation en binômes.\n-   Téléchargement personnalisé des sprites - Bien que cela n'aparaisse que plus tard dans les leçons, vous pouvez quand même décider d'enseigner aux élèves à télécharger leurs propres costumes et arrière-plans pour sprites à l'aide de cette <a href=\"https://youtu.be/CHipUGfL_0M\" target=\"_blank\">vidéo</a>.",
           "purpose": "Les étudiants créent une application de guide touristique dans le cadre d'une expérience d'apprentissage interactive qui intègre plusieurs domaines. En combinant des concepts informatiques avec du contenu de géographie, la leçon vise à aider les élèves à mieux comprendre les deux matières et à voir leurs liens. Cette leçon vise à permettre aux élèves d'appliquer leurs compétences de codage dans un contexte réel en créant une application de guide touristique qui met en évidence les points de repère, les événements culturels et les sites historiques importants dans un lieu géographique donné.",
           "student_overview": "Dans cette leçon, vous allez explorer les cartes ! Les cartes vous aident à savoir où aller. Ils racontent également des histoires sur les personnes qui composent un lieu. \n\nAvec le code, vous allez animer des sprites sur un arrière-plan pour créer une carte interactive."
         },
@@ -5344,7 +5449,7 @@
         "csc-mappinglandmarks-2023/Local Landmarks - Coding Your Project": {
           "name": "Codage de ma carte",
           "overview": "Dans cette leçon, les élèves utilisent les plans de projet du cours précédent pour créer leur carte interactive. Les étudiants peuvent en être à différents stades de leur plan.\n\nUne fois que les élèves passeront à l'ordinateur, ils suivront une progression de niveau qui les guidera tout au long du processus consistant à définir un arrière-plan, à créer un guide touristique, à lui faire dire « Bienvenue », à le faire bouger et à ajouter au moins deux points de repère qui incitent le guide à dire quelque chose lorsqu'il le touche. \n\nNotez qu'il s'agit d'une progression de projet, ce qui signifie que le code des élèves les suivra d'un niveau à l'autre. Encouragez les élèves à appuyer sur « Exécuter » à chaque niveau pour enregistrer leur code avant de passer au niveau suivant.\n\nLa leçon se termine par une rapide visite de la galerie en préparation de la leçon suivante, au cours de laquelle les élèves font part de leurs projets à la classe. ",
-          "preparation": "-   Passez en revue et complétez vous-même le didacticiel en ligne.\n-   Préparez-vous à retourner les guides de planification de la leçon précédente. \n-   Envisagez des stratégies de soutien pour les élèves qui ne se sentent peut-être pas confiants ou prêts à démarrer leur projet créatif. \n-   Tenez compte de ces options d'extensions connexes ([link](https://studio.code.org/s/csc-mappinglandmarks-2023/lessons/3#activity-5197066))\n\n##### Facultatif :\n\n-   Codez votre propre carte à titre d'exemple pour les étudiants\n-   Consultez ce diaporama de conseils utiles. <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\"></a> \n-   Consultez ce guide de débogage destiné aux <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">enseignants</a>  pour être prêt à aider les élèves à détecter et à corriger les erreurs dans leur code. ",
+          "preparation": "-   Étudiez et complétez vous-même le tutoriel en ligne.\n-   Préparez-vous à rendre les guides de planification de la leçon précédente. \n-   Envisagez des stratégies de soutien pour les élèves qui ne se sentent peut-être pas suffisamment confiants ou prêts à démarrer leur projet créatif. \n-   Prendre en considération ces options pour aller plus loin connexes ([lien](https://studio.code.org/s/csc-mappinglandmarks-2023/lessons/3#activity-5197066)).\n\n##### Facultatif :\n\n-   Codez votre propre carte à titre d'exemple pour les élèves\n-   Consultez ce <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">diaporama de conseils utiles</a>.\n-   Consultez ce guide de débogage destiné aux <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">enseignants</a>  pour être prêt à aider les élèves à détecter et à corriger les erreurs dans leur code. ",
           "purpose": "Cette leçon vise à offrir une expérience d'apprentissage riche et engageante qui combine l'informatique et la géographie et aide les élèves à développer une gamme d'aptitudes et de compétences pertinentes dans le monde d'aujourd'hui. En codant leur propre application de guide touristique, les élèves peuvent explorer les caractéristiques géographiques, les événements culturels et les sites historiques d'un lieu donné. Ils peuvent exprimer leur compréhension et leur appréciation de cet endroit par le biais du code et de la technologie. La leçon met également l'accent sur l'importance de la planification, de la résolution de problèmes et de l'expression personnelle dans le codage.",
           "student_overview": "Il est maintenant temps de créer votre carte avec un guide touristique qui visitera chaque point de repère. Vous suivrez le plan que vous avez conçu lors du dernier cours. Suivez attentivement les instructions de chaque niveau. Dans ce projet, votre code vous suivra de niveau en niveau. "
         },
@@ -5358,7 +5463,7 @@
         "csc-starquilts-2023/Native American Star Quilts (beta)": {
           "name": "Couvre-lits en forme d'étoile amérindienne",
           "overview": "Dans cette leçon Unplugged, les élèves découvriront les Native American Star Quilts et leur importance. Ensuite, les élèves créeront une étoile à 6 branches sur du papier. L'un des principaux objectifs est de discuter des motifs de la forme. Ces idées seront essentielles pour les parties de codage en ligne de l'activité ultérieurement. ",
-          "preparation": "-   Parcourez les niveaux et examinez les diapositives des leçons\n-   Décidez du rythme entre le temps de travail des élèves et l'enseignement en groupe complet.\n-   Examinez ces options d'extension connexes (lien) à explorer après la dernière leçon.\n\n##### Facultatif :\n\n-   Consultez ce <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">diaporama de conseils utiles.</a> \n-   Consultez ce guide de débogage destiné aux <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">enseignants</a>  pour être prêt à aider les élèves à détecter et à corriger les erreurs dans leur code. \n-   Programmation en binôme - Décidez si vous voulez que les élèves s'adonnent à la programmation en binôme. Regardez cette <a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">vidéo</a> et consultez cette</a> page d' <a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">assistance pour plus d'informations sur la programmation par paires.",
+          "preparation": "-   Parcourir les niveaux et étuiderles diapositives des leçons\n-   Décidez du rythme entre le temps de travail des élèves et l'enseignement en groupe complet.\n-   Envisager d'explorer ces options pour aller plus loin connexes (lien) après la dernière leçon.\n\n##### Facultatif :\n\n-   Consultez ce <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">diaporama de conseils utiles.</a> \n-   Consultez ce guide de débogage destiné aux <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">enseignants</a> pour être prêt à aider les élèves à détecter et à corriger les erreurs dans leur code. \n-   Programmation en binôme - Décidez si vous souhaitez que les élèves fassent de la programmation en binôme. Regarder cette <a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">vidéo</a> et consulter cette</a> page d'assistance<a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\"> pour plus d'informations sur la programmation en binômes.",
           "purpose": "Aujourd'hui, vous apprendrez tout sur Star Quilts. Ensuite, vous utiliserez un crayon, du papier et des couleurs pour commencer à concevoir votre propre forme d'étoile à 6 branches. Soyez à l'affût des modèles !"
         },
         "csc-starquilts-2023/Getting Started with The Artist (beta)": {
@@ -5370,7 +5475,7 @@
         "csc-starquilts-2023/Code Your Star Quilt (beta)": {
           "name": "Couvre-lit Coding My Star",
           "overview": "Dans la dernière leçon de cette activité, les élèves sont prêts à construire leur propre Star Quilt. Les élèves construiront une pointe de l'étoile, puis boucleront leur code pour obtenir une courtepointe en forme d'étoile traditionnelle à 8 points. Les courtepointes Star sont destinées à être offertes aux étudiants afin qu'ils puissent partager leur projet avec quelqu'un de spécial.",
-          "preparation": "-   Parcourez les niveaux et examinez les diapositives des leçons\n-   Décidez du rythme entre le temps de travail des élèves et l'enseignement en groupe complet.\n-   Tenez compte de ces options d'extension connexes ([link](https://studio.code.org/s/csc-starquilts-2023/lessons/3#activity-4365328)) à explorer après la dernière leçon.\n\n##### Facultatif :\n\n-   Consultez ce guide de débogage destiné aux <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">enseignants pour être prêt à aider les élèves</a>  à détecter et à corriger les erreurs dans leur code. \n-   Programmation en binôme - Décidez si vous voulez que les élèves s'adonnent à la programmation en binôme. Regardez cette <a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">vidéo</a> et consultez cette</a> page d' <a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">assistance pour plus d'informations sur la programmation par paires.",
+          "preparation": "-   Parcourir les niveaux et étuiderles diapositives des leçons\n-   Décidez du rythme entre le temps de travail des élèves et l'enseignement en groupe complet.\n-   Envisager d'explorer ces options pour aller plus loin connexes ([lien](https://studio.code.org/s/csc-starquilts-2023/lessons/3#activity-4365328)) après la dernière leçon.\n\n##### Facultatif :\n\n-   Consultez ce guide de débogage destiné aux <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">enseignants</a> pour être prêt à aider les élèves à détecter et à corriger les erreurs dans leur code. \n-   Programmation en binôme - Décidez si vous souhaitez que les élèves fassent de la programmation en binôme. Regardez cette <a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">vidéo</a> et consultez cette</a> page d'assistance<a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\"> pour plus d'informations sur la programmation en binômes.",
           "purpose": "Aujourd'hui, nous allons créer le code pour créer notre propre courtepointe en forme d'étoile. N'oubliez pas que dans la tradition amérindienne, offrir des couettes en forme d'étoile lors d'occasions spéciales exprime l'amour, l'honneur et le respect des autres. Une couette numérique en forme d'étoile est une version moderne de cette tradition qui vous permet de partager votre amour et votre appréciation avec les autres d'une manière nouvelle et créative. Lorsque nous aurons terminé, assurez-vous de partager votre couette étoilée avec quelqu'un que vous aimez et appréciez.",
           "student_overview": "Aujourd'hui, nous allons créer le code pour créer notre propre courtepointe en forme d'étoile. N'oubliez pas que dans la tradition amérindienne, offrir des couettes en forme d'étoile lors d'occasions spéciales exprime l'amour, l'honneur et le respect des autres. Une couette numérique en forme d'étoile est une version moderne de cette tradition qui vous permet de partager votre amour et votre appréciation avec les autres d'une manière nouvelle et créative. Lorsque nous aurons terminé, assurez-vous de partager votre couette étoilée avec quelqu'un que vous aimez et appréciez."
         },
@@ -6636,13 +6741,13 @@
           "student_overview": "Utilise des événements pour créer une histoire ou un jeu interactif."
         },
         "how-ai-works-2023/Introduction to Machine Learning": {
-          "overview": "Cette leçon est centrée sur [Comment fonctionne l'IA : qu'est-ce que l'apprentissage automatique ?](https://youtu.be/KHbwOetbmbs?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) vidéo de la [série de vidéos How AI Works](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Regardez d'abord cette vidéo avant d'explorer le plan de cours.\n\nDans cette leçon, les élèves découvrent une forme d'intelligence artificielle appelée apprentissage automatique et la façon dont ils peuvent utiliser le processus de résolution de problèmes pour entraîner un robot à résoudre des problèmes. Ils participent à trois activités d'apprentissage automatique au cours desquelles un robot, AI Bot, apprend à détecter des modèles chez les poissons.\n\nCette leçon peut être enseignée seule ou dans le cadre d'une séquence de 7 leçons sur le fonctionnement de l'IA - [cliquez ici pour voir toutes les leçons de cette séquence](https://code.org/ai/how-ai-works)."
+          "overview": "Cette leçon s'articule autour de la vidéo [Comment fonctionne l'IA : Qu'est-ce que l'apprentissage automatique ?](https://youtu.be/KHbwOetbmbs?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) dans la [série vidéo Comment fonctionne l'IA](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Regardez d'abord cette vidéo avant d'étudier le plan de cours.\n\nDans cette leçon, les élèves découvriront une forme d'intelligence artificielle qu'on appelle l'apprentissage automatique et apprendront comment ils peuvent utiliser le Processus de Résolution de Problèmes pour entraîner un robot à résoudre des problèmes. Ils participeront à trois activités d'apprentissage automatique au cours desquelles un robot, nommé Bot IA, apprendra à détecter des schémas chez les poissons.\n\nCette leçon peut être enseignée seule ou dans le cadre d'une séquence de 7 leçons sur comment fonctionne l'IA - [cliquer ici pour voir toutes les leçons de cette séquence](https://code.org/ai/how-ai-works)."
         },
         "how-ai-works-2023/Computer Vision": {
           "name": "Vision par ordinateur",
-          "overview": "Cette leçon est centrée sur la[0] vidéo [How AI Works : Computer Vision] de la [série de vidéos How AI Works](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Regardez d'abord cette vidéo avant d'explorer le plan de cours.\n\nLes élèves apprennent comment fonctionne la vision par ordinateur. Ils examinent d'abord les illusions d'optique pour identifier les traits du dessin que leurs yeux ont remarqués. Les élèves regardent une vidéo expliquant la vision par ordinateur et comment un ordinateur « voit ». Ils conçoivent un algorithme qui utilise un réseau pour déterminer le nombre affiché sur l'écran à sept segments. Enfin, les élèves testent leur algorithme.\n\nCette leçon peut être enseignée seule ou dans le cadre d'une séquence de 7 leçons sur le fonctionnement de l'IA - [cliquez ici pour voir toutes les leçons de cette séquence](https://code.org/ai/how-ai-works).",
-          "preparation": "-   Imprimez des copies du guide d'activités du réseau de vision par ordinateur pour chaque groupe\n-   (Facultatif) Imprimez des copies du Seven Segment Display Manipulative",
-          "student_overview": "Découvrez comment fonctionne la vision par ordinateur en concevant un algorithme pour détecter les nombres."
+          "overview": "Cette leçon s'articule autour de la vidéo [Comment fonctionne l'IA : Vision par ordinateur](https://youtu.be/2hXG8v8p0KM?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) de la [série vidéo Comment fonctionne l'IA](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Regardez d'abord cette vidéo avant de vous lancer dans le plan de cours.\n\nLes élèves apprendront comment fonctionne la vision par ordinateur. Ils examineront d'abord des illusions d'optique pour identifier quelles caractéristiques des dessins leurs yeux remarquent. Les élèves regarderont une vidéo qui explique la vision par ordinateur et comment un ordinateur « voit ». Ils concevront un algorithme qui utilise un réseau pour déterminer quel nombre est affiché sur un écran à sept segments. Enfin, les élèves testeront leur algorithme.\n\nCette leçon peut être enseignée seule ou dans le cadre d'une séquence de 7 leçons sur le fonctionnement de l'IA - [cliquez ici pour voir toutes les leçons de cette séquence](https://code.org/ai/how-ai-works).",
+          "preparation": "-   Imprimer des copies du guide de l'activité « réseau de vision par ordinateur » pour chaque groupe\n-   (Facultatif) Imprimer des copies du manipulatif « écran à sept segments »",
+          "student_overview": "Apprendre comment fonctionne la vision par ordinateur en concevant un algorithme qui détecte les nombres."
         },
         "how-ai-works-2023/Neural Networks": {
           "name": "Réseaux neuronaux",
@@ -6677,9 +6782,6 @@
           "name": "Comment fonctionne l'IA en un jour",
           "overview": "⚠️ Cette leçon est destinée aux classes qui souhaitent montrer l'intégralité de la [série de vidéos How AI Works](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) en une seule journée\\*\\*. Il n'est pas destiné à être enseigné en séquence avec les autres leçons de cette unité, qui présente chaque vidéo un jour à la fois.\n\nLes élèves suivent chaque vidéo en faisant correspondre le vocabulaire de la vidéo, puis en répondant à une question de réflexion sur chaque vidéo. Le plan de cours et les diapositives sont très limités et ouverts pour permettre l'improvisation et la personnalisation en fonction de votre classe.",
           "preparation": "-   Imprimez le guide d'activités\n-   Projetez les diapositives sur un vidéoprojecteur"
-        },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "L'Heure de Code 2013"
         },
         "applab-intro/Intro to App Lab": {
           "name": "Introduction au Labo des Applis",
@@ -6823,9 +6925,8 @@
           "student_overview": "Résumé du Tutoriel : Tout d'abord, les élèves classent les objets en tant que « poisson » ou « pas poisson » pour tenter d'éliminer les déchets de l'océan. Ensuite, les élèves élargiront leur ensemble de données d'entraînement pour inclure d'autres créatures marines. Dans la deuxième partie de l'activité, les élèves choisiront leurs propres étiquettes à appliquer aux images de poissons générés aléatoirement. Ces données de formation sont utilisées pour un modèle d'apprentissage automatique qui devrait ensuite être capable d'étiqueter de nouvelles images par ses propres moyens."
         },
         "outbreak/Outbreak": {
-          "overview": "Cette leçon conjugue le **renforcement des compétences** autour d'événements avec un **mini-projet** où les élèves peuvent créer leur propre simulation informatique dans le Labo Sprite. Ils étudieront la simulation pour comprendre à quelle vitesse un virus peut se propager et ce qui peut être fait pour le ralentir. ",
-          "preparation": "- Parcourez les casse-têtes pour trouver des problèmes potentiels pour votre groupe scolaire.\n- Assurez-vous que chaque élève ait bien un journal de réflexion. \n",
-          "purpose": "Dans la leçon précédente, les élèves ont recueilli et interprété les données d'une simulation simple. Dans cette leçon, ils suivront des instructions afin de coder leur propre modèle de simulation. Les connaissances préalables des élèves au sujet des épidémies de virus dans le monde réel seront appliquées à un scénario fictif. ",
+          "name": "Codage d'une simulation",
+          "overview": "Cette leçon combine le **renforcement des compétences** autour d'événements avec un **mini-projet** où les élèves peuvent créer leur propre simulation informatique dans le Labo des Sprites. Ils étudieront la simulation pour comprendre à quelle vitesse un virus peut se propager et ce qui peut être fait pour le ralentir. ",
           "student_overview": "Un virus est arrivé à Monstreville ! Apprenez à créer un simulateur de virus et aidez les monstres à guérir. "
         },
         "playlab/Play Lab": {
@@ -6854,72 +6955,6 @@
         "text-compression/Text Compression": {
           "name": "Compression de texte",
           "student_overview": "À un moment donné, il arrive qu'on atteigne une certaine limite matérielle en termes de vitesse d'envoi des bits. Par conséquent, si nous voulons envoyer une grande quantité d'informations plus rapidement, nous devons trouver un moyen qui permet de reproduire les mêmes informations avec un nombre réduit de bits. Nous devons donc compresser les données.  "
-        },
-        "applab-1hour/Room Escape": {
-          "name": "S'Échapper de la Pièce"
-        },
-        "applab-2hour/Digital Design": {
-          "name": "Concept Numérique"
-        },
-        "applab-2hour/Event Driven Programming": {
-          "name": "La Programmation Événementielle"
-        },
-        "applab-2hour/Basic App Functionality": {
-          "name": "Fonctionnalité De Base De l'Application"
-        },
-        "applab-2hour/Getters and Setters": {
-          "name": "Accesseurs en lecture et en écriture"
-        },
-        "frequency_analysis/Frequency Analysis": {
-          "name": "Analyse de fréquence"
-        },
-        "gamelab/Start and End Screens": {
-          "name": "Écrans de Début et de Fin"
-        },
-        "gamelab/Start and End Screens2": {
-          "name": "Écrans de Début et de Fin2"
-        },
-        "k1hoc2017/Collector Hour of Code 2017": {
-          "name": "Hour of Code 2017 de Collecteur"
-        },
-        "netsim/Overview and Setup Instructions": {
-          "name": "Vue d’ensemble et consignes d’installation"
-        },
-        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
-          "name": "Peer to Peer - Transmetre les Bits sur un Fil Commun"
-        },
-        "netsim/Peer to Peer - Sending Numbers": {
-          "name": "Peer to Peer - Envoyer des Nombres"
-        },
-        "netsim/Peer to Peer - Sending Ascii": {
-          "name": "Peer to Peer - Envoyer Ascii"
-        },
-        "netsim/Broadcasting messages": {
-          "name": "Diffusion de messages"
-        },
-        "netsim/Routers and addresses": {
-          "name": "Routeurs et Adresses"
-        },
-        "netsim/Packets and Reliability": {
-          "name": "Paquets et Fiabilité"
-        },
-        "netsim/Manual DNS": {
-          "name": "DNS manuel"
-        },
-        "netsim/Automatic DNS node": {
-          "name": "Nœud DNS automatique"
-        },
-        "netsim/Internet Simulator Freeplay": {
-          "name": "Simulateur d'Internet en libre accès"
-        },
-        "odometer/Odometer Widget": {
-          "name": "Widget d'odomètre"
-        },
-        "poetry-hoc3/lesson-1": {
-          "name": "Étude de l'humeur"
-        },
-        "vigenere/Vigenere": {
-          "name": "Vigenère"
         },
         "allthethings/Jigsaw": {
           "name": "Casse-tête"
@@ -7059,6 +7094,21 @@
         "allthethings/lesson-49": {
           "name": "Musique"
         },
+        "applab-1hour/Room Escape": {
+          "name": "S'Échapper de la Pièce"
+        },
+        "applab-2hour/Digital Design": {
+          "name": "Concept Numérique"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "La Programmation Événementielle"
+        },
+        "applab-2hour/Basic App Functionality": {
+          "name": "Fonctionnalité De Base De l'Application"
+        },
+        "applab-2hour/Getters and Setters": {
+          "name": "Accesseurs en lecture et en écriture"
+        },
         "csd-post-survey/CSD post-course survey": {
           "name": "Enquête Post-Cours Auprès des Étudiants de CSD (2018 - 2019)"
         },
@@ -7069,7 +7119,7 @@
           "name": "Le labyrinthe"
         },
         "20-hour/Computational Thinking": {
-          "name": "Algorithmique"
+          "name": "La pensée computationnelle"
         },
         "20-hour/Graph Paper Programming": {
           "name": "Programmation sur papier quadrillé"
@@ -7234,7 +7284,7 @@
           "name": "Artiste: Boucles imbriquées"
         },
         "course3/Computational Thinking": {
-          "name": "Algorithmique"
+          "name": "La pensée computationnelle"
         },
         "course3/Maze": {
           "name": "Labyrinthe"
@@ -7368,10 +7418,58 @@
         "deepdive-debugging/Debugging for CDEF Educators": {
           "name": "Débogage pour les Éducateurs CDEF"
         },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "Analyse de fréquence"
+        },
+        "gamelab/Start and End Screens": {
+          "name": "Écrans de Début et de Fin"
+        },
+        "gamelab/Start and End Screens2": {
+          "name": "Écrans de Début et de Fin2"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "L'Heure de Code 2013"
+        },
         "jigsaw/Jigsaw": {
           "name": "Casse-tête",
           "overview": "Cette leçon donnera aux élèves une idée de ce à quoi s'attendre lorsqu'ils se dirigeront vers le laboratoire informatique. Elle commence par une brève discussion les initiant aux manières, dans le laboratoire informatique, puis ils progresseront dans l'utilisation d'un ordinateur pour résoudre des casse-têtes en ligne.",
           "student_overview": "Clique et fais glisser pour terminer les casse-têtes."
+        },
+        "k1hoc2017/Collector Hour of Code 2017": {
+          "name": "Hour of Code 2017 de Collecteur"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "Vue d’ensemble et consignes d’installation"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "Peer to Peer - Transmetre les Bits sur un Fil Commun"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "Peer to Peer - Envoyer des Nombres"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "Peer to Peer - Envoyer Ascii"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "Diffusion de messages"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Routeurs et Adresses"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "Paquets et Fiabilité"
+        },
+        "netsim/Manual DNS": {
+          "name": "DNS manuel"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "Nœud DNS automatique"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "Simulateur d'Internet en libre accès"
+        },
+        "odometer/Odometer Widget": {
+          "name": "Widget d'odomètre"
         },
         "pixelation/Black & White Pixelation Tutorial": {
           "name": "Pixellisation en Noir et Blanc Tutoriel"
@@ -7387,6 +7485,18 @@
         },
         "pixelation/Color Pixelation Freeplay": {
           "name": "Pixellisation en Couleur libre"
+        },
+        "poetry-hoc3/lesson-1": {
+          "name": "Étude de l'humeur"
+        },
+        "vigenere/Vigenere": {
+          "name": "Vigenère"
+        },
+        "dance-ai-2023/lesson-1": {
+          "name": "Soirée dansante : Édition I.A.",
+          "overview": "Le présent cours permet aux apprenants de tous âges de s'initier au codage et à l'intelligence artificielle dans un environnement sûr et créatif. Ce programme a été conçu pour des apprenants de tous âges mais nécessite de la lecture. Cette activité nécessite que les élèves jouent des sons, car le didacticiel a été conçu pour réagir à la musique.",
+          "preparation": "### Comment planifier votre heure de code\n\nTrouvez les ressources dont vous avez besoin pour planifier, mettre en œuvre et célébrer l'Heure du code dans votre école [here](https://hourofcode.com/us/how-to) !",
+          "purpose": "Faire du codage une expérience passionnante et agréable est essentiel pour cultiver l'intérêt pour l'informatique. Cette formation est remplie de moments de joie, où les élèves utilisent le code pour créer une chorégraphie de couleurs et de mouvements à l'aide de simples blocs de codage à glisser-déposer. Les élèves feront la connaissance d'un robot IA qu'ils piloteront pour les aider à trouver les effets qui correspondent le mieux à l'ambiance de leur danse."
         }
       }
     }

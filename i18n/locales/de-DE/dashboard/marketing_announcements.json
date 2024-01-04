@@ -1,0 +1,114 @@
+{
+  "banners": {
+    "csleadersprize": {
+      "title": "",
+      "body": "",
+      "buttonText": "Mehr erfahren"
+    },
+    "csjourneys-22": {
+      "title": "",
+      "body": "",
+      "buttonText": "Mehr erfahren"
+    },
+    "hoc-more": {
+      "title": "",
+      "body": "Die Hour of Code-Website hat mehr als 100 Informatik-Aktivitäten für alle Altersgruppen- und Erfahrungsstufen, die von Code.org und Partnern entwickelt wurden.",
+      "buttonText": ""
+    },
+    "superhero": {
+      "title": "",
+      "body": "",
+      "buttonText": "Mehr erfahren"
+    },
+    "csjourneys": {
+      "title": "",
+      "body": "",
+      "buttonText": "Mehr erfahren"
+    },
+    "class-schedule-survey": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "back-to-school-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "Mehr erfahren"
+    },
+    "teacher-apps-open-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "Mitmachen"
+    },
+    "teacher-apps-closing-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "Mitmachen"
+    },
+    "teacher-apps-nominate-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Benenne einen Lehrer"
+    },
+    "teacher-apps-stillon-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Mitmachen"
+    },
+    "home-learning-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Projektideen anzeigen"
+    },
+    "soonhoc-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "codebytes-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Mehr erfahren"
+    },
+    "ai-2020": {
+      "title": "Erforschen Sie künstliche Intelligenz und maschinelles Lernen",
+      "body": "",
+      "buttonText": "Mehr erfahren"
+    },
+    "congrats-certificate-share": {
+      "title": "",
+      "body": "",
+      "buttonText": "Start"
+    },
+    "coldplay": {
+      "title": "",
+      "body": "",
+      "buttonText": "Ausprobieren"
+    },
+    "ai-launch-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": "Mehr erfahren"
+    },
+    "ai-pl-launch-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": "Mehr erfahren"
+    },
+    "state-of-cs-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "hoc-2023": {
+      "title": "Hour of Code – Kreativität mit KI",
+      "body": "Schließen Sie sich Millionen Menschen auf der ganzen Welt an und veranstalten Sie eine Hour of Code mit oder ohne KI und lernen Sie, wie KI funktioniert. Jeder kann überall mitmachen, auch ohne Informatikkenntnisse oder Erfahrung.",
+      "buttonText": "Mehr erfahren"
+    },
+    "hoc-2023-dance-ai": {
+      "title": "",
+      "body": "Lernen Sie etwas über Konzepte der künstlichen Intelligenz (KI) und gestalten Sie Ihre eigene virtuelle Tanzparty mit den besten Künstlern von heute. Wählen Sie aus dutzenden Song aus, um alle SchülerInnen zu erreichen, egal welchen Musikgeschmack sie haben. Zeigen Sie, was Sie können!",
+      "buttonText": "Mehr erfahren"
+    }
+  }
+}

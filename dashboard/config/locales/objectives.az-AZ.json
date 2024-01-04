@@ -533,12 +533,6 @@
         "9ea5d8fd-1b7d-4655-b4b1-75fd09545838": {
           "description": "Yaradıcı artefaktı digər tələbələrlə paylaşın."
         },
-        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
-          "description": ""
-        },
-        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
-          "description": "Sprite və hadisələrdən istifadə edərək interaktiv animasiya yaradın."
-        },
         "80c42d14-ae97-41e5-9f54-e2d301214878": {
           "description": "Məsələnin müxtəlif həll yollarını müəyyənləşdirin."
         },
@@ -1067,8 +1061,134 @@
         "d2669646-8580-4bb3-a6e0-54961b42a029": {
           "description": "Ardıcıllıqlardan və hadisə idarəçilərindən istifadə edərək interaktiv cizgi bir hekayə yaradın."
         },
+        "181321ab-df5f-438c-952d-10f818586439": {
+          "description": "Bioloji uyğunlaşma və təkamülün kod modelləri. "
+        },
+        "24aecd42-56d2-46ee-a935-a25970ea4e3a": {
+          "description": "Yerli mühitdə heyvanların uyğunlaşmalarını müzakirə edin"
+        },
         "33f3d6db-54e2-4c96-b11a-511672ae3be9": {
           "description": "Sprite və hadisələrdən istifadə edərək interaktiv animasiya yaradın."
+        },
+        "c470f27d-c0c0-40e4-85bc-8453a3500f80": {
+          "description": "Yeni obrazlar yaradın və kostyumlar və yerlər təyin edin."
+        },
+        "cd4283af-9ccd-4a83-bc9d-16acfc47937a": {
+          "description": "Heyvanların ətraf mühitdəki dəyişikliklər nəticəsində necə inkişaf etdiyini və dəyişdiyini göstərin."
+        },
+        "36e2c3bf-e310-4aba-bdda-019164e55231": {
+          "description": "Kompüter elmindəki davranışlardan istifadə edərək interaktiv animasiya yaradın."
+        },
+        "8128f862-0d3e-4a07-b488-1fb2f03752fe": {
+          "description": "Heyvanların necə hərəkət etməsi və davranışı ilə bağlı oxşarlıqları və fərqləri müzakirə edin"
+        },
+        "846b7d3c-56e3-44b4-80dd-47431ae2a040": {
+          "description": "Qruplarda artan sağ qalma nümunələrini göstərin."
+        },
+        "e89ead7e-816f-4133-b72e-09f37281c69c": {
+          "description": "Kodla davranış uyğunlaşmalarının modellərini inkişaf etdirin."
+        },
+        "ecd731ff-0e81-46d4-bf79-407f4be474d7": {
+          "description": "Miqrasiyanı elmi dildən istifadə edərək sağ qalma mexanizmi kimi izah edin."
+        },
+        "a29abd98-2d1c-4385-adeb-209e6cbb0eaa": {
+          "description": "Kompüter elmindəki davranışlardan istifadə edərək interaktiv animasiya yaradın"
+        },
+        "48ed70e5-f9cb-4c65-9d5e-64240219fcd0": {
+          "description": "Uydurma mühit dəyişiklikləri nəzərə alınmaqla yeni, xəyali və ya hipotetik uyğunlaşmaları kodlayın"
+        },
+        "317eb9d8-664f-496f-80eb-0029f2a0dafc": {
+          "description": "Kodla davranış uyğunlaşmalarının modellərini inkişaf etdirin."
+        },
+        "d0c5f886-4268-4eb7-b499-fa86868fda17": {
+          "description": "Heyvanların ətraf mühitdəki dəyişikliklər nəticəsində necə inkişaf etdiyini və dəyişdiyini göstərin."
+        },
+        "46367e69-aa28-4aa2-b644-370d4720cb63": {
+          "description": "Rəqəmsal kitab örtüyü yaratmaq üçün lazım olan kodlaşdırma anlayışlarını və vasitələrini öyrənin."
+        },
+        "f816d140-2662-4b07-838a-356b1341298f": {
+          "description": "Qrafik dizayn seçimlərinin müşahidələrini və şərhlərini sinif müzakirələri və ya yazılı cavablar vasitəsilə ifadə edin."
+        },
+        "be255442-649e-4cc4-849d-293d6e934e84": {
+          "description": "Kitabdakı personajlarla proqramdakı obrazlar, eləcə də kitabdakı parametrlər və proqramdakı arxa planlar arasındakı əlaqəni anlayın."
+        },
+        "2779cb4f-6ca1-4a7f-ae2d-df66a9873fad": {
+          "description": "Bir tərəfdaşa isti və sərin rəy verməklə və alınan rəyləri öz işlərini yenidən nəzərdən keçirmək üçün tətbiq etməklə konstruktiv rəy vermək və almaq qabiliyyətini nümayiş etdirin."
+        },
+        "28a41551-e8f3-4421-8671-cc69e6cf6f05": {
+          "description": "Bir hekayəni effektiv şəkildə ümumiləşdirməklə, o cümlədən iki əsas personaj və süjetdəki rollarını təqdim etməklə ümumiləşdirmə bacarıqlarını inkişaf etdirin."
+        },
+        "62b336d6-02ad-446f-a4f9-54dc7bdfae1f": {
+          "description": "Kitabdakı personajlarla proqramdakı obrazlar, eləcə də kitabdakı parametrlər və proqramdakı arxa planlar arasındakı əlaqəni anlayın."
+        },
+        "0849e0ca-6bc7-486b-b9e4-0ef588648f2b": {
+          "description": "Rəqəmsal kitab örtüyü üçün kodlaşdırma seçimlərini bildirmək üçün kitabın personajları, parametrləri və hadisələri haqqında anlayışlarından istifadə edin."
+        },
+        "59dc58ad-cbc8-4d27-928f-a06fa46e705a": {
+          "description": "Xüsusi dizayn seçimlərinin kitab örtüklərinin ümumi təsirinə və mesajına necə töhfə verdiyini müzakirə edin."
+        },
+        "ce3130a2-728b-4b6f-bd20-c7048c833388": {
+          "description": "Kitab qapağı layihəsi üçün lazım olan kodlaşdırma bloklarını və anlayışlarını müəyyənləşdirin."
+        },
+        "8fbf7b5a-fbc1-42a1-b652-c99bd44dca4f": {
+          "description": "Öz rəqəmsal kitab örtüyü layihələri üzərində düşünün və daxil etməyi seçdikləri dizayn elementlərini və bu seçimlərin səbəblərini müəyyənləşdirin."
+        },
+        "d1945b16-3b38-443e-890a-dab7d81ec812": {
+          "description": "Birgə öyrənmə mühitini təşviq edərək yaşadıqları interaktiv kitab örtüyü tətbiqləri haqqında konstruktiv rəy və düşüncələr verin."
+        },
+        "4094e6da-1294-4686-aefc-b5363d35070a": {
+          "description": "Həddindən artıq balıqçılığın su ekosisteminə təsirinin simulyasiyasını hazırlayın"
+        },
+        "fa9ae023-cf9e-40d1-9128-e260e85bb8c8": {
+          "description": "Təbiətdə səbəb və nəticə ssenarisini göstərmək üçün şərti ifadələrdən istifadə edin."
+        },
+        "fc9e660e-7b37-4a84-b2a8-837fa31efbab": {
+          "description": "Dəniz ekosistemində çox, çox az və ya yalnız lazımi miqdarda yosunun təsirini təhlil edin. "
+        },
+        "621bdd35-b3ad-4df7-af0f-e8ba6e591131": {
+          "description": "Qida zəncirinin bir hissəsindəki dəyişikliklərin bütün ekosistemə necə təsir edə biləcəyini sınaqdan keçirin."
+        },
+        "977ebecc-d561-43b6-a4ad-33ff9807142a": {
+          "description": "Qida zəncirindəki bitki və heyvanlar arasındakı əlaqələri və insan təsirinin təsirlərini təhlil edin."
+        },
+        "ba2554e5-0ad2-4d70-ab12-eab4d31d57e1": {
+          "description": "Yağış meşələri, səhralar, arktika və bataqlıq ərazilər kimi müxtəlif növ ekosistemlərdə qida zəncirini müəyyənləşdirin."
+        },
+        "f3e0667d-0843-4d41-ae79-7ec7911d5ea4": {
+          "description": "Müəyyən bir növün azalması və ya başqa bir növün həddindən artıq böyüməsi kimi problemlə üzləşən ekosistemdə tarazlığı bərpa etmək üçün simulyasiyada kodu dəyişdirin."
+        },
+        "1a27b887-2aa2-4f1b-8137-85395c9d1db8": {
+          "description": "Ətrafdakı dünyanı başa düşmək üçün vasitələr kimi xəritələrin məqsədi və dəyərini daha dərin qiymətləndirmək üçün xəritə istehsalçısının rolu üzərində düşünün."
+        },
+        "fdb3a900-9efd-4710-8096-6108ed735cb6": {
+          "description": "Xəritə layihəsini planlaşdırarkən rəqəmsal xəritələşdirmə işarələri layihəsini daha kiçik vəzifələrə bölərək parçalanmadan istifadə edin."
+        },
+        "2a8ffef0-4b21-4dad-99b2-2cd1e48dbcbb": {
+          "description": "Xəritə istehsalçısının qərarlarına əsasən xəritələrin dəyişə biləcəyi yollarını müəyyənləşdirin."
+        },
+        "9d012f97-41e4-4358-8970-f1be0bdb0254": {
+          "description": "Ulduz yorğanı hazırlamaq və hədiyyə etməyin arxasındakı ənənəvi əhəmiyyəti anlayın"
+        },
+        "b3e48d93-ac56-49c0-ad15-6109d60a6c6b": {
+          "description": "Ulduz yorğanında çoxsaylı təkrarlanan nümunələri müəyyənləşdirin"
+        },
+        "e321a445-412d-447e-a8de-c78464723196": {
+          "description": "Qələm və kağızdan istifadə edərək öz ulduz yorğanlarını dizayn edin"
+        },
+        "65af51b5-9269-4617-8e33-64e96072c136": {
+          "description": "Onların Star Yorğan dizaynını təkrarlamaq üçün Rəssam kodlaşdırma alətindən istifadə edin"
+        },
+        "8a81dbf7-f967-408b-acf5-81304158f196": {
+          "description": "Kodlarında nümunələri müəyyənləşdirin"
+        },
+        "96b5e04f-5a82-475f-9de3-4d81fa8d9c8f": {
+          "description": "Kodlarını daha səmərəli etmək üçün döngələrdən istifadə edin"
+        },
+        "c0741915-7e37-4bd0-8281-c716104a5185": {
+          "description": "Rəssamın çevirdiyi bucaq ilə ulduzda neçə nöqtə olduğu arasındakı əlaqəni yoxlayın"
+        },
+        "d5798a01-93fd-4e33-bbc1-fa94d5680493": {
+          "description": "Kodlarını daha səmərəli etmək üçün döngələrdən istifadə edin"
         },
         "1bd88170-e38e-4c5b-bd62-8107acd68567": {
           "description": "Mətndə məcazi və hərfi dili vurğula"
@@ -1897,15 +2017,6 @@
         },
         "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
           "description": "Kompüter siçanı, trackpad və ya toxunma ekranına istinad edərkən müvafiq terminologiyadan istifadə edin."
-        },
-        "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
-          "description": "Vaxt təyin edilmiş hadisələrə cavab verən proqramlar inkişaf etdirin.\n"
-        },
-        "1e1c0724-7d86-4304-a73b-6f083be036fc": {
-          "description": "Şeirin əhval-ruhiyyəsinin dəyişməsini təsvir edin.\n"
-        },
-        "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
-          "description": "Mətndə məcazi və hərfi dili vurğula\n"
         }
       }
     }

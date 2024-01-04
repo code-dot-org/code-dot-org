@@ -1959,15 +1959,15 @@
         },
         "large_language_model_llm_/how-ai-works/2023": {
           "word": "Model Bahasa Besar (LLM)",
-          "definition": "bentuk tujuan umum AI yang dilatih pada pengetahuan yang sangat, sangat besar"
+          "definition": "AI dengan tujuan umum yang dilatih berdasarkan kumpulan ilmu pengetahuan yang sangat, sangat luas"
         },
         "diffusion_ai/how-ai-works/2023": {
-          "word": "Difusi AI",
-          "definition": "mengubah gambar menjadi noise, dan melatih AI untuk membalikkan proses"
+          "word": "Diffusion AI",
+          "definition": "mengubah gambar menjadi noise, dan melatih AI untuk membalikkan prosesnya"
         },
         "gan_generative_adversarial_network_/how-ai-works/2023": {
-          "word": "GAN (Jaringan Permusuhan Generatif)",
-          "definition": "cara menggunakan dua model AI yang bersaing untuk menghasilkan sesuatu"
+          "word": "GAN (Generative Adversarial Network)",
+          "definition": "cara menggunakan dua model AI yang berlawanan untuk menghasilkan sesuatu"
         },
         "artificial_intelligence/how-ai-works/2023": {
           "word": "Kecerdasan Buatan",
@@ -2295,25 +2295,21 @@
           "word": "Lossless Compression",
           "definition": "algoritma kompresi data yang memungkinkan data asli dipulihkan seperti semula secara sempurna dari data yang dikompresi. Paling umum digunakan untuk kompresi teks (yaitu, kompresi zip)"
         },
-        "code/poem-art/unversioned": {
+        "code/dance-ai/2023": {
           "word": "kode",
-          "definition": "(v) menulis instruksi untuk sebuah komputer."
+          "definition": "(v) menulis kode, atau menulis perintah untuk komputer."
         },
-        "event/poem-art/unversioned": {
+        "event/dance-ai/2023": {
           "word": "Event",
           "definition": "Tindakan yang menyebabkan terjadinya sesuatu."
         },
-        "program/poem-art/unversioned": {
+        "program/dance-ai/2023": {
           "word": "Program",
-          "definition": "Deretan langkah yang telah dikodekan ke sesuatu yang dapat dijalankan oleh mesin."
+          "definition": " Sebuah algoritma yang telah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
         },
-        "mood/poem-art/unversioned": {
-          "word": "Mood",
-          "definition": "ungkapan perasaan, suasana jiwa, atau emosi dalam seni atau tulisan."
-        },
-        "line/poem-art/unversioned": {
-          "word": "Baris",
-          "definition": "(puisi) - bagian dari sebuah puisi yang disusun dalam larik yang berakhir dengan batas kanan."
+        "artificial_intelligence_a_i_/dance-ai/2023": {
+          "word": "Artificial Intelligence (A.I.) ",
+          "definition": "Sebuah program komputer yang mengambil data, mempelajari pola dari data tersebut, lalu membuat keputusan berdasarkan apa yang telah dipelajarinya."
         }
       }
     }

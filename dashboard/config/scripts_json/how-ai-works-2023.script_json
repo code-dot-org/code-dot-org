@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "curriculum_umbrella": "AI",
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_course": true,
@@ -15,7 +16,7 @@
     },
     "new_name": null,
     "family_name": "how-ai-works",
-    "serialized_at": "2023-09-06 16:39:40 UTC",
+    "serialized_at": "2023-11-20 20:33:04 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

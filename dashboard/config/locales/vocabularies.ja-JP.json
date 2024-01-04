@@ -1951,27 +1951,27 @@
         },
         "algorithm/how-ai-works/2023": {
           "word": "アルゴリズム",
-          "definition": "問題を解決したり決定を下したりするための一連のステップ"
+          "definition": "問題解決や意思決定のための一連のステップ"
         },
         "network/how-ai-works/2023": {
           "word": "ネットワーク",
-          "definition": "つながったアイテムの集まり。これらのつながりをたどると、フローチャートのようにアルゴリズムの各ステップを表すことができます。"
+          "definition": "連結されたアイテムの集まり。これらの接続をたどることで、フローチャートのようにアルゴリズムのステップを表すことができます。"
         },
         "large_language_model_llm_/how-ai-works/2023": {
-          "word": "ラージ・ランゲージ・モデル (LLM)",
-          "definition": "非常に大量の知識に基づいて訓練された汎用的な人工知能"
+          "word": "大規模言語モデル (LLM)",
+          "definition": "非常に膨大な知識に基づいて訓練された、汎用型AI"
         },
         "diffusion_ai/how-ai-works/2023": {
-          "word": "ディフュージョン AI",
+          "word": "拡散 AI",
           "definition": "画像をノイズに変換し、そのプロセスを逆にするための AI の訓練"
         },
         "gan_generative_adversarial_network_/how-ai-works/2023": {
-          "word": "GAN (ジェネレーティブ・アドバーサリアル・ネットワーク)",
+          "word": "GAN (敵対的生成ネットワーク)",
           "definition": "競合する 2 つの AI モデルを使って何かを生成する方法"
         },
         "artificial_intelligence/how-ai-works/2023": {
           "word": "人工知能",
-          "definition": "機械が学習して問題を解決する能力。"
+          "definition": "機械の学習能力と問題解決能力。"
         },
         "code/aquatic/unversioned": {
           "definition": "（v）は、コードを記述したり、コンピュータの命令を記述したりします。"
@@ -2288,25 +2288,21 @@
           "word": "可逆圧縮",
           "definition": "圧縮されたデータから元のデータを完全に再構築できるようにするデータ圧縮アルゴリズム。 テキスト圧縮にもっとも一般的に使用されます（zip圧縮など）。"
         },
-        "code/poem-art/unversioned": {
+        "code/dance-ai/2023": {
           "word": "コード",
-          "definition": "（v）コンピューター用の指示を書くこと。"
+          "definition": "（v）は、コードを記述したり、コンピュータの命令を記述したりします。"
         },
-        "event/poem-art/unversioned": {
+        "event/dance-ai/2023": {
           "word": "イベント",
           "definition": "何かを引き起こすアクション。"
         },
-        "program/poem-art/unversioned": {
+        "program/dance-ai/2023": {
           "word": "プログラム",
-          "definition": "コンピューターで実行できる形のプログラムにした一連のステップ。"
+          "definition": "機械が実行できるようにコード化されたアルゴリズム。"
         },
-        "mood/poem-art/unversioned": {
-          "word": "ムード",
-          "definition": "アートや著作物で気持ち、雰囲気、感情を表したもの。"
-        },
-        "line/poem-art/unversioned": {
-          "word": "行",
-          "definition": "（詩） - 右端が余白で終わるように配された詩の小さな単位。"
+        "artificial_intelligence_a_i_/dance-ai/2023": {
+          "word": "人工知能（A.I.）",
+          "definition": "データを取り込み、そのデータからパターンを学習し、学習したことに基づいて意思決定を行うコンピューター・プログラム。"
         }
       }
     }

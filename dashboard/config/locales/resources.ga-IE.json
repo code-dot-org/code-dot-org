@@ -2027,6 +2027,9 @@
           "name": "Feidhmeanna a ghlacann le Paraiméadair",
           "type": "Físeán"
         },
+        "fucntions_devices/csd/2023": {
+          "name": "Feidhmeanna"
+        },
         "teacher_forum_1/csd/2023": {
           "name": "Fóram do Mhúinteoirí"
         },
@@ -2467,11 +2470,6 @@
         },
         "video-text-compression/text-compression/unversioned": {
           "type": "Físeán"
-        },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": "",
-          "type": ""
         }
       }
     }

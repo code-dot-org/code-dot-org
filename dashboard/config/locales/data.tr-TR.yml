@@ -881,7 +881,7 @@ tr:
         csa_wrapper_classes_part_2: 'CSA: Sarıcı Sınıfları Bölüm 2'
         csa_writing_a_method: 'CSA: Yöntem Yazma'
         csc-ecosystems-intro: Ekosistemlere Giriş
-        csc-event-short-intro: Etkinlikler Kısa Giriş
+        csc-event-short-intro: Olaylar için Kısa Tanıtım
         csc-mapmakers-intro: 'CSC: Harita yapımcıları\t'
         csc-poem-art-intro: Giriş Videosu
         csc-poem-art-outro: Çıkış Videosu
@@ -921,6 +921,7 @@ tr:
         csd_gamelab_velocity: Hız
         csd_how_teamwork_works: Takım çalışması Nasıl İşler
         csd_ml_ethics_ai: 'Etik ve Yapay Zeka '
+        csd_ml_how_ai_works: Yapay Zeka Nasıl Çalışır?
         csd_ml_import_model: AI Modelini İçe Aktarma
         csd_ml_intro_ai_lab_july2021: AI (Artırılmış Gerçeklik) Laboratuarı'na Giriş
         csd_ml_intro_to_ai_lab: AI (Artırılmış Gerçeklik) Laboratuarı'na Giriş

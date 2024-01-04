@@ -4859,30 +4859,6 @@
         "85076d8d-1ddf-45cc-b510-0eeddffaff85": {
           "progression_name": "Stage Extras"
         },
-        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
-          "name": "",
-          "description": ""
-        },
-        "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
-          "description": "",
-          "tips": [
-            ""
-          ]
-        },
-        "7acfc985-03d8-4d14-b244-203f8cbf4843": {
-          "name": "",
-          "description": ""
-        },
-        "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
-          "name": ""
-        },
-        "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
-          "description": ""
-        },
-        "b68a11cc-930a-4803-beca-1d4f49ede378": {
-          "name": "",
-          "description": ""
-        },
         "9a692bd5-9de8-4718-9518-f14949953885": {
           "tips": [
             null
@@ -9866,7 +9842,22 @@
             null
           ]
         },
+        "8beb2941-dd64-44f4-9e99-6149c445067a": {
+          "tips": [
+            null
+          ]
+        },
         "500131a4-a22b-4a63-bc0a-d5d4a19c7169": {
+          "tips": [
+            null
+          ]
+        },
+        "a45155ff-19af-43ac-bf11-6ca4001816f4": {
+          "tips": [
+            null
+          ]
+        },
+        "a7d5069b-aa1c-4efa-a8d8-b58bd43a6c7b": {
           "tips": [
             null
           ]
@@ -9881,7 +9872,17 @@
             null
           ]
         },
-        "b2b4b9e6-fe3f-4d2d-a828-1402cc1572e8": {
+        "4ff33db6-6668-4423-8f1d-ad0b25f6da40": {
+          "tips": [
+            null
+          ]
+        },
+        "169c3eed-52d7-4a4b-b7c6-161cf287ed33": {
+          "tips": [
+            null
+          ]
+        },
+        "f1632666-ffc1-457a-832a-c2d3b2d1fc20": {
           "tips": [
             null
           ]
@@ -9896,7 +9897,22 @@
             null
           ]
         },
+        "b2777295-b74f-4240-bb3d-c76b79dde6a9": {
+          "tips": [
+            null
+          ]
+        },
         "9bcab929-d773-4dab-bfb0-d09892056944": {
+          "tips": [
+            null
+          ]
+        },
+        "bedaca2d-4f48-45b4-b6e9-431f6a38cc13": {
+          "tips": [
+            null
+          ]
+        },
+        "221b5029-fcfd-4791-b951-852609cb0198": {
           "tips": [
             null
           ]
@@ -16180,44 +16196,14 @@
           ]
         },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
-          "name": "Introduktion",
-          "description": ""
+          "name": "Introduktion"
         },
         "d63c77c1-4167-4360-ab98-25610934beda": {
           "name": "Udbrud",
-          "description": "",
           "progression_name": "Udbrud"
-        },
-        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
-          "description": "",
-          "progression_name": ""
-        },
-        "60837b14-7f66-4848-9c51-1c6aa9a21ad9": {
-          "description": ""
-        },
-        "13a06294-2f2a-4661-9947-46ed5843913f": {
-          "description": ""
-        },
-        "df13fa93-37df-4188-837d-462c48179625": {
-          "description": "",
-          "progression_name": ""
-        },
-        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
-          "description": "",
-          "progression_name": ""
         },
         "0620e645-f84e-47ca-809b-3dcbe803d83e": {
           "progression_name": "Fri leg"
-        },
-        "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
-          "description": ""
-        },
-        "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
-          "description": ""
-        },
-        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
-          "name": "",
-          "description": ""
         },
         "2c9a4cbc-51ba-45a3-80f6-cb27e681f4ba": {
           "tips": [
@@ -16309,9 +16295,6 @@
             null
           ]
         },
-        "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
-          "name": "Opvarmning"
-        },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [
             null
@@ -16325,39 +16308,63 @@
             null
           ]
         },
-        "b16d189d-d990-44c4-be49-8f81ac81a96e": {
-          "description": "",
+        "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
+          "name": "Opvarmning"
+        },
+        "b9bacf54-bd37-42b8-85fc-bc9d07a50537": {
           "tips": [
-            ""
+            null
           ]
         },
-        "d99fc09e-a586-41df-84b2-e552cc4735e3": {
-          "description": ""
+        "b8daa26e-57e7-4bc5-8a6e-1e541a407c8e": {
+          "tips": [
+            null
+          ]
         },
-        "b6c8c6a3-fe85-4d42-999e-a2ba13f6739a": {
-          "description": ""
+        "c03cf1cb-2946-48c9-aede-76ccf4b787a9": {
+          "tips": [
+            null
+          ]
         },
-        "6fba9dd0-6069-402c-a641-53899ae667e2": {
-          "description": ""
+        "3c17e9fd-b06b-478e-bb56-5734d9344b68": {
+          "tips": [
+            null
+          ]
         },
-        "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102": {
-          "description": ""
+        "913cf29b-f688-4c8b-9834-96c9b75274f5": {
+          "tips": [
+            null
+          ]
         },
-        "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
-          "name": "",
-          "description": ""
+        "f39d7745-dd63-424d-baa1-de4e4fd0f0c0": {
+          "tips": [
+            null
+          ]
         },
-        "065eda67-268c-4f91-9caf-efb2c34493fe": {
-          "description": ""
+        "a7f20e25-3940-4615-b90f-8664e1661b3a": {
+          "tips": [
+            null
+          ]
         },
-        "51a89a3e-a8c7-41d6-bbbf-2ce16fc7e033": {
-          "description": ""
+        "2a1748fb-e49f-4ae0-be55-0c603dbe3335": {
+          "tips": [
+            null
+          ]
         },
-        "8630a813-1b6c-49c5-a58b-d2dc5dcccd0a": {
-          "description": ""
+        "e72dd2c9-59cc-4063-9dcc-d270e7fed0fe": {
+          "tips": [
+            null
+          ]
         },
-        "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
-          "description": ""
+        "5ff66bb0-517f-486e-b70f-cad0319c23df": {
+          "tips": [
+            null
+          ]
+        },
+        "31d4feb6-1e0c-4342-988b-6730a0d0155e": {
+          "tips": [
+            null
+          ]
         }
       }
     }

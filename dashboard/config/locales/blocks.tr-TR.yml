@@ -10,7 +10,7 @@ tr:
       AmysBlocks_goldilocks:
         options:
           CONDITION:
-            '"just right"': sadece doğru
+            '"just right"': harfi harfine
             '"too little"': çok az
             '"too much"': çok fazla
         text: |2-
@@ -55,6 +55,8 @@ tr:
             '2.00': Büyük
             '3.00': ekstra büyük
         text: "{SPRITE} boyutunu {SIZE} olarak ayarlayın"
+      Dancelab_ai:
+        text: "{IMAGE} {VALUE} efekti oluşturur"
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -102,6 +104,11 @@ tr:
             '"measures"': ölçüler
             '"seconds"': saniye
         text: "{TIMESTAMP} {UNIT} den sonra"
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': ölçüler
+            '"seconds"': saniye
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -125,6 +132,27 @@ tr:
             '"SLOTH"': tembel hayvanlar
             '"UNICORN"': tek boynuzlu atlar
             sprites: tüm
+          MOVE:
+            '"next"': "(Sonraki)"
+            '"prev"': "(Önceki)"
+            '"rand"': "(Rastgele)"
+            MOVES.ClapHigh: Yüksek Alkış
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Çift Aşağı
+            MOVES.Drop: Bırak
+            MOVES.Floss: Floss
+            MOVES.Fresh: Taze
+            MOVES.Kick: Yıldız
+            MOVES.Rest: Hiçbiri
+            MOVES.Roll: Body roll
+            MOVES.ThisOrThat: Şu ya da Bu
+        text: "{GROUP} sürekli {MOVE} {DIR} yap"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': kediler
+            '"SLOTH"': tembel hayvanlar
           MOVE:
             '"next"': "(Sonraki)"
             '"prev"': "(Önceki)"
@@ -620,6 +648,62 @@ tr:
             '"vintage"': Eski tip
             '"warm"': Sıcak
         text: arka plan efektini {PALETTE} {EFFECT} olarak ayarla
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"blooming_petals"': Çiçek Açan Yapraklar
+            '"circles"': Çemberler
+            '"color_cycle"': Renkler
+            '"diamonds"': Elmaslar
+            '"disco"': Kareler
+            '"disco_ball"': Disko Topu
+            '"fireworks"': Havai fişekler
+            '"flowers"': Çiçekler
+            '"frosted_grid"': Buzlu Izgara
+            '"galaxy"': Uzay
+            '"growing_stars"': Büyüyen Yıldızlar
+            '"higher_power"': Higher Power
+            '"kaleidoscope"': Kaleydoskop
+            '"lasers"': Lazer Dans Pisti
+            '"music_wave"': Dalgalar
+            '"none"': Hiçbiri
+            '"quads"': Açılar
+            '"rainbow"': Gökkuşağı
+            '"rand"': "(Rastgele)"
+            '"ripples"': Dalgalar
+            '"ripples_random"': Rastgele Dalgalar
+            '"snowflakes"': Kar
+            '"sparkles"': Kıvılcımlar
+            '"spiral"': Sarmal
+            '"splatter"': Boya Lekesi
+            '"squiggles"': Karalamalar
+            '"starburst"': Yıldız patlaması
+            '"stars"': Yıldızlar
+            '"swirl"': Hipnozcu
+            '"text"': Şarkı Adları
+          PALETTE:
+            '"autumn"': Sonbahar
+            '"cool"': Havalı
+            '"default"': Işık
+            '"electronic"': Elektronik
+            '"grayscale"': Gri ton
+            '"iceCream"': Dondurma
+            '"neon"': Neon
+            '"ocean"': Okyanus
+            '"rainbow"': Gökkuşağı
+            '"rave"': Siyah Beyaz
+            '"roses"': Güller
+            '"sky"': Gökyüzü
+            '"spring"': İlkbahar
+            '"summer"': Yaz
+            '"sunrise"': Gün Doğumu
+            '"sunset"': Gün batımı
+            '"tropical"': Tropik
+            '"twinkling"': Parıldayan
+            '"vintage"': Eski tip
+            '"warm"': Sıcak
+            '"winter"': Kış
+        text: arka plan efektini {PALETTE} {EFFECT} olarak ayarla
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -1085,6 +1169,15 @@ tr:
         text: "{SPRITE}, {TEXT1} der"
       KatiesBlocks_glideTo:
         text: "{SPRITE}, {LOCATION} konumuna süzülür"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': gaz
+            '"liquid"': sıvı
+            '"solid"': katı
+        text: |2-
+           eğer {CONDITION}{SPRITE}
+          {STATEMENT}
       KatiesBlocks_makeNumSpritesNear:
         text: "{LOCATION} yakınında {NUM} yeni {ANIMATION_NAME} karakter yap"
       KatiesBlocks_spriteBirdSay:
@@ -1098,7 +1191,7 @@ tr:
       KatiesBlocks_tumbling:
         text: karıştır
       Mikelab_addBehaviorSimple:
-        text: hareket {SPRITE} Başlar {BEHAVIOR}
+        text: "{SPRITE} karakteri {BEHAVIOR} 'e başlar"
       Mikelab_addTrainingData:
         options:
           LOCATION:
@@ -2059,17 +2152,17 @@ tr:
             right: sağa ↻
         text: dön {DIR}
       ecosystems_catchMe:
-        text: yakala {THIS}
+        text: 'yakala: {THIS}'
       ecosystems_eat:
-        text: ye {THIS}
+        text: 'ye: {THIS}'
       ecosystems_goldilocks:
         options:
           CONDITION:
-            '"just right"': sadece doğru
+            '"just right"': harfi harfine
             '"too little"': çok az
             '"too much"': çok fazla
         text: |2-
-           eğer {CONDITION}{SPRITE}
+           if {CONDITION}{SPRITE}
           {STATEMENT}
       ecosystems_int10:
         options:
@@ -2085,8 +2178,27 @@ tr:
             '8': '8'
             '9': '9'
         text: "{VALUE}"
+      ecosystems_makeNewSpriteBetween:
+        text: 'x: {X} y: {Y} konumu arasında {N} yeni {GROUP} yap'
+      ecosystems_makeNumSpritesAtLocation:
+        text: "{LOCATION_GENERATOR} konumunda {NUM} yeni {ANIMATION_NAME} hareketli
+          nesne yap"
+      ecosystems_makeNumSpritesWithinRange:
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:0, y2:200}": Alt
+            "{x1:0, x2:400, y1:150, y2:250}": Orta
+            "{x1:0, x2:400, y1:200, y2:400}": Üst
+        text: "{RANGE} konumunda {NUM} yeni {ANIMATION_NAME} hareketli nesne yap"
+      ecosystems_randomLocationWithinRange:
+        text: x min{X1}x maks{X2}y min{Y1}y maks{Y2}
+      ecosystems_randomLocationWithinSelectedRange:
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:0, y2:200}": Alt
+            "{x1:0, x2:400, y1:200, y2:400}": Üst
       gamelab_addBehaviorSimple:
-        text: hareket {SPRITE} Başlar {BEHAVIOR}
+        text: "{SPRITE} karakteri {BEHAVIOR} 'e başlar"
       gamelab_addTarget:
         options:
           OPT:

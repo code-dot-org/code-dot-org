@@ -12945,30 +12945,6 @@
         "2b5cb5b7-6a5e-4727-b8b5-128a3c546781": {
           "description": "Využijte tyto aktivity ke zlepšení výuky studentů. Lze je použít jako aktivity mimo vyučování nebo jako jiné obohacení.\n\n**Nahlédněte pod pokličku**\n\nKdyž sdílíte odkaz na svůj příběh, sdílíte také veškerý kód, který za ním stojí. Je to skvělý způsob, jak se studenti mohou učit jeden od druhého.\n\n-   Odkazy na dokončené příběhy zveřejněte online.\n    -   Vytvořte také vlastní příběh, který můžete sdílet!\n-   Když studenti načtou odkaz, nechte je kliknout na tlačítko „Jak to funguje“, aby se podívali na kód, který za příběhem stojí.\n-   Diskutujte ve skupině o různých způsobech, jakými spolužáci kódovali své příběhy.\n    -   Co vás překvapilo?\n    -   Co byste chtěli vyzkoušet?\n-   Vyberte si příběh někoho jiného a navažte na něho. (Nebojte se, původní příběh bude v bezpečí.)"
         },
-        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
-          "name": "Příprava scény",
-          "description": "Přivítejte studenty v hodině a velmi krátce představte aktivitu dne."
-        },
-        "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
-          "description": "_V této aktivitě se budete bavit vytvářením interaktivního světa se zábavnými postavičkami nazývanými sprajty. Budete mít možnost přimět sprajty, aby něco říkaly takovými bublinami, jaké vídáme v komiksech a grafických románech, a naučíte se zajistit, aby automaticky odpovídaly, když na ně Vy nebo někdo jiný kliknete._\n\n_Dnes budete psát „kód“, což znamená prostě sadu pokynů, kterým počítač rozumí. Když píšete nějaký příběh, musíte se pečlivě zamýšlet nad slovy, která volíte. Když píšete kód, musíte se pečlivě zamýšlet nad pokyny, které dáváte svému počítači._",
-          "tips": [
-            "Budete mít zájem strávit jen velmi málo času předběžným zaváděním nebo uváděním své Hodiny programování. Zejména u mladších studentů bývá dobré jít co nejrychleji rovnou na věc."
-          ]
-        },
-        "7acfc985-03d8-4d14-b244-203f8cbf4843": {
-          "name": "Obecná podpora",
-          "description": "Tady je několik rad, které by měly studentům pomoci bez ohledu na to, na jaké úrovni pracují\n\n-   **Spolupracujte se svými sousedy:** Vybídněte studenty, aby v okamžiku, kdy jim něco nepůjde, zapojili svého souseda. Podle věku a schopnosti Vašich studentů budete možná zvažovat formální rozdělení své třídy do dvojic, abyste výukový kurz dokončili metodou [párového programování][0].  \n\n-   **Přečtěte si návod:** Návod obyčejně poskytuje užitečné rady o tom, jak absolvovat danou úroveň. Než dáte studentům odpověď, ujistěte se, zda se pozorně podívali na návody, nápovědy, videa, a na veškerý úvodní kód.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Nejde Vám to? Poohlédněte se po nápovědách:** Každá úroveň zahrnuje nápovědnou radu o tom, jak absolvovat úroveň, včetně toho, jaké bloky kódu vyzkoušet. \n\n-   **Dejte si na čas a experimentujte.** Návod studentům sděluje co obecně dělat, ale také by si měli být vědomi, že mají svobodu zkusit své vlastní nápady."
-        },
-        "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
-          "name": "Ahoj, světe"
-        },
-        "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
-          "description": "Jestliže nějaká skupina nebo nějaký jednotlivec skončí dříve, vybídněte je, aby pokračovali budováním projektu na poslední úrovni. Jestliže studentům nebude jasné, co jiného mají dělat, můžete je vyzvat otázkami:\n\n-   Jaké jiné sprajty byste mohli přidat ke svému projektu?\n-   Podívali jste se do knihovny kostýmů nebo jste se pokusili nakreslit si pro svůj sprajt vlastní kostým?\n-   Co jiného by mohly Vaše sprajty říkat?\n-   Co by mohly Vaše sprajty dělat, když se na ně klikne?\n-   Vyzvěte studenty, aby si navzájem sdělovali své nápady a aby se navzájem učili jeden od druhého. Také se mohou pokusit o absolvování jiného výukového kurzu návštěvou stránky [code.org/learn][0]."
-        },
-        "b68a11cc-930a-4803-beca-1d4f49ede378": {
-          "name": "Reflexe",
-          "description": "#### Vyslechněte zpětnou vazbu\n\nPožádejte studenty, aby se zamysleli nad aktivitami dnešního dne. Co se o psaní kódu učili? Sprajty? Události?\n\nJaký mají z počítačové vědy a psaní kódu po strávení jedné hodiny poznáváním pocit?\n\n#### Další kroky\n\nDejte studentům vědět, že jestliže se jim dnešní aktivita líbila, mají mnoho možností, jak mohou pokračovat v psaní kódu. Navštivte [CS Connections][0], kde najdete nápady, jak integrovat počítačovou vědu do jiných předmětů nebo si přečtěte více o našich [nabídkách kurzů pro základní školy][1]."
-        },
         "9a692bd5-9de8-4718-9518-f14949953885": {
           "tips": [
             null
@@ -22141,7 +22117,22 @@
             null
           ]
         },
+        "8beb2941-dd64-44f4-9e99-6149c445067a": {
+          "tips": [
+            null
+          ]
+        },
         "500131a4-a22b-4a63-bc0a-d5d4a19c7169": {
+          "tips": [
+            null
+          ]
+        },
+        "a45155ff-19af-43ac-bf11-6ca4001816f4": {
+          "tips": [
+            null
+          ]
+        },
+        "a7d5069b-aa1c-4efa-a8d8-b58bd43a6c7b": {
           "tips": [
             null
           ]
@@ -22156,7 +22147,17 @@
             null
           ]
         },
-        "b2b4b9e6-fe3f-4d2d-a828-1402cc1572e8": {
+        "4ff33db6-6668-4423-8f1d-ad0b25f6da40": {
+          "tips": [
+            null
+          ]
+        },
+        "169c3eed-52d7-4a4b-b7c6-161cf287ed33": {
+          "tips": [
+            null
+          ]
+        },
+        "f1632666-ffc1-457a-832a-c2d3b2d1fc20": {
           "tips": [
             null
           ]
@@ -22171,7 +22172,22 @@
             null
           ]
         },
+        "b2777295-b74f-4240-bb3d-c76b79dde6a9": {
+          "tips": [
+            null
+          ]
+        },
         "9bcab929-d773-4dab-bfb0-d09892056944": {
+          "tips": [
+            null
+          ]
+        },
+        "bedaca2d-4f48-45b4-b6e9-431f6a38cc13": {
+          "tips": [
+            null
+          ]
+        },
+        "221b5029-fcfd-4791-b951-852609cb0198": {
           "tips": [
             null
           ]
@@ -35337,6 +35353,10 @@
           "name": "Úvod",
           "description": "**Diskuse:**\n\n-   _Co víme o tom, jak se šíří viry?_\n-   _Co může přispět k rychlejšímu šíření viru městem?_\n-   _Co může pomoct zpomalit šíření viru?_\n\nCílem této diskuse je dát studentům příležitost k aktivaci předchozích znalostí – učitel píše nápady studentů na tabuli. Zároveň je to příležitost k prozkoumání některých mylných představ o tom, jak se viry šíří."
         },
+        "9abff5bb-3f76-4f3c-b3d2-f0a873876cf8": {
+          "name": "Obecná podpora",
+          "description": "**Obecná podpora:** Role vás jako učitele je především podporovat studenty během kurzu. Tady je několik tipů, které můžou studentům pomoct bez ohledu na to, na jaké úrovni pracují:\n\n-   Řekněte studentům, ať si extra aktivity procházejí v libovolném pořadí. Kdykoli se můžou vrátit do nabídky v Úrovni 1.\n\n-   **Spolupracujte se sousedy:** Vyzvěte studenty, aby se obrátili na sousedy, pokud se na něčem zaseknou. Vzhledem k tomu, že tento výukový program zahrnuje videa a studenti můžou mít na uších sluchátka, snadno se může stát, že se „uzavřou do bubliny“. Pomozte tyto bariéry prolomit – když si všimnete, že studenti potřebují pomoct, vyzvěte je přímo, ať pracují ve dvojici. Podle věku a schopností studentů můžete zvážit formální rozdělení třídy do dvojic – výukový kurz tak dokončíte metodou [programování ve dvojicích](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Přečtěte si pokyny:** Pokyny obvykle obsahují užitečné rady, jak absolvovat danou úroveň. Než studenti začnou pracovat na nějaké úrovni, nejprve se ujistěte, že si opravdu dobře prohlédli cílový obrázek a přečetli si všechen text s pokyny.\n\n-   ![](https://curriculum.code.org/media/uploads/hint.png)**Nevíte, jak dál? Vyhledejte nápovědu:** Každá úroveň obsahuje nápovědu s dalšími informacemi o tom, jak úroveň dokončit. Pokud se studenti snaží dokončit úkoly co nejrychleji, možná zjistí, že musí určitou dobu počkat, než se přehraje celý kód a oni budou moct pokračovat dál. Hodně úrovní obsahuje i druhou nápovědu s doporučením, jak být ještě tvořivější a jak si zadání rozšířit.\n\n-   **Pokračujte dál a pak se vraťte:** Někdy je pro studenty lepší vrátit se k obtížné úrovni později. Všechny úrovně jsou na sobě nezávislé, i když do určité míry staví na dříve představených konceptech. \n\n-   **Ponechte čas na experimentování.** Pečlivě si kód přečtěte. V prvních několika úrovních postupují studenti podle přesného návodu, který je dovede k cíli, ale měli by vědět, že si taky můžou vyzkoušet vlastní nápady. V těchto úrovních neexistují žádné správné ani špatné odpovědi. (Všechny patří do kategorie volná hra.)"
+        },
         "d63c77c1-4167-4360-ab98-25610934beda": {
           "name": "Epidemie",
           "description": "_V dnešní lekci se podíváte do „Města Příšer“, kde se právě chystá propuknout epidemie viru. Dr. Příšera potřebuje Vaši pomoc se zpomalováním šíření viru._\n\n_V Laboratoři sprajtů vytvoříte simulátor epidemie, který potom použijete k pochopení toho, jak se virus může šířit. Také pomůžete všem příšerám zase se uzdravit!_",
@@ -35372,6 +35392,10 @@
         "b8e884f1-eae0-4138-8778-0972f90e34d9": {
           "name": "Reflexe",
           "description": "**Výzvy:**\n\n-   Čím tahle simulace připomíná reálný svět? Čím se od něj liší?\n-   Co byste chtěli do simulace přidat a jak ji změnit?"
+        },
+        "c1c5b270-2aae-4f8c-aded-0d92811d532f": {
+          "name": "Oslavujte",
+          "description": "Vysvětlete, že dnes strávíte jednu hodinu programováním, protože tento týden je týden výuky počítačových věd a miliony dalších studentů po celém světě tento týden také absolvovaly Hodinu kódu. Poblahopřejte studentům, že se tohoto celosvětového hnutí zúčastnili.\n\nDejte všem studentům [certifikáty](http://code.org/certificates) s jejich jmény."
         },
         "366afa8a-feff-4dd4-a415-03a04e01e897": {
           "name": "Příprava scény",
@@ -35694,18 +35718,6 @@
           "name": "Vlastnosti prvku uživatelského rozhraní",
           "progression_name": "Vlastnosti prvku uživatelského rozhraní"
         },
-        "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
-          "name": "Zahřátí"
-        },
-        "59df14b7-1344-480b-8b6b-3fc94684b8bc": {
-          "name": "Hlavní aktivita (stará)"
-        },
-        "3d1e45e9-9dd0-476b-b864-f0d86d0827b6": {
-          "name": "Hlavní aktivita (nová)"
-        },
-        "50216925-6742-400e-b45a-2de4cd3b63f2": {
-          "name": "Rekapitulace"
-        },
         "f108ae93-f672-4062-b6d6-522901659990": {
           "name": "Objevujeme informatiku – Průzkum po kurzu",
           "progression_name": "Objevujeme informatiku – Průzkum po kurzu"
@@ -35753,39 +35765,94 @@
         "6ddc599f-da51-4adc-9dcc-f13b8b53e760": {
           "description": "#### Za hranice Hodiny kódu\n\nJe spousta způsobů, jak můžete i po skončení Hodiny kódu ve třídě prvního stupně ZŠ pokračovat v učení počítačové vědy. Tady je několik námětů:\n\n-   Vyučujte kurzy programu [Základy informatiky Code Studia](http://code.org/educate/k5). Těchto šest kurzů je určených pro mladé žáky. Děti se na sérii úloh naučí programovat a pedagogové získají přístup k zajímavým plánům hodin, které jim pomůžou zpestřit výuku. Code.org nabízí k těmto kurzům bezplatný profesní rozvoj, a to jak online, tak prezenční.\n-   Pozvěte odborníka na počítačovou vědu, aby před třídou promluvil o své práci. Neznáte žádné informatiky v okolí? Oslovte některého dobrovolníka z naší [mapy dobrovolníků](https://code.org/volunteer/local)"
         },
-        "b16d189d-d990-44c4-be49-8f81ac81a96e": {
-          "description": "#### Příprava scény\n\nPřivítejte studenty na hodině a představte dnešní aktivitu.",
+        "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
+          "name": "Zahřátí"
+        },
+        "59df14b7-1344-480b-8b6b-3fc94684b8bc": {
+          "name": "Hlavní aktivita (stará)"
+        },
+        "3d1e45e9-9dd0-476b-b864-f0d86d0827b6": {
+          "name": "Hlavní aktivita (nová)"
+        },
+        "50216925-6742-400e-b45a-2de4cd3b63f2": {
+          "name": "Rekapitulace"
+        },
+        "3125ec73-4d68-45a9-a6f8-b2921c55d4a3": {
+          "name": "Filtrování hudby"
+        },
+        "524efe4b-796a-48eb-b1c6-f4e138699443": {
+          "name": "Obecná podpora"
+        },
+        "b9bacf54-bd37-42b8-85fc-bc9d07a50537": {
           "tips": [
-            "Jednou z možností, jak představit Hodinu kódu, pokud sami nemáte s kódováním dostatečnou zkušenost, je ukázat jedno z [našich inspiračních videí][0]. Vyberte takové, o kterém si myslíte, že bude vaše studenty inspirovat a sdílejte ho nyní s nimi. Pro žáky na úrovni druhého stupně základní školy doporučujeme video [Je tady Hodina kódu][1]."
+            null
           ]
         },
-        "d99fc09e-a586-41df-84b2-e552cc4735e3": {
-          "description": "Dnes budeme využívat vaší kreativity a přitom se učit programovat. Je spousta způsobů, jak být kreativní. Jakými způsoby vás baví být kreativní? "
+        "58bdb8b5-159d-4b7a-aae7-d250213c1379": {
+          "progression_name": "Úvodní video"
         },
-        "b6c8c6a3-fe85-4d42-999e-a2ba13f6739a": {
-          "description": "Povzbuďte studenty, aby se podělili o způsoby vyjádření své kreativity, například uměním, tancem, hudbou nebo psaním. Jako následující otázku se studentů zeptejte, čím se ve své kreativitě inspirují. "
+        "b8daa26e-57e7-4bc5-8a6e-1e541a407c8e": {
+          "tips": [
+            null
+          ]
         },
-        "6fba9dd0-6069-402c-a641-53899ae667e2": {
-          "description": "Věděli jste, že informatika může být velmi kreativní? Dokonce můžete kódováním vytvářet umění. Připomínáme, že kód je soubor instrukcí, které počítač dokáže chápat. To, jaký kód napíšete, může být příležitostí k vyjádření vaší kreativity! Je to podobné, jako když si při malování vybíráte, jaké použijete barvy. \n\nDnes budeme jako inspiraci vašeho kreativního programování používat poezii. Ví někdo, co je to poezie? Máte nějakou oblíbenou báseň nebo básníka? "
+        "7c95f7a1-478d-45fc-ba2d-5807bd2b828f": {
+          "name": "Shrnutí"
         },
-        "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102": {
-          "description": "**Čtěte poezii společně:** Přečtěte si jako třída společně [několik básní][0] a procvičujte si určování atmosféry každé básně. Povzbuďte studenty, aby se podělili o svou interpretaci, i když se bude lišit od interpretace někoho jiného. "
+        "c624ab39-fa08-4b83-b1e9-bf97fb42667f": {
+          "name": "Oslavujte"
         },
-        "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
-          "name": "Básnické umění",
-          "description": "#### Obecná podpora\n\nNa konci této aktivity budou mít studenti animovanou báseň představující jejich vizuální interpretaci básně, kterou si vybrali. Tato lekce je navržená tak, aby dala studentům příležitost pohrát si s jejich kódem a vybrat si vizuální efekty, které se jim nejvíc líbí. \n\nKdyž budete chodit po třídě, pobízejte studenty takto:\n\n–   **Nemusíte pospíchat:** Většina úrovní od studentů chce, aby našli ty nejlepší efekty, které odpovídají jejich vnímání atmosféry básně. Velmi doporučujeme, aby se nesnažili danou úroveň co nejdříve opustit, ale aby si s kódem pořádně pohráli. \n\n–   **Vyberte si báseň, která se vám líbí:** Báseň, která se studentům zobrazí v nové úrovni, je jen návrh. V horní části herního prostoru mají k dispozici rozevírací nabídku s několika básněmi. Požádejte studenty, aby si několik z nich přečetli a vybrali si takovou, která je oslovuje. Pak mohou tuto vybranou báseň začít animovat. \n\n–   **Pochlubte se dokončenou úrovní:** Když je nějaké kolečko představující úroveň celé zelené, znamená to, že student úspěšně splnil všechny úkoly v úrovni. Požádejte studenty, aby kliknuli na zelené kolečko a pochlubili se tím, co vytvořili. \n\nKdyž studenti nevědí, jak dál: \n\n–   **Přečtěte si pokyny:** Pokyny jsou body s odrážkami, které říkají, jak dokončit úroveň. Pokud někteří studenti nevědí jak dál, požádejte je, aby vám přečetli pokyny nahlas a řekněte jim, ať tyto pokyny zopakují svými slovy. \n    –   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Studenti také mohou kliknout na tuto ikonu pro převod textu na řeč a nechat si pokyny přečíst nahlas.\n–   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Hledejte rady**: Většina úrovní obsahuje alespoň jednu radu s konkrétnějšími pokyny k dokončení dané úrovně. \n–   **Chvalte za chyby:** Chyby v kódu jsou přirozenou součástí procesu kódování. Pokud program nedělá to, co studenti čekali, požádejte je, aby vám nejprve řekli, co chtěli, aby se stalo. Pak klikněte na Spustit a dívejte se, co se ve skutečnosti stane. Poté najděte místo v jejich kódu, která je příčinou rozporu. Nezapomeňte pochválit za nalezení chyby a za její odstranění. Když mají studenti chybu v kódu, znamená to, že odvádějí dobrou práci při tvorbě složitějšího programu. "
+        "07a73ab9-8996-453a-a87f-63628f2387db": {
+          "name": "Další kroky",
+          "description": "Sdělte studentům, že pokud se jim dnešní aktivita líbila, mají spoustu možností, jak se v programování dál rozvíjet. Doporučte jim, ať navštíví web code.org/learn, kde najdou seznam možností. A pokud máte v plánu absolvovat nějaké doplňující aktivity, řekněte jim, co je čeká v příští hodině s vámi."
         },
-        "065eda67-268c-4f91-9caf-efb2c34493fe": {
-          "description": "#### Podpora podle úrovní\n\n**Úroveň 1:** Pobídněte studenty, aby si přečetli báseň. Pak studenty požádejte, aby našli barvu pozadí nebo efekt, který odpovídá tónu jimi vybrané básně. \n\n**Úroveň 2:** V tomto příkladu by si měli studenti nejprve báseň sami přečíst a pak stisknout Spustit. Můžete se studentů zeptat, jestli zvuky a efekty, které programátor zvolil, odpovídají atmosféře básně. Požádejte studenty, aby svou odpověď rozvedli. \n\n**Úroveň 3:** Tato úroveň přidává zvuk. Studenti mohou použít sluchátka, pokud je mají. \n\n**Úroveň 4:** Požádejte studenty, aby si přečetli báseň a našli verš, ve kterém se atmosféra básně mění, nebo kde básník představuje nový obraz. Použijte blok události k přidání příslušných efektů na určené verše básně. \n\n**Úroveň 5:** V tomto příkladu by si měli studenti nejprve báseň sami přečíst a pak stisknout Spustit. Zeptejte se studentů, jestli obrázky odpovídaly slovům v básni. Požádejte je, aby svou odpověď rozvedli. \n\n**Úroveň 6, 7, 8:** Podívejte se na bod „Chvalte za chyby“ v části Obecná podpora. Pobídněte studenty, aby tvořili programy s více než jednou změnou v bloku události. \n\n**Úroveň 9:** Pobídněte studenty, aby si přečetli všechny básně v rozevírací nabídce a vybrali si jednu, která se jim líbí. Řekněte studentům, že budou moci sdílet svůj výtvor v této poslední úrovni s kamarády a rodinou. Nyní je čas spojit všechny kódovací a jazykové dovednosti dohromady! "
+        "fb665f5b-457e-484e-924a-7aa4f2e097be": {
+          "name": "Vytvořte virál"
         },
-        "51a89a3e-a8c7-41d6-bbbf-2ce16fc7e033": {
-          "description": "Pokud vás dnešní výuka kódování bavila, můžete se učit dál, když navštívíte stránky code.org/learn. Pokud se chcete podělit o svůj výtvor s kamarády a rodinou, klikněte na tlačítko „Sdílet“ a pošlete odkaz, komu budete chtít!"
+        "c03cf1cb-2946-48c9-aede-76ccf4b787a9": {
+          "tips": [
+            null
+          ]
         },
-        "8630a813-1b6c-49c5-a58b-d2dc5dcccd0a": {
-          "description": "#### (Volitelné) Hodnocení: Kontrola pochopení (4 minuty)\n\nRozdejte každému studentovi dva samolepicí papírky. "
+        "3c17e9fd-b06b-478e-bb56-5734d9344b68": {
+          "tips": [
+            null
+          ]
         },
-        "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
-          "description": "Máte dva samolepicí papírky. Na jeden napište jednu věc, kterou jste se dnes dověděli o kódování. \nNa druhý napište jednu věc, kterou jste se dnes dověděli o poezii. \n\nPodělte se s celou třídou zvednutím ruky o odpověď na otázku: Co dalšího doufáte, že byste se mohli o kódování a informatice naučit příště? "
+        "913cf29b-f688-4c8b-9834-96c9b75274f5": {
+          "tips": [
+            null
+          ]
+        },
+        "f39d7745-dd63-424d-baa1-de4e4fd0f0c0": {
+          "tips": [
+            null
+          ]
+        },
+        "a7f20e25-3940-4615-b90f-8664e1661b3a": {
+          "tips": [
+            null
+          ]
+        },
+        "2a1748fb-e49f-4ae0-be55-0c603dbe3335": {
+          "tips": [
+            null
+          ]
+        },
+        "e72dd2c9-59cc-4063-9dcc-d270e7fed0fe": {
+          "tips": [
+            null
+          ]
+        },
+        "5ff66bb0-517f-486e-b70f-cad0319c23df": {
+          "tips": [
+            null
+          ]
+        },
+        "31d4feb6-1e0c-4342-988b-6730a0d0155e": {
+          "tips": [
+            null
+          ]
         }
       }
     }

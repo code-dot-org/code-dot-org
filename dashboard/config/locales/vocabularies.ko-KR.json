@@ -1259,11 +1259,11 @@
         },
         "code/csc-adaptations/2023": {
           "word": "코드",
-          "definition": "(v) 컴퓨터에 대한 지침을 작성하려면"
+          "definition": "(동사) 컴퓨터에 쓰이는 명령문을 작성하다."
         },
         "event/csc-adaptations/2023": {
           "word": "이벤트 ",
-          "definition": "어떤 일이 일어나도록 하는 행동"
+          "definition": "어떤 일이 일어나도록 하는 동작."
         },
         "evolution/csc-adaptations/2023": {
           "word": "진화",
@@ -1319,51 +1319,51 @@
         },
         "code/csc-ecosystems/2023": {
           "word": "코드",
-          "definition": "(v) 컴퓨터에 대한 지침을 작성하려면"
+          "definition": "(동사) 컴퓨터에 쓰이는 명령문을 작성하다."
         },
         "condition/csc-ecosystems/2023": {
           "word": "조건",
-          "definition": "액션을 허용하기 전에 프로그램이 참인지 확인하는 것"
+          "definition": "작업을 실행하기 전에 프로그램이 참과 거짓 여부를 확인하는 것."
         },
         "conditionals/csc-ecosystems/2023": {
-          "word": "조건",
-          "definition": "특정 조건에서만 실행되는 명령문"
+          "word": "조건문",
+          "definition": "특정 조건이 충족되어야 실행하는 명령문."
         },
         "ecosystem/csc-ecosystems/2023": {
           "word": "생태계",
-          "definition": "상호 작용하는 유기체와 환경의 생물학적 공동체"
+          "definition": "상호작용하는 생물과 환경의 생물학적 복합체계."
         },
         "event/csc-ecosystems/2023": {
           "word": "이벤트 ",
-          "definition": "어떤 일이 일어나도록 하는 행동"
+          "definition": "어떤 일이 일어나도록 하는 동작."
         },
         "overfishing/csc-ecosystems/2023": {
           "word": "남획",
-          "definition": "번식 가능한 속도보다 빠른 물고기 제거"
+          "definition": "번식 속도를 능가하는 속도로 물고기를 잡는 것."
         },
         "simulation/csc-ecosystems/2023": {
           "word": "시뮬레이션",
-          "definition": "연구 목적의 컴퓨터 모델."
+          "definition": "연구 목적의 컴퓨터 모델"
         },
         "debug/csc-ecosystems/2023": {
           "word": "디버그",
-          "definition": "코드에서 오류 또는 문제를 찾고 수정합니다."
+          "definition": "코드에서 오류 또는 문제를 찾아 수정함"
         },
         "variable/csc-ecosystems/2023": {
           "word": "변수",
-          "definition": "값을 저장할 수 있는 컨테이너입니다. "
+          "definition": "값을 저장할 수 있는 컨테이너"
         },
         "ecologist/csc-ecosystems/2023": {
           "word": "생태학자",
-          "definition": "동물과 식물이 환경과 어떻게 상호 작용하는지 연구하는 과학자."
+          "definition": "동식물이 환경과 상호작용하는 방식을 연구하는 과학자."
         },
         "energy/csc-ecosystems/2023": {
           "word": "에너지",
-          "definition": "생산자에서 소비자에게 먹이 그물에 있는 유기체 간에 전달됩니다.유기체는 복잡한 작업을 수행하는 데 에너지를 사용합니다."
+          "definition": "먹이그물에서 생산자가 소비자에게 전달하는 것. 생물이 활동하고 복잡한 작업을 수행하는 데 사용된다."
         },
         "food_chain/csc-ecosystems/2023": {
           "word": "먹이 사슬 ",
-          "definition": "먹는 음식 순서대로, 생산자에서 소비자로, 먹이에서 포식자로 연결된 유기체 그룹."
+          "definition": "생산자에서 소비자로, 먹잇감에서 포식자로, 먹이의 순서대로 연결된 일군의 생물."
         },
         "code/csc-mappinglandmarks/2023": {
           "word": "코드",
@@ -2097,10 +2097,10 @@
         },
         "network/how-ai-works/2023": {
           "word": "네트워크",
-          "definition": "서로 연결된 항목 모음입니다.이러한 연결을 따르는 것은 순서도와 같은 알고리즘의 단계를 나타낼 수 있습니다."
+          "definition": "서로 연결된 항목 모음. 이러한 연결을 따르는 것은 순서도와 같은 알고리즘의 단계를 나타낼 수 있습니다."
         },
         "large_language_model_llm_/how-ai-works/2023": {
-          "word": "대형 언어 모델 (LLM)",
+          "word": "대규모 언어 모델 (LLM)",
           "definition": "매우 방대한 지식을 바탕으로 훈련되는 범용 형태의 AI"
         },
         "model/how-ai-works/2023": {
@@ -2109,15 +2109,15 @@
         },
         "diffusion_ai/how-ai-works/2023": {
           "word": "디퓨전 AI",
-          "definition": "이미지를 노이즈로 변환하고 프로세스를 역전시키도록 AI를 훈련시킵니다."
+          "definition": "이미지를 노이즈로 변환하고 프로세스를 뒤바꾸도록 AI를 훈련시킵니다."
         },
         "gan_generative_adversarial_network_/how-ai-works/2023": {
-          "word": "GAN (생성적 적대 네트워크)",
+          "word": "GAN (적대적 생성 신경망)",
           "definition": "경쟁하는 두 AI 모델을 사용하여 무언가를 생성하는 방법"
         },
         "artificial_intelligence/how-ai-works/2023": {
           "word": "인공지능",
-          "definition": "학습하고 문제를 해결하는 기계의 능력."
+          "definition": "학습하고 문제를 해결하는 머신의 능력."
         },
         "ethics/how-ai-works/2023": {
           "word": "윤리",
@@ -2443,25 +2443,21 @@
           "word": "무손실 압축",
           "definition": "압축한 데이터에서 원래 데이터가 완벽하게 복원되게 하는 데이터 압축 알고리즘. 텍스트 압축용으로 가장 흔히 사용됨 (예. zip 압축)"
         },
-        "code/poem-art/unversioned": {
+        "code/dance-ai/2023": {
           "word": "코드",
-          "definition": "(동사) 컴퓨터용 명령문을 작성합니다."
+          "definition": "(동사) 코드 작성, 컴퓨터에게 내릴 지시사항 작성."
         },
-        "event/poem-art/unversioned": {
+        "event/dance-ai/2023": {
           "word": "이벤트 ",
           "definition": " 무언가를 일으키는 행위."
         },
-        "program/poem-art/unversioned": {
+        "program/dance-ai/2023": {
           "word": "프로그램 ",
-          "definition": "기계가 실행할 수 있는 것으로 코딩된 일련의 단계입니다."
+          "definition": " 머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
         },
-        "mood/poem-art/unversioned": {
-          "word": "분위기",
-          "definition": "느낌이나 분위기, 감정이 예술 또는 글로 표현된 것입니다."
-        },
-        "line/poem-art/unversioned": {
-          "word": "구절",
-          "definition": "(시) - 오른쪽 여백에서 끝나는 한 줄로 배열된 시의 한 부분입니다."
+        "artificial_intelligence_a_i_/dance-ai/2023": {
+          "word": "인공지능(A.I.) ",
+          "definition": "데이터로 받아들이고 그 데이터에서 패턴을 학습한 다음 학습한 내용을 기반으로 결정을 내리는 컴퓨터 프로그램."
         }
       }
     }

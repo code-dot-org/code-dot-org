@@ -59,12 +59,6 @@ Dashboard::Application.routes.draw do
 
     get 'maker/home', to: 'maker#home'
     get 'maker/setup', to: 'maker#setup'
-    get 'maker/discountcode', to: 'maker#discountcode'
-    post 'maker/apply', to: 'maker#apply'
-    post 'maker/schoolchoice', to: 'maker#schoolchoice'
-    post 'maker/complete', to: 'maker#complete'
-    get 'maker/application_status', to: 'maker#application_status'
-    post 'maker/override', to: 'maker#override'
     get 'maker/google_oauth_login_code', to: 'maker#login_code'
     get 'maker/display_google_oauth_code', to: 'maker#display_code'
     get 'maker/google_oauth_confirm_login', to: 'maker#confirm_login'
@@ -265,6 +259,7 @@ Dashboard::Application.routes.draw do
           get "/#{key}/:channel_id/remix", to: 'projects#remix', key: key.to_s, as: "#{key}_project_remix"
           get "/#{key}/:channel_id/export_create_channel", to: 'projects#export_create_channel', key: key.to_s, as: "#{key}_project_export_create_channel"
           get "/#{key}/:channel_id/export_config", to: 'projects#export_config', key: key.to_s, as: "#{key}_project_export_config"
+          get "/#{key}/:channel_id/can_publish_age_status", to: 'projects#can_publish_age_status'
         end
 
         get '/:tab_name', to: 'projects#index', constraints: {tab_name: /(public|libraries)/}
@@ -358,6 +353,9 @@ Dashboard::Application.routes.draw do
 
       resources :reference_guides, param: 'key', path: 'guides'
     end
+
+    resources :potential_teachers, only: [:create]
+    get '/potential_teachers/:id', param: :id, to: 'potential_teachers#show'
 
     # CSP 20-21 lockable lessons with lesson plan redirects
     get '/s/csp1-2020/lockable/2(*all)', to: redirect(path: '/s/csp1-2020/lessons/14%{all}')
@@ -598,6 +596,7 @@ Dashboard::Application.routes.draw do
     # LTI API endpoints
     match '/lti/v1/login(/:platform_id)', to: 'lti_v1#login', via: [:get, :post]
     post '/lti/v1/authenticate', to: 'lti_v1#authenticate'
+    match '/lti/v1/sync_course', to: 'lti_v1#sync_course', via: [:get, :post]
 
     # OAuth endpoints
     get '/oauth/jwks', to: 'oauth_jwks#jwks'
@@ -869,6 +868,7 @@ Dashboard::Application.routes.draw do
             send(method, action, action: action)
           end
         end
+        post 'test/ai_proxy/assessment', to: 'test_ai_proxy#assessment'
       end
     end
 
@@ -879,6 +879,9 @@ Dashboard::Application.routes.draw do
         post 'users/:user_id/using_text_mode', to: 'users#post_using_text_mode'
         post 'users/:user_id/display_theme', to: 'users#update_display_theme'
         post 'users/:user_id/mute_music', to: 'users#post_mute_music'
+
+        post 'users/sort_by_family_name', to: 'users#post_sort_by_family_name'
+
         get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
         get 'users/:user_id/display_theme', to: 'users#get_display_theme'
         get 'users/:user_id/mute_music', to: 'users#get_mute_music'
@@ -920,6 +923,15 @@ Dashboard::Application.routes.draw do
         # Routes used by the peer reviews admin pages
         get 'peer_review_submissions/index', to: 'peer_review_submissions#index'
         get 'peer_review_submissions/report_csv', to: 'peer_review_submissions#report_csv'
+
+        get 'section_instructors/check', to: 'section_instructors#check'
+        resources :section_instructors, only: [:index, :create, :destroy] do
+          member do
+            put 'accept'
+            put 'decline'
+          end
+        end
+        get 'section_instructors/:section_id', to: 'section_instructors#show'
 
         resources :ml_models, only: [:show, :destroy] do
           collection do
@@ -1043,14 +1055,12 @@ Dashboard::Application.routes.draw do
     resources :rubrics, only: [:create, :edit, :new, :update] do
       member do
         get 'get_ai_evaluations'
+        get 'get_teacher_evaluations'
+        get 'ai_evaluation_status_for_user'
+        get 'ai_evaluation_status_for_all'
+        post 'run_ai_evaluations_for_user'
+        post 'run_ai_evaluations_for_all'
         post 'submit_evaluations'
-      end
-    end
-
-    resources :learning_goal_evaluations, only: [:create, :update] do
-      collection do
-        get :get_evaluation
-        post :get_or_create_evaluation
       end
     end
 
@@ -1058,6 +1068,12 @@ Dashboard::Application.routes.draw do
       collection do
         get :get_evaluation
         post :get_or_create_evaluation
+      end
+    end
+
+    resources :learning_goal_ai_evaluation_feedbacks, only: [:create, :update] do
+      collection do
+        post :get_by_ai_evaluation_id
       end
     end
 

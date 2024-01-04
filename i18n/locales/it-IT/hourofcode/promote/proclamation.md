@@ -1,5 +1,5 @@
 ---
-title: Un esempio di delibera per supportare la Settimana di Educazione all'Informatica e l'Ora del Codice
+title: Un esempio di delibera per supportare la Settimana Internazionale di Educazione all'Informatica e l'Ora del Codice
 ---
 
 {{ signup_button }}
@@ -21,11 +21,13 @@ Visto che la tecnologia informatica è un parte integrante della cultura e sta t
 
 Visto che l'ingegneria informatica sta trasformando l'industria, creando nuovi ambiti di commercio, guidando l'innovazione in ogni campo della scienza e incrementando la produttività nei settori economici consolidati;
 
-Visto che l'ambito dell'ingegneria informatica è alla base del settore della tecnologia dell'informazione della nostra economia e che apporta un significativo contributo al prodotto economico dell'Italia;
+considerando che il campo dell'informatica è un argomento fondamentale che è alla base del settore della tecnologia dell'informazione della nostra economia, che contribuisce in modo significativo alla produzione economica degli Stati Uniti;
 
-Visto che il campo dell'ingegneria informatica è una scienza fondamentale per l'Era Digitale;
+Considerando che l'alfabetizzazione in materia di intelligenza artificiale si riferisce alle conoscenze, alle abilità e agli atteggiamenti associati al funzionamento dell'intelligenza artificiale, compresi i concetti fondamentali dell'informatica e a come utilizzare l'intelligenza artificiale in modo sicuro, responsabile ed etico;
 
-Visto che il settore della tecnologia dell'informazione è esclusivamente posizionato per aiutare la ripresa economica attraverso la ricerca e lo sviluppo di nuove innovazioni;
+considerando che il campo dell'informatica, compresa l'intelligenza artificiale, è costituito da tecnologie in grado di trasformare radicalmente quasi tutti i settori dell'economia degli Stati Uniti;
+
+considerando che la leadership tecnologica in tutti i settori dell'informatica, compresa l'intelligenza artificiale, è un imperativo economico e di sicurezza nazionale;
 
 Considerando che le prospettive per i posti di lavori nel campo dell'informatica sono luminose con oltre 500.000 posizioni informatiche aperte in tutto il paese;
 
@@ -33,11 +35,11 @@ Considerato che offrire agli studenti la possibilità di partecipare ad attivit�
 
 Considerando che tutti gli studenti meritano una preparazione completa nell'insegnamento dell'informatica, compreso l'accesso a insegnanti qualificati, tecnologia e curriculum adeguati all'età, necessari per apprendere l'informatica ai livelli elementare e secondario dell'istruzione;
 
-Considerando che l'insegnamento dell'informatica deve affrontare delle sfide, tra cui il conteggio delle lezioni di informatica ai fini del conseguimento del diploma di scuola superiore e l'offerta di sviluppo professionale per gli insegnanti di informatica;
+considerando che l'istruzione informatica presenta sfide da affrontare, tra cui il miglioramento dell'accesso ai corsi di informatica per tutti gli studenti e lo sviluppo professionale degli insegnanti di informatica;
 
-Considerando che la partecipazione a un'Ora del Codice durante la settimana dell'insegnamento dell'informatica può servire a demistificare il campo dell'informatica e incoraggiare un maggior numero di studenti a intraprendere ulteriori studi di informatica;
+Considerando che la partecipazione a un'Ora del Codice durante la settimana dell'insegnamento dell'informatica può servire a fare chiarezza sul tema dell'informatica e incoraggiare un maggior numero di studenti a intraprendere ulteriori studi in questo ambito;
 
-Considerando che il campo dell'informatica ha notevoli barriere da affrontare per raggiungere l'equità, tra cui l'attrazione di una maggiore partecipazione delle donne e delle minoranze sotto-rappresentate in tutti i livelli e settori;
+considerando che il campo dell'informatica presenta notevoli barriere di equità da affrontare, tra cui l'attrazione e il mantenimento di un gruppo di candidati diversi per razza, etnia e genere a tutti i livelli e settori;
 
 Considerando che Grace Murray Hopper, una delle prime donne nel campo dell'informatica, ha progettato nuovi linguaggi di programmazione e ha introdotto standard per i sistemi informatici che hanno gettato le basi per molti progressi nell'informatica; e
 
@@ -47,12 +49,10 @@ Determinato che il (IL SENATO, STATO, CONTEA, CITTÀ O CONSIGLIO SCOLASTICO) -
 
 (1) sostiene la designazione di Settimana dell'insegnamento dell'informatica ({{ campaign_date/full }});
 
-(2) incoraggia le scuole, gli educatori, i genitori e i responsabili politici a partecipare alla Settimana dell'insegnamento dell'informatica consentendo ai propri studenti di partecipare all'Ora del Codice;
+incoraggia scuole, educatori, genitori e responsabili politici a partecipare alla settimana dell'educazione informatica permettendo agli studenti di partecipare all'Ora del Codice;
 
 (3) incoraggia scuole, insegnanti, ricercatori, università, dirigenti d'azienda e responsabili politici a identificare meccanismi che consentano agli insegnanti di ricevere uno sviluppo professionale all'avanguardia per fornire esperienze di apprendimento sostenibile in informatica a tutti i livelli educativi e incoraggiare gli studenti ad avvicinarsi ai concetti di informatica ;
 
-(4) incoraggia i responsabili politici a rimuovere le barriere che impediscono alle lezioni di informatica di essere conteggiate come crediti di matematica o scienze nei requisiti richiesti per il conseguimento del diploma;
-
-(5) incoraggia le opportunità, anche attraverso i programmi esistenti, per le donne e le minoranze sotto-rappresentate nell'informatica.
+(4) incoraggia le opportunità, anche attraverso i programmi esistenti, per studentesse e studentesse di gruppi razziali ed etnici sottorappresentati nell'informatica.
 
 {{ signup_button }}

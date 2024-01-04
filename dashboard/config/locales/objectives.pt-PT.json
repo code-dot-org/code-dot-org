@@ -935,12 +935,6 @@
         "9ea5d8fd-1b7d-4655-b4b1-75fd09545838": {
           "description": "Compartilhar um artefato criativo com outros alunos."
         },
-        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
-          "description": "Crie novas fadas e dê a elas nomes, trajes e localização."
-        },
-        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
-          "description": "Crie uma animação interativa utilizando fadas e eventos."
-        },
         "214e78cd-feb0-4235-a076-0fe81d14d95a": {
           "description": "Treinar e testar um modelo de aprendizado de máquina."
         },
@@ -3085,15 +3079,6 @@
         },
         "67dec84f-bfa5-4756-9dbd-02a20ce3da52": {
           "description": "Compartilhar um artefato criativo com outros alunos."
-        },
-        "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
-          "description": "Desenvolver programas que respondam a eventos temporizados."
-        },
-        "1e1c0724-7d86-4304-a73b-6f083be036fc": {
-          "description": "Ilustre as mudanças no humor de um poema."
-        },
-        "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
-          "description": "Represente a linguagem literal e a figurativa através de um texto"
         }
       }
     }

@@ -72,7 +72,7 @@ Promuj Godzinę Kodowania wśród innych nauczycieli, którzy mogą chcieć przy
 
 ### Powiadom wolontariuszy rejestrując wydarzenie
 
-Gdy [ zarejestrujesz swoją Godzinę Kodowania](/#join), otrzymasz mail z pomocnymi wiadomościami i wskazówkami na temat organizacji udanej Godziny Kodowania. W ten sposób możesz poinformować lokalnych wolontariuszy o tym, że Twoja szkoła bierze udział. Wolontariusze są świetnym wsparciem, mogą przyjść i porozmawiać z klasą na temat informatyki lub po prostu pomóc uczniom w zajęciach Godziny Kodowania.
+Kiedy [zarejestrujesz się na wydarzenie Godziny Kodowania](/events), otrzymasz pomocne wiadomości e-mail z wiadomościami i wskazówkami dotyczącymi udanej Godziny Kodowania. W ten sposób możesz poinformować lokalnych wolontariuszy o tym, że Twoja szkoła bierze udział. Wolontariusze są świetnym wsparciem, mogą przyjść i porozmawiać z klasą na temat informatyki lub po prostu pomóc uczniom w zajęciach Godziny Kodowania.
 
 ### Spowoduj ekscytację wśród swoich uczniów
 
@@ -151,6 +151,6 @@ A co zrobić, jeśli któryś z uczniów skończy wcześniej?
 
 ### Co będzie się działo po Godzinie Kodowania?
 
-Informatyka nie musi kończyć się Godziną Kodowania! [Dowiedz się](/beyond) , jak przynieść CS do swojej szkoły i uczniów.
+Informatyka nie musi kończyć się z Godziną Kodowania! [Dowiedz się](/beyond), jak przynieść informatykę do swojej szkoły i dla uczniów.
 
 {{ signup_button }}

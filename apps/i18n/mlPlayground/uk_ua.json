@@ -1,9 +1,37 @@
 {
+  "addFeatureButton": "Додати ознаку",
+  "aiBotAltText": "ШІ-бот",
+  "aiBotBeamAltText": "Промінь сканера ШІ-бота",
+  "aiBotBodyAltText": "Тіло ШІ-бота",
+  "aiBotHeadAltText": "Голова ШІ-бота",
+  "animationDescriptionsHeader": "Опис анімації",
+  "animationDescriptionsTesting": "ШІ-бот сканує вхідні рядки нерозмічених даних з тестового набору даних. Коли кожен рядок проходить під променем ШІ-бота, він робить прогноз, додаючи значення до стовпця мітки.",
+  "animationDescriptionsTraining": "Марковані рядки з навчального набору даних потрапляють у відкриту голову ШІ-бота.",
+  "columnDetailsInformation": "Інформація про стовпчик",
   "columnDetailsMaximumValue": "максимум",
   "columnDetailsMinimumValue": "мінімум",
+  "columnDetailsNumericalTypeError": "Числові стовпці не можуть містити текст.",
+  "columnDetailsTooManyLabels": "У цьому стовпчику знайдено  {labelCount} значень. Графік буде показано лише тоді, коли їх {maxLabelCount} або менше.",
+  "columnDetailsValueRange": "діапазон",
+  "columnInspectorDataType": "Тип даних",
   "columnInspectorDescription": "Опис",
+  "columnType_categorical": "категорійний",
+  "columnType_numerical": "числовий",
   "correctAnswer": "Правильно",
+  "crossTabRelationshipHeader": "Інформація про зв'язки",
+  "crossTabTooMuchData": "Вибрані дані занадто великі, щоб відобразити їх у таблиці.",
+  "dataCardDefaultHeader": "Деталі",
   "dataCardLastUpdated": "Останнє оновлення",
+  "dataCardPotentialMisuses": "Потенційні зловживання",
+  "dataCardPotentialUses": "Потенційне використання",
+  "dataCardRemovedRows": "{rowCount} {rowCount, plural, one {ряд} few {ряди} many {рядів} other {рядів}} знято, тому що {rowCount, plural, one {це} few {вони} many {вони} other {вони}} містили порожні клітини.",
+  "dataCardRowCount": "Ряди даних",
+  "dataCardSource": "Джерело",
+  "dataCardWarningLargeDataset": "Попередження: Набори даних з більш ніж {rowCount} рядками сповільнять роботу користувача.",
+  "dataDisplayRowCount": "Є {rowCount} рядків даних.",
+  "dataDisplayRowCountTruncated": "Є {rowCount} рядків даних. (Показано перші {rowLimit} рядки)",
+  "datasetDescriptionLabel": "Про дані",
+  "datasetDescriptionPlaceholder": "Як збиралися дані? Хто їх збирав? Коли їх збирали?",
   "datasets": {
     "abalone": {
       "fields": {
@@ -66,6 +94,13 @@
       "fields": {
         "Age": {
           "id": "Вік"
+        }
+      }
+    },
+    "icecream_toppings_toy": {
+      "fields": {
+        "Preference": {
+          "id": "Уподобання"
         }
       }
     },
@@ -139,6 +174,61 @@
         },
         "Description": {
           "id": "Опис"
+        }
+      }
+    },
+    "pizza_toppings_toy": {
+      "card": {
+        "context": {
+          "potentialMisuses": "Все, що завгодно, окрім рекомендацій щодо піци.",
+          "potentialUses": "Допоможіть порекомендувати, яку піцу варто купити новому клієнту."
+        },
+        "description": "Опитування клієнтів у піцерії про те, чи подобаються їм певні комбінації піци."
+      },
+      "fields": {
+        "Anchovies": {
+          "description": "Чи були в піці анчоуси?",
+          "id": "Анчоуси"
+        },
+        "Bacon": {
+          "description": "У піці був бекон?",
+          "id": "Бекон"
+        },
+        "Broccoli": {
+          "description": "Чи була в піці броколі?",
+          "id": "Броколі"
+        },
+        "Extra Cheese": {
+          "description": "Чи був у піци додатковий сир?",
+          "id": "Екстра сир"
+        },
+        "Fried Chicken": {
+          "description": "У піці була смажена курка?",
+          "id": "Смажена курка"
+        },
+        "Ham": {
+          "description": "У піці була шинка?",
+          "id": "Шинка"
+        },
+        "Olives": {
+          "description": "Чи були в піці оливки?",
+          "id": "Оливки"
+        },
+        "Pepperoni": {
+          "description": "У піці було пепероні?",
+          "id": "Пепероні"
+        },
+        "Peppers": {
+          "description": "У піці були перці?",
+          "id": "Перці"
+        },
+        "Preference": {
+          "description": "Як Вам сподобалася піца?",
+          "id": "Уподобання"
+        },
+        "Sausage": {
+          "description": "Чи була в піці ковбаса?",
+          "id": "Ковбаса"
         }
       }
     },
@@ -323,6 +413,13 @@
         }
       }
     },
+    "taco_toppings_toy": {
+      "fields": {
+        "Preference": {
+          "id": "Уподобання"
+        }
+      }
+    },
     "zoo": {
       "fields": {
         "Aquatic": {
@@ -331,17 +428,61 @@
       }
     }
   },
+  "generateResultsHeader": "Тестування моделі",
   "incorrectAnswer": "Неправильно",
+  "modelCardAccuracy": "Точність",
+  "modelCardDatasetDetails": "Про дані",
+  "modelCardDatasetDetailsSize": "Розмір набору даних",
+  "modelCardDatasetDetailsSizeCount": "{rowCount} рядів",
   "modelCardFeatures": "Ознаки",
+  "modelCardFeaturesAndLabel": "Ознаки та мітки",
+  "modelCardIntendedUse": "Очікуване використання",
   "modelCardLabel": "Мітка",
+  "modelCardLimitations": "Обмеження та застереження",
+  "modelCardPossibleValues": "Можливі значення",
   "modelCardPossibleValuesMaximum": "максимум",
   "modelCardPossibleValuesMinimum": "мінімум",
+  "modelNameLabel": "Назва моделі",
   "navigateBack": "Назад",
   "navigateDone": "Кінець",
   "navigateForward": "Продовжити",
+  "potentialMisusesDescription": "Опишіть будь-які обмеження в тому, як ця модель була створена або як її слід використовувати. Можна вказати щось на кшталт: \"Уникайте використання цієї моделі для...\" або \"Будьте обережні щодо...\".\nВажливими питаннями для розгляду є:",
+  "potentialMisusesDescriptionEnough": "Чи зібрано достатньо даних, щоб бути впевненими в точності моделі?",
+  "potentialMisusesDescriptionRepresent": "Чи представляють дані всіх можливих користувачів і сценарії?",
+  "potentialMisusesDescriptionSituations": "Чи існують ситуації, коли цю модель точно не варто використовувати?",
+  "potentialMisusesLabel": "Обмеження та застереження",
+  "potentialMisusesPlaceholder": "Напишіть короткий опис.",
+  "potentialUsesDescription": "Опишіть проблему, яку, на вашу думку, ця модель може допомогти вирішити, або один потенційний застосунок, який хтось міг би створити за допомогою цієї моделі.",
+  "potentialUsesLabel": "Очікуване використання",
+  "potentialUsesPlaceholder": "Напишіть короткий опис.",
+  "predictAIBotPredicts": "ШІ прогнозує",
   "predictButton": "Прогнозування",
+  "predictHeader": "Спробуйте!",
+  "predictPlaceholder": "min {minimum}, max {maximum}",
+  "predictionStatement": "Прогнозувати {output} на основі {inputs}",
+  "resultsAccuracy": "Точність",
+  "resultsDetailsButton": "Деталі",
+  "resultsHeader": "Результат",
+  "resultsPreviousResults": "Попередні результати",
+  "resultsTableActualValueHeader": "Фактичне",
   "resultsTableFeatureHeader": "Ознаки",
+  "resultsTablePredictedValueHeader": "Прогнозування ШІ",
+  "resultsTablePredictionRange": "Прогнози становлять +/- {percentage}% діапазону",
+  "saveModelColumnCountLabel": "Описи стовпців",
+  "saveModelColumnTypeFeature": "ознака",
+  "saveModelColumnTypeLabel": "мітка",
+  "saveModelFieldRequired": "обов'язкове",
   "saveProgress": "Зберегти",
+  "saveStatus_failure": "Сталася помилка. Модель не збережено. Будь ласка, спробуйте ще раз.",
+  "saveStatus_piiProfanity": "Вашу модель не вдалося зберегти, оскільки вона містить ненормативну лексику або особисту інформацію (наприклад, електронну пошту, адресу, номер телефону).",
+  "saveStatus_success": "Модель збережено!",
+  "scatterPlotLabel": "Інформація про зв'язки",
+  "selectDatasetErrorTooFewColumns": "Будь ласка, завантажте {fileType} файл із принаймні {count} стовпцями.",
+  "selectDatasetErrorTooFewRows": "Будь ласка, завантажте {fileType} файл із принаймні {count} рядками.",
+  "selectDatasetUploadFileButton": "Завантажити {fileType}",
+  "selectLabelButton": "Вибрати мітку",
+  "trainModelButtonText": "Тренувати",
   "trainModelHeading": "Тренування",
-  "tryAgain": "Спробуйте знову"
+  "tryAgain": "Спробувати знову",
+  "uniqueOptionsWarningMessage": "Категорійні стовпці з більш ніж {valueCount} унікальних значень не можуть бути обрані як мітка або ознака."
 }

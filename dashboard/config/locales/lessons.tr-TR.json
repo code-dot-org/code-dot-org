@@ -1577,6 +1577,39 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Heceleme Yarışması"
         },
+        "K5-OnlinePD/Getting Started": {
+          "name": "Başlarken"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Bilgisayar Bilimi Temelleri"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "Geleceğe bakış"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "Temellerde uzmanlaşma: Sıralama"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "Temellerde uzmanlaşma-Döngüler"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "Temellerde uzmanlaşma: Koşullar"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "Temellerde uzmanlaşma: Fonksiyonlar"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "Temellerde uzmanlaşma-Olaylar"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "Bilgisayar Bilimleri öğretim için en iyi yöntemler"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Planlama"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Sonraki Adımlar"
+        },
         "csd1-2019/Intro to Problem Solving": {
           "name": "Problem çözme tanıtımı"
         },
@@ -2257,6 +2290,45 @@
         },
         "pre-express-2019/Make a Game in Play Lab": {
           "name": "Etkinliklerle Kraliyet Savaşı"
+        },
+        "k5-onlinepd-2019/Welcome to \"Teaching Computer Science Fundamentals\"": {
+          "name": "\"Bilgisayar Bilimi Temelleri Öğretimine\" Hoşgeldiniz"
+        },
+        "k5-onlinepd-2019/Understanding the Computer Science Fundamentals Courses": {
+          "name": "Bilgisayar Bilimi Temelleri Derslerinin Anlaşılması"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Sıralama"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Döngüler"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Olaylar"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Koşullar"
+        },
+        "k5-onlinepd-2019/End of Course projects": {
+          "name": "Kurs Sonu projeleri"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Fonksiyonlar"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Değişkenler"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "For (İçin) Döngüleri"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Hareketli Nesne Laboratuvarı"
+        },
+        "k5-onlinepd-2019/Reviewing your reflections": {
+          "name": "Yansımalarınızı Gözden Geçirme"
+        },
+        "k5-onlinepd-2019/Next steps": {
+          "name": "Sonraki adımlar"
         },
         "coursea-2020/Safety in My Online Neighborhood": {
           "name": "Çevrimiçi Mahallemde Güvenlik"
@@ -3948,6 +4020,39 @@
           "purpose": "Bu çevrimiçi aktivitede öğrenciler, Play Lab'deki etkinlikleri nasıl kullanacaklarını öğrenecekler.  Bir ok tuşuna basıldığında şövalyeyi hareket etmesi için eğiterek başlayacaklar, ardından son serbest oyun bulmacasının bir parçası olarak sıralama ve döngü dahil olmak üzere bu kurs boyunca öğrendikleri becerilerin geri kalanını sergileme fırsatı ile sona erecekler.",
           "student_overview": "Bir hikaye oluşturmak veya etkileşimli bir oyun yapmak için olayları kullanın."
         },
+        "kodea-pd-2021/Getting Started": {
+          "name": "Başlarken"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Bilgisayar Bilimi Temelleri"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "Geleceğe bakış"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "Temellerde uzmanlaşma: Sıralama"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "Temellerde uzmanlaşma-Döngüler"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "Temellerde uzmanlaşma: Koşullar"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "Temellerde uzmanlaşma: Fonksiyonlar"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "Temellerde uzmanlaşma-Olaylar"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "Bilgisayar Bilimleri öğretim için en iyi yöntemler"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Planlama"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Sonraki Adımlar"
+        },
         "csd1-2022/Intro to Problem Solving": {
           "name": "Problem çözme tanıtımı",
           "assessment_opportunities": "1.  **Bir sorunu çözmek için sınıf arkadaşlarınızla iletişim kurun ve işbirliği yapın**\n\n     İşbirliği ile ilgili özet tartışma sorusunda, problem çözmede işbirliğinin avantajlarını kontrol edin ve zorlukların üstesinden gelmek için uygun stratejileri listeleyebilirsiniz. Bu uygulama ünite ve kurs boyunca pekiştirilecektir.\n2.  **Bir sorunun çözümünü yinelemeli olarak iyileştirin**\n\n     Etkinlik Kılavuzunda, öğrencilerin orijinal tasarımındaki güçlü ve zayıf yönleri ve projenin bir sonraki tekrarı için uygun değişikliklerle bağlantısını kontrol edin.\n3.  **Bir sorunu çözmek için kullanılan farklı stratejileri belirleyin**\n\n     Etkinlik Kılavuzunda, etkinlikteki zorlukların üstesinden gelmek için stratejiler olup olmadığına bakın. Rehberin ikinci sayfasında planlarını geliştirmenin bir parçası olarak öğrencilerin listeledikleri tasarımlarının \"güçlü yanlarını\" da kontrol etmek isteyebilirsiniz.",
@@ -5220,20 +5325,20 @@
         },
         "csc-ecosystems-2023/Overfishing Simulation (pilot)": {
           "name": "Aşırı Avlanma Simülasyonu",
-          "overview": "Bu **beceri geliştirme** dersinde, öğrenciler bir su ekosistemi modelini programlayacak ve ardından aşırı avlanma durumunu simüle edeceklerdir. Öğrenciler sudaki alg miktarını kontrol etmek için koşullu ifadelerin nasıl programlanacağını öğreneceklerdir. Çok fazla yosun varsa, mercan hastalanır. Çok az yosun varsa, balığın besin kaynağı yoktur ve bölgeyi terk eder. Doğru miktarda yosun varsa, hasta mercan iyileşir ve balık bölgede kalır. ",
-          "preparation": "-   Seviyeleri oynayın ve <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">ders slaytlarını gözden geçirin</a> \n-   Öğrenci çalışma süresi ile tüm grup eğitimi arasında ilerlemeye karar verin.\n-   Öğrencilere önerilen hazırlığı atamayı düşünün \n    ([link](https://studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4911962))\n-   Son dersten sonra keşfetmek için bu ilgili uzantı seçeneklerini ([link](https://studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4911963)) düşünün.\n\n##### İsteğe bağlı:\n\n-   Bu <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">Faydalı İpuçları slayt   \\[Optional] gösterisini inceleyin.</a> \n-   Öğrencilerin kodlarındaki hataları bulmalarına ve düzeltmelerine yardımcı olmak</a>  için hazırlanmak üzere bu <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">öğretmenin hata ayıklama kılavuzunu   \\[Optional] inceleyin. ",
-          "purpose": "Öğrenciler, deniz ekosistemlerinin etkileşime giren ve birbirlerini dengede tutan birçok organizmaya sahip olduğunu öğreneceklerdir. Bu ders, öğrenciler gerçek hayatta neden ve sonuç göstermek için bilgisayar bilimlerinde koşullu ifadeler kullanarak aşırı avlanmanın etkilerini simüle eden bir model oluştururken bilgisayar bilimini yaşam bilimleriyle birleştirir. "
+          "overview": "Bu **beceri geliştirme** dersinde öğrenciler bir su ekosistemi modeli programlayacak ve ardından aşırı avlanma durumunu simüle edecekler. Öğrenciler sudaki yosun miktarını kontrol etmek için koşullu ifadeleri nasıl programlayacaklarını öğrenecekler. Çok fazla yosun varsa mercan hastalanır. Yosunların çok az olması durumunda balıklar besin kaynağı bulamaz ve bölgeyi terk eder. Yeterli miktarda yosun varsa hasta mercan iyileşecek ve balıklar bölgede kalacaktır.",
+          "preparation": "-   Seviyeleri oynayın ve <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">ders slaytlarını</a> gözden geçirin\n-   Öğrenci çalışma süresi ile tüm grup eğitimi arasında bir hızda ilerlemeye karar verin..\n-   Öğrencilere önerilen hazırlığı atamayı düşünün \n    ([link](https://studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4911962))\n-   Bu, devam niteliğindeki ilgili seçenekleri ([link](https://studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4911963)) son dersten sonra keşfetmeyi düşünün.\n\n##### İsteğe bağlı:\n\n-   [Optional] Bu <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">Faydalı İpuçları</a> slayt gösterisini inceleyin.\n-   [Optional] Öğrencilerin kodlarındaki hataları bulmalarına ve düzeltmelerine yardımcı olmak için hazırlanmak üzere bu <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">öğretmenin hata ayıklama kılavuzunu</a> inceleyin. ",
+          "purpose": " Öğrenciler deniz ekosistemlerinin birbiriyle etkileşim halinde olan ve birbirini dengede tutan birçok organizmaya sahip olduğunu öğreneceklerdir. Bu derste, öğrenciler gerçek hayatta neden ve sonucu göstermek için bilgisayar bilimlerindeki koşullu ifadeleri kullanarak aşırı avlanmanın etkilerini simüle eden bir model oluştururken bilgisayar bilimi ile yaşam bilimlerini birleştirir."
         },
         "csc-ecosystems-2023/Balancing the Ecosystem (pilot)": {
           "name": "Ekosistemi Dengelemek",
           "overview": "Bu **beceri geliştirme** dersinde, öğrenciler aşırı avlanma sorununa üç farklı çözüm okuyacak ve daha sonra programlayacaklardır.\n\nBu ders, dengesiz bir su ekosistemi modeliyle önceki dersin kaldığı yerden başlar. İlk olarak, öğrenciler teknenin davranışını değiştirecekler, böylece yalnızca belirli bir “balıkçılık bölgesi” içinde hareket edebilecekler. İkinci, öğrenciler bir “balıkçılık sezonu” ve “balık tutma sezonu” belirtmek için yeni bir etkinlik programlayacaklar. Üçüncüsü, öğrenciler teknenin çıkardığı balık sayısını takip etmek için bir değişkeni nasıl kullanacaklarını öğreneceklerdir. Ders, öğrencilerin aşırı avlanmanın üç çözümünü öğrenmelerini sağlamak için Anlama Kontrolü seviyesiyle sona erer..",
-          "preparation": "-   Aşırı</a>Avlanmayı <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\" target=\"_blank\">Anlama ile ilgili verilen makaleyi okuyun. Öğrencilerinizin ihtiyaçlarını karşılamak için gerektiği gibi iskele. \n-   Seviyeleri oynayın ve <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">ders slaytlarını gözden geçirin</a> \n-   Öğrenci çalışma süresi ile tüm grup eğitimi arasında ilerlemeye karar verin.\n-   Öğrencilere önerilen hazırlığı atamayı düşünün [(bağlantı)](https://studio.code.org/s/csc-ecosystems-2023/lessons/2#activity-4986903).\n-   Bu ilgili uzantı seçeneklerini göz önünde bulundurun [(bağlantı)](https://studio.code.org/s/csc-ecosystems-2023/lessons/2#activity-4986904).\n\n##### İsteğe bağlı:\n\n-   Bu <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">Faydalı İpuçları slayt   \\[Optional] gösterisini inceleyin.</a> \n-   Öğrencilerin kodlarındaki hataları bulmalarına ve düzeltmelerine yardımcı olmak</a>  için hazırlanmak üzere bu <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">öğretmenin hata ayıklama kılavuzunu   \\[Optional] inceleyin. ",
+          "preparation": "-   <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\" target=\"_blank\">Aşırı Avlanmayı Anlama</a> ile ilgili verilen makaleyi okuyun. Öğrencilerinizin ihtiyaçlarını karşılamak için gereken rehberliği sağlayın. \n-   Seviyeleri oynayın ve <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">ders slaytlarını</a> gözden geçirin\n-   Öğrenci çalışma süresi ile tüm grup eğitimi arasında bir hızda ilerlemeye karar verin.\n-   Öğrencilere önerilen hazırlığı atamayı düşünün [(bağlantı)](https://studio.code.org/s/csc-ecosystems-2023/lessons/2#activity-4986903).\n-   Bu, devam niteliğindeki ilgili seçenekleri göz önünde bulundurun [(bağlantı)](https://studio.code.org/s/csc-ecosystems-2023/lessons/2#activity-4986904).\n\n##### İsteğe bağlı:\n\n-   [Optional] Bu <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">Faydalı İpuçları</a> slayt gösterisini inceleyin.\n-   [Optional] Öğrencilerin kodlarındaki hataları bulmalarına ve düzeltmelerine yardımcı olmak için hazırlanmak üzere bu <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">öğretmenin hata ayıklama kılavuzunu</a> inceleyin. ",
           "purpose": "Öğrenciler dengeli ve dengesiz ekosistemler hakkında bilgi edinmeye devam edeceklerdir. Temel olarak aşırı avlanma hakkında bilimsel bir makale kullanarak, öğrenciler bir ekosistemdeki organizmalar arasındaki bağlantılar hakkında zengin bir anlayış geliştireceklerdir. Sonuçta, öğrenciler yerel bir ekosistemi modelleyerek öğrendiklerini uygulama fırsatına sahip olacaklar. "
         },
         "csc-ecosystems-2023/lesson-3": {
           "name": "Ekosistemimi Kodlama",
           "overview": "Bu **beceri geliştirme** dersinde öğrenciler birkaç farklı ekosistem simülasyonunu keşfedecekler. Öğrenciler bir yağmur ormanı, çöl, kutup veya sulak alan ekosistemini keşfetmeyi seçebilirler. Bir ekolojist rolünü üstlenecekler ve her ekosistemin besin zincirindeki bitkiler ve hayvanlar arasındaki etkileşimleri araştıracaklar. Öğrenciler, her ekosistemin karşılaştığı zorlukları anlamak için talimatları okuyacaklardır. Daha sonra ekosistemi yeniden dengelemek için ilgili kodu değiştirecekler. ",
-          "preparation": "-   Seviyeleri oynayın ve <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">ders slaytlarını gözden geçirin</a> \n-   Öğrenci çalışma süresi ile tüm grup eğitimi arasında ilerlemeye karar verin.\n-   Her öğrenci için bir Ekolojist Defteri yazdırın\n-   Bu dersten[0] sonra bu [uzatma fırsatlarını] göz önünde bulundurun"
+          "preparation": "-   Seviyeleri oynayın ve <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">ders slaytlarını</a> gözden geçirin \n-   Öğrenci çalışma süresi ile tüm grup eğitimi arasında bir hızda ilerlemeye karar verin.\n-   Her öğrenci için bir Ekolojist Defteri yazdırın\n-   Bu dersten sonra bu [devam niteliğindeki fırsatları](https://studio.code.org/s/csc-ecosystems-2023/lessons/3#activity-4852074) göz önünde bulundurun"
         },
         "csc-mappinglandmarks-2023/US Landmarks": {
           "name": "Harita Yapımına Giriş",
@@ -6545,50 +6650,48 @@
           "student_overview": "Bir hikaye oluşturmak veya etkileşimli bir oyun yapmak için olayları kullanın."
         },
         "how-ai-works-2023/Introduction to Machine Learning": {
-          "overview": "Bu ders [AI Nasıl Çalışır: Makine Öğrenimi Nedir?](https://youtu.be/KHbwOetbmbs?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) [AI Nasıl Çalışır video serisinden] video[1]. Ders planını keşfetmeden önce bu videoyu izleyin.\n\nBu derste öğrencilere makine öğrenimi adı verilen bir yapay zeka biçimi ve problemleri çözmek için bir robotun eğitilmesine yardımcı olmak için Problem Çözme Sürecini nasıl kullanabilecekleri tanıtılır. Bir robotun - AI Bot'un - balıklardaki kalıpları nasıl tespit edeceğini öğrendiği üç makine öğrenimi etkinliğine katılırlar.\n\nBu ders kendi başına veya AI Nasıl Çalışır - [bu sıradaki tüm dersleri görüntülemek için burayı tıklayın](https://code.org/ai/how-ai-works)üzerine 7 derslik bir dizinin parçası olarak öğretilebilir."
+          "overview": "Bu ders, [Yapay Zeka Nasıl Çalışır video serisinden](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) [Yapay Zeka Nasıl Çalışır: Makine Öğrenimi Nedir?](https://youtu.be/KHbwOetbmbs?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) videosunu konu alır. Ders planını keşfetmeden önce bu videoyu izleyin.\n\nBu derste öğrencilere, makine öğrenimi adı verilen bir yapay zeka biçimi ve bir robotun sorunları çözecek şekilde eğitilmesine yardımcı olmak için Sorun Çözme Sürecini nasıl kullanabilecekleri anlatılıyor. Bir robotun (AI Bot) balıklardaki desenleri nasıl tespit edeceğini öğrendiği üç makine öğrenimi etkinliğine katılıyorlar.\n\nBu ders kendi başına veya Yapay Zeka Nasıl Çalışır konulu 7 derslik bir dizinin parçası olarak öğretilebilir - [bu dizideki tüm dersleri görüntülemek için buraya tıklayın](https://code.org/ai/how-ai-works)."
         },
         "how-ai-works-2023/Computer Vision": {
           "name": "Bilgisayarla Görme",
-          "overview": "Bu ders, \\[AI Nasıl Çalışır[0] video serisinden] [AI Nasıl Çalışır: Bilgisayarla Görme] videosuna odaklanır[1]. Ders planını keşfetmeden önce bu videoyu izleyin.\n\nÖğrenciler bilgisayarla görmenin nasıl çalıştığını öğrenir. Önce gözlerinin fark ettiği çizimin özelliklerini tanımlamak için optik illüzyonlara bakarlar. Öğrenciler bilgisayar görüşünü ve bir bilgisayarın nasıl “gördüğünü” açıklayan bir video izlerler. Yedi segment ekranının hangi sayıyı görüntülediğine karar vermek için bir ağ kullanan bir algoritma tasarlarlar. Son olarak, öğrenciler algoritmalarını test eder.\n\nBu ders kendi başına veya AI Nasıl Çalışır - [bu sıradaki tüm dersleri görüntülemek için burayı tıklayın](https://code.org/ai/how-ai-works)üzerine 7 derslik bir dizinin parçası olarak öğretilebilir.",
-          "preparation": "-   Her grup için Computer Vision Network etkinlik kılavuzunun kopyalarını yazdırın\n-   (İsteğe bağlı) Yedi Segment Ekran Manipülatifinin kopyalarını yazdırın",
-          "student_overview": "Sayıları algılamak için bir algoritma tasarlayarak bilgisayarla görmenin nasıl çalıştığını öğrenin."
+          "overview": "Bu ders, [Yapay Zeka Nasıl Çalışır video serisinden] [1] [Yapay Zeka Nasıl Çalışır: Bilgisayarla Görme](https://youtu.be/2hXG8v8p0KM?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) videosu etrafında şekillenir. Ders planını keşfetmeden önce bu videoyu izleyin.\n\nÖğrenciler bilgisayarla görmenin nasıl çalıştığını öğrenirler. Çizimde gözlerinin fark ettiği özellikleri belirlemek için öncelikle optik illüzyonlara bakarlar. Öğrenciler bilgisayar görüşünü ve bilgisayarın nasıl \"gördüğünü\" açıklayan bir video izlerler. Yedi bölümlü ekranın hangi sayıyı gösterdiğine karar vermek için ağ kullanan bir algoritma tasarlıyorlar. Son olarak öğrenciler algoritmalarını test ederler.\n\nBu ders kendi başına veya Yapay Zeka Nasıl Çalışır konulu 7 derslik bir dizinin parçası olarak öğretilebilir - [bu dizideki tüm dersleri görüntülemek için buraya tıklayın](https://code.org/ai/how-ai-works).",
+          "preparation": "-   Her grup için Görüntü İşleme Ağı aktivite rehberinin kopyalarını yazdırın\n-   (İsteğe bağlı) Yedi Segmentli Ekran Manipülatifinin kopyalarını yazdırın\n    ​",
+          "student_overview": "Sayıları algılamak için bir algoritma tasarlayarak bilgisayarlı görmenin nasıl çalıştığını öğrenin."
         },
         "how-ai-works-2023/Neural Networks": {
           "name": "Sinir Ağları",
-          "overview": "Bu ders, \\[AI Nasıl Çalışır?[0] video serisinden] [AI Nasıl Çalışır: Sinir Ağları](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)videosuna odaklanır. Ders planını keşfetmeden önce bu videoyu izleyin.\n\nÖğrenciler sinir ağlarının nasıl çalıştığını öğrenir. Önce size bir şeyler öneren bir deneyim örneğini tartışırlar. Daha sonra videoları bir kişiye göre öneren bir widget kullanırlar. Öğrenciler sinir ağlarını açıklayan bir video izlerler. Her kişinin ağırlıklarını ayarlamak için güncellenmiş bir widget kullanırlar. Son olarak, öğrenciler öneri sistemleri oluştururken farklı bakış açılarına duyulan ihtiyacı tartışırlar.\n\nBu ders kendi başına veya AI Nasıl Çalışır - [bu sıradaki tüm dersleri görüntülemek için burayı tıklayın](https://code.org/ai/how-ai-works)üzerine 7 derslik bir dizinin parçası olarak öğretilebilir.",
-          "preparation": "-   Her öğrenci için WeTube Content Creators kaynağının kopyalarını yazdırın\n-   Her öğrenci için Sinir Ağı etkinlik kılavuzunun kopyalarını yazdırın",
+          "overview": "Bu ders, [Yapay Zeka Nasıl Çalışır video serisinden](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)[Yapay Zeka Nasıl Çalışır: Sinir Ağları](https://youtu.be/JrXazCEACVo?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) videosunu ele alır. Ders planını keşfetmeden önce bu videoyu izleyin.\n\nÖğrenciler sinir ağlarının nasıl çalıştığını öğrenirler. İlk önce size bir şeyler öneren bir deneyim örneğini tartışırlar. Daha sonra tek bir kişiye göre video öneren bir widget kullanıyorlar. Öğrenciler sinir ağlarını açıklayan bir video izlerler. Her kişinin ağırlıklarını ayarlamak için güncellenmiş bir widget kullanıyorlar. Son olarak öğrenciler öneri sistemleri oluştururken farklı bakış açılarına olan ihtiyacı tartışırlar.\n\nBu ders kendi başına veya AI Nasıl Çalışır'daki 7 derslik bir dizinin parçası olarak - [bu sıradaki tüm dersleri görüntülemek için burayı tıklayın](https://code.org/ai/how-ai-works) öğretilebilir.",
+          "preparation": "-   Her öğrenci için WeTube İçerik Oluşturucular kaynağının kopyalarını yazdırın\n-   Her öğrenci için Sinir Ağı aktivite rehberinin kopyalarını yazdırın",
           "student_overview": "Çıktıları ayarlamak için bir öneri sisteminin ağırlıklarını ayarlayarak sinir ağlarının nasıl çalıştığını öğrenin."
         },
         "how-ai-works-2023/Chatbots and Large Language Models (LLMs)": {
           "name": "Sohbet Robotları ve Büyük Dil Modelleri (LLM'ler)",
-          "overview": "Bu ders, [AI Nasıl Çalışır video serisinden] [AI Nasıl Çalışır: Sohbet Robotları ve Büyük Dil Modelleri](https://youtu.be/X-AWdfSFCHQ) videosuna odaklanır.[1]Ders planını keşfetmeden önce bu videoyu izleyin.\n\nBüyük Dil Modelleri (LLM'ler) yeni metin oluşturur. LLM'lerin ürettiği metin, Wikipedia gibi büyük metin gövdelerine dayalı olarak büyük dil modelleri oluşturulduğu için bir insan yazmış gibi görünüyor. Bu derste, öğrenciler bir LLM'nin ne olduğunu ve nasıl çalıştığını öğrenir, daha sonra AI ile bir metin oluşturmak için bir LLM kullanır. Son olarak, sınıf, LLM'lerin akıllı mı yoksa yaratıcı mı olduğu hakkında bir tartışma ile tamamlanır.\n\nBu ders kendi başına veya AI Nasıl Çalışır - [bu sıradaki tüm dersleri görüntülemek için burayı tıklayın](https://code.org/ai/how-ai-works)üzerine 7 derslik bir dizinin parçası olarak öğretilebilir.",
-          "preparation": "-   Her öğrenci için etkinlik kılavuzunun kopyalarını yazdırın",
+          "overview": "Bu ders, [AI Nasıl Çalışır video serisinden](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) [AI Nasıl Çalışır: Sohbet Robotları ve Büyük Dil Modelleri](https://youtu.be/X-AWdfSFCHQ) videosuna odaklanır.Ders planını incelemeden önce bu videoyu izleyin.\n\nBüyük Dil Modelleri (LLM'ler) yeni metin oluşturur. LLM'lerin oluşturduğu metin, bunu bir insan yazmış gibi görünüyor çünkü büyük dil modelleri, Wikipedia gibi büyük metinlere dayalı olarak oluşturulmuştur. Bu derste öğrenciler LLM'in ne olduğunu ve nasıl çalıştığını öğrenirler, ardından da AI(Yapay zeka) ile birlikte bir metin oluşturmak için bir LLM(Büyük Dil Modeli) kullanın.\nSon olarak, sınıf, LLM'lerin akıllı mı yoksa yaratıcı mı olduğu hakkında bir tartışma ile tamamlanır.\n\nBu ders kendi başına veya AI Nasıl Çalışır üzerine 7 derslik bir dizinin parçası olarak öğretilebilir. - [bu sıradaki tüm dersleri görüntülemek için burayı tıklayın](https://code.org/ai/how-ai-works)",
+          "preparation": "-   Her öğrenci için aktivite rehberinin kopyalarını yazdırın",
           "student_overview": "Büyük Dil Modelleri (LLM'ler) akıllı mı yoksa yaratıcı mı? Bir şeyler yaratmak için onlarla çalışırken kendiniz karar verin, ve nasıl çalıştıkları hakkında daha fazla bilgi edinin!"
         },
         "how-ai-works-2023/Generative Images": {
           "name": "Üretken Görüntüler",
-          "overview": "Bu ders [AI Nasıl Çalışır: Yaratıcılık ve Hayal Gücü?](https://www.youtube.com/watch?v=X994dDnmRmY) [AI Nasıl Çalışır video serisinden] video[1]. Ders planını keşfetmeden önce bu videoyu izleyin.\n\nDifüzyon modelleri görüntü oluşturur. Difüzyon AI, bir görüntüyü gürültüye dönüştürür ve işlemi tersine çevirmek için bir yapay zekayı eğitir. Bu derste, öğrenciler yapay zekanın nasıl görüntü oluşturabileceğini öğrenir, ardından bir difüzyon AI widget'ını keşfedin. Son olarak, sınıf, bu modellerin yaratıcı olup olmadığı hakkında bir tartışma ile tamamlanır.\n\nBu ders kendi başına veya AI Nasıl Çalışır - [bu sıradaki tüm dersleri görüntülemek için burayı tıklayın](https://code.org/ai/how-ai-works)üzerine 7 derslik bir dizinin parçası olarak öğretilebilir.",
-          "preparation": "-   Her öğrenci için etkinlik kılavuzunun kopyalarını yazdırın",
+          "overview": "Bu ders, [How AI Works video series] [1] nden [How AI Works: Creativity and Imagination?](https://www.youtube.com/watch?v=X994dDnmRmY) videosunu konu alır. Ders planını keşfetmeden önce bu videoyu izleyin.\n\nDifüzyon modelleri görüntüler üretir. Difüzyon AI, görüntüyü gürültüye dönüştürür ve süreci tersine çevirmek için yapay zekayı eğitir. Bu derste öğrenciler yapay zekanın nasıl görüntü oluşturabileceğini öğreniyor ve ardından bir yapay zeka difüzyon widget'ını keşfediyor. Son olarak sınıf, bu modellerin yaratıcı olup olmadığına dair bir toparlamayla sona erer.\n\nBu ders kendi başına veya AI Nasıl Çalışır - [bu sıradaki tüm dersleri görüntülemek için burayı tıklayın](https://code.org/ai/how-ai-works)üzerine 7 derslik bir dizinin parçası olarak öğretilebilir.",
+          "preparation": "-   Her öğrenci için aktivite rehberinin kopyalarını yazdırın",
           "student_overview": "Yapay zekanın bir difüzyon AI widget'ını keşfederek nasıl görüntü oluşturabileceğini öğrenin."
         },
         "how-ai-works-2023/Algorithmic Bias": {
           "name": "Algoritmik Önyargı",
-          "overview": "Bu ders, [AI Nasıl Çalışır video serisinden] [AI Nasıl Çalışır: Eşit Erişim ve Algoritmik Önyargı](https://youtu.be/tJQSyzBUAew?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) videosuna odaklanır.[1]Ders planını keşfetmeden önce bu videoyu izleyin.\n\nBu derste öğrenciler, Twitter kırpma algoritmasının altında yatan önyargıyı ortaya çıkarmak için görüntüleri kırpma alıştırması yapacaklar. Ardından, öğrenciler bu önyargılı algoritmanın keşfi hakkında bir video okuyacak ve izleyeceklerdir. Son olarak, öğrenciler Twitter'ın kırpma algoritmalarındaki önyargı iddialarına verdiği yanıtı analiz etmenin yanı sıra önyargıyı tanımanın ve azaltmanın yollarını tartışacaklar.\n\nBu ders kendi başına veya AI Nasıl Çalışır - [bu sıradaki tüm dersleri görüntülemek için burayı tıklayın](https://code.org/ai/how-ai-works)üzerine 7 derslik bir dizinin parçası olarak öğretilebilir.",
-          "preparation": "-   Kırpma widget'ı etkinliğini kendiniz tamamlayın, böylece öğrencilerinizin widget ile neler yaşayacağını ve hangi soruları veya sorunları ortaya çıkarabileceklerini görebilirsiniz.\n-   Videonun bölümlerini izleyin [“Irkçılığı Otomatikleştiriyor muyuz?”](https://youtu.be/Ok5sKLXqynQ) Ders planında referans alınmıştır.\n-   Aşağıdaki bağlantılar bölümünden iki makaleyi okuyun.",
+          "overview": "Bu ders, [AI Nasıl Çalışır video serisinden](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)[AI Nasıl Çalışır: Eşit Erişim ve Algoritmik Önyargı](https://youtu.be/tJQSyzBUAew?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) videosuna odaklanır.Ders planını keşfetmeden önce bu videoyu izleyin.\n\nBu derste öğrenciler, Twitter kırpma algoritmasının altında yatan önyargıyı ortaya çıkarmak için görüntüleri kırpma alıştırması yapacaklar. Ardından, öğrenciler bu önyargılı algoritmanın keşfi hakkında okuyacak ve bir video izleyeceklerdir. Son olarak, öğrenciler Twitter'ın kırpma algoritmalarındaki önyargı iddialarına verdiği yanıtı analiz etmenin yanı sıra önyargıyı tanımanın ve azaltmanın yollarını tartışacaklar.\n\nBu ders kendi başına veya AI Nasıl Çalışırüzerine 7 derslik bir dizinin parçası olarak öğretilebilir. - [bu sıradaki tüm dersleri görüntülemek için burayı tıklayın](https://code.org/ai/how-ai-works)",
+          "preparation": "-   Kırpma widget'ı etkinliğini kendiniz tamamlayın; böylece öğrencilerinizin widget'la neler yaşayacaklarını ve hangi soruları veya sorunları gündeme getirebileceklerini görebilirsiniz.\n-   Ders planında [“Irkçılığı Otomatikleştiriyor muyuz?”](https://youtu.be/Ok5sKLXqynQ) adlı videonun bölümlerini izleyin.\n-   Aşağıdaki bağlantılar bölümünden iki makaleyi okuyun.",
           "student_overview": "Bu derste, görüntüleri kırpma üzerinde çalışacak ve bir makineye bir görüntünün nasıl kırpılacağını öğretmenin getirdiği zorlukları ve önyargıları tartışacaksınız."
         },
         "how-ai-works-2023/Our AI Code of Ethics": {
           "name": "Yapay Zeka Etik Kurallarımız",
-          "overview": "Bu ders, \\[AI Nasıl Çalışır[0] video serisinden] [AI Nasıl Çalışır: Gizlilik ve İşin Geleceği] videosuna odaklanır[1]. Ders planını keşfetmeden önce bu videoyu izleyin.\n\nKüçük gruplar halinde öğrenciler, seçtikleri yapay zeka alanındaki etik tuzakları ortaya çıkaran makaleler ve videolar kullanarak araştırma yaparlar. Daha sonra, her grup seçtikleri alana hitap eden en az bir çözüm odaklı ilke geliştirir. Bu ilkeler daha sonra her yerdeki AI yaratıcıları ve yasa koyucular için sınıf çapında bir “AI Etik Kurallarımız” kaynağında (örneğin bir slayt sunumu, belge veya web sayfası) bir araya getirilir.\n\nBu ders kendi başına veya AI Nasıl Çalışır - [bu sıradaki tüm dersleri görüntülemek için burayı tıklayın](https://code.org/ai/how-ai-works)üzerine 7 derslik bir dizinin parçası olarak öğretilebilir.",
-          "student_overview": "Yapay zeka etiği hakkında işbirliği içinde araştırma yapın ve paylaşılabilir bir davranış kuralları oluşturun."
+          "overview": "Bu ders, [Yapay Zeka Nasıl Çalışır video serisinden] [1] [Yapay Zeka Nasıl Çalışır: Gizlilik ve Çalışmanın Geleceği](https://youtu.be/zNxw5gJtHLc?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) videosu etrafında şekillenir.. Ders planını keşfetmeden önce bu videoyu izleyin.\n\nKüçük gruplar halinde öğrenciler, seçtikleri yapay zeka alanındaki etik tuzakları ortaya çıkaran makaleler ve videolar kullanarak araştırma yaparlar. Daha sonra, her grup seçtikleri alana hitap eden en az bir çözüm odaklı ilke geliştirir. Bu ilkeler daha sonra her yerdeki AI yaratıcıları ve yasa koyucular için sınıf çapında bir “AI Etik Kurallarımız” kaynağında (örneğin bir slayt sunumu, belge veya web sayfası) bir araya getirilir.\n\nBu ders tek başına veya Yapay Zeka Nasıl Çalışır konulu 7 derslik bir dizinin parçası olarak öğretilebilir. - [click here to view all lessons in this sequence](https://code.org/ai/how-ai-works).",
+          "student_overview": "Yapay zeka etiği hakkında işbirliği içinde araştırma yapın ve paylaşılabilir bir davranış kuralları oluşturun.",
+          "preparation": "-   Grup başına bir**AI Etik Araştırma Alanları** çalışma kağıdını çevrimiçi olarak paylaşmaya hazırlanın.\n-   Grup başına bir**AI Etik Araştırma Yansıması** çalışma kağıdını yazdırın veya çevrimiçi paylaşmaya hazırlanın.\n-   Sınıfınızın “AI Etik Kurallarımız” kaynağını oluşturmak için kullanılacak paylaşılabilir bir web belgesi, slayt sunumu, video şablonu veya başka herhangi bir medya biçimi hazırlayın."
         },
         "how-ai-works-2023/How AI Works In a Day": {
-          "name": "Yapay Zeka Bir Günde Nasıl Çalışır",
-          "overview": "⚠️ Bu ders, [AI Nasıl Çalışır video serisinin](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) tamamını **tek bir günde** göstermek isteyen sınıflar için tasarlanmıştır. Her videoyu her seferinde bir gün tanıtan bu ünitedeki diğer derslerle sırayla öğretilmesi amaçlanmamıştır.\n\nÖğrenciler, videodaki kelimeleri eşleştirerek her videoyu takip eder, ardından her video hakkında bir yansıma sorusunu yanıtlamak. Ders planı ve slaytlar, sınıfınıza uyacak şekilde doğaçlama ve özelleştirmeye izin vermek için çok seyrek ve açık uçludur.",
-          "preparation": "-   Etkinlik kılavuzunu yazdırın\n-   Slaytları bir video projektöre yansıtın"
-        },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Kodlama Saati 2013"
+          "name": "Bir Günde Yapay Zeka Nasıl Çalışır",
+          "overview": "⚠️ Bu ders, [AI Nasıl Çalışır video serisinin](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) tamamını **tek bir günde** göstermek isteyen sınıflar için tasarlanmıştır. Her videoyu her seferinde bir gün tanıtan bu ünitedeki diğer derslerle sırayla öğretilmesi amaçlanmamıştır.\n\nÖğrenciler, videodaki sözcükleri eşleştirerek ve ardından her videoyla ilgili bir düşünme sorusunu yanıtlayarak her videoyu takip ederler. Ders planı ve slaytlar, sınıfınıza uyacak şekilde doğaçlama ve özelleştirmeye izin vermek için çok seyrek ve açık uçludur.",
+          "preparation": "-   Aktivite rehberini yazdırın\n-   Slaytları bir video projektörde yansıtın"
         },
         "applab-intro/Intro to App Lab": {
           "name": "Uygulama Labına Giriş",
@@ -6766,9 +6869,10 @@
           "student_overview": "Öncelikle öğrenciler, okyanustan çöpleri kaldırmak amacıyla nesneleri ya \"balık\" ya da \"balık değil\" olarak sınıflandırır. Sonra öğrencilerin, kendi eğitim veri setini suya ait olan diğer deniz yaratıklarını kapsayacak şekilde genişletmesi gerekecektir. Aktivitenin ikinci kısmında öğrenciler, rastgele meydana getirilmiş balıkların resimlerine uygulamak üzere kendi etiketlerini seçecektir. Bu eğitim verisi, sonrasında kendi kendine yeni resimleri etiketleyebilen bir makine öğrenim modeli için kullanılır."
         },
         "outbreak/Outbreak": {
-          "overview": "Bu ders, etkinlikler etrafında **beceri geliştirmeyi** öğrencilerin Hareketli Nesne Laboratuvarında kendi bilgisayar simülasyonlarını oluşturabilecekleri bir **mini proje** ile birleştirir. Öğrenciler, bir virüsün ne kadar hızlı yayılabileceğini ve yayılmayı yavaşlatmak için neler yapılabileceğini anlamak için simülasyonu inceleyecekler.",
-          "preparation": "-   Sınıfınız için varsa bir potansiyel sorun alanını bulmak üzere bulmacalarla oynayın. \n-   Her öğrencinin bir düşünce günlüğü olduğundan emin olun.",
-          "purpose": "Bir önceki derste öğrenciler basit bir simülasyondan veri toplayıp yorumladılar. Bu derste öğrenciler kendi simülasyon modellerini kodlamak için yönergeleri takip edecekler. Öğrencilerin gerçek dünyadaki virüs salgınları hakkındaki ön bilgileri hayali bir senaryoya uygulanacaktır.",
+          "name": "Simülasyon Kodlama",
+          "overview": "Bu derste, her yaştan öğrenci, güvenli ve destekleyici bir ortamda kodlama ve bilgisayar bilimlerine giriş deneyimi yaşar. Bu ders, öğrencilerin Hareketli Nesne Laboratuvarı'nda kendi bilgisayar simülasyonlarını oluşturabilecekleri bir **mini proje** ile etkinlikler etrafında **beceri geliştirmeyi** birleştirir. Öğrenciler, bir virüsün ne kadar hızlı yayılabileceğini ve onu yavaşlatmak için neler yapılabileceğini anlamak için simülasyonu inceleyecekler. ",
+          "preparation": "### Hour of Code Etkinliğinizden Bir Hafta Önce\n\n-   Hour of Code etkinliğinizi planlamaya başlamak için [Hour of Code Eğitim Rehberi](https://hourofcode.com/us/how-to) ve [Başarılı Eğitimcilerden En İyi Uygulamalar](https://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)'ı inceleyin.\n\n-   Sınıf desteği, indirimli posterler almak veya robotik çekilişine (yalnızca ABD) katılmak istiyorsanız [Hour of Code etkinliğinizi kaydedin](https://hourofcode.com/us).\n\n-   Çevrimiçi öğreticiyi gözden geçirin ve tamamlayın: [Outbreak](https://studio.code.org/s/outbreak/)\n\n-   Öğrencilerinizden tamamlamalarını istemeden önce gerekli testleri yaptığınızdan emin olun.\n\n-   Sisteminizi kontrol edin ve Hour of Code etkinliğinizden önce herhangi bir sorunu gidermeniz gerekip gerekmediğine karar verin.\n\n### Hour of Code Etkinliğinizden Bir Gün Önce\n\n-   Etkinliği tamamlayan her öğrenci bir [certificate](https://studio.code.org/certificates/batch) almalıdır. Hour of Code etkinliğinizin sonunda bunu kolaylaştırmak için herkes için bir adet yazdırın.\n\n-   (isteğe bağlı) Öğrencileri etkinlik sırasında kullanmak üzere kulaklık getirmeleri için teşvik edin.",
+          "purpose": "Bu derste öğrenciler kendi simülasyon modellerini kodlamak için yönergeleri takip edecekler. Öğrencilerin gerçek dünyadaki virüs salgınları hakkındaki ön bilgileri hayali bir senaryoya uygulanacaktır. ",
           "student_overview": "Canavar Şehri'ne bir virüs geldi! Bir virüs simülatörü oluşturmayı öğrenin ve canavarların tekrar sağlıklarına kavuşmalarına yardımcı olun."
         },
         "playlab/Play Lab": {
@@ -6811,72 +6915,6 @@
           "preparation": "-   Metin Sıkıştırma Widget'ını test edin\n-   Hangi seçenekleri kullanmak istediğinize karar vermek için öğretmen ipuçlarını gözden geçirin",
           "purpose": "Sıkıştırmanın ardındaki temel prensip, orijinal bilgiti temsil edecek daha az sayıda bitin kullanılmasına dair bir yöntem veya protokol geliştirmektir. Bu derste, bir tekrarlı örüntü \"sözlüğü\" ile sıkıştırılmış verileri temsil etme yöntemimiz, [LZW sıkıştırma şeması](http://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch)'na benzerdir, ancak LZW'nun, öğrencilerin bu derste yaptıklarından bir miktar farklı olduğu göz önünde bulundurulmalıdır. Burada öğrenciler kendi yöntemlerini bulur. LZW ise yalnızca metinler (zip dosyaları) için değil, aynı zamanda GIF görüntü dosyası formatı için de kullanılır.",
           "student_overview": "Bir noktada, bitleri gönderebileceğimiz fiziksel hız sınırına ulaşırız ve büyük miktarda bilgiyi daha hızlı göndermek istiyorsak, aynı bilgiyi daha az bit ile temsil etmenin bir yolunu bulmalıyız, yani verileri sıkıştırmalıyız."
-        },
-        "applab-1hour/Room Escape": {
-          "name": "Kaçış odası"
-        },
-        "applab-2hour/Digital Design": {
-          "name": "Dijital Tasarım"
-        },
-        "applab-2hour/Event Driven Programming": {
-          "name": "Olay Temelli Programlama"
-        },
-        "applab-2hour/Basic App Functionality": {
-          "name": "Temel uygulama işlevselliği"
-        },
-        "applab-2hour/Getters and Setters": {
-          "name": "Alıcılar ve Belirleyiciler"
-        },
-        "frequency_analysis/Frequency Analysis": {
-          "name": "Frekans analizi"
-        },
-        "gamelab/Start and End Screens": {
-          "name": "Başlatma ve Sonlandırma Ekranları"
-        },
-        "gamelab/Start and End Screens2": {
-          "name": "Başlatma ve Sonlandırma Ekranları2"
-        },
-        "k1hoc2017/Collector Hour of Code 2017": {
-          "name": "Toplayıcı Kod Saati 2017"
-        },
-        "netsim/Overview and Setup Instructions": {
-          "name": "Genel bakış ve kurulum yönergeleri"
-        },
-        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
-          "name": "Karşı karşıya -paylaşılan bir tel üzerinden ikili gönderme"
-        },
-        "netsim/Peer to Peer - Sending Numbers": {
-          "name": "Karşı karşıya - Ascii Karakter gönderme"
-        },
-        "netsim/Peer to Peer - Sending Ascii": {
-          "name": "Karşı karşıya - Ascii gönderme"
-        },
-        "netsim/Broadcasting messages": {
-          "name": "Mesajları yayımlamak"
-        },
-        "netsim/Routers and addresses": {
-          "name": "Yönlendiriciler ve adresleri"
-        },
-        "netsim/Packets and Reliability": {
-          "name": "Paketler ve güvenilirlik"
-        },
-        "netsim/Manual DNS": {
-          "name": "El ile DNS"
-        },
-        "netsim/Automatic DNS node": {
-          "name": "Otomatik DNS düğümü"
-        },
-        "netsim/Internet Simulator Freeplay": {
-          "name": "Internet simülatörü serbest oyun"
-        },
-        "odometer/Odometer Widget": {
-          "name": "Kilometre Sayacı Widget'ı"
-        },
-        "poetry-hoc3/lesson-1": {
-          "name": "Mod Çalışması"
-        },
-        "vigenere/Vigenere": {
-          "name": "Şifre karesi"
         },
         "allthethings/Jigsaw": {
           "name": "Yapboz"
@@ -7012,6 +7050,21 @@
         },
         "allthethings/lesson-49": {
           "name": "Müzik"
+        },
+        "applab-1hour/Room Escape": {
+          "name": "Kaçış odası"
+        },
+        "applab-2hour/Digital Design": {
+          "name": "Dijital Tasarım"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "Olay Temelli Programlama"
+        },
+        "applab-2hour/Basic App Functionality": {
+          "name": "Temel uygulama işlevselliği"
+        },
+        "applab-2hour/Getters and Setters": {
+          "name": "Alıcılar ve Belirleyiciler"
         },
         "csd-post-survey/CSD post-course survey": {
           "name": "CSD Öğrenci Kurs Sonrası Anketi ('18-'19)"
@@ -7322,12 +7375,60 @@
         "deepdive-debugging/Debugging for CDEF Educators": {
           "name": "CDEF Eğitimcileri için Hata Ayıklama"
         },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "Frekans analizi"
+        },
+        "gamelab/Start and End Screens": {
+          "name": "Başlatma ve Sonlandırma Ekranları"
+        },
+        "gamelab/Start and End Screens2": {
+          "name": "Başlatma ve Sonlandırma Ekranları2"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Kodlama Saati 2013"
+        },
         "jigsaw/Jigsaw": {
           "name": "Yapboz",
           "overview": "Bu ders öğrencilere bilgisayar laboratuvarında oldukları zaman beklentinin ne olduğu hakkında bir fikir verecektir. Bilgisayar laboratuvarında sergileyecekleri davranışlar hakkında kısa bir tartışma ile başlar, daha sonra bir bilgisayar kullanarak çevrim içi bulmacaları tamamlayarak ilerleyecekler.",
           "preparation": "-   Daha fazla çevrimiçi güvenlik içeriği için [Common Sense Education](https://www.commonsense.org/education/digital-citizenship) web sitesini inceleyin.",
           "purpose": "Bu dersin temel amacı, bilgisayarlarla öğrenci deneyimi oluşturmaktır. Tıklama, sürükleme ve bırakma gibi en temel bilgisayar işlevlerini ele alarak, gelecekteki bulmacalar için sınıfta daha eşit bir oyun alanı yaratıyoruz. Bu ders ayrıca, cihazlarınıza bağlı olarak potansiyel olarak \"fare\", \"dokunmatik fare\" veya \"dokunmatik ekran\" dahil olmak üzere temel bilgisayar donanımı terminolojisini tanıtmak için harika bir fırsat sunar.",
           "student_overview": "Bulmacaları tamamlamak için tıklayıp sürükleyin."
+        },
+        "k1hoc2017/Collector Hour of Code 2017": {
+          "name": "Toplayıcı Kod Saati 2017"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "Genel bakış ve kurulum yönergeleri"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "Karşı karşıya -paylaşılan bir tel üzerinden ikili gönderme"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "Karşı karşıya - Ascii Karakter gönderme"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "Karşı karşıya - Ascii gönderme"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "Mesajları yayımlamak"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Yönlendiriciler ve adresleri"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "Paketler ve güvenilirlik"
+        },
+        "netsim/Manual DNS": {
+          "name": "El ile DNS"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "Otomatik DNS düğümü"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "Internet simülatörü serbest oyun"
+        },
+        "odometer/Odometer Widget": {
+          "name": "Kilometre Sayacı Widget'ı"
         },
         "pixelation/Black & White Pixelation Tutorial": {
           "name": "Siyah ve beyaz Pixelleme eğitim"
@@ -7343,6 +7444,18 @@
         },
         "pixelation/Color Pixelation Freeplay": {
           "name": "Renkli mozaik serbest oyun"
+        },
+        "poetry-hoc3/lesson-1": {
+          "name": "Mod Çalışması"
+        },
+        "vigenere/Vigenere": {
+          "name": "Şifre karesi"
+        },
+        "dance-ai-2023/lesson-1": {
+          "name": "Dans Partisi: A.I Sürümü",
+          "overview": "Bu aktivitede, her yaştan öğrenci, güvenli ve yaratıcı bir ortamda, kodlama ve yapay zekaya giriş deneyimi yaşar. Bu ders her yaştan öğrenci için tasarlanmıştır ancak okuyabilme gerektirir. Öğretici müziğe yanıt verecek şekilde tasarlandığından, bu aktivite öğrencilerin ses çalmasını gerektirir.",
+          "preparation": "### Kodlama Saatinizi Nasıl Planlayabilirsiniz?\n\nOkulunuzda Hour of Code'u planlamak, uygulamak ve kutlamak için, ihtiyacınız olan kaynakları [here](https://hourofcode.com/us/how-to) bulun!",
+          "purpose": "Kodlamayı, heyecan verici ve keyifli bir deneyim haline getirmek, bilgisayar bilimine olan ilgiyi geliştirmek için çok önemlidir. Bu ders, öğrencilerin basit sürükle ve bırak kodlama bloklarını kullanarak, renk ve hareketten oluşan bir dans gösterisinin koreografisini yapmak için, kodu kullandıkları neşeli anlarla doludur. Öğrencilere, danslarının ruh haline uyacak, mükemmel efektleri bulmalarına yardımcı olacak, bir Yapay Zeka Robotu tanıtılacak."
         }
       }
     }

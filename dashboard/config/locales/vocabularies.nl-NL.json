@@ -715,14 +715,6 @@
         "program/minecraft/unversioned": {
           "word": "Programma"
         },
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "code/playlab/unversioned": {
           "word": "Code",
           "definition": "(v) om code te schrijven of om instructies voor een computer te schrijven."
@@ -785,25 +777,12 @@
         "lossless_compression/text-compression/unversioned": {
           "word": "Lossless Compressie"
         },
-        "code/poem-art/unversioned": {
+        "code/dance-ai/2023": {
           "word": "Code",
-          "definition": "(v) instructies voor een computer schrijven."
+          "definition": "(v) om code te schrijven of om instructies voor een computer te schrijven."
         },
-        "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/poem-art/unversioned": {
-          "word": "Programma",
-          "definition": "Een reeks stappen die zijn gecodeerd tot iets dat door een machine kan worden uitgevoerd."
-        },
-        "mood/poem-art/unversioned": {
-          "word": "Stemming",
-          "definition": "de uitdrukking van een gevoel, sfeer of emotie in kunst of geschrift."
-        },
-        "line/poem-art/unversioned": {
-          "word": "Regel",
-          "definition": "(poëzie) - een onderverdeling van een gedicht, gerangschikt in een rij die eindigt in de rechtermarge."
+        "program/dance-ai/2023": {
+          "word": "Programma"
         }
       }
     }

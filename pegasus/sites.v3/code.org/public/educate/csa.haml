@@ -11,7 +11,7 @@ theme: responsive_full_width
     .text-wrapper
       %h1{style: "color: white"}
         =hoc_s(:curriculum_name_csa)
-      %p{style: "color: white"}
+      %p.has-external-link{style: "color: white"}
         =hoc_s(:csa_page_top_desc, markdown: :inline, locals: {csa_url: "https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-course-and-exam-description.pdf?course=ap-computer-science-a"})
       %a.link-button.white{href: CDO.studio_url("/courses/csa-2023?viewAs=Instructor")}
         =hoc_s(:call_to_action_explore_course)
@@ -99,9 +99,9 @@ theme: responsive_full_width
   .wrapper
     = view :support_and_questions_section
 
-%section{style: "padding-top: 2rem"}
+%section#csa-newsletter-signup{style: "padding-top: 2rem"}
   .wrapper
-    = view :curriculum_subscribe_form, subscribe_form_section_desc: hoc_s(:subscribe_form_section_desc_csa), form_src: "http://go.pardot.com/l/153401/2021-02-19/p291ns"
+    = view :subscribe_form, subscribe_form_section_title: hoc_s(:subscribe_form_section_title), subscribe_form_section_desc: hoc_s(:subscribe_form_section_desc_csa), form_height: "375px", form_src: "http://go.pardot.com/l/153401/2021-02-19/p291ns"
 
 = view :section_divider_line
 

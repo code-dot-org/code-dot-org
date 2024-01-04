@@ -1583,6 +1583,39 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Ape Sapiente"
         },
+        "K5-OnlinePD/Getting Started": {
+          "name": "Introduzione"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Fondamenti di Informatica"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "Guardare avanti"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "I concetti fondamentali: sequenze di istruzioni"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "I concetti fondamentali: cicli"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "I concetti fondamentali: istruzioni condizionali"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "I concetti fondamentali: funzioni"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "I concetti fondamentali: eventi"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "Linee guida per l'insegnamento dell'informatica"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Gestione della classe"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Passi successivi"
+        },
         "csd1-2019/Intro to Problem Solving": {
           "name": "Introduzione alla risoluzione di problemi"
         },
@@ -2263,6 +2296,45 @@
         },
         "pre-express-2019/Make a Game in Play Lab": {
           "name": "Una battaglia reale con eventi"
+        },
+        "k5-onlinepd-2019/Welcome to \"Teaching Computer Science Fundamentals\"": {
+          "name": "Benvenuti in \"Fondamenti di Informatica - Corso per insegnanti\""
+        },
+        "k5-onlinepd-2019/Understanding the Computer Science Fundamentals Courses": {
+          "name": "Introduzione ai corsi di Fondamenti di informatica (CSF)"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Sequenze di istruzioni"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Cicli"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Eventi"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Istruzioni condizionali"
+        },
+        "k5-onlinepd-2019/End of Course projects": {
+          "name": "Progetti di fine corso"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funzioni"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Variabili"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Cicli con contatore"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Laboratorio dei Personaggi"
+        },
+        "k5-onlinepd-2019/Reviewing your reflections": {
+          "name": "Analizza le tue riflessioni"
+        },
+        "k5-onlinepd-2019/Next steps": {
+          "name": "Passi successivi"
         },
         "coursea-2020/Safety in My Online Neighborhood": {
           "name": "Il mio quartiere digitale"
@@ -3009,7 +3081,7 @@
         },
         "csd3-2021/Text": {
           "name": "Testo",
-          "assessment_opportunities": "**1. Aggiungere testo**\n\nUsa l'esercizio 5 come valutazione per gli studenti. Fai clic all'interno dell'esercizio per visualizzare una tabella con i criteri di valutazione.",
+          "assessment_opportunities": "**1. Aggiungere testo**\n\nUsa l'esercizio 5 come valutazione per gli studenti. Clicca all'interno dell'esercizio per visualizzare una tabella con i criteri di valutazione.",
           "overview": "**Domanda del giorno: come possiamo usare il testo per migliorare le nostre scene e le nostre animazioni?**\n\nQuesta lezione introduce le istruzioni  testuali di Sviluppo Giochi, offrendo agli studenti più pratica nell'uso del piano e dei parametri delle coordinate. All'inizio della lezione, agli studenti viene chiesto di aggiungere una didascalia a un cartone animato creato in Sviluppo Giochi. Passeranno quindi a Code Studio, dove si esercitano a posizionare il testo sullo schermo e a controllare altre proprietà del testo, come le dimensioni. Gli studenti che completano la valutazione in anticipo possono continuare a imparare blocchi più impegnativi relativi alle proprietà del testo. ",
           "purpose": "Questa lezione introduce il testo, di cui gli studenti avranno bisogno quando inizieranno a creare programmi più complessi (ad esempio giochi con tabelloni). Questo è l'ultimo tipo di elemento che gli studenti posizioneranno sullo schermo. Successivamente, gli studenti si concentreranno su come possono controllare il movimento e le interazioni di questi elementi.",
           "student_overview": "**Domanda del giorno: come possiamo usare il testo per migliorare le nostre scene e le nostre animazioni?**\n\nIn questa lezione imparerai a usare le istruzioni testuali di Sviluppo Giochi per aggiungere didascalie alle tue scene. "
@@ -3574,7 +3646,7 @@
         "csd7-2021/Types of Machine Learning": {
           "name": "Tipologie di apprendimento automatico",
           "assessment_opportunities": "1.  **Descrivere le differenze tra apprendimento con e senza supervisione.**\n\n    Controlla le risposte degli studenti nella guida alle attività alla fine della lezione.",
-          "overview": "In questa lezione gli studenti considereranno come si creano modelli «mentali» quando si apprendono nuovi concetti e come questi possono essere simili a un modello di «apprendimento automatico». Partecipano a un'attività con schemi cromatici per simulare la costruzione di un modello di apprndimento automatico senza ausilio, quindi si cimentano in un gioco chiamato «Porta a vetri verde» come esempio di apprendimento supervisionato e, infine, classificheranno diversi scenari in apprendimento «supervisionato» o «senza supervisione».\n\n**Domanda del giorno:** Quali sono i diversi tipi di apprendimento automatico?",
+          "overview": "In questa lezione gli studenti considereranno come si creano modelli «mentali» quando si apprendono nuovi concetti e come questi possono essere simili a un modello di «apprendimento automatico». Partecipano a un'attività con schemi cromatici per simulare la costruzione di un modello di apprendimento automatico senza ausilio, quindi si cimentano in un gioco chiamato «Porta a vetri verde» come esempio di apprendimento supervisionato e, infine, classificheranno diversi scenari in apprendimento «supervisionato» o «senza supervisione».\n\n**Domanda del giorno:** Quali sono i diversi tipi di apprendimento automatico?",
           "preparation": "-   Ripassa tutto il materiale per la lezione di oggi.",
           "purpose": "-   Ripassa gli esercizi di Code Studio prima della lezione in modo da sapere come giocare al gioco chiamato «La porta a vetri verde»\n-   Stampa o preparati a condividere delle copie online della guida alle attività per ogni studente",
           "student_overview": "Impara due diversi tipi di apprendimento automatico: apprendimento supervisionato e non supervisionato. Quindi confronta come l'apprendimento automatico può essere simile o diverso a come apprendono gli umani."
@@ -3725,7 +3797,7 @@
         "coursea-2021/Programming: Happy Maps": {
           "name": "Mappe felici",
           "overview": "Il passaggio da algoritmo a programmazione può essere più immediato se gli alunni capiscono la differenza tra pianificare una sequenza e codificare tale sequenza in un linguaggio opportuno. Questa attività aiuta gli alunni ad acquisire esperienza leggendo e scrivendo del codice costituito da semplici simboli.",
-          "preparation": "-   Stampare un **\\*foglio di lavoro \\*\\* e un set di \\*_\\\\_Schede da ritagliare** per gruppi di 2-3.\n-   Fai in modo che ogni alunno abbia un diario per le proprie riflessioni.",
+          "preparation": "-   Stampa un **\\*foglio di lavoro** e un set di **\\*Schede da ritagliare** per gruppi di 2-3.\n-   Fai in modo che ogni alunno abbia un diario per le proprie riflessioni.",
           "purpose": "Il passaggio da algoritmo a programmazione può essere più immediato se gli alunni comprendono la differenza tra pianificare una sequenza e codificare tale sequenza in un linguaggio opportuno. Questa attività aiuterà gli alunni ad acquisire esperienza leggendo e scrivendo del codice costituito da semplici simboli.",
           "student_overview": "Scrivi le istruzioni per portare il Flurb fino al frutto."
         },
@@ -4257,14 +4329,14 @@
         "coursef-2021/lesson-7": {
           "name": "Creazione di personaggi",
           "overview": "Questa lezione è una **palestra delle competenze**: gli alunni lavorano attraverso una serie di esercizi di programmazione al computer, concludendo con un'attività di \"gioco libero\" e senza limiti di tempo, nella quale possono realizzare ciò che vogliono. Gli alunni scrivono programmi e imparano i due concetti principali del Laboratorio dei personaggi: personaggi e comportamenti.",
-          "preparation": "Gioca attraverso gli esercizi e ripassa le \\*_\\\\_diapositive delle lezioni\\*.",
+          "preparation": "Supera gli esercizi e ripassa le \\*_\\\\_diapositive delle lezioni\\*.",
           "purpose": "Questa lezione è progettata per introdurre gli alunni alla programmazione nel Laboratorio dei Personaggi. Gli alunni inizieranno a comprendere il modello di programmazione di questo strumento ed esploreranno i modi in cui possono usarlo per esprimersi.",
           "student_overview": "In questa lezione scriverai programmi e scoprirai personaggi e comportamenti."
         },
         "coursef-2021/lesson-8": {
           "name": "Personaggi in azione",
           "overview": "Questa lezione è una **palestra delle competenze**: gli alunni lavorano attraverso una serie di esercizi di programmazione al computer, concludendo con un'attività di \"gioco libero\" senza limiti di tempo, nella quale possono realizzare ciò che desiderano. Gli alunni scrivono programmi che rispondono a eventi a tempo e input dell'utente. ",
-          "preparation": "Gioca attraverso gli esercizi e ripassa le diapositive delle lezioni.",
+          "preparation": "Supera gli esercizi e ripassa le diapositive delle lezioni.",
           "purpose": "Questa lezione è progettata per rafforzare le competenze della lezione precedente e introdurre gli alunni alla programmazione con eventi. Durante questo corso, gli eventi saranno il modo principale in cui gli alunni cambieranno il modo in cui i loro programmi vengono eseguiti nel tempo o in risposta all'input dell'utente.",
           "student_overview": "Lavorerai con esercizi di programmazione e giungerai alla conclusione con un'attività di \"gioco libero\" senza limiti di tempo, nella quale potrai costruire quello che preferisci."
         },
@@ -4292,7 +4364,7 @@
         "coursef-2021/lesson-10": {
           "name": "Testo e richieste all'utente",
           "overview": "Questa lezione è una **palestra delle competenze**: gli alunni fanno pratica con le variabili nel Laboratorio dei personaggi.",
-          "preparation": "Gioca attraverso gli esercizi e ripassa le diapositive delle lezioni.",
+          "preparation": "Supera gli esercizi e ripassa le diapositive delle lezioni.",
           "purpose": "Le variabili verranno utilizzate in questo corso per memorizzare e modificare i dati. A questo punto, gli alunni memorizzeranno e recupereranno semplicemente i valori senza modificarli. Nelle lezioni successive, gli alunni memorizzeranno i valori numerici e li modificheranno nel tempo per tenere traccia di cose come il punteggio di un giocatore in una partita.",
           "student_overview": "in questa lezione farai pratica con le variabili nel Laboratorio dei personaggi.  "
         },
@@ -4424,14 +4496,14 @@
         "express-2021/lesson-2": {
           "name": "Creazione di personaggi",
           "overview": "Questa lezione è una **palestra delle competenze**: gli alunni lavorano attraverso una serie di esercizi di programmazione al computer, concludendo con un'attività di \"gioco libero\" e senza limiti di tempo, nella quale possono realizzare ciò che vogliono. Gli alunni scrivono programmi e imparano i due concetti principali del Laboratorio dei personaggi: personaggi e comportamenti.",
-          "preparation": "Gioca attraverso gli esercizi e ripassa le \\*_\\\\_diapositive delle lezioni\\*.",
+          "preparation": "Supera gli esercizi e ripassa le \\*_\\\\_diapositive delle lezioni\\*.",
           "purpose": "Questa lezione è progettata per introdurre gli alunni alla programmazione nel Laboratorio dei Personaggi. Gli alunni inizieranno a comprendere il modello di programmazione di questo strumento ed esploreranno i modi in cui possono usarlo per esprimersi.",
           "student_overview": "In questa lezione scriverai programmi e scoprirai personaggi e comportamenti."
         },
         "express-2021/lesson-3": {
           "name": "Personaggi in azione",
           "overview": "Questa lezione è una **palestra delle competenze**: gli alunni lavorano attraverso una serie di esercizi di programmazione al computer, concludendo con un'attività di \"gioco libero\" senza limiti di tempo, nella quale possono realizzare ciò che desiderano. Gli alunni scrivono programmi che rispondono a eventi a tempo e input dell'utente. ",
-          "preparation": "Gioca attraverso gli esercizi e ripassa le diapositive delle lezioni.",
+          "preparation": "Supera gli esercizi e ripassa le diapositive delle lezioni.",
           "purpose": "Questa lezione è progettata per introdurre gli alunni alla programmazione con eventi. Durante questo corso, gli eventi saranno il modo principale in cui gli alunni cambieranno il modo in cui i loro programmi vengono eseguiti nel tempo o in risposta all'input dell'utente.",
           "student_overview": "Lavorerai con esercizi di programmazione e giungerai alla conclusione con un'attività di \"gioco libero\" senza limiti di tempo, nella quale potrai costruire quello che preferisci."
         },
@@ -4543,7 +4615,7 @@
         "express-2021/lesson-4": {
           "name": "Testo e richieste all'utente",
           "overview": "Questa lezione è una **palestra delle competenze**: gli alunni fanno pratica con le variabili nel Laboratorio dei personaggi.",
-          "preparation": "Gioca attraverso gli esercizi e ripassa le diapositive delle lezioni.",
+          "preparation": "Supera gli esercizi e ripassa le diapositive delle lezioni.",
           "purpose": "Le variabili verranno utilizzate in questo corso per memorizzare e modificare i dati. A questo punto, gli alunni memorizzeranno e recupereranno semplicemente i valori senza modificarli. Nelle lezioni successive, gli alunni memorizzeranno i valori numerici e li modificheranno nel tempo per tenere traccia di cose come il punteggio di un giocatore in una partita.",
           "student_overview": "in questa lezione farai pratica con le variabili nel Laboratorio dei personaggi.  "
         },
@@ -4655,6 +4727,39 @@
           "preparation": "-   Naviga attraverso gli esercizi per identificare i punti potenzialmente più critici per la tua classe.\n-   (Facoltativo) Scegli un paio di esercizi da fare in gruppo con la tua classe.\n-   Assicurati che ogni alunno abbia un diario per le proprie riflessioni",
           "purpose": "In questa attività online, gli alunni impareranno come usare gli eventi nel Laboratorio. Inizieranno addestrando un cavaliere a muoversi quando viene premuto un tasto freccia, per poi terminare con l'opportunità di mostrare nell'ultimo esercizio libero, tutte le competenze apprese durante il corso, tra cui le sequenze di istruzioni ed i cicli.",
           "student_overview": "Usa gli eventi per creare una storia o realizzare un gioco interattivo."
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "Introduzione"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Fondamenti di Informatica"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "Guardare avanti"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "I concetti fondamentali: sequenze di istruzioni"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "I concetti fondamentali: cicli"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "I concetti fondamentali: istruzioni condizionali"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "I concetti fondamentali: funzioni"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "I concetti fondamentali: eventi"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "Linee guida per l'insegnamento dell'informatica"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Gestione della classe"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Passi successivi"
         },
         "csd1-2022/Intro to Problem Solving": {
           "name": "Introduzione alla risoluzione di problemi",
@@ -4997,7 +5102,7 @@
         },
         "csd3-2022/Text": {
           "name": "Testo",
-          "assessment_opportunities": "**1. Aggiungere testo**\n\nUsa l'esercizio 5 come valutazione per gli studenti. Fai clic all'interno dell'esercizio per visualizzare una tabella con i criteri di valutazione.",
+          "assessment_opportunities": "**1. Aggiungere testo**\n\nUsa l'esercizio 5 come valutazione per gli studenti. Clicca all'interno dell'esercizio per visualizzare una tabella con i criteri di valutazione.",
           "overview": "**Domanda del giorno: come possiamo usare il testo per migliorare le nostre scene e le nostre animazioni?**\n\nQuesta lezione introduce le istruzioni  testuali di Sviluppo Giochi, offrendo agli studenti più pratica nell'uso del piano e dei parametri delle coordinate. All'inizio della lezione, agli studenti viene chiesto di aggiungere una didascalia a un cartone animato creato in Sviluppo Giochi. Passeranno quindi a Code Studio, dove si esercitano a posizionare il testo sullo schermo e a controllare altre proprietà del testo, come le dimensioni. Gli studenti che completano la valutazione in anticipo possono continuare a imparare blocchi più impegnativi relativi alle proprietà del testo. ",
           "preparation": "-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
           "purpose": "Questa lezione introduce il testo, di cui gli studenti avranno bisogno quando inizieranno a creare programmi più complessi (ad esempio giochi con tabelloni). Questo è l'ultimo tipo di elemento che gli studenti posizioneranno sullo schermo. Successivamente, gli studenti si concentreranno su come possono controllare il movimento e le interazioni di questi elementi.",
@@ -5589,7 +5694,7 @@
         "csd7-2022/Types of Machine Learning": {
           "name": "Tipologie di apprendimento automatico",
           "assessment_opportunities": "1.  **Descrivere le differenze tra apprendimento con e senza supervisione.**\n\n    Controlla le risposte degli studenti nella guida alle attività alla fine della lezione.",
-          "overview": "In questa lezione gli studenti considereranno come si creano modelli «mentali» quando si apprendono nuovi concetti e come questi possono essere simili a un modello di «apprendimento automatico». Partecipano a un'attività con schemi cromatici per simulare la costruzione di un modello di apprndimento automatico senza ausilio, quindi si cimentano in un gioco chiamato «Porta a vetri verde» come esempio di apprendimento supervisionato e, infine, classificheranno diversi scenari in apprendimento «supervisionato» o «senza supervisione».\n\n**Domanda del giorno:** Quali sono i diversi tipi di apprendimento automatico?",
+          "overview": "In questa lezione gli studenti considereranno come si creano modelli «mentali» quando si apprendono nuovi concetti e come questi possono essere simili a un modello di «apprendimento automatico». Partecipano a un'attività con schemi cromatici per simulare la costruzione di un modello di apprendimento automatico senza ausilio, quindi si cimentano in un gioco chiamato «Porta a vetri verde» come esempio di apprendimento supervisionato e, infine, classificheranno diversi scenari in apprendimento «supervisionato» o «senza supervisione».\n\n**Domanda del giorno:** Quali sono i diversi tipi di apprendimento automatico?",
           "preparation": "-   Riguarda tutti i materiali per la lezione di oggi.\n-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) per gli insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti",
           "purpose": "-   Ripassa gli esercizi di Code Studio prima della lezione in modo da sapere come giocare al gioco chiamato «La porta a vetri verde»\n-   Stampa o preparati a condividere delle copie online della guida alle attività per ogni studente",
           "student_overview": "Impara due diversi tipi di apprendimento automatico: apprendimento supervisionato e non supervisionato. Quindi confronta come l'apprendimento automatico può essere simile o diverso a come apprendono gli umani."
@@ -5745,7 +5850,7 @@
         "coursea-2022/Happy Maps": {
           "name": "Mappe felici",
           "overview": "Il passaggio da algoritmo a programmazione può essere più immediato se gli alunni capiscono la differenza tra pianificare una sequenza e codificare tale sequenza in un linguaggio opportuno. Questa attività aiuta gli alunni ad acquisire esperienza leggendo e scrivendo del codice costituito da semplici simboli.",
-          "preparation": "-   Stampare un **\\*foglio di lavoro \\*\\* e un set di \\*_\\\\_Schede da ritagliare** per gruppi di 2-3.\n-   Fai in modo che ogni alunno abbia un diario per le proprie riflessioni.",
+          "preparation": "-   Stampa un **\\*foglio di lavoro** e un set di **\\*Schede da ritagliare** per gruppi di 2-3.\n-   Fai in modo che ogni alunno abbia un diario per le proprie riflessioni.",
           "purpose": "Il passaggio da algoritmo a programmazione può essere più immediato se gli alunni comprendono la differenza tra pianificare una sequenza e codificare tale sequenza in un linguaggio opportuno. Questa attività aiuterà gli alunni ad acquisire esperienza leggendo e scrivendo del codice costituito da semplici simboli.",
           "student_overview": "Scrivi le istruzioni per portare il Flurb fino al frutto."
         },
@@ -6242,14 +6347,14 @@
         "coursef-2022/Making Sprites": {
           "name": "Creazione di personaggi",
           "overview": "Questa lezione è una **palestra delle competenze**: gli alunni lavorano attraverso una serie di esercizi di programmazione al computer, concludendo con un'attività di \"gioco libero\" e senza limiti di tempo, nella quale possono realizzare ciò che vogliono. Gli alunni scrivono programmi e imparano i due concetti principali del Laboratorio dei personaggi: personaggi e comportamenti.",
-          "preparation": "Gioca attraverso gli esercizi e ripassa le \\*_\\\\_diapositive delle lezioni\\*.",
+          "preparation": "Supera gli esercizi e ripassa le \\*_\\\\_diapositive delle lezioni\\*.",
           "purpose": "Questa lezione è progettata per introdurre gli alunni alla programmazione nel Laboratorio dei Personaggi. Gli alunni inizieranno a comprendere il modello di programmazione di questo strumento ed esploreranno i modi in cui possono usarlo per esprimersi.",
           "student_overview": "In questa lezione scriverai programmi e scoprirai personaggi e comportamenti."
         },
         "coursef-2022/Sprites in Action": {
           "name": "Personaggi in azione",
           "overview": "Questa lezione è una **palestra delle competenze**: gli alunni lavorano attraverso una serie di esercizi di programmazione al computer, concludendo con un'attività di \"gioco libero\" senza limiti di tempo, nella quale possono realizzare ciò che desiderano. Gli alunni scrivono programmi che rispondono a eventi a tempo e input dell'utente. ",
-          "preparation": "Gioca attraverso gli esercizi e ripassa le diapositive delle lezioni.",
+          "preparation": "Supera gli esercizi e ripassa le diapositive delle lezioni.",
           "purpose": "Questa lezione è progettata per rafforzare le competenze della lezione precedente e introdurre gli alunni alla programmazione con eventi. Durante questo corso, gli eventi saranno il modo principale in cui gli alunni cambieranno il modo in cui i loro programmi vengono eseguiti nel tempo o in risposta all'input dell'utente.",
           "student_overview": "Lavorerai con esercizi di programmazione e giungerai alla conclusione con un'attività di \"gioco libero\" senza limiti di tempo, nella quale potrai costruire quello che preferisci."
         },
@@ -6270,7 +6375,7 @@
         "coursef-2022/Text and Prompts": {
           "name": "Testo e richieste all'utente",
           "overview": "Questa lezione è una **palestra delle competenze**: gli alunni fanno pratica con le variabili nel Laboratorio dei personaggi.",
-          "preparation": "Gioca attraverso gli esercizi e ripassa le diapositive delle lezioni.",
+          "preparation": "Supera gli esercizi e ripassa le diapositive delle lezioni.",
           "purpose": "Le variabili verranno utilizzate in questo corso per memorizzare e modificare i dati. A questo punto, gli alunni memorizzeranno e recupereranno semplicemente i valori senza modificarli. Nelle lezioni successive, gli alunni memorizzeranno i valori numerici e li modificheranno nel tempo per tenere traccia di cose come il punteggio di un giocatore in una partita.",
           "student_overview": "in questa lezione farai pratica con le variabili nel Laboratorio dei personaggi.  "
         },
@@ -6356,14 +6461,14 @@
         "express-2022/Making Sprites": {
           "name": "Creazione di personaggi",
           "overview": "Questa lezione è una **palestra delle competenze**: gli alunni lavorano attraverso una serie di esercizi di programmazione al computer, concludendo con un'attività di \"gioco libero\" e senza limiti di tempo, nella quale possono realizzare ciò che vogliono. Gli alunni scrivono programmi e imparano i due concetti principali del Laboratorio dei personaggi: personaggi e comportamenti.",
-          "preparation": "Gioca attraverso gli esercizi e ripassa le \\*_\\\\_diapositive delle lezioni\\*.",
+          "preparation": "Supera gli esercizi e ripassa le \\*_\\\\_diapositive delle lezioni\\*.",
           "purpose": "Questa lezione è progettata per introdurre gli alunni alla programmazione nel Laboratorio dei Personaggi. Gli alunni inizieranno a comprendere il modello di programmazione di questo strumento ed esploreranno i modi in cui possono usarlo per esprimersi.",
           "student_overview": "In questa lezione scriverai programmi e scoprirai personaggi e comportamenti."
         },
         "express-2022/Sprites in Action": {
           "name": "Personaggi in azione",
           "overview": "Questa lezione è una **palestra delle competenze**: gli alunni lavorano attraverso una serie di esercizi di programmazione al computer, concludendo con un'attività di \"gioco libero\" senza limiti di tempo, nella quale possono realizzare ciò che desiderano. Gli alunni scrivono programmi che rispondono a eventi a tempo e input dell'utente. ",
-          "preparation": "Gioca attraverso gli esercizi e ripassa le diapositive delle lezioni.",
+          "preparation": "Supera gli esercizi e ripassa le diapositive delle lezioni.",
           "purpose": "Questa lezione è progettata per introdurre gli alunni alla programmazione con eventi. Durante questo corso, gli eventi saranno il modo principale in cui gli alunni cambieranno il modo in cui i loro programmi vengono eseguiti nel tempo o in risposta all'input dell'utente.",
           "student_overview": "Lavorerai con esercizi di programmazione e giungerai alla conclusione con un'attività di \"gioco libero\" senza limiti di tempo, nella quale potrai costruire quello che preferisci."
         },
@@ -6474,7 +6579,7 @@
         "express-2022/Text and Prompts": {
           "name": "Testo e richieste all'utente",
           "overview": "Questa lezione è una **palestra delle competenze**: gli alunni fanno pratica con le variabili nel Laboratorio dei personaggi.",
-          "preparation": "Gioca attraverso gli esercizi e ripassa le diapositive delle lezioni.",
+          "preparation": "Supera gli esercizi e ripassa le diapositive delle lezioni.",
           "purpose": "Le variabili verranno utilizzate in questo corso per memorizzare e modificare i dati. A questo punto, gli alunni memorizzeranno e recupereranno semplicemente i valori senza modificarli. Nelle lezioni successive, gli alunni memorizzeranno i valori numerici e li modificheranno nel tempo per tenere traccia di cose come il punteggio di un giocatore in una partita.",
           "student_overview": "in questa lezione farai pratica con le variabili nel Laboratorio dei personaggi.  "
         },
@@ -6589,7 +6694,7 @@
         },
         "ai-ethics-2023/lesson-1": {
           "name": "Il nostro codice etico sulla IA",
-          "student_overview": "Effettua ricerche collaborative sull'etica dell'IA e crea un codice di condotta condivisibile."
+          "student_overview": "Fai una ricerca di gruppo sull'etica dell'IA e crea un codice di condotta condivisibile."
         },
         "csc-adaptations-2023/Modeling Animal Adaptations (pilot)": {
           "name": "Introduzione agli adattamenti animali",
@@ -6602,17 +6707,19 @@
           "overview": "In questa lezione integrata di CS e scienza, gli studenti useranno i comportamenti dell'informatica per rappresentare i comportamenti di sopravvivenza degli animali. Quando gli studenti usano i `comportamenti` in Sprite Lab, danno al loro sprite una serie di istruzioni da eseguire più e più volte come un'animazione. Per prima cosa, gli studenti proveranno diversi comportamenti predefiniti, tra cui i modelli migratori di balene e farfalle, le danze degli uccelli usate per attirare un compagno e i pesci che viaggiano in gruppo. Quindi, gli studenti si eserciteranno a modificare e codificare i propri comportamenti animali.    ",
           "preparation": "-   Rivedi e completa tu stesso il tutorial online.\n-   Determina in anticipo quali livelli potrebbero essere più impegnativi per gli studenti.\n-   Rivedi le diapositive e decidi qual è il ritmo tra l'orario di lavoro degli studenti e le lezioni di gruppo.\n-   Fornisci del materiale da scrivere per prepararti alla riflessione e per concludere il biglietto di uscita.\n-   Considerate queste opzioni di estensione correlate ([link](https://studio.code.org/s/csc-adaptations-2023/lessons/2#activity-4165453)) da esplorare dopo l'ultima lezione.",
           "purpose": "Utilizzando la codifica per modellare i comportamenti dei gruppi di animali, gli studenti possono esplorare i modelli e le dinamiche degli animali sociali in modo pratico e coinvolgente. Questa lezione incoraggia gli studenti ad applicare le proprie capacità di programmazione in un contesto significativo e pertinente. Gli studenti saranno in grado di lavorare in modo creativo scegliendo sfondi, sprite e comportamenti, permettendo loro di realizzare progetti unici.",
-          "student_overview": "Oggi esplorerai molti animali e i loro comportamenti (a volte stupidi). Gli animali hanno sviluppato determinati movimenti e comportamenti per sopravvivere e riprodursi. Il tuo codice controllerà le animazioni degli sprite nel playspace. "
+          "student_overview": "Oggi esplorerai molti animali e i loro comportamenti (a volte stupidi). Gli animali hanno sviluppato determinati movimenti e comportamenti per sopravvivere e riprodursi. Il tuo codice controllerà le animazioni degli sprite nel playspace. ",
+          "name": "Comportamenti animali per la sopravvivenza"
         },
         "csc-adaptations-2023/lesson-3": {
           "overview": "In questa lezione integrata di CS e scienza, gli studenti impareranno come modificare i comportamenti degli animali nel codice. Per prima cosa, gli studenti faranno una previsione sul comportamento misterioso di una volpe. Quindi, nei livelli seguenti, useranno il pulsante «modifica» per eseguire il debug di diversi comportamenti animali, tra cui velocità, direzione e stile di rotazione. Infine, gli studenti sceglieranno uno scenario di cambiamento ambientale e useranno il proprio codice creativo per modellare un nuovo e unico adattamento animale! \n\nAlla fine della lezione, gli studenti condivideranno i loro progetti personalizzati con i loro compagni di classe. Gli studenti avranno la possibilità di riflettere su ciò che hanno imparato sui comportamenti nei codici e sui comportamenti degli animali nella vita reale. ",
           "preparation": "-   Rivedi e completa tu stesso il tutorial online.\n-   Determina in anticipo quali livelli potrebbero essere più impegnativi per gli studenti.\n-   Rivedi le diapositive e decidi qual è il ritmo tra l'orario di lavoro degli studenti e le lezioni di gruppo.\n-   Considerate queste opzioni di estensione correlate ([link](https://studio.code.org/s/csc-adaptations-2023/lessons/3#activity-4233684)) da approfondire dopo questa lezione.",
-          "purpose": "Gli studenti faranno previsioni su comportamenti misteriosi ed eseguiranno il debug dei comportamenti degli animali che non funzionano correttamente. Quindi, useranno le loro abilità per codificare un adattamento animale unico che non è mai stato visto prima, immaginando un improvviso cambiamento nell'ambiente. Con la funzione di sfondo e costume da sprite «Upload My Own», gli studenti possono creare un ambiente tutto loro."
+          "purpose": "Gli studenti faranno previsioni su comportamenti misteriosi ed eseguiranno il debug dei comportamenti degli animali che non funzionano correttamente. Quindi, useranno le loro abilità per codificare un adattamento animale unico che non è mai stato visto prima, immaginando un improvviso cambiamento nell'ambiente. Con la funzione di sfondo e costume da sprite «Upload My Own», gli studenti possono creare un ambiente tutto loro.",
+          "name": "Scrivi il tuo programma sull'adattamento"
         },
         "csc-bookcovers-2023/Learn to Code a Book Cover ": {
           "name": "Impara a codificare la copertina di un libro ",
           "overview": "In questa lezione integrata CS ed ELA per nuovi programmatori, gli studenti impareranno a codificare la copertina di un libro digitale. Per prima cosa, esamineranno le copertine dei libri esistenti e discuteranno delle scelte di progettazione grafica che sono state fatte. Successivamente, gli studenti esamineranno un esempio di copertina di libro digitale prima di crearne diverse personalizzate. Gli studenti impareranno a selezionare gli sprite per rappresentare i personaggi di un libro e a usare gli eventi per farli parlare. ",
-          "preparation": "-   Supera i livelli e rivedi le<a href=\"https://docs.google.com/presentation/d/1GTaZX9z0b-dwk6Z48TSwqwhjZ9pO9Onk7w8n9xNt_Zk/template/preview\" target=\"_blank\">diapositive delle lezioni</a>\n-   Decidi il ritmo tra il tempo di lavoro degli studenti e le lezioni di gruppo.\n-   Valuta la possibilità di esplorare le attività preparatorie consigliate prima di iniziare ()[link](https://studio.code.org/s/csc-bookcovers-2023/lessons/1#activity-4350298).\n\n##### Opzionale:\n\n-   Guardate questa <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">presentazione di suggerimenti utili.</a> \n-   Consultate questa guida per <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">insegnanti sul debugging per essere pronti ad aiutare gli studenti a trovare e</a>  correggere gli errori nel codice. \n-   Programmazione in coppia: decidi se vuoi che gli studenti si dedichino alla programmazione in coppia. Guarda questo <a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">video</a> e visita questa</a> pagina di <a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">supporto per ulteriori informazioni sulla programmazione in coppia.\n-   Caricamenti Sprite personalizzati - Anche se questo argomento verrà introdotto nelle lezioni successive, con questo video puoi scegliere di insegnare agli studenti come caricare i propri costumi e sfondi da sprite. <a href=\"https://youtu.be/CHipUGfL_0M\" target=\"_blank\"></a>",
+          "preparation": "-   Supera gli esercizi e ripassa le <a href=\"https://docs.google.com/presentation/d/1GTaZX9z0b-dwk6Z48TSwqwhjZ9pO9Onk7w8n9xNt_Zk/template/preview\" target=\"_blank\">diapositive delle lezioni</a>\n-   Decidi i tempi tra il ritmo di lavoro degli studenti e le lezioni di gruppo.\n-   Considera l'idea di esplorare le attività di preparazione consigliate prima di iniziare ()[link](https://studio.code.org/s/csc-bookcovers-2023/lessons/1#activity-4350298).\n\n##### Opzionale:\n\n-   Ripassa questa presentazione con alcuni <a href=\"https://docs.google.com/presentation/d/1-r9itVdiOY02gvEVPcY8In54SeAUdj8C_qhuh_51Vh8/template/preview\" target=\"_blank\">suggerimenti utili.</a> \n-   Consulta questa guida per <a href=\"https://fedd.it/ebuggingeacherpdf\" target=\"_blank\">insegnanti sul debugging per essere pronti ad aiutare gli studenti a trovare e</a>  correggere gli errori nel codice. \n-   Programmazione in coppia: decidi se vuoi che gli studenti si dedichino alla programmazione in coppia. Guarda questo <a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">video</a> e visita questa</a> pagina di <a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">supporto per ulteriori informazioni sulla programmazione in coppia.\n-   Caricamento di Personaggi personalizzati - Anche se questo argomento verrà introdotto nelle lezioni successive, con questo video puoi scegliere di insegnare agli studenti come caricare costumi e sfondi personalizzati per i personaggi. <a href=\"https://youtu.be/CHipUGfL_0M\" target=\"_blank\"></a>",
           "student_overview": "In questa lezione imparerai a codificare la copertina di un libro digitale. Innanzitutto, selezionerai lo sfondo e i personaggi. Quindi, imparerai come programmare la conversazione dei personaggi quando clicchi. Alla fine della lezione, avrai codificato diversi esempi di copertine di libri interattive."
         },
         "csc-bookcovers-2023/lesson-4": {
@@ -6633,26 +6740,26 @@
           "student_overview": "In questa lezione finale, condividerai la copertina del tuo libro con i tuoi compagni di classe. Avrai la possibilità di mostrare i tuoi lavori e testare i progetti dei tuoi compagni di classe. Alla fine della lezione, discuterai delle scelte fatte dai tuoi compagni di classe sulle copertine dei loro libri."
         },
         "csc-ecosystems-2023/Overfishing Simulation (pilot)": {
-          "name": "Simulazione di sovrasfruttamento",
-          "overview": "In questa lezione**skill-building**, gli studenti programmeranno un modello di ecosistema acquatico e poi simuleranno una situazione di pesca eccessiva. Gli studenti impareranno a programmare dichiarazioni condizionali per controllare la quantità di alghe nell'acqua. Se ci sono troppe alghe, il corallo si ammala. Se le alghe sono troppo scarse, i pesci non hanno alcuna fonte di cibo e abbandonano l'area. Se c'è la giusta quantità di alghe, il corallo malato guarirà e i pesci rimarranno nella zona. ",
-          "preparation": "-   Supera i livelli e rivedi le diapositive delle <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">lezioni</a> \n-   Decidi il ritmo tra il tempo di lavoro degli studenti e le lezioni di gruppo.\n-   Valuta la possibilità di assegnare agli studenti la preparazione consigliata \n    ([link](https://studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4911962))\n-   Considera queste opzioni relative alle estensioni ([link](https://studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4911963)) da esplorare dopo l'ultima lezione.\n\n##### Opzionale:\n\n-   [Optional] Guardate questa presentazione di suggerimenti utili. <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\"></a> \n-   [Optional] Consultate questa guida per <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">insegnanti sul debugging per essere pronti ad aiutare gli studenti a trovare e</a>  correggere gli errori nel codice. ",
-          "purpose": "Gli studenti impareranno che gli ecosistemi marini hanno molti organismi che interagiscono e si mantengono in equilibrio. Questa lezione combina l'informatica con le scienze della vita in quanto gli studenti creano un modello che simula gli effetti della pesca eccessiva utilizzando dichiarazioni condizionali in informatica per mostrare causa ed effetto nella vita reale. "
+          "name": "Simulazione di pesca eccessiva",
+          "overview": "In questa lezione **di costruzione delle competenze**, gli studenti programmeranno un modello di ecosistema acquatico e poi simuleranno una situazione di pesca eccessiva. Gli studenti impareranno a programmare istruzioni condizionali per controllare la quantità di alghe nell'acqua. Se ci sono troppe alghe, il corallo si ammala. Se le alghe sono troppo scarse, i pesci non hanno alcuna fonte di cibo e abbandonano l'area. Se c'è la giusta quantità di alghe, il corallo malato guarirà e i pesci rimarranno nella zona. ",
+          "preparation": "-   Supera gli esercizi e ripassa le <a href=\"https://docs.google.com/presentation/d/1Nnn6FUUZyixBzgvGNIRektWIPsBL1tIOwolj05nR-Nc/template/preview\" target=\"_blank\">diapositive delle lezioni</a>\n-   Decidi i tempi tra il ritmo di lavoro degli studenti e le lezioni di gruppo.\n-   Valuta la possibilità di assegnare agli studenti la preparazione consigliata\n     ([link](https://studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4911962))\n-   Considera di esplorare dopo l'ultima lezione queste opzioni relative agli approfondimenti ([link](https://studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4911963)).\n\n##### Opzionale:\n\n-   [Facoltativo] Osserva questa presentazione <a href=\"1-r9itVdiOY02gvEVPcY8In54SeAUdj8C_qhuh_51Vh8/template/preview\" target=\"_blank\">Suggerimenti utili</a>.\n-   [Facoltativo] Consulta questa <a href=\"https://fedd.it/ebuggingeacherpdf\" target=\"_blank\">guida al debugging per l'insegnante</a> per essere pronto ad aiutare gli studenti a trovare e a correggere gli errori nel programma.",
+          "purpose": "Gli studenti impareranno che gli ecosistemi marini presentano molti organismi che interagiscono e si mantengono in equilibrio. Questa lezione combina l'informatica con la biologia in quanto gli studenti creano un modello che simula gli effetti della pesca eccessiva utilizzando istruzioni condizionali in informatica per mostrare causa ed effetto nella vita reale. "
         },
         "csc-ecosystems-2023/Balancing the Ecosystem (pilot)": {
-          "name": "Equilibrare l'ecosistema",
-          "overview": "In questa lezione**sullo sviluppo delle abilità**, gli studenti leggeranno e poi programmeranno tre diverse soluzioni al problema della pesca eccessiva.\n\nQuesta lezione inizia dal punto in cui si era interrotta la lezione precedente, con il modello di un ecosistema acquatico squilibrato. Innanzitutto, gli studenti modificheranno il comportamento della barca in modo che possa muoversi solo all'interno di una determinata «zona di pesca». In secondo luogo, gli studenti programmeranno un nuovo evento per specificare una «stagione di pesca» e una «nessuna stagione di pesca». In terzo luogo, gli studenti impareranno a usare una variabile per tenere traccia del numero di pesci che la barca ha rimosso. La lezione termina con un livello di verifica della comprensione per assicurarsi che gli studenti abbiano appreso le tre soluzioni alla pesca eccessiva.",
-          "preparation": "-   Leggi l'articolo fornito su <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\" target=\"_blank\">Understanding Overfishing</a>. Scaffold secondo necessità per soddisfare le esigenze dei tuoi studenti. \n-   Supera i livelli e rivedi le diapositive delle <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">lezioni</a> \n-   Decidi il ritmo tra l'orario di lavoro degli studenti e le lezioni di gruppo.\n-   Valuta la possibilità di assegnare agli studenti la preparazione consigliata [(link)].[0]\n-   Considerate queste opzioni di estensione correlate [(link)](https://studio.code.org/s/csc-ecosystems-2023/lessons/2#activity-4986904).\n\n##### Opzionale:\n\n-   Guardate questa <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">presentazione di   \\[Optional] suggerimenti utili.</a> \n-   [Optional] Consultate questa guida per <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">insegnanti sul debugging per essere pronti ad aiutare gli studenti a trovare e</a>  correggere gli errori nel codice. ",
-          "purpose": "Gli studenti continueranno a conoscere ecosistemi equilibrati e squilibrati. Utilizzando come base un articolo scientifico sulla pesca eccessiva, gli studenti svilupperanno una ricca comprensione delle connessioni tra gli organismi in un ecosistema. In definitiva, gli studenti avranno l'opportunità di applicare ciò che hanno appreso modellando un ecosistema locale. "
+          "name": "Rendere equilibrato l'ecosistema",
+          "overview": "In questa lezione **sullo sviluppo delle competenze**, gli studenti leggeranno e poi programmeranno riguardo a tre diverse soluzioni al problema della pesca eccessiva.\n\nQuesta lezione inizia dal punto in cui si era interrotta la lezione precedente, con il modello di un ecosistema acquatico squilibrato. Innanzitutto, gli studenti modificheranno il comportamento della barca in modo che possa muoversi solo all'interno di una determinata «area di pesca». In secondo luogo, gli studenti programmeranno un nuovo evento per specificare una «stagione di pesca» e una «nessuna stagione di pesca». In terzo luogo, gli studenti impareranno a usare una variabile per tenere traccia del numero di pesci che la barca ha rimosso. La lezione termina con un esercizio di verifica della comprensione per assicurarsi che gli studenti abbiano appreso le tre soluzioni alla pesca eccessiva.",
+          "preparation": "-   Leggi l'articolo disponibile su <a href=\"https://docs.google.com/presentation/d/1-r9itVdiOY02gvEVPcY8In54SeAUdj8C_qhuh_51Vh8/template/preview\" target=\"_blank\">Comprendere la pesca eccessiva</a>. Si tratta di un'intelaiatura necessaria per soddisfare la conoscenza dei tuoi studenti. \n-   Supera gli esercizi e ripassa le diapositive delle <a href=\"https://docs.google.com/presentation/d/1Nnn6FUUZyixBzgvGNIRektWIPsBL1tIOwolj05nR-Nc/template/preview\" target=\"_blank\">lezioni</a> \n-   Decidi i tempi tra il ritmo di lavoro degli studenti e le lezioni di gruppo.\n-   Valuta la possibilità di assegnare agli studenti la preparazione consigliata [(link)](https://studio.code.org/s/csc-ecosystems-2023/lessons/2#activity-4986903).\n-   Considera queste opzioni relative agli approfondimenti [(link)](https://studio.code.org/s/csc-ecosystems-2023/lessons/2#activity-4986904).\n\n##### Facoltativo:\n\n-   [Optional] Rivedi questa <a href=\"https://docs.google.com/presentation/d/1-r9itVdiOY02gvEVPcY8In54SeAUdj8C_qhuh_51Vh8/template/preview\" target=\"_blank\">rassegna di suggerimenti utili.</a> \n-   [Optional] Rivedi questa guida per <a href=\"https://fedd.it/ebuggingeacherpdf\" target=\"_blank\">insegnanti sul debugging per essere pronti ad aiutare gli studenti a trovare e</a>  correggere gli errori nel programma. ",
+          "purpose": "Gli studenti continueranno a conoscere ecosistemi equilibrati e squilibrati. Utilizzando come base un articolo scientifico sulla pesca eccessiva, gli studenti svilupperanno una ricca comprensione delle connessioni tra gli organismi in un ecosistema. In definitiva, gli studenti avranno l'opportunità di applicare ciò che hanno appreso creando il modello di un ecosistema locale. "
         },
         "csc-ecosystems-2023/lesson-3": {
-          "name": "Codificare il mio ecosistema",
-          "overview": "In questa lezione**sullo sviluppo delle competenze**, gli studenti esploreranno diverse simulazioni di ecosistemi. Gli studenti possono scegliere di esplorare un ecosistema di foresta pluviale, desertica, artica o paludosa. Assumeranno il ruolo di ecologisti e studieranno le interazioni tra piante e animali nella catena alimentare di ciascun ecosistema. Gli studenti leggeranno le istruzioni per comprendere la sfida che ogni ecosistema sta affrontando. Quindi modificheranno il codice corrispondente per riequilibrare l'ecosistema. ",
-          "preparation": "-   Supera i livelli e rivedi le diapositive delle <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">lezioni</a> \n-   Decidi il ritmo tra il tempo di lavoro degli studenti e le lezioni di gruppo.\n-   Stampa un taccuino da ecologista per ogni studente\n-   Considera queste [opportunità di estensione](https://studio.code.org/s/csc-ecosystems-2023/lessons/3#activity-4852074) dopo questa lezione"
+          "name": "Programmare il mio ecosistema",
+          "overview": "In questa lezione di **sviluppo delle competenze**, gli studenti esploreranno diverse simulazioni di ecosistemi. Gli studenti possono scegliere di esplorare un ecosistema di foresta pluviale, desertica, artica o paludosa. Assumeranno il ruolo di ecologi e studieranno le interazioni tra piante e animali nella catena alimentare di ciascun ecosistema. Gli studenti leggeranno le istruzioni per comprendere la sfida che ogni ecosistema sta affrontando. Quindi modificheranno il programma corrispondente per riequilibrare l'ecosistema. ",
+          "preparation": "-   Supera gli esercizi e ripassa le diapositive delle <a href=\"https://docs.google.com/presentation/d/1Nnn6FUUZyixBzgvGNIRektWIPsBL1tIOwolj05nR-Nc/template/preview\" target=\"_blank\">lezioni</a> \n-   Decidi i tempi tra il ritmo di lavoro degli studenti e le lezioni di gruppo.\n-   Stampa un Taccuino dell'ecologo per ogni studente\n-   Considera queste [opportunità di approfondimento](https://studio.code.org/s/csc-ecosystems-2023/lessons/3#activity-4852074) dopo questa lezione"
         },
         "csc-mappinglandmarks-2023/US Landmarks": {
           "name": "Introduzione alla creazione di mappe",
           "overview": "In questa lezione**skill-building**, gli studenti impareranno a creare e animare sprite su una mappa. \n\nQuesta lezione ha due scopi principali: (1) offrire un esempio di codifica di una mappa interattiva e (2) introdurre gli studenti alla programmazione in Sprite Lab. Sprite Lab è un ambiente di codifica aperto che utilizza codice basato su blocchi. Gli studenti impareranno le basi di Sprite Lab durante questa lezione per pianificare e costruire la loro mappa interattiva nelle lezioni seguenti. \n\nIn questa lezione integrata, gli studenti imparano i concetti di studi sociali creando una mappa con codice. Per iniziare, gli studenti esamineranno diversi esempi di mappe e discuteranno delle caratteristiche che compongono la mappa. Nel riepilogo, gli studenti discuteranno del ruolo di un creatore di mappe. \n\n\\_Nota: le mappe e le immagini non saranno perfette in tutti i casi. Fortunatamente, c'è uno strumento Sprite Upload e gli studenti possono accedere alla Animation Library nei livelli di gioco gratuiti che consentono la personalizzazione. \\_",
-          "preparation": "-   Rivedi e completa tu stesso il tutorial online.\n-   Rivedi le diapositive e decidi qual è il ritmo tra l'orario di lavoro degli studenti e le lezioni di gruppo.\n-   Prepara note adesive o carta da grattare per ogni studente nella discussione conclusiva.\n-   Verifica la tua tecnologia e decidi in anticipo se è necessario risolvere eventuali problemi.\n\n##### Opzionale:\n\n-   Consultate questa presentazione di suggerimenti utili. <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\"></a> \n-   Consultate questa guida per <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">insegnanti sul debugging per essere pronti ad aiutare gli studenti a trovare e</a>  correggere gli errori nel codice. \n-   Programmazione in coppia: decidi se vuoi che gli studenti si dedichino alla programmazione in coppia. Guarda questo <a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">video</a> e visita questa</a> pagina di <a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">supporto per ulteriori informazioni sulla programmazione in coppia.\n-   Caricamenti Sprite personalizzati - Anche se questo argomento verrà introdotto nelle lezioni successive, con questo video puoi scegliere di insegnare agli studenti come caricare i propri costumi e sfondi da sprite. <a href=\"https://youtu.be/CHipUGfL_0M\" target=\"_blank\"></a>",
+          "preparation": "-   RIpassa e completa tu stesso l'esercitazione online.\n-   RIpassa le diapositive e decidi qual è il giusto ritmo tra l'orario degli studenti e le lezioni di gruppo.\n-   Durante la discussione conclusiva metti a disposizione di ogni studente foglietti adesivi o fogli per gli appunti.\n-   Verifica la tua dotazione tecnologica e valuta se è necessario risolvere in anticipo eventuali problemi.\n\n##### Facoltativo:\n\n-   Consulta questa presentazione con alcuni <a href=\"https://docs.google.com/presentation/d/1-r9itVdiOY02gvEVPcY8In54SeAUdj8C_qhuh_51Vh8/template/preview\" target=\"_blank\">Suggerimenti utili</a>. \n-   Consulta questa guida per <a href=\"https://fedd.it/ebuggingeacherpdff\" target=\"_blank\">insegnanti sul debugging per essere pronto ad aiutare gli studenti a trovare e</a>  correggere gli errori nel programma. \n-   Programmazione in coppia: decidi se preferisci che gli studenti si dedichino alla programmazione a coppie. Guarda questo <a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">video</a> e visita questa</a> pagina di <a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">supporto per ulteriori informazioni sulla programmazione in coppia.\n-   Caricamenti Personaggi personalizzati - Anche se questo argomento verrà introdotto nelle lezioni successive, con questo video puoi scegliere se insegnare agli studenti come caricare costumi e sfondi personalizzati per i personaggi. <a href=\"https://youtu.be/CHipUGfL_0M\" target=\"_blank\"></a>",
           "purpose": "Gli studenti creano un'app di guida turistica in un'esperienza di apprendimento interattiva che integra più aree tematiche. Combinando concetti di informatica con contenuti geografici, la lezione mira ad aiutare gli studenti a sviluppare una comprensione più profonda di entrambe le materie e a vedere le loro connessioni. Questa lezione ha lo scopo di consentire agli studenti di applicare le loro abilità di programmazione in un contesto reale creando un'app di guida turistica che evidenzi importanti monumenti, eventi culturali e siti storici in una particolare posizione geografica.",
           "student_overview": "In questa lezione esplorerai le mappe! Le mappe ti aiutano a capire dove andare. Raccontano anche storie sulle persone che compongono un luogo. \n\nCon il codice, animerai gli sprite su uno sfondo per creare una mappa interattiva."
         },
@@ -6666,7 +6773,7 @@
         "csc-mappinglandmarks-2023/Local Landmarks - Coding Your Project": {
           "name": "Codifica della mia mappa",
           "overview": "In questa lezione, gli studenti usano i piani di progetto della classe precedente per creare la loro mappa interattiva. Gli studenti possono trovarsi in fasi diverse del loro piano.\n\nUna volta che gli studenti passeranno ai computer, seguiranno una progressione di livello che li guiderà attraverso il processo di impostazione dello sfondo, creazione di una guida turistica, facendola dire «Benvenuto», facendola muovere e aggiungendo almeno 2 punti di riferimento che inducano la guida a dire qualcosa quando vengono toccati. \n\nTieni presente che si tratta di una progressione del progetto, il che significa che il codice dello studente li seguirà da un livello all'altro. Incoraggia gli studenti a premere «Esegui» su ogni livello per salvare il codice prima di passare al livello successivo.\n\nLa lezione termina con una breve passeggiata in galleria in preparazione della lezione successiva, in cui gli studenti condividono i loro progetti con la classe. ",
-          "preparation": "-   Rivedi e completa tu stesso il tutorial online.\n-   Preparati a restituire le guide alla pianificazione della lezione precedente. \n-   Prendi in considerazione strategie di supporto per gli studenti che potrebbero non sentirsi sicuri o pronti a iniziare il loro progetto creativo. \n-   Considerate queste opzioni relative alle estensioni ([link](https://studio.code.org/s/csc-mappinglandmarks-2023/lessons/3#activity-5197066))\n\n##### Opzionale:\n\n-   Codificate la vostra mappa come esempio per gli studenti\n-   Guardate questa presentazione di suggerimenti utili. <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\"></a> \n-   Consultate questa guida per <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">insegnanti sul debug per essere pronti ad aiutare gli studenti a trovare e correggere</a>  gli errori nel codice. ",
+          "preparation": "-   Ripassa e completa tu stesso l'esercitazione online.\n-   Preparati a restituire le guide alla pianificazione della lezione precedente. \n-   Prendi in considerazione strategie di supporto per gli studenti che potrebbero non sentirsi sicuri o pronti a iniziare il loro progetto creativo. \n-   Considera queste opzioni relative agli approfondimenti ([link](https://studio.code.org/s/csc-mappinglandmarks-2023/lessons/3#activity-5197066))\n\n##### Facoltativo:\n\n-   Programma la tua mappa come esempio per gli studenti\n-   Guarda questa presentazione con alcuni <a href=\"https://docs.google.com/presentation/d/1-r9itVdiOY02gvEVPcY8In54SeAUdj8C_qhuh_51Vh8/template/preview\" target=\"_blank\">suggerimenti utili.</a> \n-   Consulta questa guida per <a href=\"https://fedd.it/ebuggingeacherpdf\" target=\"_blank\">insegnanti sul debugging per essere pronti ad aiutare gli studenti a trovare e correggere</a>  gli errori nel programma. ",
           "purpose": "Questa lezione mira a fornire un'esperienza di apprendimento ricca e coinvolgente che combina informatica e geografia e aiuta gli studenti a sviluppare una serie di abilità e competenze rilevanti nel mondo di oggi. Codificando la propria app di guida turistica, gli studenti possono esplorare le caratteristiche geografiche, gli eventi culturali e i siti storici di una particolare località. Possono esprimere la loro comprensione e apprezzamento per questo luogo attraverso il codice e la tecnologia. La lezione sottolinea anche l'importanza della pianificazione, della risoluzione dei problemi e dell'espressione personale nella programmazione.",
           "student_overview": "Ora è il momento di creare la tua mappa con una guida turistica che visita ogni punto di riferimento. Seguirai il piano che hai progettato l'ultima lezione. Segui attentamente le istruzioni in ogni livello. In questo progetto, il tuo codice ti seguirà da un livello all'altro. "
         },
@@ -6680,7 +6787,7 @@
         "csc-starquilts-2023/Native American Star Quilts (beta)": {
           "name": "Trapunte Native American Star",
           "overview": "In questa lezione Unplugged, gli studenti verranno introdotti ai Native American Star Quilts e al loro significato. Quindi, gli studenti creeranno una forma a stella a 6 punte su carta. Uno degli obiettivi principali è discutere i modelli all'interno della forma. Queste idee saranno fondamentali per le parti successive dell'attività di codifica online. ",
-          "preparation": "-   Supera i livelli e rivedi le diapositive delle lezioni\n-   Decidi il ritmo tra il tempo di lavoro degli studenti e le lezioni di gruppo.\n-   Prendi in considerazione queste opzioni di estensione correlate (link) da esplorare dopo l'ultima lezione.\n\n##### Opzionale:\n\n-   Guardate questa <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">presentazione di suggerimenti utili.</a> \n-   Consultate questa guida per <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">insegnanti sul debugging per essere pronti ad aiutare gli studenti a trovare e</a>  correggere gli errori nel codice. \n-   Programmazione in coppia: decidi se vuoi che gli studenti si dedichino alla programmazione in coppia. Guarda questo <a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">video</a> e visita questa</a> pagina di <a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">supporto per ulteriori informazioni sulla programmazione in coppia.",
+          "preparation": "-   Supera gli esercizi e ripassa le diapositive delle lezioni\n-   Decidi il ritmo tra il tempo di lavoro degli studenti e le lezioni di gruppo.\n-   Prendi in considerazione questi approfondimenti facoltativi correlati (link) da esplorare dopo l'ultima lezione.\n\n##### Facoltativo:\n\n-   Ripassa questa presentazione con alcuni <a href=\"https://docs.google.com/presentation/d/1-r9itVdiOY02gvEVPcY8In54SeAUdj8C_qhuh_51Vh8/template/preview\" target=\"_blank\">Suggerimenti utili</a>. \n-   Ripassa questa <a href=\"https://fedd.it/ebuggingeacherpdf\" target=\"_blank\">guida al debugging per il docente</a>  per preparare ad aiutare gli studenti a trovare e correggere gli errori nel loro codice. \n-   Programmazione in coppia - Decidi se vuoi che gli studenti si impegnino nella programmazione in coppia. Guarda questo <a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">video</a> e visita questa pagina di <a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">Supporto</a> per avere ulteriori informazioni sulla programmazione in coppia.",
           "purpose": "Oggi imparerai tutto su Star Quilts. Quindi utilizzerai matita, carta e colori per iniziare a disegnare la tua forma a stella a 6 punte. Stai attento agli schemi!"
         },
         "csc-starquilts-2023/Getting Started with The Artist (beta)": {
@@ -6692,7 +6799,7 @@
         "csc-starquilts-2023/Code Your Star Quilt (beta)": {
           "name": "Coding My Star Quilt",
           "overview": "Nella lezione finale di questa attività, gli studenti sono pronti a costruire la propria trapunta Star. Gli studenti costruiranno una punta della stella e poi ripeteranno il codice per ottenere uno Star Quilt tradizionale a 8 punti. Le Star Quilt sono pensate per essere regalate in modo che gli studenti possano condividere il loro progetto con una persona speciale.",
-          "preparation": "-   Supera i livelli e rivedi le diapositive delle lezioni\n-   Decidi il ritmo tra il tempo di lavoro degli studenti e le lezioni di gruppo.\n-   Considera queste opzioni di estensione correlate ([link](https://studio.code.org/s/csc-starquilts-2023/lessons/3#activity-4365328)) da esplorare dopo l'ultima lezione.\n\n##### Facoltativo:\n\n-   Consultate questa guida per <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">insegnanti sul debugging per essere pronti ad aiutare gli studenti</a>  a trovare e correggere gli errori nel codice. \n-   Programmazione in coppia: decidi se vuoi che gli studenti si dedichino alla programmazione in coppia. Guarda questo <a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">video</a> e visita questa</a> pagina di <a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">supporto per ulteriori informazioni sulla programmazione in coppia.",
+          "preparation": "-   Supera gli esercizi e ripassa le diapositive delle lezioni \n-   Decidi il ritmo tra il tempo di lavoro degli studenti e le lezioni di gruppo.\n-   Prendi in considerazione questi approfondimenti facoltativi correlati ([link](https://studio.code.org/s/csc-starquilts-2023/lessons/3#activity-4365328)) da esplorare dopo l'ultima lezione. \n\n##### Facoltativo:\n\n-   Ripassa questa <a href=\"https://fedd.it/ebuggingeacherpdf\" target=\"_blank\">Guida al debugging per il docente</a> per prepararti ad aiutare gli studenti a trovare e correggere gli errori nel loro codice. \n-   Programmazione in coppia - Decidi se vuoi che gli studenti si impegnino nella programmazione in coppia. Guarda questo <a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">video</a> e visita questa pagina di <a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">Supporto</a> per ulteriori informazioni sulla programmazione in coppia.",
           "purpose": "Oggi creeremo il codice per creare la nostra trapunta a stella personale. Ricorda, nella tradizione dei nativi americani, regalare trapunte a stella in occasioni speciali esprime amore, onore e rispetto per gli altri. Una trapunta digitale a stella è una versione moderna di questa tradizione che ti consente di condividere il tuo amore e il tuo apprezzamento con gli altri in un modo nuovo e creativo. Quando avremo finito, assicurati di condividere la tua trapunta a forma di stella con qualcuno che ami e apprezzi.",
           "student_overview": "Oggi creeremo il codice per creare la nostra trapunta a stella personale. Ricorda, nella tradizione dei nativi americani, regalare trapunte a stella in occasioni speciali esprime amore, onore e rispetto per gli altri. Una trapunta digitale a stella è una versione moderna di questa tradizione che ti consente di condividere il tuo amore e il tuo apprezzamento con gli altri in un modo nuovo e creativo. Quando avremo finito, assicurati di condividere la tua trapunta a forma di stella con qualcuno che ami e apprezzi."
         },
@@ -7326,7 +7433,7 @@
         },
         "csd7-2023/Types of Machine Learning": {
           "name": "Tipologie di apprendimento automatico",
-          "overview": "In questa lezione gli studenti considereranno come si creano modelli «mentali» quando si apprendono nuovi concetti e come questi possono essere simili a un modello di «apprendimento automatico». Partecipano a un'attività con schemi cromatici per simulare la costruzione di un modello di apprndimento automatico senza ausilio, quindi si cimentano in un gioco chiamato «Porta a vetri verde» come esempio di apprendimento supervisionato e, infine, classificheranno diversi scenari in apprendimento «supervisionato» o «senza supervisione».\n\n**Domanda del giorno:** Quali sono i diversi tipi di apprendimento automatico?",
+          "overview": "In questa lezione gli studenti considereranno come si creano modelli «mentali» quando si apprendono nuovi concetti e come questi possono essere simili a un modello di «apprendimento automatico». Partecipano a un'attività con schemi cromatici per simulare la costruzione di un modello di apprendimento automatico senza ausilio, quindi si cimentano in un gioco chiamato «Porta a vetri verde» come esempio di apprendimento supervisionato e, infine, classificheranno diversi scenari in apprendimento «supervisionato» o «senza supervisione».\n\n**Domanda del giorno:** Quali sono i diversi tipi di apprendimento automatico?",
           "preparation": "-   Riguarda tutti i materiali per la lezione di oggi.\n-   Consulta il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) per gli insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri insegnanti",
           "purpose": "-   Ripassa gli esercizi di Code Studio prima della lezione in modo da sapere come giocare al gioco chiamato «La porta a vetri verde»\n-   Stampa o preparati a condividere delle copie online della guida alle attività per ogni studente",
           "student_overview": "Impara due diversi tipi di apprendimento automatico: apprendimento supervisionato e non supervisionato. Quindi confronta come l'apprendimento automatico può essere simile o diverso a come apprendono gli umani."
@@ -7463,7 +7570,7 @@
         "coursea-2023/Happy Maps": {
           "name": "Mappe felici",
           "overview": "Il passaggio da algoritmo a programmazione può essere più immediato se gli alunni capiscono la differenza tra pianificare una sequenza e codificare tale sequenza in un linguaggio opportuno. Questa attività aiuta gli alunni ad acquisire esperienza leggendo e scrivendo del codice costituito da semplici simboli.",
-          "preparation": "-   Stampare un **\\*foglio di lavoro \\*\\* e un set di \\*_\\\\_Schede da ritagliare** per gruppi di 2-3.\n-   Fai in modo che ogni alunno abbia un diario per le proprie riflessioni.",
+          "preparation": "-   Stampa un **\\*foglio di lavoro** e un set di **\\*Schede da ritagliare** per gruppi di 2-3.\n-   Fai in modo che ogni alunno abbia un diario per le proprie riflessioni.",
           "purpose": "Il passaggio da algoritmo a programmazione può essere più immediato se gli alunni comprendono la differenza tra pianificare una sequenza e codificare tale sequenza in un linguaggio opportuno. Questa attività aiuterà gli alunni ad acquisire esperienza leggendo e scrivendo del codice costituito da semplici simboli.",
           "student_overview": "Scrivi le istruzioni per portare il Flurb fino al frutto."
         },
@@ -7960,14 +8067,14 @@
         "coursef-2023/Making Sprites": {
           "name": "Creazione di personaggi",
           "overview": "Questa lezione è una **palestra delle competenze**: gli alunni lavorano attraverso una serie di esercizi di programmazione al computer, concludendo con un'attività di \"gioco libero\" e senza limiti di tempo, nella quale possono realizzare ciò che vogliono. Gli alunni scrivono programmi e imparano i due concetti principali del Laboratorio dei personaggi: personaggi e comportamenti.",
-          "preparation": "Gioca attraverso gli esercizi e ripassa le \\*_\\\\_diapositive delle lezioni\\*.",
+          "preparation": "Supera gli esercizi e ripassa le \\*_\\\\_diapositive delle lezioni\\*.",
           "purpose": "Questa lezione è progettata per introdurre gli alunni alla programmazione nel Laboratorio dei Personaggi. Gli alunni inizieranno a comprendere il modello di programmazione di questo strumento ed esploreranno i modi in cui possono usarlo per esprimersi.",
           "student_overview": "In questa lezione scriverai programmi e scoprirai personaggi e comportamenti."
         },
         "coursef-2023/Sprites in Action": {
           "name": "Personaggi in azione",
           "overview": "Questa lezione è una **palestra delle competenze**: gli alunni lavorano attraverso una serie di esercizi di programmazione al computer, concludendo con un'attività di \"gioco libero\" senza limiti di tempo, nella quale possono realizzare ciò che desiderano. Gli alunni scrivono programmi che rispondono a eventi a tempo e input dell'utente. ",
-          "preparation": "Gioca attraverso gli esercizi e ripassa le diapositive delle lezioni.",
+          "preparation": "Supera gli esercizi e ripassa le diapositive delle lezioni.",
           "purpose": "Questa lezione è progettata per rafforzare le competenze della lezione precedente e introdurre gli alunni alla programmazione con eventi. Durante questo corso, gli eventi saranno il modo principale in cui gli alunni cambieranno il modo in cui i loro programmi vengono eseguiti nel tempo o in risposta all'input dell'utente.",
           "student_overview": "Lavorerai con esercizi di programmazione e giungerai alla conclusione con un'attività di \"gioco libero\" senza limiti di tempo, nella quale potrai costruire quello che preferisci."
         },
@@ -7988,7 +8095,7 @@
         "coursef-2023/Text and Prompts": {
           "name": "Testo e richieste all'utente",
           "overview": "Questa lezione è una **palestra delle competenze**: gli alunni fanno pratica con le variabili nel Laboratorio dei personaggi.",
-          "preparation": "Gioca attraverso gli esercizi e ripassa le diapositive delle lezioni.",
+          "preparation": "Supera gli esercizi e ripassa le diapositive delle lezioni.",
           "purpose": "Le variabili verranno utilizzate in questo corso per memorizzare e modificare i dati. A questo punto, gli alunni memorizzeranno e recupereranno semplicemente i valori senza modificarli. Nelle lezioni successive, gli alunni memorizzeranno i valori numerici e li modificheranno nel tempo per tenere traccia di cose come il punteggio di un giocatore in una partita.",
           "student_overview": "in questa lezione farai pratica con le variabili nel Laboratorio dei personaggi.  "
         },
@@ -8074,14 +8181,14 @@
         "express-2023/Making Sprites": {
           "name": "Creazione di personaggi",
           "overview": "Questa lezione è una **palestra delle competenze**: gli alunni lavorano attraverso una serie di esercizi di programmazione al computer, concludendo con un'attività di \"gioco libero\" e senza limiti di tempo, nella quale possono realizzare ciò che vogliono. Gli alunni scrivono programmi e imparano i due concetti principali del Laboratorio dei personaggi: personaggi e comportamenti.",
-          "preparation": "Gioca attraverso gli esercizi e ripassa le \\*_\\\\_diapositive delle lezioni\\*.",
+          "preparation": "Supera gli esercizi e ripassa le \\*_\\\\_diapositive delle lezioni\\*.",
           "purpose": "Questa lezione è progettata per introdurre gli alunni alla programmazione nel Laboratorio dei Personaggi. Gli alunni inizieranno a comprendere il modello di programmazione di questo strumento ed esploreranno i modi in cui possono usarlo per esprimersi.",
           "student_overview": "In questa lezione scriverai programmi e scoprirai personaggi e comportamenti."
         },
         "express-2023/Sprites in Action": {
           "name": "Personaggi in azione",
           "overview": "Questa lezione è una **palestra delle competenze**: gli alunni lavorano attraverso una serie di esercizi di programmazione al computer, concludendo con un'attività di \"gioco libero\" senza limiti di tempo, nella quale possono realizzare ciò che desiderano. Gli alunni scrivono programmi che rispondono a eventi a tempo e input dell'utente. ",
-          "preparation": "Gioca attraverso gli esercizi e ripassa le diapositive delle lezioni.",
+          "preparation": "Supera gli esercizi e ripassa le diapositive delle lezioni.",
           "purpose": "Questa lezione è progettata per introdurre gli alunni alla programmazione con eventi. Durante questo corso, gli eventi saranno il modo principale in cui gli alunni cambieranno il modo in cui i loro programmi vengono eseguiti nel tempo o in risposta all'input dell'utente.",
           "student_overview": "Lavorerai con esercizi di programmazione e giungerai alla conclusione con un'attività di \"gioco libero\" senza limiti di tempo, nella quale potrai costruire quello che preferisci."
         },
@@ -8192,7 +8299,7 @@
         "express-2023/Text and Prompts": {
           "name": "Testo e richieste all'utente",
           "overview": "Questa lezione è una **palestra delle competenze**: gli alunni fanno pratica con le variabili nel Laboratorio dei personaggi.",
-          "preparation": "Gioca attraverso gli esercizi e ripassa le diapositive delle lezioni.",
+          "preparation": "Supera gli esercizi e ripassa le diapositive delle lezioni.",
           "purpose": "Le variabili verranno utilizzate in questo corso per memorizzare e modificare i dati. A questo punto, gli alunni memorizzeranno e recupereranno semplicemente i valori senza modificarli. Nelle lezioni successive, gli alunni memorizzeranno i valori numerici e li modificheranno nel tempo per tenere traccia di cose come il punteggio di un giocatore in una partita.",
           "student_overview": "in questa lezione farai pratica con le variabili nel Laboratorio dei personaggi.  "
         },
@@ -8307,53 +8414,50 @@
         },
         "how-ai-works-2023/Introduction to Machine Learning": {
           "name": "Introduzione all'apprendimento automatico",
-          "overview": "Questa lezione è incentrata su [Come funziona l'intelligenza artificiale: cos'è l'apprendimento automatico?](https://youtu.be/KHbwOetbmbs?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) video della [serie di video How AI Works](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Guarda questo video prima di esplorare il programma della lezione.\n\nIn questa lezione gli studenti vengono introdotti a una forma di intelligenza artificiale chiamata apprendimento automatico e a come possono utilizzare il processo di risoluzione dei problemi per addestrare un robot a risolvere i problemi. Partecipano a tre attività di apprendimento automatico in cui un robot, AI Bot, sta imparando a rilevare i modelli nei pesci.\n\nQuesta lezione può essere insegnata da sola o come parte di una sequenza di 7 lezioni su Come funziona l'IA - [clicca qui per vedere tutte le lezioni di questa sequenza](https://code.org/ai/how-ai-works).",
+          "overview": "Questa lezione è incentrata su [Come funziona l'IA: cos'è l'apprendimento automatico?](https://youtu.be/KHbwOetbmbs?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) video tratto dalla [serie di video Come funziona l'IA](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Guarda questo video prima di esplorare il piano delle lezioni.\n\nIn questa lezione gli studenti vengono introdotti a una forma di intelligenza artificiale chiamata apprendimento automatico e a come possono utilizzare il processo di risoluzione dei problemi per addestrare un robot a risolvere i problemi. Partecipano a tre attività di apprendimento automatico in cui un robot, Bot IA, sta imparando a rilevare gli schemi nei pesci.\n\nQuesta lezione può essere insegnata singolarmente o come parte di una serie di 7 lezioni su Come funziona l'IA - [clicca qui per visualizzare tutte le lezioni di questa serie](https://code.org/ai/how-ai-works).",
           "preparation": "-   Ripassa gli esercizi di Code Studio prima della lezione\n-   Stampa per ogni studente, le copie della guida alle attività",
           "student_overview": "Scopri le basi dell'apprendimento automatico aiutando Bot IA a riconoscere i pesci per ripulire l'oceano"
         },
         "how-ai-works-2023/Computer Vision": {
-          "name": "Visione computerizzata",
-          "overview": "Questa lezione è incentrata sul[0] video [How AI Works: Computer Vision] tratto dalla serie di video [How AI Works](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Guarda questo video prima di esplorare il programma della lezione.\n\nGli studenti imparano come funziona la visione artificiale. Per prima cosa guardano le illusioni ottiche per identificare le caratteristiche del disegno che i loro occhi hanno notato. Gli studenti guardano un video che spiega la visione artificiale e come un computer «vede». Progettano un algoritmo che utilizza una rete per decidere quale numero visualizzare sul display a sette segmenti. Infine, gli studenti testano il loro algoritmo.\n\nQuesta lezione può essere insegnata da sola o come parte di una sequenza di 7 lezioni su Come funziona l'IA - [clicca qui per vedere tutte le lezioni in questa sequenza](https://code.org/ai/how-ai-works).",
-          "preparation": "-   Stampa copie della guida alle attività del Computer Vision Network per ogni gruppo\n-   (Facoltativo) Stampa copie del Seven Segment Display Manipulative",
+          "name": "Visione artificiale",
+          "overview": "Questa lezione è incentrata sul video [Come funziona l'IA: Visione artificiale](https://youtu.be/2hXG8v8p0KM?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) tratto dalla [serie di video Come funziona l'IA](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Guarda questo video prima di esplorare il piano delle lezioni.\n\nGli studenti imparano come funziona la visione artificiale. Per prima cosa osservano le illusioni ottiche per identificare le caratteristiche del disegno che i loro occhi hanno notato. Gli studenti guardano un video che spiega la visione artificiale e come un computer \"vede\". Progettano un algoritmo che utilizza una rete per decidere quale numero viene visualizzato sul display a sette segmenti. Infine, gli studenti testano il loro algoritmo.\n\nQuesta lezione può essere insegnata singolarmente o come parte di una serie di 7 lezioni su Come funziona l'IA - [clicca qui per visualizzare tutte le lezioni in questa serie](https://code.org/ai/how-ai-works).",
+          "preparation": "-   Per ogni gruppo, stampa una copia della guida alle attività Rete della visione artificiale\n-   (Facoltativo) Stampa delle copie di Display a sette segmenti - Schede cartacee",
           "student_overview": "Scopri come funziona la visione artificiale progettando un algoritmo per rilevare i numeri."
         },
         "how-ai-works-2023/Neural Networks": {
           "name": "Reti neurali",
-          "overview": "Questa lezione è incentrata sul video [How AI Works: Neural Networks](https://youtu.be/JrXazCEACVo?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) tratto dalla serie di video [How AI Works](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Guarda questo video prima di esplorare il programma della lezione.\n\nGli studenti imparano come funzionano le reti neurali. Per prima cosa discutono di un esempio di esperienza che ti consiglia delle cose. Quindi utilizzano un widget che consiglia video basati su una persona. Gli studenti guardano un video che spiega le reti neurali. Usano un widget aggiornato per regolare i pesi di ogni persona. Infine, gli studenti discutono della necessità di prospettive diverse nella creazione di sistemi di raccomandazione.\n\nQuesta lezione può essere insegnata da sola o come parte di una sequenza di 7 lezioni su Come funziona l'IA - [clicca qui per visualizzare tutte le lezioni in questa sequenza].[2]",
-          "preparation": "-   Stampa copie della risorsa WeTube Content Creators per ogni studente\n-   Stampa copie della guida alle attività della rete neurale per ogni studente",
-          "student_overview": "Scopri come funzionano le reti neurali regolando i pesi di un sistema di raccomandazione per regolare gli output."
+          "overview": "Questa lezione è incentrata sul video [Come funziona l'IA: reti neurali](https://youtu.be/JrXazCEACVo?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) tratto dalla [serie di video Come funziona l'IA](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Guarda questo video prima di esplorare il piano delle lezioni.\n\nGli studenti imparano come funzionano le reti neurali. Per prima cosa discutono di un esempio di esperienza che ti consiglia alcune cose. Quindi utilizzano un componente che consiglia i video in base a una persona. Gli studenti guardano un video che spiega le reti neurali. Usano un componente aggiornato per regolare i pesi di ogni persona. Infine, gli studenti discutono della necessità di prospettive diverse nella creazione di sistemi di raccomandazione.\n\nQuesta lezione può essere insegnata singolarmente o come parte di una serie di 7 lezioni su Come funziona l'IA - [clicca qui per visualizzare tutte le lezioni in questa sequenza](https://code.org/ai/how-ai-works).",
+          "preparation": "-   Stampa copie della risorsa WeTube: creatori di contenuti per ogni studente\n-   Stampa copie della guida alle attività della Rete neurale per ogni studente",
+          "student_overview": "Scopri come funzionano le reti neurali regolando la ponderazione di un sistema di raccomandazione per regolare gli output."
         },
         "how-ai-works-2023/Chatbots and Large Language Models (LLMs)": {
           "name": "Chatbot e modelli linguistici di grandi dimensioni (LLM)",
-          "overview": "Questa lezione è incentrata sul video [How AI Works: Chatbots and Large Language Models](https://youtu.be/X-AWdfSFCHQ) tratto dalla [serie di video How AI Works].[1]Guarda questo video prima di esplorare il programma della lezione.\n\nI Large Language Models (LLM) generano nuovo testo. Il testo generato dagli LLM assomiglia a quello che potrebbe essere stato scritto da un essere umano, perché i modelli linguistici di grandi dimensioni sono costruiti sulla base di grandi quantità di testo, come Wikipedia. In questa lezione, gli studenti imparano cos'è un LLM e come funziona, quindi usano un LLM per co-creare un testo con l'intelligenza artificiale. Infine, la classe si conclude con una discussione sul fatto che i LLM siano intelligenti o creativi o meno.\n\nQuesta lezione può essere insegnata da sola o come parte di una sequenza di 7 lezioni su Come funziona l'IA - [clicca qui per visualizzare tutte le lezioni in questa sequenza].[2]",
-          "preparation": "-   Stampa copie della guida alle attività per ogni studente",
-          "student_overview": "I Large Language Model (LLM) sono intelligenti o creativi? Decidi tu stesso, mentre lavori con loro, di creare qualcosa e scopri di più su come funzionano!"
+          "overview": "Questa lezione è incentrata sul video [Come funziona l'IA: chatbot e Modelli Linguistici di Grandi Dimensioni](https://youtu.be/X-AWdfSFCHQ) tratto dalla [serie di video Come funziona l'IA](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Guarda questo video prima di esplorare il programma della lezione.\n\nI Modelli Linguistici di Grandi Dimensioni (o Large Language Models, LLM) generano nuovo testo. Il testo generato dagli LLM assomiglia a quello che potrebbe essere stato scritto da un essere umano, perché i modelli linguistici di grandi dimensioni sono costruiti sulla base di grandi quantità di testo, come Wikipedia. In questa lezione, gli studenti imparano cos'è un LLM e come funziona, quindi usano un LLM per co-creare un testo con l'intelligenza artificiale. Infine, la classe si conclude con una discussione sul fatto che i LLM siano intelligenti o creativi o meno.\n\nQuesta lezione può essere insegnata singolarmente o come parte di una serie di 7 lezioni su Come funziona l'IA - [clicca qui per visualizzare tutte le lezioni di questa serie](https://code.org/ai/how-ai-works).",
+          "preparation": "-   Stampa per ogni studente una copia della guida alle attività",
+          "student_overview": "I modelli linguistici di grandi dimensioni (LLM) sono intelligenti o creativi? Decidete voi stessi mentre collaborate con loro per creare qualcosa e scoprite di più su come funzionano!"
         },
         "how-ai-works-2023/Generative Images": {
-          "name": "Immagini generative",
-          "overview": "Questa lezione è incentrata su [Come funziona l'IA: creatività e immaginazione?](https://www.youtube.com/watch?v=X994dDnmRmY) video della [serie di video How AI Works](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Guarda questo video prima di esplorare il programma della lezione.\n\nI modelli di diffusione generano immagini. L'IA di diffusione converte un'immagine in rumore e addestra un'intelligenza artificiale per invertire il processo. In questa lezione, gli studenti imparano come l'intelligenza artificiale può generare immagini, quindi esplorano un widget di intelligenza artificiale di diffusione. Infine, la classe termina con una discussione sul fatto che questi modelli siano o meno creativi.\n\nQuesta lezione può essere insegnata da sola o come parte di una sequenza di 7 lezioni su Come funziona l'intelligenza artificiale - [clicca qui per visualizzare tutte le lezioni di questa sequenza].[2]",
-          "preparation": "-   Stampa copie della guida alle attività per ogni studente",
-          "student_overview": "Scopri come l'intelligenza artificiale può generare immagini esplorando un widget di intelligenza artificiale di diffusione."
+          "name": "Immagini generate da IA",
+          "overview": "Questa lezione è incentrata su [Come funziona l'IA: creatività e immaginazione?](https://www.youtube.com/watch?v=X994dDnmRmY) video tratto dalla [serie di video Come funziona l'IA](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Guarda questo video prima di esplorare il piano delle lezioni.\n\nI modelli di diffusione generano immagini. Diffusion AI converte un'immagine in rumore e addestra un'intelligenza artificiale per invertire il processo. In questa lezione, gli studenti imparano come l'IA può generare immagini, quindi esplorano un componente di intelligenza artificiale di diffusione. Infine, la lezione si conclude con una discussione sulla creatività o meno di questi modelli.\n\nQuesta lezione può essere insegnata singolarmente o come parte di una serie di 7 lezioni su Come funziona l'IA - [clicca qui per visualizzare tutte le lezioni di questa serie](https://code.org/ai/how-ai-works).",
+          "preparation": "-   Stampa per ogni studente una copia della guida alle attività",
+          "student_overview": "Scopri mentre esplori un componente di intelligenza artificiale di diffusione, in che modo l'intelligenza artificiale può generare immagini."
         },
         "how-ai-works-2023/Algorithmic Bias": {
-          "name": "Bias algoritmico",
-          "overview": "Questa lezione è incentrata sul video [How AI Works: Equal Access and Algorithmic Bias] tratto dalla[0] serie di video [How AI Works].[1]Guarda questo video prima di esplorare il programma della lezione.\n\nIn questa lezione, gli studenti si eserciteranno a ritagliare le immagini per scoprire le distorsioni alla base dell'algoritmo di ritaglio di Twitter. Quindi, gli studenti leggeranno e guarderanno un video sulla scoperta di questo algoritmo distorto. Infine, gli studenti discuteranno dei modi per riconoscere e ridurre i pregiudizi e analizzeranno la risposta di Twitter alle accuse di pregiudizi contenute nel loro algoritmo di ritaglio.\n\nQuesta lezione può essere insegnata da sola o come parte di una sequenza di 7 lezioni su Come funziona l'intelligenza artificiale - [fai clic qui per visualizzare tutte le lezioni in questa sequenza].[2]",
-          "preparation": "-   Completa tu stesso l'attività del widget di ritaglio in modo da vedere cosa sperimenteranno i tuoi studenti con il widget e quali domande o problemi potrebbero sollevare.\n-   Guarda le parti del video [«Are We Automating Racism?»](https://youtu.be/Ok5sKLXqynQ) a cui si fa riferimento nel programma della lezione.\n-   Leggi i due articoli dalla sezione dei link qui sotto.",
-          "student_overview": "In questa lezione, lavorerai sul ritaglio delle immagini e discuterai delle sfide e dei pregiudizi legati all'insegnamento a una macchina di ritagliare un'immagine."
+          "name": "Pregiudizio (o bias) algoritmico",
+          "overview": "Questa lezione è incentrata sul video [Come funziona l'IA: parità di accesso e pregiudizi algoritmici](https://youtu.be/tJQSyzBUAew?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) tratto dalla [serie di video Come funziona l'IA](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Guarda questo video prima di esplorare il piano delle lezioni.\n\nIn questa lezione, gli studenti si eserciteranno a ritagliare le immagini per scoprire le distorsioni alla base dell'algoritmo di ritaglio di Twitter. Quindi, gli studenti leggeranno e guarderanno un video sulla scoperta di questo algoritmo spggetto a pregiudizi. Infine, gli studenti discuteranno dei modi per riconoscere e ridurre i pregiudizi e analizzeranno la risposta di Twitter alle accuse di parzialità contenute nel loro algoritmo di ritaglio.\n\nQuesta lezione può essere insegnata singolarmente o come parte di una serie di 7 lezioni su Come funziona l'IA - [clicca qui per visualizzare tutte le lezioni di questa serie](https://code.org/ai/how-ai-works).",
+          "preparation": "-   Completa tu stesso l'attività del componente di ritaglio in modo da vedere cosa sperimenteranno i tuoi studenti con il componente e quali domande o problemi potrebbero sollevare.\n-   Guarda le parti del video [«Stiamo automatizzando il razzismo?»](https://youtu.be/Ok5sKLXqynQ) a cui si fa riferimento nel programma della lezione.\n-   Leggi i due articoli dalla sezione dei link qui sotto.",
+          "student_overview": "In questa lezione, lavorerai sul ritaglio delle immagini e discuterai delle sfide e dei pregiudizi legati all'insegnamento a una macchina nel modo in cui ritaglia un'immagine."
         },
         "how-ai-works-2023/Our AI Code of Ethics": {
           "name": "Il nostro codice etico sulla IA",
-          "overview": "Questa lezione è incentrata sul[0] video [How AI Works: Privacy and the Future of Work] tratto dalla [serie di video How AI Works](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Guarda questo video prima di esplorare il programma della lezione.\n\nIn piccoli gruppi, gli studenti conducono ricerche utilizzando articoli e video che espongono le insidie etiche in un'area di intelligenza artificiale di loro scelta. Successivamente, ogni gruppo sviluppa almeno un principio orientato alla soluzione che riguardi l'area prescelta. Questi principi vengono poi raccolti in una risorsa collettiva intitolata «Il nostro Codice etico dell'IA» (ad esempio una presentazione in slide, un documento o una pagina web) destinata ai creatori e ai legislatori dell'IA di tutto il mondo.\n\nQuesta lezione può essere insegnata singolarmente o come parte di una sequenza di 7 lezioni su Come funziona l'IA - [fai clic qui per visualizzare tutte le lezioni in questa sequenza].[2]",
+          "overview": "Questa lezione è incentrata sul video [Come funziona l'IA: privacy e futuro del lavoro](https://youtu.be/zNxw5gJtHLc?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) tratto dalla [serie di video Come funziona l'IA](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Guarda questo video prima di esplorare il piano delle lezioni.\n\nIn piccoli gruppi, gli studenti conducono ricerche utilizzando articoli e video che espongono le insidie etiche in un'area di intelligenza artificiale di loro scelta. Successivamente, ogni gruppo sviluppa almeno un principio orientato alla soluzione che riguarda l'area prescelta. Questi principi vengono poi riuniti in una risorsa «Il nostro Codice etico dell'IA» a livello di classe (ad esempio una presentazione con diapositive, un documento o una pagina web) destinata ai creatori e ai legislatori dell'IA di tutto il mondo.\n\nQuesta lezione può essere insegnata da sola o come parte di una serie di 7 lezioni su Come funziona l'IA - [clicca qui per visualizzare tutte le lezioni di questa serie](https://code.org/ai/how-ai-works).",
           "preparation": "-   Preparati a condividere online un volantino **Aree di ricerca etica sulla IA** per gruppo.\n-   Stampa o preparati a condividere online un volantino **Riflessione sulla ricerca etica della IA** per gruppo.\n-   Prepara un documento web condivisibile, una presentazione con diapositive, un modello di video o qualsiasi altra forma di supporto da utilizzare per includere la risorsa «Il nostro codice etico sull'intelligenza artificiale» della tua classe.",
-          "student_overview": "Effettua ricerche collaborative sull'etica dell'IA e crea un codice di condotta condivisibile."
+          "student_overview": "Fai una ricerca di gruppo sull'etica dell'IA e crea un codice di condotta condivisibile."
         },
         "how-ai-works-2023/How AI Works In a Day": {
           "name": "Come funziona l'IA in un giorno",
-          "overview": "⚠️ Questa lezione è destinata alle classi che vogliono mostrare l'intera serie di video [How AI Works](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) in un **solo giorno**. Non è pensata per essere insegnata in sequenza con le altre lezioni di questa unità, che presenta ogni video un giorno alla volta.\n\nGli studenti seguono ogni video abbinando il vocabolario del video, quindi rispondendo a una domanda di riflessione su ogni video. Il piano delle lezioni e le diapositive sono molto limitati e aperti per consentire l'improvvisazione e la personalizzazione in base alle esigenze della classe.",
-          "preparation": "-   Stampa la guida alle attività\n-   Proietta le diapositive su un videoproiettore"
-        },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "L'Ora del Codice 2013"
+          "overview": "⚠️ Questa lezione è destinata alle classi che desiderano mostrare l'intera [serie di video Come funziona l'IA](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) in un **solo giorno**. Non è pensata per essere insegnata in sequenza con le altre lezioni di questa unità, che introduce ogni video un giorno alla volta.\n\nGli studenti seguono ogni video associando la voce di glossario del video e poi rispondendo a una domanda su ogni video mirata alla riflessione. Il piano delle lezioni e le diapositive sono molto diradati e piuttosto aperti per consentire l'improvvisazione e la personalizzazione per adattarle alla classe.",
+          "preparation": "-   Stampa la guida alle attività\n-   Proietta le diapositive con un videoproiettore"
         },
         "applab-intro/Intro to App Lab": {
           "name": "Introduzione a Sviluppo App",
@@ -8506,9 +8610,7 @@
           "student_overview": "Riepilogo del tutorial: i primi studenti classificano gli oggetti come \"pesce\" o \"non pesce\" per tentare di rimuovere la spazzatura dall'oceano. Quindi, gli studenti dovranno espandere il loro set di dati di addestramento per includere altre creature marine che appartengono all'acqua. Nella seconda parte dell'attività, gli studenti sceglieranno le proprie etichette da applicare alle immagini di pesci generati casualmente. Questi dati di addestramento vengono utilizzati per un modello di apprendimento automatico che dovrebbe quindi essere in grado di etichettare le nuove immagini da soli."
         },
         "outbreak/Outbreak": {
-          "overview": "Questa lezione combina la **palestra delle competenze** sugli eventi con un **mini progetto** in cui gli alunni possono creare la propria simulazione al computer nel Laboratorio dei personaggi. Gli alunni studiano la simulazione per capire quanto velocemente può diffondersi un virus e cosa si può fare per rallentarlo. ",
-          "preparation": "-   Naviga attraverso gli esercizi per identificare i punti potenzialmente più critici per la tua classe.\n-   Assicurati che ogni alunno abbia un diario per le proprie riflessioni",
-          "purpose": "Nella lezione precedente, gli alunni hanno raccolto e interpretato i dati da una semplice simulazione. In questa lezione, gli alunni seguiranno le istruzioni per codificare il proprio modello di simulazione. Le precedenti conoscenze degli alunni sulle epidemie di virus nel mondo reale verranno applicate a uno scenario fittizio. ",
+          "name": "Codifica di una simulazione",
           "student_overview": "Un virus è arrivato nella Città dei Mostri! Impara a creare un simulatore di virus e aiuta i mostri a guarire."
         },
         "playlab/Play Lab": {
@@ -8544,72 +8646,6 @@
           "preparation": "-   Prova il pulsante di compressione del testo\n-   Rivedi i suggerimenti per l'insegnamento per decidere quali opzioni desideri utilizzare",
           "purpose": "Il principio basilare alla base della compressione è sviluppare un metodo o un protocollo per utilizzare un minor numero di bit per rappresentare le informazioni originali. Il modo in cui rappresentiamo i dati compressi in questa lezione, con un \"dizionario\" di modelli ripetuti è simile al [LZW compression scheme](http://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch), ma va notato che LZW è leggermente diverso da quello che fanno gli studenti in questa lezione.  Gli studenti qui inventano un loro modo. LZW viene utilizzato non solo per il testo (file zip), ma anche con il formato file immagine GIF.",
           "student_overview": "A un certo punto si raggiunge un limite fisico di quanto velocemente possiamo inviare bit, e se vogliamo inviare una grande quantità di informazioni più velocemente, dobbiamo trovare un modo per rappresentare le stesse informazioni con meno bit - dobbiamo quindi comprimere i dati. "
-        },
-        "applab-1hour/Room Escape": {
-          "name": "Escape Room"
-        },
-        "applab-2hour/Digital Design": {
-          "name": "Design Digitale"
-        },
-        "applab-2hour/Event Driven Programming": {
-          "name": "Programmazione Basata sugli Eventi"
-        },
-        "applab-2hour/Basic App Functionality": {
-          "name": "Funzionalità Essenziali dell'App"
-        },
-        "applab-2hour/Getters and Setters": {
-          "name": "Getters and Setters"
-        },
-        "frequency_analysis/Frequency Analysis": {
-          "name": "Analisi di Frequenza"
-        },
-        "gamelab/Start and End Screens": {
-          "name": "Schermate Iniziali e Finali"
-        },
-        "gamelab/Start and End Screens2": {
-          "name": "Schermate Iniziali e Finali 2"
-        },
-        "k1hoc2017/Collector Hour of Code 2017": {
-          "name": "Ora di Codice per Collezionisti 2017"
-        },
-        "netsim/Overview and Setup Instructions": {
-          "name": "Panoramica ed Istruzioni Installazione"
-        },
-        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
-          "name": "Peer to Peer - Inviare Bit su un Cavo Condiviso"
-        },
-        "netsim/Peer to Peer - Sending Numbers": {
-          "name": "Peer to Peer - Inviare Numeri"
-        },
-        "netsim/Peer to Peer - Sending Ascii": {
-          "name": "Peer to Peer - Inviare Ascii"
-        },
-        "netsim/Broadcasting messages": {
-          "name": "Broadcasting dei messaggi"
-        },
-        "netsim/Routers and addresses": {
-          "name": "Router ed indirizzi"
-        },
-        "netsim/Packets and Reliability": {
-          "name": "Pacchetti ed Affidabilità"
-        },
-        "netsim/Manual DNS": {
-          "name": "DNS Manuale"
-        },
-        "netsim/Automatic DNS node": {
-          "name": "Nodo DNS Automatico"
-        },
-        "netsim/Internet Simulator Freeplay": {
-          "name": "Simulatore Internet Freeplay"
-        },
-        "odometer/Odometer Widget": {
-          "name": "Widget contachilometri"
-        },
-        "poetry-hoc3/lesson-1": {
-          "name": "Studio dello stato d'animo"
-        },
-        "vigenere/Vigenere": {
-          "name": "Vigenere"
         },
         "allthethings/Jigsaw": {
           "name": "Puzzle"
@@ -8748,6 +8784,21 @@
         },
         "allthethings/lesson-49": {
           "name": "Musica"
+        },
+        "applab-1hour/Room Escape": {
+          "name": "Escape Room"
+        },
+        "applab-2hour/Digital Design": {
+          "name": "Design Digitale"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "Programmazione Basata sugli Eventi"
+        },
+        "applab-2hour/Basic App Functionality": {
+          "name": "Funzionalità Essenziali dell'App"
+        },
+        "applab-2hour/Getters and Setters": {
+          "name": "Getters and Setters"
         },
         "csd-post-survey/CSD post-course survey": {
           "name": "Sondaggio post-corso per studenti ('18-'19)"
@@ -9058,12 +9109,60 @@
         "deepdive-debugging/Debugging for CDEF Educators": {
           "name": "Debug per Educatori CDEF"
         },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "Analisi di Frequenza"
+        },
+        "gamelab/Start and End Screens": {
+          "name": "Schermate Iniziali e Finali"
+        },
+        "gamelab/Start and End Screens2": {
+          "name": "Schermate Iniziali e Finali 2"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "L'Ora del Codice 2013"
+        },
         "jigsaw/Jigsaw": {
           "name": "Puzzle",
           "overview": "Questa lezione darà agli alunni un'idea di cosa aspettarsi quando si recheranno nell'aula computer. Inizia con una breve discussione che li introduca alle buone norme comportamentali dell'aula computer, quindi passeranno all'utilizzo di un computer per completare gli esercizi online.",
           "preparation": "-   Consulta il sito web dii [Common Sense Education](https://www.commonsense.org/education/digital-citizenship) per ulteriori contenuti sulla sicurezza online.",
           "purpose": "L'obiettivo principale di questa lezione è introdurre gli alunni ai computer. Coprendo le funzionalità informatiche più basilari, come cliccare, trascinare e rilasciare, creiamo un campo di gioco più equo nella classe, per i rompicapi futuri. Questa lezione, inoltre, fornisce un'ottima opportunità per introdurre la terminologia sul hardware essenziale del computer, tra cui, potenzialmente, \"mouse\", \"trackpad\" o \"schermo touch\", a seconda dei dispositivi.",
           "student_overview": "Clicca e trascina per completare l'esercizio"
+        },
+        "k1hoc2017/Collector Hour of Code 2017": {
+          "name": "Ora di Codice per Collezionisti 2017"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "Panoramica ed Istruzioni Installazione"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "Peer to Peer - Inviare Bit su un Cavo Condiviso"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "Peer to Peer - Inviare Numeri"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "Peer to Peer - Inviare Ascii"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "Broadcasting dei messaggi"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Router ed indirizzi"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "Pacchetti ed Affidabilità"
+        },
+        "netsim/Manual DNS": {
+          "name": "DNS Manuale"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "Nodo DNS Automatico"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "Simulatore Internet Freeplay"
+        },
+        "odometer/Odometer Widget": {
+          "name": "Widget contachilometri"
         },
         "pixelation/Black & White Pixelation Tutorial": {
           "name": "Pixellazione Bianco e Nero Tutorial"
@@ -9079,6 +9178,22 @@
         },
         "pixelation/Color Pixelation Freeplay": {
           "name": "Colore Pixellazione Freeplay"
+        },
+        "poetry-hoc3/lesson-1": {
+          "name": "Studio dello stato d'animo"
+        },
+        "vigenere/Vigenere": {
+          "name": "Vigenere"
+        },
+        "ai-ethics-2023/lesson-2": {
+          "overview": "Gli studenti esplorano l'impatto dell'IA generativa partecipando a un gioco collaborativo. Iniziano guardando un video che presenta come funzionano i modelli linguistici di grandi dimensioni, come i chatbot, o le immagini generate da IA. Poi, gli studenti vestono i panni di una persona colpita dall'intelligenza artificiale generativa leggendo alcuni articoli e reagendo in prima persona. Quindi, gli studenti formano gruppi e ricevono uno scenario che coinvolge la loro persona e l'intelligenza artificiale generativa. Lavorando insieme, elaborano linee guida su come implementare l'IA generativa in questo scenario, che include le voci e le prospettive di tutte le parti interessate. Infine, gli studenti condividono i risultati con la classe e riflettono su questo processo.",
+          "name": "Impatto sociale dell'IA generativa"
+        },
+        "dance-ai-2023/lesson-1": {
+          "name": "Dance Party: edizione A.I.",
+          "overview": "In questa attività, gli studenti di tutte le età hanno un'esperienza introduttiva alla programmazione e all'AI in un ambiente sicuro e creativo. Questa lezione è stata progettata per studenti di tutte le età, ma richiede una lettura. Questa attività richiede agli studenti di riprodurre un suono, poiché il tutorial è stato creato per rispondere alla musica.",
+          "preparation": "### Come pianificare Hour of Code\n\nTrova le risorse necessarie per pianificare, implementare e celebrare Hour of Code nella tua scuola! [qui](https://hourofcode.com/us/how-to)",
+          "purpose": "Fare della programmazione un'esperienza emozionante e piacevole è essenziale per coltivare l'interesse per l'informatica. Questa lezione è piena di momenti di felicità, in cui gli studenti usano il codice per creare la coreografia di uno spettacolo di danza fatto di colori e movimenti utilizzando semplici blocchi di codice trascinabili. Agli studenti verrà presentato un Bot A.I. che indirizzeranno per aiutarli a trovare gli effetti perfetti in base all'atmosfera della loro danza."
         }
       }
     }

@@ -1595,6 +1595,39 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Concurso de Ortografía"
         },
+        "K5-OnlinePD/Getting Started": {
+          "name": "Primeros pasos"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Fundamentos de la informática"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "Mirar hacia Adelante"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "Dominio de los conceptos básicos: secuencias"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "Dominio de los conceptos básicos: bucles"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "Dominio de los conceptos básicos: condicionales"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "Dominio de los conceptos básicos: funciones"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "Dominio de los conceptos básicos: eventos"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "Mejores prácticas para la enseñanza de ciencias de la computación"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Planificación"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Próximos pasos"
+        },
         "csd1-2019/Intro to Problem Solving": {
           "name": "Introducción a la resolución de problemas"
         },
@@ -2281,6 +2314,45 @@
         },
         "pre-express-2019/Make a Game in Play Lab": {
           "name": "Una batalla real con eventos"
+        },
+        "k5-onlinepd-2019/Welcome to \"Teaching Computer Science Fundamentals\"": {
+          "name": "Bienvenido a \"Cómo enseñar los Fundamentos de Ciencias de la Computación\""
+        },
+        "k5-onlinepd-2019/Understanding the Computer Science Fundamentals Courses": {
+          "name": "Cursos de comprensión de los Fundamentos de Ciencias de la Computación"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Secuencias"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Bucles"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Eventos"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Condicionales"
+        },
+        "k5-onlinepd-2019/End of Course projects": {
+          "name": "Proyectos de fin de curso"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funciones"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Variables"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Bucles Para"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Laboratorio de sprites"
+        },
+        "k5-onlinepd-2019/Reviewing your reflections": {
+          "name": "Revisión de tus reflexiones"
+        },
+        "k5-onlinepd-2019/Next steps": {
+          "name": "Próximos pasos"
         },
         "coursea-2020/Safety in My Online Neighborhood": {
           "name": "Seguridad en mi Vecindario de Internet"
@@ -4674,6 +4746,39 @@
           "purpose": "En esta actividad en línea, los estudiantes aprenderán a usar eventos en Play Lab. Empezarán entrenando al\ncaballero para que se mueva cuando una flecha sea presionada y, finalmente, tendrán la oportunidad de mostrar el resto de las habilidades que han adquirido a lo largo de este curso, incluidas el uso de secuencias y bucles, como parte de un desafío libre.",
           "student_overview": "Usa los eventos para crear una historia o un juego interactivo."
         },
+        "kodea-pd-2021/Getting Started": {
+          "name": "Primeros pasos"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Fundamentos de la informática"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "Mirar hacia Adelante"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "Dominio de los conceptos básicos: secuencias"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "Dominio de los conceptos básicos: bucles"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "Dominio de los conceptos básicos: condicionales"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "Dominio de los conceptos básicos: funciones"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "Dominio de los conceptos básicos: eventos"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "Mejores prácticas para la enseñanza de ciencias de la computación"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Planificación"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Próximos pasos"
+        },
         "csd1-2022/Intro to Problem Solving": {
           "name": "Introducción a la resolución de problemas",
           "assessment_opportunities": "1.  **Comunicarse y colaborar con los compañeros de clase para resolver un problema**.\n\nEn la pregunta del debate final sobre la colaboración, comprueba las ventajas de la colaboración en la resolución de problemas así como las estrategias adecuadas para superar los retos. Esta práctica se reforzará a lo largo de la unidad y del curso.\n\n2.  **Mejorar de forma iterativa la solución de un problema**\n\n    En la Guía de Actividad, comprobar los puntos fuertes y débiles del diseño original de los alumnos y la conexión con los cambios apropiados para la siguiente iteración del proyecto.\n3.  **Identificar las diferentes estrategias utilizadas para resolver un problema**\n\n    En la Guía de Actividad, comprueba las estrategias para superar los retos de la actividad.  También puedes comprobar los \"puntos fuertes\" de sus diseños, que los alumnos enumeran como parte del desarrollo de su plan en la segunda página de la guía.",
@@ -6667,7 +6772,8 @@
         },
         "ai-ethics-2023/lesson-1": {
           "name": "Nuestro Código Ético de la Inteligencia Artificial",
-          "student_overview": "Investiga de manera colaborativa sobre la ética de la IA y crea un código de conducta que se pueda compartir."
+          "student_overview": "Investiga colaborativamente acerca de la ética de la IA y crea un código de conducta que se pueda compartir.",
+          "overview": "Esta lección se basa en actividades previas relacionadas con la investigación y la búsqueda de fuentes para justificar un argumento. En grupos pequeños, los estudiantes realizan investigaciones utilizando artículos y vídeos que exponen las dificultades éticas en un área de inteligencia artificial (IA) de su elección. Después, los estudiantes pueden elegir formas de sintetizar lo que han aprendido para hacer recomendaciones sobre cómo utilizar la IA en la sociedad: crear un código de ética de la IA, crear un manifiesto sobre la IA o diseñar una representación artística con el lema «Imagina tu mundo»."
         },
         "csc-adaptations-2023/Modeling Animal Adaptations (pilot)": {
           "name": "Introducción a las adaptaciones animales",
@@ -6711,21 +6817,21 @@
           "student_overview": "En esta lección final, vas a compartir tu Portada de libro con tus compañeros de clase. Tendrás la oportunidad de mostrar tu trabajo y poner a prueba los proyectos de tus compañeros de clase. Al final de la clase, tendrás una discusión sobre qué elecciones tomaron tus compañeros de clase en sus portadas de libros."
         },
         "csc-ecosystems-2023/Overfishing Simulation (pilot)": {
-          "name": "Simulación de sobrepesca",
-          "overview": "En esta lección de **desarrollo de estudios**, los estudiantes programarán un modelo de ecosistema acuático y luego simularán una situación de sobrepesca. Los alumnos aprenderán a programar declaraciones condicionales para verificar la cantidad de algas en el agua. Si hay demasiadas algas, el coral se enferma. Si hay muy pocas algas, los peces no tienen fuente de alimento y salen de la zona. Si hay la cantidad justa de algas, el coral enfermo sanará y los peces se quedarán en la zona. ",
+          "name": "Simulación de Sobrepesca",
+          "overview": "En esta lección de **desarrollo de habilidades**, los estudiantes programarán un modelo de ecosistema acuático y luego simularán una situación de sobrepesca. Los alumnos aprenderán a programar sentencias condicionales para verificar la cantidad de algas en el agua. Si hay demasiadas algas, el coral se enferma. Si hay muy pocas algas, los peces no tienen fuente de alimento y salen de la zona. Si hay la cantidad justa de algas, el coral enfermo sanará y los peces se quedarán en la zona. ",
           "preparation": "-   Juega a través de los niveles y revise las <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">láminas de la lección</a>. \n-   Decida el ritmo entre el tiempo de trabajo de los estudiantes y la instrucción en grupo entero.\n-   Considere la posibilidad de asignar a los alumnos la preparación recomendada \n    ([link](https://studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4911962))\n-   Considere estas opciones de extensiones relacionadas ([link](https://studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4911963)) para explorar después de la última lección.\n\n##### Opcional:\n\n-   [Opcional] Revise esta presentación de diapositivas <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">Consejos útiles</a>. \n-   Opcional] Revisa esta <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">guía del profesor sobre depuración</a> para estar preparado para ayudar a los alumnos a encontrar y corregir errores en su código.",
-          "purpose": "Los estudiantes aprenderán que los ecosistemas marinos tienen muchos organismos que interactúan y se mantienen en equilibrio entre sí. Esta lección combina la informática con las ciencias de la vida a medida que los estudiantes crean un modelo que simula los efectos de la sobrepesca utilizando declaraciones condicionales en ciencias de la computación para mostrar causa y efecto en la vida real. "
+          "purpose": "Los estudiantes aprenderán que los ecosistemas marinos tienen muchos organismos que interactúan y se mantienen en equilibrio entre sí. Esta lección combina la informática con las ciencias de la vida a medida que los estudiantes crean un modelo que simula los efectos de la sobrepesca utilizando sentencias condicionales en ciencias de la computación para mostrar causa y efecto en la vida real. "
         },
         "csc-ecosystems-2023/Balancing the Ecosystem (pilot)": {
-          "name": "Equilibrar el ecosistema",
-          "overview": "En esta lección de **desarrollo de estudios**, los estudiantes leerán y luego programarán tres soluciones diferentes al problema de la sobrepesca.\n\nEsta lección comienza donde la lección anterior la dejó, con el modelo de un ecosistema acuático desequilibrado. En primer lugar, los alumnos modificarán el comportamiento de la embarcación para que ésta sólo pueda desplazarse dentro de una “zona de pesca” especificada. Segundo, los estudiantes programarán un nuevo evento para especificar una “temporada de pesca” y una “temporada de no pesca”. Tercero, los alumnos aprenderán a usar una variable para hacer un seguimiento del número de peces que el barco ha eliminado. La lección termina con un nivel Check For Understanding para asegurarse de que los estudiantes aprendieron las tres soluciones para la sobrepesca.",
-          "preparation": "-   Lea el artículo proporcionado sobre <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\" target=\"_blank\">Comprensión de la sobrepesca</a>. Andamio según sea necesario para satisfacer las necesidades de tus alumnos. \n-   Juega a través de los niveles y revisa las diapositivas de la <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">lección</a> \n-   Decide el ritmo entre el tiempo de trabajo del estudiante y la instrucción de grupo completo.\n-   Considerar asignar a los alumnos la preparación recomendada [(link)](https://studio.code.org/s/csc-ecosystems-2023/lessons/2#activity-4986903).\n-   Considere estas opciones de extensiones relacionadas [(link)](https://studio.code.org/s/csc-ecosystems-2023/lessons/2#activity-4986904).\n\n##### Opcional:\n\n-   [Optional] Revisa esta presentación de diapositivas de sugerencias <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\"></a>  útiles. \n-   [Optional] Revisa esta guía del <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">profesor sobre depuración para estar preparado</a>  para ayudar a los alumnos a encontrar y corregir errores en su código. ",
+          "name": "Equilibrando el Ecosistema",
+          "overview": "En esta lección de **desarrollo de competencias**, los estudiantes leerán y luego programarán tres soluciones diferentes al problema de la sobrepesca.\n\nEsta lección comienza donde terminó la anterior, con el modelo de un ecosistema acuático desequilibrado. En primer lugar, los alumnos modificarán el comportamiento del barco para que sólo pueda moverse dentro de una \"zona de pesca\" especificada. Segundo, los estudiantes programarán un nuevo evento para especificar una “temporada de pesca” y una “temporada de no pesca”. Tercero, los alumnos aprenderán a usar una variable para hacer un seguimiento del número de peces que el barco ha eliminado. La lección termina con un nivel Comprueba la Comprensión para asegurarse de que los estudiantes aprendieron las tres soluciones para la sobrepesca.",
+          "preparation": "-   Lea el artículo proporcionado sobre <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\" target=\"_blank\">Comprensión de la sobrepesca</a>. Andamio según sea necesario para satisfacer las necesidades de tus alumnos. \n-   Juega a través de los niveles y revisa las diapositivas de la <a href=\"https://docs.google.com/presentation/d/1VahcbHciDmb_KMEfLavzO3-t3Ukxyn6djZQfVZCPwGU/view\" target=\"_blank\">lección</a> \n-   Decide el ritmo entre el tiempo de trabajo del estudiante y la instrucción de grupo completo.\n-   Considerar asignar a los alumnos la preparación recomendada [(link)](https://studio.code.org/s/csc-ecosystems-2023/lessons/2#activity-4986903).\n-   Considere estas opciones de extensiones relacionadas [(link)](https://studio.code.org/s/csc-ecosystems-2023/lessons/2#activity-4986904).\n\n##### Opcional:\n\n-   [Optional] Revisa esta presentación de diapositivas de  <a href=\"https://docs.google.com/presentation/d/1HDw4VMDIBEfzmSlWM73BffOnnZvSjp4_tTVs3_xwvm0/view\" target=\"_blank\">sugerencias útiles</a>  . \n-   [Optional] Revisa esta guía del <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">profesor sobre depuración para estar preparado</a>  para ayudar a los alumnos a encontrar y corregir errores en su código. ",
           "purpose": "Los estudiantes continuarán aprendiendo sobre ecosistemas equilibrados y desequilibrados. Utilizando un artículo científico sobre la sobrepesca como base, los estudiantes desarrollarán una rica comprensión de las conexiones entre organismos en un ecosistema. En última instancia, los estudiantes tendrán la oportunidad de aplicar lo aprendido modelando un ecosistema local. "
         },
         "csc-ecosystems-2023/lesson-3": {
-          "name": "Codificar mi ecosistema",
-          "overview": "En esta lección de **desarrollo de estudios**, los estudiantes explorarán varias simulaciones de ecosistemas diferentes. Los estudiantes pueden optar por explorar un ecosistema de selva tropical, desierto, ártico o humedales. Asumirán el papel de ecologista e investigarán las interacciones entre las plantas y los animales en la cadena alimentaria de cada ecosistema. Los alumnos leerán las instrucciones para entender el reto que enfrenta cada ecosistema. Después modificarán el código correspondiente a fin de reequilibrar el ecosistema. ",
-          "preparation": "-   Juega a través de los niveles y revisa las diapositivas de la <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">lección</a> \n-   Decide el ritmo entre el tiempo de trabajo del estudiante y la instrucción de grupo completo.\n-   Imprimir un Cuaderno de Ecologista para cada alumno\n-   Considere estas [oportunidades de extensión](https://studio.code.org/s/csc-ecosystems-2023/lessons/3#activity-4852074) después de esta lección"
+          "name": "Codificar Mi Ecosistema",
+          "overview": "En esta lección de **desarrollo de competencias**, los estudiantes explorarán varias simulaciones de ecosistemas diferentes. Los estudiantes pueden optar por explorar un ecosistema de selva tropical, desierto, ártico o humedales. Asumirán el papel de ecologista e investigarán las interacciones entre las plantas y los animales en la cadena alimentaria de cada ecosistema. Los alumnos leerán las instrucciones para entender el reto que enfrenta cada ecosistema. Después modificarán el código correspondiente a fin de reequilibrar el ecosistema. ",
+          "preparation": "-   Juega a través de los niveles y revisa las diapositivas de la <a href=\"https://docs.google.com/presentation/d/1VahcbHciDmb_KMEfLavzO3-t3Ukxyn6djZQfVZCPwGU/view\" target=\"_blank\">lección</a> \n-   Decide el ritmo entre el tiempo de trabajo del estudiante y la instrucción de grupo completo.\n-   Imprimir un Cuaderno de Ecologista para cada alumno\n-   Considere estas [oportunidades de extensión](https://studio.code.org/s/csc-ecosystems-2023/lessons/3#activity-4852074) después de esta lección"
         },
         "csc-mappinglandmarks-2023/US Landmarks": {
           "name": "Introducción al Mapmaking",
@@ -8459,41 +8565,38 @@
         },
         "how-ai-works-2023/Neural Networks": {
           "name": "Redes Neuronales",
-          "overview": "Esta lección se centra en el[0] video [Cómo funciona la IA: redes neuronales] de la serie de videos [Cómo funciona la IA](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Mire este video primero antes de explorar el plan de lecciones.\n\nLos estudiantes aprenden cómo funcionan las redes neuronales. Primero discuten un ejemplo de una experiencia que te recomienda cosas. Luego usan un widget que recomienda videos basados en una sola persona. Los estudiantes ven un video explicando las redes neuronales. Utilizan un widget actualizado para ajustar los pesos de cada persona. Finalmente, los estudiantes discuten la necesidad de diversas perspectivas a la hora de crear sistemas de recomendación.\n\nEsta lección se puede enseñar por sí sola, o como parte de una secuencia de 7 lecciones sobre Cómo funciona la IA - [haz clic aquí para ver todas las lecciones de esta secuencia](https://code.org/ai/how-ai-works).",
-          "preparation": "-   Imprimir copias del recurso Creadores de contenido de WetUBE para cada alumno\n-   Imprimir copias de la guía de actividades de la Red Neural para cada alumno",
+          "overview": "Esta lección se centra en el vídeo [Cómo funciona la IA: Redes neuronales](https://youtu.be/JrXazCEACVo?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) de la serie [Cómo funciona la IA](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Vea este vídeo antes de explorar el plan de la lección.\n\nLos estudiantes aprenderán cómo funcionan las redes neuronales. Primero analizarán un ejemplo de una experiencia que recomienda cosas. A continuación, utilizan un widget que recomienda vídeos basándose en una persona. Los estudiantes ven un vídeo en el que se explican las redes neuronales. Utilizan un widget actualizado para ajustar los pesos de cada persona. Por último, los estudiantes conversan sobre la necesidad de contar con diversas perspectivas a la hora de crear sistemas de recomendación.\n\nEsta lección puede impartirse por sí sola o como parte de una serie de 7 lecciones sobre el funcionamiento de la inteligencia artificial. [haga clic aquí para ver todas las lecciones de esta serie](https://code.org/ai/how-ai-works).",
+          "preparation": "-   Imprima copias del recurso Creadores de contenido de WetUBE para cada estudiante.\n-   Imprima copias de la guía de actividades de la Red Neural para cada estudiante.",
           "student_overview": "Aprenda cómo funcionan las redes neuronales ajustando los pesos de un sistema de recomendación para ajustar las salidas."
         },
         "how-ai-works-2023/Chatbots and Large Language Models (LLMs)": {
-          "name": "Chatbots y modelos de lenguaje grande (LLM)",
-          "overview": "Esta lección se centra en el video [Cómo funciona la IA: Chatbots y modelos de lenguaje grande] de la serie de[0] videos [Cómo funciona la IA](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Mire este video primero antes de explorar el plan de lecciones.\n\nLos Modelos de Lenguaje Grande (LLM) generan nuevo texto. El texto LLM genera parece que un humano podría haberlo escrito porque los grandes modelos de lenguaje se construyen a partir de grandes cuerpos de texto, como Wikipedia. En esta lección, los estudiantes aprenden qué es un LLM y cómo funciona, luego usan un LLM para co-crear un texto con IA. Finalmente, la clase concluye con una discusión sobre si los LLM son o no inteligentes o creativos.\n\nEsta lección se puede enseñar por sí sola, o como parte de una secuencia de 7 lecciones sobre Cómo funciona la IA - [haz clic aquí para ver todas las lecciones de esta secuencia](https://code.org/ai/how-ai-works).",
-          "preparation": "-   Imprimir copias de la guía de actividades para cada alumno",
-          "student_overview": "¿Los Modelos de Lenguaje Grande (LLM) son inteligentes o creativos? Decide por ti mismo mientras trabajas con ellos para crear algo, ¡y aprende más sobre cómo funcionan!"
+          "name": "Chatbots y Grandes Modelos de Lenguaje (LLM)",
+          "overview": "Esta lección se centra en el video [Cómo funciona la IA: Chatbots y Grandes modelos de lenguaje] de la serie de[0] videos [Cómo funciona la IA](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Vea este video primero antes de explorar el plan de lecciones.\n\nLos Grandes Modelos de Lenguaje (LLM) generan nuevo texto.El texto que generan los LLM tiene el aspecto de haber sido escrito por un ser humano, ya que los grandes modelos lingüísticos se construyen a partir de grandes volúmenes de texto, como Wikipedia. En esta lección, los estudiantes aprenderán qué es un LLM y cómo funciona, y después utilizarán un LLM para crear un texto junto con la IA. Por último, la clase concluye con un debate sobre si los LLM son inteligentes o creativos.\n\nEsta lección se puede enseñar por sí sola, o como parte de una secuencia de 7 lecciones acerca de Cómo funciona la IA - [haga clic aquí para ver todas las lecciones de esta secuencia](https://code.org/ai/how-ai-works).",
+          "preparation": "-   Imprima copias de la guía de actividades para cada estudiante.",
+          "student_overview": "¿Crees que los Grandes Modelos de Lenguaje (LLM) son inteligentes o creativos? Considera esta pregunta mientras trabajas con ellos para crear algo. ¡En esta actividad aprenderás como funcionan!"
         },
         "how-ai-works-2023/Generative Images": {
           "name": "Imágenes Generativas",
-          "overview": "Esta lección se centra en el [¿Cómo funciona la IA: creatividad e imaginación?](https://www.youtube.com/watch?v=X994dDnmRmY) video de la serie de videos [Cómo funciona la IA](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Mire este video primero antes de explorar el plan de lecciones.\n\nLos modelos de difusión generan imágenes. La IA de difusión convierte una imagen en ruido y entrena una IA para revertir el proceso. En esta lección, los estudiantes aprenden cómo la IA puede generar imágenes y luego explorar un widget de IA de difusión. Por último, la clase concluye con una discusión sobre si estos modelos son creativos o no.\n\nEsta lección se puede enseñar por sí sola, o como parte de una secuencia de 7 lecciones sobre Cómo funciona la IA - [haz clic aquí para ver todas las lecciones de esta secuencia](https://code.org/ai/how-ai-works).",
-          "preparation": "-   Imprimir copias de la guía de actividades para cada alumno",
+          "overview": "Esta lección se centra en el vídeo [Cómo funciona la inteligencia artificial: creatividad e imaginación](https://www.youtube.com/watch?v=X994dDnmRmY) de la serie [Cómo funciona la inteligencia artificial](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Vea primero este vídeo antes de explorar el plan de la lección.\n\nLos modelos de difusión generan imágenes. La IA de difusión convierte una imagen en ruido y entrena a una IA para invertir el proceso. En esta lección, los estudiantes aprenden cómo la IA puede generar imágenes y, a continuación, exploran un widget de difusión de IA . La clase concluye con un debate sobre si estos modelos son creativos o no.\n\nEsta lección puede impartirse por sí sola o como parte de una secuencia de 7 lecciones acerca de Cómo funciona la IA - [haga clic aquí para ver todas las lecciones de esta secuencia](https://code.org/ai/how-ai-works).",
+          "preparation": "-   Imprima copias de la guía de actividades para cada estudiante.",
           "student_overview": "Aprenda cómo la IA puede generar imágenes explorando un widget de IA de difusión."
         },
         "how-ai-works-2023/Algorithmic Bias": {
           "name": "Sesgo algorítmico",
-          "overview": "Esta lección se centra en el video [Cómo funciona la IA: acceso equitativo y sesgo algorítmico] de la serie de[0] videos [Cómo funciona la IA].[1]Mire este video primero antes de explorar el plan de lecciones.\n\nEn esta lección, los estudiantes practicarán el recorte de imágenes para descubrir el sesgo subyacente al algoritmo de recorte de Twitter. Después, los alumnos leerán y verán un video sobre el descubrimiento de este algoritmo sesgado. Por último, los estudiantes discutirán formas de reconocer y reducir el sesgo junto con analizar la respuesta de Twitter a las acusaciones de sesgo en su algoritmo de cultivo.\n\nEsta lección se puede enseñar por sí sola, o como parte de una secuencia de 7 lecciones sobre Cómo funciona la IA - [haz clic aquí para ver todas las lecciones de esta secuencia](https://code.org/ai/how-ai-works).",
-          "preparation": "-   Completa la actividad del widget de recorte tú mismo para que puedas ver lo que tus alumnos experimentarán con el widget y qué preguntas o temas pueden plantear.\n-   Mira las partes del video [“¿Estamos automatizando el racismo?”](https://youtu.be/Ok5sKLXqynQ) referenciado en el plan de lección.\n-   Lee los dos artículos de la sección de enlaces a continuación.",
+          "overview": "Esta lección se centra en el video [Cómo funciona la IA: acceso equitativo y sesgo algorítmico] de la serie de[0] videos [Cómo funciona la IA].[1]Mire este video primero antes de explorar el plan de lecciones.\n\nEn esta lección, los estudiantes practicarán el recorte de imágenes para descubrir el sesgo subyacente al algoritmo de recorte de Twitter. Después, leerán y verán un video acerca del descubrimiento de este algoritmo sesgado. Por último, los estudiantes conversarán acerca de formas de reconocer y reducir el sesgo junto con analizar la respuesta de Twitter a las acusaciones de sesgo en su algoritmo para recorte.\n\nEsta lección se puede enseñar por sí sola, o como parte de una secuencia de 7 lecciones sobre Cómo funciona la IA - [haga clic aquí para ver todas las lecciones de esta secuencia](https://code.org/ai/how-ai-works).",
+          "preparation": "-   Complete la actividad del widget de recorte para que puedas experimentar lo que sus estudiantes experimentarán con el widget y qué preguntas o temas podrían plantear.\n-   Vea las partes del video [“¿Estamos automatizando el racismo?”](https://youtu.be/Ok5sKLXqynQ) referenciado en el plan de lección.\n-   Lea los dos artículos de la sección de enlaces a continuación.",
           "student_overview": "En esta lección, trabajarás en recortar imágenes y discutirás los desafíos y sesgos que implica enseñar a una máquina cómo recortar una imagen."
         },
         "how-ai-works-2023/Our AI Code of Ethics": {
           "name": "Nuestro Código Ético de la Inteligencia Artificial",
-          "overview": "Esta lección se centra en el[0] video [Cómo funciona la IA: privacidad y el futuro del trabajo] de la serie de videos [Cómo funciona la IA](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Mire este video primero antes de explorar el plan de lecciones.\n\nEn grupos pequeños, los estudiantes realizan investigaciones utilizando artículos y videos que exponen trampas éticas en un área de inteligencia artificial de su elección. Posteriormente, cada grupo desarrolla al menos un principio orientado a la solución que aborda su área elegida. Estos principios se ensamblan luego en un recurso de clase “Nuestro Código de Ética de la IA” (por ejemplo, una presentación de diapositivas, documento o página web) para creadores y legisladores de IA en todas partes.\n\nEsta lección se puede enseñar por sí sola, o como parte de una secuencia de 7 lecciones sobre Cómo funciona la IA - [haz clic aquí para ver todas las lecciones de esta secuencia](https://code.org/ai/how-ai-works).",
+          "overview": "Esta lección se centra en el[0] video [Cómo funciona la IA: privacidad y el futuro del trabajo] de la serie de videos [Cómo funciona la IA](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Mire este video antes de explorar el plan de lecciones.\n\nEn pequeños grupos, los estudiantes realizan una investigación utilizando artículos y vídeos que exponen los escollos éticos en un área de inteligencia artificial de su elección. Luego, cada grupo desarrolla al menos un principio orientado a la solución que aborde el área que ha elegido. Estos principios se reúnen en un \"Código ético de nuestra IA\" para toda la clase, como por ejemplo, una presentación de diapositivas, un documento o una página web, destinado a los creadores y legisladores de IA de todo el mundo.\n\nEsta lección se puede enseñar por sí sola, o como parte de una secuencia de 7 lecciones sobre Cómo funciona la IA - [haga clic aquí para ver todas las lecciones de esta secuencia](https://code.org/ai/how-ai-works).",
           "preparation": "-   Prepárese para compartir en línea y con cada grupo la guía **Áreas de investigación de la Inteligencia Artificial**. \n-   Imprima o prepárese para compartir en línea y con cada grupo la guía **Reflexión de investigación de la Inteligencia Artificial**.\n-   Prepare un documento que pueda compartir con los estudiantes en línea, como, por ejemplo, una presentación, una plantilla de video, u otro tipo de recurso que pueda ayudar a los estudiantes a elaborar el recurso “Nuestro código de ética de la Inteligencia artificial”.",
-          "student_overview": "Investiga de manera colaborativa sobre la ética de la IA y crea un código de conducta que se pueda compartir."
+          "student_overview": "Investiga colaborativamente acerca de la ética de la IA y crea un código de conducta que se pueda compartir."
         },
         "how-ai-works-2023/How AI Works In a Day": {
           "name": "Cómo funciona la IA en un día",
-          "overview": "⚠️ Esta lección está pensada para aulas que quieran mostrar toda la [serie de videos Cómo funciona la IA](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) en un **solo día**. No se pretende que se imparten en secuencia con las demás lecciones de esta unidad, que introduce cada video un día a la vez.\n\nLos estudiantes siguen cada video haciendo coincidir el vocabulario del video, luego respondiendo una pregunta de reflexión sobre cada video. El plan de lección y las diapositivas son muy escasas y abiertas para permitir la improvisación y la personalización para adaptarse a su salón de clases.",
-          "preparation": "-   Imprime la guía de actividades\n-   Proyecta las diapositivas en un proyector de video"
-        },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "La hora del código 2013"
+          "overview": "⚠️ Esta lección está pensada para aulas que quieran mostrar toda la [serie de videos Cómo funciona la IA](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) en un **solo día**. Los videos no están pensados  para mostrarse uno cada día como en otras lecciones. \n\nLos estudiantes ven cada video, aprenden del vocabulario presentado en este, y luego responden a una pregunta de reflexión sobre cada video. El plan de lección y las diapositivas son muy abiertos y no permiten la improvisación ni la personalización para adaptarse a cualquier clase. ",
+          "preparation": "-   Imprima la guía de actividades\n-   Proyecte las diapositivas en un proyector"
         },
         "applab-intro/Intro to App Lab": {
           "name": "Introducción al Laboratorio de aplicaciones",
@@ -8671,9 +8774,10 @@
           "student_overview": "Resumen de la tutoría: En primer lugar, los alumnos clasifican los objetos como \"peces\" o \"no peces\" para intentar eliminar la basura del océano. A continuación, los alumnos deberán ampliar su conjunto de datos de entrenamiento para incluir otras criaturas marinas que pertenecen al agua. En la segunda parte de la actividad, los alumnos elegirán sus propias etiquetas para aplicarlas a imágenes de peces generadas al azar. Estos datos de entrenamiento se utilizan para un modelo de aprendizaje automático que luego debería ser capaz de etiquetar nuevas imágenes por sí mismo."
         },
         "outbreak/Outbreak": {
+          "name": "Como programar una simulación",
           "overview": "En esta lección, los alumnos crearán un simulador de brote epidémico utilizando sucesos. Los alumnos estudiarán la simulación para comprender la rapidez con la que puede propagarse un virus y lo que se puede hacer para frenar el contagio. ",
-          "preparation": "-  Juega con los rompecabezas para encontrar cualquier área potencialmente problemática para tu clase.\n-  Asegúrate de que cada estudiante tenga un diario de reflexión.",
-          "purpose": "En la lección anterior, los alumnos recopilaron e interpretaron los datos de una simulación sencilla.  En esta lección, los alumnos seguirán las instrucciones para codificar su propio modelo de simulación. Los conocimientos previos de los alumnos sobre los brotes de virus en el mundo real se aplicarán a un escenario ficticio. ",
+          "preparation": "Una semana antes de la Hora del Código\n\n-   Revisa la [Guía del Educador de la Hora del Código](https://hourofcode.com/us/how-to) y las [Mejores Prácticas de Educadores Exitosos](https://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) para comenzar a planear tu evento de la Hora del Código.\n\n-   Registra tu evento de La Hora del Código][2] si quieres obtener apoyo en el aula, carteles con descuento o participar en el sorteo de robótica (sólo en EE.UU.).\n\n-   Revisa y completa tú mismo el tutorial en línea: [Outbreak](https://studio.code.org/s/outbreak/)\n\n-   Asegúrate de probarlo antes de pedir a tus alumnos que lo completen. \n\n-   Comprueba tu tecnología y decide si necesitas solucionar algún problema antes de la Hora del Código.\n\n#### Un día antes de la Hora del Código\n\n-   Cada estudiante que complete la actividad debe recibir un [certificado](https://studio.code.org/certificates/batch). Imprime uno para cada alumno con antelación para facilitar la entrega al final de la Hora del Código.\n\n-   (opcional) Anima a los alumnos a traer auriculares para usarlos durante la actividad.",
+          "purpose": "En esta lección, los alumnos seguirán las instrucciones para codificar su propio modelo de simulación. Los conocimientos previos de los alumnos sobre los brotes de virus en el mundo real se aplicarán a un escenario ficticio. ",
           "student_overview": "¡Un virus ha llegado a Monster Town! Aprende a crear un simulador de virus y ayuda a los monstruos a volver a estar sanos."
         },
         "playlab/Play Lab": {
@@ -8716,72 +8820,6 @@
           "preparation": "-   Prueba el Widget de Compresión de Texto\n-   Revisa los consejos de enseñanza para decidir qué opciones quieres utilizar",
           "purpose": "El principio básico de la compresión es desarrollar un método o protocolo que permita utilizar menos bits para representar la información original. La forma en que representamos los datos comprimidos en esta lección, con un \"diccionario\" de patrones repetidos, es similar al [esquema de compresión LZW](http://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch), pero hay que tener en cuenta que LZW es ligeramente diferente de lo que los alumnos hacen en esta lección.  Aquí los alumnos inventan su propio camino.  LZW se utiliza no sólo para el texto (archivos zip), sino también con el formato de archivo de imagen GIF.",
           "student_overview": "En algún momento llegamos a un límite físico de la velocidad a la que podemos enviar los bits y si queremos enviar una gran cantidad de información más rápido, tenemos que encontrar una manera de representar la misma información con menos bits: debemos comprimir los datos.  "
-        },
-        "applab-1hour/Room Escape": {
-          "name": "Sala de escape"
-        },
-        "applab-2hour/Digital Design": {
-          "name": "Diseño digital"
-        },
-        "applab-2hour/Event Driven Programming": {
-          "name": "Programación orientada por eventos"
-        },
-        "applab-2hour/Basic App Functionality": {
-          "name": "Funcionalidad básica de la aplicación"
-        },
-        "applab-2hour/Getters and Setters": {
-          "name": "Getters y setters"
-        },
-        "frequency_analysis/Frequency Analysis": {
-          "name": "Análisis de frecuencia"
-        },
-        "gamelab/Start and End Screens": {
-          "name": "Pantallas de inicio y fin"
-        },
-        "gamelab/Start and End Screens2": {
-          "name": "Pantallas de inicio y fin2"
-        },
-        "k1hoc2017/Collector Hour of Code 2017": {
-          "name": "Hora del Código de la Recolectora 2017"
-        },
-        "netsim/Overview and Setup Instructions": {
-          "name": "Instrucciones generales y de configuración"
-        },
-        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
-          "name": "Red de compañeros - Envío de bits en un cable compartido"
-        },
-        "netsim/Peer to Peer - Sending Numbers": {
-          "name": "Red de compañeros - Envío de números"
-        },
-        "netsim/Peer to Peer - Sending Ascii": {
-          "name": "Red de compañeros - Envío de Ascii"
-        },
-        "netsim/Broadcasting messages": {
-          "name": "Difusión de mensajes"
-        },
-        "netsim/Routers and addresses": {
-          "name": "Enrutadores y direcciones"
-        },
-        "netsim/Packets and Reliability": {
-          "name": "Paquetes y confiabilidad"
-        },
-        "netsim/Manual DNS": {
-          "name": "DNS manual"
-        },
-        "netsim/Automatic DNS node": {
-          "name": "Nodo DNS automático"
-        },
-        "netsim/Internet Simulator Freeplay": {
-          "name": "Juego libre de simulador de Internet"
-        },
-        "odometer/Odometer Widget": {
-          "name": "Widget de cuentakilómetros"
-        },
-        "poetry-hoc3/lesson-1": {
-          "name": "Estudio de Humor"
-        },
-        "vigenere/Vigenere": {
-          "name": "Vigenere"
         },
         "allthethings/Jigsaw": {
           "name": "Rompecabezas"
@@ -8920,6 +8958,21 @@
         },
         "allthethings/lesson-49": {
           "name": "Música"
+        },
+        "applab-1hour/Room Escape": {
+          "name": "Sala de escape"
+        },
+        "applab-2hour/Digital Design": {
+          "name": "Diseño digital"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "Programación orientada por eventos"
+        },
+        "applab-2hour/Basic App Functionality": {
+          "name": "Funcionalidad básica de la aplicación"
+        },
+        "applab-2hour/Getters and Setters": {
+          "name": "Getters y setters"
         },
         "csd-post-survey/CSD post-course survey": {
           "name": "Encuesta de fin de curso para estudiantes de CSD ('18-'19)"
@@ -9230,12 +9283,60 @@
         "deepdive-debugging/Debugging for CDEF Educators": {
           "name": "Depuración para educadores de CDEF"
         },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "Análisis de frecuencia"
+        },
+        "gamelab/Start and End Screens": {
+          "name": "Pantallas de inicio y fin"
+        },
+        "gamelab/Start and End Screens2": {
+          "name": "Pantallas de inicio y fin2"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "La hora del código 2013"
+        },
         "jigsaw/Jigsaw": {
           "name": "Rompecabezas",
           "overview": "Esta lección dará a los estudiantes una idea de qué esperar cuando se dirigen al laboratorio de computación. Comienza con un breve debate sobre los modales en un laboratorio de computación y continúa con el uso de una computadora para completar desafíos en línea.",
           "preparation": "-   Consulta el sitio web de [Common Sense Education](https://www.commonsense.org/education/digital-citizenship) para ver más contenidos sobre seguridad en línea.",
           "purpose": "El objetivo principal de esta lección es que los alumnos adquieran experiencia con los ordenadores. Al cubrir las funciones informáticas más básicas, como hacer clic, arrastrar y soltar, estamos creando un campo de juego más igualitario en la clase para futuros rompecabezas. Esta lección también ofrece una gran oportunidad para introducir la terminología básica del hardware del ordenador, incluyendo potencialmente \"ratón\", \"trackpad\" o \"pantalla táctil\", dependiendo de sus dispositivos.",
           "student_overview": "Haz clic y arrastra para terminar los desafíos."
+        },
+        "k1hoc2017/Collector Hour of Code 2017": {
+          "name": "Hora del Código de la Recolectora 2017"
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "Instrucciones generales y de configuración"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "Red de compañeros - Envío de bits en un cable compartido"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "Red de compañeros - Envío de números"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "Red de compañeros - Envío de Ascii"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "Difusión de mensajes"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Enrutadores y direcciones"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "Paquetes y confiabilidad"
+        },
+        "netsim/Manual DNS": {
+          "name": "DNS manual"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "Nodo DNS automático"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "Juego libre de simulador de Internet"
+        },
+        "odometer/Odometer Widget": {
+          "name": "Widget de cuentakilómetros"
         },
         "pixelation/Black & White Pixelation Tutorial": {
           "name": "Tutorial de pixelación en blanco y negro"
@@ -9251,6 +9352,22 @@
         },
         "pixelation/Color Pixelation Freeplay": {
           "name": "Juego libre de pixelación en color"
+        },
+        "poetry-hoc3/lesson-1": {
+          "name": "Estudio de Humor"
+        },
+        "vigenere/Vigenere": {
+          "name": "Vigenere"
+        },
+        "dance-ai-2023/lesson-1": {
+          "name": "Fiesta de Baile: Edición IA",
+          "overview": "En esta actividad, los estudiantes de todas las edades tendrán una primera experiencia con la programación y la inteligencia artificial en un entorno seguro y creativo. Esta lección ha sido creada para estudiantes de todas las edades, pero es importante saber leer. Además, esta actividad requiere que los estudiantes reproduzcan sonidos, ya que el tutorial fue diseñado para responder a la música.",
+          "preparation": "### Cómo Planificar Tu Hora del Código\n\n¡Encuentra los recursos que necesitas para planificar, implementar y celebrar la Hora del Código en tu escuela! [here](https://hourofcode.com/us/how-to)",
+          "purpose": "Hacer que la programación sea una experiencia emocionante y divertida es esencial para cultivar el interés en las ciencias de la computación. Esta lección está llena de momentos alegres, donde los estudiantes utilizan código para coreografiar una fiesta de baile llena de color y efectos visuales. Los estudiantes conocerán a A.I. el Robot de Inteligencia Artificial al que dirigirán para generar efectos que coincidan con el tono de su fiesta de baile."
+        },
+        "ai-ethics-2023/lesson-2": {
+          "overview": "Los estudiantes exploran el impacto de la IA generativa al participar en un juego colaborativo. Empiezan viendo un vídeo en el que se presenta cómo funcionan los modelos de lenguaje de gran tamaño, como los chatbots o las imágenes generativas. Luego, los estudiantes adoptan el papel de alguien afectado por la IA generativa para leer algunos artículos y reaccionar como personajes. Luego, los estudiantes forman grupos y se les presenta un escenario que involucra sus personajes y la IA generativa. Trabajando juntos, elaboran directrices sobre cómo debe implementarse la IA generativa en este escenario, que incluye las voces y perspectivas de todas las partes interesadas. Por último, los estudiantes comparten sus resultados con la clase y reflexionan sobre este proceso.",
+          "student_overview": "Aprenda sobre la IA generativa adoptando un personaje y elaborando las pautas adecuadas para la IA generativa"
         }
       }
     }

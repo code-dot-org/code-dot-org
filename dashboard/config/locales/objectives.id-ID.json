@@ -986,12 +986,6 @@
         "9ea5d8fd-1b7d-4655-b4b1-75fd09545838": {
           "description": "Bagikan karya kreatif kepada murid lain."
         },
-        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
-          "description": ""
-        },
-        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
-          "description": ""
-        },
         "214e78cd-feb0-4235-a076-0fe81d14d95a": {
           "description": "Latih dan uji model pembelajaran mesin."
         },
@@ -3096,7 +3090,7 @@
           "description": "Bagikan karya kreatif kepada murid lain."
         },
         "13d689fe-f5b2-4e76-84d5-4fd24f91cfab": {
-          "description": "Jelaskan konstruksi computer vision yang terdiri beberapa lapisan yang memadukan komponen yang lebih kecil untuk menghasilkan prediksi akhir"
+          "description": "Jelaskan konstruksi computer vision yang terdiri beberapa layer yang memadukan komponen yang lebih kecil untuk menghasilkan prediksi akhir"
         },
         "5bb33a90-28cb-40cb-9647-59a1818980b8": {
           "description": "Jelaskan perlunya sudut pandang yang beragam saat membuat sistem rekomendasi"
@@ -3105,22 +3099,22 @@
           "description": "Gunakan bobot neuron buatan untuk menyesuaikan output dari sistem rekomendasi"
         },
         "2b61407b-2812-4aa5-bdf0-661ae14b44d0": {
-          "description": "Diskusikan efek samping positif dan negatif dari model ini"
+          "description": "Diskusikan dampak positif dan negatif dari model ini"
         },
         "941fa029-220b-4d04-880f-29d93c952a9d": {
-          "description": "Berkolaborasi dengan AI untuk membuat dokumen teks kreatif"
+          "description": "Berkolaborasi dengan AI untuk membuat dokumen teks yang kreatif"
         },
         "f766948a-55ae-4083-9e67-cd42e929adcc": {
-          "description": "Jelaskan bahwa memiliki sejumlah besar teks untuk dipelajari memungkinkan komputer tampil cerdas dalam bentuk tertulis"
+          "description": "Jelaskan bahwa mempelajari jumlah teks yang sangat besar memungkinkan komputer untuk terlihat cerdas dalam bentuk tertulis"
         },
         "13fca3f5-45af-4888-8d22-71ce991caf3d": {
-          "description": "Diskusikan apakah model ini kreatif atau tidak dan siapa yang memiliki gambar-gambar ini"
+          "description": "Diskusikan apakah model ini kreatif atau tidak, dan siapa pemilik gambar-gambar ini"
         },
         "4b4fc091-b0d2-4cf4-bb61-a4b243abc4b8": {
-          "description": "Jelaskan bahwa AI dapat menghasilkan gambar yang tampak cukup realistis melalui proses yang dikenal sebagai difusi - di mana model belajar cara menggambar detail dengan membalikkan detail"
+          "description": "Jelaskan bahwa AI dapat menghasilkan gambar yang tampak cukup realistis melalui proses yang disebut difusi – di mana model mempelajari cara menggambar detail dengan membalik detailnya"
         },
         "cb45ec87-ad2c-41f8-96e5-cb48a1181314": {
-          "description": "Alasan tentang jenis tugas mana yang tidak boleh diselesaikan oleh algoritma"
+          "description": "Pikirkan jenis tugas yang tidak boleh dikerjakan oleh suatu algoritma"
         },
         "bb0c78af-3cdb-48cc-9f7a-f79c7d954752": {
           "description": "Jelaskan cara kerja AI"
@@ -3398,14 +3392,14 @@
         "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
           "description": "Gunakan istilah yang sesuai saat merujuk ke mouse komputer, trackpad, atau layar sentuh."
         },
-        "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
-          "description": "Kembangkan program yang merespons event yang diberi waktu."
+        "120d0539-1db0-452c-ab3c-e15980fbef26": {
+          "description": "Pikirkan cara agar komputer bisa memberi kontribusi dalam proses-proses kreatif. "
         },
-        "1e1c0724-7d86-4304-a73b-6f083be036fc": {
-          "description": "Jelaskan perpindahan mood sebuah puisi."
+        "3d8bf8f0-1aa6-4758-9acb-f2fc35e3af5a": {
+          "description": "Manfaatkan A.I. untuk memilih dan membuat efek khusus yang sesuai berdasarkan emoji yang dipilih guna meningkatkan tampilan visual dari pesta dansa mereka."
         },
-        "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
-          "description": "Tuangkan bahasa kiasan dan harfiah ke dalam teks."
+        "eaa9f1b1-c83f-4cc7-aff7-c1da143706a1": {
+          "description": "Gunakan konsep coding utama untuk memprogram elemen interaktif yang merespons input dari pengguna, seperti tekanan tombol dan event berwaktu."
         }
       }
     }

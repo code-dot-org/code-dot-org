@@ -161,39 +161,14 @@
         "function/hero/unversioned": {
           "word": "Функция"
         },
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "code/poem-art/2021": {
           "word": "Код жазуу"
         },
         "code/sports/unversioned": {
           "word": "Код жазуу"
         },
-        "code/poem-art/unversioned": {
-          "word": "Код жазуу",
-          "definition": ""
-        },
-        "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+        "code/dance-ai/2023": {
+          "word": "Код жазуу"
         }
       }
     }
