@@ -300,10 +300,9 @@ Feature: Curriculum Catalog Page
   Scenario: On mobile, User sees the Learn More button on Catalog Cards
     Given I am on "http://studio.code.org/catalog"
     And I rotate to portrait
-    And I wait for page to fully load
     And I wait until element "h4:contains(AI for Oceans)" is visible
-    And I click selector "span:contains(Learn More)"
-    And I wait until element "h1:contains(AI for Oceans)" is visible
+    And I click selector "[aria-label='Learn more about AI for Oceans']"
+    And I wait until current URL contains "/oceans"
   
   # Curriculum Catalog Filter tests
   
