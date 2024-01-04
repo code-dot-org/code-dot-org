@@ -1,4 +1,3 @@
-@no_mobile
 @single_session
 Feature: Hamburger dropdown
 
@@ -7,6 +6,25 @@ Feature: Hamburger dropdown
     And I dismiss the language selector
     Then I wait to see ".header_button"
     Then element "#hamburger-icon" is not visible
+
+  @only_mobile
+  Scenario: Signed out user in English can see hamburger on mobile
+    Given I am on "http://code.org/"
+    And I rotate to portrait
+    And I wait for 0.5 seconds
+    Then I wait until element "#hamburger-icon" is visible
+    And I click selector "#hamburger-icon"
+    And I wait until element "a:contains(Course Catalog)" is visible
+    And I wait until element "a:contains(Projects)" is visible
+    And I wait until element "a:contains(Incubator)" is visible
+    And I wait until element "a:contains(Help and support)" is visible
+    And I wait until element "a:contains(Report a problem)" is visible
+    And I wait until element "a:contains(Learn)" is visible
+    And I wait until element "div:contains(Teach)" is visible
+    And I wait until element "a:contains(Stats)" is visible
+    And I wait until element "a:contains(Help Us)" is visible
+    And I wait until element "div:contains(About)" is visible
+    And I wait until element "a:contains(Privacy & Legal)" is visible
 
   Scenario: Student viewing hamburger dropdown and help button dropdown in English on desktop
     Given I create a student named "Sally Student" and go home
