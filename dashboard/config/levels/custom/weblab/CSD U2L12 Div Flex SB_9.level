@@ -1,0 +1,20 @@
+<Weblab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 58,
+  "created_at": "2024-01-04T01:06:58.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "validation_enabled": "true",
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-01-04 19:03:41 +0000\",\"changed\":[\"published\",\"validation_enabled\"],\"changed_by_id\":19162,\"changed_by_email\":\"carl.reiner@code.org\"}]"
+}]]></config>
+</Weblab>
