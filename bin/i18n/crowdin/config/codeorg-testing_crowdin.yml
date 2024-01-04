@@ -30,6 +30,10 @@ files: [
   # files or directories for ignore
   # e.g. ["/**/?.txt", "/**/[0-9].txt", "/**/*\?*.txt"]
   #
+  # animations content is handled by the `I18n::Resources::Apps::Animations::SyncUp` class
+  # blockly-core content is handled by the `I18n::Resources::Apps::ExternalSources::SyncUp` class
+  # blockly-mooc content is handled by the `I18n::Resources::Apps::Labs::SyncUp` class
+  # external-sources content is handled by the `I18n::Resources::Apps::ExternalSources::SyncUp` class
   # hourofcode content is handled by the hourofcode-specific sync
   "ignore" : [
     "/animations/**",
