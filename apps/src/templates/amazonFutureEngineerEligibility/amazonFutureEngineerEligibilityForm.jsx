@@ -12,7 +12,6 @@ import SingleCheckbox from '../../code-studio/pd/form_components/SingleCheckbox'
 import CheckboxDropdown from '@cdo/apps/templates/CheckboxDropdown';
 import style from '../../../style/code-studio/curriculum_catalog_filters.module.scss';
 import color from '@cdo/apps/util/color';
-import fontConstants from '@cdo/apps/fontConstants';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 import i18n from '@cdo/locale';
 
@@ -205,7 +204,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
   render() {
     return (
       <div>
-        <div>
+        <div style={styles.standardPadding}>
           <ValidationStep
             stepStatus={Status.SUCCEEDED}
             stepName="You teach at an eligible school!"
@@ -237,39 +236,43 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
             <br />
           </div>
           <div style={styles.inputBoxes}>
-            <FieldGroup
-              id="firstName"
-              label={i18n.afeFirstName()}
-              type="text"
-              required={true}
-              onChange={this.handleChange}
-              validationState={
-                Object.prototype.hasOwnProperty.call(
-                  this.state.errors,
-                  'firstName'
-                )
-                  ? VALIDATION_STATE_ERROR
-                  : null
-              }
-            />
-            <FieldGroup
-              id="lastName"
-              label={i18n.afeLastName()}
-              type="text"
-              required={true}
-              onChange={this.handleChange}
-              validationState={
-                Object.prototype.hasOwnProperty.call(
-                  this.state.errors,
-                  'lastName'
-                )
-                  ? VALIDATION_STATE_ERROR
-                  : null
-              }
-            />
+            <div style={styles.fillSpace}>
+              <FieldGroup
+                id="firstName"
+                label={i18n.afeFirstName()}
+                type="text"
+                required={true}
+                onChange={this.handleChange}
+                validationState={
+                  Object.prototype.hasOwnProperty.call(
+                    this.state.errors,
+                    'firstName'
+                  )
+                    ? VALIDATION_STATE_ERROR
+                    : null
+                }
+              />
+            </div>
+            <div style={styles.fillSpace}>
+              <FieldGroup
+                id="lastName"
+                label={i18n.afeLastName()}
+                type="text"
+                required={true}
+                onChange={this.handleChange}
+                validationState={
+                  Object.prototype.hasOwnProperty.call(
+                    this.state.errors,
+                    'lastName'
+                  )
+                    ? VALIDATION_STATE_ERROR
+                    : null
+                }
+              />
+            </div>
           </div>
           <div style={styles.inputBoxes}>
-            <div>
+            <div style={styles.dropdownAndLabel}>
               <label
                 style={styles.descriptiveText}
                 htmlFor="professionalRoleSelect"
@@ -277,7 +280,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
                 {i18n.afeWhatIsYourRole()}
               </label>
               <select
-                style={styles.dropdownPadding}
+                style={styles.dropdown}
                 id="professionalRoleSelect"
                 name="professionalRole"
                 value={this.state.professionalRole}
@@ -360,17 +363,24 @@ const styles = {
     backgroundColor: color.orange,
     color: color.white,
   },
-  dropdownPadding: {
+  standardPadding: {
     marginTop: 10,
     marginBottom: 10,
   },
+  dropdownAndLabel: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    marginBottom: 15,
+    width: '50%',
+  },
+  dropdown: {
+    border: `1px solid ${color.lighter_gray}`,
+    borderRadius: 4,
+    height: '68%',
+    width: '98%',
+  },
   descriptiveText: {
     display: 'block',
-    ...fontConstants['main-font-regular'],
-    fontWeight: 'bold',
-    fontSize: 14,
-    border: 'none',
-    color: color.dimgray,
     margin: 0,
   },
   checkboxItem: {
@@ -381,5 +391,9 @@ const styles = {
   },
   inputBoxes: {
     display: 'flex',
+    gap: 10,
+  },
+  fillSpace: {
+    flexGrow: 1,
   },
 };
