@@ -1568,12 +1568,6 @@ class User < ApplicationRecord
     !!sort_by_family_name
   end
 
-  def get_show_progress_table_v2
-    return "default" if show_progress_table_v2.nil?
-
-    show_progress_table_v2
-  end
-
   def generate_username
     # skip an expensive db query if the name is not valid anyway. we can't depend on validations being run
     return if name.blank? || name.utf8mb4? || (email&.utf8mb4?)
