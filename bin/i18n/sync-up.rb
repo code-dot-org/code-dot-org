@@ -16,13 +16,19 @@ Dir[File.expand_path('../resources/*.rb', __FILE__)].sort.each {|file| require f
 # can be specified from the environment variables. We set I18N_SOURCE_DIR as an environment variable so it can be
 # globally changed for all Crowdin projects.
 ENV['I18N_SOURCE_DIR'] = CDO.dir(I18N_SOURCE_DIR)
+
+EXCLUDED_PROJECTS = %i[codeorg-restricted codeorg-restricted-test].freeze
+
 def sync_up
   I18nScriptUtils.with_synchronous_stdout do
     puts "Sync up starting"
 
     I18n::Resources::Apps.sync_up
+    I18n::Resources::Dashboard.sync_up
 
     CROWDIN_PROJECTS.each do |name, options|
+      next if EXCLUDED_PROJECTS.include?(name)
+
       puts "Uploading source strings to #{name} project"
       command = "crowdin upload sources --config #{options[:config_file]} --identity #{options[:identity_file]}"
       Open3.popen2(command) do |_stdin, stdout, status_thread|

@@ -27,6 +27,25 @@ module I18n
         UnpluggedContent.sync_in
       end
 
+      def self.sync_up
+        BaseContent.sync_up
+        Blocks.sync_up
+        CourseContent.sync_up
+        CourseOfferings.sync_up
+        Courses.sync_up
+        CurriculumContent.sync_up
+        DataContent.sync_up
+        DeviseContent.sync_up
+        Docs.sync_up
+        MarketingAnnouncements.sync_up
+        RestrictedContent.sync_up
+        Scripts.sync_up
+        SharedFunctions.sync_up
+        Slides.sync_up
+        Standards.sync_up
+        UnpluggedContent.sync_up
+      end
+
       def self.sync_out
         BaseContent.sync_out
         Blocks.sync_out
@@ -52,4 +71,4 @@ module I18n
   end
 end
 
-Dir[File.expand_path('../dashboard/**/*.rb', __FILE__)].sort.each {|file| require file}
+Dir[File.expand_path('../dashboard/*.rb', __FILE__)].sort.each {|file| require file}
