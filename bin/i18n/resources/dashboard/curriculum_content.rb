@@ -1,8 +1,6 @@
 require_relative '../../i18n_script_utils'
 require_relative '../dashboard'
 
-Dir[File.expand_path('../curriculum_content/**/*.rb', __FILE__)].sort.each {|file| require file}
-
 module I18n
   module Resources
     module Dashboard
@@ -19,6 +17,10 @@ module I18n
           SyncIn.perform
         end
 
+        def self.sync_up
+          SyncUp.perform
+        end
+
         def self.sync_out
           SyncOut.perform
         end
@@ -26,3 +28,5 @@ module I18n
     end
   end
 end
+
+Dir[File.expand_path('../curriculum_content/**/*.rb', __FILE__)].sort.each {|file| require file}
