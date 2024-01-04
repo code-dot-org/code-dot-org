@@ -49,7 +49,7 @@
     "encrypted_examples": "pevRPGaduCSlImVAlrq4OVNCHdKIo6lr4B/+mPuZ/VfOjB0IFn9yyVbvQbN9\nzvWQj5hT8+BMDppr8p7IPUligQ==\n",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2023-12-12T20:56:00.456+00:00\",\"changed\":[\"cloned from \\\"CSC-SelfPaced-customization1_2023\\\"\"],\"cloned_from\":\"CSC-SelfPaced-customization1_2023\"},{\"changed_at\":\"2023-12-14 21:21:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-12-12T20:56:00.456+00:00\",\"changed\":[\"cloned from \\\"CSC-SelfPaced-customization1_2023\\\"\"],\"cloned_from\":\"CSC-SelfPaced-customization1_2023\"},{\"changed_at\":\"2023-12-14 21:21:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-01-03 16:14:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-01-03 16:17:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
