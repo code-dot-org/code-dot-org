@@ -14,6 +14,10 @@ FirebaseStorage.deleteRecord = function (tableName, record, onSuccess, onError) 
 // DEPRECATED: we are planning to remove this block
 FirebaseStorage.onRecordEvent = function (tableName) {}
 
+/* firebaseCounters.js */
+
+/* firebaseMetadata.js */
+
 /* DATA BROWSER */
 
 FirebaseStorage.createTable = function (tableName, onSuccess, onError) {}
