@@ -1,17 +1,15 @@
 require_relative '../../i18n_script_utils'
 require_relative '../dashboard'
 
-Dir[File.expand_path('../blocks/**/*.rb', __FILE__)].sort.each {|file| require file}
-
 module I18n
   module Resources
     module Dashboard
       module Blocks
         FILE_NAME = 'blocks.yml'.freeze
 
-        ORIGIN_I18N_FILE_PATH = File.join(I18n::Resources::Dashboard::ORIGIN_I18N_DIR_PATH, 'blocks.en.yml').freeze
-        I18N_SOURCE_FILE_PATH = File.join(I18n::Resources::Dashboard::I18N_SOURCE_DIR_PATH, FILE_NAME).freeze
-        I18N_BACKUP_FILE_PATH = File.join(I18n::Resources::Dashboard::I18N_BACKUP_DIR_PATH, FILE_NAME).freeze
+        ORIGIN_I18N_FILE_PATH = File.join(ORIGIN_I18N_DIR_PATH, 'blocks.en.yml').freeze
+        I18N_SOURCE_FILE_PATH = File.join(I18N_SOURCE_DIR_PATH, FILE_NAME).freeze
+        I18N_BACKUP_FILE_PATH = File.join(I18N_BACKUP_DIR_PATH, FILE_NAME).freeze
 
         REDACT_PLUGINS = %w[blockfield].freeze
         REDACT_FORMAT = 'txt'.freeze
@@ -21,6 +19,10 @@ module I18n
           SyncIn.perform
         end
 
+        def self.sync_up
+          SyncUp.perform
+        end
+
         def self.sync_out
           SyncOut.perform
         end
@@ -28,3 +30,5 @@ module I18n
     end
   end
 end
+
+Dir[File.expand_path('../blocks/**/*.rb', __FILE__)].sort.each {|file| require file}
