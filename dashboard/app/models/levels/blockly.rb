@@ -681,26 +681,8 @@ class Blockly < Level
         )
       behavior_name.content = localized_name if localized_name
     end
-    block_xml.xpath("//block[@type=\"behavior_definition\"]").each do |behavior|
-      behavior_name = behavior.at_xpath("./#{tag}[@name=\"NAME\"]")
-      next unless behavior_name
-      puts "localizing #{behavior_name.content}"
-      localized_name =
-        I18n.t(
-          behavior_name.content,
-          scope: [:data, :shared_functions],
-          default: nil,
-          smart: true
-        ) ||
-        I18n.t(
-          behavior_name.content,
-          scope: [:data, :behavior_names, name],
-          default: nil,
-          smart: true
-        )
-      behavior_name.content = localized_name if localized_name
-    end
 
+    # localize_behaviors handles localizing behavior definitions.
     localize_behaviors(block_xml)
     block_xml
   end
@@ -926,7 +908,6 @@ class Blockly < Level
       end
 
       behavior.xpath(".//#{tag}[@name=\"NAME\"]").each do |name_element|
-        puts "localizing #{name_element.content}"
         localized_name =
           I18n.t(
             name_element.content,
