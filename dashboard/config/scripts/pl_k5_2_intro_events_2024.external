@@ -10,7 +10,7 @@ markdown <<MARKDOWN
 <img src="https://images.code.org/777a7b74cb2c3607d956c0c672d04f6f-image-1679964913802.png" alt="Image of a cartoon octopus holding a microphone and wearing a hat singing" style="border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;">
 
 
-## In this module, you will:
+## In this lesson, you will:
 
 * ##### Learn about events and event-based programming.
 * ##### Practice events with different types of event blocks.
@@ -18,7 +18,7 @@ markdown <<MARKDOWN
 * ##### Debug a program by correcting the mistakes to make it work properly.
 
 
-### **Suggested time:** 15 minutes
+### **Suggested time:** 20 minutes
 
 
 ## Let's get started!
