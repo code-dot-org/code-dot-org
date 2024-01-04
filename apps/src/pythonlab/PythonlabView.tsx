@@ -6,7 +6,7 @@ import SidePanel from './SidePanel';
 
 const PythonlabView: React.FunctionComponent = () => {
   return (
-    <div className={moduleStyles.pythonLab}>
+    <div className={moduleStyles.pythonlab}>
       <SidePanel />
       <PythonEditor />
     </div>
