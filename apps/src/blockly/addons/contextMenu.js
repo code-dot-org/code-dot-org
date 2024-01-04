@@ -255,7 +255,9 @@ export function registerHelp() {
       const block = scope.block;
       const url =
         typeof block.helpUrl === 'function' ? block.helpUrl() : block.helpUrl;
-      if (url) {
+      // Some common Blockly blocks have help URLs for pages on Wikipedia, GitHub, etc.
+      // We only want to allow a documentation dialog for one of our local docs links.
+      if (url && url.startsWith('/docs/')) {
         return 'enabled';
       }
       return 'hidden';
@@ -272,7 +274,7 @@ export function registerHelp() {
           .attr('src', url),
         autoResizeScrollableElement: '.markdown-instructions-container',
         id: 'block-documentation-lightbox',
-        link: 'url',
+        link: url,
       });
       dialog.show();
     },

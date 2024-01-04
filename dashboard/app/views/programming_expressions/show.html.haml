@@ -1,9 +1,9 @@
-//%script{src: webpack_asset_path('js/googleblockly.js')}
+%script{src: webpack_asset_path('js/googleblockly.js')}
 %link{href: asset_path('css/markdown.css'), rel: 'stylesheet', type: 'text/css'}
 %link{href: asset_path('css/curriculum_navigation.css'), rel: 'stylesheet', type: 'text/css'}
 - content_for(:head) do
   = tag 'meta', name: 'description', content: @programming_expression.syntax
-%script{src: webpack_asset_path('js/blockly.js')}
+//%script{src: webpack_asset_path('js/googleblockly.js')}
 %script{src: webpack_asset_path("js/#{js_locale}/blockly_locale.js")}
 %script{src: webpack_asset_path('js/programming_expressions/show.js'),
   data: {programmingExpression: @programming_expression.summarize_for_show.to_json, customBlocksConfig: @programming_expression.get_blocks.to_json, programmingEnvironmentTitle: @programming_expression.programming_environment.title.to_json, programmingEnvironmentName: @programming_expression.programming_environment.name.to_json, programmingEnvironmentLanguage: (@programming_expression.programming_environment.editor_language || '').to_json, categoriesForNavigation: @programming_environment_categories.to_json, currentCategoryKey: @programming_expression.programming_environment_category&.key&.to_json}}
