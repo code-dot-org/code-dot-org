@@ -143,16 +143,6 @@ class ScriptLevel < ApplicationRecord
     end
   end
 
-  def path_for_user
-    build_script_level_path(this_level)
-  end
-
-  # Return this script level
-  def this_level
-    i = script.script_levels.find_index(self)
-    script.script_levels[i]
-  end
-
   def next_level_or_redirect_path_for_user(
     user,
     extras_lesson = nil,
