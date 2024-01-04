@@ -125,7 +125,6 @@ class Watchers extends React.Component {
       return;
     }
 
-    // EMILY: This is where users add new variables to watch
     this.props.add(inputText);
     this.setState(
       {
