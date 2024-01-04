@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "coursec-maker",
-    "serialized_at": "2023-12-08 16:28:02 UTC",
+    "serialized_at": "2024-01-02 21:16:28 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -103,10 +103,10 @@
       "name": "Meet your micro:bit",
       "absolute_position": 3,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
-        "overview": "[micro:bit Physical Computing Fundamentals](https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf)"
+        "overview": "This lesson plan is not available on Code.org's website - instead, [click here to access micro:bit Physical Computing Fundamentals, pp. 7-17](https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf#page=7)"
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -122,7 +122,7 @@
       "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
-        "overview": "[micro:bit Physical Computing Fundamentals pp. 22-24](https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf)"
+        "overview": "This lesson plan is not available on Code.org's website - instead, [click here to access micro:bit Physical Computing Fundamentals pp. 22-24](https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf#page=22)"
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -171,33 +171,14 @@
       }
     },
     {
-      "key": "Play Lab",
-      "name": "Play Lab",
-      "absolute_position": 7,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 7,
-      "properties": {
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In this lesson, learners get an introductory experience with computer science and create a game using basic block code.This lesson has been designed for learners in the middle grades, ages 10-16, but can be adapted for younger or older learners using the differentiation suggestions provided.",
-        "preparation": "### One Week Before Your Hour of Code\n\n- Review the [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) and [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) in order to begin to plan your Hour of Code event. \n- [Register your Hour of Code event](http://hourofcode.com) if you’d like to receive swag or classroom support.\n- Review and complete the online tutorial yourself: [Playlab](https://studio.code.org/s/playlab/stage/1/puzzle/1) \n- Be sure to test it first before asking your students to complete it. Check your technology and decide if you need to troubleshoot anything in advance of your Hour of Code.\n\n### One Day Before Your Hour of Code\n\n- Write the words “coding”, “programming” and “debugging” on the board or add them to your word wall if you have one.\n- Each student who completes the activity should receive a [certificate](http://code.org/certificates). Print one for each student in advance to make this easier at the end of your Hour of Code.\n",
-        "purpose": "This lesson introduces the core CS concepts of coding and programming (using blocks), as well as simple debugging techniques.",
-        "student_overview": "In this lesson, learners get an introductory experience with computer science and create a game using basic block code."
-      },
-      "seeding_key": {
-        "lesson.key": "Play Lab",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "coursec-maker-2024"
-      }
-    },
-    {
       "key": "lesson-5",
       "name": "Meet your micro:bit",
-      "absolute_position": 8,
+      "absolute_position": 7,
       "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 8,
+      "has_lesson_plan": false,
+      "relative_position": 7,
       "properties": {
+        "overview": "This lesson plan is not available on Code.org's website - instead, [click here to access micro:bit Physical Computing Fundamentals, pp. 7-17](https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf#page=7)"
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -208,11 +189,12 @@
     {
       "key": "lesson-6",
       "name": "Calming LEDs",
-      "absolute_position": 9,
+      "absolute_position": 8,
       "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 9,
+      "has_lesson_plan": false,
+      "relative_position": 8,
       "properties": {
+        "overview": "This lesson plan is not available on Code.org's website - instead, [click here to access micro:bit Physical Computing Fundamentals pp. 25-27](https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf#page=25)"
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
@@ -223,10 +205,10 @@
     {
       "key": "Picturing Data",
       "name": "Picturing Data",
-      "absolute_position": 10,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 10,
+      "relative_position": 9,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students will collect data from a Play Lab project and visualize it using different graphs in this **exploratory** lesson.",
@@ -243,10 +225,10 @@
     {
       "key": "Counting with Variables",
       "name": "Counting with Variables",
-      "absolute_position": 11,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 11,
+      "relative_position": 10,
       "properties": {
         "overview": "In this **skill-building** lesson, students will use variables to track a value that changes over time, like a counter. This lesson also includes a short **mini-project** in which students create a simple game.",
         "preparation": "Play through the levels and review the **lesson slides**.\n",
@@ -262,11 +244,12 @@
     {
       "key": "lesson-1",
       "name": "Meet your micro:bit",
-      "absolute_position": 12,
+      "absolute_position": 11,
       "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 12,
+      "has_lesson_plan": false,
+      "relative_position": 11,
       "properties": {
+        "overview": "This lesson plan is not available on Code.org's website - instead, [click here to access micro:bit Physical Computing Fundamentals, pp. 7-17](https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf#page=7)"
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -277,11 +260,12 @@
     {
       "key": "lesson-2",
       "name": "Counter",
-      "absolute_position": 13,
+      "absolute_position": 12,
       "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 13,
+      "has_lesson_plan": false,
+      "relative_position": 12,
       "properties": {
+        "overview": "This lesson plan is not available on Code.org's website - instead, [click here to access micro:bit Physical Computing Fundamentals pp. 28-30](https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf#page=28)"
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -588,74 +572,6 @@
       }
     },
     {
-      "key": "821409db-e55d-4426-a22b-3afc66272dcc",
-      "position": 1,
-      "properties": {
-        "duration": 5,
-        "name": "Getting Started"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "821409db-e55d-4426-a22b-3afc66272dcc",
-        "lesson.key": "Play Lab",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "coursec-maker-2024"
-      }
-    },
-    {
-      "key": "144e0bc0-cc48-44d5-bf31-f679bac6ff30",
-      "position": 2,
-      "properties": {
-        "name": "Activity (30-45 minutes)"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "144e0bc0-cc48-44d5-bf31-f679bac6ff30",
-        "lesson.key": "Play Lab",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "coursec-maker-2024"
-      }
-    },
-    {
-      "key": "fd16f7dd-9554-4b5a-98a6-4d342a9cd4a1",
-      "position": 3,
-      "properties": {
-        "duration": 5,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "fd16f7dd-9554-4b5a-98a6-4d342a9cd4a1",
-        "lesson.key": "Play Lab",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "coursec-maker-2024"
-      }
-    },
-    {
-      "key": "7a9a8b49-52fb-47e2-bdb7-ef33d65275a4",
-      "position": 4,
-      "properties": {
-        "duration": 2,
-        "name": "Assessment"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "7a9a8b49-52fb-47e2-bdb7-ef33d65275a4",
-        "lesson.key": "Play Lab",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "coursec-maker-2024"
-      }
-    },
-    {
-      "key": "84293f35-277a-4b98-9f93-f580db278cc8",
-      "position": 5,
-      "properties": {
-        "name": "Extended Learning"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "84293f35-277a-4b98-9f93-f580db278cc8",
-        "lesson.key": "Play Lab",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "coursec-maker-2024"
-      }
-    },
-    {
       "key": "6589350e-4722-4ebc-8208-0b84007bce66",
       "position": 1,
       "properties": {
@@ -663,6 +579,18 @@
       "seeding_key": {
         "lesson_activity.key": "6589350e-4722-4ebc-8208-0b84007bce66",
         "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursec-maker-2024"
+      }
+    },
+    {
+      "key": "aee1c063-fbf1-499a-90c4-a6b1b3fa4e15",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "aee1c063-fbf1-499a-90c4-a6b1b3fa4e15",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "coursec-maker-2024"
       }
@@ -762,6 +690,30 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "coursec-maker-2024"
       }
+    },
+    {
+      "key": "8a686e12-9e31-41bb-bb8f-e85550f621ab",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8a686e12-9e31-41bb-bb8f-e85550f621ab",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "coursec-maker-2024"
+      }
+    },
+    {
+      "key": "fab02723-90c1-401f-9e66-d2e80e2d7212",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fab02723-90c1-401f-9e66-d2e80e2d7212",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "coursec-maker-2024"
+      }
     }
   ],
   "activity_sections": [
@@ -835,7 +787,8 @@
       "key": "1a301cd0-f473-4a4a-963e-e834019570be",
       "position": 5,
       "properties": {
-        "description": "####Dance Party\n\n- Start playing some music.\n\t- Check out this [Spotify Playlist (all ages)](https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw). We are using radio-safe versions of all songs.\n- Use the controller buttons to have class change dance moves while the music plays."
+        "description": "####Dance Party\n\n- Start playing some music.\n\t- Check out this [Spotify Playlist (all ages)](https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw). We are using radio-safe versions of all songs.\n- Use the controller buttons to have class change dance moves while the music plays.",
+        "progression_name": "Dance Party"
       },
       "seeding_key": {
         "activity_section.key": "1a301cd0-f473-4a4a-963e-e834019570be",
@@ -1095,6 +1048,7 @@
       "key": "39e055c1-b58e-40d9-af70-8cd830b3aaa0",
       "position": 1,
       "properties": {
+        "progression_name": "Meet your micro:bit"
       },
       "seeding_key": {
         "activity_section.key": "39e055c1-b58e-40d9-af70-8cd830b3aaa0",
@@ -1105,6 +1059,7 @@
       "key": "f90547b7-ad2d-4bec-9a8c-82e93e725eb6",
       "position": 1,
       "properties": {
+        "progression_name": "Emotion Badge"
       },
       "seeding_key": {
         "activity_section.key": "f90547b7-ad2d-4bec-9a8c-82e93e725eb6",
@@ -1383,162 +1338,36 @@
       }
     },
     {
-      "key": "b5543563-eb78-4409-b0d5-4972b5c80414",
-      "position": 1,
-      "properties": {
-        "description": "Welcome students to class and very briefly introduce the day’s activity. \n\n**Say:** *Today we’re going to spend one hour learning to code. Has anyone here heard the term “code” before? What does it mean?”*\n\nStudents might mention that a “code” is like a secret message, or that it’s related to computers in some way.",
-        "name": "Setting the Stage\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "b5543563-eb78-4409-b0d5-4972b5c80414",
-        "lesson_activity.key": "821409db-e55d-4426-a22b-3afc66272dcc"
-      }
-    },
-    {
-      "key": "fd2df5b1-ec8a-4d9a-af99-2b2bf00b6957",
-      "position": 2,
-      "properties": {
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "One way to introduce the Hour of Code if you are not very familiar with coding yourself is to show one of [our inspirational videos](https://hourofcode.com/us/resources#videos). Choose one you think your students will find inspiring, and share it now. For young learners, we suggest “[Anybody Can Learn](https://youtu.be/qYZF6oIZtfc).”\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "fd2df5b1-ec8a-4d9a-af99-2b2bf00b6957",
-        "lesson_activity.key": "821409db-e55d-4426-a22b-3afc66272dcc"
-      }
-    },
-    {
-      "key": "deef918d-c9dd-4f4f-9597-2dfe9a736006",
-      "position": 3,
-      "properties": {
-        "description": "Explain that in computer science, “code” means a set of instructions that a computer can understand. Let students know that today, they are going to practice “coding,” “programming” and “debugging”.\r\n\r\nDefine:\r\n\r\n- **Coding** means to write code, or to write instructions for a computer.\r\n- **Programming**, similarly, means to write code or instructions. Today, you will program with blocks on the computer (if you’re using an online tutorial) or with pen and paper (if you’re using an unplugged activity).\r\n- **Debugging** means to check code for mistakes and try to fix errors.\r\n\r\nAsk students to think about what their ideal next step might be after high school graduation. Ask students to raise their hand if they believe that next step will require them to use a computer. Everyone should raise their hand, because computers are all around us...in our phones, in our cars, even in our microwaves and dishwashers!\r\n\r\nAsk students to guess how many K12 schools there are in the United States of America. The answer is around 100,000. Now ask students to guess how many of those K12 schools offer a course in computer science. The answer is less than 1 in 4 schools. That means that less than 25% of the US population has the opportunity to learn computer science in school. Ask students: how does this impact a young person's ability to land their dream job or get into their ideal college, if they have little to no experience with computers? And this problem exists not just in the US, but all over the world.\r\n\r\nExplain that across the globe, young people just like your students are participating in Hour of Code as a way to bring awareness to this injustice -- the lack of access to computer science education. Your class will be taking part, not just to learn the basics of CS and have a little fun -- but also to take a stand and use your voice to speak up about the importance of CS for all."
-      },
-      "seeding_key": {
-        "activity_section.key": "deef918d-c9dd-4f4f-9597-2dfe9a736006",
-        "lesson_activity.key": "821409db-e55d-4426-a22b-3afc66272dcc"
-      }
-    },
-    {
-      "key": "01333e52-8719-430b-804d-a606fd80985b",
-      "position": 1,
-      "properties": {
-        "description": "Challenge your students to complete the [Playlab](https://studio.code.org/s/playlab/stage/1/puzzle/1)  tutorial.\n\nDepending on the age and ability of your students, you might consider: \n\n- For middle and high school students, we suggest you choose tutorials that allow free play and creation of apps or games. You can have students work independently or in pairs or small groups. There are many other tutorials on [code.org/learn](http://code.org/learn) that allow for free creation, including the Make a Flappy Game](https://studio.code.org/s/flappy) and our new beta tool [AppLab](https://code.org/educate/applab).\n- For younger students, we suggest you break your class into pairs or very small groups (three to four students each) and ask each group to work together to complete the tutorial using [pair programming](https://youtu.be/vgkahOzFH2Q).\n- For adult learners, the [Write your first computer program](https://studio.code.org/hoc/1) tutorial works extremely well either as an independent challenge or a pair programming activity.",
-        "name": "Play Lab"
-      },
-      "seeding_key": {
-        "activity_section.key": "01333e52-8719-430b-804d-a606fd80985b",
-        "lesson_activity.key": "144e0bc0-cc48-44d5-bf31-f679bac6ff30"
-      }
-    },
-    {
-      "key": "f4609226-6f72-4712-bc9a-80baa38ec3df",
-      "position": 2,
-      "properties": {
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Be sure to play through your chosen tutorials yourself, before asking your students to attempt them. That way you’ll know what to expect and can make decisions about whether to let students choose their own tutorial, or if you want to assign tutorials based on student needs.\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "f4609226-6f72-4712-bc9a-80baa38ec3df",
-        "lesson_activity.key": "144e0bc0-cc48-44d5-bf31-f679bac6ff30"
-      }
-    },
-    {
-      "key": "54a01326-72e8-4fd2-b2f4-82a4c42c1dbb",
-      "position": 3,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "54a01326-72e8-4fd2-b2f4-82a4c42c1dbb",
-        "lesson_activity.key": "144e0bc0-cc48-44d5-bf31-f679bac6ff30"
-      }
-    },
-    {
-      "key": "a58c0043-3151-4295-953a-988de1e90b68",
-      "position": 4,
-      "properties": {
-        "description": "If a group or individual finishes early, they can attempt another tutorial by visiting [code.org/learn](http://code.org/learn)."
-      },
-      "seeding_key": {
-        "activity_section.key": "a58c0043-3151-4295-953a-988de1e90b68",
-        "lesson_activity.key": "144e0bc0-cc48-44d5-bf31-f679bac6ff30"
-      }
-    },
-    {
-      "key": "089b8b56-d5fc-47cd-857e-6c76bd7fdc19",
-      "position": 1,
-      "properties": {
-        "description": "Facilitate a \"Turn and Talk.\" Ask students to share their game, app or final product with a friend for feedback. Then switch and check out your partner's app or game. Ask a few groups to share out their experience: what did you learn about how apps and games work today? How do you feel having had the opportunity to study computer science?",
-        "name": "Debrief\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "089b8b56-d5fc-47cd-857e-6c76bd7fdc19",
-        "lesson_activity.key": "fd16f7dd-9554-4b5a-98a6-4d342a9cd4a1"
-      }
-    },
-    {
-      "key": "0d954761-a4c5-42f9-b693-3e1269927d2b",
-      "position": 2,
-      "properties": {
-        "description": "Explain that you are spending one hour coding today, because this week is CS Education Week, and millions of other students across the globe have also been learning one Hour of Code this week. Congratulate students on being part of this world wide movement.\r\n\r\nGive each student [a certificate](http://code.org/certificates) with his or her name on it.",
-        "name": "Celebrate\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "0d954761-a4c5-42f9-b693-3e1269927d2b",
-        "lesson_activity.key": "fd16f7dd-9554-4b5a-98a6-4d342a9cd4a1"
-      }
-    },
-    {
-      "key": "20f4d89c-3473-4a98-ba20-657ba209d5e2",
-      "position": 3,
-      "properties": {
-        "description": "Let students know that if they enjoyed today’s activity, they have many options for continuing to code. Encourage students to visit code.org/learn for a list of options, or, if you’re planning any of the extension activities that follow, tell students what’s coming next in your classroom.",
-        "name": "Next Steps\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "20f4d89c-3473-4a98-ba20-657ba209d5e2",
-        "lesson_activity.key": "fd16f7dd-9554-4b5a-98a6-4d342a9cd4a1"
-      }
-    },
-    {
-      "key": "98ecb6c7-09d1-4ea9-91ec-b6978a7c8525",
-      "position": 1,
-      "properties": {
-        "description": "Challenge students to share some aspect of their Hour of Code experience on social media using #hourofcode as a way to lend their voices to this world wide movement. Students can share their game, images, videos or just their thoughts.",
-        "name": "Speak Up\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "98ecb6c7-09d1-4ea9-91ec-b6978a7c8525",
-        "lesson_activity.key": "7a9a8b49-52fb-47e2-bdb7-ef33d65275a4"
-      }
-    },
-    {
-      "key": "c26822b5-ad63-4cec-be94-29088a8040f1",
-      "position": 1,
-      "properties": {
-        "description": "After your Hour of Code ends, there are many ways to continue teaching computer science in your K-5 classroom. Here are some ideas:\n\n- **Teach the [Code Studio Computer Science Fundamentals](http://code.org/educate/k5) courses**. These six courses are designed for young learners. Students work their way through a series of puzzles that teach them to code, and educators have access to engaging lesson plans that help make the learning coming alive. Code.org offers free professional development for these courses, online or in-person.\n- **Invite a computer science expert to talk to your class about his or her work**. Don't know any volunteers, reach out to a few on the [volunteer map](https://code.org/volunteer/local).",
-        "name": "Beyond an Hour of Code\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "c26822b5-ad63-4cec-be94-29088a8040f1",
-        "lesson_activity.key": "84293f35-277a-4b98-9f93-f580db278cc8"
-      }
-    },
-    {
       "key": "57ca6de4-7aa1-4198-b7fc-cf9296610b4d",
       "position": 1,
       "properties": {
-        "description": "Video level: https://mbit.io/csf-1-lesson-guide\n\nProject level: https://mbit.io/csf-1-project"
+        "description": "Video level: https://mbit.io/csf-1-lesson-guide\n\nProject level: https://mbit.io/csf-1-project",
+        "progression_name": "Meet your micro:bit"
       },
       "seeding_key": {
         "activity_section.key": "57ca6de4-7aa1-4198-b7fc-cf9296610b4d",
         "lesson_activity.key": "6589350e-4722-4ebc-8208-0b84007bce66"
+      }
+    },
+    {
+      "key": "e56e0a0f-1a40-4dc8-a5d6-c42a922e1dc7",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e56e0a0f-1a40-4dc8-a5d6-c42a922e1dc7",
+        "lesson_activity.key": "6589350e-4722-4ebc-8208-0b84007bce66"
+      }
+    },
+    {
+      "key": "ce5804af-f79f-4429-9cfb-b9e2d760a6b6",
+      "position": 1,
+      "properties": {
+        "progression_name": "Calming LEDs"
+      },
+      "seeding_key": {
+        "activity_section.key": "ce5804af-f79f-4429-9cfb-b9e2d760a6b6",
+        "lesson_activity.key": "aee1c063-fbf1-499a-90c4-a6b1b3fa4e15"
       }
     },
     {
@@ -1885,15 +1714,65 @@
         "activity_section.key": "da29ad7f-6cb2-4717-92fc-d6728279badb",
         "lesson_activity.key": "51d40ff1-ad1c-4397-b98a-886989f8f87c"
       }
+    },
+    {
+      "key": "004eb3c8-79e2-4ba8-83b1-5f8e817fdfb3",
+      "position": 1,
+      "properties": {
+        "progression_name": "Meet your micro:bit"
+      },
+      "seeding_key": {
+        "activity_section.key": "004eb3c8-79e2-4ba8-83b1-5f8e817fdfb3",
+        "lesson_activity.key": "8a686e12-9e31-41bb-bb8f-e85550f621ab"
+      }
+    },
+    {
+      "key": "2a45eed6-43d6-445c-acf6-e465970ed3a8",
+      "position": 1,
+      "properties": {
+        "progression_name": "Counter"
+      },
+      "seeding_key": {
+        "activity_section.key": "2a45eed6-43d6-445c-acf6-e465970ed3a8",
+        "lesson_activity.key": "fab02723-90c1-401f-9e66-d2e80e2d7212"
+      }
     }
   ],
   "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "course_c_maker_dance_party_unplugged"
+        ],
+        "progression": "Dance Party"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course_c_maker_dance_party_unplugged"
+        ],
+        "lesson.key": "Dance Party: Unplugged",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "coursec-maker-2024",
+        "activity_section.key": "1a301cd0-f473-4a4a-963e-e834019570be"
+      },
+      "level_keys": [
+        "course_c_maker_dance_party_unplugged"
+      ]
+    },
     {
       "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_video_flappyIntro_maker"
+        ],
         "progression": "Video: Code Your Own Flappy Game"
       },
       "bonus": false,
@@ -1916,6 +1795,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_flappy_events1_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1938,6 +1820,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_flappy_events2_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1960,6 +1845,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_flappy_events3_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1982,6 +1870,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_flappy_events4_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2004,6 +1895,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_flappy_events5_maker"
+        ],
         "progression": "Mini-project: Flappy Game"
       },
       "bonus": false,
@@ -2026,6 +1920,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_flappy_events6_maker"
+        ],
         "progression": "Mini-project: Flappy Game"
       },
       "bonus": false,
@@ -2048,6 +1945,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_flappy_events7_maker"
+        ],
         "progression": "Mini-project: Flappy Game"
       },
       "bonus": false,
@@ -2070,6 +1970,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_flappy_events8_maker"
+        ],
         "progression": "Mini-project: Flappy Game"
       },
       "bonus": false,
@@ -2092,6 +1995,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_flappy_events9_maker"
+        ],
         "progression": "Mini-project: Flappy Game"
       },
       "bonus": false,
@@ -2114,6 +2020,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_flappy_events10_maker"
+        ],
         "progression": "Mini-project: Flappy Game"
       },
       "bonus": false,
@@ -2136,6 +2045,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_c_maker_meet_your_microbit"
+        ],
+        "progression": "Meet your micro:bit"
       },
       "bonus": false,
       "seeding_key": {
@@ -2157,6 +2070,34 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_c_maker_emotion_badge"
+        ],
+        "progression": "Emotion Badge"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course_c_maker_emotion_badge"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "coursec-maker-2024",
+        "activity_section.key": "f90547b7-ad2d-4bec-9a8c-82e93e725eb6"
+      },
+      "level_keys": [
+        "course_c_maker_emotion_badge"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "MyLoopyRoboticFriends-Unplugged2022_maker"
+        ],
         "progression": "My Loopy Robotic Friends - Unplugged Activity"
       },
       "bonus": false,
@@ -2174,11 +2115,14 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_video_ArtistIntro_maker"
+        ],
         "progression": "Video: The Artist in Code Studio"
       },
       "bonus": false,
@@ -2196,11 +2140,14 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_artist_loops1_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2218,11 +2165,14 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_video_artistLoops_maker"
+        ],
         "progression": "Video: Repeat Blocks with the Artist"
       },
       "bonus": false,
@@ -2240,11 +2190,14 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_artist_loops2_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2262,11 +2215,14 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_artist_loops3_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2284,11 +2240,14 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_artist_loops4_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2306,11 +2265,14 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_artist_loops5_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2328,11 +2290,14 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 8,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_artist_loops6_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2350,12 +2315,15 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "challenge": true,
+        "level_keys": [
+          "courseB_artist_loops7_maker"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -2373,11 +2341,14 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_artist_loops8_maker"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2395,11 +2366,14 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_artist_loops9_maker"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2417,11 +2391,14 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_artist_loops10_maker"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -2439,11 +2416,14 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_artist_loops_challenge1_maker"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -2461,11 +2441,14 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 14,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseB_artist_loops_challenge2_maker"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -2483,221 +2466,61 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Meet your micro:bit"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "blockly:Studio:playlab_1"
+          "course_c_maker_meet_your_microbit_2"
         ],
-        "lesson.key": "Play Lab",
+        "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "coursec-maker-2024",
-        "activity_section.key": "54a01326-72e8-4fd2-b2f4-82a4c42c1dbb"
+        "activity_section.key": "57ca6de4-7aa1-4198-b7fc-cf9296610b4d"
       },
       "level_keys": [
-        "blockly:Studio:playlab_1"
-      ]
-    },
-    {
-      "chapter": 30,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "blockly:Studio:playlab_2"
-        ],
-        "lesson.key": "Play Lab",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "coursec-maker-2024",
-        "activity_section.key": "54a01326-72e8-4fd2-b2f4-82a4c42c1dbb"
-      },
-      "level_keys": [
-        "blockly:Studio:playlab_2"
+        "course_c_maker_meet_your_microbit_2"
       ]
     },
     {
       "chapter": 31,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "blockly:Studio:playlab_3"
-        ],
-        "lesson.key": "Play Lab",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "coursec-maker-2024",
-        "activity_section.key": "54a01326-72e8-4fd2-b2f4-82a4c42c1dbb"
-      },
-      "level_keys": [
-        "blockly:Studio:playlab_3"
-      ]
-    },
-    {
-      "chapter": 32,
-      "position": 4,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "blockly:Studio:playlab_4"
-        ],
-        "lesson.key": "Play Lab",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "coursec-maker-2024",
-        "activity_section.key": "54a01326-72e8-4fd2-b2f4-82a4c42c1dbb"
-      },
-      "level_keys": [
-        "blockly:Studio:playlab_4"
-      ]
-    },
-    {
-      "chapter": 33,
-      "position": 5,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "blockly:Studio:playlab_5"
-        ],
-        "lesson.key": "Play Lab",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "coursec-maker-2024",
-        "activity_section.key": "54a01326-72e8-4fd2-b2f4-82a4c42c1dbb"
-      },
-      "level_keys": [
-        "blockly:Studio:playlab_5"
-      ]
-    },
-    {
-      "chapter": 34,
-      "position": 6,
-      "activity_section_position": 6,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "blockly:Studio:playlab_6"
-        ],
-        "lesson.key": "Play Lab",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "coursec-maker-2024",
-        "activity_section.key": "54a01326-72e8-4fd2-b2f4-82a4c42c1dbb"
-      },
-      "level_keys": [
-        "blockly:Studio:playlab_6"
-      ]
-    },
-    {
-      "chapter": 35,
-      "position": 7,
-      "activity_section_position": 7,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "blockly:Studio:playlab_7"
-        ],
-        "lesson.key": "Play Lab",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "coursec-maker-2024",
-        "activity_section.key": "54a01326-72e8-4fd2-b2f4-82a4c42c1dbb"
-      },
-      "level_keys": [
-        "blockly:Studio:playlab_7"
-      ]
-    },
-    {
-      "chapter": 36,
-      "position": 8,
-      "activity_section_position": 8,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "blockly:Studio:playlab_8"
-        ],
-        "lesson.key": "Play Lab",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "coursec-maker-2024",
-        "activity_section.key": "54a01326-72e8-4fd2-b2f4-82a4c42c1dbb"
-      },
-      "level_keys": [
-        "blockly:Studio:playlab_8"
-      ]
-    },
-    {
-      "chapter": 37,
-      "position": 9,
-      "activity_section_position": 9,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "blockly:Studio:playlab_9"
-        ],
-        "lesson.key": "Play Lab",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "coursec-maker-2024",
-        "activity_section.key": "54a01326-72e8-4fd2-b2f4-82a4c42c1dbb"
-      },
-      "level_keys": [
-        "blockly:Studio:playlab_9"
-      ]
-    },
-    {
-      "chapter": 38,
-      "position": 10,
-      "activity_section_position": 10,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "blockly:Studio:playlab_10"
-        ],
-        "lesson.key": "Play Lab",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "coursec-maker-2024",
-        "activity_section.key": "54a01326-72e8-4fd2-b2f4-82a4c42c1dbb"
-      },
-      "level_keys": [
-        "blockly:Studio:playlab_10"
-      ]
-    },
-    {
-      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_c_maker_calming_leds"
+        ],
+        "progression": "Calming LEDs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course_c_maker_calming_leds"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursec-maker-2024",
+        "activity_section.key": "ce5804af-f79f-4429-9cfb-b9e2d760a6b6"
+      },
+      "level_keys": [
+        "course_c_maker_calming_leds"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseC_data wizard_maker"
+        ],
         "progression": "Picturing Data"
       },
       "bonus": false,
@@ -2715,11 +2538,14 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_predict_maker"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -2737,11 +2563,14 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 34,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_predict2_maker"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -2759,11 +2588,14 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 35,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_set_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2781,11 +2613,14 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 36,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_change_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2803,11 +2638,14 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 37,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_click_maker"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2825,11 +2663,14 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 38,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_explore_maker"
+        ],
         "progression": "Exploration: Clicker Game"
       },
       "bonus": false,
@@ -2847,11 +2688,14 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 39,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_sprites_maker"
+        ],
         "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
@@ -2869,11 +2713,14 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 40,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_remove_maker"
+        ],
         "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
@@ -2891,11 +2738,14 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 41,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_variable_maker"
+        ],
         "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
@@ -2913,11 +2763,14 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 42,
       "position": 10,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_score_maker"
+        ],
         "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
@@ -2935,11 +2788,14 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 43,
       "position": 11,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_finish_maker"
+        ],
         "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
@@ -2955,9 +2811,68 @@
       "level_keys": [
         "courseF_clicker_finish_maker"
       ]
+    },
+    {
+      "chapter": 44,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Meet your micro:bit"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course_c_maker_meet_your_microbit_3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "coursec-maker-2024",
+        "activity_section.key": "004eb3c8-79e2-4ba8-83b1-5f8e817fdfb3"
+      },
+      "level_keys": [
+        "course_c_maker_meet_your_microbit_3"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "course_c_maker_counter"
+        ],
+        "progression": "Counter"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course_c_maker_counter"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "coursec-maker-2024",
+        "activity_section.key": "2a45eed6-43d6-445c-acf6-e465970ed3a8"
+      },
+      "level_keys": [
+        "course_c_maker_counter"
+      ]
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "course_c_maker_dance_party_unplugged",
+        "script_level.level_keys": [
+          "course_c_maker_dance_party_unplugged"
+        ],
+        "lesson.key": "Dance Party: Unplugged",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "coursec-maker-2024",
+        "activity_section.key": "1a301cd0-f473-4a4a-963e-e834019570be"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "courseC_video_flappyIntro_maker",
@@ -3100,6 +3015,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "coursec-maker-2024",
         "activity_section.key": "39e055c1-b58e-40d9-af70-8cd830b3aaa0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "course_c_maker_emotion_badge",
+        "script_level.level_keys": [
+          "course_c_maker_emotion_badge"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "coursec-maker-2024",
+        "activity_section.key": "f90547b7-ad2d-4bec-9a8c-82e93e725eb6"
       }
     },
     {
@@ -3284,122 +3211,26 @@
     },
     {
       "seeding_key": {
-        "level.key": "blockly:Studio:playlab_1",
+        "level.key": "course_c_maker_meet_your_microbit_2",
         "script_level.level_keys": [
-          "blockly:Studio:playlab_1"
+          "course_c_maker_meet_your_microbit_2"
         ],
-        "lesson.key": "Play Lab",
+        "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "coursec-maker-2024",
-        "activity_section.key": "54a01326-72e8-4fd2-b2f4-82a4c42c1dbb"
+        "activity_section.key": "57ca6de4-7aa1-4198-b7fc-cf9296610b4d"
       }
     },
     {
       "seeding_key": {
-        "level.key": "blockly:Studio:playlab_2",
+        "level.key": "course_c_maker_calming_leds",
         "script_level.level_keys": [
-          "blockly:Studio:playlab_2"
+          "course_c_maker_calming_leds"
         ],
-        "lesson.key": "Play Lab",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "coursec-maker-2024",
-        "activity_section.key": "54a01326-72e8-4fd2-b2f4-82a4c42c1dbb"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "blockly:Studio:playlab_3",
-        "script_level.level_keys": [
-          "blockly:Studio:playlab_3"
-        ],
-        "lesson.key": "Play Lab",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "coursec-maker-2024",
-        "activity_section.key": "54a01326-72e8-4fd2-b2f4-82a4c42c1dbb"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "blockly:Studio:playlab_4",
-        "script_level.level_keys": [
-          "blockly:Studio:playlab_4"
-        ],
-        "lesson.key": "Play Lab",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "coursec-maker-2024",
-        "activity_section.key": "54a01326-72e8-4fd2-b2f4-82a4c42c1dbb"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "blockly:Studio:playlab_5",
-        "script_level.level_keys": [
-          "blockly:Studio:playlab_5"
-        ],
-        "lesson.key": "Play Lab",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "coursec-maker-2024",
-        "activity_section.key": "54a01326-72e8-4fd2-b2f4-82a4c42c1dbb"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "blockly:Studio:playlab_6",
-        "script_level.level_keys": [
-          "blockly:Studio:playlab_6"
-        ],
-        "lesson.key": "Play Lab",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "coursec-maker-2024",
-        "activity_section.key": "54a01326-72e8-4fd2-b2f4-82a4c42c1dbb"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "blockly:Studio:playlab_7",
-        "script_level.level_keys": [
-          "blockly:Studio:playlab_7"
-        ],
-        "lesson.key": "Play Lab",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "coursec-maker-2024",
-        "activity_section.key": "54a01326-72e8-4fd2-b2f4-82a4c42c1dbb"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "blockly:Studio:playlab_8",
-        "script_level.level_keys": [
-          "blockly:Studio:playlab_8"
-        ],
-        "lesson.key": "Play Lab",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "coursec-maker-2024",
-        "activity_section.key": "54a01326-72e8-4fd2-b2f4-82a4c42c1dbb"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "blockly:Studio:playlab_9",
-        "script_level.level_keys": [
-          "blockly:Studio:playlab_9"
-        ],
-        "lesson.key": "Play Lab",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "coursec-maker-2024",
-        "activity_section.key": "54a01326-72e8-4fd2-b2f4-82a4c42c1dbb"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "blockly:Studio:playlab_10",
-        "script_level.level_keys": [
-          "blockly:Studio:playlab_10"
-        ],
-        "lesson.key": "Play Lab",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "coursec-maker-2024",
-        "activity_section.key": "54a01326-72e8-4fd2-b2f4-82a4c42c1dbb"
+        "activity_section.key": "ce5804af-f79f-4429-9cfb-b9e2d760a6b6"
       }
     },
     {
@@ -3544,6 +3375,30 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "coursec-maker-2024",
         "activity_section.key": "6f20dc82-6227-4ca1-87ec-e46b4615a6d4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "course_c_maker_meet_your_microbit_3",
+        "script_level.level_keys": [
+          "course_c_maker_meet_your_microbit_3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "coursec-maker-2024",
+        "activity_section.key": "004eb3c8-79e2-4ba8-83b1-5f8e817fdfb3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "course_c_maker_counter",
+        "script_level.level_keys": [
+          "course_c_maker_counter"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "coursec-maker-2024",
+        "activity_section.key": "2a45eed6-43d6-445c-acf6-e465970ed3a8"
       }
     }
   ],
@@ -3907,16 +3762,6 @@
   ],
   "vocabularies": [
     {
-      "key": "code",
-      "word": "code",
-      "definition": "(v) to write code, or to write instructions for a computer.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "code"
-      }
-    },
-    {
       "key": "data",
       "word": "Data",
       "definition": "A collection of information",
@@ -3924,16 +3769,6 @@
       },
       "seeding_key": {
         "vocabulary.key": "data"
-      }
-    },
-    {
-      "key": "debugging",
-      "word": "Debugging",
-      "definition": "Finding and fixing problems in an algorithm or program.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "debugging"
       }
     },
     {
@@ -3964,16 +3799,6 @@
       },
       "seeding_key": {
         "vocabulary.key": "loop"
-      }
-    },
-    {
-      "key": "program",
-      "word": "Program",
-      "definition": "An algorithm that has been coded into something that can be run by a machine.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "program"
       }
     },
     {
@@ -4029,24 +3854,6 @@
         "lesson.key": "Picturing Data",
         "vocabulary.key": "graph"
       }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Play Lab",
-        "vocabulary.key": "code"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Play Lab",
-        "vocabulary.key": "debugging"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Play Lab",
-        "vocabulary.key": "program"
-      }
     }
   ],
   "lessons_programming_expressions": [
@@ -4071,26 +3878,6 @@
       "seeding_key": {
         "lesson.key": "Picturing Data",
         "objective.key": "1aa53119-005c-4292-8e9b-3c9b4e33d5cd"
-      }
-    },
-    {
-      "key": "3fde47c9-f93c-462f-8c7a-5d66d2331ef7",
-      "properties": {
-        "description": "Identify key computer science vocabulary"
-      },
-      "seeding_key": {
-        "lesson.key": "Play Lab",
-        "objective.key": "3fde47c9-f93c-462f-8c7a-5d66d2331ef7"
-      }
-    },
-    {
-      "key": "41d0bed6-5983-4e92-9912-4cefaaf97d12",
-      "properties": {
-        "description": "Identify places to go to continue learning computer science and coding"
-      },
-      "seeding_key": {
-        "lesson.key": "Play Lab",
-        "objective.key": "41d0bed6-5983-4e92-9912-4cefaaf97d12"
       }
     },
     {
@@ -4131,16 +3918,6 @@
       "seeding_key": {
         "lesson.key": "Picturing Data",
         "objective.key": "70436563-fb45-4a7b-8516-431856da5250"
-      }
-    },
-    {
-      "key": "84a2e081-32dd-4381-976a-4ab10a4456df",
-      "properties": {
-        "description": "Make connections between computer science concepts and the real world"
-      },
-      "seeding_key": {
-        "lesson.key": "Play Lab",
-        "objective.key": "84a2e081-32dd-4381-976a-4ab10a4456df"
       }
     },
     {
@@ -4211,16 +3988,6 @@
       "seeding_key": {
         "lesson.key": "My Loopy Robotic Friends Jr",
         "objective.key": "e334124d-9f23-4855-a745-a8dfd23faea5"
-      }
-    },
-    {
-      "key": "e7eba1da-0b87-4825-afa7-935241154559",
-      "properties": {
-        "description": "Define “coding” and “computer science”"
-      },
-      "seeding_key": {
-        "lesson.key": "Play Lab",
-        "objective.key": "e7eba1da-0b87-4825-afa7-935241154559"
       }
     },
     {
@@ -4372,223 +4139,6 @@
         "lesson.key": "Picturing Data",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-DA-07"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Play Lab",
-        "framework.shortcode": "ccela",
-        "standard.shortcode": "11-12.W.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Play Lab",
-        "framework.shortcode": "ccela",
-        "standard.shortcode": "4.W.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Play Lab",
-        "framework.shortcode": "ccela",
-        "standard.shortcode": "6.W.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Play Lab",
-        "framework.shortcode": "ccela",
-        "standard.shortcode": "7.W.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Play Lab",
-        "framework.shortcode": "ccela",
-        "standard.shortcode": "7.W.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Play Lab",
-        "framework.shortcode": "ccela",
-        "standard.shortcode": "8.W.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Play Lab",
-        "framework.shortcode": "ccela",
-        "standard.shortcode": "9-10.W.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Play Lab",
-        "framework.shortcode": "ccmath",
-        "standard.shortcode": "MP.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Play Lab",
-        "framework.shortcode": "ccmath",
-        "standard.shortcode": "MP.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Play Lab",
-        "framework.shortcode": "ccmath",
-        "standard.shortcode": "MP.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Play Lab",
-        "framework.shortcode": "ccmath",
-        "standard.shortcode": "MP.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Play Lab",
-        "framework.shortcode": "ccmath",
-        "standard.shortcode": "MP.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Play Lab",
-        "framework.shortcode": "ccmath",
-        "standard.shortcode": "MP.7"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Play Lab",
-        "framework.shortcode": "ccmath",
-        "standard.shortcode": "MP.8"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Play Lab",
-        "framework.shortcode": "csta2011",
-        "standard.shortcode": "CL.L1:6-02"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Play Lab",
-        "framework.shortcode": "csta2011",
-        "standard.shortcode": "CPP.L1:3-01"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Play Lab",
-        "framework.shortcode": "csta2011",
-        "standard.shortcode": "CPP.L1:6-01"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Play Lab",
-        "framework.shortcode": "csta2011",
-        "standard.shortcode": "CPP.L1:6-06"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Play Lab",
-        "framework.shortcode": "csta2011",
-        "standard.shortcode": "CPP.L2:3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Play Lab",
-        "framework.shortcode": "csta2011",
-        "standard.shortcode": "CT.L2:12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Play Lab",
-        "framework.shortcode": "csta2011",
-        "standard.shortcode": "CT.L2:7"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Play Lab",
-        "framework.shortcode": "iste",
-        "standard.shortcode": "1.a"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Play Lab",
-        "framework.shortcode": "iste",
-        "standard.shortcode": "1.b"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Play Lab",
-        "framework.shortcode": "iste",
-        "standard.shortcode": "1.c"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Play Lab",
-        "framework.shortcode": "iste",
-        "standard.shortcode": "2.a"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Play Lab",
-        "framework.shortcode": "iste",
-        "standard.shortcode": "2.b"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Play Lab",
-        "framework.shortcode": "iste",
-        "standard.shortcode": "4.b"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Play Lab",
-        "framework.shortcode": "iste",
-        "standard.shortcode": "4.d"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Play Lab",
-        "framework.shortcode": "iste",
-        "standard.shortcode": "6.a"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Play Lab",
-        "framework.shortcode": "iste",
-        "standard.shortcode": "6.c"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Play Lab",
-        "framework.shortcode": "iste",
-        "standard.shortcode": "6.d"
       }
     }
   ],

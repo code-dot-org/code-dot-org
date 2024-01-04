@@ -942,6 +942,9 @@ fr:
   cs_ambassador_application_date: Candidatures ouvertes jusqu'au 8 novembre 2023
   cs_ambassador_application_subhead: Travaillez avec un enseignant pour soumettre
     votre candidature dès aujourd'hui
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: Des questions ? Veuillez contacter [youngwomen@code.org]
     (%{email_url})
   cs_ambassador_do_heading: Que font les ambassadeurs CS ?

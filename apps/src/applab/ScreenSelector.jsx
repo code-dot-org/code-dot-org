@@ -4,6 +4,7 @@ import React from 'react';
 import * as constants from './constants';
 import {connect} from 'react-redux';
 import style from './screen-selector.module.scss';
+import applabMsg from '@cdo/applab/locale';
 import * as elementUtils from './designElements/elementUtils';
 import * as screens from './redux/screens';
 
@@ -73,6 +74,7 @@ class ScreenSelector extends React.Component {
         value={this.props.currentScreenId || ''}
         onChange={this.handleChange}
         disabled={this.props.isRunning}
+        aria-label={applabMsg.selectScreen()}
       >
         {options}
         {canAddScreen && <option>{constants.IMPORT_SCREEN}</option>}

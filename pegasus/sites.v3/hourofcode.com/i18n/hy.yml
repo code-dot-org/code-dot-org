@@ -927,6 +927,9 @@ hy:
   cs_ambassador_application_date: Դիմումները բաց են մինչև 2023 թվականի նոյեմբերի 8-ը
   cs_ambassador_application_subhead: Աշխատեք ուսուցչի հետ՝ ձեր դիմումը ներկայացնելու
     համար այսօր
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: Հարցեր? Խնդրում ենք կապվել [youngwomen@code.org]
     (%{email_url})
   cs_ambassador_do_heading: 'Ի՞նչ են անում CS դեսպանները:'

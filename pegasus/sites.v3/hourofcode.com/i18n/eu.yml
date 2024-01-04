@@ -880,6 +880,9 @@ eu:
   cs_ambassador_application_date: Applications open until November 8th, 2023
   cs_ambassador_application_subhead: Work with a teacher to submit your application
     today
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: Questions? Please contact [youngwomen@code.org](%{email_url})
   cs_ambassador_do_heading: What do CS Ambassadors do?
   cs_ambassador_do_desc: CS Ambassadors encourage young women to explore the subject,

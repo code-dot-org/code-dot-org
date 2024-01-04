@@ -444,6 +444,20 @@ da:
         text: Til at begynde med, skal du knytte dine blokke til den orange "når kør"
           blok. Du kan sammenkæde flere blokke ved at trække dem hen til hinanden,
           indtil du ser den gule linje. Derefter vil de snappe sammen af sig selv.
+    hoc-dance-ai-warmup:
+      2:
+        text: Hej! Mit navn er Miral Kotb og jeg er danser, software programmør, og
+          skaber af iLuminate.
+      3:
+        text: Programmering er på mange måder meget kreativt. Virkeligt meget. Jeg
+          mener, at når du først har muligheden for at skrive koden til software,
+          så kan du virkelig bruge alle dine idéer. Jeg gøre det med lys på tøjet.
+          Der er så meget du kan gøre, når du har det rette værktøj til at kode, og
+          mulighederne er uendelige.
+      5:
+        text: Du skal bruge kode-blokke til at vælge forskellige dansere, skifte mellem
+          forskellige dansetrin, få danserne til at følge musikken og få dem gjort
+          interaktive.
     hoc_dance_congrats:
       1:
         text: 'Hour of Code | Dance Party: Så er der fest!'

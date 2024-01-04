@@ -14,31 +14,31 @@ ko:
   campaign_date_start_long: 12월 4일
   campaign_date_short: 12월 4일-10일
   campaign_date_full: 12월 4일-10일
-  campaign_date_year: 2016년
+  campaign_date_year: '2023'
   campaign_date_full_year: 2023년 12월 4일부터 10일
   nonus_campaign_date_start_short: 10월 1일
   nonus_campaign_date_start_long: 10월 1일
   nonus_campaign_date_short: 10월 1일 ~12월 18일
   nonus_campaign_date_full: 10월 1일부터 12월 18일까지
-  nonus_campaign_date_year: 2016년
+  nonus_campaign_date_year: '2023'
   nonus_campaign_date_full_year: 2022년 10월 1일 ~2022년 12월 18일
   latam_campaign_date_start_short: 10월 1일
   latam_campaign_date_start_long: 10월 1일
   latam_campaign_date_short: 10월 1일 ~12월 18일
   latam_campaign_date_full: 10월 1일부터 12월 18일까지
-  latam_campaign_date_year: 2016년
+  latam_campaign_date_year: '2023'
   latam_campaign_date_full_year: 2022년 10월 1일 ~2022년 12월 18일
   europe_campaign_date_start_short: 10월 10일
   europe_campaign_date_start_long: 10월 10일
   europe_campaign_date_short: 10월 10일~25일
   europe_campaign_date_full: 10월 10일~25일
-  europe_campaign_date_year: 2016년
+  europe_campaign_date_year: '2023'
   europe_campaign_date_full_year: 2020년 10월 10일~25일
   africa_campaign_date_start_short: 10월 1일
   africa_campaign_date_start_long: 10월 1일
   africa_campaign_date_short: 10월 1일~31일
   africa_campaign_date_full: 10월 1일~31일
-  africa_campaign_date_year: 2016년
+  africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: 2020년 10월 1일~31일
   hoc2023_header: AI를 통한 창의성
   hoc2023_hero_desc_homepage: 전 세계 수백만 명의 사람들과 함께 AI를 사용하거나 또는 사용하지 않고 한 시간 동안 코딩을
@@ -615,7 +615,7 @@ ko:
   module_label_student_content_resources: 콘텐츠 및 리소스
   module_label_new: 신규
   module_label_coming_soon: 곧 출시됩니다
-  module_label_available_now: 지금 구매 가능
+  module_label_available_now: 지금 시청 가능
   module_label_video_series: 비디오 시리즈
   module_label_self_paced: 자습형 모듈
   module_label_event_or_lessons: Event or lessons
@@ -756,6 +756,9 @@ ko:
     이러한 성별 격차를 줄이는 데 도움을 줄 수 있습니다.
   cs_ambassador_application_date: 2023년 11월 8일까지 신청 가능
   cs_ambassador_application_subhead: 선생님과 상의하여 오늘 지원서를 제출하세요
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: 질문이 있으신가요?[youngwomen@code.org] (%{email_url})
     으로 연락해 주세요.
   cs_ambassador_do_heading: CS 앰배서더는 어떤 일을 하나요?
@@ -2263,7 +2266,7 @@ ko:
   map_title: 아워오브코드 맵
   map_header: "# 아워오브코드 2017에 등록된 이벤트"
   map_header_count_year: "%{year}년에 등록된 %{event_count}개의 이벤트"
-  map_header_count_year_so_far: "%{year}년에 지금까지 등록된 %{event_count}개 이벤트"
+  map_header_count_year_so_far: " %{year}년에 지금까지 %{event_count} 이벤트가 등록됨"
   see_all_events: 모든 이벤트 살펴보기
   map_header_company: "# 회사 조직 위원이 운영하고 있습니다."
   map_header_country: "# %{country}에서"

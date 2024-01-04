@@ -909,6 +909,9 @@ mk:
   cs_ambassador_application_date: Апликациите се отворени до 8 ноември 2023 година
   cs_ambassador_application_subhead: Работете со наставник за да ја поднесете вашата
     апликација денес
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: Прашања? Ве молиме контактирајте со [youngwomen@code.org]
     (%{email_url})
   cs_ambassador_do_heading: Што прават амбасадорите на ЦС?

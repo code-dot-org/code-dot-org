@@ -918,6 +918,9 @@ bg:
   cs_ambassador_application_date: Кандидатурите са отворени до 8 ноември 2023 г.
   cs_ambassador_application_subhead: Работете с учител, за да подадете заявлението
     си днес
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: Въпроси? Моля, свържете се с [youngwomen@code.org]
     (%{email_url})
   cs_ambassador_do_heading: Какво правят посланиците на CS?

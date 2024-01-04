@@ -910,6 +910,9 @@ ms:
   cs_ambassador_application_date: Permohonan dibuka sehingga 8 November 2023
   cs_ambassador_application_subhead: Bekerjasama dengan guru untuk mengemukakan permohonan
     anda hari ini
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: Soalan? Sila hubungi [youngwomen@code.org]
     (%{email_url})
   cs_ambassador_do_heading: Apa yang dilakukan oleh Duta Besar CS?

@@ -31,7 +31,7 @@ var SpellingControls = function (props) {
                 className="spellingButton"
                 disabled
               >
-                <img src="/blockly/media/1x1.gif" />
+                <img src="/blockly/media/1x1.gif" alt="" />
                 <span id="currentWordContents" />
               </button>
             </td>

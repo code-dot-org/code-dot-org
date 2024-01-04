@@ -12,7 +12,7 @@ import {
 import experiments from '@cdo/apps/util/experiments';
 import {GeneratorHelpersSimple2} from './blocks/simple2';
 import {Renderers} from '@cdo/apps/blockly/constants';
-import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
 /**
  * Wraps the Blockly workspace for Music Lab. Provides functions to setup the
@@ -24,6 +24,7 @@ export default class MusicBlocklyWorkspace {
     this.compiledEvents = null;
     this.triggerIdToStartType = {};
     this.lastExecutedEvents = null;
+    this.metricsReporter = Lab2Registry.getInstance().getMetricsReporter();
   }
 
   triggerIdToEvent = id => `triggeredAtButton-${id}`;
@@ -91,7 +92,7 @@ export default class MusicBlocklyWorkspace {
    */
   compileSong(scope) {
     if (!this.workspace) {
-      Lab2MetricsReporter.logWarning('workspace not initialized.');
+      this.metricsReporter.logWarning('workspace not initialized.');
       return;
     }
     Blockly.getGenerator().init(this.workspace);
@@ -234,7 +235,7 @@ export default class MusicBlocklyWorkspace {
    */
   executeCompiledSong(triggerEvents = []) {
     if (this.compiledEvents === null) {
-      Lab2MetricsReporter.logWarning(
+      this.metricsReporter.logWarning(
         'executeCompiledSong called before compileSong.'
       );
       return;
@@ -299,7 +300,7 @@ export default class MusicBlocklyWorkspace {
 
   getCode() {
     if (!this.workspace) {
-      Lab2MetricsReporter.logWarning('workspace not initialized.');
+      this.metricsReporter.logWarning('workspace not initialized.');
       return {};
     }
     return Blockly.serialization.workspaces.save(this.workspace);
@@ -307,7 +308,7 @@ export default class MusicBlocklyWorkspace {
 
   getAllBlocks() {
     if (!this.workspace) {
-      Lab2MetricsReporter.logWarning('workspace not initialized.');
+      this.metricsReporter.logWarning('workspace not initialized.');
       return [];
     }
     return this.workspace.getAllBlocks();
@@ -345,7 +346,7 @@ export default class MusicBlocklyWorkspace {
   // Load the workspace with the given code.
   loadCode(code) {
     if (!this.workspace) {
-      Lab2MetricsReporter.logWarning('workspace not initialized.');
+      this.metricsReporter.logWarning('workspace not initialized.');
       return;
     }
     this.workspace.clearUndo();
@@ -356,7 +357,7 @@ export default class MusicBlocklyWorkspace {
     try {
       fn.call(this, ...args);
     } catch (e) {
-      Lab2MetricsReporter.logError('Error running user generated code', e);
+      this.metricsReporter.logError('Error running user generated code', e);
     }
   }
 
@@ -370,7 +371,7 @@ export default class MusicBlocklyWorkspace {
 
   canUndo() {
     if (!this.workspace) {
-      Lab2MetricsReporter.logWarning('workspace not initialized.');
+      this.metricsReporter.logWarning('workspace not initialized.');
       return false;
     }
     return this.workspace.getUndoStack().length > 0;
@@ -378,7 +379,7 @@ export default class MusicBlocklyWorkspace {
 
   canRedo() {
     if (!this.workspace) {
-      Lab2MetricsReporter.logWarning('workspace not initialized.');
+      this.metricsReporter.logWarning('workspace not initialized.');
       return false;
     }
     return this.workspace.getRedoStack().length > 0;
@@ -386,7 +387,7 @@ export default class MusicBlocklyWorkspace {
 
   undoRedo(redo) {
     if (!this.workspace) {
-      Lab2MetricsReporter.logWarning('workspace not initialized.');
+      this.metricsReporter.logWarning('workspace not initialized.');
       return;
     }
     this.workspace.undo(redo);
