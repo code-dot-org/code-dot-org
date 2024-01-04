@@ -280,11 +280,11 @@ It is worthwhile to make sure that you are using WSL 2. Attempting to use WSL 1 
             1. `sudo apt install ./google-chrome-stable_current_amd64.deb`
             1. Add `export CHROME_BIN=$(which google-chrome)` to your `~/.bashrc` or desired shell configuration file.
         
-1. Follow the [Ubuntu instructions](#ubuntu-1804) to install required tools on the Ubuntu instance, _with the following modifications:
+1. Follow the [Ubuntu instructions](#ubuntu-1804) to install required tools on the Ubuntu instance, _with the following modifications_:
     * There is an ongoing clock skew issue going on with wsl. This can cause issues with `apt update`, ssl certs, among other things. You can force your clock to sync with `sudo hwclock -s` to fix these issues temporarily. See the [megathread](https://github.com/microsoft/WSL/issues/10006) for more details.
     * Skip exporting `CHROME_BIN` since you already did so above.
     * Before updating the root password to empty in SQL (step 10), restart MySQL using `sudo /etc/init.d/mysql restart`
-1. Follow the [overview instructions](#overview), _with the following modifications:
+1. Follow the [overview instructions](#overview), _with the following modifications_:
     * Before running `bundle exec rake install`, restart the mysql service: `sudo service mysql start`
     * If localhost responds slowly and you have exhausted conventional options (e.g. turning off Firewall during testing), try moving the code-dot-org repo outside of the /mnt/ directory (e.g. ~) to improve responsiveness
 
