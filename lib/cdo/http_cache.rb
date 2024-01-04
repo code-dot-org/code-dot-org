@@ -52,8 +52,6 @@ class HttpCache
   DEFAULT_COOKIES = [
     # Language drop-down selection.
     'language_',
-    # Offline experiment flag, to allow users into the pilot
-    'offline_pilot',
     # Experiment flag used to debug the onetrust cookie experience.
     'onetrust_cookie_scripts',
     # Feature flag for the Colorado Privacy Act (CPA)
